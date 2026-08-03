@@ -1,0 +1,112 @@
+/* Design tokens. Light: warm paper. Dark: warm, low-brightness — also the
+   in-pew mode (a separate "church" theme was folded into it, owner 2026-08-03). */
+:root,
+[data-theme='light'] {
+	--bg: #f7f1e6;
+	--surface: #fcf8ef;
+	--ink: #251e12;
+	--ink-soft: #7a6b51;
+	--rubric: #9e2b1e;
+	--border: #e0d4ba;
+	--wash: #ede2c9;
+	--wash-strong: #e3d3ae;
+	--shadow: 0 -10px 34px rgba(66, 50, 22, 0.14);
+}
+
+[data-theme='dark'] {
+	--bg: #1a1611;
+	--surface: #211c15;
+	--ink: #ddd1bb;
+	--ink-soft: #9a8a6c;
+	--rubric: #c4573f;
+	--border: #372e20;
+	--wash: #2b2417;
+	--wash-strong: #3a3120;
+	--shadow: 0 -10px 34px rgba(0, 0, 0, 0.45);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'EB Garamond Variable', 'EB Garamond', Georgia, 'Times New Roman', serif;
+	font-optical-sizing: auto;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--ink);
+	transition:
+		background-color 0.25s ease,
+		color 0.25s ease;
+	-webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition: none !important;
+		animation: none !important;
+	}
+}
+
+/* EB Garamond's roman carries an OpenType locl rule for the Latin language
+   system that substitutes u -> v ("qvia", "cvlpa") — triggered by lang="la".
+   The 1962 liturgical orthography distinguishes u/v, so the feature is
+   disabled; the semantic lang attribute stays (the italic face has no such
+   rule). */
+:lang(la) {
+	font-feature-settings: 'locl' 0;
+}
+
+.smallcaps {
+	font-variant-caps: small-caps;
+	letter-spacing: 0.08em;
+}
+
+/* Optical centering for small control labels, cross-browser. EB Garamond's
+   extreme vertical metrics (ascent taller than the em, to fit stacked
+   accents) make ordinary line-box centering sit visibly off. Rather than
+   Chrome-only text-box trim (Firefox lacks it), redeclare the same font
+   files under a label-only family with NORMALIZED metrics — every engine
+   honors @font-face metric overrides (Firefox 89+, Chrome 87+, Safari
+   16.4+), so all browsers center identically. With ascent 75% / descent
+   25%, the box center sits 0.25em above the baseline ≈ small-cap
+   mid-height — optically centered for small-caps labels. Same woff2 files
+   as the text face: zero extra download. Revisit text-box trim when
+   Firefox ships it. */
+@font-face {
+	font-family: 'EB Garamond Label';
+	src: url('../node_modules/@fontsource-variable/eb-garamond/files/eb-garamond-latin-wght-normal.woff2')
+		format('woff2-variations');
+	font-weight: 400 800;
+	font-display: swap;
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+		U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	ascent-override: 75%;
+	descent-override: 25%;
+	line-gap-override: 0%;
+}
+
+@font-face {
+	font-family: 'EB Garamond Label';
+	src: url('../node_modules/@fontsource-variable/eb-garamond/files/eb-garamond-latin-ext-wght-normal.woff2')
+		format('woff2-variations');
+	font-weight: 400 800;
+	font-display: swap;
+	unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308,
+		U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+		U+2C60-2C7F, U+A720-A7FF;
+	ascent-override: 75%;
+	descent-override: 25%;
+	line-gap-override: 0%;
+}
+
+.trim-label {
+	font-family: 'EB Garamond Label', 'EB Garamond Variable', Georgia, serif;
+}
+
+a {
+	color: inherit;
+}
