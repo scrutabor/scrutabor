@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { SvelteSet } from 'svelte/reactivity';
-	import { confiteorGlosses, confiteorText, type Word } from '$lib/corpus';
+	import { TEXTS } from '$lib/corpus';
+	import { sectionFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
@@ -10,7 +11,10 @@
 
 	const lang = $derived(page.params.lang as Lang);
 	const msgs = $derived(M[lang]);
-	const gloss = $derived(confiteorGlosses[lang]);
+	const entry = $derived(TEXTS[`${page.params.category}/${page.params.slug}`]);
+	const doc = $derived(entry?.text);
+	const gloss = $derived(entry?.glosses[lang]);
+	const sectionLabel = $derived(sectionFor(page.params.category ?? '')?.label[lang] ?? '');
 
 	// Three verbosity states:
 	// 0 = text only · 1 = + rubric narratives and translations · 2 = + glosses
@@ -18,20 +22,24 @@
 	let selectedId = $state<string | null>(null);
 	const openTranslations = new SvelteSet<string>();
 
-	function toggleTranslation(id: string) {
-		if (openTranslations.has(id)) openTranslations.delete(id);
-		else openTranslations.add(id);
-	}
+	const wordsById = $derived(
+		new Map((doc?.segments ?? []).flatMap((s) => (s.words ?? []).map((w) => [w.id, w] as const)))
+	);
 
-	const wordsById = new Map<string, Word>();
-	for (const seg of confiteorText.segments) {
-		for (const w of seg.words ?? []) wordsById.set(w.id, w);
-	}
+	// Segment ids and word ids restart per text — reset transient state when
+	// navigating between texts within the same route component.
+	$effect(() => {
+		void doc;
+		selectedId = null;
+		openTranslations.clear();
+	});
 
 	let selectedWord = $derived(selectedId ? (wordsById.get(selectedId) ?? null) : null);
-	let selectedGloss = $derived(selectedId ? (gloss.words[selectedId] ?? null) : null);
+	let selectedGloss = $derived(
+		selectedId && gloss ? (gloss.words[selectedId] ?? null) : null
+	);
 	let selectedAnalysis = $derived(
-		selectedWord ? (selectedWord.analysis ?? confiteorText.analysis_defaults) : null
+		selectedWord && doc ? (selectedWord.analysis ?? doc.analysis_defaults) : null
 	);
 
 	function toggle(id: string) {
@@ -42,81 +50,92 @@
 		selectedId = id;
 		document.getElementById(id)?.scrollIntoView({ block: 'center' });
 	}
+
+	function toggleTranslation(id: string) {
+		if (openTranslations.has(id)) openTranslations.delete(id);
+		else openTranslations.add(id);
+	}
 </script>
 
 <svelte:head>
-	<title>Confíteor — Scrutabor</title>
+	<title>{doc ? `${doc.title} — Scrutabor` : 'Scrutabor'}</title>
 </svelte:head>
 
-<div class="page">
-	<header>
-		<nav>
-			<a href="/{lang}" class="back smallcaps">scrutabor</a>
-			<div class="nav-right">
-				<LangMenu {lang} />
-				<ThemeToggle {lang} />
-			</div>
-		</nav>
-		<h1 lang="la">Confíteor</h1>
-		<p class="subtitle smallcaps">{msgs.subtitle}</p>
-		<div class="help-row">
-			<HelpLevels {lang} bind:value={helpLevel} />
-		</div>
-	</header>
-
-	<main class:panel-open={selectedWord !== null}>
-		{#each confiteorText.segments as seg (seg.id)}
-			{#if seg.type === 'rubric'}
-				<div class="rubric">
-					<p class="rubric-la" lang="la">{seg.text}</p>
-					{#if helpLevel >= 1 && gloss.segments[seg.id]?.narrative}
-						<p class="rubric-narrative">{gloss.segments[seg.id].narrative}</p>
-					{/if}
+{#if !entry || !doc || !gloss}
+	<div class="page">
+		<p><a href="/{lang}">Scrutabor</a></p>
+	</div>
+{:else}
+	<div class="page">
+		<header>
+			<nav>
+				<a href="/{lang}" class="back smallcaps">scrutabor</a>
+				<div class="nav-right">
+					<LangMenu {lang} />
+					<ThemeToggle {lang} />
 				</div>
-			{:else}
-				<p class="verse" class:glossed={helpLevel >= 2} lang="la">
-					{#each seg.words ?? [] as w (w.id)}<button
-							class="word"
-							id={w.id}
-							class:selected={selectedId === w.id}
-							onclick={() => toggle(w.id)}
-							><ruby>{w.form}{#if helpLevel >= 2}<rt lang={lang}
-										>{gloss.words[w.id]?.gloss}</rt
-									>{/if}</ruby></button
-						>{w.post ?? ''}{' '}{/each}
-				</p>
-				{#if helpLevel >= 1 && gloss.segments[seg.id]?.translation}
-					<div class="seg-extra">
-						<button
-							class="reveal smallcaps trim-label"
-							class:open={openTranslations.has(seg.id)}
-							aria-expanded={openTranslations.has(seg.id)}
-							onclick={() => toggleTranslation(seg.id)}
-						>
-							{msgs.translationLabel}<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"
-								><path d="m6 9 6 6 6-6" /></svg
-							>
-						</button>
-						{#if openTranslations.has(seg.id)}
-							<p class="translation">{gloss.segments[seg.id].translation}</p>
+			</nav>
+			<h1 lang="la">{doc.title}</h1>
+			<p class="subtitle smallcaps">{sectionLabel} · {msgs.workingEdition}</p>
+			<div class="help-row">
+				<HelpLevels {lang} bind:value={helpLevel} />
+			</div>
+		</header>
+
+		<main class:panel-open={selectedWord !== null}>
+			{#each doc.segments as seg (seg.id)}
+				{#if seg.type === 'rubric'}
+					<div class="rubric">
+						<p class="rubric-la" lang="la">{seg.text}</p>
+						{#if helpLevel >= 1 && gloss.segments[seg.id]?.narrative}
+							<p class="rubric-narrative">{gloss.segments[seg.id].narrative}</p>
 						{/if}
 					</div>
+				{:else}
+					<p class="verse" class:glossed={helpLevel >= 2} lang="la">
+						{#each seg.words ?? [] as w (w.id)}<button
+								class="word"
+								id={w.id}
+								class:selected={selectedId === w.id}
+								onclick={() => toggle(w.id)}
+								><ruby>{w.form}{#if helpLevel >= 2}<rt lang={lang}
+											>{gloss.words[w.id]?.gloss}</rt
+										>{/if}</ruby></button
+							>{w.post ?? ''}{' '}{/each}
+					</p>
+					{#if helpLevel >= 1 && gloss.segments[seg.id]?.translation}
+						<div class="seg-extra">
+							<button
+								class="reveal smallcaps trim-label"
+								class:open={openTranslations.has(seg.id)}
+								aria-expanded={openTranslations.has(seg.id)}
+								onclick={() => toggleTranslation(seg.id)}
+							>
+								{msgs.translationLabel}<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"
+									><path d="m6 9 6 6 6-6" /></svg
+								>
+							</button>
+							{#if openTranslations.has(seg.id)}
+								<p class="translation">{gloss.segments[seg.id].translation}</p>
+							{/if}
+						</div>
+					{/if}
 				{/if}
-			{/if}
-		{/each}
-	</main>
+			{/each}
+		</main>
 
-	{#if selectedWord && selectedAnalysis}
-		<WordPanel
-			word={selectedWord}
-			gloss={selectedGloss}
-			analysis={selectedAnalysis}
-			{lang}
-			onclose={() => (selectedId = null)}
-			onnavigate={navigateTo}
-		/>
-	{/if}
-</div>
+		{#if selectedWord && selectedAnalysis}
+			<WordPanel
+				word={selectedWord}
+				gloss={selectedGloss}
+				analysis={selectedAnalysis}
+				{lang}
+				onclose={() => (selectedId = null)}
+				onnavigate={navigateTo}
+			/>
+		{/if}
+	</div>
+{/if}
 
 <style>
 	.page {

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { CATALOG } from '$lib/catalog';
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import { M, type Lang } from '$lib/i18n';
@@ -25,11 +26,19 @@
 		</p>
 		<p class="motto-ref smallcaps">{msgs.mottoRef}</p>
 
-		<a class="card" href="/{lang}/ordinarium/confiteor">
-			<span class="card-cat smallcaps">{msgs.cardCat}</span>
-			<span class="card-title" lang="la">Confíteor</span>
-			<span class="card-note">{msgs.cardNote}</span>
-		</a>
+		{#each CATALOG as section (section.category)}
+			<section>
+				<h2 class="smallcaps">{section.label[lang]}</h2>
+				<div class="cards">
+					{#each section.texts as t (t.slug)}
+						<a class="card" href="/{lang}/{t.category}/{t.slug}">
+							<span class="card-title" lang="la">{t.title}</span>
+							<span class="card-note">{t.note[lang]}</span>
+						</a>
+					{/each}
+				</div>
+			</section>
+		{/each}
 
 		<p class="working smallcaps">{msgs.working}</p>
 	</main>
@@ -88,15 +97,35 @@
 		color: var(--ink-soft);
 	}
 
-	.card {
-		margin: 3rem 0 0;
+	section {
+		margin: 2.6rem 0 0;
+		width: 100%;
+		max-width: 30rem;
+	}
+
+	h2 {
+		margin: 0 0 0.7rem;
+		font-size: 0.8rem;
+		font-weight: 500;
+		color: var(--rubric);
+		text-align: center;
+	}
+
+	.cards {
 		display: flex;
 		flex-direction: column;
-		gap: 0.15rem;
+		gap: 0.6rem;
+	}
+
+	.card {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
 		text-decoration: none;
 		border: 1px solid var(--border);
 		border-radius: 0.6rem;
-		padding: 1.1rem 2.6rem;
+		padding: 0.8rem 1.4rem;
 		background: var(--surface);
 	}
 
@@ -104,19 +133,15 @@
 		background: var(--wash);
 	}
 
-	.card-cat {
-		font-size: 0.75rem;
-		color: var(--rubric);
-	}
-
 	.card-title {
-		font-size: 1.6rem;
+		font-size: 1.35rem;
 	}
 
 	.card-note {
-		font-size: 0.95rem;
+		font-size: 0.9rem;
 		color: var(--ink-soft);
 		font-style: italic;
+		text-align: right;
 	}
 
 	.working {
