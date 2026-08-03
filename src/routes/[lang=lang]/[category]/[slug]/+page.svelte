@@ -34,6 +34,22 @@
 		openTranslations.clear();
 	});
 
+	const translationIds = $derived(
+		(doc?.segments ?? [])
+			.filter((s) => gloss?.segments[s.id]?.translation)
+			.map((s) => s.id)
+	);
+
+	// The top level means "everything": all translations unfold; individual
+	// boxes can still be closed by hand. Dropping below re-collapses them.
+	$effect(() => {
+		if (helpLevel >= 2) {
+			for (const id of translationIds) openTranslations.add(id);
+		} else {
+			openTranslations.clear();
+		}
+	});
+
 	let selectedWord = $derived(selectedId ? (wordsById.get(selectedId) ?? null) : null);
 	let selectedGloss = $derived(
 		selectedId && gloss ? (gloss.words[selectedId] ?? null) : null
@@ -104,7 +120,7 @@
 							>{w.post ?? ''}{' '}{/each}
 					</p>
 					{#if helpLevel >= 1 && gloss.segments[seg.id]?.translation}
-						<div class="seg-extra">
+						<div class="seg-extra" class:box={openTranslations.has(seg.id)}>
 							<button
 								class="reveal smallcaps trim-label"
 								class:open={openTranslations.has(seg.id)}
@@ -257,6 +273,17 @@
 
 	.seg-extra {
 		margin: -0.6rem 0 1.3rem;
+	}
+
+	/* When open, a box grows around the button and translation: the pill
+	   keeps its x-position (the box extends into the gutter via negative
+	   inline margins) and reads as the box's header tab. */
+	.seg-extra.box {
+		margin-inline: -1rem;
+		padding: 0.5rem 1rem 0.7rem;
+		border: 1px solid var(--border);
+		border-radius: 0.7rem;
+		background: var(--surface);
 	}
 
 	/* Label uses the metrics-normalized face (.trim-label in app.css), so
