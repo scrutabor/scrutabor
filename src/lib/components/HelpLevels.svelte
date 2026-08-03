@@ -8,9 +8,7 @@
 		const raw = localStorage.getItem('scrutabor-help');
 		if (raw === null) return;
 		const stored = Number(raw);
-		// Migration from the retired 0-3 graded slider: any gloss level (1-3)
-		// maps to "word by word"; 0 stays "text only".
-		if (Number.isInteger(stored)) value = stored <= 0 ? 0 : Math.min(stored, 2);
+		if (Number.isInteger(stored)) value = Math.max(0, Math.min(stored, 3));
 	});
 
 	function persist() {
@@ -23,14 +21,14 @@
 	<input
 		type="range"
 		min="0"
-		max="2"
+		max="3"
 		step="1"
 		bind:value
 		oninput={persist}
 		aria-label={M[lang].levelsAria}
 		aria-valuetext={M[lang].levels[value]}
 	/>
-	<span class="end smallcaps">{M[lang].levels[2]}</span>
+	<span class="end smallcaps">{M[lang].levels[3]}</span>
 </div>
 
 <style>

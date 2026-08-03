@@ -16,8 +16,9 @@
 	const gloss = $derived(entry?.glosses[lang]);
 	const sectionLabel = $derived(sectionFor(page.params.category ?? '')?.label[lang] ?? '');
 
-	// Three verbosity states:
-	// 0 = text only · 1 = + rubric narratives and translations · 2 = + glosses
+	// Four verbosity states:
+	// 0 = text only · 1 = + rubric narratives and folded translation reveals
+	// 2 = + interlinear glosses (reveals stay folded) · 3 = everything open
 	let helpLevel = $state(2);
 	let selectedId = $state<string | null>(null);
 	const openTranslations = new SvelteSet<string>();
@@ -43,7 +44,7 @@
 	// The top level means "everything": all translations unfold; individual
 	// boxes can still be closed by hand. Dropping below re-collapses them.
 	$effect(() => {
-		if (helpLevel >= 2) {
+		if (helpLevel >= 3) {
 			for (const id of translationIds) openTranslations.add(id);
 		} else {
 			openTranslations.clear();
