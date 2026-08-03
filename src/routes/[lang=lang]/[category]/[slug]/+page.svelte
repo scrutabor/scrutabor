@@ -97,7 +97,7 @@
 							>{w.post ?? ''}{' '}{/each}
 					</p>
 					{#if helpLevel >= 2 && gloss.segments[seg.id]?.translation}
-						<div class="seg-extra box">
+						<div class="seg-extra">
 							<p class="translation">{gloss.segments[seg.id].translation}</p>
 						</div>
 					{/if}
@@ -236,18 +236,13 @@
 		line-height: 1.5;
 	}
 
-	/* Translations sit in quiet boxes visually separate from the Latin,
-	   extended into the gutter so their text stays aligned with the verse. */
+	/* Translations get the same typographic treatment as rubric narratives —
+	   a thin vertical hairline with an indent — so the page stays layered
+	   text, not cards: red hairline = what happens, neutral = what it means. */
 	.seg-extra {
-		margin: -0.5rem 0 1.3rem;
-	}
-
-	.seg-extra.box {
-		margin-inline: -1rem;
-		padding: 0.55rem 1rem 0.6rem;
-		border: 1px solid var(--border);
-		border-radius: 0.7rem;
-		background: var(--surface);
+		margin: -0.45rem 0 1.4rem;
+		border-inline-start: 2px solid var(--wash-strong);
+		padding-inline-start: 0.9rem;
 	}
 
 	.translation {
