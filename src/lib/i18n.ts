@@ -8,9 +8,8 @@ export interface Messages {
 	tagline: string;
 	mottoRef: string;
 	workingEdition: string;
-	levels: [string, string, string, string];
+	levels: [string, string, string];
 	levelsAria: string;
-	translationLabel: string;
 	themeAria: { toLight: string; toDark: string };
 	langMenuAria: string;
 	lemmaLabel: string;
@@ -25,9 +24,8 @@ export const M: Record<Lang, Messages> = {
 		tagline: 'Módl się po łacinie ze zrozumieniem.',
 		mottoRef: 'ps 118, 34',
 		workingEdition: 'wydanie robocze',
-		levels: ['sam tekst', 'co się dzieje', 'słowo po słowie', 'wszystko'],
+		levels: ['sam tekst', 'słowo po słowie', 'wszystko'],
 		levelsAria: 'Poziom pomocy',
-		translationLabel: 'przekład',
 		themeAria: { toLight: 'przełącz na tryb jasny', toDark: 'przełącz na tryb ciemny' },
 		langMenuAria: 'wybór języka',
 		lemmaLabel: 'lemat',
@@ -40,9 +38,8 @@ export const M: Record<Lang, Messages> = {
 		tagline: 'Pray in Latin with understanding.',
 		mottoRef: 'ps 118 (119), 34',
 		workingEdition: 'working edition',
-		levels: ['text only', "what's happening", 'word by word', 'everything'],
+		levels: ['text only', 'word by word', 'everything'],
 		levelsAria: 'Help level',
-		translationLabel: 'translation',
 		themeAria: { toLight: 'switch to light mode', toDark: 'switch to dark mode' },
 		langMenuAria: 'language selection',
 		lemmaLabel: 'lemma',

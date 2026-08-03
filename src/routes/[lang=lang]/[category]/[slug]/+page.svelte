@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { SvelteSet } from 'svelte/reactivity';
 	import { TEXTS } from '$lib/corpus';
 	import { sectionFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
@@ -16,39 +15,21 @@
 	const gloss = $derived(entry?.glosses[lang]);
 	const sectionLabel = $derived(sectionFor(page.params.category ?? '')?.label[lang] ?? '');
 
-	// Four verbosity states:
-	// 0 = text only · 1 = + rubric narratives and folded translation reveals
-	// 2 = + interlinear glosses (reveals stay folded) · 3 = everything open
-	let helpLevel = $state(2);
+	// Three verbosity states:
+	// 0 = text only · 1 = + interlinear glosses · 2 = + translations (as
+	// always-open boxes, no toggles) and rubric narratives
+	let helpLevel = $state(1);
 	let selectedId = $state<string | null>(null);
-	const openTranslations = new SvelteSet<string>();
 
 	const wordsById = $derived(
 		new Map((doc?.segments ?? []).flatMap((s) => (s.words ?? []).map((w) => [w.id, w] as const)))
 	);
 
-	// Segment ids and word ids restart per text — reset transient state when
-	// navigating between texts within the same route component.
+	// Word ids restart per text — reset the selection when navigating
+	// between texts within the same route component.
 	$effect(() => {
 		void doc;
 		selectedId = null;
-		openTranslations.clear();
-	});
-
-	const translationIds = $derived(
-		(doc?.segments ?? [])
-			.filter((s) => gloss?.segments[s.id]?.translation)
-			.map((s) => s.id)
-	);
-
-	// The top level means "everything": all translations unfold; individual
-	// boxes can still be closed by hand. Dropping below re-collapses them.
-	$effect(() => {
-		if (helpLevel >= 3) {
-			for (const id of translationIds) openTranslations.add(id);
-		} else {
-			openTranslations.clear();
-		}
 	});
 
 	let selectedWord = $derived(selectedId ? (wordsById.get(selectedId) ?? null) : null);
@@ -66,11 +47,6 @@
 	function navigateTo(id: string) {
 		selectedId = id;
 		document.getElementById(id)?.scrollIntoView({ block: 'center' });
-	}
-
-	function toggleTranslation(id: string) {
-		if (openTranslations.has(id)) openTranslations.delete(id);
-		else openTranslations.add(id);
 	}
 </script>
 
@@ -104,37 +80,25 @@
 				{#if seg.type === 'rubric'}
 					<div class="rubric">
 						<p class="rubric-la" lang="la">{seg.text}</p>
-						{#if helpLevel >= 1 && gloss.segments[seg.id]?.narrative}
+						{#if helpLevel >= 2 && gloss.segments[seg.id]?.narrative}
 							<p class="rubric-narrative">{gloss.segments[seg.id].narrative}</p>
 						{/if}
 					</div>
 				{:else}
-					<p class="verse" class:glossed={helpLevel >= 2} lang="la">
+					<p class="verse" class:glossed={helpLevel >= 1} lang="la">
 						{#each seg.words ?? [] as w (w.id)}<button
 								class="word"
 								id={w.id}
 								class:selected={selectedId === w.id}
 								onclick={() => toggle(w.id)}
-								><ruby>{w.form}{#if helpLevel >= 2}<rt lang={lang}
+								><ruby>{w.form}{#if helpLevel >= 1}<rt lang={lang}
 											>{gloss.words[w.id]?.gloss}</rt
 										>{/if}</ruby></button
 							>{w.post ?? ''}{' '}{/each}
 					</p>
-					{#if helpLevel >= 1 && gloss.segments[seg.id]?.translation}
-						<div class="seg-extra" class:box={openTranslations.has(seg.id)}>
-							<button
-								class="reveal smallcaps trim-label"
-								class:open={openTranslations.has(seg.id)}
-								aria-expanded={openTranslations.has(seg.id)}
-								onclick={() => toggleTranslation(seg.id)}
-							>
-								{msgs.translationLabel}<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"
-									><path d="m6 9 6 6 6-6" /></svg
-								>
-							</button>
-							{#if openTranslations.has(seg.id)}
-								<p class="translation">{gloss.segments[seg.id].translation}</p>
-							{/if}
+					{#if helpLevel >= 2 && gloss.segments[seg.id]?.translation}
+						<div class="seg-extra box">
+							<p class="translation">{gloss.segments[seg.id].translation}</p>
 						</div>
 					{/if}
 				{/if}
@@ -272,70 +236,22 @@
 		line-height: 1.5;
 	}
 
+	/* Translations sit in quiet boxes visually separate from the Latin,
+	   extended into the gutter so their text stays aligned with the verse. */
 	.seg-extra {
-		margin: -0.6rem 0 1.3rem;
+		margin: -0.5rem 0 1.3rem;
 	}
 
-	/* When open, a box grows around the button and translation: the pill
-	   keeps its x-position (the box extends into the gutter via negative
-	   inline margins) and reads as the box's header tab. */
 	.seg-extra.box {
 		margin-inline: -1rem;
-		padding: 0.5rem 1rem 0.7rem;
+		padding: 0.55rem 1rem 0.6rem;
 		border: 1px solid var(--border);
 		border-radius: 0.7rem;
 		background: var(--surface);
 	}
 
-	/* Label uses the metrics-normalized face (.trim-label in app.css), so
-	   line-box centering IS optical centering, in every browser. The
-	   chevron rides the TEXT baseline via vertical-align — text and icon
-	   cannot drift apart: -0.24em puts the chevron's ink midpoint at
-	   small-cap mid-height (0.25em - half of the 0.7rem icon). Right
-	   padding is tighter: the chevron is airy and over-reads as space. */
-	.reveal {
-		display: inline-block;
-		font-variant-caps: small-caps;
-		letter-spacing: 0.08em;
-		font-size: 0.72rem;
-		background: none;
-		border: 1px solid var(--border);
-		border-radius: 999px;
-		padding: 0.22rem 0.7rem 0.22rem 0.9rem;
-		color: var(--ink-soft);
-		cursor: pointer;
-	}
-
-	.reveal:hover {
-		background: var(--wash);
-		color: var(--ink);
-	}
-
-	.reveal.open {
-		background: var(--wash-strong);
-		border-color: var(--wash-strong);
-		color: var(--ink);
-	}
-
-	.reveal .chev {
-		width: 0.7rem;
-		height: 0.7rem;
-		fill: none;
-		stroke: currentColor;
-		stroke-width: 2;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		transition: transform 0.15s ease;
-		vertical-align: -0.24em;
-		margin-inline-start: 0.32rem;
-	}
-
-	.reveal.open .chev {
-		transform: rotate(180deg);
-	}
-
 	.translation {
-		margin: 0.35rem 0 0;
+		margin: 0;
 		color: var(--ink-soft);
 		font-style: italic;
 		font-size: 1.05rem;

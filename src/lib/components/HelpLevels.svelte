@@ -8,7 +8,7 @@
 		const raw = localStorage.getItem('scrutabor-help');
 		if (raw === null) return;
 		const stored = Number(raw);
-		if (Number.isInteger(stored)) value = Math.max(0, Math.min(stored, 3));
+		if (Number.isInteger(stored)) value = Math.max(0, Math.min(stored, 2));
 	});
 
 	function persist() {
@@ -21,14 +21,14 @@
 	<input
 		type="range"
 		min="0"
-		max="3"
+		max="2"
 		step="1"
 		bind:value
 		oninput={persist}
 		aria-label={M[lang].levelsAria}
 		aria-valuetext={M[lang].levels[value]}
 	/>
-	<span class="end smallcaps">{M[lang].levels[3]}</span>
+	<span class="end smallcaps">{M[lang].levels[2]}</span>
 </div>
 
 <style>
