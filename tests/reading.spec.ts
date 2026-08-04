@@ -8,15 +8,17 @@ test('help slider walks the three-step ladder', async ({ page }) => {
 	await page.goto(CONFITEOR);
 	const slider = page.locator('input[type="range"]');
 
-	// default (1): interlinear glosses, no translations
+	// default (1): interlinear glosses and rubric narratives, no translations
 	await expect(page.locator('rt').first()).toBeVisible();
+	await expect(page.locator('.rubric-narrative').first()).toBeVisible();
 	await expect(page.locator('.translation')).toHaveCount(0);
 
 	// 0: bare Latin
 	await slider.fill('0');
 	await expect(page.locator('rt')).toHaveCount(0);
+	await expect(page.locator('.rubric-narrative')).toHaveCount(0);
 
-	// 2: translations and rubric narratives join
+	// 2: translations join
 	await slider.fill('2');
 	await expect(page.locator('.translation').first()).toBeVisible();
 	await expect(page.locator('.rubric-narrative').first()).toBeVisible();

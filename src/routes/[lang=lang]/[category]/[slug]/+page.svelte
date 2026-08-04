@@ -160,7 +160,10 @@
 				{#if seg.type === 'rubric'}
 					<div class="rubric">
 						<p class="rubric-la" lang="la">{seg.text}</p>
-						{#if helpLevel >= 2 && gloss.segments[seg.id]?.narrative}
+						<!-- Narratives ride with any help (reading-ux §5): knowing what
+						     happens at the altar is word-level-grade help; translations
+						     alone stay at the top step. -->
+						{#if helpLevel >= 1 && gloss.segments[seg.id]?.narrative}
 							<p class="rubric-narrative">{gloss.segments[seg.id].narrative}</p>
 						{/if}
 					</div>
