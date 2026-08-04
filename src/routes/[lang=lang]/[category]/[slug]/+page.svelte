@@ -114,7 +114,9 @@
 	let selectedWord = $derived(selectedId ? (wordsById.get(selectedId) ?? null) : null);
 	let selectedGloss = $derived(selectedId && gloss ? (gloss.words[selectedId] ?? null) : null);
 	let selectedAnalysis = $derived(
-		selectedWord && doc ? (selectedWord.analysis ?? doc.analysis_defaults) : null
+		selectedWord && doc
+			? (selectedWord.analysis ?? doc.analysis_defaults_words ?? doc.analysis_defaults)
+			: null
 	);
 
 	function toggle(id: string) {

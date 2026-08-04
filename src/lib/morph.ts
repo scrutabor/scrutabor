@@ -209,6 +209,8 @@ const ANALYSIS_LABELS: Record<
 			accepted: 'zaakceptowane',
 			disputed: 'sporne',
 			editorial: 'opracowanie',
+			whitakers: 'Whitaker',
+			collatinus: 'Collatinus',
 			expert: 'ekspert'
 		}
 	},
@@ -223,6 +225,8 @@ const ANALYSIS_LABELS: Record<
 			accepted: 'accepted',
 			disputed: 'disputed',
 			editorial: 'editorial',
+			whitakers: 'Whitaker',
+			collatinus: 'Collatinus',
 			expert: 'expert'
 		}
 	}

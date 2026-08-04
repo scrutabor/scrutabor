@@ -41,8 +41,16 @@ test('word panel shows all three layers', async ({ page }) => {
 	);
 	// layer 3: the contextual note
 	await expect(panel.locator('.function')).toContainText('Apozycja');
-	// provenance stays visible
-	await expect(panel.locator('.meta')).toContainText('opracowanie');
+	// provenance names the machine confirmers (schema 0.7.0 word default)
+	await expect(panel.locator('.meta')).toContainText('zaakceptowane');
+	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
+});
+
+test('a proper name absent from one analyzer names its true confirmers', async ({ page }) => {
+	await page.goto('/pl/ordinarium/confiteor?w=w009'); // Michaéli
+	const meta = page.locator('aside .meta');
+	await expect(meta).toContainText('opracowanie, Collatinus');
+	await expect(meta).not.toContainText('Whitaker,');
 });
 
 test('a lemma-level note appears on every token of the lemma', async ({ page }) => {

@@ -63,6 +63,9 @@ export interface TextDocument {
 	title: string;
 	status: string;
 	analysis_defaults: Analysis;
+	/** Word-token default (schema 0.7.0); segments never read it.
+	 * Resolution: word.analysis ?? analysis_defaults_words ?? analysis_defaults. */
+	analysis_defaults_words?: Analysis;
 	segments: Segment[];
 }
 
