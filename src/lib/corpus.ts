@@ -105,6 +105,9 @@ export interface LemmaEntry {
 export interface SenseEntry {
 	senses: string[];
 	note?: string;
+	// Target-language words genuinely derived from this lemma — learner
+	// memory hooks (corpus SCHEMA.md 0.6.0).
+	derivatives?: string[];
 	analysis?: Analysis;
 }
 

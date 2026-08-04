@@ -54,6 +54,12 @@
 				{#if sense.note}
 					<p class="note">{sense.note}</p>
 				{/if}
+				{#if sense.derivatives}
+					<p class="derivatives">
+						<span class="label smallcaps">{msgs.derivativesLabel}</span>
+						{sense.derivatives.join(', ')}
+					</p>
+				{/if}
 			{/if}
 
 			{#if texts.length > 0}
@@ -150,6 +156,19 @@
 		color: var(--ink-soft);
 		font-size: 0.98rem;
 		line-height: 1.55;
+	}
+
+	.derivatives {
+		margin: 0.9rem auto 0;
+		max-width: 28rem;
+		text-align: center;
+		font-size: 0.98rem;
+	}
+
+	.derivatives .label {
+		color: var(--ink-soft);
+		font-size: 0.75rem;
+		margin-right: 0.35rem;
 	}
 
 	.occurrences {
