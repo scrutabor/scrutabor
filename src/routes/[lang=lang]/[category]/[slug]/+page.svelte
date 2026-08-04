@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { replaceState } from '$app/navigation';
+	import { pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import { TEXTS } from '$lib/corpus';
 	import { sectionFor } from '$lib/catalog';
@@ -27,34 +27,74 @@
 
 	let selectedId = $state<string | null>(null);
 
-	// The selection is mirrored into ?w= with replaceState — no extra
-	// history entries, but the entry the reader leaves behind carries the
-	// open word, so coming back from a lemma or grammar page restores the
-	// panel. (page.url is NOT reactive to shallow routing, so the mirror is
-	// one-way: taps write state + URL, navigations read the URL back.)
-	function setSelection(id: string | null) {
-		selectedId = id;
+	// Bottom-sheet history model (one entry per panel session, the Material
+	// convention): OPENING the panel pushes a ?w= entry, so back closes it;
+	// SWITCHING words replaces, so browsing ten words never costs ten back
+	// presses; ×, outside-click, Esc and back all close through the same
+	// popped entry. A panel opened by a deep link pushed nothing — back then
+	// returns to the page the reader came from, and closing it merely strips
+	// ?w= from the current entry.
+	let openedByPush = false;
+
+	function urlWith(id: string | null): URL {
 		const url = new URL(location.href);
 		if (id) url.searchParams.set('w', id);
 		else url.searchParams.delete('w');
-		replaceState(url, {});
+		return url;
 	}
 
-	// Real navigations (initial load, deep links, back/forward, moves
-	// between texts) apply the URL's selection and scroll to it. page.url is
-	// only the TRIGGER; the value comes from location — after back/forward
-	// to an entry modified by shallow replaceState, page.url can lag behind
-	// the real URL, while location never lies. Taps use replaceState, which
-	// touches neither the trigger nor any other dependency, so they cannot
-	// re-run this (the revert-on-tap regression class stays excluded).
-	// Effects never run at prerender, so reading location here is safe.
-	$effect(() => {
-		void page.url;
+	function openWord(id: string) {
+		if (selectedId === null) {
+			pushState(urlWith(id), {});
+			openedByPush = true;
+		} else {
+			replaceState(urlWith(id), {});
+		}
+		selectedId = id;
+	}
+
+	function closePanel() {
+		if (openedByPush) {
+			openedByPush = false;
+			history.back();
+		} else {
+			replaceState(urlWith(null), {});
+		}
+		selectedId = null;
+	}
+
+	// Navigations apply the URL's selection and scroll to it. page.url is
+	// only the TRIGGER (real navigations change it; shallow push/replace do
+	// not, so taps cannot re-run this — the revert-on-tap regression class
+	// stays excluded); the value comes from location, because after a
+	// history traversal to a shallow-modified entry page.url can lag behind
+	// the real URL. The popstate listener covers same-route traversals
+	// (back closing / forward reopening the panel), where no navigation
+	// fires at all. Effects and window listeners never run at prerender, so
+	// reading location here is safe.
+	function applyFromLocation() {
 		const w = new URL(location.href).searchParams.get('w');
 		const target = w && wordsById.has(w) ? w : null;
+		if (!target) openedByPush = false;
 		selectedId = target;
 		if (target) document.getElementById(target)?.scrollIntoView({ block: 'center' });
+	}
+
+	$effect(() => {
+		void page.url;
+		void wordsById;
+		applyFromLocation();
 	});
+
+	function onWindowClick(e: MouseEvent) {
+		if (selectedId === null) return;
+		const t = e.target as Element | null;
+		if (t && !t.closest('aside, .word')) closePanel();
+	}
+
+	function onWindowKeydown(e: KeyboardEvent) {
+		if (e.key === 'Escape' && selectedId !== null) closePanel();
+	}
 
 	let selectedWord = $derived(selectedId ? (wordsById.get(selectedId) ?? null) : null);
 	let selectedGloss = $derived(
@@ -65,14 +105,17 @@
 	);
 
 	function toggle(id: string) {
-		setSelection(selectedId === id ? null : id);
+		if (selectedId === id) closePanel();
+		else openWord(id);
 	}
 
 	function navigateTo(id: string) {
-		setSelection(id);
+		openWord(id);
 		document.getElementById(id)?.scrollIntoView({ block: 'center' });
 	}
 </script>
+
+<svelte:window onpopstate={applyFromLocation} onclick={onWindowClick} onkeydown={onWindowKeydown} />
 
 <svelte:head>
 	<title>{doc ? `${doc.title} — Scrutabor` : 'Scrutabor'}</title>
@@ -135,7 +178,7 @@
 				gloss={selectedGloss}
 				analysis={selectedAnalysis}
 				{lang}
-				onclose={() => setSelection(null)}
+				onclose={closePanel}
 				onnavigate={navigateTo}
 			/>
 		{/if}
