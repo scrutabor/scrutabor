@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import { TEXTS } from '$lib/corpus';
 	import { sectionFor } from '$lib/catalog';
@@ -20,25 +20,36 @@
 	// 0 = text only · 1 = + interlinear glosses · 2 = + translations (as
 	// always-open boxes, no toggles) and rubric narratives
 	let helpLevel = $state(1);
-	let selectedId = $state<string | null>(null);
 
 	const wordsById = $derived(
 		new Map((doc?.segments ?? []).flatMap((s) => (s.words ?? []).map((w) => [w.id, w] as const)))
 	);
 
-	// Deep link from the lemma-page concordance: ?w=wNNN opens the panel on
-	// that word. Guarded by `browser` — search params are unknowable at
-	// prerender time and reading them there is an error.
-	const requestedId = $derived(browser ? page.url.searchParams.get('w') : null);
+	let selectedId = $state<string | null>(null);
 
-	// Word ids restart per text — reset the selection when navigating
-	// between texts within the same route component (or honor the deep link).
-	// The effect must not read `selectedId` (a read would make every word tap
-	// re-run it and revert the selection to the URL state); it tracks only
-	// the document and the deep-link target.
+	// The selection is mirrored into ?w= with replaceState — no extra
+	// history entries, but the entry the reader leaves behind carries the
+	// open word, so coming back from a lemma or grammar page restores the
+	// panel. (page.url is NOT reactive to shallow routing, so the mirror is
+	// one-way: taps write state + URL, navigations read the URL back.)
+	function setSelection(id: string | null) {
+		selectedId = id;
+		const url = new URL(location.href);
+		if (id) url.searchParams.set('w', id);
+		else url.searchParams.delete('w');
+		replaceState(url, {});
+	}
+
+	// Real navigations (initial load, deep links, back/forward, moves
+	// between texts) apply the URL's selection and scroll to it. page.url is
+	// reactive to real navigations but NOT to the shallow replaceState above,
+	// so taps never retrigger this — the revert-on-tap regression class is
+	// excluded by construction. The effect must not read selectedId (that
+	// read would re-add the dependency); effects never run at prerender, so
+	// reading search params here is safe.
 	$effect(() => {
-		void doc;
-		const target = requestedId && wordsById.has(requestedId) ? requestedId : null;
+		const w = page.url.searchParams.get('w');
+		const target = w && wordsById.has(w) ? w : null;
 		selectedId = target;
 		if (target) document.getElementById(target)?.scrollIntoView({ block: 'center' });
 	});
@@ -52,11 +63,11 @@
 	);
 
 	function toggle(id: string) {
-		selectedId = selectedId === id ? null : id;
+		setSelection(selectedId === id ? null : id);
 	}
 
 	function navigateTo(id: string) {
-		selectedId = id;
+		setSelection(id);
 		document.getElementById(id)?.scrollIntoView({ block: 'center' });
 	}
 </script>
@@ -122,7 +133,7 @@
 				gloss={selectedGloss}
 				analysis={selectedAnalysis}
 				{lang}
-				onclose={() => (selectedId = null)}
+				onclose={() => setSelection(null)}
 				onnavigate={navigateTo}
 			/>
 		{/if}
