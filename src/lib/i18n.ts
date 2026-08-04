@@ -1,7 +1,8 @@
 // UI strings live here; corpus content lives in the gloss layers.
 export type Lang = 'pl' | 'en';
 
-export const LANGS: Lang[] = ['pl', 'en'];
+// English first, everywhere a language list renders (owner rule).
+export const LANGS: Lang[] = ['en', 'pl'];
 
 export interface Messages {
 	langName: string;

@@ -1,19 +1,43 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation';
 	import { LANGS, M } from '$lib/i18n';
-
-	// Returning readers go straight to their language; first visit chooses.
-	onMount(() => {
-		const stored = localStorage.getItem('scrutabor-lang');
-		if (stored === 'pl' || stored === 'en') {
-			goto(`/${stored}`, { replaceState: true });
-		}
-	});
 </script>
 
+<!-- The root is not a page, it is a router: pick the reader's language
+     and get out of the way (prayer-book first — no interstitial). The
+     script element below is prerendered into <head> so it runs before
+     first paint — the only way a static site can redirect without a
+     flash or a backend. Order of trust: the stored choice (maintained
+     by the [lang] layout on every visit), then the browser's ordered
+     language list, then English. The body is the fallback for no-JS
+     readers and crawlers. -->
 <svelte:head>
 	<title>Scrutabor</title>
+	<link rel="alternate" hreflang="en" href="https://scrutabor.org/en" />
+	<link rel="alternate" hreflang="pl" href="https://scrutabor.org/pl" />
+	<link rel="alternate" hreflang="x-default" href="https://scrutabor.org/en" />
+	<script>
+		(function () {
+			var pick = 'en';
+			try {
+				var stored = localStorage.getItem('scrutabor-lang');
+				if (stored === 'pl' || stored === 'en') {
+					pick = stored;
+				} else {
+					var prefs = navigator.languages || [navigator.language || ''];
+					for (var i = 0; i < prefs.length; i++) {
+						var base = String(prefs[i]).toLowerCase().split('-')[0];
+						if (base === 'pl' || base === 'en') {
+							pick = base;
+							break;
+						}
+					}
+				}
+			} catch (e) {
+				/* storage blocked: fall through to English */
+			}
+			location.replace('/' + pick + location.search + location.hash);
+		})();
+	</script>
 </svelte:head>
 
 <div class="landing">
