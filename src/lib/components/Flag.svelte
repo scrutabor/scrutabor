@@ -21,7 +21,12 @@
 		</clipPath>
 		<rect width="60" height="40" fill="#012169" />
 		<path d="M0,0 60,40 M60,0 0,40" stroke="#fff" stroke-width="7" />
-		<path d="M0,0 60,40 M60,0 0,40" clip-path="url(#quad-{uid})" stroke="#c8102e" stroke-width="4.5" />
+		<path
+			d="M0,0 60,40 M60,0 0,40"
+			clip-path="url(#quad-{uid})"
+			stroke="#c8102e"
+			stroke-width="4.5"
+		/>
 		<path d="M30,0 v40 M0,20 h60" stroke="#fff" stroke-width="12" />
 		<path d="M30,0 v40 M0,20 h60" stroke="#c8102e" stroke-width="7" />
 	</svg>

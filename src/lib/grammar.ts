@@ -55,19 +55,28 @@ export const CONCEPTS: Concept[] = [
 				la: 'Dóminus tecum',
 				textKey: 'orationes/ave-maria',
 				wordId: 'w005',
-				note: { pl: 'Pan [jest] z Tobą — podmiot z domyślnym „est”.', en: 'the Lord [is] with thee — the subject with an understood “est”.' }
+				note: {
+					pl: 'Pan [jest] z Tobą — podmiot z domyślnym „est”.',
+					en: 'the Lord [is] with thee — the subject with an understood “est”.'
+				}
 			},
 			{
 				la: 'Fiat volúntas tua',
 				textKey: 'orationes/pater-noster',
 				wordId: 'w014',
-				note: { pl: 'wola — podmiot prośby: co ma się stać?', en: 'the will — the subject of the petition: what is to be done?' }
+				note: {
+					pl: 'wola — podmiot prośby: co ma się stać?',
+					en: 'the will — the subject of the petition: what is to be done?'
+				}
 			},
 			{
 				la: 'Glória Patri',
 				textKey: 'orationes/gloria-patri',
 				wordId: 'w001',
-				note: { pl: 'chwała [niech będzie] — mianownik bez wyrażonego orzeczenia.', en: 'glory [be] — a nominative with the verb left unexpressed.' }
+				note: {
+					pl: 'chwała [niech będzie] — mianownik bez wyrażonego orzeczenia.',
+					en: 'glory [be] — a nominative with the verb left unexpressed.'
+				}
 			}
 		]
 	},
@@ -101,13 +110,19 @@ export const CONCEPTS: Concept[] = [
 				la: 'in hora mortis nostræ',
 				textKey: 'orationes/ave-maria',
 				wordId: 'w029',
-				note: { pl: 'w godzinie śmierci — w godzinie czego.', en: 'at the hour of death — the hour of what.' }
+				note: {
+					pl: 'w godzinie śmierci — w godzinie czego.',
+					en: 'at the hour of death — the hour of what.'
+				}
 			},
 			{
 				la: 'in sǽcula sæculórum',
 				textKey: 'orationes/gloria-patri',
 				wordId: 'w019',
-				note: { pl: 'wieki wieków — dopełniacz wzmacnia przez powtórzenie.', en: 'ages of ages — the genitive intensifies by repetition.' }
+				note: {
+					pl: 'wieki wieków — dopełniacz wzmacnia przez powtórzenie.',
+					en: 'ages of ages — the genitive intensifies by repetition.'
+				}
 			}
 		]
 	},
@@ -125,7 +140,10 @@ export const CONCEPTS: Concept[] = [
 				la: 'Confíteor Deo omnipoténti',
 				textKey: 'ordinarium/confiteor',
 				wordId: 'w002',
-				note: { pl: 'spowiadam się komu — Bogu; pierwszy z długiej listy celowników.', en: 'I confess to whom — to God; the first of a long chain of datives.' }
+				note: {
+					pl: 'spowiadam się komu — Bogu; pierwszy z długiej listy celowników.',
+					en: 'I confess to whom — to God; the first of a long chain of datives.'
+				}
 			},
 			{
 				la: 'Glória Patri',
@@ -167,7 +185,10 @@ export const CONCEPTS: Concept[] = [
 				la: 'ne nos indúcas in tentatiónem',
 				textKey: 'orationes/pater-noster',
 				wordId: 'w044',
-				note: { pl: '„in” z biernikiem — kierunek: w pokusę.', en: '“in” with the accusative — direction: into temptation.' }
+				note: {
+					pl: '„in” z biernikiem — kierunek: w pokusę.',
+					en: '“in” with the accusative — direction: into temptation.'
+				}
 			},
 			{
 				la: 'ad Dóminum Deum nostrum',
@@ -197,7 +218,10 @@ export const CONCEPTS: Concept[] = [
 				la: 'cogitatióne, verbo et ópere',
 				textKey: 'ordinarium/confiteor',
 				wordId: 'w027',
-				note: { pl: 'zgrzeszyłem czym — myślą, mową, uczynkiem: trzy ablativy narzędzia.', en: 'sinned by what — by thought, word and deed: three ablatives of means.' }
+				note: {
+					pl: 'zgrzeszyłem czym — myślą, mową, uczynkiem: trzy ablativy narzędzia.',
+					en: 'sinned by what — by thought, word and deed: three ablatives of means.'
+				}
 			},
 			{
 				la: 'ora pro nobis',
@@ -209,7 +233,10 @@ export const CONCEPTS: Concept[] = [
 				la: 'qui es in cælis',
 				textKey: 'orationes/pater-noster',
 				wordId: 'w006',
-				note: { pl: '„in” z ablativem — miejsce: w niebiosach.', en: '“in” with the ablative — place: in the heavens.' }
+				note: {
+					pl: '„in” z ablativem — miejsce: w niebiosach.',
+					en: '“in” with the ablative — place: in the heavens.'
+				}
 			}
 		]
 	},
@@ -227,7 +254,10 @@ export const CONCEPTS: Concept[] = [
 				la: 'Pater noster',
 				textKey: 'orationes/pater-noster',
 				wordId: 'w001',
-				note: { pl: 'Ojcze — cała modlitwa jest mową wprost.', en: 'Father — the whole prayer is speech to a Thou.' }
+				note: {
+					pl: 'Ojcze — cała modlitwa jest mową wprost.',
+					en: 'Father — the whole prayer is speech to a Thou.'
+				}
 			},
 			{
 				la: 'Ave María',
@@ -239,7 +269,10 @@ export const CONCEPTS: Concept[] = [
 				la: 'et tibi, pater',
 				textKey: 'ordinarium/confiteor',
 				wordId: 'w023',
-				note: { pl: 'wołacz, nie celownik — przywołanie osoby, nie element wyliczenia.', en: 'vocative, not dative — an address to the person, not an item in the list.' }
+				note: {
+					pl: 'wołacz, nie celownik — przywołanie osoby, nie element wyliczenia.',
+					en: 'vocative, not dative — an address to the person, not an item in the list.'
+				}
 			}
 		]
 	},
@@ -275,7 +308,10 @@ export const CONCEPTS: Concept[] = [
 				la: 'ne nos indúcas',
 				textKey: 'orationes/pater-noster',
 				wordId: 'w042',
-				note: { pl: 'z „ne” — prośba przecząca: abyś nie wiódł.', en: 'with “ne” — a negative petition: that Thou not lead.' }
+				note: {
+					pl: 'z „ne” — prośba przecząca: abyś nie wiódł.',
+					en: 'with “ne” — a negative petition: that Thou not lead.'
+				}
 			}
 		]
 	},
@@ -311,7 +347,10 @@ export const CONCEPTS: Concept[] = [
 				la: 'Ave María',
 				textKey: 'orationes/ave-maria',
 				wordId: 'w001',
-				note: { pl: 'rozkaźnik jako pozdrowienie: witaj.', en: 'an imperative as a greeting: hail.' }
+				note: {
+					pl: 'rozkaźnik jako pozdrowienie: witaj.',
+					en: 'an imperative as a greeting: hail.'
+				}
 			}
 		]
 	},
@@ -329,13 +368,19 @@ export const CONCEPTS: Concept[] = [
 				la: 'Confíteor Deo',
 				textKey: 'ordinarium/confiteor',
 				wordId: 'w001',
-				note: { pl: 'spowiadam się — forma bierna, znaczenie czynne.', en: 'I confess — passive form, active meaning.' }
+				note: {
+					pl: 'spowiadam się — forma bierna, znaczenie czynne.',
+					en: 'I confess — passive form, active meaning.'
+				}
 			},
 			{
 				la: 'Ídeo precor',
 				textKey: 'ordinarium/confiteor',
 				wordId: 'w039',
-				note: { pl: 'błagam — drugi deponens tej modlitwy.', en: 'I beseech — the prayer’s second deponent.' }
+				note: {
+					pl: 'błagam — drugi deponens tej modlitwy.',
+					en: 'I beseech — the prayer’s second deponent.'
+				}
 			}
 		]
 	},
@@ -353,19 +398,28 @@ export const CONCEPTS: Concept[] = [
 				la: 'Michaéli Archángelo',
 				textKey: 'ordinarium/confiteor',
 				wordId: 'w010',
-				note: { pl: 'Michałowi — Archaniołowi: ten sam celownik.', en: 'to Michael — the Archangel: the same dative.' }
+				note: {
+					pl: 'Michałowi — Archaniołowi: ten sam celownik.',
+					en: 'to Michael — the Archangel: the same dative.'
+				}
 			},
 			{
 				la: 'fructus ventris tui Jesus',
 				textKey: 'orationes/ave-maria',
 				wordId: 'w016',
-				note: { pl: 'owoc… — Jezus: apozycja w mianowniku.', en: 'the fruit… — Jesus: an apposition in the nominative.' }
+				note: {
+					pl: 'owoc… — Jezus: apozycja w mianowniku.',
+					en: 'the fruit… — Jesus: an apposition in the nominative.'
+				}
 			},
 			{
 				la: 'Sancta María, Mater Dei',
 				textKey: 'orationes/ave-maria',
 				wordId: 'w019',
-				note: { pl: 'Maryjo — Matko: dopowiedzenie w wołaczu.', en: 'Mary — Mother: an apposition in the vocative.' }
+				note: {
+					pl: 'Maryjo — Matko: dopowiedzenie w wołaczu.',
+					en: 'Mary — Mother: an apposition in the vocative.'
+				}
 			},
 			{
 				la: 'pro nobis peccatóribus',
@@ -386,9 +440,7 @@ export function conceptById(id: string): Concept | undefined {
 for (const c of CONCEPTS) {
 	for (const ex of c.examples) {
 		const entry = TEXTS[ex.textKey];
-		const word = entry?.text.segments
-			.flatMap((s) => s.words ?? [])
-			.find((w) => w.id === ex.wordId);
+		const word = entry?.text.segments.flatMap((s) => s.words ?? []).find((w) => w.id === ex.wordId);
 		if (!word) {
 			throw new Error(`grammar: ${c.id}: no word ${ex.wordId} in ${ex.textKey}`);
 		}

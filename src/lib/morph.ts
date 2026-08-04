@@ -164,8 +164,7 @@ export function describeMorphParts(m: Morph, lang: Lang): MorphPart[] {
 		if (m.person) parts.push({ text: t.person(m.person) });
 		if (m.number) parts.push({ text: t.number[m.number] ?? m.number });
 		if (m.tense) parts.push({ text: t.tense[m.tense] ?? m.tense });
-		if (m.mood)
-			parts.push({ text: t.mood[m.mood] ?? m.mood, concept: MOOD_CONCEPT[m.mood] });
+		if (m.mood) parts.push({ text: t.mood[m.mood] ?? m.mood, concept: MOOD_CONCEPT[m.mood] });
 		if (m.voice)
 			parts.push({
 				text: t.voice[m.voice] ?? m.voice,

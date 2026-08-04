@@ -104,9 +104,7 @@
 	}
 
 	let selectedWord = $derived(selectedId ? (wordsById.get(selectedId) ?? null) : null);
-	let selectedGloss = $derived(
-		selectedId && gloss ? (gloss.words[selectedId] ?? null) : null
-	);
+	let selectedGloss = $derived(selectedId && gloss ? (gloss.words[selectedId] ?? null) : null);
 	let selectedAnalysis = $derived(
 		selectedWord && doc ? (selectedWord.analysis ?? doc.analysis_defaults) : null
 	);
@@ -165,9 +163,9 @@
 								id={w.id}
 								class:selected={selectedId === w.id}
 								onclick={() => toggle(w.id)}
-								><ruby>{w.form}{#if helpLevel >= 1}<rt lang={lang}
-											>{gloss.words[w.id]?.gloss}</rt
-										>{/if}</ruby></button
+								><ruby
+									>{w.form}{#if helpLevel >= 1}<rt {lang}>{gloss.words[w.id]?.gloss}</rt>{/if}</ruby
+								></button
 							>{w.post ?? ''}{' '}{/each}
 					</p>
 					{#if helpLevel >= 2 && gloss.segments[seg.id]?.translation}
