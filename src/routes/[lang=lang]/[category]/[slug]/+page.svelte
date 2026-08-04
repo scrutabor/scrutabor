@@ -33,10 +33,14 @@
 
 	// Word ids restart per text — reset the selection when navigating
 	// between texts within the same route component (or honor the deep link).
+	// The effect must not read `selectedId` (a read would make every word tap
+	// re-run it and revert the selection to the URL state); it tracks only
+	// the document and the deep-link target.
 	$effect(() => {
 		void doc;
-		selectedId = requestedId && wordsById.has(requestedId) ? requestedId : null;
-		if (selectedId) document.getElementById(selectedId)?.scrollIntoView({ block: 'center' });
+		const target = requestedId && wordsById.has(requestedId) ? requestedId : null;
+		selectedId = target;
+		if (target) document.getElementById(target)?.scrollIntoView({ block: 'center' });
 	});
 
 	let selectedWord = $derived(selectedId ? (wordsById.get(selectedId) ?? null) : null);
