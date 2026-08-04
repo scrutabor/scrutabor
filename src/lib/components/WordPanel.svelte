@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { LEXICON, type Analysis, type Word, type WordGloss } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
-	import { GENDER_MARK, describeAnalysis, describeMorph } from '$lib/morph';
+	import { GENDER_MARK, describeAnalysis, describeMorphParts } from '$lib/morph';
 
 	let {
 		word,
@@ -62,7 +62,12 @@
 				<span class="head-arrow" aria-hidden="true">›</span></a
 			>
 		</p>
-		<p class="morph">{describeMorph(word.morph, lang)}</p>
+		<p class="morph">
+			{#each describeMorphParts(word.morph, lang) as part, i (i)}{#if part.concept}<a
+						class="concept"
+						href="/{lang}/grammatica/{part.concept}">{part.text}</a
+					>{:else}{part.text}{/if}{/each}
+		</p>
 		{#if gloss}
 			<p class="gloss">{gloss.gloss}</p>
 		{/if}
@@ -185,6 +190,16 @@
 		margin: 0.35rem 0 0;
 		color: var(--rubric);
 		font-size: 1rem;
+	}
+
+	.concept {
+		color: inherit;
+		text-decoration: none;
+		border-bottom: 1px dotted var(--rubric);
+	}
+
+	.concept:hover {
+		border-bottom-style: solid;
 	}
 
 	.gloss {

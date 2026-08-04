@@ -134,29 +134,65 @@ export function describeLemma(
 	return parts.join(', ');
 }
 
-export function describeMorph(m: Morph, lang: Lang): string {
+// A parse-line segment; `concept` names a grammar-concept page the term
+// links to (/{lang}/grammatica/{concept}).
+export interface MorphPart {
+	text: string;
+	concept?: string;
+}
+
+const CASE_CONCEPT: Record<string, string> = {
+	nom: 'nominativus',
+	gen: 'genetivus',
+	dat: 'dativus',
+	acc: 'accusativus',
+	abl: 'ablativus',
+	voc: 'vocativus'
+};
+
+const MOOD_CONCEPT: Record<string, string> = { subj: 'coniunctivus', imp: 'imperativus' };
+
+export function describeMorphParts(m: Morph, lang: Lang): MorphPart[] {
 	const t = LABELS[lang];
 	const pos = t.pos[m.pos] ?? m.pos;
 
-	if (m.pos === 'prep') return t.prep(m.governs);
-	if (m.pos === 'adv' || m.pos === 'conj' || m.pos === 'intj') return pos;
+	if (m.pos === 'prep') return [{ text: t.prep(m.governs) }];
+	if (m.pos === 'adv' || m.pos === 'conj' || m.pos === 'intj') return [{ text: pos }];
 
-	const parts: string[] = [];
+	const parts: MorphPart[] = [];
 	if (m.pos === 'verb') {
-		if (m.person) parts.push(t.person(m.person));
-		if (m.number) parts.push(t.number[m.number] ?? m.number);
-		if (m.tense) parts.push(t.tense[m.tense] ?? m.tense);
-		if (m.mood) parts.push(t.mood[m.mood] ?? m.mood);
-		if (m.voice) parts.push(t.voice[m.voice] ?? m.voice);
-		if (m.conj) parts.push(t.conj(m.conj));
+		if (m.person) parts.push({ text: t.person(m.person) });
+		if (m.number) parts.push({ text: t.number[m.number] ?? m.number });
+		if (m.tense) parts.push({ text: t.tense[m.tense] ?? m.tense });
+		if (m.mood)
+			parts.push({ text: t.mood[m.mood] ?? m.mood, concept: MOOD_CONCEPT[m.mood] });
+		if (m.voice)
+			parts.push({
+				text: t.voice[m.voice] ?? m.voice,
+				concept: m.voice === 'dep' ? 'deponens' : undefined
+			});
+		if (m.conj) parts.push({ text: t.conj(m.conj) });
 	} else {
-		if (m.degree) parts.push(t.degree[m.degree] ?? m.degree);
-		if (m.case) parts.push(t.case[m.case] ?? m.case);
-		if (m.number) parts.push(t.number[m.number] ?? m.number);
-		if (m.gender) parts.push(t.gender[m.gender] ?? m.gender);
-		if (m.decl) parts.push(t.decl(m.decl));
+		if (m.degree) parts.push({ text: t.degree[m.degree] ?? m.degree });
+		if (m.case) parts.push({ text: t.case[m.case] ?? m.case, concept: CASE_CONCEPT[m.case] });
+		if (m.number) parts.push({ text: t.number[m.number] ?? m.number });
+		if (m.gender) parts.push({ text: t.gender[m.gender] ?? m.gender });
+		if (m.decl) parts.push({ text: t.decl(m.decl) });
 	}
-	return parts.length > 0 ? `${pos} — ${parts.join(', ')}` : pos;
+
+	if (parts.length === 0) return [{ text: pos }];
+	const out: MorphPart[] = [{ text: `${pos} — ` }];
+	parts.forEach((p, i) => {
+		if (i > 0) out.push({ text: ', ' });
+		out.push(p);
+	});
+	return out;
+}
+
+export function describeMorph(m: Morph, lang: Lang): string {
+	return describeMorphParts(m, lang)
+		.map((p) => p.text)
+		.join('');
 }
 
 const ANALYSIS_LABELS: Record<

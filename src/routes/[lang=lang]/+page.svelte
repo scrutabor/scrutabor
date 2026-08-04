@@ -40,6 +40,9 @@
 			</section>
 		{/each}
 
+		<p class="grammar-link smallcaps">
+			<a href="/{lang}/grammatica">{msgs.grammarTitle} →</a>
+		</p>
 		<p class="working smallcaps">{msgs.working}</p>
 	</main>
 </div>
@@ -144,8 +147,22 @@
 		text-align: right;
 	}
 
-	.working {
+	.grammar-link {
 		margin: 3rem 0 0;
+		font-size: 0.8rem;
+	}
+
+	.grammar-link a {
+		color: var(--ink-soft);
+		text-decoration: none;
+	}
+
+	.grammar-link a:hover {
+		color: var(--ink);
+	}
+
+	.working {
+		margin: 0.6rem 0 0;
 		font-size: 0.75rem;
 		color: var(--ink-soft);
 	}

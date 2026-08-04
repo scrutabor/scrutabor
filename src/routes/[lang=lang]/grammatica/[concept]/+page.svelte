@@ -1,0 +1,164 @@
+<script lang="ts">
+	import { page } from '$app/state';
+	import LangMenu from '$lib/components/LangMenu.svelte';
+	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+	import { conceptById } from '$lib/grammar';
+	import { M, type Lang } from '$lib/i18n';
+
+	const lang = $derived(page.params.lang as Lang);
+	const msgs = $derived(M[lang]);
+	const concept = $derived(conceptById(page.params.concept ?? ''));
+</script>
+
+<svelte:head>
+	<title>{concept ? `${concept.label[lang]} — Scrutabor` : 'Scrutabor'}</title>
+	{#if concept}
+		<meta name="description" content={concept.what[lang]} />
+	{/if}
+</svelte:head>
+
+<div class="page">
+	<nav>
+		<a href="/{lang}/grammatica" class="back smallcaps">{msgs.grammarTitle}</a>
+		<div class="nav-right">
+			<LangMenu {lang} />
+			<ThemeToggle {lang} />
+		</div>
+	</nav>
+
+	{#if !concept}
+		<main>
+			<p class="notfound">{msgs.notFound}</p>
+		</main>
+	{:else}
+		<main>
+			<h1>{concept.label[lang]}</h1>
+			{#if concept.la !== concept.label[lang]}
+				<p class="latin-name" lang="la">{concept.la}</p>
+			{/if}
+			<p class="what">{concept.what[lang]}</p>
+			{#if concept.spot}
+				<p class="spot">{concept.spot[lang]}</p>
+			{/if}
+
+			<section class="examples">
+				<h2 class="smallcaps">{msgs.occurrences}</h2>
+				{#each concept.examples as ex (ex.textKey + ex.wordId)}
+					<div class="example">
+						<p class="example-la" lang="la">
+							<a href="/{lang}/{ex.textKey}?w={ex.wordId}">{ex.la}</a>
+						</p>
+						<p class="example-note">{ex.note[lang]}</p>
+					</div>
+				{/each}
+			</section>
+		</main>
+	{/if}
+</div>
+
+<style>
+	.page {
+		max-width: 38rem;
+		margin: 0 auto;
+		padding: 1.25rem 1.5rem 4rem;
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.nav-right {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.back {
+		text-decoration: none;
+		color: var(--ink-soft);
+		font-size: 0.85rem;
+	}
+
+	.back:hover {
+		color: var(--ink);
+	}
+
+	h1 {
+		margin: 1.8rem 0 0;
+		font-size: 2.2rem;
+		font-weight: 500;
+		text-align: center;
+	}
+
+	.latin-name {
+		margin: 0.3rem 0 0;
+		text-align: center;
+		color: var(--ink-soft);
+		font-style: italic;
+		font-size: 1.05rem;
+	}
+
+	.what {
+		margin: 1.6rem auto 0;
+		max-width: 30rem;
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
+
+	.spot {
+		margin: 0.7rem auto 0;
+		max-width: 30rem;
+		color: var(--ink-soft);
+		font-size: 1rem;
+		line-height: 1.55;
+	}
+
+	.examples {
+		margin: 2.4rem auto 0;
+		max-width: 30rem;
+	}
+
+	h2 {
+		margin: 0 0 0.9rem;
+		font-size: 0.8rem;
+		font-weight: 500;
+		color: var(--rubric);
+		text-align: center;
+	}
+
+	.example {
+		margin: 0 0 1.1rem;
+		border-inline-start: 2px solid var(--wash-strong);
+		padding-inline-start: 0.9rem;
+	}
+
+	.example-la {
+		margin: 0;
+		font-size: 1.2rem;
+	}
+
+	.example-la a {
+		color: inherit;
+		text-decoration: none;
+		border-bottom: 1px dotted var(--rubric);
+	}
+
+	.example-la a:hover {
+		color: var(--rubric);
+	}
+
+	.example-note {
+		margin: 0.15rem 0 0;
+		color: var(--ink-soft);
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	.notfound {
+		margin: 3rem 0;
+		text-align: center;
+		color: var(--ink-soft);
+	}
+</style>

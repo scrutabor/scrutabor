@@ -20,6 +20,8 @@ export interface Messages {
 	occurrences: string;
 	externalDict: string;
 	notFound: string;
+	grammarTitle: string;
+	derivativesLabel: string;
 }
 
 export const M: Record<Lang, Messages> = {
@@ -39,7 +41,9 @@ export const M: Record<Lang, Messages> = {
 		lemmaPageHint: 'otwórz hasło',
 		occurrences: 'w tekstach',
 		externalDict: 'słownik zewnętrzny',
-		notFound: 'Nie ma takiego hasła.'
+		notFound: 'Nie ma takiego hasła.',
+		grammarTitle: 'gramatyka',
+		derivativesLabel: 'w polszczyźnie'
 	},
 	en: {
 		langName: 'English',
@@ -57,7 +61,9 @@ export const M: Record<Lang, Messages> = {
 		lemmaPageHint: 'open the entry',
 		occurrences: 'in the texts',
 		externalDict: 'external dictionary',
-		notFound: 'No such entry.'
+		notFound: 'No such entry.',
+		grammarTitle: 'grammar',
+		derivativesLabel: 'in English'
 	}
 };
 
