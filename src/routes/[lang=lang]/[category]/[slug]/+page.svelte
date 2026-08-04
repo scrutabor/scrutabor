@@ -42,13 +42,15 @@
 
 	// Real navigations (initial load, deep links, back/forward, moves
 	// between texts) apply the URL's selection and scroll to it. page.url is
-	// reactive to real navigations but NOT to the shallow replaceState above,
-	// so taps never retrigger this — the revert-on-tap regression class is
-	// excluded by construction. The effect must not read selectedId (that
-	// read would re-add the dependency); effects never run at prerender, so
-	// reading search params here is safe.
+	// only the TRIGGER; the value comes from location — after back/forward
+	// to an entry modified by shallow replaceState, page.url can lag behind
+	// the real URL, while location never lies. Taps use replaceState, which
+	// touches neither the trigger nor any other dependency, so they cannot
+	// re-run this (the revert-on-tap regression class stays excluded).
+	// Effects never run at prerender, so reading location here is safe.
 	$effect(() => {
-		const w = page.url.searchParams.get('w');
+		void page.url;
+		const w = new URL(location.href).searchParams.get('w');
 		const target = w && wordsById.has(w) ? w : null;
 		selectedId = target;
 		if (target) document.getElementById(target)?.scrollIntoView({ block: 'center' });
