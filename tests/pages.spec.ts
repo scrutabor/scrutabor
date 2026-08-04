@@ -74,3 +74,33 @@ test('the 404 page speaks both languages, English first', async ({ page }) => {
 	await expect(page.locator('a[href="/en"]')).toBeVisible();
 	await expect(page.locator('a[href="/pl"]')).toBeVisible();
 });
+
+test('pages carry canonical and hreflang alternates without query strings', async ({ page }) => {
+	await page.goto('/pl/orationes/pater-noster?w=w008');
+	await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+		'href',
+		'https://scrutabor.org/pl/orationes/pater-noster'
+	);
+	await expect(page.locator('link[hreflang="en"]')).toHaveAttribute(
+		'href',
+		'https://scrutabor.org/en/orationes/pater-noster'
+	);
+	await expect(page.locator('link[hreflang="x-default"]')).toHaveAttribute(
+		'href',
+		'https://scrutabor.org/en/orationes/pater-noster'
+	);
+	await expect(page.locator('meta[name="description"]')).toHaveAttribute(
+		'content',
+		/Pater noster — tekst łaciński/
+	);
+});
+
+test('the sitemap lists both languages of every surface', async ({ request }) => {
+	const res = await request.get('/sitemap.xml');
+	expect(res.status()).toBe(200);
+	const xml = await res.text();
+	expect(xml).toContain('<loc>https://scrutabor.org/pl/orationes/pater-noster</loc>');
+	expect(xml).toContain('<loc>https://scrutabor.org/en/lemma/oro</loc>');
+	expect(xml).toContain('<loc>https://scrutabor.org/en/grammatica/pronuntiatio</loc>');
+	expect(xml).not.toContain('/404');
+});

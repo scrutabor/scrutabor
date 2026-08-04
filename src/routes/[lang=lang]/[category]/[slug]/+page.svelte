@@ -132,6 +132,9 @@
 
 <svelte:head>
 	<title>{doc ? `${doc.title} — Scrutabor` : 'Scrutabor'}</title>
+	{#if doc}
+		<meta name="description" content={msgs.readingDescription.replace('{title}', doc.title)} />
+	{/if}
 </svelte:head>
 
 {#if !entry || !doc || !gloss}

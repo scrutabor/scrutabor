@@ -18,6 +18,7 @@
 
 <svelte:head>
 	<title>{msgs.grammarTitle} — Scrutabor</title>
+	<meta name="description" content={msgs.grammarDescription} />
 </svelte:head>
 
 <div class="page">

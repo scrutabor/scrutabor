@@ -11,6 +11,7 @@
 
 <svelte:head>
 	<title>Scrutabor — {msgs.tagline.toLowerCase().replace(/\.$/, '')}</title>
+	<meta name="description" content={msgs.catalogDescription} />
 </svelte:head>
 
 <div class="landing">

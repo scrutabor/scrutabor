@@ -141,6 +141,7 @@
 
 <svelte:head>
 	<title>{lang === 'pl' ? 'wymowa' : 'pronunciation'} — Scrutabor</title>
+	<meta name="description" content={msgs.pronunciationDescription} />
 </svelte:head>
 
 <div class="page">

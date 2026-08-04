@@ -20,6 +20,11 @@ export interface Messages {
 	occurrences: string;
 	externalDict: string;
 	notFound: string;
+	catalogDescription: string;
+	grammarDescription: string;
+	pronunciationDescription: string;
+	/** '{title}' is replaced with the text's Latin title. */
+	readingDescription: string;
 	pageNotFound: string;
 	errorGeneric: string;
 	goHome: string;
@@ -45,6 +50,13 @@ export const M: Record<Lang, Messages> = {
 		occurrences: 'w tekstach',
 		externalDict: 'słownik zewnętrzny',
 		notFound: 'Nie ma takiego hasła.',
+		catalogDescription:
+			'Modlitewnik łaciński z analizą słowo po słowie — przekład, gramatyka i wymowa każdego słowa.',
+		grammarDescription: 'Pojęcia gramatyki łacińskiej objaśnione na przykładach z modlitw.',
+		pronunciationDescription:
+			'Zasady wymowy łaciny kościelnej — tradycja rzymska i polska, z transkrypcją.',
+		readingDescription:
+			'{title} — tekst łaciński z analizą słowo po słowie, przekładem i objaśnieniami gramatycznymi.',
 		pageNotFound: 'Ta strona nie istnieje.',
 		errorGeneric: 'Coś poszło nie tak.',
 		goHome: 'wróć na stronę główną',
@@ -68,6 +80,13 @@ export const M: Record<Lang, Messages> = {
 		occurrences: 'in the texts',
 		externalDict: 'external dictionary',
 		notFound: 'No such entry.',
+		catalogDescription:
+			'A Latin prayer book with word-by-word analysis — translation, grammar, and pronunciation for every word.',
+		grammarDescription: 'Latin grammar concepts explained with examples from the prayers.',
+		pronunciationDescription:
+			'How to pronounce ecclesiastical Latin, in the Roman tradition, with transcriptions.',
+		readingDescription:
+			'{title} — the Latin text with word-by-word analysis, translation, and grammar notes.',
 		pageNotFound: 'This page does not exist.',
 		errorGeneric: 'Something went wrong.',
 		goHome: 'go to the home page',
