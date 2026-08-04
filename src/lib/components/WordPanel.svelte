@@ -60,7 +60,7 @@
 						class="gender">{GENDER_MARK[lemmaEntry.gender]}</span
 					>{/if}
 				<span class="head-arrow" aria-hidden="true">›</span></a
-			>
+			>{#if senseEntry}<span class="head-senses"> — {senseEntry.senses.join(', ')}</span>{/if}
 		</p>
 		<p class="morph">
 			{#each describeMorphParts(word.morph, lang) as part, i (i)}{#if part.concept}<a
@@ -71,14 +71,8 @@
 		{#if gloss}
 			<p class="gloss">{gloss.gloss}</p>
 		{/if}
-		{#if senseEntry}
-			<p class="senses">
-				<span class="label smallcaps">{M[lang].dictLabel}</span>
-				{senseEntry.senses.join(', ')}
-			</p>
-			{#if senseEntry.note}
-				<p class="note">{senseEntry.note}</p>
-			{/if}
+		{#if senseEntry?.note}
+			<p class="note">{senseEntry.note}</p>
 		{/if}
 		{#if gloss?.function}
 			<p class="function">
@@ -147,20 +141,12 @@
 		font-style: normal;
 	}
 
+	.head-senses {
+		font-style: normal;
+	}
+
 	.gender {
 		font-size: 0.9rem;
-	}
-
-	.senses {
-		margin: 0.45rem 0 0;
-		font-size: 1rem;
-		line-height: 1.5;
-	}
-
-	.senses .label {
-		color: var(--ink-soft);
-		font-size: 0.75rem;
-		margin-right: 0.35rem;
 	}
 
 	.note {

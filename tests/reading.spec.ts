@@ -30,7 +30,7 @@ test('word panel shows all three layers', async ({ page }) => {
 	// layer 1: lexicon — dictionary head linking to the lemma page, senses
 	await expect(panel.locator('.head a')).toHaveAttribute('href', '/pl/lemma/mater');
 	await expect(panel.locator('.head')).toContainText('mater, matris');
-	await expect(panel.locator('.senses')).toContainText('matka');
+	await expect(panel.locator('.head')).toContainText('— matka');
 	// layer 2: parse line with a concept-linked term
 	await expect(panel.locator('.morph')).toContainText('wołacz');
 	await expect(panel.locator('.morph a.concept')).toHaveAttribute(
@@ -61,5 +61,5 @@ test('the English locale renders its own gloss layer', async ({ page }) => {
 	await page.goto('/en/orationes/ave-maria');
 	await expect(page.locator('rt').first()).toHaveText('hail');
 	await page.locator('#w019').click();
-	await expect(page.locator('aside .senses')).toContainText('mother');
+	await expect(page.locator('aside .head')).toContainText('— mother');
 });

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import Flag from './Flag.svelte';
 	import { LANGS, M, type Lang } from '$lib/i18n';
 
@@ -8,9 +7,12 @@
 	let open = $state(false);
 	let root: HTMLElement | undefined = $state();
 
-	// Same page in the other language: swap the leading path segment.
+	// Same page in the other language: swap the leading path segment and
+	// keep the query (an open word panel travels as ?w=). Reads location,
+	// not page.url — shallow replaceState updates only the former — and is
+	// safe because this only runs after a click, never at prerender.
 	function pathFor(l: Lang): string {
-		return `/${l}${page.url.pathname.replace(/^\/(pl|en)/, '')}`;
+		return `/${l}${location.pathname.replace(/^\/(pl|en)/, '')}${location.search}`;
 	}
 
 	function onWindowClick(e: MouseEvent) {

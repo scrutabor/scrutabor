@@ -93,10 +93,18 @@
 		applyFromLocation();
 	});
 
+	// Tapping the quiet parts of the page dismisses the sheet; interactive
+	// chrome (language menu, theme toggle, the help slider, links) does its
+	// own job without also closing it. Word buttons switch, the sheet's own
+	// controls are inside the aside. composedPath, not target.closest: a
+	// control that re-renders on click (the theme toggle swaps its icon)
+	// detaches the clicked node before the event reaches window.
 	function onWindowClick(e: MouseEvent) {
 		if (selectedId === null) return;
-		const t = e.target as Element | null;
-		if (t && !t.closest('aside, .word')) closePanel();
+		const interactive = e
+			.composedPath()
+			.some((n) => n instanceof Element && n.matches('a, button, input, select, textarea, aside'));
+		if (!interactive) closePanel();
 	}
 
 	function onWindowKeydown(e: KeyboardEvent) {

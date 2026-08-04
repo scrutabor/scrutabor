@@ -101,3 +101,23 @@ test('a concordance link deep-links into the reading view', async ({ page }) => 
 	await expect(page.locator(panelWord)).toHaveText('oráre');
 	await expect(page.locator('.word.selected')).toBeInViewport();
 });
+
+test('interactive chrome does not dismiss the sheet', async ({ page }) => {
+	await page.goto(PATER);
+	await page.locator('#w008').click();
+	// theme toggle does its job, panel stays
+	await page.locator('button[aria-label="przełącz na tryb ciemny"]').click();
+	await expect(page.locator(panelWord)).toHaveText('nomen');
+	// help slider adjusts, panel stays
+	await page.locator('input[type="range"]').fill('2');
+	await expect(page.locator(panelWord)).toHaveText('nomen');
+});
+
+test('switching language keeps the panel open on the same word', async ({ page }) => {
+	await page.goto(PATER);
+	await page.locator('#w008').click();
+	await page.locator('button[aria-label="wybór języka"]').click();
+	await page.locator('a', { hasText: 'English' }).click();
+	await expect(page).toHaveURL(/\/en\/orationes\/pater-noster\?w=w008$/);
+	await expect(page.locator(panelWord)).toHaveText('nomen');
+});
