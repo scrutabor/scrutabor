@@ -14,6 +14,9 @@ import aveEn from './data/ave-maria.en.json';
 import gloriaText from './data/gloria-patri.json';
 import gloriaPl from './data/gloria-patri.pl.json';
 import gloriaEn from './data/gloria-patri.en.json';
+import gloriaExcText from './data/gloria.json';
+import gloriaExcPl from './data/gloria.pl.json';
+import gloriaExcEn from './data/gloria.en.json';
 import lexiconLemmata from './data/lexicon.json';
 import lexiconPl from './data/lexicon.pl.json';
 import lexiconEn from './data/lexicon.en.json';
@@ -135,6 +138,7 @@ const entry = (text: unknown, pl: unknown, en: unknown): TextEntry => ({
 /** Keyed by `category/slug`, matching the reading route params. */
 export const TEXTS: Record<string, TextEntry> = {
 	'ordinarium/confiteor': entry(confiteorText, confiteorPl, confiteorEn),
+	'ordinarium/gloria': entry(gloriaExcText, gloriaExcPl, gloriaExcEn),
 	'orationes/pater-noster': entry(paterText, paterPl, paterEn),
 	'orationes/ave-maria': entry(aveText, avePl, aveEn),
 	'orationes/gloria-patri': entry(gloriaText, gloriaPl, gloriaEn)

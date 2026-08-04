@@ -99,3 +99,22 @@ test('identical traditions collapse to one transcription', async ({ page }) => {
 	await expect(pron).toContainText('/ˈma.tɛr/');
 	await expect(pron).not.toContainText('rz.');
 });
+
+test('the Gloria reads with narrative, panel and provenance', async ({ page }) => {
+	await page.goto('/pl/ordinarium/gloria?w=w041'); // Agnus
+	const panel = page.locator('aside');
+	await expect(panel.locator('.form')).toHaveText('Agnus');
+	await expect(panel.locator('.gloss')).toHaveText('Baranku');
+	// the nominative-as-address note cross-links its vocative anchor
+	await expect(panel.locator('.function')).toContainText('mianownika');
+	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
+	// single-analyzer override on Jesu
+	await page.goto('/pl/ordinarium/gloria?w=w037');
+	await expect(panel.locator('.meta')).toContainText('opracowanie, Collatinus');
+	// the superlative links its grammar concept and the lemma page resolves
+	await page.goto('/en/ordinarium/gloria?w=w074'); // Altissimus
+	await expect(panel.locator('.gloss')).toHaveText('the Most High');
+	await panel.locator('.head a').click();
+	await expect(page).toHaveURL(/lemma\/altus$/);
+	await expect(page.locator('.senses')).toContainText('high');
+});
