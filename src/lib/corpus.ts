@@ -14,6 +14,9 @@ import aveEn from './data/ave-maria.en.json';
 import gloriaText from './data/gloria-patri.json';
 import gloriaPl from './data/gloria-patri.pl.json';
 import gloriaEn from './data/gloria-patri.en.json';
+import lexiconLemmata from './data/lexicon.json';
+import lexiconPl from './data/lexicon.pl.json';
+import lexiconEn from './data/lexicon.en.json';
 import type { Lang } from './i18n';
 
 export interface Morph {
@@ -65,7 +68,9 @@ export interface TextDocument {
 
 export interface WordGloss {
 	gloss: string;
-	function: string;
+	// Contextual-only and OPTIONAL since corpus schema 0.5.0 — the parse line
+	// and the lexicon carry everything else.
+	function?: string;
 	analysis?: Analysis;
 }
 
@@ -83,6 +88,38 @@ export interface TextEntry {
 	text: TextDocument;
 	glosses: Record<Lang, GlossDocument>;
 }
+
+// Lexicon: the per-lemma layer (corpus SCHEMA.md 0.5.0). `head` is the
+// reader-facing dictionary head in liturgical orthography; senses live in
+// one file per language.
+export interface LemmaEntry {
+	head: string;
+	pos: string;
+	gender?: string;
+	gender_pl?: string;
+	decl?: number;
+	conj?: number;
+	analysis?: Analysis;
+}
+
+export interface SenseEntry {
+	senses: string[];
+	note?: string;
+	analysis?: Analysis;
+}
+
+export interface Lexicon {
+	lemmata: Record<string, LemmaEntry>;
+	senses: Record<Lang, Record<string, SenseEntry>>;
+}
+
+export const LEXICON: Lexicon = {
+	lemmata: lexiconLemmata.entries as Record<string, LemmaEntry>,
+	senses: {
+		pl: lexiconPl.entries as Record<string, SenseEntry>,
+		en: lexiconEn.entries as Record<string, SenseEntry>
+	}
+};
 
 const entry = (text: unknown, pl: unknown, en: unknown): TextEntry => ({
 	text: text as TextDocument,

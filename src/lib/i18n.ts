@@ -12,7 +12,7 @@ export interface Messages {
 	levelsAria: string;
 	themeAria: { toLight: string; toDark: string };
 	langMenuAria: string;
-	lemmaLabel: string;
+	dictLabel: string;
 	close: string;
 	panelAria: string;
 	working: string;
@@ -28,7 +28,7 @@ export const M: Record<Lang, Messages> = {
 		levelsAria: 'Poziom pomocy',
 		themeAria: { toLight: 'przełącz na tryb jasny', toDark: 'przełącz na tryb ciemny' },
 		langMenuAria: 'wybór języka',
-		lemmaLabel: 'lemat',
+		dictLabel: 'słownik',
 		close: 'Zamknij',
 		panelAria: 'Analiza słowa',
 		working: 'wydanie robocze · przed przeglądem eksperckim'
@@ -42,7 +42,7 @@ export const M: Record<Lang, Messages> = {
 		levelsAria: 'Help level',
 		themeAria: { toLight: 'switch to light mode', toDark: 'switch to dark mode' },
 		langMenuAria: 'language selection',
-		lemmaLabel: 'lemma',
+		dictLabel: 'dictionary',
 		close: 'Close',
 		panelAria: 'Word analysis',
 		working: 'working edition · awaiting expert review'

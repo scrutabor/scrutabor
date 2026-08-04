@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Analysis, Word, WordGloss } from '$lib/corpus';
+	import { LEXICON, type Analysis, type Word, type WordGloss } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
-	import { describeAnalysis, describeMorph } from '$lib/morph';
+	import { GENDER_MARK, describeAnalysis, describeMorph } from '$lib/morph';
 
 	let {
 		word,
@@ -38,19 +38,41 @@
 		return parts;
 	}
 
-	let functionParts = $derived(gloss ? parseFunction(gloss.function) : []);
+	let functionParts = $derived(gloss?.function ? parseFunction(gloss.function) : []);
+
+	// The per-lemma layer: dictionary head + gender in the header, senses and
+	// an optional lemma-level note below the contextual gloss. The corpus
+	// checks guarantee an entry for every lemma; fall back to the bare lemma
+	// so a stale snapshot degrades visibly instead of crashing.
+	let lemmaEntry = $derived(LEXICON.lemmata[word.lemma]);
+	let senseEntry = $derived(LEXICON.senses[lang][word.lemma]);
 </script>
 
 <aside aria-label={M[lang].panelAria}>
 	<div class="inner">
 		<header>
 			<span class="form" lang="la">{word.form}</span>
-			<span class="lemma">{M[lang].lemmaLabel}: <i lang="la">{word.lemma}</i></span>
 			<button class="close" onclick={onclose} aria-label={M[lang].close}>×</button>
 		</header>
+		<p class="head">
+			<i lang="la">{lemmaEntry?.head ?? word.lemma}</i>{#if lemmaEntry?.gender}&nbsp;<span
+					class="gender">{GENDER_MARK[lemmaEntry.gender]}</span
+				>{/if}
+		</p>
 		<p class="morph">{describeMorph(word.morph, lang)}</p>
 		{#if gloss}
 			<p class="gloss">{gloss.gloss}</p>
+		{/if}
+		{#if senseEntry}
+			<p class="senses">
+				<span class="label smallcaps">{M[lang].dictLabel}</span>
+				{senseEntry.senses.join(', ')}
+			</p>
+			{#if senseEntry.note}
+				<p class="note">{senseEntry.note}</p>
+			{/if}
+		{/if}
+		{#if gloss?.function}
 			<p class="function">
 				{#each functionParts as part, i (i)}
 					{#if 'id' in part}
@@ -97,9 +119,33 @@
 		font-weight: 500;
 	}
 
-	.lemma {
+	.head {
+		margin: 0.15rem 0 0;
+		color: var(--ink-soft);
+		font-size: 1.05rem;
+	}
+
+	.gender {
+		font-size: 0.9rem;
+	}
+
+	.senses {
+		margin: 0.45rem 0 0;
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+	.senses .label {
+		color: var(--ink-soft);
+		font-size: 0.75rem;
+		margin-right: 0.35rem;
+	}
+
+	.note {
+		margin: 0.35rem 0 0;
 		color: var(--ink-soft);
 		font-size: 0.95rem;
+		line-height: 1.5;
 	}
 
 	.close {

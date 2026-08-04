@@ -31,7 +31,8 @@ const LABELS: Record<Lang, MorphLabels> = {
 			pron: 'zaimek',
 			adv: 'przysłówek',
 			conj: 'spójnik',
-			prep: 'przyimek'
+			prep: 'przyimek',
+			intj: 'wykrzyknik (nieodmienny)'
 		},
 		case: {
 			nom: 'mianownik',
@@ -76,7 +77,8 @@ const LABELS: Record<Lang, MorphLabels> = {
 			pron: 'pronoun',
 			adv: 'adverb',
 			conj: 'conjunction',
-			prep: 'preposition'
+			prep: 'preposition',
+			intj: 'interjection (indeclinable)'
 		},
 		case: {
 			nom: 'nominative',
@@ -115,12 +117,16 @@ const LABELS: Record<Lang, MorphLabels> = {
 	}
 };
 
+// Dictionary gender marks are international Latin abbreviations
+// (masculinum/femininum/neutrum) — the same in every gloss language.
+export const GENDER_MARK: Record<string, string> = { m: 'm.', f: 'f.', n: 'n.' };
+
 export function describeMorph(m: Morph, lang: Lang): string {
 	const t = LABELS[lang];
 	const pos = t.pos[m.pos] ?? m.pos;
 
 	if (m.pos === 'prep') return t.prep(m.governs);
-	if (m.pos === 'adv' || m.pos === 'conj') return pos;
+	if (m.pos === 'adv' || m.pos === 'conj' || m.pos === 'intj') return pos;
 
 	const parts: string[] = [];
 	if (m.pos === 'verb') {
