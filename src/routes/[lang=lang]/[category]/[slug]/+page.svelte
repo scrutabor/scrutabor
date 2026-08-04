@@ -77,7 +77,14 @@
 		const target = w && wordsById.has(w) ? w : null;
 		if (!target) openedByPush = false;
 		selectedId = target;
-		if (target) document.getElementById(target)?.scrollIntoView({ block: 'center' });
+		// The router resets scroll AFTER this runs on client-side
+		// navigations — schedule the centering behind it or deep links into
+		// long texts land at the top.
+		if (target) {
+			requestAnimationFrame(() =>
+				document.getElementById(target)?.scrollIntoView({ block: 'center' })
+			);
+		}
 	}
 
 	$effect(() => {
