@@ -63,3 +63,14 @@ test('pronuntiatio page carries the rules and links into the prayers', async ({ 
 	await page.locator('a[href="/pl/orationes/pater-noster?w=w006"]').click();
 	await expect(page.locator('aside .form')).toHaveText('cælis');
 });
+
+test('the 404 page speaks both languages, English first', async ({ page }) => {
+	await page.goto('/404');
+	await expect(page.locator('.status')).toHaveText('404');
+	const lines = page.locator('.line');
+	await expect(lines).toHaveCount(2);
+	await expect(lines.first()).toContainText('This page does not exist.');
+	await expect(lines.last()).toContainText('Ta strona nie istnieje.');
+	await expect(page.locator('a[href="/en"]')).toBeVisible();
+	await expect(page.locator('a[href="/pl"]')).toBeVisible();
+});

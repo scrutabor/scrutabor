@@ -20,6 +20,9 @@ export interface Messages {
 	occurrences: string;
 	externalDict: string;
 	notFound: string;
+	pageNotFound: string;
+	errorGeneric: string;
+	goHome: string;
 	grammarTitle: string;
 	derivativesLabel: string;
 	pronunciationHint: string;
@@ -42,6 +45,9 @@ export const M: Record<Lang, Messages> = {
 		occurrences: 'w tekstach',
 		externalDict: 'słownik zewnętrzny',
 		notFound: 'Nie ma takiego hasła.',
+		pageNotFound: 'Ta strona nie istnieje.',
+		errorGeneric: 'Coś poszło nie tak.',
+		goHome: 'wróć na stronę główną',
 		grammarTitle: 'gramatyka',
 		derivativesLabel: 'w polszczyźnie',
 		pronunciationHint: 'zasady wymowy'
@@ -62,6 +68,9 @@ export const M: Record<Lang, Messages> = {
 		occurrences: 'in the texts',
 		externalDict: 'external dictionary',
 		notFound: 'No such entry.',
+		pageNotFound: 'This page does not exist.',
+		errorGeneric: 'Something went wrong.',
+		goHome: 'go to the home page',
 		grammarTitle: 'grammar',
 		derivativesLabel: 'in English',
 		pronunciationHint: 'pronunciation guide'
