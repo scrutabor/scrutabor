@@ -55,9 +55,12 @@
 			<button class="close" onclick={onclose} aria-label={M[lang].close}>×</button>
 		</header>
 		<p class="head">
-			<i lang="la">{lemmaEntry?.head ?? word.lemma}</i>{#if lemmaEntry?.gender}&nbsp;<span
-					class="gender">{GENDER_MARK[lemmaEntry.gender]}</span
-				>{/if}
+			<a href="/{lang}/lemma/{word.lemma}" title={M[lang].lemmaPageHint}
+				><i lang="la">{lemmaEntry?.head ?? word.lemma}</i>{#if lemmaEntry?.gender}&nbsp;<span
+						class="gender">{GENDER_MARK[lemmaEntry.gender]}</span
+					>{/if}
+				<span class="head-arrow" aria-hidden="true">›</span></a
+			>
 		</p>
 		<p class="morph">{describeMorph(word.morph, lang)}</p>
 		{#if gloss}
@@ -123,6 +126,20 @@
 		margin: 0.15rem 0 0;
 		color: var(--ink-soft);
 		font-size: 1.05rem;
+	}
+
+	.head a {
+		color: inherit;
+		text-decoration: none;
+		border-bottom: 1px dotted var(--rubric);
+	}
+
+	.head a:hover {
+		color: var(--rubric);
+	}
+
+	.head-arrow {
+		font-style: normal;
 	}
 
 	.gender {

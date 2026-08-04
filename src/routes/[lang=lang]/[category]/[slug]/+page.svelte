@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { TEXTS } from '$lib/corpus';
 	import { sectionFor } from '$lib/catalog';
@@ -25,11 +26,17 @@
 		new Map((doc?.segments ?? []).flatMap((s) => (s.words ?? []).map((w) => [w.id, w] as const)))
 	);
 
+	// Deep link from the lemma-page concordance: ?w=wNNN opens the panel on
+	// that word. Guarded by `browser` — search params are unknowable at
+	// prerender time and reading them there is an error.
+	const requestedId = $derived(browser ? page.url.searchParams.get('w') : null);
+
 	// Word ids restart per text — reset the selection when navigating
-	// between texts within the same route component.
+	// between texts within the same route component (or honor the deep link).
 	$effect(() => {
 		void doc;
-		selectedId = null;
+		selectedId = requestedId && wordsById.has(requestedId) ? requestedId : null;
+		if (selectedId) document.getElementById(selectedId)?.scrollIntoView({ block: 'center' });
 	});
 
 	let selectedWord = $derived(selectedId ? (wordsById.get(selectedId) ?? null) : null);

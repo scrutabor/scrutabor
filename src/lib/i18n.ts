@@ -16,6 +16,10 @@ export interface Messages {
 	close: string;
 	panelAria: string;
 	working: string;
+	lemmaPageHint: string;
+	occurrences: string;
+	externalDict: string;
+	notFound: string;
 }
 
 export const M: Record<Lang, Messages> = {
@@ -31,7 +35,11 @@ export const M: Record<Lang, Messages> = {
 		dictLabel: 'słownik',
 		close: 'Zamknij',
 		panelAria: 'Analiza słowa',
-		working: 'wydanie robocze · przed przeglądem eksperckim'
+		working: 'wydanie robocze · przed przeglądem eksperckim',
+		lemmaPageHint: 'otwórz hasło',
+		occurrences: 'w tekstach',
+		externalDict: 'słownik zewnętrzny',
+		notFound: 'Nie ma takiego hasła.'
 	},
 	en: {
 		langName: 'English',
@@ -45,7 +53,11 @@ export const M: Record<Lang, Messages> = {
 		dictLabel: 'dictionary',
 		close: 'Close',
 		panelAria: 'Word analysis',
-		working: 'working edition · awaiting expert review'
+		working: 'working edition · awaiting expert review',
+		lemmaPageHint: 'open the entry',
+		occurrences: 'in the texts',
+		externalDict: 'external dictionary',
+		notFound: 'No such entry.'
 	}
 };
 

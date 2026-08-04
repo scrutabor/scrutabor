@@ -121,6 +121,19 @@ const LABELS: Record<Lang, MorphLabels> = {
 // (masculinum/femininum/neutrum) — the same in every gloss language.
 export const GENDER_MARK: Record<string, string> = { m: 'm.', f: 'f.', n: 'n.' };
 
+// Lemma-level grammar line for the lemma page: part of speech plus the
+// paradigm facts the lexicon carries (no token, so no case/number here).
+export function describeLemma(
+	e: { pos: string; decl?: number; conj?: number },
+	lang: Lang
+): string {
+	const t = LABELS[lang];
+	const parts = [t.pos[e.pos] ?? e.pos];
+	if (e.decl) parts.push(t.decl(e.decl));
+	if (e.conj) parts.push(t.conj(e.conj));
+	return parts.join(', ');
+}
+
 export function describeMorph(m: Morph, lang: Lang): string {
 	const t = LABELS[lang];
 	const pos = t.pos[m.pos] ?? m.pos;
