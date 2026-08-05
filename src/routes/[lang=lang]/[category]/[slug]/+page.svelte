@@ -158,6 +158,16 @@
 			<div class="help-row">
 				<HelpLevels {lang} bind:value={helpLevel} />
 			</div>
+			{#if gloss.about}
+				<!-- Collapsed by default at EVERY slider position (owner rule):
+				     the introduction is one tap away, never ambient. Native
+				     details/summary keeps keyboard and screen-reader behavior
+				     for free; no persistence — a fresh page starts closed. -->
+				<details class="about">
+					<summary class="smallcaps">{msgs.aboutLabel}</summary>
+					<p>{gloss.about}</p>
+				</details>
+			{/if}
 		</header>
 
 		<main class:panel-open={selectedWord !== null}>
@@ -274,6 +284,51 @@
 
 	.verse.glossed {
 		line-height: 2.7;
+	}
+
+	.about {
+		margin: 1.6rem auto 0;
+		max-width: 34rem;
+		text-align: center;
+	}
+
+	.about summary {
+		display: inline-block;
+		cursor: pointer;
+		list-style: none;
+		font-size: 0.75rem;
+		color: var(--ink-soft);
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		padding: 0.25rem 0.9rem;
+	}
+
+	.about summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.about summary::after {
+		content: ' ›';
+	}
+
+	.about[open] summary::after {
+		content: ' ‹';
+	}
+
+	.about summary:hover {
+		color: var(--ink);
+		background: var(--wash);
+	}
+
+	.about p {
+		margin: 0.8rem 0 0;
+		padding: 0.9rem 1.1rem;
+		background: var(--wash);
+		border-radius: 0.6rem;
+		text-align: left;
+		font-size: 0.95rem;
+		line-height: 1.6;
+		color: var(--ink-soft);
 	}
 
 	.token {

@@ -28,6 +28,7 @@ export interface Messages {
 	pageNotFound: string;
 	errorGeneric: string;
 	goHome: string;
+	aboutLabel: string;
 	grammarTitle: string;
 	derivativesLabel: string;
 	pronunciationHint: string;
@@ -60,6 +61,7 @@ export const M: Record<Lang, Messages> = {
 		pageNotFound: 'Ta strona nie istnieje.',
 		errorGeneric: 'Coś poszło nie tak.',
 		goHome: 'wróć na stronę główną',
+		aboutLabel: 'o modlitwie',
 		grammarTitle: 'gramatyka',
 		derivativesLabel: 'w polszczyźnie',
 		pronunciationHint: 'zasady wymowy'
@@ -90,6 +92,7 @@ export const M: Record<Lang, Messages> = {
 		pageNotFound: 'This page does not exist.',
 		errorGeneric: 'Something went wrong.',
 		goHome: 'go to the home page',
+		aboutLabel: 'about this prayer',
 		grammarTitle: 'grammar',
 		derivativesLabel: 'in English',
 		pronunciationHint: 'pronunciation guide'

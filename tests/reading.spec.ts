@@ -142,3 +142,31 @@ test('no token ever fragments across lines, any text, narrow viewport', async ({
 		expect(fragmented, path).toEqual([]);
 	}
 });
+
+test('the about note is collapsed at every slider position, opens on demand', async ({ page }) => {
+	await page.goto('/pl/ordinarium/gloria');
+	const about = page.locator('details.about');
+	const body = about.locator('p');
+	const slider = page.locator('input[type="range"]');
+	// collapsed by default at all three help levels
+	for (const level of ['1', '0', '2']) {
+		await slider.fill(level);
+		await expect(about).toBeVisible();
+		await expect(body).not.toBeVisible();
+	}
+	// opens on the button, carries the introduction
+	await about.locator('summary').click();
+	await expect(body).toBeVisible();
+	await expect(body).toContainText('hymn anielski');
+	// a fresh load starts collapsed again
+	await page.goto('/pl/ordinarium/gloria');
+	await expect(body).not.toBeVisible();
+});
+
+test('the about note speaks the interface language', async ({ page }) => {
+	await page.goto('/en/orationes/pater-noster');
+	const about = page.locator('details.about');
+	await expect(about.locator('summary')).toHaveText('about this prayer');
+	await about.locator('summary').click();
+	await expect(about.locator('p')).toContainText('Didache');
+});

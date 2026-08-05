@@ -85,6 +85,8 @@ export interface GlossDocument {
 	text: string;
 	lang: string;
 	status: string;
+	/** One-paragraph introduction (schema 0.8.0) — collapsed by default. */
+	about?: string;
 	analysis_defaults: Analysis;
 	segments: Record<string, { translation?: string; narrative?: string }>;
 	words: Record<string, WordGloss>;
