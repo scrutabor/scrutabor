@@ -262,14 +262,16 @@
 			<nav class="pager" aria-label={msgs.pagerAria}>
 				{#if around.prev}
 					<a class="pager-link" href="/{lang}/{around.prev.category}/{around.prev.slug}"
-						>‹ <span lang="la">{around.prev.title}</span></a
+						><span class="chev" aria-hidden="true">‹</span>
+						<span lang="la">{around.prev.title}</span></a
 					>
 				{:else}
 					<span></span>
 				{/if}
 				{#if around.next}
 					<a class="pager-link pager-next" href="/{lang}/{around.next.category}/{around.next.slug}"
-						><span lang="la">{around.next.title}</span> ›</a
+						><span lang="la">{around.next.title}</span>
+						<span class="chev" aria-hidden="true">›</span></a
 					>
 				{/if}
 			</nav>
@@ -478,6 +480,13 @@
 	.pager-next {
 		text-align: right;
 		margin-left: auto;
+	}
+
+	/* EB Garamond centers its guillemets on the x-height, which reads
+	   low beside capital-initial titles — raise them optically. */
+	.chev {
+		display: inline-block;
+		transform: translateY(-0.09em);
 	}
 
 	.token {
