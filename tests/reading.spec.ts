@@ -1,5 +1,5 @@
 // The reading experience: help ladder, panel layers, cross-reference jumps.
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 const AVE = '/pl/orationes/ave-maria';
 const CONFITEOR = '/pl/ordinarium/confiteor';

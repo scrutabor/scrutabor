@@ -14,6 +14,14 @@
 
 	let { children } = $props();
 
+	// Marks the moment the page becomes interactive. The prerendered HTML is
+	// readable long before the corpus bundle has hydrated it, so a tap on a
+	// word can land while nothing is listening yet — this says when that
+	// stops being true, for tests and for any styling that wants to wait.
+	$effect(() => {
+		document.documentElement.dataset.hydrated = 'true';
+	});
+
 	const fonts = [ebLatin, ebLatinExt, ebLatinItalic, ebLatinExtItalic];
 </script>
 

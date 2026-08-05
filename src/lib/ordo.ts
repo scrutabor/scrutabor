@@ -363,16 +363,27 @@ const ORDO_SOURCE: OrdoMovement[] = [
 		part: 'fidelium',
 		entries: [
 			{
-				id: 'praefatio',
-				title: 'Præfátio',
-				kind: 'proper',
+				id: 'praefatio-dialogus',
+				title: 'Sursum corda',
+				kind: 'text',
+				text: 'ordinarium/praefatio-dialogus',
 				note: {
-					pl: 'Dialog Sursum corda, a po nim uroczyste dziękczynienie śpiewane albo mówione na głos.',
-					en: 'The Sursum corda dialogue, and after it the solemn thanksgiving, sung or said aloud.'
+					pl: 'Dialog, którym zaczyna się prefacja — kapłan rozkłada ręce i podnosi je przy „Sursum corda”.',
+					en: 'The dialogue that opens the preface — the priest spreads his hands and raises them at Sursum corda.'
+				}
+			},
+			{
+				id: 'praefatio-communis',
+				title: 'Præfátio commúnis',
+				kind: 'text',
+				text: 'ordinarium/praefatio-communis',
+				note: {
+					pl: 'Prefacja wspólna: najkrótsza z rzymskich, nie nazywa żadnej tajemnicy i prowadzi wprost do chórów anielskich.',
+					en: 'The common preface: the shortest of the Roman ones, naming no mystery and leading straight to the choirs of angels.'
 				},
 				when: {
-					pl: 'prefacja własna, gdy dzień ją ma; w przeciwnym razie prefacja okresu albo wspólna',
-					en: 'the proper preface where the day has one; otherwise the seasonal preface, otherwise the common'
+					pl: 'w wiele dni roku ustępuje prefacji własnej albo okresowej',
+					en: 'on many days a proper or seasonal preface takes its place'
 				}
 			},
 			{
@@ -388,46 +399,141 @@ const ORDO_SOURCE: OrdoMovement[] = [
 			{
 				id: 'te-igitur',
 				title: 'Te ígitur',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/te-igitur',
 				note: {
-					pl: 'Zaczyna się Kanon, odmawiany po cichu: modlitwa za Kościół, papieża i biskupa, wspomnienie żywych i świętych, a przy Hanc ígitur kapłan wyciąga ręce nad darami i dzwonek uprzedza o Przeistoczeniu.',
-					en: 'The Canon begins, said silently: prayer for the Church, the Pope and the bishop, the remembrance of the living and of the saints, and at the Hanc ígitur the priest spreads his hands over the gifts while the bell warns that the Consecration is near.'
+					pl: 'Kanon zaczyna się po cichu: modlitwa za Kościół, papieża i biskupa.',
+					en: 'The Canon begins in silence: the prayer for the Church, the Pope and the bishop.'
 				}
 			},
 			{
-				id: 'consecratio',
-				title: 'Consecrátio',
-				kind: 'pending',
+				id: 'memento-vivorum',
+				title: 'Meménto (vivórum)',
+				kind: 'text',
+				text: 'ordinarium/memento-vivorum',
 				note: {
-					pl: 'Kapłan powtarza słowa Chrystusa nad chlebem (Qui prídie), potem nad kielichem (Símili modo); po każdym przyklęka, unosi Postać w górę, a dzwonek dzwoni trzy razy.',
-					en: 'The priest repeats Christ’s words over the bread (Qui prídie), then over the chalice (Símili modo); after each he genuflects and raises it for all to see, and the bell rings three times.'
+					pl: 'Kapłan milknie i wspomina żywych — w miejscu, gdzie mszał drukuje N. et N.',
+					en: 'The priest falls silent and remembers the living — where the missal prints N. et N.'
+				}
+			},
+			{
+				id: 'communicantes',
+				title: 'Communicántes',
+				kind: 'text',
+				text: 'ordinarium/communicantes',
+				note: {
+					pl: 'Lista świętych: Maryja, dwunastu apostołów i dwunastu męczenników rzymskich; św. Józefa dopisał tu Jan XXIII w 1962 roku.',
+					en: 'The list of saints: Mary, twelve apostles and twelve Roman martyrs; John XXIII added St Joseph here in 1962.'
+				}
+			},
+			{
+				id: 'hanc-igitur',
+				title: 'Hanc ígitur',
+				kind: 'text',
+				text: 'ordinarium/hanc-igitur',
+				note: {
+					pl: 'Kapłan wyciąga ręce nad darami, a dzwonek uprzedza, że Przeistoczenie jest blisko.',
+					en: 'The priest spreads his hands over the gifts, and the bell warns that the Consecration is near.'
+				}
+			},
+			{
+				id: 'quam-oblationem',
+				title: 'Quam oblatiónem',
+				kind: 'text',
+				text: 'ordinarium/quam-oblationem',
+				note: {
+					pl: 'Ostatnia prośba przed słowami Chrystusa: aby ta ofiara stała się Ciałem i Krwią.',
+					en: 'The last petition before Christ\u2019s own words: that this offering become the Body and Blood.'
+				}
+			},
+			{
+				id: 'qui-pridie',
+				title: 'Qui prídie',
+				kind: 'text',
+				text: 'ordinarium/qui-pridie',
+				note: {
+					pl: 'Konsekracja chleba. Kapłan przyklęka, unosi Hostię, przyklęka znowu; dzwonek dzwoni przy każdym geście.',
+					en: 'The consecration of the bread. The priest genuflects, raises the Host, genuflects again; the bell rings at each.'
+				}
+			},
+			{
+				id: 'simili-modo',
+				title: 'Símili modo',
+				kind: 'text',
+				text: 'ordinarium/simili-modo',
+				note: {
+					pl: 'Konsekracja kielicha, tymi samymi gestami.',
+					en: 'The consecration of the chalice, with the same gestures.'
 				}
 			},
 			{
 				id: 'unde-et-memores',
 				title: 'Unde et mémores',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/unde-et-memores',
 				note: {
-					pl: 'Kapłan ofiaruje obecną już Ofiarę, przypomina ofiary Abla, Abrahama i Melchizedeka i prosi, by anioł zaniósł ją na ołtarz w niebie.',
-					en: 'The priest offers the Victim now present, recalls the sacrifices of Abel, Abraham and Melchisedech, and asks that an angel carry it to the altar on high.'
+					pl: 'Kapłan ofiaruje to, co już jest obecne, i czyni pięć znaków krzyża nad darami konsekrowanymi.',
+					en: 'The priest offers what is now present, and makes five crosses over the consecrated gifts.'
 				}
 			},
 			{
-				id: 'memento-etiam',
-				title: 'Meménto étiam',
-				kind: 'pending',
+				id: 'supra-quae',
+				title: 'Supra quæ',
+				kind: 'text',
+				text: 'ordinarium/supra-quae',
 				note: {
-					pl: 'Kapłan wspomina zmarłych, milknie na chwilę, po czym uderza się w piersi i podnosi głos przy słowach Nobis quoque peccatóribus.',
-					en: 'The priest remembers the dead, pauses in silence, then strikes his breast and raises his voice at the words Nobis quoque peccatóribus.'
+					pl: 'Przypomnienie ofiar Abla, Abrahama i Melchizedeka — trzech ofiar sprzed Prawa.',
+					en: 'The sacrifices of Abel, Abraham and Melchisedech recalled — three offerings older than the Law.'
+				}
+			},
+			{
+				id: 'supplices-te-rogamus',
+				title: 'Súpplices te rogámus',
+				kind: 'text',
+				text: 'ordinarium/supplices-te-rogamus',
+				note: {
+					pl: 'Prośba, by anioł zaniósł Ofiarę na ołtarz w niebie; anioł pozostaje nienazwany.',
+					en: 'The prayer that an angel carry the sacrifice to the altar on high; the angel is never named.'
+				}
+			},
+			{
+				id: 'memento-defunctorum',
+				title: 'Meménto (defunctórum)',
+				kind: 'text',
+				text: 'ordinarium/memento-defunctorum',
+				note: {
+					pl: 'Wspomnienie zmarłych, znowu w ciszy, znowu z miejscem na imiona.',
+					en: 'The remembrance of the dead, again in silence, again with room for names.'
+				}
+			},
+			{
+				id: 'nobis-quoque',
+				title: 'Nobis quoque peccatóribus',
+				kind: 'text',
+				text: 'ordinarium/nobis-quoque',
+				note: {
+					pl: 'Jedyne słowa Kanonu mówione głośniej: kapłan uderza się w piersi i wymienia siedem świętych kobiet.',
+					en: 'The only words of the Canon said aloud: the priest strikes his breast and names seven women among the saints.'
+				}
+			},
+			{
+				id: 'per-quem-haec-omnia',
+				title: 'Per quem hæc ómnia',
+				kind: 'text',
+				text: 'ordinarium/per-quem-haec-omnia',
+				note: {
+					pl: 'Krótka modlitwa, w której miejscu dawniej błogosławiono oleje i plony.',
+					en: 'A short prayer, at whose place the oils and the fruits of the earth were once blessed.'
 				}
 			},
 			{
 				id: 'per-ipsum',
 				title: 'Per ipsum',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/per-ipsum',
 				note: {
-					pl: 'Kapłan czyni Hostią pięć znaków krzyża — trzy nad kielichem, dwa przed nim — i unosi oba naczynia nieco nad ołtarz; to małe podniesienie zamyka Kanon, a Per ómnia sǽcula sæculórum i Amen słychać już na głos.',
-					en: 'With the Host the priest makes five crosses — three over the chalice, two before it — and lifts both vessels a little above the altar; this minor elevation closes the Canon, and the Per ómnia sǽcula sæculórum with its Amen is heard aloud.'
+					pl: 'Małe podniesienie zamyka Kanon; dopiero Per ómnia sǽcula sæculórum słychać na głos.',
+					en: 'The minor elevation closes the Canon; only the Per ómnia sǽcula sæculórum is heard aloud.'
 				}
 			}
 		]

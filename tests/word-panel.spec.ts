@@ -2,7 +2,7 @@
 // shipped behavior or a regression that actually happened (2026-08-04:
 // taps reverted by the deep-link effect; panel not restored on back from
 // a concept page) — keep them green.
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 const PATER = '/pl/orationes/pater-noster';
 const panel = 'aside';

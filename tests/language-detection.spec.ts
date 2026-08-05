@@ -2,7 +2,8 @@
 // language list, then English (src/routes/+page.svelte). The redirect
 // fires from <head> during parse, which aborts the initial load — hence
 // waitUntil: 'commit' plus a swallowed goto error before waitForURL.
-import { expect, test } from '@playwright/test';
+import { test as noScript } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 async function landFrom(page: import('@playwright/test').Page): Promise<void> {
 	await page.goto('/', { waitUntil: 'commit' }).catch(() => {});
@@ -41,10 +42,12 @@ test.describe('unsupported browser language', () => {
 	});
 });
 
-test.describe('no javascript', () => {
-	test.use({ javaScriptEnabled: false });
+// Without scripts there is nothing to hydrate, so this block uses the plain
+// fixture rather than the one that waits for the marker.
+noScript.describe('no javascript', () => {
+	noScript.use({ javaScriptEnabled: false });
 
-	test('the root still offers both languages, English first', async ({ page }) => {
+	noScript('the root still offers both languages, English first', async ({ page }) => {
 		await page.goto('/');
 		const cards = page.locator('.card');
 		await expect(cards).toHaveCount(2);

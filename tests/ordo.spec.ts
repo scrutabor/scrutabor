@@ -1,5 +1,5 @@
 // The flow view: the Mass in order, for a reader following it in the pew.
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 import { ORDO } from '../src/lib/ordo';
 
 test('the ordo is a map of six movements, walked in order', async ({ page }) => {
@@ -63,10 +63,11 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 
 	// the day's own texts are marked where they fall
 	await expect(page.locator('.mark', { hasText: 'z formularza dnia' }).first()).toBeVisible();
-	// and so are the parts still to come — the first two movements have none
-	// left now that the Kyrie and the foot-of-the-altar prayers have shipped,
-	// so look where they remain
-	await page.goto('/pl/ordo/canon');
+	// and so are the parts still to come — the movements fill in as the
+	// corpus grows, so look wherever any remain
+	const remaining = ORDO.find((m) => m.entries.some((e) => e.kind === 'pending'));
+	expect(remaining, 'no movement has a pending part left').toBeTruthy();
+	await page.goto(`/pl/ordo/${remaining!.id}`);
 	await expect(page.locator('.mark', { hasText: 'wkrótce w tym wydaniu' }).first()).toBeVisible();
 	// a part we do not carry shows no text of its own
 	const pending = page

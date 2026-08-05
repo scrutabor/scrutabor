@@ -65,6 +65,54 @@ import suscipe_sancta_trinitasEn from './data/suscipe-sancta-trinitas.en.json';
 import orate_fratresText from './data/orate-fratres.json';
 import orate_fratresPl from './data/orate-fratres.pl.json';
 import orate_fratresEn from './data/orate-fratres.en.json';
+import praefatio_dialogusText from './data/praefatio-dialogus.json';
+import praefatio_dialogusPl from './data/praefatio-dialogus.pl.json';
+import praefatio_dialogusEn from './data/praefatio-dialogus.en.json';
+import praefatio_communisText from './data/praefatio-communis.json';
+import praefatio_communisPl from './data/praefatio-communis.pl.json';
+import praefatio_communisEn from './data/praefatio-communis.en.json';
+import te_igiturText from './data/te-igitur.json';
+import te_igiturPl from './data/te-igitur.pl.json';
+import te_igiturEn from './data/te-igitur.en.json';
+import memento_vivorumText from './data/memento-vivorum.json';
+import memento_vivorumPl from './data/memento-vivorum.pl.json';
+import memento_vivorumEn from './data/memento-vivorum.en.json';
+import communicantesText from './data/communicantes.json';
+import communicantesPl from './data/communicantes.pl.json';
+import communicantesEn from './data/communicantes.en.json';
+import hanc_igiturText from './data/hanc-igitur.json';
+import hanc_igiturPl from './data/hanc-igitur.pl.json';
+import hanc_igiturEn from './data/hanc-igitur.en.json';
+import quam_oblationemText from './data/quam-oblationem.json';
+import quam_oblationemPl from './data/quam-oblationem.pl.json';
+import quam_oblationemEn from './data/quam-oblationem.en.json';
+import qui_pridieText from './data/qui-pridie.json';
+import qui_pridiePl from './data/qui-pridie.pl.json';
+import qui_pridieEn from './data/qui-pridie.en.json';
+import simili_modoText from './data/simili-modo.json';
+import simili_modoPl from './data/simili-modo.pl.json';
+import simili_modoEn from './data/simili-modo.en.json';
+import unde_et_memoresText from './data/unde-et-memores.json';
+import unde_et_memoresPl from './data/unde-et-memores.pl.json';
+import unde_et_memoresEn from './data/unde-et-memores.en.json';
+import supra_quaeText from './data/supra-quae.json';
+import supra_quaePl from './data/supra-quae.pl.json';
+import supra_quaeEn from './data/supra-quae.en.json';
+import supplices_te_rogamusText from './data/supplices-te-rogamus.json';
+import supplices_te_rogamusPl from './data/supplices-te-rogamus.pl.json';
+import supplices_te_rogamusEn from './data/supplices-te-rogamus.en.json';
+import memento_defunctorumText from './data/memento-defunctorum.json';
+import memento_defunctorumPl from './data/memento-defunctorum.pl.json';
+import memento_defunctorumEn from './data/memento-defunctorum.en.json';
+import nobis_quoqueText from './data/nobis-quoque.json';
+import nobis_quoquePl from './data/nobis-quoque.pl.json';
+import nobis_quoqueEn from './data/nobis-quoque.en.json';
+import per_quem_haec_omniaText from './data/per-quem-haec-omnia.json';
+import per_quem_haec_omniaPl from './data/per-quem-haec-omnia.pl.json';
+import per_quem_haec_omniaEn from './data/per-quem-haec-omnia.en.json';
+import per_ipsumText from './data/per-ipsum.json';
+import per_ipsumPl from './data/per-ipsum.pl.json';
+import per_ipsumEn from './data/per-ipsum.en.json';
 import kyrieText from './data/kyrie.json';
 import kyriePl from './data/kyrie.pl.json';
 import kyrieEn from './data/kyrie.en.json';
@@ -239,6 +287,42 @@ export const TEXTS: Record<string, TextEntry> = {
 		suscipe_sancta_trinitasEn
 	),
 	'ordinarium/orate-fratres': entry(orate_fratresText, orate_fratresPl, orate_fratresEn),
+	'ordinarium/praefatio-dialogus': entry(
+		praefatio_dialogusText,
+		praefatio_dialogusPl,
+		praefatio_dialogusEn
+	),
+	'ordinarium/praefatio-communis': entry(
+		praefatio_communisText,
+		praefatio_communisPl,
+		praefatio_communisEn
+	),
+	'ordinarium/te-igitur': entry(te_igiturText, te_igiturPl, te_igiturEn),
+	'ordinarium/memento-vivorum': entry(memento_vivorumText, memento_vivorumPl, memento_vivorumEn),
+	'ordinarium/communicantes': entry(communicantesText, communicantesPl, communicantesEn),
+	'ordinarium/hanc-igitur': entry(hanc_igiturText, hanc_igiturPl, hanc_igiturEn),
+	'ordinarium/quam-oblationem': entry(quam_oblationemText, quam_oblationemPl, quam_oblationemEn),
+	'ordinarium/qui-pridie': entry(qui_pridieText, qui_pridiePl, qui_pridieEn),
+	'ordinarium/simili-modo': entry(simili_modoText, simili_modoPl, simili_modoEn),
+	'ordinarium/unde-et-memores': entry(unde_et_memoresText, unde_et_memoresPl, unde_et_memoresEn),
+	'ordinarium/supra-quae': entry(supra_quaeText, supra_quaePl, supra_quaeEn),
+	'ordinarium/supplices-te-rogamus': entry(
+		supplices_te_rogamusText,
+		supplices_te_rogamusPl,
+		supplices_te_rogamusEn
+	),
+	'ordinarium/memento-defunctorum': entry(
+		memento_defunctorumText,
+		memento_defunctorumPl,
+		memento_defunctorumEn
+	),
+	'ordinarium/nobis-quoque': entry(nobis_quoqueText, nobis_quoquePl, nobis_quoqueEn),
+	'ordinarium/per-quem-haec-omnia': entry(
+		per_quem_haec_omniaText,
+		per_quem_haec_omniaPl,
+		per_quem_haec_omniaEn
+	),
+	'ordinarium/per-ipsum': entry(per_ipsumText, per_ipsumPl, per_ipsumEn),
 	'ordinarium/kyrie': entry(kyrieText, kyriePl, kyrieEn),
 	'ordinarium/gloria': entry(gloriaExcText, gloriaExcPl, gloriaExcEn),
 	'ordinarium/credo': entry(credoText, credoPl, credoEn),

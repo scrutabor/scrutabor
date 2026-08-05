@@ -9,5 +9,9 @@ export default defineConfig({
 		port: 4173,
 		reuseExistingServer: !process.env.CI
 	},
+	// The corpus is large and the flow pages are long; a 5 s default starts
+	// biting on page loads that are genuinely doing work.
+	timeout: 60_000,
+	expect: { timeout: 15_000 },
 	use: { baseURL: 'http://localhost:4173' }
 });

@@ -1,6 +1,6 @@
 // The educational surfaces around the reading view: lemma pages,
 // grammar-concept pages, and the landing.
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 import { CATALOG } from '../src/lib/catalog';
 
 test('lemma page shows head, senses, derivatives and concordance', async ({ page }) => {

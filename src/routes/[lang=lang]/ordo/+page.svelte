@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { TEXTS } from '$lib/corpus';
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import { M, type Lang } from '$lib/i18n';
@@ -15,8 +14,10 @@
 	const movements = $derived(
 		ORDO.map((m) => ({
 			...m,
-			// what a reader will find there: the texts we carry, named
-			carried: m.entries.filter((e) => e.text && TEXTS[e.text]).map((e) => e.title)
+			// What a reader will find there. The spine's own `kind` answers
+			// this, so the index does not import the corpus — that would pull
+			// every text into the bundle of a page that shows none.
+			carried: m.entries.filter((e) => e.kind === 'text').map((e) => e.title)
 		}))
 	);
 </script>
