@@ -1,0 +1,138 @@
+{
+	"schema_version": "0.8.0",
+	"text": "orationes.ave-maria",
+	"lang": "pl",
+	"status": "working-edition",
+	"about": "Pozdrowienie anielskie łączy dwa biblijne pozdrowienia — archanioła Gabriela (Łk 1, 28) i Elżbiety (Łk 1, 42) — z prośbą „Sancta María…”, która narastała w późnym średniowieczu, a ostateczny kształt otrzymała w XVI wieku, w brewiarzu św. Piusa V (1568). Połączone pozdrowienia śpiewano we Mszy na wieki przed dodaniem prośby: to ofertorium IV niedzieli Adwentu, zapisane już w rękopisach z IX wieku.",
+	"analysis_defaults": {
+		"confidence": "high",
+		"sources": [
+			"editorial"
+		],
+		"review": "pending"
+	},
+	"segments": {
+		"s01": {
+			"translation": "Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus."
+		},
+		"s02": {
+			"translation": "Święta Maryjo, Matko Boża, módl się za nami grzesznymi, teraz i w godzinę śmierci naszej. Amen."
+		}
+	},
+	"words": {
+		"w001": {
+			"gloss": "zdrowaś",
+			"function": "Słowa anioła z Łk 1, 28; utarte polskie „Zdrowaś” oddaje starożytne pozdrowienie."
+		},
+		"w002": {
+			"gloss": "Maryjo",
+			"function": "Bezpośredni zwrot do Maryi."
+		},
+		"w003": {
+			"gloss": "łaski",
+			"function": "Ablativus przy „plena” (w004): pełna czym — łaską; polski przekład ma dopełniacz „łaski pełna”."
+		},
+		"w004": {
+			"gloss": "pełna",
+			"function": "Zgadza się z „María” (w002); łączy się z ablativem „grátia” (w003)."
+		},
+		"w005": {
+			"gloss": "Pan",
+			"function": "Podmiot zdania z domyślnym „est”: Pan [jest] z Tobą."
+		},
+		"w006": {
+			"gloss": "z Tobą",
+			"function": "Forma zrośnięta: „te” + „cum” (z) — z zaimkami osobowymi przyimek „cum” stoi PO zaimku: tecum, nobíscum."
+		},
+		"w007": {
+			"gloss": "błogosławiona",
+			"function": "„Błogosławiona [jesteś] ty” — domyślne „es”. W Wulgacie te słowa należą jeszcze do pozdrowienia anielskiego (Łk 1, 28)."
+		},
+		"w008": {
+			"gloss": "ty",
+			"function": "Podmiot wypowiedziany wprost."
+		},
+		"w009": {
+			"gloss": "między"
+		},
+		"w010": {
+			"gloss": "niewiastami"
+		},
+		"w011": {
+			"gloss": "i"
+		},
+		"w012": {
+			"gloss": "błogosławiony",
+			"function": "Teraz o owocu, nie o Maryi — rodzaj męski za „fructus” (w013)."
+		},
+		"w013": {
+			"gloss": "owoc"
+		},
+		"w014": {
+			"gloss": "żywota",
+			"function": "Owoc czego — żywota; dopełniacz przy „fructus” (w013)."
+		},
+		"w015": {
+			"gloss": "Twojego",
+			"function": "Zgadza się z „ventris” (w014)."
+		},
+		"w016": {
+			"gloss": "Jezus",
+			"function": "Apozycja (dopowiedzenie) do „fructus” (w013): owoc… — Jezus."
+		},
+		"w017": {
+			"gloss": "Święta",
+			"function": "Otwiera część błagalną modlitwy; zgadza się z „María” (w018)."
+		},
+		"w018": {
+			"gloss": "Maryjo"
+		},
+		"w019": {
+			"gloss": "Matko",
+			"function": "Apozycja (dopowiedzenie) do „María” (w018)."
+		},
+		"w020": {
+			"gloss": "Boga",
+			"function": "Matko kogo — Boga; utarte polskie „Matko Boża” oddaje ten dopełniacz przymiotnikiem."
+		},
+		"w021": {
+			"gloss": "módl się"
+		},
+		"w022": {
+			"gloss": "za"
+		},
+		"w023": {
+			"gloss": "nami",
+			"function": "Ablativus po „pro” (w022)."
+		},
+		"w024": {
+			"gloss": "grzesznikami",
+			"function": "Apozycja (dopowiedzenie) do „nobis” (w023): za nami, grzesznikami; tradycyjnie „za nami grzesznymi”."
+		},
+		"w025": {
+			"gloss": "teraz",
+			"function": "Pierwszy z dwóch momentów prośby: teraz — i w godzinę śmierci."
+		},
+		"w026": {
+			"gloss": "i"
+		},
+		"w027": {
+			"gloss": "w"
+		},
+		"w028": {
+			"gloss": "godzinie",
+			"function": "Ablativus po „in” (w027) — kiedy; utarty polski przekład ma „w godzinę”."
+		},
+		"w029": {
+			"gloss": "śmierci",
+			"function": "W godzinie czego — śmierci; dopełniacz przy „hora” (w028)."
+		},
+		"w030": {
+			"gloss": "naszej",
+			"function": "Zgadza się z „mortis” (w029)."
+		},
+		"w031": {
+			"gloss": "amen"
+		}
+	}
+}

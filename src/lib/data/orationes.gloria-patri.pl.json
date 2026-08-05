@@ -1,0 +1,91 @@
+{
+	"schema_version": "0.8.0",
+	"text": "orationes.gloria-patri",
+	"lang": "pl",
+	"status": "working-edition",
+	"about": "Doksologia mniejsza — krótkie uwielbienie Trójcy, którym Kościół od starożytności kończy psalmy i kantyki oficjum. Jej łacińską postać z dodanym zdaniem „Sicut erat in princípio” — wyznaniem, że Syn jest wieczny — nakazał dla Galii synod w Vaison (529), wprost przeciwko arianom. Wschód po dziś dzień śpiewa doksologię bez tego zdania — „Sicut erat…” pozostało osobliwością łacińskiego Zachodu.",
+	"analysis_defaults": {
+		"confidence": "high",
+		"sources": [
+			"editorial"
+		],
+		"review": "pending"
+	},
+	"segments": {
+		"s01": {
+			"translation": "Chwała Ojcu i Synowi, i Duchowi Świętemu."
+		},
+		"s02": {
+			"translation": "Jak była na początku, teraz i zawsze, i na wieki wieków. Amen."
+		}
+	},
+	"words": {
+		"w001": {
+			"gloss": "chwała",
+			"function": "Z domyślnym „sit”: chwała [niech będzie]."
+		},
+		"w002": {
+			"gloss": "Ojcu",
+			"function": "Chwała komu — Ojcu; pierwszy z trzech celowników Trójcy."
+		},
+		"w003": {
+			"gloss": "i"
+		},
+		"w004": {
+			"gloss": "Synowi"
+		},
+		"w005": {
+			"gloss": "i"
+		},
+		"w006": {
+			"gloss": "Duchowi"
+		},
+		"w007": {
+			"gloss": "Świętemu",
+			"function": "Zgadza się ze „Spirítui” (w006)."
+		},
+		"w008": {
+			"gloss": "jak"
+		},
+		"w009": {
+			"gloss": "była",
+			"function": "Trwanie w przeszłości; podmiot domyślny — chwała."
+		},
+		"w010": {
+			"gloss": "na"
+		},
+		"w011": {
+			"gloss": "początku"
+		},
+		"w012": {
+			"gloss": "i"
+		},
+		"w013": {
+			"gloss": "teraz"
+		},
+		"w014": {
+			"gloss": "i"
+		},
+		"w015": {
+			"gloss": "zawsze"
+		},
+		"w016": {
+			"gloss": "i"
+		},
+		"w017": {
+			"gloss": "na",
+			"function": "Z biernikiem — rozciągłość w czasie: „na wieki”. Por. „in” (w010) z ablativem — punkt w czasie."
+		},
+		"w018": {
+			"gloss": "wieki",
+			"function": "Rozciągłość w czasie po „in” (w017)."
+		},
+		"w019": {
+			"gloss": "wieków",
+			"function": "Dopełniacz przy „sǽcula” (w018): wieki wieków — jak „Święte Świętych”."
+		},
+		"w020": {
+			"gloss": "amen"
+		}
+	}
+}
