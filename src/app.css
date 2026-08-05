@@ -29,31 +29,38 @@
 	box-sizing: border-box;
 }
 
-/* Metric-matched fallback: Georgia resized to EB Garamond's advance
-   widths (measured 91.6% on the corpus text), so the paint before the
-   webfont arrives occupies the same space and the swap shifts nothing.
-   Guarded by the cold-load CLS e2e. */
+/* Metric-matched fallback: a system serif resized to EB Garamond's
+   advance widths, so the paint before the webfont arrives occupies the
+   same space and the swap shifts nothing. Guarded by the cold-load CLS
+   e2e — and the guard earned its keep: the first calibration was made on
+   Latin verse alone and set Georgia 5 points too wide, which cost a
+   whole extra line on the pages that mix Latin with Polish prose.
+   Re-measured in the DOM at the sizes and weights the pages actually
+   use, over every text run on a reading page: Georgia 86.3%, Times 92.5%.
+   Re-measure the same way if the reading typography changes.
+
+   Vertical metrics are pinned to EB Garamond's rendered line box —
+   ascent 1.01em, descent 0.30em — and Chromium multiplies these
+   overrides by size-adjust, so each face divides the target by its own
+   adjustment. */
 @font-face {
 	font-family: 'EB Garamond Fallback';
 	src: local('Georgia');
-	size-adjust: 91.6%;
-	/* Vertical metrics pinned to EB Garamond's rendered line box
-	   (131/101 per 100px, calibrated in-engine — Chromium multiplies
-	   these overrides by size-adjust, hence the >100% ascent). */
-	ascent-override: 109.8%;
-	descent-override: 32.6%;
+	size-adjust: 86.3%;
+	ascent-override: 117%;
+	descent-override: 34.8%;
 	line-gap-override: 0%;
 }
 
-/* The same shim for platforms without Georgia (Linux CI, Android):
-   Times-metric faces are width-identical to EB Garamond on the corpus
-   text (measured 99.9%), so only the vertical box needs pinning. With
-   no size-adjust the overrides are the raw EB values. */
+/* The same shim for platforms without Georgia (Linux CI, Android).
+   Times-metric faces are closer to EB Garamond than Georgia is, but not
+   identical — the earlier 99.9% did not survive re-measurement either. */
 @font-face {
 	font-family: 'EB Garamond Fallback Times';
 	src: local('Times New Roman'), local('Liberation Serif'), local('Tinos');
-	ascent-override: 101%;
-	descent-override: 30%;
+	size-adjust: 92.5%;
+	ascent-override: 109.2%;
+	descent-override: 32.4%;
 	line-gap-override: 0%;
 }
 
