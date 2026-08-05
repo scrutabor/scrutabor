@@ -79,3 +79,31 @@ describe('GENDER_MARK', () => {
 		expect(GENDER_MARK).toEqual({ m: 'm.', f: 'f.', n: 'n.' });
 	});
 });
+
+describe('participles', () => {
+	const natum = {
+		pos: 'verb',
+		mood: 'part',
+		tense: 'perf',
+		voice: 'pass',
+		case: 'acc',
+		number: 'sg',
+		gender: 'm',
+		conj: 3
+	};
+
+	it('reads as a verbal adjective in both languages', () => {
+		expect(describeMorph(natum, 'pl')).toBe(
+			'czasownik — imiesłów, perfectum, strona bierna, biernik, l. poj., r. męski, koniugacja III'
+		);
+		expect(describeMorph(natum, 'en')).toBe(
+			'verb — participle, perfect, passive, accusative, singular, masculine, 3rd conjugation'
+		);
+	});
+
+	it('links the case concept and keeps the deponent concept', () => {
+		const parts = describeMorphParts({ ...natum, voice: 'dep' }, 'pl');
+		expect(parts.some((p) => p.concept === 'accusativus')).toBe(true);
+		expect(parts.some((p) => p.concept === 'deponens')).toBe(true);
+	});
+});

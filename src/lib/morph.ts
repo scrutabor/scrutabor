@@ -56,7 +56,8 @@ const LABELS: Record<Lang, MorphLabels> = {
 			ind: 'tryb oznajmujący',
 			subj: 'tryb łączący',
 			imp: 'tryb rozkazujący',
-			inf: 'bezokolicznik'
+			inf: 'bezokolicznik',
+			part: 'imiesłów'
 		},
 		voice: {
 			act: 'strona czynna',
@@ -102,7 +103,8 @@ const LABELS: Record<Lang, MorphLabels> = {
 			ind: 'indicative',
 			subj: 'subjunctive',
 			imp: 'imperative',
-			inf: 'infinitive'
+			inf: 'infinitive',
+			part: 'participle'
 		},
 		voice: {
 			act: 'active',
@@ -160,7 +162,21 @@ export function describeMorphParts(m: Morph, lang: Lang): MorphPart[] {
 	if (m.pos === 'adv' || m.pos === 'conj' || m.pos === 'intj') return [{ text: pos }];
 
 	const parts: MorphPart[] = [];
-	if (m.pos === 'verb') {
+	if (m.pos === 'verb' && m.mood === 'part') {
+		// Participles read as verbal adjectives: name the form first, then
+		// its verbal facts (tense, voice), then the nominal agreement.
+		parts.push({ text: t.mood.part });
+		if (m.tense) parts.push({ text: t.tense[m.tense] ?? m.tense });
+		if (m.voice)
+			parts.push({
+				text: t.voice[m.voice] ?? m.voice,
+				concept: m.voice === 'dep' ? 'deponens' : undefined
+			});
+		if (m.case) parts.push({ text: t.case[m.case] ?? m.case, concept: CASE_CONCEPT[m.case] });
+		if (m.number) parts.push({ text: t.number[m.number] ?? m.number });
+		if (m.gender) parts.push({ text: t.gender[m.gender] ?? m.gender });
+		if (m.conj) parts.push({ text: t.conj(m.conj) });
+	} else if (m.pos === 'verb') {
 		if (m.person) parts.push({ text: t.person(m.person) });
 		if (m.number) parts.push({ text: t.number[m.number] ?? m.number });
 		if (m.tense) parts.push({ text: t.tense[m.tense] ?? m.tense });
