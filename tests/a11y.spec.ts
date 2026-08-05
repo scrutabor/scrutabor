@@ -54,6 +54,26 @@ for (const theme of ['light', 'dark'] as const) {
 	}
 }
 
+// The pew case is a phone held at arm's length, and a narrow viewport
+// reflows everything: what fits at 1280px may overlap or clip at 375.
+test.describe('on a phone', () => {
+	test.use({ viewport: { width: 375, height: 812 } });
+
+	for (const { name, path } of SURFACES.filter((s) => s.path !== '/')) {
+		test(`${name} meets WCAG 2.1 AA`, async ({ page }) => {
+			await page.goto(path);
+			expect(await violations(page), `${path} at 375px`).toEqual([]);
+		});
+	}
+
+	test('the word panel meets WCAG 2.1 AA where it covers most of the screen', async ({ page }) => {
+		await page.goto('/pl/ordinarium/gloria');
+		await page.locator('.word').first().click();
+		await expect(page.locator('aside')).toBeVisible();
+		expect(await violations(page), 'panel on a phone').toEqual([]);
+	});
+});
+
 test('the word panel meets WCAG 2.1 AA, open and interactive', async ({ page }) => {
 	await page.goto('/pl/ordinarium/gloria');
 	await page.locator('.word').first().click();
