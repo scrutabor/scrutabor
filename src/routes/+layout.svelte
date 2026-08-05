@@ -7,11 +7,15 @@
 	import favicon from '$lib/assets/favicon.svg';
 	// Preloaded so the reading face is in flight before the CSS is parsed
 	// — together with the metric-matched fallback in app.css this removes
-	// the first-load font flicker. Only the latin ranges: latin-ext and
-	// Greek are small and the browser fetches them by unicode-range when a
-	// page needs them.
+	// the first-load font flicker. BOTH latin ranges: Polish diacritics and
+	// Latin's ǽ live in latin-ext, so leaving it to be discovered means a
+	// second swap, later, and a second layout shift. It costs 24K now that
+	// the faces are subsets (it was 198K before). Greek stays on demand:
+	// only a handful of pages set a Greek word.
 	import ebLatin from '$lib/fonts/eb-garamond-latin-wght-normal.woff2?url';
+	import ebLatinExt from '$lib/fonts/eb-garamond-latin-ext-wght-normal.woff2?url';
 	import ebLatinItalic from '$lib/fonts/eb-garamond-latin-wght-italic.woff2?url';
+	import ebLatinExtItalic from '$lib/fonts/eb-garamond-latin-ext-wght-italic.woff2?url';
 
 	let { children } = $props();
 
@@ -40,7 +44,7 @@
 		return () => removeEventListener('appinstalled', onInstalled);
 	});
 
-	const fonts = [ebLatin, ebLatinItalic];
+	const fonts = [ebLatin, ebLatinExt, ebLatinItalic, ebLatinExtItalic];
 </script>
 
 <svelte:head>
