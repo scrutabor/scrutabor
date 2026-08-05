@@ -252,6 +252,30 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	await expect(page.locator('.pager a')).toHaveCount(1);
 });
 
+test.describe('wake lock', () => {
+	// Headless denies the lock without an explicit grant; with it the
+	// REAL API runs, so a failed acquisition still fails the test.
+	test.use({ permissions: ['screen-wake-lock'] });
+
+	test('the wake toggle holds the lock across the book', async ({ page }) => {
+		await page.goto('/pl/ordinarium/gloria');
+		const wake = page.locator('button.wake');
+		await expect(wake).toHaveAttribute('aria-pressed', 'false');
+		await wake.click();
+		// stays pressed — an acquisition failure would snap it back to false
+		await expect(wake).toHaveAttribute('aria-pressed', 'true');
+		await page.waitForTimeout(150);
+		await expect(wake).toHaveAttribute('aria-pressed', 'true');
+		// the switch is app-level: paging to the next text keeps it on
+		await page.locator('.pager-next').click();
+		await expect(page).toHaveURL(/credo/);
+		await expect(page.locator('button.wake')).toHaveAttribute('aria-pressed', 'true');
+		// off releases
+		await page.locator('button.wake').click();
+		await expect(page.locator('button.wake')).toHaveAttribute('aria-pressed', 'false');
+	});
+});
+
 test('closing the panel leaves the page where it is', async ({ page }) => {
 	await page.setViewportSize({ width: 800, height: 520 });
 	await page.goto('/pl/ordinarium/credo');

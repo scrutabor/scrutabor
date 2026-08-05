@@ -12,6 +12,7 @@ export interface Messages {
 	levels: [string, string, string];
 	levelsAria: string;
 	themeAria: { toLight: string; toDark: string };
+	wakeAria: { toOn: string; toOff: string };
 	langMenuAria: string;
 	close: string;
 	panelAria: string;
@@ -45,6 +46,7 @@ export const M: Record<Lang, Messages> = {
 		levels: ['sama łacina', 'słowo po słowie', 'pełny przekład'],
 		levelsAria: 'Poziom pomocy',
 		themeAria: { toLight: 'przełącz na tryb jasny', toDark: 'przełącz na tryb ciemny' },
+		wakeAria: { toOn: 'nie wygaszaj ekranu', toOff: 'pozwól ekranowi zgasnąć' },
 		langMenuAria: 'wybór języka',
 		close: 'Zamknij',
 		panelAria: 'Analiza słowa',
@@ -79,6 +81,7 @@ export const M: Record<Lang, Messages> = {
 		levels: ['Latin only', 'word by word', 'full translation'],
 		levelsAria: 'Help level',
 		themeAria: { toLight: 'switch to light mode', toDark: 'switch to dark mode' },
+		wakeAria: { toOn: 'keep the screen awake', toOff: 'let the screen sleep' },
 		langMenuAria: 'language selection',
 		close: 'Close',
 		panelAria: 'Word analysis',

@@ -8,6 +8,7 @@
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+	import WakeLockToggle from '$lib/components/WakeLockToggle.svelte';
 	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
 
@@ -225,6 +226,7 @@
 			<nav>
 				<a href="/{lang}" class="back smallcaps">scrutabor</a>
 				<div class="nav-right">
+					<WakeLockToggle {lang} />
 					<LangMenu {lang} />
 					<ThemeToggle {lang} />
 				</div>
