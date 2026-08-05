@@ -103,13 +103,13 @@ body {
    honors @font-face metric overrides (Firefox 89+, Chrome 87+, Safari
    16.4+), so all browsers center identically. With ascent 75% / descent
    25%, the box center sits 0.25em above the baseline ≈ small-cap
-   mid-height — optically centered for small-caps labels. Same woff2 files
-   as the text face: zero extra download. Revisit text-box trim when
-   Firefox ships it. */
+   mid-height — optically centered for small-caps labels. The same subset
+   files as the text face (lib/fonts): zero extra download, which only
+   stays true if these point at our subsets and not at upstream. Revisit
+   text-box trim when Firefox ships it. */
 @font-face {
 	font-family: 'EB Garamond Label';
-	src: url('../node_modules/@fontsource-variable/eb-garamond/files/eb-garamond-latin-wght-normal.woff2')
-		format('woff2-variations');
+	src: url('./lib/fonts/eb-garamond-latin-wght-normal.woff2') format('woff2-variations');
 	font-weight: 400 800;
 	font-display: swap;
 	unicode-range:
@@ -122,8 +122,7 @@ body {
 
 @font-face {
 	font-family: 'EB Garamond Label';
-	src: url('../node_modules/@fontsource-variable/eb-garamond/files/eb-garamond-latin-ext-wght-normal.woff2')
-		format('woff2-variations');
+	src: url('./lib/fonts/eb-garamond-latin-ext-wght-normal.woff2') format('woff2-variations');
 	font-weight: 400 800;
 	font-display: swap;
 	unicode-range:

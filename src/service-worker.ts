@@ -19,19 +19,12 @@ const sw = self as unknown as ServiceWorkerGlobalScope;
 
 const CACHE = `scrutabor-${version}`;
 
-// EB Garamond ships every script it covers; two languages of Latin liturgy
-// need none of these.
-const UNUSED_SCRIPTS = /-(cyrillic|greek|vietnamese)(-ext)?-/;
 // Pages that ARE the shell: the language router, the two catalogs, the ordo
 // map, the edition page. Everything else — texts, movements, the dictionary,
 // the grammar — is a page a reader chooses.
 const SHELL_PAGE = /^\/(|[a-z]{2}|[a-z]{2}\/(ordo|editio|404))$/;
 
-const SHELL = [
-	...build.filter((path) => !UNUSED_SCRIPTS.test(path)),
-	...files,
-	...prerendered.filter((path) => SHELL_PAGE.test(path))
-];
+const SHELL = [...build, ...files, ...prerendered.filter((path) => SHELL_PAGE.test(path))];
 
 /** The whole book, for a reader who installed it. */
 const EVERYTHING = [...SHELL, ...prerendered.filter((path) => !path.endsWith('/sitemap.xml'))];

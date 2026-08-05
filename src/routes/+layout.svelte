@@ -1,16 +1,17 @@
 <script lang="ts">
-	import '@fontsource-variable/eb-garamond';
-	import '@fontsource-variable/eb-garamond/wght-italic.css';
+	// Our own subsets of EB Garamond, cut to the characters this edition
+	// sets (scripts/subset-fonts.py). Upstream ships every script it
+	// covers, which cost a reader 288K of font on every page.
+	import '$lib/fonts/fonts.css';
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
-	// Preloaded so the reading face (roman + italic; Polish needs
-	// latin-ext) is in flight before the CSS is parsed — together with
-	// the metric-matched fallback in app.css this removes the
-	// first-load font flicker.
-	import ebLatin from '@fontsource-variable/eb-garamond/files/eb-garamond-latin-wght-normal.woff2?url';
-	import ebLatinExt from '@fontsource-variable/eb-garamond/files/eb-garamond-latin-ext-wght-normal.woff2?url';
-	import ebLatinItalic from '@fontsource-variable/eb-garamond/files/eb-garamond-latin-wght-italic.woff2?url';
-	import ebLatinExtItalic from '@fontsource-variable/eb-garamond/files/eb-garamond-latin-ext-wght-italic.woff2?url';
+	// Preloaded so the reading face is in flight before the CSS is parsed
+	// — together with the metric-matched fallback in app.css this removes
+	// the first-load font flicker. Only the latin ranges: latin-ext and
+	// Greek are small and the browser fetches them by unicode-range when a
+	// page needs them.
+	import ebLatin from '$lib/fonts/eb-garamond-latin-wght-normal.woff2?url';
+	import ebLatinItalic from '$lib/fonts/eb-garamond-latin-wght-italic.woff2?url';
 
 	let { children } = $props();
 
@@ -39,7 +40,7 @@
 		return () => removeEventListener('appinstalled', onInstalled);
 	});
 
-	const fonts = [ebLatin, ebLatinExt, ebLatinItalic, ebLatinExtItalic];
+	const fonts = [ebLatin, ebLatinItalic];
 </script>
 
 <svelte:head>

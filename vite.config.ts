@@ -14,6 +14,12 @@ export default defineConfig({
 			adapter: adapter()
 		})
 	],
+	build: {
+		// Keep font files as files. Vite inlines assets under 4 KB as data
+		// URIs, which for the small Greek ranges means every page carries
+		// them in its stylesheet whether or not it sets a Greek word.
+		assetsInlineLimit: (file) => !file.endsWith('.woff2')
+	},
 	test: {
 		include: ['src/**/*.test.ts'],
 		environment: 'node'
