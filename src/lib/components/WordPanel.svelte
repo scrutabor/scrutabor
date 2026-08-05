@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { LEXICON, type Analysis, type Word, type WordGloss } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
-	import { GENDER_MARK, describeAnalysis, describeMorphParts } from '$lib/morph';
+	import { GENDER_MARK, describeAnalysisParts, describeMorphParts } from '$lib/morph';
 	import { pronunciations, syllabized } from '$lib/pronunciation';
 
 	let {
@@ -111,7 +111,13 @@
 				{/each}
 			</p>
 		{/if}
-		<p class="meta smallcaps">{describeAnalysis(analysis, lang)}</p>
+		<p class="meta smallcaps">
+			{#each describeAnalysisParts(analysis, lang) as part, i (i)}{#if part.href}<a
+						href={part.href}
+						target={part.external ? '_blank' : undefined}
+						rel={part.external ? 'external noopener' : undefined}>{part.text}</a
+					>{:else}{part.text}{/if}{/each}
+		</p>
 	</div>
 </aside>
 
@@ -277,5 +283,15 @@
 		margin: 0.8rem 0 0;
 		font-size: 0.75rem;
 		color: var(--ink-soft);
+	}
+
+	.meta a {
+		color: inherit;
+		text-decoration: none;
+		border-bottom: 1px dotted var(--border);
+	}
+
+	.meta a:hover {
+		color: var(--ink);
 	}
 </style>

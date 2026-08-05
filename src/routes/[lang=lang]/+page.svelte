@@ -44,7 +44,7 @@
 		<p class="grammar-link smallcaps">
 			<a href="/{lang}/grammatica">{msgs.grammarTitle} →</a>
 		</p>
-		<p class="working smallcaps">{msgs.working}</p>
+		<p class="working smallcaps"><a href="/{lang}/editio">{msgs.working}</a></p>
 	</main>
 </div>
 

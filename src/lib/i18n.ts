@@ -21,6 +21,7 @@ export interface Messages {
 	externalDict: string;
 	notFound: string;
 	catalogDescription: string;
+	editioDescription: string;
 	grammarDescription: string;
 	pronunciationDescription: string;
 	/** '{title}' is replaced with the text's Latin title. */
@@ -53,6 +54,8 @@ export const M: Record<Lang, Messages> = {
 		notFound: 'Nie ma takiego hasła.',
 		catalogDescription:
 			'Modlitewnik łaciński z analizą słowo po słowie — przekład, gramatyka i wymowa każdego słowa.',
+		editioDescription:
+			'Jak powstaje to wydanie: świadkowie i kolacja tekstów, mechaniczna weryfikacja analiz, stany przeglądu.',
 		grammarDescription: 'Pojęcia gramatyki łacińskiej objaśnione na przykładach z modlitw.',
 		pronunciationDescription:
 			'Zasady wymowy łaciny kościelnej — tradycja rzymska i polska, z transkrypcją.',
@@ -84,6 +87,8 @@ export const M: Record<Lang, Messages> = {
 		notFound: 'No such entry.',
 		catalogDescription:
 			'A Latin prayer book with word-by-word analysis — translation, grammar, and pronunciation for every word.',
+		editioDescription:
+			'How this edition is made: text witnesses and collation, mechanical verification of the analyses, review states.',
 		grammarDescription: 'Latin grammar concepts explained with examples from the prayers.',
 		pronunciationDescription:
 			'How to pronounce ecclesiastical Latin, in the Roman tradition, with transcriptions.',

@@ -170,7 +170,7 @@
 				</div>
 			</nav>
 			<h1 lang="la">{doc.title}</h1>
-			<p class="subtitle smallcaps">{sectionLabel} · {msgs.workingEdition}</p>
+			<p class="subtitle smallcaps">{sectionLabel}</p>
 			<div class="help-row">
 				<HelpLevels {lang} bind:value={helpLevel} />
 			</div>

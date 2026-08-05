@@ -104,3 +104,27 @@ test('the sitemap lists both languages of every surface', async ({ request }) =>
 	expect(xml).toContain('<loc>https://scrutabor.org/en/grammatica/pronuntiatio</loc>');
 	expect(xml).not.toContain('/404');
 });
+
+test('the edition page explains the sources and carries the working label', async ({ page }) => {
+	await page.goto('/pl/editio');
+	await expect(page.locator('h1')).toHaveText('o wydaniu');
+	await expect(page.locator('.what a[href*="whitakers-words"]')).toHaveAttribute(
+		'target',
+		'_blank'
+	);
+	await expect(page.locator('main')).toContainText('wydaniem roboczym');
+	// the landing's quiet label links here; reading pages no longer carry it
+	await page.goto('/pl');
+	await page.locator('.working a').click();
+	await expect(page).toHaveURL(/\/pl\/editio$/);
+	await page.goto('/pl/ordinarium/credo');
+	await expect(page.locator('.subtitle')).not.toContainText('robocze');
+});
+
+test('the provenance sources are clickable', async ({ page }) => {
+	await page.goto('/pl/orationes/pater-noster?w=w001');
+	const meta = page.locator('aside .meta');
+	await expect(meta.locator('a[href="/pl/editio"]')).toHaveText('opracowanie');
+	await expect(meta.locator('a[href*="whitakers-words"]')).toHaveAttribute('target', '_blank');
+	await expect(meta.locator('a[href*="collatinus"]')).toHaveAttribute('rel', /noopener/);
+});

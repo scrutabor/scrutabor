@@ -248,10 +248,39 @@ const ANALYSIS_LABELS: Record<
 	}
 };
 
-export function describeAnalysis(a: Analysis, lang: Lang): string {
+// Where a source id leads: the analyzers to their projects, editorial
+// to the edition page (per-language). Witness ids and future sources
+// stay plain text.
+const SOURCE_LINKS: Record<string, string> = {
+	whitakers: 'https://github.com/mk270/whitakers-words',
+	collatinus: 'https://outils.biblissima.fr/en/collatinus/'
+};
+
+export interface AnalysisPart {
+	text: string;
+	href?: string;
+	external?: boolean;
+}
+
+export function describeAnalysisParts(a: Analysis, lang: Lang): AnalysisPart[] {
 	const t = ANALYSIS_LABELS[lang];
 	const confidence = t.values[a.confidence] ?? a.confidence;
 	const review = t.values[a.review] ?? a.review;
-	const sources = a.sources.map((s) => t.values[s] ?? s).join(', ');
-	return `${t.confidence}: ${confidence} · ${review} · ${t.sources}: ${sources}`;
+	const parts: AnalysisPart[] = [
+		{ text: `${t.confidence}: ${confidence} · ${review} · ${t.sources}: ` }
+	];
+	a.sources.forEach((s, i) => {
+		if (i > 0) parts.push({ text: ', ' });
+		const text = t.values[s] ?? s;
+		if (s === 'editorial') parts.push({ text, href: `/${lang}/editio` });
+		else if (SOURCE_LINKS[s]) parts.push({ text, href: SOURCE_LINKS[s], external: true });
+		else parts.push({ text });
+	});
+	return parts;
+}
+
+export function describeAnalysis(a: Analysis, lang: Lang): string {
+	return describeAnalysisParts(a, lang)
+		.map((p) => p.text)
+		.join('');
 }
