@@ -82,3 +82,37 @@ test('the reading face stays small', async ({ request }) => {
 		'font subsets have grown — did a regeneration lose its charset?'
 	).toBeLessThan(140);
 });
+
+test('Latin text still refuses the locl substitution', async ({ page }) => {
+	// EB Garamond's roman carries an OpenType locl rule for the Latin
+	// language system that swaps u for v — "qvia", "cvlpa" — and lang="la"
+	// triggers it. The 1962 orthography distinguishes the two letters, so
+	// the feature is off. This is a font-level trap that no charset check
+	// and no screenshot of a passing page would catch, and the subsetting
+	// kept the feature in the file, so the CSS is the only thing standing
+	// between a reader and "qvia".
+	await page.goto('/pl/ordinarium/gloria');
+	const applied = await page.evaluate(() => {
+		const latin = document.querySelector('[lang="la"], .verse');
+		return latin ? getComputedStyle(latin).fontFeatureSettings : 'none';
+	});
+	expect(applied).toContain('locl');
+	expect(applied).toMatch(/locl["']?\s*0/);
+
+	// and the rendered result: with the substitution live, u and v would
+	// be drawn with the same glyph and measure the same
+	const same = await page.evaluate(() => {
+		const probe = (text: string) => {
+			const s = document.createElement('span');
+			s.lang = 'la';
+			s.style.cssText = 'position:absolute;visibility:hidden;font-size:64px';
+			s.textContent = text;
+			document.body.appendChild(s);
+			const w = s.getBoundingClientRect().width;
+			s.remove();
+			return w;
+		};
+		return Math.abs(probe('uuuu') - probe('vvvv')) < 1;
+	});
+	expect(same, 'u and v are being drawn as the same glyph').toBe(false);
+});
