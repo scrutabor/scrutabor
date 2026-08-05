@@ -5,6 +5,7 @@
 	import '$lib/fonts/fonts.css';
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import { loadRole } from '$lib/role.svelte';
 	// Preloaded so the reading face is in flight before the CSS is parsed
 	// — together with the metric-matched fallback in app.css this removes
 	// the first-load font flicker. BOTH latin ranges: Polish diacritics and
@@ -18,6 +19,12 @@
 	import ebLatinExtItalic from '$lib/fonts/eb-garamond-latin-ext-wght-italic.woff2?url';
 
 	let { children } = $props();
+
+	// The reader's part at Mass, applied once the page is alive (the
+	// prerendered HTML is always the pew's view).
+	$effect(() => {
+		loadRole();
+	});
 
 	// Marks the moment the page becomes interactive. The prerendered HTML is
 	// readable long before the corpus bundle has hydrated it, so a tap on a

@@ -40,6 +40,17 @@ export interface Messages {
 	grammarTitle: string;
 	derivativesLabel: string;
 	pronunciationHint: string;
+	/** Who says a line, and how loudly (corpus 0.9.0). */
+	speakers: Record<'sacerdos' | 'minister' | 'populus' | 'omnes' | 'schola', string>;
+	voices: Record<'submissa' | 'secreto' | 'cantus', string>;
+	/** Marks a line the reader answers with, so it can be found at a glance. */
+	yoursLabel: string;
+	/** The reader's part at Mass, and the control that sets it. */
+	roleLabel: string;
+	roles: Record<'populus' | 'minister' | 'sacerdos', string>;
+	roleHint: Record<'populus' | 'minister' | 'sacerdos', string>;
+	quietCollapsed: string;
+	quietReveal: string;
 }
 
 const MESSAGES: Record<Lang, Messages> = {
@@ -81,6 +92,24 @@ const MESSAGES: Record<Lang, Messages> = {
 		ordoPending: 'wkrótce w tym wydaniu',
 		grammarTitle: 'gramatyka',
 		derivativesLabel: 'w polszczyźnie',
+		speakers: {
+			sacerdos: 'kapłan',
+			minister: 'ministrant',
+			populus: 'lud',
+			omnes: 'wszyscy',
+			schola: 'schola'
+		},
+		voices: { submissa: 'półgłosem', secreto: 'po cichu', cantus: 'śpiew' },
+		yoursLabel: 'odpowiadasz',
+		roleLabel: 'twoja rola',
+		roles: { populus: 'wierny', minister: 'ministrant', sacerdos: 'kapłan' },
+		roleHint: {
+			populus: 'to, co słychać, i to, co odpowiadasz',
+			minister: 'także odpowiedzi ministranta',
+			sacerdos: 'całość, z modlitwami odmawianymi po cichu'
+		},
+		quietCollapsed: 'kapłan modli się po cichu',
+		quietReveal: 'pokaż',
 		pronunciationHint: 'zasady wymowy'
 	},
 	en: {
@@ -121,6 +150,24 @@ const MESSAGES: Record<Lang, Messages> = {
 		ordoPending: 'not yet in this edition',
 		grammarTitle: 'grammar',
 		derivativesLabel: 'in English',
+		speakers: {
+			sacerdos: 'priest',
+			minister: 'server',
+			populus: 'people',
+			omnes: 'all',
+			schola: 'choir'
+		},
+		voices: { submissa: 'in a low voice', secreto: 'silently', cantus: 'sung' },
+		yoursLabel: 'you answer',
+		roleLabel: 'your part',
+		roles: { populus: 'in the pew', minister: 'server', sacerdos: 'priest' },
+		roleHint: {
+			populus: 'what is heard, and what you answer',
+			minister: 'the server’s responses as well',
+			sacerdos: 'everything, including the prayers said silently'
+		},
+		quietCollapsed: 'the priest prays silently',
+		quietReveal: 'show',
 		pronunciationHint: 'pronunciation guide'
 	}
 };

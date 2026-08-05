@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.8.0",
+	"schema_version": "0.9.0",
 	"id": "ordinarium.agnus-dei",
 	"title": "Agnus Dei",
 	"category": "ordinarium",
@@ -45,6 +45,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w001",
@@ -151,6 +152,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w009",
@@ -257,6 +259,7 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w017",

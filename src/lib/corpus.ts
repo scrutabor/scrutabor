@@ -44,9 +44,19 @@ export interface Word {
 	analysis?: Analysis;
 }
 
+/** Who says a line. Absent means the sources have not been read for it
+ * yet (corpus SCHEMA.md 0.9.0) — which must be rendered as unmarked, not
+ * guessed at. */
+export type Speaker = 'sacerdos' | 'minister' | 'populus' | 'omnes' | 'schola';
+
+/** How loudly: aloud, raised-but-not-full, silent, sung. */
+export type Voice = 'clara' | 'submissa' | 'secreto' | 'cantus';
+
 export interface Segment {
 	id: string;
 	type: 'verse' | 'rubric';
+	speaker?: Speaker;
+	voice?: Voice;
 	text?: string;
 	words?: Word[];
 	analysis?: Analysis;

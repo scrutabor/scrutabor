@@ -2,6 +2,7 @@
 	import { page } from '$app/state';
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+	import RolePicker from '$lib/components/RolePicker.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { ORDO } from '$lib/ordo';
 
@@ -39,6 +40,8 @@
 	<main>
 		<h1 lang="la">Ordo Missæ</h1>
 		<p class="subtitle smallcaps">{msgs.ordoSubtitle}</p>
+
+		<RolePicker {lang} />
 
 		<div class="movements">
 			{#each movements as m (m.id)}

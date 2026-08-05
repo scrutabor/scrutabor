@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.8.0",
+	"schema_version": "0.9.0",
 	"id": "ordinarium.qui-dixisti",
 	"title": "Dómine Jesu Christe, qui dixísti",
 	"category": "ordinarium",
@@ -46,6 +46,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w001",
@@ -145,6 +146,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w008",
@@ -236,6 +238,7 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w015",
@@ -332,6 +335,7 @@
 		{
 			"id": "s05",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w023",
@@ -428,6 +432,7 @@
 		{
 			"id": "s06",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w031",

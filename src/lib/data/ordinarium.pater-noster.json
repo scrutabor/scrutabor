@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.8.0",
+	"schema_version": "0.9.0",
 	"id": "ordinarium.pater-noster",
 	"title": "Pater noster (Missæ)",
 	"category": "ordinarium",
@@ -732,6 +732,7 @@
 		{
 			"id": "s12",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w055",
@@ -805,6 +806,8 @@
 		{
 			"id": "s14",
 			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w060",

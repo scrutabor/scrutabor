@@ -54,6 +54,73 @@ export interface OrdoMovement {
 	entries: OrdoEntry[];
 }
 
+/**
+ * How loudly each part is said at LOW MASS, which is the Mass this spine
+ * describes throughout. Editorial, like the narrative notes beside it and
+ * held to the same standard: it states the rite's own practice — the
+ * offertory prayers and the Canon from Te ígitur to Per ipsum are said
+ * secreto, the dialogues and the lessons aloud — and it is the claim a
+ * Latinist should check first, because it is what the role filter acts on.
+ *
+ * `submissa` is the raised-but-not-full voice the rubrics call *elata
+ * aliquantulum voce*: the first Dómine non sum dignus, the opening words
+ * of Nobis quoque and of Orate fratres, where the priest lets the server
+ * hear him and then drops back into silence.
+ *
+ * A part named nowhere here is said aloud. Where the CORPUS has read a
+ * voice from the rubrics (SCHEMA.md 0.9.0) that reading governs the text
+ * itself; this map governs the spine, which is coarser by design — a
+ * reader filtering the ordo is choosing what to walk past, not what to
+ * believe about a single line.
+ */
+const QUIET: Record<string, 'secreto' | 'submissa'> = {
+	// preparation: the psalm and its versicles are said with the server;
+	// these two the priest says going up to the altar
+	'aufer-a-nobis': 'secreto',
+	// offertory: every one of these prayers is said silently
+	'suscipe-sancte-pater': 'secreto',
+	'deus-qui-humanae': 'secreto',
+	'offerimus-tibi': 'secreto',
+	'in-spiritu-humilitatis': 'secreto',
+	lavabo: 'secreto',
+	'suscipe-sancta-trinitas': 'secreto',
+	'orate-fratres': 'submissa',
+	secreta: 'secreto',
+	// the Canon, silent from Te ígitur to the doxology
+	'te-igitur': 'secreto',
+	'memento-vivorum': 'secreto',
+	communicantes: 'secreto',
+	'hanc-igitur': 'secreto',
+	'quam-oblationem': 'secreto',
+	'qui-pridie': 'secreto',
+	'simili-modo': 'secreto',
+	'unde-et-memores': 'secreto',
+	'supra-quae': 'secreto',
+	'supplices-te-rogamus': 'secreto',
+	'memento-defunctorum': 'secreto',
+	'nobis-quoque': 'submissa',
+	'per-quem-haec-omnia': 'secreto',
+	'per-ipsum': 'secreto',
+	// communion: the embolism, the commixture, the three prayers, the
+	// priest's own communion and the ablutions
+	'libera-nos': 'secreto',
+	'haec-commixtio': 'secreto',
+	'qui-dixisti': 'secreto',
+	'fili-dei-vivi': 'secreto',
+	'perceptio-corporis': 'secreto',
+	'panem-caelestem': 'submissa',
+	'quid-retribuam': 'secreto',
+	'quod-ore-sumpsimus': 'secreto',
+	'corpus-tuum': 'secreto',
+	// after the dismissal
+	'placeat-tibi': 'secreto'
+};
+
+/** How loudly this part is said; undefined means aloud. */
+export function partVoice(id: string): 'secreto' | 'submissa' | undefined {
+	return QUIET[id];
+}
+
 const ORDO_SOURCE: OrdoMovement[] = [
 	{
 		id: 'praeparatio',

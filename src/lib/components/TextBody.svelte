@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { GlossDocument, TextDocument } from '$lib/corpus';
-	import type { Lang } from '$lib/i18n';
+	import { M, type Lang } from '$lib/i18n';
 
 	// The rendered text itself, shared by the reading page and the ordo
 	// flow. `ontap` makes the words buttons; the flow passes an idPrefix so
@@ -28,6 +28,11 @@
 	// stays readable instead of arriving as %3A, and it matches the corpus's
 	// own dotted ids (ordinarium.credo).
 	const domId = (id: string) => (idPrefix ? `${idPrefix}.${id}` : id);
+
+	// The voices a reader in the pew answers with. At low Mass the server
+	// answers for everyone, and the congregation joins at a dialogue Mass —
+	// either way these are the lines the reader may be saying.
+	const ANSWERS = new Set(['minister', 'populus', 'omnes']);
 </script>
 
 {#snippet face(id: string, form: string)}<ruby
@@ -46,7 +51,27 @@
 			{/if}
 		</div>
 	{:else}
-		<p class="verse" class:glossed={helpLevel >= 1} lang="la">
+		<!-- Who says it, and how loudly. Absent attribution renders as
+		     nothing at all: the corpus says "not read yet" by leaving the
+		     field out, and a missal that guessed would be worse than one
+		     that is silent. The reader's own lines carry the strongest
+		     mark, because finding them at a glance is the whole point. -->
+		{#if seg.speaker || (seg.voice && seg.voice !== 'clara')}
+			<p class="who" class:yours={ANSWERS.has(seg.speaker ?? '')}>
+				{#if seg.speaker}<span class="who-name">{M[lang].speakers[seg.speaker]}</span>{/if}
+				{#if seg.voice && seg.voice !== 'clara'}<span class="who-voice"
+						>{M[lang].voices[seg.voice]}</span
+					>{/if}
+				{#if ANSWERS.has(seg.speaker ?? '')}<span class="who-yours">{M[lang].yoursLabel}</span>{/if}
+			</p>
+		{/if}
+		<p
+			class="verse"
+			class:glossed={helpLevel >= 1}
+			class:quiet={seg.voice === 'secreto'}
+			class:answer={ANSWERS.has(seg.speaker ?? '')}
+			lang="la"
+		>
 			<!-- Word and its trailing punctuation form one atomic token
 			     (inline-block): the line breaker may only break at the
 			     spaces BETWEEN tokens, never between a word and its
@@ -69,6 +94,42 @@
 {/each}
 
 <style>
+	/* The attribution line: small caps, quiet, above the words it names —
+	   the shape a missal uses for its S. and M. */
+	.who {
+		margin: 0 0 0.15rem;
+		font-size: 0.72rem;
+		letter-spacing: 0.09em;
+		text-transform: lowercase;
+		font-variant-caps: small-caps;
+		color: var(--ink-soft);
+		display: flex;
+		gap: 0.6rem;
+		align-items: baseline;
+	}
+
+	.who-voice {
+		font-style: italic;
+	}
+
+	.who-yours {
+		color: var(--rubric);
+	}
+
+	/* A line the reader answers with is marked down its edge, so the eye
+	   finds it while the ear is following the priest. */
+	.verse.answer {
+		border-inline-start: 2px solid var(--rubric);
+		padding-inline-start: 0.7rem;
+		margin-inline-start: -0.9rem;
+	}
+
+	/* Said silently: still fully legible — it is the text of the Mass, not
+	   an aside — but set apart so that what is heard reads first. */
+	.verse.quiet {
+		color: var(--ink-soft);
+	}
+
 	.verse {
 		font-size: 1.45rem;
 		line-height: 1.75;

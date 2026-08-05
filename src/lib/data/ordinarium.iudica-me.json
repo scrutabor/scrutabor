@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.8.0",
+	"schema_version": "0.9.0",
 	"id": "ordinarium.iudica-me",
 	"title": "Psalmus Júdica me",
 	"category": "ordinarium",
@@ -59,6 +59,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"words": [
 				{
 					"id": "w001",
@@ -273,6 +274,7 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w019",
@@ -475,6 +477,7 @@
 		{
 			"id": "s05",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"words": [
 				{
 					"id": "w036",
@@ -692,6 +695,7 @@
 		{
 			"id": "s06",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w055",
@@ -831,6 +835,7 @@
 		{
 			"id": "s07",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"words": [
 				{
 					"id": "w066",
@@ -1018,6 +1023,7 @@
 		{
 			"id": "s08",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w082",
@@ -1170,6 +1176,7 @@
 		{
 			"id": "s09",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"words": [
 				{
 					"id": "w095",
@@ -1254,6 +1261,7 @@
 		{
 			"id": "s10",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w102",
@@ -1454,6 +1462,7 @@
 		{
 			"id": "s13",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w119",

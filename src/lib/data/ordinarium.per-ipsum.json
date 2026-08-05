@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.8.0",
+	"schema_version": "0.9.0",
 	"id": "ordinarium.per-ipsum",
 	"title": "Per ipsum",
 	"category": "ordinarium",
@@ -331,6 +331,7 @@
 		{
 			"id": "s08",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w022",
@@ -382,6 +383,8 @@
 		{
 			"id": "s09",
 			"type": "verse",
+			"speaker": "minister",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w026",

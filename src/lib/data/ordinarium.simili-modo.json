@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.8.0",
+	"schema_version": "0.9.0",
 	"id": "ordinarium.simili-modo",
 	"title": "Símili modo",
 	"category": "ordinarium",
@@ -450,6 +450,7 @@
 		{
 			"id": "s07",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w032",
@@ -711,6 +712,7 @@
 		{
 			"id": "s09",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w054",

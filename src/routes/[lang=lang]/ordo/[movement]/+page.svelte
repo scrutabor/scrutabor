@@ -7,7 +7,8 @@
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
-	import { movementById, movementNeighbors } from '$lib/ordo';
+	import { movementById, movementNeighbors, partVoice } from '$lib/ordo';
+	import { role, showsWords } from '$lib/role.svelte';
 	import { ribbon } from '$lib/ribbon.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
 	import { wordPanel } from '$lib/wordpanel.svelte';
@@ -23,6 +24,11 @@
 
 	// The flow shares the reading page's help ladder and its stored setting.
 	let helpLevel = $state(1);
+
+	// Parts the reader has opened for themselves this visit. Folding is a
+	// default, never a refusal: one tap and the words are there, and they
+	// stay there while the reader is on the page.
+	let unfolded = $state<Record<string, boolean>>({});
 
 	// …and its word panel. A word is one tap from its analysis wherever it
 	// stands (decisions #20); the flow is not an exception. Several texts
@@ -147,7 +153,15 @@
 						{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
 					</p>
 				{/if}
-				{#if entry}
+				{#if entry && !showsWords(partVoice(e.id), role.value) && !unfolded[e.id]}
+					<!-- Folded, not hidden: the note above already says what is
+					     happening, and the words are one tap away. -->
+					<button class="unfold" onclick={() => (unfolded[e.id] = true)}>
+						<span class="unfold-what">{msgs.quietCollapsed}</span>
+						<span class="unfold-do smallcaps">{msgs.quietReveal}</span>
+					</button>
+				{/if}
+				{#if entry && (showsWords(partVoice(e.id), role.value) || unfolded[e.id])}
 					<div class="part-text">
 						<TextBody
 							doc={entry.doc}
@@ -292,6 +306,46 @@
 		flex: none;
 		font-size: 0.7rem;
 		color: var(--ink-soft);
+	}
+
+	/* A folded prayer: the note above says what is happening, this says
+	   the words are here if wanted. Quiet, and the whole line is the
+	   target — a thumb in a pew is not precise. */
+	.unfold {
+		display: flex;
+		width: 100%;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
+		margin: 0.2rem 0 0.6rem;
+		padding: 0.55rem 0.9rem;
+		background: transparent;
+		border: 1px dashed var(--border);
+		border-radius: 0.4rem;
+		color: var(--ink-soft);
+		font: inherit;
+		font-size: 0.95rem;
+		text-align: start;
+		cursor: pointer;
+	}
+
+	.unfold:hover {
+		border-color: var(--rubric);
+	}
+
+	.unfold:focus-visible {
+		outline: 2px solid var(--rubric);
+		outline-offset: 2px;
+	}
+
+	.unfold-what {
+		font-style: italic;
+	}
+
+	.unfold-do {
+		color: var(--rubric);
+		font-size: 0.72rem;
+		letter-spacing: 0.09em;
 	}
 
 	.part-note {

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.8.0",
+	"schema_version": "0.9.0",
 	"id": "ordinarium.aufer-a-nobis",
 	"title": "Aufer a nobis",
 	"category": "ordinarium",
@@ -46,6 +46,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w001",
@@ -80,6 +81,7 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w002",
@@ -266,6 +268,7 @@
 		{
 			"id": "s05",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w017",
@@ -339,6 +342,7 @@
 		{
 			"id": "s07",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w022",
@@ -440,6 +444,7 @@
 		{
 			"id": "s09",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w029",

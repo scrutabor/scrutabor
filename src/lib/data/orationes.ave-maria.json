@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.8.0",
+	"schema_version": "0.9.0",
 	"id": "orationes.ave-maria",
 	"title": "Ave María",
 	"category": "orationes",
@@ -32,6 +32,7 @@
 		{
 			"id": "s01",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"words": [
 				{
 					"id": "w001",
@@ -229,6 +230,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"speaker": "omnes",
 			"words": [
 				{
 					"id": "w017",

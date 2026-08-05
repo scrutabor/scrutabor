@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.8.0",
+	"schema_version": "0.9.0",
 	"id": "ordinarium.introibo",
 	"title": "Introíbo ad altáre Dei",
 	"category": "ordinarium",
@@ -46,6 +46,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w001",
@@ -169,6 +170,8 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w010",
@@ -222,6 +225,8 @@
 		{
 			"id": "s05",
 			"type": "verse",
+			"speaker": "minister",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w014",

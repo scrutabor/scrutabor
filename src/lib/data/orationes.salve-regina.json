@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.8.0",
+	"schema_version": "0.9.0",
 	"id": "orationes.salve-regina",
 	"title": "Salve Regína",
 	"category": "orationes",
@@ -33,6 +33,7 @@
 		{
 			"id": "s01",
 			"type": "verse",
+			"speaker": "omnes",
 			"words": [
 				{
 					"id": "w001",
@@ -164,6 +165,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"speaker": "omnes",
 			"words": [
 				{
 					"id": "w011",
@@ -241,6 +243,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"speaker": "omnes",
 			"words": [
 				{
 					"id": "w017",
@@ -371,6 +374,7 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"speaker": "omnes",
 			"words": [
 				{
 					"id": "w027",
@@ -497,6 +501,7 @@
 		{
 			"id": "s05",
 			"type": "verse",
+			"speaker": "omnes",
 			"words": [
 				{
 					"id": "w038",
@@ -637,6 +642,7 @@
 		{
 			"id": "s06",
 			"type": "verse",
+			"speaker": "omnes",
 			"words": [
 				{
 					"id": "w049",
@@ -803,6 +809,7 @@
 		{
 			"id": "s08",
 			"type": "verse",
+			"speaker": "omnes",
 			"words": [
 				{
 					"id": "w063",

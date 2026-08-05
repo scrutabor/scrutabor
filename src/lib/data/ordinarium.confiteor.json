@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.8.0",
+	"schema_version": "0.9.0",
 	"id": "ordinarium.confiteor",
 	"title": "Confíteor (Ministrórum)",
 	"category": "ordinarium",
@@ -46,6 +46,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w001",
@@ -333,6 +334,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w024",
@@ -428,6 +430,7 @@
 		{
 			"id": "s05",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w031",
@@ -518,6 +521,7 @@
 		{
 			"id": "s06",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w038",

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.8.0",
+	"schema_version": "0.9.0",
 	"id": "ordinarium.deus-tu-conversus",
 	"title": "Deus, tu convérsus",
 	"category": "ordinarium",
@@ -45,6 +45,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"words": [
 				{
 					"id": "w001",
@@ -114,6 +115,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w006",
@@ -185,6 +187,7 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"words": [
 				{
 					"id": "w012",
@@ -253,6 +256,7 @@
 		{
 			"id": "s05",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w017",
@@ -315,6 +319,7 @@
 		{
 			"id": "s06",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"words": [
 				{
 					"id": "w022",
@@ -372,6 +377,7 @@
 		{
 			"id": "s07",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w026",
@@ -443,6 +449,7 @@
 		{
 			"id": "s08",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"words": [
 				{
 					"id": "w032",
@@ -480,6 +487,7 @@
 		{
 			"id": "s09",
 			"type": "verse",
+			"speaker": "minister",
 			"words": [
 				{
 					"id": "w034",
