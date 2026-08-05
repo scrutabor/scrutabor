@@ -45,6 +45,15 @@
 				</div>
 			</section>
 		{/each}
+		<section>
+			<h2 class="smallcaps">{lang === 'pl' ? 'wymowa' : 'pronunciation'}</h2>
+			<div class="cards">
+				<a class="card" href="/{lang}/grammatica/pronuntiatio">
+					<span class="card-title">{lang === 'pl' ? 'wymowa' : 'pronunciation'}</span>
+					<span class="card-note" lang="la">pronuntiatio</span>
+				</a>
+			</div>
+		</section>
 	</main>
 </div>
 

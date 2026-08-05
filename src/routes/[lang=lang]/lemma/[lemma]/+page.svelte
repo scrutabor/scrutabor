@@ -6,6 +6,7 @@
 	import { LEXICON } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
 	import { GENDER_MARK, describeLemma } from '$lib/morph';
+	import { pronunciations, syllabized } from '$lib/pronunciation';
 
 	const lang = $derived(page.params.lang as Lang);
 	const msgs = $derived(M[lang]);
@@ -16,6 +17,7 @@
 	// (oro of "oro, oráre, orávi, orátum") — liturgical orthography, unlike
 	// the normalized lemma in the URL.
 	const headword = $derived((entry?.head ?? lemma).split(',')[0].trim());
+	const pron = $derived(pronunciations(headword));
 	const texts = $derived(occurrencesOf(lemma));
 </script>
 
@@ -48,6 +50,20 @@
 					>{/if}
 			</p>
 			<p class="pos">{describeLemma(entry, lang)}</p>
+			<p class="pron">
+				<span lang="la">{syllabized(headword)}</span>
+				{#if lang === 'pl' && pron.differ}
+					· <a href="/{lang}/grammatica/pronuntiatio"
+						><span class="smallcaps">rz.</span> /{pron.roman}/</a
+					>
+					·
+					<a href="/{lang}/grammatica/pronuntiatio"
+						><span class="smallcaps">pol.</span> /{pron.polish}/</a
+					>
+				{:else}
+					· <a href="/{lang}/grammatica/pronuntiatio">/{pron.roman}/</a>
+				{/if}
+			</p>
 
 			{#if sense}
 				<p class="senses">{sense.senses.join(', ')}</p>
@@ -142,6 +158,27 @@
 		text-align: center;
 		color: var(--rubric);
 		font-size: 0.95rem;
+	}
+
+	.pron {
+		margin: 0.35rem 0 0;
+		text-align: center;
+		color: var(--ink-soft);
+		font-size: 0.95rem;
+	}
+
+	.pron a {
+		color: inherit;
+		text-decoration: none;
+		border-bottom: 1px dotted var(--border);
+	}
+
+	.pron a:hover {
+		color: var(--ink);
+	}
+
+	.pron .smallcaps {
+		font-size: 0.75rem;
 	}
 
 	.senses {

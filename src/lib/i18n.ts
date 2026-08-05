@@ -21,6 +21,7 @@ export interface Messages {
 	notFound: string;
 	grammarTitle: string;
 	derivativesLabel: string;
+	pronunciationHint: string;
 }
 
 export const M: Record<Lang, Messages> = {
@@ -41,7 +42,8 @@ export const M: Record<Lang, Messages> = {
 		externalDict: 'słownik zewnętrzny',
 		notFound: 'Nie ma takiego hasła.',
 		grammarTitle: 'gramatyka',
-		derivativesLabel: 'w polszczyźnie'
+		derivativesLabel: 'w polszczyźnie',
+		pronunciationHint: 'zasady wymowy'
 	},
 	en: {
 		langName: 'English',
@@ -60,7 +62,8 @@ export const M: Record<Lang, Messages> = {
 		externalDict: 'external dictionary',
 		notFound: 'No such entry.',
 		grammarTitle: 'grammar',
-		derivativesLabel: 'in English'
+		derivativesLabel: 'in English',
+		pronunciationHint: 'pronunciation guide'
 	}
 };
 

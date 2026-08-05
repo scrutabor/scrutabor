@@ -65,3 +65,29 @@ test('the English locale renders its own gloss layer', async ({ page }) => {
 	await page.locator('#w019').click();
 	await expect(page.locator('aside .head')).toContainText('— mother');
 });
+
+test('pronunciation line shows both traditions on the Polish interface', async ({ page }) => {
+	await page.goto('/pl/orationes/pater-noster?w=w006'); // cælis
+	const pron = page.locator('aside .pron');
+	await expect(pron).toContainText('cæ-lis');
+	await expect(pron).toContainText('rz.');
+	await expect(pron).toContainText('/ˈtʃɛ.lis/');
+	await expect(pron).toContainText('pol.');
+	await expect(pron).toContainText('/ˈtsɛ.lis/');
+});
+
+test('pronunciation line shows Roman only on the English interface', async ({ page }) => {
+	await page.goto('/en/orationes/pater-noster?w=w006');
+	const pron = page.locator('aside .pron');
+	await expect(pron).toContainText('/ˈtʃɛ.lis/');
+	await expect(pron).not.toContainText('rz.');
+	await expect(pron).not.toContainText('pol.');
+});
+
+test('identical traditions collapse to one transcription', async ({ page }) => {
+	await page.goto('/pl/orationes/ave-maria?w=w019'); // Mater
+	const pron = page.locator('aside .pron');
+	await expect(pron).toContainText('Ma-ter');
+	await expect(pron).toContainText('/ˈma.tɛr/');
+	await expect(pron).not.toContainText('rz.');
+});
