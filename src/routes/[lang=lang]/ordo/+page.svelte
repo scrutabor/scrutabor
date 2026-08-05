@@ -1,100 +1,25 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { TEXTS, type TextDocument, type Word } from '$lib/corpus';
-	import HelpLevels from '$lib/components/HelpLevels.svelte';
+	import { TEXTS } from '$lib/corpus';
 	import LangMenu from '$lib/components/LangMenu.svelte';
-	import TextBody from '$lib/components/TextBody.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
-	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { ORDO } from '$lib/ordo';
-	import { ribbon } from '$lib/ribbon.svelte';
-	import { keepAwake } from '$lib/keepawake.svelte';
-	import { wordPanel } from '$lib/wordpanel.svelte';
 
 	const lang = $derived(page.params.lang as Lang);
 	const msgs = $derived(M[lang]);
 
-	// The flow shares the reading page's help ladder and its stored setting.
-	let helpLevel = $state(1);
-
-	// …and its word panel. A word is one tap from its analysis wherever it
-	// stands (decisions #20); the flow is not an exception. Several texts
-	// share this page, so a word is addressed by text AND id — `credo.w001`
-	// — which is also what the ?w= deep link carries.
-	const inlined = $derived(
-		ORDO.flatMap((section) =>
-			section.entries.flatMap((e) => {
-				const entry = e.text ? TEXTS[e.text] : undefined;
-				return entry ? [{ slug: e.text!.split('/')[1], key: e.text!, entry }] : [];
-			})
-		)
-	);
-
-	const wordsById = $derived(
-		new Map<string, { word: Word; doc: TextDocument; slug: string }>(
-			inlined.flatMap(({ slug, entry }) =>
-				entry.text.segments.flatMap((seg) =>
-					(seg.words ?? []).map((w): [string, { word: Word; doc: TextDocument; slug: string }] => [
-						`${slug}.${w.id}`,
-						{ word: w, doc: entry.text, slug }
-					])
-				)
-			)
-		)
-	);
-
-	const panel = wordPanel({ has: (id) => wordsById.has(id) });
-
-	$effect(() => {
-		void page.url;
-		void wordsById;
-		panel.applyFromLocation();
-	});
-
-	const picked = $derived(panel.id ? (wordsById.get(panel.id) ?? null) : null);
-	const pickedEntry = $derived(picked ? TEXTS[`ordinarium/${picked.slug}`] : null);
-	const pickedGloss = $derived(
-		picked && pickedEntry ? (pickedEntry.glosses[lang].words[picked.word.id] ?? null) : null
-	);
-	const pickedAnalysis = $derived(
-		picked
-			? (picked.word.analysis ?? picked.doc.analysis_defaults_words ?? picked.doc.analysis_defaults)
-			: null
-	);
-
-	// Dismissal gestures, as on the reading pages: Esc, and a tap on the
-	// quiet parts of the page. composedPath, not target.closest — a control
-	// that re-renders on click detaches before the event reaches window.
-	function onWindowClick(e: MouseEvent) {
-		if (panel.id === null) return;
-		const interactive = e
-			.composedPath()
-			.some((n) => n instanceof Element && n.matches('a, button, input, select, textarea, aside'));
-		if (!interactive) panel.close();
-	}
-
-	function onWindowKeydown(e: KeyboardEvent) {
-		if (e.key === 'Escape' && panel.id !== null) panel.close();
-	}
-
-	keepAwake();
-
-	// The flow is the longest surface in the book and the one a reader
-	// leaves and comes back to mid-Mass — it keeps a ribbon like the rest.
-	ribbon(
-		() => 'scrutabor-pos:ordo',
-		// a deep link into a word outranks the ribbon — that reader asked
-		// for a place, the same rule the reading pages follow
-		() => new URL(location.href).searchParams.has('w')
+	// The Mass at a glance: six movements, each its own page. This is also
+	// the answer to "where am I" — a reader who looks up mid-Mass finds the
+	// movement by name instead of scrolling a page as long as the whole ordo.
+	const movements = $derived(
+		ORDO.map((m) => ({
+			...m,
+			// what a reader will find there: the texts we carry, named
+			carried: m.entries.filter((e) => e.text && TEXTS[e.text]).map((e) => e.title)
+		}))
 	);
 </script>
-
-<svelte:window
-	onpopstate={panel.applyFromLocation}
-	onclick={onWindowClick}
-	onkeydown={onWindowKeydown}
-/>
 
 <svelte:head>
 	<title>Ordo Missæ — Scrutabor</title>
@@ -102,76 +27,32 @@
 </svelte:head>
 
 <div class="page">
-	<header>
-		<nav>
-			<a href="/{lang}" class="back smallcaps">scrutabor</a>
-			<div class="nav-right">
-				<LangMenu {lang} />
-				<ThemeToggle {lang} />
-			</div>
-		</nav>
+	<nav>
+		<a href="/{lang}" class="back smallcaps">scrutabor</a>
+		<div class="nav-right">
+			<LangMenu {lang} />
+			<ThemeToggle {lang} />
+		</div>
+	</nav>
+
+	<main>
 		<h1 lang="la">Ordo Missæ</h1>
 		<p class="subtitle smallcaps">{msgs.ordoSubtitle}</p>
-		<div class="help-row">
-			<HelpLevels {lang} bind:value={helpLevel} />
-		</div>
-	</header>
 
-	<main class:panel-open={picked !== null || panel.keepPad}>
-		{#each ORDO as section (section.id)}
-			<h2 class="section smallcaps">{section.label[lang]}</h2>
-			{#each section.entries as e (e.id)}
-				{@const entry = e.text ? TEXTS[e.text] : undefined}
-				<section class="part">
-					<div class="part-head">
-						{#if e.text && entry}
-							<a class="part-title" href="/{lang}/{e.text}" lang="la"
-								>{e.title}<span class="chev" aria-hidden="true">›</span></a
-							>
-						{:else}
-							<span class="part-title" lang="la">{e.title}</span>
-						{/if}
-						{#if e.kind !== 'text'}
-							<span class="mark smallcaps"
-								>{e.kind === 'proper' ? msgs.ordoProper : msgs.ordoPending}</span
-							>
-						{/if}
-					</div>
-					<!-- The what-happens line rides with any help, like the rubric
-					     narratives it continues (reading-ux §5). -->
-					{#if helpLevel >= 1}
-						<p class="part-note">
-							{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
-						</p>
+		<div class="movements">
+			{#each movements as m (m.id)}
+				<a class="movement" href="/{lang}/ordo/{m.id}">
+					<span class="movement-head">
+						<span class="movement-title" lang="la">{m.title}</span>
+						<span class="movement-label">{m.label[lang]}</span>
+					</span>
+					{#if m.carried.length}
+						<span class="movement-carried" lang="la">{m.carried.join(' · ')}</span>
 					{/if}
-					{#if entry}
-						<div class="part-text">
-							<TextBody
-								doc={entry.text}
-								gloss={entry.glosses[lang]}
-								{lang}
-								{helpLevel}
-								idPrefix={e.text!.split('/')[1]}
-								selectedId={panel.id}
-								ontap={panel.toggle}
-							/>
-						</div>
-					{/if}
-				</section>
+				</a>
 			{/each}
-		{/each}
+		</div>
 	</main>
-
-	{#if picked && pickedAnalysis}
-		<WordPanel
-			word={picked.word}
-			gloss={pickedGloss}
-			analysis={pickedAnalysis}
-			{lang}
-			onclose={panel.close}
-			onnavigate={(id) => panel.goTo(`${picked.slug}.${id}`)}
-		/>
-	{/if}
 </div>
 
 <style>
@@ -217,84 +98,52 @@
 		font-size: 0.85rem;
 	}
 
-	.help-row {
+	.movements {
+		margin: 2.6rem auto 0;
+		max-width: 30rem;
 		display: flex;
-		justify-content: center;
-		margin: 1.4rem 0 2.2rem;
+		flex-direction: column;
+		gap: 0.6rem;
 	}
 
-	.section {
-		margin: 2.8rem 0 1.4rem;
-		font-size: 0.8rem;
-		font-weight: 500;
-		color: var(--rubric);
-		text-align: center;
+	/* One card per movement, in the catalog's idiom — the Mass read as its
+	   own table of contents. */
+	.movement {
+		display: block;
+		text-decoration: none;
+		border: 1px solid var(--border);
+		border-radius: 0.6rem;
+		padding: 0.85rem 1.4rem 0.95rem;
+		background: var(--surface);
 	}
 
-	.section:first-child {
-		margin-top: 0;
+	.movement:hover {
+		background: var(--wash);
 	}
 
-	/* Every part is a station on one road: the rule marks the step, and a
-	   part whose text we carry simply continues below it. */
-	.part {
-		margin: 0 0 1.8rem;
-		padding-top: 1.1rem;
-		border-top: 1px solid var(--border);
-	}
-
-	.part-head {
+	.movement-head {
 		display: flex;
 		align-items: baseline;
 		justify-content: space-between;
 		gap: 1rem;
 	}
 
-	.part-title {
-		font-size: 1.3rem;
+	.movement-title {
+		font-size: 1.35rem;
 		color: var(--ink);
-		text-decoration: none;
 	}
 
-	a.part-title:hover {
-		color: var(--rubric);
-	}
-
-	.chev {
-		display: inline-block;
-		transform: translateY(-0.09em);
-		margin-inline: 0.15em;
-		color: var(--ink-soft);
-	}
-
-	.mark {
-		flex: none;
-		font-size: 0.7rem;
-		color: var(--ink-soft);
-	}
-
-	.part-note {
-		margin: 0.3rem 0 0;
-		color: var(--ink-soft);
-		font-size: 0.98rem;
-		line-height: 1.5;
-	}
-
-	/* The condition is a footnote to the part, not a clause of its
-	   description — the note prose already carries dashes of its own. */
-	.when {
-		display: block;
-		margin-top: 0.2rem;
-		font-style: italic;
+	.movement-label {
 		font-size: 0.9rem;
+		color: var(--ink-soft);
+		font-style: italic;
+		text-align: right;
 	}
 
-	.part-text {
-		margin-top: 1.2rem;
-	}
-
-	/* room for the sheet, so even the last word can rise clear of it */
-	main.panel-open {
-		padding-bottom: 45vh;
+	.movement-carried {
+		display: block;
+		margin-top: 0.15rem;
+		font-size: 0.85rem;
+		color: var(--rubric);
 	}
 </style>

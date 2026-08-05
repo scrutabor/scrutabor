@@ -2,6 +2,14 @@
 // not this edition carries its text yet — so a reader in the pew can see
 // where they are, including at the parts that change with the day.
 //
+// The spine is grouped into MOVEMENTS, one page each. Not because the Mass
+// divides that way on paper — it is continuous — but because a reader looks
+// up at these seams anyway, and because one page carrying the whole ordo
+// would run to some 870K of HTML with the corpus complete, most of it far
+// from wherever the reader is. Six pages of 50-260K, walked with the same
+// chevrons the book pager uses, cost one tap at a seam and save a great
+// deal of scrolling.
+//
 // Low Mass (Missa lecta) is the default throughout: what a reader sees and
 // hears at a said Mass. Sung-Mass differences are named only where they
 // change what happens.
@@ -32,16 +40,26 @@ export interface OrdoEntry {
 	when?: Record<Lang, string>;
 }
 
-export interface OrdoSection {
+/** Which half of the Mass a movement belongs to (the preparation precedes
+ * both, as the corpus's own `section` field has it). */
+export type OrdoPart = 'praeparatio' | 'catechumenorum' | 'fidelium';
+
+export interface OrdoMovement {
+	/** URL segment: /{lang}/ordo/{id} */
 	id: string;
+	/** Latin name, as the page's heading */
+	title: string;
 	label: Record<Lang, string>;
+	part: OrdoPart;
 	entries: OrdoEntry[];
 }
 
-const ORDO_SOURCE: OrdoSection[] = [
+const ORDO_SOURCE: OrdoMovement[] = [
 	{
-		id: 'missa-catechumenorum',
-		label: { pl: 'msza katechumenów', en: 'mass of the catechumens' },
+		id: 'praeparatio',
+		title: 'Præparátio',
+		label: { pl: 'modlitwy u stopni ołtarza', en: 'prayers at the foot of the altar' },
+		part: 'praeparatio',
 		entries: [
 			{
 				id: 'introibo',
@@ -74,7 +92,15 @@ const ORDO_SOURCE: OrdoSection[] = [
 					pl: 'Kapłan wstępuje po stopniach, prosząc o oczyszczenie z grzechów, i całuje ołtarz w miejscu relikwii.',
 					en: 'The priest goes up the steps asking to be cleansed of sin, and kisses the altar over the relics.'
 				}
-			},
+			}
+		]
+	},
+	{
+		id: 'catechumenorum',
+		title: 'Missa Catechumenórum',
+		label: { pl: 'msza katechumenów', en: 'mass of the catechumens' },
+		part: 'catechumenorum',
+		entries: [
 			{
 				id: 'introitus',
 				title: 'Intróitus',
@@ -165,8 +191,10 @@ const ORDO_SOURCE: OrdoSection[] = [
 		]
 	},
 	{
-		id: 'missa-fidelium',
-		label: { pl: 'msza wiernych', en: 'mass of the faithful' },
+		id: 'offertorium',
+		title: 'Offertórium',
+		label: { pl: 'ofiarowanie', en: 'the offertory' },
+		part: 'fidelium',
 		entries: [
 			{
 				id: 'offertorium',
@@ -203,7 +231,15 @@ const ORDO_SOURCE: OrdoSection[] = [
 					pl: 'Modlitwa nad darami z formularza dnia, odmawiana po cichu — słychać dopiero jej zakończenie: Per ómnia sǽcula sæculórum.',
 					en: 'The day’s prayer over the gifts, said silently — only its ending is heard: Per ómnia sǽcula sæculórum.'
 				}
-			},
+			}
+		]
+	},
+	{
+		id: 'canon',
+		title: 'Canon Missæ',
+		label: { pl: 'kanon', en: 'the canon' },
+		part: 'fidelium',
+		entries: [
 			{
 				id: 'praefatio',
 				title: 'Præfátio',
@@ -271,7 +307,15 @@ const ORDO_SOURCE: OrdoSection[] = [
 					pl: 'Kapłan czyni Hostią pięć znaków krzyża — trzy nad kielichem, dwa przed nim — i unosi oba naczynia nieco nad ołtarz; to małe podniesienie zamyka Kanon, a Per ómnia sǽcula sæculórum i Amen słychać już na głos.',
 					en: 'With the Host the priest makes five crosses — three over the chalice, two before it — and lifts both vessels a little above the altar; this minor elevation closes the Canon, and the Per ómnia sǽcula sæculórum with its Amen is heard aloud.'
 				}
-			},
+			}
+		]
+	},
+	{
+		id: 'communio',
+		title: 'Commúnio',
+		label: { pl: 'komunia', en: 'communion' },
+		part: 'fidelium',
+		entries: [
 			{
 				id: 'pater-noster',
 				title: 'Pater noster',
@@ -334,7 +378,15 @@ const ORDO_SOURCE: OrdoSection[] = [
 					pl: 'Kapłan oczyszcza kielich winem, obmywa palce winem z wodą i wyciera naczynia; dwie ciche modlitwy wypełniają tę przerwę.',
 					en: 'The priest purifies the chalice with wine, washes his fingers with wine and water and wipes the vessels; two silent prayers fill the pause.'
 				}
-			},
+			}
+		]
+	},
+	{
+		id: 'conclusio',
+		title: 'Conclúsio',
+		label: { pl: 'zakończenie', en: 'the conclusion' },
+		part: 'fidelium',
+		entries: [
 			{
 				id: 'communio',
 				title: 'Commúnio',
@@ -424,4 +476,15 @@ const ORDO_SOURCE: OrdoSection[] = [
 
 /** Polish one-letter words bound to what follows (lib/polish); Latin
  * titles and English prose in the same objects are untouched. */
-export const ORDO: OrdoSection[] = bindPlFields(ORDO_SOURCE);
+export const ORDO: OrdoMovement[] = bindPlFields(ORDO_SOURCE);
+
+export function movementById(id: string): OrdoMovement | undefined {
+	return ORDO.find((m) => m.id === id);
+}
+
+/** The movement before and after, for the pager. */
+export function movementNeighbors(id: string): { prev?: OrdoMovement; next?: OrdoMovement } {
+	const i = ORDO.findIndex((m) => m.id === id);
+	if (i < 0) return {};
+	return { prev: ORDO[i - 1], next: ORDO[i + 1] };
+}

@@ -1,6 +1,7 @@
 import { LEXICON, TEXTS } from '$lib/corpus';
 import { CONCEPTS } from '$lib/grammar';
 import { LANGS } from '$lib/i18n';
+import { ORDO } from '$lib/ordo';
 import { ORIGIN } from '$lib/site';
 
 export const prerender = true;
@@ -11,6 +12,7 @@ export const prerender = true;
 const surfaces: string[] = [
 	'',
 	'/ordo',
+	...ORDO.map((m) => `/ordo/${m.id}`),
 	'/editio',
 	'/grammatica',
 	'/grammatica/pronuntiatio',

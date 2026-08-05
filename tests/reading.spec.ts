@@ -285,9 +285,13 @@ test.describe('keeping the screen awake', () => {
 			.poll(() => page.evaluate(() => (window as unknown as { calls: string[] }).calls.length))
 			.toBeGreaterThan(0);
 
-		// and the flow of the Mass does the same (a fresh document, so its
-		// own tally starts from nothing)
+		// and a movement of the flow does the same (a fresh document, so its
+		// own tally starts from nothing). The ordo index is a menu, like the
+		// landing, and holds nothing.
 		await page.goto('/pl/ordo');
+		await page.waitForTimeout(150);
+		expect(await page.evaluate(() => (window as unknown as { calls: string[] }).calls)).toEqual([]);
+		await page.goto('/pl/ordo/canon');
 		await expect
 			.poll(() => page.evaluate(() => (window as unknown as { calls: string[] }).calls))
 			.toEqual(['screen']);
