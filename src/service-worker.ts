@@ -64,6 +64,11 @@ sw.addEventListener('message', (event) => {
 });
 
 sw.addEventListener('fetch', (event) => {
+	// A cache-first worker and a dev server want opposite things: the dev
+	// server rewrites modules on every edit and the worker would keep
+	// handing back the version it saw first. ($app/environment is not
+	// available in a worker; Vite's own constant is.)
+	if (import.meta.env.DEV) return;
 	if (event.request.method !== 'GET') return;
 	const url = new URL(event.request.url);
 	if (url.origin !== sw.location.origin) return;
@@ -72,8 +77,12 @@ sw.addEventListener('fetch', (event) => {
 
 async function respond(request: Request, url: URL): Promise<Response> {
 	const cache = await caches.open(CACHE);
-	// ignoreSearch: ?w= deep links are the same document as their page.
-	const cached = await cache.match(request, { ignoreSearch: true });
+	// A ?w= deep link is the same document as its page, so navigations
+	// match without their query. Nothing else may: an asset URL that
+	// differs only by query is a DIFFERENT file, and answering it from the
+	// bare path hands back the wrong bytes entirely.
+	const isPage = request.mode === 'navigate';
+	const cached = await cache.match(request, { ignoreSearch: isPage });
 	if (cached) return cached;
 
 	try {

@@ -18,7 +18,8 @@ export default defineConfig({
 		// Keep font files as files. Vite inlines assets under 4 KB as data
 		// URIs, which for the small Greek ranges means every page carries
 		// them in its stylesheet whether or not it sets a Greek word.
-		assetsInlineLimit: (file) => !file.endsWith('.woff2')
+		// false = never inline; undefined = leave the default limit alone.
+		assetsInlineLimit: (file) => (file.endsWith('.woff2') ? false : undefined)
 	},
 	test: {
 		include: ['src/**/*.test.ts'],
