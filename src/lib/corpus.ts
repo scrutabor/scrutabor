@@ -17,6 +17,9 @@ import gloriaEn from './data/gloria-patri.en.json';
 import gloriaExcText from './data/gloria.json';
 import gloriaExcPl from './data/gloria.pl.json';
 import gloriaExcEn from './data/gloria.en.json';
+import credoText from './data/credo.json';
+import credoPl from './data/credo.pl.json';
+import credoEn from './data/credo.en.json';
 import lexiconLemmata from './data/lexicon.json';
 import lexiconPl from './data/lexicon.pl.json';
 import lexiconEn from './data/lexicon.en.json';
@@ -141,6 +144,7 @@ const entry = (text: unknown, pl: unknown, en: unknown): TextEntry => ({
 export const TEXTS: Record<string, TextEntry> = {
 	'ordinarium/confiteor': entry(confiteorText, confiteorPl, confiteorEn),
 	'ordinarium/gloria': entry(gloriaExcText, gloriaExcPl, gloriaExcEn),
+	'ordinarium/credo': entry(credoText, credoPl, credoEn),
 	'orationes/pater-noster': entry(paterText, paterPl, paterEn),
 	'orationes/ave-maria': entry(aveText, avePl, aveEn),
 	'orationes/gloria-patri': entry(gloriaText, gloriaPl, gloriaEn)

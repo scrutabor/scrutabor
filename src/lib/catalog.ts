@@ -55,6 +55,12 @@ export const CATALOG: CatalogSection[] = [
 				slug: 'gloria',
 				title: 'Glória in excélsis',
 				note: { pl: 'hymn anielski', en: 'the angelic hymn' }
+			},
+			{
+				category: 'ordinarium',
+				slug: 'credo',
+				title: 'Credo',
+				note: { pl: 'wyznanie wiary', en: 'the profession of faith' }
 			}
 		]
 	}

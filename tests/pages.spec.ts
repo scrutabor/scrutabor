@@ -45,7 +45,7 @@ test('a concept example deep-links into the prayer', async ({ page }) => {
 
 test('landing shows the catalog and a quiet grammar link', async ({ page }) => {
 	await page.goto('/pl');
-	await expect(page.locator('.card')).toHaveCount(5);
+	await expect(page.locator('.card')).toHaveCount(6);
 	await expect(page.locator('a[href="/pl/grammatica"]')).toBeVisible();
 	await expect(page.locator('.motto')).toContainText('scrutabor legem tuam');
 });

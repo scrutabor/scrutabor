@@ -170,3 +170,20 @@ test('the about note speaks the interface language', async ({ page }) => {
 	await about.locator('summary').click();
 	await expect(about.locator('p')).toContainText('Didache');
 });
+
+test('the Credo reads with participles in the panel', async ({ page }) => {
+	await page.goto('/pl/ordinarium/credo?w=w064'); // incarnátus
+	const panel = page.locator('aside');
+	await expect(panel.locator('.form')).toHaveText('incarnátus');
+	await expect(panel.locator('.morph')).toContainText('imiesłów');
+	await expect(panel.locator('.morph')).toContainText('perfectum');
+	await expect(panel.locator('.function')).toContainText('incarnátus est');
+	// deponent participle keeps its concept link
+	await page.goto('/en/ordinarium/credo?w=w083'); // passus
+	await expect(panel.locator('.morph')).toContainText('participle');
+	await expect(panel.locator('.morph a.concept', { hasText: 'deponent' })).toBeVisible();
+	// the feminine dies ruling surfaces in the parse line
+	await page.goto('/pl/ordinarium/credo?w=w090'); // die
+	await expect(panel.locator('.morph')).toContainText('r. żeński');
+	await expect(panel.locator('.function')).toContainText('tértia');
+});
