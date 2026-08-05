@@ -32,6 +32,31 @@ test('the whole book is readable offline after one visit', async ({ page, contex
 	await context.setOffline(false);
 });
 
+test('the pew core is offline; the dictionary follows the reader', async ({ page, context }) => {
+	await page.goto('/en');
+	await page.evaluate(() => navigator.serviceWorker.ready);
+	await page.reload();
+	await page.waitForFunction(() => !!navigator.serviceWorker.controller);
+
+	// a lemma page the reader HAS opened is kept…
+	await page.goto('/en/lemma/mater');
+	await expect(page.locator('h1')).toHaveText('mater');
+
+	await context.setOffline(true);
+
+	await page.goto('/en/lemma/mater');
+	await expect(page.locator('h1')).toHaveText('mater');
+	// …one they never opened is not precached: the install cost tracks the
+	// prayers, not the lexicon
+	const unvisited = await page.evaluate(async () => {
+		const cache = await caches.open((await caches.keys())[0]);
+		return !!(await cache.match('/en/lemma/panis', { ignoreSearch: true }));
+	});
+	expect(unvisited).toBe(false);
+
+	await context.setOffline(false);
+});
+
 test('the app declares itself installable', async ({ page }) => {
 	await page.goto('/en');
 	await expect(page.locator('link[rel="manifest"]')).toHaveAttribute(

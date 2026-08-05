@@ -72,8 +72,12 @@ test('the help ladder governs the whole flow', async ({ page }) => {
 
 test('the catalog offers the flow above the ordinary', async ({ page }) => {
 	await page.goto('/en');
-	const link = page.locator('.ordo-link a');
+	// it leads the ordinary as a card, not as a footnote under it
+	const link = page.locator('.card-flow');
+	await expect(link).toContainText('Ordo Missæ');
 	await expect(link).toContainText('order of Mass');
+	const cards = page.locator('.cards').nth(1).locator('.card');
+	await expect(cards.first()).toHaveClass(/card-flow/);
 	await link.click();
 	await expect(page).toHaveURL(/\/en\/ordo$/);
 });

@@ -61,11 +61,15 @@ export function ribbon(key: () => string, skip: () => boolean = () => false) {
 		// racing it: while the page sits where we put it, keep laying the
 		// ribbon back down; the moment the scroll is anywhere else, stop and
 		// leave it alone.
-		let frames = 20;
+		// A frame budget is a machine-speed budget in disguise: under load the
+		// router can take longer than any fixed number of frames. Watch by
+		// the clock instead — the loop still stops the instant the scroll is
+		// somewhere we did not put it.
+		const until = performance.now() + 1000;
 		let live = true;
 		let placed = 0;
 		const attempt = () => {
-			if (!live || --frames < 0 || skip()) return;
+			if (!live || performance.now() > until || skip()) return;
 			const y = window.scrollY;
 			if (y > 8 && Math.abs(y - placed) > 2) return; // not ours: someone means it
 			const target = read(k);

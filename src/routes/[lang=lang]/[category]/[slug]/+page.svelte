@@ -9,10 +9,10 @@
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
-	import WakeLockToggle from '$lib/components/WakeLockToggle.svelte';
 	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { ribbon } from '$lib/ribbon.svelte';
+	import { keepAwake } from '$lib/keepawake.svelte';
 
 	const lang = $derived(page.params.lang as Lang);
 	const msgs = $derived(M[lang]);
@@ -125,6 +125,9 @@
 		applyFromLocation();
 	});
 
+	// Reading is the whole point of this page: hold the screen open.
+	keepAwake();
+
 	// The book's ribbon, keyed by text (see lib/ribbon): a deep link into a
 	// word outranks it — that reader asked for a place.
 	ribbon(
@@ -235,7 +238,6 @@
 			<nav>
 				<a href="/{lang}" class="back smallcaps">scrutabor</a>
 				<div class="nav-right">
-					<WakeLockToggle {lang} />
 					<LangMenu {lang} />
 					<ThemeToggle {lang} />
 				</div>

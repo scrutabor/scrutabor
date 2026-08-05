@@ -5,10 +5,10 @@
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
-	import WakeLockToggle from '$lib/components/WakeLockToggle.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { ORDO } from '$lib/ordo';
 	import { ribbon } from '$lib/ribbon.svelte';
+	import { keepAwake } from '$lib/keepawake.svelte';
 
 	const lang = $derived(page.params.lang as Lang);
 	const msgs = $derived(M[lang]);
@@ -18,6 +18,8 @@
 	// Following the Mass is the job; a word worth pursuing has its own
 	// page one tap away, at the part's title.
 	let helpLevel = $state(1);
+
+	keepAwake();
 
 	// The flow is the longest surface in the book and the one a reader
 	// leaves and comes back to mid-Mass — it keeps a ribbon like the rest.
@@ -34,7 +36,6 @@
 		<nav>
 			<a href="/{lang}" class="back smallcaps">scrutabor</a>
 			<div class="nav-right">
-				<WakeLockToggle {lang} />
 				<LangMenu {lang} />
 				<ThemeToggle {lang} />
 			</div>

@@ -30,15 +30,16 @@
 		{#each CATALOG as section (section.category)}
 			<section>
 				<h2 class="smallcaps">{section.label[lang]}</h2>
-				{#if section.category === 'ordinarium'}
-					<!-- The flow view is the companion's way in: the whole Mass in
-					     order, the fixed texts in place and the day's own texts
-					     marked where they fall. -->
-					<p class="ordo-link smallcaps">
-						<a href="/{lang}/ordo">{msgs.ordoTitle} →</a>
-					</p>
-				{/if}
 				<div class="cards">
+					<!-- The flow view leads the ordinary, and looks like it: for a
+					     reader following Mass it is the way in, not a footnote to
+					     the list of texts. -->
+					{#if section.category === 'ordinarium'}
+						<a class="card card-flow" href="/{lang}/ordo">
+							<span class="card-title" lang="la">Ordo Missæ</span>
+							<span class="card-note">{msgs.ordoTitle}</span>
+						</a>
+					{/if}
 					{#each section.texts as t (t.slug)}
 						<a class="card" href="/{lang}/{t.category}/{t.slug}">
 							<span class="card-title" lang="la">{t.title}</span>
@@ -156,19 +157,14 @@
 		text-align: right;
 	}
 
-	.ordo-link {
-		margin: -0.2rem 0 0.9rem;
-		text-align: center;
-		font-size: 0.75rem;
+	/* The whole Mass, one tap: a card like the texts it gathers, marked
+	   with the rubric so the eye finds it first. */
+	.card-flow {
+		border-color: var(--rubric);
 	}
 
-	.ordo-link a {
-		color: var(--ink-soft);
-		text-decoration: none;
-	}
-
-	.ordo-link a:hover {
-		color: var(--ink);
+	.card-flow .card-title {
+		color: var(--rubric);
 	}
 
 	.grammar-link {

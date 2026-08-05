@@ -252,27 +252,44 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	await expect(page.locator('.pager a')).toHaveCount(1);
 });
 
-test.describe('wake lock', () => {
-	// Headless denies the lock without an explicit grant; with it the
-	// REAL API runs, so a failed acquisition still fails the test.
+test.describe('keeping the screen awake', () => {
 	test.use({ permissions: ['screen-wake-lock'] });
 
-	test('the wake toggle holds the lock across the book', async ({ page }) => {
-		await page.goto('/pl/ordinarium/gloria');
-		const wake = page.locator('button.wake');
-		await expect(wake).toHaveAttribute('aria-pressed', 'false');
-		await wake.click();
-		// stays pressed — an acquisition failure would snap it back to false
-		await expect(wake).toHaveAttribute('aria-pressed', 'true');
+	test('a text holds the screen open by itself, and lets go off-page', async ({ page }) => {
+		// record what the page asks of the real API (which then runs)
+		await page.addInitScript(() => {
+			const real = navigator.wakeLock;
+			(window as unknown as { calls: string[] }).calls = [];
+			Object.defineProperty(navigator, 'wakeLock', {
+				configurable: true,
+				value: {
+					request: (type: WakeLockType) => {
+						(window as unknown as { calls: string[] }).calls.push(type);
+						return real.request(type);
+					}
+				}
+			});
+		});
+
+		// the landing is a menu, not a reading surface — nothing is held
+		await page.goto('/pl');
 		await page.waitForTimeout(150);
-		await expect(wake).toHaveAttribute('aria-pressed', 'true');
-		// the switch is app-level: paging to the next text keeps it on
-		await page.locator('.pager-next').click();
-		await expect(page).toHaveURL(/credo/);
-		await expect(page.locator('button.wake')).toHaveAttribute('aria-pressed', 'true');
-		// off releases
-		await page.locator('button.wake').click();
-		await expect(page.locator('button.wake')).toHaveAttribute('aria-pressed', 'false');
+		expect(await page.evaluate(() => (window as unknown as { calls: string[] }).calls)).toEqual([]);
+		// no switch: the reader is never asked
+		await expect(page.locator('button.wake')).toHaveCount(0);
+
+		// opening a text takes the lock without being asked
+		await page.locator('a[href="/pl/ordinarium/credo"]').click();
+		await expect
+			.poll(() => page.evaluate(() => (window as unknown as { calls: string[] }).calls.length))
+			.toBeGreaterThan(0);
+
+		// and the flow of the Mass does the same (a fresh document, so its
+		// own tally starts from nothing)
+		await page.goto('/pl/ordo');
+		await expect
+			.poll(() => page.evaluate(() => (window as unknown as { calls: string[] }).calls))
+			.toEqual(['screen']);
 	});
 });
 
