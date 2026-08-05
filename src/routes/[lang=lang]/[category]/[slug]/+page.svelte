@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { untrack } from 'svelte';
 	import { pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import { TEXTS } from '$lib/corpus';
@@ -58,7 +59,24 @@
 		selectedId = id;
 	}
 
+	// Closing must not move the page: the router restores the scroll
+	// position recorded when the panel's history entry was pushed (before
+	// any tap-scroll shift), and dropping the sheet padding can clamp a
+	// near-end position. Pin the current position across both.
+	let keepPanelPad = $state(false);
+
+	function preserveScroll() {
+		const y = window.scrollY;
+		const pad = window.innerHeight * 0.45;
+		const maxAfter = document.documentElement.scrollHeight - pad - window.innerHeight;
+		if (y > maxAfter) keepPanelPad = true;
+		const pin = () => window.scrollTo({ top: y, behavior: 'auto' });
+		setTimeout(pin, 0);
+		requestAnimationFrame(() => requestAnimationFrame(pin));
+	}
+
 	function closePanel() {
+		preserveScroll();
 		if (openedByPush) {
 			openedByPush = false;
 			history.back();
@@ -80,6 +98,12 @@
 	function applyFromLocation() {
 		const w = new URL(location.href).searchParams.get('w');
 		const target = w && wordsById.has(w) ? w : null;
+		// The browser's own back also just closes the panel - the page
+		// stays where the reader is, not where they were when it opened.
+		// untrack: reading selectedId here plainly would make the
+		// navigation effect depend on it, re-running this on every tap
+		// (the documented read-after-write regression class).
+		if (!target && untrack(() => selectedId) !== null) preserveScroll();
 		if (!target) openedByPush = false;
 		selectedId = target;
 		// The router resets scroll AFTER this runs on client-side
@@ -220,7 +244,7 @@
 			{/if}
 		</header>
 
-		<main class:panel-open={selectedWord !== null}>
+		<main class:panel-open={selectedWord !== null || keepPanelPad}>
 			{#each doc.segments as seg (seg.id)}
 				{#if seg.type === 'rubric'}
 					<div class="rubric">

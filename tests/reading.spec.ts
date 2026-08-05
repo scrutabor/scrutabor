@@ -251,3 +251,32 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	await page.goto('/pl/orationes/pater-noster');
 	await expect(page.locator('.pager a')).toHaveCount(1);
 });
+
+test('closing the panel leaves the page where it is', async ({ page }) => {
+	await page.setViewportSize({ width: 800, height: 520 });
+	await page.goto('/pl/ordinarium/credo');
+	const id = await page.evaluate(() => {
+		const vh = window.innerHeight;
+		const word = [...document.querySelectorAll('.word')].find((el) => {
+			const r = el.getBoundingClientRect();
+			return r.top > vh * 0.7 && r.bottom < vh;
+		});
+		return word?.id ?? null;
+	});
+	await page.locator(`#${id}`).click();
+	await expect.poll(() => page.evaluate(() => document.querySelector('aside') !== null)).toBe(true);
+	await page.waitForTimeout(700); // let the tap-scroll settle
+	const shifted = await page.evaluate(() => window.scrollY);
+	expect(shifted).toBeGreaterThan(0);
+	// close via Escape (history-entry path) — the page must not move
+	await page.keyboard.press('Escape');
+	await page.waitForTimeout(400);
+	expect(await page.evaluate(() => window.scrollY)).toBe(shifted);
+	// and via the browser's own back after reopening
+	await page.locator(`#${id}`).click();
+	await page.waitForTimeout(700);
+	const shifted2 = await page.evaluate(() => window.scrollY);
+	await page.goBack();
+	await page.waitForTimeout(400);
+	expect(await page.evaluate(() => window.scrollY)).toBe(shifted2);
+});
