@@ -70,14 +70,23 @@ test('the help ladder governs the whole flow', async ({ page }) => {
 	await expect(page.locator('.translation').first()).toBeVisible();
 });
 
-test('the catalog offers the flow above the ordinary', async ({ page }) => {
+test('the landing separates following the Mass from opening a text', async ({ page }) => {
 	await page.goto('/en');
-	// it leads the ordinary as a card, not as a footnote under it
-	const link = page.locator('.card-flow');
-	await expect(link).toContainText('Ordo Missæ');
-	await expect(link).toContainText('order of Mass');
-	const cards = page.locator('.cards').nth(1).locator('.card');
-	await expect(cards.first()).toHaveClass(/card-flow/);
-	await link.click();
+	const flow = page.locator('a.flow');
+	await expect(flow).toContainText('Ordo Missæ');
+	// it says what it is, not just what it is called
+	await expect(flow).toContainText('the whole Mass, part by part');
+
+	// it stands above the catalog and outside it: no card links to the flow
+	const firstSection = page.locator('main section').first();
+	expect(
+		await flow.evaluate(
+			(el, section) => !!(el.compareDocumentPosition(section!) & Node.DOCUMENT_POSITION_FOLLOWING),
+			await firstSection.elementHandle()
+		)
+	).toBe(true);
+	await expect(page.locator('.cards a[href$="/ordo"]')).toHaveCount(0);
+
+	await flow.click();
 	await expect(page).toHaveURL(/\/en\/ordo$/);
 });

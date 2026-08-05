@@ -32,6 +32,7 @@ export interface Messages {
 	aboutLabel: string;
 	pagerAria: string;
 	ordoTitle: string;
+	ordoLead: string;
 	ordoSubtitle: string;
 	ordoDescription: string;
 	ordoProper: string;
@@ -73,6 +74,7 @@ export const M: Record<Lang, Messages> = {
 		aboutLabel: 'o modlitwie',
 		pagerAria: 'sąsiednie teksty',
 		ordoTitle: 'porządek Mszy',
+		ordoLead: 'cały przebieg Mszy, część po części — z tekstami',
 		ordoSubtitle: 'porządek Mszy świętej',
 		ordoDescription:
 			'Cały porządek Mszy w rycie z 1962 roku, część po części — z tekstami stałymi i miejscami, w których wchodzą teksty własne dnia.',
@@ -113,6 +115,7 @@ export const M: Record<Lang, Messages> = {
 		aboutLabel: 'about this prayer',
 		pagerAria: 'neighboring texts',
 		ordoTitle: 'the order of Mass',
+		ordoLead: 'the whole Mass, part by part — with the texts',
 		ordoSubtitle: 'the order of Mass',
 		ordoDescription:
 			'The whole order of Mass in the 1962 rite, part by part — the fixed texts, and where the day’s own texts belong.',

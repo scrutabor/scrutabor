@@ -27,19 +27,19 @@
 		</p>
 		<p class="motto-ref smallcaps">{msgs.mottoRef}</p>
 
+		<!-- Two ways to use the book, and they are not used together:
+		     following the whole Mass, or opening one text. The flow is a way
+		     IN, not another text — so it stands apart, above the catalog,
+		     instead of heading a list it does not belong to. -->
+		<a class="flow" href="/{lang}/ordo">
+			<span class="flow-title" lang="la">Ordo Missæ</span>
+			<span class="flow-lead">{msgs.ordoLead}</span>
+		</a>
+
 		{#each CATALOG as section (section.category)}
 			<section>
 				<h2 class="smallcaps">{section.label[lang]}</h2>
 				<div class="cards">
-					<!-- The flow view leads the ordinary, and looks like it: for a
-					     reader following Mass it is the way in, not a footnote to
-					     the list of texts. -->
-					{#if section.category === 'ordinarium'}
-						<a class="card card-flow" href="/{lang}/ordo">
-							<span class="card-title" lang="la">Ordo Missæ</span>
-							<span class="card-note">{msgs.ordoTitle}</span>
-						</a>
-					{/if}
 					{#each section.texts as t (t.slug)}
 						<a class="card" href="/{lang}/{t.category}/{t.slug}">
 							<span class="card-title" lang="la">{t.title}</span>
@@ -157,14 +157,37 @@
 		text-align: right;
 	}
 
-	/* The whole Mass, one tap: a card like the texts it gathers, marked
-	   with the rubric so the eye finds it first. */
-	.card-flow {
-		border-color: var(--rubric);
+	/* The way into the Mass: wider, quieter and set apart from the cards,
+	   so it reads as a door rather than as an entry in a list. */
+	.flow {
+		display: block;
+		width: 100%;
+		max-width: 30rem;
+		margin: 2.8rem 0 0;
+		padding: 1.1rem 1.4rem 1.2rem;
+		text-align: left;
+		text-decoration: none;
+		border: 1px solid var(--rubric);
+		border-radius: 0.6rem;
+		background: var(--surface);
 	}
 
-	.card-flow .card-title {
+	.flow:hover {
+		background: var(--wash);
+	}
+
+	.flow-title {
+		display: block;
+		font-size: 1.7rem;
 		color: var(--rubric);
+	}
+
+	.flow-lead {
+		display: block;
+		margin-top: 0.15rem;
+		font-size: 0.95rem;
+		font-style: italic;
+		color: var(--ink-soft);
 	}
 
 	.grammar-link {
