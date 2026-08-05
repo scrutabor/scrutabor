@@ -379,6 +379,10 @@
 
 	.about-close {
 		margin-left: auto;
+		/* the button's tap padding would inset the glyph from the text
+		   column's right edge — pull it back out so the × sits ON the
+		   corner the eye expects */
+		margin-right: -0.5rem;
 		font: inherit;
 		font-size: 1.3rem;
 		line-height: 1;

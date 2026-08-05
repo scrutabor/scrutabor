@@ -194,6 +194,9 @@
 
 	.close {
 		margin-left: auto;
+		/* pull the tap padding back out so the glyph aligns with the
+		   text column's right edge */
+		margin-right: -0.5rem;
 		font: inherit;
 		font-size: 1.3rem;
 		line-height: 1;
