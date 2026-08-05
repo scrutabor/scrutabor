@@ -24,7 +24,10 @@
 		ontap?: (id: string) => void;
 	} = $props();
 
-	const domId = (id: string) => (idPrefix ? `${idPrefix}:${id}` : id);
+	// A dot, not a colon: it is unreserved in a URL, so `?w=credo.w001`
+	// stays readable instead of arriving as %3A, and it matches the corpus's
+	// own dotted ids (ordinarium.credo).
+	const domId = (id: string) => (idPrefix ? `${idPrefix}.${id}` : id);
 </script>
 
 {#snippet face(id: string, form: string)}<ruby

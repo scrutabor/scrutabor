@@ -20,7 +20,7 @@
 
 	// …and its word panel. A word is one tap from its analysis wherever it
 	// stands (decisions #20); the flow is not an exception. Several texts
-	// share this page, so a word is addressed by text AND id — `credo:w001`
+	// share this page, so a word is addressed by text AND id — `credo.w001`
 	// — which is also what the ?w= deep link carries.
 	const inlined = $derived(
 		ORDO.flatMap((section) =>
@@ -36,7 +36,7 @@
 			inlined.flatMap(({ slug, entry }) =>
 				entry.text.segments.flatMap((seg) =>
 					(seg.words ?? []).map((w): [string, { word: Word; doc: TextDocument; slug: string }] => [
-						`${slug}:${w.id}`,
+						`${slug}.${w.id}`,
 						{ word: w, doc: entry.text, slug }
 					])
 				)
@@ -169,7 +169,7 @@
 			analysis={pickedAnalysis}
 			{lang}
 			onclose={panel.close}
-			onnavigate={(id) => panel.goTo(`${picked.slug}:${id}`)}
+			onnavigate={(id) => panel.goTo(`${picked.slug}.${id}`)}
 		/>
 	{/if}
 </div>
