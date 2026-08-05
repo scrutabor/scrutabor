@@ -204,3 +204,29 @@ test('the Credo reads with participles in the panel', async ({ page }) => {
 	await expect(panel.locator('.morph')).toContainText('r. żeński');
 	await expect(panel.locator('.function')).toContainText('tértia');
 });
+
+test('a tapped word near the viewport bottom rises above the panel', async ({ page }) => {
+	await page.setViewportSize({ width: 800, height: 520 });
+	await page.goto('/pl/ordinarium/credo');
+	const id = await page.evaluate(() => {
+		const vh = window.innerHeight;
+		const word = [...document.querySelectorAll('.word')].find((el) => {
+			const r = el.getBoundingClientRect();
+			return r.top > vh * 0.7 && r.bottom < vh;
+		});
+		return word?.id ?? null;
+	});
+	expect(id).not.toBeNull();
+	await page.locator(`#${id}`).click();
+	await expect
+		.poll(
+			() =>
+				page.evaluate((wid) => {
+					const r = document.getElementById(wid!)!.getBoundingClientRect();
+					const s = document.querySelector('aside')!.getBoundingClientRect();
+					return r.bottom <= s.top + 1;
+				}, id),
+			{ timeout: 3000 }
+		)
+		.toBe(true);
+});

@@ -134,15 +134,37 @@
 			: null
 	);
 
+	// A tap must never bury the analyzed word under its own panel: once
+	// the sheet has rendered, scroll by exactly the overlap (plus a
+	// breathing margin), so words already visible stay put. panel-open
+	// pads the page bottom, so even the last word has room to rise.
+	function ensureWordAboveSheet(id: string) {
+		requestAnimationFrame(() => {
+			const el = document.getElementById(id);
+			const sheet = document.querySelector('aside');
+			if (!el || !sheet) return;
+			const margin = 16;
+			const overlap =
+				el.getBoundingClientRect().bottom + margin - sheet.getBoundingClientRect().top;
+			if (overlap <= 0) return;
+			const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			window.scrollBy({ top: overlap, behavior: reduced ? 'auto' : 'smooth' });
+		});
+	}
+
 	function toggle(id: string) {
 		aboutOpen = false;
 		if (selectedId === id) closePanel();
-		else openWord(id);
+		else {
+			openWord(id);
+			ensureWordAboveSheet(id);
+		}
 	}
 
 	function navigateTo(id: string) {
 		openWord(id);
 		document.getElementById(id)?.scrollIntoView({ block: 'center' });
+		ensureWordAboveSheet(id);
 	}
 </script>
 
