@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { GENDER_MARK, describeLemma, describeMorph, describeMorphParts } from './morph';
+import type { Morph } from './corpus';
 
 describe('describeMorph', () => {
 	it('renders a noun parse in both languages', () => {
@@ -111,5 +112,33 @@ describe('participles', () => {
 		const parts = describeMorphParts({ ...natum, voice: 'dep' }, 'pl');
 		expect(parts.some((p) => p.concept === 'accusativus')).toBe(true);
 		expect(parts.some((p) => p.concept === 'deponens')).toBe(true);
+	});
+});
+
+describe('a verb whose form does not settle its tense or mood', () => {
+	// retríbuam (quid-retribuam w002): both analyzers allow future
+	// indicative and present subjunctive, and nothing in the sentence
+	// decides. The corpus claims what it knows and stops.
+	const retribuam: Morph = {
+		pos: 'verb',
+		person: 1,
+		number: 'sg',
+		voice: 'act',
+		conj: 3
+	};
+
+	// The marker stands where the tense and mood would have stood.
+	it('says so, rather than leaving the line looking unfinished', () => {
+		expect(describeMorph(retribuam, 'pl')).toBe(
+			'czasownik — 1. os., l. poj., forma niejednoznaczna, strona czynna, koniugacja III'
+		);
+		expect(describeMorph(retribuam, 'en')).toBe(
+			'verb — 1st person, singular, the form does not decide, active, 3rd conjugation'
+		);
+	});
+
+	it('stays silent when the tense is known', () => {
+		const known = { ...retribuam, tense: 'perf' as const, mood: 'ind' as const };
+		expect(describeMorph(known, 'pl')).not.toContain('niejednoznaczna');
 	});
 });

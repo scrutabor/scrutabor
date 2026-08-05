@@ -547,7 +547,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 			{
 				id: 'pater-noster',
 				title: 'Pater noster',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/pater-noster',
 				note: {
 					pl: 'Modlitwę Pańską kapłan śpiewa lub mówi sam; ministrant włącza się dopiero na końcu: Sed líbera nos a malo.',
 					en: 'The priest sings or says the Lord’s Prayer alone; the server joins only at the end: Sed líbera nos a malo.'
@@ -556,10 +557,31 @@ const ORDO_SOURCE: OrdoMovement[] = [
 			{
 				id: 'libera-nos',
 				title: 'Líbera nos',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/libera-nos',
 				note: {
-					pl: 'Po cichu kapłan przedłuża ostatnią prośbę, łamie Hostię na trzy części, pozdrawia lud słowami Pax Dómini sit semper vobíscum i wpuszcza cząstkę do kielicha.',
-					en: 'Silently the priest extends the last petition, breaks the Host into three, greets the people with Pax Dómini sit semper vobíscum and lets a particle fall into the chalice.'
+					pl: 'Po cichu kapłan rozwija ostatnią prośbę — od zła przeszłego, obecnego i przyszłego — a w trakcie niej łamie Hostię na trzy części. Głośno wraca dopiero na zakończenie.',
+					en: 'Silently the priest opens out the last petition — evil past, present and to come — and during it breaks the Host into three. His voice returns only for the ending.'
+				}
+			},
+			{
+				id: 'pax-domini',
+				title: 'Pax Dómini',
+				kind: 'text',
+				text: 'ordinarium/pax-domini',
+				note: {
+					pl: 'Trzymając odłamaną cząstkę, kapłan trzy razy znaczy nią kielich i pozdrawia lud: Pax Dómini sit semper vobíscum.',
+					en: 'Holding the broken particle, the priest signs the chalice with it three times and greets the people: Pax Dómini sit semper vobíscum.'
+				}
+			},
+			{
+				id: 'haec-commixtio',
+				title: 'Hæc commíxtio',
+				kind: 'text',
+				text: 'ordinarium/haec-commixtio',
+				note: {
+					pl: 'Cząstka wpada do kielicha; słowa, które temu towarzyszą, kapłan mówi po cichu.',
+					en: 'The particle falls into the chalice; the words that go with it the priest says silently.'
 				}
 			},
 			{
@@ -577,21 +599,67 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				}
 			},
 			{
-				id: 'communio-sacerdotis',
-				title: 'Panem cæléstem accípiam',
-				kind: 'pending',
+				id: 'qui-dixisti',
+				title: 'Dómine Jesu Christe, qui dixísti',
+				kind: 'text',
+				text: 'ordinarium/qui-dixisti',
 				note: {
-					pl: 'Po trzech cichych modlitwach — a we Mszy uroczystej i po pocałunku pokoju — kapłan trzy razy uderza się w piersi przy Dómine, non sum dignus i przyjmuje Ciało, a potem Krew Pańską.',
-					en: 'After three silent prayers — and, at Solemn Mass, the kiss of peace — the priest strikes his breast three times at Dómine, non sum dignus and receives the Body, then the Blood of the Lord.'
+					pl: 'Pierwsza z trzech cichych modlitw przed Komunią — o pokój dla Kościoła. We Mszy uroczystej po niej następuje pocałunek pokoju.',
+					en: 'The first of three silent prayers before Communion, for the peace of the Church. At Solemn Mass the kiss of peace follows it.'
+				},
+				when: {
+					pl: 'we Mszach żałobnych opuszcza się ją wraz z pozdrowieniem pokoju',
+					en: 'at Requiem Masses it is omitted, and so is the peace'
 				}
 			},
 			{
-				id: 'communio-fidelium',
-				title: 'Ecce Agnus Dei',
-				kind: 'pending',
+				id: 'fili-dei-vivi',
+				title: 'Dómine Jesu Christe, Fili Dei vivi',
+				kind: 'text',
+				text: 'ordinarium/fili-dei-vivi',
 				note: {
-					pl: 'Kapłan ukazuje Hostię, trzy razy powtarza się Dómine, non sum dignus, po czym rozdaje Komunię przy balaskach, mówiąc każdemu Corpus Dómini nostri Jesu Christi.',
-					en: 'The priest shows the Host, Dómine, non sum dignus is said three times, and he gives Communion at the rail with Corpus Dómini nostri Jesu Christi to each.'
+					pl: 'Druga: aby Komunia uwolniła kapłana od win i nigdy nie pozwoliła mu odłączyć się od Chrystusa.',
+					en: 'The second: that Communion may free the priest from his sins and never let him be parted from Christ.'
+				}
+			},
+			{
+				id: 'perceptio-corporis',
+				title: 'Percéptio Córporis tui',
+				kind: 'text',
+				text: 'ordinarium/perceptio-corporis',
+				note: {
+					pl: 'Trzecia: aby przyjęcie Ciała Pańskiego nie obróciło się w sąd, lecz stało się lekarstwem.',
+					en: 'The third: that receiving the Lord’s Body may not turn to judgement but be a remedy.'
+				}
+			},
+			{
+				id: 'panem-caelestem',
+				title: 'Panem cæléstem',
+				kind: 'text',
+				text: 'ordinarium/panem-caelestem',
+				note: {
+					pl: 'Kapłan przyklęka, bierze obie części Hostii i trzy razy uderza się w piersi: Dómine, non sum dignus — pierwsze słowa nieco głośniej, resztę po cichu — po czym przyjmuje Ciało Pańskie.',
+					en: 'The priest genuflects, takes both halves of the Host and strikes his breast three times at Dómine, non sum dignus — the opening words a little louder, the rest silently — and receives the Body of the Lord.'
+				}
+			},
+			{
+				id: 'quid-retribuam',
+				title: 'Quid retríbuam',
+				kind: 'text',
+				text: 'ordinarium/quid-retribuam',
+				note: {
+					pl: 'Odkrywa kielich, zbiera na patenę okruchy, żegna się kielichem i przyjmuje Krew Pańską.',
+					en: 'He uncovers the chalice, gathers any fragments onto the paten, signs himself with the chalice and receives the Blood of the Lord.'
+				}
+			},
+			{
+				id: 'ecce-agnus-dei',
+				title: 'Ecce Agnus Dei',
+				kind: 'text',
+				text: 'ordinarium/ecce-agnus-dei',
+				note: {
+					pl: 'Kapłan ukazuje Hostię: Ecce Agnus Dei. Trzy razy powtarza się Dómine, non sum dignus, po czym rozdaje Komunię przy balaskach, mówiąc każdemu Corpus Dómini nostri Jesu Christi.',
+					en: 'The priest shows the Host: Ecce Agnus Dei. Dómine, non sum dignus is said three times, and he gives Communion at the rail with Corpus Dómini nostri Jesu Christi to each.'
 				},
 				when: {
 					pl: 'gdy wierni przystępują do Komunii',
@@ -599,12 +667,23 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				}
 			},
 			{
-				id: 'ablutiones',
+				id: 'quod-ore-sumpsimus',
 				title: 'Quod ore súmpsimus',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/quod-ore-sumpsimus',
 				note: {
-					pl: 'Kapłan oczyszcza kielich winem, obmywa palce winem z wodą i wyciera naczynia; dwie ciche modlitwy wypełniają tę przerwę.',
-					en: 'The priest purifies the chalice with wine, washes his fingers with wine and water and wipes the vessels; two silent prayers fill the pause.'
+					pl: 'Ministrant wlewa wino do kielicha; kapłan oczyszcza go i pije.',
+					en: 'The server pours wine into the chalice; the priest purifies it and drinks.'
+				}
+			},
+			{
+				id: 'corpus-tuum',
+				title: 'Corpus tuum',
+				kind: 'text',
+				text: 'ordinarium/corpus-tuum',
+				note: {
+					pl: 'Obmywa palce winem z wodą, wyciera kielich i naczynia; ta druga cicha modlitwa zamyka obrzęd Komunii.',
+					en: 'He washes his fingers with wine and water and dries the chalice and vessels; this second silent prayer closes the Communion rite.'
 				}
 			}
 		]

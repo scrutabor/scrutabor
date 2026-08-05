@@ -21,6 +21,8 @@ interface MorphLabels {
 	decl: (d: number) => string;
 	conj: (c: number) => string;
 	prep: (governs: string | undefined) => string;
+	/** Said of a verb whose form does not settle its tense or mood. */
+	undecided: string;
 }
 
 const LABELS: Record<Lang, MorphLabels> = {
@@ -69,7 +71,8 @@ const LABELS: Record<Lang, MorphLabels> = {
 		person: (p) => `${p}. os.`,
 		decl: (d) => `deklinacja ${ROMAN[d - 1]}`,
 		conj: (c) => `koniugacja ${ROMAN[c - 1]}`,
-		prep: (governs) => `przyimek (z ${governs === 'acc' ? 'biernikiem' : 'ablativem'})`
+		prep: (governs) => `przyimek (z ${governs === 'acc' ? 'biernikiem' : 'ablativem'})`,
+		undecided: 'forma niejednoznaczna'
 	},
 	en: {
 		pos: {
@@ -116,7 +119,8 @@ const LABELS: Record<Lang, MorphLabels> = {
 		person: (p) => `${ORDINAL[p - 1]} person`,
 		decl: (d) => `${ORDINAL[d - 1]} declension`,
 		conj: (c) => `${ORDINAL[c - 1]} conjugation`,
-		prep: (governs) => `preposition (with the ${governs === 'acc' ? 'accusative' : 'ablative'})`
+		prep: (governs) => `preposition (with the ${governs === 'acc' ? 'accusative' : 'ablative'})`,
+		undecided: 'the form does not decide'
 	}
 };
 
@@ -187,6 +191,12 @@ export function describeMorphParts(m: Morph, lang: Lang): MorphPart[] {
 		if (m.number) parts.push({ text: t.number[m.number] ?? m.number });
 		if (m.tense) parts.push({ text: t.tense[m.tense] ?? m.tense });
 		if (m.mood) parts.push({ text: t.mood[m.mood] ?? m.mood, concept: MOOD_CONCEPT[m.mood] });
+		// A verb with neither tense nor mood is not an oversight: the form
+		// admits more than one and nothing in the sentence decides
+		// (retríbuam — future indicative or deliberative subjunctive?). Say
+		// so, or the line reads as a parse we forgot to finish. The word's
+		// own note carries the argument.
+		if (!m.tense && !m.mood) parts.push({ text: t.undecided });
 		if (m.voice)
 			parts.push({
 				text: t.voice[m.voice] ?? m.voice,
