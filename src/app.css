@@ -29,8 +29,38 @@
 	box-sizing: border-box;
 }
 
+/* Metric-matched fallback: Georgia resized to EB Garamond's advance
+   widths (measured 91.6% on the corpus text), so the paint before the
+   webfont arrives occupies the same space and the swap shifts nothing.
+   Guarded by the cold-load CLS e2e. */
+@font-face {
+	font-family: 'EB Garamond Fallback';
+	src: local('Georgia');
+	size-adjust: 91.6%;
+	/* Vertical metrics pinned to EB Garamond's rendered line box
+	   (131/101 per 100px, calibrated in-engine — Chromium multiplies
+	   these overrides by size-adjust, hence the >100% ascent). */
+	ascent-override: 109.8%;
+	descent-override: 32.6%;
+	line-gap-override: 0%;
+}
+
+/* The same shim for platforms without Georgia (Linux CI, Android):
+   Times-metric faces are width-identical to EB Garamond on the corpus
+   text (measured 99.9%), so only the vertical box needs pinning. With
+   no size-adjust the overrides are the raw EB values. */
+@font-face {
+	font-family: 'EB Garamond Fallback Times';
+	src: local('Times New Roman'), local('Liberation Serif'), local('Tinos');
+	ascent-override: 101%;
+	descent-override: 30%;
+	line-gap-override: 0%;
+}
+
 html {
-	font-family: 'EB Garamond Variable', 'EB Garamond', Georgia, 'Times New Roman', serif;
+	font-family:
+		'EB Garamond Variable', 'EB Garamond', 'EB Garamond Fallback', 'EB Garamond Fallback Times',
+		Georgia, 'Times New Roman', serif;
 	font-optical-sizing: auto;
 }
 
@@ -106,7 +136,7 @@ body {
 }
 
 .trim-label {
-	font-family: 'EB Garamond Label', 'EB Garamond Variable', Georgia, serif;
+	font-family: 'EB Garamond Label', 'EB Garamond Variable', 'EB Garamond Fallback', Georgia, serif;
 }
 
 a {
