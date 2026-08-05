@@ -143,32 +143,49 @@ test('no token ever fragments across lines, any text, narrow viewport', async ({
 	}
 });
 
-test('the about note is collapsed at every slider position, opens on demand', async ({ page }) => {
+test('the about sheet is closed at every slider position, opens on demand', async ({ page }) => {
 	await page.goto('/pl/ordinarium/gloria');
-	const about = page.locator('details.about');
-	const body = about.locator('p');
+	const pill = page.locator('.about-pill');
+	const sheet = page.locator('aside.about-sheet');
 	const slider = page.locator('input[type="range"]');
-	// collapsed by default at all three help levels
+	// closed by default at all three help levels
 	for (const level of ['1', '0', '2']) {
 		await slider.fill(level);
-		await expect(about).toBeVisible();
-		await expect(body).not.toBeVisible();
+		await expect(pill).toBeVisible();
+		await expect(sheet).not.toBeVisible();
 	}
-	// opens on the button, carries the introduction
-	await about.locator('summary').click();
-	await expect(body).toBeVisible();
-	await expect(body).toContainText('hymn anielski');
-	// a fresh load starts collapsed again
+	// opens as a bottom sheet without moving the text
+	const before = await page.locator('.verse').first().boundingBox();
+	await pill.click();
+	await expect(sheet).toBeVisible();
+	await expect(sheet).toContainText('hymn anielski');
+	const after = await page.locator('.verse').first().boundingBox();
+	expect(after?.y).toBe(before?.y);
+	// escape closes it; a fresh load starts closed
+	await page.keyboard.press('Escape');
+	await expect(sheet).not.toBeVisible();
+	await pill.click();
 	await page.goto('/pl/ordinarium/gloria');
-	await expect(body).not.toBeVisible();
+	await expect(sheet).not.toBeVisible();
 });
 
-test('the about note speaks the interface language', async ({ page }) => {
+test('the about sheet and the word panel take turns', async ({ page }) => {
+	await page.goto('/pl/ordinarium/gloria?w=w001');
+	await expect(page.locator('aside .form')).toHaveText('Glória');
+	await page.locator('.about-pill').click();
+	await expect(page.locator('aside.about-sheet')).toBeVisible();
+	await expect(page.locator('aside .form')).not.toBeVisible();
+	await page.locator('#w002').click();
+	await expect(page.locator('aside.about-sheet')).not.toBeVisible();
+	await expect(page.locator('aside .form')).toHaveText('in');
+});
+
+test('the about sheet speaks the interface language', async ({ page }) => {
 	await page.goto('/en/orationes/pater-noster');
-	const about = page.locator('details.about');
-	await expect(about.locator('summary')).toHaveText('about this prayer');
-	await about.locator('summary').click();
-	await expect(about.locator('p')).toContainText('Didache');
+	const pill = page.locator('.about-pill');
+	await expect(pill).toContainText('about this prayer');
+	await pill.click();
+	await expect(page.locator('aside.about-sheet')).toContainText('Didache');
 });
 
 test('the Credo reads with participles in the panel', async ({ page }) => {

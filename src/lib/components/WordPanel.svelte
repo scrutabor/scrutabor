@@ -126,6 +126,18 @@
 		z-index: 10;
 	}
 
+	/* On wide screens the sheet becomes a centered card, so its close
+	   button sits at a real corner instead of stranded mid-viewport. */
+	@media (min-width: 48rem) {
+		aside {
+			max-width: 42rem;
+			margin-inline: auto;
+			border: 1px solid var(--border);
+			border-bottom: none;
+			border-radius: 0.9rem 0.9rem 0 0;
+		}
+	}
+
 	.inner {
 		max-width: 38rem;
 		margin: 0 auto;

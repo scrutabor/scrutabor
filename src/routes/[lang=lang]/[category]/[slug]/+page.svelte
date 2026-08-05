@@ -99,16 +99,31 @@
 	// controls are inside the aside. composedPath, not target.closest: a
 	// control that re-renders on click (the theme toggle swaps its icon)
 	// detaches the clicked node before the event reaches window.
+	// The about sheet shares the word panel's idiom (one bottom sheet at
+	// a time, same dismissal gestures) but not its history model — it is
+	// chrome, one tap to reopen.
+	let aboutOpen = $state(false);
+
+	function toggleAbout() {
+		if (!aboutOpen && selectedId !== null) closePanel();
+		aboutOpen = !aboutOpen;
+	}
+
 	function onWindowClick(e: MouseEvent) {
-		if (selectedId === null) return;
+		if (selectedId === null && !aboutOpen) return;
 		const interactive = e
 			.composedPath()
 			.some((n) => n instanceof Element && n.matches('a, button, input, select, textarea, aside'));
-		if (!interactive) closePanel();
+		if (!interactive) {
+			if (selectedId !== null) closePanel();
+			aboutOpen = false;
+		}
 	}
 
 	function onWindowKeydown(e: KeyboardEvent) {
-		if (e.key === 'Escape' && selectedId !== null) closePanel();
+		if (e.key !== 'Escape') return;
+		if (selectedId !== null) closePanel();
+		aboutOpen = false;
 	}
 
 	let selectedWord = $derived(selectedId ? (wordsById.get(selectedId) ?? null) : null);
@@ -120,6 +135,7 @@
 	);
 
 	function toggle(id: string) {
+		aboutOpen = false;
 		if (selectedId === id) closePanel();
 		else openWord(id);
 	}
@@ -159,14 +175,12 @@
 				<HelpLevels {lang} bind:value={helpLevel} />
 			</div>
 			{#if gloss.about}
-				<!-- Collapsed by default at EVERY slider position (owner rule):
-				     the introduction is one tap away, never ambient. Native
-				     details/summary keeps keyboard and screen-reader behavior
-				     for free; no persistence — a fresh page starts closed. -->
-				<details class="about">
-					<summary class="smallcaps">{msgs.aboutLabel}</summary>
-					<p>{gloss.about}</p>
-				</details>
+				<!-- Closed at EVERY slider position (owner rule): the
+				     introduction is one tap away, never ambient. It opens as
+				     a bottom sheet — the reading layout never reflows. -->
+				<button class="about-pill smallcaps" aria-expanded={aboutOpen} onclick={toggleAbout}
+					>{msgs.aboutLabel}</button
+				>
 			{/if}
 		</header>
 
@@ -209,6 +223,20 @@
 				{/if}
 			{/each}
 		</main>
+
+		{#if aboutOpen && gloss.about}
+			<aside class="about-sheet" aria-label={msgs.aboutLabel}>
+				<div class="about-inner">
+					<header class="about-header">
+						<span class="smallcaps about-title">{msgs.aboutLabel}</span>
+						<button class="about-close" onclick={() => (aboutOpen = false)} aria-label={msgs.close}
+							>×</button
+						>
+					</header>
+					<p class="about-text">{gloss.about}</p>
+				</div>
+			</aside>
+		{/if}
 
 		{#if selectedWord && selectedAnalysis}
 			<WordPanel
@@ -286,49 +314,90 @@
 		line-height: 2.7;
 	}
 
-	.about {
-		margin: 1.6rem auto 0;
-		max-width: 34rem;
-		text-align: center;
-	}
-
-	.about summary {
-		display: inline-block;
+	/* The about pill opens a bottom sheet (the word panel's idiom), so
+	   the reading layout never reflows. */
+	.about-pill {
+		margin: 1.6rem auto 1.4rem;
+		display: block;
+		width: fit-content;
+		font: inherit;
 		cursor: pointer;
-		list-style: none;
 		font-size: 0.75rem;
 		color: var(--ink-soft);
+		background: none;
 		border: 1px solid var(--border);
 		border-radius: 999px;
 		padding: 0.25rem 0.9rem;
 	}
 
-	.about summary::-webkit-details-marker {
-		display: none;
-	}
-
-	.about summary::after {
-		content: ' ›';
-	}
-
-	.about[open] summary::after {
-		content: ' ‹';
-	}
-
-	.about summary:hover {
+	.about-pill:hover {
 		color: var(--ink);
 		background: var(--wash);
 	}
 
-	.about p {
-		margin: 0.8rem 0 0;
-		padding: 0.9rem 1.1rem;
-		background: var(--wash);
-		border-radius: 0.6rem;
-		text-align: left;
-		font-size: 0.95rem;
-		line-height: 1.6;
+	.about-sheet {
+		position: fixed;
+		inset-inline: 0;
+		bottom: 0;
+		background: var(--surface);
+		border-top: 1px solid var(--border);
+		box-shadow: var(--shadow);
+		z-index: 10;
+	}
+
+	/* On wide screens the full-viewport sheet leaves the close button
+	   stranded between the content column and the screen edge — so the
+	   sheet becomes a centered card and the corner is a real corner. */
+	@media (min-width: 48rem) {
+		.about-sheet {
+			max-width: 42rem;
+			margin-inline: auto;
+			border: 1px solid var(--border);
+			border-bottom: none;
+			border-radius: 0.9rem 0.9rem 0 0;
+		}
+	}
+
+	.about-inner {
+		max-width: 38rem;
+		margin: 0 auto;
+		padding: 1.1rem 1.5rem calc(1.4rem + env(safe-area-inset-bottom));
+		max-height: 55vh;
+		overflow-y: auto;
+	}
+
+	.about-header {
+		display: flex;
+		align-items: baseline;
+		gap: 1rem;
+	}
+
+	.about-title {
+		font-size: 0.75rem;
+		color: var(--rubric);
+	}
+
+	.about-close {
+		margin-left: auto;
+		font: inherit;
+		font-size: 1.3rem;
+		line-height: 1;
+		background: none;
+		border: none;
 		color: var(--ink-soft);
+		cursor: pointer;
+		padding: 0.2rem 0.5rem;
+	}
+
+	.about-close:hover {
+		color: var(--ink);
+	}
+
+	.about-text {
+		margin: 0.6rem 0 0;
+		font-size: 1rem;
+		line-height: 1.65;
+		color: var(--ink);
 	}
 
 	.token {
