@@ -154,31 +154,43 @@
 
 	onDestroy(() => clearTimeout(posTimer));
 
+	function ribbonFor(key: string): number | null {
+		try {
+			const raw = localStorage.getItem(key);
+			if (!raw) return null;
+			const { y, t } = JSON.parse(raw);
+			if (typeof y !== 'number' || typeof t !== 'number') return null;
+			return Date.now() - t > POS_TTL ? null : y;
+		} catch {
+			// a malformed entry is as good as none
+			return null;
+		}
+	}
+
 	$effect(() => {
 		void page.url.pathname;
-		// The router applies its own scroll (reset to top on forward
-		// navigations, the recorded position on history back) at its own
-		// pace — sample a few frames and restore only once the page sits
-		// at the top: a reset means "fresh entry, the ribbon applies", a
-		// restored position means the router already knew better.
-		let tries = 12;
+		// The router applies its own scroll at its own pace — a reset to the
+		// top on a fresh entry, the recorded position on history back — and
+		// it can land either side of us. So watch a short window instead of
+		// racing it: while the page sits at the top, keep laying the ribbon
+		// back down; the moment the reader (or the router, restoring a real
+		// position) puts it anywhere else, stop and leave it alone.
+		const key = posKey();
+		let frames = 20;
 		let live = true;
+		let placed = 0;
 		const attempt = () => {
-			if (!live) return;
+			if (!live || --frames < 0) return;
 			if (new URL(location.href).searchParams.get('w')) return;
-			if (window.scrollY <= 8) {
-				try {
-					const raw = localStorage.getItem(posKey());
-					if (!raw) return;
-					const { y, t } = JSON.parse(raw);
-					if (typeof y !== 'number' || typeof t !== 'number' || Date.now() - t > POS_TTL) return;
-					window.scrollTo({ top: y, behavior: 'auto' });
-				} catch {
-					// a malformed entry is as good as none
-				}
-				return;
+			const y = window.scrollY;
+			if (y > 8 && Math.abs(y - placed) > 2) return; // not ours: someone means it
+			const target = ribbonFor(key);
+			if (target === null) return;
+			if (y !== target) {
+				window.scrollTo({ top: target, behavior: 'auto' });
+				placed = target;
 			}
-			if (--tries > 0) requestAnimationFrame(attempt);
+			requestAnimationFrame(attempt);
 		};
 		requestAnimationFrame(attempt);
 		return () => {
