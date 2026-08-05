@@ -487,6 +487,7 @@
 	.chev {
 		display: inline-block;
 		transform: translateY(-0.09em);
+		margin-inline: 0.15em;
 	}
 
 	.token {
