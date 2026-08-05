@@ -69,3 +69,19 @@ export const CATALOG: CatalogSection[] = [
 export function sectionFor(category: string): CatalogSection | undefined {
 	return CATALOG.find((s) => s.category === category);
 }
+
+/** The book's reading order: catalog sections flattened — within
+ * ordinarium this IS the liturgical sequence, which the pager relies on. */
+export function orderedTexts(): CatalogText[] {
+	return CATALOG.flatMap((s) => s.texts);
+}
+
+export function neighborsOf(
+	category: string,
+	slug: string
+): { prev?: CatalogText; next?: CatalogText } {
+	const all = orderedTexts();
+	const i = all.findIndex((t) => t.category === category && t.slug === slug);
+	if (i < 0) return {};
+	return { prev: all[i - 1], next: all[i + 1] };
+}

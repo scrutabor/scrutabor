@@ -30,6 +30,7 @@ export interface Messages {
 	errorGeneric: string;
 	goHome: string;
 	aboutLabel: string;
+	pagerAria: string;
 	grammarTitle: string;
 	derivativesLabel: string;
 	pronunciationHint: string;
@@ -65,6 +66,7 @@ export const M: Record<Lang, Messages> = {
 		errorGeneric: 'Coś poszło nie tak.',
 		goHome: 'wróć na stronę główną',
 		aboutLabel: 'o modlitwie',
+		pagerAria: 'sąsiednie teksty',
 		grammarTitle: 'gramatyka',
 		derivativesLabel: 'w polszczyźnie',
 		pronunciationHint: 'zasady wymowy'
@@ -98,6 +100,7 @@ export const M: Record<Lang, Messages> = {
 		errorGeneric: 'Something went wrong.',
 		goHome: 'go to the home page',
 		aboutLabel: 'about this prayer',
+		pagerAria: 'neighboring texts',
 		grammarTitle: 'grammar',
 		derivativesLabel: 'in English',
 		pronunciationHint: 'pronunciation guide'

@@ -2,7 +2,8 @@
 	import { pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import { TEXTS } from '$lib/corpus';
-	import { sectionFor } from '$lib/catalog';
+	import { goto } from '$app/navigation';
+	import { neighborsOf, sectionFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
@@ -15,6 +16,10 @@
 	const doc = $derived(entry?.text);
 	const gloss = $derived(entry?.glosses[lang]);
 	const sectionLabel = $derived(sectionFor(page.params.category ?? '')?.label[lang] ?? '');
+	// Book navigation: the catalog's flattened order — within ordinarium
+	// that is the liturgical sequence, so a reader can follow the Mass
+	// text to text without returning to the catalog.
+	const around = $derived(neighborsOf(page.params.category ?? '', page.params.slug ?? ''));
 
 	// Three verbosity states:
 	// 0 = text only · 1 = + interlinear glosses · 2 = + translations (as
@@ -121,9 +126,18 @@
 	}
 
 	function onWindowKeydown(e: KeyboardEvent) {
-		if (e.key !== 'Escape') return;
-		if (selectedId !== null) closePanel();
-		aboutOpen = false;
+		if (e.key === 'Escape') {
+			if (selectedId !== null) closePanel();
+			aboutOpen = false;
+			return;
+		}
+		// Arrow keys page through the book — unless a control (the help
+		// slider) owns them.
+		if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+		const tag = (document.activeElement as HTMLElement | null)?.tagName;
+		if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+		const target = e.key === 'ArrowLeft' ? around.prev : around.next;
+		if (target) goto(`/${lang}/${target.category}/${target.slug}`);
 	}
 
 	let selectedWord = $derived(selectedId ? (wordsById.get(selectedId) ?? null) : null);
@@ -244,6 +258,21 @@
 					{/if}
 				{/if}
 			{/each}
+
+			<nav class="pager" aria-label={msgs.pagerAria}>
+				{#if around.prev}
+					<a class="pager-link" href="/{lang}/{around.prev.category}/{around.prev.slug}"
+						>‹ <span lang="la">{around.prev.title}</span></a
+					>
+				{:else}
+					<span></span>
+				{/if}
+				{#if around.next}
+					<a class="pager-link pager-next" href="/{lang}/{around.next.category}/{around.next.slug}"
+						><span lang="la">{around.next.title}</span> ›</a
+					>
+				{/if}
+			</nav>
 		</main>
 
 		{#if aboutOpen && gloss.about}
@@ -424,6 +453,31 @@
 		font-size: 1rem;
 		line-height: 1.65;
 		color: var(--ink);
+	}
+
+	.pager {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1rem;
+		margin-top: 3rem;
+		padding-top: 1.1rem;
+		border-top: 1px solid var(--border);
+	}
+
+	.pager-link {
+		color: var(--ink-soft);
+		text-decoration: none;
+		font-size: 1.05rem;
+	}
+
+	.pager-link:hover {
+		color: var(--ink);
+	}
+
+	.pager-next {
+		text-align: right;
+		margin-left: auto;
 	}
 
 	.token {

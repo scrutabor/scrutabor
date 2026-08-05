@@ -230,3 +230,24 @@ test('a tapped word near the viewport bottom rises above the panel', async ({ pa
 		)
 		.toBe(true);
 });
+
+test('the pager walks the book in liturgical order', async ({ page }) => {
+	await page.goto('/pl/ordinarium/gloria');
+	const pager = page.locator('.pager');
+	await expect(pager.locator('a', { hasText: 'Confíteor' })).toBeVisible();
+	await pager.locator('a', { hasText: 'Credo' }).click();
+	await expect(page).toHaveURL(/ordinarium\/credo$/);
+	// crossing the section boundary backwards
+	await page.goto('/pl/ordinarium/confiteor');
+	await pager.locator('a', { hasText: 'Glória Patri' }).click();
+	await expect(page).toHaveURL(/orationes\/gloria-patri$/);
+	// arrow keys page too, but never while the slider owns them
+	await page.keyboard.press('ArrowRight');
+	await expect(page).toHaveURL(/ordinarium\/confiteor$/);
+	await page.locator('input[type="range"]').focus();
+	await page.keyboard.press('ArrowRight');
+	await expect(page).toHaveURL(/ordinarium\/confiteor$/);
+	// first text has no previous
+	await page.goto('/pl/orationes/pater-noster');
+	await expect(page.locator('.pager a')).toHaveCount(1);
+});
