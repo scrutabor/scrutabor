@@ -61,6 +61,18 @@ export const CATALOG: CatalogSection[] = [
 				slug: 'credo',
 				title: 'Credo',
 				note: { pl: 'wyznanie wiary', en: 'the profession of faith' }
+			},
+			{
+				category: 'ordinarium',
+				slug: 'sanctus',
+				title: 'Sanctus',
+				note: { pl: 'przed Kanonem', en: 'before the Canon' }
+			},
+			{
+				category: 'ordinarium',
+				slug: 'agnus-dei',
+				title: 'Agnus Dei',
+				note: { pl: 'przed Komunią', en: 'before Communion' }
 			}
 		]
 	}

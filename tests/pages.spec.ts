@@ -1,6 +1,7 @@
 // The educational surfaces around the reading view: lemma pages,
 // grammar-concept pages, and the landing.
 import { expect, test } from '@playwright/test';
+import { CATALOG } from '../src/lib/catalog';
 
 test('lemma page shows head, senses, derivatives and concordance', async ({ page }) => {
 	await page.goto('/pl/lemma/panis');
@@ -45,7 +46,12 @@ test('a concept example deep-links into the prayer', async ({ page }) => {
 
 test('landing shows the catalog and a quiet grammar link', async ({ page }) => {
 	await page.goto('/pl');
-	await expect(page.locator('.card')).toHaveCount(6);
+	// exactly the catalog, nothing dropped and nothing invented
+	const texts = CATALOG.flatMap((s) => s.texts);
+	await expect(page.locator('.card')).toHaveCount(texts.length);
+	for (const t of texts) {
+		await expect(page.locator(`.card[href="/pl/${t.category}/${t.slug}"]`)).toContainText(t.title);
+	}
 	await expect(page.locator('a[href="/pl/grammatica"]')).toBeVisible();
 	await expect(page.locator('.motto')).toContainText('scrutabor legem tuam');
 });

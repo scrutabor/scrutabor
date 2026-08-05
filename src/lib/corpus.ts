@@ -20,6 +20,12 @@ import gloriaExcEn from './data/gloria.en.json';
 import credoText from './data/credo.json';
 import credoPl from './data/credo.pl.json';
 import credoEn from './data/credo.en.json';
+import sanctusText from './data/sanctus.json';
+import sanctusPl from './data/sanctus.pl.json';
+import sanctusEn from './data/sanctus.en.json';
+import agnusText from './data/agnus-dei.json';
+import agnusPl from './data/agnus-dei.pl.json';
+import agnusEn from './data/agnus-dei.en.json';
 import lexiconLemmata from './data/lexicon.json';
 import lexiconPl from './data/lexicon.pl.json';
 import lexiconEn from './data/lexicon.en.json';
@@ -145,6 +151,8 @@ export const TEXTS: Record<string, TextEntry> = {
 	'ordinarium/confiteor': entry(confiteorText, confiteorPl, confiteorEn),
 	'ordinarium/gloria': entry(gloriaExcText, gloriaExcPl, gloriaExcEn),
 	'ordinarium/credo': entry(credoText, credoPl, credoEn),
+	'ordinarium/sanctus': entry(sanctusText, sanctusPl, sanctusEn),
+	'ordinarium/agnus-dei': entry(agnusText, agnusPl, agnusEn),
 	'orationes/pater-noster': entry(paterText, paterPl, paterEn),
 	'orationes/ave-maria': entry(aveText, avePl, aveEn),
 	'orationes/gloria-patri': entry(gloriaText, gloriaPl, gloriaEn)
