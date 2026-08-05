@@ -38,6 +38,33 @@ import deus_tu_conversusEn from './data/deus-tu-conversus.en.json';
 import aufer_a_nobisText from './data/aufer-a-nobis.json';
 import aufer_a_nobisPl from './data/aufer-a-nobis.pl.json';
 import aufer_a_nobisEn from './data/aufer-a-nobis.en.json';
+import confiteor_sacerdotisText from './data/confiteor-sacerdotis.json';
+import confiteor_sacerdotisPl from './data/confiteor-sacerdotis.pl.json';
+import confiteor_sacerdotisEn from './data/confiteor-sacerdotis.en.json';
+import misereatur_tuiText from './data/misereatur-tui.json';
+import misereatur_tuiPl from './data/misereatur-tui.pl.json';
+import misereatur_tuiEn from './data/misereatur-tui.en.json';
+import suscipe_sancte_paterText from './data/suscipe-sancte-pater.json';
+import suscipe_sancte_paterPl from './data/suscipe-sancte-pater.pl.json';
+import suscipe_sancte_paterEn from './data/suscipe-sancte-pater.en.json';
+import deus_qui_humanaeText from './data/deus-qui-humanae.json';
+import deus_qui_humanaePl from './data/deus-qui-humanae.pl.json';
+import deus_qui_humanaeEn from './data/deus-qui-humanae.en.json';
+import offerimus_tibiText from './data/offerimus-tibi.json';
+import offerimus_tibiPl from './data/offerimus-tibi.pl.json';
+import offerimus_tibiEn from './data/offerimus-tibi.en.json';
+import in_spiritu_humilitatisText from './data/in-spiritu-humilitatis.json';
+import in_spiritu_humilitatisPl from './data/in-spiritu-humilitatis.pl.json';
+import in_spiritu_humilitatisEn from './data/in-spiritu-humilitatis.en.json';
+import lavaboText from './data/lavabo.json';
+import lavaboPl from './data/lavabo.pl.json';
+import lavaboEn from './data/lavabo.en.json';
+import suscipe_sancta_trinitasText from './data/suscipe-sancta-trinitas.json';
+import suscipe_sancta_trinitasPl from './data/suscipe-sancta-trinitas.pl.json';
+import suscipe_sancta_trinitasEn from './data/suscipe-sancta-trinitas.en.json';
+import orate_fratresText from './data/orate-fratres.json';
+import orate_fratresPl from './data/orate-fratres.pl.json';
+import orate_fratresEn from './data/orate-fratres.en.json';
 import kyrieText from './data/kyrie.json';
 import kyriePl from './data/kyrie.pl.json';
 import kyrieEn from './data/kyrie.en.json';
@@ -183,6 +210,35 @@ export const TEXTS: Record<string, TextEntry> = {
 		deus_tu_conversusEn
 	),
 	'ordinarium/aufer-a-nobis': entry(aufer_a_nobisText, aufer_a_nobisPl, aufer_a_nobisEn),
+	'ordinarium/confiteor-sacerdotis': entry(
+		confiteor_sacerdotisText,
+		confiteor_sacerdotisPl,
+		confiteor_sacerdotisEn
+	),
+	'ordinarium/misereatur-tui': entry(misereatur_tuiText, misereatur_tuiPl, misereatur_tuiEn),
+	'ordinarium/suscipe-sancte-pater': entry(
+		suscipe_sancte_paterText,
+		suscipe_sancte_paterPl,
+		suscipe_sancte_paterEn
+	),
+	'ordinarium/deus-qui-humanae': entry(
+		deus_qui_humanaeText,
+		deus_qui_humanaePl,
+		deus_qui_humanaeEn
+	),
+	'ordinarium/offerimus-tibi': entry(offerimus_tibiText, offerimus_tibiPl, offerimus_tibiEn),
+	'ordinarium/in-spiritu-humilitatis': entry(
+		in_spiritu_humilitatisText,
+		in_spiritu_humilitatisPl,
+		in_spiritu_humilitatisEn
+	),
+	'ordinarium/lavabo': entry(lavaboText, lavaboPl, lavaboEn),
+	'ordinarium/suscipe-sancta-trinitas': entry(
+		suscipe_sancta_trinitasText,
+		suscipe_sancta_trinitasPl,
+		suscipe_sancta_trinitasEn
+	),
+	'ordinarium/orate-fratres': entry(orate_fratresText, orate_fratresPl, orate_fratresEn),
 	'ordinarium/kyrie': entry(kyrieText, kyriePl, kyrieEn),
 	'ordinarium/gloria': entry(gloriaExcText, gloriaExcPl, gloriaExcEn),
 	'ordinarium/credo': entry(credoText, credoPl, credoEn),

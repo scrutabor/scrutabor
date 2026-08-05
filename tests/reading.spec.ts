@@ -300,8 +300,23 @@ test.describe('keeping the screen awake', () => {
 
 test('the book keeps a ribbon: reopening a text resumes the position', async ({ page }) => {
 	await page.goto('/pl/ordinarium/credo');
-	await page.evaluate(() => window.scrollTo(0, 600));
-	await page.waitForTimeout(1500); // dwell: the ribbon commits after a pause
+	// Scroll and wait for the ribbon to actually commit. A fixed pause races
+	// hydration: the listener that records the position is attached by the
+	// page's own script, and under load a scroll can land before it exists.
+	await expect
+		.poll(
+			async () => {
+				// Return to the top first: scrolling to a position the page is
+				// already at fires no event, so a retry would be silent.
+				await page.evaluate(() => {
+					window.scrollTo(0, 0);
+					window.scrollTo(0, 600);
+				});
+				return page.evaluate(() => localStorage.getItem('scrutabor-pos:ordinarium/credo'));
+			},
+			{ intervals: [1400, 1400, 1400, 1400], timeout: 15000 }
+		)
+		.not.toBeNull();
 	// leave for the catalog and come back — the ribbon holds
 	await page.locator('a.back').click();
 	await expect(page).toHaveURL(/\/pl$/);

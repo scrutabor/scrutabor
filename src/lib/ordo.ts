@@ -96,8 +96,28 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				}
 			},
 			{
+				id: 'confiteor-sacerdotis',
+				title: 'Confíteor (Sacerdotis)',
+				kind: 'text',
+				text: 'ordinarium/confiteor-sacerdotis',
+				note: {
+					pl: 'Kapłan wyznaje grzechy pierwszy, zwracając się do usługujących: „wam, bracia”.',
+					en: 'The priest confesses first, addressing the servers: “to you, brothers”.'
+				}
+			},
+			{
+				id: 'misereatur-tui',
+				title: 'Misereátur tui',
+				kind: 'text',
+				text: 'ordinarium/misereatur-tui',
+				note: {
+					pl: 'Ministranci odpowiadają mu tą samą modlitwą w liczbie pojedynczej — bez Indulgéntiam, które należy tylko do kapłana.',
+					en: 'The servers answer him with the same prayer in the singular — without the Indulgéntiam, which is the priest\u2019s alone.'
+				}
+			},
+			{
 				id: 'confiteor',
-				title: 'Confíteor',
+				title: 'Confíteor (Ministrórum)',
 				kind: 'text',
 				text: 'ordinarium/confiteor',
 				note: {
@@ -248,21 +268,81 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				}
 			},
 			{
-				id: 'oblatio',
+				id: 'suscipe-sancte-pater',
 				title: 'Súscipe, sancte Pater',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/suscipe-sancte-pater',
 				note: {
-					pl: 'Po cichu kapłan ofiaruje hostię na patenie, wlewa do kielicha wino z kroplą wody, unosi kielich i obmywa palce przy Lavábo.',
-					en: 'Silently the priest offers the host on the paten, pours wine with a drop of water into the chalice, raises it, and washes his fingers at the Lavábo.'
+					pl: 'Kapłan unosi patenę z hostią i ofiaruje ją po cichu — pierwsza z trzech modlitw nad darami.',
+					en: 'The priest raises the paten with the host and offers it silently — the first of three prayers over the gifts.'
+				}
+			},
+			{
+				id: 'deus-qui-humanae',
+				title: 'Deus, qui humánæ substántiæ',
+				kind: 'text',
+				text: 'ordinarium/deus-qui-humanae',
+				note: {
+					pl: 'Do wina dolewa się kropla wody; modlitwa nad nią jest starą kolektą Bożego Narodzenia.',
+					en: 'A drop of water goes into the wine; the prayer said over it is an old Christmas collect.'
+				},
+				when: {
+					pl: 'we Mszach żałobnych wody się nie błogosławi',
+					en: 'at Requiem Masses the water is not blessed'
+				}
+			},
+			{
+				id: 'offerimus-tibi',
+				title: 'Offérimus tibi, Dómine',
+				kind: 'text',
+				text: 'ordinarium/offerimus-tibi',
+				note: {
+					pl: 'Kapłan unosi kielich i ofiaruje go tymi samymi słowami, w liczbie mnogiej.',
+					en: 'The priest raises the chalice and offers it in the same words, now in the plural.'
+				}
+			},
+			{
+				id: 'in-spiritu-humilitatis',
+				title: 'In spíritu humilitátis',
+				kind: 'text',
+				text: 'ordinarium/in-spiritu-humilitatis',
+				note: {
+					pl: 'Dwie krótkie modlitwy nad złożonymi już darami: prośba, by przyjęto nas samych, i wezwanie Uświęciciela.',
+					en: 'Two short prayers over gifts already laid down: that we ourselves be received, and a call to the Sanctifier.'
+				}
+			},
+			{
+				id: 'lavabo',
+				title: 'Lavábo',
+				kind: 'text',
+				text: 'ordinarium/lavabo',
+				note: {
+					pl: 'Kapłan obmywa końce palców, mówiąc psalm 25 od wersetu o ołtarzu.',
+					en: 'The priest washes his fingertips, saying Psalm 25 from the verse that names the altar.'
+				},
+				when: {
+					pl: 'Chwała Ojcu odpada we Mszach żałobnych i w okresie Męki Pańskiej',
+					en: 'the Glória Patri is omitted at Requiem Masses and in Passiontide'
+				}
+			},
+			{
+				id: 'suscipe-sancta-trinitas',
+				title: 'Súscipe, sancta Trínitas',
+				kind: 'text',
+				text: 'ordinarium/suscipe-sancta-trinitas',
+				note: {
+					pl: 'Jedyna modlitwa ofiarowania zwrócona do Trójcy — i jedyna, która mówi, czego ta Ofiara jest pamiątką.',
+					en: 'The one offertory prayer addressed to the Trinity, and the one that says what the sacrifice recalls.'
 				}
 			},
 			{
 				id: 'orate-fratres',
 				title: 'Oráte, fratres',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/orate-fratres',
 				note: {
-					pl: 'Kapłan odwraca się do wiernych, prosi o modlitwę i wraca do ołtarza; ministrant odpowiada Suscípiat Dóminus, a kapłan kończy półgłosem Amen.',
-					en: 'The priest turns to the people to ask their prayer and turns back; the server answers Suscípiat Dóminus, and the priest ends with a quiet Amen.'
+					pl: 'Kapłan odwraca się i prosi o modlitwę; odpowiedź ministranta jest najdłuższą, jaka pada we Mszy.',
+					en: 'The priest turns and asks for prayer; the server\u2019s answer is the longest in the whole Mass.'
 				}
 			},
 			{

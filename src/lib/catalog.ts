@@ -48,7 +48,7 @@ const CATALOG_SOURCE: CatalogSection[] = [
 			{
 				category: 'ordinarium',
 				slug: 'confiteor',
-				title: 'Confíteor',
+				title: 'Confíteor (Ministrórum)',
 				note: { pl: 'spowiedź powszechna', en: 'the general confession' }
 			},
 			{

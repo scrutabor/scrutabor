@@ -37,7 +37,9 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 	// step, where the interlinear glosses do not interleave with the Latin)
 	await page.goto('/pl/ordo/praeparatio');
 	await page.locator('input[type="range"]').fill('0');
-	const confiteor = page.locator('.part', { hasText: 'Confíteor' }).first();
+	// two Confiteors stand here now; this is the ministers', the one the
+	// faithful say
+	const confiteor = page.locator('.part', { hasText: 'Confíteor (Ministrórum)' }).first();
 	await expect(confiteor.locator('.verse').first()).toContainText('Confíteor Deo omnipoténti');
 	// …and their titles lead to the study page
 	await expect(confiteor.locator('a.part-title')).toHaveAttribute(
