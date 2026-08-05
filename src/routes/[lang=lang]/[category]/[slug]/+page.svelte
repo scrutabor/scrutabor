@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { untrack } from 'svelte';
-	import { pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import { TEXTS } from '$lib/corpus';
 	import { goto } from '$app/navigation';
@@ -12,6 +10,7 @@
 	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { ribbon } from '$lib/ribbon.svelte';
+	import { wordPanel } from '$lib/wordpanel.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
 
 	const lang = $derived(page.params.lang as Lang);
@@ -34,95 +33,13 @@
 		new Map((doc?.segments ?? []).flatMap((s) => (s.words ?? []).map((w) => [w.id, w] as const)))
 	);
 
-	let selectedId = $state<string | null>(null);
-
-	// Bottom-sheet history model (one entry per panel session, the Material
-	// convention): OPENING the panel pushes a ?w= entry, so back closes it;
-	// SWITCHING words replaces, so browsing ten words never costs ten back
-	// presses; ×, outside-click, Esc and back all close through the same
-	// popped entry. A panel opened by a deep link pushed nothing — back then
-	// returns to the page the reader came from, and closing it merely strips
-	// ?w= from the current entry.
-	let openedByPush = false;
-
-	function urlWith(id: string | null): URL {
-		const url = new URL(location.href);
-		if (id) url.searchParams.set('w', id);
-		else url.searchParams.delete('w');
-		return url;
-	}
-
-	function openWord(id: string) {
-		if (selectedId === null) {
-			pushState(urlWith(id), {});
-			openedByPush = true;
-		} else {
-			replaceState(urlWith(id), {});
-		}
-		selectedId = id;
-	}
-
-	// Closing must not move the page: the router restores the scroll
-	// position recorded when the panel's history entry was pushed (before
-	// any tap-scroll shift), and dropping the sheet padding can clamp a
-	// near-end position. Pin the current position across both.
-	let keepPanelPad = $state(false);
-
-	function preserveScroll() {
-		const y = window.scrollY;
-		const pad = window.innerHeight * 0.45;
-		const maxAfter = document.documentElement.scrollHeight - pad - window.innerHeight;
-		if (y > maxAfter) keepPanelPad = true;
-		const pin = () => window.scrollTo({ top: y, behavior: 'auto' });
-		setTimeout(pin, 0);
-		requestAnimationFrame(() => requestAnimationFrame(pin));
-	}
-
-	function closePanel() {
-		preserveScroll();
-		if (openedByPush) {
-			openedByPush = false;
-			history.back();
-		} else {
-			replaceState(urlWith(null), {});
-		}
-		selectedId = null;
-	}
-
-	// Navigations apply the URL's selection and scroll to it. page.url is
-	// only the TRIGGER (real navigations change it; shallow push/replace do
-	// not, so taps cannot re-run this — the revert-on-tap regression class
-	// stays excluded); the value comes from location, because after a
-	// history traversal to a shallow-modified entry page.url can lag behind
-	// the real URL. The popstate listener covers same-route traversals
-	// (back closing / forward reopening the panel), where no navigation
-	// fires at all. Effects and window listeners never run at prerender, so
-	// reading location here is safe.
-	function applyFromLocation() {
-		const w = new URL(location.href).searchParams.get('w');
-		const target = w && wordsById.has(w) ? w : null;
-		// The browser's own back also just closes the panel - the page
-		// stays where the reader is, not where they were when it opened.
-		// untrack: reading selectedId here plainly would make the
-		// navigation effect depend on it, re-running this on every tap
-		// (the documented read-after-write regression class).
-		if (!target && untrack(() => selectedId) !== null) preserveScroll();
-		if (!target) openedByPush = false;
-		selectedId = target;
-		// The router resets scroll AFTER this runs on client-side
-		// navigations — schedule the centering behind it or deep links into
-		// long texts land at the top.
-		if (target) {
-			requestAnimationFrame(() =>
-				document.getElementById(target)?.scrollIntoView({ block: 'center' })
-			);
-		}
-	}
+	// The panel behaves the same here as in the flow — see lib/wordpanel.
+	const panel = wordPanel({ has: (id) => wordsById.has(id) });
 
 	$effect(() => {
 		void page.url;
 		void wordsById;
-		applyFromLocation();
+		panel.applyFromLocation();
 	});
 
 	// Reading is the whole point of this page: hold the screen open.
@@ -146,25 +63,30 @@
 	// chrome, one tap to reopen.
 	let aboutOpen = $state(false);
 
+	function tapWord(id: string) {
+		aboutOpen = false;
+		panel.toggle(id);
+	}
+
 	function toggleAbout() {
-		if (!aboutOpen && selectedId !== null) closePanel();
+		if (!aboutOpen && panel.id !== null) panel.close();
 		aboutOpen = !aboutOpen;
 	}
 
 	function onWindowClick(e: MouseEvent) {
-		if (selectedId === null && !aboutOpen) return;
+		if (panel.id === null && !aboutOpen) return;
 		const interactive = e
 			.composedPath()
 			.some((n) => n instanceof Element && n.matches('a, button, input, select, textarea, aside'));
 		if (!interactive) {
-			if (selectedId !== null) closePanel();
+			if (panel.id !== null) panel.close();
 			aboutOpen = false;
 		}
 	}
 
 	function onWindowKeydown(e: KeyboardEvent) {
 		if (e.key === 'Escape') {
-			if (selectedId !== null) closePanel();
+			if (panel.id !== null) panel.close();
 			aboutOpen = false;
 			return;
 		}
@@ -177,49 +99,20 @@
 		if (target) goto(`/${lang}/${target.category}/${target.slug}`);
 	}
 
-	let selectedWord = $derived(selectedId ? (wordsById.get(selectedId) ?? null) : null);
-	let selectedGloss = $derived(selectedId && gloss ? (gloss.words[selectedId] ?? null) : null);
+	let selectedWord = $derived(panel.id ? (wordsById.get(panel.id) ?? null) : null);
+	let selectedGloss = $derived(panel.id && gloss ? (gloss.words[panel.id] ?? null) : null);
 	let selectedAnalysis = $derived(
 		selectedWord && doc
 			? (selectedWord.analysis ?? doc.analysis_defaults_words ?? doc.analysis_defaults)
 			: null
 	);
-
-	// A tap must never bury the analyzed word under its own panel: once
-	// the sheet has rendered, scroll by exactly the overlap (plus a
-	// breathing margin), so words already visible stay put. panel-open
-	// pads the page bottom, so even the last word has room to rise.
-	function ensureWordAboveSheet(id: string) {
-		requestAnimationFrame(() => {
-			const el = document.getElementById(id);
-			const sheet = document.querySelector('aside');
-			if (!el || !sheet) return;
-			const margin = 16;
-			const overlap =
-				el.getBoundingClientRect().bottom + margin - sheet.getBoundingClientRect().top;
-			if (overlap <= 0) return;
-			const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-			window.scrollBy({ top: overlap, behavior: reduced ? 'auto' : 'smooth' });
-		});
-	}
-
-	function toggle(id: string) {
-		aboutOpen = false;
-		if (selectedId === id) closePanel();
-		else {
-			openWord(id);
-			ensureWordAboveSheet(id);
-		}
-	}
-
-	function navigateTo(id: string) {
-		openWord(id);
-		document.getElementById(id)?.scrollIntoView({ block: 'center' });
-		ensureWordAboveSheet(id);
-	}
 </script>
 
-<svelte:window onpopstate={applyFromLocation} onclick={onWindowClick} onkeydown={onWindowKeydown} />
+<svelte:window
+	onpopstate={panel.applyFromLocation}
+	onclick={onWindowClick}
+	onkeydown={onWindowKeydown}
+/>
 
 <svelte:head>
 	<title>{doc ? `${doc.title} — Scrutabor` : 'Scrutabor'}</title>
@@ -257,8 +150,8 @@
 			{/if}
 		</header>
 
-		<main class:panel-open={selectedWord !== null || keepPanelPad}>
-			<TextBody {doc} {gloss} {lang} {helpLevel} {selectedId} ontap={toggle} />
+		<main class:panel-open={selectedWord !== null || panel.keepPad}>
+			<TextBody {doc} {gloss} {lang} {helpLevel} selectedId={panel.id} ontap={tapWord} />
 
 			<nav class="pager" aria-label={msgs.pagerAria}>
 				{#if around.prev}
@@ -298,8 +191,8 @@
 				gloss={selectedGloss}
 				analysis={selectedAnalysis}
 				{lang}
-				onclose={closePanel}
-				onnavigate={navigateTo}
+				onclose={panel.close}
+				onnavigate={panel.goTo}
 			/>
 		{/if}
 	</div>

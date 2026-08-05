@@ -1,30 +1,100 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { TEXTS } from '$lib/corpus';
+	import { TEXTS, type TextDocument, type Word } from '$lib/corpus';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { ORDO } from '$lib/ordo';
 	import { ribbon } from '$lib/ribbon.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
+	import { wordPanel } from '$lib/wordpanel.svelte';
 
 	const lang = $derived(page.params.lang as Lang);
 	const msgs = $derived(M[lang]);
 
-	// The flow shares the reading page's help ladder (and its stored
-	// setting) but not its study machinery: words here are plain text.
-	// Following the Mass is the job; a word worth pursuing has its own
-	// page one tap away, at the part's title.
+	// The flow shares the reading page's help ladder and its stored setting.
 	let helpLevel = $state(1);
+
+	// …and its word panel. A word is one tap from its analysis wherever it
+	// stands (decisions #20); the flow is not an exception. Several texts
+	// share this page, so a word is addressed by text AND id — `credo:w001`
+	// — which is also what the ?w= deep link carries.
+	const inlined = $derived(
+		ORDO.flatMap((section) =>
+			section.entries.flatMap((e) => {
+				const entry = e.text ? TEXTS[e.text] : undefined;
+				return entry ? [{ slug: e.text!.split('/')[1], key: e.text!, entry }] : [];
+			})
+		)
+	);
+
+	const wordsById = $derived(
+		new Map<string, { word: Word; doc: TextDocument; slug: string }>(
+			inlined.flatMap(({ slug, entry }) =>
+				entry.text.segments.flatMap((seg) =>
+					(seg.words ?? []).map((w): [string, { word: Word; doc: TextDocument; slug: string }] => [
+						`${slug}:${w.id}`,
+						{ word: w, doc: entry.text, slug }
+					])
+				)
+			)
+		)
+	);
+
+	const panel = wordPanel({ has: (id) => wordsById.has(id) });
+
+	$effect(() => {
+		void page.url;
+		void wordsById;
+		panel.applyFromLocation();
+	});
+
+	const picked = $derived(panel.id ? (wordsById.get(panel.id) ?? null) : null);
+	const pickedEntry = $derived(picked ? TEXTS[`ordinarium/${picked.slug}`] : null);
+	const pickedGloss = $derived(
+		picked && pickedEntry ? (pickedEntry.glosses[lang].words[picked.word.id] ?? null) : null
+	);
+	const pickedAnalysis = $derived(
+		picked
+			? (picked.word.analysis ?? picked.doc.analysis_defaults_words ?? picked.doc.analysis_defaults)
+			: null
+	);
+
+	// Dismissal gestures, as on the reading pages: Esc, and a tap on the
+	// quiet parts of the page. composedPath, not target.closest — a control
+	// that re-renders on click detaches before the event reaches window.
+	function onWindowClick(e: MouseEvent) {
+		if (panel.id === null) return;
+		const interactive = e
+			.composedPath()
+			.some((n) => n instanceof Element && n.matches('a, button, input, select, textarea, aside'));
+		if (!interactive) panel.close();
+	}
+
+	function onWindowKeydown(e: KeyboardEvent) {
+		if (e.key === 'Escape' && panel.id !== null) panel.close();
+	}
 
 	keepAwake();
 
 	// The flow is the longest surface in the book and the one a reader
 	// leaves and comes back to mid-Mass — it keeps a ribbon like the rest.
-	ribbon(() => 'scrutabor-pos:ordo');
+	ribbon(
+		() => 'scrutabor-pos:ordo',
+		// a deep link into a word outranks the ribbon — that reader asked
+		// for a place, the same rule the reading pages follow
+		() => new URL(location.href).searchParams.has('w')
+	);
 </script>
+
+<svelte:window
+	onpopstate={panel.applyFromLocation}
+	onclick={onWindowClick}
+	onkeydown={onWindowKeydown}
+/>
 
 <svelte:head>
 	<title>Ordo Missæ — Scrutabor</title>
@@ -47,7 +117,7 @@
 		</div>
 	</header>
 
-	<main>
+	<main class:panel-open={picked !== null || panel.keepPad}>
 		{#each ORDO as section (section.id)}
 			<h2 class="section smallcaps">{section.label[lang]}</h2>
 			{#each section.entries as e (e.id)}
@@ -76,13 +146,32 @@
 					{/if}
 					{#if entry}
 						<div class="part-text">
-							<TextBody doc={entry.text} gloss={entry.glosses[lang]} {lang} {helpLevel} />
+							<TextBody
+								doc={entry.text}
+								gloss={entry.glosses[lang]}
+								{lang}
+								{helpLevel}
+								idPrefix={e.text!.split('/')[1]}
+								selectedId={panel.id}
+								ontap={panel.toggle}
+							/>
 						</div>
 					{/if}
 				</section>
 			{/each}
 		{/each}
 	</main>
+
+	{#if picked && pickedAnalysis}
+		<WordPanel
+			word={picked.word}
+			gloss={pickedGloss}
+			analysis={pickedAnalysis}
+			{lang}
+			onclose={panel.close}
+			onnavigate={(id) => panel.goTo(`${picked.slug}:${id}`)}
+		/>
+	{/if}
 </div>
 
 <style>
@@ -202,5 +291,10 @@
 
 	.part-text {
 		margin-top: 1.2rem;
+	}
+
+	/* room for the sheet, so even the last word can rise clear of it */
+	main.panel-open {
+		padding-bottom: 45vh;
 	}
 </style>

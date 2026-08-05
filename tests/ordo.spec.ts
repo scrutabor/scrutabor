@@ -43,14 +43,57 @@ test('the flow walks the Mass, texts in place and slots marked', async ({ page }
 	await expect(pending.locator('.verse')).toHaveCount(0);
 });
 
-test('the flow is for following, not for study: words do not open the panel', async ({ page }) => {
+test('a word in the flow opens its analysis, wherever it stands', async ({ page }) => {
 	await page.goto('/pl/ordo');
-	const word = page.locator('.part-text .word').first();
-	await expect(word).toBeVisible();
-	await word.click();
-	await expect(page.locator('aside')).toHaveCount(0);
-	// no word carries a corpus id here — several texts share one page
-	expect(await page.locator('.part-text [id^="w0"]').count()).toBe(0);
+	// a word from the LAST inlined text, to prove every text is wired
+	const agnus = page.locator('#agnus-dei\\:w001');
+	await agnus.click();
+	const panel = page.locator('aside');
+	await expect(panel.locator('.form')).toHaveText('Agnus');
+	await expect(panel.locator('.head a')).toHaveAttribute('href', '/pl/lemma/agnus');
+
+	// switching to a word from a DIFFERENT text keeps working
+	await page.locator('#credo\\:w001').click();
+	await expect(panel.locator('.form')).toHaveText('Credo');
+
+	// the deep link addresses text and word together, and survives a reload
+	await expect(page).toHaveURL(/\?w=credo%3Aw001|\?w=credo:w001/);
+	await page.reload();
+	await expect(page.locator('aside .form')).toHaveText('Credo');
+
+	// escape closes it, as everywhere else
+	await page.keyboard.press('Escape');
+	await expect(panel).toHaveCount(0);
+});
+
+test('a deep link into the flow lands on its word, not on the ribbon', async ({ page }) => {
+	// leave a ribbon somewhere far from the target
+	await page.goto('/pl/ordo');
+	await page.evaluate(() => window.scrollTo(0, 3000));
+	await page.waitForTimeout(1500);
+
+	await page.goto('/pl/ordo?w=kyrie:w002');
+	await expect(page.locator('aside .form')).toHaveText('eléison');
+	await expect
+		.poll(() =>
+			page.evaluate(() => {
+				const r = document.getElementById('kyrie:w002')?.getBoundingClientRect();
+				return !!r && r.top >= 0 && r.bottom <= window.innerHeight;
+			})
+		)
+		.toBe(true);
+});
+
+test('the flow and the reading page number their words apart', async ({ page }) => {
+	await page.goto('/pl/ordo');
+	// same corpus id in five texts, five distinct DOM ids — no collisions
+	const first = await page.locator('.part-text .word').first().getAttribute('id');
+	expect(first).toMatch(/^[a-z-]+:w\d{3}$/);
+	const ids = await page.locator('.part-text .word').evaluateAll((els) => els.map((e) => e.id));
+	expect(new Set(ids).size).toBe(ids.length);
+	// the reading page keeps the bare corpus id, so its deep links are unchanged
+	await page.goto('/pl/ordinarium/credo');
+	expect(await page.locator('.word').first().getAttribute('id')).toBe('w001');
 });
 
 test('the help ladder governs the whole flow', async ({ page }) => {

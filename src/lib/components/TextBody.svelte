@@ -3,16 +3,15 @@
 	import type { Lang } from '$lib/i18n';
 
 	// The rendered text itself, shared by the reading page and the ordo
-	// flow. `ontap` decides which of the two it is: with it, words are
-	// buttons carrying their corpus id (the study surface); without it,
-	// they are plain text — the flow inlines several texts on one page,
-	// where word ids would collide anyway.
+	// flow. `ontap` makes the words buttons; the flow passes an idPrefix so
+	// that the several texts on its page address their words apart.
 	let {
 		doc,
 		gloss,
 		lang,
 		helpLevel,
 		selectedId = null,
+		idPrefix = '',
 		ontap
 	}: {
 		doc: TextDocument;
@@ -20,8 +19,12 @@
 		lang: Lang;
 		helpLevel: number;
 		selectedId?: string | null;
+		/** Namespaces the DOM ids, for pages that show more than one text. */
+		idPrefix?: string;
 		ontap?: (id: string) => void;
 	} = $props();
+
+	const domId = (id: string) => (idPrefix ? `${idPrefix}:${id}` : id);
 </script>
 
 {#snippet face(id: string, form: string)}<ruby
@@ -48,9 +51,9 @@
 			{#each seg.words ?? [] as w (w.id)}<span class="token"
 					>{#if ontap}<button
 							class="word"
-							id={w.id}
-							class:selected={selectedId === w.id}
-							onclick={() => ontap?.(w.id)}>{@render face(w.id, w.form)}</button
+							id={domId(w.id)}
+							class:selected={selectedId === domId(w.id)}
+							onclick={() => ontap?.(domId(w.id))}>{@render face(w.id, w.form)}</button
 						>{:else}<span class="word">{@render face(w.id, w.form)}</span>{/if}{w.post ?? ''}</span
 				>{' '}{/each}
 		</p>
