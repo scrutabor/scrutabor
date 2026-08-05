@@ -26,6 +26,18 @@ for (;;) {
 	const res = await fetch(`https://api.github.com/repos/${REPO}/commits/${sha}/check-runs`, {
 		headers
 	});
+	if (res.status === 403 || res.status === 429) {
+		// The anonymous limit, shared across every build on this IP pool.
+		// Retry until the deadline - and set GITHUB_TOKEN in the Pages
+		// environment to stop depending on that lottery.
+		if (Date.now() - started > TIMEOUT_MS) {
+			console.error('ci-gate: rate-limited past the deadline - failing closed');
+			process.exit(1);
+		}
+		console.log(`ci-gate: checks API rate-limited (${res.status}) - retrying...`);
+		await new Promise((resolve) => setTimeout(resolve, POLL_MS));
+		continue;
+	}
 	if (!res.ok) {
 		console.error(`ci-gate: checks API answered ${res.status} - failing closed`);
 		process.exit(1);
