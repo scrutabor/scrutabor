@@ -14,6 +14,11 @@
 		dark = !dark;
 		const theme = dark ? 'dark' : 'light';
 		document.documentElement.dataset.theme = theme;
+		// keep the installed app's status bar with the page (app.html sets
+		// this before first paint; here it follows the reader's choice)
+		document
+			.querySelector('meta[name="theme-color"]')
+			?.setAttribute('content', dark ? '#1a1611' : '#f7f1e6');
 		localStorage.setItem('scrutabor-theme', theme);
 	}
 </script>

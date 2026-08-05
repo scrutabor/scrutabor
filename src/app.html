@@ -4,6 +4,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="text-scale" content="scale" />
+		<!-- Installed, the browser paints this behind the status bar, so it
+		     tracks the chosen theme rather than the system one. -->
+		<meta name="theme-color" content="#f7f1e6" />
 		<script>
 			// Resolve the theme before first paint: stored choice, else system.
 			try {
@@ -13,6 +16,9 @@
 					t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 				}
 				document.documentElement.dataset.theme = t;
+				document
+					.querySelector('meta[name="theme-color"]')
+					.setAttribute('content', t === 'dark' ? '#1a1611' : '#f7f1e6');
 			} catch (e) {
 				/* keep the static default */
 			}

@@ -19,6 +19,8 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<link rel="manifest" href="/manifest.webmanifest" />
+	<link rel="apple-touch-icon" href="/icon-192.png" />
 	{#each fonts as href (href)}
 		<link rel="preload" as="font" type="font/woff2" {href} crossorigin="anonymous" />
 	{/each}

@@ -1,0 +1,23 @@
+{
+	"id": "/",
+	"name": "Scrutabor",
+	"short_name": "Scrutabor",
+	"description": "A Latin prayer book with word-by-word analysis — translation, grammar, and pronunciation for every word.",
+	"lang": "en",
+	"dir": "ltr",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"background_color": "#f7f1e6",
+	"theme_color": "#f7f1e6",
+	"icons": [
+		{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+		{ "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+		{
+			"src": "/icon-maskable-512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	]
+}
