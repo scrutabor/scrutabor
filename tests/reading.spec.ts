@@ -118,3 +118,27 @@ test('the Gloria reads with narrative, panel and provenance', async ({ page }) =
 	await expect(page).toHaveURL(/lemma\/altus$/);
 	await expect(page.locator('.senses')).toContainText('high');
 });
+
+test('no token ever fragments across lines, any text, narrow viewport', async ({ page }) => {
+	// A token (word + trailing punctuation) is atomic: an inline element
+	// that fragments across lines reports multiple client rects — so one
+	// rect per token IS the no-orphaned-punctuation invariant, wherever
+	// the line breaks happen to fall.
+	await page.setViewportSize({ width: 320, height: 900 });
+	for (const path of [
+		'/pl/ordinarium/gloria',
+		'/pl/ordinarium/confiteor',
+		'/pl/orationes/pater-noster',
+		'/pl/orationes/ave-maria',
+		'/pl/orationes/gloria-patri'
+	]) {
+		await page.goto(path);
+		await expect(page.locator('.verse .token').first()).toBeVisible();
+		const fragmented = await page.evaluate(() =>
+			[...document.querySelectorAll('.verse .token')]
+				.filter((t) => t.getClientRects().length !== 1)
+				.map((t) => t.querySelector('button')?.id ?? '?')
+		);
+		expect(fragmented, path).toEqual([]);
+	}
+});

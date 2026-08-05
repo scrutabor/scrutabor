@@ -174,15 +174,22 @@
 					</div>
 				{:else}
 					<p class="verse" class:glossed={helpLevel >= 1} lang="la">
-						{#each seg.words ?? [] as w (w.id)}<button
-								class="word"
-								id={w.id}
-								class:selected={selectedId === w.id}
-								onclick={() => toggle(w.id)}
-								><ruby
-									>{w.form}{#if helpLevel >= 1}<rt {lang}>{gloss.words[w.id]?.gloss}</rt>{/if}</ruby
-								></button
-							>{w.post ?? ''}{' '}{/each}
+						<!-- Word and its trailing punctuation form one atomic token
+						     (inline-block): the line breaker may only break at the
+						     spaces BETWEEN tokens, never between a word and its
+						     comma or period. Guarded by the one-rect e2e invariant. -->
+						{#each seg.words ?? [] as w (w.id)}<span class="token"
+								><button
+									class="word"
+									id={w.id}
+									class:selected={selectedId === w.id}
+									onclick={() => toggle(w.id)}
+									><ruby
+										>{w.form}{#if helpLevel >= 1}<rt {lang}>{gloss.words[w.id]?.gloss}</rt
+											>{/if}</ruby
+									></button
+								>{w.post ?? ''}</span
+							>{' '}{/each}
 					</p>
 					{#if helpLevel >= 2 && gloss.segments[seg.id]?.translation}
 						<div class="seg-extra">
@@ -267,6 +274,10 @@
 
 	.verse.glossed {
 		line-height: 2.7;
+	}
+
+	.token {
+		display: inline-block;
 	}
 
 	.word {
