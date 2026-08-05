@@ -18,5 +18,15 @@ jobs:
       - run: npm run lint
       - run: npm run check
       - run: npm run build
-      - run: npx playwright install --with-deps chromium
+      # The browser download dominates CI time; cache it keyed to the
+      # lockfile so only a Playwright version bump re-downloads.
+      - uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+      - if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
       - run: npm test
