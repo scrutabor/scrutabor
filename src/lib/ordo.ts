@@ -64,14 +64,35 @@ const ORDO_SOURCE: OrdoMovement[] = [
 			{
 				id: 'introibo',
 				title: 'Introíbo ad altáre Dei',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/introibo',
 				note: {
-					pl: 'Kapłan stoi u stopni ołtarza i odmawia z ministrantem na przemian psalm 42 — na ołtarz jeszcze nie wstępuje.',
-					en: 'The priest stands at the foot of the altar and says Psalm 42 in alternation with the server — he has not gone up to the altar yet.'
+					pl: 'Kapłan staje u stopni ołtarza, żegna się i mówi pierwsze słowa Mszy — na ołtarz jeszcze nie wstępuje.',
+					en: 'The priest stands at the foot of the altar, signs himself and says the first words of the Mass — he has not gone up yet.'
+				}
+			},
+			{
+				id: 'iudica-me',
+				title: 'Psalmus Júdica me',
+				kind: 'text',
+				text: 'ordinarium/iudica-me',
+				note: {
+					pl: 'Psalm 42 odmawiany na przemian z ministrantem, zakończony Chwała Ojcu i powtórzoną antyfoną.',
+					en: 'Psalm 42, said in alternation with the server, closed by the Glória Patri and the antiphon again.'
 				},
 				when: {
-					pl: 'psalm opuszcza się w okresie Męki Pańskiej i we Mszach żałobnych',
-					en: 'the psalm is omitted in Passiontide and at Requiem Masses'
+					pl: 'odpada w okresie Męki Pańskiej i we Mszach żałobnych — wraz z doksologią i powtórzoną antyfoną',
+					en: 'omitted in Passiontide and at Requiem Masses — with its doxology and the repeated antiphon'
+				}
+			},
+			{
+				id: 'adiutorium',
+				title: 'Adjutórium nostrum',
+				kind: 'text',
+				text: 'ordinarium/adiutorium',
+				note: {
+					pl: 'Werset i odpowiedź; kapłan żegna się drugi raz i zaraz potem, głęboko pochylony, zaczyna spowiedź powszechną.',
+					en: 'A versicle and its response; the priest signs himself a second time and, bowing low, begins the confession.'
 				}
 			},
 			{
@@ -85,9 +106,30 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				}
 			},
 			{
+				id: 'misereatur',
+				title: 'Misereátur',
+				kind: 'text',
+				text: 'ordinarium/misereatur',
+				note: {
+					pl: 'Dwie modlitwy o przebaczenie po spowiedzi ministrantów: Misereátur i Indulgéntiam — prośby, nie rozgrzeszenie sakramentalne.',
+					en: 'Two prayers for pardon after the servers\u0027 confession, the Misereátur and the Indulgéntiam — petitions, not sacramental absolution.'
+				}
+			},
+			{
+				id: 'deus-tu-conversus',
+				title: 'Deus, tu convérsus',
+				kind: 'text',
+				text: 'ordinarium/deus-tu-conversus',
+				note: {
+					pl: 'Ostatnie wersety u stopni, mówione na przemian; zaraz po nich kapłan wstępuje na ołtarz.',
+					en: 'The last versicles at the foot, said in alternation; immediately after them the priest goes up to the altar.'
+				}
+			},
+			{
 				id: 'aufer-a-nobis',
 				title: 'Aufer a nobis',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/aufer-a-nobis',
 				note: {
 					pl: 'Kapłan wstępuje po stopniach, prosząc o oczyszczenie z grzechów, i całuje ołtarz w miejscu relikwii.',
 					en: 'The priest goes up the steps asking to be cleansed of sin, and kisses the altar over the relics.'

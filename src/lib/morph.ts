@@ -2,6 +2,7 @@
 // The corpus stores enums (SCHEMA.md); every gloss language brings its own
 // label set here.
 import type { Analysis, Morph } from './corpus';
+import { bindOrphans } from './polish';
 import type { Lang } from './i18n';
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V'];
@@ -133,7 +134,8 @@ export function describeLemma(
 	const parts = [t.pos[e.pos] ?? e.pos];
 	if (e.decl) parts.push(t.decl(e.decl));
 	if (e.conj) parts.push(t.conj(e.conj));
-	return parts.join(', ');
+	const line = parts.join(', ');
+	return lang === 'pl' ? bindOrphans(line) : line;
 }
 
 // A parse-line segment; `concept` names a grammar-concept page the term
@@ -157,9 +159,13 @@ const MOOD_CONCEPT: Record<string, string> = { subj: 'coniunctivus', imp: 'imper
 export function describeMorphParts(m: Morph, lang: Lang): MorphPart[] {
 	const t = LABELS[lang];
 	const pos = t.pos[m.pos] ?? m.pos;
+	// Some labels are computed rather than looked up ("przyimek (z ablativem)"),
+	// so Polish one-letter binding has to happen here, where the text is made.
+	const bind = (part: MorphPart): MorphPart =>
+		lang === 'pl' ? { ...part, text: bindOrphans(part.text) } : part;
 
-	if (m.pos === 'prep') return [{ text: t.prep(m.governs) }];
-	if (m.pos === 'adv' || m.pos === 'conj' || m.pos === 'intj') return [{ text: pos }];
+	if (m.pos === 'prep') return [bind({ text: t.prep(m.governs) })];
+	if (m.pos === 'adv' || m.pos === 'conj' || m.pos === 'intj') return [bind({ text: pos })];
 
 	const parts: MorphPart[] = [];
 	if (m.pos === 'verb' && m.mood === 'part') {
@@ -195,11 +201,11 @@ export function describeMorphParts(m: Morph, lang: Lang): MorphPart[] {
 		if (m.decl) parts.push({ text: t.decl(m.decl) });
 	}
 
-	if (parts.length === 0) return [{ text: pos }];
-	const out: MorphPart[] = [{ text: `${pos} — ` }];
+	if (parts.length === 0) return [bind({ text: pos })];
+	const out: MorphPart[] = [bind({ text: `${pos} — ` })];
 	parts.forEach((p, i) => {
 		if (i > 0) out.push({ text: ', ' });
-		out.push(p);
+		out.push(bind(p));
 	});
 	return out;
 }

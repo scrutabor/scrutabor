@@ -29,8 +29,14 @@ describe('describeMorph', () => {
 	});
 
 	it('renders prepositions with the governed case', () => {
-		expect(describeMorph({ pos: 'prep', governs: 'abl' }, 'pl')).toBe('przyimek (z ablativem)');
-		expect(describeMorph({ pos: 'prep', governs: 'acc' }, 'pl')).toBe('przyimek (z biernikiem)');
+		// the one-letter preposition is bound to what follows it (lib/polish):
+		// this label is computed, so the message table's binding never sees it
+		expect(describeMorph({ pos: 'prep', governs: 'abl' }, 'pl')).toBe(
+			'przyimek (z\u00a0ablativem)'
+		);
+		expect(describeMorph({ pos: 'prep', governs: 'acc' }, 'pl')).toBe(
+			'przyimek (z\u00a0biernikiem)'
+		);
 		expect(describeMorph({ pos: 'prep', governs: 'acc' }, 'en')).toBe(
 			'preposition (with the accusative)'
 		);

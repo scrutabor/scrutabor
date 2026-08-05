@@ -20,6 +20,24 @@ import gloriaExcEn from './data/gloria.en.json';
 import credoText from './data/credo.json';
 import credoPl from './data/credo.pl.json';
 import credoEn from './data/credo.en.json';
+import introiboText from './data/introibo.json';
+import introiboPl from './data/introibo.pl.json';
+import introiboEn from './data/introibo.en.json';
+import iudica_meText from './data/iudica-me.json';
+import iudica_mePl from './data/iudica-me.pl.json';
+import iudica_meEn from './data/iudica-me.en.json';
+import adiutoriumText from './data/adiutorium.json';
+import adiutoriumPl from './data/adiutorium.pl.json';
+import adiutoriumEn from './data/adiutorium.en.json';
+import misereaturText from './data/misereatur.json';
+import misereaturPl from './data/misereatur.pl.json';
+import misereaturEn from './data/misereatur.en.json';
+import deus_tu_conversusText from './data/deus-tu-conversus.json';
+import deus_tu_conversusPl from './data/deus-tu-conversus.pl.json';
+import deus_tu_conversusEn from './data/deus-tu-conversus.en.json';
+import aufer_a_nobisText from './data/aufer-a-nobis.json';
+import aufer_a_nobisPl from './data/aufer-a-nobis.pl.json';
+import aufer_a_nobisEn from './data/aufer-a-nobis.en.json';
 import kyrieText from './data/kyrie.json';
 import kyriePl from './data/kyrie.pl.json';
 import kyrieEn from './data/kyrie.en.json';
@@ -155,6 +173,16 @@ const entry = (text: unknown, pl: unknown, en: unknown): TextEntry => ({
 /** Keyed by `category/slug`, matching the reading route params. */
 export const TEXTS: Record<string, TextEntry> = {
 	'ordinarium/confiteor': entry(confiteorText, confiteorPl, confiteorEn),
+	'ordinarium/introibo': entry(introiboText, introiboPl, introiboEn),
+	'ordinarium/iudica-me': entry(iudica_meText, iudica_mePl, iudica_meEn),
+	'ordinarium/adiutorium': entry(adiutoriumText, adiutoriumPl, adiutoriumEn),
+	'ordinarium/misereatur': entry(misereaturText, misereaturPl, misereaturEn),
+	'ordinarium/deus-tu-conversus': entry(
+		deus_tu_conversusText,
+		deus_tu_conversusPl,
+		deus_tu_conversusEn
+	),
+	'ordinarium/aufer-a-nobis': entry(aufer_a_nobisText, aufer_a_nobisPl, aufer_a_nobisEn),
 	'ordinarium/kyrie': entry(kyrieText, kyriePl, kyrieEn),
 	'ordinarium/gloria': entry(gloriaExcText, gloriaExcPl, gloriaExcEn),
 	'ordinarium/credo': entry(credoText, credoPl, credoEn),

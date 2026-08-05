@@ -1,5 +1,6 @@
 // The flow view: the Mass in order, for a reader following it in the pew.
 import { expect, test } from '@playwright/test';
+import { ORDO } from '../src/lib/ordo';
 
 test('the ordo is a map of six movements, walked in order', async ({ page }) => {
 	await page.goto('/pl/ordo');
@@ -23,20 +24,13 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 	await expect(page.locator('.part-title').last()).toContainText('Preces Leonínæ');
 	await expect(page.locator('.pager-next')).toHaveCount(0);
 
-	// every part is on exactly one movement page
+	// every part of the spine appears on exactly one movement page
 	let parts = 0;
-	for (const id of [
-		'praeparatio',
-		'catechumenorum',
-		'offertorium',
-		'canon',
-		'communio',
-		'conclusio'
-	]) {
-		await page.goto(`/pl/ordo/${id}`);
+	for (const m of ORDO) {
+		await page.goto(`/pl/ordo/${m.id}`);
 		parts += await page.locator('.part-title').count();
 	}
-	expect(parts).toBe(35);
+	expect(parts).toBe(ORDO.flatMap((m) => m.entries).length);
 	await page.goto('/pl/ordo/catechumenorum');
 
 	// the texts this edition carries are inlined in full (read at the bare
@@ -67,9 +61,10 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 
 	// the day's own texts are marked where they fall
 	await expect(page.locator('.mark', { hasText: 'z formularza dnia' }).first()).toBeVisible();
-	// and so are the parts still to come — the catechumens' movement has
-	// none left now that the Kyrie has shipped, so look where they remain
-	await page.goto('/pl/ordo/praeparatio');
+	// and so are the parts still to come — the first two movements have none
+	// left now that the Kyrie and the foot-of-the-altar prayers have shipped,
+	// so look where they remain
+	await page.goto('/pl/ordo/canon');
 	await expect(page.locator('.mark', { hasText: 'wkrótce w tym wydaniu' }).first()).toBeVisible();
 	// a part we do not carry shows no text of its own
 	const pending = page
