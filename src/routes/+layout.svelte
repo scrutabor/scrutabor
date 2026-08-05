@@ -22,6 +22,23 @@
 		document.documentElement.dataset.hydrated = 'true';
 	});
 
+	// The offline promise belongs to the installed app, not to a first web
+	// visit: when the browser reports an install, tell the worker to fetch
+	// the whole book. Someone who opened one prayer never pays for a missal.
+	$effect(() => {
+		// `ready`, not `controller`: a worker that has just installed is not
+		// yet controlling this page, and that is exactly when an install
+		// happens.
+		const ask = () =>
+			navigator.serviceWorker?.ready.then((r) => r.active?.postMessage('cache-the-book'));
+		const onInstalled = () => ask();
+		addEventListener('appinstalled', onInstalled);
+		// Already installed and merely reopened: ask again; the worker only
+		// fetches what it is missing.
+		if (matchMedia('(display-mode: standalone)').matches) ask();
+		return () => removeEventListener('appinstalled', onInstalled);
+	});
+
 	const fonts = [ebLatin, ebLatinExt, ebLatinItalic, ebLatinExtItalic];
 </script>
 

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { TEXTS } from '$lib/corpus';
 	import { goto } from '$app/navigation';
 	import { neighborsOf, sectionFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
@@ -13,11 +12,14 @@
 	import { wordPanel } from '$lib/wordpanel.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
 
+	// The corpus arrives from the server load, already narrowed to this text
+	// — the browser never receives the whole snapshot (see +page.server.ts).
+	let { data } = $props();
+
 	const lang = $derived(page.params.lang as Lang);
 	const msgs = $derived(M[lang]);
-	const entry = $derived(TEXTS[`${page.params.category}/${page.params.slug}`]);
-	const doc = $derived(entry?.text);
-	const gloss = $derived(entry?.glosses[lang]);
+	const doc = $derived(data.doc);
+	const gloss = $derived(data.gloss);
 	const sectionLabel = $derived(sectionFor(page.params.category ?? '')?.label[lang] ?? '');
 	// Book navigation: the catalog's flattened order — within ordinarium
 	// that is the liturgical sequence, so a reader can follow the Mass
@@ -121,7 +123,7 @@
 	{/if}
 </svelte:head>
 
-{#if !entry || !doc || !gloss}
+{#if !doc || !gloss}
 	<div class="page">
 		<p><a href="/{lang}">Scrutabor</a></p>
 	</div>
@@ -190,6 +192,7 @@
 				word={selectedWord}
 				gloss={selectedGloss}
 				analysis={selectedAnalysis}
+				lex={data.lex}
 				{lang}
 				onclose={panel.close}
 				onnavigate={panel.goTo}

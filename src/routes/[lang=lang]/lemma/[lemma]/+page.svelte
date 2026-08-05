@@ -1,24 +1,25 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { occurrencesOf } from '$lib/concordance';
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
-	import { LEXICON } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
 	import { GENDER_MARK, describeLemma } from '$lib/morph';
 	import { pronunciations, syllabized } from '$lib/pronunciation';
 
+	// entry, senses and concordance all arrive prerendered (+page.server.ts)
+	let { data } = $props();
+
 	const lang = $derived(page.params.lang as Lang);
 	const msgs = $derived(M[lang]);
 	const lemma = $derived(page.params.lemma ?? '');
-	const entry = $derived(LEXICON.lemmata[lemma]);
-	const sense = $derived(LEXICON.senses[lang][lemma]);
+	const entry = $derived(data.entry);
+	const sense = $derived(data.sense);
 	// The display headword is the first component of the dictionary head
 	// (oro of "oro, oráre, orávi, orátum") — liturgical orthography, unlike
 	// the normalized lemma in the URL.
 	const headword = $derived((entry?.head ?? lemma).split(',')[0].trim());
 	const pron = $derived(pronunciations(headword));
-	const texts = $derived(occurrencesOf(lemma));
+	const texts = $derived(data.occurrences);
 </script>
 
 <svelte:head>

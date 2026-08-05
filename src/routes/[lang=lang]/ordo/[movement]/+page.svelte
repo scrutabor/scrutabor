@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { TEXTS, type TextDocument, type Word } from '$lib/corpus';
+	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
@@ -11,6 +11,10 @@
 	import { ribbon } from '$lib/ribbon.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
 	import { wordPanel } from '$lib/wordpanel.svelte';
+
+	// Only this movement's texts, from the server load — never the corpus.
+	let { data } = $props();
+	const texts = $derived(data.texts as Record<string, { doc: TextDocument; gloss: GlossDocument }>);
 
 	const lang = $derived(page.params.lang as Lang);
 	const msgs = $derived(M[lang]);
@@ -26,7 +30,7 @@
 	// — which is also what the ?w= deep link carries.
 	const inlined = $derived(
 		(movement?.entries ?? []).flatMap((e) => {
-			const entry = e.text ? TEXTS[e.text] : undefined;
+			const entry = e.text ? texts[e.text] : undefined;
 			return entry ? [{ slug: e.text!.split('/')[1], key: e.text!, entry }] : [];
 		})
 	);
@@ -34,10 +38,10 @@
 	const wordsById = $derived(
 		new Map<string, { word: Word; doc: TextDocument; slug: string }>(
 			inlined.flatMap(({ slug, entry }) =>
-				entry.text.segments.flatMap((seg) =>
+				entry.doc.segments.flatMap((seg) =>
 					(seg.words ?? []).map((w): [string, { word: Word; doc: TextDocument; slug: string }] => [
 						`${slug}.${w.id}`,
-						{ word: w, doc: entry.text, slug }
+						{ word: w, doc: entry.doc, slug }
 					])
 				)
 			)
@@ -53,9 +57,9 @@
 	});
 
 	const picked = $derived(panel.id ? (wordsById.get(panel.id) ?? null) : null);
-	const pickedEntry = $derived(picked ? TEXTS[`ordinarium/${picked.slug}`] : null);
+	const pickedEntry = $derived(picked ? texts[`ordinarium/${picked.slug}`] : null);
 	const pickedGloss = $derived(
-		picked && pickedEntry ? (pickedEntry.glosses[lang].words[picked.word.id] ?? null) : null
+		picked && pickedEntry ? (pickedEntry.gloss.words[picked.word.id] ?? null) : null
 	);
 	const pickedAnalysis = $derived(
 		picked
@@ -120,7 +124,7 @@
 
 	<main class:panel-open={picked !== null || panel.keepPad}>
 		{#each movement?.entries ?? [] as e (e.id)}
-			{@const entry = e.text ? TEXTS[e.text] : undefined}
+			{@const entry = e.text ? texts[e.text] : undefined}
 			<section class="part">
 				<div class="part-head">
 					{#if e.text && entry}
@@ -146,8 +150,8 @@
 				{#if entry}
 					<div class="part-text">
 						<TextBody
-							doc={entry.text}
-							gloss={entry.glosses[lang]}
+							doc={entry.doc}
+							gloss={entry.gloss}
 							{lang}
 							{helpLevel}
 							idPrefix={e.text!.split('/')[1]}
@@ -182,6 +186,7 @@
 			word={picked.word}
 			gloss={pickedGloss}
 			analysis={pickedAnalysis}
+			lex={data.lex}
 			{lang}
 			onclose={panel.close}
 			onnavigate={(id) => panel.goTo(`${picked.slug}.${id}`)}

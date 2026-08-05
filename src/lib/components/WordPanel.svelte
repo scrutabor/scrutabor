@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { LEXICON, type Analysis, type Word, type WordGloss } from '$lib/corpus';
+	import type { Analysis, LemmaEntry, SenseEntry, Word, WordGloss } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
 	import { GENDER_MARK, describeAnalysisParts, describeMorphParts } from '$lib/morph';
 	import { pronunciations, syllabized } from '$lib/pronunciation';
@@ -8,6 +8,7 @@
 		word,
 		gloss,
 		analysis,
+		lex,
 		lang,
 		onclose,
 		onnavigate
@@ -15,6 +16,9 @@
 		word: Word;
 		gloss: WordGloss | null;
 		analysis: Analysis;
+		/** Only the entries this page's words need — the whole dictionary is
+		 * never sent to the browser (see the route's +page.server.ts). */
+		lex: { lemmata: Record<string, LemmaEntry>; senses: Record<string, SenseEntry> };
 		lang: Lang;
 		onclose: () => void;
 		onnavigate: (id: string) => void;
@@ -45,8 +49,8 @@
 	// an optional lemma-level note below the contextual gloss. The corpus
 	// checks guarantee an entry for every lemma; fall back to the bare lemma
 	// so a stale snapshot degrades visibly instead of crashing.
-	let lemmaEntry = $derived(LEXICON.lemmata[word.lemma]);
-	let senseEntry = $derived(LEXICON.senses[lang][word.lemma]);
+	let lemmaEntry = $derived(lex.lemmata[word.lemma]);
+	let senseEntry = $derived(lex.senses[word.lemma]);
 
 	// Pronunciation is derived, never stored: syllable division plus IPA in
 	// the Roman ecclesiastical and Polish-traditional tables. The Polish

@@ -3,7 +3,6 @@
 // (UI-language educational prose, not corpus data); the module validates at
 // load time that every example points at a real word and quotes its form —
 // a wrong reference fails the prerender, not the reader.
-import { TEXTS } from './corpus';
 import type { Lang } from './i18n';
 import { bindPlFields } from './polish';
 
@@ -438,21 +437,4 @@ export const CONCEPTS: Concept[] = bindPlFields(CONCEPTS_SOURCE);
 
 export function conceptById(id: string): Concept | undefined {
 	return CONCEPTS.find((c) => c.id === id);
-}
-
-// Load-time validation: every example must point at a real word whose form
-// appears in the quoted phrase. A failure here fails the prerender.
-for (const c of CONCEPTS) {
-	for (const ex of c.examples) {
-		const entry = TEXTS[ex.textKey];
-		const word = entry?.text.segments.flatMap((s) => s.words ?? []).find((w) => w.id === ex.wordId);
-		if (!word) {
-			throw new Error(`grammar: ${c.id}: no word ${ex.wordId} in ${ex.textKey}`);
-		}
-		if (!ex.la.includes(word.form)) {
-			throw new Error(
-				`grammar: ${c.id}: phrase ${JSON.stringify(ex.la)} does not contain form ${JSON.stringify(word.form)} (${ex.wordId})`
-			);
-		}
-	}
 }

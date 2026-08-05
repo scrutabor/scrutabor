@@ -2,59 +2,67 @@
 // chapel with no signal.
 import { expect, test } from '@playwright/test';
 
-test('the whole book is readable offline after one visit', async ({ page, context }) => {
+test('a first web visit installs the shell, not the book', async ({ page }) => {
 	await page.goto('/en');
-	// ready resolves once the worker is active — install (and with it the
-	// precache of every page) has finished by then.
 	await page.evaluate(() => navigator.serviceWorker.ready);
-	// The worker deliberately does not claim open pages, so control
-	// arrives on the next navigation — as it would for a real reader.
+
+	const cached = await page.evaluate(async () => {
+		const cache = await caches.open((await caches.keys())[0]);
+		return (await cache.keys()).map((r) => new URL(r.url).pathname);
+	});
+	// the way in is there…
+	for (const path of ['/en', '/pl', '/en/ordo', '/en/editio']) {
+		expect(cached, path).toContain(path);
+	}
+	// …and the book is not: someone who opened one page has not asked for a
+	// missal. Those pages are kept as they are opened, and the installed app
+	// fetches the rest (decisions #27).
+	expect(cached).not.toContain('/en/ordinarium/credo');
+	expect(cached.filter((p) => p.includes('/lemma/'))).toEqual([]);
+	expect(cached.length).toBeLessThan(120);
+});
+
+test('a page the reader opens is kept for them', async ({ page, context }) => {
+	await page.goto('/en');
+	await page.evaluate(() => navigator.serviceWorker.ready);
 	await page.reload();
 	await page.waitForFunction(() => !!navigator.serviceWorker.controller);
 
-	await context.setOffline(true);
-
-	// a text never opened in this session, reached by URL
 	await page.goto('/en/ordinarium/credo');
 	await expect(page.locator('h1')).toHaveText('Credo');
-	await expect(page.locator('rt').first()).toBeVisible();
 
-	// the word panel needs no network either
+	await context.setOffline(true);
+	await page.goto('/en/ordinarium/credo');
+	await expect(page.locator('h1')).toHaveText('Credo');
+	// and its words still answer, because the page carries its own data
 	await page.locator('#w001').click();
 	await expect(page.locator('aside .form')).toHaveText('Credo');
-	await expect(page.locator('aside .meta')).toContainText('editorial');
-
-	// and so does paging through the book (Credo closes the ordinarium,
-	// so its pager offers the previous text)
-	await page.locator('.pager a').first().click();
-	await expect(page.locator('h1')).toHaveText('Glória in excélsis');
-
 	await context.setOffline(false);
 });
 
-test('the pew core is offline; the dictionary follows the reader', async ({ page, context }) => {
+test('an installed app fetches the whole book', async ({ page }) => {
+	test.setTimeout(120_000);
 	await page.goto('/en');
 	await page.evaluate(() => navigator.serviceWorker.ready);
-	await page.reload();
-	await page.waitForFunction(() => !!navigator.serviceWorker.controller);
 
-	// a lemma page the reader HAS opened is kept…
-	await page.goto('/en/lemma/mater');
-	await expect(page.locator('h1')).toHaveText('mater');
+	const has = (path: string) =>
+		page.evaluate(async (p) => {
+			const cache = await caches.open((await caches.keys())[0]);
+			return !!(await cache.match(p, { ignoreSearch: true }));
+		}, path);
 
-	await context.setOffline(true);
+	expect(await has('/en/ordinarium/credo'), 'the book before the signal').toBe(false);
 
-	await page.goto('/en/lemma/mater');
-	await expect(page.locator('h1')).toHaveText('mater');
-	// …one they never opened is not precached: the install cost tracks the
-	// prayers, not the lexicon
-	const unvisited = await page.evaluate(async () => {
-		const cache = await caches.open((await caches.keys())[0]);
-		return !!(await cache.match('/en/lemma/panis', { ignoreSearch: true }));
-	});
-	expect(unvisited).toBe(false);
+	// the browser reports an install to the PAGE; the page forwards it
+	await page.evaluate(() =>
+		navigator.serviceWorker.ready.then((r) => r.active?.postMessage('cache-the-book'))
+	);
 
-	await context.setOffline(false);
+	// the worker fetches in small batches so it does not compete with the
+	// reader, so wait for the pages themselves rather than for a count
+	for (const path of ['/en/ordinarium/credo', '/pl/ordo/canon', '/pl/lemma/mater']) {
+		await expect.poll(() => has(path), { timeout: 90_000, intervals: [1000] }).toBe(true);
+	}
 });
 
 test('the app declares itself installable', async ({ page }) => {

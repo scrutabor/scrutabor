@@ -1,41 +1,43 @@
 /// <reference types="@sveltejs/kit" />
 /// <reference lib="webworker" />
 
-// Offline shell. A missal has to work in a church basement, on airplane
-// mode, in a crypt with no signal.
+// Offline, in two stages — because the web and the installed app want
+// opposite things (decisions #27, revised).
 //
-// WHAT IS PRECACHED AT INSTALL is the book you pray from: the app itself,
-// the reading fonts, the catalog, the flow of the Mass, and every text.
-// WHAT IS NOT is the book you study from: one page per lemma per language
-// is already three fifths of this site and grows with the lexicon, not
-// with the prayers — so those pages, and the grammar pages with them, are
-// kept the first time they are opened. A reader who taps words keeps the
-// words they tapped; a reader who only prays never pays for the
-// dictionary.
+// A FIRST WEB VISIT should cost almost nothing: someone who opened one
+// prayer has not asked to download a missal. So install precaches only the
+// SHELL — the app's own code, the reading fonts, the catalog and the ordo
+// map — and everything else is kept as the reader opens it.
 //
-// Cache-first, never revalidated, keyed by build version: a release
-// installs its own cache alongside and takes over when the last old tab
-// closes, so a page from build N never meets assets from build N+1.
+// AN INSTALLED APP is the offline promise: it may be opened in a basement
+// chapel with no signal, so when the browser reports an install (or the page
+// asks in so many words) the worker fetches the whole book in the
+// background. The native wrappers ship the same way.
 import { build, files, prerendered, version } from '$service-worker';
 
 const sw = self as unknown as ServiceWorkerGlobalScope;
 
 const CACHE = `scrutabor-${version}`;
 
-// EB Garamond ships every script it covers; two languages of Latin
-// liturgy need none of these.
+// EB Garamond ships every script it covers; two languages of Latin liturgy
+// need none of these.
 const UNUSED_SCRIPTS = /-(cyrillic|greek|vietnamese)(-ext)?-/;
-// The study surfaces — kept on first visit instead (see above).
-const ON_DEMAND = /\/(lemma|grammatica)\//;
+// Pages that ARE the shell: the language router, the two catalogs, the ordo
+// map, the edition page. Everything else — texts, movements, the dictionary,
+// the grammar — is a page a reader chooses.
+const SHELL_PAGE = /^\/(|[a-z]{2}|[a-z]{2}\/(ordo|editio|404))$/;
 
-const PRECACHE = [
+const SHELL = [
 	...build.filter((path) => !UNUSED_SCRIPTS.test(path)),
 	...files,
-	...prerendered.filter((path) => !ON_DEMAND.test(path) && !path.endsWith('/sitemap.xml'))
+	...prerendered.filter((path) => SHELL_PAGE.test(path))
 ];
 
+/** The whole book, for a reader who installed it. */
+const EVERYTHING = [...SHELL, ...prerendered.filter((path) => !path.endsWith('/sitemap.xml'))];
+
 sw.addEventListener('install', (event) => {
-	event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(PRECACHE)));
+	event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL)));
 });
 
 sw.addEventListener('activate', (event) => {
@@ -46,6 +48,26 @@ sw.addEventListener('activate', (event) => {
 			}
 		})()
 	);
+});
+
+async function fetchTheBook(): Promise<void> {
+	const cache = await caches.open(CACHE);
+	const missing = [];
+	for (const path of EVERYTHING) {
+		if (!(await cache.match(path, { ignoreSearch: true }))) missing.push(path);
+	}
+	// A few at a time: this runs while someone is reading, and a stampede of
+	// a thousand requests would compete with the page in front of them.
+	for (let i = 0; i < missing.length; i += 6) {
+		await cache.addAll(missing.slice(i, i + 6)).catch(() => {
+			/* one bad path must not abandon the rest */
+		});
+	}
+}
+
+// The browser tells the page, not the worker, so the page forwards it.
+sw.addEventListener('message', (event) => {
+	if (event.data === 'cache-the-book') event.waitUntil(fetchTheBook());
 });
 
 sw.addEventListener('fetch', (event) => {
@@ -63,9 +85,9 @@ async function respond(request: Request, url: URL): Promise<Response> {
 
 	try {
 		const response = await fetch(request);
-		// Keep what the reader actually opened, so the dictionary fills in
-		// behind them. Only real, own-origin answers: an error page cached
-		// is an error page forever.
+		// Keep what the reader actually opened, so the book fills in behind
+		// them. Only real, own-origin answers: an error page cached is an
+		// error page forever.
 		if (response.ok && response.type === 'basic') {
 			await cache.put(request, response.clone());
 		}
