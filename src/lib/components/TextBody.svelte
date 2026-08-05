@@ -105,6 +105,14 @@
 		background: var(--wash-strong);
 	}
 
+	/* On the word under analysis the gloss is the thing being read, and the
+	   strong wash is too close to the soft ink for text this size (4.0:1).
+	   Primary ink both clears AA and matches where the reader is looking.
+	   Guarded by tests/contrast.spec and the axe sweep. */
+	button.word.selected rt {
+		color: var(--ink);
+	}
+
 	button.word:focus-visible {
 		outline: 2px solid var(--rubric);
 		outline-offset: 2px;

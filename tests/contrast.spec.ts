@@ -9,7 +9,14 @@ import { expect, test } from '@playwright/test';
 
 const AA = 4.5;
 const INK = ['--ink', '--ink-soft', '--rubric'];
+// --wash-strong is the tapped word's highlight, and the only text that
+// ever sits on it is the word itself and its gloss — both primary ink,
+// which is why TextBody overrides the gloss there. Checking --rubric
+// against it too would fail on a pair the design never puts together, and
+// a guard that demands impossible pairs drives real colours somewhere
+// worse. What is actually painted is covered by the axe sweep.
 const SURFACES = ['--bg', '--surface', '--wash'];
+const STRONG_WASH_INK = ['--ink'];
 
 function contrast(a: string, b: string): number {
 	const luminance = (hex: string) => {
@@ -30,7 +37,7 @@ for (const theme of ['light', 'dark'] as const) {
 				const style = getComputedStyle(document.documentElement);
 				return Object.fromEntries(names.map((n) => [n, style.getPropertyValue(n).trim()]));
 			},
-			{ t: theme, names: [...INK, ...SURFACES] }
+			{ t: theme, names: [...INK, ...SURFACES, '--wash-strong'] }
 		);
 
 		const failures: string[] = [];
@@ -40,6 +47,10 @@ for (const theme of ['light', 'dark'] as const) {
 				const ratio = contrast(tokens[ink], tokens[surface]);
 				if (ratio < AA) failures.push(`${ink} on ${surface}: ${ratio.toFixed(2)}`);
 			}
+		}
+		for (const ink of STRONG_WASH_INK) {
+			const ratio = contrast(tokens[ink], tokens['--wash-strong']);
+			if (ratio < AA) failures.push(`${ink} on --wash-strong: ${ratio.toFixed(2)}`);
 		}
 		expect(failures, `${theme} theme falls under WCAG AA`).toEqual([]);
 	});
