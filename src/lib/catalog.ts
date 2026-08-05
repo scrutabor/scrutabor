@@ -53,6 +53,12 @@ const CATALOG_SOURCE: CatalogSection[] = [
 			},
 			{
 				category: 'ordinarium',
+				slug: 'kyrie',
+				title: 'Kýrie, eléison',
+				note: { pl: 'wezwania o zmiłowanie', en: 'the plea for mercy' }
+			},
+			{
+				category: 'ordinarium',
 				slug: 'gloria',
 				title: 'Glória in excélsis',
 				note: { pl: 'hymn anielski', en: 'the angelic hymn' }

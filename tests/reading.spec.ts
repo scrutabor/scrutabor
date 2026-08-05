@@ -234,7 +234,8 @@ test('a tapped word near the viewport bottom rises above the panel', async ({ pa
 test('the pager walks the book in liturgical order', async ({ page }) => {
 	await page.goto('/pl/ordinarium/gloria');
 	const pager = page.locator('.pager');
-	await expect(pager.locator('a', { hasText: 'Confíteor' })).toBeVisible();
+	// the Kyrie stands between the Confiteor and the Gloria, as at Mass
+	await expect(pager.locator('a', { hasText: 'Kýrie' })).toBeVisible();
 	await pager.locator('a', { hasText: 'Credo' }).click();
 	await expect(page).toHaveURL(/ordinarium\/credo$/);
 	// crossing the section boundary backwards

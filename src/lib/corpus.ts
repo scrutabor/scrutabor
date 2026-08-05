@@ -20,6 +20,9 @@ import gloriaExcEn from './data/gloria.en.json';
 import credoText from './data/credo.json';
 import credoPl from './data/credo.pl.json';
 import credoEn from './data/credo.en.json';
+import kyrieText from './data/kyrie.json';
+import kyriePl from './data/kyrie.pl.json';
+import kyrieEn from './data/kyrie.en.json';
 import sanctusText from './data/sanctus.json';
 import sanctusPl from './data/sanctus.pl.json';
 import sanctusEn from './data/sanctus.en.json';
@@ -152,6 +155,7 @@ const entry = (text: unknown, pl: unknown, en: unknown): TextEntry => ({
 /** Keyed by `category/slug`, matching the reading route params. */
 export const TEXTS: Record<string, TextEntry> = {
 	'ordinarium/confiteor': entry(confiteorText, confiteorPl, confiteorEn),
+	'ordinarium/kyrie': entry(kyrieText, kyriePl, kyrieEn),
 	'ordinarium/gloria': entry(gloriaExcText, gloriaExcPl, gloriaExcEn),
 	'ordinarium/credo': entry(credoText, credoPl, credoEn),
 	'ordinarium/sanctus': entry(sanctusText, sanctusPl, sanctusEn),

@@ -87,7 +87,8 @@ const ORDO_SOURCE: OrdoSection[] = [
 			{
 				id: 'kyrie',
 				title: 'Kýrie eléison',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/kyrie',
 				note: {
 					pl: 'Kapłan wraca na środek ołtarza i odmawia z ministrantem na przemian dziewięć wezwań: trzy razy Kýrie, trzy Christe, trzy Kýrie.',
 					en: 'The priest returns to the middle of the altar and alternates nine invocations with the server: Kýrie three times, Christe three times, Kýrie three times.'

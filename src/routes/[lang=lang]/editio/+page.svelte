@@ -53,6 +53,15 @@
 				własna wydania — glosy, przekłady i&nbsp;objaśnienia.
 			</p>
 			<p class="what">
+				Warto wiedzieć, czego taka weryfikacja dowodzi, a&nbsp;czego nie. Analizatory rozpoznają
+				<em>formę</em>: mówią, jakie rozbiory dana forma dopuszcza. Prawie trzy piąte słów
+				w&nbsp;tym wydaniu ma formę wieloznaczną — „María” dopuszcza dwanaście odczytań — więc
+				zgodność znaczy tyle, że nasz rozbiór jest wśród możliwych, a&nbsp;nie że jest jedynym.
+				Wybór właściwego odczytania w&nbsp;kontekście należy do wydania i&nbsp;to on czeka na
+				przegląd eksperta. Oba analizatory są niezależnymi programami o&nbsp;w&nbsp;dużej mierze
+				różnych słownikach, ale mają wspólne źródło — Lewis&nbsp;&amp; Short.
+			</p>
+			<p class="what">
 				„Zaakceptowane” przy słowie znaczy: rozbiór zgodny z&nbsp;głosami analizatorów; „do
 				przeglądu” — ta część czeka jeszcze na weryfikację. Całość pozostaje
 				<strong>wydaniem roboczym</strong> do czasu przeglądu przez latynistę; błędy są możliwe, a&nbsp;uwagi
@@ -84,6 +93,15 @@
 					rel="external noopener">Collatinus</a
 				>. The word panel names each word's confirmers; “editorial” is the edition's own work — the
 				glosses, translations, notes and rulings.
+			</p>
+			<p class="what">
+				It is worth being plain about what that check proves. The analyzers read the
+				<em>form</em>: they say which parses a form admits. Nearly three fifths of the words in this
+				edition have an ambiguous form — “María” admits twelve readings — so agreement means our
+				parse is among the possible ones, not that it is the only one. Choosing the right reading in
+				context is the edition's own act, and it is that choice which awaits expert review. The two
+				analyzers are independent programs with largely different dictionaries, but they share one
+				source: Lewis &amp; Short.
 			</p>
 			<p class="what">
 				“Accepted” on a word means its parse agrees with the analyzers' votes; “awaiting review”
