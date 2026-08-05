@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { untrack } from 'svelte';
+	import { onDestroy, untrack } from 'svelte';
 	import { pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import { TEXTS } from '$lib/corpus';
@@ -123,6 +123,69 @@
 		applyFromLocation();
 	});
 
+	// Reading-position memory: every text opens where the reader last left
+	// it — a prayer book keeps its ribbon. Saved per text, not per
+	// language, so switching languages resumes in place; entries expire
+	// after twelve hours, so a mid-Mass return resumes and next Sunday
+	// opens at the top. Deep links win, and a position the router itself
+	// restored (history back) is left alone.
+	const POS_TTL = 12 * 60 * 60 * 1000;
+	const posKey = () => `scrutabor-pos:${page.params.category}/${page.params.slug}`;
+
+	// A physical ribbon does not move because the book was closed: this
+	// one tracks the last position the reader DWELLED at. Transient
+	// scrolls — up to the nav chrome on the way out, or the router's own
+	// resets — never live long enough to commit; a position near the top
+	// held for a moment means the reader rewound, and drops the ribbon.
+	const POS_DWELL = 1200;
+	let posTimer = 0;
+
+	function onScroll() {
+		clearTimeout(posTimer);
+		posTimer = window.setTimeout(() => {
+			try {
+				if (window.scrollY < 200) localStorage.removeItem(posKey());
+				else localStorage.setItem(posKey(), JSON.stringify({ y: window.scrollY, t: Date.now() }));
+			} catch {
+				// storage unavailable (private mode) — the ribbon just doesn't hold
+			}
+		}, POS_DWELL);
+	}
+
+	onDestroy(() => clearTimeout(posTimer));
+
+	$effect(() => {
+		void page.url.pathname;
+		// The router applies its own scroll (reset to top on forward
+		// navigations, the recorded position on history back) at its own
+		// pace — sample a few frames and restore only once the page sits
+		// at the top: a reset means "fresh entry, the ribbon applies", a
+		// restored position means the router already knew better.
+		let tries = 12;
+		let live = true;
+		const attempt = () => {
+			if (!live) return;
+			if (new URL(location.href).searchParams.get('w')) return;
+			if (window.scrollY <= 8) {
+				try {
+					const raw = localStorage.getItem(posKey());
+					if (!raw) return;
+					const { y, t } = JSON.parse(raw);
+					if (typeof y !== 'number' || typeof t !== 'number' || Date.now() - t > POS_TTL) return;
+					window.scrollTo({ top: y, behavior: 'auto' });
+				} catch {
+					// a malformed entry is as good as none
+				}
+				return;
+			}
+			if (--tries > 0) requestAnimationFrame(attempt);
+		};
+		requestAnimationFrame(attempt);
+		return () => {
+			live = false;
+		};
+	});
+
 	// Tapping the quiet parts of the page dismisses the sheet; interactive
 	// chrome (language menu, theme toggle, the help slider, links) does its
 	// own job without also closing it. Word buttons switch, the sheet's own
@@ -207,7 +270,12 @@
 	}
 </script>
 
-<svelte:window onpopstate={applyFromLocation} onclick={onWindowClick} onkeydown={onWindowKeydown} />
+<svelte:window
+	onpopstate={applyFromLocation}
+	onclick={onWindowClick}
+	onkeydown={onWindowKeydown}
+	onscroll={onScroll}
+/>
 
 <svelte:head>
 	<title>{doc ? `${doc.title} — Scrutabor` : 'Scrutabor'}</title>

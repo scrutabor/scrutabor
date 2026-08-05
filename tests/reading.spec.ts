@@ -276,6 +276,41 @@ test.describe('wake lock', () => {
 	});
 });
 
+test('the book keeps a ribbon: reopening a text resumes the position', async ({ page }) => {
+	await page.goto('/pl/ordinarium/credo');
+	await page.evaluate(() => window.scrollTo(0, 600));
+	await page.waitForTimeout(1500); // dwell: the ribbon commits after a pause
+	// leave for the catalog and come back — the ribbon holds
+	await page.locator('a.back').click();
+	await expect(page).toHaveURL(/\/pl$/);
+	await page.locator('a[href="/pl/ordinarium/credo"]').click();
+	await expect(page).toHaveURL(/credo/);
+	await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(400);
+	// a deep link outranks the ribbon: the word is centered, not the ribbon restored
+	await page.goto('/pl/ordinarium/credo?w=w003');
+	await expect(page.locator('aside')).toBeVisible();
+	await expect
+		.poll(() =>
+			page.evaluate(() => {
+				const r = document.getElementById('w003')?.getBoundingClientRect();
+				return !!r && r.top >= 0 && r.bottom <= window.innerHeight;
+			})
+		)
+		.toBe(true);
+	// an expired ribbon is ignored — planted from the catalog, where no
+	// leave-time save can overwrite it on the way in
+	await page.goto('/pl');
+	await page.evaluate(() => {
+		localStorage.setItem(
+			'scrutabor-pos:ordinarium/credo',
+			JSON.stringify({ y: 600, t: Date.now() - 13 * 60 * 60 * 1000 })
+		);
+	});
+	await page.goto('/pl/ordinarium/credo');
+	await page.waitForTimeout(200);
+	expect(await page.evaluate(() => window.scrollY)).toBeLessThan(10);
+});
+
 test('closing the panel leaves the page where it is', async ({ page }) => {
 	await page.setViewportSize({ width: 800, height: 520 });
 	await page.goto('/pl/ordinarium/credo');
