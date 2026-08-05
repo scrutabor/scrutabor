@@ -48,9 +48,8 @@ test('landing shows the catalog and a quiet grammar link', async ({ page }) => {
 	await page.goto('/pl');
 	// exactly the catalog, nothing dropped and nothing invented
 	const texts = CATALOG.flatMap((s) => s.texts);
-	// every text, plus the flow of the Mass leading the ordinary
-	await expect(page.locator('.card')).toHaveCount(texts.length + 1);
-	await expect(page.locator('.card-flow')).toHaveAttribute('href', '/pl/ordo');
+	// the cards are the texts and nothing else — the flow is not one of them
+	await expect(page.locator('.card')).toHaveCount(texts.length);
 	for (const t of texts) {
 		await expect(page.locator(`.card[href="/pl/${t.category}/${t.slug}"]`)).toContainText(t.title);
 	}

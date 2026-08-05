@@ -31,7 +31,7 @@ export interface Messages {
 	goHome: string;
 	aboutLabel: string;
 	pagerAria: string;
-	ordoTitle: string;
+	ordoLead: string;
 	ordoSubtitle: string;
 	ordoDescription: string;
 	ordoProper: string;
@@ -72,8 +72,10 @@ export const M: Record<Lang, Messages> = {
 		goHome: 'wróć na stronę główną',
 		aboutLabel: 'o modlitwie',
 		pagerAria: 'sąsiednie teksty',
-		ordoTitle: 'porządek Mszy',
-		ordoSubtitle: 'porządek Mszy świętej',
+		// NBSP after the one-letter preposition: Polish typography does not
+		// leave 'z' hanging at the end of a line.
+		ordoLead: 'porządek Mszy świętej według Mszału Rzymskiego z\u00a01962 roku',
+		ordoSubtitle: 'Mszał Rzymski z\u00a01962 roku',
 		ordoDescription:
 			'Cały porządek Mszy w rycie z 1962 roku, część po części — z tekstami stałymi i miejscami, w których wchodzą teksty własne dnia.',
 		ordoProper: 'z formularza dnia',
@@ -112,8 +114,8 @@ export const M: Record<Lang, Messages> = {
 		goHome: 'go to the home page',
 		aboutLabel: 'about this prayer',
 		pagerAria: 'neighboring texts',
-		ordoTitle: 'the order of Mass',
-		ordoSubtitle: 'the order of Mass',
+		ordoLead: 'the order of Mass in the Roman Missal of 1962',
+		ordoSubtitle: 'the Roman Missal of 1962',
 		ordoDescription:
 			'The whole order of Mass in the 1962 rite, part by part — the fixed texts, and where the day’s own texts belong.',
 		ordoProper: 'from the day’s formulary',
