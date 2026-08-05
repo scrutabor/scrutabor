@@ -30,6 +30,14 @@
 		{#each CATALOG as section (section.category)}
 			<section>
 				<h2 class="smallcaps">{section.label[lang]}</h2>
+				{#if section.category === 'ordinarium'}
+					<!-- The flow view is the companion's way in: the whole Mass in
+					     order, the fixed texts in place and the day's own texts
+					     marked where they fall. -->
+					<p class="ordo-link smallcaps">
+						<a href="/{lang}/ordo">{msgs.ordoTitle} →</a>
+					</p>
+				{/if}
 				<div class="cards">
 					{#each section.texts as t (t.slug)}
 						<a class="card" href="/{lang}/{t.category}/{t.slug}">
@@ -146,6 +154,21 @@
 		color: var(--ink-soft);
 		font-style: italic;
 		text-align: right;
+	}
+
+	.ordo-link {
+		margin: -0.2rem 0 0.9rem;
+		text-align: center;
+		font-size: 0.75rem;
+	}
+
+	.ordo-link a {
+		color: var(--ink-soft);
+		text-decoration: none;
+	}
+
+	.ordo-link a:hover {
+		color: var(--ink);
 	}
 
 	.grammar-link {

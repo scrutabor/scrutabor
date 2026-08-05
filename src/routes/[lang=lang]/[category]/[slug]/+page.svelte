@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onDestroy, untrack } from 'svelte';
+	import { untrack } from 'svelte';
 	import { pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import { TEXTS } from '$lib/corpus';
@@ -7,10 +7,12 @@
 	import { neighborsOf, sectionFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import LangMenu from '$lib/components/LangMenu.svelte';
+	import TextBody from '$lib/components/TextBody.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import WakeLockToggle from '$lib/components/WakeLockToggle.svelte';
 	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
+	import { ribbon } from '$lib/ribbon.svelte';
 
 	const lang = $derived(page.params.lang as Lang);
 	const msgs = $derived(M[lang]);
@@ -123,80 +125,12 @@
 		applyFromLocation();
 	});
 
-	// Reading-position memory: every text opens where the reader last left
-	// it — a prayer book keeps its ribbon. Saved per text, not per
-	// language, so switching languages resumes in place; entries expire
-	// after twelve hours, so a mid-Mass return resumes and next Sunday
-	// opens at the top. Deep links win, and a position the router itself
-	// restored (history back) is left alone.
-	const POS_TTL = 12 * 60 * 60 * 1000;
-	const posKey = () => `scrutabor-pos:${page.params.category}/${page.params.slug}`;
-
-	// A physical ribbon does not move because the book was closed: this
-	// one tracks the last position the reader DWELLED at. Transient
-	// scrolls — up to the nav chrome on the way out, or the router's own
-	// resets — never live long enough to commit; a position near the top
-	// held for a moment means the reader rewound, and drops the ribbon.
-	const POS_DWELL = 1200;
-	let posTimer = 0;
-
-	function onScroll() {
-		clearTimeout(posTimer);
-		posTimer = window.setTimeout(() => {
-			try {
-				if (window.scrollY < 200) localStorage.removeItem(posKey());
-				else localStorage.setItem(posKey(), JSON.stringify({ y: window.scrollY, t: Date.now() }));
-			} catch {
-				// storage unavailable (private mode) — the ribbon just doesn't hold
-			}
-		}, POS_DWELL);
-	}
-
-	onDestroy(() => clearTimeout(posTimer));
-
-	function ribbonFor(key: string): number | null {
-		try {
-			const raw = localStorage.getItem(key);
-			if (!raw) return null;
-			const { y, t } = JSON.parse(raw);
-			if (typeof y !== 'number' || typeof t !== 'number') return null;
-			return Date.now() - t > POS_TTL ? null : y;
-		} catch {
-			// a malformed entry is as good as none
-			return null;
-		}
-	}
-
-	$effect(() => {
-		void page.url.pathname;
-		// The router applies its own scroll at its own pace — a reset to the
-		// top on a fresh entry, the recorded position on history back — and
-		// it can land either side of us. So watch a short window instead of
-		// racing it: while the page sits at the top, keep laying the ribbon
-		// back down; the moment the reader (or the router, restoring a real
-		// position) puts it anywhere else, stop and leave it alone.
-		const key = posKey();
-		let frames = 20;
-		let live = true;
-		let placed = 0;
-		const attempt = () => {
-			if (!live || --frames < 0) return;
-			if (new URL(location.href).searchParams.get('w')) return;
-			const y = window.scrollY;
-			if (y > 8 && Math.abs(y - placed) > 2) return; // not ours: someone means it
-			const target = ribbonFor(key);
-			if (target === null) return;
-			if (y !== target) {
-				window.scrollTo({ top: target, behavior: 'auto' });
-				placed = target;
-			}
-			requestAnimationFrame(attempt);
-		};
-		requestAnimationFrame(attempt);
-		return () => {
-			live = false;
-		};
-	});
+	// The book's ribbon, keyed by text (see lib/ribbon): a deep link into a
+	// word outranks it — that reader asked for a place.
+	ribbon(
+		() => `scrutabor-pos:${page.params.category}/${page.params.slug}`,
+		() => new URL(location.href).searchParams.has('w')
+	);
 
 	// Tapping the quiet parts of the page dismisses the sheet; interactive
 	// chrome (language menu, theme toggle, the help slider, links) does its
@@ -282,12 +216,7 @@
 	}
 </script>
 
-<svelte:window
-	onpopstate={applyFromLocation}
-	onclick={onWindowClick}
-	onkeydown={onWindowKeydown}
-	onscroll={onScroll}
-/>
+<svelte:window onpopstate={applyFromLocation} onclick={onWindowClick} onkeydown={onWindowKeydown} />
 
 <svelte:head>
 	<title>{doc ? `${doc.title} — Scrutabor` : 'Scrutabor'}</title>
@@ -327,43 +256,7 @@
 		</header>
 
 		<main class:panel-open={selectedWord !== null || keepPanelPad}>
-			{#each doc.segments as seg (seg.id)}
-				{#if seg.type === 'rubric'}
-					<div class="rubric">
-						<p class="rubric-la" lang="la">{seg.text}</p>
-						<!-- Narratives ride with any help (reading-ux §5): knowing what
-						     happens at the altar is word-level-grade help; translations
-						     alone stay at the top step. -->
-						{#if helpLevel >= 1 && gloss.segments[seg.id]?.narrative}
-							<p class="rubric-narrative">{gloss.segments[seg.id].narrative}</p>
-						{/if}
-					</div>
-				{:else}
-					<p class="verse" class:glossed={helpLevel >= 1} lang="la">
-						<!-- Word and its trailing punctuation form one atomic token
-						     (inline-block): the line breaker may only break at the
-						     spaces BETWEEN tokens, never between a word and its
-						     comma or period. Guarded by the one-rect e2e invariant. -->
-						{#each seg.words ?? [] as w (w.id)}<span class="token"
-								><button
-									class="word"
-									id={w.id}
-									class:selected={selectedId === w.id}
-									onclick={() => toggle(w.id)}
-									><ruby
-										>{w.form}{#if helpLevel >= 1}<rt {lang}>{gloss.words[w.id]?.gloss}</rt
-											>{/if}</ruby
-									></button
-								>{w.post ?? ''}</span
-							>{' '}{/each}
-					</p>
-					{#if helpLevel >= 2 && gloss.segments[seg.id]?.translation}
-						<div class="seg-extra">
-							<p class="translation">{gloss.segments[seg.id].translation}</p>
-						</div>
-					{/if}
-				{/if}
-			{/each}
+			<TextBody {doc} {gloss} {lang} {helpLevel} {selectedId} ontap={toggle} />
 
 			<nav class="pager" aria-label={msgs.pagerAria}>
 				{#if around.prev}
@@ -461,16 +354,6 @@
 
 	main.panel-open {
 		padding-bottom: 45vh;
-	}
-
-	.verse {
-		font-size: 1.45rem;
-		line-height: 1.75;
-		margin: 0 0 1.1rem;
-	}
-
-	.verse.glossed {
-		line-height: 2.7;
 	}
 
 	/* The about pill opens a bottom sheet (the word panel's idiom), so
@@ -594,81 +477,5 @@
 		display: inline-block;
 		transform: translateY(-0.09em);
 		margin-inline: 0.15em;
-	}
-
-	.token {
-		display: inline-block;
-	}
-
-	.word {
-		font: inherit;
-		background: none;
-		border: none;
-		padding: 0 0.1rem;
-		margin: 0;
-		border-radius: 0.25rem;
-		cursor: pointer;
-		color: inherit;
-	}
-
-	.word:hover {
-		background: var(--wash);
-	}
-
-	.word.selected {
-		background: var(--wash-strong);
-	}
-
-	.word:focus-visible {
-		outline: 2px solid var(--rubric);
-		outline-offset: 2px;
-	}
-
-	ruby {
-		ruby-position: under;
-	}
-
-	rt {
-		font-size: 0.55em;
-		font-style: italic;
-		color: var(--ink-soft);
-		letter-spacing: 0.01em;
-	}
-
-	.rubric {
-		margin: 0 0 1.1rem;
-		border-inline-start: 2px solid var(--rubric);
-		padding-inline-start: 0.9rem;
-	}
-
-	.rubric-la {
-		margin: 0;
-		color: var(--rubric);
-		font-style: italic;
-		font-size: 1.05rem;
-	}
-
-	.rubric-narrative {
-		margin: 0.25rem 0 0;
-		color: var(--ink-soft);
-		font-size: 0.98rem;
-		line-height: 1.5;
-	}
-
-	/* Translations get the same typographic treatment as rubric narratives —
-	   a thin vertical hairline with an indent — so the page stays layered
-	   text, not cards: red hairline = what happens, neutral = what it means. */
-	.seg-extra {
-		margin: -0.45rem 0 1.4rem;
-		border-inline-start: 2px solid var(--wash-strong);
-		padding-inline-start: 0.9rem;
-	}
-
-	.translation {
-		margin: 0;
-		color: var(--ink-soft);
-		font-style: italic;
-		font-size: 1.05rem;
-		line-height: 1.55;
 	}
 </style>

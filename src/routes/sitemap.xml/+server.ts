@@ -10,6 +10,7 @@ export const prerender = true;
 // the full hreflang pair so crawlers bind the two variants together.
 const surfaces: string[] = [
 	'',
+	'/ordo',
 	'/editio',
 	'/grammatica',
 	'/grammatica/pronuntiatio',

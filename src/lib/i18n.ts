@@ -32,6 +32,11 @@ export interface Messages {
 	goHome: string;
 	aboutLabel: string;
 	pagerAria: string;
+	ordoTitle: string;
+	ordoSubtitle: string;
+	ordoDescription: string;
+	ordoProper: string;
+	ordoPending: string;
 	grammarTitle: string;
 	derivativesLabel: string;
 	pronunciationHint: string;
@@ -69,6 +74,12 @@ export const M: Record<Lang, Messages> = {
 		goHome: 'wróć na stronę główną',
 		aboutLabel: 'o modlitwie',
 		pagerAria: 'sąsiednie teksty',
+		ordoTitle: 'porządek Mszy',
+		ordoSubtitle: 'porządek Mszy świętej',
+		ordoDescription:
+			'Cały porządek Mszy w rycie z 1962 roku, część po części — z tekstami stałymi i miejscami, w których wchodzą teksty własne dnia.',
+		ordoProper: 'z formularza dnia',
+		ordoPending: 'wkrótce w tym wydaniu',
 		grammarTitle: 'gramatyka',
 		derivativesLabel: 'w polszczyźnie',
 		pronunciationHint: 'zasady wymowy'
@@ -104,6 +115,12 @@ export const M: Record<Lang, Messages> = {
 		goHome: 'go to the home page',
 		aboutLabel: 'about this prayer',
 		pagerAria: 'neighboring texts',
+		ordoTitle: 'the order of Mass',
+		ordoSubtitle: 'the order of Mass',
+		ordoDescription:
+			'The whole order of Mass in the 1962 rite, part by part — the fixed texts, and where the day’s own texts belong.',
+		ordoProper: 'from the day’s formulary',
+		ordoPending: 'not yet in this edition',
 		grammarTitle: 'grammar',
 		derivativesLabel: 'in English',
 		pronunciationHint: 'pronunciation guide'
