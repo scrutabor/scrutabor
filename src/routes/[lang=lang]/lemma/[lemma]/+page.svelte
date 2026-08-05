@@ -99,7 +99,7 @@
 			<p class="external smallcaps">
 				{msgs.externalDict}:
 				<a href="https://logeion.uchicago.edu/{lemma}" target="_blank" rel="external noopener"
-					>Logeion ↗</a
+					>Logeion</a
 				>
 			</p>
 		</main>

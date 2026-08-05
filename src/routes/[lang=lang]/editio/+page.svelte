@@ -28,59 +28,62 @@
 
 		{#if lang === 'pl'}
 			<p class="what">
-				Teksty tego wydania są przepisane litera po literze z publicznie dostępnych świadków — ksiąg
-				i wydań liturgii z 1962 roku — i skolacjonowane: żadna rozbieżność w samych literach nie
-				jest tolerowana, a różnice akcydentalne (interpunkcja, wielkie litery) mają swoje
-				rozstrzygnięcia zapisane w aparacie. Świadkowie, aparaty i całe dane wydania są jawne w
+				Teksty tego wydania są przepisane litera po literze ze źródeł publicznie dostępnych —
+				świadków tekstu, czyli ksiąg i wydań liturgii z 1962 roku — a następnie porównane z nimi
+				słowo po słowie. W samych literach nie dopuszczamy żadnej rozbieżności; różnice drugorzędne
+				(interpunkcja, wielkie litery) są rozstrzygane, a każde rozstrzygnięcie jest zapisane wraz z
+				uzasadnieniem w aparacie krytycznym. Źródła, aparat krytyczny i wszystkie dane wydania są
+				jawne w
 				<a
 					href="https://github.com/scrutabor/scrutabor-corpus"
 					target="_blank"
-					rel="external noopener">repozytorium korpusu ↗</a
+					rel="external noopener">repozytorium korpusu</a
 				>.
 			</p>
 			<p class="what">
 				Analiza każdego słowa — lemat i rozbiór gramatyczny — jest sprawdzana mechanicznie przez dwa
 				niezależne, otwarte analizatory łaciny:
 				<a href="https://github.com/mk270/whitakers-words" target="_blank" rel="external noopener"
-					>Whitaker's Words ↗</a
+					>Whitaker's Words</a
 				>
 				i
 				<a
 					href="https://outils.biblissima.fr/en/collatinus/"
 					target="_blank"
-					rel="external noopener">Collatinus ↗</a
-				>. Panel słowa wymienia przy każdym wyrazie, kto potwierdził jego rozbiór; „opracowanie” to
-				praca własna wydania — glosy, przekłady, noty i rozstrzygnięcia.
+					rel="external noopener">Collatinus</a
+				>. Przy każdym słowie panel wymienia, kto potwierdził jego rozbiór; „opracowanie” to praca
+				własna wydania — glosy, przekłady i objaśnienia.
 			</p>
 			<p class="what">
 				„Zaakceptowane” przy słowie znaczy: rozbiór zgodny z głosami analizatorów; „do przeglądu” —
-				warstwa czeka na weryfikację. Całość pozostaje <strong>wydaniem roboczym</strong> do czasu przeglądu
-				przez latynistę; błędy są możliwe, a uwagi mile widziane.
+				ta część czeka jeszcze na weryfikację. Całość pozostaje
+				<strong>wydaniem roboczym</strong> do czasu przeglądu przez latynistę; błędy są możliwe, a uwagi
+				mile widziane.
 			</p>
 		{:else}
 			<p class="what">
 				The texts of this edition are transcribed letter for letter from publicly available
 				witnesses — books and editions of the 1962 liturgy — and collated: no divergence in the
 				letters themselves is tolerated, and accidental differences (punctuation, capitals) carry
-				recorded rulings in an apparatus. The witnesses, apparatus and all edition data are open in
-				the
+				recorded rulings in a critical apparatus. The witnesses, critical apparatus and all edition
+				data are open in the
 				<a
 					href="https://github.com/scrutabor/scrutabor-corpus"
 					target="_blank"
-					rel="external noopener">corpus repository ↗</a
+					rel="external noopener">corpus repository</a
 				>.
 			</p>
 			<p class="what">
 				Every word's analysis — lemma and parse — is checked mechanically by two independent open
 				Latin analyzers:
 				<a href="https://github.com/mk270/whitakers-words" target="_blank" rel="external noopener"
-					>Whitaker's Words ↗</a
+					>Whitaker's Words</a
 				>
 				and
 				<a
 					href="https://outils.biblissima.fr/en/collatinus/"
 					target="_blank"
-					rel="external noopener">Collatinus ↗</a
+					rel="external noopener">Collatinus</a
 				>. The word panel names each word's confirmers; “editorial” is the edition's own work — the
 				glosses, translations, notes and rulings.
 			</p>
