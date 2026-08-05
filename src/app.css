@@ -1,11 +1,15 @@
 /* Design tokens. Light: warm paper. Dark: warm, low-brightness — also the
-   in-pew mode (a separate "church" theme was folded into it, owner 2026-08-03). */
+   in-pew mode (a separate "church" theme was folded into it, owner 2026-08-03).
+   Every text colour clears WCAG AA (4.5:1) against every surface it is set
+   on, including the tinted wash behind a tapped word — checked by the
+   contrast guard in tests/contrast.spec.ts, which reads the tokens from
+   the rendered page rather than trusting this comment. */
 :root,
 [data-theme='light'] {
 	--bg: #f7f1e6;
 	--surface: #fcf8ef;
 	--ink: #251e12;
-	--ink-soft: #7a6b51;
+	--ink-soft: #70624a;
 	--rubric: #9e2b1e;
 	--border: #e0d4ba;
 	--wash: #ede2c9;
@@ -18,7 +22,7 @@
 	--surface: #211c15;
 	--ink: #ddd1bb;
 	--ink-soft: #9a8a6c;
-	--rubric: #c4573f;
+	--rubric: #ce7460;
 	--border: #372e20;
 	--wash: #2b2417;
 	--wash-strong: #3a3120;
