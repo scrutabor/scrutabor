@@ -719,32 +719,35 @@ const ORDO_SOURCE: OrdoMovement[] = [
 			{
 				id: 'ite-missa-est',
 				title: 'Ite, missa est',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/ite-missa-est',
 				note: {
-					pl: 'Kapłan wraca na środek, całuje ołtarz i zwrócony do wiernych odsyła ich; odpowiedź brzmi Deo grátias.',
-					en: 'The priest returns to the middle, kisses the altar and, facing the people, dismisses them; the answer is Deo grátias.'
+					pl: 'Kapłan zwraca się do ludu i odsyła go słowami Ite, missa est; ministrant odpowiada Deo grátias.',
+					en: 'The priest turns to the people and dismisses them with Ite, missa est; the server answers Deo grátias.'
 				},
 				when: {
-					pl: 'we Mszach żałobnych zamiast tego: Requiéscant in pace, z odpowiedzią Amen',
-					en: 'at Requiem Masses instead: Requiéscant in pace, answered Amen'
+					pl: 'gdy nie było Glórii, śpiewa się Benedicámus Dómino; we Mszach żałobnych — Requiéscant in pace',
+					en: 'when the Gloria was not said the dismissal is Benedicámus Dómino; at Requiems, Requiéscant in pace'
 				}
 			},
 			{
 				id: 'placeat-tibi',
 				title: 'Pláceat tibi',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/placeat-tibi',
 				note: {
-					pl: 'Pochylony nad ołtarzem kapłan po cichu prosi, by Bóg przyjął złożoną Ofiarę, i całuje ołtarz.',
-					en: 'Bowed over the altar the priest silently asks God to accept the sacrifice offered, and kisses the altar.'
+					pl: 'Pochylony nad ołtarzem kapłan prosi po cichu, aby złożona ofiara podobała się Trójcy Świętej, i całuje ołtarz.',
+					en: 'Bowed over the altar the priest asks silently that the sacrifice may please the Holy Trinity, and kisses the altar.'
 				}
 			},
 			{
 				id: 'benedictio',
 				title: 'Benedícat vos',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/benedictio',
 				note: {
-					pl: 'Kapłan podnosi oczy i ręce, odwraca się do wiernych i błogosławi ich jednym znakiem krzyża.',
-					en: 'The priest raises his eyes and hands, turns to the people and blesses them with a single sign of the cross.'
+					pl: 'Kapłan podnosi oczy, wyciąga ręce i błogosławi lud jednym znakiem krzyża.',
+					en: 'The priest raises his eyes, extends his hands and blesses the people with one sign of the cross.'
 				},
 				when: {
 					pl: 'we Mszach żałobnych błogosławieństwa się nie udziela',
@@ -754,14 +757,11 @@ const ORDO_SOURCE: OrdoMovement[] = [
 			{
 				id: 'evangelium-ultimum',
 				title: 'In princípio',
-				kind: 'pending',
+				kind: 'text',
+				text: 'ordinarium/evangelium-ultimum',
 				note: {
-					pl: 'Kapłan przechodzi na stronę Ewangelii i czyta prolog św. Jana; na słowa Et Verbum caro factum est wszyscy przyklękają, a całość zamyka Deo grátias.',
-					en: 'The priest goes to the Gospel side and reads the prologue of St John; all genuflect at Et Verbum caro factum est, and Deo grátias closes it.'
-				},
-				when: {
-					pl: 'w trzeciej Mszy Bożego Narodzenia prolog jest już ewangelią dnia, więc na końcu czyta się ewangelię Objawienia',
-					en: 'at the third Mass of Christmas the prologue is already the Gospel of the day, so the Epiphany Gospel is read at the end instead'
+					pl: 'Przy ołtarzu po stronie Ewangelii kapłan czyta prolog świętego Jana. Na słowa Et Verbum caro factum est wszyscy przyklękają.',
+					en: 'At the Gospel side the priest reads the prologue of St John. At Et Verbum caro factum est everyone genuflects.'
 				}
 			},
 			{
@@ -769,12 +769,12 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Preces Leonínæ',
 				kind: 'pending',
 				note: {
-					pl: 'Kapłan klęka u stopni ołtarza i odmawia z wiernymi trzykrotne Ave María, Salve Regína z modlitwą, wezwanie do św. Michała i trzy razy Cor Jesu sacratíssimum.',
-					en: 'The priest kneels at the foot of the altar and says with the people the Ave María three times, the Salve Regína with its prayer, the invocation of St Michael and Cor Jesu sacratíssimum three times.'
+					pl: 'Po Mszy cichej kapłan klęka u stopni i odmawia z ludem modlitwy przepisane przez Leona XIII: trzy Zdrowaś Maryjo, Salve Regína z wersetem i modlitwą, wezwanie do świętego Michała i trzykrotne Cor Jesu sacratíssimum. To wydanie ma na razie Salve Regína i modlitwę do świętego Michała.',
+					en: 'After low Mass the priest kneels at the foot of the altar and says with the people the prayers Leo XIII prescribed: three Hail Marys, the Salve Regína with its versicle and prayer, the invocation of St Michael, and Cor Jesu sacratíssimum three times. This edition carries the Salve Regína and the prayer to St Michael so far.'
 				},
 				when: {
-					pl: 'po Mszy recytowanej',
-					en: 'after low Mass'
+					pl: 'po Mszy cichej; opuszcza się je po Mszy śpiewanej',
+					en: 'after low Mass; omitted after a sung Mass'
 				}
 			}
 		]

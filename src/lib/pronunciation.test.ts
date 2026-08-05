@@ -143,3 +143,25 @@ describe('ipa', () => {
 		}
 	});
 });
+
+describe('the glide the books still spell with an i', () => {
+	// ORTHOGRAPHY writes consonantal i as j (ejus, major), but a few words
+	// keep the older spelling — Eia in the Salve Regina, allelúia. There
+	// the i between vowels is a glide, not a syllable of its own.
+	it('divides Eia and allelúia on the glide', () => {
+		expect(syllabify('Eia')).toEqual(['E', 'ia']);
+		expect(syllabify('allelúia')).toEqual(['al', 'le', 'lú', 'ia']);
+	});
+
+	it('sounds the glide as /j/', () => {
+		expect(ipa('Eia', 'roman')).toContain('j');
+		expect(ipa('allelúia', 'roman')).toContain('j');
+	});
+
+	it('leaves a real vowel pair alone', () => {
+		// diéi is di-é-i: ei is not a diphthong and the i is not a glide
+		expect(syllabify('diéi')).toHaveLength(3);
+		// qu is consumed first, so quia keeps its vocalic i
+		expect(syllabify('quia')).toEqual(['qui', 'a']);
+	});
+});

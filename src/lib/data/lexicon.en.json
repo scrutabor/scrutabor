@@ -118,6 +118,12 @@
 				"Damian"
 			]
 		},
+		"Eva": {
+			"senses": [
+				"Eve"
+			],
+			"note": "The name of the first mother, Hebrew for the living one. The prayer calls us her banished children."
+		},
 		"Felicitas": {
 			"senses": [
 				"Felicity"
@@ -418,6 +424,16 @@
 				"adventure"
 			]
 		},
+		"advocata": {
+			"senses": [
+				"advocate",
+				"she who pleads"
+			],
+			"note": "The feminine of advocátus — one called to another's side (ad and voco) to stand by the accused.",
+			"derivatives": [
+				"advocate"
+			]
+		},
 		"aequus": {
 			"senses": [
 				"fitting",
@@ -482,6 +498,13 @@
 				"some",
 				"a certain"
 			]
+		},
+		"alius": {
+			"senses": [
+				"other",
+				"another"
+			],
+			"note": "Declines like a pronoun: genitive alíus, dative álii — not like the -us, -a, -um adjectives."
 		},
 		"altare": {
 			"senses": [
@@ -783,6 +806,17 @@
 				"capable"
 			]
 		},
+		"caro": {
+			"senses": [
+				"flesh"
+			],
+			"note": "In Scripture it means the whole man in his weakness and mortality, not the body as against the soul.",
+			"derivatives": [
+				"carnal",
+				"carnation",
+				"carnival"
+			]
+		},
 		"catholicus": {
 			"senses": [
 				"universal",
@@ -843,6 +877,17 @@
 				"zither"
 			]
 		},
+		"clamo": {
+			"senses": [
+				"to cry out",
+				"to call"
+			],
+			"derivatives": [
+				"claim",
+				"proclaim",
+				"clamour"
+			]
+		},
 		"clamor": {
 			"senses": [
 				"cry",
@@ -896,6 +941,18 @@
 				"recognized"
 			]
 		},
+		"cognosco": {
+			"senses": [
+				"to know",
+				"to recognize",
+				"to acknowledge"
+			],
+			"note": "A compound of gnósco, to come to know — the same root as Greek gnósis.",
+			"derivatives": [
+				"cognition",
+				"recognize"
+			]
+		},
 		"commixtio": {
 			"senses": [
 				"mingling",
@@ -916,6 +973,18 @@
 			"derivatives": [
 				"communion",
 				"communicate"
+			]
+		},
+		"comprehendo": {
+			"senses": [
+				"to seize",
+				"to grasp",
+				"to comprehend"
+			],
+			"note": "Literally to seize together — hence both taking hold with the hand and grasping with the mind.",
+			"derivatives": [
+				"comprehend",
+				"comprehensive"
 			]
 		},
 		"concedo": {
@@ -1030,6 +1099,17 @@
 				"of one substance with"
 			],
 			"note": "A theological coinage rendering Greek homooúsios — of the same substance; formed from cum + substántia."
+		},
+		"contra": {
+			"senses": [
+				"against",
+				"opposite"
+			],
+			"derivatives": [
+				"contrary",
+				"counter",
+				"contrast"
+			]
 		},
 		"contritus": {
 			"senses": [
@@ -1236,6 +1316,17 @@
 				"deduction"
 			]
 		},
+		"defendo": {
+			"senses": [
+				"to defend",
+				"to ward off"
+			],
+			"derivatives": [
+				"defend",
+				"defence",
+				"fence"
+			]
+		},
 		"defunctus": {
 			"senses": [
 				"dead",
@@ -1277,6 +1368,17 @@
 				"descendant"
 			]
 		},
+		"detrudo": {
+			"senses": [
+				"to thrust down",
+				"to cast down"
+			],
+			"note": "A compound of de and trudo, to push: to push so that a thing falls.",
+			"derivatives": [
+				"intrude",
+				"obtrude"
+			]
+		},
 		"deus": {
 			"senses": [
 				"God",
@@ -1303,6 +1405,17 @@
 				"right hand"
 			],
 			"note": "Understand “(manus) déxtera” — the right hand; “at the right hand” is Scripture's place of honor."
+		},
+		"diabolus": {
+			"senses": [
+				"the devil",
+				"the slanderer"
+			],
+			"note": "From Greek diábolos, one who throws accusations across; Latin took the word untranslated.",
+			"derivatives": [
+				"devil",
+				"diabolical"
+			]
 		},
 		"dico": {
 			"senses": [
@@ -1531,6 +1644,22 @@
 				"dormant"
 			]
 		},
+		"dulcedo": {
+			"senses": [
+				"sweetness"
+			],
+			"note": "The noun of dulcis; the ending -edo makes nouns of quality, as in altitúdo."
+		},
+		"dulcis": {
+			"senses": [
+				"sweet",
+				"kind"
+			],
+			"derivatives": [
+				"dulcet",
+				"dolce"
+			]
+		},
 		"dum": {
 			"senses": [
 				"while",
@@ -1558,6 +1687,17 @@
 				"ecclesiastical"
 			]
 		},
+		"efficio": {
+			"senses": [
+				"to bring about",
+				"to make into"
+			],
+			"note": "A compound of ex and fácio: to work a thing out, to carry it through.",
+			"derivatives": [
+				"effect",
+				"efficient"
+			]
+		},
 		"effundo": {
 			"senses": [
 				"to pour out",
@@ -1576,6 +1716,13 @@
 				"ego",
 				"egoism"
 			]
+		},
+		"eia": {
+			"senses": [
+				"come now",
+				"then"
+			],
+			"note": "An interjection of urging. Its i is vocalic and its ei a diphthong — hence two syllables and no accent."
 		},
 		"electus": {
 			"senses": [
@@ -1626,6 +1773,27 @@
 			],
 			"note": "Never stands first in its clause: Latin slips it into second place."
 		},
+		"eo": {
+			"senses": [
+				"to go",
+				"to proceed"
+			],
+			"note": "An irregular verb whose stem can shrink to a single letter (it — he goes); the plural imperative is ite.",
+			"derivatives": [
+				"exit",
+				"transit",
+				"ambition"
+			]
+		},
+		"ergo": {
+			"senses": [
+				"therefore",
+				"then"
+			],
+			"derivatives": [
+				"ergo"
+			]
+		},
 		"eripio": {
 			"senses": [
 				"to snatch away",
@@ -1655,6 +1823,17 @@
 			],
 			"note": "A compound of et (and) + jam (already)."
 		},
+		"evangelium": {
+			"senses": [
+				"Gospel",
+				"good news"
+			],
+			"note": "From Greek euangélion, good tidings; Latin took the word over untranslated.",
+			"derivatives": [
+				"evangelist",
+				"evangelical"
+			]
+		},
 		"ex": {
 			"senses": [
 				"out of, from within",
@@ -1680,6 +1859,16 @@
 				"excelsior"
 			]
 		},
+		"exilium": {
+			"senses": [
+				"exile",
+				"banishment"
+			],
+			"note": "From ex and solum, the soil: the state of one who is off his own ground.",
+			"derivatives": [
+				"exile"
+			]
+		},
 		"exspecto": {
 			"senses": [
 				"to await",
@@ -1689,6 +1878,16 @@
 			"note": "A compound of ex + spectáre (to look) — to look out for; some editions print the simplified spelling “expécto”.",
 			"derivatives": [
 				"expectation"
+			]
+		},
+		"exsul": {
+			"senses": [
+				"an exile",
+				"a banished person"
+			],
+			"note": "The noun of the same root as exílium.",
+			"derivatives": [
+				"exile"
 			]
 		},
 		"exsultatio": {
@@ -1805,6 +2004,15 @@
 			],
 			"note": "Irregular; serves as the passive of “fácere”, to do or make."
 		},
+		"fleo": {
+			"senses": [
+				"to weep",
+				"to weep for"
+			],
+			"derivatives": [
+				"feeble"
+			]
+		},
 		"formo": {
 			"senses": [
 				"to shape",
@@ -1865,6 +2073,12 @@
 			"note": "Originally the future participle of sum; Latin uses it as a plain adjective too, and in the neuter plural for “things to come”.",
 			"derivatives": [
 				"future"
+			]
+		},
+		"gemo": {
+			"senses": [
+				"to groan",
+				"to sigh"
 			]
 		},
 		"genetrix": {
@@ -1959,6 +2173,18 @@
 			"derivatives": [
 				"habitation",
 				"habitat"
+			]
+		},
+		"habito": {
+			"senses": [
+				"to dwell",
+				"to live in"
+			],
+			"note": "A frequentative of hábeo, to have: to dwell is to keep on having, to hold a place.",
+			"derivatives": [
+				"habitat",
+				"inhabit",
+				"habitation"
 			]
 		},
 		"hic": {
@@ -2084,6 +2310,16 @@
 			],
 			"note": "From libáre, to take a portion from an offering; illibátus is what nothing has been taken from."
 		},
+		"illumino": {
+			"senses": [
+				"to give light to",
+				"to enlighten"
+			],
+			"derivatives": [
+				"illuminate",
+				"illumination"
+			]
+		},
 		"immaculatus": {
 			"senses": [
 				"spotless",
@@ -2092,6 +2328,18 @@
 			"note": "From mácula — a stain; literally without a spot.",
 			"derivatives": [
 				"immaculate"
+			]
+		},
+		"impero": {
+			"senses": [
+				"to command",
+				"to rule"
+			],
+			"note": "Governs the dative: one commands TO someone, not someone.",
+			"derivatives": [
+				"emperor",
+				"imperative",
+				"empire"
 			]
 		},
 		"impius": {
@@ -2184,6 +2432,17 @@
 				"inferior"
 			]
 		},
+		"infernus": {
+			"senses": [
+				"hell",
+				"the world below"
+			],
+			"note": "From inférus, lower: the place set lower than everything else.",
+			"derivatives": [
+				"infernal",
+				"inferno"
+			]
+		},
 		"ingredior": {
 			"senses": [
 				"to enter",
@@ -2239,6 +2498,17 @@
 				"iniquitous"
 			]
 		},
+		"initium": {
+			"senses": [
+				"beginning"
+			],
+			"note": "The noun of íneo, to go in: that which is entered first.",
+			"derivatives": [
+				"initial",
+				"initiate",
+				"initiation"
+			]
+		},
 		"innocens": {
 			"senses": [
 				"innocent",
@@ -2263,6 +2533,16 @@
 			],
 			"derivatives": [
 				"innumerable"
+			]
+		},
+		"insidiae": {
+			"senses": [
+				"ambush",
+				"snares"
+			],
+			"note": "A noun only in the plural; literally a sitting in hiding (in and sédeo).",
+			"derivatives": [
+				"insidious"
 			]
 		},
 		"institutio": {
@@ -2448,6 +2728,15 @@
 				"kyrie"
 			]
 		},
+		"lacryma": {
+			"senses": [
+				"tear"
+			],
+			"note": "Lacryma and lacrima are one word; the y came in when the ending was felt to be Greek.",
+			"derivatives": [
+				"lachrymose"
+			]
+		},
 		"laetifico": {
 			"senses": [
 				"to gladden",
@@ -2538,6 +2827,17 @@
 				"soliloquy"
 			]
 		},
+		"luceo": {
+			"senses": [
+				"to shine",
+				"to be bright"
+			],
+			"note": "The same root as lux. Intransitive: the light shines of itself, it does not shine on something.",
+			"derivatives": [
+				"lucid",
+				"translucent"
+			]
+		},
 		"lumen": {
 			"senses": [
 				"light",
@@ -2591,6 +2891,17 @@
 			],
 			"derivatives": [
 				"majesty"
+			]
+		},
+		"malignus": {
+			"senses": [
+				"malicious",
+				"evil"
+			],
+			"note": "A compound of malus and gigno: one who breeds evil. Its opposite is benígnus.",
+			"derivatives": [
+				"malign",
+				"malignant"
 			]
 		},
 		"malum": {
@@ -2728,6 +3039,17 @@
 				"my"
 			]
 		},
+		"militia": {
+			"senses": [
+				"army",
+				"military service"
+			],
+			"note": "From miles, mílitis, a soldier.",
+			"derivatives": [
+				"militia",
+				"military"
+			]
+		},
 		"mirabilis": {
 			"senses": [
 				"wonderful",
@@ -2775,6 +3097,37 @@
 				"compassionate"
 			],
 			"note": "A compound of miser (wretched) + cor (heart): having a heart for the wretched."
+		},
+		"miseror": {
+			"senses": [
+				"to pity",
+				"to have mercy"
+			],
+			"note": "A deponent (passive form, active meaning). Its participle miseránte is active in form, as every deponent's present participle is."
+		},
+		"missa": {
+			"senses": [
+				"Mass",
+				"the dismissal of the assembly"
+			],
+			"note": "A late Latin noun built on missus (sent away). From this one word the whole liturgy took its name — missa, Mass, Messe, msza.",
+			"derivatives": [
+				"Mass",
+				"Christmas",
+				"Michaelmas"
+			]
+		},
+		"mitto": {
+			"senses": [
+				"to send",
+				"to let go"
+			],
+			"note": "From its participle missus comes missa, the name of the Mass.",
+			"derivatives": [
+				"mission",
+				"missile",
+				"emit"
+			]
 		},
 		"modus": {
 			"senses": [
@@ -2931,6 +3284,30 @@
 				"negligee"
 			]
 		},
+		"neque": {
+			"senses": [
+				"nor",
+				"and not"
+			],
+			"note": "The same word as nec in its full shape."
+		},
+		"nequitia": {
+			"senses": [
+				"wickedness",
+				"worthlessness"
+			],
+			"note": "From nequam, a good-for-nothing."
+		},
+		"nihil": {
+			"senses": [
+				"nothing"
+			],
+			"note": "Indeclinable. From ne and hilum, the speck on a bean — not even that much.",
+			"derivatives": [
+				"nihilism",
+				"annihilate"
+			]
+		},
 		"nimis": {
 			"senses": [
 				"exceedingly",
@@ -3004,6 +3381,12 @@
 				"now"
 			]
 		},
+		"o": {
+			"senses": [
+				"O"
+			],
+			"note": "The interjection of the vocative: it is not translated on its own but strengthens an address."
+		},
 		"ob": {
 			"senses": [
 				"on account of",
@@ -3020,6 +3403,18 @@
 			"derivatives": [
 				"oblation",
 				"oblate"
+			]
+		},
+		"obsequium": {
+			"senses": [
+				"homage",
+				"service rendered to another",
+				"compliance"
+			],
+			"note": "From ob and sequor — to follow after; hence the service shown to the one followed.",
+			"derivatives": [
+				"obsequious",
+				"obsequies"
 			]
 		},
 		"oculus": {
@@ -3339,6 +3734,16 @@
 				"receipt"
 			]
 		},
+		"perditio": {
+			"senses": [
+				"ruin",
+				"perdition"
+			],
+			"note": "The noun of perdo, to destroy utterly.",
+			"derivatives": [
+				"perdition"
+			]
+		},
 		"perdo": {
 			"senses": [
 				"to destroy",
@@ -3363,6 +3768,13 @@
 				"to convey"
 			],
 			"note": "A compound of per and fero, and as irregular: its principal parts come from three different roots."
+		},
+		"perhibeo": {
+			"senses": [
+				"to bear (witness)",
+				"to bring forward"
+			],
+			"note": "A compound of per and hábeo. In biblical Latin almost only in the phrase testimónium perhibére, to bear witness."
 		},
 		"permitto": {
 			"senses": [
@@ -3399,6 +3811,17 @@
 				"perturbation"
 			]
 		},
+		"pervagor": {
+			"senses": [
+				"to roam through",
+				"to wander about"
+			],
+			"note": "A deponent (passive form, active meaning). A compound of per and vagor — to wander the length of a thing.",
+			"derivatives": [
+				"vagrant",
+				"extravagant"
+			]
+		},
 		"pes": {
 			"senses": [
 				"foot"
@@ -3428,6 +3851,19 @@
 			],
 			"note": "For a Roman, the duty owed to parents, gods and country — hence pius Æneas. Said of God it means His faithfulness toward us.",
 			"derivatives": [
+				"piety",
+				"pity"
+			]
+		},
+		"pius": {
+			"senses": [
+				"dutiful",
+				"loving",
+				"gracious"
+			],
+			"note": "Roman píetas is faithfulness towards the gods, one's parents and one's country; the adjective carries all of it.",
+			"derivatives": [
+				"pious",
 				"piety",
 				"pity"
 			]
@@ -3470,6 +3906,17 @@
 			"derivatives": [
 				"plenary",
 				"plenty"
+			]
+		},
+		"post": {
+			"senses": [
+				"after",
+				"behind"
+			],
+			"derivatives": [
+				"postscript",
+				"posterior",
+				"postpone"
 			]
 		},
 		"postquam": {
@@ -3525,6 +3972,13 @@
 			],
 			"note": "Literally very bright; the præ- here intensifies rather than meaning before."
 		},
+		"praelium": {
+			"senses": [
+				"battle",
+				"combat"
+			],
+			"note": "Prælium and proelium are one word; the liturgical books print prælium."
+		},
 		"praeparo": {
 			"senses": [
 				"to prepare",
@@ -3545,6 +3999,18 @@
 			"derivatives": [
 				"present",
 				"presence"
+			]
+		},
+		"praesidium": {
+			"senses": [
+				"protection",
+				"garrison",
+				"stronghold"
+			],
+			"note": "From præsídeo, to sit in front of a thing and guard it.",
+			"derivatives": [
+				"presidium",
+				"preside"
 			]
 		},
 		"praesto": {
@@ -3616,6 +4082,19 @@
 				"primitive"
 			]
 		},
+		"princeps": {
+			"senses": [
+				"first",
+				"chief",
+				"prince"
+			],
+			"note": "A compound of primus and cápio: the one who takes first place.",
+			"derivatives": [
+				"prince",
+				"principal",
+				"principle"
+			]
+		},
 		"principium": {
 			"senses": [
 				"beginning",
@@ -3655,6 +4134,15 @@
 				"proficient"
 			]
 		},
+		"promissio": {
+			"senses": [
+				"promise"
+			],
+			"note": "The noun of promítto, to send forth and so to promise — from the same mitto as missa.",
+			"derivatives": [
+				"promise"
+			]
+		},
 		"propheta": {
 			"senses": [
 				"prophet"
@@ -3665,6 +4153,13 @@
 				"prophecy"
 			]
 		},
+		"propitiabilis": {
+			"senses": [
+				"propitiatory",
+				"winning favour"
+			],
+			"note": "A late and rare word built on propitius: that through which propitiation is made."
+		},
 		"propitius": {
 			"senses": [
 				"gracious",
@@ -3674,6 +4169,18 @@
 			"derivatives": [
 				"propitious",
 				"propitiation"
+			]
+		},
+		"proprius": {
+			"senses": [
+				"one's own",
+				"proper to"
+			],
+			"note": "Hence the proprium — the parts of the Mass proper to the day, as against the unchanging ordinarium.",
+			"derivatives": [
+				"property",
+				"proper",
+				"appropriate"
 			]
 		},
 		"propter": {
@@ -3750,6 +4257,13 @@
 				"for what reason"
 			],
 			"note": "A fusion of qua re — for what cause."
+		},
+		"quasi": {
+			"senses": [
+				"as if",
+				"as it were"
+			],
+			"note": "A fusion of quam and si, as if. It does not equate: it states a likeness."
 		},
 		"qui": {
 			"senses": [
@@ -3838,6 +4352,18 @@
 				"ratification"
 			]
 		},
+		"recipio": {
+			"senses": [
+				"to receive",
+				"to take back"
+			],
+			"note": "A compound of re and cápio: to take to oneself what comes.",
+			"derivatives": [
+				"receive",
+				"reception",
+				"recipe"
+			]
+		},
 		"reddo": {
 			"senses": [
 				"to give back",
@@ -3904,6 +4430,16 @@
 			"derivatives": [
 				"refrigerate",
 				"refrigerator"
+			]
+		},
+		"regina": {
+			"senses": [
+				"queen"
+			],
+			"note": "The feminine of rex, regis.",
+			"derivatives": [
+				"regina",
+				"reign"
 			]
 		},
 		"regno": {
@@ -4157,6 +4693,13 @@
 			],
 			"note": "The same word used as a noun gives salutáre — salvation."
 		},
+		"salveo": {
+			"senses": [
+				"to be well",
+				"to be in health"
+			],
+			"note": "In practice only in the imperative: salve and salvéte are the Roman greeting — be well."
+		},
 		"salvus": {
 			"senses": [
 				"safe",
@@ -4213,6 +4756,16 @@
 				"sane",
 				"sanitary",
 				"sanatorium"
+			]
+		},
+		"satanas": {
+			"senses": [
+				"Satan"
+			],
+			"note": "From Hebrew through Greek: the adversary, the accuser. It declines like the Greek masculines of the 1st declension.",
+			"derivatives": [
+				"satan",
+				"satanic"
 			]
 		},
 		"scelus": {
@@ -4393,6 +4946,15 @@
 			],
 			"derivatives": [
 				"simultaneous"
+			]
+		},
+		"sine": {
+			"senses": [
+				"without"
+			],
+			"note": "Governs the ablative — the opposite of the preposition cum, which governs the same case.",
+			"derivatives": [
+				"sinecure"
 			]
 		},
 		"societas": {
@@ -4594,6 +5156,16 @@
 				"susceptible"
 			]
 		},
+		"suspiro": {
+			"senses": [
+				"to sigh",
+				"to sigh for"
+			],
+			"note": "A compound of sub and spiro: breath drawn from below.",
+			"derivatives": [
+				"suspire"
+			]
+		},
 		"suus": {
 			"senses": [
 				"his own",
@@ -4651,6 +5223,15 @@
 				"temporary"
 			]
 		},
+		"tenebrae": {
+			"senses": [
+				"darkness"
+			],
+			"note": "The noun exists only in the plural. From it the Tenebrae of Holy Week take their name.",
+			"derivatives": [
+				"tenebrous"
+			]
+		},
 		"tentatio": {
 			"senses": [
 				"temptation",
@@ -4686,6 +5267,17 @@
 			"derivatives": [
 				"testament",
 				"testify"
+			]
+		},
+		"testimonium": {
+			"senses": [
+				"witness",
+				"testimony"
+			],
+			"note": "From testis, a witness.",
+			"derivatives": [
+				"testimony",
+				"testimonial"
 			]
 		},
 		"tollo": {
@@ -4858,6 +5450,15 @@
 				"utilitarian"
 			]
 		},
+		"vallis": {
+			"senses": [
+				"valley"
+			],
+			"derivatives": [
+				"valley",
+				"vale"
+			]
+		},
 		"vel": {
 			"senses": [
 				"or",
@@ -4959,6 +5560,16 @@
 				"your (of more than one)"
 			],
 			"note": "The possessive of the second person plural. Its form vestri also serves as the genitive of the pronoun vos."
+		},
+		"video": {
+			"senses": [
+				"to see"
+			],
+			"derivatives": [
+				"video",
+				"vision",
+				"evident"
+			]
 		},
 		"vinum": {
 			"senses": [

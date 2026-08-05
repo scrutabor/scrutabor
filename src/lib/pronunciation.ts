@@ -48,6 +48,22 @@ function tokenize(word: string): Unit[] {
 			continue;
 		}
 		const ch = word[i];
+		// The books keep the glide spelled i in a few words where this
+		// orthography otherwise writes j — Eia in the Salve Regina,
+		// allelúia. Between two vowels that i is consonantal, so it joins
+		// the next syllable's onset rather than making one of its own
+		// (E-ia, al-le-lú-ia). The test is on the preceding UNIT, not the
+		// preceding letter: qu and gu are consumed above as consonants, so
+		// the u of quia must not count as the vowel before the i.
+		if (
+			(ch === 'i' || ch === 'í') &&
+			units[units.length - 1]?.vowel === true &&
+			VOWELS.has(word[i + 1] ?? '')
+		) {
+			units.push({ text: ch, vowel: false });
+			i += 1;
+			continue;
+		}
 		if (VOWELS.has(ch)) {
 			// au as a diphthong (lau-dá-mus, gáu-di-um); other pairs stay
 			// separate vowels
@@ -217,7 +233,11 @@ function phonemes(units: Unit[], tradition: Tradition): string[] {
 			case 'h':
 				out.push(tradition === 'roman' ? '' : 'x');
 				break;
+			case 'i':
+			case 'í':
 			case 'j':
+				// reached only for a non-vowel unit, so an i here is the
+				// glide the books still spell with an i (E-ia, al-le-lú-ia)
 				out.push('j');
 				break;
 			case 's': {

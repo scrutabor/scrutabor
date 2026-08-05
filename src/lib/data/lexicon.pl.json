@@ -117,6 +117,12 @@
 				"Damian"
 			]
 		},
+		"Eva": {
+			"senses": [
+				"Ewa"
+			],
+			"note": "Imię pierwszej matki, po hebrajsku „żyjąca”. Modlitwa nazywa nas jej wygnanymi dziećmi."
+		},
 		"Felicitas": {
 			"senses": [
 				"Felicyta"
@@ -411,6 +417,16 @@
 				"adwent"
 			]
 		},
+		"advocata": {
+			"senses": [
+				"orędowniczka",
+				"rzeczniczka"
+			],
+			"note": "Żeńska postać rzeczownika advocátus — ten, kogo się przywołuje (ad + voco), aby stanął przy oskarżonym.",
+			"derivatives": [
+				"adwokat"
+			]
+		},
 		"aequus": {
 			"senses": [
 				"słuszny",
@@ -467,6 +483,13 @@
 				"jakiś",
 				"pewien"
 			]
+		},
+		"alius": {
+			"senses": [
+				"inny",
+				"drugi"
+			],
+			"note": "Odmiana zaimkowa: dopełniacz alíus, celownik álii — nie jak przymiotniki na -us, -a, -um."
 		},
 		"altare": {
 			"senses": [
@@ -749,6 +772,16 @@
 				"recepcja"
 			]
 		},
+		"caro": {
+			"senses": [
+				"ciało"
+			],
+			"note": "W Piśmie oznacza całego człowieka w jego słabości i śmiertelności, nie samo ciało w przeciwieństwie do duszy.",
+			"derivatives": [
+				"karnacja",
+				"karnawał"
+			]
+		},
 		"catholicus": {
 			"senses": [
 				"powszechny",
@@ -808,6 +841,16 @@
 				"cytra"
 			]
 		},
+		"clamo": {
+			"senses": [
+				"wołać",
+				"krzyczeć"
+			],
+			"derivatives": [
+				"reklama",
+				"proklamacja"
+			]
+		},
 		"clamor": {
 			"senses": [
 				"wołanie",
@@ -848,6 +891,18 @@
 				"poznany"
 			]
 		},
+		"cognosco": {
+			"senses": [
+				"poznać",
+				"rozpoznać",
+				"uznać"
+			],
+			"note": "Złożenie z gnósco (poznawać) — ten sam rdzeń, co w greckim gnósis.",
+			"derivatives": [
+				"kognitywny",
+				"rekognicja"
+			]
+		},
 		"commixtio": {
 			"senses": [
 				"zmieszanie",
@@ -866,6 +921,14 @@
 				"komunia",
 				"komunikat"
 			]
+		},
+		"comprehendo": {
+			"senses": [
+				"pochwycić",
+				"pojąć",
+				"ogarnąć"
+			],
+			"note": "Dosłownie „chwycić razem” — stąd zarazem chwytać ręką i pojmować umysłem."
 		},
 		"concedo": {
 			"senses": [
@@ -977,6 +1040,16 @@
 				"tej samej istoty"
 			],
 			"note": "Złożenie cum + substántia, oddające greckie homooúsios — tej samej istoty; poświadczone już u Tertuliana, na długo przed Niceą. Polskie „współistotny” jest jego kalką."
+		},
+		"contra": {
+			"senses": [
+				"przeciw",
+				"naprzeciw"
+			],
+			"derivatives": [
+				"kontra",
+				"kontrast"
+			]
 		},
 		"contritus": {
 			"senses": [
@@ -1163,6 +1236,15 @@
 				"dedukcja"
 			]
 		},
+		"defendo": {
+			"senses": [
+				"bronić",
+				"odpierać"
+			],
+			"derivatives": [
+				"defensywa"
+			]
+		},
 		"defunctus": {
 			"senses": [
 				"zmarły",
@@ -1191,6 +1273,13 @@
 			],
 			"note": "Złożenie de (w dół) + scándere (wspinać się, wstępować)."
 		},
+		"detrudo": {
+			"senses": [
+				"strącić",
+				"zepchnąć w dół"
+			],
+			"note": "Złożenie de + trudo (pchać): pchnąć tak, żeby spadło."
+		},
 		"deus": {
 			"senses": [
 				"Bóg",
@@ -1217,6 +1306,17 @@
 				"prawa ręka"
 			],
 			"note": "Domyślnie „(manus) déxtera” — prawa ręka; „po prawicy” to w Piśmie miejsce honorowe."
+		},
+		"diabolus": {
+			"senses": [
+				"diabeł",
+				"oszczerca"
+			],
+			"note": "Z greckiego diábolos — ten, kto rzuca oskarżenia; łacina wzięła słowo bez tłumaczenia.",
+			"derivatives": [
+				"diabeł",
+				"diaboliczny"
+			]
 		},
 		"dico": {
 			"senses": [
@@ -1412,6 +1512,18 @@
 				"dormitorium"
 			]
 		},
+		"dulcedo": {
+			"senses": [
+				"słodycz"
+			],
+			"note": "Rzeczownik od dulcis; przyrostek -edo tworzy nazwy właściwości, jak w altitúdo."
+		},
+		"dulcis": {
+			"senses": [
+				"słodki",
+				"miły"
+			]
+		},
 		"dum": {
 			"senses": [
 				"podczas gdy",
@@ -1438,6 +1550,17 @@
 				"eklezjologia"
 			]
 		},
+		"efficio": {
+			"senses": [
+				"sprawić",
+				"uczynić czymś"
+			],
+			"note": "Złożenie ex + fácio: wyprowadzić coś na zewnątrz, doprowadzić do skutku.",
+			"derivatives": [
+				"efekt",
+				"efektywny"
+			]
+		},
 		"effundo": {
 			"senses": [
 				"wylać",
@@ -1451,6 +1574,13 @@
 			"senses": [
 				"ja"
 			]
+		},
+		"eia": {
+			"senses": [
+				"nuże",
+				"otóż"
+			],
+			"note": "Wykrzyknik zachęty. Jego i jest samogłoskowe, a ei stanowi dyftong — stąd dwie sylaby i brak akcentu."
 		},
 		"electus": {
 			"senses": [
@@ -1498,6 +1628,26 @@
 			],
 			"note": "Nigdy nie stoi na początku zdania: łacina wsuwa je na drugie miejsce."
 		},
+		"eo": {
+			"senses": [
+				"iść",
+				"udać się"
+			],
+			"note": "Czasownik nieregularny: sam rdzeń bywa jedną literą (it — idzie), a tryb rozkazujący liczby mnogiej brzmi ite.",
+			"derivatives": [
+				"tranzyt",
+				"ambicja"
+			]
+		},
+		"ergo": {
+			"senses": [
+				"więc",
+				"przeto"
+			],
+			"derivatives": [
+				"ergo"
+			]
+		},
 		"eripio": {
 			"senses": [
 				"wyrwać",
@@ -1528,6 +1678,17 @@
 			],
 			"note": "Złożenie et (i) + jam (już)."
 		},
+		"evangelium": {
+			"senses": [
+				"Ewangelia",
+				"dobra nowina"
+			],
+			"note": "Z greckiego euangélion — dobra wieść; łacina przejęła to słowo bez tłumaczenia.",
+			"derivatives": [
+				"ewangelia",
+				"ewangelicki"
+			]
+		},
 		"ex": {
 			"senses": [
 				"z, ze (z wnętrza czegoś)",
@@ -1549,6 +1710,13 @@
 			],
 			"note": "„In excélsis” — na wysokościach, czyli w niebiosach; liczba mnoga za hebrajskim zwyczajem psalmów."
 		},
+		"exilium": {
+			"senses": [
+				"wygnanie",
+				"obczyzna"
+			],
+			"note": "Od ex + solum (ziemia): stan tego, kto jest poza swoją ziemią."
+		},
 		"exspecto": {
 			"senses": [
 				"oczekiwać",
@@ -1556,6 +1724,12 @@
 				"wyglądać czegoś"
 			],
 			"note": "Złożenie ex + spectáre (patrzeć) — wypatrywać czegoś; część wydań drukuje uproszczoną pisownię „expécto”."
+		},
+		"exsul": {
+			"senses": [
+				"wygnaniec"
+			],
+			"note": "Rzeczownik tego samego rdzenia co exílium."
 		},
 		"exsultatio": {
 			"senses": [
@@ -1662,6 +1836,12 @@
 			],
 			"note": "Czasownik nieregularny; służy za stronę bierną do „fácere” (czynić)."
 		},
+		"fleo": {
+			"senses": [
+				"płakać",
+				"opłakiwać"
+			]
+		},
 		"formo": {
 			"senses": [
 				"kształtować",
@@ -1715,6 +1895,12 @@
 				"mający nastąpić"
 			],
 			"note": "Pierwotnie imiesłów przyszły od sum; łacina używa go także samodzielnie jako przymiotnika, a w liczbie mnogiej nijakiej — „przyszłe rzeczy”."
+		},
+		"gemo": {
+			"senses": [
+				"jęczeć",
+				"wzdychać"
+			]
 		},
 		"genetrix": {
 			"senses": [
@@ -1801,6 +1987,16 @@
 			"senses": [
 				"mieszkanie",
 				"siedziba"
+			]
+		},
+		"habito": {
+			"senses": [
+				"mieszkać",
+				"zamieszkać"
+			],
+			"note": "Forma częstotliwa od hábeo (mieć): mieszkać to mieć raz po raz, trzymać się miejsca.",
+			"derivatives": [
+				"habitat"
 			]
 		},
 		"hic": {
@@ -1924,12 +2120,33 @@
 			],
 			"note": "Od libáre — ujmować coś z ofiary; illibátus to takie, z czego nic nie ubyło."
 		},
+		"illumino": {
+			"senses": [
+				"oświecać",
+				"opromieniać"
+			],
+			"derivatives": [
+				"iluminacja",
+				"iluminator"
+			]
+		},
 		"immaculatus": {
 			"senses": [
 				"niepokalany",
 				"nieskalany"
 			],
 			"note": "Od mácula — plama; dosłownie „bez plamy”."
+		},
+		"impero": {
+			"senses": [
+				"rozkazać",
+				"władać"
+			],
+			"note": "Rządzi celownikiem: rozkazuje się komuś, nie kogoś.",
+			"derivatives": [
+				"imperator",
+				"imperatyw"
+			]
 		},
 		"impius": {
 			"senses": [
@@ -2013,6 +2230,16 @@
 				"inferno"
 			]
 		},
+		"infernus": {
+			"senses": [
+				"piekło",
+				"otchłań"
+			],
+			"note": "Od inférus (dolny): miejsce położone niżej niż wszystko inne.",
+			"derivatives": [
+				"infernalny"
+			]
+		},
 		"ingredior": {
 			"senses": [
 				"wchodzić",
@@ -2051,6 +2278,16 @@
 			],
 			"note": "Zaprzeczone æquus (równy, słuszny): in- + æquus."
 		},
+		"initium": {
+			"senses": [
+				"początek"
+			],
+			"note": "Rzeczownik od íneo (wchodzić): to, w co się wchodzi najpierw.",
+			"derivatives": [
+				"inicjał",
+				"inicjacja"
+			]
+		},
 		"innocens": {
 			"senses": [
 				"niewinny",
@@ -2067,6 +2304,13 @@
 			"senses": [
 				"niezliczony"
 			]
+		},
+		"insidiae": {
+			"senses": [
+				"zasadzka",
+				"podstęp"
+			],
+			"note": "Rzeczownik tylko w liczbie mnogiej; dosłownie „siedzenie w ukryciu” (in + sédeo)."
 		},
 		"institutio": {
 			"senses": [
@@ -2221,6 +2465,12 @@
 			],
 			"note": "Greckie κύριε, wołacz od κύριος „pan”. Żaden słownik łaciny nie notuje tego słowa osobno — łacina wzięła całą formułę: Niermeyer ma hasło kyrie-eleison na oznaczenie samego śpiewu, a Du Cange kyrieles „litania” i czasownik kyrieleisare „śpiewać Kyrie eleison”."
 		},
+		"lacryma": {
+			"senses": [
+				"łza"
+			],
+			"note": "Zapis lacryma i lacrima to to samo słowo; y weszło wtedy, gdy widziano w nim greckie pochodzenie."
+		},
 		"laetifico": {
 			"senses": [
 				"rozweselać",
@@ -2300,6 +2550,13 @@
 				"kolokwium"
 			]
 		},
+		"luceo": {
+			"senses": [
+				"świecić",
+				"jaśnieć"
+			],
+			"note": "Ten sam rdzeń co lux. Czasownik nieprzechodni: światło samo świeci, nie oświeca czegoś."
+		},
 		"lumen": {
 			"senses": [
 				"światło",
@@ -2350,6 +2607,16 @@
 			],
 			"derivatives": [
 				"majestat"
+			]
+		},
+		"malignus": {
+			"senses": [
+				"złośliwy",
+				"zły"
+			],
+			"note": "Złożenie malus + gigno: taki, kto rodzi zło. Przeciwieństwem jest benígnus.",
+			"derivatives": [
+				"maligna"
 			]
 		},
 		"malum": {
@@ -2475,6 +2742,17 @@
 				"mój"
 			]
 		},
+		"militia": {
+			"senses": [
+				"wojsko",
+				"służba wojskowa"
+			],
+			"note": "Od miles, mílitis (żołnierz).",
+			"derivatives": [
+				"milicja",
+				"militarny"
+			]
+		},
 		"mirabilis": {
 			"senses": [
 				"godny podziwu",
@@ -2516,6 +2794,37 @@
 				"litościwy"
 			],
 			"note": "Złożenie miser (nieszczęsny) + cor (serce): mający serce dla nieszczęśliwego."
+		},
+		"miseror": {
+			"senses": [
+				"litować się",
+				"zmiłować się"
+			],
+			"note": "Deponens: forma bierna, znaczenie czynne. Imiesłów miseránte jest formy czynnej, jak u wszystkich deponensów."
+		},
+		"missa": {
+			"senses": [
+				"Msza",
+				"rozesłanie zgromadzenia"
+			],
+			"note": "Późnołaciński rzeczownik urobiony od missus (odesłany). Od tego jednego słowa wzięła nazwę cała liturgia — missa, msza, Messe, Mass.",
+			"derivatives": [
+				"msza",
+				"mszał"
+			]
+		},
+		"mitto": {
+			"senses": [
+				"posłać",
+				"wysłać",
+				"puścić"
+			],
+			"note": "Od jego imiesłowu missus pochodzi missa — nazwa Mszy.",
+			"derivatives": [
+				"misja",
+				"misjonarz",
+				"emisja"
+			]
 		},
 		"modus": {
 			"senses": [
@@ -2651,6 +2960,29 @@
 				"negliż"
 			]
 		},
+		"neque": {
+			"senses": [
+				"ani",
+				"i nie"
+			],
+			"note": "To samo słowo co nec, tylko w pełnej postaci."
+		},
+		"nequitia": {
+			"senses": [
+				"nikczemność",
+				"przewrotność"
+			],
+			"note": "Od nequam — nicpoń, człowiek do niczego."
+		},
+		"nihil": {
+			"senses": [
+				"nic"
+			],
+			"note": "Nieodmienne. Ze złożenia ne + hilum, gdzie hilum to znaczek na ziarnku fasoli — „ani tyle”.",
+			"derivatives": [
+				"nihilizm"
+			]
+		},
 		"nimis": {
 			"senses": [
 				"zbytnio",
@@ -2724,6 +3056,12 @@
 				"teraz"
 			]
 		},
+		"o": {
+			"senses": [
+				"o"
+			],
+			"note": "Wykrzyknik wołacza: nie tłumaczy się go osobno, tylko wzmacnia zwrot do kogoś."
+		},
 		"ob": {
 			"senses": [
 				"ze względu na",
@@ -2739,6 +3077,17 @@
 			"note": "Rzeczownik od offérre — to, co przyniesiono przed Boga.",
 			"derivatives": [
 				"oblat"
+			]
+		},
+		"obsequium": {
+			"senses": [
+				"hołd",
+				"służba oddana komuś",
+				"posłuszeństwo"
+			],
+			"note": "Od ob + sequor — iść za kimś; stąd służba okazywana temu, za kim się idzie.",
+			"derivatives": [
+				"obsekwie"
 			]
 		},
 		"oculus": {
@@ -3037,6 +3386,13 @@
 				"percepcja"
 			]
 		},
+		"perditio": {
+			"senses": [
+				"zguba",
+				"zatracenie"
+			],
+			"note": "Rzeczownik od perdo (zgubić, zniszczyć)."
+		},
 		"perdo": {
 			"senses": [
 				"zatracać",
@@ -3058,6 +3414,13 @@
 				"przenieść"
 			],
 			"note": "Złożenie per + fero; nieregularne jak fero, którego formy bierze z trzech różnych rdzeni."
+		},
+		"perhibeo": {
+			"senses": [
+				"dawać (świadectwo)",
+				"przytaczać"
+			],
+			"note": "Złożenie per + hábeo. W łacinie biblijnej niemal wyłącznie w zwrocie testimónium perhibére — dawać świadectwo."
 		},
 		"permitto": {
 			"senses": [
@@ -3091,6 +3454,16 @@
 				"perturbacja"
 			]
 		},
+		"pervagor": {
+			"senses": [
+				"krążyć",
+				"błąkać się po czymś"
+			],
+			"note": "Deponens: forma bierna, znaczenie czynne. Złożenie per + vagor — wędrować wzdłuż i wszerz.",
+			"derivatives": [
+				"wagabunda"
+			]
+		},
 		"pes": {
 			"senses": [
 				"noga",
@@ -3118,6 +3491,17 @@
 				"pobożność"
 			],
 			"note": "U Rzymian powinność wobec rodziców, bogów i ojczyzny — stąd pius Æneas. O Bogu mówi się nią o Jego wierności wobec nas.",
+			"derivatives": [
+				"pietyzm"
+			]
+		},
+		"pius": {
+			"senses": [
+				"pobożny",
+				"łaskawy",
+				"czuły"
+			],
+			"note": "Rzymska píetas to wierność wobec bogów, rodziców i ojczyzny; przymiotnik niesie całą tę wierność.",
 			"derivatives": [
 				"pietyzm"
 			]
@@ -3156,6 +3540,15 @@
 			"derivatives": [
 				"plenum",
 				"plenarny"
+			]
+		},
+		"post": {
+			"senses": [
+				"po",
+				"za"
+			],
+			"derivatives": [
+				"postscriptum"
 			]
 		},
 		"postquam": {
@@ -3209,6 +3602,13 @@
 			],
 			"note": "Dosłownie „bardzo jasny”; præ- wzmacnia, a nie znaczy „przed”."
 		},
+		"praelium": {
+			"senses": [
+				"bitwa",
+				"walka"
+			],
+			"note": "Pisownia prælium i proelium to jedno słowo; księgi liturgiczne drukują prælium."
+		},
 		"praeparo": {
 			"senses": [
 				"przygotować"
@@ -3225,6 +3625,17 @@
 				"bieżący"
 			],
 			"note": "Pierwotnie imiesłów czynny od præesse — być przy czymś; stąd „obecny” i „teraźniejszy” zarazem."
+		},
+		"praesidium": {
+			"senses": [
+				"obrona",
+				"warownia",
+				"załoga"
+			],
+			"note": "Od præsídeo — siedzieć na przedzie, strzec.",
+			"derivatives": [
+				"prezydium"
+			]
 		},
 		"praesto": {
 			"senses": [
@@ -3282,6 +3693,18 @@
 				"prymitywny"
 			]
 		},
+		"princeps": {
+			"senses": [
+				"pierwszy",
+				"wódz",
+				"książę"
+			],
+			"note": "Złożenie primus + cápio: ten, kto zajmuje pierwsze miejsce.",
+			"derivatives": [
+				"pryncypał",
+				"pryncypialny"
+			]
+		},
 		"principium": {
 			"senses": [
 				"początek",
@@ -3321,6 +3744,15 @@
 				"profit"
 			]
 		},
+		"promissio": {
+			"senses": [
+				"obietnica"
+			],
+			"note": "Rzeczownik od promítto (posłać naprzód, obiecać) — z tego samego mitto, co missa.",
+			"derivatives": [
+				"promesa"
+			]
+		},
 		"propheta": {
 			"senses": [
 				"prorok"
@@ -3330,12 +3762,29 @@
 				"profetyczny"
 			]
 		},
+		"propitiabilis": {
+			"senses": [
+				"przebłagalny",
+				"jednający łaskę"
+			],
+			"note": "Słowo późne i rzadkie, urobione od propitius: takie, przez które przebłaganie się dokonuje."
+		},
 		"propitius": {
 			"senses": [
 				"łaskawy",
 				"przychylny"
 			],
 			"note": "Słowo z rzymskiego języka ofiar: bóstwo propítium to takie, które ofiarę przyjęło."
+		},
+		"proprius": {
+			"senses": [
+				"własny",
+				"właściwy komuś"
+			],
+			"note": "Stąd proprium — te części Mszy, które są właściwe danemu dniu, w odróżnieniu od niezmiennego ordinarium.",
+			"derivatives": [
+				"apropriacja"
+			]
 		},
 		"propter": {
 			"senses": [
@@ -3407,6 +3856,13 @@
 				"czemu"
 			],
 			"note": "Zrosło się z qua re — z jakiej przyczyny."
+		},
+		"quasi": {
+			"senses": [
+				"jakby",
+				"niby"
+			],
+			"note": "Zrost quam + si, „jak gdyby”. Nie stawia znaku równości, lecz mówi o podobieństwie."
 		},
 		"qui": {
 			"senses": [
@@ -3489,6 +3945,17 @@
 				"ratyfikacja"
 			]
 		},
+		"recipio": {
+			"senses": [
+				"przyjąć",
+				"odebrać"
+			],
+			"note": "Złożenie re + cápio: wziąć do siebie to, co przychodzi.",
+			"derivatives": [
+				"recepcja",
+				"recepta"
+			]
+		},
 		"reddo": {
 			"senses": [
 				"oddać",
@@ -3549,6 +4016,12 @@
 				"wytchnienie"
 			],
 			"note": "Dosłownie „ochłodzenie”. W starochrześcijańskich napisach nagrobnych to zwykłe słowo na miejsce spoczynku zmarłych, a rzymskie rodziny urządzały na grobach posiłek zwany refrigérium."
+		},
+		"regina": {
+			"senses": [
+				"królowa"
+			],
+			"note": "Żeńska postać od rex, regis."
 		},
 		"regno": {
 			"senses": [
@@ -3771,6 +4244,13 @@
 			],
 			"note": "Ten sam wyraz, użyty rzeczownikowo, daje salutáre — zbawienie."
 		},
+		"salveo": {
+			"senses": [
+				"być zdrowym",
+				"mieć się dobrze"
+			],
+			"note": "Praktycznie tylko w trybie rozkazującym: salve i salvéte to rzymskie powitanie — „bądź zdrów”."
+		},
 		"salvus": {
 			"senses": [
 				"bezpieczny",
@@ -3823,6 +4303,15 @@
 			"derivatives": [
 				"sanacja",
 				"sanatorium"
+			]
+		},
+		"satanas": {
+			"senses": [
+				"szatan"
+			],
+			"note": "Z hebrajskiego przez grekę: przeciwnik, oskarżyciel. Odmienia się jak rzeczowniki I deklinacji rodzaju męskiego pochodzenia greckiego.",
+			"derivatives": [
+				"szatan"
 			]
 		},
 		"scelus": {
@@ -3988,6 +4477,15 @@
 			],
 			"derivatives": [
 				"symultaniczny"
+			]
+		},
+		"sine": {
+			"senses": [
+				"bez"
+			],
+			"note": "Rządzi ablativem — przeciwieństwo przyimka cum, który rządzi tym samym przypadkiem.",
+			"derivatives": [
+				"synekura"
 			]
 		},
 		"societas": {
@@ -4176,6 +4674,12 @@
 				"podejmować"
 			]
 		},
+		"suspiro": {
+			"senses": [
+				"wzdychać"
+			],
+			"note": "Złożenie sub + spiro: oddech idący z głębi."
+		},
 		"suus": {
 			"senses": [
 				"swój"
@@ -4226,6 +4730,13 @@
 				"temporalny"
 			]
 		},
+		"tenebrae": {
+			"senses": [
+				"ciemności",
+				"mrok"
+			],
+			"note": "Rzeczownik występuje tylko w liczbie mnogiej. Od niego wzięły nazwę Tenebrae — jutrznie Wielkiego Tygodnia."
+		},
 		"tentatio": {
 			"senses": [
 				"pokusa",
@@ -4261,6 +4772,12 @@
 			"derivatives": [
 				"testament"
 			]
+		},
+		"testimonium": {
+			"senses": [
+				"świadectwo"
+			],
+			"note": "Od testis (świadek)."
 		},
 		"tollo": {
 			"senses": [
@@ -4411,6 +4928,11 @@
 				"utylitarny"
 			]
 		},
+		"vallis": {
+			"senses": [
+				"dolina"
+			]
+		},
 		"vel": {
 			"senses": [
 				"albo",
@@ -4502,6 +5024,17 @@
 				"wasz"
 			],
 			"note": "Zaimek dzierżawczy drugiej osoby liczby mnogiej. Jego forma vestri służy zarazem za dopełniacz zaimka vos."
+		},
+		"video": {
+			"senses": [
+				"widzieć",
+				"zobaczyć"
+			],
+			"derivatives": [
+				"wideo",
+				"wizja",
+				"rewizja"
+			]
 		},
 		"vinum": {
 			"senses": [
