@@ -1,6 +1,7 @@
 // Navigation catalog: which texts exist and how they group. Content itself
 // lives in the corpus data (lib/data); this file only orders and labels it.
 import type { Lang } from './i18n';
+import { bindPlFields } from './polish';
 
 export interface CatalogText {
 	category: string;
@@ -15,7 +16,7 @@ export interface CatalogSection {
 	texts: CatalogText[];
 }
 
-export const CATALOG: CatalogSection[] = [
+const CATALOG_SOURCE: CatalogSection[] = [
 	{
 		category: 'orationes',
 		label: { pl: 'modlitwy', en: 'prayers' },
@@ -77,6 +78,10 @@ export const CATALOG: CatalogSection[] = [
 		]
 	}
 ];
+
+/** Polish one-letter words bound to what follows (lib/polish); Latin
+ * titles and English prose in the same objects are untouched. */
+export const CATALOG: CatalogSection[] = bindPlFields(CATALOG_SOURCE);
 
 export function sectionFor(category: string): CatalogSection | undefined {
 	return CATALOG.find((s) => s.category === category);

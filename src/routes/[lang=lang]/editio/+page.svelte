@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>{lang === 'pl' ? 'o wydaniu' : 'about this edition'} — Scrutabor</title>
+	<title>{lang === 'pl' ? 'o\u00a0wydaniu' : 'about this edition'} — Scrutabor</title>
 	<meta name="description" content={msgs.editioDescription} />
 </svelte:head>
 
@@ -23,41 +23,39 @@
 	</nav>
 
 	<main>
-		<h1>{lang === 'pl' ? 'o wydaniu' : 'about this edition'}</h1>
+		<h1>{lang === 'pl' ? 'o\u00a0wydaniu' : 'about this edition'}</h1>
 		<p class="latin-name" lang="la">de editione</p>
 
 		{#if lang === 'pl'}
 			<p class="what">
 				Teksty tego wydania są przepisane litera po literze ze źródeł publicznie dostępnych —
-				świadków tekstu, czyli ksiąg i wydań liturgii z 1962 roku — a następnie porównane z nimi
-				słowo po słowie. W samych literach nie dopuszczamy żadnej rozbieżności; różnice drugorzędne
-				(interpunkcja, wielkie litery) są rozstrzygane, a każde rozstrzygnięcie jest zapisane wraz z
-				uzasadnieniem w aparacie krytycznym. Źródła, aparat krytyczny i wszystkie dane wydania są
-				jawne w
-				<a
+				świadków tekstu, czyli ksiąg i&nbsp;wydań liturgii z&nbsp;1962 roku — a&nbsp;następnie
+				porównane z&nbsp;nimi słowo po słowie. W&nbsp;samych literach nie dopuszczamy żadnej
+				rozbieżności; różnice drugorzędne (interpunkcja, wielkie litery) są rozstrzygane,
+				a&nbsp;każde rozstrzygnięcie jest zapisane wraz z&nbsp;uzasadnieniem w&nbsp;aparacie
+				krytycznym. Źródła, aparat krytyczny i&nbsp;wszystkie dane wydania są jawne w&nbsp;<a
 					href="https://github.com/scrutabor/scrutabor-corpus"
 					target="_blank"
 					rel="external noopener">repozytorium korpusu</a
 				>.
 			</p>
 			<p class="what">
-				Analiza każdego słowa — lemat i rozbiór gramatyczny — jest sprawdzana mechanicznie przez dwa
-				niezależne, otwarte analizatory łaciny:
+				Analiza każdego słowa — lemat i&nbsp;rozbiór gramatyczny — jest sprawdzana mechanicznie
+				przez dwa niezależne, otwarte analizatory łaciny:
 				<a href="https://github.com/mk270/whitakers-words" target="_blank" rel="external noopener"
 					>Whitaker's Words</a
 				>
-				i
-				<a
+				i&nbsp;<a
 					href="https://outils.biblissima.fr/en/collatinus/"
 					target="_blank"
 					rel="external noopener">Collatinus</a
 				>. Przy każdym słowie panel wymienia, kto potwierdził jego rozbiór; „opracowanie” to praca
-				własna wydania — glosy, przekłady i objaśnienia.
+				własna wydania — glosy, przekłady i&nbsp;objaśnienia.
 			</p>
 			<p class="what">
-				„Zaakceptowane” przy słowie znaczy: rozbiór zgodny z głosami analizatorów; „do przeglądu” —
-				ta część czeka jeszcze na weryfikację. Całość pozostaje
-				<strong>wydaniem roboczym</strong> do czasu przeglądu przez latynistę; błędy są możliwe, a uwagi
+				„Zaakceptowane” przy słowie znaczy: rozbiór zgodny z&nbsp;głosami analizatorów; „do
+				przeglądu” — ta część czeka jeszcze na weryfikację. Całość pozostaje
+				<strong>wydaniem roboczym</strong> do czasu przeglądu przez latynistę; błędy są możliwe, a&nbsp;uwagi
 				mile widziane.
 			</p>
 		{:else}

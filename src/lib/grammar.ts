@@ -5,6 +5,7 @@
 // a wrong reference fails the prerender, not the reader.
 import { TEXTS } from './corpus';
 import type { Lang } from './i18n';
+import { bindPlFields } from './polish';
 
 export type ConceptGroup = 'casus' | 'verbum' | 'syntaxis';
 
@@ -36,7 +37,7 @@ export const CONCEPT_GROUPS: Record<ConceptGroup, Record<Lang, string>> = {
 	syntaxis: { pl: 'składnia', en: 'syntax' }
 };
 
-export const CONCEPTS: Concept[] = [
+const CONCEPTS_SOURCE: Concept[] = [
 	{
 		id: 'nominativus',
 		group: 'casus',
@@ -430,6 +431,10 @@ export const CONCEPTS: Concept[] = [
 		]
 	}
 ];
+
+/** Polish one-letter words bound to what follows (lib/polish); Latin
+ * titles and English prose in the same objects are untouched. */
+export const CONCEPTS: Concept[] = bindPlFields(CONCEPTS_SOURCE);
 
 export function conceptById(id: string): Concept | undefined {
 	return CONCEPTS.find((c) => c.id === id);

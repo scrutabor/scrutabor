@@ -13,6 +13,7 @@
 // rather than guessed: a companion that is wrong about when something is
 // omitted is worse than one that is silent.
 import type { Lang } from './i18n';
+import { bindPlFields } from './polish';
 
 export type OrdoKind =
 	/** a fixed text this edition carries — `text` names the corpus key */
@@ -37,7 +38,7 @@ export interface OrdoSection {
 	entries: OrdoEntry[];
 }
 
-export const ORDO: OrdoSection[] = [
+const ORDO_SOURCE: OrdoSection[] = [
 	{
 		id: 'missa-catechumenorum',
 		label: { pl: 'msza katechumenów', en: 'mass of the catechumens' },
@@ -419,3 +420,7 @@ export const ORDO: OrdoSection[] = [
 		]
 	}
 ];
+
+/** Polish one-letter words bound to what follows (lib/polish); Latin
+ * titles and English prose in the same objects are untouched. */
+export const ORDO: OrdoSection[] = bindPlFields(ORDO_SOURCE);

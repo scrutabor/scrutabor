@@ -1,4 +1,5 @@
 // UI strings live here; corpus content lives in the gloss layers.
+import { bindProse } from './polish';
 export type Lang = 'pl' | 'en';
 
 // English first, everywhere a language list renders (owner rule).
@@ -41,7 +42,7 @@ export interface Messages {
 	pronunciationHint: string;
 }
 
-export const M: Record<Lang, Messages> = {
+const MESSAGES: Record<Lang, Messages> = {
 	pl: {
 		langName: 'Polski',
 		tagline: 'Módl się po łacinie ze zrozumieniem.',
@@ -72,10 +73,8 @@ export const M: Record<Lang, Messages> = {
 		goHome: 'wróć na stronę główną',
 		aboutLabel: 'o modlitwie',
 		pagerAria: 'sąsiednie teksty',
-		// NBSP after the one-letter preposition: Polish typography does not
-		// leave 'z' hanging at the end of a line.
-		ordoLead: 'porządek Mszy świętej według Mszału Rzymskiego z\u00a01962 roku',
-		ordoSubtitle: 'Mszał Rzymski z\u00a01962 roku',
+		ordoLead: 'porządek Mszy świętej według Mszału Rzymskiego z 1962 roku',
+		ordoSubtitle: 'Mszał Rzymski z 1962 roku',
 		ordoDescription:
 			'Cały porządek Mszy w rycie z 1962 roku, część po części — z tekstami stałymi i miejscami, w których wchodzą teksty własne dnia.',
 		ordoProper: 'z formularza dnia',
@@ -125,6 +124,10 @@ export const M: Record<Lang, Messages> = {
 		pronunciationHint: 'pronunciation guide'
 	}
 };
+
+// Polish one-letter words are bound to what follows them (see lib/polish);
+// English needs nothing of the kind.
+export const M: Record<Lang, Messages> = { en: MESSAGES.en, pl: bindProse(MESSAGES.pl) };
 
 export function otherLang(lang: Lang): Lang {
 	return lang === 'pl' ? 'en' : 'pl';

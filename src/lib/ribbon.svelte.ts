@@ -8,6 +8,8 @@
 // languages resumes in place, and expire after twelve hours: a return
 // mid-Mass resumes, next Sunday opens at the top.
 
+import { afterNavigate } from '$app/navigation';
+
 const TTL = 12 * 60 * 60 * 1000;
 
 // A physical ribbon does not move because the book was closed: this one
@@ -53,36 +55,22 @@ export function ribbon(key: () => string, skip: () => boolean = () => false) {
 		};
 	});
 
-	$effect(() => {
-		const k = key();
-		// The router applies its own scroll at its own pace — a reset to the
-		// top on a fresh entry, the recorded position on history back — and
-		// it can land either side of us. So watch a short window instead of
-		// racing it: while the page sits where we put it, keep laying the
-		// ribbon back down; the moment the scroll is anywhere else, stop and
-		// leave it alone.
-		// A frame budget is a machine-speed budget in disguise: under load the
-		// router can take longer than any fixed number of frames. Watch by
-		// the clock instead — the loop still stops the instant the scroll is
-		// somewhere we did not put it.
-		const until = performance.now() + 1000;
-		let live = true;
-		let placed = 0;
-		const attempt = () => {
-			if (!live || performance.now() > until || skip()) return;
-			const y = window.scrollY;
-			if (y > 8 && Math.abs(y - placed) > 2) return; // not ours: someone means it
-			const target = read(k);
-			if (target === null) return;
-			if (y !== target) {
-				window.scrollTo({ top: target, behavior: 'auto' });
-				placed = target;
-			}
-			requestAnimationFrame(attempt);
-		};
-		requestAnimationFrame(attempt);
-		return () => {
-			live = false;
-		};
+	// Restore when the router says it is done, not on a timer: afterNavigate
+	// fires once the new page is in place and SvelteKit has applied its own
+	// scroll — a reset to the top on a fresh entry, or a real recorded
+	// position on history back. Polling for that moment worked until the
+	// machine was busy, which is exactly when it must not fail.
+	afterNavigate(() => {
+		if (skip()) return;
+		// The router put the reader somewhere on purpose — leave it.
+		if (window.scrollY > 8) return;
+		const target = read(key());
+		if (target === null) return;
+		const apply = () => window.scrollTo({ top: target, behavior: 'auto' });
+		apply();
+		// Two frames of insurance for any scroll the browser applies late
+		// (restoration on reload arrives after the first paint).
+		requestAnimationFrame(apply);
+		requestAnimationFrame(() => requestAnimationFrame(apply));
 	});
 }

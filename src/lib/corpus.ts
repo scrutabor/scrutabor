@@ -30,6 +30,7 @@ import lexiconLemmata from './data/lexicon.json';
 import lexiconPl from './data/lexicon.pl.json';
 import lexiconEn from './data/lexicon.en.json';
 import type { Lang } from './i18n';
+import { bindProse } from './polish';
 
 export interface Morph {
 	pos: string;
@@ -136,14 +137,16 @@ export interface Lexicon {
 export const LEXICON: Lexicon = {
 	lemmata: lexiconLemmata.entries as Record<string, LemmaEntry>,
 	senses: {
-		pl: lexiconPl.entries as Record<string, SenseEntry>,
+		// Polish prose is bound on the way in (lib/polish); the corpus itself
+		// stores ordinary spaces, and its own checks forbid anything else.
+		pl: bindProse(lexiconPl.entries as Record<string, SenseEntry>),
 		en: lexiconEn.entries as Record<string, SenseEntry>
 	}
 };
 
 const entry = (text: unknown, pl: unknown, en: unknown): TextEntry => ({
 	text: text as TextDocument,
-	glosses: { pl: pl as GlossDocument, en: en as GlossDocument }
+	glosses: { pl: bindProse(pl as GlossDocument), en: en as GlossDocument }
 });
 
 /** Keyed by `category/slug`, matching the reading route params. */

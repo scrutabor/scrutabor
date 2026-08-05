@@ -3,6 +3,7 @@
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import { M, type Lang } from '$lib/i18n';
+	import { bindPlFields } from '$lib/polish';
 
 	const lang = $derived(page.params.lang as Lang);
 	const msgs = $derived(M[lang]);
@@ -109,7 +110,7 @@
 	];
 
 	// The ~20 symbols a reader meets, each with an anchor word.
-	const symbols: { s: string; pl: string; en: string }[] = [
+	const symbols: { s: string; pl: string; en: string }[] = bindPlFields([
 		{
 			s: 'a ɛ i ɔ u',
 			pl: 'jak polskie a, e, i, o, u',
@@ -136,7 +137,7 @@
 		},
 		{ s: 'ˈ', pl: 'akcent — pada na następną sylabę', en: 'stress — falls on the next syllable' },
 		{ s: '.', pl: 'granica sylaby', en: 'syllable boundary' }
-	];
+	]);
 </script>
 
 <svelte:head>
@@ -160,18 +161,18 @@
 		{#if lang === 'pl'}
 			<p class="what">
 				Transkrybujemy wymowę <strong>rzymską</strong> (kościelną, „włoską”) — tę, którą śpiewają
-				księgi z 1962 roku i schole gregoriańskie — a tam, gdzie polska tradycja parafialna różni
-				się od rzymskiej, pokazujemy obie: <span class="smallcaps">rz.</span>
-				(rzymska) i <span class="smallcaps">pol.</span> (polska). Za świętego Piusa X Rzym zachęcał cały
-				Kościół do wymowy rzymskiej, ale tradycje narodowe — w tym polska — przetrwały w parafiach i obie
-				są dziś w użyciu.
+				księgi z&nbsp;1962 roku i&nbsp;schole gregoriańskie — a&nbsp;tam, gdzie polska tradycja
+				parafialna różni się od rzymskiej, pokazujemy obie: <span class="smallcaps">rz.</span>
+				(rzymska) i&nbsp;<span class="smallcaps">pol.</span> (polska). Za świętego Piusa X Rzym zachęcał
+				cały Kościół do wymowy rzymskiej, ale tradycje narodowe — w&nbsp;tym polska — przetrwały w&nbsp;parafiach
+				i&nbsp;obie są dziś w&nbsp;użyciu.
 			</p>
 			<p class="what">
-				Podział na sylaby jest w obu tradycjach ten sam — w śpiewie każda sylaba dostaje swoją nutę
-				i „grá-ti-a” ma trzy sylaby w Rzymie i w Polsce. W mowie potocznej polszczyzna ściąga „-tia”
-				do jednej sylaby („gracja”); nasze transkrypcje zachowują podział śpiewany. Polska tradycja
-				nie jest też jednolita — różni się między regionami i pokoleniami; zapisujemy jej
-				najczęstszą postać.
+				Podział na sylaby jest w&nbsp;obu tradycjach ten sam — w&nbsp;śpiewie każda sylaba dostaje
+				swoją nutę i&nbsp;„grá-ti-a” ma trzy sylaby w&nbsp;Rzymie i&nbsp;w&nbsp;Polsce. W&nbsp;mowie
+				potocznej polszczyzna ściąga „-tia” do jednej sylaby („gracja”); nasze transkrypcje
+				zachowują podział śpiewany. Polska tradycja nie jest też jednolita — różni się między
+				regionami i&nbsp;pokoleniami; zapisujemy jej najczęstszą postać.
 			</p>
 		{:else}
 			<p class="what">
@@ -220,7 +221,7 @@
 			</div>
 			<p class="fine">
 				{lang === 'pl'
-					? 'Reguła „ti” nie działa po s, t, x ani na początku wyrazu (hóstia: /ˈɔ.sti.a/). S między samogłoskami dźwięcznieje w obu tradycjach (Jesus); pozostałe litery czyta się jak po polsku.'
+					? 'Reguła „ti” nie działa po s, t, x ani na początku wyrazu (hóstia: /ˈɔ.sti.a/). S między samogłoskami dźwięcznieje w\u00a0obu tradycjach (Jesus); pozostałe litery czyta się jak po polsku.'
 					: 'The “ti” rule does not apply after s, t, x, or at the start of a word (hóstia: /ˈɔ.sti.a/). S between vowels is voiced in both traditions (Jesus); other letters keep the Latin values of the symbols table — j is always /j/, never as in “joy”.'}
 			</p>
 		</section>
@@ -232,7 +233,7 @@
 					<tbody>
 						{#each symbols as row (row.s)}
 							<tr>
-								<td class="sym">{row.s}</td>
+								<td class="sym" lang="und-fonipa">{row.s}</td>
 								<td>{lang === 'pl' ? row.pl : row.en}</td>
 							</tr>
 						{/each}
