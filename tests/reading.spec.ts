@@ -510,3 +510,41 @@ test('a tapped word is highlighted on the word, not around the gloss', async ({ 
 	expect(box.onBase, 'the wash is on the Latin').not.toBe('rgba(0, 0, 0, 0)');
 	expect(box.onButton, 'and not on the whole ruby').toBe('rgba(0, 0, 0, 0)');
 });
+
+test('the highlight covers the whole of a raised initial', async ({ page }) => {
+	// The base box is sized for text at the reading size, so an initial at
+	// 1.75 pokes out of the top of it and Q's tail out of the bottom — the
+	// wash covered the word but not the letter that opens it. Padding on an
+	// inline element grows the box it paints without touching the line, so
+	// the letter is covered and the gloss stays where it is.
+	for (const [url, letter] of [
+		['/en/ordinarium/libera-nos?w=w001', 'L'], // reaches up
+		['/en/ordinarium/quod-ore-sumpsimus?w=w001', 'Q'] // and down
+	]) {
+		await page.goto(url);
+		const cover = await page.evaluate(() => {
+			const base = [...document.querySelectorAll('.word.selected .base')].find((b) =>
+				b.querySelector('.initial')
+			);
+			if (!base) return null;
+			const ini = base.querySelector('.initial')!;
+			const c = document.createElement('canvas').getContext('2d')!;
+			const cs = getComputedStyle(ini);
+			c.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+			const m = c.measureText(ini.textContent ?? '');
+			const probe = document.createElement('span');
+			probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+			ini.parentElement!.insertBefore(probe, ini.nextSibling);
+			const baseline = probe.getBoundingClientRect().top;
+			probe.remove();
+			const r = base.getBoundingClientRect();
+			return {
+				top: baseline - m.actualBoundingBoxAscent - r.top,
+				bottom: r.bottom - (baseline + m.actualBoundingBoxDescent)
+			};
+		});
+		expect(cover, `${url} has a selected initial`).not.toBeNull();
+		expect(cover!.top, `${letter} pokes out of the top of its highlight`).toBeGreaterThan(0);
+		expect(cover!.bottom, `${letter} pokes out of the bottom of its highlight`).toBeGreaterThan(0);
+	}
+});

@@ -215,6 +215,42 @@
 	// by what the tail needs, so the glosses stay level with EACH OTHER,
 	// which is the alignment a reader can see, and only sit a hair lower
 	// than the row of some other verse, which nobody can.
+	// INK reach above and below the baseline, in the letter's own em. The
+	// highlight is drawn on the base box, and that box is sized for text at
+	// the reading size: an initial at 1.75 pokes out of the top of it, and
+	// Q's tail out of the bottom. Padding on an inline element grows the
+	// box it paints without touching the line, which is exactly what is
+	// wanted — the wash covers the whole letter and the gloss does not move.
+	const INK: Record<string, [number, number]> = {
+		P: [0.658, 0.005],
+		S: [0.664, 0.016],
+		C: [0.663, 0.015],
+		A: [0.686, 0.005],
+		D: [0.659, 0.007],
+		E: [0.653, 0.005],
+		M: [0.656, 0.011],
+		Q: [0.664, 0.248],
+		I: [0.653, 0.005],
+		G: [0.663, 0.014],
+		H: [0.653, 0.005],
+		L: [0.653, 0.005],
+		O: [0.664, 0.014],
+		B: [0.657, 0.005],
+		N: [0.658, 0.017],
+		V: [0.653, 0.012],
+		T: [0.694, 0.005],
+		U: [0.653, 0.014]
+	};
+	// how far the base's own box reaches, measured, less the padding it
+	// already carries
+	const BOX_ASC = 1.073 - 0.06;
+	const BOX_DESC = 0.362 - 0.06;
+	const PAD = 0.06;
+	// The box measurement is of one rendering of one font; a hair of margin
+	// covers rounding and whatever the next environment measures instead.
+	// Without it L came out half a pixel proud of its own highlight.
+	const COVER = 0.04;
+
 	const DESCENT: Record<string, number> = { Q: 0.248 };
 	// The gloss row now sits GLOSS_GAP lower than ruby puts it, so a
 	// descender has that much more room before it: measured 0.272em from
@@ -252,7 +288,10 @@
 			// down with it: 4px measured at scale 1.75, and it scales with the
 			// extra size, so 0.333rem for every 1 of it
 			lift: (scale - 1) * 0.333,
-			sink: sinkFor(letter, glossed)
+			sink: sinkFor(letter, glossed),
+			// the wash has to cover the whole letter, top and tail
+			padTop: Math.max(PAD, (INK[letter]?.[0] ?? 0) * scale - BOX_ASC + COVER),
+			padBottom: Math.max(PAD, (INK[letter]?.[1] ?? 0) * scale - BOX_DESC + COVER)
 		};
 	}
 
@@ -267,7 +306,10 @@
 		form.slice(0, 1),
 		helpLevel >= 1
 	)}<ruby
-		><span class="base"
+		><span
+			class="base"
+			style:padding-top={raised ? `${fit.padTop}em` : null}
+			style:padding-bottom={raised ? `${fit.padBottom}em` : null}
 			>{#if raised}<span
 					class="initial"
 					style:font-size="{fit.scale}em"
