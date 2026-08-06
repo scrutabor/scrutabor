@@ -71,6 +71,14 @@
 			href: '/orationes/pater-noster?w=w003'
 		},
 		{
+			grapheme: 'i + vocalis',
+			roman: '/j/',
+			polish: '/j/',
+			example: 'Iesus',
+			exampleIpa: { pl: '/ˈjɛ.zus/', en: '/ˈjɛ.zus/' },
+			href: '/orationes/ave-maria?w=w016'
+		},
+		{
 			grapheme: 'gn',
 			roman: '/ɲ/',
 			polish: '/gn/',
@@ -88,7 +96,7 @@
 			grapheme: 's (inter vocales)',
 			roman: '/z/',
 			polish: '/z/',
-			example: 'Jesus',
+			example: 'Iesus',
 			exampleIpa: { pl: '/ˈjɛ.zus/', en: '/ˈjɛ.zus/' },
 			href: '/orationes/ave-maria?w=w016'
 		},
@@ -221,8 +229,8 @@
 			</div>
 			<p class="fine">
 				{lang === 'pl'
-					? 'Reguła „ti” nie działa po s, t, x ani na początku wyrazu (hóstia: /ˈɔ.sti.a/). S między samogłoskami dźwięcznieje w\u00a0obu tradycjach (Jesus); pozostałe litery czyta się jak po polsku.'
-					: 'The “ti” rule does not apply after s, t, x, or at the start of a word (hóstia: /ˈɔ.sti.a/). S between vowels is voiced in both traditions (Jesus); other letters keep the Latin values of the symbols table — j is always /j/, never as in “joy”.'}
+					? 'Reguła „ti” nie działa po s, t, x ani na początku wyrazu (hóstia: /ˈɔ.sti.a/). S między samogłoskami dźwięcznieje w\u00a0obu tradycjach (Iesus). Spółgłoskowe „i” nie jest osobną sylabą: Ie-sus ma dwie, ma-ie-stá-tis cztery; starsze mszaliki drukują w\u00a0tym miejscu j (Jesus, majestátis) — to ta sama głoska. Pozostałe litery czyta się jak po polsku.'
+					: 'The “ti” rule does not apply after s, t, x, or at the start of a word (hóstia: /ˈɔ.sti.a/). S between vowels is voiced in both traditions (Iesus). Consonantal i is not a syllable of its own: Ie-sus has two, ma-ie-stá-tis four; older hand missals print j here (Jesus, majestátis) for the same sound. Other letters keep the Latin values of the symbols table.'}
 			</p>
 		</section>
 

@@ -154,7 +154,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 			},
 			{
 				id: 'adiutorium',
-				title: 'Adjutórium nostrum',
+				title: 'Adiutórium nostrum',
 				kind: 'text',
 				text: 'ordinarium/adiutorium',
 				note: {
@@ -667,7 +667,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 			},
 			{
 				id: 'qui-dixisti',
-				title: 'Dómine Jesu Christe, qui dixísti',
+				title: 'Dómine Iesu Christe, qui dixísti',
 				kind: 'text',
 				text: 'ordinarium/qui-dixisti',
 				note: {
@@ -681,7 +681,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 			},
 			{
 				id: 'fili-dei-vivi',
-				title: 'Dómine Jesu Christe, Fili Dei vivi',
+				title: 'Dómine Iesu Christe, Fili Dei vivi',
 				kind: 'text',
 				text: 'ordinarium/fili-dei-vivi',
 				note: {
@@ -725,8 +725,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/ecce-agnus-dei',
 				note: {
-					pl: 'Kapłan ukazuje Hostię: Ecce Agnus Dei. Trzy razy powtarza się Dómine, non sum dignus, po czym rozdaje Komunię przy balaskach, mówiąc każdemu Corpus Dómini nostri Jesu Christi.',
-					en: 'The priest shows the Host: Ecce Agnus Dei. Dómine, non sum dignus is said three times, and he gives Communion at the rail with Corpus Dómini nostri Jesu Christi to each.'
+					pl: 'Kapłan ukazuje Hostię: Ecce Agnus Dei. Trzy razy powtarza się Dómine, non sum dignus, po czym rozdaje Komunię przy balaskach, mówiąc każdemu Corpus Dómini nostri Iesu Christi.',
+					en: 'The priest shows the Host: Ecce Agnus Dei. Dómine, non sum dignus is said three times, and he gives Communion at the rail with Corpus Dómini nostri Iesu Christi to each.'
 				},
 				when: {
 					pl: 'gdy wierni przystępują do Komunii',
@@ -836,8 +836,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Preces Leonínæ',
 				kind: 'pending',
 				note: {
-					pl: 'Po Mszy cichej kapłan klęka u stopni i odmawia z ludem modlitwy przepisane przez Leona XIII: trzy Zdrowaś Maryjo, Salve Regína z wersetem i modlitwą, wezwanie do świętego Michała i trzykrotne Cor Jesu sacratíssimum. To wydanie ma na razie Salve Regína i modlitwę do świętego Michała.',
-					en: 'After low Mass the priest kneels at the foot of the altar and says with the people the prayers Leo XIII prescribed: three Hail Marys, the Salve Regína with its versicle and prayer, the invocation of St Michael, and Cor Jesu sacratíssimum three times. This edition carries the Salve Regína and the prayer to St Michael so far.'
+					pl: 'Po Mszy cichej kapłan klęka u stopni i odmawia z ludem modlitwy przepisane przez Leona XIII: trzy Zdrowaś Maryjo, Salve Regína z wersetem i modlitwą, wezwanie do świętego Michała i trzykrotne Cor Iesu sacratíssimum. To wydanie ma na razie Salve Regína i modlitwę do świętego Michała.',
+					en: 'After low Mass the priest kneels at the foot of the altar and says with the people the prayers Leo XIII prescribed: three Hail Marys, the Salve Regína with its versicle and prayer, the invocation of St Michael, and Cor Iesu sacratíssimum three times. This edition carries the Salve Regína and the prayer to St Michael so far.'
 				},
 				when: {
 					pl: 'po Mszy cichej; opuszcza się je po Mszy śpiewanej',

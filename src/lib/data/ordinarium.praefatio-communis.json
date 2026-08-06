@@ -7,7 +7,7 @@
 	"variant": "missae",
 	"sung": true,
 	"status": "working-edition",
-	"notes": "The common Preface, said on most weekdays and whenever no proper Preface is assigned. Its own document because it is one of several Prefaces that occupy the same slot; the dialogue before it and the Sanctus after it are separate documents for the same reason. SALUTÁRE at w008 is the neuter of the adjective salutáris, standing in a series with dignum, justum and æquum, not the noun salutáre (salvation) that the corpus already carries at ordinarium.gloria: the agreement report records the divergence, since Whitaker's Words heads only the noun. DOMINATIÓNES at w033 and POTESTÁTES at w035 are nominative subjects of adórant and tremunt, not further objects of laudant; the forms are identical in both cases and the reading rests on the three parallel verbs, each of which needs a subject. SÉRAPHIM at w041 is indeclinable; the case and number are those the sentence requires and that beáta agrees with, not marks the form carries. SÓCIA at w042 is ablative with exsultatióne, not nominative with the subjects. QUIBUS at w046 carries no gender: the antecedent is the whole company of angels, of more than one grammatical gender, and the form marks none. Witness handmissal-eo prints ætérnæ Deus for ætérne Deus; that is a printer's slip, declared as a corrigendum in the witness header and not a variant.",
+	"notes": "The common Preface, said on most weekdays and whenever no proper Preface is assigned. Its own document because it is one of several Prefaces that occupy the same slot; the dialogue before it and the Sanctus after it are separate documents for the same reason. SALUTÁRE at w008 is the neuter of the adjective salutáris, standing in a series with dignum, iustum and æquum, not the noun salutáre (salvation) that the corpus already carries at ordinarium.gloria: the agreement report records the divergence, since Whitaker's Words heads only the noun. DOMINATIÓNES at w033 and POTESTÁTES at w035 are nominative subjects of adórant and tremunt, not further objects of laudant; the forms are identical in both cases and the reading rests on the three parallel verbs, each of which needs a subject. SÉRAPHIM at w041 is indeclinable; the case and number are those the sentence requires and that beáta agrees with, not marks the form carries. SÓCIA at w042 is ablative with exsultatióne, not nominative with the subjects. QUIBUS at w046 carries no gender: the antecedent is the whole company of angels, of more than one grammatical gender, and the form marks none. Witness handmissal-eo prints ætérnæ Deus for ætérne Deus; that is a printer's slip, declared as a corrigendum in the witness header and not a variant.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence once the corrigendum declared in the handmissal-eo witness header is applied. Accidental variants adjudicated in the apparatus.",
 		"witnesses": "witnesses/ordinarium.praefatio-communis/",
@@ -33,7 +33,7 @@
 		{
 			"id": "s01",
 			"type": "rubric",
-			"text": "Deinde disjungit manus, et disjunctas tenet usque ad finem Præfationis: qua finita, iterum jungit eas, et inclinatus dicit: Sanctus.",
+			"text": "Deinde disiungit manus, et disiunctas tenet usque ad finem Præfationis: qua finita, iterum iungit eas, et inclinatus dicit: Sanctus.",
 			"analysis": {
 				"confidence": "high",
 				"sources": [
@@ -78,21 +78,13 @@
 				},
 				{
 					"id": "w004",
-					"form": "justum",
+					"form": "iustum",
 					"lemma": "iustus",
 					"morph": {
 						"pos": "adj",
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -364,7 +356,7 @@
 				},
 				{
 					"id": "w028",
-					"form": "majestátem",
+					"form": "maiestátem",
 					"lemma": "maiestas",
 					"morph": {
 						"pos": "noun",
@@ -372,14 +364,6 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -674,7 +658,7 @@
 				},
 				{
 					"id": "w052",
-					"form": "júbeas",
+					"form": "iúbeas",
 					"post": ",",
 					"lemma": "iubeo",
 					"morph": {
@@ -685,14 +669,6 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{

@@ -33,7 +33,7 @@
 		{
 			"id": "s01",
 			"type": "rubric",
-			"text": "Deinde ad medium Altaris extendens, elevans et jungens manus, dicit, si dicendum est, Credo in unum Deum, et prosequitur junctis manibus.",
+			"text": "Deinde ad medium Altaris extendens, elevans et iungens manus, dicit, si dicendum est, Credo in unum Deum, et prosequitur iunctis manibus.",
 			"analysis": {
 				"confidence": "high",
 				"sources": [
@@ -257,21 +257,13 @@
 				},
 				{
 					"id": "w019",
-					"form": "Jesum",
+					"form": "Iesum",
 					"lemma": "Iesus",
 					"morph": {
 						"pos": "noun",
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -1382,7 +1374,7 @@
 				},
 				{
 					"id": "w107",
-					"form": "judicáre",
+					"form": "iudicáre",
 					"lemma": "iudico",
 					"morph": {
 						"pos": "verb",
@@ -1390,14 +1382,6 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 1
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -1433,21 +1417,13 @@
 				},
 				{
 					"id": "w111",
-					"form": "cujus",
+					"form": "cuius",
 					"lemma": "qui",
 					"morph": {
 						"pos": "pron",
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{

@@ -112,21 +112,13 @@
 				},
 				{
 					"id": "w006",
-					"form": "Jesum",
+					"form": "Iesum",
 					"lemma": "Iesus",
 					"morph": {
 						"pos": "noun",
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -242,7 +234,7 @@
 		{
 			"id": "s03",
 			"type": "rubric",
-			"text": "Osculatur Altare et, junctis manibus ante pectus, dicit:",
+			"text": "Osculatur Altare et, iunctis manibus ante pectus, dicit:",
 			"analysis": {
 				"confidence": "high",
 				"sources": [

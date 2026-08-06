@@ -3,7 +3,7 @@
 	"text": "ordinarium.communicantes",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Twelve apostles and twelve martyrs. Paul stands among the apostles in place of Matthias — Rome counted the college its own way. The martyrs are five popes (Linus, Cletus, Clement, Sixtus, Cornelius), Cyprian the bishop of Carthage, Lawrence the deacon, and after them Chrysogonus, John and Paul, Cosmas and Damian. The name of St Joseph was put here by John XXIII in 1962: the first change to the Canon since the missal of Pius V. The whole sentence is one chain of genitives hanging from memóriam venerántes, and it has no main clause — the verb does not arrive until Hanc ígitur.",
+	"about": "Twelve apostles and twelve martyrs. Paul stands among the apostles in place of Matthias — Rome counted the college its own way. The martyrs are five popes (Linus, Cletus, Clement, Sixtus, Cornelius), Cyprian the bishop of Carthage, Lawrence the deacon, and after them Chrysogonus, John and Paul, Cosmas and Damian. The name of St Ioseph was put here by John XXIII in 1962: the first change to the Canon since the missal of Pius V. The whole sentence is one chain of genitives hanging from memóriam venerántes, and it has no main clause — the verb does not arrive until Hanc ígitur.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,10 +13,10 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "In communion with, and venerating the memory first of all of the glorious ever-Virgin Mary, Mother of our God and Lord Jesus Christ:"
+			"translation": "In communion with, and venerating the memory first of all of the glorious ever-Virgin Mary, Mother of our God and Lord Iesus Christ:"
 		},
 		"s02": {
-			"translation": "and also of blessed Joseph, Spouse of the same Virgin,"
+			"translation": "and also of blessed Ioseph, Spouse of the same Virgin,"
 		},
 		"s03": {
 			"translation": "and of thy blessed apostles and martyrs, Peter and Paul, Andrew, James, John, Thomas, James, Philip, Bartholomew, Matthew, Simon and Thaddeus:"
@@ -85,7 +85,7 @@
 			"gloss": "our"
 		},
 		"w016": {
-			"gloss": "Jesus"
+			"gloss": "Iesus"
 		},
 		"w017": {
 			"gloss": "Christ"
@@ -101,7 +101,7 @@
 			"gloss": "blessed"
 		},
 		"w021": {
-			"gloss": "Joseph",
+			"gloss": "Ioseph",
 			"function": "An indeclinable name: only “beáti” (w020), which agrees with it, shows the case."
 		},
 		"w022": {

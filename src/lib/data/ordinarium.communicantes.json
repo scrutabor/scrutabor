@@ -7,7 +7,7 @@
 	"variant": "missae",
 	"sung": false,
 	"status": "working-edition",
-	"notes": "The prayer that joins the offering to the saints — Our Lady, Joseph, the twelve, and twelve martyrs of the Roman church: the popes Linus, Cletus, Clement and Sixtus, the bishops Cornelius and Cyprian, the deacon Lawrence, Chrysogonus, John and Paul, Cosmas and Damian. The list is a single chain of genitives depending on memóriam venerántes, and every name in it is tagged genitive on that syntax, since several of the forms could as well be nominative plural. COMMUNICÁNTES at w001 and VENERÁNTES at w004 are nominative plural masculine, agreeing with a subject the sentence never states: the priest and those with him. JOSEPH at w020 is indeclinable and carries no declension; its case is the one beáti agrees with. GENETRÍCIS at w011 is the reading of the typical edition and of witness do; witness handmissal-eo prints Genitrícis, and both are real spellings of the word, so the difference is ruled in the apparatus rather than passed over. ÓMNIBUS at w061 is neuter — in all things, not among all men. COSMÆ at w050 and CLETI at w040 are unknown to both analyzers; their parses rest on the edition alone and say so in their provenance.",
+	"notes": "The prayer that joins the offering to the saints — Our Lady, Ioseph, the twelve, and twelve martyrs of the Roman church: the popes Linus, Cletus, Clement and Sixtus, the bishops Cornelius and Cyprian, the deacon Lawrence, Chrysogonus, John and Paul, Cosmas and Damian. The list is a single chain of genitives depending on memóriam venerántes, and every name in it is tagged genitive on that syntax, since several of the forms could as well be nominative plural. COMMUNICÁNTES at w001 and VENERÁNTES at w004 are nominative plural masculine, agreeing with a subject the sentence never states: the priest and those with him. IOSEPH at w021 is indeclinable and carries no declension; its case is the one beáti agrees with. GENETRÍCIS at w011 is the reading of the typical edition and of witness do; witness handmissal-eo prints Genitrícis, and both are real spellings of the word, so the difference is ruled in the apparatus rather than passed over. ÓMNIBUS at w069 is neuter — in all things, not among all men. COSMÆ at w056 and CLETI at w046 are unknown to both analyzers; their parses rest on the edition alone and say so in their provenance.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence, apart from the orthographic variant adjudicated in the apparatus. Accidental variants adjudicated in the apparatus.",
 		"witnesses": "witnesses/ordinarium.communicantes/",
@@ -208,21 +208,13 @@
 				},
 				{
 					"id": "w016",
-					"form": "Jesu",
+					"form": "Iesu",
 					"lemma": "Iesus",
 					"morph": {
 						"pos": "noun",
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -275,7 +267,7 @@
 				},
 				{
 					"id": "w021",
-					"form": "Joseph",
+					"form": "Ioseph",
 					"post": ",",
 					"lemma": "Ioseph",
 					"morph": {
@@ -295,7 +287,7 @@
 				},
 				{
 					"id": "w022",
-					"form": "ejúsdem",
+					"form": "eiúsdem",
 					"lemma": "idem",
 					"morph": {
 						"pos": "pron",
@@ -456,7 +448,7 @@
 				},
 				{
 					"id": "w035",
-					"form": "Jacóbi",
+					"form": "Iacóbi",
 					"post": ",",
 					"lemma": "Iacobus",
 					"morph": {
@@ -477,7 +469,7 @@
 				},
 				{
 					"id": "w036",
-					"form": "Joánnis",
+					"form": "Ioánnis",
 					"post": ",",
 					"lemma": "Ioannes",
 					"morph": {
@@ -486,14 +478,6 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -519,7 +503,7 @@
 				},
 				{
 					"id": "w038",
-					"form": "Jacóbi",
+					"form": "Iacóbi",
 					"post": ",",
 					"lemma": "Iacobus",
 					"morph": {
@@ -811,7 +795,7 @@
 				},
 				{
 					"id": "w053",
-					"form": "Joánnis",
+					"form": "Ioánnis",
 					"lemma": "Ioannes",
 					"morph": {
 						"pos": "noun",
@@ -819,14 +803,6 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -1088,7 +1064,7 @@
 		{
 			"id": "s06",
 			"type": "rubric",
-			"text": "Jungit manus.",
+			"text": "Iungit manus.",
 			"analysis": {
 				"confidence": "high",
 				"sources": [

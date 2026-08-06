@@ -7,7 +7,7 @@
 	"variant": "missae",
 	"sung": false,
 	"status": "working-edition",
-	"notes": "The embolism: the prayer takes up the last petition just answered — líbera nos a malo — and expands it into all evils past, present and to come. Its conclusion is said over the breaking of the Host, which is why the rubrics fall where they do: the Host is broken in two at Per eúndem Dóminum nostrum Jesum Christum Fílium tuum, a particle is broken from the left half at Qui tecum vivit et regnat, and only Per ómnia sǽcula sæculórum is said aloud. PRÆTÉRITIS, PRÆSÉNTIBUS and FUTÚRIS (w008-w011) are tagged adjectives, not participles: both analyzers head prætéritus, præsens and futúrus as adjectives in their own right, the reverse of the case at ordinarium.qui-pridie w014. ADJÚTI at w044 is a participle — Collatinus heads it under adiuvo and Whitaker's does not carry the form at all, so its provenance names Collatinus alone. OPE at w041 is the ablative of ops, a noun with no nominative singular in use. GENETRÍCE at w020 is an adjudicated orthographic variant against witness handmissal-eo (see the apparatus).",
+	"notes": "The embolism: the prayer takes up the last petition just answered — líbera nos a malo — and expands it into all evils past, present and to come. Its conclusion is said over the breaking of the Host, which is why the rubrics fall where they do: the Host is broken in two at Per eúndem Dóminum nostrum Iesum Christum Fílium tuum, a particle is broken from the left half at Qui tecum vivit et regnat, and only Per ómnia sǽcula sæculórum is said aloud. PRÆTÉRITIS, PRÆSÉNTIBUS and FUTÚRIS (w008-w011) are tagged adjectives, not participles: both analyzers head prætéritus, præsens and futúrus as adjectives in their own right, the reverse of the case at ordinarium.qui-pridie w014. ADIÚTI at w044 is a participle of adiuvo, not an adjective; both analyzers head the form there. OPE at w041 is the ablative of ops, a noun with no nominative singular in use. GENETRÍCE at w020 is an adjudicated orthographic variant against witness handmissal-eo (see the apparatus).",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence beyond the adjudicated orthographic variant. Accidental variants adjudicated in the apparatus.",
 		"witnesses": "witnesses/ordinarium.libera-nos/",
@@ -581,7 +581,7 @@
 				},
 				{
 					"id": "w044",
-					"form": "adjúti",
+					"form": "adiúti",
 					"post": ",",
 					"lemma": "adiuvo",
 					"morph": {
@@ -593,14 +593,6 @@
 						"mood": "part",
 						"voice": "pass",
 						"conj": 1
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -782,21 +774,13 @@
 				},
 				{
 					"id": "w060",
-					"form": "Jesum",
+					"form": "Iesum",
 					"lemma": "Iesus",
 					"morph": {
 						"pos": "noun",
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -975,7 +959,7 @@
 		{
 			"id": "s11",
 			"type": "rubric",
-			"text": "Aliam mediam partem, quam in sinistra manu habet, adjungit mediæ super Patenam positæ, et particulam parvam dextera retinens super Calicem, quem sinistra per nodum infra cuppam tenet, dicit intellegibili voce vel cantat:",
+			"text": "Aliam mediam partem, quam in sinistra manu habet, adiungit mediæ super Patenam positæ, et particulam parvam dextera retinens super Calicem, quem sinistra per nodum infra cuppam tenet, dicit intellegibili voce vel cantat:",
 			"analysis": {
 				"confidence": "high",
 				"sources": [

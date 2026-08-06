@@ -192,7 +192,7 @@
 				},
 				{
 					"id": "w013",
-					"form": "majestátis",
+					"form": "maiestátis",
 					"lemma": "maiestas",
 					"morph": {
 						"pos": "noun",
@@ -200,14 +200,6 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{

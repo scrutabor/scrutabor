@@ -188,7 +188,7 @@
 				},
 				{
 					"id": "w012",
-					"form": "Joánni",
+					"form": "Ioánni",
 					"lemma": "Ioannes",
 					"morph": {
 						"pos": "noun",
@@ -196,14 +196,6 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -650,7 +642,7 @@
 				},
 				{
 					"id": "w048",
-					"form": "Joánnem",
+					"form": "Ioánnem",
 					"lemma": "Ioannes",
 					"morph": {
 						"pos": "noun",
@@ -658,14 +650,6 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{

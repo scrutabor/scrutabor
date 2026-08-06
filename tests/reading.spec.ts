@@ -108,9 +108,11 @@ test('the Gloria reads with narrative, panel and provenance', async ({ page }) =
 	// the nominative-as-address note cross-links its vocative anchor
 	await expect(panel.locator('.function')).toContainText('mianownika');
 	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
-	// single-analyzer override on Jesu
-	await page.goto('/pl/ordinarium/gloria?w=w037');
-	await expect(panel.locator('.meta')).toContainText('opracowanie, Collatinus');
+	// single-analyzer override: déxteram is confirmed by Whitaker's alone,
+	// against the document's both-analyzers default
+	await page.goto('/pl/ordinarium/gloria?w=w061');
+	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker');
+	await expect(panel.locator('.meta')).not.toContainText('Collatinus');
 	// the superlative links its grammar concept and the lemma page resolves
 	await page.goto('/en/ordinarium/gloria?w=w074'); // Altissimus
 	await expect(panel.locator('.gloss')).toHaveText('the Most High');

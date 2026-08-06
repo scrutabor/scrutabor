@@ -134,13 +134,13 @@
 			"decl": 3
 		},
 		"Iacobus": {
-			"head": "Jacóbus, -i",
+			"head": "Iacóbus, -i",
 			"pos": "noun",
 			"gender": "m",
 			"decl": 2
 		},
 		"Iesus": {
-			"head": "Jesus, Jesu",
+			"head": "Iesus, Iesu",
 			"pos": "noun",
 			"gender": "m"
 		},
@@ -151,13 +151,13 @@
 			"decl": 2
 		},
 		"Ioannes": {
-			"head": "Joánnes, Joánnis",
+			"head": "Ioánnes, Ioánnis",
 			"pos": "noun",
 			"gender": "m",
 			"decl": 3
 		},
 		"Ioseph": {
-			"head": "Joseph",
+			"head": "Ioseph",
 			"pos": "noun",
 			"gender": "m"
 		},
@@ -326,13 +326,13 @@
 			"pos": "adv"
 		},
 		"adiutorium": {
-			"head": "adjutórium, -ii",
+			"head": "adiutórium, -ii",
 			"pos": "noun",
 			"gender": "n",
 			"decl": 2
 		},
 		"adiuvo": {
-			"head": "ádjuvo, adjuváre, adjúvi, adjútum",
+			"head": "ádiuvo, adiuváre, adiúvi, adiútum",
 			"pos": "verb",
 			"conj": 1
 		},
@@ -1567,27 +1567,27 @@
 			"pos": "adv"
 		},
 		"iubeo": {
-			"head": "júbeo, jubére, jussi, jussum",
+			"head": "iúbeo, iubére, iussi, iussum",
 			"pos": "verb",
 			"conj": 2
 		},
 		"iudicium": {
-			"head": "judícium, -ii",
+			"head": "iudícium, -ii",
 			"pos": "noun",
 			"gender": "n",
 			"decl": 2
 		},
 		"iudico": {
-			"head": "júdico, judicáre, judicávi, judicátum",
+			"head": "iúdico, iudicáre, iudicávi, iudicátum",
 			"pos": "verb",
 			"conj": 1
 		},
 		"iustus": {
-			"head": "justus, -a, -um",
+			"head": "iustus, -a, -um",
 			"pos": "adj"
 		},
 		"iuventus": {
-			"head": "juvéntus, juventútis",
+			"head": "iuvéntus, iuventútis",
 			"pos": "noun",
 			"gender": "f",
 			"decl": 3
@@ -1683,7 +1683,7 @@
 			"pos": "adj"
 		},
 		"maiestas": {
-			"head": "majéstas, majestátis",
+			"head": "maiéstas, maiestátis",
 			"pos": "noun",
 			"gender": "f",
 			"decl": 3

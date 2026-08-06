@@ -805,21 +805,13 @@
 				},
 				{
 					"id": "w063",
-					"form": "Jesu",
+					"form": "Iesu",
 					"lemma": "Iesus",
 					"morph": {
 						"pos": "noun",
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{

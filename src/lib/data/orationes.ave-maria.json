@@ -206,7 +206,7 @@
 				},
 				{
 					"id": "w016",
-					"form": "Jesus",
+					"form": "Iesus",
 					"post": ".",
 					"lemma": "Iesus",
 					"morph": {
@@ -214,14 +214,6 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				}
 			]

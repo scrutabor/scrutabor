@@ -7,7 +7,7 @@
 	"variant": "missae",
 	"sung": true,
 	"status": "working-edition",
-	"notes": "The dialogue that opens the Preface, sung by priest and people. Its own document because it is a fixed exchange the reader looks up by name, and because everything after it changes with the day. CORDA at w008 is accusative with no verb expressed: the missal's Sursum corda is an elliptical command, and the response supplies the verb (habémus). SURSUM at w007 is the adverb, not a preposition — it governs nothing. DÓMINO DEO NOSTRO at w014-w016 is a dative and its apposition, tagged as such; witness do prints a comma between them, adjudicated in the apparatus with the corpus rulings on appositions.",
+	"notes": "The dialogue that opens the Preface, sung by priest and people. Its own document because it is a fixed exchange the reader looks up by name, and because everything after it changes with the day. CORDA at w008 is accusative with no verb expressed: the missal's Sursum corda is an elliptical command, and the response supplies the verb (habémus). SURSUM at w007 is the adverb, not a preposition — it governs nothing. DÓMINO DEO NOSTRO at w016-w016 is a dative and its apposition, tagged as such; witness do prints a comma between them, adjudicated in the apparatus with the corpus rulings on appositions.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
 		"witnesses": "witnesses/ordinarium.praefatio-dialogus/",
@@ -33,7 +33,7 @@
 		{
 			"id": "s01",
 			"type": "rubric",
-			"text": "Præfationem incipit ambabus manibus positis hinc inde super Altare: quas aliquantulum elevat, cum dicit: Sursum corda. Jungit eas ante pectus, et caput inclinat, cum dicit: Grátias agamus Dómino, Deo nostro.",
+			"text": "Præfationem incipit ambabus manibus positis hinc inde super Altare: quas aliquantulum elevat, cum dicit: Sursum corda. Iungit eas ante pectus, et caput inclinat, cum dicit: Grátias agamus Dómino, Deo nostro.",
 			"analysis": {
 				"confidence": "high",
 				"sources": [
@@ -301,21 +301,13 @@
 				},
 				{
 					"id": "w019",
-					"form": "justum",
+					"form": "iustum",
 					"lemma": "iustus",
 					"morph": {
 						"pos": "adj",
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{

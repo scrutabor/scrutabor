@@ -7,7 +7,7 @@
 	"variant": "missae",
 	"sung": false,
 	"status": "working-edition",
-	"notes": "The third of the three prayers before Communion. Like the second, it carries no rubric segment: the witnesses print one rubric for all three, and it stands at the head of ordinarium.qui-dixisti. QUOD at w007 is neuter and picks up Córporis, not the feminine Percéptio that governs the sentence — the relative crosses over its nearer noun to reach the right one. PERCIPIÉNDAM at w033 is a gerundive, written as SCHEMA.md requires: a future passive participle, mood part, tense fut, voice pass, with the case, number and gender of medélam. PROSIT at w023 is prosum, a compound of sum, so it carries no conjugation. JUDÍCIUM at w016 is one of the ju- words the Whitaker's port does not carry; its provenance names Collatinus alone, as the corpus already records for judicáre, júbeas and justum.",
+	"notes": "The third of the three prayers before Communion. Like the second, it carries no rubric segment: the witnesses print one rubric for all three, and it stands at the head of ordinarium.qui-dixisti. QUOD at w007 is neuter and picks up Córporis, not the feminine Percéptio that governs the sentence — the relative crosses over its nearer noun to reach the right one. PERCIPIÉNDAM at w033 is a gerundive, written as SCHEMA.md requires: a future passive participle, mood part, tense fut, voice pass, with the case, number and gender of medélam. PROSIT at w023 is prosum, a compound of sum, so it carries no conjugation.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variant is adjudicated in the apparatus.",
 		"witnesses": "witnesses/ordinarium.perceptio-corporis/",
@@ -94,21 +94,13 @@
 				},
 				{
 					"id": "w005",
-					"form": "Jesu",
+					"form": "Iesu",
 					"lemma": "Iesus",
 					"morph": {
 						"pos": "noun",
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -234,7 +226,7 @@
 				},
 				{
 					"id": "w016",
-					"form": "judícium",
+					"form": "iudícium",
 					"lemma": "iudicium",
 					"morph": {
 						"pos": "noun",
@@ -242,14 +234,6 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{

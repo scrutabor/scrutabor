@@ -8,7 +8,7 @@
 // is IDENTICAL in both — chant assigns notes per syllable, and both
 // traditions sing grá-ti-a as three — so only the phoneme tables differ.
 // Division follows the liturgical books' Italian style: maximal onsets
-// (no-ster, pa-trem, A-gnus), geminates split (mis-sa, Jo-án-ni).
+// (no-ster, pa-trem, A-gnus), geminates split (mis-sa, Io-án-ni).
 
 const VOWELS = new Set('aeiouyáéíóúýæœǽë'.split(''));
 // Front vowels trigger the soft readings of c, g, sc, xc.
@@ -20,6 +20,44 @@ const LIQUID = new Set(['l', 'r']);
 const DIGRAPHS = new Set(['ch', 'ph', 'th', 'gn']);
 
 const ACCENTED = new Set('áéíóúýǽ'.split(''));
+
+// A compound keeps the consonantal i of the simplex it is built on:
+// adiutórium is ad + iuvo, so its i is the consonant and the word divides
+// ad-iu-tó-ri-um. Prefix AND stem both have to be named, because the same
+// position holds a VOCALIC i in the compounds of eo — ábiit is ab + iit,
+// a-bi-it — and nothing in the spelling tells the two apart. Kept in step
+// with checks/normalize.py in the corpus, which the unit tests cross-check.
+const GLIDE_PREFIXES = new Set([
+	'ab',
+	'ad',
+	'con',
+	'de',
+	'dis',
+	'in',
+	'inter',
+	'ob',
+	'per',
+	'prae',
+	'sub',
+	'trans'
+]);
+const GLIDE_STEMS = ['iac', 'iect', 'iud', 'iung', 'iunct', 'iur', 'iust', 'iut', 'iuv'];
+
+function bare(s: string): string {
+	return s
+		.normalize('NFD')
+		.replace(/[\u0300-\u036f]/g, '')
+		.replace(/æ/g, 'ae')
+		.replace(/œ/g, 'oe');
+}
+
+/** True when everything before `at` is a prefix and what follows is a stem
+ * beginning with the consonant (ad|iutórium). */
+function afterPrefix(word: string, at: number): boolean {
+	if (!GLIDE_PREFIXES.has(bare(word.slice(0, at)))) return false;
+	const stem = bare(word.slice(at));
+	return GLIDE_STEMS.some((s) => stem.startsWith(s));
+}
 
 export type Tradition = 'roman' | 'polish';
 
@@ -48,17 +86,18 @@ function tokenize(word: string): Unit[] {
 			continue;
 		}
 		const ch = word[i];
-		// The books keep the glide spelled i in a few words where this
-		// orthography otherwise writes j — Eia in the Salve Regina,
-		// allelúia. Between two vowels that i is consonantal, so it joins
-		// the next syllable's onset rather than making one of its own
-		// (E-ia, al-le-lú-ia). The test is on the preceding UNIT, not the
+		// Consonantal i — this orthography prints the glide as i, not j
+		// (ORTHOGRAPHY.md), so it is common. It joins the next syllable's
+		// onset rather than making one of its own: between two vowels
+		// (E-ia, al-le-lú-ia, e-ius), at the head of a word before another
+		// vowel (Ie-sus, Io-án-nes, iu-be), and across a prefix seam
+		// (ad-iu-tó-ri-um). The vowel test is on the preceding UNIT, not the
 		// preceding letter: qu and gu are consumed above as consonants, so
 		// the u of quia must not count as the vowel before the i.
 		if (
 			(ch === 'i' || ch === 'í') &&
-			units[units.length - 1]?.vowel === true &&
-			VOWELS.has(word[i + 1] ?? '')
+			VOWELS.has(word[i + 1] ?? '') &&
+			(units[units.length - 1]?.vowel === true || units.length === 0 || afterPrefix(word, i))
 		) {
 			units.push({ text: ch, vowel: false });
 			i += 1;

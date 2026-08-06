@@ -22,10 +22,10 @@ test('the external dictionary link opens in a new tab', async ({ page }) => {
 	await expect(logeion).toHaveAttribute('rel', /noopener/);
 });
 
-test('the j-lemma displays its liturgical headword', async ({ page }) => {
-	// lemma key is normalized (Ioannes); the reader sees Joánnes
+test('the lemma page displays its liturgical headword', async ({ page }) => {
+	// the key is bare and normalized (Ioannes); the reader sees it accented
 	await page.goto('/pl/lemma/Ioannes');
-	await expect(page.locator('h1')).toHaveText('Joánnes');
+	await expect(page.locator('h1')).toHaveText('Ioánnes');
 });
 
 test('grammatica index lists the concept tranche in groups', async ({ page }) => {

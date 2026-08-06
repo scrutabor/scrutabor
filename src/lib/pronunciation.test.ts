@@ -10,7 +10,7 @@ describe('syllabify', () => {
 		expect(syllabized('noster')).toBe('no-ster'); // s+stop opens
 		expect(syllabized('patrem')).toBe('pa-trem'); // muta cum liquida
 		expect(syllabized('peccávi')).toBe('pec-cá-vi'); // geminates split
-		expect(syllabized('Joánni')).toBe('Jo-án-ni');
+		expect(syllabized('Ioánni')).toBe('Io-án-ni');
 		expect(syllabized('sanctificétur')).toBe('san-cti-fi-cé-tur'); // 1961 books: San-ctus
 		expect(syllabized('quotidiánum')).toBe('quo-ti-di-á-num');
 		expect(syllabized('excélsis')).toBe('ex-cél-sis');
@@ -100,8 +100,8 @@ describe('ipa', () => {
 	});
 
 	it('voices intervocalic s in both traditions', () => {
-		expect(ipa('Jesus', 'roman')).toBe('ˈjɛ.zus');
-		expect(ipa('Jesus', 'polish')).toBe('ˈjɛ.zus');
+		expect(ipa('Iesus', 'roman')).toBe('ˈjɛ.zus');
+		expect(ipa('Iesus', 'polish')).toBe('ˈjɛ.zus');
 	});
 
 	it('renders gn per tradition', () => {
@@ -144,13 +144,28 @@ describe('ipa', () => {
 	});
 });
 
-describe('the glide the books still spell with an i', () => {
-	// ORTHOGRAPHY writes consonantal i as j (ejus, major), but a few words
-	// keep the older spelling — Eia in the Salve Regina, allelúia. There
-	// the i between vowels is a glide, not a syllable of its own.
-	it('divides Eia and allelúia on the glide', () => {
+describe('the consonantal i', () => {
+	// ORTHOGRAPHY prints the glide as i, never j (Iesus, eius, maiestátis),
+	// so it stands wherever the older j did — and it must not be counted as
+	// a syllable of its own.
+	it('divides on the glide between vowels', () => {
 		expect(syllabify('Eia')).toEqual(['E', 'ia']);
 		expect(syllabify('allelúia')).toEqual(['al', 'le', 'lú', 'ia']);
+	});
+
+	it('divides on the glide at the head of a word', () => {
+		expect(syllabify('Iesu')).toEqual(['Ie', 'su']);
+		expect(syllabify('Ioánnes')).toEqual(['Io', 'án', 'nes']);
+		expect(syllabify('iube')).toEqual(['iu', 'be']);
+		expect(syllabify('maiestátis')).toHaveLength(4);
+	});
+
+	it('divides on the glide across a prefix seam', () => {
+		// ad + iuvo: the compound keeps the consonant of its simplex, and
+		// the books divide it the same way (ad-ju-tó-ri-um in the Liber)
+		expect(syllabify('Adiutórium')).toEqual(['Ad', 'iu', 'tó', 'ri', 'um']);
+		// but the compounds of eo have a real vowel there: ab + iit
+		expect(syllabify('ábiit')).toHaveLength(3);
 	});
 
 	it('sounds the glide as /j/', () => {
@@ -160,6 +175,8 @@ describe('the glide the books still spell with an i', () => {
 
 	it('leaves a real vowel pair alone', () => {
 		// diéi is di-é-i: ei is not a diphthong and the i is not a glide
+		// (nor is the i of ita, in, or fílii — the glide needs a vowel after
+		// it AND a vowel, a word edge, or a prefix seam before it)
 		expect(syllabify('diéi')).toHaveLength(3);
 		// qu is consumed first, so quia keeps its vocalic i
 		expect(syllabify('quia')).toEqual(['qui', 'a']);

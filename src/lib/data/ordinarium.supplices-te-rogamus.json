@@ -7,7 +7,7 @@
 	"variant": "missae",
 	"sung": false,
 	"status": "working-edition",
-	"notes": "The prayer that asks an angel to carry the offering to the altar on high, said deeply bowed. QUOTQUOT at w027 is indeclinable; the nominative plural is the one the sentence requires, as the subject of sumpsérimus, and no gender is claimed, since nothing marks one. SUMPSÉRIMUS at w042 is future perfect rather than perfect subjunctive: the main verb repleámur is the subjunctive of the purpose clause, and quotquot ... sumpsérimus states the condition. PERFÉRRI at w008 is a compound of fero and carries no conjugation. ÁNGELI at w012 is singular — one angel, unnamed. The comma the edition prints after ut, with witness do and the typical edition, marks off the whole clause that quotquot opens.",
+	"notes": "The prayer that asks an angel to carry the offering to the altar on high, said deeply bowed. QUOTQUOT at w024 is indeclinable; the nominative plural is the one the sentence requires, as the subject of sumpsérimus, and no gender is claimed, since nothing marks one. SUMPSÉRIMUS at w035 is future perfect rather than perfect subjunctive: the main verb repleámur is the subjunctive of the purpose clause, and quotquot ... sumpsérimus states the condition. PERFÉRRI at w008 is a compound of fero and carries no conjugation. ÁNGELI at w012 is singular — one angel, unnamed. The comma the edition prints after ut, with witness do and the typical edition, marks off the whole clause that quotquot opens.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
 		"witnesses": "witnesses/ordinarium.supplices-te-rogamus/",
@@ -33,7 +33,7 @@
 		{
 			"id": "s01",
 			"type": "rubric",
-			"text": "Profunde inclinatus, junctis manibus et super Altare positis, dicit:",
+			"text": "Profunde inclinatus, iunctis manibus et super Altare positis, dicit:",
 			"analysis": {
 				"confidence": "high",
 				"sources": [
@@ -111,7 +111,7 @@
 				},
 				{
 					"id": "w006",
-					"form": "jube",
+					"form": "iube",
 					"lemma": "iubeo",
 					"morph": {
 						"pos": "verb",
@@ -121,14 +121,6 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -286,7 +278,7 @@
 				},
 				{
 					"id": "w021",
-					"form": "majestátis",
+					"form": "maiestátis",
 					"lemma": "maiestas",
 					"morph": {
 						"pos": "noun",
@@ -294,14 +286,6 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -447,7 +431,7 @@
 		{
 			"id": "s05",
 			"type": "rubric",
-			"text": "Jungit manus, et signat semel super Hostiam, et semel super Calicem.",
+			"text": "Iungit manus, et signat semel super Hostiam, et semel super Calicem.",
 			"analysis": {
 				"confidence": "high",
 				"sources": [
@@ -606,7 +590,7 @@
 		{
 			"id": "s09",
 			"type": "rubric",
-			"text": "Jungit manus.",
+			"text": "Iungit manus.",
 			"analysis": {
 				"confidence": "high",
 				"sources": [

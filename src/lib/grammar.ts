@@ -404,7 +404,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 				}
 			},
 			{
-				la: 'fructus ventris tui Jesus',
+				la: 'fructus ventris tui Iesus',
 				textKey: 'orationes/ave-maria',
 				wordId: 'w016',
 				note: {

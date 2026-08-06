@@ -513,7 +513,7 @@
 				},
 				{
 					"id": "w039",
-					"form": "Jesum",
+					"form": "Iesum",
 					"post": ",",
 					"lemma": "Iesus",
 					"morph": {
@@ -521,14 +521,6 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{

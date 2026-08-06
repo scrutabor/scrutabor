@@ -33,7 +33,7 @@
 		{
 			"id": "s01",
 			"type": "rubric",
-			"text": "Postea in medio Altaris extendens et jungens manus, caputque aliquantulum inclínans, dicit, si dicendum est, Glória in excélsis Deo, et prosequitur junctis manibus.",
+			"text": "Postea in medio Altaris extendens et iungens manus, caputque aliquantulum inclínans, dicit, si dicendum est, Glória in excélsis Deo, et prosequitur iunctis manibus.",
 			"analysis": {
 				"confidence": "high",
 				"sources": [
@@ -514,21 +514,13 @@
 				},
 				{
 					"id": "w037",
-					"form": "Jesu",
+					"form": "Iesu",
 					"lemma": "Iesus",
 					"morph": {
 						"pos": "noun",
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -1025,21 +1017,13 @@
 				},
 				{
 					"id": "w075",
-					"form": "Jesu",
+					"form": "Iesu",
 					"lemma": "Iesus",
 					"morph": {
 						"pos": "noun",
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
