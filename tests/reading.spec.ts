@@ -436,3 +436,45 @@ test('the header sits on one centre line', async ({ page }) => {
 		}
 	}
 });
+
+test('a gloss belongs to the word above it, and is legible', async ({ page }) => {
+	// The proportions were backwards: a gloss sat ON its Latin — 0.1px,
+	// sometimes touching a descender — with 27px of nothing beneath it, so
+	// each pair read as two loose lines instead of a word and its meaning.
+	// Proximity is the only thing making that pairing legible, so it is
+	// measured: the gap to the next line has to be clearly larger than the
+	// gap to the word the gloss belongs to, and neither may be zero.
+	await page.goto('/en/ordinarium/corpus-tuum');
+	const gaps = await page.evaluate(() => {
+		const c = document.createElement('canvas').getContext('2d')!;
+		const ink = (el: Element) => {
+			const cs = getComputedStyle(el);
+			c.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+			const m = c.measureText(el.textContent || 'x');
+			const probe = document.createElement('span');
+			probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+			el.appendChild(probe);
+			const base = probe.getBoundingClientRect().top;
+			probe.remove();
+			return { top: base - m.actualBoundingBoxAscent, bottom: base + m.actualBoundingBoxDescent };
+		};
+		const verse = document.querySelector('.verse')!;
+		const rubies = [...verse.querySelectorAll('ruby')];
+		const first = rubies[0];
+		const rt = first.querySelector('rt')!;
+		const y0 = first.getBoundingClientRect().top;
+		const next = rubies.find((r) => r.getBoundingClientRect().top > y0 + 10)!;
+		return {
+			pair: ink(rt).top - ink(first).bottom,
+			between: ink(next).top - ink(rt).bottom,
+			size: parseFloat(getComputedStyle(rt).fontSize),
+			slope: getComputedStyle(rt).fontStyle
+		};
+	});
+	expect(gaps.pair, 'the gloss is not touching its word').toBeGreaterThan(3);
+	expect(gaps.between, 'the next line is further off than the gloss').toBeGreaterThan(
+		gaps.pair * 1.5
+	);
+	expect(gaps.size, 'the gloss is big enough to read').toBeGreaterThan(13);
+	expect(gaps.slope, 'and upright at that size').toBe('normal');
+});

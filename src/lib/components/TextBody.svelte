@@ -216,8 +216,12 @@
 	// which is the alignment a reader can see, and only sit a hair lower
 	// than the row of some other verse, which nobody can.
 	const DESCENT: Record<string, number> = { Q: 0.248 };
-	// measured 0.272em from the baseline to the ink of the first gloss
-	const ROOM_BELOW = 0.272;
+	// The gloss row now sits GLOSS_GAP lower than ruby puts it, so a
+	// descender has that much more room before it: measured 0.272em from
+	// the baseline to the ink of the gloss, plus the gap. Q's tail at 1.75
+	// wants 0.434em and now fits without the line having to give way at all.
+	const GLOSS_GAP = 0.32; // rem
+	const ROOM_BELOW = 0.272 + GLOSS_GAP / 1.45;
 	const RAISED = 1.75;
 	// A large letter wants more room around it than its metrics ask for:
 	// the one judgement in all of this, and what stops A reading as touching
@@ -269,7 +273,7 @@
 				style:margin-inline-start="{fit.start}em"
 				style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
 			>{form.slice(1)}{:else}{form}{/if}{#if helpLevel >= 1}<rt
-				style:top="{sink - (raised ? fit.lift : 0)}rem"
+				style:top="{GLOSS_GAP + sink - (raised ? fit.lift : 0)}rem"
 				class="shifted"
 				{lang}>{gloss.words[id]?.gloss}</rt
 			>{/if}</ruby
@@ -497,8 +501,16 @@
 		text-indent: -2rem;
 	}
 
+	/* Measured, because the proportions were backwards: a gloss sat ON the
+	   Latin it belongs to (0.1px, sometimes touching a descender) with 27px
+	   of nothing beneath it, so every pair read as two loose lines rather
+	   than one word and its meaning. Now roughly 9px between a word and its
+	   gloss against 18px to the next line — the gloss belongs to the Latin
+	   above it by proximity, which is the only thing making that pairing
+	   legible. The line-height comes down with it: 2.7 was spreading the
+	   Latin to make room that the gloss never used. */
 	.verse.glossed {
-		line-height: 2.7;
+		line-height: 2.15;
 	}
 
 	/* text-indent INHERITS, and an inline-block establishes its own first
@@ -554,9 +566,13 @@
 		ruby-position: under;
 	}
 
+	/* Upright, and larger. The gloss is read WORD BY WORD, in short bursts,
+	   at the size of a footnote — and EB Garamond's italic at 12.7px is too
+	   light for that, which is what made it hard to read. It is already
+	   told apart from the Latin by size and by colour; the slope was doing
+	   no work the other two were not. */
 	rt {
-		font-size: 0.55em;
-		font-style: italic;
+		font-size: 0.64em;
 		color: var(--ink-soft);
 		letter-spacing: 0.01em;
 	}

@@ -132,9 +132,14 @@
 		color: var(--border);
 	}
 
+	/* Colour alone was not enough to say "this one" — ink against soft ink
+	   is a difference you have to look for. The chosen part carries the
+	   rubric under it, which is the mark this book already uses for the
+	   reader's own. */
 	.picker.compact .option.on {
 		background: none;
 		color: var(--ink);
+		box-shadow: inset 0 -0.12em 0 var(--rubric);
 	}
 
 	.picker.compact .option:hover {
