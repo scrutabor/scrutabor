@@ -11,7 +11,10 @@ async function choose(page: Page, name: string) {
 
 const size = (page: Page) =>
 	page.evaluate(() => ({
-		reading: getComputedStyle(document.documentElement).getPropertyValue('--reading').trim(),
+		// the knob is the ROOT size — every size in the app is a multiple of
+		// it, which is the point: a reader who needs large print needs it on
+		// the catalogue and the word panel too, not only on the Latin
+		root: getComputedStyle(document.documentElement).fontSize,
 		latin: parseFloat(getComputedStyle(document.querySelector('.verse')!).fontSize),
 		gloss: parseFloat(getComputedStyle(document.querySelector('.verse rt')!).fontSize),
 		mark: parseFloat(getComputedStyle(document.querySelector('.verse .mark')!).fontSize)
@@ -92,15 +95,15 @@ test('the apparatus grows with the face, not after it', async ({ page }) => {
 test('the choice survives the page, the navigation and the reload', async ({ page }) => {
 	await page.goto('/en/ordinarium/confiteor');
 	await choose(page, 'larger');
-	const chosen = (await size(page)).reading;
-	expect(chosen).not.toBe('1.45rem');
+	const chosen = (await size(page)).root;
+	expect(chosen).not.toBe('16px');
 
 	await page.goto('/en/ordinarium/credo');
-	expect((await size(page)).reading, 'kept across a navigation').toBe(chosen);
+	expect((await size(page)).root, 'kept across a navigation').toBe(chosen);
 
 	await page.reload();
 	await page.waitForSelector('html[data-hydrated]');
-	expect((await size(page)).reading, 'kept across a reload').toBe(chosen);
+	expect((await size(page)).root, 'kept across a reload').toBe(chosen);
 	await expect(trigger(page), 'and the control still says so').toHaveAccessibleName(
 		'text size: larger'
 	);
@@ -113,10 +116,8 @@ test('a reader who asked for large print never sees the page start small', async
 	await page.goto('/en/ordinarium/confiteor');
 	await choose(page, 'largest');
 	await page.goto('/en/ordinarium/credo');
-	const set = await page.evaluate(() =>
-		getComputedStyle(document.documentElement).getPropertyValue('--reading').trim()
-	);
-	expect(set, 'the size is on the document from the <head> script').toBe('2.05rem');
+	const set = await page.evaluate(() => getComputedStyle(document.documentElement).fontSize);
+	expect(set, 'the size is on the document from the <head> script').toBe('22.4px');
 });
 
 test('the control is wherever the reader is', async ({ page }) => {
@@ -160,18 +161,27 @@ test('largest print on the smallest phone still holds together', async ({ page }
 		await page.reload();
 		await page.waitForSelector('html[data-hydrated]');
 		const damage = await page.evaluate(() => ({
-			reading: getComputedStyle(document.documentElement).getPropertyValue('--reading').trim(),
+			root: getComputedStyle(document.documentElement).fontSize,
 			splitTokens: [...document.querySelectorAll('.verse .token')]
 				.filter((t) => t.getClientRects().length !== 1)
 				.map((t) => t.textContent?.trim()),
 			brokenGlosses: [...document.querySelectorAll('.verse.glossed rt')]
 				.filter((r) => r.getClientRects().length > 1)
 				.map((r) => r.textContent?.trim()),
-			overflowing: document.documentElement.scrollWidth > document.documentElement.clientWidth
+			overflowing: document.documentElement.scrollWidth > document.documentElement.clientWidth,
+			trackSpans: (() => {
+				const help = document.querySelector('.help');
+				const track = document.querySelector('input[type="range"]');
+				if (!help || !track) return true;
+				return track.getBoundingClientRect().width > help.getBoundingClientRect().width * 0.9;
+			})()
 		}));
-		expect(damage.reading, `${url}: the size did not take`).toBe('2.05rem');
+		expect(damage.root, `${url}: the size did not take`).toBe('22.4px');
 		expect(damage.splitTokens, `${url}: a token fragmented`).toEqual([]);
 		expect(damage.brokenGlosses, `${url}: a gloss broke across lines`).toEqual([]);
 		expect(damage.overflowing, `${url}: the page scrolls sideways`).toBe(false);
+		// and it fits by STACKING the slider, not by breaking words inside
+		// its labels — the first attempt did the latter and read as broken
+		expect(damage.trackSpans, `${url}: the help slider did not stack`).toBe(true);
 	}
 });

@@ -296,6 +296,11 @@
 	   target — a thumb in a pew is not precise. */
 	.unfold {
 		display: flex;
+		/* One line while the three parts fit, and as many as it takes when
+		   they do not — at the largest reading size on the narrowest phone
+		   the name alone fills the column, and a row that cannot wrap
+		   pushes the whole page sideways instead. */
+		flex-wrap: wrap;
 		width: 100%;
 		align-items: baseline;
 		gap: 0.7rem;
@@ -323,8 +328,19 @@
 		color: var(--ink-soft);
 	}
 
+	/* The name may wrap rather than hold the row open. It was `flex: none`,
+	   which is right until the text is large: at the largest reading size on
+	   a 320px phone "Meménto (defunctórum)" alone is wider than the column,
+	   and an unshrinkable item pushes the whole page sideways. */
 	.unfold-title {
-		flex: none;
+		flex: 0 1 auto;
+		min-width: 0;
+		/* Last resort, and only when a single word genuinely cannot fit:
+		   "(defunctórum)" at the largest reading size is wider than a
+		   320px column on its own. This is the NAME of a folded prayer,
+		   a label for navigating by — not liturgical text, where a broken
+		   word would be unacceptable and the token invariant forbids it. */
+		overflow-wrap: break-word;
 		color: var(--ink);
 	}
 
@@ -332,8 +348,14 @@
 	   what a reader in the pew is told about a prayer they are not saying,
 	   and half of it with an ellipsis is not worth the pixels it saves. */
 	.unfold-what {
-		flex: 1;
+		/* A BASIS, not 1 1 0: with a zero basis this never wraps, it is
+		   merely crushed — at the largest reading size on a 320px phone it
+		   was squeezed into 30px beside the title and its text spilled
+		   straight out of the page. Given a basis it drops below the title
+		   when the two will not share a line. */
+		flex: 1 1 9rem;
 		min-width: 0;
+		overflow-wrap: break-word;
 	}
 
 	.unfold:hover .unfold-title,

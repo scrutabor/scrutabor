@@ -285,6 +285,9 @@ h2 {
 }
 
 .help-row {
+	/* a container, so the slider inside can lay itself out by the room it
+	   actually has — which depends on the text size as much as the window */
+	container-type: inline-size;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

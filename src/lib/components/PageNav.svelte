@@ -25,15 +25,25 @@
 </nav>
 
 <style>
+	/* The settings are touch targets, so they grow with the text size like
+	   everything else — and on the smallest phone at the largest size the
+	   three of them plus the way back no longer fit on one line. They wrap
+	   rather than push the page sideways. (Nothing to do with the size
+	   setting in particular: a longer word than "scrutabor" would have
+	   done it too.) */
 	nav {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+		gap: 0.5rem;
 	}
 
 	.nav-right {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
+		justify-content: flex-end;
 		gap: 0.5rem;
 	}
 

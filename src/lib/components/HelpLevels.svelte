@@ -66,7 +66,12 @@
 		appearance: none;
 		-webkit-appearance: none;
 		flex: none;
-		width: 9.5rem;
+		/* The track is a control, not text. It grows with the reading size
+		   like everything else, but it may not take so much of a narrow
+		   column that the two labels have nowhere to go — at the largest
+		   size on a 320px phone, 9.5rem is 213px of a 253px column and the
+		   row pushed the page sideways. */
+		width: min(9.5rem, 38%);
 		height: 2px;
 		background: var(--border);
 		border-radius: 1px;
@@ -100,5 +105,32 @@
 	input:focus-visible {
 		outline: 2px solid var(--rubric);
 		outline-offset: 6px;
+	}
+
+	/* Where the three of them will not share a line — the largest reading
+	   size on the narrowest phone — the labels take the ends of one row and
+	   the track spans beneath them. Breaking "translation" across lines to
+	   keep it inline was the first attempt and it looked broken. The
+	   threshold is in rem, so it grows with the text: what matters is
+	   whether the words fit, not how many device pixels there are. */
+	@container (max-width: 18rem) {
+		.help {
+			flex-wrap: wrap;
+			gap: 0.3rem 0.7rem;
+		}
+
+		.end:first-child {
+			text-align: start;
+		}
+
+		.end:last-child {
+			text-align: end;
+		}
+
+		input {
+			order: 3;
+			flex: 1 1 100%;
+			width: 100%;
+		}
 	}
 </style>
