@@ -761,3 +761,38 @@ test('a reading page takes the screen it is given, prose excepted', async ({ pag
 	const phone = await measure();
 	expect(phone.column, 'the phone still gets the whole width').toBe(390);
 });
+
+test('a word begins where its column begins', async ({ page }) => {
+	// A word and its gloss share a column as wide as the longer of them.
+	// Ruby centres both in it by default, which is invisible mid-line and
+	// obvious at the head of one: "Fiat" over "niech się stanie" sat 26px
+	// into its column and read as an indent the text does not have.
+	//
+	// Measured with a zero-width marker spliced in front of the text —
+	// element rects and Ranges both report the COLUMN inside a ruby base,
+	// not the glyphs, so they cheerfully report perfect alignment while
+	// the page shows otherwise.
+	await page.setViewportSize({ width: 700, height: 1100 });
+	for (const url of ['/pl/orationes/pater-noster', '/en/ordinarium/credo']) {
+		await page.goto(url);
+		const worst = await page.evaluate(() => {
+			let worst = { word: '', inset: 0 };
+			for (const ruby of document.querySelectorAll('.verse.glossed ruby')) {
+				const base = ruby.querySelector('.base');
+				if (!base) continue;
+				const m = document.createElement('span');
+				m.style.cssText = 'display:inline-block;width:0;height:1em;vertical-align:baseline';
+				base.insertBefore(m, base.firstChild);
+				const inset = m.getBoundingClientRect().left - ruby.getBoundingClientRect().left;
+				m.remove();
+				if (inset > worst.inset)
+					worst = { word: (base.textContent ?? '').trim().slice(0, 20), inset };
+			}
+			return worst;
+		});
+		expect(
+			worst.inset,
+			`${url}: “${worst.word}” is pushed into its column and reads as an indent`
+		).toBeLessThan(4);
+	}
+});

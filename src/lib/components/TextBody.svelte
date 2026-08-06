@@ -642,6 +642,20 @@
 
 	ruby {
 		ruby-position: under;
+		/* A word and its gloss share a column as wide as the LONGER of
+		   them, and ruby's default is to centre both in it. Mid-line that
+		   is invisible; at the head of a line it is not — "Fiat" over
+		   "niech się stanie" was pushed 26px into its column and read as a
+		   deliberate indent, which is what the owner saw. Aligned to the
+		   start instead, so every word begins where its column begins and
+		   every gloss begins under its own word, which is how a printed
+		   interlinear is set anyway. The slack all falls to the right of
+		   whichever of the two is shorter.
+
+		   Prefixed for WebKit; where neither is honoured the layout
+		   degrades to the centred version, which is what it was. */
+		-webkit-ruby-align: start;
+		ruby-align: start;
 	}
 
 	/* Upright, and larger. The gloss is read WORD BY WORD, in short bursts,
