@@ -6,15 +6,8 @@
 // #27). What crosses to the browser is three small numbers and two titles.
 import { TEXTS } from '$lib/corpus';
 import { ORDO } from '$lib/ordo';
-import { ROLES, type Role } from '$lib/role.svelte';
+import { ROLES, isYours, type Role } from '$lib/role.svelte';
 import type { PageServerLoad } from './$types';
-
-/** Whose lines each part owns — the same table the reading surfaces use. */
-const OWNED: Record<Role, ReadonlySet<string>> = {
-	sacerdos: new Set(['sacerdos', 'omnes']),
-	minister: new Set(['minister', 'omnes']),
-	populus: new Set(['minister', 'populus', 'omnes'])
-};
 
 /** A part is SAID by this reader when most of its words are theirs; where
  * they have a line or two in someone else's prayer, they are answering. The
@@ -29,14 +22,13 @@ export const load: PageServerLoad = () => {
 
 	const summary = Object.fromEntries(
 		ROLES.map((role) => {
-			const own = OWNED[role];
 			let answers = 0;
 			const says: string[] = [];
 			for (const part of parts) {
 				const verses = part.text.segments.filter((s) => s.type === 'verse');
 				const total = verses.reduce((n, s) => n + (s.words?.length ?? 0), 0);
 				const mine = verses
-					.filter((s) => s.speaker && own.has(s.speaker))
+					.filter((s) => isYours(s.speaker, role))
 					.reduce((n, s) => n + (s.words?.length ?? 0), 0);
 				if (!mine) continue;
 				if (total && mine / total > SAYS_IT) says.push(part.text.title);

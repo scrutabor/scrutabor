@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import LangMenu from '$lib/components/LangMenu.svelte';
-	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+	import PageNav from '$lib/components/PageNav.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { GENDER_MARK, describeLemma } from '$lib/morph';
 	import { pronunciations, syllabized } from '$lib/pronunciation';
@@ -30,13 +29,7 @@
 </svelte:head>
 
 <div class="page">
-	<nav>
-		<a href="/{lang}" class="back smallcaps">scrutabor</a>
-		<div class="nav-right">
-			<LangMenu {lang} />
-			<ThemeToggle {lang} />
-		</div>
-	</nav>
+	<PageNav {lang} />
 
 	{#if !entry}
 		<main>
@@ -108,34 +101,6 @@
 </div>
 
 <style>
-	.page {
-		max-width: 38rem;
-		margin: 0 auto;
-		padding: 1.25rem 1.5rem 4rem;
-	}
-
-	nav {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.nav-right {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-	}
-
-	.back {
-		text-decoration: none;
-		color: var(--ink-soft);
-		font-size: 0.85rem;
-	}
-
-	.back:hover {
-		color: var(--ink);
-	}
-
 	h1 {
 		margin: 1.8rem 0 0;
 		font-size: 2.6rem;

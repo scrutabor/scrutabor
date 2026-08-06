@@ -136,6 +136,30 @@ export const LEXICON: Lexicon = {
 	}
 };
 
+/**
+ * The lexicon entries these texts can ask about, and no others. Every page
+ * that shows words does this — the reading route for one text, the ordo
+ * movement for a dozen — and it is the whole reason the browser never
+ * receives the dictionary (decisions #27). One copy, so that a page cannot
+ * quietly ship more of it than the others.
+ */
+export function narrowLexicon(
+	docs: Iterable<TextDocument>,
+	lang: Lang
+): { lemmata: Record<string, LemmaEntry>; senses: Record<string, SenseEntry> } {
+	const lemmata: Record<string, LemmaEntry> = {};
+	const senses: Record<string, SenseEntry> = {};
+	for (const doc of docs) {
+		for (const seg of doc.segments) {
+			for (const w of seg.words ?? []) {
+				if (LEXICON.lemmata[w.lemma]) lemmata[w.lemma] = LEXICON.lemmata[w.lemma];
+				if (LEXICON.senses[lang][w.lemma]) senses[w.lemma] = LEXICON.senses[lang][w.lemma];
+			}
+		}
+	}
+	return { lemmata, senses };
+}
+
 const entry = (text: unknown, pl: unknown, en: unknown): TextEntry => ({
 	text: text as TextDocument,
 	glosses: { pl: bindProse(pl as GlossDocument), en: en as GlossDocument }

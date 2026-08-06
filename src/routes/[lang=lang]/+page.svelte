@@ -14,7 +14,7 @@
 	<meta name="description" content={msgs.catalogDescription} />
 </svelte:head>
 
-<div class="landing">
+<div class="page landing">
 	<nav>
 		<LangMenu {lang} />
 		<ThemeToggle {lang} />
@@ -58,10 +58,9 @@
 </div>
 
 <style>
+	/* the book's measure comes from .page; these pages add a full
+	   viewport so their one line of content can sit in the middle */
 	.landing {
-		max-width: 38rem;
-		margin: 0 auto;
-		padding: 1.25rem 1.5rem 4rem;
 		min-height: 100dvh;
 		display: flex;
 		flex-direction: column;

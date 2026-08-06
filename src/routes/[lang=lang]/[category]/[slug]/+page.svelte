@@ -3,12 +3,11 @@
 	import { goto } from '$app/navigation';
 	import { neighborsOf, sectionFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
-	import LangMenu from '$lib/components/LangMenu.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
+	import PageNav from '$lib/components/PageNav.svelte';
 	import RolePicker from '$lib/components/RolePicker.svelte';
 	import Sheet from '$lib/components/Sheet.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
-	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { ribbon } from '$lib/ribbon.svelte';
@@ -130,13 +129,7 @@
 {:else}
 	<div class="page">
 		<header>
-			<nav>
-				<a href="/{lang}" class="back smallcaps">scrutabor</a>
-				<div class="nav-right">
-					<LangMenu {lang} />
-					<ThemeToggle {lang} />
-				</div>
-			</nav>
+			<PageNav {lang} />
 			<h1 lang="la">{doc.title}</h1>
 			<p class="subtitle smallcaps">{sectionLabel}</p>
 			<div class="help-row">
@@ -213,34 +206,6 @@
 {/if}
 
 <style>
-	.page {
-		max-width: 38rem;
-		margin: 0 auto;
-		padding: 1.25rem 1.5rem 4rem;
-	}
-
-	nav {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.nav-right {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-	}
-
-	.back {
-		text-decoration: none;
-		color: var(--ink-soft);
-		font-size: 0.85rem;
-	}
-
-	.back:hover {
-		color: var(--ink);
-	}
-
 	/* The page's own top section only. Unqualified, this reached the
 	   about sheet's header too and opened a 3rem hole under its label. */
 	.page > header {

@@ -11,7 +11,7 @@
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
-<div class="notfound">
+<div class="page notfound">
 	<main>
 		<p class="status">404</p>
 		{#each LANGS as lang (lang)}
@@ -24,10 +24,9 @@
 </div>
 
 <style>
+	/* the book's measure comes from .page; these pages add a full
+	   viewport so their one line of content can sit in the middle */
 	.notfound {
-		max-width: 38rem;
-		margin: 0 auto;
-		padding: 1.25rem 1.5rem 4rem;
 		min-height: 100dvh;
 		display: flex;
 		flex-direction: column;

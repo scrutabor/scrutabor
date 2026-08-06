@@ -2,11 +2,10 @@
 	import { page } from '$app/state';
 	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
-	import LangMenu from '$lib/components/LangMenu.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
+	import PageNav from '$lib/components/PageNav.svelte';
 	import RolePicker from '$lib/components/RolePicker.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
-	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { movementById, movementNeighbors, partVoice } from '$lib/ordo';
@@ -125,13 +124,7 @@
 
 <div class="page">
 	<header>
-		<nav>
-			<a href="/{lang}" class="back smallcaps">scrutabor</a>
-			<div class="nav-right">
-				<LangMenu {lang} />
-				<ThemeToggle {lang} />
-			</div>
-		</nav>
+		<PageNav {lang} />
 		<a href="/{lang}/ordo" class="up smallcaps" lang="la">Ordo Missæ</a>
 		<h1 lang="la">{movement?.title ?? ''}</h1>
 		<p class="subtitle smallcaps">{movement?.label[lang] ?? ''}</p>
@@ -240,34 +233,6 @@
 </div>
 
 <style>
-	.page {
-		max-width: 38rem;
-		margin: 0 auto;
-		padding: 1.25rem 1.5rem 4rem;
-	}
-
-	nav {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.nav-right {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-	}
-
-	.back {
-		text-decoration: none;
-		color: var(--ink-soft);
-		font-size: 0.85rem;
-	}
-
-	.back:hover {
-		color: var(--ink);
-	}
-
 	h1 {
 		margin: 0.2rem 0 0;
 		font-size: 2.6rem;

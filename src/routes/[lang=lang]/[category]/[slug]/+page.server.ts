@@ -5,7 +5,7 @@
 // own text, its own gloss layer, and only the lexicon entries its own words
 // need: the web stays light, and the installed app fills its cache
 // separately (decisions #27).
-import { LEXICON, TEXTS, type LemmaEntry, type SenseEntry } from '$lib/corpus';
+import { TEXTS, narrowLexicon } from '$lib/corpus';
 import { LANGS, type Lang } from '$lib/i18n';
 import { error } from '@sveltejs/kit';
 import type { EntryGenerator, PageServerLoad } from './$types';
@@ -30,13 +30,6 @@ export const load: PageServerLoad = ({ params }) => {
 	const lang = params.lang as Lang;
 
 	// Just the entries this text can ask about, not the whole dictionary.
-	const lemmata: Record<string, LemmaEntry> = {};
-	const senses: Record<string, SenseEntry> = {};
-	for (const seg of entry.text.segments) {
-		for (const w of seg.words ?? []) {
-			if (LEXICON.lemmata[w.lemma]) lemmata[w.lemma] = LEXICON.lemmata[w.lemma];
-			if (LEXICON.senses[lang][w.lemma]) senses[w.lemma] = LEXICON.senses[lang][w.lemma];
-		}
-	}
-	return { doc: entry.text, gloss: entry.glosses[lang], lex: { lemmata, senses } };
+	const lex = narrowLexicon([entry.text], lang);
+	return { doc: entry.text, gloss: entry.glosses[lang], lex };
 };

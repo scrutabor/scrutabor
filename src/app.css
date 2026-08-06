@@ -101,6 +101,17 @@ body {
 	font-feature-settings: 'locl' 0;
 }
 
+/* The measure of the book. Every page of it is one column of this width
+   — the reading pages, the catalogue, the grammar, the colophon — so it
+   is stated once here rather than in each route, where eight identical
+   copies were eight chances to drift. The pages that are not a column of
+   text (the 404, the error boundary) keep their own rule. */
+.page {
+	max-width: 38rem;
+	margin: 0 auto;
+	padding: 1.25rem 1.5rem 4rem;
+}
+
 .smallcaps {
 	font-variant-caps: small-caps;
 	letter-spacing: 0.08em;
