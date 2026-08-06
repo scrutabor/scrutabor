@@ -255,11 +255,21 @@
 	const COVER = 0.1;
 
 	const DESCENT: Record<string, number> = { Q: 0.248 };
-	// The gloss row now sits GLOSS_GAP lower than ruby puts it, so a
-	// descender has that much more room before it: measured 0.272em from
-	// the baseline to the ink of the gloss, plus the gap. Q's tail at 1.75
-	// wants 0.434em and now fits without the line having to give way at all.
-	const GLOSS_GAP = 0.32; // rem
+	// The gloss row sits GLOSS_GAP lower than ruby puts it, so a descender
+	// has that much more room before it: measured 0.272em from the baseline
+	// to the ink of the gloss, plus the gap.
+	//
+	// It used to be 0.32rem, chosen so that even the raised initial's tail
+	// cleared the gloss without the line giving way — and that pushed the
+	// gloss AWAY from the Latin it belongs to and towards the Latin below,
+	// which on a verse that wraps left the two indistinguishable: measured
+	// 1.3px to its own line against 2.0px to the next. A reader had no cue
+	// which line a gloss went with, and the whole column read as evenly
+	// spaced rather than as pairs. So it comes back to what an ordinary
+	// descender actually needs (0.341em of room against a p or q's 0.24em),
+	// and the raised initial does what it was always meant to do when its
+	// tail is too long: sink that one verse's gloss row (see `sink`).
+	const GLOSS_GAP = 0.22; // rem
 	const ROOM_BELOW = 0.272 + GLOSS_GAP / 1.45;
 	const RAISED = 1.75;
 	// A large letter wants more room around it than its metrics ask for:
@@ -543,20 +553,24 @@
 	/* Measured, because the proportions were backwards: a gloss sat ON the
 	   Latin it belongs to (0.1px, sometimes touching a descender) with 27px
 	   of nothing beneath it, so every pair read as two loose lines rather
-	   than one word and its meaning. Now roughly 9px between a word and its
-	   gloss against 18px to the next line — the gloss belongs to the Latin
-	   above it by proximity, which is the only thing making that pairing
-	   legible. The line-height comes down with it: 2.7 was spreading the
-	   Latin to make room that the gloss never used. */
+	   than one word and its meaning.
+
+	   Proximity is the only thing making that pairing legible, so the
+	   three distances are set as a scale and not one at a time: a gloss
+	   close to the Latin it glosses, a clear step to the next line of the
+	   same verse, a clearer one to the next verse. The middle step is
+	   line-height — with ruby-position: under there is no other lever for
+	   the space between two lines of ONE verse, since the gloss hangs
+	   inside the line box. */
 	.verse.glossed {
-		line-height: 2.15;
+		line-height: 2.3;
 		/* The gloss row is shifted down by GLOSS_GAP, and a relative shift
 		   moves paint without moving layout — so the last gloss of a verse
 		   hangs below the box that carries the margin, and the verse gives
 		   away that much of the space beneath it. Given back here, which is
 		   why a rubric under a glossed line looked cramped while the same
 		   rubric under another rubric looked right. */
-		margin-bottom: calc(1.1rem + 0.32rem);
+		margin-bottom: calc(2.1rem + 0.22rem);
 	}
 
 	/* text-indent INHERITS, and an inline-block establishes its own first

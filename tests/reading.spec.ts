@@ -438,12 +438,17 @@ test('the header sits on one centre line', async ({ page }) => {
 });
 
 test('a gloss belongs to the word above it, and is legible', async ({ page }) => {
-	// The proportions were backwards: a gloss sat ON its Latin — 0.1px,
-	// sometimes touching a descender — with 27px of nothing beneath it, so
-	// each pair read as two loose lines instead of a word and its meaning.
-	// Proximity is the only thing making that pairing legible, so it is
-	// measured: the gap to the next line has to be clearly larger than the
-	// gap to the word the gloss belongs to, and neither may be zero.
+	// The three distances down a glossed page are a SCALE, and the whole
+	// legibility of the apparatus is in the ratios between them: a gloss
+	// tight to the Latin it glosses, a clear step to the next line of the
+	// same verse, a clearer one to the next verse. They were 6 : 14 : 33,
+	// and the owner's report was that a verse which wraps looked wrong —
+	// at 2.4x the gloss did not visibly belong to the line above it, and a
+	// verse break at 2.3x over that was not visibly a break either, so the
+	// column read as one irregular rhythm. Now 4.5 : 18 : 51.
+	//
+	// The floor on the first is the descenders: below about 3px a p or a q
+	// touches the gloss under it.
 	await page.goto('/en/ordinarium/corpus-tuum');
 	const gaps = await page.evaluate(() => {
 		const c = document.createElement('canvas').getContext('2d')!;
@@ -458,22 +463,29 @@ test('a gloss belongs to the word above it, and is legible', async ({ page }) =>
 			probe.remove();
 			return { top: base - m.actualBoundingBoxAscent, bottom: base + m.actualBoundingBoxDescent };
 		};
-		const verse = document.querySelector('.verse')!;
+		const verses = [...document.querySelectorAll('.verse.glossed')];
+		const verse = verses[0];
 		const rubies = [...verse.querySelectorAll('ruby')];
 		const first = rubies[0];
 		const rt = first.querySelector('rt')!;
 		const y0 = first.getBoundingClientRect().top;
 		const next = rubies.find((r) => r.getBoundingClientRect().top > y0 + 10)!;
+		const lastRt = [...verse.querySelectorAll('rt')].pop()!;
+		const nextVerse = verses[1].querySelector('ruby')!;
 		return {
 			pair: ink(rt).top - ink(first).bottom,
 			between: ink(next).top - ink(rt).bottom,
+			toNextVerse: ink(nextVerse).top - ink(lastRt).bottom,
 			size: parseFloat(getComputedStyle(rt).fontSize),
 			slope: getComputedStyle(rt).fontStyle
 		};
 	});
 	expect(gaps.pair, 'the gloss is not touching its word').toBeGreaterThan(3);
-	expect(gaps.between, 'the next line is further off than the gloss').toBeGreaterThan(
-		gaps.pair * 1.5
+	expect(gaps.between, 'the next line of the verse stands well clear').toBeGreaterThan(
+		gaps.pair * 3
+	);
+	expect(gaps.toNextVerse, 'and the next VERSE stands clear of that').toBeGreaterThan(
+		gaps.between * 2.2
 	);
 	expect(gaps.size, 'the gloss is big enough to read').toBeGreaterThan(13);
 	expect(gaps.slope, 'and upright at that size').toBe('normal');
