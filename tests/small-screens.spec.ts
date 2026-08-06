@@ -147,3 +147,59 @@ test('a wide screen keeps every control in its unstacked form', async ({ page })
 	);
 	expect(fullRows, 'the full parts control stacked on a wide screen').toBe(1);
 });
+
+test('each part is drawn in its own slot, not over its separator', async ({ page }) => {
+	// The compact control keeps every part at the width of its BOLD form so
+	// that choosing one does not nudge its neighbours: a hidden copy sets
+	// the width and the visible word is laid over it. The word was laid
+	// over the whole BUTTON, which also holds the middot before it — so
+	// every unselected word was drawn a few pixels left of its own slot,
+	// into the separator. It looked like uneven spacing, which is a hard
+	// thing to see and a very easy thing to state: the visible word and the
+	// copy that reserves its room are the same box.
+	//
+	// Both parts of the mechanism are checked here, because a fix for
+	// either one alone is easy to reach for: the words must not move when a
+	// different part is chosen, and they must sit where their slot is.
+	for (const [width, size] of [
+		[1280, 'normal'],
+		[390, 'largest']
+	] as const) {
+		await page.setViewportSize({ width, height: 900 });
+		await page.goto('/pl/ordo/praeparatio');
+		await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
+		await page.reload();
+		await page.waitForSelector('html[data-hydrated]');
+
+		const slots = () =>
+			page.evaluate(() =>
+				[...document.querySelectorAll('.picker.compact .option')].map((o) => {
+					const ghost = o.querySelector('.ghost')!.getBoundingClientRect();
+					const real = o.querySelector('.real')!.getBoundingClientRect();
+					return {
+						word: (o as HTMLElement).dataset.word!,
+						offBy: Math.max(Math.abs(ghost.x - real.x), Math.abs(ghost.right - real.right)),
+						x: Math.round(ghost.x)
+					};
+				})
+			);
+
+		const before = await slots();
+		for (const slot of before)
+			expect(slot.offBy, `${width}px/${size}: “${slot.word}” is drawn off its slot`).toBeLessThan(
+				0.5
+			);
+
+		await page.locator('.picker.compact .option').last().click();
+		const after = await slots();
+		expect(
+			after.map((s) => s.x),
+			`${width}px/${size}: choosing a part moved the others`
+		).toEqual(before.map((s) => s.x));
+		for (const slot of after)
+			expect(
+				slot.offBy,
+				`${width}px/${size}: “${slot.word}” is drawn off its slot once chosen`
+			).toBeLessThan(0.5);
+	}
+});

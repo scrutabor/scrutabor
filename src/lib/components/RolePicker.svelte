@@ -34,11 +34,19 @@
 					<!-- the ghost sets the width at the weight the chosen word
 					     will take, so choosing one does not nudge its
 					     neighbours. ONLY compact: that is the variant that
-					     goes bold, and the styling for these two spans is
-					     scoped to it — rendered in the full picker they both
-					     showed, and every part read twice. -->
-					<span class="ghost" aria-hidden="true">{msgs.roles[r]}</span>
-					<span class="real">{msgs.roles[r]}</span>
+					     goes bold, and the styling for these spans is scoped
+					     to it — rendered in the full picker they both showed,
+					     and every part read twice.
+
+					     The slot exists to be what the visible word is
+					     positioned against. Without it the word was laid over
+					     the whole button, and the button also holds the
+					     separator before it, so every unselected word was
+					     drawn a few pixels into its own middot. -->
+					<span class="slot">
+						<span class="ghost" aria-hidden="true">{msgs.roles[r]}</span>
+						<span class="real">{msgs.roles[r]}</span>
+					</span>
 				{:else}
 					{msgs.roles[r]}
 				{/if}
@@ -166,10 +174,17 @@
 	   pseudo-element because ::before is already carrying the separator
 	   between the words.) */
 	.picker.compact .option {
-		position: relative;
 		font-size: 0.9rem;
 		padding: 0 0.15rem;
 		color: var(--ink-soft);
+	}
+
+	/* The slot is the box the word is centred in, and it holds ONLY the two
+	   copies of the word. The separator lives on the option, outside it, so
+	   the space the middot takes is not space the word can be laid over. */
+	.picker.compact .slot {
+		position: relative;
+		display: inline-block;
 	}
 
 	.picker.compact .ghost {
