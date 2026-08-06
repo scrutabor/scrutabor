@@ -27,9 +27,13 @@
 				aria-checked={current === r}
 				class="option"
 				class:on={current === r}
+				data-word={msgs.roles[r]}
 				onclick={() => role.set(r as Role)}
 			>
-				{msgs.roles[r]}
+				<!-- the ghost sets the width at the weight the chosen word will
+				     take, so choosing one does not nudge its neighbours -->
+				<span class="ghost" aria-hidden="true">{msgs.roles[r]}</span>
+				<span class="real">{msgs.roles[r]}</span>
 			</button>
 		{/each}
 	</div>
@@ -116,10 +120,29 @@
 		gap: 0.1rem;
 	}
 
+	/* Every option holds the width of its own BOLD form, chosen or not: a
+	   hidden copy at that weight sets the width and the visible word sits
+	   over it, so choosing one no longer nudges its neighbours sideways as
+	   it thickens. (The width-setter is an element rather than a
+	   pseudo-element because ::before is already carrying the separator
+	   between the words.) */
 	.picker.compact .option {
+		position: relative;
 		font-size: 0.9rem;
 		padding: 0 0.15rem;
 		color: var(--ink-soft);
+	}
+
+	.picker.compact .ghost {
+		visibility: hidden;
+		font-weight: 600;
+	}
+
+	.picker.compact .real {
+		position: absolute;
+		inset: 0;
+		display: grid;
+		place-items: center;
 	}
 
 	.picker.compact .option + .option {
@@ -130,6 +153,10 @@
 		content: '·';
 		margin-inline-end: 0.4rem;
 		color: var(--border);
+		/* it must not thicken with the word it follows — bold on a middot
+		   is a fraction of a pixel, and a fraction of a pixel on every
+		   separator is the row shifting again */
+		font-weight: 400;
 	}
 
 	/* Colour alone was not enough to say "this one" — ink against soft ink

@@ -596,3 +596,50 @@ test('a rubric is set apart from the prayer it interrupts', async ({ page }) => 
 		'a rubric stands further off than the next line of the prayer'
 	).toBeGreaterThan(Math.max(...between));
 });
+
+test('the three sheets of a reading page are one sheet', async ({ page }) => {
+	// The word panel, the introduction and the mark key are three
+	// components, and the reader is not supposed to be able to tell: same
+	// surface, same width, same card on a wide screen. The mark key had
+	// drifted to the page background and full width.
+	await page.goto('/pl/ordinarium/pater-noster');
+	const box = async (open: () => Promise<void>, sel: string) => {
+		await open();
+		await expect(page.locator(sel)).toBeVisible();
+		return page.locator(sel).evaluate((el) => {
+			const b = el.getBoundingClientRect();
+			const s = getComputedStyle(el);
+			return {
+				left: Math.round(b.left),
+				width: Math.round(b.width),
+				bg: s.backgroundColor,
+				radius: s.borderTopLeftRadius
+			};
+		});
+	};
+
+	const about = await box(() => page.locator('.about-pill').click(), 'aside.about-sheet');
+	const legend = await box(() => page.locator('.mark').first().click(), '.legend');
+	const panel = await box(
+		() => page.locator('.word').first().click(),
+		'aside.panel, aside:not(.about-sheet)'
+	);
+
+	expect(legend, 'the mark key is cut to the same sheet as the introduction').toEqual(about);
+	expect(panel.left, 'the word panel too').toBe(about.left);
+	expect(panel.width).toBe(about.width);
+});
+
+test('the introduction opens right under its own label', async ({ page }) => {
+	// The page's top section is spaced with `header { padding-bottom }`,
+	// and unqualified that reached the sheet's own <header> as well — 3rem
+	// of nothing between "about this prayer" and the prose.
+	await page.goto('/pl/orationes/pater-noster');
+	await page.locator('.about-pill').click();
+	const gap = await page.evaluate(() => {
+		const head = document.querySelector('.about-sheet header')!.getBoundingClientRect();
+		const text = document.querySelector('.about-text')!.getBoundingClientRect();
+		return text.top - head.bottom;
+	});
+	expect(gap, 'the label and its prose belong together').toBeLessThan(20);
+});

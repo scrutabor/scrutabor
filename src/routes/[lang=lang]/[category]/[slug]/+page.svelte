@@ -6,6 +6,7 @@
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import RolePicker from '$lib/components/RolePicker.svelte';
+	import Sheet from '$lib/components/Sheet.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import WordPanel from '$lib/components/WordPanel.svelte';
@@ -67,15 +68,11 @@
 		() => new URL(location.href).searchParams.has('w')
 	);
 
-	// Tapping the quiet parts of the page dismisses the sheet; interactive
-	// chrome (language menu, theme toggle, the help slider, links) does its
-	// own job without also closing it. Word buttons switch, the sheet's own
-	// controls are inside the aside. composedPath, not target.closest: a
-	// control that re-renders on click (the theme toggle swaps its icon)
-	// detaches the clicked node before the event reaches window.
-	// The about sheet shares the word panel's idiom (one bottom sheet at
-	// a time, same dismissal gestures) but not its history model — it is
-	// chrome, one tap to reopen.
+	// Three sheets can open from this page and only one at a time: opening
+	// any of them closes the others. That is the page's business; how a
+	// sheet looks and how it is dismissed is the Sheet component's. The
+	// introduction and the mark key are chrome — one tap to reopen — so
+	// unlike the word panel they keep no history.
 	let aboutOpen = $state(false);
 	let legendOpen = $state(false);
 
@@ -87,6 +84,7 @@
 
 	function tapWord(id: string) {
 		aboutOpen = false;
+		legendOpen = false;
 		panel.toggle(id);
 	}
 
@@ -96,25 +94,10 @@
 		aboutOpen = !aboutOpen;
 	}
 
-	function onWindowClick(e: MouseEvent) {
-		if (panel.id === null && !aboutOpen) return;
-		const interactive = e
-			.composedPath()
-			.some((n) => n instanceof Element && n.matches('a, button, input, select, textarea, aside'));
-		if (!interactive) {
-			if (panel.id !== null) panel.close();
-			aboutOpen = false;
-		}
-	}
-
 	function onWindowKeydown(e: KeyboardEvent) {
-		if (e.key === 'Escape') {
-			if (panel.id !== null) panel.close();
-			aboutOpen = false;
-			return;
-		}
 		// Arrow keys page through the book — unless a control (the help
-		// slider) owns them.
+		// slider) owns them. (Escape belongs to whichever sheet is open,
+		// and it handles it itself.)
 		if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
 		const tag = (document.activeElement as HTMLElement | null)?.tagName;
 		if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
@@ -131,11 +114,7 @@
 	);
 </script>
 
-<svelte:window
-	onpopstate={panel.applyFromLocation}
-	onclick={onWindowClick}
-	onkeydown={onWindowKeydown}
-/>
+<svelte:window onpopstate={panel.applyFromLocation} onkeydown={onWindowKeydown} />
 
 <svelte:head>
 	<title>{doc ? `${doc.title} — Scrutabor` : 'Scrutabor'}</title>
@@ -204,17 +183,15 @@
 		</main>
 
 		{#if aboutOpen && gloss.about}
-			<aside class="about-sheet" aria-label={msgs.aboutLabel}>
-				<div class="about-inner">
-					<header class="about-header">
-						<span class="smallcaps about-title">{msgs.aboutLabel}</span>
-						<button class="about-close" onclick={() => (aboutOpen = false)} aria-label={msgs.close}
-							>×</button
-						>
-					</header>
-					<p class="about-text">{gloss.about}</p>
-				</div>
-			</aside>
+			<Sheet
+				{lang}
+				label={msgs.aboutLabel}
+				title={msgs.aboutLabel}
+				extra="about-sheet"
+				onclose={() => (aboutOpen = false)}
+			>
+				<p class="about-text">{gloss.about}</p>
+			</Sheet>
 		{/if}
 
 		{#if legendOpen}
@@ -264,7 +241,9 @@
 		color: var(--ink);
 	}
 
-	header {
+	/* The page's own top section only. Unqualified, this reached the
+	   about sheet's header too and opened a 3rem hole under its label. */
+	.page > header {
 		padding-bottom: 3rem;
 	}
 
@@ -294,8 +273,8 @@
 		padding-bottom: 45vh;
 	}
 
-	/* The about pill opens a bottom sheet (the word panel's idiom), so
-	   the reading layout never reflows. */
+	/* The about pill opens the shared bottom sheet, so the reading layout
+	   never reflows for it. */
 	.about-pill {
 		margin: 1.4rem auto 0;
 		display: block;
@@ -313,68 +292,6 @@
 	.about-pill:hover {
 		color: var(--ink);
 		background: var(--wash);
-	}
-
-	.about-sheet {
-		position: fixed;
-		inset-inline: 0;
-		bottom: 0;
-		background: var(--surface);
-		border-top: 1px solid var(--border);
-		box-shadow: var(--shadow);
-		z-index: 10;
-	}
-
-	/* On wide screens the full-viewport sheet leaves the close button
-	   stranded between the content column and the screen edge — so the
-	   sheet becomes a centered card and the corner is a real corner. */
-	@media (min-width: 48rem) {
-		.about-sheet {
-			max-width: 42rem;
-			margin-inline: auto;
-			border: 1px solid var(--border);
-			border-bottom: none;
-			border-radius: 0.9rem 0.9rem 0 0;
-		}
-	}
-
-	.about-inner {
-		max-width: 38rem;
-		margin: 0 auto;
-		padding: 1.1rem 1.5rem calc(1.4rem + env(safe-area-inset-bottom));
-		max-height: 55vh;
-		overflow-y: auto;
-	}
-
-	.about-header {
-		display: flex;
-		align-items: baseline;
-		gap: 1rem;
-	}
-
-	.about-title {
-		font-size: 0.75rem;
-		color: var(--rubric);
-	}
-
-	.about-close {
-		margin-left: auto;
-		/* the button's tap padding would inset the glyph from the text
-		   column's right edge — pull it back out so the × sits ON the
-		   corner the eye expects */
-		margin-right: -0.5rem;
-		font: inherit;
-		font-size: 1.3rem;
-		line-height: 1;
-		background: none;
-		border: none;
-		color: var(--ink-soft);
-		cursor: pointer;
-		padding: 0.2rem 0.5rem;
-	}
-
-	.about-close:hover {
-		color: var(--ink);
 	}
 
 	.about-text {

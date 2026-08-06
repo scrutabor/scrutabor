@@ -383,3 +383,42 @@ test('a descending initial keeps its size, and the gloss row gives way', async (
 	});
 	expect(new Set(tops).size, 'the gloss row is level').toBe(1);
 });
+
+test('choosing a part does not shift the parts beside it', async ({ page }) => {
+	// The chosen part is set bold, and bold is wider: each label was
+	// nudging its neighbours a couple of pixels sideways as the reader
+	// moved along the row, which made the row look loose. Every option now
+	// reserves the width of its own bold form whether or not it is chosen,
+	// so only the weight changes.
+	await page.goto('/en/ordinarium/confiteor');
+	const lefts = () =>
+		page.$$eval('.picker.compact .option', (els) =>
+			els.map((e) => Math.round(e.getBoundingClientRect().left))
+		);
+
+	const first = await lefts();
+	for (const name of ['server', 'priest', 'faithful']) {
+		await page.getByRole('radio', { name }).click();
+		expect(await lefts(), `the row moved after choosing ${name}`).toEqual(first);
+	}
+});
+
+test('the mark key is dismissed the way every other sheet is', async ({ page }) => {
+	// It arrived last and got only its own close button: a tap outside and
+	// Escape, which dismiss the word panel and the introduction, left it
+	// sitting there. Three sheets open from one page; a reader should not
+	// have to learn which one needs the ×.
+	for (const url of ['/pl/ordinarium/pater-noster', '/pl/ordo/praeparatio']) {
+		await page.goto(url);
+
+		await page.locator('.mark').first().click();
+		await expect(page.locator('.legend'), `${url}: does not open`).toBeVisible();
+		await page.locator('h1').click();
+		await expect(page.locator('.legend'), `${url}: survives a tap outside`).toHaveCount(0);
+
+		await page.locator('.mark').first().click();
+		await expect(page.locator('.legend')).toBeVisible();
+		await page.keyboard.press('Escape');
+		await expect(page.locator('.legend'), `${url}: survives Escape`).toHaveCount(0);
+	}
+});

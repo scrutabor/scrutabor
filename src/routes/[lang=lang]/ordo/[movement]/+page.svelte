@@ -38,6 +38,11 @@
 		legendOpen = true;
 	}
 
+	function tapWord(id: string) {
+		legendOpen = false;
+		panel.toggle(id);
+	}
+
 	// The prayers this reader is not saying, for the movement as a whole.
 	// Knowing the whole set is what lets a RUN of them be named once — "the
 	// priest prays these silently" belongs over the twelve prayers of the
@@ -99,21 +104,6 @@
 			: null
 	);
 
-	// Dismissal gestures, as on the reading pages: Esc, and a tap on the
-	// quiet parts of the page. composedPath, not target.closest — a control
-	// that re-renders on click detaches before the event reaches window.
-	function onWindowClick(e: MouseEvent) {
-		if (panel.id === null) return;
-		const interactive = e
-			.composedPath()
-			.some((n) => n instanceof Element && n.matches('a, button, input, select, textarea, aside'));
-		if (!interactive) panel.close();
-	}
-
-	function onWindowKeydown(e: KeyboardEvent) {
-		if (e.key === 'Escape' && panel.id !== null) panel.close();
-	}
-
 	keepAwake();
 
 	// The flow is the longest surface in the book and the one a reader
@@ -126,11 +116,7 @@
 	);
 </script>
 
-<svelte:window
-	onpopstate={panel.applyFromLocation}
-	onclick={onWindowClick}
-	onkeydown={onWindowKeydown}
-/>
+<svelte:window onpopstate={panel.applyFromLocation} />
 
 <svelte:head>
 	<title>{movement ? `${movement.title} — Ordo Missæ` : 'Ordo Missæ'} — Scrutabor</title>
@@ -210,7 +196,7 @@
 							{helpLevel}
 							idPrefix={e.text!.split('/')[1]}
 							selectedId={panel.id}
-							ontap={panel.toggle}
+							ontap={tapWord}
 							onmark={openLegend}
 						/>
 					</div>
@@ -307,7 +293,7 @@
 	/* The rule closes the top section, so it sits nearer to what it closes
 	   than to what comes after it — overshooting that put it closer to the
 	   first prayer and it read as that prayer's opening rule instead. */
-	header {
+	.page > header {
 		padding-bottom: 1.3rem;
 	}
 
