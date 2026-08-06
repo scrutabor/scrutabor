@@ -555,22 +555,32 @@
 	   of nothing beneath it, so every pair read as two loose lines rather
 	   than one word and its meaning.
 
-	   Proximity is the only thing making that pairing legible, so the
-	   three distances are set as a scale and not one at a time: a gloss
-	   close to the Latin it glosses, a clear step to the next line of the
-	   same verse, a clearer one to the next verse. The middle step is
-	   line-height — with ruby-position: under there is no other lever for
-	   the space between two lines of ONE verse, since the gloss hangs
-	   inside the line box. */
+	   Proximity is the only thing making that pairing legible, so a gloss
+	   sits close to the Latin it glosses and every line stands well clear
+	   of the next.
+
+	   ONE rhythm down the page, and no extra air at a verse break. The
+	   page used to open up between verses, and the owner's report was
+	   that it looked arbitrary — which it was: whether a verse takes one
+	   line or two is a fact about the WINDOW, not about the text, so the
+	   tight gap marked something a reader cannot learn and that moves
+	   when the phone is turned. Where a verse begins is said instead by
+	   the hanging indent below, which costs nothing vertically and does
+	   not change with the width. */
 	.verse.glossed {
 		line-height: 2.3;
+		/* the first line of a verse stands out to the margin, its
+		   continuations hang in — the psalter's own device */
+		padding-inline-start: 1.15rem;
+		text-indent: -1.15rem;
 		/* The gloss row is shifted down by GLOSS_GAP, and a relative shift
 		   moves paint without moving layout — so the last gloss of a verse
 		   hangs below the box that carries the margin, and the verse gives
 		   away that much of the space beneath it. Given back here, which is
 		   why a rubric under a glossed line looked cramped while the same
-		   rubric under another rubric looked right. */
-		margin-bottom: calc(2.1rem + 0.22rem);
+		   rubric under another rubric looked right. Nothing beyond that:
+		   a verse break is not extra air. */
+		margin-bottom: 0.22rem;
 	}
 
 	/* text-indent INHERITS, and an inline-block establishes its own first

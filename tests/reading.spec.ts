@@ -438,17 +438,18 @@ test('the header sits on one centre line', async ({ page }) => {
 });
 
 test('a gloss belongs to the word above it, and is legible', async ({ page }) => {
-	// The three distances down a glossed page are a SCALE, and the whole
-	// legibility of the apparatus is in the ratios between them: a gloss
-	// tight to the Latin it glosses, a clear step to the next line of the
-	// same verse, a clearer one to the next verse. They were 6 : 14 : 33,
-	// and the owner's report was that a verse which wraps looked wrong —
-	// at 2.4x the gloss did not visibly belong to the line above it, and a
-	// verse break at 2.3x over that was not visibly a break either, so the
-	// column read as one irregular rhythm. Now 4.5 : 18 : 51.
+	// Two things about the vertical rhythm, both the owner's calls.
 	//
-	// The floor on the first is the descenders: below about 3px a p or a q
-	// touches the gloss under it.
+	// A gloss belongs to the Latin ABOVE it, and only proximity says so:
+	// tight to its own line, well clear of the next. The floor on the
+	// first is the descenders — below about 3px a p or a q touches the
+	// gloss under it — so it is measured on the ink, not the boxes.
+	//
+	// And the rhythm is UNIFORM: a new verse gets no more air than a
+	// wrapped line does. It used to get 2.3x more, and that looked
+	// arbitrary because it is — whether a verse takes one line or two is
+	// a fact about the window, so the page changed shape when the phone
+	// turned. Where a verse begins is said by the hanging indent instead.
 	await page.goto('/en/ordinarium/corpus-tuum');
 	const gaps = await page.evaluate(() => {
 		const c = document.createElement('canvas').getContext('2d')!;
@@ -484,9 +485,10 @@ test('a gloss belongs to the word above it, and is legible', async ({ page }) =>
 	expect(gaps.between, 'the next line of the verse stands well clear').toBeGreaterThan(
 		gaps.pair * 3
 	);
-	expect(gaps.toNextVerse, 'and the next VERSE stands clear of that').toBeGreaterThan(
-		gaps.between * 2.2
-	);
+	expect(
+		Math.abs(gaps.toNextVerse - gaps.between),
+		'a verse break is the same step as a line break'
+	).toBeLessThan(2);
 	expect(gaps.size, 'the gloss is big enough to read').toBeGreaterThan(13);
 	expect(gaps.slope, 'and upright at that size').toBe('normal');
 });
@@ -562,17 +564,20 @@ test('the highlight covers the whole of a raised initial', async ({ page }) => {
 });
 
 test('a rubric is set apart from the prayer it interrupts', async ({ page }) => {
-	// Two faults met here. The gloss row is shifted down and a relative
-	// shift moves paint without moving layout, so a glossed verse was
-	// giving away that much of the margin beneath it — which is why a
-	// rubric under a glossed line looked cramped while the same rubric
-	// under another rubric looked right. And a rubric is a different voice,
-	// in red with a rule down its edge: it wants a step more air than one
-	// line of a prayer takes from the next.
+	// A rubric is a different voice, in red with a rule down its edge, and
+	// it wants a step more air than one line of a prayer takes from the
+	// next — which is the ONLY step left in the vertical rhythm now that a
+	// verse break is the same as a line break.
+	//
+	// Ink on both sides, never boxes: the gloss row is shifted down by a
+	// relative offset, which moves paint without moving layout, so a
+	// glossed verse's box ends ABOVE its own last gloss. Measuring to the
+	// next element's box top therefore reads as a negative gap while the
+	// page is perfectly well spaced.
 	await page.goto('/en/ordinarium/corpus-tuum');
 	const gaps = await page.evaluate(() => {
 		const c = document.createElement('canvas').getContext('2d')!;
-		const inkBottom = (el: Element) => {
+		const metrics = (el: Element) => {
 			const cs = getComputedStyle(el);
 			c.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
 			const m = c.measureText(el.textContent || 'x');
@@ -581,8 +586,12 @@ test('a rubric is set apart from the prayer it interrupts', async ({ page }) => 
 			el.appendChild(probe);
 			const b = probe.getBoundingClientRect().top;
 			probe.remove();
-			return b + m.actualBoundingBoxDescent;
+			return { top: b - m.actualBoundingBoxAscent, bottom: b + m.actualBoundingBoxDescent };
 		};
+		const inkBottom = (el: Element) => metrics(el).bottom;
+		/** the ink top of whatever the block starts with — a verse starts
+		 * with a ruby base, a rubric with its own prose */
+		const inkTop = (el: Element) => metrics(el.querySelector('.base') ?? el).top;
 		const kids = [...document.querySelectorAll('main > .verse, main > .rubric, main > .who')];
 		const out: { kind: string; gap: number }[] = [];
 		for (let i = 1; i < kids.length; i++) {
@@ -593,7 +602,7 @@ test('a rubric is set apart from the prayer it interrupts', async ({ page }) => 
 			const bottom = last ? inkBottom(last) : a.getBoundingClientRect().bottom;
 			out.push({
 				kind: `${a.className.split(' ')[0]}→${b.className.split(' ')[0]}`,
-				gap: b.getBoundingClientRect().top - bottom
+				gap: inkTop(b) - bottom
 			});
 		}
 		return out;
@@ -603,6 +612,7 @@ test('a rubric is set apart from the prayer it interrupts', async ({ page }) => 
 	expect(between.length, 'the prayer has several lines').toBeGreaterThan(0);
 	expect(toRubric.length, 'and a rubric after one of them').toBeGreaterThan(0);
 	expect(Math.min(...between), 'no line is crowded against the next').toBeGreaterThan(12);
+	// the rubric is the one place the rhythm still steps up
 	expect(
 		Math.min(...toRubric),
 		'a rubric stands further off than the next line of the prayer'
@@ -654,4 +664,34 @@ test('the introduction opens right under its own label', async ({ page }) => {
 		return text.top - head.bottom;
 	});
 	expect(gap, 'the label and its prose belong together').toBeLessThan(20);
+});
+
+test('a verse begins at the margin and its continuations hang in', async ({ page }) => {
+	// With the vertical rhythm uniform, this is what is left to say where
+	// a verse starts — the psalter's own device, and it costs nothing
+	// vertically and does not change when the window does.
+	await page.goto('/en/ordinarium/credo');
+	const lines = await page.evaluate(() => {
+		const verse = [...document.querySelectorAll('.verse.glossed')].find((v) => {
+			const r = document.createRange();
+			r.selectNodeContents(v);
+			const tops = new Set(
+				[...r.getClientRects()].filter((x) => x.width > 2).map((x) => Math.round(x.top / 14))
+			);
+			return tops.size > 2 && !v.querySelector('.mark');
+		})!;
+		const r = document.createRange();
+		r.selectNodeContents(verse);
+		const groups: { top: number; left: number }[] = [];
+		for (const x of [...r.getClientRects()].filter((x) => x.width > 2)) {
+			const g = groups.find((g) => Math.abs(g.top - x.top) < 14);
+			if (g) g.left = Math.min(g.left, x.left);
+			else groups.push({ top: x.top, left: x.left });
+		}
+		groups.sort((a, b) => a.top - b.top);
+		return groups.map((g) => Math.round(g.left));
+	});
+	const first = lines[0];
+	const cont = lines[lines.length - 1];
+	expect(cont - first, 'the continuation hangs in from the verse’s own margin').toBeGreaterThan(10);
 });
