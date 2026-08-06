@@ -57,7 +57,7 @@ noScript.describe('no javascript', () => {
 
 test('the language menu lists English first', async ({ page }) => {
 	await page.goto('/pl/orationes/pater-noster');
-	await page.locator('.menu > button').click();
+	await page.getByRole('button', { name: 'wybór języka' }).click();
 	const items = page.locator('[role="listbox"] li');
 	await expect(items).toHaveCount(2);
 	await expect(items.first()).toContainText('English');

@@ -9,9 +9,17 @@
 	// older, the primary use is a dim nave with the book at arm's length,
 	// and once this is wrapped for Android and iOS there is no browser
 	// chrome to pinch-zoom from.
+	//
+	// A MENU rather than a button that cycles. Cycling was the first try
+	// and the owner found it opaque: it says neither what the setting is
+	// nor what else it could be, and on the pages with no Latin on them —
+	// the landing, the Ordo index — pressing it changed nothing a reader
+	// could see, so it read as broken. A menu answers both at once, and
+	// answers them everywhere.
 	import { onMount } from 'svelte';
+	import Menu from './Menu.svelte';
 	import { M, type Lang } from '$lib/i18n';
-	import { reading } from '$lib/reading.svelte';
+	import { ORDER, reading } from '$lib/reading.svelte';
 
 	let { lang }: { lang: Lang } = $props();
 	const msgs = $derived(M[lang]);
@@ -20,45 +28,65 @@
 	// stored choice before first paint, and this picks it up.
 	onMount(() => reading.sync());
 
-	// The label carries the CURRENT step, so a reader who cannot see the
-	// letters is told where the setting stands when the button takes focus,
-	// and told again when it changes.
 	const label = $derived(`${msgs.textSizeAria}: ${msgs.textSizes[reading.value]}`);
 </script>
 
-<button onclick={() => reading.next()} aria-label={label} title={label}>
-	<!-- the small-A/large-A the whole world uses for this -->
-	<span class="small" aria-hidden="true">A</span><span class="large" aria-hidden="true">A</span>
-</button>
-<span class="sr-only" aria-live="polite">{label}</span>
+<Menu {label}>
+	{#snippet trigger()}
+		<!-- the small-A/large-A the whole world uses for this. trim-label is
+		     the face with normalised metrics (app.css): EB Garamond's ascent
+		     is taller than its em, so a line box of it centres visibly high
+		     inside a round button, which is what the owner saw. -->
+		<span class="aa trim-label" aria-hidden="true">A<span class="big">A</span></span>
+	{/snippet}
+	{#snippet children(close)}
+		{#each ORDER as step (step)}
+			<li>
+				<button
+					class="menu-row"
+					type="button"
+					role="option"
+					aria-selected={step === reading.value}
+					onclick={() => {
+						reading.set(step);
+						close();
+					}}
+				>
+					<!-- each option is set at the size it stands for, so the list
+				     shows the choice rather than describing it -->
+					<span
+						class="sample trim-label"
+						aria-hidden="true"
+						style:font-size={`${0.8 + ORDER.indexOf(step) * 0.28}rem`}>A</span
+					>
+					<span>{msgs.textSizes[step]}</span>
+				</button>
+			</li>
+		{/each}
+	{/snippet}
+</Menu>
 
 <style>
-	button {
-		width: 2rem;
-		height: 2rem;
+	/* not `.mark` — that is the speaker mark on the reading surfaces,
+	   and two different things under one name is how a selector in a
+	   test quietly measures the wrong element. */
+	.aa {
 		display: flex;
 		align-items: baseline;
-		justify-content: center;
 		gap: 0.05em;
-		background: none;
-		border: 1px solid var(--border);
-		border-radius: 999px;
-		padding: 0;
+		font-size: 0.78rem;
+		line-height: 1;
+	}
+
+	.big {
+		font-size: 1.3em;
+	}
+
+	.sample {
+		flex: none;
+		width: 1.4rem;
+		text-align: center;
+		line-height: 1;
 		color: var(--ink-soft);
-		font: inherit;
-		cursor: pointer;
-	}
-
-	button:hover {
-		background: var(--wash);
-		color: var(--ink);
-	}
-
-	.small {
-		font-size: 0.72rem;
-	}
-
-	.large {
-		font-size: 1rem;
 	}
 </style>

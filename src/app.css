@@ -193,6 +193,36 @@ h2 {
 	text-align: center;
 }
 
+/* One row of a nav menu, whether it navigates (a language) or acts (a
+   size). It lives here rather than in Menu.svelte because the rows are
+   the CALLER's markup — and because this codebase does not use :global,
+   which stylelint is not configured for. */
+.menu-row {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	width: 100%;
+	padding: 0.4rem 0.6rem;
+	border: 0;
+	border-radius: 0.35rem;
+	background: none;
+	text-align: start;
+	text-decoration: none;
+	font: inherit;
+	font-size: 0.95rem;
+	color: var(--ink);
+	cursor: pointer;
+}
+
+.menu-row:hover {
+	background: var(--wash);
+}
+
+.menu-row[aria-current='true'],
+.menu-row[aria-selected='true'] {
+	background: var(--wash-strong);
+}
+
 /* A list of links as cards — the catalogue of texts, the grammar index.
    Two copies of these three rules, and they had already drifted apart by
    a tenth of a rem of padding, which is exactly how this goes: nobody
