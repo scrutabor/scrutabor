@@ -162,7 +162,11 @@ const MESSAGES: Record<Lang, Messages> = {
 		voices: { submissa: 'in a low voice', secreto: 'silently', cantus: 'sung' },
 		yoursLabel: { answer: 'you answer', say: 'you say' },
 		roleLabel: 'texts for',
-		roles: { populus: 'the faithful', minister: 'the server', sacerdos: 'the priest' },
+		// Bare nouns, no article: this is a label, and a label is what the
+		// missals put in the margin beside a line — Priest, Server, Faithful.
+		// The article belongs in the sentence underneath, where it reads as
+		// English rather than as three repetitions of "the".
+		roles: { populus: 'faithful', minister: 'server', sacerdos: 'priest' },
 		roleHint: {
 			populus: 'the parts said aloud, with the answers of the faithful',
 			minister: 'the same, with the server’s responses in full',
