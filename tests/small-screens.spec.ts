@@ -94,3 +94,54 @@ test('every menu opens onto the screen, not off the edge of it', async ({ page }
 	}
 	expect(damage, `a menu opened off the screen:\n  ${damage.join('\n  ')}`).toEqual([]);
 });
+
+test('a wide screen keeps every control in its unstacked form', async ({ page }) => {
+	// The other half of the sweep, and the half that was missing. Three
+	// controls now rearrange themselves when the room runs out, and a
+	// rearrangement that fires when it should not is just as wrong as one
+	// that does not fire when it should — `container-type: inline-size`
+	// applies `contain: inline-size`, so a control sized BY its contents
+	// collapses to nothing and every container query matches. That shipped:
+	// the parts control stacked on an 1800px screen.
+	for (const [width, size] of [
+		[1800, 'normal'],
+		[1200, 'largest'],
+		[1024, 'larger']
+	] as const) {
+		await page.setViewportSize({ width, height: 900 });
+		await page.goto('/pl/ordo/praeparatio');
+		await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
+		await page.reload();
+		await page.waitForSelector('html[data-hydrated]');
+		const shape = await page.evaluate(() => {
+			const rows = (sel: string) =>
+				new Set(
+					[...document.querySelectorAll(sel)].map((e) => Math.round(e.getBoundingClientRect().top))
+				).size;
+			const help = document.querySelector('.help')!.getBoundingClientRect();
+			const track = document.querySelector('input[type="range"]')!.getBoundingClientRect();
+			return {
+				partRows: rows('.picker.compact .option'),
+				labelLines: document.querySelector('.picker.compact .label')!.getClientRects().length,
+				trackSpansTheRow: track.width > help.width * 0.9
+			};
+		});
+		const at = `${width}px/${size}`;
+		expect(shape.partRows, `${at}: the parts control stacked with room to spare`).toBe(1);
+		expect(shape.labelLines, `${at}: its label wrapped with room to spare`).toBe(1);
+		expect(shape.trackSpansTheRow, `${at}: the help slider stacked with room to spare`).toBe(false);
+	}
+
+	// and on the index, the full picker keeps its three parts side by side
+	await page.setViewportSize({ width: 1200, height: 900 });
+	await page.goto('/pl/ordo');
+	const fullRows = await page.evaluate(
+		() =>
+			new Set(
+				[...document.querySelectorAll('.picker:not(.compact) .option')].map((e) =>
+					Math.round(e.getBoundingClientRect().top)
+				)
+			).size
+	);
+	expect(fullRows, 'the full parts control stacked on a wide screen').toBe(1);
+});

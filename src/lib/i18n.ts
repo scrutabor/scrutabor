@@ -125,9 +125,9 @@ const MESSAGES: Record<Lang, Messages> = {
 		roleLabel: 'teksty dla',
 		roles: { populus: 'wiernych', minister: 'ministranta', sacerdos: 'kapłana' },
 		roleHint: {
-			populus: 'części odmawiane głośno wraz z odpowiedziami wiernych',
-			minister: 'to samo, wraz z odpowiedziami ministranta',
-			sacerdos: 'całe Ordo, wraz z modlitwami odmawianymi po cichu'
+			populus: 'części odmawiane głośno, z odpowiedziami wiernych',
+			minister: 'części odmawiane głośno, z pełnymi odpowiedziami ministranta',
+			sacerdos: 'całe Ordo Missæ, wraz z modlitwami odmawianymi po cichu'
 		},
 		rolePart: (answers, said, titles) =>
 			said === 0
@@ -205,8 +205,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		roles: { populus: 'faithful', minister: 'server', sacerdos: 'priest' },
 		roleHint: {
 			populus: 'the parts said aloud, with the answers of the faithful',
-			minister: 'the same, with the server’s responses in full',
-			sacerdos: 'the whole Ordo, with the prayers said secretly'
+			minister: 'the parts said aloud, with the server’s answers in full',
+			sacerdos: 'the whole Ordo Missæ, including the prayers said silently'
 		},
 		rolePart: (answers, said, titles) =>
 			said === 0

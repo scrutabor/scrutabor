@@ -50,9 +50,6 @@
 
 <style>
 	.picker {
-		/* a container, so the control can answer to the room it has —
-		   which depends on the text size as much as on the window */
-		container-type: inline-size;
 		margin: 1.6rem auto 0;
 		max-width: 34rem;
 		text-align: center;
@@ -71,6 +68,16 @@
 		border: 1px solid var(--border);
 		border-radius: 999px;
 		overflow: hidden;
+	}
+
+	/* Only the FULL picker is a container. `container-type: inline-size`
+	   applies `contain: inline-size`, which means the contents no longer
+	   contribute to the width — fine for a block that is as wide as its
+	   parent, fatal for the compact form, which is an inline-flex sized BY
+	   its contents. It collapsed, the query matched at every window width,
+	   and the control stacked on a 1800px screen. */
+	.picker:not(.compact) {
+		container-type: inline-size;
 	}
 
 	/* Three parts side by side need about 15rem of room. Below that — a
