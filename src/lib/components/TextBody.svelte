@@ -315,10 +315,8 @@
 	);
 </script>
 
-{#snippet face(id: string, form: string, raised = false, sink = 0)}{@const fit = initialFit(
-		form.slice(0, 1),
-		helpLevel >= 1
-	)}<ruby
+{#snippet face(id: string, form: string, post = '', raised = false, sink = 0)}{@const fit =
+		initialFit(form.slice(0, 1), helpLevel >= 1)}<ruby
 		><span
 			class="base"
 			style:padding-top={raised ? `${fit.padTop}em` : null}
@@ -328,7 +326,7 @@
 					style:font-size="{fit.scale}em"
 					style:margin-inline-start="{fit.start}em"
 					style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
-				>{form.slice(1)}{:else}{form}{/if}</span
+				>{form.slice(1)}{:else}{form}{/if}{post}</span
 		>{#if helpLevel >= 1}<rt
 				style:top="{GLOSS_GAP + sink - (raised ? fit.lift : 0)}rem"
 				class="shifted"
@@ -407,9 +405,10 @@
 							id={domId(w.id)}
 							class:selected={selectedId === domId(w.id)}
 							onclick={() => ontap?.(domId(w.id))}
-							>{@render face(w.id, w.form, raised, sink)}</button
-						>{:else}<span class="word">{@render face(w.id, w.form, raised, sink)}</span
-						>{/if}{w.post ?? ''}</span
+							>{@render face(w.id, w.form, w.post ?? '', raised, sink)}</button
+						>{:else}<span class="word"
+							>{@render face(w.id, w.form, w.post ?? '', raised, sink)}</span
+						>{/if}</span
 				>{' '}{/each}
 		</p>
 		{#if helpLevel >= 2 && gloss.segments[seg.id]?.translation}
@@ -612,6 +611,14 @@
 	   and ended in the middle of the gloss beneath them. */
 	.base {
 		padding: 0.06em 0.1rem;
+		/* The wash wants a little air around the letters; the LETTERS must
+		   not move for it. Horizontal padding on an inline box is layout,
+		   not just paint, so that 0.1rem was pushing every Latin word
+		   1.6px into its ruby column while the gloss started at the column
+		   edge — which is why the glosses read as sitting further left
+		   than the Latin. Cancelled here: the wash keeps its air, the text
+		   keeps the margin. */
+		margin-inline: -0.1rem;
 		border-radius: 0.25rem;
 	}
 
@@ -719,10 +726,21 @@
 	/* Translations get the same typographic treatment as rubric narratives —
 	   a thin vertical hairline with an indent — so the page stays layered
 	   text, not cards: red hairline = what happens, neutral = what it means. */
+	/* A translation belongs to the verse above it, and the page has ONE
+	   rhythm — so it sits a line's distance under the gloss row and the
+	   next verse sits a line's distance under it, not jammed against one
+	   and marooned from the other.
+	   (It used to pull itself UP by 0.45rem, which worked while a glossed
+	   verse carried 1.42rem of margin beneath it. That margin is 0.22rem
+	   now — one rhythm — so the same negative pulled the translation into
+	   the gloss row.)
+	   Its rule stands in the gutter where the speaker marks hang, and its
+	   text starts on the same left edge as the Latin: it is that verse in
+	   another language, so it belongs in that verse's column. */
 	.seg-extra {
-		margin: -0.45rem 0 1.4rem;
+		margin: 0.5rem 0 0.55rem;
 		border-inline-start: 2px solid var(--wash-strong);
-		padding-inline-start: 0.9rem;
+		padding-inline-start: calc(2rem - 2px);
 	}
 
 	.translation {

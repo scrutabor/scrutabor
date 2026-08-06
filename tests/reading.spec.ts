@@ -821,3 +821,83 @@ test('a gloss of several words stays one gloss', async ({ page }) => {
 		expect(broken, `${url} at ${w}px broke a gloss across lines`).toEqual([]);
 	}
 });
+
+test('Latin, gloss and translation share one left edge', async ({ page }) => {
+	// Three layers of the same verse, so they start on the same line. Two
+	// separate regressions have broken this, both invisible to a test that
+	// looks at element rects:
+	//
+	//   * the wash around a tapped word is drawn with horizontal padding on
+	//     the ruby base, and horizontal padding on an inline box is LAYOUT —
+	//     it pushed every Latin word 1.6px into its column while the gloss
+	//     started at the column edge, so the glosses read as further left;
+	//   * the translation block was indented to its own rule rather than to
+	//     the verse's column, leaving it 16px left of the Latin.
+	//
+	// Measured with a zero-width marker, which is the only thing that sees
+	// where text actually starts inside a ruby.
+	for (const url of ['/en/orationes/pater-noster', '/pl/ordinarium/credo']) {
+		await page.setViewportSize({ width: 760, height: 1200 });
+		await page.goto(url);
+		await page.locator('input[type="range"]').fill('2');
+		const edges = await page.evaluate(() => {
+			const boxStart = (el: Element) => {
+				const s = document.createElement('span');
+				s.style.cssText = 'display:inline-block;width:0;height:1em;vertical-align:baseline';
+				el.insertBefore(s, el.firstChild);
+				const x = s.getBoundingClientRect().left;
+				s.remove();
+				return x;
+			};
+			const verse = document.querySelector('.verse.glossed')!;
+			const extra = verse.nextElementSibling?.classList.contains('seg-extra')
+				? verse.nextElementSibling
+				: document.querySelector('.seg-extra')!;
+			return {
+				latin: Math.round(boxStart(verse.querySelector('.base')!)),
+				gloss: Math.round(boxStart(verse.querySelector('rt')!)),
+				translation: Math.round(boxStart(extra.querySelector('.translation')!))
+			};
+		});
+		const spread = Math.max(...Object.values(edges)) - Math.min(...Object.values(edges));
+		expect(spread, `${url}: the three layers are ragged — ${JSON.stringify(edges)}`).toBeLessThan(
+			2
+		);
+	}
+});
+
+test('a translation belongs to the verse above it', async ({ page }) => {
+	// It sits one line-step under its own gloss row and clearly further
+	// from the next verse. It used to pull itself UP by 0.45rem, which was
+	// right while a glossed verse carried 1.42rem beneath it; once the
+	// rhythm became uniform that negative jammed the translation into the
+	// gloss row and marooned the next verse.
+	await page.setViewportSize({ width: 760, height: 1200 });
+	await page.goto('/en/orationes/pater-noster');
+	await page.locator('input[type="range"]').fill('2');
+	const gaps = await page.evaluate(() => {
+		const c = document.createElement('canvas').getContext('2d')!;
+		const ink = (el: Element) => {
+			const cs = getComputedStyle(el);
+			c.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+			const m = c.measureText((el.textContent || 'x').trim());
+			const probe = document.createElement('span');
+			probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+			el.appendChild(probe);
+			const b = probe.getBoundingClientRect().top;
+			probe.remove();
+			return { top: b - m.actualBoundingBoxAscent, bottom: b + m.actualBoundingBoxDescent };
+		};
+		const verses = [...document.querySelectorAll('.verse.glossed')];
+		const tr = document.querySelector('.seg-extra .translation')!;
+		const lastRt = [...verses[0].querySelectorAll('rt')].pop()!;
+		return {
+			toItsOwnVerse: ink(tr).top - ink(lastRt).bottom,
+			toTheNextVerse: ink(verses[1].querySelector('.base')!).top - ink(tr).bottom
+		};
+	});
+	expect(gaps.toItsOwnVerse, 'not jammed into the gloss row').toBeGreaterThan(8);
+	expect(gaps.toTheNextVerse, 'and nearer its own verse than the next').toBeGreaterThan(
+		gaps.toItsOwnVerse * 1.25
+	);
+});
