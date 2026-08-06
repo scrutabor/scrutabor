@@ -3,6 +3,7 @@
 	import { M, type Lang } from '$lib/i18n';
 	import { isYours, role } from '$lib/role.svelte';
 	import { initialFit } from '$lib/reading-geometry';
+	import * as marks from '$lib/speaker-marks';
 
 	// The rendered text itself, shared by the reading page and the ordo
 	// flow. `ontap` makes the words buttons; the flow passes an idPrefix so
@@ -61,122 +62,16 @@
 		schola: 'R.'
 	};
 
-	// Two shapes, and the books set them differently.
-	//
-	// A DIALOGUE is voices trading lines — the preface dialogue, the psalm
-	// said alternately with the server. The books mark every line of it,
-	// ℣ and ℟ down the page, and give it no opening initial.
-	//
-	// A PRAYER is one voice saying the whole thing, and it ends with the
-	// answer Amen. The books open it with a red initial and mark NOTHING
-	// but that answer: no missal prints ℣ down the body of the Canon.
-	//
-	// The two are told apart by how often the voice changes: a prayer turns
-	// over once, at the Amen; a dialogue keeps turning.
-	const turns = $derived.by(() => {
-		const speakers = doc.segments
-			.filter((s) => s.type === 'verse' && s.speaker)
-			.map((s) => s.speaker);
-		return speakers.filter((sp, i) => i > 0 && sp !== speakers[i - 1]).length;
-	});
-	const isDialogue = $derived(turns >= 2);
-	const answers = $derived(
-		new Set(doc.segments.filter((s) => s.type === 'verse' && s.speaker).map((s) => s.speaker))
-			.size > 1
-	);
-
-	// The mark says who says it; the NAME says what the mark means, and it
-	// only has to say that once. Each speaker is named the first time it
-	// appears in a text — a dialogue that alternates every line would
-	// otherwise carry a label above every line of it.
-	//
-	// It used to add "you answer" on the reader's own first line. That is
-	// gone: the page SHOWS whose line it is — the mark is red and heavy for
-	// the reader's part and quiet for the other voice — and a book does not
-	// need to tell its reader what to do with a line it has already marked
-	// as theirs.
-	const firstAt = $derived.by(() => {
-		const seen: Record<string, number> = {};
-		doc.segments.forEach((s, i) => {
-			if (s.type === 'verse' && s.speaker && !(s.speaker in seen)) seen[s.speaker] = i;
-		});
-		return seen;
-	});
-	const namesSpeaker = (i: number) => {
-		const sp = doc.segments[i]?.speaker;
-		return answers && sp !== undefined && firstAt[sp] === i;
-	};
-
-	// Is there a rubric between this verse and the one before it? A
-	// direction breaks the text apart on the page — red, railed, with its
-	// own translation under it — and the eye that comes back down to the
-	// Latin has lost the thread of whose words these are.
-	const afterRubric = (i: number) => {
-		for (let j = i - 1; j >= 0; j--) {
-			if (doc.segments[j].type === 'verse') return false;
-			if (doc.segments[j].type === 'rubric') return true;
-		}
-		return false;
-	};
-
-	// The mark prints where the voice TURNS, and again wherever a rubric has
-	// broken the flow. Both halves are the owner's, and both are about the
-	// same thing — a reader following Mass should never have to work out
-	// where the last mark stopped applying:
-	//
-	//   * not on every line of one voice. Four V.'s down the petitions of
-	//     the Pater noster say the same thing four times, and the indent
-	//     already says a line belongs to the voice above it.
-	//   * but yes after every rubric, even where that means Per ipsum takes
-	//     a V. on each of its phrases: that prayer has a direction between
-	//     every one of them, so the reader is coming back to the text each
-	//     time, and each time is a place to be told.
-	const marked = (i: number) => {
-		const sp = doc.segments[i]?.speaker;
-		if (!sp) return false;
-		if (afterRubric(i)) return true;
-		for (let j = i - 1; j >= 0; j--) {
-			if (doc.segments[j].type === 'verse') return doc.segments[j].speaker !== sp;
-		}
-		return true;
-	};
-
-	// The voice follows the same rule, for the same reason: "silently" over
-	// every line of a prayer said silently throughout is a label repeating
-	// itself, but after a direction it is worth saying again.
-	const namesVoice = (i: number) => {
-		const seg = doc.segments[i];
-		if (!seg?.voice || seg.voice === 'clara') return false;
-		if (afterRubric(i)) return true;
-		for (let j = i - 1; j >= 0; j--) {
-			if (doc.segments[j].type === 'verse') return doc.segments[j].voice !== seg.voice;
-		}
-		return true;
-	};
-
-	// The initial the books open a prayer with, in red. RAISED, not dropped:
-	// a dropped initial floats, and a float cuts straight through the gloss
-	// line under the first words — this page carries an apparatus the
-	// printers did not have to fit around. Raised is a missal device too,
-	// and it sits on the baseline where the word-by-word layout expects it.
-	//
-	// It has to be split off the first word rather than styled through it:
-	// ::first-letter never reaches the letter, because every word is an
-	// inline-block and that is where the pseudo-element stops. It stays
-	// INSIDE the ruby base, though. Setting it beside the ruby put the
-	// gloss back on the line but left the base holding only "ax" of Pax
-	// while the annotation read "The peace" — and ruby centres a short base
-	// under a long annotation, which opened a gap after the initial wide
-	// enough to read as a word break.
-	//
-	// It goes on the first line with something to say — "Orémus." on its own
-	// is a call to pray, and the book gives the initial to the prayer that
-	// follows it, not to it.
-	const firstVerse = $derived(
-		isDialogue
-			? -1
-			: doc.segments.findIndex((s) => s.type === 'verse' && (s.words?.length ?? 0) >= 3)
-	);
+	// The editorial rules — who is marked, whose voice is named, which verse
+	// opens with the initial — are pure functions of the segments and live in
+	// $lib/speaker-marks with their reasons and their tests. What is here is
+	// only the binding of them to this document.
+	const segs = $derived(doc.segments);
+	const answers = $derived(marks.hasAnswers(segs));
+	const namesSpeaker = (i: number) => marks.namesSpeaker(segs, i);
+	const marked = (i: number) => marks.marked(segs, i);
+	const namesVoice = (i: number) => marks.namesVoice(segs, i);
+	const firstVerse = $derived(marks.firstVerseWithInitial(segs));
 </script>
 
 {#snippet face(id: string, form: string, post = '', raised = false, sink = 0)}{@const fit =
