@@ -26,7 +26,9 @@ const PAGES = [
 	'/en/ordinarium/credo'
 ];
 
-const WIDTHS = [320, 390];
+// Phones at both ends, and the tablet widths where a two-column idea would
+// first be tempting and a control first has room to spread.
+const WIDTHS = [320, 390, 768, 1024];
 const SIZES = ['normal', 'larger', 'largest'];
 
 test('nothing runs off the screen, at any width and any text size', async ({ page }) => {

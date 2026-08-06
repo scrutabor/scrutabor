@@ -81,6 +81,28 @@ test('the word panel meets WCAG 2.1 AA, open and interactive', async ({ page }) 
 	expect(await violations(page), 'reading page with the word panel open').toEqual([]);
 });
 
+// The reading size is a knob a reader turns precisely because the print is
+// too small for them, so the sizes that matter most for accessibility are
+// the ones the checks above never saw. Largest print on the narrowest phone
+// is where text overlaps, where a control's touch target is squeezed, and
+// where a wrapped label can end up over a background it was never measured
+// against.
+test.describe('at the largest reading size', () => {
+	for (const width of [375, 834, 1280]) {
+		for (const { name, path } of SURFACES.filter((s) => s.path !== '/')) {
+			test(`${name} meets WCAG 2.1 AA at ${width}px`, async ({ page }) => {
+				await page.addInitScript(() => {
+					localStorage.setItem('scrutabor-reading', 'largest');
+				});
+				await page.setViewportSize({ width, height: 812 });
+				await page.goto(path);
+				await expect(page.locator('html')).toHaveCSS('font-size', '22.4px');
+				expect(await violations(page), `${path} at ${width}px, largest`).toEqual([]);
+			});
+		}
+	}
+});
+
 test('the help slider at its fullest meets WCAG 2.1 AA', async ({ page }) => {
 	// The top step puts every layer on screen at once — translations,
 	// narrative, interlinear gloss — which is the densest the app ever gets.
