@@ -260,10 +260,10 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	await expect(pager.locator('a', { hasText: 'Kýrie' })).toBeVisible();
 	await pager.locator('a', { hasText: 'Credo' }).click();
 	await expect(page).toHaveURL(/ordinarium\/credo$/);
-	// crossing the section boundary backwards
+	// crossing the section boundary backwards, into the last of the prayers
 	await page.goto('/pl/ordinarium/confiteor');
-	await pager.locator('a', { hasText: 'Glória Patri' }).click();
-	await expect(page).toHaveURL(/orationes\/gloria-patri$/);
+	await pager.locator('a', { hasText: 'Míchaël' }).click();
+	await expect(page).toHaveURL(/orationes\/sancte-michael$/);
 	// arrow keys page too, but never while the slider owns them
 	await page.keyboard.press('ArrowRight');
 	await expect(page).toHaveURL(/ordinarium\/confiteor$/);

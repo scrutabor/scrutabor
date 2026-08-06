@@ -4,9 +4,16 @@ import { occurrencesOf } from './concordance';
 describe('occurrencesOf', () => {
 	it('groups occurrences by text in catalog order', () => {
 		const oro = occurrencesOf('oro');
-		expect(oro.map((t) => t.textKey)).toEqual(['orationes/ave-maria', 'ordinarium/confiteor']);
+		// the prayers shelf before the ordinary, and inside it the shelf's own
+		// order — which is the CATALOGUE's, not the corpus's alphabet
+		expect(oro.map((t) => t.textKey)).toEqual([
+			'orationes/ave-maria',
+			'orationes/salve-regina',
+			'orationes/regina-caeli',
+			'ordinarium/confiteor'
+		]);
 		expect(oro[0].items.map((o) => o.form)).toEqual(['ora']);
-		expect(oro[1].items.map((o) => o.form)).toEqual(['oráre']);
+		expect(oro.at(-1)!.items.map((o) => o.form)).toEqual(['oráre']);
 	});
 
 	it('lists every form of a lemma with its word id', () => {

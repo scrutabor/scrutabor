@@ -491,6 +491,16 @@
 			],
 			"note": "Odmiana zaimkowa: dopełniacz alíus, celownik álii — nie jak przymiotniki na -us, -a, -um."
 		},
+		"alleluia": {
+			"senses": [
+				"chwalcie Pana",
+				"alleluja"
+			],
+			"note": "Hebrajskie hallelu-Jah, „chwalcie Jah(we)”, przejęte przez grekę i nieodmienne w łacinie. Od Siedemdziesiątnicy aż do Wigilii Paschalnej liturgia nie wypowiada go ani razu.",
+			"derivatives": [
+				"alleluja"
+			]
+		},
 		"altare": {
 			"senses": [
 				"ołtarz"
@@ -1896,6 +1906,13 @@
 			],
 			"note": "Pierwotnie imiesłów przyszły od sum; łacina używa go także samodzielnie jako przymiotnika, a w liczbie mnogiej nijakiej — „przyszłe rzeczy”."
 		},
+		"gaudeo": {
+			"senses": [
+				"radować się",
+				"cieszyć się"
+			],
+			"note": "Półdeponens: czasy teraźniejsze odmienia czynnie, przeszłe biernie — gavísus sum, „ucieszyłem się”. Od jego rzeczownika gaudium pochodzi francuskie joie i angielskie joy."
+		},
 		"gemo": {
 			"senses": [
 				"jęczeć",
@@ -2720,6 +2737,18 @@
 				"mentalność"
 			]
 		},
+		"mereo": {
+			"senses": [
+				"zasłużyć",
+				"dostąpić",
+				"wysłużyć"
+			],
+			"note": "W łacinie kościelnej z bezokolicznikiem znaczy zwykle „dostąpić tego, by…”, nie „zapracować na coś”: żołnierski sens zapłaty jest klasyczny, sens daru kościelny.",
+			"derivatives": [
+				"merytoryczny",
+				"emerytura"
+			]
+		},
 		"mereor": {
 			"senses": [
 				"zasługiwać",
@@ -3540,6 +3569,19 @@
 			"derivatives": [
 				"plenum",
 				"plenarny"
+			]
+		},
+		"porto": {
+			"senses": [
+				"nieść",
+				"nosić",
+				"dźwigać"
+			],
+			"note": "Zwyczajne słowo o dźwiganiu ciężaru; ten sam rdzeń niesie transport i eksport. Nie ma związku z porta, czyli bramą.",
+			"derivatives": [
+				"transport",
+				"eksport",
+				"import"
 			]
 		},
 		"post": {
@@ -4659,6 +4701,17 @@
 			],
 			"derivatives": [
 				"suprematyzm"
+			]
+		},
+		"surgo": {
+			"senses": [
+				"powstać",
+				"podnieść się",
+				"wstać"
+			],
+			"note": "Ściągnięte z sub-régere, „prowadzić w górę”. Bez przedrostka re- mówi tylko tyle, że ktoś wstał.",
+			"derivatives": [
+				"insurekcja"
 			]
 		},
 		"sursum": {

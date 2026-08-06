@@ -38,6 +38,30 @@ const CATALOG_SOURCE: CatalogSection[] = [
 				slug: 'gloria-patri',
 				title: 'Glória Patri',
 				note: { pl: 'doksologia mniejsza', en: 'the lesser doxology' }
+			},
+			{
+				category: 'orationes',
+				slug: 'salve-regina',
+				title: 'Salve Regína',
+				note: { pl: 'antyfona maryjna, po Mszy cichej', en: 'the Marian antiphon, after low Mass' }
+			},
+			{
+				category: 'orationes',
+				slug: 'regina-caeli',
+				title: 'Regína cæli',
+				note: {
+					pl: 'antyfona maryjna okresu wielkanocnego',
+					en: 'the Marian antiphon of Paschaltide'
+				}
+			},
+			{
+				category: 'orationes',
+				slug: 'sancte-michael',
+				title: 'Sancte Míchaël',
+				note: {
+					pl: 'modlitwa do świętego Michała Archanioła',
+					en: 'the prayer to St Michael the Archangel'
+				}
 			}
 		]
 	},

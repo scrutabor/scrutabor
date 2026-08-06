@@ -405,6 +405,10 @@
 			"head": "álius, ália, áliud",
 			"pos": "adj"
 		},
+		"alleluia": {
+			"head": "allelúia",
+			"pos": "intj"
+		},
 		"altare": {
 			"head": "altáre, altáris",
 			"pos": "noun",
@@ -1246,6 +1250,11 @@
 			"head": "futúrus, -a, -um",
 			"pos": "adj"
 		},
+		"gaudeo": {
+			"head": "gáudeo, gaudére, gavísus sum",
+			"pos": "verb",
+			"conj": 2
+		},
 		"gemo": {
 			"head": "gemo, gémere, gémui, gémitum",
 			"pos": "verb",
@@ -1753,6 +1762,11 @@
 			"gender": "f",
 			"decl": 3
 		},
+		"mereo": {
+			"head": "méreo, merére, mérui, méritum",
+			"pos": "verb",
+			"conj": 2
+		},
 		"mereor": {
 			"head": "méreor, meréri, méritus sum",
 			"pos": "verb",
@@ -2236,6 +2250,11 @@
 		"plenus": {
 			"head": "plenus, -a, -um",
 			"pos": "adj"
+		},
+		"porto": {
+			"head": "porto, portáre, portávi, portátum",
+			"pos": "verb",
+			"conj": 1
 		},
 		"post": {
 			"head": "post",
@@ -2875,6 +2894,11 @@
 		"supra": {
 			"head": "supra",
 			"pos": "prep"
+		},
+		"surgo": {
+			"head": "surgo, súrgere, surréxi, surréctum",
+			"pos": "verb",
+			"conj": 3
 		},
 		"sursum": {
 			"head": "sursum",
