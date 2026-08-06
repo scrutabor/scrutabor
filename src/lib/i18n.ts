@@ -51,9 +51,6 @@ export interface Messages {
 	markLegendNote: string;
 	voices: Record<'submissa' | 'secreto' | 'cantus', string>;
 	/** Marks a line the reader answers with, so it can be found at a glance. */
-	/** Keyed by what the reader's own part DOES with the line: the one
-	 * who answers, or the celebrant who says it. */
-	yoursLabel: Record<'answer' | 'say', string>;
 	/** The reader's part at Mass, and the control that sets it. */
 	roleLabel: string;
 	roles: Record<'populus' | 'minister' | 'sacerdos', string>;
@@ -121,7 +118,6 @@ const MESSAGES: Record<Lang, Messages> = {
 		markLegendNote:
 			'Znak stoi tam, gdzie zmienia się mówiący, i powtarza się po każdej rubryce. Wiersze bez znaku należą do głosu powyżej.',
 		voices: { submissa: 'półgłosem', secreto: 'po cichu', cantus: 'śpiew' },
-		yoursLabel: { answer: 'odpowiadasz', say: 'odmawiasz' },
 		roleLabel: 'teksty dla',
 		roles: { populus: 'wiernych', minister: 'ministranta', sacerdos: 'kapłana' },
 		roleHint: {
@@ -195,7 +191,6 @@ const MESSAGES: Record<Lang, Messages> = {
 		markLegendNote:
 			'A mark stands where the voice changes, and again after every rubric. Lines without one belong to the voice above them.',
 		voices: { submissa: 'in a low voice', secreto: 'silently', cantus: 'sung' },
-		yoursLabel: { answer: 'you answer', say: 'you say' },
 		roleLabel: 'texts for',
 		// Bare nouns, no article: this is a label, and a label is what the
 		// missals put in the margin beside a line — Priest, Server, Faithful.

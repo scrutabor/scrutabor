@@ -1,5 +1,5 @@
-// Following the Mass from the pew: what is said aloud, what you answer,
-// and what the priest prays silently.
+// Following the Mass from the pew: what is said aloud, what the reader's
+// own part is, and what the priest prays silently.
 //
 // The rule these guard is that nothing is ever HIDDEN. The silent prayers
 // fold to a line naming what is happening and open on one tap, and a
@@ -58,12 +58,13 @@ test('the role survives leaving the page', async ({ page }) => {
 test('a line the reader answers is marked as theirs', async ({ page }) => {
 	await page.goto('/pl/ordinarium/praefatio-dialogus');
 
-	// each speaker is named once — the mark carries it after that — and the
-	// reader's own part is named on the first line that is theirs
+	// each speaker is named once — the mark carries it after that — and
+	// nothing tells the reader what to do with the line: the page shows
+	// whose it is and stops there
 	const named = page.locator('.who');
 	await expect(named.first()).toContainText('kapłan');
 	await expect(named.nth(1)).toContainText('ministrant');
-	await expect(named.nth(1)).toContainText('odpowiadasz');
+	await expect(page.locator('.who-yours')).toHaveCount(0);
 	expect(await page.locator('.verse.answer').count()).toBeGreaterThan(0);
 });
 
@@ -109,7 +110,8 @@ test('the reader can change their part from a text page, and the marks follow', 
 	// as the celebrant, his own are — and he does not "answer" them
 	expect((await answered()).filter(Boolean)).toContain('V.');
 	expect((await answered()).filter(Boolean)).not.toContain('R.');
-	await expect(page.locator('.who-yours').first()).toHaveText('odmawiasz');
+	// and nothing is said about it in words: the marks carry it
+	await expect(page.locator('.who-yours')).toHaveCount(0);
 });
 
 test('the mark does not collide with the words beside it', async ({ page }) => {

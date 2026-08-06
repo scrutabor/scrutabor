@@ -304,11 +304,15 @@
 		margin: 1.6rem 0 0;
 	}
 
-	/* The first part's rule would otherwise sit straight under the last
-	   control. The header keeps its own room, as it does on a reading
-	   page. */
+	/* The rule closes the top section, so it sits nearer to what it closes
+	   than to what comes after it — overshooting that put it closer to the
+	   first prayer and it read as that prayer's opening rule instead. */
 	header {
-		padding-bottom: 2.2rem;
+		padding-bottom: 1.3rem;
+	}
+
+	.part:first-of-type {
+		padding-top: 2.2rem;
 	}
 
 	.up {

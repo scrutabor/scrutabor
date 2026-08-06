@@ -87,9 +87,13 @@
 	// The mark says who says it; the NAME says what the mark means, and it
 	// only has to say that once. Each speaker is named the first time it
 	// appears in a text — a dialogue that alternates every line would
-	// otherwise carry a label above every line of it — and the reader's own
-	// part is named once, on the first line that is theirs. After that the
-	// red marks and the rail carry it alone, which is how a missal does it.
+	// otherwise carry a label above every line of it.
+	//
+	// It used to add "you answer" on the reader's own first line. That is
+	// gone: the page SHOWS whose line it is — the mark is red and heavy for
+	// the reader's part and quiet for the other voice — and a book does not
+	// need to tell its reader what to do with a line it has already marked
+	// as theirs.
 	const firstAt = $derived.by(() => {
 		const seen: Record<string, number> = {};
 		doc.segments.forEach((s, i) => {
@@ -97,9 +101,6 @@
 		});
 		return seen;
 	});
-	const firstMine = $derived(
-		doc.segments.findIndex((s) => s.type === 'verse' && isYours(s.speaker, role.value))
-	);
 	const namesSpeaker = (i: number) => {
 		const sp = doc.segments[i]?.speaker;
 		return answers && sp !== undefined && firstAt[sp] === i;
@@ -343,18 +344,14 @@
 		     that is silent. The reader's own lines carry the strongest
 		     mark, because finding them at a glance is the whole point. -->
 		{@const mine = answers && isYours(seg.speaker, role.value)}
-		{@const saysYours = mine && i === firstMine}
 		{@const showVoice = namesVoice(i)}
-		{#if namesSpeaker(i) || saysYours || showVoice}
+		{#if namesSpeaker(i) || showVoice}
 			<p class="who" class:yours={mine}>
 				{#if namesSpeaker(i) && seg.speaker}<span class="who-name"
 						>{M[lang].speakers[seg.speaker]}</span
 					>{/if}
 				{#if showVoice && seg.voice && seg.voice !== 'clara'}<span class="who-voice"
 						>{M[lang].voices[seg.voice]}</span
-					>{/if}
-				{#if saysYours}<span class="who-yours"
-						>{M[lang].yoursLabel[role.value === 'sacerdos' ? 'say' : 'answer']}</span
 					>{/if}
 			</p>
 		{/if}
@@ -430,10 +427,6 @@
 
 	.who-voice {
 		font-style: italic;
-	}
-
-	.who-yours {
-		color: var(--rubric);
 	}
 
 	/* The speaker's mark, in the red the books use for everything that is
