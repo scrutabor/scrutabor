@@ -301,8 +301,8 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		gap: 0.8rem 1.6rem;
-		margin: 1.4rem 0 2.2rem;
+		gap: 1rem 1.6rem;
+		margin: 1.5rem 0 0;
 	}
 
 	.up {

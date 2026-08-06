@@ -89,13 +89,18 @@
 		color: var(--ink-soft);
 	}
 
-	/* On a reading page the control has to be present without being
-	   chrome: one line, the size of the help slider beside it. */
+	/* On a reading page the control is a setting, not a call to action, and
+	   it is set once. So no boxes there: three words with the reader's own
+	   in ink and the others quiet, which is both lighter beside the slider
+	   and honestly centred — a pill group sitting to the right of a small
+	   label reads as off-centre however carefully the row is centred, which
+	   is what the owner was seeing. The Ordo index keeps the full picker,
+	   because choosing is the point of that page. */
 	.picker.compact {
 		margin: 0;
 		display: inline-flex;
-		align-items: center;
-		gap: 0.55rem;
+		align-items: baseline;
+		gap: 0.6rem;
 	}
 
 	.picker.compact .label {
@@ -105,10 +110,34 @@
 
 	.picker.compact .options {
 		margin-top: 0;
+		border: 0;
+		border-radius: 0;
+		overflow: visible;
+		gap: 0.1rem;
 	}
 
 	.picker.compact .option {
-		font-size: 0.82rem;
-		padding: 0.2rem 0.7rem;
+		font-size: 0.9rem;
+		padding: 0 0.15rem;
+		color: var(--ink-soft);
+	}
+
+	.picker.compact .option + .option {
+		border-inline-start: 0;
+	}
+
+	.picker.compact .option + .option::before {
+		content: '·';
+		margin-inline-end: 0.4rem;
+		color: var(--border);
+	}
+
+	.picker.compact .option.on {
+		background: none;
+		color: var(--ink);
+	}
+
+	.picker.compact .option:hover {
+		color: var(--rubric);
 	}
 </style>

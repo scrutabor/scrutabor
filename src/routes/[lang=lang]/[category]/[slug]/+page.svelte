@@ -19,8 +19,19 @@
 	let { data } = $props();
 
 	const lang = $derived(page.params.lang as Lang);
+
 	const msgs = $derived(M[lang]);
 	const doc = $derived(data.doc);
+
+	// A page whose text is spoken by one voice throughout has nothing for
+	// the reader's part to change: no line is marked as theirs and nothing
+	// folds. Offering the choice there is offering a control that does
+	// nothing, so it is not offered — Quod ore súmpsimus is the priest's
+	// alone from beginning to end.
+	const takesPart = $derived(
+		new Set(doc.segments.filter((sg) => sg.type === 'verse' && sg.speaker).map((sg) => sg.speaker))
+			.size > 1
+	);
 	const gloss = $derived(data.gloss);
 	const sectionLabel = $derived(sectionFor(page.params.category ?? '')?.label[lang] ?? '');
 	// Book navigation: the catalog's flattened order — within ordinarium
@@ -151,7 +162,7 @@
 			<p class="subtitle smallcaps">{sectionLabel}</p>
 			<div class="help-row">
 				<HelpLevels {lang} bind:value={helpLevel} />
-				<RolePicker {lang} compact />
+				{#if takesPart}<RolePicker {lang} compact />{/if}
 			</div>
 			{#if gloss.about}
 				<!-- Closed at EVERY slider position (owner rule): the
@@ -253,6 +264,10 @@
 		color: var(--ink);
 	}
 
+	header {
+		padding-bottom: 2.4rem;
+	}
+
 	h1 {
 		margin: 1.8rem 0 0;
 		font-size: 2.6rem;
@@ -272,8 +287,8 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		gap: 0.8rem 1.6rem;
-		margin: 1.4rem 0 2.2rem;
+		gap: 1rem 1.6rem;
+		margin: 1.5rem 0 0;
 	}
 
 	main.panel-open {
@@ -283,7 +298,7 @@
 	/* The about pill opens a bottom sheet (the word panel's idiom), so
 	   the reading layout never reflows. */
 	.about-pill {
-		margin: 1.6rem auto 1.4rem;
+		margin: 1.4rem auto 0;
 		display: block;
 		width: fit-content;
 		font: inherit;

@@ -392,3 +392,17 @@ test('closing the panel leaves the page where it is', async ({ page }) => {
 	await page.waitForTimeout(400);
 	expect(await page.evaluate(() => window.scrollY)).toBe(shifted2);
 });
+
+test('the part control appears only where it changes something', async ({ page }) => {
+	// A page whose text is spoken by one voice from beginning to end has
+	// nothing for the reader's part to change — no line is marked as theirs
+	// and nothing folds — so the choice is not offered there. Offering a
+	// control that does nothing is worse than not offering it.
+	await page.goto('/en/ordinarium/praefatio-dialogus');
+	await expect(page.getByRole('radio', { name: 'faithful' })).toBeVisible();
+
+	await page.goto('/en/ordinarium/quod-ore-sumpsimus'); // the priest's, throughout
+	await expect(page.getByRole('radio', { name: 'faithful' })).toHaveCount(0);
+	// and the help slider, which always does something, stays
+	await expect(page.locator('input[type="range"]')).toBeVisible();
+});
