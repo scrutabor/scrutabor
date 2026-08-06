@@ -628,7 +628,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/libera-nos',
 				note: {
 					pl: 'Po cichu kapłan rozwija ostatnią prośbę — od zła przeszłego, obecnego i przyszłego — a w trakcie niej łamie Hostię na trzy części. Głośno wraca dopiero na zakończenie.',
-					en: 'Silently the priest opens out the last petition — evil past, present and to come — and during it breaks the Host into three. His voice returns only for the ending.'
+					en: 'Silently the priest opens out the last petition — evil past, present and to come — and during it breaks the Host into three. The priest’s voice returns only for the ending.'
 				}
 			},
 			{
@@ -716,7 +716,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/quid-retribuam',
 				note: {
 					pl: 'Odkrywa kielich, zbiera na patenę okruchy, żegna się kielichem i przyjmuje Krew Pańską.',
-					en: 'He uncovers the chalice, gathers any fragments onto the paten, signs himself with the chalice and receives the Blood of the Lord.'
+					en: 'The priest uncovers the chalice, gathers any fragments onto the paten, signs himself with the chalice and receives the Blood of the Lord.'
 				}
 			},
 			{
@@ -750,7 +750,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/corpus-tuum',
 				note: {
 					pl: 'Obmywa palce winem z wodą, wyciera kielich i naczynia; ta druga cicha modlitwa zamyka obrzęd Komunii.',
-					en: 'He washes his fingers with wine and water and dries the chalice and vessels; this second silent prayer closes the Communion rite.'
+					en: 'The priest washes his fingers with wine and water and dries the chalice and vessels; this second silent prayer closes the Communion rite.'
 				}
 			}
 		]

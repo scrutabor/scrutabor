@@ -214,3 +214,29 @@ test('the index says what the reader’s own part has to say', async ({ page }) 
 	await page.getByRole('radio', { name: 'faithful' }).click();
 	await expect(line).toContainText('You answer at 14 places');
 });
+
+test('the narrative names the priest rather than calling him "he"', async ({ page }) => {
+	// A prayer book's rubrics name him, and a reader lands in the MIDDLE of
+	// this book constantly — every part is its own block and the Ordo jumps
+	// between them — so a sentence beginning "He goes on silently" has no
+	// antecedent anywhere in view. The corpus lints its own narratives; this
+	// covers the spine's notes, which are the app's prose, and catches a
+	// corpus fix that was made but never vendored.
+	const offenders: string[] = [];
+	for (const m of ORDO) {
+		await page.goto(`/en/ordo/${m.id}`);
+		offenders.push(
+			...(await page.evaluate(() =>
+				[...document.querySelectorAll('.part-note, .unfold-what, .rubric-narrative')]
+					.flatMap((el) => (el.textContent ?? '').split(/(?<=[.;])\s+/))
+					.filter(
+						(s) =>
+							/^\W*(He|His)\b/.test(s) ||
+							/^\W*(Then|Now|Meanwhile|Here|Next|Again|Afterwards?)\b[^.]{0,24}\bhe\b/.test(s)
+					)
+					.map((s) => s.slice(0, 60))
+			))
+		);
+	}
+	expect(offenders).toEqual([]);
+});

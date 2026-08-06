@@ -204,34 +204,39 @@
 
 	// DESCENT below the baseline, in the letter's own em. Q is the only
 	// capital that opens a prayer in this corpus and reaches below the
-	// line, and the gloss leaves it 0.28em of the reading size to reach
-	// into — measured from the baseline to the ink of the first gloss. At
-	// 1.75 its tail put 3.6px into the word "What". The arithmetic gives it
-	// no room to grow at all: the cap lands at 1.0, so while the apparatus
-	// is showing a Q is rubricated and not raised — which is a missal
-	// device in its own right, and the honest answer to a constraint rather
-	// than a collision dressed up as a flourish. With the glosses off there
-	// is a whole line of room and it takes the full size like the rest.
+	// line, and at 1.75 its tail put 3.6px into the gloss underneath.
+	//
+	// Shrinking it was the wrong answer — the owner's, and he is right: a Q
+	// two-thirds the size of every other initial is a worse fault than the
+	// one it fixes, and the ink is not where a sideways nudge could help
+	// either (the tail falls straight over the START of the gloss word, so
+	// clearing it that way would drag the gloss 36px off its own word).
+	// The line gives way instead: the whole gloss row of that verse sinks
+	// by what the tail needs, so the glosses stay level with EACH OTHER,
+	// which is the alignment a reader can see, and only sit a hair lower
+	// than the row of some other verse, which nobody can.
 	const DESCENT: Record<string, number> = { Q: 0.248 };
-	// measured 0.272em from the baseline to the ink of the first gloss,
-	// less a little air
-	const ROOM_BELOW = 0.25;
+	// measured 0.272em from the baseline to the ink of the first gloss
+	const ROOM_BELOW = 0.272;
 	const RAISED = 1.75;
 	// A large letter wants more room around it than its metrics ask for:
 	// the one judgement in all of this, and what stops A reading as touching
 	// the word before it while measuring as neutral on both sides.
 	const AIR = 0.03;
 
-	function scaleOf(letter: string, glossed: boolean): number {
+	/** How far this verse's gloss row has to sink for the initial's tail,
+	 * in rem — nothing at all unless the letter reaches below the line. */
+	function sinkFor(letter: string, glossed: boolean): number {
 		const descent = DESCENT[letter] ?? 0;
-		if (!glossed || descent === 0) return RAISED;
-		return Math.min(RAISED, ROOM_BELOW / descent);
+		if (!glossed || descent === 0) return 0;
+		const over = descent * RAISED - ROOM_BELOW; // in the reading size's em
+		return over <= 0 ? 0 : (over * 1.45) / 1 + 0.02; // reading size is 1.45rem
 	}
 
 	/** [font-size, margin-start, margin-end, gloss lift] for an initial, all
 	 * in the initial's own em except the lift, which is the reading size. */
 	function initialFit(letter: string, glossed: boolean) {
-		const scale = scaleOf(letter, glossed);
+		const scale = RAISED;
 		const [sbStart, sbEnd] = SB[letter] ?? [0, 0];
 		const air = AIR / scale;
 		const side = (sb: number) => (sb < 0 ? -sb + air : (-(scale - 1) / scale) * sb + air);
@@ -242,7 +247,8 @@
 			// a taller glyph raises the ruby base box and the annotation rides
 			// down with it: 4px measured at scale 1.75, and it scales with the
 			// extra size, so 0.333rem for every 1 of it
-			lift: (scale - 1) * 0.333
+			lift: (scale - 1) * 0.333,
+			sink: sinkFor(letter, glossed)
 		};
 	}
 
@@ -253,7 +259,7 @@
 	);
 </script>
 
-{#snippet face(id: string, form: string, raised = false)}{@const fit = initialFit(
+{#snippet face(id: string, form: string, raised = false, sink = 0)}{@const fit = initialFit(
 		form.slice(0, 1),
 		helpLevel >= 1
 	)}<ruby
@@ -263,8 +269,8 @@
 				style:margin-inline-start="{fit.start}em"
 				style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
 			>{form.slice(1)}{:else}{form}{/if}{#if helpLevel >= 1}<rt
-				style:top={raised ? `${-fit.lift}rem` : null}
-				class:lifted={raised}
+				style:top="{sink - (raised ? fit.lift : 0)}rem"
+				class="shifted"
 				{lang}>{gloss.words[id]?.gloss}</rt
 			>{/if}</ruby
 	>{/snippet}
@@ -303,6 +309,12 @@
 			</p>
 		{/if}
 		{@const showMark = marked(i)}
+		<!-- The gloss row of a verse whose initial reaches below the line
+		     sinks together, so the glosses stay level with each other. -->
+		{@const sink =
+			i === firstVerse
+				? initialFit(seg.words?.[0]?.form.slice(0, 1) ?? '', helpLevel >= 1).sink
+				: 0}
 		<p
 			class="verse"
 			class:glossed={helpLevel >= 1}
@@ -337,9 +349,10 @@
 							class="word"
 							id={domId(w.id)}
 							class:selected={selectedId === domId(w.id)}
-							onclick={() => ontap?.(domId(w.id))}>{@render face(w.id, w.form, raised)}</button
-						>{:else}<span class="word">{@render face(w.id, w.form, raised)}</span>{/if}{w.post ??
-						''}</span
+							onclick={() => ontap?.(domId(w.id))}
+							>{@render face(w.id, w.form, raised, sink)}</button
+						>{:else}<span class="word">{@render face(w.id, w.form, raised, sink)}</span
+						>{/if}{w.post ?? ''}</span
 				>{' '}{/each}
 		</p>
 		{#if helpLevel >= 2 && gloss.segments[seg.id]?.translation}
@@ -436,7 +449,7 @@
 	   at the reading size, identical at phone width, so the gloss of the
 	   first word sat 4px below the line its neighbours share. Put back by
 	   the same 4px. */
-	rt.lifted {
+	rt.shifted {
 		position: relative;
 	}
 

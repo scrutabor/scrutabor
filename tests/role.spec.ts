@@ -353,18 +353,29 @@ test('no opening initial lands on the letters beside it', async ({ page }) => {
 	}
 });
 
-test('an initial takes its full size where there is room for it', async ({ page }) => {
-	// Q cannot be raised while a gloss line is showing: the ink of the
-	// gloss starts 0.27em under the baseline and Q's tail reaches further
-	// than that at any size above 1. At the bare Latin there is a whole
-	// line of room, and it takes the same size as every other initial.
+test('a descending initial keeps its size, and the gloss row gives way', async ({ page }) => {
+	// Shrinking Q was the wrong answer: an initial two-thirds the size of
+	// every other one is a worse fault than the collision it fixed. The
+	// LINE gives way instead — the whole gloss row of that verse sinks by
+	// what the tail needs, so the glosses stay level with each other, which
+	// is the alignment a reader can actually see.
 	await page.goto('/en/ordinarium/quod-ore-sumpsimus');
-	const glossed = await page.evaluate(() =>
+	const q = await page.evaluate(() =>
 		parseFloat(getComputedStyle(document.querySelector('.initial')!).fontSize)
 	);
-	await page.locator('input[type="range"]').fill('0');
-	const bare = await page.evaluate(() =>
+	await page.goto('/en/ordinarium/per-ipsum');
+	const p = await page.evaluate(() =>
 		parseFloat(getComputedStyle(document.querySelector('.initial')!).fontSize)
 	);
-	expect(bare).toBeGreaterThan(glossed * 1.4);
+	expect(q, 'Q is set no smaller than P').toBeCloseTo(p, 1);
+
+	// and every gloss on the line the initial opens sits level with its own
+	await page.goto('/en/ordinarium/quod-ore-sumpsimus');
+	const tops = await page.evaluate(() => {
+		const verse = document.querySelector('.verse .initial')!.closest('.verse')!;
+		return [...verse.querySelectorAll('rt')]
+			.slice(0, 4)
+			.map((r) => Math.round(r.getBoundingClientRect().top));
+	});
+	expect(new Set(tops).size, 'the gloss row is level').toBe(1);
 });
