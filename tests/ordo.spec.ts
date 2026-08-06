@@ -166,3 +166,31 @@ test('the landing separates following the Mass from opening a text', async ({ pa
 	await flow.click();
 	await expect(page).toHaveURL(/\/en\/ordo$/);
 });
+
+test('every prayer the Ordo links to is actually built', async ({ page, request }) => {
+	// The prerender list was the CATALOGUE, which orders the shelf but is
+	// not the list of what exists: 27 texts — the whole Canon among them —
+	// were linked from the Ordo and never built, so on the static site
+	// those titles led to a 404 while the dev server served them happily.
+	// A route that is linked has to be built, and the only way to know is
+	// to follow the links.
+	// as the celebrant, so nothing is folded and every part shows its title
+	// as the link it is
+	await page.addInitScript(() => localStorage.setItem('scrutabor-role', 'sacerdos'));
+	const seen = new Set<string>();
+	for (const m of ORDO) {
+		await page.goto(`/pl/ordo/${m.id}`);
+		const hrefs = await page.evaluate(() =>
+			[...document.querySelectorAll('a.part-title')].map((a) => a.getAttribute('href')!)
+		);
+		for (const href of hrefs) seen.add(href);
+	}
+	expect(seen.size, 'the Ordo links to its texts').toBeGreaterThan(30);
+
+	const missing: string[] = [];
+	for (const href of seen) {
+		const res = await request.get(href);
+		if (!res.ok()) missing.push(`${href} → ${res.status()}`);
+	}
+	expect(missing).toEqual([]);
+});

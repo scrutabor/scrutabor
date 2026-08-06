@@ -280,3 +280,49 @@ test('the reader’s own lines are the red ones, and the other voice recedes', a
 	});
 	expect(redInk).not.toBe(quietInk);
 });
+
+test('no opening initial lands on the letters beside it', async ({ page }) => {
+	// The correction for a letter set at 1.75em among letters set at 1 is
+	// arithmetic, and arithmetic can be wrong: the first version scaled the
+	// difference where it should have cleared the whole overhang, and Q
+	// went on driving its tail into "uod" while every test passed. So
+	// measure the ink, on every letter that opens a prayer in this corpus.
+	const pages = [
+		'/en/ordinarium/quod-ore-sumpsimus', // Q — the tail
+		'/en/ordinarium/agnus-dei', // A — the diagonal
+		'/en/ordinarium/te-igitur', // T — the arm
+		'/en/ordinarium/per-ipsum', // P — a closed bowl, the other case
+		'/en/ordinarium/ecce-agnus-dei', // E
+		'/en/ordinarium/aufer-a-nobis' // A again, another word after it
+	];
+	for (const url of pages) {
+		await page.goto(url);
+		const seen = await page.evaluate(() => {
+			const ini = document.querySelector('.verse .initial');
+			if (!ini) return null;
+			const cs = getComputedStyle(ini);
+			const box = ini.getBoundingClientRect();
+			const c = document.createElement('canvas').getContext('2d')!;
+			c.font = `${cs.fontSize} ${cs.fontFamily}`;
+			const m = c.measureText(ini.textContent ?? '');
+			const inkRight = box.left + m.actualBoundingBoxRight;
+			const ruby = ini.closest('ruby')!;
+			const r = document.createRange();
+			r.setStartAfter(ini);
+			r.setEnd(ruby, ruby.childNodes.length);
+			const rest = r.getClientRects()[0];
+			return {
+				letter: ini.textContent,
+				overlap: rest ? inkRight - rest.left : null,
+				// and it must not open a hole either: a whole space would read
+				// as a word break, as "P ax" did
+				gap: rest ? rest.left - inkRight : null
+			};
+		});
+		expect(seen, `${url} has an opening initial`).not.toBeNull();
+		expect(seen!.overlap, `${seen!.letter} in ${url} sits on the next letter`).toBeLessThanOrEqual(
+			0.5
+		);
+		expect(seen!.gap, `${seen!.letter} in ${url} opens a word-sized hole`).toBeLessThan(9);
+	}
+});

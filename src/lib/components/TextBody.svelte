@@ -178,24 +178,33 @@
 	//
 	// These are corrections, not taste: measured off the reading face
 	// itself with canvas metrics (actualBoundingBox against the advance),
-	// as [start, end] in the initial's own em —
+	// as [start, end] in the initial's own em. Two cases, and getting them
+	// confused is what left Q still colliding on the first attempt:
 	//
-	//   start = (−(scale − 1) × leftSidebearing + air) / scale
-	//   end   = (kern − (scale − 1) × rightSidebearing + air) / scale
+	//   ink that CROSSES the advance (Q's tail, V's foot, A's diagonal)
+	//     lands on the next glyph whatever the font intended at 1em, so
+	//     all of it has to be cleared:      margin = −sidebearing + air
+	//   ink that STOPS SHORT of the advance (P, C, S…) only leaves too big
+	//     a gap, and only by what scaling added:
+	//                       margin = −(scale−1) × sidebearing / scale + air
 	//
-	// The `air` term is 0.03em, and it is the one judgement here: a large
-	// letter wants more room around it than its metrics ask for, which is
-	// why A read as touching the word before it and the g after it while
-	// measuring as perfectly neutral on both sides.
+	// No kerning term. A pair kerned for two letters of one size says
+	// nothing about a letter set nearly twice as large beside a small one —
+	// importing it pulled T's arm 1.7px onto the e of Te ígitur.
+	//
+	// The `air` term is 0.03em of the reading size, and it is the one
+	// judgement here: a large letter wants more room around it than its
+	// metrics ask for, which is why A read as touching the word before it
+	// and the g after it while measuring as neutral on both sides.
 	const FIT: Record<string, [number, number]> = {
-		P: [0.007, -0.022],
+		P: [0.007, 0.006],
 		S: [0.0, -0.001],
 		C: [-0.003, -0.006],
-		A: [0.018, 0.019],
+		A: [0.019, 0.022],
 		D: [0.005, 0.002],
-		E: [0.001, -0.008],
-		M: [0.009, -0.01],
-		Q: [-0.002, 0.067],
+		E: [0.001, 0.006],
+		M: [0.009, 0.002],
+		Q: [-0.002, 0.133],
 		I: [0.009, 0.009],
 		G: [-0.002, 0.002],
 		H: [0.001, 0.0],
@@ -203,8 +212,8 @@
 		O: [-0.002, -0.002],
 		B: [0.009, 0.0],
 		N: [0.012, 0.013],
-		V: [0.017, -0.037],
-		T: [0.006, -0.044],
+		V: [0.017, 0.023],
+		T: [0.006, 0.016],
 		U: [0.007, 0.013]
 	};
 	const fitOf = (letter: string): [number, number] => FIT[letter] ?? [0, 0];

@@ -6,14 +6,22 @@
 // need: the web stays light, and the installed app fills its cache
 // separately (decisions #27).
 import { LEXICON, TEXTS, type LemmaEntry, type SenseEntry } from '$lib/corpus';
-import { CATALOG } from '$lib/catalog';
 import { LANGS, type Lang } from '$lib/i18n';
 import { error } from '@sveltejs/kit';
 import type { EntryGenerator, PageServerLoad } from './$types';
 
+// EVERY text in the corpus, not every text in the catalogue. The catalogue
+// orders the shelf; it is not the list of what exists. The Ordo links each
+// of its parts to the text's own page, and 27 of them — the whole Canon
+// among them — were never prerendered, so on the built site those titles
+// led to a 404 while the dev server served them happily. A route that is
+// linked has to be built.
 export const entries: EntryGenerator = () =>
 	LANGS.flatMap((lang) =>
-		CATALOG.flatMap((s) => s.texts).map((t) => ({ lang, category: t.category, slug: t.slug }))
+		Object.keys(TEXTS).map((key) => {
+			const [category, slug] = key.split('/');
+			return { lang, category, slug };
+		})
 	);
 
 export const load: PageServerLoad = ({ params }) => {
