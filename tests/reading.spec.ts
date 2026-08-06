@@ -548,3 +548,51 @@ test('the highlight covers the whole of a raised initial', async ({ page }) => {
 		expect(cover!.bottom, `${letter} pokes out of the bottom of its highlight`).toBeGreaterThan(0);
 	}
 });
+
+test('a rubric is set apart from the prayer it interrupts', async ({ page }) => {
+	// Two faults met here. The gloss row is shifted down and a relative
+	// shift moves paint without moving layout, so a glossed verse was
+	// giving away that much of the margin beneath it — which is why a
+	// rubric under a glossed line looked cramped while the same rubric
+	// under another rubric looked right. And a rubric is a different voice,
+	// in red with a rule down its edge: it wants a step more air than one
+	// line of a prayer takes from the next.
+	await page.goto('/en/ordinarium/corpus-tuum');
+	const gaps = await page.evaluate(() => {
+		const c = document.createElement('canvas').getContext('2d')!;
+		const inkBottom = (el: Element) => {
+			const cs = getComputedStyle(el);
+			c.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+			const m = c.measureText(el.textContent || 'x');
+			const probe = document.createElement('span');
+			probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+			el.appendChild(probe);
+			const b = probe.getBoundingClientRect().top;
+			probe.remove();
+			return b + m.actualBoundingBoxDescent;
+		};
+		const kids = [...document.querySelectorAll('main > .verse, main > .rubric, main > .who')];
+		const out: { kind: string; gap: number }[] = [];
+		for (let i = 1; i < kids.length; i++) {
+			const a = kids[i - 1];
+			const b = kids[i];
+			const rts = [...a.querySelectorAll('rt')];
+			const last = rts[rts.length - 1];
+			const bottom = last ? inkBottom(last) : a.getBoundingClientRect().bottom;
+			out.push({
+				kind: `${a.className.split(' ')[0]}→${b.className.split(' ')[0]}`,
+				gap: b.getBoundingClientRect().top - bottom
+			});
+		}
+		return out;
+	});
+	const between = gaps.filter((g) => g.kind === 'verse→verse').map((g) => g.gap);
+	const toRubric = gaps.filter((g) => g.kind === 'verse→rubric').map((g) => g.gap);
+	expect(between.length, 'the prayer has several lines').toBeGreaterThan(0);
+	expect(toRubric.length, 'and a rubric after one of them').toBeGreaterThan(0);
+	expect(Math.min(...between), 'no line is crowded against the next').toBeGreaterThan(12);
+	expect(
+		Math.min(...toRubric),
+		'a rubric stands further off than the next line of the prayer'
+	).toBeGreaterThan(Math.max(...between));
+});

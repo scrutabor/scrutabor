@@ -555,6 +555,13 @@
 	   Latin to make room that the gloss never used. */
 	.verse.glossed {
 		line-height: 2.15;
+		/* The gloss row is shifted down by GLOSS_GAP, and a relative shift
+		   moves paint without moving layout — so the last gloss of a verse
+		   hangs below the box that carries the margin, and the verse gives
+		   away that much of the space beneath it. Given back here, which is
+		   why a rubric under a glossed line looked cramped while the same
+		   rubric under another rubric looked right. */
+		margin-bottom: calc(1.1rem + 0.32rem);
 	}
 
 	/* text-indent INHERITS, and an inline-block establishes its own first
@@ -630,8 +637,12 @@
 		letter-spacing: 0.01em;
 	}
 
+	/* A rubric is not another line of the prayer: it is a different voice,
+	   in red, with a rule down its edge. It takes a step more air above it
+	   than one line of a prayer takes from the next — the margins collapse,
+	   so this is the one that decides the gap. */
 	.rubric {
-		margin: 0 0 1.1rem;
+		margin: 1.8rem 0 1.1rem;
 		border-inline-start: 2px solid var(--rubric);
 		padding-inline-start: 0.9rem;
 	}
