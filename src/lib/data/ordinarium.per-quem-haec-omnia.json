@@ -33,6 +33,7 @@
 		{
 			"id": "s01",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w001",
@@ -142,6 +143,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w009",

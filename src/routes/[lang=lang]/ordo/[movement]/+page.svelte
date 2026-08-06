@@ -131,6 +131,10 @@
 	<main class:panel-open={picked !== null || panel.keepPad}>
 		{#each movement?.entries ?? [] as e (e.id)}
 			{@const entry = e.text ? texts[e.text] : undefined}
+			{@const voices = (entry?.doc.segments ?? [])
+				.filter((s) => s.type === 'verse')
+				.map((s) => s.voice)}
+			{@const words = showsWords(voices, partVoice(e.id), role.value)}
 			<section class="part">
 				<div class="part-head">
 					{#if e.text && entry}
@@ -153,7 +157,7 @@
 						{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
 					</p>
 				{/if}
-				{#if entry && !showsWords(partVoice(e.id), role.value) && !unfolded[e.id]}
+				{#if entry && !words && !unfolded[e.id]}
 					<!-- Folded, not hidden: the note above already says what is
 					     happening, and the words are one tap away. -->
 					<button class="unfold" onclick={() => (unfolded[e.id] = true)}>
@@ -161,7 +165,7 @@
 						<span class="unfold-do smallcaps">{msgs.quietReveal}</span>
 					</button>
 				{/if}
-				{#if entry && (showsWords(partVoice(e.id), role.value) || unfolded[e.id])}
+				{#if entry && (words || unfolded[e.id])}
 					<div class="part-text">
 						<TextBody
 							doc={entry.doc}

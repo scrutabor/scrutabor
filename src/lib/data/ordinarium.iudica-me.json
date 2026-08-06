@@ -59,6 +59,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "sacerdos",
 			"words": [
 				{
@@ -274,6 +275,7 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "minister",
 			"words": [
 				{
@@ -477,6 +479,7 @@
 		{
 			"id": "s05",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "sacerdos",
 			"words": [
 				{
@@ -695,6 +698,7 @@
 		{
 			"id": "s06",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "minister",
 			"words": [
 				{
@@ -835,6 +839,7 @@
 		{
 			"id": "s07",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "sacerdos",
 			"words": [
 				{
@@ -1023,6 +1028,7 @@
 		{
 			"id": "s08",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "minister",
 			"words": [
 				{
@@ -1176,6 +1182,7 @@
 		{
 			"id": "s09",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "sacerdos",
 			"words": [
 				{
@@ -1261,6 +1268,7 @@
 		{
 			"id": "s10",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "minister",
 			"words": [
 				{
@@ -1409,6 +1417,7 @@
 		{
 			"id": "s12",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w115",
@@ -1462,6 +1471,7 @@
 		{
 			"id": "s13",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "minister",
 			"words": [
 				{

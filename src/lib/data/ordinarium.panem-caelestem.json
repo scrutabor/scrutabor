@@ -45,6 +45,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"voice": "secreto",
 			"words": [
 				{
 					"id": "w001",
@@ -369,7 +370,7 @@
 			"id": "s07",
 			"type": "verse",
 			"speaker": "sacerdos",
-			"voice": "secreto",
+			"voice": "submissa",
 			"words": [
 				{
 					"id": "w025",
@@ -588,7 +589,7 @@
 			"id": "s10",
 			"type": "verse",
 			"speaker": "sacerdos",
-			"voice": "secreto",
+			"voice": "submissa",
 			"words": [
 				{
 					"id": "w042",

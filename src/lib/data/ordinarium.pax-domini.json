@@ -45,6 +45,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w001",
@@ -115,6 +116,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "minister",
 			"words": [
 				{

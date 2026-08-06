@@ -77,3 +77,28 @@ test('a segment the sources have not been read for stays unmarked', async ({ pag
 	expect(marked).toBeGreaterThan(0);
 	expect(marked).toBeLessThan(verses);
 });
+
+test('a silent prayer that ends aloud is not folded away', async ({ page }) => {
+	// The embolism and the Canon's doxology are said silently and then end
+	// aloud with Per ómnia sǽcula sæculórum, which the people answer. The
+	// corpus knows that line by line (Rubricae generales 511); folding on
+	// the prayer as a whole would hide the one line the reader is there to
+	// say. Each word is its own element, so look for the words.
+	const saidAloud = (page: import('@playwright/test').Page) =>
+		page.evaluate(() =>
+			[...document.querySelectorAll('.word')].some((w) => /sǽcula/.test(w.textContent ?? ''))
+		);
+
+	await page.goto('/pl/ordo/canon');
+	expect(await saidAloud(page), 'the Canon doxology ends aloud').toBe(true);
+
+	await page.goto('/pl/ordo/communio');
+	expect(await saidAloud(page), 'the embolism ends aloud').toBe(true);
+});
+
+test('a wholly silent prayer still folds', async ({ page }) => {
+	await page.goto('/pl/ordo/canon');
+	// Te ígitur carries no aloud line at all, so the pew gets the note
+	const folds = page.locator('.unfold');
+	expect(await folds.count()).toBeGreaterThan(5);
+});

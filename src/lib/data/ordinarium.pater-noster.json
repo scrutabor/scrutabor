@@ -46,6 +46,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w001",
@@ -67,6 +68,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w002",
@@ -199,6 +201,7 @@
 		{
 			"id": "s05",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w011",
@@ -275,6 +278,7 @@
 		{
 			"id": "s06",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w017",
@@ -319,6 +323,7 @@
 		{
 			"id": "s07",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w020",
@@ -363,6 +368,7 @@
 		{
 			"id": "s08",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w023",
@@ -465,6 +471,7 @@
 		{
 			"id": "s09",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w032",
@@ -538,6 +545,7 @@
 		{
 			"id": "s10",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w038",
@@ -664,6 +672,7 @@
 		{
 			"id": "s11",
 			"type": "verse",
+			"voice": "clara",
 			"words": [
 				{
 					"id": "w049",
@@ -732,6 +741,7 @@
 		{
 			"id": "s12",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "minister",
 			"words": [
 				{

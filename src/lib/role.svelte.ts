@@ -46,13 +46,29 @@ export function loadRole(): void {
 }
 
 /**
- * Does this reader want the words of a part said in this voice, or only
- * the note that says what is happening?
+ * Does this reader want the words of a part, or only the note that says
+ * what is happening?
  *
- * Only the silent prayers fold, and only for the pew: a server answers
- * through them and a priest says them. `submissa` never folds — the
- * raised voice exists precisely so that the people can hear it.
+ * Only wholly silent prayers fold, and only for the pew: a server answers
+ * through them and a priest says them. `submissa` never folds — the raised
+ * voice exists precisely so that the people can hear it.
+ *
+ * A prayer is wholly silent only if the CORPUS says every one of its lines
+ * is (schema 0.9.0, sourced from Rubricae generales 511). That distinction
+ * is not pedantry: the embolism and the Canon's doxology are said silently
+ * and then end aloud with Per ómnia sǽcula sæculórum, which the people
+ * answer — folding those on the voice of the prayer as a whole hides the
+ * one line the reader is there to say.
  */
-export function showsWords(voice: 'secreto' | 'submissa' | undefined, of: Role): boolean {
-	return of !== 'populus' || voice !== 'secreto';
+export function showsWords(
+	voices: (string | undefined)[],
+	fallback: 'secreto' | 'submissa' | undefined,
+	of: Role
+): boolean {
+	if (of !== 'populus') return true;
+	const known = voices.filter(Boolean);
+	if (known.length) return !known.every((v) => v === 'secreto');
+	// no corpus voice (a proper, or a part this edition does not carry yet):
+	// fall back to the spine's own reading
+	return fallback !== 'secreto';
 }

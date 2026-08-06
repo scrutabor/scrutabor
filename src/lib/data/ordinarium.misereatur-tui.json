@@ -32,6 +32,7 @@
 		{
 			"id": "s01",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "minister",
 			"words": [
 				{
@@ -205,6 +206,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"voice": "clara",
 			"speaker": "sacerdos",
 			"words": [
 				{
