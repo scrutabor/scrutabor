@@ -25,7 +25,7 @@
 		</main>
 	{:else}
 		<main>
-			<h1>{concept.label[lang]}</h1>
+			<h1 class="minor">{concept.label[lang]}</h1>
 			{#if concept.la !== concept.label[lang]}
 				<p class="latin-name" lang="la">{concept.la}</p>
 			{/if}
@@ -50,13 +50,6 @@
 </div>
 
 <style>
-	h1 {
-		margin: 1.8rem 0 0;
-		font-size: 2.2rem;
-		font-weight: 500;
-		text-align: center;
-	}
-
 	.latin-name {
 		margin: 0.3rem 0 0;
 		text-align: center;
@@ -83,14 +76,6 @@
 	.examples {
 		margin: 2.4rem auto 0;
 		max-width: 30rem;
-	}
-
-	h2 {
-		margin: 0 0 0.9rem;
-		font-size: 0.8rem;
-		font-weight: 500;
-		color: var(--rubric);
-		text-align: center;
 	}
 
 	.example {

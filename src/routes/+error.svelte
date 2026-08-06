@@ -14,7 +14,7 @@
 	<title>{page.status} — Scrutabor</title>
 </svelte:head>
 
-<div class="page errorpage">
+<div class="page centered errorpage">
 	<main>
 		<p class="status">{page.status}</p>
 		<p class="line" {lang}>
@@ -23,44 +23,3 @@
 		</p>
 	</main>
 </div>
-
-<style>
-	/* the book's measure comes from .page; these pages add a full
-	   viewport so their one line of content can sit in the middle */
-	.errorpage {
-		min-height: 100dvh;
-		display: flex;
-		flex-direction: column;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-	}
-
-	.status {
-		margin: 0;
-		font-size: 3.4rem;
-		font-weight: 500;
-		letter-spacing: 0.12em;
-		color: var(--ink-soft);
-	}
-
-	.line {
-		margin: 1.1rem 0 0;
-		font-size: 1.1rem;
-	}
-
-	.line a {
-		color: var(--rubric);
-		text-decoration: none;
-	}
-
-	.line a:hover {
-		text-decoration: underline;
-	}
-</style>

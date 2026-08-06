@@ -112,6 +112,121 @@ body {
 	padding: 1.25rem 1.5rem 4rem;
 }
 
+/* Pages that are one line of content rather than a column of it — the
+   language router, the two landings, the 404, the error boundary — hold
+   the whole viewport and sit that line in the middle of it. Four copies
+   of these two rules, once. */
+.page.centered {
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+}
+
+.page.centered main {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+/* The title of a page of the book. Ten routes wrote out this rule, in
+   three sizes that are a real scale and not an accident — so the scale
+   is stated once: the texts at full size, the apparatus around them (the
+   grammar, the colophon) a size smaller. The two landings set their
+   wordmark themselves; it is not a title. */
+h1 {
+	margin: 1.8rem 0 0;
+	font-size: 2.6rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+h1.minor {
+	font-size: 2.2rem;
+}
+
+/* Every h2 in the book is a small rubric label over a list — the sections
+   of the catalogue, the groups of the grammar, "where it occurs" on a
+   lemma. Five copies, drifted into two margins that nobody chose. */
+h2 {
+	margin: 0 0 0.7rem;
+	font-size: 0.8rem;
+	font-weight: 500;
+	color: var(--rubric);
+	text-align: center;
+}
+
+/* A list of links as cards — the catalogue of texts, the grammar index.
+   Two copies of these three rules, and they had already drifted apart by
+   a tenth of a rem of padding, which is exactly how this goes: nobody
+   chose the difference, it just happened. One rule now. */
+.cards {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.card {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 1rem;
+	text-decoration: none;
+	border: 1px solid var(--border);
+	border-radius: 0.6rem;
+	padding: 0.8rem 1.4rem;
+	background: var(--surface);
+}
+
+.card:hover {
+	background: var(--wash);
+}
+
+/* …and what a centred page says: a status, then a line with the way
+   home. The 404 and the client-side error boundary are the same page in
+   two forms, so they are cut the same. */
+.page.centered .status {
+	margin: 0;
+	font-size: 3.4rem;
+	font-weight: 500;
+	letter-spacing: 0.12em;
+	color: var(--ink-soft);
+}
+
+.page.centered .line {
+	margin: 1.1rem 0 0;
+	font-size: 1.1rem;
+}
+
+.page.centered .line a {
+	color: var(--rubric);
+	text-decoration: none;
+}
+
+.page.centered .line a:hover {
+	text-decoration: underline;
+}
+
+/* The line under a title, and the row of reading controls under that:
+   the two reading surfaces are seen one after the other by anyone
+   following the Mass, so their heads have to be cut the same. */
+.subtitle {
+	margin: 0.3rem 0 0;
+	text-align: center;
+	color: var(--ink-soft);
+	font-size: 0.85rem;
+}
+
+.help-row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.3rem;
+	margin: 1.6rem 0 0;
+}
+
 .smallcaps {
 	font-variant-caps: small-caps;
 	letter-spacing: 0.08em;

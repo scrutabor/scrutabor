@@ -14,7 +14,7 @@
 	<meta name="description" content={msgs.catalogDescription} />
 </svelte:head>
 
-<div class="page landing">
+<div class="page centered landing">
 	<nav>
 		<LangMenu {lang} />
 		<ThemeToggle {lang} />
@@ -58,28 +58,11 @@
 </div>
 
 <style>
-	/* the book's measure comes from .page; these pages add a full
-	   viewport so their one line of content can sit in the middle */
-	.landing {
-		min-height: 100dvh;
-		display: flex;
-		flex-direction: column;
-	}
-
 	nav {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
 		gap: 0.5rem;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
 	}
 
 	h1 {
@@ -113,36 +96,6 @@
 		margin: 2.6rem 0 0;
 		width: 100%;
 		max-width: 30rem;
-	}
-
-	h2 {
-		margin: 0 0 0.7rem;
-		font-size: 0.8rem;
-		font-weight: 500;
-		color: var(--rubric);
-		text-align: center;
-	}
-
-	.cards {
-		display: flex;
-		flex-direction: column;
-		gap: 0.6rem;
-	}
-
-	.card {
-		display: flex;
-		align-items: baseline;
-		justify-content: space-between;
-		gap: 1rem;
-		text-decoration: none;
-		border: 1px solid var(--border);
-		border-radius: 0.6rem;
-		padding: 0.8rem 1.4rem;
-		background: var(--surface);
-	}
-
-	.card:hover {
-		background: var(--wash);
 	}
 
 	.card-title {

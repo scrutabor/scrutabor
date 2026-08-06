@@ -1,0 +1,10 @@
+{
+	"threshold": 0,
+	"minLines": 5,
+	"minTokens": 50,
+	"format": ["svelte", "typescript", "css"],
+	"reporters": ["console"],
+	"absolute": false,
+	"gitignore": true,
+	"ignore": ["**/lib/fonts/**"]
+}

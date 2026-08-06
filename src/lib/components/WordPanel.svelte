@@ -1,9 +1,9 @@
 <script lang="ts">
+	import Pronunciation from '$lib/components/Pronunciation.svelte';
 	import Sheet from '$lib/components/Sheet.svelte';
 	import type { Analysis, LemmaEntry, SenseEntry, Word, WordGloss } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
 	import { GENDER_MARK, describeAnalysisParts, describeMorphParts } from '$lib/morph';
-	import { pronunciations, syllabized } from '$lib/pronunciation';
 
 	let {
 		word,
@@ -52,13 +52,6 @@
 	// so a stale snapshot degrades visibly instead of crashing.
 	let lemmaEntry = $derived(lex.lemmata[word.lemma]);
 	let senseEntry = $derived(lex.senses[word.lemma]);
-
-	// Pronunciation is derived, never stored: syllable division plus IPA in
-	// the Roman ecclesiastical and Polish-traditional tables. The Polish
-	// interface shows both where they differ (that is what its readers hear
-	// at their parish vs what the schola sings); the English interface shows
-	// Roman. Labels link to the pronuntiatio page.
-	let pron = $derived(pronunciations(word.form));
 </script>
 
 {#snippet lead()}
@@ -82,22 +75,7 @@
 					href="/{lang}/grammatica/{part.concept}">{part.text}</a
 				>{:else}{part.text}{/if}{/each}
 	</p>
-	<p class="pron">
-		<span lang="la">{syllabized(word.form)}</span>
-		{#if lang === 'pl' && pron.differ}
-			· <a href="/{lang}/grammatica/pronuntiatio" title={M[lang].pronunciationHint}
-				><span class="smallcaps">rz.</span> /{pron.roman}/</a
-			>
-			·
-			<a href="/{lang}/grammatica/pronuntiatio" title={M[lang].pronunciationHint}
-				><span class="smallcaps">pol.</span> /{pron.polish}/</a
-			>
-		{:else}
-			· <a href="/{lang}/grammatica/pronuntiatio" title={M[lang].pronunciationHint}
-				>/{pron.roman}/</a
-			>
-		{/if}
-	</p>
+	<Pronunciation form={word.form} {lang} />
 	{#if gloss}
 		<p class="gloss">{gloss.gloss}</p>
 	{/if}
@@ -181,26 +159,6 @@
 
 	.concept:hover {
 		border-bottom-style: solid;
-	}
-
-	.pron {
-		margin: 0.3rem 0 0;
-		color: var(--ink-soft);
-		font-size: 0.95rem;
-	}
-
-	.pron a {
-		color: inherit;
-		text-decoration: none;
-		border-bottom: 1px dotted var(--border);
-	}
-
-	.pron a:hover {
-		color: var(--ink);
-	}
-
-	.pron .smallcaps {
-		font-size: 0.75rem;
 	}
 
 	.gloss {

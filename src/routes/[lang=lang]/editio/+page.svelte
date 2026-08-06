@@ -16,7 +16,7 @@
 	<PageNav {lang} />
 
 	<main>
-		<h1>{lang === 'pl' ? 'o\u00a0wydaniu' : 'about this edition'}</h1>
+		<h1 class="minor">{lang === 'pl' ? 'o\u00a0wydaniu' : 'about this edition'}</h1>
 		<p class="latin-name" lang="la">de editione</p>
 
 		{#if lang === 'pl'}
@@ -106,13 +106,6 @@
 </div>
 
 <style>
-	h1 {
-		margin: 1.8rem 0 0;
-		font-size: 2.2rem;
-		font-weight: 500;
-		text-align: center;
-	}
-
 	.latin-name {
 		margin: 0.2rem 0 0;
 		text-align: center;

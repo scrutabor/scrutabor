@@ -40,7 +40,7 @@
 	</script>
 </svelte:head>
 
-<div class="page landing">
+<div class="page centered landing">
 	<main>
 		<h1 class="smallcaps">Scrutabor</h1>
 		<p class="motto" lang="la">
@@ -48,7 +48,7 @@
 		</p>
 		<div class="langs">
 			{#each LANGS as lang (lang)}
-				<a class="card" href="/{lang}" {lang}>
+				<a class="lang-card" href="/{lang}" {lang}>
 					<span class="card-title">{M[lang].langName}</span>
 					<span class="card-note">{M[lang].tagline}</span>
 				</a>
@@ -58,23 +58,6 @@
 </div>
 
 <style>
-	/* the book's measure comes from .page; these pages add a full
-	   viewport so their one line of content can sit in the middle */
-	.landing {
-		min-height: 100dvh;
-		display: flex;
-		flex-direction: column;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-	}
-
 	h1 {
 		margin: 0;
 		font-size: 3.4rem;
@@ -98,7 +81,7 @@
 		justify-content: center;
 	}
 
-	.card {
+	.lang-card {
 		display: flex;
 		flex-direction: column;
 		gap: 0.15rem;
@@ -110,7 +93,7 @@
 		min-width: 14rem;
 	}
 
-	.card:hover {
+	.lang-card:hover {
 		background: var(--wash);
 	}
 

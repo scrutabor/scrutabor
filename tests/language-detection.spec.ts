@@ -49,7 +49,7 @@ noScript.describe('no javascript', () => {
 
 	noScript('the root still offers both languages, English first', async ({ page }) => {
 		await page.goto('/');
-		const cards = page.locator('.card');
+		const cards = page.locator('.lang-card');
 		await expect(cards).toHaveCount(2);
 		await expect(cards.first()).toContainText('English');
 	});

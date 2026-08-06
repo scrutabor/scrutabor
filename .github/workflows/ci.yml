@@ -19,6 +19,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run lint
+      # A copy of something is how the reading surfaces drift apart: one
+      # copy gets fixed and the others quietly do not. The threshold is
+      # zero, so a new one has to be named rather than merged.
+      - run: npm run lint:clones
       - run: npm run check
       - run: npm run build
       # The browser download dominates CI time; cache it keyed to the

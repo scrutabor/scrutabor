@@ -156,7 +156,7 @@
 	<PageNav {lang} href="/{lang}/grammatica" label={msgs.grammarTitle} />
 
 	<main>
-		<h1>{lang === 'pl' ? 'wymowa' : 'pronunciation'}</h1>
+		<h1 class="minor">{lang === 'pl' ? 'wymowa' : 'pronunciation'}</h1>
 		<p class="latin-name" lang="la">pronuntiatio</p>
 
 		{#if lang === 'pl'}
@@ -246,13 +246,6 @@
 </div>
 
 <style>
-	h1 {
-		margin: 1.8rem 0 0;
-		font-size: 2.2rem;
-		font-weight: 500;
-		text-align: center;
-	}
-
 	.latin-name {
 		margin: 0.3rem 0 0;
 		text-align: center;
@@ -271,14 +264,6 @@
 	section {
 		margin: 2.4rem auto 0;
 		max-width: 34rem;
-	}
-
-	h2 {
-		margin: 0 0 0.9rem;
-		font-size: 0.8rem;
-		font-weight: 500;
-		color: var(--rubric);
-		text-align: center;
 	}
 
 	.table-wrap {

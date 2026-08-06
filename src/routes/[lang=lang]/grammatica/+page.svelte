@@ -23,7 +23,7 @@
 <div class="page">
 	<PageNav {lang} />
 	<main>
-		<h1>{msgs.grammarTitle}</h1>
+		<h1 class="minor">{msgs.grammarTitle}</h1>
 		{#each groups as group (group.id)}
 			<section>
 				<h2 class="smallcaps">{group.label}</h2>
@@ -52,46 +52,9 @@
 </div>
 
 <style>
-	h1 {
-		margin: 1.8rem 0 0;
-		font-size: 2.2rem;
-		font-weight: 500;
-		text-align: center;
-	}
-
 	section {
 		margin: 2.2rem auto 0;
 		max-width: 30rem;
-	}
-
-	h2 {
-		margin: 0 0 0.7rem;
-		font-size: 0.8rem;
-		font-weight: 500;
-		color: var(--rubric);
-		text-align: center;
-	}
-
-	.cards {
-		display: flex;
-		flex-direction: column;
-		gap: 0.6rem;
-	}
-
-	.card {
-		display: flex;
-		align-items: baseline;
-		justify-content: space-between;
-		gap: 1rem;
-		text-decoration: none;
-		border: 1px solid var(--border);
-		border-radius: 0.6rem;
-		padding: 0.7rem 1.4rem;
-		background: var(--surface);
-	}
-
-	.card:hover {
-		background: var(--wash);
 	}
 
 	.card-title {

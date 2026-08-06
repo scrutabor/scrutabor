@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import PageNav from '$lib/components/PageNav.svelte';
+	import Pronunciation from '$lib/components/Pronunciation.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { GENDER_MARK, describeLemma } from '$lib/morph';
-	import { pronunciations, syllabized } from '$lib/pronunciation';
 
 	// entry, senses and concordance all arrive prerendered (+page.server.ts)
 	let { data } = $props();
@@ -17,7 +17,6 @@
 	// (oro of "oro, oráre, orávi, orátum") — liturgical orthography, unlike
 	// the normalized lemma in the URL.
 	const headword = $derived((entry?.head ?? lemma).split(',')[0].trim());
-	const pron = $derived(pronunciations(headword));
 	const texts = $derived(data.occurrences);
 </script>
 
@@ -44,20 +43,7 @@
 					>{/if}
 			</p>
 			<p class="pos">{describeLemma(entry, lang)}</p>
-			<p class="pron">
-				<span lang="la">{syllabized(headword)}</span>
-				{#if lang === 'pl' && pron.differ}
-					· <a href="/{lang}/grammatica/pronuntiatio"
-						><span class="smallcaps">rz.</span> /{pron.roman}/</a
-					>
-					·
-					<a href="/{lang}/grammatica/pronuntiatio"
-						><span class="smallcaps">pol.</span> /{pron.polish}/</a
-					>
-				{:else}
-					· <a href="/{lang}/grammatica/pronuntiatio">/{pron.roman}/</a>
-				{/if}
-			</p>
+			<Pronunciation form={headword} {lang} centered />
 
 			{#if sense}
 				<p class="senses">{sense.senses.join(', ')}</p>
@@ -101,13 +87,6 @@
 </div>
 
 <style>
-	h1 {
-		margin: 1.8rem 0 0;
-		font-size: 2.6rem;
-		font-weight: 500;
-		text-align: center;
-	}
-
 	.head {
 		margin: 0.4rem 0 0;
 		text-align: center;
@@ -124,27 +103,6 @@
 		text-align: center;
 		color: var(--rubric);
 		font-size: 0.95rem;
-	}
-
-	.pron {
-		margin: 0.35rem 0 0;
-		text-align: center;
-		color: var(--ink-soft);
-		font-size: 0.95rem;
-	}
-
-	.pron a {
-		color: inherit;
-		text-decoration: none;
-		border-bottom: 1px dotted var(--border);
-	}
-
-	.pron a:hover {
-		color: var(--ink);
-	}
-
-	.pron .smallcaps {
-		font-size: 0.75rem;
 	}
 
 	.senses {
@@ -179,14 +137,6 @@
 	.occurrences {
 		margin: 2.6rem auto 0;
 		max-width: 30rem;
-	}
-
-	h2 {
-		margin: 0 0 0.7rem;
-		font-size: 0.8rem;
-		font-weight: 500;
-		color: var(--rubric);
-		text-align: center;
 	}
 
 	.occ-row {

@@ -3,6 +3,7 @@
 	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
+	import Pager from '$lib/components/Pager.svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
 	import RolePicker from '$lib/components/RolePicker.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
@@ -197,22 +198,11 @@
 			</section>
 		{/each}
 
-		<nav class="pager" aria-label={msgs.pagerAria}>
-			{#if around.prev}
-				<a class="pager-link" href="/{lang}/ordo/{around.prev.id}"
-					><span class="chev" aria-hidden="true">‹</span>
-					<span lang="la">{around.prev.title}</span></a
-				>
-			{:else}
-				<span></span>
-			{/if}
-			{#if around.next}
-				<a class="pager-link pager-next" href="/{lang}/ordo/{around.next.id}"
-					><span lang="la">{around.next.title}</span>
-					<span class="chev" aria-hidden="true">›</span></a
-				>
-			{/if}
-		</nav>
+		<Pager
+			{lang}
+			prev={around.prev && { href: `/${lang}/ordo/${around.prev.id}`, title: around.prev.title }}
+			next={around.next && { href: `/${lang}/ordo/${around.next.id}`, title: around.next.title }}
+		/>
 	</main>
 
 	{#if legendOpen}
@@ -234,25 +224,7 @@
 
 <style>
 	h1 {
-		margin: 0.2rem 0 0;
-		font-size: 2.6rem;
-		font-weight: 500;
-		text-align: center;
-	}
-
-	.subtitle {
-		margin: 0.3rem 0 0;
-		text-align: center;
-		color: var(--ink-soft);
-		font-size: 0.85rem;
-	}
-
-	.help-row {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1.3rem;
-		margin: 1.6rem 0 0;
+		margin-top: 0.2rem;
 	}
 
 	/* The rule closes the top section, so it sits nearer to what it closes
@@ -311,13 +283,6 @@
 	a.part-title:hover {
 		color: var(--rubric);
 		border-bottom-color: var(--rubric);
-	}
-
-	.chev {
-		display: inline-block;
-		transform: translateY(-0.09em);
-		margin-inline: 0.15em;
-		color: var(--ink-soft);
 	}
 
 	.mark {
@@ -406,31 +371,6 @@
 
 	.part-text {
 		margin-top: 1.2rem;
-	}
-
-	.pager {
-		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
-		gap: 1rem;
-		margin-top: 3rem;
-		padding-top: 1.1rem;
-		border-top: 1px solid var(--border);
-	}
-
-	.pager-link {
-		color: var(--ink-soft);
-		text-decoration: none;
-		font-size: 1.05rem;
-	}
-
-	.pager-link:hover {
-		color: var(--ink);
-	}
-
-	.pager-next {
-		text-align: right;
-		margin-left: auto;
 	}
 
 	/* room for the sheet, so even the last word can rise clear of it */

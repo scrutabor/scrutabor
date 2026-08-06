@@ -4,6 +4,7 @@
 	import { neighborsOf, sectionFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
+	import Pager from '$lib/components/Pager.svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
 	import RolePicker from '$lib/components/RolePicker.svelte';
 	import Sheet from '$lib/components/Sheet.svelte';
@@ -157,22 +158,17 @@
 				onmark={openLegend}
 			/>
 
-			<nav class="pager" aria-label={msgs.pagerAria}>
-				{#if around.prev}
-					<a class="pager-link" href="/{lang}/{around.prev.category}/{around.prev.slug}"
-						><span class="chev" aria-hidden="true">‹</span>
-						<span lang="la">{around.prev.title}</span></a
-					>
-				{:else}
-					<span></span>
-				{/if}
-				{#if around.next}
-					<a class="pager-link pager-next" href="/{lang}/{around.next.category}/{around.next.slug}"
-						><span lang="la">{around.next.title}</span>
-						<span class="chev" aria-hidden="true">›</span></a
-					>
-				{/if}
-			</nav>
+			<Pager
+				{lang}
+				prev={around.prev && {
+					href: `/${lang}/${around.prev.category}/${around.prev.slug}`,
+					title: around.prev.title
+				}}
+				next={around.next && {
+					href: `/${lang}/${around.next.category}/${around.next.slug}`,
+					title: around.next.title
+				}}
+			/>
 		</main>
 
 		{#if aboutOpen && gloss.about}
@@ -212,28 +208,6 @@
 		padding-bottom: 3rem;
 	}
 
-	h1 {
-		margin: 1.8rem 0 0;
-		font-size: 2.6rem;
-		font-weight: 500;
-		text-align: center;
-	}
-
-	.subtitle {
-		margin: 0.3rem 0 0;
-		text-align: center;
-		color: var(--ink-soft);
-		font-size: 0.85rem;
-	}
-
-	.help-row {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1.3rem;
-		margin: 1.6rem 0 0;
-	}
-
 	main.panel-open {
 		padding-bottom: 45vh;
 	}
@@ -264,38 +238,5 @@
 		font-size: 1rem;
 		line-height: 1.65;
 		color: var(--ink);
-	}
-
-	.pager {
-		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
-		gap: 1rem;
-		margin-top: 3rem;
-		padding-top: 1.1rem;
-		border-top: 1px solid var(--border);
-	}
-
-	.pager-link {
-		color: var(--ink-soft);
-		text-decoration: none;
-		font-size: 1.05rem;
-	}
-
-	.pager-link:hover {
-		color: var(--ink);
-	}
-
-	.pager-next {
-		text-align: right;
-		margin-left: auto;
-	}
-
-	/* EB Garamond centers its guillemets on the x-height, which reads
-	   low beside capital-initial titles — raise them optically. */
-	.chev {
-		display: inline-block;
-		transform: translateY(-0.09em);
-		margin-inline: 0.15em;
 	}
 </style>

@@ -77,13 +77,6 @@
 		color: var(--ink-soft);
 	}
 
-	h1 {
-		margin: 1.8rem 0 0;
-		font-size: 2.6rem;
-		font-weight: 500;
-		text-align: center;
-	}
-
 	.subtitle {
 		margin: 0.3rem 0 0;
 		text-align: center;
