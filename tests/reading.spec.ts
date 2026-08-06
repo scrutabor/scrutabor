@@ -796,3 +796,28 @@ test('a word begins where its column begins', async ({ page }) => {
 		).toBeLessThan(4);
 	}
 });
+
+test('a gloss of several words stays one gloss', async ({ page }) => {
+	// The apparatus rests on one gloss standing under one word (Leipzig
+	// rule 1), and one Latin word often needs several words to gloss it —
+	// 49 of the 163 in the English Credo. "having suffered" broken over
+	// two lines reads as two glosses of two different words.
+	//
+	// Leipzig joins these with periods (`come.out`). That is right for a
+	// paper and wrong for someone praying, so the words stay and the break
+	// is what goes.
+	for (const [w, url] of [
+		[280, '/pl/ordinarium/credo'],
+		[320, '/en/ordinarium/credo'],
+		[390, '/pl/ordo/canon']
+	] as const) {
+		await page.setViewportSize({ width: w, height: 1100 });
+		await page.goto(url);
+		const broken = await page.evaluate(() =>
+			[...document.querySelectorAll('.verse.glossed rt')]
+				.filter((r) => r.getClientRects().length > 1)
+				.map((r) => (r.textContent ?? '').trim())
+		);
+		expect(broken, `${url} at ${w}px broke a gloss across lines`).toEqual([]);
+	}
+});

@@ -667,6 +667,20 @@
 		font-size: 0.64em;
 		color: var(--ink-soft);
 		letter-spacing: 0.01em;
+		/* One Latin word often needs several words to gloss it — 49 of the
+		   163 glosses in the English Credo — and the gloss has to read as
+		   ONE thing under ONE word, or the word-by-word correspondence
+		   that the whole apparatus rests on is broken: "having suffered"
+		   split over two lines reads as two glosses.
+
+		   The Leipzig Glossing Rules solve this by joining such a gloss
+		   with periods (`come.out`), which is right for a linguistics
+		   paper and wrong for someone praying — "let.it.be.done" is not
+		   readable. Same guarantee, kept in the layout instead: the words
+		   stay, the break does not. (It happens not to break today even at
+		   280px, because the ruby column sizes to the longer of the two —
+		   this states the invariant rather than relying on that.) */
+		white-space: nowrap;
 	}
 
 	/* A rubric is not another line of the prayer: it is a different voice,
