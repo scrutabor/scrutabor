@@ -449,7 +449,7 @@ test('a gloss belongs to the word above it, and is legible', async ({ page }) =>
 	// wrapped line does. It used to get 2.3x more, and that looked
 	// arbitrary because it is — whether a verse takes one line or two is
 	// a fact about the window, so the page changed shape when the phone
-	// turned. Where a verse begins is said by the hanging indent instead.
+	// turned.
 	await page.goto('/en/ordinarium/corpus-tuum');
 	const gaps = await page.evaluate(() => {
 		const c = document.createElement('canvas').getContext('2d')!;
@@ -666,32 +666,34 @@ test('the introduction opens right under its own label', async ({ page }) => {
 	expect(gap, 'the label and its prose belong together').toBeLessThan(20);
 });
 
-test('a verse begins at the margin and its continuations hang in', async ({ page }) => {
-	// With the vertical rhythm uniform, this is what is left to say where
-	// a verse starts — the psalter's own device, and it costs nothing
-	// vertically and does not change when the window does.
-	await page.goto('/en/ordinarium/credo');
-	const lines = await page.evaluate(() => {
-		const verse = [...document.querySelectorAll('.verse.glossed')].find((v) => {
-			const r = document.createRange();
-			r.selectNodeContents(v);
-			const tops = new Set(
-				[...r.getClientRects()].filter((x) => x.width > 2).map((x) => Math.round(x.top / 14))
-			);
-			return tops.size > 2 && !v.querySelector('.mark');
-		})!;
-		const r = document.createRange();
-		r.selectNodeContents(verse);
-		const groups: { top: number; left: number }[] = [];
-		for (const x of [...r.getClientRects()].filter((x) => x.width > 2)) {
-			const g = groups.find((g) => Math.abs(g.top - x.top) < 14);
-			if (g) g.left = Math.min(g.left, x.left);
-			else groups.push({ top: x.top, left: x.left });
-		}
-		groups.sort((a, b) => a.top - b.top);
-		return groups.map((g) => Math.round(g.left));
-	});
-	const first = lines[0];
-	const cont = lines[lines.length - 1];
-	expect(cont - first, 'the continuation hangs in from the verse’s own margin').toBeGreaterThan(10);
+test('every line of a prayer starts on the same left edge', async ({ page }) => {
+	// The speaker mark hangs out into the margin — .verse pads the column
+	// and .verse.marked pulls the first line back out by exactly that much
+	// — so a verse that names its voice starts its WORDS where a verse
+	// that does not starts its words. It is easy to break from a distance:
+	// anything else that sets text-indent on a verse undoes the pull, and
+	// then only the marked verses move. So the whole column is measured.
+	for (const url of ['/en/ordinarium/credo', '/pl/ordinarium/confiteor', '/pl/ordo/praeparatio']) {
+		await page.goto(url);
+		const lefts = await page.evaluate(() => {
+			const out: number[] = [];
+			for (const v of document.querySelectorAll('.verse')) {
+				// the WORDS, not the mark: the mark is meant to hang out to the
+				// left of the column, and does
+				const rects = [...v.querySelectorAll('ruby, .token')].map((e) => e.getBoundingClientRect());
+				const lines: number[] = [];
+				for (const x of rects) if (!lines.some((l) => Math.abs(l - x.top) < 14)) lines.push(x.top);
+				for (const top of lines) {
+					const on = rects.filter((x) => Math.abs(x.top - top) < 14);
+					out.push(Math.round(Math.min(...on.map((x) => x.left))));
+				}
+			}
+			return out;
+		});
+		const spread = Math.max(...lefts) - Math.min(...lefts);
+		expect(
+			spread,
+			`the column is ragged on ${url}: ${[...new Set(lefts)].join(', ')}`
+		).toBeLessThan(2);
+	}
 });

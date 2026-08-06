@@ -559,20 +559,19 @@
 	   sits close to the Latin it glosses and every line stands well clear
 	   of the next.
 
-	   ONE rhythm down the page, and no extra air at a verse break. The
-	   page used to open up between verses, and the owner's report was
-	   that it looked arbitrary — which it was: whether a verse takes one
-	   line or two is a fact about the WINDOW, not about the text, so the
-	   tight gap marked something a reader cannot learn and that moves
-	   when the phone is turned. Where a verse begins is said instead by
-	   the hanging indent below, which costs nothing vertically and does
-	   not change with the width. */
+	   ONE rhythm down the page, and one left edge. The page used to open
+	   up between verses, and the owner's report was that it looked
+	   arbitrary — which it was: whether a verse takes one line or two is
+	   a fact about the WINDOW, not about the text, so the tight gap
+	   marked something a reader cannot learn and that moves when the
+	   phone is turned. A hanging indent for the continuations was tried
+	   in its place and was worse: it broke the column AND, by setting its
+	   own text-indent, it undid the one the speaker mark hangs on, so a
+	   marked verse's words stood 2rem right of an unmarked one's. The
+	   column is flush; what says a verse has begun is its capital, its
+	   stop, and the mark when the voice changes. */
 	.verse.glossed {
 		line-height: 2.3;
-		/* the first line of a verse stands out to the margin, its
-		   continuations hang in — the psalter's own device */
-		padding-inline-start: 1.15rem;
-		text-indent: -1.15rem;
 		/* The gloss row is shifted down by GLOSS_GAP, and a relative shift
 		   moves paint without moving layout — so the last gloss of a verse
 		   hangs below the box that carries the margin, and the verse gives
