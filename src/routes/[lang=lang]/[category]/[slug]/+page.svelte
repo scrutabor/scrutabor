@@ -124,11 +124,11 @@
 </svelte:head>
 
 {#if !doc || !gloss}
-	<div class="page">
+	<div class="page reading">
 		<p><a href="/{lang}">Scrutabor</a></p>
 	</div>
 {:else}
-	<div class="page">
+	<div class="page reading">
 		<header>
 			<PageNav {lang} />
 			<h1 lang="la">{doc.title}</h1>

@@ -101,6 +101,26 @@ body {
 	font-feature-settings: 'locl' 0;
 }
 
+/* A page that is READ rather than chosen from — the prayers and the ordo
+   — takes the screen it is given. 38rem is the right measure for prose,
+   but this is not prose: every Latin word is as wide as the gloss under
+   it, so at 38rem a line of the Credo carries a median of 33 Latin
+   characters where ordinary setting wants 45-75. The column was not at
+   its limit, it was well short of it, and on a 1512px laptop it used 40%
+   of the width and wrapped 10 of the Credo's 17 verses.
+
+   clamp, not a breakpoint, so nothing jumps as a window is dragged: it
+   holds 38rem until about 1024px and reaches 56rem at about 1500px,
+   where the median line is 45 characters and 2 verses of 17 wrap.
+
+   The type size deliberately does not change with it. TextBody's gloss
+   geometry is measured in rem against a 1.45rem reading size — ROOM_BELOW,
+   the initial's sink and lift all convert through that number — so
+   scaling the face would detune the spacing without saying so. */
+.page.reading {
+	max-width: clamp(38rem, 60vw, 56rem);
+}
+
 /* The measure of the book. Every page of it is one column of this width
    — the reading pages, the catalogue, the grammar, the colophon — so it
    is stated once here rather than in each route, where eight identical

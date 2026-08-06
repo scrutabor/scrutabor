@@ -665,8 +665,16 @@
 		padding-inline-start: 0.9rem;
 	}
 
+	/* The verses can take the whole of a wide column, because a line of
+	   them is only as long as the words on it and every word is as wide as
+	   its gloss. The PROSE cannot: rubrics, their narratives and the
+	   translations are ordinary sentences, and at 56rem they were running
+	   to 127 characters a line. Capped in `ch`, so each block is held to a
+	   reading measure by its OWN type rather than by a number of rem that
+	   is only right for one of them. */
 	.rubric-la {
 		margin: 0;
+		max-width: 62ch;
 		color: var(--rubric);
 		font-style: italic;
 		font-size: 1.05rem;
@@ -674,6 +682,7 @@
 
 	.rubric-narrative {
 		margin: 0.25rem 0 0;
+		max-width: 62ch;
 		color: var(--ink-soft);
 		font-size: 0.98rem;
 		line-height: 1.5;
@@ -690,6 +699,9 @@
 
 	.translation {
 		margin: 0;
+		/* its face is wider than the narrative's for the same ch, so it
+		   needs fewer of them to land on the same measure */
+		max-width: 56ch;
 		color: var(--ink-soft);
 		font-style: italic;
 		font-size: 1.05rem;

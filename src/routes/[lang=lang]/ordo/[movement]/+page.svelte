@@ -123,7 +123,7 @@
 	<meta name="description" content={msgs.ordoDescription} />
 </svelte:head>
 
-<div class="page">
+<div class="page reading">
 	<header>
 		<PageNav {lang} />
 		<a href="/{lang}/ordo" class="up smallcaps" lang="la">Ordo Missæ</a>

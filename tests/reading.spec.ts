@@ -697,3 +697,67 @@ test('every line of a prayer starts on the same left edge', async ({ page }) => 
 		).toBeLessThan(2);
 	}
 });
+
+test('a reading page takes the screen it is given, prose excepted', async ({ page }) => {
+	// The owner's report: on a laptop the app looked mobile-only. It was —
+	// the column was a fixed 38rem, so a 1512px screen was 40% used and 10
+	// of the Credo's 17 verses wrapped. 38rem is the right measure for
+	// PROSE, but a glossed verse is not prose: every Latin word is as wide
+	// as the gloss under it, so the line carried a median of 33 Latin
+	// characters where ordinary setting wants 45-75. It was short of the
+	// limit, not at it.
+	//
+	// So the verses take the wide column and the prose does not — rubrics,
+	// their narratives and the translations are ordinary sentences and ran
+	// to 127 characters a line at 56rem.
+	const measure = () =>
+		page.evaluate(() => {
+			const chars = (sel: string) => {
+				const el = document.querySelector(sel);
+				if (!el) return 0;
+				const range = document.createRange();
+				range.selectNodeContents(el);
+				const rects = [...range.getClientRects()].filter((x) => x.width > 2);
+				const perPx = (el.textContent || '').trim().length / rects.reduce((n, x) => n + x.width, 0);
+				return Math.round((rects[0]?.width ?? 0) * perPx);
+			};
+			const counts: number[] = [];
+			for (const v of document.querySelectorAll('.verse.glossed')) {
+				const lines = new Map<number, number>();
+				for (const r of v.querySelectorAll('ruby')) {
+					const k = Math.round(r.getBoundingClientRect().top / 14);
+					lines.set(k, (lines.get(k) ?? 0) + (r.querySelector('.base')?.textContent?.length ?? 0));
+				}
+				counts.push(...lines.values());
+			}
+			counts.sort((a, b) => a - b);
+			return {
+				column: Math.round(document.querySelector('.page')!.getBoundingClientRect().width),
+				latinChars: counts[Math.floor(counts.length / 2)],
+				rubric: chars('.rubric-la'),
+				narrative: chars('.rubric-narrative'),
+				translation: chars('.translation')
+			};
+		});
+
+	await page.setViewportSize({ width: 1512, height: 982 });
+	await page.goto('/pl/ordinarium/credo');
+	await page.locator('input[type="range"]').fill('2');
+	const wide = await measure();
+	expect(wide.column, 'the column grows past the prose measure').toBeGreaterThan(38 * 16);
+	expect(wide.latinChars, 'and the Latin line reaches a real measure').toBeGreaterThan(40);
+	for (const [what, n] of [
+		['the rubric', wide.rubric],
+		['its narrative', wide.narrative],
+		['the translation', wide.translation]
+	] as const) {
+		expect(n, `${what} is prose and stays readable`).toBeGreaterThan(40);
+		expect(n, `${what} is prose and must not run the full column`).toBeLessThan(80);
+	}
+
+	// a phone is unchanged: the column is the screen
+	await page.setViewportSize({ width: 390, height: 844 });
+	await page.goto('/pl/ordinarium/credo');
+	const phone = await measure();
+	expect(phone.column, 'the phone still gets the whole width').toBe(390);
+});
