@@ -246,3 +246,37 @@ test('the mark explains itself when asked', async ({ page }) => {
 	await page.locator('.mark').first().click();
 	await expect(page.locator('.legend')).toBeVisible();
 });
+
+test('the reader’s own lines are the red ones, and the other voice recedes', async ({ page }) => {
+	// The choice of part has to change the PAGE, not only its labels: red
+	// is kept for the lines the reader says, so "which of these do I say?"
+	// is answered by the colour rather than worked out.
+	await page.goto('/pl/ordinarium/praefatio-dialogus');
+	const colours = () =>
+		page.evaluate(() =>
+			[...document.querySelectorAll('.verse .mark')].map((m) => ({
+				mark: m.textContent,
+				red: m.classList.contains('yours')
+			}))
+		);
+
+	// in the pew, the answers are the reader's
+	const pew = await colours();
+	expect(pew.filter((c) => c.red).every((c) => c.mark === 'R.')).toBe(true);
+	expect(pew.some((c) => c.mark === 'V.' && !c.red)).toBe(true);
+
+	// as the celebrant, it is the other way round
+	await page.getByRole('radio', { name: 'kapłana' }).click();
+	const priest = await colours();
+	expect(priest.filter((c) => c.red).every((c) => c.mark === 'V.')).toBe(true);
+	expect(priest.some((c) => c.mark === 'R.' && !c.red)).toBe(true);
+
+	// and the two really are different colours on the page
+	const [redInk, quietInk] = await page.evaluate(() => {
+		const marks = [...document.querySelectorAll('.verse .mark')];
+		const mine = marks.find((m) => m.classList.contains('yours'))!;
+		const theirs = marks.find((m) => !m.classList.contains('yours'))!;
+		return [getComputedStyle(mine).color, getComputedStyle(theirs).color];
+	});
+	expect(redInk).not.toBe(quietInk);
+});

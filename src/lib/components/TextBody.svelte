@@ -170,6 +170,45 @@
 	// It goes on the first line with something to say — "Orémus." on its own
 	// is a call to pray, and the book gives the initial to the prayer that
 	// follows it, not to it.
+	// A letter set at 1.75em among letters set at 1 does not fit where the
+	// font expects: its sidebearings scale with it, so an open letter like
+	// Q pushes its tail into the next glyph while a closed one like P opens
+	// a hole, and the kerning pair with the letter after it is lost
+	// altogether once the two sit in different elements.
+	//
+	// These are corrections, not taste: measured off the reading face
+	// itself with canvas metrics (actualBoundingBox against the advance),
+	// as [start, end] in the initial's own em —
+	//
+	//   start = (−(scale − 1) × leftSidebearing + air) / scale
+	//   end   = (kern − (scale − 1) × rightSidebearing + air) / scale
+	//
+	// The `air` term is 0.03em, and it is the one judgement here: a large
+	// letter wants more room around it than its metrics ask for, which is
+	// why A read as touching the word before it and the g after it while
+	// measuring as perfectly neutral on both sides.
+	const FIT: Record<string, [number, number]> = {
+		P: [0.007, -0.022],
+		S: [0.0, -0.001],
+		C: [-0.003, -0.006],
+		A: [0.018, 0.019],
+		D: [0.005, 0.002],
+		E: [0.001, -0.008],
+		M: [0.009, -0.01],
+		Q: [-0.002, 0.067],
+		I: [0.009, 0.009],
+		G: [-0.002, 0.002],
+		H: [0.001, 0.0],
+		L: [0.006, 0.013],
+		O: [-0.002, -0.002],
+		B: [0.009, 0.0],
+		N: [0.012, 0.013],
+		V: [0.017, -0.037],
+		T: [0.006, -0.044],
+		U: [0.007, 0.013]
+	};
+	const fitOf = (letter: string): [number, number] => FIT[letter] ?? [0, 0];
+
 	const firstVerse = $derived(
 		isDialogue
 			? -1
@@ -178,9 +217,11 @@
 </script>
 
 {#snippet face(id: string, form: string, raised = false)}<ruby
-		>{#if raised}<span class="initial">{form.slice(0, 1)}</span>{form.slice(
-				1
-			)}{:else}{form}{/if}{#if helpLevel >= 1}<rt class:lifted={raised} {lang}
+		>{#if raised}<span
+				class="initial"
+				style:margin-inline-start="{fitOf(form.slice(0, 1))[0]}em"
+				style:margin-inline-end="{fitOf(form.slice(0, 1))[1]}em">{form.slice(0, 1)}</span
+			>{form.slice(1)}{:else}{form}{/if}{#if helpLevel >= 1}<rt class:lifted={raised} {lang}
 				>{gloss.words[id]?.gloss}</rt
 			>{/if}</ruby
 	>{/snippet}
@@ -302,7 +343,13 @@
 		font: inherit;
 		display: inline-block;
 		width: 2rem;
-		color: var(--rubric);
+		/* The OTHER voice's mark is quiet ink. Red is kept for the reader's
+		   own lines, so that the answer to "which of these do I say?" is
+		   the colour of the page rather than something to work out — the
+		   way a bilingual missal sets the people's parts in bold. This is
+		   what makes the choice of part change the page rather than only
+		   its labels. */
+		color: var(--ink-soft);
 		font-size: 0.95rem;
 		user-select: none;
 		/* A button, and it looks exactly like the letter a missal prints:
@@ -327,9 +374,8 @@
 		outline-offset: 2px;
 	}
 
-	/* Your own lines carry a heavier mark: the page should answer "which
-	   of these do I say?" from across a pew, before any word is read. */
 	.mark.yours {
+		color: var(--rubric);
 		font-weight: 600;
 	}
 
