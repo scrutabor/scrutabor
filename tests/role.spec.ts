@@ -45,8 +45,8 @@ test('a server and a priest are shown everything from the start', async ({ page 
 
 test('the role survives leaving the page', async ({ page }) => {
 	await page.goto('/pl/ordo');
-	await page.getByRole('radio', { name: 'ministrant' }).click();
-	await expect(page.getByRole('radio', { name: 'ministrant' })).toHaveAttribute(
+	await page.getByRole('radio', { name: 'ministranta' }).click();
+	await expect(page.getByRole('radio', { name: 'ministranta' })).toHaveAttribute(
 		'aria-checked',
 		'true'
 	);
@@ -58,13 +58,89 @@ test('the role survives leaving the page', async ({ page }) => {
 test('a line the reader answers is marked as theirs', async ({ page }) => {
 	await page.goto('/pl/ordinarium/praefatio-dialogus');
 
-	// the priest's line and the answering one are named, and only the
-	// answer carries the reader's mark
-	const marks = page.locator('.who');
-	await expect(marks.first()).toContainText('kapłan');
-	await expect(marks.nth(1)).toContainText('ministrant');
-	await expect(marks.nth(1)).toContainText('odpowiadasz');
+	// each speaker is named once — the mark carries it after that — and the
+	// reader's own part is named on the first line that is theirs
+	const named = page.locator('.who');
+	await expect(named.first()).toContainText('kapłan');
+	await expect(named.nth(1)).toContainText('ministrant');
+	await expect(named.nth(1)).toContainText('odpowiadasz');
 	expect(await page.locator('.verse.answer').count()).toBeGreaterThan(0);
+});
+
+test('a dialogue is marked V. and R. down the page, as the books mark it', async ({ page }) => {
+	// versiculus and responsum, in red, on EVERY line of an exchange — the
+	// marks the typical edition prints and the ones this corpus's own
+	// witnesses print most (R. 96 times, V. 74, against S. 36 and M. 15).
+	await page.goto('/pl/ordinarium/praefatio-dialogus');
+	const marks = page.locator('.verse .mark');
+	const verses = await page.locator('.verse').count();
+	expect(await marks.count()).toBe(verses);
+	await expect(marks.first()).toHaveText('V.');
+	await expect(marks.nth(1)).toHaveText('R.');
+
+	// red, and never a tap target: the words are what a reader taps
+	const colour = await marks.first().evaluate((el) => getComputedStyle(el).color);
+	const rubric = await page.evaluate(() =>
+		getComputedStyle(document.documentElement).getPropertyValue('--rubric').trim()
+	);
+	expect(rubric).not.toBe('');
+	await expect(marks.first()).toHaveAttribute('aria-hidden', 'true');
+	expect(colour).not.toBe('');
+	expect(await marks.first().locator('button').count()).toBe(0);
+});
+
+test('the reader can change their part from a text page, and the marks follow', async ({
+	page
+}) => {
+	// The control belongs wherever the reader is, not only on the Ordo
+	// index: arriving at a text from a link is the common case.
+	await page.goto('/pl/ordinarium/praefatio-dialogus');
+	const answered = () =>
+		page.evaluate(() =>
+			[...document.querySelectorAll('.verse')].map((v) =>
+				v.classList.contains('answer') ? (v.querySelector('.mark')?.textContent ?? '?') : ''
+			)
+		);
+
+	// in the pew, the answering lines are the reader's
+	expect((await answered()).filter(Boolean)).toContain('R.');
+	expect((await answered()).filter(Boolean)).not.toContain('V.');
+
+	await page.getByRole('radio', { name: 'kapłana' }).click();
+
+	// as the celebrant, his own are — and he does not "answer" them
+	expect((await answered()).filter(Boolean)).toContain('V.');
+	expect((await answered()).filter(Boolean)).not.toContain('R.');
+	await expect(page.locator('.who-yours').first()).toHaveText('odmawiasz');
+});
+
+test('the mark does not collide with the words beside it', async ({ page }) => {
+	// text-indent INHERITS, and every token is an inline-block with its own
+	// first line box: the verse's hanging indent was re-applied inside each
+	// one and printed the words on top of each other. Boxes, not opinions.
+	//
+	// Measure the WORDS, not the tokens. The indent moves the glyphs inside
+	// each inline-block, not the block itself — with the bug present the
+	// token boxes still tile neatly while the words inside them sit 2rem to
+	// the left, on top of each other. A test on token boxes passes happily
+	// through the very fault it was written for (proved by mutation).
+	await page.goto('/pl/ordinarium/iudica-me');
+	const overlaps = await page.evaluate(() => {
+		const bad: string[] = [];
+		for (const verse of document.querySelectorAll('.verse')) {
+			const boxes = [...verse.querySelectorAll('.word')].map((t) => t.getBoundingClientRect());
+			for (let i = 1; i < boxes.length; i++) {
+				const a = boxes[i - 1];
+				const b = boxes[i];
+				// same line, and the next token starts before the last one ended
+				if (Math.abs(a.top - b.top) < 2 && b.left < a.right - 0.5) {
+					bad.push(`${verse.textContent?.slice(0, 30)}: word ${i}`);
+				}
+			}
+		}
+		return bad;
+	});
+	expect(overlaps).toEqual([]);
 });
 
 test('a text the sources say nothing about stays unmarked', async ({ page }) => {
@@ -75,10 +151,36 @@ test('a text the sources say nothing about stays unmarked', async ({ page }) => 
 	await expect(page.locator('.verse').first()).toBeVisible();
 	await expect(page.locator('.who')).toHaveCount(0);
 
-	// while the Mass, whose sources do mark the voices, is fully attributed
+	await expect(page.locator('.verse .mark')).toHaveCount(0);
+	// and it opens with the red initial the books give a prayer
+	await expect(page.locator('.initial').first()).toHaveText('G'); // Glória Patri
+
+	// while an exchange, whose sources do mark the voices, is marked on
+	// every line, with the names given once each
 	await page.goto('/pl/ordinarium/ite-missa-est');
 	const verses = await page.locator('.verse').count();
-	expect(await page.locator('.who').count()).toBe(verses);
+	expect(await page.locator('.verse .mark').count()).toBe(verses);
+	expect(await page.locator('.who-name').count()).toBeLessThan(verses);
+});
+
+test('a prayer is opened with an initial and marked only where it is answered', async ({
+	page
+}) => {
+	// The books do not print V. down the body of the Canon: one voice says
+	// the whole prayer, a red initial opens it, and the only mark is on the
+	// Amen that answers it.
+	await page.goto('/pl/ordinarium/per-ipsum');
+	await expect(page.locator('.initial')).toHaveText('P');
+	const marks = await page.evaluate(() =>
+		[...document.querySelectorAll('.verse')].map((v) => v.querySelector('.mark')?.textContent ?? '')
+	);
+	expect(marks.filter(Boolean)).toEqual(['R.']);
+	expect(marks[0]).toBe('');
+
+	// the initial is part of its word: the whole form is still there to be
+	// read aloud, copied, and tapped
+	const word = page.locator('.word').first();
+	await expect(word).toHaveText(/^Per/);
 });
 
 test('a silent prayer that ends aloud is not folded away', async ({ page }) => {

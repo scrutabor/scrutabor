@@ -72,3 +72,24 @@ export function showsWords(
 	// fall back to the spine's own reading
 	return fallback !== 'secreto';
 }
+
+/**
+ * Whose line is this — is it one the reader says?
+ *
+ * The books mark the Ordo S. and M., the priest and the one who answers
+ * him; this edition asks the reader which of them they are and marks their
+ * own lines from it. At a low Mass the server gives every response, and at
+ * a dialogue Mass the faithful answer with him, so both of those parts own
+ * the answering lines. `omnes` is everyone by definition. A priest reading
+ * this owns what he says and not what is said to him — which is why the
+ * marking cannot simply be "anything that is not the celebrant".
+ */
+const OWNED: Record<Role, ReadonlySet<string>> = {
+	sacerdos: new Set(['sacerdos']),
+	minister: new Set(['minister', 'omnes']),
+	populus: new Set(['minister', 'populus', 'omnes'])
+};
+
+export function isYours(speaker: string | undefined, of: Role): boolean {
+	return speaker !== undefined && OWNED[of].has(speaker);
+}

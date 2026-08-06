@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { GlossDocument, TextDocument } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
+	import { isYours, role } from '$lib/role.svelte';
 
 	// The rendered text itself, shared by the reading page and the ordo
 	// flow. `ontap` makes the words buttons; the flow passes an idPrefix so
@@ -29,17 +30,103 @@
 	// own dotted ids (ordinarium.credo).
 	const domId = (id: string) => (idPrefix ? `${idPrefix}.${id}` : id);
 
-	// The voices a reader in the pew answers with. At low Mass the server
-	// answers for everyone, and the congregation joins at a dialogue Mass —
-	// either way these are the lines the reader may be saying.
-	const ANSWERS = new Set(['minister', 'populus', 'omnes']);
+	// V. and R. — versiculus and responsum — in red, the marks the 1962
+	// typical edition prints down its dialogue pages and the marks a Polish
+	// reader meets in the Pallottinum Ordo. They are also what this corpus's
+	// own witnesses print by a wide margin: R. 96 times and V. 74 against
+	// S. 36 and M. 15.
+	//
+	// (The books set them barred, ℣ and ℟. That pair lives in Letterlike
+	// Symbols, a block EB Garamond does not carry, so they would drop to a
+	// system face mid-line. Plain V. and R. it is, which is how plenty of
+	// hand missals print them too.)
+	//
+	// Marks belong to a DIALOGUE. A prayer said straight through by one
+	// voice gets none — the book does not mark the Canon line by line, and
+	// neither do we; the devotional prayers, which the corpus attributes to
+	// omnes because everyone says the whole of them, get none either. What
+	// the mark is for is the moment the reader has to know whether the next
+	// line is his.
+	const MARKS: Record<string, string> = {
+		sacerdos: 'V.',
+		minister: 'R.',
+		populus: 'R.',
+		omnes: 'R.',
+		schola: 'R.'
+	};
+
+	// Two shapes, and the books set them differently.
+	//
+	// A DIALOGUE is voices trading lines — the preface dialogue, the psalm
+	// said alternately with the server. The books mark every line of it,
+	// ℣ and ℟ down the page, and give it no opening initial.
+	//
+	// A PRAYER is one voice saying the whole thing, and it ends with the
+	// answer Amen. The books open it with a red initial and mark NOTHING
+	// but that answer: no missal prints ℣ down the body of the Canon.
+	//
+	// The two are told apart by how often the voice changes: a prayer turns
+	// over once, at the Amen; a dialogue keeps turning.
+	const turns = $derived.by(() => {
+		const speakers = doc.segments
+			.filter((s) => s.type === 'verse' && s.speaker)
+			.map((s) => s.speaker);
+		return speakers.filter((sp, i) => i > 0 && sp !== speakers[i - 1]).length;
+	});
+	const isDialogue = $derived(turns >= 2);
+	const answers = $derived(
+		new Set(doc.segments.filter((s) => s.type === 'verse' && s.speaker).map((s) => s.speaker))
+			.size > 1
+	);
+
+	// The mark says who says it; the NAME says what the mark means, and it
+	// only has to say that once. Each speaker is named the first time it
+	// appears in a text — a dialogue that alternates every line would
+	// otherwise carry a label above every line of it — and the reader's own
+	// part is named once, on the first line that is theirs. After that the
+	// red marks and the rail carry it alone, which is how a missal does it.
+	const firstAt = $derived.by(() => {
+		const seen: Record<string, number> = {};
+		doc.segments.forEach((s, i) => {
+			if (s.type === 'verse' && s.speaker && !(s.speaker in seen)) seen[s.speaker] = i;
+		});
+		return seen;
+	});
+	const firstMine = $derived(
+		doc.segments.findIndex((s) => s.type === 'verse' && isYours(s.speaker, role.value))
+	);
+	const namesSpeaker = (i: number) => {
+		const sp = doc.segments[i]?.speaker;
+		return answers && sp !== undefined && firstAt[sp] === i;
+	};
+
+	// The initial the books open a prayer with, in red. RAISED, not dropped:
+	// a dropped initial floats, and a float cuts straight through the gloss
+	// line under the first words — this page carries an apparatus the
+	// printers did not have to fit around. Raised is a missal device too,
+	// and it sits on the baseline where the word-by-word layout expects it.
+	//
+	// It has to be split off the first word rather than styled through it:
+	// ::first-letter never reaches the letter, because every word is an
+	// inline-block and that is where the pseudo-element stops.
+	//
+	// It goes on the first line with something to say — "Orémus." on its own
+	// is a call to pray, and the book gives the initial to the prayer that
+	// follows it, not to it.
+	const firstVerse = $derived(
+		isDialogue
+			? -1
+			: doc.segments.findIndex((s) => s.type === 'verse' && (s.words?.length ?? 0) >= 3)
+	);
 </script>
 
-{#snippet face(id: string, form: string)}<ruby
-		>{form}{#if helpLevel >= 1}<rt {lang}>{gloss.words[id]?.gloss}</rt>{/if}</ruby
+{#snippet face(id: string, form: string, raised = false)}<ruby
+		>{#if raised}<span class="initial">{form.slice(0, 1)}</span>{form.slice(
+				1
+			)}{:else}{form}{/if}{#if helpLevel >= 1}<rt {lang}>{gloss.words[id]?.gloss}</rt>{/if}</ruby
 	>{/snippet}
 
-{#each doc.segments as seg (seg.id)}
+{#each doc.segments as seg, i (seg.id)}
 	{#if seg.type === 'rubric'}
 		<div class="rubric">
 			<p class="rubric-la" lang="la">{seg.text}</p>
@@ -56,33 +143,53 @@
 		     field out, and a missal that guessed would be worse than one
 		     that is silent. The reader's own lines carry the strongest
 		     mark, because finding them at a glance is the whole point. -->
-		{#if seg.speaker || (seg.voice && seg.voice !== 'clara')}
-			<p class="who" class:yours={ANSWERS.has(seg.speaker ?? '')}>
-				{#if seg.speaker}<span class="who-name">{M[lang].speakers[seg.speaker]}</span>{/if}
+		{@const mine = answers && isYours(seg.speaker, role.value)}
+		{@const saysYours = mine && i === firstMine}
+		{#if namesSpeaker(i) || saysYours || (seg.voice && seg.voice !== 'clara')}
+			<p class="who" class:yours={mine}>
+				{#if namesSpeaker(i) && seg.speaker}<span class="who-name"
+						>{M[lang].speakers[seg.speaker]}</span
+					>{/if}
 				{#if seg.voice && seg.voice !== 'clara'}<span class="who-voice"
 						>{M[lang].voices[seg.voice]}</span
 					>{/if}
-				{#if ANSWERS.has(seg.speaker ?? '')}<span class="who-yours">{M[lang].yoursLabel}</span>{/if}
+				{#if saysYours}<span class="who-yours"
+						>{M[lang].yoursLabel[role.value === 'sacerdos' ? 'say' : 'answer']}</span
+					>{/if}
 			</p>
 		{/if}
 		<p
 			class="verse"
 			class:glossed={helpLevel >= 1}
 			class:quiet={seg.voice === 'secreto'}
-			class:answer={ANSWERS.has(seg.speaker ?? '')}
+			class:answer={mine}
 			lang="la"
 		>
-			<!-- Word and its trailing punctuation form one atomic token
-			     (inline-block): the line breaker may only break at the
-			     spaces BETWEEN tokens, never between a word and its
-			     comma or period. Guarded by the one-rect e2e invariant. -->
-			{#each seg.words ?? [] as w (w.id)}<span class="token"
+			<!-- The mark the books print in red beside the line, and then the
+			     words with NO text node between: a space there would push the
+			     first line one space past the lines it wraps onto, and the
+			     hanging indent exists precisely to line them up. The mark is
+			     not a word of the text — it carries the speaker's name for
+			     anyone who cannot see the colour, and the tap targets stay
+			     the words. Word and trailing punctuation form one atomic
+			     token (inline-block): the line breaker may only break at the
+			     spaces BETWEEN tokens, never between a word and its comma or
+			     period. Guarded by the one-rect e2e invariant. -->
+			{#if answers && seg.speaker && (isDialogue || seg.speaker !== 'sacerdos') && MARKS[seg.speaker]}<span
+					class="mark"
+					class:yours={mine}
+					aria-hidden="true">{MARKS[seg.speaker]}</span
+				><span class="sr-only"
+					>{M[lang].speakers[seg.speaker]}:
+				</span>{/if}{#each seg.words ?? [] as w, wi (w.id)}{@const raised =
+					i === firstVerse && wi === 0}<span class="token"
 					>{#if ontap}<button
 							class="word"
 							id={domId(w.id)}
 							class:selected={selectedId === domId(w.id)}
-							onclick={() => ontap?.(domId(w.id))}>{@render face(w.id, w.form)}</button
-						>{:else}<span class="word">{@render face(w.id, w.form)}</span>{/if}{w.post ?? ''}</span
+							onclick={() => ontap?.(domId(w.id))}>{@render face(w.id, w.form, raised)}</button
+						>{:else}<span class="word">{@render face(w.id, w.form, raised)}</span>{/if}{w.post ??
+						''}</span
 				>{' '}{/each}
 		</p>
 		{#if helpLevel >= 2 && gloss.segments[seg.id]?.translation}
@@ -116,11 +223,53 @@
 		color: var(--rubric);
 	}
 
+	/* The speaker's mark, in the red the books use for everything that is
+	   not the text itself. Fixed width, so the marks read as a column of
+	   their own and the Latin beside them keeps one straight edge — the
+	   way S. and M. sit in a hand missal. Works at every width: the mark
+	   is part of the line, not something hung in a margin a phone does
+	   not have. */
+	.mark {
+		display: inline-block;
+		width: 2rem;
+		color: var(--rubric);
+		font-size: 0.95rem;
+		user-select: none;
+	}
+
+	/* Your own lines carry a heavier mark: the page should answer "which
+	   of these do I say?" from across a pew, before any word is read. */
+	.mark.yours {
+		font-weight: 600;
+	}
+
+	/* The opening initial, red, standing on the same baseline as the word it
+	   begins — large enough to open the prayer, not so large that it opens a
+	   hole in the line above. */
+	.initial {
+		color: var(--rubric);
+		font-size: 1.75em;
+		line-height: 0;
+		text-indent: 0;
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
+		border: 0;
+	}
+
 	/* A line the reader answers with is marked down its edge, so the eye
 	   finds it while the ear is following the priest. */
 	.verse.answer {
 		border-inline-start: 2px solid var(--rubric);
-		padding-inline-start: 0.7rem;
+		padding-inline-start: 2.7rem;
 		margin-inline-start: -0.9rem;
 	}
 
@@ -130,14 +279,31 @@
 		color: var(--ink-soft);
 	}
 
+	/* Hanging indent: the mark sits out at the edge and every line of the
+	   verse — the first and the ones it wraps onto — aligns past it, so
+	   the marks form their own column and the Latin keeps one straight
+	   left edge. Verses with no mark indent the same, or an unattributed
+	   line would jut out among attributed ones. */
 	.verse {
 		font-size: 1.45rem;
 		line-height: 1.75;
 		margin: 0 0 1.1rem;
+		padding-inline-start: 2rem;
+		text-indent: -2rem;
 	}
 
 	.verse.glossed {
 		line-height: 2.7;
+	}
+
+	/* text-indent INHERITS, and an inline-block establishes its own first
+	   line box — so the verse's hanging indent would be re-applied inside
+	   every token and every word would sit 2rem left of where it belongs,
+	   printing them on top of one another. The indent belongs to the verse
+	   alone; everything inside it starts at zero. */
+	.token,
+	.mark {
+		text-indent: 0;
 	}
 
 	.token {

@@ -4,6 +4,7 @@
 	import { neighborsOf, sectionFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import LangMenu from '$lib/components/LangMenu.svelte';
+	import RolePicker from '$lib/components/RolePicker.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import WordPanel from '$lib/components/WordPanel.svelte';
@@ -141,6 +142,7 @@
 			<p class="subtitle smallcaps">{sectionLabel}</p>
 			<div class="help-row">
 				<HelpLevels {lang} bind:value={helpLevel} />
+				<RolePicker {lang} compact />
 			</div>
 			{#if gloss.about}
 				<!-- Closed at EVERY slider position (owner rule): the
@@ -246,7 +248,10 @@
 
 	.help-row {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
+		align-items: center;
+		gap: 0.8rem 1.6rem;
 		margin: 1.4rem 0 2.2rem;
 	}
 

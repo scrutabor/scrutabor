@@ -207,18 +207,38 @@ test('the Credo reads with participles in the panel', async ({ page }) => {
 	await expect(panel.locator('.function')).toContainText('tértia');
 });
 
+/**
+ * A word sitting in the bottom third of a short viewport — the case where
+ * the panel would cover the very word that was tapped.
+ *
+ * Scrolls until it finds one instead of assuming the first screen holds
+ * text: how tall the header is depends on what controls a reading page
+ * carries, and a test that silently found nothing would report a null id
+ * rather than the behaviour it is here for.
+ */
+async function wordNearBottom(page: import('@playwright/test').Page): Promise<string> {
+	const pick = () =>
+		page.evaluate(() => {
+			const vh = window.innerHeight;
+			const word = [...document.querySelectorAll('.word')].find((el) => {
+				const r = el.getBoundingClientRect();
+				return r.top > vh * 0.7 && r.bottom < vh;
+			});
+			return word?.id ?? null;
+		});
+	for (let tries = 0; tries < 12; tries++) {
+		const id = await pick();
+		if (id) return id;
+		await page.evaluate(() => window.scrollBy(0, 200));
+		await page.waitForTimeout(50);
+	}
+	throw new Error('no word in the bottom third of the viewport, after scrolling');
+}
+
 test('a tapped word near the viewport bottom rises above the panel', async ({ page }) => {
 	await page.setViewportSize({ width: 800, height: 520 });
 	await page.goto('/pl/ordinarium/credo');
-	const id = await page.evaluate(() => {
-		const vh = window.innerHeight;
-		const word = [...document.querySelectorAll('.word')].find((el) => {
-			const r = el.getBoundingClientRect();
-			return r.top > vh * 0.7 && r.bottom < vh;
-		});
-		return word?.id ?? null;
-	});
-	expect(id).not.toBeNull();
+	const id = await wordNearBottom(page);
 	await page.locator(`#${id}`).click();
 	await expect
 		.poll(
@@ -353,19 +373,13 @@ test('the book keeps a ribbon: reopening a text resumes the position', async ({ 
 test('closing the panel leaves the page where it is', async ({ page }) => {
 	await page.setViewportSize({ width: 800, height: 520 });
 	await page.goto('/pl/ordinarium/credo');
-	const id = await page.evaluate(() => {
-		const vh = window.innerHeight;
-		const word = [...document.querySelectorAll('.word')].find((el) => {
-			const r = el.getBoundingClientRect();
-			return r.top > vh * 0.7 && r.bottom < vh;
-		});
-		return word?.id ?? null;
-	});
+	const id = await wordNearBottom(page);
+	const before = await page.evaluate(() => window.scrollY);
 	await page.locator(`#${id}`).click();
 	await expect.poll(() => page.evaluate(() => document.querySelector('aside') !== null)).toBe(true);
 	await page.waitForTimeout(700); // let the tap-scroll settle
 	const shifted = await page.evaluate(() => window.scrollY);
-	expect(shifted).toBeGreaterThan(0);
+	expect(shifted).toBeGreaterThan(before);
 	// close via Escape (history-entry path) — the page must not move
 	await page.keyboard.press('Escape');
 	await page.waitForTimeout(400);
