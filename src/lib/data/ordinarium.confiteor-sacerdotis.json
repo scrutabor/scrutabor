@@ -46,6 +46,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"voice": "clara",
 			"words": [
 				{
@@ -335,7 +336,7 @@
 			"id": "s03",
 			"type": "verse",
 			"voice": "clara",
-			"speaker": "minister",
+			"speaker": "sacerdos",
 			"words": [
 				{
 					"id": "w024",
@@ -432,7 +433,7 @@
 			"id": "s05",
 			"type": "verse",
 			"voice": "clara",
-			"speaker": "minister",
+			"speaker": "sacerdos",
 			"words": [
 				{
 					"id": "w031",
@@ -523,6 +524,7 @@
 		{
 			"id": "s06",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"voice": "clara",
 			"words": [
 				{

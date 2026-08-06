@@ -46,6 +46,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"voice": "secreto",
 			"words": [
 				{
@@ -145,6 +146,7 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"voice": "secreto",
 			"words": [
 				{
@@ -269,6 +271,7 @@
 		{
 			"id": "s06",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"voice": "secreto",
 			"words": [
 				{
@@ -334,6 +337,7 @@
 		{
 			"id": "s08",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"voice": "clara",
 			"words": [
 				{

@@ -67,15 +67,18 @@ test('a line the reader answers is marked as theirs', async ({ page }) => {
 	expect(await page.locator('.verse.answer').count()).toBeGreaterThan(0);
 });
 
-test('a segment the sources have not been read for stays unmarked', async ({ page }) => {
-	// Ite, missa est: its dialogue is attributed, the dismissal itself is
-	// not — the corpus leaves it empty rather than guessing, and the page
-	// must say nothing rather than invent a speaker.
+test('a text the sources say nothing about stays unmarked', async ({ page }) => {
+	// The devotional prayers are said by whoever prays them: no celebrant,
+	// no server. The corpus leaves them unattributed on purpose, and the
+	// page must render nothing rather than invent a speaker.
+	await page.goto('/pl/orationes/gloria-patri');
+	await expect(page.locator('.verse').first()).toBeVisible();
+	await expect(page.locator('.who')).toHaveCount(0);
+
+	// while the Mass, whose sources do mark the voices, is fully attributed
 	await page.goto('/pl/ordinarium/ite-missa-est');
 	const verses = await page.locator('.verse').count();
-	const marked = await page.locator('.who').count();
-	expect(marked).toBeGreaterThan(0);
-	expect(marked).toBeLessThan(verses);
+	expect(await page.locator('.who').count()).toBe(verses);
 });
 
 test('a silent prayer that ends aloud is not folded away', async ({ page }) => {

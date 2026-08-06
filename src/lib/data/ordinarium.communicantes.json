@@ -33,6 +33,7 @@
 		{
 			"id": "s01",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"voice": "secreto",
 			"words": [
 				{
@@ -242,6 +243,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"voice": "secreto",
 			"words": [
 				{
@@ -332,6 +334,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"voice": "secreto",
 			"words": [
 				{
@@ -644,6 +647,7 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"voice": "secreto",
 			"words": [
 				{
@@ -898,6 +902,7 @@
 		{
 			"id": "s05",
 			"type": "verse",
+			"speaker": "sacerdos",
 			"voice": "secreto",
 			"words": [
 				{
