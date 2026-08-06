@@ -246,10 +246,12 @@
 	const BOX_ASC = 1.073 - 0.06;
 	const BOX_DESC = 0.362 - 0.06;
 	const PAD = 0.06;
-	// The box measurement is of one rendering of one font; a hair of margin
-	// covers rounding and whatever the next environment measures instead.
-	// Without it L came out half a pixel proud of its own highlight.
-	const COVER = 0.04;
+	// The box measurement is of one rendering of one font, and the next
+	// environment measures its own: 0.04em was enough for this machine's
+	// build and left L 0.06px proud of its highlight on CI's. The margin
+	// is 0.1em — about two pixels, which no one can see on a wash and no
+	// rounding is going to cross.
+	const COVER = 0.1;
 
 	const DESCENT: Record<string, number> = { Q: 0.248 };
 	// The gloss row now sits GLOSS_GAP lower than ruby puts it, so a
