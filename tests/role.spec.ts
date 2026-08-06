@@ -163,39 +163,38 @@ test('a text the sources say nothing about stays unmarked', async ({ page }) => 
 	expect(await page.locator('.who-name').count()).toBeLessThan(verses);
 });
 
-test('a prayer is opened with an initial, and every line still says who says it', async ({
-	page
-}) => {
-	// The mark is printed where the VOICE TURNS (owner, 2026-08-06): once at
-	// the head of what the priest says, again on the answer. Repeating it
-	// down every line of one voice says the same thing over and over, and
-	// the indent already says the line belongs to the voice above it. The
-	// red initial opens the prayer.
+test('the mark prints where the voice turns, and again after every rubric', async ({ page }) => {
+	// Two halves of one rule, both the owner's, both about never making a
+	// reader work out where the last mark stopped applying.
+
+	// Not on every line of one voice: the petitions of the Pater noster run
+	// on unmarked under the V. that opened them, and keep the text column,
+	// which is what says they are still his.
+	await page.goto('/pl/ordinarium/pater-noster');
+	const petitions = await page.evaluate(() =>
+		[...document.querySelectorAll('.verse')].map((v) => ({
+			mark: v.querySelector('.mark')?.textContent ?? '',
+			left: Math.round(v.querySelector('.word')!.getBoundingClientRect().left)
+		}))
+	);
+	const run = petitions.slice(4, 8); // Sanctificétur … Panem nostrum
+	expect(run.every((p) => p.mark === '')).toBe(true);
+	expect(new Set(run.map((p) => p.left)).size, 'the column holds').toBe(1);
+
+	// But yes after a rubric: Per ipsum has a direction between every phrase
+	// of its doxology, so the reader comes back to the Latin each time and
+	// is told each time whose it is.
 	await page.goto('/pl/ordinarium/per-ipsum');
 	await expect(page.locator('.initial')).toHaveText('P');
 	const marks = await page.evaluate(() =>
 		[...document.querySelectorAll('.verse')].map((v) => v.querySelector('.mark')?.textContent ?? '')
 	);
-	expect(marks[0], 'the priest is named where he begins').toBe('V.');
-	expect(marks.at(-1), 'and the answer is named').toBe('R.');
-	expect(
-		marks.slice(1, -1).every((m) => m === ''),
-		'one voice, marked once'
-	).toBe(true);
-
-	// an unmarked continuation still lines up under the words above it,
-	// which is what says it is the same voice
-	const [head, next] = await page.evaluate(() =>
-		[...document.querySelectorAll('.verse')]
-			.slice(0, 2)
-			.map((v) => Math.round(v.querySelector('.word')!.getBoundingClientRect().left))
-	);
-	expect(Math.abs(head - next), 'the column holds').toBeLessThanOrEqual(1);
+	expect(marks.every(Boolean), 'a rubric before every line, so a mark on every line').toBe(true);
+	expect(marks.at(-1)).toBe('R.');
 
 	// the initial is part of its word: the whole form is still there to be
 	// read aloud, copied, and tapped
-	const word = page.locator('.word').first();
-	await expect(word).toHaveText(/^Per/);
+	await expect(page.locator('.word').first()).toHaveText(/^Per/);
 });
 
 test('a silent prayer that ends aloud is not folded away', async ({ page }) => {

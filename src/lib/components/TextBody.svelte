@@ -102,23 +102,49 @@
 		return answers && sp !== undefined && firstAt[sp] === i;
 	};
 
-	// The mark is printed where the VOICE TURNS, and nowhere else: four V.'s
-	// down the petitions of the Pater noster say the same thing four times,
-	// and the indent already says the line belongs to the voice above it
-	// (owner, 2026-08-06).
+	// Is there a rubric between this verse and the one before it? A
+	// direction breaks the text apart on the page — red, railed, with its
+	// own translation under it — and the eye that comes back down to the
+	// Latin has lost the thread of whose words these are.
+	const afterRubric = (i: number) => {
+		for (let j = i - 1; j >= 0; j--) {
+			if (doc.segments[j].type === 'verse') return false;
+			if (doc.segments[j].type === 'rubric') return true;
+		}
+		return false;
+	};
+
+	// The mark prints where the voice TURNS, and again wherever a rubric has
+	// broken the flow. Both halves are the owner's, and both are about the
+	// same thing — a reader following Mass should never have to work out
+	// where the last mark stopped applying:
 	//
-	// Rubrics do not reset it. They were reprinting the mark at first, on
-	// the argument that a direction interrupts the thread — but Per ipsum
-	// carries a rubric between every phrase of one doxology, and it came
-	// back marked V. four times over, which is the noise this rule exists
-	// to remove. A rubric is set apart in red and railed; the text column
-	// runs on underneath it, and that is what says the voice has not
-	// changed.
+	//   * not on every line of one voice. Four V.'s down the petitions of
+	//     the Pater noster say the same thing four times, and the indent
+	//     already says a line belongs to the voice above it.
+	//   * but yes after every rubric, even where that means Per ipsum takes
+	//     a V. on each of its phrases: that prayer has a direction between
+	//     every one of them, so the reader is coming back to the text each
+	//     time, and each time is a place to be told.
 	const marked = (i: number) => {
 		const sp = doc.segments[i]?.speaker;
 		if (!sp) return false;
+		if (afterRubric(i)) return true;
 		for (let j = i - 1; j >= 0; j--) {
 			if (doc.segments[j].type === 'verse') return doc.segments[j].speaker !== sp;
+		}
+		return true;
+	};
+
+	// The voice follows the same rule, for the same reason: "silently" over
+	// every line of a prayer said silently throughout is a label repeating
+	// itself, but after a direction it is worth saying again.
+	const namesVoice = (i: number) => {
+		const seg = doc.segments[i];
+		if (!seg?.voice || seg.voice === 'clara') return false;
+		if (afterRubric(i)) return true;
+		for (let j = i - 1; j >= 0; j--) {
+			if (doc.segments[j].type === 'verse') return doc.segments[j].voice !== seg.voice;
 		}
 		return true;
 	};
@@ -169,12 +195,13 @@
 		     mark, because finding them at a glance is the whole point. -->
 		{@const mine = answers && isYours(seg.speaker, role.value)}
 		{@const saysYours = mine && i === firstMine}
-		{#if namesSpeaker(i) || saysYours || (seg.voice && seg.voice !== 'clara')}
+		{@const showVoice = namesVoice(i)}
+		{#if namesSpeaker(i) || saysYours || showVoice}
 			<p class="who" class:yours={mine}>
 				{#if namesSpeaker(i) && seg.speaker}<span class="who-name"
 						>{M[lang].speakers[seg.speaker]}</span
 					>{/if}
-				{#if seg.voice && seg.voice !== 'clara'}<span class="who-voice"
+				{#if showVoice && seg.voice && seg.voice !== 'clara'}<span class="who-voice"
 						>{M[lang].voices[seg.voice]}</span
 					>{/if}
 				{#if saysYours}<span class="who-yours"
