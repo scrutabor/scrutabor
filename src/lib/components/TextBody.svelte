@@ -269,8 +269,13 @@
 	// descender actually needs (0.341em of room against a p or q's 0.24em),
 	// and the raised initial does what it was always meant to do when its
 	// tail is too long: sink that one verse's gloss row (see `sink`).
-	const GLOSS_GAP = 0.22; // rem
-	const ROOM_BELOW = 0.272 + GLOSS_GAP / 1.45;
+	// A FRACTION OF THE READING SIZE, not a length: mirrors --gloss-gap in
+	// app.css, which is what actually positions the row. This copy exists
+	// because the sink decision below has to be made in numbers, and the
+	// test 'the reading size is the only knob' holds the two together by
+	// rendering at two sizes and checking the geometry still lands.
+	const GLOSS_GAP = 0.152;
+	const ROOM_BELOW = 0.272 + GLOSS_GAP;
 	const RAISED = 1.75;
 	// A large letter wants more room around it than its metrics ask for:
 	// the one judgement in all of this, and what stops A reading as touching
@@ -278,16 +283,18 @@
 	const AIR = 0.03;
 
 	/** How far this verse's gloss row has to sink for the initial's tail,
-	 * in rem — nothing at all unless the letter reaches below the line. */
+	 * in the reading size's em — nothing unless the letter reaches below
+	 * the line. */
 	function sinkFor(letter: string, glossed: boolean): number {
 		const descent = DESCENT[letter] ?? 0;
 		if (!glossed || descent === 0) return 0;
 		const over = descent * RAISED - ROOM_BELOW; // in the reading size's em
-		return over <= 0 ? 0 : (over * 1.45) / 1 + 0.02; // reading size is 1.45rem
+		return over <= 0 ? 0 : over + 0.014;
 	}
 
 	/** [font-size, margin-start, margin-end, gloss lift] for an initial, all
-	 * in the initial's own em except the lift, which is the reading size. */
+	 * in the initial's own em except the lift and the sink, which are in the
+	 * reading size's em. */
 	function initialFit(letter: string, glossed: boolean) {
 		const scale = RAISED;
 		const [sbStart, sbEnd] = SB[letter] ?? [0, 0];
@@ -298,9 +305,10 @@
 			start: side(sbStart),
 			end: side(sbEnd),
 			// a taller glyph raises the ruby base box and the annotation rides
-			// down with it: 4px measured at scale 1.75, and it scales with the
-			// extra size, so 0.333rem for every 1 of it
-			lift: (scale - 1) * 0.333,
+			// down with it: 4px measured at scale 1.75 against a 1.45rem
+			// reading size, and it scales with the extra size — so 0.23 of
+			// the reading size for every 1 of that extra
+			lift: (scale - 1) * 0.23,
 			sink: sinkFor(letter, glossed),
 			// the wash has to cover the whole letter, top and tail
 			padTop: Math.max(PAD, (INK[letter]?.[0] ?? 0) * scale - BOX_ASC + COVER),
@@ -328,7 +336,7 @@
 					style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
 				>{form.slice(1)}{:else}{form}{/if}{post}</span
 		>{#if helpLevel >= 1}<rt
-				style:top="{GLOSS_GAP + sink - (raised ? fit.lift : 0)}rem"
+				style:top="calc(var(--reading) * (var(--gloss-gap) + {sink - (raised ? fit.lift : 0)}))"
 				class="shifted"
 				{lang}>{gloss.words[id]?.gloss}</rt
 			>{/if}</ruby
@@ -423,14 +431,14 @@
 	/* The attribution line: small caps, quiet, above the words it names —
 	   the shape a missal uses for its S. and M. */
 	.who {
-		margin: 0 0 0.15rem;
-		font-size: 0.72rem;
+		margin: 0 0 calc(var(--reading) * 0.103);
+		font-size: calc(var(--reading) * 0.497);
 		letter-spacing: 0.09em;
 		text-transform: lowercase;
 		font-variant-caps: small-caps;
 		color: var(--ink-soft);
 		display: flex;
-		gap: 0.6rem;
+		gap: calc(var(--reading) * 0.414);
 		align-items: baseline;
 	}
 
@@ -450,7 +458,7 @@
 		   the page's face at the page's size. */
 		font: inherit;
 		display: inline-block;
-		width: 2rem;
+		width: calc(var(--reading) * 1.379);
 		/* The OTHER voice's mark is quiet ink. Red is kept for the reader's
 		   own lines, so that the answer to "which of these do I say?" is
 		   the colour of the page rather than something to work out — the
@@ -458,7 +466,7 @@
 		   what makes the choice of part change the page rather than only
 		   its labels. */
 		color: var(--ink-soft);
-		font-size: 0.95rem;
+		font-size: calc(var(--reading) * 0.655);
 		user-select: none;
 		/* A button, and it looks exactly like the letter a missal prints:
 		   no chrome, no underline. Tapping it opens the key — the owner
@@ -536,17 +544,17 @@
 	   left edge. Verses with no mark indent the same, or an unattributed
 	   line would jut out among attributed ones. */
 	.verse {
-		font-size: 1.45rem;
+		font-size: var(--reading);
 		line-height: 1.75;
-		margin: 0 0 1.1rem;
-		padding-inline-start: 2rem;
+		margin: 0 0 calc(var(--reading) * 0.759);
+		padding-inline-start: calc(var(--reading) * 1.379);
 	}
 
 	/* Only a line that carries a mark hangs out to the left for it. A line
 	   continuing the same voice keeps the column, which is what says it is
 	   still that voice. */
 	.verse.marked {
-		text-indent: -2rem;
+		text-indent: calc(var(--reading) * -1.379);
 	}
 
 	/* Measured, because the proportions were backwards: a gloss sat ON the
@@ -578,7 +586,7 @@
 		   why a rubric under a glossed line looked cramped while the same
 		   rubric under another rubric looked right. Nothing beyond that:
 		   a verse break is not extra air. */
-		margin-bottom: 0.22rem;
+		margin-bottom: calc(var(--reading) * var(--gloss-gap));
 	}
 
 	/* text-indent INHERITS, and an inline-block establishes its own first
@@ -610,7 +618,7 @@
 	   so a tapped word came back with a wash that started above the letters
 	   and ended in the middle of the gloss beneath them. */
 	.base {
-		padding: 0.06em 0.1rem;
+		padding: 0.06em 0.069em;
 		/* The wash wants a little air around the letters; the LETTERS must
 		   not move for it. Horizontal padding on an inline box is layout,
 		   not just paint, so that 0.1rem was pushing every Latin word
@@ -618,8 +626,8 @@
 		   edge — which is why the glosses read as sitting further left
 		   than the Latin. Cancelled here: the wash keeps its air, the text
 		   keeps the margin. */
-		margin-inline: -0.1rem;
-		border-radius: 0.25rem;
+		margin-inline: -0.069em;
+		border-radius: 0.172em;
 	}
 
 	button.word {
@@ -695,9 +703,9 @@
 	   than one line of a prayer takes from the next — the margins collapse,
 	   so this is the one that decides the gap. */
 	.rubric {
-		margin: 1.8rem 0 1.1rem;
+		margin: calc(var(--reading) * 1.241) 0 calc(var(--reading) * 0.759);
 		border-inline-start: 2px solid var(--rubric);
-		padding-inline-start: 0.9rem;
+		padding-inline-start: calc(var(--reading) * 0.621);
 	}
 
 	/* The verses can take the whole of a wide column, because a line of
@@ -712,14 +720,14 @@
 		max-width: 62ch;
 		color: var(--rubric);
 		font-style: italic;
-		font-size: 1.05rem;
+		font-size: calc(var(--reading) * 0.724);
 	}
 
 	.rubric-narrative {
-		margin: 0.25rem 0 0;
+		margin: calc(var(--reading) * 0.172) 0 0;
 		max-width: 62ch;
 		color: var(--ink-soft);
-		font-size: 0.98rem;
+		font-size: calc(var(--reading) * 0.676);
 		line-height: 1.5;
 	}
 
@@ -738,9 +746,9 @@
 	   text starts on the same left edge as the Latin: it is that verse in
 	   another language, so it belongs in that verse's column. */
 	.seg-extra {
-		margin: 0.5rem 0 0.55rem;
+		margin: calc(var(--reading) * 0.345) 0 calc(var(--reading) * 0.379);
 		border-inline-start: 2px solid var(--wash-strong);
-		padding-inline-start: calc(2rem - 2px);
+		padding-inline-start: calc(var(--reading) * 1.379 - 2px);
 	}
 
 	.translation {
@@ -750,7 +758,7 @@
 		max-width: 56ch;
 		color: var(--ink-soft);
 		font-style: italic;
-		font-size: 1.05rem;
+		font-size: calc(var(--reading) * 0.724);
 		line-height: 1.55;
 	}
 </style>

@@ -901,3 +901,103 @@ test('a translation belongs to the verse above it', async ({ page }) => {
 		gaps.toItsOwnVerse * 1.25
 	);
 });
+
+test('the reading size is the only knob', async ({ page }) => {
+	// Everything on a reading surface is a multiple of --reading: the type,
+	// the rhythm, the mark gutter, and TextBody's own gloss geometry, which
+	// used to convert through a hard-coded 1.45 in three places. This turns
+	// the knob and re-runs the invariants that matter, which is the whole
+	// point of having it be one knob — and is what a large-print setting
+	// would rest on.
+	await page.setViewportSize({ width: 820, height: 1200 });
+	const sizes: Record<string, unknown> = {};
+	for (const reading of ['1.45rem', '1.75rem', '2.1rem']) {
+		await page.goto('/pl/ordinarium/qui-pridie');
+		const m = await page.evaluate((reading) => {
+			document.documentElement.style.setProperty('--reading', reading);
+			const c = document.createElement('canvas').getContext('2d')!;
+			const ink = (el: Element) => {
+				const cs = getComputedStyle(el);
+				c.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+				const t = (el.textContent || 'x').trim();
+				const mm = c.measureText(t);
+				const probe = document.createElement('span');
+				probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+				el.appendChild(probe);
+				const b = probe.getBoundingClientRect().top;
+				probe.remove();
+				return { top: b - mm.actualBoundingBoxAscent, bottom: b + mm.actualBoundingBoxDescent };
+			};
+			const boxStart = (el: Element) => {
+				const s = document.createElement('span');
+				s.style.cssText = 'display:inline-block;width:0;height:1em;vertical-align:baseline';
+				el.insertBefore(s, el.firstChild);
+				const x = s.getBoundingClientRect().left;
+				s.remove();
+				return x;
+			};
+			const verses = [...document.querySelectorAll('.verse.glossed')];
+			// the pairing is measured on a verse WITHOUT a raised initial: the
+			// initial's tail reaches below the line by design, and `sink` gives
+			// it room, so it is not the case the gloss/line ratio describes
+			const v = verses.find(
+				(x) => !x.querySelector('.initial') && x.querySelectorAll('ruby').length > 6
+			)!;
+			const rubies = [...v.querySelectorAll('ruby')];
+			const rt = rubies[0].querySelector('rt')!;
+			const y0 = rubies[0].getBoundingClientRect().top;
+			const next = rubies.find((r) => r.getBoundingClientRect().top > y0 + 10);
+			// the raised initial's tail must still clear the gloss beneath it
+			const initial = document.querySelector('.initial');
+			return {
+				latinPx: parseFloat(getComputedStyle(v).fontSize),
+				glossPx: parseFloat(getComputedStyle(rt).fontSize),
+				markPx: parseFloat(getComputedStyle(document.querySelector('.mark')!).fontSize),
+				pair: +(ink(rt).top - ink(rubies[0].querySelector('.base')!).bottom).toFixed(2),
+				between: next ? +(ink(next).top - ink(rt).bottom).toFixed(2) : null,
+				edges: [
+					Math.round(boxStart(v.querySelector('.base')!)),
+					Math.round(boxStart(v.querySelector('rt')!))
+				],
+				brokenGlosses: [...document.querySelectorAll('.verse.glossed rt')].filter(
+					(r) => r.getClientRects().length > 1
+				).length,
+				splitTokens: [...document.querySelectorAll('.verse .token')].filter(
+					(t) => t.getClientRects().length !== 1
+				).length,
+				initialClears: initial
+					? +(ink(rt).top - initial.getBoundingClientRect().bottom).toFixed(2)
+					: null
+			};
+		}, reading);
+		sizes[reading] = m;
+
+		expect(m.pair, `${reading}: the gloss touches its word`).toBeGreaterThan(3);
+		expect(m.between, `${reading}: the next line is not clear of the gloss`).toBeGreaterThan(
+			m.pair
+		);
+		expect(m.edges[0] - m.edges[1], `${reading}: Latin and gloss are ragged`).toBeLessThan(2);
+		expect(m.brokenGlosses, `${reading}: a gloss broke across lines`).toBe(0);
+		expect(m.splitTokens, `${reading}: a token fragmented`).toBe(0);
+	}
+
+	// and the apparatus grew WITH the face, rather than being left behind
+	const [small, mid, large] = Object.values(sizes) as {
+		latinPx: number;
+		glossPx: number;
+		markPx: number;
+	}[];
+	expect(mid.latinPx, 'the reading face follows the knob').toBeGreaterThan(small.latinPx);
+	expect(large.latinPx).toBeGreaterThan(mid.latinPx);
+	for (const [what, k] of [
+		['the gloss', 'glossPx'],
+		['the speaker mark', 'markPx']
+	] as const) {
+		const ratioSmall = small[k] / small.latinPx;
+		const ratioLarge = large[k] / large.latinPx;
+		expect(
+			Math.abs(ratioLarge - ratioSmall),
+			`${what} did not scale with the reading face`
+		).toBeLessThan(0.02);
+	}
+});

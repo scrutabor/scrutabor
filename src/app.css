@@ -101,6 +101,21 @@ body {
 	font-feature-settings: 'locl' 0;
 }
 
+/* THE ONE KNOB. Every size and every space on a reading surface is a
+   multiple of this, so the reading face can be made larger without any of
+   the apparatus staying behind — which is what a large-print prayer book
+   is, and what the audience for this one will want (owner, 2026-08-06).
+   Nothing reads 1.45rem for itself any more; TextBody's own geometry
+   converts through it too. */
+:root {
+	--reading: 1.45rem;
+	/* How far the gloss row is pushed below where ruby puts it, as a
+	   fraction of the reading size. Two things need it and they must
+	   agree: the offset itself, and the margin a glossed verse gives back
+	   underneath (a relative shift moves paint, not layout). */
+	--gloss-gap: 0.152;
+}
+
 /* A page that is READ rather than chosen from — the prayers and the ordo
    — takes the screen it is given. 38rem is the right measure for prose,
    but this is not prose: every Latin word is as wide as the gloss under
