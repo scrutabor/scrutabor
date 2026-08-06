@@ -7,7 +7,7 @@
 	"variant": "missae",
 	"sung": false,
 	"status": "working-edition",
-	"notes": "The consecration of the chalice, with the command to repeat it. The words of consecration are set in capitals for the reason given at Qui prídie. CENÁTUM at w004 is the reading of the typical edition and of witness do, against witness handmissal-eo's cænátum, and is ruled in the apparatus: both are real spellings. It is tagged as the adjective cenátus with both analyzers; read strictly, cenátum est is the impersonal perfect passive of ceno — after the meal had been eaten — and the note carries that sense. MYSTÉRIUM FÍDEI at w027-w028 stands in the nominative, in apposition to CALIX, and is not governed by anything in the clause. FECÉRITIS at w037 is future perfect rather than perfect subjunctive; both analyzers offer the two, and the future indicative faciétis that answers it settles the choice.",
+	"notes": "The consecration of the chalice, with the command to repeat it. The words of consecration are set as the typical edition prints them — Hic est enim Calix Sánguinis mei — for the reason given at Qui prídie; that edition capitalises Calix and Sánguinis and nothing else in the formula. CENÁTUM at w004 is the reading of the typical edition and of witness do, against witness handmissal-eo's cænátum, and is ruled in the apparatus: both are real spellings. It is tagged as the adjective cenátus with both analyzers; read strictly, cenátum est is the impersonal perfect passive of ceno — after the meal had been eaten — and the note carries that sense. MYSTÉRIUM FÍDEI at w027-w028 stands in the nominative, in apposition to CALIX, and is not governed by anything in the clause. FECÉRITIS at w037 is future perfect rather than perfect subjunctive; both analyzers offer the two, and the future indicative faciétis that answers it settles the choice.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence, apart from the orthographic variant adjudicated in the apparatus. Accidental variants adjudicated in the apparatus.",
 		"witnesses": "witnesses/ordinarium.simili-modo/",
@@ -461,7 +461,7 @@
 			"words": [
 				{
 					"id": "w032",
-					"form": "HIC",
+					"form": "Hic",
 					"lemma": "hic",
 					"morph": {
 						"pos": "pron",
@@ -472,7 +472,7 @@
 				},
 				{
 					"id": "w033",
-					"form": "EST",
+					"form": "est",
 					"lemma": "sum",
 					"morph": {
 						"pos": "verb",
@@ -485,7 +485,7 @@
 				},
 				{
 					"id": "w034",
-					"form": "ENIM",
+					"form": "enim",
 					"lemma": "enim",
 					"morph": {
 						"pos": "conj"
@@ -493,7 +493,7 @@
 				},
 				{
 					"id": "w035",
-					"form": "CALIX",
+					"form": "Calix",
 					"lemma": "calix",
 					"morph": {
 						"pos": "noun",
@@ -505,7 +505,7 @@
 				},
 				{
 					"id": "w036",
-					"form": "SÁNGUINIS",
+					"form": "Sánguinis",
 					"lemma": "sanguis",
 					"morph": {
 						"pos": "noun",
@@ -517,7 +517,7 @@
 				},
 				{
 					"id": "w037",
-					"form": "MEI",
+					"form": "mei",
 					"post": ",",
 					"lemma": "meus",
 					"morph": {
@@ -529,7 +529,7 @@
 				},
 				{
 					"id": "w038",
-					"form": "NOVI",
+					"form": "novi",
 					"lemma": "novus",
 					"morph": {
 						"pos": "adj",
@@ -540,7 +540,7 @@
 				},
 				{
 					"id": "w039",
-					"form": "ET",
+					"form": "et",
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
@@ -548,7 +548,7 @@
 				},
 				{
 					"id": "w040",
-					"form": "ÆTÉRNI",
+					"form": "ætérni",
 					"lemma": "aeternus",
 					"morph": {
 						"pos": "adj",
@@ -559,7 +559,7 @@
 				},
 				{
 					"id": "w041",
-					"form": "TESTAMÉNTI",
+					"form": "testaménti",
 					"post": ":",
 					"lemma": "testamentum",
 					"morph": {
@@ -572,7 +572,7 @@
 				},
 				{
 					"id": "w042",
-					"form": "MYSTÉRIUM",
+					"form": "mystérium",
 					"lemma": "mysterium",
 					"morph": {
 						"pos": "noun",
@@ -584,7 +584,7 @@
 				},
 				{
 					"id": "w043",
-					"form": "FÍDEI",
+					"form": "fídei",
 					"post": ":",
 					"lemma": "fides",
 					"morph": {
@@ -597,7 +597,7 @@
 				},
 				{
 					"id": "w044",
-					"form": "QUI",
+					"form": "qui",
 					"lemma": "qui",
 					"morph": {
 						"pos": "pron",
@@ -608,7 +608,7 @@
 				},
 				{
 					"id": "w045",
-					"form": "PRO",
+					"form": "pro",
 					"lemma": "pro",
 					"morph": {
 						"pos": "prep",
@@ -617,7 +617,7 @@
 				},
 				{
 					"id": "w046",
-					"form": "VOBIS",
+					"form": "vobis",
 					"lemma": "vos",
 					"morph": {
 						"pos": "pron",
@@ -627,7 +627,7 @@
 				},
 				{
 					"id": "w047",
-					"form": "ET",
+					"form": "et",
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
@@ -635,7 +635,7 @@
 				},
 				{
 					"id": "w048",
-					"form": "PRO",
+					"form": "pro",
 					"lemma": "pro",
 					"morph": {
 						"pos": "prep",
@@ -644,7 +644,7 @@
 				},
 				{
 					"id": "w049",
-					"form": "MULTIS",
+					"form": "multis",
 					"lemma": "multus",
 					"morph": {
 						"pos": "adj",
@@ -655,7 +655,7 @@
 				},
 				{
 					"id": "w050",
-					"form": "EFFUNDÉTUR",
+					"form": "effundétur",
 					"lemma": "effundo",
 					"morph": {
 						"pos": "verb",
@@ -669,7 +669,7 @@
 				},
 				{
 					"id": "w051",
-					"form": "IN",
+					"form": "in",
 					"lemma": "in",
 					"morph": {
 						"pos": "prep",
@@ -678,7 +678,7 @@
 				},
 				{
 					"id": "w052",
-					"form": "REMISSIÓNEM",
+					"form": "remissiónem",
 					"lemma": "remissio",
 					"morph": {
 						"pos": "noun",
@@ -690,7 +690,7 @@
 				},
 				{
 					"id": "w053",
-					"form": "PECCATÓRUM",
+					"form": "peccatórum",
 					"post": ".",
 					"lemma": "peccatum",
 					"morph": {
