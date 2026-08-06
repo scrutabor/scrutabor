@@ -41,6 +41,16 @@ export function findOrphans(text: string): string[] {
  */
 export function bindProse<T>(value: T): T {
 	if (typeof value === 'string') return bindOrphans(value) as T;
+	// A message that takes arguments is bound on the way OUT, so that both
+	// the sentence around the values and any Polish among the values gets
+	// the treatment. A function value used to pass through untouched, and
+	// the one message written as a function — the Ordo's "Odpowiadasz
+	// w 14 miejscach, a w całości…" — walked straight past the rule with
+	// two orphans in it.
+	if (typeof value === 'function') {
+		const fn = value as (...args: unknown[]) => unknown;
+		return ((...args: unknown[]) => bindProse(fn(...args))) as T;
+	}
 	if (Array.isArray(value)) return value.map(bindProse) as T;
 	if (value && typeof value === 'object') {
 		const out: Record<string, unknown> = {};

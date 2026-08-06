@@ -194,3 +194,23 @@ test('every prayer the Ordo links to is actually built', async ({ page, request 
 	}
 	expect(missing).toEqual([]);
 });
+
+test('the index says what the reader’s own part has to say', async ({ page }) => {
+	// Counted from the corpus at prerender, not written by hand: the picker
+	// changes what the book shows, and this says what that means before the
+	// reader goes looking for it.
+	await page.goto('/en/ordo');
+	const line = page.locator('.role-part');
+	await expect(line).toContainText('You answer at 14 places');
+	// two parts is few enough to name; the celebrant's 43 are not
+	await expect(line).toContainText('Confíteor (Ministrórum)');
+
+	await page.getByRole('radio', { name: 'priest' }).click();
+	await expect(line).toContainText('43 of the parts in full');
+	await expect(line).not.toContainText('Confíteor (Ministrórum)');
+
+	// and it is counted, not guessed: the numbers must match what the ordo
+	// pages actually mark as the reader's
+	await page.getByRole('radio', { name: 'faithful' }).click();
+	await expect(line).toContainText('You answer at 14 places');
+});

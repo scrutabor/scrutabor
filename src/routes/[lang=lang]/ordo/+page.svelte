@@ -5,6 +5,14 @@
 	import RolePicker from '$lib/components/RolePicker.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { ORDO } from '$lib/ordo';
+	import { role } from '$lib/role.svelte';
+
+	let { data } = $props();
+
+	// What this part actually has to say, counted from the corpus at
+	// prerender. Titles only while there are few enough to read: the
+	// celebrant says 43 of the parts and gets the number instead.
+	const mine = $derived(data.summary[role.value]);
 
 	const lang = $derived(page.params.lang as Lang);
 	const msgs = $derived(M[lang]);
@@ -42,6 +50,14 @@
 		<p class="subtitle smallcaps">{msgs.ordoSubtitle}</p>
 
 		<RolePicker {lang} />
+		<!-- What this part actually has to say, counted from the corpus at
+		     prerender. The picker changes what the book shows; this says
+		     what it means before the reader goes looking. Titles only
+		     while there are few enough to read — the celebrant says 43 of
+		     the parts and gets the number instead. -->
+		<p class="role-part">
+			{msgs.rolePart(mine.answers, mine.says.length, mine.says.length <= 4 ? mine.says : [])}
+		</p>
 
 		<div class="movements">
 			{#each movements as m (m.id)}
@@ -60,6 +76,14 @@
 </div>
 
 <style>
+	.role-part {
+		margin: 0.6rem auto 0;
+		max-width: 34rem;
+		text-align: center;
+		font-size: 0.92rem;
+		color: var(--ink-soft);
+	}
+
 	.page {
 		max-width: 38rem;
 		margin: 0 auto;
