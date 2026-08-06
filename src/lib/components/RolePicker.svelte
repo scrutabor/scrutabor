@@ -133,13 +133,13 @@
 	}
 
 	/* Colour alone was not enough to say "this one" — ink against soft ink
-	   is a difference you have to look for. The chosen part carries the
-	   rubric under it, which is the mark this book already uses for the
-	   reader's own. */
+	   is a difference you have to look for. The rule under it said so
+	   clearly and looked like a link doing it, so the chosen part is set in
+	   the rubric instead, and heavier: two signals, no ornament. */
 	.picker.compact .option.on {
 		background: none;
-		color: var(--ink);
-		box-shadow: inset 0 -0.12em 0 var(--rubric);
+		color: var(--rubric);
+		font-weight: 600;
 	}
 
 	.picker.compact .option:hover {

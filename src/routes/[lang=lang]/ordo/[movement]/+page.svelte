@@ -300,8 +300,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 0.9rem;
-		margin: 1.5rem 0 0;
+		gap: 1.3rem;
+		margin: 1.6rem 0 0;
+	}
+
+	/* The first part's rule would otherwise sit straight under the last
+	   control. The header keeps its own room, as it does on a reading
+	   page. */
+	header {
+		padding-bottom: 2.2rem;
 	}
 
 	.up {

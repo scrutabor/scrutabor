@@ -265,7 +265,7 @@
 	}
 
 	header {
-		padding-bottom: 2.4rem;
+		padding-bottom: 3rem;
 	}
 
 	h1 {
@@ -286,8 +286,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 0.9rem;
-		margin: 1.5rem 0 0;
+		gap: 1.3rem;
+		margin: 1.6rem 0 0;
 	}
 
 	main.panel-open {
