@@ -42,6 +42,10 @@ export interface Messages {
 	pronunciationHint: string;
 	/** Who says a line, and how loudly (corpus 0.9.0). */
 	speakers: Record<'sacerdos' | 'minister' | 'populus' | 'omnes' | 'schola', string>;
+	/** What the red mark beside a line stands for, for a reader meeting it
+	 * for the first time. Shown on hover; the abbreviation is Latin and the
+	 * expansion names both the word and who says the line. */
+	markTitle: Record<'sacerdos' | 'minister' | 'populus' | 'omnes' | 'schola', string>;
 	voices: Record<'submissa' | 'secreto' | 'cantus', string>;
 	/** Marks a line the reader answers with, so it can be found at a glance. */
 	/** Keyed by what the reader's own part DOES with the line: the one
@@ -101,6 +105,13 @@ const MESSAGES: Record<Lang, Messages> = {
 			omnes: 'wszyscy',
 			schola: 'schola'
 		},
+		markTitle: {
+			sacerdos: 'Versículus — werset, który mówi kapłan',
+			minister: 'Responsórium — odpowiedź ministranta',
+			populus: 'Responsórium — odpowiedź wiernych',
+			omnes: 'Omnes — mówią wszyscy razem',
+			schola: 'Responsórium — śpiewa schola'
+		},
 		voices: { submissa: 'półgłosem', secreto: 'po cichu', cantus: 'śpiew' },
 		yoursLabel: { answer: 'odpowiadasz', say: 'odmawiasz' },
 		roleLabel: 'teksty dla',
@@ -158,6 +169,13 @@ const MESSAGES: Record<Lang, Messages> = {
 			populus: 'people',
 			omnes: 'all',
 			schola: 'choir'
+		},
+		markTitle: {
+			sacerdos: 'Versículus — the verse the priest says',
+			minister: 'Responsórium — the server’s answer',
+			populus: 'Responsórium — the answer of the faithful',
+			omnes: 'Omnes — said by all together',
+			schola: 'Responsórium — sung by the choir'
 		},
 		voices: { submissa: 'in a low voice', secreto: 'silently', cantus: 'sung' },
 		yoursLabel: { answer: 'you answer', say: 'you say' },

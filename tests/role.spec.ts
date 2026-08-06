@@ -166,19 +166,31 @@ test('a text the sources say nothing about stays unmarked', async ({ page }) => 
 test('a prayer is opened with an initial, and every line still says who says it', async ({
 	page
 }) => {
-	// The books leave the body of a prayer bare and mark only the Amen that
-	// answers it. This edition marks every line instead (owner, 2026-08-06):
-	// what confused him following Mass in print was precisely the unmarked
-	// lines, where a reader has to work out where the last mark stopped
-	// applying. The red initial still opens the prayer.
+	// The mark is printed where the VOICE TURNS (owner, 2026-08-06): once at
+	// the head of what the priest says, again on the answer. Repeating it
+	// down every line of one voice says the same thing over and over, and
+	// the indent already says the line belongs to the voice above it. The
+	// red initial opens the prayer.
 	await page.goto('/pl/ordinarium/per-ipsum');
 	await expect(page.locator('.initial')).toHaveText('P');
 	const marks = await page.evaluate(() =>
 		[...document.querySelectorAll('.verse')].map((v) => v.querySelector('.mark')?.textContent ?? '')
 	);
-	expect(marks.every(Boolean), 'no spoken line is left unmarked').toBe(true);
-	expect(marks[0]).toBe('V.');
-	expect(marks.at(-1)).toBe('R.');
+	expect(marks[0], 'the priest is named where he begins').toBe('V.');
+	expect(marks.at(-1), 'and the answer is named').toBe('R.');
+	expect(
+		marks.slice(1, -1).every((m) => m === ''),
+		'one voice, marked once'
+	).toBe(true);
+
+	// an unmarked continuation still lines up under the words above it,
+	// which is what says it is the same voice
+	const [head, next] = await page.evaluate(() =>
+		[...document.querySelectorAll('.verse')]
+			.slice(0, 2)
+			.map((v) => Math.round(v.querySelector('.word')!.getBoundingClientRect().left))
+	);
+	expect(Math.abs(head - next), 'the column holds').toBeLessThanOrEqual(1);
 
 	// the initial is part of its word: the whole form is still there to be
 	// read aloud, copied, and tapped
@@ -209,4 +221,20 @@ test('a wholly silent prayer still folds', async ({ page }) => {
 	// Te ígitur carries no aloud line at all, so the pew gets the note
 	const folds = page.locator('.unfold');
 	expect(await folds.count()).toBeGreaterThan(5);
+});
+
+test('the mark explains itself to a reader meeting it for the first time', async ({ page }) => {
+	// V. and R. are Latin abbreviations, and a first-time reader has no way
+	// to know that from the letter. They are marked up as abbreviations,
+	// with the word they stand for and who says the line.
+	await page.goto('/pl/ordinarium/pater-noster');
+	const first = page.locator('.mark').first();
+	expect(await first.evaluate((el) => el.tagName)).toBe('ABBR');
+	await expect(first).toHaveAttribute('title', /Vers[íi]culus/);
+	await expect(page.locator('.mark', { hasText: 'R.' }).first()).toHaveAttribute(
+		'title',
+		/Respons[óo]rium/
+	);
+	// and it must not look like a link while it does it
+	expect(await first.evaluate((el) => getComputedStyle(el).textDecorationLine)).toBe('none');
 });

@@ -102,6 +102,27 @@
 		return answers && sp !== undefined && firstAt[sp] === i;
 	};
 
+	// The mark is printed where the VOICE TURNS, and nowhere else: four V.'s
+	// down the petitions of the Pater noster say the same thing four times,
+	// and the indent already says the line belongs to the voice above it
+	// (owner, 2026-08-06).
+	//
+	// Rubrics do not reset it. They were reprinting the mark at first, on
+	// the argument that a direction interrupts the thread — but Per ipsum
+	// carries a rubric between every phrase of one doxology, and it came
+	// back marked V. four times over, which is the noise this rule exists
+	// to remove. A rubric is set apart in red and railed; the text column
+	// runs on underneath it, and that is what says the voice has not
+	// changed.
+	const marked = (i: number) => {
+		const sp = doc.segments[i]?.speaker;
+		if (!sp) return false;
+		for (let j = i - 1; j >= 0; j--) {
+			if (doc.segments[j].type === 'verse') return doc.segments[j].speaker !== sp;
+		}
+		return true;
+	};
+
 	// The initial the books open a prayer with, in red. RAISED, not dropped:
 	// a dropped initial floats, and a float cuts straight through the gloss
 	// line under the first words — this page carries an apparatus the
@@ -161,11 +182,13 @@
 					>{/if}
 			</p>
 		{/if}
+		{@const showMark = marked(i)}
 		<p
 			class="verse"
 			class:glossed={helpLevel >= 1}
 			class:quiet={seg.voice === 'secreto'}
 			class:answer={mine}
+			class:marked={showMark}
 			lang="la"
 		>
 			<!-- The mark the books print in red beside the line, and then the
@@ -178,10 +201,11 @@
 			     token (inline-block): the line breaker may only break at the
 			     spaces BETWEEN tokens, never between a word and its comma or
 			     period. Guarded by the one-rect e2e invariant. -->
-			{#if seg.speaker && MARKS[seg.speaker]}<span
+			{#if showMark && seg.speaker && MARKS[seg.speaker]}<abbr
 					class="mark"
 					class:yours={mine}
-					aria-hidden="true">{MARKS[seg.speaker]}</span
+					title={M[lang].markTitle[seg.speaker]}
+					aria-hidden="true">{MARKS[seg.speaker]}</abbr
 				><span class="sr-only"
 					>{M[lang].speakers[seg.speaker]}:
 				</span>{/if}{#each seg.words ?? [] as w, wi (w.id)}{@const raised =
@@ -238,6 +262,11 @@
 		color: var(--rubric);
 		font-size: 0.95rem;
 		user-select: none;
+		/* an <abbr>, because that is what it is — a letter standing for a
+		   word — but without the underline browsers give one, which beside
+		   Latin would read as a link */
+		text-decoration: none;
+		cursor: help;
 	}
 
 	/* Your own lines carry a heavier mark: the page should answer "which
@@ -291,6 +320,12 @@
 		line-height: 1.75;
 		margin: 0 0 1.1rem;
 		padding-inline-start: 2rem;
+	}
+
+	/* Only a line that carries a mark hangs out to the left for it. A line
+	   continuing the same voice keeps the column, which is what says it is
+	   still that voice. */
+	.verse.marked {
 		text-indent: -2rem;
 	}
 
