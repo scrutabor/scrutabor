@@ -3,6 +3,7 @@
 	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import LangMenu from '$lib/components/LangMenu.svelte';
+	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import RolePicker from '$lib/components/RolePicker.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
@@ -30,6 +31,12 @@
 	// default, never a refusal: one tap and the words are there, and they
 	// stay there while the reader is on the page.
 	let unfolded = $state<Record<string, boolean>>({});
+	let legendOpen = $state(false);
+
+	function openLegend() {
+		panel.close();
+		legendOpen = true;
+	}
 
 	// The prayers this reader is not saying, for the movement as a whole.
 	// Knowing the whole set is what lets a RUN of them be named once — "the
@@ -204,6 +211,7 @@
 							idPrefix={e.text!.split('/')[1]}
 							selectedId={panel.id}
 							ontap={panel.toggle}
+							onmark={openLegend}
 						/>
 					</div>
 				{/if}
@@ -227,6 +235,10 @@
 			{/if}
 		</nav>
 	</main>
+
+	{#if legendOpen}
+		<MarkLegend {lang} onclose={() => (legendOpen = false)} />
+	{/if}
 
 	{#if picked && pickedAnalysis}
 		<WordPanel

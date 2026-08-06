@@ -13,7 +13,8 @@
 		helpLevel,
 		selectedId = null,
 		idPrefix = '',
-		ontap
+		ontap,
+		onmark
 	}: {
 		doc: TextDocument;
 		gloss: GlossDocument;
@@ -23,6 +24,8 @@
 		/** Namespaces the DOM ids, for pages that show more than one text. */
 		idPrefix?: string;
 		ontap?: (id: string) => void;
+		/** Asked for the key to the marks. Without it the mark is inert. */
+		onmark?: () => void;
 	} = $props();
 
 	// A dot, not a colon: it is unreserved in a URL, so `?w=credo.w001`
@@ -157,7 +160,12 @@
 	//
 	// It has to be split off the first word rather than styled through it:
 	// ::first-letter never reaches the letter, because every word is an
-	// inline-block and that is where the pseudo-element stops.
+	// inline-block and that is where the pseudo-element stops. It stays
+	// INSIDE the ruby base, though. Setting it beside the ruby put the
+	// gloss back on the line but left the base holding only "ax" of Pax
+	// while the annotation read "The peace" — and ruby centres a short base
+	// under a long annotation, which opened a gap after the initial wide
+	// enough to read as a word break.
 	//
 	// It goes on the first line with something to say — "Orémus." on its own
 	// is a call to pray, and the book gives the initial to the prayer that
@@ -169,10 +177,11 @@
 	);
 </script>
 
-{#snippet face(id: string, form: string, raised = false)}{#if raised}<span class="initial"
-			>{form.slice(0, 1)}</span
-		>{/if}<ruby
-		>{raised ? form.slice(1) : form}{#if helpLevel >= 1}<rt {lang}>{gloss.words[id]?.gloss}</rt
+{#snippet face(id: string, form: string, raised = false)}<ruby
+		>{#if raised}<span class="initial">{form.slice(0, 1)}</span>{form.slice(
+				1
+			)}{:else}{form}{/if}{#if helpLevel >= 1}<rt class:lifted={raised} {lang}
+				>{gloss.words[id]?.gloss}</rt
 			>{/if}</ruby
 	>{/snippet}
 
@@ -228,12 +237,15 @@
 			     token (inline-block): the line breaker may only break at the
 			     spaces BETWEEN tokens, never between a word and its comma or
 			     period. Guarded by the one-rect e2e invariant. -->
-			{#if showMark && seg.speaker && MARKS[seg.speaker]}<abbr
-					class="mark"
-					class:yours={mine}
-					title={M[lang].markTitle[seg.speaker]}
-					aria-hidden="true">{MARKS[seg.speaker]}</abbr
-				><span class="sr-only"
+			{#if showMark && seg.speaker && MARKS[seg.speaker]}{#if onmark}<button
+						type="button"
+						class="mark"
+						class:yours={mine}
+						aria-label={M[lang].markTitle[seg.speaker]}
+						onclick={onmark}>{MARKS[seg.speaker]}</button
+					>{:else}<span class="mark" class:yours={mine} aria-hidden="true"
+						>{MARKS[seg.speaker]}</span
+					>{/if}<span class="sr-only"
 					>{M[lang].speakers[seg.speaker]}:
 				</span>{/if}{#each seg.words ?? [] as w, wi (w.id)}{@const raised =
 					i === firstVerse && wi === 0}<span class="token"
@@ -284,16 +296,35 @@
 	   is part of the line, not something hung in a margin a phone does
 	   not have. */
 	.mark {
+		/* `font` before `font-size`, or the shorthand resets it: a button
+		   carries the browser's own font otherwise, and the mark has to be
+		   the page's face at the page's size. */
+		font: inherit;
 		display: inline-block;
 		width: 2rem;
 		color: var(--rubric);
 		font-size: 0.95rem;
 		user-select: none;
-		/* an <abbr>, because that is what it is — a letter standing for a
-		   word — but without the underline browsers give one, which beside
-		   Latin would read as a link */
-		text-decoration: none;
-		cursor: help;
+		/* A button, and it looks exactly like the letter a missal prints:
+		   no chrome, no underline. Tapping it opens the key — the owner
+		   found a help cursor with a slow native tooltip invited a click
+		   and then did nothing, which is worse than either alone. */
+		appearance: none;
+		border: 0;
+		background: none;
+		padding: 0;
+		text-align: start;
+		cursor: pointer;
+	}
+
+	button.mark:hover {
+		text-decoration: underline dotted;
+		text-underline-offset: 0.25em;
+	}
+
+	button.mark:focus-visible {
+		outline: 2px solid var(--rubric);
+		outline-offset: 2px;
 	}
 
 	/* Your own lines carry a heavier mark: the page should answer "which
@@ -310,6 +341,16 @@
 		font-size: 1.75em;
 		line-height: 0;
 		text-indent: 0;
+	}
+
+	/* A taller glyph in the ruby base raises the base box, and the
+	   annotation rides down with it: measured at 4px for a 1.75em initial
+	   at the reading size, identical at phone width, so the gloss of the
+	   first word sat 4px below the line its neighbours share. Put back by
+	   the same 4px. */
+	rt.lifted {
+		position: relative;
+		top: -0.25rem;
 	}
 
 	.sr-only {

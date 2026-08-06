@@ -4,6 +4,7 @@
 	import { neighborsOf, sectionFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import LangMenu from '$lib/components/LangMenu.svelte';
+	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import RolePicker from '$lib/components/RolePicker.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
@@ -65,6 +66,13 @@
 	// a time, same dismissal gestures) but not its history model — it is
 	// chrome, one tap to reopen.
 	let aboutOpen = $state(false);
+	let legendOpen = $state(false);
+
+	function openLegend() {
+		panel.close();
+		aboutOpen = false;
+		legendOpen = true;
+	}
 
 	function tapWord(id: string) {
 		aboutOpen = false;
@@ -72,6 +80,7 @@
 	}
 
 	function toggleAbout() {
+		legendOpen = false;
 		if (!aboutOpen && panel.id !== null) panel.close();
 		aboutOpen = !aboutOpen;
 	}
@@ -155,7 +164,15 @@
 		</header>
 
 		<main class:panel-open={selectedWord !== null || panel.keepPad}>
-			<TextBody {doc} {gloss} {lang} {helpLevel} selectedId={panel.id} ontap={tapWord} />
+			<TextBody
+				{doc}
+				{gloss}
+				{lang}
+				{helpLevel}
+				selectedId={panel.id}
+				ontap={tapWord}
+				onmark={openLegend}
+			/>
 
 			<nav class="pager" aria-label={msgs.pagerAria}>
 				{#if around.prev}
@@ -187,6 +204,10 @@
 					<p class="about-text">{gloss.about}</p>
 				</div>
 			</aside>
+		{/if}
+
+		{#if legendOpen}
+			<MarkLegend {lang} onclose={() => (legendOpen = false)} />
 		{/if}
 
 		{#if selectedWord && selectedAnalysis}

@@ -78,15 +78,13 @@ test('a dialogue is marked V. and R. down the page, as the books mark it', async
 	await expect(marks.first()).toHaveText('V.');
 	await expect(marks.nth(1)).toHaveText('R.');
 
-	// red, and never a tap target: the words are what a reader taps
-	const colour = await marks.first().evaluate((el) => getComputedStyle(el).color);
+	// red, and it carries its own name for anyone who cannot see the colour
 	const rubric = await page.evaluate(() =>
 		getComputedStyle(document.documentElement).getPropertyValue('--rubric').trim()
 	);
 	expect(rubric).not.toBe('');
-	await expect(marks.first()).toHaveAttribute('aria-hidden', 'true');
-	expect(colour).not.toBe('');
-	expect(await marks.first().locator('button').count()).toBe(0);
+	await expect(marks.first()).toHaveAttribute('aria-label', /Vers[íi]culus/);
+	expect(await marks.first().evaluate((el) => getComputedStyle(el).color)).not.toBe('');
 });
 
 test('the reader can change their part from a text page, and the marks follow', async ({
@@ -222,18 +220,29 @@ test('a wholly silent prayer still folds', async ({ page }) => {
 	expect(await folds.count()).toBeGreaterThan(5);
 });
 
-test('the mark explains itself to a reader meeting it for the first time', async ({ page }) => {
-	// V. and R. are Latin abbreviations, and a first-time reader has no way
-	// to know that from the letter. They are marked up as abbreviations,
-	// with the word they stand for and who says the line.
+test('the mark explains itself when asked', async ({ page }) => {
+	// V. and R. are Latin abbreviations and a first-time reader has no way
+	// to get that from the letter. It was a tooltip first, and the owner's
+	// verdict was that a help cursor with a slow native tooltip invites a
+	// click and then does nothing. So the mark is a button, and it opens
+	// the whole key: a reader who does not know V. does not know R. either.
 	await page.goto('/pl/ordinarium/pater-noster');
-	const first = page.locator('.mark').first();
-	expect(await first.evaluate((el) => el.tagName)).toBe('ABBR');
-	await expect(first).toHaveAttribute('title', /Vers[íi]culus/);
-	await expect(page.locator('.mark', { hasText: 'R.' }).first()).toHaveAttribute(
-		'title',
-		/Respons[óo]rium/
-	);
-	// and it must not look like a link while it does it
-	expect(await first.evaluate((el) => getComputedStyle(el).textDecorationLine)).toBe('none');
+	const mark = page.locator('.mark').first();
+	expect(await mark.evaluate((el) => el.tagName)).toBe('BUTTON');
+	await expect(page.locator('.legend')).toHaveCount(0);
+
+	await mark.click();
+	const legend = page.locator('.legend');
+	await expect(legend).toBeVisible();
+	await expect(legend).toContainText('Versículus');
+	await expect(legend).toContainText('Responsórium');
+	await expect(legend).toContainText('Omnes');
+
+	// it closes, and it does not sit on top of the word panel
+	await legend.getByRole('button').click();
+	await expect(legend).toHaveCount(0);
+	await page.locator('.word').first().click();
+	await expect(page.locator('aside.panel, aside')).toBeVisible();
+	await page.locator('.mark').first().click();
+	await expect(page.locator('.legend')).toBeVisible();
 });

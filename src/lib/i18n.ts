@@ -46,6 +46,9 @@ export interface Messages {
 	 * for the first time. Shown on hover; the abbreviation is Latin and the
 	 * expansion names both the word and who says the line. */
 	markTitle: Record<'sacerdos' | 'minister' | 'populus' | 'omnes' | 'schola', string>;
+	/** The key to the marks, opened by tapping one. */
+	markLegendTitle: string;
+	markLegendNote: string;
 	voices: Record<'submissa' | 'secreto' | 'cantus', string>;
 	/** Marks a line the reader answers with, so it can be found at a glance. */
 	/** Keyed by what the reader's own part DOES with the line: the one
@@ -112,6 +115,9 @@ const MESSAGES: Record<Lang, Messages> = {
 			omnes: 'Omnes — mówią wszyscy razem',
 			schola: 'Responsórium — śpiewa schola'
 		},
+		markLegendTitle: 'znaki przy wierszach',
+		markLegendNote:
+			'Znak stoi tam, gdzie zmienia się mówiący, i powtarza się po każdej rubryce. Wiersze bez znaku należą do głosu powyżej.',
 		voices: { submissa: 'półgłosem', secreto: 'po cichu', cantus: 'śpiew' },
 		yoursLabel: { answer: 'odpowiadasz', say: 'odmawiasz' },
 		roleLabel: 'teksty dla',
@@ -177,6 +183,9 @@ const MESSAGES: Record<Lang, Messages> = {
 			omnes: 'Omnes — said by all together',
 			schola: 'Responsórium — sung by the choir'
 		},
+		markLegendTitle: 'the marks beside the lines',
+		markLegendNote:
+			'A mark stands where the voice changes, and again after every rubric. Lines without one belong to the voice above them.',
 		voices: { submissa: 'in a low voice', secreto: 'silently', cantus: 'sung' },
 		yoursLabel: { answer: 'you answer', say: 'you say' },
 		roleLabel: 'texts for',
