@@ -32,20 +32,40 @@
 </div>
 
 <style>
+	/* The two labels are different lengths — "Latin only" against "full
+	   translation", "sama łacina" against "pełny przekład" — so sizing them
+	   to their text puts the track wherever the longer one pushes it, and
+	   the middle stop of the slider lands off the page's centre line. They
+	   share the width equally instead and face inward, which puts the track
+	   in the middle of the control and its middle stop under the middle of
+	   the title. */
 	.help {
 		display: flex;
 		align-items: center;
 		gap: 0.7rem;
+		width: min(100%, 30rem);
+		margin-inline: auto;
 	}
 
 	.end {
+		flex: 1 1 0;
+		min-width: 0;
 		font-size: 0.75rem;
 		color: var(--ink-soft);
+	}
+
+	.end:first-child {
+		text-align: end;
+	}
+
+	.end:last-child {
+		text-align: start;
 	}
 
 	input {
 		appearance: none;
 		-webkit-appearance: none;
+		flex: none;
 		width: 9.5rem;
 		height: 2px;
 		background: var(--border);

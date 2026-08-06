@@ -298,10 +298,9 @@
 
 	.help-row {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+		flex-direction: column;
 		align-items: center;
-		gap: 1rem 1.6rem;
+		gap: 0.9rem;
 		margin: 1.5rem 0 0;
 	}
 

@@ -406,3 +406,33 @@ test('the part control appears only where it changes something', async ({ page }
 	// and the help slider, which always does something, stays
 	await expect(page.locator('input[type="range"]')).toBeVisible();
 });
+
+test('the header sits on one centre line', async ({ page }) => {
+	// The two labels of the slider are different lengths in both languages
+	// — "Latin only" against "full translation", "sama łacina" against
+	// "pełny przekład" — so sizing them to their text put the track, and
+	// with it the middle stop, off the page's centre. Measured, not
+	// eyeballed, and in both languages, because the label lengths differ
+	// differently in each.
+	for (const url of ['/en/ordinarium/praefatio-dialogus', '/pl/ordinarium/praefatio-dialogus']) {
+		await page.goto(url);
+		const centres = await page.evaluate(() => {
+			const mid = (sel: string) => {
+				const el = document.querySelector(sel);
+				if (!el) return null;
+				const b = el.getBoundingClientRect();
+				return (b.left + b.right) / 2;
+			};
+			return {
+				title: mid('h1'),
+				track: mid('input[type="range"]'),
+				part: mid('.picker.compact'),
+				about: mid('.about-pill')
+			};
+		});
+		for (const [what, x] of Object.entries(centres)) {
+			if (x === null || what === 'title') continue;
+			expect(Math.abs(x - centres.title!), `${what} is off centre in ${url}`).toBeLessThan(1);
+		}
+	}
+});
