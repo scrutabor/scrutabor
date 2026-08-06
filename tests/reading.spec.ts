@@ -1001,3 +1001,49 @@ test('the reading size is the only knob', async ({ page }) => {
 		).toBeLessThan(0.02);
 	}
 });
+
+test('the highlight marks the word AND its gloss', async ({ page }) => {
+	// A ruby base is stretched to its column, and the column is as wide as
+	// the longer of the word and its gloss — so a short word under a long
+	// gloss came back with a box far wider than itself and nothing said
+	// why. Measured: the glyphs of „Fiat" are 34px inside an 89px box, and
+	// no inner span can hug them (ruby stretches its base's inline content,
+	// and an inline-block that escaped that would disturb the line box the
+	// raised initial depends on).
+	//
+	// So the box was right and the MEANING was missing: it marks the pair.
+	// The two halves have to be continuous — a gap between them would read
+	// as two marks rather than one.
+	await page.goto('/pl/orationes/pater-noster?w=w013');
+	const m = await page.evaluate(() => {
+		const w = document.querySelector('.word.selected')!;
+		const base = w.querySelector('.base')!;
+		const rt = w.querySelector('rt')!;
+		const b = base.getBoundingClientRect();
+		const r = rt.getBoundingClientRect();
+		return {
+			word: (base.textContent ?? '').trim(),
+			gloss: (rt.textContent ?? '').trim(),
+			baseBg: getComputedStyle(base).backgroundColor,
+			rtBg: getComputedStyle(rt).backgroundColor,
+			seam: r.top - b.bottom,
+			widths: [Math.round(b.width), Math.round(r.width)]
+		};
+	});
+	expect(m.gloss.length, 'this word really is shorter than its gloss').toBeGreaterThan(
+		m.word.length
+	);
+	expect(m.baseBg, 'the word is marked').not.toBe('rgba(0, 0, 0, 0)');
+	expect(m.rtBg, 'and so is its gloss').toBe(m.baseBg);
+	expect(m.seam, 'the two halves meet without a gap').toBeLessThanOrEqual(0);
+	expect(Math.abs(m.widths[0] - m.widths[1]), 'and they are the same width').toBeLessThan(5);
+
+	// with no gloss showing, there is nothing to mark but the word
+	await page.goto('/pl/orationes/pater-noster?w=w013');
+	await page.locator('input[type="range"]').fill('0');
+	await expect(page.locator('.word.selected rt')).toHaveCount(0);
+	const bare = await page.evaluate(
+		() => getComputedStyle(document.querySelector('.word.selected .base')!).backgroundColor
+	);
+	expect(bare, 'the word is still marked with the glosses off').not.toBe('rgba(0, 0, 0, 0)');
+});

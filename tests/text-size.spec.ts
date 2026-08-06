@@ -185,3 +185,26 @@ test('largest print on the smallest phone still holds together', async ({ page }
 		expect(damage.trackSpans, `${url}: the help slider did not stack`).toBe(true);
 	}
 });
+
+test('the slider’s thumb clears the labels above it', async ({ page }) => {
+	// When the control stacks, the row gap has to clear the THUMB and not
+	// the track: the track is 2px tall and the thumb 0.95rem, so it
+	// overhangs by about half of that either side. At 0.3rem of gap it sat
+	// on top of the label above it.
+	await page.setViewportSize({ width: 320, height: 800 });
+	await page.goto('/pl/ordo/praeparatio');
+	await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
+	await page.reload();
+	await page.waitForSelector('html[data-hydrated]');
+	const clearance = await page.evaluate(() => {
+		const input = document.querySelector('input[type="range"]')!;
+		const track = input.getBoundingClientRect();
+		const root = parseFloat(getComputedStyle(document.documentElement).fontSize);
+		const thumbTop = track.top + track.height / 2 - (root * 0.95) / 2;
+		const lowestLabel = Math.max(
+			...[...document.querySelectorAll('.help .end')].map((e) => e.getBoundingClientRect().bottom)
+		);
+		return thumbTop - lowestLabel;
+	});
+	expect(clearance, 'the thumb overlaps the label above it').toBeGreaterThan(2);
+});

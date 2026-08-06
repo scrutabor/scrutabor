@@ -116,7 +116,10 @@
 	@container (max-width: 18rem) {
 		.help {
 			flex-wrap: wrap;
-			gap: 0.3rem 0.7rem;
+			/* The row gap has to clear the THUMB, not the track: the track is
+			   2px tall and the thumb 0.95rem, so it overhangs by about half
+			   of that either side and was touching the labels above it. */
+			gap: 0.75rem 0.7rem;
 		}
 
 		.end:first-child {

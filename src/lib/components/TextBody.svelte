@@ -605,8 +605,20 @@
 	   the annotation hung below the box that was drawing the highlight —
 	   so a tapped word came back with a wash that started above the letters
 	   and ended in the middle of the gloss beneath them. */
+	/* The wash marks the PAIR — the word and the gloss under it — not the
+	   word alone. A ruby base is stretched to its column and the column is
+	   as wide as the longer of the two, so a short word under a long gloss
+	   („Fiat" under „niech się stanie") came back with a box far wider
+	   than itself and nothing said why. Measured: the glyphs of Fiat are
+	   34px inside an 89px box, and no inner span can hug them — ruby
+	   stretches its base's inline content, and an inline-block that
+	   escaped that would disturb the line box the raised initial needs.
+	   So the box is right and it was the MEANING that was missing: it
+	   covers the gloss too now, which is what the column width was always
+	   describing. The gap between the two is closed by padding, which on
+	   an inline box paints without moving the line. */
 	.base {
-		padding: 0.06em 0.069em;
+		padding: 0.06em 0.069em calc(var(--reading) * var(--gloss-gap));
 		/* The wash wants a little air around the letters; the LETTERS must
 		   not move for it. Horizontal padding on an inline box is layout,
 		   not just paint, so that 0.1rem was pushing every Latin word
@@ -622,11 +634,13 @@
 		cursor: pointer;
 	}
 
-	button.word:hover .base {
+	button.word:hover .base,
+	button.word:hover rt {
 		background: var(--wash);
 	}
 
-	button.word.selected .base {
+	button.word.selected .base,
+	button.word.selected rt {
 		background: var(--wash-strong);
 	}
 
