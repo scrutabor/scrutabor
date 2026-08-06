@@ -478,3 +478,35 @@ test('a gloss belongs to the word above it, and is legible', async ({ page }) =>
 	expect(gaps.size, 'the gloss is big enough to read').toBeGreaterThan(13);
 	expect(gaps.slope, 'and upright at that size').toBe('normal');
 });
+
+test('a tapped word is highlighted on the word, not around the gloss', async ({ page }) => {
+	// A ruby's box holds its annotation too, so a wash drawn on the word
+	// covered both — and once the gloss row was given its own air the
+	// annotation hung below that box, leaving a highlight that began above
+	// the letters and ended in the middle of the gloss beneath them.
+	await page.goto('/en/ordinarium/pater-noster?w=w022');
+	const box = await page.evaluate(() => {
+		const w = document.querySelector('.word.selected')!;
+		const base = w.querySelector('.base')!;
+		const rt = w.querySelector('rt')!;
+		const c = document.createElement('canvas').getContext('2d')!;
+		const cs = getComputedStyle(rt);
+		c.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+		const probe = document.createElement('span');
+		probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+		rt.appendChild(probe);
+		const rtBase = probe.getBoundingClientRect().top;
+		probe.remove();
+		return {
+			clearance:
+				rtBase -
+				c.measureText(rt.textContent ?? '').actualBoundingBoxAscent -
+				base.getBoundingClientRect().bottom,
+			onBase: getComputedStyle(base).backgroundColor,
+			onButton: getComputedStyle(w).backgroundColor
+		};
+	});
+	expect(box.clearance, 'the highlight stops above the gloss').toBeGreaterThan(0);
+	expect(box.onBase, 'the wash is on the Latin').not.toBe('rgba(0, 0, 0, 0)');
+	expect(box.onButton, 'and not on the whole ruby').toBe('rgba(0, 0, 0, 0)');
+});

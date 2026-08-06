@@ -267,12 +267,14 @@
 		form.slice(0, 1),
 		helpLevel >= 1
 	)}<ruby
-		>{#if raised}<span
-				class="initial"
-				style:font-size="{fit.scale}em"
-				style:margin-inline-start="{fit.start}em"
-				style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
-			>{form.slice(1)}{:else}{form}{/if}{#if helpLevel >= 1}<rt
+		><span class="base"
+			>{#if raised}<span
+					class="initial"
+					style:font-size="{fit.scale}em"
+					style:margin-inline-start="{fit.start}em"
+					style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
+				>{form.slice(1)}{:else}{form}{/if}</span
+		>{#if helpLevel >= 1}<rt
 				style:top="{GLOSS_GAP + sink - (raised ? fit.lift : 0)}rem"
 				class="shifted"
 				{lang}>{gloss.words[id]?.gloss}</rt
@@ -531,21 +533,30 @@
 		font: inherit;
 		background: none;
 		border: none;
-		padding: 0 0.1rem;
+		padding: 0;
 		margin: 0;
-		border-radius: 0.25rem;
 		color: inherit;
+	}
+
+	/* The highlight hugs the LATIN, not the ruby box. A ruby's box holds
+	   its annotation as well, and once the gloss row was given its own air
+	   the annotation hung below the box that was drawing the highlight —
+	   so a tapped word came back with a wash that started above the letters
+	   and ended in the middle of the gloss beneath them. */
+	.base {
+		padding: 0.06em 0.1rem;
+		border-radius: 0.25rem;
 	}
 
 	button.word {
 		cursor: pointer;
 	}
 
-	button.word:hover {
+	button.word:hover .base {
 		background: var(--wash);
 	}
 
-	button.word.selected {
+	button.word.selected .base {
 		background: var(--wash-strong);
 	}
 

@@ -309,7 +309,8 @@ test('no opening initial lands on the letters beside it', async ({ page }) => {
 			const ruby = ini.closest('ruby')!;
 			const r = document.createRange();
 			r.setStartAfter(ini);
-			r.setEnd(ruby, ruby.childNodes.length);
+			const holder = ini.parentElement!;
+			r.setEnd(holder, holder.childNodes.length);
 			const rest = r.getClientRects()[0];
 			// and how far its tail reaches into the gloss line below
 			const rt = ruby.querySelector('rt');
@@ -317,7 +318,8 @@ test('no opening initial lands on the letters beside it', async ({ page }) => {
 			if (rt) {
 				const probe = document.createElement('span');
 				probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
-				ruby.insertBefore(probe, ini.nextSibling);
+				// the initial sits inside the base span, not directly in the ruby
+				ini.parentElement!.insertBefore(probe, ini.nextSibling);
 				const baseline = probe.getBoundingClientRect().top;
 				probe.remove();
 				const p2 = document.createElement('span');
