@@ -513,18 +513,6 @@
 		position: relative;
 	}
 
-	.sr-only {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		margin: -1px;
-		overflow: hidden;
-		clip-path: inset(50%);
-		white-space: nowrap;
-		border: 0;
-	}
-
 	/* The reader's own lines are marked by their MARK — heavier, and in
 	   the red the eye is already looking for. They used to carry a red rule
 	   down the edge as well, which was a second device saying the same

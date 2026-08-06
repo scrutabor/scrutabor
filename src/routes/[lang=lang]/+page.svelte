@@ -2,6 +2,7 @@
 	import { page } from '$app/state';
 	import { CATALOG } from '$lib/catalog';
 	import LangMenu from '$lib/components/LangMenu.svelte';
+	import TextSize from '$lib/components/TextSize.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import { M, type Lang } from '$lib/i18n';
 
@@ -17,6 +18,7 @@
 <div class="page centered landing">
 	<nav>
 		<LangMenu {lang} />
+		<TextSize {lang} />
 		<ThemeToggle {lang} />
 	</nav>
 	<main>

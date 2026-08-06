@@ -262,6 +262,21 @@ h2 {
 	margin: 1.6rem 0 0;
 }
 
+/* For a reader who cannot see the page: present to a screen reader,
+   absent from the layout. Two components need it — the speaker's name
+   beside its mark, and the reading size announcing where it stands — and
+   there is only one way to write it. */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
 .smallcaps {
 	font-variant-caps: small-caps;
 	letter-spacing: 0.08em;

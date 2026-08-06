@@ -19,6 +19,12 @@
 				document
 					.querySelector('meta[name="theme-color"]')
 					.setAttribute('content', t === 'dark' ? '#1a1611' : '#f7f1e6');
+				// …and the reading size, for the same reason: a reader who
+				// asked for large print should not watch the page start
+				// small. The steps are mirrored in lib/reading.svelte.ts.
+				var r = localStorage.getItem('scrutabor-reading');
+				var steps = { normal: '1.45rem', larger: '1.75rem', largest: '2.05rem' };
+				if (steps[r]) document.documentElement.style.setProperty('--reading', steps[r]);
 			} catch (e) {
 				/* keep the static default */
 			}

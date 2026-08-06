@@ -13,6 +13,8 @@ export interface Messages {
 	levels: [string, string, string];
 	levelsAria: string;
 	themeAria: { toLight: string; toDark: string };
+	textSizeAria: string;
+	textSizes: { normal: string; larger: string; largest: string };
 	langMenuAria: string;
 	close: string;
 	panelAria: string;
@@ -70,6 +72,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		levels: ['sama łacina', 'słowo po słowie', 'pełny przekład'],
 		levelsAria: 'Poziom pomocy',
 		themeAria: { toLight: 'przełącz na tryb jasny', toDark: 'przełącz na tryb ciemny' },
+		textSizeAria: 'wielkość pisma',
+		textSizes: { normal: 'normalne', larger: 'większe', largest: 'największe' },
 		langMenuAria: 'wybór języka',
 		close: 'Zamknij',
 		panelAria: 'Analiza słowa',
@@ -143,6 +147,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		levels: ['Latin only', 'word by word', 'full translation'],
 		levelsAria: 'Help level',
 		themeAria: { toLight: 'switch to light mode', toDark: 'switch to dark mode' },
+		textSizeAria: 'text size',
+		textSizes: { normal: 'normal', larger: 'larger', largest: 'largest' },
 		langMenuAria: 'language selection',
 		close: 'Close',
 		panelAria: 'Word analysis',
