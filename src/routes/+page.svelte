@@ -58,13 +58,6 @@
 </div>
 
 <style>
-	h1 {
-		margin: 0;
-		font-size: 3.4rem;
-		font-weight: 500;
-		letter-spacing: 0.12em;
-	}
-
 	.motto {
 		margin: 1.8rem 0 0;
 		font-style: italic;

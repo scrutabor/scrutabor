@@ -141,9 +141,10 @@
 
 	.occ-row {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: baseline;
 		justify-content: space-between;
-		gap: 1rem;
+		gap: 0.15rem 1rem;
 		margin: 0 0 0.5rem;
 		border-bottom: 1px solid var(--border);
 		padding-bottom: 0.5rem;
@@ -155,6 +156,7 @@
 	}
 
 	.occ-forms {
+		margin-inline-start: auto;
 		text-align: right;
 		font-size: 1.05rem;
 		line-height: 1.9;

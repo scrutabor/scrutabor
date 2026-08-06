@@ -45,7 +45,7 @@
 					{#each section.texts as t (t.slug)}
 						<a class="card" href="/{lang}/{t.category}/{t.slug}">
 							<span class="card-title" lang="la">{t.title}</span>
-							<span class="card-note">{t.note[lang]}</span>
+							<span class="hung-note">{t.note[lang]}</span>
 						</a>
 					{/each}
 				</div>
@@ -66,13 +66,6 @@
 		justify-content: flex-end;
 		align-items: center;
 		gap: 0.5rem;
-	}
-
-	h1 {
-		margin: 0;
-		font-size: 3.4rem;
-		font-weight: 500;
-		letter-spacing: 0.12em;
 	}
 
 	.tagline {
@@ -103,13 +96,6 @@
 
 	.card-title {
 		font-size: 1.35rem;
-	}
-
-	.card-note {
-		font-size: 0.9rem;
-		color: var(--ink-soft);
-		font-style: italic;
-		text-align: right;
 	}
 
 	/* The way into the Mass: wider, quieter and set apart from the cards,

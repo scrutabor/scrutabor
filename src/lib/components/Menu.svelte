@@ -21,6 +21,29 @@
 
 	let open = $state(false);
 	let root: HTMLElement | undefined = $state();
+	let pop: HTMLElement | undefined = $state();
+
+	// The list hangs off the END of its pill, which is right until the pill
+	// itself is near the left edge — and it is, once the nav wraps on a
+	// narrow phone at a large text size. Measured there: the language list
+	// sat at -93px, its first letters cut off by the screen.
+	//
+	// Neither side can be the answer on its own: anchored left instead, the
+	// LAST pill's list runs off the right. So the list is placed against
+	// the VIEWPORT — it prefers to hang off the end of its pill and gives
+	// that up only as far as it must to stay on screen. Measured on open,
+	// because none of it is known until then.
+	$effect(() => {
+		if (!open || !pop || !root) return;
+		const gap = 8;
+		const menu = root.getBoundingClientRect();
+		const width = pop.offsetWidth;
+		const room = document.documentElement.clientWidth;
+		const wanted = menu.right - width;
+		const x = Math.min(Math.max(wanted, gap), Math.max(gap, room - width - gap));
+		pop.style.left = `${x - menu.left}px`;
+		pop.style.right = 'auto';
+	});
 
 	function onWindowClick(e: MouseEvent) {
 		if (open && root && !root.contains(e.target as Node)) open = false;
@@ -44,7 +67,7 @@
 		<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
 	</button>
 	{#if open}
-		<ul role="listbox" aria-label={label}>
+		<ul bind:this={pop} role="listbox" aria-label={label}>
 			{@render children(() => (open = false))}
 		</ul>
 	{/if}
@@ -98,5 +121,7 @@
 		box-shadow: 0 8px 24px rgb(0 0 0 / 14%);
 		z-index: 20;
 		min-width: 9rem;
+		/* it may never be wider than the screen it has to fit on */
+		max-width: calc(100vw - 1rem);
 	}
 </style>

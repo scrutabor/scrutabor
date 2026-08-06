@@ -182,6 +182,30 @@ h1.minor {
 	font-size: 2.2rem;
 }
 
+/* The wordmark on the two landings. Nine letter-spaced capitals: it grows
+   with the text size like everything else, but it may not out-grow the
+   screen — at the largest size on a 320px phone 3.4rem put SCRUTABOR
+   through both margins. */
+h1.wordmark {
+	margin: 0;
+	font-size: min(3.4rem, 12vw);
+	letter-spacing: 0.12em;
+	text-align: center;
+}
+
+/* A note hung off the right of a title — the Polish name beside a Latin
+   one, the label beside a movement. `auto` and not just text-align: the
+   row it sits in wraps at large text sizes on a narrow phone, and this is
+   what keeps the note against the right edge once it drops onto a line of
+   its own. */
+.hung-note {
+	margin-inline-start: auto;
+	font-size: 0.9rem;
+	color: var(--ink-soft);
+	font-style: italic;
+	text-align: right;
+}
+
 /* Every h2 in the book is a small rubric label over a list — the sections
    of the catalogue, the groups of the grammar, "where it occurs" on a
    lemma. Five copies, drifted into two margins that nobody chose. */
@@ -235,9 +259,15 @@ h2 {
 
 .card {
 	display: flex;
+	/* Title on the left, note on the right — until they will not share a
+	   line, which at the largest reading size on a narrow phone they will
+	   not. Then the note drops beneath and keeps to the right edge (see
+	   the margin on the note itself), rather than being crushed into a
+	   few pixels and spilling out of the card. */
+	flex-wrap: wrap;
 	align-items: baseline;
 	justify-content: space-between;
-	gap: 1rem;
+	gap: 0.15rem 1rem;
 	text-decoration: none;
 	border: 1px solid var(--border);
 	border-radius: 0.6rem;

@@ -30,10 +30,18 @@
 				data-word={msgs.roles[r]}
 				onclick={() => role.set(r as Role)}
 			>
-				<!-- the ghost sets the width at the weight the chosen word will
-				     take, so choosing one does not nudge its neighbours -->
-				<span class="ghost" aria-hidden="true">{msgs.roles[r]}</span>
-				<span class="real">{msgs.roles[r]}</span>
+				{#if compact}
+					<!-- the ghost sets the width at the weight the chosen word
+					     will take, so choosing one does not nudge its
+					     neighbours. ONLY compact: that is the variant that
+					     goes bold, and the styling for these two spans is
+					     scoped to it — rendered in the full picker they both
+					     showed, and every part read twice. -->
+					<span class="ghost" aria-hidden="true">{msgs.roles[r]}</span>
+					<span class="real">{msgs.roles[r]}</span>
+				{:else}
+					{msgs.roles[r]}
+				{/if}
 			</button>
 		{/each}
 	</div>
@@ -42,6 +50,9 @@
 
 <style>
 	.picker {
+		/* a container, so the control can answer to the room it has —
+		   which depends on the text size as much as on the window */
+		container-type: inline-size;
 		margin: 1.6rem auto 0;
 		max-width: 34rem;
 		text-align: center;
@@ -60,6 +71,24 @@
 		border: 1px solid var(--border);
 		border-radius: 999px;
 		overflow: hidden;
+	}
+
+	/* Three parts side by side need about 15rem of room. Below that — a
+	   narrow phone, or a wide one at the largest reading size — they stack
+	   instead of running off the page. A segmented control set as a column
+	   is still a segmented control; one that overflows is not. */
+	@container (max-width: 15rem) {
+		.options {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			border-radius: 1rem;
+		}
+
+		.option + .option {
+			border-inline-start: 0;
+			border-top: 1px solid var(--border);
+		}
 	}
 
 	.option {
@@ -103,8 +132,11 @@
 	.picker.compact {
 		margin: 0;
 		display: inline-flex;
+		/* the label and the three parts wrap rather than run off the page */
+		flex-wrap: wrap;
+		justify-content: center;
 		align-items: baseline;
-		gap: 0.6rem;
+		gap: 0.2rem 0.6rem;
 	}
 
 	.picker.compact .label {

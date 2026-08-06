@@ -57,7 +57,7 @@
 				<a class="movement" href="/{lang}/ordo/{m.id}">
 					<span class="movement-head">
 						<span class="movement-title" lang="la">{m.title}</span>
-						<span class="movement-label">{m.label[lang]}</span>
+						<span class="hung-note">{m.label[lang]}</span>
 					</span>
 					{#if m.carried.length}
 						<span class="movement-carried" lang="la">{m.carried.join(' · ')}</span>
@@ -109,21 +109,15 @@
 
 	.movement-head {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: baseline;
 		justify-content: space-between;
-		gap: 1rem;
+		gap: 0.15rem 1rem;
 	}
 
 	.movement-title {
 		font-size: 1.35rem;
 		color: var(--ink);
-	}
-
-	.movement-label {
-		font-size: 0.9rem;
-		color: var(--ink-soft);
-		font-style: italic;
-		text-align: right;
 	}
 
 	.movement-carried {
