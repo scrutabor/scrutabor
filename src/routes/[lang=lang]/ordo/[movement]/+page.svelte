@@ -31,6 +31,21 @@
 	// stay there while the reader is on the page.
 	let unfolded = $state<Record<string, boolean>>({});
 
+	// The prayers this reader is not saying, for the movement as a whole.
+	// Knowing the whole set is what lets a RUN of them be named once — "the
+	// priest prays these silently" belongs over the twelve prayers of the
+	// Canon, not on each of the twelve.
+	const silent = $derived.by(() => {
+		const out = new Set<string>();
+		for (const e of movement?.entries ?? []) {
+			const entry = e.text ? texts[e.text] : undefined;
+			if (!entry) continue;
+			const voices = entry.doc.segments.filter((sg) => sg.type === 'verse').map((sg) => sg.voice);
+			if (!showsWords(voices, partVoice(e.id), role.value)) out.add(e.id);
+		}
+		return out;
+	});
+
 	// …and its word panel. A word is one tap from its analysis wherever it
 	// stands (decisions #20); the flow is not an exception. Several texts
 	// share this page, so a word is addressed by text AND id — `credo.w001`
@@ -131,41 +146,50 @@
 	</header>
 
 	<main class:panel-open={picked !== null || panel.keepPad}>
-		{#each movement?.entries ?? [] as e (e.id)}
+		{#each movement?.entries ?? [] as e, idx (e.id)}
 			{@const entry = e.text ? texts[e.text] : undefined}
 			{@const voices = (entry?.doc.segments ?? [])
 				.filter((s) => s.type === 'verse')
 				.map((s) => s.voice)}
 			{@const words = showsWords(voices, partVoice(e.id), role.value)}
-			<section class="part">
-				<div class="part-head">
-					{#if e.text && entry}
-						<a class="part-title" href="/{lang}/{e.text}" lang="la"
-							>{e.title}<span class="chev" aria-hidden="true">›</span></a
-						>
-					{:else}
-						<span class="part-title" lang="la">{e.title}</span>
-					{/if}
-					{#if e.kind !== 'text'}
-						<span class="mark smallcaps"
-							>{e.kind === 'proper' ? msgs.ordoProper : msgs.ordoPending}</span
-						>
-					{/if}
-				</div>
-				<!-- The what-happens line rides with any help, like the rubric
-					     narratives it continues (reading-ux §5). -->
-				{#if helpLevel >= 1}
-					<p class="part-note">
-						{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
-					</p>
-				{/if}
-				{#if entry && !words && !unfolded[e.id]}
-					<!-- Folded, not hidden: the note above already says what is
-					     happening, and the words are one tap away. -->
+			{@const folded = !!entry && !words && !unfolded[e.id]}
+			{#if silent.has(e.id) && !silent.has(movement?.entries[idx - 1]?.id ?? '')}
+				<!-- Said once over the run, not on every line of it. -->
+				<p class="silent-run smallcaps">{msgs.quietCollapsed}</p>
+			{/if}
+			<section class="part" class:folded>
+				{#if folded}
+					<!-- A prayer the reader is not saying costs ONE LINE, not a
+					     card: title, what is happening, and the way in. Twelve of
+					     these stand between the Sanctus and the Amen a person in
+					     the pew answers, and at a card apiece they were most of
+					     the page — the reader scrolls past the silence looking
+					     for their own next line. Folded, never hidden. -->
 					<button class="unfold" onclick={() => (unfolded[e.id] = true)}>
-						<span class="unfold-what">{msgs.quietCollapsed}</span>
+						<span class="unfold-title" lang="la">{e.title}</span>
+						{#if helpLevel >= 1}<span class="unfold-what">{e.note[lang]}</span>{/if}
 						<span class="unfold-do smallcaps">{msgs.quietReveal}</span>
 					</button>
+				{:else}
+					<div class="part-head">
+						{#if e.text && entry}
+							<a class="part-title" href="/{lang}/{e.text}" lang="la">{e.title}</a>
+						{:else}
+							<span class="part-title" lang="la">{e.title}</span>
+						{/if}
+						{#if e.kind !== 'text'}
+							<span class="mark smallcaps"
+								>{e.kind === 'proper' ? msgs.ordoProper : msgs.ordoPending}</span
+							>
+						{/if}
+					</div>
+					<!-- The what-happens line rides with any help, like the rubric
+						     narratives it continues (reading-ux §5). -->
+					{#if helpLevel >= 1}
+						<p class="part-note">
+							{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
+						</p>
+					{/if}
 				{/if}
 				{#if entry && (words || unfolded[e.id])}
 					<div class="part-text">
@@ -300,8 +324,17 @@
 		text-decoration: none;
 	}
 
+	/* A dotted rule under it, the way every other link in this book is
+	   drawn (the panel's lemma and concept links). The arrow that used to
+	   sit here read as punctuation of the Latin title rather than as an
+	   affordance. */
+	a.part-title {
+		border-bottom: 1px dotted var(--rubric);
+	}
+
 	a.part-title:hover {
 		color: var(--rubric);
+		border-bottom-color: var(--rubric);
 	}
 
 	.chev {
@@ -324,13 +357,11 @@
 		display: flex;
 		width: 100%;
 		align-items: baseline;
-		justify-content: space-between;
-		gap: 1rem;
-		margin: 0.2rem 0 0.6rem;
-		padding: 0.55rem 0.9rem;
+		gap: 0.7rem;
+		margin: 0;
+		padding: 0.3rem 0;
 		background: transparent;
-		border: 1px dashed var(--border);
-		border-radius: 0.4rem;
+		border: 0;
 		color: var(--ink-soft);
 		font: inherit;
 		font-size: 0.95rem;
@@ -338,8 +369,35 @@
 		cursor: pointer;
 	}
 
-	.unfold:hover {
-		border-color: var(--rubric);
+	/* A run of folded prayers reads as a list, so it needs the spacing of
+	   a list rather than of a section. */
+	.part.folded {
+		margin: 0;
+	}
+
+	.silent-run {
+		margin: 1.6rem 0 0.3rem;
+		font-size: 0.72rem;
+		letter-spacing: 0.09em;
+		color: var(--ink-soft);
+	}
+
+	.unfold-title {
+		flex: none;
+		color: var(--ink);
+	}
+
+	/* The note wraps rather than truncating: this line is the whole of
+	   what a reader in the pew is told about a prayer they are not saying,
+	   and half of it with an ellipsis is not worth the pixels it saves. */
+	.unfold-what {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.unfold:hover .unfold-title,
+	.unfold:hover .unfold-do {
+		color: var(--rubric);
 	}
 
 	.unfold:focus-visible {
@@ -347,11 +405,8 @@
 		outline-offset: 2px;
 	}
 
-	.unfold-what {
-		font-style: italic;
-	}
-
 	.unfold-do {
+		flex: none;
 		color: var(--rubric);
 		font-size: 0.72rem;
 		letter-spacing: 0.09em;

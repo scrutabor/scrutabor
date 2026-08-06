@@ -24,11 +24,13 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 	await expect(page.locator('.part-title').last()).toContainText('Preces Leonínæ');
 	await expect(page.locator('.pager-next')).toHaveCount(0);
 
-	// every part of the spine appears on exactly one movement page
+	// every part of the spine appears on exactly one movement page — under
+	// its own heading when it is shown, or as a row in the list of what the
+	// reader is not saying, which is still the part being named
 	let parts = 0;
 	for (const m of ORDO) {
 		await page.goto(`/pl/ordo/${m.id}`);
-		parts += await page.locator('.part-title').count();
+		parts += await page.locator('.part-title, .unfold-title').count();
 	}
 	expect(parts).toBe(ORDO.flatMap((m) => m.entries).length);
 	await page.goto('/pl/ordo/catechumenorum');

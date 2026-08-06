@@ -163,19 +163,22 @@ test('a text the sources say nothing about stays unmarked', async ({ page }) => 
 	expect(await page.locator('.who-name').count()).toBeLessThan(verses);
 });
 
-test('a prayer is opened with an initial and marked only where it is answered', async ({
+test('a prayer is opened with an initial, and every line still says who says it', async ({
 	page
 }) => {
-	// The books do not print V. down the body of the Canon: one voice says
-	// the whole prayer, a red initial opens it, and the only mark is on the
-	// Amen that answers it.
+	// The books leave the body of a prayer bare and mark only the Amen that
+	// answers it. This edition marks every line instead (owner, 2026-08-06):
+	// what confused him following Mass in print was precisely the unmarked
+	// lines, where a reader has to work out where the last mark stopped
+	// applying. The red initial still opens the prayer.
 	await page.goto('/pl/ordinarium/per-ipsum');
 	await expect(page.locator('.initial')).toHaveText('P');
 	const marks = await page.evaluate(() =>
 		[...document.querySelectorAll('.verse')].map((v) => v.querySelector('.mark')?.textContent ?? '')
 	);
-	expect(marks.filter(Boolean)).toEqual(['R.']);
-	expect(marks[0]).toBe('');
+	expect(marks.every(Boolean), 'no spoken line is left unmarked').toBe(true);
+	expect(marks[0]).toBe('V.');
+	expect(marks.at(-1)).toBe('R.');
 
 	// the initial is part of its word: the whole form is still there to be
 	// read aloud, copied, and tapped

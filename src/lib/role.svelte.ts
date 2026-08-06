@@ -85,7 +85,7 @@ export function showsWords(
  * marking cannot simply be "anything that is not the celebrant".
  */
 const OWNED: Record<Role, ReadonlySet<string>> = {
-	sacerdos: new Set(['sacerdos']),
+	sacerdos: new Set(['sacerdos', 'omnes']),
 	minister: new Set(['minister', 'omnes']),
 	populus: new Set(['minister', 'populus', 'omnes'])
 };

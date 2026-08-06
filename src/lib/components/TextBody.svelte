@@ -41,17 +41,19 @@
 	// system face mid-line. Plain V. and R. it is, which is how plenty of
 	// hand missals print them too.)
 	//
-	// Marks belong to a DIALOGUE. A prayer said straight through by one
-	// voice gets none — the book does not mark the Canon line by line, and
-	// neither do we; the devotional prayers, which the corpus attributes to
-	// omnes because everyone says the whole of them, get none either. What
-	// the mark is for is the moment the reader has to know whether the next
-	// line is his.
+	// EVERY spoken line carries its mark, including the ones the books
+	// leave bare down the body of a prayer (owner, 2026-08-06). His reason
+	// is the one that counts here: what confused him years ago, following
+	// Mass in a printed missal, was exactly the lines that carry no mark. A
+	// mark on every line answers "who says this" without the reader having
+	// to work out where the last mark stopped applying — and it draws a
+	// second line the page needs, between what is SAID and the narrative
+	// around it.
 	const MARKS: Record<string, string> = {
 		sacerdos: 'V.',
 		minister: 'R.',
 		populus: 'R.',
-		omnes: 'R.',
+		omnes: 'O.',
 		schola: 'R.'
 	};
 
@@ -120,10 +122,11 @@
 	);
 </script>
 
-{#snippet face(id: string, form: string, raised = false)}<ruby
-		>{#if raised}<span class="initial">{form.slice(0, 1)}</span>{form.slice(
-				1
-			)}{:else}{form}{/if}{#if helpLevel >= 1}<rt {lang}>{gloss.words[id]?.gloss}</rt>{/if}</ruby
+{#snippet face(id: string, form: string, raised = false)}{#if raised}<span class="initial"
+			>{form.slice(0, 1)}</span
+		>{/if}<ruby
+		>{raised ? form.slice(1) : form}{#if helpLevel >= 1}<rt {lang}>{gloss.words[id]?.gloss}</rt
+			>{/if}</ruby
 	>{/snippet}
 
 {#each doc.segments as seg, i (seg.id)}
@@ -175,7 +178,7 @@
 			     token (inline-block): the line breaker may only break at the
 			     spaces BETWEEN tokens, never between a word and its comma or
 			     period. Guarded by the one-rect e2e invariant. -->
-			{#if answers && seg.speaker && (isDialogue || seg.speaker !== 'sacerdos') && MARKS[seg.speaker]}<span
+			{#if seg.speaker && MARKS[seg.speaker]}<span
 					class="mark"
 					class:yours={mine}
 					aria-hidden="true">{MARKS[seg.speaker]}</span
@@ -265,13 +268,12 @@
 		border: 0;
 	}
 
-	/* A line the reader answers with is marked down its edge, so the eye
-	   finds it while the ear is following the priest. */
-	.verse.answer {
-		border-inline-start: 2px solid var(--rubric);
-		padding-inline-start: 2.7rem;
-		margin-inline-start: -0.9rem;
-	}
+	/* The reader's own lines are marked by their MARK — heavier, and in
+	   the red the eye is already looking for. They used to carry a red rule
+	   down the edge as well, which was a second device saying the same
+	   thing in the same colour as the rule beside a rubric: two vertical
+	   red lines on one page, meaning different things. The rule now means
+	   one thing, "this is a rubric", and the mark carries the rest. */
 
 	/* Said silently: still fully legible — it is the text of the Mass, not
 	   an aside — but set apart so that what is heard reads first. */
