@@ -170,53 +170,81 @@
 	// It goes on the first line with something to say — "Orémus." on its own
 	// is a call to pray, and the book gives the initial to the prayer that
 	// follows it, not to it.
-	// A letter set at 1.75em among letters set at 1 does not fit where the
-	// font expects: its sidebearings scale with it, so an open letter like
-	// Q pushes its tail into the next glyph while a closed one like P opens
-	// a hole, and the kerning pair with the letter after it is lost
-	// altogether once the two sit in different elements.
+	// Fitting a letter set larger than the letters beside it. Three
+	// measurements off the reading face itself (canvas actualBoundingBox
+	// against the advance), and everything else follows from them.
 	//
-	// These are corrections, not taste: measured off the reading face
-	// itself with canvas metrics (actualBoundingBox against the advance),
-	// as [start, end] in the initial's own em. Two cases, and getting them
-	// confused is what left Q still colliding on the first attempt:
-	//
-	//   ink that CROSSES the advance (Q's tail, V's foot, A's diagonal)
-	//     lands on the next glyph whatever the font intended at 1em, so
-	//     all of it has to be cleared:      margin = −sidebearing + air
-	//   ink that STOPS SHORT of the advance (P, C, S…) only leaves too big
-	//     a gap, and only by what scaling added:
-	//                       margin = −(scale−1) × sidebearing / scale + air
-	//
-	// No kerning term. A pair kerned for two letters of one size says
-	// nothing about a letter set nearly twice as large beside a small one —
-	// importing it pulled T's arm 1.7px onto the e of Te ígitur.
-	//
-	// The `air` term is 0.03em of the reading size, and it is the one
-	// judgement here: a large letter wants more room around it than its
-	// metrics ask for, which is why A read as touching the word before it
-	// and the g after it while measuring as neutral on both sides.
-	const FIT: Record<string, [number, number]> = {
-		P: [0.007, 0.006],
-		S: [0.0, -0.001],
-		C: [-0.003, -0.006],
-		A: [0.019, 0.022],
-		D: [0.005, 0.002],
-		E: [0.001, 0.006],
-		M: [0.009, 0.002],
-		Q: [-0.002, 0.133],
-		I: [0.009, 0.009],
-		G: [-0.002, 0.002],
-		H: [0.001, 0.0],
-		L: [0.006, 0.013],
-		O: [-0.002, -0.002],
-		B: [0.009, 0.0],
-		N: [0.012, 0.013],
-		V: [0.017, 0.023],
-		T: [0.006, 0.016],
-		U: [0.007, 0.013]
+	// SIDEBEARINGS, as fractions of the letter's own size. Ink that CROSSES
+	// the advance (Q's tail, A's diagonal) lands on the next glyph whatever
+	// the font intended at 1em, so all of it is cleared; ink that STOPS
+	// SHORT only leaves too big a gap, and only by what scaling added. No
+	// kerning term: a pair kerned for two letters of one size says nothing
+	// about a letter set nearly twice as large beside a small one, and
+	// importing it pulled T's arm onto the e of Te ígitur.
+	const SB: Record<string, [number, number]> = {
+		P: [0.024, 0.025],
+		S: [0.04, 0.043],
+		C: [0.046, 0.055],
+		A: [-0.002, -0.005],
+		D: [0.029, 0.035],
+		E: [0.037, 0.025],
+		M: [0.019, 0.036],
+		Q: [0.045, -0.116],
+		I: [0.019, 0.018],
+		G: [0.045, 0.036],
+		H: [0.037, 0.04],
+		L: [0.027, 0.009],
+		O: [0.045, 0.045],
+		B: [0.019, 0.04],
+		N: [0.012, 0.01],
+		V: [0.0, -0.006],
+		T: [0.027, 0.002],
+		U: [0.024, 0.01]
 	};
-	const fitOf = (letter: string): [number, number] => FIT[letter] ?? [0, 0];
+
+	// DESCENT below the baseline, in the letter's own em. Q is the only
+	// capital that opens a prayer in this corpus and reaches below the
+	// line, and the gloss leaves it 0.28em of the reading size to reach
+	// into — measured from the baseline to the ink of the first gloss. At
+	// 1.75 its tail put 3.6px into the word "What". The arithmetic gives it
+	// no room to grow at all: the cap lands at 1.0, so while the apparatus
+	// is showing a Q is rubricated and not raised — which is a missal
+	// device in its own right, and the honest answer to a constraint rather
+	// than a collision dressed up as a flourish. With the glosses off there
+	// is a whole line of room and it takes the full size like the rest.
+	const DESCENT: Record<string, number> = { Q: 0.248 };
+	// measured 0.272em from the baseline to the ink of the first gloss,
+	// less a little air
+	const ROOM_BELOW = 0.25;
+	const RAISED = 1.75;
+	// A large letter wants more room around it than its metrics ask for:
+	// the one judgement in all of this, and what stops A reading as touching
+	// the word before it while measuring as neutral on both sides.
+	const AIR = 0.03;
+
+	function scaleOf(letter: string, glossed: boolean): number {
+		const descent = DESCENT[letter] ?? 0;
+		if (!glossed || descent === 0) return RAISED;
+		return Math.min(RAISED, ROOM_BELOW / descent);
+	}
+
+	/** [font-size, margin-start, margin-end, gloss lift] for an initial, all
+	 * in the initial's own em except the lift, which is the reading size. */
+	function initialFit(letter: string, glossed: boolean) {
+		const scale = scaleOf(letter, glossed);
+		const [sbStart, sbEnd] = SB[letter] ?? [0, 0];
+		const air = AIR / scale;
+		const side = (sb: number) => (sb < 0 ? -sb + air : (-(scale - 1) / scale) * sb + air);
+		return {
+			scale,
+			start: side(sbStart),
+			end: side(sbEnd),
+			// a taller glyph raises the ruby base box and the annotation rides
+			// down with it: 4px measured at scale 1.75, and it scales with the
+			// extra size, so 0.333rem for every 1 of it
+			lift: (scale - 1) * 0.333
+		};
+	}
 
 	const firstVerse = $derived(
 		isDialogue
@@ -225,13 +253,19 @@
 	);
 </script>
 
-{#snippet face(id: string, form: string, raised = false)}<ruby
+{#snippet face(id: string, form: string, raised = false)}{@const fit = initialFit(
+		form.slice(0, 1),
+		helpLevel >= 1
+	)}<ruby
 		>{#if raised}<span
 				class="initial"
-				style:margin-inline-start="{fitOf(form.slice(0, 1))[0]}em"
-				style:margin-inline-end="{fitOf(form.slice(0, 1))[1]}em">{form.slice(0, 1)}</span
-			>{form.slice(1)}{:else}{form}{/if}{#if helpLevel >= 1}<rt class:lifted={raised} {lang}
-				>{gloss.words[id]?.gloss}</rt
+				style:font-size="{fit.scale}em"
+				style:margin-inline-start="{fit.start}em"
+				style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
+			>{form.slice(1)}{:else}{form}{/if}{#if helpLevel >= 1}<rt
+				style:top={raised ? `${-fit.lift}rem` : null}
+				class:lifted={raised}
+				{lang}>{gloss.words[id]?.gloss}</rt
 			>{/if}</ruby
 	>{/snippet}
 
@@ -393,7 +427,6 @@
 	   hole in the line above. */
 	.initial {
 		color: var(--rubric);
-		font-size: 1.75em;
 		line-height: 0;
 		text-indent: 0;
 	}
@@ -405,7 +438,6 @@
 	   the same 4px. */
 	rt.lifted {
 		position: relative;
-		top: -0.25rem;
 	}
 
 	.sr-only {

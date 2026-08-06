@@ -311,8 +311,30 @@ test('no opening initial lands on the letters beside it', async ({ page }) => {
 			r.setStartAfter(ini);
 			r.setEnd(ruby, ruby.childNodes.length);
 			const rest = r.getClientRects()[0];
+			// and how far its tail reaches into the gloss line below
+			const rt = ruby.querySelector('rt');
+			let tailIntoGloss = 0;
+			if (rt) {
+				const probe = document.createElement('span');
+				probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+				ruby.insertBefore(probe, ini.nextSibling);
+				const baseline = probe.getBoundingClientRect().top;
+				probe.remove();
+				const p2 = document.createElement('span');
+				p2.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+				rt.appendChild(p2);
+				const rtBaseline = p2.getBoundingClientRect().top;
+				p2.remove();
+				const rtCs = getComputedStyle(rt);
+				c.font = `${rtCs.fontSize} ${rtCs.fontFamily}`;
+				const rtInkTop = rtBaseline - c.measureText(rt.textContent ?? '').actualBoundingBoxAscent;
+				c.font = `${cs.fontSize} ${cs.fontFamily}`;
+				tailIntoGloss =
+					baseline + c.measureText(ini.textContent ?? '').actualBoundingBoxDescent - rtInkTop;
+			}
 			return {
 				letter: ini.textContent,
+				tailIntoGloss,
 				overlap: rest ? inkRight - rest.left : null,
 				// and it must not open a hole either: a whole space would read
 				// as a word break, as "P ax" did
@@ -324,5 +346,25 @@ test('no opening initial lands on the letters beside it', async ({ page }) => {
 			0.5
 		);
 		expect(seen!.gap, `${seen!.letter} in ${url} opens a word-sized hole`).toBeLessThan(9);
+		expect(
+			seen!.tailIntoGloss,
+			`${seen!.letter} in ${url} drops its tail into the gloss line`
+		).toBeLessThanOrEqual(0.5);
 	}
+});
+
+test('an initial takes its full size where there is room for it', async ({ page }) => {
+	// Q cannot be raised while a gloss line is showing: the ink of the
+	// gloss starts 0.27em under the baseline and Q's tail reaches further
+	// than that at any size above 1. At the bare Latin there is a whole
+	// line of room, and it takes the same size as every other initial.
+	await page.goto('/en/ordinarium/quod-ore-sumpsimus');
+	const glossed = await page.evaluate(() =>
+		parseFloat(getComputedStyle(document.querySelector('.initial')!).fontSize)
+	);
+	await page.locator('input[type="range"]').fill('0');
+	const bare = await page.evaluate(() =>
+		parseFloat(getComputedStyle(document.querySelector('.initial')!).fontSize)
+	);
+	expect(bare).toBeGreaterThan(glossed * 1.4);
 });
