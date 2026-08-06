@@ -35,16 +35,19 @@
 	// Knowing the whole set is what lets a RUN of them be named once — "the
 	// priest prays these silently" belongs over the twelve prayers of the
 	// Canon, not on each of the twelve.
-	const silent = $derived.by(() => {
-		const out = new Set<string>();
-		for (const e of movement?.entries ?? []) {
-			const entry = e.text ? texts[e.text] : undefined;
-			if (!entry) continue;
-			const voices = entry.doc.segments.filter((sg) => sg.type === 'verse').map((sg) => sg.voice);
-			if (!showsWords(voices, partVoice(e.id), role.value)) out.add(e.id);
-		}
-		return out;
-	});
+	// A plain array, not a Set: the lint rule against mutable built-in
+	// collections in components is right — a Set is not reactive, and this
+	// value is rebuilt from scratch whenever the reader changes their part.
+	const silent = $derived(
+		(movement?.entries ?? [])
+			.filter((e) => {
+				const entry = e.text ? texts[e.text] : undefined;
+				if (!entry) return false;
+				const voices = entry.doc.segments.filter((sg) => sg.type === 'verse').map((sg) => sg.voice);
+				return !showsWords(voices, partVoice(e.id), role.value);
+			})
+			.map((e) => e.id)
+	);
 
 	// …and its word panel. A word is one tap from its analysis wherever it
 	// stands (decisions #20); the flow is not an exception. Several texts
@@ -153,7 +156,7 @@
 				.map((s) => s.voice)}
 			{@const words = showsWords(voices, partVoice(e.id), role.value)}
 			{@const folded = !!entry && !words && !unfolded[e.id]}
-			{#if silent.has(e.id) && !silent.has(movement?.entries[idx - 1]?.id ?? '')}
+			{#if silent.includes(e.id) && !silent.includes(movement?.entries[idx - 1]?.id ?? '')}
 				<!-- Said once over the run, not on every line of it. -->
 				<p class="silent-run smallcaps">{msgs.quietCollapsed}</p>
 			{/if}
