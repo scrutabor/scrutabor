@@ -11,10 +11,60 @@
 
 import { untrack } from 'svelte';
 import { pushState, replaceState } from '$app/navigation';
+import type { GlossDocument, TextDocument } from './corpus';
 
 export interface WordPanelHost {
 	/** Does this id address a word on this surface? */
 	has: (id: string) => boolean;
+}
+
+/**
+ * The panel wired to ONE document — the shape a reading page and the
+ * landing's specimen share: the map of the document's words, the store
+ * guarded by it, the URL's ?w= applied on arrival, and the selection
+ * resolved to exactly what WordPanel renders. The ordo flow keeps its
+ * own wiring: several texts share its page and its ids are prefixed.
+ *
+ * Call during component init — it owns runes; the getters stay live.
+ */
+export function docWordPanel(
+	doc: () => TextDocument | undefined,
+	gloss: () => GlossDocument | undefined
+) {
+	// Rebuilt whole by the derived whenever the document changes and never
+	// mutated afterwards — the reactivity is the derived's, so the plain
+	// Map needs none of SvelteMap's.
+	const wordsById = $derived(
+		// eslint-disable-next-line svelte/prefer-svelte-reactivity
+		new Map((doc()?.segments ?? []).flatMap((s) => (s.words ?? []).map((w) => [w.id, w] as const)))
+	);
+	const panel = wordPanel({ has: (id) => wordsById.has(id) });
+
+	$effect(() => {
+		void wordsById;
+		panel.applyFromLocation();
+	});
+
+	const word = $derived(panel.id ? (wordsById.get(panel.id) ?? null) : null);
+	const wordGloss = $derived(panel.id ? (gloss()?.words[panel.id] ?? null) : null);
+	const analysis = $derived.by(() => {
+		const d = doc();
+		if (!word || !d) return null;
+		return word.analysis ?? d.analysis_defaults_words ?? d.analysis_defaults;
+	});
+
+	return {
+		panel,
+		get word() {
+			return word;
+		},
+		get gloss() {
+			return wordGloss;
+		},
+		get analysis() {
+			return analysis;
+		}
+	};
 }
 
 export function wordPanel(host: WordPanelHost) {

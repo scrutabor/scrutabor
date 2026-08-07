@@ -1,0 +1,33 @@
+// The landing's specimen is real: verse 34 of Psalm 118 — the He stanza,
+// psalmi.118-he, the verse the motto quotes and the app is named from —
+// sliced to that one verse and served exactly as a reading page serves
+// its text (decisions #27: the corpus never reaches the browser bundle;
+// a page receives its own words and the lexicon entries they can ask
+// about, nothing more). The demonstration is therefore the mechanism
+// itself: the same slider, the same panel, the same data.
+import { TEXTS, narrowLexicon, type GlossDocument, type TextDocument } from '$lib/corpus';
+import type { Lang } from '$lib/i18n';
+import { error } from '@sveltejs/kit';
+import type { PageServerLoad } from './$types';
+
+const VERSE = 's02';
+
+export const load: PageServerLoad = ({ params }) => {
+	const lang = params.lang as Lang;
+	const entry = TEXTS['psalmi/118-he'];
+	const verse = entry?.text.segments.find((s) => s.id === VERSE);
+	if (!entry || !verse) error(500, 'the specimen verse is missing from the corpus snapshot');
+
+	const doc: TextDocument = { ...entry.text, segments: [verse] };
+	const full = entry.glosses[lang];
+	const ids = new Set((verse.words ?? []).map((w) => w.id));
+	const gloss: GlossDocument = {
+		...full,
+		// the stanza's introduction belongs to its own page, not the landing
+		about: undefined,
+		segments: { [verse.id]: full.segments[verse.id] },
+		words: Object.fromEntries(Object.entries(full.words).filter(([id]) => ids.has(id)))
+	};
+
+	return { specimen: { doc, gloss, lex: narrowLexicon([doc], lang) } };
+};

@@ -1,17 +1,41 @@
 <script lang="ts">
-	// The landing: what Scrutabor is, shown before it is told. One static
-	// page per language, in the book's own face and voice. The specimen is
-	// the actual reading mechanism — the motto's own verse rendered by the
-	// app's own TextBody at each of the help slider's three steps — so the
-	// page demonstrates the book by BEING the book for one verse.
+	// The landing: what Scrutabor is, shown before it is told. One page
+	// per language, in the book's own face and voice. The specimen is the
+	// book itself for one verse — verse 34 of Psalm 118, the motto's own,
+	// straight from the corpus (see +page.server.ts) with the app's real
+	// slider and the app's real word panel, fully alive.
+	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
+	import WordCard from '$lib/components/WordCard.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { bindProse } from '$lib/polish';
-	import { SPECIMEN_DOC, SPECIMEN_GLOSS } from './specimen';
 
 	let { data } = $props();
 	const lang = $derived(data.lang as Lang);
+
+	const doc = $derived(data.specimen.doc);
+	const gloss = $derived(data.specimen.gloss);
+
+	// The same three verbosity states as every reading page; the slider
+	// itself restores the reader's stored choice on mount.
+	let helpLevel = $state(1);
+
+	// The specimen's analysis lives in a box that is ALWAYS open — its
+	// whole purpose is to be looked at, so there is nothing to close and
+	// no history to keep: a tap only chooses which word it explains. It
+	// opens on scrutábor, the word the app is named after (word ids are
+	// forever — decisions #3).
+	let selected = $state('w016');
+
+	const wordsOf = $derived(
+		new Map((doc?.segments ?? []).flatMap((s) => (s.words ?? []).map((w) => [w.id, w] as const)))
+	);
+	const selWord = $derived(wordsOf.get(selected) ?? doc.segments[0]?.words?.[0] ?? null);
+	const selGloss = $derived(selWord ? (gloss.words[selWord.id] ?? null) : null);
+	const selAnalysis = $derived(
+		selWord ? (selWord.analysis ?? doc.analysis_defaults_words ?? doc.analysis_defaults) : null
+	);
 
 	interface Copy {
 		title: string;
@@ -20,9 +44,7 @@
 		openNote: string;
 		specimenTitle: string;
 		specimenLead: string;
-		panelLemma: string;
-		panelParse: string;
-		panelNote: string;
+		stanzaLink: string;
 		cards: { title: string; note: string; href: string }[];
 		keepTitle: string;
 		keepBody: string;
@@ -42,11 +64,8 @@
 			openNote: 'w przeglądarce — bez instalacji, bez kont',
 			specimenTitle: 'słowo po słowie',
 			specimenLead:
-				'Suwak pomocy prowadzi przez trzy stopnie — od samej łaciny do pełnego przekładu — a dotknięcie słowa otwiera jego analizę: formę, hasło słownikowe i objaśnienie.',
-			panelLemma: 'scrutari — badać, zgłębiać',
-			panelParse:
-				'czasownik · 1. osoba liczby pojedynczej · czas przyszły · deponens (forma bierna, znaczenie czynne)',
-			panelNote: '„Będę zgłębiał” — słowo, od którego ta aplikacja bierze nazwę.',
+				'Werset, od którego Scrutabor bierze nazwę — żywy, tak jak w modlitewniku: suwak pomocy prowadzi od samej łaciny do pełnego przekładu, a dotknięcie słowa otwiera jego analizę.',
+			stanzaLink: 'Psalm\u00a0118, He — w.\u00a034',
 			cards: [
 				{
 					title: 'podczas Mszy',
@@ -81,11 +100,8 @@
 			openNote: 'in your browser — nothing to install, no accounts',
 			specimenTitle: 'word by word',
 			specimenLead:
-				'The help slider moves through three steps — from bare Latin to a full translation — and a tap on any word opens its analysis: the form, the dictionary entry, and an explanation.',
-			panelLemma: 'scrutari — to search, to examine deeply',
-			panelParse:
-				'verb · 1st person singular · future · deponent (passive in form, active in meaning)',
-			panelNote: '“I will search” — the word this app takes its name from.',
+				'The verse Scrutabor takes its name from — alive, exactly as in the prayer book: the help slider moves from bare Latin to a full translation, and a tap on any word opens its analysis.',
+			stanzaLink: 'Psalm\u00a0118, He — v.\u00a034',
 			cards: [
 				{ title: 'at Mass', note: 'the whole 1962 Ordo Missæ, part by part', href: 'ordo' },
 				{
@@ -111,7 +127,6 @@
 	};
 
 	const t = $derived(T[lang]);
-	const levels = $derived(M[lang].levels);
 
 	// The zip travels with each release rather than with the site: the
 	// stable GitHub URL always resolves to the newest release's asset.
@@ -131,7 +146,10 @@
 		<p class="motto" lang="la">
 			„Da mihi intellectum, et scrutabor legem tuam, et custodiam illam in toto corde meo.”
 		</p>
-		<p class="motto-ref smallcaps">{M[lang].mottoRef}</p>
+		<!-- The reference is a door: the psalm's stanza is in the book. -->
+		<p class="motto-ref smallcaps">
+			<a href="/app/{lang}/psalmi/118-he">{M[lang].mottoRef}</a>
+		</p>
 
 		<a class="cta" href="/app/{lang}">{t.open}</a>
 		<p class="cta-note">{t.openNote}</p>
@@ -140,35 +158,39 @@
 			<h2 class="smallcaps">{t.specimenTitle}</h2>
 			<p class="lead">{t.specimenLead}</p>
 
-			<!-- The slider's three steps on the verse the motto comes from,
-			     each rendered by the app's own TextBody: bare Latin, the
-			     interlinear gloss, and the gloss with the verse's translation
-			     — exactly what the reading pages show at each stop. The
-			     idPrefix keeps the three copies' word ids apart, as on the
-			     ordo flow. -->
-			<figure class="specimen">
-				{#each [0, 1, 2] as level (level)}
-					<div class="tier">
-						<p class="tier-label smallcaps">{levels[level]}</p>
-						<TextBody
-							doc={SPECIMEN_DOC}
-							gloss={SPECIMEN_GLOSS[lang]}
+			<!-- The book itself, for one verse: the real slider over the
+			     real corpus text, and beneath them the analysis box — the
+			     word panel's content, standing open in the page. A tap
+			     chooses which word it explains; nothing closes. -->
+			<div class="specimen">
+				<div class="specimen-help">
+					<HelpLevels {lang} bind:value={helpLevel} />
+				</div>
+				<TextBody
+					{doc}
+					{gloss}
+					{lang}
+					{helpLevel}
+					selectedId={selected}
+					ontap={(id) => (selected = id)}
+				/>
+				<p class="stanza-link">
+					<a href="/app/{lang}/psalmi/118-he">{t.stanzaLink} ›</a>
+				</p>
+				{#if selWord && selAnalysis}
+					<div class="word-box">
+						<p class="word-box-form" lang="la">{selWord.form}</p>
+						<WordCard
+							word={selWord}
+							gloss={selGloss}
+							analysis={selAnalysis}
+							lex={data.specimen.lex}
 							{lang}
-							helpLevel={level}
-							idPrefix={`spec${level}`}
+							onnavigate={(id) => (selected = id)}
 						/>
 					</div>
-				{/each}
-
-				<!-- …and what a tap answers with, for the one word this book
-				     is named after: the panel as the app draws it. -->
-				<figcaption class="panel">
-					<p class="panel-head" lang="la">scrutabor</p>
-					<p class="panel-lemma">{t.panelLemma}</p>
-					<p class="panel-parse">{t.panelParse}</p>
-					<p class="panel-note">{t.panelNote}</p>
-				</figcaption>
-			</figure>
+				{/if}
+			</div>
 		</section>
 
 		<section>
@@ -247,54 +269,61 @@
 		line-height: 1.65;
 	}
 
-	/* The specimen is the reading surface itself — TextBody carries its
-	   own styles — so all this page adds is the frame around each step.
-	   Left-set, as the book is. */
+	/* The specimen is the reading surface itself — TextBody, the slider
+	   and the panel carry their own styles — so all this page adds is the
+	   frame. Left-set, as the book is. */
 	.specimen {
-		margin: 0.6rem 0 0;
+		margin: 1.4rem 0 0;
 		text-align: left;
 	}
 
-	.tier {
-		margin: 1.9rem 0 0;
+	.specimen-help {
+		margin: 0 0 1.6rem;
 	}
 
-	.tier-label {
-		margin: 0 0 0.5rem;
-		font-size: 0.75rem;
-		color: var(--ink-soft);
-	}
-
-	/* What a tap answers with, as the app draws it: a quiet card. */
-	.panel {
-		margin: 2rem 0 0;
-		padding: 0.9rem 1.2rem 1rem;
+	/* The analysis box: the word panel's content, set in the page like a
+	   quotation from the app — same surface, same border, no way to close
+	   it, because on this page it IS the exhibit. */
+	.word-box {
+		margin: 1.6rem 0 0;
+		padding: 1rem 1.3rem 1.1rem;
 		border: 1px solid var(--border);
 		border-radius: 0.6rem;
 		background: var(--surface);
-		text-align: left;
 	}
 
-	.panel p {
-		margin: 0.2rem 0 0;
+	.word-box-form {
+		margin: 0;
+		font-size: 1.7rem;
+		font-weight: 500;
 	}
 
-	.panel-head {
-		font-size: 1.3rem;
-	}
-
-	.panel-lemma {
-		font-style: italic;
-	}
-
-	.panel-parse {
+	/* A citation under its verse, as an apparatus prints one: set off by
+	   real air, standing at the right edge — and it is the door to the
+	   stanza's own page. */
+	.stanza-link {
+		margin: 1.8rem 0 0;
 		font-size: 0.9rem;
-		color: var(--ink-soft);
+		text-align: right;
 	}
 
-	.panel-note {
-		margin-top: 0.55rem;
-		font-size: 0.95rem;
+	.stanza-link a {
+		color: var(--ink-soft);
+		text-decoration: none;
+	}
+
+	.stanza-link a:hover {
+		color: var(--ink);
+	}
+
+	.motto-ref a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.motto-ref a:hover {
+		color: var(--ink);
+		text-decoration: underline;
 	}
 
 	.keep-action {

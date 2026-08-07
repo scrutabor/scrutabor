@@ -11,7 +11,7 @@
 	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { ribbon } from '$lib/ribbon.svelte';
-	import { wordPanel } from '$lib/wordpanel.svelte';
+	import { docWordPanel } from '$lib/wordpanel.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
 
 	// The corpus arrives from the server load, already narrowed to this text
@@ -44,17 +44,13 @@
 	// always-open boxes, no toggles) and rubric narratives
 	let helpLevel = $state(1);
 
-	const wordsById = $derived(
-		new Map((doc?.segments ?? []).flatMap((s) => (s.words ?? []).map((w) => [w.id, w] as const)))
+	// The panel behaves the same here as in the flow and on the landing's
+	// specimen — one document, one wiring (see lib/wordpanel).
+	const wp = docWordPanel(
+		() => data.doc,
+		() => data.gloss
 	);
-
-	// The panel behaves the same here as in the flow — see lib/wordpanel.
-	const panel = wordPanel({ has: (id) => wordsById.has(id) });
-
-	$effect(() => {
-		void wordsById;
-		panel.applyFromLocation();
-	});
+	const panel = wp.panel;
 
 	// Reading is the whole point of this page: hold the screen open.
 	keepAwake();
@@ -110,13 +106,9 @@
 		if (target) goto(`/app/${lang}/${target.category}/${target.slug}`);
 	}
 
-	let selectedWord = $derived(panel.id ? (wordsById.get(panel.id) ?? null) : null);
-	let selectedGloss = $derived(panel.id && gloss ? (gloss.words[panel.id] ?? null) : null);
-	let selectedAnalysis = $derived(
-		selectedWord && doc
-			? (selectedWord.analysis ?? doc.analysis_defaults_words ?? doc.analysis_defaults)
-			: null
-	);
+	let selectedWord = $derived(wp.word);
+	let selectedGloss = $derived(wp.gloss);
+	let selectedAnalysis = $derived(wp.analysis);
 </script>
 
 <svelte:window onpopstate={panel.applyFromLocation} onkeydown={onWindowKeydown} />

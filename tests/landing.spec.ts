@@ -45,33 +45,58 @@ test.describe('landing @online', () => {
 		expect(root).toContain('hreflang="en" href="https://scrutabor.org/en"');
 	});
 
-	test('the specimen walks the slider: bare Latin, glosses, translation', async ({ page }) => {
-		// The tiers are the app's own TextBody at each help level — the
-		// mechanism itself, not a picture of it — so what is asserted is
-		// what the reading pages themselves render at each stop.
+	test('the specimen is the book itself: the real slider over the real verse', async ({ page }) => {
+		// Not a picture of the mechanism — the mechanism: psalmi.118-he's
+		// verse 34 from the corpus, TextBody, and the same slider a
+		// reading page carries.
 		await page.goto('/pl');
-		// three tiers, labelled with the slider's own words
-		const labels = page.locator('.tier-label');
-		await expect(labels).toHaveText(['sama łacina', 'słowo po słowie', 'pełny przekład']);
-		// the bare tier shows no glosses; the glossed tiers carry the verse
-		await expect(page.locator('.tier').nth(0).locator('rt')).toHaveCount(0);
-		await expect(page.locator('.tier').nth(1).locator('rt')).toHaveCount(14);
-		await expect(page.locator('.tier').nth(2).locator('rt')).toHaveCount(14);
-		// the consecutive et is glossed "a", as Polish renders it
-		await expect(page.locator('.tier').nth(1).locator('rt').nth(3)).toHaveText('a');
-		// the fullest step adds the verse's translation, in the app's own slot
-		await expect(page.locator('.tier').nth(2).locator('.translation')).toContainText(
-			'Daj mi zrozumienie'
-		);
-		// and the panel a tap would open, on the name-word itself
-		await expect(page.locator('.panel-head')).toHaveText('scrutabor');
-		await expect(page.locator('.panel-lemma')).toContainText('scrutari');
+		const slider = page.locator('.specimen input[type="range"]');
+		await expect(slider).toHaveValue('1');
+		// the real corpus text: liturgical accents, and the colon the
+		// witnesses print where the brand motto prints a comma
+		await expect(page.locator('.specimen')).toContainText('scrutábor');
+		await expect(page.locator('.specimen')).toContainText('tuam:');
+		// bare Latin
+		await slider.fill('0');
+		await expect(page.locator('.specimen rt')).toHaveCount(0);
+		// the full step: all fourteen glosses (the consecutive et as "a")
+		// and the verse's own translation
+		await slider.fill('2');
+		await expect(page.locator('.specimen rt')).toHaveCount(14);
+		await expect(page.locator('.specimen rt').nth(3)).toHaveText('a');
+		await expect(page.locator('.specimen .translation')).toContainText('Daj mi zrozumienie');
 
 		await page.goto('/en');
-		await expect(page.locator('.tier').nth(1).locator('rt').nth(4)).toHaveText('I will search');
-		await expect(page.locator('.tier').nth(2).locator('.translation')).toContainText(
-			'Give me understanding'
-		);
+		await page.locator('.specimen input[type="range"]').fill('2');
+		await expect(page.locator('.specimen .translation')).toContainText('Give me understanding');
+	});
+
+	test('the analysis box stands open on scrutábor, and taps re-aim it', async ({ page }) => {
+		await page.goto('/pl');
+		// pre-selected on the name-word: the analysis is already in the
+		// page — a box, not a sheet, with nothing to close
+		await expect(page.locator('.word-box-form')).toHaveText('scrutábor');
+		await expect(page.locator('.word-box a[href="/app/pl/lemma/scrutor"]')).toBeVisible();
+		await expect(page.locator('aside')).toHaveCount(0);
+		// the tapped word carries the selection wash
+		await expect(page.locator('#w016')).toHaveClass(/selected/);
+		// a tap re-aims the box at another word
+		await page.locator('#w017').click();
+		await expect(page.locator('.word-box-form')).toHaveText('legem');
+		// and a cross-reference in the note re-aims it too: scrutábor's
+		// note points at the Da it answers
+		await page.locator('#w016').click();
+		await page.locator('.word-box .xref').click();
+		await expect(page.locator('.word-box-form')).toHaveText('Da');
+	});
+
+	test('the motto and the specimen both reach the psalm page', async ({ page }) => {
+		await page.goto('/pl');
+		await expect(page.locator('.motto-ref a')).toHaveAttribute('href', '/app/pl/psalmi/118-he');
+		await expect(page.locator('.stanza-link a')).toHaveAttribute('href', '/app/pl/psalmi/118-he');
+		await page.locator('.stanza-link a').click();
+		await page.waitForURL(atRoute('/app/pl/psalmi/118-he'));
+		await expect(page.locator('h1')).toHaveText('Psalmus 118, HE');
 	});
 
 	test('the sections are doors into the book', async ({ page }) => {
