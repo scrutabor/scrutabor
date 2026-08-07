@@ -19,13 +19,26 @@ export async function goto(url: string | URL) {
 	location.href = String(url);
 }
 
-/** Shallow routing puts ?w=… in the address bar as words are tapped. From a
- * folder there is no address to put it in — `history.pushState` on a
- * file:// URL is refused — so the panel simply opens. The deep link still
- * WORKS as an entry point, which is the half that matters: a page opened at
- * ?w=w022 reads it on load. */
-export function pushState() {}
-export function replaceState() {}
+/**
+ * Shallow routing — the ?w= that appears as words are tapped.
+ *
+ * These were no-ops on the assumption that file:// refuses `pushState`. It
+ * does not: pushing an entry, and setting a same-document query, both work
+ * there. The assumption cost a real bug — the panel pushes an entry when it
+ * opens and pops it when it closes, so a swallowed push meant every close
+ * ran `history.back()` against whatever came before, and shutting the panel
+ * navigated to the previous prayer.
+ *
+ * SvelteKit's signature is (url, state); the platform's is (state, title,
+ * url).
+ */
+export function pushState(url: string | URL, state: unknown = {}) {
+	history.pushState(state, '', url);
+}
+
+export function replaceState(url: string | URL, state: unknown = {}) {
+	history.replaceState(state, '', url);
+}
 
 export function preloadData() {
 	return Promise.resolve();
