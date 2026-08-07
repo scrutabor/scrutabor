@@ -207,7 +207,7 @@
 			"senses": [
 				"Michał"
 			],
-			"note": "Z hebrajskiego Mika'el — „Któż jak Bóg?”."
+			"note": "Z hebrajskiego Mika’el — „Któż jak Bóg?”."
 		},
 		"Paulus": {
 			"senses": [
@@ -277,7 +277,7 @@
 				"z dala od",
 				"przez (sprawcę)"
 			],
-			"note": "Przed spółgłoską „a”; przed samogłoską i h „ab” (przed spółgłoskami zdarza się i „ab”: ab hómine)."
+			"note": "Przed spółgłoską „a”, przed samogłoską i przed h „ab” — stąd ab hómine iníquo."
 		},
 		"absolutio": {
 			"senses": [
@@ -786,7 +786,7 @@
 			],
 			"note": "Jeden z podstawowych czasowników łaciny; w koniugacji III odmienia się według wzoru na -io. Tkwi w accípere, percípere i súscipere.",
 			"derivatives": [
-				"kapitulacja",
+				"koncepcja",
 				"recepcja"
 			]
 		},
@@ -1094,8 +1094,7 @@
 			],
 			"note": "Od convérto — obrócić. Nawrócenie jest po łacinie obróceniem się całego człowieka, nie zmianą zdania.",
 			"derivatives": [
-				"konwersja",
-				"konwertyta"
+				"konwersja"
 			]
 		},
 		"converto": {
@@ -1398,7 +1397,7 @@
 				"umiłowany",
 				"kochany"
 			],
-			"note": "Imiesłów díligo — kochać wyborem, nie uczuciem; to samo słowo, co w „ukochany Syn” u chrztu Pańskiego."
+			"note": "Imiesłów díligo — kochać wyborem, nie uczuciem; to samo słowo, co w „Syn umiłowany” przy chrzcie Pańskim."
 		},
 		"diligo": {
 			"senses": [
@@ -1517,7 +1516,7 @@
 				"obdarzyć",
 				"udzielić"
 			],
-			"note": "Od „donum” — dar. Daje rzecz (biernik) osobie (celownik); klasyczna łacina umie też odwrotnie: obdarowywać osobę (biernik) czymś (ablativus).",
+			"note": "Od „donum” — dar. Daje rzecz (biernik) osobie (celownik); klasyczna łacina zna też konstrukcję odwrotną: obdarowywać osobę (biernik) czymś (ablativus).",
 			"derivatives": [
 				"donacja",
 				"donator"
@@ -1624,7 +1623,7 @@
 			"senses": [
 				"zmiłuj się"
 			],
-			"note": "Greckie ἐλέησον, tryb rozkazujący od ἐλεέω „litować się”. W grece jest to aoryst: prośba o zmiłowanie ujęte jako jeden czyn. Jak i Kýrie, słowo nie ma osobnego hasła w słownikach łaciny."
+			"note": "Greckie ἐλέησον, tryb rozkazujący od ἐλεέω „litować się”. W grece jest to aoryst: prośba o zmiłowanie ujęte jako jeden czyn. Podobnie jak Kýrie, słowo nie ma osobnego hasła w słownikach łaciny."
 		},
 		"elevo": {
 			"senses": [
@@ -1953,7 +1952,7 @@
 				"rodzicielka",
 				"matka"
 			],
-			"note": "Rzeczownik żeński od gigno — rodzić; ten sam rdzeń, co w génitus. Pisownia genetrix i genitrix chodzą parami w księgach."
+			"note": "Rzeczownik żeński od gigno — rodzić; ten sam rdzeń, co w génitus. W księgach spotyka się obie pisownie: genetrix i genitrix."
 		},
 		"gens": {
 			"senses": [
@@ -2164,7 +2163,7 @@
 				"nienaruszony",
 				"nietknięty"
 			],
-			"note": "Od libáre — ujmować coś z ofiary; illibátus to takie, z czego nic nie ubyło."
+			"note": "Od libáre — ujmować coś z ofiary; illibátus znaczy: taki, z którego nic nie ubyło."
 		},
 		"illumino": {
 			"senses": [
@@ -2580,11 +2579,7 @@
 				"wolność",
 				"swoboda"
 			],
-			"note": "Od liber — wolny; stan człowieka, który nie jest niewolnikiem.",
-			"derivatives": [
-				"liberalny",
-				"libertyn"
-			]
+			"note": "Od liber — wolny; stan człowieka, który nie jest niewolnikiem."
 		},
 		"locus": {
 			"senses": [
@@ -2671,7 +2666,7 @@
 				"złośliwy",
 				"zły"
 			],
-			"note": "Złożenie malus + gigno: taki, kto rodzi zło. Przeciwieństwem jest benígnus.",
+			"note": "Złożenie malus + gigno: ten, kto rodzi zło. Przeciwieństwem jest benígnus.",
 			"derivatives": [
 				"maligna"
 			]
@@ -2724,7 +2719,7 @@
 				"matka"
 			],
 			"derivatives": [
-				"Alma Mater",
+				"matryca",
 				"matrona"
 			]
 		},
@@ -2855,7 +2850,7 @@
 				"miłosierdzie",
 				"litość"
 			],
-			"note": "Złożenie míserum cor — serce dla nieszczęśliwego; ta sama budowa co miséricors."
+			"note": "Złożenie z miser (nieszczęsny) i cor (serce) — serce dla nieszczęśliwego; ta sama budowa co miséricors."
 		},
 		"misericors": {
 			"senses": [
@@ -3047,7 +3042,7 @@
 			"senses": [
 				"nic"
 			],
-			"note": "Nieodmienne. Ze złożenia ne + hilum, gdzie hilum to znaczek na ziarnku fasoli — „ani tyle”.",
+			"note": "Nieodmienne. Ze złożenia ne + hilum, gdzie hilum to znamię na ziarnie fasoli — „ani tyle”.",
 			"derivatives": [
 				"nihilizm"
 			]
@@ -3303,7 +3298,7 @@
 		},
 		"pacifico": {
 			"senses": [
-				"dać pokój",
+				"obdarzyć pokojem",
 				"pojednać",
 				"uspokoić"
 			],
@@ -3324,7 +3319,7 @@
 			"senses": [
 				"papież"
 			],
-			"note": "Greckie páppas — „tatuś”; na Wschodzie tytuł każdego kapłana, na Zachodzie od V wieku zastrzeżony biskupowi Rzymu.",
+			"note": "Greckie páppas — poufałe określenie ojca; na Wschodzie tytuł każdego kapłana, na Zachodzie od V wieku zastrzeżony biskupowi Rzymu.",
 			"derivatives": [
 				"papież",
 				"papieski"
@@ -3539,7 +3534,7 @@
 				"stopa"
 			],
 			"derivatives": [
-				"pedał"
+				"piedestał"
 			]
 		},
 		"peto": {
@@ -3559,7 +3554,7 @@
 				"łaskawość",
 				"pobożność"
 			],
-			"note": "U Rzymian powinność wobec rodziców, bogów i ojczyzny — stąd pius Æneas. O Bogu mówi się nią o Jego wierności wobec nas.",
+			"note": "U Rzymian powinność wobec rodziców, bogów i ojczyzny — stąd pius Æneas. Użyte o Bogu, słowo to mówi o Jego wierności wobec nas.",
 			"derivatives": [
 				"pietyzm"
 			]
@@ -4033,7 +4028,7 @@
 				"ważny",
 				"prawomocny"
 			],
-			"note": "Termin prawny: umowa rata to taka, która ma moc. Stąd „ratyfikacja”.",
+			"note": "Termin prawny: ratum pactum to umowa, która ma moc. Stąd „ratyfikacja”.",
 			"derivatives": [
 				"ratyfikacja"
 			]
@@ -4115,10 +4110,7 @@
 				"ucieczka",
 				"schronienie"
 			],
-			"note": "Rzeczownik od refúgio — uciekać się dokądś. Nie oznacza samej ucieczki, lecz miejsce, do którego się ucieka.",
-			"derivatives": [
-				"refugium"
-			]
+			"note": "Rzeczownik od refúgio — uciekać się dokądś. Nie oznacza samej ucieczki, lecz miejsce, do którego się ucieka."
 		},
 		"regina": {
 			"senses": [
@@ -4302,11 +4294,7 @@
 				"poświęcony",
 				"uświęcony"
 			],
-			"note": "Imiesłów bierny od sacro — poświęcać. W stopniu najwyższym, sacratíssimus, jest słowem, którym Kościół mówi o tym, co najświętsze.",
-			"derivatives": [
-				"sakrament",
-				"sakra"
-			]
+			"note": "Imiesłów bierny od sacro — poświęcać. W stopniu najwyższym, sacratíssimus, jest słowem, którym Kościół mówi o tym, co najświętsze."
 		},
 		"sacrificium": {
 			"senses": [
@@ -4476,7 +4464,7 @@
 			],
 			"derivatives": [
 				"sesja",
-				"sedes"
+				"rezydencja"
 			]
 		},
 		"semper": {
@@ -4791,7 +4779,7 @@
 				"w górę",
 				"do góry"
 			],
-			"note": "Ściągnięte sub-vórsum — „obrócony w górę”; przysłówek kierunku, nie przyimek."
+			"note": "Ściągnięte z sub-vórsum — „obrócony w górę”; przysłówek kierunku, nie przyimek."
 		},
 		"suscipio": {
 			"senses": [
@@ -4817,7 +4805,7 @@
 				"przybytek",
 				"mieszkanie"
 			],
-			"note": "Zdrobnienie od tabérna — buda, chata; w Biblii namiot spotkania.",
+			"note": "Zdrobnienie od tabérna — chata, kram; w Biblii namiot spotkania.",
 			"derivatives": [
 				"tabernakulum"
 			]
@@ -4842,7 +4830,7 @@
 				"dom",
 				"schronienie"
 			],
-			"note": "Imiesłów bierny od tego — kryć — użyty rzeczownikowo: to, co przykrywa. Częsty w łacinie jako określenie domu w ogóle."
+			"note": "Imiesłów bierny od tégere — kryć — użyty rzeczownikowo: to, co przykrywa. Częsty w łacinie jako określenie domu w ogóle."
 		},
 		"temporalis": {
 			"senses": [
@@ -5289,7 +5277,7 @@
 				"twarz",
 				"wyraz twarzy"
 			],
-			"note": "Vultus to twarz jako wyraz — spojrzenie, mina; fácies to twarz jako kształt."
+			"note": "Vultus to twarz jako wyraz — spojrzenie, układ rysów; fácies to twarz jako kształt."
 		}
 	}
 }

@@ -3,7 +3,7 @@
 	"text": "ordinarium.corpus-tuum",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Ostatnia modlitwa obrzędu Komunii i ta, w której tkwi węzeł. Quem jest rodzaju męskiego: nie może należeć do mácula, skazy, która jest żeńska, ani do sacraménta, które są nijakie i w liczbie mnogiej. Sięga ponad nimi obiema do me, o pięć słów wstecz — niech nie pozostanie we mnie zmaza grzechów, którego posiliły czyste i święte sakramenty. Łacina może tak zrobić, bo trzymają ją końcówki; język, który je stracił, nie może, i każdy przekład musi wybrać. Modlitwa prosi też o coś dziwnie cielesnego: żeby Ciało i Krew przylgnęły do wnętrzności kapłana, a nie do jego duszy.",
+	"about": "Ostatnia modlitwa obrzędu Komunii i ta, w której tkwi węzeł. Quem jest rodzaju męskiego: nie może należeć do mácula, skazy, która jest żeńska, ani do sacraménta, które są nijakie i w liczbie mnogiej. Sięga ponad nimi obiema do me, o pięć słów wstecz — niech nie pozostanie we mnie zmaza grzechów, którego posiliły czyste i święte sakramenty. Łacinie pozwalają na to końcówki; język, który je stracił, tego nie potrafi, i każdy przekład musi wybrać. Modlitwa prosi też o coś dziwnie cielesnego: żeby Ciało i Krew przylgnęły do wnętrzności kapłana, a nie do jego duszy.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -19,7 +19,7 @@
 			"translation": "Ciało Twoje, Panie, które przyjąłem, i Krew, którą wypiłem, niech przylgną do wnętrzności moich:"
 		},
 		"s03": {
-			"translation": "i spraw, aby nie pozostała we mnie zmaza grzechów, którego posiliły czyste i święte sakramenty:"
+			"translation": "i spraw, aby we mnie, którego posiliły czyste i święte sakramenty, nie pozostała zmaza grzechów:"
 		},
 		"s04": {
 			"translation": "Który żyjesz i królujesz na wieki wieków. Amen."
@@ -76,7 +76,7 @@
 		},
 		"w014": {
 			"gloss": "spraw",
-			"function": "Goły rozkaźnik, a średnik po nim zostawia otwarte to, o co się prosi."
+			"function": "Sam rozkaźnik, a średnik po nim zostawia otwarte to, o co się prosi."
 		},
 		"w015": {
 			"gloss": "aby"
@@ -134,7 +134,7 @@
 		},
 		"w031": {
 			"gloss": "królujesz",
-			"function": "Najkrótsze z zakończeń w tej części Mszy: żadnej Trójcy po imieniu, żadnego Deus w dopowiedzeniu — modlitwa się kończy, a Msza idzie dalej."
+			"function": "Najkrótsze z zakończeń w tej części Mszy: żadnej Trójcy po imieniu, żadnego Deus w dopowiedzeniu — modlitwa się kończy, a Msza toczy się dalej."
 		},
 		"w032": {
 			"gloss": "na"

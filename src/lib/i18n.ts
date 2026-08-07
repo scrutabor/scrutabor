@@ -83,7 +83,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		catalogDescription:
 			'Modlitewnik łaciński z analizą słowo po słowie — przekład, gramatyka i wymowa każdego słowa.',
 		editioDescription:
-			'Jak powstaje to wydanie: świadkowie i kolacja tekstów, mechaniczna weryfikacja analiz, stany przeglądu.',
+			'Jak powstaje to wydanie: świadkowie tekstu i ich kolacjonowanie, mechaniczna weryfikacja analiz, etapy przeglądu.',
 		grammarDescription: 'Pojęcia gramatyki łacińskiej objaśnione na przykładach z modlitw.',
 		pronunciationDescription:
 			'Zasady wymowy łaciny kościelnej — tradycja rzymska i polska, z transkrypcją.',

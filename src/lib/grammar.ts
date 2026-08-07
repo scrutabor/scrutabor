@@ -47,7 +47,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 			en: 'The case of the subject: who or what acts, or whom the sentence is about. In the prayers it often stands with an understood “is” — Latin likes to drop the copula.'
 		},
 		spot: {
-			pl: 'To forma słownikowa rzeczownika w liczbie pojedynczej — ta, którą znajdziesz w haśle.',
+			pl: 'To forma słownikowa rzeczownika w liczbie pojedynczej — ta, która stoi w haśle.',
 			en: 'It is the dictionary form of a noun in the singular — the one you find in the entry.'
 		},
 		examples: [

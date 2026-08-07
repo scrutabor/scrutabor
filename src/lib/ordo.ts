@@ -148,7 +148,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'Psalm 42, said in alternation with the server, closed by the Glória Patri and the antiphon again.'
 				},
 				when: {
-					pl: 'odpada w okresie Męki Pańskiej i we Mszach żałobnych — wraz z doksologią i powtórzoną antyfoną',
+					pl: 'opuszcza się w okresie Męki Pańskiej i we Mszach żałobnych — wraz z doksologią i powtórzoną antyfoną',
 					en: 'omitted in Passiontide and at Requiem Masses — with its doxology and the repeated antiphon'
 				}
 			},
@@ -277,7 +277,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Epístola',
 				kind: 'proper',
 				note: {
-					pl: 'Kapłan czyta po stronie lekcji czytanie dnia; że się skończyło, poznać po odpowiedzi ministranta: Deo grátias.',
+					pl: 'Po stronie lekcji kapłan czyta lekcję dnia; że się skończyła, poznać po odpowiedzi ministranta: Deo grátias.',
 					en: 'At the Epistle side the priest reads the day’s reading; that it has ended you know from the server’s Deo grátias.'
 				}
 			},
@@ -388,7 +388,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest washes his fingertips, saying Psalm 25 from the verse that names the altar.'
 				},
 				when: {
-					pl: 'Chwała Ojcu odpada we Mszach żałobnych i w okresie Męki Pańskiej',
+					pl: 'Chwały Ojcu nie odmawia się we Mszach żałobnych ani w okresie Męki Pańskiej',
 					en: 'the Glória Patri is omitted at Requiem Masses and in Passiontide'
 				}
 			},
@@ -519,7 +519,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/qui-pridie',
 				note: {
-					pl: 'Konsekracja chleba. Kapłan przyklęka, unosi Hostię, przyklęka znowu; dzwonek dzwoni przy każdym geście.',
+					pl: 'Konsekracja chleba. Kapłan przyklęka, unosi Hostię, przyklęka znowu; ministrant dzwoni przy każdym geście.',
 					en: 'The consecration of the bread. The priest genuflects, raises the Host, genuflects again; the bell rings at each.'
 				}
 			},
@@ -589,7 +589,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/per-quem-haec-omnia',
 				note: {
-					pl: 'Krótka modlitwa, w której miejscu dawniej błogosławiono oleje i plony.',
+					pl: 'Krótka modlitwa, w której miejscu dawniej błogosławiono oleje i płody ziemi.',
 					en: 'A short prayer, at whose place the oils and the fruits of the earth were once blessed.'
 				}
 			},
@@ -739,7 +739,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/quod-ore-sumpsimus',
 				note: {
-					pl: 'Ministrant wlewa wino do kielicha; kapłan oczyszcza go i pije.',
+					pl: 'Ministrant wlewa wino do kielicha; kapłan oczyszcza go i spożywa ablucję.',
 					en: 'The server pours wine into the chalice; the priest purifies it and drinks.'
 				}
 			},
@@ -842,7 +842,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'orationes/ave-maria',
 				note: {
-					pl: 'Kapłan klęka u stopni ołtarza i zaczyna z ludem trzy Zdrowaś Maryjo; ludzie odpowiadają drugą połową każdego z nich.',
+					pl: 'Kapłan klęka u stopni ołtarza i zaczyna z ludem trzy Zdrowaś Maryjo; wierni odpowiadają drugą połową każdego z nich.',
 					en: 'The priest kneels at the foot of the altar and begins three Hail Marys with the people, who answer the second half of each.'
 				},
 				when: {

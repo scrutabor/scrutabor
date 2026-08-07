@@ -46,13 +46,13 @@
 				własna wydania — glosy, przekłady i&nbsp;objaśnienia.
 			</p>
 			<p class="what">
-				Warto wiedzieć, czego taka weryfikacja dowodzi, a&nbsp;czego nie. Analizatory rozpoznają
+				Ta weryfikacja czegoś dowodzi, a&nbsp;czegoś nie. Analizatory rozpoznają
 				<em>formę</em>: mówią, jakie rozbiory dana forma dopuszcza. Prawie trzy piąte słów
 				w&nbsp;tym wydaniu ma formę wieloznaczną — „María” dopuszcza dwanaście odczytań — więc
 				zgodność znaczy tyle, że nasz rozbiór jest wśród możliwych, a&nbsp;nie że jest jedynym.
 				Wybór właściwego odczytania w&nbsp;kontekście należy do wydania i&nbsp;to on czeka na
-				przegląd eksperta. Oba analizatory są niezależnymi programami o&nbsp;w&nbsp;dużej mierze
-				różnych słownikach, ale mają wspólne źródło — Lewis&nbsp;&amp; Short.
+				przegląd eksperta. Oba analizatory są niezależnymi programami o&nbsp;słownikach w&nbsp;dużej
+				mierze różnych, ale mają wspólne źródło — Lewis&nbsp;&amp; Short.
 			</p>
 			<p class="what">
 				„Zaakceptowane” przy słowie znaczy: rozbiór zgodny z&nbsp;głosami analizatorów; „do
