@@ -9,14 +9,28 @@
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import type { Lang } from '$lib/i18n';
 
-	// Most pages go back to the reader's home; the grammar pages go back to
-	// their own index, which is the only thing that varies.
-	let { lang, href, label }: { lang: Lang; href?: string; label?: string } = $props();
-	const to = $derived(href ?? `/${lang}`);
+	// A trail, not a title. The corner used to hold ONE link — the way back
+	// — and the grammar pages, whose way back is their own index rather than
+	// the catalogue, therefore relabelled it: the word in the top left read
+	// "gramatyka" instead of "scrutabor", so on those pages the book
+	// appeared to have been renamed (owner, 2026-08-07).
+	//
+	// The name of the book is not a navigation control and does not move. It
+	// stays, and a page one level down adds its parent after it —
+	// scrutabor › gramatyka — which says both things at once: where you are,
+	// and that you can go up. An ordered list because that is what a
+	// breadcrumb is; the separator is drawn, not read.
+	let { lang, parent, parentLabel }: { lang: Lang; parent?: string; parentLabel?: string } =
+		$props();
 </script>
 
 <nav>
-	<a href={to} class="back smallcaps">{label ?? 'scrutabor'}</a>
+	<ol class="trail smallcaps">
+		<li><a href="/{lang}" class="back">scrutabor</a></li>
+		{#if parent && parentLabel}
+			<li><span class="sep" aria-hidden="true">›</span><a href={parent}>{parentLabel}</a></li>
+		{/if}
+	</ol>
 	<div class="nav-right">
 		<LangMenu {lang} />
 		<TextSize {lang} />
@@ -47,13 +61,31 @@
 		gap: 0.5rem;
 	}
 
-	.back {
+	/* The trail wraps like everything else in this row, and a crumb that
+	   wraps takes its separator with it. */
+	.trail {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.trail a {
 		text-decoration: none;
 		color: var(--ink-soft);
 		font-size: 0.85rem;
 	}
 
-	.back:hover {
+	.trail a:hover {
 		color: var(--ink);
+	}
+
+	.sep {
+		/* quieter than either crumb: it is punctuation, not a step */
+		margin: 0 0.4rem;
+		font-size: 0.85rem;
+		color: var(--border);
 	}
 </style>

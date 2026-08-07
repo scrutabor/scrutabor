@@ -64,7 +64,7 @@ export interface Messages {
 const MESSAGES: Record<Lang, Messages> = {
 	pl: {
 		langName: 'Polski',
-		tagline: 'Módl się po łacinie ze zrozumieniem.',
+		tagline: 'Modlitwa po łacinie ze zrozumieniem.',
 		mottoRef: 'ps 118, 34',
 		workingEdition: 'wydanie robocze',
 		levels: ['sama łacina', 'słowo po słowie', 'pełny przekład'],
@@ -133,7 +133,7 @@ const MESSAGES: Record<Lang, Messages> = {
 	},
 	en: {
 		langName: 'English',
-		tagline: 'Pray in Latin with understanding.',
+		tagline: 'Prayer in Latin, with understanding.',
 		mottoRef: 'ps 118 (119), 34',
 		workingEdition: 'working edition',
 		levels: ['Latin only', 'word by word', 'full translation'],

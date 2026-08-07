@@ -15,6 +15,7 @@ import {
 	marked,
 	namesSpeaker,
 	namesVoice,
+	saidByEveryone,
 	turns
 } from './speaker-marks';
 
@@ -108,6 +109,31 @@ describe('where the mark prints', () => {
 
 	it('never on a verse with no speaker', () => {
 		expect(marked([verse(undefined)], 0)).toBe(false);
+	});
+
+	// The Ave María: an unattributed first half, then "Sancta María" and the
+	// rest said by everyone. The turn from nobody to omnes printed an O.
+	// with no name beside it, over a line already the reader's.
+	it('and nowhere in a prayer that is everyone’s throughout', () => {
+		const ave = [verse(undefined), verse('omnes')];
+		expect(saidByEveryone(ave)).toBe(true);
+		expect(marked(ave, 1)).toBe(false);
+	});
+
+	it('but a prayer said throughout by the priest keeps its mark', () => {
+		// Which is the point of the distinction: there the mark says
+		// something the reader needs, that these words are not theirs.
+		const canon = [verse('sacerdos'), verse('sacerdos')];
+		expect(saidByEveryone(canon)).toBe(false);
+		expect(marked(canon, 0)).toBe(true);
+	});
+
+	it('and a plain prayer that is a real dialogue keeps every one', () => {
+		// The Angelus, which is next on the prayer shelf: everyone's answer
+		// to the celebrant's versicle, and the books mark both.
+		const angelus = [verse('sacerdos'), verse('omnes'), verse('sacerdos'), verse('omnes')];
+		expect(saidByEveryone(angelus)).toBe(false);
+		expect([0, 1, 2, 3].map((i) => marked(angelus, i))).toEqual([true, true, true, true]);
 	});
 });
 

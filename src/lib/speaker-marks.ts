@@ -44,6 +44,33 @@ export function hasAnswers(segments: Segment[]): boolean {
 	);
 }
 
+/**
+ * Is the whole of this text said by everyone — the reader included?
+ *
+ * `omnes` is the one speaker every role owns (see OWNED in $lib/role): a
+ * priest, a server and someone in the pew all say it. So a text with no
+ * other voice in it is a text whose every line is the reader's, whoever
+ * they are, and a mark beside each of them tells them apart from nobody.
+ *
+ * That is what an O. before *Sancta María* was doing in the Ave María
+ * (owner, 2026-08-07: "a bit confusing"). His instinct was to keep marks
+ * out of the plain prayers and inside the Ordo, which is right about the
+ * shelf as it stands and wrong as a rule — the Angelus is a plain prayer
+ * and a genuine dialogue, ℣ Ángelus Dómini nuntiávit Maríæ ℟ Et concépit,
+ * and the books mark it. So the test is the text's own voices, not which
+ * shelf it sits on: the four prayers this silences today are exactly the
+ * four he meant, and the Angelus will keep its marks when it arrives.
+ *
+ * A prayer said throughout by the PRIEST is the other case and keeps its
+ * mark, because there it says something the reader needs: not yours.
+ */
+export function saidByEveryone(segments: Segment[]): boolean {
+	const voices = new Set(
+		segments.filter((s) => s.type === 'verse' && s.speaker).map((s) => s.speaker)
+	);
+	return voices.size === 1 && voices.has('omnes');
+}
+
 /** Segment index where each speaker first appears. */
 export function firstAppearance(segments: Segment[]): Record<string, number> {
 	const seen: Record<string, number> = {};
@@ -92,10 +119,13 @@ export function afterRubric(segments: Segment[], i: number): boolean {
  *     on each of its phrases: that prayer has a direction between every one
  *     of them, so the reader is coming back to the text each time, and each
  *     time is a place to be told.
+ *   * and nowhere at all in a prayer that is everyone's throughout, where
+ *     the mark has nobody to tell the reader apart from — saidByEveryone.
  */
 export function marked(segments: Segment[], i: number): boolean {
 	const sp = segments[i]?.speaker;
 	if (!sp) return false;
+	if (saidByEveryone(segments)) return false;
 	if (afterRubric(segments, i)) return true;
 	for (let j = i - 1; j >= 0; j--) {
 		if (segments[j].type === 'verse') return segments[j].speaker !== sp;
