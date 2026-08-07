@@ -77,7 +77,7 @@
 			</li>
 		</ul>
 		<p class="mail">
-			{t.mailLead} <a href="mailto:js@jakubstefanski.com">js@jakubstefanski.com</a>
+			{t.mailLead} <a href="mailto:contact@scrutabor.org">contact@scrutabor.org</a>
 		</p>
 		<p class="note">{t.note}</p>
 		<p class="back"><a href="/{lang}">{t.back} ›</a></p>
@@ -92,6 +92,10 @@
 	   subpages. */
 	main {
 		max-width: 34rem;
+		/* The page column is wider than this cap, and a stretch-flex
+		   child aligns start — without this the whole block sits left of
+		   the viewport centre on wide screens. */
+		margin-inline: auto;
 	}
 
 	.lede {

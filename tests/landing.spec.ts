@@ -166,10 +166,27 @@ test.describe('landing @online', () => {
 		await expect(
 			page.locator('a[href="https://github.com/scrutabor/scrutabor/issues"]')
 		).toBeVisible();
-		await expect(page.locator('a[href^="mailto:"]')).toBeVisible();
+		// the project's own address, not a personal one — the stores and
+		// the readers both get the same door
+		await expect(page.locator('a[href="mailto:contact@scrutabor.org"]')).toBeVisible();
 		await page.goto('/en/support');
 		await expect(page.locator('h1')).toHaveText('Support');
 		expect((await page.request.get('/en/support')).status()).toBe(200);
+	});
+
+	test('the landing subpages stand centered on a wide screen', async ({ page }) => {
+		// Both subpages cap their column at 34rem inside a wider stretch-flex
+		// page; without margin-inline auto the block hugs the left and the
+		// misalignment only shows past the page's own max-width.
+		await page.setViewportSize({ width: 1920, height: 900 });
+		for (const path of ['/pl/support', '/en/privacy']) {
+			await page.goto(path);
+			const centre = await page.locator('main').evaluate((el) => {
+				const r = el.getBoundingClientRect();
+				return Math.round(r.x + r.width / 2);
+			});
+			expect(centre, `${path} main centre at 1920px`).toBe(960);
+		}
 	});
 
 	test('the footer reaches the public source', async ({ page }) => {

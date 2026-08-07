@@ -81,6 +81,10 @@
 
 	main {
 		max-width: 34rem;
+		/* The page column is wider than this cap, and a stretch-flex
+		   child aligns start — without this the whole block sits left of
+		   the viewport centre on wide screens. */
+		margin-inline: auto;
 	}
 
 	.lede {
