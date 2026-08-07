@@ -35,6 +35,25 @@ test('grammatica index lists the concept tranche in groups', async ({ page }) =>
 	await expect(page.locator('a[href="/pl/grammatica/ablativus"]')).toBeVisible();
 });
 
+test('a page one level down names its parent without renaming the book', async ({ page }) => {
+	// The corner held ONE link, the way back — so the grammar pages, whose
+	// way back is their own index, relabelled it, and on those pages the
+	// book appeared to have been renamed "gramatyka" (owner, 2026-08-07).
+	// The name of the book is not a navigation control and does not move.
+	await page.goto('/pl/grammatica/nominativus');
+	const trail = page.locator('nav .trail');
+	await expect(trail.locator('li')).toHaveCount(2);
+	await expect(trail.locator('a').first()).toHaveText('scrutabor');
+	await expect(trail.locator('a').first()).toHaveAttribute('href', '/pl');
+	await expect(trail.locator('a').nth(1)).toHaveText('gramatyka');
+
+	// the second crumb is the way up, and one level up there is only the book
+	await trail.locator('a').nth(1).click();
+	await expect(page).toHaveURL(atRoute('/pl/grammatica'));
+	await expect(page.locator('nav .trail li')).toHaveCount(1);
+	await expect(page.locator('nav .trail a')).toHaveText('scrutabor');
+});
+
 test('a concept example deep-links into the prayer', async ({ page }) => {
 	await page.goto('/en/grammatica/deponens');
 	await expect(page.locator('h1')).toHaveText('deponent');

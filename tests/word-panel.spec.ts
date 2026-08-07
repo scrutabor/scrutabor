@@ -121,3 +121,41 @@ test('switching language keeps the panel open on the same word', async ({ page }
 	await expect(page).toHaveURL(atRoute('/en/orationes/pater-noster', '?w=w008'));
 	await expect(page.locator(panelWord)).toHaveText('nomen');
 });
+
+test('the way out of a long panel does not scroll away', async ({ page }) => {
+	// A word with senses, a function note and its sources outgrows the
+	// sheet on a phone, so the sheet scrolls — and the HEADER scrolled with
+	// it, trimming the word and carrying the × up out of the panel
+	// altogether (owner, 2026-08-07): a sheet covering the prayer with no
+	// visible way to close it.
+	//
+	// The word is pinned along with the ×, not just the ×. Everything below
+	// is an answer to "what is this word", and the words a reader taps are
+	// so often near-identical forms of one lemma that losing the question
+	// two screens down is a real loss.
+	await page.setViewportSize({ width: 375, height: 812 });
+	await page.goto('/en/ordinarium/evangelium-ultimum?w=w184');
+
+	const sheet = page.locator('aside.sheet');
+	const header = sheet.locator('header');
+	const inner = sheet.locator('.inner');
+	await expect(sheet.locator('.form')).toHaveText('plenum');
+	expect(
+		await inner.evaluate((el) => el.scrollHeight > el.clientHeight),
+		'this panel is long enough to scroll — pick a longer word if it stops being'
+	).toBe(true);
+
+	const before = await header.boundingBox();
+	await inner.evaluate((el) => (el.scrollTop = el.scrollHeight));
+	// the rule under the header shows only once something has gone up behind it
+	await expect(header).toHaveClass(/scrolled/);
+
+	const after = await header.boundingBox();
+	expect(after!.y, 'the header held its place').toBeCloseTo(before!.y, 0);
+	await expect(sheet.locator('.form')).toBeInViewport();
+	await expect(sheet.locator('.close')).toBeInViewport();
+
+	// and it still does what it is there for
+	await sheet.locator('.close').click();
+	await expect(sheet).toHaveCount(0);
+});

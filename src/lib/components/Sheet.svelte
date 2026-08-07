@@ -55,13 +55,34 @@
 	function escape(e: KeyboardEvent) {
 		if (e.key === 'Escape') onclose();
 	}
+
+	// A long analysis outgrows the sheet and the sheet scrolls, which is
+	// right — but the HEADER was scrolling with it, and the header holds the
+	// only way out. On a phone, a word with several senses and a function
+	// note took the × off the top of the panel entirely (owner, 2026-08-07):
+	// a sheet with no visible way to close it, over the prayer it covers.
+	//
+	// So the header is pinned and only the body moves. The word goes with
+	// it, not just the ×: everything below is an answer to "what is this
+	// word", and scrolled two screens into Dómine's senses the question
+	// itself should still be on the page — the more so here, where the words
+	// a reader taps are so often near-identical forms of the same lemma.
+	//
+	// The rule under it appears only once something has actually gone up
+	// behind the header, so a short panel keeps the plain look it has now
+	// and a scrolled one says plainly where the fixed part ends.
+	let scrolled = $state(false);
 </script>
 
 <svelte:window onclick={outside} onkeydown={escape} />
 
 <aside class="sheet {extra}" aria-label={label}>
-	<div class="inner" style:max-height={max}>
-		<header>
+	<div
+		class="inner"
+		style:max-height={max}
+		onscroll={(e) => (scrolled = e.currentTarget.scrollTop > 0)}
+	>
+		<header class:scrolled>
 			{#if lead}{@render lead()}{:else}<span class="smallcaps title">{title}</span>{/if}
 			<button class="close" onclick={onclose} aria-label={M[lang].close}>×</button>
 		</header>
@@ -93,17 +114,36 @@
 		}
 	}
 
+	/* This box still both scrolls and carries the height the page reserves,
+	   so `max` describes the whole sheet exactly as before and
+	   main.panel-open goes on padding the reading column by the same
+	   figure. It keeps the scrolling because it keeps the close button
+	   inside it: a scrollable region with no focusable descendant is
+	   unreachable by keyboard, and pulling the header out into a sibling
+	   would have created one. The top padding moved into the header, so
+	   that nothing shows in the strip above it. */
 	.inner {
 		max-width: 38rem;
 		margin: 0 auto;
-		padding: 1.1rem 1.5rem calc(1.4rem + env(safe-area-inset-bottom));
+		padding: 0 1.5rem calc(1.4rem + env(safe-area-inset-bottom));
 		overflow-y: auto;
 	}
 
 	header {
+		position: sticky;
+		top: 0;
+		z-index: 1;
+		background: var(--surface);
 		display: flex;
 		align-items: baseline;
 		gap: 1rem;
+		padding: 1.1rem 0 0.2rem;
+		/* held in place, so the row below cannot shift when it appears */
+		border-bottom: 1px solid transparent;
+	}
+
+	header.scrolled {
+		border-bottom-color: var(--border);
 	}
 
 	.title {

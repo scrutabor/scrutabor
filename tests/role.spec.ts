@@ -163,6 +163,26 @@ test('a text the sources say nothing about stays unmarked', async ({ page }) => 
 	expect(await page.locator('.who-name').count()).toBeLessThan(verses);
 });
 
+test('a prayer everyone says is not marked either, though it is attributed', async ({ page }) => {
+	// The Ave María: an unattributed first half, then "Sancta María" and the
+	// rest given to omnes. The turn from nobody to everyone printed an O.
+	// beside a line that was already the reader's, with no name anywhere to
+	// say what the letter meant (owner, 2026-08-07: "a bit confusing").
+	//
+	// A mark tells voices apart. Where the only voice is everyone — the one
+	// speaker a priest, a server and a reader in the pew all own — there is
+	// nobody to be told apart from.
+	await page.goto('/pl/orationes/ave-maria');
+	await expect(page.locator('.verse')).toHaveCount(2);
+	await expect(page.locator('.verse .mark')).toHaveCount(0);
+	await expect(page.locator('.who')).toHaveCount(0);
+
+	// But a prayer said throughout by the PRIEST keeps its mark, because
+	// there the letter says something the reader needs: not yours.
+	await page.goto('/pl/ordinarium/te-igitur');
+	await expect(page.locator('.verse .mark').first()).toHaveText('V.');
+});
+
 test('the mark prints where the voice turns, and again after every rubric', async ({ page }) => {
 	// Two halves of one rule, both the owner's, both about never making a
 	// reader work out where the last mark stopped applying.

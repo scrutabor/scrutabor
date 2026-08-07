@@ -153,7 +153,7 @@
 </svelte:head>
 
 <div class="page">
-	<PageNav {lang} href="/{lang}/grammatica" label={msgs.grammarTitle} />
+	<PageNav {lang} parent="/{lang}/grammatica" parentLabel={msgs.grammarTitle} />
 
 	<main>
 		<h1 class="minor">{lang === 'pl' ? 'wymowa' : 'pronunciation'}</h1>
