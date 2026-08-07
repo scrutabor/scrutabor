@@ -64,6 +64,13 @@ test('a page one level down names its parent without renaming the book', async (
 	await expect(ordo.locator('li')).toHaveCount(2);
 	await expect(ordo.locator('a').nth(1)).toHaveText('Ordo Missæ');
 	await expect(ordo.locator('a').nth(1)).toHaveAttribute('lang', 'la');
+	// …and RENDERS in one case, whatever case it is written in. small-caps
+	// shrinks lowercase letters and leaves capitals at full height, so the
+	// O and the M of "Ordo Missæ" stood over small letters and the crumb
+	// read as though it were set larger than "scrutabor" (owner,
+	// 2026-08-07 — it is not: both compute to 13.6px). The DOM keeps the
+	// proper name; only the paint is lowercased.
+	expect(await ordo.locator('a').nth(1).innerText()).toBe('ordo missæ');
 	await ordo.locator('a').nth(1).click();
 	await expect(page).toHaveURL(atRoute('/pl/ordo'));
 });

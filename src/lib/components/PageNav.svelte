@@ -74,9 +74,20 @@
 		gap: 0.5rem;
 	}
 
-	/* The trail wraps like everything else in this row, and a crumb that
-	   wraps takes its separator with it. */
+	/* Every crumb the same height, whatever case it is written in.
+	   `font-variant-caps: small-caps` only shrinks LOWERCASE letters;
+	   capitals keep their full height. So "scrutabor" came out uniformly
+	   small and "Ordo Missæ" came out with two full-height letters
+	   standing over small ones, and the second crumb read as though it
+	   were set larger (owner, 2026-08-07 — it is not: both compute to
+	   13.6px). Lowercased first, so the small-caps rule has only
+	   lowercase to work on and the case a label happens to be written in
+	   stops being a typographic decision. Same pairing as .who in
+	   TextBody, for the same reason.
+	   text-transform is paint: the DOM text, and so the accessible name,
+	   is still "Ordo Missæ". */
 	.trail {
+		text-transform: lowercase;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: baseline;
