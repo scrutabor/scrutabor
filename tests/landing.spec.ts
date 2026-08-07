@@ -91,6 +91,23 @@ test.describe('landing @online', () => {
 		await expect(page.locator('.word-box-form')).toHaveText('Da');
 	});
 
+	test('a cross-reference outside the verse opens the psalm page at its word', async ({ page }) => {
+		await page.goto('/pl');
+		// custódiam's note cites exquíram from verse 33 — a word the
+		// specimen does not carry, so the reference leaves the landing for
+		// the real page, deep-linked at the cited word
+		await page.locator('#w020').click();
+		await expect(page.locator('.word-box-form')).toHaveText('custódiam');
+		// the note cites two witnesses: scrutábor within the verse (re-aims
+		// the box) and exquíram beyond it (leaves for the psalm page)
+		await page.locator('.word-box .xref', { hasText: 'scrutábor' }).click();
+		await expect(page.locator('.word-box-form')).toHaveText('scrutábor');
+		await page.locator('#w020').click();
+		await page.locator('.word-box .xref', { hasText: 'exquíram' }).click();
+		await page.waitForURL(atRoute('/app/pl/psalmi/118-he', '?w=w009'));
+		await expect(page.locator('aside')).toContainText('exquíram');
+	});
+
 	test('the specimen citation reaches the psalm page', async ({ page }) => {
 		await page.goto('/pl');
 		await expect(page.locator('.stanza-link a')).toHaveAttribute('href', '/app/pl/psalmi/118-he');

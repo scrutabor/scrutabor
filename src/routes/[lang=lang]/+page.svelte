@@ -4,6 +4,7 @@
 	// book itself for one verse — verse 34 of Psalm 118, the motto's own,
 	// straight from the corpus (see +page.server.ts) with the app's real
 	// slider and the app's real word panel, fully alive.
+	import { goto } from '$app/navigation';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
@@ -261,7 +262,15 @@
 							analysis={selAnalysis}
 							lex={data.specimen.lex}
 							{lang}
-							onnavigate={(id) => (selected = id)}
+							onnavigate={(id) => {
+								// A note may cite a word from another verse of the
+								// stanza (custódiam cites exquíram); the specimen
+								// carries only its own verse, so such a reference
+								// opens the real page at the cited word instead of
+								// silently re-aiming the box at the fallback.
+								if (wordsOf.has(id)) selected = id;
+								else goto(`/app/${lang}/psalmi/118-he?w=${id}`);
+							}}
 						/>
 					</div>
 				{/if}

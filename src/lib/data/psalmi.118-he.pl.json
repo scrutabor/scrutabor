@@ -69,7 +69,7 @@
 		},
 		"w009": {
 			"gloss": "będę szukał",
-			"function": "Wydanie nie rozstrzyga tu ani czasu, ani trybu: forma jest zarazem czasem przyszłym trybu oznajmującego, „będę szukał”, i czasem teraźniejszym trybu łączącego, „bym szukał”. Nic w zdaniu nie rozstrzyga, więc nic się nie orzeka. Tak samo przy „custódiam” (w020)."
+			"function": "Wydanie nie rozstrzyga tu ani czasu, ani trybu: forma jest zarazem czasem przyszłym trybu oznajmującego, „będę szukał”, i czasem teraźniejszym trybu łączącego, „bym szukał”. Nic w zdaniu nie rozstrzyga, więc nic się nie orzeka. Ta sama forma powraca w „custódiam” (w020)."
 		},
 		"w010": {
 			"gloss": "jej",
@@ -80,21 +80,22 @@
 		},
 		"w012": {
 			"gloss": "daj",
-			"function": "Tryb rozkazujący od „do”. Od tego słowa zaczyna się werset, od którego wzięło nazwę to wydanie."
+			"function": "Tym słowem zaczyna się werset, od którego to wydanie wzięło nazwę."
 		},
 		"w013": {
 			"gloss": "mi"
 		},
 		"w014": {
 			"gloss": "zrozumienie",
-			"function": "Od intellégere — czytać między wierszami, rozeznawać. Prośba nie dotyczy wiedzy, lecz zdolności pojmowania."
+			"function": "Dopełnienie prośby „Da” (w012)."
 		},
 		"w015": {
-			"gloss": "a"
+			"gloss": "a",
+			"function": "Po prośbie „Da” (w012) zapowiada jej skutek: daj — a będę badał. Stąd „a”, nie „i”."
 		},
 		"w016": {
 			"gloss": "będę badał",
-			"function": "Czas przyszły po „Da” (w012) brzmi jak ślubowanie: najpierw dar zrozumienia, potem praca badania."
+			"function": "Czas przyszły po „Da” (w012) brzmi jak obietnica: najpierw dar zrozumienia, potem trud badania."
 		},
 		"w017": {
 			"gloss": "prawo"
@@ -107,7 +108,7 @@
 		},
 		"w020": {
 			"gloss": "zachowam",
-			"function": "Ta sama dwuznaczność co przy „exquíram” (w009): czas przyszły trybu oznajmującego albo czas teraźniejszy trybu łączącego. Wydanie nie orzeka."
+			"function": "Ta sama dwuznaczność co przy „exquíram” (w009): czas przyszły trybu oznajmującego albo czas teraźniejszy trybu łączącego. Sąsiedni „scrutábor” (w016), jednoznacznie przyszły, przechyla wagę — ale sama forma nie rozstrzyga."
 		},
 		"w021": {
 			"gloss": "je",
@@ -121,7 +122,7 @@
 		},
 		"w024": {
 			"gloss": "sercu",
-			"function": "Ablativus przy „in” (w022). W piśmie hebrajskim serce jest siedzibą rozumu i woli, nie uczuć — prośba z wersetu 34 domyka się tu tym samym."
+			"function": "Ablativus przy „in” (w022). W hebrajszczyźnie biblijnej serce jest siedzibą rozumu i woli, nie tylko uczuć — werset kończy się więc tam, gdzie się zaczął: prośbą o zrozumienie."
 		},
 		"w025": {
 			"gloss": "moim"
