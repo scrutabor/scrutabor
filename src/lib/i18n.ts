@@ -57,8 +57,6 @@ export interface Messages {
 	roleLabel: string;
 	roles: Record<'populus' | 'minister' | 'sacerdos', string>;
 	roleHint: Record<'populus' | 'minister' | 'sacerdos', string>;
-	/** What this part actually has to say, counted from the corpus. */
-	rolePart: (answers: number, said: number, titles: string[]) => string;
 	quietCollapsed: string;
 	quietReveal: string;
 }
@@ -129,12 +127,6 @@ const MESSAGES: Record<Lang, Messages> = {
 			minister: 'części odmawiane głośno, z pełnymi odpowiedziami ministranta',
 			sacerdos: 'całe Ordo Missæ, wraz z modlitwami odmawianymi po cichu'
 		},
-		rolePart: (answers, said, titles) =>
-			said === 0
-				? `Odpowiadasz w ${answers} miejscach.`
-				: titles.length
-					? `Odpowiadasz w ${answers} miejscach, a w całości odmawiasz: ${titles.join(' · ')}.`
-					: `Odpowiadasz w ${answers} miejscach i odmawiasz w całości ${said} części.`,
 		quietCollapsed: 'kapłan modli się po cichu',
 		quietReveal: 'pokaż',
 		pronunciationHint: 'zasady wymowy'
@@ -208,12 +200,6 @@ const MESSAGES: Record<Lang, Messages> = {
 			minister: 'the parts said aloud, with the server’s answers in full',
 			sacerdos: 'the whole Ordo Missæ, including the prayers said silently'
 		},
-		rolePart: (answers, said, titles) =>
-			said === 0
-				? `You answer at ${answers} places.`
-				: titles.length
-					? `You answer at ${answers} places, and say in full: ${titles.join(' · ')}.`
-					: `You answer at ${answers} places, and say ${said} of the parts in full.`,
 		quietCollapsed: 'the priest prays silently',
 		quietReveal: 'show',
 		pronunciationHint: 'pronunciation guide'

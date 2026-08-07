@@ -206,24 +206,25 @@ test('every prayer the Ordo links to is actually built', async ({ page, request 
 	expect(missing).toEqual([]);
 });
 
-test('the index says what the reader’s own part has to say', async ({ page }) => {
-	// Counted from the corpus at prerender, not written by hand: the picker
-	// changes what the book shows, and this says what that means before the
-	// reader goes looking for it.
+test('the index answers a change of part in the book’s own voice', async ({ page }) => {
+	// The picker's hint is the WHOLE answer the index gives. It stood under
+	// a second line that counted the reader's places — "You answer at 16
+	// places, and say in full: …" — which said the same thing in the second
+	// person, on a page meant for browsing, and no missal does that. The
+	// parts are marked where the reader meets them instead.
 	await page.goto('/en/ordo');
-	const line = page.locator('.role-part');
-	await expect(line).toContainText('You answer at 16 places');
-	// two parts is few enough to name; the celebrant's 43 are not
-	await expect(line).toContainText('Confíteor (Ministrórum)');
+	const hint = page.locator('.picker:not(.compact) .hint');
+	await expect(hint).toHaveText('the parts said aloud, with the answers of the faithful');
 
 	await page.getByRole('radio', { name: 'priest' }).click();
-	await expect(line).toContainText('45 of the parts in full');
-	await expect(line).not.toContainText('Confíteor (Ministrórum)');
+	await expect(hint).toHaveText('the whole Ordo Missæ, including the prayers said silently');
 
-	// and it is counted, not guessed: the numbers must match what the ordo
-	// pages actually mark as the reader's
 	await page.getByRole('radio', { name: 'faithful' }).click();
-	await expect(line).toContainText('You answer at 16 places');
+	await expect(hint).toHaveText('the parts said aloud, with the answers of the faithful');
+
+	// and nothing counts at the reader
+	await expect(page.locator('.role-part')).toHaveCount(0);
+	await expect(page.locator('main')).not.toContainText('You answer at');
 });
 
 test('the narrative names the priest rather than calling him "he"', async ({ page }) => {
