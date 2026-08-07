@@ -367,6 +367,12 @@
 			"gender": "f",
 			"decl": 1
 		},
+		"aequitas": {
+			"head": "ǽquitas, æquitátis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
 		"aequus": {
 			"head": "æquus, -a, -um",
 			"pos": "adj"
@@ -422,6 +428,11 @@
 		"amen": {
 			"head": "amen",
 			"pos": "intj"
+		},
+		"amputo": {
+			"head": "ámputo, amputáre, amputávi, amputátum",
+			"pos": "verb",
+			"conj": 1
 		},
 		"angelus": {
 			"head": "ángelus, -i",
@@ -516,10 +527,21 @@
 			"gender": "n",
 			"decl": 2
 		},
+		"avaritia": {
+			"head": "avarítia, avarítiæ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
+		},
 		"aveo": {
 			"head": "áveo, avére",
 			"pos": "verb",
 			"conj": 2
+		},
+		"averto": {
+			"head": "avérto, avértere, avérti, avérsum",
+			"pos": "verb",
+			"conj": 3
 		},
 		"baptisma": {
 			"head": "baptísma, baptísmatis",
@@ -687,6 +709,11 @@
 			"head": "concélebro, concelebráre, concelebrávi, concelebrátum",
 			"pos": "verb",
 			"conj": 1
+		},
+		"concupisco": {
+			"head": "concupísco, concupíscere, concupívi, concupítum",
+			"pos": "verb",
+			"conj": 3
 		},
 		"condemnatio": {
 			"head": "condemnátio, condemnatiónis",
@@ -1086,6 +1113,12 @@
 			"pos": "verb",
 			"conj": 1
 		},
+		"eloquium": {
+			"head": "elóquium, elóquii",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
 		"emitto": {
 			"head": "emítto, emíttere, emísi, emíssum",
 			"pos": "verb",
@@ -1156,6 +1189,11 @@
 			"pos": "noun",
 			"gender": "n",
 			"decl": 2
+		},
+		"exquiro": {
+			"head": "exquíro, exquírere, exquisívi, exquisítum",
+			"pos": "verb",
+			"conj": 3
 		},
 		"exspecto": {
 			"head": "exspécto, exspectáre, exspectávi, exspectátum",
@@ -1444,6 +1482,11 @@
 			"pos": "verb",
 			"conj": 3
 		},
+		"inclino": {
+			"head": "inclíno, inclináre, inclinávi, inclinátum",
+			"pos": "verb",
+			"conj": 1
+		},
 		"incolumitas": {
 			"head": "incolúmitas, incolumitátis",
 			"pos": "noun",
@@ -1540,6 +1583,12 @@
 			"gender": "f",
 			"decl": 3
 		},
+		"intellectus": {
+			"head": "intelléctus, intelléctus",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 4
+		},
 		"inter": {
 			"head": "inter",
 			"pos": "prep"
@@ -1596,6 +1645,10 @@
 			"pos": "verb",
 			"conj": 2
 		},
+		"iucundus": {
+			"head": "iucúndus, -a, -um",
+			"pos": "adj"
+		},
 		"iudicium": {
 			"head": "iudícium, -ii",
 			"pos": "noun",
@@ -1606,6 +1659,12 @@
 			"head": "iúdico, iudicáre, iudicávi, iudicátum",
 			"pos": "verb",
 			"conj": 1
+		},
+		"iustificatio": {
+			"head": "iustificátio, iustificatiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
 		},
 		"iustus": {
 			"head": "iustus, -a, -um",
@@ -1659,6 +1718,12 @@
 			"head": "lavo, laváre, lavi, lautum",
 			"pos": "verb",
 			"conj": 1
+		},
+		"lex": {
+			"head": "lex, legis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
 		},
 		"liber": {
 			"head": "liber, líbera, líberum",
@@ -2048,6 +2113,12 @@
 			"head": "omnis, omne",
 			"pos": "adj"
 		},
+		"opprobrium": {
+			"head": "oppróbrium, oppróbrii",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
 		"ops": {
 			"head": "ops, opis",
 			"pos": "noun",
@@ -2272,6 +2343,11 @@
 		"plenus": {
 			"head": "plenus, -a, -um",
 			"pos": "adj"
+		},
+		"pono": {
+			"head": "pono, pónere, pósui, pósitum",
+			"pos": "verb",
+			"conj": 3
 		},
 		"populus": {
 			"head": "pópulus, -i",
@@ -2754,6 +2830,11 @@
 			"gender": "f",
 			"decl": 1
 		},
+		"scrutor": {
+			"head": "scrutor, scrutári, scrutátus sum",
+			"pos": "verb",
+			"conj": 1
+		},
 		"secundum": {
 			"head": "secúndum",
 			"pos": "prep"
@@ -2770,6 +2851,12 @@
 			"head": "sédeo, sedére, sedi, sessum",
 			"pos": "verb",
 			"conj": 2
+		},
+		"semita": {
+			"head": "sémita, sémitæ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
 		},
 		"semper": {
 			"head": "semper",
@@ -2883,6 +2970,11 @@
 			"gender": "m",
 			"decl": 2
 		},
+		"statuo": {
+			"head": "státuo, statúere, státui, statútum",
+			"pos": "verb",
+			"conj": 3
+		},
 		"sto": {
 			"head": "sto, stare, steti, statum",
 			"pos": "verb",
@@ -2946,6 +3038,11 @@
 			"head": "suscípio, suscípere, suscépi, suscéptum",
 			"pos": "verb",
 			"conj": 3
+		},
+		"suspicor": {
+			"head": "suspícor, suspicári, suspicátus sum",
+			"pos": "verb",
+			"conj": 1
 		},
 		"suspiro": {
 			"head": "suspíro, suspiráre, suspirávi, suspirátum",
@@ -3013,6 +3110,12 @@
 			"pos": "noun",
 			"gender": "n",
 			"decl": 2
+		},
+		"timor": {
+			"head": "timor, timóris",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 3
 		},
 		"tollo": {
 			"head": "tollo, tóllere, sústuli, sublátum",
@@ -3107,6 +3210,12 @@
 			"gender": "f",
 			"decl": 3
 		},
+		"vanitas": {
+			"head": "vánitas, vanitátis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
 		"vel": {
 			"head": "vel",
 			"pos": "conj"
@@ -3160,6 +3269,12 @@
 		"vester": {
 			"head": "vester, vestra, vestrum",
 			"pos": "adj"
+		},
+		"via": {
+			"head": "via, viæ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
 		},
 		"video": {
 			"head": "vídeo, vidére, vidi, visum",
@@ -3219,6 +3334,10 @@
 		"vivus": {
 			"head": "vivus, -a, -um",
 			"pos": "adj"
+		},
+		"volo": {
+			"head": "volo, velle, vólui",
+			"pos": "verb"
 		},
 		"voluntas": {
 			"head": "volúntas, voluntátis",

@@ -68,6 +68,14 @@
 						"number": "sg",
 						"gender": "n",
 						"degree": "sup"
+					},
+					"analysis": {
+						"confidence": "high",
+						"sources": [
+							"editorial",
+							"collatinus"
+						],
+						"review": "accepted"
 					}
 				}
 			]

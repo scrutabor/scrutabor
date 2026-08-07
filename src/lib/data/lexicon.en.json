@@ -434,6 +434,17 @@
 				"advocate"
 			]
 		},
+		"aequitas": {
+			"senses": [
+				"equity",
+				"justice"
+			],
+			"note": "From æquus, level. Not equality in the modern sense but what is even and right — the measure God judges by.",
+			"derivatives": [
+				"equity",
+				"adequate"
+			]
+		},
 		"aequus": {
 			"senses": [
 				"fitting",
@@ -542,6 +553,16 @@
 				"truly"
 			],
 			"note": "A Hebrew word taken into Latin unchanged — indeclinable; the solemn seal of a prayer."
+		},
+		"amputo": {
+			"senses": [
+				"to cut away",
+				"to remove"
+			],
+			"note": "Literally to prune round about (am- for ambi-, around, and putare, to cut). The petition is surgical, not gentle.",
+			"derivatives": [
+				"amputate"
+			]
 		},
 		"angelus": {
 			"senses": [
@@ -708,12 +729,34 @@
 				"auxiliary"
 			]
 		},
+		"avaritia": {
+			"senses": [
+				"greed",
+				"covetousness"
+			],
+			"note": "From avárus, greedy, itself from avére, to crave. In the psalm it is what the heart may lean towards instead of God's testimonies.",
+			"derivatives": [
+				"avarice",
+				"avaricious"
+			]
+		},
 		"aveo": {
 			"senses": [
 				"to be well",
 				"hail!, greetings (imperative)"
 			],
 			"note": "A defective verb: in practice almost only the imperatives “ave”, “avéte”, used as a greeting."
+		},
+		"averto": {
+			"senses": [
+				"to turn away",
+				"to avert"
+			],
+			"derivatives": [
+				"avert",
+				"aversion",
+				"averse"
+			]
 		},
 		"baptisma": {
 			"senses": [
@@ -1026,6 +1069,16 @@
 				"to keep a feast jointly"
 			],
 			"note": "A compound of cum and celebráre. Here it is said of the choirs of angels, not of priests: the modern sense of concelebration is a much later use."
+		},
+		"concupisco": {
+			"senses": [
+				"to long for",
+				"to desire greatly"
+			],
+			"note": "An inchoative verb (-sco): not I desire but I came to desire. The same root as concupiscence — here the longing turned towards the commandments.",
+			"derivatives": [
+				"concupiscence"
+			]
 		},
 		"condemnatio": {
 			"senses": [
@@ -1782,6 +1835,17 @@
 				"elevation"
 			]
 		},
+		"eloquium": {
+			"senses": [
+				"word",
+				"utterance"
+			],
+			"note": "From éloqui, to speak out. In the psalms it is almost always God's word: not speech as an art but the promise God has spoken.",
+			"derivatives": [
+				"eloquence",
+				"eloquent"
+			]
+		},
 		"emitto": {
 			"senses": [
 				"to send forth",
@@ -1909,6 +1973,16 @@
 			"note": "From ex and solum, the soil: the state of one who is off his own ground.",
 			"derivatives": [
 				"exile"
+			]
+		},
+		"exquiro": {
+			"senses": [
+				"to search out",
+				"to seek diligently"
+			],
+			"note": "Ex- intensifies quærere: not merely to seek but to seek out to the end. The same thought as scrutabor in verse 34.",
+			"derivatives": [
+				"exquisite"
 			]
 		},
 		"exspecto": {
@@ -2427,6 +2501,18 @@
 			],
 			"note": "A compound of in + cédere — to step forward; it names a manner of walking, not motion in general."
 		},
+		"inclino": {
+			"senses": [
+				"to bend",
+				"to incline"
+			],
+			"note": "The petition asks for a movement of the heart rather than for its conviction: tilt it, as a vessel is tilted.",
+			"derivatives": [
+				"incline",
+				"inclination",
+				"declension"
+			]
+		},
 		"incolumitas": {
 			"senses": [
 				"safety",
@@ -2610,6 +2696,17 @@
 				"institution"
 			]
 		},
+		"intellectus": {
+			"senses": [
+				"understanding",
+				"insight"
+			],
+			"note": "From intellégere, to read between (inter + légere), hence to discern. It is what the verse Scrutabor is named from asks for: not knowledge but the power to understand.",
+			"derivatives": [
+				"intellect",
+				"intelligence"
+			]
+		},
 		"inter": {
 			"senses": [
 				"among",
@@ -2732,6 +2829,16 @@
 				"jussive"
 			]
 		},
+		"iucundus": {
+			"senses": [
+				"pleasant",
+				"delightful"
+			],
+			"note": "Related to iuváre, to help or please. God's judgements are called delightful — not bearable but wanted.",
+			"derivatives": [
+				"jocund"
+			]
+		},
 		"iudicium": {
 			"senses": [
 				"judgment",
@@ -2754,6 +2861,17 @@
 			"derivatives": [
 				"adjudicate",
 				"judicature"
+			]
+		},
+		"iustificatio": {
+			"senses": [
+				"statute",
+				"ordinance",
+				"justification"
+			],
+			"note": "In the psalms not justification in the theological sense but what God has laid down as just: his statutes. The Greek psalter renders the Hebrew chuqqim so.",
+			"derivatives": [
+				"justification"
 			]
 		},
 		"iustus": {
@@ -2837,6 +2955,17 @@
 			"derivatives": [
 				"lavatory",
 				"laundry"
+			]
+		},
+		"lex": {
+			"senses": [
+				"law"
+			],
+			"note": "In psalm 118 this is the Torah — not a code but a teaching: the whole of what God shows about the way. Hence this edition's motto, scrutabor legem tuam.",
+			"derivatives": [
+				"legal",
+				"legislation",
+				"legitimate"
 			]
 		},
 		"liber": {
@@ -3554,6 +3683,17 @@
 				"omnivore"
 			]
 		},
+		"opprobrium": {
+			"senses": [
+				"reproach",
+				"disgrace"
+			],
+			"note": "Ob- with probrum, a shameful act: not shame felt inwardly but reproach thrown by others.",
+			"derivatives": [
+				"opprobrium",
+				"opprobrious"
+			]
+		},
 		"ops": {
 			"senses": [
 				"help",
@@ -3983,6 +4123,19 @@
 			"derivatives": [
 				"plenary",
 				"plenty"
+			]
+		},
+		"pono": {
+			"senses": [
+				"to set",
+				"to lay down",
+				"to appoint"
+			],
+			"note": "Legem pone mihi does not ask for a new law but that God set it before me — show it, point out the way.",
+			"derivatives": [
+				"position",
+				"deposit",
+				"compose"
 			]
 		},
 		"populus": {
@@ -4904,6 +5057,18 @@
 			],
 			"note": "From scríbere (to write); in the plural Scriptúræ — the Scriptures."
 		},
+		"scrutor": {
+			"senses": [
+				"to search",
+				"to examine",
+				"to sift"
+			],
+			"note": "To search thoroughly, to the bottom. Hence the name: Scrutabor.",
+			"derivatives": [
+				"scrutiny",
+				"inscrutable"
+			]
+		},
 		"secundum": {
 			"senses": [
 				"according to",
@@ -4938,6 +5103,13 @@
 				"sedentary",
 				"session"
 			]
+		},
+		"semita": {
+			"senses": [
+				"path",
+				"footpath"
+			],
+			"note": "Less than a via: a narrow path, worn rather than built. The psalm asks to be led onto that."
 		},
 		"semper": {
 			"senses": [
@@ -5155,6 +5327,19 @@
 				"espouse"
 			]
 		},
+		"statuo": {
+			"senses": [
+				"to set up",
+				"to establish",
+				"to make firm"
+			],
+			"note": "From stare, to stand. The prayer asks that God's word be set up for his servant as something that henceforth stands.",
+			"derivatives": [
+				"statute",
+				"statue",
+				"institute"
+			]
+		},
 		"sto": {
 			"senses": [
 				"to stand"
@@ -5289,6 +5474,18 @@
 				"susceptible"
 			]
 		},
+		"suspicor": {
+			"senses": [
+				"to suspect",
+				"to fear",
+				"to surmise"
+			],
+			"note": "Deponent: passive in form, active in meaning. Literally to look up from under (sub + spécere) — the sidelong glance out of which suspicion grows.",
+			"derivatives": [
+				"suspicion",
+				"suspect"
+			]
+		},
 		"suspiro": {
 			"senses": [
 				"to sigh",
@@ -5411,6 +5608,17 @@
 			"derivatives": [
 				"testimony",
 				"testimonial"
+			]
+		},
+		"timor": {
+			"senses": [
+				"fear",
+				"awe"
+			],
+			"note": "In the psalms nearly always the fear of God — not dread of punishment but the awe one stands in.",
+			"derivatives": [
+				"timid",
+				"timorous"
 			]
 		},
 		"tollo": {
@@ -5592,6 +5800,18 @@
 				"vale"
 			]
 		},
+		"vanitas": {
+			"senses": [
+				"emptiness",
+				"vanity",
+				"worthlessness"
+			],
+			"note": "From vanus, empty. Not vanity as conceit but what is hollow: the thing without substance the eyes are asked not to look at.",
+			"derivatives": [
+				"vanity",
+				"vain"
+			]
+		},
 		"vel": {
 			"senses": [
 				"or",
@@ -5693,6 +5913,18 @@
 				"your (of more than one)"
 			],
 			"note": "The possessive of the second person plural. Its form vestri also serves as the genitive of the pronoun vos."
+		},
+		"via": {
+			"senses": [
+				"way",
+				"road"
+			],
+			"note": "A built road, as against a footpath (sémita). In psalm 118 the way is a manner of living, not a stretch of ground.",
+			"derivatives": [
+				"viaduct",
+				"trivial",
+				"obvious"
+			]
 		},
 		"video": {
 			"senses": [
@@ -5801,6 +6033,18 @@
 				"living"
 			],
 			"note": "Used as a noun: vivi, the living."
+		},
+		"volo": {
+			"senses": [
+				"to wish",
+				"to want"
+			],
+			"note": "An irregular verb, with no passive future and no supine. Ipsam vólui — I have wanted that very thing: a perfect, so a choice already made.",
+			"derivatives": [
+				"volition",
+				"voluntary",
+				"benevolent"
+			]
 		},
 		"voluntas": {
 			"senses": [

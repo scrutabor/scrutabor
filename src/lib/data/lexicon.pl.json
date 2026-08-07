@@ -427,6 +427,17 @@
 				"adwokat"
 			]
 		},
+		"aequitas": {
+			"senses": [
+				"sprawiedliwość",
+				"prawość"
+			],
+			"note": "Od æquus — równy. Nie „równość” w dzisiejszym sensie, lecz to, co jest proste i słuszne: Boża miara, wedle której się sądzi.",
+			"derivatives": [
+				"ekwiwalent",
+				"adekwatny"
+			]
+		},
 		"aequus": {
 			"senses": [
 				"słuszny",
@@ -527,6 +538,16 @@
 				"zaprawdę"
 			],
 			"note": "Hebrajskie słowo przejęte przez łacinę bez odmiany — uroczyste potwierdzenie modlitwy."
+		},
+		"amputo": {
+			"senses": [
+				"odciąć",
+				"usunąć"
+			],
+			"note": "Dosłownie: obciąć wokoło (am- = ambi-, „wokół” + putare, „ciąć”). Prośba jest chirurgiczna, nie łagodna.",
+			"derivatives": [
+				"amputacja"
+			]
 		},
 		"angelus": {
 			"senses": [
@@ -680,12 +701,32 @@
 				"wsparcie"
 			]
 		},
+		"avaritia": {
+			"senses": [
+				"chciwość",
+				"skąpstwo"
+			],
+			"note": "Od avárus — chciwy, a to od avére, „pragnąć gorąco”. W psalmie stoi jako to, ku czemu serce może się skłonić zamiast ku świadectwom Bożym.",
+			"derivatives": [
+				"awaria"
+			]
+		},
 		"aveo": {
 			"senses": [
 				"mieć się dobrze",
 				"witaj!, bądź pozdrowiony (w rozkaźniku)"
 			],
 			"note": "Czasownik ułomny: w praktyce używane niemal wyłącznie rozkaźniki „ave”, „avéte” jako pozdrowienie."
+		},
+		"averto": {
+			"senses": [
+				"odwrócić",
+				"odsunąć"
+			],
+			"derivatives": [
+				"awersja",
+				"awers"
+			]
 		},
 		"baptisma": {
 			"senses": [
@@ -964,6 +1005,16 @@
 				"wspólnie sławić"
 			],
 			"note": "Złożenie cum + celebráre. Tu o chórach anielskich, nie o kapłanach: dzisiejsze „koncelebra” to inne, znacznie późniejsze użycie."
+		},
+		"concupisco": {
+			"senses": [
+				"zapragnąć",
+				"zapłonąć pragnieniem"
+			],
+			"note": "Czasownik inchoatywny (-sco): nie „pragnę”, lecz „zapragnąłem”, zacząłem pragnąć. Ten sam rdzeń co concupiscéntia, pożądliwość — tu jednak pragnienie zwrócone ku przykazaniom.",
+			"derivatives": [
+				"konkupiscencja"
+			]
 		},
 		"condemnatio": {
 			"senses": [
@@ -1634,6 +1685,16 @@
 				"elewacja"
 			]
 		},
+		"eloquium": {
+			"senses": [
+				"słowo",
+				"wypowiedź"
+			],
+			"note": "Od éloqui — wypowiedzieć. W psalmach niemal zawsze o słowie Bożym: nie mowa jako sztuka, lecz obietnica, którą Bóg wypowiedział.",
+			"derivatives": [
+				"elokwencja"
+			]
+		},
 		"emitto": {
 			"senses": [
 				"wysyłać",
@@ -1754,6 +1815,17 @@
 				"obczyzna"
 			],
 			"note": "Od ex + solum (ziemia): stan tego, kto jest poza swoją ziemią."
+		},
+		"exquiro": {
+			"senses": [
+				"szukać",
+				"dociekać",
+				"wypytywać"
+			],
+			"note": "Ex- wzmacnia quærere: nie tyle szukać, ile wyszukiwać do końca. Ten sam rdzeń co „scrutabor” z wersetu 34 i ta sama myśl — badać prawo aż do dna.",
+			"derivatives": [
+				"ekskwizytny"
+			]
 		},
 		"exspecto": {
 			"senses": [
@@ -2224,6 +2296,17 @@
 			],
 			"note": "Złożenie in + cédere — iść naprzód; nazywa sposób chodzenia, nie ruch w ogóle."
 		},
+		"inclino": {
+			"senses": [
+				"nachylić",
+				"skłonić"
+			],
+			"note": "Prośba jest o ruch serca, nie o jego przekonanie: nachyl je, jak nachyla się naczynie.",
+			"derivatives": [
+				"inklinacja",
+				"deklinacja"
+			]
+		},
 		"incolumitas": {
 			"senses": [
 				"bezpieczeństwo",
@@ -2368,6 +2451,17 @@
 				"instytucja"
 			]
 		},
+		"intellectus": {
+			"senses": [
+				"zrozumienie",
+				"pojmowanie"
+			],
+			"note": "Od intellégere — czytać między (inter + légere), czyli rozeznawać. To o nie prosi werset, od którego wzięła się nazwa Scrutabor: nie o wiedzę, lecz o zdolność pojmowania.",
+			"derivatives": [
+				"intelekt",
+				"inteligencja"
+			]
+		},
 		"inter": {
 			"senses": [
 				"między",
@@ -2472,6 +2566,17 @@
 				"polecić"
 			]
 		},
+		"iucundus": {
+			"senses": [
+				"radosny",
+				"miły",
+				"słodki"
+			],
+			"note": "Spokrewnione z iuváre — pomagać, sprawiać przyjemność. O sądach Bożych mówi się tu, że są miłe — nie znośne, lecz upragnione.",
+			"derivatives": [
+				"jukstapozycja"
+			]
+		},
 		"iudicium": {
 			"senses": [
 				"sąd",
@@ -2489,6 +2594,17 @@
 			"note": "Utworzony od júdex (sędzia), a ten od jus, juris (prawo) + dícere (mówić) — ten, kto wypowiada prawo.",
 			"derivatives": [
 				"judykatura"
+			]
+		},
+		"iustificatio": {
+			"senses": [
+				"przykazanie",
+				"ustawa",
+				"usprawiedliwienie"
+			],
+			"note": "W psalmach nie „usprawiedliwienie” w sensie teologicznym, lecz to, co Bóg ustanowił jako sprawiedliwe: Jego ustawy. Grecki psałterz oddaje tak hebrajskie chuqqim, przepisy.",
+			"derivatives": [
+				"justyfikacja"
 			]
 		},
 		"iustus": {
@@ -2556,6 +2672,17 @@
 			"senses": [
 				"myć",
 				"obmywać"
+			]
+		},
+		"lex": {
+			"senses": [
+				"prawo",
+				"zakon"
+			],
+			"note": "W psalmie 118 to Tora — nie kodeks, lecz pouczenie: całość tego, czego Bóg naucza o drodze. Stąd i motto tego wydania: scrutabor legem tuam.",
+			"derivatives": [
+				"legalny",
+				"legislacja"
 			]
 		},
 		"liber": {
@@ -3212,6 +3339,17 @@
 				"omnibus"
 			]
 		},
+		"opprobrium": {
+			"senses": [
+				"hańba",
+				"zniewaga",
+				"wstyd"
+			],
+			"note": "Ob- + probrum, czyn haniebny: nie wstyd odczuwany, lecz hańba rzucona w twarz przez innych.",
+			"derivatives": [
+				"opprobrium"
+			]
+		},
 		"ops": {
 			"senses": [
 				"pomoc",
@@ -3606,6 +3744,19 @@
 				"plenarny"
 			]
 		},
+		"pono": {
+			"senses": [
+				"położyć",
+				"ustanowić",
+				"wyznaczyć"
+			],
+			"note": "„Legem pone mihi” to nie prośba o nowe prawo, lecz o to, by Bóg je przede mną postawił — pokazał, wskazał drogę.",
+			"derivatives": [
+				"pozycja",
+				"depozyt",
+				"komponować"
+			]
+		},
 		"populus": {
 			"senses": [
 				"lud",
@@ -3652,7 +3803,7 @@
 				"moc",
 				"Zwierzchność (chór anielski)"
 			],
-			"note": "W Prefacji nazwa chóru anielskiego, obok Państw; obie z Kol 1, 16."
+			"note": "W Prefacji nazwa chóru anielskiego, obok Państw. Oba imiona idą za Wujkiem, który w Kol 1, 16 oddaje cztery chóry jako trony, państwa, księztwa, zwierzchności — a więc potestates to Zwierzchności, a dominationes Państwa. Nowsze przekłady przesuwają Zwierzchności na principatus; to wydanie trzyma się Wujka, jak wszędzie indziej."
 		},
 		"poto": {
 			"senses": [
@@ -4432,6 +4583,18 @@
 			],
 			"note": "Od scríbere (pisać); w liczbie mnogiej Scriptúræ — Pisma, księgi natchnione."
 		},
+		"scrutor": {
+			"senses": [
+				"badać",
+				"przeszukiwać",
+				"dociekać"
+			],
+			"note": "Przeszukiwać dokładnie, aż do dna. Stąd nazwa: Scrutabor.",
+			"derivatives": [
+				"skrutacja",
+				"skrupulatny"
+			]
+		},
 		"secundum": {
 			"senses": [
 				"według",
@@ -4466,6 +4629,13 @@
 				"sesja",
 				"rezydencja"
 			]
+		},
+		"semita": {
+			"senses": [
+				"ścieżka",
+				"dróżka"
+			],
+			"note": "Mniej niż via: wąska ścieżka, wydeptana, a nie zbudowana. Psalm prosi o wprowadzenie właśnie na nią."
 		},
 		"semper": {
 			"senses": [
@@ -4666,6 +4836,19 @@
 				"responsorium"
 			]
 		},
+		"statuo": {
+			"senses": [
+				"postawić",
+				"ustanowić",
+				"utwierdzić"
+			],
+			"note": "Od stare — stać. Prosi się, by słowo Boże zostało postawione słudze jak coś, co odtąd stoi i nie chwieje się.",
+			"derivatives": [
+				"statut",
+				"statua",
+				"instytucja"
+			]
+		},
 		"sto": {
 			"senses": [
 				"stać",
@@ -4787,6 +4970,17 @@
 				"podejmować"
 			]
 		},
+		"suspicor": {
+			"senses": [
+				"podejrzewać",
+				"obawiać się",
+				"przypuszczać"
+			],
+			"note": "Deponens: forma bierna, znaczenie czynne. Dosłownie „patrzeć spod” (sub + spécere) — spojrzenie z ukosa, z którego rodzi się podejrzenie.",
+			"derivatives": [
+				"suspekt"
+			]
+		},
 		"suspiro": {
 			"senses": [
 				"wzdychać"
@@ -4891,6 +5085,16 @@
 				"świadectwo"
 			],
 			"note": "Od testis (świadek)."
+		},
+		"timor": {
+			"senses": [
+				"bojaźń",
+				"lęk"
+			],
+			"note": "W psalmach niemal zawsze bojaźń Boża — nie strach przed karą, lecz cześć, w której się stoi.",
+			"derivatives": [
+				"tymidny"
+			]
 		},
 		"tollo": {
 			"senses": [
@@ -5046,6 +5250,17 @@
 				"dolina"
 			]
 		},
+		"vanitas": {
+			"senses": [
+				"marność",
+				"próżność",
+				"czczość"
+			],
+			"note": "Od vanus — pusty. Nie próżność w sensie zarozumiałości, lecz to, co puste: rzecz bez treści, na którą prosi się, by oczy nie patrzyły.",
+			"derivatives": [
+				"wanitatywny"
+			]
+		},
 		"vel": {
 			"senses": [
 				"albo",
@@ -5137,6 +5352,16 @@
 				"wasz"
 			],
 			"note": "Zaimek dzierżawczy drugiej osoby liczby mnogiej. Jego forma vestri służy zarazem za dopełniacz zaimka vos."
+		},
+		"via": {
+			"senses": [
+				"droga"
+			],
+			"note": "Droga zbudowana, w odróżnieniu od ścieżki (sémita). W psalmie 118 „droga” jest sposobem życia, nie odcinkiem terenu.",
+			"derivatives": [
+				"wiadukt",
+				"trywialny"
+			]
 		},
 		"video": {
 			"senses": [
@@ -5233,6 +5458,17 @@
 				"żyjący"
 			],
 			"note": "W użyciu rzeczownikowym: vivi — żyjący."
+		},
+		"volo": {
+			"senses": [
+				"chcieć",
+				"pragnąć"
+			],
+			"note": "Czasownik nieregularny, bez czasu przyszłego biernego i bez supinum. „Ipsam vólui” — chciałem właśnie jej: perfectum, a więc wybór już dokonany.",
+			"derivatives": [
+				"wola",
+				"woluntarny"
+			]
 		},
 		"voluntas": {
 			"senses": [

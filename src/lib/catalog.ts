@@ -106,6 +106,22 @@ const CATALOG_SOURCE: CatalogSection[] = [
 				note: { pl: 'przed Komunią', en: 'before Communion' }
 			}
 		]
+	},
+	{
+		// The first shelf that is not the Mass. Psalm 118 is an acrostic of
+		// twenty-two stanzas, one per Hebrew letter, so a stanza is the unit
+		// and not the psalm — and this one is here first because verse 34 of
+		// it is the verse this edition is named from.
+		category: 'psalmi',
+		label: { pl: 'psalmy', en: 'psalms' },
+		texts: [
+			{
+				category: 'psalmi',
+				slug: '118-he',
+				title: 'Psalmus 118, HE',
+				note: { pl: 'wersety 33-40, z mottem', en: 'verses 33-40, with the motto' }
+			}
+		]
 	}
 ];
 
