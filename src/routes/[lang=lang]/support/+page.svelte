@@ -5,7 +5,7 @@
 	// project answers — through its public issue trackers, and by mail.
 	// jscpd:ignore-start — the same scaffolding as the privacy page,
 	// deliberately: landing subpages share one shape.
-	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
+	import PageNav from '$lib/components/PageNav.svelte';
 	import type { Lang } from '$lib/i18n';
 	import { bindProse } from '$lib/polish';
 
@@ -31,8 +31,8 @@
 			lede: 'Pytania, uwagi i zgłoszenia błędów są mile widziane.',
 			appIssues: 'błędy i propozycje dotyczące aplikacji',
 			corpusIssues: 'uwagi do tekstów, przekładów i analiz',
-			mailLead: 'Można też napisać wprost:',
-			note: 'Scrutabor jest projektem pro bono — odpowiadamy najszybciej, jak się da.',
+			mailLead: 'Można również napisać na adres e-mail:',
+			note: 'Scrutabor jest projektem pro bono — odpowiadamy tak szybko, jak to możliwe.',
 			back: 'wróć na stronę główną'
 		}),
 		en: {
@@ -58,7 +58,7 @@
 </svelte:head>
 
 <div class="page centered landing">
-	<SurfaceNav {lang} base="" />
+	<PageNav {lang} base="" />
 	<main>
 		<h1 class="smallcaps">{t.title}</h1>
 		<!-- jscpd:ignore-end -->
@@ -67,13 +67,13 @@
 			<li>
 				<a href="https://github.com/scrutabor/scrutabor/issues" rel="external">scrutabor · Issues</a
 				>
-				<span class="what">{t.appIssues}</span>
+				<span class="channel-note">{t.appIssues}</span>
 			</li>
 			<li>
 				<a href="https://github.com/scrutabor/scrutabor-corpus/issues" rel="external"
 					>scrutabor-corpus · Issues</a
 				>
-				<span class="what">{t.corpusIssues}</span>
+				<span class="channel-note">{t.corpusIssues}</span>
 			</li>
 		</ul>
 		<p class="mail">
@@ -108,14 +108,26 @@
 		padding: 0;
 		list-style: none;
 		text-align: left;
+		/* Two aligned columns: the trackers differ in width, and with a
+		   per-row flex the descriptions started wherever each link ended.
+		   Rows are list items for the reader; the grid sees through them. */
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		gap: 0.7rem 0.8rem;
 	}
 
 	.channels li {
-		margin: 0.7rem 0 0;
-		display: flex;
-		flex-wrap: wrap;
+		/* Each row shares the list's own columns through subgrid, so the
+		   two description cells share one left edge to the pixel. The
+		   descriptions must NOT be named .what: app.css gives that class
+		   the prose measure with margin-inline auto, and auto margins
+		   beat grid alignment — the narrower cell sat centred, one
+		   pixel off the shared edge. */
+		display: grid;
+		grid-column: 1 / -1;
+		grid-template-columns: subgrid;
 		align-items: baseline;
-		gap: 0.2rem 0.8rem;
+		justify-items: start;
 	}
 
 	.channels a {
@@ -128,7 +140,7 @@
 		border-bottom-style: solid;
 	}
 
-	.what {
+	.channel-note {
 		color: var(--ink-soft);
 		font-size: 0.95rem;
 	}

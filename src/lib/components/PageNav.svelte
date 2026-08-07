@@ -25,17 +25,28 @@
 	// Polish sweep reads the nearest [lang] to decide whether a line is
 	// governed by Polish typography, and <html lang> would otherwise claim
 	// it.
+	// base: the landing's subpages carry the same trail, but their home is
+	// the landing at the origin root, not the book — same word, nearest
+	// home (owner, 2026-08-08: a page without the top-left way back reads
+	// as a dead end, even with a link at the foot).
 	let {
 		lang,
 		parent,
 		parentLabel,
-		parentLang
-	}: { lang: Lang; parent?: string; parentLabel?: string; parentLang?: string } = $props();
+		parentLang,
+		base = '/app'
+	}: {
+		lang: Lang;
+		parent?: string;
+		parentLabel?: string;
+		parentLang?: string;
+		base?: string;
+	} = $props();
 </script>
 
 <nav>
 	<ol class="trail smallcaps">
-		<li><a href="/app/{lang}" class="back">scrutabor</a></li>
+		<li><a href="{base}/{lang}" class="back">scrutabor</a></li>
 		{#if parent && parentLabel}
 			<li>
 				<span class="sep" aria-hidden="true">›</span><a href={parent} lang={parentLang}
@@ -45,7 +56,7 @@
 		{/if}
 	</ol>
 	<div class="nav-right">
-		<LangMenu {lang} />
+		<LangMenu {lang} {base} />
 		<TextSize {lang} />
 		<ThemeToggle {lang} />
 	</div>

@@ -156,6 +156,7 @@ test.describe('landing @online', () => {
 		await page.goto('/en/privacy');
 		await expect(page.locator('h1')).toHaveText('Privacy');
 		await expect(page.locator('.lede')).toContainText('collects no data');
+		await expect(page.locator('.trail a.back')).toHaveAttribute('href', '/en');
 		// the store-facing URL must not silently become a 404 shell
 		expect((await page.request.get('/en/privacy')).status()).toBe(200);
 	});
@@ -163,6 +164,15 @@ test.describe('landing @online', () => {
 	test('the support page offers real contact in both languages', async ({ page }) => {
 		await page.goto('/pl/support');
 		await expect(page.locator('h1')).toHaveText('Pomoc');
+		// the way back stands top-left as on every page of the book, but
+		// here home is the landing, not the catalog
+		await expect(page.locator('.trail a.back')).toHaveAttribute('href', '/pl');
+		// the two channel descriptions share one left edge (a grid, not
+		// per-row flex — and not the .what class, which app.css centres)
+		const edges = await page
+			.locator('.channel-note')
+			.evaluateAll((els) => els.map((el) => el.getBoundingClientRect().x));
+		expect(edges[0]).toBe(edges[1]);
 		await expect(
 			page.locator('a[href="https://github.com/scrutabor/scrutabor/issues"]')
 		).toBeVisible();

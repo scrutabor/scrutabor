@@ -367,8 +367,11 @@ h2 {
 
 /* The header row of a centred page — the language menu, the reading
    size, the theme — identical on the catalog, the landing and the
-   privacy page. One rule, same reason as everything else here. */
-.page.centered nav {
+   privacy page. One rule, same reason as everything else here.
+   Only for rows WITHOUT a trail: a nav that carries the way back
+   (PageNav on the landing's subpages) spreads its two ends itself,
+   and this rule outweighs the component's scoped space-between. */
+.page.centered nav:not(:has(.trail)) {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;

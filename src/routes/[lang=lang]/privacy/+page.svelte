@@ -4,7 +4,7 @@
 	// states what IS stored (the reader's own settings, on their own
 	// device) and the one thing serving a website necessarily involves.
 	// The app stores will require this URL when the wrapped builds ship.
-	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
+	import PageNav from '$lib/components/PageNav.svelte';
 	import type { Lang } from '$lib/i18n';
 	import { bindProse } from '$lib/polish';
 
@@ -27,8 +27,8 @@
 			lede: 'Scrutabor nie wymaga rejestracji, nie zbiera danych i niczego nie śledzi.',
 			points: [
 				'Nie używamy plików cookie, analityki, reklam ani żadnych skryptów osób trzecich. Strona nie mierzy odwiedzin i nie buduje żadnych profili.',
-				'Ustawienia czytelnika — język, motyw, wielkość pisma, wybrana rola we Mszy, miejsce w lekturze — są zapisywane wyłącznie w pamięci przeglądarki i nigdy nie opuszczają urządzenia. Zainstalowana aplikacja przechowuje na urządzeniu całą książkę, żeby działała bez internetu.',
-				'Strona to zbiór statycznych plików serwowanych przez Cloudflare Pages. Jak każdy serwer WWW, Cloudflare widzi adres IP, pod który dostarcza pliki; my nie prowadzimy żadnych dzienników odwiedzin i nie mamy niczego, co można by komuś przekazać.'
+				'Ustawienia czytelnika — język, motyw, wielkość pisma, wybrana rola we Mszy, miejsce w lekturze — są zapisywane wyłącznie w pamięci przeglądarki i nigdy nie opuszczają urządzenia. Zainstalowana aplikacja przechowuje na urządzeniu całą książkę, aby działała także bez połączenia z internetem.',
+				'Strona to zbiór statycznych plików serwowanych przez Cloudflare Pages. Jak każdy serwer WWW, Cloudflare widzi adres IP, na który dostarcza pliki; my nie prowadzimy dzienników odwiedzin i nie przechowujemy niczego, co mogłoby zostać przekazane osobom trzecim.'
 			],
 			contact: 'Uwagi i poprawki: github.com/scrutabor.',
 			back: 'wróć na stronę główną'
@@ -58,7 +58,7 @@
 </svelte:head>
 
 <div class="page centered landing">
-	<SurfaceNav {lang} base="" />
+	<PageNav {lang} base="" />
 	<main>
 		<h1 class="smallcaps">{t.title}</h1>
 		<!-- jscpd:ignore-end -->
