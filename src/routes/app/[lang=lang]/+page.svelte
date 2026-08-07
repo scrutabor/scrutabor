@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { CATALOG } from '$lib/catalog';
-	import LangMenu from '$lib/components/LangMenu.svelte';
-	import TextSize from '$lib/components/TextSize.svelte';
-	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
 	import { M, type Lang } from '$lib/i18n';
 
 	let { data } = $props();
@@ -16,11 +14,7 @@
 </svelte:head>
 
 <div class="page centered landing">
-	<nav>
-		<LangMenu {lang} />
-		<TextSize {lang} />
-		<ThemeToggle {lang} />
-	</nav>
+	<SurfaceNav {lang} />
 	<main>
 		<h1 class="smallcaps">Scrutabor</h1>
 		<p class="tagline">{msgs.tagline}</p>
@@ -60,16 +54,8 @@
 </div>
 
 <style>
-	nav {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-end;
-		align-items: center;
-		gap: 0.5rem;
-	}
-
-	/* .tagline, .motto and .motto-ref are the brand furniture, shared with
-	   the landing pages and the routers via app.css. */
+	/* The nav row, .tagline, .motto and .motto-ref are shared furniture
+	   (app.css): the same objects on the landing and the routers. */
 
 	section {
 		margin: 2.6rem 0 0;

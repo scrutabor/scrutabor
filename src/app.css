@@ -365,6 +365,17 @@ h2 {
 	background: var(--wash);
 }
 
+/* The header row of a centred page — the language menu, the reading
+   size, the theme — identical on the catalog, the landing and the
+   privacy page. One rule, same reason as everything else here. */
+.page.centered nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 0.5rem;
+}
+
 /* The brand's own furniture — the tagline, the motto and its reference —
    shared by every surface that presents the book rather than reads from
    it: the two language routers, the landing pages, the catalog. One copy,

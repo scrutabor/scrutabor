@@ -14,3 +14,17 @@
  * deriving it from something that is only sometimes true.
  */
 export const where = $state({ path: '' });
+
+/**
+ * What every language layout does when its page is alive: record where
+ * the reader is, keep the live DOM lang in sync (the prerendered
+ * <html lang> is set by hooks), and remember the choice so both routers
+ * — the site root's and the app's — open in it next time. One function
+ * because the book's layout and the landing's must do exactly the same
+ * thing without depending on each other.
+ */
+export function adoptLanguage(lang: string, path: string): void {
+	where.path = path;
+	document.documentElement.lang = lang;
+	localStorage.setItem('scrutabor-lang', lang);
+}

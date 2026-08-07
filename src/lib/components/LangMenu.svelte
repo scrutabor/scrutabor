@@ -4,7 +4,10 @@
 	import { LANGS, M, type Lang } from '$lib/i18n';
 	import { where } from '$lib/where.svelte';
 
-	let { lang }: { lang: Lang } = $props();
+	// `base` is what stands before the language segment: the book lives
+	// under /app, the landing pages at the origin root — the menu serves
+	// both surfaces and only the prefix differs.
+	let { lang, base = '/app' }: { lang: Lang; base?: string } = $props();
 
 	// The same page in the other language. The path within a language comes
 	// from the layout (see $lib/where) rather than from location.pathname,
@@ -12,7 +15,7 @@
 	// to cut. The query still comes from location: an open word panel
 	// travels as ?w=, and shallow routing updates only the real URL.
 	function pathFor(l: Lang): string {
-		return `/app/${l}${where.path}${location.search}`;
+		return `${base}/${l}${where.path}${location.search}`;
 	}
 </script>
 

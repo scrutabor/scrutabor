@@ -1,28 +1,17 @@
 <script lang="ts">
 	// The landing: what Scrutabor is, shown before it is told. One static
-	// page per language, in the book's own face and voice — the specimen
-	// below is the actual reading mechanism (ruby, gloss, panel), set by
-	// hand on the words of the motto, so the page demonstrates the book
-	// instead of describing it.
-	import { M, otherLang, type Lang } from '$lib/i18n';
+	// page per language, in the book's own face and voice. The specimen is
+	// the actual reading mechanism — the motto's own verse rendered by the
+	// app's own TextBody at each of the help slider's three steps — so the
+	// page demonstrates the book by BEING the book for one verse.
+	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
+	import TextBody from '$lib/components/TextBody.svelte';
+	import { M, type Lang } from '$lib/i18n';
 	import { bindProse } from '$lib/polish';
+	import { SPECIMEN_DOC, SPECIMEN_GLOSS } from './specimen';
 
 	let { data } = $props();
 	const lang = $derived(data.lang as Lang);
-	const other = $derived(otherLang(lang));
-
-	// The specimen: the opening of the motto, glossed word by word the way
-	// every text in the book is. The panel under it is what a tap opens —
-	// for the one word this book is named after.
-	const SPECIMEN: { la: string; pl: string; en: string; name?: true }[] = [
-		{ la: 'Da', pl: 'daj', en: 'give' },
-		{ la: 'mihi', pl: 'mnie', en: 'to me' },
-		{ la: 'intellectum,', pl: 'zrozumienie', en: 'understanding' },
-		{ la: 'et', pl: 'i', en: 'and' },
-		{ la: 'scrutabor', pl: 'będę zgłębiał', en: 'I will search', name: true },
-		{ la: 'legem', pl: 'prawo', en: 'law' },
-		{ la: 'tuam', pl: 'twoje', en: 'your' }
-	];
 
 	interface Copy {
 		title: string;
@@ -34,7 +23,7 @@
 		panelLemma: string;
 		panelParse: string;
 		panelNote: string;
-		what: { title: string; body: string }[];
+		cards: { title: string; note: string; href: string }[];
 		keepTitle: string;
 		keepBody: string;
 		keepAction: string;
@@ -53,28 +42,31 @@
 			openNote: 'w przeglądarce — bez instalacji, bez kont',
 			specimenTitle: 'słowo po słowie',
 			specimenLead:
-				'Pod każdym słowem stoi jego znaczenie, a dotknięcie otwiera resztę: formę, hasło słownikowe i objaśnienie.',
+				'Suwak pomocy prowadzi przez trzy stopnie — od samej łaciny do pełnego przekładu — a dotknięcie słowa otwiera jego analizę: formę, hasło słownikowe i objaśnienie.',
 			panelLemma: 'scrutari — badać, zgłębiać',
 			panelParse:
 				'czasownik · 1. osoba liczby pojedynczej · czas przyszły · deponens (forma bierna, znaczenie czynne)',
-			panelNote: '„Będę zgłębiał” — słowo, od którego ta książka ma imię.',
-			what: [
+			panelNote: '„Będę zgłębiał” — słowo, od którego ta aplikacja bierze nazwę.',
+			cards: [
 				{
 					title: 'podczas Mszy',
-					body: 'Całe Ordo Missæ z 1962 roku, część po części. Widać, kto mówi i co słychać; odpowiedzi wiernych są zaznaczone, a modlitwy odmawiane po cichu — opisane.'
+					note: 'całe Ordo Missæ z 1962 roku, część po części',
+					href: 'ordo'
 				},
 				{
 					title: 'modlitwy',
-					body: 'Ojcze nasz, Zdrowaś Maryjo, Credo, antyfony maryjne — każda ze słowem po słowie i przekładem, a zbiór rośnie.'
+					note: 'Ojcze nasz, Zdrowaś Maryjo, Credo, antyfony maryjne…',
+					href: ''
 				},
 				{
 					title: 'do nauki',
-					body: 'Hasła słownikowe z konkordancją, strony gramatyki z przykładami z modlitw, wymowa w tradycji rzymskiej i polskiej.'
+					note: 'słownik z konkordancją, gramatyka, wymowa',
+					href: 'grammatica'
 				}
 			],
 			keepTitle: 'kopia do zabrania',
 			keepBody:
-				'Całą książkę można pobrać i otworzyć w dowolnej przeglądarce — bez internetu, bez instalowania czegokolwiek. Rozpakuj folder i otwórz index.html. Ta kopia jest Twoja: nic nie łączy się z siecią, nic nie wygasa i będzie działać także wtedy, gdyby ta strona kiedyś przestała.',
+				'Cały modlitewnik można pobrać i czytać w dowolnej przeglądarce — bez internetu, bez instalowania czegokolwiek. Po rozpakowaniu wystarczy otworzyć index.html. Raz pobrana kopia pozostaje na zawsze: nic nie łączy się z siecią, nic nie wygasa i wszystko będzie działać także wtedy, gdyby ta strona kiedyś zniknęła.',
 			keepAction: 'Pobierz Scrutabor.zip',
 			privacyLine: 'Bez kont, bez śledzenia, bez reklam.',
 			privacyLink: 'prywatność',
@@ -89,28 +81,27 @@
 			openNote: 'in your browser — nothing to install, no accounts',
 			specimenTitle: 'word by word',
 			specimenLead:
-				'Under every word stands its meaning, and a tap opens the rest: the form, the dictionary entry, and an explanation.',
+				'The help slider moves through three steps — from bare Latin to a full translation — and a tap on any word opens its analysis: the form, the dictionary entry, and an explanation.',
 			panelLemma: 'scrutari — to search, to examine deeply',
 			panelParse:
 				'verb · 1st person singular · future · deponent (passive in form, active in meaning)',
-			panelNote: '“I will search” — the word this book takes its name from.',
-			what: [
-				{
-					title: 'at Mass',
-					body: 'The whole Ordo Missæ of 1962, part by part. It shows who speaks and what is heard; the answers of the faithful are marked, and the prayers said silently are named.'
-				},
+			panelNote: '“I will search” — the word this app takes its name from.',
+			cards: [
+				{ title: 'at Mass', note: 'the whole 1962 Ordo Missæ, part by part', href: 'ordo' },
 				{
 					title: 'the prayers',
-					body: 'The Our Father, the Hail Mary, the Credo, the Marian antiphons — each with its word-by-word gloss and a translation, and the collection is growing.'
+					note: 'the Our Father, the Hail Mary, the Credo, the Marian antiphons…',
+					href: ''
 				},
 				{
 					title: 'for study',
-					body: 'Dictionary entries with a concordance, grammar pages with examples drawn from the prayers, and pronunciation in the Roman tradition.'
+					note: 'a dictionary with concordance, grammar, pronunciation',
+					href: 'grammatica'
 				}
 			],
 			keepTitle: 'a copy to keep',
 			keepBody:
-				'The whole book can be downloaded and opened in any browser — no internet, nothing to install. Unzip the folder and open index.html. This copy is yours: nothing calls home, nothing expires, and it will keep working even if this website one day does not.',
+				'The whole prayer book can be downloaded and read in any browser — no internet, nothing to install. Unzipped, it opens from index.html. Once downloaded, the copy is permanent: nothing calls home, nothing expires, and it will keep working even if this website one day does not.',
 			keepAction: 'Download Scrutabor.zip',
 			privacyLine: 'No accounts, no tracking, no ads.',
 			privacyLink: 'privacy',
@@ -120,6 +111,11 @@
 	};
 
 	const t = $derived(T[lang]);
+	const levels = $derived(M[lang].levels);
+
+	// The zip travels with each release rather than with the site: the
+	// stable GitHub URL always resolves to the newest release's asset.
+	const ZIP = 'https://github.com/scrutabor/scrutabor-app/releases/latest/download/Scrutabor.zip';
 </script>
 
 <svelte:head>
@@ -128,9 +124,7 @@
 </svelte:head>
 
 <div class="page centered landing">
-	<nav>
-		<a class="other-lang" href="/{other}" lang={other}>{M[other].langName}</a>
-	</nav>
+	<SurfaceNav {lang} base="" />
 	<main>
 		<h1 class="smallcaps">Scrutabor</h1>
 		<p class="tagline">{M[lang].tagline}</p>
@@ -145,12 +139,29 @@
 		<section class="specimen-section">
 			<h2 class="smallcaps">{t.specimenTitle}</h2>
 			<p class="lead">{t.specimenLead}</p>
+
+			<!-- The slider's three steps on the verse the motto comes from,
+			     each rendered by the app's own TextBody: bare Latin, the
+			     interlinear gloss, and the gloss with the verse's translation
+			     — exactly what the reading pages show at each stop. The
+			     idPrefix keeps the three copies' word ids apart, as on the
+			     ordo flow. -->
 			<figure class="specimen">
-				<p class="specimen-line" lang="la">
-					{#each SPECIMEN as w (w.la)}<span class="sw" class:named={w.name}
-							><ruby><span class="sw-base">{w.la}</span><rt {lang}>{w[lang]}</rt></ruby></span
-						>{' '}{/each}
-				</p>
+				{#each [0, 1, 2] as level (level)}
+					<div class="tier">
+						<p class="tier-label smallcaps">{levels[level]}</p>
+						<TextBody
+							doc={SPECIMEN_DOC}
+							gloss={SPECIMEN_GLOSS[lang]}
+							{lang}
+							helpLevel={level}
+							idPrefix={`spec${level}`}
+						/>
+					</div>
+				{/each}
+
+				<!-- …and what a tap answers with, for the one word this book
+				     is named after: the panel as the app draws it. -->
 				<figcaption class="panel">
 					<p class="panel-head" lang="la">scrutabor</p>
 					<p class="panel-lemma">{t.panelLemma}</p>
@@ -160,17 +171,21 @@
 			</figure>
 		</section>
 
-		{#each t.what as block (block.title)}
-			<section class="what-section">
-				<h2 class="smallcaps">{block.title}</h2>
-				<p class="lead">{block.body}</p>
-			</section>
-		{/each}
+		<section>
+			<div class="cards">
+				{#each t.cards as card (card.title)}
+					<a class="card" href="/app/{lang}{card.href ? `/${card.href}` : ''}">
+						<span class="card-title">{card.title}</span>
+						<span class="hung-note">{card.note}</span>
+					</a>
+				{/each}
+			</div>
+		</section>
 
-		<section class="what-section">
+		<section>
 			<h2 class="smallcaps">{t.keepTitle}</h2>
 			<p class="lead">{t.keepBody}</p>
-			<p class="keep-action"><a href="/Scrutabor.zip" download>{t.keepAction}</a></p>
+			<p class="keep-action"><a href={ZIP} rel="external">{t.keepAction}</a></p>
 		</section>
 
 		<footer>
@@ -185,24 +200,8 @@
 </div>
 
 <style>
-	nav {
-		display: flex;
-		justify-content: flex-end;
-	}
-
-	.other-lang {
-		color: var(--ink-soft);
-		text-decoration: none;
-		font-size: 0.95rem;
-		padding: 0.3rem 0;
-	}
-
-	.other-lang:hover {
-		color: var(--ink);
-	}
-
-	/* .tagline, .motto and .motto-ref are the brand furniture, shared with
-	   the catalog and the routers via app.css. */
+	/* The nav row, .tagline, .motto and .motto-ref are shared furniture
+	   (app.css): the same objects on the catalog and the routers. */
 
 	/* The one loud thing on the page. Rubric red carries it in both
 	   themes; the label is set in the page background colour, which
@@ -234,10 +233,13 @@
 		color: var(--ink-soft);
 	}
 
+	/* Wider than the app's catalog column: the landing is read on
+	   whatever screen finds it, and the specimen wants room for a whole
+	   verse before it wraps. */
 	section {
 		margin: 3.2rem 0 0;
 		width: 100%;
-		max-width: 30rem;
+		max-width: 46rem;
 	}
 
 	.lead {
@@ -245,53 +247,27 @@
 		line-height: 1.65;
 	}
 
-	/* The specimen is the reading surface in miniature: the same ruby
-	   mechanism, the same proportions, a wash on the word whose panel is
-	   open — so what the page promises is what the page shows. */
+	/* The specimen is the reading surface itself — TextBody carries its
+	   own styles — so all this page adds is the frame around each step.
+	   Left-set, as the book is. */
 	.specimen {
-		margin: 1.6rem 0 0;
+		margin: 0.6rem 0 0;
+		text-align: left;
 	}
 
-	.specimen-line {
-		font-size: 1.45rem;
-		line-height: 2.3;
-		margin: 0;
+	.tier {
+		margin: 1.9rem 0 0;
 	}
 
-	.specimen-line ruby {
-		ruby-position: under;
-		-webkit-ruby-align: start;
-		ruby-align: start;
-	}
-
-	.specimen-line rt {
-		font-size: 0.64em;
+	.tier-label {
+		margin: 0 0 0.5rem;
+		font-size: 0.75rem;
 		color: var(--ink-soft);
-		letter-spacing: 0.01em;
-	}
-
-	.sw {
-		display: inline-block;
-	}
-
-	.sw.named .sw-base,
-	.sw.named rt {
-		background: var(--wash-strong);
-	}
-
-	.sw.named rt {
-		color: var(--ink);
-	}
-
-	.sw-base {
-		padding: 0.06em 0.069em;
-		margin-inline: -0.069em;
-		border-radius: 0.172em;
 	}
 
 	/* What a tap answers with, as the app draws it: a quiet card. */
 	.panel {
-		margin: 1.4rem 0 0;
+		margin: 2rem 0 0;
 		padding: 0.9rem 1.2rem 1rem;
 		border: 1px solid var(--border);
 		border-radius: 0.6rem;

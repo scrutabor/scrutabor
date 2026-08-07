@@ -1,19 +1,20 @@
 <script lang="ts">
+	// jscpd:ignore-start — the same scaffolding as the app's language
+	// layout, deliberately: the two must do the same thing without
+	// depending on each other (their head URLs differ; nothing else may).
 	import type { Lang } from '$lib/i18n';
 	import { ORIGIN } from '$lib/site';
+	import { adoptLanguage } from '$lib/where.svelte';
 
 	let { children, data } = $props();
 
 	const lang = $derived(data.lang as Lang);
 	const rest = $derived(data.path);
 
-	// Remember the language a reader chose here, so the app's own router
-	// at /app/ opens in it, and keep the live DOM lang in sync (the
-	// prerendered <html lang> is set by hooks).
 	$effect(() => {
-		document.documentElement.lang = lang;
-		localStorage.setItem('scrutabor-lang', lang);
+		adoptLanguage(lang, rest);
 	});
+	// jscpd:ignore-end
 </script>
 
 <svelte:head>

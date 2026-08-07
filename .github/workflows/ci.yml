@@ -2,7 +2,11 @@ name: ci
 
 on:
   push:
-    branches: [main]
+    # *-gate: the conventions' pattern for risky work — push a gate
+    # branch, let CI prove it, fast-forward main. Without this line the
+    # pattern silently proved nothing: no workflow ever ran on a gate
+    # branch, and the wait for its verdict could only time out.
+    branches: [main, '*-gate']
   pull_request:
 
 permissions:

@@ -4,6 +4,7 @@
 	// states what IS stored (the reader's own settings, on their own
 	// device) and the one thing serving a website necessarily involves.
 	// The app stores will require this URL when the wrapped builds ship.
+	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
 	import type { Lang } from '$lib/i18n';
 	import { bindProse } from '$lib/polish';
 
@@ -49,26 +50,35 @@
 	const t = $derived(T[lang]);
 </script>
 
+<!-- jscpd:ignore-start — the opening every landing surface shares:
+     head, frame, nav, heading. Scaffolding, not content. -->
 <svelte:head>
 	<title>Scrutabor — {t.title.toLowerCase()}</title>
 	<meta name="description" content={t.description} />
 </svelte:head>
 
 <div class="page centered landing">
+	<SurfaceNav {lang} base="" />
 	<main>
 		<h1 class="smallcaps">{t.title}</h1>
+		<!-- jscpd:ignore-end -->
 		<p class="lede">{t.lede}</p>
 		{#each t.points as point (point)}
 			<p class="point">{point}</p>
 		{/each}
+		<!-- jscpd:ignore-start — the way to the sources and the way home,
+		     spelled the same as the landing's footer on purpose. -->
 		<p class="contact">
 			<a href="https://github.com/scrutabor" rel="external">{t.contact}</a>
 		</p>
 		<p class="back"><a href="/{lang}">{t.back} ›</a></p>
+		<!-- jscpd:ignore-end -->
 	</main>
 </div>
 
 <style>
+	/* The nav row is shared furniture (app.css). */
+
 	main {
 		max-width: 34rem;
 	}

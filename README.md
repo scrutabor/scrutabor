@@ -54,7 +54,8 @@ One origin, one build, two surfaces:
   to the open word.
 - **A copy to keep** — `npm run build:offline` assembles the whole book
   as a folder (and `-- --zip` as `Scrutabor.zip`) that runs from a disk
-  with no server at all; the landing offers it for download.
+  with no server at all. Each release attaches the zip as an asset, and
+  the landing links the latest release's copy directly.
 
 ## Development
 
@@ -67,7 +68,6 @@ npm run test:unit      # vitest (rendering logic, data-snapshot consistency)
 npm run test:e2e       # playwright against the built static site AND the offline folder
 npm run build          # static site into build/
 npm run build:offline  # the downloadable folder into build-offline/
-npm run build:site     # everything production serves: site + Scrutabor.zip in build/
 ```
 
 CI runs lint, check, build, and both test suites on every push.
