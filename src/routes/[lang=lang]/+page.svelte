@@ -166,6 +166,9 @@
 				<div class="specimen-help">
 					<HelpLevels {lang} bind:value={helpLevel} />
 				</div>
+				<p class="stanza-link smallcaps">
+					<a href="/app/{lang}/psalmi/118-he">{t.stanzaLink} ›</a>
+				</p>
 				<TextBody
 					{doc}
 					{gloss}
@@ -174,9 +177,6 @@
 					selectedId={selected}
 					ontap={(id) => (selected = id)}
 				/>
-				<p class="stanza-link">
-					<a href="/app/{lang}/psalmi/118-he">{t.stanzaLink} ›</a>
-				</p>
 				{#if selWord && selAnalysis}
 					<div class="word-box">
 						<p class="word-box-form" lang="la">{selWord.form}</p>
@@ -298,13 +298,12 @@
 		font-weight: 500;
 	}
 
-	/* A citation under its verse, as an apparatus prints one: set off by
-	   real air, standing at the right edge — and it is the door to the
-	   stanza's own page. */
+	/* The citation stands over its verse like a title — under the box it
+	   pushed the analysis below the fold on a phone, right where the
+	   tapping happens. Quiet, and still the door to the stanza's page. */
 	.stanza-link {
-		margin: 1.8rem 0 0;
-		font-size: 0.9rem;
-		text-align: right;
+		margin: 0 0 0.9rem;
+		font-size: 0.8rem;
 	}
 
 	.stanza-link a {

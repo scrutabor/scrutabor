@@ -24,10 +24,27 @@ export const entries: EntryGenerator = () =>
 		})
 	);
 
+// The psalter numbers its verses and the witnesses print the numbers
+// ({118:33} in the Hetzenauer Clementine), so the reading page shows
+// them. Editorial app data until the corpus schema carries a per-segment
+// verse field (BACKLOG): the first verse of each stanza, counted up over
+// its verse segments.
+const FIRST_VERSE: Record<string, number> = { 'psalmi/118-he': 33 };
+
 export const load: PageServerLoad = ({ params }) => {
 	const entry = TEXTS[`${params.category}/${params.slug}`];
 	if (!entry) error(404, 'no such text');
 	const lang = params.lang as Lang;
+
+	let verses: Record<string, number> | undefined;
+	const first = FIRST_VERSE[`${params.category}/${params.slug}`];
+	if (first !== undefined) {
+		verses = {};
+		let n = first;
+		for (const seg of entry.text.segments) {
+			if (seg.type === 'verse') verses[seg.id] = n++;
+		}
+	}
 
 	// Just the entries this text can ask about, not the whole dictionary.
 	const lex = narrowLexicon([entry.text], lang);
@@ -36,6 +53,7 @@ export const load: PageServerLoad = ({ params }) => {
 		slug: params.slug,
 		doc: entry.text,
 		gloss: entry.glosses[lang],
-		lex
+		lex,
+		verses
 	};
 };

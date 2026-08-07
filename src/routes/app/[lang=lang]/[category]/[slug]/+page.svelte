@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
+	import { goto, replaceState } from '$app/navigation';
 	import { neighborsOf, sectionFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
@@ -56,11 +56,50 @@
 	keepAwake();
 
 	// The book's ribbon, keyed by text (see lib/ribbon): a deep link into a
-	// word outranks it — that reader asked for a place.
+	// word or a cited verse outranks it — that reader asked for a place.
 	ribbon(
 		() => `scrutabor-pos:${data.category}/${data.slug}`,
-		() => new URL(location.href).searchParams.has('w')
+		() => {
+			// eslint-disable-next-line svelte/prefer-svelte-reactivity
+			const q = new URL(location.href).searchParams;
+			return q.has('w') || q.has('v');
+		}
 	);
+
+	// The psalter's verses are addressable: a tapped number cites its
+	// verse in the URL (?v=34) the way a tapped word travels as ?w= —
+	// shareable, and the page opens scrolled to the verse it names.
+	// replaceState, not push: citing is a bookmarkable state, not a step
+	// a reader should have to back out of.
+	let citedVerse = $state<number | null>(null);
+
+	function applyVerseFromLocation() {
+		if (!data.verses) return;
+		// eslint-disable-next-line svelte/prefer-svelte-reactivity
+		const raw = new URL(location.href).searchParams.get('v');
+		const n = raw === null ? null : Number(raw);
+		citedVerse = n !== null && Object.values(data.verses).includes(n) ? n : null;
+		const target = citedVerse;
+		if (target !== null) {
+			requestAnimationFrame(() =>
+				document.getElementById(`v${target}`)?.scrollIntoView({ block: 'center' })
+			);
+		}
+	}
+
+	$effect(() => {
+		void data.verses;
+		applyVerseFromLocation();
+	});
+
+	function tapVerse(no: number) {
+		citedVerse = citedVerse === no ? null : no;
+		// eslint-disable-next-line svelte/prefer-svelte-reactivity
+		const url = new URL(location.href);
+		if (citedVerse === null) url.searchParams.delete('v');
+		else url.searchParams.set('v', String(citedVerse));
+		replaceState(url, {});
+	}
 
 	// Three sheets can open from this page and only one at a time: opening
 	// any of them closes the others. That is the page's business; how a
@@ -111,7 +150,13 @@
 	let selectedAnalysis = $derived(wp.analysis);
 </script>
 
-<svelte:window onpopstate={panel.applyFromLocation} onkeydown={onWindowKeydown} />
+<svelte:window
+	onpopstate={() => {
+		panel.applyFromLocation();
+		applyVerseFromLocation();
+	}}
+	onkeydown={onWindowKeydown}
+/>
 
 <svelte:head>
 	<title>{doc ? `${doc.title} — Scrutabor` : 'Scrutabor'}</title>
@@ -153,6 +198,9 @@
 				selectedId={panel.id}
 				ontap={tapWord}
 				onmark={openLegend}
+				verses={data.verses}
+				onverse={data.verses ? tapVerse : undefined}
+				{citedVerse}
 			/>
 
 			<Pager

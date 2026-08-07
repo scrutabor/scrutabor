@@ -16,7 +16,10 @@
 		selectedId = null,
 		idPrefix = '',
 		ontap,
-		onmark
+		onmark,
+		verses,
+		onverse,
+		citedVerse = null
 	}: {
 		doc: TextDocument;
 		gloss: GlossDocument;
@@ -28,6 +31,14 @@
 		ontap?: (id: string) => void;
 		/** Asked for the key to the marks. Without it the mark is inert. */
 		onmark?: () => void;
+		/** Verse numbers by segment id, for the texts that print them —
+		 * the psalter. They take the speaker mark's column and its quiet
+		 * ink; a segment with a speaker keeps its speaker mark instead. */
+		verses?: Record<string, number>;
+		/** Tapped a verse number. With it the numbers become buttons and
+		 * the cited verse is marked; without it they are print. */
+		onverse?: (no: number) => void;
+		citedVerse?: number | null;
 	} = $props();
 
 	// A dot, not a colon: it is unreserved in a URL, so `?w=credo.w001`
@@ -123,6 +134,7 @@
 			</p>
 		{/if}
 		{@const showMark = marked(i)}
+		{@const verseNo = seg.speaker ? undefined : verses?.[seg.id]}
 		<!-- The gloss row of a verse whose initial reaches below the line
 		     sinks together, so the glosses stay level with each other. -->
 		{@const sink =
@@ -134,7 +146,9 @@
 			class:glossed={helpLevel >= 1}
 			class:quiet={seg.voice === 'secreto'}
 			class:answer={mine}
-			class:marked={showMark}
+			class:marked={showMark || verseNo !== undefined}
+			class:cited={verseNo !== undefined && verseNo === citedVerse}
+			id={verseNo !== undefined ? `v${verseNo}` : undefined}
 			lang="la"
 		>
 			<!-- The mark the books print in red beside the line, and then the
@@ -157,7 +171,14 @@
 						>{MARKS[seg.speaker]}</span
 					>{/if}<span class="sr-only"
 					>{M[lang].speakers[seg.speaker]}:
-				</span>{/if}{#each seg.words ?? [] as w, wi (w.id)}{@const raised =
+				</span>{:else if verseNo !== undefined}{#if onverse}<button
+						type="button"
+						class="mark"
+						aria-label={M[lang].verseAria(verseNo)}
+						aria-pressed={verseNo === citedVerse}
+						onclick={() => onverse?.(verseNo)}>{verseNo}</button
+					>{:else}<span class="mark">{verseNo}</span
+					>{/if}{/if}{#each seg.words ?? [] as w, wi (w.id)}{@const raised =
 					i === firstVerse && wi === 0}<span class="token"
 					>{#if ontap}<button
 							class="word"
@@ -228,6 +249,13 @@
 		background: none;
 		padding: 0;
 		text-align: start;
+	}
+
+	/* Only a mark that DOES something invites the hand: a tappable
+	   speaker mark opens the key, a verse number cites its verse. A
+	   plain span in the margin is print, and print offered a dead
+	   pointer (the owner found it). */
+	button.mark {
 		cursor: pointer;
 	}
 
@@ -239,6 +267,12 @@
 	button.mark:focus-visible {
 		outline: 2px solid var(--rubric);
 		outline-offset: 2px;
+	}
+
+	/* The cited verse: its number in rubric red — the same signal the
+	   reader's own lines use, here meaning "the verse this link names". */
+	.verse.cited > .mark {
+		color: var(--rubric);
 	}
 
 	.mark.yours {

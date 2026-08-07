@@ -173,6 +173,30 @@ test('pages carry canonical and hreflang alternates without query strings', asyn
 	);
 });
 
+test('the psalm page numbers its verses in the margin', async ({ page }) => {
+	// The psalter prints its numbers and so do the witnesses ({118:33});
+	// they ride in the speaker mark's column, quiet ink, He = vv. 33-40.
+	await page.goto('/app/pl/psalmi/118-he');
+	const nums = page.locator('.verse .mark');
+	await expect(nums).toHaveCount(8);
+	await expect(nums.first()).toHaveText('33');
+	await expect(nums.last()).toHaveText('40');
+});
+
+test('a verse number cites its verse, and the citation is a place', async ({ page }) => {
+	await page.goto('/app/pl/psalmi/118-he');
+	// tapping the number writes ?v=; tapping again clears it
+	await page.locator('#v34 .mark').click();
+	await expect(page).toHaveURL(/\?v=34$/);
+	await expect(page.locator('#v34 .mark')).toHaveAttribute('aria-pressed', 'true');
+	await page.locator('#v34 .mark').click();
+	await expect(page).not.toHaveURL(/v=/);
+	// and arriving BY the citation opens on the verse it names
+	await page.goto('/app/pl/psalmi/118-he?v=40');
+	await expect(page.locator('#v40')).toBeInViewport();
+	await expect(page.locator('#v40 .mark')).toHaveAttribute('aria-pressed', 'true');
+});
+
 test('the sitemap lists both languages of every surface', async ({ request }) => {
 	const res = await request.get('/sitemap.xml');
 	expect(res.status()).toBe(200);
