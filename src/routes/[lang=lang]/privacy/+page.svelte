@@ -23,8 +23,8 @@
 	const T: Record<Lang, Copy> = {
 		pl: bindProse({
 			title: 'Prywatność',
-			description: 'Scrutabor nie ma kont, nie zbiera danych i niczego nie śledzi.',
-			lede: 'Scrutabor nie ma kont, nie zbiera danych i niczego nie śledzi.',
+			description: 'Scrutabor nie wymaga rejestracji, nie zbiera danych i niczego nie śledzi.',
+			lede: 'Scrutabor nie wymaga rejestracji, nie zbiera danych i niczego nie śledzi.',
 			points: [
 				'Nie używamy plików cookie, analityki, reklam ani żadnych skryptów osób trzecich. Strona nie mierzy odwiedzin i nie buduje żadnych profili.',
 				'Ustawienia czytelnika — język, motyw, wielkość pisma, wybrana rola we Mszy, miejsce w lekturze — są zapisywane wyłącznie w pamięci przeglądarki i nigdy nie opuszczają urządzenia. Zainstalowana aplikacja przechowuje na urządzeniu całą książkę, żeby działała bez internetu.',
@@ -35,8 +35,8 @@
 		}),
 		en: {
 			title: 'Privacy',
-			description: 'Scrutabor has no accounts, collects no data, and tracks nothing.',
-			lede: 'Scrutabor has no accounts, collects no data, and tracks nothing.',
+			description: 'Scrutabor requires no registration, collects no data, and tracks nothing.',
+			lede: 'Scrutabor requires no registration, collects no data, and tracks nothing.',
 			points: [
 				'There are no cookies, no analytics, no ads, and no third-party scripts. The site does not count visits and builds no profiles.',
 				'A reader’s settings — language, theme, text size, the chosen part at Mass, the place in the reading — are stored only in the browser’s own storage and never leave the device. The installed app keeps the whole book on the device so that it works offline.',
