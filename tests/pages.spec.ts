@@ -1,5 +1,6 @@
 // The educational surfaces around the reading view: lemma pages,
 // grammar-concept pages, and the landing.
+import pkg from '../package.json' with { type: 'json' };
 import { atRoute, expect, test } from './fixtures';
 import { CATALOG } from '../src/lib/catalog';
 
@@ -171,6 +172,15 @@ test('pages carry canonical and hreflang alternates without query strings', asyn
 		'content',
 		/Pater noster — tekst łaciński/
 	);
+});
+
+test('the catalog closes with a colophon naming the edition', async ({ page }) => {
+	// Which copy is this, and the way home — on the book's front page,
+	// never in the reading chrome. The version comes from the one source.
+	await page.goto('/app/pl');
+	const colophon = page.locator('.colophon');
+	await expect(colophon).toContainText(`v${pkg.version}`);
+	await expect(colophon.locator('a')).toHaveAttribute('href', '/pl');
 });
 
 test('the psalm page numbers its verses in the margin', async ({ page }) => {

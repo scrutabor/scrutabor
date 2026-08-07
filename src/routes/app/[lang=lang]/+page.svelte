@@ -50,6 +50,15 @@
 			<a href="/app/{lang}/grammatica">{msgs.grammarTitle} →</a>
 		</p>
 		<p class="working smallcaps"><a href="/app/{lang}/editio">{msgs.working}</a></p>
+		<!-- The colophon: which copy this is, and the way home. A book
+		     names its edition and its printer on the colophon page, not on
+		     every leaf — so it lives here, on the book's own front page,
+		     and nowhere in the reading chrome. In the downloaded folder
+		     the link opens the live site (see offline/shims/navigation):
+		     "is there a new version" is a network question. -->
+		<p class="colophon smallcaps">
+			Scrutabor · {msgs.edition}&nbsp;v{data.version} · <a href="/{lang}">scrutabor.org</a>
+		</p>
 	</main>
 </div>
 
@@ -118,5 +127,21 @@
 		margin: 0.6rem 0 0;
 		font-size: 0.75rem;
 		color: var(--ink-soft);
+	}
+
+	.colophon {
+		margin: 0.4rem 0 0;
+		font-size: 0.75rem;
+		color: var(--ink-soft);
+	}
+
+	.colophon a {
+		color: inherit;
+		text-decoration: none;
+		border-bottom: 1px dotted var(--border);
+	}
+
+	.colophon a:hover {
+		color: var(--ink);
 	}
 </style>

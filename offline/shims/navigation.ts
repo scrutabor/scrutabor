@@ -4,6 +4,8 @@
 // because every navigation here is a document load, so the hooks that exist
 // to observe client-side navigation have nothing to observe.
 
+import { ORIGIN } from '$lib/site';
+
 /** There is no client-side navigation, so this fires once, on load — which
  * is the moment the callers care about (the reading ribbon restores the
  * reader's place). */
@@ -32,6 +34,11 @@ export function asFile(href: string): string {
 	// The .html belongs to the FILE, so it goes before any query or hash.
 	const [, route = '', tail = ''] = /^([^?#]*)([?#].*)?$/.exec(href) ?? [];
 	const stripped = route.replace(/^\/app(?=\/|$)/, '');
+	// A path OUTSIDE /app names the site, not the book — the landing, the
+	// colophon's way home. The folder carries only the book, so those
+	// doors open the live site: "is there a new version" is a network
+	// question, and the README already points there.
+	if (stripped === route && !route.startsWith('/_')) return `${ORIGIN}${href}`;
 	// The app's own front door is the package root's index.html.
 	if (stripped === '' || stripped === '/') return `${up}../index.html${tail}`;
 	const suffix = /\.[a-z0-9]+$/.test(stripped) ? '' : '.html';

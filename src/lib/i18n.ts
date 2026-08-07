@@ -10,6 +10,8 @@ export interface Messages {
 	tagline: string;
 	mottoRef: string;
 	workingEdition: string;
+	/** The colophon's word for an edition of the app. */
+	edition: string;
 	levels: [string, string, string];
 	levelsAria: string;
 	themeAria: { toLight: string; toDark: string };
@@ -69,6 +71,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		tagline: 'Modlitwa po łacinie ze zrozumieniem',
 		mottoRef: 'ps\u00a0118,\u00a034',
 		workingEdition: 'wydanie robocze',
+		edition: 'wydanie',
 		levels: ['sama łacina', 'słowo po słowie', 'pełny przekład'],
 		levelsAria: 'Poziom pomocy',
 		themeAria: { toLight: 'przełącz na tryb jasny', toDark: 'przełącz na tryb ciemny' },
@@ -139,6 +142,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		tagline: 'Prayer in Latin, with understanding',
 		mottoRef: 'ps\u00a0118\u00a0(119),\u00a034',
 		workingEdition: 'working edition',
+		edition: 'edition',
 		levels: ['Latin only', 'word by word', 'full translation'],
 		levelsAria: 'Help level',
 		themeAria: { toLight: 'switch to light mode', toDark: 'switch to dark mode' },
