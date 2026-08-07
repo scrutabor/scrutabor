@@ -6,17 +6,25 @@
 // how those files find each other, and how a page starts.
 //
 //   node scripts/build-offline.mjs           → build-offline/
-//   node scripts/build-offline.mjs --zip     → …and scrutabor-offline.zip
+//   node scripts/build-offline.mjs --zip     → …and Scrutabor.zip
 //
-// Expects `npm run build` and `vite build --config vite.offline.config.ts`
-// to have run; it does not shell out to them, so that a failure here is
-// never confused with a failure there.
+// What the reader opens has to be obvious at a glance, so the folder holds
+// three things and no more:
+//
+//   README.txt     what this is
+//   index.html     ← the one to open
+//   app/           everything else, which nobody needs to look at
+//
+// Expects `npm run build` and `npm run build:offline-runtime` to have run;
+// it does not shell out to them, so a failure here is never confused with a
+// failure there.
 import { execFileSync } from 'node:child_process';
 import {
 	cpSync,
 	existsSync,
 	readFileSync,
 	readdirSync,
+	renameSync,
 	rmSync,
 	statSync,
 	writeFileSync
@@ -26,6 +34,8 @@ import { join, relative, sep } from 'node:path';
 const SITE = 'build';
 const RUNTIME = 'build-offline-runtime/offline.js';
 const OUT = 'build-offline';
+/** Everything but README.txt and index.html lives in here. */
+const INNER = 'app';
 
 for (const required of [SITE, RUNTIME]) {
 	if (!existsSync(required)) {
@@ -44,29 +54,64 @@ function* walk(dir) {
 	}
 }
 
+const app = join(OUT, INNER);
 rmSync(OUT, { recursive: true, force: true });
-cpSync(SITE, OUT, { recursive: true });
-cpSync(RUNTIME, join(OUT, '_app', 'offline.js'));
+cpSync(SITE, app, { recursive: true });
+cpSync(RUNTIME, join(app, '_app', 'offline.js'));
 
-// A stylesheet's url() resolves against the STYLESHEET, so a font sitting
-// beside it is simply named.
-let sheets = 0;
-for (const path of walk(OUT)) {
-	if (!path.endsWith('.css')) continue;
-	const before = readFileSync(path, 'utf8');
-	const after = before.replaceAll('url(/_app/immutable/assets/', 'url(./');
-	if (before !== after) {
-		writeFileSync(path, after);
-		sheets++;
+// Files that only mean something to a web server or an app store. A
+// crawler will never read this folder; a service worker cannot register
+// without an origin; nothing can be installed from a disk. 404.html is
+// SvelteKit's fallback for a server that has one, and nothing here links
+// to it.
+const POINTLESS = [
+	'robots.txt',
+	'sitemap.xml',
+	'404.html',
+	'service-worker.js',
+	'manifest.webmanifest',
+	'icon-192.png',
+	'icon-512.png',
+	'icon-maskable-512.png'
+];
+let dropped = 0;
+for (const name of POINTLESS) {
+	const path = join(app, name);
+	if (existsSync(path)) {
+		rmSync(path);
+		dropped++;
 	}
 }
 
-let pages = 0;
-for (const path of walk(OUT)) {
+// A stylesheet's url() resolves against the STYLESHEET, so a font sitting
+// beside it is simply named.
+for (const path of walk(app)) {
+	if (!path.endsWith('.css')) continue;
+	const before = readFileSync(path, 'utf8');
+	const after = before.replaceAll('url(/_app/immutable/assets/', 'url(./');
+	if (before !== after) writeFileSync(path, after);
+}
+
+// The root's language chooser is the whole of the top level, so it moves
+// out of the copied site and up. Everything it points at gains the `app/`
+// prefix, which is exactly what its depth would have been.
+renameSync(join(app, 'index.html'), join(OUT, 'index.html'));
+
+/** @type {Array<[path: string, up: string]>} */
+const pages = [[join(OUT, 'index.html'), `${INNER}/`]];
+for (const path of walk(app)) {
 	if (!path.endsWith('.html')) continue;
-	const depth = relative(OUT, path).split(sep).length - 1;
-	const up = depth ? '../'.repeat(depth) : './';
+	const depth = relative(app, path).split(sep).length - 1;
+	pages.push([path, depth ? '../'.repeat(depth) : './']);
+}
+
+for (const [path, up] of pages) {
 	let html = readFileSync(path, 'utf8');
+
+	// The chooser descended a level when it moved to the top, so the paths
+	// SvelteKit already wrote relative — stylesheets, chiefly — have to
+	// follow it. Everything it names lives in the folder below now.
+	if (up === `${INNER}/`) html = html.replace(/\b(href|src)="\.\//g, `$1="${INNER}/`);
 
 	// A root-absolute path means the filesystem root once there is no
 	// server. Every route gained a .html twin at build time; a file keeps
@@ -76,10 +121,17 @@ for (const path of walk(OUT)) {
 		return `${attr}="${up}${target.slice(1)}${suffix}"`;
 	});
 
-	// Nothing here will fetch a module, and a service worker cannot
-	// register without an origin — nor has it anything to do when every
-	// file is already on the disk.
+	// Head links with nothing behind them any more. The font preloads carry
+	// `crossorigin`, which on a file:// URL fails the CORS check and prints
+	// an error for every face — and the offline runtime inlines the reading
+	// face anyway, so they were asking for what it already has.
 	html = html.replace(/<link[^>]+rel="modulepreload"[^>]*>/g, '');
+	html = html.replace(/<link[^>]+rel="manifest"[^>]*>/g, '');
+	html = html.replace(/<link[^>]+rel="apple-touch-icon"[^>]*>/g, '');
+	html = html.replace(/<link[^>]+rel="preload"[^>]+as="font"[^>]*>/g, '');
+
+	// It cannot register without an origin, and it has nothing to do when
+	// every file is already on the disk.
 	html = html.replaceAll('navigator.serviceWorker.register(sanitised)', 'Promise.resolve()');
 
 	// The root picks the reader's language before first paint and sends
@@ -114,30 +166,39 @@ for (const path of walk(OUT)) {
 			'<script>\n\t\t\t\t{\n\t\t\t\t\t__sveltekit'
 	);
 	writeFileSync(path, html);
-	pages++;
 }
 
 writeFileSync(
 	join(OUT, 'README.txt'),
 	`Scrutabor — a Latin missal and prayer book with a word-by-word layer.
 
-Open index.html in any browser. Everything works with no internet:
-tap a word for its dictionary entry and parse, move the slider for more
-or less help, choose whose parts you are following.
+    Open index.html.
 
-This copy is yours. Nothing here calls home, nothing expires, and it
-will keep working if the website ever does not.
+It works in any browser, with no internet: tap a word for its dictionary
+entry and its grammar, move the slider for more or less help, choose
+whose parts you are following at Mass.
+
+The "app" folder holds the book itself. There is nothing to look at in
+there, and nothing to install.
+
+This copy is yours. Nothing here calls home, nothing expires, and it will
+keep working if the website one day does not.
 
 scrutabor.org
 `
 );
 
-console.log(`${pages} pages, ${sheets} stylesheets → ${OUT}/`);
+console.log(`${pages.length} pages, ${dropped} server-only files dropped → ${OUT}/`);
 
 if (process.argv.includes('--zip')) {
-	const zip = 'scrutabor-offline.zip';
+	// Unzipping must give ONE folder with a name a reader recognises, not
+	// three loose items in a Downloads directory.
+	const staged = 'Scrutabor';
+	const zip = 'Scrutabor.zip';
+	rmSync(staged, { recursive: true, force: true });
 	rmSync(zip, { force: true });
-	execFileSync('zip', ['-qr', join('..', zip), '.'], { cwd: OUT });
-	const mb = (statSync(zip).size / 1048576).toFixed(1);
-	console.log(`${zip} — ${mb} MB`);
+	cpSync(OUT, staged, { recursive: true });
+	execFileSync('zip', ['-qr', zip, staged]);
+	rmSync(staged, { recursive: true, force: true });
+	console.log(`${zip} — ${(statSync(zip).size / 1048576).toFixed(1)} MB`);
 }
