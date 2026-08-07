@@ -6,7 +6,7 @@
 // how those files find each other, and how a page starts.
 //
 //   node scripts/build-offline.mjs           → build-offline/
-//   node scripts/build-offline.mjs --zip     → …and Scrutabor.zip
+//   node scripts/build-offline.mjs --zip     → …and Scrutabor-v<version>.zip
 //
 // What the reader opens has to be obvious at a glance, so the folder holds
 // three things and no more:
@@ -30,6 +30,13 @@ import {
 	writeFileSync
 } from 'node:fs';
 import { join, relative, sep } from 'node:path';
+
+/** The package version, single-sourced from package.json (the release
+ * ritual bumps it with `npm version`, which also cuts the tag). It goes
+ * into the zip's NAME — two copies on a disk must tell themselves apart
+ * before anyone unzips them — and into the README; the folder inside
+ * stays plain `Scrutabor`, so unzipping always yields the same shape. */
+const VERSION = JSON.parse(readFileSync('package.json', 'utf8')).version;
 
 const SITE = 'build';
 const RUNTIME = 'build-offline-runtime/offline.js';
@@ -189,6 +196,7 @@ for (const [path, up] of pages) {
 writeFileSync(
 	join(OUT, 'README.txt'),
 	`Scrutabor — a Latin missal and prayer book with a word-by-word layer.
+Edition v${VERSION}.
 
     Open index.html.
 
@@ -212,9 +220,11 @@ if (process.argv.includes('--zip')) {
 	// Unzipping must give ONE folder with a name a reader recognises, not
 	// three loose items in a Downloads directory.
 	const staged = 'Scrutabor';
-	const zip = 'Scrutabor.zip';
+	const zip = `Scrutabor-v${VERSION}.zip`;
 	rmSync(staged, { recursive: true, force: true });
-	rmSync(zip, { force: true });
+	for (const stale of readdirSync('.')) {
+		if (/^Scrutabor(-v.*)?\.zip$/.test(stale)) rmSync(stale);
+	}
 	cpSync(OUT, staged, { recursive: true });
 	execFileSync('zip', ['-qr', zip, staged]);
 	rmSync(staged, { recursive: true, force: true });

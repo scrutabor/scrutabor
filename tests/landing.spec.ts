@@ -2,6 +2,7 @@
 // app stores will point at. It exists only on the served site — the
 // downloaded folder is the book alone — so the whole file is @online.
 // Its axe sweep lives with the others in a11y.spec.
+import pkg from '../package.json' with { type: 'json' };
 import { atRoute, expect, test } from './fixtures';
 
 test.describe('landing @online', () => {
@@ -115,16 +116,20 @@ test.describe('landing @online', () => {
 		}
 	});
 
-	test('the download door points at the latest release', async ({ page }) => {
-		// The zip travels with each GitHub release, not with the site — so
-		// this asserts the address, and the release ritual owns the file.
+	test('the download door points at its own version of the release asset', async ({ page }) => {
+		// The zip travels with each GitHub release under a versioned name,
+		// and the landing (deployed only on release) links the exact asset
+		// of its own version — so this asserts the address against the one
+		// source, package.json, and the release ritual owns the file.
+		const { version } = pkg;
 		await page.goto('/en');
 		const zip = page.locator('a.way', { hasText: 'ZIP file' });
 		await expect(zip).toHaveAttribute(
 			'href',
-			'https://github.com/scrutabor/scrutabor-app/releases/latest/download/Scrutabor.zip'
+			`https://github.com/scrutabor/scrutabor-app/releases/download/v${version}/Scrutabor-v${version}.zip`
 		);
 		await expect(zip).toContainText('a copy to download');
+		await expect(zip).toContainText(`v${version}`);
 	});
 
 	test('the privacy page states the promise in both languages', async ({ page }) => {

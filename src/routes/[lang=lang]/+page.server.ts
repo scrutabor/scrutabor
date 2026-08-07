@@ -8,9 +8,18 @@
 import { TEXTS, narrowLexicon, type GlossDocument, type TextDocument } from '$lib/corpus';
 import type { Lang } from '$lib/i18n';
 import { error } from '@sveltejs/kit';
+import pkg from '../../../package.json';
 import type { PageServerLoad } from './$types';
 
 const VERSE = 's02';
+
+// The zip travels with each GitHub release under a VERSIONED name — two
+// copies on a disk must tell themselves apart — and since the landing
+// deploys only on release, it can link the exact asset of its own
+// version instead of a latest-indirection. Single-sourced from
+// package.json; the release ritual bumps it with `npm version`, which
+// also cuts the tag this URL names.
+const ZIP = `https://github.com/scrutabor/scrutabor-app/releases/download/v${pkg.version}/Scrutabor-v${pkg.version}.zip`;
 
 export const load: PageServerLoad = ({ params }) => {
 	const lang = params.lang as Lang;
@@ -29,5 +38,9 @@ export const load: PageServerLoad = ({ params }) => {
 		words: Object.fromEntries(Object.entries(full.words).filter(([id]) => ids.has(id)))
 	};
 
-	return { specimen: { doc, gloss, lex: narrowLexicon([doc], lang) } };
+	return {
+		specimen: { doc, gloss, lex: narrowLexicon([doc], lang) },
+		zip: ZIP,
+		version: pkg.version
+	};
 };

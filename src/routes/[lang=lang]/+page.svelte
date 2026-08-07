@@ -100,9 +100,9 @@
 
 	const t = $derived(T[lang]);
 
-	// The zip travels with each release rather than with the site: the
-	// stable GitHub URL always resolves to the newest release's asset.
-	const ZIP = 'https://github.com/scrutabor/scrutabor-app/releases/latest/download/Scrutabor.zip';
+	// The versioned release asset, resolved by the server load — see
+	// +page.server.ts for why the landing can link an exact version.
+	const ZIP = $derived(data.zip);
 </script>
 
 {#snippet doorIcon(name: string)}
@@ -215,7 +215,7 @@
 			<a class="way" href={ZIP} rel="external">
 				{@render doorIcon('download')}
 				<span class="way-title">{t.zipTitle}</span>
-				<span class="way-note">{t.zipNote}</span>
+				<span class="way-note">{t.zipNote} · v{data.version}</span>
 			</a>
 			{#each SOON as channel (channel.name)}
 				<div class="way soon">
