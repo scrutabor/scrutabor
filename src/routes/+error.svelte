@@ -6,7 +6,13 @@
 	// was never prerendered, for example); direct hits on unknown URLs
 	// are answered by the static 404.html instead. The language comes
 	// from the path being attempted, defaulting to English.
-	const lang: Lang = $derived(page.url.pathname.startsWith('/pl') ? 'pl' : 'en');
+	// Read from the document rather than the router: this page is also the
+	// 404 of a downloaded copy, where no router is running.
+	const lang: Lang = $derived(
+		(typeof location !== 'undefined' ? location.pathname : page.url.pathname).includes('/pl')
+			? 'pl'
+			: 'en'
+	);
 	const message = $derived(page.status === 404 ? M[lang].pageNotFound : M[lang].errorGeneric);
 </script>
 

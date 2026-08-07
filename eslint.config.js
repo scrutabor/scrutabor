@@ -37,6 +37,7 @@ export default ts.config(
 		ignores: [
 			'build/',
 			'build-offline-runtime/',
+			'build-offline/',
 			'.svelte-kit/',
 			'src/lib/data/',
 			'test-results/',
