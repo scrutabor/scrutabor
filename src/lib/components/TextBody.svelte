@@ -419,14 +419,40 @@
 		cursor: pointer;
 	}
 
-	button.word:hover .base,
-	button.word:hover rt {
-		background: var(--wash);
+	/* ONE wash, one box, anchored to the BASE. Tinting base and rt
+	   separately relied on the two boxes coming out the same width, and
+	   they only do when the gloss is the longer: the base stretches to
+	   the ruby column, the annotation does not, so a word longer than
+	   its gloss came back as two ragged rectangles (the owner saw it on
+	   scrutábor). The button was the wrong anchor too — its box carries
+	   the line's leading, ~0.4em of air above the glyphs, and a wash
+	   drawn from it reached into the previous line's glosses on a
+	   wrapped verse. The base hugs the letters AND spans the column, so
+	   the rectangle starts just over the capitals and, when the glosses
+	   show, reaches 0.86 of the reading size below the base box —
+	   measured past the shifted gloss row and the hooks of its ę
+	   (pinned by the e2e guards). */
+	.word .base {
+		position: relative;
 	}
 
-	button.word.selected .base,
-	button.word.selected rt {
+	button.word:hover .base::before,
+	button.word.selected .base::before {
+		content: '';
+		position: absolute;
+		inset: -0.1em -0.07em;
+		border-radius: 0.172em;
+		background: var(--wash);
+		z-index: -1;
+	}
+
+	button.word.selected .base::before {
 		background: var(--wash-strong);
+	}
+
+	.glossed button.word:hover .base::before,
+	.glossed button.word.selected .base::before {
+		bottom: calc(var(--reading) * -0.86);
 	}
 
 	/* On the word under analysis the gloss is the thing being read, and the
@@ -469,6 +495,12 @@
 		font-size: 0.64em;
 		color: var(--ink-soft);
 		letter-spacing: 0.01em;
+		/* The gloss is apparatus, not text: a selection swept across the
+		   verse must copy the LATIN alone, not "Dadaj mihimi" — the
+		   annotation excluded itself from every selection the moment it
+		   was allowed into one (the owner pasted the result). */
+		user-select: none;
+		-webkit-user-select: none;
 		/* One Latin word often needs several words to gloss it — 49 of the
 		   163 glosses in the English Credo — and the gloss has to read as
 		   ONE thing under ONE word, or the word-by-word correspondence

@@ -530,42 +530,55 @@ test('a gloss belongs to the word above it, and is legible', async ({ page }) =>
 	expect(gaps.slope, 'and upright at that size').toBe('normal');
 });
 
-test('a tapped word is highlighted on the word, not around the gloss', async ({ page }) => {
-	// A ruby's box holds its annotation too, so a wash drawn on the word
-	// covered both — and once the gloss row was given its own air the
-	// annotation hung below that box, leaving a highlight that began above
-	// the letters and ended in the middle of the gloss beneath them.
+test('a selection copies the Latin alone, no apparatus interleaved', async ({ page }) => {
+	// The glosses are apparatus, not text: swept into a selection they
+	// came out as "Dadaj mihimi intelléctum,zrozumienie…" (the owner
+	// pasted it). The annotation and the margin marks exclude themselves;
+	// what a reader copies is what the book prints as the text.
+	await page.goto('/app/pl/psalmi/118-he');
+	const text = await page.evaluate(() => {
+		const verse = document.querySelector('.verse')!;
+		const range = document.createRange();
+		range.selectNodeContents(verse);
+		const sel = getSelection()!;
+		sel.removeAllRanges();
+		sel.addRange(range);
+		return sel.toString().trim();
+	});
+	expect(text).toBe(
+		'Legem pone mihi, Dómine, viam iustificatiónum tuárum: et exquíram eam semper.'
+	);
+});
+
+test('the highlight is one box, with air around the letters', async ({ page }) => {
+	// The wash is a single rectangle painted behind the button — the ruby
+	// column plus a little air — not a tint on base and rt separately:
+	// those two boxes only agree in width while the gloss is the longer
+	// half, and a word longer than its gloss came back as two ragged
+	// rectangles (the owner saw it on scrutábor).
 	await page.goto('/app/en/ordinarium/pater-noster?w=w022');
-	const box = await page.evaluate(() => {
-		const w = document.querySelector('.word.selected')!;
-		const base = w.querySelector('.base')!;
-		const rt = w.querySelector('rt')!;
-		const c = document.createElement('canvas').getContext('2d')!;
-		const cs = getComputedStyle(rt);
-		c.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
-		const probe = document.createElement('span');
-		probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
-		rt.appendChild(probe);
-		const rtBase = probe.getBoundingClientRect().top;
-		probe.remove();
+	const m = await page.evaluate(() => {
+		const w = document.querySelector('button.word.selected')!;
+		const baseEl = w.querySelector('.base')!;
+		const st = getComputedStyle(baseEl, '::before');
+		const b = baseEl.getBoundingClientRect();
+		const box = {
+			left: b.left + parseFloat(st.left),
+			right: b.right - parseFloat(st.right),
+			top: b.top + parseFloat(st.top)
+		};
+		const base = b;
 		return {
-			clearance:
-				rtBase -
-				c.measureText(rt.textContent ?? '').actualBoundingBoxAscent -
-				base.getBoundingClientRect().bottom,
-			onBase: getComputedStyle(base).backgroundColor,
-			onButton: getComputedStyle(w).backgroundColor
+			bg: st.backgroundColor,
+			baseBg: getComputedStyle(w.querySelector('.base')!).backgroundColor,
+			air: { left: base.left - box.left, right: box.right - base.right, top: base.top - box.top }
 		};
 	});
-	// Not > 0. The gap is half a pixel here by design — the gloss row was
-	// tuned to sit as close to its word as it can without touching — and
-	// half a pixel is inside the difference between two rasterizers: this
-	// same page measures 0.54 on macOS and 0.00 on the Linux runner. The
-	// defect being guarded against is the wash running INTO the gloss,
-	// which was several pixels of overlap and is a NEGATIVE clearance.
-	expect(box.clearance, 'the highlight stops above the gloss').toBeGreaterThanOrEqual(0);
-	expect(box.onBase, 'the wash is on the Latin').not.toBe('rgba(0, 0, 0, 0)');
-	expect(box.onButton, 'and not on the whole ruby').toBe('rgba(0, 0, 0, 0)');
+	expect(m.bg, 'the wash paints').not.toBe('rgba(0, 0, 0, 0)');
+	expect(m.baseBg, 'and only once — the base itself carries none').toBe('rgba(0, 0, 0, 0)');
+	expect(m.air.left, 'air before the letters').toBeGreaterThan(0);
+	expect(m.air.right, 'air after them').toBeGreaterThan(0);
+	expect(m.air.top, 'air above them').toBeGreaterThan(0);
 });
 
 test('the highlight covers the whole of a raised initial', async ({ page }) => {
@@ -580,11 +593,11 @@ test('the highlight covers the whole of a raised initial', async ({ page }) => {
 	]) {
 		await page.goto(url);
 		const cover = await page.evaluate(() => {
-			const base = [...document.querySelectorAll('.word.selected .base')].find((b) =>
+			const w = [...document.querySelectorAll('button.word.selected')].find((b) =>
 				b.querySelector('.initial')
 			);
-			if (!base) return null;
-			const ini = base.querySelector('.initial')!;
+			if (!w) return null;
+			const ini = w.querySelector('.initial')!;
 			const c = document.createElement('canvas').getContext('2d')!;
 			const cs = getComputedStyle(ini);
 			c.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
@@ -594,10 +607,12 @@ test('the highlight covers the whole of a raised initial', async ({ page }) => {
 			ini.parentElement!.insertBefore(probe, ini.nextSibling);
 			const baseline = probe.getBoundingClientRect().top;
 			probe.remove();
-			const r = base.getBoundingClientRect();
+			const baseEl = w.querySelector('.base')!;
+			const st = getComputedStyle(baseEl, '::before');
+			const b = baseEl.getBoundingClientRect();
 			return {
-				top: baseline - m.actualBoundingBoxAscent - r.top,
-				bottom: r.bottom - (baseline + m.actualBoundingBoxDescent)
+				top: baseline - m.actualBoundingBoxAscent - (b.top + parseFloat(st.top)),
+				bottom: b.bottom - parseFloat(st.bottom) - (baseline + m.actualBoundingBoxDescent)
 			};
 		});
 		expect(cover, `${url} has a selected initial`).not.toBeNull();
@@ -1074,36 +1089,52 @@ test('the highlight marks the word AND its gloss', async ({ page }) => {
 	// So the box was right and the MEANING was missing: it marks the pair.
 	// The two halves have to be continuous — a gap between them would read
 	// as two marks rather than one.
-	await page.goto('/app/pl/orationes/pater-noster?w=w013');
-	const m = await page.evaluate(() => {
-		const w = document.querySelector('.word.selected')!;
-		const base = w.querySelector('.base')!;
-		const rt = w.querySelector('rt')!;
-		const b = base.getBoundingClientRect();
-		const r = rt.getBoundingClientRect();
-		return {
-			word: (base.textContent ?? '').trim(),
-			gloss: (rt.textContent ?? '').trim(),
-			baseBg: getComputedStyle(base).backgroundColor,
-			rtBg: getComputedStyle(rt).backgroundColor,
-			seam: r.top - b.bottom,
-			widths: [Math.round(b.width), Math.round(r.width)]
-		};
-	});
-	expect(m.gloss.length, 'this word really is shorter than its gloss').toBeGreaterThan(
-		m.word.length
-	);
-	expect(m.baseBg, 'the word is marked').not.toBe('rgba(0, 0, 0, 0)');
-	expect(m.rtBg, 'and so is its gloss').toBe(m.baseBg);
-	expect(m.seam, 'the two halves meet without a gap').toBeLessThanOrEqual(0);
-	expect(Math.abs(m.widths[0] - m.widths[1]), 'and they are the same width').toBeLessThan(5);
+	// One box must hold the pair in BOTH width cases — the base stretches
+	// to the ruby column and the annotation does not, so the per-element
+	// tint held only while the gloss was the longer half.
+	for (const [url, kind] of [
+		['/app/pl/orationes/pater-noster?w=w013', 'gloss longer'],
+		['/app/pl/psalmi/118-he?w=w016', 'word longer']
+	] as const) {
+		await page.goto(url);
+		const m = await page.evaluate(() => {
+			const w = document.querySelector('button.word.selected')!;
+			const baseEl = w.querySelector('.base')!;
+			const st = getComputedStyle(baseEl, '::before');
+			const b = baseEl.getBoundingClientRect();
+			const box = {
+				left: b.left + parseFloat(st.left),
+				right: b.right - parseFloat(st.right),
+				top: b.top + parseFloat(st.top),
+				bottom: b.bottom - parseFloat(st.bottom)
+			};
+			const covers = (r: DOMRect) =>
+				box.left <= r.left + 0.5 &&
+				box.right >= r.right - 0.5 &&
+				box.top <= r.top + 0.5 &&
+				box.bottom >= r.bottom - 0.5;
+			const rt = w.querySelector('rt')!.getBoundingClientRect();
+			return {
+				bg: st.backgroundColor,
+				word: covers(w.querySelector('.base')!.getBoundingClientRect()),
+				gloss: covers(rt),
+				glossAir: box.bottom - rt.bottom
+			};
+		});
+		expect(m.bg, `${kind}: the wash paints`).not.toBe('rgba(0, 0, 0, 0)');
+		expect(m.word, `${kind}: the word sits inside the box`).toBe(true);
+		expect(m.gloss, `${kind}: and so does its gloss`).toBe(true);
+		expect(m.glossAir, `${kind}: with air under its descenders`).toBeGreaterThan(1);
+	}
 
 	// with no gloss showing, there is nothing to mark but the word
 	await page.goto('/app/pl/orationes/pater-noster?w=w013');
 	await page.locator('input[type="range"]').fill('0');
 	await expect(page.locator('.word.selected rt')).toHaveCount(0);
 	const bare = await page.evaluate(
-		() => getComputedStyle(document.querySelector('.word.selected .base')!).backgroundColor
+		() =>
+			getComputedStyle(document.querySelector('button.word.selected .base')!, '::before')
+				.backgroundColor
 	);
 	expect(bare, 'the word is still marked with the glosses off').not.toBe('rgba(0, 0, 0, 0)');
 });
