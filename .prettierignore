@@ -9,3 +9,4 @@ build/
 test-results/
 playwright-report/
 package-lock.json
+build-offline-runtime

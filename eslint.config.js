@@ -34,6 +34,13 @@ export default ts.config(
 		}
 	},
 	{
-		ignores: ['build/', '.svelte-kit/', 'src/lib/data/', 'test-results/', 'playwright-report/']
+		ignores: [
+			'build/',
+			'build-offline-runtime/',
+			'.svelte-kit/',
+			'src/lib/data/',
+			'test-results/',
+			'playwright-report/'
+		]
 	}
 );

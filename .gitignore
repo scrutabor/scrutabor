@@ -25,3 +25,6 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# the offline runtime is a build artifact, like build/
+build-offline-runtime
