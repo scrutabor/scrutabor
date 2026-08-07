@@ -60,7 +60,6 @@
 	ribbon(
 		() => `scrutabor-pos:${data.category}/${data.slug}`,
 		() => {
-			// eslint-disable-next-line svelte/prefer-svelte-reactivity
 			const q = new URL(location.href).searchParams;
 			return q.has('w') || q.has('v');
 		}
@@ -75,7 +74,6 @@
 
 	function applyVerseFromLocation() {
 		if (!data.verses) return;
-		// eslint-disable-next-line svelte/prefer-svelte-reactivity
 		const raw = new URL(location.href).searchParams.get('v');
 		const n = raw === null ? null : Number(raw);
 		citedVerse = n !== null && Object.values(data.verses).includes(n) ? n : null;
@@ -94,7 +92,6 @@
 
 	function tapVerse(no: number) {
 		citedVerse = citedVerse === no ? null : no;
-		// eslint-disable-next-line svelte/prefer-svelte-reactivity
 		const url = new URL(location.href);
 		if (citedVerse === null) url.searchParams.delete('v');
 		else url.searchParams.set('v', String(citedVerse));

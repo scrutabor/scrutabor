@@ -7,7 +7,7 @@ import { atRoute, expect, test } from './fixtures';
 test.describe('landing @online', () => {
 	test('the CTA opens the book in the landing language', async ({ page }) => {
 		await page.goto('/pl');
-		await page.getByRole('link', { name: 'Otwórz modlitewnik' }).click();
+		await page.getByRole('link', { name: /Otwórz modlitewnik/ }).click();
 		await page.waitForURL(atRoute('/app/pl'));
 		// the catalog, alive — not merely a URL
 		await expect(page.locator('.flow-title')).toHaveText('Ordo Missæ');
@@ -90,31 +90,41 @@ test.describe('landing @online', () => {
 		await expect(page.locator('.word-box-form')).toHaveText('Da');
 	});
 
-	test('the motto and the specimen both reach the psalm page', async ({ page }) => {
+	test('the specimen citation reaches the psalm page', async ({ page }) => {
 		await page.goto('/pl');
-		await expect(page.locator('.motto-ref a')).toHaveAttribute('href', '/app/pl/psalmi/118-he');
 		await expect(page.locator('.stanza-link a')).toHaveAttribute('href', '/app/pl/psalmi/118-he');
 		await page.locator('.stanza-link a').click();
 		await page.waitForURL(atRoute('/app/pl/psalmi/118-he'));
 		await expect(page.locator('h1')).toHaveText('Psalmus 118, HE');
 	});
 
-	test('the sections are doors into the book', async ({ page }) => {
+	test('every way in stands in one row, ready or announced', async ({ page }) => {
 		await page.goto('/pl');
-		await expect(page.locator('.cards .card')).toHaveCount(3);
-		await expect(page.locator('.cards .card').nth(0)).toHaveAttribute('href', '/app/pl/ordo');
-		await expect(page.locator('.cards .card').nth(1)).toHaveAttribute('href', '/app/pl');
-		await expect(page.locator('.cards .card').nth(2)).toHaveAttribute('href', '/app/pl/grammatica');
+		// two doors open today: the web (loud, full-width) and the zip —
+		// the PWA offer belongs to the browser once the reader is in the
+		// app, and the landing cannot honestly make it
+		await expect(page.locator('a.way')).toHaveCount(2);
+		await expect(page.locator('.way.primary')).toHaveAttribute('href', '/app/pl');
+		// three are announced: named, quiet, and NOT links — a door that
+		// opens nothing must not invite the hand
+		await expect(page.locator('.way.soon')).toHaveCount(3);
+		for (const channel of ['Google Play', 'App Store', 'F-Droid']) {
+			const tile = page.locator('.way.soon', { hasText: channel });
+			await expect(tile).toContainText('wkrótce');
+			expect(await tile.evaluate((el) => el.tagName)).toBe('DIV');
+		}
 	});
 
-	test('the download link points at the latest release', async ({ page }) => {
+	test('the download door points at the latest release', async ({ page }) => {
 		// The zip travels with each GitHub release, not with the site — so
 		// this asserts the address, and the release ritual owns the file.
 		await page.goto('/en');
-		await expect(page.getByRole('link', { name: 'Download Scrutabor.zip' })).toHaveAttribute(
+		const zip = page.locator('a.way', { hasText: 'ZIP file' });
+		await expect(zip).toHaveAttribute(
 			'href',
 			'https://github.com/scrutabor/scrutabor-app/releases/latest/download/Scrutabor.zip'
 		);
+		await expect(zip).toContainText('a copy to download');
 	});
 
 	test('the privacy page states the promise in both languages', async ({ page }) => {
