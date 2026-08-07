@@ -886,8 +886,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'orationes/cor-iesu',
 				note: {
-					pl: 'Wezwanie powtarzane trzykrotnie, którym kończą się modlitwy. Dodał je Pius X w roku 1904.',
-					en: 'The invocation that ends the prayers, said three times. Pius X added it in 1904.'
+					pl: 'Wezwanie powtarzane trzykrotnie, którym kończą się modlitwy. Dodał je Pius X w roku 1904.',
+					en: 'The invocation that ends the prayers, said three times. Pius X added it in 1904.'
 				}
 			}
 		]

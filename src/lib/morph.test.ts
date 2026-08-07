@@ -6,9 +6,9 @@ describe('describeMorph', () => {
 	it('renders a noun parse in both languages', () => {
 		const mater = { pos: 'noun', case: 'voc', number: 'sg', gender: 'f', decl: 3 };
 		expect(describeMorph(mater, 'pl')).toBe(
-			'rzeczownik — wołacz, l. poj., r. żeński, deklinacja III'
+			'rzeczownik — wołacz, l. poj., r. żeński, deklinacja III'
 		);
-		expect(describeMorph(mater, 'en')).toBe('noun — vocative, singular, feminine, 3rd declension');
+		expect(describeMorph(mater, 'en')).toBe('noun — vocative, singular, feminine, 3rd declension');
 	});
 
 	it('renders a deponent verb with the terminology-contract description', () => {
@@ -22,10 +22,10 @@ describe('describeMorph', () => {
 			conj: 2
 		};
 		expect(describeMorph(confiteor, 'pl')).toBe(
-			'czasownik — 1. os., l. poj., czas teraźniejszy, tryb oznajmujący, deponens (forma bierna, znaczenie czynne), koniugacja II'
+			'czasownik — 1. os., l. poj., czas teraźniejszy, tryb oznajmujący, deponens (forma bierna, znaczenie czynne), koniugacja II'
 		);
 		expect(describeMorph(confiteor, 'en')).toBe(
-			'verb — 1st person, singular, present, indicative, deponent (passive form, active meaning), 2nd conjugation'
+			'verb — 1st person, singular, present, indicative, deponent (passive form, active meaning), 2nd conjugation'
 		);
 	});
 
@@ -75,8 +75,8 @@ describe('describeMorphParts concept links', () => {
 
 describe('describeLemma', () => {
 	it('renders lemma-level paradigm facts', () => {
-		expect(describeLemma({ pos: 'verb', conj: 1 }, 'pl')).toBe('czasownik, koniugacja I');
-		expect(describeLemma({ pos: 'noun', decl: 4 }, 'en')).toBe('noun, 4th declension');
+		expect(describeLemma({ pos: 'verb', conj: 1 }, 'pl')).toBe('czasownik, koniugacja I');
+		expect(describeLemma({ pos: 'noun', decl: 4 }, 'en')).toBe('noun, 4th declension');
 		expect(describeLemma({ pos: 'intj' }, 'en')).toBe('interjection (indeclinable)');
 	});
 });
@@ -101,10 +101,10 @@ describe('participles', () => {
 
 	it('reads as a verbal adjective in both languages', () => {
 		expect(describeMorph(natum, 'pl')).toBe(
-			'czasownik — imiesłów, perfectum, strona bierna, biernik, l. poj., r. męski, koniugacja III'
+			'czasownik — imiesłów, perfectum, strona bierna, biernik, l. poj., r. męski, koniugacja III'
 		);
 		expect(describeMorph(natum, 'en')).toBe(
-			'verb — participle, perfect, passive, accusative, singular, masculine, 3rd conjugation'
+			'verb — participle, perfect, passive, accusative, singular, masculine, 3rd conjugation'
 		);
 	});
 
@@ -130,10 +130,10 @@ describe('a verb whose form does not settle its tense or mood', () => {
 	// The marker stands where the tense and mood would have stood.
 	it('says so, rather than leaving the line looking unfinished', () => {
 		expect(describeMorph(retribuam, 'pl')).toBe(
-			'czasownik — 1. os., l. poj., forma niejednoznaczna, strona czynna, koniugacja III'
+			'czasownik — 1. os., l. poj., forma niejednoznaczna, strona czynna, koniugacja III'
 		);
 		expect(describeMorph(retribuam, 'en')).toBe(
-			'verb — 1st person, singular, the form does not decide, active, 3rd conjugation'
+			'verb — 1st person, singular, the form does not decide, active, 3rd conjugation'
 		);
 	});
 

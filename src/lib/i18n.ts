@@ -65,7 +65,7 @@ const MESSAGES: Record<Lang, Messages> = {
 	pl: {
 		langName: 'Polski',
 		tagline: 'Modlitwa po łacinie ze zrozumieniem.',
-		mottoRef: 'ps 118, 34',
+		mottoRef: 'ps\u00a0118,\u00a034',
 		workingEdition: 'wydanie robocze',
 		levels: ['sama łacina', 'słowo po słowie', 'pełny przekład'],
 		levelsAria: 'Poziom pomocy',
@@ -134,7 +134,7 @@ const MESSAGES: Record<Lang, Messages> = {
 	en: {
 		langName: 'English',
 		tagline: 'Prayer in Latin, with understanding.',
-		mottoRef: 'ps 118 (119), 34',
+		mottoRef: 'ps\u00a0118\u00a0(119),\u00a034',
 		workingEdition: 'working edition',
 		levels: ['Latin only', 'word by word', 'full translation'],
 		levelsAria: 'Help level',

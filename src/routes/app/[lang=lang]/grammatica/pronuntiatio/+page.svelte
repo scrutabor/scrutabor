@@ -164,7 +164,7 @@
 				Transkrybujemy wymowę <strong>rzymską</strong> (kościelną, „włoską”) — tę, którą śpiewają
 				księgi z&nbsp;1962 roku i&nbsp;schole gregoriańskie — a&nbsp;tam, gdzie polska tradycja
 				parafialna różni się od rzymskiej, pokazujemy obie: <span class="smallcaps">rz.</span>
-				(rzymska) i&nbsp;<span class="smallcaps">pol.</span> (polska). Za świętego Piusa X Rzym zachęcał
+				(rzymska) i&nbsp;<span class="smallcaps">pol.</span> (polska). Za świętego Piusa&nbsp;X Rzym zachęcał
 				cały Kościół do wymowy rzymskiej, ale tradycje narodowe — w&nbsp;tym polska — przetrwały w&nbsp;parafiach
 				i&nbsp;obie są dziś w&nbsp;użyciu.
 			</p>
@@ -178,8 +178,8 @@
 		{:else}
 			<p class="what">
 				We transcribe the <strong>Roman</strong> (ecclesiastical, “Italianate”) pronunciation — the one
-				the 1962 books are sung in by Gregorian scholas. Under saint Pius X, Rome encouraged the whole
-				Church toward the Roman pronunciation; national traditions (the Polish one among them) survive
+				the 1962 books are sung in by Gregorian scholas. Under saint Pius&nbsp;X, Rome encouraged the
+				whole Church toward the Roman pronunciation; national traditions (the Polish one among them) survive
 				in parishes, and the Polish interface of this app shows both where they differ.
 			</p>
 			<p class="what">

@@ -45,8 +45,8 @@ const LABELS: Record<Lang, MorphLabels> = {
 			abl: 'ablativus',
 			voc: 'wołacz'
 		},
-		number: { sg: 'l. poj.', pl: 'l. mn.' },
-		gender: { m: 'r. męski', f: 'r. żeński', n: 'r. nijaki' },
+		number: { sg: 'l.\u00a0poj.', pl: 'l.\u00a0mn.' },
+		gender: { m: 'r.\u00a0męski', f: 'r.\u00a0żeński', n: 'r.\u00a0nijaki' },
 		tense: {
 			pres: 'czas teraźniejszy',
 			impf: 'imperfectum',
@@ -68,9 +68,9 @@ const LABELS: Record<Lang, MorphLabels> = {
 			dep: 'deponens (forma bierna, znaczenie czynne)'
 		},
 		degree: { comp: 'stopień wyższy', sup: 'stopień najwyższy' },
-		person: (p) => `${p}. os.`,
-		decl: (d) => `deklinacja ${ROMAN[d - 1]}`,
-		conj: (c) => `koniugacja ${ROMAN[c - 1]}`,
+		person: (p) => `${p}.\u00a0os.`,
+		decl: (d) => `deklinacja\u00a0${ROMAN[d - 1]}`,
+		conj: (c) => `koniugacja\u00a0${ROMAN[c - 1]}`,
 		prep: (governs) => `przyimek (z ${governs === 'acc' ? 'biernikiem' : 'ablativem'})`,
 		undecided: 'forma niejednoznaczna'
 	},
@@ -116,9 +116,9 @@ const LABELS: Record<Lang, MorphLabels> = {
 			dep: 'deponent (passive form, active meaning)'
 		},
 		degree: { comp: 'comparative', sup: 'superlative' },
-		person: (p) => `${ORDINAL[p - 1]} person`,
-		decl: (d) => `${ORDINAL[d - 1]} declension`,
-		conj: (c) => `${ORDINAL[c - 1]} conjugation`,
+		person: (p) => `${ORDINAL[p - 1]}\u00a0person`,
+		decl: (d) => `${ORDINAL[d - 1]}\u00a0declension`,
+		conj: (c) => `${ORDINAL[c - 1]}\u00a0conjugation`,
 		prep: (governs) => `preposition (with the ${governs === 'acc' ? 'accusative' : 'ablative'})`,
 		undecided: 'the form does not decide'
 	}
