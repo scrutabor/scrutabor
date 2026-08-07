@@ -866,8 +866,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'orationes/deus-refugium',
 				note: {
-					pl: 'Kolekta, którą kapłan zamyka antyfonę. Leon XIII prosił w niej o wolność Kościoła; od roku 1929 modlitwy te ofiarowuje się w intencji Rosji.',
-					en: 'The collect with which the priest closes the antiphon. Leo XIII asked in it for the freedom of the Church; since 1929 these prayers have been offered for Russia.'
+					pl: 'Kolekta, którą kapłan zamyka antyfonę. Leon XIII prosił w niej o wolność Kościoła; od roku 1930 modlitwy te ofiarowuje się w intencji Rosji.',
+					en: 'The collect with which the priest closes the antiphon. Leo XIII asked in it for the freedom of the Church; since 1930 these prayers have been offered for Russia.'
 				}
 			},
 			{
