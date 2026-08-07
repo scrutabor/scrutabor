@@ -22,7 +22,9 @@ export default defineConfig({
 		assetsInlineLimit: (file) => (file.endsWith('.woff2') ? false : undefined)
 	},
 	test: {
-		include: ['src/**/*.test.ts'],
+		// scripts too: a build script that does the wrong thing on the
+		// production branch is not something to find out about afterwards
+		include: ['src/**/*.test.ts', 'scripts/**/*.test.ts'],
 		environment: 'node'
 	}
 });

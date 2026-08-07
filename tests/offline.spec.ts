@@ -1,8 +1,8 @@
 // The installable, offline shell: a missal has to open in a basement
 // chapel with no signal.
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
-test('a first web visit installs the shell, not the book', async ({ page }) => {
+test('a first web visit installs the shell, not the book @online', async ({ page }) => {
 	await page.goto('/en');
 	await page.evaluate(() => navigator.serviceWorker.ready);
 
@@ -22,7 +22,7 @@ test('a first web visit installs the shell, not the book', async ({ page }) => {
 	expect(cached.length).toBeLessThan(120);
 });
 
-test('a page the reader opens is kept for them', async ({ page, context }) => {
+test('a page the reader opens is kept for them @online', async ({ page, context }) => {
 	await page.goto('/en');
 	await page.evaluate(() => navigator.serviceWorker.ready);
 	await page.reload();
@@ -40,7 +40,7 @@ test('a page the reader opens is kept for them', async ({ page, context }) => {
 	await context.setOffline(false);
 });
 
-test('an installed app fetches the whole book', async ({ page }) => {
+test('an installed app fetches the whole book @online', async ({ page }) => {
 	test.setTimeout(120_000);
 	await page.goto('/en');
 	await page.evaluate(() => navigator.serviceWorker.ready);
@@ -65,7 +65,7 @@ test('an installed app fetches the whole book', async ({ page }) => {
 	}
 });
 
-test('the app declares itself installable', async ({ page }) => {
+test('the app declares itself installable @online', async ({ page }) => {
 	await page.goto('/en');
 	await expect(page.locator('link[rel="manifest"]')).toHaveAttribute(
 		'href',
@@ -88,7 +88,7 @@ test('the app declares itself installable', async ({ page }) => {
 	}
 });
 
-test('the status bar colour follows the chosen theme', async ({ page }) => {
+test('the status bar colour follows the chosen theme @online', async ({ page }) => {
 	await page.goto('/en');
 	const meta = page.locator('meta[name="theme-color"]');
 	await expect(meta).toHaveAttribute('content', '#f7f1e6');

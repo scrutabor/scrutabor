@@ -3,9 +3,12 @@
 // handles the data; this sweep is what proves it reached the page — it
 // reads the rendered text of every Polish surface the sitemap knows and
 // fails on any one-letter word still followed by a breakable space.
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
-test('no Polish surface leaves a one-letter word before a breakable space', async ({
+// Reads sitemap.xml to find every Polish page. A downloaded copy carries
+// no sitemap — nothing there is crawled — so the sweep has nothing to
+// enumerate from and this runs against the served site.
+test('no Polish surface leaves a one-letter word before a breakable space @online', async ({
 	page,
 	request
 }) => {

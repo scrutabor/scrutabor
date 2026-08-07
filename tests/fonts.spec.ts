@@ -7,7 +7,7 @@
 // So the character set is committed next to the fonts, and this is the
 // guard: nothing the server serves may need a character the subsets do
 // not carry. When it fails, regenerate — the message says how.
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 import type { APIRequestContext } from '@playwright/test';
 import { CHARSET } from '../src/lib/fonts/charset';
 
@@ -20,7 +20,7 @@ async function everyPage(request: APIRequestContext): Promise<string[]> {
 	return [...paths, '/pl/404', '/en/404'];
 }
 
-test('nothing served needs a character the font subsets lack', async ({ request }) => {
+test('nothing served needs a character the font subsets lack @online', async ({ request }) => {
 	test.setTimeout(120_000);
 
 	const declared = new Set(CHARSET);
@@ -56,7 +56,7 @@ test('nothing served needs a character the font subsets lack', async ({ request 
 	).toEqual([]);
 });
 
-test('the reading face stays small', async ({ request }) => {
+test('the reading face stays small @online', async ({ request }) => {
 	// Follow the CSS to the faces, so this measures what a browser would
 	// actually be asked to download.
 	const home = await (await request.get('/en')).text();
@@ -83,7 +83,7 @@ test('the reading face stays small', async ({ request }) => {
 	).toBeLessThan(140);
 });
 
-test('Latin text still refuses the locl substitution', async ({ page }) => {
+test('Latin text still refuses the locl substitution @online', async ({ page }) => {
 	// EB Garamond's roman carries an OpenType locl rule for the Latin
 	// language system that swaps u for v — "qvia", "cvlpa" — and lang="la"
 	// triggers it. The 1962 orthography distinguishes the two letters, so

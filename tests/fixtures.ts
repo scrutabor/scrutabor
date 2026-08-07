@@ -47,6 +47,50 @@ function projectRoot(testInfo: { config: { configFile?: string; rootDir: string 
 	return file ? file.replace(/[/\\][^/\\]+$/, '') : `${testInfo.config.rootDir}/..`;
 }
 
+/**
+ * The guard, on every page Playwright opens.
+ *
+ * Seven spec files used to import `test` straight from Playwright and so
+ * had neither of these. In the offline project that meant they ran against
+ * the HOSTED server — Playwright derives baseURL from `webServer.port`
+ * unless a project sets one — proving nothing about the folder while
+ * reporting as though they had. And nothing stopped them reaching the
+ * internet.
+ */
+function guard(page: import('@playwright/test').Page, reachedOut: string[]) {
+	return page.route('**/*', (route) => {
+		const url = route.request().url();
+		if (LOCAL.test(url)) return route.continue();
+		reachedOut.push(url);
+		return route.abort();
+	});
+}
+
+function translate(
+	page: import('@playwright/test').Page,
+	testInfo: import('@playwright/test').TestInfo
+) {
+	if (testInfo.project.name !== 'offline') return;
+	const goto = page.goto.bind(page);
+	page.goto = (url: string, options?: Parameters<typeof goto>[1]) =>
+		goto(url.startsWith('/') ? offlineUrl(projectRoot(testInfo), url) : url, options);
+}
+
+/**
+ * For a page that is not expected to come alive: scripting disabled, or a
+ * cold load measured while it is still painting. It gets the network guard
+ * and the path translation and nothing else.
+ */
+export const bare = base.extend<object>({
+	page: async ({ page }, use, testInfo) => {
+		const reachedOut: string[] = [];
+		await guard(page, reachedOut);
+		translate(page, testInfo);
+		await use(page);
+		expect(reachedOut, 'the page tried to reach the network').toEqual([]);
+	}
+});
+
 export const test = base.extend<object>({
 	page: async ({ page }, use, testInfo) => {
 		// NOTHING REACHES THE NETWORK. A font from a CDN, an analytics
@@ -57,18 +101,12 @@ export const test = base.extend<object>({
 		// request that tries anyway fails the test that made it rather than
 		// being quietly dropped.
 		const reachedOut: string[] = [];
-		await page.route('**/*', (route) => {
-			const url = route.request().url();
-			if (LOCAL.test(url)) return route.continue();
-			reachedOut.push(url);
-			return route.abort();
-		});
+		await guard(page, reachedOut);
+		translate(page, testInfo);
 
-		const offline = testInfo.project.name === 'offline';
 		const goto = page.goto.bind(page);
 		page.goto = async (url: string, options?: Parameters<typeof goto>[1]) => {
-			const target = offline && url.startsWith('/') ? offlineUrl(projectRoot(testInfo), url) : url;
-			const response = await goto(target, options);
+			const response = await goto(url, options);
 			await page.waitForSelector('html[data-hydrated]', { timeout: 20_000 });
 			await page.evaluate(() => document.fonts.ready);
 			return response;

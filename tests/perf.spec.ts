@@ -2,7 +2,7 @@
 // network the fallback font paints first, so any metric mismatch with
 // the webfont shows up as layout-shift entries. The metric-matched
 // fallback in app.css must keep the swap invisible.
-import { expect, test } from '@playwright/test';
+import { bare as test, expect } from './fixtures';
 
 test('cold load swaps fonts without layout shift', async ({ page }) => {
 	const cdp = await page.context().newCDPSession(page);

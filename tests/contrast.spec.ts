@@ -5,7 +5,7 @@
 // The guard reads the tokens from the rendered page in both themes and
 // checks every text colour against every surface it can sit on, the
 // tinted wash behind a tapped word included.
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 const AA = 4.5;
 const INK = ['--ink', '--ink-soft', '--rubric'];

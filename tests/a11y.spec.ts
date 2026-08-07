@@ -8,7 +8,8 @@
 // checks the colour tokens directly, because axe only sees the colours a
 // page happens to put on screen and the tokens must hold everywhere.
 import AxeBuilder from '@axe-core/playwright';
-import { expect, test, type Page } from '@playwright/test';
+import type { Page } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 // One of each surface, not one of each page: the templates are what can
 // be wrong, and 1100 prerendered pages come from these seven.
@@ -19,9 +20,14 @@ const SURFACES = [
 	{ name: 'ordo movement', path: '/pl/ordo/communio' },
 	{ name: 'reading page', path: '/pl/ordinarium/gloria' },
 	{ name: 'lemma page', path: '/pl/lemma/deus' },
-	{ name: 'grammar concept', path: '/pl/grammatica/casus' },
+	// a concept that EXISTS: /pl/grammatica/casus never did, and the
+	// hosted server's 404 fallback let this surface pass for months while
+	// scanning the not-found page under a grammar page's name
+	{ name: 'grammar concept', path: '/pl/grammatica/nominativus' },
 	{ name: 'edition page', path: '/en/editio' },
-	{ name: 'not found', path: '/pl/404' }
+	// the server's own 404: there is no such page in a downloaded copy,
+	// where a link that misses is the browser's error, not ours
+	{ name: 'not found @online', path: '/pl/404' }
 ];
 
 const TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'];
