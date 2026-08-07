@@ -831,17 +831,63 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'At the Gospel side the priest reads the prologue of St John. At Et Verbum caro factum est everyone genuflects.'
 				}
 			},
+			// The prayers of Leo XIII, prescribed in 1884 and said kneeling at
+			// the foot of the altar after low Mass. They are five, and they
+			// are here as five: the block stood as one PENDING entry while
+			// two of its texts were already in the book and unreachable, and
+			// the remaining two were waiting on a second Latin witness.
 			{
-				id: 'preces-leoninae',
-				title: 'Preces Leonínæ',
-				kind: 'pending',
+				id: 'ave-maria',
+				title: 'Ave María',
+				kind: 'text',
+				text: 'orationes/ave-maria',
 				note: {
-					pl: 'Po Mszy cichej kapłan klęka u stopni i odmawia z ludem modlitwy przepisane przez Leona XIII: trzy Zdrowaś Maryjo, Salve Regína z wersetem i modlitwą, wezwanie do świętego Michała i trzykrotne Cor Iesu sacratíssimum. To wydanie ma na razie Salve Regína i modlitwę do świętego Michała.',
-					en: 'After low Mass the priest kneels at the foot of the altar and says with the people the prayers Leo XIII prescribed: three Hail Marys, the Salve Regína with its versicle and prayer, the invocation of St Michael, and Cor Iesu sacratíssimum three times. This edition carries the Salve Regína and the prayer to St Michael so far.'
+					pl: 'Kapłan klęka u stopni ołtarza i zaczyna z ludem trzy Zdrowaś Maryjo; ludzie odpowiadają drugą połową każdego z nich.',
+					en: 'The priest kneels at the foot of the altar and begins three Hail Marys with the people, who answer the second half of each.'
 				},
 				when: {
 					pl: 'po Mszy cichej; opuszcza się je po Mszy śpiewanej',
 					en: 'after low Mass; omitted after a sung Mass'
+				}
+			},
+			{
+				id: 'salve-regina',
+				title: 'Salve Regína',
+				kind: 'text',
+				text: 'orationes/salve-regina',
+				note: {
+					pl: 'Antyfona odmawiana wspólnie, a po niej werset: kapłan mówi „Módl się za nami”, lud odpowiada.',
+					en: 'The antiphon is said by all together, and a versicle follows it: the priest says “Pray for us”, and the people answer.'
+				}
+			},
+			{
+				id: 'deus-refugium',
+				title: 'Deus, refúgium nostrum',
+				kind: 'text',
+				text: 'orationes/deus-refugium',
+				note: {
+					pl: 'Kolekta, którą kapłan zamyka antyfonę. Leon XIII prosił w niej o wolność Kościoła; od roku 1929 modlitwy te ofiarowuje się w intencji Rosji.',
+					en: 'The collect with which the priest closes the antiphon. Leo XIII asked in it for the freedom of the Church; since 1929 these prayers have been offered for Russia.'
+				}
+			},
+			{
+				id: 'sancte-michael',
+				title: 'Sancte Míchaël',
+				kind: 'text',
+				text: 'orationes/sancte-michael',
+				note: {
+					pl: 'Modlitwa do świętego Michała Archanioła, ułożona przez samego Leona XIII.',
+					en: 'The prayer to St Michael the Archangel, composed by Leo XIII himself.'
+				}
+			},
+			{
+				id: 'cor-iesu',
+				title: 'Cor Iesu sacratíssimum',
+				kind: 'text',
+				text: 'orationes/cor-iesu',
+				note: {
+					pl: 'Wezwanie powtarzane trzykrotnie, którym kończą się modlitwy. Dodał je Pius X w roku 1904.',
+					en: 'The invocation that ends the prayers, said three times. Pius X added it in 1904.'
 				}
 			}
 		]

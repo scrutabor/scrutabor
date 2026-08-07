@@ -760,6 +760,18 @@
 				"benediction"
 			]
 		},
+		"benignus": {
+			"senses": [
+				"kind",
+				"gracious",
+				"kindly"
+			],
+			"note": "A compound of bonus and the root of gigno — well-born, and so kindly by nature.",
+			"derivatives": [
+				"benign",
+				"benignity"
+			]
+		},
 		"bibo": {
 			"senses": [
 				"to drink"
@@ -1140,6 +1152,17 @@
 				"to disquiet"
 			],
 			"note": "A compound of cum + turbáre — to stir up thoroughly."
+		},
+		"conversio": {
+			"senses": [
+				"conversion",
+				"a turning"
+			],
+			"note": "From convérto, to turn round. A conversion in Latin is the turning of a whole person, not a change of mind.",
+			"derivatives": [
+				"conversion",
+				"convert"
+			]
 		},
 		"converto": {
 			"senses": [
@@ -1852,6 +1875,17 @@
 				"as a result of"
 			],
 			"note": "Before a vowel always “ex”; before a consonant both “e” and “ex” occur (ex María Vírgine)."
+		},
+		"exaltatio": {
+			"senses": [
+				"exaltation",
+				"a lifting up"
+			],
+			"note": "From exálto, to raise high — ex- intensifying altus, high.",
+			"derivatives": [
+				"exaltation",
+				"exalt"
+			]
 		},
 		"exaudio": {
 			"senses": [
@@ -2826,6 +2860,18 @@
 			],
 			"derivatives": [
 				"liberate"
+			]
+		},
+		"libertas": {
+			"senses": [
+				"freedom",
+				"liberty"
+			],
+			"note": "From liber, free — the condition of one who is not a slave.",
+			"derivatives": [
+				"liberty",
+				"liberal",
+				"libertine"
 			]
 		},
 		"locus": {
@@ -3944,6 +3990,18 @@
 				"plenty"
 			]
 		},
+		"populus": {
+			"senses": [
+				"people",
+				"nation"
+			],
+			"note": "A people taken as one body, not a crowd of persons; in Roman law, the citizens together.",
+			"derivatives": [
+				"population",
+				"popular",
+				"public"
+			]
+		},
 		"porto": {
 			"senses": [
 				"to carry",
@@ -4481,6 +4539,17 @@
 				"refrigerator"
 			]
 		},
+		"refugium": {
+			"senses": [
+				"refuge",
+				"shelter"
+			],
+			"note": "The noun of refúgio, to flee for help. It does not name the flight but the place fled to.",
+			"derivatives": [
+				"refuge",
+				"refugee"
+			]
+		},
 		"regina": {
 			"senses": [
 				"queen"
@@ -4681,6 +4750,17 @@
 			"derivatives": [
 				"sacrament",
 				"sacramental"
+			]
+		},
+		"sacratus": {
+			"senses": [
+				"consecrated",
+				"hallowed"
+			],
+			"note": "The past participle of sacro, to consecrate. Its superlative, sacratíssimus, is the Church's word for what is most holy.",
+			"derivatives": [
+				"sacrament",
+				"consecrate"
 			]
 		},
 		"sacrificium": {

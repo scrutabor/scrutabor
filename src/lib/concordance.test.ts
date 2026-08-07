@@ -1,19 +1,23 @@
 import { describe, expect, it } from 'vitest';
-import { occurrencesOf } from './concordance';
+import { CATALOG } from './catalog';
+import { everyTextInOrder, occurrencesOf } from './concordance';
+import { TEXTS } from './corpus';
+import { ORDO } from './ordo';
 
 describe('occurrencesOf', () => {
-	it('groups occurrences by text in catalog order', () => {
+	it("groups occurrences by text in the book's own order", () => {
 		const oro = occurrencesOf('oro');
-		// the prayers shelf before the ordinary, and inside it the shelf's own
-		// order — which is the CATALOGUE's, not the corpus's alphabet
-		expect(oro.map((t) => t.textKey)).toEqual([
-			'orationes/ave-maria',
-			'orationes/salve-regina',
-			'orationes/regina-caeli',
-			'ordinarium/confiteor'
-		]);
+		const keys = oro.map((t) => t.textKey);
+		const at = (k: string) => keys.indexOf(k);
+		// the prayers shelf first, in the shelf's order…
+		expect(keys[0]).toBe('orationes/ave-maria');
+		expect(at('orationes/salve-regina')).toBeLessThan(at('orationes/regina-caeli'));
+		// …then the Mass, in the Ordo's liturgical sequence, not the alphabet
+		expect(at('orationes/regina-caeli')).toBeLessThan(at('ordinarium/confiteor'));
+		expect(at('ordinarium/aufer-a-nobis')).toBeLessThan(at('ordinarium/orate-fratres'));
+		// …and the prayers said AFTER Mass come after all of it
+		expect(at('ordinarium/pater-noster')).toBeLessThan(at('orationes/deus-refugium'));
 		expect(oro[0].items.map((o) => o.form)).toEqual(['ora']);
-		expect(oro.at(-1)!.items.map((o) => o.form)).toEqual(['oráre']);
 	});
 
 	it('lists every form of a lemma with its word id', () => {
@@ -35,5 +39,35 @@ describe('occurrencesOf', () => {
 		// The index is derived from the same snapshot as the reading view —
 		// a lemma with zero occurrences would mean the derivation dropped it.
 		expect(occurrencesOf('et').length).toBeGreaterThan(0);
+	});
+});
+
+describe('what the concordance is built from', () => {
+	it('is every text in the corpus, not the shelf', () => {
+		// It read the CATALOGUE once, which orders thirteen texts of the
+		// sixty-one that exist, so the whole Canon was missing from every
+		// lemma page — and the page gave no sign of it.
+		expect(everyTextInOrder().length).toBe(Object.keys(TEXTS).length);
+	});
+
+	it('and something sequences each of them', () => {
+		// Order comes from the shelf and then from the Ordo. A text neither
+		// of them names would fall to the sorted tail here — and it would
+		// have nothing linking to it in the app either, which is the real
+		// thing this catches.
+		const sequenced = new Set([
+			...CATALOG.flatMap((s) => s.texts).map((t) => `${t.category}/${t.slug}`),
+			...ORDO.flatMap((m) => m.entries).flatMap((e) => (e.text ? [e.text] : []))
+		]);
+		expect(everyTextInOrder().filter((k) => !sequenced.has(k))).toEqual([]);
+	});
+
+	it('opens with the prayers and reaches the last Gospel at the end', () => {
+		const order = everyTextInOrder();
+		expect(order[0]).toBe('orationes/pater-noster');
+		expect(order.indexOf('ordinarium/te-igitur')).toBeGreaterThan(
+			order.indexOf('ordinarium/kyrie')
+		);
+		expect(order).toContain('ordinarium/evangelium-ultimum');
 	});
 });

@@ -21,7 +21,9 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 		await page.locator('.pager-next').click();
 		await expect(page).toHaveURL(new RegExp(`/pl/ordo/${id}$`));
 	}
-	await expect(page.locator('.part-title').last()).toContainText('Preces Leonínæ');
+	// the last of the five prayers of Leo XIII, which the conclusion now
+	// lists one by one instead of describing as a block still to come
+	await expect(page.locator('.part-title').last()).toContainText('Cor Iesu sacratíssimum');
 	await expect(page.locator('.pager-next')).toHaveCount(0);
 
 	// every part of the spine appears on exactly one movement page — under
@@ -65,18 +67,27 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 
 	// the day's own texts are marked where they fall
 	await expect(page.locator('.mark', { hasText: 'z formularza dnia' }).first()).toBeVisible();
-	// and so are the parts still to come — the movements fill in as the
-	// corpus grows, so look wherever any remain
+
+	// A part still to come is marked too, and shows no text of its own.
+	// There are none left: the last of them was the block of prayers after
+	// low Mass, and with the collect and Cor Iesu sacratíssimum in, every
+	// FIXED text the spine names is carried. So the check is on the
+	// mechanism rather than on a particular gap, and it comes back the day
+	// the spine names something new.
 	const remaining = ORDO.find((m) => m.entries.some((e) => e.kind === 'pending'));
-	expect(remaining, 'no movement has a pending part left').toBeTruthy();
-	await page.goto(`/pl/ordo/${remaining!.id}`);
-	await expect(page.locator('.mark', { hasText: 'wkrótce w tym wydaniu' }).first()).toBeVisible();
-	// a part we do not carry shows no text of its own
-	const pending = page
-		.locator('.part')
-		.filter({ has: page.locator('.mark') })
-		.first();
-	await expect(pending.locator('.verse')).toHaveCount(0);
+	if (remaining) {
+		await page.goto(`/pl/ordo/${remaining.id}`);
+		await expect(page.locator('.mark', { hasText: 'wkrótce w tym wydaniu' }).first()).toBeVisible();
+		const pending = page
+			.locator('.part')
+			.filter({ has: page.locator('.mark') })
+			.first();
+		await expect(pending.locator('.verse')).toHaveCount(0);
+	} else {
+		// what remains unshown is the proper of the day, and only that
+		const kinds = new Set(ORDO.flatMap((m) => m.entries).map((e) => e.kind));
+		expect([...kinds].sort()).toEqual(['proper', 'text']);
+	}
 });
 
 test('a word in the flow opens its analysis, wherever it stands', async ({ page }) => {
@@ -201,18 +212,18 @@ test('the index says what the reader’s own part has to say', async ({ page }) 
 	// reader goes looking for it.
 	await page.goto('/en/ordo');
 	const line = page.locator('.role-part');
-	await expect(line).toContainText('You answer at 14 places');
+	await expect(line).toContainText('You answer at 16 places');
 	// two parts is few enough to name; the celebrant's 43 are not
 	await expect(line).toContainText('Confíteor (Ministrórum)');
 
 	await page.getByRole('radio', { name: 'priest' }).click();
-	await expect(line).toContainText('43 of the parts in full');
+	await expect(line).toContainText('45 of the parts in full');
 	await expect(line).not.toContainText('Confíteor (Ministrórum)');
 
 	// and it is counted, not guessed: the numbers must match what the ordo
 	// pages actually mark as the reader's
 	await page.getByRole('radio', { name: 'faithful' }).click();
-	await expect(line).toContainText('You answer at 14 places');
+	await expect(line).toContainText('You answer at 16 places');
 });
 
 test('the narrative names the priest rather than calling him "he"', async ({ page }) => {

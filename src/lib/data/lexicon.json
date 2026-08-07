@@ -546,6 +546,10 @@
 			"head": "benedíctus, -a, -um",
 			"pos": "adj"
 		},
+		"benignus": {
+			"head": "benígnus, -a, -um",
+			"pos": "adj"
+		},
 		"bibo": {
 			"head": "bibo, bíbere, bibi, bíbitum",
 			"pos": "verb",
@@ -751,6 +755,12 @@
 			"head": "contúrbo, conturbáre, conturbávi, conturbátum",
 			"pos": "verb",
 			"conj": 1
+		},
+		"conversio": {
+			"head": "convérsio, conversiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
 		},
 		"converto": {
 			"head": "convérto, convértere, convérti, convérsum",
@@ -1125,6 +1135,12 @@
 		"ex": {
 			"head": "e, ex",
 			"pos": "prep"
+		},
+		"exaltatio": {
+			"head": "exaltátio, exaltatiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
 		},
 		"exaudio": {
 			"head": "exáudio, exaudíre, exaudívi, exaudítum",
@@ -1652,6 +1668,12 @@
 			"head": "líbero, liberáre, liberávi, liberátum",
 			"pos": "verb",
 			"conj": 1
+		},
+		"libertas": {
+			"head": "libértas, libertátis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
 		},
 		"locus": {
 			"head": "locus, -i",
@@ -2251,6 +2273,12 @@
 			"head": "plenus, -a, -um",
 			"pos": "adj"
 		},
+		"populus": {
+			"head": "pópulus, -i",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 2
+		},
 		"porto": {
 			"head": "porto, portáre, portávi, portátum",
 			"pos": "verb",
@@ -2522,6 +2550,12 @@
 			"gender": "n",
 			"decl": 2
 		},
+		"refugium": {
+			"head": "refúgium, -i",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
 		"regina": {
 			"head": "regína, -æ",
 			"pos": "noun",
@@ -2630,6 +2664,10 @@
 			"pos": "noun",
 			"gender": "n",
 			"decl": 2
+		},
+		"sacratus": {
+			"head": "sacrátus, -a, -um",
+			"pos": "adj"
 		},
 		"sacrificium": {
 			"head": "sacrifícium, -ii",

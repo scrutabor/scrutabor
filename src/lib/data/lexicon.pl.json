@@ -731,6 +731,14 @@
 				"Benedykt"
 			]
 		},
+		"benignus": {
+			"senses": [
+				"łaskawy",
+				"dobrotliwy",
+				"życzliwy"
+			],
+			"note": "Złożenie z bonus i rdzenia gigno — dobrze urodzony, a stąd: życzliwy z natury."
+		},
 		"bibo": {
 			"senses": [
 				"pić"
@@ -1078,6 +1086,17 @@
 				"mącić"
 			],
 			"note": "Złożenie cum + turbáre — zmącić do gruntu."
+		},
+		"conversio": {
+			"senses": [
+				"nawrócenie",
+				"zwrócenie się"
+			],
+			"note": "Od convérto — obrócić. Nawrócenie jest po łacinie obróceniem się całego człowieka, nie zmianą zdania.",
+			"derivatives": [
+				"konwersja",
+				"konwertyta"
+			]
 		},
 		"converto": {
 			"senses": [
@@ -1706,6 +1725,16 @@
 				"wskutek, na podstawie"
 			],
 			"note": "Przed samogłoską zawsze „ex”; przed spółgłoską spotyka się i „e”, i „ex” (ex María Vírgine)."
+		},
+		"exaltatio": {
+			"senses": [
+				"wywyższenie",
+				"podniesienie"
+			],
+			"note": "Od exálto — podnieść wysoko; ex- wzmacnia altus, wysoki.",
+			"derivatives": [
+				"egzaltacja"
+			]
 		},
 		"exaudio": {
 			"senses": [
@@ -2544,6 +2573,17 @@
 			"senses": [
 				"uwalniać",
 				"wybawiać"
+			]
+		},
+		"libertas": {
+			"senses": [
+				"wolność",
+				"swoboda"
+			],
+			"note": "Od liber — wolny; stan człowieka, który nie jest niewolnikiem.",
+			"derivatives": [
+				"liberalny",
+				"libertyn"
 			]
 		},
 		"locus": {
@@ -3571,6 +3611,17 @@
 				"plenarny"
 			]
 		},
+		"populus": {
+			"senses": [
+				"lud",
+				"naród"
+			],
+			"note": "Lud jako jedna całość, nie tłum ludzi; w rzymskim prawie — obywatele wzięci razem.",
+			"derivatives": [
+				"populacja",
+				"popularny"
+			]
+		},
 		"porto": {
 			"senses": [
 				"nieść",
@@ -4059,6 +4110,16 @@
 			],
 			"note": "Dosłownie „ochłodzenie”. W starochrześcijańskich napisach nagrobnych to zwykłe słowo na miejsce spoczynku zmarłych, a rzymskie rodziny urządzały na grobach posiłek zwany refrigérium."
 		},
+		"refugium": {
+			"senses": [
+				"ucieczka",
+				"schronienie"
+			],
+			"note": "Rzeczownik od refúgio — uciekać się dokądś. Nie oznacza samej ucieczki, lecz miejsce, do którego się ucieka.",
+			"derivatives": [
+				"refugium"
+			]
+		},
 		"regina": {
 			"senses": [
 				"królowa"
@@ -4234,6 +4295,17 @@
 			"note": "U Rzymian przysięga żołnierska i zastaw złożony w świątyni; łacina chrześcijańska wzięła to słowo na oddanie greckiego mystérion.",
 			"derivatives": [
 				"sakrament"
+			]
+		},
+		"sacratus": {
+			"senses": [
+				"poświęcony",
+				"uświęcony"
+			],
+			"note": "Imiesłów bierny od sacro — poświęcać. W stopniu najwyższym, sacratíssimus, jest słowem, którym Kościół mówi o tym, co najświętsze.",
+			"derivatives": [
+				"sakrament",
+				"sakra"
 			]
 		},
 		"sacrificium": {
