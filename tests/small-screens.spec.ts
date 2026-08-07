@@ -215,3 +215,43 @@ test('each part is drawn in its own slot, not over its separator', async ({ page
 			).toBeLessThan(0.5);
 	}
 });
+
+test('a heading stands across the list it names, not beside the first of it', async ({ page }) => {
+	// The lists that stand in two columns above 85rem hold their own
+	// heading, and a multi-column flow has no idea it is a heading: it laid
+	// "w tekstach" at the head of column one and put the first occurrence of
+	// column two level with it, so the two read as a pair (owner,
+	// 2026-08-07). column-span lifts it out of the flow.
+	//
+	// Asserted at BOTH widths, because the fault only exists in the
+	// two-column form and a rule that stopped applying there would
+	// otherwise still pass on a phone.
+	for (const width of [390, 1500]) {
+		await page.setViewportSize({ width, height: 900 });
+		for (const url of ['/pl/lemma/meus', '/pl/grammatica/nominativus']) {
+			await page.goto(url);
+			const shape = await page.evaluate(() => {
+				const list = document.querySelector('.in-two')!;
+				const h2 = list.querySelector(':scope > h2')!;
+				const head = h2.getBoundingClientRect();
+				const rows = [...list.children]
+					.filter((e) => e !== h2 && e.getBoundingClientRect().height)
+					.map((e) => e.getBoundingClientRect());
+				return {
+					rows: rows.length,
+					cols: new Set(rows.map((r) => Math.round(r.left))).size,
+					// the heading is as wide as the whole list, not one column
+					spans: head.width > list.getBoundingClientRect().width - 1,
+					beside: rows.filter((r) => r.top < head.bottom - 0.5).length
+				};
+			});
+			const at = `${url} at ${width}px`;
+			expect(shape.rows, `${at}: nothing in the list to arrange`).toBeGreaterThan(1);
+			expect(shape.beside, `${at}: a row sits level with the heading`).toBe(0);
+			expect(shape.spans, `${at}: the heading is only as wide as one column`).toBe(true);
+			expect(shape.cols, `${at}: expected ${width < 1360 ? 'one column' : 'two'}`).toBe(
+				width < 1360 ? 1 : 2
+			);
+		}
+	}
+});

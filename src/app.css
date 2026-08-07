@@ -211,6 +211,16 @@ body {
 		break-inside: avoid;
 	}
 
+	/* The heading names the whole list, so it stands across the whole
+	   list. Inside a multi-column flow it is otherwise just the first
+	   item: "w tekstach" sat at the head of column one with the first
+	   occurrence of column two level beside it, as though the two were a
+	   pair (owner, 2026-08-07). column-span lifts it out of the flow and
+	   everything else balances underneath. */
+	.page .in-two > h2 {
+		column-span: all;
+	}
+
 	/* A FLEX container ignores `columns` outright — the card index kept
 	   its single column and said nothing. It is already a stack with a
 	   gap, so it becomes a two-track grid, which is the same stack with
