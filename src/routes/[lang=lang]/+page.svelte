@@ -218,7 +218,8 @@
 			<a class="way" href={ZIP} rel="external">
 				{@render doorIcon('download')}
 				<span class="way-title">{t.zipTitle}</span>
-				<span class="way-note">{t.zipNote} · v{data.version}</span>
+				<span class="way-note">{t.zipNote}</span>
+				<span class="way-version">v{data.version}</span>
 			</a>
 			{#each SOON as channel (channel.name)}
 				<div class="way soon">
@@ -351,6 +352,11 @@
 
 	.way-note {
 		font-size: 0.8rem;
+		color: var(--ink-soft);
+	}
+
+	.way-version {
+		font-size: 0.75rem;
 		color: var(--ink-soft);
 	}
 
