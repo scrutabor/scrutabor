@@ -24,5 +24,5 @@ export const load: PageServerLoad = ({ params }) => {
 		texts[e.text!] = { doc: entry.text, gloss: entry.glosses[lang] };
 		docs.push(entry.text);
 	}
-	return { texts, lex: narrowLexicon(docs, lang) };
+	return { movement: params.movement, texts, lex: narrowLexicon(docs, lang) };
 };

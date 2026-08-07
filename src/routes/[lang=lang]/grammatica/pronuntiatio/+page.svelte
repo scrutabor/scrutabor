@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import PageNav from '$lib/components/PageNav.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { bindPlFields } from '$lib/polish';
 
-	const lang = $derived(page.params.lang as Lang);
+	let { data } = $props();
+	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
 
 	// Rule rows: grapheme, Roman, Polish, example (corpus deep link when we

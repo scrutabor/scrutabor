@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
@@ -19,10 +18,10 @@
 	let { data } = $props();
 	const texts = $derived(data.texts as Record<string, { doc: TextDocument; gloss: GlossDocument }>);
 
-	const lang = $derived(page.params.lang as Lang);
+	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
-	const movement = $derived(movementById(page.params.movement ?? ''));
-	const around = $derived(movementNeighbors(page.params.movement ?? ''));
+	const movement = $derived(movementById(data.movement));
+	const around = $derived(movementNeighbors(data.movement));
 
 	// The flow shares the reading page's help ladder and its stored setting.
 	let helpLevel = $state(1);
@@ -88,7 +87,6 @@
 	const panel = wordPanel({ has: (id) => wordsById.has(id) });
 
 	$effect(() => {
-		void page.url;
 		void wordsById;
 		panel.applyFromLocation();
 	});
@@ -109,7 +107,7 @@
 	// The flow is the longest surface in the book and the one a reader
 	// leaves and comes back to mid-Mass — it keeps a ribbon like the rest.
 	ribbon(
-		() => `scrutabor-pos:ordo/${page.params.movement}`,
+		() => `scrutabor-pos:ordo/${data.movement}`,
 		// a deep link into a word outranks the ribbon — that reader asked
 		// for a place, the same rule the reading pages follow
 		() => new URL(location.href).searchParams.has('w')

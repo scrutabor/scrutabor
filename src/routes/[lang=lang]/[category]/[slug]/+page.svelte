@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import { neighborsOf, sectionFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
@@ -19,7 +18,7 @@
 	// — the browser never receives the whole snapshot (see +page.server.ts).
 	let { data } = $props();
 
-	const lang = $derived(page.params.lang as Lang);
+	const lang = $derived(data.lang as Lang);
 
 	const msgs = $derived(M[lang]);
 	const doc = $derived(data.doc);
@@ -34,11 +33,11 @@
 			.size > 1
 	);
 	const gloss = $derived(data.gloss);
-	const sectionLabel = $derived(sectionFor(page.params.category ?? '')?.label[lang] ?? '');
+	const sectionLabel = $derived(sectionFor(data.category)?.label[lang] ?? '');
 	// Book navigation: the catalog's flattened order — within ordinarium
 	// that is the liturgical sequence, so a reader can follow the Mass
 	// text to text without returning to the catalog.
-	const around = $derived(neighborsOf(page.params.category ?? '', page.params.slug ?? ''));
+	const around = $derived(neighborsOf(data.category, data.slug));
 
 	// Three verbosity states:
 	// 0 = text only · 1 = + interlinear glosses · 2 = + translations (as
@@ -53,7 +52,6 @@
 	const panel = wordPanel({ has: (id) => wordsById.has(id) });
 
 	$effect(() => {
-		void page.url;
 		void wordsById;
 		panel.applyFromLocation();
 	});
@@ -64,7 +62,7 @@
 	// The book's ribbon, keyed by text (see lib/ribbon): a deep link into a
 	// word outranks it — that reader asked for a place.
 	ribbon(
-		() => `scrutabor-pos:${page.params.category}/${page.params.slug}`,
+		() => `scrutabor-pos:${data.category}/${data.slug}`,
 		() => new URL(location.href).searchParams.has('w')
 	);
 

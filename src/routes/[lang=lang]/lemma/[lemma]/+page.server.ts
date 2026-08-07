@@ -15,6 +15,7 @@ export const load: PageServerLoad = ({ params }) => {
 	const lang = params.lang as Lang;
 	const lemma = params.lemma;
 	return {
+		lemma,
 		entry: LEXICON.lemmata[lemma] ?? null,
 		sense: LEXICON.senses[lang][lemma] ?? null,
 		occurrences: occurrencesOf(lemma)

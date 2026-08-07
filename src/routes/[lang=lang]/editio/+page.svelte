@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import PageNav from '$lib/components/PageNav.svelte';
 	import { M, type Lang } from '$lib/i18n';
 
-	const lang = $derived(page.params.lang as Lang);
+	let { data } = $props();
+	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
 </script>
 

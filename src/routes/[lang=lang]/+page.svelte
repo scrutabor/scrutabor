@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import { CATALOG } from '$lib/catalog';
 	import LangMenu from '$lib/components/LangMenu.svelte';
 	import TextSize from '$lib/components/TextSize.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import { M, type Lang } from '$lib/i18n';
 
-	const lang = $derived(page.params.lang as Lang);
+	let { data } = $props();
+	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
 </script>
 

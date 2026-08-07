@@ -31,5 +31,11 @@ export const load: PageServerLoad = ({ params }) => {
 
 	// Just the entries this text can ask about, not the whole dictionary.
 	const lex = narrowLexicon([entry.text], lang);
-	return { doc: entry.text, gloss: entry.glosses[lang], lex };
+	return {
+		category: params.category,
+		slug: params.slug,
+		doc: entry.text,
+		gloss: entry.glosses[lang],
+		lex
+	};
 };

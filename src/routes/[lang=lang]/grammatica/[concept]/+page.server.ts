@@ -8,7 +8,7 @@ import type { EntryGenerator, PageServerLoad } from './$types';
 export const entries: EntryGenerator = () =>
 	LANGS.flatMap((lang) => CONCEPTS.map((c) => ({ lang, concept: c.id })));
 
-export const load: PageServerLoad = () => {
+export const load: PageServerLoad = ({ params }) => {
 	assertExamplesResolve();
-	return {};
+	return { concept: params.concept };
 };

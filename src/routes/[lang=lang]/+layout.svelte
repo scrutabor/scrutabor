@@ -1,14 +1,12 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import type { Lang } from '$lib/i18n';
 	import { ORIGIN } from '$lib/site';
 
-	let { children } = $props();
+	let { children, data } = $props();
 
-	const lang = $derived(page.params.lang as Lang);
-	// The language-relative path; canonical drops any query (?w= deep
-	// links canonicalize to their page).
-	const rest = $derived(page.url.pathname.replace(/^\/(pl|en)/, ''));
+	// From the layout's own load, not from the router: see +layout.ts.
+	const lang = $derived(data.lang as Lang);
+	const rest = $derived(data.path);
 
 	// Remember the reader's language and keep the live DOM lang in sync on
 	// client-side navigation (the prerendered <html lang> is set by hooks).
