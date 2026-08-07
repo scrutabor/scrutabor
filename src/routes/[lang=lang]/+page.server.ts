@@ -19,7 +19,7 @@ const VERSE = 's02';
 // version instead of a latest-indirection. Single-sourced from
 // package.json; the release ritual bumps it with `npm version`, which
 // also cuts the tag this URL names.
-const ZIP = `https://github.com/scrutabor/scrutabor-app/releases/download/v${pkg.version}/Scrutabor-v${pkg.version}.zip`;
+const ZIP = `https://github.com/scrutabor/scrutabor/releases/download/v${pkg.version}/Scrutabor-v${pkg.version}.zip`;
 
 export const load: PageServerLoad = ({ params }) => {
 	const lang = params.lang as Lang;

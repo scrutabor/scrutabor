@@ -7,7 +7,7 @@
 // and the build fails: fail-closed by design.
 import { execFileSync } from 'node:child_process';
 
-const REPO_URL = 'https://github.com/scrutabor/scrutabor-app.git';
+const REPO_URL = 'https://github.com/scrutabor/scrutabor.git';
 const sha = process.env.CF_PAGES_COMMIT_SHA;
 const TIMEOUT_MS = 12 * 60 * 1000;
 const POLL_MS = 20 * 1000;

@@ -65,8 +65,7 @@
 		<p class="lede">{t.lede}</p>
 		<ul class="channels">
 			<li>
-				<a href="https://github.com/scrutabor/scrutabor-app/issues" rel="external"
-					>scrutabor-app · Issues</a
+				<a href="https://github.com/scrutabor/scrutabor/issues" rel="external">scrutabor · Issues</a
 				>
 				<span class="what">{t.appIssues}</span>
 			</li>

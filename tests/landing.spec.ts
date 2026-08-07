@@ -143,7 +143,7 @@ test.describe('landing @online', () => {
 		const zip = page.locator('a.way', { hasText: 'ZIP file' });
 		await expect(zip).toHaveAttribute(
 			'href',
-			`https://github.com/scrutabor/scrutabor-app/releases/download/v${version}/Scrutabor-v${version}.zip`
+			`https://github.com/scrutabor/scrutabor/releases/download/v${version}/Scrutabor-v${version}.zip`
 		);
 		await expect(zip).toContainText('a copy to download');
 		await expect(zip).toContainText(`v${version}`);
@@ -164,7 +164,7 @@ test.describe('landing @online', () => {
 		await page.goto('/pl/support');
 		await expect(page.locator('h1')).toHaveText('Pomoc');
 		await expect(
-			page.locator('a[href="https://github.com/scrutabor/scrutabor-app/issues"]')
+			page.locator('a[href="https://github.com/scrutabor/scrutabor/issues"]')
 		).toBeVisible();
 		await expect(page.locator('a[href^="mailto:"]')).toBeVisible();
 		await page.goto('/en/support');
