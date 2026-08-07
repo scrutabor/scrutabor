@@ -1,5 +1,5 @@
 // The reading size: three steps, set once, kept.
-import { expect, test } from './fixtures';
+import { expect, settled, test } from './fixtures';
 import type { Page } from '@playwright/test';
 
 const trigger = (page: Page) => page.getByRole('button', { name: /text size/i });
@@ -102,7 +102,7 @@ test('the choice survives the page, the navigation and the reload', async ({ pag
 	expect((await size(page)).root, 'kept across a navigation').toBe(chosen);
 
 	await page.reload();
-	await page.waitForSelector('html[data-hydrated]');
+	await settled(page);
 	expect((await size(page)).root, 'kept across a reload').toBe(chosen);
 	await expect(trigger(page), 'and the control still says so').toHaveAccessibleName(
 		'text size: larger'
@@ -159,7 +159,7 @@ test('largest print on the smallest phone still holds together', async ({ page }
 		await page.goto(url);
 		await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
 		await page.reload();
-		await page.waitForSelector('html[data-hydrated]');
+		await settled(page);
 		const damage = await page.evaluate(() => ({
 			root: getComputedStyle(document.documentElement).fontSize,
 			splitTokens: [...document.querySelectorAll('.verse .token')]
@@ -195,7 +195,7 @@ test('the slider’s thumb clears the labels above it', async ({ page }) => {
 	await page.goto('/pl/ordo/praeparatio');
 	await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
 	await page.reload();
-	await page.waitForSelector('html[data-hydrated]');
+	await settled(page);
 	const clearance = await page.evaluate(() => {
 		const input = document.querySelector('input[type="range"]')!;
 		const track = input.getBoundingClientRect();

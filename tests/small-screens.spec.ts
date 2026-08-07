@@ -9,7 +9,7 @@
 // the folded rows of the ordo, the catalogue cards, the movement heads,
 // the concordance rows, the help slider, the nav itself — and not one of
 // them was visible at the size and width a developer happens to be using.
-import { expect, test } from './fixtures';
+import { expect, settled, test } from './fixtures';
 
 // One of each SHAPE of page rather than one of each page: the failures
 // are in the layouts, and the layouts repeat.
@@ -32,15 +32,26 @@ const WIDTHS = [320, 390, 768, 1024];
 const SIZES = ['normal', 'larger', 'largest'];
 
 test('nothing runs off the screen, at any width and any text size', async ({ page }) => {
+	// 120 combinations, and each one used to cost TWO page loads: a goto to
+	// get an origin to write localStorage on, then a reload to make the
+	// setting take. The setting outlives a navigation — localStorage is per
+	// origin, not per page — so it is written once per size and every goto
+	// after it already has it. 240 loads become 123.
+	//
+	// That is not tidying. Each load waits for hydration and for the
+	// webfont, which is 8 seconds here and several times that on a CI
+	// runner with two cores, and this sweep ran out of its budget there
+	// while passing locally.
+	test.setTimeout(180_000);
 	const damage: string[] = [];
 	for (const size of SIZES) {
+		await page.goto('/pl');
+		await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
 		for (const width of WIDTHS) {
 			await page.setViewportSize({ width, height: 760 });
 			for (const url of PAGES) {
-				await page.goto(url);
-				await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
-				await page.reload();
-				await page.waitForSelector('html[data-hydrated]');
+				// named, so a failure says which of the 120 it was on
+				await test.step(`${url} at ${width}px/${size}`, () => page.goto(url));
 				const bad = await page.evaluate(() => {
 					const vw = document.documentElement.clientWidth;
 					const over = document.documentElement.scrollWidth - vw;
@@ -74,12 +85,13 @@ test('every menu opens onto the screen, not off the edge of it', async ({ page }
 	// the language menu was visibly cut in half.
 	const damage: string[] = [];
 	for (const size of SIZES) {
+		await page.goto('/pl/ordo');
+		await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
 		for (const width of [...WIDTHS, 1200]) {
 			await page.setViewportSize({ width, height: 760 });
+			// same as above: the size is already stored, so this is one load
+			// and the fixture's goto has waited for it
 			await page.goto('/pl/ordo');
-			await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
-			await page.reload();
-			await page.waitForSelector('html[data-hydrated]');
 			for (const name of ['wybór języka', 'wielkość pisma']) {
 				await page.getByRole('button', { name: new RegExp(name) }).click();
 				const box = await page.evaluate(() => {
@@ -114,7 +126,7 @@ test('a wide screen keeps every control in its unstacked form', async ({ page })
 		await page.goto('/pl/ordo/praeparatio');
 		await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
 		await page.reload();
-		await page.waitForSelector('html[data-hydrated]');
+		await settled(page);
 		const shape = await page.evaluate(() => {
 			const rows = (sel: string) =>
 				new Set(
@@ -169,7 +181,7 @@ test('each part is drawn in its own slot, not over its separator', async ({ page
 		await page.goto('/pl/ordo/praeparatio');
 		await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
 		await page.reload();
-		await page.waitForSelector('html[data-hydrated]');
+		await settled(page);
 
 		const slots = () =>
 			page.evaluate(() =>
