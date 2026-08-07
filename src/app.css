@@ -116,35 +116,111 @@ body {
 	--gloss-gap: 0.152;
 }
 
-/* A page that is READ rather than chosen from — the prayers and the ordo
-   — takes the screen it is given. 38rem is the right measure for prose,
-   but this is not prose: every Latin word is as wide as the gloss under
-   it, so at 38rem a line of the Credo carries a median of 33 Latin
-   characters where ordinary setting wants 45-75. The column was not at
-   its limit, it was well short of it, and on a 1512px laptop it used 40%
-   of the width and wrapped 10 of the Credo's 17 verses.
+/* THE FRAME. One width for every page of the book, so that two of them
+   opened side by side on a large screen are the same object.
+   38rem was the frame and it was also the measure, which held only as
+   long as every page was prose. It stopped holding twice.
+
+   First for the pages that are READ rather than chosen from. Every Latin
+   word there is as wide as the gloss under it, so at 38rem a line of the
+   Credo carried a median of 33 Latin characters where ordinary setting
+   wants 45-75: the column was not at its limit, it was well short of it,
+   and on a 1512px laptop it used 40% of the width and wrapped 10 of the
+   Credo's 17 verses.
+
+   Then for the rest, which is what the owner saw (2026-08-07): the
+   grammar pages sitting in a 608px column beside a reading page's 896px,
+   on a 1500px screen. Measured before touching anything, their PROSE was
+   already the wider of the two — 69 characters against the reading
+   page's 62 — so the answer was never to let the text run further. It is
+   the frame that was narrow, and there was nothing in it wide enough to
+   want the room. Now the frame is one number and the measure is `--measure`
+   below, which is how the reading page has always done it.
 
    clamp, not a breakpoint, so nothing jumps as a window is dragged: it
    holds 38rem until about 1024px and reaches 56rem at about 1500px,
-   where the median line is 45 characters and 2 verses of 17 wrap.
+   where a reading page's median line is 45 characters and 2 verses of 17
+   wrap.
 
    The type size deliberately does not change with it. TextBody's gloss
    geometry is measured in rem against a 1.45rem reading size — ROOM_BELOW,
    the initial's sink and lift all convert through that number — so
    scaling the face would detune the spacing without saying so. */
-.page.reading {
-	max-width: clamp(38rem, 60vw, 56rem);
-}
-
-/* The measure of the book. Every page of it is one column of this width
-   — the reading pages, the catalogue, the grammar, the colophon — so it
-   is stated once here rather than in each route, where eight identical
-   copies were eight chances to drift. The pages that are not a column of
-   text (the 404, the error boundary) keep their own rule. */
 .page {
-	max-width: 38rem;
+	max-width: clamp(38rem, 60vw, 56rem);
 	margin: 0 auto;
 	padding: 1.25rem 1.5rem 4rem;
+}
+
+/* THE MEASURE, which is a different thing and no longer moves with the
+   frame. Prose is held to a reading measure in `ch`, so it is stated
+   against its OWN type rather than in a number of rem that is right for
+   one size of it and wrong for the next — and it is centred, because a
+   62-character column left-hugging a 56rem frame reads as a mistake.
+
+   NAMED, not structural. The first attempt capped `main > section > p`,
+   which is prose on a grammar page and is a CONCORDANCE ROW on a lemma
+   page — 77 occurrences of dóminus squeezed back into a 62-character
+   column, which is the opposite of the point. What wants the measure is
+   sentences; what wants the frame is everything built as a row, a card
+   or a table, and no selector can tell those apart by shape.
+
+   Reading pages are not listed: their verses fill the frame, and the
+   prose inside them — rubric narratives, translations — carries its own
+   cap in the same unit, from before this rule existed.
+
+   NOT headings. Capping an h1 costs nothing — a heading is never 62
+   characters — but `margin-inline: auto` on one does: in the centred
+   flex column of the landing it replaces `align-items: center`, and
+   when the heading is WIDER than its column (the wordmark at the
+   largest reading size on a 320px phone) auto margins collapse to zero
+   and the item aligns to the start instead of straddling the middle.
+   The overflow was there either way; centring hid it off the left,
+   where document scrollWidth cannot see it, and the sweep only spoke
+   up once it moved to the right. */
+.page .what,
+.page .spot,
+.page .fine {
+	max-width: 62ch;
+	margin-inline: auto;
+}
+
+/* A STACK OF ROWS that has room to stand in two.
+   This is the part that actually uses the frame, and without it widening
+   the frame changed nothing anyone could see: the prose was already at
+   its measure and the lists carried their own `max-width: 30rem`, so a
+   wider page just grew wider margins.
+   Which is the answer to why some pages "did not get" the wide layout.
+   The frame was shared all along — `.page` is one rule — but fifteen
+   hardcoded inner widths, 28rem to 34rem for the same kind of block,
+   were re-narrowing the content underneath it. Those are gone from the
+   three lists below; the rest stay because they ARE prose and prose has
+   a measure.
+   Only above 85rem, where the frame has reached about 51rem and two
+   columns are each still wider than a phone. Below that a single column
+   is right and nothing changes. `break-inside: avoid`, or a row splits
+   across the fold with its title in one column and its note in the
+   other. */
+@media (min-width: 85rem) {
+	.page .in-two {
+		columns: 2;
+		column-gap: 2.6rem;
+	}
+
+	.page .in-two > * {
+		break-inside: avoid;
+	}
+
+	/* A FLEX container ignores `columns` outright — the card index kept
+	   its single column and said nothing. It is already a stack with a
+	   gap, so it becomes a two-track grid, which is the same stack with
+	   the gap preserved. */
+	.page .cards.in-two {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 2.6rem;
+		align-content: start;
+	}
 }
 
 /* Pages that are one line of content rather than a column of it — the

@@ -27,7 +27,7 @@
 		{#each groups as group (group.id)}
 			<section>
 				<h2 class="smallcaps">{group.label}</h2>
-				<div class="cards">
+				<div class="cards in-two">
 					{#each group.concepts as c (c.id)}
 						<a class="card" href="/{lang}/grammatica/{c.id}">
 							<span class="card-title">{c.label[lang]}</span>
@@ -52,9 +52,10 @@
 </div>
 
 <style>
+	/* the cards take the frame, and stand in two above 85rem — see
+	   .in-two in app.css */
 	section {
 		margin: 2.2rem auto 0;
-		max-width: 30rem;
 	}
 
 	.card-title {

@@ -34,7 +34,7 @@
 				<p class="spot">{concept.spot[lang]}</p>
 			{/if}
 
-			<section class="examples">
+			<section class="examples in-two">
 				<h2 class="smallcaps">{msgs.occurrences}</h2>
 				{#each concept.examples as ex (ex.textKey + ex.wordId)}
 					<div class="example">
@@ -73,9 +73,10 @@
 		line-height: 1.55;
 	}
 
+	/* width comes from the frame now, and above 85rem the rows stand in
+	   two — see .in-two in app.css */
 	.examples {
 		margin: 2.4rem auto 0;
-		max-width: 30rem;
 	}
 
 	.example {

@@ -58,7 +58,7 @@
 			{/if}
 
 			{#if texts.length > 0}
-				<section class="occurrences">
+				<section class="occurrences in-two">
 					<h2 class="smallcaps">{msgs.occurrences}</h2>
 					{#each texts as t (t.textKey)}
 						<p class="occ-row">
@@ -133,9 +133,10 @@
 		margin-right: 0.35rem;
 	}
 
+	/* 77 occurrences of dóminus across 44 texts: the one list here long
+	   enough that halving its height is worth a column — see .in-two */
 	.occurrences {
 		margin: 2.6rem auto 0;
-		max-width: 30rem;
 	}
 
 	.occ-row {
