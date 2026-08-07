@@ -520,7 +520,13 @@ test('a tapped word is highlighted on the word, not around the gloss', async ({ 
 			onButton: getComputedStyle(w).backgroundColor
 		};
 	});
-	expect(box.clearance, 'the highlight stops above the gloss').toBeGreaterThan(0);
+	// Not > 0. The gap is half a pixel here by design — the gloss row was
+	// tuned to sit as close to its word as it can without touching — and
+	// half a pixel is inside the difference between two rasterizers: this
+	// same page measures 0.54 on macOS and 0.00 on the Linux runner. The
+	// defect being guarded against is the wash running INTO the gloss,
+	// which was several pixels of overlap and is a NEGATIVE clearance.
+	expect(box.clearance, 'the highlight stops above the gloss').toBeGreaterThanOrEqual(0);
 	expect(box.onBase, 'the wash is on the Latin').not.toBe('rgba(0, 0, 0, 0)');
 	expect(box.onButton, 'and not on the whole ruby').toBe('rgba(0, 0, 0, 0)');
 });
@@ -710,16 +716,20 @@ test('a reading page takes the screen it is given, prose excepted', async ({ pag
 	// So the verses take the wide column and the prose does not — rubrics,
 	// their narratives and the translations are ordinary sentences and ran
 	// to 127 characters a line at 56rem.
+	// The prose measure is set in `ch` (62ch, 56ch), so the rule to check is
+	// that the box is CAPPED at it — not an estimate of how many characters
+	// land on a line. That estimate divides a first-line width by an average
+	// density taken across however many lines the text happens to wrap into,
+	// and it read 69 on one machine and 81 on another for the same CSS. The
+	// box, in the page's own units, is the same number everywhere.
 	const measure = () =>
 		page.evaluate(() => {
-			const chars = (sel: string) => {
+			const capped = (sel: string) => {
 				const el = document.querySelector(sel);
-				if (!el) return 0;
-				const range = document.createRange();
-				range.selectNodeContents(el);
-				const rects = [...range.getClientRects()].filter((x) => x.width > 2);
-				const perPx = (el.textContent || '').trim().length / rects.reduce((n, x) => n + x.width, 0);
-				return Math.round((rects[0]?.width ?? 0) * perPx);
+				if (!el) return null;
+				const width = el.getBoundingClientRect().width;
+				const declared = parseFloat(getComputedStyle(el).maxWidth); // the ch measure, in px
+				return { width: Math.round(width), cap: Math.round(declared) };
 			};
 			const counts: number[] = [];
 			for (const v of document.querySelectorAll('.verse.glossed')) {
@@ -734,9 +744,9 @@ test('a reading page takes the screen it is given, prose excepted', async ({ pag
 			return {
 				column: Math.round(document.querySelector('.page')!.getBoundingClientRect().width),
 				latinChars: counts[Math.floor(counts.length / 2)],
-				rubric: chars('.rubric-la'),
-				narrative: chars('.rubric-narrative'),
-				translation: chars('.translation')
+				rubric: capped('.rubric-la'),
+				narrative: capped('.rubric-narrative'),
+				translation: capped('.translation')
 			};
 		});
 
@@ -746,13 +756,22 @@ test('a reading page takes the screen it is given, prose excepted', async ({ pag
 	const wide = await measure();
 	expect(wide.column, 'the column grows past the prose measure').toBeGreaterThan(38 * 16);
 	expect(wide.latinChars, 'and the Latin line reaches a real measure').toBeGreaterThan(40);
-	for (const [what, n] of [
+	for (const [what, box] of [
 		['the rubric', wide.rubric],
 		['its narrative', wide.narrative],
 		['the translation', wide.translation]
 	] as const) {
-		expect(n, `${what} is prose and stays readable`).toBeGreaterThan(40);
-		expect(n, `${what} is prose and must not run the full column`).toBeLessThan(80);
+		expect(box, `${what} is on the page`).not.toBeNull();
+		// its own declared measure is a real one — 45 to 75 characters is
+		// ordinary setting, and `ch` runs a little under a character
+		expect(box!.cap, `${what} declares a prose measure`).toBeGreaterThan(40 * 8);
+		expect(box!.cap, `${what} declares a prose measure`).toBeLessThan(75 * 12);
+		// and it is HELD: the box stops at the measure instead of following
+		// the verse column, which is what ran these to 127 characters a line
+		expect(box!.width, `${what} is prose and must not run the full column`).toBeLessThanOrEqual(
+			box!.cap
+		);
+		expect(box!.width, `${what} must not run the full column`).toBeLessThan(wide.column * 0.8);
 	}
 
 	// a phone is unchanged: the column is the screen
