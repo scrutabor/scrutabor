@@ -77,9 +77,31 @@ function translate(
 }
 
 /**
+ * Wait for the page to become interactive.
+ *
+ * `attached`, not the default `visible`: what is being waited for is an
+ * attribute on <html>, and visibility adds a geometry condition about the
+ * root element that nobody meant to assert.
+ *
+ * Exported because a navigation the test did not drive through goto — a
+ * link click, a back button — leaves the page loading again, and in the
+ * folder that is a real document load. An assertion after one is safe,
+ * because assertions retry; a KEYSTROKE after one is not, and lands on a
+ * page where nothing is listening yet.
+ */
+export async function settled(page: import('@playwright/test').Page): Promise<void> {
+	await page.waitForSelector('html[data-hydrated]', { state: 'attached', timeout: 20_000 });
+}
+
+/**
  * For a page that is not expected to come alive: scripting disabled, or a
  * cold load measured while it is still painting. It gets the network guard
  * and the path translation and nothing else.
+ *
+ * Also for a sweep that READS many pages rather than operating them. The
+ * text a sweep reads is in the prerendered HTML; making it wait for
+ * hydration and for the webfont on every one of several hundred pages
+ * buys nothing and costs the budget it then runs out of.
  */
 export const bare = base.extend<object>({
 	page: async ({ page }, use, testInfo) => {
@@ -107,7 +129,7 @@ export const test = base.extend<object>({
 		const goto = page.goto.bind(page);
 		page.goto = async (url: string, options?: Parameters<typeof goto>[1]) => {
 			const response = await goto(url, options);
-			await page.waitForSelector('html[data-hydrated]', { timeout: 20_000 });
+			await settled(page);
 			await page.evaluate(() => document.fonts.ready);
 			return response;
 		};
