@@ -1,8 +1,8 @@
 // The reading experience: help ladder, panel layers, cross-reference jumps.
 import { atRoute, expect, settled, test } from './fixtures';
 
-const AVE = '/pl/orationes/ave-maria';
-const CONFITEOR = '/pl/ordinarium/confiteor';
+const AVE = '/app/pl/orationes/ave-maria';
+const CONFITEOR = '/app/pl/ordinarium/confiteor';
 
 test('help slider walks the three-step ladder', async ({ page }) => {
 	await page.goto(CONFITEOR);
@@ -30,14 +30,14 @@ test('word panel shows all three layers', async ({ page }) => {
 	const panel = page.locator('aside');
 	await expect(panel.locator('.form')).toHaveText('Mater');
 	// layer 1: lexicon — dictionary head linking to the lemma page, senses
-	await expect(panel.locator('.head a')).toHaveAttribute('href', '/pl/lemma/mater');
+	await expect(panel.locator('.head a')).toHaveAttribute('href', '/app/pl/lemma/mater');
 	await expect(panel.locator('.head')).toContainText('mater, matris');
 	await expect(panel.locator('.head')).toContainText('— matka');
 	// layer 2: parse line with a concept-linked term
 	await expect(panel.locator('.morph')).toContainText('wołacz');
 	await expect(panel.locator('.morph a.concept')).toHaveAttribute(
 		'href',
-		'/pl/grammatica/vocativus'
+		'/app/pl/grammatica/vocativus'
 	);
 	// layer 3: the contextual note
 	await expect(panel.locator('.function')).toContainText('Apozycja');
@@ -47,7 +47,7 @@ test('word panel shows all three layers', async ({ page }) => {
 });
 
 test('a proper name absent from one analyzer names its true confirmers', async ({ page }) => {
-	await page.goto('/pl/ordinarium/confiteor?w=w009'); // Michaéli
+	await page.goto('/app/pl/ordinarium/confiteor?w=w009'); // Michaéli
 	const meta = page.locator('aside .meta');
 	await expect(meta).toContainText('opracowanie, Collatinus');
 	await expect(meta).not.toContainText('Whitaker,');
@@ -68,14 +68,14 @@ test('cross-references in notes jump to the referenced word', async ({ page }) =
 });
 
 test('the English locale renders its own gloss layer', async ({ page }) => {
-	await page.goto('/en/orationes/ave-maria');
+	await page.goto('/app/en/orationes/ave-maria');
 	await expect(page.locator('rt').first()).toHaveText('hail');
 	await page.locator('#w019').click();
 	await expect(page.locator('aside .head')).toContainText('— mother');
 });
 
 test('pronunciation line shows both traditions on the Polish interface', async ({ page }) => {
-	await page.goto('/pl/orationes/pater-noster?w=w006'); // cælis
+	await page.goto('/app/pl/orationes/pater-noster?w=w006'); // cælis
 	const pron = page.locator('aside .pron');
 	await expect(pron).toContainText('cæ-lis');
 	await expect(pron).toContainText('rz.');
@@ -85,7 +85,7 @@ test('pronunciation line shows both traditions on the Polish interface', async (
 });
 
 test('pronunciation line shows Roman only on the English interface', async ({ page }) => {
-	await page.goto('/en/orationes/pater-noster?w=w006');
+	await page.goto('/app/en/orationes/pater-noster?w=w006');
 	const pron = page.locator('aside .pron');
 	await expect(pron).toContainText('/ˈtʃɛ.lis/');
 	await expect(pron).not.toContainText('rz.');
@@ -93,7 +93,7 @@ test('pronunciation line shows Roman only on the English interface', async ({ pa
 });
 
 test('identical traditions collapse to one transcription', async ({ page }) => {
-	await page.goto('/pl/orationes/ave-maria?w=w019'); // Mater
+	await page.goto('/app/pl/orationes/ave-maria?w=w019'); // Mater
 	const pron = page.locator('aside .pron');
 	await expect(pron).toContainText('Ma-ter');
 	await expect(pron).toContainText('/ˈma.tɛr/');
@@ -101,7 +101,7 @@ test('identical traditions collapse to one transcription', async ({ page }) => {
 });
 
 test('the Gloria reads with narrative, panel and provenance', async ({ page }) => {
-	await page.goto('/pl/ordinarium/gloria?w=w041'); // Agnus
+	await page.goto('/app/pl/ordinarium/gloria?w=w041'); // Agnus
 	const panel = page.locator('aside');
 	await expect(panel.locator('.form')).toHaveText('Agnus');
 	await expect(panel.locator('.gloss')).toHaveText('Baranku');
@@ -110,11 +110,11 @@ test('the Gloria reads with narrative, panel and provenance', async ({ page }) =
 	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
 	// single-analyzer override: déxteram is confirmed by Whitaker's alone,
 	// against the document's both-analyzers default
-	await page.goto('/pl/ordinarium/gloria?w=w061');
+	await page.goto('/app/pl/ordinarium/gloria?w=w061');
 	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker');
 	await expect(panel.locator('.meta')).not.toContainText('Collatinus');
 	// the superlative links its grammar concept and the lemma page resolves
-	await page.goto('/en/ordinarium/gloria?w=w074'); // Altissimus
+	await page.goto('/app/en/ordinarium/gloria?w=w074'); // Altissimus
 	await expect(panel.locator('.gloss')).toHaveText('the Most High');
 	await panel.locator('.head a').click();
 	await expect(page).toHaveURL(atRoute('lemma/altus'));
@@ -128,11 +128,11 @@ test('no token ever fragments across lines, any text, narrow viewport', async ({
 	// the line breaks happen to fall.
 	await page.setViewportSize({ width: 320, height: 900 });
 	for (const path of [
-		'/pl/ordinarium/gloria',
-		'/pl/ordinarium/confiteor',
-		'/pl/orationes/pater-noster',
-		'/pl/orationes/ave-maria',
-		'/pl/orationes/gloria-patri'
+		'/app/pl/ordinarium/gloria',
+		'/app/pl/ordinarium/confiteor',
+		'/app/pl/orationes/pater-noster',
+		'/app/pl/orationes/ave-maria',
+		'/app/pl/orationes/gloria-patri'
 	]) {
 		await page.goto(path);
 		await expect(page.locator('.verse .token').first()).toBeVisible();
@@ -146,7 +146,7 @@ test('no token ever fragments across lines, any text, narrow viewport', async ({
 });
 
 test('the about sheet is closed at every slider position, opens on demand', async ({ page }) => {
-	await page.goto('/pl/ordinarium/gloria');
+	await page.goto('/app/pl/ordinarium/gloria');
 	const pill = page.locator('.about-pill');
 	const sheet = page.locator('aside.about-sheet');
 	const slider = page.locator('input[type="range"]');
@@ -167,12 +167,12 @@ test('the about sheet is closed at every slider position, opens on demand', asyn
 	await page.keyboard.press('Escape');
 	await expect(sheet).not.toBeVisible();
 	await pill.click();
-	await page.goto('/pl/ordinarium/gloria');
+	await page.goto('/app/pl/ordinarium/gloria');
 	await expect(sheet).not.toBeVisible();
 });
 
 test('the about sheet and the word panel take turns', async ({ page }) => {
-	await page.goto('/pl/ordinarium/gloria?w=w001');
+	await page.goto('/app/pl/ordinarium/gloria?w=w001');
 	await expect(page.locator('aside .form')).toHaveText('Glória');
 	await page.locator('.about-pill').click();
 	await expect(page.locator('aside.about-sheet')).toBeVisible();
@@ -183,7 +183,7 @@ test('the about sheet and the word panel take turns', async ({ page }) => {
 });
 
 test('the about sheet speaks the interface language', async ({ page }) => {
-	await page.goto('/en/orationes/pater-noster');
+	await page.goto('/app/en/orationes/pater-noster');
 	const pill = page.locator('.about-pill');
 	await expect(pill).toContainText('about this prayer');
 	await pill.click();
@@ -191,18 +191,18 @@ test('the about sheet speaks the interface language', async ({ page }) => {
 });
 
 test('the Credo reads with participles in the panel', async ({ page }) => {
-	await page.goto('/pl/ordinarium/credo?w=w064'); // incarnátus
+	await page.goto('/app/pl/ordinarium/credo?w=w064'); // incarnátus
 	const panel = page.locator('aside');
 	await expect(panel.locator('.form')).toHaveText('incarnátus');
 	await expect(panel.locator('.morph')).toContainText('imiesłów');
 	await expect(panel.locator('.morph')).toContainText('perfectum');
 	await expect(panel.locator('.function')).toContainText('incarnátus est');
 	// deponent participle keeps its concept link
-	await page.goto('/en/ordinarium/credo?w=w083'); // passus
+	await page.goto('/app/en/ordinarium/credo?w=w083'); // passus
 	await expect(panel.locator('.morph')).toContainText('participle');
 	await expect(panel.locator('.morph a.concept', { hasText: 'deponent' })).toBeVisible();
 	// the feminine dies ruling surfaces in the parse line
-	await page.goto('/pl/ordinarium/credo?w=w090'); // die
+	await page.goto('/app/pl/ordinarium/credo?w=w090'); // die
 	await expect(panel.locator('.morph')).toContainText('r. żeński');
 	await expect(panel.locator('.function')).toContainText('tértia');
 });
@@ -237,7 +237,7 @@ async function wordNearBottom(page: import('@playwright/test').Page): Promise<st
 
 test('a tapped word near the viewport bottom rises above the panel', async ({ page }) => {
 	await page.setViewportSize({ width: 800, height: 520 });
-	await page.goto('/pl/ordinarium/credo');
+	await page.goto('/app/pl/ordinarium/credo');
 	const id = await wordNearBottom(page);
 	await page.locator(`#${id}`).click();
 	await expect
@@ -254,14 +254,14 @@ test('a tapped word near the viewport bottom rises above the panel', async ({ pa
 });
 
 test('the pager walks the book in liturgical order', async ({ page }) => {
-	await page.goto('/pl/ordinarium/gloria');
+	await page.goto('/app/pl/ordinarium/gloria');
 	const pager = page.locator('.pager');
 	// the Kyrie stands between the Confiteor and the Gloria, as at Mass
 	await expect(pager.locator('a', { hasText: 'Kýrie' })).toBeVisible();
 	await pager.locator('a', { hasText: 'Credo' }).click();
 	await expect(page).toHaveURL(atRoute('ordinarium/credo'));
 	// crossing the section boundary backwards, into the last of the prayers
-	await page.goto('/pl/ordinarium/confiteor');
+	await page.goto('/app/pl/ordinarium/confiteor');
 	await pager.locator('a', { hasText: 'Míchaël' }).click();
 	await expect(page).toHaveURL(atRoute('orationes/sancte-michael'));
 	// arrow keys page too, but never while the slider owns them.
@@ -282,7 +282,7 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	await page.keyboard.press('ArrowRight');
 	await expect(page).toHaveURL(atRoute('ordinarium/confiteor'));
 	// first text has no previous
-	await page.goto('/pl/orationes/pater-noster');
+	await page.goto('/app/pl/orationes/pater-noster');
 	await expect(page.locator('.pager a')).toHaveCount(1);
 });
 
@@ -297,7 +297,7 @@ test('a modified arrow belongs to the browser, not to the pager', async ({ page 
 	// must not happen is a move through the book. Sancte Míchaël is what
 	// a bare ArrowLeft would reach from here, which is what the test above
 	// asserts it still does.
-	await page.goto('/pl/ordinarium/confiteor');
+	await page.goto('/app/pl/ordinarium/confiteor');
 	for (const chord of [
 		'Meta+ArrowLeft',
 		'Alt+ArrowLeft',
@@ -329,14 +329,14 @@ test.describe('keeping the screen awake', () => {
 		});
 
 		// the landing is a menu, not a reading surface — nothing is held
-		await page.goto('/pl');
+		await page.goto('/app/pl');
 		await page.waitForTimeout(150);
 		expect(await page.evaluate(() => (window as unknown as { calls: string[] }).calls)).toEqual([]);
 		// no switch: the reader is never asked
 		await expect(page.locator('button.wake')).toHaveCount(0);
 
 		// opening a text takes the lock without being asked
-		await page.locator('a[href="/pl/ordinarium/credo"]').click();
+		await page.locator('a[href="/app/pl/ordinarium/credo"]').click();
 		await expect
 			.poll(() => page.evaluate(() => (window as unknown as { calls: string[] }).calls.length))
 			.toBeGreaterThan(0);
@@ -344,10 +344,10 @@ test.describe('keeping the screen awake', () => {
 		// and a movement of the flow does the same (a fresh document, so its
 		// own tally starts from nothing). The ordo index is a menu, like the
 		// landing, and holds nothing.
-		await page.goto('/pl/ordo');
+		await page.goto('/app/pl/ordo');
 		await page.waitForTimeout(150);
 		expect(await page.evaluate(() => (window as unknown as { calls: string[] }).calls)).toEqual([]);
-		await page.goto('/pl/ordo/canon');
+		await page.goto('/app/pl/ordo/canon');
 		await expect
 			.poll(() => page.evaluate(() => (window as unknown as { calls: string[] }).calls))
 			.toEqual(['screen']);
@@ -355,7 +355,7 @@ test.describe('keeping the screen awake', () => {
 });
 
 test('the book keeps a ribbon: reopening a text resumes the position', async ({ page }) => {
-	await page.goto('/pl/ordinarium/credo');
+	await page.goto('/app/pl/ordinarium/credo');
 	// Scroll and wait for the ribbon to actually commit. A fixed pause races
 	// hydration: the listener that records the position is attached by the
 	// page's own script, and under load a scroll can land before it exists.
@@ -375,12 +375,12 @@ test('the book keeps a ribbon: reopening a text resumes the position', async ({ 
 		.not.toBeNull();
 	// leave for the catalog and come back — the ribbon holds
 	await page.locator('a.back').click();
-	await expect(page).toHaveURL(atRoute('/pl'));
-	await page.locator('a[href="/pl/ordinarium/credo"]').click();
+	await expect(page).toHaveURL(atRoute('/app/pl'));
+	await page.locator('a[href="/app/pl/ordinarium/credo"]').click();
 	await expect(page).toHaveURL(/credo/);
 	await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(400);
 	// a deep link outranks the ribbon: the word is centered, not the ribbon restored
-	await page.goto('/pl/ordinarium/credo?w=w003');
+	await page.goto('/app/pl/ordinarium/credo?w=w003');
 	await expect(page.locator('aside')).toBeVisible();
 	await expect
 		.poll(() =>
@@ -392,21 +392,21 @@ test('the book keeps a ribbon: reopening a text resumes the position', async ({ 
 		.toBe(true);
 	// an expired ribbon is ignored — planted from the catalog, where no
 	// leave-time save can overwrite it on the way in
-	await page.goto('/pl');
+	await page.goto('/app/pl');
 	await page.evaluate(() => {
 		localStorage.setItem(
 			'scrutabor-pos:ordinarium/credo',
 			JSON.stringify({ y: 600, t: Date.now() - 13 * 60 * 60 * 1000 })
 		);
 	});
-	await page.goto('/pl/ordinarium/credo');
+	await page.goto('/app/pl/ordinarium/credo');
 	await page.waitForTimeout(200);
 	expect(await page.evaluate(() => window.scrollY)).toBeLessThan(10);
 });
 
 test('closing the panel leaves the page where it is', async ({ page }) => {
 	await page.setViewportSize({ width: 800, height: 520 });
-	await page.goto('/pl/ordinarium/credo');
+	await page.goto('/app/pl/ordinarium/credo');
 	const id = await wordNearBottom(page);
 	const before = await page.evaluate(() => window.scrollY);
 	await page.locator(`#${id}`).click();
@@ -432,10 +432,10 @@ test('the part control appears only where it changes something', async ({ page }
 	// nothing for the reader's part to change — no line is marked as theirs
 	// and nothing folds — so the choice is not offered there. Offering a
 	// control that does nothing is worse than not offering it.
-	await page.goto('/en/ordinarium/praefatio-dialogus');
+	await page.goto('/app/en/ordinarium/praefatio-dialogus');
 	await expect(page.getByRole('radio', { name: 'faithful' })).toBeVisible();
 
-	await page.goto('/en/ordinarium/quod-ore-sumpsimus'); // the priest's, throughout
+	await page.goto('/app/en/ordinarium/quod-ore-sumpsimus'); // the priest's, throughout
 	await expect(page.getByRole('radio', { name: 'faithful' })).toHaveCount(0);
 	// and the help slider, which always does something, stays
 	await expect(page.locator('input[type="range"]')).toBeVisible();
@@ -448,7 +448,10 @@ test('the header sits on one centre line', async ({ page }) => {
 	// with it the middle stop, off the page's centre. Measured, not
 	// eyeballed, and in both languages, because the label lengths differ
 	// differently in each.
-	for (const url of ['/en/ordinarium/praefatio-dialogus', '/pl/ordinarium/praefatio-dialogus']) {
+	for (const url of [
+		'/app/en/ordinarium/praefatio-dialogus',
+		'/app/pl/ordinarium/praefatio-dialogus'
+	]) {
 		await page.goto(url);
 		const centres = await page.evaluate(() => {
 			const mid = (sel: string) => {
@@ -484,7 +487,7 @@ test('a gloss belongs to the word above it, and is legible', async ({ page }) =>
 	// arbitrary because it is — whether a verse takes one line or two is
 	// a fact about the window, so the page changed shape when the phone
 	// turned.
-	await page.goto('/en/ordinarium/corpus-tuum');
+	await page.goto('/app/en/ordinarium/corpus-tuum');
 	const gaps = await page.evaluate(() => {
 		const c = document.createElement('canvas').getContext('2d')!;
 		const ink = (el: Element) => {
@@ -532,7 +535,7 @@ test('a tapped word is highlighted on the word, not around the gloss', async ({ 
 	// covered both — and once the gloss row was given its own air the
 	// annotation hung below that box, leaving a highlight that began above
 	// the letters and ended in the middle of the gloss beneath them.
-	await page.goto('/en/ordinarium/pater-noster?w=w022');
+	await page.goto('/app/en/ordinarium/pater-noster?w=w022');
 	const box = await page.evaluate(() => {
 		const w = document.querySelector('.word.selected')!;
 		const base = w.querySelector('.base')!;
@@ -572,8 +575,8 @@ test('the highlight covers the whole of a raised initial', async ({ page }) => {
 	// inline element grows the box it paints without touching the line, so
 	// the letter is covered and the gloss stays where it is.
 	for (const [url, letter] of [
-		['/en/ordinarium/libera-nos?w=w001', 'L'], // reaches up
-		['/en/ordinarium/quod-ore-sumpsimus?w=w001', 'Q'] // and down
+		['/app/en/ordinarium/libera-nos?w=w001', 'L'], // reaches up
+		['/app/en/ordinarium/quod-ore-sumpsimus?w=w001', 'Q'] // and down
 	]) {
 		await page.goto(url);
 		const cover = await page.evaluate(() => {
@@ -614,7 +617,7 @@ test('a rubric is set apart from the prayer it interrupts', async ({ page }) => 
 	// glossed verse's box ends ABOVE its own last gloss. Measuring to the
 	// next element's box top therefore reads as a negative gap while the
 	// page is perfectly well spaced.
-	await page.goto('/en/ordinarium/corpus-tuum');
+	await page.goto('/app/en/ordinarium/corpus-tuum');
 	const gaps = await page.evaluate(() => {
 		const c = document.createElement('canvas').getContext('2d')!;
 		const metrics = (el: Element) => {
@@ -664,7 +667,7 @@ test('the three sheets of a reading page are one sheet', async ({ page }) => {
 	// components, and the reader is not supposed to be able to tell: same
 	// surface, same width, same card on a wide screen. The mark key had
 	// drifted to the page background and full width.
-	await page.goto('/pl/ordinarium/pater-noster');
+	await page.goto('/app/pl/ordinarium/pater-noster');
 	const box = async (open: () => Promise<void>, sel: string) => {
 		await open();
 		await expect(page.locator(sel)).toBeVisible();
@@ -696,7 +699,7 @@ test('the introduction opens right under its own label', async ({ page }) => {
 	// The page's top section is spaced with `header { padding-bottom }`,
 	// and unqualified that reached the sheet's own <header> as well — 3rem
 	// of nothing between "about this prayer" and the prose.
-	await page.goto('/pl/orationes/pater-noster');
+	await page.goto('/app/pl/orationes/pater-noster');
 	await page.locator('.about-pill').click();
 	const gap = await page.evaluate(() => {
 		const head = document.querySelector('.about-sheet header')!.getBoundingClientRect();
@@ -713,7 +716,11 @@ test('every line of a prayer starts on the same left edge', async ({ page }) => 
 	// that does not starts its words. It is easy to break from a distance:
 	// anything else that sets text-indent on a verse undoes the pull, and
 	// then only the marked verses move. So the whole column is measured.
-	for (const url of ['/en/ordinarium/credo', '/pl/ordinarium/confiteor', '/pl/ordo/praeparatio']) {
+	for (const url of [
+		'/app/en/ordinarium/credo',
+		'/app/pl/ordinarium/confiteor',
+		'/app/pl/ordo/praeparatio'
+	]) {
 		await page.goto(url);
 		const lefts = await page.evaluate(() => {
 			const out: number[] = [];
@@ -785,7 +792,7 @@ test('a reading page takes the screen it is given, prose excepted', async ({ pag
 		});
 
 	await page.setViewportSize({ width: 1512, height: 982 });
-	await page.goto('/pl/ordinarium/credo');
+	await page.goto('/app/pl/ordinarium/credo');
 	await page.locator('input[type="range"]').fill('2');
 	const wide = await measure();
 	expect(wide.column, 'the column grows past the prose measure').toBeGreaterThan(38 * 16);
@@ -810,7 +817,7 @@ test('a reading page takes the screen it is given, prose excepted', async ({ pag
 
 	// a phone is unchanged: the column is the screen
 	await page.setViewportSize({ width: 390, height: 844 });
-	await page.goto('/pl/ordinarium/credo');
+	await page.goto('/app/pl/ordinarium/credo');
 	const phone = await measure();
 	expect(phone.column, 'the phone still gets the whole width').toBe(390);
 });
@@ -826,7 +833,7 @@ test('a word begins where its column begins', async ({ page }) => {
 	// not the glyphs, so they cheerfully report perfect alignment while
 	// the page shows otherwise.
 	await page.setViewportSize({ width: 700, height: 1100 });
-	for (const url of ['/pl/orationes/pater-noster', '/en/ordinarium/credo']) {
+	for (const url of ['/app/pl/orationes/pater-noster', '/app/en/ordinarium/credo']) {
 		await page.goto(url);
 		const worst = await page.evaluate(() => {
 			let worst = { word: '', inset: 0 };
@@ -860,9 +867,9 @@ test('a gloss of several words stays one gloss', async ({ page }) => {
 	// paper and wrong for someone praying, so the words stay and the break
 	// is what goes.
 	for (const [w, url] of [
-		[280, '/pl/ordinarium/credo'],
-		[320, '/en/ordinarium/credo'],
-		[390, '/pl/ordo/canon']
+		[280, '/app/pl/ordinarium/credo'],
+		[320, '/app/en/ordinarium/credo'],
+		[390, '/app/pl/ordo/canon']
 	] as const) {
 		await page.setViewportSize({ width: w, height: 1100 });
 		await page.goto(url);
@@ -889,7 +896,7 @@ test('Latin, gloss and translation share one left edge', async ({ page }) => {
 	//
 	// Measured with a zero-width marker, which is the only thing that sees
 	// where text actually starts inside a ruby.
-	for (const url of ['/en/orationes/pater-noster', '/pl/ordinarium/credo']) {
+	for (const url of ['/app/en/orationes/pater-noster', '/app/pl/ordinarium/credo']) {
 		await page.setViewportSize({ width: 760, height: 1200 });
 		await page.goto(url);
 		await page.locator('input[type="range"]').fill('2');
@@ -926,7 +933,7 @@ test('a translation belongs to the verse above it', async ({ page }) => {
 	// rhythm became uniform that negative jammed the translation into the
 	// gloss row and marooned the next verse.
 	await page.setViewportSize({ width: 760, height: 1200 });
-	await page.goto('/en/orationes/pater-noster');
+	await page.goto('/app/en/orationes/pater-noster');
 	await page.locator('input[type="range"]').fill('2');
 	const gaps = await page.evaluate(() => {
 		const c = document.createElement('canvas').getContext('2d')!;
@@ -965,7 +972,7 @@ test('the reading size is the only knob', async ({ page }) => {
 	await page.setViewportSize({ width: 820, height: 1200 });
 	const sizes: Record<string, unknown> = {};
 	for (const reading of ['1.45rem', '1.75rem', '2.1rem']) {
-		await page.goto('/pl/ordinarium/qui-pridie');
+		await page.goto('/app/pl/ordinarium/qui-pridie');
 		const m = await page.evaluate((reading) => {
 			document.documentElement.style.setProperty('--reading', reading);
 			const c = document.createElement('canvas').getContext('2d')!;
@@ -1067,7 +1074,7 @@ test('the highlight marks the word AND its gloss', async ({ page }) => {
 	// So the box was right and the MEANING was missing: it marks the pair.
 	// The two halves have to be continuous — a gap between them would read
 	// as two marks rather than one.
-	await page.goto('/pl/orationes/pater-noster?w=w013');
+	await page.goto('/app/pl/orationes/pater-noster?w=w013');
 	const m = await page.evaluate(() => {
 		const w = document.querySelector('.word.selected')!;
 		const base = w.querySelector('.base')!;
@@ -1092,7 +1099,7 @@ test('the highlight marks the word AND its gloss', async ({ page }) => {
 	expect(Math.abs(m.widths[0] - m.widths[1]), 'and they are the same width').toBeLessThan(5);
 
 	// with no gloss showing, there is nothing to mark but the word
-	await page.goto('/pl/orationes/pater-noster?w=w013');
+	await page.goto('/app/pl/orationes/pater-noster?w=w013');
 	await page.locator('input[type="range"]').fill('0');
 	await expect(page.locator('.word.selected rt')).toHaveCount(0);
 	const bare = await page.evaluate(

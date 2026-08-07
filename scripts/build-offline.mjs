@@ -37,7 +37,7 @@ const OUT = 'build-offline';
 /** Everything but README.txt and index.html lives in here. */
 const INNER = 'app';
 
-for (const required of [SITE, RUNTIME]) {
+for (const required of [SITE, join(SITE, INNER), RUNTIME]) {
 	if (!existsSync(required)) {
 		console.error(
 			`missing ${required} — run \`npm run build\` and \`npm run build:offline-runtime\` first`
@@ -54,32 +54,25 @@ function* walk(dir) {
 	}
 }
 
+// The BOOK, not the site. The site serves the book under /app and its
+// landing pages at the root; a downloaded copy is the book alone, so only
+// the build/app/ subtree (the pages) and build/_app/ (the shared
+// immutable assets) are taken. Everything else at the build root — the
+// landing pages, robots, the sitemap, the service worker, the manifest,
+// the icons, 404.html — means something only to a web server or an app
+// store, and staying outside the copy is how it stays out of the zip.
 const app = join(OUT, INNER);
 rmSync(OUT, { recursive: true, force: true });
-cpSync(SITE, app, { recursive: true });
+cpSync(join(SITE, INNER), app, { recursive: true });
+cpSync(join(SITE, '_app'), join(app, '_app'), { recursive: true });
 cpSync(RUNTIME, join(app, '_app', 'offline.js'));
 
-// Files that only mean something to a web server or an app store. A
-// crawler will never read this folder; a service worker cannot register
-// without an origin; nothing can be installed from a disk. 404.html is
-// SvelteKit's fallback for a server that has one, and nothing here links
-// to it.
-const POINTLESS = [
-	'robots.txt',
-	'sitemap.xml',
-	'404.html',
-	'service-worker.js',
-	'manifest.webmanifest',
-	'icon-192.png',
-	'icon-512.png',
-	'icon-maskable-512.png'
-];
-let dropped = 0;
-for (const name of POINTLESS) {
-	const path = join(app, name);
-	if (existsSync(path)) {
-		rmSync(path);
-		dropped++;
+// The canary for that boundary: the privacy page exists in every language
+// and only on the landing side, so finding it here means the copy widened.
+for (const path of walk(app)) {
+	if (/[/\\]privacy\.html$/.test(path)) {
+		console.error(`landing page in the package: ${path}`);
+		process.exit(1);
 	}
 }
 
@@ -108,40 +101,62 @@ for (const path of walk(app)) {
 for (const [path, up] of pages) {
 	let html = readFileSync(path, 'utf8');
 
-	// The chooser descended a level when it moved to the top, so the paths
-	// SvelteKit already wrote relative — stylesheets, chiefly — have to
-	// follow it. Everything it names lives in the folder below now.
-	if (up === `${INNER}/`) html = html.replace(/\b(href|src)="\.\//g, `$1="${INNER}/`);
+	// SvelteKit writes asset paths RELATIVE (../../../_app/…), against the
+	// page's place in the SITE — where _app sits beside /app, one level
+	// above the book. This folder keeps _app inside app/, beside the
+	// pages' own root, so every such path is one step too high.
+	if (up === `${INNER}/`) {
+		// The chooser ascended a level when it moved to the top: what the
+		// site wrote as one directory up is, from here, the book's folder.
+		html = html.replace(/\b(href|src)="\.\.\//g, `$1="${INNER}/`);
+	} else {
+		html = html.replace(
+			/\b(href|src)="((?:\.\.\/)+)_app\//g,
+			(_, attr, ups) => `${attr}="${ups.length > 3 ? ups.slice(3) : './'}_app/`
+		);
+	}
 
 	// A root-absolute path means the filesystem root once there is no
-	// server. Every route gained a .html twin at build time; a file keeps
-	// the name it has.
+	// server. The site serves the book under /app; in this folder the app/
+	// directory IS that subtree and `up` already points at it, so the
+	// prefix comes off — /app/pl becomes pl.html at this page's depth.
+	// Every route gained a .html twin at build time; a file keeps the name
+	// it has.
 	html = html.replace(/\b(href|src)="(\/[^"#]*)"/g, (_, attr, target) => {
 		// A query rides AFTER the .html — the file is the route, not the
 		// route plus its query.
 		const [, route = '', tail = ''] = /^([^?#]*)([?#].*)?$/.exec(target) ?? [];
-		const suffix = /\.[a-z0-9]+$/.test(route) ? '' : '.html';
-		return `${attr}="${up}${route.slice(1)}${suffix}${tail}"`;
+		const stripped = route.replace(/^\/app(?=\/|$)/, '');
+		// The app's own front door is the package root's index.html.
+		if (stripped === '' || stripped === '/') {
+			const toRoot = up === `${INNER}/` ? '' : `${up}../`;
+			return `${attr}="${toRoot}index.html${tail}"`;
+		}
+		const suffix = /\.[a-z0-9]+$/.test(stripped) ? '' : '.html';
+		return `${attr}="${up}${stripped.slice(1)}${suffix}${tail}"`;
 	});
 
 	// Head links with nothing behind them any more. The font preloads carry
 	// `crossorigin`, which on a file:// URL fails the CORS check and prints
 	// an error for every face — and the offline runtime inlines the reading
 	// face anyway, so they were asking for what it already has.
+	// The manifest and apple-touch-icon links STAY, dead as they are: they
+	// are the entire prerendered output of the app layout's <svelte:head>,
+	// and Svelte's head hydration claims that block by its markers — with
+	// the links stripped the block is empty, the claim mis-anchors, and
+	// the repair swallowed every stylesheet link beside it. A link nothing
+	// ever fetches is cheaper than a head the hydrator cannot recognise.
 	html = html.replace(/<link[^>]+rel="modulepreload"[^>]*>/g, '');
-	html = html.replace(/<link[^>]+rel="manifest"[^>]*>/g, '');
-	html = html.replace(/<link[^>]+rel="apple-touch-icon"[^>]*>/g, '');
 	html = html.replace(/<link[^>]+rel="preload"[^>]+as="font"[^>]*>/g, '');
 
-	// It cannot register without an origin, and it has nothing to do when
-	// every file is already on the disk.
-	html = html.replaceAll('navigator.serviceWorker.register(sanitised)', 'Promise.resolve()');
-
-	// The root picks the reader's language before first paint and sends
-	// them to it. `/pl` is the filesystem root here, so the very first
-	// thing anyone opening this folder would meet is a blank window.
+	// The chooser picks the reader's language before first paint and sends
+	// them to it. `/app/pl` is the filesystem root here, so the very first
+	// thing anyone opening this folder would meet is a blank window. (The
+	// service worker needs no such treatment any more: its registration
+	// lives in the app layout's compiled code, guarded there against
+	// origin-less pages, not in the prerendered HTML.)
 	html = html.replace(
-		"location.replace('/' + pick + location.search + location.hash)",
+		"location.replace('/app/' + pick + location.search + location.hash)",
 		`location.replace(${JSON.stringify(up)} + pick + '.html' + location.search + location.hash)`
 	);
 
@@ -191,7 +206,7 @@ scrutabor.org
 `
 );
 
-console.log(`${pages.length} pages, ${dropped} server-only files dropped → ${OUT}/`);
+console.log(`${pages.length} pages → ${OUT}/`);
 
 if (process.argv.includes('--zip')) {
 	// Unzipping must give ONE folder with a name a reader recognises, not

@@ -35,7 +35,7 @@
 
 <nav>
 	<ol class="trail smallcaps">
-		<li><a href="/{lang}" class="back">scrutabor</a></li>
+		<li><a href="/app/{lang}" class="back">scrutabor</a></li>
 		{#if parent && parentLabel}
 			<li>
 				<span class="sep" aria-hidden="true">›</span><a href={parent} lang={parentLang}

@@ -30,7 +30,7 @@ function contrast(a: string, b: string): number {
 
 for (const theme of ['light', 'dark'] as const) {
 	test(`every text colour clears AA on every surface — ${theme}`, async ({ page }) => {
-		await page.goto('/pl/ordinarium/gloria');
+		await page.goto('/app/pl/ordinarium/gloria');
 		const tokens = await page.evaluate(
 			({ t, names }) => {
 				document.documentElement.dataset.theme = t;

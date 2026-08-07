@@ -3,7 +3,7 @@ import { atRoute, expect, test } from './fixtures';
 import { ORDO } from '../src/lib/ordo';
 
 test('the ordo is a map of six movements, walked in order', async ({ page }) => {
-	await page.goto('/pl/ordo');
+	await page.goto('/app/pl/ordo');
 	await expect(page.locator('h1')).toHaveText('Ordo Missæ');
 	const movements = page.locator('.movement');
 	await expect(movements).toHaveCount(6);
@@ -12,14 +12,14 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 
 	// the Mass opens at the foot of the altar…
 	await movements.first().click();
-	await expect(page).toHaveURL(atRoute('/pl/ordo/praeparatio'));
+	await expect(page).toHaveURL(atRoute('/app/pl/ordo/praeparatio'));
 	await expect(page.locator('.part-title').first()).toContainText('Introíbo');
 
 	// …and the pager walks the movements to the end, where the prayers
 	// after low Mass close it
 	for (const id of ['catechumenorum', 'offertorium', 'canon', 'communio', 'conclusio']) {
 		await page.locator('.pager-next').click();
-		await expect(page).toHaveURL(atRoute(`/pl/ordo/${id}`));
+		await expect(page).toHaveURL(atRoute(`/app/pl/ordo/${id}`));
 	}
 	// the last of the five prayers of Leo XIII, which the conclusion now
 	// lists one by one instead of describing as a block still to come
@@ -31,15 +31,15 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 	// reader is not saying, which is still the part being named
 	let parts = 0;
 	for (const m of ORDO) {
-		await page.goto(`/pl/ordo/${m.id}`);
+		await page.goto(`/app/pl/ordo/${m.id}`);
 		parts += await page.locator('.part-title, .unfold-title').count();
 	}
 	expect(parts).toBe(ORDO.flatMap((m) => m.entries).length);
-	await page.goto('/pl/ordo/catechumenorum');
+	await page.goto('/app/pl/ordo/catechumenorum');
 
 	// the texts this edition carries are inlined in full (read at the bare
 	// step, where the interlinear glosses do not interleave with the Latin)
-	await page.goto('/pl/ordo/praeparatio');
+	await page.goto('/app/pl/ordo/praeparatio');
 	await page.locator('input[type="range"]').fill('0');
 	// two Confiteors stand here now; this is the ministers', the one the
 	// faithful say
@@ -48,7 +48,7 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 	// …and their titles lead to the study page
 	await expect(confiteor.locator('a.part-title')).toHaveAttribute(
 		'href',
-		'/pl/ordinarium/confiteor'
+		'/app/pl/ordinarium/confiteor'
 	);
 
 	// every text this edition carries appears in the flow, on its movement
@@ -60,10 +60,10 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 		['sanctus', 'canon'],
 		['agnus-dei', 'communio']
 	]) {
-		await page.goto(`/pl/ordo/${movement}`);
-		await expect(page.locator(`.part a[href="/pl/ordinarium/${slug}"]`)).toHaveCount(1);
+		await page.goto(`/app/pl/ordo/${movement}`);
+		await expect(page.locator(`.part a[href="/app/pl/ordinarium/${slug}"]`)).toHaveCount(1);
 	}
-	await page.goto('/pl/ordo/catechumenorum');
+	await page.goto('/app/pl/ordo/catechumenorum');
 
 	// the day's own texts are marked where they fall
 	await expect(page.locator('.mark', { hasText: 'z formularza dnia' }).first()).toBeVisible();
@@ -76,7 +76,7 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 	// the spine names something new.
 	const remaining = ORDO.find((m) => m.entries.some((e) => e.kind === 'pending'));
 	if (remaining) {
-		await page.goto(`/pl/ordo/${remaining.id}`);
+		await page.goto(`/app/pl/ordo/${remaining.id}`);
 		await expect(page.locator('.mark', { hasText: 'wkrótce w tym wydaniu' }).first()).toBeVisible();
 		const pending = page
 			.locator('.part')
@@ -91,13 +91,13 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 });
 
 test('a word in the flow opens its analysis, wherever it stands', async ({ page }) => {
-	await page.goto('/pl/ordo/communio');
+	await page.goto('/app/pl/ordo/communio');
 	// a word from the LAST inlined text, to prove every text is wired
 	const agnus = page.locator('[id="agnus-dei.w001"]');
 	await agnus.click();
 	const panel = page.locator('aside');
 	await expect(panel.locator('.form')).toHaveText('Agnus');
-	await expect(panel.locator('.head a')).toHaveAttribute('href', '/pl/lemma/agnus');
+	await expect(panel.locator('.head a')).toHaveAttribute('href', '/app/pl/lemma/agnus');
 
 	// the deep link addresses text and word together, and survives a reload
 	// (a dot is unreserved in a URL, so it makes the round trip unencoded)
@@ -112,11 +112,11 @@ test('a word in the flow opens its analysis, wherever it stands', async ({ page 
 
 test('a deep link into the flow lands on its word, not on the ribbon', async ({ page }) => {
 	// leave a ribbon somewhere far from the target
-	await page.goto('/pl/ordo/catechumenorum');
+	await page.goto('/app/pl/ordo/catechumenorum');
 	await page.evaluate(() => window.scrollTo(0, 3000));
 	await page.waitForTimeout(1500);
 
-	await page.goto('/pl/ordo/catechumenorum?w=kyrie.w002');
+	await page.goto('/app/pl/ordo/catechumenorum?w=kyrie.w002');
 	await expect(page.locator('aside .form')).toHaveText('eléison');
 	await expect
 		.poll(() =>
@@ -129,19 +129,19 @@ test('a deep link into the flow lands on its word, not on the ribbon', async ({ 
 });
 
 test('the flow and the reading page number their words apart', async ({ page }) => {
-	await page.goto('/pl/ordo/catechumenorum');
+	await page.goto('/app/pl/ordo/catechumenorum');
 	// same corpus id in five texts, five distinct DOM ids — no collisions
 	const first = await page.locator('.part-text .word').first().getAttribute('id');
 	expect(first).toMatch(/^[a-z-]+\.w\d{3}$/);
 	const ids = await page.locator('.part-text .word').evaluateAll((els) => els.map((e) => e.id));
 	expect(new Set(ids).size).toBe(ids.length);
 	// the reading page keeps the bare corpus id, so its deep links are unchanged
-	await page.goto('/pl/ordinarium/credo');
+	await page.goto('/app/pl/ordinarium/credo');
 	expect(await page.locator('.word').first().getAttribute('id')).toBe('w001');
 });
 
 test('the help ladder governs the whole flow', async ({ page }) => {
-	await page.goto('/en/ordo/catechumenorum');
+	await page.goto('/app/en/ordo/catechumenorum');
 	const slider = page.locator('input[type="range"]');
 
 	// default: interlinear glosses and the what-happens lines
@@ -158,7 +158,7 @@ test('the help ladder governs the whole flow', async ({ page }) => {
 });
 
 test('the landing separates following the Mass from opening a text', async ({ page }) => {
-	await page.goto('/en');
+	await page.goto('/app/en');
 	const flow = page.locator('a.flow');
 	await expect(flow).toContainText('Ordo Missæ');
 	// it says which order of Mass this is — the edition, by name and year
@@ -175,7 +175,7 @@ test('the landing separates following the Mass from opening a text', async ({ pa
 	await expect(page.locator('.cards a[href$="/ordo"]')).toHaveCount(0);
 
 	await flow.click();
-	await expect(page).toHaveURL(atRoute('/en/ordo'));
+	await expect(page).toHaveURL(atRoute('/app/en/ordo'));
 });
 
 test('every prayer the Ordo links to is actually built', async ({ page, request }) => {
@@ -190,7 +190,7 @@ test('every prayer the Ordo links to is actually built', async ({ page, request 
 	await page.addInitScript(() => localStorage.setItem('scrutabor-role', 'sacerdos'));
 	const seen = new Set<string>();
 	for (const m of ORDO) {
-		await page.goto(`/pl/ordo/${m.id}`);
+		await page.goto(`/app/pl/ordo/${m.id}`);
 		const hrefs = await page.evaluate(() =>
 			[...document.querySelectorAll('a.part-title')].map((a) => a.getAttribute('href')!)
 		);
@@ -212,7 +212,7 @@ test('the index answers a change of part in the book’s own voice', async ({ pa
 	// places, and say in full: …" — which said the same thing in the second
 	// person, on a page meant for browsing, and no missal does that. The
 	// parts are marked where the reader meets them instead.
-	await page.goto('/en/ordo');
+	await page.goto('/app/en/ordo');
 	const hint = page.locator('.picker:not(.compact) .hint');
 	await expect(hint).toHaveText('the parts said aloud, with the answers of the faithful');
 
@@ -236,7 +236,7 @@ test('the narrative names the priest rather than calling him "he"', async ({ pag
 	// corpus fix that was made but never vendored.
 	const offenders: string[] = [];
 	for (const m of ORDO) {
-		await page.goto(`/en/ordo/${m.id}`);
+		await page.goto(`/app/en/ordo/${m.id}`);
 		offenders.push(
 			...(await page.evaluate(() =>
 				[...document.querySelectorAll('.part-note, .unfold-what, .rubric-narrative')]

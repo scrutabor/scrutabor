@@ -29,7 +29,7 @@
 				<h2 class="smallcaps">{group.label}</h2>
 				<div class="cards in-two">
 					{#each group.concepts as c (c.id)}
-						<a class="card" href="/{lang}/grammatica/{c.id}">
+						<a class="card" href="/app/{lang}/grammatica/{c.id}">
 							<span class="card-title">{c.label[lang]}</span>
 							{#if c.la !== c.label[lang]}
 								<span class="card-note" lang="la">{c.la}</span>
@@ -42,7 +42,7 @@
 		<section>
 			<h2 class="smallcaps">{lang === 'pl' ? 'wymowa' : 'pronunciation'}</h2>
 			<div class="cards">
-				<a class="card" href="/{lang}/grammatica/pronuntiatio">
+				<a class="card" href="/app/{lang}/grammatica/pronuntiatio">
 					<span class="card-title">{lang === 'pl' ? 'wymowa' : 'pronunciation'}</span>
 					<span class="card-note" lang="la">pronuntiatio</span>
 				</a>

@@ -123,7 +123,7 @@
 
 <div class="page reading">
 	<header>
-		<PageNav {lang} parent="/{lang}/ordo" parentLabel="Ordo Missæ" parentLang="la" />
+		<PageNav {lang} parent="/app/{lang}/ordo" parentLabel="Ordo Missæ" parentLang="la" />
 		<h1 lang="la">{movement?.title ?? ''}</h1>
 		<p class="subtitle smallcaps">{movement?.label[lang] ?? ''}</p>
 		<div class="help-row">
@@ -160,7 +160,7 @@
 				{:else}
 					<div class="part-head">
 						{#if e.text && entry}
-							<a class="part-title" href="/{lang}/{e.text}" lang="la">{e.title}</a>
+							<a class="part-title" href="/app/{lang}/{e.text}" lang="la">{e.title}</a>
 						{:else}
 							<span class="part-title" lang="la">{e.title}</span>
 						{/if}
@@ -197,8 +197,14 @@
 
 		<Pager
 			{lang}
-			prev={around.prev && { href: `/${lang}/ordo/${around.prev.id}`, title: around.prev.title }}
-			next={around.next && { href: `/${lang}/ordo/${around.next.id}`, title: around.next.title }}
+			prev={around.prev && {
+				href: `/app/${lang}/ordo/${around.prev.id}`,
+				title: around.prev.title
+			}}
+			next={around.next && {
+				href: `/app/${lang}/ordo/${around.next.id}`,
+				title: around.next.title
+			}}
 		/>
 	</main>
 

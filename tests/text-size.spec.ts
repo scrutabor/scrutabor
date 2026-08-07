@@ -24,7 +24,7 @@ test('the control says what it is on, and what else it could be', async ({ page 
 	// It was a button that cycled, and the owner's verdict was that it told
 	// him neither — the text changed size and nothing said which of three
 	// steps he had landed on or what the others were.
-	await page.goto('/en/ordinarium/credo');
+	await page.goto('/app/en/ordinarium/credo');
 	await expect(trigger(page)).toHaveAccessibleName('text size: normal');
 
 	await trigger(page).click();
@@ -51,7 +51,7 @@ test('it answers on the pages with no Latin on them too', async ({ page }) => {
 	// there is nothing to resize, so a cycling button changed the stored
 	// setting and NOTHING a reader could see. It read as broken. The menu
 	// shows the setting itself, so it answers wherever it is pressed.
-	for (const url of ['/en', '/en/ordo']) {
+	for (const url of ['/app/en', '/app/en/ordo']) {
 		await page.goto(url);
 		expect(await page.locator('.verse').count(), `${url} has no reading text`).toBe(0);
 		await choose(page, 'larger');
@@ -64,7 +64,7 @@ test('it answers on the pages with no Latin on them too', async ({ page }) => {
 });
 
 test('three steps, each larger than the last', async ({ page }) => {
-	await page.goto('/en/ordinarium/confiteor');
+	await page.goto('/app/en/ordinarium/confiteor');
 	const seen: number[] = [];
 	for (const step of ['normal', 'larger', 'largest']) {
 		await choose(page, step);
@@ -78,7 +78,7 @@ test('the apparatus grows with the face, not after it', async ({ page }) => {
 	// The whole reason the size had to become one knob: five sizes and the
 	// entire vertical rhythm used to be absolute, so the Latin would have
 	// grown and the glosses, marks and rubrics stayed where they were.
-	await page.goto('/en/ordinarium/confiteor');
+	await page.goto('/app/en/ordinarium/confiteor');
 	await choose(page, 'normal');
 	const small = await size(page);
 	await choose(page, 'largest');
@@ -93,12 +93,12 @@ test('the apparatus grows with the face, not after it', async ({ page }) => {
 });
 
 test('the choice survives the page, the navigation and the reload', async ({ page }) => {
-	await page.goto('/en/ordinarium/confiteor');
+	await page.goto('/app/en/ordinarium/confiteor');
 	await choose(page, 'larger');
 	const chosen = (await size(page)).root;
 	expect(chosen).not.toBe('16px');
 
-	await page.goto('/en/ordinarium/credo');
+	await page.goto('/app/en/ordinarium/credo');
 	expect((await size(page)).root, 'kept across a navigation').toBe(chosen);
 
 	await page.reload();
@@ -113,9 +113,9 @@ test('a reader who asked for large print never sees the page start small', async
 	// app.html resolves the stored size in <head>, before anything is
 	// drawn — the same treatment the theme gets. If it were left to the
 	// component's onMount the page would paint at the default size first.
-	await page.goto('/en/ordinarium/confiteor');
+	await page.goto('/app/en/ordinarium/confiteor');
 	await choose(page, 'largest');
-	await page.goto('/en/ordinarium/credo');
+	await page.goto('/app/en/ordinarium/credo');
 	const set = await page.evaluate(() => getComputedStyle(document.documentElement).fontSize);
 	expect(set, 'the size is on the document from the <head> script').toBe('22.4px');
 });
@@ -124,7 +124,12 @@ test('the control is wherever the reader is', async ({ page }) => {
 	// It is a setting, so it lives with the theme and the language rather
 	// than on the reading surfaces (decisions #20) — which means it has to
 	// be on the landing too, or it could only be changed while reading.
-	for (const url of ['/en', '/en/ordinarium/credo', '/en/ordo/canon', '/en/grammatica']) {
+	for (const url of [
+		'/app/en',
+		'/app/en/ordinarium/credo',
+		'/app/en/ordo/canon',
+		'/app/en/grammatica'
+	]) {
 		await page.goto(url);
 		await expect(trigger(page), `no way to set the size on ${url}`).toBeVisible();
 	}
@@ -136,7 +141,7 @@ test('the mark sits in the middle of its pill', async ({ page }) => {
 	// saw. app.css keeps a copy of the face with normalised metrics for
 	// exactly this (.trim-label); without it the mark rides about a
 	// pixel and a half above centre and the button looks broken.
-	await page.goto('/en/ordinarium/credo');
+	await page.goto('/app/en/ordinarium/credo');
 	const off = await page.evaluate(() => {
 		const btn = [...document.querySelectorAll('button')].find((b) =>
 			(b.getAttribute('aria-label') || '').startsWith('text size')
@@ -155,7 +160,11 @@ test('largest print on the smallest phone still holds together', async ({ page }
 	// fragments orphans its punctuation onto the next line; a gloss that
 	// breaks reads as two glosses of two different words.
 	await page.setViewportSize({ width: 320, height: 800 });
-	for (const url of ['/pl/ordinarium/credo', '/en/ordo/canon', '/pl/orationes/pater-noster']) {
+	for (const url of [
+		'/app/pl/ordinarium/credo',
+		'/app/en/ordo/canon',
+		'/app/pl/orationes/pater-noster'
+	]) {
 		await page.goto(url);
 		await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
 		await page.reload();
@@ -192,7 +201,7 @@ test('the slider’s thumb clears the labels above it', async ({ page }) => {
 	// overhangs by about half of that either side. At 0.3rem of gap it sat
 	// on top of the label above it.
 	await page.setViewportSize({ width: 320, height: 800 });
-	await page.goto('/pl/ordo/praeparatio');
+	await page.goto('/app/pl/ordo/praeparatio');
 	await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
 	await page.reload();
 	await settled(page);

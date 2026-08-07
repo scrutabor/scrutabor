@@ -288,7 +288,7 @@ export function describeAnalysisParts(a: Analysis, lang: Lang): AnalysisPart[] {
 	a.sources.forEach((s, i) => {
 		if (i > 0) parts.push({ text: ', ' });
 		const text = t.values[s] ?? s;
-		if (s === 'editorial') parts.push({ text, href: `/${lang}/editio` });
+		if (s === 'editorial') parts.push({ text, href: `/app/${lang}/editio` });
 		else if (SOURCE_LINKS[s]) parts.push({ text, href: SOURCE_LINKS[s], external: true });
 		else parts.push({ text });
 	});

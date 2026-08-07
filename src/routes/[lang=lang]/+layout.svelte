@@ -1,24 +1,25 @@
 <script lang="ts">
 	import type { Lang } from '$lib/i18n';
 	import { ORIGIN } from '$lib/site';
-	import { where } from '$lib/where.svelte';
 
 	let { children, data } = $props();
 
-	// From the layout's own load, not from the router: see +layout.ts.
 	const lang = $derived(data.lang as Lang);
 	const rest = $derived(data.path);
 
-	// Remember the reader's language and keep the live DOM lang in sync on
-	// client-side navigation (the prerendered <html lang> is set by hooks).
+	// Remember the language a reader chose here, so the app's own router
+	// at /app/ opens in it, and keep the live DOM lang in sync (the
+	// prerendered <html lang> is set by hooks).
 	$effect(() => {
-		where.path = rest;
 		document.documentElement.lang = lang;
 		localStorage.setItem('scrutabor-lang', lang);
 	});
 </script>
 
 <svelte:head>
+	<!-- jscpd:ignore-start — the same SEO head as the app's language
+	     layout, at the landing's own origin-root URLs. Named, not merged:
+	     the two layouts must not depend on each other. -->
 	<link rel="canonical" href="{ORIGIN}/{lang}{rest}" />
 	<link rel="alternate" hreflang="en" href="{ORIGIN}/en{rest}" />
 	<link rel="alternate" hreflang="pl" href="{ORIGIN}/pl{rest}" />
@@ -26,6 +27,7 @@
 	<meta property="og:site_name" content="Scrutabor" />
 	<meta property="og:type" content="website" />
 	<meta property="og:locale" content={lang === 'pl' ? 'pl_PL' : 'en_US'} />
+	<!-- jscpd:ignore-end -->
 </svelte:head>
 
 {@render children()}

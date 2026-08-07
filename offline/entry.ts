@@ -100,9 +100,12 @@ export async function start(options: {
 			constructors: modules.map((m: { component: unknown }) => m.component),
 			components: [],
 			form: null,
-			data_0: merged[0] ?? null,
-			data_1: merged[1] ?? null,
-			data_2: merged[2] ?? null
+			// One data_N per level of the route tree, however deep it is.
+			// A hard-coded trio held until the book moved under /app and
+			// every reading page gained a fourth level (root layout · app
+			// layout · language layout · page) — the level left without
+			// its data made hydration throw, and no page ever woke.
+			...Object.fromEntries(node_ids.map((_, i) => [`data_${i}`, merged[i] ?? null]))
 		}
 	});
 }

@@ -91,7 +91,7 @@ test('Latin text still refuses the locl substitution @online', async ({ page }) 
 	// and no screenshot of a passing page would catch, and the subsetting
 	// kept the feature in the file, so the CSS is the only thing standing
 	// between a reader and "qvia".
-	await page.goto('/pl/ordinarium/gloria');
+	await page.goto('/app/pl/ordinarium/gloria');
 	const applied = await page.evaluate(() => {
 		const latin = document.querySelector('[lang="la"], .verse');
 		return latin ? getComputedStyle(latin).fontFeatureSettings : 'none';

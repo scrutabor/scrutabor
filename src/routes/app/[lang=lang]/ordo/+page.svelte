@@ -46,7 +46,7 @@
 
 		<div class="movements">
 			{#each movements as m (m.id)}
-				<a class="movement" href="/{lang}/ordo/{m.id}">
+				<a class="movement" href="/app/{lang}/ordo/{m.id}">
 					<span class="movement-head">
 						<span class="movement-title" lang="la">{m.title}</span>
 						<span class="hung-note">{m.label[lang]}</span>

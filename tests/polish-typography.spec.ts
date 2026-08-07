@@ -21,7 +21,13 @@ test('no Polish surface leaves a one-letter word before a breakable space @onlin
 	test.setTimeout(180_000);
 
 	const sitemap = await (await request.get('/sitemap.xml')).text();
-	const paths = [...sitemap.matchAll(/<loc>[^<]*?(\/pl(?:\/[^<]*)?)<\/loc>/g)].map((m) => m[1]);
+	// The full pathname after the origin, or the lazy prefix would eat the
+	// /app segment and this sweep would knock on landing doors that are
+	// really book pages. Both families are Polish surfaces: the landing at
+	// /pl and the book at /app/pl.
+	const paths = [
+		...sitemap.matchAll(/<loc>https?:\/\/[^/]+((?:\/app)?\/pl(?:\/[^<]*)?)<\/loc>/g)
+	].map((m) => m[1]);
 	// every prerendered Polish page, plus the one surface the sitemap
 	// deliberately leaves out
 	paths.push('/pl/404');

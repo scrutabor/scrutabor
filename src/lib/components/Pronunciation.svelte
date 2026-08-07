@@ -20,15 +20,15 @@
 <p class="pron" class:centered>
 	<span lang="la">{syllabized(form)}</span>
 	{#if lang === 'pl' && pron.differ}
-		· <a href="/{lang}/grammatica/pronuntiatio" title={hint}
+		· <a href="/app/{lang}/grammatica/pronuntiatio" title={hint}
 			><span class="smallcaps">rz.</span> /{pron.roman}/</a
 		>
 		·
-		<a href="/{lang}/grammatica/pronuntiatio" title={hint}
+		<a href="/app/{lang}/grammatica/pronuntiatio" title={hint}
 			><span class="smallcaps">pol.</span> /{pron.polish}/</a
 		>
 	{:else}
-		· <a href="/{lang}/grammatica/pronuntiatio" title={hint}>/{pron.roman}/</a>
+		· <a href="/app/{lang}/grammatica/pronuntiatio" title={hint}>/{pron.roman}/</a>
 	{/if}
 </p>
 

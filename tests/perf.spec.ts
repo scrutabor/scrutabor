@@ -13,7 +13,7 @@ test('cold load swaps fonts without layout shift', async ({ page }) => {
 		downloadThroughput: 1_500_000,
 		uploadThroughput: 750_000
 	});
-	await page.goto('/pl/ordinarium/gloria');
+	await page.goto('/app/pl/ordinarium/gloria');
 	const cls = await page.evaluate(async () => {
 		await document.fonts.ready;
 		return new Promise((resolve) => {

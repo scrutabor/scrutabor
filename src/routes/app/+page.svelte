@@ -2,22 +2,27 @@
 	import { LANGS, M } from '$lib/i18n';
 </script>
 
-<!-- The root is not a page, it is a router: pick the reader's language
-     and get out of the way. The script element below is prerendered into
-     <head> so it runs before first paint — the only way a static site
-     can redirect without a flash or a backend. Order of trust: the
-     stored choice (maintained by the language layouts on every visit),
-     then the browser's ordered language list, then English. The body is
-     the fallback for no-JS readers and crawlers — and per the brand
-     rule, it says the same thing in both languages, side by side. -->
+<!-- The app's front door is not a page, it is a router: pick the
+     reader's language and get out of the way (prayer-book first — no
+     interstitial). The script element below is prerendered into <head>
+     so it runs before first paint — the only way a static site can
+     redirect without a flash or a backend. Order of trust: the stored
+     choice (maintained by the [lang] layout on every visit), then the
+     browser's ordered language list, then English. The body is the
+     fallback for no-JS readers and crawlers.
+
+     This is also the PWA's start_url, which is why it lives at /app/
+     with a trailing slash (see +page.ts): the service worker's scope is
+     /app/, and a scope only controls what it prefixes — an installed
+     app whose first document sat outside it could not open offline. -->
 <svelte:head>
 	<title>Scrutabor</title>
-	<link rel="alternate" hreflang="en" href="https://scrutabor.org/en" />
-	<link rel="alternate" hreflang="pl" href="https://scrutabor.org/pl" />
-	<link rel="alternate" hreflang="x-default" href="https://scrutabor.org/en" />
+	<link rel="alternate" hreflang="en" href="https://scrutabor.org/app/en" />
+	<link rel="alternate" hreflang="pl" href="https://scrutabor.org/app/pl" />
+	<link rel="alternate" hreflang="x-default" href="https://scrutabor.org/app/en" />
 	<script>
 		// jscpd:ignore-start — one detection rule, two routers: this script
-		// is kept deliberately in step with routes/app/+page.svelte, which
+		// is kept deliberately in step with routes/+page.svelte, which
 		// differs only in where it sends the reader.
 		(function () {
 			var pick = 'en';
@@ -39,7 +44,7 @@
 				/* storage blocked: fall through to English */
 			}
 			// jscpd:ignore-end
-			location.replace('/' + pick + location.search + location.hash);
+			location.replace('/app/' + pick + location.search + location.hash);
 		})();
 	</script>
 </svelte:head>
@@ -56,7 +61,7 @@
 		</p>
 		<div class="langs">
 			{#each LANGS as lang (lang)}
-				<a class="lang-card" href="/{lang}" {lang}>
+				<a class="lang-card" href="/app/{lang}" {lang}>
 					<span class="card-title">{M[lang].langName}</span>
 					<span class="card-note">{M[lang].tagline}</span>
 				</a>
@@ -67,5 +72,5 @@
 <!-- jscpd:ignore-end -->
 
 <!-- Styles: the brand furniture (.motto, .langs, .lang-card, .card-title,
-     .card-note) is shared with the app router at /app/ and lives in
+     .card-note) is shared with the site root's router and lives in
      app.css — the two routers must stay the same object. -->

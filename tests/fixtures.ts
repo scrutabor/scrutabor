@@ -25,12 +25,21 @@ import { test as base, expect } from '@playwright/test';
 /** A site path as it exists in the downloaded folder. The project root
  * comes from Playwright's own config file — `rootDir` is the TEST
  * directory, which is one level too deep — so this file needs no node
- * types to find it. */
+ * types to find it.
+ *
+ * Only the book is in the folder: the site's /app prefix IS the app/
+ * directory, and the app's front door is the package root's index.html.
+ * The landing pages at the origin root are deliberately not packaged, so
+ * a test that asks for one offline is asking for the wrong artifact —
+ * loudly, not by opening some other file. */
 export function offlineUrl(root: string, path: string): string {
 	const [, route = '/', query = ''] = /^([^?#]*)([?#].*)?$/.exec(path) ?? [];
 	const base = `file://${root}/build-offline`;
-	if (route === '/' || route === '') return `${base}/index.html${query}`;
-	return `${base}/app${route}.html${query}`;
+	if (route === '/app' || route === '/app/') return `${base}/index.html${query}`;
+	if (!route.startsWith('/app/')) {
+		throw new Error(`not in the downloaded folder (landing or root): ${path}`);
+	}
+	return `${base}${route}.html${query}`;
 }
 
 /**

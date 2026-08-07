@@ -12,7 +12,7 @@
 	// to cut. The query still comes from location: an open word panel
 	// travels as ?w=, and shallow routing updates only the real URL.
 	function pathFor(l: Lang): string {
-		return `/${l}${where.path}${location.search}`;
+		return `/app/${l}${where.path}${location.search}`;
 	}
 </script>
 

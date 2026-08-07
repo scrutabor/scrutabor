@@ -15,8 +15,12 @@ export function afterNavigate(fn: (nav?: unknown) => void) {
 export function beforeNavigate() {}
 
 /**
- * A site path as the file it is: /pl/ordinarium/confiteor becomes
+ * A site path as the file it is: /app/pl/ordinarium/confiteor becomes
  * ../../pl/ordinarium/confiteor.html, relative to whatever page is asking.
+ *
+ * The site serves the book under /app; in the folder, the app/ directory
+ * IS that subtree, and `up` already climbs to it — so the prefix goes,
+ * exactly as the build script drops it from the prerendered links.
  *
  * The depth is stamped into each page by the build, because a page cannot
  * work it out for itself — under file:// its own path is wherever the
@@ -27,8 +31,11 @@ export function asFile(href: string): string {
 	const up = (window as unknown as { __scrutabor_up?: string }).__scrutabor_up ?? './';
 	// The .html belongs to the FILE, so it goes before any query or hash.
 	const [, route = '', tail = ''] = /^([^?#]*)([?#].*)?$/.exec(href) ?? [];
-	const suffix = /\.[a-z0-9]+$/.test(route) ? '' : '.html';
-	return up + route.slice(1) + suffix + tail;
+	const stripped = route.replace(/^\/app(?=\/|$)/, '');
+	// The app's own front door is the package root's index.html.
+	if (stripped === '' || stripped === '/') return `${up}../index.html${tail}`;
+	const suffix = /\.[a-z0-9]+$/.test(stripped) ? '' : '.html';
+	return up + stripped.slice(1) + suffix + tail;
 }
 
 /**

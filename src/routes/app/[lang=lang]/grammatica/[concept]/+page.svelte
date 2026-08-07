@@ -17,7 +17,7 @@
 </svelte:head>
 
 <div class="page">
-	<PageNav {lang} parent="/{lang}/grammatica" parentLabel={msgs.grammarTitle} />
+	<PageNav {lang} parent="/app/{lang}/grammatica" parentLabel={msgs.grammarTitle} />
 
 	{#if !concept}
 		<main>
@@ -39,7 +39,7 @@
 				{#each concept.examples as ex (ex.textKey + ex.wordId)}
 					<div class="example">
 						<p class="example-la" lang="la">
-							<a href="/{lang}/{ex.textKey}?w={ex.wordId}">{ex.la}</a>
+							<a href="/app/{lang}/{ex.textKey}?w={ex.wordId}">{ex.la}</a>
 						</p>
 						<p class="example-note">{ex.note[lang]}</p>
 					</div>

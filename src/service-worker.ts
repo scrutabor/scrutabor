@@ -19,15 +19,19 @@ const sw = self as unknown as ServiceWorkerGlobalScope;
 
 const CACHE = `scrutabor-${version}`;
 
-// Pages that ARE the shell: the language router, the two catalogs, the ordo
-// map, the edition page. Everything else — texts, movements, the dictionary,
-// the grammar — is a page a reader chooses.
-const SHELL_PAGE = /^\/(|[a-z]{2}|[a-z]{2}\/(ordo|editio|404))$/;
+// Pages that ARE the shell: the app's language router, the two catalogs,
+// the ordo map, the edition page. Everything else — texts, movements, the
+// dictionary, the grammar — is a page a reader chooses. The landing pages
+// outside /app/ are nobody's shell: this worker's scope never controls
+// them, and they must not sit in the book's cache.
+const SHELL_PAGE = /^\/app\/([a-z]{2}(\/(ordo|editio))?)?$/;
 
 const SHELL = [...build, ...files, ...prerendered.filter((path) => SHELL_PAGE.test(path))];
 
-/** The whole book, for a reader who installed it. */
-const EVERYTHING = [...SHELL, ...prerendered.filter((path) => !path.endsWith('/sitemap.xml'))];
+/** The whole book, for a reader who installed it. Only the app subtree:
+ * this also leaves out the sitemap and the landing pages, which live at
+ * the origin root. */
+const EVERYTHING = [...SHELL, ...prerendered.filter((path) => path.startsWith('/app/'))];
 
 sw.addEventListener('install', (event) => {
 	event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL)));
@@ -98,7 +102,7 @@ async function respond(request: Request, url: URL): Promise<Response> {
 		// Offline and never opened. Land the reader in the book rather than
 		// on a browser error page.
 		if (request.mode === 'navigate') {
-			const lang = url.pathname.startsWith('/pl') ? '/pl' : '/en';
+			const lang = url.pathname.startsWith('/app/pl') ? '/app/pl' : '/app/en';
 			const home = await cache.match(lang);
 			if (home) return home;
 		}

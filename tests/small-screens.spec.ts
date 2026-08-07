@@ -14,16 +14,16 @@ import { expect, settled, test } from './fixtures';
 // One of each SHAPE of page rather than one of each page: the failures
 // are in the layouts, and the layouts repeat.
 const PAGES = [
-	'/pl', // the landing, and its wordmark
-	'/pl/ordo', // an index of cards with notes hung right
-	'/pl/ordo/canon', // the flow: folded rows, marks, the parts control
-	'/pl/ordinarium/confiteor-sacerdotis', // the longest title in the book
-	'/pl/ordinarium/credo', // the longest text
-	'/pl/lemma/mater', // a concordance
-	'/pl/grammatica', // a card index
-	'/pl/grammatica/pronuntiatio', // a prose page with tables
-	'/en/ordo', // the same shapes with English words in them
-	'/en/ordinarium/credo'
+	'/app/pl', // the landing, and its wordmark
+	'/app/pl/ordo', // an index of cards with notes hung right
+	'/app/pl/ordo/canon', // the flow: folded rows, marks, the parts control
+	'/app/pl/ordinarium/confiteor-sacerdotis', // the longest title in the book
+	'/app/pl/ordinarium/credo', // the longest text
+	'/app/pl/lemma/mater', // a concordance
+	'/app/pl/grammatica', // a card index
+	'/app/pl/grammatica/pronuntiatio', // a prose page with tables
+	'/app/en/ordo', // the same shapes with English words in them
+	'/app/en/ordinarium/credo'
 ];
 
 // Phones at both ends, and the tablet widths where a two-column idea would
@@ -45,7 +45,7 @@ test('nothing runs off the screen, at any width and any text size', async ({ pag
 	test.setTimeout(180_000);
 	const damage: string[] = [];
 	for (const size of SIZES) {
-		await page.goto('/pl');
+		await page.goto('/app/pl');
 		await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
 		for (const width of WIDTHS) {
 			await page.setViewportSize({ width, height: 760 });
@@ -85,13 +85,13 @@ test('every menu opens onto the screen, not off the edge of it', async ({ page }
 	// the language menu was visibly cut in half.
 	const damage: string[] = [];
 	for (const size of SIZES) {
-		await page.goto('/pl/ordo');
+		await page.goto('/app/pl/ordo');
 		await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
 		for (const width of [...WIDTHS, 1200]) {
 			await page.setViewportSize({ width, height: 760 });
 			// same as above: the size is already stored, so this is one load
 			// and the fixture's goto has waited for it
-			await page.goto('/pl/ordo');
+			await page.goto('/app/pl/ordo');
 			for (const name of ['wybór języka', 'wielkość pisma']) {
 				await page.getByRole('button', { name: new RegExp(name) }).click();
 				const box = await page.evaluate(() => {
@@ -123,7 +123,7 @@ test('a wide screen keeps every control in its unstacked form', async ({ page })
 		[1024, 'larger']
 	] as const) {
 		await page.setViewportSize({ width, height: 900 });
-		await page.goto('/pl/ordo/praeparatio');
+		await page.goto('/app/pl/ordo/praeparatio');
 		await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
 		await page.reload();
 		await settled(page);
@@ -148,7 +148,7 @@ test('a wide screen keeps every control in its unstacked form', async ({ page })
 
 	// and on the index, the full picker keeps its three parts side by side
 	await page.setViewportSize({ width: 1200, height: 900 });
-	await page.goto('/pl/ordo');
+	await page.goto('/app/pl/ordo');
 	const fullRows = await page.evaluate(
 		() =>
 			new Set(
@@ -178,7 +178,7 @@ test('each part is drawn in its own slot, not over its separator', async ({ page
 		[390, 'largest']
 	] as const) {
 		await page.setViewportSize({ width, height: 900 });
-		await page.goto('/pl/ordo/praeparatio');
+		await page.goto('/app/pl/ordo/praeparatio');
 		await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
 		await page.reload();
 		await settled(page);
@@ -228,7 +228,7 @@ test('a heading stands across the list it names, not beside the first of it', as
 	// otherwise still pass on a phone.
 	for (const width of [390, 1500]) {
 		await page.setViewportSize({ width, height: 900 });
-		for (const url of ['/pl/lemma/meus', '/pl/grammatica/nominativus']) {
+		for (const url of ['/app/pl/lemma/meus', '/app/pl/grammatica/nominativus']) {
 			await page.goto(url);
 			const shape = await page.evaluate(() => {
 				const list = document.querySelector('.in-two')!;

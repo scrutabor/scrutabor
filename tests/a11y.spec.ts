@@ -12,19 +12,23 @@ import type { Page } from '@playwright/test';
 import { expect, test } from './fixtures';
 
 // One of each surface, not one of each page: the templates are what can
-// be wrong, and 1100 prerendered pages come from these seven.
+// be wrong, and the prerendered pages all come from these few — the
+// landing pages included, since the pew case (dark theme, phone width,
+// large print) is the first thing a visitor meets there too.
 const SURFACES = [
-	{ name: 'language router', path: '/' },
-	{ name: 'catalog', path: '/pl' },
-	{ name: 'ordo index', path: '/pl/ordo' },
-	{ name: 'ordo movement', path: '/pl/ordo/communio' },
-	{ name: 'reading page', path: '/pl/ordinarium/gloria' },
-	{ name: 'lemma page', path: '/pl/lemma/deus' },
-	// a concept that EXISTS: /pl/grammatica/casus never did, and the
+	{ name: 'app language router', path: '/app/' },
+	{ name: 'landing @online', path: '/pl' },
+	{ name: 'privacy page @online', path: '/en/privacy' },
+	{ name: 'catalog', path: '/app/pl' },
+	{ name: 'ordo index', path: '/app/pl/ordo' },
+	{ name: 'ordo movement', path: '/app/pl/ordo/communio' },
+	{ name: 'reading page', path: '/app/pl/ordinarium/gloria' },
+	{ name: 'lemma page', path: '/app/pl/lemma/deus' },
+	// a concept that EXISTS: /app/pl/grammatica/casus never did, and the
 	// hosted server's 404 fallback let this surface pass for months while
 	// scanning the not-found page under a grammar page's name
-	{ name: 'grammar concept', path: '/pl/grammatica/nominativus' },
-	{ name: 'edition page', path: '/en/editio' },
+	{ name: 'grammar concept', path: '/app/pl/grammatica/nominativus' },
+	{ name: 'edition page', path: '/app/en/editio' },
 	// the server's own 404: there is no such page in a downloaded copy,
 	// where a link that misses is the browser's error, not ours
 	{ name: 'not found @online', path: '/pl/404' }
@@ -65,7 +69,7 @@ for (const theme of ['light', 'dark'] as const) {
 test.describe('on a phone', () => {
 	test.use({ viewport: { width: 375, height: 812 } });
 
-	for (const { name, path } of SURFACES.filter((s) => s.path !== '/')) {
+	for (const { name, path } of SURFACES.filter((s) => s.path !== '/app/')) {
 		test(`${name} meets WCAG 2.1 AA`, async ({ page }) => {
 			await page.goto(path);
 			expect(await violations(page), `${path} at 375px`).toEqual([]);
@@ -73,7 +77,7 @@ test.describe('on a phone', () => {
 	}
 
 	test('the word panel meets WCAG 2.1 AA where it covers most of the screen', async ({ page }) => {
-		await page.goto('/pl/ordinarium/gloria');
+		await page.goto('/app/pl/ordinarium/gloria');
 		await page.locator('.word').first().click();
 		await expect(page.locator('aside')).toBeVisible();
 		expect(await violations(page), 'panel on a phone').toEqual([]);
@@ -81,7 +85,7 @@ test.describe('on a phone', () => {
 });
 
 test('the word panel meets WCAG 2.1 AA, open and interactive', async ({ page }) => {
-	await page.goto('/pl/ordinarium/gloria');
+	await page.goto('/app/pl/ordinarium/gloria');
 	await page.locator('.word').first().click();
 	await expect(page.locator('aside')).toBeVisible();
 	expect(await violations(page), 'reading page with the word panel open').toEqual([]);
@@ -95,7 +99,7 @@ test('the word panel meets WCAG 2.1 AA, open and interactive', async ({ page }) 
 // against.
 test.describe('at the largest reading size', () => {
 	for (const width of [375, 834, 1280]) {
-		for (const { name, path } of SURFACES.filter((s) => s.path !== '/')) {
+		for (const { name, path } of SURFACES.filter((s) => s.path !== '/app/')) {
 			test(`${name} meets WCAG 2.1 AA at ${width}px`, async ({ page }) => {
 				await page.addInitScript(() => {
 					localStorage.setItem('scrutabor-reading', 'largest');
@@ -112,7 +116,7 @@ test.describe('at the largest reading size', () => {
 test('the help slider at its fullest meets WCAG 2.1 AA', async ({ page }) => {
 	// The top step puts every layer on screen at once — translations,
 	// narrative, interlinear gloss — which is the densest the app ever gets.
-	await page.goto('/pl/ordinarium/credo');
+	await page.goto('/app/pl/ordinarium/credo');
 	await page.locator('input[type="range"]').fill('2');
 	expect(await violations(page), 'reading page at full help').toEqual([]);
 });

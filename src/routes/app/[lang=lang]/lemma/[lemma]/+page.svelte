@@ -67,7 +67,7 @@
 								{#each t.items as occ, i (occ.wordId)}{#if i > 0}{', '}{/if}<a
 										class="occ-form"
 										lang="la"
-										href="/{lang}/{t.textKey}?w={occ.wordId}">{occ.form}</a
+										href="/app/{lang}/{t.textKey}?w={occ.wordId}">{occ.form}</a
 									>{/each}
 							</span>
 						</p>

@@ -6,7 +6,7 @@
 // reader who serves or celebrates sees everything from the start.
 import { expect, test } from './fixtures';
 
-const CANON = '/pl/ordo/canon';
+const CANON = '/app/pl/ordo/canon';
 
 test('the pew sees what is said aloud, and the silent prayers folded', async ({ page }) => {
 	await page.goto(CANON);
@@ -44,7 +44,7 @@ test('a server and a priest are shown everything from the start', async ({ page 
 });
 
 test('the role survives leaving the page', async ({ page }) => {
-	await page.goto('/pl/ordo');
+	await page.goto('/app/pl/ordo');
 	await page.getByRole('radio', { name: 'ministranta' }).click();
 	await expect(page.getByRole('radio', { name: 'ministranta' })).toHaveAttribute(
 		'aria-checked',
@@ -56,7 +56,7 @@ test('the role survives leaving the page', async ({ page }) => {
 });
 
 test('a line the reader answers is marked as theirs', async ({ page }) => {
-	await page.goto('/pl/ordinarium/praefatio-dialogus');
+	await page.goto('/app/pl/ordinarium/praefatio-dialogus');
 
 	// each speaker is named once — the mark carries it after that — and
 	// nothing tells the reader what to do with the line: the page shows
@@ -72,7 +72,7 @@ test('a dialogue is marked V. and R. down the page, as the books mark it', async
 	// versiculus and responsum, in red, on EVERY line of an exchange — the
 	// marks the typical edition prints and the ones this corpus's own
 	// witnesses print most (R. 96 times, V. 74, against S. 36 and M. 15).
-	await page.goto('/pl/ordinarium/praefatio-dialogus');
+	await page.goto('/app/pl/ordinarium/praefatio-dialogus');
 	const marks = page.locator('.verse .mark');
 	const verses = await page.locator('.verse').count();
 	expect(await marks.count()).toBe(verses);
@@ -93,7 +93,7 @@ test('the reader can change their part from a text page, and the marks follow', 
 }) => {
 	// The control belongs wherever the reader is, not only on the Ordo
 	// index: arriving at a text from a link is the common case.
-	await page.goto('/pl/ordinarium/praefatio-dialogus');
+	await page.goto('/app/pl/ordinarium/praefatio-dialogus');
 	const answered = () =>
 		page.evaluate(() =>
 			[...document.querySelectorAll('.verse')].map((v) =>
@@ -124,7 +124,7 @@ test('the mark does not collide with the words beside it', async ({ page }) => {
 	// token boxes still tile neatly while the words inside them sit 2rem to
 	// the left, on top of each other. A test on token boxes passes happily
 	// through the very fault it was written for (proved by mutation).
-	await page.goto('/pl/ordinarium/iudica-me');
+	await page.goto('/app/pl/ordinarium/iudica-me');
 	const overlaps = await page.evaluate(() => {
 		const bad: string[] = [];
 		for (const verse of document.querySelectorAll('.verse')) {
@@ -147,7 +147,7 @@ test('a text the sources say nothing about stays unmarked', async ({ page }) => 
 	// The devotional prayers are said by whoever prays them: no celebrant,
 	// no server. The corpus leaves them unattributed on purpose, and the
 	// page must render nothing rather than invent a speaker.
-	await page.goto('/pl/orationes/gloria-patri');
+	await page.goto('/app/pl/orationes/gloria-patri');
 	await expect(page.locator('.verse').first()).toBeVisible();
 	await expect(page.locator('.who')).toHaveCount(0);
 
@@ -157,7 +157,7 @@ test('a text the sources say nothing about stays unmarked', async ({ page }) => 
 
 	// while an exchange, whose sources do mark the voices, is marked on
 	// every line, with the names given once each
-	await page.goto('/pl/ordinarium/ite-missa-est');
+	await page.goto('/app/pl/ordinarium/ite-missa-est');
 	const verses = await page.locator('.verse').count();
 	expect(await page.locator('.verse .mark').count()).toBe(verses);
 	expect(await page.locator('.who-name').count()).toBeLessThan(verses);
@@ -172,14 +172,14 @@ test('a prayer everyone says is not marked either, though it is attributed', asy
 	// A mark tells voices apart. Where the only voice is everyone — the one
 	// speaker a priest, a server and a reader in the pew all own — there is
 	// nobody to be told apart from.
-	await page.goto('/pl/orationes/ave-maria');
+	await page.goto('/app/pl/orationes/ave-maria');
 	await expect(page.locator('.verse')).toHaveCount(2);
 	await expect(page.locator('.verse .mark')).toHaveCount(0);
 	await expect(page.locator('.who')).toHaveCount(0);
 
 	// But a prayer said throughout by the PRIEST keeps its mark, because
 	// there the letter says something the reader needs: not yours.
-	await page.goto('/pl/ordinarium/te-igitur');
+	await page.goto('/app/pl/ordinarium/te-igitur');
 	await expect(page.locator('.verse .mark').first()).toHaveText('V.');
 });
 
@@ -190,7 +190,7 @@ test('the mark prints where the voice turns, and again after every rubric', asyn
 	// Not on every line of one voice: the petitions of the Pater noster run
 	// on unmarked under the V. that opened them, and keep the text column,
 	// which is what says they are still his.
-	await page.goto('/pl/ordinarium/pater-noster');
+	await page.goto('/app/pl/ordinarium/pater-noster');
 	const petitions = await page.evaluate(() =>
 		[...document.querySelectorAll('.verse')].map((v) => ({
 			mark: v.querySelector('.mark')?.textContent ?? '',
@@ -204,7 +204,7 @@ test('the mark prints where the voice turns, and again after every rubric', asyn
 	// But yes after a rubric: Per ipsum has a direction between every phrase
 	// of its doxology, so the reader comes back to the Latin each time and
 	// is told each time whose it is.
-	await page.goto('/pl/ordinarium/per-ipsum');
+	await page.goto('/app/pl/ordinarium/per-ipsum');
 	await expect(page.locator('.initial')).toHaveText('P');
 	const marks = await page.evaluate(() =>
 		[...document.querySelectorAll('.verse')].map((v) => v.querySelector('.mark')?.textContent ?? '')
@@ -228,15 +228,15 @@ test('a silent prayer that ends aloud is not folded away', async ({ page }) => {
 			[...document.querySelectorAll('.word')].some((w) => /sǽcula/.test(w.textContent ?? ''))
 		);
 
-	await page.goto('/pl/ordo/canon');
+	await page.goto('/app/pl/ordo/canon');
 	expect(await saidAloud(page), 'the Canon doxology ends aloud').toBe(true);
 
-	await page.goto('/pl/ordo/communio');
+	await page.goto('/app/pl/ordo/communio');
 	expect(await saidAloud(page), 'the embolism ends aloud').toBe(true);
 });
 
 test('a wholly silent prayer still folds', async ({ page }) => {
-	await page.goto('/pl/ordo/canon');
+	await page.goto('/app/pl/ordo/canon');
 	// Te ígitur carries no aloud line at all, so the pew gets the note
 	const folds = page.locator('.unfold');
 	expect(await folds.count()).toBeGreaterThan(5);
@@ -248,7 +248,7 @@ test('the mark explains itself when asked', async ({ page }) => {
 	// verdict was that a help cursor with a slow native tooltip invites a
 	// click and then does nothing. So the mark is a button, and it opens
 	// the whole key: a reader who does not know V. does not know R. either.
-	await page.goto('/pl/ordinarium/pater-noster');
+	await page.goto('/app/pl/ordinarium/pater-noster');
 	const mark = page.locator('.mark').first();
 	expect(await mark.evaluate((el) => el.tagName)).toBe('BUTTON');
 	await expect(page.locator('.legend')).toHaveCount(0);
@@ -273,7 +273,7 @@ test('the reader’s own lines are the red ones, and the other voice recedes', a
 	// The choice of part has to change the PAGE, not only its labels: red
 	// is kept for the lines the reader says, so "which of these do I say?"
 	// is answered by the colour rather than worked out.
-	await page.goto('/pl/ordinarium/praefatio-dialogus');
+	await page.goto('/app/pl/ordinarium/praefatio-dialogus');
 	const colours = () =>
 		page.evaluate(() =>
 			[...document.querySelectorAll('.verse .mark')].map((m) => ({
@@ -310,12 +310,12 @@ test('no opening initial lands on the letters beside it', async ({ page }) => {
 	// went on driving its tail into "uod" while every test passed. So
 	// measure the ink, on every letter that opens a prayer in this corpus.
 	const pages = [
-		'/en/ordinarium/quod-ore-sumpsimus', // Q — the tail
-		'/en/ordinarium/agnus-dei', // A — the diagonal
-		'/en/ordinarium/te-igitur', // T — the arm
-		'/en/ordinarium/per-ipsum', // P — a closed bowl, the other case
-		'/en/ordinarium/ecce-agnus-dei', // E
-		'/en/ordinarium/aufer-a-nobis' // A again, another word after it
+		'/app/en/ordinarium/quod-ore-sumpsimus', // Q — the tail
+		'/app/en/ordinarium/agnus-dei', // A — the diagonal
+		'/app/en/ordinarium/te-igitur', // T — the arm
+		'/app/en/ordinarium/per-ipsum', // P — a closed bowl, the other case
+		'/app/en/ordinarium/ecce-agnus-dei', // E
+		'/app/en/ordinarium/aufer-a-nobis' // A again, another word after it
 	];
 	for (const url of pages) {
 		await page.goto(url);
@@ -383,18 +383,18 @@ test('a descending initial keeps its size, and the gloss row gives way', async (
 	// LINE gives way instead — the whole gloss row of that verse sinks by
 	// what the tail needs, so the glosses stay level with each other, which
 	// is the alignment a reader can actually see.
-	await page.goto('/en/ordinarium/quod-ore-sumpsimus');
+	await page.goto('/app/en/ordinarium/quod-ore-sumpsimus');
 	const q = await page.evaluate(() =>
 		parseFloat(getComputedStyle(document.querySelector('.initial')!).fontSize)
 	);
-	await page.goto('/en/ordinarium/per-ipsum');
+	await page.goto('/app/en/ordinarium/per-ipsum');
 	const p = await page.evaluate(() =>
 		parseFloat(getComputedStyle(document.querySelector('.initial')!).fontSize)
 	);
 	expect(q, 'Q is set no smaller than P').toBeCloseTo(p, 1);
 
 	// and every gloss on the line the initial opens sits level with its own
-	await page.goto('/en/ordinarium/quod-ore-sumpsimus');
+	await page.goto('/app/en/ordinarium/quod-ore-sumpsimus');
 	const tops = await page.evaluate(() => {
 		const verse = document.querySelector('.verse .initial')!.closest('.verse')!;
 		return [...verse.querySelectorAll('rt')]
@@ -410,7 +410,7 @@ test('choosing a part does not shift the parts beside it', async ({ page }) => {
 	// moved along the row, which made the row look loose. Every option now
 	// reserves the width of its own bold form whether or not it is chosen,
 	// so only the weight changes.
-	await page.goto('/en/ordinarium/confiteor');
+	await page.goto('/app/en/ordinarium/confiteor');
 	const lefts = () =>
 		page.$$eval('.picker.compact .option', (els) =>
 			els.map((e) => Math.round(e.getBoundingClientRect().left))
@@ -428,7 +428,7 @@ test('the mark key is dismissed the way every other sheet is', async ({ page }) 
 	// Escape, which dismiss the word panel and the introduction, left it
 	// sitting there. Three sheets open from one page; a reader should not
 	// have to learn which one needs the ×.
-	for (const url of ['/pl/ordinarium/pater-noster', '/pl/ordo/praeparatio']) {
+	for (const url of ['/app/pl/ordinarium/pater-noster', '/app/pl/ordo/praeparatio']) {
 		await page.goto(url);
 
 		await page.locator('.mark').first().click();

@@ -62,7 +62,7 @@
      never left underneath the sheet — see .panel-open -->
 <Sheet {lang} {onclose} label={M[lang].panelAria} extra="panel" max="45vh" {lead}>
 	<p class="head">
-		<a href="/{lang}/lemma/{word.lemma}" title={M[lang].lemmaPageHint}
+		<a href="/app/{lang}/lemma/{word.lemma}" title={M[lang].lemmaPageHint}
 			><i lang="la">{lemmaEntry?.head ?? word.lemma}</i>{#if lemmaEntry?.gender}&nbsp;<span
 					class="gender">{GENDER_MARK[lemmaEntry.gender]}</span
 				>{/if}
@@ -72,7 +72,7 @@
 	<p class="morph">
 		{#each describeMorphParts(word.morph, lang) as part, i (i)}{#if part.concept}<a
 					class="concept"
-					href="/{lang}/grammatica/{part.concept}">{part.text}</a
+					href="/app/{lang}/grammatica/{part.concept}">{part.text}</a
 				>{:else}{part.text}{/if}{/each}
 	</p>
 	<Pronunciation form={word.form} {lang} />

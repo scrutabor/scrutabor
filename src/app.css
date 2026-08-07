@@ -365,6 +365,67 @@ h2 {
 	background: var(--wash);
 }
 
+/* The brand's own furniture — the tagline, the motto and its reference —
+   shared by every surface that presents the book rather than reads from
+   it: the two language routers, the landing pages, the catalog. One copy,
+   for the same reason as the cards above: these lines are the same object
+   wherever they appear, and a drift between them is nobody's decision. */
+.tagline {
+	margin: 0.4rem 0 0;
+	font-size: 1.2rem;
+	color: var(--ink-soft);
+}
+
+.motto {
+	margin: 2.6rem 0 0;
+	font-style: italic;
+	font-size: 1.1rem;
+	line-height: 1.6;
+	max-width: 28rem;
+}
+
+.motto-ref {
+	margin: 0.3rem 0 0;
+	font-size: 0.8rem;
+	color: var(--ink-soft);
+}
+
+/* The two language routers — the site root and the app's front door at
+   /app/ — offer the same pair of cards. */
+.langs {
+	margin: 3rem 0 0;
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.lang-card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+	text-decoration: none;
+	border: 1px solid var(--border);
+	border-radius: 0.6rem;
+	padding: 1.1rem 2.2rem;
+	background: var(--surface);
+	min-width: 14rem;
+}
+
+.lang-card:hover {
+	background: var(--wash);
+}
+
+.lang-card .card-title {
+	font-size: 1.4rem;
+}
+
+.card-note {
+	font-size: 0.95rem;
+	color: var(--ink-soft);
+	font-style: italic;
+}
+
 /* …and what a centred page says: a status, then a line with the way
    home. The 404 and the client-side error boundary are the same page in
    two forms, so they are cut the same. */

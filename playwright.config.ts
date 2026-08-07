@@ -13,9 +13,15 @@ import { defineConfig } from '@playwright/test';
 export default defineConfig({
 	testDir: 'tests',
 	webServer: {
-		// Both artifacts, from one command, so they can never disagree about
-		// which corpus or which runtime they were built from.
-		command: 'npm run build:offline && npm run preview',
+		// Everything production serves, from one command, so the artifacts
+		// can never disagree about which corpus or which runtime they were
+		// built from — and the landing's download link points at a zip that
+		// really is in the build, because build:site puts it there exactly
+		// as the Pages build does. (Production serves build/; SvelteKit's
+		// preview serves .svelte-kit/output — build:site copies the zip to
+		// BOTH, or this suite would assert against a server that cannot
+		// see the one file the adapter did not put there.)
+		command: 'npm run build:site && npm run preview',
 		port: 4173,
 		reuseExistingServer: !process.env.CI
 	},

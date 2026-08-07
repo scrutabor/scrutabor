@@ -153,7 +153,7 @@
 </svelte:head>
 
 <div class="page">
-	<PageNav {lang} parent="/{lang}/grammatica" parentLabel={msgs.grammarTitle} />
+	<PageNav {lang} parent="/app/{lang}/grammatica" parentLabel={msgs.grammarTitle} />
 
 	<main>
 		<h1 class="minor">{lang === 'pl' ? 'wymowa' : 'pronunciation'}</h1>
@@ -209,7 +209,7 @@
 								<td>{r.polish}</td>
 								<td>
 									{#if r.href}
-										<a lang="la" href="/{lang}{r.href}">{r.example}</a>
+										<a lang="la" href="/app/{lang}{r.href}">{r.example}</a>
 									{:else}
 										<span lang="la">{r.example}</span>
 									{/if}

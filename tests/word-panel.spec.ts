@@ -4,7 +4,7 @@
 // a concept page) — keep them green.
 import { atRoute, expect, test } from './fixtures';
 
-const PATER = '/pl/orationes/pater-noster';
+const PATER = '/app/pl/orationes/pater-noster';
 const panel = 'aside';
 const panelWord = 'aside .form';
 
@@ -78,7 +78,7 @@ test('closing a deep-linked panel strips ?w= without leaving the page', async ({
 test('panel is restored on back from a grammar-concept page', async ({ page }) => {
 	await page.goto(PATER);
 	await page.locator('#w008').click();
-	await page.locator('aside a[href="/pl/grammatica/nominativus"]').click();
+	await page.locator('aside a[href="/app/pl/grammatica/nominativus"]').click();
 	await expect(page).toHaveURL(atRoute('grammatica/nominativus'));
 	await page.goBack();
 	await expect(page.locator(panelWord)).toHaveText('nomen');
@@ -88,7 +88,7 @@ test('panel is restored on back from a grammar-concept page', async ({ page }) =
 test('panel is restored on back from a lemma page', async ({ page }) => {
 	await page.goto(PATER);
 	await page.locator('#w008').click();
-	await page.locator('aside a[href="/pl/lemma/nomen"]').click();
+	await page.locator('aside a[href="/app/pl/lemma/nomen"]').click();
 	await expect(page).toHaveURL(atRoute('lemma/nomen'));
 	await expect(page.locator('h1')).toHaveText('nomen');
 	await page.goBack();
@@ -96,8 +96,8 @@ test('panel is restored on back from a lemma page', async ({ page }) => {
 });
 
 test('a concordance link deep-links into the reading view', async ({ page }) => {
-	await page.goto('/pl/lemma/oro');
-	await page.locator('a[href="/pl/ordinarium/confiteor?w=w060"]').click();
+	await page.goto('/app/pl/lemma/oro');
+	await page.locator('a[href="/app/pl/ordinarium/confiteor?w=w060"]').click();
 	await expect(page.locator(panelWord)).toHaveText('oráre');
 	await expect(page.locator('.word.selected')).toBeInViewport();
 });
@@ -118,7 +118,7 @@ test('switching language keeps the panel open on the same word', async ({ page }
 	await page.locator('#w008').click();
 	await page.locator('button[aria-label="wybór języka"]').click();
 	await page.locator('a', { hasText: 'English' }).click();
-	await expect(page).toHaveURL(atRoute('/en/orationes/pater-noster', '?w=w008'));
+	await expect(page).toHaveURL(atRoute('/app/en/orationes/pater-noster', '?w=w008'));
 	await expect(page.locator(panelWord)).toHaveText('nomen');
 });
 
@@ -134,7 +134,7 @@ test('the way out of a long panel does not scroll away', async ({ page }) => {
 	// so often near-identical forms of one lemma that losing the question
 	// two screens down is a real loss.
 	await page.setViewportSize({ width: 375, height: 812 });
-	await page.goto('/en/ordinarium/evangelium-ultimum?w=w184');
+	await page.goto('/app/en/ordinarium/evangelium-ultimum?w=w184');
 
 	const sheet = page.locator('aside.sheet');
 	const header = sheet.locator('header');

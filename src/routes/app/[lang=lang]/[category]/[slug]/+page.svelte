@@ -107,7 +107,7 @@
 		const tag = (document.activeElement as HTMLElement | null)?.tagName;
 		if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
 		const target = e.key === 'ArrowLeft' ? around.prev : around.next;
-		if (target) goto(`/${lang}/${target.category}/${target.slug}`);
+		if (target) goto(`/app/${lang}/${target.category}/${target.slug}`);
 	}
 
 	let selectedWord = $derived(panel.id ? (wordsById.get(panel.id) ?? null) : null);
@@ -130,7 +130,7 @@
 
 {#if !doc || !gloss}
 	<div class="page reading">
-		<p><a href="/{lang}">Scrutabor</a></p>
+		<p><a href="/app/{lang}">Scrutabor</a></p>
 	</div>
 {:else}
 	<div class="page reading">
@@ -166,11 +166,11 @@
 			<Pager
 				{lang}
 				prev={around.prev && {
-					href: `/${lang}/${around.prev.category}/${around.prev.slug}`,
+					href: `/app/${lang}/${around.prev.category}/${around.prev.slug}`,
 					title: around.prev.title
 				}}
 				next={around.next && {
-					href: `/${lang}/${around.next.category}/${around.next.slug}`,
+					href: `/app/${lang}/${around.next.category}/${around.next.slug}`,
 					title: around.next.title
 				}}
 			/>
