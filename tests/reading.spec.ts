@@ -1,5 +1,5 @@
 // The reading experience: help ladder, panel layers, cross-reference jumps.
-import { expect, test } from './fixtures';
+import { atRoute, expect, test } from './fixtures';
 
 const AVE = '/pl/orationes/ave-maria';
 const CONFITEOR = '/pl/ordinarium/confiteor';
@@ -117,7 +117,7 @@ test('the Gloria reads with narrative, panel and provenance', async ({ page }) =
 	await page.goto('/en/ordinarium/gloria?w=w074'); // Altissimus
 	await expect(panel.locator('.gloss')).toHaveText('the Most High');
 	await panel.locator('.head a').click();
-	await expect(page).toHaveURL(/lemma\/altus$/);
+	await expect(page).toHaveURL(atRoute('lemma/altus'));
 	await expect(page.locator('.senses')).toContainText('high');
 });
 
@@ -259,17 +259,17 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	// the Kyrie stands between the Confiteor and the Gloria, as at Mass
 	await expect(pager.locator('a', { hasText: 'Kýrie' })).toBeVisible();
 	await pager.locator('a', { hasText: 'Credo' }).click();
-	await expect(page).toHaveURL(/ordinarium\/credo$/);
+	await expect(page).toHaveURL(atRoute('ordinarium/credo'));
 	// crossing the section boundary backwards, into the last of the prayers
 	await page.goto('/pl/ordinarium/confiteor');
 	await pager.locator('a', { hasText: 'Míchaël' }).click();
-	await expect(page).toHaveURL(/orationes\/sancte-michael$/);
+	await expect(page).toHaveURL(atRoute('orationes/sancte-michael'));
 	// arrow keys page too, but never while the slider owns them
 	await page.keyboard.press('ArrowRight');
-	await expect(page).toHaveURL(/ordinarium\/confiteor$/);
+	await expect(page).toHaveURL(atRoute('ordinarium/confiteor'));
 	await page.locator('input[type="range"]').focus();
 	await page.keyboard.press('ArrowRight');
-	await expect(page).toHaveURL(/ordinarium\/confiteor$/);
+	await expect(page).toHaveURL(atRoute('ordinarium/confiteor'));
 	// first text has no previous
 	await page.goto('/pl/orationes/pater-noster');
 	await expect(page.locator('.pager a')).toHaveCount(1);
@@ -341,7 +341,7 @@ test('the book keeps a ribbon: reopening a text resumes the position', async ({ 
 		.not.toBeNull();
 	// leave for the catalog and come back — the ribbon holds
 	await page.locator('a.back').click();
-	await expect(page).toHaveURL(/\/pl$/);
+	await expect(page).toHaveURL(atRoute('/pl'));
 	await page.locator('a[href="/pl/ordinarium/credo"]').click();
 	await expect(page).toHaveURL(/credo/);
 	await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(400);

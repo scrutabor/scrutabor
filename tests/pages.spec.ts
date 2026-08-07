@@ -1,6 +1,6 @@
 // The educational surfaces around the reading view: lemma pages,
 // grammar-concept pages, and the landing.
-import { expect, test } from './fixtures';
+import { atRoute, expect, test } from './fixtures';
 import { CATALOG } from '../src/lib/catalog';
 
 test('lemma page shows head, senses, derivatives and concordance', async ({ page }) => {
@@ -71,7 +71,7 @@ test('pronuntiatio page carries the rules and links into the prayers', async ({ 
 	await expect(page.locator('aside .form')).toHaveText('cælis');
 });
 
-test('the 404 page speaks both languages, English first', async ({ page }) => {
+test('the 404 page speaks both languages, English first @online', async ({ page }) => {
 	await page.goto('/404');
 	await expect(page.locator('.status')).toHaveText('404');
 	const lines = page.locator('.line');
@@ -123,7 +123,7 @@ test('the edition page explains the sources and carries the working label', asyn
 	// the landing's quiet label links here; reading pages no longer carry it
 	await page.goto('/pl');
 	await page.locator('.working a').click();
-	await expect(page).toHaveURL(/\/pl\/editio$/);
+	await expect(page).toHaveURL(atRoute('/pl/editio'));
 	await page.goto('/pl/ordinarium/credo');
 	await expect(page.locator('.subtitle')).not.toContainText('robocze');
 });

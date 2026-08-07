@@ -1,5 +1,5 @@
 // The flow view: the Mass in order, for a reader following it in the pew.
-import { expect, test } from './fixtures';
+import { atRoute, expect, test } from './fixtures';
 import { ORDO } from '../src/lib/ordo';
 
 test('the ordo is a map of six movements, walked in order', async ({ page }) => {
@@ -12,14 +12,14 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 
 	// the Mass opens at the foot of the altar…
 	await movements.first().click();
-	await expect(page).toHaveURL(/\/pl\/ordo\/praeparatio$/);
+	await expect(page).toHaveURL(atRoute('/pl/ordo/praeparatio'));
 	await expect(page.locator('.part-title').first()).toContainText('Introíbo');
 
 	// …and the pager walks the movements to the end, where the prayers
 	// after low Mass close it
 	for (const id of ['catechumenorum', 'offertorium', 'canon', 'communio', 'conclusio']) {
 		await page.locator('.pager-next').click();
-		await expect(page).toHaveURL(new RegExp(`/pl/ordo/${id}$`));
+		await expect(page).toHaveURL(atRoute(`/pl/ordo/${id}`));
 	}
 	// the last of the five prayers of Leo XIII, which the conclusion now
 	// lists one by one instead of describing as a block still to come
@@ -175,7 +175,7 @@ test('the landing separates following the Mass from opening a text', async ({ pa
 	await expect(page.locator('.cards a[href$="/ordo"]')).toHaveCount(0);
 
 	await flow.click();
-	await expect(page).toHaveURL(/\/en\/ordo$/);
+	await expect(page).toHaveURL(atRoute('/en/ordo'));
 });
 
 test('every prayer the Ordo links to is actually built', async ({ page, request }) => {

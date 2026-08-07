@@ -2,15 +2,17 @@
 	import Flag from './Flag.svelte';
 	import Menu from './Menu.svelte';
 	import { LANGS, M, type Lang } from '$lib/i18n';
+	import { where } from '$lib/where.svelte';
 
 	let { lang }: { lang: Lang } = $props();
 
-	// Same page in the other language: swap the leading path segment and
-	// keep the query (an open word panel travels as ?w=). Reads location,
-	// not page.url — shallow replaceState updates only the former — and is
-	// safe because this only runs after a click, never at prerender.
+	// The same page in the other language. The path within a language comes
+	// from the layout (see $lib/where) rather than from location.pathname,
+	// which is a FILE path in a downloaded copy and has no language prefix
+	// to cut. The query still comes from location: an open word panel
+	// travels as ?w=, and shallow routing updates only the real URL.
 	function pathFor(l: Lang): string {
-		return `/${l}${location.pathname.replace(/^\/(pl|en)/, '')}${location.search}`;
+		return `/${l}${where.path}${location.search}`;
 	}
 </script>
 

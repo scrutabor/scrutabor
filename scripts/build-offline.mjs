@@ -117,8 +117,11 @@ for (const [path, up] of pages) {
 	// server. Every route gained a .html twin at build time; a file keeps
 	// the name it has.
 	html = html.replace(/\b(href|src)="(\/[^"#]*)"/g, (_, attr, target) => {
-		const suffix = /\.[a-z0-9]+$/.test(target) ? '' : '.html';
-		return `${attr}="${up}${target.slice(1)}${suffix}"`;
+		// A query rides AFTER the .html — the file is the route, not the
+		// route plus its query.
+		const [, route = '', tail = ''] = /^([^?#]*)([?#].*)?$/.exec(target) ?? [];
+		const suffix = /\.[a-z0-9]+$/.test(route) ? '' : '.html';
+		return `${attr}="${up}${route.slice(1)}${suffix}${tail}"`;
 	});
 
 	// Head links with nothing behind them any more. The font preloads carry

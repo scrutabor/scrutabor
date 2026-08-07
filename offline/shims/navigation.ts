@@ -14,9 +14,33 @@ export function afterNavigate(fn: (nav?: unknown) => void) {
 
 export function beforeNavigate() {}
 
-/** A real navigation, because that is what every link does here. */
+/**
+ * A site path as the file it is: /pl/ordinarium/confiteor becomes
+ * ../../pl/ordinarium/confiteor.html, relative to whatever page is asking.
+ *
+ * The depth is stamped into each page by the build, because a page cannot
+ * work it out for itself — under file:// its own path is wherever the
+ * reader happened to unzip the book.
+ */
+export function asFile(href: string): string {
+	if (!href.startsWith('/')) return href;
+	const up = (window as unknown as { __scrutabor_up?: string }).__scrutabor_up ?? './';
+	// The .html belongs to the FILE, so it goes before any query or hash.
+	const [, route = '', tail = ''] = /^([^?#]*)([?#].*)?$/.exec(href) ?? [];
+	const suffix = /\.[a-z0-9]+$/.test(route) ? '' : '.html';
+	return up + route.slice(1) + suffix + tail;
+}
+
+/**
+ * A real navigation, because that is what every link does here.
+ *
+ * It has to translate as well. The pager moves with the arrow keys and the
+ * language menu switches through this, not through a link — so a `goto`
+ * that took the path literally walked into the filesystem root, and only
+ * those two paths through the book were broken.
+ */
 export async function goto(url: string | URL) {
-	location.href = String(url);
+	location.href = asFile(String(url));
 }
 
 /**

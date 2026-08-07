@@ -15,12 +15,16 @@
  * It reads SvelteKit's GENERATED manifest rather than a list of its own, so
  * a new route needs no change here.
  */
-import { hydrate } from 'svelte';
-import { nodes } from '../.svelte-kit/generated/client/app.js';
-// The root component ITSELF, not `app.js`'s `root` — that one is wrapped in
-// `asClassComponent` from svelte/legacy for the old component API, and
-// Svelte 5's `hydrate` wants the function.
-import root from '../.svelte-kit/generated/root.svelte';
+// `root` here is SvelteKit's own export: root.svelte wrapped in
+// `asClassComponent`. Calling Svelte 5's `hydrate()` on the raw component
+// instead looked equivalent and was not — it appended a fresh copy of
+// everything in <svelte:head> beside the copy the build had already
+// written, so every page carried two canonicals, two descriptions and six
+// hreflangs. The wrapper is what claims them. SvelteKit constructs it
+// exactly this way, and matching that is also what keeps this file from
+// drifting away from the framework it borrows.
+import { nodes, root } from '../.svelte-kit/generated/client/app.js';
+import { asFile } from './shims/navigation';
 
 type Payload = { type: string; data: Record<string, unknown> } | null;
 
@@ -84,8 +88,12 @@ export async function start(options: {
 		state: {}
 	};
 
-	hydrate(root, {
+	dedupeHead();
+	new root({
 		target: element as HTMLElement,
+		hydrate: true,
+		// asynchronous instantiation, as SvelteKit does it: no flushSync
+		sync: false,
 		props: {
 			stores: { page: store(page), navigating: store(null), updated: store(false) },
 			page,
@@ -107,6 +115,31 @@ export async function start(options: {
  * stands exactly as built.
  */
 /**
+ * The head, once the page is alive.
+ *
+ * Hydration adds a second copy of everything in `<svelte:head>` — canonical,
+ * description, the three hreflangs — beside the copy the build wrote.
+ * SvelteKit's own client does not, and matching it exactly was not worth
+ * more of the framework's internals than this: nothing offline reads a
+ * canonical link, so the duplicates are invisible to a reader and only
+ * wrong on principle.
+ *
+ * Called BEFORE hydration, removing what the build wrote so that the live
+ * copy — the one that stays correct if anything ever changes it — is the
+ * only one left.
+ */
+function dedupeHead() {
+	for (const selector of [
+		'link[rel="canonical"]',
+		'link[rel="alternate"]',
+		'meta[name="description"]',
+		'meta[property^="og:"]'
+	]) {
+		document.head.querySelectorAll(selector).forEach((node) => node.remove());
+	}
+}
+
+/**
  * Links, once the page is alive.
  *
  * Rewriting the built HTML gets the links that were prerendered, and misses
@@ -121,7 +154,6 @@ export async function start(options: {
  * reader happened to unzip the book.
  */
 function interceptLinks() {
-	const up = (window as unknown as { __scrutabor_up?: string }).__scrutabor_up ?? './';
 	addEventListener(
 		'click',
 		(event) => {
@@ -130,8 +162,7 @@ function interceptLinks() {
 			const href = anchor?.getAttribute('href');
 			if (!href || !href.startsWith('/')) return;
 			event.preventDefault();
-			const suffix = /\.[a-z0-9]+$/.test(href) ? '' : '.html';
-			location.href = up + href.slice(1) + suffix;
+			location.href = asFile(href);
 		},
 		true
 	);

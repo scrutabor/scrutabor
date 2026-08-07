@@ -2,7 +2,7 @@
 // shipped behavior or a regression that actually happened (2026-08-04:
 // taps reverted by the deep-link effect; panel not restored on back from
 // a concept page) — keep them green.
-import { expect, test } from './fixtures';
+import { atRoute, expect, test } from './fixtures';
 
 const PATER = '/pl/orationes/pater-noster';
 const panel = 'aside';
@@ -20,7 +20,7 @@ test('tapping the same word closes and cleans the URL', async ({ page }) => {
 	await page.locator('#w008').click();
 	await page.locator('#w008').click();
 	await expect(page.locator(panel)).toHaveCount(0);
-	await expect(page).toHaveURL(/pater-noster$/);
+	await expect(page).toHaveURL(atRoute('pater-noster'));
 });
 
 test('switching words replaces history instead of pushing', async ({ page }) => {
@@ -31,7 +31,7 @@ test('switching words replaces history instead of pushing', async ({ page }) => 
 	// one back skips every intermediate word and lands on the clean entry
 	await page.goBack();
 	await expect(page.locator(panel)).toHaveCount(0);
-	await expect(page).toHaveURL(/pater-noster$/);
+	await expect(page).toHaveURL(atRoute('pater-noster'));
 });
 
 test('back closes the panel, forward reopens it', async ({ page }) => {
@@ -40,7 +40,7 @@ test('back closes the panel, forward reopens it', async ({ page }) => {
 	await expect(page.locator(panelWord)).toHaveText('Panem');
 	await page.goBack();
 	await expect(page.locator(panel)).toHaveCount(0);
-	await expect(page).toHaveURL(/pater-noster$/);
+	await expect(page).toHaveURL(atRoute('pater-noster'));
 	await page.goForward();
 	await expect(page.locator(panelWord)).toHaveText('Panem');
 	await expect(page).toHaveURL(/\?w=w022$/);
@@ -51,7 +51,7 @@ test('clicking outside the sheet closes it', async ({ page }) => {
 	await page.locator('#w008').click();
 	await page.locator('h1').click();
 	await expect(page.locator(panel)).toHaveCount(0);
-	await expect(page).toHaveURL(/pater-noster$/);
+	await expect(page).toHaveURL(atRoute('pater-noster'));
 });
 
 test('Escape closes the sheet', async ({ page }) => {
@@ -71,7 +71,7 @@ test('closing a deep-linked panel strips ?w= without leaving the page', async ({
 	await page.goto(`${PATER}?w=w049`);
 	await page.locator('h1').click();
 	await expect(page.locator(panel)).toHaveCount(0);
-	await expect(page).toHaveURL(/pater-noster$/);
+	await expect(page).toHaveURL(atRoute('pater-noster'));
 	await expect(page.locator('h1')).toHaveText('Pater noster');
 });
 
@@ -79,7 +79,7 @@ test('panel is restored on back from a grammar-concept page', async ({ page }) =
 	await page.goto(PATER);
 	await page.locator('#w008').click();
 	await page.locator('aside a[href="/pl/grammatica/nominativus"]').click();
-	await expect(page).toHaveURL(/grammatica\/nominativus$/);
+	await expect(page).toHaveURL(atRoute('grammatica/nominativus'));
 	await page.goBack();
 	await expect(page.locator(panelWord)).toHaveText('nomen');
 	await expect(page.locator('.word.selected')).toBeInViewport();
@@ -89,7 +89,7 @@ test('panel is restored on back from a lemma page', async ({ page }) => {
 	await page.goto(PATER);
 	await page.locator('#w008').click();
 	await page.locator('aside a[href="/pl/lemma/nomen"]').click();
-	await expect(page).toHaveURL(/lemma\/nomen$/);
+	await expect(page).toHaveURL(atRoute('lemma/nomen'));
 	await expect(page.locator('h1')).toHaveText('nomen');
 	await page.goBack();
 	await expect(page.locator(panelWord)).toHaveText('nomen');
@@ -118,6 +118,6 @@ test('switching language keeps the panel open on the same word', async ({ page }
 	await page.locator('#w008').click();
 	await page.locator('button[aria-label="wybór języka"]').click();
 	await page.locator('a', { hasText: 'English' }).click();
-	await expect(page).toHaveURL(/\/en\/orationes\/pater-noster\?w=w008$/);
+	await expect(page).toHaveURL(atRoute('/en/orationes/pater-noster', '?w=w008'));
 	await expect(page.locator(panelWord)).toHaveText('nomen');
 });

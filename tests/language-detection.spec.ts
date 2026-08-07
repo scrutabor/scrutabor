@@ -3,7 +3,7 @@
 // fires from <head> during parse, which aborts the initial load — hence
 // waitUntil: 'commit' plus a swallowed goto error before waitForURL.
 import { test as noScript } from '@playwright/test';
-import { expect, test } from './fixtures';
+import { atRoute, expect, test } from './fixtures';
 
 async function landFrom(page: import('@playwright/test').Page): Promise<void> {
 	await page.goto('/', { waitUntil: 'commit' }).catch(() => {});
@@ -14,7 +14,7 @@ test.describe('polish browser', () => {
 
 	test('the root lands on /pl', async ({ page }) => {
 		await landFrom(page);
-		await page.waitForURL(/\/pl$/);
+		await page.waitForURL(atRoute('/pl'));
 	});
 });
 
@@ -23,7 +23,7 @@ test.describe('english browser', () => {
 
 	test('the root lands on /en', async ({ page }) => {
 		await landFrom(page);
-		await page.waitForURL(/\/en$/);
+		await page.waitForURL(atRoute('/en'));
 	});
 });
 
@@ -32,13 +32,13 @@ test.describe('unsupported browser language', () => {
 
 	test('the root falls back to English', async ({ page }) => {
 		await landFrom(page);
-		await page.waitForURL(/\/en$/);
+		await page.waitForURL(atRoute('/en'));
 	});
 
 	test('a stored choice wins over the browser', async ({ page }) => {
 		await page.addInitScript(() => localStorage.setItem('scrutabor-lang', 'pl'));
 		await landFrom(page);
-		await page.waitForURL(/\/pl$/);
+		await page.waitForURL(atRoute('/pl'));
 	});
 });
 

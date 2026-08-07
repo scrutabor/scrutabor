@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Lang } from '$lib/i18n';
 	import { ORIGIN } from '$lib/site';
+	import { where } from '$lib/where.svelte';
 
 	let { children, data } = $props();
 
@@ -11,6 +12,7 @@
 	// Remember the reader's language and keep the live DOM lang in sync on
 	// client-side navigation (the prerendered <html lang> is set by hooks).
 	$effect(() => {
+		where.path = rest;
 		document.documentElement.lang = lang;
 		localStorage.setItem('scrutabor-lang', lang);
 	});
