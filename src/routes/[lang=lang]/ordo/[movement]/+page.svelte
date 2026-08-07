@@ -123,8 +123,7 @@
 
 <div class="page reading">
 	<header>
-		<PageNav {lang} />
-		<a href="/{lang}/ordo" class="up smallcaps" lang="la">Ordo Missæ</a>
+		<PageNav {lang} parent="/{lang}/ordo" parentLabel="Ordo Missæ" parentLang="la" />
 		<h1 lang="la">{movement?.title ?? ''}</h1>
 		<p class="subtitle smallcaps">{movement?.label[lang] ?? ''}</p>
 		<div class="help-row">
@@ -221,10 +220,6 @@
 </div>
 
 <style>
-	h1 {
-		margin-top: 0.2rem;
-	}
-
 	/* The rule closes the top section, so it sits nearer to what it closes
 	   than to what comes after it — overshooting that put it closer to the
 	   first prayer and it read as that prayer's opening rule instead. */
@@ -234,19 +229,6 @@
 
 	.part:first-of-type {
 		padding-top: 2.2rem;
-	}
-
-	.up {
-		display: block;
-		margin: 1.6rem 0 0;
-		text-align: center;
-		font-size: 0.75rem;
-		color: var(--ink-soft);
-		text-decoration: none;
-	}
-
-	.up:hover {
-		color: var(--rubric);
 	}
 
 	/* Every part is a station on one road: the rule marks the step, and a

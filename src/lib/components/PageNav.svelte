@@ -20,15 +20,28 @@
 	// scrutabor › gramatyka — which says both things at once: where you are,
 	// and that you can go up. An ordered list because that is what a
 	// breadcrumb is; the separator is drawn, not read.
-	let { lang, parent, parentLabel }: { lang: Lang; parent?: string; parentLabel?: string } =
-		$props();
+	// parentLang, because a crumb is not always in the interface language:
+	// the Ordo's is "Ordo Missæ", which is Latin and has to say so — the
+	// Polish sweep reads the nearest [lang] to decide whether a line is
+	// governed by Polish typography, and <html lang> would otherwise claim
+	// it.
+	let {
+		lang,
+		parent,
+		parentLabel,
+		parentLang
+	}: { lang: Lang; parent?: string; parentLabel?: string; parentLang?: string } = $props();
 </script>
 
 <nav>
 	<ol class="trail smallcaps">
 		<li><a href="/{lang}" class="back">scrutabor</a></li>
 		{#if parent && parentLabel}
-			<li><span class="sep" aria-hidden="true">›</span><a href={parent}>{parentLabel}</a></li>
+			<li>
+				<span class="sep" aria-hidden="true">›</span><a href={parent} lang={parentLang}
+					>{parentLabel}</a
+				>
+			</li>
 		{/if}
 	</ol>
 	<div class="nav-right">

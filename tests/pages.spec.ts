@@ -52,6 +52,49 @@ test('a page one level down names its parent without renaming the book', async (
 	await expect(page).toHaveURL(atRoute('/pl/grammatica'));
 	await expect(page.locator('nav .trail li')).toHaveCount(1);
 	await expect(page.locator('nav .trail a')).toHaveText('scrutabor');
+
+	// The Ordo's movements are the other page one level down, and they used
+	// a device of their own for it — a centred link under the nav — so the
+	// same question was answered two ways on two pages (owner, 2026-08-07).
+	// One device now, and this crumb declares its language: it is Latin in
+	// a Polish interface, and the Polish typography sweep decides what a
+	// line is governed by from the nearest [lang].
+	await page.goto('/pl/ordo/offertorium');
+	const ordo = page.locator('nav .trail');
+	await expect(ordo.locator('li')).toHaveCount(2);
+	await expect(ordo.locator('a').nth(1)).toHaveText('Ordo Missæ');
+	await expect(ordo.locator('a').nth(1)).toHaveAttribute('lang', 'la');
+	await ordo.locator('a').nth(1).click();
+	await expect(page).toHaveURL(atRoute('/pl/ordo'));
+});
+
+test('every kind of page opens on the same line', async ({ page }) => {
+	// The chrome is shared and the spacing under it was not. The Ordo's
+	// movements held their h1 0.2rem below the nav instead of the 1.8rem
+	// every other page takes, because the centred link that used to sit
+	// between them supplied the difference — so removing that link left the
+	// title 3px under the settings row while five other page kinds sat at
+	// 29. A distance that is a fact about a DELETED element is exactly the
+	// kind of drift this catches.
+	const gaps: Record<string, number> = {};
+	for (const url of [
+		'/pl/ordo', // an index
+		'/pl/ordo/offertorium', // the flow
+		'/pl/ordinarium/credo', // a reading page
+		'/pl/grammatica/nominativus', // one level down
+		'/pl/lemma/mater', // a lemma
+		'/pl/editio' // the colophon
+	]) {
+		await page.goto(url);
+		gaps[url] = await page.evaluate(() => {
+			const nav = document.querySelector('nav')!.getBoundingClientRect();
+			return Math.round(document.querySelector('h1')!.getBoundingClientRect().top - nav.bottom);
+		});
+	}
+	expect(
+		new Set(Object.values(gaps)).size,
+		`the pages open differently: ${JSON.stringify(gaps)}`
+	).toBe(1);
 });
 
 test('a concept example deep-links into the prayer', async ({ page }) => {
