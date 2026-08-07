@@ -3,7 +3,13 @@
 // handles the data; this sweep is what proves it reached the page — it
 // reads the rendered text of every Polish surface the sitemap knows and
 // fails on any one-letter word still followed by a breakable space.
-import { expect, test } from './fixtures';
+// `bare` and not the full fixture: this reads several hundred pages, and
+// what it reads — rendered text — is in the prerendered HTML. Waiting on
+// every one of them for hydration and for the webfont bought nothing and
+// spent the budget it then ran out of, twice, on CI. The pages this DOES
+// operate wait for themselves, below. The network guard is the reason it
+// still goes through a fixture at all.
+import { bare as test, expect, settled } from './fixtures';
 
 // Reads sitemap.xml to find every Polish page. A downloaded copy carries
 // no sitemap — nothing there is crawled — so the sweep has nothing to
@@ -23,14 +29,21 @@ test('no Polish surface leaves a one-letter word before a breakable space @onlin
 
 	const offences: string[] = [];
 	for (const path of paths) {
-		await page.goto(path);
-		// Reading pages keep their fullest prose behind the help slider; read
-		// at the top step so translations and narratives are in the DOM, and
-		// open a word so gloss, lemma note and contextual note render too.
-		const slider = page.locator('input[type="range"]');
-		if (await slider.count()) await slider.fill('2');
-		const word = page.locator('.word').first();
-		if (await word.count()) await word.click();
+		// A sweep that fails without naming the page it was on is a sweep
+		// that costs a CI round trip to diagnose. It cost two.
+		await test.step(path, async () => {
+			await page.goto(path);
+			// Reading pages keep their fullest prose behind the help slider; read
+			// at the top step so translations and narratives are in the DOM, and
+			// open a word so gloss, lemma note and contextual note render too.
+			const slider = page.locator('input[type="range"]');
+			const word = page.locator('.word').first();
+			const operable = (await slider.count()) + (await word.count()) > 0;
+			// only a page about to be OPERATED has to be alive
+			if (operable) await settled(page);
+			if (await slider.count()) await slider.fill('2');
+			if (await word.count()) await word.click();
+		});
 
 		offences.push(
 			...(

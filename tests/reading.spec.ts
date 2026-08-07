@@ -1,5 +1,5 @@
 // The reading experience: help ladder, panel layers, cross-reference jumps.
-import { atRoute, expect, test } from './fixtures';
+import { atRoute, expect, settled, test } from './fixtures';
 
 const AVE = '/pl/orationes/ave-maria';
 const CONFITEOR = '/pl/ordinarium/confiteor';
@@ -264,9 +264,20 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	await page.goto('/pl/ordinarium/confiteor');
 	await pager.locator('a', { hasText: 'Míchaël' }).click();
 	await expect(page).toHaveURL(atRoute('orationes/sancte-michael'));
-	// arrow keys page too, but never while the slider owns them
+	// arrow keys page too, but never while the slider owns them.
+	// The URL arriving is not the page being ready to answer a key: this
+	// navigation was a CLICK, so it did not go through the fixture's goto,
+	// and in the folder it is a real document load. An assertion after one
+	// is safe because assertions retry — a keystroke is not, and this one
+	// landed on a page with nothing listening yet, on CI, in the offline
+	// project, while every local run passed.
+	await settled(page);
 	await page.keyboard.press('ArrowRight');
 	await expect(page).toHaveURL(atRoute('ordinarium/confiteor'));
+	// and that key was a navigation too, so the same applies — the more so
+	// here, where the assertion is that NOTHING happens: an unhydrated page
+	// would give exactly that answer for the wrong reason
+	await settled(page);
 	await page.locator('input[type="range"]').focus();
 	await page.keyboard.press('ArrowRight');
 	await expect(page).toHaveURL(atRoute('ordinarium/confiteor'));
