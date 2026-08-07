@@ -286,6 +286,29 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	await expect(page.locator('.pager a')).toHaveCount(1);
 });
 
+test('a modified arrow belongs to the browser, not to the pager', async ({ page }) => {
+	// Cmd+← is Back on a Mac and Alt+← is Back everywhere else, and the
+	// pager swallowed both: the reader pressed Back and arrived at the
+	// NEXT prayer instead (owner, 2026-08-07). It checked which key and
+	// never which modifiers.
+	//
+	// Loaded straight into this page, so there is nothing behind it in
+	// history: whatever the browser makes of the chord, the one thing that
+	// must not happen is a move through the book. Sancte Míchaël is what
+	// a bare ArrowLeft would reach from here, which is what the test above
+	// asserts it still does.
+	await page.goto('/pl/ordinarium/confiteor');
+	for (const chord of [
+		'Meta+ArrowLeft',
+		'Alt+ArrowLeft',
+		'Control+ArrowRight',
+		'Shift+ArrowRight'
+	]) {
+		await page.keyboard.press(chord);
+		await expect(page, `${chord} paged the book`).toHaveURL(atRoute('ordinarium/confiteor'));
+	}
+});
+
 test.describe('keeping the screen awake', () => {
 	test.use({ permissions: ['screen-wake-lock'] });
 

@@ -97,6 +97,13 @@
 		// slider) owns them. (Escape belongs to whichever sheet is open,
 		// and it handles it itself.)
 		if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+		// A BARE arrow key, and only that. Cmd+← is Back on a Mac and Alt+←
+		// is Back everywhere else, and this was swallowing both: the reader
+		// pressed Back and went to the next prayer instead (owner,
+		// 2026-08-07). Every modifier is refused rather than the two that
+		// are known to mean something, because a shortcut this page has
+		// never heard of still belongs to the browser and not to it.
+		if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
 		const tag = (document.activeElement as HTMLElement | null)?.tagName;
 		if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
 		const target = e.key === 'ArrowLeft' ? around.prev : around.next;
