@@ -43,5 +43,9 @@ jobs:
       - run: npm test
       # The deployment gate reads this ref over git smart-HTTP (no API
       # rate limits): its existence IS the green verdict for the sha.
-      - if: github.ref == 'refs/heads/main'
+      # Gate branches get it too: the staging deploy builds their tips
+      # through the same ci-gate, and a verdict names a SHA, not a
+      # branch — a sha green on a gate branch is green on main after
+      # the fast-forward. PRs stay unmarked (forks can't push anyway).
+      - if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || endsWith(github.ref, '-gate'))
         run: git push origin "HEAD:refs/ci-green/${GITHUB_SHA}"
