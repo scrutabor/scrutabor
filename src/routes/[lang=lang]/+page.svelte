@@ -49,6 +49,7 @@
 		stanzaLink: string;
 		privacyLine: string;
 		privacyLink: string;
+		supportLink: string;
 		editioLink: string;
 		sourcesLink: string;
 	}
@@ -76,6 +77,7 @@
 			stanzaLink: 'Psalm\u00a0118, He — w.\u00a034',
 			privacyLine: 'Bez kont, bez śledzenia, bez reklam.',
 			privacyLink: 'prywatność',
+			supportLink: 'pomoc',
 			editioLink: 'jak powstaje to wydanie',
 			sourcesLink: 'źródła na GitHubie'
 		}),
@@ -93,6 +95,7 @@
 			stanzaLink: 'Psalm\u00a0118, He — v.\u00a034',
 			privacyLine: 'No accounts, no tracking, no ads.',
 			privacyLink: 'privacy',
+			supportLink: 'support',
 			editioLink: 'how this edition is made',
 			sourcesLink: 'source on GitHub'
 		}
@@ -268,6 +271,7 @@
 			<p class="privacy-line">{t.privacyLine}</p>
 			<p class="foot-links">
 				<a href="/{lang}/privacy">{t.privacyLink}</a>
+				· <a href="/{lang}/support">{t.supportLink}</a>
 				· <a href="/app/{lang}/editio">{t.editioLink}</a>
 				· <a href="https://github.com/scrutabor" rel="external">{t.sourcesLink}</a>
 			</p>

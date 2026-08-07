@@ -11,7 +11,7 @@ export const prerender = true;
 // pure redirects and are left out, as the root always was.
 // Paths are language-relative; each gets one <url> per language carrying
 // the full hreflang pair so crawlers bind the two variants together.
-const landing: string[] = ['', '/privacy'];
+const landing: string[] = ['', '/privacy', '/support'];
 
 const app: string[] = [
 	'',

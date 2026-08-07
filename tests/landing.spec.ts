@@ -143,6 +143,18 @@ test.describe('landing @online', () => {
 		expect((await page.request.get('/en/privacy')).status()).toBe(200);
 	});
 
+	test('the support page offers real contact in both languages', async ({ page }) => {
+		await page.goto('/pl/support');
+		await expect(page.locator('h1')).toHaveText('Pomoc');
+		await expect(
+			page.locator('a[href="https://github.com/scrutabor/scrutabor-app/issues"]')
+		).toBeVisible();
+		await expect(page.locator('a[href^="mailto:"]')).toBeVisible();
+		await page.goto('/en/support');
+		await expect(page.locator('h1')).toHaveText('Support');
+		expect((await page.request.get('/en/support')).status()).toBe(200);
+	});
+
 	test('the footer reaches the public source', async ({ page }) => {
 		await page.goto('/en');
 		await expect(page.getByRole('link', { name: 'source on GitHub' })).toHaveAttribute(

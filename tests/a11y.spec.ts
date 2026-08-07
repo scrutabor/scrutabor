@@ -19,6 +19,7 @@ const SURFACES = [
 	{ name: 'app language router', path: '/app/' },
 	{ name: 'landing @online', path: '/pl' },
 	{ name: 'privacy page @online', path: '/en/privacy' },
+	{ name: 'support page @online', path: '/pl/support' },
 	{ name: 'catalog', path: '/app/pl' },
 	{ name: 'ordo index', path: '/app/pl/ordo' },
 	{ name: 'ordo movement', path: '/app/pl/ordo/communio' },
