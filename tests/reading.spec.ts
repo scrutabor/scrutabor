@@ -1199,3 +1199,48 @@ test('a rubric sits centrally between the verses it parts', async ({ page }) => 
 		expect(g.above, 'and still sits nearer the verse it names').toBeGreaterThan(g.below * 2);
 	}
 });
+
+test('the translation gets a reading measure, not half the column', async ({ page }) => {
+	// It was capped at 56ch and broke at little more than half the width
+	// the Latin above it used, so a psalm verse of 77 characters wrapped
+	// where its own Latin had not — which reads as a fault, not a measure
+	// (owner, 2026-08-09). Still capped, because prose at the full column
+	// runs past 100 characters a line; capped at the top of the readable
+	// range rather than the bottom.
+	await page.setViewportSize({ width: 1440, height: 900 });
+	await page.goto('/app/pl/ordinarium/lavabo');
+	await page.locator('input[type=range]').fill('2');
+
+	const m = await page.evaluate(() => {
+		const tr = document.querySelector('.translation') as HTMLElement;
+		const cs = getComputedStyle(tr);
+		const probe = document.createElement('span');
+		probe.style.cssText = `position:absolute;visibility:hidden;white-space:nowrap;font:${cs.font}`;
+		document.body.appendChild(probe);
+		probe.textContent = '0'.repeat(100);
+		const chPx = probe.getBoundingClientRect().width / 100;
+		probe.remove();
+		const lh = parseFloat(cs.lineHeight);
+		const all = [...document.querySelectorAll('.translation')] as HTMLElement[];
+		const ink = (e: Element) => {
+			const r = document.createRange();
+			r.selectNodeContents(e);
+			return r.getBoundingClientRect().width;
+		};
+		return {
+			measureCh: parseFloat(cs.maxWidth) / chPx,
+			wrapped: all.filter((t) => Math.round(t.getBoundingClientRect().height / lh) > 1).length,
+			total: all.length,
+			widestLatin: Math.max(...[...document.querySelectorAll('.verse')].map(ink)),
+			cap: parseFloat(cs.maxWidth)
+		};
+	});
+
+	// bounded above: prose still gets a measure, not the whole column
+	expect(m.measureCh, 'the translation keeps a readable measure').toBeLessThanOrEqual(80);
+	// bounded below: and not so narrow that it reads as broken
+	expect(m.measureCh, 'the measure is not half a column').toBeGreaterThanOrEqual(64);
+	// the symptom itself: this psalm's verses each fit their own line, as their Latin does
+	expect(m.wrapped, `${m.wrapped} of ${m.total} verses wrapped where their Latin did not`).toBe(0);
+	expect(m.cap / m.widestLatin, 'the two measures are of a kind').toBeGreaterThan(0.6);
+});

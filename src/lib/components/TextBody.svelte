@@ -589,9 +589,17 @@
 
 	.translation {
 		margin: 0;
-		/* its face is wider than the narrative's for the same ch, so it
-		   needs fewer of them to land on the same measure */
-		max-width: 56ch;
+		/* The translation sits directly under the Latin it renders, and the
+		   Latin runs the whole column because every word there is as wide
+		   as its gloss. At 56ch the translation broke at little more than
+		   half the width the line above it used, and a psalm verse of 77
+		   characters wrapped where its Latin had not — which reads as a
+		   fault rather than as a measure (owner, 2026-08-09). It is still
+		   capped, because prose at the full column runs past 100 characters
+		   a line, but at the top of the readable measure rather than the
+		   bottom of it: the psalm's verses now sit on one line each, as
+		   their Latin does. In `ch`, so the cap follows the type. */
+		max-width: 72ch;
 		color: var(--ink-soft);
 		font-style: italic;
 		font-size: calc(var(--reading) * 0.724);
