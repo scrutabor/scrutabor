@@ -760,7 +760,7 @@ test('every line of a prayer starts on the same left edge', async ({ page }) => 
 	}
 });
 
-test('a reading page takes the screen it is given, prose excepted', async ({ page }) => {
+test('a reading page takes the screen it is given', async ({ page }) => {
 	// The owner's report: on a laptop the app looked mobile-only. It was —
 	// the column was a fixed 38rem, so a 1512px screen was 40% used and 10
 	// of the Credo's 17 verses wrapped. 38rem is the right measure for
@@ -769,24 +769,13 @@ test('a reading page takes the screen it is given, prose excepted', async ({ pag
 	// characters where ordinary setting wants 45-75. It was short of the
 	// limit, not at it.
 	//
-	// So the verses take the wide column and the prose does not — rubrics,
-	// their narratives and the translations are ordinary sentences and ran
-	// to 127 characters a line at 56rem.
-	// The prose measure is set in `ch` (62ch, 56ch), so the rule to check is
-	// that the box is CAPPED at it — not an estimate of how many characters
-	// land on a line. That estimate divides a first-line width by an average
-	// density taken across however many lines the text happens to wrap into,
-	// and it read 69 on one machine and 81 on another for the same CSS. The
-	// box, in the page's own units, is the same number everywhere.
+	// This test used to carry a second half — "prose excepted" — holding
+	// the rubrics and translations to a `ch` measure inside that wide
+	// column. The owner withdrew the exception on 2026-08-09: every kind of
+	// text now ends where the Latin ends, and that is asserted on the
+	// EDGES, in px, by 'every kind of text ends where the Latin ends'.
 	const measure = () =>
 		page.evaluate(() => {
-			const capped = (sel: string) => {
-				const el = document.querySelector(sel);
-				if (!el) return null;
-				const width = el.getBoundingClientRect().width;
-				const declared = parseFloat(getComputedStyle(el).maxWidth); // the ch measure, in px
-				return { width: Math.round(width), cap: Math.round(declared) };
-			};
 			const counts: number[] = [];
 			for (const v of document.querySelectorAll('.verse.glossed')) {
 				const lines = new Map<number, number>();
@@ -799,10 +788,7 @@ test('a reading page takes the screen it is given, prose excepted', async ({ pag
 			counts.sort((a, b) => a - b);
 			return {
 				column: Math.round(document.querySelector('.page')!.getBoundingClientRect().width),
-				latinChars: counts[Math.floor(counts.length / 2)],
-				rubric: capped('.rubric-la'),
-				narrative: capped('.rubric-narrative'),
-				translation: capped('.translation')
+				latinChars: counts[Math.floor(counts.length / 2)]
 			};
 		});
 
@@ -812,23 +798,6 @@ test('a reading page takes the screen it is given, prose excepted', async ({ pag
 	const wide = await measure();
 	expect(wide.column, 'the column grows past the prose measure').toBeGreaterThan(38 * 16);
 	expect(wide.latinChars, 'and the Latin line reaches a real measure').toBeGreaterThan(40);
-	for (const [what, box] of [
-		['the rubric', wide.rubric],
-		['its narrative', wide.narrative],
-		['the translation', wide.translation]
-	] as const) {
-		expect(box, `${what} is on the page`).not.toBeNull();
-		// its own declared measure is a real one — 45 to 75 characters is
-		// ordinary setting, and `ch` runs a little under a character
-		expect(box!.cap, `${what} declares a prose measure`).toBeGreaterThan(40 * 8);
-		expect(box!.cap, `${what} declares a prose measure`).toBeLessThan(75 * 12);
-		// and it is HELD: the box stops at the measure instead of following
-		// the verse column, which is what ran these to 127 characters a line
-		expect(box!.width, `${what} is prose and must not run the full column`).toBeLessThanOrEqual(
-			box!.cap
-		);
-		expect(box!.width, `${what} must not run the full column`).toBeLessThan(wide.column * 0.8);
-	}
 
 	// a phone is unchanged: the column is the screen
 	await page.setViewportSize({ width: 390, height: 844 });
@@ -1200,47 +1169,70 @@ test('a rubric sits centrally between the verses it parts', async ({ page }) => 
 	}
 });
 
-test('the translation gets a reading measure, not half the column', async ({ page }) => {
-	// It was capped at 56ch and broke at little more than half the width
-	// the Latin above it used, so a psalm verse of 77 characters wrapped
-	// where its own Latin had not — which reads as a fault, not a measure
-	// (owner, 2026-08-09). Still capped, because prose at the full column
-	// runs past 100 characters a line; capped at the top of the readable
-	// range rather than the bottom.
+test('every kind of text ends where the Latin ends', async ({ page }) => {
+	// One right margin on the page, not four (owner, 2026-08-09). Verse,
+	// rubric, narrative and translation all run to the column's right
+	// edge; none of them carries a measure of its own.
+	//
+	// This asserts EDGES, in px, deliberately. The rule it replaced was
+	// three per-block `ch` caps tuned to land together — and `ch` is the
+	// width of a zero in whatever font actually loaded, so the three that
+	// sat within 4px on a Mac sat 40px apart on the Linux runner.
+	await page.setViewportSize({ width: 1440, height: 900 });
+	await page.goto('/app/pl/ordinarium/orate-fratres');
+	await page.locator('input[type=range]').fill('2');
+
+	const edges = await page.evaluate(() => {
+		// the right edge of a block's CONTENT box — where its line can reach
+		const contentRight = (el: Element) => {
+			const cs = getComputedStyle(el);
+			return (
+				el.getBoundingClientRect().right -
+				parseFloat(cs.paddingRight) -
+				parseFloat(cs.borderRightWidth)
+			);
+		};
+		const of = (sel: string) =>
+			[...document.querySelectorAll(sel)].map((e) => Math.round(contentRight(e)));
+		return {
+			verse: of('.verse'),
+			rubricLa: of('.rubric-la'),
+			narrative: of('.rubric-narrative'),
+			translation: of('.translation')
+		};
+	});
+
+	expect(edges.verse.length, 'the page carries verses').toBeGreaterThan(0);
+	const latin = Math.max(...edges.verse);
+
+	for (const kind of ['rubricLa', 'narrative', 'translation'] as const) {
+		expect(edges[kind].length, `the page carries ${kind}`).toBeGreaterThan(0);
+		for (const right of edges[kind]) {
+			expect(right, `${kind} ends where the Latin ends (Latin ${latin})`).toBeGreaterThan(
+				latin - 2
+			);
+			expect(right, `${kind} does not overrun the Latin (Latin ${latin})`).toBeLessThan(latin + 2);
+		}
+	}
+});
+
+test('a translation does not wrap where its own Latin did not', async ({ page }) => {
+	// The symptom that started it: capped at 56ch, the translation broke at
+	// little more than half the width the line above it used, and each of
+	// this psalm's verses wrapped though its Latin had not.
 	await page.setViewportSize({ width: 1440, height: 900 });
 	await page.goto('/app/pl/ordinarium/lavabo');
 	await page.locator('input[type=range]').fill('2');
 
 	const m = await page.evaluate(() => {
-		const tr = document.querySelector('.translation') as HTMLElement;
-		const cs = getComputedStyle(tr);
-		const probe = document.createElement('span');
-		probe.style.cssText = `position:absolute;visibility:hidden;white-space:nowrap;font:${cs.font}`;
-		document.body.appendChild(probe);
-		probe.textContent = '0'.repeat(100);
-		const chPx = probe.getBoundingClientRect().width / 100;
-		probe.remove();
-		const lh = parseFloat(cs.lineHeight);
 		const all = [...document.querySelectorAll('.translation')] as HTMLElement[];
-		const ink = (e: Element) => {
-			const r = document.createRange();
-			r.selectNodeContents(e);
-			return r.getBoundingClientRect().width;
-		};
+		const lh = parseFloat(getComputedStyle(all[0]).lineHeight);
 		return {
-			measureCh: parseFloat(cs.maxWidth) / chPx,
 			wrapped: all.filter((t) => Math.round(t.getBoundingClientRect().height / lh) > 1).length,
-			total: all.length,
-			widestLatin: Math.max(...[...document.querySelectorAll('.verse')].map(ink)),
-			cap: parseFloat(cs.maxWidth)
+			total: all.length
 		};
 	});
 
-	// bounded above: prose still gets a measure, not the whole column
-	expect(m.measureCh, 'the translation keeps a readable measure').toBeLessThanOrEqual(80);
-	// bounded below: and not so narrow that it reads as broken
-	expect(m.measureCh, 'the measure is not half a column').toBeGreaterThanOrEqual(64);
-	// the symptom itself: this psalm's verses each fit their own line, as their Latin does
-	expect(m.wrapped, `${m.wrapped} of ${m.total} verses wrapped where their Latin did not`).toBe(0);
-	expect(m.cap / m.widestLatin, 'the two measures are of a kind').toBeGreaterThan(0.6);
+	expect(m.total, 'the psalm carries its translations').toBeGreaterThan(5);
+	expect(m.wrapped, `${m.wrapped} of ${m.total} wrapped where their Latin did not`).toBe(0);
 });

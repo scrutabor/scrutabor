@@ -544,16 +544,27 @@
 		padding-inline-start: calc(var(--reading) * 0.621);
 	}
 
-	/* The verses can take the whole of a wide column, because a line of
-	   them is only as long as the words on it and every word is as wide as
-	   its gloss. The PROSE cannot: rubrics, their narratives and the
-	   translations are ordinary sentences, and at 56rem they were running
-	   to 127 characters a line. Capped in `ch`, so each block is held to a
-	   reading measure by its OWN type rather than by a number of rem that
-	   is only right for one of them. */
+	/* EVERY KIND OF TEXT ENDS WHERE THE LATIN ENDS (owner, 2026-08-09).
+	   Verse, rubric, narrative and translation all run to the one right
+	   edge of the column, so the page has one right margin and not four.
+	   None of them carries a measure of its own.
+
+	   That replaced a set of per-block `ch` caps meant to hold each kind
+	   of prose to a classical measure, and two things were wrong with
+	   them. They stopped the prose some 200px short of the Latin standing
+	   directly above it, which a reader takes for a fault rather than for
+	   a measure. And `ch` is the width of a zero in whatever font ACTUALLY
+	   LOADED: the three numbers that landed within 4px of each other on a
+	   Mac landed 40px apart on the Linux runner, and the test written to
+	   hold them together is what caught it. A measure tuned in `ch` across
+	   three different faces is not a measure, it is a coincidence.
+
+	   The column already bounds the line without any of that: `.page`
+	   caps at 896px, so prose reaches about 105 characters at the
+	   smallest reading size on the widest screen, and fewer at every
+	   larger size. */
 	.rubric-la {
 		margin: 0;
-		max-width: 62ch;
 		color: var(--rubric);
 		font-style: italic;
 		font-size: calc(var(--reading) * 0.724);
@@ -561,7 +572,6 @@
 
 	.rubric-narrative {
 		margin: calc(var(--reading) * 0.172) 0 0;
-		max-width: 62ch;
 		color: var(--ink-soft);
 		font-size: calc(var(--reading) * 0.676);
 		line-height: 1.5;
@@ -589,17 +599,11 @@
 
 	.translation {
 		margin: 0;
-		/* The translation sits directly under the Latin it renders, and the
-		   Latin runs the whole column because every word there is as wide
-		   as its gloss. At 56ch the translation broke at little more than
-		   half the width the line above it used, and a psalm verse of 77
-		   characters wrapped where its Latin had not — which reads as a
-		   fault rather than as a measure (owner, 2026-08-09). It is still
-		   capped, because prose at the full column runs past 100 characters
-		   a line, but at the top of the readable measure rather than the
-		   bottom of it: the psalm's verses now sit on one line each, as
-		   their Latin does. In `ch`, so the cap follows the type. */
-		max-width: 72ch;
+		/* No measure of its own — it ends where the Latin above it ends;
+		   see the rule over .rubric-la. This is the block that started
+		   that change: capped, it broke at little more than half the width
+		   the line above it used, and a psalm verse of 77 characters
+		   wrapped where its own Latin had not. */
 		color: var(--ink-soft);
 		font-style: italic;
 		font-size: calc(var(--reading) * 0.724);
