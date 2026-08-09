@@ -330,13 +330,35 @@ test('the focus ring marks the word, not the line it sits on', async ({ page }) 
 	const m = await page.evaluate(() => {
 		const w = document.activeElement as HTMLElement;
 		const base = w.querySelector('.base') as HTMLElement;
+		const ring = getComputedStyle(base, '::before');
+		// where the ring's OUTERMOST edge falls, in page coordinates
+		const tint = base.getBoundingClientRect();
+		const pad = 0.07 * parseFloat(getComputedStyle(base).fontSize); // the wash's inset
+		const offset = parseFloat(ring.outlineOffset);
+		const outer = { left: tint.left - pad - offset, right: tint.right + pad + offset };
+		// the neighbouring words, whose letters the ring must not reach into
+		const words = [...document.querySelectorAll('button.word')];
+		const i = words.indexOf(w as HTMLButtonElement);
+		const inkOf = (b: Element | undefined) => {
+			if (!b) return null;
+			const r = document.createRange();
+			r.selectNodeContents(b.querySelector('.base')!);
+			return r.getBoundingClientRect();
+		};
+		const prev = inkOf(words[i - 1]),
+			next = inkOf(words[i + 1]);
 		return {
 			isWord: w.classList.contains('word'),
 			focusVisible: w.matches(':focus-visible'),
 			onTheButton: getComputedStyle(w).outlineStyle,
-			onTheWord: getComputedStyle(base, '::before').outlineStyle,
+			onTheWord: ring.outlineStyle,
+			offset,
+			width: parseFloat(ring.outlineWidth),
 			lineBox: w.getBoundingClientRect().height,
-			wordBox: base.getBoundingClientRect().height
+			wordBox: tint.height,
+			clearsPrev: prev ? outer.left - prev.right : Infinity,
+			clearsNext: next ? next.left - outer.right : Infinity,
+			stacking: { position: getComputedStyle(w).position, zIndex: getComputedStyle(w).zIndex }
 		};
 	});
 
@@ -346,6 +368,53 @@ test('the focus ring marks the word, not the line it sits on', async ({ page }) 
 	expect(m.onTheWord, 'a ring on the word').toBe('solid');
 	// the reason the two are not interchangeable
 	expect(m.lineBox, 'the line box is the taller of the two').toBeGreaterThan(m.wordBox + 8);
+
+	// Drawn INSIDE the tint. Offset outward and the page shows through
+	// between the two, and the ring reaches into the words on either side
+	// (owner, 2026-08-09) — the words are set 1.4px apart, so there is no
+	// room to spend outward at all.
+	expect(m.offset, 'the ring is inset by its own width, not offset out').toBeLessThanOrEqual(
+		-m.width
+	);
+	expect(m.clearsPrev, 'the ring clears the word before it').toBeGreaterThan(0);
+	expect(m.clearsNext, 'the ring clears the word after it').toBeGreaterThan(0);
+
+	// And nothing paints over it. Tints are pseudo-elements at one depth,
+	// where equal z-index paints in DOM order, so the word AFTER the
+	// focused one drew its tint across the ring's right stroke and it came
+	// back thinner than the other three (owner, 2026-08-09).
+	expect(m.stacking.position, 'the focused word is positioned').toBe('relative');
+	expect(m.stacking.zIndex, 'and stacks above its neighbours').not.toBe('auto');
+});
+
+test('two tinted words never run into one another', async ({ page }) => {
+	// The tint reached 0.07em to each side where the ruby columns leave
+	// 1.4px between words, so a hovered word and a selected one beside it
+	// merged into a band, each lying over the other's edge — which is how
+	// a neighbour came to be painting on a focus ring at all.
+	await page.setViewportSize({ width: 1440, height: 900 });
+	await page.goto('/app/pl/ordinarium/confiteor');
+
+	const tightest = await page.evaluate(() => {
+		const words = [...document.querySelectorAll('button.word')];
+		const tint = (b: Element) => {
+			const el = b.querySelector('.base')!;
+			const r = el.getBoundingClientRect();
+			// the inset the wash is drawn with, in px
+			const pad = 0.02 * parseFloat(getComputedStyle(el).fontSize);
+			return { left: r.left - pad, right: r.right + pad, top: r.top };
+		};
+		let worst = Infinity;
+		for (let i = 0; i < words.length - 1; i++) {
+			const a = tint(words[i]),
+				b = tint(words[i + 1]);
+			if (Math.abs(a.top - b.top) > 2) continue; // same line only
+			worst = Math.min(worst, b.left - a.right);
+		}
+		return worst;
+	});
+
+	expect(tightest, 'adjacent tints keep a gap').toBeGreaterThan(0);
 });
 
 test('a modified arrow belongs to the browser, not to the pager', async ({ page }) => {

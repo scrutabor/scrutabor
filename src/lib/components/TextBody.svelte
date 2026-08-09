@@ -451,7 +451,11 @@
 	button.word.selected .base::before {
 		content: '';
 		position: absolute;
-		inset: -0.1em -0.07em;
+		/* 0.07em to the side spent 1.6px where the ruby columns leave 1.4px
+		   between words, so two tinted words merged into one band and each
+		   tint lay over its neighbour's edge. Narrower than half the gap,
+		   so they never touch. */
+		inset: -0.1em -0.02em;
 		border-radius: 0.172em;
 		background: var(--wash);
 		z-index: -1;
@@ -488,11 +492,26 @@
 	   focus (see the wash rules above). */
 	button.word:focus-visible {
 		outline: none;
+		/* A stacking context of its own, so nothing paints over the ring.
+		   Tints are pseudo-elements at the same depth, and equal z-index
+		   paints in DOM ORDER — so the word AFTER the focused one drew its
+		   tint across the ring's right stroke, which came back thinner than
+		   the other three (owner, 2026-08-09). Inside this context the tint
+		   is still behind its own letters, which is all the -1 means. */
+		position: relative;
+		z-index: 1;
 	}
 
+	/* Drawn INSIDE the wash, on its own edge. Offset outward by even 1px and
+	   two things go wrong at once: the page shows through between the tint
+	   and the ring, and the ring reaches into the words on either side —
+	   the gap between two words is a space, and there is not a pixel of it
+	   to spare (owner, 2026-08-09). A negative offset the width of the
+	   ring puts its outer edge exactly on the tint's, so the focused word
+	   is one chip and takes no more room than it did unfocused. */
 	button.word:focus-visible .base::before {
 		outline: 2px solid var(--rubric);
-		outline-offset: 1px;
+		outline-offset: -2px;
 	}
 
 	ruby {
