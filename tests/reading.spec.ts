@@ -331,9 +331,11 @@ test('the focus ring marks the word, not the line it sits on', async ({ page }) 
 		const w = document.activeElement as HTMLElement;
 		const base = w.querySelector('.base') as HTMLElement;
 		const ring = getComputedStyle(base, '::before');
-		// where the ring's OUTERMOST edge falls, in page coordinates
+		// where the ring's OUTERMOST edge falls, in page coordinates.
+		// The tint's inset is READ from the rendered pseudo-element rather
+		// than copied from the stylesheet, so the two cannot drift apart.
 		const tint = base.getBoundingClientRect();
-		const pad = 0.07 * parseFloat(getComputedStyle(base).fontSize); // the wash's inset
+		const pad = (parseFloat(ring.width) - tint.width) / 2;
 		const offset = parseFloat(ring.outlineOffset);
 		const outer = { left: tint.left - pad - offset, right: tint.right + pad + offset };
 		// the neighbouring words, whose letters the ring must not reach into
@@ -387,34 +389,38 @@ test('the focus ring marks the word, not the line it sits on', async ({ page }) 
 	expect(m.stacking.zIndex, 'and stacks above its neighbours').not.toBe('auto');
 });
 
-test('two tinted words never run into one another', async ({ page }) => {
-	// The tint reached 0.07em to each side where the ruby columns leave
-	// 1.4px between words, so a hovered word and a selected one beside it
-	// merged into a band, each lying over the other's edge — which is how
-	// a neighbour came to be painting on a focus ring at all.
+test('two tinted words meet exactly, with no page between them', async ({ page }) => {
+	// The tint is half the gap between two words, so a selected word and a
+	// focused one beside it stand edge to edge. Wider and every tint lay
+	// across both its neighbours', which is how the word after a focused
+	// one came to paint over its ring; narrower and a line of page showed
+	// between a ring and the tint beside it (owner, 2026-08-09).
 	await page.setViewportSize({ width: 1440, height: 900 });
 	await page.goto('/app/pl/ordinarium/confiteor');
+	// a word must be tinted for its ::before to exist at all
+	await page.locator('button.word').first().click();
 
-	const tightest = await page.evaluate(() => {
+	const m = await page.evaluate(() => {
+		const sel = document.querySelector('button.word.selected .base')!;
+		// read the inset off the rendered tint, never off the stylesheet
+		const pad =
+			(parseFloat(getComputedStyle(sel, '::before').width) - sel.getBoundingClientRect().width) / 2;
 		const words = [...document.querySelectorAll('button.word')];
-		const tint = (b: Element) => {
-			const el = b.querySelector('.base')!;
-			const r = el.getBoundingClientRect();
-			// the inset the wash is drawn with, in px
-			const pad = 0.02 * parseFloat(getComputedStyle(el).fontSize);
-			return { left: r.left - pad, right: r.right + pad, top: r.top };
-		};
 		let worst = Infinity;
 		for (let i = 0; i < words.length - 1; i++) {
-			const a = tint(words[i]),
-				b = tint(words[i + 1]);
+			const a = words[i].querySelector('.base')!.getBoundingClientRect();
+			const b = words[i + 1].querySelector('.base')!.getBoundingClientRect();
 			if (Math.abs(a.top - b.top) > 2) continue; // same line only
-			worst = Math.min(worst, b.left - a.right);
+			worst = Math.min(worst, b.left - pad - (a.right + pad));
 		}
-		return worst;
+		return { worst, pad };
 	});
 
-	expect(tightest, 'adjacent tints keep a gap').toBeGreaterThan(0);
+	expect(m.pad, 'the tint has an inset to read').toBeGreaterThan(0);
+	expect(m.worst, 'no page shows between two tints').toBeLessThanOrEqual(0);
+	// and they still only just meet — a real overlap is what let a
+	// neighbour paint on the ring
+	expect(m.worst, 'and they do not overlap by anything visible').toBeGreaterThan(-1);
 });
 
 test('a modified arrow belongs to the browser, not to the pager', async ({ page }) => {

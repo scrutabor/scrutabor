@@ -451,11 +451,19 @@
 	button.word.selected .base::before {
 		content: '';
 		position: absolute;
-		/* 0.07em to the side spent 1.6px where the ruby columns leave 1.4px
-		   between words, so two tinted words merged into one band and each
-		   tint lay over its neighbour's edge. Narrower than half the gap,
-		   so they never touch. */
-		inset: -0.1em -0.02em;
+		/* HALF THE GAP BETWEEN TWO WORDS, so two tints meet exactly and the
+		   page never shows between them.
+		   The gap is the same 0.0625em at every reading size — measured
+		   across all 57 pairs on a page at three sizes, min equal to max —
+		   so half of it is a constant this can be written in. 0.07em was
+		   spending more than the whole gap: every tint lay across both its
+		   neighbours', two tinted words merged into a band, and the tint
+		   after a focused word painted over its ring. 0.02em left the
+		   opposite fault, a line of page between a ring and the tint beside
+		   it (owner, 2026-08-09). A hair over half, because two boxes that
+		   share an edge exactly are each antialiased against the page and
+		   can still show a seam. */
+		inset: -0.1em -0.035em;
 		border-radius: 0.172em;
 		background: var(--wash);
 		z-index: -1;
