@@ -147,9 +147,26 @@
 		color: var(--ink);
 	}
 
+	/* The ring follows the pill. An outline traces its element's own corners,
+	   and an option's are square while the row it sits in is a 999px pill —
+	   so the ring on the first and last options cut across the curve and
+	   showed a red sliver outside it (owner, 2026-08-10). The end options
+	   take the pill's radius on their outer side, which is the shape the
+	   ring should have had; the inner sides stay square, because that edge
+	   is a divider between two options and not an end of anything. */
 	.option:focus-visible {
 		outline: 2px solid var(--rubric);
 		outline-offset: -2px;
+	}
+
+	.picker:not(.compact) .option:first-child {
+		border-start-start-radius: 999px;
+		border-end-start-radius: 999px;
+	}
+
+	.picker:not(.compact) .option:last-child {
+		border-start-end-radius: 999px;
+		border-end-end-radius: 999px;
 	}
 
 	.hint {

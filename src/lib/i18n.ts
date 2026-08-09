@@ -144,7 +144,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		massForms: { cantu: 'śpiewana', lecta: 'cicha' },
 		massHint: {
 			cantu: 'wierni śpiewają odpowiedzi i części stałe',
-			lecta: 'wierni odpowiadają; części stałe zależnie od zwyczaju'
+			lecta: 'wierni odpowiadają razem z ministrantem i odmawiają części stałe'
 		},
 		everyone: 'odpowiadają wszyscy',
 		faithful: 'wierni',
@@ -225,7 +225,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		massForms: { cantu: 'sung', lecta: 'low' },
 		massHint: {
 			cantu: 'the faithful sing the responses and the Ordinary',
-			lecta: 'the faithful answer; the Ordinary as the custom is'
+			lecta: 'the faithful answer with the server and say the Ordinary'
 		},
 		everyone: 'everyone answers',
 		faithful: 'the faithful',
