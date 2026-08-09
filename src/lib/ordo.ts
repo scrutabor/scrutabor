@@ -408,8 +408,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/orate-fratres',
 				note: {
-					pl: 'Kapłan odwraca się i prosi o modlitwę; odpowiedź ministranta jest najdłuższą, jaka pada we Mszy.',
-					en: 'The priest turns and asks for prayer; the server\u2019s answer is the longest in the whole Mass.'
+					pl: 'Kapłan odwraca się i prosi o modlitwę; ministrant odpowiada za wszystkich, wyliczając cel ofiary.',
+					en: 'The priest turns and asks for prayer; the server answers for everyone, naming what the sacrifice is for.'
 				}
 			},
 			{
