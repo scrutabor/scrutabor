@@ -273,6 +273,16 @@ test('arrow keys page the Ordo, where a reader is walking the Mass', async ({ pa
 	const here = page.url();
 	await page.keyboard.press('Alt+ArrowRight');
 	await expect(page).toHaveURL(here);
+
+	// A word is a <button>, and refusing the arrows to every button took
+	// them from the text itself: tap a word in the Canon to read it and the
+	// walk through the Mass stopped (owner, 2026-08-09). The role picker
+	// keeps its own arrows by role, which is what the handler now asks.
+	await settled(page);
+	await page.locator('button.word').first().click();
+	await expect(page.locator('aside .form')).toBeVisible();
+	await page.keyboard.press('ArrowRight');
+	await expect(page, 'a selected word does not stop the walk').toHaveURL(atRoute('ordo/communio'));
 });
 
 test('an opened aside says it is one, and can be shut again', async ({ page }) => {

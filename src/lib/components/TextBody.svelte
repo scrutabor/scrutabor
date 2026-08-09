@@ -447,6 +447,7 @@
 	}
 
 	button.word:hover .base::before,
+	button.word:focus-visible .base::before,
 	button.word.selected .base::before {
 		content: '';
 		position: absolute;
@@ -461,6 +462,7 @@
 	}
 
 	.glossed button.word:hover .base::before,
+	.glossed button.word:focus-visible .base::before,
 	.glossed button.word.selected .base::before {
 		bottom: calc(var(--reading) * -0.86);
 	}
@@ -473,9 +475,24 @@
 		color: var(--ink);
 	}
 
+	/* The ring goes on the same rectangle the wash uses, NOT on the button.
+	   The button is an inline box around a ruby, so its own box is the
+	   whole line — 2.3 of the reading size tall — and the ring drew a
+	   rectangle that swallowed the gloss row of the line above and sat
+	   nowhere near the word it meant (owner, 2026-08-09). The base hugs
+	   the letters and reaches down over the gloss, which is exactly the
+	   shape a reader should see marked.
+
+	   The outline is moved, not removed: the button carries none of its
+	   own, and the ::before it draws on is present whenever the word has
+	   focus (see the wash rules above). */
 	button.word:focus-visible {
+		outline: none;
+	}
+
+	button.word:focus-visible .base::before {
 		outline: 2px solid var(--rubric);
-		outline-offset: 2px;
+		outline-offset: 1px;
 	}
 
 	ruby {
@@ -544,6 +561,30 @@
 		padding-inline-start: calc(var(--reading) * 0.621);
 	}
 
+	/* HALF-LEADING IS NOT INK, and the eye only sees ink. The pair above
+	   balances the BOXES, and with the glosses showing the owner still read
+	   the rubric as belonging to the text above it: 26px of daylight over,
+	   45 under. Measured in glyphs rather than boxes, which is what the
+	   reader measures in.
+
+	   Both numbers come from line-height 2.3 on a glossed verse. It is a
+	   third of a line of air ABOVE the first Latin glyph of the verse
+	   below — inside that verse's own box, so no margin here can see it —
+	   and the gloss row of the verse above hangs past its box the other
+	   way. Neither is visible to the box model; together they move the
+	   rubric two thirds of the way toward the text above it.
+
+	   So the two corrections only exist while the glosses do, and each
+	   names the state that causes it. Bare Latin (help 0) already balanced
+	   at 41/38 and is deliberately left alone. */
+	.verse.glossed + .rubric {
+		margin-top: calc(var(--reading) * (1 + var(--gloss-gap) + 0.43));
+	}
+
+	.rubric:has(+ .verse.glossed) {
+		margin-bottom: calc(var(--reading) * 0.61);
+	}
+
 	/* EVERY KIND OF TEXT ENDS WHERE THE LATIN ENDS (owner, 2026-08-09).
 	   Verse, rubric, narrative and translation all run to the one right
 	   edge of the column, so the page has one right margin and not four.
@@ -591,8 +632,16 @@
 	   Its rule stands in the gutter where the speaker marks hang, and its
 	   text starts on the same left edge as the Latin: it is that verse in
 	   another language, so it belongs in that verse's column. */
+	/* The gloss row hangs past the box this margin hangs from, so 0.345 of
+	   a line bought 7px of daylight and the translation sat almost on the
+	   glosses (owner, 2026-08-09).
+	   Half a step more, and no further: it is bounded above as well as
+	   below, because a translation that is equally far from both verses
+	   has stopped saying which one it translates. 0.621 was tried and
+	   reached 1.22 of the gap to the next verse, inside the 1.25 the
+	   e2e guard holds; this sits at 1.34. */
 	.seg-extra {
-		margin: calc(var(--reading) * 0.345) 0 calc(var(--reading) * 0.379);
+		margin: calc(var(--reading) * 0.517) 0 calc(var(--reading) * 0.379);
 		border-inline-start: 2px solid var(--wash-strong);
 		padding-inline-start: calc(var(--reading) * 1.379 - 2px);
 	}

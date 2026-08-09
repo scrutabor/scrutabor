@@ -24,7 +24,16 @@ export function arrowNav(hrefFor: (dir: 'prev' | 'next') => string | undefined) 
 		// The help slider and the role picker are radio groups: the arrows
 		// move between their options and belong to them while they hold
 		// focus.
-		if (el?.getAttribute('role') === 'radio' || tag === 'BUTTON') return;
+		//
+		// role, NOT tagName. This refused every BUTTON when it was written,
+		// which reads as a safe superset of the radios and is not one:
+		// EVERY WORD IN THE BOOK IS A BUTTON. Tapping a word to read its
+		// analysis therefore switched the arrow keys off, and the reader
+		// who paged through the Mass one prayer at a time lost the keys the
+		// moment they looked something up (owner, 2026-08-09). A radio
+		// group says what it is; a button says nothing about who owns the
+		// arrows.
+		if (el?.getAttribute('role') === 'radio') return;
 		const href = hrefFor(e.key === 'ArrowLeft' ? 'prev' : 'next');
 		return href;
 	};

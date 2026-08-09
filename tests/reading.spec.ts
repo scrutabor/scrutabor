@@ -1,4 +1,5 @@
 // The reading experience: help ladder, panel layers, cross-reference jumps.
+import type { Page } from '@playwright/test';
 import { atRoute, expect, settled, test } from './fixtures';
 
 const AVE = '/app/pl/orationes/ave-maria';
@@ -284,6 +285,67 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	// first text has no previous
 	await page.goto('/app/pl/orationes/pater-noster');
 	await expect(page.locator('.pager a')).toHaveCount(1);
+});
+
+test('selecting a word does not take the arrow keys away', async ({ page }) => {
+	// Every word in the book is a <button>, and the pager's key handler
+	// refused arrows whenever a BUTTON held focus — meant to keep them for
+	// the radio groups, it took them from the text itself. Tap a word to
+	// read its analysis and the arrows went dead (owner, 2026-08-09).
+	//
+	// Asserted as an EQUIVALENCE rather than against a hardcoded next text:
+	// what the arrows do is the book's business, and this test's business
+	// is only that selecting a word does not change it.
+	await page.goto('/app/pl/ordinarium/confiteor');
+	await settled(page);
+	await page.keyboard.press('ArrowRight');
+	// the navigation is client-side; page.url() is only true once it lands
+	await page.waitForURL((u) => !u.pathname.includes('confiteor'));
+	const paged = new URL(page.url()).pathname;
+
+	await page.goto('/app/pl/ordinarium/confiteor');
+	await settled(page);
+	await page.locator('button.word').first().click();
+	await expect(page.locator('aside .form')).toBeVisible();
+	await page.keyboard.press('ArrowRight');
+	await expect(page, 'with a word selected the arrow still pages').toHaveURL(
+		(u) => u.pathname === paged
+	);
+});
+
+test('the focus ring marks the word, not the line it sits on', async ({ page }) => {
+	// A word's button is an inline box around a ruby, so its own box is the
+	// whole line — 2.3 of the reading size — and the ring drew a rectangle
+	// that swallowed the gloss row of the line above (owner, 2026-08-09).
+	// It goes on the base, which is the shape the selection wash uses.
+	await page.goto('/app/pl/ordinarium/confiteor');
+	await settled(page);
+	// TABBED to, not focused programmatically: :focus-visible is the whole
+	// point of the rule, and only a real keyboard route turns it on.
+	for (let i = 0; i < 60; i++) {
+		await page.keyboard.press('Tab');
+		if (await page.evaluate(() => document.activeElement?.classList.contains('word'))) break;
+	}
+
+	const m = await page.evaluate(() => {
+		const w = document.activeElement as HTMLElement;
+		const base = w.querySelector('.base') as HTMLElement;
+		return {
+			isWord: w.classList.contains('word'),
+			focusVisible: w.matches(':focus-visible'),
+			onTheButton: getComputedStyle(w).outlineStyle,
+			onTheWord: getComputedStyle(base, '::before').outlineStyle,
+			lineBox: w.getBoundingClientRect().height,
+			wordBox: base.getBoundingClientRect().height
+		};
+	});
+
+	expect(m.isWord, 'tabbing reaches a word').toBe(true);
+	expect(m.focusVisible, 'and gives it a visible focus').toBe(true);
+	expect(m.onTheButton, 'no ring on the line box').toBe('none');
+	expect(m.onTheWord, 'a ring on the word').toBe('solid');
+	// the reason the two are not interchangeable
+	expect(m.lineBox, 'the line box is the taller of the two').toBeGreaterThan(m.wordBox + 8);
 });
 
 test('a modified arrow belongs to the browser, not to the pager', async ({ page }) => {
@@ -1108,10 +1170,120 @@ test('the highlight marks the word AND its gloss', async ({ page }) => {
 	expect(bare, 'the word is still marked with the glosses off').not.toBe('rgba(0, 0, 0, 0)');
 });
 
+// The reader measures in GLYPHS; the box model measures in boxes, and on
+// this page they disagree by a lot. A glossed verse carries line-height
+// 2.3, so a third of a line of air sits ABOVE its first Latin glyph,
+// inside its own box where no neighbouring margin can see it — and its
+// gloss row hangs past the bottom of that box the other way. An earlier
+// version of this test measured Range rects, reported 27 above and 22
+// below, and passed while the owner was looking at 26 above and 45 below.
+//
+// So: line box -> baseline via the font's own ascent -> ink via
+// actualBoundingBox. Half-leading is not ink.
+const inkGaps = (page: Page) =>
+	page.evaluate(() => {
+		const ctx = document.createElement('canvas').getContext('2d')!;
+		const edge = (el: Element, side: 'top' | 'bottom') => {
+			const cs = getComputedStyle(el);
+			const r = document.createRange();
+			r.selectNodeContents(el);
+			const rects = [...r.getClientRects()].filter((x) => x.height > 0);
+			if (!rects.length) return null;
+			const box = side === 'top' ? rects[0] : rects[rects.length - 1];
+			ctx.font = cs.font;
+			const m = ctx.measureText((el.textContent || 'Hxg').trim() || 'Hxg');
+			const half = (box.height - (m.fontBoundingBoxAscent + m.fontBoundingBoxDescent)) / 2;
+			const base = box.top + half + m.fontBoundingBoxAscent;
+			return side === 'top' ? base - m.actualBoundingBoxAscent : base + m.actualBoundingBoxDescent;
+		};
+		// a verse's ink includes its gloss row, painted below its own box
+		const edgeOf = (el: Element, side: 'top' | 'bottom') => {
+			if (!el.classList.contains('verse')) return edge(el, side);
+			const parts = [...el.querySelectorAll('.base, rt')];
+			const vals = (parts.length ? parts : [el])
+				.map((e) => edge(e, side))
+				.filter((x): x is number => x != null);
+			return side === 'top' ? Math.min(...vals) : Math.max(...vals);
+		};
+
+		const rubrics: { above: number; below: number; txt: string }[] = [];
+		document.querySelectorAll('.rubric').forEach((rb) => {
+			const p = rb.previousElementSibling,
+				n = rb.nextElementSibling;
+			if (!p || !n || !n.classList.contains('verse')) return;
+			const la = rb.querySelector('.rubric-la')!;
+			const last = rb.querySelector('.rubric-narrative') ?? la;
+			rubrics.push({
+				above: edge(la, 'top')! - edgeOf(p, 'bottom')!,
+				below: edgeOf(n, 'top')! - edge(last, 'bottom')!,
+				txt: la.textContent!.trim().slice(0, 24)
+			});
+		});
+
+		const translations: { above: number; below: number; txt: string }[] = [];
+		document.querySelectorAll('.seg-extra').forEach((sx) => {
+			const p = sx.previousElementSibling,
+				n = sx.nextElementSibling;
+			const tr = sx.querySelector('.translation');
+			if (!p || !n || !tr || !n.classList.contains('verse')) return;
+			translations.push({
+				above: edge(tr, 'top')! - edgeOf(p, 'bottom')!,
+				below: edgeOf(n, 'top')! - edge(tr, 'bottom')!,
+				txt: tr.textContent!.trim().slice(0, 24)
+			});
+		});
+		return { rubrics, translations };
+	});
+
 test('a rubric sits centrally between the verses it parts', async ({ page }) => {
-	// It was 29px from the verse above and 18 from the one below, and the
-	// speaker label was landing on the gloss row of the verse before it —
-	// a glossed verse paints its gloss BELOW the box its margin hangs from,
+	// It was 29px from the verse above and 18 from the one below; corrected,
+	// it drifted back to 26/45 as soon as the glosses were showing, because
+	// the correction was sized for the gloss row's overhang alone and the
+	// leading is the larger half of it (owner, 2026-08-09). Balanced at
+	// every position of the help slider, since each shows a different
+	// line-height.
+	await page.goto('/app/pl/ordinarium/confiteor');
+
+	for (const help of ['0', '1', '2']) {
+		await page.locator('input[type="range"]').fill(help);
+		const { rubrics } = await inkGaps(page);
+		expect(rubrics.length, `a rubric stands between verses at help ${help}`).toBeGreaterThan(0);
+		for (const g of rubrics) {
+			expect(
+				Math.max(g.above, g.below) / Math.min(g.above, g.below),
+				`"${g.txt}" at help ${help}: ${Math.round(g.above)} above, ${Math.round(g.below)} below`
+			).toBeLessThan(1.3);
+		}
+	}
+});
+
+test('a translation is attached to its verse without touching it', async ({ page }) => {
+	// 0.345 of a line of margin bought 7px of daylight, because the gloss
+	// row it follows hangs past the box that margin hangs from — the
+	// translation sat almost on the glosses (owner, 2026-08-09).
+	//
+	// Both bounds matter. Too little air and it touches; too much and it
+	// stops belonging to the verse above, which is the one thing its
+	// position has to say.
+	await page.goto('/app/pl/ordinarium/confiteor');
+	await page.locator('input[type="range"]').fill('2');
+	const { translations } = await inkGaps(page);
+
+	expect(translations.length, 'the text has translations between verses').toBeGreaterThan(0);
+	for (const g of translations) {
+		expect(g.above, `"${g.txt}" clears the gloss row (${Math.round(g.above)}px)`).toBeGreaterThan(
+			10
+		);
+		expect(
+			g.below / g.above,
+			`"${g.txt}" is nearer its own verse (${Math.round(g.above)} above, ${Math.round(g.below)} below)`
+		).toBeGreaterThan(1.4);
+	}
+});
+
+test('a speaker label belongs to the verse below it', async ({ page }) => {
+	// The label was landing on the gloss row of the verse before it — a
+	// glossed verse paints its gloss BELOW the box its margin hangs from,
 	// so the margin was buying no daylight at all (owner, 2026-08-09).
 	await page.goto('/app/pl/ordo/praeparatio');
 	const gaps = await page.evaluate(() => {
@@ -1121,25 +1293,12 @@ test('a rubric sits centrally between the verses it parts', async ({ page }) => 
 			const b = r.getBoundingClientRect();
 			return side === 'top' ? b.top : b.bottom;
 		};
-		const out: { kind: string; above: number; below: number }[] = [];
-		document.querySelectorAll('.rubric').forEach((rb) => {
-			const p = rb.previousElementSibling,
-				n = rb.nextElementSibling;
-			if (!p || !n || !p.classList.contains('verse') || !n.classList.contains('verse')) return;
-			const la = rb.querySelector('.rubric-la')!;
-			const last = rb.querySelector('.rubric-narrative') ?? la;
-			out.push({
-				kind: 'rubric',
-				above: ink(la, 'top') - ink(p, 'bottom'),
-				below: ink(n, 'top') - ink(last, 'bottom')
-			});
-		});
+		const out: { above: number; below: number }[] = [];
 		document.querySelectorAll('.who').forEach((w) => {
 			const p = w.previousElementSibling,
 				n = w.nextElementSibling;
 			if (!p || !n || !p.classList.contains('verse')) return;
 			out.push({
-				kind: 'who',
 				above: ink(w, 'top') - ink(p, 'bottom'),
 				below: ink(n, 'top') - ink(w, 'bottom')
 			});
@@ -1147,23 +1306,8 @@ test('a rubric sits centrally between the verses it parts', async ({ page }) => 
 		return out;
 	});
 
-	expect(
-		gaps.some((g) => g.kind === 'rubric'),
-		'the movement has rubrics between verses'
-	).toBe(true);
-	for (const g of gaps.filter((x) => x.kind === 'rubric')) {
-		// central: neither side more than a third again as open as the other
-		expect(
-			Math.max(g.above, g.below) / Math.min(g.above, g.below),
-			'the rubric sits centrally'
-		).toBeLessThan(1.34);
-	}
-	expect(
-		gaps.some((g) => g.kind === 'who'),
-		'a speaker label follows a verse somewhere'
-	).toBe(true);
-	for (const g of gaps.filter((x) => x.kind === 'who')) {
-		// the label belongs to the verse BELOW it, and must look like it
+	expect(gaps.length, 'a speaker label follows a verse somewhere').toBeGreaterThan(0);
+	for (const g of gaps) {
 		expect(g.above, 'the label clears the gloss row above it').toBeGreaterThan(6);
 		expect(g.above, 'and still sits nearer the verse it names').toBeGreaterThan(g.below * 2);
 	}
