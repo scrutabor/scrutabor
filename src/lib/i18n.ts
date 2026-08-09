@@ -138,7 +138,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		quietCollapsed: 'kapłan modli się po cichu',
 		quietReveal: 'pokaż',
 		quietHide: 'ukryj',
-		quietAside: 'nie twoja część',
+		quietAside: 'modlitwa kapłana',
 		pronunciationHint: 'zasady wymowy'
 	},
 	en: {
@@ -215,7 +215,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		quietCollapsed: 'the priest prays silently',
 		quietReveal: 'show',
 		quietHide: 'hide',
-		quietAside: 'not your part',
+		quietAside: 'the priest’s prayer',
 		pronunciationHint: 'pronunciation guide'
 	}
 };

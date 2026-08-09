@@ -1,5 +1,5 @@
 // The flow view: the Mass in order, for a reader following it in the pew.
-import { atRoute, expect, test } from './fixtures';
+import { atRoute, expect, settled, test } from './fixtures';
 import { ORDO } from '../src/lib/ordo';
 
 test('the ordo is a map of six movements, walked in order', async ({ page }) => {
@@ -258,13 +258,18 @@ test('arrow keys page the Ordo, where a reader is walking the Mass', async ({ pa
 	// backwards: the Ordo is exactly where the next movement is wanted
 	// without reaching for the pager (owner, 2026-08-09).
 	await page.goto('/app/pl/ordo/canon');
-	await page.locator('main').click({ position: { x: 5, y: 5 } });
 	await page.keyboard.press('ArrowRight');
 	await expect(page).toHaveURL(atRoute('ordo/communio'));
+
+	// Offline the book is file:// and every move is a fresh document, so
+	// the next key has to wait for the new page to be hydrated — rendered
+	// is not enough, the handler arrives with hydration.
+	await settled(page);
 	await page.keyboard.press('ArrowLeft');
 	await expect(page).toHaveURL(atRoute('ordo/canon'));
 
 	// and a modifier still belongs to the browser, not to the page
+	await settled(page);
 	const here = page.url();
 	await page.keyboard.press('Alt+ArrowRight');
 	await expect(page).toHaveURL(here);
@@ -282,7 +287,7 @@ test('an opened aside says it is one, and can be shut again', async ({ page }) =
 	await page.locator('.unfold').first().click();
 	const revealed = page.locator('.part.revealed').first();
 	await expect(revealed).toBeVisible();
-	await expect(revealed.locator('.aside-mark')).toHaveText('nie twoja część');
+	await expect(revealed.locator('.aside-mark')).toHaveText('modlitwa kapłana');
 	await expect(revealed.locator('.part-text')).toBeVisible();
 
 	await revealed.locator('.refold').click();
