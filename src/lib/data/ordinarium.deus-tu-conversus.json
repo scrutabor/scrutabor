@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.9.0",
+	"schema_version": "0.10.0",
 	"id": "ordinarium.deus-tu-conversus",
 	"title": "Deus, tu convérsus",
 	"category": "ordinarium",
@@ -184,7 +184,13 @@
 						"number": "sg"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		},
 		{
 			"id": "s04",
@@ -318,7 +324,13 @@
 						"number": "pl"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		},
 		{
 			"id": "s06",
@@ -450,7 +462,13 @@
 						"conj": 4
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		},
 		{
 			"id": "s08",
@@ -538,7 +556,17 @@
 						"gender": "m"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 1,
+					"source": "DMS 31 a"
+				},
+				"cantu": {
+					"gradus": 1,
+					"source": "DMS 25 a"
+				}
+			}
 		}
 	]
 }

@@ -11,6 +11,7 @@
 // visits, not chrome that sits over the text while they pray.
 
 import { browser } from '$app/environment';
+import type { MassForm, Segment } from '$lib/corpus';
 
 export const ROLES = ['populus', 'minister', 'sacerdos'] as const;
 export type Role = (typeof ROLES)[number];
@@ -78,18 +79,38 @@ export function showsWords(
  *
  * The books mark the Ordo S. and M., the priest and the one who answers
  * him; this edition asks the reader which of them they are and marks their
- * own lines from it. At a low Mass the server gives every response, and at
- * a dialogue Mass the faithful answer with him, so both of those parts own
- * the answering lines. `omnes` is everyone by definition. A priest reading
- * this owns what he says and not what is said to him — which is why the
- * marking cannot simply be "anything that is not the celebrant".
+ * own lines from it. `omnes` is everyone by definition, and a priest owns
+ * what he says and not what is said to him — which is why the marking
+ * cannot simply be "anything that is not the celebrant".
  */
 const OWNED: Record<Role, ReadonlySet<string>> = {
 	sacerdos: new Set(['sacerdos', 'omnes']),
 	minister: new Set(['minister', 'omnes']),
-	populus: new Set(['minister', 'populus', 'omnes'])
+	// The pew's own lines are NOT read from the speaker — see below.
+	populus: new Set(['populus', 'omnes'])
 };
 
-export function isYours(speaker: string | undefined, of: Role): boolean {
-	return speaker !== undefined && OWNED[of].has(speaker);
+/**
+ * For a reader in the pew this is answered by the corpus's participation
+ * layer, not by the speaker: the Missale gives every response at low Mass
+ * to the minister and says nothing about the people, so a rule reading the
+ * speaker could only ever guess. The 1958 instruction is what grants them
+ * their parts, it grades them, and it grades the sung Mass differently from
+ * the said one — so which lines are the reader's depends on which Mass they
+ * are at, which is why the form is asked for (corpus SCHEMA.md 0.10.0).
+ */
+export function isYours(seg: Segment, of: Role, form: MassForm): boolean {
+	if (of === 'populus') return seg.participation?.[form] !== undefined;
+	return seg.speaker !== undefined && OWNED[of].has(seg.speaker);
+}
+
+/**
+ * Of the lines that are the reader's, the ones EVERYONE answers: the first
+ * degree, the short responses the instruction asks that the faithful be
+ * able to make everywhere (nn. 25 a, 31 a). A first-timer's question is not
+ * "which lines may I say" but "which ones is everybody about to say", and
+ * that is this one.
+ */
+export function isEveryonesResponse(seg: Segment, form: MassForm): boolean {
+	return seg.participation?.[form]?.gradus === 1;
 }

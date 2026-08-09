@@ -213,7 +213,7 @@ test('the index answers a change of part in the book’s own voice', async ({ pa
 	// person, on a page meant for browsing, and no missal does that. The
 	// parts are marked where the reader meets them instead.
 	await page.goto('/app/en/ordo');
-	const hint = page.locator('.picker:not(.compact) .hint');
+	const hint = page.locator('.picker[data-kind="role"]:not(.compact) .hint');
 	await expect(hint).toHaveText('the parts said aloud, with the answers of the faithful');
 
 	await page.getByRole('radio', { name: 'priest' }).click();
@@ -303,4 +303,47 @@ test('an opened aside says it is one, and can be shut again', async ({ page }) =
 	await revealed.locator('.refold').click();
 	await expect(page.locator('.part.revealed')).toHaveCount(0);
 	await expect(page.locator('.part.folded')).toHaveCount(before);
+});
+
+test('the reader is told which lines are theirs, and at which Mass', async ({ page }) => {
+	// The Missale gives every response at low Mass to the minister and says
+	// nothing about the people, so the label read ministrant over lines a
+	// congregation was about to say (owner, 2026-08-09). The corpus now
+	// carries the 1958 instruction's own attributions, and they differ by
+	// the KIND of Mass: the prayers at the foot of the altar are the
+	// server's dialogue with the priest at a sung Mass, and the people's
+	// second-degree part at a low one.
+	await page.goto('/app/pl/ordo/praeparatio');
+	await settled(page);
+	const names = () => page.locator('.who-name');
+
+	// sung is the default (owner, 2026-08-10): where the traditional rite is
+	// celebrated at all it is usually the Sunday Mass, and n. 26 asks that
+	// the Sunday parish Mass be sung
+	await expect(page.locator('.picker .option.on', { hasText: 'śpiewana' })).toBeVisible();
+	await expect(names().filter({ hasText: 'ministrant' }).first()).toBeVisible();
+
+	// at a low Mass the same lines are the faithful's, by n. 31 b
+	await page.locator('.option[data-word="cicha"]').click();
+	await expect(names().filter({ hasText: 'ministrant' })).toHaveCount(0);
+	await expect(names().filter({ hasText: 'wierni' }).first()).toBeVisible();
+
+	// and a server still sees the rubrical speaker, which is what he needs
+	await page.locator('.option[data-word="ministranta"]').click();
+	await expect(names().filter({ hasText: 'ministrant' }).first()).toBeVisible();
+});
+
+test('the responses everyone makes are marked as such', async ({ page }) => {
+	// A newcomer's question is not which lines they MAY say but which ones
+	// everybody is about to. That is the first degree of the instruction —
+	// nn. 25 a and 31 a — and nothing else carries the mark.
+	await page.goto('/app/pl/ordo/canon');
+	await settled(page);
+	const everyone = page.locator('.who-all');
+	await expect(everyone.first()).toBeVisible();
+	await expect(everyone.first()).toHaveText('odpowiadają wszyscy');
+
+	// a server is not "everyone": the mark belongs to the pew's view
+	await page.locator('.option[data-word="kapłana"]').click();
+	await expect(everyone).toHaveCount(0);
 });

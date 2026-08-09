@@ -3,6 +3,7 @@
 	// layout, not the root one: the landing pages above it are plain web
 	// pages, and editing them must never touch the app's offline promise.
 	import { dev } from '$app/environment';
+	import { loadMassForm } from '$lib/mass-form.svelte';
 	import { loadRole } from '$lib/role.svelte';
 
 	let { children } = $props();
@@ -11,6 +12,7 @@
 	// prerendered HTML is always the pew's view).
 	$effect(() => {
 		loadRole();
+		loadMassForm();
 	});
 
 	// Registered by hand rather than by the framework, because the scope

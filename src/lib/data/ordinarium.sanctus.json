@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.9.0",
+	"schema_version": "0.10.0",
 	"id": "ordinarium.sanctus",
 	"title": "Sanctus",
 	"category": "ordinarium",
@@ -126,7 +126,17 @@
 						"review": "pending"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 3,
+					"source": "DMS 31 c"
+				},
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			}
 		},
 		{
 			"id": "s03",
@@ -222,7 +232,17 @@
 						"gender": "f"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 3,
+					"source": "DMS 31 c"
+				},
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			}
 		},
 		{
 			"id": "s04",
@@ -259,7 +279,17 @@
 						"gender": "n"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 3,
+					"source": "DMS 31 c"
+				},
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			}
 		},
 		{
 			"id": "s05",
@@ -337,7 +367,17 @@
 						"decl": 2
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 3,
+					"source": "DMS 31 c"
+				},
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			}
 		},
 		{
 			"id": "s06",
@@ -374,7 +414,17 @@
 						"gender": "n"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 3,
+					"source": "DMS 31 c"
+				},
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			}
 		}
 	]
 }

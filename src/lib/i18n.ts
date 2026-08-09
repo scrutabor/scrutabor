@@ -60,6 +60,17 @@ export interface Messages {
 	/** The reader's part at Mass, and the control that sets it. */
 	roleLabel: string;
 	roles: Record<'populus' | 'minister' | 'sacerdos', string>;
+	/** Which kind of Mass the reader is at — the people's parts differ. */
+	massLabel: string;
+	massForms: Record<'cantu' | 'lecta', string>;
+	massHint: Record<'cantu' | 'lecta', string>;
+	/** Marks the responses EVERYONE makes, the first degree of the 1958
+	 * instruction — the answer to a newcomer's real question. */
+	everyone: string;
+	/** What the reader in the pew is called over their own lines. The
+	 * corpus's own word for that speaker is `populus`, printed as lud; this
+	 * is the word the picker uses, so that the setting and the page agree. */
+	faithful: string;
 	roleHint: Record<'populus' | 'minister' | 'sacerdos', string>;
 	quietCollapsed: string;
 	quietReveal: string;
@@ -129,6 +140,14 @@ const MESSAGES: Record<Lang, Messages> = {
 		voices: { submissa: 'półgłosem', secreto: 'po cichu', cantus: 'śpiew' },
 		verseAria: (n) => `odnośnik do wersetu ${n}`,
 		roleLabel: 'teksty dla',
+		massLabel: 'Msza',
+		massForms: { cantu: 'śpiewana', lecta: 'cicha' },
+		massHint: {
+			cantu: 'wierni śpiewają odpowiedzi i części stałe',
+			lecta: 'wierni odpowiadają; części stałe zależnie od zwyczaju'
+		},
+		everyone: 'odpowiadają wszyscy',
+		faithful: 'wierni',
 		roles: { populus: 'wiernych', minister: 'ministranta', sacerdos: 'kapłana' },
 		roleHint: {
 			populus: 'części odmawiane głośno, z odpowiedziami wiernych',
@@ -202,6 +221,14 @@ const MESSAGES: Record<Lang, Messages> = {
 		voices: { submissa: 'in a low voice', secreto: 'silently', cantus: 'sung' },
 		verseAria: (n) => `link to verse ${n}`,
 		roleLabel: 'texts for',
+		massLabel: 'Mass',
+		massForms: { cantu: 'sung', lecta: 'low' },
+		massHint: {
+			cantu: 'the faithful sing the responses and the Ordinary',
+			lecta: 'the faithful answer; the Ordinary as the custom is'
+		},
+		everyone: 'everyone answers',
+		faithful: 'the faithful',
 		// Bare nouns, no article: this is a label, and a label is what the
 		// missals put in the margin beside a line — Priest, Server, Faithful.
 		// The article belongs in the sentence underneath, where it reads as

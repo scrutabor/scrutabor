@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.9.0",
+	"schema_version": "0.10.0",
 	"id": "ordinarium.ite-missa-est",
 	"title": "Ite, Missa est",
 	"category": "ordinarium",
@@ -129,7 +129,17 @@
 						"gender": "m"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 1,
+					"source": "DMS 31 a"
+				},
+				"cantu": {
+					"gradus": 1,
+					"source": "DMS 25 a"
+				}
+			}
 		},
 		{
 			"id": "s04",
@@ -223,7 +233,17 @@
 						"decl": 1
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 1,
+					"source": "DMS 31 a"
+				},
+				"cantu": {
+					"gradus": 1,
+					"source": "DMS 25 a"
+				}
+			}
 		},
 		{
 			"id": "s07",

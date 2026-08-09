@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.9.0",
+	"schema_version": "0.10.0",
 	"id": "ordinarium.orate-fratres",
 	"title": "Oráte, fratres",
 	"category": "ordinarium",
@@ -438,7 +438,13 @@
 						"gender": "f"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		},
 		{
 			"id": "s05",

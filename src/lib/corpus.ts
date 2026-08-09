@@ -52,6 +52,21 @@ export type Speaker = 'sacerdos' | 'minister' | 'populus' | 'omnes' | 'schola';
 /** How loudly: aloud, raised-but-not-full, silent, sung. */
 export type Voice = 'clara' | 'submissa' | 'secreto' | 'cantus';
 
+/** The two forms of Mass the 1958 instruction grades apart: `lecta` the low
+ * Mass (its n. 31), `cantu` the sung Mass (n. 25, extended to the Missa
+ * cantata by n. 26 — the form a parish keeps on Sundays). They are not the
+ * same event and the people do not have the same parts in them. */
+export type MassForm = 'cantu' | 'lecta';
+
+/** Who among the FAITHFUL says this line, and on whose authority — which is
+ * a different question from `speaker`, whom the Missale charges with it.
+ * `gradus` is the degree of participation (1-4), absent where the law grants
+ * a part without grading it. Corpus SCHEMA.md 0.10.0. */
+export interface Participation {
+	gradus?: number;
+	source: string;
+}
+
 export interface Segment {
 	id: string;
 	type: 'verse' | 'rubric';
@@ -60,6 +75,7 @@ export interface Segment {
 	text?: string;
 	words?: Word[];
 	analysis?: Analysis;
+	participation?: Partial<Record<MassForm, Participation>>;
 }
 
 export interface TextDocument {

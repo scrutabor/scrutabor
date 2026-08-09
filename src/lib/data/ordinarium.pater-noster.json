@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.9.0",
+	"schema_version": "0.10.0",
 	"id": "ordinarium.pater-noster",
 	"title": "Pater noster (Missæ)",
 	"category": "ordinarium",
@@ -276,7 +276,12 @@
 						"decl": 2
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"source": "DMS 32"
+				}
+			}
 		},
 		{
 			"id": "s06",
@@ -322,7 +327,12 @@
 						"gender": "n"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"source": "DMS 32"
+				}
+			}
 		},
 		{
 			"id": "s07",
@@ -368,7 +378,12 @@
 						"gender": "n"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"source": "DMS 32"
+				}
+			}
 		},
 		{
 			"id": "s08",
@@ -472,7 +487,12 @@
 						"decl": 1
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"source": "DMS 32"
+				}
+			}
 		},
 		{
 			"id": "s09",
@@ -556,7 +576,12 @@
 						"pos": "adv"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"source": "DMS 32"
+				}
+			}
 		},
 		{
 			"id": "s10",
@@ -684,7 +709,12 @@
 						"gender": "m"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"source": "DMS 32"
+				}
+			}
 		},
 		{
 			"id": "s11",
@@ -754,7 +784,12 @@
 						"decl": 3
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"source": "DMS 32"
+				}
+			}
 		},
 		{
 			"id": "s12",
@@ -825,7 +860,17 @@
 						"review": "pending"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 1,
+					"source": "DMS 31 a"
+				},
+				"cantu": {
+					"gradus": 1,
+					"source": "DMS 25 a"
+				}
+			}
 		},
 		{
 			"id": "s13",
@@ -855,7 +900,12 @@
 						"pos": "intj"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"source": "DMS 32"
+				}
+			}
 		}
 	]
 }

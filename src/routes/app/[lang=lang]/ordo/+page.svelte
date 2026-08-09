@@ -43,6 +43,7 @@
 		     it. The parts themselves are marked where the reader meets
 		     them, which is where it is of any use. -->
 		<RolePicker {lang} />
+		<RolePicker {lang} kind="mass" />
 
 		<div class="movements">
 			{#each movements as m (m.id)}

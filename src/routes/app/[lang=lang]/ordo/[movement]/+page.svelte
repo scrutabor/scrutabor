@@ -145,6 +145,7 @@
 		<div class="help-row">
 			<HelpLevels {lang} bind:value={helpLevel} />
 			<RolePicker {lang} compact />
+			<RolePicker {lang} compact kind="mass" />
 		</div>
 	</header>
 

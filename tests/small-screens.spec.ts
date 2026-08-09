@@ -135,7 +135,13 @@ test('a wide screen keeps every control in its unstacked form', async ({ page })
 			const help = document.querySelector('.help')!.getBoundingClientRect();
 			const track = document.querySelector('input[type="range"]')!.getBoundingClientRect();
 			return {
-				partRows: rows('.picker.compact .option'),
+				// per control: two of them sit in this row now, the reader's
+				// part and the kind of Mass, and each must keep its own
+				// options on one line
+				partRows: Math.max(
+					rows('.picker.compact[data-kind="role"] .option'),
+					rows('.picker.compact[data-kind="mass"] .option')
+				),
 				labelLines: document.querySelector('.picker.compact .label')!.getClientRects().length,
 				trackSpansTheRow: track.width > help.width * 0.9
 			};
@@ -146,18 +152,23 @@ test('a wide screen keeps every control in its unstacked form', async ({ page })
 		expect(shape.trackSpansTheRow, `${at}: the help slider stacked with room to spare`).toBe(false);
 	}
 
-	// and on the index, the full picker keeps its three parts side by side
+	// and on the index, each full picker keeps its own options side by side.
+	// Two of them stand there — the reader's part and the kind of Mass — so
+	// this counts rows WITHIN a control, not across the pair, which of
+	// course sit on two rows because they are two settings.
 	await page.setViewportSize({ width: 1200, height: 900 });
 	await page.goto('/app/pl/ordo');
-	const fullRows = await page.evaluate(
-		() =>
-			new Set(
-				[...document.querySelectorAll('.picker:not(.compact) .option')].map((e) =>
-					Math.round(e.getBoundingClientRect().top)
-				)
-			).size
+	const fullRows = await page.evaluate(() =>
+		['role', 'mass'].map(
+			(kind) =>
+				new Set(
+					[...document.querySelectorAll(`.picker:not(.compact)[data-kind="${kind}"] .option`)].map(
+						(e) => Math.round(e.getBoundingClientRect().top)
+					)
+				).size
+		)
 	);
-	expect(fullRows, 'the full parts control stacked on a wide screen').toBe(1);
+	expect(fullRows, 'a full picker stacked on a wide screen').toEqual([1, 1]);
 });
 
 test('each part is drawn in its own slot, not over its separator', async ({ page }) => {

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.9.0",
+	"schema_version": "0.10.0",
 	"id": "ordinarium.adiutorium",
 	"title": "Adiutórium nostrum",
 	"category": "ordinarium",
@@ -172,7 +172,13 @@
 						"decl": 1
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		}
 	]
 }

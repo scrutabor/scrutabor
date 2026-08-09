@@ -2,33 +2,54 @@
 	// Which part the reader has at Mass. Three buttons, no menu: the choice
 	// is small, it is made once, and a reader about to pray should not have
 	// to open anything to see what it is set to.
+	import type { MassForm } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
+	import { MASS_FORMS, massForm } from '$lib/mass-form.svelte';
 	import { ROLES, role, type Role } from '$lib/role.svelte';
 
+	// TWO settings, one control. The reader's part and the kind of Mass are
+	// the same sort of question — asked once, answered with a word, and both
+	// changing what the page shows — so they are the same row of words in
+	// the same place rather than two inventions to learn (owner, 2026-08-10).
+	//
 	// `compact` is the form the control takes on a page that is being read
 	// rather than chosen from: label and options on one line, no note. The
 	// reader can change their part wherever they are, which matters when
 	// they arrive at a text from a link rather than through the Ordo.
-	let { lang, compact = false }: { lang: Lang; compact?: boolean } = $props();
+	let {
+		lang,
+		compact = false,
+		kind = 'role'
+	}: { lang: Lang; compact?: boolean; kind?: 'role' | 'mass' } = $props();
 	const msgs = $derived(M[lang]);
-	const current = $derived(role.value);
-	// Two of these can be on one page (the Ordo index shows the full form);
-	// a radiogroup must not point at an id that is not its own.
-	const labelId = $derived(`role-label-${compact ? 'compact' : 'full'}`);
+	const isMass = $derived(kind === 'mass');
+	const options = $derived<readonly string[]>(isMass ? MASS_FORMS : ROLES);
+	const current = $derived(isMass ? massForm.value : role.value);
+	const label = $derived(isMass ? msgs.massLabel : msgs.roleLabel);
+	const word = $derived((o: string) =>
+		isMass ? msgs.massForms[o as MassForm] : msgs.roles[o as Role]
+	);
+	const hint = $derived(
+		isMass ? msgs.massHint[current as MassForm] : msgs.roleHint[current as Role]
+	);
+	const choose = (o: string) => (isMass ? massForm.set(o as MassForm) : role.set(o as Role));
+	// Several of these can be on one page (the Ordo index shows both in full
+	// form); a radiogroup must not point at an id that is not its own.
+	const labelId = $derived(`${kind}-label-${compact ? 'compact' : 'full'}`);
 </script>
 
-<div class="picker" class:compact>
-	<span class="label smallcaps" id={labelId}>{msgs.roleLabel}</span>
+<div class="picker" class:compact data-kind={kind}>
+	<span class="label smallcaps" id={labelId}>{label}</span>
 	<div class="options" role="radiogroup" aria-labelledby={labelId}>
-		{#each ROLES as r (r)}
+		{#each options as r (r)}
 			<button
 				type="button"
 				role="radio"
 				aria-checked={current === r}
 				class="option"
 				class:on={current === r}
-				data-word={msgs.roles[r]}
-				onclick={() => role.set(r as Role)}
+				data-word={word(r)}
+				onclick={() => choose(r)}
 			>
 				{#if compact}
 					<!-- the ghost sets the width at the weight the chosen word
@@ -44,16 +65,16 @@
 					     separator before it, so every unselected word was
 					     drawn a few pixels into its own middot. -->
 					<span class="slot">
-						<span class="ghost" aria-hidden="true">{msgs.roles[r]}</span>
-						<span class="real">{msgs.roles[r]}</span>
+						<span class="ghost" aria-hidden="true">{word(r)}</span>
+						<span class="real">{word(r)}</span>
 					</span>
 				{:else}
-					{msgs.roles[r]}
+					{word(r)}
 				{/if}
 			</button>
 		{/each}
 	</div>
-	{#if !compact}<p class="hint">{msgs.roleHint[current]}</p>{/if}
+	{#if !compact}<p class="hint">{hint}</p>{/if}
 </div>
 
 <style>

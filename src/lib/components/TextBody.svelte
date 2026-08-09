@@ -1,7 +1,8 @@
 <script lang="ts">
 	import type { GlossDocument, TextDocument } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
-	import { isYours, role } from '$lib/role.svelte';
+	import { massForm } from '$lib/mass-form.svelte';
+	import { isEveryonesResponse, isYours, role } from '$lib/role.svelte';
 	import { initialFit } from '$lib/reading-geometry';
 	import * as marks from '$lib/speaker-marks';
 
@@ -121,13 +122,29 @@
 		     field out, and a missal that guessed would be worse than one
 		     that is silent. The reader's own lines carry the strongest
 		     mark, because finding them at a glance is the whole point. -->
-		{@const mine = answers && isYours(seg.speaker, role.value)}
+		{@const mine = answers && isYours(seg, role.value, massForm.value)}
 		{@const showVoice = namesVoice(i)}
+		<!-- WHOSE LINE, from where the reader is sitting. The Missale gives
+		     every response at low Mass to the minister, so the label read
+		     ministrant over lines a congregation was about to say — the
+		     wrong answer to the question the reader was asking (owner,
+		     2026-08-09). A reader in the pew is named for their own lines;
+		     a server or a priest still sees the rubrical speaker, which is
+		     what THEY need. Nothing is renamed that is not the reader's:
+		     the celebrant's lines keep his name for everyone. -->
+		{@const yours = mine && role.value === 'populus'}
+		{@const everyones = mine && isEveryonesResponse(seg, massForm.value)}
 		{#if namesSpeaker(i) || showVoice}
 			<p class="who" class:yours={mine}>
-				{#if namesSpeaker(i) && seg.speaker}<span class="who-name"
-						>{M[lang].speakers[seg.speaker]}</span
+				{#if namesSpeaker(i) && (yours || seg.speaker)}<span class="who-name"
+						>{yours ? M[lang].faithful : M[lang].speakers[seg.speaker!]}</span
 					>{/if}
+				<!-- The first degree: the short responses the instruction asks
+				     that every congregation be able to make (nn. 25 a, 31 a).
+				     A newcomer's question is not which lines they MAY say but
+				     which ones everybody is about to, and this is the answer
+				     to that one. -->
+				{#if everyones}<span class="who-all">{M[lang].everyone}</span>{/if}
 				{#if showVoice && seg.voice && seg.voice !== 'clara'}<span class="who-voice"
 						>{M[lang].voices[seg.voice]}</span
 					>{/if}
@@ -245,6 +262,13 @@
 
 	.who:has(+ .verse.glossed) {
 		margin-bottom: calc(var(--reading) * -0.26);
+	}
+
+	/* Set like the voice mark it sits beside — the same size and tracking,
+	   in the rubric's red, because it says something about the reader's own
+	   part rather than about the celebrant's. */
+	.who-all {
+		color: var(--rubric);
 	}
 
 	.who-voice {

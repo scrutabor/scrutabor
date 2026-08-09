@@ -165,7 +165,7 @@
 			<p class="subtitle smallcaps">{sectionLabel}</p>
 			<div class="help-row">
 				<HelpLevels {lang} bind:value={helpLevel} />
-				{#if takesPart}<RolePicker {lang} compact />{/if}
+				{#if takesPart}<RolePicker {lang} compact /><RolePicker {lang} compact kind="mass" />{/if}
 			</div>
 			{#if gloss.about}
 				<!-- Closed at EVERY slider position (owner rule): the

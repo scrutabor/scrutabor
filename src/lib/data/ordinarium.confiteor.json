@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.9.0",
+	"schema_version": "0.10.0",
 	"id": "ordinarium.confiteor",
 	"title": "Confíteor (Ministrórum)",
 	"category": "ordinarium",
@@ -322,7 +322,13 @@
 						"decl": 3
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		},
 		{
 			"id": "s03",
@@ -406,7 +412,13 @@
 						"decl": 3
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		},
 		{
 			"id": "s04",
@@ -511,7 +523,13 @@
 						"decl": 1
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		},
 		{
 			"id": "s06",
@@ -852,7 +870,13 @@
 						"gender": "m"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		}
 	]
 }

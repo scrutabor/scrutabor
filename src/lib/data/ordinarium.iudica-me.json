@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.9.0",
+	"schema_version": "0.10.0",
 	"id": "ordinarium.iudica-me",
 	"title": "Psalmus Iúdica me",
 	"category": "ordinarium",
@@ -466,7 +466,13 @@
 						"decl": 2
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		},
 		{
 			"id": "s05",
@@ -818,7 +824,13 @@
 						"gender": "f"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		},
 		{
 			"id": "s07",
@@ -1161,7 +1173,13 @@
 						"gender": "m"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		},
 		{
 			"id": "s09",
@@ -1383,7 +1401,13 @@
 						"pos": "intj"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		},
 		{
 			"id": "s11",
@@ -1529,7 +1553,13 @@
 						"gender": "f"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			}
 		}
 	]
 }

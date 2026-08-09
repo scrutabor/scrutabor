@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.9.0",
+	"schema_version": "0.10.0",
 	"id": "ordinarium.praefatio-dialogus",
 	"title": "Dóminus vobíscum (dialogus Præfationis)",
 	"category": "ordinarium",
@@ -129,7 +129,17 @@
 						"gender": "m"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 1,
+					"source": "DMS 31 a"
+				},
+				"cantu": {
+					"gradus": 1,
+					"source": "DMS 25 a"
+				}
+			}
 		},
 		{
 			"id": "s04",
@@ -202,7 +212,17 @@
 						"decl": 2
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 1,
+					"source": "DMS 31 a"
+				},
+				"cantu": {
+					"gradus": 1,
+					"source": "DMS 25 a"
+				}
+			}
 		},
 		{
 			"id": "s06",
@@ -324,7 +344,17 @@
 						"voice": "act"
 					}
 				}
-			]
+			],
+			"participation": {
+				"lecta": {
+					"gradus": 1,
+					"source": "DMS 31 a"
+				},
+				"cantu": {
+					"gradus": 1,
+					"source": "DMS 25 a"
+				}
+			}
 		}
 	]
 }

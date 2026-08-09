@@ -58,12 +58,15 @@ test('the role survives leaving the page', async ({ page }) => {
 test('a line the reader answers is marked as theirs', async ({ page }) => {
 	await page.goto('/app/pl/ordinarium/praefatio-dialogus');
 
-	// each speaker is named once — the mark carries it after that — and
-	// nothing tells the reader what to do with the line: the page shows
-	// whose it is and stops there
+	// Each speaker is named once — the mark carries it after that. A reader
+	// in the pew is named for their OWN lines: Et cum spiritu tuo is one of
+	// the responses the 1958 instruction asks that every congregation be
+	// able to make (n. 25 a at a sung Mass, n. 31 a at a low one), so the
+	// line that used to be labelled ministrant over a congregation about to
+	// say it now says who is saying it (owner, 2026-08-09).
 	const named = page.locator('.who');
 	await expect(named.first()).toContainText('kapłan');
-	await expect(named.nth(1)).toContainText('ministrant');
+	await expect(named.nth(1)).toContainText('wierni');
 	await expect(page.locator('.who-yours')).toHaveCount(0);
 	expect(await page.locator('.verse.answer').count()).toBeGreaterThan(0);
 });
