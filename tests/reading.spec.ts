@@ -406,21 +406,26 @@ test('two tinted words meet exactly, with no page between them', async ({ page }
 		const pad =
 			(parseFloat(getComputedStyle(sel, '::before').width) - sel.getBoundingClientRect().width) / 2;
 		const words = [...document.querySelectorAll('button.word')];
-		let worst = Infinity;
+		const em = parseFloat(getComputedStyle(sel).fontSize);
+		let widestGap = 0;
 		for (let i = 0; i < words.length - 1; i++) {
 			const a = words[i].querySelector('.base')!.getBoundingClientRect();
 			const b = words[i + 1].querySelector('.base')!.getBoundingClientRect();
 			if (Math.abs(a.top - b.top) > 2) continue; // same line only
-			worst = Math.min(worst, b.left - pad - (a.right + pad));
+			widestGap = Math.max(widestGap, b.left - a.right);
 		}
-		return { worst, pad };
+		return { pad, widestGap, em };
 	});
 
 	expect(m.pad, 'the tint has an inset to read').toBeGreaterThan(0);
-	expect(m.worst, 'no page shows between two tints').toBeLessThanOrEqual(0);
-	// and they still only just meet — a real overlap is what let a
-	// neighbour paint on the ring
-	expect(m.worst, 'and they do not overlap by anything visible').toBeGreaterThan(-1);
+	// Stated against the gap this renderer actually produces, not against a
+	// pixel count: the gap is 0.0625em on a Mac and 0.079em on the Linux
+	// runner, and a test written to the first number went red on the second.
+	expect(2 * m.pad, 'two tints reach each other').toBeGreaterThanOrEqual(m.widestGap);
+	expect(
+		(2 * m.pad - m.widestGap) / m.em,
+		'and do not overlap enough to read as one band'
+	).toBeLessThan(0.06);
 });
 
 test('a modified arrow belongs to the browser, not to the pager', async ({ page }) => {
@@ -1295,6 +1300,18 @@ const inkGaps = (page: Page) =>
 			});
 		});
 
+		const labels: { above: number; below: number; txt: string }[] = [];
+		document.querySelectorAll('.who').forEach((w) => {
+			const p = w.previousElementSibling,
+				n = w.nextElementSibling;
+			if (!p || !n || !n.classList.contains('verse')) return;
+			labels.push({
+				above: edge(w, 'top')! - edgeOf(p, 'bottom')!,
+				below: edgeOf(n, 'top')! - edge(w, 'bottom')!,
+				txt: w.textContent!.trim().slice(0, 24)
+			});
+		});
+
 		const translations: { above: number; below: number; txt: string }[] = [];
 		document.querySelectorAll('.seg-extra').forEach((sx) => {
 			const p = sx.previousElementSibling,
@@ -1307,7 +1324,7 @@ const inkGaps = (page: Page) =>
 				txt: tr.textContent!.trim().slice(0, 24)
 			});
 		});
-		return { rubrics, translations };
+		return { rubrics, translations, labels };
 	});
 
 test('a rubric sits centrally between the verses it parts', async ({ page }) => {
@@ -1357,34 +1374,29 @@ test('a translation is attached to its verse without touching it', async ({ page
 });
 
 test('a speaker label belongs to the verse below it', async ({ page }) => {
-	// The label was landing on the gloss row of the verse before it — a
-	// glossed verse paints its gloss BELOW the box its margin hangs from,
-	// so the margin was buying no daylight at all (owner, 2026-08-09).
+	// The label names the verse UNDER it, and has to look like it does.
+	// Measured in glyphs it was the wrong way round as soon as the glosses
+	// showed — 40 above and 22 below on bare Latin, 20 and 28 with the
+	// glosses on, where it read as the tail of the verse above (owner,
+	// 2026-08-09). Two causes, both invisible to the box model: the gloss
+	// row hangs past the box above, and a glossed verse keeps a third of a
+	// line of leading over its first glyph below.
 	await page.goto('/app/pl/ordo/praeparatio');
-	const gaps = await page.evaluate(() => {
-		const ink = (e: Element, side: 'top' | 'bottom') => {
-			const r = document.createRange();
-			r.selectNodeContents(e);
-			const b = r.getBoundingClientRect();
-			return side === 'top' ? b.top : b.bottom;
-		};
-		const out: { above: number; below: number }[] = [];
-		document.querySelectorAll('.who').forEach((w) => {
-			const p = w.previousElementSibling,
-				n = w.nextElementSibling;
-			if (!p || !n || !p.classList.contains('verse')) return;
-			out.push({
-				above: ink(w, 'top') - ink(p, 'bottom'),
-				below: ink(n, 'top') - ink(w, 'bottom')
-			});
-		});
-		return out;
-	});
 
-	expect(gaps.length, 'a speaker label follows a verse somewhere').toBeGreaterThan(0);
-	for (const g of gaps) {
-		expect(g.above, 'the label clears the gloss row above it').toBeGreaterThan(6);
-		expect(g.above, 'and still sits nearer the verse it names').toBeGreaterThan(g.below * 2);
+	for (const help of ['0', '1', '2']) {
+		await page.locator('input[type="range"]').fill(help);
+		const { labels } = await inkGaps(page);
+		expect(labels.length, `a label stands over a verse at help ${help}`).toBeGreaterThan(0);
+		for (const g of labels) {
+			expect(
+				g.above,
+				`"${g.txt}" at help ${help} clears what is above it (${Math.round(g.above)}px)`
+			).toBeGreaterThan(10);
+			expect(
+				g.above / g.below,
+				`"${g.txt}" at help ${help}: ${Math.round(g.above)} above, ${Math.round(g.below)} below`
+			).toBeGreaterThan(1.2);
+		}
 	}
 });
 

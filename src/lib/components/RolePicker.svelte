@@ -226,4 +226,19 @@
 	.picker.compact .option:hover {
 		color: var(--rubric);
 	}
+
+	/* The ring goes round the WORD. Compact, the option's box carries the
+	   separator before it — the middot and the 0.4rem after it — so a ring
+	   on the button enclosed the dot belonging to the previous part and
+	   started a third of a word to its left (owner, 2026-08-09). The slot
+	   holds only the word, which is the thing being chosen. */
+	.picker.compact .option:focus-visible {
+		outline: none;
+	}
+
+	.picker.compact .option:focus-visible .slot {
+		outline: 2px solid var(--rubric);
+		outline-offset: 3px;
+		border-radius: 0.15rem;
+	}
 </style>

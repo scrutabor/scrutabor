@@ -166,7 +166,7 @@
 						class="mark"
 						class:yours={mine}
 						aria-label={M[lang].markTitle[seg.speaker]}
-						onclick={onmark}>{MARKS[seg.speaker]}</button
+						onclick={onmark}><span class="ink">{MARKS[seg.speaker]}</span></button
 					>{:else}<span class="mark" class:yours={mine} aria-hidden="true"
 						>{MARKS[seg.speaker]}</span
 					>{/if}<span class="sr-only"
@@ -176,7 +176,7 @@
 						class="mark"
 						aria-label={M[lang].verseAria(verseNo)}
 						aria-pressed={verseNo === citedVerse}
-						onclick={() => onverse?.(verseNo)}>{verseNo}</button
+						onclick={() => onverse?.(verseNo)}><span class="ink">{verseNo}</span></button
 					>{:else}<span class="mark">{verseNo}</span
 					>{/if}{/if}{#each seg.words ?? [] as w, wi (w.id)}{@const raised =
 					i === firstVerse && wi === 0}<span class="token"
@@ -222,6 +222,29 @@
 		display: flex;
 		gap: calc(var(--reading) * 0.414);
 		align-items: baseline;
+	}
+
+	/* And measured in glyphs it was still the wrong way round as soon as the
+	   glosses showed: 40 above and 22 below on bare Latin, where the label
+	   plainly names the verse under it — but 20 and 28 with the glosses on,
+	   where it reads as the tail of the verse above (owner, 2026-08-09).
+
+	   The overhang above is only half of it. The other half is the leading
+	   BELOW: a glossed verse is set at line-height 2.3, so a third of a
+	   line of air stands over its first Latin glyph, inside its own box
+	   where a margin cannot reach it. Clearing the overhang bought back
+	   5px and the leading had already given away 26.
+
+	   So the label spends more above and takes back some of that leading
+	   below, and the pair restores the proportion bare Latin has: 40 and
+	   22. Both corrections name the state that causes them and neither
+	   fires without it. */
+	.verse.glossed + .who {
+		margin-top: calc(var(--reading) * (0.517 + var(--gloss-gap) + 0.86));
+	}
+
+	.who:has(+ .verse.glossed) {
+		margin-bottom: calc(var(--reading) * -0.26);
 	}
 
 	.who-voice {
@@ -274,9 +297,21 @@
 		text-underline-offset: 0.25em;
 	}
 
+	/* The ring goes round the LETTER, not the gutter. A mark's box is a
+	   fixed 1.379 of the reading size — the width the Latin column is
+	   indented by, which is what keeps every verse on one left edge — and
+	   `V.` fills less than half of it. A ring on that box drew a rectangle
+	   three times the width of the letter and reached over the first word
+	   of the line (owner, 2026-08-09). The span holds the ink and nothing
+	   else; the button keeps the width the column needs. */
 	button.mark:focus-visible {
+		outline: none;
+	}
+
+	button.mark:focus-visible .ink {
 		outline: 2px solid var(--rubric);
 		outline-offset: 2px;
+		border-radius: 0.1em;
 	}
 
 	/* The cited verse: its number in rubric red — the same signal the
@@ -451,19 +486,20 @@
 	button.word.selected .base::before {
 		content: '';
 		position: absolute;
-		/* HALF THE GAP BETWEEN TWO WORDS, so two tints meet exactly and the
-		   page never shows between them.
-		   The gap is the same 0.0625em at every reading size — measured
-		   across all 57 pairs on a page at three sizes, min equal to max —
-		   so half of it is a constant this can be written in. 0.07em was
-		   spending more than the whole gap: every tint lay across both its
-		   neighbours', two tinted words merged into a band, and the tint
-		   after a focused word painted over its ring. 0.02em left the
-		   opposite fault, a line of page between a ring and the tint beside
-		   it (owner, 2026-08-09). A hair over half, because two boxes that
-		   share an edge exactly are each antialiased against the page and
-		   can still show a seam. */
-		inset: -0.1em -0.035em;
+		/* MORE THAN HALF THE GAP between two words, so two tints always meet
+		   and the page never shows between them (owner, 2026-08-09). They
+		   may overlap by a fraction of a pixel; nothing depends on their
+		   paint order any more, because a focused word makes a stacking
+		   context of its own.
+
+		   Half the gap exactly was tried, and that is not a number that
+		   exists: the gap measures 0.0625em on a Mac and 0.079em on the
+		   Linux runner. Font metrics again — the same trap that made a
+		   measure tuned in `ch` land 40px out. So this is sized for the
+		   wider of the two rather than for the one in front of me, and the
+		   test states the rule relatively: they meet, and they do not
+		   overlap enough to read as one band. */
+		inset: -0.1em -0.05em;
 		border-radius: 0.172em;
 		background: var(--wash);
 		z-index: -1;

@@ -33,6 +33,24 @@
 	box-sizing: border-box;
 }
 
+/* ONE focus ring for the whole book, in the page's own red.
+
+   Every component used to declare its own, which is fine until one does
+   not: fifteen focusable things on a single Ordo movement had no rule at
+   all — nine part titles among them — and fell back to the browser's blue
+   double ring, on a page that has no blue in it anywhere. The owner found
+   it by pressing Tab (2026-08-09).
+
+   In :where(), so it carries no specificity and any component that needs a
+   different SHAPE — a word, whose box is the whole line; a speaker mark,
+   whose box is the gutter it is aligned in — overrides it with a plain
+   class selector and does not have to fight this rule to do it. What is
+   not negotiable is the colour and that there is one. */
+:where(a[href], area, button, input, select, textarea, summary, [tabindex]):focus-visible {
+	outline: 2px solid var(--rubric);
+	outline-offset: 2px;
+}
+
 /* Metric-matched fallback: a system serif resized to EB Garamond's
    advance widths, so the paint before the webfont arrives occupies the
    same space and the swap shifts nothing. Guarded by the cold-load CLS

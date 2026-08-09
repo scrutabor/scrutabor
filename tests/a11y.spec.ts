@@ -121,3 +121,88 @@ test('the help slider at its fullest meets WCAG 2.1 AA', async ({ page }) => {
 	await page.locator('input[type="range"]').fill('2');
 	expect(await violations(page), 'reading page at full help').toEqual([]);
 });
+
+test('everything the keyboard reaches wears the house focus ring', async ({ page }) => {
+	// Every component declared its own ring, which holds until one does
+	// not: fifteen focusable things on a single Ordo movement had no rule
+	// at all — the nine part titles among them — and Chrome drew its blue
+	// double ring on a page with no blue anywhere in it. The owner found it
+	// by pressing Tab (2026-08-09). There is one ring now, declared once in
+	// app.css at zero specificity, and this is what says so.
+	await page.goto('/app/pl/ordo/praeparatio');
+
+	const findings = await page.evaluate(() => {
+		// every selector in the app that styles a focus ring
+		const rules: string[] = [];
+		for (const sheet of document.styleSheets) {
+			let list: CSSRuleList;
+			try {
+				list = sheet.cssRules;
+			} catch {
+				continue; // cross-origin, not ours
+			}
+			for (const r of list) {
+				const sel = (r as CSSStyleRule).selectorText;
+				// `matches` cannot take a pseudo-ELEMENT, and a rule that ends
+				// in one is styling the ring of a rule that does not
+				if (sel && sel.includes(':focus-visible') && !sel.includes('::')) rules.push(sel);
+			}
+		}
+
+		const focusable = 'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])';
+		const bare = new Set<string>();
+		let counted = 0;
+		for (const el of document.querySelectorAll(focusable)) {
+			counted++;
+			// the whole selector list at once — splitting on commas would cut
+			// `:where(a, button)` in half
+			const covered = rules.some((sel) => {
+				try {
+					return el.matches(sel.replace(/:focus-visible/g, ''));
+				} catch {
+					return false;
+				}
+			});
+			if (!covered) {
+				const cls = (el.getAttribute('class') ?? '').split(' ')[0];
+				bare.add(el.tagName.toLowerCase() + (cls ? `.${cls}` : ''));
+			}
+		}
+		return { bare: [...bare], counted, rules: rules.length };
+	});
+
+	expect(findings.counted, 'the movement has things to focus').toBeGreaterThan(20);
+	expect(findings.bare, 'these would fall back to the browser default ring').toEqual([]);
+});
+
+test('a focus ring is drawn round the ink, not round the box it aligns in', async ({ page }) => {
+	// Two boxes on a reading surface are deliberately bigger than what they
+	// print. A speaker mark is a fixed 1.379 of the reading size, the width
+	// the Latin column is indented by; a role option in the compact picker
+	// carries the separator that precedes it. Ringing either box drew a
+	// rectangle around a lot of nothing, and the mark's reached over the
+	// first word of its line (owner, 2026-08-09).
+	await page.goto('/app/pl/ordo/praeparatio');
+
+	const m = await page.evaluate(() => {
+		const box = (el: Element | null | undefined) => {
+			const r = el?.getBoundingClientRect();
+			return r ? { w: r.width, left: r.left } : null;
+		};
+		const mark = document.querySelector('button.mark');
+		const option = [...document.querySelectorAll('.picker.compact .option')].find(
+			(o) => o.previousElementSibling // one that carries the separator
+		);
+		return {
+			mark: { button: box(mark), ring: box(mark?.querySelector('.ink')) },
+			option: { button: box(option), ring: box(option?.querySelector('.slot')) }
+		};
+	});
+
+	expect(m.mark.ring, 'the mark rings an inner span').not.toBeNull();
+	// the letter is well under half the gutter it is aligned in
+	expect(m.mark.ring!.w).toBeLessThan(m.mark.button!.w * 0.6);
+	expect(m.option.ring, 'the option rings its word').not.toBeNull();
+	// and the ring starts clear of the separator the button also holds
+	expect(m.option.ring!.left).toBeGreaterThan(m.option.button!.left + 5);
+});
