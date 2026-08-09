@@ -3,7 +3,7 @@
 	"text": "ordinarium.perceptio-corporis",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The last of the three prayers, and the one that names the danger. St Paul writes that whoever eats and drinks unworthily eats and drinks judgment to himself — iudicium sibi manducat et bibit — and this missal prints those words as the Epistle for Corpus Christi and for Holy Thursday; the prayer asks that the receiving not turn out that way. It is built on one subject and two verbs pulling against each other, one negative and one positive: let it not come out to judgment, let it profit me instead. Præsúmo says plainly what the priest is doing: taking beforehand what is not his by right.",
+	"about": "The last of the three prayers, and the one that names the danger. St Paul writes that whoever eats and drinks unworthily eats and drinks judgment to himself — iudicium sibi manducat et bibit — and the 1962 missal prints those words as the Epistle for Corpus Christi and for Holy Thursday; the prayer asks that the receiving not turn out that way. It is built on one subject and two verbs pulling against each other, one negative and one positive: let it not come out to judgment, let it profit me instead. Præsúmo says plainly what the priest is doing: taking beforehand what he is not worthy to take.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,22 +13,22 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "Let not the partaking of Thy Body, O Lord Iesus Christ, which I, unworthy, presume to receive,"
+			"translation": "May the receiving of Your Body and Blood, Lord Jesus Christ, which I, unworthy, presume to receive,"
 		},
 		"s02": {
-			"translation": "turn out to my judgment and condemnation:"
+			"translation": "not bring me to judgment and condemnation:"
 		},
 		"s03": {
-			"translation": "but by Thy loving-kindness let it profit me as a safeguard of mind and body, and as a healing to be received:"
+			"translation": "but through Your loving mercy be for me protection in mind and body, and a healing remedy:"
 		},
 		"s04": {
-			"translation": "Who livest and reignest with God the Father in the unity of the Holy Spirit, God, for ever and ever. Amen."
+			"translation": "Who live and reign with God the Father in the unity of the Holy Spirit, God, for ever and ever. Amen."
 		}
 	},
 	"words": {
 		"w001": {
 			"gloss": "The partaking",
-			"function": "Subject of both verbs of the prayer, and held apart from them by everything in between; it does not reach “provéniat” (w014) until the second segment."
+			"function": "Subject of both verbs of the prayer, and held apart from them by everything in between; it does not reach “provéniat” (w014) until the second segment. Whitaker's does not carry the noun percéptio, so the parse rests on Collatinus alone."
 		},
 		"w002": {
 			"gloss": "of the Body"
@@ -41,14 +41,14 @@
 			"gloss": "O Lord"
 		},
 		"w005": {
-			"gloss": "Iesus"
+			"gloss": "Jesus"
 		},
 		"w006": {
 			"gloss": "Christ"
 		},
 		"w007": {
 			"gloss": "which",
-			"function": "Neuter, so it reaches past the feminine Percéptio to “Córporis” (w002): what he presumes to receive is the Body, not the partaking of it."
+			"function": "Neuter, so it points to “Córporis” (w002), not the feminine Percéptio: what he presumes to receive is the Body, not the partaking of it."
 		},
 		"w008": {
 			"gloss": "I",
@@ -63,7 +63,7 @@
 		},
 		"w011": {
 			"gloss": "presume",
-			"function": "Præ and sumo: to take beforehand, to take what has not been granted. The word admits the audacity rather than excusing it."
+			"function": "Præ and sumo: to take beforehand, to reach for what one is not worthy of. The word admits the audacity rather than excusing it."
 		},
 		"w012": {
 			"gloss": "not"
@@ -81,7 +81,7 @@
 		},
 		"w016": {
 			"gloss": "judgment",
-			"function": "The word St Paul uses of eating and drinking unworthily; the Whitaker's port does not carry ju- words, so this parse rests on Collatinus and the edition."
+			"function": "The word St Paul uses of eating and drinking unworthily."
 		},
 		"w017": {
 			"gloss": "and"
@@ -101,7 +101,7 @@
 		},
 		"w022": {
 			"gloss": "loving-kindness",
-			"function": "Pietas in a Roman mouth is the duty owed to parents, gods and country; turned toward God it means His fidelity to us, not our feeling toward Him."
+			"function": "Pro tua pietáte: the unworthy man's plea rests not on his own merit but on God's faithfulness — that one word carries the whole petition."
 		},
 		"w023": {
 			"gloss": "let it profit",
@@ -118,7 +118,8 @@
 			"function": "A late formation from tueor, to watch over: a thing that guards. It governs the two genitives that follow."
 		},
 		"w027": {
-			"gloss": "of mind"
+			"gloss": "of mind",
+			"function": "Mens is the mind rather than the soul; the pair the prayer sets together is the mind and the body."
 		},
 		"w028": {
 			"gloss": "and"
@@ -137,8 +138,8 @@
 			"gloss": "a healing"
 		},
 		"w033": {
-			"gloss": "to be received",
-			"function": "A gerundive, which is the future passive participle: agreeing with “medélam” (w032), a healing that is to be received. The obligation such forms usually carry is here no more than purpose."
+			"gloss": "for receiving",
+			"function": "A gerundive, the future passive participle, drawn into agreement with “medélam” (w032); ad with the accusative makes the whole phrase one of purpose, and English turns it round to an active: for receiving healing. The obligation such forms usually carry is not in it."
 		},
 		"w034": {
 			"gloss": "Who"

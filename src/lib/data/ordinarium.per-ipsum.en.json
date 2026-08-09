@@ -3,7 +3,7 @@
 	"text": "ordinarium.per-ipsum",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The doxology that closes the Canon, said with the Host held over the chalice: this is the minor elevation, so called to distinguish it from the two elevations after each consecration. Those two are the younger — they entered the Roman Mass only around 1200; this one is older. The whole Canon is said silently; of it the people hear only the first three words of Nobis quoque and this closing Per ómnia sǽcula sæculórum, to which they answer Amen.",
+	"about": "The doxology that closes the Canon, said with the Host held over the chalice: this is the minor elevation, so called to distinguish it from the elevation after each of the two consecrations. Those are the younger — the Host's entered the Roman Mass around 1200, the chalice's spread more slowly still; this one is older, attested from the ninth century. The whole Canon is said silently; of it the people hear only the first three words of Nobis quoque and this closing Per ómnia sǽcula sæculórum, to which the people — at low Mass the server — answer Amen.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,28 +13,28 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest uncovers the chalice, genuflects, takes the host in his right hand and, holding the chalice in his left, signs the cross with it three times from lip to lip of the chalice."
+			"narrative": "The priest uncovers the chalice, genuflects, takes the Host in his right hand and, holding the chalice in his left, signs the cross with it three times from lip to lip of the chalice."
 		},
 		"s02": {
-			"translation": "Through him, and with him, and in him,"
+			"translation": "Through Him, and with Him, and in Him,"
 		},
 		"s03": {
-			"narrative": "With the host the priest makes two signs of the cross between himself and the chalice."
+			"narrative": "With the Host the priest makes two signs of the cross between himself and the chalice."
 		},
 		"s04": {
-			"translation": "is to thee, God the Father almighty, in the unity of the Holy Spirit,"
+			"translation": "O God, almighty Father, in the unity of the Holy Spirit,"
 		},
 		"s05": {
-			"narrative": "The priest raises the chalice a little, with the host."
+			"narrative": "The priest raises the chalice a little, with the Host."
 		},
 		"s06": {
-			"translation": "all honour and glory."
+			"translation": "all glory and honour is Yours,"
 		},
 		"s07": {
-			"narrative": "The priest sets down the host, covers the chalice with the pall, genuflects, rises and says in an audible voice, or sings:"
+			"narrative": "The priest sets down the Host, covers the chalice with the pall, genuflects, rises and says in an audible voice, or sings:"
 		},
 		"s08": {
-			"translation": "For ever and ever."
+			"translation": "for ever and ever."
 		},
 		"s09": {
 			"translation": "Amen."
@@ -45,8 +45,8 @@
 			"gloss": "through"
 		},
 		"w002": {
-			"gloss": "him",
-			"function": "Ipse insists: through him himself, and no other."
+			"gloss": "Him",
+			"function": "Ipse takes up the Christ just named: through him. The shade through him himself is one reading — later Latin sets ipse for plain is as well."
 		},
 		"w003": {
 			"gloss": "and"
@@ -55,7 +55,7 @@
 			"gloss": "with"
 		},
 		"w005": {
-			"gloss": "him"
+			"gloss": "Him"
 		},
 		"w006": {
 			"gloss": "and"
@@ -64,7 +64,7 @@
 			"gloss": "in"
 		},
 		"w008": {
-			"gloss": "him",
+			"gloss": "Him",
 			"function": "Three prepositions and three crosses: at each of them the priest passes the host over the chalice."
 		},
 		"w009": {
@@ -72,7 +72,7 @@
 			"function": "The only verb in the sentence, and it stands in the middle, before the subjects that close it."
 		},
 		"w010": {
-			"gloss": "to thee",
+			"gloss": "to Thee",
 			"function": "Dative: to whom the honour and glory belong."
 		},
 		"w011": {
@@ -125,7 +125,7 @@
 		},
 		"w026": {
 			"gloss": "Amen",
-			"function": "The people's answer — and the one word of the Canon the priest does not say himself."
+			"function": "The people's answer — at low Mass the server's — and the one word of the Canon the priest does not say himself."
 		}
 	}
 }

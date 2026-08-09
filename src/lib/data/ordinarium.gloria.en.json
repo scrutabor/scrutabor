@@ -13,43 +13,43 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "At the middle of the altar the priest intones the angelic hymn — the song the angels sang over Bethlehem (Lk 2:14). At High Mass all stand at the intonation. The rubric has it said “si dicendum est” — if it falls to be said: it is omitted, among other days, at the seasonal Masses of Advent, Pre-Lent and Lent and at Requiem Masses, and returns on the feasts of those seasons. At the words “Adorámus te”, “Grátias ágimus tibi”, “Iesu Christe” and “Súscipe deprecatiónem” the priest bows his head, and at “Cum Sancto Spíritu” he signs himself with the cross."
+			"narrative": "At the middle of the altar the priest intones the angelic hymn — the song the angels sang over Bethlehem (Lk 2:14). At High Mass all stand at the intonation. The rubric has it said “si dicendum est” — if it falls to be said: it is omitted, among other days, at the seasonal Masses of Advent, Pre-Lent and Lent and at Requiem Masses, and returns on the feasts of those seasons. At “Adorámus te”, “Grátias ágimus tibi”, “Súscipe deprecatiónem” and each time at “Iesu Christe” the priest bows his head — he bows it too at “Deo” in the intonation — and at “Cum Sancto Spíritu” he signs himself with the cross."
 		},
 		"s02": {
 			"translation": "Glory to God in the highest."
 		},
 		"s03": {
-			"translation": "And on earth peace to men of good will."
+			"translation": "And on earth peace to people of good will."
 		},
 		"s04": {
-			"translation": "We praise you. We bless you. We adore you. We glorify you."
+			"translation": "We praise You. We bless You. We adore You. We glorify You."
 		},
 		"s05": {
-			"translation": "We give you thanks for your great glory."
+			"translation": "We give You thanks for Your great glory."
 		},
 		"s06": {
-			"translation": "Lord God, heavenly King, God the Father almighty."
+			"translation": "Lord God, heavenly King, O God, almighty Father."
 		},
 		"s07": {
-			"translation": "Lord, only-begotten Son, Iesus Christ."
+			"translation": "Lord, only-begotten Son, Jesus Christ."
 		},
 		"s08": {
 			"translation": "Lord God, Lamb of God, Son of the Father."
 		},
 		"s09": {
-			"translation": "You who take away the sins of the world, have mercy on us."
+			"translation": "You take away the sins of the world, have mercy on us."
 		},
 		"s10": {
-			"translation": "You who take away the sins of the world, receive our plea."
+			"translation": "You take away the sins of the world, receive our prayer."
 		},
 		"s11": {
-			"translation": "You who sit at the right hand of the Father, have mercy on us."
+			"translation": "You are seated at the right hand of the Father, have mercy on us."
 		},
 		"s12": {
-			"translation": "For you alone are the Holy One. You alone are the Lord. You alone are the Most High, Iesus Christ."
+			"translation": "For You alone are the Holy One. You alone are the Lord. You alone are the Most High, Jesus Christ."
 		},
 		"s13": {
-			"translation": "With the Holy Spirit, in the glory of God the Father. Amen."
+			"translation": "With the Holy Spirit in the glory of God the Father. Amen."
 		}
 	},
 	"words": {
@@ -93,35 +93,35 @@
 			"gloss": "we praise"
 		},
 		"w013": {
-			"gloss": "you"
+			"gloss": "You"
 		},
 		"w014": {
 			"gloss": "we bless"
 		},
 		"w015": {
-			"gloss": "you"
+			"gloss": "You"
 		},
 		"w016": {
 			"gloss": "we adore"
 		},
 		"w017": {
-			"gloss": "you"
+			"gloss": "You"
 		},
 		"w018": {
 			"gloss": "we glorify"
 		},
 		"w019": {
-			"gloss": "you"
+			"gloss": "You"
 		},
 		"w020": {
 			"gloss": "thanks"
 		},
 		"w021": {
 			"gloss": "we give",
-			"function": "Literally “we do” — the object is “Grátias” (w020), fronted for emphasis."
+			"function": "Literally “we do” — the object is “Grátias” (w020): the fixed idiom “grátias ágere”, whose noun always precedes the verb."
 		},
 		"w022": {
-			"gloss": "to you"
+			"gloss": "to You"
 		},
 		"w023": {
 			"gloss": "for"
@@ -133,7 +133,7 @@
 			"gloss": "glory"
 		},
 		"w026": {
-			"gloss": "your"
+			"gloss": "Your"
 		},
 		"w027": {
 			"gloss": "Lord"
@@ -168,7 +168,7 @@
 			"gloss": "only-begotten"
 		},
 		"w037": {
-			"gloss": "Iesus"
+			"gloss": "Jesus"
 		},
 		"w038": {
 			"gloss": "Christ"
@@ -260,18 +260,18 @@
 			"gloss": "for"
 		},
 		"w066": {
-			"gloss": "you"
+			"gloss": "You"
 		},
 		"w067": {
 			"gloss": "alone",
 			"function": "“You alone” — in Latin an adjective beside the pronoun, with no verb: an implied “es” (are) must be supplied in all three sentences of this verse."
 		},
 		"w068": {
-			"gloss": "the Holy One",
-			"function": "An adjective doing a title's work: “the Holy One” as a name of God — as in “Sanctus, Sanctus, Sanctus”."
+			"gloss": "holy",
+			"function": "A predicate with the verb understood: you alone — holy; the threefold “Sanctus” of the Sanctus predicates the same way."
 		},
 		"w069": {
-			"gloss": "you"
+			"gloss": "You"
 		},
 		"w070": {
 			"gloss": "alone"
@@ -280,17 +280,17 @@
 			"gloss": "the Lord"
 		},
 		"w072": {
-			"gloss": "you"
+			"gloss": "You"
 		},
 		"w073": {
 			"gloss": "alone"
 		},
 		"w074": {
-			"gloss": "the Most High",
-			"function": "Like “Sanctus” (w068) — an adjective serving as a predicate title; the peak of the three-step ladder: Holy One, Lord, Most High."
+			"gloss": "Most High",
+			"function": "Like “Sanctus” (w068) — a predicate; the peak of the three-step gradation: holy, Lord, Most High."
 		},
 		"w075": {
-			"gloss": "Iesus"
+			"gloss": "Jesus"
 		},
 		"w076": {
 			"gloss": "Christ"

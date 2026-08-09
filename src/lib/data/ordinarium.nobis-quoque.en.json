@@ -3,7 +3,7 @@
 	"text": "ordinarium.nobis-quoque",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The one prayer of the Canon the priest says aloud — the rubric has him raise his voice “a little” — and the one at which he strikes his breast. The two go together: it is the sinners' petition for themselves. Its list of saints answers the list in the Communicántes: John (usually taken to be the Baptist), Stephen, Matthias, Barnabas, Ignatius, Alexander, Marcellinus and Peter — not the apostle but the exorcist, Marcellinus's companion — and then seven women: Felicity, Perpetua, Agatha, Lucy, Agnes, Cecilia, Anastasia. It is the largest group of women named in the Roman Mass.",
+	"about": "The opening three words the priest says aloud — the rubric has him raise his voice “a little” — the only ones the people hear from the Canon besides the closing Per ómnia; and the one prayer at which he strikes his breast. The two go together: it is the sinners' petition for themselves. Its list of saints answers the list in the Communicántes: John (usually taken to be the Baptist), Stephen, Matthias, Barnabas, Ignatius, Alexander, Marcellinus and Peter — not the apostle but the exorcist, Marcellinus's companion — and then seven women: Felicity, Perpetua, Agatha, Lucy, Agnes, Cecilia, Anastasia. It is the largest group of women named in the Roman Mass.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,19 +16,19 @@
 			"narrative": "The priest strikes his breast with his right hand and says, with his voice raised a little:"
 		},
 		"s02": {
-			"translation": "To us also, sinners,"
+			"translation": "To us, also, Your servants, who, though sinners,"
 		},
 		"s03": {
 			"narrative": "The priest spreads his hands as before and goes on silently."
 		},
 		"s04": {
-			"translation": "thy servants, who hope in the multitude of thy mercies, deign to grant some part and fellowship with thy holy Apostles and Martyrs:"
+			"translation": "hope in Your abundant mercies, graciously grant some share and fellowship with Your holy Apostles and Martyrs:"
 		},
 		"s05": {
-			"translation": "with John, Stephen, Matthias, Barnabas, Ignatius, Alexander, Marcellinus, Peter, Felicity, Perpetua, Agatha, Lucy, Agnes, Cecilia, Anastasia and all thy Saints:"
+			"translation": "with John the Baptist, Stephen, Matthias, Barnabas, Ignatius, Alexander, Marcellinus, Peter, Felicity, Perpetua, Agatha, Lucy, Agnes, Cecilia, Anastasia and all Your Saints:"
 		},
 		"s06": {
-			"translation": "into whose company admit us — not as a weigher of merit, but as a bountiful giver of pardon, we beseech thee."
+			"translation": "admit us, we beseech You, into their company, not weighing our merits, but granting us Your pardon."
 		},
 		"s07": {
 			"narrative": "The priest joins his hands."
@@ -40,7 +40,7 @@
 	"words": {
 		"w001": {
 			"gloss": "to us",
-			"function": "A dative right at the head, twelve words before its verb; and these are the only three words of the Canon the people hear, apart from the closing Per ómnia."
+			"function": "A dative right at the head, thirteen words before its verb; and these are the only three words of the Canon the people hear, apart from the closing Per ómnia."
 		},
 		"w002": {
 			"gloss": "also",
@@ -48,14 +48,14 @@
 		},
 		"w003": {
 			"gloss": "sinners",
-			"function": "It is at this word that the priest strikes his breast."
+			"function": "The priest strikes his breast as he says these words — the rubric ties the gesture to the whole phrase."
 		},
 		"w004": {
 			"gloss": "servants",
 			"function": "In apposition to “Nobis” (w001)."
 		},
 		"w005": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w006": {
 			"gloss": "in"
@@ -68,7 +68,7 @@
 			"function": "Not the feeling of pity but its exercise — particular acts, hence the plural."
 		},
 		"w009": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w010": {
 			"gloss": "who hope",
@@ -97,7 +97,7 @@
 			"gloss": "with"
 		},
 		"w018": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w019": {
 			"gloss": "holy"
@@ -123,7 +123,7 @@
 		},
 		"w026": {
 			"gloss": "Matthias",
-			"function": "The apostle chosen by lot in Judas's place — he was missing from the Communicántes, where Paul stood in his room."
+			"function": "He was missing from the Communicántes, where Paul stood in his room — here he returns to the company of the Twelve."
 		},
 		"w027": {
 			"gloss": "Barnabas"
@@ -132,7 +132,8 @@
 			"gloss": "Ignatius"
 		},
 		"w029": {
-			"gloss": "Alexander"
+			"gloss": "Alexander",
+			"function": "Usually taken to be Pope Alexander I, though the identification is disputed — as with John."
 		},
 		"w030": {
 			"gloss": "Marcellinus"
@@ -142,11 +143,12 @@
 			"function": "Not the apostle: this is Peter the exorcist, whose name goes paired with Marcellinus in the Roman calendar."
 		},
 		"w032": {
-			"gloss": "Felicity"
+			"gloss": "Felicity",
+			"function": "The name is an ordinary Latin noun — happiness; the analyzers here confirm the form, not the saint."
 		},
 		"w033": {
 			"gloss": "Perpetua",
-			"function": "The name is a Latin adjective (continual), and that is all the dictionaries the corpus checks against know it as; that it is a name here is known from the list it stands in."
+			"function": "The name of a martyr, and also a Latin adjective (continual) — which is all the analyzers’ dictionaries carry, proper names being outside them; that it is a name here is settled by the list of saints it stands in."
 		},
 		"w034": {
 			"gloss": "Agatha"
@@ -173,7 +175,7 @@
 			"gloss": "Saints"
 		},
 		"w042": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w043": {
 			"gloss": "into"
@@ -193,7 +195,7 @@
 		},
 		"w048": {
 			"gloss": "a weigher",
-			"function": "Vocative, like “largítor” (w053): the priest is addressing God, not describing him. Nominative and vocative are identical in this declension, so the imperative “admítte” (w054) decides."
+			"function": "A nominative in apposition to the unexpressed subject of “admítte” (w054) — the reading both translations give; the vocative, identical in form, remains the competing reading and the word carries the disputed flag."
 		},
 		"w049": {
 			"gloss": "of merit"
@@ -203,7 +205,7 @@
 		},
 		"w051": {
 			"gloss": "of pardon",
-			"function": "Not the cancelling of a debt but a gracious leave; hence a venial sin — peccátum veniále."
+			"function": "A genitive with “largítor” (w053): a giver not of wages but of pardon."
 		},
 		"w052": {
 			"gloss": "we beseech"
@@ -213,7 +215,7 @@
 		},
 		"w054": {
 			"gloss": "admit",
-			"function": "The imperative comes last, after the eight words that depend on it."
+			"function": "The imperative comes last, after the eleven words that precede it."
 		},
 		"w055": {
 			"gloss": "Through"

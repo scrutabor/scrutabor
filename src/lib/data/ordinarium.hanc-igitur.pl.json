@@ -3,7 +3,7 @@
 	"text": "ordinarium.hanc-igitur",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Kapłan rozkłada ręce nad darami — gest, którego Msza rzymska używa tylko w tym jednym miejscu — a ministrant dzwoni: to znak, że konsekracja jest blisko. Drugą połowę modlitwy, od „diésque nostros”, dodał według Liber Pontificalis święty Grzegorz Wielki. Zdanie zaczęte w Communicántes dopiero tu dostaje czasownik: quǽsumus, prosimy.",
+	"about": "Kapłan rozkłada ręce nad darami — gest, którego Msza rzymska używa tylko w tym jednym miejscu — a ministrant dzwoni: to znak, że konsekracja jest blisko. Drugą połowę modlitwy, od „diésque nostros”, dodał według Liber Pontificalis święty Grzegorz Wielki. Prośba wisi na quǽsumus: zdanie z ut — byś przyjął — niesie właśnie to „prosimy”.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,10 +16,10 @@
 			"narrative": "Kapłan trzyma rozłożone ręce nad darami."
 		},
 		"s02": {
-			"translation": "Tę więc ofiarę służby naszej, a także całej rodziny Twojej, prosimy Cię, Panie, byś przyjął przejednany:"
+			"translation": "Boże, przyjmij łaskawie tę Ofiarę od nas, sług Twoich, i całego ludu Twego;"
 		},
 		"s03": {
-			"translation": "i dni nasze w Twoim pokoju rozporządził, i każ nas wyrwać z wiecznego potępienia i zaliczyć do trzody Twoich wybranych."
+			"translation": "napełnij nasze życie swoim pokojem, zachowaj nas od wiecznego potępienia i dołącz do grona swoich wybranych."
 		},
 		"s04": {
 			"narrative": "Kapłan składa ręce."
@@ -41,7 +41,7 @@
 		},
 		"w004": {
 			"gloss": "służby",
-			"function": "Servítus to nie zwykła służba, lecz stan niewolnika; Kanon nazywa tak dobrowolne poddanie się Bogu."
+			"function": "Dopełniacz: ofiara „naszej służby” — tych, którzy stoją przy ołtarzu; obok zaraz stanie szersza para, „famíliæ” (w009)."
 		},
 		"w005": {
 			"gloss": "naszej"
@@ -57,14 +57,14 @@
 		},
 		"w009": {
 			"gloss": "rodziny",
-			"function": "Família to po łacinie dom razem ze służbą, nie rodzina w naszym sensie; tu — cały Kościół."
+			"function": "Dopełniacz w parze z „servitútis” (w004): po służbie ołtarza — cały dom Boży, czyli Kościół."
 		},
 		"w010": {
 			"gloss": "Twojej"
 		},
 		"w011": {
 			"gloss": "prosimy",
-			"function": "Skostniałe wtrącenie, jak polskie „prosimy”: nie rządzi zdaniem, tylko je zmiękcza."
+			"function": "Zwykle skostniałe wtrącenie; tu jednak rządzi: na tym czasowniku prośby wisi zdanie z „ut” (w013)."
 		},
 		"w012": {
 			"gloss": "Panie"
@@ -81,7 +81,7 @@
 		},
 		"w016": {
 			"gloss": "i dni",
-			"function": "Biernik liczby mnogiej; -que doczepione z przodu wyrazu łączy to zdanie z poprzednim."
+			"function": "Biernik liczby mnogiej; -que doczepione na końcu wyrazu, który stoi na początku zdania, łączy to zdanie z poprzednim."
 		},
 		"w017": {
 			"gloss": "nasze"
@@ -115,14 +115,14 @@
 			"function": "Biernik jako podmiot bezokolicznika „éripi” (w027): każ, byśmy zostali wyrwani."
 		},
 		"w027": {
-			"gloss": "wyrwać",
-			"function": "Bezokolicznik bierny zależny od „iúbeas” (w032), które stoi o sześć słów dalej; ten sam czasownik rządzi też „numerári” (w034)."
+			"gloss": "być wyrwanymi",
+			"function": "Bezokolicznik bierny zależny od „iúbeas” (w032), które stoi o pięć słów dalej; ten sam czasownik rządzi też „numerári” (w034)."
 		},
 		"w028": {
 			"gloss": "i"
 		},
 		"w029": {
-			"gloss": "do"
+			"gloss": "w"
 		},
 		"w030": {
 			"gloss": "wybranych"
@@ -135,10 +135,10 @@
 		},
 		"w033": {
 			"gloss": "trzody",
-			"function": "Ablativus przy numerári: policzonym w trzodzie, nie do trzody."
+			"function": "Ablativus po „in” (w029): policzonym w trzodzie, nie do trzody."
 		},
 		"w034": {
-			"gloss": "zaliczyć"
+			"gloss": "być policzonymi"
 		},
 		"w035": {
 			"gloss": "Przez"

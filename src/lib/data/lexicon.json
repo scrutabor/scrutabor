@@ -619,16 +619,17 @@
 			"gender": "f",
 			"decl": 1
 		},
-		"cenatus": {
-			"head": "cenátus, -a, -um",
-			"pos": "adj"
+		"ceno": {
+			"head": "ceno, cenáre, cenávi, cenátum",
+			"pos": "verb",
+			"conj": 1
 		},
 		"christianus": {
 			"head": "christiánus, -a, -um",
 			"pos": "adj"
 		},
 		"circumdo": {
-			"head": "circúmdo, circumdáre, circúmdedi, circúmdatum",
+			"head": "circúmdo, circúmdare, circúmdedi, circúmdatum",
 			"pos": "verb",
 			"conj": 1
 		},
@@ -1204,6 +1205,7 @@
 			"head": "exsul, éxsulis",
 			"pos": "noun",
 			"gender": "m",
+			"gender_alt": "f",
 			"decl": 3
 		},
 		"exsultatio": {
@@ -1993,7 +1995,8 @@
 		},
 		"ne": {
 			"head": "ne",
-			"pos": "adv"
+			"pos": "adv",
+			"pos_alt": "conj"
 		},
 		"nec": {
 			"head": "nec",
@@ -2035,7 +2038,7 @@
 			"pos": "adv"
 		},
 		"nos": {
-			"head": "nos, nostrum",
+			"head": "nos, nostri",
 			"pos": "pron"
 		},
 		"noster": {
@@ -2452,6 +2455,7 @@
 			"head": "princeps, príncipis",
 			"pos": "noun",
 			"gender": "m",
+			"gender_alt": "f",
 			"decl": 3
 		},
 		"principium": {
@@ -2621,7 +2625,7 @@
 			"conj": 1
 		},
 		"refrigerium": {
-			"head": "refrigérium, -i",
+			"head": "refrigérium, -ii",
 			"pos": "noun",
 			"gender": "n",
 			"decl": 2

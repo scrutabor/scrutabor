@@ -7,7 +7,7 @@
 	"variant": "missae",
 	"sung": false,
 	"status": "working-edition",
-	"notes": "The consecration of the chalice, with the command to repeat it. The words of consecration are set as the typical edition prints them — Hic est enim Calix Sánguinis mei — for the reason given at Qui prídie; that edition capitalises Calix and Sánguinis and nothing else in the formula. CENÁTUM at w004 is the reading of the typical edition and of witness do, against witness handmissal-eo's cænátum, and is ruled in the apparatus: both are real spellings. It is tagged as the adjective cenátus with both analyzers; read strictly, cenátum est is the impersonal perfect passive of ceno — after the meal had been eaten — and the note carries that sense. MYSTÉRIUM FÍDEI at w043-w028 stands in the nominative, in apposition to CALIX, and is not governed by anything in the clause. FECÉRITIS at w056 is future perfect rather than perfect subjunctive; both analyzers offer the two, and the future indicative faciétis that answers it settles the choice.",
+	"notes": "The consecration of the chalice, with the command to repeat it. The words of consecration are set as the typical edition prints them — Hic est enim Calix Sánguinis mei — for the reason given at Qui prídie; that edition capitalises the opening word, Calix and Sánguinis, and nothing else in the formula. CENÁTUM at w004 is the reading of the typical edition and of witness do, against witness handmissal-eo's cænátum, and is ruled in the apparatus: both are real spellings. It is tagged as the adjective cenátus with both analyzers; read strictly, cenátum est is the impersonal perfect passive of ceno — after the meal had been eaten — and the note carries that sense. MYSTÉRIUM FÍDEI at w042-w043 stands in the nominative, taking its case from no governing word; the received reading holds it in apposition to CALIX, an older tradition hears it as an exclamation of its own — the question is old and open, and both words stand flagged for review. QUI at w044 is likewise flagged: Calix and Sánguinis are both masculine, so the form leaves the antecedent open (see the gloss note). FECÉRITIS at w056 is future perfect rather than perfect subjunctive; both analyzers offer the two, and the future indicative faciétis that answers it settles the choice.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence, apart from the orthographic variant adjudicated in the apparatus. Accidental variants adjudicated in the apparatus.",
 		"witnesses": "witnesses/ordinarium.simili-modo/",
@@ -83,12 +83,16 @@
 				{
 					"id": "w004",
 					"form": "cenátum",
-					"lemma": "cenatus",
+					"lemma": "ceno",
 					"morph": {
-						"pos": "adj",
+						"pos": "verb",
 						"case": "nom",
 						"number": "sg",
-						"gender": "n"
+						"gender": "n",
+						"tense": "perf",
+						"mood": "part",
+						"voice": "pass",
+						"conj": 1
 					}
 				},
 				{
@@ -245,7 +249,29 @@
 						"number": "pl",
 						"gender": "f"
 					}
-				},
+				}
+			]
+		},
+		{
+			"id": "s05",
+			"type": "rubric",
+			"text": "Item caput inclinat.",
+			"analysis": {
+				"confidence": "high",
+				"sources": [
+					"editorial",
+					"do",
+					"mr"
+				],
+				"review": "pending"
+			}
+		},
+		{
+			"id": "s06",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "secreto",
+			"words": [
 				{
 					"id": "w017",
 					"form": "item",
@@ -291,7 +317,29 @@
 						"voice": "act",
 						"conj": 3
 					}
-				},
+				}
+			]
+		},
+		{
+			"id": "s07",
+			"type": "rubric",
+			"text": "Sinistra tenens Calicem, dextera signat super eum.",
+			"analysis": {
+				"confidence": "high",
+				"sources": [
+					"editorial",
+					"do",
+					"mr"
+				],
+				"review": "pending"
+			}
+		},
+		{
+			"id": "s08",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "secreto",
+			"words": [
 				{
 					"id": "w021",
 					"form": "benedíxit",
@@ -364,7 +412,7 @@
 			]
 		},
 		{
-			"id": "s05",
+			"id": "s09",
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
@@ -441,7 +489,7 @@
 			]
 		},
 		{
-			"id": "s06",
+			"id": "s10",
 			"type": "rubric",
 			"text": "Profert verba consecrationis super Calicem, attente, continuate, et secrete, tenens illum parum elevatum.",
 			"analysis": {
@@ -454,7 +502,7 @@
 			}
 		},
 		{
-			"id": "s07",
+			"id": "s11",
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
@@ -580,6 +628,15 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"analysis": {
+						"confidence": "high",
+						"sources": [
+							"editorial",
+							"whitakers",
+							"collatinus"
+						],
+						"review": "pending"
 					}
 				},
 				{
@@ -604,6 +661,15 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"analysis": {
+						"confidence": "high",
+						"sources": [
+							"editorial",
+							"whitakers",
+							"collatinus"
+						],
+						"review": "pending"
 					}
 				},
 				{
@@ -704,7 +770,7 @@
 			]
 		},
 		{
-			"id": "s08",
+			"id": "s12",
 			"type": "rubric",
 			"text": "Quibus verbis prolatis, deponit Calicem super Corporale, et dicens secrete:",
 			"analysis": {
@@ -717,7 +783,7 @@
 			}
 		},
 		{
-			"id": "s09",
+			"id": "s13",
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
@@ -813,7 +879,7 @@
 			]
 		},
 		{
-			"id": "s10",
+			"id": "s14",
 			"type": "rubric",
 			"text": "Genuflexus adorat: surgit, ostendit populo, deponit, cooperit, et genuflexus iterum adorat.",
 			"analysis": {

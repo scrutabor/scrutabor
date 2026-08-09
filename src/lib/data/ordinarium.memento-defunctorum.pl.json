@@ -3,7 +3,7 @@
 	"text": "ordinarium.memento-defunctorum",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Drugie milczenie Kanonu. „Cum signo fídei” — ze znakiem wiary — to od starożytności określenie chrztu: modlitwa wspomina ochrzczonych. „Dórmiunt in somno pacis” mówi o zmarłych językiem katakumb, gdzie „in pace” było najczęstszą formułą nagrobną, a „refrigérium” — ochłoda — zwykłym słowem na to, o co dla nich proszono. Prośba trzyma się do samego końca: locum czeka na swój czasownik przez sześć słów.",
+	"about": "Druga pauza Kanonu. „Cum signo fídei” — ze znakiem wiary — od dawna rozumie się o chrzcie, o pieczęci na nim przyjętej: modlitwa wspomina ochrzczonych. „Dórmiunt in somno pacis” mówi o zmarłych językiem katakumb, gdzie „in pace” było najczęstszą formułą nagrobną, a „refrigérium” — ochłoda — zwykłym słowem na to, o co dla nich proszono. Prośba trzyma się do samego końca: locum znajduje swój czasownik dopiero o sześć słów dalej.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,13 +13,13 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "Pamiętaj też, Panie, o sługach i służebnicach Twoich, którzy nas poprzedzili ze znakiem wiary i śpią snem pokoju."
+			"translation": "Pamiętaj też, Boże, o swoich sługach i służebnicach, którzy przed nami odeszli ze znakiem wiary i śpią w pokoju."
 		},
 		"s02": {
 			"narrative": "Kapłan składa ręce i modli się chwilę w milczeniu za tych zmarłych, których chce wspomnieć; potem rozkłada ręce i mówi dalej."
 		},
 		"s03": {
-			"translation": "Im, Panie, i wszystkim spoczywającym w Chrystusie błagamy, byś dał miejsce ochłody, światła i pokoju."
+			"translation": "Błagamy Cię, daj tym zmarłym oraz wszystkim spoczywającym w Chrystusie miejsce ochłody, światłości i pokoju."
 		},
 		"s04": {
 			"narrative": "Kapłan składa ręce i pochyla głowę."
@@ -48,7 +48,7 @@
 		},
 		"w006": {
 			"gloss": "Twoich",
-			"function": "Tu mszał drukuje N. et N. i kapłan milknie. Wydanie tego pustego miejsca nie drukuje, więc zdanie względne, które następuje, opisuje wprost sługi i służebnice."
+			"function": "Tu mszał drukuje N. et N.; to wydanie nie drukuje pustego miejsca, więc zdanie względne, które następuje, opisuje wprost sługi i służebnice. Pauza na wspomnienie imion przychodzi dopiero po „dórmiunt in somno pacis”."
 		},
 		"w007": {
 			"gloss": "którzy"
@@ -64,7 +64,7 @@
 		},
 		"w011": {
 			"gloss": "znakiem",
-			"function": "Signum fídei to od starożytności określenie chrztu."
+			"function": "Ablativus po „cum” (w010): ze znakiem — pieczęcią chrztu, jak czyta tradycja; patrz hasło."
 		},
 		"w012": {
 			"gloss": "wiary"
@@ -110,11 +110,11 @@
 		},
 		"w025": {
 			"gloss": "miejsce",
-			"function": "Dopełnienie „indúlgeas” (w031), oddalone o sześć słów; łacina odkłada czasownik na sam koniec zdania."
+			"function": "Dopełnienie „indúlgeas” (w031), oddalone o sześć słów; łacina odkłada czasownik na sam koniec swojego zdania podrzędnego."
 		},
 		"w026": {
 			"gloss": "ochłody",
-			"function": "Dosłownie „ochłodzenie”; w starochrześcijańskich napisach nagrobnych zwykłe słowo na to, o co dla zmarłych proszono."
+			"function": "Dopełniacz przy „locum” (w025), współrzędny z lucis i pacis, co nie zostawia locativowi żadnego miejsca. Whitaker czyta tę nieściągniętą formę jako locativus, bo jego hasło dla tego rzeczownika niesie tylko dopełniacz ściągnięty — ten sam analizator czyta Evangélii jako dopełniacz — i został odsunięty zapisaną regułą."
 		},
 		"w027": {
 			"gloss": "światła"

@@ -3,7 +3,7 @@
 	"text": "ordinarium.supplices-te-rogamus",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The priest bows low, lays his joined hands on the altar and asks that an angel carry the offering to the altar on high. The angel is not named, and the tradition has never settled who he is: some saw Michael, some Christ himself, some refused to name him at all. Sublíme altáre — the altar on high — comes from Revelation 8. The sentence has one main verb (repleámur) with a conditional clause about those who will communicate wedged into the middle of it.",
+	"about": "The priest bows low, lays his joined hands on the altar and asks that an angel carry the offering to the altar on high. The angel is not named, and the tradition has never settled who he is: some saw Michael, some Christ Himself, some the Holy Spirit — a reading the old commentators rejected — and some refused to name him at all. Sublíme altáre — the altar on high — echoes Revelation 8. The petition rides on rogámus with the imperative iube; the ut clause has one verb (repleámur), with a generalizing clause about those who will communicate wedged in front of it.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,25 +16,28 @@
 			"narrative": "The priest bows low and lays his joined hands upon the altar."
 		},
 		"s02": {
-			"translation": "Humbly we beseech thee, almighty God: bid these things be carried by the hands of thy holy Angel to thine altar on high, into the sight of thy divine majesty:"
+			"translation": "In humble prayer we ask You, almighty God: command that these gifts be borne by the hands of Your holy Angel to Your altar on high, in the sight of Your divine majesty:"
 		},
 		"s03": {
 			"narrative": "The priest kisses the altar."
 		},
 		"s04": {
-			"translation": "that as many of us as, by partaking of this altar, shall receive the most holy"
+			"translation": "so that all of us, who"
+		},
+		"s11": {
+			"translation": "through this participation at the altar receive the most holy Body and Blood of Your Son"
 		},
 		"s05": {
-			"narrative": "The priest joins his hands and signs the cross once over the host and once over the chalice."
+			"narrative": "The priest joins his hands and signs the cross once over the Host and once over the chalice."
 		},
 		"s06": {
-			"translation": "Body and Blood of thy Son,"
+			"translation": "—"
 		},
 		"s07": {
 			"narrative": "The priest signs himself."
 		},
 		"s08": {
-			"translation": "may be filled with every heavenly blessing and grace."
+			"translation": "may be filled with every grace and heavenly blessing."
 		},
 		"s09": {
 			"narrative": "The priest joins his hands."
@@ -46,10 +49,10 @@
 	"words": {
 		"w001": {
 			"gloss": "humbly",
-			"function": "An adjective, not an adverb: from sub and plicáre, to bend down under — it describes the posture the rubric has just commanded."
+			"function": "An adjective — we, the suppliant — rendered adverbially here: it describes the posture the rubric has just commanded."
 		},
 		"w002": {
-			"gloss": "thee"
+			"gloss": "Thee"
 		},
 		"w003": {
 			"gloss": "we beseech"
@@ -85,7 +88,7 @@
 			"function": "Singular: one angel, unnamed. The tradition has never settled who he is."
 		},
 		"w013": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w014": {
 			"gloss": "to"
@@ -97,7 +100,7 @@
 			"gloss": "altar"
 		},
 		"w017": {
-			"gloss": "thine"
+			"gloss": "Thine"
 		},
 		"w018": {
 			"gloss": "into"
@@ -112,7 +115,7 @@
 			"gloss": "majesty"
 		},
 		"w022": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w023": {
 			"gloss": "that",
@@ -120,7 +123,7 @@
 		},
 		"w024": {
 			"gloss": "as many as",
-			"function": "Indeclinable: the form marks neither case nor gender nor number. The nominative plural follows from its being the subject of “sumpsérimus” (w035); no gender is claimed, because nothing marks one."
+			"function": "The subject of “sumpsérimus” (w035) — hence nominative, though the form marks no case; the whole relative clause has wedged itself between “ut” (w023) and its verb."
 		},
 		"w025": {
 			"gloss": "from"
@@ -133,17 +136,17 @@
 		},
 		"w028": {
 			"gloss": "partaking",
-			"function": "From pártem cápere, to take a part; not presence but a share received."
+			"function": "An ablative with “ex” (w025): not mere presence but the receiving of a share — see the lemma."
 		},
 		"w029": {
 			"gloss": "most holy",
-			"function": "A Roman legal term: a sacrosánctus person could not be harmed without incurring a curse."
+			"function": "The epithet of what the priest is about to name: the most holy — inviolable — Body and Blood; the lemma tells the word’s Roman story."
 		},
 		"w030": {
 			"gloss": "of the Son"
 		},
 		"w031": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w032": {
 			"gloss": "Body"
@@ -156,7 +159,7 @@
 		},
 		"w035": {
 			"gloss": "shall receive",
-			"function": "A future perfect: the receiving is to be complete before the petition for grace is fulfilled. The form can also be a perfect subjunctive, but the conditional clause decides."
+			"function": "A future perfect: the receiving is to be complete before the petition for grace is fulfilled. The form can also be a perfect subjunctive, and a clause sitting inside a purpose clause can be drawn into that mood with it; the sense of the generalizing clause — as many as SHALL HAVE received — is what tips this edition to the future perfect."
 		},
 		"w036": {
 			"gloss": "every"

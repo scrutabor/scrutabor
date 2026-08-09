@@ -3,7 +3,7 @@
 	"text": "orationes.deus-refugium",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Kolekta modlitw Leona XIII, odmawiana po Salve Regína i jej wersecie. Papież nakazał je w roku 1884, a prosiły wtedy o wolność Kościoła; kiedy układy laterańskie rozstrzygnęły tę sprawę w roku 1929, Pius XI polecił rok później ofiarowywać je w intencji Rosji. Zbudowana jest jak każda rzymska kolekta: jedno zdanie, w którym wszystko poprzedza dwa czasowniki rozkazujące i do nich prowadzi — wejrzyj i wysłuchaj. Zamyka ją formuła „przez tegoż Chrystusa”: modlitwa jest skierowana do Ojca, a Syn wspomniany w niej został nie wprost, w tytule Bożej Rodzicielki.",
+	"about": "Kolekta z modlitw Leona XIII, odmawiana po Salve Regína i jej wersecie; jej pierwsze słowa to Psalm 45, 2 — z mianownika psalmu uczynione wołaczem. Modlitwy po Mszy cichej ustanowił Pius IX w roku 1859 dla Państwa Kościelnego; Leon XIII rozciągnął je w roku 1884 na cały Kościół, a drukowany tu tekst pochodzi z jego przeredagowania z roku 1886 — wtedy weszły prośby o wolność Kościoła i o nawrócenie grzeszników. Kiedy traktaty laterańskie rozstrzygnęły kwestię rzymską w roku 1929, rok później Pius XI polecił ofiarowywać te modlitwy w intencji Rosji. Zbudowana jest jak rzymska kolekta: jedno zdanie, w którym wszystko prowadzi do czasowników rozkazujących — a są tu dwa, gdzie klasyczna kolekta miewa jeden: wejrzyj i wysłuchaj. Zamyka ją formuła „przez tegoż Chrystusa”: modlitwa jest skierowana do Ojca, a Syn wspomniany w niej został nie wprost, w tytule Bożej Rodzicielki.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -28,7 +28,7 @@
 			"translation": "modlitwy, które zanosimy o nawrócenie grzeszników, o wolność i wywyższenie świętej Matki Kościoła,"
 		},
 		"s06": {
-			"translation": "wysłuchaj miłosierny i łaskawy."
+			"translation": "wysłuchaj miłościwie i łaskawie."
 		},
 		"s07": {
 			"translation": "Przez tegoż Chrystusa, Pana naszego. Amen."
@@ -45,7 +45,7 @@
 		},
 		"w003": {
 			"gloss": "ucieczko",
-			"function": "Dopowiedzenie do „Deus” (w002): Bóg nazwany tym, czym jest dla proszących. Rzeczownik oznacza nie ucieczkę, lecz miejsce, do którego się ucieka."
+			"function": "Dopowiedzenie do „Deus” (w002): Bóg nazwany tym, czym jest dla proszących. Rzeczownik oznacza nie samą ucieczkę, lecz miejsce, do którego się ucieka — jak w wezwaniu „Ucieczko grzeszników”."
 		},
 		"w004": {
 			"gloss": "nasza"
@@ -213,7 +213,7 @@
 		},
 		"w053": {
 			"gloss": "wysłuchaj",
-			"function": "Drugi rozkaźnik; jego dopełnieniem są „preces” (w048), oddzielone od niego jedenastoma słowami."
+			"function": "Drugi czasownik rozkazujący; jego dopełnieniem są „preces” (w048), które padły pięć słów wcześniej — a czekały od „quas” (w037)."
 		},
 		"w054": {
 			"gloss": "Przez"

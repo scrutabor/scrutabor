@@ -3,7 +3,7 @@
 	"text": "ordinarium.lavabo",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The psalm begins in the middle — at verse 6 — because that is the verse that names the altar: I will wash my hands and go about thy altar. What the priest washes is not his whole hands but the tips of the thumbs and index fingers: the ones that will touch the consecrated host. The psalm speaks of innocence, and speaks it in the first person — “I have walked in my innocence” — which at the altar sounds like a petition rather than a boast: “rédime me”, redeem me, follows two lines later. The Glória Patri is omitted in Masses for the Dead and from Passion Sunday to Holy Thursday inclusive; the psalm itself stays.",
+	"about": "The psalm begins in the middle — at verse 6 — because that is the verse that names the altar: I will wash my hands and go about Thy altar. What the priest washes is not his whole hands but the tips of the thumbs and index fingers: the ones that will touch the consecrated Host. The psalm speaks of innocence, and speaks it in the first person — “I have walked in my innocence” — which at the altar sounds like a petition rather than a boast: “rédime me”, redeem me, follows at once. The Glória Patri is omitted in Masses for the Dead and — in Masses of the season — from Passion Sunday to Holy Thursday inclusive; the psalm itself stays.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,13 +16,13 @@
 			"narrative": "The priest moves to the right side of the altar; the server pours water over his fingertips."
 		},
 		"s02": {
-			"translation": "I will wash my hands among the innocent, and go about thy altar, Lord:"
+			"translation": "I will wash my hands among the innocent, and go about Thy altar, Lord:"
 		},
 		"s03": {
-			"translation": "That I may hear the voice of praise, and tell all thy wonders."
+			"translation": "That I may hear the voice of praise, and tell all Thy wonders."
 		},
 		"s04": {
-			"translation": "Lord, I have loved the beauty of thy house, and the place of the dwelling of thy glory."
+			"translation": "Lord, I have loved the beauty of Thy house, and the place of the dwelling of Thy glory."
 		},
 		"s05": {
 			"translation": "Destroy not my soul with the wicked, God, nor my life with men of blood:"
@@ -34,19 +34,19 @@
 			"translation": "But I have walked in my innocence: redeem me, and have mercy on me."
 		},
 		"s08": {
-			"translation": "My foot hath stood in the straight way: in the assemblies I will bless thee, Lord."
+			"translation": "My foot hath stood in the straight way: in the assemblies I will bless Thee, Lord."
 		},
 		"s09": {
-			"translation": "Glory to the Father, and to the Son, and to the Holy Spirit."
+			"translation": "Glory be to the Father, and to the Son, and to the Holy Spirit."
 		},
 		"s10": {
-			"translation": "As it was in the beginning, is now, and ever shall be, unto ages of ages. Amen."
+			"translation": "As it was in the beginning, is now, and ever shall be, world without end. Amen."
 		}
 	},
 	"words": {
 		"w001": {
 			"gloss": "I will wash",
-			"function": "A future opens the psalm and sets the tense for the three main verbs that follow."
+			"function": "A future opens the psalm and sets the tense for the two further main verbs — “circúmdabo” and “benedícam”."
 		},
 		"w002": {
 			"gloss": "among"
@@ -56,7 +56,7 @@
 			"function": "An adjective standing as a noun. In-nocens: one who does no harm."
 		},
 		"w004": {
-			"gloss": "my hands",
+			"gloss": "hands",
 			"function": "One spelling serving six slots of the paradigm; accusative plural here, because it is the object of “Lavábo” (w001)."
 		},
 		"w005": {
@@ -70,10 +70,10 @@
 			"function": "The stress falls on the antepenult, because the a of dare is short; some editions accent it otherwise."
 		},
 		"w008": {
-			"gloss": "thy altar"
+			"gloss": "altar"
 		},
 		"w009": {
-			"gloss": "thy",
+			"gloss": "Thy",
 			"function": "Agrees with “altáre” (w008)."
 		},
 		"w010": {
@@ -108,7 +108,7 @@
 			"function": "A neuter plural adjective standing as a noun: the things worth wondering at."
 		},
 		"w019": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w020": {
 			"gloss": "Lord"
@@ -121,11 +121,11 @@
 			"gloss": "the beauty"
 		},
 		"w023": {
-			"gloss": "of thy house",
+			"gloss": "of the house",
 			"function": "Genitive singular; the same spelling serves the nominative and the plural, and dependence on “decórem” (w022) decides."
 		},
 		"w024": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w025": {
 			"gloss": "and"
@@ -137,11 +137,11 @@
 			"gloss": "of the dwelling"
 		},
 		"w028": {
-			"gloss": "of thy glory",
+			"gloss": "of glory",
 			"function": "Two genitives one after another: the place of the dwelling — of what? — of thy glory."
 		},
 		"w029": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w030": {
 			"gloss": "do not",
@@ -162,7 +162,7 @@
 			"gloss": "God"
 		},
 		"w035": {
-			"gloss": "my soul"
+			"gloss": "soul"
 		},
 		"w036": {
 			"gloss": "my"
@@ -181,7 +181,7 @@
 			"function": "A genitive plural: literally “men of bloods”. A Hebrew way of naming murderers, rendered word for word."
 		},
 		"w041": {
-			"gloss": "my life"
+			"gloss": "life"
 		},
 		"w042": {
 			"gloss": "my",
@@ -205,7 +205,7 @@
 			"gloss": "are"
 		},
 		"w048": {
-			"gloss": "their right hand"
+			"gloss": "right hand"
 		},
 		"w049": {
 			"gloss": "their"
@@ -262,7 +262,7 @@
 			"function": "The genitive of the pronoun “I”, not the possessive “my”: misereor governs the genitive of the person pitied."
 		},
 		"w065": {
-			"gloss": "My foot"
+			"gloss": "foot"
 		},
 		"w066": {
 			"gloss": "my"
@@ -289,13 +289,13 @@
 			"function": "The form would also allow a subjunctive; the future rests on the main clause and on the company of “Lavábo” (w001)."
 		},
 		"w073": {
-			"gloss": "thee"
+			"gloss": "Thee"
 		},
 		"w074": {
 			"gloss": "Lord"
 		},
 		"w075": {
-			"gloss": "Glory",
+			"gloss": "glory",
 			"function": "A verbless sentence: “glory to the Father” — “be” is understood."
 		},
 		"w076": {

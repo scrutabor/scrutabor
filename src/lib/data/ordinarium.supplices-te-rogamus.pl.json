@@ -3,7 +3,7 @@
 	"text": "ordinarium.supplices-te-rogamus",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Kapłan pochyla się głęboko, kładzie złożone ręce na ołtarzu i prosi, by anioł zaniósł ofiarę na ołtarz w niebie. Anioł nie ma tu imienia i tradycja nigdy nie rozstrzygnęła, kim jest: jedni widzieli w nim Michała, inni samego Chrystusa, jeszcze inni nie chcieli go nazywać wcale. „Sublíme altáre” — ołtarz w górze — pochodzi z Apokalipsy 8. Zdanie ma jedno orzeczenie główne (repleámur) i wtrącone w środek zdanie warunkowe o tych, którzy będą komunikować.",
+	"about": "Kapłan pochyla się głęboko, kładzie złożone ręce na ołtarzu i prosi, by anioł zaniósł ofiarę na ołtarz w niebie. Anioł nie ma tu imienia i tradycja nigdy nie rozstrzygnęła, kim jest: jedni widzieli w nim Michała, inni samego Chrystusa, inni Ducha Świętego — czemu dawni komentatorzy się sprzeciwiali — a jeszcze inni nie chcieli go nazywać wcale. „Sublíme altáre” — ołtarz w górze — nawiązuje do Apokalipsy 8. Prośbę niesie rogámus z rozkaźnikiem iube; w zdaniu z ut jedno orzeczenie (repleámur), a przed nim wtrącone zdanie względne o tych, którzy będą komunikować.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,25 +16,28 @@
 			"narrative": "Kapłan pochyla się głęboko i kładzie złożone ręce na ołtarzu."
 		},
 		"s02": {
-			"translation": "Pokornie Cię prosimy, wszechmogący Boże: każ to zanieść rękami świętego Anioła Twego na wysoki ołtarz Twój, przed oblicze Twojego boskiego majestatu:"
+			"translation": "Pokornie Cię błagamy, wszechmogący Boże, niech Twój święty Anioł zaniesie tę Ofiarę na ołtarz w niebie przed oblicze Twojego boskiego majestatu:"
 		},
 		"s03": {
 			"narrative": "Kapłan całuje ołtarz."
 		},
 		"s04": {
-			"translation": "abyśmy — ilukolwiek nas przyjmie z tego ołtarza najświętsze Syna Twego"
+			"translation": "abyśmy wszyscy, przyjmując"
+		},
+		"s11": {
+			"translation": "z tego ołtarza Najświętsze Ciało i Krew Twojego Syna"
 		},
 		"s05": {
-			"narrative": "Kapłan składa ręce i czyni jeden znak krzyża nad hostią i jeden nad kielichem."
+			"narrative": "Kapłan składa ręce i czyni jeden znak krzyża nad Hostią i jeden nad kielichem."
 		},
 		"s06": {
-			"translation": "Ciało i Krew —"
+			"translation": "—"
 		},
 		"s07": {
 			"narrative": "Kapłan żegna sam siebie."
 		},
 		"s08": {
-			"translation": "zostali napełnieni wszelkim błogosławieństwem niebieskim i łaską."
+			"translation": "otrzymali obfite błogosławieństwo i łaskę z nieba."
 		},
 		"s09": {
 			"narrative": "Kapłan składa ręce."
@@ -46,7 +49,7 @@
 	"words": {
 		"w001": {
 			"gloss": "pokornie",
-			"function": "Przymiotnik, nie przysłówek: od sub + plicáre, zgiąć się pod — mówi o postawie ciała, którą rubryka właśnie nakazała."
+			"function": "Przymiotnik („my, korni”), oddany tu przysłówkiem: mówi o postawie ciała, którą rubryka właśnie nakazała."
 		},
 		"w002": {
 			"gloss": "Cię"
@@ -75,7 +78,7 @@
 			"gloss": "przez"
 		},
 		"w010": {
-			"gloss": "rękami"
+			"gloss": "ręce"
 		},
 		"w011": {
 			"gloss": "świętego"
@@ -120,7 +123,7 @@
 		},
 		"w024": {
 			"gloss": "ilukolwiek",
-			"function": "Nieodmienne: forma nie wskazuje ani przypadku, ani rodzaju, ani liczby. Mianownik liczby mnogiej wynika z tego, że jest podmiotem „sumpsérimus” (w035); rodzaju nie podano, bo nic go nie wskazuje."
+			"function": "Podmiot „sumpsérimus” (w035) — stąd mianownik, choć sama forma nie wskazuje przypadku; całe zdanie względne wcisnęło się między „ut” (w023) a jego orzeczenie."
 		},
 		"w025": {
 			"gloss": "z"
@@ -132,12 +135,12 @@
 			"gloss": "ołtarza"
 		},
 		"w028": {
-			"gloss": "przyjęcia",
-			"function": "Od pártem cápere — brać część; nie obecność, lecz otrzymany udział."
+			"gloss": "uczestnictwa",
+			"function": "Ablativus przy „ex” (w025): nie sama obecność, lecz otrzymanie udziału — patrz hasło."
 		},
 		"w029": {
 			"gloss": "najświętsze",
-			"function": "Rzymski termin prawny: sacrosánctus był ten, komu nie wolno było uczynić krzywdy pod karą klątwy."
+			"function": "Przydawka przy tym, co kapłan zaraz nazwie: najświętsze — nietykalne — Ciało i Krew; o rzymskim rodowodzie słowa mówi hasło."
 		},
 		"w030": {
 			"gloss": "Syna"
@@ -156,7 +159,7 @@
 		},
 		"w035": {
 			"gloss": "przyjmiemy",
-			"function": "Czas przyszły dokonany: przyjęcie ma się dokonać, zanim spełni się prośba o napełnienie łaską. Forma bywa też trybem łączącym czasu przeszłego, ale zdanie warunkowe rozstrzyga."
+			"function": "Czas przyszły dokonany: przyjęcie ma się dokonać, zanim spełni się prośba o napełnienie łaską. Forma bywa też trybem łączącym czasu przeszłego, a zdanie stojące wewnątrz zdania celowego bywa w ten tryb wciągane; ku czasowi przyszłemu przechyla sens zdania uogólniającego — ilukolwiek PRZYJMIE."
 		},
 		"w036": {
 			"gloss": "wszelkim"
@@ -172,10 +175,10 @@
 		},
 		"w040": {
 			"gloss": "łaską",
-			"function": "Ablativus przy „repleámur” (w041): to, czym się zostaje napełnionym."
+			"function": "Ablativus przy „repleámur” (w041): to, czym zostajemy napełnieni."
 		},
 		"w041": {
-			"gloss": "zostaliśmy napełnieni"
+			"gloss": "zostali napełnieni"
 		},
 		"w042": {
 			"gloss": "Przez"

@@ -3,7 +3,7 @@
 	"text": "ordinarium.adiutorium",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The versicle and its response are not two sentences but one psalm verse broken in half: the last verse of Psalm 123, one of the fifteen Gradual Psalms. The priest says the first half, the server the second. Neither half has a verb “is” — the Latin does not need one here, and a translation has to supply it.",
+	"about": "The versicle and its response are not two sentences but one psalm verse broken in half: the last verse of Psalm 123, one of the fifteen Gradual Psalms. The priest says the first half, the server the second. The first half has no verb “is” — Latin drops the copula in a nominal sentence, and English has to supply it; the second half carries its own verb, fecit.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -44,7 +44,7 @@
 		},
 		"w006": {
 			"gloss": "who",
-			"function": "The response takes up the priest's sentence and finishes it: one psalm verse laid out for two voices."
+			"function": "A relative pronoun whose antecedent is “Dómini” (w005), a genitive: the subject of the second half is picked up from an attribute inside the first, which is why the response cannot stand alone."
 		},
 		"w007": {
 			"gloss": "made",

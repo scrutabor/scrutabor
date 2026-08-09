@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "May almighty God have mercy on you, and having forgiven your sins, bring you to life everlasting."
+			"translation": "May almighty God have mercy on thee, and having forgiven thy sins, bring thee to life everlasting."
 		},
 		"s02": {
 			"narrative": "The priest answers the prayer made for himself."
@@ -27,12 +27,12 @@
 	},
 	"words": {
 		"w001": {
-			"gloss": "may he have mercy",
+			"gloss": "may He have mercy",
 			"function": "A subjunctive of wish: not “he had mercy” but “may he have mercy”. The servers do not absolve — they ask that God do it."
 		},
 		"w002": {
 			"gloss": "on you",
-			"function": "The genitive of the pronoun “thou”, not the possessive adjective: misereor governs the genitive of the person pitied. The same form tui belongs to the paradigm of “thy” as well — hence the easy confusion with “tuis” (w008)."
+			"function": "The genitive of the pronoun “thou”, not the possessive adjective: misereor governs the genitive of the person pitied. The same form tui belongs to the paradigm of “thy” as well — hence the temptation to read it as a possessive, like “tuis” (w008)."
 		},
 		"w003": {
 			"gloss": "almighty",
@@ -46,7 +46,7 @@
 			"gloss": "and"
 		},
 		"w006": {
-			"gloss": "having forgiven",
+			"gloss": "having been forgiven",
 			"function": "The participle opens an ablative absolute — a phrase standing free of the rest of the sentence: “thy sins having been forgiven”."
 		},
 		"w007": {
@@ -58,7 +58,7 @@
 			"function": "Agrees with “peccátis” (w007). This is the possessive adjective, unlike “tui” (w002) — one family of words, two different jobs."
 		},
 		"w009": {
-			"gloss": "may he bring",
+			"gloss": "may He bring",
 			"function": "A second subjunctive of wish, joined to the first: may he have mercy and may he bring."
 		},
 		"w010": {

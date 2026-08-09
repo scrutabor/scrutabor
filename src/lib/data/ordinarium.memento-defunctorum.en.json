@@ -3,7 +3,7 @@
 	"text": "ordinarium.memento-defunctorum",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The second silence of the Canon. Cum signo fídei — with the sign of faith — has meant baptism since antiquity: the prayer remembers the baptized. Dórmiunt in somno pacis speaks of the dead in the language of the catacombs, where in pace was the commonest epitaph and refrigérium — a cooling — the ordinary word for what was asked for them. The petition holds off to the very end: locum waits six words for its verb.",
+	"about": "The second pause of the Canon. Cum signo fídei — with the sign of faith — is understood of baptism, the seal received in it: the prayer remembers the baptized. Dórmiunt in somno pacis speaks of the dead in the language of the catacombs, where in pace was the commonest epitaph and refrigérium — a cooling — the ordinary word for what was asked for them. The petition holds off to the very end: locum finds its verb only six words on.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,13 +13,13 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "Be mindful also, O Lord, of thy servants and handmaids who have gone before us with the sign of faith and sleep the sleep of peace."
+			"translation": "Remember also, Lord, Your servants and handmaids who have gone before us with the sign of faith and rest in the sleep of peace."
 		},
 		"s02": {
 			"narrative": "The priest joins his hands and prays a while in silence for those dead he means to remember; then he spreads his hands and goes on."
 		},
 		"s03": {
-			"translation": "To them, O Lord, and to all who rest in Christ, we plead that thou grant a place of refreshment, of light and of peace."
+			"translation": "Grant them, O Lord, we pray, and all who sleep in Christ, a place of refreshment, light and peace."
 		},
 		"s04": {
 			"narrative": "The priest joins his hands and bows his head."
@@ -47,8 +47,8 @@
 			"gloss": "and handmaids"
 		},
 		"w006": {
-			"gloss": "thy",
-			"function": "Here the missal prints N. et N. and the priest falls silent. This edition does not print the blank, so the relative clause that follows describes the servants and handmaids themselves."
+			"gloss": "Thy",
+			"function": "Here the missal prints N. et N.; this edition does not print the blank, so the relative clause that follows describes the servants and handmaids themselves. The pause to recall the names comes only after dórmiunt in somno pacis."
 		},
 		"w007": {
 			"gloss": "who"
@@ -64,7 +64,7 @@
 		},
 		"w011": {
 			"gloss": "the sign",
-			"function": "Signum fídei has meant baptism since antiquity."
+			"function": "An ablative after “cum” (w010): with the sign — the seal of baptism, as the tradition reads it; see the lemma."
 		},
 		"w012": {
 			"gloss": "of faith"
@@ -114,7 +114,7 @@
 		},
 		"w026": {
 			"gloss": "of refreshment",
-			"function": "Literally a cooling; in early Christian epitaphs the ordinary word for what was asked for the dead."
+			"function": "A genitive with “locum” (w025), coordinate with lucis and pacis, which leaves a locative no room at all. Whitaker’s reads the uncontracted form as a locative, because his entry for this noun carries the contracted genitive alone — the same analyzer reads Evangélii as a genitive — and he is set aside by a recorded ruling."
 		},
 		"w027": {
 			"gloss": "of light"
@@ -129,7 +129,7 @@
 			"gloss": "that"
 		},
 		"w031": {
-			"gloss": "thou grant"
+			"gloss": "Thou grant"
 		},
 		"w032": {
 			"gloss": "we plead",

@@ -3,7 +3,7 @@
 	"text": "orationes.salve-regina",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Średniowieczna antyfona maryjna, śpiewana na zakończenie komplety przez długi okres po Zesłaniu Ducha Świętego, a od Leona XIII odmawiana także po Mszy cichej, po trzykrotnym Ave María. Pierwsza połowa to samo wołanie: siedem wołaczy jeden po drugim — Królowo, Matko, życie, słodyczy, nadziejo — zanim padnie pierwszy czasownik. Modlitwa nie ukrywa, gdzie stoi mówiący: nazywa nas wygnanymi dziećmi Ewy w dolinie łez. Po antyfonie następuje werset i odpowiedź, którymi kapłan i lud przechodzą do modlitwy.",
+	"about": "Średniowieczna antyfona maryjna, śpiewana na zakończenie komplety przez długi okres po Zesłaniu Ducha Świętego, a od Leona XIII odmawiana także po Mszy cichej, po trzykrotnym Ave María. Pierwsza połowa to samo wołanie: modlitwa otwiera się czasownikiem — Salve — a po nim stawia pięć wołaczy: Królowo, Matko, życie, słodyczy, nadziejo. Modlitwa nie ukrywa, gdzie stoi mówiący: nazywa nas wygnanymi dziećmi Ewy w dolinie łez. Po antyfonie następuje werset i odpowiedź, którymi kapłan i lud przechodzą do modlitwy.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,13 +16,13 @@
 			"translation": "Witaj, Królowo, Matko miłosierdzia, życie, słodyczy i nadziejo nasza, witaj."
 		},
 		"s02": {
-			"translation": "Do Ciebie wołamy, wygnane dzieci Ewy."
+			"translation": "Do Ciebie wołamy wygnańcy, synowie Ewy."
 		},
 		"s03": {
 			"translation": "Do Ciebie wzdychamy, jęcząc i płacząc na tym łez padole."
 		},
 		"s04": {
-			"translation": "Nuże więc, Orędowniczko nasza, one miłosierne oczy Twoje ku nam zwróć."
+			"translation": "Przeto, Orędowniczko nasza, one miłosierne oczy Twoje na nas zwróć."
 		},
 		"s05": {
 			"translation": "A Jezusa, błogosławiony owoc żywota Twojego, po tym wygnaniu nam okaż."
@@ -40,7 +40,7 @@
 	"words": {
 		"w001": {
 			"gloss": "Witaj",
-			"function": "Nie wykrzyknik, lecz tryb rozkazujący: czasownik salvéo znaczy „być zdrowym”, a rzymskie powitanie brzmi dosłownie „bądź zdrowa”."
+			"function": "Nie wykrzyknik, lecz tryb rozkazujący: czasownik sálveo znaczy „być zdrowym”, a rzymskie powitanie brzmi dosłownie „bądź zdrowa”."
 		},
 		"w002": {
 			"gloss": "Królowo"
@@ -63,7 +63,7 @@
 		},
 		"w008": {
 			"gloss": "nadziejo",
-			"function": "Piąty wołacz z rzędu. Wszystkie od „Regína” (w002) po to słowo są wołaczami, a pierwszy czasownik przychodzi dopiero w następnym zdaniu."
+			"function": "Piąty wołacz — między wołaczami stoi jeszcze dopełniacz „misericórdiæ” (w004) — a czasownik tego zdania to samo „Salve” (w001), które je otwiera."
 		},
 		"w009": {
 			"gloss": "nasza"
@@ -82,7 +82,7 @@
 			"gloss": "wołamy"
 		},
 		"w014": {
-			"gloss": "wygnane",
+			"gloss": "wygnańcy",
 			"function": "Rzeczownik w mianowniku, w apozycji (dopowiedzeniu) do domyślnego „my” zawartego w „clamámus” (w013) — to my jesteśmy wygnańcami."
 		},
 		"w015": {
@@ -125,7 +125,7 @@
 		},
 		"w027": {
 			"gloss": "Nuże",
-			"function": "Wykrzyknik zachęty, którym modlitwa przechodzi od skargi do prośby: dotąd opisywała, teraz prosi."
+			"function": "Wykrzyknik zachęty, którym modlitwa przechodzi od skargi do prośby."
 		},
 		"w028": {
 			"gloss": "więc"
@@ -190,7 +190,7 @@
 		},
 		"w048": {
 			"gloss": "okaż",
-			"function": "Drugi rozkaz do Matki, i cel całej modlitwy: nie prosi o wybawienie z doliny, lecz o to, by ukazała Syna."
+			"function": "Druga prośba do Matki — a czwarty czasownik rozkazujący zwrócony do niej — i cel całej modlitwy: nie prosi o wybawienie z doliny, lecz o to, by ukazała Syna."
 		},
 		"w049": {
 			"gloss": "O"
@@ -247,7 +247,7 @@
 		},
 		"w066": {
 			"gloss": "obietnic",
-			"function": "Celownik: po łacinie jest się godnym czegoś w celowniku przy tym czasowniku."
+			"function": "Ablativus: „dignus” łączy się z ablativem — godny czego. Słowo zależy od „digni” (w064), nie od czasownika."
 		},
 		"w067": {
 			"gloss": "Chrystusowych"

@@ -3,7 +3,7 @@
 	"text": "ordinarium.praefatio-dialogus",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Wymiana zdań, którą kapłan otwiera Prefację. Cyprian z Kartaginy cytuje ją już w III wieku: „kapłan przed modlitwą przygotowuje umysły braci, mówiąc: Sursum corda”. „Habémus ad Dóminum” nie ma czasownika, który trzeba by przetłumaczyć — dosłownie „mamy ku Panu”; domyślne dopełnienie to serca, o których była mowa przed chwilą. Odpowiedź „Dignum et iustum est” kapłan podejmie natychmiast pierwszymi słowami Prefacji: Vere dignum et iustum est.",
+	"about": "Wymiana zdań, którą kapłan otwiera Prefację. Cyprian z Kartaginy cytuje ją już w III wieku: „kapłan przed modlitwą przygotowuje umysły braci, mówiąc: Sursum corda”. „Habémus ad Dóminum” zostawia niedopowiedziane dopełnienie — dosłownie „mamy ku Panu”; tym, co „mamy”, są serca, o których była mowa przed chwilą. Odpowiedź „Dignum et iustum est” kapłan podejmie natychmiast pierwszymi słowami Prefacji: Vere dignum et iustum est.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan kładzie ręce po obu stronach ołtarza i unosi je nieco, mówiąc „Sursum corda”; przy „Grátias agámus” składa je przed piersią i pochyla głowę."
+			"narrative": "Kapłan kładzie obie ręce na ołtarzu, po jego obu stronach, i unosi je nieco, mówiąc „Sursum corda”; przy „Grátias agámus” składa je przed piersią i pochyla głowę."
 		},
 		"s02": {
 			"translation": "Pan z wami."
@@ -25,7 +25,7 @@
 			"translation": "W górę serca."
 		},
 		"s05": {
-			"translation": "Mamy je ku Panu."
+			"translation": "Wznosimy je do Pana."
 		},
 		"s06": {
 			"translation": "Dzięki składajmy Panu, Bogu naszemu."
@@ -53,7 +53,7 @@
 		},
 		"w006": {
 			"gloss": "twoim",
-			"function": "Odpowiedź nie brzmi „i z tobą”: mówi o duchu kapłana, o darze, który otrzymał przy święceniach."
+			"function": "Odpowiedź zwraca pozdrowienie samemu kapłanowi. Dawni czytali „duchowi twemu” o łasce święceń; Jungmann słyszy tu semityzm — po prostu „tobie”. Oba odczytania stoją obok siebie."
 		},
 		"w007": {
 			"gloss": "w górę",
@@ -75,7 +75,7 @@
 		},
 		"w012": {
 			"gloss": "dzięki",
-			"function": "Grátias ágere — „czynić dzięki” — to stały łaciński zwrot; od niego wzięła nazwę cała Eucharystia, czyli po grecku dziękczynienie."
+			"function": "Grátias ágere — „czynić dzięki” — to stały łaciński zwrot; oddaje greckie eucharistein, od którego wzięła nazwę Eucharystia — dziękczynienie."
 		},
 		"w013": {
 			"gloss": "składajmy",

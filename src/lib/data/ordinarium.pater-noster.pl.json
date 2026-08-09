@@ -3,7 +3,7 @@
 	"text": "ordinarium.pater-noster",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Rubryki mszału nazywają zdanie otwierające ten tekst prefacją Modlitwy Pańskiej, a samą modlitwę — precatio ad Communionem, modlitwą należącą do Komunii; dlatego stoi tutaj, po Kanonie, a nie wśród jego próśb. Prefacja podaje najpierw dwie podstawy, zanim padną słowa: przykazania, które zbawiają, i ustanowienie, które jest Boże — a potem nazywa rzecz po imieniu: audémus dícere, ośmielamy się mówić. Kapłan odmawia modlitwę sam aż do tentatiónem; ostatnia prośba należy do ministranta, a Amen kapłan dopowiada po cichu. Te same słowa stoją w tym zbiorze także osobno, jako modlitwa poza Mszą.",
+	"about": "Rubryki mszału nazywają zdanie otwierające ten tekst prefacją Modlitwy Pańskiej; instrukcja z 1958 roku zwie samą modlitwę precatio ad Communionem — dawną modlitwą przed Komunią. Po Kanonie postawił ją Grzegorz Wielki. Prefacja podaje najpierw dwie podstawy, zanim padną słowa: przykazania, które zbawiają, i ustanowienie, które jest Boże — a potem nazywa rzecz po imieniu: audémus dícere, ośmielamy się mówić. Kapłan odmawia modlitwę sam aż do tentatiónem; ostatnia prośba należy do ministranta, a Amen kapłan dopowiada po cichu. Te same słowa stoją w tym zbiorze także osobno, jako modlitwa poza Mszą.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -19,7 +19,7 @@
 			"translation": "Módlmy się."
 		},
 		"s03": {
-			"translation": "Pouczeni zbawiennymi przykazaniami i ukształtowani Bożym ustanowieniem, ośmielamy się mówić:"
+			"translation": "Pouczeni przez Zbawiciela i posłuszni Jego słowom, ośmielamy się mówić:"
 		},
 		"s04": {
 			"narrative": "Kapłan rozkłada ręce i tak je trzyma przez całą modlitwę."
@@ -70,7 +70,7 @@
 		},
 		"w004": {
 			"gloss": "pouczeni",
-			"function": "Imiesłów, nie przymiotnik — liczba mnoga obejmuje całe zgromadzenie, dlatego zdanie może zakończyć się pierwszą osobą liczby mnogiej."
+			"function": "Imiesłów, nie przymiotnik — zgadza się z domyślnym „my”, podmiotem „audémus”: stąd pierwsza osoba liczby mnogiej na końcu."
 		},
 		"w005": {
 			"gloss": "i"
@@ -120,7 +120,7 @@
 		},
 		"w017": {
 			"gloss": "niech się święci",
-			"function": "Tryb łączący jako prośba-życzenie: „niech będzie święcone” — pierwsza z trzech próśb wypowiedzianych w ten sposób."
+			"function": "Tryb łączący jako prośba-życzenie: „niech będzie święcone” — pierwsza z trzech próśb wypowiedzianych w trzeciej osobie."
 		},
 		"w018": {
 			"gloss": "imię",
@@ -204,7 +204,7 @@
 		},
 		"w040": {
 			"gloss": "nam",
-			"function": "Odpuść komu — nam."
+			"function": "Odpuść komu — nam; osoba, której się odpuszcza, stoi w celowniku."
 		},
 		"w041": {
 			"gloss": "winy",
@@ -232,7 +232,7 @@
 		},
 		"w047": {
 			"gloss": "winowajcom",
-			"function": "Odpuszczamy komu — dłużnikom; dosłownie „dłużnikom”, tradycyjnie „winowajcom”."
+			"function": "Odpuszczamy komu — dosłownie „dłużnikom”, tradycyjnie „winowajcom”."
 		},
 		"w048": {
 			"gloss": "naszym",
@@ -243,7 +243,7 @@
 		},
 		"w050": {
 			"gloss": "nie",
-			"function": "Z trybem łączącym „indúcas” (w052) tworzy przeczącą prośbę: „abyś nie…”."
+			"function": "Z trybem łączącym „indúcas” (w052) tworzy przeczącą prośbę główną: „nie…” — zakaz wprost, nie zdanie podrzędne."
 		},
 		"w051": {
 			"gloss": "nas",
@@ -267,7 +267,7 @@
 		},
 		"w056": {
 			"gloss": "wybaw",
-			"function": "Słowo, które podejmie i rozwinie następna modlitwa — líbera nos ab ómnibus malis, ten sam rozkaźnik otwiera embolizm."
+			"function": "Słowo, które podejmie i rozwinie następna modlitwa — Líbera nos, quǽsumus, Dómine, ab ómnibus malis: ten sam rozkaźnik otwiera embolizm."
 		},
 		"w057": {
 			"gloss": "nas",
@@ -278,11 +278,11 @@
 		},
 		"w059": {
 			"gloss": "złego",
-			"function": "Forma nie rozstrzyga rodzaju: nijakie „malum” (zło) czy męskie „malus” (Zły)? Tradycja czyta tu oba sensy naraz."
+			"function": "Forma nie rozstrzyga rodzaju: nijakie „malum” (zło) czy męskie „malus” (Zły)? Tradycja czyta tu oba sensy naraz, a embolizm tuż po modlitwie podejmuje słowo w nijakiej liczbie mnogiej — ab ómnibus malis."
 		},
 		"w060": {
 			"gloss": "amen",
-			"function": "Należy do kapłana i mówi się je po cichu — odpowiada on na odpowiedź, a modlitwa zamyka się, nie dochodząc do uszu ludu."
+			"function": "Należy do kapłana: rubryka na stronie każe je mówić secrete, Ritus servandus — submissa voce, głosem zniżonym; wydanie idzie za rubryką strony i odnotowuje rozbieżność."
 		}
 	}
 }

@@ -3,7 +3,7 @@
 	"text": "ordinarium.supra-quae",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Jedyne miejsce Mszy rzymskiej, które wymienia ofiary Starego Testamentu: Abla, Abrahama i Melchizedeka. Te same trzy postacie stoją przy jednym ołtarzu na mozaice w Sant'Apollinare in Classe pod Rawenną. Modlitwa prosi, by Bóg przyjął tę ofiarę tak, jak przyjął tamte — i prosi o to po konsekracji, co średniowiecznym komentatorom sprawiało kłopot. Abel jest tu „púer tuus justus”, sługą sprawiedliwym; Melchizedek — „summus sacérdos”, najwyższym kapłanem.",
+	"about": "Jedyne miejsce ordinarium Mszy, które wymienia ofiary Starego Testamentu: Abla, Abrahama i Melchizedeka. Te same trzy postacie stoją przy jednym ołtarzu na mozaice w Sant'Apollinare in Classe pod Rawenną. Modlitwa prosi, by Bóg przyjął tę ofiarę tak, jak przyjął tamte — i prosi o to po konsekracji, co średniowiecznym komentatorom sprawiało kłopot. Abel jest tu „púer tuus iustus”, sługą sprawiedliwym; Melchizedek — „summus sacérdos”, najwyższym kapłanem. Szorstki szew ostatnich słów ma w przekazie imię: według Liber Pontificalis „sanctum sacrifícium, immaculátam hóstiam” dopisał Leon Wielki.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,10 +16,10 @@
 			"narrative": "Kapłan mówi dalej z rozłożonymi rękami."
 		},
 		"s02": {
-			"translation": "Na te dary racz wejrzeć wzrokiem łaskawym i pogodnym i przyjąć je, jak raczyłeś przyjąć dary sługi Twego sprawiedliwego, Abla, i ofiarę praojca naszego Abrahama:"
+			"translation": "Racz wejrzeć na nie z miłością i łaskawie przyjąć, podobnie jak przyjąłeś dary swojego sługi, sprawiedliwego Abla, i ofiarę naszego Patriarchy Abrahama:"
 		},
 		"s03": {
-			"translation": "i to, co Ci ofiarował najwyższy kapłan Twój Melchizedek — świętą ofiarę, niepokalaną hostię."
+			"translation": "oraz tę ofiarę, którą Ci złożył najwyższy Twój kapłan Melchizedek — świętą ofiarę, niepokalaną Hostię."
 		}
 	},
 	"words": {
@@ -32,17 +32,17 @@
 		},
 		"w003": {
 			"gloss": "łaskawym",
-			"function": "Słowo z rzymskiego języka ofiar: bóstwo propítium to takie, które ofiarę przyjęło."
+			"function": "Pierwsza z pary przydawek przy „vultu” (w006): słowo rzymskiej modlitwy o bogu życzliwym proszącemu — patrz hasło."
 		},
 		"w004": {
 			"gloss": "i"
 		},
 		"w005": {
 			"gloss": "pogodnym",
-			"function": "Najpierw o niebie bez chmur, dopiero potem o twarzy."
+			"function": "Druga z pary przydawek przy „vultu” (w006): oblicze bez chmury — patrz hasło o drodze tego słowa od nieba do twarzy."
 		},
 		"w006": {
-			"gloss": "wzrokiem"
+			"gloss": "obliczem"
 		},
 		"w007": {
 			"gloss": "wejrzeć"
@@ -59,7 +59,7 @@
 		},
 		"w011": {
 			"gloss": "mieć",
-			"function": "Accépta habére jak w Te ígitur: uznać za przyjęte, wpisać na listę przyjętych."
+			"function": "Accépta habére — zwrot z Te ígitur (tam: accépta hábeas): uznać za przyjęte, wpisać na listę przyjętych."
 		},
 		"w012": {
 			"gloss": "tak jak"
@@ -102,7 +102,7 @@
 			"gloss": "ofiarę"
 		},
 		"w024": {
-			"gloss": "praojca"
+			"gloss": "patriarchy"
 		},
 		"w025": {
 			"gloss": "naszego"
@@ -126,7 +126,7 @@
 		},
 		"w031": {
 			"gloss": "najwyższy",
-			"function": "Stopień najwyższy od súperus (górny); ten przymiotnik nie ma stopnia równego."
+			"function": "W parze z „sacérdos” (w032). W Rdz 14 ta przydawka stoi przy Bogu — sacérdos Dei altíssimi; Kanon przenosi ją na kapłana."
 		},
 		"w032": {
 			"gloss": "kapłan"
@@ -136,7 +136,7 @@
 		},
 		"w034": {
 			"gloss": "Melchizedek",
-			"function": "Nieodmienne: mianownik wynika z apozycji (dopowiedzenia) do „sacérdos” (w032). List do Hebrajczyków czyni z niego figurę kapłaństwa Chrystusa."
+			"function": "Nieodmienne: mianownik wynika z apozycji (dopowiedzenia) do „sacérdos” (w032) — to Melchizedek jest podmiotem „óbtulit” (w030); jedyny z trzech ofiarował to, co i my: chleb i wino."
 		},
 		"w035": {
 			"gloss": "świętą"
@@ -149,7 +149,8 @@
 			"gloss": "niepokalaną"
 		},
 		"w038": {
-			"gloss": "hostię"
+			"gloss": "hostię",
+			"function": "Drugie z dwóch dopowiedzeń do „quod” (w028); rodzaj żeński przy nijakim zaimku — dopowiedzenie zgadza się tylko przypadkiem."
 		}
 	}
 }

@@ -3,7 +3,7 @@
 	"text": "ordinarium.quid-retribuam",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Two psalms, welded together. The question and the chalice come from Psalm 115; the last line, Laudans invocábo Dóminum, comes from Psalm 17. Cálicem salutáris accípiam is the verse the priest already borrowed once, before receiving the Host, with panem cæléstem put in place of the cup — now he says it as the psalm wrote it, with the chalice actually in his hand. Salutáris here is a noun, not an adjective: the chalice of salvation. The whole thing is said while he scrapes the paten clean over the chalice, so that not a fragment is lost; the psalm is set to a piece of housekeeping.",
+	"about": "Two psalms, welded together. The question and the chalice come from Psalm 115; the last line, Laudans invocábo Dóminum, comes from Psalm 17. Cálicem salutáris accípiam is the verse the priest already borrowed once, before receiving the Host, with panem cæléstem put in place of the cup — now he says it as the psalm wrote it, with the chalice actually in his hand. Salutáris here is a noun, not an adjective: the chalice of salvation. The first verse is said while he wipes the paten clean over the chalice, so that not a fragment is lost; the next two come with the chalice already taken up.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -28,16 +28,16 @@
 			"narrative": "The priest takes the chalice in his right hand and signs himself with it, saying:"
 		},
 		"s06": {
-			"translation": "May the Blood of our Lord Iesus Christ keep my soul unto life everlasting. Amen."
+			"translation": "May the Blood of our Lord Jesus Christ keep my soul unto life everlasting. Amen."
 		},
 		"s07": {
-			"narrative": "Holding the paten beneath the chalice with his left hand, the priest reverently drinks all the Precious Blood together with the particle."
+			"narrative": "Holding the paten beneath the chalice with his left hand, the priest reverently drinks all the Blood together with the particle."
 		}
 	},
 	"words": {
 		"w001": {
 			"gloss": "What",
-			"function": "Neuter accusative, the object of the verb that follows: an interrogative, though the same forms serve for the indefinite “someone, something” elsewhere."
+			"function": "Neuter accusative thrown to the front, the object of the verb that follows: the psalmist opens with the question the next two verses answer."
 		},
 		"w002": {
 			"gloss": "shall I render",
@@ -111,7 +111,7 @@
 		},
 		"w023": {
 			"gloss": "safe",
-			"function": "With “ero” (w024) it forms the future of being safe, where English uses one word. Collatinus heads the word under its archaic nominative saluos, which is the same adjective; both analyzers read the form the same way."
+			"function": "With “ero” (w024) it forms the future of being safe — English needs the same two words Latin does. Collatinus heads the word under its archaic nominative saluos, which is the same adjective; both analyzers read the form the same way."
 		},
 		"w024": {
 			"gloss": "I shall be"
@@ -127,7 +127,7 @@
 			"gloss": "our"
 		},
 		"w028": {
-			"gloss": "Iesus"
+			"gloss": "Jesus"
 		},
 		"w029": {
 			"gloss": "Christ"

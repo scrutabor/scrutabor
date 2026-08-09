@@ -3,7 +3,7 @@
 	"text": "ordinarium.lavabo",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Psalm zaczyna się w połowie — od wersetu 6 — bo dopiero ten werset mówi o ołtarzu: obmyję ręce i obejdę ołtarz twój. Kapłan obmywa przy tym nie całe dłonie, lecz końce kciuków i palców wskazujących: tych, którymi będzie dotykał konsekrowanej hostii. Psalm mówi o niewinności, i mówi ją w pierwszej osobie — „ja zaś chodziłem w niewinności mojej” — co przy ołtarzu brzmi jak prośba, nie jak chluba: zaraz potem pada „rédime me”, wykup mnie. Chwała Ojcu opuszcza się we Mszach żałobnych oraz od Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie; sam psalm zostaje.",
+	"about": "Psalm zaczyna się w połowie — od wersetu 6 — bo dopiero ten werset mówi o ołtarzu: obmyję ręce i obejdę ołtarz twój. Kapłan obmywa przy tym nie całe dłonie, lecz końce kciuków i palców wskazujących: tych, którymi będzie dotykał konsekrowanej Hostii. Psalm mówi o niewinności — i mówi o niej w pierwszej osobie — „ja zaś chodziłem w niewinności mojej” — co przy ołtarzu brzmi jak prośba, nie jak chluba: zaraz potem pada „rédime me”, wykup mnie. Doksologię „Chwała Ojcu” opuszcza się we Mszach żałobnych oraz — we Mszach okresowych — od Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie; sam psalm zostaje.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -40,13 +40,13 @@
 			"translation": "Chwała Ojcu i Synowi, i Duchowi Świętemu."
 		},
 		"s10": {
-			"translation": "Jak była na początku, i teraz, i zawsze, i na wieki wieków. Amen."
+			"translation": "Jak była na początku, teraz i zawsze, i na wieki wieków. Amen."
 		}
 	},
 	"words": {
 		"w001": {
 			"gloss": "obmyję",
-			"function": "Czas przyszły otwiera psalm i wyznacza czas trzem następnym czasownikom głównym."
+			"function": "Czas przyszły otwiera psalm i wyznacza czas dwóm dalszym czasownikom głównym — „circúmdabo” i „benedícam”."
 		},
 		"w002": {
 			"gloss": "między"
@@ -246,7 +246,7 @@
 		},
 		"w060": {
 			"gloss": "wykup",
-			"function": "Red-émere: odkupić z powrotem, wykupić jeńca. Prośba tuż po zapewnieniu o niewinności odbiera mu ton chluby."
+			"function": "Red-émere: kupić z powrotem, wykupić jeńca. Prośba tuż po zapewnieniu o niewinności odbiera mu ton chluby."
 		},
 		"w061": {
 			"gloss": "mnie"
@@ -295,7 +295,7 @@
 			"gloss": "Panie"
 		},
 		"w075": {
-			"gloss": "Chwała",
+			"gloss": "chwała",
 			"function": "Zdanie bez czasownika: „chwała Ojcu” — domyślne „niech będzie”."
 		},
 		"w076": {

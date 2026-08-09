@@ -76,11 +76,7 @@
 			"senses": [
 				"Christ"
 			],
-			"note": "Greek Christós — “the anointed one” — rendering Hebrew Mashiach (Messiah).",
-			"derivatives": [
-				"Christian",
-				"christen"
-			]
+			"note": "Greek Christós — “the anointed one” — rendering Hebrew Mashiach (Messiah)."
 		},
 		"Chrysogonus": {
 			"senses": [
@@ -138,9 +134,12 @@
 		},
 		"Iesus": {
 			"senses": [
-				"Iesus"
+				"Jesus"
 			],
-			"note": "The Greek form of Hebrew Yeshua — “the Lord saves”; irregular declension (nominative Iesus, accusative Iesum, all other cases Iesu)."
+			"note": "Through Greek from the Hebrew name Yeshua — “the Lord saves”; irregular declension (nominative Iesus, accusative Iesum, all other cases Iesu).",
+			"derivatives": [
+				"Jesuit"
+			]
 		},
 		"Ignatius": {
 			"senses": [
@@ -151,13 +150,13 @@
 			"senses": [
 				"John"
 			],
-			"note": "From Hebrew Yochanan — “God is gracious”."
+			"note": "From Hebrew Yochanan — “the Lord is gracious”."
 		},
 		"Ioseph": {
 			"senses": [
-				"Ioseph"
+				"Joseph"
 			],
-			"note": "A Hebrew name, indeclinable. It entered the Canon only in 1962: the one change St John XXIII made to this text."
+			"note": "A Hebrew name, indeclinable. It entered the Canon only in 1962: the one change St John XXIII made to the Canon."
 		},
 		"Laurentius": {
 			"senses": [
@@ -225,7 +224,7 @@
 			"senses": [
 				"Peter"
 			],
-			"note": "From Greek “pétra” — rock (Mt 16:18)."
+			"note": "Greek “pétros” — a stone; as a name it was coined to render Aramaic Kephas. Beside it in Mt 16:18 stands “pétra” — rock (in Koine the two had become synonyms): thou art Peter (Pétros), and upon this rock (pétra)…"
 		},
 		"Philippus": {
 			"senses": [
@@ -269,7 +268,7 @@
 			"senses": [
 				"Sixtus"
 			],
-			"note": "The Greek spelling of the name Latin later settled as Sixtus."
+			"note": "The Greek form of the name; Latin later fixed it as Sixtus, drawn toward sextus — sixth."
 		},
 		"ab": {
 			"senses": [
@@ -277,7 +276,7 @@
 				"away from",
 				"by (an agent)"
 			],
-			"note": "“a” before consonants; “ab” before vowels and h (and at times before consonants too: ab hómine)."
+			"note": "“a” before consonants; “ab” before vowels and h (and here and there before l, n, r or s) — hence ab hómine iníquo at the Iúdica."
 		},
 		"absolutio": {
 			"senses": [
@@ -294,7 +293,7 @@
 				"and",
 				"and also"
 			],
-			"note": "A variant of “atque” used before consonants; it binds more closely than et."
+			"note": "A variant of “atque” used before consonants; it adds with more emphasis than et."
 		},
 		"acceptabilis": {
 			"senses": [
@@ -311,7 +310,7 @@
 				"welcome",
 				"pleasing"
 			],
-			"note": "A participle of accípere hardened into an adjective. The phrase accépta habére — to hold as received — is legal language, not devotional."
+			"note": "A participle of accípere hardened into an adjective. The phrase accépta habére — to hold as received — is the language of office and ledger, not of devotion."
 		},
 		"accipio": {
 			"senses": [
@@ -366,7 +365,7 @@
 				"help",
 				"aid"
 			],
-			"note": "A noun from adjuváre — to help."
+			"note": "A noun from adiuváre — to help."
 		},
 		"adiuvo": {
 			"senses": [
@@ -374,7 +373,7 @@
 				"to support",
 				"to aid"
 			],
-			"note": "Ad and juvo, to help toward something; the same stem as adjutórium.",
+			"note": "Ad and iuvo, to help toward something; the same stem as adiutórium.",
 			"derivatives": [
 				"adjutant",
 				"aid"
@@ -431,7 +430,7 @@
 			],
 			"note": "The feminine of advocátus — one called to another's side (ad and voco) to stand by the accused.",
 			"derivatives": [
-				"advocate"
+				"advocate (from advocátus)"
 			]
 		},
 		"aequitas": {
@@ -442,7 +441,7 @@
 			"note": "From æquus, level. Not equality in the modern sense but what is even and right — the measure God judges by.",
 			"derivatives": [
 				"equity",
-				"adequate"
+				"adequate (from aequus)"
 			]
 		},
 		"aequus": {
@@ -453,7 +452,6 @@
 			],
 			"derivatives": [
 				"equal",
-				"equity",
 				"equanimity"
 			]
 		},
@@ -480,7 +478,7 @@
 				"to strike down",
 				"to distress"
 			],
-			"note": "Literally to dash against the ground (ad + fligo); hence to afflict.",
+			"note": "Literally to dash against, to strike down (ad + fligo); hence to afflict.",
 			"derivatives": [
 				"afflict",
 				"affliction"
@@ -531,7 +529,7 @@
 			"senses": [
 				"altar"
 			],
-			"note": "Classical Latin calls an altar ara; altáre (more often the plural altária) is the word of Scripture and the liturgy.",
+			"note": "Classical Latin calls an altar ara and knows this word almost only in the plural, altária; the singular altáre is the word of Scripture and the liturgy.",
 			"derivatives": [
 				"altar"
 			]
@@ -552,7 +550,7 @@
 				"so be it",
 				"truly"
 			],
-			"note": "A Hebrew word taken into Latin unchanged — indeclinable; the solemn seal of a prayer."
+			"note": "A Hebrew word taken into Latin through the Greek, unchanged — indeclinable; the solemn seal of a prayer."
 		},
 		"amputo": {
 			"senses": [
@@ -571,8 +569,7 @@
 			],
 			"note": "Greek ángelos means simply “messenger”; Latin took the word over untranslated.",
 			"derivatives": [
-				"angel",
-				"evangelist"
+				"angel"
 			]
 		},
 		"anima": {
@@ -620,7 +617,7 @@
 			"senses": [
 				"apostolic"
 			],
-			"note": "The adjective of apóstolus (apostle) — coming from the Apostles, belonging to them."
+			"note": "From Greek apostolikós — the adjective of apóstolus: coming from the Apostles, belonging to them."
 		},
 		"apostolus": {
 			"senses": [
@@ -718,7 +715,7 @@
 				"however",
 				"now"
 			],
-			"note": "It never stands first in its sentence — always after the first word."
+			"note": "It never stands first in its sentence — normally after the first word, sometimes after a word-group taken as one (In diébus autem illis)."
 		},
 		"auxilium": {
 			"senses": [
@@ -781,8 +778,7 @@
 			],
 			"note": "A compound of bene (well) + dícere (to say) — to bless is literally “to speak well”.",
 			"derivatives": [
-				"benediction",
-				"benedictine"
+				"benedictine (from the name Benedict)"
 			]
 		},
 		"benedictio": {
@@ -799,7 +795,7 @@
 			],
 			"note": "From “bene dícere” — to speak well (of someone).",
 			"derivatives": [
-				"benediction"
+				"benediction (from benedíctio)"
 			]
 		},
 		"benignus": {
@@ -864,7 +860,7 @@
 				"to seize",
 				"to receive"
 			],
-			"note": "One of the basic Latin verbs; it belongs to the third conjugation in its -io pattern. Accípere, percípere and súscipere are all built on it.",
+			"note": "One of the basic Latin verbs; it belongs to the third conjugation in its -io pattern. Accípere, percípere and suscípere are all built on it.",
 			"derivatives": [
 				"capture",
 				"receive",
@@ -904,19 +900,20 @@
 				"excuse"
 			]
 		},
-		"cenatus": {
+		"ceno": {
 			"senses": [
-				"having dined",
-				"after supper"
+				"to dine",
+				"to take supper"
 			],
-			"note": "From ceno, to dine. In the phrase cenátum est there is no subject: when supper was over."
+			"note": "Intransitive, and cenátum est is its impersonal passive — a construction Latin allows of verbs that take no object, as in ventum est, there was a coming. No subject is possible: literally it has been dined, that is, when supper was over."
 		},
 		"christianus": {
 			"senses": [
 				"Christian"
 			],
 			"derivatives": [
-				"Christian"
+				"Christian",
+				"christen"
 			]
 		},
 		"circumdo": {
@@ -989,7 +986,7 @@
 				"to unite",
 				"to gather into one"
 			],
-			"note": "A late-Latin verb from co- and unus: to bring many to one. Classical Latin does not have it."
+			"note": "A late-Latin verb from co- and adunáre (itself ad and unus): to bring many to one. Classical Latin does not have it."
 		},
 		"cogitatio": {
 			"senses": [
@@ -1012,7 +1009,7 @@
 				"to recognize",
 				"to acknowledge"
 			],
-			"note": "A compound of gnósco, to come to know — the same root as Greek gnósis.",
+			"note": "A compound of co- and gnosco, to come to know — the same root as Greek gnósis.",
 			"derivatives": [
 				"cognition",
 				"recognize"
@@ -1023,9 +1020,9 @@
 				"mingling",
 				"mixture"
 			],
-			"note": "From commiscére, to mix together; a late-Latin noun, used once in the Roman liturgy.",
+			"note": "From commiscére, to mix together; a late-Latin noun. The Ordinary of the Mass uses it once; at the blessing of water the same book says Commíxtio salis et aquæ páriter fiat — the same noun with the same verb.",
 			"derivatives": [
-				"commixture"
+				"commixture (from commixtúra)"
 			]
 		},
 		"communico": {
@@ -1034,9 +1031,9 @@
 				"to be in communion",
 				"to impart"
 			],
-			"note": "From commúnis, common. In Church Latin it means to stand in union with someone, and from it comes communion.",
+			"note": "From commúnis, common. In Church Latin it means to stand in union with someone — and thence, through communio, communion.",
 			"derivatives": [
-				"communion",
+				"communion (from communio)",
 				"communicate"
 			]
 		},
@@ -1075,7 +1072,7 @@
 				"to long for",
 				"to desire greatly"
 			],
-			"note": "An inchoative verb (-sco): not I desire but I came to desire. The same root as concupiscence — here the longing turned towards the commandments.",
+			"note": "An -sco formation on cupio — the shape Latin uses for beginnings — lexicalized as strong desire itself: to long for, to covet. The same root as concupiscence — here the longing turned towards the commandments.",
 			"derivatives": [
 				"concupiscence"
 			]
@@ -1143,7 +1140,8 @@
 			],
 			"note": "Con-sors: one who shares another's lot (sors).",
 			"derivatives": [
-				"consort"
+				"consort",
+				"consortium"
 			]
 		},
 		"consortium": {
@@ -1173,7 +1171,7 @@
 				"consubstantial",
 				"of one substance with"
 			],
-			"note": "A theological coinage rendering Greek homooúsios — of the same substance; formed from cum + substántia."
+			"note": "From cum + substántia, rendering Greek homooúsios — of the same substance; the word is older than the Nicene disputes, attested already in Tertullian."
 		},
 		"contra": {
 			"senses": [
@@ -1309,9 +1307,9 @@
 			],
 			"note": "From cólere, which means both to till the soil and to worship; one word for both, and the root of culture and cult.",
 			"derivatives": [
-				"culture",
-				"cult",
-				"cultivate"
+				"culture (from cólere)",
+				"cult (from cólere)",
+				"cultivate (from cólere)"
 			]
 		},
 		"cum": {
@@ -1331,8 +1329,8 @@
 				"to keep watch over"
 			],
 			"derivatives": [
-				"custody",
-				"custodian"
+				"custody (from custódia)",
+				"custodian (from custódia)"
 			]
 		},
 		"damnatio": {
@@ -1342,7 +1340,7 @@
 			],
 			"derivatives": [
 				"damnation",
-				"condemn"
+				"condemn (from condemnáre)"
 			]
 		},
 		"datum": {
@@ -1350,7 +1348,7 @@
 				"a gift",
 				"a thing given"
 			],
-			"note": "The participle of do used as a noun. The pair dona ac data — gifts and grants — comes from the language of Roman offerings.",
+			"note": "The participle of do used as a noun. The pair dona ac data is a rhetorical doubling — compare James 1:17: omne datum optimum et omne donum perfectum.",
 			"derivatives": [
 				"data",
 				"date"
@@ -1386,7 +1384,7 @@
 				"grace"
 			],
 			"derivatives": [
-				"decorate",
+				"decorate (from decus)",
 				"decorum"
 			]
 		},
@@ -1460,8 +1458,8 @@
 			],
 			"note": "A compound of de and trudo, to push: to push so that a thing falls.",
 			"derivatives": [
-				"intrude",
-				"obtrude"
+				"intrude (from trúdere)",
+				"obtrude (from trúdere)"
 			]
 		},
 		"deus": {
@@ -1469,7 +1467,7 @@
 				"God",
 				"god"
 			],
-			"note": "Classical Latin avoided a vocative of “deus”; Church Latin simply calls “Deus”.",
+			"note": "Latin never formed a separate vocative of “deus” — where one is wanted the nominative serves, as in the Vulgate's psalms; the “dee” a few late writers tried never took.",
 			"derivatives": [
 				"deity",
 				"deism"
@@ -1510,7 +1508,7 @@
 			"derivatives": [
 				"diction",
 				"dictate",
-				"verdict"
+				"verdict (from vere dictum)"
 			]
 		},
 		"dies": {
@@ -1522,7 +1520,7 @@
 			"note": "One of the few 5th-declension nouns; usually masculine, feminine especially of an appointed day.",
 			"derivatives": [
 				"diary",
-				"journal"
+				"journal (from diurnális)"
 			]
 		},
 		"dignitas": {
@@ -1549,11 +1547,6 @@
 			"senses": [
 				"worthy",
 				"fitting"
-			],
-			"derivatives": [
-				"dignity",
-				"deign",
-				"dainty"
 			]
 		},
 		"dilectus": {
@@ -1612,7 +1605,7 @@
 				"disciple",
 				"pupil"
 			],
-			"note": "From díscere, to learn; a disciple is a learner, not a follower.",
+			"note": "Traditionally from díscere, to learn (the formation is disputed); a disciple is a learner, not a follower.",
 			"derivatives": [
 				"disciple",
 				"discipline"
@@ -1649,10 +1642,6 @@
 		"do": {
 			"senses": [
 				"to give"
-			],
-			"derivatives": [
-				"date (calendar)",
-				"data"
 			]
 		},
 		"dolosus": {
@@ -1671,7 +1660,7 @@
 			"note": "In the Preface this is the name of one of the choirs of angels, drawn from Col 1:16 and Eph 1:21.",
 			"derivatives": [
 				"domination",
-				"dominion"
+				"dominion (from domínium)"
 			]
 		},
 		"dominus": {
@@ -1733,7 +1722,7 @@
 			"senses": [
 				"sweetness"
 			],
-			"note": "The noun of dulcis; the ending -edo makes nouns of quality, as in altitúdo."
+			"note": "The noun of dulcis; the ending -edo makes nouns of quality, as in pinguédo."
 		},
 		"dulcis": {
 			"senses": [
@@ -1758,7 +1747,7 @@
 				"see here",
 				"look"
 			],
-			"note": "A pointing interjection; it takes the nominative, so the noun after it is not an object."
+			"note": "A pointing interjection; standing alone it takes the nominative (ecce homo). It can also point at a whole sentence — then the noun after it may be the object of its own verb."
 		},
 		"ecclesia": {
 			"senses": [
@@ -1807,7 +1796,7 @@
 				"come now",
 				"then"
 			],
-			"note": "An interjection of urging. Its i is vocalic and its ei a diphthong — hence two syllables and no accent."
+			"note": "An interjection of urging. Two syllables — the i read as a glide (E-ia) — hence no accent."
 		},
 		"electus": {
 			"senses": [
@@ -1842,8 +1831,8 @@
 			],
 			"note": "From éloqui, to speak out. In the psalms it is almost always God's word: not speech as an art but the promise God has spoken.",
 			"derivatives": [
-				"eloquence",
-				"eloquent"
+				"eloquence (from éloqui)",
+				"eloquent (from éloqui)"
 			]
 		},
 		"emitto": {
@@ -1867,7 +1856,7 @@
 				"for",
 				"indeed"
 			],
-			"note": "Never stands first in its clause: Latin slips it into second place."
+			"note": "Never stands first in its clause: Latin slips it into second, less often third place."
 		},
 		"eo": {
 			"senses": [
@@ -1917,7 +1906,7 @@
 				"even",
 				"still, yet"
 			],
-			"note": "A compound of et (and) + jam (already)."
+			"note": "A compound of et (and) + iam (already)."
 		},
 		"evangelium": {
 			"senses": [
@@ -1970,7 +1959,7 @@
 				"exile",
 				"banishment"
 			],
-			"note": "From ex and solum, the soil: the state of one who is off his own ground.",
+			"note": "The noun of exsul; the second element is old and uncertain. The state of one who is off his own ground.",
 			"derivatives": [
 				"exile"
 			]
@@ -2001,7 +1990,7 @@
 				"an exile",
 				"a banished person"
 			],
-			"note": "The noun of the same root as exílium.",
+			"note": "From it comes exílium.",
 			"derivatives": [
 				"exile"
 			]
@@ -2013,7 +2002,7 @@
 			],
 			"note": "From exsultáre, to leap up; a joy that cannot keep still.",
 			"derivatives": [
-				"exult",
+				"exult (from exsultáre)",
 				"exultation"
 			]
 		},
@@ -2051,7 +2040,7 @@
 			"note": "In Latin it means first the whole household, servants included, and only later the family in our sense; the Canon uses it of the whole Church.",
 			"derivatives": [
 				"family",
-				"familiar"
+				"familiar (from familiáris)"
 			]
 		},
 		"famula": {
@@ -2087,7 +2076,7 @@
 			"note": "One word for faith and for faithfulness: in Latin they are the same thing seen from two sides.",
 			"derivatives": [
 				"fidelity",
-				"confide",
+				"confide (from fídere)",
 				"infidel"
 			]
 		},
@@ -2118,7 +2107,7 @@
 				"to come about",
 				"to be done"
 			],
-			"note": "Irregular; serves as the passive of “fácere”, to do or make."
+			"note": "Irregular; serves as the passive of “fácere”, to do or make, in the present system — the perfect passive is factus sum."
 		},
 		"fleo": {
 			"senses": [
@@ -2196,7 +2185,7 @@
 				"to rejoice",
 				"to be glad"
 			],
-			"note": "A semi-deponent: active in form in the present tenses, passive in the perfect — gavísus sum, I rejoiced. English joy and enjoy descend from its noun gaudium by way of French.",
+			"note": "A semi-deponent: active in form in the present tenses, passive in the perfect — gavísus sum, I rejoiced. English joy descends from its noun gaudium by way of French; enjoy came through the verb itself.",
 			"derivatives": [
 				"joy",
 				"rejoice",
@@ -2244,6 +2233,10 @@
 			"senses": [
 				"glory",
 				"renown"
+			],
+			"derivatives": [
+				"glory",
+				"glorious"
 			]
 		},
 		"glorifico": {
@@ -2267,6 +2260,7 @@
 			],
 			"derivatives": [
 				"grace",
+				"gracious",
 				"gratis"
 			]
 		},
@@ -2289,7 +2283,6 @@
 			],
 			"derivatives": [
 				"habit",
-				"inhabit",
 				"able"
 			]
 		},
@@ -2300,7 +2293,7 @@
 			],
 			"derivatives": [
 				"habitation",
-				"habitat"
+				"habitat (from habitáre)"
 			]
 		},
 		"habito": {
@@ -2311,8 +2304,7 @@
 			"note": "A frequentative of hábeo, to have: to dwell is to keep on having, to hold a place.",
 			"derivatives": [
 				"habitat",
-				"inhabit",
-				"habitation"
+				"inhabit"
 			]
 		},
 		"hic": {
@@ -2372,7 +2364,7 @@
 			],
 			"note": "In classical Latin a sacrificial animal — not bread; the eucharistic sense is later.",
 			"derivatives": [
-				"host"
+				"host (the eucharistic one)"
 			]
 		},
 		"humanitas": {
@@ -2428,7 +2420,7 @@
 				"that one",
 				"he"
 			],
-			"note": "The demonstrative of what is farther off; in Christian Latin often simply he. The Romance definite articles (il, le, el) descend from it."
+			"note": "The demonstrative of what is farther off; in Christian Latin often simply “he”. The Romance definite articles (il, le, el) descend from it."
 		},
 		"illibatus": {
 			"senses": [
@@ -2480,6 +2472,7 @@
 		"in": {
 			"senses": [
 				"in, on (with the ablative — place)",
+				"among (in muliéribus)",
 				"into, unto (with the accusative — direction)"
 			]
 		},
@@ -2509,8 +2502,7 @@
 			"note": "The petition asks for a movement of the heart rather than for its conviction: tilt it, as a vessel is tilted.",
 			"derivatives": [
 				"incline",
-				"inclination",
-				"declension"
+				"inclination"
 			]
 		},
 		"incolumitas": {
@@ -2568,8 +2560,8 @@
 			],
 			"note": "Always plural: literally those below. Ab ínferis means from among the dead, not from hell.",
 			"derivatives": [
-				"infernal",
-				"inferior"
+				"infernal (from infernus)",
+				"inferior (from ínferus)"
 			]
 		},
 		"infernus": {
@@ -2600,7 +2592,7 @@
 				"to adhere to",
 				"to stick fast"
 			],
-			"note": "In and hǽreo, to stick to; used both of things glued and of a man faithful to a cause. It governs the dative.",
+			"note": "In and hǽreo, to stick to; used both of what holds fast and of a man faithful to a cause. It governs the dative.",
 			"derivatives": [
 				"inherent"
 			]
@@ -2704,7 +2696,7 @@
 			"note": "From intellégere: inter + légere — literally to pick out among, hence to discern. It is what the verse Scrutabor is named from asks for: not knowledge but the power to understand.",
 			"derivatives": [
 				"intellect",
-				"intelligence"
+				"intelligence (from intellégere)"
 			]
 		},
 		"inter": {
@@ -2722,7 +2714,7 @@
 				"to intercede",
 				"to step between"
 			],
-			"note": "Inter-cédere: to stand between the one asking and the one asked.",
+			"note": "Inter-cédere: to step between — to stand between the one asking and the one asked.",
 			"derivatives": [
 				"intercede",
 				"intercession"
@@ -2783,7 +2775,7 @@
 				"himself, herself, itself",
 				"the very one"
 			],
-			"note": "The intensive pronoun: it presses on the person or thing spoken of."
+			"note": "The intensive pronoun: it presses on the person or thing spoken of. In the psalter it often stands where classical Latin would write a plain “is”."
 		},
 		"is": {
 			"senses": [
@@ -2798,7 +2790,7 @@
 				"that",
 				"that one there"
 			],
-			"note": "It points at what is near the person addressed, or at hand where the speaker stands."
+			"note": "It points at what is at hand where the speaker stands, or near the person addressed."
 		},
 		"item": {
 			"senses": [
@@ -2845,7 +2837,7 @@
 				"trial",
 				"discernment"
 			],
-			"note": "From judex, a judge; it covers both the trial and the power of judging.",
+			"note": "From iudex, a judge; it covers both the trial and the power of judging.",
 			"derivatives": [
 				"judicial",
 				"prejudice"
@@ -2857,7 +2849,7 @@
 				"to pass sentence",
 				"to consider, to deem"
 			],
-			"note": "Formed from júdex (judge), itself from jus, juris (law) + dícere (to speak) — the one who declares the law.",
+			"note": "Formed from iudex (judge), itself from ius, iuris (law) + dícere (to speak) — the one who declares the law.",
 			"derivatives": [
 				"adjudicate",
 				"judicature"
@@ -2889,7 +2881,7 @@
 				"youth",
 				"young people"
 			],
-			"note": "From júvenis — young; the collective noun also means the young as a body."
+			"note": "From iúvenis — young; the collective noun also means the young as a body."
 		},
 		"kyrie": {
 			"senses": [
@@ -2904,7 +2896,7 @@
 			"senses": [
 				"tear"
 			],
-			"note": "Lacryma and lacrima are one word; the y came in when the ending was felt to be Greek.",
+			"note": "Lacryma and lacrima are one word; the y came in when the word was felt to be Greek.",
 			"derivatives": [
 				"lachrymose"
 			]
@@ -3040,7 +3032,6 @@
 			"note": "The same root as lux; lumen is usually light as it is seen — brightness, or a lamp.",
 			"derivatives": [
 				"luminous",
-				"illuminate",
 				"luminary"
 			]
 		},
@@ -3049,11 +3040,7 @@
 				"light",
 				"daylight"
 			],
-			"note": "Lux is light itself; lumen is the light a thing gives off (compare lumen de lúmine in the Credo).",
-			"derivatives": [
-				"lucid",
-				"translucent"
-			]
+			"note": "Lux is light itself; lumen is the light a thing gives off (compare lumen de lúmine in the Credo)."
 		},
 		"macula": {
 			"senses": [
@@ -3103,7 +3090,7 @@
 				"misfortune"
 			],
 			"derivatives": [
-				"malice"
+				"malice (from malus)"
 			]
 		},
 		"mandatum": {
@@ -3116,7 +3103,7 @@
 			"derivatives": [
 				"mandate",
 				"Maundy",
-				"command"
+				"command (from mandáre)"
 			]
 		},
 		"manduco": {
@@ -3124,7 +3111,7 @@
 				"to eat",
 				"to chew"
 			],
-			"note": "A colloquial word — to chew, not the polite édere; biblical Latin chose it, and the Romance languages kept it (French manger)."
+			"note": "A colloquial word — to chew, not the polite édere; biblical Latin chose it, and part of the Romance family kept it (French manger)."
 		},
 		"manus": {
 			"senses": [
@@ -3141,7 +3128,7 @@
 			],
 			"note": "Greek mártys means simply witness; Latin took the word over untranslated, and the sense of one who died for the faith is the Church's addition.",
 			"derivatives": [
-				"martyr",
+				"martyrology",
 				"martyrdom"
 			]
 		},
@@ -3152,7 +3139,7 @@
 			"derivatives": [
 				"maternal",
 				"matrix",
-				"alma mater"
+				"matron"
 			]
 		},
 		"medela": {
@@ -3163,8 +3150,8 @@
 			],
 			"note": "From médeor, to heal; the same stem as medicus and medicína.",
 			"derivatives": [
-				"medicine",
-				"remedy"
+				"medicine (from medicína)",
+				"remedy (from remédium)"
 			]
 		},
 		"memini": {
@@ -3172,7 +3159,7 @@
 				"to remember",
 				"to be mindful"
 			],
-			"note": "A defective verb: it has only perfect forms, but a present sense. Its imperative meménto is a future imperative — the only imperative it possesses.",
+			"note": "A defective verb: it has only perfect-system forms, but a present sense. Its only imperatives are future: meménto, plural mementóte.",
 			"derivatives": [
 				"memento"
 			]
@@ -3253,7 +3240,7 @@
 			"note": "From miles, mílitis, a soldier.",
 			"derivatives": [
 				"militia",
-				"military"
+				"military (from miles)"
 			]
 		},
 		"mirabilis": {
@@ -3271,7 +3258,7 @@
 				"wonderfully",
 				"marvellously"
 			],
-			"note": "Its comparative is mirabílius, which is spelt the same as the neuter of the adjective."
+			"note": "Its comparative is mirabílius, spelt the same as the neuter of the adjective's comparative."
 		},
 		"miseratio": {
 			"senses": [
@@ -3285,24 +3272,24 @@
 				"to have mercy",
 				"to pity"
 			],
-			"note": "In liturgical formulas with the dative (miserére nobis); classically and in the psalms with the genitive (miserére mei).",
-			"derivatives": [
-				"misericord"
-			]
+			"note": "Normally with the genitive (miserére mei, misereátur vestri); liturgical formulas also use the dative (miserére nobis)."
 		},
 		"misericordia": {
 			"senses": [
 				"mercy",
 				"compassion"
 			],
-			"note": "A compound of míserum cor — a heart for the wretched; the same build as miséricors."
+			"note": "From miser (wretched) and cor (heart) — a heart for the wretched; formed from miséricors."
 		},
 		"misericors": {
 			"senses": [
 				"merciful",
 				"compassionate"
 			],
-			"note": "A compound of miser (wretched) + cor (heart): having a heart for the wretched."
+			"note": "A compound of miser (wretched) + cor (heart): having a heart for the wretched.",
+			"derivatives": [
+				"misericord"
+			]
 		},
 		"miseror": {
 			"senses": [
@@ -3316,7 +3303,7 @@
 				"Mass",
 				"the dismissal of the assembly"
 			],
-			"note": "A late Latin noun built on missus (sent away). From this one word the whole liturgy took its name — missa, Mass, Messe, msza.",
+			"note": "A late Latin form of the noun missio — a dismissal; medieval Latin knows such pairs (collecta beside collectio). From this one word the whole liturgy took its name — missa, Mass, Messe, msza.",
 			"derivatives": [
 				"Mass",
 				"Christmas",
@@ -3328,11 +3315,10 @@
 				"to send",
 				"to let go"
 			],
-			"note": "From its participle missus comes missa, the name of the Mass.",
+			"note": "Missa, the name of the Mass, is a late form of the noun missio (a dismissal), not the participle missus.",
 			"derivatives": [
 				"mission",
-				"missile",
-				"emit"
+				"missile"
 			]
 		},
 		"modus": {
@@ -3469,7 +3455,8 @@
 		},
 		"ne": {
 			"senses": [
-				"not (in prohibitions and negative petitions)"
+				"not (in prohibitions and negative petitions)",
+				"lest, that … not (opening a negative purpose clause)"
 			]
 		},
 		"nec": {
@@ -3487,7 +3474,7 @@
 			"note": "The fault of omission — what was left undone.",
 			"derivatives": [
 				"negligence",
-				"negligee"
+				"negligee (from neglegere)"
 			]
 		},
 		"neque": {
@@ -3533,7 +3520,7 @@
 			"senses": [
 				"not"
 			],
-			"note": "It negates a single word or a whole clause; prohibitions and negative petitions use ne instead."
+			"note": "It negates a single word or a whole clause; prohibitions and negative petitions classically take ne — yet the liturgy says non mihi provéniat, negating the whole clause."
 		},
 		"nos": {
 			"senses": [
@@ -3551,7 +3538,6 @@
 				"familiar"
 			],
 			"derivatives": [
-				"note",
 				"notorious"
 			]
 		},
@@ -3572,7 +3558,7 @@
 				"to reckon among"
 			],
 			"derivatives": [
-				"number",
+				"number (from númerus)",
 				"enumerate"
 			]
 		},
@@ -3605,10 +3591,10 @@
 				"offering",
 				"oblation"
 			],
-			"note": "The noun of offérre — the thing carried up before God.",
+			"note": "The noun of offérre — the thing brought before God.",
 			"derivatives": [
 				"oblation",
-				"oblate"
+				"oblate (from offérre)"
 			]
 		},
 		"obsequium": {
@@ -3649,7 +3635,7 @@
 			],
 			"note": "A fault against someone, not the bad deed in itself.",
 			"derivatives": [
-				"offence"
+				"offence (from offensa)"
 			]
 		},
 		"offero": {
@@ -3658,7 +3644,7 @@
 				"to present",
 				"to bring before"
 			],
-			"note": "A compound of ob- and fero, and the source of the name of the offertory. It declines irregularly, like fero.",
+			"note": "A compound of ob- and fero, and the source of the name of the offertory. It is conjugated irregularly, like fero.",
 			"derivatives": [
 				"offer",
 				"offertory"
@@ -3713,7 +3699,7 @@
 			],
 			"derivatives": [
 				"opus",
-				"operate"
+				"operate (through ópera)"
 			]
 		},
 		"oratio": {
@@ -3724,7 +3710,7 @@
 			"note": "The noun of oráre; in classical Latin a speech, in Christian Latin chiefly a prayer.",
 			"derivatives": [
 				"oration",
-				"oratory"
+				"oratory (from oráre)"
 			]
 		},
 		"orbis": {
@@ -3768,7 +3754,7 @@
 				"face",
 				"speech"
 			],
-			"note": "Not to be confused with os, ossis, a bone; the two match in the nominative but differ in stem. Oratio and osculum come from this one.",
+			"note": "Not to be confused with os, ossis, a bone; the two are spelt alike in the nominative — classical Latin kept them apart by vowel length — and differ in stem. Orátio and ósculum come from this one.",
 			"derivatives": [
 				"oral",
 				"orifice"
@@ -3793,7 +3779,7 @@
 			],
 			"derivatives": [
 				"pacify",
-				"pacific"
+				"pacific (from pacíficus)"
 			]
 		},
 		"panis": {
@@ -3809,7 +3795,7 @@
 			"senses": [
 				"pope"
 			],
-			"note": "Greek páppas, daddy; in the East a title for any priest, in the West reserved to the bishop of Rome from the fifth century.",
+			"note": "Greek páppas, a child's word for father; in the East a title for any priest, in the West increasingly restricted to the bishop of Rome from the sixth century, and reserved to him formally by Gregory VII (1073).",
 			"derivatives": [
 				"pope",
 				"papal"
@@ -3894,8 +3880,7 @@
 				"peace"
 			],
 			"derivatives": [
-				"peace",
-				"pacify"
+				"peace"
 			]
 		},
 		"peccator": {
@@ -3907,7 +3892,7 @@
 			"senses": [
 				"sin"
 			],
-			"note": "The noun of pecco (to sin) — the deed, not the disposition.",
+			"note": "The noun of pecco (to sin): it names the deed.",
 			"derivatives": [
 				"peccadillo"
 			]
@@ -3927,14 +3912,14 @@
 				"through (space)",
 				"throughout (time)"
 			],
-			"note": "It expresses mediation — hence the standing close of the orations, “per Christum Dóminum nostrum”."
+			"note": "It expresses mediation — hence the standing close of the orations, “per Christum Dóminum nostrum”; with expressions of time it is duration — per ómnia sǽcula sæculórum."
 		},
 		"perceptio": {
 			"senses": [
 				"partaking",
 				"receiving"
 			],
-			"note": "From percípere, to take fully; in liturgical Latin the settled word for receiving Communion.",
+			"note": "From percípere, to take fully; in liturgical Latin one of the words for receiving Communion.",
 			"derivatives": [
 				"perception"
 			]
@@ -3948,7 +3933,7 @@
 			"note": "Per and cápio, to take through to the end; hence both “obtain” and “understand”.",
 			"derivatives": [
 				"perceive",
-				"receipt"
+				"receipt (from recípio)"
 			]
 		},
 		"perditio": {
@@ -3984,7 +3969,7 @@
 				"to bear to the end",
 				"to convey"
 			],
-			"note": "A compound of per and fero, and as irregular: its principal parts come from three different roots."
+			"note": "A compound of per and fero, and as irregular as fero: its principal parts come from three different roots."
 		},
 		"perhibeo": {
 			"senses": [
@@ -4035,8 +4020,7 @@
 			],
 			"note": "A deponent (passive form, active meaning). A compound of per and vagor — to wander the length of a thing.",
 			"derivatives": [
-				"vagrant",
-				"extravagant"
+				"extravagant (from vagári)"
 			]
 		},
 		"pes": {
@@ -4135,7 +4119,7 @@
 			"derivatives": [
 				"position",
 				"deposit",
-				"compose"
+				"postpone"
 			]
 		},
 		"populus": {
@@ -4156,7 +4140,7 @@
 				"to bear",
 				"to bring"
 			],
-			"note": "An everyday word for carrying a load; the same root carries transport and export. It has nothing to do with porta, a gate.",
+			"note": "An everyday word for carrying a load; the same root carries transport and export. It is not formed from porta, a gate, though both go back to one root of passing through.",
 			"derivatives": [
 				"transport",
 				"export",
@@ -4192,7 +4176,7 @@
 			"senses": [
 				"to drink"
 			],
-			"note": "The plain everyday word for drinking; pótio, a draught, and potátor, a drinker, come from it.",
+			"note": "Ante-classical and late — the everyday word is bibo; pótio, a draught, and potátor, a drinker, come from it.",
 			"derivatives": [
 				"potion",
 				"potable"
@@ -4265,7 +4249,7 @@
 			"note": "From præsídeo, to sit in front of a thing and guard it.",
 			"derivatives": [
 				"presidium",
-				"preside"
+				"preside (from præsidére)"
 			]
 		},
 		"praesto": {
@@ -4313,7 +4297,7 @@
 				"prayer",
 				"entreaty"
 			],
-			"note": "In classical Latin almost always plural — preces; the singular is rare.",
+			"note": "In classical Latin almost always plural — preces; the nominative prex is not attested at all.",
 			"derivatives": [
 				"pray",
 				"precarious",
@@ -4372,7 +4356,7 @@
 				"to go forward",
 				"to advance"
 			],
-			"note": "A compound of pro (forward) + cédere (to go); in trinitarian language it is the verb for one divine Person's origin from another.",
+			"note": "A compound of pro (forward) + cédere (to go); in the language of the creeds it states the Holy Spirit's procession; of the Son the creed says otherwise — génitum, begotten.",
 			"derivatives": [
 				"procession",
 				"process"
@@ -4395,7 +4379,7 @@
 			],
 			"note": "The noun of promítto, to send forth and so to promise — from the same mitto as missa.",
 			"derivatives": [
-				"promise"
+				"promise (from promítto)"
 			]
 		},
 		"propheta": {
@@ -4413,14 +4397,14 @@
 				"propitiatory",
 				"winning favour"
 			],
-			"note": "A late and rare word built on propitius: that through which propitiation is made."
+			"note": "A rare word, attested as early as Ennius; built on the verb propitiáre, as -bilis adjectives are: that through which propitiation is made."
 		},
 		"propitius": {
 			"senses": [
 				"gracious",
 				"favourable"
 			],
-			"note": "A word from Roman sacrifice: a propítium god is one whose offering has been received.",
+			"note": "A word of Roman religion: a propítium god is one well-disposed to the asker; from the adjective comes the verb propitiáre, to appease.",
 			"derivatives": [
 				"propitious",
 				"propitiation"
@@ -4528,8 +4512,8 @@
 		},
 		"quia": {
 			"senses": [
-				"that (in church Latin)",
-				"because"
+				"because",
+				"that (in church Latin)"
 			],
 			"note": "Classical Latin mostly “because”; church Latin, following the Greek, also uses “quia” for “that” after verbs of saying and confessing."
 		},
@@ -4539,9 +4523,9 @@
 				"to be at rest"
 			],
 			"derivatives": [
-				"quiet",
+				"quiet (from quiétus)",
 				"acquiesce",
-				"requiem"
+				"requiem (from réquies)"
 			]
 		},
 		"quis": {
@@ -4569,7 +4553,7 @@
 			"senses": [
 				"daily"
 			],
-			"note": "In the Lord's Prayer it renders the Greek “epioúsios”, a word almost unattested elsewhere.",
+			"note": "In the Lord's Prayer it renders the Greek “epioúsios”, a word almost unattested elsewhere. Jerome's Vulgate gives supersubstantiálem at Mt 6:11 and quotidiánum at Lk 11:3; the Mass keeps the Old Latin wording.",
 			"derivatives": [
 				"quotidian"
 			]
@@ -4585,7 +4569,7 @@
 				"however many",
 				"as many as"
 			],
-			"note": "Indeclinable: the form marks neither case nor gender nor number."
+			"note": "Indeclinable for case and gender, but plural in itself — however many. The corpus states the case the sentence gives it."
 		},
 		"rationabilis": {
 			"senses": [
@@ -4593,7 +4577,7 @@
 				"rational",
 				"spiritual"
 			],
-			"note": "The Canon follows Rom 12:1: rationábile obséquium, a reasonable service — that is, spiritual rather than animal sacrifice."
+			"note": "Reasonable, rational; through the Greek logikè latreía of Rom 12:1 the word can be tied to the Word, the Logos — the shade stays contested."
 		},
 		"ratus": {
 			"senses": [
@@ -4601,10 +4585,10 @@
 				"valid",
 				"settled"
 			],
-			"note": "A legal term: a ratus agreement is one that holds good. Ratification comes from it.",
+			"note": "A legal term: ratum habére, to hold as valid. Ratification comes from it.",
 			"derivatives": [
-				"ratify",
-				"ratification"
+				"ratify (from ratificáre)",
+				"ratification (from ratificáre)"
 			]
 		},
 		"recipio": {
@@ -4640,7 +4624,7 @@
 			"note": "From émere, to buy; a redémptio is the buying back of a slave or a captive for a price.",
 			"derivatives": [
 				"redemption",
-				"redeem"
+				"redeem (from redímere)"
 			]
 		},
 		"redimo": {
@@ -4681,10 +4665,10 @@
 				"coolness",
 				"solace"
 			],
-			"note": "Literally a cooling. In early Christian tomb inscriptions it is the ordinary word for the state of the departed, and Roman families held a graveside meal called a refrigérium.",
+			"note": "Literally a cooling. In early Christian tomb inscriptions it is the ordinary word for what was asked for the dead, and Roman families held a graveside meal called a refrigérium.",
 			"derivatives": [
-				"refrigerate",
-				"refrigerator"
+				"refrigerate (from refrigeráre)",
+				"refrigerator (from refrigeráre)"
 			]
 		},
 		"refugium": {
@@ -4692,7 +4676,7 @@
 				"refuge",
 				"shelter"
 			],
-			"note": "The noun of refúgio, to flee for help. It does not name the flight but the place fled to.",
+			"note": "The noun of refúgio, to flee for help. Here it names not the flight but the place fled to.",
 			"derivatives": [
 				"refuge",
 				"refugee"
@@ -4702,11 +4686,7 @@
 			"senses": [
 				"queen"
 			],
-			"note": "The feminine of rex, regis.",
-			"derivatives": [
-				"regina",
-				"reign"
-			]
+			"note": "The feminine of rex, regis."
 		},
 		"regno": {
 			"senses": [
@@ -4714,7 +4694,7 @@
 				"to rule"
 			],
 			"derivatives": [
-				"reign",
+				"reign (from regnum)",
 				"regnant"
 			]
 		},
@@ -4808,7 +4788,7 @@
 			],
 			"derivatives": [
 				"replete",
-				"replenish"
+				"replenish (from plenus)"
 			]
 		},
 		"respicio": {
@@ -4838,7 +4818,10 @@
 				"resurrection",
 				"rising again"
 			],
-			"note": "The noun of resúrgere, to rise again."
+			"note": "The noun of resúrgere, to rise again.",
+			"derivatives": [
+				"resurrection"
+			]
 		},
 		"retribuo": {
 			"senses": [
@@ -4849,7 +4832,7 @@
 			"note": "Re- and tríbuo, to allot back; the one word serves both for the gift given and for the gift returned.",
 			"derivatives": [
 				"retribution",
-				"tribute"
+				"tribute (from tribútum)"
 			]
 		},
 		"rex": {
@@ -4883,7 +4866,7 @@
 			"senses": [
 				"priest"
 			],
-			"note": "From sacra dare, to offer holy things. A different word from presbýter, which gave English priest.",
+			"note": "The ancients read it as sacra dare, to offer holy things; the second element is in truth the root of fácere — the one who performs the sacred rites. A different word from presbýter, which gave English priest.",
 			"derivatives": [
 				"sacerdotal"
 			]
@@ -4911,7 +4894,7 @@
 			"senses": [
 				"sacrifice"
 			],
-			"note": "Sacrum fácere — to make holy; the sacrifice as an act, not as the gift.",
+			"note": "Sacrum fácere — to perform the sacred rite; the sacrifice as an act, not as the gift.",
 			"derivatives": [
 				"sacrifice"
 			]
@@ -4932,7 +4915,7 @@
 				"generation",
 				"the world (this present age)"
 			],
-			"note": "“In sǽcula sæculórum” — a Hebrew intensifying idiom: unto the ages of ages, world without end.",
+			"note": "“In sǽcula sæculórum” — a Semitic intensifying idiom: unto the ages of ages, world without end.",
 			"derivatives": [
 				"secular"
 			]
@@ -5004,7 +4987,7 @@
 				"holy",
 				"saint (as a noun)"
 			],
-			"note": "Often used as a noun: “Sancti”, the Saints.",
+			"note": "Often used as a noun: “Sancti”, the Saints; in “Spíritus Sancti” it is the plain adjective.",
 			"derivatives": [
 				"sanctuary"
 			]
@@ -5013,7 +4996,7 @@
 			"senses": [
 				"blood"
 			],
-			"note": "Its plural sánguines means shed blood in the psalter, hence “viri sánguinum”, men of blood.",
+			"note": "Its plural means shed blood in the psalter: de sanguínibus (Ps 50), vir sánguinum — a man of blood (Ps 5).",
 			"derivatives": [
 				"sanguine"
 			]
@@ -5026,8 +5009,8 @@
 			],
 			"note": "From sanus, healthy; used of bodies and of repairing what is broken alike.",
 			"derivatives": [
-				"sane",
-				"sanitary",
+				"sane (from sanus)",
+				"sanitary (from sanitas)",
 				"sanatorium"
 			]
 		},
@@ -5174,7 +5157,7 @@
 			],
 			"note": "Stronger than service: it is the condition of a slave. The Canon uses it of a service freely given to God.",
 			"derivatives": [
-				"servitude"
+				"servitude (from servitúdo, from servus)"
 			]
 		},
 		"servus": {
@@ -5213,7 +5196,7 @@
 				"mark",
 				"standard"
 			],
-			"note": "Signum fídei, the sign of faith, has meant baptism since antiquity; that is how the Canon speaks of the baptized dead.",
+			"note": "Signum fídei, the sign of faith, is understood of baptism — the seal received in it; that is how the Canon speaks of the baptized dead.",
 			"derivatives": [
 				"sign",
 				"signal",
@@ -5265,7 +5248,7 @@
 				"allied",
 				"joint"
 			],
-			"note": "The adjective of sócius, a companion; sócia exsultatióne means in shared exultation."
+			"note": "An adjective — sharing, allied; the noun sócius, a companion, is the adjective used substantively. Sócia exsultatióne means in shared exultation."
 		},
 		"solus": {
 			"senses": [
@@ -5320,10 +5303,10 @@
 				"bridegroom",
 				"betrothed"
 			],
-			"note": "From spondére, to pledge solemnly; the bridegroom is the one pledged to.",
+			"note": "From spondére, to pledge solemnly; the bridegroom is the one who gave the pledge.",
 			"derivatives": [
 				"spouse",
-				"sponsor",
+				"sponsor (from spondére)",
 				"espouse"
 			]
 		},
@@ -5355,7 +5338,8 @@
 				"pleasantness"
 			],
 			"derivatives": [
-				"suave"
+				"suavity",
+				"suave (from suávis)"
 			]
 		},
 		"sub": {
@@ -5421,7 +5405,7 @@
 			"derivatives": [
 				"assume",
 				"consume",
-				"presume"
+				"presume (from praesúmo)"
 			]
 		},
 		"supplex": {
@@ -5441,7 +5425,7 @@
 				"upon"
 			],
 			"derivatives": [
-				"supreme",
+				"supreme (from suprémus)",
 				"supranational"
 			]
 		},
@@ -5482,8 +5466,8 @@
 			],
 			"note": "Deponent: passive in form, active in meaning. Literally to look up from under (sub + spécere) — the sidelong glance out of which suspicion grows.",
 			"derivatives": [
-				"suspicion",
-				"suspect"
+				"suspicion (from suspício)",
+				"suspect (from suspícere)"
 			]
 		},
 		"suspiro": {
@@ -5537,8 +5521,8 @@
 			],
 			"note": "The passive participle of tego, to cover, used as a noun: the thing that covers. Latin commonly uses it for a house entire.",
 			"derivatives": [
-				"protect",
-				"detect"
+				"protect (from protego)",
+				"detect (from detego)"
 			]
 		},
 		"temporalis": {
@@ -5550,7 +5534,7 @@
 			"note": "From tempus, time; in Church Latin the standing opposite of ætérnus.",
 			"derivatives": [
 				"temporal",
-				"temporary"
+				"temporary (from temporárius)"
 			]
 		},
 		"tenebrae": {
@@ -5575,7 +5559,7 @@
 			],
 			"derivatives": [
 				"terrain",
-				"territory"
+				"territory (disputed)"
 			]
 		},
 		"tertius": {
@@ -5596,7 +5580,7 @@
 			"note": "A Roman testamentum is a disposition made against one's death; biblical Latin used the word for the Hebrew covenant, and both senses sound in the words of consecration.",
 			"derivatives": [
 				"testament",
-				"testify"
+				"testify (from testis)"
 			]
 		},
 		"testimonium": {
@@ -5617,7 +5601,7 @@
 			],
 			"note": "In the psalms nearly always the fear of God — not dread of punishment but the awe one stands in.",
 			"derivatives": [
-				"timid",
+				"timid (from tímidus)",
 				"timorous"
 			]
 		},
@@ -5626,7 +5610,7 @@
 				"to lift up",
 				"to take away"
 			],
-			"note": "In the liturgy both senses at once: the Lamb “lifts” the world's sins onto himself and so “takes them away”.",
+			"note": "In the liturgy both senses are live: the Lamb “lifts” the world's sins onto himself and so “takes them away”.",
 			"derivatives": [
 				"extol"
 			]
@@ -5692,10 +5676,10 @@
 				"defence",
 				"protection"
 			],
-			"note": "From tueor, to watch over; a late and rare word, hardly met outside the liturgy.",
+			"note": "From tueor, to watch over; a late and rare word, at home in Christian Latin.",
 			"derivatives": [
-				"tuition",
-				"tutor"
+				"tuition (from tuítio)",
+				"tutor (from tutor)"
 			]
 		},
 		"tuus": {
@@ -5809,7 +5793,7 @@
 			"note": "From vanus, empty. Not vanity as conceit but what is hollow: the thing without substance the eyes are asked not to look at.",
 			"derivatives": [
 				"vanity",
-				"vain"
+				"vain (from vanus)"
 			]
 		},
 		"vel": {
@@ -5826,7 +5810,7 @@
 			],
 			"derivatives": [
 				"venerable",
-				"venerate"
+				"venerate (from venerári)"
 			]
 		},
 		"veneror": {
@@ -5857,7 +5841,7 @@
 				"to arrive",
 				"to draw near"
 			],
-			"note": "The base of many compounds: advénio (to come to), convénio (to come together), invénio (to find).",
+			"note": "The base of many compounds: advénio (to come to), convénio (to come together), invénio (to find), evénio (to come to pass).",
 			"derivatives": [
 				"convene",
 				"event"
@@ -5980,7 +5964,7 @@
 				"entrails",
 				"the depths"
 			],
-			"note": "Almost always plural, víscera. Literally the organs under the ribs; by transference, whatever is innermost in a person.",
+			"note": "Almost always plural, víscera. Literally the inner organs — the heart and lungs no less than the entrails; by transference, whatever is innermost in a person.",
 			"derivatives": [
 				"viscera",
 				"visceral"
@@ -6022,7 +6006,7 @@
 				"to live"
 			],
 			"derivatives": [
-				"vivid",
+				"vivid (from vívus)",
 				"survive",
 				"revive"
 			]
@@ -6039,7 +6023,7 @@
 				"to wish",
 				"to want"
 			],
-			"note": "An irregular verb, with no passive future and no supine. Ipsam vólui — I have wanted that very thing: a perfect, so a choice already made.",
+			"note": "An irregular verb: no passive at all, and no supine. Ipsam vólui — I have wanted that very thing: a perfect, so a choice already made.",
 			"derivatives": [
 				"volition",
 				"voluntary",
@@ -6072,7 +6056,7 @@
 			"derivatives": [
 				"vote",
 				"votive",
-				"devote"
+				"devote (from devovére)"
 			]
 		},
 		"vox": {

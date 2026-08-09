@@ -3,7 +3,7 @@
 	"text": "ordinarium.evangelium-ultimum",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Prolog świętego Jana, czytany na końcu Mszy przy stronie Ewangelii. Kapłan znaczy krzyżem najpierw ołtarz albo księgę, potem siebie — na czole, na ustach i na piersi — jak przed każdą Ewangelią, i czyta czternaście wersetów, które cofają całą historię aż przed stworzenie świata. Na słowach „Et Verbum caro factum est” przyklęka. Jedna z edycji drukuje te pięć słów wersalikami, druga stawia w tym miejscu rubrykę — obie znaczą to samo. Zapowiedź ma swoją odpowiedź, „Glória tibi, Dómine”, a całość zamyka „Deo grátias”.",
+	"about": "Prolog świętego Jana, czytany na końcu Mszy przy stronie Ewangelii. Kapłan znaczy krzyżem najpierw ołtarz albo księgę, potem siebie — na czole, na ustach i na piersi — jak przed każdą Ewangelią, i czyta czternaście wersetów, które cofają całą historię aż przed stworzenie świata. Na słowach „Et Verbum caro factum est” przyklęka. Mszalik ręczny drukuje te pięć słów wersalikami i niesie zarazem rubrykę; do i wydanie typiczne stawiają tu rubrykę — wszystkie znaczą to samo. Zapowiedź ma swoją odpowiedź, „Glória tibi, Dómine”, a całość zamyka „Deo grátias”.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -34,13 +34,13 @@
 			"narrative": "Ze złożonymi rękami mówi dalej:"
 		},
 		"s08": {
-			"translation": "Na początku było Słowo, a Słowo było u Boga, a Bogiem było Słowo. Ono było na początku u Boga. Wszystko przez Nie się stało, a bez Niego nic się nie stało, co się stało: w Nim było życie, a życie było światłością ludzi; a światłość w ciemnościach świeci i ciemności jej nie ogarnęły."
+			"translation": "Na początku było Słowo, a Słowo było u Boga, a Bogiem było Słowo. Ono było na początku u Boga. Wszystko przez Nie się stało, a bez Niego nic się nie stało, co się stało: w Nim było Życie, a Życie było Światłością ludzi; a Światłość w ciemnościach świeci i ciemności Jej nie ogarnęły."
 		},
 		"s09": {
-			"translation": "Był człowiek posłany od Boga, któremu na imię było Jan. Ten przyszedł na świadectwo, aby dać świadectwo o światłości, aby wszyscy uwierzyli przez niego. Nie był on światłością, lecz miał dać świadectwo o światłości."
+			"translation": "Był człowiek posłany od Boga, któremu na imię było Jan. Ten przyszedł na świadectwo, aby dać świadectwo o Światłości, aby wszyscy uwierzyli przez niego. Nie był on Światłością, lecz miał dać świadectwo o Światłości."
 		},
 		"s10": {
-			"translation": "Była światłość prawdziwa, która oświeca każdego człowieka przychodzącego na ten świat. Na świecie było, a świat przez Nie się stał, a świat Go nie poznał. Do swojej własności przyszedł, a swoi Go nie przyjęli. A ilu Go przyjęło, tym dał moc stać się synami Bożymi — tym, którzy wierzą w imię Jego: którzy nie z krwi ani z woli ciała, ani z woli męża, ale z Boga się narodzili."
+			"translation": "Była Światłość prawdziwa, która oświeca każdego człowieka przychodzącego na ten świat. Na świecie było, a świat przez Nie się stał, a świat Go nie poznał. Do swojej własności przyszedł, a swoi Go nie przyjęli. A ilu Go przyjęło, tym dał moc stać się synami Bożymi — tym, którzy wierzą w imię Jego: którzy nie z krwi ani z woli ciała, ani z woli męża, ale z Boga się narodzili."
 		},
 		"s11": {
 			"narrative": "Tu przyklęka, mówiąc:"
@@ -106,7 +106,7 @@
 		},
 		"w015": {
 			"gloss": "Na",
-			"function": "Te same trzy słowa otwierają Księgę Rodzaju w łacińskiej Biblii — In princípio. Jan zaczyna swoją Ewangelię od początku wszystkiego."
+			"function": "Te same dwa słowa otwierają Księgę Rodzaju w łacińskiej Biblii — In princípio. Jan zaczyna swoją Ewangelię od początku wszystkiego."
 		},
 		"w016": {
 			"gloss": "początku"
@@ -174,7 +174,7 @@
 			"gloss": "przez"
 		},
 		"w036": {
-			"gloss": "Nie"
+			"gloss": "Nie (= Słowo)"
 		},
 		"w037": {
 			"gloss": "uczynione",
@@ -200,7 +200,7 @@
 		},
 		"w044": {
 			"gloss": "nic",
-			"function": "Podmiot zdania, choć słowo jest nieodmienne: korpus orzeka liczbę i rodzaj, przypadku nie ma czym poprzeć w formie."
+			"function": "Podmiot zdania, choć słowo jest nieodmienne: korpus orzeka przypadek, liczbę i rodzaj, które daje mu zdanie — sama forma nie znaczy żadnego."
 		},
 		"w045": {
 			"gloss": "co",
@@ -219,7 +219,7 @@
 			"gloss": "Nim"
 		},
 		"w050": {
-			"gloss": "życie"
+			"gloss": "Życie"
 		},
 		"w051": {
 			"gloss": "było"
@@ -228,13 +228,13 @@
 			"gloss": "a"
 		},
 		"w053": {
-			"gloss": "życie"
+			"gloss": "Życie"
 		},
 		"w054": {
 			"gloss": "było"
 		},
 		"w055": {
-			"gloss": "światłością"
+			"gloss": "Światłością"
 		},
 		"w056": {
 			"gloss": "ludzi",
@@ -244,7 +244,7 @@
 			"gloss": "a"
 		},
 		"w058": {
-			"gloss": "światłość"
+			"gloss": "Światłość"
 		},
 		"w059": {
 			"gloss": "w"
@@ -264,8 +264,8 @@
 			"gloss": "ciemności"
 		},
 		"w064": {
-			"gloss": "jej",
-			"function": "Rodzaj żeński, bo „lux” (w058) jest po łacinie rodzaju żeńskiego."
+			"gloss": "Jej",
+			"function": "Rodzaj żeński, bo „lux” (w058) jest po łacinie rodzaju żeńskiego. Wielka litera to reguła tego wydania dla zaimka o odniesieniu Bożym: światłość tego wiersza to życie, które było w Słowie."
 		},
 		"w065": {
 			"gloss": "nie"
@@ -330,7 +330,7 @@
 			"gloss": "o"
 		},
 		"w084": {
-			"gloss": "światłości"
+			"gloss": "Światłości"
 		},
 		"w085": {
 			"gloss": "aby"
@@ -358,7 +358,7 @@
 			"gloss": "on"
 		},
 		"w093": {
-			"gloss": "światłością",
+			"gloss": "Światłością",
 			"function": "Orzecznik w mianowniku: po łacinie przy „esse” stoi ten sam przypadek co podmiot."
 		},
 		"w094": {
@@ -377,13 +377,13 @@
 			"gloss": "o"
 		},
 		"w099": {
-			"gloss": "światłości"
+			"gloss": "Światłości"
 		},
 		"w100": {
 			"gloss": "Była"
 		},
 		"w101": {
-			"gloss": "światłość"
+			"gloss": "Światłość"
 		},
 		"w102": {
 			"gloss": "prawdziwa"
@@ -433,7 +433,7 @@
 			"gloss": "przez"
 		},
 		"w117": {
-			"gloss": "Nie"
+			"gloss": "Nie (= Słowo)"
 		},
 		"w118": {
 			"gloss": "uczyniony"
@@ -471,7 +471,7 @@
 		},
 		"w129": {
 			"gloss": "swoi",
-			"function": "Ten sam zaimek dzierżawczy, ale w rodzaju męskim: tam rzeczy, tu ludzie."
+			"function": "Inne słowo niż „própria” (w126) — suus to zwrotny zaimek dzierżawczy — w tym samym rzeczownikowym użyciu, tym razem w rodzaju męskim: tam rzeczy, tu ludzie."
 		},
 		"w130": {
 			"gloss": "Go"
@@ -619,7 +619,7 @@
 		},
 		"w176": {
 			"gloss": "ujrzeliśmy",
-			"function": "Pierwsza osoba liczby mnogiej — jedyne miejsce tego czytania, gdzie mówi świadek: my widzieliśmy."
+			"function": "Pierwsza osoba liczby mnogiej — jedyny czasownik tego czytania w pierwszej osobie: my widzieliśmy."
 		},
 		"w177": {
 			"gloss": "chwałę"

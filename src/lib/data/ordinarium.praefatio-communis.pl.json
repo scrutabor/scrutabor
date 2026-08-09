@@ -3,7 +3,7 @@
 	"text": "ordinarium.praefatio-communis",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Prefacja wspólna — najkrótsza z rzymskich prefacji i jedyna, która nie nazywa żadnej tajemnicy: mówi tylko „przez Chrystusa, Pana naszego”, i od razu przechodzi do aniołów. Wymienione chóry — Aniołowie, Państwa, Zwierzchności, Moce, Serafiny — pochodzą z list Nowego Testamentu (Kol 1, 16; Ef 1, 21) i z widzenia Izajasza. Całe zdanie od „nos tibi” do „ágere” jest bezokolicznikowe: „że my Tobie mamy składać dzięki” — orzeczeniem głównym jest krótkie est na początku.",
+	"about": "Prefacja zwykła — najkrótsza z rzymskich prefacji i jedyna, która nie nazywa żadnej tajemnicy: mówi tylko „przez Chrystusa, Pana naszego”, i od razu przechodzi do aniołów. Wymienione chóry — Aniołowie, Państwa, Zwierzchności, Moce, Serafiny — pochodzą z list Nowego Testamentu (Kol 1, 16; Ef 1, 21) i z widzenia Izajasza. Całe zdanie od „nos tibi” do „ágere” jest bezokolicznikowe: „że my Tobie mamy składać dzięki” — orzeczeniem głównym jest krótkie est na początku.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -22,13 +22,13 @@
 			"translation": "Panie święty, Ojcze wszechmogący, wieczny Boże: przez Chrystusa Pana naszego."
 		},
 		"s04": {
-			"translation": "Przez Niego majestat Twój chwalą Aniołowie, uwielbiają Państwa, drżą Zwierzchności."
+			"translation": "Przez Niego Twój majestat chwalą Aniołowie, uwielbiają Państwa, z lękiem czczą Potęgi."
 		},
 		"s05": {
-			"translation": "Niebiosa i Moce niebios, i błogosławione Serafiny wspólnie je sławią w radosnym uniesieniu."
+			"translation": "Niebiosa i Moce niebios oraz błogosławieni Serafini we wspólnej wysławiają radości."
 		},
 		"s06": {
-			"translation": "Z nimi razem, prosimy, każ i naszym głosom być dopuszczonymi, gdy mówimy w kornym wyznaniu:"
+			"translation": "Z nimi to, prosimy, dozwól i naszym głosom wołać w pokornym uwielbieniu:"
 		}
 	},
 	"words": {
@@ -37,7 +37,7 @@
 		},
 		"w002": {
 			"gloss": "godne",
-			"function": "Kapłan powtarza słowa, którymi wierni przed chwilą odpowiedzieli — Dignum et iustum est — i dodaje do nich dwa własne."
+			"function": "Kapłan powtarza słowa odpowiedzi, która przed chwilą padła — Dignum et iustum est — i dodaje do nich dwa własne."
 		},
 		"w003": {
 			"gloss": "i"
@@ -47,10 +47,11 @@
 		},
 		"w005": {
 			"gloss": "jest",
-			"function": "Jedyne orzeczenie w tym długim zdaniu; wszystko, co następuje aż do „ágere”, jest jego podmiotem."
+			"function": "Jedyne orzeczenie w tym długim zdaniu; wszystko od „nos” po „ágere” jest jego podmiotem, a æquum i salutáre — orzecznikami."
 		},
 		"w006": {
-			"gloss": "słuszne"
+			"gloss": "słuszne",
+			"function": "Parę æquum et salutáre polski tekst mszalny oddaje dosłownie — „słuszne i zbawienne” — i tak modli się też przekład obok; angielskie księgi oddają ją sensem: „our duty and our salvation”."
 		},
 		"w007": {
 			"gloss": "i"
@@ -99,7 +100,7 @@
 		},
 		"w021": {
 			"gloss": "Boże",
-			"function": "Sześć słów w wołaczu naraz — najdłuższy zwrot do Boga w całym Ordo."
+			"function": "Sześć słów w wołaczu naraz — dłuższy ciąg ma tylko Gloria."
 		},
 		"w022": {
 			"gloss": "przez"
@@ -119,7 +120,7 @@
 		},
 		"w027": {
 			"gloss": "Niego",
-			"function": "Zaimek względny odnosi się do Chrystusa i zaczyna zdanie, które biegnie aż do końca Prefacji."
+			"function": "Zaimek względny odnosi się do Chrystusa i otwiera łańcuch względny, który niesie Prefację do końca."
 		},
 		"w028": {
 			"gloss": "majestat",
@@ -152,7 +153,7 @@
 			"function": "Cælum ma w liczbie mnogiej rodzaj męski — cæli, nie cæla; to rzeczownik, który zmienia rodzaj w liczbie mnogiej."
 		},
 		"w037": {
-			"gloss": "i Moce niebios",
+			"gloss": "i niebios",
 			"function": "Dopełniacz zależny od „Virtútes” (w038): moce należące do niebios."
 		},
 		"w038": {
@@ -203,7 +204,7 @@
 		},
 		"w052": {
 			"gloss": "każ",
-			"function": "Tryb łączący po ut; prośba wyrażona nie rozkazem, lecz życzeniem."
+			"function": "Tryb łączący po ut; po polsku oddany rozkaźnikiem, ale w łacinie to prośba, nie rozkaz."
 		},
 		"w053": {
 			"gloss": "prosimy",

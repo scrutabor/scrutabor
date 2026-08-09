@@ -410,7 +410,11 @@ test('choosing a part does not shift the parts beside it', async ({ page }) => {
 	// moved along the row, which made the row look loose. Every option now
 	// reserves the width of its own bold form whether or not it is chosen,
 	// so only the weight changes.
-	await page.goto('/app/en/ordinarium/confiteor');
+	// iudica-me, not the Confiteor: the ministers' Confiteor is said by one
+	// speaker from beginning to end, so it offers no part to choose — the
+	// corpus review corrected its speaker map in 2026-08, and the picker
+	// correctly disappeared with it.
+	await page.goto('/app/en/ordinarium/iudica-me');
 	const lefts = () =>
 		page.$$eval('.picker.compact .option', (els) =>
 			els.map((e) => Math.round(e.getBoundingClientRect().left))

@@ -3,7 +3,7 @@
 	"text": "ordinarium.corpus-tuum",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Ostatnia modlitwa obrzędu Komunii i ta, w której tkwi węzeł. Quem jest rodzaju męskiego: nie może należeć do mácula, skazy, która jest żeńska, ani do sacraménta, które są nijakie i w liczbie mnogiej. Sięga ponad nimi obiema do me, o pięć słów wstecz — niech nie pozostanie we mnie zmaza grzechów, którego posiliły czyste i święte sakramenty. Łacinie pozwalają na to końcówki; język, który je stracił, tego nie potrafi, i każdy przekład musi wybrać. Modlitwa prosi też o coś dziwnie cielesnego: żeby Ciało i Krew przylgnęły do wnętrzności kapłana, a nie do jego duszy.",
+	"about": "Ostatnia modlitwa obrzędu Komunii i ta, w której tkwi węzeł. Quem jest rodzaju męskiego: nie może należeć do mácula, skazy, która jest żeńska, ani do sacraménta, które są nijakie i w liczbie mnogiej. Sięga ponad nimi obiema do me, o pięć słów wstecz — niech nie pozostanie we mnie zmaza grzechów, którego posiliły czyste i święte sakramenty. Pozwalają na to łacińskie końcówki; język, który je stracił, tego nie potrafi, i każdy przekład musi wybrać. Modlitwa prosi, żeby Ciało i Krew przylgnęły do wnętrzności kapłana — víscera to w Biblii siedziba czułości i miłosierdzia, per víscera misericórdiæ: prośba cielesna i wewnętrzna zarazem.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,7 +16,7 @@
 			"narrative": "Następnie mówi dalej:"
 		},
 		"s02": {
-			"translation": "Ciało Twoje, Panie, które przyjąłem, i Krew, którą wypiłem, niech przylgną do wnętrzności moich:"
+			"translation": "Ciało Twoje, Panie, które przyjąłem, i Krew, którą wypiłem, niech przylgnie do wnętrzności moich:"
 		},
 		"s03": {
 			"translation": "i spraw, aby we mnie, którego posiliły czyste i święte sakramenty, nie pozostała zmaza grzechów:"
@@ -58,7 +58,7 @@
 		},
 		"w009": {
 			"gloss": "wypiłem",
-			"function": "Poto to zwyczajne słowo o piciu, bez śladu uroczystości zdania, w którym stoi."
+			"function": "Poto nie jest codziennym słowem o piciu — tym jest bibo, słowo ustanowienia; modlitwa i tu waży słownictwo."
 		},
 		"w010": {
 			"gloss": "niech przylgną",
@@ -66,7 +66,7 @@
 		},
 		"w011": {
 			"gloss": "do wnętrzności",
-			"function": "Celownik po „adhǽreat” (w010). Víscera to narządy pod żebrami, nie dusza: modlitwa prosi o coś cielesnego."
+			"function": "Celownik po „adhǽreat” (w010). Víscera to w Wulgacie siedziba czułości — per víscera misericórdiæ — a prośba jest cielesna i wewnętrzna zarazem."
 		},
 		"w012": {
 			"gloss": "moich"
@@ -117,11 +117,11 @@
 		},
 		"w026": {
 			"gloss": "posiliły",
-			"function": "Re i fácio — uczynić na nowo; słowa używa się o posiłku, który stawia na nogi wędrowca, i taki jest tu obraz."
+			"function": "Perfectum — pokrzepienie już się dokonało; do tego dokonanego faktu modlitwa przypina swoją prośbę o czystość."
 		},
 		"w027": {
 			"gloss": "sakramenty",
-			"function": "Liczba mnoga: Ciało i Krew, obie przed chwilą przyjęte, policzone jako dwa."
+			"function": "Liczba mnoga: Ciało i Krew, oboje przed chwilą przyjęte, policzone jako dwa."
 		},
 		"w028": {
 			"gloss": "Który"

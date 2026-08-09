@@ -3,7 +3,7 @@
 	"text": "ordinarium.ite-missa-est",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The dismissal. Missa is a late Latin noun built on missus, “sent away”, and from this one word the whole liturgy took its name. The sentence is ordinary and complete: Ite — go, Missa est — the dismissal is made. The rubric directs that the dismissal be chosen “pro Missæ qualitate”, according to the character of the Mass: beside Ite, Missa est it names Benedicámus Dómino, and in Masses for the Dead it directs Requiéscant in pace with the answer Amen. At a sung Mass the dismissal is sung: the books give it several melodies, and in Eastertide a form of its own with a double allelúja.",
+	"about": "The dismissal. Missa is a late Latin form of the noun missio — a dismissal, as collecta stands beside collectio — and from this one word the whole liturgy took its name. The sentence is ordinary and complete: Ite — go, Missa est — the dismissal is made. The rubric directs that the dismissal be chosen “pro Missæ qualitate”, according to the character of the Mass: beside Ite, Missa est it names Benedicámus Dómino (“Let us bless the Lord”), and in Masses for the Dead it directs Requiéscant in pace (“May they rest in peace”) with the answer Amen. At a sung Mass the dismissal is sung: the books give it several melodies, and in the Easter octave a form of its own with a double allelúia.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -19,13 +19,13 @@
 			"translation": "The Lord be with you."
 		},
 		"s03": {
-			"translation": "And with thy spirit."
+			"translation": "And with your spirit."
 		},
 		"s04": {
-			"narrative": "And according to the character of the Mass the priest says either Ite, Missa est or Benedicámus Dómino; to both the answer is Deo grátias."
+			"narrative": "And according to the character of the Mass the priest says either Ite, Missa est or Benedicámus Dómino (“Let us bless the Lord”); to both the answer is Deo grátias."
 		},
 		"s05": {
-			"translation": "Go, the Mass is ended."
+			"translation": "Go forth, the Mass is ended."
 		},
 		"s06": {
 			"translation": "Thanks be to God."
@@ -39,7 +39,7 @@
 			"gloss": "The Lord"
 		},
 		"w002": {
-			"gloss": "be with you",
+			"gloss": "with you",
 			"function": "One written word carrying two: the preposition cum stands after the pronoun and fuses with it, as it always does with the personal pronouns (mecum, tecum, nobíscum)."
 		},
 		"w003": {
@@ -52,7 +52,7 @@
 			"gloss": "spirit"
 		},
 		"w006": {
-			"gloss": "thy"
+			"gloss": "your"
 		},
 		"w007": {
 			"gloss": "Go",

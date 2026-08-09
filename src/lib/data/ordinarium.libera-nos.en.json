@@ -3,7 +3,7 @@
 	"text": "ordinarium.libera-nos",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "This prayer is called the embolism, from the Greek word for an insertion: it is slipped in between the Lord's Prayer and the Communion, and it does one thing only — it takes the petition the server has just made, líbera nos a malo, and opens it out. The one evil becomes all evils, and the evils are given three tenses: past, present, and still to come. Its ending is said over the breaking of the Host: the Host is divided in two at Fílium tuum, a small particle is broken from the left-hand half at Qui tecum vivit et regnat, and only the last four words are raised to a voice the church can hear.",
+	"about": "This prayer is called the embolism, from the Greek word for an insertion: it is slipped in between the Lord's Prayer and the Communion, and it does one thing only — it takes the petition the server has just made, líbera nos a malo, and opens it out. The one evil becomes all evils, and the evils are given three tenses: past, present, and still to come. Its ending is said over the breaking of the Host: the Host is divided in two while the conclusion is said, a small particle is broken from the left-hand half at Qui tecum vivit et regnat, and only the last four words are raised to a voice the church can hear.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,31 +16,31 @@
 			"narrative": "The priest takes the paten between his first and middle fingers, holds it upright over the altar, and says the prayer secretly."
 		},
 		"s02": {
-			"translation": "Deliver us, we beseech Thee, O Lord, from all evils, past, present and to come: and by the intercession of the blessed and glorious ever-Virgin Mary, Mother of God, with Thy blessed Apostles Peter and Paul, and Andrew, and all the Saints,"
+			"translation": "Deliver us, Lord, we pray, from every evil, past, present and to come: and by the intercession of the blessed and glorious ever-Virgin Mary, Mother of God, with Your blessed Apostles Peter and Paul, and Andrew, and all the Saints,"
 		},
 		"s03": {
 			"narrative": "The priest signs himself with the paten, from forehead to breast."
 		},
 		"s04": {
-			"translation": "graciously grant peace in our days:"
+			"translation": "graciously grant peace in our days,"
 		},
 		"s05": {
 			"narrative": "The priest kisses the paten."
 		},
 		"s06": {
-			"translation": "that, upheld by the help of Thy mercy, we may be always free from sin and safe from all disquiet."
+			"translation": "that, by the help of Your mercy, we may be always free from sin and safe from all distress."
 		},
 		"s07": {
 			"narrative": "The priest slips the paten under the Host, uncovers the chalice, genuflects, rises, takes the Host, and holding it over the chalice with both hands breaks it in two."
 		},
 		"s08": {
-			"translation": "Through the same Iesus Christ our Lord, Thy Son."
+			"translation": "Through the same Jesus Christ our Lord, Your Son."
 		},
 		"s09": {
 			"narrative": "The priest lays the right-hand half on the paten, and from the half left in his hand breaks off a small particle."
 		},
 		"s10": {
-			"translation": "Who liveth and reigneth with Thee in the unity of the Holy Spirit, God."
+			"translation": "Who lives and reigns with You in the unity of the Holy Spirit, God."
 		},
 		"s11": {
 			"narrative": "The priest joins the left-hand half to the half on the paten, holds the small particle over the chalice, and now says or sings aloud."
@@ -61,7 +61,7 @@
 			"gloss": "us"
 		},
 		"w003": {
-			"gloss": "we beseech Thee",
+			"gloss": "we beseech",
 			"function": "A parenthesis dropped into the sentence, as elsewhere in the Roman prayers; it takes no object of its own here."
 		},
 		"w004": {
@@ -167,7 +167,7 @@
 		},
 		"w034": {
 			"gloss": "grant",
-			"function": "The main verb of the sentence, held back until all the intercession has been named: everything since the evils was leading here."
+			"function": "The verb of its own clause — beside the imperative “Líbera” (w001) — held back until all the intercession has been named: everything since the evils was leading here."
 		},
 		"w035": {
 			"gloss": "graciously",
@@ -191,7 +191,7 @@
 		},
 		"w041": {
 			"gloss": "by the help",
-			"function": "Ablative of means with “adiúti” (w044). Ops has no nominative singular in use, so this is one of the four forms the word has."
+			"function": "Ablative of means with “adiúti” (w044). Ops has no nominative singular in use, so this is one of the three forms the singular has."
 		},
 		"w042": {
 			"gloss": "of mercy"
@@ -201,7 +201,7 @@
 		},
 		"w044": {
 			"gloss": "upheld",
-			"function": "A participle agreeing with the unstated subject of “simus” (w048) — us; Whitaker's does not carry the form, so this parse rests on Collatinus and the edition."
+			"function": "A participle agreeing with the unstated subject of “simus” (w048) — us."
 		},
 		"w045": {
 			"gloss": "both",
@@ -247,7 +247,7 @@
 		},
 		"w057": {
 			"gloss": "the same",
-			"function": "Points back to the Lord already named in the prayer, so the ending does not introduce Him afresh."
+			"function": "Eúndem wants to point back — but Iesus Christus is not named earlier in this prayer, and the opening “Dómine” reads as the Father. This is a known knot of the embolism, and the word carries the disputed flag."
 		},
 		"w058": {
 			"gloss": "Lord"
@@ -256,14 +256,14 @@
 			"gloss": "our"
 		},
 		"w060": {
-			"gloss": "Iesus"
+			"gloss": "Jesus"
 		},
 		"w061": {
 			"gloss": "Christ"
 		},
 		"w062": {
 			"gloss": "Son",
-			"function": "In apposition to “Christum” (w061) and addressed to the Father: through Thy Son. The Host is broken in two on these words."
+			"function": "In apposition to “Christum” (w061) and addressed to the Father: through Thy Son. The Host is divided while this whole conclusion is said, not at these two words."
 		},
 		"w063": {
 			"gloss": "Thy"
@@ -298,7 +298,7 @@
 		},
 		"w073": {
 			"gloss": "God",
-			"function": "Nominative, standing with the two verbs, not an address: He lives and reigns as God. A particle is broken from the Host on these words."
+			"function": "Nominative, standing with the two verbs, not an address: He lives and reigns as God. The particle has been broken off before this word is reached; the priest is holding it over the chalice as he says it."
 		},
 		"w074": {
 			"gloss": "Through"

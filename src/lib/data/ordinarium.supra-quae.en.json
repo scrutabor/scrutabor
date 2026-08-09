@@ -3,7 +3,7 @@
 	"text": "ordinarium.supra-quae",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The one place in the Roman Mass that names the sacrifices of the Old Testament: Abel, Abraham and Melchisedech. The same three stand at one altar in the mosaic of Sant'Apollinare in Classe outside Ravenna. The prayer asks God to accept this sacrifice as he accepted theirs — and asks it after the consecration, which gave the medieval commentators trouble. Abel is here púer tuus justus, thy just servant; Melchisedech is summus sacérdos, thy high priest.",
+	"about": "The one place in the Ordinary of the Mass that names the sacrifices of the Old Testament: Abel, Abraham and Melchisedech. The same three stand at one altar in the mosaic of Sant'Apollinare in Classe outside Ravenna. The prayer asks God to accept this sacrifice as He accepted theirs — and asks it after the consecration, which gave the medieval commentators trouble. Abel is here púer tuus iustus, Thy just servant; Melchisedech is summus sacérdos, Thy high priest. The rough seam of the closing words has a name in the tradition: the Liber Pontificalis says Leo the Great added sanctum sacrifícium, immaculátam hóstiam.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,10 +16,10 @@
 			"narrative": "The priest goes on with his hands spread."
 		},
 		"s02": {
-			"translation": "Upon these deign to look with a gracious and serene countenance, and to accept them, as thou didst deign to accept the gifts of thy just servant Abel, and the sacrifice of Abraham our patriarch:"
+			"translation": "Be pleased to look upon these offerings with a serene and kindly countenance, and to accept them, as once You were pleased to accept the gifts of Your servant Abel the just, and the sacrifice of Abraham, our father in faith:"
 		},
 		"s03": {
-			"translation": "and that which thy high priest Melchisedech offered to thee, a holy sacrifice, an unspotted victim."
+			"translation": "and the offering of Your high priest Melchisedech, a holy sacrifice, a spotless victim."
 		}
 	},
 	"words": {
@@ -32,14 +32,14 @@
 		},
 		"w003": {
 			"gloss": "gracious",
-			"function": "A word from Roman sacrifice: a propítium god is one whose offering has been received."
+			"function": "The first of the pair of epithets with “vultu” (w006): a word of Roman prayer for a god well-disposed to the asker — see the lemma."
 		},
 		"w004": {
 			"gloss": "and"
 		},
 		"w005": {
 			"gloss": "serene",
-			"function": "First said of a cloudless sky, and only then of a face."
+			"function": "The second of the pair of epithets with “vultu” (w006): a face without a cloud — see the lemma for the word’s road from sky to countenance."
 		},
 		"w006": {
 			"gloss": "countenance"
@@ -59,7 +59,7 @@
 		},
 		"w011": {
 			"gloss": "to hold",
-			"function": "Accépta habére as in the Te ígitur: to hold as received, to enter on the list of the accepted."
+			"function": "Accépta habére — the idiom of the Te ígitur (there: accépta hábeas): to hold as received, to enter on the list of the accepted."
 		},
 		"w012": {
 			"gloss": "as"
@@ -71,7 +71,7 @@
 			"gloss": "to hold"
 		},
 		"w015": {
-			"gloss": "thou didst deign",
+			"gloss": "Thou didst deign",
 			"function": "A deponent participle with es: passive in form, active in meaning, and perfect in tense."
 		},
 		"w016": {
@@ -86,7 +86,7 @@
 			"function": "Puer means both boy and servant, as Greek país does."
 		},
 		"w019": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w020": {
 			"gloss": "just"
@@ -119,24 +119,24 @@
 			"function": "A relative with no antecedent: that which he offered. Two appositions close the sentence after it."
 		},
 		"w029": {
-			"gloss": "to thee"
+			"gloss": "to Thee"
 		},
 		"w030": {
 			"gloss": "offered"
 		},
 		"w031": {
 			"gloss": "high",
-			"function": "The superlative of súperus, upper; this adjective has no positive degree."
+			"function": "Paired with “sacérdos” (w032). In Gen 14 the epithet stands with God — sacérdos Dei altíssimi; the Canon moves it to the priest."
 		},
 		"w032": {
 			"gloss": "priest"
 		},
 		"w033": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w034": {
 			"gloss": "Melchisedech",
-			"function": "Indeclinable: the nominative follows from its apposition to “sacérdos” (w032). Hebrews makes him the figure of Christ's priesthood."
+			"function": "Indeclinable: the nominative follows from its apposition to “sacérdos” (w032) — Melchisedech is the subject of “óbtulit” (w030); alone of the three he offered what we offer, bread and wine."
 		},
 		"w035": {
 			"gloss": "a holy"
@@ -149,7 +149,8 @@
 			"gloss": "an unspotted"
 		},
 		"w038": {
-			"gloss": "victim"
+			"gloss": "victim",
+			"function": "The second of the two appositions to “quod” (w028); feminine beside the neuter relative — apposition agrees in case alone."
 		}
 	}
 }

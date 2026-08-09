@@ -3,7 +3,7 @@
 	"text": "ordinarium.libera-nos",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Tę modlitwę nazywa się embolizmem, od greckiego słowa oznaczającego wtręt: wsuwa się między Modlitwę Pańską a Komunię i czyni tylko jedno: bierze prośbę, którą przed chwilą wypowiedział ministrant, líbera nos a malo, i rozwija ją. Jedno zło staje się wszelkim złem, a złu przypisane zostają trzy czasy: przeszłe, obecne i to, które ma dopiero nadejść. Zakończenie wypowiada się nad łamaniem Hostii: przy Fílium tuum kapłan dzieli Hostię na dwoje, przy Qui tecum vivit et regnat odłamuje z lewej połowy małą cząstkę, a głośno padają dopiero cztery ostatnie słowa.",
+	"about": "Tę modlitwę nazywa się embolizmem, od greckiego słowa oznaczającego wtręt: wsuwa się między Modlitwę Pańską a Komunię i czyni tylko jedno: bierze prośbę, którą przed chwilą wypowiedział ministrant, líbera nos a malo, i rozwija ją. Jedno zło staje się wszelkim złem, a złu przypisane zostają trzy czasy: przeszłe, obecne i to, które ma dopiero nadejść. Zakończenie wypowiada się nad łamaniem Hostii: kapłan dzieli Hostię na dwoje, mówiąc to zakończenie, a przy Qui tecum vivit et regnat odłamuje z lewej połowy małą cząstkę, a głośno padają dopiero cztery ostatnie słowa.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,19 +16,19 @@
 			"narrative": "Kapłan bierze patenę między palec wskazujący a środkowy, trzyma ją pionowo nad ołtarzem i odmawia modlitwę po cichu."
 		},
 		"s02": {
-			"translation": "Wybaw nas, prosimy, Panie, od wszelkiego zła: przeszłego, obecnego i przyszłego, a za wstawiennictwem błogosławionej i chwalebnej zawsze Dziewicy, Bożej Rodzicielki Maryi, ze świętymi Twoimi Apostołami Piotrem i Pawłem, i Andrzejem, i ze wszystkimi Świętymi,"
+			"translation": "Wybaw nas, Panie, od zła wszelkiego: przeszłego, obecnego i przyszłego, a za wstawiennictwem błogosławionej i chwalebnej zawsze Dziewicy, Bożej Rodzicielki Maryi, ze świętymi Twoimi Apostołami Piotrem i Pawłem, i Andrzejem, i ze wszystkimi Świętymi,"
 		},
 		"s03": {
 			"narrative": "Żegna się pateną, od czoła do piersi."
 		},
 		"s04": {
-			"translation": "użycz łaskawie pokoju za dni naszych:"
+			"translation": "obdarz nasze czasy pokojem,"
 		},
 		"s05": {
 			"narrative": "Całuje patenę."
 		},
 		"s06": {
-			"translation": "abyśmy, wsparci pomocą Twego miłosierdzia, byli zawsze wolni od grzechu i bezpieczni od wszelkiego zamętu."
+			"translation": "wspomóż nas w swoim miłosierdziu, abyśmy zawsze byli wolni od grzechu i bezpieczni od wszelkiego zamętu."
 		},
 		"s07": {
 			"narrative": "Wsuwa patenę pod Hostię, odkrywa kielich, przyklęka, wstaje, bierze Hostię i trzymając ją oburącz nad kielichem, łamie na dwoje."
@@ -80,7 +80,7 @@
 		},
 		"w008": {
 			"gloss": "przeszłego",
-			"function": "Pierwszy z trzech przymiotników zgadzających się z „malis” (w007); wszystkie trzy słowniki notują jako osobne przymiotniki, a nie jako imiesłowy wciąż pełniące pracę czasownika."
+			"function": "Pierwszy z trzech przymiotników zgadzających się z „malis” (w007); słowniki notują wszystkie trzy jako osobne przymiotniki, a nie jako imiesłowy wciąż pełniące pracę czasownika."
 		},
 		"w009": {
 			"gloss": "obecnego"
@@ -167,7 +167,7 @@
 		},
 		"w034": {
 			"gloss": "użycz",
-			"function": "Orzeczenie całego zdania, wstrzymane aż do wymienienia całego wstawiennictwa: wszystko od zła prowadziło tutaj."
+			"function": "Orzeczenie swojego zdania — obok rozkaźnika „Líbera” (w001) — wstrzymane aż do wymienienia całego wstawiennictwa: wszystko od zła prowadziło tutaj."
 		},
 		"w035": {
 			"gloss": "łaskawie",
@@ -191,7 +191,7 @@
 		},
 		"w041": {
 			"gloss": "pomocą",
-			"function": "Ablativus narzędzia przy „adiúti” (w044). Ops nie ma w użyciu mianownika liczby pojedynczej, więc to jedna z czterech form, jakie słowo ma."
+			"function": "Ablativus narzędzia przy „adiúti” (w044). Ops nie ma w użyciu mianownika liczby pojedynczej, więc to jedna z trzech form, jakie pojedyncza liczba ma."
 		},
 		"w042": {
 			"gloss": "miłosierdzia"
@@ -201,7 +201,7 @@
 		},
 		"w044": {
 			"gloss": "wsparci",
-			"function": "Imiesłów zgadzający się z niewypowiedzianym podmiotem „simus” (w048) — z nami; Whitaker's tej formy nie zna, więc rozbiór opiera się na Collatinusie i na wydaniu."
+			"function": "Imiesłów zgadzający się z niewypowiedzianym podmiotem „simus” (w048) — z nami."
 		},
 		"w045": {
 			"gloss": "i",
@@ -247,7 +247,7 @@
 		},
 		"w057": {
 			"gloss": "tegoż",
-			"function": "Wskazuje wstecz na Pana już w modlitwie nazwanego, więc zakończenie nie wprowadza Go na nowo."
+			"function": "Eúndem chce wskazywać wstecz — ale w tej modlitwie Jezus Chrystus wcześniej nie pada z imienia, a „Dómine” z początku czyta się o Ojcu. To znany węzeł embolizmu i słowo nosi znak sporu."
 		},
 		"w058": {
 			"gloss": "Pana"
@@ -263,7 +263,7 @@
 		},
 		"w062": {
 			"gloss": "Syna",
-			"function": "Apozycja (dopowiedzenie) do „Christum” (w061), zwrócona do Ojca: przez Syna Twego. Na tych słowach Hostia zostaje przełamana na dwoje."
+			"function": "Apozycja (dopowiedzenie) do „Christum” (w061), zwrócona do Ojca: przez Syna Twego. Hostia zostaje przełamana podczas całego tego zakończenia, nie przy tych dwóch słowach."
 		},
 		"w063": {
 			"gloss": "Twego"
@@ -298,7 +298,7 @@
 		},
 		"w073": {
 			"gloss": "Bóg",
-			"function": "Mianownik przy dwóch orzeczeniach, nie zwrot do kogoś: żyje i króluje jako Bóg. Na tych słowach odłamuje się cząstkę Hostii."
+			"function": "Mianownik przy dwóch orzeczeniach, nie zwrot do kogoś: żyje i króluje jako Bóg. Cząstka jest już odłamana, zanim padnie to słowo; kapłan trzyma ją nad kielichem, wymawiając je."
 		},
 		"w074": {
 			"gloss": "Przez"

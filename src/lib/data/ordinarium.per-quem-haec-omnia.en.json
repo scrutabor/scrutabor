@@ -3,7 +3,7 @@
 	"text": "ordinarium.per-quem-haec-omnia",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Four verbs over the gifts, and the shortest prayer of the Canon. This is the place where the Roman Church inserted blessings of things brought up — oil, the fruits of the earth; the missal still blesses the holy oils here on Maundy Thursday. Hence hæc ómnia … bona creas: it speaks of things God creates, not of the Body and Blood. The relative quem reaches back to Christ, named at the end of the prayer before.",
+	"about": "Four verbs over the gifts, and the shortest prayer of the Canon. This is the place where the Roman Church inserted blessings of things brought up — oil, the fruits of the earth; the Pontifical still sets the blessing of the oil of the sick here, in the Maundy Thursday Mass. Hence hæc ómnia … bona creas: it speaks first of the things God creates — the Eucharistic gifts are not excluded from it. The relative quem reaches back to Christ, named at the end of the prayer before.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,13 +13,13 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "Through whom, O Lord, thou dost ever create all these good things,"
+			"translation": "Through whom You continue to make all these good things, O Lord;"
 		},
 		"s02": {
-			"narrative": "Three signs of the cross over the host and chalice together."
+			"narrative": "Three signs of the cross over the Host and chalice together."
 		},
 		"s03": {
-			"translation": "dost hallow them, quicken them, bless them and bestow them upon us."
+			"translation": "You sanctify them, fill them with life, bless them, and bestow them upon us."
 		}
 	},
 	"words": {
@@ -28,7 +28,7 @@
 		},
 		"w002": {
 			"gloss": "whom",
-			"function": "The relative reaches back to the Christ of the last words of Nobis quoque: the two prayers are one sentence."
+			"function": "The relative reaches back to the Christ of the last words of Nobis quoque — that prayer has no Amen of its own and runs on into this one."
 		},
 		"w003": {
 			"gloss": "these"
@@ -47,22 +47,22 @@
 			"function": "Predicative with “creas” (w008): thou createst them good, not thou createst good things."
 		},
 		"w008": {
-			"gloss": "thou dost create"
+			"gloss": "Thou dost create"
 		},
 		"w009": {
-			"gloss": "thou dost hallow"
+			"gloss": "Thou dost hallow"
 		},
 		"w010": {
-			"gloss": "thou dost quicken"
+			"gloss": "Thou dost quicken"
 		},
 		"w011": {
-			"gloss": "thou dost bless"
+			"gloss": "Thou dost bless"
 		},
 		"w012": {
 			"gloss": "and"
 		},
 		"w013": {
-			"gloss": "thou dost bestow"
+			"gloss": "Thou dost bestow"
 		},
 		"w014": {
 			"gloss": "upon us"

@@ -20,13 +20,13 @@
 			"senses": [
 				"Abraham"
 			],
-			"note": "Imię hebrajskie; łacina daje mu dopełniacz Ábrahæ, ale reszty przypadków nie odmienia jednolicie."
+			"note": "Imię hebrajskie; łacina daje mu dopełniacz Ábrahæ, ale pozostałych przypadków nie odmienia jednolicie."
 		},
 		"Agatha": {
 			"senses": [
 				"Agata"
 			],
-			"note": "Imię greckie, „dobra”. Męczennica sycylijska, wymieniana w Kanonie."
+			"note": "Imię greckie, „dobra”. Męczennica sycylijska."
 		},
 		"Agnes": {
 			"senses": [
@@ -75,10 +75,9 @@
 			"senses": [
 				"Chrystus"
 			],
-			"note": "Greckie Christós — „namaszczony” — tłumaczenie hebrajskiego Masziach (Mesjasz).",
+			"note": "Greckie Christós — „namaszczony” — to tłumaczenie hebrajskiego Masziach (Mesjasz).",
 			"derivatives": [
-				"chrześcijanin",
-				"chrzest"
+				"chrzest (przez czeskie křest z germańskiego Krist)"
 			]
 		},
 		"Chrysogonus": {
@@ -133,13 +132,16 @@
 			"senses": [
 				"Jakub"
 			],
-			"note": "Z hebrajskiego Jaakow. W Kanonie występuje dwa razy: to dwaj różni apostołowie."
+			"note": "Z hebrajskiego Jaakow. W Kanonie imię pada dwa razy: to dwaj różni apostołowie."
 		},
 		"Iesus": {
 			"senses": [
 				"Jezus"
 			],
-			"note": "Grecka forma hebrajskiego Jeszua — „Pan zbawia”; odmiana nieregularna (mianownik Iesus, biernik Iesum, pozostałe przypadki Iesu)."
+			"note": "Przez grekę z hebrajskiego imienia Jeszua — „Pan zbawia”; odmiana nieregularna (mianownik Iesus, biernik Iesum, pozostałe przypadki Iesu).",
+			"derivatives": [
+				"jezuita"
+			]
 		},
 		"Ignatius": {
 			"senses": [
@@ -150,13 +152,13 @@
 			"senses": [
 				"Jan"
 			],
-			"note": "Z hebrajskiego Jochanan — „Bóg jest łaskaw”."
+			"note": "Z hebrajskiego Jochanan — „Pan jest łaskaw”."
 		},
 		"Ioseph": {
 			"senses": [
 				"Józef"
 			],
-			"note": "Imię hebrajskie, nieodmienne. Do Kanonu weszło dopiero w 1962 roku — to jedyna zmiana, jaką św. Jan XXIII wprowadził w tym tekście."
+			"note": "Imię hebrajskie, nieodmienne. Do Kanonu weszło dopiero w 1962 roku — to jedyna zmiana, jaką wprowadził w nim św. Jan XXIII."
 		},
 		"Laurentius": {
 			"senses": [
@@ -184,7 +186,7 @@
 				"Maryja",
 				"Maria"
 			],
-			"note": "Hebrajskie Miriam; w polszczyźnie forma „Maryja” zastrzeżona dla Matki Bożej."
+			"note": "Hebrajskie Miriam; w polszczyźnie religijnej imię „Maryja” odnosi się wyłącznie do Matki Bożej — inne Marie są zawsze „Mariami”."
 		},
 		"Matthaeus": {
 			"senses": [
@@ -225,7 +227,7 @@
 			"senses": [
 				"Piotr"
 			],
-			"note": "Z greckiego „pétra” — skała (Mt 16, 18)."
+			"note": "Greckie „pétros” — kamień; jako imię zostało ukute, by oddać aramejskie Kefas. Obok niego w Mt 16, 18 stoi „pétra” — skała (w grece koine oba słowa znaczyły już to samo): „Ty jesteś Piotr (Pétros), a na tej skale (pétra) zbuduję…”."
 		},
 		"Philippus": {
 			"senses": [
@@ -269,7 +271,7 @@
 			"senses": [
 				"Ksystus"
 			],
-			"note": "Grecka pisownia imienia, które po łacinie ustaliło się jako Sixtus."
+			"note": "Grecka postać imienia; łacina utrwaliła je później jako Sixtus, skojarzone z sextus — szósty."
 		},
 		"ab": {
 			"senses": [
@@ -277,7 +279,7 @@
 				"z dala od",
 				"przez (sprawcę)"
 			],
-			"note": "Przed spółgłoską „a”, przed samogłoską i przed h „ab” — stąd ab hómine iníquo."
+			"note": "Przed spółgłoską używa się „a”, przed samogłoską i przed h — „ab” (czasem też przed l, n, r i s) — stąd ab hómine iníquo w Iúdica."
 		},
 		"absolutio": {
 			"senses": [
@@ -294,7 +296,7 @@
 				"i",
 				"a także"
 			],
-			"note": "Wariant „atque” używany przed spółgłoską; łączy ściślej niż et."
+			"note": "Postać poboczna „atque”, używana przed spółgłoską; łączy z większym naciskiem niż et."
 		},
 		"acceptabilis": {
 			"senses": [
@@ -302,7 +304,7 @@
 				"możliwy do przyjęcia"
 			],
 			"derivatives": [
-				"akceptowalny"
+				"akceptowalny (od acceptáre)"
 			]
 		},
 		"acceptus": {
@@ -311,7 +313,7 @@
 				"miły",
 				"mile widziany"
 			],
-			"note": "Imiesłów accípere, który stwardniał w przymiotnik. Zwrot accépta habére — „mieć za przyjęte” — to formuła prawnicza, nie modlitewna."
+			"note": "Imiesłów od accípere, który stwardniał w przymiotnik. Zwrot accépta habére — „mieć za przyjęte” — to formuła z języka urzędowego, nie modlitewnego."
 		},
 		"accipio": {
 			"senses": [
@@ -363,7 +365,7 @@
 				"pomoc",
 				"wsparcie"
 			],
-			"note": "Rzeczownik od adjuváre — wspomagać."
+			"note": "Rzeczownik od adiuváre — wspomagać."
 		},
 		"adiuvo": {
 			"senses": [
@@ -371,7 +373,7 @@
 				"pomagać",
 				"wspierać"
 			],
-			"note": "Ad + juvo — dosłownie „wspierać przy czymś”; ten sam rdzeń co w adjutórium.",
+			"note": "Ad + iuvo — dosłownie „wspierać przy czymś”; ten sam rdzeń co w adiutórium.",
 			"derivatives": [
 				"adiutant"
 			]
@@ -424,18 +426,19 @@
 			],
 			"note": "Żeńska postać rzeczownika advocátus — ten, kogo się przywołuje (ad + voco), aby stanął przy oskarżonym.",
 			"derivatives": [
-				"adwokat"
+				"adwokat (od advocátus)"
 			]
 		},
 		"aequitas": {
 			"senses": [
 				"sprawiedliwość",
+				"słuszność",
 				"prawość"
 			],
 			"note": "Od æquus — równy. Nie „równość” w dzisiejszym sensie, lecz to, co jest proste i słuszne: Boża miara, wedle której się sądzi.",
 			"derivatives": [
-				"ekwiwalent",
-				"adekwatny"
+				"ekwiwalent (od aequus)",
+				"adekwatny (od aequus)"
 			]
 		},
 		"aequus": {
@@ -460,7 +463,7 @@
 				"wieczny",
 				"odwieczny"
 			],
-			"note": "Ściągnięte z ævitérnus, od ævum — wiek, długi czas."
+			"note": "Ściągnięta postać wyrazu ævitérnus, od ævum — wiek, długi czas."
 		},
 		"affligo": {
 			"senses": [
@@ -468,7 +471,7 @@
 				"dręczyć",
 				"powalać"
 			],
-			"note": "Dosłownie: uderzać o ziemię (ad + fligo); stąd gnębić."
+			"note": "Dosłownie: uderzać o coś, powalić (ad + fligo); stąd gnębić."
 		},
 		"agnus": {
 			"senses": [
@@ -516,7 +519,7 @@
 			"senses": [
 				"ołtarz"
 			],
-			"note": "Klasyczna łacina mówi o ołtarzu ara; altáre (częściej w liczbie mnogiej altária) to słowo Biblii i liturgii.",
+			"note": "Klasyczna łacina nazywa ołtarz ara, a to słowo zna niemal tylko w liczbie mnogiej — altária; altáre w liczbie pojedynczej to słowo Biblii i liturgii.",
 			"derivatives": [
 				"ołtarz"
 			]
@@ -537,7 +540,7 @@
 				"niech się stanie",
 				"zaprawdę"
 			],
-			"note": "Hebrajskie słowo przejęte przez łacinę bez odmiany — uroczyste potwierdzenie modlitwy."
+			"note": "Hebrajskie słowo, które łacina przejęła za pośrednictwem greki; nieodmienne — uroczysta pieczęć modlitwy."
 		},
 		"amputo": {
 			"senses": [
@@ -603,14 +606,14 @@
 			"senses": [
 				"apostolski"
 			],
-			"note": "Przymiotnik od apóstolus (apostoł) — pochodzący od Apostołów, z nimi związany."
+			"note": "Z greckiego apostolikós — przymiotnik od apóstolus: pochodzący od Apostołów, z nimi związany."
 		},
 		"apostolus": {
 			"senses": [
 				"apostoł",
 				"wysłannik"
 			],
-			"note": "Z greckiego „apóstolos” — posłany."
+			"note": "Z greckiego „apóstolos” — ten, kto został posłany."
 		},
 		"apud": {
 			"senses": [
@@ -693,7 +696,7 @@
 				"natomiast",
 				"a"
 			],
-			"note": "Nigdy nie stoi na pierwszym miejscu w zdaniu — zawsze po pierwszym wyrazie."
+			"note": "Nigdy nie stoi na pierwszym miejscu w zdaniu — zwykle po pierwszym wyrazie, czasem po całym zwrocie wziętym za jedno (In diébus autem illis)."
 		},
 		"auxilium": {
 			"senses": [
@@ -706,10 +709,7 @@
 				"chciwość",
 				"skąpstwo"
 			],
-			"note": "Od avárus — chciwy, a to od avére, „pragnąć gorąco”. W psalmie stoi jako to, ku czemu serce może się skłonić zamiast ku świadectwom Bożym.",
-			"derivatives": [
-				"awaria"
-			]
+			"note": "Od avárus — chciwy, a to od avére, „pragnąć gorąco”. W psalmie jest tym, ku czemu serce może się skłonić zamiast ku świadectwom Bożym."
 		},
 		"aveo": {
 			"senses": [
@@ -724,8 +724,7 @@
 				"odsunąć"
 			],
 			"derivatives": [
-				"awersja",
-				"awers"
+				"awersja"
 			]
 		},
 		"baptisma": {
@@ -750,8 +749,7 @@
 			],
 			"note": "Złożenie bene (dobrze) + dícere (mówić) — błogosławić to dosłownie „dobrze mówić”.",
 			"derivatives": [
-				"benedyktyn",
-				"benedykcja"
+				"benedyktyn (od imienia Benedykt)"
 			]
 		},
 		"benedictio": {
@@ -768,7 +766,7 @@
 			],
 			"note": "Od „bene dícere” — dobrze mówić (o kimś).",
 			"derivatives": [
-				"benedykcja",
+				"benedykcja (od benedíctio)",
 				"Benedykt"
 			]
 		},
@@ -816,7 +814,7 @@
 				"czara"
 			],
 			"derivatives": [
-				"kielich"
+				"kielich (przez niemieckie Kelch)"
 			]
 		},
 		"capio": {
@@ -825,7 +823,7 @@
 				"chwytać",
 				"przyjmować"
 			],
-			"note": "Jeden z podstawowych czasowników łaciny; w koniugacji III odmienia się według wzoru na -io. Tkwi w accípere, percípere i súscipere.",
+			"note": "Jeden z podstawowych czasowników łaciny; w koniugacji III odmienia się według wzoru na -io. Tkwi w accípere, percípere i suscípere.",
 			"derivatives": [
 				"koncepcja",
 				"recepcja"
@@ -861,12 +859,12 @@
 				"kauzalny"
 			]
 		},
-		"cenatus": {
+		"ceno": {
 			"senses": [
-				"po posiłku",
-				"najedzony"
+				"jeść wieczerzę",
+				"wieczerzać"
 			],
-			"note": "Od ceno — jeść wieczerzę. W zwrocie cenátum est nie ma podmiotu: „gdy było po wieczerzy”."
+			"note": "Czasownik nieprzechodni, a cenátum est to jego strona bierna bezosobowa — konstrukcja, na którą łacina pozwala czasownikom bez dopełnienia, jak ventum est, „przyszło się”. Podmiot jest niemożliwy: dosłownie „zjedzono wieczerzę”, czyli „gdy było po wieczerzy”."
 		},
 		"christianus": {
 			"senses": [
@@ -936,7 +934,7 @@
 				"jednoczyć",
 				"zbierać w jedno"
 			],
-			"note": "Późnołaciński czasownik od co- i unus: sprowadzić wielu do jednego. Klasyczna łacina go nie zna."
+			"note": "Późnołaciński czasownik od co- i adunáre (samo adunáre to ad i unus): sprowadzić wielu do jednego. Klasyczna łacina go nie zna."
 		},
 		"cogitatio": {
 			"senses": [
@@ -956,7 +954,7 @@
 				"rozpoznać",
 				"uznać"
 			],
-			"note": "Złożenie z gnósco (poznawać) — ten sam rdzeń, co w greckim gnósis.",
+			"note": "Złożenie: co- i gnosco (poznawać) — ten sam rdzeń, co w greckim gnósis.",
 			"derivatives": [
 				"kognitywny",
 				"rekognicja"
@@ -967,7 +965,7 @@
 				"zmieszanie",
 				"połączenie"
 			],
-			"note": "Od commiscére — zmieszać razem; rzeczownik późnołaciński, w liturgii rzymskiej użyty raz."
+			"note": "Od commiscére — zmieszać razem; rzeczownik późnołaciński. Stały porządek Mszy używa go raz; przy święceniu wody ta sama księga mówi Commíxtio salis et aquæ páriter fiat — ten sam rzeczownik z tym samym czasownikiem."
 		},
 		"communico": {
 			"senses": [
@@ -975,9 +973,9 @@
 				"być we wspólnocie",
 				"dzielić"
 			],
-			"note": "Od commúnis — wspólny. W łacinie kościelnej znaczy „być w jedności z kimś”, i stąd komunia.",
+			"note": "Od commúnis — wspólny. W łacinie kościelnej znaczy „być w jedności z kimś” — i stąd, przez communio, komunia.",
 			"derivatives": [
-				"komunia",
+				"komunia (od communio)",
 				"komunikat"
 			]
 		},
@@ -1009,9 +1007,9 @@
 		"concupisco": {
 			"senses": [
 				"zapragnąć",
-				"zapłonąć pragnieniem"
+				"gorąco pragnąć"
 			],
-			"note": "Czasownik inchoatywny (-sco): nie „pragnę”, lecz „zapragnąłem”, zacząłem pragnąć. Ten sam rdzeń co concupiscéntia, pożądliwość — tu jednak pragnienie zwrócone ku przykazaniom.",
+			"note": "Formacja na -sco od cúpio — kształt, którym łacina znaczy początek — zleksykalizowana jako samo mocne pragnienie: gorąco pragnąć, pożądać. Ten sam rdzeń co concupiscéntia, pożądliwość — tu jednak pragnienie zwrócone ku przykazaniom.",
 			"derivatives": [
 				"konkupiscencja"
 			]
@@ -1079,7 +1077,10 @@
 				"uczestnik",
 				"współtowarzysz"
 			],
-			"note": "Con-sors: ten, kto ma udział w cudzym losie (sors)."
+			"note": "Con-sors: ten, kto ma udział w cudzym losie (sors).",
+			"derivatives": [
+				"konsorcjum (od consortium)"
+			]
 		},
 		"consortium": {
 			"senses": [
@@ -1108,7 +1109,7 @@
 				"współistotny",
 				"tej samej istoty"
 			],
-			"note": "Złożenie cum + substántia, oddające greckie homooúsios — tej samej istoty; poświadczone już u Tertuliana, na długo przed Niceą. Polskie „współistotny” jest jego kalką."
+			"note": "Złożenie cum + substántia, oddające greckie homooúsios — tej samej istoty; słowo starsze niż spory nicejskie, poświadczone już u Tertuliana. Polskie „współistotny” jest jego kalką."
 		},
 		"contra": {
 			"senses": [
@@ -1233,8 +1234,8 @@
 			],
 			"note": "Od cólere — uprawiać ziemię i czcić bogów; jedno słowo na oba, i stąd „kultura” i „kult”.",
 			"derivatives": [
-				"kultura",
-				"kult"
+				"kultura (od cólere)",
+				"kult (od cólere)"
 			]
 		},
 		"cum": {
@@ -1255,7 +1256,7 @@
 				"pilnować"
 			],
 			"derivatives": [
-				"kustosz"
+				"kustosz (od custos)"
 			]
 		},
 		"damnatio": {
@@ -1269,7 +1270,7 @@
 				"dar",
 				"to, co dane"
 			],
-			"note": "Rzeczownikowe użycie imiesłowa od do. Zwrot dona ac data — „dary i daniny” — sięga języka ofiar rzymskich.",
+			"note": "Rzeczownikowe użycie imiesłowa od do. Zwrot dona ac data to retoryczne podwojenie — por. Jk 1, 17: omne datum optimum et omne donum perfectum.",
 			"derivatives": [
 				"data"
 			]
@@ -1280,7 +1281,7 @@
 				"o, na temat",
 				"według, na podstawie"
 			],
-			"note": "Bliskie ex, ale ex wskazuje wyjście ze środka, de — oddzielenie od czegoś albo ruch z góry."
+			"note": "Bliskie ex, ale ex wskazuje wyjście ze środka, de — oddzielenie od czegoś albo ruch z góry na dół."
 		},
 		"debitor": {
 			"senses": [
@@ -1302,7 +1303,7 @@
 				"wdzięk"
 			],
 			"derivatives": [
-				"dekoracja"
+				"dekoracja (od decus)"
 			]
 		},
 		"deduco": {
@@ -1364,7 +1365,7 @@
 				"Bóg",
 				"bóg"
 			],
-			"note": "Łacina klasyczna unikała wołacza od „deus”; łacina kościelna woła po prostu „Deus”.",
+			"note": "Łacina nie utworzyła osobnego wołacza od „deus” — gdzie go trzeba, służy mianownik, jak w psalmach Wulgaty; „dee”, które próbowali nieliczni późni pisarze, nie przyjęło się.",
 			"derivatives": [
 				"deizm"
 			]
@@ -1374,7 +1375,7 @@
 				"oddanie",
 				"pobożność"
 			],
-			"note": "Pierwotnie: uroczyste poświęcenie siebie bóstwu, także na śmierć; łacina chrześcijańska złagodziła je do oddania i pobożności.",
+			"note": "Pierwotnie: uroczyste poświęcenie siebie bóstwu, nawet aż po śmierć; łacina chrześcijańska złagodziła je do znaczenia oddania i pobożności.",
 			"derivatives": [
 				"dewocja"
 			]
@@ -1413,7 +1414,7 @@
 				"doba",
 				"wyznaczony dzień, termin"
 			],
-			"note": "Jeden z niewielu rzeczowników V deklinacji; zwykle rodzaju męskiego, żeński zwłaszcza o dniu oznaczonym, terminie.",
+			"note": "Jeden z niewielu rzeczowników V deklinacji; zwykle rodzaju męskiego, żeński zwłaszcza wtedy, gdy znaczy dzień wyznaczony, termin.",
 			"derivatives": [
 				"diariusz"
 			]
@@ -1438,9 +1439,6 @@
 			"senses": [
 				"godny",
 				"słuszny"
-			],
-			"derivatives": [
-				"dygnitarz"
 			]
 		},
 		"dilectus": {
@@ -1493,7 +1491,7 @@
 			"senses": [
 				"uczeń"
 			],
-			"note": "Od díscere — uczyć się; uczeń to ten, kto się uczy, nie zwolennik.",
+			"note": "Tradycyjnie od díscere — uczyć się (budowa słowa jest sporna); uczeń to ten, kto się uczy, nie zwolennik.",
 			"derivatives": [
 				"dyscyplina"
 			]
@@ -1551,7 +1549,7 @@
 			],
 			"derivatives": [
 				"dominować",
-				"dominikanie"
+				"dominikanie (od imienia Domínicus)"
 			]
 		},
 		"domus": {
@@ -1567,7 +1565,7 @@
 				"obdarzyć",
 				"udzielić"
 			],
-			"note": "Od „donum” — dar. Daje rzecz (biernik) osobie (celownik); klasyczna łacina zna też konstrukcję odwrotną: obdarowywać osobę (biernik) czymś (ablativus).",
+			"note": "Od „donum” — dar. Rządzi biernikiem rzeczy i celownikiem osoby; klasyczna łacina zna też konstrukcję odwrotną: obdarowywać osobę (biernik) czymś (ablativus).",
 			"derivatives": [
 				"donacja",
 				"donator"
@@ -1586,7 +1584,7 @@
 				"spać",
 				"spoczywać"
 			],
-			"note": "O zmarłych mówi się w Kanonie, że śpią; stąd „cmentarz” — po grecku miejsce snu.",
+			"note": "O zmarłych mówi się w Kanonie, że śpią; ta sama myśl nazwała cmentarz — greckie koimetérion znaczy miejsce snu.",
 			"derivatives": [
 				"dormitorium"
 			]
@@ -1595,7 +1593,7 @@
 			"senses": [
 				"słodycz"
 			],
-			"note": "Rzeczownik od dulcis; przyrostek -edo tworzy nazwy właściwości, jak w altitúdo."
+			"note": "Rzeczownik od dulcis; przyrostek -edo tworzy nazwy właściwości, jak w pinguédo."
 		},
 		"dulcis": {
 			"senses": [
@@ -1615,7 +1613,7 @@
 				"oto",
 				"patrz"
 			],
-			"note": "Wykrzyknik wskazujący; łączy się z mianownikiem, dlatego stojący po nim rzeczownik nie jest dopełnieniem."
+			"note": "Wykrzyknik wskazujący; samodzielnie łączy się z mianownikiem (ecce homo). Może też wskazywać całe zdanie — wtedy rzeczownik po nim bywa dopełnieniem swojego czasownika."
 		},
 		"ecclesia": {
 			"senses": [
@@ -1634,7 +1632,7 @@
 				"sprawić",
 				"uczynić czymś"
 			],
-			"note": "Złożenie ex + fácio: wyprowadzić coś na zewnątrz, doprowadzić do skutku.",
+			"note": "Złożenie ex + fácio: wykonać coś do końca, doprowadzić do skutku.",
 			"derivatives": [
 				"efekt",
 				"efektywny"
@@ -1659,7 +1657,7 @@
 				"nuże",
 				"otóż"
 			],
-			"note": "Wykrzyknik zachęty. Jego i jest samogłoskowe, a ei stanowi dyftong — stąd dwie sylaby i brak akcentu."
+			"note": "Wykrzyknik zachęty. Dwie sylaby — literę i czyta się tu jak j (E-ja) — stąd brak akcentu."
 		},
 		"electus": {
 			"senses": [
@@ -1674,7 +1672,7 @@
 			"senses": [
 				"zmiłuj się"
 			],
-			"note": "Greckie ἐλέησον, tryb rozkazujący od ἐλεέω „litować się”. W grece jest to aoryst: prośba o zmiłowanie ujęte jako jeden czyn. Podobnie jak Kýrie, słowo nie ma osobnego hasła w słownikach łaciny."
+			"note": "Greckie ἐλέησον, tryb rozkazujący od ἐλεέω „litować się”. W grece jest to aoryst: prośba o zmiłowanie ujęte jako całość. Podobnie jak Kýrie, także to słowo nie ma osobnego hasła w słownikach łacińskich."
 		},
 		"elevo": {
 			"senses": [
@@ -1692,7 +1690,7 @@
 			],
 			"note": "Od éloqui — wypowiedzieć. W psalmach niemal zawsze o słowie Bożym: nie mowa jako sztuka, lecz obietnica, którą Bóg wypowiedział.",
 			"derivatives": [
-				"elokwencja"
+				"elokwencja (od éloqui)"
 			]
 		},
 		"emitto": {
@@ -1715,7 +1713,7 @@
 				"bowiem",
 				"albowiem"
 			],
-			"note": "Nigdy nie stoi na początku zdania: łacina wsuwa je na drugie miejsce."
+			"note": "Nigdy nie stoi na początku swojego zdania: łacina wsuwa je na drugie, rzadziej trzecie miejsce."
 		},
 		"eo": {
 			"senses": [
@@ -1765,7 +1763,7 @@
 				"nawet",
 				"jeszcze, wciąż"
 			],
-			"note": "Złożenie et (i) + jam (już)."
+			"note": "Złożenie et (i) + iam (już)."
 		},
 		"evangelium": {
 			"senses": [
@@ -1814,7 +1812,7 @@
 				"wygnanie",
 				"obczyzna"
 			],
-			"note": "Od ex + solum (ziemia): stan tego, kto jest poza swoją ziemią."
+			"note": "Rzeczownik od exsul; drugi człon dawny i niepewny. Stan tego, kto jest poza swoją ziemią."
 		},
 		"exquiro": {
 			"senses": [
@@ -1822,10 +1820,7 @@
 				"dociekać",
 				"wypytywać"
 			],
-			"note": "Ex- wzmacnia quærere: nie tyle szukać, ile wyszukiwać do końca. Ten sam rdzeń co „scrutabor” z wersetu 34 i ta sama myśl — badać prawo aż do dna.",
-			"derivatives": [
-				"ekskwizytny"
-			]
+			"note": "Ex- wzmacnia quærere: nie tyle szukać, ile wyszukiwać do końca. Ta sama myśl co w „scrutabor” z wersetu 34 — badać prawo aż do dna."
 		},
 		"exspecto": {
 			"senses": [
@@ -1839,7 +1834,7 @@
 			"senses": [
 				"wygnaniec"
 			],
-			"note": "Rzeczownik tego samego rdzenia co exílium."
+			"note": "Od niego pochodzi exílium."
 		},
 		"exsultatio": {
 			"senses": [
@@ -1848,7 +1843,7 @@
 			],
 			"note": "Od exsultáre — podskakiwać; radość, która nie usiedzi w miejscu.",
 			"derivatives": [
-				"egzultet"
+				"Exsultet (od exsultáre)"
 			]
 		},
 		"facio": {
@@ -1857,7 +1852,7 @@
 				"tworzyć, wykonywać",
 				"sprawiać, powodować"
 			],
-			"note": "W czasach teraźniejszych stronę bierną zastępuje fio (stawać się); bierne czasy dokonane tworzy factus sum.",
+			"note": "W czasach opartych na temacie praesentis stronę bierną zastępuje fio (stawać się); w czasach perfectum tworzy ją factus sum.",
 			"derivatives": [
 				"fakt",
 				"faktura"
@@ -1883,7 +1878,7 @@
 			"note": "W łacinie to najpierw domownicy razem ze służbą, dopiero potem rodzina w naszym sensie; Kanon nazywa tak cały Kościół.",
 			"derivatives": [
 				"familia",
-				"familiarny"
+				"familiarny (od familiáris)"
 			]
 		},
 		"famula": {
@@ -1912,7 +1907,7 @@
 				"wierność",
 				"zaufanie"
 			],
-			"note": "Jedno słowo na wiarę i wierność: po łacinie to ta sama rzecz widziana z dwóch stron.",
+			"note": "Jedno słowo oznacza i wiarę, i wierność: po łacinie to ta sama rzecz widziana z dwóch stron.",
 			"derivatives": [
 				"fideizm"
 			]
@@ -1944,7 +1939,7 @@
 				"dziać się",
 				"być czynionym"
 			],
-			"note": "Czasownik nieregularny; służy za stronę bierną do „fácere” (czynić)."
+			"note": "Czasownik nieregularny; zastępuje stronę bierną „fácere” (czynić) w czasach opartych na temacie praesentis — perfectum bierne to factus sum."
 		},
 		"fleo": {
 			"senses": [
@@ -2004,14 +1999,14 @@
 				"przyszły",
 				"mający nastąpić"
 			],
-			"note": "Pierwotnie imiesłów przyszły od sum; łacina używa go także samodzielnie jako przymiotnika, a w liczbie mnogiej nijakiej — „przyszłe rzeczy”."
+			"note": "Pierwotnie imiesłów przyszły od sum; łacina używa go także samodzielnie jako przymiotnika, a w liczbie mnogiej nijakiej — rzeczownikowo: „przyszłe rzeczy”."
 		},
 		"gaudeo": {
 			"senses": [
 				"radować się",
 				"cieszyć się"
 			],
-			"note": "Półdeponens: czasy teraźniejsze odmienia czynnie, przeszłe biernie — gavísus sum, „ucieszyłem się”. Od jego rzeczownika gaudium pochodzi francuskie joie i angielskie joy."
+			"note": "Półdeponens: czasy oparte na temacie praesentis odmienia czynnie, czasy perfectum biernie — gavísus sum, „ucieszyłem się”. Od jego rzeczownika gaudium pochodzi francuskie joie i angielskie joy."
 		},
 		"gemo": {
 			"senses": [
@@ -2024,7 +2019,7 @@
 				"rodzicielka",
 				"matka"
 			],
-			"note": "Rzeczownik żeński od gigno — rodzić; ten sam rdzeń, co w génitus. W księgach spotyka się obie pisownie: genetrix i genitrix."
+			"note": "Rzeczownik żeński od gigno — rodzić; ten sam rdzeń, co w génitus. W księgach liturgicznych spotyka się obie pisownie: genetrix i genitrix."
 		},
 		"gens": {
 			"senses": [
@@ -2122,7 +2117,7 @@
 				"ta",
 				"to"
 			],
-			"note": "Zaimek wskazujący na to, co blisko mówiącego; nie mylić z przysłówkiem hic — tu, tutaj."
+			"note": "Zaimek wskazujący na to, co jest blisko mówiącego; nie mylić z przysłówkiem hic — tu, tutaj."
 		},
 		"hic_adverbium": {
 			"senses": [
@@ -2206,7 +2201,7 @@
 				"ten sam",
 				"tenże"
 			],
-			"note": "To zaimek is z doczepionym -dem; przed d głoska m przechodzi w n (eúndem)."
+			"note": "Zaimek is z dodanym -dem; przed d głoska m przechodzi w n (eúndem)."
 		},
 		"ideo": {
 			"senses": [
@@ -2220,7 +2215,7 @@
 				"zatem",
 				"przeto"
 			],
-			"note": "Zwykle nie na pierwszym miejscu; Kanon łamie ten zwyczaj rzadko — tu stoi po Te i po Hanc."
+			"note": "Zwykle nie na pierwszym miejscu; w Kanonie stoi na drugim — po Te i po Hanc."
 		},
 		"ille": {
 			"senses": [
@@ -2228,7 +2223,7 @@
 				"tamten",
 				"on"
 			],
-			"note": "Zaimek wskazujący na to, co dalsze; w łacinie chrześcijańskiej często po prostu on. Z niego wyrosły rodzajniki języków romańskich (il, le, el)."
+			"note": "Zaimek wskazujący na to, co dalsze; w łacinie chrześcijańskiej często po prostu „on”. Z niego wyrosły rodzajniki języków romańskich (il, le, el)."
 		},
 		"illibatus": {
 			"senses": [
@@ -2275,6 +2270,7 @@
 		"in": {
 			"senses": [
 				"w, na (z ablativem — miejsce)",
+				"wśród, między (in muliéribus)",
 				"do, w, na (z biernikiem — kierunek)"
 			]
 		},
@@ -2303,8 +2299,7 @@
 			],
 			"note": "Prośba jest o ruch serca, nie o jego przekonanie: nachyl je, jak nachyla się naczynie.",
 			"derivatives": [
-				"inklinacja",
-				"deklinacja"
+				"inklinacja"
 			]
 		},
 		"incolumitas": {
@@ -2355,7 +2350,7 @@
 			],
 			"note": "Zawsze w liczbie mnogiej: dosłownie „ci na dole”. Ab ínferis znaczy „spośród umarłych”, nie „z piekła”.",
 			"derivatives": [
-				"inferno"
+				"inferno (od infernus)"
 			]
 		},
 		"infernus": {
@@ -2381,7 +2376,7 @@
 				"trwać przy",
 				"tkwić w"
 			],
-			"note": "In i hǽreo — przywrzeć do czegoś; używa się i o rzeczach sklejonych, i o człowieku wiernym sprawie. Rządzi celownikiem."
+			"note": "In i hǽreo — przywrzeć do czegoś; używa się i o tym, co mocno przywarło, i o człowieku wiernym sprawie. Rządzi celownikiem."
 		},
 		"inimicus": {
 			"senses": [
@@ -2446,7 +2441,7 @@
 				"urządzenie",
 				"pouczenie"
 			],
-			"note": "Od instítuere — postawić, ustanowić; w języku liturgii to ustanowienie obrzędu przez samego Chrystusa.",
+			"note": "Od instítuere — postawić, ustanowić; w języku liturgii to ustanowienie przez samego Chrystusa — tu modlitwy, gdzie indziej obrzędu.",
 			"derivatives": [
 				"instytucja"
 			]
@@ -2456,10 +2451,10 @@
 				"zrozumienie",
 				"pojmowanie"
 			],
-			"note": "Od intellégere: inter + légere — dosłownie „wybierać spośród”, stąd rozeznawać. To o nie prosi werset, od którego wzięła się nazwa Scrutabor: nie o wiedzę, lecz o zdolność pojmowania.",
+			"note": "Od intellégere: inter + légere — dosłownie „wybierać spośród”, stąd rozeznawać. O nie właśnie prosi werset, od którego wzięła się nazwa Scrutabor: nie o wiedzę, lecz o zdolność pojmowania.",
 			"derivatives": [
 				"intelekt",
-				"inteligencja"
+				"inteligencja (od intellégere)"
 			]
 		},
 		"inter": {
@@ -2476,7 +2471,7 @@
 				"wstawiać się",
 				"wchodzić pomiędzy"
 			],
-			"note": "Inter-cédere: stanąć między proszącym a tym, kogo się prosi."
+			"note": "Inter-cédere: wejść pomiędzy — stanąć między proszącym a tym, kogo się prosi."
 		},
 		"intra": {
 			"senses": [
@@ -2528,7 +2523,7 @@
 				"on sam",
 				"właśnie ten"
 			],
-			"note": "Zaimek wzmacniający: podkreśla osobę lub rzecz, o której mowa."
+			"note": "Zaimek wzmacniający: podkreśla osobę lub rzecz, o której mowa. W psałterzu stoi często tam, gdzie łacina klasyczna ma zwykłe „is”."
 		},
 		"is": {
 			"senses": [
@@ -2542,7 +2537,7 @@
 				"ten",
 				"ten oto"
 			],
-			"note": "Wskazuje na to, co blisko rozmówcy albo obecne przy mówiącym."
+			"note": "Wskazuje na to, co obecne przy mówiącym albo blisko rozmówcy."
 		},
 		"item": {
 			"senses": [
@@ -2569,13 +2564,9 @@
 		"iucundus": {
 			"senses": [
 				"radosny",
-				"miły",
-				"słodki"
+				"miły"
 			],
-			"note": "Spokrewnione z iuváre — pomagać, sprawiać przyjemność. O sądach Bożych mówi się tu, że są miłe — nie znośne, lecz upragnione.",
-			"derivatives": [
-				"jukstapozycja"
-			]
+			"note": "Spokrewnione z iuváre — pomagać, sprawiać przyjemność. O sądach Bożych mówi się tu, że są miłe — nie znośne, lecz upragnione."
 		},
 		"iudicium": {
 			"senses": [
@@ -2583,7 +2574,7 @@
 				"wyrok",
 				"rozeznanie"
 			],
-			"note": "Od judex — sędzia; obejmuje i rozprawę, i zdolność osądzania."
+			"note": "Od iudex — sędzia; obejmuje i rozprawę, i zdolność osądzania."
 		},
 		"iudico": {
 			"senses": [
@@ -2591,15 +2582,15 @@
 				"osądzać, wydawać wyrok",
 				"uważać, oceniać"
 			],
-			"note": "Utworzony od júdex (sędzia), a ten od jus, juris (prawo) + dícere (mówić) — ten, kto wypowiada prawo.",
+			"note": "Utworzony od iudex (sędzia), a ten od ius, iuris (prawo) + dícere (mówić) — ten, kto wypowiada prawo.",
 			"derivatives": [
 				"judykatura"
 			]
 		},
 		"iustificatio": {
 			"senses": [
-				"przykazanie",
 				"ustawa",
+				"przepis",
 				"usprawiedliwienie"
 			],
 			"note": "W psalmach nie „usprawiedliwienie” w sensie teologicznym, lecz to, co Bóg ustanowił jako sprawiedliwe: Jego ustawy. Grecki psałterz oddaje tak hebrajskie chuqqim, przepisy.",
@@ -2618,13 +2609,13 @@
 				"młodość",
 				"młodzież"
 			],
-			"note": "Od júvenis — młody; rzeczownik zbiorowy oznacza też ogół młodych."
+			"note": "Od iúvenis — młody; rzeczownik zbiorowy oznacza też ogół młodych."
 		},
 		"kyrie": {
 			"senses": [
 				"Panie"
 			],
-			"note": "Greckie κύριε, wołacz od κύριος „pan”. Żaden słownik łaciny nie notuje tego słowa osobno — łacina wzięła całą formułę: Niermeyer ma hasło kyrie-eleison na oznaczenie samego śpiewu, a Du Cange kyrieles „litania” i czasownik kyrieleisare „śpiewać Kyrie eleison”."
+			"note": "Greckie κύριε, wołacz od κύριος „pan”. Żaden słownik łaciński nie notuje tego słowa osobno — łacina przejęła całą formułę: Niermeyer ma hasło kyrie-eleison na oznaczenie samego śpiewu, a Du Cange kyrieles „litania” i czasownik kyrieleisare „śpiewać Kyrie eleison”."
 		},
 		"lacryma": {
 			"senses": [
@@ -2664,6 +2655,7 @@
 		},
 		"laus": {
 			"senses": [
+				"cześć",
 				"chwała",
 				"pochwała"
 			]
@@ -2690,7 +2682,7 @@
 				"wolny",
 				"swobodny"
 			],
-			"note": "Nie mylić z rzeczownikiem liber, libri — księga, ani z líberi, liberórum — dzieci (dosłownie „wolni”, w odróżnieniu od niewolników domu).",
+			"note": "Nie mylić z rzeczownikiem liber, libri — księga ani z líberi, liberórum — dzieci (dosłownie „wolni”, w odróżnieniu od domowych niewolników).",
 			"derivatives": [
 				"liberalny"
 			]
@@ -2744,7 +2736,6 @@
 			],
 			"note": "Ten sam rdzeń co lux; lumen to zwykle światło widzialne — blask, jasność, także lampa.",
 			"derivatives": [
-				"iluminacja",
 				"luminarz"
 			]
 		},
@@ -2754,7 +2745,7 @@
 				"światłość",
 				"dzień"
 			],
-			"note": "Lux to samo światło; lumen — światło, które coś wydaje (por. lumen de lúmine w Credo).",
+			"note": "Lux to światło samo w sobie; lumen — światło, które coś wydaje (por. Lumen de Lúmine w Credo).",
 			"derivatives": [
 				"luks"
 			]
@@ -2820,7 +2811,7 @@
 				"jeść",
 				"spożywać"
 			],
-			"note": "Słowo potoczne — „żuć”, nie eleganckie édere; łacina biblijna wybrała je i przekazała językom romańskim (fr. manger)."
+			"note": "Słowo potoczne — „żuć”, nie eleganckie édere; łacina biblijna wybrała je i stąd trafiło do części języków romańskich (fr. manger)."
 		},
 		"manus": {
 			"senses": [
@@ -2836,7 +2827,7 @@
 			"senses": [
 				"męczennik"
 			],
-			"note": "Greckie mártys znaczy „świadek”; łacina przejęła je bez tłumaczenia, a znaczenie „ten, kto zginął za wiarę” dołożył dopiero Kościół.",
+			"note": "Greckie mártys znaczy „świadek”; łacina przejęła je bez tłumaczenia, a znaczenie „ten, kto zginął za wiarę” nadał mu dopiero Kościół.",
 			"derivatives": [
 				"martyrologium"
 			]
@@ -2863,7 +2854,7 @@
 				"pamiętać",
 				"wspominać"
 			],
-			"note": "Czasownik ułomny: ma tylko formy czasu przeszłego, ale znaczenie teraźniejsze. Rozkaźnik meménto jest formą czasu przyszłego — jedynym rozkaźnikiem, jaki ten czasownik posiada.",
+			"note": "Czasownik ułomny: ma tylko formy systemu perfectum, ale znaczenie teraźniejsze. Tryb rozkazujący ma tylko w czasie przyszłym: meménto, w liczbie mnogiej mementóte.",
 			"derivatives": [
 				"memento"
 			]
@@ -2925,7 +2916,7 @@
 			],
 			"note": "Rzeczownik od meréri — zasłużyć.",
 			"derivatives": [
-				"merytoryczny"
+				"merytoryczny (od meritórius)"
 			]
 		},
 		"meus": {
@@ -2941,7 +2932,7 @@
 			"note": "Od miles, mílitis (żołnierz).",
 			"derivatives": [
 				"milicja",
-				"militarny"
+				"militarny (od miles)"
 			]
 		},
 		"mirabilis": {
@@ -2956,7 +2947,7 @@
 				"cudownie",
 				"przedziwnie"
 			],
-			"note": "Stopień wyższy brzmi mirabílius i jest tożsamy z rodzajem nijakim przymiotnika."
+			"note": "Stopień wyższy brzmi mirabílius — tak samo jak rodzaj nijaki stopnia wyższego przymiotnika."
 		},
 		"miseratio": {
 			"senses": [
@@ -2967,17 +2958,17 @@
 		},
 		"misereor": {
 			"senses": [
-				"litować się",
-				"zmiłować się"
+				"zmiłować się",
+				"litować się"
 			],
-			"note": "W formułach liturgicznych z celownikiem (miserére nobis); klasycznie i w psalmach z dopełniaczem (miserére mei)."
+			"note": "Zwykle z dopełniaczem (miserére mei, misereátur vestri); formuły liturgiczne znają też celownik (miserére nobis)."
 		},
 		"misericordia": {
 			"senses": [
 				"miłosierdzie",
 				"litość"
 			],
-			"note": "Złożenie z miser (nieszczęsny) i cor (serce) — serce dla nieszczęśliwego; ta sama budowa co miséricors."
+			"note": "Z miser (nieszczęsny) i cor (serce) — serce dla nieszczęśliwego; rzeczownik utworzony od miséricors."
 		},
 		"misericors": {
 			"senses": [
@@ -2998,7 +2989,7 @@
 				"Msza",
 				"rozesłanie zgromadzenia"
 			],
-			"note": "Późnołaciński rzeczownik urobiony od missus (odesłany). Od tego jednego słowa wzięła nazwę cała liturgia — missa, msza, Messe, Mass.",
+			"note": "Późnołacińska forma rzeczownika missio — odesłanie; średniowieczna łacina zna takie pary (collecta obok collectio). Od tego jednego słowa wzięła nazwę cała liturgia — missa, msza, Messe, Mass.",
 			"derivatives": [
 				"msza",
 				"mszał"
@@ -3010,11 +3001,10 @@
 				"wysłać",
 				"puścić"
 			],
-			"note": "Od jego imiesłowu missus pochodzi missa — nazwa Mszy.",
+			"note": "Późnołacińska missa — nazwa Mszy — to forma rzeczownika missio (odesłanie), nie imiesłów missus.",
 			"derivatives": [
 				"misja",
-				"misjonarz",
-				"emisja"
+				"misjonarz"
 			]
 		},
 		"modus": {
@@ -3131,7 +3121,8 @@
 		},
 		"ne": {
 			"senses": [
-				"nie (w zakazach i prośbach przeczących)"
+				"nie (w zakazach i prośbach przeczących)",
+				"aby nie, żeby nie (w zdaniu celowym zaprzeczonym)"
 			]
 		},
 		"nec": {
@@ -3139,7 +3130,7 @@
 				"ani",
 				"i nie"
 			],
-			"note": "Skrócone neque. Zestawienie nec non znaczy nie „ani nie”, lecz mocne „a także”: dwa przeczenia znoszą się."
+			"note": "Skrócone neque. Zestawienie nec non nie znaczy „ani nie”, lecz mocne „a także”: dwa przeczenia znoszą się."
 		},
 		"negligentia": {
 			"senses": [
@@ -3148,7 +3139,7 @@
 			],
 			"note": "Wina przez zaniechanie — to, czego nie zrobiono.",
 			"derivatives": [
-				"negliż"
+				"negliż (od negligere)"
 			]
 		},
 		"neque": {
@@ -3163,7 +3154,7 @@
 				"nikczemność",
 				"przewrotność"
 			],
-			"note": "Od nequam — nicpoń, człowiek do niczego."
+			"note": "Od nequam — nicpoń, ktoś nic niewart."
 		},
 		"nihil": {
 			"senses": [
@@ -3176,9 +3167,9 @@
 		},
 		"nimis": {
 			"senses": [
-				"zbytnio",
+				"bardzo",
 				"ponad miarę",
-				"bardzo"
+				"zbytnio"
 			]
 		},
 		"nomen": {
@@ -3195,7 +3186,7 @@
 			"senses": [
 				"nie"
 			],
-			"note": "Przeczy pojedynczemu wyrazowi albo całemu zdaniu; w zakazach i prośbach przeczących używa się ne."
+			"note": "Przeczy pojedynczemu wyrazowi albo całemu zdaniu; w zakazach i prośbach przeczących łacina klasyczna stawia ne — liturgia mówi jednak i non mihi provéniat, przecząc całemu zdaniu."
 		},
 		"nos": {
 			"senses": [
@@ -3213,7 +3204,6 @@
 				"wiadomy"
 			],
 			"derivatives": [
-				"nota",
 				"notoryczny"
 			]
 		},
@@ -3232,7 +3222,7 @@
 				"zaliczyć"
 			],
 			"derivatives": [
-				"numer",
+				"numer (od númerus)",
 				"numeracja"
 			]
 		},
@@ -3251,7 +3241,7 @@
 			"senses": [
 				"o"
 			],
-			"note": "Wykrzyknik wołacza: nie tłumaczy się go osobno, tylko wzmacnia zwrot do kogoś."
+			"note": "Wykrzyknik wołacza: nie tłumaczy się go osobno, tylko wzmacnia wołacz."
 		},
 		"ob": {
 			"senses": [
@@ -3267,7 +3257,7 @@
 			],
 			"note": "Rzeczownik od offérre — to, co przyniesiono przed Boga.",
 			"derivatives": [
-				"oblat"
+				"oblat (od offérre)"
 			]
 		},
 		"obsequium": {
@@ -3307,7 +3297,7 @@
 			],
 			"note": "Wina wobec kogoś, nie sam zły czyn.",
 			"derivatives": [
-				"ofensywa"
+				"ofensywa (od offendere; znaczenie odeszło ku natarciu)"
 			]
 		},
 		"offero": {
@@ -3316,7 +3306,7 @@
 				"składać w ofierze",
 				"przynosić"
 			],
-			"note": "Złożenie ob- i fero; od niego nazwa ofiarowania. Odmienia się nieregularnie, jak fero.",
+			"note": "Złożenie ob- i fero; stąd nazwa Ofiarowania (offertorium). Odmienia się nieregularnie, jak fero.",
 			"derivatives": [
 				"oferta"
 			]
@@ -3342,13 +3332,9 @@
 		"opprobrium": {
 			"senses": [
 				"hańba",
-				"zniewaga",
-				"wstyd"
+				"zniewaga"
 			],
-			"note": "Ob- + probrum, czyn haniebny: nie wstyd odczuwany, lecz hańba rzucona w twarz przez innych.",
-			"derivatives": [
-				"opprobrium"
-			]
+			"note": "Ob- + probrum, czyn haniebny: nie wstyd odczuwany, lecz hańba rzucona w twarz przez innych."
 		},
 		"ops": {
 			"senses": [
@@ -3365,7 +3351,7 @@
 			],
 			"derivatives": [
 				"opus",
-				"operacja"
+				"operacja (przez ópera)"
 			]
 		},
 		"oratio": {
@@ -3377,7 +3363,7 @@
 			"note": "Rzeczownik od oráre; w łacinie klasycznej mowa, w chrześcijańskiej przede wszystkim modlitwa.",
 			"derivatives": [
 				"oracja",
-				"oratorium"
+				"oratorium (od oráre)"
 			]
 		},
 		"orbis": {
@@ -3397,7 +3383,7 @@
 				"prosić",
 				"przemawiać"
 			],
-			"note": "Od „oro” pochodzi wezwanie „Orémus” — módlmy się.",
+			"note": "To ten sam czasownik, co w wezwaniu „Orémus” — módlmy się.",
 			"derivatives": [
 				"oracja",
 				"oratorium"
@@ -3418,7 +3404,7 @@
 				"twarz",
 				"mowa"
 			],
-			"note": "Nie mylić z os, ossis — kość; oba brzmią tak samo w mianowniku, ale mają różne tematy. Stąd oratio i osculum.",
+			"note": "Nie mylić z os, ossis — kość; w mianowniku pisze się je tak samo (klasyczna łacina różniła je iloczasem), a tematy mają różne. Stąd orátio i ósculum.",
 			"derivatives": [
 				"oralny"
 			]
@@ -3457,7 +3443,7 @@
 			"senses": [
 				"papież"
 			],
-			"note": "Greckie páppas — poufałe określenie ojca; na Wschodzie tytuł każdego kapłana, na Zachodzie od V wieku zastrzeżony biskupowi Rzymu.",
+			"note": "Greckie páppas — poufałe określenie ojca; na Wschodzie tytuł każdego kapłana, na Zachodzie od VI wieku coraz częściej tylko o biskupie Rzymu, któremu zastrzegł go formalnie Grzegorz VII (1073).",
 			"derivatives": [
 				"papież",
 				"papieski"
@@ -3487,7 +3473,7 @@
 				"uczestnictwo",
 				"udział"
 			],
-			"note": "Od pártem cápere — brać część; nie obecność, lecz otrzymanie udziału.",
+			"note": "Od pártem cápere — wziąć część, mieć udział; nie obecność, lecz otrzymanie udziału.",
 			"derivatives": [
 				"partycypacja"
 			]
@@ -3550,7 +3536,7 @@
 			"senses": [
 				"grzech"
 			],
-			"note": "Rzeczownik od pecco (grzeszyć) — czyn, nie skłonność."
+			"note": "Rzeczownik od „pecco” (grzeszyć): nazywa sam czyn."
 		},
 		"pecco": {
 			"senses": [
@@ -3564,7 +3550,7 @@
 				"przez, poprzez (przestrzeń)",
 				"przez (czas trwania)"
 			],
-			"note": "Wyraża pośrednictwo — stąd stałe zakończenie modlitw „per Christum Dóminum nostrum”."
+			"note": "Wyraża pośrednictwo — stąd stałe zakończenie modlitw „per Christum Dóminum nostrum”; z określeniami czasu znaczy „przez cały” — per ómnia sǽcula sæculórum."
 		},
 		"perceptio": {
 			"senses": [
@@ -3572,7 +3558,7 @@
 				"otrzymanie",
 				"spożycie"
 			],
-			"note": "Od percípere — wziąć w całości; w łacinie liturgicznej ustalone słowo na przyjęcie Komunii.",
+			"note": "Od percípere — wziąć w całości; w łacinie liturgicznej jedno ze słów na przyjęcie Komunii.",
 			"derivatives": [
 				"percepcja"
 			]
@@ -3585,7 +3571,7 @@
 			],
 			"note": "Per i cápio — wziąć do końca; stąd i „otrzymać”, i „pojąć”.",
 			"derivatives": [
-				"percepcja"
+				"percepcja (od percéptio)"
 			]
 		},
 		"perditio": {
@@ -3615,7 +3601,7 @@
 				"donieść",
 				"przenieść"
 			],
-			"note": "Złożenie per + fero; nieregularne jak fero, którego formy bierze z trzech różnych rdzeni."
+			"note": "Złożenie per + fero; nieregularne jak fero, które formy podstawowe bierze z trzech różnych rdzeni."
 		},
 		"perhibeo": {
 			"senses": [
@@ -3640,7 +3626,7 @@
 				"nieustanny",
 				"wieczysty"
 			],
-			"note": "Od pétere — dążyć: to, co idzie bez przerwy do końca. Nieco inaczej niż ætérnus, który mówi o bezkresie.",
+			"note": "Od pétere — dążyć: to, co idzie bez przerwy do końca. Znaczy nieco co innego niż ætérnus, który mówi o bezkresie.",
 			"derivatives": [
 				"perpetuum"
 			]
@@ -3663,7 +3649,7 @@
 			],
 			"note": "Deponens: forma bierna, znaczenie czynne. Złożenie per + vagor — wędrować wzdłuż i wszerz.",
 			"derivatives": [
-				"wagabunda"
+				"wagabunda (od vagári)"
 			]
 		},
 		"pes": {
@@ -3714,7 +3700,7 @@
 				"łaskawy",
 				"ułagodzony"
 			],
-			"note": "Imiesłów placáre, który stwardniał w przymiotnik: nie „dający się przebłagać”, lecz „już przebłagany”."
+			"note": "Imiesłów od placáre, który stwardniał w przymiotnik: nie „dający się przebłagać”, lecz „już przebłagany”."
 		},
 		"placeo": {
 			"senses": [
@@ -3728,7 +3714,7 @@
 				"lud",
 				"pospólstwo"
 			],
-			"note": "W Rzymie stan przeciwstawny patrycjuszom; w łacinie kościelnej po prostu lud.",
+			"note": "W Rzymie stan przeciwstawiany patrycjuszom; w łacinie kościelnej po prostu lud.",
 			"derivatives": [
 				"plebejusz",
 				"plebs"
@@ -3774,7 +3760,7 @@
 				"nosić",
 				"dźwigać"
 			],
-			"note": "Zwyczajne słowo o dźwiganiu ciężaru; ten sam rdzeń niesie transport i eksport. Nie ma związku z porta, czyli bramą.",
+			"note": "Zwyczajne słowo o dźwiganiu ciężaru; ten sam rdzeń niesie transport i eksport. Nie jest urobione od porta — bramy — choć oba słowa sięgają tego samego rdzenia przechodzenia.",
 			"derivatives": [
 				"transport",
 				"eksport",
@@ -3803,17 +3789,14 @@
 				"moc",
 				"Zwierzchność (chór anielski)"
 			],
-			"note": "W Prefacji nazwa chóru anielskiego, obok Państw. Oba imiona idą za Wujkiem, który w Kol 1, 16 oddaje cztery chóry jako trony, państwa, księztwa, zwierzchności — a więc potestates to Zwierzchności, a dominationes Państwa. Nowsze przekłady przesuwają Zwierzchności na principatus; to wydanie trzyma się Wujka, jak wszędzie indziej."
+			"note": "W Prefacji nazwa chóru anielskiego, obok Państw. Oba imiona idą za Wujkiem, który w Kol 1, 16 oddaje cztery chóry jako trony, państwa, księztwa, zwierzchności — a więc potestates to Zwierzchności, a dominationes Państwa. Nowsze przekłady przesuwają Zwierzchności na principatus; to wydanie trzyma się tu Wujka."
 		},
 		"poto": {
 			"senses": [
 				"pić",
 				"wypijać"
 			],
-			"note": "Zwykłe, codzienne słowo o piciu; stąd pótio — napój, i potátor — pijak.",
-			"derivatives": [
-				"potacja"
-			]
+			"note": "Słowo przedklasyczne i późne — codziennym jest bibo; stąd pótio — napój, i potátor — pijak."
 		},
 		"praecedo": {
 			"senses": [
@@ -3846,7 +3829,7 @@
 				"bitwa",
 				"walka"
 			],
-			"note": "Pisownia prælium i proelium to jedno słowo; księgi liturgiczne drukują prælium."
+			"note": "Prælium i proelium to dwa zapisy jednego słowa; księgi liturgiczne drukują prælium."
 		},
 		"praeparo": {
 			"senses": [
@@ -3913,14 +3896,17 @@
 				"modlitwa",
 				"prośba"
 			],
-			"note": "W klasycznej łacinie prawie zawsze w liczbie mnogiej — preces; forma pojedyncza jest rzadka."
+			"note": "W klasycznej łacinie prawie zawsze w liczbie mnogiej — preces; mianownika prex w ogóle się nie spotyka.",
+			"derivatives": [
+				"prekariat (od precarius)"
+			]
 		},
 		"pridie": {
 			"senses": [
 				"dzień wcześniej",
 				"w przeddzień"
 			],
-			"note": "Rzymski wyraz kalendarzowy: prídie Kaléndas — dzień przed pierwszym."
+			"note": "Rzymski wyraz kalendarzowy: prídie Kaléndas — dzień przed pierwszym dniem miesiąca."
 		},
 		"primus": {
 			"senses": [
@@ -3966,7 +3952,7 @@
 				"wychodzić naprzód",
 				"postępować, iść dalej"
 			],
-			"note": "Złożenie pro (naprzód) + cédere (iść, kroczyć); w mowie o Trójcy Świętej jest to czasownik pochodzenia jednej Osoby od drugiej.",
+			"note": "Złożenie pro (naprzód) + cédere (iść, kroczyć); w języku wyznań wiary orzeka o pochodzeniu Ducha Świętego; o Synu credo mówi inaczej — génitum, zrodzony.",
 			"derivatives": [
 				"procesja",
 				"proces",
@@ -3989,7 +3975,7 @@
 			],
 			"note": "Rzeczownik od promítto (posłać naprzód, obiecać) — z tego samego mitto, co missa.",
 			"derivatives": [
-				"promesa"
+				"promesa (od promítto)"
 			]
 		},
 		"propheta": {
@@ -4006,14 +3992,14 @@
 				"przebłagalny",
 				"jednający łaskę"
 			],
-			"note": "Słowo późne i rzadkie, urobione od propitius: takie, przez które przebłaganie się dokonuje."
+			"note": "Słowo rzadkie, poświadczone już u Enniusza; urobione od czasownika propitiáre, jak przymiotniki na -bilis: takie, przez które przebłaganie się dokonuje."
 		},
 		"propitius": {
 			"senses": [
 				"łaskawy",
 				"przychylny"
 			],
-			"note": "Słowo z rzymskiego języka ofiar: bóstwo propítium to takie, które ofiarę przyjęło."
+			"note": "Słowo rzymskiej religii: bóstwo propítium jest życzliwe proszącemu; od tego przymiotnika czasownik propitiáre — przebłagać."
 		},
 		"proprius": {
 			"senses": [
@@ -4080,7 +4066,7 @@
 				"proszę",
 				"błagam"
 			],
-			"note": "Czasownik ułomny: żyją głównie quæso i quǽsumus, wtrącane w prośbę jak polskie „proszę”. To starsza postać czasownika quærere — szukać, dopominać się."
+			"note": "Czasownik ułomny: zachowały się głównie quæso i quǽsumus, wtrącane w prośbę jak polskie „proszę”. To starsza postać czasownika quærere — szukać, dopominać się."
 		},
 		"quam": {
 			"senses": [
@@ -4111,8 +4097,8 @@
 		},
 		"quia": {
 			"senses": [
-				"że (w łacinie kościelnej)",
-				"ponieważ, bo"
+				"ponieważ, bo",
+				"że (w łacinie kościelnej)"
 			],
 			"note": "W łacinie klasycznej przede wszystkim „ponieważ”; łacina kościelna za greką używa „quia” także jako „że” po czasownikach mówienia i wyznawania."
 		},
@@ -4123,7 +4109,7 @@
 			],
 			"derivatives": [
 				"kwietyzm",
-				"requiem"
+				"requiem (od réquies)"
 			]
 		},
 		"quis": {
@@ -4151,7 +4137,7 @@
 				"codzienny",
 				"powszedni"
 			],
-			"note": "W Modlitwie Pańskiej oddaje greckie „epioúsios” — słowo poza nią niemal niespotykane; polskie „powszedni” utrwalone przez tradycję."
+			"note": "W Modlitwie Pańskiej oddaje greckie „epioúsios” — słowo poza nią niemal niespotykane. Wulgata Hieronima daje w Mt 6, 11 supersubstantiálem, w Łk 11, 3 quotidiánum; Msza trzyma się starołacińskiego brzmienia. Polskie „powszedni” utrwalone przez tradycję."
 		},
 		"quotiescumque": {
 			"senses": [
@@ -4164,14 +4150,14 @@
 				"ilukolwiek",
 				"wszyscy, którzy"
 			],
-			"note": "Nieodmienne: forma nie wskazuje ani przypadku, ani rodzaju, ani liczby."
+			"note": "Nieodmienne co do przypadku i rodzaju, ale samo w sobie mnogie — „ilukolwiek”. Korpus orzeka przypadek, który daje zdanie."
 		},
 		"rationabilis": {
 			"senses": [
 				"rozumny",
 				"zgodny z rozumem"
 			],
-			"note": "Kanon idzie za Rz 12, 1: rationábile obséquium — służba rozumna, to znaczy duchowa, nie zwierzęca ofiara."
+			"note": "Rozumny, zgodny z rozumem; za greckim logikè latreía z Rz 12, 1 słowo daje się wiązać także ze Słowem-Logosem — odcień pozostaje sporny."
 		},
 		"ratus": {
 			"senses": [
@@ -4179,9 +4165,9 @@
 				"ważny",
 				"prawomocny"
 			],
-			"note": "Termin prawny: ratum pactum to umowa, która ma moc. Stąd „ratyfikacja”.",
+			"note": "Termin prawny: ratum habére — uznać za prawomocne. Stąd „ratyfikacja”.",
 			"derivatives": [
-				"ratyfikacja"
+				"ratyfikacja (od ratificáre)"
 			]
 		},
 		"recipio": {
@@ -4201,7 +4187,7 @@
 				"zwrócić",
 				"spełnić"
 			],
-			"note": "Vota réddere to techniczny zwrot: wypełnić ślub złożony bóstwu, oddać obiecane.",
+			"note": "Vota réddere to zwrot techniczny: wypełnić ślub złożony bóstwu, oddać to, co obiecane.",
 			"derivatives": [
 				"renta"
 			]
@@ -4211,10 +4197,10 @@
 				"odkupienie",
 				"wykup"
 			],
-			"note": "Od émere — kupić; redémptio to odkupienie niewolnika lub jeńca za cenę.",
+			"note": "Od émere — kupić; redémptio to wykupienie niewolnika lub jeńca za cenę.",
 			"derivatives": [
 				"redempcja",
-				"redemptorysta"
+				"redemptorysta (od Redemptor)"
 			]
 		},
 		"redimo": {
@@ -4235,7 +4221,6 @@
 			],
 			"note": "Re- i fácio — zrobić na nowo; o posiłku, który stawia na nogi zmęczonego wędrowca.",
 			"derivatives": [
-				"refekcja",
 				"refektarz"
 			]
 		},
@@ -4254,14 +4239,14 @@
 				"pokrzepienie",
 				"wytchnienie"
 			],
-			"note": "Dosłownie „ochłodzenie”. W starochrześcijańskich napisach nagrobnych to zwykłe słowo na miejsce spoczynku zmarłych, a rzymskie rodziny urządzały na grobach posiłek zwany refrigérium."
+			"note": "Dosłownie „ochłodzenie”. W starochrześcijańskich napisach nagrobnych to zwykłe słowo na to, o co dla zmarłych proszono, a rzymskie rodziny urządzały na grobach posiłek zwany refrigérium."
 		},
 		"refugium": {
 			"senses": [
 				"ucieczka",
 				"schronienie"
 			],
-			"note": "Rzeczownik od refúgio — uciekać się dokądś. Nie oznacza samej ucieczki, lecz miejsce, do którego się ucieka."
+			"note": "Rzeczownik od refúgio — uciekać się dokądś. Tu nie o samą ucieczkę chodzi, lecz o miejsce, do którego się ucieka."
 		},
 		"regina": {
 			"senses": [
@@ -4311,8 +4296,7 @@
 			],
 			"note": "Rzeczownik występujący tylko w liczbie mnogiej; od relínquere — pozostawić.",
 			"derivatives": [
-				"relikwie",
-				"relikt"
+				"relikwie"
 			]
 		},
 		"remaneo": {
@@ -4339,7 +4323,7 @@
 				"darowanie długu lub kary",
 				"ulga, złagodzenie"
 			],
-			"note": "Rzeczownik od remíttere — odesłać, puścić wolno; odpuszczenie grzechów to ich puszczenie wolno.",
+			"note": "Rzeczownik od remíttere — odesłać, puścić wolno; odpuszczenie grzechów to puszczenie ich wolno.",
 			"derivatives": [
 				"remisja"
 			]
@@ -4381,7 +4365,7 @@
 				"zmartwychwstanie",
 				"powstanie z martwych"
 			],
-			"note": "Rzeczownik od resúrgere; polska „rezurekcja” — procesja i Msza poranka wielkanocnego — pochodzi wprost od niego.",
+			"note": "Rzeczownik od resúrgere; polska „rezurekcja” — procesja i Msza poranka wielkanocnego — pochodzi wprost od resurrectio.",
 			"derivatives": [
 				"rezurekcja"
 			]
@@ -4395,7 +4379,7 @@
 			"note": "Re- i tríbuo — przydzielić z powrotem; to samo słowo służy o darze danym i o darze odwzajemnionym.",
 			"derivatives": [
 				"retrybucja",
-				"trybut"
+				"trybut (od tribútum)"
 			]
 		},
 		"rex": {
@@ -4427,7 +4411,7 @@
 			"senses": [
 				"kapłan"
 			],
-			"note": "Od sacra dare — składać święte rzeczy. Inne słowo niż presbýter, z którego pochodzi polskie „prezbiter”."
+			"note": "Starożytni czytali w tym sacra dare — składać święte rzeczy; drugi człon to w istocie rdzeń fácere: ten, kto sprawuje święte obrzędy. Inne słowo niż presbýter, z którego pochodzi polskie „prezbiter”."
 		},
 		"sacramentum": {
 			"senses": [
@@ -4451,14 +4435,14 @@
 			"senses": [
 				"ofiara"
 			],
-			"note": "Sacrum fácere — uczynić świętym; ofiara jako czynność, nie jako dar."
+			"note": "Sacrum fácere — sprawować rzecz świętą; ofiara jako czynność, nie jako dar."
 		},
 		"sacrosanctus": {
 			"senses": [
 				"najświętszy",
 				"nienaruszalny"
 			],
-			"note": "Rzymski termin prawny: sacrosánctus był ten, komu nie wolno było uczynić krzywdy pod karą klątwy — trybun ludowy."
+			"note": "Rzymski termin prawny: sacrosánctus był ten, komu nie wolno było uczynić krzywdy pod karą klątwy: taki był trybun ludowy."
 		},
 		"saeculum": {
 			"senses": [
@@ -4466,7 +4450,7 @@
 				"pokolenie",
 				"świat (doczesny)"
 			],
-			"note": "„In sǽcula sæculórum” — hebraizm wzmacniający przez powtórzenie: na wieki wieków.",
+			"note": "„In sǽcula sæculórum” — semityzm: wzmocnienie przez powtórzenie, na wieki wieków.",
 			"derivatives": [
 				"sekularyzacja"
 			]
@@ -4502,7 +4486,7 @@
 				"być zdrowym",
 				"mieć się dobrze"
 			],
-			"note": "Praktycznie tylko w trybie rozkazującym: salve i salvéte to rzymskie powitanie — „bądź zdrów”."
+			"note": "Niemal wyłącznie w trybie rozkazującym: salve i salvéte to rzymskie powitanie — „bądź zdrów”."
 		},
 		"salvus": {
 			"senses": [
@@ -4526,13 +4510,13 @@
 				"uświęcać",
 				"święcić"
 			],
-			"note": "Złożenie „sanctus” + „fácere” — czynić świętym."
+			"note": "Złożenie sanctus (święty) + fácere (czynić) — czynić świętym."
 		},
 		"sanctus": {
 			"senses": [
 				"święty"
 			],
-			"note": "Często w użyciu rzeczownikowym: „Sancti” — Święci.",
+			"note": "Często w użyciu rzeczownikowym: „Sancti” — Święci; w „Spíritus Sancti” to jednak zwykły przymiotnik.",
 			"derivatives": [
 				"sanktuarium"
 			]
@@ -4541,7 +4525,7 @@
 			"senses": [
 				"krew"
 			],
-			"note": "Liczba mnoga sánguines znaczy w psałterzu przelaną krew, stąd „viri sánguinum” — mężowie krwi.",
+			"note": "W psałterzu liczba mnoga oznacza przelaną krew: de sanguínibus (Ps 50), vir sánguinum — dosłownie mąż krwi (Ps 5; u Wujka „mąż krwawy”).",
 			"derivatives": [
 				"sangwinik"
 			]
@@ -4562,7 +4546,7 @@
 			"senses": [
 				"szatan"
 			],
-			"note": "Z hebrajskiego przez grekę: przeciwnik, oskarżyciel. Odmienia się jak rzeczowniki I deklinacji rodzaju męskiego pochodzenia greckiego.",
+			"note": "Z hebrajskiego przez grekę: przeciwnik, oskarżyciel. Odmienia się jak greckie rzeczowniki męskie I deklinacji.",
 			"derivatives": [
 				"szatan"
 			]
@@ -4720,14 +4704,14 @@
 				"tak jak",
 				"podobnie jak"
 			],
-			"note": "Sicut z dodanym -i; znaczenie to samo, brzmienie uroczystsze. Akcent pada na pierwszą zgłoskę."
+			"note": "Sicut z dodanym -i; znaczenie to samo, brzmienie uroczystsze. Akcent pada na pierwszą sylabę."
 		},
 		"signum": {
 			"senses": [
 				"znak",
 				"godło"
 			],
-			"note": "Signum fídei — „znak wiary” — to od starożytności określenie chrztu; tak Kanon mówi o zmarłych ochrzczonych.",
+			"note": "Signum fídei — „znak wiary” — od dawna rozumie się o chrzcie, o pieczęci na nim przyjętej; tak Kanon mówi o zmarłych ochrzczonych.",
 			"derivatives": [
 				"sygnał",
 				"sygnatura"
@@ -4775,7 +4759,7 @@
 				"wspólny",
 				"towarzyszący"
 			],
-			"note": "Przymiotnik od sócius — towarzysz; sócia exsultatióne znaczy „we wspólnym uniesieniu”."
+			"note": "Przymiotnik — „wspólny, towarzyszący”; rzeczownik sócius, towarzysz, to jego użycie rzeczownikowe. Sócia exsultatióne znaczy „we wspólnym uniesieniu”."
 		},
 		"solus": {
 			"senses": [
@@ -4801,7 +4785,7 @@
 				"ufać",
 				"spodziewać się"
 			],
-			"note": "W psalmach z przyimkiem in i ablativem: speráre in Deo — złożyć nadzieję w Bogu.",
+			"note": "W psalmach z przyimkiem in i ablativusem: speráre in Deo — złożyć nadzieję w Bogu.",
 			"derivatives": [
 				"desperacja"
 			]
@@ -4830,10 +4814,9 @@
 				"oblubieniec",
 				"narzeczony"
 			],
-			"note": "Od spondére — uroczyście przyrzec; oblubieniec to ten, komu przyrzeczono.",
+			"note": "Od spondére — uroczyście przyrzec; oblubieniec to ten, który przyrzekł.",
 			"derivatives": [
-				"sponsor",
-				"responsorium"
+				"sponsor (od spondére)"
 			]
 		},
 		"statuo": {
@@ -4909,7 +4892,7 @@
 				"najwyższy",
 				"największy"
 			],
-			"note": "Stopień najwyższy od súperus (górny); nie ma osobnego stopnia równego.",
+			"note": "Stopień najwyższy od súperus (górny); sam nie ma osobnego stopnia równego.",
 			"derivatives": [
 				"suma",
 				"sumaryczny"
@@ -4932,7 +4915,7 @@
 				"kornie proszący",
 				"błagalny"
 			],
-			"note": "Od sub + plicáre — zgiąć się pod; postawa ciała, nie tylko ton głosu.",
+			"note": "Od sub + plicáre — ugiąć się przed kimś; postawa ciała, nie tylko ton głosu.",
 			"derivatives": [
 				"suplikacje"
 			]
@@ -4943,7 +4926,7 @@
 				"ponad"
 			],
 			"derivatives": [
-				"suprematyzm"
+				"suprematyzm (od suprémus)"
 			]
 		},
 		"surgo": {
@@ -4976,10 +4959,7 @@
 				"obawiać się",
 				"przypuszczać"
 			],
-			"note": "Deponens: forma bierna, znaczenie czynne. Dosłownie „patrzeć spod” (sub + spécere) — spojrzenie z ukosa, z którego rodzi się podejrzenie.",
-			"derivatives": [
-				"suspekt"
-			]
+			"note": "Deponens: forma bierna, znaczenie czynne. Dosłownie „patrzeć spod” (sub + spécere) — spojrzenie z ukosa, z którego rodzi się podejrzenie."
 		},
 		"suspiro": {
 			"senses": [
@@ -4991,7 +4971,7 @@
 			"senses": [
 				"swój"
 			],
-			"note": "Zaimek zwrotny: odnosi się do podmiotu zdania, inaczej niż eius — jego, kogoś innego."
+			"note": "Zaimek dzierżawczy zwrotny: odnosi się do podmiotu zdania, inaczej niż eius — jego, kogoś innego."
 		},
 		"tabernaculum": {
 			"senses": [
@@ -5056,7 +5036,7 @@
 				"ziemia"
 			],
 			"derivatives": [
-				"terytorium",
+				"terytorium (sporne)",
 				"teren"
 			]
 		},
@@ -5075,7 +5055,7 @@
 				"przymierze",
 				"testament"
 			],
-			"note": "Rzymski testament to rozporządzenie na wypadek śmierci; łacina biblijna wzięła to słowo na hebrajskie „przymierze”, i oba znaczenia brzmią w słowach konsekracji.",
+			"note": "Rzymski testamentum to rozporządzenie na wypadek śmierci; łacina biblijna użyła tego słowa na oddanie hebrajskiego „przymierza” — i oba znaczenia brzmią w słowach konsekracji.",
 			"derivatives": [
 				"testament"
 			]
@@ -5091,17 +5071,14 @@
 				"bojaźń",
 				"lęk"
 			],
-			"note": "W psalmach niemal zawsze bojaźń Boża — nie strach przed karą, lecz cześć, w której się stoi.",
-			"derivatives": [
-				"tymidny"
-			]
+			"note": "W psalmach niemal zawsze bojaźń Boża — nie strach przed karą, lecz cześć, w której się stoi."
 		},
 		"tollo": {
 			"senses": [
 				"podnosić",
 				"usuwać, gładzić"
 			],
-			"note": "W liturgii oba znaczenia naraz: Baranek „podnosi” grzechy świata na siebie i tak je „gładzi”."
+			"note": "W liturgii oba znaczenia są żywe: Baranek „podnosi” grzechy świata — bierze je na siebie i tak je „gładzi”."
 		},
 		"totus": {
 			"senses": [
@@ -5126,7 +5103,7 @@
 				"przyznawać",
 				"przydzielać"
 			],
-			"note": "Pierwotnie: rozdzielać między tribus, rzymskie okręgi; stąd przydzielać.",
+			"note": "Pierwotnie: rozdzielać między tribus — rzymskie okręgi; stąd przydzielać.",
 			"derivatives": [
 				"trybut",
 				"atrybut",
@@ -5159,7 +5136,7 @@
 				"osłona",
 				"zabezpieczenie"
 			],
-			"note": "Od tueor — strzec, mieć na oku; słowo późne i rzadkie, poza liturgią prawie niespotykane."
+			"note": "Od tueor — strzec, mieć na oku; słowo późne i rzadkie, zadomowione w łacinie chrześcijańskiej."
 		},
 		"tuus": {
 			"senses": [
@@ -5195,6 +5172,9 @@
 		"unitas": {
 			"senses": [
 				"jedność"
+			],
+			"derivatives": [
+				"unitarianizm"
 			]
 		},
 		"universus": {
@@ -5275,7 +5255,7 @@
 				"godny czci"
 			],
 			"derivatives": [
-				"weneracja"
+				"weneracja (od venerári)"
 			]
 		},
 		"veneror": {
@@ -5294,7 +5274,7 @@
 				"łaska",
 				"pobłażanie"
 			],
-			"note": "Nie darowanie długu, lecz łaskawe przyzwolenie; stąd „grzech powszedni” — peccátum veniále, taki, któremu łatwo przebaczyć."
+			"note": "Nie darowanie długu, lecz łaskawe przyzwolenie; stąd „grzech powszedni” — peccátum veniále, łatwy do przebaczenia."
 		},
 		"venio": {
 			"senses": [
@@ -5302,7 +5282,7 @@
 				"przybywać",
 				"nadchodzić"
 			],
-			"note": "Rdzeń wielu złożeń: advénio (nadchodzić), convénio (schodzić się), invénio (znaleźć).",
+			"note": "Rdzeń wielu złożeń: advénio (nadchodzić), convénio (schodzić się), invénio (znaleźć), evénio (wydarzyć się).",
 			"derivatives": [
 				"konwent",
 				"inwencja"
@@ -5402,7 +5382,7 @@
 				"cnota",
 				"Moc (chór anielski)"
 			],
-			"note": "Od vir — mąż: najpierw męstwo, potem wszelka sprawność, wreszcie cnota. W Prefacji to nazwa chóru anielskiego.",
+			"note": "Od vir — mąż: najpierw męstwo, potem wszelka sprawność, wreszcie cnota. W Prefacji jest nazwą chóru anielskiego.",
 			"derivatives": [
 				"wirtuoz"
 			]
@@ -5413,7 +5393,7 @@
 				"trzewia",
 				"głębia"
 			],
-			"note": "Prawie zawsze w liczbie mnogiej, víscera. Dosłownie organy pod żebrami; przenośnie — to, co najgłębsze w człowieku.",
+			"note": "Prawie zawsze w liczbie mnogiej, víscera. Dosłownie narządy wewnętrzne — serce i płuca tak samo jak trzewia; przenośnie — to, co najgłębsze w człowieku.",
 			"derivatives": [
 				"wisceralny"
 			]
@@ -5464,10 +5444,10 @@
 				"chcieć",
 				"pragnąć"
 			],
-			"note": "Czasownik nieregularny, bez czasu przyszłego biernego i bez supinum. „Ipsam vólui” — chciałem właśnie jej: perfectum, a więc wybór już dokonany.",
+			"note": "Czasownik nieregularny: bez strony biernej i bez supinum. „Ipsam vólui” — chciałem właśnie jej: perfectum, a więc wybór już dokonany.",
 			"derivatives": [
-				"wola",
-				"woluntarny"
+				"woluntarny",
+				"wolontariusz (od volúntas)"
 			]
 		},
 		"voluntas": {
@@ -5491,7 +5471,7 @@
 				"przyrzeczenie",
 				"modlitewne życzenie"
 			],
-			"note": "Od vovére — ślubować; wota to również dary składane w zamian za wysłuchanie.",
+			"note": "Od vovére — ślubować; wota to również dary składane w podzięce za wysłuchaną modlitwę.",
 			"derivatives": [
 				"wotum",
 				"wotywny"

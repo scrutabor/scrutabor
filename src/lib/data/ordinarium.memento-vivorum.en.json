@@ -13,25 +13,25 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "Be mindful, O Lord, of thy servants and handmaids"
+			"translation": "Remember, Lord, Your servants and handmaids"
 		},
 		"s02": {
 			"narrative": "The priest joins his hands and prays a while in silence for those he means to remember; then he spreads his hands and goes on."
 		},
 		"s03": {
-			"translation": "and of all here present, whose faith is known to thee and whose devotion is not hidden, for whom we offer to thee:"
+			"translation": "and all gathered here, whose faith and devotion are known to You. For them we offer to You:"
 		},
 		"s04": {
-			"translation": "or who themselves offer thee this sacrifice of praise, for themselves and for all their own: for the redemption of their souls, for their hope of salvation and safety,"
+			"translation": "or they themselves offer You this sacrifice of praise, for themselves and all who are dear to them: for the redemption of their souls, in hope of salvation and well-being,"
 		},
 		"s05": {
-			"translation": "and who pay their vows to thee, the eternal, living and true God."
+			"translation": "and paying their vows to You, the eternal God, living and true."
 		}
 	},
 	"words": {
 		"w001": {
 			"gloss": "be mindful",
-			"function": "A future imperative — the only one this verb has; Latin uses it to mean “have this in mind when the moment comes”."
+			"function": "A future imperative — the only kind this verb has (plural mementóte); Latin uses it to mean “have this in mind when the moment comes”."
 		},
 		"w002": {
 			"gloss": "O Lord"
@@ -45,7 +45,7 @@
 			"function": "One written word: the feminine noun with -que (and) attached. Liturgical Latin names the men and the women separately."
 		},
 		"w005": {
-			"gloss": "thy",
+			"gloss": "Thy",
 			"function": "Here the missal prints N. et N.; the priest passes into silence and calls the names to mind, and no one hears them."
 		},
 		"w006": {
@@ -62,7 +62,7 @@
 			"gloss": "whose"
 		},
 		"w010": {
-			"gloss": "to thee"
+			"gloss": "to Thee"
 		},
 		"w011": {
 			"gloss": "faith"
@@ -72,13 +72,13 @@
 		},
 		"w013": {
 			"gloss": "is",
-			"function": "One est serves both clauses: the faith is known and the devotion is not hidden."
+			"function": "One est serves both clauses: the faith is known and the devotion is noted."
 		},
 		"w014": {
 			"gloss": "and"
 		},
 		"w015": {
-			"gloss": "not hidden"
+			"gloss": "noted"
 		},
 		"w016": {
 			"gloss": "devotion"
@@ -90,7 +90,7 @@
 			"gloss": "whom"
 		},
 		"w019": {
-			"gloss": "to thee"
+			"gloss": "to Thee"
 		},
 		"w020": {
 			"gloss": "we offer"
@@ -103,7 +103,7 @@
 			"gloss": "who"
 		},
 		"w023": {
-			"gloss": "to thee"
+			"gloss": "to Thee"
 		},
 		"w024": {
 			"gloss": "offer"
@@ -116,7 +116,7 @@
 		},
 		"w027": {
 			"gloss": "of praise",
-			"function": "Sacrifícium laudis is a phrase from the psalms (Ps 49 and 115) taken into the Canon."
+			"function": "Sacrifícium laudis is a phrase from the psalms (Ps 49 and 106) taken into the Canon."
 		},
 		"w028": {
 			"gloss": "for"
@@ -137,7 +137,7 @@
 		},
 		"w033": {
 			"gloss": "the redemption",
-			"function": "From émere, to buy; a redémptio is the buying back of a slave for a price."
+			"function": "After “pro” (w032): a slave-market word — a buying back at a price — used here of souls."
 		},
 		"w034": {
 			"gloss": "of the souls"
@@ -165,11 +165,11 @@
 			"gloss": "their"
 		},
 		"w042": {
-			"gloss": "and to thee"
+			"gloss": "and to Thee"
 		},
 		"w043": {
 			"gloss": "they pay",
-			"function": "Vota réddere is a technical phrase: to discharge a vow made to a god, to pay what was promised."
+			"function": "Vota réddere — to discharge a vow: here the psalm's own turn, Ps 115: Vota mea Dómino reddam."
 		},
 		"w044": {
 			"gloss": "vows"
@@ -182,7 +182,7 @@
 		},
 		"w047": {
 			"gloss": "God",
-			"function": "Dative: it is to him that the vows are paid. The pair living and true comes from the Old Testament and sets God against the idols."
+			"function": "Dative: it is to him that the vows are paid. The pair living and true is 1 Thess 1:9 verbatim, setting God against the idols; Jer 10:10 stands behind it."
 		},
 		"w048": {
 			"gloss": "living"

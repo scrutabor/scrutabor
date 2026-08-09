@@ -3,7 +3,7 @@
 	"text": "ordinarium.quam-oblationem",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Five adjectives and one verb. Three of the five are words from Roman office and court: adscrípta means entered on a register, rata ratified, acceptábilis fit to be received. The last petition before the consecration says outright what the offering is to become: Body and Blood. The sentence opens with the relative Quam, reaching back to the oblatiónem of Hanc ígitur — the two prayers are one run of thought.",
+	"about": "Five epithets and one petition: fácere dignéris. Two of the five are words from Roman office and court: adscrípta means entered on a register, rata ratified; acceptábilis is the Church's own word, first found in Tertullian. The last petition before the consecration says outright what the offering is to become: Body and Blood. The sentence opens with the relative Quam, reaching back to the oblatiónem of Hanc ígitur — the two prayers are one run of thought.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,19 +13,25 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "Which oblation do thou, O God, we beseech thee, deign in all respects to make"
+			"translation": "Be pleased, O God, we pray, to make this offering in every respect"
 		},
 		"s02": {
 			"narrative": "Three signs of the cross over the offerings."
 		},
 		"s03": {
-			"translation": "blessed, approved, ratified, reasonable and acceptable:"
+			"translation": "blessed, acknowledged, approved, spiritual and acceptable:"
 		},
 		"s04": {
-			"narrative": "One sign of the cross over the host, and one over the chalice."
+			"narrative": "One sign of the cross over the Host alone, at the word Corpus, and one over the chalice alone, at Sanguis."
 		},
 		"s05": {
-			"translation": "that it may become for us the Body and Blood of thy most beloved Son our Lord Iesus Christ."
+			"translation": "so that it may become for us the Body and Blood of Your most beloved Son,"
+		},
+		"s06": {
+			"narrative": "The priest joins his hands."
+		},
+		"s07": {
+			"translation": "our Lord Jesus Christ."
 		}
 	},
 	"words": {
@@ -37,7 +43,7 @@
 			"gloss": "oblation"
 		},
 		"w003": {
-			"gloss": "thou",
+			"gloss": "Thou",
 			"function": "A subject pronoun Latin usually leaves out: here it insists that God alone can do this."
 		},
 		"w004": {
@@ -56,16 +62,16 @@
 			"gloss": "blessed"
 		},
 		"w009": {
-			"gloss": "approved",
+			"gloss": "enrolled",
 			"function": "Literally entered on a list. The one word of the five the dictionaries do not head as an adjective — it is the perfect passive participle of adscríbo."
 		},
 		"w010": {
 			"gloss": "ratified",
-			"function": "A legal term: a rata agreement is one that holds good; ratification comes from it."
+			"function": "The juridical epithet of the five: the offering is to be valid and irrevocable, as a ratified act (ratum habére)."
 		},
 		"w011": {
 			"gloss": "reasonable",
-			"function": "The Canon follows Rom 12:1: rationábile obséquium, a reasonable service — spiritual rather than animal sacrifice."
+			"function": "An echo of Rom 12:1: rationábile obséquium — a spiritual sacrifice, not an animal one."
 		},
 		"w012": {
 			"gloss": "and acceptable"
@@ -85,7 +91,7 @@
 		},
 		"w017": {
 			"gloss": "the Body",
-			"function": "Nominative: Corpus and Sanguis are the subjects of “fiat” (w020), though everything around them stands in other cases."
+			"function": "Nominative: Corpus and Sanguis are what the offering is to become — predicate nominatives beside “fiat” (w020), whose subject, the offering itself, is never spoken. That is why the verb is singular."
 		},
 		"w018": {
 			"gloss": "and"
@@ -95,17 +101,17 @@
 		},
 		"w020": {
 			"gloss": "may become",
-			"function": "Fio has active forms and a passive meaning — to become, that is, to be made; it serves as the passive of fácio."
+			"function": "Fio has almost all active forms with a passive meaning (the infinitive fíeri is the exception) — to become, that is, to be made; it serves as the passive of fácio."
 		},
 		"w021": {
 			"gloss": "most beloved",
-			"function": "The superlative of the participle of díligo, to love by choice; the word the Father uses of the Son at the Jordan."
+			"function": "The superlative of the participle of díligo, to love by choice; in its positive degree the word the Father uses of the Son at the Jordan (diléctus)."
 		},
 		"w022": {
 			"gloss": "Son"
 		},
 		"w023": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w024": {
 			"gloss": "Lord"
@@ -114,7 +120,7 @@
 			"gloss": "our"
 		},
 		"w026": {
-			"gloss": "Iesus"
+			"gloss": "Jesus"
 		},
 		"w027": {
 			"gloss": "Christ"

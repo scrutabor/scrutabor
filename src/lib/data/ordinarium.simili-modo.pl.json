@@ -3,7 +3,7 @@
 	"text": "ordinarium.simili-modo",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Konsekracja kielicha i polecenie powtarzania. Słowa nad kielichem są dłuższe niż którykolwiek opis biblijny: „mystérium fídei” nie stoi w żadnej relacji o ustanowieniu, a „ætérni” dokłada Kanon do „nowego przymierza” z Łk 22 i 1 Kor 11 — samo określenie „krew przymierza wiecznego” pochodzi z Hbr 13, 20. Zdanie „Hæc quotiescúmque fecéritis” jest cytatem z 1 Kor 11.",
+	"about": "Konsekracja kielicha i polecenie powtarzania. Słowa nad kielichem są dłuższe niż którykolwiek opis biblijny: „mystérium fídei” nie stoi w żadnej relacji o ustanowieniu, a „ætérni” dokłada Kanon do „nowego przymierza” Mt 26 i Mk 14 — kielich sam jest z Łk 22 i 1 Kor 11, „pro vobis” Łukaszowe, „pro multis” Mateuszowe i Markowe, a określenie „krew przymierza wiecznego” pochodzi z Hbr 13, 20. Zdanie „Hæc quotiescúmque fecéritis” to własna przeróbka Kanonu z 1 Kor 11, 25-26 i Łk 22, 19 — żaden opis biblijny tych słów nie ma.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,30 +16,42 @@
 			"narrative": "Kapłan odsłania kielich."
 		},
 		"s02": {
-			"translation": "Podobnie, gdy było po wieczerzy,"
+			"translation": "Podobnie po wieczerzy"
 		},
 		"s03": {
-			"narrative": "Bierze kielich obiema rękami."
+			"narrative": "Kapłan bierze kielich obiema rękami."
 		},
 		"s04": {
-			"translation": "biorąc i ten przesławny kielich w swoje święte i czcigodne ręce, znów składając Ci dzięki, pobłogosławił i dał uczniom swoim, mówiąc:"
+			"translation": "wziął ten przesławny kielich w swoje święte i czcigodne ręce,"
 		},
 		"s05": {
-			"translation": "Bierzcie i pijcie z niego wszyscy."
+			"narrative": "Kapłan znów pochyla głowę."
 		},
 		"s06": {
-			"narrative": "Kapłan wymawia słowa konsekracji nad kielichem uważnie, jednym ciągiem i po cichu, trzymając go nieco uniesiony."
+			"translation": "ponownie dzięki Tobie składając,"
 		},
 		"s07": {
-			"translation": "To jest bowiem Kielich Krwi mojej, nowego i wiecznego przymierza: tajemnica wiary: która za was i za wielu będzie wylana na odpuszczenie grzechów."
+			"narrative": "Trzymając kielich w lewej ręce, kapłan prawą czyni nad nim znak krzyża."
 		},
 		"s08": {
-			"narrative": "Po tych słowach kapłan stawia kielich na korporale i mówi po cichu:"
+			"translation": "błogosławił i podał swoim uczniom, mówiąc:"
 		},
 		"s09": {
-			"translation": "Ilekroć to czynić będziecie, na moją pamiątkę czynić będziecie."
+			"translation": "Bierzcie i pijcie z niego wszyscy:"
 		},
 		"s10": {
+			"narrative": "Kapłan wymawia słowa konsekracji nad kielichem uważnie, jednym ciągiem i po cichu, trzymając go nieco uniesiony."
+		},
+		"s11": {
+			"translation": "To jest bowiem kielich Krwi mojej nowego i wiecznego przymierza: tajemnica wiary: która za was i za wielu będzie wylana na odpuszczenie grzechów."
+		},
+		"s12": {
+			"narrative": "Po tych słowach kapłan stawia kielich na korporale i mówi po cichu:"
+		},
+		"s13": {
+			"translation": "Ilekroć to czynić będziecie, na moją pamiątkę czynić będziecie."
+		},
+		"s14": {
 			"narrative": "Kapłan przyklęka i adoruje, wstaje, ukazuje kielich ludowi, stawia go, nakrywa i znów przyklęka."
 		}
 	},
@@ -56,7 +68,7 @@
 		},
 		"w004": {
 			"gloss": "po wieczerzy",
-			"function": "Cenátum est nie ma podmiotu: dosłownie „zjedzono”. Słowniki podają cenátum jako przymiotnik i tak jest tu opisane, ale ściśle biorąc to bezosobowa strona bierna czasownika ceno."
+			"function": "Rodzaj nijaki liczby pojedynczej, nie zgadzający się z niczym: est daje czas, a zwrot obywa się bez podmiotu. Analizatory podają cenátus jako osobny przymiotnik; to wydanie opisuje imiesłów pod czasownikiem, do którego należy."
 		},
 		"w005": {
 			"gloss": "było"
@@ -73,7 +85,7 @@
 		},
 		"w009": {
 			"gloss": "przesławny",
-			"function": "Dosłownie „bardzo jasny”; præ- wzmacnia, a nie znaczy „przed”."
+			"function": "Przydawka przy „Cálicem” (w010) — echo Ps 22, 5: calix meus inébrians quam præclárus est."
 		},
 		"w010": {
 			"gloss": "kielich",
@@ -176,18 +188,18 @@
 		},
 		"w041": {
 			"gloss": "przymierza",
-			"function": "Rzymski testamentum to rozporządzenie na wypadek śmierci; łacina biblijna wzięła to słowo na hebrajskie „przymierze”, i oba znaczenia tu brzmią."
+			"function": "Dopełniacz z „novi” (w038) i „ætérni” (w040), zawieszony na „Sánguinis” (w036): krew nowego i wiecznego przymierza."
 		},
 		"w042": {
 			"gloss": "tajemnica",
-			"function": "Mianownik: apozycja (dopowiedzenie) do „Calix” (w035), nie dopełnienie niczego. Tych dwóch słów nie ma w żadnym opisie ustanowienia."
+			"function": "Mianownik, nie rządzony niczym: odczytanie przyjęte widzi tu apozycję (dopowiedzenie) do „Calix” (w035), dawniejsza tradycja słyszy osobny okrzyk, a oba słowa noszą znak sporu. Tych dwóch słów nie ma w żadnym opisie ustanowienia."
 		},
 		"w043": {
 			"gloss": "wiary"
 		},
 		"w044": {
 			"gloss": "która",
-			"function": "Rodzaj męski, bo zaimek zgadza się z „Calix” (w035), nie z krwią; polszczyzna musi tu wybrać inny rodzaj."
+			"function": "Rodzaj męski niczego tu nie rozstrzyga: „Calix” (w035) i „Sánguinis” (w036) są oba męskie, więc forma zostawia pytanie otwarte. Mt 26, 28 mówi tak o krwi — i polszczyzna, zmuszona wybrać, idzie za krwią: „która”."
 		},
 		"w045": {
 			"gloss": "za"
@@ -224,7 +236,7 @@
 			"gloss": "ilekroć"
 		},
 		"w056": {
-			"gloss": "czynić będziecie",
+			"gloss": "uczynicie",
 			"function": "Czas przyszły dokonany: czynność zakończona przed tą, o której mówi „faciétis” (w060). Ta sama forma może być trybem łączącym czasu przeszłego, rozstrzyga następujący czas przyszły."
 		},
 		"w057": {
@@ -232,7 +244,7 @@
 		},
 		"w058": {
 			"gloss": "moją",
-			"function": "Dopełniacz zaimka osobowego, nie przymiotnik dzierżawczy: „pamiątkę mnie”, nie „moją pamiątkę”."
+			"function": "Dopełniacz zaimka osobowego, nie przymiotnik dzierżawczy: „pamiątkę mnie”. Polszczyzna musi tu użyć zaimka dzierżawczego — „moją” — którego łacina właśnie nie ma."
 		},
 		"w059": {
 			"gloss": "pamiątkę"

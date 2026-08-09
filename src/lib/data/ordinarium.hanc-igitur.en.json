@@ -3,7 +3,7 @@
 	"text": "ordinarium.hanc-igitur",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The priest spreads his hands over the offerings — a gesture the Roman Mass uses in this one place only — and the server rings the bell: the sign that the consecration is near. The second half of the prayer, from diésque nostros, was added by St Gregory the Great, according to the Liber Pontificalis. The sentence begun back at Communicántes gets its verb only here: quǽsumus, we beseech.",
+	"about": "The priest spreads his hands over the offerings — a gesture the Roman Mass uses in this one place only — and the server rings the bell: the sign that the consecration is near. The second half of the prayer, from diésque nostros, was added by St Gregory the Great, according to the Liber Pontificalis. The petition hangs on quǽsumus: the ut-clause — that Thou accept — is carried by this one we beseech.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,10 +16,10 @@
 			"narrative": "The priest holds his hands spread over the offerings."
 		},
 		"s02": {
-			"translation": "This oblation therefore of our service, and of thy whole household, we beseech thee, O Lord, graciously to accept:"
+			"translation": "Therefore, Lord, we pray: graciously accept this oblation of our service, that of Your whole family;"
 		},
 		"s03": {
-			"translation": "and to dispose our days in thy peace, and bid us be snatched from eternal damnation and numbered in the flock of thine elect."
+			"translation": "order our days in Your peace, and command that we be delivered from eternal damnation and counted among the flock of those You have chosen."
 		},
 		"s04": {
 			"narrative": "The priest joins his hands."
@@ -41,7 +41,7 @@
 		},
 		"w004": {
 			"gloss": "of the service",
-			"function": "Servítus is not ordinary service but the condition of a slave; the Canon uses it of a service freely given to God."
+			"function": "A genitive: the offering “of our service” — of those who stand at the altar; the wider pair, “famíliæ” (w009), follows at once."
 		},
 		"w005": {
 			"gloss": "our"
@@ -57,14 +57,14 @@
 		},
 		"w009": {
 			"gloss": "household",
-			"function": "In Latin a família is a house together with its servants, not the family in our sense; here it is the whole Church."
+			"function": "A genitive paired with “servitútis” (w004): after the service of the altar, the whole household of God — the Church."
 		},
 		"w010": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w011": {
 			"gloss": "we beseech",
-			"function": "A fossilised parenthesis, like the English “we pray”: it does not govern the sentence but softens it."
+			"function": "Often a fossilised parenthesis; here it governs: the clause with “ut” (w013) hangs on this verb of asking."
 		},
 		"w012": {
 			"gloss": "O Lord"
@@ -90,7 +90,7 @@
 			"gloss": "in"
 		},
 		"w019": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w020": {
 			"gloss": "peace"
@@ -116,7 +116,7 @@
 		},
 		"w027": {
 			"gloss": "be snatched",
-			"function": "A passive infinitive depending on “iúbeas” (w032), six words further on; the same verb governs “numerári” (w034) as well."
+			"function": "A passive infinitive depending on “iúbeas” (w032), five words further on; the same verb governs “numerári” (w034) as well."
 		},
 		"w028": {
 			"gloss": "and"
@@ -125,17 +125,17 @@
 			"gloss": "in"
 		},
 		"w030": {
-			"gloss": "of thine elect"
+			"gloss": "of the elect"
 		},
 		"w031": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w032": {
 			"gloss": "bid"
 		},
 		"w033": {
 			"gloss": "the flock",
-			"function": "An ablative with numerári: numbered within the flock, not added to it."
+			"function": "An ablative under “in” (w029): numbered within the flock, not added to it."
 		},
 		"w034": {
 			"gloss": "be numbered"

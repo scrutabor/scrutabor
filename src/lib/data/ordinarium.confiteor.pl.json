@@ -3,7 +3,7 @@
 	"text": "ordinarium.confiteor",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Spowiedź powszechna z modlitw u stopni ołtarza. Najpierw odmawia ją kapłan, potem — w tej wersji, z „tibi, pater” — usługujący, a we Mszy dialogowanej wraz z nimi wierni. Po pierwszej następuje Misereátur, po drugiej Misereátur i Indulgéntiam. Wyrosła ze średniowiecznych modlitw przygotowania do Mszy, a jej obecny kształt utrwalił mszał św. Piusa V (1570).",
+	"about": "Spowiedź powszechna z modlitw u stopni ołtarza. Najpierw odmawia ją kapłan, potem — w tej wersji, z „tibi, pater” — usługujący, a we Mszy dialogowanej wraz z nimi wierni. Po pierwszej następuje Misereátur, po spowiedzi usługujących — Misereátur i Indulgéntiam. Wyrosła ze średniowiecznych modlitw przygotowania do Mszy, a jej obecny kształt utrwalił mszał św. Piusa V (1570).",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,7 +16,7 @@
 			"narrative": "Ministranci — we Mszy uroczystej diakon i subdiakon — powtarzają teraz spowiedź powszechną; wierni odmawiają ją razem z nimi: na głos we Mszy recytowanej albo w duchu."
 		},
 		"s02": {
-			"translation": "Spowiadam się Bogu wszechmogącemu, błogosławionej Maryi zawsze Dziewicy, błogosławionemu Michałowi Archaniołowi, błogosławionemu Janowi Chrzcicielowi, świętym Apostołom Piotrowi i Pawłowi, wszystkim Świętym i tobie, ojcze:"
+			"translation": "Spowiadam się Bogu wszechmogącemu, Najświętszej Maryi zawsze Dziewicy, świętemu Michałowi Archaniołowi, świętemu Janowi Chrzcicielowi, świętym Apostołom Piotrowi i Pawłowi, wszystkim Świętym i tobie, ojcze:"
 		},
 		"s03": {
 			"translation": "że bardzo zgrzeszyłem myślą, mową i uczynkiem:"
@@ -28,7 +28,7 @@
 			"translation": "moja wina, moja wina, moja bardzo wielka wina."
 		},
 		"s06": {
-			"translation": "Przeto błagam błogosławioną Maryję zawsze Dziewicę, błogosławionego Michała Archanioła, błogosławionego Jana Chrzciciela, świętych Apostołów Piotra i Pawła, wszystkich Świętych i ciebie, ojcze, o modlitwę za mnie do Pana Boga naszego."
+			"translation": "Przeto błagam Najświętszą Maryję zawsze Dziewicę, świętego Michała Archanioła, świętego Jana Chrzciciela, świętych Apostołów Piotra i Pawła, wszystkich Świętych i ciebie, ojcze, o modlitwę za mnie do Pana Boga naszego."
 		}
 	},
 	"words": {
@@ -73,7 +73,7 @@
 		},
 		"w011": {
 			"gloss": "błogosławionemu",
-			"function": "Zgadza się z następującym „Ioánni” (w012). „Beatus” powtarza się przed każdym imieniem tej litanii świętych."
+			"function": "Zgadza się z następującym „Ioánni” (w012). „Beátus” poprzedza troje wymienionych osobno — Maryję, Michała, Jana; od Apostołów modlitwa mówi „sanctis”."
 		},
 		"w012": {
 			"gloss": "Janowi"
@@ -99,7 +99,7 @@
 		},
 		"w018": {
 			"gloss": "Pawłowi",
-			"function": "Apozycja (dopowiedzenie) do „Apóstolis” (w015)."
+			"function": "Razem z „Petro” (w016) apozycja (dopowiedzenie) do „Apóstolis” (w015)."
 		},
 		"w019": {
 			"gloss": "wszystkim",
@@ -230,14 +230,14 @@
 		},
 		"w052": {
 			"gloss": "Piotra",
-			"function": "Apozycja (dopowiedzenie) do „Apóstolos” (w051). Por. „Petro” (w016)."
+			"function": "Razem z „Paulum” (w054) apozycja (dopowiedzenie) do „Apóstolos” (w051). Por. „Petro” (w016)."
 		},
 		"w053": {
 			"gloss": "i"
 		},
 		"w054": {
 			"gloss": "Pawła",
-			"function": "Apozycja (dopowiedzenie) do „Apóstolos” (w051). Por. „Paulo” (w018)."
+			"function": "Razem z „Petrum” (w052) apozycja (dopowiedzenie) do „Apóstolos” (w051). Por. „Paulo” (w018)."
 		},
 		"w055": {
 			"gloss": "wszystkich",
@@ -260,7 +260,7 @@
 		},
 		"w060": {
 			"gloss": "modlić się",
-			"function": "Bezokolicznik w konstrukcji „precor + biernik + bezokolicznik”: błagam ich, aby się modlili. To on niesie treść prośby."
+			"function": "Bezokolicznik w konstrukcji „precor + biernik + bezokolicznik”: błagam ich — i ciebie — aby się modlili. To on niesie treść prośby."
 		},
 		"w061": {
 			"gloss": "za"

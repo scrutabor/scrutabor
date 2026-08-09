@@ -747,6 +747,15 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"analysis": {
+						"confidence": "medium",
+						"sources": [
+							"editorial",
+							"whitakers",
+							"collatinus"
+						],
+						"review": "disputed"
 					}
 				},
 				{

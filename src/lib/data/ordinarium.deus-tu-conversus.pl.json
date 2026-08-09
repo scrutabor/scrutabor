@@ -3,7 +3,7 @@
 	"text": "ordinarium.deus-tu-conversus",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Cztery pary wersetów, wszystkie wyjęte z psalmów. Pierwsze dwie to jeden ciąg: psalm 84, wiersze 7 i 8, wzięte po kolei i rozdzielone na dwa głosy. Trzecia to psalm 101, wiersz 2. Czwarta — Dóminus vobíscum — nie pochodzi z psalmu i pada tu po raz pierwszy we Mszy; kapłan powtórzy ją jeszcze kilkakrotnie, zawsze przed czymś, co ma zrobić razem z ludem.",
+	"about": "Cztery pary wersetów, trzy z nich wyjęte z psalmów. Pierwsze dwie to jeden ciąg: psalm 84, wiersze 7 i 8, wzięte po kolei i rozdzielone na dwa głosy. Trzecia to psalm 101, wiersz 2. Czwarta — Dóminus vobíscum — nie pochodzi z psalmu i pada tu po raz pierwszy we Mszy; kapłan powtórzy ją jeszcze kilkakrotnie, zawsze przed czymś, co ma zrobić razem z ludem.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,10 +13,10 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan pozostaje pochylony u stopni ołtarza i mówi dalej, na przemian z ministrantem. To ostatnie słowa, jakie padają u stopni: zaraz potem wstąpi na ołtarz."
+			"narrative": "Kapłan pozostaje pochylony u stopni ołtarza i mówi dalej, na przemian z ministrantem. U stopni padnie jeszcze jedno słowo — głośne Orémus — i z nim kapłan wstąpi na ołtarz."
 		},
 		"s02": {
-			"translation": "Boże, Ty zwróciwszy się ku nam, ożywisz nas."
+			"translation": "Boże, Ty, zwróciwszy się ku nam, ożywisz nas."
 		},
 		"s03": {
 			"translation": "A lud Twój rozraduje się w Tobie."
@@ -71,7 +71,7 @@
 		},
 		"w009": {
 			"gloss": "rozraduje się",
-			"function": "Deponens (forma bierna, znaczenie czynne): wygląda na stronę bierną, znaczy „będzie się radował”."
+			"function": "Futurum: radość ludu odpowiada zapowiedzianemu ożywieniu — najpierw Boży zwrot ku nam, potem radowanie się w Nim."
 		},
 		"w010": {
 			"gloss": "w"
@@ -92,7 +92,7 @@
 		},
 		"w015": {
 			"gloss": "miłosierdzie",
-			"function": "Złożenie z miser (nieszczęsny) i cor (serce) — serce dla nieszczęśliwego; ta sama budowa co „miséricors” w poprzedniej modlitwie."
+			"function": "Biernik prośby: miłosierdzie ma tu być okazane, pokazane niemal jak rzecz widzialna — wiersz prosi Boga, by dał je zobaczyć."
 		},
 		"w016": {
 			"gloss": "Twoje",
@@ -167,7 +167,7 @@
 		},
 		"w036": {
 			"gloss": "duchem",
-			"function": "Odpowiedź nie brzmi „i z tobą”: lud odpowiada kapłanowi wskazując na to, co otrzymał przy święceniach."
+			"function": "Dawni czytali „z duchem twoim” o łasce święceń kapłana; Jungmann słyszy tu semityzm — po prostu „z tobą”. Oba odczytania stoją obok siebie."
 		},
 		"w037": {
 			"gloss": "twoim",

@@ -3,7 +3,7 @@
 	"text": "ordinarium.pater-noster",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The missal's rubrics call the sentence that opens this text the preface of the Lord's Prayer, and call the prayer itself a precatio ad Communionem, a prayer belonging to Communion — which is why it stands here, after the Canon, and not among the Canon's own petitions. The preface lays down two grounds before the words are risked, precepts that save and an institution that is divine, and then names the risk: audémus dícere, we dare to say. The priest says the prayer alone as far as tentatiónem; the last petition falls to the server, and the Amen the priest adds under his breath. The same words stand elsewhere in this collection as a prayer on its own, for use outside Mass.",
+	"about": "The missal's rubrics call the sentence that opens this text the preface of the Lord's Prayer; a 1958 Instruction calls the prayer itself a precatio ad Communionem, an ancient prayer toward Communion. Its place after the Canon is Gregory the Great's arrangement. The preface lays down two grounds before the words are risked, precepts that save and an institution that is divine, and then names the risk: audémus dícere, we dare to say. The priest says the prayer alone as far as tentatiónem; the last petition falls to the server, and the Amen the priest adds under his breath. The same words stand elsewhere in this collection as a prayer on its own, for use outside Mass.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -19,7 +19,7 @@
 			"translation": "Let us pray."
 		},
 		"s03": {
-			"translation": "Admonished by saving precepts, and formed by divine instruction, we dare to say:"
+			"translation": "At the Saviour's command and formed by divine teaching, we dare to say:"
 		},
 		"s04": {
 			"narrative": "The priest spreads his hands, and keeps them so through the prayer."
@@ -46,7 +46,7 @@
 			"translation": "And lead us not into temptation,"
 		},
 		"s12": {
-			"translation": "But deliver us from evil."
+			"translation": "but deliver us from evil."
 		},
 		"s13": {
 			"narrative": "The priest answers himself, quietly."
@@ -70,7 +70,7 @@
 		},
 		"w004": {
 			"gloss": "admonished",
-			"function": "A participle, not an adjective — the plural refers to the whole assembly, which is why the sentence can end in the first person plural."
+			"function": "A participle, not an adjective — it agrees with the unexpressed we, the subject of “audémus”: hence the first person plural at the end."
 		},
 		"w005": {
 			"gloss": "and"
@@ -120,7 +120,7 @@
 		},
 		"w017": {
 			"gloss": "hallowed be",
-			"function": "The subjunctive as a wish-petition: “may it be made holy” — the first of three petitions voiced this way."
+			"function": "The subjunctive as a wish-petition: “may it be made holy” — the first of three petitions asked in the third person."
 		},
 		"w018": {
 			"gloss": "name",
@@ -243,7 +243,7 @@
 		},
 		"w050": {
 			"gloss": "not",
-			"function": "With the subjunctive “indúcas” (w052) it forms a negative petition: “that Thou not…”."
+			"function": "With the subjunctive “indúcas” (w052) it forms a negative main petition: “do not…” — a direct prohibition, not a subordinate clause."
 		},
 		"w051": {
 			"gloss": "us",
@@ -267,7 +267,7 @@
 		},
 		"w056": {
 			"gloss": "deliver",
-			"function": "The word the prayer that follows will take up and expand — líbera nos ab ómnibus malis, the same imperative opening the embolism."
+			"function": "The word the prayer that follows will take up and expand — Líbera nos, quǽsumus, Dómine, ab ómnibus malis: the same imperative opening the embolism."
 		},
 		"w057": {
 			"gloss": "us",
@@ -278,11 +278,11 @@
 		},
 		"w059": {
 			"gloss": "evil",
-			"function": "The form leaves the gender open: neuter “malum” (evil) or masculine “malus” (the Evil One)? The tradition reads both senses at once."
+			"function": "The form leaves the gender open: neuter “malum” (evil) or masculine “malus” (the Evil One)? The tradition reads both senses at once, and the embolism just after the prayer takes the word up in the neuter plural — ab ómnibus malis."
 		},
 		"w060": {
 			"gloss": "amen",
-			"function": "The priest's own, said secretly — he answers the answer, and the prayer ends without the people hearing it close."
+			"function": "The priest's own: the page rubric has him say it secrete, the Ritus servandus submissa voce, in a lowered voice; the edition follows the page rubric and records the disagreement."
 		}
 	}
 }

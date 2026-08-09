@@ -13,32 +13,32 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "Pamiętaj, Panie, o sługach i służebnicach Twoich"
+			"translation": "Pamiętaj, Boże, o swoich sługach i służebnicach"
 		},
 		"s02": {
 			"narrative": "Kapłan składa ręce i modli się chwilę w milczeniu za tych, których chce wspomnieć; potem rozkłada ręce i mówi dalej."
 		},
 		"s03": {
-			"translation": "i o wszystkich tu obecnych, których wiara jest Ci znana i pobożność wiadoma, za których Ci składamy:"
+			"translation": "i o wszystkich tu zgromadzonych, których wiara i oddanie są Ci znane. Za nich składamy Tobie:"
 		},
 		"s04": {
-			"translation": "albo którzy Ci składają tę ofiarę chwały za siebie i za wszystkich swoich: za odkupienie dusz swoich, za nadzieję zbawienia i bezpieczeństwa swego,"
+			"translation": "albo oni sami składają Tobie tę Ofiarę uwielbienia za siebie oraz za wszystkich swoich bliskich: aby dostąpić odkupienia dusz swoich i osiągnąć zbawienie,"
 		},
 		"s05": {
-			"translation": "i Tobie oddają swoje śluby, Bogu wiecznemu, żywemu i prawdziwemu."
+			"translation": "i wznoszą swoje modlitwy ku Tobie, Bogu wiecznemu, żywemu i prawdziwemu."
 		}
 	},
 	"words": {
 		"w001": {
 			"gloss": "pamiętaj",
-			"function": "Rozkaźnik czasu przyszłego — jedyny, jaki ten czasownik ma; łacina znaczy nim „miej to w pamięci, gdy przyjdzie chwila”."
+			"function": "Rozkaźnik czasu przyszłego — jedyny rodzaj rozkaźnika, jaki ten czasownik ma (obok mnogiego mementóte); łacina znaczy nim „miej to w pamięci, gdy przyjdzie chwila”."
 		},
 		"w002": {
 			"gloss": "Panie"
 		},
 		"w003": {
 			"gloss": "sług",
-			"function": "Dopełniacz, bo meminísse rządzi dopełniaczem: pamiętać kogoś, nie kogo."
+			"function": "Dopełniacz, bo meminísse rządzi dopełniaczem — po polsku raczej: pamiętać o kimś."
 		},
 		"w004": {
 			"gloss": "i służebnic",
@@ -116,7 +116,7 @@
 		},
 		"w027": {
 			"gloss": "chwały",
-			"function": "Sacrifícium laudis to zwrot z psalmów (Ps 49 i 115), przejęty przez Kanon."
+			"function": "Sacrifícium laudis to zwrot z psalmów (Ps 49 i 106), przejęty przez Kanon."
 		},
 		"w028": {
 			"gloss": "za"
@@ -137,7 +137,7 @@
 		},
 		"w033": {
 			"gloss": "odkupienie",
-			"function": "Od émere — kupić; redémptio to wykupienie niewolnika za cenę."
+			"function": "Ablativus po „pro” (w032): słowo z targu niewolników — wykup za cenę — użyte tu o duszach."
 		},
 		"w034": {
 			"gloss": "dusz"
@@ -169,7 +169,7 @@
 		},
 		"w043": {
 			"gloss": "oddają",
-			"function": "Vota réddere to zwrot techniczny: wypełnić ślub złożony bóstwu, oddać to, co obiecane."
+			"function": "Vota réddere — wypełnić ślub: tu psalmowy zwrot, Ps 115: Vota mea Dómino reddam."
 		},
 		"w044": {
 			"gloss": "śluby"
@@ -182,7 +182,7 @@
 		},
 		"w047": {
 			"gloss": "Bogu",
-			"function": "Celownik: to Jemu oddaje się śluby. Zwrot „żywemu i prawdziwemu” pochodzi ze Starego Testamentu i przeciwstawia Boga bożkom."
+			"function": "Celownik: to Jemu oddaje się śluby. Zwrot „żywemu i prawdziwemu” to słowa 1 Tes 1, 9, przeciwstawiające Boga bożkom; w tle stoi Jr 10, 10."
 		},
 		"w048": {
 			"gloss": "żywemu"

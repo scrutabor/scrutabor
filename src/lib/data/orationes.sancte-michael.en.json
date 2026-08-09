@@ -3,7 +3,7 @@
 	"text": "orationes.sancte-michael",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The prayer Leo XIII composed and ordered to be said after low Mass; among his prayers it stands after the Salve Regína and the collect. Three sentences and three different postures: first a plea to Michael for defence, then a wish addressed to God — let Him command him — and last a command to Michael again, this time a long one, with a whole train of objects before the verb. The name Míchaël is Hebrew for “who is like God”, and the prayer says exactly that when it leaves the commanding to God and the carrying out to the Archangel.",
+	"about": "The prayer Leo XIII composed and ordered to be said after low Mass; among his prayers it stands after the Salve Regína and the collect. Three petitions and three different postures: first a plea to Michael for defence, then a wish that God command the enemy, and last a charge to Michael again, this time a long one, with a whole train of objects before the verb. The name Míchaël is Hebrew for “who is like God”, and the prayer says exactly that when it leaves the commanding to God and the carrying out to the Archangel.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,13 +13,13 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "Saint Michael the Archangel, defend us in battle; against the wickedness and snares of the devil be our protection."
+			"translation": "Saint Michael the Archangel, defend us in battle. Be our protection against the wickedness and snares of the devil."
 		},
 		"s02": {
-			"translation": "May God command him, we humbly pray."
+			"translation": "May God rebuke him, we humbly pray."
 		},
 		"s03": {
-			"translation": "And do thou, Prince of the heavenly host, thrust down into hell Satan and the other evil spirits who roam the world for the ruin of souls, by the power of God. Amen."
+			"translation": "And do thou, O Prince of the heavenly hosts, by the power of God, thrust into hell Satan, and all the evil spirits, who prowl about the world seeking the ruin of souls. Amen."
 		}
 	},
 	"words": {
@@ -62,14 +62,14 @@
 		},
 		"w013": {
 			"gloss": "be",
-			"function": "The future imperative — the form Latin uses for orders meant to hold from now on, not only at this moment. The plain imperative would be es."
+			"function": "The future imperative — the form Latin uses for orders meant to hold from now on, not only at this moment. The plain imperative would be “es”."
 		},
 		"w014": {
 			"gloss": "protection"
 		},
 		"w015": {
 			"gloss": "May command",
-			"function": "Subjunctive of wish, and not a request to Michael: the commanding is God's. The verb governs the dative — hence “illi” (w016), not an accusative."
+			"function": "Subjunctive of wish, and not a request to Michael: the commanding is God's. The verb governs the dative — hence “illi” (w016), not an accusative. The received English says “rebuke”, after the Greek of Jude 9; the Latin imperet is command."
 		},
 		"w016": {
 			"gloss": "him"
@@ -79,7 +79,7 @@
 		},
 		"w018": {
 			"gloss": "humbly",
-			"function": "An adjective in the nominative plural, not an adverb: “we, suppliant, pray”."
+			"function": "An adjective in the nominative plural — “we, suppliant, pray” — rendered adverbially, as English wants it."
 		},
 		"w019": {
 			"gloss": "we pray",
@@ -104,7 +104,7 @@
 		},
 		"w025": {
 			"gloss": "and the other",
-			"function": "It declines like a pronoun: genitive alíus, dative álii, not like the -us, -a, -um adjectives. The -que hung on it joins it to “sátanam” (w024)."
+			"function": "It declines like a pronoun: genitive “alíus”, dative “álii”, not like the -us, -a, -um adjectives. The -que hung on it joins it to “sátanam” (w024)."
 		},
 		"w026": {
 			"gloss": "spirits"
@@ -135,10 +135,10 @@
 			"gloss": "the world"
 		},
 		"w035": {
-			"gloss": "by power"
+			"gloss": "divine"
 		},
 		"w036": {
-			"gloss": "divine",
+			"gloss": "by power",
 			"function": "Ablative of means: Michael casts them down not by his own strength but by God's."
 		},
 		"w037": {

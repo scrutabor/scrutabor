@@ -31,3 +31,6 @@ build-offline-runtime
 build-offline
 Scrutabor*.zip
 Scrutabor/
+
+# the python venv for scripts/subset-fonts.py
+.venv/

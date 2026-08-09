@@ -7,7 +7,7 @@
 	"variant": "missae",
 	"sung": false,
 	"status": "working-edition",
-	"notes": "The consecration of the bread. The words of consecration are set as the typical edition prints them — Hoc est enim Corpus meum — with a capital only on the opening word and on Corpus. Both hand missals set the whole formula in capitals, and this edition followed them until the typical edition itself could be read; the authority's own practice governs, and the hand missals' capitals are recorded in the apparatus rather than corrected. The accents follow the corpus's rule, which handmissal-eo also prints and do does not. ELEVÁTIS ÓCULIS at w015-w015 is an ablative absolute; elevátis is a participle here rather than an adjective, since neither analyzer heads one. OMNES at w038 is nominative, agreeing with the unstated subject of the two imperatives — all of you, take and eat — and not a vocative address, though the two forms are identical. QUAM at w003 is the conjunction that follows prídie, not the relative pronoun whose accusative is spelt the same.",
+	"notes": "The consecration of the bread. The words of consecration are set as the typical edition prints them — Hoc est enim Corpus meum — with a capital only on the opening word and on Corpus. Both hand missals set the whole formula in capitals, and this edition followed them until the typical edition itself could be read; the authority's own practice governs, and the hand missals' capitals are recorded in the apparatus rather than corrected. The accents follow the corpus's rule, which handmissal-eo also prints and do does not. ELEVÁTIS ÓCULIS at w014-w015 is an ablative absolute; elevátis is a participle here rather than an adjective, since neither analyzer heads one. OMNES at w038 is nominative, agreeing with the unstated subject of the two imperatives — all of you, take and eat — and not a vocative address, though the two forms are identical. QUAM at w003 is the conjunction that follows prídie, not the relative pronoun whose accusative is spelt the same.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
 		"witnesses": "witnesses/ordinarium.qui-pridie/",
@@ -222,6 +222,15 @@
 						"mood": "part",
 						"voice": "pass",
 						"conj": 1
+					},
+					"analysis": {
+						"confidence": "high",
+						"sources": [
+							"editorial",
+							"whitakers",
+							"collatinus"
+						],
+						"review": "pending"
 					}
 				},
 				{
@@ -322,7 +331,29 @@
 						"number": "sg",
 						"gender": "m"
 					}
-				},
+				}
+			]
+		},
+		{
+			"id": "s05",
+			"type": "rubric",
+			"text": "Caput inclinat.",
+			"analysis": {
+				"confidence": "high",
+				"sources": [
+					"editorial",
+					"do",
+					"mr"
+				],
+				"review": "pending"
+			}
+		},
+		{
+			"id": "s06",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "secreto",
+			"words": [
 				{
 					"id": "w024",
 					"form": "tibi",
@@ -360,7 +391,29 @@
 						"voice": "act",
 						"conj": 3
 					}
-				},
+				}
+			]
+		},
+		{
+			"id": "s07",
+			"type": "rubric",
+			"text": "Signat super Hostiam.",
+			"analysis": {
+				"confidence": "high",
+				"sources": [
+					"editorial",
+					"do",
+					"mr"
+				],
+				"review": "pending"
+			}
+		},
+		{
+			"id": "s08",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "secreto",
+			"words": [
 				{
 					"id": "w027",
 					"form": "benedíxit",
@@ -448,7 +501,7 @@
 			]
 		},
 		{
-			"id": "s05",
+			"id": "s09",
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
@@ -520,12 +573,21 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
+					},
+					"analysis": {
+						"confidence": "high",
+						"sources": [
+							"editorial",
+							"whitakers",
+							"collatinus"
+						],
+						"review": "pending"
 					}
 				}
 			]
 		},
 		{
-			"id": "s06",
+			"id": "s10",
 			"type": "rubric",
 			"text": "Tenens ambabus manibus Hostiam inter indices et pollices, profert verba consecrationis secrete, distincte et attente super Hostiam, et simul super omnes, si plures sint consecrandæ.",
 			"analysis": {
@@ -538,7 +600,7 @@
 			}
 		},
 		{
-			"id": "s07",
+			"id": "s11",
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
@@ -602,9 +664,9 @@
 			]
 		},
 		{
-			"id": "s08",
+			"id": "s12",
 			"type": "rubric",
-			"text": "Quibus verbis prolatis, statim Hostiam consecratam genuflexus adorat: surgit, ostendit populo, reponit super Corporale, et genuflexus iterum adorat.",
+			"text": "Quibus verbis prolatis, statim Hostiam consecratam genuflexus adorat: surgit, ostendit populo, reponit super Corporale, et genuflexus iterum adorat: nec amplius pollices et indices disiungit, nisi quando Hostia tractanda est, usque ad ablutionem digitorum.",
 			"analysis": {
 				"confidence": "high",
 				"sources": [

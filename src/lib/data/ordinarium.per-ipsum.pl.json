@@ -3,7 +3,7 @@
 	"text": "ordinarium.per-ipsum",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Doksologia zamykająca Kanon, mówiona z hostią uniesioną nad kielichem: to mała elewacja, tak nazwana dla odróżnienia od dwóch podniesień po każdej konsekracji. Te dwa są młodsze — weszły do Mszy rzymskiej dopiero około roku 1200; to jedno jest starsze. Cały Kanon kapłan mówi po cichu; lud słyszy z niego tylko trzy pierwsze słowa Nobis quoque i to końcowe „Per ómnia sǽcula sæculórum”, na które odpowiada Amen.",
+	"about": "Doksologia zamykająca Kanon, mówiona z Hostią uniesioną nad kielichem: to mała elewacja, tak nazwana dla odróżnienia od podniesienia po każdej z dwóch konsekracji. Tamte są młodsze — podniesienie Hostii weszło do Mszy rzymskiej około roku 1200, kielicha rozpowszechniało się jeszcze dłużej; to jedno jest starsze, poświadczone od IX wieku. Cały Kanon kapłan mówi po cichu; lud słyszy z niego tylko trzy pierwsze słowa Nobis quoque i to końcowe „Per ómnia sǽcula sæculórum”, na które lud — we Mszy cichej ministrant — odpowiada Amen.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,28 +13,28 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan odsłania kielich, przyklęka, bierze hostię w prawą rękę i trzymając lewą kielich, czyni nią trzy znaki krzyża od brzegu do brzegu kielicha."
+			"narrative": "Kapłan odsłania kielich, przyklęka, bierze Hostię w prawą rękę i trzymając lewą kielich, czyni nią trzy znaki krzyża od brzegu do brzegu kielicha."
 		},
 		"s02": {
-			"translation": "Przez Niego i z Nim, i w Nim,"
+			"translation": "Przez Chrystusa, z Chrystusem i w Chrystusie,"
 		},
 		"s03": {
 			"narrative": "Hostią czyni dwa znaki krzyża między sobą a kielichem."
 		},
 		"s04": {
-			"translation": "jest Tobie, Bogu Ojcu wszechmogącemu, w jedności Ducha Świętego,"
+			"translation": "Tobie, Boże, Ojcze wszechmogący, w jedności Ducha Świętego,"
 		},
 		"s05": {
-			"narrative": "Kapłan unosi nieco kielich wraz z hostią."
+			"narrative": "Kapłan unosi nieco kielich wraz z Hostią."
 		},
 		"s06": {
-			"translation": "wszelka cześć i chwała."
+			"translation": "wszelka cześć i chwała,"
 		},
 		"s07": {
-			"narrative": "Stawia hostię, nakrywa kielich palką, przyklęka, wstaje i mówi zrozumiałym głosem albo śpiewa:"
+			"narrative": "Stawia Hostię, nakrywa kielich palką, przyklęka, wstaje i mówi zrozumiałym głosem albo śpiewa:"
 		},
 		"s08": {
-			"translation": "Przez wszystkie wieki wieków."
+			"translation": "przez wszystkie wieki wieków."
 		},
 		"s09": {
 			"translation": "Amen."
@@ -46,7 +46,7 @@
 		},
 		"w002": {
 			"gloss": "Niego",
-			"function": "Ipse podkreśla: przez Niego samego, nie przez kogo innego."
+			"function": "Ipse podejmuje Chrystusa nazwanego przed chwilą: przez Niego. Odcień „przez Niego samego” to jedno z odczytań — późna łacina stawia ipse i za zwykłe „is”."
 		},
 		"w003": {
 			"gloss": "i"
@@ -125,7 +125,7 @@
 		},
 		"w026": {
 			"gloss": "Amen",
-			"function": "Odpowiedź ludu — i jedyne słowo Kanonu, którego kapłan nie mówi sam."
+			"function": "Odpowiedź ludu — we Mszy cichej ministranta — i jedyne słowo Kanonu, którego kapłan nie mówi sam."
 		}
 	}
 }

@@ -3,7 +3,7 @@
 	"text": "ordinarium.praefatio-communis",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The common Preface — the shortest of the Roman prefaces and the only one that names no mystery: it says merely “through Christ our Lord” and goes straight to the angels. The choirs it names — Angels, Dominations, Powers, Virtues, Seraphim — come from the New Testament lists (Col 1:16; Eph 1:21) and from Isaiah's vision. The whole stretch from nos tibi to ágere is an infinitive clause — that we should give thee thanks — hanging from the short est near the beginning.",
+	"about": "The common Preface — the shortest of the Roman prefaces and the only one that names no mystery: it says merely “through Christ our Lord” and goes straight to the angels. The choirs it names — Angels, Dominations, Powers, Virtues, Seraphim — come from the New Testament lists (Col 1:16; Eph 1:21) and from Isaiah's vision. The whole stretch from nos tibi to ágere is an infinitive clause — that we should give You thanks — hanging from the short est near the beginning.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,19 +16,19 @@
 			"narrative": "The priest parts his hands and holds them apart to the end of the Preface."
 		},
 		"s02": {
-			"translation": "It is truly right and just, proper and salutary, that we should always and everywhere give thanks to thee:"
+			"translation": "It is truly right and just, our duty and our salvation, always and everywhere to give You thanks:"
 		},
 		"s03": {
-			"translation": "Holy Lord, Father almighty, eternal God: through Christ our Lord."
+			"translation": "Lord, holy Father, almighty and eternal God: through Christ our Lord."
 		},
 		"s04": {
-			"translation": "Through whom the Angels praise thy majesty, the Dominations adore, the Powers tremble."
+			"translation": "Through Him the Angels praise Your majesty, Dominions adore and Powers tremble before You."
 		},
 		"s05": {
-			"translation": "The heavens and the hosts of heaven and the blessed Seraphim celebrate it together in shared exultation."
+			"translation": "Heaven and the Virtues of heaven and the blessed Seraphim worship together with exultation."
 		},
 		"s06": {
-			"translation": "With them we pray thee to bid our voices too be admitted, saying in humble confession:"
+			"translation": "May our voices, we pray, join with theirs in humble praise, as we acclaim:"
 		}
 	},
 	"words": {
@@ -37,7 +37,7 @@
 		},
 		"w002": {
 			"gloss": "right",
-			"function": "The priest repeats the words the people have just answered with — Dignum et iustum est — and adds two of his own."
+			"function": "The priest repeats the words of the answer just made — Dignum et iustum est — and adds two of his own."
 		},
 		"w003": {
 			"gloss": "and"
@@ -47,10 +47,11 @@
 		},
 		"w005": {
 			"gloss": "it is",
-			"function": "The only finite verb in this long sentence; everything down to ágere is its subject."
+			"function": "The only finite verb in this long sentence; everything from nos down to ágere is its subject, with æquum and salutáre as predicates."
 		},
 		"w006": {
-			"gloss": "proper"
+			"gloss": "proper",
+			"function": "The received English prays “our duty and our salvation” for æquum et salutáre — a sense-rendering; the glosses keep the words' own senses."
 		},
 		"w007": {
 			"gloss": "and"
@@ -64,7 +65,7 @@
 			"function": "The accusative subject of the infinitive “ágere” (w015) — a construction English renders with a that-clause."
 		},
 		"w010": {
-			"gloss": "to thee"
+			"gloss": "to Thee"
 		},
 		"w011": {
 			"gloss": "always"
@@ -99,7 +100,7 @@
 		},
 		"w021": {
 			"gloss": "God",
-			"function": "Six words of address at once — the longest vocative in the whole Ordo."
+			"function": "Six words of address at once — only the Gloria runs longer."
 		},
 		"w022": {
 			"gloss": "through"
@@ -119,14 +120,14 @@
 		},
 		"w027": {
 			"gloss": "whom",
-			"function": "The relative reaches back to Christ and opens a sentence that runs to the end of the Preface."
+			"function": "The relative reaches back to Christ and opens the relative period that carries the Preface to its end."
 		},
 		"w028": {
 			"gloss": "majesty",
 			"function": "One object for three verbs: they praise it, adore it, tremble before it."
 		},
 		"w029": {
-			"gloss": "thy"
+			"gloss": "Thy"
 		},
 		"w030": {
 			"gloss": "praise"
@@ -153,10 +154,10 @@
 		},
 		"w037": {
 			"gloss": "and of the heavens",
-			"function": "A genitive depending on “Virtútes” (w038): the powers belonging to the heavens."
+			"function": "A genitive depending on “Virtútes” (w038): the Virtues belonging to the heavens."
 		},
 		"w038": {
-			"gloss": "the hosts"
+			"gloss": "the Virtues"
 		},
 		"w039": {
 			"gloss": "and"
@@ -186,7 +187,7 @@
 			"function": "No gender is given: the antecedent is the whole heavenly host, made of nouns of more than one gender, and the form marks none."
 		},
 		"w047": {
-			"gloss": "and too"
+			"gloss": "also"
 		},
 		"w048": {
 			"gloss": "our"
@@ -202,7 +203,7 @@
 			"gloss": "be admitted"
 		},
 		"w052": {
-			"gloss": "thou bid",
+			"gloss": "Thou bid",
 			"function": "A subjunctive after ut; the petition is put as a wish rather than a command."
 		},
 		"w053": {

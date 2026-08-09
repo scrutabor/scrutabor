@@ -3,7 +3,7 @@
 	"text": "ordinarium.ecce-agnus-dei",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Zdanie Jana Chrzciciela nad Jordanem, ze zmianą jednego słowa. Jan mówi Ecce Agnus Dei, ecce qui tollit peccátum mundi — grzech świata, w liczbie pojedynczej; Msza mówi peccáta, grzechy. Potem lud powtarza trzykrotnie zdanie setnika — u setnika kończyło się ono słowami sanábitur puer meus, sługa mój będzie uzdrowiony, a Msza mówi ánima mea, dusza moja, dokładnie tak, jak przed chwilą wypowiedział je kapłan nad sobą, i przyjmuje Komunię przy formule, której kapłan użył, zmienionej w jednym słowie: ánimam tuam zamiast ánimam meam. Kapłan zaczyna od strony lekcji i całe zdanie wypowiada każdemu z osobna, czyniąc Hostią znak krzyża nad puszką.",
+	"about": "Zdanie Jana Chrzciciela nad Jordanem, ze zmianą jednego słowa. Jan mówi Ecce Agnus Dei, ecce qui tollit peccátum mundi — grzech świata, w liczbie pojedynczej; Msza mówi peccáta, grzechy. Potem kapłan, zwrócony ku przystępującym, mówi trzykrotnie zdanie setnika — u setnika kończyło się ono słowami sanábitur puer meus, sługa mój będzie uzdrowiony, a Msza mówi ánima mea, dusza moja, tak jak przed chwilą, gdy mówił je nad sobą — i każdy przyjmuje Komunię przy formule zmienionej w jednym słowie: ánimam tuam zamiast ánimam meam. Kapłan zaczyna od strony lekcji i całe zdanie wypowiada każdemu z osobna, czyniąc Hostią znak krzyża nad puszką.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -19,7 +19,7 @@
 			"translation": "Oto Baranek Boży, oto Ten, który gładzi grzechy świata."
 		},
 		"s03": {
-			"narrative": "Następnie mówi, a lud powtarza za nim:"
+			"narrative": "Następnie mówi trzykrotnie:"
 		},
 		"s04": {
 			"translation": "Panie, nie jestem godzien, abyś wszedł pod dach mój, ale powiedz tylko słowo, a będzie uzdrowiona dusza moja."
@@ -71,7 +71,7 @@
 		},
 		"w009": {
 			"gloss": "Panie",
-			"function": "Znowu zdanie setnika, tym razem w ustach przystępujących; kapłan przed chwilą wypowiedział te same słowa nad sobą."
+			"function": "Znowu zdanie setnika, tym razem zwrócone ku przystępującym; kapłan przed chwilą wypowiedział te same słowa nad sobą."
 		},
 		"w010": {
 			"gloss": "nie"
@@ -81,7 +81,7 @@
 		},
 		"w012": {
 			"gloss": "godzien",
-			"function": "Na tym słowie lud bije się w piersi, tak jak kapłan bił się na swoim."
+			"function": "Rubryki każą kapłanowi bić się w piersi przy jego własnym Dómine non sum dignus; tutaj księga milczy, a powszechny zwyczaj czyni ten gest i przy balaskach."
 		},
 		"w013": {
 			"gloss": "abyś"

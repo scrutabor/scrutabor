@@ -3,7 +3,7 @@
 	"text": "ordinarium.aufer-a-nobis",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Dwie modlitwy, które kapłan mówi za siebie samego, a które mimo to stoją w liczbie mnogiej: „od nas”, „nasze nieprawości”, „abyśmy zasłużyli”. Głośno pada z nich tylko jedno słowo — Orémus; reszty nikt nie słyszy. „Sancta sanctórum” to hebrajski stopień najwyższy oddany słowo w słowo: świętość świętości, czyli najświętsze miejsce świątyni. Druga modlitwa mówi o relikwiach, które tu są — kapłan całuje w tej chwili środek ołtarza, a w kamieniu ołtarzowym relikwie są zamurowane; słowo „hic” wskazuje więc miejsce, którego dotykają jego wargi.",
+	"about": "Dwie modlitwy, które kapłan mówi za siebie samego, a które mimo to biegną w liczbie mnogiej — „od nas”, „nasze nieprawości”, „abyśmy zasłużyli” — aż druga zamknie się w liczbie pojedynczej: „wszystkie grzechy moje”. Głośno pada z nich tylko jedno słowo — Orémus; reszty nikt nie słyszy. „Sancta sanctórum” to hebrajski stopień najwyższy oddany słowo w słowo: świętość świętości, czyli najświętsze miejsce świątyni. Druga modlitwa mówi o relikwiach, które tu są — kapłan całuje w tej chwili ołtarz, a w każdym poświęconym ołtarzu zamurowane są relikwie; słowo „hic” wskazuje więc ten właśnie ołtarz, którego dotykają jego wargi.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -34,7 +34,7 @@
 			"translation": "Prosimy Cię, Panie, przez zasługi Twoich Świętych,"
 		},
 		"s08": {
-			"narrative": "Kapłan całuje ołtarz pośrodku — w tym właśnie miejscu, o którym mówią słowa modlitwy."
+			"narrative": "Kapłan całuje ołtarz pośrodku — ten właśnie ołtarz, o którym mówią słowa modlitwy."
 		},
 		"s09": {
 			"translation": "których relikwie tu się znajdują, i wszystkich Świętych: racz odpuścić wszystkie grzechy moje. Amen."
@@ -58,7 +58,7 @@
 		},
 		"w005": {
 			"gloss": "prosimy Cię",
-			"function": "Czasownik ułomny, wtrącany w zdanie jak polskie „proszę”; nie zmienia jego budowy, tylko łagodzi prośbę."
+			"function": "Wtrącone w sam środek zdania, między czasownik a jego dopełnienie; nie zmienia budowy, tylko łagodzi prośbę."
 		},
 		"w006": {
 			"gloss": "Panie"
@@ -79,7 +79,7 @@
 			"gloss": "do"
 		},
 		"w011": {
-			"gloss": "miejsca najświętszego",
+			"gloss": "Święte",
 			"function": "Przymiotnik użyty rzeczownikowo, w liczbie mnogiej rodzaju nijakiego: rzeczy święte. Razem z „sanctórum” (w012) tworzy hebrajski stopień najwyższy oddany słowo w słowo."
 		},
 		"w012": {
@@ -92,7 +92,7 @@
 		},
 		"w014": {
 			"gloss": "zasłużyli",
-			"function": "Deponens (forma bierna, znaczenie czynne); rządzi bezokolicznikiem „introíre” (w016): abyśmy zasłużyli na to, by wejść."
+			"function": "Rządzi bezokolicznikiem „introíre” (w016): abyśmy zasłużyli na to, by wejść — prośba czyni z wejścia rzecz do wysłużenia."
 		},
 		"w015": {
 			"gloss": "sercem",
@@ -100,7 +100,7 @@
 		},
 		"w016": {
 			"gloss": "wejść",
-			"function": "Bezokolicznik zależny od „mereámur” (w014). Ten sam czasownik, którym kapłan zapowiadał u stopni: przystąpię do ołtarza."
+			"function": "Bezokolicznik zależny od „mereámur” (w014). Ten sam czasownik, którym kapłan zapowiadał u stopni: Przystąpię do ołtarza Bożego."
 		},
 		"w017": {
 			"gloss": "przez"
@@ -152,11 +152,11 @@
 		},
 		"w030": {
 			"gloss": "relikwie",
-			"function": "Rzeczownik występujący tylko w liczbie mnogiej; mianownik, podmiot zdania."
+			"function": "Mianownik, podmiot zdania względnego: relikwie są tu, zamurowane w ołtarzu, który kapłan całuje, mówiąc te słowa."
 		},
 		"w031": {
 			"gloss": "tu",
-			"function": "Przysłówek miejsca — wskazuje kamień ołtarzowy, który kapłan w tej chwili całuje."
+			"function": "Przysłówek miejsca — wskazuje ołtarz, który kapłan w tej chwili całuje."
 		},
 		"w032": {
 			"gloss": "są"
@@ -182,7 +182,7 @@
 		},
 		"w038": {
 			"gloss": "racz",
-			"function": "Deponens (forma bierna, znaczenie czynne); tryb łączący po „ut” (w036). Zwrot uprzejmy: racz to uczynić."
+			"function": "Tryb łączący po „ut” (w036); zwrot dworski, jak w modlitwach rzymskich — nie „odpuść”, lecz „racz odpuścić”."
 		},
 		"w039": {
 			"gloss": "wszystkie",
@@ -193,7 +193,7 @@
 		},
 		"w041": {
 			"gloss": "moje",
-			"function": "Liczba pojedyncza po całej modlitwie mówionej w liczbie mnogiej: tu kapłan mówi wreszcie za siebie samego."
+			"function": "Właściciel w liczbie pojedynczej po całej modlitwie mówionej w liczbie mnogiej — sama forma to biernik liczby mnogiej, z „peccáta” (w040) — tu kapłan mówi wreszcie za siebie samego."
 		},
 		"w042": {
 			"gloss": "amen"

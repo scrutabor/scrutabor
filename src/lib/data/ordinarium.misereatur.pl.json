@@ -13,16 +13,16 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan, ze złożonymi rękami, wypowiada nad usługującymi i wiernymi pierwszą z dwóch modlitw o przebaczenie."
+			"narrative": "Kapłan, ze złożonymi rękami, wypowiada nad ministrantami i wiernymi pierwszą z dwóch modlitw o przebaczenie."
 		},
 		"s02": {
-			"translation": "Niech się zmiłuje nad wami Bóg wszechmogący i odpuściwszy wam grzechy, niech was doprowadzi do życia wiecznego."
+			"translation": "Niech się zmiłuje nad wami Bóg wszechmogący, a odpuściwszy wam grzechy, niech was doprowadzi do życia wiecznego."
 		},
 		"s03": {
 			"translation": "Amen."
 		},
 		"s04": {
-			"narrative": "Kapłan znaczy się znakiem krzyża i mówi drugą modlitwę — tę, w której prosi już nie za samych usługujących, lecz za wszystkich obecnych razem z sobą."
+			"narrative": "Kapłan znaczy się znakiem krzyża i mówi drugą modlitwę — tę, w której prosi także za samego siebie: nostrórum, nobis."
 		},
 		"s05": {
 			"translation": "Przebaczenia, rozgrzeszenia i odpuszczenia grzechów naszych niech nam udzieli wszechmogący i miłosierny Pan."
@@ -38,7 +38,7 @@
 		},
 		"w002": {
 			"gloss": "nad wami",
-			"function": "Dopełniacz zaimka „wy”, nie zaimek dzierżawczy: misereor rządzi dopełniaczem osoby, nad którą się litujemy. Ta sama forma vestri należy zarazem do odmiany „wasz” — stąd łatwa pomyłka z „vestris” (w008)."
+			"function": "Dopełniacz zaimka „wy”, nie zaimek dzierżawczy: misereor rządzi dopełniaczem osoby, nad którą się litujemy. Ta sama forma vestri należy zarazem do odmiany „wasz” — stąd pokusa, by czytać je jak zaimek dzierżawczy, taki jak „vestris” (w008)."
 		},
 		"w003": {
 			"gloss": "wszechmogący",
@@ -46,13 +46,13 @@
 		},
 		"w004": {
 			"gloss": "Bóg",
-			"function": "Mianownik: podmiot, choć stoi dopiero na czwartym miejscu. Łacina prowadzi zdanie od czasownika."
+			"function": "Mianownik: podmiot, choć stoi dopiero na czwartym miejscu. Modlitwa otwiera się czasownikiem, jak te formuły błogosławieństwa."
 		},
 		"w005": {
 			"gloss": "i"
 		},
 		"w006": {
-			"gloss": "odpuściwszy",
+			"gloss": "odpuszczone",
 			"function": "Imiesłów otwiera ablativus absolutus — konstrukcję niezależną od reszty zdania: „gdy grzechy zostaną odpuszczone”. Polszczyzna oddaje ją imiesłowem."
 		},
 		"w007": {
@@ -96,7 +96,7 @@
 		},
 		"w018": {
 			"gloss": "odpuszczenia",
-			"function": "Trzy rzeczowniki bliskoznaczne piętrzą się jeden na drugim — sposób modlitwy rzymskiej, która woli dopowiedzieć trzy razy niż raz."
+			"function": "Trzy rzeczowniki na trzy strony przebaczenia, spiętrzone na sposób późnośredniowiecznych formuł rozgrzeszenia."
 		},
 		"w019": {
 			"gloss": "grzechów",

@@ -3,7 +3,7 @@
 	"text": "psalmi.118-he",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Psalm 118 jest akrostychem: dwadzieścia dwie stancy po osiem wersetów, po jednej na każdą literę alfabetu hebrajskiego, a wszystkie osiem wersetów jednej stancy zaczyna się w hebrajskim tą samą literą. To najdłuższy psalm psałterza i niemal każdy jego werset mówi o jednym: o prawie Bożym, nazywanym po kolei zakonem, świadectwem, ustawą, przykazaniem, sądem, słowem. Ta stanca nosi imię litery HE. W brewiarzu rzymskim odmawia się ją w niedzielę w tercji. Werset trzydziesty czwarty — „Da mihi intelléctum, et scrutábor legem tuam” — dał nazwę temu wydaniu: prośba o zrozumienie, a nie o wiedzę, i obietnica badania, a nie samego czytania.",
+	"about": "Psalm 118 jest akrostychem: dwadzieścia dwie strofy po osiem wersetów, po jednej na każdą literę alfabetu hebrajskiego, a wszystkie osiem wersetów jednej strofy zaczyna się w hebrajskim tą samą literą. To najdłuższy psalm psałterza i niemal każdy jego werset mówi o jednym: o prawie Bożym, nazywanym między innymi zakonem, świadectwem, ustawą, przykazaniem, sądem, słowem. Ta strofa nosi nazwę litery HE. W brewiarzu rzymskim jej wersety otwierają psalmodię niedzielnej tercji, a antyfona tej godziny bierze z niej werset 35; cały psalm rozłożony jest na wszystkie cztery godziny mniejsze niedzieli. Werset trzydziesty czwarty — „Da mihi intelléctum, et scrutábor legem tuam” — dał nazwę temu wydaniu: prośba o zrozumienie, a nie o wiedzę, i obietnica badania, a nie samego czytania.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -19,7 +19,7 @@
 			"translation": "Daj mi zrozumienie, a będę badał Twoje prawo i zachowam je całym sercem moim."
 		},
 		"s03": {
-			"translation": "Prowadź mnie na ścieżkę Twoich przykazań, bo jej właśnie zapragnąłem."
+			"translation": "Prowadź mnie na ścieżkę Twoich przykazań, bo jej właśnie chciałem."
 		},
 		"s04": {
 			"translation": "Nachyl moje serce ku Twoim świadectwom, a nie ku chciwości."
@@ -43,15 +43,15 @@
 			"function": "Nie dopełnienie, lecz orzecznik w bierniku: dopełnieniem jest „viam” (w005), a „Legem” mówi, czym ta droga ma się stać. Łacina stawia obok dopełnienia drugi biernik, by powiedzieć, w co się coś obraca."
 		},
 		"w002": {
-			"gloss": "połóż",
-			"function": "Tryb rozkazujący. Nie prośba o nowe prawo, lecz o to, by Bóg położył je przed proszącym — pokazał."
+			"gloss": "postaw",
+			"function": "Nie prośba o nowe prawo, lecz o to, by Bóg postawił je przed proszącym — pokazał."
 		},
 		"w003": {
 			"gloss": "mi"
 		},
 		"w004": {
 			"gloss": "Panie",
-			"function": "Wołacz: cała stanca jest mową wprost do Boga i wszystkie zaimki „Twój” odnoszą się do Niego."
+			"function": "Wołacz: cała strofa zwraca się wprost do Boga i wszystkie zaimki „Twój” odnoszą się do Niego."
 		},
 		"w005": {
 			"gloss": "drogę",
@@ -69,11 +69,11 @@
 		},
 		"w009": {
 			"gloss": "będę szukał",
-			"function": "Wydanie nie rozstrzyga tu ani czasu, ani trybu: forma jest zarazem czasem przyszłym trybu oznajmującego, „będę szukał”, i czasem teraźniejszym trybu łączącego, „bym szukał”. Nic w zdaniu nie rozstrzyga, więc nic się nie orzeka. Ta sama forma powraca w „custódiam” (w020)."
+			"function": "Wydanie nie rozstrzyga tu ani czasu, ani trybu: forma jest zarazem czasem przyszłym trybu oznajmującego, „będę szukał”, i czasem teraźniejszym trybu łączącego, „bym szukał”. Nic w zdaniu nie rozstrzyga, więc nic się nie orzeka. Ta sama forma powraca w „custódiam” (w020) — tam jednak rozstrzyga sąsiedni czas przyszły."
 		},
 		"w010": {
 			"gloss": "jej",
-			"function": "Biernik rodzaju żeńskiego. Najbliższym poprzednikiem jest „viam” (w005), ale „Legem” (w001) też jest żeńskie i łacina tego nie rozstrzyga."
+			"function": "Biernik rodzaju żeńskiego. Najbliższym poprzednikiem jest „viam” (w005), ale „Legem” (w001) też jest żeńskie i sama łacina tego nie rozstrzyga; greka ma tu αὐτήν — drogę."
 		},
 		"w011": {
 			"gloss": "zawsze"
@@ -91,7 +91,7 @@
 		},
 		"w015": {
 			"gloss": "a",
-			"function": "Po prośbie „Da” (w012) zapowiada jej skutek: daj — a będę badał. Stąd „a”, nie „i”."
+			"function": "Po prośbie „Da” (w012) spójnik zapowiada jej skutek: daj — a będę badał. Stąd „a”, nie „i”."
 		},
 		"w016": {
 			"gloss": "będę badał",
@@ -108,7 +108,7 @@
 		},
 		"w020": {
 			"gloss": "zachowam",
-			"function": "Ta sama dwuznaczność co przy „exquíram” (w009): czas przyszły trybu oznajmującego albo czas teraźniejszy trybu łączącego. Sąsiedni „scrutábor” (w016), jednoznacznie przyszły, przechyla wagę — ale sama forma nie rozstrzyga."
+			"function": "Forma czasownika jest dwuznaczna jak „exquíram” (w009) — czas przyszły albo tryb łączący — ale tu rozstrzyga współrzędny „scrutábor” (w016), jednoznacznie przyszły: wydanie czyta czas przyszły."
 		},
 		"w021": {
 			"gloss": "je",
@@ -152,11 +152,11 @@
 		},
 		"w033": {
 			"gloss": "jej właśnie",
-			"function": "Zaimek wzmacniający: nie „jej”, lecz „właśnie jej”, tej a nie innej."
+			"function": "Zaimek wzmacniający. W psałterzu ipse stoi nieraz tam, gdzie łacina klasyczna ma zwykłe „is” — greka ma tu proste αὐτήν — lecz łacina pozwala mu naciskać: właśnie jej."
 		},
 		"w034": {
-			"gloss": "zapragnąłem",
-			"function": "Czas przeszły dokonany: wybór już się dokonał, nie jest dopiero deklarowany."
+			"gloss": "chciałem",
+			"function": "Perfectum: wybór już się dokonał, nie jest dopiero deklarowany."
 		},
 		"w035": {
 			"gloss": "nachyl",
@@ -204,11 +204,11 @@
 			"function": "Otwiera zdanie celowe zaprzeczone, stąd tryb łączący przy „vídeant” (w049)."
 		},
 		"w049": {
-			"gloss": "patrzyły",
+			"gloss": "patrzyły na",
 			"function": "Tryb łączący po „ne” (w048): nie stwierdzenie, lecz cel, dla którego prosi się o odwrócenie oczu."
 		},
 		"w050": {
-			"gloss": "marności",
+			"gloss": "marność",
 			"function": "Od vanus — pusty. Nie próżność w sensie zarozumiałości, lecz to, co puste i bez treści."
 		},
 		"w051": {
@@ -260,7 +260,7 @@
 		},
 		"w065": {
 			"gloss": "hańbę",
-			"function": "Nie wstyd odczuwany wewnątrz, lecz zniewaga rzucona przez innych."
+			"function": "Nie wstyd odczuwany wewnątrz, lecz hańba rzucona przez innych."
 		},
 		"w066": {
 			"gloss": "moją"
@@ -275,14 +275,14 @@
 		},
 		"w069": {
 			"gloss": "się",
-			"function": "Nie orzeczenie samodzielne: „suspicátus sum” to jedna forma, perfectum deponens — bierna w kształcie, czynna w znaczeniu, więc „obawiałem się”, a nie „byłem podejrzewany”."
+			"function": "Nie orzeczenie samodzielne: „suspicátus sum” to jedna forma, perfectum deponens: bierna w kształcie, czynna w znaczeniu, więc „obawiałem się”, a nie „byłem podejrzewany”."
 		},
 		"w070": {
 			"gloss": "bo"
 		},
 		"w071": {
 			"gloss": "sądy",
-			"function": "Mianownik liczby mnogiej; orzeczenie „są” jest domyślne, jak często w łacinie zdaniowej."
+			"function": "Mianownik liczby mnogiej; łącznik „są” jest domyślny, jak to łacina często czyni."
 		},
 		"w072": {
 			"gloss": "Twoje"
@@ -296,7 +296,7 @@
 		},
 		"w075": {
 			"gloss": "zapragnąłem",
-			"function": "Czasownik inchoatywny: nie „pragnę”, lecz „zacząłem pragnąć”. Ten sam rdzeń co concupiscéntia, tu jednak zwrócony ku przykazaniom."
+			"function": "Czasownik na -sco — kształt, którym łacina znaczy początek — zleksykalizowany jednak jako samo mocne pragnienie; perfectum concupívi znaczy „zapragnąłem”. Ten sam rdzeń co concupiscéntia, tu jednak zwrócony ku przykazaniom."
 		},
 		"w076": {
 			"gloss": "przykazań"
@@ -316,7 +316,7 @@
 		},
 		"w081": {
 			"gloss": "ożyw",
-			"function": "Powtórzenie prośby z wersetu 37: stanca zaczyna się i kończy tą samą prośbą o życie."
+			"function": "Powtórzenie prośby z wersetu 37 — „vivífica” (w054): prośba o życie wraca na końcu strofy."
 		},
 		"w082": {
 			"gloss": "mnie"

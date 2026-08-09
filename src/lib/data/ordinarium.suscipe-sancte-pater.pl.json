@@ -3,7 +3,7 @@
 	"text": "ordinarium.suscipe-sancte-pater",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Modlitwa nazywa chleb „hóstia” — a hostia to po łacinie zwierzę ofiarne, nie chleb; już tutaj, przed konsekracją, mówi się o darze słowami ofiary. Kapłan wylicza, za kogo go składa, i porządek tego wyliczenia jest wymowny: najpierw własne grzechy, potem „wszyscy obecni” — circumstántes, dosłownie ci, którzy stoją wokół — a na końcu wszyscy wierni żywi i umarli. Trzy słowa na własną winę też nie są synonimami: peccáta to czyny, offensiónes to zniewagi wyrządzone komuś, negligéntiæ to zaniedbania, czyli to, czego nie zrobiono.",
+	"about": "Modlitwa nazywa chleb „hóstia” — a Hostia to po łacinie zwierzę ofiarne, nie chleb; już tutaj, przed konsekracją, mówi się o darze słowami ofiary. Kapłan wylicza, za kogo składa ten dar, i porządek tego wyliczenia jest wymowny: najpierw własne grzechy, potem „wszyscy obecni” — circumstántes, dosłownie ci, którzy stoją wokół — a na końcu wszyscy wierni żywi i umarli. Trzy słowa na własną winę też nie są synonimami: peccáta to czyny, offensiónes to zniewagi wyrządzone komuś, negligéntiæ to zaniedbania, czyli to, czego nie zrobiono.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,10 +13,10 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan bierze patenę z hostią i unosi ją; we Mszy uroczystej podaje mu ją diakon. Modlitwę mówi po cichu."
+			"narrative": "Kapłan bierze patenę z Hostią i unosi ją; we Mszy uroczystej podaje mu ją diakon. Modlitwę mówi po cichu."
 		},
 		"s02": {
-			"translation": "Przyjmij, Ojcze święty, wszechmogący wieczny Boże, tę niepokalaną hostię, którą ja, niegodny sługa Twój, składam Tobie, Bogu memu żywemu i prawdziwemu, za niezliczone grzechy, zniewagi i zaniedbania moje, i za wszystkich tu obecnych, a także za wszystkich wiernych chrześcijan żywych i umarłych: aby mnie i im posłużyła ku zbawieniu i życiu wiecznemu. Amen."
+			"translation": "Przyjmij, Ojcze święty, wszechmogący wieczny Boże, tę niepokalaną Hostię, którą ja, niegodny sługa Twój, składam Tobie, Bogu memu żywemu i prawdziwemu, za niezliczone grzechy, zniewagi i zaniedbania moje, i za wszystkich tu obecnych, a także za wszystkich wiernych chrześcijan żywych i umarłych: aby mnie i im posłużyła ku zbawieniu na życie wieczne. Amen."
 		}
 	},
 	"words": {
@@ -41,7 +41,7 @@
 		},
 		"w006": {
 			"gloss": "Boże",
-			"function": "Trzy przydawki i rzeczownik — wszystkie w wołaczu, choć tylko „ætérne” ma osobną formę wołacza."
+			"function": "Dwa wołania w jednym: „sancte Pater” i „omnípotens ætérne Deus” — trzy przymiotniki i dwa rzeczowniki, wszystkie w wołaczu."
 		},
 		"w007": {
 			"gloss": "tę",
@@ -95,7 +95,7 @@
 		},
 		"w021": {
 			"gloss": "prawdziwemu",
-			"function": "Zwrot ze Starego Testamentu: Bóg żywy i prawdziwy, w odróżnieniu od bożków."
+			"function": "Zwrot biblijny — słowa są Pawłowe (1 Tes 1, 9): Bóg żywy i prawdziwy, w odróżnieniu od bożków."
 		},
 		"w022": {
 			"gloss": "za"
@@ -113,7 +113,7 @@
 		},
 		"w026": {
 			"gloss": "zniewagi",
-			"function": "Drugi z trzech rzeczowników winy: nie sam czyn, lecz uraza wyrządzona komuś."
+			"function": "Drugi z trzech rzeczowników winy: nie sam czyn, lecz zniewaga wyrządzona komuś."
 		},
 		"w027": {
 			"gloss": "i"
@@ -124,7 +124,7 @@
 		},
 		"w029": {
 			"gloss": "moje",
-			"function": "Jedno „moje” obejmuje wszystkie trzy rzeczowniki; forma nie wskazuje rodzaju, a rzeczowniki są dwojakiego — dlatego rodzaju tu nie podano."
+			"function": "Jedno „moje” obejmuje wszystkie trzy rzeczowniki; forma nie wskazuje rodzaju, a rzeczowniki są dwojakiego rodzaju — dlatego rodzaju tu nie podano."
 		},
 		"w030": {
 			"gloss": "i"
@@ -158,7 +158,7 @@
 		},
 		"w039": {
 			"gloss": "chrześcijan",
-			"function": "Oba przymiotniki stoją tu za rzeczownikiem: wierni chrześcijanie."
+			"function": "Oba przymiotniki są tu użyte rzeczownikowo: wierni chrześcijanie."
 		},
 		"w040": {
 			"gloss": "żywych"

@@ -3,7 +3,7 @@
 	"text": "ordinarium.unde-et-memores",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Modlitwa wspomnienia: Kościół czyni to, co polecono — „na moją pamiątkę”. Wspomina trzy rzeczy: mękę, zmartwychwstanie i wniebowstąpienie. Ofiarę nazywa pięcioma imionami — czysta, święta, niepokalana hostia, święty Chleb życia wiecznego, Kielich wiecznego zbawienia — i przy każdym kapłan czyni znak krzyża nad darami już konsekrowanymi; średniowiecznym komentatorom sprawiało to kłopot: co znaczy błogosławić to, co już jest Ciałem i Krwią. „De tuis donis ac datis” mówi, że oddaje się to, co się wprzód otrzymało.",
+	"about": "Modlitwa wspomnienia: Kościół czyni to, co polecono — „na moją pamiątkę”. Wspomina trzy rzeczy: mękę, zmartwychwstanie i wniebowstąpienie. Ofiarę nazywa pięcioma imionami — czysta, święta, niepokalana Hostia, święty Chleb życia wiecznego, Kielich wiecznego zbawienia — i przy każdym kapłan czyni znak krzyża nad darami już konsekrowanymi; średniowiecznym komentatorom sprawiało to kłopot: co znaczy błogosławić to, co już jest Ciałem i Krwią. „De tuis donis ac datis” mówi, że oddaje się to, co się wprzód otrzymało.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,41 +16,41 @@
 			"narrative": "Kapłan rozłącza ręce."
 		},
 		"s02": {
-			"translation": "Przeto i my, słudzy Twoi, Panie, a także lud Twój święty, pomni na tegoż Chrystusa, Syna Twego, Pana naszego, tak błogosławioną mękę, a także na zmartwychwstanie spośród umarłych i na chwalebne wniebowstąpienie:"
+			"translation": "Boże Ojcze, my, Twoi słudzy, oraz lud Twój święty, wspominając błogosławioną mękę tegoż Chrystusa, Twojego Syna, naszego Pana, Jego zmartwychwstanie oraz chwalebne wniebowstąpienie:"
 		},
 		"s03": {
-			"translation": "składamy przesławnemu majestatowi Twemu z Twoich darów i danin"
+			"translation": "składamy Twojemu najwyższemu majestatowi z otrzymanych od Ciebie darów"
 		},
 		"s04": {
-			"narrative": "Kapłan składa ręce i czyni trzykrotny znak krzyża nad hostią i kielichem naraz."
+			"narrative": "Kapłan składa ręce; potem, z lewą ręką na korporale, prawą czyni trzykrotny znak krzyża nad Hostią i kielichem naraz."
 		},
 		"s05": {
-			"translation": "hostię czystą, hostię świętą, hostię niepokalaną,"
+			"translation": "Ofiarę czystą, świętą i doskonałą,"
 		},
 		"s06": {
-			"narrative": "Jeden znak krzyża nad hostią."
+			"narrative": "Jeden znak krzyża nad Hostią."
 		},
 		"s07": {
-			"translation": "święty Chleb życia wiecznego,"
+			"translation": "Chleb święty życia wiecznego"
 		},
 		"s08": {
 			"narrative": "I jeden nad kielichem."
 		},
 		"s09": {
-			"translation": "i Kielich wiecznego zbawienia."
+			"translation": "i Kielich wiekuistego zbawienia."
 		}
 	},
 	"words": {
 		"w001": {
 			"gloss": "przeto",
-			"function": "Pytajne „skąd” użyte jako spójnik wnioskujący: skoro tak, więc."
+			"function": "Spójnik spina tę modlitwę z nakazem sprzed chwili: „to czyńcie” — przeto czynimy."
 		},
 		"w002": {
 			"gloss": "i"
 		},
 		"w003": {
 			"gloss": "pomni",
-			"function": "Rządzi dopełniaczem, a trzy dopełniacze, których dotyczy — passiónis, resurrectiónis, ascensiónis — stoją o kilkanaście słów dalej. Nigdzie indziej w tym wydaniu para taka nie jest rozsunięta tak daleko."
+			"function": "Rządzi dopełniaczem, a trzy dopełniacze, których dotyczy — passiónis, resurrectiónis, ascensiónis — stoją o kilkanaście słów dalej; dłużej rozsunięty jest w tym wydaniu tylko łańcuch Communicántes."
 		},
 		"w004": {
 			"gloss": "Panie"
@@ -70,7 +70,7 @@
 		},
 		"w009": {
 			"gloss": "także",
-			"function": "Sed et — „a nadto”: modlitwa rozszerza podmiot z kapłanów na cały lud."
+			"function": "Sed et — „a nadto”: modlitwa rozszerza podmiot ze sług ołtarza na cały lud."
 		},
 		"w010": {
 			"gloss": "lud"
@@ -124,7 +124,7 @@
 		},
 		"w026": {
 			"gloss": "umarłych",
-			"function": "Ínferi — dosłownie „ci na dole”; „ab ínferis” znaczy „spośród umarłych”, nie „z piekła”."
+			"function": "Po „ab” (w025): powrót spośród umarłych — stamtąd, dokąd wedle Składu Apostolskiego Pan zstąpił."
 		},
 		"w027": {
 			"gloss": "zmartwychwstanie"
@@ -219,7 +219,7 @@
 		},
 		"w056": {
 			"gloss": "wiecznego",
-			"function": "Perpétuus mówi o tym, co biegnie bez przerwy do końca; ætérnus — o tym, co nie ma kresu. Ta modlitwa używa obu w dwóch sąsiednich wierszach."
+			"function": "Perpétuus mówi o tym, co biegnie bez przerwy do końca; ætérnus — o tym, co nie ma kresu. Ta modlitwa używa obu w dwóch kolejnych prośbach."
 		}
 	}
 }

@@ -3,7 +3,7 @@
 	"text": "orationes.gloria-patri",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Doksologia mniejsza — krótkie uwielbienie Trójcy, którym Kościół od starożytności kończy psalmy i kantyki oficjum. Jej łacińską postać z dodanym zdaniem „Sicut erat in princípio” — wyznaniem, że Syn jest wieczny — nakazał dla Galii synod w Vaison (529), wprost przeciwko arianom. Wschód po dziś dzień śpiewa doksologię bez tego zdania — „Sicut erat…” pozostało osobliwością łacińskiego Zachodu.",
+	"about": "Doksologia mniejsza — krótkie uwielbienie Trójcy, którym Kościół od starożytności kończy psalmy i kantyki oficjum; we Mszy stoi w psalmie Iúdica, przy psalmie introitu i przy Lavábo. Jej łacińską postać z dodanym zdaniem „Sicut erat in princípio” — wyznaniem, że Syn jest wieczny — nakazał w Galii synod w Vaison (529), wprost przeciwko arianom; zdanie ułożono o Synu, dziś czyta się je o chwale. Synod sądził, że zdanie zna także Wschód — mylił się: Wschód po dziś dzień śpiewa doksologię bez niego, a „Sicut erat…” pozostało osobliwością łacińskiego Zachodu.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -42,7 +42,7 @@
 		},
 		"w007": {
 			"gloss": "Świętemu",
-			"function": "Zgadza się ze „Spirítui” (w006)."
+			"function": "Zgadza się ze „Spirítui” (w006); przymiotnik zachowuje własną odmianę — stąd „Sancto”, nie „Sanctui”."
 		},
 		"w008": {
 			"gloss": "jak"
@@ -74,11 +74,11 @@
 		},
 		"w017": {
 			"gloss": "na",
-			"function": "Z biernikiem — rozciągłość w czasie: „na wieki”. Por. „in” (w010) z ablativem — punkt w czasie."
+			"function": "Z biernikiem — czas, ku któremu się zmierza: „na wieki”. Por. „in” (w010) z ablativem — punkt w czasie."
 		},
 		"w018": {
 			"gloss": "wieki",
-			"function": "Rozciągłość w czasie po „in” (w017)."
+			"function": "Czas, ku któremu się zmierza, po „in” (w017)."
 		},
 		"w019": {
 			"gloss": "wieków",

@@ -3,7 +3,7 @@
 	"text": "ordinarium.misereatur-tui",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "To jedyne miejsce Mszy, w którym usługujący modlą się o przebaczenie dla samego kapłana, i mówią mu dokładnie to, co on za chwilę powie nad nimi — ta sama formuła, tylko w liczbie pojedynczej: „misereátur tui”, „peccátis tuis”, „perdúcat te”. Nad nimi zabrzmi „vestri”, „vestris”, „vos”. Odpowiedź kapłana — „Amen” — jest zgodą na modlitwę zanoszoną za niego samego. Nie ma tu drugiej formuły, „Indulgéntiam”: tę kapłan doda dopiero po spowiedzi usługujących, i obejmie nią także siebie.",
+	"about": "To jedyne miejsce Mszy, w którym ministranci modlą się o przebaczenie dla samego kapłana, i mówią mu dokładnie to, co on za chwilę powie nad nimi — ta sama formuła, tylko w liczbie pojedynczej: „misereátur tui”, „peccátis tuis”, „perdúcat te”. Nad nimi zabrzmi „vestri”, „vestris”, „vos”. Odpowiedź kapłana — „Amen” — jest zgodą na modlitwę zanoszoną za niego samego. Nie ma tu drugiej formuły, „Indulgéntiam”: tę kapłan doda dopiero po spowiedzi ministrantów, i obejmie nią także siebie.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "Niech się zmiłuje nad tobą Bóg wszechmogący i odpuściwszy ci grzechy, niech cię doprowadzi do życia wiecznego."
+			"translation": "Niech się zmiłuje nad tobą Bóg wszechmogący, a odpuściwszy ci grzechy, niech cię doprowadzi do życia wiecznego."
 		},
 		"s02": {
 			"narrative": "Kapłan odpowiada na modlitwę zanoszoną za niego samego."
@@ -22,17 +22,17 @@
 			"translation": "Amen."
 		},
 		"s04": {
-			"narrative": "Kapłan się prostuje. Teraz spowiedź powtarzają usługujący — tymi samymi słowami, z jedyną zmianą, którą mszał podaje wprost: gdzie kapłan mówił „wam, bracia” i „was, bracia”, oni mówią „tobie, ojcze” i „ciebie, ojcze”."
+			"narrative": "Kapłan się prostuje. Teraz spowiedź powtarzają ministranci — tymi samymi słowami, z jedyną zmianą, którą mszał podaje wprost: gdzie kapłan mówił „wam, bracia” i „was, bracia”, oni mówią „tobie, ojcze” i „ciebie, ojcze”."
 		}
 	},
 	"words": {
 		"w001": {
 			"gloss": "niech się zmiłuje",
-			"function": "Tryb łączący życzenia: nie „zmiłował się”, lecz „niech się zmiłuje”. Usługujący nie rozgrzeszają — proszą, żeby uczynił to Bóg."
+			"function": "Tryb łączący życzenia: nie „zmiłował się”, lecz „niech się zmiłuje”. Ministranci nie rozgrzeszają — proszą, żeby uczynił to Bóg."
 		},
 		"w002": {
 			"gloss": "nad tobą",
-			"function": "Dopełniacz zaimka „ty”, nie zaimek dzierżawczy: misereor rządzi dopełniaczem osoby, nad którą się litujemy. Ta sama forma tui należy zarazem do odmiany „twój” — stąd łatwa pomyłka z „tuis” (w008)."
+			"function": "Dopełniacz zaimka „ty”, nie zaimek dzierżawczy: misereor rządzi dopełniaczem osoby, nad którą się litujemy. Ta sama forma tui należy zarazem do odmiany „twój” — stąd pokusa, by czytać je jak zaimek dzierżawczy, taki jak „tuis” (w008)."
 		},
 		"w003": {
 			"gloss": "wszechmogący",
@@ -46,7 +46,7 @@
 			"gloss": "i"
 		},
 		"w006": {
-			"gloss": "odpuściwszy",
+			"gloss": "odpuszczone",
 			"function": "Imiesłów otwiera ablativus absolutus — konstrukcję niezależną od reszty zdania: „gdy grzechy zostaną odpuszczone”."
 		},
 		"w007": {

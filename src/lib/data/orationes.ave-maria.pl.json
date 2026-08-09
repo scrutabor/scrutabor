@@ -3,7 +3,7 @@
 	"text": "orationes.ave-maria",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Pozdrowienie anielskie łączy dwa biblijne pozdrowienia — archanioła Gabriela (Łk 1, 28) i Elżbiety (Łk 1, 42) — z prośbą „Sancta María…”, która narastała w późnym średniowieczu, a ostateczny kształt otrzymała w XVI wieku, w brewiarzu św. Piusa V (1568). Połączone pozdrowienia śpiewano we Mszy na wieki przed dodaniem prośby: to ofertorium IV niedzieli Adwentu, zapisane już w rękopisach z IX wieku.",
+	"about": "Pozdrowienie anielskie łączy dwa biblijne pozdrowienia — archanioła Gabriela (Łk 1, 28) i Elżbiety (Łk 1, 42; w Wulgacie „błogosławionaś Ty między niewiastami” to jeszcze słowa Gabriela — Elżbieta dodaje błogosławieństwo owocu) — z prośbą „Sancta María…”, która narastała w późnym średniowieczu, a ostateczny kształt otrzymała w XVI wieku, w brewiarzu św. Piusa V (1568). Połączone pozdrowienia śpiewano we Mszy całe wieki przed dodaniem prośby: to ofertorium IV niedzieli Adwentu, zapisane w rzymskich księgach śpiewu już w IX wieku. Imię „Iesus” na końcu pozdrowienia nie pochodzi z tych dwóch wersetów — to późniejszy dodatek pobożności.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,12 +16,12 @@
 			"translation": "Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus."
 		},
 		"s02": {
-			"translation": "Święta Maryjo, Matko Boża, módl się za nami grzesznymi, teraz i w godzinę śmierci naszej. Amen."
+			"translation": "Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen."
 		}
 	},
 	"words": {
 		"w001": {
-			"gloss": "zdrowaś",
+			"gloss": "Zdrowaś",
 			"function": "Słowa anioła z Łk 1, 28; utarte polskie „Zdrowaś” oddaje starożytne pozdrowienie."
 		},
 		"w002": {
@@ -29,7 +29,7 @@
 			"function": "Bezpośredni zwrot do Maryi."
 		},
 		"w003": {
-			"gloss": "łaski",
+			"gloss": "łaską",
 			"function": "Ablativus przy „plena” (w004): pełna czym — łaską; polski przekład ma dopełniacz „łaski pełna”."
 		},
 		"w004": {
@@ -42,7 +42,7 @@
 		},
 		"w006": {
 			"gloss": "z Tobą",
-			"function": "Forma zrośnięta: „te” + „cum” (z) — z zaimkami osobowymi przyimek „cum” stoi PO zaimku: tecum, nobíscum."
+			"function": "Forma zrośnięta: „te” + „cum” (z) — z zaimkami osobowymi przyimek „cum” stoi po zaimku, nie przed nim: tecum, nobíscum."
 		},
 		"w007": {
 			"gloss": "błogosławiona",
@@ -63,7 +63,7 @@
 		},
 		"w012": {
 			"gloss": "błogosławiony",
-			"function": "Teraz o owocu, nie o Maryi — rodzaj męski za „fructus” (w013)."
+			"function": "Teraz o owocu, nie o Maryi — rodzaj męski, bo zgadza się z „fructus” (w013)."
 		},
 		"w013": {
 			"gloss": "owoc"

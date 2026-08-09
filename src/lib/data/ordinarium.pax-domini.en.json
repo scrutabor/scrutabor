@@ -3,7 +3,7 @@
 	"text": "ordinarium.pax-domini",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Nine times in this Mass the priest greets with Dóminus vobíscum; once, here, he greets with these words instead, and the place chosen for the change is the moment just after the Host has been broken. He speaks holding over the chalice the particle he snapped from the left-hand half, signing the chalice three times with it: the peace is announced with the broken Body in his fingers, and at the next prayer that same particle goes into the Precious Blood. The response is the ordinary one, unchanged.",
+	"about": "Eight times in this Mass the priest greets with Dóminus vobíscum; once, here, he greets with these words instead — and this greeting falls exactly where the Host has just been broken. He speaks holding over the chalice the particle he snapped from the left-hand half, signing the chalice three times with it: the peace is announced with the broken Body in his fingers, and at the next prayer that same particle goes into the Precious Blood. The response is the ordinary one, unchanged.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,10 +16,10 @@
 			"narrative": "Holding the particle over the chalice, the priest signs the chalice three times with it."
 		},
 		"s02": {
-			"translation": "The peace of the Lord be always with you."
+			"translation": "The peace of the Lord be with you always."
 		},
 		"s03": {
-			"translation": "And with thy spirit."
+			"translation": "And with your spirit."
 		}
 	},
 	"words": {
@@ -28,7 +28,7 @@
 		},
 		"w002": {
 			"gloss": "of the Lord",
-			"function": "Genitive: not peace in general but the peace that belongs to Him — the peace He gives, and the subject of the prayer said a moment later over the Apostles' peace."
+			"function": "Genitive: not peace in general but the peace that belongs to Him — the peace He gives, and the object of the prayer of the Apostles' peace said a moment later."
 		},
 		"w003": {
 			"gloss": "be",
@@ -49,10 +49,10 @@
 		},
 		"w008": {
 			"gloss": "spirit",
-			"function": "The answer returns the greeting to the priest alone, and to his spirit rather than to him: the ancient response to a greeting given in virtue of ordination."
+			"function": "The answer returns the greeting to the priest alone. The old reading refers thy spirit to the grace of ordination; Jungmann hears a Semitism for simply thee. Both readings stand."
 		},
 		"w009": {
-			"gloss": "thy"
+			"gloss": "your"
 		}
 	}
 }

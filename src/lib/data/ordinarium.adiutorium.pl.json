@@ -3,7 +3,7 @@
 	"text": "ordinarium.adiutorium",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Werset i odpowiedź nie są dwoma zdaniami, lecz jednym wierszem psalmu przełamanym na pół: to ostatni wiersz psalmu 123, jednego z piętnastu psalmów stopni. Kapłan mówi pierwszą połowę, ministrant drugą. W obu zdaniach nie ma czasownika „jest” — łacina go tu nie potrzebuje, a przekład musi go dopowiedzieć.",
+	"about": "Werset i odpowiedź nie są dwoma zdaniami, lecz jednym wierszem psalmu przełamanym na pół: to ostatni wiersz psalmu 123, jednego z piętnastu psalmów stopni. Kapłan mówi pierwszą połowę, ministrant drugą. W pierwszej połowie nie ma czasownika „jest” — łacina opuszcza łącznik w zdaniu imiennym, a polszczyzna może uczynić to samo; druga połowa ma własne orzeczenie: fecit.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -44,10 +44,10 @@
 		},
 		"w006": {
 			"gloss": "który",
-			"function": "Odpowiedź podejmuje zdanie kapłana i dopowiada je: jeden wiersz psalmu, rozłożony na dwa głosy."
+			"function": "Zaimek względny: jego poprzednikiem jest „Dómini” (w005), choć tamto słowo stoi w dopełniaczu — dlatego odpowiedź nie może stać sama."
 		},
 		"w007": {
-			"gloss": "stworzył",
+			"gloss": "uczynił",
 			"function": "Perfectum: dzieło dokonane raz, którego skutek trwa."
 		},
 		"w008": {

@@ -3,7 +3,7 @@
 	"text": "ordinarium.praefatio-dialogus",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The exchange with which the priest opens the Preface. Cyprian of Carthage quotes it already in the third century: the priest, before the prayer, prepares the minds of the brethren by saying Sursum corda. “Habémus ad Dóminum” has no verb to translate — literally we have towards the Lord; the object left unsaid is the hearts just spoken of. The answer “Dignum et iustum est” is the phrase the priest picks up at once in the first words of the Preface: Vere dignum et iustum est.",
+	"about": "The exchange with which the priest opens the Preface. Cyprian of Carthage quotes it already in the third century: the priest, before the prayer, prepares the minds of the brethren by saying Sursum corda. “Habémus ad Dóminum” leaves its object unsaid — literally we have towards the Lord; the hearts just spoken of are what is had. The answer “Dignum et iustum est” is the phrase the priest picks up at once in the first words of the Preface: Vere dignum et iustum est.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,19 +13,19 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest lays his hands on either side of the altar and raises them a little as he says Sursum corda; at Grátias agámus he joins them before his breast and bows his head."
+			"narrative": "The priest lays both hands on the altar, one on either side, and raises them a little as he says Sursum corda; at Grátias agámus he joins them before his breast and bows his head."
 		},
 		"s02": {
 			"translation": "The Lord be with you."
 		},
 		"s03": {
-			"translation": "And with thy spirit."
+			"translation": "And with your spirit."
 		},
 		"s04": {
 			"translation": "Lift up your hearts."
 		},
 		"s05": {
-			"translation": "We have them lifted to the Lord."
+			"translation": "We lift them up to the Lord."
 		},
 		"s06": {
 			"translation": "Let us give thanks to the Lord our God."
@@ -39,7 +39,7 @@
 			"gloss": "The Lord"
 		},
 		"w002": {
-			"gloss": "be with you",
+			"gloss": "with you",
 			"function": "One written word carrying two: the preposition cum stands after the pronoun, as it always does with the personal pronouns (mecum, tecum, nobíscum)."
 		},
 		"w003": {
@@ -52,8 +52,8 @@
 			"gloss": "spirit"
 		},
 		"w006": {
-			"gloss": "thy",
-			"function": "The answer is not “and with you”: it speaks of the priest's spirit, of the gift he received at ordination."
+			"gloss": "your",
+			"function": "The answer returns the greeting to the priest alone. The old reading refers thy spirit to the grace of ordination; Jungmann hears a Semitism for simply thee. Both readings stand."
 		},
 		"w007": {
 			"gloss": "upwards",
@@ -75,7 +75,7 @@
 		},
 		"w012": {
 			"gloss": "thanks",
-			"function": "Grátias ágere, to render thanks, is the fixed Latin phrase; from it the Eucharist takes its name, which is Greek for thanksgiving."
+			"function": "Grátias ágere, to render thanks, is the fixed Latin phrase; it renders the Greek eucharistein, from which the Eucharist — thanksgiving — takes its name."
 		},
 		"w013": {
 			"gloss": "let us give",

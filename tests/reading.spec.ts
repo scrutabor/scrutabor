@@ -115,7 +115,7 @@ test('the Gloria reads with narrative, panel and provenance', async ({ page }) =
 	await expect(panel.locator('.meta')).not.toContainText('Collatinus');
 	// the superlative links its grammar concept and the lemma page resolves
 	await page.goto('/app/en/ordinarium/gloria?w=w074'); // Altissimus
-	await expect(panel.locator('.gloss')).toHaveText('the Most High');
+	await expect(panel.locator('.gloss')).toHaveText('Most High');
 	await panel.locator('.head a').click();
 	await expect(page).toHaveURL(atRoute('lemma/altus'));
 	await expect(page.locator('.senses')).toContainText('high');

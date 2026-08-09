@@ -3,7 +3,7 @@
 	"text": "ordinarium.deus-qui-humanae",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Ta modlitwa nie powstała dla ofiarowania: jest starą kolektą Bożego Narodzenia, którą znają już najstarsze sakramentarze rzymskie. Przeniesiono ją tutaj, rozcinając jednym wtrąceniem — „per huius aquæ et vini mystérium”, przez tajemnicę tej wody i wina. Kolekta prosiła po prostu, byśmy stali się uczestnikami bóstwa Tego, który stał się uczestnikiem naszego człowieczeństwa; przy ołtarzu ta sama prośba przechodzi przez kroplę wody wlewaną do kielicha. Stąd też sens dwóch przysłówków: mirabíliter — mirabílius, cudownie stworzył, jeszcze cudowniej odnowił; odnowienie jest większym dziełem niż stworzenie. We Mszach żałobnych modlitwę się mówi, ale wody się nie błogosławi.",
+	"about": "Ta modlitwa nie powstała dla ofiarowania: jest starą kolektą Bożego Narodzenia, którą znają już najstarsze sakramentarze rzymskie. Przeniesiono ją tutaj, rozcinając wtrąceniem — „per huius aquæ et vini mystérium”, przez tajemnicę tej wody i wina. Imię Syna na końcu nie jest dopiskiem: najstarsze świadectwa kolekty już się nim zamykają. Kolekta prosiła po prostu, byśmy stali się współuczestnikami bóstwa Tego, który stał się uczestnikiem naszego człowieczeństwa; przy ołtarzu ta sama prośba przechodzi przez kroplę wody wlewaną do kielicha. Stąd też sens dwóch przysłówków: mirabíliter — mirabílius, cudownie stworzył, jeszcze cudowniej odnowił; odnowienie jest większym dziełem niż stworzenie. We Mszach żałobnych modlitwę się odmawia, ale wody się nie błogosławi.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,13 +13,13 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan kładzie hostię na korporale i przechodzi na prawą stronę ołtarza. Wlewa wino do kielicha, a wodę, którą ma domieszać, błogosławi znakiem krzyża."
+			"narrative": "Kapłan kreśli pateną znak krzyża nad korporałem, kładzie Hostię i przechodzi na prawą stronę ołtarza. We Mszy cichej sam wlewa wino do kielicha, a wodę, którą ma domieszać, błogosławi znakiem krzyża."
 		},
 		"s02": {
-			"translation": "Boże, któryś godność ludzkiej natury cudownie stworzył, a jeszcze cudowniej odnowił: daj nam przez tajemnicę tej wody i wina stać się uczestnikami bóstwa Tego, który raczył stać się uczestnikiem naszego człowieczeństwa, Jezusa Chrystusa, Syna Twego, Pana naszego: który z Tobą żyje i króluje w jedności Ducha Świętego Bóg: przez wszystkie wieki wieków. Amen."
+			"translation": "Boże, któryś godność ludzkiej natury cudownie stworzył, a jeszcze cudowniej odnowił: przez to misterium wody i wina daj nam udział w bóstwie Tego, który przyjął nasze człowieczeństwo, Jezusa Chrystusa, Twojego Syna, naszego Pana: który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, przez wszystkie wieki wieków. Amen."
 		},
 		"s03": {
-			"narrative": "We Mszach żałobnych modlitwę się mówi, ale wody się nie błogosławi — w tych Mszach opuszcza się błogosławieństwa."
+			"narrative": "We Mszach żałobnych modlitwę się odmawia, ale wody się nie błogosławi."
 		}
 	},
 	"words": {
@@ -48,18 +48,18 @@
 		},
 		"w007": {
 			"gloss": "stworzyłeś",
-			"function": "Cóndere to założyć, ustanowić — czasownik zakładania miast, nie lepienia z gliny."
+			"function": "Cóndere to założyć, ustanowić — czasownik zakładania miast, nie zaś fingere, lepienie z gliny."
 		},
 		"w008": {
 			"gloss": "i"
 		},
 		"w009": {
 			"gloss": "jeszcze cudowniej",
-			"function": "Stopień wyższy tego samego przysłówka, co „mirabíliter” (w006). Forma jest zarazem rodzajem nijakim przymiotnika — o przysłówku rozstrzyga to, że określa czasownik."
+			"function": "Stopień wyższy tego samego przysłówka, co „mirabíliter” (w006). Forma jest zarazem rodzajem nijakim stopnia wyższego przymiotnika — o przysłówku rozstrzyga to, że określa czasownik."
 		},
 		"w010": {
 			"gloss": "odnowiłeś",
-			"function": "Forma ściągnięta z reformavísti — łacina liturgiczna często skraca w ten sposób perfectum."
+			"function": "Forma ściągnięta z reformavísti — łacina często tak skraca perfectum (amásti zamiast amavísti); mszał zachowuje tu formę krótką obok pełnego condidísti dwa słowa wcześniej."
 		},
 		"w011": {
 			"gloss": "daj",
@@ -73,7 +73,7 @@
 		},
 		"w014": {
 			"gloss": "tej",
-			"function": "Odnosi się do wody i wina naraz; forma nie wskazuje rodzaju, a rzeczowniki są dwojakiego, dlatego rodzaju tu nie podano."
+			"function": "Odnosi się do wody i wina naraz; forma nie wskazuje rodzaju, a rzeczowniki są dwojakiego rodzaju, dlatego tu go nie podano."
 		},
 		"w015": {
 			"gloss": "wody"
@@ -86,7 +86,7 @@
 		},
 		"w018": {
 			"gloss": "tajemnicę",
-			"function": "Biernik po „per” (w013). To jedyne słowa, którymi ofiarowanie rozszerzyło kolektę Bożego Narodzenia."
+			"function": "Biernik po „per” (w013). Te słowa ofiarowanie wcięło w kolektę Bożego Narodzenia."
 		},
 		"w019": {
 			"gloss": "jego",
@@ -100,12 +100,12 @@
 			"function": "Bezokolicznik jest dopełnieniem „da” (w011): daj nam być — daj, żebyśmy byli."
 		},
 		"w022": {
-			"gloss": "uczestnikami",
+			"gloss": "współuczestnikami",
 			"function": "Forma jest zarazem mianownikiem i biernikiem; biernik, bo domyślnym podmiotem bezokolicznika „esse” (w021) jest „nas” w bierniku, a nie celownik „nobis” (w012). Con-sors to ten, kto ma udział w losie (sors) drugiego."
 		},
 		"w023": {
 			"gloss": "który",
-			"function": "Drugie zdanie względne odwraca pierwsze: my mamy udział w Jego bóstwie, bo On wziął udział w naszym człowieczeństwie."
+			"function": "Drugie zdanie względne odwraca prośbę: my mamy udział w Jego bóstwie, bo On wziął udział w naszym człowieczeństwie."
 		},
 		"w024": {
 			"gloss": "człowieczeństwa",
@@ -150,7 +150,7 @@
 		},
 		"w036": {
 			"gloss": "który",
-			"function": "Zaczyna się zakończenie modlitwy, to samo we wszystkich kolektach zwróconych do Ojca przez Syna."
+			"function": "Zaczyna się zakończenie modlitwy do Ojca; ponieważ Syn został właśnie wymieniony, zaczyna się ono od razu od „Qui tecum”, bez „Per Dóminum nostrum”."
 		},
 		"w037": {
 			"gloss": "z tobą",

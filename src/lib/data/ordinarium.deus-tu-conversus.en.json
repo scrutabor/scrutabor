@@ -3,7 +3,7 @@
 	"text": "ordinarium.deus-tu-conversus",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Four pairs of versicles, all taken from the psalms. The first two are one continuous passage: Psalm 84, verses 7 and 8, taken in order and split between two voices. The third is Psalm 101, verse 2. The fourth — Dóminus vobíscum — is not from a psalm and falls here for the first time in the Mass; the priest will say it again several times, always before something he is about to do together with the people.",
+	"about": "Four pairs of versicles, three of them taken from the psalms. The first two are one continuous passage: Psalm 84, verses 7 and 8, taken in order and split between two voices. The third is Psalm 101, verse 2. The fourth — Dóminus vobíscum — is not from a psalm and falls here for the first time in the Mass; the priest will say it again several times, always before something he is about to do together with the people.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,31 +13,31 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest stays bowed at the foot of the altar and goes on, alternating with the server. These are the last words said at the foot: immediately after them he goes up to the altar."
+			"narrative": "The priest stays bowed at the foot of the altar and goes on, alternating with the server. One word more is said at the foot — Orémus, aloud — and with it the priest goes up to the altar."
 		},
 		"s02": {
-			"translation": "O God, thou wilt turn and give us life."
+			"translation": "O God, Thou wilt turn and give us life."
 		},
 		"s03": {
-			"translation": "And thy people will rejoice in thee."
+			"translation": "And Thy people will rejoice in Thee."
 		},
 		"s04": {
-			"translation": "Show us thy mercy, O Lord."
+			"translation": "Show us Thy mercy, O Lord."
 		},
 		"s05": {
-			"translation": "And grant us thy salvation."
+			"translation": "And grant us Thy salvation."
 		},
 		"s06": {
 			"translation": "O Lord, hear my prayer."
 		},
 		"s07": {
-			"translation": "And let my cry come unto thee."
+			"translation": "And let my cry come unto Thee."
 		},
 		"s08": {
 			"translation": "The Lord be with you."
 		},
 		"s09": {
-			"translation": "And with thy spirit."
+			"translation": "And with your spirit."
 		}
 	},
 	"words": {
@@ -45,7 +45,7 @@
 			"gloss": "O God"
 		},
 		"w002": {
-			"gloss": "thou"
+			"gloss": "Thou"
 		},
 		"w003": {
 			"gloss": "turning",
@@ -66,18 +66,18 @@
 			"function": "A Roman word for the commons as against the patricians; in Scripture simply the people of God."
 		},
 		"w008": {
-			"gloss": "thy",
+			"gloss": "Thy",
 			"function": "Agrees with “plebs” (w007)."
 		},
 		"w009": {
 			"gloss": "will rejoice",
-			"function": "A deponent (passive form, active meaning): it looks passive and means “will be glad”."
+			"function": "A future: the people's rejoicing answers the promised quickening — God's turning first, the joy in Him after."
 		},
 		"w010": {
 			"gloss": "in"
 		},
 		"w011": {
-			"gloss": "thee",
+			"gloss": "Thee",
 			"function": "Ablative after “in” (w010) — not “toward thee” but “in thee”: the joy has its place in God, not merely its direction."
 		},
 		"w012": {
@@ -92,10 +92,10 @@
 		},
 		"w015": {
 			"gloss": "mercy",
-			"function": "A compound of míserum cor — a heart for the wretched; the same build as “miséricors” in the prayer just before."
+			"function": "The accusative of the plea: mercy here is a thing to be shown, almost to be seen — the verse asks God to let it be looked upon."
 		},
 		"w016": {
-			"gloss": "thy",
+			"gloss": "Thy",
 			"function": "Agrees with “misericórdiam” (w015)."
 		},
 		"w017": {
@@ -106,7 +106,7 @@
 			"function": "The adjective salutáre used as a noun: the thing that saves. Here the object of “da” (w020), and so accusative."
 		},
 		"w019": {
-			"gloss": "thy",
+			"gloss": "Thy",
 			"function": "Agrees with “salutáre” (w018) — neuter, because that is the gender of the noun."
 		},
 		"w020": {
@@ -119,7 +119,7 @@
 			"gloss": "O Lord"
 		},
 		"w023": {
-			"gloss": "hear",
+			"gloss": "hear favourably",
 			"function": "An intensified audíre: not “hear” but “hear favourably” — that is, grant."
 		},
 		"w024": {
@@ -144,7 +144,7 @@
 			"gloss": "unto"
 		},
 		"w030": {
-			"gloss": "thee",
+			"gloss": "Thee",
 			"function": "Accusative after “ad” (w029) — motion toward someone; the same form stood above in the ablative after “in” (w010)."
 		},
 		"w031": {
@@ -167,10 +167,10 @@
 		},
 		"w036": {
 			"gloss": "spirit",
-			"function": "The answer is not “and with you”: the people answer the priest by naming what he received at his ordination."
+			"function": "The old reading refers thy spirit to the grace of ordination; Jungmann hears a Semitism for simply thee. Both readings stand."
 		},
 		"w037": {
-			"gloss": "thy",
+			"gloss": "your",
 			"function": "Agrees with “spíritu” (w036). Singular — they speak to one priest, where he spoke to many."
 		}
 	}

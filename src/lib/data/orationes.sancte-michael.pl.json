@@ -3,7 +3,7 @@
 	"text": "orationes.sancte-michael",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Modlitwa ułożona przez Leona XIII i przez niego nakazana po Mszy cichej; wśród jego modlitw stoi po Salve Regína i po kolekcie. Trzy zdania i trzy różne postawy: najpierw prośba do Michała o obronę, potem życzenie skierowane do Boga — niech mu rozkaże — a na końcu znów rozkaz do Michała, tym razem długi, z całym szeregiem dopełnień przed czasownikiem. Imię Míchaël znaczy po hebrajsku „któż jak Bóg”, i modlitwa mówi dokładnie to samo, gdy oddaje rozkazywanie Bogu, a Archaniołowi zostawia wykonanie.",
+	"about": "Modlitwa ułożona przez Leona XIII i przez niego nakazana po Mszy cichej; wśród jego modlitw stoi po Salve Regína i po kolekcie. Trzy prośby i trzy różne postawy: najpierw prośba do Michała o obronę, potem życzenie, by Bóg rozkazał nieprzyjacielowi, a na końcu znów wezwanie skierowane do Michała, tym razem długie, z całym szeregiem dopełnień przed czasownikiem. Imię Míchaël znaczy po hebrajsku „któż jak Bóg”, i modlitwa mówi dokładnie to samo, gdy oddaje rozkazywanie Bogu, a Archaniołowi zostawia wykonanie.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,13 +13,13 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "Święty Michale Archaniele, broń nas w walce; przeciw niegodziwości i zasadzkom diabła bądź nam obroną."
+			"translation": "Święty Michale Archaniele, wspomagaj nas w walce, a przeciw niegodziwości i zasadzkom złego ducha bądź naszą obroną."
 		},
 		"s02": {
-			"translation": "Niech mu Bóg rozkaże, pokornie prosimy."
+			"translation": "Oby go Bóg pogromić raczył, pokornie o to prosimy."
 		},
 		"s03": {
-			"translation": "A Ty, Książę wojska niebieskiego, szatana i inne duchy złe, które na zgubę dusz krążą po świecie, mocą Bożą strąć do piekła. Amen."
+			"translation": "A Ty, Wodzu niebieskich zastępów, szatana i inne duchy złe, które na zgubę dusz ludzkich po tym świecie krążą, mocą Bożą strąć do piekła. Amen."
 		}
 	},
 	"words": {
@@ -62,14 +62,14 @@
 		},
 		"w013": {
 			"gloss": "bądź",
-			"function": "Tryb rozkazujący czasu przyszłego — forma, której łacina używa do poleceń mających obowiązywać odtąd, nie tylko w tej chwili. Zwykły rozkaz brzmiałby es."
+			"function": "Tryb rozkazujący czasu przyszłego — forma, której łacina używa do poleceń mających obowiązywać odtąd, nie tylko w tej chwili. Zwykły rozkaz brzmiałby „es”."
 		},
 		"w014": {
 			"gloss": "obroną"
 		},
 		"w015": {
 			"gloss": "Niech rozkaże",
-			"function": "Tryb łączący życzenia, a nie prośba do Michała: rozkazywać ma Bóg. Czasownik rządzi celownikiem — stąd „illi” (w016), nie biernik."
+			"function": "Tryb łączący w funkcji życzenia — nie prośba do Michała: rozkazywać ma Bóg. Czasownik rządzi celownikiem — stąd „illi” (w016), nie biernik. Przyjęta polska modlitwa mówi „pogromi”; łacińskie imperet znaczy „rozkazać” — jak w Jud 9 u Wujka: „niech ci Pan rozkaże”."
 		},
 		"w016": {
 			"gloss": "mu"
@@ -79,7 +79,7 @@
 		},
 		"w018": {
 			"gloss": "pokornie",
-			"function": "Przymiotnik w mianowniku liczby mnogiej, nie przysłówek: „my, pokorni, prosimy”."
+			"function": "Przymiotnik w mianowniku liczby mnogiej — „my, pokorni, prosimy” — oddany przysłówkiem."
 		},
 		"w019": {
 			"gloss": "prosimy",
@@ -104,7 +104,7 @@
 		},
 		"w025": {
 			"gloss": "i inne",
-			"function": "Zaimkowa odmiana: dopełniacz brzmi alíus, celownik álii, nie jak u przymiotników na -us, -a, -um. Doczepione -que łączy z „sátanam” (w024)."
+			"function": "Zaimkowa odmiana: dopełniacz brzmi „alíus”, celownik „álii”, nie jak u przymiotników na -us, -a, -um. Doczepione -que łączy z „sátanam” (w024)."
 		},
 		"w026": {
 			"gloss": "duchy"
@@ -135,10 +135,10 @@
 			"gloss": "świecie"
 		},
 		"w035": {
-			"gloss": "mocą"
+			"gloss": "Bożą"
 		},
 		"w036": {
-			"gloss": "Bożą",
+			"gloss": "mocą",
 			"function": "Ablativus narzędzia: nie własną mocą Michał strąca, lecz Bożą."
 		},
 		"w037": {

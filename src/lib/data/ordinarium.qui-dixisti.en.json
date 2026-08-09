@@ -16,19 +16,19 @@
 			"narrative": "The priest bows over the altar with his hands joined upon it, and says the three prayers that follow secretly."
 		},
 		"s02": {
-			"translation": "O Lord Iesus Christ, who didst say to Thine Apostles:"
+			"translation": "Lord Jesus Christ, who said to Your Apostles:"
 		},
 		"s03": {
-			"translation": "Peace I leave you, my peace I give you:"
+			"translation": "Peace I leave you, My peace I give you:"
 		},
 		"s04": {
-			"translation": "look not upon my sins, but upon the faith of Thy Church;"
+			"translation": "look not on our sins, but on the faith of Your Church;"
 		},
 		"s05": {
-			"translation": "and vouchsafe to give her peace and to gather her into one according to Thy will:"
+			"translation": "and graciously grant her peace and unity in accordance with Your will:"
 		},
 		"s06": {
-			"translation": "Who livest and reignest, God, for ever and ever. Amen."
+			"translation": "Who live and reign for ever and ever. Amen."
 		},
 		"s07": {
 			"narrative": "In Masses for the dead the peace is not given, and this prayer is left out."
@@ -39,8 +39,8 @@
 			"gloss": "O Lord"
 		},
 		"w002": {
-			"gloss": "Iesus",
-			"function": "The vocative of Iesus is Iesu, one of the few Greek endings Latin kept unaltered; Whitaker's does not carry the name at all, so this parse rests on Collatinus and the edition."
+			"gloss": "Jesus",
+			"function": "The vocative of Iesus is Iesu, one of the few Greek endings Latin kept unaltered."
 		},
 		"w003": {
 			"gloss": "Christ"
@@ -95,7 +95,7 @@
 		},
 		"w018": {
 			"gloss": "my",
-			"function": "Singular “my”, though the priest is about to ask for the whole Church: the sins are his own, the faith is not."
+			"function": "“My” — and the owner is the priest alone, though he is about to ask for the whole Church: the sins are his own, the faith is not. The form is accusative plural, with “peccáta” (w017)."
 		},
 		"w019": {
 			"gloss": "but"
@@ -112,7 +112,7 @@
 		},
 		"w023": {
 			"gloss": "and her",
-			"function": "Two feminine nouns stand within reach — the faith and the Church — and the form settles neither. The two things asked, peace and gathering into one, are asked of the Church, and that is how the prayer is read."
+			"function": "Two feminine nouns stand within reach — the faith and the Church — and the form settles neither. The two things asked, peace and gathering into one, are asked for the Church, and that is how the prayer is read."
 		},
 		"w024": {
 			"gloss": "according to"
@@ -136,7 +136,7 @@
 		},
 		"w030": {
 			"gloss": "vouchsafe",
-			"function": "Deponent — passive in form, active in meaning. The construction is the courtly one of the Roman prayers: not “do this” but “think it worthy to do this”."
+			"function": "The courtly construction of the Roman prayers: not “do this” but “think it worthy to do this” — hence the two infinitives that complete it."
 		},
 		"w031": {
 			"gloss": "Who"

@@ -3,7 +3,7 @@
 	"text": "ordinarium.nobis-quoque",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Jedyna modlitwa Kanonu, którą kapłan mówi głośno — rubryka każe podnieść głos „nieco” — i jedyna, przy której uderza się w piersi. Te dwie rzeczy idą razem: to prośba grzeszników o siebie samych. Jej lista świętych odpowiada liście z Communicántes: Jan (zwykle rozumiany jako Chrzciciel), Szczepan, Maciej, Barnaba, Ignacy, Aleksander, Marcelin i Piotr — nie Apostoł, lecz egzorcysta, towarzysz Marcelina — a potem siedem kobiet: Felicyta, Perpetua, Agata, Łucja, Agnieszka, Cecylia, Anastazja. To największa grupa kobiet wymieniona z imienia we Mszy rzymskiej.",
+	"about": "Trzy słowa otwarcia kapłan mówi głośno — rubryka każe podnieść głos „nieco” — jedyne, jakie lud słyszy z Kanonu poza końcowym Per ómnia; i jedyna to modlitwa, przy której uderza się w piersi. Te dwie rzeczy idą razem: to prośba grzeszników o siebie samych. Jej lista świętych odpowiada liście z Communicántes: Jan (zwykle rozumiany jako Chrzciciel), Szczepan, Maciej, Barnaba, Ignacy, Aleksander, Marcelin i Piotr — nie Apostoł, lecz egzorcysta, towarzysz Marcelina — a potem siedem kobiet: Felicyta, Perpetua, Agata, Łucja, Agnieszka, Cecylia, Anastazja. To największa grupa kobiet wymieniona z imienia we Mszy rzymskiej.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,19 +16,19 @@
 			"narrative": "Kapłan uderza się prawą ręką w piersi i mówi głosem nieco podniesionym:"
 		},
 		"s02": {
-			"translation": "Nam także, grzesznikom,"
+			"translation": "Również nam, Twoim grzesznym sługom,"
 		},
 		"s03": {
 			"narrative": "Kapłan rozkłada ręce jak przedtem i mówi dalej po cichu."
 		},
 		"s04": {
-			"translation": "sługom Twoim, ufającym w mnóstwo zmiłowań Twoich, racz dać jakąś cząstkę i wspólnotę ze świętymi Twoimi Apostołami i Męczennikami:"
+			"translation": "ufającym w Twoje miłosierdzie, daj udział we wspólnocie z Twoimi świętymi Apostołami i Męczennikami:"
 		},
 		"s05": {
-			"translation": "z Janem, Szczepanem, Maciejem, Barnabą, Ignacym, Aleksandrem, Marcelinem, Piotrem, Felicytą, Perpetuą, Agatą, Łucją, Agnieszką, Cecylią, Anastazją i ze wszystkimi Świętymi Twoimi:"
+			"translation": "Janem Chrzcicielem, Szczepanem, Maciejem, Barnabą, Ignacym, Aleksandrem, Marcelinem, Piotrem, Felicytą, Perpetuą, Agatą, Łucją, Agnieszką, Cecylią, Anastazją i wszystkimi Twoimi Świętymi:"
 		},
 		"s06": {
-			"translation": "dopuść nas do ich grona — nie jako ten, kto waży zasługę, lecz jako szczodry dawca przebaczenia, prosimy."
+			"translation": "prosimy Cię, dopuść nas do ich grona nie z powodu naszych zasług, lecz dzięki Twojemu przebaczeniu."
 		},
 		"s07": {
 			"narrative": "Kapłan składa ręce."
@@ -40,7 +40,7 @@
 	"words": {
 		"w001": {
 			"gloss": "nam",
-			"function": "Celownik na samym początku, przed czasownikiem oddalonym o dwanaście słów; i to jedyne trzy słowa Kanonu, które lud słyszy poza końcowym Per ómnia."
+			"function": "Celownik na samym początku, przed czasownikiem oddalonym o trzynaście słów; i to jedyne trzy słowa Kanonu, które lud słyszy poza końcowym Per ómnia."
 		},
 		"w002": {
 			"gloss": "także",
@@ -48,7 +48,7 @@
 		},
 		"w003": {
 			"gloss": "grzesznikom",
-			"function": "Przy tym słowie kapłan uderza się w piersi."
+			"function": "Kapłan uderza się w piersi, wypowiadając te słowa — rubryka wiąże gest z całym zwrotem."
 		},
 		"w004": {
 			"gloss": "sługom",
@@ -123,7 +123,7 @@
 		},
 		"w026": {
 			"gloss": "Maciejem",
-			"function": "Apostoł wybrany losem na miejsce Judasza — w Communicántes go nie było, bo tam jego miejsce zajął Paweł."
+			"function": "W Communicántes go nie było — tam jego miejsce zajął Paweł; tu wraca do grona Dwunastu."
 		},
 		"w027": {
 			"gloss": "Barnabą"
@@ -132,7 +132,8 @@
 			"gloss": "Ignacym"
 		},
 		"w029": {
-			"gloss": "Aleksandrem"
+			"gloss": "Aleksandrem",
+			"function": "Zwykle utożsamiany z papieżem Aleksandrem I, choć utożsamienie jest sporne — jak przy Janie."
 		},
 		"w030": {
 			"gloss": "Marcelinem"
@@ -142,11 +143,12 @@
 			"function": "Nie Apostoł: to Piotr egzorcysta, którego imię idzie w rzymskim kalendarzu w parze z Marcelinem."
 		},
 		"w032": {
-			"gloss": "Felicytą"
+			"gloss": "Felicytą",
+			"function": "Imię jest zwykłym łacińskim rzeczownikiem — szczęście; analizatory potwierdzają tu formę, nie świętą."
 		},
 		"w033": {
 			"gloss": "Perpetuą",
-			"function": "Imię jest łacińskim przymiotnikiem („nieustanna”), i tylko tak znają je słowniki, którymi sprawdzamy formy; że jest tu imieniem, wiadomo z szeregu, w którym stoi."
+			"function": "Imię męczennicy, a zarazem łaciński przymiotnik („nieustanna”) — i tylko to niosą słowniki analizatorów, bo imion własnych nie obejmują; że jest tu imieniem, rozstrzyga szereg świętych, w którym stoi."
 		},
 		"w034": {
 			"gloss": "Agatą"
@@ -193,7 +195,7 @@
 		},
 		"w048": {
 			"gloss": "ten, kto szacuje",
-			"function": "Wołacz, jak „largítor” (w053): kapłan zwraca się do Boga, a nie opisuje Go. Mianownik i wołacz mają w tej deklinacji tę samą formę, więc rozstrzyga rozkaźnik „admítte” (w054)."
+			"function": "Mianownik w dopowiedzeniu do domyślnego podmiotu „admítte” (w054) — tak czytają oba przekłady; wołacz, o tej samej formie, pozostaje odczytaniem konkurencyjnym i słowo nosi znak sporu."
 		},
 		"w049": {
 			"gloss": "zasługę"
@@ -203,7 +205,7 @@
 		},
 		"w051": {
 			"gloss": "przebaczenia",
-			"function": "Nie darowanie długu, lecz łaskawe przyzwolenie; stąd „grzech powszedni” — peccátum veniále."
+			"function": "Dopełniacz przy „largítor” (w053): dawca nie zapłaty, lecz przebaczenia."
 		},
 		"w052": {
 			"gloss": "prosimy"
@@ -213,7 +215,7 @@
 		},
 		"w054": {
 			"gloss": "dopuść",
-			"function": "Rozkaźnik na samym końcu, po ośmiu słowach, które od niego zależą."
+			"function": "Rozkaźnik na samym końcu, po jedenastu słowach, które go poprzedzają."
 		},
 		"w055": {
 			"gloss": "Przez"

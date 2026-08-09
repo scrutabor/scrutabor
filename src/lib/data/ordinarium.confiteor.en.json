@@ -3,7 +3,7 @@
 	"text": "ordinarium.confiteor",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The general confession from the prayers at the foot of the altar. The priest says it first, then — in this version, with “tibi, pater” — the ministers, joined by the faithful at a dialogue Mass. After the first comes the Misereátur; after the second, the Misereátur and the Indulgéntiam. It grew out of the medieval prayers of preparation for Mass, and its present shape was fixed by the missal of St. Pius V (1570).",
+	"about": "The general confession from the prayers at the foot of the altar. The priest says it first, then — in this version, with “tibi, pater” — the ministers, joined by the faithful at a dialogue Mass. After the first comes the Misereátur; after the ministers', the Misereátur and the Indulgéntiam. It grew out of the medieval prayers of preparation for Mass, and its present shape was fixed by the missal of St. Pius V (1570).",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -73,7 +73,7 @@
 		},
 		"w011": {
 			"gloss": "to blessed",
-			"function": "Agrees with the following “Ioánni” (w012). “Beatus” recurs before each name in this litany of saints."
+			"function": "Agrees with the following “Ioánni” (w012). “Beátus” introduces the three named singly — Mary, Michael, John; from the Apostles on the prayer says “sanctis”."
 		},
 		"w012": {
 			"gloss": "John"
@@ -99,7 +99,7 @@
 		},
 		"w018": {
 			"gloss": "Paul",
-			"function": "Apposition to “Apóstolis” (w015)."
+			"function": "With “Petro” (w016), in apposition to “Apóstolis” (w015)."
 		},
 		"w019": {
 			"gloss": "to all",
@@ -165,7 +165,7 @@
 			"function": "The third and strongest repetition — “máxima” (w036) is about to join it."
 		},
 		"w036": {
-			"gloss": "most grievous",
+			"gloss": "greatest",
 			"function": "Agrees with “culpa” (w037)."
 		},
 		"w037": {
@@ -230,14 +230,14 @@
 		},
 		"w052": {
 			"gloss": "Peter",
-			"function": "Apposition to “Apóstolos” (w051). Compare “Petro” (w016)."
+			"function": "With “Paulum” (w054), in apposition to “Apóstolos” (w051). Compare “Petro” (w016)."
 		},
 		"w053": {
 			"gloss": "and"
 		},
 		"w054": {
 			"gloss": "Paul",
-			"function": "Apposition to “Apóstolos” (w051). Compare “Paulo” (w018)."
+			"function": "With “Petrum” (w052), in apposition to “Apóstolos” (w051). Compare “Paulo” (w018)."
 		},
 		"w055": {
 			"gloss": "all",
@@ -260,7 +260,7 @@
 		},
 		"w060": {
 			"gloss": "to pray",
-			"function": "Infinitive in the construction “precor + accusative + infinitive”: I beseech them to pray. It carries the content of the petition."
+			"function": "Infinitive in the construction “precor + accusative + infinitive”: I beseech them — and you — to pray. It carries the content of the petition."
 		},
 		"w061": {
 			"gloss": "for"

@@ -104,12 +104,12 @@
 						"number": "pl"
 					},
 					"analysis": {
-						"confidence": "medium",
+						"confidence": "high",
 						"sources": [
 							"editorial",
 							"whitakers"
 						],
-						"review": "disputed"
+						"review": "accepted"
 					}
 				}
 			]
