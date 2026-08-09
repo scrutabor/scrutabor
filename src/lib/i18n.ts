@@ -63,6 +63,8 @@ export interface Messages {
 	roleHint: Record<'populus' | 'minister' | 'sacerdos', string>;
 	quietCollapsed: string;
 	quietReveal: string;
+	quietHide: string;
+	quietAside: string;
 }
 
 const MESSAGES: Record<Lang, Messages> = {
@@ -135,6 +137,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		},
 		quietCollapsed: 'kapłan modli się po cichu',
 		quietReveal: 'pokaż',
+		quietHide: 'ukryj',
+		quietAside: 'nie twoja część',
 		pronunciationHint: 'zasady wymowy'
 	},
 	en: {
@@ -210,6 +214,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		},
 		quietCollapsed: 'the priest prays silently',
 		quietReveal: 'show',
+		quietHide: 'hide',
+		quietAside: 'not your part',
 		pronunciationHint: 'pronunciation guide'
 	}
 };

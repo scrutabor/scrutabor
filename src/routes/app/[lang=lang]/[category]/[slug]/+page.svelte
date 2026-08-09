@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto, replaceState } from '$app/navigation';
+	import { arrowNav } from '$lib/arrow-nav';
 	import { neighborsOf, sectionFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
@@ -124,23 +125,10 @@
 		aboutOpen = !aboutOpen;
 	}
 
-	function onWindowKeydown(e: KeyboardEvent) {
-		// Arrow keys page through the book — unless a control (the help
-		// slider) owns them. (Escape belongs to whichever sheet is open,
-		// and it handles it itself.)
-		if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
-		// A BARE arrow key, and only that. Cmd+← is Back on a Mac and Alt+←
-		// is Back everywhere else, and this was swallowing both: the reader
-		// pressed Back and went to the next prayer instead (owner,
-		// 2026-08-07). Every modifier is refused rather than the two that
-		// are known to mean something, because a shortcut this page has
-		// never heard of still belongs to the browser and not to it.
-		if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
-		const tag = (document.activeElement as HTMLElement | null)?.tagName;
-		if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
-		const target = e.key === 'ArrowLeft' ? around.prev : around.next;
-		if (target) goto(`/app/${lang}/${target.category}/${target.slug}`);
-	}
+	const onWindowKeydown = arrowNav((dir) => {
+		const t = dir === 'prev' ? around.prev : around.next;
+		return t ? `/app/${lang}/${t.category}/${t.slug}` : undefined;
+	});
 
 	let selectedWord = $derived(wp.word);
 	let selectedGloss = $derived(wp.gloss);
@@ -152,7 +140,10 @@
 		panel.applyFromLocation();
 		applyVerseFromLocation();
 	}}
-	onkeydown={onWindowKeydown}
+	onkeydown={(e) => {
+		const href = onWindowKeydown(e);
+		if (href) goto(href);
+	}}
 />
 
 <svelte:head>

@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
+	import { arrowNav } from '$lib/arrow-nav';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import Pager from '$lib/components/Pager.svelte';
@@ -30,6 +32,14 @@
 	// default, never a refusal: one tap and the words are there, and they
 	// stay there while the reader is on the page.
 	let unfolded = $state<Record<string, boolean>>({});
+
+	// The Ordo is exactly where paging by key is worth having — the reader
+	// is walking the Mass movement by movement — and it was the one surface
+	// without it (owner, 2026-08-09).
+	const onWindowKeydown = arrowNav((dir) => {
+		const t = dir === 'prev' ? around.prev : around.next;
+		return t ? `/app/${lang}/ordo/${t.id}` : undefined;
+	});
 	let legendOpen = $state(false);
 
 	function openLegend() {
@@ -114,7 +124,13 @@
 	);
 </script>
 
-<svelte:window onpopstate={panel.applyFromLocation} />
+<svelte:window
+	onpopstate={panel.applyFromLocation}
+	onkeydown={(e) => {
+		const href = onWindowKeydown(e);
+		if (href) goto(href);
+	}}
+/>
 
 <svelte:head>
 	<title>{movement ? `${movement.title} — Ordo Missæ` : 'Ordo Missæ'} — Scrutabor</title>
@@ -144,7 +160,8 @@
 				<!-- Said once over the run, not on every line of it. -->
 				<p class="silent-run smallcaps">{msgs.quietCollapsed}</p>
 			{/if}
-			<section class="part" class:folded>
+			{@const revealed = !!entry && !words && !!unfolded[e.id]}
+			<section class="part" class:folded class:revealed>
 				{#if folded}
 					<!-- A prayer the reader is not saying costs ONE LINE, not a
 					     card: title, what is happening, and the way in. Twelve of
@@ -167,6 +184,16 @@
 						{#if e.kind !== 'text'}
 							<span class="mark smallcaps"
 								>{e.kind === 'proper' ? msgs.ordoProper : msgs.ordoPending}</span
+							>
+						{/if}
+						<!-- Opened by the reader, not theirs to say: it keeps saying
+						     so, and it can be shut again. Without this the text
+						     arrived inline with nothing to mark it as an aside and
+						     no way back (owner, 2026-08-09). -->
+						{#if revealed}
+							<span class="aside-mark smallcaps">{msgs.quietAside}</span>
+							<button class="refold smallcaps" onclick={() => (unfolded[e.id] = false)}
+								>{msgs.quietHide}</button
 							>
 						{/if}
 					</div>
@@ -250,6 +277,38 @@
 		align-items: baseline;
 		justify-content: space-between;
 		gap: 1rem;
+	}
+
+	/* An opened aside keeps the quiet ink of the fold it came from, so the
+	   eye still reads it as something set apart from the reader's own
+	   lines, and it carries its own way back. */
+	.aside-mark {
+		margin-inline-start: auto;
+		font-size: 0.72rem;
+		letter-spacing: 0.09em;
+		color: var(--ink-soft);
+	}
+
+	.refold {
+		border: 0;
+		background: none;
+		padding: 0;
+		font: inherit;
+		font-size: 0.72rem;
+		letter-spacing: 0.09em;
+		color: var(--rubric);
+		cursor: pointer;
+		text-decoration: underline;
+		text-underline-offset: 0.25em;
+	}
+
+	.refold:hover {
+		text-decoration-thickness: 2px;
+	}
+
+	.part.revealed .part-text {
+		border-inline-start: 2px solid var(--rule);
+		padding-inline-start: 1rem;
 	}
 
 	.part-title {

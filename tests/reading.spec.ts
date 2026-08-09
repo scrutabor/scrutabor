@@ -1138,3 +1138,64 @@ test('the highlight marks the word AND its gloss', async ({ page }) => {
 	);
 	expect(bare, 'the word is still marked with the glosses off').not.toBe('rgba(0, 0, 0, 0)');
 });
+
+test('a rubric sits centrally between the verses it parts', async ({ page }) => {
+	// It was 29px from the verse above and 18 from the one below, and the
+	// speaker label was landing on the gloss row of the verse before it —
+	// a glossed verse paints its gloss BELOW the box its margin hangs from,
+	// so the margin was buying no daylight at all (owner, 2026-08-09).
+	await page.goto('/app/pl/ordo/praeparatio');
+	const gaps = await page.evaluate(() => {
+		const ink = (e: Element, side: 'top' | 'bottom') => {
+			const r = document.createRange();
+			r.selectNodeContents(e);
+			const b = r.getBoundingClientRect();
+			return side === 'top' ? b.top : b.bottom;
+		};
+		const out: { kind: string; above: number; below: number }[] = [];
+		document.querySelectorAll('.rubric').forEach((rb) => {
+			const p = rb.previousElementSibling,
+				n = rb.nextElementSibling;
+			if (!p || !n || !p.classList.contains('verse') || !n.classList.contains('verse')) return;
+			const la = rb.querySelector('.rubric-la')!;
+			const last = rb.querySelector('.rubric-narrative') ?? la;
+			out.push({
+				kind: 'rubric',
+				above: ink(la, 'top') - ink(p, 'bottom'),
+				below: ink(n, 'top') - ink(last, 'bottom')
+			});
+		});
+		document.querySelectorAll('.who').forEach((w) => {
+			const p = w.previousElementSibling,
+				n = w.nextElementSibling;
+			if (!p || !n || !p.classList.contains('verse')) return;
+			out.push({
+				kind: 'who',
+				above: ink(w, 'top') - ink(p, 'bottom'),
+				below: ink(n, 'top') - ink(w, 'bottom')
+			});
+		});
+		return out;
+	});
+
+	expect(
+		gaps.some((g) => g.kind === 'rubric'),
+		'the movement has rubrics between verses'
+	).toBe(true);
+	for (const g of gaps.filter((x) => x.kind === 'rubric')) {
+		// central: neither side more than a third again as open as the other
+		expect(
+			Math.max(g.above, g.below) / Math.min(g.above, g.below),
+			'the rubric sits centrally'
+		).toBeLessThan(1.34);
+	}
+	expect(
+		gaps.some((g) => g.kind === 'who'),
+		'a speaker label follows a verse somewhere'
+	).toBe(true);
+	for (const g of gaps.filter((x) => x.kind === 'who')) {
+		// the label belongs to the verse BELOW it, and must look like it
+		expect(g.above, 'the label clears the gloss row above it').toBeGreaterThan(6);
+		expect(g.above, 'and still sits nearer the verse it names').toBeGreaterThan(g.below * 2);
+	}
+});

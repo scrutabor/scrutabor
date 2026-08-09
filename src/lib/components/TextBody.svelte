@@ -203,7 +203,17 @@
 	/* The attribution line: small caps, quiet, above the words it names —
 	   the shape a missal uses for its S. and M. */
 	.who {
-		margin: 0 0 calc(var(--reading) * 0.103);
+		/* The label belongs to the verse BELOW it, and it has to look like
+		   it does. Its own bottom margin is tiny for that reason — but a
+		   glossed verse above gives back only --gloss-gap, exactly the
+		   overhang its gloss row paints below the box, so the label was
+		   landing on that row with no daylight at all and reading as part
+		   of the verse it follows (owner, 2026-08-09). The top margin here
+		   is the daylight, and it is written as the air wanted PLUS the
+		   overhang that has to be cleared first. Collapses against a
+		   rubric's larger bottom margin, so a label after a rubric is
+		   unchanged. */
+		margin: calc(var(--reading) * (0.517 + var(--gloss-gap))) 0 calc(var(--reading) * 0.103);
 		font-size: calc(var(--reading) * 0.497);
 		letter-spacing: 0.09em;
 		text-transform: lowercase;
@@ -522,7 +532,14 @@
 	   than one line of a prayer takes from the next — the margins collapse,
 	   so this is the one that decides the gap. */
 	.rubric {
-		margin: calc(var(--reading) * 1.241) 0 calc(var(--reading) * 0.759);
+		/* A rubric sits BETWEEN two verses and should look equally far from
+		   each (owner, 2026-08-09); it was 29px from the one above and 18
+		   from the one below. Equal ink, not equal margins: a glossed verse
+		   paints its gloss row --gloss-gap below the box the margin hangs
+		   from, so clearing that overhang is what buys the same daylight
+		   above as below. The two together still spend the 2.0 the old pair
+		   spent, so the page's rhythm is unchanged. */
+		margin: calc(var(--reading) * (1 + var(--gloss-gap))) 0 calc(var(--reading) * 1);
 		border-inline-start: 2px solid var(--rubric);
 		padding-inline-start: calc(var(--reading) * 0.621);
 	}

@@ -252,3 +252,40 @@ test('the narrative names the priest rather than calling him "he"', async ({ pag
 	}
 	expect(offenders).toEqual([]);
 });
+
+test('arrow keys page the Ordo, where a reader is walking the Mass', async ({ page }) => {
+	// The individual prayers had this and the flow did not, which is
+	// backwards: the Ordo is exactly where the next movement is wanted
+	// without reaching for the pager (owner, 2026-08-09).
+	await page.goto('/app/pl/ordo/canon');
+	await page.locator('main').click({ position: { x: 5, y: 5 } });
+	await page.keyboard.press('ArrowRight');
+	await expect(page).toHaveURL(atRoute('ordo/communio'));
+	await page.keyboard.press('ArrowLeft');
+	await expect(page).toHaveURL(atRoute('ordo/canon'));
+
+	// and a modifier still belongs to the browser, not to the page
+	const here = page.url();
+	await page.keyboard.press('Alt+ArrowRight');
+	await expect(page).toHaveURL(here);
+});
+
+test('an opened aside says it is one, and can be shut again', async ({ page }) => {
+	// Folded parts opened INLINE with nothing to mark them as an aside and
+	// no way back — the reader could reveal the whole silent Canon and not
+	// get their own page back (owner, 2026-08-09).
+	await page.goto('/app/pl/ordo/canon');
+	const folded = page.locator('.part.folded');
+	const before = await folded.count();
+	expect(before, 'the pew view folds the silent prayers').toBeGreaterThan(0);
+
+	await page.locator('.unfold').first().click();
+	const revealed = page.locator('.part.revealed').first();
+	await expect(revealed).toBeVisible();
+	await expect(revealed.locator('.aside-mark')).toHaveText('nie twoja część');
+	await expect(revealed.locator('.part-text')).toBeVisible();
+
+	await revealed.locator('.refold').click();
+	await expect(page.locator('.part.revealed')).toHaveCount(0);
+	await expect(page.locator('.part.folded')).toHaveCount(before);
+});
