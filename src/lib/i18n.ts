@@ -129,7 +129,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		},
 		markTitle: {
 			sacerdos: 'Versículus — werset, który mówi kapłan',
-			minister: 'Responsórium — odpowiedź ministranta',
+			minister: 'Responsórium — odpowiedź ministranta i wiernych',
 			populus: 'Responsórium — odpowiedź wiernych',
 			omnes: 'Omnes — mówią wszyscy razem',
 			schola: 'Responsórium — śpiewa schola'
@@ -210,7 +210,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		},
 		markTitle: {
 			sacerdos: 'Versículus — the verse the priest says',
-			minister: 'Responsórium — the server’s answer',
+			minister: 'Responsórium — the answer of the server and the faithful',
 			populus: 'Responsórium — the answer of the faithful',
 			omnes: 'Omnes — said by all together',
 			schola: 'Responsórium — sung by the choir'
