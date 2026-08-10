@@ -3,7 +3,7 @@
 	"text": "ordinarium.fili-dei-vivi",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The second of the three prayers, and from first word to last the priest's own: deliver me, my iniquities, make me cling. Fili Dei vivi is a quotation twice over — Peter says Tu es Christus, Filius Dei vivi at Caesarea Philippi, and Martha says it at Bethany before the raising of Lazarus. Both Gospels stand in this missal. The relative clause names all three Persons at work in one redemption: by the will of the Father, with the Holy Spirit cooperating, through Thy own death. In Masses for the dead the first prayer is dropped, but this one is said.",
+	"about": "The priest addresses Jesus Christ, the Son of the living God. He recalls the work of salvation accomplished through Christ's death, by the will of the Father and with the cooperation of the Holy Spirit. He asks to be delivered from iniquity and evil, to remain faithful to the commandments, and never to be separated from Christ.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -94,7 +94,7 @@
 		},
 		"w020": {
 			"gloss": "me",
-			"function": "The prayer turns to the first person singular here and stays there. The priest asks for himself alone."
+			"function": "From this point the prayer remains in the first person singular."
 		},
 		"w021": {
 			"gloss": "through"
