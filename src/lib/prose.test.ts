@@ -56,6 +56,14 @@ function corpusProse(): { where: string; text: string }[] {
 	return out;
 }
 
+/** One rule, asked of both bodies of prose. */
+function noSemicolons(all: { where: string; text: string }[]) {
+	const offenders = all
+		.filter(({ text }) => text.includes(';'))
+		.map(({ where, text }) => `${where}: ${text.slice(0, 60)}`);
+	expect(offenders, `use a full stop or an "and":\n  ${offenders.join('\n  ')}`).toEqual([]);
+}
+
 describe('the words the app says', () => {
 	it('sweeps the whole of what the app says', () => {
 		// A sweep that finds nothing proves nothing. These are the three
@@ -79,10 +87,7 @@ describe('the words the app says', () => {
 		// punctuation the surface cannot carry, and in a note it is usually
 		// a full stop that lost its nerve. 51 of them lived in the movement
 		// notes alone. Two sentences, or an "and" — not this.
-		const offenders = prose()
-			.filter(({ text }) => text.includes(';'))
-			.map(({ where, text }) => `${where}: ${text.slice(0, 60)}`);
-		expect(offenders, `use a full stop or an "and":\n  ${offenders.join('\n  ')}`).toEqual([]);
+		noSemicolons(prose());
 	});
 
 	it('and neither does the corpus, outside the text it is translating', () => {
@@ -91,10 +96,7 @@ describe('the words the app says', () => {
 		// where this edition does its explaining.
 		const all = corpusProse();
 		expect(all.length, 'the vendored prose is reachable').toBeGreaterThan(2000);
-		const offenders = all
-			.filter(({ text }) => text.includes(';'))
-			.map(({ where, text }) => `${where}: ${text.slice(0, 60)}`);
-		expect(offenders, `use a full stop or an "and":\n  ${offenders.join('\n  ')}`).toEqual([]);
+		noSemicolons(all);
 	});
 
 	it('does not hedge where the rite is definite', () => {
