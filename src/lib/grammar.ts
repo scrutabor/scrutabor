@@ -141,8 +141,8 @@ const CONCEPTS_SOURCE: Concept[] = [
 				textKey: 'ordinarium/confiteor',
 				wordId: 'w002',
 				note: {
-					pl: 'spowiadam się komu — Bogu; pierwszy z długiej listy celowników.',
-					en: 'I confess to whom — to God; the first of a long chain of datives.'
+					pl: 'spowiadam się komu — Bogu. Pierwszy z długiej listy celowników.',
+					en: 'I confess to whom — to God. The first of a long chain of datives.'
 				}
 			},
 			{
@@ -391,7 +391,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 		label: { pl: 'apozycja (dopowiedzenie)', en: 'apposition' },
 		what: {
 			pl: 'Dopowiedzenie: drugi rzeczownik, który bliżej określa pierwszy i dziedziczy jego przypadek — Michałowi Archaniołowi, owoc… Jezus.',
-			en: 'A second noun that restates the first and inherits its case — to Michael the Archangel; the fruit… Jesus.'
+			en: 'A second noun that restates the first and inherits its case — to Michael the Archangel, the fruit… Jesus.'
 		},
 		examples: [
 			{

@@ -158,8 +158,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/adiutorium',
 				note: {
-					pl: 'Werset i odpowiedź; kapłan żegna się drugi raz i zaraz potem, głęboko pochylony, zaczyna spowiedź powszechną.',
-					en: 'A versicle and its response; the priest signs himself a second time and, bowing low, begins the confession.'
+					pl: 'Werset i odpowiedź. Kapłan żegna się drugi raz i zaraz potem, głęboko pochylony, zaczyna spowiedź powszechną.',
+					en: 'A versicle and its response. The priest signs himself a second time and, bowing low, begins the confession.'
 				}
 			},
 			{
@@ -208,8 +208,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/deus-tu-conversus',
 				note: {
-					pl: 'Ostatnie wersety u stopni, mówione na przemian; zaraz po nich kapłan wstępuje na ołtarz.',
-					en: 'The last versicles at the foot, said in alternation; immediately after them the priest goes up to the altar.'
+					pl: 'Ostatnie wersety u stopni, mówione na przemian. Zaraz po nich kapłan wstępuje na ołtarz.',
+					en: 'The last versicles at the foot, said in alternation. Immediately after them the priest goes up to the altar.'
 				}
 			},
 			{
@@ -255,12 +255,12 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/gloria',
 				note: {
-					pl: 'Kapłan intonuje hymn anielski na środku ołtarza; we Mszy śpiewanej podejmuje go chór.',
-					en: 'At the middle of the altar the priest intones the angelic hymn; at a sung Mass the choir takes it up.'
+					pl: 'Kapłan intonuje hymn anielski na środku ołtarza. We Mszy śpiewanej podejmuje go chór.',
+					en: 'At the middle of the altar the priest intones the angelic hymn. At a sung Mass the choir takes it up.'
 				},
 				when: {
 					pl: 'opuszcza się w Adwencie, Przedpościu i Wielkim Poście oraz we Mszach żałobnych, wraca w święta tych okresów',
-					en: 'omitted in Advent, Pre-Lent and Lent and at Requiem Masses; it returns on the feasts of those seasons'
+					en: 'omitted in Advent, Pre-Lent and Lent and at Requiem Masses, and returns on the feasts of those seasons'
 				}
 			},
 			{
@@ -268,7 +268,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Orátio',
 				kind: 'proper',
 				note: {
-					pl: 'Kapłan pozdrawia wiernych, wzywa Orémus i odmawia modlitwę dnia — czasem kilka, gdy przypadają wspomnienia; każdą zamyka Amen.',
+					pl: 'Kapłan pozdrawia wiernych, wzywa Orémus i odmawia modlitwę dnia — czasem kilka, gdy przypadają wspomnienia — a każdą zamyka Amen.',
 					en: 'The priest greets the people, calls Orémus and says the day’s prayer — sometimes several, when commemorations fall — each closed by the Amen.'
 				}
 			},
@@ -277,8 +277,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Epístola',
 				kind: 'proper',
 				note: {
-					pl: 'Po stronie lekcji kapłan czyta lekcję dnia; że się skończyła, poznać po odpowiedzi ministranta: Deo grátias.',
-					en: 'At the Epistle side the priest reads the day’s reading; that it has ended you know from the server’s Deo grátias.'
+					pl: 'Po stronie lekcji kapłan czyta lekcję dnia. Że się skończyła, poznać po odpowiedzi ministranta: Deo grátias.',
+					en: 'At the Epistle side the priest reads the day’s reading. That it has ended you know from the server’s Deo grátias.'
 				}
 			},
 			{
@@ -286,12 +286,12 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Graduále, Allelúia, Tractus',
 				kind: 'proper',
 				note: {
-					pl: 'Śpiew między czytaniami, wzięty z formularza dnia; we Mszy recytowanej kapłan czyta go na głos po stronie lekcji.',
-					en: 'The chant between the readings, taken from the day’s proper; at low Mass the priest reads it aloud at the Epistle side.'
+					pl: 'Śpiew między czytaniami, wzięty z formularza dnia. We Mszy recytowanej kapłan czyta go na głos po stronie lekcji.',
+					en: 'The chant between the readings, taken from the day’s proper. At low Mass the priest reads it aloud at the Epistle side.'
 				},
 				when: {
-					pl: 'od Siedemdziesiątnicy do Wielkanocy zamiast Allelúia śpiewa się traktus; w kilka dni roku dochodzi sekwencja',
-					en: 'from Septuagesima to Easter the Tract replaces the Allelúia; on a few days of the year a Sequence is added'
+					pl: 'od Siedemdziesiątnicy do Wielkanocy zamiast Allelúia śpiewa się traktus, a w kilka dni roku dochodzi sekwencja',
+					en: 'from Septuagesima to Easter the Tract replaces the Allelúia, and on a few days of the year a Sequence is added'
 				}
 			},
 			{
@@ -299,8 +299,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Evangélium',
 				kind: 'proper',
 				note: {
-					pl: 'Mszał przenosi się na stronę Ewangelii i wszyscy wstają; kapłan po cichej modlitwie Munda cor meum znaczy krzyżem księgę oraz własne czoło, usta i piersi.',
-					en: 'The missal is carried to the Gospel side and all stand; after the silent Munda cor meum the priest signs the book and his own forehead, lips and breast.'
+					pl: 'Mszał przenosi się na stronę Ewangelii i wszyscy wstają. Kapłan po cichej modlitwie Munda cor meum znaczy krzyżem księgę oraz własne czoło, usta i piersi.',
+					en: 'The missal is carried to the Gospel side and all stand. After the silent Munda cor meum the priest signs the book and his own forehead, lips and breast.'
 				}
 			},
 			{
@@ -309,8 +309,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/credo',
 				note: {
-					pl: 'Po Ewangelii, a w niedziele zwykle po kazaniu, kapłan intonuje wyznanie wiary; przy słowach o Wcieleniu wszyscy przyklękają.',
-					en: 'After the Gospel — on Sundays usually after the sermon — the priest intones the profession of faith; all genuflect at the words of the Incarnation.'
+					pl: 'Po Ewangelii, a w niedziele zwykle po kazaniu, kapłan intonuje wyznanie wiary. Przy słowach o Wcieleniu wszyscy przyklękają.',
+					en: 'After the Gospel — on Sundays usually after the sermon — the priest intones the profession of faith. All genuflect at the words of the Incarnation.'
 				},
 				when: {
 					pl: 'w niedziele i większe święta',
@@ -350,8 +350,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/deus-qui-humanae',
 				note: {
-					pl: 'Do wina dolewa się kropla wody; modlitwa nad nią jest starą kolektą Bożego Narodzenia.',
-					en: 'A drop of water goes into the wine; the prayer said over it is an old Christmas collect.'
+					pl: 'Do wina dolewa się kropla wody. Modlitwa nad nią jest starą kolektą Bożego Narodzenia.',
+					en: 'A drop of water goes into the wine. The prayer said over it is an old Christmas collect.'
 				},
 				when: {
 					pl: 'we Mszach żałobnych wody się nie błogosławi',
@@ -408,8 +408,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/orate-fratres',
 				note: {
-					pl: 'Kapłan odwraca się i prosi o modlitwę; ministrant odpowiada za wszystkich, wyliczając cel ofiary.',
-					en: 'The priest turns and asks for prayer; the server answers for everyone, naming what the sacrifice is for.'
+					pl: 'Kapłan odwraca się i prosi o modlitwę. Ministrant odpowiada za wszystkich, wyliczając cel ofiary.',
+					en: 'The priest turns and asks for prayer. The server answers for everyone, naming what the sacrifice is for.'
 				}
 			},
 			{
@@ -459,8 +459,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/sanctus',
 				note: {
-					pl: 'Ostatnie słowa prefacji przechodzą wprost w Sanctus; zaraz po nim zaczyna się cichy Kanon.',
-					en: 'The Preface runs straight into the Sanctus; the silent Canon begins the moment it ends.'
+					pl: 'Ostatnie słowa prefacji przechodzą wprost w Sanctus. Zaraz po nim zaczyna się cichy Kanon.',
+					en: 'The Preface runs straight into the Sanctus. The silent Canon begins the moment it ends.'
 				}
 			},
 			{
@@ -489,8 +489,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/communicantes',
 				note: {
-					pl: 'Lista świętych: Maryja, dwunastu apostołów i dwunastu męczenników rzymskich; św. Józefa dopisał tu Jan XXIII w 1962 roku.',
-					en: 'The list of saints: Mary, twelve apostles and twelve Roman martyrs; John XXIII added St Joseph here in 1962.'
+					pl: 'Lista świętych: Maryja, dwunastu apostołów i dwunastu męczenników rzymskich. Świętego Józefa dopisał tu Jan XXIII w 1962 roku.',
+					en: 'The list of saints: Mary, twelve apostles and twelve Roman martyrs. John XXIII added St Joseph here in 1962.'
 				}
 			},
 			{
@@ -519,8 +519,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/qui-pridie',
 				note: {
-					pl: 'Konsekracja chleba. Kapłan przyklęka, unosi Hostię, przyklęka znowu; ministrant dzwoni przy każdym geście.',
-					en: 'The consecration of the bread. The priest genuflects, raises the Host, genuflects again; the bell rings at each.'
+					pl: 'Konsekracja chleba. Kapłan przyklęka, unosi Hostię, przyklęka znowu. Ministrant dzwoni przy każdym geście.',
+					en: 'The consecration of the bread. The priest genuflects, raises the Host, genuflects again. The bell rings at each.'
 				}
 			},
 			{
@@ -559,8 +559,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/supplices-te-rogamus',
 				note: {
-					pl: 'Prośba, by anioł zaniósł Ofiarę na ołtarz w niebie; anioł pozostaje nienazwany.',
-					en: 'The prayer that an angel carry the sacrifice to the altar on high; the angel is never named.'
+					pl: 'Prośba, by anioł zaniósł Ofiarę na ołtarz w niebie. Anioł pozostaje nienazwany.',
+					en: 'The prayer that an angel carry the sacrifice to the altar on high. The angel is never named.'
 				}
 			},
 			{
@@ -599,8 +599,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/per-ipsum',
 				note: {
-					pl: 'Małe podniesienie zamyka Kanon; dopiero Per ómnia sǽcula sæculórum słychać na głos.',
-					en: 'The minor elevation closes the Canon; only the Per ómnia sǽcula sæculórum is heard aloud.'
+					pl: 'Małe podniesienie zamyka Kanon. Dopiero Per ómnia sǽcula sæculórum słychać na głos.',
+					en: 'The minor elevation closes the Canon. Only the Per ómnia sǽcula sæculórum is heard aloud.'
 				}
 			}
 		]
@@ -617,8 +617,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/pater-noster',
 				note: {
-					pl: 'Modlitwę Pańską kapłan śpiewa lub mówi sam; ministrant włącza się dopiero na końcu: Sed líbera nos a malo.',
-					en: 'The priest sings or says the Lord’s Prayer alone; the server joins only at the end: Sed líbera nos a malo.'
+					pl: 'Modlitwę Pańską kapłan śpiewa lub mówi sam. Ministrant włącza się dopiero na końcu: Sed líbera nos a malo.',
+					en: 'The priest sings or says the Lord’s Prayer alone. The server joins only at the end: Sed líbera nos a malo.'
 				}
 			},
 			{
@@ -647,8 +647,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/haec-commixtio',
 				note: {
-					pl: 'Cząstka wpada do kielicha; słowa, które temu towarzyszą, kapłan mówi po cichu.',
-					en: 'The particle falls into the chalice; the words that go with it the priest says silently.'
+					pl: 'Cząstka wpada do kielicha. Słowa, które temu towarzyszą, kapłan mówi po cichu.',
+					en: 'The particle falls into the chalice. The words that go with it the priest says silently.'
 				}
 			},
 			{
@@ -739,8 +739,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/quod-ore-sumpsimus',
 				note: {
-					pl: 'Ministrant wlewa wino do kielicha; kapłan oczyszcza go i spożywa ablucję.',
-					en: 'The server pours wine into the chalice; the priest purifies it and drinks.'
+					pl: 'Ministrant wlewa wino do kielicha. Kapłan oczyszcza go i spożywa ablucję.',
+					en: 'The server pours wine into the chalice. The priest purifies it and drinks.'
 				}
 			},
 			{
@@ -749,8 +749,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/corpus-tuum',
 				note: {
-					pl: 'Obmywa palce winem z wodą, wyciera kielich i naczynia; ta druga cicha modlitwa zamyka obrzęd Komunii.',
-					en: 'The priest washes his fingers with wine and water and dries the chalice and vessels; this second silent prayer closes the Communion rite.'
+					pl: 'Obmywa palce winem z wodą, wyciera kielich i naczynia. Ta druga cicha modlitwa zamyka obrzęd Komunii.',
+					en: 'The priest washes his fingers with wine and water and dries the chalice and vessels. This second silent prayer closes the Communion rite.'
 				}
 			}
 		]
@@ -766,8 +766,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Commúnio',
 				kind: 'proper',
 				note: {
-					pl: 'Antyfona z formularza dnia, odczytana po stronie lekcji; we Mszy śpiewanej chór śpiewa ją już podczas rozdawania Komunii.',
-					en: 'The day’s antiphon, read at the Epistle side; at a sung Mass the choir has already sung it during the distribution of Communion.'
+					pl: 'Antyfona z formularza dnia, odczytana po stronie lekcji. We Mszy śpiewanej chór śpiewa ją już podczas rozdawania Komunii.',
+					en: 'The day’s antiphon, read at the Epistle side. At a sung Mass the choir has already sung it during the distribution of Communion.'
 				}
 			},
 			{
@@ -789,12 +789,12 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/ite-missa-est',
 				note: {
-					pl: 'Kapłan zwraca się do ludu i odsyła go słowami Ite, missa est; ministrant odpowiada Deo grátias.',
-					en: 'The priest turns to the people and dismisses them with Ite, missa est; the server answers Deo grátias.'
+					pl: 'Kapłan zwraca się do ludu i odsyła go słowami Ite, missa est. Ministrant odpowiada Deo grátias.',
+					en: 'The priest turns to the people and dismisses them with Ite, missa est. The server answers Deo grátias.'
 				},
 				when: {
-					pl: 'gdy nie było Glórii, śpiewa się Benedicámus Dómino; we Mszach żałobnych — Requiéscant in pace',
-					en: 'when the Gloria was not said the dismissal is Benedicámus Dómino; at Requiems, Requiéscant in pace'
+					pl: 'gdy nie było Glórii, śpiewa się Benedicámus Dómino, a we Mszach żałobnych — Requiéscant in pace',
+					en: 'when the Gloria was not said the dismissal is Benedicámus Dómino, and at Requiems Requiéscant in pace'
 				}
 			},
 			{
@@ -842,12 +842,12 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'orationes/ave-maria',
 				note: {
-					pl: 'Kapłan klęka u stopni ołtarza i zaczyna z ludem trzy Zdrowaś Maryjo; wierni odpowiadają drugą połową każdego z nich.',
+					pl: 'Kapłan klęka u stopni ołtarza i zaczyna z ludem trzy Zdrowaś Maryjo, a wierni odpowiadają drugą połową każdego z nich.',
 					en: 'The priest kneels at the foot of the altar and begins three Hail Marys with the people, who answer the second half of each.'
 				},
 				when: {
-					pl: 'po Mszy cichej; opuszcza się je po Mszy śpiewanej',
-					en: 'after low Mass; omitted after a sung Mass'
+					pl: 'po Mszy cichej, a po śpiewanej opuszcza się je',
+					en: 'after low Mass, and omitted after a sung Mass'
 				}
 			},
 			{
@@ -866,8 +866,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'orationes/deus-refugium',
 				note: {
-					pl: 'Kolekta, którą kapłan zamyka antyfonę. Leon XIII prosił w niej o wolność Kościoła; od roku 1930 modlitwy te ofiarowuje się w intencji Rosji.',
-					en: 'The collect with which the priest closes the antiphon. Leo XIII asked in it for the freedom of the Church; since 1930 these prayers have been offered for Russia.'
+					pl: 'Kolekta, którą kapłan zamyka antyfonę. Leon XIII prosił w niej o wolność Kościoła. Od roku 1930 modlitwy te ofiarowuje się w intencji Rosji.',
+					en: 'The collect with which the priest closes the antiphon. Leo XIII asked in it for the freedom of the Church. Since 1930 these prayers have been offered for Russia.'
 				}
 			},
 			{

@@ -84,8 +84,8 @@
 					href="https://outils.biblissima.fr/en/collatinus/"
 					target="_blank"
 					rel="external noopener">Collatinus</a
-				>. The word panel names each word's confirmers; “editorial” is the edition's own work — the
-				glosses, translations, notes and rulings.
+				>. The word panel names each word's confirmers, and “editorial” is the edition's own work —
+				the glosses, translations, notes and rulings.
 			</p>
 			<p class="what">
 				It is worth being plain about what that check proves. The analyzers read the

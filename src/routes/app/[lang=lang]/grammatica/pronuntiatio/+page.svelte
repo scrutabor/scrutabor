@@ -136,11 +136,11 @@
 		{ s: 'ɲ', pl: 'jak ń w „koń”', en: 'as ny in canyon' },
 		{ s: 'x', pl: 'jak ch w „chleb”', en: 'as ch in loch' },
 		{ s: 'dz', pl: 'jak dz w „dzwon”', en: 'as ds in lads' },
-		{ s: 's z v r', pl: 'jak s, z, w, r (r drżące)', en: 'as in sit, zeal, vine; r is rolled' },
+		{ s: 's z v r', pl: 'jak s, z, w, r (r drżące)', en: 'as in sit, zeal, vine, with r rolled' },
 		{
 			s: 'kw kv gw',
-			pl: 'jak kw w „kwiat”; gw jak w „gwiazda”',
-			en: 'as qu in quick; gw as in Gwen'
+			pl: 'jak kw w „kwiat”, gw jak w „gwiazda”',
+			en: 'as qu in quick, gw as in Gwen'
 		},
 		{ s: 'ˈ', pl: 'akcent — pada na następną sylabę', en: 'stress — falls on the next syllable' },
 		{ s: '.', pl: 'granica sylaby', en: 'syllable boundary' }
@@ -222,8 +222,8 @@
 			</div>
 			<p class="fine">
 				{lang === 'pl'
-					? 'Reguła „ti” nie działa po s, t, x ani na początku wyrazu (hóstia: /ˈɔ.sti.a/). S między samogłoskami dźwięcznieje w\u00a0obu tradycjach (Iesus). Spółgłoskowe „i” nie jest osobną sylabą: Ie-sus ma dwie, ma-ie-stá-tis cztery; starsze mszaliki drukują w\u00a0tym miejscu j (Jesus, majestátis) — to ta sama głoska. Pozostałe litery czyta się jak po polsku.'
-					: 'The “ti” rule does not apply after s, t, x, or at the start of a word (hóstia: /ˈɔ.sti.a/). S between vowels is voiced in both traditions (Iesus). Consonantal i is not a syllable of its own: Ie-sus has two, ma-ie-stá-tis four; older hand missals print j here (Jesus, majestátis) for the same sound. Other letters keep the Latin values of the symbols table.'}
+					? 'Reguła „ti” nie działa po s, t, x ani na początku wyrazu (hóstia: /ˈɔ.sti.a/). S między samogłoskami dźwięcznieje w\u00a0obu tradycjach (Iesus). Spółgłoskowe „i” nie jest osobną sylabą: Ie-sus ma dwie, ma-ie-stá-tis cztery. Starsze mszaliki drukują w\u00a0tym miejscu j (Jesus, majestátis) — to ta sama głoska. Pozostałe litery czyta się jak po polsku.'
+					: 'The “ti” rule does not apply after s, t, x, or at the start of a word (hóstia: /ˈɔ.sti.a/). S between vowels is voiced in both traditions (Iesus). Consonantal i is not a syllable of its own: Ie-sus has two, ma-ie-stá-tis four. Older hand missals print j here (Jesus, majestátis) for the same sound. Other letters keep the Latin values of the symbols table.'}
 			</p>
 		</section>
 
