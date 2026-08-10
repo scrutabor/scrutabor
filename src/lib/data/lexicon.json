@@ -771,6 +771,12 @@
 			"head": "consubstantiális, -e",
 			"pos": "adj"
 		},
+		"contentio": {
+			"head": "conténtio, contentiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
 		"contra": {
 			"head": "contra",
 			"pos": "prep"
@@ -826,6 +832,12 @@
 			"head": "crucifígo, crucifígere, crucifíxi, crucifíxum",
 			"pos": "verb",
 			"conj": 3
+		},
+		"cubile": {
+			"head": "cubíle, cubílis",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 3
 		},
 		"culpa": {
 			"head": "culpa, -æ",

@@ -1016,7 +1016,6 @@
 				"konsekracja",
 				"poświęcenie"
 			],
-			"note": "Od consecráre — oddać na własność bóstwu; w łacinie pogańskiej także o zaliczeniu cesarza w poczet bogów.",
 			"derivatives": [
 				"konsekracja"
 			]
@@ -1026,7 +1025,6 @@
 				"uczestnik",
 				"współtowarzysz"
 			],
-			"note": "Con-sors: ten, kto ma udział w cudzym losie (sors).",
 			"derivatives": [
 				"konsorcjum (od consortium)"
 			]
@@ -1037,7 +1035,6 @@
 				"towarzystwo",
 				"udział"
 			],
-			"note": "Od cum + sors, los: consórtes to ci, którym przypadł ten sam los.",
 			"derivatives": [
 				"konsorcjum"
 			]
@@ -1058,7 +1055,10 @@
 				"współistotny",
 				"tej samej istoty"
 			],
-			"note": "Złożenie cum + substántia, oddające greckie homooúsios — tej samej istoty; słowo starsze niż spory nicejskie, poświadczone już u Tertuliana. Polskie „współistotny” jest jego kalką."
+			"note": "W Credo oznacza, że Syn jest tej samej istoty co Ojciec."
+		},
+		"contentio": {
+			"senses": ["spór"]
 		},
 		"contra": {
 			"senses": [
@@ -1075,7 +1075,6 @@
 				"skruszony",
 				"starty"
 			],
-			"note": "Imiesłów od contérere — zetrzeć na proch.",
 			"derivatives": [
 				"kontrycja"
 			]
@@ -1085,15 +1084,13 @@
 				"niepokoić",
 				"wprawiać w zamęt",
 				"mącić"
-			],
-			"note": "Złożenie cum + turbáre — zmącić do gruntu."
+			]
 		},
 		"conversio": {
 			"senses": [
 				"nawrócenie",
 				"zwrócenie się"
 			],
-			"note": "Od convérto — obrócić. Nawrócenie jest po łacinie obróceniem się całego człowieka, nie zmianą zdania.",
 			"derivatives": [
 				"konwersja"
 			]
@@ -1115,7 +1112,6 @@
 				"współdziałać",
 				"współpracować"
 			],
-			"note": "Deponens: forma bierna, znaczenie czynne. Con- i óperor — działać razem z kimś.",
 			"derivatives": [
 				"kooperacja"
 			]
@@ -1164,10 +1160,12 @@
 				"ukrzyżować",
 				"przybić do krzyża"
 			],
-			"note": "Zrost wyrażenia cruci fígere — przybić do krzyża (crux, crucis + fígere).",
 			"derivatives": [
 				"krucyfiks"
 			]
+		},
+		"cubile": {
+			"senses": ["łoże"]
 		},
 		"culpa": {
 			"senses": [
@@ -1181,7 +1179,6 @@
 				"wyznawca",
 				"uprawiający"
 			],
-			"note": "Od cólere — uprawiać ziemię i czcić bogów; jedno słowo na oba, i stąd „kultura” i „kult”.",
 			"derivatives": [
 				"kultura (od cólere)",
 				"kult (od cólere)"
