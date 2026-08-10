@@ -3,7 +3,7 @@
 	"text": "psalmi.118-he",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Psalm 118 is an acrostic: twenty-two stanzas of eight verses, one stanza for each letter of the Hebrew alphabet, with all eight verses of a stanza beginning with the same letter in the Hebrew. It is the longest psalm in the psalter, and nearly every verse of it speaks about one thing — God's law, called among other names law, testimony, statute, commandment, judgement, word. This stanza carries the letter HE. In the Roman breviary its verses open the psalmody of Sunday Terce, whose antiphon is drawn from verse 35. The psalm itself runs across all four of Sunday's little hours. Verse thirty-four — “Da mihi intelléctum, et scrutábor legem tuam” — is where this edition takes its name: a petition for understanding rather than for knowledge, and a promise to search rather than merely to read.",
+	"about": "Psalm 118 is an acrostic: twenty-two stanzas of eight verses, one stanza for each letter of the Hebrew alphabet, with all eight verses of a stanza beginning with the same letter in the Hebrew. It is the longest psalm in the psalter, and nearly every verse of it speaks about one thing — God's law, called among other names law, testimony, statute, commandment, judgement, word. This stanza carries the letter HE. In the Roman breviary its verses open the psalmody of Sunday Terce, whose antiphon is drawn from verse 35. The psalm itself runs across all four of Sunday's little hours. Verse thirty-four — “Da mihi intelléctum, et scrutábor legem tuam” — gave this edition its name. In it, the psalmist asks God for understanding and says that he will search His law and keep it with his whole heart.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -79,8 +79,7 @@
 			"gloss": "always"
 		},
 		"w012": {
-			"gloss": "give",
-			"function": "The verse this edition is named from begins here."
+			"gloss": "give"
 		},
 		"w013": {
 			"gloss": "me"
@@ -91,11 +90,11 @@
 		},
 		"w015": {
 			"gloss": "and",
-			"function": "After the petition “Da” (w012) the conjunction announces its promised result: give — and I will search."
+			"function": "Here the conjunction links the petition to the psalmist's statement of what he will do."
 		},
 		"w016": {
 			"gloss": "I will search",
-			"function": "A future answering “Da” (w012), spoken like a vow: the gift of understanding comes first, then the work of searching."
+			"function": "After the petition “Da” (w012), the psalmist says that he will search God's law."
 		},
 		"w017": {
 			"gloss": "law"
@@ -122,7 +121,7 @@
 		},
 		"w024": {
 			"gloss": "heart",
-			"function": "Ablative with “in” (w022). In Hebrew idiom the heart is the seat of mind and will, not only of feeling — so the verse ends where it began: asking for understanding."
+			"function": "Ablative with “in” (w022). The phrase “in toto corde” stresses that God's law is to be kept with a whole and undivided heart."
 		},
 		"w025": {
 			"gloss": "my"
@@ -248,15 +247,13 @@
 			"gloss": "in"
 		},
 		"w062": {
-			"gloss": "fear",
-			"function": "In the psalms nearly always the fear of God: not dread of punishment but the awe one stands in."
+			"gloss": "fear"
 		},
 		"w063": {
 			"gloss": "Thy"
 		},
 		"w064": {
-			"gloss": "cut away",
-			"function": "Literally to prune round about. The petition is surgical, not gentle."
+			"gloss": "cut away"
 		},
 		"w065": {
 			"gloss": "reproach",
