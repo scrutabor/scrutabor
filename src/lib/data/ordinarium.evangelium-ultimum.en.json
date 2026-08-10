@@ -3,7 +3,7 @@
 	"text": "ordinarium.evangelium-ultimum",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The Prologue of Saint John, read at the end of Mass at the Gospel side. The priest signs with the cross first the altar or the book, then himself — forehead, lips and breast — as before any Gospel, and reads the fourteen verses that carry the whole story back behind the making of the world. At the words “Et Verbum caro factum est” he genuflects. The hand missal prints those five words in capitals and carries the rubric besides; do and the typical edition set a rubric — all mean the same thing. The announcement has its answer, “Glória tibi, Dómine”, and the whole closes with “Deo grátias”.",
+	"about": "The Prologue of Saint John, read at the end of Mass at the Gospel side. The priest signs with the cross first the altar or the book, then himself — forehead, lips and breast — as before any Gospel, and reads the fourteen verses that carry the whole story back behind the making of the world. At the words “Et Verbum caro factum est” he genuflects. The hand missal prints those five words in capitals and carries the rubric besides. Do and the typical edition set a rubric — all mean the same thing. The announcement has its answer, “Glória tibi, Dómine”, and the whole closes with “Deo grátias”.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -83,7 +83,7 @@
 		},
 		"w008": {
 			"gloss": "of the holy",
-			"function": "Agrees with “Evangélii” (w009); evangélium is neuter, hence sancti and not sanctæ."
+			"function": "Agrees with “Evangélii” (w009). Evangélium is neuter, hence sancti and not sanctæ."
 		},
 		"w009": {
 			"gloss": "Gospel"
@@ -403,7 +403,7 @@
 		},
 		"w107": {
 			"gloss": "coming",
-			"function": "Accusative, so it agrees with “hóminem” (w106) and not with the light: it is the man who comes into the world. The Greek allows both readings; the Latin form does not."
+			"function": "Accusative, so it agrees with “hóminem” (w106) and not with the light: it is the man who comes into the world. The Greek allows both readings. The Latin form does not."
 		},
 		"w108": {
 			"gloss": "into"

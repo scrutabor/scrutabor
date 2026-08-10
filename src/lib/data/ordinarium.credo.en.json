@@ -3,7 +3,7 @@
 	"text": "ordinarium.credo",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The Nicene-Constantinopolitan Creed: the confession of Nicaea (325) as reworked and much enlarged in the form received under the name of the Council of Constantinople (381) — a form that also drops clauses Nicaea had (the anathemas, “of the substance of the Father”). The Latin Mass text is a third form again: it keeps “Deum de Deo”, which the conciliar Greek does not have, and confesses the Spirit's procession “from the Father and the Son” (Filióque) — a Western addition, not in the Greek of the council. It entered the Roman Mass late: Berno of Reichenau reports that Rome began to sing it in 1014, when Benedict VIII conceded it at the request of Emperor Henry II — the usual account; claims of earlier Roman use rest on Carolingian books whose Roman footing is disputed.",
+	"about": "The Nicene-Constantinopolitan Creed: the confession of Nicaea (325) as reworked and much enlarged in the form received under the name of the Council of Constantinople (381) — a form that also drops clauses Nicaea had (the anathemas, “of the substance of the Father”). The Latin Mass text is a third form again: it keeps “Deum de Deo”, which the conciliar Greek does not have, and confesses the Spirit's procession “from the Father and the Son” (Filióque) — a Western addition, not in the Greek of the council. It entered the Roman Mass late: Berno of Reichenau reports that Rome began to sing it in 1014, when Benedict VIII conceded it at the request of Emperor Henry II — the usual account. Claims of earlier Roman use rest on Carolingian books whose Roman footing is disputed.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "At the middle of the altar the priest intones the profession of faith; the Credo is said on Sundays and greater feasts and usually omitted on weekdays. At the word “Deum” the priest bows his head to the cross, likewise at “Iesum Christum” and “simul adorátur”, and at the end, at “Et vitam ventúri sǽculi”, he signs himself with the cross."
+			"narrative": "At the middle of the altar the priest intones the profession of faith. The Credo is said on Sundays and greater feasts and usually omitted on weekdays. At the word “Deum” the priest bows his head to the cross, likewise at “Iesum Christum” and “simul adorátur”, and at the end, at “Et vitam ventúri sǽculi”, he signs himself with the cross."
 		},
 		"s02": {
 			"translation": "I believe in one God, the Father almighty, maker of heaven and earth, of all things visible and invisible."
@@ -34,7 +34,7 @@
 			"translation": "For us men and for our salvation He came down from heaven."
 		},
 		"s08": {
-			"narrative": "The rubric calls for a genuflection here: the priest kneels from “Et incarnátus est” until “Et homo factus est” — honoring the moment the Incarnation is confessed; the faithful genuflect with him."
+			"narrative": "The rubric calls for a genuflection here: the priest kneels from “Et incarnátus est” until “Et homo factus est” — honoring the moment the Incarnation is confessed. The faithful genuflect with him."
 		},
 		"s09": {
 			"translation": "And was incarnate by the Holy Spirit, of the Virgin Mary: and was made man."
@@ -73,7 +73,7 @@
 	"words": {
 		"w001": {
 			"gloss": "I believe",
-			"function": "“Crédere in” with the accusative — “to believe *into* someone”, to entrust oneself — is biblical and Church syntax; classical Latin said “crédere” with the dative: to give credence."
+			"function": "“Crédere in” with the accusative — “to believe *into* someone”, to entrust oneself — is biblical and Church syntax. Classical Latin said “crédere” with the dative: to give credence."
 		},
 		"w002": {
 			"gloss": "in"
@@ -198,7 +198,7 @@
 		},
 		"w042": {
 			"gloss": "begotten",
-			"function": "The accusative appositions continue; set against “factum” (w044) it carries the heart of the Nicene confession: begotten, not made."
+			"function": "The accusative appositions continue. Set against “factum” (w044) it carries the heart of the Nicene confession: begotten, not made."
 		},
 		"w043": {
 			"gloss": "not"
@@ -255,7 +255,7 @@
 		},
 		"w060": {
 			"gloss": "came down",
-			"function": "The form looks the same in the present and the perfect; here it narrates the accomplished descent — “came down”."
+			"function": "The form looks the same in the present and the perfect. Here it narrates the accomplished descent — “came down”."
 		},
 		"w061": {
 			"gloss": "from"
@@ -268,7 +268,7 @@
 		},
 		"w064": {
 			"gloss": "made flesh",
-			"function": "With “est” (w065) it forms the perfect: incarnátus est — “was made flesh”; Latin builds such tenses from a participle and the verb “to be”."
+			"function": "With “est” (w065) it forms the perfect: incarnátus est — “was made flesh”. Latin builds such tenses from a participle and the verb “to be”."
 		},
 		"w065": {
 			"gloss": "was"
@@ -299,7 +299,7 @@
 		},
 		"w074": {
 			"gloss": "was made",
-			"function": "Again a participle with “est” (w075): factus est — “was made”; the predicate is the nominative “homo” (w073)."
+			"function": "Again a participle with “est” (w075): factus est — “was made”. The predicate is the nominative “homo” (w073)."
 		},
 		"w075": {
 			"gloss": "—"
@@ -350,7 +350,7 @@
 		},
 		"w090": {
 			"gloss": "day",
-			"function": "The form “tértia” (w089) is feminine — “dies” is feminine here; the ablative answers: when?"
+			"function": "The form “tértia” (w089) is feminine — “dies” is feminine here. The ablative answers: when?"
 		},
 		"w091": {
 			"gloss": "according to"
@@ -391,7 +391,7 @@
 		},
 		"w103": {
 			"gloss": "about to come",
-			"function": "The future participle with “est” (w104): ventúrus est — “is to come, will come”; Latin's way of stating what is appointed."
+			"function": "The future participle with “est” (w104): ventúrus est — “is to come, will come”. Latin's way of stating what is appointed."
 		},
 		"w104": {
 			"gloss": "—"
@@ -404,7 +404,7 @@
 		},
 		"w107": {
 			"gloss": "to judge",
-			"function": "An infinitive of purpose after “ventúrus est”: he will come — to do what? — to judge. Classical prose would say “ad iudicandum”; the infinitive here is a Grecism, ordinary in biblical Latin."
+			"function": "An infinitive of purpose after “ventúrus est”: he will come — to do what? — to judge. Classical prose would say “ad iudicandum”. The infinitive here is a Grecism, ordinary in biblical Latin."
 		},
 		"w108": {
 			"gloss": "the living"
@@ -417,7 +417,7 @@
 		},
 		"w111": {
 			"gloss": "of whose",
-			"function": "A possessive genitive with “regni” (w112); masculine, for the antecedent is Christ, not the kingdom — the form itself does not show the gender."
+			"function": "A possessive genitive with “regni” (w112). Masculine, for the antecedent is Christ, not the kingdom — the form itself does not show the gender."
 		},
 		"w112": {
 			"gloss": "kingdom"
@@ -501,7 +501,7 @@
 		},
 		"w138": {
 			"gloss": "spoke",
-			"function": "A deponent participle with “est” (w139): locútus est — “spoke”; passive form, active meaning."
+			"function": "A deponent participle with “est” (w139): locútus est — “spoke”. Passive form, active meaning."
 		},
 		"w139": {
 			"gloss": "—"

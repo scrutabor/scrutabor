@@ -3,7 +3,7 @@
 	"text": "ordinarium.corpus-tuum",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Ostatnia modlitwa obrzędu Komunii i ta, w której tkwi węzeł. Quem jest rodzaju męskiego: nie może należeć do mácula, skazy, która jest żeńska, ani do sacraménta, które są nijakie i w liczbie mnogiej. Sięga ponad nimi obiema do me, o pięć słów wstecz — niech nie pozostanie we mnie zmaza grzechów, którego posiliły czyste i święte sakramenty. Pozwalają na to łacińskie końcówki; język, który je stracił, tego nie potrafi, i każdy przekład musi wybrać. Modlitwa prosi, żeby Ciało i Krew przylgnęły do wnętrzności kapłana — víscera to w Biblii siedziba czułości i miłosierdzia, per víscera misericórdiæ: prośba cielesna i wewnętrzna zarazem.",
+	"about": "Ostatnia modlitwa obrzędu Komunii i ta, w której tkwi węzeł. Quem jest rodzaju męskiego: nie może należeć do mácula, skazy, która jest żeńska, ani do sacraménta, które są nijakie i w liczbie mnogiej. Sięga ponad nimi obiema do me, o pięć słów wstecz — niech nie pozostanie we mnie zmaza grzechów, którego posiliły czyste i święte sakramenty. Pozwalają na to łacińskie końcówki. Język, który je stracił, tego nie potrafi, i każdy przekład musi wybrać. Modlitwa prosi, żeby Ciało i Krew przylgnęły do wnętrzności kapłana — víscera to w Biblii siedziba czułości i miłosierdzia, per víscera misericórdiæ: prośba cielesna i wewnętrzna zarazem.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -58,11 +58,11 @@
 		},
 		"w009": {
 			"gloss": "wypiłem",
-			"function": "Poto nie jest codziennym słowem o piciu — tym jest bibo, słowo ustanowienia; modlitwa i tu waży słownictwo."
+			"function": "Poto nie jest codziennym słowem o piciu — tym jest bibo, słowo ustanowienia. Modlitwa i tu waży słownictwo."
 		},
 		"w010": {
 			"gloss": "niech przylgną",
-			"function": "Ad i hæreo — przywrzeć do czegoś; rządzi celownikiem, tak jak inhærére w drugiej modlitwie przed Komunią."
+			"function": "Ad i hæreo — przywrzeć do czegoś. Rządzi celownikiem, tak jak inhærére w drugiej modlitwie przed Komunią."
 		},
 		"w011": {
 			"gloss": "do wnętrzności",
@@ -117,7 +117,7 @@
 		},
 		"w026": {
 			"gloss": "posiliły",
-			"function": "Perfectum — pokrzepienie już się dokonało; do tego dokonanego faktu modlitwa przypina swoją prośbę o czystość."
+			"function": "Perfectum — pokrzepienie już się dokonało. Do tego dokonanego faktu modlitwa przypina swoją prośbę o czystość."
 		},
 		"w027": {
 			"gloss": "sakramenty",

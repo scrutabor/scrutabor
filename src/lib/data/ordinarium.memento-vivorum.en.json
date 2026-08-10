@@ -3,7 +3,7 @@
 	"text": "ordinarium.memento-vivorum",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The commemoration of the living. In old Rome the names of those for whom the offering was made were read from tablets called diptychs; the missal's N. et N. is what remains of them. The priest joins his hands and falls silent — he prays for those he means to remember, and no one hears the names. The prayer then takes in all who are present, circumstántes, literally those standing round, and sets out what is asked for them: the redeeming of their souls, their hope of salvation, and their safety.",
+	"about": "The commemoration of the living. In old Rome the names of those for whom the offering was made were read from tablets called diptychs. The missal's N. et N. is what remains of them. The priest joins his hands and falls silent — he prays for those he means to remember, and no one hears the names. The prayer then takes in all who are present, circumstántes, literally those standing round, and sets out what is asked for them: the redeeming of their souls, their hope of salvation, and their safety.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,7 +16,7 @@
 			"translation": "Remember, Lord, Your servants and handmaids"
 		},
 		"s02": {
-			"narrative": "The priest joins his hands and prays a while in silence for those he means to remember; then he spreads his hands and goes on."
+			"narrative": "The priest joins his hands and prays a while in silence for those he means to remember, then spreads his hands and goes on."
 		},
 		"s03": {
 			"translation": "and all gathered here, whose faith and devotion are known to You. For them we offer to You:"
@@ -31,7 +31,7 @@
 	"words": {
 		"w001": {
 			"gloss": "be mindful",
-			"function": "A future imperative — the only kind this verb has (plural mementóte); Latin uses it to mean “have this in mind when the moment comes”."
+			"function": "A future imperative — the only kind this verb has (plural mementóte). Latin uses it to mean “have this in mind when the moment comes”."
 		},
 		"w002": {
 			"gloss": "O Lord"
@@ -46,7 +46,7 @@
 		},
 		"w005": {
 			"gloss": "Thy",
-			"function": "Here the missal prints N. et N.; the priest passes into silence and calls the names to mind, and no one hears them."
+			"function": "Here the missal prints N. et N.. The priest passes into silence and calls the names to mind, and no one hears them."
 		},
 		"w006": {
 			"gloss": "and"
@@ -97,7 +97,7 @@
 		},
 		"w021": {
 			"gloss": "or",
-			"function": "Vel allows both alternatives; aut would rule one of them out. The offering is made by the priest for them and by them through him."
+			"function": "Vel allows both alternatives. Aut would rule one of them out. The offering is made by the priest for them and by them through him."
 		},
 		"w022": {
 			"gloss": "who"
@@ -127,7 +127,7 @@
 		},
 		"w030": {
 			"gloss": "and for their own",
-			"function": "The masculine comes from the sense — people, not things; the form itself marks no gender."
+			"function": "The masculine comes from the sense — people, not things. The form itself marks no gender."
 		},
 		"w031": {
 			"gloss": "all"
@@ -153,7 +153,7 @@
 		},
 		"w038": {
 			"gloss": "of salvation",
-			"function": "Salus means salvation and health at once; beside it stands incolúmitas, safety in this life — the prayer asks for both."
+			"function": "Salus means salvation and health at once. Beside it stands incolúmitas, safety in this life — the prayer asks for both."
 		},
 		"w039": {
 			"gloss": "and"
@@ -182,7 +182,7 @@
 		},
 		"w047": {
 			"gloss": "God",
-			"function": "Dative: it is to him that the vows are paid. The pair living and true is 1 Thess 1:9 verbatim, setting God against the idols; Jer 10:10 stands behind it."
+			"function": "Dative: it is to him that the vows are paid. The pair living and true is 1 Thess 1:9 verbatim, setting God against the idols. Jer 10:10 stands behind it."
 		},
 		"w048": {
 			"gloss": "living"

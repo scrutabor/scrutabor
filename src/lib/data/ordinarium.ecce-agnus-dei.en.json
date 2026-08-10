@@ -3,7 +3,7 @@
 	"text": "ordinarium.ecce-agnus-dei",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The Baptist's sentence at the Jordan, with one word altered. John says Ecce Agnus Dei, ecce qui tollit peccátum mundi — the sin of the world, in the singular; the Mass says peccáta, the sins. The priest, turned toward those about to receive, then says the centurion's line three times — the centurion's own words ended sanábitur puer meus, my servant shall be healed, where the Mass says ánima mea, my soul, just as a moment ago over himself — and each receives with the form changed in one word: ánimam tuam for ánimam meam. He begins at the Epistle side, and says the whole sentence to each communicant while signing the ciborium with the Host.",
+	"about": "The Baptist's sentence at the Jordan, with one word altered. John says Ecce Agnus Dei, ecce qui tollit peccátum mundi — the sin of the world, in the singular. The Mass says peccáta, the sins. The priest, turned toward those about to receive, then says the centurion's line three times — the centurion's own words ended sanábitur puer meus, my servant shall be healed, where the Mass says ánima mea, my soul, just as a moment ago over himself — and each receives with the form changed in one word: ánimam tuam for ánimam meam. He begins at the Epistle side, and says the whole sentence to each communicant while signing the ciborium with the Host.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -64,14 +64,14 @@
 		},
 		"w007": {
 			"gloss": "the sins",
-			"function": "The Gospel at the Jordan has peccátum, the sin of the world in the singular; the Mass says the sins."
+			"function": "The Gospel at the Jordan has peccátum, the sin of the world in the singular. The Mass says the sins."
 		},
 		"w008": {
 			"gloss": "of the world"
 		},
 		"w009": {
 			"gloss": "Lord",
-			"function": "The centurion's sentence again, this time said facing those about to receive; the priest said the same words over himself a moment ago."
+			"function": "The centurion's sentence again, this time said facing those about to receive. The priest said the same words over himself a moment ago."
 		},
 		"w010": {
 			"gloss": "not"
@@ -81,7 +81,7 @@
 		},
 		"w012": {
 			"gloss": "worthy",
-			"function": "The rubrics order the priest to strike his breast at his own Dómine non sum dignus; here the book is silent, and widespread custom makes the same gesture at the rail."
+			"function": "The rubrics order the priest to strike his breast at his own Dómine non sum dignus. Here the book is silent, and widespread custom makes the same gesture at the rail."
 		},
 		"w013": {
 			"gloss": "that"

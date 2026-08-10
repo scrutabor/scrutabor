@@ -3,7 +3,7 @@
 	"text": "ordinarium.pax-domini",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Osiem razy w tej Mszy kapłan pozdrawia słowami Dóminus vobíscum; raz, tutaj, pozdrawia inaczej — i to pozdrowienie pada dokładnie tam, gdzie Hostia została właśnie przełamana. Kapłan mówi je, trzymając nad kielichem cząstkę odłamaną z lewej połowy i żegnając nią kielich trzykrotnie: pokój ogłasza się z przełamanym Ciałem w palcach, a przy następnej modlitwie ta sama cząstka wpadnie do Najdroższej Krwi. Odpowiedź jest zwyczajna, niezmieniona.",
+	"about": "Osiem razy w tej Mszy kapłan pozdrawia słowami Dóminus vobíscum. Raz, tutaj, pozdrawia inaczej — i to pozdrowienie pada dokładnie tam, gdzie Hostia została właśnie przełamana. Kapłan mówi je, trzymając nad kielichem cząstkę odłamaną z lewej połowy i żegnając nią kielich trzykrotnie: pokój ogłasza się z przełamanym Ciałem w palcach, a przy następnej modlitwie ta sama cząstka wpadnie do Najdroższej Krwi. Odpowiedź jest zwyczajna, niezmieniona.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -32,7 +32,7 @@
 		},
 		"w003": {
 			"gloss": "niech będzie",
-			"function": "Tryb łączący jako życzenie; to on czyni z tego zdania błogosławieństwo, a nie stwierdzenie."
+			"function": "Tryb łączący jako życzenie. To on czyni z tego zdania błogosławieństwo, a nie stwierdzenie."
 		},
 		"w004": {
 			"gloss": "zawsze"
@@ -49,7 +49,7 @@
 		},
 		"w008": {
 			"gloss": "duchem",
-			"function": "Odpowiedź zwraca pozdrowienie samemu kapłanowi. Dawni czytali „duchowi twemu” o łasce święceń; Jungmann słyszy tu semityzm — po prostu „tobie”. Oba odczytania stoją obok siebie."
+			"function": "Odpowiedź zwraca pozdrowienie samemu kapłanowi. Dawni czytali „duchowi twemu” o łasce święceń. Jungmann słyszy tu semityzm — po prostu „tobie”. Oba odczytania stoją obok siebie."
 		},
 		"w009": {
 			"gloss": "twoim"

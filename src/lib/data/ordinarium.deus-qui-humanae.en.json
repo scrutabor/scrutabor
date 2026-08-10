@@ -3,7 +3,7 @@
 	"text": "ordinarium.deus-qui-humanae",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "This prayer was not written for the offertory: it is an old Christmas collect, which the oldest Roman sacramentaries already carry as such. It was brought here, cut open by an insertion — “per huius aquæ et vini mystérium”, through the mystery of this water and wine. The name of the Son at its end is no addition: the oldest witnesses of the collect already close on it. The collect simply asked that we be made sharers in the divinity of Him who was made a partaker in our humanity; at the altar the same petition passes through the drop of water poured into the chalice. Hence too the point of the two adverbs: mirabíliter — mirabílius, wonderfully made, more wonderfully restored; the restoring is the greater work of the two. In Masses for the Dead the prayer is said but the water is not blessed.",
+	"about": "This prayer was not written for the offertory: it is an old Christmas collect, which the oldest Roman sacramentaries already carry as such. It was brought here, cut open by an insertion — “per huius aquæ et vini mystérium”, through the mystery of this water and wine. The name of the Son at its end is no addition: the oldest witnesses of the collect already close on it. The collect simply asked that we be made sharers in the divinity of Him who was made a partaker in our humanity. At the altar the same petition passes through the drop of water poured into the chalice. Hence too the point of the two adverbs: mirabíliter — mirabílius, wonderfully made, more wonderfully restored. The restoring is the greater work of the two. In Masses for the Dead the prayer is said but the water is not blessed.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -25,7 +25,7 @@
 	"words": {
 		"w001": {
 			"gloss": "God",
-			"function": "Vocative; the form is the same as the nominative, because “deus” has no separate vocative."
+			"function": "Vocative. The form is the same as the nominative, because “deus” has no separate vocative."
 		},
 		"w002": {
 			"gloss": "who",
@@ -55,15 +55,15 @@
 		},
 		"w009": {
 			"gloss": "more wonderfully",
-			"function": "The comparative of the same adverb as “mirabíliter” (w006). The form doubles as the neuter of the adjective's comparative; it is an adverb here because it modifies a verb."
+			"function": "The comparative of the same adverb as “mirabíliter” (w006). The form doubles as the neuter of the adjective's comparative. It is an adverb here because it modifies a verb."
 		},
 		"w010": {
 			"gloss": "didst restore",
-			"function": "A contracted form of reformavísti — Latin often shortens the perfect this way (amásti for amavísti); the missal keeps the short form beside the full condidísti two words earlier."
+			"function": "A contracted form of reformavísti — Latin often shortens the perfect this way (amásti for amavísti). The missal keeps the short form beside the full condidísti two words earlier."
 		},
 		"w011": {
 			"gloss": "grant",
-			"function": "Here the petition begins; everything before it was invocation."
+			"function": "Here the petition begins. Everything before it was invocation."
 		},
 		"w012": {
 			"gloss": "us"
@@ -73,7 +73,7 @@
 		},
 		"w014": {
 			"gloss": "this",
-			"function": "It qualifies the water and the wine together; the form marks no gender and the two nouns are of different genders, so none is claimed here."
+			"function": "It qualifies the water and the wine together. The form marks no gender and the two nouns are of different genders, so none is claimed here."
 		},
 		"w015": {
 			"gloss": "water"
@@ -90,7 +90,7 @@
 		},
 		"w019": {
 			"gloss": "His",
-			"function": "A genitive depending on “divinitátis” (w020); its masculine gender comes from its referent, Christ, who is named only a few words later."
+			"function": "A genitive depending on “divinitátis” (w020). Its masculine gender comes from its referent, Christ, who is named only a few words later."
 		},
 		"w020": {
 			"gloss": "divinity"
@@ -101,7 +101,7 @@
 		},
 		"w022": {
 			"gloss": "sharers",
-			"function": "The form is nominative as well as accusative; accusative, because the understood subject of “esse” (w021) is an accusative us, not the dative “nobis” (w012). Con-sors is one who shares another's lot (sors)."
+			"function": "The form is nominative as well as accusative. Accusative, because the understood subject of “esse” (w021) is an accusative us, not the dative “nobis” (w012). Con-sors is one who shares another's lot (sors)."
 		},
 		"w023": {
 			"gloss": "who",
@@ -123,7 +123,7 @@
 		},
 		"w028": {
 			"gloss": "—",
-			"function": "With “dignátus” (w027) it makes one past-tense form of a deponent verb; on its own it means nothing here."
+			"function": "With “dignátus” (w027) it makes one past-tense form of a deponent verb. On its own it means nothing here."
 		},
 		"w029": {
 			"gloss": "a partaker",
@@ -150,7 +150,7 @@
 		},
 		"w036": {
 			"gloss": "who",
-			"function": "Here begins the conclusion of a prayer to the Father; because the Son has just been named, it starts straight at “Qui tecum”, without “Per Dóminum nostrum”."
+			"function": "Here begins the conclusion of a prayer to the Father. Because the Son has just been named, it starts straight at “Qui tecum”, without “Per Dóminum nostrum”."
 		},
 		"w037": {
 			"gloss": "with Thee",

@@ -3,7 +3,7 @@
 	"text": "ordinarium.pater-noster",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Rubryki mszału nazywają zdanie otwierające ten tekst prefacją Modlitwy Pańskiej; instrukcja z 1958 roku zwie samą modlitwę precatio ad Communionem — dawną modlitwą przed Komunią. Po Kanonie postawił ją Grzegorz Wielki. Prefacja podaje najpierw dwie podstawy, zanim padną słowa: przykazania, które zbawiają, i ustanowienie, które jest Boże — a potem nazywa rzecz po imieniu: audémus dícere, ośmielamy się mówić. Kapłan odmawia modlitwę sam aż do tentatiónem; ostatnia prośba należy do ministranta, a Amen kapłan dopowiada po cichu. Te same słowa stoją w tym zbiorze także osobno, jako modlitwa poza Mszą.",
+	"about": "Rubryki mszału nazywają zdanie otwierające ten tekst prefacją Modlitwy Pańskiej. Instrukcja z 1958 roku zwie samą modlitwę precatio ad Communionem — dawną modlitwą przed Komunią. Po Kanonie postawił ją Grzegorz Wielki. Prefacja podaje najpierw dwie podstawy, zanim padną słowa: przykazania, które zbawiają, i ustanowienie, które jest Boże — a potem nazywa rzecz po imieniu: audémus dícere, ośmielamy się mówić. Kapłan odmawia modlitwę sam aż do tentatiónem. Ostatnia prośba należy do ministranta, a Amen kapłan dopowiada po cichu. Te same słowa stoją w tym zbiorze także osobno, jako modlitwa poza Mszą.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -58,7 +58,7 @@
 	"words": {
 		"w001": {
 			"gloss": "módlmy się",
-			"function": "Samo wezwanie, wypowiadane głośno; to, co po nim następuje, jest jeszcze uzasadnieniem śmiałości, a nie modlitwą."
+			"function": "Samo wezwanie, wypowiadane głośno. To, co po nim następuje, jest jeszcze uzasadnieniem śmiałości, a nie modlitwą."
 		},
 		"w002": {
 			"gloss": "przykazaniami",
@@ -81,7 +81,7 @@
 		},
 		"w007": {
 			"gloss": "ustanowieniem",
-			"function": "Ustanowienie czegoś, tu: sam czyn Pana, który tej modlitwy nauczył; druga podstawa obok przykazania."
+			"function": "Ustanowienie czegoś, tu: sam czyn Pana, który tej modlitwy nauczył. Druga podstawa obok przykazania."
 		},
 		"w008": {
 			"gloss": "ukształtowani",
@@ -97,11 +97,11 @@
 		},
 		"w011": {
 			"gloss": "Ojcze",
-			"function": "Bezpośredni zwrot do Boga; cała modlitwa jest mową wprost."
+			"function": "Bezpośredni zwrot do Boga. Cała modlitwa jest mową wprost."
 		},
 		"w012": {
 			"gloss": "nasz",
-			"function": "Zgadza się z „Pater” (w011); nie „mój”, lecz „nasz” — modlitwa wspólnoty."
+			"function": "Zgadza się z „Pater” (w011). Nie „mój”, lecz „nasz” — modlitwa wspólnoty."
 		},
 		"w013": {
 			"gloss": "który",
@@ -116,7 +116,7 @@
 		},
 		"w016": {
 			"gloss": "niebiosach",
-			"function": "W liczbie mnogiej — por. „cælo” (w028), liczba pojedyncza, w tej samej modlitwie; polski przekład oddaje ją pojedynczo."
+			"function": "W liczbie mnogiej — por. „cælo” (w028), liczba pojedyncza, w tej samej modlitwie. Polski przekład oddaje ją pojedynczo."
 		},
 		"w017": {
 			"gloss": "niech się święci",
@@ -175,7 +175,7 @@
 		},
 		"w032": {
 			"gloss": "chleba",
-			"function": "Dopełnienie „da” (w035): daj co — chleb; polski przekład ma dopełniacz „chleba”, łacina biernik."
+			"function": "Dopełnienie „da” (w035): daj co — chleb. Polski przekład ma dopełniacz „chleba”, łacina biernik."
 		},
 		"w033": {
 			"gloss": "naszego",
@@ -187,7 +187,7 @@
 		},
 		"w035": {
 			"gloss": "daj",
-			"function": "Pierwsza prośba wypowiedziana wprost rozkaźnikiem; prośba przecząca „indúcas” (w052) sięgnie po tryb łączący."
+			"function": "Pierwsza prośba wypowiedziana wprost rozkaźnikiem. Prośba przecząca „indúcas” (w052) sięgnie po tryb łączący."
 		},
 		"w036": {
 			"gloss": "nam",
@@ -204,11 +204,11 @@
 		},
 		"w040": {
 			"gloss": "nam",
-			"function": "Odpuść komu — nam; osoba, której się odpuszcza, stoi w celowniku."
+			"function": "Odpuść komu — nam. Osoba, której się odpuszcza, stoi w celowniku."
 		},
 		"w041": {
 			"gloss": "winy",
-			"function": "Dosłownie „długi”; utarty polski przekład ma „winy”."
+			"function": "Dosłownie „długi”. Utarty polski przekład ma „winy”."
 		},
 		"w042": {
 			"gloss": "nasze",
@@ -251,7 +251,7 @@
 		},
 		"w052": {
 			"gloss": "wódź",
-			"function": "Tryb łączący po „ne” (w050) — przeczenie niesie „ne”; utarte polskie „nie wódź” łączy oba słowa."
+			"function": "Tryb łączący po „ne” (w050) — przeczenie niesie „ne”. Utarte polskie „nie wódź” łączy oba słowa."
 		},
 		"w053": {
 			"gloss": "na",
@@ -282,7 +282,7 @@
 		},
 		"w060": {
 			"gloss": "amen",
-			"function": "Należy do kapłana: rubryka na stronie każe je mówić secrete, Ritus servandus — submissa voce, głosem zniżonym; wydanie idzie za rubryką strony i odnotowuje rozbieżność."
+			"function": "Należy do kapłana: rubryka na stronie każe je mówić secrete, Ritus servandus — submissa voce, głosem zniżonym. Wydanie idzie za rubryką strony i odnotowuje rozbieżność."
 		}
 	}
 }

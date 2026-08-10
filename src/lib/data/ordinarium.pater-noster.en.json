@@ -3,7 +3,7 @@
 	"text": "ordinarium.pater-noster",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The missal's rubrics call the sentence that opens this text the preface of the Lord's Prayer; a 1958 Instruction calls the prayer itself a precatio ad Communionem, an ancient prayer toward Communion. Its place after the Canon is Gregory the Great's arrangement. The preface lays down two grounds before the words are risked, precepts that save and an institution that is divine, and then names the risk: audémus dícere, we dare to say. The priest says the prayer alone as far as tentatiónem; the last petition falls to the server, and the Amen the priest adds under his breath. The same words stand elsewhere in this collection as a prayer on its own, for use outside Mass.",
+	"about": "The missal's rubrics call the sentence that opens this text the preface of the Lord's Prayer. A 1958 Instruction calls the prayer itself a precatio ad Communionem, an ancient prayer toward Communion. Its place after the Canon is Gregory the Great's arrangement. The preface lays down two grounds before the words are risked, precepts that save and an institution that is divine, and then names the risk: audémus dícere, we dare to say. The priest says the prayer alone as far as tentatiónem. The last petition falls to the server, and the Amen the priest adds under his breath. The same words stand elsewhere in this collection as a prayer on its own, for use outside Mass.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -58,7 +58,7 @@
 	"words": {
 		"w001": {
 			"gloss": "let us pray",
-			"function": "The invitation on its own, said aloud; what follows it is the reason for daring, not yet the prayer."
+			"function": "The invitation on its own, said aloud. What follows it is the reason for daring, not yet the prayer."
 		},
 		"w002": {
 			"gloss": "by precepts",
@@ -81,7 +81,7 @@
 		},
 		"w007": {
 			"gloss": "by the institution",
-			"function": "The setting-up of a thing, here the Lord's own act of teaching the prayer; the second ground beside the precept."
+			"function": "The setting-up of a thing, here the Lord's own act of teaching the prayer. The second ground beside the precept."
 		},
 		"w008": {
 			"gloss": "formed",
@@ -97,11 +97,11 @@
 		},
 		"w011": {
 			"gloss": "Father",
-			"function": "Direct address to God; the whole prayer is speech to a Thou."
+			"function": "Direct address to God. The whole prayer is speech to a Thou."
 		},
 		"w012": {
 			"gloss": "our",
-			"function": "Agrees with “Pater” (w011); not “my” but “our” — the prayer of a community."
+			"function": "Agrees with “Pater” (w011). Not “my” but “our” — the prayer of a community."
 		},
 		"w013": {
 			"gloss": "who",
@@ -116,7 +116,7 @@
 		},
 		"w016": {
 			"gloss": "the heavens",
-			"function": "Plural — compare “cælo” (w028), singular, in the same prayer; the received English renders it singular."
+			"function": "Plural — compare “cælo” (w028), singular, in the same prayer. The received English renders it singular."
 		},
 		"w017": {
 			"gloss": "hallowed be",
@@ -187,7 +187,7 @@
 		},
 		"w035": {
 			"gloss": "give",
-			"function": "The first petition voiced as a direct imperative; the negative petition “indúcas” (w052) will use the subjunctive instead."
+			"function": "The first petition voiced as a direct imperative. The negative petition “indúcas” (w052) will use the subjunctive instead."
 		},
 		"w036": {
 			"gloss": "to us",
@@ -208,7 +208,7 @@
 		},
 		"w041": {
 			"gloss": "debts",
-			"function": "Literally “debts”; the received English says “trespasses”."
+			"function": "Literally “debts”. The received English says “trespasses”."
 		},
 		"w042": {
 			"gloss": "our",
@@ -232,7 +232,7 @@
 		},
 		"w047": {
 			"gloss": "debtors",
-			"function": "We forgive whom — the debtors; literally “to the debtors”, traditionally “those who trespass against us”."
+			"function": "We forgive whom — the debtors. Literally “to the debtors”, traditionally “those who trespass against us”."
 		},
 		"w048": {
 			"gloss": "our",
@@ -251,7 +251,7 @@
 		},
 		"w052": {
 			"gloss": "lead",
-			"function": "Subjunctive after “ne” (w050) — the negation rides on “ne”; the received English joins them as “lead us not”."
+			"function": "Subjunctive after “ne” (w050) — the negation rides on “ne”. The received English joins them as “lead us not”."
 		},
 		"w053": {
 			"gloss": "into",
@@ -282,7 +282,7 @@
 		},
 		"w060": {
 			"gloss": "amen",
-			"function": "The priest's own: the page rubric has him say it secrete, the Ritus servandus submissa voce, in a lowered voice; the edition follows the page rubric and records the disagreement."
+			"function": "The priest's own: the page rubric has him say it secrete, the Ritus servandus submissa voce, in a lowered voice. The edition follows the page rubric and records the disagreement."
 		}
 	}
 }

@@ -3,7 +3,7 @@
 	"text": "ordinarium.supra-quae",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The one place in the Ordinary of the Mass that names the sacrifices of the Old Testament: Abel, Abraham and Melchisedech. The same three stand at one altar in the mosaic of Sant'Apollinare in Classe outside Ravenna. The prayer asks God to accept this sacrifice as He accepted theirs — and asks it after the consecration, which gave the medieval commentators trouble. Abel is here púer tuus iustus, Thy just servant; Melchisedech is summus sacérdos, Thy high priest. The rough seam of the closing words has a name in the tradition: the Liber Pontificalis says Leo the Great added sanctum sacrifícium, immaculátam hóstiam.",
+	"about": "The one place in the Ordinary of the Mass that names the sacrifices of the Old Testament: Abel, Abraham and Melchisedech. The same three stand at one altar in the mosaic of Sant'Apollinare in Classe outside Ravenna. The prayer asks God to accept this sacrifice as He accepted theirs — and asks it after the consecration, which gave the medieval commentators trouble. Abel is here púer tuus iustus, Thy just servant. Melchisedech is summus sacérdos, Thy high priest. The rough seam of the closing words has a name in the tradition: the Liber Pontificalis says Leo the Great added sanctum sacrifícium, immaculátam hóstiam.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -28,7 +28,7 @@
 		},
 		"w002": {
 			"gloss": "these",
-			"function": "A relative with no antecedent clause, reaching back to the offerings of the prayer before; Latin opens a paragraph this way, English cannot."
+			"function": "A relative with no antecedent clause, reaching back to the offerings of the prayer before. Latin opens a paragraph this way, English cannot."
 		},
 		"w003": {
 			"gloss": "gracious",
@@ -126,7 +126,7 @@
 		},
 		"w031": {
 			"gloss": "high",
-			"function": "Paired with “sacérdos” (w032). In Gen 14 the epithet stands with God — sacérdos Dei altíssimi; the Canon moves it to the priest."
+			"function": "Paired with “sacérdos” (w032). In Gen 14 the epithet stands with God — sacérdos Dei altíssimi. The Canon moves it to the priest."
 		},
 		"w032": {
 			"gloss": "priest"
@@ -136,7 +136,7 @@
 		},
 		"w034": {
 			"gloss": "Melchisedech",
-			"function": "Indeclinable: the nominative follows from its apposition to “sacérdos” (w032) — Melchisedech is the subject of “óbtulit” (w030); alone of the three he offered what we offer, bread and wine."
+			"function": "Indeclinable: the nominative follows from its apposition to “sacérdos” (w032) — Melchisedech is the subject of “óbtulit” (w030). Alone of the three he offered what we offer, bread and wine."
 		},
 		"w035": {
 			"gloss": "a holy"
@@ -150,7 +150,7 @@
 		},
 		"w038": {
 			"gloss": "victim",
-			"function": "The second of the two appositions to “quod” (w028); feminine beside the neuter relative — apposition agrees in case alone."
+			"function": "The second of the two appositions to “quod” (w028). Feminine beside the neuter relative — apposition agrees in case alone."
 		}
 	}
 }

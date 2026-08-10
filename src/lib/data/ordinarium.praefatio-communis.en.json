@@ -3,7 +3,7 @@
 	"text": "ordinarium.praefatio-communis",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The common Preface — the one that names no feast and no mystery: it says merely “through Christ our Lord” and goes straight to the angels. The choirs it names — Angels, Dominations, Powers, Virtues, Seraphim — come from the New Testament lists (Col 1:16; Eph 1:21) and from Isaiah's vision. The whole stretch from nos tibi to ágere is an infinitive clause — that we should give You thanks — hanging from the short est near the beginning.",
+	"about": "The common Preface — the one that names no feast and no mystery: it says merely “through Christ our Lord” and goes straight to the angels. The choirs it names — Angels, Dominations, Powers, Virtues, Seraphim — come from the New Testament lists (Col 1:16 and Eph 1:21) and from Isaiah's vision. The whole stretch from nos tibi to ágere is an infinitive clause — that we should give You thanks — hanging from the short est near the beginning.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -47,11 +47,11 @@
 		},
 		"w005": {
 			"gloss": "it is",
-			"function": "The only finite verb in this long sentence; everything from nos down to ágere is its subject, with æquum and salutáre as predicates."
+			"function": "The only finite verb in this long sentence. Everything from nos down to ágere is its subject, with æquum and salutáre as predicates."
 		},
 		"w006": {
 			"gloss": "proper",
-			"function": "The received English prays “our duty and our salvation” for æquum et salutáre — a sense-rendering; the glosses keep the words' own senses."
+			"function": "The received English prays “our duty and our salvation” for æquum et salutáre — a sense-rendering. The glosses keep the words' own senses."
 		},
 		"w007": {
 			"gloss": "and"
@@ -113,7 +113,7 @@
 		},
 		"w025": {
 			"gloss": "our",
-			"function": "Here the common Preface stops without naming any mystery; the proper prefaces put into this place whatever the day commemorates."
+			"function": "Here the common Preface stops without naming any mystery. The proper prefaces put into this place whatever the day commemorates."
 		},
 		"w026": {
 			"gloss": "through"
@@ -140,7 +140,7 @@
 		},
 		"w033": {
 			"gloss": "the Dominations",
-			"function": "Nominative, not accusative: the subject of adórant, not a second object of “laudant” (w030). The form is the same in both cases; the three parallel verbs decide it."
+			"function": "Nominative, not accusative: the subject of adórant, not a second object of “laudant” (w030). The form is the same in both cases. The three parallel verbs decide it."
 		},
 		"w034": {
 			"gloss": "tremble"
@@ -150,7 +150,7 @@
 		},
 		"w036": {
 			"gloss": "The heavens",
-			"function": "Cælum takes a masculine plural — cæli, not cæla; it is a noun that changes gender in the plural."
+			"function": "Cælum takes a masculine plural — cæli, not cæla. It is a noun that changes gender in the plural."
 		},
 		"w037": {
 			"gloss": "and of the heavens",
@@ -194,7 +194,7 @@
 		},
 		"w049": {
 			"gloss": "voices",
-			"function": "The accusative subject of the infinitive “admítti” (w051); “iúbeas” (w052) governs the whole construction."
+			"function": "The accusative subject of the infinitive “admítti” (w051) — “iúbeas” (w052) governs the whole construction."
 		},
 		"w050": {
 			"gloss": "that"
@@ -204,7 +204,7 @@
 		},
 		"w052": {
 			"gloss": "Thou bid",
-			"function": "A subjunctive after ut; the petition is put as a wish rather than a command."
+			"function": "A subjunctive after ut. The petition is put as a wish rather than a command."
 		},
 		"w053": {
 			"gloss": "we pray",
@@ -219,7 +219,7 @@
 		},
 		"w056": {
 			"gloss": "saying",
-			"function": "The participle agrees with the unstated “we”; the sentence breaks off, and the Sanctus is its continuation."
+			"function": "The participle agrees with the unstated “we”. The sentence breaks off, and the Sanctus is its continuation."
 		}
 	}
 }

@@ -3,7 +3,7 @@
 	"text": "ordinarium.deus-tu-conversus",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Cztery pary wersetów, trzy z nich wyjęte z psalmów. Pierwsze dwie to jeden ciąg: psalm 84, wiersze 7 i 8, wzięte po kolei i rozdzielone na dwa głosy. Trzecia to psalm 101, wiersz 2. Czwarta — Dóminus vobíscum — nie pochodzi z psalmu i pada tu po raz pierwszy we Mszy; kapłan powtórzy ją jeszcze kilkakrotnie, zawsze przed czymś, co ma zrobić razem z ludem.",
+	"about": "Cztery pary wersetów, trzy z nich wyjęte z psalmów. Pierwsze dwie to jeden ciąg: psalm 84, wiersze 7 i 8, wzięte po kolei i rozdzielone na dwa głosy. Trzecia to psalm 101, wiersz 2. Czwarta — Dóminus vobíscum — nie pochodzi z psalmu i pada tu po raz pierwszy we Mszy. Kapłan powtórzy ją jeszcze kilkakrotnie, zawsze przed czymś, co ma zrobić razem z ludem.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -49,7 +49,7 @@
 		},
 		"w003": {
 			"gloss": "zwróciwszy się",
-			"function": "Imiesłów o formie biernej, ale o znaczeniu zwrotnym: nie „obrócony”, lecz „obróciwszy się”. Psałterz łaciński przejął ten sposób z greki; po polsku wychodzi imiesłów czynny."
+			"function": "Imiesłów o formie biernej, ale o znaczeniu zwrotnym: nie „obrócony”, lecz „obróciwszy się”. Psałterz łaciński przejął ten sposób z greki. Po polsku wychodzi imiesłów czynny."
 		},
 		"w004": {
 			"gloss": "ożywisz",
@@ -63,7 +63,7 @@
 		},
 		"w007": {
 			"gloss": "lud",
-			"function": "Rzymskie słowo o pospólstwie w odróżnieniu od patrycjuszy; w Biblii po prostu lud Boży."
+			"function": "Rzymskie słowo o pospólstwie w odróżnieniu od patrycjuszy. W Biblii po prostu lud Boży."
 		},
 		"w008": {
 			"gloss": "Twój",
@@ -145,7 +145,7 @@
 		},
 		"w030": {
 			"gloss": "Ciebie",
-			"function": "Biernik po „ad” (w029) — ruch ku komuś; ta sama forma stała wyżej w ablativie po „in” (w010)."
+			"function": "Biernik po „ad” (w029) — ruch ku komuś. Ta sama forma stała wyżej w ablativie po „in” (w010)."
 		},
 		"w031": {
 			"gloss": "niech przyjdzie",
@@ -167,7 +167,7 @@
 		},
 		"w036": {
 			"gloss": "duchem",
-			"function": "Dawni czytali „z duchem twoim” o łasce święceń kapłana; Jungmann słyszy tu semityzm — po prostu „z tobą”. Oba odczytania stoją obok siebie."
+			"function": "Dawni czytali „z duchem twoim” o łasce święceń kapłana. Jungmann słyszy tu semityzm — po prostu „z tobą”. Oba odczytania stoją obok siebie."
 		},
 		"w037": {
 			"gloss": "twoim",

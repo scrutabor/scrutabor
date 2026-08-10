@@ -3,7 +3,7 @@
 	"text": "ordinarium.iudica-me",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Psalm 42 in the missal's numbering is Psalm 43 in Hebrew Bibles; the same shift runs through most of the psalter. The text the priest says comes from the Gallican psalter — a translation made from the Greek, not from the Hebrew. Verse 3 shows it plainly: “ipsa” stands in the neuter plural although both nouns it replaces, lux and véritas, are feminine in Latin. The Greek has neuter αὐτά there, because the first of its two nouns (φῶς, light) is neuter — the Latin followed the Greek rather than its own genders. The psalm is not said every day: the missal drops it at Requiem Masses, and in Masses of the season from Passion Sunday through Maundy Thursday, together with the Glória Patri and the repeated antiphon.",
+	"about": "Psalm 42 in the missal's numbering is Psalm 43 in Hebrew Bibles. The same shift runs through most of the psalter. The text the priest says comes from the Gallican psalter — a translation made from the Greek, not from the Hebrew. Verse 3 shows it plainly: “ipsa” stands in the neuter plural although both nouns it replaces, lux and véritas, are feminine in Latin. The Greek has neuter αὐτά there, because the first of its two nouns (φῶς, light) is neuter — the Latin followed the Greek rather than its own genders. The psalm is not said every day: the missal drops it at Requiem Masses, and in Masses of the season from Passion Sunday through Maundy Thursday, together with the Glória Patri and the repeated antiphon.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "This part is left out at Requiem Masses, and in Masses of the season from Passion Sunday through Maundy Thursday. What goes is the psalm together with the Glória Patri and the repetition of the antiphon; the rest of the prayers at the foot stay — the sign of the cross, the antiphon and the Adiutórium — and the confession follows at once."
+			"narrative": "This part is left out at Requiem Masses, and in Masses of the season from Passion Sunday through Maundy Thursday. What goes is the psalm together with the Glória Patri and the repetition of the antiphon. The rest of the prayers at the foot stay — the sign of the cross, the antiphon and the Adiutórium — and the confession follows at once."
 		},
 		"s02": {
 			"narrative": "The priest says the psalm alternately with the server, verse for verse. At a dialogue Mass the faithful answer with the server."
@@ -58,7 +58,7 @@
 		},
 		"w002": {
 			"gloss": "me",
-			"function": "Accusative — the object of the imperative “Iúdica” (w001). The bare form could also be ablative; the verb settles it."
+			"function": "Accusative — the object of the imperative “Iúdica” (w001). The bare form could also be ablative. The verb settles it."
 		},
 		"w003": {
 			"gloss": "O God",
@@ -90,7 +90,7 @@
 		},
 		"w011": {
 			"gloss": "holy",
-			"function": "Agrees with “gente” (w009), so ablative and not nominative; “non sancta” is one description: an unholy nation."
+			"function": "Agrees with “gente” (w009), so ablative and not nominative — “non sancta” is one description: an unholy nation."
 		},
 		"w012": {
 			"gloss": "from"
@@ -101,7 +101,7 @@
 		},
 		"w014": {
 			"gloss": "unjust",
-			"function": "Agrees with “hómine” (w013); the bare form could also be dative."
+			"function": "Agrees with “hómine” (w013). The bare form could also be dative."
 		},
 		"w015": {
 			"gloss": "and"
@@ -173,7 +173,7 @@
 		},
 		"w035": {
 			"gloss": "the enemy",
-			"function": "An adjective used as a noun — the unfriendly man, the enemy; here the subject of the clause."
+			"function": "An adjective used as a noun — the unfriendly man, the enemy. Here the subject of the clause."
 		},
 		"w036": {
 			"gloss": "send forth"
@@ -274,7 +274,7 @@
 		},
 		"w064": {
 			"gloss": "youth",
-			"function": "The Hebrew has two words for joy here and none meaning youth; the Greek translation reads “youth”, and the Latin follows the Greek."
+			"function": "The Hebrew has two words for joy here and none meaning youth. The Greek translation reads “youth”, and the Latin follows the Greek."
 		},
 		"w065": {
 			"gloss": "my",
@@ -293,7 +293,7 @@
 		},
 		"w069": {
 			"gloss": "the harp",
-			"function": "Ablative after “in” (w068) — to its accompaniment. The spelling does not distinguish nominative from ablative here; the preposition settles it."
+			"function": "Ablative after “in” (w068) — to its accompaniment. The spelling does not distinguish nominative from ablative here. The preposition settles it."
 		},
 		"w070": {
 			"gloss": "O God"
@@ -345,7 +345,7 @@
 		},
 		"w084": {
 			"gloss": "God",
-			"function": "Ablative after “in” (w083). The same form opens the Confiteor as a dative — I confess to God; here it is the thing hope rests on."
+			"function": "Ablative after “in” (w083). The same form opens the Confiteor as a dative — I confess to God. Here it is the thing hope rests on."
 		},
 		"w085": {
 			"gloss": "for"
@@ -366,7 +366,7 @@
 		},
 		"w090": {
 			"gloss": "of countenance",
-			"function": "A 4th-declension genitive, shaped like the nominative; “mei” (w091) shows which it is. Vultus is the face as it looks out — the gaze turned toward someone."
+			"function": "A 4th-declension genitive, shaped like the nominative — “mei” (w091) shows which it is. Vultus is the face as it looks out — the gaze turned toward someone."
 		},
 		"w091": {
 			"gloss": "my",

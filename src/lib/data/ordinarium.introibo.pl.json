@@ -3,7 +3,7 @@
 	"text": "ordinarium.introibo",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Antyfona, od której zaczyna się Msza, jest wierszem tego samego psalmu, który zaraz po niej nastąpi — czwartym (Ps 42, 4). Psalm zostaje więc oprawiony w zdanie wyjęte z jego własnego środka; to sposób, w jaki liturgia od wieków śpiewa psalmy. Łacińskie „rozwesela młodość moją” idzie za greckim tłumaczeniem: hebrajski oryginał ma w tym miejscu dwa słowa oznaczające radość i żadnego, które znaczyłoby młodość. Cały ten blok modlitw był pierwotnie prywatnym przygotowaniem kapłana; mszał z 1570 roku wydrukował go na początku porządku Mszy.",
+	"about": "Antyfona, od której zaczyna się Msza, jest wierszem tego samego psalmu, który zaraz po niej nastąpi — czwartym (Ps 42, 4). Psalm zostaje więc oprawiony w zdanie wyjęte z jego własnego środka. To sposób, w jaki liturgia od wieków śpiewa psalmy. Łacińskie „rozwesela młodość moją” idzie za greckim tłumaczeniem: hebrajski oryginał ma w tym miejscu dwa słowa oznaczające radość i żadnego, które znaczyłoby młodość. Cały ten blok modlitw był pierwotnie prywatnym przygotowaniem kapłana. Mszał z 1570 roku wydrukował go na początku porządku Mszy.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -19,7 +19,7 @@
 			"translation": "W imię Ojca i Syna, i Ducha Świętego. Amen."
 		},
 		"s03": {
-			"narrative": "Ze złożonymi rękami przed piersią kapłan zaczyna antyfonę; ministrant odpowiada. Od tej chwili aż do wejścia na ołtarz modlitwy idą na przemian."
+			"narrative": "Ze złożonymi rękami przed piersią kapłan zaczyna antyfonę. Ministrant odpowiada. Od tej chwili aż do wejścia na ołtarz modlitwy idą na przemian."
 		},
 		"s04": {
 			"translation": "Przystąpię do ołtarza Bożego."
@@ -69,7 +69,7 @@
 		},
 		"w012": {
 			"gloss": "ołtarza",
-			"function": "Biernik po „ad” (w011) — ruch ku czemuś. Sama forma może być mianownikiem, biernikiem albo wołaczem; rozstrzyga przyimek."
+			"function": "Biernik po „ad” (w011) — ruch ku czemuś. Sama forma może być mianownikiem, biernikiem albo wołaczem. Rozstrzyga przyimek."
 		},
 		"w013": {
 			"gloss": "Bożego",

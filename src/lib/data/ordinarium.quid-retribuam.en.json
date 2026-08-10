@@ -3,7 +3,7 @@
 	"text": "ordinarium.quid-retribuam",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Two psalms, welded together. The question and the chalice come from Psalm 115; the last line, Laudans invocábo Dóminum, comes from Psalm 17. Cálicem salutáris accípiam is the verse the priest already borrowed once, before receiving the Host, with panem cæléstem put in place of the cup — now he says it as the psalm wrote it, with the chalice actually in his hand. Salutáris here is a noun, not an adjective: the chalice of salvation. The first verse is said while he wipes the paten clean over the chalice, so that not a fragment is lost; the next two come with the chalice already taken up.",
+	"about": "Two psalms, welded together. The question and the chalice come from Psalm 115. The last line, Laudans invocábo Dóminum, comes from Psalm 17. Cálicem salutáris accípiam is the verse the priest already borrowed once, before receiving the Host, with panem cæléstem put in place of the cup — now he says it as the psalm wrote it, with the chalice actually in his hand. Salutáris here is a noun, not an adjective: the chalice of salvation. The first verse is said while he wipes the paten clean over the chalice, so that not a fragment is lost. The next two come with the chalice already taken up.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -58,7 +58,7 @@
 		},
 		"w007": {
 			"gloss": "He has rendered",
-			"function": "Present and perfect are spelt alike in this verb; the perfect is read, because the benefits the question weighs are ones already given."
+			"function": "Present and perfect are spelt alike in this verb. The perfect is read, because the benefits the question weighs are ones already given."
 		},
 		"w008": {
 			"gloss": "to me",
@@ -111,7 +111,7 @@
 		},
 		"w023": {
 			"gloss": "safe",
-			"function": "With “ero” (w024) it forms the future of being safe — English needs the same two words Latin does. Collatinus heads the word under its archaic nominative saluos, which is the same adjective; both analyzers read the form the same way."
+			"function": "With “ero” (w024) it forms the future of being safe — English needs the same two words Latin does. Collatinus heads the word under its archaic nominative saluos, which is the same adjective. Both analyzers read the form the same way."
 		},
 		"w024": {
 			"gloss": "I shall be"

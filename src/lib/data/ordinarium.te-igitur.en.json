@@ -3,7 +3,7 @@
 	"text": "ordinarium.te-igitur",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The first prayer of the Canon. In medieval missals the T of “Te” was drawn as a cross, and out of that letter grew the full-page Crucifixion that stands before the Canon in the old missal. The prayer names what lies on the altar three times over — dona, múnera, sacrifícia — and the priest signs the cross at each of the three. It also names the Church, the Pope and the local bishop; the word orthodóxus occurs nowhere else in the whole Ordinary of the Mass.",
+	"about": "The first prayer of the Canon. In medieval missals the T of “Te” was drawn as a cross, and out of that letter grew the full-page Crucifixion that stands before the Canon in the old missal. The prayer names what lies on the altar three times over — dona, múnera, sacrifícia — and the priest signs the cross at each of the three. It also names the Church, the Pope and the local bishop. The word orthodóxus occurs nowhere else in the whole Ordinary of the Mass.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -51,7 +51,7 @@
 		},
 		"w003": {
 			"gloss": "most merciful",
-			"function": "A superlative in the vocative; the same form is also the superlative adverb — agreement with “Pater” (w004) decides it here. The same word turns up further on as a name — Cleméntis in the Communicántes."
+			"function": "A superlative in the vocative. The same form is also the superlative adverb — agreement with “Pater” (w004) decides it here. The same word turns up further on as a name — Cleméntis in the Communicántes."
 		},
 		"w004": {
 			"gloss": "Father",
@@ -94,7 +94,7 @@
 		},
 		"w016": {
 			"gloss": "that",
-			"function": "An older form of ut; not the infinitive of utor (to use), though it is spelt the same."
+			"function": "An older form of ut. Not the infinitive of utor (to use), though it is spelt the same."
 		},
 		"w017": {
 			"gloss": "as accepted",
@@ -121,7 +121,7 @@
 		},
 		"w024": {
 			"gloss": "dues",
-			"function": "A munus is a gift that is owed — a due, a duty; a donum is freely given."
+			"function": "A munus is a gift that is owed — a due, a duty. A donum is freely given."
 		},
 		"w025": {
 			"gloss": "these"
@@ -134,7 +134,7 @@
 		},
 		"w028": {
 			"gloss": "unblemished",
-			"function": "From libáre, to take a portion from an offering; illibáta is an offering nothing has been taken from."
+			"function": "From libáre, to take a portion from an offering. Illibáta is an offering nothing has been taken from."
 		},
 		"w029": {
 			"gloss": "first"
@@ -170,7 +170,7 @@
 		},
 		"w039": {
 			"gloss": "whom",
-			"function": "Feminine, because Ecclésia is feminine in Latin; the four infinitives that follow all take it as their object."
+			"function": "Feminine, because Ecclésia is feminine in Latin. The four infinitives that follow all take it as their object."
 		},
 		"w040": {
 			"gloss": "to give peace to",
@@ -228,7 +228,7 @@
 		},
 		"w056": {
 			"gloss": "Bishop",
-			"function": "Antístes — literally one who stands before; in pagan Latin the priest of a temple."
+			"function": "Antístes — literally one who stands before. In pagan Latin the priest of a temple."
 		},
 		"w057": {
 			"gloss": "our",
@@ -250,7 +250,7 @@
 		},
 		"w062": {
 			"gloss": "catholic",
-			"function": "A genitive agreeing with “fídei” (w065); the adjectives run two words ahead of their noun."
+			"function": "A genitive agreeing with “fídei” (w065). The adjectives run two words ahead of their noun."
 		},
 		"w063": {
 			"gloss": "and"
@@ -263,7 +263,7 @@
 		},
 		"w066": {
 			"gloss": "worshippers",
-			"function": "From cólere, which means both to till and to worship; cultóres fídei are those who cultivate the faith as a field."
+			"function": "From cólere, which means both to till and to worship. Cultóres fídei are those who cultivate the faith as a field."
 		}
 	}
 }

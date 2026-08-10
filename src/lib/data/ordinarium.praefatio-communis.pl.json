@@ -3,7 +3,7 @@
 	"text": "ordinarium.praefatio-communis",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Prefacja zwykła — ta, która nie nazywa ani święta, ani tajemnicy: mówi tylko „przez Chrystusa, Pana naszego”, i od razu przechodzi do aniołów. Wymienione chóry — Aniołowie, Państwa, Zwierzchności, Moce, Serafiny — pochodzą z list Nowego Testamentu (Kol 1, 16; Ef 1, 21) i z widzenia Izajasza. Całe zdanie od „nos tibi” do „ágere” jest bezokolicznikowe: „że my Tobie mamy składać dzięki” — orzeczeniem głównym jest krótkie est na początku.",
+	"about": "Prefacja zwykła — ta, która nie nazywa ani święta, ani tajemnicy: mówi tylko „przez Chrystusa, Pana naszego”, i od razu przechodzi do aniołów. Wymienione chóry — Aniołowie, Państwa, Zwierzchności, Moce, Serafiny — pochodzą z list Nowego Testamentu (Kol 1, 16 i Ef 1, 21) i z widzenia Izajasza. Całe zdanie od „nos tibi” do „ágere” jest bezokolicznikowe: „że my Tobie mamy składać dzięki” — orzeczeniem głównym jest krótkie est na początku.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -47,11 +47,11 @@
 		},
 		"w005": {
 			"gloss": "jest",
-			"function": "Jedyne orzeczenie w tym długim zdaniu; wszystko od „nos” po „ágere” jest jego podmiotem, a æquum i salutáre — orzecznikami."
+			"function": "Jedyne orzeczenie w tym długim zdaniu. Wszystko od „nos” po „ágere” jest jego podmiotem, a æquum i salutáre — orzecznikami."
 		},
 		"w006": {
 			"gloss": "słuszne",
-			"function": "Parę æquum et salutáre polski tekst mszalny oddaje dosłownie — „słuszne i zbawienne” — i tak modli się też przekład obok; angielskie księgi oddają ją sensem: „our duty and our salvation”."
+			"function": "Parę æquum et salutáre polski tekst mszalny oddaje dosłownie — „słuszne i zbawienne” — i tak modli się też przekład obok. Angielskie księgi oddają ją sensem: „our duty and our salvation”."
 		},
 		"w007": {
 			"gloss": "i"
@@ -113,7 +113,7 @@
 		},
 		"w025": {
 			"gloss": "naszego",
-			"function": "Tu Prefacja wspólna się kończy i nie nazywa żadnej tajemnicy; prefacje własne wstawiają w tym miejscu to, co dany dzień wspomina."
+			"function": "Tu Prefacja wspólna się kończy i nie nazywa żadnej tajemnicy. Prefacje własne wstawiają w tym miejscu to, co dany dzień wspomina."
 		},
 		"w026": {
 			"gloss": "przez"
@@ -150,7 +150,7 @@
 		},
 		"w036": {
 			"gloss": "Niebiosa",
-			"function": "Cælum ma w liczbie mnogiej rodzaj męski — cæli, nie cæla; to rzeczownik, który zmienia rodzaj w liczbie mnogiej."
+			"function": "Cælum ma w liczbie mnogiej rodzaj męski — cæli, nie cæla. To rzeczownik, który zmienia rodzaj w liczbie mnogiej."
 		},
 		"w037": {
 			"gloss": "i niebios",
@@ -194,7 +194,7 @@
 		},
 		"w049": {
 			"gloss": "głosy",
-			"function": "Podmiot bezokolicznika „admítti” (w051) w bierniku; „iúbeas” (w052) rządzi całą tą konstrukcją."
+			"function": "Podmiot bezokolicznika „admítti” (w051) w bierniku — „iúbeas” (w052) rządzi całą tą konstrukcją."
 		},
 		"w050": {
 			"gloss": "aby"
@@ -204,7 +204,7 @@
 		},
 		"w052": {
 			"gloss": "każ",
-			"function": "Tryb łączący po ut; po polsku oddany rozkaźnikiem, ale w łacinie to prośba, nie rozkaz."
+			"function": "Tryb łączący po ut. Po polsku oddany rozkaźnikiem, ale w łacinie to prośba, nie rozkaz."
 		},
 		"w053": {
 			"gloss": "prosimy",
@@ -219,7 +219,7 @@
 		},
 		"w056": {
 			"gloss": "mówiąc",
-			"function": "Imiesłów zgadza się z domyślnym „my”; zdanie urywa się, a jego dalszym ciągiem jest Sanctus."
+			"function": "Imiesłów zgadza się z domyślnym „my”. Zdanie urywa się, a jego dalszym ciągiem jest Sanctus."
 		}
 	}
 }

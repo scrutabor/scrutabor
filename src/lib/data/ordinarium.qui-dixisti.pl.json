@@ -3,7 +3,7 @@
 	"text": "ordinarium.qui-dixisti",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Pierwsza z trzech modlitw, które kapłan odmawia pochylony nad ołtarzem, ze złożonymi na nim rękami, zanim przyjmie Komunię — i jedyna z trzech, która prosi o coś ponad niego samego: o pokój i jedność dla Kościoła. Początek cytuje J 14, 27 słowo w słowo aż do pacem meam do vobis, słowa wypowiedziane przy Ostatniej Wieczerzy, w przeddzień odejścia; Ewangelia mówi dalej non quomodo mundus dat, nie tak, jak daje świat, a modlitwa to zdanie opuszcza. We Mszy uroczystej wprost z niej wynika pocałunek pokoju. We Mszach za zmarłych pokoju się nie przekazuje, a tej modlitwy się nie mówi.",
+	"about": "Pierwsza z trzech modlitw, które kapłan odmawia pochylony nad ołtarzem, ze złożonymi na nim rękami, zanim przyjmie Komunię — i jedyna z trzech, która prosi o coś ponad niego samego: o pokój i jedność dla Kościoła. Początek cytuje J 14, 27 słowo w słowo aż do pacem meam do vobis, słowa wypowiedziane przy Ostatniej Wieczerzy, w przeddzień odejścia. Ewangelia mówi dalej non quomodo mundus dat, nie tak, jak daje świat, a modlitwa to zdanie opuszcza. We Mszy uroczystej wprost z niej wynika pocałunek pokoju. We Mszach za zmarłych pokoju się nie przekazuje, a tej modlitwy się nie mówi.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -64,7 +64,7 @@
 		},
 		"w009": {
 			"gloss": "zostawiam",
-			"function": "Relínquo to, co człowiek zostawia po sobie odchodząc; słowa padły w przeddzień męki."
+			"function": "Relínquo to, co człowiek zostawia po sobie odchodząc. Słowa padły w przeddzień męki."
 		},
 		"w010": {
 			"gloss": "wam"
@@ -102,7 +102,7 @@
 		},
 		"w020": {
 			"gloss": "wiarę",
-			"function": "Przeciwstawiona „peccáta” (w017) jako to, na co ma spojrzeć w zamian; oba biernikowe dopełnienia należą do tego samego orzeczenia."
+			"function": "Przeciwstawiona „peccáta” (w017) jako to, na co ma spojrzeć w zamian. Oba biernikowe dopełnienia należą do tego samego orzeczenia."
 		},
 		"w021": {
 			"gloss": "Kościoła"
@@ -125,7 +125,7 @@
 		},
 		"w027": {
 			"gloss": "obdarzyć pokojem",
-			"function": "Jeden z dwóch bezokoliczników zależnych od „dignéris” (w030); czasownik utworzony od pax — uczynić spokojnym."
+			"function": "Jeden z dwóch bezokoliczników zależnych od „dignéris” (w030). Czasownik utworzony od pax — uczynić spokojnym."
 		},
 		"w028": {
 			"gloss": "i"

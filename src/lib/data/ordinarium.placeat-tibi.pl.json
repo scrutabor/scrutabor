@@ -3,7 +3,7 @@
 	"text": "ordinarium.placeat-tibi",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Modlitwa samego kapłana, odmawiana po cichu, pochylonym nad środkiem ołtarza, ze złożonymi na nim rękami. Msza jest już rozesłana; to, co jeszcze zostaje, kapłan mówi za siebie. Cała modlitwa stoi w pierwszej osobie liczby pojedynczej — servitútis meæ, óbtuli, mihíque — a prosi o dwie rzeczy: żeby złożona służba była Bogu miła i żeby ofiara wyjednała łaskę jemu samemu i tym, za których ją złożył. Wraz z ofiarowaniem („Súscipe, sancta Trínitas”) jest to jedna z dwóch modlitw Mszy zwracających się do Trójcy po imieniu. W Mszach za zmarłych błogosławieństwa się nie udziela, a Pláceat mówi się mimo to.",
+	"about": "Modlitwa samego kapłana, odmawiana po cichu, pochylonym nad środkiem ołtarza, ze złożonymi na nim rękami. Msza jest już rozesłana. To, co jeszcze zostaje, kapłan mówi za siebie. Cała modlitwa stoi w pierwszej osobie liczby pojedynczej — servitútis meæ, óbtuli, mihíque — a prosi o dwie rzeczy: żeby złożona służba była Bogu miła i żeby ofiara wyjednała łaskę jemu samemu i tym, za których ją złożył. Wraz z ofiarowaniem („Súscipe, sancta Trínitas”) jest to jedna z dwóch modlitw Mszy zwracających się do Trójcy po imieniu. W Mszach za zmarłych błogosławieństwa się nie udziela, a Pláceat mówi się mimo to.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -22,7 +22,7 @@
 	"words": {
 		"w001": {
 			"gloss": "Niech się podoba",
-			"function": "Podmiotem nie jest kapłan, lecz „obséquium” (w005) — hołd; to on ma się Bogu podobać."
+			"function": "Podmiotem nie jest kapłan, lecz „obséquium” (w005) — hołd. To on ma się Bogu podobać."
 		},
 		"w002": {
 			"gloss": "Tobie"
@@ -122,7 +122,7 @@
 		},
 		"w031": {
 			"gloss": "przebłagalna",
-			"function": "Słowo rzadkie, poświadczone już u Enniusza; z dwóch słowników łacińskich, na których opiera się korpus, zna je tylko jeden."
+			"function": "Słowo rzadkie, poświadczone już u Enniusza. Z dwóch słowników łacińskich, na których opiera się korpus, zna je tylko jeden."
 		},
 		"w032": {
 			"gloss": "Przez"

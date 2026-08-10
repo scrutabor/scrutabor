@@ -3,7 +3,7 @@
 	"text": "ordinarium.kyrie",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Jedyny grecki tekst, jaki został w rzymskiej Mszy — i nie jest pozostałością po czasach, gdy Rzym modlił się po grecku: forma przyszła ze Wschodu i weszła do Mszy łacińskiej później. Pielgrzymka Egerii z IV wieku objaśnia ją łacińskim czytelnikom słowami „miserére Dómine”. Środkowe wezwanie jest zaś wynalazkiem rzymskim — Grzegorz Wielki pisze wprost, że Grecy nie mówią „Christe eléison”. W Piśmie to wołanie ma dopełnienie („zmiłuj się nade mną”); liturgia skróciła je do samego wezwania. Liczba powtórzeń też nie zawsze była stała: w najstarszym rzymskim porządku śpiewano je, dopóki papież nie dał znaku.",
+	"about": "Jedyny grecki tekst, jaki został w rzymskiej Mszy — i nie jest pozostałością po czasach, gdy Rzym modlił się po grecku: forma przyszła ze Wschodu i weszła do Mszy łacińskiej później. Pielgrzymka Egerii z IV wieku objaśnia ją łacińskim czytelnikom słowami „miserére Dómine”. Środkowe wezwanie jest zaś wynalazkiem rzymskim — Grzegorz Wielki pisze wprost, że Grecy nie mówią „Christe eléison”. W Piśmie to wołanie ma dopełnienie („zmiłuj się nade mną”). Liturgia skróciła je do samego wezwania. Liczba powtórzeń też nie zawsze była stała: w najstarszym rzymskim porządku śpiewano je, dopóki papież nie dał znaku.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -50,7 +50,7 @@
 		},
 		"w002": {
 			"gloss": "zmiłuj się",
-			"function": "Rozkaźnik: „zmiłuj się”. W grece jest tu aoryst — prosi o zmiłowanie ujęte jako całość, nie jako trwanie; łacina takiego rozróżnienia w trybie rozkazującym nie zna, a polskie „zmiłuj się” — dokonane — właśnie je oddaje."
+			"function": "Rozkaźnik: „zmiłuj się”. W grece jest tu aoryst — prosi o zmiłowanie ujęte jako całość, nie jako trwanie. Łacina takiego rozróżnienia w trybie rozkazującym nie zna, a polskie „zmiłuj się” — dokonane — właśnie je oddaje."
 		},
 		"w003": {
 			"gloss": "Panie"

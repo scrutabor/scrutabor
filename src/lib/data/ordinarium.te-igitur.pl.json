@@ -3,7 +3,7 @@
 	"text": "ordinarium.te-igitur",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Pierwsza modlitwa Kanonu. W średniowiecznych mszałach literę T słowa „Te” rysowano jako krzyż, i z tego rysunku wyrosła całostronicowa scena Ukrzyżowania, którą stary mszał ma przed Kanonem. Modlitwa nazywa trzykrotnie to, co leży na ołtarzu — dona, múnera, sacrifícia — i przy każdym z tych słów kapłan czyni znak krzyża. Wymienia też Kościół, papieża i biskupa miejsca; słowo orthodóxus nie pada nigdzie indziej w całym stałym porządku Mszy.",
+	"about": "Pierwsza modlitwa Kanonu. W średniowiecznych mszałach literę T słowa „Te” rysowano jako krzyż, i z tego rysunku wyrosła całostronicowa scena Ukrzyżowania, którą stary mszał ma przed Kanonem. Modlitwa nazywa trzykrotnie to, co leży na ołtarzu — dona, múnera, sacrifícia — i przy każdym z tych słów kapłan czyni znak krzyża. Wymienia też Kościół, papieża i biskupa miejsca. Słowo orthodóxus nie pada nigdzie indziej w całym stałym porządku Mszy.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Po Sanctus kapłan wznosi i składa ręce, wznosi oczy i zaraz je opuszcza, po czym pochyla się głęboko nad ołtarzem, kładąc na nim dłonie. Odtąd aż po zamykające „Per ómnia sǽcula sæculórum” mówi po cichu; głośniej — tylko trzy słowa „Nobis quoque peccatóribus”."
+			"narrative": "Po Sanctus kapłan wznosi i składa ręce, wznosi oczy i zaraz je opuszcza, po czym pochyla się głęboko nad ołtarzem, kładąc na nim dłonie. Odtąd aż po zamykające „Per ómnia sǽcula sæculórum” mówi po cichu. Głośniej — tylko trzy słowa „Nobis quoque peccatóribus”."
 		},
 		"s02": {
 			"translation": "Ojcze nieskończenie dobry, pokornie Cię błagamy przez Jezusa Chrystusa, Twojego Syna, naszego Pana,"
@@ -47,11 +47,11 @@
 		},
 		"w002": {
 			"gloss": "więc",
-			"function": "„Więc” nawiązuje do prefacji i Sanctus, które przed chwilą wybrzmiały; o to, do czego dokładnie odsyła, komentatorzy spierają się od dawna."
+			"function": "„Więc” nawiązuje do prefacji i Sanctus, które przed chwilą wybrzmiały. O to, do czego dokładnie odsyła, komentatorzy spierają się od dawna."
 		},
 		"w003": {
 			"gloss": "najłaskawszy",
-			"function": "Stopień najwyższy w wołaczu; ta sama forma jest też przysłówkiem w stopniu najwyższym — tu rozstrzyga zgoda z „Pater” (w004). Ten sam wyraz wraca dalej jako imię — Cleméntis w Communicántes."
+			"function": "Stopień najwyższy w wołaczu. Ta sama forma jest też przysłówkiem w stopniu najwyższym — tu rozstrzyga zgoda z „Pater” (w004). Ten sam wyraz wraca dalej jako imię — Cleméntis w Communicántes."
 		},
 		"w004": {
 			"gloss": "Ojcze",
@@ -68,7 +68,7 @@
 		},
 		"w008": {
 			"gloss": "Syna",
-			"function": "Apozycja (dopowiedzenie) do „Christum” (w007); stąd biernik."
+			"function": "Apozycja (dopowiedzenie) do „Christum” (w007). Stąd biernik."
 		},
 		"w009": {
 			"gloss": "Twego"
@@ -94,7 +94,7 @@
 		},
 		"w016": {
 			"gloss": "abyś",
-			"function": "Starsza postać ut; nie bezokolicznik od utor (używać), choć pisze się tak samo."
+			"function": "Starsza postać ut. Nie bezokolicznik od utor (używać), choć pisze się tak samo."
 		},
 		"w017": {
 			"gloss": "za przyjęte",
@@ -121,7 +121,7 @@
 		},
 		"w024": {
 			"gloss": "daniny",
-			"function": "Munus to dar, który się należy — danina, powinność; donum jest darem swobodnym."
+			"function": "Munus to dar, który się należy — danina, powinność. Donum jest darem swobodnym."
 		},
 		"w025": {
 			"gloss": "te"
@@ -134,7 +134,7 @@
 		},
 		"w028": {
 			"gloss": "nieskalane",
-			"function": "Od libáre — ująć coś z ofiary; illibáta to ofiara, z której nic nie ubyło."
+			"function": "Od libáre — ująć coś z ofiary. Illibáta to ofiara, z której nic nie ubyło."
 		},
 		"w029": {
 			"gloss": "przede"
@@ -170,7 +170,7 @@
 		},
 		"w039": {
 			"gloss": "który",
-			"function": "Rodzaj żeński, bo Ecclésia jest po łacinie rodzaju żeńskiego; cztery bezokoliczniki, które następują, mają go za dopełnienie."
+			"function": "Rodzaj żeński, bo Ecclésia jest po łacinie rodzaju żeńskiego. Cztery bezokoliczniki, które następują, mają go za dopełnienie."
 		},
 		"w040": {
 			"gloss": "obdarzyć pokojem",
@@ -228,7 +228,7 @@
 		},
 		"w056": {
 			"gloss": "biskupem",
-			"function": "Antístes — dosłownie „ten, który stoi przed”; w pogańskiej łacinie kapłan świątyni."
+			"function": "Antístes — dosłownie „ten, który stoi przed”. W pogańskiej łacinie kapłan świątyni."
 		},
 		"w057": {
 			"gloss": "naszym",
@@ -250,7 +250,7 @@
 		},
 		"w062": {
 			"gloss": "katolickiej",
-			"function": "Przydawka w dopełniaczu — zgadza się z „fídei” (w065); przydawki wyprzedzają swój rzeczownik o dwa słowa."
+			"function": "Przydawka w dopełniaczu — zgadza się z „fídei” (w065). Przydawki wyprzedzają swój rzeczownik o dwa słowa."
 		},
 		"w063": {
 			"gloss": "i"
@@ -263,7 +263,7 @@
 		},
 		"w066": {
 			"gloss": "wyznawcami",
-			"function": "Od cólere — uprawiać rolę i czcić bogów; cultóres fídei to ci, którzy wiarę uprawiają jak ziemię."
+			"function": "Od cólere — uprawiać rolę i czcić bogów. Cultóres fídei to ci, którzy wiarę uprawiają jak ziemię."
 		}
 	}
 }

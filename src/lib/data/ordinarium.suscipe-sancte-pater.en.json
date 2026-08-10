@@ -3,7 +3,7 @@
 	"text": "ordinarium.suscipe-sancte-pater",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The prayer calls the bread “hóstia” — Latin for a sacrificial victim, not for bread; already here, before the consecration, the gift is spoken of in the words of sacrifice. The priest lists whom he offers it for, and the order is telling: his own sins first, then “all here present” — circumstántes, literally those standing round — and last all the faithful, living and dead. The three words for his own fault are not synonyms either: peccáta are deeds done, offensiónes are affronts given to someone, negligéntiæ are neglects — the things left undone.",
+	"about": "The prayer calls the bread “hóstia” — Latin for a sacrificial victim, not for bread. Already here, before the consecration, the gift is spoken of in the words of sacrifice. The priest lists whom he offers it for, and the order is telling: his own sins first, then “all here present” — circumstántes, literally those standing round — and last all the faithful, living and dead. The three words for his own fault are not synonyms either: peccáta are deeds done, offensiónes are affronts given to someone, negligéntiæ are neglects — the things left undone.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest takes the paten with the Host and raises it; at Solemn Mass the deacon hands it to him. The priest says the prayer silently."
+			"narrative": "The priest takes the paten with the Host and raises it. At Solemn Mass the deacon hands it to him. The priest says the prayer silently."
 		},
 		"s02": {
 			"translation": "Receive, holy Father, almighty eternal God, this spotless Host, which I, Thy unworthy servant, offer to Thee, my living and true God, for my innumerable sins, offences and negligences, and for all here present, and also for all faithful Christians living and dead: that it may profit me and them unto salvation, into life everlasting. Amen."
@@ -22,7 +22,7 @@
 	"words": {
 		"w001": {
 			"gloss": "receive",
-			"function": "The imperative opens the prayer; its object, “hóstiam” (w009), stands eight words away."
+			"function": "The imperative opens the prayer. Its object, “hóstiam” (w009), stands eight words away."
 		},
 		"w002": {
 			"gloss": "holy",
@@ -34,7 +34,7 @@
 		},
 		"w004": {
 			"gloss": "almighty",
-			"function": "The vocative of a 3rd declension adjective is identical with the nominative; the address to the Father settles it."
+			"function": "The vocative of a 3rd declension adjective is identical with the nominative. The address to the Father settles it."
 		},
 		"w005": {
 			"gloss": "eternal"
@@ -56,7 +56,7 @@
 		},
 		"w010": {
 			"gloss": "which",
-			"function": "A relative in the accusative because it is the object of “óffero” (w015); it takes gender and number from “hóstiam” (w009)."
+			"function": "A relative in the accusative because it is the object of “óffero” (w015). It takes gender and number from “hóstiam” (w009)."
 		},
 		"w011": {
 			"gloss": "I",
@@ -106,7 +106,7 @@
 		},
 		"w024": {
 			"gloss": "sins",
-			"function": "The form is dative as well as ablative; the preposition “pro” (w022), which governs the ablative, decides."
+			"function": "The form is dative as well as ablative. The preposition “pro” (w022), which governs the ablative, decides."
 		},
 		"w025": {
 			"gloss": "and"
@@ -124,7 +124,7 @@
 		},
 		"w029": {
 			"gloss": "my",
-			"function": "One “my” covers all three nouns; the form marks no gender and the nouns are of two, so no gender is claimed here."
+			"function": "One “my” covers all three nouns. The form marks no gender and the nouns are of two, so no gender is claimed here."
 		},
 		"w030": {
 			"gloss": "and"
@@ -169,7 +169,7 @@
 		},
 		"w042": {
 			"gloss": "dead",
-			"function": "From defúngi — to discharge, to have done with; the dead are those who have finished with life."
+			"function": "From defúngi — to discharge, to have done with. The dead are those who have finished with life."
 		},
 		"w043": {
 			"gloss": "that"
@@ -183,7 +183,7 @@
 		},
 		"w046": {
 			"gloss": "them",
-			"function": "The form is dative as well as ablative and marks no gender; the masculine dative rests on the sense — those just named."
+			"function": "The form is dative as well as ablative and marks no gender. The masculine dative rests on the sense — those just named."
 		},
 		"w047": {
 			"gloss": "may profit",

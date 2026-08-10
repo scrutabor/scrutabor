@@ -3,7 +3,7 @@
 	"text": "ordinarium.corpus-tuum",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The last prayer of the communion rite, and the one with a knot in it. Quem is masculine: it cannot belong to mácula, the stain, which is feminine, nor to sacraménta, which is neuter and plural. It reaches back over both of them to me, five words earlier — let no stain of sins remain in me, whom the pure and holy sacraments have refreshed. Latin can do this because the endings hold; a language that has lost them cannot, and every translation has to choose. The prayer asks that the Body and Blood cleave to the priest's viscera — in the Bible the seat of tenderness and mercy, per víscera misericórdiæ: a plea bodily and inward at once.",
+	"about": "The last prayer of the communion rite, and the one with a knot in it. Quem is masculine: it cannot belong to mácula, the stain, which is feminine, nor to sacraménta, which is neuter and plural. It reaches back over both of them to me, five words earlier — let no stain of sins remain in me, whom the pure and holy sacraments have refreshed. Latin can do this because the endings hold. A language that has lost them cannot, and every translation has to choose. The prayer asks that the Body and Blood cleave to the priest's viscera — in the Bible the seat of tenderness and mercy, per víscera misericórdiæ: a plea bodily and inward at once.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -58,11 +58,11 @@
 		},
 		"w009": {
 			"gloss": "I have drunk",
-			"function": "Poto is not the everyday drinking word — that is bibo, the institution's own bibite; even here the prayer weighs its diction."
+			"function": "Poto is not the everyday drinking word — that is bibo, the institution's own bibite. Even here the prayer weighs its diction."
 		},
 		"w010": {
 			"gloss": "may cleave",
-			"function": "Ad and hæreo, to stick fast to; it governs the dative, as inhærére does in the second prayer before Communion."
+			"function": "Ad and hæreo, to stick fast to. It governs the dative, as inhærére does in the second prayer before Communion."
 		},
 		"w011": {
 			"gloss": "to the inmost parts",
@@ -117,7 +117,7 @@
 		},
 		"w026": {
 			"gloss": "have refreshed",
-			"function": "A perfect — the refreshment is already given; the prayer pins its plea for cleanness to that accomplished fact."
+			"function": "A perfect — the refreshment is already given. The prayer pins its plea for cleanness to that accomplished fact."
 		},
 		"w027": {
 			"gloss": "sacraments",

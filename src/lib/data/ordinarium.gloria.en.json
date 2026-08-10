@@ -3,7 +3,7 @@
 	"text": "ordinarium.gloria",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The Greater Doxology, the angelic hymn: it opens with the angels' song over Bethlehem (Lk 2:14 — the Vulgate there has “in altíssimis”, the hymn sings “in excélsis”) and unfolds into an early Christian hymn of praise, originally sung in Greek at the morning prayer of the East and translated into Latin in antiquity. By an old Roman tradition it was first heard at Mass in the night of Christmas; for centuries it was reserved to bishops' Masses, priests being allowed to intone it only at Easter — a restriction that vanished toward the end of the eleventh century.",
+	"about": "The Greater Doxology, the angelic hymn: it opens with the angels' song over Bethlehem (Lk 2:14 — the Vulgate there has “in altíssimis”, the hymn sings “in excélsis”) and unfolds into an early Christian hymn of praise, originally sung in Greek at the morning prayer of the East and translated into Latin in antiquity. By an old Roman tradition it was first heard at Mass in the night of Christmas. For centuries it was reserved to bishops' Masses, priests being allowed to intone it only at Easter — a restriction that vanished toward the end of the eleventh century.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -181,7 +181,7 @@
 		},
 		"w041": {
 			"gloss": "Lamb",
-			"function": "Apposition to “Dómine” (w039) — a nominative form serving as an address. Latin often does this in long apostrophes; the vocative proper would be “agne”."
+			"function": "Apposition to “Dómine” (w039) — a nominative form serving as an address. Latin often does this in long apostrophes. The vocative proper would be “agne”."
 		},
 		"w042": {
 			"gloss": "of God"
@@ -226,7 +226,7 @@
 		},
 		"w055": {
 			"gloss": "receive",
-			"function": "An imperative — the hymn's petition addressed directly to the Lamb; its object is “deprecatiónem” (w056)."
+			"function": "An imperative — the hymn's petition addressed directly to the Lamb. Its object is “deprecatiónem” (w056)."
 		},
 		"w056": {
 			"gloss": "the plea"
@@ -268,7 +268,7 @@
 		},
 		"w068": {
 			"gloss": "holy",
-			"function": "A predicate with the verb understood: you alone — holy; the threefold “Sanctus” of the Sanctus predicates the same way."
+			"function": "A predicate with the verb understood: you alone — holy. The threefold “Sanctus” of the Sanctus predicates the same way."
 		},
 		"w069": {
 			"gloss": "You"
@@ -287,7 +287,7 @@
 		},
 		"w074": {
 			"gloss": "Most High",
-			"function": "Like “Sanctus” (w068) — a predicate; the peak of the three-step gradation: holy, Lord, Most High."
+			"function": "Like “Sanctus” (w068) — a predicate. The peak of the three-step gradation: holy, Lord, Most High."
 		},
 		"w075": {
 			"gloss": "Jesus"

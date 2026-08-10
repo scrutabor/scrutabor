@@ -3,7 +3,7 @@
 	"text": "ordinarium.nobis-quoque",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Trzy słowa otwarcia kapłan mówi głośno — rubryka każe podnieść głos „nieco” — jedyne, jakie lud słyszy z Kanonu poza końcowym Per ómnia; i jedyna to modlitwa, przy której uderza się w piersi. Te dwie rzeczy idą razem: to prośba grzeszników o siebie samych. Jej lista świętych odpowiada liście z Communicántes: Jan (zwykle rozumiany jako Chrzciciel), Szczepan, Maciej, Barnaba, Ignacy, Aleksander, Marcelin i Piotr — nie Apostoł, lecz egzorcysta, towarzysz Marcelina — a potem siedem kobiet: Felicyta, Perpetua, Agata, Łucja, Agnieszka, Cecylia, Anastazja. To największa grupa kobiet wymieniona z imienia we Mszy rzymskiej.",
+	"about": "Trzy słowa otwarcia kapłan mówi głośno — rubryka każe podnieść głos „nieco” — jedyne, jakie lud słyszy z Kanonu poza końcowym Per ómnia. I jedyna to modlitwa, przy której uderza się w piersi. Te dwie rzeczy idą razem: to prośba grzeszników o siebie samych. Jej lista świętych odpowiada liście z Communicántes: Jan (zwykle rozumiany jako Chrzciciel), Szczepan, Maciej, Barnaba, Ignacy, Aleksander, Marcelin i Piotr — nie Apostoł, lecz egzorcysta, towarzysz Marcelina — a potem siedem kobiet: Felicyta, Perpetua, Agata, Łucja, Agnieszka, Cecylia, Anastazja. To największa grupa kobiet wymieniona z imienia we Mszy rzymskiej.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -40,11 +40,11 @@
 	"words": {
 		"w001": {
 			"gloss": "nam",
-			"function": "Celownik na samym początku, przed czasownikiem oddalonym o trzynaście słów; i to jedyne trzy słowa Kanonu, które lud słyszy poza końcowym Per ómnia."
+			"function": "Celownik na samym początku, przed czasownikiem oddalonym o trzynaście słów. I to jedyne trzy słowa Kanonu, które lud słyszy poza końcowym Per ómnia."
 		},
 		"w002": {
 			"gloss": "także",
-			"function": "„Także” — bo modlitwa poprzednia prosiła za zmarłych; teraz prosi za tych, którzy stoją przy ołtarzu."
+			"function": "„Także” — bo modlitwa poprzednia prosiła za zmarłych. Teraz prosi za tych, którzy stoją przy ołtarzu."
 		},
 		"w003": {
 			"gloss": "grzesznikom",
@@ -123,7 +123,7 @@
 		},
 		"w026": {
 			"gloss": "Maciejem",
-			"function": "W Communicántes go nie było — tam jego miejsce zajął Paweł; tu wraca do grona Dwunastu."
+			"function": "W Communicántes go nie było — tam jego miejsce zajął Paweł. Tu wraca do grona Dwunastu."
 		},
 		"w027": {
 			"gloss": "Barnabą"
@@ -144,11 +144,11 @@
 		},
 		"w032": {
 			"gloss": "Felicytą",
-			"function": "Imię jest zwykłym łacińskim rzeczownikiem — szczęście; analizatory potwierdzają tu formę, nie świętą."
+			"function": "Imię jest zwykłym łacińskim rzeczownikiem — szczęście. Analizatory potwierdzają tu formę, nie świętą."
 		},
 		"w033": {
 			"gloss": "Perpetuą",
-			"function": "Imię męczennicy, a zarazem łaciński przymiotnik („nieustanna”) — i tylko to niosą słowniki analizatorów, bo imion własnych nie obejmują; że jest tu imieniem, rozstrzyga szereg świętych, w którym stoi."
+			"function": "Imię męczennicy, a zarazem łaciński przymiotnik („nieustanna”) — i tylko to niosą słowniki analizatorów, bo imion własnych nie obejmują. Że jest tu imieniem, rozstrzyga szereg świętych, w którym stoi."
 		},
 		"w034": {
 			"gloss": "Agatą"
@@ -195,7 +195,7 @@
 		},
 		"w048": {
 			"gloss": "ten, kto szacuje",
-			"function": "Mianownik w dopowiedzeniu do domyślnego podmiotu „admítte” (w054) — tak czytają oba przekłady; wołacz, o tej samej formie, pozostaje odczytaniem konkurencyjnym i słowo nosi znak sporu."
+			"function": "Mianownik w dopowiedzeniu do domyślnego podmiotu „admítte” (w054) — tak czytają oba przekłady. Wołacz, o tej samej formie, pozostaje odczytaniem konkurencyjnym i słowo nosi znak sporu."
 		},
 		"w049": {
 			"gloss": "zasługę"

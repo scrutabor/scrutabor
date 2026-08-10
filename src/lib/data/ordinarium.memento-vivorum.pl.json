@@ -3,7 +3,7 @@
 	"text": "ordinarium.memento-vivorum",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Wspomnienie żywych. W dawnym Rzymie imiona, za które składano ofiarę, odczytywano z tabliczek zwanych dyptychami; mszałowe N. et N. jest tym, co po nich zostało. Kapłan składa ręce i milknie — modli się za tych, których sam chce wspomnieć, i nikt tych imion nie słyszy. Potem modlitwa obejmuje „wszystkich obecnych”, circumstántes, dosłownie tych, którzy stoją wokół, i wylicza, o co się dla nich prosi: odkupienie dusz, nadzieję zbawienia i bezpieczeństwo.",
+	"about": "Wspomnienie żywych. W dawnym Rzymie imiona, za które składano ofiarę, odczytywano z tabliczek zwanych dyptychami. Mszałowe N. et N. jest tym, co po nich zostało. Kapłan składa ręce i milknie — modli się za tych, których sam chce wspomnieć, i nikt tych imion nie słyszy. Potem modlitwa obejmuje „wszystkich obecnych”, circumstántes, dosłownie tych, którzy stoją wokół, i wylicza, o co się dla nich prosi: odkupienie dusz, nadzieję zbawienia i bezpieczeństwo.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -16,7 +16,7 @@
 			"translation": "Pamiętaj, Boże, o swoich sługach i służebnicach"
 		},
 		"s02": {
-			"narrative": "Kapłan składa ręce i modli się chwilę w milczeniu za tych, których chce wspomnieć; potem rozkłada ręce i mówi dalej."
+			"narrative": "Kapłan składa ręce i modli się chwilę w milczeniu za tych, których chce wspomnieć. Potem rozkłada ręce i mówi dalej."
 		},
 		"s03": {
 			"translation": "i o wszystkich tu zgromadzonych, których wiara i oddanie są Ci znane. Za nich składamy Tobie:"
@@ -31,7 +31,7 @@
 	"words": {
 		"w001": {
 			"gloss": "pamiętaj",
-			"function": "Rozkaźnik czasu przyszłego — jedyny rodzaj rozkaźnika, jaki ten czasownik ma (obok mnogiego mementóte); łacina znaczy nim „miej to w pamięci, gdy przyjdzie chwila”."
+			"function": "Rozkaźnik czasu przyszłego — jedyny rodzaj rozkaźnika, jaki ten czasownik ma (obok mnogiego mementóte). Łacina znaczy nim „miej to w pamięci, gdy przyjdzie chwila”."
 		},
 		"w002": {
 			"gloss": "Panie"
@@ -46,7 +46,7 @@
 		},
 		"w005": {
 			"gloss": "Twoich",
-			"function": "Tu mszał drukuje N. et N.; kapłan przechodzi do milczenia i wspomina imiona, których nikt nie słyszy."
+			"function": "Tu mszał drukuje N. et N.. Kapłan przechodzi do milczenia i wspomina imiona, których nikt nie słyszy."
 		},
 		"w006": {
 			"gloss": "i"
@@ -97,7 +97,7 @@
 		},
 		"w021": {
 			"gloss": "albo",
-			"function": "Vel dopuszcza obie możliwości; aut wykluczałoby jedną z nich. Ofiarę składa kapłan za nich i oni sami przez niego."
+			"function": "Vel dopuszcza obie możliwości. Aut wykluczałoby jedną z nich. Ofiarę składa kapłan za nich i oni sami przez niego."
 		},
 		"w022": {
 			"gloss": "którzy"
@@ -127,7 +127,7 @@
 		},
 		"w030": {
 			"gloss": "i za swoich",
-			"function": "Rodzaj męski wynika z sensu — chodzi o ludzi, nie o rzeczy; sama forma rodzaju nie wskazuje."
+			"function": "Rodzaj męski wynika z sensu — chodzi o ludzi, nie o rzeczy. Sama forma rodzaju nie wskazuje."
 		},
 		"w031": {
 			"gloss": "wszystkich"
@@ -153,7 +153,7 @@
 		},
 		"w038": {
 			"gloss": "zbawienia",
-			"function": "Salus znaczy naraz zbawienie i zdrowie; obok stoi incolúmitas, czyli bezpieczeństwo doczesne — modlitwa prosi o jedno i drugie."
+			"function": "Salus znaczy naraz zbawienie i zdrowie. Obok stoi incolúmitas, czyli bezpieczeństwo doczesne — modlitwa prosi o jedno i drugie."
 		},
 		"w039": {
 			"gloss": "i"
@@ -182,7 +182,7 @@
 		},
 		"w047": {
 			"gloss": "Bogu",
-			"function": "Celownik: to Jemu oddaje się śluby. Zwrot „żywemu i prawdziwemu” to słowa 1 Tes 1, 9, przeciwstawiające Boga bożkom; w tle stoi Jr 10, 10."
+			"function": "Celownik: to Jemu oddaje się śluby. Zwrot „żywemu i prawdziwemu” to słowa 1 Tes 1, 9, przeciwstawiające Boga bożkom. W tle stoi Jr 10, 10."
 		},
 		"w048": {
 			"gloss": "żywemu"

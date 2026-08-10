@@ -3,7 +3,7 @@
 	"text": "ordinarium.quod-ore-sumpsimus",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Całą modlitwę niosą dwa przeciwstawione sobie ablativy: ore, ustami, i pura mente, czystym umysłem. Usta swoje zrobiły; umysł jeszcze nie zaczął. A na końcu odpowiadają sobie dwa dalsze słowa — dar dany w czasie, múnere temporáli, ma się stać lekarstwem, które się nie kończy, remédium sempitérnum. Po trzech modlitwach przed Komunią, wszystkich w liczbie pojedynczej i wszystkich własnych kapłanowi, ta jest od początku do końca w liczbie mnogiej: spożyliśmy, obyśmy przyjęli, nam.",
+	"about": "Całą modlitwę niosą dwa przeciwstawione sobie ablativy: ore, ustami, i pura mente, czystym umysłem. Usta swoje zrobiły. Umysł jeszcze nie zaczął. A na końcu odpowiadają sobie dwa dalsze słowa — dar dany w czasie, múnere temporáli, ma się stać lekarstwem, które się nie kończy, remédium sempitérnum. Po trzech modlitwach przed Komunią, wszystkich w liczbie pojedynczej i wszystkich własnych kapłanowi, ta jest od początku do końca w liczbie mnogiej: spożyliśmy, obyśmy przyjęli, nam.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -44,11 +44,11 @@
 		},
 		"w006": {
 			"gloss": "umysłem",
-			"function": "Drugi ablativus narzędzia, odpowiadający „ore” (w002). Przekład przyjęty modli się „czystym sercem”; glosa zostaje przy słowie, którego używa łacina."
+			"function": "Drugi ablativus narzędzia, odpowiadający „ore” (w002). Przekład przyjęty modli się „czystym sercem”. Glosa zostaje przy słowie, którego używa łacina."
 		},
 		"w007": {
 			"gloss": "obyśmy przyjęli",
-			"function": "Cápio to zwyczajne słowo o chwytaniu; modlitwa nie prosi o drugą Komunię, lecz o to, by umysł ujął to, co usta już mają."
+			"function": "Cápio to zwyczajne słowo o chwytaniu. Modlitwa nie prosi o drugą Komunię, lecz o to, by umysł ujął to, co usta już mają."
 		},
 		"w008": {
 			"gloss": "i"

@@ -3,7 +3,7 @@
 	"text": "ordinarium.lavabo",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Psalm zaczyna się w połowie — od wersetu 6 — bo dopiero ten werset mówi o ołtarzu: obmyję ręce i obejdę ołtarz twój. Kapłan obmywa przy tym nie całe dłonie, lecz końce kciuków i palców wskazujących: tych, którymi będzie dotykał konsekrowanej Hostii. Psalm mówi o niewinności — i mówi o niej w pierwszej osobie — „ja zaś chodziłem w niewinności mojej” — co przy ołtarzu brzmi jak prośba, nie jak chluba: zaraz potem pada „rédime me”, wykup mnie. Doksologię „Chwała Ojcu” opuszcza się we Mszach żałobnych oraz — we Mszach okresowych — od Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie; sam psalm zostaje.",
+	"about": "Psalm zaczyna się w połowie — od wersetu 6 — bo dopiero ten werset mówi o ołtarzu: obmyję ręce i obejdę ołtarz twój. Kapłan obmywa przy tym nie całe dłonie, lecz końce kciuków i palców wskazujących: tych, którymi będzie dotykał konsekrowanej Hostii. Psalm mówi o niewinności — i mówi o niej w pierwszej osobie — „ja zaś chodziłem w niewinności mojej” — co przy ołtarzu brzmi jak prośba, nie jak chluba: zaraz potem pada „rédime me”, wykup mnie. Doksologię „Chwała Ojcu” opuszcza się we Mszach żałobnych oraz — we Mszach okresowych — od Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie. Sam psalm zostaje.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan przechodzi na prawą stronę ołtarza; ministrant polewa mu wodą końce palców."
+			"narrative": "Kapłan przechodzi na prawą stronę ołtarza. Ministrant polewa mu wodą końce palców."
 		},
 		"s02": {
 			"translation": "Obmyję ręce moje między niewinnymi i obejdę ołtarz Twój, Panie:"
@@ -57,7 +57,7 @@
 		},
 		"w004": {
 			"gloss": "ręce",
-			"function": "Forma ta sama w sześciu miejscach odmiany; biernik liczby mnogiej, bo to dopełnienie „Lavábo” (w001)."
+			"function": "Forma ta sama w sześciu miejscach odmiany. Biernik liczby mnogiej, bo to dopełnienie „Lavábo” (w001)."
 		},
 		"w005": {
 			"gloss": "moje"
@@ -67,7 +67,7 @@
 		},
 		"w007": {
 			"gloss": "obejdę",
-			"function": "Akcent pada na trzecią sylabę od końca, bo „a” w dare jest krótkie; niektóre wydania akcentują inaczej."
+			"function": "Akcent pada na trzecią sylabę od końca, bo „a” w dare jest krótkie. Niektóre wydania akcentują inaczej."
 		},
 		"w008": {
 			"gloss": "ołtarz"
@@ -85,7 +85,7 @@
 		},
 		"w012": {
 			"gloss": "słyszał",
-			"function": "Forma jest zarazem czasem przyszłym; o trybie łączącym rozstrzyga „enárrem” (w016), które innego trybu mieć nie może."
+			"function": "Forma jest zarazem czasem przyszłym. O trybie łączącym rozstrzyga „enárrem” (w016), które innego trybu mieć nie może."
 		},
 		"w013": {
 			"gloss": "głos"
@@ -115,14 +115,14 @@
 		},
 		"w021": {
 			"gloss": "umiłowałem",
-			"function": "Dilígere to miłość z wyboru — dosłownie „wybrać spośród”; nie uczucie, lecz upodobanie."
+			"function": "Dilígere to miłość z wyboru — dosłownie „wybrać spośród”. Nie uczucie, lecz upodobanie."
 		},
 		"w022": {
 			"gloss": "piękno"
 		},
 		"w023": {
 			"gloss": "domu",
-			"function": "Dopełniacz liczby pojedynczej; ta sama forma bywa mianownikiem i liczbą mnogą, rozstrzyga zależność od „decórem” (w022)."
+			"function": "Dopełniacz liczby pojedynczej. Ta sama forma bywa mianownikiem i liczbą mnogą, rozstrzyga zależność od „decórem” (w022)."
 		},
 		"w024": {
 			"gloss": "twego"
@@ -215,7 +215,7 @@
 		},
 		"w051": {
 			"gloss": "—",
-			"function": "Z „repléta” (w050) tworzy jedną formę czasu przeszłego strony biernej; osobno nic tu nie znaczy."
+			"function": "Z „repléta” (w050) tworzy jedną formę czasu przeszłego strony biernej. Osobno nic tu nie znaczy."
 		},
 		"w052": {
 			"gloss": "darami",
@@ -242,7 +242,7 @@
 		},
 		"w059": {
 			"gloss": "—",
-			"function": "Z „ingréssus” (w058) tworzy jedną formę perfectum czasownika deponentnego; osobno nic tu nie znaczy."
+			"function": "Z „ingréssus” (w058) tworzy jedną formę perfectum czasownika deponentnego. Osobno nic tu nie znaczy."
 		},
 		"w060": {
 			"gloss": "wykup",
@@ -282,11 +282,11 @@
 		},
 		"w071": {
 			"gloss": "zgromadzeniach",
-			"function": "Ecclésia to najpierw zwołane zgromadzenie; znaczenie „kościół jako budynek” jest późniejsze."
+			"function": "Ecclésia to najpierw zwołane zgromadzenie. Znaczenie „kościół jako budynek” jest późniejsze."
 		},
 		"w072": {
 			"gloss": "będę błogosławił",
-			"function": "Forma dopuszcza też tryb łączący; czas przyszły wynika ze zdania głównego i z sąsiedztwa „Lavábo” (w001)."
+			"function": "Forma dopuszcza też tryb łączący. Czas przyszły wynika ze zdania głównego i z sąsiedztwa „Lavábo” (w001)."
 		},
 		"w073": {
 			"gloss": "ciebie"

@@ -3,7 +3,7 @@
 	"text": "ordinarium.supplices-te-rogamus",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The priest bows low, lays his joined hands on the altar and asks that an angel carry the offering to the altar on high. The angel is not named, and the tradition has never settled who he is: some saw Michael, some Christ Himself, some the Holy Spirit — a reading the old commentators rejected — and some refused to name him at all. Sublíme altáre — the altar on high — echoes Revelation 8. The petition rides on rogámus with the imperative iube; the ut clause has one verb (repleámur), with a generalizing clause about those who will communicate wedged in front of it.",
+	"about": "The priest bows low, lays his joined hands on the altar and asks that an angel carry the offering to the altar on high. The angel is not named, and the tradition has never settled who he is: some saw Michael, some Christ Himself, some the Holy Spirit — a reading the old commentators rejected — and some refused to name him at all. Sublíme altáre — the altar on high — echoes Revelation 8. The petition rides on rogámus with the imperative iube. The ut clause has one verb (repleámur), with a generalizing clause about those who will communicate wedged in front of it.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -123,7 +123,7 @@
 		},
 		"w024": {
 			"gloss": "as many as",
-			"function": "The subject of “sumpsérimus” (w035) — hence nominative, though the form marks no case; the whole relative clause has wedged itself between “ut” (w023) and its verb."
+			"function": "The subject of “sumpsérimus” (w035) — hence nominative, though the form marks no case. The whole relative clause has wedged itself between “ut” (w023) and its verb."
 		},
 		"w025": {
 			"gloss": "from"
@@ -140,7 +140,7 @@
 		},
 		"w029": {
 			"gloss": "most holy",
-			"function": "The epithet of what the priest is about to name: the most holy — inviolable — Body and Blood; the lemma tells the word’s Roman story."
+			"function": "The epithet of what the priest is about to name: the most holy — inviolable — Body and Blood. The lemma tells the word’s Roman story."
 		},
 		"w030": {
 			"gloss": "of the Son"
@@ -159,7 +159,7 @@
 		},
 		"w035": {
 			"gloss": "shall receive",
-			"function": "A future perfect: the receiving is to be complete before the petition for grace is fulfilled. The form can also be a perfect subjunctive, and a clause sitting inside a purpose clause can be drawn into that mood with it; the sense of the generalizing clause — as many as SHALL HAVE received — is what tips this edition to the future perfect."
+			"function": "A future perfect: the receiving is to be complete before the petition for grace is fulfilled. The form can also be a perfect subjunctive, and a clause sitting inside a purpose clause can be drawn into that mood with it. The sense of the generalizing clause — as many as SHALL HAVE received — is what tips this edition to the future perfect."
 		},
 		"w036": {
 			"gloss": "every"

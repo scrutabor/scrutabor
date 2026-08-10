@@ -3,7 +3,7 @@
 	"text": "ordinarium.confiteor-sacerdotis",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The missal prints this confession in full only once — here, in the priest's mouth — and gives the ministers' version as a single rubric: where the priest said “vobis, fratres” and “vos, fratres”, the ministers say “tibi, pater” and “te, pater”. Apart from those two places the two confessions are word for word the same. It is worth hearing what each calls the other: the priest addresses those before him as brothers, and they address him as father. He confesses first and alone, bowed low; the answer he will hear is the very formula he is about to say over them, only in the singular.",
+	"about": "The missal prints this confession in full only once — here, in the priest's mouth — and gives the ministers' version as a single rubric: where the priest said “vobis, fratres” and “vos, fratres”, the ministers say “tibi, pater” and “te, pater”. Apart from those two places the two confessions are word for word the same. It is worth hearing what each calls the other: the priest addresses those before him as brothers, and they address him as father. He confesses first and alone, bowed low. The answer he will hear is the very formula he is about to say over them, only in the singular.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest joins his hands and bows low; he makes the general confession first, alone."
+			"narrative": "The priest joins his hands and bows low, and makes the general confession first, alone."
 		},
 		"s02": {
 			"translation": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, brethren:"
@@ -133,7 +133,7 @@
 		},
 		"w027": {
 			"gloss": "in thought",
-			"function": "By what have I sinned — by thought; first of three ablatives of means: by thought, by word, by deed."
+			"function": "By what have I sinned — by thought. First of three ablatives of means: by thought, by word, by deed."
 		},
 		"w028": {
 			"gloss": "in word"
@@ -264,7 +264,7 @@
 		},
 		"w064": {
 			"gloss": "the Lord",
-			"function": "Accusative after “ad” (w063); the whole phrase “Dóminum Deum nostrum” stands in the accusative."
+			"function": "Accusative after “ad” (w063). The whole phrase “Dóminum Deum nostrum” stands in the accusative."
 		},
 		"w065": {
 			"gloss": "God",

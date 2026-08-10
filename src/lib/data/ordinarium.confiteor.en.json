@@ -3,7 +3,7 @@
 	"text": "ordinarium.confiteor",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The general confession from the prayers at the foot of the altar. The priest says it first, then — in this version, with “tibi, pater” — the ministers, joined by the faithful at a dialogue Mass. After the first comes the Misereátur; after the ministers', the Misereátur and the Indulgéntiam. It grew out of the medieval prayers of preparation for Mass, and its present shape was fixed by the missal of St. Pius V (1570).",
+	"about": "The general confession from the prayers at the foot of the altar. The priest says it first, then — in this version, with “tibi, pater” — the ministers, joined by the faithful at a dialogue Mass. After the first comes the Misereátur. After the ministers', the Misereátur and the Indulgéntiam. It grew out of the medieval prayers of preparation for Mass, and its present shape was fixed by the missal of St. Pius V (1570).",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The ministers repeat the confession — at Solemn Mass the deacon and subdeacon, otherwise the servers; the faithful join them, aloud at a dialogue Mass or in spirit."
+			"narrative": "The ministers repeat the confession — at Solemn Mass the deacon and subdeacon, otherwise the servers. The faithful join them, aloud at a dialogue Mass or in spirit."
 		},
 		"s02": {
 			"translation": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, father:"
@@ -73,7 +73,7 @@
 		},
 		"w011": {
 			"gloss": "to blessed",
-			"function": "Agrees with the following “Ioánni” (w012). “Beátus” introduces the three named singly — Mary, Michael, John; from the Apostles on the prayer says “sanctis”."
+			"function": "Agrees with the following “Ioánni” (w012). “Beátus” introduces the three named singly — Mary, Michael, John. From the Apostles on the prayer says “sanctis”."
 		},
 		"w012": {
 			"gloss": "John"
@@ -118,7 +118,7 @@
 		},
 		"w023": {
 			"gloss": "father",
-			"function": "Vocative, not the dative “patri” — a direct address to the person, not another item in the list; spoken to the priest."
+			"function": "Vocative, not the dative “patri” — a direct address to the person, not another item in the list. Spoken to the priest."
 		},
 		"w024": {
 			"gloss": "that",
@@ -133,7 +133,7 @@
 		},
 		"w027": {
 			"gloss": "in thought",
-			"function": "By what have I sinned — by thought; first of three ablatives of means: by thought, by word, by deed."
+			"function": "By what have I sinned — by thought. First of three ablatives of means: by thought, by word, by deed."
 		},
 		"w028": {
 			"gloss": "in word"
@@ -256,7 +256,7 @@
 		},
 		"w059": {
 			"gloss": "father",
-			"function": "The vocative repeated from the first half — addressed to the priest; hence “pater”, not “patri”."
+			"function": "The vocative repeated from the first half — addressed to the priest. Hence “pater”, not “patri”."
 		},
 		"w060": {
 			"gloss": "to pray",
@@ -274,11 +274,11 @@
 		},
 		"w064": {
 			"gloss": "the Lord",
-			"function": "Accusative after “ad” (w063); the whole phrase “Dóminum Deum nostrum” stands in the accusative."
+			"function": "Accusative after “ad” (w063). The whole phrase “Dóminum Deum nostrum” stands in the accusative."
 		},
 		"w065": {
 			"gloss": "God",
-			"function": "Apposition to “Dóminum” (w064): the Lord — God. Compare “Deo” (w002): the same word opened the prayer in the dative; the prayer closes as it began."
+			"function": "Apposition to “Dóminum” (w064): the Lord — God. Compare “Deo” (w002): the same word opened the prayer in the dative. The prayer closes as it began."
 		},
 		"w066": {
 			"gloss": "our",

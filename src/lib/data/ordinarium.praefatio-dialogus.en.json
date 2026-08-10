@@ -3,7 +3,7 @@
 	"text": "ordinarium.praefatio-dialogus",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The exchange with which the priest opens the Preface. Cyprian of Carthage quotes it already in the third century: the priest, before the prayer, prepares the minds of the brethren by saying Sursum corda. “Habémus ad Dóminum” leaves its object unsaid — literally we have towards the Lord; the hearts just spoken of are what is had. The answer “Dignum et iustum est” is the phrase the priest picks up at once in the first words of the Preface: Vere dignum et iustum est.",
+	"about": "The exchange with which the priest opens the Preface. Cyprian of Carthage quotes it already in the third century: the priest, before the prayer, prepares the minds of the brethren by saying Sursum corda. “Habémus ad Dóminum” leaves its object unsaid — literally we have towards the Lord. The hearts just spoken of are what is had. The answer “Dignum et iustum est” is the phrase the priest picks up at once in the first words of the Preface: Vere dignum et iustum est.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest lays both hands on the altar, one on either side, and raises them a little as he says Sursum corda; at Grátias agámus he joins them before his breast and bows his head."
+			"narrative": "The priest lays both hands on the altar, one on either side, and raises them a little as he says Sursum corda. At Grátias agámus he joins them before his breast and bows his head."
 		},
 		"s02": {
 			"translation": "The Lord be with you."
@@ -53,7 +53,7 @@
 		},
 		"w006": {
 			"gloss": "your",
-			"function": "The answer returns the greeting to the priest alone. The old reading refers thy spirit to the grace of ordination; Jungmann hears a Semitism for simply thee. Both readings stand."
+			"function": "The answer returns the greeting to the priest alone. The old reading refers thy spirit to the grace of ordination. Jungmann hears a Semitism for simply thee. Both readings stand."
 		},
 		"w007": {
 			"gloss": "upwards",
@@ -65,7 +65,7 @@
 		},
 		"w009": {
 			"gloss": "we have",
-			"function": "The answer does not repeat the command but states that it has been done; the object (“them”) is again left unsaid."
+			"function": "The answer does not repeat the command but states that it has been done. The object (“them”) is again left unsaid."
 		},
 		"w010": {
 			"gloss": "to"
@@ -75,7 +75,7 @@
 		},
 		"w012": {
 			"gloss": "thanks",
-			"function": "Grátias ágere, to render thanks, is the fixed Latin phrase; it renders the Greek eucharistein, from which the Eucharist — thanksgiving — takes its name."
+			"function": "Grátias ágere, to render thanks, is the fixed Latin phrase. It renders the Greek eucharistein, from which the Eucharist — thanksgiving — takes its name."
 		},
 		"w013": {
 			"gloss": "let us give",

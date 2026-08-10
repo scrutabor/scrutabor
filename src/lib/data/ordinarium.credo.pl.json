@@ -3,7 +3,7 @@
 	"text": "ordinarium.credo",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Nicejsko-konstantynopolitańskie wyznanie wiary: spowiedź Nicei (325) w postaci przebudowanej i znacznie poszerzonej, przekazanej pod imieniem soboru w Konstantynopolu (381) — która też opuszcza zdania Nicei (anatematyzmy, „z istoty Ojca”). Łaciński tekst mszalny jest jeszcze trzecią postacią: zachowuje „Deum de Deo”, którego greka soborowa nie ma, i wyznaje pochodzenie Ducha „od Ojca i Syna” (Filióque) — dodatek zachodni, nieobecny w grece soboru. Do Mszy rzymskiej wszedł późno: wedle Bernona z Reichenau Rzym zaczął go śpiewać w 1014 roku, gdy Benedykt VIII ustąpił prośbie cesarza Henryka II — tak brzmi zwykła relacja; świadectwa wcześniejszego użycia rzymskiego opierają się na księgach karolińskich, których rzymskie pochodzenie jest sporne.",
+	"about": "Nicejsko-konstantynopolitańskie wyznanie wiary: spowiedź Nicei (325) w postaci przebudowanej i znacznie poszerzonej, przekazanej pod imieniem soboru w Konstantynopolu (381) — która też opuszcza zdania Nicei (anatematyzmy, „z istoty Ojca”). Łaciński tekst mszalny jest jeszcze trzecią postacią: zachowuje „Deum de Deo”, którego greka soborowa nie ma, i wyznaje pochodzenie Ducha „od Ojca i Syna” (Filióque) — dodatek zachodni, nieobecny w grece soboru. Do Mszy rzymskiej wszedł późno: wedle Bernona z Reichenau Rzym zaczął go śpiewać w 1014 roku, gdy Benedykt VIII ustąpił prośbie cesarza Henryka II — tak brzmi zwykła relacja. Świadectwa wcześniejszego użycia rzymskiego opierają się na księgach karolińskich, których rzymskie pochodzenie jest sporne.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan na środku ołtarza intonuje wyznanie wiary; Credo odmawia się w niedziele i większe święta, w dni powszednie zwykle się je opuszcza. Na słowo „Deum” kapłan skłania głowę ku krzyżowi, podobnie na „Iesum Christum” i „simul adorátur”, a na końcu, przy „Et vitam ventúri sǽculi”, żegna się znakiem krzyża."
+			"narrative": "Kapłan na środku ołtarza intonuje wyznanie wiary. Credo odmawia się w niedziele i większe święta, w dni powszednie zwykle się je opuszcza. Na słowo „Deum” kapłan skłania głowę ku krzyżowi, podobnie na „Iesum Christum” i „simul adorátur”, a na końcu, przy „Et vitam ventúri sǽculi”, żegna się znakiem krzyża."
 		},
 		"s02": {
 			"translation": "Wierzę w jednego Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, wszystkich rzeczy widzialnych i niewidzialnych."
@@ -34,7 +34,7 @@
 			"translation": "On to dla nas ludzi i dla naszego zbawienia zstąpił z nieba."
 		},
 		"s08": {
-			"narrative": "Rubryka każe tu przyklęknąć: kapłan przyklęka na „Et incarnátus est” i trwa tak aż po „Et homo factus est” — na wspomnienie Wcielenia; wierni przyklękają razem z nim."
+			"narrative": "Rubryka każe tu przyklęknąć: kapłan przyklęka na „Et incarnátus est” i trwa tak aż po „Et homo factus est” — na wspomnienie Wcielenia. Wierni przyklękają razem z nim."
 		},
 		"s09": {
 			"translation": "I za sprawą Ducha Świętego przyjął ciało z Maryi Dziewicy: i stał się człowiekiem."
@@ -73,7 +73,7 @@
 	"words": {
 		"w001": {
 			"gloss": "wierzę",
-			"function": "„Crédere in” z biernikiem — „wierzyć w kogoś”, powierzyć się — to składnia biblijna i kościelna; klasyczna łacina mówiła „crédere” z celownikiem: dawać wiarę."
+			"function": "„Crédere in” z biernikiem — „wierzyć w kogoś”, powierzyć się — to składnia biblijna i kościelna. Klasyczna łacina mówiła „crédere” z celownikiem: dawać wiarę."
 		},
 		"w002": {
 			"gloss": "w"
@@ -198,7 +198,7 @@
 		},
 		"w042": {
 			"gloss": "zrodzonego",
-			"function": "Dalszy ciąg biernikowych dopowiedzeń; zestawione z „factum” (w044) niesie sedno nicejskiego wyznania: zrodzony, nie uczyniony."
+			"function": "Dalszy ciąg biernikowych dopowiedzeń. Zestawione z „factum” (w044) niesie sedno nicejskiego wyznania: zrodzony, nie uczyniony."
 		},
 		"w043": {
 			"gloss": "nie"
@@ -224,7 +224,7 @@
 		},
 		"w050": {
 			"gloss": "uczynione",
-			"function": "Z „sunt” (w051) tworzy stronę bierną perfectum: facta sunt — dosłownie „zostały uczynione”; po polsku „wszystko… stało się”, w liczbie pojedynczej."
+			"function": "Z „sunt” (w051) tworzy stronę bierną perfectum: facta sunt — dosłownie „zostały uczynione”. Po polsku „wszystko… stało się”, w liczbie pojedynczej."
 		},
 		"w051": {
 			"gloss": "zostało"
@@ -255,7 +255,7 @@
 		},
 		"w060": {
 			"gloss": "zstąpił",
-			"function": "Forma wygląda tak samo w czasie teraźniejszym i przeszłym; tu opowiada o dokonanym zstąpieniu — „zstąpił”."
+			"function": "Forma wygląda tak samo w czasie teraźniejszym i przeszłym. Tu opowiada o dokonanym zstąpieniu — „zstąpił”."
 		},
 		"w061": {
 			"gloss": "z"
@@ -268,7 +268,7 @@
 		},
 		"w064": {
 			"gloss": "wcielony",
-			"function": "Z „est” (w065) tworzy perfectum: incarnátus est — „wcielił się”; łacina buduje ten czas z imiesłowu i słowa „być”."
+			"function": "Z „est” (w065) tworzy perfectum: incarnátus est — „wcielił się”. Łacina buduje ten czas z imiesłowu i słowa „być”."
 		},
 		"w065": {
 			"gloss": "został"
@@ -299,7 +299,7 @@
 		},
 		"w074": {
 			"gloss": "stał się",
-			"function": "Znów imiesłów z „est” (w075): factus est — „stał się”; orzecznikiem jest mianownik „homo” (w073)."
+			"function": "Znów imiesłów z „est” (w075): factus est — „stał się”. Orzecznikiem jest mianownik „homo” (w073)."
 		},
 		"w075": {
 			"gloss": "—"
@@ -350,7 +350,7 @@
 		},
 		"w090": {
 			"gloss": "dnia",
-			"function": "Forma „tértia” (w089) jest żeńska — „dies” jest tu rodzaju żeńskiego; ablativus odpowiada na pytanie: kiedy?"
+			"function": "Forma „tértia” (w089) jest żeńska — „dies” jest tu rodzaju żeńskiego. Ablativus odpowiada na pytanie: kiedy?"
 		},
 		"w091": {
 			"gloss": "według"
@@ -391,7 +391,7 @@
 		},
 		"w103": {
 			"gloss": "mający przyjść",
-			"function": "Imiesłów przyszły z „est” (w104): ventúrus est — „ma przyjść, przyjdzie”; łacina tak wyraża zapowiedź."
+			"function": "Imiesłów przyszły z „est” (w104): ventúrus est — „ma przyjść, przyjdzie”. Łacina tak wyraża zapowiedź."
 		},
 		"w104": {
 			"gloss": "—"
@@ -404,7 +404,7 @@
 		},
 		"w107": {
 			"gloss": "sądzić",
-			"function": "Bezokolicznik celu po „ventúrus est”: przyjdzie — po co? — sądzić. Łacina klasyczna tak nie mówi (powiedziałaby „ad iudicandum”); to grecyzm, w łacinie biblijnej zwyczajny."
+			"function": "Bezokolicznik celu po „ventúrus est”: przyjdzie — po co? — sądzić. Łacina klasyczna tak nie mówi (powiedziałaby „ad iudicandum”). To grecyzm, w łacinie biblijnej zwyczajny."
 		},
 		"w108": {
 			"gloss": "żywych"
@@ -417,7 +417,7 @@
 		},
 		"w111": {
 			"gloss": "którego",
-			"function": "Dopełniacz posiadacza przy „regni” (w112); rodzaj męski, bo poprzednikiem jest Chrystus, nie królestwo — sama forma rodzaju nie zdradza."
+			"function": "Dopełniacz posiadacza przy „regni” (w112). Rodzaj męski, bo poprzednikiem jest Chrystus, nie królestwo — sama forma rodzaju nie zdradza."
 		},
 		"w112": {
 			"gloss": "królestwa"
@@ -501,7 +501,7 @@
 		},
 		"w138": {
 			"gloss": "mówił",
-			"function": "Imiesłów deponentny z „est” (w139): locútus est — „przemówił, mówił”; forma bierna, znaczenie czynne."
+			"function": "Imiesłów deponentny z „est” (w139): locútus est — „przemówił, mówił”. Forma bierna, znaczenie czynne."
 		},
 		"w139": {
 			"gloss": "—"

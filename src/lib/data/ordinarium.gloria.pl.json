@@ -3,7 +3,7 @@
 	"text": "ordinarium.gloria",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Doksologia większa, hymn anielski: zaczyna się od pieśni aniołów nad Betlejem (Łk 2, 14; Wulgata ma tam „in altíssimis”, hymn śpiewa „in excélsis”), a rozwija się w starochrześcijańskie uwielbienie, śpiewane pierwotnie po grecku w modlitwie porannej Wschodu i przełożony na łacinę już w starożytności. Według starej rzymskiej tradycji po raz pierwszy zabrzmiał we Mszy w nocy Bożego Narodzenia; długo był zastrzeżony dla Mszy biskupich, a kapłanom wolno go było intonować tylko w Wielkanoc — to ograniczenie zniknęło u schyłku XI wieku.",
+	"about": "Doksologia większa, hymn anielski: zaczyna się od pieśni aniołów nad Betlejem (Łk 2, 14 — Wulgata ma tam „in altíssimis”, hymn śpiewa „in excélsis”), a rozwija się w starochrześcijańskie uwielbienie, śpiewane pierwotnie po grecku w modlitwie porannej Wschodu i przełożony na łacinę już w starożytności. Według starej rzymskiej tradycji po raz pierwszy zabrzmiał we Mszy w nocy Bożego Narodzenia. Długo był zastrzeżony dla Mszy biskupich, a kapłanom wolno go było intonować tylko w Wielkanoc — to ograniczenie zniknęło u schyłku XI wieku.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -181,7 +181,7 @@
 		},
 		"w041": {
 			"gloss": "Baranku",
-			"function": "Apozycja (dopowiedzenie) do „Dómine” (w039) — forma mianownika w funkcji zawołania. Łacina często tak czyni w rozbudowanych apostrofach; wołacz brzmiałby „agne”."
+			"function": "Apozycja (dopowiedzenie) do „Dómine” (w039) — forma mianownika w funkcji zawołania. Łacina często tak czyni w rozbudowanych apostrofach. Wołacz brzmiałby „agne”."
 		},
 		"w042": {
 			"gloss": "Boga"
@@ -226,7 +226,7 @@
 		},
 		"w055": {
 			"gloss": "przyjmij",
-			"function": "Tryb rozkazujący — prośba hymnu zwrócona wprost do Baranka; dopełnieniem jest „deprecatiónem” (w056)."
+			"function": "Tryb rozkazujący — prośba hymnu zwrócona wprost do Baranka. Dopełnieniem jest „deprecatiónem” (w056)."
 		},
 		"w056": {
 			"gloss": "błaganie"
@@ -268,7 +268,7 @@
 		},
 		"w068": {
 			"gloss": "Święty",
-			"function": "Orzecznik z domyślnym „jesteś”: Ty sam — święty; tak samo orzeka potrójne „Sanctus” w hymnie Sanctus."
+			"function": "Orzecznik z domyślnym „jesteś”: Ty sam — święty. Tak samo orzeka potrójne „Sanctus” w hymnie Sanctus."
 		},
 		"w069": {
 			"gloss": "Ty"
@@ -287,7 +287,7 @@
 		},
 		"w074": {
 			"gloss": "Najwyższy",
-			"function": "Jak „Sanctus” (w068) — orzecznik; szczyt trójstopniowej gradacji: Święty, Pan, Najwyższy."
+			"function": "Jak „Sanctus” (w068) — orzecznik. Szczyt trójstopniowej gradacji: Święty, Pan, Najwyższy."
 		},
 		"w075": {
 			"gloss": "Jezu"

@@ -3,7 +3,7 @@
 	"text": "ordinarium.deus-qui-humanae",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Ta modlitwa nie powstała dla ofiarowania: jest starą kolektą Bożego Narodzenia, którą znają już najstarsze sakramentarze rzymskie. Przeniesiono ją tutaj, rozcinając wtrąceniem — „per huius aquæ et vini mystérium”, przez tajemnicę tej wody i wina. Imię Syna na końcu nie jest dopiskiem: najstarsze świadectwa kolekty już się nim zamykają. Kolekta prosiła po prostu, byśmy stali się współuczestnikami bóstwa Tego, który stał się uczestnikiem naszego człowieczeństwa; przy ołtarzu ta sama prośba przechodzi przez kroplę wody wlewaną do kielicha. Stąd też sens dwóch przysłówków: mirabíliter — mirabílius, cudownie stworzył, jeszcze cudowniej odnowił; odnowienie jest większym dziełem niż stworzenie. We Mszach żałobnych modlitwę się odmawia, ale wody się nie błogosławi.",
+	"about": "Ta modlitwa nie powstała dla ofiarowania: jest starą kolektą Bożego Narodzenia, którą znają już najstarsze sakramentarze rzymskie. Przeniesiono ją tutaj, rozcinając wtrąceniem — „per huius aquæ et vini mystérium”, przez tajemnicę tej wody i wina. Imię Syna na końcu nie jest dopiskiem: najstarsze świadectwa kolekty już się nim zamykają. Kolekta prosiła po prostu, byśmy stali się współuczestnikami bóstwa Tego, który stał się uczestnikiem naszego człowieczeństwa. Przy ołtarzu ta sama prośba przechodzi przez kroplę wody wlewaną do kielicha. Stąd też sens dwóch przysłówków: mirabíliter — mirabílius, cudownie stworzył, jeszcze cudowniej odnowił. Odnowienie jest większym dziełem niż stworzenie. We Mszach żałobnych modlitwę się odmawia, ale wody się nie błogosławi.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -25,7 +25,7 @@
 	"words": {
 		"w001": {
 			"gloss": "Boże",
-			"function": "Wołacz; forma jest ta sama co mianownik, bo „deus” nie ma osobnego wołacza."
+			"function": "Wołacz. Forma jest ta sama co mianownik, bo „deus” nie ma osobnego wołacza."
 		},
 		"w002": {
 			"gloss": "który",
@@ -59,11 +59,11 @@
 		},
 		"w010": {
 			"gloss": "odnowiłeś",
-			"function": "Forma ściągnięta z reformavísti — łacina często tak skraca perfectum (amásti zamiast amavísti); mszał zachowuje tu formę krótką obok pełnego condidísti dwa słowa wcześniej."
+			"function": "Forma ściągnięta z reformavísti — łacina często tak skraca perfectum (amásti zamiast amavísti). Mszał zachowuje tu formę krótką obok pełnego condidísti dwa słowa wcześniej."
 		},
 		"w011": {
 			"gloss": "daj",
-			"function": "Tu zaczyna się prośba; wszystko przed nią było przywołaniem."
+			"function": "Tu zaczyna się prośba. Wszystko przed nią było przywołaniem."
 		},
 		"w012": {
 			"gloss": "nam"
@@ -73,7 +73,7 @@
 		},
 		"w014": {
 			"gloss": "tej",
-			"function": "Odnosi się do wody i wina naraz; forma nie wskazuje rodzaju, a rzeczowniki są dwojakiego rodzaju, dlatego tu go nie podano."
+			"function": "Odnosi się do wody i wina naraz. Forma nie wskazuje rodzaju, a rzeczowniki są dwojakiego rodzaju, dlatego tu go nie podano."
 		},
 		"w015": {
 			"gloss": "wody"
@@ -90,7 +90,7 @@
 		},
 		"w019": {
 			"gloss": "jego",
-			"function": "Dopełniacz zależny od „divinitátis” (w020); rodzaj męski bierze się od tego, do kogo się odnosi — od Chrystusa, wymienionego dopiero za chwilę."
+			"function": "Dopełniacz zależny od „divinitátis” (w020). Rodzaj męski bierze się od tego, do kogo się odnosi — od Chrystusa, wymienionego dopiero za chwilę."
 		},
 		"w020": {
 			"gloss": "bóstwa"
@@ -101,7 +101,7 @@
 		},
 		"w022": {
 			"gloss": "współuczestnikami",
-			"function": "Forma jest zarazem mianownikiem i biernikiem; biernik, bo domyślnym podmiotem bezokolicznika „esse” (w021) jest „nas” w bierniku, a nie celownik „nobis” (w012). Con-sors to ten, kto ma udział w losie (sors) drugiego."
+			"function": "Forma jest zarazem mianownikiem i biernikiem. Biernik, bo domyślnym podmiotem bezokolicznika „esse” (w021) jest „nas” w bierniku, a nie celownik „nobis” (w012). Con-sors to ten, kto ma udział w losie (sors) drugiego."
 		},
 		"w023": {
 			"gloss": "który",
@@ -123,7 +123,7 @@
 		},
 		"w028": {
 			"gloss": "—",
-			"function": "Z „dignátus” (w027) tworzy jedną formę czasu przeszłego czasownika deponentnego; osobno nic tu nie znaczy."
+			"function": "Z „dignátus” (w027) tworzy jedną formę czasu przeszłego czasownika deponentnego. Osobno nic tu nie znaczy."
 		},
 		"w029": {
 			"gloss": "uczestnikiem",
@@ -150,7 +150,7 @@
 		},
 		"w036": {
 			"gloss": "który",
-			"function": "Zaczyna się zakończenie modlitwy do Ojca; ponieważ Syn został właśnie wymieniony, zaczyna się ono od razu od „Qui tecum”, bez „Per Dóminum nostrum”."
+			"function": "Zaczyna się zakończenie modlitwy do Ojca. Ponieważ Syn został właśnie wymieniony, zaczyna się ono od razu od „Qui tecum”, bez „Per Dóminum nostrum”."
 		},
 		"w037": {
 			"gloss": "z tobą",

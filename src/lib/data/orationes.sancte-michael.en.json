@@ -3,7 +3,7 @@
 	"text": "orationes.sancte-michael",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The prayer Leo XIII composed and ordered to be said after low Mass; among his prayers it stands after the Salve Regína and the collect. Three petitions and three different postures: first a plea to Michael for defence, then a wish that God command the enemy, and last a charge to Michael again, this time a long one, with a whole train of objects before the verb. The name Míchaël is Hebrew for “who is like God”, and the prayer says exactly that when it leaves the commanding to God and the carrying out to the Archangel.",
+	"about": "The prayer Leo XIII composed and ordered to be said after low Mass. Among his prayers it stands after the Salve Regína and the collect. Three petitions and three different postures: first a plea to Michael for defence, then a wish that God command the enemy, and last a charge to Michael again, this time a long one, with a whole train of objects before the verb. The name Míchaël is Hebrew for “who is like God”, and the prayer says exactly that when it leaves the commanding to God and the carrying out to the Archangel.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -69,7 +69,7 @@
 		},
 		"w015": {
 			"gloss": "May command",
-			"function": "Subjunctive of wish, and not a request to Michael: the commanding is God's. The verb governs the dative — hence “illi” (w016), not an accusative. The received English says “rebuke”, after the Greek of Jude 9; the Latin imperet is command."
+			"function": "Subjunctive of wish, and not a request to Michael: the commanding is God's. The verb governs the dative — hence “illi” (w016), not an accusative. The received English says “rebuke”, after the Greek of Jude 9. The Latin imperet is command."
 		},
 		"w016": {
 			"gloss": "him"
@@ -126,7 +126,7 @@
 		},
 		"w032": {
 			"gloss": "roam",
-			"function": "A deponent; the compound of per and vagor means to wander the whole length and breadth of a place."
+			"function": "A deponent. The compound of per and vagor means to wander the whole length and breadth of a place."
 		},
 		"w033": {
 			"gloss": "in"

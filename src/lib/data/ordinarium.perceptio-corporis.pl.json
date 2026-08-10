@@ -3,7 +3,7 @@
 	"text": "ordinarium.perceptio-corporis",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Ostatnia z trzech modlitw i ta, która nazywa niebezpieczeństwo. Św. Paweł pisze, że kto spożywa i pije niegodnie, sąd sobie spożywa i pije — iudicium sibi manducat et bibit — a mszał z 1962 roku drukuje te słowa jako lekcję na Boże Ciało i na Wielki Czwartek; modlitwa prosi, by przyjęcie nie wypadło w ten sposób. Zbudowana jest na jednym podmiocie i dwóch orzeczeniach ciągnących w przeciwne strony, jednym przeczącym i jednym twierdzącym: niech nie wyjdzie na sąd, niech raczej posłuży. Præsúmo mówi wprost, co kapłan robi: bierze naprzód to, czego sam nie jest godzien.",
+	"about": "Ostatnia z trzech modlitw i ta, która nazywa niebezpieczeństwo. Św. Paweł pisze, że kto spożywa i pije niegodnie, sąd sobie spożywa i pije — iudicium sibi manducat et bibit — a mszał z 1962 roku drukuje te słowa jako lekcję na Boże Ciało i na Wielki Czwartek. Modlitwa prosi, by przyjęcie nie wypadło w ten sposób. Zbudowana jest na jednym podmiocie i dwóch orzeczeniach ciągnących w przeciwne strony, jednym przeczącym i jednym twierdzącym: niech nie wyjdzie na sąd, niech raczej posłuży. Præsúmo mówi wprost, co kapłan robi: bierze naprzód to, czego sam nie jest godzien.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -28,7 +28,7 @@
 	"words": {
 		"w001": {
 			"gloss": "Przyjęcie",
-			"function": "Podmiot obu orzeczeń modlitwy, oddzielony od nich wszystkim, co stoi pomiędzy; do „provéniat” (w014) dociera dopiero w drugim odcinku. Whitaker's nie zna rzeczownika percéptio, więc rozbiór opiera się na samym Collatinusie."
+			"function": "Podmiot obu orzeczeń modlitwy, oddzielony od nich wszystkim, co stoi pomiędzy. Do „provéniat” (w014) dociera dopiero w drugim odcinku. Whitaker's nie zna rzeczownika percéptio, więc rozbiór opiera się na samym Collatinusie."
 		},
 		"w002": {
 			"gloss": "Ciała"
@@ -52,7 +52,7 @@
 		},
 		"w008": {
 			"gloss": "ja",
-			"function": "Łacina zaimka podmiotowego nie potrzebuje; stoi tu po to, by go zważyć z następującym przymiotnikiem."
+			"function": "Łacina zaimka podmiotowego nie potrzebuje. Stoi tu po to, by go zważyć z następującym przymiotnikiem."
 		},
 		"w009": {
 			"gloss": "niegodny",
@@ -88,7 +88,7 @@
 		},
 		"w018": {
 			"gloss": "potępienie",
-			"function": "Sąd to rozprawa, potępienie to wyrok; modlitwa wymienia oba, w tej kolejności."
+			"function": "Sąd to rozprawa, potępienie to wyrok. Modlitwa wymienia oba, w tej kolejności."
 		},
 		"w019": {
 			"gloss": "lecz"
@@ -119,7 +119,7 @@
 		},
 		"w027": {
 			"gloss": "umysłu",
-			"function": "Mens to umysł, nie dusza; przekład idzie tu za polskimi mszalikami, które mówią „dusza”."
+			"function": "Mens to umysł, nie dusza. Przekład idzie tu za polskimi mszalikami, które mówią „dusza”."
 		},
 		"w028": {
 			"gloss": "i"

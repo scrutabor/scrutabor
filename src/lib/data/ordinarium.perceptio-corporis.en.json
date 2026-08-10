@@ -3,7 +3,7 @@
 	"text": "ordinarium.perceptio-corporis",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The last of the three prayers, and the one that names the danger. St Paul writes that whoever eats and drinks unworthily eats and drinks judgment to himself — iudicium sibi manducat et bibit — and the 1962 missal prints those words as the Epistle for Corpus Christi and for Holy Thursday; the prayer asks that the receiving not turn out that way. It is built on one subject and two verbs pulling against each other, one negative and one positive: let it not come out to judgment, let it profit me instead. Præsúmo says plainly what the priest is doing: taking beforehand what he is not worthy to take.",
+	"about": "The last of the three prayers, and the one that names the danger. St Paul writes that whoever eats and drinks unworthily eats and drinks judgment to himself — iudicium sibi manducat et bibit — and the 1962 missal prints those words as the Epistle for Corpus Christi and for Holy Thursday. The prayer asks that the receiving not turn out that way. It is built on one subject and two verbs pulling against each other, one negative and one positive: let it not come out to judgment, let it profit me instead. Præsúmo says plainly what the priest is doing: taking beforehand what he is not worthy to take.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -28,7 +28,7 @@
 	"words": {
 		"w001": {
 			"gloss": "The partaking",
-			"function": "Subject of both verbs of the prayer, and held apart from them by everything in between; it does not reach “provéniat” (w014) until the second segment. Whitaker's does not carry the noun percéptio, so the parse rests on Collatinus alone."
+			"function": "Subject of both verbs of the prayer, and held apart from them by everything in between. It does not reach “provéniat” (w014) until the second segment. Whitaker's does not carry the noun percéptio, so the parse rests on Collatinus alone."
 		},
 		"w002": {
 			"gloss": "of the Body"
@@ -52,7 +52,7 @@
 		},
 		"w008": {
 			"gloss": "I",
-			"function": "Latin needs no subject pronoun; it is here to be weighted against the adjective that follows."
+			"function": "Latin needs no subject pronoun. It is here to be weighted against the adjective that follows."
 		},
 		"w009": {
 			"gloss": "unworthy",
@@ -88,7 +88,7 @@
 		},
 		"w018": {
 			"gloss": "condemnation",
-			"function": "Judgment is the trial, condemnation the sentence; the prayer names both, in that order."
+			"function": "Judgment is the trial, condemnation the sentence. The prayer names both, in that order."
 		},
 		"w019": {
 			"gloss": "but"
@@ -119,7 +119,7 @@
 		},
 		"w027": {
 			"gloss": "of mind",
-			"function": "Mens is the mind rather than the soul; the pair the prayer sets together is the mind and the body."
+			"function": "Mens is the mind rather than the soul. The pair the prayer sets together is the mind and the body."
 		},
 		"w028": {
 			"gloss": "and"
@@ -139,7 +139,7 @@
 		},
 		"w033": {
 			"gloss": "for receiving",
-			"function": "A gerundive, the future passive participle, drawn into agreement with “medélam” (w032); ad with the accusative makes the whole phrase one of purpose, and English turns it round to an active: for receiving healing. The obligation such forms usually carry is not in it."
+			"function": "A gerundive, the future passive participle, drawn into agreement with “medélam” (w032). Ad with the accusative makes the whole phrase one of purpose, and English turns it round to an active: for receiving healing. The obligation such forms usually carry is not in it."
 		},
 		"w034": {
 			"gloss": "Who"

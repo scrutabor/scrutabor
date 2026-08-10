@@ -1,9 +1,18 @@
-// The house rules for the words the app itself says.
+// The house rules for the words this edition says, wherever they come from.
 //
-// These are the app's OWN strings — the interface, the movement notes, the
-// grammar explanations. The corpus's prose (glosses, word notes, the about
-// sheets) is content and answers to the corpus's own checks; this file makes
-// no claim on it.
+// Two bodies of prose reach the reader. The app's own strings — the
+// interface, the movement notes, the grammar concepts — and the corpus's,
+// which is the larger half: about sheets, rubric narratives, and the word
+// notes that carry most of the edition's writing. Both are swept here,
+// because the reader cannot tell which is which and the rule is about what
+// they see.
+//
+// The verse TRANSLATIONS are exempt, and that is not an oversight: their
+// punctuation belongs to the text being translated, not to this edition's
+// voice, and the received wording the corpus aligned to is not ours to
+// repunctuate.
+import { readFileSync, readdirSync } from 'node:fs';
+
 import { describe, expect, it } from 'vitest';
 
 import { CONCEPTS } from './grammar';
@@ -22,6 +31,28 @@ function prose(): { where: string; text: string }[] {
 	walk(M, 'i18n');
 	walk(ORDO, 'ordo');
 	walk(CONCEPTS, 'grammar');
+	return out;
+}
+
+/** Every prose string the corpus puts on a page, except verse translations. */
+function corpusProse(): { where: string; text: string }[] {
+	const dir = 'src/lib/data';
+	const out: { where: string; text: string }[] = [];
+	for (const file of readdirSync(dir)) {
+		if (!file.endsWith('.json')) continue;
+		const doc = JSON.parse(readFileSync(`${dir}/${file}`, 'utf8'));
+		if (!doc.lang) continue; // the Latin source carries no prose of ours
+		const at = (k: string) => `${file}:${k}`;
+		if (doc.about) out.push({ where: at('about'), text: doc.about });
+		for (const [sid, seg] of Object.entries(doc.segments ?? {}) as [
+			string,
+			Record<string, string>
+		][])
+			if (seg.narrative) out.push({ where: at(`${sid}.narrative`), text: seg.narrative });
+		for (const [wid, w] of Object.entries(doc.words ?? {}) as [string, Record<string, string>][])
+			for (const k of ['note', 'function'])
+				if (w[k]) out.push({ where: at(`${wid}.${k}`), text: w[k] });
+	}
 	return out;
 }
 
@@ -49,6 +80,18 @@ describe('the words the app says', () => {
 		// a full stop that lost its nerve. 51 of them lived in the movement
 		// notes alone. Two sentences, or an "and" — not this.
 		const offenders = prose()
+			.filter(({ text }) => text.includes(';'))
+			.map(({ where, text }) => `${where}: ${text.slice(0, 60)}`);
+		expect(offenders, `use a full stop or an "and":\n  ${offenders.join('\n  ')}`).toEqual([]);
+	});
+
+	it('and neither does the corpus, outside the text it is translating', () => {
+		// 589 of these were rewritten on 2026-08-10 — the larger half of the
+		// sweep, and the half a reader meets most, since the word notes are
+		// where this edition does its explaining.
+		const all = corpusProse();
+		expect(all.length, 'the vendored prose is reachable').toBeGreaterThan(2000);
+		const offenders = all
 			.filter(({ text }) => text.includes(';'))
 			.map(({ where, text }) => `${where}: ${text.slice(0, 60)}`);
 		expect(offenders, `use a full stop or an "and":\n  ${offenders.join('\n  ')}`).toEqual([]);

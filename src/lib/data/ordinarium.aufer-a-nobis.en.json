@@ -3,7 +3,7 @@
 	"text": "ordinarium.aufer-a-nobis",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Two prayers the priest says for himself alone, and yet they run in the plural — “from us”, “our iniquities”, “that we may be counted worthy” — until the second closes on the singular: “all my sins”. Only one word of them is said aloud — Orémus; the rest nobody hears. “Sancta sanctórum” is a Hebrew superlative rendered word for word: holy of holies, the innermost place of the Temple. The second prayer speaks of relics that are here — the priest is at that moment kissing the altar, and every consecrated altar has relics sealed within it; the word “hic” therefore points at the very altar his lips touch.",
+	"about": "Two prayers the priest says for himself alone, and yet they run in the plural — “from us”, “our iniquities”, “that we may be counted worthy” — until the second closes on the singular: “all my sins”. Only one word of them is said aloud — Orémus. The rest nobody hears. “Sancta sanctórum” is a Hebrew superlative rendered word for word: holy of holies, the innermost place of the Temple. The second prayer speaks of relics that are here — the priest is at that moment kissing the altar, and every consecrated altar has relics sealed within it. The word “hic” therefore points at the very altar his lips touch.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -43,7 +43,7 @@
 	"words": {
 		"w001": {
 			"gloss": "let us pray",
-			"function": "A hortatory subjunctive in the first person plural. The only word of this prayer said aloud; the rest goes silently."
+			"function": "A hortatory subjunctive in the first person plural. The only word of this prayer said aloud. The rest goes silently."
 		},
 		"w002": {
 			"gloss": "take away",
@@ -58,7 +58,7 @@
 		},
 		"w005": {
 			"gloss": "we beseech Thee",
-			"function": "Set into the very middle of the clause, between verb and object; it changes nothing in the structure and only softens the request."
+			"function": "Set into the very middle of the clause, between verb and object. It changes nothing in the structure and only softens the request."
 		},
 		"w006": {
 			"gloss": "O Lord"
@@ -92,7 +92,7 @@
 		},
 		"w014": {
 			"gloss": "may we be worthy",
-			"function": "A deponent (passive form, active meaning); it governs the infinitive “introíre” (w016): that we may deserve to enter."
+			"function": "A deponent (passive form, active meaning). It governs the infinitive “introíre” (w016): that we may deserve to enter."
 		},
 		"w015": {
 			"gloss": "minds",
@@ -182,7 +182,7 @@
 		},
 		"w038": {
 			"gloss": "Thou wouldst deign",
-			"function": "Subjunctive after “ut” (w036); the courtly turn of the Roman prayers — not “forgive” but “be pleased to forgive”."
+			"function": "Subjunctive after “ut” (w036). The courtly turn of the Roman prayers — not “forgive” but “be pleased to forgive”."
 		},
 		"w039": {
 			"gloss": "all",

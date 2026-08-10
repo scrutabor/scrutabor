@@ -3,7 +3,7 @@
 	"text": "orationes.deus-refugium",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The collect among the prayers of Leo XIII, said after the Salve Regína and its versicle; its first words are Psalm 45:2, the psalm's nominative turned into a vocative. The prayers after low Mass were instituted by Pius IX in 1859 for the Papal States; Leo XIII extended them to the whole Church in 1884, and the text printed here is his rewriting of 1886 — that is when the petitions for the freedom of the Church and the conversion of sinners came in. When the Lateran treaties settled the Roman Question in 1929, Pius XI directed the year after that these prayers be offered for Russia. It is built like a Roman collect — one sentence in which everything leads to the imperative — except that the imperatives here are two: look upon, and hear. It closes with “through the same Christ”, because the prayer is addressed to the Father and the Son has been named in it only obliquely, in the title Mother of God.",
+	"about": "The collect among the prayers of Leo XIII, said after the Salve Regína and its versicle. Its first words are Psalm 45:2, the psalm's nominative turned into a vocative. The prayers after low Mass were instituted by Pius IX in 1859 for the Papal States. Leo XIII extended them to the whole Church in 1884, and the text printed here is his rewriting of 1886 — that is when the petitions for the freedom of the Church and the conversion of sinners came in. When the Lateran treaties settled the Roman Question in 1929, Pius XI directed the year after that these prayers be offered for Russia. It is built like a Roman collect — one sentence in which everything leads to the imperative — except that the imperatives here are two: look upon, and hear. It closes with “through the same Christ”, because the prayer is addressed to the Father and the Son has been named in it only obliquely, in the title Mother of God.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -55,7 +55,7 @@
 		},
 		"w006": {
 			"gloss": "strength",
-			"function": "The second half of the apposition; “nostrum” (w004) covers both."
+			"function": "The second half of the apposition — “nostrum” (w004) covers both."
 		},
 		"w007": {
 			"gloss": "the people",
@@ -77,7 +77,7 @@
 		},
 		"w012": {
 			"gloss": "look upon",
-			"function": "The first of the sentence's two imperatives; the second, “exáudi” (w053), closes it forty words later."
+			"function": "The first of the sentence's two imperatives. The second, “exáudi” (w053), closes it forty words later."
 		},
 		"w013": {
 			"gloss": "and"
@@ -97,7 +97,7 @@
 		},
 		"w018": {
 			"gloss": "Virgin",
-			"function": "The noun of the ablative absolute; both adjectives before it agree with it."
+			"function": "The noun of the ablative absolute. Both adjectives before it agree with it."
 		},
 		"w019": {
 			"gloss": "of God"
@@ -213,7 +213,7 @@
 		},
 		"w053": {
 			"gloss": "hear",
-			"function": "The second imperative; its object is “preces” (w048), five words back — waited for since “quas” (w037)."
+			"function": "The second imperative. Its object is “preces” (w048), five words back — waited for since “quas” (w037)."
 		},
 		"w054": {
 			"gloss": "Through"

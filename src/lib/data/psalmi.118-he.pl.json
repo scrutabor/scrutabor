@@ -3,7 +3,7 @@
 	"text": "psalmi.118-he",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Psalm 118 jest akrostychem: dwadzieścia dwie strofy po osiem wersetów, po jednej na każdą literę alfabetu hebrajskiego, a wszystkie osiem wersetów jednej strofy zaczyna się w hebrajskim tą samą literą. To najdłuższy psalm psałterza i niemal każdy jego werset mówi o jednym: o prawie Bożym, nazywanym między innymi zakonem, świadectwem, ustawą, przykazaniem, sądem, słowem. Ta strofa nosi nazwę litery HE. W brewiarzu rzymskim jej wersety otwierają psalmodię niedzielnej tercji, a antyfona tej godziny bierze z niej werset 35; cały psalm rozłożony jest na wszystkie cztery godziny mniejsze niedzieli. Werset trzydziesty czwarty — „Da mihi intelléctum, et scrutábor legem tuam” — dał nazwę temu wydaniu: prośba o zrozumienie, a nie o wiedzę, i obietnica badania, a nie samego czytania.",
+	"about": "Psalm 118 jest akrostychem: dwadzieścia dwie strofy po osiem wersetów, po jednej na każdą literę alfabetu hebrajskiego, a wszystkie osiem wersetów jednej strofy zaczyna się w hebrajskim tą samą literą. To najdłuższy psalm psałterza i niemal każdy jego werset mówi o jednym: o prawie Bożym, nazywanym między innymi zakonem, świadectwem, ustawą, przykazaniem, sądem, słowem. Ta strofa nosi nazwę litery HE. W brewiarzu rzymskim jej wersety otwierają psalmodię niedzielnej tercji, a antyfona tej godziny bierze z niej werset 35. Cały psalm rozłożony jest na wszystkie cztery godziny mniejsze niedzieli. Werset trzydziesty czwarty — „Da mihi intelléctum, et scrutábor legem tuam” — dał nazwę temu wydaniu: prośba o zrozumienie, a nie o wiedzę, i obietnica badania, a nie samego czytania.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -55,7 +55,7 @@
 		},
 		"w005": {
 			"gloss": "drogę",
-			"function": "Dopełnienie przy „pone” (w002). Grecki psałterz ma tu jeden czasownik o znaczeniu „ustanowić prawem”; łacina rozkłada go na „legem pone” i zostawia drogę jako to, co ma być ustanowione."
+			"function": "Dopełnienie przy „pone” (w002). Grecki psałterz ma tu jeden czasownik o znaczeniu „ustanowić prawem”. Łacina rozkłada go na „legem pone” i zostawia drogę jako to, co ma być ustanowione."
 		},
 		"w006": {
 			"gloss": "ustaw",
@@ -73,7 +73,7 @@
 		},
 		"w010": {
 			"gloss": "jej",
-			"function": "Biernik rodzaju żeńskiego. Najbliższym poprzednikiem jest „viam” (w005), ale „Legem” (w001) też jest żeńskie i sama łacina tego nie rozstrzyga; greka ma tu αὐτήν — drogę."
+			"function": "Biernik rodzaju żeńskiego. Najbliższym poprzednikiem jest „viam” (w005), ale „Legem” (w001) też jest żeńskie i sama łacina tego nie rozstrzyga. Greka ma tu αὐτήν — drogę."
 		},
 		"w011": {
 			"gloss": "zawsze"
@@ -112,7 +112,7 @@
 		},
 		"w021": {
 			"gloss": "je",
-			"function": "Biernik rodzaju żeńskiego, bo odnosi się do „legem” (w017); polskie „prawo” jest nijakie i zaimek musi zmienić rodzaj."
+			"function": "Biernik rodzaju żeńskiego, bo odnosi się do „legem” (w017). Polskie „prawo” jest nijakie i zaimek musi zmienić rodzaj."
 		},
 		"w022": {
 			"gloss": "w"
@@ -129,7 +129,7 @@
 		},
 		"w026": {
 			"gloss": "prowadź",
-			"function": "Tryb rozkazujący; „Deduc” ma skróconą formę bez końcowego -e, jak „dic” i „duc”."
+			"function": "Tryb rozkazujący — „Deduc” ma skróconą formę bez końcowego -e, jak „dic” i „duc”."
 		},
 		"w027": {
 			"gloss": "mnie"
@@ -271,7 +271,7 @@
 		},
 		"w068": {
 			"gloss": "obawiałem",
-			"function": "Imiesłów czasu przeszłego czasownika deponentnego; razem z „sum” (w069) tworzy formę osobową."
+			"function": "Imiesłów czasu przeszłego czasownika deponentnego. Razem z „sum” (w069) tworzy formę osobową."
 		},
 		"w069": {
 			"gloss": "się",
@@ -282,7 +282,7 @@
 		},
 		"w071": {
 			"gloss": "sądy",
-			"function": "Mianownik liczby mnogiej; łącznik „są” jest domyślny, jak to łacina często czyni."
+			"function": "Mianownik liczby mnogiej. Łącznik „są” jest domyślny, jak to łacina często czyni."
 		},
 		"w072": {
 			"gloss": "Twoje"
@@ -296,7 +296,7 @@
 		},
 		"w075": {
 			"gloss": "zapragnąłem",
-			"function": "Czasownik na -sco — kształt, którym łacina znaczy początek — zleksykalizowany jednak jako samo mocne pragnienie; perfectum concupívi znaczy „zapragnąłem”. Ten sam rdzeń co concupiscéntia, tu jednak zwrócony ku przykazaniom."
+			"function": "Czasownik na -sco — kształt, którym łacina znaczy początek — zleksykalizowany jednak jako samo mocne pragnienie. Perfectum concupívi znaczy „zapragnąłem”. Ten sam rdzeń co concupiscéntia, tu jednak zwrócony ku przykazaniom."
 		},
 		"w076": {
 			"gloss": "przykazań"

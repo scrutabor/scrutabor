@@ -3,7 +3,7 @@
 	"text": "ordinarium.deus-tu-conversus",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Four pairs of versicles, three of them taken from the psalms. The first two are one continuous passage: Psalm 84, verses 7 and 8, taken in order and split between two voices. The third is Psalm 101, verse 2. The fourth — Dóminus vobíscum — is not from a psalm and falls here for the first time in the Mass; the priest will say it again several times, always before something he is about to do together with the people.",
+	"about": "Four pairs of versicles, three of them taken from the psalms. The first two are one continuous passage: Psalm 84, verses 7 and 8, taken in order and split between two voices. The third is Psalm 101, verse 2. The fourth — Dóminus vobíscum — is not from a psalm and falls here for the first time in the Mass. The priest will say it again several times, always before something he is about to do together with the people.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -63,7 +63,7 @@
 		},
 		"w007": {
 			"gloss": "people",
-			"function": "A Roman word for the commons as against the patricians; in Scripture simply the people of God."
+			"function": "A Roman word for the commons as against the patricians. In Scripture simply the people of God."
 		},
 		"w008": {
 			"gloss": "Thy",
@@ -145,7 +145,7 @@
 		},
 		"w030": {
 			"gloss": "Thee",
-			"function": "Accusative after “ad” (w029) — motion toward someone; the same form stood above in the ablative after “in” (w010)."
+			"function": "Accusative after “ad” (w029) — motion toward someone. The same form stood above in the ablative after “in” (w010)."
 		},
 		"w031": {
 			"gloss": "let come",
@@ -167,7 +167,7 @@
 		},
 		"w036": {
 			"gloss": "spirit",
-			"function": "The old reading refers thy spirit to the grace of ordination; Jungmann hears a Semitism for simply thee. Both readings stand."
+			"function": "The old reading refers thy spirit to the grace of ordination. Jungmann hears a Semitism for simply thee. Both readings stand."
 		},
 		"w037": {
 			"gloss": "your",

@@ -3,7 +3,7 @@
 	"text": "ordinarium.supplices-te-rogamus",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Kapłan pochyla się głęboko, kładzie złożone ręce na ołtarzu i prosi, by anioł zaniósł ofiarę na ołtarz w niebie. Anioł nie ma tu imienia i tradycja nigdy nie rozstrzygnęła, kim jest: jedni widzieli w nim Michała, inni samego Chrystusa, inni Ducha Świętego — czemu dawni komentatorzy się sprzeciwiali — a jeszcze inni nie chcieli go nazywać wcale. „Sublíme altáre” — ołtarz w górze — nawiązuje do Apokalipsy 8. Prośbę niesie rogámus z rozkaźnikiem iube; w zdaniu z ut jedno orzeczenie (repleámur), a przed nim wtrącone zdanie względne o tych, którzy będą komunikować.",
+	"about": "Kapłan pochyla się głęboko, kładzie złożone ręce na ołtarzu i prosi, by anioł zaniósł ofiarę na ołtarz w niebie. Anioł nie ma tu imienia i tradycja nigdy nie rozstrzygnęła, kim jest: jedni widzieli w nim Michała, inni samego Chrystusa, inni Ducha Świętego — czemu dawni komentatorzy się sprzeciwiali — a jeszcze inni nie chcieli go nazywać wcale. „Sublíme altáre” — ołtarz w górze — nawiązuje do Apokalipsy 8. Prośbę niesie rogámus z rozkaźnikiem iube. W zdaniu z ut jedno orzeczenie (repleámur), a przed nim wtrącone zdanie względne o tych, którzy będą komunikować.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -123,7 +123,7 @@
 		},
 		"w024": {
 			"gloss": "ilukolwiek",
-			"function": "Podmiot „sumpsérimus” (w035) — stąd mianownik, choć sama forma nie wskazuje przypadku; całe zdanie względne wcisnęło się między „ut” (w023) a jego orzeczenie."
+			"function": "Podmiot „sumpsérimus” (w035) — stąd mianownik, choć sama forma nie wskazuje przypadku. Całe zdanie względne wcisnęło się między „ut” (w023) a jego orzeczenie."
 		},
 		"w025": {
 			"gloss": "z"
@@ -140,7 +140,7 @@
 		},
 		"w029": {
 			"gloss": "najświętsze",
-			"function": "Przydawka przy tym, co kapłan zaraz nazwie: najświętsze — nietykalne — Ciało i Krew; o rzymskim rodowodzie słowa mówi hasło."
+			"function": "Przydawka przy tym, co kapłan zaraz nazwie: najświętsze — nietykalne — Ciało i Krew. O rzymskim rodowodzie słowa mówi hasło."
 		},
 		"w030": {
 			"gloss": "Syna"
@@ -159,7 +159,7 @@
 		},
 		"w035": {
 			"gloss": "przyjmiemy",
-			"function": "Czas przyszły dokonany: przyjęcie ma się dokonać, zanim spełni się prośba o napełnienie łaską. Forma bywa też trybem łączącym czasu przeszłego, a zdanie stojące wewnątrz zdania celowego bywa w ten tryb wciągane; ku czasowi przyszłemu przechyla sens zdania uogólniającego — ilukolwiek PRZYJMIE."
+			"function": "Czas przyszły dokonany: przyjęcie ma się dokonać, zanim spełni się prośba o napełnienie łaską. Forma bywa też trybem łączącym czasu przeszłego, a zdanie stojące wewnątrz zdania celowego bywa w ten tryb wciągane. Ku czasowi przyszłemu przechyla sens zdania uogólniającego — ilukolwiek PRZYJMIE."
 		},
 		"w036": {
 			"gloss": "wszelkim"
