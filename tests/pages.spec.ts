@@ -29,6 +29,19 @@ test('the lemma page displays its liturgical headword', async ({ page }) => {
 	await expect(page.locator('h1')).toHaveText('Ioánnes');
 });
 
+test('a global lemma note does not pretend that a verse is present', async ({ page }) => {
+	await page.goto('/app/pl/lemma/intellectus');
+	await expect(page.locator('.note')).toHaveText(
+		'Od intellégere — rozumieć, pojmować, rozeznawać.'
+	);
+	await expect(page.locator('.note')).not.toContainText('w tym wersecie');
+
+	await page.goto('/app/pl/psalmi/118-he?w=w014');
+	await expect(page.locator('aside .function')).toContainText(
+		'psalmista prosi Boga o dar zrozumienia'
+	);
+});
+
 test('grammatica index lists the concept tranche in groups', async ({ page }) => {
 	await page.goto('/app/pl/grammatica');
 	await expect(page.locator('.card')).toHaveCount(11);
