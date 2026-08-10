@@ -484,7 +484,7 @@
 				"działać",
 				"pędzić"
 			],
-			"note": "Czasownik o bardzo szerokim znaczeniu; w liturgii najczęściej w zwrocie „grátias ágere” — dziękować.",
+      "note": "W zwrocie grátias ágere znaczy „dziękować”.",
 			"derivatives": [
 				"agenda",
 				"agent"
@@ -1898,7 +1898,6 @@
 				"wierność",
 				"zaufanie"
 			],
-			"note": "Jedno słowo oznacza i wiarę, i wierność: po łacinie to ta sama rzecz widziana z dwóch stron.",
 			"derivatives": [
 				"fideizm"
 			]
@@ -2509,7 +2508,7 @@
 				"on sam",
 				"właśnie ten"
 			],
-			"note": "Zaimek wzmacniający: podkreśla osobę lub rzecz, o której mowa. W psałterzu stoi często tam, gdzie łacina klasyczna ma zwykłe „is”."
+      "note": "Zaimek wzmacniający, podkreślający osobę lub rzecz, o której mowa."
 		},
 		"is": {
 			"senses": [
@@ -2952,8 +2951,7 @@
 			"senses": [
 				"miłosierdzie",
 				"litość"
-			],
-			"note": "Z miser (nieszczęsny) i cor (serce) — serce dla nieszczęśliwego; rzeczownik utworzony od miséricors."
+      ]
 		},
 		"misericors": {
 			"senses": [
@@ -4046,7 +4044,7 @@
 				"proszę",
 				"błagam"
 			],
-			"note": "Czasownik ułomny: zachowały się głównie quæso i quǽsumus, wtrącane w prośbę jak polskie „proszę”. To starsza postać czasownika quærere — szukać, dopominać się."
+      "note": "Czasownik ułomny; zachowały się głównie formy quæso i quǽsumus, używane w prośbach."
 		},
 		"quam": {
 			"senses": [
@@ -4447,7 +4445,7 @@
 				"zbawienie",
 				"wybawienie"
 			],
-			"note": "Rzeczownikowe użycie przymiotnika salutáris (zbawienny). Tym samym słowem Symeon nazywa Dziecię w Nunc dimíttis (Łk 2, 30)."
+      "note": "Przymiotnik salutáris (zbawienny) użyty rzeczownikowo."
 		},
 		"salutaris": {
 			"senses": [
@@ -5352,7 +5350,6 @@
 				"cnota",
 				"Moc (chór anielski)"
 			],
-			"note": "Od vir — mąż: najpierw męstwo, potem wszelka sprawność, wreszcie cnota. W Prefacji jest nazwą chóru anielskiego.",
 			"derivatives": [
 				"wirtuoz"
 			]
@@ -5390,8 +5387,7 @@
 			"senses": [
 				"ożywiać",
 				"dawać życie"
-			],
-			"note": "Złożenie vivus (żywy) + fácere (czynić) — czynić żywym."
+      ]
 		},
 		"vivo": {
 			"senses": [
