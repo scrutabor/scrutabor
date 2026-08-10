@@ -214,8 +214,7 @@
 		"Paulus": {
 			"senses": [
 				"Paweł"
-			],
-			"note": "Łacińskie „paulus” — mały."
+      ]
 		},
 		"Perpetua": {
 			"senses": [
@@ -227,7 +226,7 @@
 			"senses": [
 				"Piotr"
 			],
-			"note": "Greckie „pétros” — kamień; jako imię zostało ukute, by oddać aramejskie Kefas. Obok niego w Mt 16, 18 stoi „pétra” — skała (w grece koine oba słowa znaczyły już to samo): „Ty jesteś Piotr (Pétros), a na tej skale (pétra) zbuduję…”."
+      "note": "Aramejskie Kefas znaczy „skała”; w J 1,42 Ewangelista objaśnia je greckim Pétros."
 		},
 		"Philippus": {
 			"senses": [
@@ -744,7 +743,7 @@
 				"błogosławić",
 				"dobrze mówić o"
 			],
-			"note": "Złożenie bene (dobrze) + dícere (mówić) — błogosławić to dosłownie „dobrze mówić”.",
+      "note": "Złożenie bene (dobrze) i dico (mówię).",
 			"derivatives": [
 				"benedyktyn (od imienia Benedykt)"
 			]
@@ -1275,7 +1274,7 @@
 				"o, na temat",
 				"według, na podstawie"
 			],
-			"note": "Bliskie ex, ale ex wskazuje wyjście ze środka, de — oddzielenie od czegoś albo ruch z góry na dół."
+      "note": "De oznacza między innymi oddzielenie lub ruch z góry; ex często wskazuje ruch z wnętrza."
 		},
 		"debitor": {
 			"senses": [
@@ -1427,7 +1426,7 @@
 				"raczyć",
 				"uznawać za godne"
 			],
-			"note": "Deponens (forma bierna, znaczenie czynne) od dignus — godny; dignéris to uprzejma prośba: racz."
+      "note": "Czasownik deponens od dignus — godny; dignéris znaczy „racz”."
 		},
 		"dignus": {
 			"senses": [
@@ -4438,8 +4437,7 @@
 				"ocalenie, ratunek",
 				"zdrowie",
 				"pozdrowienie"
-			],
-			"note": "W łacinie klasycznej przede wszystkim zdrowie i ocalenie; w łacinie chrześcijańskiej na pierwszy plan wysuwa się zbawienie.",
+      ],
 			"derivatives": [
 				"salutować"
 			]
@@ -4547,7 +4545,7 @@
 			"przeszukiwać",
 			"dociekać"
 		],
-		"note": "Czasownik oznacza uważne, wnikliwe badanie. Od jego formy scrutábor pochodzi nazwa Scrutabor.",
+      "note": "Czasownik oznacza uważne, wnikliwe badanie. Od jego formy scrutábor pochodzi nazwa Scrutabor.",
 			"derivatives": [
 				"skrutacja",
 				"skrutator"
@@ -4945,7 +4943,7 @@
 			"senses": [
 				"swój"
 			],
-			"note": "Zaimek dzierżawczy zwrotny: odnosi się do podmiotu zdania, inaczej niż eius — jego, kogoś innego."
+      "note": "Zaimek dzierżawczy zwrotny, zwykle odnoszący się do podmiotu zdania."
 		},
 		"tabernaculum": {
 			"senses": [
