@@ -1349,6 +1349,37 @@ test('a rubric sits centrally between the verses it parts', async ({ page }) => 
 	}
 });
 
+test('a verse reserves the space its raised initial paints', async ({ page }) => {
+	// Vertical padding on an INLINE box paints and reserves nothing — it
+	// does not grow the line — so a drop cap rises out of the top of its
+	// line and into whatever stands above it. Every speaker label on this
+	// movement sat 20px clear of its verse except the four before a drop
+	// cap, which had 13 (owner, 2026-08-10).
+	//
+	// Asserted as SPACE PAINTED == SPACE RESERVED, which is what the fix
+	// claims, rather than as a gap in pixels. The obvious measurement is
+	// the trap here: an initial is set at line-height 0, so its box says
+	// nothing about where its ink is, and comparing rects reports a label
+	// eight pixels INSIDE a verse that looks perfectly clear.
+	await page.goto('/app/en/ordo/praeparatio');
+
+	const m = await page.evaluate(() => {
+		const verses = [...document.querySelectorAll('.verse')];
+		const withCap = verses.find((v) => v.querySelector('.initial'))!;
+		const plain = verses.find((v) => !v.querySelector('.initial'))!;
+		return {
+			painted: parseFloat(getComputedStyle(withCap.querySelector('.base')!).paddingTop),
+			reserved: parseFloat(getComputedStyle(withCap).marginTop),
+			plainReserves: parseFloat(getComputedStyle(plain).marginTop)
+		};
+	});
+
+	expect(m.painted, 'the initial is padded for').toBeGreaterThan(0);
+	expect(m.reserved, 'and the verse reserves exactly that').toBeCloseTo(m.painted, 0);
+	// and no verse pays for a letter it does not carry
+	expect(m.plainReserves, 'a verse without an initial reserves nothing').toBe(0);
+});
+
 test('a translation is attached to its verse without touching it', async ({ page }) => {
 	// 0.345 of a line of margin bought 7px of daylight, because the gloss
 	// row it follows hangs past the box that margin hangs from — the

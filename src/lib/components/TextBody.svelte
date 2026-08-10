@@ -154,12 +154,12 @@
 		{@const verseNo = seg.speaker ? undefined : verses?.[seg.id]}
 		<!-- The gloss row of a verse whose initial reaches below the line
 		     sinks together, so the glosses stay level with each other. -->
-		{@const sink =
-			i === firstVerse
-				? initialFit(seg.words?.[0]?.form.slice(0, 1) ?? '', helpLevel >= 1).sink
-				: 0}
+		{@const fit0 =
+			i === firstVerse ? initialFit(seg.words?.[0]?.form.slice(0, 1) ?? '', helpLevel >= 1) : null}
+		{@const sink = fit0?.sink ?? 0}
 		<p
 			class="verse"
+			style:margin-top={fit0 ? `calc(var(--reading) * ${fit0.padTop})` : null}
 			class:glossed={helpLevel >= 1}
 			class:quiet={seg.voice === 'secreto'}
 			class:answer={mine}
@@ -385,6 +385,18 @@
 	   the marks form their own column and the Latin keeps one straight
 	   left edge. Verses with no mark indent the same, or an unattributed
 	   line would jut out among attributed ones. */
+	/* THE INITIAL RESERVES ITS OWN SPACE, and the verse carrying it is the
+	   only place that can. Vertical padding on an INLINE box paints and
+	   reserves nothing — it does not grow the line — so the raised letter
+	   rises out of the top of its line and into whatever stands above it.
+	   Every speaker label on a movement sat 20px clear of its verse except
+	   the four before a drop cap, which had 13 (owner, 2026-08-10).
+	   The margin is set from `initialFit().padTop`, the same measured
+	   number the wash is padded by, so the space reserved and the space
+	   painted cannot drift apart. Compensating in the label instead would
+	   have meant compensating in the rubric and the translation too, and
+	   in whatever comes next: the fault is the verse's, so the verse pays.
+	   The mirror of --gloss-gap, which is ink hanging BELOW its box. */
 	.verse {
 		font-size: var(--reading);
 		line-height: 1.75;
