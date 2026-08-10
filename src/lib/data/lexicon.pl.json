@@ -1481,7 +1481,6 @@
 			"senses": [
 				"uczeń"
 			],
-			"note": "Tradycyjnie od díscere — uczyć się (budowa słowa jest sporna); uczeń to ten, kto się uczy, nie zwolennik.",
 			"derivatives": [
 				"dyscyplina"
 			]
@@ -2370,8 +2369,7 @@
 				"nieprawość",
 				"niesprawiedliwość",
 				"zło"
-			],
-			"note": "Od iníquus; u podstaw leży brak równości — æquus."
+      ]
 		},
 		"iniquus": {
 			"senses": [
@@ -2450,8 +2448,7 @@
 			"senses": [
 				"wstawiać się",
 				"wchodzić pomiędzy"
-			],
-			"note": "Inter-cédere: wejść pomiędzy — stanąć między proszącym a tym, kogo się prosi."
+      ]
 		},
 		"intra": {
 			"senses": [
@@ -2892,7 +2889,6 @@
 				"zasługa",
 				"wartość czynu"
 			],
-			"note": "Rzeczownik od meréri — zasłużyć.",
 			"derivatives": [
 				"merytoryczny (od meritórius)"
 			]
@@ -2951,8 +2947,7 @@
 			"senses": [
 				"miłosierny",
 				"litościwy"
-			],
-			"note": "Złożenie miser (nieszczęsny) + cor (serce): mający serce dla nieszczęśliwego."
+      ]
 		},
 		"miseror": {
 			"senses": [
@@ -3229,7 +3224,6 @@
 				"ofiara",
 				"dar ofiarny"
 			],
-			"note": "Rzeczownik od offérre — to, co przyniesiono przed Boga.",
 			"derivatives": [
 				"oblat (od offérre)"
 			]
@@ -5297,7 +5291,7 @@
 			"senses": [
 				"droga"
 			],
-			"note": "Droga zbudowana, w odróżnieniu od ścieżki (sémita). W psalmie 118 „droga” jest sposobem życia, nie odcinkiem terenu.",
+      "note": "W Psalmie 118 via jest obrazem sposobu życia.",
 			"derivatives": [
 				"wiadukt",
 				"trywialny"
