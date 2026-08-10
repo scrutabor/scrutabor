@@ -161,7 +161,7 @@ test('the about sheet is closed at every slider position, opens on demand', asyn
 	const before = await page.locator('.verse').first().boundingBox();
 	await pill.click();
 	await expect(sheet).toBeVisible();
-	await expect(sheet).toContainText('hymn anielski');
+	await expect(sheet).toContainText('pieśni aniołów');
 	const after = await page.locator('.verse').first().boundingBox();
 	expect(after?.y).toBe(before?.y);
 	// escape closes it; a fresh load starts closed
@@ -188,7 +188,7 @@ test('the about sheet speaks the interface language', async ({ page }) => {
 	const pill = page.locator('.about-pill');
 	await expect(pill).toContainText('about this prayer');
 	await pill.click();
-	await expect(page.locator('aside.about-sheet')).toContainText('Didache');
+	await expect(page.locator('aside.about-sheet')).toContainText("Lord's Prayer");
 });
 
 test('the Credo reads with participles in the panel', async ({ page }) => {
