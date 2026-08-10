@@ -3,7 +3,7 @@
 	"text": "ordinarium.supra-quae",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The one place in the Ordinary of the Mass that names the sacrifices of the Old Testament: Abel, Abraham and Melchisedech. The same three stand at one altar in the mosaic of Sant'Apollinare in Classe outside Ravenna. The prayer asks God to accept this sacrifice as He accepted theirs — and asks it after the consecration, which gave the medieval commentators trouble. Abel is here púer tuus iustus, Thy just servant. Melchisedech is summus sacérdos, Thy high priest. The rough seam of the closing words has a name in the tradition: the Liber Pontificalis says Leo the Great added sanctum sacrifícium, immaculátam hóstiam.",
+  "about": "The priest asks God to look favourably upon the offering and accept it, as He accepted the gifts of the just Abel, the sacrifice of Abraham, and what Melchisedech, here called a high priest, offered to Him.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -136,7 +136,7 @@
 		},
 		"w034": {
 			"gloss": "Melchisedech",
-			"function": "Indeclinable: the nominative follows from its apposition to “sacérdos” (w032) — Melchisedech is the subject of “óbtulit” (w030). Alone of the three he offered what we offer, bread and wine."
+			"function": "An indeclinable name, nominative in apposition to “sacérdos” (w032). Melchisedech is the subject of “óbtulit” (w030). Genesis 14:18 says that he brought out bread and wine."
 		},
 		"w035": {
 			"gloss": "a holy"
