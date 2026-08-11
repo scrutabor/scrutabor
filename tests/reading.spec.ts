@@ -61,11 +61,11 @@ test('a lemma-level note appears on every token of the lemma', async ({ page }) 
 
 test('cross-references in notes jump to the referenced word', async ({ page }) => {
 	await page.goto(CONFITEOR);
-	await page.locator('#w002').click(); // Deo — note compares „Deum” (w065)
-	await expect(page.locator('aside .form')).toHaveText('Deo');
-	await page.locator('aside .xref', { hasText: 'Deum' }).click();
-	await expect(page.locator('aside .form')).toHaveText('Deum');
-	await expect(page.locator('#w065')).toBeInViewport();
+	await page.locator('#w006').click(); // semper — note points to „Vírgini” (w007)
+	await expect(page.locator('aside .form')).toHaveText('semper');
+	await page.locator('aside .xref', { hasText: 'Vírgini' }).click();
+	await expect(page.locator('aside .form')).toHaveText('Vírgini');
+	await expect(page.locator('#w007')).toBeInViewport();
 });
 
 test('the English locale renders its own gloss layer', async ({ page }) => {
