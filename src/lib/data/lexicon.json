@@ -2506,6 +2506,12 @@
 			"head": "potens, poténtis",
 			"pos": "adj"
 		},
+		"potentia": {
+			"head": "poténtia, -æ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
+		},
 		"potestas": {
 			"head": "potéstas, potestátis",
 			"pos": "noun",
@@ -2563,6 +2569,10 @@
 			"pos": "verb",
 			"conj": 3
 		},
+		"praetereo": {
+			"head": "prætéreo, præteríre, præterívi, præterítum",
+			"pos": "verb"
+		},
 		"praeteritus": {
 			"head": "prætéritus, -a, -um",
 			"pos": "adj"
@@ -2571,6 +2581,12 @@
 			"head": "precor, precári, precátus sum",
 			"pos": "verb",
 			"conj": 1
+		},
+		"pressura": {
+			"head": "pressúra, -æ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
 		},
 		"prex": {
 			"head": "prex, precis",
@@ -2608,6 +2624,11 @@
 			"pos": "verb",
 			"conj": 3
 		},
+		"produco": {
+			"head": "prodúco, prodúcere, prodúxi, prodúctum",
+			"pos": "verb",
+			"conj": 3
+		},
 		"proficio": {
 			"head": "profício, profícere, proféci, proféctum",
 			"pos": "verb",
@@ -2624,6 +2645,10 @@
 			"pos": "noun",
 			"gender": "m",
 			"decl": 1
+		},
+		"propinquus": {
+			"head": "propínquus, -a, -um",
+			"pos": "adj"
 		},
 		"propitiabilis": {
 			"head": "propitiábilis, propitiábile",

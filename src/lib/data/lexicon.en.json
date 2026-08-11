@@ -4073,6 +4073,9 @@
 		"potens": {
 			"senses": ["powerful"]
 		},
+		"potentia": {
+			"senses": ["power"]
+		},
 		"potestas": {
 			"senses": [
 				"power",
@@ -4084,7 +4087,6 @@
 			"senses": [
 				"to drink"
 			],
-			"note": "Ante-classical and late — the everyday word is bibo; pótio, a draught, and potátor, a drinker, come from it.",
 			"derivatives": [
 				"potion",
 				"potable"
@@ -4106,7 +4108,6 @@
 				"command",
 				"instruction"
 			],
-			"note": "Properly the passive participle of præcípere, to take beforehand, to enjoin: the thing enjoined.",
 			"derivatives": [
 				"precept"
 			]
@@ -4124,7 +4125,7 @@
 				"battle",
 				"combat"
 			],
-			"note": "Prælium and proelium are one word; the liturgical books print prælium."
+			"note": "Variant spelling: proelium."
 		},
 		"praeparo": {
 			"senses": [
@@ -4142,7 +4143,6 @@
 				"at hand",
 				"current"
 			],
-			"note": "Originally the active participle of præesse, to be at hand; hence both “present in place” and “present in time”.",
 			"derivatives": [
 				"present",
 				"presence"
@@ -4154,7 +4154,6 @@
 				"garrison",
 				"stronghold"
 			],
-			"note": "From præsídeo, to sit in front of a thing and guard it.",
 			"derivatives": [
 				"presidium",
 				"preside (from præsidére)"
@@ -4173,11 +4172,13 @@
 				"to take beforehand",
 				"to venture"
 			],
-			"note": "Præ and sumo, to take in advance or without leave; hence both “assume in advance” and “dare”.",
 			"derivatives": [
 				"presume",
 				"presumption"
 			]
+		},
+		"praetereo": {
+			"senses": ["pass away"]
 		},
 		"praeteritus": {
 			"senses": [
@@ -4185,7 +4186,6 @@
 				"bygone",
 				"gone by"
 			],
-			"note": "Originally the passive participle of præteríre, to go past; Latin settled it as an adjective in its own right, and the dictionaries head it as one.",
 			"derivatives": [
 				"preterite"
 			]
@@ -4199,6 +4199,9 @@
 			"derivatives": [
 				"pray"
 			]
+		},
+		"pressura": {
+			"senses": ["distress"]
 		},
 		"prex": {
 			"senses": [
@@ -4216,7 +4219,7 @@
 			"senses": [
 				"on the day before"
 			],
-			"note": "A word from the Roman calendar: prídie Kaléndas, the day before the first of the month."
+			"note": "Prídie Kaléndas means the day before the first of the month."
 		},
 		"primus": {
 			"senses": [
@@ -4234,7 +4237,6 @@
 				"chief",
 				"prince"
 			],
-			"note": "A compound of primus and cápio: the one who takes first place.",
 			"derivatives": [
 				"prince",
 				"principal",
@@ -4263,11 +4265,13 @@
 				"to go forward",
 				"to advance"
 			],
-			"note": "A compound of pro (forward) + cédere (to go); in the language of the creeds it states the Holy Spirit's procession; of the Son the creed says otherwise — génitum, begotten.",
 			"derivatives": [
 				"procession",
 				"process"
 			]
+		},
+		"produco": {
+			"senses": ["bring forth"]
 		},
 		"proficio": {
 			"senses": [
@@ -4284,7 +4288,6 @@
 			"senses": [
 				"promise"
 			],
-			"note": "The noun of promítto, to send forth and so to promise — from the same mitto as missa.",
 			"derivatives": [
 				"promise (from promítto)"
 			]
@@ -4293,11 +4296,14 @@
 			"senses": [
 				"prophet"
 			],
-			"note": "A 1st-declension noun, yet masculine — like “agrícola”, farmer; from Greek “prophétes” — one who speaks for another.",
+			"note": "A masculine noun of the first declension.",
 			"derivatives": [
 				"prophetic",
 				"prophecy"
 			]
+		},
+		"propinquus": {
+			"senses": ["near"]
 		},
 		"propitiabilis": {
 			"senses": [
