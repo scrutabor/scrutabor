@@ -80,7 +80,9 @@
 	// $lib/speaker-marks with their reasons and their tests. What is here is
 	// only the binding of them to this document.
 	const segs = $derived(doc.segments);
-	const answers = $derived(marks.hasAnswers(segs));
+	// A one-line fixed response has only one rubrical speaker, but its
+	// participation still makes it an answer the reader needs identified.
+	const answers = $derived(marks.hasAnswers(segs) || marks.hasParticipation(segs));
 	const namesSpeaker = (i: number) => marks.namesSpeaker(segs, i);
 	const marked = (i: number) => marks.marked(segs, i);
 	const namesVoice = (i: number) => marks.namesVoice(segs, i);

@@ -56,6 +56,8 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 		['confiteor', 'praeparatio'],
 		['kyrie', 'catechumenorum'],
 		['gloria', 'catechumenorum'],
+		['deo-gratias-epistolae', 'catechumenorum'],
+		['laus-tibi-christe', 'catechumenorum'],
 		['credo', 'catechumenorum'],
 		['sanctus', 'canon'],
 		['agnus-dei', 'communio']
@@ -346,4 +348,23 @@ test('the responses everyone makes are marked as such', async ({ page }) => {
 	// a server is not "everyone": the mark belongs to the pew's view
 	await page.locator('.option[data-word="kapłana"]').click();
 	await expect(everyone).toHaveCount(0);
+});
+
+test('the responses after the readings follow the sourced participation lists', async ({
+	page
+}) => {
+	await page.goto('/app/pl/ordo/catechumenorum');
+	await settled(page);
+	const deo = page.locator('.part', { hasText: 'Deo grátias' });
+	const laus = page.locator('.part', { hasText: 'Laus tibi, Christe' });
+
+	// DMS 25 a names Deo gratias for sung Mass but does not name Laus tibi,
+	// Christe. Silence in that list must not be promoted to an attribution.
+	await expect(deo.locator('.who-all')).toHaveText('odpowiadają wszyscy');
+	await expect(laus.locator('.who-all')).toHaveCount(0);
+
+	// DMS 31 a names both among the first-degree responses at low Mass.
+	await page.locator('.option[data-word="cicha"]').click();
+	await expect(deo.locator('.who-all')).toHaveText('odpowiadają wszyscy');
+	await expect(laus.locator('.who-all')).toHaveText('odpowiadają wszyscy');
 });

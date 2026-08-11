@@ -11,6 +11,7 @@ import {
 	afterRubric,
 	firstVerseWithInitial,
 	hasAnswers,
+	hasParticipation,
 	isDialogue,
 	marked,
 	namesSpeaker,
@@ -64,6 +65,18 @@ describe('naming a speaker', () => {
 	it('names nobody where there is only one voice to name', () => {
 		const alone = [verse('sacerdos'), verse('sacerdos')];
 		expect(namesSpeaker(alone, 0)).toBe(false);
+	});
+
+	it('names a single fixed response when participation makes it the reader’s line', () => {
+		const response = [
+			{
+				...verse('minister'),
+				participation: { cantu: { gradus: 1, source: 'DMS 25 a' } }
+			} as Segment
+		];
+		expect(hasAnswers(response)).toBe(false);
+		expect(hasParticipation(response)).toBe(true);
+		expect(namesSpeaker(response, 0)).toBe(true);
 	});
 
 	it('and says nothing about a verse with no speaker at all', () => {

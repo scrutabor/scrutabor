@@ -277,8 +277,18 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Epístola',
 				kind: 'proper',
 				note: {
-					pl: 'Po stronie lekcji kapłan czyta lekcję dnia. Że się skończyła, poznać po odpowiedzi ministranta: Deo grátias.',
-					en: 'At the Epistle side the priest reads the day’s reading. That it has ended you know from the server’s Deo grátias.'
+					pl: 'Po stronie lekcji kapłan czyta lekcję dnia.',
+					en: 'At the Epistle side the priest reads the day’s reading.'
+				}
+			},
+			{
+				id: 'deo-gratias-epistolae',
+				title: 'Deo grátias',
+				kind: 'text',
+				text: 'ordinarium/deo-gratias-epistolae',
+				note: {
+					pl: 'Po zakończeniu Epistoły ministrant odpowiada.',
+					en: 'The server answers at the end of the Epistle.'
 				}
 			},
 			{
@@ -301,6 +311,16 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				note: {
 					pl: 'Mszał przenosi się na stronę Ewangelii i wszyscy wstają. Kapłan po cichej modlitwie Munda cor meum znaczy krzyżem księgę oraz własne czoło, usta i piersi.',
 					en: 'The missal is carried to the Gospel side and all stand. After the silent Munda cor meum the priest signs the book and his own forehead, lips and breast.'
+				}
+			},
+			{
+				id: 'laus-tibi-christe',
+				title: 'Laus tibi, Christe',
+				kind: 'text',
+				text: 'ordinarium/laus-tibi-christe',
+				note: {
+					pl: 'Po zakończeniu Ewangelii ministrant odpowiada.',
+					en: 'The server answers at the end of the Gospel.'
 				}
 			},
 			{

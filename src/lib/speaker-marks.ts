@@ -44,6 +44,18 @@ export function hasAnswers(segments: Segment[]): boolean {
 	);
 }
 
+/** Does the participation layer give the faithful any part in this text?
+ * A fixed response may contain only one speaker and therefore fail
+ * `hasAnswers`, while still being exactly the line a reader needs marked. */
+export function hasParticipation(segments: Segment[]): boolean {
+	return segments.some(
+		(segment) =>
+			segment.type === 'verse' &&
+			segment.participation !== undefined &&
+			Object.keys(segment.participation).length > 0
+	);
+}
+
 /**
  * Is the whole of this text said by everyone — the reader included?
  *
@@ -88,7 +100,7 @@ export function firstAppearance(segments: Segment[]): Record<string, number> {
  */
 export function namesSpeaker(segments: Segment[], i: number): boolean {
 	const sp = segments[i]?.speaker;
-	if (!sp || !hasAnswers(segments)) return false;
+	if (!sp || (!hasAnswers(segments) && !hasParticipation(segments))) return false;
 	return firstAppearance(segments)[sp] === i;
 }
 
