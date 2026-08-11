@@ -22,7 +22,7 @@
 			"translation": "składamy Twojemu najwyższemu majestatowi z otrzymanych od Ciebie darów"
 		},
 		"s04": {
-			"narrative": "Kapłan składa ręce. Potem, z lewą ręką na korporale, prawą czyni trzykrotny znak krzyża nad Hostią i kielichem naraz."
+			"narrative": "Kapłan składa ręce i czyni trzykrotny znak krzyża nad Hostią i kielichem równocześnie."
 		},
 		"s05": {
 			"translation": "Ofiarę czystą, świętą i doskonałą,"
@@ -34,7 +34,7 @@
 			"translation": "Chleb święty życia wiecznego"
 		},
 		"s08": {
-			"narrative": "I jeden nad kielichem."
+			"narrative": "Kapłan czyni jeden znak krzyża nad kielichem."
 		},
 		"s09": {
 			"translation": "i Kielich wiekuistego zbawienia."
@@ -43,14 +43,14 @@
 	"words": {
 		"w001": {
 			"gloss": "przeto",
-			"function": "Spójnik spina tę modlitwę z nakazem sprzed chwili: „to czyńcie” — przeto czynimy."
+			"function": "Spójnik łączący tę modlitwę z poprzedzającym tekstem: „przeto”."
 		},
 		"w002": {
 			"gloss": "i"
 		},
 		"w003": {
 			"gloss": "pomni",
-			"function": "Rządzi dopełniaczem, a trzy dopełniacze, których dotyczy — passiónis, resurrectiónis, ascensiónis — stoją o kilkanaście słów dalej. Dłużej rozsunięty jest w tym wydaniu tylko łańcuch Communicántes."
+			"function": "Rządzi trzema dopełniaczami: „passiónis” (w021), „resurrectiónis” (w027) i „ascensiónis” (w033)."
 		},
 		"w004": {
 			"gloss": "Panie"
@@ -70,7 +70,7 @@
 		},
 		"w009": {
 			"gloss": "także",
-			"function": "Sed et — „a nadto”: modlitwa rozszerza podmiot ze sług ołtarza na cały lud."
+			"function": "„Sed et” rozszerza podmiot od „nos servi tui” do „plebs tua sancta”."
 		},
 		"w010": {
 			"gloss": "lud"
