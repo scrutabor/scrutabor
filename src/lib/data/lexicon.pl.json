@@ -1658,7 +1658,7 @@
 				"iść",
 				"udać się"
 			],
-			"note": "Czasownik nieregularny: sam rdzeń bywa jedną literą (it — idzie), a tryb rozkazujący liczby mnogiej brzmi ite.",
+			"note": "Czasownik nieregularny; tryb rozkazujący liczby mnogiej: ite.",
 			"derivatives": [
 				"tranzyt",
 				"ambicja"
@@ -1684,8 +1684,7 @@
 				"wyrywać",
 				"wydobywać",
 				"ratować"
-			],
-			"note": "Dosłownie: wykopać, wygrzebać; stąd wyrwać kogoś z niebezpieczeństwa."
+			]
 		},
 		"et": {
 			"senses": [
@@ -1724,7 +1723,6 @@
 				"wywyższenie",
 				"podniesienie"
 			],
-			"note": "Od exálto — podnieść wysoko; ex- wzmacnia altus, wysoki.",
 			"derivatives": [
 				"egzaltacja"
 			]
@@ -1742,12 +1740,14 @@
 			],
 			"note": "In excélsis — „na wysokościach”."
 		},
+		"excito": {
+			"senses": ["wzbudzać"]
+		},
 		"exilium": {
 			"senses": [
 				"wygnanie",
 				"obczyzna"
-			],
-			"note": "Rzeczownik od exsul; drugi człon dawny i niepewny. Stan tego, kto jest poza swoją ziemią."
+			]
 		},
 		"exquiro": {
 			"senses": [
@@ -1755,6 +1755,9 @@
 				"dociekać",
 				"wypytywać"
 			]
+		},
+		"exspectatio": {
+			"senses": ["oczekiwanie"]
 		},
 		"exspecto": {
 			"senses": [
@@ -1767,15 +1770,13 @@
 		"exsul": {
 			"senses": [
 				"wygnaniec"
-			],
-			"note": "Od niego pochodzi exílium."
+			]
 		},
 		"exsultatio": {
 			"senses": [
 				"radość",
 				"uniesienie"
 			],
-			"note": "Od exsultáre — podskakiwać; radość, która nie usiedzi w miejscu.",
 			"derivatives": [
 				"Exsultet (od exsultáre)"
 			]
@@ -1798,7 +1799,6 @@
 				"twórca, sprawca",
 				"wykonawca"
 			],
-			"note": "Rzeczownik od fácere (czynić) — „ten, który czyni”; w Symbolu wiary tytuł Boga jako Stwórcy.",
 			"derivatives": [
 				"faktor"
 			]
@@ -1809,7 +1809,6 @@
 				"domownicy",
 				"służba domowa"
 			],
-			"note": "W łacinie to najpierw domownicy razem ze służbą, dopiero potem rodzina w naszym sensie; Kanon nazywa tak cały Kościół.",
 			"derivatives": [
 				"familia",
 				"familiarny (od familiáris)"
@@ -1828,6 +1827,9 @@
 			"derivatives": [
 				"famulus"
 			]
+		},
+		"ficulneus": {
+			"senses": ["drzewo figowe"]
 		},
 		"fidelis": {
 			"senses": [
@@ -1880,6 +1882,9 @@
 				"opłakiwać"
 			]
 		},
+		"fluctus": {
+			"senses": ["fala"]
+		},
 		"formo": {
 			"senses": [
 				"kształtować",
@@ -1896,8 +1901,7 @@
 				"moc",
 				"siła",
 				"męstwo"
-			],
-			"note": "Od fortis — mocny; w psalmach moc Boga, wśród cnót męstwo."
+			]
 		},
 		"frango": {
 			"senses": [
