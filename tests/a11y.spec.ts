@@ -30,6 +30,7 @@ const SURFACES = [
 	// scanning the not-found page under a grammar page's name
 	{ name: 'grammar concept', path: '/app/pl/grammatica/nominativus' },
 	{ name: 'edition page', path: '/app/en/editio' },
+	{ name: 'bibliography page', path: '/app/pl/bibliographia' },
 	// the server's own 404: there is no such page in a downloaded copy,
 	// where a link that misses is the browser's error, not ours
 	{ name: 'not found @online', path: '/pl/404' }

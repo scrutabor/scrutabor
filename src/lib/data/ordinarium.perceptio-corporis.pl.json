@@ -4,6 +4,13 @@
 	"lang": "pl",
 	"status": "working-edition",
 	"about": "Modlitwa prosi, aby przyjęcie Ciała Chrystusa nie sprowadziło sądu ani potępienia, lecz służyło ochronie i uzdrowieniu duszy i ciała. Jej słowa nawiązują do 1 Kor 11,29, gdzie św. Paweł przestrzega przed niegodnym przyjmowaniem.",
+	"about_citations": [
+		{
+			"title": "Nova Vulgata, Epistula I ad Corinthios",
+			"locator": "11, 29",
+			"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_epist-i-corinthios_lt.html#11"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -81,7 +88,13 @@
 		},
 		"w016": {
 			"gloss": "sąd",
-			"function": "Słowo użyte w 1 Kor 11,29 w odniesieniu do niegodnego przyjmowania."
+			"function": "Słowo użyte w 1 Kor 11,29 w odniesieniu do niegodnego przyjmowania.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "1 Corinthians 11:29"
+				}
+			]
 		},
 		"w017": {
 			"gloss": "i"

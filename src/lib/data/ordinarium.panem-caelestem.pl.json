@@ -42,7 +42,14 @@
 			"translation": "Panie, nie jestem godzien,"
 		},
 		"s05": {
-			"narrative": "Dalej mówi po cichu."
+			"narrative": "Dalej mówi po cichu.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ritus servandus in celebratione Missae, X, 4",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s06": {
 			"translation": "abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja."
@@ -51,7 +58,14 @@
 			"translation": "Panie, nie jestem godzien,"
 		},
 		"s08": {
-			"narrative": "Dalej mówi po cichu."
+			"narrative": "Dalej mówi po cichu.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ritus servandus in celebratione Missae, X, 4",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s09": {
 			"translation": "abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja."
@@ -60,7 +74,14 @@
 			"translation": "Panie, nie jestem godzien,"
 		},
 		"s11": {
-			"narrative": "Dalej mówi po cichu."
+			"narrative": "Dalej mówi po cichu.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ritus servandus in celebratione Missae, X, 4",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s12": {
 			"translation": "abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja."

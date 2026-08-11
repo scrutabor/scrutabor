@@ -50,6 +50,9 @@
 			<a href="/app/{lang}/grammatica">{msgs.grammarTitle} →</a>
 		</p>
 		<p class="working smallcaps"><a href="/app/{lang}/editio">{msgs.working}</a></p>
+		<p class="bibliography-link smallcaps">
+			<a href="/app/{lang}/bibliographia">{msgs.bibliographyTitle}</a>
+		</p>
 		<!-- The colophon: which copy this is, and the way home. A book
 		     names its edition and its printer on the colophon page, not on
 		     every leaf — so it lives here, on the book's own front page,
@@ -127,6 +130,20 @@
 		margin: 0.6rem 0 0;
 		font-size: 0.75rem;
 		color: var(--ink-soft);
+	}
+
+	.bibliography-link {
+		margin: 0.35rem 0 0;
+		font-size: 0.75rem;
+	}
+
+	.bibliography-link a {
+		color: var(--ink-soft);
+		text-decoration: none;
+	}
+
+	.bibliography-link a:hover {
+		color: var(--ink);
 	}
 
 	.colophon {

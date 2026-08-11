@@ -94,7 +94,13 @@
 		},
 		"w021": {
 			"gloss": "true",
-			"function": "The phrase “Deo vivo et vero” also occurs in 1 Thessalonians 1:9."
+			"function": "The phrase “Deo vivo et vero” also occurs in 1 Thessalonians 1:9.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "1 Thessalonians 1:9"
+				}
+			]
 		},
 		"w022": {
 			"gloss": "for"

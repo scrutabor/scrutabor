@@ -125,7 +125,13 @@
 		},
 		"w031": {
 			"gloss": "high",
-			"function": "It modifies “sacérdos” (w032). In Genesis 14:18 Melchisedech is called “sacérdos Dei altíssimi” — “priest of God most high”."
+			"function": "It modifies “sacérdos” (w032). In Genesis 14:18 Melchisedech is called “sacérdos Dei altíssimi” — “priest of God most high”.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Genesis 14:18"
+				}
+			]
 		},
 		"w032": {
 			"gloss": "priest"
@@ -135,7 +141,13 @@
 		},
 		"w034": {
 			"gloss": "Melchisedech",
-			"function": "An indeclinable name, nominative in apposition to “sacérdos” (w032). Melchisedech is the subject of “óbtulit” (w030). Genesis 14:18 says that he brought out bread and wine."
+			"function": "An indeclinable name, nominative in apposition to “sacérdos” (w032). Melchisedech is the subject of “óbtulit” (w030). Genesis 14:18 says that he brought out bread and wine.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Genesis 14:18"
+				}
+			]
 		},
 		"w035": {
 			"gloss": "a holy"

@@ -15,14 +15,20 @@
 		<ol>
 			{#each citations as citation (`${citation.title}:${citation.locator}`)}
 				<li>
-					{#if citation.url}<a href={citation.url} target="_blank" rel="external noopener"
-							>{citation.title}</a
-						>{:else}<cite>{citation.title}</cite>{/if}<span class="locator"
+					{#if citation.url}<a
+							href={citation.url}
+							target="_blank"
+							rel="external noopener"
+							lang="und">{citation.title}</a
+						>{:else}<cite lang="und">{citation.title}</cite>{/if}<span class="locator" lang="und"
 						>, {citation.locator}</span
 					>
 				</li>
 			{/each}
 		</ol>
+		<p class="bibliography-link">
+			<a href="/app/{lang}/bibliographia">{M[lang].bibliographyLink}</a>
+		</p>
 	</details>
 {/if}
 
@@ -59,6 +65,10 @@
 
 	li + li {
 		margin-top: 0.3rem;
+	}
+
+	.bibliography-link {
+		margin: 0.45rem 0 0;
 	}
 
 	a {

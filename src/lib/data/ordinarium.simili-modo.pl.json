@@ -112,7 +112,13 @@
 		},
 		"w009": {
 			"gloss": "przesławny",
-			"function": "Przydawka przy „Cálicem” (w010) — echo Ps 22, 5: calix meus inébrians quam præclárus est."
+			"function": "Przydawka przy „Cálicem” (w010) — echo Ps 22, 5: calix meus inébrians quam præclárus est.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Psalm 22:5"
+				}
+			]
 		},
 		"w010": {
 			"gloss": "kielich"
@@ -210,7 +216,13 @@
 		},
 		"w040": {
 			"gloss": "wiecznego",
-			"function": "Tego określenia nie ma w opisach ustanowienia. „Krew przymierza wiecznego” występuje w Hbr 13, 20."
+			"function": "Tego określenia nie ma w opisach ustanowienia. „Krew przymierza wiecznego” występuje w Hbr 13, 20.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Hebrews 13:20"
+				}
+			]
 		},
 		"w041": {
 			"gloss": "przymierza",

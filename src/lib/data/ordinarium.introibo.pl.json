@@ -13,13 +13,27 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan w szatach liturgicznych podchodzi do ołtarza, oddaje mu należną cześć, czyni znak krzyża od czoła do piersi i mówi głośno."
+			"narrative": "Kapłan w szatach liturgicznych podchodzi do ołtarza, oddaje mu należną cześć, czyni znak krzyża od czoła do piersi i mówi głośno.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ordo Missae, opening rubric",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s02": {
 			"translation": "W imię Ojca i Syna, i Ducha Świętego. Amen."
 		},
 		"s03": {
-			"narrative": "Ze złożonymi rękami przed piersią kapłan rozpoczyna antyfonę."
+			"narrative": "Ze złożonymi rękami przed piersią kapłan rozpoczyna antyfonę.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ordo Missae rubric before Introibo ad altare Dei",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s04": {
 			"translation": "Przystąpię do ołtarza Bożego."
@@ -88,7 +102,17 @@
 		},
 		"w018": {
 			"gloss": "młodość",
-			"function": "Łacińska „młodość” odpowiada greckiemu tekstowi psalmu. Tekst hebrajski mówi w tym miejscu o radości."
+			"function": "Łacińska „młodość” odpowiada greckiemu tekstowi psalmu. Tekst hebrajski mówi w tym miejscu o radości.",
+			"function_citations": [
+				{
+					"title": "Septuaginta, ed. Rahlfs–Hanhart",
+					"locator": "Psalm 42:4"
+				},
+				{
+					"title": "Biblia Hebraica Stuttgartensia",
+					"locator": "Psalm 43:4"
+				}
+			]
 		},
 		"w019": {
 			"gloss": "moją"

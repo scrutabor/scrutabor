@@ -18,6 +18,7 @@ const app: string[] = [
 	'/ordo',
 	...ORDO.map((m) => `/ordo/${m.id}`),
 	'/editio',
+	'/bibliographia',
 	'/grammatica',
 	'/grammatica/pronuntiatio',
 	...Object.keys(TEXTS).map((key) => `/${key}`),

@@ -164,7 +164,17 @@
 		},
 		"w035": {
 			"gloss": "jedzcie",
-			"function": "Rozkaźnik. Kanon mówi „manducáte” za 1 Kor 11, 24, tam gdzie Mt 26, 26 ma „comédite”."
+			"function": "Rozkaźnik. Kanon mówi „manducáte” za 1 Kor 11, 24, tam gdzie Mt 26, 26 ma „comédite”.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "1 Corinthians 11:24"
+				},
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Matthew 26:26"
+				}
+			]
 		},
 		"w036": {
 			"gloss": "z"

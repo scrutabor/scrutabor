@@ -63,7 +63,19 @@
 		},
 		"w011": {
 			"gloss": "the sign",
-			"function": "Ablative after “cum” (w010): “with the sign of faith”. CCC 1274 relates the phrase to baptismal faith kept until death."
+			"function": "Ablative after “cum” (w010): “with the sign of faith”. CCC 1274 relates the phrase to baptismal faith kept until death.",
+			"function_citations": [
+				{
+					"title": "Catechismus Catholicae Ecclesiae",
+					"locator": "n. 1274",
+					"url": "https://www.vatican.va/archive/catechism_lt/index_lt.htm"
+				},
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Canon Missae, Memento defunctorum",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"w012": {
 			"gloss": "of faith"

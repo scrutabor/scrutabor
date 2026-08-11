@@ -42,7 +42,14 @@
 			"translation": "Lord, I am not worthy,"
 		},
 		"s05": {
-			"narrative": "The priest goes on under his breath."
+			"narrative": "The priest goes on under his breath.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ritus servandus in celebratione Missae, X, 4",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s06": {
 			"translation": "that You should enter under my roof: but only say the word, and my soul shall be healed."
@@ -51,7 +58,14 @@
 			"translation": "Lord, I am not worthy,"
 		},
 		"s08": {
-			"narrative": "The priest goes on under his breath."
+			"narrative": "The priest goes on under his breath.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ritus servandus in celebratione Missae, X, 4",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s09": {
 			"translation": "that You should enter under my roof: but only say the word, and my soul shall be healed."
@@ -60,7 +74,14 @@
 			"translation": "Lord, I am not worthy,"
 		},
 		"s11": {
-			"narrative": "The priest goes on under his breath."
+			"narrative": "The priest goes on under his breath.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ritus servandus in celebratione Missae, X, 4",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s12": {
 			"translation": "that You should enter under my roof: but only say the word, and my soul shall be healed."

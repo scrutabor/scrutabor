@@ -164,7 +164,17 @@
 		},
 		"w035": {
 			"gloss": "eat",
-			"function": "An imperative. The Canon says “manducáte” with 1 Cor 11:24, where Mt 26:26 has “comédite”."
+			"function": "An imperative. The Canon says “manducáte” with 1 Cor 11:24, where Mt 26:26 has “comédite”.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "1 Corinthians 11:24"
+				},
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Matthew 26:26"
+				}
+			]
 		},
 		"w036": {
 			"gloss": "of"

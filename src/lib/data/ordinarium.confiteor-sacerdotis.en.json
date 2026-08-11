@@ -13,7 +13,14 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest joins his hands, bows deeply, and recites the Confiteor."
+			"narrative": "The priest joins his hands, bows deeply, and recites the Confiteor.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ordo Missae, rubric before the priest's Confiteor",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s02": {
 			"translation": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, brethren:"
@@ -22,7 +29,14 @@
 			"translation": "that I have sinned exceedingly in thought, word and deed:"
 		},
 		"s04": {
-			"narrative": "The priest strikes his breast three times."
+			"narrative": "The priest strikes his breast three times.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ordo Missae, rubric at mea culpa",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s05": {
 			"translation": "through my fault, through my fault, through my most grievous fault."

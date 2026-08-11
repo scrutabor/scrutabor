@@ -4,6 +4,18 @@
 	"lang": "pl",
 	"status": "working-edition",
 	"about": "Wyrażenie „Cálicem salutáris” pochodzi z Ps 115, 4: „kielich zbawienia wezmę i imienia Pańskiego wzywać będę”. W końcowej prośbie powraca biblijne „odor suavitátis”, określenie ofiary składanej Panu (np. Kpł 1, 9). Czasownik „ascéndat” wyraża prośbę, by kielich wzniósł się przed oblicze Boga.",
+	"about_citations": [
+		{
+			"title": "Nova Vulgata, Liber Psalmorum",
+			"locator": "Psalmus 116 (Vg 115), 13",
+			"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+		},
+		{
+			"title": "Nova Vulgata, Liber Leviticus",
+			"locator": "1, 9",
+			"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_leviticus_lt.html#1"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -21,8 +33,7 @@
 	},
 	"words": {
 		"w001": {
-			"gloss": "składamy",
-			"function": "Liczba mnoga: we Mszy uroczystej diakon odmawia tę modlitwę razem z kapłanem."
+			"gloss": "składamy"
 		},
 		"w002": {
 			"gloss": "tobie"

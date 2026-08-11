@@ -94,7 +94,13 @@
 		},
 		"w021": {
 			"gloss": "prawdziwemu",
-			"function": "Zwrot „Deo vivo et vero” występuje także w 1 Tes 1,9."
+			"function": "Zwrot „Deo vivo et vero” występuje także w 1 Tes 1,9.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "1 Thessalonians 1:9"
+				}
+			]
 		},
 		"w022": {
 			"gloss": "za"

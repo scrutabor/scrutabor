@@ -13,7 +13,14 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan składa ręce, głęboko się pochyla i odmawia Confíteor."
+			"narrative": "Kapłan składa ręce, głęboko się pochyla i odmawia Confíteor.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ordo Missae, rubric before the priest's Confiteor",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s02": {
 			"translation": "Spowiadam się Bogu wszechmogącemu, Najświętszej Maryi zawsze Dziewicy, świętemu Michałowi Archaniołowi, świętemu Janowi Chrzcicielowi, świętym Apostołom Piotrowi i Pawłowi, wszystkim Świętym i wam, bracia:"
@@ -22,7 +29,14 @@
 			"translation": "że bardzo zgrzeszyłem myślą, mową i uczynkiem:"
 		},
 		"s04": {
-			"narrative": "Kapłan trzykrotnie uderza się w piersi."
+			"narrative": "Kapłan trzykrotnie uderza się w piersi.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ordo Missae, rubric at mea culpa",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s05": {
 			"translation": "moja wina, moja wina, moja bardzo wielka wina."
