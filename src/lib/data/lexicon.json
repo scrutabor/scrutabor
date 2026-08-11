@@ -1212,6 +1212,11 @@
 			"head": "excélsus, -a, -um",
 			"pos": "adj"
 		},
+		"excito": {
+			"head": "éxcito, excitáre, excitávi, excitátum",
+			"pos": "verb",
+			"conj": 1
+		},
 		"exilium": {
 			"head": "exílium, -ii",
 			"pos": "noun",
@@ -1222,6 +1227,12 @@
 			"head": "exquíro, exquírere, exquisívi, exquisítum",
 			"pos": "verb",
 			"conj": 3
+		},
+		"exspectatio": {
+			"head": "exspectátio, exspectatiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
 		},
 		"exspecto": {
 			"head": "exspécto, exspectáre, exspectávi, exspectátum",
@@ -1270,6 +1281,10 @@
 			"gender": "m",
 			"decl": 2
 		},
+		"ficulneus": {
+			"head": "ficúlneus, -a, -um",
+			"pos": "adj"
+		},
 		"fidelis": {
 			"head": "fidélis, fidéle",
 			"pos": "adj"
@@ -1300,6 +1315,12 @@
 			"head": "fleo, flere, flevi, fletum",
 			"pos": "verb",
 			"conj": 2
+		},
+		"fluctus": {
+			"head": "fluctus, -us",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 4
 		},
 		"formo": {
 			"head": "formo, formáre, formávi, formátum",
