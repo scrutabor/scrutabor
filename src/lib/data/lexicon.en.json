@@ -2878,6 +2878,9 @@
 				"laundry"
 			]
 		},
+		"levo": {
+			"senses": ["raise"]
+		},
 	"lex": {
 		"senses": [
 			"law"
@@ -2894,7 +2897,7 @@
 				"free",
 				"unhindered"
 			],
-			"note": "Not the noun liber, libri, a book, nor líberi, liberórum, children — literally “the free ones” as against the household's slaves.",
+			"note": "Not the noun liber, libri (“book”) or líberi, liberórum (“children”).",
 			"derivatives": [
 				"liberal",
 				"liberty"
@@ -2914,7 +2917,6 @@
 				"freedom",
 				"liberty"
 			],
-			"note": "From liber, free — the condition of one who is not a slave.",
 			"derivatives": [
 				"liberty"
 			]
@@ -2934,7 +2936,6 @@
 				"to talk",
 				"to say"
 			],
-			"note": "It stresses speaking as an activity; dícere stresses what is said.",
 			"derivatives": [
 				"eloquent",
 				"colloquial",
@@ -2946,7 +2947,7 @@
 				"to shine",
 				"to be bright"
 			],
-			"note": "The same root as lux. Intransitive: the light shines of itself, it does not shine on something.",
+			"note": "An intransitive verb.",
 			"derivatives": [
 				"lucid",
 				"translucent"
@@ -2963,6 +2964,9 @@
 				"luminary"
 			]
 		},
+		"luna": {
+			"senses": ["moon"]
+		},
 		"lux": {
 			"senses": [
 				"light",
@@ -2975,7 +2979,6 @@
 				"spot",
 				"blemish"
 			],
-			"note": "First a mark on cloth or skin, only afterwards a moral stain; immaculátus, spotless, is its negative.",
 			"derivatives": [
 				"immaculate",
 				"maculate"
@@ -3005,7 +3008,6 @@
 				"malicious",
 				"evil"
 			],
-			"note": "A compound of malus and gigno: one who breeds evil. Its opposite is benígnus.",
 			"derivatives": [
 				"malign",
 				"malignant"
@@ -3036,8 +3038,7 @@
 			"senses": [
 				"to eat",
 				"to chew"
-			],
-			"note": "A colloquial word — to chew, not the polite édere; biblical Latin chose it, and part of the Romance family kept it (French manger)."
+			]
 		},
 		"manus": {
 			"senses": [
@@ -3047,6 +3048,9 @@
 				"manual",
 				"manuscript"
 			]
+		},
+		"mare": {
+			"senses": ["sea"]
 		},
 		"martyr": {
 			"senses": [
@@ -3074,7 +3078,6 @@
 				"remedy",
 				"cure"
 			],
-			"note": "From médeor, to heal; the same stem as medicus and medicína.",
 			"derivatives": [
 				"medicine (from medicína)",
 				"remedy (from remédium)"
