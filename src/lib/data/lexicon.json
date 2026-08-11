@@ -912,6 +912,11 @@
 			"head": "defúnctus, -a, -um",
 			"pos": "adj"
 		},
+		"demonstro": {
+			"head": "demónstro, demonstráre, demonstrávi, demonstrátum",
+			"pos": "verb",
+			"conj": 1
+		},
 		"deprecatio": {
 			"head": "deprecátio, deprecatiónis",
 			"pos": "noun",
