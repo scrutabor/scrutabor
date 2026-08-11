@@ -3,7 +3,7 @@
 	"text": "ordinarium.praefatio-dialogus",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Wymiana zdań, którą kapłan otwiera Prefację. Cyprian z Kartaginy cytuje ją już w III wieku: „kapłan przed modlitwą przygotowuje umysły braci, mówiąc: Sursum corda”. „Habémus ad Dóminum” zostawia niedopowiedziane dopełnienie — dosłownie „mamy ku Panu”. Tym, co „mamy”, są serca, o których była mowa przed chwilą. Odpowiedź „Dignum et iustum est” kapłan podejmie natychmiast pierwszymi słowami Prefacji: Vere dignum et iustum est.",
+	"about": "Dialog poprzedzający Prefację. W wezwaniu „Sursum corda” czasownik pozostaje domyślny. W odpowiedzi „Habémus ad Dóminum” niewypowiedzianym dopełnieniem są „corda”. Ostatnią odpowiedź kapłan podejmuje słowami „Vere dignum et iustum est”.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -40,7 +40,7 @@
 		},
 		"w002": {
 			"gloss": "z wami",
-			"function": "Jedno słowo pisane, dwa wyrazy: przyimek cum stoi za zaimkiem, jak zawsze przy zaimkach osobowych (mecum, tecum, nobíscum)."
+			"function": "Przyimek „cum” stoi po zaimku osobowym: „vobis” + „cum” tworzy „vobíscum”."
 		},
 		"w003": {
 			"gloss": "i"
@@ -56,16 +56,15 @@
 			"function": "Zgadza się ze „spíritu” (w005) w odpowiedzi „Et cum spíritu tuo”."
 		},
 		"w007": {
-			"gloss": "w górę",
-			"function": "Wezwanie nie ma czasownika — sam przysłówek kierunku i dopełnienie. Łacina zostawia domysłowi, co należy zrobić z sercami."
+			"gloss": "w górę"
 		},
 		"w008": {
 			"gloss": "serca",
-			"function": "Biernik, choć nie ma czasownika, który by nim rządził: forma zdradza, że jest dopełnieniem domyślnego „podnieście”."
+			"function": "Biernik liczby mnogiej w wezwaniu bez wyrażonego czasownika."
 		},
 		"w009": {
 			"gloss": "mamy",
-			"function": "Odpowiedź nie powtarza polecenia, lecz stwierdza, że zostało wykonane. Dopełnienie („je”) znów zostaje niewypowiedziane."
+			"function": "Niewypowiedzianym dopełnieniem „habémus” są „corda” z poprzedniego wezwania."
 		},
 		"w010": {
 			"gloss": "ku"
