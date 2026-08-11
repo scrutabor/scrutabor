@@ -50,7 +50,7 @@
 		},
 		"w004": {
 			"gloss": "miłosierdzia",
-			"function": "Dopełniacz przy „Mater” (w003) — Matka, która miłosierdzie rodzi i rozdaje."
+			"function": "Dopełniacz zależny od „Mater” (w003)."
 		},
 		"w005": {
 			"gloss": "życie"
@@ -82,7 +82,7 @@
 		},
 		"w014": {
 			"gloss": "wygnańcy",
-			"function": "Rzeczownik w mianowniku, w apozycji (dopowiedzeniu) do domyślnego „my” zawartego w „clamámus” (w013) — to my jesteśmy wygnańcami."
+			"function": "Mianownik w apozycji do domyślnego podmiotu „clamámus” (w013)."
 		},
 		"w015": {
 			"gloss": "dzieci"
@@ -101,7 +101,7 @@
 		},
 		"w020": {
 			"gloss": "jęcząc",
-			"function": "Imiesłów w mianowniku liczby mnogiej, zgadza się z domyślnym podmiotem „suspirámus” (w019)."
+			"function": "Imiesłów w mianowniku liczby mnogiej, zgodny z domyślnym podmiotem „suspirámus” (w019)."
 		},
 		"w021": {
 			"gloss": "i"
@@ -117,14 +117,13 @@
 		},
 		"w025": {
 			"gloss": "łez",
-			"function": "Dopełniacz liczby mnogiej przy „valle” (w026): dolina należąca do łez, dolina, którą łzy wypełniają."
+			"function": "Dopełniacz liczby mnogiej zależny od „valle” (w026)."
 		},
 		"w026": {
 			"gloss": "padole"
 		},
 		"w027": {
-			"gloss": "Nuże",
-			"function": "Wykrzyknik zachęty, którym modlitwa przechodzi od skargi do prośby."
+			"gloss": "Nuże"
 		},
 		"w028": {
 			"gloss": "więc"
@@ -137,7 +136,7 @@
 		},
 		"w031": {
 			"gloss": "one",
-			"function": "Zaimek wskazujący postawiony przed rzeczownikiem: nie „jakieś oczy”, lecz te właśnie, znane — owe miłosierne oczy Twoje."
+			"function": "Zaimek wskazujący. Zgadza się z „óculos” (w034)."
 		},
 		"w032": {
 			"gloss": "Twoje"
@@ -189,7 +188,7 @@
 		},
 		"w048": {
 			"gloss": "okaż",
-			"function": "Druga prośba do Matki — a czwarty czasownik rozkazujący zwrócony do niej — i cel całej modlitwy: nie prosi o wybawienie z doliny, lecz o to, by ukazała Syna."
+			"function": "Tryb rozkazujący skierowany do Maryi. Dopełnieniem jest „Iesum” (w039)."
 		},
 		"w049": {
 			"gloss": "O"
@@ -231,8 +230,7 @@
 			"gloss": "Boża"
 		},
 		"w062": {
-			"gloss": "Rodzicielko",
-			"function": "Wołacz. Korpus pisze genetrix przez e, jak wszędzie u siebie. Obie pisownie są tym samym słowem od gigno (rodzić)."
+			"gloss": "Rodzicielko"
 		},
 		"w063": {
 			"gloss": "Abyśmy"
@@ -242,11 +240,11 @@
 		},
 		"w065": {
 			"gloss": "się stali",
-			"function": "Strona bierna: dosłownie „abyśmy zostali uczynieni godnymi”. Godność nie jest tu naszym dziełem."
+			"function": "Strona bierna: dosłownie, abyśmy zostali uczynieni godnymi."
 		},
 		"w066": {
 			"gloss": "obietnic",
-			"function": "Ablativus: „dignus” łączy się z ablativem — godny czego. Słowo zależy od „digni” (w064), nie od czasownika."
+			"function": "Ablativus zależny od „digni” (w064)."
 		},
 		"w067": {
 			"gloss": "Chrystusowych"
