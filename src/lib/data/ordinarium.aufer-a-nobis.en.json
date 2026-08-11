@@ -13,13 +13,13 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest spreads and rejoins his hands — the gesture that opens a prayer in the Roman rite — and says one word aloud."
+			"narrative": "The priest spreads and rejoins his hands, then says one word aloud."
 		},
 		"s02": {
 			"translation": "Let us pray."
 		},
 		"s03": {
-			"narrative": "The priest goes up the steps toward the altar and says the rest under his breath, for himself alone."
+			"narrative": "The priest ascends the steps to the altar and continues silently."
 		},
 		"s04": {
 			"translation": "Take away from us our iniquities, we beseech Thee, O Lord, that we may be worthy to enter the holy of holies with pure minds."
@@ -34,7 +34,7 @@
 			"translation": "We beseech Thee, O Lord, by the merits of Thy Saints,"
 		},
 		"s08": {
-			"narrative": "The priest kisses the altar in the middle — the altar the words of the prayer are speaking of."
+			"narrative": "The priest kisses the middle of the altar."
 		},
 		"s09": {
 			"translation": "whose relics are here, and of all the Saints: that Thou wouldst deign to forgive me all my sins. Amen."
@@ -43,7 +43,7 @@
 	"words": {
 		"w001": {
 			"gloss": "let us pray",
-			"function": "A hortatory subjunctive in the first person plural. The only word of this prayer said aloud. The rest goes silently."
+			"function": "Hortatory subjunctive, first person plural."
 		},
 		"w002": {
 			"gloss": "take away",

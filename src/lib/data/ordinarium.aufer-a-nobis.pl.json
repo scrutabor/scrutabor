@@ -13,13 +13,13 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan rozkłada i składa ręce — gest, którym w liturgii rzymskiej otwiera się modlitwa — i mówi na głos jedno słowo."
+			"narrative": "Kapłan rozkłada i składa ręce, po czym mówi na głos jedno słowo."
 		},
 		"s02": {
 			"translation": "Módlmy się."
 		},
 		"s03": {
-			"narrative": "Wstępuje po stopniach ku ołtarzowi i dalej mówi już po cichu, tylko dla siebie."
+			"narrative": "Kapłan wstępuje po stopniach do ołtarza i dalszy ciąg mówi po cichu."
 		},
 		"s04": {
 			"translation": "Zgładź nasze nieprawości, prosimy Cię, Panie, abyśmy do miejsca najświętszego mogli wejść z czystym sercem."
@@ -34,7 +34,7 @@
 			"translation": "Prosimy Cię, Panie, przez zasługi Twoich Świętych,"
 		},
 		"s08": {
-			"narrative": "Kapłan całuje ołtarz pośrodku — ten właśnie ołtarz, o którym mówią słowa modlitwy."
+			"narrative": "Kapłan całuje środek ołtarza."
 		},
 		"s09": {
 			"translation": "których relikwie tu się znajdują, i wszystkich Świętych: racz odpuścić wszystkie grzechy moje. Amen."
@@ -43,7 +43,7 @@
 	"words": {
 		"w001": {
 			"gloss": "módlmy się",
-			"function": "Tryb łączący zachęty w pierwszej osobie liczby mnogiej. Jedyne słowo tej modlitwy powiedziane głośno. Resztę mówi się po cichu."
+			"function": "Tryb łączący zachęty, pierwsza osoba liczby mnogiej."
 		},
 		"w002": {
 			"gloss": "zgładź",
