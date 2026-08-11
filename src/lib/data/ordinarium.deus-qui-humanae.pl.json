@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan kreśli pateną znak krzyża nad korporałem, kładzie Hostię i przechodzi na prawą stronę ołtarza. We Mszy cichej sam wlewa wino do kielicha, a wodę, którą ma domieszać, błogosławi znakiem krzyża."
+			"narrative": "Kapłan kreśli pateną znak krzyża i kładzie Hostię na korporale. Diakon podaje wino, a subdiakon wodę. We Mszy cichej kapłan wlewa oboje i błogosławi wodę znakiem krzyża."
 		},
 		"s02": {
 			"translation": "Boże, któryś godność ludzkiej natury cudownie stworzył, a jeszcze cudowniej odnowił: przez to misterium wody i wina daj nam udział w bóstwie Tego, który przyjął nasze człowieczeństwo, Jezusa Chrystusa, Twojego Syna, naszego Pana: który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, przez wszystkie wieki wieków. Amen."
@@ -25,7 +25,7 @@
 	"words": {
 		"w001": {
 			"gloss": "Boże",
-			"function": "Wołacz. Forma jest ta sama co mianownik, bo „deus” nie ma osobnego wołacza."
+			"function": "Wołacz o formie takiej samej jak mianownik."
 		},
 		"w002": {
 			"gloss": "który",
@@ -41,29 +41,28 @@
 		},
 		"w005": {
 			"gloss": "godność",
-			"function": "Jedno dopełnienie dwóch czasowników: stworzył ją i odnowił."
+			"function": "Dopełnienie „condidísti” (w007) i „reformásti” (w010)."
 		},
 		"w006": {
 			"gloss": "cudownie"
 		},
 		"w007": {
-			"gloss": "stworzyłeś",
-			"function": "Cóndere to założyć, ustanowić — czasownik zakładania miast, nie zaś fingere, lepienie z gliny."
+			"gloss": "stworzyłeś"
 		},
 		"w008": {
 			"gloss": "i"
 		},
 		"w009": {
 			"gloss": "jeszcze cudowniej",
-			"function": "Stopień wyższy tego samego przysłówka, co „mirabíliter” (w006). Forma jest zarazem rodzajem nijakim stopnia wyższego przymiotnika — o przysłówku rozstrzyga to, że określa czasownik."
+			"function": "Przysłówek w stopniu wyższym określający „reformásti” (w010), odpowiada „mirabíliter” (w006)."
 		},
 		"w010": {
 			"gloss": "odnowiłeś",
-			"function": "Forma ściągnięta z reformavísti — łacina często tak skraca perfectum (amásti zamiast amavísti). Mszał zachowuje tu formę krótką obok pełnego condidísti dwa słowa wcześniej."
+			"function": "Ściągnięta forma perfectum „reformavísti”."
 		},
 		"w011": {
 			"gloss": "daj",
-			"function": "Tu zaczyna się prośba. Wszystko przed nią było przywołaniem."
+			"function": "Tryb rozkazujący rozpoczynający prośbę."
 		},
 		"w012": {
 			"gloss": "nam"
@@ -73,7 +72,7 @@
 		},
 		"w014": {
 			"gloss": "tej",
-			"function": "Odnosi się do wody i wina naraz. Forma nie wskazuje rodzaju, a rzeczowniki są dwojakiego rodzaju, dlatego tu go nie podano."
+			"function": "Dopełniacz liczby pojedynczej wprowadzający „aquæ” (w015) i „vini” (w017)."
 		},
 		"w015": {
 			"gloss": "wody"
@@ -86,7 +85,7 @@
 		},
 		"w018": {
 			"gloss": "tajemnicę",
-			"function": "Biernik po „per” (w013). Te słowa ofiarowanie wcięło w kolektę Bożego Narodzenia."
+			"function": "Biernik po „per” (w013)."
 		},
 		"w019": {
 			"gloss": "jego",
@@ -97,37 +96,37 @@
 		},
 		"w021": {
 			"gloss": "być",
-			"function": "Bezokolicznik jest dopełnieniem „da” (w011): daj nam być — daj, żebyśmy byli."
+			"function": "Bezokolicznik dopełniający „da” (w011)."
 		},
 		"w022": {
 			"gloss": "współuczestnikami",
-			"function": "Forma jest zarazem mianownikiem i biernikiem. Biernik, bo domyślnym podmiotem bezokolicznika „esse” (w021) jest „nas” w bierniku, a nie celownik „nobis” (w012). Con-sors to ten, kto ma udział w losie (sors) drugiego."
+			"function": "Orzecznik przy „esse” (w021)."
 		},
 		"w023": {
 			"gloss": "który",
-			"function": "Drugie zdanie względne odwraca prośbę: my mamy udział w Jego bóstwie, bo On wziął udział w naszym człowieczeństwie."
+			"function": "Wprowadza zdanie względne odnoszące się do Chrystusa, nazwanego jako „Iesus” (w030)."
 		},
 		"w024": {
 			"gloss": "człowieczeństwa",
-			"function": "Dopełniacz przy „párticeps” (w029), tak jak „divinitátis” (w020) przy „consórtes” (w022)."
+			"function": "Dopełniacz przy „párticeps” (w029)."
 		},
 		"w025": {
 			"gloss": "naszego"
 		},
 		"w026": {
 			"gloss": "stać się",
-			"function": "Bezokolicznik od fio — czasownika, który w łacinie zastępuje stronę bierną „czynić”: fíeri znaczy „stawać się”, „być uczynionym”."
+			"function": "Bezokolicznik dopełniający „dignátus” (w027)."
 		},
 		"w027": {
 			"gloss": "raczył"
 		},
 		"w028": {
 			"gloss": "—",
-			"function": "Z „dignátus” (w027) tworzy jedną formę czasu przeszłego czasownika deponentnego. Osobno nic tu nie znaczy."
+			"function": "Z „dignátus” (w027) tworzy deponentne perfectum „dignátus est”."
 		},
 		"w029": {
 			"gloss": "uczestnikiem",
-			"function": "Orzecznik po „fíeri” (w026). Pars-cápere: ten, kto bierze część."
+			"function": "Orzecznik po „fíeri” (w026)."
 		},
 		"w030": {
 			"gloss": "Jezus"
@@ -146,15 +145,15 @@
 		},
 		"w035": {
 			"gloss": "nasz",
-			"function": "Cały ten szereg to jedno dopowiedzenie do „qui” (w023) — imię wreszcie wypowiedziane."
+			"function": "Zgadza się z „Dóminus” (w034)."
 		},
 		"w036": {
 			"gloss": "który",
-			"function": "Zaczyna się zakończenie modlitwy do Ojca. Ponieważ Syn został właśnie wymieniony, zaczyna się ono od razu od „Qui tecum”, bez „Per Dóminum nostrum”."
+			"function": "Zaimek względny odnoszący się do Jezusa Chrystusa i rozpoczynający zakończenie."
 		},
 		"w037": {
 			"gloss": "z tobą",
-			"function": "Jedno słowo pisane, dwa wyrazy: przyimek cum stoi po zaimku, jak zawsze przy zaimkach osobowych (mecum, nobíscum)."
+			"function": "Przyimek „cum” następuje po zaimku osobowym: „te-cum”."
 		},
 		"w038": {
 			"gloss": "żyje"
@@ -179,7 +178,7 @@
 		},
 		"w045": {
 			"gloss": "Bóg",
-			"function": "Mianownik, nie wołacz jak „Deus” (w001): dopowiedzenie do „Qui” (w036) — Ten, który żyje i króluje jako Bóg."
+			"function": "Mianownik w apozycji do „Qui” (w036)."
 		},
 		"w046": {
 			"gloss": "przez"
