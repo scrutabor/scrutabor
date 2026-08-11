@@ -3103,6 +3103,12 @@
 			"head": "símilis, -e",
 			"pos": "adj"
 		},
+		"similitudo": {
+			"head": "similitúdo, similitúdinis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
 		"simul": {
 			"head": "simul",
 			"pos": "adv"
@@ -3121,6 +3127,16 @@
 			"head": "sócius, -a, -um",
 			"pos": "adj"
 		},
+		"sol": {
+			"head": "sol, solis",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 3
+		},
+		"solemnis": {
+			"head": "solémnis, solémne",
+			"pos": "adj"
+		},
 		"solus": {
 			"head": "solus, -a, -um",
 			"pos": "adj"
@@ -3130,6 +3146,12 @@
 			"pos": "noun",
 			"gender": "m",
 			"decl": 2
+		},
+		"sonitus": {
+			"head": "sónitus, -us",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 4
 		},
 		"spero": {
 			"head": "spero, speráre, sperávi, sperátum",
