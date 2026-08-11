@@ -134,12 +134,12 @@ test('the way out of a long panel does not scroll away', async ({ page }) => {
 	// so often near-identical forms of one lemma that losing the question
 	// two screens down is a real loss.
 	await page.setViewportSize({ width: 375, height: 812 });
-	await page.goto('/app/en/ordinarium/evangelium-ultimum?w=w184');
+	await page.goto('/app/en/ordinarium/memento-defunctorum?w=w026');
 
 	const sheet = page.locator('aside.sheet');
 	const header = sheet.locator('header');
 	const inner = sheet.locator('.inner');
-	await expect(sheet.locator('.form')).toHaveText('plenum');
+	await expect(sheet.locator('.form')).toHaveText('refrigérii');
 	expect(
 		await inner.evaluate((el) => el.scrollHeight > el.clientHeight),
 		'this panel is long enough to scroll — pick a longer word if it stops being'
