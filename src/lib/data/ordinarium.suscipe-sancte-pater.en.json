@@ -59,7 +59,7 @@
 		},
 		"w011": {
 			"gloss": "I",
-			"function": "Latin drops the subject pronoun unless it is stressed — and here it is: it is I, unworthy, who offer."
+			"function": "An expressed subject pronoun, modified by “indígnus” (w012) and “fámulus” (w013)."
 		},
 		"w012": {
 			"gloss": "unworthy"
@@ -73,7 +73,7 @@
 		},
 		"w015": {
 			"gloss": "offer",
-			"function": "A compound of ob- and fero (to carry): to carry a thing before someone. This whole part of the Mass is named from it."
+			"function": "The verb of the relative clause beginning with “quam” (w010)."
 		},
 		"w016": {
 			"gloss": "to Thee"
@@ -87,14 +87,14 @@
 		},
 		"w019": {
 			"gloss": "living",
-			"function": "The adjective, not the verb “I live” — agreement with “Deo” (w017) decides it."
+			"function": "Agrees with “Deo” (w017)."
 		},
 		"w020": {
 			"gloss": "and"
 		},
 		"w021": {
 			"gloss": "true",
-			"function": "A biblical turn of phrase — the words are Paul's (1 Thess 1:9): the living and true God, as against idols."
+			"function": "The phrase “Deo vivo et vero” also occurs in 1 Thessalonians 1:9."
 		},
 		"w022": {
 			"gloss": "for"
@@ -111,19 +111,18 @@
 			"gloss": "and"
 		},
 		"w026": {
-			"gloss": "offences",
-			"function": "The second of three nouns of fault: not the deed itself but the affront given to someone."
+			"gloss": "offences"
 		},
 		"w027": {
 			"gloss": "and"
 		},
 		"w028": {
 			"gloss": "negligences",
-			"function": "The third kind of fault: not what was done wrongly but what was left undone."
+			"function": "It denotes what was neglected or left undone."
 		},
 		"w029": {
 			"gloss": "my",
-			"function": "One “my” covers all three nouns. The form marks no gender and the nouns are of two, so no gender is claimed here."
+			"function": "Ablative plural, sharing its case with all three preceding nouns."
 		},
 		"w030": {
 			"gloss": "and"
@@ -137,14 +136,14 @@
 		},
 		"w033": {
 			"gloss": "here present",
-			"function": "A participle used as a noun: literally “those standing round”. This is the Church Latin word for the congregation."
+			"function": "A participle used as a noun: “those standing around”, meaning those present."
 		},
 		"w034": {
 			"gloss": "but"
 		},
 		"w035": {
 			"gloss": "also",
-			"function": "“sed et” is not “but and” but the settled “and moreover”: the list widens beyond those present."
+			"function": "In the phrase “sed et”, it expands the list: “and also”."
 		},
 		"w036": {
 			"gloss": "for"
@@ -163,12 +162,11 @@
 			"gloss": "living"
 		},
 		"w041": {
-			"gloss": "and",
-			"function": "A stronger “and” than et — it binds the two into one pair: the living and the dead together."
+			"gloss": "and"
 		},
 		"w042": {
 			"gloss": "dead",
-			"function": "From defúngi — to discharge, to have done with. The dead are those who have finished with life."
+			"function": "A participle used as a noun: “the deceased”."
 		},
 		"w043": {
 			"gloss": "that"
@@ -182,11 +180,11 @@
 		},
 		"w046": {
 			"gloss": "them",
-			"function": "The form is dative as well as ablative and marks no gender. The masculine dative rests on the sense — those just named."
+			"function": "Dative plural with “profíciat” (w047), parallel to “mihi” (w044)."
 		},
 		"w047": {
 			"gloss": "may profit",
-			"function": "Its subject is the host: may it be of profit. Subjunctive after “ut” (w043)."
+			"function": "Subjunctive after “ut” (w043). Its subject is the offering previously named “hóstiam” (w009)."
 		},
 		"w048": {
 			"gloss": "unto"
