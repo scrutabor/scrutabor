@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The Preface comes to its end. The priest joins his hands before his breast, bows, and says the Sanctus in the same audible voice as the Preface — the server ringing the bell meanwhile. At the words “Benedíctus qui venit in nómine Dómini” he straightens up and signs himself with the cross from forehead to breast. The Canon begins immediately after, said silently."
+			"narrative": "The Preface comes to its end. The priest joins his hands before his breast, bows, and says the Sanctus in a moderate voice while the server rings the bell. At the words “Benedíctus qui venit in nómine Dómini” he straightens up and signs himself with the cross from forehead to breast. The Canon begins immediately after, said silently."
 		},
 		"s02": {
 			"translation": "Holy, holy, holy, Lord God of hosts."
@@ -34,7 +34,7 @@
 	"words": {
 		"w001": {
 			"gloss": "holy",
-			"function": "A predicate with no verb — supply “est”: holy (is) the Lord. All three acclamations describe “Dóminus” (w004), which is why they stand in the nominative and the masculine."
+			"function": "“Sanctus”, repeated three times, refers to “Dóminus” (w004) and is therefore nominative masculine. The copula “est” is understood."
 		},
 		"w002": {
 			"gloss": "holy"
