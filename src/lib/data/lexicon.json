@@ -1926,6 +1926,10 @@
 			"gender": "f",
 			"decl": 1
 		},
+		"medius": {
+			"head": "médius, -a, -um",
+			"pos": "adj"
+		},
 		"memini": {
 			"head": "mémini, meminísse",
 			"pos": "verb"
@@ -2034,6 +2038,11 @@
 			"gender": "m",
 			"decl": 3
 		},
+		"moveo": {
+			"head": "móveo, movére, movi, motum",
+			"pos": "verb",
+			"conj": 2
+		},
 		"mors": {
 			"head": "mors, mortis",
 			"pos": "noun",
@@ -2059,6 +2068,11 @@
 		"multus": {
 			"head": "multus, -a, -um",
 			"pos": "adj"
+		},
+		"mundo": {
+			"head": "mundo, mundáre, mundávi, mundátum",
+			"pos": "verb",
+			"conj": 1
 		},
 		"mundus": {
 			"head": "mundus, -i",
