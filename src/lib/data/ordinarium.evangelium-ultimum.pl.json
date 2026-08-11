@@ -263,14 +263,14 @@
 		},
 		"w064": {
 			"gloss": "Jej",
-			"function": "Rodzaj żeński, bo „lux” (w058) jest po łacinie rodzaju żeńskiego. Wielka litera to reguła tego wydania dla zaimka o odniesieniu Bożym: światłość tego wiersza to życie, które było w Słowie."
+			"function": "Rodzaj żeński, odnosi się do „lux” (w058)."
 		},
 		"w065": {
 			"gloss": "nie"
 		},
 		"w066": {
 			"gloss": "ogarnęły",
-			"function": "Czasownik znaczy zarazem „pochwycić” i „pojąć”, a zdanie nie każe wybierać: ciemności ani nie zdołały światła pochwycić, ani go nie pojęły."
+			"function": "Perfectum indicativi."
 		},
 		"w067": {
 			"gloss": "Był"
@@ -322,7 +322,7 @@
 		},
 		"w082": {
 			"gloss": "dał",
-			"function": "Coniunctivus imperfecti w zdaniu celowym po „ut” (w080) — czas przeszły, bo zdanie główne jest w przeszłości."
+			"function": "Coniunctivus imperfecti w zdaniu celowym po „ut” (w080)."
 		},
 		"w083": {
 			"gloss": "o"
@@ -335,7 +335,7 @@
 		},
 		"w086": {
 			"gloss": "wszyscy",
-			"function": "Przymiotnik użyty rzeczownikowo: rodzaj męski liczby mnogiej znaczy „wszyscy ludzie”."
+			"function": "Przymiotnik rodzaju męskiego w liczbie mnogiej użyty rzeczownikowo: „wszyscy”."
 		},
 		"w087": {
 			"gloss": "uwierzyli"
@@ -357,7 +357,7 @@
 		},
 		"w093": {
 			"gloss": "Światłością",
-			"function": "Orzecznik w mianowniku: po łacinie przy „esse” stoi ten sam przypadek co podmiot."
+			"function": "Orzecznik w mianowniku przy „erat” (w091)."
 		},
 		"w094": {
 			"gloss": "lecz"
@@ -459,7 +459,7 @@
 		},
 		"w126": {
 			"gloss": "swojej własności",
-			"function": "Przymiotnik bez rzeczownika, w liczbie mnogiej rodzaju nijakiego: „to, co Jego własne” — dom, dziedzictwo, kraj."
+			"function": "Przymiotnik rodzaju nijakiego w liczbie mnogiej użyty rzeczownikowo: „to, co Jego własne”."
 		},
 		"w127": {
 			"gloss": "przyszedł"
@@ -469,7 +469,7 @@
 		},
 		"w129": {
 			"gloss": "swoi",
-			"function": "Inne słowo niż „própria” (w126) — suus to zwrotny zaimek dzierżawczy — w tym samym rzeczownikowym użyciu, tym razem w rodzaju męskim: tam rzeczy, tu ludzie."
+			"function": "Przymiotnik rodzaju męskiego w liczbie mnogiej użyty rzeczownikowo: „swoi”. Por. nijakie „própria” (w126)."
 		},
 		"w130": {
 			"gloss": "Go"
@@ -503,7 +503,7 @@
 		},
 		"w140": {
 			"gloss": "synami",
-			"function": "Biernik przy bezokoliczniku „fíeri” (w142): łacina mówi „stać się synami” w bierniku, bo cała ta grupa zależy od „potestátem” (w139)."
+			"function": "Orzecznik w bierniku przy bezokoliczniku „fíeri” (w142)."
 		},
 		"w141": {
 			"gloss": "Bożymi"
@@ -513,14 +513,14 @@
 		},
 		"w143": {
 			"gloss": "tym",
-			"function": "Celownik liczby mnogiej, dopowiedzenie do „eis” (w138): powtarza je, żeby dopiąć zdanie względne — tym mianowicie, którzy wierzą."
+			"function": "Celownik liczby mnogiej w apozycji do „eis” (w138)."
 		},
 		"w144": {
 			"gloss": "którzy"
 		},
 		"w145": {
 			"gloss": "wierzą",
-			"function": "Czas teraźniejszy pośród perfectów: wiara trwa, podczas gdy reszta zdania opowiada o tym, co się stało."
+			"function": "Czas teraźniejszy, tryb oznajmujący."
 		},
 		"w146": {
 			"gloss": "w"
@@ -542,7 +542,7 @@
 		},
 		"w152": {
 			"gloss": "krwi",
-			"function": "Liczba mnoga tam, gdzie polszczyzna ma pojedynczą — hebraizm: „z krwi” znaczy tyle co „ze zwykłego rodzenia”."
+			"function": "Ablativus liczby mnogiej po „ex” (w151)."
 		},
 		"w153": {
 			"gloss": "ani"
@@ -592,7 +592,7 @@
 		},
 		"w168": {
 			"gloss": "ciałem",
-			"function": "Orzecznik w mianowniku, rodzaju żeńskiego — a mimo to imiesłów „factum” (w169) jest nijaki, bo zgadza się z podmiotem, ze Słowem, nie z ciałem."
+			"function": "Orzecznik rodzaju żeńskiego w mianowniku. Nijakie „factum” (w169) zgadza się z „Verbum” (w167)."
 		},
 		"w169": {
 			"gloss": "się stało"
@@ -617,7 +617,7 @@
 		},
 		"w176": {
 			"gloss": "ujrzeliśmy",
-			"function": "Pierwsza osoba liczby mnogiej — jedyny czasownik tego czytania w pierwszej osobie: my widzieliśmy."
+			"function": "Perfectum indicativi, pierwsza osoba liczby mnogiej."
 		},
 		"w177": {
 			"gloss": "chwałę"
@@ -630,11 +630,11 @@
 		},
 		"w180": {
 			"gloss": "jakby",
-			"function": "Nie stawia znaku równości, lecz porównuje: chwałę taką, jaka przystoi Jednorodzonemu."
+			"function": "Spójnik wprowadzający porównanie."
 		},
 		"w181": {
 			"gloss": "Jednorodzonego",
-			"function": "Przymiotnik użyty rzeczownikowo, w dopełniaczu: chwała należąca do Jednorodzonego."
+			"function": "Przymiotnik użyty rzeczownikowo w dopełniaczu: „Jednorodzonego”."
 		},
 		"w182": {
 			"gloss": "od"
