@@ -2130,8 +2130,7 @@
 			"senses": [
 				"uniżenie",
 				"pokora"
-			],
-			"note": "Od húmus — ziemia; uniżenie to bycie nisko przy ziemi."
+			]
 		},
 		"idem": {
 			"senses": [
@@ -2165,8 +2164,7 @@
 			"senses": [
 				"nienaruszony",
 				"nietknięty"
-			],
-			"note": "Od libáre — ujmować coś z ofiary; illibátus znaczy: taki, z którego nic nie ubyło."
+			]
 		},
 		"illumino": {
 			"senses": [
@@ -2178,18 +2176,21 @@
 				"iluminator"
 			]
 		},
-    "immaculatus": {
-      "senses": [
-        "niepokalany",
-        "nieskalany"
-      ]
-    },
+		"immaculatus": {
+			"senses": [
+				"niepokalany",
+				"nieskalany"
+			]
+		},
+		"immineo": {
+			"senses": ["zagrażać"]
+		},
 		"impero": {
 			"senses": [
 				"rozkazać",
 				"władać"
 			],
-			"note": "Rządzi celownikiem: rozkazuje się komuś, nie kogoś.",
+			"note": "Łączy się z celownikiem osoby, której się rozkazuje.",
 			"derivatives": [
 				"imperator",
 				"imperatyw"
@@ -2199,8 +2200,10 @@
 			"senses": [
 				"bezbożny",
 				"niegodziwy"
-			],
-			"note": "Przeciwieństwo pius — tego, kto oddaje należną cześć Bogu i rodzicom."
+			]
+		},
+		"impudicitia": {
+			"senses": ["nieczystość"]
 		},
 		"in": {
 			"senses": [
@@ -2214,7 +2217,6 @@
 				"wcielać",
 				"przyoblekać w ciało"
 			],
-			"note": "Czasownik łaciny chrześcijańskiej, utworzony od caro, carnis (ciało).",
 			"derivatives": [
 				"inkarnacja"
 			]
@@ -2224,15 +2226,16 @@
 				"kroczyć",
 				"iść",
 				"postępować"
-			],
-			"note": "Złożenie in + cédere — iść naprzód; nazywa sposób chodzenia, nie ruch w ogóle."
+			]
+		},
+		"incipio": {
+			"senses": ["zaczynać"]
 		},
 		"inclino": {
 			"senses": [
 				"nachylić",
 				"skłonić"
 			],
-			"note": "Prośba jest o ruch serca, nie o jego przekonanie: nachyl je, jak nachyla się naczynie.",
 			"derivatives": [
 				"inklinacja"
 			]
@@ -2264,7 +2267,7 @@
 				"łaskawość",
 				"darowanie kary"
 			],
-			"note": "W języku Kościoła stało się terminem: odpust, darowanie kary doczesnej.",
+			"note": "W terminologii kościelnej oznacza odpust: darowanie przed Bogiem kary doczesnej za grzechy zgładzone już co do winy.",
 			"derivatives": [
 				"indulgencja"
 			]
@@ -2283,7 +2286,7 @@
 				"otchłań",
 				"podziemie"
 			],
-			"note": "Zawsze w liczbie mnogiej: dosłownie „ci na dole”. Ab ínferis znaczy „spośród umarłych”, nie „z piekła”.",
+			"note": "Rzeczownikowo występuje w liczbie mnogiej; ab ínferis znaczy „spośród umarłych”.",
 			"derivatives": [
 				"inferno (od infernus)"
 			]
@@ -2293,7 +2296,6 @@
 				"piekło",
 				"otchłań"
 			],
-			"note": "Od inférus (dolny): miejsce położone niżej niż wszystko inne.",
 			"derivatives": [
 				"infernalny"
 			]
