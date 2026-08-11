@@ -2412,6 +2412,12 @@
 			"pos": "verb",
 			"conj": 2
 		},
+		"periculum": {
+			"head": "perículum, -i",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
 		"permitto": {
 			"head": "permítto, permíttere, permísi, permíssum",
 			"pos": "verb",
@@ -2495,6 +2501,10 @@
 		"postquam": {
 			"head": "postquam",
 			"pos": "conj"
+		},
+		"potens": {
+			"head": "potens, poténtis",
+			"pos": "adj"
 		},
 		"potestas": {
 			"head": "potéstas, potestátis",
