@@ -4927,7 +4927,6 @@
 				"ziemia"
 			],
 			"derivatives": [
-				"terytorium (sporne)",
 				"teren"
 			]
 		},
@@ -4935,7 +4934,6 @@
 			"senses": [
 				"trzeci"
 			],
-			"note": "Liczebnik porządkowy od tres (trzy).",
 			"derivatives": [
 				"tercja",
 				"tercet"
@@ -4946,7 +4944,6 @@
 				"przymierze",
 				"testament"
 			],
-			"note": "Rzymski testamentum to rozporządzenie na wypadek śmierci; łacina biblijna użyła tego słowa na oddanie hebrajskiego „przymierza” — i oba znaczenia brzmią w słowach konsekracji.",
 			"derivatives": [
 				"testament"
 			]
@@ -4991,7 +4988,6 @@
 				"przyznawać",
 				"przydzielać"
 			],
-			"note": "Pierwotnie: rozdzielać między tribus — rzymskie okręgi; stąd przydzielać.",
 			"derivatives": [
 				"trybut",
 				"atrybut",
@@ -5018,13 +5014,17 @@
 				"ty"
 			]
 		},
+		"tunc": {
+			"senses": [
+				"wtedy"
+			]
+		},
 		"tutamentum": {
 			"senses": [
 				"obrona",
 				"osłona",
 				"zabezpieczenie"
-			],
-			"note": "Od tueor — strzec, mieć na oku; słowo późne i rzadkie, zadomowione w łacinie chrześcijańskiej."
+			]
 		},
 		"tuus": {
 			"senses": [
@@ -5041,15 +5041,14 @@
 				"razem",
 				"wspólnie"
 			],
-			"note": "Zastygły ablativus liczebnika unus, używany jako przysłówek; una cum znaczy „razem z”."
+			"note": "Przysłówek utworzony od ablativu unus; una cum znaczy „razem z”."
 		},
 		"unde": {
 			"senses": [
 				"skąd",
 				"stąd też",
 				"dlatego"
-			],
-			"note": "Pytajne „skąd” użyte jako spójnik wnioskujący: „skoro tak, więc”."
+			]
 		},
 		"unigenitus": {
 			"senses": [
@@ -5101,7 +5100,7 @@
 				"aby",
 				"żeby"
 			],
-			"note": "Starsza postać ut; ta sama pisownia co bezokolicznik od utor (używać), ale to inne słowo."
+			"note": "Starsza postać ut; nie mylić z bezokolicznikiem od utor."
 		},
 		"utilitas": {
 			"senses": [
@@ -5133,8 +5132,7 @@
 				"albo",
 				"lub",
 				"czy też"
-			],
-			"note": "Dopuszcza oba człony, inaczej niż aut, które wyklucza jeden z nich."
+			]
 		},
 		"venerabilis": {
 			"senses": [
@@ -5150,7 +5148,7 @@
 				"czcić",
 				"oddawać cześć"
 			],
-			"note": "Deponens: forma bierna, znaczenie czynne. Rdzeń ten sam, co w imieniu Wenus.",
+			"note": "Deponens: forma bierna, znaczenie czynne.",
 			"derivatives": [
 				"weneracja"
 			]
