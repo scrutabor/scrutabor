@@ -28,7 +28,7 @@
 		},
 		"w002": {
 			"gloss": "które",
-			"function": "Zaimek względny bez zdania nadrzędnego, odsyłający do darów z modlitwy poprzedniej. Łacina zaczyna tak akapit, polszczyzna nie potrafi."
+			"function": "Zaimek względny odsyłający do darów wymienionych w poprzedniej modlitwie."
 		},
 		"w003": {
 			"gloss": "łaskawym",
@@ -39,7 +39,7 @@
 		},
 		"w005": {
 			"gloss": "pogodnym",
-			"function": "Druga z pary przydawek przy „vultu” (w006): oblicze bez chmury — patrz hasło o drodze tego słowa od nieba do twarzy."
+			"function": "Wraz z „propítio” (w003) określa „vultu” (w006)."
 		},
 		"w006": {
 			"gloss": "obliczem"
@@ -59,7 +59,7 @@
 		},
 		"w011": {
 			"gloss": "mieć",
-			"function": "Accépta habére — zwrot z Te ígitur (tam: accépta hábeas): uznać za przyjęte, wpisać na listę przyjętych."
+			"function": "W zwrocie „accépta habére”: „uznać za przyjęte”."
 		},
 		"w012": {
 			"gloss": "tak jak"
@@ -72,18 +72,17 @@
 		},
 		"w015": {
 			"gloss": "raczyłeś",
-			"function": "Imiesłów deponentny z „es”: forma bierna, znaczenie czynne, czas przeszły dokonany."
+			"function": "Imiesłów czasu przeszłego czasownika deponentnego „dignor”. Wraz z „es” (w016) tworzy czas przeszły dokonany."
 		},
 		"w016": {
-			"gloss": "—",
-			"function": "Czasownik posiłkowy: znaczenie czasu przeszłego niesie imiesłów „dignátus” (w015), i on jest tu tłumaczony."
+			"gloss": "—"
 		},
 		"w017": {
 			"gloss": "dary"
 		},
 		"w018": {
 			"gloss": "sługi",
-			"function": "Puer znaczy i „chłopiec”, i „sługa” — jak greckie país."
+			"function": "W tym miejscu „puer” znaczy „sługa”."
 		},
 		"w019": {
 			"gloss": "Twego"
@@ -116,7 +115,7 @@
 		},
 		"w028": {
 			"gloss": "to, co",
-			"function": "Zaimek względny bez poprzednika: „to, co ofiarował”. Ma przy sobie dwie apozycje (dopowiedzenia), które zamykają zdanie."
+			"function": "Zaimek względny bez wyrażonego poprzednika: „to, co ofiarował”. Po nim następują dwa dopowiedzenia."
 		},
 		"w029": {
 			"gloss": "Ci"
@@ -126,7 +125,7 @@
 		},
 		"w031": {
 			"gloss": "najwyższy",
-			"function": "W parze z „sacérdos” (w032). W Rdz 14 ta przydawka stoi przy Bogu — sacérdos Dei altíssimi. Kanon przenosi ją na kapłana."
+			"function": "Określa „sacérdos” (w032). W Rdz 14,18 Melchizedek jest nazwany „sacérdos Dei altíssimi” — „kapłanem Boga Najwyższego”."
 		},
 		"w032": {
 			"gloss": "kapłan"
@@ -143,14 +142,14 @@
 		},
 		"w036": {
 			"gloss": "ofiarę",
-			"function": "Apozycja (dopowiedzenie) do „quod” (w028): to, co ofiarował — święta ofiara."
+			"function": "Pierwsze dopowiedzenie do „quod” (w028): „święta ofiara”."
 		},
 		"w037": {
 			"gloss": "niepokalaną"
 		},
 		"w038": {
 			"gloss": "hostię",
-			"function": "Drugie z dwóch dopowiedzeń do „quod” (w028). Rodzaj żeński przy nijakim zaimku — dopowiedzenie zgadza się tylko przypadkiem."
+			"function": "Drugie dopowiedzenie do „quod” (w028). Żeńskie „hóstiam” i nijakie „quod” łączy przypadek: biernik."
 		}
 	}
 }
