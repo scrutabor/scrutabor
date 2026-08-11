@@ -3,7 +3,7 @@
 	"text": "ordinarium.praefatio-communis",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The common Preface — the one that names no feast and no mystery: it says merely “through Christ our Lord” and goes straight to the angels. The choirs it names — Angels, Dominations, Powers, Virtues, Seraphim — come from the New Testament lists (Col 1:16 and Eph 1:21) and from Isaiah's vision. The whole stretch from nos tibi to ágere is an infinitive clause — that we should give You thanks — hanging from the short est near the beginning.",
+	"about": "The Common Preface names no mystery of the day. After “through Christ our Lord” it turns to the angelic choirs' praise of God. Its opening sentence is built around “est”, which governs the construction “nos tibi grátias ágere”.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -37,7 +37,7 @@
 		},
 		"w002": {
 			"gloss": "right",
-			"function": "The priest repeats the words of the answer just made — Dignum et iustum est — and adds two of his own."
+			"function": "“Vere dignum et iustum est” takes up the answer “Dignum et iustum est”."
 		},
 		"w003": {
 			"gloss": "and"
@@ -47,11 +47,10 @@
 		},
 		"w005": {
 			"gloss": "it is",
-			"function": "The only finite verb in this long sentence. Everything from nos down to ágere is its subject, with æquum and salutáre as predicates."
+			"function": "The only finite verb in this sentence. Its subject is the construction “nos tibi grátias ágere”."
 		},
 		"w006": {
-			"gloss": "proper",
-			"function": "The received English prays “our duty and our salvation” for æquum et salutáre — a sense-rendering. The glosses keep the words' own senses."
+			"gloss": "proper"
 		},
 		"w007": {
 			"gloss": "and"
@@ -81,7 +80,7 @@
 		},
 		"w015": {
 			"gloss": "give",
-			"function": "The infinitive depending on “est” (w005): it is a worthy thing that we should give."
+			"function": "The infinitive in “nos tibi grátias ágere”, a construction governed by “est” (w005)."
 		},
 		"w016": {
 			"gloss": "Lord"
