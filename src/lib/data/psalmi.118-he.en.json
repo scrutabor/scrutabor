@@ -68,11 +68,11 @@
 		},
 		"w009": {
 			"gloss": "I will seek",
-			"function": "This edition states neither tense nor mood: the form is at once future indicative, “I will seek”, and present subjunctive, “let me seek”. Nothing in the sentence decides, so nothing is claimed. The same form returns in “custódiam” (w020) — there, the coordinate future decides it."
+			"function": "The form may be future indicative or present subjunctive. This edition does not resolve the ambiguity."
 		},
 		"w010": {
 			"gloss": "it",
-			"function": "Feminine accusative. The nearest antecedent is “viam” (w005), but “Legem” (w001) is feminine too and the Latin alone does not decide. The Greek has αὐτήν — the way."
+			"function": "A feminine accusative. It may refer to “viam” (w005) or to “Legem” (w001)."
 		},
 		"w011": {
 			"gloss": "always"
@@ -136,8 +136,7 @@
 			"gloss": "into"
 		},
 		"w029": {
-			"gloss": "the path",
-			"function": "Less than the “viam” (w005): a path worn rather than built."
+			"gloss": "the path"
 		},
 		"w030": {
 			"gloss": "of the commandments"
@@ -150,15 +149,15 @@
 		},
 		"w033": {
 			"gloss": "that very one",
-			"function": "An intensive pronoun. In the psalter ipse often stands where classical Latin would write a plain “is” — the Greek here has a simple αὐτήν — but the Latin lets it press: that very one."
+			"function": "An intensive pronoun referring to “sémitam” (w029): that very one."
 		},
 		"w034": {
 			"gloss": "I have wanted",
-			"function": "A perfect: the choice is already made, not merely declared."
+			"function": "A first-person singular perfect indicative."
 		},
 		"w035": {
 			"gloss": "incline",
-			"function": "The petition asks for a movement of the heart rather than for its conviction — tilt it, as a vessel is tilted."
+			"function": "An imperative whose object is “cor” (w036)."
 		},
 		"w036": {
 			"gloss": "heart"
@@ -207,7 +206,7 @@
 		},
 		"w050": {
 			"gloss": "emptiness",
-			"function": "From vanus, empty. Not vanity as conceit but what is hollow and without substance."
+			"function": "Here “vánitas” means emptiness or futility, not conceit."
 		},
 		"w051": {
 			"gloss": "in"
@@ -220,14 +219,14 @@
 		},
 		"w054": {
 			"gloss": "give life to",
-			"function": "Imperative of vivífico — literally “make alive”, from vivus and fácere."
+			"function": "An imperative of “vivífico”: make alive."
 		},
 		"w055": {
 			"gloss": "me"
 		},
 		"w056": {
 			"gloss": "establish",
-			"function": "From stare, to stand. The prayer asks that the word be set up so that it henceforth stands."
+			"function": "An imperative whose object is “elóquium” (w059)."
 		},
 		"w057": {
 			"gloss": "for the servant"
@@ -255,7 +254,7 @@
 		},
 		"w065": {
 			"gloss": "reproach",
-			"function": "Not shame felt inwardly but reproach thrown by others."
+			"function": "“Oppróbrium” means reproach or disgrace."
 		},
 		"w066": {
 			"gloss": "my"
@@ -270,14 +269,14 @@
 		},
 		"w069": {
 			"gloss": "(have)",
-			"function": "Not a verb of its own: “suspicátus sum” is a single form, a deponent perfect — passive in shape, active in sense, so “I have feared” and not “I have been suspected”."
+			"function": "With “suspicátus” (w068), it forms the perfect of a deponent verb: I have feared."
 		},
 		"w070": {
 			"gloss": "for"
 		},
 		"w071": {
 			"gloss": "judgements",
-			"function": "Nominative plural. The verb “are” is understood, as Latin often leaves it."
+			"function": "A nominative plural with the verb are understood."
 		},
 		"w072": {
 			"gloss": "Thy"
@@ -311,7 +310,7 @@
 		},
 		"w081": {
 			"gloss": "give life to",
-			"function": "The petition of verse 37 — “vivífica” (w054) — returns: the plea for life comes back at the stanza's close."
+			"function": "It repeats “vivífica” (w054) from the earlier verse."
 		},
 		"w082": {
 			"gloss": "me"
