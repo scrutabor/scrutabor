@@ -3083,6 +3083,9 @@
 				"remedy (from remédium)"
 			]
 		},
+		"medius": {
+			"senses": ["middle"]
+		},
 		"memini": {
 			"senses": [
 				"to remember",
@@ -3098,7 +3101,7 @@
 				"mindful",
 				"remembering"
 			],
-			"note": "It governs the genitive: mindful of a thing, never mindful a thing.",
+			"note": "It takes the genitive.",
 			"derivatives": [
 				"memorial",
 				"memory"
@@ -3131,7 +3134,6 @@
 				"to be counted worthy",
 				"to earn"
 			],
-			"note": "With an infinitive in liturgical Latin it usually means to be granted something rather than to have earned it: the soldier's sense of wages is the classical one, the sense of gift the Church's.",
 			"derivatives": [
 				"merit",
 				"meritorious",
@@ -3165,7 +3167,6 @@
 				"army",
 				"military service"
 			],
-			"note": "From miles, mílitis, a soldier.",
 			"derivatives": [
 				"militia",
 				"military (from miles)"
@@ -3176,7 +3177,7 @@
 				"wonderful",
 				"marvellous"
 			],
-			"note": "Its neuter plural stands as a noun: mirabília, wonders, the things worth wondering at.",
+			"note": "Substantive mirabília means “wonders” or “marvellous works”.",
 			"derivatives": [
 				"marvel"
 			]
@@ -3191,8 +3192,7 @@
 			"senses": [
 				"compassion",
 				"act of mercy"
-			],
-			"note": "Not the feeling of pity but its exercise: in the plural, particular acts of mercy."
+			]
 		},
 		"misereor": {
 			"senses": [
@@ -3221,7 +3221,7 @@
 				"to pity",
 				"to have mercy"
 			],
-			"note": "A deponent (passive form, active meaning). Its participle miseránte is active in form, as every deponent's present participle is."
+			"note": "A deponent verb: passive in form but active in meaning."
 		},
 		"missa": {
 			"senses": [
@@ -3238,7 +3238,6 @@
 				"to send",
 				"to let go"
 			],
-			"note": "Missa, the name of the Mass, is a late form of the noun missio (a dismissal), not the participle missus.",
 			"derivatives": [
 				"mission",
 				"missile"
@@ -3262,7 +3261,6 @@
 				"to remind",
 				"to warn"
 			],
-			"note": "From the same root as mens and memini: to make someone mindful.",
 			"derivatives": [
 				"monitor",
 				"admonish",
@@ -3278,6 +3276,9 @@
 				"mountain",
 				"amount"
 			]
+		},
+		"moveo": {
+			"senses": ["move"]
 		},
 		"mors": {
 			"senses": [
@@ -3321,6 +3322,9 @@
 				"multitude",
 				"multiple"
 			]
+		},
+		"mundo": {
+			"senses": ["cleanse"]
 		},
 		"mundus": {
 			"senses": [
