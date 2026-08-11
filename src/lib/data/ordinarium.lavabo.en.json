@@ -46,18 +46,18 @@
 	"words": {
 		"w001": {
 			"gloss": "I will wash",
-			"function": "A future opens the psalm and sets the tense for the two further main verbs — “circúmdabo” and “benedícam”."
+			"function": "First-person singular future."
 		},
 		"w002": {
 			"gloss": "among"
 		},
 		"w003": {
 			"gloss": "the innocent",
-			"function": "An adjective standing as a noun. In-nocens: one who does no harm."
+			"function": "An adjective used as a noun in the accusative plural after “inter” (w002)."
 		},
 		"w004": {
 			"gloss": "hands",
-			"function": "One spelling serving six slots of the paradigm. Accusative plural here, because it is the object of “Lavábo” (w001)."
+			"function": "Accusative plural as the object of “Lavábo” (w001)."
 		},
 		"w005": {
 			"gloss": "my"
@@ -66,26 +66,24 @@
 			"gloss": "and"
 		},
 		"w007": {
-			"gloss": "I will go about",
-			"function": "The stress falls on the antepenult, because the a of dare is short. Some editions accent it otherwise."
+			"gloss": "I will go about"
 		},
 		"w008": {
 			"gloss": "altar"
 		},
 		"w009": {
-			"gloss": "Thy",
-			"function": "Agrees with “altáre” (w008)."
+			"gloss": "Thy"
 		},
 		"w010": {
 			"gloss": "Lord"
 		},
 		"w011": {
 			"gloss": "that",
-			"function": "It opens a purpose clause: what the washing and the circling are for."
+			"function": "It opens a purpose clause with verbs in the subjunctive."
 		},
 		"w012": {
 			"gloss": "I may hear",
-			"function": "The form is also a future. The subjunctive is settled by “enárrem” (w016), which can be nothing else."
+			"function": "First-person singular subjunctive in the clause introduced by “Ut” (w011)."
 		},
 		"w013": {
 			"gloss": "the voice"
@@ -98,14 +96,14 @@
 		},
 		"w016": {
 			"gloss": "may tell",
-			"function": "E-narráre: to recount in order, to tell through to the end."
+			"function": "The second subjunctive verb governed by “Ut” (w011)."
 		},
 		"w017": {
 			"gloss": "all"
 		},
 		"w018": {
 			"gloss": "wonders",
-			"function": "A neuter plural adjective standing as a noun: the things worth wondering at."
+			"function": "A neuter plural adjective used as a noun."
 		},
 		"w019": {
 			"gloss": "Thy"
@@ -114,15 +112,14 @@
 			"gloss": "Lord"
 		},
 		"w021": {
-			"gloss": "I have loved",
-			"function": "Dilígere is love by choice — literally to pick out from among. Not feeling but preference."
+			"gloss": "I have loved"
 		},
 		"w022": {
 			"gloss": "the beauty"
 		},
 		"w023": {
 			"gloss": "of the house",
-			"function": "Genitive singular. The same spelling serves the nominative and the plural, and dependence on “decórem” (w022) decides."
+			"function": "Genitive singular dependent on “decórem” (w022)."
 		},
 		"w024": {
 			"gloss": "Thy"
@@ -138,25 +135,25 @@
 		},
 		"w028": {
 			"gloss": "of glory",
-			"function": "Two genitives one after another: the place of the dwelling — of what? — of thy glory."
+			"function": "A genitive dependent on “habitatiónis” (w027), which itself depends on “locum” (w026)."
 		},
 		"w029": {
 			"gloss": "Thy"
 		},
 		"w030": {
 			"gloss": "do not",
-			"function": "A prohibition or negative petition takes ne in Latin, not non."
+			"function": "“Ne” introduces a negative petition."
 		},
 		"w031": {
 			"gloss": "destroy",
-			"function": "Subjunctive in a negative petition: do not destroy."
+			"function": "A subjunctive governed by negative “Ne” (w030)."
 		},
 		"w032": {
 			"gloss": "with"
 		},
 		"w033": {
 			"gloss": "the wicked",
-			"function": "An adjective standing as a noun, like “innocéntes” (w003) at the psalm's opening — the two sides the psalmist asks to be sorted between."
+			"function": "An adjective used as a noun in the ablative plural after “cum” (w032)."
 		},
 		"w034": {
 			"gloss": "God"
@@ -178,25 +175,23 @@
 		},
 		"w040": {
 			"gloss": "of blood",
-			"function": "A genitive plural: literally “men of bloods”. A Hebrew way of naming murderers, rendered word for word."
+			"function": "Genitive plural dependent on “viris” (w039)."
 		},
 		"w041": {
 			"gloss": "life"
 		},
 		"w042": {
-			"gloss": "my",
-			"function": "Soul and life stand in parallel — one thing said twice over, as Hebrew poetry says it."
+			"gloss": "my"
 		},
 		"w043": {
 			"gloss": "in"
 		},
 		"w044": {
 			"gloss": "whose",
-			"function": "It refers back to “viris” (w039) in the verse before — the psalm goes on about the same men."
+			"function": "The relative pronoun refers to “viris” (w039) in the preceding verse."
 		},
 		"w045": {
-			"gloss": "hands",
-			"function": "The same hands as in the first verse, but another's, and full of something else."
+			"gloss": "hands"
 		},
 		"w046": {
 			"gloss": "iniquities"
@@ -215,7 +210,7 @@
 		},
 		"w051": {
 			"gloss": "—",
-			"function": "With “repléta” (w050) it makes one past passive form. On its own it means nothing here."
+			"function": "With “repléta” (w050), it forms a perfect passive."
 		},
 		"w052": {
 			"gloss": "with gifts",
