@@ -16,7 +16,7 @@
 			"translation": "Niech się zmiłuje nad tobą Bóg wszechmogący, a odpuściwszy ci grzechy, niech cię doprowadzi do życia wiecznego."
 		},
 		"s02": {
-			"narrative": "Kapłan odpowiada na modlitwę zanoszoną za niego samego."
+			"narrative": "Kapłan odpowiada."
 		},
 		"s03": {
 			"translation": "Amen."
@@ -28,42 +28,40 @@
 	"words": {
 		"w001": {
 			"gloss": "niech się zmiłuje",
-			"function": "Tryb łączący życzenia: nie „zmiłował się”, lecz „niech się zmiłuje”. Ministranci nie rozgrzeszają — proszą, żeby uczynił to Bóg."
+			"function": "Tryb łączący wyrażający prośbę skierowaną do Boga."
 		},
 		"w002": {
 			"gloss": "nad tobą",
-			"function": "Dopełniacz zaimka „ty”, nie zaimek dzierżawczy: misereor rządzi dopełniaczem osoby, nad którą się litujemy. Ta sama forma tui należy zarazem do odmiany „twój” — stąd pokusa, by czytać je jak zaimek dzierżawczy, taki jak „tuis” (w008)."
+			"function": "Dopełniacz liczby pojedynczej zależny od „Misereátur” (w001)."
 		},
 		"w003": {
-			"gloss": "wszechmogący",
-			"function": "Zgadza się z „Deus” (w004)."
+			"gloss": "wszechmogący"
 		},
 		"w004": {
 			"gloss": "Bóg",
-			"function": "Mianownik: podmiot, choć stoi dopiero na czwartym miejscu."
+			"function": "Mianownik jako podmiot „Misereátur” (w001) i „perdúcat” (w009)."
 		},
 		"w005": {
 			"gloss": "i"
 		},
 		"w006": {
 			"gloss": "odpuszczone",
-			"function": "Imiesłów otwiera ablativus absolutus — konstrukcję niezależną od reszty zdania: „gdy grzechy zostaną odpuszczone”."
+			"function": "Imiesłów tworzący z „peccátis” (w007) ablativus absolutus."
 		},
 		"w007": {
 			"gloss": "grzechy",
-			"function": "Podmiot ablativu absolutnego przy „dimíssis” (w006)."
+			"function": "Rzeczownik w konstrukcji ablativus absolutus z „dimíssis” (w006)."
 		},
 		"w008": {
-			"gloss": "twoje",
-			"function": "Zgadza się z „peccátis” (w007). To zaimek dzierżawczy, inaczej niż „tui” (w002) — ta sama rodzina słów, dwie różne role."
+			"gloss": "twoje"
 		},
 		"w009": {
 			"gloss": "niech doprowadzi",
-			"function": "Drugi tryb łączący życzenia, połączony z pierwszym: niech się zmiłuje i niech doprowadzi."
+			"function": "Drugi czasownik w trybie łączącym, współrzędny z „Misereátur” (w001)."
 		},
 		"w010": {
 			"gloss": "cię",
-			"function": "Biernik — dopełnienie „perdúcat” (w009)."
+			"function": "Biernik jako dopełnienie „perdúcat” (w009)."
 		},
 		"w011": {
 			"gloss": "do"
@@ -72,8 +70,7 @@
 			"gloss": "życia"
 		},
 		"w013": {
-			"gloss": "wiecznego",
-			"function": "Zgadza się z „vitam” (w012)."
+			"gloss": "wiecznego"
 		},
 		"w014": {
 			"gloss": "amen"
