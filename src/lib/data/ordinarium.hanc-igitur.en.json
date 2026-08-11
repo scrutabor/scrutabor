@@ -63,7 +63,7 @@
 		},
 		"w011": {
 			"gloss": "we beseech",
-			"function": "Often a fossilised parenthesis. Here it governs: the clause with “ut” (w013) hangs on this verb of asking."
+			"function": "A verb of asking on which the clause with “ut” (w013) depends."
 		},
 		"w012": {
 			"gloss": "O Lord"
@@ -73,14 +73,14 @@
 		},
 		"w014": {
 			"gloss": "appeased",
-			"function": "The adjective agrees with the unstated subject of “accípias” (w015): not be appeased, but receive already appeased."
+			"function": "Nominative singular referring to the unstated subject of “accípias” (w015)."
 		},
 		"w015": {
 			"gloss": "accept"
 		},
 		"w016": {
 			"gloss": "and the days",
-			"function": "Accusative plural. The -que attached to it joins this clause to the one before."
+			"function": "Accusative plural. The enclitic “-que” joins this petition to the preceding one."
 		},
 		"w017": {
 			"gloss": "our"
@@ -111,11 +111,11 @@
 		},
 		"w026": {
 			"gloss": "us",
-			"function": "The accusative subject of the infinitive “éripi” (w027): bid that we be snatched away."
+			"function": "Accusative subject of the infinitive “éripi” (w027)."
 		},
 		"w027": {
 			"gloss": "be snatched",
-			"function": "A passive infinitive depending on “iúbeas” (w032), five words further on. The same verb governs “numerári” (w034) as well."
+			"function": "A passive infinitive depending on “iúbeas” (w032), as does “numerári” (w034)."
 		},
 		"w028": {
 			"gloss": "and"
@@ -134,7 +134,7 @@
 		},
 		"w033": {
 			"gloss": "the flock",
-			"function": "An ablative under “in” (w029): numbered within the flock, not added to it."
+			"function": "Ablative governed by “in” (w029): among the elect."
 		},
 		"w034": {
 			"gloss": "be numbered"
@@ -143,8 +143,7 @@
 			"gloss": "Through"
 		},
 		"w036": {
-			"gloss": "Christ",
-			"function": "No eúndem here: Christ has not been named in this prayer, so there is nothing to refer back to."
+			"gloss": "Christ"
 		},
 		"w037": {
 			"gloss": "Lord"
