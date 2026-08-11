@@ -49,7 +49,7 @@
 			"translation": "ale nas zbaw ode złego."
 		},
 		"s13": {
-			"narrative": "Kapłan odpowiada sam sobie, po cichu."
+			"narrative": "Kapłan mówi po cichu Amen."
 		},
 		"s14": {
 			"translation": "Amen."
@@ -58,11 +58,11 @@
 	"words": {
 		"w001": {
 			"gloss": "módlmy się",
-			"function": "Samo wezwanie, wypowiadane głośno. To, co po nim następuje, jest jeszcze uzasadnieniem śmiałości, a nie modlitwą."
+			"function": "Tryb łączący zachęcający w pierwszej osobie liczby mnogiej."
 		},
 		"w002": {
 			"gloss": "przykazaniami",
-			"function": "Ablativus narzędzia przy „móniti” (w004): pouczeni czym — przykazaniami. Chodzi o nakaz Chrystusa, by modlić się tymi właśnie słowami."
+			"function": "Ablativus narzędzia przy móniti."
 		},
 		"w003": {
 			"gloss": "zbawiennymi",
@@ -70,7 +70,7 @@
 		},
 		"w004": {
 			"gloss": "pouczeni",
-			"function": "Imiesłów, nie przymiotnik — zgadza się z domyślnym „my”, podmiotem „audémus”: stąd pierwsza osoba liczby mnogiej na końcu."
+			"function": "Imiesłów zgadzający się z niewyrażonym zaimkiem nos, podmiotem audémus."
 		},
 		"w005": {
 			"gloss": "i"
@@ -81,11 +81,11 @@
 		},
 		"w007": {
 			"gloss": "ustanowieniem",
-			"function": "Ustanowienie czegoś, tu: sam czyn Pana, który tej modlitwy nauczył. Druga podstawa obok przykazania."
+			"function": "Ablativus narzędzia przy formáti. Institutio oznacza tu pouczenie: ukształtowani przez Bożą naukę."
 		},
 		"w008": {
 			"gloss": "ukształtowani",
-			"function": "Drugi imiesłów, równoważny z „móniti” (w004): najpierw nakaz, by się modlić, potem gotowe słowa."
+			"function": "Imiesłów zgadzający się z niewyrażonym zaimkiem nos, podmiotem audémus."
 		},
 		"w009": {
 			"gloss": "ośmielamy się",
@@ -93,19 +93,19 @@
 		},
 		"w010": {
 			"gloss": "mówić",
-			"function": "Dopełnia „audémus” (w009), a dwukropek po nim otwiera się wprost na modlitwę."
+			"function": "Bezokolicznik dopełniający audémus."
 		},
 		"w011": {
 			"gloss": "Ojcze",
-			"function": "Bezpośredni zwrot do Boga. Cała modlitwa jest mową wprost."
+			"function": "Wołacz liczby pojedynczej w bezpośrednim zwrocie do Boga."
 		},
 		"w012": {
 			"gloss": "nasz",
-			"function": "Zgadza się z „Pater” (w011). Nie „mój”, lecz „nasz” — modlitwa wspólnoty."
+			"function": "Wołacz rodzaju męskiego liczby pojedynczej, zgadzający się z Pater."
 		},
 		"w013": {
 			"gloss": "który",
-			"function": "Otwiera zdanie względne o adresacie."
+			"function": "Podmiot przy es w mianowniku."
 		},
 		"w014": {
 			"gloss": "jesteś",
@@ -116,19 +116,19 @@
 		},
 		"w016": {
 			"gloss": "niebiosach",
-			"function": "W liczbie mnogiej — por. „cælo” (w028), liczba pojedyncza, w tej samej modlitwie. Polski przekład oddaje ją pojedynczo."
+			"function": "Ablativus liczby mnogiej po in. Tradycyjny przekład oddaje go liczbą pojedynczą."
 		},
 		"w017": {
 			"gloss": "niech się święci",
-			"function": "Tryb łączący jako prośba-życzenie: „niech będzie święcone” — pierwsza z trzech próśb wypowiedzianych w trzeciej osobie."
+			"function": "Tryb łączący czasu teraźniejszego w trzeciej osobie strony biernej, wyrażający prośbę."
 		},
 		"w018": {
 			"gloss": "imię",
-			"function": "Podmiot prośby: co ma być święcone?"
+			"function": "Podmiot przy sanctificétur w mianowniku."
 		},
 		"w019": {
 			"gloss": "Twoje",
-			"function": "Zgadza się z „nomen” (w018)."
+			"function": "Mianownik rodzaju nijakiego liczby pojedynczej, zgadzający się z nomen."
 		},
 		"w020": {
 			"gloss": "niech przyjdzie",
