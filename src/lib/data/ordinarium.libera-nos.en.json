@@ -89,15 +89,14 @@
 			"gloss": "and"
 		},
 		"w011": {
-			"gloss": "to come",
-			"function": "Past, present and future close the list: no evil of any time is left outside the petition."
+			"gloss": "to come"
 		},
 		"w012": {
 			"gloss": "and"
 		},
 		"w013": {
 			"gloss": "interceding",
-			"function": "Ablative absolute with “Vírgine” (w018): while she intercedes. The construction hangs free of the main clause, which is why English needs “by the intercession of”."
+			"function": "A participle forming an ablative absolute with “Vírgine” (w018)."
 		},
 		"w014": {
 			"gloss": "blessed"
@@ -110,18 +109,18 @@
 		},
 		"w017": {
 			"gloss": "ever",
-			"function": "Not loose emphasis but part of the title: semper Virgo, ever-Virgin."
+			"function": "An adverb modifying “Vírgine” (w018): ever-Virgin."
 		},
 		"w018": {
 			"gloss": "Virgin"
 		},
 		"w019": {
 			"gloss": "of God",
-			"function": "Depends on “Genetríce” (w020), not on Vírgine: Mother of God, the title defined at Ephesus in 431."
+			"function": "A genitive dependent on “Genetríce” (w020)."
 		},
 		"w020": {
 			"gloss": "Mother",
-			"function": "In apposition to “Vírgine” (w018). The word means specifically she who bears, a mother by childbearing."
+			"function": "In apposition to “Vírgine” (w018)."
 		},
 		"w021": {
 			"gloss": "Mary"
@@ -148,8 +147,7 @@
 			"gloss": "Paul"
 		},
 		"w029": {
-			"gloss": "and",
-			"function": "Atque joins more tightly than et and gives what follows a slight lift: and Andrew besides."
+			"gloss": "and"
 		},
 		"w030": {
 			"gloss": "Andrew"
@@ -159,7 +157,7 @@
 		},
 		"w032": {
 			"gloss": "all",
-			"function": "Masculine here, agreeing with “Sanctis” (w033) — the saints, not the evils that the identical “ómnibus” (w006) qualifies."
+			"function": "Masculine ablative plural, agreeing with “Sanctis” (w033)."
 		},
 		"w033": {
 			"gloss": "the Saints",
@@ -167,11 +165,11 @@
 		},
 		"w034": {
 			"gloss": "grant",
-			"function": "The verb of its own clause — beside the imperative “Líbera” (w001) — held back until all the intercession has been named: everything since the evils was leading here."
+			"function": "Second-person singular imperative."
 		},
 		"w035": {
 			"gloss": "graciously",
-			"function": "An adjective agreeing with the unstated Thou, not an adverb: grant, being favourable. Latin describes the giver where English describes the giving."
+			"function": "A nominative adjective agreeing with the understood subject of “da” (w034)."
 		},
 		"w036": {
 			"gloss": "peace"
@@ -187,11 +185,11 @@
 		},
 		"w040": {
 			"gloss": "that",
-			"function": "The comma after ut marks an interruption: the phrase about mercy is wedged between the conjunction and its verb “simus” (w048)."
+			"function": "It introduces a purpose clause with “simus” (w048) as its verb."
 		},
 		"w041": {
 			"gloss": "by the help",
-			"function": "Ablative of means with “adiúti” (w044). Ops has no nominative singular in use, so this is one of the three forms the singular has."
+			"function": "Ablative of means with “adiúti” (w044)."
 		},
 		"w042": {
 			"gloss": "of mercy"
@@ -201,7 +199,7 @@
 		},
 		"w044": {
 			"gloss": "upheld",
-			"function": "A participle agreeing with the unstated subject of “simus” (w048) — us."
+			"function": "A participle agreeing with the understood subject of “simus” (w048)."
 		},
 		"w045": {
 			"gloss": "both",
@@ -215,14 +213,14 @@
 		},
 		"w048": {
 			"gloss": "we may be",
-			"function": "The verb the whole ut clause was waiting for. It governs both “líberi” (w050) and “secúri” (w055)."
+			"function": "The verb of the clause introduced by “ut” (w040), with “líberi” (w050) and “secúri” (w055) as predicates."
 		},
 		"w049": {
 			"gloss": "always"
 		},
 		"w050": {
 			"gloss": "free",
-			"function": "Predicate with “simus” (w048): free from sin — the guilt taken away."
+			"function": "The first predicate with “simus” (w048)."
 		},
 		"w051": {
 			"gloss": "and"
@@ -231,23 +229,21 @@
 			"gloss": "from"
 		},
 		"w053": {
-			"gloss": "all",
-			"function": "Agrees with “perturbatióne” (w054)."
+			"gloss": "all"
 		},
 		"w054": {
-			"gloss": "disquiet",
-			"function": "Outward disorder and inward agitation at once. The prayer asks peace for the days and quiet for the soul in one breath."
+			"gloss": "disquiet"
 		},
 		"w055": {
 			"gloss": "safe",
-			"function": "The second predicate with “simus” (w048), and the sharper of the pair: freed from sin, and past fearing it."
+			"function": "The second predicate with “simus” (w048)."
 		},
 		"w056": {
 			"gloss": "Through"
 		},
 		"w057": {
 			"gloss": "the same",
-			"function": "Eúndem wants to point back — but Iesus Christus is not named earlier in this prayer, and the opening “Dómine” reads as the Father. This is a known knot of the embolism, and the word carries the disputed flag."
+			"function": "Masculine accusative singular, agreeing with “Dóminum” (w058)."
 		},
 		"w058": {
 			"gloss": "Lord"
@@ -263,7 +259,7 @@
 		},
 		"w062": {
 			"gloss": "Son",
-			"function": "In apposition to “Christum” (w061) and addressed to the Father: through Thy Son. The Host is divided while this whole conclusion is said, not at these two words."
+			"function": "In apposition to “Christum” (w061)."
 		},
 		"w063": {
 			"gloss": "Thy"

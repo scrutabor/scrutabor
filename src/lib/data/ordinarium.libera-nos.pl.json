@@ -89,15 +89,14 @@
 			"gloss": "i"
 		},
 		"w011": {
-			"gloss": "przyszłego",
-			"function": "Przeszłość, teraźniejszość i przyszłość zamykają listę: żadne zło żadnego czasu nie zostaje poza prośbą."
+			"gloss": "przyszłego"
 		},
 		"w012": {
 			"gloss": "a"
 		},
 		"w013": {
 			"gloss": "za wstawiennictwem",
-			"function": "Ablativus absolutus z „Vírgine” (w018): gdy Ona się wstawia. Konstrukcja stoi luźno obok zdania głównego, dlatego polszczyzna oddaje ją rzeczownikiem."
+			"function": "Imiesłów tworzący z „Vírgine” (w018) ablativus absolutus."
 		},
 		"w014": {
 			"gloss": "błogosławionej"
@@ -110,18 +109,18 @@
 		},
 		"w017": {
 			"gloss": "zawsze",
-			"function": "Nie luźne wzmocnienie, lecz część tytułu: semper Virgo, zawsze Dziewica."
+			"function": "Przysłówek określający „Vírgine” (w018): zawsze Dziewicy."
 		},
 		"w018": {
 			"gloss": "Dziewicy"
 		},
 		"w019": {
 			"gloss": "Bożej",
-			"function": "Zależy od „Genetríce” (w020), nie od Vírgine: Rodzicielka Boga — tytuł orzeczony w Efezie w 431 roku."
+			"function": "Dopełniacz zależny od „Genetríce” (w020)."
 		},
 		"w020": {
 			"gloss": "Rodzicielki",
-			"function": "Apozycja (dopowiedzenie) do „Vírgine” (w018). Słowo znaczy dokładnie: ta, która rodzi — matka przez zrodzenie."
+			"function": "Apozycja (dopowiedzenie) do „Vírgine” (w018)."
 		},
 		"w021": {
 			"gloss": "Maryi"
@@ -148,8 +147,7 @@
 			"gloss": "Pawłem"
 		},
 		"w029": {
-			"gloss": "i",
-			"function": "Atque wiąże ciaśniej niż et i lekko podnosi to, co następuje: i jeszcze Andrzejem."
+			"gloss": "i"
 		},
 		"w030": {
 			"gloss": "Andrzejem"
@@ -159,7 +157,7 @@
 		},
 		"w032": {
 			"gloss": "wszystkimi",
-			"function": "Tutaj rodzaj męski — zgadza się ze „Sanctis” (w033), a nie ze złem, które określa identyczne „ómnibus” (w006)."
+			"function": "Ablativus liczby mnogiej rodzaju męskiego. Zgadza się z „Sanctis” (w033)."
 		},
 		"w033": {
 			"gloss": "Świętymi",
@@ -167,11 +165,11 @@
 		},
 		"w034": {
 			"gloss": "użycz",
-			"function": "Orzeczenie swojego zdania — obok rozkaźnika „Líbera” (w001) — wstrzymane aż do wymienienia całego wstawiennictwa: wszystko od zła prowadziło tutaj."
+			"function": "Druga osoba liczby pojedynczej trybu rozkazującego."
 		},
 		"w035": {
 			"gloss": "łaskawie",
-			"function": "Przymiotnik zgadzający się z niewypowiedzianym „Ty”, nie przysłówek: użycz, będąc łaskawym. Łacina opisuje dawcę tam, gdzie polszczyzna opisuje dawanie."
+			"function": "Przymiotnik w mianowniku. Zgadza się z domyślnym podmiotem „da” (w034)."
 		},
 		"w036": {
 			"gloss": "pokoju"
@@ -187,11 +185,11 @@
 		},
 		"w040": {
 			"gloss": "aby",
-			"function": "Przecinek po ut znaczy przerwę: zwrot o miłosierdziu wciska się między spójnik a jego orzeczenie „simus” (w048)."
+			"function": "Wprowadza zdanie celowe z orzeczeniem „simus” (w048)."
 		},
 		"w041": {
 			"gloss": "pomocą",
-			"function": "Ablativus narzędzia przy „adiúti” (w044). Ops nie ma w użyciu mianownika liczby pojedynczej, więc to jedna z trzech form, jakie pojedyncza liczba ma."
+			"function": "Ablativus narzędzia przy „adiúti” (w044)."
 		},
 		"w042": {
 			"gloss": "miłosierdzia"
@@ -201,7 +199,7 @@
 		},
 		"w044": {
 			"gloss": "wsparci",
-			"function": "Imiesłów zgadzający się z niewypowiedzianym podmiotem „simus” (w048) — z nami."
+			"function": "Imiesłów zgadzający się z domyślnym podmiotem „simus” (w048)."
 		},
 		"w045": {
 			"gloss": "i",
@@ -215,14 +213,14 @@
 		},
 		"w048": {
 			"gloss": "byśmy byli",
-			"function": "Orzeczenie, na które czekało całe zdanie po ut. Rządzi zarówno „líberi” (w050), jak i „secúri” (w055)."
+			"function": "Orzeczenie zdania rozpoczętego przez „ut” (w040), z orzecznikami „líberi” (w050) i „secúri” (w055)."
 		},
 		"w049": {
 			"gloss": "zawsze"
 		},
 		"w050": {
 			"gloss": "wolni",
-			"function": "Orzecznik przy „simus” (w048): wolni od grzechu — wina zdjęta."
+			"function": "Pierwszy orzecznik przy „simus” (w048)."
 		},
 		"w051": {
 			"gloss": "i"
@@ -231,23 +229,21 @@
 			"gloss": "od"
 		},
 		"w053": {
-			"gloss": "wszelkiego",
-			"function": "Zgadza się z „perturbatióne” (w054)."
+			"gloss": "wszelkiego"
 		},
 		"w054": {
-			"gloss": "zamętu",
-			"function": "Naraz zamieszanie zewnętrzne i wzburzenie wewnętrzne. Modlitwa jednym tchem prosi o pokój dla dni i o ciszę dla duszy."
+			"gloss": "zamętu"
 		},
 		"w055": {
 			"gloss": "bezpieczni",
-			"function": "Drugi orzecznik przy „simus” (w048), i ostrzejszy z pary: uwolnieni od grzechu i już się go nie lękający."
+			"function": "Drugi orzecznik przy „simus” (w048)."
 		},
 		"w056": {
 			"gloss": "Przez"
 		},
 		"w057": {
 			"gloss": "tegoż",
-			"function": "Eúndem chce wskazywać wstecz — ale w tej modlitwie Jezus Chrystus wcześniej nie pada z imienia, a „Dómine” z początku czyta się o Ojcu. To znany węzeł embolizmu i słowo nosi znak sporu."
+			"function": "Biernik liczby pojedynczej rodzaju męskiego. Zgadza się z „Dóminum” (w058)."
 		},
 		"w058": {
 			"gloss": "Pana"
@@ -263,7 +259,7 @@
 		},
 		"w062": {
 			"gloss": "Syna",
-			"function": "Apozycja (dopowiedzenie) do „Christum” (w061), zwrócona do Ojca: przez Syna Twego. Hostia zostaje przełamana podczas całego tego zakończenia, nie przy tych dwóch słowach."
+			"function": "Apozycja (dopowiedzenie) do „Christum” (w061)."
 		},
 		"w063": {
 			"gloss": "Twego"
