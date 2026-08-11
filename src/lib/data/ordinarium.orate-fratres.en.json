@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest kisses the altar and turns to the people, spreads and joins his hands, and, as the rubric directs, raises his voice a little."
+			"narrative": "The priest kisses the altar, turns to the people, spreads and joins his hands, and raises his voice a little."
 		},
 		"s02": {
 			"translation": "Pray, brethren, that my sacrifice and yours may be acceptable to God, the almighty Father."
@@ -25,7 +25,7 @@
 			"translation": "May the Lord accept the sacrifice at your hands for the praise and glory of His name, for our good also and the good of all His holy Church."
 		},
 		"s05": {
-			"narrative": "The priest answers in a low voice — the last word of the offertory he says to himself alone."
+			"narrative": "The priest says Amen in a low voice."
 		},
 		"s06": {
 			"translation": "Amen."
@@ -34,18 +34,18 @@
 	"words": {
 		"w001": {
 			"gloss": "pray",
-			"function": "A plural imperative: the priest speaks to everyone present."
+			"function": "A plural imperative addressed to those present."
 		},
 		"w002": {
 			"gloss": "brethren",
-			"function": "Vocative. In the plural it sounds the same as the nominative and the accusative."
+			"function": "Vocative plural, identical in form to the nominative and accusative plural."
 		},
 		"w003": {
 			"gloss": "that"
 		},
 		"w004": {
 			"gloss": "my",
-			"function": "Neuter, because it agrees with “sacrifícium” (w007), not with any masculine noun."
+			"function": "Neuter singular agreeing with “sacrifícium” (w007)."
 		},
 		"w005": {
 			"gloss": "and"
@@ -55,11 +55,11 @@
 		},
 		"w007": {
 			"gloss": "sacrifice",
-			"function": "Singular in spite of the two modifiers: mine and yours, but one sacrifice."
+			"function": "A singular noun modified by “meum” (w004) and “vestrum” (w006)."
 		},
 		"w008": {
 			"gloss": "acceptable",
-			"function": "Predicate after “fiat” (w009): that it may become acceptable."
+			"function": "A predicate adjective with “fiat” (w009)."
 		},
 		"w009": {
 			"gloss": "may be"
@@ -79,7 +79,7 @@
 		},
 		"w014": {
 			"gloss": "may receive",
-			"function": "The same verb with which the priest began both “Súscipe” prayers — here a subjunctive of wish, of the Lord in the third person."
+			"function": "A third-person subjunctive expressing a prayer."
 		},
 		"w015": {
 			"gloss": "the Lord"
@@ -95,7 +95,7 @@
 		},
 		"w019": {
 			"gloss": "thy",
-			"function": "The answer hands the sacrifice back to the priest: he called it “mine and yours”, they say “from thy hands”."
+			"function": "Agrees with “mánibus” (w018) and refers to the priest's hands."
 		},
 		"w020": {
 			"gloss": "unto"
@@ -113,8 +113,8 @@
 			"gloss": "of name"
 		},
 		"w025": {
-			"gloss": "His",
-			"function": "The reflexive possessive: his own, that is, the Lord's who receives. It agrees with “nóminis” (w024)."
+			"gloss": "His own",
+			"function": "A reflexive possessive referring to “Dóminus” (w015) and agreeing with “nóminis” (w024)."
 		},
 		"w026": {
 			"gloss": "unto"

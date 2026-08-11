@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan całuje ołtarz i odwraca się do ludu. Rozkłada i składa ręce, a głos — jak każe rubryka — podnosi nieco."
+			"narrative": "Kapłan całuje ołtarz, odwraca się do ludu, rozkłada i składa ręce oraz nieco podnosi głos."
 		},
 		"s02": {
 			"translation": "Módlcie się, bracia, aby moją i waszą ofiarę przyjął Bóg Ojciec wszechmogący."
@@ -25,7 +25,7 @@
 			"translation": "Niech Pan przyjmie ofiarę z rąk twoich na cześć i chwałę swojego imienia, a także na pożytek nasz i całego swego Kościoła świętego."
 		},
 		"s05": {
-			"narrative": "Kapłan odpowiada zniżonym głosem — ostatnie słowo ofiarowania mówi już tylko dla siebie."
+			"narrative": "Kapłan mówi Amen zniżonym głosem."
 		},
 		"s06": {
 			"translation": "Amen."
@@ -34,18 +34,18 @@
 	"words": {
 		"w001": {
 			"gloss": "módlcie się",
-			"function": "Liczba mnoga rozkaźnika: kapłan zwraca się do wszystkich obecnych."
+			"function": "Rozkaźnik liczby mnogiej skierowany do obecnych."
 		},
 		"w002": {
 			"gloss": "bracia",
-			"function": "Wołacz. W liczbie mnogiej brzmi tak samo jak mianownik i biernik."
+			"function": "Wołacz liczby mnogiej, o formie tożsamej z mianownikiem i biernikiem."
 		},
 		"w003": {
 			"gloss": "aby"
 		},
 		"w004": {
 			"gloss": "moja",
-			"function": "Rodzaj nijaki, bo zgadza się z „sacrifícium” (w007), nie z żadnym rzeczownikiem rodzaju męskiego."
+			"function": "Rodzaj nijaki liczby pojedynczej. Forma zgadza się z „sacrifícium” (w007)."
 		},
 		"w005": {
 			"gloss": "i"
@@ -55,11 +55,11 @@
 		},
 		"w007": {
 			"gloss": "ofiara",
-			"function": "Liczba pojedyncza mimo dwóch określeń: moja i wasza, ale ofiara jedna."
+			"function": "Rzeczownik w liczbie pojedynczej, określany przez „meum” (w004) i „vestrum” (w006)."
 		},
 		"w008": {
 			"gloss": "przyjemna",
-			"function": "Orzecznik po „fiat” (w009): aby się stała przyjemna."
+			"function": "Przymiotnik w funkcji orzecznika przy „fiat” (w009)."
 		},
 		"w009": {
 			"gloss": "stała się"
@@ -79,7 +79,7 @@
 		},
 		"w014": {
 			"gloss": "niech przyjmie",
-			"function": "Ten sam czasownik, którym kapłan zaczynał obie modlitwy „Súscipe” — tu w trybie łączącym życzenia, o Panu w trzeciej osobie."
+			"function": "Tryb łączący w trzeciej osobie, wyrażający prośbę."
 		},
 		"w015": {
 			"gloss": "Pan"
@@ -95,7 +95,7 @@
 		},
 		"w019": {
 			"gloss": "twoich",
-			"function": "Odpowiedź oddaje ofiarę kapłanowi: on nazwał ją „moją i waszą”, oni mówią „z rąk twoich”."
+			"function": "Zgadza się z „mánibus” (w018) i odnosi się do rąk kapłana."
 		},
 		"w020": {
 			"gloss": "na"
@@ -113,8 +113,8 @@
 			"gloss": "imienia"
 		},
 		"w025": {
-			"gloss": "jego",
-			"function": "Zaimek zwrotny dzierżawczy: „swojego”, czyli Pana, który przyjmuje. Zgadza się z „nóminis” (w024)."
+			"gloss": "swego",
+			"function": "Zaimek zwrotny dzierżawczy odnosi się do „Dóminus” (w015) oraz zgadza się z „nóminis” (w024)."
 		},
 		"w026": {
 			"gloss": "na"
