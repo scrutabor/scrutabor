@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest makes the sign of the cross over the corporal with the paten, lays the Host on it and moves to the right side of the altar. At low Mass he pours the wine into the chalice himself, and blesses with the sign of the cross the water he is about to mix with it."
+			"narrative": "The priest makes the sign of the cross with the paten and places the Host on the corporal. The deacon supplies the wine and the subdeacon the water. At Low Mass the priest pours both and blesses the water with the sign of the cross."
 		},
 		"s02": {
 			"translation": "O God, who wonderfully created the dignity of human nature and still more wonderfully restored it: by the mystery of this water and wine, may we come to share in the divinity of Him who humbled Himself to share in our humanity, Jesus Christ, Your Son, our Lord: who lives and reigns with You in the unity of the Holy Spirit, God, for ever and ever. Amen."
@@ -25,7 +25,7 @@
 	"words": {
 		"w001": {
 			"gloss": "God",
-			"function": "Vocative. The form is the same as the nominative, because “deus” has no separate vocative."
+			"function": "Vocative, with the same form as the nominative."
 		},
 		"w002": {
 			"gloss": "who",
@@ -41,29 +41,28 @@
 		},
 		"w005": {
 			"gloss": "dignity",
-			"function": "One object for two verbs: he made it and he restored it."
+			"function": "Object of “condidísti” (w007) and “reformásti” (w010)."
 		},
 		"w006": {
 			"gloss": "wonderfully"
 		},
 		"w007": {
-			"gloss": "didst make",
-			"function": "Cóndere is to found, to establish — the verb for founding cities, not fingere, shaping clay."
+			"gloss": "didst make"
 		},
 		"w008": {
 			"gloss": "and"
 		},
 		"w009": {
 			"gloss": "more wonderfully",
-			"function": "The comparative of the same adverb as “mirabíliter” (w006). The form doubles as the neuter of the adjective's comparative. It is an adverb here because it modifies a verb."
+			"function": "Comparative adverb modifying “reformásti” (w010), corresponding to “mirabíliter” (w006)."
 		},
 		"w010": {
 			"gloss": "didst restore",
-			"function": "A contracted form of reformavísti — Latin often shortens the perfect this way (amásti for amavísti). The missal keeps the short form beside the full condidísti two words earlier."
+			"function": "Contracted perfect form of “reformavísti”."
 		},
 		"w011": {
 			"gloss": "grant",
-			"function": "Here the petition begins. Everything before it was invocation."
+			"function": "Imperative beginning the petition."
 		},
 		"w012": {
 			"gloss": "us"
@@ -73,7 +72,7 @@
 		},
 		"w014": {
 			"gloss": "this",
-			"function": "It qualifies the water and the wine together. The form marks no gender and the two nouns are of different genders, so none is claimed here."
+			"function": "Genitive singular introducing “aquæ” (w015) and “vini” (w017)."
 		},
 		"w015": {
 			"gloss": "water"
@@ -86,7 +85,7 @@
 		},
 		"w018": {
 			"gloss": "mystery",
-			"function": "Accusative after “per” (w013). These are the words the offertory cut into the Christmas Collect."
+			"function": "Accusative after “per” (w013)."
 		},
 		"w019": {
 			"gloss": "His",
@@ -97,37 +96,37 @@
 		},
 		"w021": {
 			"gloss": "to be",
-			"function": "The infinitive is the object of “da” (w011): grant us to be."
+			"function": "Infinitive complement of “da” (w011)."
 		},
 		"w022": {
 			"gloss": "sharers",
-			"function": "The form is nominative as well as accusative. Accusative, because the understood subject of “esse” (w021) is an accusative us, not the dative “nobis” (w012). Con-sors is one who shares another's lot (sors)."
+			"function": "Predicate with “esse” (w021)."
 		},
 		"w023": {
 			"gloss": "who",
-			"function": "The second relative clause turns the petition around: we share his divinity because he took a share in our humanity."
+			"function": "Introduces a relative clause referring to Christ, named as “Iesus” (w030)."
 		},
 		"w024": {
 			"gloss": "humanity",
-			"function": "A genitive with “párticeps” (w029), just as “divinitátis” (w020) goes with “consórtes” (w022)."
+			"function": "Genitive complement of “párticeps” (w029)."
 		},
 		"w025": {
 			"gloss": "our"
 		},
 		"w026": {
 			"gloss": "to be made",
-			"function": "The infinitive of fio — the verb that serves Latin as the passive of “to make”: fíeri means to become, to be made."
+			"function": "Infinitive complement of “dignátus” (w027)."
 		},
 		"w027": {
 			"gloss": "deigned"
 		},
 		"w028": {
 			"gloss": "—",
-			"function": "With “dignátus” (w027) it makes one past-tense form of a deponent verb. On its own it means nothing here."
+			"function": "With “dignátus” (w027), forms the deponent perfect “dignátus est”."
 		},
 		"w029": {
 			"gloss": "a partaker",
-			"function": "Predicate after “fíeri” (w026). Pars-cápere: one who takes a part."
+			"function": "Predicate after “fíeri” (w026)."
 		},
 		"w030": {
 			"gloss": "Jesus"
@@ -146,15 +145,15 @@
 		},
 		"w035": {
 			"gloss": "our",
-			"function": "This whole series of nouns is one apposition to “qui” (w023) — the name at last spoken."
+			"function": "Agrees with “Dóminus” (w034)."
 		},
 		"w036": {
 			"gloss": "who",
-			"function": "Here begins the conclusion of a prayer to the Father. Because the Son has just been named, it starts straight at “Qui tecum”, without “Per Dóminum nostrum”."
+			"function": "Relative pronoun referring to Jesus Christ and beginning the conclusion."
 		},
 		"w037": {
 			"gloss": "with Thee",
-			"function": "One written word carrying two: the preposition cum stands after the pronoun, as it always does with the personal pronouns (mecum, nobíscum)."
+			"function": "The preposition “cum” follows the personal pronoun: “te-cum”."
 		},
 		"w038": {
 			"gloss": "liveth"
@@ -179,7 +178,7 @@
 		},
 		"w045": {
 			"gloss": "God",
-			"function": "Nominative, not vocative like “Deus” (w001): apposition to “Qui” (w036) — he who lives and reigns as God."
+			"function": "Nominative in apposition to “Qui” (w036)."
 		},
 		"w046": {
 			"gloss": "through"
