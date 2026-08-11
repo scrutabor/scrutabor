@@ -132,27 +132,27 @@
 		},
 		"w020": {
 			"gloss": "may come",
-			"function": "Optative subjunctive — the second petition: “may it come”."
+			"function": "Third-person present active subjunctive expressing a petition."
 		},
 		"w021": {
 			"gloss": "kingdom",
-			"function": "The subject of the petition: what is to come?"
+			"function": "Nominative subject of advéniat."
 		},
 		"w022": {
 			"gloss": "Thy",
-			"function": "Agrees with “regnum” (w021)."
+			"function": "Nominative neuter singular agreeing with regnum."
 		},
 		"w023": {
 			"gloss": "be done",
-			"function": "The third petition: “may it be done”. The same “fiat” Mary answers with at the Annunciation (Lk 1:38)."
+			"function": "Third-person present subjunctive of fio expressing a petition."
 		},
 		"w024": {
 			"gloss": "will",
-			"function": "The subject of the petition: what is to be done?"
+			"function": "Nominative subject of fiat."
 		},
 		"w025": {
 			"gloss": "Thy",
-			"function": "Agrees with “volúntas” (w024)."
+			"function": "Nominative feminine singular agreeing with volúntas."
 		},
 		"w026": {
 			"gloss": "as"
@@ -162,7 +162,7 @@
 		},
 		"w028": {
 			"gloss": "heaven",
-			"function": "Singular — compare “cælis” (w016)."
+			"function": "Ablative singular after in."
 		},
 		"w029": {
 			"gloss": "and"
@@ -175,23 +175,23 @@
 		},
 		"w032": {
 			"gloss": "bread",
-			"function": "Object of “da” (w035): give what — bread."
+			"function": "Accusative object of da."
 		},
 		"w033": {
 			"gloss": "our",
-			"function": "Agrees with “Panem” (w032)."
+			"function": "Accusative masculine singular agreeing with panem."
 		},
 		"w034": {
 			"gloss": "daily",
-			"function": "Agrees with “Panem” (w032)."
+			"function": "Accusative masculine singular agreeing with panem."
 		},
 		"w035": {
 			"gloss": "give",
-			"function": "The first petition voiced as a direct imperative. The negative petition “indúcas” (w052) will use the subjunctive instead."
+			"function": "Second-person singular present imperative."
 		},
 		"w036": {
 			"gloss": "to us",
-			"function": "Give to whom — to us."
+			"function": "Dative indirect object of da."
 		},
 		"w037": {
 			"gloss": "today"
@@ -204,35 +204,35 @@
 		},
 		"w040": {
 			"gloss": "us",
-			"function": "Forgive for whom — for us: the person forgiven stands in the dative."
+			"function": "Dative of the person forgiven with dimítte."
 		},
 		"w041": {
 			"gloss": "debts",
-			"function": "Literally “debts”. The received English says “trespasses”."
+			"function": "Accusative plural. Literally debts. The received English has trespasses."
 		},
 		"w042": {
 			"gloss": "our",
-			"function": "Agrees with “débita” (w041)."
+			"function": "Accusative neuter plural agreeing with débita."
 		},
 		"w043": {
 			"gloss": "as",
-			"function": "Opens the comparison with our own forgiving."
+			"function": "Introduces the comparison with our forgiving."
 		},
 		"w044": {
 			"gloss": "also",
-			"function": "Here “also”: as we too."
+			"function": "Et has the adverbial sense also here."
 		},
 		"w045": {
 			"gloss": "we",
-			"function": "The subject spelled out for emphasis."
+			"function": "Nominative subject expressed for emphasis."
 		},
 		"w046": {
 			"gloss": "forgive",
-			"function": "Indicative — a statement of fact, not a petition: this is what we do."
+			"function": "Present indicative, in contrast to the petitionary subjunctives."
 		},
 		"w047": {
 			"gloss": "debtors",
-			"function": "We forgive whom — the debtors. Literally “to the debtors”, traditionally “those who trespass against us”."
+			"function": "Dative plural indirect object of dimíttimus. Literally debtors."
 		},
 		"w048": {
 			"gloss": "our",
