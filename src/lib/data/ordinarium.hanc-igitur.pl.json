@@ -63,7 +63,7 @@
 		},
 		"w011": {
 			"gloss": "prosimy",
-			"function": "Zwykle skostniałe wtrącenie. Tu jednak rządzi: na tym czasowniku prośby wisi zdanie z „ut” (w013)."
+			"function": "Czasownik prośby, od którego zależy zdanie z „ut” (w013)."
 		},
 		"w012": {
 			"gloss": "Panie"
@@ -73,14 +73,14 @@
 		},
 		"w014": {
 			"gloss": "przejednany",
-			"function": "Przymiotnik zgadza się z domyślnym podmiotem „accípias” (w015): nie „daj się przebłagać”, lecz „przyjmij już przejednany”."
+			"function": "Mianownik liczby pojedynczej odnoszący się do domyślnego podmiotu „accípias” (w015)."
 		},
 		"w015": {
 			"gloss": "przyjął"
 		},
 		"w016": {
 			"gloss": "i dni",
-			"function": "Biernik liczby mnogiej. Cząstka -que, doczepiona na końcu wyrazu otwierającego zdanie, łączy je z poprzednim."
+			"function": "Biernik liczby mnogiej. Enklityka „-que” łączy tę prośbę z poprzednią."
 		},
 		"w017": {
 			"gloss": "nasze"
@@ -111,11 +111,11 @@
 		},
 		"w026": {
 			"gloss": "nas",
-			"function": "Biernik jako podmiot bezokolicznika „éripi” (w027): każ, byśmy zostali wyrwani."
+			"function": "Biernik jako podmiot bezokolicznika „éripi” (w027)."
 		},
 		"w027": {
 			"gloss": "być wyrwanymi",
-			"function": "Bezokolicznik bierny zależny od „iúbeas” (w032), które stoi o pięć słów dalej. Ten sam czasownik rządzi też „numerári” (w034)."
+			"function": "Bezokolicznik bierny zależny od „iúbeas” (w032), podobnie jak „numerári” (w034)."
 		},
 		"w028": {
 			"gloss": "i"
@@ -134,7 +134,7 @@
 		},
 		"w033": {
 			"gloss": "trzody",
-			"function": "Ablativus po „in” (w029): policzonym w trzodzie, nie do trzody."
+			"function": "Ablativus zależny od „in” (w029): w gronie wybranych."
 		},
 		"w034": {
 			"gloss": "być policzonymi"
@@ -143,8 +143,7 @@
 			"gloss": "Przez"
 		},
 		"w036": {
-			"gloss": "Chrystusa",
-			"function": "Tu bez „eúndem”: Chrystus nie był w tej modlitwie wymieniony, więc nie ma do czego odsyłać."
+			"gloss": "Chrystusa"
 		},
 		"w037": {
 			"gloss": "Pana"
