@@ -1060,6 +1060,10 @@
 			"gender": "f",
 			"decl": 4
 		},
+		"donec": {
+			"head": "donec",
+			"pos": "conj"
+		},
 		"dono": {
 			"head": "dono, donáre, donávi, donátum",
 			"pos": "verb",
@@ -1089,6 +1093,12 @@
 		"dum": {
 			"head": "dum",
 			"pos": "conj"
+		},
+		"ebrietas": {
+			"head": "ebríetas, ebrietátis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
 		},
 		"ecce": {
 			"head": "ecce",
