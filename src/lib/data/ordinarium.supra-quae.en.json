@@ -28,7 +28,7 @@
 		},
 		"w002": {
 			"gloss": "these",
-			"function": "A relative with no antecedent clause, reaching back to the offerings of the prayer before. Latin opens a paragraph this way, English cannot."
+			"function": "A relative pronoun referring to the offerings named in the preceding prayer."
 		},
 		"w003": {
 			"gloss": "gracious",
@@ -39,7 +39,7 @@
 		},
 		"w005": {
 			"gloss": "serene",
-			"function": "The second of the pair of epithets with “vultu” (w006): a face without a cloud — see the lemma for the word’s road from sky to countenance."
+			"function": "Together with “propítio” (w003), it modifies “vultu” (w006)."
 		},
 		"w006": {
 			"gloss": "countenance"
@@ -59,7 +59,7 @@
 		},
 		"w011": {
 			"gloss": "to hold",
-			"function": "Accépta habére — the idiom of the Te ígitur (there: accépta hábeas): to hold as received, to enter on the list of the accepted."
+			"function": "In the phrase “accépta habére”: “to regard as accepted”."
 		},
 		"w012": {
 			"gloss": "as"
@@ -72,18 +72,17 @@
 		},
 		"w015": {
 			"gloss": "Thou didst deign",
-			"function": "A deponent participle with es: passive in form, active in meaning, and perfect in tense."
+			"function": "The perfect participle of the deponent verb “dignor”. With “es” (w016), it forms the perfect tense."
 		},
 		"w016": {
-			"gloss": "—",
-			"function": "The auxiliary: the tense is carried by the participle “dignátus” (w015), which is what the gloss renders."
+			"gloss": "—"
 		},
 		"w017": {
 			"gloss": "the gifts"
 		},
 		"w018": {
 			"gloss": "of the servant",
-			"function": "Puer means both boy and servant, as Greek país does."
+			"function": "Here “puer” means “servant”."
 		},
 		"w019": {
 			"gloss": "Thy"
@@ -116,7 +115,7 @@
 		},
 		"w028": {
 			"gloss": "that which",
-			"function": "A relative with no antecedent: that which he offered. Two appositions close the sentence after it."
+			"function": "A relative pronoun without an expressed antecedent: “that which he offered”. Two appositions follow it."
 		},
 		"w029": {
 			"gloss": "to Thee"
@@ -126,7 +125,7 @@
 		},
 		"w031": {
 			"gloss": "high",
-			"function": "Paired with “sacérdos” (w032). In Gen 14 the epithet stands with God — sacérdos Dei altíssimi. The Canon moves it to the priest."
+			"function": "It modifies “sacérdos” (w032). In Genesis 14:18 Melchisedech is called “sacérdos Dei altíssimi” — “priest of God most high”."
 		},
 		"w032": {
 			"gloss": "priest"
@@ -143,14 +142,14 @@
 		},
 		"w036": {
 			"gloss": "sacrifice",
-			"function": "In apposition to “quod” (w028): the thing he offered — a holy sacrifice."
+			"function": "The first apposition to “quod” (w028): “a holy sacrifice”."
 		},
 		"w037": {
 			"gloss": "an unspotted"
 		},
 		"w038": {
 			"gloss": "victim",
-			"function": "The second of the two appositions to “quod” (w028). Feminine beside the neuter relative — apposition agrees in case alone."
+			"function": "The second apposition to “quod” (w028). Feminine “hóstiam” and neuter “quod” share the accusative case."
 		}
 	}
 }
