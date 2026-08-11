@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PageNav from '$lib/components/PageNav.svelte';
 	import Pronunciation from '$lib/components/Pronunciation.svelte';
+	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { GENDER_MARK, describeLemma } from '$lib/morph';
 
@@ -48,6 +49,7 @@
 				<p class="senses">{sense.senses.join(', ')}</p>
 				{#if sense.note}
 					<p class="note">{sense.note}</p>
+					<SourceNotes citations={sense.note_citations} {lang} centered />
 				{/if}
 				{#if sense.derivatives}
 					<p class="derivatives">

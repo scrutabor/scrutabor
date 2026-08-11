@@ -81,6 +81,40 @@ describe('vendored corpus snapshot', () => {
 		}
 	});
 
+	it('keeps reader-facing citations exact and attached to prose', () => {
+		for (const key of textKeys) {
+			const citations = (lang: 'pl' | 'en') => {
+				const gloss = TEXTS[key].glosses[lang];
+				return {
+					about: gloss.about_citations,
+					words: Object.fromEntries(
+						Object.entries(gloss.words)
+							.filter(([, entry]) => entry.function_citations)
+							.map(([id, entry]) => [id, entry.function_citations])
+					),
+					segments: Object.fromEntries(
+						Object.entries(gloss.segments)
+							.filter(([, entry]) => entry.narrative_citations)
+							.map(([id, entry]) => [id, entry.narrative_citations])
+					)
+				};
+			};
+			expect(citations('pl'), key).toEqual(citations('en'));
+
+			for (const lang of ['pl', 'en'] as const) {
+				const gloss = TEXTS[key].glosses[lang];
+				if (gloss.about_citations) expect(gloss.about, `${key} ${lang} about`).toBeTruthy();
+				for (const [id, entry] of Object.entries(gloss.words)) {
+					if (entry.function_citations) expect(entry.function, `${key} ${lang} ${id}`).toBeTruthy();
+				}
+				for (const [id, entry] of Object.entries(gloss.segments)) {
+					if (entry.narrative_citations)
+						expect(entry.narrative, `${key} ${lang} ${id}`).toBeTruthy();
+				}
+			}
+		}
+	});
+
 	it('resolves every cross-reference to a word whose form matches the quote', () => {
 		for (const key of textKeys) {
 			const byId = new Map(allWords(key).map((w) => [w.id, w]));

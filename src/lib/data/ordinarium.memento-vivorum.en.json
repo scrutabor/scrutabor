@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.memento-vivorum",
 	"lang": "en",
 	"status": "working-edition",
-  "about": "The priest joins his hands and prays for a while for the living whom he intends to remember. The prayer then embraces all who are present and names its intentions: the redemption of their souls, the hope of salvation, and their well-being.",
+	"about": "The priest joins his hands and prays for a while for the living whom he intends to remember. The prayer then embraces all who are present and names its intentions: the redemption of their souls, the hope of salvation, and their well-being.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

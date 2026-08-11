@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.misereatur-tui",
 	"lang": "pl",
 	"status": "working-edition",
-  "about": "Usługujący modlą się za kapłana w liczbie pojedynczej: „misereátur tui”, „peccátis tuis”, „perdúcat te”, a kapłan odpowiada „Amen”. Po spowiedzi usługujących ta sama formuła występuje w liczbie mnogiej. Dopiero potem kapłan dodaje modlitwę „Indulgéntiam”.",
+	"about": "Usługujący modlą się za kapłana w liczbie pojedynczej: „misereátur tui”, „peccátis tuis”, „perdúcat te”, a kapłan odpowiada „Amen”. Po spowiedzi usługujących ta sama formuła występuje w liczbie mnogiej. Dopiero potem kapłan dodaje modlitwę „Indulgéntiam”.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

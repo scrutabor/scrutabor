@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.suscipe-sancte-pater",
 	"lang": "pl",
 	"status": "working-edition",
-  "about": "Kapłan ofiaruje Bogu Ojcu hostię za własne grzechy, przewinienia i zaniedbania, za wszystkich obecnych oraz za wszystkich wiernych chrześcijan, żywych i umarłych. Prosi, aby ofiara posłużyła jemu i im ku zbawieniu na życie wieczne.",
+	"about": "Kapłan ofiaruje Bogu Ojcu hostię za własne grzechy, przewinienia i zaniedbania, za wszystkich obecnych oraz za wszystkich wiernych chrześcijan, żywych i umarłych. Prosi, aby ofiara posłużyła jemu i im ku zbawieniu na życie wieczne.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

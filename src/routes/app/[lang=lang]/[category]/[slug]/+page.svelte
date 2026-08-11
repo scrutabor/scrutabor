@@ -6,6 +6,7 @@
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import Pager from '$lib/components/Pager.svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
+	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import RolePicker from '$lib/components/RolePicker.svelte';
 	import Sheet from '$lib/components/Sheet.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
@@ -213,6 +214,7 @@
 				onclose={() => (aboutOpen = false)}
 			>
 				<p class="about-text">{gloss.about}</p>
+				<SourceNotes citations={gloss.about_citations} {lang} />
 			</Sheet>
 		{/if}
 

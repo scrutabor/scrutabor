@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "orationes.regina-caeli",
 	"lang": "pl",
 	"status": "working-edition",
-  "about": "Maryjna antyfona okresu wielkanocnego. Wzywa Najświętszą Maryję Pannę do radości ze zmartwychwstania Jej Syna i prosi Ją o modlitwę za nami. Po antyfonie następuje werset z odpowiedzią, wyznający prawdziwe zmartwychwstanie Pana.",
+	"about": "Maryjna antyfona okresu wielkanocnego. Wzywa Najświętszą Maryję Pannę do radości ze zmartwychwstania Jej Syna i prosi Ją o modlitwę za nami. Po antyfonie następuje werset z odpowiedzią, wyznający prawdziwe zmartwychwstanie Pana.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

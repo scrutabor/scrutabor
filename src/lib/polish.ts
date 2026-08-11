@@ -34,6 +34,12 @@ export function findOrphans(text: string): string[] {
 	return [...text.matchAll(ORPHAN)].map((m) => m[2]);
 }
 
+function mapObject<T>(value: T, mapper: (key: string, child: unknown) => unknown): T {
+	const out: Record<string, unknown> = {};
+	for (const [key, child] of Object.entries(value as object)) out[key] = mapper(key, child);
+	return out as T;
+}
+
 /**
  * Walks a Polish content object and binds every string in it. Used on the
  * data at module load, so the prerendered HTML already carries the
@@ -53,9 +59,12 @@ export function bindProse<T>(value: T): T {
 	}
 	if (Array.isArray(value)) return value.map(bindProse) as T;
 	if (value && typeof value === 'object') {
-		const out: Record<string, unknown> = {};
-		for (const [k, v] of Object.entries(value)) out[k] = bindProse(v);
-		return out as T;
+		return mapObject(value, (key, child) => {
+			// Citation metadata is language-independent by corpus contract. A
+			// title beginning with Latin or English "A" must not acquire Polish
+			// typography merely because it accompanies the Polish prose layer.
+			return key.endsWith('_citations') ? child : bindProse(child);
+		});
 	}
 	return value;
 }
@@ -69,11 +78,9 @@ export function bindProse<T>(value: T): T {
 export function bindPlFields<T>(value: T): T {
 	if (Array.isArray(value)) return value.map(bindPlFields) as T;
 	if (value && typeof value === 'object') {
-		const out: Record<string, unknown> = {};
-		for (const [k, v] of Object.entries(value)) {
-			out[k] = k === 'pl' ? bindProse(v) : bindPlFields(v);
-		}
-		return out as T;
+		return mapObject(value, (key, child) =>
+			key === 'pl' ? bindProse(child) : bindPlFields(child)
+		);
 	}
 	return value;
 }

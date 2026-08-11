@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.deus-qui-humanae",
 	"lang": "pl",
 	"status": "working-edition",
-  "about": "Wlewając wodę do kielicha z winem, kapłan prosi, abyśmy przez tajemnicę tej wody i wina stali się uczestnikami bóstwa Chrystusa, który zechciał stać się uczestnikiem naszego człowieczeństwa. Modlitwa wysławia Boga, który godność ludzkiej natury cudownie stworzył i jeszcze cudowniej odnowił.",
+	"about": "Wlewając wodę do kielicha z winem, kapłan prosi, abyśmy przez tajemnicę tej wody i wina stali się uczestnikami bóstwa Chrystusa, który zechciał stać się uczestnikiem naszego człowieczeństwa. Modlitwa wysławia Boga, który godność ludzkiej natury cudownie stworzył i jeszcze cudowniej odnowił.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -190,7 +190,7 @@
 			"gloss": "wieki"
 		},
 		"w049": {
-		"gloss": "wieków"
+			"gloss": "wieków"
 		},
 		"w050": {
 			"gloss": "amen"

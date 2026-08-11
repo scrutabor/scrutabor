@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.deus-tu-conversus",
 	"lang": "en",
 	"status": "working-edition",
@@ -49,7 +49,7 @@
 		},
 		"w003": {
 			"gloss": "turning",
-		"function": "A passive participle used reflexively: “having turned”."
+			"function": "A passive participle used reflexively: “having turned”."
 		},
 		"w004": {
 			"gloss": "wilt give life",

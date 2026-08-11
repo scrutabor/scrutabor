@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "orationes.sancte-michael",
 	"lang": "en",
 	"status": "working-edition",
-  "about": "The prayer asks Saint Michael the Archangel to defend us against the wickedness and snares of the devil. It then beseeches God to command him and again addresses Saint Michael, as prince of the heavenly host, asking him by the power of God to cast Satan and the other evil spirits into hell.",
+	"about": "The prayer asks Saint Michael the Archangel to defend us against the wickedness and snares of the devil. It then beseeches God to command him and again addresses Saint Michael, as prince of the heavenly host, asking him by the power of God to cast Satan and the other evil spirits into hell.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"lang": "en",
 	"status": "working-edition",
 	"analysis_defaults": {
@@ -55,7 +55,7 @@
 				"Baptist",
 				"baptizer"
 			],
-      "note": "A masculine 1st-declension noun, like agrícola — farmer."
+			"note": "A masculine 1st-declension noun, like agrícola — farmer."
 		},
 		"Barnabas": {
 			"senses": [
@@ -208,7 +208,7 @@
 		"Paulus": {
 			"senses": [
 				"Paul"
-      ]
+			]
 		},
 		"Perpetua": {
 			"senses": [
@@ -219,7 +219,7 @@
 			"senses": [
 				"Peter"
 			],
-      "note": "Aramaic Cephas means “rock”; in John 1:42 the Evangelist interprets it with Greek Pétros."
+			"note": "Aramaic Cephas means “rock”; in John 1:42 the Evangelist interprets it with Greek Pétros."
 		},
 		"Philippus": {
 			"senses": [
@@ -268,7 +268,12 @@
 				"away from",
 				"by (an agent)"
 			],
-      "note": "Usually a before a consonant, ab before a vowel or h."
+			"note": "Usually a before a consonant, ab before a vowel or h."
+		},
+		"abicio": {
+			"senses": [
+				"throw away"
+			]
 		},
 		"absolutio": {
 			"senses": [
@@ -284,7 +289,7 @@
 				"and",
 				"and also"
 			],
-      "note": "The form of atque used before a consonant."
+			"note": "The form of atque used before a consonant."
 		},
 		"acceptabilis": {
 			"senses": [
@@ -391,7 +396,7 @@
 				"to enter on a list",
 				"to reckon among"
 			],
-      "note": "Literally, to write in beside or enter on a list."
+			"note": "Literally, to write in beside or enter on a list."
 		},
 		"aduno": {
 			"senses": [
@@ -419,6 +424,11 @@
 				"advocate (from advocátus)"
 			]
 		},
+		"aemulatio": {
+			"senses": [
+				"jealousy"
+			]
+		},
 		"aequitas": {
 			"senses": [
 				"equity",
@@ -439,6 +449,11 @@
 				"equanimity"
 			]
 		},
+		"aestas": {
+			"senses": [
+				"summer"
+			]
+		},
 		"aestimator": {
 			"senses": [
 				"one who appraises",
@@ -449,7 +464,7 @@
 			"senses": [
 				"eternal",
 				"everlasting"
-      ],
+			],
 			"derivatives": [
 				"eternity"
 			]
@@ -469,7 +484,7 @@
 			"senses": [
 				"lamb"
 			],
-      "note": "Ecce Agnus Dei — the Baptist's words about Christ (John 1:29)."
+			"note": "Ecce Agnus Dei — the Baptist's words about Christ (John 1:29)."
 		},
 		"ago": {
 			"senses": [
@@ -477,7 +492,7 @@
 				"to drive",
 				"to act"
 			],
-      "note": "In the phrase grátias ágere it means “to give thanks”.",
+			"note": "In the phrase grátias ágere it means “to give thanks”.",
 			"derivatives": [
 				"agent",
 				"agenda"
@@ -510,7 +525,7 @@
 			"senses": [
 				"altar"
 			],
-      "note": "The plural altária is common in classical Latin. The singular altáre also occurs regularly in the Vulgate and the liturgy.",
+			"note": "The plural altária is common in classical Latin. The singular altáre also occurs regularly in the Vulgate and the liturgy.",
 			"derivatives": [
 				"altar"
 			]
@@ -520,10 +535,16 @@
 				"high",
 				"deep"
 			],
-      "note": "Altíssimus is the superlative of altus: “the Most High.”",
+			"note": "Altíssimus is the superlative of altus: “the Most High.”",
 			"derivatives": [
 				"altitude",
 				"exalt"
+			]
+		},
+		"ambulo": {
+			"senses": [
+				"walk",
+				"conduct oneself"
 			]
 		},
 		"amen": {
@@ -591,7 +612,7 @@
 				"bishop",
 				"prelate"
 			],
-      "note": "Literally, one who stands before. In Christian Latin it is a title for a bishop."
+			"note": "Literally, one who stands before. In Christian Latin it is a title for a bishop."
 		},
 		"apostolicus": {
 			"senses": [
@@ -602,6 +623,11 @@
 			"senses": [
 				"apostle",
 				"envoy"
+			]
+		},
+		"appropinquo": {
+			"senses": [
+				"draw near"
 			]
 		},
 		"apud": {
@@ -620,9 +646,26 @@
 				"aqueduct"
 			]
 		},
+		"arbor": {
+			"senses": [
+				"tree"
+			]
+		},
 		"archangelus": {
 			"senses": [
 				"archangel"
+			]
+		},
+		"aresco": {
+			"senses": [
+				"dry up",
+				"wither",
+				"languish"
+			]
+		},
+		"arma": {
+			"senses": [
+				"arms"
 			]
 		},
 		"ascendo": {
@@ -649,7 +692,7 @@
 			"senses": [
 				"and",
 				"and moreover"
-      ]
+			]
 		},
 		"audeo": {
 			"senses": [
@@ -750,7 +793,7 @@
 				"to bless",
 				"to speak well of"
 			],
-      "note": "A compound of bene (well) and dico (I say).",
+			"note": "A compound of bene (well) and dico (I say).",
 			"derivatives": [
 				"benedictine (from the name Benedict)"
 			]
@@ -769,6 +812,11 @@
 			],
 			"derivatives": [
 				"benediction (from benedíctio)"
+			]
+		},
+		"benignitas": {
+			"senses": [
+				"kindness"
 			]
 		},
 		"benignus": {
@@ -834,6 +882,11 @@
 				"capture",
 				"receive",
 				"capable"
+			]
+		},
+		"caput": {
+			"senses": [
+				"head"
 			]
 		},
 		"caro": {
@@ -976,6 +1029,11 @@
 				"recognize"
 			]
 		},
+		"comessatio": {
+			"senses": [
+				"carousing"
+			]
+		},
 		"commixtio": {
 			"senses": [
 				"mingling",
@@ -1059,6 +1117,11 @@
 				"confession"
 			]
 		},
+		"confido": {
+			"senses": [
+				"trust"
+			]
+		},
 		"confiteor": {
 			"senses": [
 				"to confess",
@@ -1069,10 +1132,25 @@
 				"confession"
 			]
 		},
+		"confundo": {
+			"senses": [
+				"put to shame"
+			]
+		},
+		"confusio": {
+			"senses": [
+				"confusion"
+			]
+		},
 		"conglorifico": {
 			"senses": [
 				"to glorify together",
 				"to glorify along with"
+			]
+		},
+		"congruus": {
+			"senses": [
+				"fitting"
 			]
 		},
 		"consecratio": {
@@ -1123,7 +1201,9 @@
 			"note": "In the Creed, it means that the Son is of the same substance as the Father."
 		},
 		"contentio": {
-			"senses": ["strife"]
+			"senses": [
+				"strife"
+			]
 		},
 		"contra": {
 			"senses": [
@@ -1237,7 +1317,9 @@
 			]
 		},
 		"cubile": {
-			"senses": ["bed"]
+			"senses": [
+				"bed"
+			]
 		},
 		"culpa": {
 			"senses": [
@@ -1307,7 +1389,7 @@
 				"about, concerning",
 				"according to"
 			],
-      "note": "De can mark separation or motion from above; ex often marks motion from within."
+			"note": "De can mark separation or motion from above; ex often marks motion from within."
 		},
 		"debitor": {
 			"senses": [
@@ -1367,7 +1449,9 @@
 			]
 		},
 		"demonstro": {
-			"senses": ["show"]
+			"senses": [
+				"show"
+			]
 		},
 		"deprecatio": {
 			"senses": [
@@ -1414,7 +1498,7 @@
 				"God",
 				"god"
 			],
-      "note": "In the Vulgate and liturgical Latin, the vocative has the same form as the nominative: Deus.",
+			"note": "In the Vulgate and liturgical Latin, the vocative has the same form as the nominative: Deus.",
 			"derivatives": [
 				"deity",
 				"deism"
@@ -1483,7 +1567,7 @@
 				"to deign",
 				"to think worthy"
 			],
-      "note": "A deponent verb from dignus — worthy; dignéris means “be pleased to”.",
+			"note": "A deponent verb from dignus — worthy; dignéris means “be pleased to”.",
 			"derivatives": [
 				"deign"
 			]
@@ -1624,7 +1708,9 @@
 			]
 		},
 		"donec": {
-			"senses": ["until"]
+			"senses": [
+				"until"
+			]
 		},
 		"dono": {
 			"senses": [
@@ -1681,7 +1767,9 @@
 			]
 		},
 		"ebrietas": {
-			"senses": ["drunkenness"]
+			"senses": [
+				"drunkenness"
+			]
 		},
 		"ecce": {
 			"senses": [
@@ -1701,6 +1789,11 @@
 			"derivatives": [
 				"ecclesial",
 				"ecclesiastical"
+			]
+		},
+		"edoceo": {
+			"senses": [
+				"teach thoroughly"
 			]
 		},
 		"efficio": {
@@ -1769,7 +1862,7 @@
 				"word",
 				"utterance"
 			],
-      "note": "From éloqui, to speak out.",
+			"note": "From éloqui, to speak out.",
 			"derivatives": [
 				"eloquence (from éloqui)",
 				"eloquent (from éloqui)"
@@ -1825,6 +1918,11 @@
 				"to rescue"
 			]
 		},
+		"erubesco": {
+			"senses": [
+				"be ashamed"
+			]
+		},
 		"eruo": {
 			"senses": [
 				"to pluck out",
@@ -1836,6 +1934,11 @@
 			"senses": [
 				"and",
 				"also"
+			]
+		},
+		"etenim": {
+			"senses": [
+				"for indeed"
 			]
 		},
 		"etiam": {
@@ -1890,7 +1993,9 @@
 			]
 		},
 		"excito": {
-			"senses": ["stir up"]
+			"senses": [
+				"stir up"
+			]
 		},
 		"exilium": {
 			"senses": [
@@ -1911,7 +2016,9 @@
 			]
 		},
 		"exspectatio": {
-			"senses": ["expectation"]
+			"senses": [
+				"expectation"
+			]
 		},
 		"exspecto": {
 			"senses": [
@@ -1919,7 +2026,7 @@
 				"to look for, to expect",
 				"to wait"
 			],
-      "note": "The spelling expécto also occurs.",
+			"note": "The spelling expécto also occurs.",
 			"derivatives": [
 				"expectation"
 			]
@@ -1994,7 +2101,9 @@
 			]
 		},
 		"ficulneus": {
-			"senses": ["fig tree"]
+			"senses": [
+				"fig tree"
+			]
 		},
 		"fidelis": {
 			"senses": [
@@ -2056,7 +2165,9 @@
 			]
 		},
 		"fluctus": {
-			"senses": ["wave"]
+			"senses": [
+				"wave"
+			]
 		},
 		"formo": {
 			"senses": [
@@ -2138,14 +2249,16 @@
 			]
 		},
 		"generatio": {
-			"senses": ["generation"]
+			"senses": [
+				"generation"
+			]
 		},
 		"genetrix": {
 			"senses": [
 				"mother",
 				"she who bears"
 			],
-      "note": "A noun from gigno, to beget; the spelling genitrix also occurs."
+			"note": "A noun from gigno, to beget; the spelling genitrix also occurs."
 		},
 		"gens": {
 			"senses": [
@@ -2272,7 +2385,9 @@
 			]
 		},
 		"honeste": {
-			"senses": ["honorably"]
+			"senses": [
+				"honorably"
+			]
 		},
 		"honor": {
 			"senses": [
@@ -2333,6 +2448,11 @@
 				"humility"
 			]
 		},
+		"iam": {
+			"senses": [
+				"now"
+			]
+		},
 		"idem": {
 			"senses": [
 				"the same"
@@ -2386,7 +2506,9 @@
 			]
 		},
 		"immineo": {
-			"senses": ["threaten"]
+			"senses": [
+				"threaten"
+			]
 		},
 		"impero": {
 			"senses": [
@@ -2407,7 +2529,9 @@
 			]
 		},
 		"impudicitia": {
-			"senses": ["unchastity"]
+			"senses": [
+				"unchastity"
+			]
 		},
 		"in": {
 			"senses": [
@@ -2433,7 +2557,9 @@
 			]
 		},
 		"incipio": {
-			"senses": ["begin"]
+			"senses": [
+				"begin"
+			]
 		},
 		"inclino": {
 			"senses": [
@@ -2490,6 +2616,11 @@
 			"note": "It governs the dative of the person: indulgére alicui — to be gracious to someone.",
 			"derivatives": [
 				"indulge"
+			]
+		},
+		"induo": {
+			"senses": [
+				"clothe"
 			]
 		},
 		"inferi": {
@@ -2622,12 +2753,12 @@
 				"institution"
 			]
 		},
-	"intellectus": {
-		"senses": [
-			"understanding",
-			"insight"
-		],
-		"note": "From intellégere, to understand, grasp, or discern.",
+		"intellectus": {
+			"senses": [
+				"understanding",
+				"insight"
+			],
+			"note": "From intellégere, to understand, grasp, or discern.",
 			"derivatives": [
 				"intellect",
 				"intelligence (from intellégere)"
@@ -2679,7 +2810,7 @@
 				"to go in",
 				"to enter"
 			],
-      "note": "A compound of intro and eo; it inflects irregularly like eo.",
+			"note": "A compound of intro and eo; it inflects irregularly like eo.",
 			"derivatives": [
 				"introit"
 			]
@@ -2707,7 +2838,12 @@
 				"himself, herself, itself",
 				"the very one"
 			],
-      "note": "An intensive pronoun emphasizing the person or thing spoken of."
+			"note": "An intensive pronoun emphasizing the person or thing spoken of."
+		},
+		"irrideo": {
+			"senses": [
+				"mock"
+			]
 		},
 		"is": {
 			"senses": [
@@ -2724,7 +2860,9 @@
 			"note": "In Classical Latin, it usually points to a person or thing associated with the addressee."
 		},
 		"ita": {
-			"senses": ["so"]
+			"senses": [
+				"so"
+			]
 		},
 		"item": {
 			"senses": [
@@ -2879,12 +3017,14 @@
 			]
 		},
 		"levo": {
-			"senses": ["raise"]
+			"senses": [
+				"raise"
+			]
 		},
-	"lex": {
-		"senses": [
-			"law"
-		],
+		"lex": {
+			"senses": [
+				"law"
+			],
 			"note": "In Psalm 118, Latin lex corresponds to Hebrew torah, a word that means both law and instruction.",
 			"derivatives": [
 				"legal",
@@ -2965,13 +3105,15 @@
 			]
 		},
 		"luna": {
-			"senses": ["moon"]
+			"senses": [
+				"moon"
+			]
 		},
 		"lux": {
 			"senses": [
 				"light",
 				"daylight"
-      ]
+			]
 		},
 		"macula": {
 			"senses": [
@@ -3050,7 +3192,9 @@
 			]
 		},
 		"mare": {
-			"senses": ["sea"]
+			"senses": [
+				"sea"
+			]
 		},
 		"martyr": {
 			"senses": [
@@ -3084,7 +3228,9 @@
 			]
 		},
 		"medius": {
-			"senses": ["middle"]
+			"senses": [
+				"middle"
+			]
 		},
 		"memini": {
 			"senses": [
@@ -3205,7 +3351,7 @@
 			"senses": [
 				"mercy",
 				"compassion"
-      ]
+			]
 		},
 		"misericors": {
 			"senses": [
@@ -3277,9 +3423,6 @@
 				"amount"
 			]
 		},
-		"moveo": {
-			"senses": ["move"]
-		},
 		"mors": {
 			"senses": [
 				"death"
@@ -3297,6 +3440,11 @@
 			"note": "The perfect participle of mórior (to die), used both as an adjective and as a noun: mórtui, the dead.",
 			"derivatives": [
 				"mortuary"
+			]
+		},
+		"moveo": {
+			"senses": [
+				"move"
 			]
 		},
 		"mulier": {
@@ -3324,7 +3472,9 @@
 			]
 		},
 		"mundo": {
-			"senses": ["cleanse"]
+			"senses": [
+				"cleanse"
+			]
 		},
 		"mundus": {
 			"senses": [
@@ -3365,6 +3515,11 @@
 				"mystery"
 			]
 		},
+		"nam": {
+			"senses": [
+				"for"
+			]
+		},
 		"nascor": {
 			"senses": [
 				"to be born",
@@ -3377,9 +3532,6 @@
 				"nascent",
 				"renaissance"
 			]
-		},
-		"nam": {
-			"senses": ["for"]
 		},
 		"ne": {
 			"senses": [
@@ -3477,10 +3629,14 @@
 			]
 		},
 		"nox": {
-			"senses": ["night"]
+			"senses": [
+				"night"
+			]
 		},
 		"nubes": {
-			"senses": ["cloud"]
+			"senses": [
+				"cloud"
+			]
 		},
 		"numero": {
 			"senses": [
@@ -3892,7 +4048,9 @@
 			"note": "Often used in the phrase testimónium perhibére, “to bear witness”."
 		},
 		"periculum": {
-			"senses": ["danger"]
+			"senses": [
+				"danger"
+			]
 		},
 		"permitto": {
 			"senses": [
@@ -4071,10 +4229,14 @@
 			]
 		},
 		"potens": {
-			"senses": ["powerful"]
+			"senses": [
+				"powerful"
+			]
 		},
 		"potentia": {
-			"senses": ["power"]
+			"senses": [
+				"power"
+			]
 		},
 		"potestas": {
 			"senses": [
@@ -4090,6 +4252,13 @@
 			"derivatives": [
 				"potion",
 				"potable"
+			]
+		},
+		"prae": {
+			"senses": [
+				"before, in front of",
+				"in comparison with",
+				"because of"
 			]
 		},
 		"praecedo": {
@@ -4178,7 +4347,9 @@
 			]
 		},
 		"praetereo": {
-			"senses": ["pass away"]
+			"senses": [
+				"pass away"
+			]
 		},
 		"praeteritus": {
 			"senses": [
@@ -4201,7 +4372,9 @@
 			]
 		},
 		"pressura": {
-			"senses": ["distress"]
+			"senses": [
+				"distress"
+			]
 		},
 		"prex": {
 			"senses": [
@@ -4271,7 +4444,9 @@
 			]
 		},
 		"produco": {
-			"senses": ["bring forth"]
+			"senses": [
+				"bring forth"
+			]
 		},
 		"proficio": {
 			"senses": [
@@ -4292,6 +4467,11 @@
 				"promise (from promítto)"
 			]
 		},
+		"prope": {
+			"senses": [
+				"near"
+			]
+		},
 		"propheta": {
 			"senses": [
 				"prophet"
@@ -4303,7 +4483,9 @@
 			]
 		},
 		"propinquus": {
-			"senses": ["near"]
+			"senses": [
+				"near"
+			]
 		},
 		"propitiabilis": {
 			"senses": [
@@ -4357,7 +4539,9 @@
 			]
 		},
 		"protego": {
-			"senses": ["protect"]
+			"senses": [
+				"protect"
+			]
 		},
 		"provenio": {
 			"senses": [
@@ -4392,7 +4576,7 @@
 				"I beg",
 				"please"
 			],
-      "note": "A defective verb; chiefly the forms quæso and quǽsumus survive, used in requests."
+			"note": "A defective verb; chiefly the forms quæso and quǽsumus survive, used in requests."
 		},
 		"quam": {
 			"senses": [
@@ -4564,7 +4748,7 @@
 				"coolness",
 				"solace"
 			],
-      "note": "Literally, a cooling. In prayer for the dead: refreshment and rest.",
+			"note": "Literally, a cooling. In prayer for the dead: refreshment and rest.",
 			"derivatives": [
 				"refrigerate (from refrigeráre)",
 				"refrigerator (from refrigeráre)"
@@ -4664,7 +4848,9 @@
 			]
 		},
 		"reparatio": {
-			"senses": ["restoration"]
+			"senses": [
+				"restoration"
+			]
 		},
 		"repello": {
 			"senses": [
@@ -4756,7 +4942,9 @@
 			"note": "Sabaoth is an indeclinable transcription of a plural Hebrew noun meaning ‘hosts’. In Deus Sabaoth it means ‘God of Hosts’."
 		},
 		"sacer": {
-			"senses": ["sacred"]
+			"senses": [
+				"sacred"
+			]
 		},
 		"sacerdos": {
 			"senses": [
@@ -4816,7 +5004,7 @@
 				"deliverance, safety",
 				"health",
 				"a greeting"
-      ],
+			],
 			"derivatives": [
 				"salute",
 				"salutary"
@@ -4828,7 +5016,7 @@
 				"deliverance",
 				"God's saving help"
 			],
-      "note": "The adjective salutáris (saving) used as a noun."
+			"note": "The adjective salutáris (saving) used as a noun."
 		},
 		"salutaris": {
 			"senses": [
@@ -4845,7 +5033,9 @@
 			"note": "The imperatives salve and salvéte are forms of greeting, singular and plural respectively."
 		},
 		"salvo": {
-			"senses": ["save"]
+			"senses": [
+				"save"
+			]
 		},
 		"salvus": {
 			"senses": [
@@ -4916,6 +5106,11 @@
 				"outrage"
 			]
 		},
+		"scio": {
+			"senses": [
+				"know"
+			]
+		},
 		"scriptura": {
 			"senses": [
 				"Scripture",
@@ -4923,13 +5118,13 @@
 				"an inscription"
 			]
 		},
-	"scrutor": {
-		"senses": [
-			"to search",
-			"to examine",
-			"to sift"
-		],
-      "note": "The verb denotes close, careful examination. The name Scrutabor comes from its form scrutábor.",
+		"scrutor": {
+			"senses": [
+				"to search",
+				"to examine",
+				"to sift"
+			],
+			"note": "The verb denotes close, careful examination. The name Scrutabor comes from its form scrutábor.",
 			"derivatives": [
 				"scrutiny",
 				"inscrutable"
@@ -5131,10 +5326,14 @@
 			"note": "Used as a noun, sócius means ‘companion’."
 		},
 		"sol": {
-			"senses": ["sun"]
+			"senses": [
+				"sun"
+			]
 		},
 		"solemnis": {
-			"senses": ["solemn"]
+			"senses": [
+				"solemn"
+			]
 		},
 		"solus": {
 			"senses": [
@@ -5156,7 +5355,9 @@
 			]
 		},
 		"sonitus": {
-			"senses": ["sound"]
+			"senses": [
+				"sound"
+			]
 		},
 		"spero": {
 			"senses": [
@@ -5212,7 +5413,9 @@
 			]
 		},
 		"stella": {
-			"senses": ["star"]
+			"senses": [
+				"star"
+			]
 		},
 		"sto": {
 			"senses": [
@@ -5292,11 +5495,16 @@
 				"to receive",
 				"to consume"
 			],
-      "note": "With reference to Communion, sumere means “to receive”.",
+			"note": "With reference to Communion, sumere means “to receive”.",
 			"derivatives": [
 				"assume",
 				"consume",
 				"presume (from praesúmo)"
+			]
+		},
+		"supervenio": {
+			"senses": [
+				"come upon"
 			]
 		},
 		"supplex": {
@@ -5308,9 +5516,6 @@
 				"supplication",
 				"supple"
 			]
-		},
-		"supervenio": {
-			"senses": ["come upon"]
 		},
 		"supra": {
 			"senses": [
@@ -5376,7 +5581,7 @@
 				"her own",
 				"their own"
 			],
-      "note": "The reflexive possessive, normally referring to the subject of its clause."
+			"note": "The reflexive possessive, normally referring to the subject of its clause."
 		},
 		"tabernaculum": {
 			"senses": [
@@ -5414,7 +5619,9 @@
 			]
 		},
 		"templum": {
-			"senses": ["temple"]
+			"senses": [
+				"temple"
+			]
 		},
 		"temporalis": {
 			"senses": [
@@ -5428,7 +5635,9 @@
 			]
 		},
 		"tempus": {
-			"senses": ["time"]
+			"senses": [
+				"time"
+			]
 		},
 		"tenebrae": {
 			"senses": [
@@ -5486,7 +5695,7 @@
 			"senses": [
 				"fear",
 				"awe"
-      ],
+			],
 			"derivatives": [
 				"timid (from tímidus)",
 				"timorous"
@@ -5509,6 +5718,11 @@
 			"note": "Its genitive is totíus and its dative toti — a pronominal declension, not the ordinary adjectival one.",
 			"derivatives": [
 				"total"
+			]
+		},
+		"transeo": {
+			"senses": [
+				"pass away"
 			]
 		},
 		"tremo": {
@@ -5721,7 +5935,7 @@
 				"to come",
 				"to arrive",
 				"to draw near"
-      ],
+			],
 			"derivatives": [
 				"convene",
 				"event"
@@ -5782,7 +5996,7 @@
 				"way",
 				"road"
 			],
-      "note": "In Psalm 118, via is an image for a way of life.",
+			"note": "In Psalm 118, via is an image for a way of life.",
 			"derivatives": [
 				"viaduct",
 				"trivial",
@@ -5861,7 +6075,7 @@
 			"senses": [
 				"life",
 				"way of life"
-      ],
+			],
 			"derivatives": [
 				"vital",
 				"vitamin"

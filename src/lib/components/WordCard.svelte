@@ -4,6 +4,7 @@
 	// in a sheet (WordPanel); the landing presents it in a box that never
 	// closes, because there its whole purpose is to be looked at.
 	import Pronunciation from '$lib/components/Pronunciation.svelte';
+	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import type { Analysis, LemmaEntry, SenseEntry, Word, WordGloss } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
 	import { GENDER_MARK, describeAnalysisParts, describeMorphParts } from '$lib/morph';
@@ -75,6 +76,7 @@
 {/if}
 {#if senseEntry?.note}
 	<p class="note">{senseEntry.note}</p>
+	<SourceNotes citations={senseEntry.note_citations} {lang} />
 {/if}
 {#if gloss?.function}
 	<p class="function">
@@ -88,6 +90,7 @@
 			{/if}
 		{/each}
 	</p>
+	<SourceNotes citations={gloss.function_citations} {lang} />
 {/if}
 <p class="meta smallcaps">
 	{#each describeAnalysisParts(analysis, lang) as part, i (i)}{#if part.href}<a

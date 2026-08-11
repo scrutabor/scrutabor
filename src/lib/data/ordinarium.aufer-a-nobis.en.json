@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.aufer-a-nobis",
 	"lang": "en",
 	"status": "working-edition",
-  "about": "As he ascends the altar steps, the priest asks God to take away iniquity so that he may enter the “Sancta sanctórum”, the holy of holies. He then kisses the altar and asks that his sins be forgiven through the merits of the saints whose relics are in this place, and of all the saints.",
+	"about": "As he ascends the altar steps, the priest asks God to take away iniquity so that he may enter the “Sancta sanctórum”, the holy of holies. He then kisses the altar and asks that his sins be forgiven through the merits of the saints whose relics are in this place, and of all the saints.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -80,7 +80,7 @@
 		},
 		"w011": {
 			"gloss": "the holy",
-		"function": "An adjective used as a noun in the neuter plural: holy things. With “sanctórum” (w012) it forms “the Holy of Holies”."
+			"function": "An adjective used as a noun in the neuter plural: holy things. With “sanctórum” (w012) it forms “the Holy of Holies”."
 		},
 		"w012": {
 			"gloss": "of holies",

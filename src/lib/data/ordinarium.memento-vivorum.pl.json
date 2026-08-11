@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.memento-vivorum",
 	"lang": "pl",
 	"status": "working-edition",
-  "about": "Kapłan składa ręce i przez chwilę modli się za żyjących, których pragnie wspomnieć. Następnie modlitwa obejmuje wszystkich obecnych i wymienia intencje: odkupienie ich dusz, nadzieję zbawienia oraz pomyślność.",
+	"about": "Kapłan składa ręce i przez chwilę modli się za żyjących, których pragnie wspomnieć. Następnie modlitwa obejmuje wszystkich obecnych i wymienia intencje: odkupienie ich dusz, nadzieję zbawienia oraz pomyślność.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

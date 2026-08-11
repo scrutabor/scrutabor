@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.deus-qui-humanae",
 	"lang": "en",
 	"status": "working-edition",
-  "about": "As he pours water into the chalice of wine, the priest asks that through the mystery of this water and wine we may share in the divinity of Christ, who deigned to share our humanity. The prayer praises God, who wonderfully created the dignity of human nature and yet more wonderfully restored it.",
+	"about": "As he pours water into the chalice of wine, the priest asks that through the mystery of this water and wine we may share in the divinity of Christ, who deigned to share our humanity. The prayer praises God, who wonderfully created the dignity of human nature and yet more wonderfully restored it.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -190,7 +190,7 @@
 			"gloss": "ages"
 		},
 		"w049": {
-		"gloss": "of ages"
+			"gloss": "of ages"
 		},
 		"w050": {
 			"gloss": "amen"

@@ -35,6 +35,7 @@ export interface Messages {
 	errorGeneric: string;
 	goHome: string;
 	aboutLabel: string;
+	sourcesLabel: string;
 	pagerAria: string;
 	ordoLead: string;
 	ordoSubtitle: string;
@@ -111,6 +112,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		errorGeneric: 'Coś poszło nie tak.',
 		goHome: 'wróć na stronę główną',
 		aboutLabel: 'o modlitwie',
+		sourcesLabel: 'źródła',
 		pagerAria: 'sąsiednie teksty',
 		ordoLead: 'porządek Mszy świętej według Mszału Rzymskiego z 1962 roku',
 		ordoSubtitle: 'Mszał Rzymski z 1962 roku',
@@ -192,6 +194,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		errorGeneric: 'Something went wrong.',
 		goHome: 'go to the home page',
 		aboutLabel: 'about this prayer',
+		sourcesLabel: 'sources',
 		pagerAria: 'neighboring texts',
 		ordoLead: 'the order of Mass in the Roman Missal of 1962',
 		ordoSubtitle: 'the Roman Missal of 1962',

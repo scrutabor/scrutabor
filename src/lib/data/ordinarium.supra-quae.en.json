@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.supra-quae",
 	"lang": "en",
 	"status": "working-edition",
-  "about": "The priest asks God to look favourably upon the offering and accept it, as He accepted the gifts of the just Abel, the sacrifice of Abraham, and what Melchisedech, here called a high priest, offered to Him.",
+	"about": "The priest asks God to look favourably upon the offering and accept it, as He accepted the gifts of the just Abel, the sacrifice of Abraham, and what Melchisedech, here called a high priest, offered to Him.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
