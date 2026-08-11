@@ -13,13 +13,13 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest stands at the foot of the altar, makes the reverence due to it, and signs himself from forehead to breast. The first words of Mass are said aloud."
+			"narrative": "The vested priest approaches the altar, makes the reverence due to it, signs himself from forehead to breast and speaks aloud."
 		},
 		"s02": {
 			"translation": "In the name of the Father, and of the Son, and of the Holy Spirit. Amen."
 		},
 		"s03": {
-			"narrative": "With hands joined before his breast the priest begins the antiphon and the server answers. From here until he goes up to the altar the prayers alternate."
+			"narrative": "With hands joined before his breast, the priest begins the antiphon."
 		},
 		"s04": {
 			"translation": "I will go in unto the altar of God."
@@ -30,15 +30,14 @@
 	},
 	"words": {
 		"w001": {
-			"gloss": "in",
-			"function": "It governs the ablative: not “to the name” but “in the name” — in it and by its power."
+			"gloss": "in"
 		},
 		"w002": {
 			"gloss": "the name"
 		},
 		"w003": {
 			"gloss": "of the Father",
-			"function": "A genitive depending on “nómine” (w002). One preposition covers three genitives: one name, three Persons."
+			"function": "Genitive depending on “nómine” (w002), parallel to “Fílii” (w005) and “Spíritus” (w007)."
 		},
 		"w004": {
 			"gloss": "and"
@@ -51,29 +50,28 @@
 		},
 		"w007": {
 			"gloss": "of the Spirit",
-			"function": "4th declension: one form serves for nominative and genitive alike. That this is the genitive is shown by “Sancti” (w008) and by the two genitives just before it."
+			"function": "“Spíritus” can be nominative or genitive. Agreement with “Sancti” (w008) establishes the genitive here."
 		},
 		"w008": {
-			"gloss": "Holy",
-			"function": "Agrees with “Spíritus” (w007)."
+			"gloss": "Holy"
 		},
 		"w009": {
 			"gloss": "amen"
 		},
 		"w010": {
 			"gloss": "I will go in",
-			"function": "Future, not present: he has not gone in yet. The verb is built from intro (inwards) and ire (to go) — the priest announces what he is about to do."
+			"function": "First person singular future."
 		},
 		"w011": {
 			"gloss": "unto"
 		},
 		"w012": {
 			"gloss": "the altar",
-			"function": "Accusative after “ad” (w011) — motion toward. The bare form could be nominative, accusative or vocative. The preposition settles it."
+			"function": "Accusative governed by “ad” (w011), which expresses direction."
 		},
 		"w013": {
 			"gloss": "of God",
-			"function": "Genitive: the altar belongs to God. Compare “Deum” (w015) — the same word in the accusative, because there he is the goal of the journey and not its owner."
+			"function": "Genitive depending on “altáre” (w012)."
 		},
 		"w014": {
 			"gloss": "to"
@@ -83,7 +81,7 @@
 		},
 		"w016": {
 			"gloss": "who",
-			"function": "Nominative, though its antecedent “Deum” (w015) stands in the accusative: a relative takes its case from its own clause, and here it is the subject."
+			"function": "Nominative as the subject of “lætíficat” (w017), although its antecedent “Deum” (w015) is accusative."
 		},
 		"w017": {
 			"gloss": "gladdens"
@@ -93,8 +91,7 @@
 		"function": "The Latin “youth” corresponds to the Greek text of the psalm. The Hebrew text speaks here of joy."
 		},
 		"w019": {
-			"gloss": "my",
-			"function": "Agrees with “iuventútem” (w018)."
+			"gloss": "my"
 		}
 	}
 }
