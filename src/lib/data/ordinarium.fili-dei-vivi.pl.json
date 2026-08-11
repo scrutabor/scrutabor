@@ -40,14 +40,14 @@
 		},
 		"w004": {
 			"gloss": "Synu",
-			"function": "Wołacz: fili, nie filius. Tytuł jest wyznaniem Piotra pod Cezareą Filipową i Marty w Betanii, oba przytoczone tu w wołaczu."
+			"function": "Wołacz liczby pojedynczej od filius."
 		},
 		"w005": {
 			"gloss": "Boga"
 		},
 		"w006": {
 			"gloss": "żywego",
-			"function": "Zgadza się z „Dei” (w005), a nie z Fili: Bóg, który żyje, w odróżnieniu od bogów, którzy nie żyją."
+			"function": "Dopełniacz liczby pojedynczej, zgadzający się z „Dei” (w005)."
 		},
 		"w007": {
 			"gloss": "który"
@@ -63,7 +63,7 @@
 		},
 		"w011": {
 			"gloss": "przy współdziałaniu",
-			"function": "Ablativus absolutus ze „Spíritu” (w012): gdy Duch współdziała. Imiesłów deponentny — forma bierna, znaczenie czynne."
+			"function": "Imiesłów deponentny tworzący ze „Spíritu” (w012) ablativus absolutus."
 		},
 		"w012": {
 			"gloss": "Ducha"
@@ -78,16 +78,15 @@
 			"gloss": "śmierć"
 		},
 		"w016": {
-			"gloss": "Twoją",
-			"function": "Zgadza się z „mortem” (w015). Trzy Osoby i trzy człony stoją obok siebie: od Ojca, z Duchem, przez własną śmierć."
+			"gloss": "Twoją"
 		},
 		"w017": {
 			"gloss": "świat",
-			"function": "Dopełnienie „vivificásti” (w018): co zostało ożywione — nie Kościół, nie wybrani, lecz świat."
+			"function": "Dopełnienie „vivificásti” (w018)."
 		},
 		"w018": {
 			"gloss": "ożywiłeś",
-			"function": "Skrócone perfectum: vivificávisti ze ściągniętym -vi-, jak łacina czyni to regularnie. Nasz analizator Whitakera nie rozpoznaje formy ściągniętej, więc rozbiór opiera się na Collatinusie i na wydaniu."
+			"function": "Ściągnięta forma perfectum: vivificásti = vivificávisti."
 		},
 		"w019": {
 			"gloss": "wybaw"
@@ -101,7 +100,7 @@
 		},
 		"w022": {
 			"gloss": "to",
-			"function": "Rodzaj nijaki, zgadza się z „Corpus” (w024): to Ciało — to, które leży przed nim na patenie."
+			"function": "Rodzaj nijaki, zgadza się z „Corpus” (w024)."
 		},
 		"w023": {
 			"gloss": "najświętsze",
@@ -118,7 +117,7 @@
 		},
 		"w027": {
 			"gloss": "Twoją",
-			"function": "Zgadza się z samym „Sánguinem” (w026): forma mogłaby być i nijaka, ale stoi tuż po nim, a Corpus niesie już własne przydawki — hoc sacrosánctum. Sens obejmuje oba."
+			"function": "Zgadza się z „Sánguinem” (w026). Znaczeniowo odnosi się do Ciała i Krwi."
 		},
 		"w028": {
 			"gloss": "od"
@@ -127,8 +126,7 @@
 			"gloss": "wszystkich"
 		},
 		"w030": {
-			"gloss": "nieprawości",
-			"function": "Nieprawość to, co nie jest æquum, nie jest równe: obraz bierze się z gruntu nierównego, a nie ze złamanego prawa."
+			"gloss": "nieprawości"
 		},
 		"w031": {
 			"gloss": "moich"
@@ -141,7 +139,7 @@
 		},
 		"w034": {
 			"gloss": "zła",
-			"function": "Liczba mnoga rodzaju nijakiego, jak w embolizmie: złe rzeczy, nie źli ludzie. Prośba rozszerza się z własnych grzechów na wszystko, co szkodzi."
+			"function": "Rzeczownik rodzaju nijakiego w liczbie mnogiej: wszelkie zło, nie źli ludzie."
 		},
 		"w035": {
 			"gloss": "i"
@@ -151,22 +149,20 @@
 		},
 		"w037": {
 			"gloss": "mnie",
-			"function": "Podmiot bezokolicznika „inhærére” (w040) w bierniku: uczyń mnie trwającym — jedna konstrukcja: biernik i bezokolicznik."
+			"function": "Biernik jako podmiot bezokolicznika „inhærére” (w040)."
 		},
 		"w038": {
 			"gloss": "Twoich",
-			"function": "Zgadza się z „mandátis” (w041), oddalonym o trzy słowa. Łacina może tak daleko rozdzielić przydawkę od rzeczownika. Tutaj końcówki nie zostawiają wątpliwości, do czego należy."
+			"function": "Zgadza się z „mandátis” (w041)."
 		},
 		"w039": {
 			"gloss": "zawsze"
 		},
 		"w040": {
-			"gloss": "trwać",
-			"function": "In i hæreo: przylgnąć tak, żeby nie puścić. Tu dopełnieniem jest celownik „mandátis” (w041) — trwać przy przykazaniach."
+			"gloss": "trwać"
 		},
 		"w041": {
-			"gloss": "przykazaniach",
-			"function": "Celownik po „inhærére” (w040): trwać przy czym — przy przykazaniach."
+			"gloss": "przykazaniach"
 		},
 		"w042": {
 			"gloss": "i"
@@ -182,11 +178,11 @@
 		},
 		"w046": {
 			"gloss": "być odłączonym",
-			"function": "Bezokolicznik bierny: nie „bym nie odszedł”, lecz „bym nie został zabrany” — prosi o obronę przed tym, co mogłoby mu zostać uczynione."
+			"function": "Bezokolicznik strony biernej zależny od „permíttas” (w047)."
 		},
 		"w047": {
 			"gloss": "dopuść",
-			"function": "Tryb łączący jako prośba, a przeczenie niesie „numquam” (w045): nigdy na to nie pozwól."
+			"function": "Tryb łączący wyrażający prośbę, z przeczeniem „numquam” (w045)."
 		},
 		"w048": {
 			"gloss": "Który"
@@ -196,7 +192,7 @@
 		},
 		"w050": {
 			"gloss": "tymże",
-			"function": "Ojciec i Duch zostali w modlitwie już nazwani, więc zakończenie wskazuje wstecz, zamiast wprowadzać ich na nowo."
+			"function": "Zgadza się z „Deo” (w051) i odsyła do wcześniej nazwanego Boga Ojca."
 		},
 		"w051": {
 			"gloss": "Bogiem"
@@ -224,7 +220,7 @@
 		},
 		"w059": {
 			"gloss": "Bóg",
-			"function": "Mianownik przy dwóch orzeczeniach: który jako Bóg żyjesz i królujesz."
+			"function": "Mianownik w apozycji do „Qui” (w048)."
 		},
 		"w060": {
 			"gloss": "na"
@@ -233,8 +229,7 @@
 			"gloss": "wieki"
 		},
 		"w062": {
-			"gloss": "wieków",
-			"function": "Tutaj in sǽcula sæculórum, a w poprzedniej modlitwie per ómnia sǽcula sæculórum: zakończenia się różnią i oba drukuje się tak, jak stoją."
+			"gloss": "wieków"
 		},
 		"w063": {
 			"gloss": "Amen"
