@@ -40,14 +40,14 @@
 		},
 		"w004": {
 			"gloss": "Son",
-			"function": "Vocative: fili, not filius. The title is Peter's confession at Caesarea Philippi and Martha's at Bethany, both taken up here in the vocative."
+			"function": "Singular vocative of filius."
 		},
 		"w005": {
 			"gloss": "of God"
 		},
 		"w006": {
 			"gloss": "living",
-			"function": "Agrees with “Dei” (w005), not with Fili: the God who is living, over against the gods that are not."
+			"function": "Genitive singular agreeing with “Dei” (w005)."
 		},
 		"w007": {
 			"gloss": "who"
@@ -63,7 +63,7 @@
 		},
 		"w011": {
 			"gloss": "cooperating",
-			"function": "Ablative absolute with “Spíritu” (w012): the Spirit working along with. A deponent participle — passive in form, active in meaning."
+			"function": "Deponent participle forming an ablative absolute with “Spíritu” (w012)."
 		},
 		"w012": {
 			"gloss": "Spirit"
@@ -78,16 +78,15 @@
 			"gloss": "death"
 		},
 		"w016": {
-			"gloss": "Thy",
-			"function": "Agrees with “mortem” (w015). Three Persons and three phrases stand side by side: from the Father, with the Spirit, through His own death."
+			"gloss": "Thy"
 		},
 		"w017": {
 			"gloss": "the world",
-			"function": "Object of “vivificásti” (w018): what was given life — not the Church, not the elect, but the world."
+			"function": "Object of “vivificásti” (w018)."
 		},
 		"w018": {
 			"gloss": "hast given life to",
-			"function": "A shortened perfect: vivificávisti with the -vi- squeezed out, as Latin regularly does. Our Whitaker's analyzer does not resolve the contracted form, so this parse rests on Collatinus and the edition."
+			"function": "Contracted perfect form: vivificásti = vivificávisti."
 		},
 		"w019": {
 			"gloss": "deliver"
@@ -101,7 +100,7 @@
 		},
 		"w022": {
 			"gloss": "this",
-			"function": "Neuter, agreeing with “Corpus” (w024): this Body — the one lying on the paten in front of him."
+			"function": "Neuter, agreeing with “Corpus” (w024)."
 		},
 		"w023": {
 			"gloss": "most holy",
@@ -118,7 +117,7 @@
 		},
 		"w027": {
 			"gloss": "Thy",
-			"function": "Agrees with “Sánguinem” (w026) alone: the form could as well be neuter, but it stands hard against it, and Corpus already carries its own attributives, hoc sacrosánctum. The sense covers both."
+			"function": "Agrees with “Sánguinem” (w026). In sense it qualifies both Body and Blood."
 		},
 		"w028": {
 			"gloss": "from"
@@ -127,8 +126,7 @@
 			"gloss": "all"
 		},
 		"w030": {
-			"gloss": "iniquities",
-			"function": "Iniquity is what is not æquum, not level: the word draws its picture from uneven ground rather than from a broken law."
+			"gloss": "iniquities"
 		},
 		"w031": {
 			"gloss": "my"
@@ -141,7 +139,7 @@
 		},
 		"w034": {
 			"gloss": "evils",
-			"function": "Neuter plural, as in the embolism: evils, not evil men. The petition widens from his own sins to everything that harms."
+			"function": "Neuter plural noun: evils, not evil men."
 		},
 		"w035": {
 			"gloss": "and"
@@ -151,22 +149,20 @@
 		},
 		"w037": {
 			"gloss": "me",
-			"function": "Subject of the infinitive “inhærére” (w040) in the accusative: make me to cling — one construction: an accusative and an infinitive."
+			"function": "Accusative subject of the infinitive “inhærére” (w040)."
 		},
 		"w038": {
 			"gloss": "Thy",
-			"function": "Agrees with “mandátis” (w041), three words later. Latin can hold an adjective that far from its noun. Here the endings leave no doubt where it belongs."
+			"function": "Agrees with “mandátis” (w041)."
 		},
 		"w039": {
 			"gloss": "always"
 		},
 		"w040": {
-			"gloss": "to cling",
-			"function": "In and hæreo: to cling so as not to let go. Its object here is the dative “mandátis” (w041) — to hold to the commandments."
+			"gloss": "to cling"
 		},
 		"w041": {
-			"gloss": "commandments",
-			"function": "Dative after “inhærére” (w040): cling to what — to the commandments."
+			"gloss": "commandments"
 		},
 		"w042": {
 			"gloss": "and"
@@ -182,11 +178,11 @@
 		},
 		"w046": {
 			"gloss": "to be parted",
-			"function": "Passive infinitive: not that he should never leave, but that he should never be taken away — the asking is against a thing done to him."
+			"function": "Passive infinitive depending on “permíttas” (w047)."
 		},
 		"w047": {
 			"gloss": "allow",
-			"function": "Subjunctive as a petition, with “numquam” (w045) carrying the negation: never let it happen."
+			"function": "Subjunctive expressing a petition, negated by “numquam” (w045)."
 		},
 		"w048": {
 			"gloss": "Who"
@@ -196,7 +192,7 @@
 		},
 		"w050": {
 			"gloss": "the same",
-			"function": "The Father and the Spirit have already been named in the prayer, so the ending points back rather than introducing them again."
+			"function": "Agrees with “Deo” (w051) and points back to God the Father named earlier."
 		},
 		"w051": {
 			"gloss": "God"
@@ -224,7 +220,7 @@
 		},
 		"w059": {
 			"gloss": "God",
-			"function": "Nominative standing with the two verbs: who as God livest and reignest."
+			"function": "Nominative in apposition to “Qui” (w048)."
 		},
 		"w060": {
 			"gloss": "unto"
@@ -233,8 +229,7 @@
 			"gloss": "ages"
 		},
 		"w062": {
-			"gloss": "of ages",
-			"function": "In sǽcula sæculórum here, per ómnia sǽcula sæculórum in the prayer before: the two endings differ, and both are printed as they stand."
+			"gloss": "of ages"
 		},
 		"w063": {
 			"gloss": "Amen"
