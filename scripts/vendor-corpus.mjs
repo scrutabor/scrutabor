@@ -18,12 +18,18 @@ import { join } from 'node:path';
 
 const CORPUS = '../scrutabor-corpus';
 const DATA = 'src/lib/data';
+// The Proper has entered the corpus, but not yet the app: there is no
+// `proprium` catalog category or reading route for it. Importing those files
+// early would ship unreachable data and make a normal re-vendor silently
+// widen the product. Add the category here only when its app surface lands.
+const CATEGORIES = new Set(['orationes', 'ordinarium', 'psalmi']);
 
 const read = (path) => JSON.parse(readFileSync(path, 'utf8'));
 
 function textFiles() {
 	const out = [];
 	for (const category of readdirSync(join(CORPUS, 'texts'))) {
+		if (!CATEGORIES.has(category)) continue;
 		for (const file of readdirSync(join(CORPUS, 'texts', category))) {
 			if (file.endsWith('.json')) out.push(join(CORPUS, 'texts', category, file));
 		}

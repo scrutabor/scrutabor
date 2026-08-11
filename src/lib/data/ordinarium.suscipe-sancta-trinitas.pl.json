@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.suscipe-sancta-trinitas",
 	"lang": "pl",
 	"status": "working-edition",
-  "about": "Kapłan prosi Trójcę Świętą o przyjęcie ofiary składanej na pamiątkę męki, zmartwychwstania i wniebowstąpienia Chrystusa oraz ku czci Najświętszej Maryi Panny i świętych. W końcowej prośbie ich wstawiennictwu w niebie odpowiada obchodzenie ich pamiątki na ziemi.",
+	"about": "Kapłan prosi Trójcę Świętą o przyjęcie ofiary składanej na pamiątkę męki, zmartwychwstania i wniebowstąpienia Chrystusa oraz ku czci Najświętszej Maryi Panny i świętych. W końcowej prośbie ich wstawiennictwu w niebie odpowiada obchodzenie ich pamiątki na ziemi.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

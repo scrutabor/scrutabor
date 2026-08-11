@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"lang": "pl",
 	"status": "working-edition",
 	"analysis_defaults": {
@@ -54,7 +54,7 @@
 			"senses": [
 				"Chrzciciel"
 			],
-      "note": "Rzeczownik I deklinacji rodzaju męskiego, jak agrícola — rolnik."
+			"note": "Rzeczownik I deklinacji rodzaju męskiego, jak agrícola — rolnik."
 		},
 		"Barnabas": {
 			"senses": [
@@ -211,7 +211,7 @@
 		"Paulus": {
 			"senses": [
 				"Paweł"
-      ]
+			]
 		},
 		"Perpetua": {
 			"senses": [
@@ -222,7 +222,7 @@
 			"senses": [
 				"Piotr"
 			],
-      "note": "Aramejskie Kefas znaczy „skała”; w J 1,42 Ewangelista objaśnia je greckim Pétros."
+			"note": "Aramejskie Kefas znaczy „skała”; w J 1,42 Ewangelista objaśnia je greckim Pétros."
 		},
 		"Philippus": {
 			"senses": [
@@ -271,7 +271,12 @@
 				"z dala od",
 				"przez (sprawcę)"
 			],
-      "note": "Przed spółgłoską zwykle występuje a, przed samogłoską lub h — ab."
+			"note": "Przed spółgłoską zwykle występuje a, przed samogłoską lub h — ab."
+		},
+		"abicio": {
+			"senses": [
+				"odrzucać"
+			]
 		},
 		"absolutio": {
 			"senses": [
@@ -287,7 +292,7 @@
 				"i",
 				"a także"
 			],
-      "note": "Postać atque używana przed spółgłoską."
+			"note": "Postać atque używana przed spółgłoską."
 		},
 		"acceptabilis": {
 			"senses": [
@@ -387,7 +392,7 @@
 				"wpisać",
 				"zaliczyć"
 			],
-      "note": "Dosłownie: dopisać do listy."
+			"note": "Dosłownie: dopisać do listy."
 		},
 		"aduno": {
 			"senses": [
@@ -415,6 +420,11 @@
 				"adwokat (od advocátus)"
 			]
 		},
+		"aemulatio": {
+			"senses": [
+				"zawiść"
+			]
+		},
 		"aequitas": {
 			"senses": [
 				"sprawiedliwość",
@@ -432,6 +442,11 @@
 				"ekwiwalent"
 			]
 		},
+		"aestas": {
+			"senses": [
+				"lato"
+			]
+		},
 		"aestimator": {
 			"senses": [
 				"ten, kto szacuje",
@@ -442,7 +457,7 @@
 			"senses": [
 				"wieczny",
 				"odwieczny"
-      ]
+			]
 		},
 		"affligo": {
 			"senses": [
@@ -456,7 +471,7 @@
 				"baranek",
 				"jagnię"
 			],
-      "note": "Ecce Agnus Dei — słowa Jana Chrzciciela o Chrystusie (J 1,29)."
+			"note": "Ecce Agnus Dei — słowa Jana Chrzciciela o Chrystusie (J 1,29)."
 		},
 		"ago": {
 			"senses": [
@@ -464,7 +479,7 @@
 				"działać",
 				"pędzić"
 			],
-      "note": "W zwrocie grátias ágere znaczy „dziękować”.",
+			"note": "W zwrocie grátias ágere znaczy „dziękować”.",
 			"derivatives": [
 				"agenda",
 				"agent"
@@ -497,7 +512,7 @@
 			"senses": [
 				"ołtarz"
 			],
-      "note": "W klasycznej łacinie częsta jest liczba mnoga altária. W Wulgacie i liturgii regularnie występuje także liczba pojedyncza altáre.",
+			"note": "W klasycznej łacinie częsta jest liczba mnoga altária. W Wulgacie i liturgii regularnie występuje także liczba pojedyncza altáre.",
 			"derivatives": [
 				"ołtarz"
 			]
@@ -507,10 +522,16 @@
 				"wysoki",
 				"głęboki"
 			],
-      "note": "Altíssimus to stopień najwyższy od altus: „Najwyższy”.",
+			"note": "Altíssimus to stopień najwyższy od altus: „Najwyższy”.",
 			"derivatives": [
 				"alt",
 				"altówka"
+			]
+		},
+		"ambulo": {
+			"senses": [
+				"chodzić",
+				"postępować"
 			]
 		},
 		"amen": {
@@ -577,7 +598,7 @@
 				"biskup",
 				"przełożony"
 			],
-      "note": "Dosłownie: „ten, kto stoi przed”. W łacinie chrześcijańskiej jest tytułem biskupa."
+			"note": "Dosłownie: „ten, kto stoi przed”. W łacinie chrześcijańskiej jest tytułem biskupa."
 		},
 		"apostolicus": {
 			"senses": [
@@ -588,6 +609,11 @@
 			"senses": [
 				"apostoł",
 				"wysłannik"
+			]
+		},
+		"appropinquo": {
+			"senses": [
+				"zbliżać się"
 			]
 		},
 		"apud": {
@@ -606,9 +632,26 @@
 				"akwedukt"
 			]
 		},
+		"arbor": {
+			"senses": [
+				"drzewo"
+			]
+		},
 		"archangelus": {
 			"senses": [
 				"archanioł"
+			]
+		},
+		"aresco": {
+			"senses": [
+				"usychać",
+				"więdnąć",
+				"słabnąć"
+			]
+		},
+		"arma": {
+			"senses": [
+				"oręż"
 			]
 		},
 		"ascendo": {
@@ -631,7 +674,7 @@
 			"senses": [
 				"i",
 				"oraz"
-      ]
+			]
 		},
 		"audeo": {
 			"senses": [
@@ -718,7 +761,7 @@
 				"błogosławić",
 				"dobrze mówić o"
 			],
-      "note": "Złożenie bene (dobrze) i dico (mówię).",
+			"note": "Złożenie bene (dobrze) i dico (mówię).",
 			"derivatives": [
 				"benedyktyn (od imienia Benedykt)"
 			]
@@ -738,6 +781,11 @@
 			"derivatives": [
 				"benedykcja (od benedíctio)",
 				"Benedykt"
+			]
+		},
+		"benignitas": {
+			"senses": [
+				"dobroć"
 			]
 		},
 		"benignus": {
@@ -768,7 +816,7 @@
 			"senses": [
 				"niebieski",
 				"niebiański"
-      ]
+			]
 		},
 		"caelum": {
 			"senses": [
@@ -793,6 +841,11 @@
 			"derivatives": [
 				"koncepcja",
 				"recepcja"
+			]
+		},
+		"caput": {
+			"senses": [
+				"głowa"
 			]
 		},
 		"caro": {
@@ -918,6 +971,11 @@
 				"rekognicja"
 			]
 		},
+		"comessatio": {
+			"senses": [
+				"hulanka"
+			]
+		},
 		"commixtio": {
 			"senses": [
 				"zmieszanie",
@@ -994,6 +1052,11 @@
 				"konfesjonał"
 			]
 		},
+		"confido": {
+			"senses": [
+				"ufać"
+			]
+		},
 		"confiteor": {
 			"senses": [
 				"wyznawać",
@@ -1005,10 +1068,25 @@
 				"konfesja"
 			]
 		},
+		"confundo": {
+			"senses": [
+				"zawstydzać"
+			]
+		},
+		"confusio": {
+			"senses": [
+				"zamęt"
+			]
+		},
 		"conglorifico": {
 			"senses": [
 				"wspólnie wysławiać",
 				"otaczać chwałą razem z kimś"
+			]
+		},
+		"congruus": {
+			"senses": [
+				"stosowny"
 			]
 		},
 		"consecratio": {
@@ -1058,7 +1136,9 @@
 			"note": "W Credo oznacza, że Syn jest tej samej istoty co Ojciec."
 		},
 		"contentio": {
-			"senses": ["spór"]
+			"senses": [
+				"spór"
+			]
 		},
 		"contra": {
 			"senses": [
@@ -1165,7 +1245,9 @@
 			]
 		},
 		"cubile": {
-			"senses": ["łoże"]
+			"senses": [
+				"łoże"
+			]
 		},
 		"culpa": {
 			"senses": [
@@ -1226,7 +1308,7 @@
 				"o, na temat",
 				"według, na podstawie"
 			],
-      "note": "De oznacza między innymi oddzielenie lub ruch z góry; ex często wskazuje ruch z wnętrza."
+			"note": "De oznacza między innymi oddzielenie lub ruch z góry; ex często wskazuje ruch z wnętrza."
 		},
 		"debitor": {
 			"senses": [
@@ -1277,7 +1359,9 @@
 			]
 		},
 		"demonstro": {
-			"senses": ["ukazywać"]
+			"senses": [
+				"ukazywać"
+			]
 		},
 		"deprecatio": {
 			"senses": [
@@ -1310,7 +1394,7 @@
 				"Bóg",
 				"bóg"
 			],
-      "note": "W Wulgacie i łacinie liturgicznej wołacz ma formę Deus, taką samą jak mianownik.",
+			"note": "W Wulgacie i łacinie liturgicznej wołacz ma formę Deus, taką samą jak mianownik.",
 			"derivatives": [
 				"deizm"
 			]
@@ -1376,7 +1460,7 @@
 				"raczyć",
 				"uznawać za godne"
 			],
-      "note": "Czasownik deponens od dignus — godny; dignéris znaczy „racz”."
+			"note": "Czasownik deponens od dignus — godny; dignéris znaczy „racz”."
 		},
 		"dignus": {
 			"senses": [
@@ -1496,7 +1580,9 @@
 			"note": "Ma formy IV i II deklinacji."
 		},
 		"donec": {
-			"senses": ["aż"]
+			"senses": [
+				"aż"
+			]
 		},
 		"dono": {
 			"senses": [
@@ -1546,7 +1632,9 @@
 			]
 		},
 		"ebrietas": {
-			"senses": ["pijaństwo"]
+			"senses": [
+				"pijaństwo"
+			]
 		},
 		"ecce": {
 			"senses": [
@@ -1565,6 +1653,11 @@
 			"derivatives": [
 				"eklezjalny",
 				"eklezjologia"
+			]
+		},
+		"edoceo": {
+			"senses": [
+				"pouczać"
 			]
 		},
 		"efficio": {
@@ -1626,7 +1719,7 @@
 				"słowo",
 				"wypowiedź"
 			],
-      "note": "Od éloqui — „wypowiedzieć”.",
+			"note": "Od éloqui — „wypowiedzieć”.",
 			"derivatives": [
 				"elokwencja (od éloqui)"
 			]
@@ -1679,6 +1772,11 @@
 				"wybawić"
 			]
 		},
+		"erubesco": {
+			"senses": [
+				"wstydzić się"
+			]
+		},
 		"eruo": {
 			"senses": [
 				"wyrywać",
@@ -1691,6 +1789,11 @@
 				"i",
 				"a",
 				"także"
+			]
+		},
+		"etenim": {
+			"senses": [
+				"albowiem"
 			]
 		},
 		"etiam": {
@@ -1741,7 +1844,9 @@
 			"note": "In excélsis — „na wysokościach”."
 		},
 		"excito": {
-			"senses": ["wzbudzać"]
+			"senses": [
+				"wzbudzać"
+			]
 		},
 		"exilium": {
 			"senses": [
@@ -1757,7 +1862,9 @@
 			]
 		},
 		"exspectatio": {
-			"senses": ["oczekiwanie"]
+			"senses": [
+				"oczekiwanie"
+			]
 		},
 		"exspecto": {
 			"senses": [
@@ -1765,7 +1872,7 @@
 				"czekać na coś",
 				"wyglądać czegoś"
 			],
-      "note": "Spotyka się też pisownię expécto."
+			"note": "Spotyka się też pisownię expécto."
 		},
 		"exsul": {
 			"senses": [
@@ -1829,7 +1936,9 @@
 			]
 		},
 		"ficulneus": {
-			"senses": ["drzewo figowe"]
+			"senses": [
+				"drzewo figowe"
+			]
 		},
 		"fidelis": {
 			"senses": [
@@ -1883,7 +1992,9 @@
 			]
 		},
 		"fluctus": {
-			"senses": ["fala"]
+			"senses": [
+				"fala"
+			]
 		},
 		"formo": {
 			"senses": [
@@ -1952,14 +2063,16 @@
 			]
 		},
 		"generatio": {
-			"senses": ["pokolenie"]
+			"senses": [
+				"pokolenie"
+			]
 		},
 		"genetrix": {
 			"senses": [
 				"rodzicielka",
 				"matka"
 			],
-      "note": "Rzeczownik od gigno — rodzić; spotyka się też pisownię genitrix."
+			"note": "Rzeczownik od gigno — rodzić; spotyka się też pisownię genitrix."
 		},
 		"gens": {
 			"senses": [
@@ -2075,7 +2188,9 @@
 			]
 		},
 		"honeste": {
-			"senses": ["uczciwie"]
+			"senses": [
+				"uczciwie"
+			]
 		},
 		"honor": {
 			"senses": [
@@ -2132,6 +2247,11 @@
 				"pokora"
 			]
 		},
+		"iam": {
+			"senses": [
+				"już"
+			]
+		},
 		"idem": {
 			"senses": [
 				"ten sam",
@@ -2183,7 +2303,9 @@
 			]
 		},
 		"immineo": {
-			"senses": ["zagrażać"]
+			"senses": [
+				"zagrażać"
+			]
 		},
 		"impero": {
 			"senses": [
@@ -2203,7 +2325,9 @@
 			]
 		},
 		"impudicitia": {
-			"senses": ["nieczystość"]
+			"senses": [
+				"nieczystość"
+			]
 		},
 		"in": {
 			"senses": [
@@ -2229,7 +2353,9 @@
 			]
 		},
 		"incipio": {
-			"senses": ["zaczynać"]
+			"senses": [
+				"zaczynać"
+			]
 		},
 		"inclino": {
 			"senses": [
@@ -2280,6 +2406,11 @@
 			],
 			"note": "Rządzi celownikiem osoby: indulgére alicui — być dla kogoś łaskawym."
 		},
+		"induo": {
+			"senses": [
+				"przyoblekać"
+			]
+		},
 		"inferi": {
 			"senses": [
 				"zmarli",
@@ -2319,14 +2450,14 @@
 			"senses": [
 				"nieprzyjaciel",
 				"wróg"
-      ]
+			]
 		},
 		"iniquitas": {
 			"senses": [
 				"nieprawość",
 				"niesprawiedliwość",
 				"zło"
-      ]
+			]
 		},
 		"iniquus": {
 			"senses": [
@@ -2378,12 +2509,12 @@
 				"instytucja"
 			]
 		},
-	"intellectus": {
-		"senses": [
-			"zrozumienie",
-			"pojmowanie"
-		],
-		"note": "Od intellégere — rozumieć, pojmować, rozeznawać.",
+		"intellectus": {
+			"senses": [
+				"zrozumienie",
+				"pojmowanie"
+			],
+			"note": "Od intellégere — rozumieć, pojmować, rozeznawać.",
 			"derivatives": [
 				"intelekt",
 				"inteligencja (od intellégere)"
@@ -2402,7 +2533,7 @@
 			"senses": [
 				"wstawiać się",
 				"wchodzić pomiędzy"
-      ]
+			]
 		},
 		"intra": {
 			"senses": [
@@ -2425,7 +2556,7 @@
 				"wchodzić",
 				"wstępować"
 			],
-      "note": "Złożenie intro i eo; odmienia się nieregularnie jak eo.",
+			"note": "Złożenie intro i eo; odmienia się nieregularnie jak eo.",
 			"derivatives": [
 				"introit"
 			]
@@ -2453,7 +2584,12 @@
 				"on sam",
 				"właśnie ten"
 			],
-      "note": "Zaimek wzmacniający, podkreślający osobę lub rzecz, o której mowa."
+			"note": "Zaimek wzmacniający, podkreślający osobę lub rzecz, o której mowa."
+		},
+		"irrideo": {
+			"senses": [
+				"szydzić"
+			]
 		},
 		"is": {
 			"senses": [
@@ -2469,7 +2605,9 @@
 			"note": "W łacinie klasycznej wskazuje zwykle na osobę lub rzecz związaną z rozmówcą."
 		},
 		"ita": {
-			"senses": ["tak"]
+			"senses": [
+				"tak"
+			]
 		},
 		"item": {
 			"senses": [
@@ -2594,13 +2732,15 @@
 			]
 		},
 		"levo": {
-			"senses": ["podnosić"]
+			"senses": [
+				"podnosić"
+			]
 		},
-	"lex": {
-		"senses": [
-			"prawo",
-			"zakon"
-		],
+		"lex": {
+			"senses": [
+				"prawo",
+				"zakon"
+			],
 			"note": "W Psalmie 118 łacińskie lex odpowiada hebrajskiemu słowu torah, które oznacza zarazem prawo i pouczenie.",
 			"derivatives": [
 				"legalny",
@@ -2667,7 +2807,9 @@
 			]
 		},
 		"luna": {
-			"senses": ["księżyc"]
+			"senses": [
+				"księżyc"
+			]
 		},
 		"lux": {
 			"senses": [
@@ -2749,7 +2891,9 @@
 			]
 		},
 		"mare": {
-			"senses": ["morze"]
+			"senses": [
+				"morze"
+			]
 		},
 		"martyr": {
 			"senses": [
@@ -2777,7 +2921,9 @@
 			]
 		},
 		"medius": {
-			"senses": ["środkowy"]
+			"senses": [
+				"środkowy"
+			]
 		},
 		"memini": {
 			"senses": [
@@ -2892,13 +3038,13 @@
 			"senses": [
 				"miłosierdzie",
 				"litość"
-      ]
+			]
 		},
 		"misericors": {
 			"senses": [
 				"miłosierny",
 				"litościwy"
-      ]
+			]
 		},
 		"miseror": {
 			"senses": [
@@ -2956,9 +3102,6 @@
 				"montaż"
 			]
 		},
-		"moveo": {
-			"senses": ["poruszać"]
-		},
 		"mors": {
 			"senses": [
 				"śmierć"
@@ -2970,6 +3113,11 @@
 				"zmarły (w użyciu rzeczownikowym)"
 			],
 			"note": "Imiesłów czasownika deponentnego mórior (umierać) — forma bierna, znaczenie czynne — używany jak przymiotnik i jak rzeczownik: mórtui — umarli."
+		},
+		"moveo": {
+			"senses": [
+				"poruszać"
+			]
 		},
 		"mulier": {
 			"senses": [
@@ -2995,7 +3143,9 @@
 			]
 		},
 		"mundo": {
-			"senses": ["oczyszczać"]
+			"senses": [
+				"oczyszczać"
+			]
 		},
 		"mundus": {
 			"senses": [
@@ -3031,6 +3181,11 @@
 				"misterium"
 			]
 		},
+		"nam": {
+			"senses": [
+				"bowiem"
+			]
+		},
 		"nascor": {
 			"senses": [
 				"rodzić się",
@@ -3041,9 +3196,6 @@
 				"natura",
 				"renesans"
 			]
-		},
-		"nam": {
-			"senses": ["bowiem"]
 		},
 		"ne": {
 			"senses": [
@@ -3140,10 +3292,14 @@
 			]
 		},
 		"nox": {
-			"senses": ["noc"]
+			"senses": [
+				"noc"
+			]
 		},
 		"nubes": {
-			"senses": ["obłok"]
+			"senses": [
+				"obłok"
+			]
 		},
 		"numero": {
 			"senses": [
@@ -3522,7 +3678,9 @@
 			"note": "Często występuje w zwrocie testimónium perhibére — „dawać świadectwo”."
 		},
 		"periculum": {
-			"senses": ["niebezpieczeństwo"]
+			"senses": [
+				"niebezpieczeństwo"
+			]
 		},
 		"permitto": {
 			"senses": [
@@ -3688,10 +3846,14 @@
 			]
 		},
 		"potens": {
-			"senses": ["potężny"]
+			"senses": [
+				"potężny"
+			]
 		},
 		"potentia": {
-			"senses": ["moc"]
+			"senses": [
+				"moc"
+			]
 		},
 		"potestas": {
 			"senses": [
@@ -3704,6 +3866,13 @@
 			"senses": [
 				"pić",
 				"wypijać"
+			]
+		},
+		"prae": {
+			"senses": [
+				"przed, z przodu",
+				"w porównaniu z",
+				"z powodu"
 			]
 		},
 		"praecedo": {
@@ -3782,7 +3951,9 @@
 			]
 		},
 		"praetereo": {
-			"senses": ["przemijać"]
+			"senses": [
+				"przemijać"
+			]
 		},
 		"praeteritus": {
 			"senses": [
@@ -3798,7 +3969,9 @@
 			]
 		},
 		"pressura": {
-			"senses": ["ucisk"]
+			"senses": [
+				"ucisk"
+			]
 		},
 		"prex": {
 			"senses": [
@@ -3866,7 +4039,9 @@
 			]
 		},
 		"produco": {
-			"senses": ["wydawać"]
+			"senses": [
+				"wydawać"
+			]
 		},
 		"proficio": {
 			"senses": [
@@ -3886,6 +4061,11 @@
 				"promesa (od promítto)"
 			]
 		},
+		"prope": {
+			"senses": [
+				"blisko"
+			]
+		},
 		"propheta": {
 			"senses": [
 				"prorok"
@@ -3896,7 +4076,9 @@
 			]
 		},
 		"propinquus": {
-			"senses": ["bliski"]
+			"senses": [
+				"bliski"
+			]
 		},
 		"propitiabilis": {
 			"senses": [
@@ -3944,7 +4126,9 @@
 			]
 		},
 		"protego": {
-			"senses": ["chronić"]
+			"senses": [
+				"chronić"
+			]
 		},
 		"provenio": {
 			"senses": [
@@ -3975,7 +4159,7 @@
 				"proszę",
 				"błagam"
 			],
-      "note": "Czasownik ułomny; zachowały się głównie formy quæso i quǽsumus, używane w prośbach."
+			"note": "Czasownik ułomny; zachowały się głównie formy quæso i quǽsumus, używane w prośbach."
 		},
 		"quam": {
 			"senses": [
@@ -4137,7 +4321,7 @@
 				"pokrzepienie",
 				"wytchnienie"
 			],
-      "note": "Dosłownie: „ochłodzenie”. W modlitwie za zmarłych: pokrzepienie i wytchnienie."
+			"note": "Dosłownie: „ochłodzenie”. W modlitwie za zmarłych: pokrzepienie i wytchnienie."
 		},
 		"refugium": {
 			"senses": [
@@ -4222,7 +4406,9 @@
 			]
 		},
 		"reparatio": {
-			"senses": ["odnowienie"]
+			"senses": [
+				"odnowienie"
+			]
 		},
 		"repello": {
 			"senses": [
@@ -4300,7 +4486,9 @@
 			"note": "Sabaoth jest nieodmienną transkrypcją hebrajskiego rzeczownika w liczbie mnogiej, oznaczającego „zastępy”. W Deus Sabaoth znaczy „Bóg Zastępów”."
 		},
 		"sacer": {
-			"senses": ["święty"]
+			"senses": [
+				"święty"
+			]
 		},
 		"sacerdos": {
 			"senses": [
@@ -4350,7 +4538,7 @@
 				"ocalenie, ratunek",
 				"zdrowie",
 				"pozdrowienie"
-      ],
+			],
 			"derivatives": [
 				"salutować"
 			]
@@ -4360,7 +4548,7 @@
 				"zbawienie",
 				"wybawienie"
 			],
-      "note": "Przymiotnik salutáris (zbawienny) użyty rzeczownikowo."
+			"note": "Przymiotnik salutáris (zbawienny) użyty rzeczownikowo."
 		},
 		"salutaris": {
 			"senses": [
@@ -4376,7 +4564,9 @@
 			"note": "Formy rozkazujące salve i salvéte służą jako pozdrowienie: „bądź zdrów” i „bądźcie zdrowi”."
 		},
 		"salvo": {
-			"senses": ["zbawiać"]
+			"senses": [
+				"zbawiać"
+			]
 		},
 		"salvus": {
 			"senses": [
@@ -4442,6 +4632,11 @@
 				"niegodziwość"
 			]
 		},
+		"scio": {
+			"senses": [
+				"wiedzieć"
+			]
+		},
 		"scriptura": {
 			"senses": [
 				"Pismo Święte",
@@ -4449,13 +4644,13 @@
 				"napis"
 			]
 		},
-	"scrutor": {
-		"senses": [
-			"badać",
-			"przeszukiwać",
-			"dociekać"
-		],
-      "note": "Czasownik oznacza uważne, wnikliwe badanie. Od jego formy scrutábor pochodzi nazwa Scrutabor.",
+		"scrutor": {
+			"senses": [
+				"badać",
+				"przeszukiwać",
+				"dociekać"
+			],
+			"note": "Czasownik oznacza uważne, wnikliwe badanie. Od jego formy scrutábor pochodzi nazwa Scrutabor.",
 			"derivatives": [
 				"skrutacja",
 				"skrutator"
@@ -4640,10 +4835,14 @@
 			"note": "Jako rzeczownik sócius oznacza „towarzysza”."
 		},
 		"sol": {
-			"senses": ["słońce"]
+			"senses": [
+				"słońce"
+			]
 		},
 		"solemnis": {
-			"senses": ["uroczysty"]
+			"senses": [
+				"uroczysty"
+			]
 		},
 		"solus": {
 			"senses": [
@@ -4664,7 +4863,9 @@
 			]
 		},
 		"sonitus": {
-			"senses": ["szum"]
+			"senses": [
+				"szum"
+			]
 		},
 		"spero": {
 			"senses": [
@@ -4719,7 +4920,9 @@
 			]
 		},
 		"stella": {
-			"senses": ["gwiazda"]
+			"senses": [
+				"gwiazda"
+			]
 		},
 		"sto": {
 			"senses": [
@@ -4793,10 +4996,15 @@
 				"spożyć",
 				"przyjąć"
 			],
-      "note": "W odniesieniu do Komunii sumere znaczy „przyjmować”.",
+			"note": "W odniesieniu do Komunii sumere znaczy „przyjmować”.",
 			"derivatives": [
 				"konsumpcja",
 				"asumpt"
+			]
+		},
+		"supervenio": {
+			"senses": [
+				"nadchodzić"
 			]
 		},
 		"supplex": {
@@ -4807,9 +5015,6 @@
 			"derivatives": [
 				"suplikacje"
 			]
-		},
-		"supervenio": {
-			"senses": ["nadchodzić"]
 		},
 		"supra": {
 			"senses": [
@@ -4859,7 +5064,7 @@
 			"senses": [
 				"swój"
 			],
-      "note": "Zaimek dzierżawczy zwrotny, zwykle odnoszący się do podmiotu zdania."
+			"note": "Zaimek dzierżawczy zwrotny, zwykle odnoszący się do podmiotu zdania."
 		},
 		"tabernaculum": {
 			"senses": [
@@ -4893,7 +5098,9 @@
 			]
 		},
 		"templum": {
-			"senses": ["świątynia"]
+			"senses": [
+				"świątynia"
+			]
 		},
 		"temporalis": {
 			"senses": [
@@ -4906,7 +5113,9 @@
 			]
 		},
 		"tempus": {
-			"senses": ["czas"]
+			"senses": [
+				"czas"
+			]
 		},
 		"tenebrae": {
 			"senses": [
@@ -4957,13 +5166,13 @@
 			"senses": [
 				"bojaźń",
 				"lęk"
-      ]
+			]
 		},
 		"tollo": {
 			"senses": [
 				"podnosić",
 				"usuwać, gładzić"
-      ]
+			]
 		},
 		"totus": {
 			"senses": [
@@ -4971,6 +5180,11 @@
 				"wszystek"
 			],
 			"note": "Dopełniacz brzmi totíus, celownik toti — odmiana zaimkowa, nie zwykła przymiotnikowa."
+		},
+		"transeo": {
+			"senses": [
+				"przemijać"
+			]
 		},
 		"tremo": {
 			"senses": [
@@ -5165,7 +5379,7 @@
 				"przychodzić",
 				"przybywać",
 				"nadchodzić"
-      ],
+			],
 			"derivatives": [
 				"konwent",
 				"inwencja"
@@ -5219,7 +5433,7 @@
 			"senses": [
 				"droga"
 			],
-      "note": "W Psalmie 118 via jest obrazem sposobu życia.",
+			"note": "W Psalmie 118 via jest obrazem sposobu życia.",
 			"derivatives": [
 				"wiadukt",
 				"trywialny"
@@ -5290,7 +5504,7 @@
 				"życie",
 				"żywot",
 				"sposób życia"
-      ],
+			],
 			"derivatives": [
 				"witalny",
 				"witamina"
@@ -5300,7 +5514,7 @@
 			"senses": [
 				"ożywiać",
 				"dawać życie"
-      ]
+			]
 		},
 		"vivo": {
 			"senses": [

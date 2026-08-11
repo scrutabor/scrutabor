@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.aufer-a-nobis",
 	"lang": "pl",
 	"status": "working-edition",
-  "about": "Wchodząc po stopniach ołtarza, kapłan prosi Boga o usunięcie nieprawości, aby mógł wejść do „Sancta sanctórum”, miejsca najświętszego. Następnie całuje ołtarz i prosi o odpuszczenie swoich grzechów przez zasługi świętych, których relikwie znajdują się w tym miejscu, oraz wszystkich świętych.",
+	"about": "Wchodząc po stopniach ołtarza, kapłan prosi Boga o usunięcie nieprawości, aby mógł wejść do „Sancta sanctórum”, miejsca najświętszego. Następnie całuje ołtarz i prosi o odpuszczenie swoich grzechów przez zasługi świętych, których relikwie znajdują się w tym miejscu, oraz wszystkich świętych.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -80,7 +80,7 @@
 		},
 		"w011": {
 			"gloss": "Święte",
-		"function": "Przymiotnik użyty rzeczownikowo w liczbie mnogiej rodzaju nijakiego: rzeczy święte. Razem z „sanctórum” (w012) tworzy wyrażenie „Święte Świętych”."
+			"function": "Przymiotnik użyty rzeczownikowo w liczbie mnogiej rodzaju nijakiego: rzeczy święte. Razem z „sanctórum” (w012) tworzy wyrażenie „Święte Świętych”."
 		},
 		"w012": {
 			"gloss": "świętych",

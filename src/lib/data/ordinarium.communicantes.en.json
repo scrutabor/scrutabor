@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.communicantes",
 	"lang": "en",
 	"status": "working-edition",
-  "about": "In communion with the whole Church, the prayer honours the memory of the Blessed Virgin Mary, Saint Joseph, the Apostles, and the martyrs. After naming the saints, it asks God to surround the faithful with His protection through their merits and prayers.",
+	"about": "In communion with the whole Church, the prayer honours the memory of the Blessed Virgin Mary, Saint Joseph, the Apostles, and the martyrs. After naming the saints, it asks God to surround the faithful with His protection through their merits and prayers.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -70,7 +70,7 @@
 		},
 		"w011": {
 			"gloss": "Mother",
-		"function": "“Genetríx” means “Mother”. With the genitive “Dei”, the title means “Mother of God”."
+			"function": "“Genetríx” means “Mother”. With the genitive “Dei”, the title means “Mother of God”."
 		},
 		"w012": {
 			"gloss": "of God"

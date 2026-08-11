@@ -1,0 +1,77 @@
+<script lang="ts">
+	import type { Citation } from '$lib/corpus';
+	import { M, type Lang } from '$lib/i18n';
+
+	let {
+		citations,
+		lang,
+		centered = false
+	}: { citations?: Citation[]; lang: Lang; centered?: boolean } = $props();
+</script>
+
+{#if citations?.length}
+	<details class="source-notes" class:centered>
+		<summary class="smallcaps">{M[lang].sourcesLabel}</summary>
+		<ol>
+			{#each citations as citation (`${citation.title}:${citation.locator}`)}
+				<li>
+					{#if citation.url}<a href={citation.url} target="_blank" rel="external noopener"
+							>{citation.title}</a
+						>{:else}<cite>{citation.title}</cite>{/if}<span class="locator"
+						>, {citation.locator}</span
+					>
+				</li>
+			{/each}
+		</ol>
+	</details>
+{/if}
+
+<style>
+	.source-notes {
+		margin: 0.55rem 0 0;
+		color: var(--ink-soft);
+		font-size: 0.8rem;
+		line-height: 1.45;
+	}
+
+	summary {
+		width: max-content;
+		cursor: pointer;
+		color: var(--rubric);
+		font-size: 0.72rem;
+		letter-spacing: 0.06em;
+	}
+
+	.centered summary {
+		margin-inline: auto;
+	}
+
+	ol {
+		margin: 0.45rem 0 0;
+		padding-inline-start: 1.35rem;
+	}
+
+	.centered ol {
+		max-width: 28rem;
+		margin-inline: auto;
+		text-align: left;
+	}
+
+	li + li {
+		margin-top: 0.3rem;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+		border-bottom: 1px dotted var(--border);
+	}
+
+	a:hover {
+		color: var(--ink);
+	}
+
+	cite {
+		font-style: normal;
+	}
+</style>

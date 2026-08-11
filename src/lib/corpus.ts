@@ -35,6 +35,13 @@ export interface Analysis {
 	review: string;
 }
 
+/** A reader-facing source for one exact prose unit (corpus schema 0.11.0). */
+export interface Citation {
+	title: string;
+	locator: string;
+	url?: string;
+}
+
 export interface Word {
 	id: string;
 	form: string;
@@ -95,7 +102,14 @@ export interface WordGloss {
 	// Contextual-only and OPTIONAL since corpus schema 0.5.0 — the parse line
 	// and the lexicon carry everything else.
 	function?: string;
+	function_citations?: Citation[];
 	analysis?: Analysis;
+}
+
+export interface SegmentGloss {
+	translation?: string;
+	narrative?: string;
+	narrative_citations?: Citation[];
 }
 
 export interface GlossDocument {
@@ -105,8 +119,9 @@ export interface GlossDocument {
 	status: string;
 	/** One-paragraph introduction (schema 0.8.0) — collapsed by default. */
 	about?: string;
+	about_citations?: Citation[];
 	analysis_defaults: Analysis;
-	segments: Record<string, { translation?: string; narrative?: string }>;
+	segments: Record<string, SegmentGloss>;
 	words: Record<string, WordGloss>;
 }
 
@@ -131,6 +146,7 @@ export interface LemmaEntry {
 export interface SenseEntry {
 	senses: string[];
 	note?: string;
+	note_citations?: Citation[];
 	// Target-language words genuinely derived from this lemma — learner
 	// memory hooks (corpus SCHEMA.md 0.6.0).
 	derivatives?: string[];

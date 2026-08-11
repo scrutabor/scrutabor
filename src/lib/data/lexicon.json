@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"status": "working-edition",
 	"analysis_defaults": {
 		"confidence": "high",
@@ -284,6 +284,11 @@
 			"head": "a, ab",
 			"pos": "prep"
 		},
+		"abicio": {
+			"head": "abício, abícere, abiéci, abiéctum",
+			"pos": "verb",
+			"conj": 3
+		},
 		"absolutio": {
 			"head": "absolútio, absolutiónis",
 			"pos": "noun",
@@ -367,6 +372,12 @@
 			"gender": "f",
 			"decl": 1
 		},
+		"aemulatio": {
+			"head": "æmulátio, æmulatiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
 		"aequitas": {
 			"head": "ǽquitas, æquitátis",
 			"pos": "noun",
@@ -376,6 +387,12 @@
 		"aequus": {
 			"head": "æquus, -a, -um",
 			"pos": "adj"
+		},
+		"aestas": {
+			"head": "æstas, æstátis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
 		},
 		"aestimator": {
 			"head": "æstimátor, æstimatóris",
@@ -425,6 +442,11 @@
 			"head": "altus, -a, -um",
 			"pos": "adj"
 		},
+		"ambulo": {
+			"head": "ámbulo, ambuláre, ambulávi, ambulátum",
+			"pos": "verb",
+			"conj": 1
+		},
 		"amen": {
 			"head": "amen",
 			"pos": "intj"
@@ -472,6 +494,11 @@
 			"gender": "m",
 			"decl": 2
 		},
+		"appropinquo": {
+			"head": "appropínquo, appropinquáre, appropinquávi, appropinquátum",
+			"pos": "verb",
+			"conj": 1
+		},
 		"apud": {
 			"head": "apud",
 			"pos": "prep"
@@ -482,10 +509,27 @@
 			"gender": "f",
 			"decl": 1
 		},
+		"arbor": {
+			"head": "arbor, arbóris",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
 		"archangelus": {
 			"head": "archángelus, -i",
 			"pos": "noun",
 			"gender": "m",
+			"decl": 2
+		},
+		"aresco": {
+			"head": "arésco, aréscere, árui",
+			"pos": "verb",
+			"conj": 3
+		},
+		"arma": {
+			"head": "arma, -órum",
+			"pos": "noun",
+			"gender": "n",
 			"decl": 2
 		},
 		"ascendo": {
@@ -568,6 +612,12 @@
 			"head": "benedíctus, -a, -um",
 			"pos": "adj"
 		},
+		"benignitas": {
+			"head": "benígnitas, benignitátis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
 		"benignus": {
 			"head": "benígnus, -a, -um",
 			"pos": "adj"
@@ -602,6 +652,12 @@
 			"head": "cápio, cápere, cepi, captum",
 			"pos": "verb",
 			"conj": 3
+		},
+		"caput": {
+			"head": "caput, cápitis",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 3
 		},
 		"caro": {
 			"head": "caro, carnis",
@@ -685,6 +741,12 @@
 			"pos": "verb",
 			"conj": 3
 		},
+		"comessatio": {
+			"head": "comessátio, comessatiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
 		"commixtio": {
 			"head": "commíxtio, commixtiónis",
 			"pos": "noun",
@@ -733,15 +795,35 @@
 			"gender": "f",
 			"decl": 3
 		},
+		"confido": {
+			"head": "confído, confídere, confísus sum",
+			"pos": "verb",
+			"conj": 3
+		},
 		"confiteor": {
 			"head": "confíteor, confitéri, conféssus sum",
 			"pos": "verb",
 			"conj": 2
 		},
+		"confundo": {
+			"head": "confúndo, confúndere, confúdi, confúsum",
+			"pos": "verb",
+			"conj": 3
+		},
+		"confusio": {
+			"head": "confúsio, confusiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
 		"conglorifico": {
 			"head": "conglorífico, conglorificáre, conglorificávi, conglorificátum",
 			"pos": "verb",
 			"conj": 1
+		},
+		"congruus": {
+			"head": "cóngruus, -a, -um",
+			"pos": "adj"
 		},
 		"consecratio": {
 			"head": "consecrátio, consecratiónis",
@@ -1110,6 +1192,11 @@
 			"gender": "f",
 			"decl": 1
 		},
+		"edoceo": {
+			"head": "edóceo, edocére, edócui, edóctum",
+			"pos": "verb",
+			"conj": 2
+		},
 		"efficio": {
 			"head": "effício, effícere, efféci, efféctum",
 			"pos": "verb",
@@ -1174,6 +1261,11 @@
 			"pos": "verb",
 			"conj": 3
 		},
+		"erubesco": {
+			"head": "erubésco, erubéscere, erúbui",
+			"pos": "verb",
+			"conj": 3
+		},
 		"eruo": {
 			"head": "éruo, erúere, érui, érutum",
 			"pos": "verb",
@@ -1181,6 +1273,10 @@
 		},
 		"et": {
 			"head": "et",
+			"pos": "conj"
+		},
+		"etenim": {
+			"head": "étenim",
 			"pos": "conj"
 		},
 		"etiam": {
@@ -1490,6 +1586,10 @@
 			"gender": "f",
 			"decl": 3
 		},
+		"iam": {
+			"head": "iam",
+			"pos": "adv"
+		},
 		"idem": {
 			"head": "idem, éadem, idem",
 			"pos": "pron"
@@ -1588,6 +1688,11 @@
 			"head": "indúlgeo, indulgére, indúlsi, indúltum",
 			"pos": "verb",
 			"conj": 2
+		},
+		"induo": {
+			"head": "índuo, indúere, índui, indútum",
+			"pos": "verb",
+			"conj": 3
 		},
 		"inferi": {
 			"head": "ínferi, -órum",
@@ -1699,6 +1804,11 @@
 		"ipse": {
 			"head": "ipse, ipsa, ipsum",
 			"pos": "pron"
+		},
+		"irrideo": {
+			"head": "irrídeo, irridére, irrísi, irrísum",
+			"pos": "verb",
+			"conj": 2
 		},
 		"is": {
 			"head": "is, ea, id",
@@ -2038,11 +2148,6 @@
 			"gender": "m",
 			"decl": 3
 		},
-		"moveo": {
-			"head": "móveo, movére, movi, motum",
-			"pos": "verb",
-			"conj": 2
-		},
 		"mors": {
 			"head": "mors, mortis",
 			"pos": "noun",
@@ -2052,6 +2157,11 @@
 		"mortuus": {
 			"head": "mórtuus, -a, -um",
 			"pos": "adj"
+		},
+		"moveo": {
+			"head": "móveo, movére, movi, motum",
+			"pos": "verb",
+			"conj": 2
 		},
 		"mulier": {
 			"head": "múlier, mulíeris",
@@ -2523,6 +2633,10 @@
 			"pos": "verb",
 			"conj": 1
 		},
+		"prae": {
+			"head": "præ",
+			"pos": "prep"
+		},
 		"praecedo": {
 			"head": "præcédo, præcédere, præcéssi, præcéssum",
 			"pos": "verb",
@@ -2639,6 +2753,10 @@
 			"pos": "noun",
 			"gender": "f",
 			"decl": 3
+		},
+		"prope": {
+			"head": "prope",
+			"pos": "adv"
 		},
 		"propheta": {
 			"head": "prophéta, -æ",
@@ -3008,6 +3126,11 @@
 			"gender": "n",
 			"decl": 3
 		},
+		"scio": {
+			"head": "scio, scire, scivi, scitum",
+			"pos": "verb",
+			"conj": 4
+		},
 		"scriptura": {
 			"head": "scriptúra, -æ",
 			"pos": "noun",
@@ -3229,14 +3352,14 @@
 			"pos": "verb",
 			"conj": 3
 		},
-		"supplex": {
-			"head": "supplex, súpplicis",
-			"pos": "adj"
-		},
 		"supervenio": {
 			"head": "supervénio, superveníre, supervéni, supervéntum",
 			"pos": "verb",
 			"conj": 4
+		},
+		"supplex": {
+			"head": "supplex, súpplicis",
+			"pos": "adj"
 		},
 		"supra": {
 			"head": "supra",
@@ -3354,6 +3477,10 @@
 		"totus": {
 			"head": "totus, -a, -um",
 			"pos": "adj"
+		},
+		"transeo": {
+			"head": "tránseo, transíre, transívi, tránsitum",
+			"pos": "verb"
 		},
 		"tremo": {
 			"head": "tremo, trémere, trémui",

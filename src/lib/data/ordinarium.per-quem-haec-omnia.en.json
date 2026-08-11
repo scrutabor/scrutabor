@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.per-quem-haec-omnia",
 	"lang": "en",
 	"status": "working-edition",
-  "about": "The prayer professes that through Christ God continually creates all these good things, sanctifies them, gives them life, blesses them, and bestows them upon us. The relative “quem” refers to Christ, named at the end of the preceding prayer.",
+	"about": "The prayer professes that through Christ God continually creates all these good things, sanctifies them, gives them life, blesses them, and bestows them upon us. The relative “quem” refers to Christ, named at the end of the preceding prayer.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

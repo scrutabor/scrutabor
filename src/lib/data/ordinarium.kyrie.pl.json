@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.kyrie",
 	"lang": "pl",
 	"status": "working-edition",
-  "about": "Greckie wezwanie o miłosierdzie. Trzykrotne „Kýrie eléison” prowadzi do trzykrotnego „Christe eléison”, po którym „Kýrie eléison” powraca jeszcze trzy razy.",
+	"about": "Greckie wezwanie o miłosierdzie. Trzykrotne „Kýrie eléison” prowadzi do trzykrotnego „Christe eléison”, po którym „Kýrie eléison” powraca jeszcze trzy razy.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

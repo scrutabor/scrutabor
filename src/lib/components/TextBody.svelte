@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { GlossDocument, TextDocument } from '$lib/corpus';
+	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { massForm } from '$lib/mass-form.svelte';
 	import { isEveryonesResponse, isYours, role } from '$lib/role.svelte';
@@ -114,6 +115,7 @@
 			     alone stay at the top step. -->
 			{#if helpLevel >= 1 && gloss.segments[seg.id]?.narrative}
 				<p class="rubric-narrative">{gloss.segments[seg.id].narrative}</p>
+				<SourceNotes citations={gloss.segments[seg.id].narrative_citations} {lang} />
 			{/if}
 		</div>
 	{:else}

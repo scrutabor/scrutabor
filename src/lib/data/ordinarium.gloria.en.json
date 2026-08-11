@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.gloria",
 	"lang": "en",
 	"status": "working-edition",
-  "about": "The hymn begins with the song of the angels at the birth of Christ. It praises God the Father and then addresses Jesus Christ, the only-begotten Son and Lamb of God, asking Him to have mercy on us and receive our prayer. It ends by professing the glory of Christ with the Holy Spirit in the glory of God the Father.",
+	"about": "The hymn begins with the song of the angels at the birth of Christ. It praises God the Father and then addresses Jesus Christ, the only-begotten Son and Lamb of God, asking Him to have mercy on us and receive our prayer. It ends by professing the glory of Christ with the Holy Spirit in the glory of God the Father.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

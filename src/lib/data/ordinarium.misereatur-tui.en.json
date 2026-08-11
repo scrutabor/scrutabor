@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.misereatur-tui",
 	"lang": "en",
 	"status": "working-edition",
-  "about": "The ministers pray for the priest in the singular: “misereátur tui”, “peccátis tuis”, “perdúcat te”, and the priest answers “Amen”. After the ministers' confession the same formula appears in the plural. Only then does the priest add the “Indulgéntiam” prayer.",
+	"about": "The ministers pray for the priest in the singular: “misereátur tui”, “peccátis tuis”, “perdúcat te”, and the priest answers “Amen”. After the ministers' confession the same formula appears in the plural. Only then does the priest add the “Indulgéntiam” prayer.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

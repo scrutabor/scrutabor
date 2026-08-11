@@ -34,6 +34,7 @@ export const load: PageServerLoad = ({ params }) => {
 		...full,
 		// the stanza's introduction belongs to its own page, not the landing
 		about: undefined,
+		about_citations: undefined,
 		segments: { [verse.id]: full.segments[verse.id] },
 		words: Object.fromEntries(Object.entries(full.words).filter(([id]) => ids.has(id)))
 	};

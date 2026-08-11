@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.evangelium-ultimum",
 	"lang": "en",
 	"status": "working-edition",
@@ -116,7 +116,7 @@
 		},
 		"w018": {
 			"gloss": "the Word",
-		"function": "“Verbum” is neuter. In the Greek text of Jn 1:1 it corresponds to “lógos”."
+			"function": "“Verbum” is neuter. In the Greek text of Jn 1:1 it corresponds to “lógos”."
 		},
 		"w019": {
 			"gloss": "and"
@@ -401,7 +401,7 @@
 		},
 		"w107": {
 			"gloss": "coming",
-		"function": "Accusative agreeing with “hóminem” (w106): in the Latin sentence it is the man who comes into the world."
+			"function": "Accusative agreeing with “hóminem” (w106): in the Latin sentence it is the man who comes into the world."
 		},
 		"w108": {
 			"gloss": "into"

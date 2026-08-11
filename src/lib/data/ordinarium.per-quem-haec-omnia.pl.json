@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.per-quem-haec-omnia",
 	"lang": "pl",
 	"status": "working-edition",
-  "about": "Modlitwa wyznaje, że przez Chrystusa Bóg nieustannie stwarza te wszystkie dobra, uświęca je, ożywia, błogosławi i nam ich udziela. Zaimek „quem” odnosi się do Chrystusa, wymienionego na końcu poprzedniej modlitwy.",
+	"about": "Modlitwa wyznaje, że przez Chrystusa Bóg nieustannie stwarza te wszystkie dobra, uświęca je, ożywia, błogosławi i nam ich udziela. Zaimek „quem” odnosi się do Chrystusa, wymienionego na końcu poprzedniej modlitwy.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

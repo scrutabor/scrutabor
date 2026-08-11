@@ -108,6 +108,20 @@ test.describe('landing @online', () => {
 		await expect(page.locator('aside')).toContainText('exquíram');
 	});
 
+	test('a sourced word note keeps its reference one disclosure away', async ({ page }) => {
+		await page.goto('/pl');
+		await page.locator('#w020').click();
+		const sources = page.locator('.word-box details.source-notes');
+		await expect(sources.locator('summary')).toHaveText('źródła');
+		await expect(sources.getByRole('link')).not.toBeVisible();
+		await sources.locator('summary').click();
+		await expect(sources.getByRole('link', { name: 'Allen and Greenough' })).toHaveAttribute(
+			'href',
+			'https://dcc.dickinson.edu/grammar/latin/present-system'
+		);
+		await expect(sources).toContainText('§§ 168 d–e, 187');
+	});
+
 	test('the specimen citation reaches the psalm page', async ({ page }) => {
 		await page.goto('/pl');
 		await expect(page.locator('.stanza-link a')).toHaveAttribute('href', '/app/pl/psalmi/118-he');

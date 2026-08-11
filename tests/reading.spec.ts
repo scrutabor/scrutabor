@@ -191,6 +191,19 @@ test('the about sheet speaks the interface language', async ({ page }) => {
 	await expect(page.locator('aside.about-sheet')).toContainText("Lord's Prayer");
 });
 
+test('a doctrinal distinction shows its exact source only on request', async ({ page }) => {
+	await page.goto('/app/en/ordinarium/misereatur');
+	await page.locator('.about-pill').click();
+	const sources = page.locator('aside.about-sheet details.source-notes');
+	await expect(sources.locator('summary')).toHaveText('sources');
+	await expect(sources.getByRole('link')).not.toBeVisible();
+	await sources.locator('summary').click();
+	await expect(
+		sources.getByRole('link', { name: 'Catechismus Catholicae Ecclesiae' })
+	).toHaveAttribute('href', 'https://press.vatican.va/archive/catechism_lt/p2s2c2a4_lt.htm');
+	await expect(sources).toContainText('n. 1449');
+});
+
 test('the Credo reads with participles in the panel', async ({ page }) => {
 	await page.goto('/app/pl/ordinarium/credo?w=w064'); // incarnátus
 	const panel = page.locator('aside');

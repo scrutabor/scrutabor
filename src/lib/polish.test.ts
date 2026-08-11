@@ -55,4 +55,12 @@ describe('binding one-letter words', () => {
 			e: undefined
 		});
 	});
+
+	it('leaves language-independent citation metadata unchanged', () => {
+		const citation = { title: 'A Latin Grammar', locator: 'p. 1' };
+		expect(bindProse({ function: 'w zdaniu', function_citations: [citation] })).toEqual({
+			function: `w${NB}zdaniu`,
+			function_citations: [citation]
+		});
+	});
 });

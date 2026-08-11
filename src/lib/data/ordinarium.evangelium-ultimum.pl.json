@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "ordinarium.evangelium-ultimum",
 	"lang": "pl",
 	"status": "working-edition",
@@ -116,7 +116,7 @@
 		},
 		"w018": {
 			"gloss": "Słowo",
-		"function": "„Verbum” jest rodzaju nijakiego. W greckim tekście J 1, 1 odpowiada mu „lógos”."
+			"function": "„Verbum” jest rodzaju nijakiego. W greckim tekście J 1, 1 odpowiada mu „lógos”."
 		},
 		"w019": {
 			"gloss": "a"
@@ -401,7 +401,7 @@
 		},
 		"w107": {
 			"gloss": "przychodzącego",
-		"function": "Biernik. „Venientem” zgadza się z „hóminem” (w106), więc w zdaniu łacińskim to człowiek przychodzi na świat."
+			"function": "Biernik. „Venientem” zgadza się z „hóminem” (w106), więc w zdaniu łacińskim to człowiek przychodzi na świat."
 		},
 		"w108": {
 			"gloss": "na"

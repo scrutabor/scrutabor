@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "orationes.sancte-michael",
 	"lang": "pl",
 	"status": "working-edition",
-  "about": "Modlitwa prosi św. Michała Archanioła o obronę w walce przeciw niegodziwości i zasadzkom diabła. Następnie błaga Boga, aby mu rozkazał, i ponownie zwraca się do św. Michała jako wodza wojska niebieskiego, aby mocą Bożą strącił do piekła szatana i inne złe duchy.",
+	"about": "Modlitwa prosi św. Michała Archanioła o obronę w walce przeciw niegodziwości i zasadzkom diabła. Następnie błaga Boga, aby mu rozkazał, i ponownie zwraca się do św. Michała jako wodza wojska niebieskiego, aby mocą Bożą strącił do piekła szatana i inne złe duchy.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [

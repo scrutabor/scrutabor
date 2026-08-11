@@ -1,9 +1,9 @@
 {
-	"schema_version": "0.10.0",
+	"schema_version": "0.11.0",
 	"text": "orationes.regina-caeli",
 	"lang": "en",
 	"status": "working-edition",
-  "about": "A Marian antiphon of the Easter season. It calls the Blessed Virgin Mary to rejoice in the resurrection of her Son and asks her to pray for us. A versicle and response follow the antiphon, professing that the Lord has truly risen.",
+	"about": "A Marian antiphon of the Easter season. It calls the Blessed Virgin Mary to rejoice in the resurrection of her Son and asks her to pray for us. A versicle and response follow the antiphon, professing that the Lord has truly risen.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
