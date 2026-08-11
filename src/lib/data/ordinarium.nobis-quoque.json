@@ -490,6 +490,13 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"analysis": {
+						"confidence": "high",
+						"sources": [
+							"editorial"
+						],
+						"review": "accepted"
 					}
 				},
 				{
