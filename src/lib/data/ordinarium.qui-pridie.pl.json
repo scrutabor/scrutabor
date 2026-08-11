@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"text": "ordinarium.qui-pridie",
 	"lang": "pl",
 	"status": "working-edition",
@@ -164,7 +164,7 @@
 		},
 		"w035": {
 			"gloss": "jedzcie",
-			"function": "Rozkaźnik. Kanon mówi „manducáte” za 1 Kor 11, 24, tam gdzie Mt 26, 26 ma „comédite”.",
+			"function": "Tryb rozkazujący. Kanon mówi „manducáte” za 1 Kor 11, 24, tam gdzie Mt 26, 26 ma „comédite”.",
 			"function_citations": [
 				{
 					"title": "Biblia Sacra Vulgata",

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"text": "ordinarium.praefatio-communis",
 	"lang": "pl",
 	"status": "working-edition",
@@ -203,7 +203,7 @@
 		},
 		"w052": {
 			"gloss": "każ",
-			"function": "Tryb łączący po ut. Po polsku oddany rozkaźnikiem, ale w łacinie to prośba, nie rozkaz."
+			"function": "Tryb łączący po ut. Po polsku oddany trybem rozkazującym, ale w łacinie to prośba, nie rozkaz."
 		},
 		"w053": {
 			"gloss": "prosimy",

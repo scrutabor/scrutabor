@@ -214,6 +214,7 @@
 		{#if helpLevel >= 2 && gloss.segments[seg.id]?.translation}
 			<div class="seg-extra">
 				<p class="translation">{gloss.segments[seg.id].translation}</p>
+				<SourceNotes citations={gloss.segments[seg.id].translation_citations} {lang} />
 			</div>
 		{/if}
 	{/if}

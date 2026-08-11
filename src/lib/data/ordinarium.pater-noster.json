@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"id": "ordinarium.pater-noster",
 	"title": "Pater noster (Missæ)",
 	"category": "ordinarium",
@@ -532,15 +532,6 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					},
-					"analysis": {
-						"confidence": "medium",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
-						],
-						"review": "pending"
 					}
 				},
 				{

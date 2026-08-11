@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"id": "ordinarium.sanctus",
 	"title": "Sanctus",
 	"category": "ordinarium",
@@ -118,12 +118,12 @@
 						"gender": "n"
 					},
 					"analysis": {
-						"confidence": "medium",
+						"confidence": "high",
 						"sources": [
 							"editorial",
 							"whitakers"
 						],
-						"review": "pending"
+						"review": "accepted"
 					}
 				}
 			],

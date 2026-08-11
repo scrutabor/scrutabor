@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"id": "ordinarium.misereatur",
 	"title": "Misereátur",
 	"category": "ordinarium",
@@ -73,12 +73,12 @@
 						"number": "pl"
 					},
 					"analysis": {
-						"confidence": "medium",
+						"confidence": "high",
 						"sources": [
 							"editorial",
 							"whitakers"
 						],
-						"review": "pending"
+						"review": "accepted"
 					}
 				},
 				{

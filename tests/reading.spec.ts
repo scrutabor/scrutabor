@@ -25,6 +25,22 @@ test('help slider walks the three-step ladder', async ({ page }) => {
 	await expect(page.locator('.rubric-narrative').first()).toBeVisible();
 });
 
+test('a received translation identifies its source beside the verse', async ({ page }) => {
+	await page.goto('/app/pl/psalmi/118-he');
+	await page.locator('input[type="range"]').fill('2');
+	const verse = page.locator('#v34 + .seg-extra');
+	await expect(verse.locator('.translation')).toContainText('Daj mi zrozumienie');
+	const sources = verse.locator('details.source-notes');
+	await expect(sources.getByText('źródła', { exact: true })).toBeVisible();
+	await sources.locator('summary').click();
+	await expect(sources).toContainText('Biblia w przekładzie ks. Jakuba Wujka (1923)');
+	await expect(sources).toContainText('Ps 118, 34');
+	await expect(sources.getByRole('link', { name: 'pełna bibliografia' })).toHaveAttribute(
+		'href',
+		'/app/pl/bibliographia'
+	);
+});
+
 test('word panel shows all three layers', async ({ page }) => {
 	await page.goto(AVE);
 	await page.locator('#w019').click(); // Mater
@@ -1318,12 +1334,14 @@ const inkGaps = (page: Page) =>
 			const p = w.previousElementSibling,
 				n = w.nextElementSibling;
 			if (!p || !n || !n.classList.contains('verse')) return;
-			// A rubric can end in a collapsed source disclosure. Range rectangles
-			// include that disclosure's hidden contents in Chromium, although no
-			// reader sees them. Measure from the last visible line of prose instead.
+			// A rubric or translation can end in a collapsed source disclosure.
+			// Range rectangles include that disclosure's hidden contents in Chromium,
+			// although no reader sees them. Measure from its visible summary instead.
 			const visiblePrevious = p.classList.contains('rubric')
 				? (p.querySelector('.rubric-narrative') ?? p.querySelector('.rubric-la') ?? p)
-				: p;
+				: p.classList.contains('seg-extra')
+					? (p.querySelector('.source-notes summary') ?? p.querySelector('.translation') ?? p)
+					: p;
 			labels.push({
 				above: edge(w, 'top')! - edgeOf(visiblePrevious, 'bottom')!,
 				below: edgeOf(n, 'top')! - edge(w, 'bottom')!,

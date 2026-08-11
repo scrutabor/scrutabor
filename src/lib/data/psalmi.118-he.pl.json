@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"text": "psalmi.118-he",
 	"lang": "pl",
 	"status": "working-edition",
@@ -33,7 +33,13 @@
 			"translation": "Ustanów mi za prawo, Panie, drogę Twoich ustaw, a będę jej szukał zawsze."
 		},
 		"s02": {
-			"translation": "Daj mi zrozumienie, a będę badał Twoje prawo i zachowam je całym sercem moim."
+			"translation": "Daj mi zrozumienie, a będę badał Twoje prawo i zachowam je całym sercem moim.",
+			"translation_citations": [
+				{
+					"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+					"locator": "Ps 118, 34"
+				}
+			]
 		},
 		"s03": {
 			"translation": "Prowadź mnie na ścieżkę Twoich przykazań, bo jej właśnie chciałem."

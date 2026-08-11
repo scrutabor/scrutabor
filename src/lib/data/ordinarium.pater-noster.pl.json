@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"text": "ordinarium.pater-noster",
 	"lang": "pl",
 	"status": "working-edition",
@@ -300,7 +300,7 @@
 		},
 		"w056": {
 			"gloss": "wybaw",
-			"function": "Następujący embolizm rozpoczyna ten sam rozkaźnik: Líbera nos, quǽsumus, Dómine."
+			"function": "Następujący embolizm rozpoczyna ten sam tryb rozkazujący: Líbera nos, quǽsumus, Dómine."
 		},
 		"w057": {
 			"gloss": "nas",

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"text": "ordinarium.agnus-dei",
 	"lang": "pl",
 	"status": "working-edition",
@@ -118,7 +118,7 @@
 		},
 		"w023": {
 			"gloss": "obdarz",
-			"function": "Rozkaźnik łączący się z „nobis” (w024) w celowniku i „pacem” (w025) w bierniku."
+			"function": "Tryb rozkazujący łączący się z „nobis” (w024) w celowniku i „pacem” (w025) w bierniku."
 		},
 		"w024": {
 			"gloss": "nas"

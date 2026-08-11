@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"text": "ordinarium.introibo",
 	"lang": "pl",
 	"status": "working-edition",
@@ -36,7 +36,14 @@
 			]
 		},
 		"s04": {
-			"translation": "Przystąpię do ołtarza Bożego."
+			"translation": "Przystąpię do ołtarza Bożego.",
+			"translation_citations": [
+				{
+					"title": "Missale Meum",
+					"locator": "Ordo Missae, antyfona Introibo",
+					"url": "https://www.missalemeum.com/pl/ordo"
+				}
+			]
 		},
 		"s05": {
 			"translation": "Do Boga, który rozwesela młodość moją."

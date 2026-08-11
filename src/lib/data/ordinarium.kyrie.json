@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"id": "ordinarium.kyrie",
 	"title": "Kýrie, eléison",
 	"category": "ordinarium",
@@ -20,13 +20,13 @@
 		"review": "pending"
 	},
 	"analysis_defaults_words": {
-		"confidence": "medium",
+		"confidence": "high",
 		"sources": [
 			"editorial",
 			"whitakers",
 			"collatinus"
 		],
-		"review": "pending"
+		"review": "accepted"
 	},
 	"segments": [
 		{
@@ -60,12 +60,12 @@
 						"gender": "m"
 					},
 					"analysis": {
-						"confidence": "medium",
+						"confidence": "high",
 						"sources": [
 							"editorial",
 							"whitakers"
 						],
-						"review": "pending"
+						"review": "accepted"
 					}
 				},
 				{
@@ -107,12 +107,12 @@
 						"gender": "m"
 					},
 					"analysis": {
-						"confidence": "medium",
+						"confidence": "high",
 						"sources": [
 							"editorial",
 							"whitakers"
 						],
-						"review": "pending"
+						"review": "accepted"
 					}
 				},
 				{
@@ -158,12 +158,12 @@
 						"gender": "m"
 					},
 					"analysis": {
-						"confidence": "medium",
+						"confidence": "high",
 						"sources": [
 							"editorial",
 							"whitakers"
 						],
-						"review": "pending"
+						"review": "accepted"
 					}
 				},
 				{
@@ -204,15 +204,6 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -257,15 +248,6 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -306,15 +288,6 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
-					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
-						],
-						"review": "accepted"
 					}
 				},
 				{
@@ -360,12 +333,12 @@
 						"gender": "m"
 					},
 					"analysis": {
-						"confidence": "medium",
+						"confidence": "high",
 						"sources": [
 							"editorial",
 							"whitakers"
 						],
-						"review": "pending"
+						"review": "accepted"
 					}
 				},
 				{
@@ -407,12 +380,12 @@
 						"gender": "m"
 					},
 					"analysis": {
-						"confidence": "medium",
+						"confidence": "high",
 						"sources": [
 							"editorial",
 							"whitakers"
 						],
-						"review": "pending"
+						"review": "accepted"
 					}
 				},
 				{
@@ -458,12 +431,12 @@
 						"gender": "m"
 					},
 					"analysis": {
-						"confidence": "medium",
+						"confidence": "high",
 						"sources": [
 							"editorial",
 							"whitakers"
 						],
-						"review": "pending"
+						"review": "accepted"
 					}
 				},
 				{

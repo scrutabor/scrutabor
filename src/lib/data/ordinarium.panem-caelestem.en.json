@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"text": "ordinarium.panem-caelestem",
 	"lang": "en",
 	"status": "working-edition",
@@ -33,13 +33,25 @@
 			"narrative": "The priest genuflects, rises, and says:"
 		},
 		"s02": {
-			"translation": "I will take the Bread of heaven, and will call upon the name of the Lord."
+			"translation": "I will take the Bread of heaven, and will call upon the name of the Lord.",
+			"translation_citations": [
+				{
+					"title": "Douay-Rheims Bible (Challoner)",
+					"locator": "Psalm 115:13"
+				}
+			]
 		},
 		"s03": {
 			"narrative": "Bowing a little, the priest takes both halves of the Host in his left hand and slips the paten beneath them. Striking his breast with his right hand, he says the following three times in a slightly raised voice, devoutly and humbly:"
 		},
 		"s04": {
-			"translation": "Lord, I am not worthy,"
+			"translation": "Lord, I am not worthy,",
+			"translation_citations": [
+				{
+					"title": "Douay-Rheims Bible (Challoner)",
+					"locator": "Matthew 8:8"
+				}
+			]
 		},
 		"s05": {
 			"narrative": "The priest goes on under his breath.",
@@ -52,10 +64,22 @@
 			]
 		},
 		"s06": {
-			"translation": "that You should enter under my roof: but only say the word, and my soul shall be healed."
+			"translation": "that You should enter under my roof: but only say the word, and my soul shall be healed.",
+			"translation_citations": [
+				{
+					"title": "Douay-Rheims Bible (Challoner)",
+					"locator": "Matthew 8:8"
+				}
+			]
 		},
 		"s07": {
-			"translation": "Lord, I am not worthy,"
+			"translation": "Lord, I am not worthy,",
+			"translation_citations": [
+				{
+					"title": "Douay-Rheims Bible (Challoner)",
+					"locator": "Matthew 8:8"
+				}
+			]
 		},
 		"s08": {
 			"narrative": "The priest goes on under his breath.",
@@ -68,10 +92,22 @@
 			]
 		},
 		"s09": {
-			"translation": "that You should enter under my roof: but only say the word, and my soul shall be healed."
+			"translation": "that You should enter under my roof: but only say the word, and my soul shall be healed.",
+			"translation_citations": [
+				{
+					"title": "Douay-Rheims Bible (Challoner)",
+					"locator": "Matthew 8:8"
+				}
+			]
 		},
 		"s10": {
-			"translation": "Lord, I am not worthy,"
+			"translation": "Lord, I am not worthy,",
+			"translation_citations": [
+				{
+					"title": "Douay-Rheims Bible (Challoner)",
+					"locator": "Matthew 8:8"
+				}
+			]
 		},
 		"s11": {
 			"narrative": "The priest goes on under his breath.",
@@ -84,7 +120,13 @@
 			]
 		},
 		"s12": {
-			"translation": "that You should enter under my roof: but only say the word, and my soul shall be healed."
+			"translation": "that You should enter under my roof: but only say the word, and my soul shall be healed.",
+			"translation_citations": [
+				{
+					"title": "Douay-Rheims Bible (Challoner)",
+					"locator": "Matthew 8:8"
+				}
+			]
 		},
 		"s13": {
 			"narrative": "The priest signs himself with the Host over the paten, and says:"

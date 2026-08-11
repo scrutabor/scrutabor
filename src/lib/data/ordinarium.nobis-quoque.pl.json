@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"text": "ordinarium.nobis-quoque",
 	"lang": "pl",
 	"status": "working-edition",
@@ -200,7 +200,15 @@
 			"gloss": "nie"
 		},
 		"w048": {
-			"gloss": "ten, kto szacuje"
+			"gloss": "ten, kto szacuje",
+			"function": "Mianownik przy „admítte” (w054) w trybie rozkazującym, równoległy do „largítor” (w053).",
+			"function_citations": [
+				{
+					"title": "Allen and Greenough, New Latin Grammar",
+					"locator": "§ 340 a",
+					"url": "https://dcc.dickinson.edu/grammar/latin/vocative"
+				}
+			]
 		},
 		"w049": {
 			"gloss": "zasługę"
@@ -216,7 +224,15 @@
 			"gloss": "prosimy"
 		},
 		"w053": {
-			"gloss": "szczodry dawca"
+			"gloss": "szczodry dawca",
+			"function": "Mianownik w dopowiedzeniu do niewyrażonego podmiotu „admítte” (w054). Łacina dopuszcza taką konstrukcję przy trybie rozkazującym.",
+			"function_citations": [
+				{
+					"title": "Allen and Greenough, New Latin Grammar",
+					"locator": "§ 340 a",
+					"url": "https://dcc.dickinson.edu/grammar/latin/vocative"
+				}
+			]
 		},
 		"w054": {
 			"gloss": "dopuść"

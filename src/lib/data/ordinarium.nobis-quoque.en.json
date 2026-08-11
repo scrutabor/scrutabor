@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"text": "ordinarium.nobis-quoque",
 	"lang": "en",
 	"status": "working-edition",
@@ -200,7 +200,15 @@
 			"gloss": "not"
 		},
 		"w048": {
-			"gloss": "a weigher"
+			"gloss": "a weigher",
+			"function": "Nominative beside the second-person imperative “admítte” (w054), parallel to “largítor” (w053).",
+			"function_citations": [
+				{
+					"title": "Allen and Greenough, New Latin Grammar",
+					"locator": "§ 340 a",
+					"url": "https://dcc.dickinson.edu/grammar/latin/vocative"
+				}
+			]
 		},
 		"w049": {
 			"gloss": "of merit"
@@ -216,7 +224,15 @@
 			"gloss": "we beseech"
 		},
 		"w053": {
-			"gloss": "a bountiful giver"
+			"gloss": "a bountiful giver",
+			"function": "Nominative in apposition to the unexpressed subject of “admítte” (w054). Latin can use this construction beside an imperative.",
+			"function_citations": [
+				{
+					"title": "Allen and Greenough, New Latin Grammar",
+					"locator": "§ 340 a",
+					"url": "https://dcc.dickinson.edu/grammar/latin/vocative"
+				}
+			]
 		},
 		"w054": {
 			"gloss": "admit"

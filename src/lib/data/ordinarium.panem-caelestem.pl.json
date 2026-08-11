@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"text": "ordinarium.panem-caelestem",
 	"lang": "pl",
 	"status": "working-edition",
@@ -33,13 +33,25 @@
 			"narrative": "Kapłan przyklęka, wstaje i mówi:"
 		},
 		"s02": {
-			"translation": "Chleb niebiański przyjmę i imienia Pańskiego wzywać będę."
+			"translation": "Chleb niebiański przyjmę i imienia Pańskiego wzywać będę.",
+			"translation_citations": [
+				{
+					"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+					"locator": "Ps 115, 13"
+				}
+			]
 		},
 		"s03": {
 			"narrative": "Lekko pochylony, kapłan bierze obie części Hostii w lewą rękę i podsuwa pod nie patenę. Bijąc się prawą ręką w piersi, trzykrotnie mówi nieco podniesionym głosem, pobożnie i pokornie:"
 		},
 		"s04": {
-			"translation": "Panie, nie jestem godzien,"
+			"translation": "Panie, nie jestem godzien,",
+			"translation_citations": [
+				{
+					"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+					"locator": "Mt 8, 8"
+				}
+			]
 		},
 		"s05": {
 			"narrative": "Dalej mówi po cichu.",
@@ -52,10 +64,22 @@
 			]
 		},
 		"s06": {
-			"translation": "abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja."
+			"translation": "abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.",
+			"translation_citations": [
+				{
+					"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+					"locator": "Mt 8, 8"
+				}
+			]
 		},
 		"s07": {
-			"translation": "Panie, nie jestem godzien,"
+			"translation": "Panie, nie jestem godzien,",
+			"translation_citations": [
+				{
+					"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+					"locator": "Mt 8, 8"
+				}
+			]
 		},
 		"s08": {
 			"narrative": "Dalej mówi po cichu.",
@@ -68,10 +92,22 @@
 			]
 		},
 		"s09": {
-			"translation": "abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja."
+			"translation": "abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.",
+			"translation_citations": [
+				{
+					"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+					"locator": "Mt 8, 8"
+				}
+			]
 		},
 		"s10": {
-			"translation": "Panie, nie jestem godzien,"
+			"translation": "Panie, nie jestem godzien,",
+			"translation_citations": [
+				{
+					"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+					"locator": "Mt 8, 8"
+				}
+			]
 		},
 		"s11": {
 			"narrative": "Dalej mówi po cichu.",
@@ -84,7 +120,13 @@
 			]
 		},
 		"s12": {
-			"translation": "abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja."
+			"translation": "abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.",
+			"translation_citations": [
+				{
+					"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+					"locator": "Mt 8, 8"
+				}
+			]
 		},
 		"s13": {
 			"narrative": "Żegna się Hostią nad pateną i mówi:"

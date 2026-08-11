@@ -50,11 +50,21 @@ export function buildBibliography(lang: Lang): BibliographySource[] {
 	for (const [key, entry] of Object.entries(TEXTS)) {
 		const gloss = entry.glosses[lang];
 		const textUse = { title: entry.text.title, href: `/app/${lang}/${key}` };
+		const anchors = new Map(
+			entry.text.segments.map((segment) => [
+				segment.id,
+				segment.verse === undefined ? segment.id : `v${segment.verse}`
+			])
+		);
 		for (const citation of gloss.about_citations ?? []) add(citation, textUse);
 
 		for (const [segmentId, segment] of Object.entries(gloss.segments)) {
+			const href = `${textUse.href}#${anchors.get(segmentId) ?? segmentId}`;
 			for (const citation of segment.narrative_citations ?? []) {
-				add(citation, { ...textUse, href: `${textUse.href}#${segmentId}` });
+				add(citation, { ...textUse, href });
+			}
+			for (const citation of segment.translation_citations ?? []) {
+				add(citation, { ...textUse, href });
 			}
 		}
 

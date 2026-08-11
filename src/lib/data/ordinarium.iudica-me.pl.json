@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"text": "ordinarium.iudica-me",
 	"lang": "pl",
 	"status": "working-edition",
@@ -356,7 +356,7 @@
 		},
 		"w082": {
 			"gloss": "miej nadzieję",
-			"function": "Rozkaźnik skierowany do ánima mea w poprzednim zdaniu."
+			"function": "Tryb rozkazujący skierowany do ánima mea w poprzednim zdaniu."
 		},
 		"w083": {
 			"gloss": "w"

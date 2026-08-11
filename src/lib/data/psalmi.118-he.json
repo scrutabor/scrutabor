@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"id": "psalmi.118-he",
 	"title": "Psalmus 118, HE",
 	"category": "psalmi",
@@ -33,6 +33,7 @@
 		{
 			"id": "s01",
 			"type": "verse",
+			"verse": 33,
 			"words": [
 				{
 					"id": "w001",
@@ -174,6 +175,7 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"verse": 34,
 			"words": [
 				{
 					"id": "w012",
@@ -278,15 +280,6 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 4
-					},
-					"analysis": {
-						"confidence": "medium",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
-						],
-						"review": "disputed"
 					}
 				},
 				{
@@ -349,6 +342,7 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"verse": 35,
 			"words": [
 				{
 					"id": "w026",
@@ -457,6 +451,7 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"verse": 36,
 			"words": [
 				{
 					"id": "w035",
@@ -571,6 +566,7 @@
 		{
 			"id": "s05",
 			"type": "verse",
+			"verse": 37,
 			"words": [
 				{
 					"id": "w045",
@@ -706,6 +702,7 @@
 		{
 			"id": "s06",
 			"type": "verse",
+			"verse": 38,
 			"words": [
 				{
 					"id": "w056",
@@ -806,6 +803,7 @@
 		{
 			"id": "s07",
 			"type": "verse",
+			"verse": 39,
 			"words": [
 				{
 					"id": "w064",
@@ -932,6 +930,7 @@
 		{
 			"id": "s08",
 			"type": "verse",
+			"verse": 40,
 			"words": [
 				{
 					"id": "w074",

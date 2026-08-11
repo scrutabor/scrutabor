@@ -77,6 +77,7 @@ export interface Participation {
 export interface Segment {
 	id: string;
 	type: 'verse' | 'rubric';
+	verse?: number;
 	speaker?: Speaker;
 	voice?: Voice;
 	text?: string;
@@ -108,6 +109,7 @@ export interface WordGloss {
 
 export interface SegmentGloss {
 	translation?: string;
+	translation_citations?: Citation[];
 	narrative?: string;
 	narrative_citations?: Citation[];
 }

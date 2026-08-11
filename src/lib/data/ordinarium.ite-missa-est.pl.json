@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.11.0",
+	"schema_version": "0.12.0",
 	"text": "ordinarium.ite-missa-est",
 	"lang": "pl",
 	"status": "working-edition",
@@ -63,7 +63,7 @@
 		},
 		"w007": {
 			"gloss": "Idźcie",
-			"function": "Rozkaźnik liczby mnogiej, skierowany do zgromadzenia."
+			"function": "Tryb rozkazujący liczby mnogiej, skierowany do zgromadzenia."
 		},
 		"w008": {
 			"gloss": "rozesłanie",

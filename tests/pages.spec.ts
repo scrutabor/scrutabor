@@ -245,6 +245,15 @@ test('the shared bibliography exposes exact sources and their uses', async ({ pa
 		.getByRole('link', { name: 'Benedícat vos omnípotens Deus', exact: true });
 	await expect(blessingUse).toHaveAttribute('href', /ordinarium\/benedictio(?:\.html)?#s01$/);
 	await expect(page.getByRole('link', { name: '6, 3' })).toHaveAttribute('rel', /noopener/);
+
+	const wujek = page.locator('section', {
+		hasText: 'Biblia w przekładzie ks. Jakuba Wujka (1923)'
+	});
+	const namingVerse = wujek.locator('li', { hasText: 'Ps 118, 34' });
+	await expect(namingVerse).toContainText('Ps 118, 34');
+	await expect(
+		namingVerse.getByRole('link', { name: 'Psalmus 118, HE', exact: true })
+	).toHaveAttribute('href', /psalmi\/118-he(?:\.html)?#v34$/);
 });
 
 test('the edition page explains the sources and carries the working label', async ({ page }) => {
