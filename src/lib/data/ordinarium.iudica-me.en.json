@@ -143,7 +143,7 @@
 		},
 		"w027": {
 			"gloss": "hast Thou cast off",
-			"function": "Perfect: the thing is done and its effect lasts — hence the question."
+			"function": "Second-person singular perfect."
 		},
 		"w028": {
 			"gloss": "and"
@@ -156,8 +156,7 @@
 			"function": "This sentence does not determine whether the form is masculine or feminine."
 		},
 		"w031": {
-			"gloss": "do I go about",
-			"function": "Not simply “I go”: the verb names a manner of walking, here the gait of a man weighed down."
+			"gloss": "do I go about"
 		},
 		"w032": {
 			"gloss": "while"
@@ -170,7 +169,7 @@
 		},
 		"w035": {
 			"gloss": "the enemy",
-			"function": "An adjective used as a noun — the unfriendly man, the enemy. Here the subject of the clause."
+			"function": "Nominative, serving as the subject of “afflígit” (w033)."
 		},
 		"w036": {
 			"gloss": "send forth"
@@ -179,8 +178,7 @@
 			"gloss": "light"
 		},
 		"w038": {
-			"gloss": "Thy",
-			"function": "Agrees with “lucem” (w037)."
+			"gloss": "Thy"
 		},
 		"w039": {
 			"gloss": "and"
@@ -189,19 +187,18 @@
 			"gloss": "truth"
 		},
 		"w041": {
-			"gloss": "Thy",
-			"function": "Agrees with “veritátem” (w040)."
+			"gloss": "Thy"
 		},
 		"w042": {
 			"gloss": "they",
-			"function": "Neuter plural, although it stands for two feminine nouns: “lucem” (w037) and “veritátem” (w040). The Greek psalter has neuter αὐτά here, because the first of its two nouns (φῶς, light) is neuter — the Latin followed the Greek and not its own genders."
+			"function": "The neuter plural differs from the gender of “lucem” (w037) and “veritátem” (w040). It corresponds to Greek αὐτά in the Septuagint."
 		},
 		"w043": {
 			"gloss": "me"
 		},
 		"w044": {
 			"gloss": "have led",
-			"function": "Plural: the subject is two gifts — light and truth — acting together."
+			"function": "Third-person plural perfect. Its subjects are “lucem” (w037) and “veritátem” (w040)."
 		},
 		"w045": {
 			"gloss": "and"
@@ -211,19 +208,16 @@
 		},
 		"w047": {
 			"gloss": "to",
-			"function": "With the accusative — motion toward. The same preposition with the ablative would mean being there already."
+			"function": "“In” with the accusative marks direction of motion."
 		},
 		"w048": {
-			"gloss": "the mountain",
-			"function": "The temple hill: the end of the pilgrimage the psalmist is making."
+			"gloss": "the mountain"
 		},
 		"w049": {
-			"gloss": "holy",
-			"function": "Agrees with “montem” (w048)."
+			"gloss": "holy"
 		},
 		"w050": {
-			"gloss": "Thy",
-			"function": "Agrees with “montem” (w048)."
+			"gloss": "Thy"
 		},
 		"w051": {
 			"gloss": "and"
@@ -233,18 +227,17 @@
 		},
 		"w053": {
 			"gloss": "the tabernacles",
-			"function": "Accusative plural after “in” (w052) — motion toward again. Tents, not a building: the word remembers the tabernacle in the desert."
+			"function": "Accusative plural governed by directional “in” (w052)."
 		},
 		"w054": {
-			"gloss": "Thy",
-			"function": "Agrees with “tabernácula” (w053)."
+			"gloss": "Thy"
 		},
 		"w055": {
 			"gloss": "and"
 		},
 		"w056": {
 			"gloss": "I will go in",
-			"function": "This verse is the antiphon of this psalm: the liturgy lifted it out and set it before the psalm and after it."
+			"function": "In the Mass this verse serves as the antiphon before and after the psalm."
 		},
 		"w057": {
 			"gloss": "unto"
@@ -264,33 +257,32 @@
 		},
 		"w062": {
 			"gloss": "who",
-			"function": "Nominative, though its antecedent “Deum” (w061) stands in the accusative: a relative takes its case from its own clause, where it is the subject."
+			"function": "Nominative and the subject of “lætíficat” (w063). Its antecedent “Deum” (w061) is accusative."
 		},
 		"w063": {
 			"gloss": "gladdens"
 		},
 		"w064": {
 			"gloss": "youth",
-			"function": "The Hebrew has two words for joy here and none meaning youth. The Greek translation reads “youth”, and the Latin follows the Greek."
+			"function": "The Hebrew text speaks of joy, while “youth” appears in the Septuagint, which the Latin follows here."
 		},
 		"w065": {
-			"gloss": "my",
-			"function": "Agrees with “iuventútem” (w064)."
+			"gloss": "my"
 		},
 		"w066": {
 			"gloss": "I will praise",
-			"function": "The same verb opens the Confiteor, but means something else here: not to own a fault but to praise. Both senses live in confitéri — to declare openly, whether a sin or the glory of God."
+			"function": "The verb “confitéri” can mean “confess” or “praise”. Here it bears the latter sense."
 		},
 		"w067": {
 			"gloss": "Thee",
-			"function": "Dative: confitéri governs the dative of the person — to declare to someone."
+			"function": "Dative of the person with “Confitébor” (w066)."
 		},
 		"w068": {
 			"gloss": "on"
 		},
 		"w069": {
 			"gloss": "the harp",
-			"function": "Ablative after “in” (w068) — to its accompaniment. The spelling does not distinguish nominative from ablative here. The preposition settles it."
+			"function": "Ablative governed by “in” (w068)."
 		},
 		"w070": {
 			"gloss": "O God"
