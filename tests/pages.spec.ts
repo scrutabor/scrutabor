@@ -231,7 +231,20 @@ test('the sitemap lists both languages of every surface', async ({ request }) =>
 	expect(xml).toContain('<loc>https://scrutabor.org/app/pl/orationes/pater-noster</loc>');
 	expect(xml).toContain('<loc>https://scrutabor.org/app/en/lemma/oro</loc>');
 	expect(xml).toContain('<loc>https://scrutabor.org/app/en/grammatica/pronuntiatio</loc>');
+	expect(xml).toContain('<loc>https://scrutabor.org/app/pl/bibliographia</loc>');
 	expect(xml).not.toContain('/404');
+});
+
+test('the shared bibliography exposes exact sources and their uses', async ({ page }) => {
+	await page.goto('/app/pl/bibliographia');
+	await expect(page.locator('h1')).toHaveText('bibliografia');
+	const missal = page.locator('section', { hasText: 'Missale Romanum (1962)' });
+	await expect(missal).toContainText('Ritus servandus in celebratione Missae');
+	const blessingUse = missal
+		.locator('li', { hasText: 'rubric before Benedicat vos' })
+		.getByRole('link', { name: 'Benedícat vos omnípotens Deus', exact: true });
+	await expect(blessingUse).toHaveAttribute('href', /ordinarium\/benedictio(?:\.html)?#s01$/);
+	await expect(page.getByRole('link', { name: '6, 3' })).toHaveAttribute('rel', /noopener/);
 });
 
 test('the edition page explains the sources and carries the working label', async ({ page }) => {

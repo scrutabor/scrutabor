@@ -3,7 +3,14 @@
 	"text": "orationes.ave-maria",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Pierwsza część Pozdrowienia anielskiego łączy słowa Gabriela (Łk 1, 28) i Elżbiety (Łk 1, 42). Prośba rozpoczynająca się od „Sancta María” została dołączona później. Pełną formę modlitwy oficjalnie przyjęto w Brewiarzu Rzymskim z 1568 roku.",
+	"about": "Pierwsza część Pozdrowienia anielskiego łączy słowa Gabriela (Łk 1, 28) i Elżbiety (Łk 1, 42). Druga część jest prośbą skierowaną do Maryi.",
+	"about_citations": [
+		{
+			"title": "Nova Vulgata, Evangelium secundum Lucam",
+			"locator": "1, 28; 1, 42",
+			"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-lucam_lt.html#1"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -22,7 +29,13 @@
 	"words": {
 		"w001": {
 			"gloss": "Zdrowaś",
-			"function": "Pozdrowienie anioła w Łk 1, 28."
+			"function": "Pozdrowienie anioła w Łk 1, 28.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Luke 1:28"
+				}
+			]
 		},
 		"w002": {
 			"gloss": "Maryjo"

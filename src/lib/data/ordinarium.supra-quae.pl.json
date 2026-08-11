@@ -125,7 +125,13 @@
 		},
 		"w031": {
 			"gloss": "najwyższy",
-			"function": "Określa „sacérdos” (w032). W Rdz 14,18 Melchizedek jest nazwany „sacérdos Dei altíssimi” — „kapłanem Boga Najwyższego”."
+			"function": "Określa „sacérdos” (w032). W Rdz 14,18 Melchizedek jest nazwany „sacérdos Dei altíssimi” — „kapłanem Boga Najwyższego”.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Genesis 14:18"
+				}
+			]
 		},
 		"w032": {
 			"gloss": "kapłan"
@@ -135,7 +141,13 @@
 		},
 		"w034": {
 			"gloss": "Melchizedek",
-			"function": "Imię nieodmienne, w mianowniku jako dopowiedzenie do „sacérdos” (w032). Melchizedek jest podmiotem „óbtulit” (w030). Rdz 14, 18 mówi, że wyniósł chleb i wino."
+			"function": "Imię nieodmienne, w mianowniku jako dopowiedzenie do „sacérdos” (w032). Melchizedek jest podmiotem „óbtulit” (w030). Rdz 14, 18 mówi, że wyniósł chleb i wino.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Genesis 14:18"
+				}
+			]
 		},
 		"w035": {
 			"gloss": "świętą"

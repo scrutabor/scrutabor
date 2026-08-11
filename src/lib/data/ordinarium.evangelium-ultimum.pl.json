@@ -118,7 +118,17 @@
 		},
 		"w015": {
 			"gloss": "Na",
-			"function": "„In princípio” otwiera także Rdz 1,1."
+			"function": "„In princípio” otwiera także Rdz 1,1.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Genesis 1:1"
+				},
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "John 1:1"
+				}
+			]
 		},
 		"w016": {
 			"gloss": "początku"
@@ -128,7 +138,13 @@
 		},
 		"w018": {
 			"gloss": "Słowo",
-			"function": "„Verbum” jest rodzaju nijakiego. W greckim tekście J 1, 1 odpowiada mu „lógos”."
+			"function": "„Verbum” jest rodzaju nijakiego. W greckim tekście J 1, 1 odpowiada mu „lógos”.",
+			"function_citations": [
+				{
+					"title": "Novum Testamentum Graece, ed. Nestle–Aland 28",
+					"locator": "John 1:1"
+				}
+			]
 		},
 		"w019": {
 			"gloss": "a"

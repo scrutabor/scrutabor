@@ -37,7 +37,14 @@
 		},
 		"w005": {
 			"gloss": "nad nami",
-			"function": "Celownik zależny od „miserére”. W łacinie klasycznej czasownik ten zwykle łączy się z dopełniaczem."
+			"function": "Celownik zależny od „miserére”. W łacinie klasycznej czasownik ten zwykle łączy się z dopełniaczem.",
+			"function_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. misereor",
+					"url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0059"
+				}
+			]
 		}
 	}
 }

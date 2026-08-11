@@ -20,7 +20,14 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Na środku ołtarza kapłan rozkłada i składa ręce, lekko pochyla głowę i, jeśli hymn należy odmówić, rozpoczyna go słowami „Glória in excélsis Deo”. Kapłan odmawia dalszy ciąg ze złożonymi rękami."
+			"narrative": "Na środku ołtarza kapłan rozkłada i składa ręce, lekko pochyla głowę i, jeśli hymn należy odmówić, rozpoczyna go słowami „Glória in excélsis Deo”. Kapłan odmawia dalszy ciąg ze złożonymi rękami.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ordo Missae rubric before Gloria in excelsis",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s02": {
 			"translation": "Chwała na wysokości Bogu."

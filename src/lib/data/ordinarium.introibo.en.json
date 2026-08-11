@@ -13,13 +13,27 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The vested priest approaches the altar, makes the reverence due to it, signs himself from forehead to breast and speaks aloud."
+			"narrative": "The vested priest approaches the altar, makes the reverence due to it, signs himself from forehead to breast and speaks aloud.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ordo Missae, opening rubric",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s02": {
 			"translation": "In the name of the Father, and of the Son, and of the Holy Spirit. Amen."
 		},
 		"s03": {
-			"narrative": "With hands joined before his breast, the priest begins the antiphon."
+			"narrative": "With hands joined before his breast, the priest begins the antiphon.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ordo Missae rubric before Introibo ad altare Dei",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s04": {
 			"translation": "I will go in unto the altar of God."
@@ -88,7 +102,17 @@
 		},
 		"w018": {
 			"gloss": "youth",
-			"function": "The Latin “youth” corresponds to the Greek text of the psalm. The Hebrew text speaks here of joy."
+			"function": "The Latin “youth” corresponds to the Greek text of the psalm. The Hebrew text speaks here of joy.",
+			"function_citations": [
+				{
+					"title": "Septuaginta, ed. Rahlfs–Hanhart",
+					"locator": "Psalm 42:4"
+				},
+				{
+					"title": "Biblia Hebraica Stuttgartensia",
+					"locator": "Psalm 43:4"
+				}
+			]
 		},
 		"w019": {
 			"gloss": "my"

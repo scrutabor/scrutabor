@@ -34,7 +34,14 @@
 			"translation": "At the Saviour's command and formed by divine teaching, we dare to say:"
 		},
 		"s04": {
-			"narrative": "The priest spreads his hands, and keeps them so through the prayer."
+			"narrative": "The priest spreads his hands, and keeps them so through the prayer.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ritus servandus in celebratione Missae, X, 1",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s05": {
 			"translation": "Our Father, who art in heaven,"
@@ -93,7 +100,14 @@
 		},
 		"w007": {
 			"gloss": "by the institution",
-			"function": "Ablative of means with formáti. Here institutio means instruction: formed by divine teaching."
+			"function": "Ablative of means with formáti. Here institutio means instruction: formed by divine teaching.",
+			"function_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. institutio, II",
+					"url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0059"
+				}
+			]
 		},
 		"w008": {
 			"gloss": "formed",
@@ -101,7 +115,14 @@
 		},
 		"w009": {
 			"gloss": "we dare",
-			"function": "“Audémus dícere” expresses filial boldness: instructed by Christ, we dare to say “Our Father.”"
+			"function": "“Audémus dícere” expresses filial boldness: instructed by Christ, we dare to say “Our Father.”",
+			"function_citations": [
+				{
+					"title": "Catechismus Catholicae Ecclesiae",
+					"locator": "nn. 2777-2778",
+					"url": "https://www.vatican.va/archive/catechism_lt/index_lt.htm"
+				}
+			]
 		},
 		"w010": {
 			"gloss": "to say",
@@ -290,7 +311,19 @@
 		},
 		"w059": {
 			"gloss": "evil",
-			"function": "The form can be neuter, evil, or masculine, the Evil One. The following embolism takes it up in the neuter plural: ab ómnibus malis."
+			"function": "The form can be neuter, evil, or masculine, the Evil One. The following embolism takes it up in the neuter plural: ab ómnibus malis.",
+			"function_citations": [
+				{
+					"title": "Catechismus Catholicae Ecclesiae",
+					"locator": "n. 2851",
+					"url": "https://www.vatican.va/archive/catechism_lt/p4s2a3_lt.htm"
+				},
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ordo Missae, embolism after the Lord's Prayer",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"w060": {
 			"gloss": "amen",

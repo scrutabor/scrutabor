@@ -20,7 +20,14 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "At the middle of the altar, the priest extends and joins his hands, bows his head slightly and, if the hymn is to be said, begins it with “Glória in excélsis Deo”. The priest continues with hands joined."
+			"narrative": "At the middle of the altar, the priest extends and joins his hands, bows his head slightly and, if the hymn is to be said, begins it with “Glória in excélsis Deo”. The priest continues with hands joined.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ordo Missae rubric before Gloria in excelsis",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s02": {
 			"translation": "Glory to God in the highest."

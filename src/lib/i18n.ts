@@ -27,6 +27,9 @@ export interface Messages {
 	notFound: string;
 	catalogDescription: string;
 	editioDescription: string;
+	bibliographyTitle: string;
+	bibliographyDescription: string;
+	bibliographyLink: string;
 	grammarDescription: string;
 	pronunciationDescription: string;
 	/** '{title}' is replaced with the text's Latin title. */
@@ -103,6 +106,10 @@ const MESSAGES: Record<Lang, Messages> = {
 			'Modlitewnik łaciński z analizą słowo po słowie — przekład, gramatyka i wymowa każdego słowa.',
 		editioDescription:
 			'Jak powstaje to wydanie: świadkowie tekstu i ich kolacjonowanie, mechaniczna weryfikacja analiz, etapy przeglądu.',
+		bibliographyTitle: 'bibliografia',
+		bibliographyDescription:
+			'Źródła przywołane w objaśnieniach Scrutabor, z dokładnymi odsyłaczami i miejscami ich wykorzystania.',
+		bibliographyLink: 'pełna bibliografia',
 		grammarDescription: 'Pojęcia gramatyki łacińskiej objaśnione na przykładach z modlitw.',
 		pronunciationDescription:
 			'Zasady wymowy łaciny kościelnej — tradycja rzymska i polska, z transkrypcją.',
@@ -185,6 +192,10 @@ const MESSAGES: Record<Lang, Messages> = {
 			'A Latin prayer book with word-by-word analysis — translation, grammar, and pronunciation for every word.',
 		editioDescription:
 			'How this edition is made: text witnesses and collation, mechanical verification of the analyses, review states.',
+		bibliographyTitle: 'bibliography',
+		bibliographyDescription:
+			'Sources cited by Scrutabor’s explanations, with exact references and the places where they are used.',
+		bibliographyLink: 'complete bibliography',
 		grammarDescription: 'Latin grammar concepts explained with examples from the prayers.',
 		pronunciationDescription:
 			'How to pronounce ecclesiastical Latin, in the Roman tradition, with transcriptions.',

@@ -124,9 +124,12 @@ test.describe('landing @online', () => {
 
 	test('the specimen citation reaches the psalm page', async ({ page }) => {
 		await page.goto('/pl');
-		await expect(page.locator('.stanza-link a')).toHaveAttribute('href', '/app/pl/psalmi/118-he');
+		await expect(page.locator('.stanza-link a')).toHaveAttribute(
+			'href',
+			'/app/pl/psalmi/118-he?v=34'
+		);
 		await page.locator('.stanza-link a').click();
-		await page.waitForURL(atRoute('/app/pl/psalmi/118-he'));
+		await page.waitForURL(/\/app\/pl\/psalmi\/118-he\?v=34$/);
 		await expect(page.locator('h1')).toHaveText('Psalmus 118, HE');
 	});
 

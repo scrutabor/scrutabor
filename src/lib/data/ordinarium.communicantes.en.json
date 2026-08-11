@@ -28,7 +28,14 @@
 			"translation": "and all Your Saints; we ask that through their merits and prayers, in all things we may be defended by Your protecting help."
 		},
 		"s06": {
-			"narrative": "The priest joins his hands."
+			"narrative": "The priest joins his hands.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Canon Missae, rubric at Per eundem Christum",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s07": {
 			"translation": "Through the same Christ our Lord. Amen."
@@ -37,7 +44,7 @@
 	"words": {
 		"w001": {
 			"gloss": "in communion with",
-			"function": "A nominative plural participle whose subject the sentence never states: the priest and those who stand with him — or, on another reading, the offerers named in the prayer just before."
+			"function": "A nominative plural participle. Its subject is left unexpressed."
 		},
 		"w002": {
 			"gloss": "and"
@@ -141,14 +148,35 @@
 		},
 		"w033": {
 			"gloss": "Paul",
-			"function": "The list names twelve Apostles, including Paul rather than Matthias."
+			"function": "The list names twelve Apostles, including Paul rather than Matthias.",
+			"function_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Canon Missae, Communicantes",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				},
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Acts 1:26"
+				}
+			]
 		},
 		"w034": {
 			"gloss": "Andrew"
 		},
 		"w035": {
 			"gloss": "James",
-			"function": "The first of the two Jameses — the brother of John, son of Zebedee."
+			"function": "The first of the two Jameses — the brother of John, son of Zebedee.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Matthew 4:21"
+				},
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Mark 1:19"
+				}
+			]
 		},
 		"w036": {
 			"gloss": "John"
@@ -158,7 +186,17 @@
 		},
 		"w038": {
 			"gloss": "James",
-			"function": "The second James is the son of Alphaeus. His place in the list distinguishes him from “Iacóbi” (w035)."
+			"function": "The second James is the son of Alphaeus. His place in the list distinguishes him from “Iacóbi” (w035).",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Matthew 10:3"
+				},
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Mark 3:18"
+				}
+			]
 		},
 		"w039": {
 			"gloss": "Philip"
@@ -211,7 +249,18 @@
 		},
 		"w055": {
 			"gloss": "Paul",
-			"function": "Saints John and Paul are Roman martyrs commemorated together, not the Apostles named above."
+			"function": "Saints John and Paul are Roman martyrs commemorated together, not the Apostles named above.",
+			"function_citations": [
+				{
+					"title": "Martyrologium Romanum (1960)",
+					"locator": "26 June"
+				},
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Canon Missae, Communicantes",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"w056": {
 			"gloss": "Cosmas"

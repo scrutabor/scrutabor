@@ -63,14 +63,26 @@
 		},
 		"w007": {
 			"gloss": "grzechy",
-			"function": "W J 1,29 stoi liczba pojedyncza „peccátum mundi”. Tekst liturgiczny ma tu liczbę mnogą „peccáta mundi”."
+			"function": "W J 1,29 stoi liczba pojedyncza „peccátum mundi”. Tekst liturgiczny ma tu liczbę mnogą „peccáta mundi”.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "John 1:29"
+				}
+			]
 		},
 		"w008": {
 			"gloss": "świata"
 		},
 		"w009": {
 			"gloss": "Panie",
-			"function": "Słowa zaczerpnięte z wypowiedzi setnika w Mt 8,8. Tekst liturgiczny ma „ánima mea” w miejscu ewangelicznego „puer meus”."
+			"function": "Słowa zaczerpnięte z wypowiedzi setnika w Mt 8,8. Tekst liturgiczny ma „ánima mea” w miejscu ewangelicznego „puer meus”.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Matthew 8:8"
+				}
+			]
 		},
 		"w010": {
 			"gloss": "nie"

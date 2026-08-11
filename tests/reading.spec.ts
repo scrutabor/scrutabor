@@ -1318,8 +1318,14 @@ const inkGaps = (page: Page) =>
 			const p = w.previousElementSibling,
 				n = w.nextElementSibling;
 			if (!p || !n || !n.classList.contains('verse')) return;
+			// A rubric can end in a collapsed source disclosure. Range rectangles
+			// include that disclosure's hidden contents in Chromium, although no
+			// reader sees them. Measure from the last visible line of prose instead.
+			const visiblePrevious = p.classList.contains('rubric')
+				? (p.querySelector('.rubric-narrative') ?? p.querySelector('.rubric-la') ?? p)
+				: p;
 			labels.push({
-				above: edge(w, 'top')! - edgeOf(p, 'bottom')!,
+				above: edge(w, 'top')! - edgeOf(visiblePrevious, 'bottom')!,
 				below: edgeOf(n, 'top')! - edge(w, 'bottom')!,
 				txt: w.textContent!.trim().slice(0, 24)
 			});

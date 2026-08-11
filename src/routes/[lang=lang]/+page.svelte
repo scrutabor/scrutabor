@@ -52,6 +52,7 @@
 		privacyLink: string;
 		supportLink: string;
 		editioLink: string;
+		bibliographyLink: string;
 		sourcesLink: string;
 	}
 
@@ -80,6 +81,7 @@
 			privacyLink: 'prywatność',
 			supportLink: 'pomoc',
 			editioLink: 'jak powstaje to wydanie',
+			bibliographyLink: 'bibliografia',
 			sourcesLink: 'źródła na GitHubie'
 		}),
 		en: {
@@ -98,6 +100,7 @@
 			privacyLink: 'privacy',
 			supportLink: 'support',
 			editioLink: 'how this edition is made',
+			bibliographyLink: 'bibliography',
 			sourcesLink: 'source on GitHub'
 		}
 	};
@@ -243,7 +246,7 @@
 					<HelpLevels {lang} bind:value={helpLevel} />
 				</div>
 				<p class="stanza-link smallcaps">
-					<a href="/app/{lang}/psalmi/118-he">{t.stanzaLink} ›</a>
+					<a href="/app/{lang}/psalmi/118-he?v=34">{t.stanzaLink} ›</a>
 				</p>
 				<TextBody
 					{doc}
@@ -283,6 +286,7 @@
 				<a href="/{lang}/privacy">{t.privacyLink}</a>
 				· <a href="/{lang}/support">{t.supportLink}</a>
 				· <a href="/app/{lang}/editio">{t.editioLink}</a>
+				· <a href="/app/{lang}/bibliographia">{t.bibliographyLink}</a>
 				· <a href="https://github.com/scrutabor" rel="external">{t.sourcesLink}</a>
 			</p>
 		</footer>

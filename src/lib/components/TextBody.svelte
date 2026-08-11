@@ -85,6 +85,7 @@
 	const marked = (i: number) => marks.marked(segs, i);
 	const namesVoice = (i: number) => marks.namesVoice(segs, i);
 	const firstVerse = $derived(marks.firstVerseWithInitial(segs));
+	const segmentId = (id: string) => (idPrefix ? `${idPrefix}-${id}` : id);
 </script>
 
 {#snippet face(id: string, form: string, post = '', raised = false, sink = 0)}{@const fit =
@@ -108,7 +109,7 @@
 
 {#each doc.segments as seg, i (seg.id)}
 	{#if seg.type === 'rubric'}
-		<div class="rubric">
+		<div class="rubric" id={segmentId(seg.id)}>
 			<p class="rubric-la" lang="la">{seg.text}</p>
 			<!-- Narratives ride with any help (reading-ux §5): knowing what
 			     happens at the altar is word-level-grade help; translations
@@ -167,7 +168,7 @@
 			class:answer={mine}
 			class:marked={showMark || verseNo !== undefined}
 			class:cited={verseNo !== undefined && verseNo === citedVerse}
-			id={verseNo !== undefined ? `v${verseNo}` : undefined}
+			id={verseNo !== undefined ? `v${verseNo}` : segmentId(seg.id)}
 			lang="la"
 		>
 			<!-- The mark the books print in red beside the line, and then the

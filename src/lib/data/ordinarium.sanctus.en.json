@@ -25,7 +25,14 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The Preface comes to its end. The priest joins his hands before his breast, bows, and says the Sanctus in a moderate voice while the server rings the bell. At the words “Benedíctus qui venit in nómine Dómini” he straightens up and signs himself with the cross from forehead to breast. The Canon begins immediately after, said silently."
+			"narrative": "The Preface comes to its end. The priest joins his hands before his breast, bows, and says the Sanctus in a moderate voice while the server rings the bell. At the words “Benedíctus qui venit in nómine Dómini” he straightens up and signs himself with the cross from forehead to breast. The Canon begins immediately after, said silently.",
+			"narrative_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Ritus servandus in celebratione Missae, VII, 8",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
+			]
 		},
 		"s02": {
 			"translation": "Holy, holy, holy, Lord God of hosts."
@@ -62,7 +69,18 @@
 		},
 		"w006": {
 			"gloss": "of hosts",
-			"function": "The form carries no case ending — the Hebrew word entered Latin without inflection. In this title it does a genitive's work: the Lord God of hosts."
+			"function": "The form carries no case ending — the Hebrew word entered Latin without inflection. In this title it does a genitive's work: the Lord God of hosts.",
+			"function_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. Sabaoth",
+					"url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0059"
+				},
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Isaiah 6:3"
+				}
+			]
 		},
 		"w007": {
 			"gloss": "full",

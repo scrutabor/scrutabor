@@ -3,7 +3,14 @@
 	"text": "orationes.ave-maria",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The first part of the Hail Mary joins Gabriel's words (Lk 1:28) to Elizabeth's (Lk 1:42). The petition beginning “Sancta María” was added later. The complete form received official recognition in the Roman Breviary of 1568.",
+	"about": "The first part of the Hail Mary joins Gabriel's words (Lk 1:28) to Elizabeth's (Lk 1:42). The second part is a petition addressed to Mary.",
+	"about_citations": [
+		{
+			"title": "Nova Vulgata, Evangelium secundum Lucam",
+			"locator": "1, 28; 1, 42",
+			"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-lucam_lt.html#1"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -22,7 +29,13 @@
 	"words": {
 		"w001": {
 			"gloss": "hail",
-			"function": "The angel's greeting in Lk 1:28."
+			"function": "The angel's greeting in Lk 1:28.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Luke 1:28"
+				}
+			]
 		},
 		"w002": {
 			"gloss": "Mary"

@@ -112,7 +112,13 @@
 		},
 		"w009": {
 			"gloss": "excellent",
-			"function": "The epithet with “Cálicem” (w010) — an echo of Ps 22:5: calix meus inébrians quam præclárus est."
+			"function": "The epithet with “Cálicem” (w010) — an echo of Ps 22:5: calix meus inébrians quam præclárus est.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Psalm 22:5"
+				}
+			]
 		},
 		"w010": {
 			"gloss": "chalice"
@@ -210,7 +216,13 @@
 		},
 		"w040": {
 			"gloss": "eternal",
-			"function": "This qualification does not occur in the institution narratives. “The blood of the eternal covenant” occurs in Hebrews 13:20."
+			"function": "This qualification does not occur in the institution narratives. “The blood of the eternal covenant” occurs in Hebrews 13:20.",
+			"function_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Hebrews 13:20"
+				}
+			]
 		},
 		"w041": {
 			"gloss": "covenant",

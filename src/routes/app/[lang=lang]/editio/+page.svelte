@@ -60,6 +60,10 @@
 				<strong>wydaniem roboczym</strong> do czasu przeglądu przez latynistę; błędy są możliwe, a&nbsp;uwagi
 				mile widziane.
 			</p>
+			<p class="what">
+				Źródła zewnętrzne, na których opierają się objaśnienia, są podane bezpośrednio przy nich
+				i&nbsp;zebrane we wspólnej <a href="/app/{lang}/bibliographia">bibliografii</a>.
+			</p>
 		{:else}
 			<p class="what">
 				The texts of this edition are transcribed letter for letter from publicly available
@@ -97,9 +101,13 @@
 				source: Lewis &amp; Short.
 			</p>
 			<p class="what">
-				“Accepted” on a word means its parse agrees with the analyzers' votes; “awaiting review”
+				“Accepted” on a word means its parse agrees with the analyzers’ votes; “awaiting review”
 				marks a layer still to be verified. The whole remains a <strong>working edition</strong>
 				until review by a Latinist; errors are possible and corrections welcome.
+			</p>
+			<p class="what">
+				External sources supporting the explanations are named beside them and collected in the
+				shared <a href="/app/{lang}/bibliographia">bibliography</a>.
 			</p>
 		{/if}
 	</main>
