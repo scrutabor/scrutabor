@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "At the middle of the altar the priest intones the profession of faith. The Credo is said on Sundays and greater feasts and usually omitted on weekdays. At the word “Deum” the priest bows his head to the cross, likewise at “Iesum Christum” and “simul adorátur”, and at the end, at “Et vitam ventúri sǽculi”, he signs himself with the cross."
+			"narrative": "At the middle of the altar, the priest extends and raises his hands, joins them, says the Creed if prescribed, and continues with hands joined."
 		},
 		"s02": {
 			"translation": "I believe in one God, the Father almighty, maker of heaven and earth, of all things visible and invisible."
@@ -34,7 +34,7 @@
 			"translation": "For us men and for our salvation He came down from heaven."
 		},
 		"s08": {
-			"narrative": "The rubric calls for a genuflection here: the priest kneels from “Et incarnátus est” until “Et homo factus est” — honoring the moment the Incarnation is confessed. The faithful genuflect with him."
+			"narrative": "Here a genuflection is made."
 		},
 		"s09": {
 			"translation": "And was incarnate by the Holy Spirit, of the Virgin Mary: and was made man."
@@ -73,7 +73,7 @@
 	"words": {
 		"w001": {
 			"gloss": "I believe",
-			"function": "“Crédere in” with the accusative — “to believe *into* someone”, to entrust oneself — is biblical and Church syntax. Classical Latin said “crédere” with the dative: to give credence."
+			"function": "Takes “in” (w002) with the accusative."
 		},
 		"w002": {
 			"gloss": "in"
@@ -152,7 +152,7 @@
 		},
 		"w027": {
 			"gloss": "born",
-			"function": "The participle agrees with “Fílium” (w021) — the chain of accusative appositions about the Son runs through several verses."
+			"function": "Participle agreeing with “Fílium” (w021)."
 		},
 		"w028": {
 			"gloss": "before"
@@ -198,7 +198,7 @@
 		},
 		"w042": {
 			"gloss": "begotten",
-			"function": "The accusative appositions continue. Set against “factum” (w044) it carries the heart of the Nicene confession: begotten, not made."
+			"function": "Accusative agreeing with “Fílium” (w021), contrasted with “factum” (w044)."
 		},
 		"w043": {
 			"gloss": "not"
@@ -208,7 +208,7 @@
 		},
 		"w045": {
 			"gloss": "consubstantial",
-			"function": "It takes the dative “Patri” (w046): consubstantial with whom — with the Father."
+			"function": "Takes the dative “Patri” (w046)."
 		},
 		"w046": {
 			"gloss": "with the Father"
@@ -224,7 +224,7 @@
 		},
 		"w050": {
 			"gloss": "made",
-			"function": "With “sunt” (w051) it forms the perfect passive: facta sunt — “were made”."
+			"function": "With “sunt” (w051), forms the perfect passive “facta sunt”: “were made”."
 		},
 		"w051": {
 			"gloss": "were"
@@ -255,7 +255,7 @@
 		},
 		"w060": {
 			"gloss": "came down",
-			"function": "The form looks the same in the present and the perfect. Here it narrates the accomplished descent — “came down”."
+			"function": "Perfect here: “came down”."
 		},
 		"w061": {
 			"gloss": "from"
@@ -268,7 +268,7 @@
 		},
 		"w064": {
 			"gloss": "made flesh",
-			"function": "With “est” (w065) it forms the perfect: incarnátus est — “was made flesh”. Latin builds such tenses from a participle and the verb “to be”."
+			"function": "With “est” (w065), forms the perfect “incarnátus est”: “was made flesh”."
 		},
 		"w065": {
 			"gloss": "was"
@@ -299,14 +299,14 @@
 		},
 		"w074": {
 			"gloss": "was made",
-			"function": "Again a participle with “est” (w075): factus est — “was made”. The predicate is the nominative “homo” (w073)."
+			"function": "With “est” (w075), forms the perfect “factus est”. “homo” (w073) is the predicate nominative."
 		},
 		"w075": {
 			"gloss": "—"
 		},
 		"w076": {
 			"gloss": "crucified",
-			"function": "Three participles — crucified, “passus” (w083), “sepúltus” (w085) — are carried by one shared “est” (w086) at the end of the sentence."
+			"function": "Shares “est” (w086) with “passus” (w083) and “sepúltus” (w085)."
 		},
 		"w077": {
 			"gloss": "also"
@@ -350,7 +350,7 @@
 		},
 		"w090": {
 			"gloss": "day",
-			"function": "The form “tértia” (w089) is feminine — “dies” is feminine here. The ablative answers: when?"
+			"function": "Ablative of time. Feminine here, agreeing with “tértia” (w089)."
 		},
 		"w091": {
 			"gloss": "according to"
@@ -363,7 +363,7 @@
 		},
 		"w094": {
 			"gloss": "ascended",
-			"function": "Like “descéndit” (w060): a form shared by present and perfect, here perfect — “ascended”."
+			"function": "Perfect here: “ascended”."
 		},
 		"w095": {
 			"gloss": "into"
@@ -391,7 +391,7 @@
 		},
 		"w103": {
 			"gloss": "about to come",
-			"function": "The future participle with “est” (w104): ventúrus est — “is to come, will come”. Latin's way of stating what is appointed."
+			"function": "Future participle with “est” (w104): “will come”."
 		},
 		"w104": {
 			"gloss": "—"
@@ -417,7 +417,7 @@
 		},
 		"w111": {
 			"gloss": "of whose",
-			"function": "A possessive genitive with “regni” (w112). Masculine, for the antecedent is Christ, not the kingdom — the form itself does not show the gender."
+			"function": "Possessive genitive modifying “regni” (w112), with Christ as its antecedent."
 		},
 		"w112": {
 			"gloss": "kingdom"
@@ -464,7 +464,7 @@
 		},
 		"w126": {
 			"gloss": "and the Son",
-			"function": "The “-que” leaning on the word — an enclitic, not an ending — means “and”: ex Patre Filióque — “from the Father and the Son”."
+			"function": "The enclitic conjunction “-que” means “and”: “ex Patre Filióque”, “from the Father and the Son”."
 		},
 		"w127": {
 			"gloss": "proceeds"
