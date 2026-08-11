@@ -3181,6 +3181,12 @@
 			"pos": "verb",
 			"conj": 3
 		},
+		"stella": {
+			"head": "stella, -æ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
+		},
 		"sto": {
 			"head": "sto, stare, steti, statum",
 			"pos": "verb",
@@ -3226,6 +3232,11 @@
 		"supplex": {
 			"head": "supplex, súpplicis",
 			"pos": "adj"
+		},
+		"supervenio": {
+			"head": "supervénio, superveníre, supervéni, supervéntum",
+			"pos": "verb",
+			"conj": 4
 		},
 		"supra": {
 			"head": "supra",
@@ -3279,9 +3290,21 @@
 			"gender": "n",
 			"decl": 2
 		},
+		"templum": {
+			"head": "templum, -i",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
 		"temporalis": {
 			"head": "temporális, -e",
 			"pos": "adj"
+		},
+		"tempus": {
+			"head": "tempus, témporis",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 3
 		},
 		"tenebrae": {
 			"head": "ténebræ, tenebrárum",
