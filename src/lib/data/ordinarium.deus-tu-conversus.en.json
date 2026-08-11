@@ -3,7 +3,7 @@
 	"text": "ordinarium.deus-tu-conversus",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Four pairs of versicles, three of them taken from the psalms. The first two are one continuous passage: Psalm 84, verses 7 and 8, taken in order and split between two voices. The third is Psalm 101, verse 2. The fourth — Dóminus vobíscum — is not from a psalm and falls here for the first time in the Mass. The priest will say it again several times, always before something he is about to do together with the people.",
+	"about": "The first three exchanges reproduce Psalm 84:7–8 and Psalm 101:2. The last is the liturgical greeting “Dóminus vobíscum” and its response.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest stays bowed at the foot of the altar and goes on, alternating with the server. One word more is said at the foot — Orémus, aloud — and with it the priest goes up to the altar."
+			"narrative": "Bowed, the priest continues."
 		},
 		"s02": {
 			"translation": "O God, Thou wilt turn and give us life."
@@ -53,7 +53,7 @@
 		},
 		"w004": {
 			"gloss": "wilt give life",
-			"function": "Future: a petition dressed as a statement — thou wilt do it."
+			"function": "Future indicative."
 		},
 		"w005": {
 			"gloss": "us"
@@ -62,8 +62,7 @@
 			"gloss": "and"
 		},
 		"w007": {
-			"gloss": "people",
-			"function": "A Roman word for the commons as against the patricians. In Scripture simply the people of God."
+			"gloss": "people"
 		},
 		"w008": {
 			"gloss": "Thy",
@@ -78,21 +77,21 @@
 		},
 		"w011": {
 			"gloss": "Thee",
-			"function": "Ablative after “in” (w010) — not “toward thee” but “in thee”: the joy has its place in God, not merely its direction."
+			"function": "Ablative after “in” (w010)."
 		},
 		"w012": {
 			"gloss": "show"
 		},
 		"w013": {
 			"gloss": "us",
-			"function": "Dative with “Osténde” (w012). The same form is ablative in the “a nobis” of the priest's next prayer."
+			"function": "Dative with “Osténde” (w012)."
 		},
 		"w014": {
 			"gloss": "O Lord"
 		},
 		"w015": {
 			"gloss": "mercy",
-			"function": "The accusative of the plea: mercy here is a thing to be shown, almost to be seen — the verse asks God to let it be looked upon."
+			"function": "Accusative object of “Osténde” (w012)."
 		},
 		"w016": {
 			"gloss": "Thy",
@@ -103,11 +102,11 @@
 		},
 		"w018": {
 			"gloss": "salvation",
-			"function": "The adjective salutáre used as a noun: the thing that saves. Here the object of “da” (w020), and so accusative."
+			"function": "Neuter adjective used substantively. Accusative object of “da” (w020)."
 		},
 		"w019": {
 			"gloss": "Thy",
-			"function": "Agrees with “salutáre” (w018) — neuter, because that is the gender of the noun."
+			"function": "Neuter, agreeing with “salutáre” (w018)."
 		},
 		"w020": {
 			"gloss": "grant"
@@ -119,8 +118,7 @@
 			"gloss": "O Lord"
 		},
 		"w023": {
-			"gloss": "hear favourably",
-			"function": "An intensified audíre: not “hear” but “hear favourably” — that is, grant."
+			"gloss": "hear favourably"
 		},
 		"w024": {
 			"gloss": "prayer"
@@ -134,7 +132,7 @@
 		},
 		"w027": {
 			"gloss": "cry",
-			"function": "Nominative: the subject of the clause. In the psalms a clamor is the voice of prayer, not an uproar."
+			"function": "Nominative subject of “véniat” (w031)."
 		},
 		"w028": {
 			"gloss": "my",
@@ -145,19 +143,19 @@
 		},
 		"w030": {
 			"gloss": "Thee",
-			"function": "Accusative after “ad” (w029) — motion toward someone. The same form stood above in the ablative after “in” (w010)."
+			"function": "Accusative after “ad” (w029)."
 		},
 		"w031": {
 			"gloss": "let come",
-			"function": "A subjunctive of wish — a petition, not a statement."
+			"function": "Present subjunctive expressing a petition."
 		},
 		"w032": {
 			"gloss": "the Lord",
-			"function": "A sentence with no verb: the Latin supplies neither “is” nor “be”, and so both readings stay open in it."
+			"function": "Nominal clause without an expressed verb."
 		},
 		"w033": {
 			"gloss": "with you",
-			"function": "One word carrying two: the preposition cum written after the pronoun instead of before it. So it always is with the personal pronouns — mecum, tecum, nobíscum."
+			"function": "The preposition “cum” follows the personal pronoun: “vobís-cum”."
 		},
 		"w034": {
 			"gloss": "and"
@@ -171,7 +169,7 @@
 		},
 		"w037": {
 			"gloss": "your",
-			"function": "Agrees with “spíritu” (w036). Singular — they speak to one priest, where he spoke to many."
+			"function": "Agrees with “spíritu” (w036)."
 		}
 	}
 }
