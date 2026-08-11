@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest joins his hands and bows low, and makes the general confession first, alone."
+			"narrative": "The priest joins his hands, bows deeply, and recites the Confiteor."
 		},
 		"s02": {
 			"translation": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, brethren:"
@@ -22,7 +22,7 @@
 			"translation": "that I have sinned exceedingly in thought, word and deed:"
 		},
 		"s04": {
-			"narrative": "The priest strikes his breast three times — the gesture of contrition accompanies the words of self-accusation."
+			"narrative": "The priest strikes his breast three times."
 		},
 		"s05": {
 			"translation": "through my fault, through my fault, through my most grievous fault."
@@ -34,11 +34,11 @@
 	"words": {
 		"w001": {
 			"gloss": "I confess",
-			"function": "It opens the prayer and governs the long chain of datives that follows — I confess: to whom?"
+			"function": "Governs the chain of datives that follows."
 		},
 		"w002": {
 			"gloss": "to God",
-			"function": "The one confessed to — first of the chain of datives after “Confíteor” (w001). Compare “Deum” (w065) — the same word in the accusative, in a different role."
+			"function": "Dative, the first complement of “Confíteor” (w001)."
 		},
 		"w003": {
 			"gloss": "almighty",
@@ -49,8 +49,7 @@
 			"function": "Agrees with “Maríæ” (w005)."
 		},
 		"w005": {
-			"gloss": "Mary",
-			"function": "The next addressee of the confession in the list."
+			"gloss": "Mary"
 		},
 		"w006": {
 			"gloss": "ever",
