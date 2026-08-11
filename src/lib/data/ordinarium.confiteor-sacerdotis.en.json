@@ -166,19 +166,19 @@
 		},
 		"w038": {
 			"gloss": "therefore",
-			"function": "The prayer's logical turn: having confessed, I now ask for intercession."
+			"function": "Links the confession to the request for intercession that follows."
 		},
 		"w039": {
 			"gloss": "I beseech",
-			"function": "Here it takes an accusative of the person plus an infinitive: I beseech whom — to do what. Hence the whole list now returns in the accusative."
+			"function": "Takes an accusative of the person and an infinitive: to beseech someone to do something."
 		},
 		"w040": {
 			"gloss": "blessed",
-			"function": "Agrees with “Maríam” (w041). Compare “beátæ” (w004): there dative after “Confíteor” (w001), here accusative after “precor” (w039)."
+			"function": "Agrees with “Maríam” (w041). Compare the dative “beátæ” (w004)."
 		},
 		"w041": {
 			"gloss": "Mary",
-			"function": "No longer the addressee of the confession but the one beseeched to intercede — object of “precor” (w039)."
+			"function": "Accusative object of “precor” (w039)."
 		},
 		"w042": {
 			"gloss": "ever"
@@ -217,7 +217,7 @@
 		},
 		"w052": {
 			"gloss": "Peter",
-			"function": "Apposition to “Apóstolos” (w051)."
+			"function": "Together with “Paulum” (w054), in apposition to “Apóstolos” (w051)."
 		},
 		"w053": {
 			"gloss": "and"
@@ -237,15 +237,15 @@
 		},
 		"w058": {
 			"gloss": "you",
-			"function": "Compare “vobis” (w022): the same people, a different case for a different role — there the ones confessed to, here the ones asked to pray."
+			"function": "Accusative object of “precor” (w039). Compare the dative “vobis” (w022)."
 		},
 		"w059": {
 			"gloss": "brethren",
-			"function": "The vocative repeated from the first half — addressed to those standing before the altar."
+			"function": "Vocative plural, repeating “fratres” (w023)."
 		},
 		"w060": {
 			"gloss": "to pray",
-			"function": "Infinitive in the construction “precor + accusative + infinitive”: I beseech you to pray. It carries the content of the petition."
+			"function": "Infinitive completing “precor” (w039): to beseech someone to pray."
 		},
 		"w061": {
 			"gloss": "for"
@@ -259,11 +259,11 @@
 		},
 		"w064": {
 			"gloss": "the Lord",
-			"function": "Accusative after “ad” (w063). The whole phrase “Dóminum Deum nostrum” stands in the accusative."
+			"function": "Accusative governed by “ad” (w063)."
 		},
 		"w065": {
 			"gloss": "God",
-			"function": "Apposition to “Dóminum” (w064). Compare “Deo” (w002): the same word opened the prayer in the dative."
+			"function": "In apposition to “Dóminum” (w064)."
 		},
 		"w066": {
 			"gloss": "our",

@@ -166,19 +166,19 @@
 		},
 		"w038": {
 			"gloss": "przeto",
-			"function": "Zwrot logiczny modlitwy: skoro zgrzeszyłem (wyznanie) — proszę o wstawiennictwo (prośba)."
+			"function": "Łączy wyznanie win z następującą po nim prośbą o wstawiennictwo."
 		},
 		"w039": {
 			"gloss": "błagam",
-			"function": "Rządzi tu biernikiem osoby i bezokolicznikiem: błagam kogo — by co uczynił. Stąd cała lista powtórzy się teraz w bierniku."
+			"function": "Łączy się z biernikiem osoby i bezokolicznikiem: błagać kogoś, aby coś uczynił."
 		},
 		"w040": {
 			"gloss": "błogosławioną",
-			"function": "Zgadza się z „Maríam” (w041). Por. „beátæ” (w004): tam celownik po „Confíteor” (w001), tu biernik po „precor” (w039)."
+			"function": "Zgadza się z „Maríam” (w041). Por. celownik „beátæ” (w004)."
 		},
 		"w041": {
 			"gloss": "Maryję",
-			"function": "Już nie adresatka wyznania, lecz proszona o wstawiennictwo — dopełnienie „precor” (w039)."
+			"function": "Biernik jako dopełnienie „precor” (w039)."
 		},
 		"w042": {
 			"gloss": "zawsze"
@@ -217,7 +217,7 @@
 		},
 		"w052": {
 			"gloss": "Piotra",
-			"function": "Apozycja (dopowiedzenie) do „Apóstolos” (w051)."
+			"function": "Wraz z „Paulum” (w054) tworzy apozycję do „Apóstolos” (w051)."
 		},
 		"w053": {
 			"gloss": "i"
@@ -237,15 +237,15 @@
 		},
 		"w058": {
 			"gloss": "was",
-			"function": "Por. „vobis” (w022): ci sami ludzie, inny przypadek, bo inna rola — tam adresaci wyznania, tu proszeni o modlitwę."
+			"function": "Biernik jako dopełnienie „precor” (w039). Por. celownik „vobis” (w022)."
 		},
 		"w059": {
 			"gloss": "bracia",
-			"function": "Wołacz powtórzony z pierwszej części modlitwy — zwrot do stojących przed ołtarzem."
+			"function": "Wołacz liczby mnogiej, powtórzenie „fratres” (w023)."
 		},
 		"w060": {
 			"gloss": "modlić się",
-			"function": "Bezokolicznik w konstrukcji „precor + biernik + bezokolicznik”: błagam was, abyście się modlili. To on niesie treść prośby."
+			"function": "Bezokolicznik dopełniający „precor” (w039): błagać kogoś, aby się modlił."
 		},
 		"w061": {
 			"gloss": "za"
@@ -259,11 +259,11 @@
 		},
 		"w064": {
 			"gloss": "Pana",
-			"function": "Biernik po „ad” (w063). Całe wyrażenie „Dóminum Deum nostrum” stoi w bierniku."
+			"function": "Biernik rządzony przez „ad” (w063)."
 		},
 		"w065": {
 			"gloss": "Boga",
-			"function": "Apozycja (dopowiedzenie) do „Dóminum” (w064). Por. „Deo” (w002): ten sam wyraz otwierał modlitwę w celowniku."
+			"function": "Apozycja do „Dóminum” (w064)."
 		},
 		"w066": {
 			"gloss": "naszego",
