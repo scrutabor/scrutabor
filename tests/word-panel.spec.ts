@@ -133,7 +133,9 @@ test('the way out of a long panel does not scroll away', async ({ page }) => {
 	// is an answer to "what is this word", and the words a reader taps are
 	// so often near-identical forms of one lemma that losing the question
 	// two screens down is a real loss.
-	await page.setViewportSize({ width: 375, height: 812 });
+	// Use a small phone height so the behavior remains exercised even when
+	// the prose in this particular analysis is edited or shortened.
+	await page.setViewportSize({ width: 375, height: 568 });
 	await page.goto('/app/en/ordinarium/memento-defunctorum?w=w026');
 
 	const sheet = page.locator('aside.sheet');
