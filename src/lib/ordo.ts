@@ -569,8 +569,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/memento-defunctorum',
 				note: {
-					pl: 'Wspomnienie zmarłych, znowu w ciszy, znowu z miejscem na imiona.',
-					en: 'The remembrance of the dead, again in silence, again with room for names.'
+					pl: 'Wspomnienie zmarłych, których kapłan poleca Bogu w cichej modlitwie.',
+					en: 'The remembrance of the dead, whom the priest commends to God in silent prayer.'
 				}
 			},
 			{
