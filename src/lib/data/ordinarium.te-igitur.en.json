@@ -3,7 +3,7 @@
 	"text": "ordinarium.te-igitur",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The first prayer of the Canon. In medieval missals the T of “Te” was drawn as a cross, and out of that letter grew the full-page Crucifixion that stands before the Canon in the old missal. The prayer names what lies on the altar three times over — dona, múnera, sacrifícia — and the priest signs the cross at each of the three. It also names the Church, the Pope and the local bishop. The word orthodóxus occurs nowhere else in the whole Ordinary of the Mass.",
+	"about": "The first prayer of the Canon. Through Jesus Christ, the priest asks the Father to accept the offerings and to grant the Church peace, protection, unity and governance. He names the Pope, the local bishop and the faithful who keep the Catholic faith.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "After the Sanctus the priest raises and joins his hands, raises his eyes and lowers them at once, then bows low over the altar, laying his hands upon it. From here to the closing “Per ómnia sǽcula sæculórum” he speaks silently — except three words, “Nobis quoque peccatóribus”, in a slightly raised voice."
+			"narrative": "After the Preface the priest raises and joins his hands slightly, lifts his eyes to heaven and lowers them at once. The priest then bows low before the altar and rests his hands upon it."
 		},
 		"s02": {
 			"translation": "To You, therefore, most merciful Father, we make humble prayer and petition through Jesus Christ, Your Son, our Lord:"
@@ -43,19 +43,19 @@
 	"words": {
 		"w001": {
 			"gloss": "Thee",
-			"function": "The object stands first, twelve words before the verbs “rogámus” (w013) and “pétimus” (w015) — the Canon opens with the one addressed."
+			"function": "Accusative object of “rogámus” (w013) and “pétimus” (w015), placed at the prayer's beginning."
 		},
 		"w002": {
 			"gloss": "therefore",
-			"function": "The therefore reaches back to the Preface and the Sanctus just sung — what exactly it refers to has been argued over for centuries."
+			"function": "Connects this prayer with the preceding liturgy: “therefore”."
 		},
 		"w003": {
 			"gloss": "most merciful",
-			"function": "A superlative in the vocative. The same form is also the superlative adverb — agreement with “Pater” (w004) decides it here. The same word turns up further on as a name — Cleméntis in the Communicántes."
+			"function": "A superlative in the vocative, sharing its case with “Pater” (w004)."
 		},
 		"w004": {
 			"gloss": "Father",
-			"function": "The Canon addresses the Father, not Christ: the whole offering goes through the Son to the Father."
+			"function": "Vocative. “Te” (w001), “rogámus” (w013) and “pétimus” (w015) are addressed to the Father."
 		},
 		"w005": {
 			"gloss": "through"
@@ -81,7 +81,7 @@
 		},
 		"w012": {
 			"gloss": "humbly",
-			"function": "An adjective, not an adverb: it agrees with the unstated “we” and says in what posture we ask — bent low."
+			"function": "A nominative plural adjective referring to the unstated “we”: “we, the suppliants”."
 		},
 		"w013": {
 			"gloss": "we pray"
@@ -98,7 +98,7 @@
 		},
 		"w017": {
 			"gloss": "as accepted",
-			"function": "Accépta habére — to hold as accepted — is the language of administration and the account book: acceptum is the credit side of a Roman ledger. The adjective agrees with three nouns that do not arrive until after the rubric."
+			"function": "In the phrase “accépta habére”: “to regard as accepted”. It agrees with “dona” (w022), “múnera” (w024) and “sacrifícia” (w027)."
 		},
 		"w018": {
 			"gloss": "hold"
@@ -111,7 +111,7 @@
 		},
 		"w021": {
 			"gloss": "these",
-			"function": "Three times “these”, and a sign of the cross at each: the prayer is pointing at what lies on the corporal."
+			"function": "The first of three occurrences of “hæc” at which the priest signs the cross over the Host and chalice."
 		},
 		"w022": {
 			"gloss": "gifts"
@@ -120,8 +120,7 @@
 			"gloss": "these"
 		},
 		"w024": {
-			"gloss": "dues",
-			"function": "A munus is a gift that is owed — a due, a duty. A donum is freely given."
+			"gloss": "dues"
 		},
 		"w025": {
 			"gloss": "these"
@@ -134,7 +133,7 @@
 		},
 		"w028": {
 			"gloss": "unblemished",
-			"function": "From libáre, to take a portion from an offering. Illibáta is an offering nothing has been taken from."
+			"function": "Agrees with “sacrifícia” (w027): “unblemished”."
 		},
 		"w029": {
 			"gloss": "first"
@@ -145,7 +144,7 @@
 		},
 		"w031": {
 			"gloss": "which",
-			"function": "An accusative neuter plural relative: it reaches back to gifts, offerings and sacrifices at once."
+			"function": "An accusative neuter plural relative referring to “dona” (w022), “múnera” (w024) and “sacrifícia” (w027)."
 		},
 		"w032": {
 			"gloss": "Thee"
@@ -170,11 +169,10 @@
 		},
 		"w039": {
 			"gloss": "whom",
-			"function": "Feminine, because Ecclésia is feminine in Latin. The four infinitives that follow all take it as their object."
+			"function": "Feminine accusative singular, referring to “Ecclésia” (w035). It is the object of the following four infinitives."
 		},
 		"w040": {
-			"gloss": "to give peace to",
-			"function": "One verb for what English needs several words to say: to grant peace to someone."
+			"gloss": "to give peace to"
 		},
 		"w041": {
 			"gloss": "to guard"
