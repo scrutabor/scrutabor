@@ -36,7 +36,7 @@
 		},
 		"w005": {
 			"gloss": "ofiarę",
-			"function": "Rzeczownik od offérre — to, co zostało przyniesione przed Boga."
+			"function": "Biernik, dopełnienie „Súscipe” (w001): „tę ofiarę”."
 		},
 		"w006": {
 			"gloss": "którą"
@@ -52,7 +52,7 @@
 		},
 		"w010": {
 			"gloss": "pamiątki",
-			"function": "Ob, zawsze z biernikiem, znaczy „ze względu na”. Ta sama pamiątka wróci na końcu modlitwy jako „memóriam” (w059)."
+			"function": "„Ob” rządzi biernikiem i znaczy „ze względu na”. „memóriam” (w059) powraca przy końcu modlitwy."
 		},
 		"w011": {
 			"gloss": "męki"
@@ -87,7 +87,7 @@
 		},
 		"w021": {
 			"gloss": "cześć",
-			"function": "Zmiana przyimka oznacza zmianę racji: pamiątka Chrystusa, cześć świętych."
+			"function": "„Ob memóriam” odnosi się do Chrystusa, a „in honórem” do świętych."
 		},
 		"w022": {
 			"gloss": "błogosławionej"
@@ -130,14 +130,13 @@
 		},
 		"w035": {
 			"gloss": "Pawła",
-			"function": "Prawie ta sama lista świętych co w Confíteor, tu w dopełniaczu — bez Michała Archanioła, za to z „istórum” (w037)."
+			"function": "Lista odpowiada Confíteor, lecz pomija Michała Archanioła i dodaje „istórum” (w037)."
 		},
 		"w036": {
 			"gloss": "i"
 		},
 		"w037": {
-			"gloss": "tych",
-			"function": "Zaimek wskazujący na to, co blisko: świętych, których relikwie są w tym ołtarzu."
+			"gloss": "tych"
 		},
 		"w038": {
 			"gloss": "i"
@@ -175,14 +174,14 @@
 		},
 		"w049": {
 			"gloss": "zbawieniu",
-			"function": "Dwie strony jednej ofiary: świętym cześć, nam zbawienie."
+			"function": "Odpowiada „honórem” (w045): świętym ku czci, nam ku zbawieniu."
 		},
 		"w050": {
 			"gloss": "i"
 		},
 		"w051": {
 			"gloss": "oni",
-			"function": "Mianownik liczby mnogiej, podmiot „dignéntur” (w055). Ta sama forma bywa celownikiem liczby pojedynczej."
+			"function": "Mianownik liczby mnogiej, podmiot „dignéntur” (w055)."
 		},
 		"w052": {
 			"gloss": "za"
@@ -192,7 +191,7 @@
 		},
 		"w054": {
 			"gloss": "wstawiać się",
-			"function": "Bezokolicznik dopełniający „dignéntur” (w055): to, co święci mają raczyć uczynić — wstawić się za nami u Boga."
+			"function": "Bezokolicznik dopełniający „dignéntur” (w055): „wstawiać się za nami”."
 		},
 		"w055": {
 			"gloss": "niech raczą"
@@ -217,14 +216,14 @@
 		},
 		"w062": {
 			"gloss": "ziemi",
-			"function": "„in cælis” i „in terris” stoją na dwóch końcach tego samego zdania: oni tam, my tutaj."
+			"function": "„cælis” (w057) określa wstawiennictwo świętych, a „terris” obchodzenie ich pamiątki."
 		},
 		"w063": {
 			"gloss": "przez"
 		},
 		"w064": {
 			"gloss": "tegoż",
-			"function": "Idem to is z końcówką -dem, „ten sam”. Przed d głoska m przechodzi w n — stąd eúndem, nie eúmdem."
+			"function": "Biernik liczby pojedynczej od „idem”, który zgadza się z „Christum” (w065): „przez tegoż Chrystusa”."
 		},
 		"w065": {
 			"gloss": "Chrystusa"

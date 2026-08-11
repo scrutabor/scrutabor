@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest takes the paten with the Host and raises it. At Solemn Mass the deacon hands it to him. The priest says the prayer silently."
+			"narrative": "At Solemn Mass the deacon hands the celebrant the paten with the Host. At a private Mass the priest takes it himself and offers it while saying the prayer."
 		},
 		"s02": {
 			"translation": "Receive, holy Father, almighty eternal God, this spotless Host, which I, Thy unworthy servant, offer to Thee, my living and true God, for my innumerable sins, offences and negligences, and for all here present, and also for all faithful Christians living and dead: that it may profit me and them unto salvation, into life everlasting. Amen."
@@ -22,15 +22,14 @@
 	"words": {
 		"w001": {
 			"gloss": "receive",
-			"function": "The imperative opens the prayer. Its object, “hóstiam” (w009), stands eight words away."
+			"function": "An imperative. Its object is “hóstiam” (w009)."
 		},
 		"w002": {
 			"gloss": "holy",
 			"function": "Agrees with “Pater” (w003)."
 		},
 		"w003": {
-			"gloss": "Father",
-			"function": "The prayer addresses the Father — not the Trinity, as “Súscipe, sancta Trínitas” will after the Lavábo."
+			"gloss": "Father"
 		},
 		"w004": {
 			"gloss": "almighty",
@@ -41,11 +40,11 @@
 		},
 		"w006": {
 			"gloss": "God",
-			"function": "Two addresses in one: “sancte Pater” and “omnípotens ætérne Deus” — three adjectives and two nouns, all vocative."
+			"function": "“Pater” (w003) and “Deus” are vocative together with their modifying adjectives."
 		},
 		"w007": {
 			"gloss": "this",
-			"function": "It points at what the priest is holding: not a sacrifice in general but this one."
+			"function": "It agrees with “hóstiam” (w009) and points to the Host on the paten."
 		},
 		"w008": {
 			"gloss": "spotless"
