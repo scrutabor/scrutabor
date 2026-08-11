@@ -52,15 +52,15 @@
 	"words": {
 		"w001": {
 			"gloss": "Który",
-			"function": "Zaimek względny odnosi się do Jezusa Chrystusa, wymienionego na końcu modlitwy poprzedniej."
+			"function": "Zaimek względny odnosi się do Chrystusa, wymienionego na końcu poprzedniej modlitwy."
 		},
 		"w002": {
 			"gloss": "dzień wcześniej",
-			"function": "Datowanie po rzymsku: tu wskazuje dzień Ostatniej Wieczerzy, przeddzień męki."
+			"function": "Razem z „quam” (w003) tworzy wyrażenie „dzień przed tym, nim”."
 		},
 		"w003": {
 			"gloss": "niż",
-			"function": "Spójnik dopełniający „prídie” (w002): otwiera zdanie o tym, co nastąpiło nazajutrz — o męce."
+			"function": "Spójnik dopełniający „prídie” (w002): „przed tym, nim cierpiał”."
 		},
 		"w004": {
 			"gloss": "cierpiał",
@@ -86,7 +86,7 @@
 		},
 		"w011": {
 			"gloss": "ręce",
-			"function": "Manus jest IV deklinacji: mianownik liczby pojedynczej i biernik liczby mnogiej pisze się tak samo — rozstrzygają przydawki (sanctas … suas)."
+			"function": "Biernik liczby mnogiej. Przydawki „sanctas” i „suas” mają tę samą liczbę i przypadek."
 		},
 		"w012": {
 			"gloss": "swoje"
@@ -96,11 +96,10 @@
 		},
 		"w014": {
 			"gloss": "podniósłszy",
-			"function": "Ablativus absolutny: imiesłów i rzeczownik w ablativie tworzą osobne zdanie okolicznikowe, bez związku składniowego z resztą."
+			"function": "Wraz z „óculis” (w015) tworzy ablativus absolutus: „podniósłszy oczy”."
 		},
 		"w015": {
-			"gloss": "oczy",
-			"function": "Tego szczegółu nie ma w żadnym opisie Ostatniej Wieczerzy. Ewangelie mówią przy chlebach o spojrzeniu w niebo, a podniesione oczy zna J 11, 41."
+			"gloss": "oczy"
 		},
 		"w016": {
 			"gloss": "ku"
@@ -113,7 +112,7 @@
 		},
 		"w019": {
 			"gloss": "Tobie",
-			"function": "Kanon nie przestaje mówić do Ojca nawet wtedy, gdy opowiada o Chrystusie: „ku Tobie” to zwrot do Tego, kto słucha modlitwy."
+			"function": "Kanon nadal zwraca się do Ojca, opowiadając o słowach i czynach Chrystusa."
 		},
 		"w020": {
 			"gloss": "Bogu"
@@ -145,7 +144,7 @@
 		},
 		"w029": {
 			"gloss": "i dał",
-			"function": "Trzy czasowniki w czasie przeszłym dokonanym, jeden po drugim, bez spójników prócz doczepionego -que."
+			"function": "Końcowe „-que” łączy „dedit” z poprzednimi czasownikami: „pobłogosławił, połamał i dał”."
 		},
 		"w030": {
 			"gloss": "uczniom",
@@ -175,7 +174,7 @@
 		},
 		"w038": {
 			"gloss": "wszyscy",
-			"function": "Mianownik, nie wołacz: zgadza się z domyślnym podmiotem obu rozkaźników — „wy wszyscy”. Obie formy brzmią tak samo."
+			"function": "Forma mianownika i wołacza liczby mnogiej jest tu taka sama. Sens: „wy wszyscy”."
 		},
 		"w039": {
 			"gloss": "to"
@@ -185,7 +184,7 @@
 		},
 		"w041": {
 			"gloss": "bowiem",
-			"function": "W tym właśnie zdaniu enim zajmuje trzecie miejsce — Hoc est enim — po słowach niosących orzeczenie."
+			"function": "„Enim” nie rozpoczyna zdania. Tutaj następuje po „Hoc est”."
 		},
 		"w042": {
 			"gloss": "Ciało"

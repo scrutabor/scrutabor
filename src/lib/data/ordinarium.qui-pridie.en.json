@@ -52,15 +52,15 @@
 	"words": {
 		"w001": {
 			"gloss": "Who",
-			"function": "The relative reaches back to Jesus Christ, named at the end of the prayer before."
+			"function": "The relative refers to Christ, named at the end of the preceding prayer."
 		},
 		"w002": {
 			"gloss": "the day before",
-			"function": "Roman dating: here it fixes the day of the Last Supper, the eve of the passion."
+			"function": "Together with “quam” (w003), it forms the expression “the day before”."
 		},
 		"w003": {
 			"gloss": "than",
-			"function": "The conjunction completing “prídie” (w002): it opens the clause naming what came on the morrow — the passion."
+			"function": "The conjunction completing “prídie” (w002): “before He suffered”."
 		},
 		"w004": {
 			"gloss": "He suffered",
@@ -86,7 +86,7 @@
 		},
 		"w011": {
 			"gloss": "hands",
-			"function": "Manus is 4th declension: the nominative singular and the accusative plural are spelt alike — the adjectives (sanctas … suas) decide."
+			"function": "Accusative plural. The adjectives “sanctas” and “suas” have the same number and case."
 		},
 		"w012": {
 			"gloss": "His"
@@ -96,11 +96,10 @@
 		},
 		"w014": {
 			"gloss": "lifting up",
-			"function": "An ablative absolute: a participle and a noun in the ablative form a clause of their own, with no grammatical link to the rest."
+			"function": "With “óculis” (w015), it forms an ablative absolute: “lifting up His eyes”."
 		},
 		"w015": {
-			"gloss": "His eyes",
-			"function": "This detail stands in no account of the Last Supper. At the loaves the Gospels say only that He looked up to heaven, and the raised eyes themselves are John 11:41."
+			"gloss": "His eyes"
 		},
 		"w016": {
 			"gloss": "to"
@@ -113,7 +112,7 @@
 		},
 		"w019": {
 			"gloss": "Thee",
-			"function": "The Canon does not stop addressing the Father even while it narrates: “to thee” speaks to the one who hears the prayer."
+			"function": "The Canon continues to address the Father while recounting the words and actions of Christ."
 		},
 		"w020": {
 			"gloss": "God"
@@ -145,7 +144,7 @@
 		},
 		"w029": {
 			"gloss": "and He gave",
-			"function": "Three perfects in a row, with no connective but the -que attached to the last."
+			"function": "The final “-que” joins “dedit” to the preceding verbs: “He blessed, broke and gave”."
 		},
 		"w030": {
 			"gloss": "to the disciples",
@@ -175,7 +174,7 @@
 		},
 		"w038": {
 			"gloss": "all of you",
-			"function": "Nominative, not vocative: it agrees with the unstated subject of the two imperatives — you all. The two forms sound alike."
+			"function": "The nominative and vocative plural have the same form here. The sense is “you all”."
 		},
 		"w039": {
 			"gloss": "this"
@@ -185,7 +184,7 @@
 		},
 		"w041": {
 			"gloss": "for",
-			"function": "In this very clause enim takes third place — Hoc est enim — after the words that carry the predicate."
+			"function": "“Enim” does not begin its clause. Here it follows “Hoc est”."
 		},
 		"w042": {
 			"gloss": "Body"
