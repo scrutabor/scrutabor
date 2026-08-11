@@ -2676,6 +2676,11 @@
 			"gender": "f",
 			"decl": 3
 		},
+		"protego": {
+			"head": "prótego, protégere, protéxi, protéctum",
+			"pos": "verb",
+			"conj": 3
+		},
 		"provenio": {
 			"head": "provénio, proveníre, provéni, provéntum",
 			"pos": "verb",
@@ -2846,6 +2851,12 @@
 			"gender": "f",
 			"decl": 3
 		},
+		"reparatio": {
+			"head": "reparátio, reparatiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
 		"repello": {
 			"head": "repéllo, repéllere, répuli, repúlsum",
 			"pos": "verb",
@@ -2892,6 +2903,10 @@
 			"head": "Sábaoth",
 			"pos": "noun",
 			"gender": "n"
+		},
+		"sacer": {
+			"head": "sacer, sacra, sacrum",
+			"pos": "adj"
 		},
 		"sacerdos": {
 			"head": "sacérdos, sacerdótis",
@@ -2945,6 +2960,11 @@
 			"head": "sálveo, salvére",
 			"pos": "verb",
 			"conj": 2
+		},
+		"salvo": {
+			"head": "salvo, salváre, salvávi, salvátum",
+			"pos": "verb",
+			"conj": 1
 		},
 		"salvus": {
 			"head": "salvus, -a, -um",
