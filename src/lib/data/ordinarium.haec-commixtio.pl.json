@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan wpuszcza cząstkę do kielicha, mówiąc to po cichu."
+			"narrative": "Kapłan wpuszcza cząstkę do kielicha i odmawia modlitwę po cichu."
 		},
 		"s02": {
 			"translation": "Ciało i Krew naszego Pana Jezusa Chrystusa, które łączymy i konsekrujemy, niech nam, przyjmującym je, pomogą osiągnąć życie wieczne. Amen."
@@ -22,18 +22,17 @@
 	"words": {
 		"w001": {
 			"gloss": "To",
-			"function": "Rodzaj żeński, zgadza się z „commíxtio” (w002): to zmieszanie — to, którego palce kapłana właśnie dokonują."
+			"function": "Rodzaj żeński, zgadza się z „commíxtio” (w002)."
 		},
 		"w002": {
-			"gloss": "zmieszanie",
-			"function": "Con- i misceo: wymieszać jedno z drugim. W całym stałym porządku Mszy to słowo pada tylko tutaj."
+			"gloss": "zmieszanie"
 		},
 		"w003": {
 			"gloss": "i"
 		},
 		"w004": {
 			"gloss": "konsekracja",
-			"function": "Drugi podmiot przy „fiat” (w012), a orzeczenie zostaje w liczbie pojedynczej: oba akty liczą się jako jedna rzecz dokonana."
+			"function": "Drugi z dwóch podmiotów liczby pojedynczej przy „fiat” (w012), które także pozostaje w liczbie pojedynczej."
 		},
 		"w005": {
 			"gloss": "Ciała"
@@ -54,20 +53,19 @@
 			"gloss": "Jezusa"
 		},
 		"w011": {
-			"gloss": "Chrystusa",
-			"function": "Przecinek po nim zamyka łańcuch pięciu rzeczowników w dopełniaczu — nostri tylko się z nimi zgadza — żeby czytelnik nie zgubił podmiotu, zanim dojdzie do orzeczenia."
+			"gloss": "Chrystusa"
 		},
 		"w012": {
 			"gloss": "niech się stanie",
-			"function": "Tryb łączący życzący — modlitwa nie stwierdza skutku, lecz o niego prosi."
+			"function": "Tryb łączący wyrażający życzenie."
 		},
 		"w013": {
 			"gloss": "przyjmującym",
-			"function": "Imiesłów zgadzający się z „nobis” (w014): nam jako przyjmującym, czyli w samym akcie przyjmowania. Dar jest wyproszony w przyjmowaniu, nie tylko dla przyjmujących."
+			"function": "Imiesłów w celowniku liczby mnogiej, zgadzający się z „nobis” (w014)."
 		},
 		"w014": {
 			"gloss": "nam",
-			"function": "Celownik przy „fiat” (w012): niech się nam tak stanie."
+			"function": "Celownik przy „fiat” (w012)."
 		},
 		"w015": {
 			"gloss": "ku"
@@ -79,8 +77,7 @@
 			"gloss": "wiecznemu"
 		},
 		"w018": {
-			"gloss": "Amen",
-			"function": "Wypowiada je sam kapłan i po cichu, jak resztę zdania. Nie ma komu odpowiedzieć."
+			"gloss": "Amen"
 		}
 	}
 }
