@@ -3,7 +3,7 @@
 	"text": "ordinarium.praefatio-dialogus",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The exchange with which the priest opens the Preface. Cyprian of Carthage quotes it already in the third century: the priest, before the prayer, prepares the minds of the brethren by saying Sursum corda. “Habémus ad Dóminum” leaves its object unsaid — literally we have towards the Lord. The hearts just spoken of are what is had. The answer “Dignum et iustum est” is the phrase the priest picks up at once in the first words of the Preface: Vere dignum et iustum est.",
+	"about": "The dialogue preceding the Preface. In “Sursum corda” the verb is left understood. In the response “Habémus ad Dóminum”, the unexpressed object is “corda”. The priest takes up the final response with “Vere dignum et iustum est”.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -40,7 +40,7 @@
 		},
 		"w002": {
 			"gloss": "with you",
-			"function": "One written word carrying two: the preposition cum stands after the pronoun, as it always does with the personal pronouns (mecum, tecum, nobíscum)."
+			"function": "The preposition “cum” follows the personal pronoun: “vobis” + “cum” forms “vobíscum”."
 		},
 		"w003": {
 			"gloss": "and"
@@ -56,16 +56,15 @@
 			"function": "Agrees with “spíritu” (w005) in the response “Et cum spíritu tuo”."
 		},
 		"w007": {
-			"gloss": "upwards",
-			"function": "The call has no verb — only an adverb of direction and an object. Latin leaves it to be understood what is to be done with the hearts."
+			"gloss": "upwards"
 		},
 		"w008": {
 			"gloss": "hearts",
-			"function": "Accusative, though no verb governs it: the form shows that it is the object of an understood “lift up”."
+			"function": "Accusative plural in a call with no expressed verb."
 		},
 		"w009": {
 			"gloss": "we have",
-			"function": "The answer does not repeat the command but states that it has been done. The object (“them”) is again left unsaid."
+			"function": "The unexpressed object of “habémus” is “corda” from the preceding call."
 		},
 		"w010": {
 			"gloss": "to"

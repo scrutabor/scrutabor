@@ -98,8 +98,7 @@
 			"gloss": "wieczny"
 		},
 		"w021": {
-			"gloss": "Boże",
-			"function": "Sześć słów w wołaczu naraz — dłuższy ciąg ma tylko Gloria."
+			"gloss": "Boże"
 		},
 		"w022": {
 			"gloss": "przez"
@@ -112,14 +111,14 @@
 		},
 		"w025": {
 			"gloss": "naszego",
-			"function": "Tu Prefacja wspólna się kończy i nie nazywa żadnej tajemnicy. Prefacje własne wstawiają w tym miejscu to, co dany dzień wspomina."
+			"function": "W tym miejscu prefacje własne wprowadzają część odnoszącą się do dnia lub tajemnicy."
 		},
 		"w026": {
 			"gloss": "przez"
 		},
 		"w027": {
 			"gloss": "Niego",
-			"function": "Zaimek względny odnosi się do Chrystusa i otwiera łańcuch względny, który niesie Prefację do końca."
+			"function": "Zaimek względny odnoszący się do Chrystusa."
 		},
 		"w028": {
 			"gloss": "majestat",
@@ -139,7 +138,7 @@
 		},
 		"w033": {
 			"gloss": "Państwa",
-			"function": "Mianownik, nie biernik: to podmiot „adórant”, a nie drugie dopełnienie „laudant” (w030). Forma jest w obu przypadkach ta sama, rozstrzyga układ trzech równoległych czasowników."
+			"function": "Mianownik, będący podmiotem „adórant”."
 		},
 		"w034": {
 			"gloss": "drżą"
@@ -149,7 +148,7 @@
 		},
 		"w036": {
 			"gloss": "Niebiosa",
-			"function": "Cælum ma w liczbie mnogiej rodzaj męski — cæli, nie cæla. To rzeczownik, który zmienia rodzaj w liczbie mnogiej."
+			"function": "Męska liczba mnoga od nijakiego „cælum”."
 		},
 		"w037": {
 			"gloss": "i niebios",
@@ -163,7 +162,7 @@
 		},
 		"w040": {
 			"gloss": "błogosławione",
-			"function": "Rodzaj nijaki liczby mnogiej — bo Séraphim, choć nieodmienne, łacina traktuje jak liczbę mnogą rodzaju nijakiego."
+			"function": "Rodzaj nijaki liczby mnogiej, zgodny z nieodmiennym „Séraphim”."
 		},
 		"w041": {
 			"gloss": "Serafiny"
@@ -184,7 +183,7 @@
 		},
 		"w046": {
 			"gloss": "którymi",
-			"function": "Nie podano rodzaju: poprzednikiem jest cały zastęp niebieski, w którym są rzeczowniki obu rodzajów, a forma żadnego nie wskazuje."
+			"function": "Ablativus po „cum”, odnoszący się do chórów anielskich."
 		},
 		"w047": {
 			"gloss": "i"
@@ -208,7 +207,7 @@
 		},
 		"w053": {
 			"gloss": "prosimy",
-			"function": "Czasownik deponentny: forma bierna, znaczenie czynne. Stoi w środku zdania jak wtrącenie."
+			"function": "Czasownik deponentny: forma bierna, znaczenie czynne."
 		},
 		"w054": {
 			"gloss": "kornym"
@@ -219,7 +218,7 @@
 		},
 		"w056": {
 			"gloss": "mówiąc",
-			"function": "Imiesłów zgadza się z domyślnym „my”. Zdanie urywa się, a jego dalszym ciągiem jest Sanctus."
+			"function": "Imiesłów zgadza się z domyślnym „my” i wprowadza Sanctus."
 		}
 	}
 }
