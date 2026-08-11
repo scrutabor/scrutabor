@@ -3690,6 +3690,9 @@
 		"potens": {
 			"senses": ["potężny"]
 		},
+		"potentia": {
+			"senses": ["moc"]
+		},
 		"potestas": {
 			"senses": [
 				"władza",
@@ -3701,8 +3704,7 @@
 			"senses": [
 				"pić",
 				"wypijać"
-			],
-			"note": "Słowo przedklasyczne i późne — codziennym jest bibo; stąd pótio — napój, i potátor — pijak."
+			]
 		},
 		"praecedo": {
 			"senses": [
@@ -3719,8 +3721,7 @@
 				"przykazanie",
 				"nakaz",
 				"pouczenie"
-			],
-			"note": "Właściwie imiesłów bierny od præcípere — wziąć naprzód, nakazać; to, co nakazano."
+			]
 		},
 		"praeclarus": {
 			"senses": [
@@ -3735,7 +3736,7 @@
 				"bitwa",
 				"walka"
 			],
-			"note": "Prælium i proelium to dwa zapisy jednego słowa; księgi liturgiczne drukują prælium."
+			"note": "Wariant zapisu: proelium."
 		},
 		"praeparo": {
 			"senses": [
@@ -3751,8 +3752,7 @@
 				"obecny",
 				"teraźniejszy",
 				"bieżący"
-			],
-			"note": "Pierwotnie imiesłów czynny od præesse — być przy czymś; stąd „obecny” i „teraźniejszy” zarazem."
+			]
 		},
 		"praesidium": {
 			"senses": [
@@ -3760,7 +3760,6 @@
 				"warownia",
 				"załoga"
 			],
-			"note": "Od præsídeo — siedzieć na przedzie, strzec.",
 			"derivatives": [
 				"prezydium"
 			]
@@ -3778,17 +3777,18 @@
 				"brać naprzód",
 				"przywłaszczać sobie"
 			],
-			"note": "Præ i sumo — wziąć wcześniej, wziąć bez pozwolenia; stąd zarówno „zakładać z góry”, jak i „ośmielać się”.",
 			"derivatives": [
 				"prezumpcja"
 			]
+		},
+		"praetereo": {
+			"senses": ["przemijać"]
 		},
 		"praeteritus": {
 			"senses": [
 				"miniony",
 				"przeszły"
-			],
-			"note": "Pierwotnie imiesłów bierny od præteríre — przejść obok, minąć; w łacinie utrwalił się jako osobny przymiotnik i tak go notują słowniki."
+			]
 		},
 		"precor": {
 			"senses": [
@@ -3796,6 +3796,9 @@
 				"prosić",
 				"modlić się"
 			]
+		},
+		"pressura": {
+			"senses": ["ucisk"]
 		},
 		"prex": {
 			"senses": [
@@ -3812,7 +3815,7 @@
 				"dzień wcześniej",
 				"w przeddzień"
 			],
-			"note": "Rzymski wyraz kalendarzowy: prídie Kaléndas — dzień przed pierwszym dniem miesiąca."
+			"note": "Prídie Kaléndas oznacza dzień przed pierwszym dniem miesiąca."
 		},
 		"primus": {
 			"senses": [
@@ -3829,7 +3832,6 @@
 				"wódz",
 				"książę"
 			],
-			"note": "Złożenie primus + cápio: ten, kto zajmuje pierwsze miejsce.",
 			"derivatives": [
 				"pryncypał",
 				"pryncypialny"
@@ -3857,12 +3859,14 @@
 				"wychodzić naprzód",
 				"postępować, iść dalej"
 			],
-			"note": "Złożenie pro (naprzód) + cédere (iść, kroczyć); w języku wyznań wiary orzeka o pochodzeniu Ducha Świętego; o Synu credo mówi inaczej — génitum, zrodzony.",
 			"derivatives": [
 				"procesja",
 				"proces",
 				"procedura"
 			]
+		},
+		"produco": {
+			"senses": ["wydawać"]
 		},
 		"proficio": {
 			"senses": [
@@ -3878,7 +3882,6 @@
 			"senses": [
 				"obietnica"
 			],
-			"note": "Rzeczownik od promítto (posłać naprzód, obiecać) — z tego samego mitto, co missa.",
 			"derivatives": [
 				"promesa (od promítto)"
 			]
@@ -3887,10 +3890,13 @@
 			"senses": [
 				"prorok"
 			],
-			"note": "Rzeczownik I deklinacji, a mimo to rodzaju męskiego — jak „agrícola” (rolnik); z greckiego „prophétes” — ten, kto mówi w czyimś imieniu.",
+			"note": "Rzeczownik rodzaju męskiego, odmieniany według I deklinacji.",
 			"derivatives": [
 				"profetyczny"
 			]
+		},
+		"propinquus": {
+			"senses": ["bliski"]
 		},
 		"propitiabilis": {
 			"senses": [
