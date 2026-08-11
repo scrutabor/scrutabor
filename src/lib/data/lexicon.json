@@ -1519,6 +1519,11 @@
 			"head": "immaculátus, -a, -um",
 			"pos": "adj"
 		},
+		"immineo": {
+			"head": "immíneo, imminére",
+			"pos": "verb",
+			"conj": 2
+		},
 		"impero": {
 			"head": "ímpero, imperáre, imperávi, imperátum",
 			"pos": "verb",
@@ -1527,6 +1532,12 @@
 		"impius": {
 			"head": "ímpius, -a, -um",
 			"pos": "adj"
+		},
+		"impudicitia": {
+			"head": "impudicítia, -æ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
 		},
 		"in": {
 			"head": "in",
@@ -1539,6 +1550,11 @@
 		},
 		"incedo": {
 			"head": "incédo, incédere, incéssi, incéssum",
+			"pos": "verb",
+			"conj": 3
+		},
+		"incipio": {
+			"head": "incípio, incípere, incépi, incéptum",
 			"pos": "verb",
 			"conj": 3
 		},
