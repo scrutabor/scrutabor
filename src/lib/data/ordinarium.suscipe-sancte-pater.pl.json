@@ -59,7 +59,7 @@
 		},
 		"w011": {
 			"gloss": "ja",
-			"function": "Łacina pomija zaimek podmiotu, jeśli go nie podkreśla — tu podkreśla: to ja, niegodny, składam."
+			"function": "Wyrażony zaimek podmiotu, określony przez „indígnus” (w012) i „fámulus” (w013)."
 		},
 		"w012": {
 			"gloss": "niegodny"
@@ -73,7 +73,7 @@
 		},
 		"w015": {
 			"gloss": "składam",
-			"function": "Złożenie ob- i fero (nieść): nieść coś przed kogoś. Od tego czasownika nazwano całą tę część Mszy."
+			"function": "Orzeczenie zdania względnego rozpoczynającego się od „quam” (w010)."
 		},
 		"w016": {
 			"gloss": "tobie"
@@ -87,14 +87,14 @@
 		},
 		"w019": {
 			"gloss": "żywemu",
-			"function": "Przymiotnik, nie czasownik „żyję” — o tym rozstrzyga zgoda z „Deo” (w017)."
+			"function": "Zgadza się z „Deo” (w017)."
 		},
 		"w020": {
 			"gloss": "i"
 		},
 		"w021": {
 			"gloss": "prawdziwemu",
-			"function": "Zwrot biblijny — słowa są Pawłowe (1 Tes 1, 9): Bóg żywy i prawdziwy, w odróżnieniu od bożków."
+			"function": "Zwrot „Deo vivo et vero” występuje także w 1 Tes 1,9."
 		},
 		"w022": {
 			"gloss": "za"
@@ -111,19 +111,18 @@
 			"gloss": "i"
 		},
 		"w026": {
-			"gloss": "zniewagi",
-			"function": "Drugi z trzech rzeczowników winy: nie sam czyn, lecz zniewaga wyrządzona komuś."
+			"gloss": "zniewagi"
 		},
 		"w027": {
 			"gloss": "i"
 		},
 		"w028": {
 			"gloss": "zaniedbania",
-			"function": "Trzeci rodzaj winy: nie to, co zrobiono źle, lecz to, czego zaniechano."
+			"function": "Oznacza to, co zaniedbano lub czego zaniechano."
 		},
 		"w029": {
 			"gloss": "moje",
-			"function": "Jedno „moje” obejmuje wszystkie trzy rzeczowniki. Forma nie wskazuje rodzaju, a rzeczowniki są dwojakiego rodzaju — dlatego rodzaju tu nie podano."
+			"function": "Ablativus liczby mnogiej, w tym samym przypadku co wszystkie trzy poprzednie rzeczowniki."
 		},
 		"w030": {
 			"gloss": "i"
@@ -137,14 +136,14 @@
 		},
 		"w033": {
 			"gloss": "obecnych",
-			"function": "Imiesłów użyty rzeczownikowo: dosłownie „stojący wokół”. Tak w łacinie kościelnej nazywa się zgromadzonych wiernych."
+			"function": "Imiesłów użyty rzeczownikowo: „stojący wokół”, czyli obecni."
 		},
 		"w034": {
 			"gloss": "lecz"
 		},
 		"w035": {
 			"gloss": "także",
-			"function": "„sed et” to nie „ale i”, lecz utarte „a nadto”: wyliczenie rozszerza się poza obecnych."
+			"function": "W zwrocie „sed et” rozszerza wyliczenie: „a także”."
 		},
 		"w036": {
 			"gloss": "za"
@@ -163,12 +162,11 @@
 			"gloss": "żywych"
 		},
 		"w041": {
-			"gloss": "i",
-			"function": "Mocniejsze „i” niż et — łączy dwa człony w jedną parę: żywych i umarłych razem."
+			"gloss": "i"
 		},
 		"w042": {
 			"gloss": "umarłych",
-			"function": "Od defúngi — wypełnić do końca, wywiązać się. Umarły to ten, kto dopełnił życia."
+			"function": "Imiesłów użyty rzeczownikowo: „zmarli”."
 		},
 		"w043": {
 			"gloss": "aby"
@@ -182,11 +180,11 @@
 		},
 		"w046": {
 			"gloss": "im",
-			"function": "Forma jest zarazem celownikiem i ablativem i nie wskazuje rodzaju. Celownik męski wynika z sensu — chodzi o wymienionych przed chwilą."
+			"function": "Celownik liczby mnogiej przy „profíciat” (w047), równoległy do „mihi” (w044)."
 		},
 		"w047": {
 			"gloss": "niech posłuży",
-			"function": "Podmiotem jest hostia: niech ona wyjdzie na pożytek. Tryb łączący po „ut” (w043)."
+			"function": "Tryb łączący po „ut” (w043). Podmiotem jest ofiara nazwana wcześniej „hóstiam” (w009)."
 		},
 		"w048": {
 			"gloss": "ku"
