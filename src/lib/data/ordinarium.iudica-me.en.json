@@ -13,10 +13,10 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "This part is left out at Requiem Masses, and in Masses of the season from Passion Sunday through Maundy Thursday. What goes is the psalm together with the Glória Patri and the repetition of the antiphon. The rest of the prayers at the foot stay — the sign of the cross, the antiphon and the Adiutórium — and the confession follows at once."
+			"narrative": "At Masses for the Dead, and at Masses of the season from Passion Sunday through Maundy Thursday, the psalm, the Glória Patri and the repetition of the antiphon are omitted. After In nómine Patris, the antiphon and the Adiutórium, the Confíteor follows at once."
 		},
 		"s02": {
-			"narrative": "The priest says the psalm alternately with the server, verse for verse. At a dialogue Mass the faithful answer with the server."
+			"narrative": "The priest says the psalm alternately with the ministers."
 		},
 		"s03": {
 			"translation": "Judge me, O God, and set my cause apart from an unholy nation: from the unjust and deceitful man deliver me."
@@ -43,7 +43,7 @@
 			"translation": "As it was in the beginning, is now, and ever shall be, world without end. Amen."
 		},
 		"s11": {
-			"narrative": "The psalm ended, the priest takes up the antiphon once more — as in the Office an antiphon returns after the psalm it framed."
+			"narrative": "The priest repeats the antiphon."
 		},
 		"s12": {
 			"translation": "I will go in unto the altar of God."
@@ -58,11 +58,11 @@
 		},
 		"w002": {
 			"gloss": "me",
-			"function": "Accusative — the object of the imperative “Iúdica” (w001). The bare form could also be ablative. The verb settles it."
+			"function": "Accusative as the object of “Iúdica” (w001)."
 		},
 		"w003": {
 			"gloss": "O God",
-			"function": "Vocative, though the form is the same as the nominative: for deus the nominative serves as the address. That this is address is shown by the imperative beside it."
+			"function": "Vocative: the psalmist addresses God."
 		},
 		"w004": {
 			"gloss": "and"
@@ -72,47 +72,44 @@
 		},
 		"w006": {
 			"gloss": "cause",
-			"function": "A term from the courts: a causa is a case pleaded before a judge. The psalmist asks for a verdict, not for pity."
+			"function": "Accusative as the object of “discérne” (w005)."
 		},
 		"w007": {
-			"gloss": "my",
-			"function": "Agrees with “causam” (w006)."
+			"gloss": "my"
 		},
 		"w008": {
 			"gloss": "from"
 		},
 		"w009": {
 			"gloss": "the nation",
-			"function": "Ablative after “de” (w008) — separation from something."
+			"function": "Ablative governed by “de” (w008)."
 		},
 		"w010": {
 			"gloss": "not"
 		},
 		"w011": {
 			"gloss": "holy",
-			"function": "Agrees with “gente” (w009), so ablative and not nominative — “non sancta” is one description: an unholy nation."
+			"function": "Ablative. With “gente” (w009), it forms the phrase “an unholy nation”."
 		},
 		"w012": {
 			"gloss": "from"
 		},
 		"w013": {
 			"gloss": "the man",
-			"function": "Ablative after “ab” (w012). The singular here covers any such man."
+			"function": "Ablative governed by “ab” (w012)."
 		},
 		"w014": {
 			"gloss": "unjust",
-			"function": "Agrees with “hómine” (w013). The bare form could also be dative."
+			"function": "Ablative, agreeing with “hómine” (w013)."
 		},
 		"w015": {
 			"gloss": "and"
 		},
 		"w016": {
-			"gloss": "deceitful",
-			"function": "Agrees with “hómine” (w013) — the second of the two descriptions."
+			"gloss": "deceitful"
 		},
 		"w017": {
-			"gloss": "deliver",
-			"function": "Literally to dig out, to grub up — a strong word, as though someone had to be got out from under the ground."
+			"gloss": "deliver"
 		},
 		"w018": {
 			"gloss": "me"
@@ -122,7 +119,7 @@
 		},
 		"w020": {
 			"gloss": "Thou",
-			"function": "The pronoun is not needed — the ending of “es” (w021) already says who. It stands to press the point: thou, and no other."
+			"function": "The expressed pronoun emphasizes the subject: “Thou”."
 		},
 		"w021": {
 			"gloss": "art"
@@ -132,11 +129,11 @@
 		},
 		"w023": {
 			"gloss": "strength",
-			"function": "The predicate of “es” (w021), and therefore nominative: thou art my strength."
+			"function": "A predicate nominative with “es” (w021)."
 		},
 		"w024": {
 			"gloss": "my",
-			"function": "Agrees with “fortitúdo” (w023) — nominative. The same form is ablative in the Confiteor's “mea culpa”."
+			"function": "Feminine nominative, agreeing with “fortitúdo” (w023)."
 		},
 		"w025": {
 			"gloss": "why"
