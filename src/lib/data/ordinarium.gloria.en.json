@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "At the middle of the altar the priest intones the angelic hymn — the song the angels sang over Bethlehem (Lk 2:14). At High Mass all stand at the intonation. The rubric has it said “si dicendum est” — if it falls to be said: it is omitted, among other days, at the seasonal Masses of Advent, Pre-Lent and Lent and at Requiem Masses, and returns on the feasts of those seasons. At “Adorámus te”, “Grátias ágimus tibi”, “Súscipe deprecatiónem” and each time at “Iesu Christe” the priest bows his head — he bows it too at “Deo” in the intonation — and at “Cum Sancto Spíritu” he signs himself with the cross."
+			"narrative": "At the middle of the altar, the priest extends and joins his hands, bows his head slightly and, if the hymn is to be said, begins it with “Glória in excélsis Deo”. The priest continues with hands joined."
 		},
 		"s02": {
 			"translation": "Glory to God in the highest."
@@ -55,14 +55,14 @@
 	"words": {
 		"w001": {
 			"gloss": "glory",
-			"function": "A sentence with no verb — supply “let there be”: glory (be) to God. To whom? — that is the dative “Deo” (w004)."
+			"function": "A nominal sentence with “let there be” understood. “Deo” (w004) identifies the recipient of the glory."
 		},
 		"w002": {
 			"gloss": "in"
 		},
 		"w003": {
 			"gloss": "the highest",
-			"function": "An adjective doing a noun's work: “the highest (places)”."
+			"function": "A neuter adjective used substantively: “in the highest [places]”."
 		},
 		"w004": {
 			"gloss": "to God"
@@ -87,7 +87,7 @@
 		},
 		"w011": {
 			"gloss": "will",
-			"function": "Genitive of quality: men “of good will” — together with “bonæ” (w010) it says what kind of men the peace is promised to."
+			"function": "With “bonæ” (w010), it forms a genitive of quality modifying “homínibus” (w009)."
 		},
 		"w012": {
 			"gloss": "we praise"
@@ -118,7 +118,7 @@
 		},
 		"w021": {
 			"gloss": "we give",
-			"function": "Literally “we do” — the object is “Grátias” (w020): the fixed idiom “grátias ágere”, whose noun always precedes the verb."
+			"function": "With “Grátias” (w020), it forms the fixed expression “grátias ágere” — to give thanks."
 		},
 		"w022": {
 			"gloss": "to You"
@@ -140,7 +140,7 @@
 		},
 		"w028": {
 			"gloss": "God",
-			"function": "The form looks like a nominative but is an address here — like the neighboring “Dómine” (w027)."
+			"function": "“Deus” has the same form in the nominative and vocative. Here it is vocative, parallel to “Dómine” (w027)."
 		},
 		"w029": {
 			"gloss": "King"
@@ -162,7 +162,7 @@
 		},
 		"w035": {
 			"gloss": "Son",
-			"function": "A true vocative of “fílius” — the -i ending. Compare “Fílius” (w043), where the same person is named with the nominative form."
+			"function": "Singular vocative of “fílius”."
 		},
 		"w036": {
 			"gloss": "only-begotten"
@@ -181,21 +181,21 @@
 		},
 		"w041": {
 			"gloss": "Lamb",
-			"function": "Apposition to “Dómine” (w039) — a nominative form serving as an address. Latin often does this in long apostrophes. The vocative proper would be “agne”."
+			"function": "Nominative used as an address in the series following “Dómine” (w039) and “Deus” (w040)."
 		},
 		"w042": {
 			"gloss": "of God"
 		},
 		"w043": {
 			"gloss": "Son",
-			"function": "Again a nominative serving as an address — right after the true vocative “Fili” (w035) the hymn shows both of Latin's options."
+			"function": "Nominative used as an address, parallel to “Agnus” (w041)."
 		},
 		"w044": {
 			"gloss": "of the Father"
 		},
 		"w045": {
 			"gloss": "who",
-			"function": "The relative refers to “you” — which is why the verb “tollis” (w046) stands in the second person: “(you,) who take away”."
+			"function": "Subject of “tollis” (w046). The second person follows from the direct address to Christ."
 		},
 		"w046": {
 			"gloss": "take away"
@@ -226,7 +226,7 @@
 		},
 		"w055": {
 			"gloss": "receive",
-			"function": "An imperative — the hymn's petition addressed directly to the Lamb. Its object is “deprecatiónem” (w056)."
+			"function": "Imperative. Its object is “deprecatiónem” (w056)."
 		},
 		"w056": {
 			"gloss": "the plea"
@@ -245,7 +245,7 @@
 		},
 		"w061": {
 			"gloss": "the right hand",
-			"function": "The preposition “ad” with the accusative marks place here, not motion — the same fixed phrase as the Creed's “sedet ad déxteram Patris”."
+			"function": "“ad” (w060) with the accusative marks position here: at the right hand of the Father."
 		},
 		"w062": {
 			"gloss": "of the Father"
@@ -267,8 +267,7 @@
 			"function": "With “tu” (w066) it forms a sentence without an expressed verb: “Thou alone [art] holy”. The next two occurrences of solus have the same construction."
 		},
 		"w068": {
-			"gloss": "holy",
-			"function": "A predicate with the verb understood: you alone — holy. The threefold “Sanctus” of the Sanctus predicates the same way."
+			"gloss": "holy"
 		},
 		"w069": {
 			"gloss": "You"
@@ -286,8 +285,7 @@
 			"gloss": "alone"
 		},
 		"w074": {
-			"gloss": "Most High",
-			"function": "Like “Sanctus” (w068) — a predicate. The peak of the three-step gradation: holy, Lord, Most High."
+			"gloss": "Most High"
 		},
 		"w075": {
 			"gloss": "Jesus"
@@ -296,8 +294,7 @@
 			"gloss": "Christ"
 		},
 		"w077": {
-			"gloss": "with",
-			"function": "“Cum” with the ablative — “with the Holy Spirit”: the hymn's whole ending is Trinitarian, like the lesser doxology."
+			"gloss": "with"
 		},
 		"w078": {
 			"gloss": "the Holy"

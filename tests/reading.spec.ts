@@ -107,7 +107,7 @@ test('the Gloria reads with narrative, panel and provenance', async ({ page }) =
 	await expect(panel.locator('.form')).toHaveText('Agnus');
 	await expect(panel.locator('.gloss')).toHaveText('Baranku');
 	// the nominative-as-address note cross-links its vocative anchor
-	await expect(panel.locator('.function')).toContainText('mianownika');
+	await expect(panel.locator('.function')).toContainText('Mianownik');
 	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
 	// single-analyzer override: déxteram is confirmed by Whitaker's alone,
 	// against the document's both-analyzers default
