@@ -37,13 +37,13 @@
 			"translation": "Through the same Jesus Christ our Lord, Your Son."
 		},
 		"s09": {
-			"narrative": "The priest lays the right-hand half on the paten, and from the half left in his hand breaks off a small particle."
+			"narrative": "The priest lays the half held in his right hand on the paten and breaks a small particle from the half remaining in his left."
 		},
 		"s10": {
 			"translation": "Who lives and reigns with You in the unity of the Holy Spirit, God."
 		},
 		"s11": {
-			"narrative": "The priest joins the left-hand half to the half on the paten, holds the small particle over the chalice, and now says or sings aloud."
+			"narrative": "The priest joins the other half to the half on the paten, holds the small particle over the chalice, and says in an audible voice or sings."
 		},
 		"s12": {
 			"translation": "For ever and ever."
@@ -55,14 +55,14 @@
 	"words": {
 		"w001": {
 			"gloss": "Deliver",
-			"function": "The same imperative the server has just said in the Lord's Prayer. The whole prayer grows out of it."
+			"function": "A second-person singular imperative opening the prayer."
 		},
 		"w002": {
 			"gloss": "us"
 		},
 		"w003": {
 			"gloss": "we beseech",
-			"function": "A parenthesis dropped into the sentence, as elsewhere in the Roman prayers. It takes no object of its own here."
+			"function": "First-person plural present, used parenthetically."
 		},
 		"w004": {
 			"gloss": "O Lord"
@@ -72,15 +72,15 @@
 		},
 		"w006": {
 			"gloss": "all",
-			"function": "Agrees with “malis” (w007): the single evil of the petition becomes every evil."
+			"function": "Ablative plural agreeing with “malis” (w007)."
 		},
 		"w007": {
 			"gloss": "evils",
-			"function": "Neuter — evils, things that are evil, not evil men. The three adjectives that follow all take this gender."
+			"function": "Ablative plural governed by “ab” (w005)."
 		},
 		"w008": {
 			"gloss": "past",
-			"function": "First of three adjectives, all agreeing with “malis” (w007), and all treated by the dictionaries as adjectives in their own right rather than as participles still doing verbal work."
+			"function": "The first of three ablative plural adjectives agreeing with “malis” (w007)."
 		},
 		"w009": {
 			"gloss": "present"
