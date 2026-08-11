@@ -55,14 +55,14 @@
 		},
 		"w011": {
 			"gloss": "snares",
-			"function": "The noun exists only in the plural — in Latin an ambush is always ambushes."
+			"function": "A plural-only noun (plurale tantum)."
 		},
 		"w012": {
 			"gloss": "of the devil"
 		},
 		"w013": {
 			"gloss": "be",
-			"function": "The future imperative — the form Latin uses for orders meant to hold from now on, not only at this moment. The plain imperative would be “es”."
+			"function": "Future imperative of “sum”. The present imperative is “es”."
 		},
 		"w014": {
 			"gloss": "protection"
@@ -79,7 +79,7 @@
 		},
 		"w018": {
 			"gloss": "humbly",
-			"function": "An adjective in the nominative plural — “we, suppliant, pray” — rendered adverbially, as English wants it."
+			"function": "Nominative plural adjective referring to the understood subject of “deprecámur” (w019)."
 		},
 		"w019": {
 			"gloss": "we pray",
@@ -87,7 +87,7 @@
 		},
 		"w020": {
 			"gloss": "And do thou",
-			"function": "The pronoun is spoken, though Latin usually leaves it out — because the sentence turns here from God back to Michael. The conjunction -que is hung on the end of it."
+			"function": "Explicit subject pronoun. The enclitic “-que” joins this clause to the preceding one."
 		},
 		"w021": {
 			"gloss": "Prince"
@@ -97,14 +97,14 @@
 		},
 		"w023": {
 			"gloss": "heavenly",
-			"function": "Genitive: it agrees with “milítiæ” (w022), not with “Princeps” (w021). The host is heavenly, not its captain."
+			"function": "Genitive singular agreeing with “milítiæ” (w022)."
 		},
 		"w024": {
 			"gloss": "Satan"
 		},
 		"w025": {
 			"gloss": "and the other",
-			"function": "It declines like a pronoun: genitive “alíus”, dative “álii”, not like the -us, -a, -um adjectives. The -que hung on it joins it to “sátanam” (w024)."
+			"function": "Accusative plural agreeing with “spíritus” (w026). The enclitic “-que” joins it to “sátanam” (w024)."
 		},
 		"w026": {
 			"gloss": "spirits"
