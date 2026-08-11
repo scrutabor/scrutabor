@@ -188,22 +188,22 @@
 		},
 		"w045": {
 			"gloss": "deign",
-			"function": "The four infinitives all hang on this one verb, which comes only after them."
+			"function": "“Dignéris” governs the four infinitives that precede it."
 		},
 		"w046": {
 			"gloss": "throughout the whole",
-			"function": "An ablative of place with no preposition — Latin does without in here."
+			"function": "It agrees with “orbe” (w047). The phrase “toto orbe terrárum” expresses place without the preposition in."
 		},
 		"w047": {
 			"gloss": "circle"
 		},
 		"w048": {
 			"gloss": "of the lands",
-			"function": "Orbis terrárum, the circle of the lands, is the Roman name for the whole known world."
+			"function": "A genitive plural depending on “orbe” (w047). The whole phrase means the whole world."
 		},
 		"w049": {
 			"gloss": "together",
-			"function": "The ablative of unus set hard as an adverb: una cum means together with."
+			"function": "An adverb in the phrase “una cum”: together with."
 		},
 		"w050": {
 			"gloss": "with"
@@ -218,19 +218,18 @@
 			"gloss": "Pope"
 		},
 		"w054": {
-			"gloss": "our",
-			"function": "Here the missal prints N., and the priest names the reigning Pope. This edition does not print the blank, because it is not a Latin word."
+			"gloss": "our"
 		},
 		"w055": {
 			"gloss": "and"
 		},
 		"w056": {
 			"gloss": "Bishop",
-			"function": "Antístes — literally one who stands before. In pagan Latin the priest of a temple."
+			"function": "An ablative after “cum” (w050). Here it is a title for the local bishop."
 		},
 		"w057": {
 			"gloss": "our",
-			"function": "The missal's second N.: the name of the local bishop. The priest names the Ordinary of the place where he is celebrating — not any other superior, even if he is himself exempt."
+			"function": "It agrees with “Antístite” (w056). The missal provides for the local bishop's name here."
 		},
 		"w058": {
 			"gloss": "and"
@@ -240,15 +239,15 @@
 		},
 		"w060": {
 			"gloss": "the orthodox",
-			"function": "From Greek orthós, straight, and dóxa, opinion. Not the name of a communion but a description of those who hold the Church's faith."
+			"function": "With “ómnibus” (w059), it forms an ablative plural phrase: with all the orthodox."
 		},
 		"w061": {
 			"gloss": "and",
-			"function": "It joins two descriptions of one group: the orthodox are the same who worship the faith aright — the translation reads them as one."
+			"function": "It joins “orthodóxis” (w060) to “cultóribus” (w066)."
 		},
 		"w062": {
 			"gloss": "catholic",
-			"function": "A genitive agreeing with “fídei” (w065). The adjectives run two words ahead of their noun."
+			"function": "A genitive singular agreeing with “fídei” (w065)."
 		},
 		"w063": {
 			"gloss": "and"
@@ -261,7 +260,7 @@
 		},
 		"w066": {
 			"gloss": "worshippers",
-			"function": "From cólere, which means both to till and to worship. Cultóres fídei are those who cultivate the faith as a field."
+			"function": "An ablative plural after “una” (w049) and “cum” (w050). With “fídei” (w065): those who profess the faith."
 		}
 	}
 }
