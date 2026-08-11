@@ -1364,6 +1364,12 @@
 			"pos": "verb",
 			"conj": 3
 		},
+		"generatio": {
+			"head": "generátio, generatiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
 		"genetrix": {
 			"head": "génetrix, genetrícis",
 			"pos": "noun",
@@ -1441,6 +1447,10 @@
 			"pos": "noun",
 			"gender": "m",
 			"decl": 3
+		},
+		"honeste": {
+			"head": "honéste",
+			"pos": "adv"
 		},
 		"honor": {
 			"head": "honor, honóris",
