@@ -3,7 +3,7 @@
 	"text": "orationes.ave-maria",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The Hail Mary joins two scriptural greetings — the archangel Gabriel's (Lk 1:28) and Elizabeth's (Lk 1:42 — in the Vulgate “blessed art thou among women” is still Gabriel's — Elizabeth adds the blessing of the fruit) — to the petition “Sancta María…”, which grew through the late Middle Ages and took its final shape in the sixteenth century, in the breviary of St. Pius V (1568). The joined greetings were sung at Mass centuries before the petition was added: they are the offertory of the fourth Sunday of Advent, recorded in Roman chant books as early as the ninth century. The name “Iesus” closing the greeting is in neither Gospel verse — a later addition of devotion.",
+	"about": "The first part of the Hail Mary joins Gabriel's words (Lk 1:28) to Elizabeth's (Lk 1:42). The petition beginning “Sancta María” was added later. The complete form received official recognition in the Roman Breviary of 1568.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -22,19 +22,18 @@
 	"words": {
 		"w001": {
 			"gloss": "hail",
-			"function": "The angel's word at Lk 1:28. The received English keeps the old greeting “hail”."
+			"function": "The angel's greeting in Lk 1:28."
 		},
 		"w002": {
-			"gloss": "Mary",
-			"function": "Direct address to Mary."
+			"gloss": "Mary"
 		},
 		"w003": {
 			"gloss": "with grace",
-			"function": "Ablative with “plena” (w004): full with what — with grace. The received English says “full of grace”."
+			"function": "Ablative complement of “plena” (w004)."
 		},
 		"w004": {
 			"gloss": "full",
-			"function": "Agrees with “María” (w002). Construes with the ablative “grátia” (w003)."
+			"function": "Agrees with “María” (w002) and takes “grátia” (w003)."
 		},
 		"w005": {
 			"gloss": "the Lord",
@@ -42,15 +41,14 @@
 		},
 		"w006": {
 			"gloss": "with thee",
-			"function": "A fused form: “te” + “cum” (with) — with personal pronouns the preposition “cum” FOLLOWS the pronoun: tecum, nobíscum."
+			"function": "A combination of “te” and “cum”. With personal pronouns, “cum” follows the pronoun."
 		},
 		"w007": {
 			"gloss": "blessed",
-			"function": "“Blessed [art] thou” — understood “es”. In the Vulgate these words still belong to the angel's greeting (Lk 1:28)."
+			"function": "“Benedícta [es] tu” — with “es” understood."
 		},
 		"w008": {
-			"gloss": "thou",
-			"function": "The subject spelled out."
+			"gloss": "thou"
 		},
 		"w009": {
 			"gloss": "among"
@@ -63,7 +61,7 @@
 		},
 		"w012": {
 			"gloss": "blessed",
-			"function": "Now of the fruit, not of Mary — masculine after “fructus” (w013)."
+			"function": "Masculine in agreement with “fructus” (w013)."
 		},
 		"w013": {
 			"gloss": "fruit"
@@ -82,7 +80,7 @@
 		},
 		"w017": {
 			"gloss": "holy",
-			"function": "Opens the petitionary half of the prayer. Agrees with “María” (w018)."
+			"function": "Agrees with “María” (w018)."
 		},
 		"w018": {
 			"gloss": "Mary"
@@ -93,7 +91,7 @@
 		},
 		"w020": {
 			"gloss": "of God",
-			"function": "Mother of whom — of God."
+			"function": "Genitive dependent on “Mater”: Mother of God."
 		},
 		"w021": {
 			"gloss": "pray"
@@ -107,11 +105,10 @@
 		},
 		"w024": {
 			"gloss": "sinners",
-			"function": "Apposition to “nobis” (w023): for us, sinners."
+			"function": "Apposition to “nobis” (w023)."
 		},
 		"w025": {
-			"gloss": "now",
-			"function": "The first of the two moments of the petition: now — and at the hour of death."
+			"gloss": "now"
 		},
 		"w026": {
 			"gloss": "and"
@@ -121,11 +118,11 @@
 		},
 		"w028": {
 			"gloss": "the hour",
-			"function": "Ablative after “in” (w027) — when. The received English says “at the hour”."
+			"function": "Ablative after “in” (w027) in a temporal phrase."
 		},
 		"w029": {
 			"gloss": "of death",
-			"function": "At the hour of what — of death. Genitive with “hora” (w028)."
+			"function": "Genitive dependent on “hora” (w028)."
 		},
 		"w030": {
 			"gloss": "our",
