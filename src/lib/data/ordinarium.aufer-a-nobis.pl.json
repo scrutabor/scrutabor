@@ -152,11 +152,11 @@
 		},
 		"w030": {
 			"gloss": "relikwie",
-			"function": "Mianownik, podmiot zdania względnego: relikwie są tu, zamurowane w ołtarzu, który kapłan całuje, mówiąc te słowa."
+			"function": "Mianownik, podmiot zdania względnego."
 		},
 		"w031": {
 			"gloss": "tu",
-			"function": "Przysłówek miejsca — wskazuje ołtarz, który kapłan w tej chwili całuje."
+			"function": "Przysłówek miejsca."
 		},
 		"w032": {
 			"gloss": "są"
@@ -170,11 +170,11 @@
 		},
 		"w035": {
 			"gloss": "Świętych",
-			"function": "Drugi dopełniacz zależny od „mérita” (w026): zasługi tych, których relikwie tu są, i zasługi wszystkich świętych."
+			"function": "Dopełniacz zależny od „mérita” (w026), współrzędny z „Sanctórum” (w027)."
 		},
 		"w036": {
 			"gloss": "aby",
-			"function": "Wprowadza zdanie celu — o co właściwie kapłan prosi."
+			"function": "Wprowadza zdanie celu z „dignéris” (w038) w trybie łączącym."
 		},
 		"w037": {
 			"gloss": "odpuścić",
@@ -182,7 +182,7 @@
 		},
 		"w038": {
 			"gloss": "racz",
-			"function": "Tryb łączący po „ut” (w036). Zwrot dworski, jak w modlitwach rzymskich — nie „odpuść”, lecz „racz odpuścić”."
+			"function": "Deponens w trybie łączącym po „ut” (w036)."
 		},
 		"w039": {
 			"gloss": "wszystkie",
@@ -193,7 +193,7 @@
 		},
 		"w041": {
 			"gloss": "moje",
-			"function": "Właściciel w liczbie pojedynczej po całej modlitwie mówionej w liczbie mnogiej — sama forma to biernik liczby mnogiej, z „peccáta” (w040) — tu kapłan mówi wreszcie za siebie samego."
+			"function": "Przymiotnik dzierżawczy w bierniku liczby mnogiej rodzaju nijakiego. Zgadza się z „peccáta” (w040), a posiadacz jest w liczbie pojedynczej."
 		},
 		"w042": {
 			"gloss": "amen"
