@@ -2097,6 +2097,10 @@
 			"gender": "n",
 			"decl": 2
 		},
+		"nam": {
+			"head": "nam",
+			"pos": "conj"
+		},
 		"nascor": {
 			"head": "nascor, nasci, natus sum",
 			"pos": "verb",
@@ -2161,6 +2165,18 @@
 		"novus": {
 			"head": "novus, -a, -um",
 			"pos": "adj"
+		},
+		"nox": {
+			"head": "nox, noctis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
+		"nubes": {
+			"head": "nubes, nubis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
 		},
 		"numero": {
 			"head": "número, numeráre, numerávi, numerátum",
