@@ -3,7 +3,7 @@
 	"text": "ordinarium.quid-retribuam",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "Two psalms, welded together. The question and the chalice come from Psalm 115. The last line, Laudans invocábo Dóminum, comes from Psalm 17. Cálicem salutáris accípiam is the verse the priest already borrowed once, before receiving the Host, with panem cæléstem put in place of the cup — now he says it as the psalm wrote it, with the chalice actually in his hand. Salutáris here is a noun, not an adjective: the chalice of salvation. The first verse is said while he wipes the paten clean over the chalice, so that not a fragment is lost. The next two come with the chalice already taken up.",
+	"about": "The prayer before the priest receives the Precious Blood joins Psalm 115:3–4 to Psalm 17:4 in the Vulgate numbering. The first verse accompanies the gathering of fragments and the wiping of the paten over the chalice. The priest then takes the chalice and says the remaining verses. “Salutáris” is a noun here: “the chalice of salvation”.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -37,7 +37,7 @@
 	"words": {
 		"w001": {
 			"gloss": "What",
-			"function": "Neuter accusative thrown to the front, the object of the verb that follows: the psalmist opens with the question the next two verses answer."
+			"function": "Neuter accusative, serving as the object of “retríbuam” (w002)."
 		},
 		"w002": {
 			"gloss": "shall I render",
@@ -58,7 +58,7 @@
 		},
 		"w007": {
 			"gloss": "He has rendered",
-			"function": "Present and perfect are spelt alike in this verb. The perfect is read, because the benefits the question weighs are ones already given."
+			"function": "The present and perfect have the same form here. The context indicates the perfect: “He has rendered”."
 		},
 		"w008": {
 			"gloss": "to me",
