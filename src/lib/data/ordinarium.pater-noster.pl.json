@@ -132,27 +132,27 @@
 		},
 		"w020": {
 			"gloss": "niech przyjdzie",
-			"function": "Tryb łączący życzący — druga prośba: „niech przyjdzie”."
+			"function": "Tryb łączący czasu teraźniejszego w trzeciej osobie strony czynnej, wyrażający prośbę."
 		},
 		"w021": {
 			"gloss": "królestwo",
-			"function": "Podmiot prośby: co ma przyjść?"
+			"function": "Podmiot przy advéniat w mianowniku."
 		},
 		"w022": {
 			"gloss": "Twoje",
-			"function": "Zgadza się z „regnum” (w021)."
+			"function": "Mianownik rodzaju nijakiego liczby pojedynczej, zgadzający się z regnum."
 		},
 		"w023": {
 			"gloss": "niech się stanie",
-			"function": "Trzecia prośba: „niech się stanie”. To samo „fiat”, którym odpowiada Maryja przy zwiastowaniu (Łk 1, 38)."
+			"function": "Tryb łączący czasu teraźniejszego od fio w trzeciej osobie, wyrażający prośbę."
 		},
 		"w024": {
 			"gloss": "wola",
-			"function": "Podmiot prośby: co ma się stać?"
+			"function": "Podmiot przy fiat w mianowniku."
 		},
 		"w025": {
 			"gloss": "Twoja",
-			"function": "Zgadza się z „volúntas” (w024)."
+			"function": "Mianownik rodzaju żeńskiego liczby pojedynczej, zgadzający się z volúntas."
 		},
 		"w026": {
 			"gloss": "jako"
@@ -162,7 +162,7 @@
 		},
 		"w028": {
 			"gloss": "niebie",
-			"function": "Liczba pojedyncza — por. „cælis” (w016)."
+			"function": "Ablativus liczby pojedynczej po in."
 		},
 		"w029": {
 			"gloss": "i"
@@ -175,23 +175,23 @@
 		},
 		"w032": {
 			"gloss": "chleba",
-			"function": "Dopełnienie „da” (w035): daj co — chleb. Polski przekład ma dopełniacz „chleba”, łacina biernik."
+			"function": "Dopełnienie da w bierniku. Polski przekład używa dopełniacza."
 		},
 		"w033": {
 			"gloss": "naszego",
-			"function": "Zgadza się z „Panem” (w032)."
+			"function": "Biernik rodzaju męskiego liczby pojedynczej, zgadzający się z panem."
 		},
 		"w034": {
 			"gloss": "powszedniego",
-			"function": "Zgadza się z „Panem” (w032)."
+			"function": "Biernik rodzaju męskiego liczby pojedynczej, zgadzający się z panem."
 		},
 		"w035": {
 			"gloss": "daj",
-			"function": "Pierwsza prośba wypowiedziana wprost rozkaźnikiem. Prośba przecząca „indúcas” (w052) sięgnie po tryb łączący."
+			"function": "Tryb rozkazujący czasu teraźniejszego w drugiej osobie liczby pojedynczej."
 		},
 		"w036": {
 			"gloss": "nam",
-			"function": "Daj komu — nam."
+			"function": "Dopełnienie dalsze da w celowniku."
 		},
 		"w037": {
 			"gloss": "dzisiaj"
@@ -204,35 +204,35 @@
 		},
 		"w040": {
 			"gloss": "nam",
-			"function": "Odpuść komu — nam. Osoba, której się odpuszcza, stoi w celowniku."
+			"function": "Celownik osoby, której się odpuszcza, przy dimítte."
 		},
 		"w041": {
 			"gloss": "winy",
-			"function": "Dosłownie „długi”. Utarty polski przekład ma „winy”."
+			"function": "Biernik liczby mnogiej. Dosłownie długi, tradycyjnie winy."
 		},
 		"w042": {
 			"gloss": "nasze",
-			"function": "Zgadza się z „débita” (w041)."
+			"function": "Biernik rodzaju nijakiego liczby mnogiej, zgadzający się z débita."
 		},
 		"w043": {
 			"gloss": "jako",
-			"function": "Otwiera porównanie z naszym przebaczaniem."
+			"function": "Wprowadza porównanie z naszym przebaczaniem."
 		},
 		"w044": {
 			"gloss": "i",
-			"function": "Tu w sensie „także”: jako i my — my także."
+			"function": "Et ma tutaj przysłówkowe znaczenie także."
 		},
 		"w045": {
 			"gloss": "my",
-			"function": "Podmiot wypowiedziany wprost dla nacisku."
+			"function": "Podmiot w mianowniku wyrażony dla podkreślenia."
 		},
 		"w046": {
 			"gloss": "odpuszczamy",
-			"function": "Tryb oznajmujący — stwierdzenie faktu, nie prośba: tak właśnie czynimy."
+			"function": "Czas teraźniejszy trybu oznajmującego, odmiennie od próśb w trybie łączącym."
 		},
 		"w047": {
 			"gloss": "winowajcom",
-			"function": "Odpuszczamy komu — dosłownie „dłużnikom”, tradycyjnie „winowajcom”."
+			"function": "Dopełnienie dalsze dimíttimus w celowniku liczby mnogiej. Dosłownie dłużnikom."
 		},
 		"w048": {
 			"gloss": "naszym",
