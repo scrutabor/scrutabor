@@ -128,7 +128,7 @@
 		},
 		"w029": {
 			"gloss": "martyrs",
-			"function": "A genitive plural in the chain hanging from “memóriam”. Whitaker's reads a phantom singular here — the genitive singular is mártyris — and is set aside by a recorded ruling."
+			"function": "Genitive plural dependent on “memóriam” (w003)."
 		},
 		"w030": {
 			"gloss": "Thy"
@@ -141,7 +141,7 @@
 		},
 		"w033": {
 			"gloss": "Paul",
-			"function": "Paul stands here in the place of Matthias: the Roman list counts twelve, but not the twelve that Acts counts."
+			"function": "The list names twelve Apostles, including Paul rather than Matthias."
 		},
 		"w034": {
 			"gloss": "Andrew"
@@ -158,7 +158,7 @@
 		},
 		"w038": {
 			"gloss": "James",
-			"function": "The second James, son of Alphaeus. Latin distinguishes them by nothing but their place in the line."
+			"function": "The second James is the son of Alphaeus. His place in the list distinguishes him from “Iacóbi” (w035)."
 		},
 		"w039": {
 			"gloss": "Philip"
@@ -211,7 +211,7 @@
 		},
 		"w055": {
 			"gloss": "Paul",
-			"function": "Not the apostles named above: a Roman pair of martyrs, with a church of their own on the Caelian hill."
+			"function": "Saints John and Paul are Roman martyrs commemorated together, not the Apostles named above."
 		},
 		"w056": {
 			"gloss": "Cosmas"
@@ -240,14 +240,14 @@
 		},
 		"w064": {
 			"gloss": "merits",
-			"function": "An ablative read as cause: for their merits. The bare form allows means as well — by their merits, as received translations often take it."
+			"function": "Ablative plural, which may express cause or means."
 		},
 		"w065": {
 			"gloss": "and prayers"
 		},
 		"w066": {
 			"gloss": "grant",
-			"function": "A subjunctive used as a petition: may thou grant."
+			"function": "Subjunctive used as a petition."
 		},
 		"w067": {
 			"gloss": "that"
@@ -260,26 +260,24 @@
 			"function": "Neuter: in all things, not among all men."
 		},
 		"w070": {
-			"gloss": "of protection",
-			"function": "From tégere, to roof over. A protéctio is a roof held out above someone."
+			"gloss": "of protection"
 		},
 		"w071": {
 			"gloss": "Thy"
 		},
 		"w072": {
-			"gloss": "we may be defended",
-			"function": "From mœnia, city walls: the image is not a shield but a wall built round a city."
+			"gloss": "we may be defended"
 		},
 		"w073": {
 			"gloss": "by the help",
-			"function": "An ablative of means closing the prayer. Its verb muniámur stands wedged inside the phrase itself: protectiónis tuæ … auxílio."
+			"function": "Ablative of means dependent on “muniámur” (w072)."
 		},
 		"w074": {
 			"gloss": "Through"
 		},
 		"w075": {
 			"gloss": "the same",
-			"function": "“The same”, because Christ has already been named at the head of the prayer. Where he has not, the Canon says simply Per Christum."
+			"function": "Demonstrative referring back to “Christi” (w017)."
 		},
 		"w076": {
 			"gloss": "Christ"

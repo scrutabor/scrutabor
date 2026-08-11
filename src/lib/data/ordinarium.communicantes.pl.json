@@ -128,7 +128,7 @@
 		},
 		"w029": {
 			"gloss": "męczenników",
-			"function": "Dopełniacz liczby mnogiej w szeregu zależnym od „memóriam”. Whitaker czyta tu widmową liczbę pojedynczą — dopełniacz liczby pojedynczej brzmi mártyris — i został odsunięty zapisaną regułą."
+			"function": "Dopełniacz liczby mnogiej zależny od „memóriam” (w003)."
 		},
 		"w030": {
 			"gloss": "Twoich"
@@ -141,7 +141,7 @@
 		},
 		"w033": {
 			"gloss": "Pawła",
-			"function": "Paweł stoi tu na miejscu Macieja: rzymskie wyliczenie liczy dwunastu, ale nie tych samych, których liczą Dzieje."
+			"function": "Wyliczenie obejmuje dwunastu Apostołów, w tym Pawła zamiast Macieja."
 		},
 		"w034": {
 			"gloss": "Andrzeja"
@@ -158,7 +158,7 @@
 		},
 		"w038": {
 			"gloss": "Jakuba",
-			"function": "Drugi Jakub, syn Alfeusza. Łacina nie odróżnia ich niczym prócz miejsca w szeregu."
+			"function": "Drugi Jakub jest synem Alfeusza. Miejsce w wyliczeniu odróżnia go od „Iacóbi” (w035)."
 		},
 		"w039": {
 			"gloss": "Filipa"
@@ -211,7 +211,7 @@
 		},
 		"w055": {
 			"gloss": "Pawła",
-			"function": "Nie apostołowie wymienieni wyżej: to rzymska para męczenników, której poświęcono kościół na Celiuszu."
+			"function": "Święci Jan i Paweł to wspominani razem męczennicy rzymscy, nie Apostołowie wymienieni wyżej."
 		},
 		"w056": {
 			"gloss": "Kosmy"
@@ -240,14 +240,14 @@
 		},
 		"w064": {
 			"gloss": "zasługom",
-			"function": "Ablativus odczytany jako przyczyna: dla ich zasług. Goła forma dopuszcza też narzędzie — „przez ich zasługi”, jak czyta niejeden przekład."
+			"function": "Ablativus liczby mnogiej, który może wyrażać przyczynę albo narzędzie."
 		},
 		"w065": {
 			"gloss": "i modlitwom"
 		},
 		"w066": {
 			"gloss": "racz sprawić",
-			"function": "Tryb łączący w znaczeniu prośby: „obyś sprawił”. Polszczyzna dodaje „racz”, czego łacina nie ma."
+			"function": "Tryb łączący użyty jako prośba."
 		},
 		"w067": {
 			"gloss": "abyśmy"
@@ -260,26 +260,24 @@
 			"function": "Rodzaj nijaki: „we wszystkich rzeczach”, nie „wśród wszystkich ludzi”."
 		},
 		"w070": {
-			"gloss": "opieki",
-			"function": "Od tégere — kryć dachem. Protéctio to dach rozciągnięty nad kimś."
+			"gloss": "opieki"
 		},
 		"w071": {
 			"gloss": "Twojej"
 		},
 		"w072": {
-			"gloss": "byli obwarowani",
-			"function": "Od mœnia — mury miasta: obraz nie tarczy, lecz muru wokół miasta."
+			"gloss": "byli obwarowani"
 		},
 		"w073": {
 			"gloss": "pomocą",
-			"function": "Ablativus narzędzia zamykający modlitwę. Czasownik muniámur stoi wcięty w sam środek jego frazy: protectiónis tuæ … auxílio."
+			"function": "Ablativus narzędzia zależny od „muniámur” (w072)."
 		},
 		"w074": {
 			"gloss": "Przez"
 		},
 		"w075": {
 			"gloss": "tegoż",
-			"function": "„Tegoż” — bo Chrystus był już wymieniony na początku modlitwy. Gdyby nie był, Kanon powiedziałby po prostu Per Christum."
+			"function": "Zaimek wskazujący odnoszący się do „Christi” (w017)."
 		},
 		"w076": {
 			"gloss": "Chrystusa"
