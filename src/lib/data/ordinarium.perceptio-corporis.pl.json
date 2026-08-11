@@ -3,7 +3,7 @@
 	"text": "ordinarium.perceptio-corporis",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Ostatnia z trzech modlitw i ta, która nazywa niebezpieczeństwo. Św. Paweł pisze, że kto spożywa i pije niegodnie, sąd sobie spożywa i pije — iudicium sibi manducat et bibit — a mszał z 1962 roku drukuje te słowa jako lekcję na Boże Ciało i na Wielki Czwartek. Modlitwa prosi, by przyjęcie nie wypadło w ten sposób. Zbudowana jest na jednym podmiocie i dwóch orzeczeniach ciągnących w przeciwne strony, jednym przeczącym i jednym twierdzącym: niech nie wyjdzie na sąd, niech raczej posłuży. Præsúmo mówi wprost, co kapłan robi: bierze naprzód to, czego sam nie jest godzien.",
+	"about": "Modlitwa prosi, aby przyjęcie Ciała Chrystusa nie sprowadziło sądu ani potępienia, lecz służyło ochronie i uzdrowieniu duszy i ciała. Jej słowa nawiązują do 1 Kor 11,29, gdzie św. Paweł przestrzega przed niegodnym przyjmowaniem.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -28,14 +28,14 @@
 	"words": {
 		"w001": {
 			"gloss": "Przyjęcie",
-			"function": "Podmiot obu orzeczeń modlitwy, oddzielony od nich wszystkim, co stoi pomiędzy. Do „provéniat” (w014) dociera dopiero w drugim odcinku. Whitaker's nie zna rzeczownika percéptio, więc rozbiór opiera się na samym Collatinusie."
+			"function": "Podmiot przy provéniat i prosit."
 		},
 		"w002": {
 			"gloss": "Ciała"
 		},
 		"w003": {
 			"gloss": "Twego",
-			"function": "Zgadza się z „Córporis” (w002), a nie z Percéptio: Ciało jest Twoje, przyjęcie moje."
+			"function": "Dopełniacz rodzaju nijakiego liczby pojedynczej, zgadzający się z Córporis."
 		},
 		"w004": {
 			"gloss": "Panie"
@@ -48,47 +48,47 @@
 		},
 		"w007": {
 			"gloss": "które",
-			"function": "Rodzaj nijaki, więc wskazuje „Córporis” (w002), nie żeńskie Percéptio: tym, co kapłan ośmiela się przyjąć, jest Ciało, a nie przyjęcie."
+			"function": "Zaimek względny rodzaju nijakiego, odnoszący się do Córporis."
 		},
 		"w008": {
 			"gloss": "ja",
-			"function": "Łacina zaimka podmiotowego nie potrzebuje. Stoi tu po to, by go zważyć z następującym przymiotnikiem."
+			"function": "Podmiot præsúmo w mianowniku, wyrażony dla podkreślenia."
 		},
 		"w009": {
 			"gloss": "niegodny",
-			"function": "Mianownik, zgadza się z „ego” (w008): ja, będąc niegodnym — opis człowieka, który bierze, postawiony obok samego czynu."
+			"function": "Mianownik rodzaju męskiego liczby pojedynczej, zgadzający się z ego."
 		},
 		"w010": {
 			"gloss": "spożyć"
 		},
 		"w011": {
 			"gloss": "ośmielam się",
-			"function": "Præ i sumo: brać naprzód, sięgać po to, czego się nie jest godnym. Słowo przyznaje się do zuchwalstwa, zamiast je tłumaczyć."
+			"function": "Præsúmo znaczy tu ośmielam się przyjąć."
 		},
 		"w012": {
 			"gloss": "nie"
 		},
 		"w013": {
 			"gloss": "mi",
-			"function": "Celownik przy „provéniat” (w014): niech wyjdzie komu — mnie."
+			"function": "Celownik przy provéniat."
 		},
 		"w014": {
 			"gloss": "niech wyjdzie",
-			"function": "Pro i vénio — wyjść naprzód: czasownik wyniku, nie wydanego wyroku. Komunia może wypaść tak albo tak, i o to właśnie modlitwa prosi."
+			"function": "Tryb łączący czasu teraźniejszego w trzeciej osobie. Provénio znaczy tu wyniknąć lub obrócić się."
 		},
 		"w015": {
 			"gloss": "na"
 		},
 		"w016": {
 			"gloss": "sąd",
-			"function": "Słowo, którego św. Paweł używa o niegodnym spożywaniu i piciu."
+			"function": "Słowo użyte w 1 Kor 11,29 w odniesieniu do niegodnego przyjmowania."
 		},
 		"w017": {
 			"gloss": "i"
 		},
 		"w018": {
 			"gloss": "potępienie",
-			"function": "Sąd to rozprawa, potępienie to wyrok. Modlitwa wymienia oba, w tej kolejności."
+			"function": "Współrzędne z iudícium po ad."
 		},
 		"w019": {
 			"gloss": "lecz"
@@ -105,7 +105,7 @@
 		},
 		"w023": {
 			"gloss": "niech posłuży",
-			"function": "Twierdzący odpowiednik „provéniat” (w014), z tym samym podmiotem. Prosum jest złożeniem z sum i nie należy do żadnej koniugacji."
+			"function": "Ma ten sam podmiot co provéniat i wyraża oczekiwany dobry skutek."
 		},
 		"w024": {
 			"gloss": "mi"
@@ -115,11 +115,11 @@
 		},
 		"w026": {
 			"gloss": "obronie",
-			"function": "Późna formacja od tueor — strzec: to, co osłania. Rządzi dwoma następującymi dopełniaczami."
+			"function": "Biernik po ad, od którego zależą dwa następujące dopełniacze."
 		},
 		"w027": {
 			"gloss": "umysłu",
-			"function": "Mens to umysł, nie dusza. Przekład idzie tu za polskimi mszalikami, które mówią „dusza”."
+			"function": "Dopełniacz zależny od tutaméntum, współrzędny z córporis."
 		},
 		"w028": {
 			"gloss": "i"
