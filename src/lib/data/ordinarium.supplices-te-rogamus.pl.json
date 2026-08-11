@@ -49,7 +49,7 @@
 	"words": {
 		"w001": {
 			"gloss": "pokornie",
-			"function": "Przymiotnik („my, korni”), oddany tu przysłówkiem: mówi o postawie ciała, którą rubryka właśnie nakazała."
+			"function": "Przymiotnik odnoszący się do modlących: „my, korni”. Przekład oddaje go przysłówkiem „pokornie”."
 		},
 		"w002": {
 			"gloss": "Cię"
@@ -72,7 +72,7 @@
 		},
 		"w008": {
 			"gloss": "zanieść",
-			"function": "Bezokolicznik bierny czasownika złożonego z fero, który odmienia się nieregularnie i nie należy do żadnej koniugacji."
+			"function": "Bezokolicznik strony biernej od „pérfero”: „zostać zaniesionym”."
 		},
 		"w009": {
 			"gloss": "przez"
@@ -119,11 +119,11 @@
 		},
 		"w023": {
 			"gloss": "aby",
-			"function": "Przecinek po ut oddziela całe zdanie o komunikujących, które wciska się między spójnik a jego orzeczenie „repleámur” (w041)."
+			"function": "Wprowadza zdanie z orzeczeniem „repleámur” (w041). Między spójnikiem a orzeczeniem stoi rozbudowane zdanie względne."
 		},
 		"w024": {
 			"gloss": "ilukolwiek",
-			"function": "Podmiot „sumpsérimus” (w035) — stąd mianownik, choć sama forma nie wskazuje przypadku. Całe zdanie względne wcisnęło się między „ut” (w023) a jego orzeczenie."
+			"function": "Mianownik liczby mnogiej, będący podmiotem „sumpsérimus” (w035)."
 		},
 		"w025": {
 			"gloss": "z"
