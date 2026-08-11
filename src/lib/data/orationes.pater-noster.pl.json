@@ -39,16 +39,14 @@
 	},
 	"words": {
 		"w001": {
-			"gloss": "Ojcze",
-			"function": "Bezpośredni zwrot do Boga. Cała modlitwa jest zwrócona wprost do Niego."
+			"gloss": "Ojcze"
 		},
 		"w002": {
 			"gloss": "nasz",
-			"function": "Zgadza się z „Pater” (w001). Nie „mój”, lecz „nasz” — modlitwa wspólnoty."
+			"function": "Zgadza się z “Pater” (w001). Liczba mnoga wyraża wspólną modlitwę."
 		},
 		"w003": {
-			"gloss": "który",
-			"function": "Otwiera zdanie względne o Tym, do kogo modlitwa się zwraca."
+			"gloss": "który"
 		},
 		"w004": {
 			"gloss": "jesteś",
@@ -59,15 +57,14 @@
 		},
 		"w006": {
 			"gloss": "niebiosach",
-			"function": "W liczbie mnogiej — por. „cælo” (w018), liczba pojedyncza, w tej samej modlitwie. Utrwalony przekład ma tu liczbę pojedynczą. Wujek zachował mnogą — „w niebiesiech”."
+			"function": "Liczba mnoga, podczas gdy “cælo” (w018) występuje dalej w liczbie pojedynczej. Utrwalony przekład oddaje oba miejsca liczbą pojedynczą."
 		},
 		"w007": {
 			"gloss": "niech się święci",
-			"function": "Tryb łączący życzący: „niech będzie święcone” — pierwsza z trzech próśb wypowiedzianych w ten sposób."
+			"function": "Tryb łączący wyrażający prośbę."
 		},
 		"w008": {
-			"gloss": "imię",
-			"function": "Podmiot prośby: co ma być święcone?"
+			"gloss": "imię"
 		},
 		"w009": {
 			"gloss": "Twoje",
@@ -75,11 +72,10 @@
 		},
 		"w010": {
 			"gloss": "niech przyjdzie",
-			"function": "Tryb łączący życzący — druga prośba: „niech przyjdzie”."
+			"function": "Tryb łączący wyrażający prośbę."
 		},
 		"w011": {
-			"gloss": "królestwo",
-			"function": "Podmiot prośby: co ma przyjść?"
+			"gloss": "królestwo"
 		},
 		"w012": {
 			"gloss": "Twoje",
@@ -87,11 +83,10 @@
 		},
 		"w013": {
 			"gloss": "niech się stanie",
-			"function": "Trzecia prośba: „niech się stanie”. To samo „fiat”, którym odpowiada Maryja przy zwiastowaniu (Łk 1, 38)."
+			"function": "Tryb łączący wyrażający prośbę. Ta sama forma “fiat” występuje w odpowiedzi Maryi przy zwiastowaniu (Łk 1, 38)."
 		},
 		"w014": {
-			"gloss": "wola",
-			"function": "Podmiot prośby: co ma się stać?"
+			"gloss": "wola"
 		},
 		"w015": {
 			"gloss": "Twoja",
@@ -104,8 +99,7 @@
 			"gloss": "w"
 		},
 		"w018": {
-			"gloss": "niebie",
-			"function": "Liczba pojedyncza — por. „cælis” (w006)."
+			"gloss": "niebie"
 		},
 		"w019": {
 			"gloss": "i"
@@ -118,7 +112,7 @@
 		},
 		"w022": {
 			"gloss": "chleba",
-			"function": "Dopełnienie „da” (w025): daj co — chleb. Polski przekład ma dopełniacz „chleba”, łacina biernik."
+			"function": "Biernik, dopełnienie “da” (w025). Tradycyjny polski przekład oddaje go dopełniaczem “chleba”."
 		},
 		"w023": {
 			"gloss": "naszego",
@@ -130,11 +124,10 @@
 		},
 		"w025": {
 			"gloss": "daj",
-			"function": "Pierwsza prośba wypowiedziana wprost w trybie rozkazującym. Prośba przecząca „indúcas” (w042) sięgnie po tryb łączący."
+			"function": "Tryb rozkazujący wyrażający prośbę."
 		},
 		"w026": {
-			"gloss": "nam",
-			"function": "Daj komu — nam."
+			"gloss": "nam"
 		},
 		"w027": {
 			"gloss": "dzisiaj"
@@ -147,7 +140,7 @@
 		},
 		"w030": {
 			"gloss": "nam",
-			"function": "Odpuść komu — nam. Osoba, której się odpuszcza, stoi w celowniku."
+			"function": "Celownik oznaczający osobę, której odpuszcza się winy."
 		},
 		"w031": {
 			"gloss": "winy",
@@ -158,12 +151,11 @@
 			"function": "Zgadza się z „débita” (w031)."
 		},
 		"w033": {
-			"gloss": "jako",
-			"function": "Otwiera porównanie z naszym przebaczaniem."
+			"gloss": "jako"
 		},
 		"w034": {
 			"gloss": "i",
-			"function": "Tu w sensie „także”: jako i my — my także."
+			"function": "Tutaj “et” znaczy także i wzmacnia “nos” (w035)."
 		},
 		"w035": {
 			"gloss": "my",
@@ -171,7 +163,7 @@
 		},
 		"w036": {
 			"gloss": "odpuszczamy",
-			"function": "Tryb oznajmujący — stwierdzenie faktu, nie prośba: tak właśnie czynimy."
+			"function": "Tryb oznajmujący w zdaniu wprowadzonym przez “sicut” (w033)."
 		},
 		"w037": {
 			"gloss": "winowajcom",
