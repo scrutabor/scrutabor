@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan składa ręce i głęboko się pochyla. Spowiedź powszechną odmawia pierwszy, sam."
+			"narrative": "Kapłan składa ręce, głęboko się pochyla i odmawia Confíteor."
 		},
 		"s02": {
 			"translation": "Spowiadam się Bogu wszechmogącemu, Najświętszej Maryi zawsze Dziewicy, świętemu Michałowi Archaniołowi, świętemu Janowi Chrzcicielowi, świętym Apostołom Piotrowi i Pawłowi, wszystkim Świętym i wam, bracia:"
@@ -22,7 +22,7 @@
 			"translation": "że bardzo zgrzeszyłem myślą, mową i uczynkiem:"
 		},
 		"s04": {
-			"narrative": "Kapłan trzykrotnie uderza się w piersi — gest skruchy towarzyszy słowom o własnej winie."
+			"narrative": "Kapłan trzykrotnie uderza się w piersi."
 		},
 		"s05": {
 			"translation": "moja wina, moja wina, moja bardzo wielka wina."
@@ -34,11 +34,11 @@
 	"words": {
 		"w001": {
 			"gloss": "spowiadam się",
-			"function": "Otwiera modlitwę i rządzi długą listą celowników, która zaraz nastąpi — spowiadam się: komu?"
+			"function": "Łączy się z następującym dalej szeregiem celowników."
 		},
 		"w002": {
 			"gloss": "Bogu",
-			"function": "Adresat wyznania — pierwszy z listy celowników po „Confíteor” (w001). Por. „Deum” (w065) — ten sam wyraz w bierniku, w innej roli."
+			"function": "Celownik, pierwsze dopełnienie „Confíteor” (w001)."
 		},
 		"w003": {
 			"gloss": "wszechmogącemu",
@@ -49,8 +49,7 @@
 			"function": "Zgadza się z „Maríæ” (w005)."
 		},
 		"w005": {
-			"gloss": "Maryi",
-			"function": "Kolejny adresat wyznania w wyliczeniu."
+			"gloss": "Maryi"
 		},
 		"w006": {
 			"gloss": "zawsze",
