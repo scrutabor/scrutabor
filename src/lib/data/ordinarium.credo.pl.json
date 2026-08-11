@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan na środku ołtarza intonuje wyznanie wiary. Credo odmawia się w niedziele i większe święta, w dni powszednie zwykle się je opuszcza. Na słowo „Deum” kapłan skłania głowę ku krzyżowi, podobnie na „Iesum Christum” i „simul adorátur”, a na końcu, przy „Et vitam ventúri sǽculi”, żegna się znakiem krzyża."
+			"narrative": "Na środku ołtarza kapłan wyciąga i unosi ręce, składa je, odmawia Credo, jeśli jest przewidziane, i kontynuuje ze złożonymi rękami."
 		},
 		"s02": {
 			"translation": "Wierzę w jednego Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, wszystkich rzeczy widzialnych i niewidzialnych."
@@ -34,7 +34,7 @@
 			"translation": "On to dla nas ludzi i dla naszego zbawienia zstąpił z nieba."
 		},
 		"s08": {
-			"narrative": "Rubryka każe tu przyklęknąć: kapłan przyklęka na „Et incarnátus est” i trwa tak aż po „Et homo factus est” — na wspomnienie Wcielenia. Wierni przyklękają razem z nim."
+			"narrative": "W tym miejscu przyklęka się."
 		},
 		"s09": {
 			"translation": "I za sprawą Ducha Świętego przyjął ciało z Maryi Dziewicy: i stał się człowiekiem."
@@ -73,7 +73,7 @@
 	"words": {
 		"w001": {
 			"gloss": "wierzę",
-			"function": "„Crédere in” z biernikiem — „wierzyć w kogoś”, powierzyć się — to składnia biblijna i kościelna. Klasyczna łacina mówiła „crédere” z celownikiem: dawać wiarę."
+			"function": "Łączy się z „in” (w002) i biernikiem."
 		},
 		"w002": {
 			"gloss": "w"
@@ -152,7 +152,7 @@
 		},
 		"w027": {
 			"gloss": "zrodzonego",
-			"function": "Imiesłów zgadza się z „Fílium” (w021) — ciąg biernikowych dopowiedzeń o Synu biegnie przez kilka wersów."
+			"function": "Imiesłów zgadzający się z „Fílium” (w021)."
 		},
 		"w028": {
 			"gloss": "przed"
@@ -198,7 +198,7 @@
 		},
 		"w042": {
 			"gloss": "zrodzonego",
-			"function": "Dalszy ciąg biernikowych dopowiedzeń. Zestawione z „factum” (w044) niesie sedno nicejskiego wyznania: zrodzony, nie uczyniony."
+			"function": "Biernik. Zgadza się z „Fílium” (w021) i jest przeciwstawiony „factum” (w044)."
 		},
 		"w043": {
 			"gloss": "nie"
@@ -208,7 +208,7 @@
 		},
 		"w045": {
 			"gloss": "współistotnego",
-			"function": "Łączy się z celownikiem „Patri” (w046): współistotny komu — Ojcu."
+			"function": "Łączy się z celownikiem „Patri” (w046)."
 		},
 		"w046": {
 			"gloss": "Ojcu"
@@ -224,7 +224,7 @@
 		},
 		"w050": {
 			"gloss": "uczynione",
-			"function": "Z „sunt” (w051) tworzy stronę bierną perfectum: facta sunt — dosłownie „zostały uczynione”. Po polsku „wszystko… stało się”, w liczbie pojedynczej."
+			"function": "Z „sunt” (w051) tworzy stronę bierną perfectum „facta sunt”: „zostały uczynione”."
 		},
 		"w051": {
 			"gloss": "zostało"
@@ -255,7 +255,7 @@
 		},
 		"w060": {
 			"gloss": "zstąpił",
-			"function": "Forma wygląda tak samo w czasie teraźniejszym i przeszłym. Tu opowiada o dokonanym zstąpieniu — „zstąpił”."
+			"function": "Perfectum: „zstąpił”."
 		},
 		"w061": {
 			"gloss": "z"
@@ -268,7 +268,7 @@
 		},
 		"w064": {
 			"gloss": "wcielony",
-			"function": "Z „est” (w065) tworzy perfectum: incarnátus est — „wcielił się”. Łacina buduje ten czas z imiesłowu i słowa „być”."
+			"function": "Z „est” (w065) tworzy perfectum „incarnátus est”: „wcielił się”."
 		},
 		"w065": {
 			"gloss": "został"
@@ -299,14 +299,14 @@
 		},
 		"w074": {
 			"gloss": "stał się",
-			"function": "Znów imiesłów z „est” (w075): factus est — „stał się”. Orzecznikiem jest mianownik „homo” (w073)."
+			"function": "Z „est” (w075) tworzy perfectum „factus est”. „homo” (w073) jest orzecznikiem w mianowniku."
 		},
 		"w075": {
 			"gloss": "—"
 		},
 		"w076": {
 			"gloss": "ukrzyżowany",
-			"function": "Trzy imiesłowy — ukrzyżowany, „passus” (w083), „sepúltus” (w085) — niesione są przez jedno wspólne „est” (w086) na końcu zdania."
+			"function": "Łączy się ze wspólnym „est” (w086), podobnie jak „passus” (w083) i „sepúltus” (w085)."
 		},
 		"w077": {
 			"gloss": "także"
@@ -350,7 +350,7 @@
 		},
 		"w090": {
 			"gloss": "dnia",
-			"function": "Forma „tértia” (w089) jest żeńska — „dies” jest tu rodzaju żeńskiego. Ablativus odpowiada na pytanie: kiedy?"
+			"function": "Ablativus czasu. Tutaj rodzaj żeński. Zgadza się z „tértia” (w089)."
 		},
 		"w091": {
 			"gloss": "według"
@@ -363,7 +363,7 @@
 		},
 		"w094": {
 			"gloss": "wstąpił",
-			"function": "Jak „descéndit” (w060): forma wspólna dla czasu teraźniejszego i przeszłego, tu przeszła — „wstąpił”."
+			"function": "Perfectum: „wstąpił”."
 		},
 		"w095": {
 			"gloss": "do"
@@ -391,7 +391,7 @@
 		},
 		"w103": {
 			"gloss": "mający przyjść",
-			"function": "Imiesłów przyszły z „est” (w104): ventúrus est — „ma przyjść, przyjdzie”. Łacina tak wyraża zapowiedź."
+			"function": "Imiesłów przyszły z „est” (w104): „przyjdzie”."
 		},
 		"w104": {
 			"gloss": "—"
@@ -417,7 +417,7 @@
 		},
 		"w111": {
 			"gloss": "którego",
-			"function": "Dopełniacz posiadacza przy „regni” (w112). Rodzaj męski, bo poprzednikiem jest Chrystus, nie królestwo — sama forma rodzaju nie zdradza."
+			"function": "Dopełniacz posiadacza określający „regni” (w112). Jego poprzednikiem jest Chrystus."
 		},
 		"w112": {
 			"gloss": "królestwa"
@@ -464,7 +464,7 @@
 		},
 		"w126": {
 			"gloss": "i Syna",
-			"function": "Doczepka „-que” — enklityka, nie końcówka — znaczy „i”: ex Patre Filióque — „od Ojca i Syna”."
+			"function": "Enklityczny spójnik „-que” znaczy „i”: „ex Patre Filióque”, „od Ojca i Syna”."
 		},
 		"w127": {
 			"gloss": "pochodzi"
