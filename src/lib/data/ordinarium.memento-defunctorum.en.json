@@ -3,7 +3,7 @@
 	"text": "ordinarium.memento-defunctorum",
 	"lang": "en",
 	"status": "working-edition",
-	"about": "The second pause of the Canon. Cum signo fídei — with the sign of faith — is understood of baptism, the seal received in it: the prayer remembers the baptized. Dórmiunt in somno pacis speaks of the dead in the language of the catacombs, where in pace was the commonest epitaph and refrigérium — a cooling — the ordinary word for what was asked for them. The petition holds off to the very end: locum finds its verb only six words on.",
+	"about": "The commemoration of the dead in the Canon. The priest prays for God's servants and handmaids who have gone before with the sign of faith and rest in peace, asking for them and for all who rest in Christ a place of refreshment, light, and peace.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -31,11 +31,10 @@
 	"words": {
 		"w001": {
 			"gloss": "be mindful",
-			"function": "A future imperative, as in the commemoration of the living."
+			"function": "Second-person singular future imperative."
 		},
 		"w002": {
-			"gloss": "also",
-			"function": "One word divides this prayer from its twin before the consecration."
+			"gloss": "also"
 		},
 		"w003": {
 			"gloss": "O Lord"
@@ -48,7 +47,7 @@
 		},
 		"w006": {
 			"gloss": "Thy",
-			"function": "Here the missal prints N. et N.. This edition does not print the blank, so the relative clause that follows describes the servants and handmaids themselves. The pause to recall the names comes only after dórmiunt in somno pacis."
+			"function": "Feminine genitive plural, agreeing with “famularúmque” (w005)."
 		},
 		"w007": {
 			"gloss": "who"
@@ -74,7 +73,7 @@
 		},
 		"w014": {
 			"gloss": "sleep",
-			"function": "A present beside a perfect: they went before us once, and they are sleeping now."
+			"function": "Present tense after the perfect “præcessérunt” (w009)."
 		},
 		"w015": {
 			"gloss": "in"
@@ -87,7 +86,7 @@
 		},
 		"w018": {
 			"gloss": "to them",
-			"function": "A dative with “indúlgeas” (w031): to whom the grant is to be made."
+			"function": "A dative governed by “indúlgeas” (w031)."
 		},
 		"w019": {
 			"gloss": "O Lord"
@@ -106,15 +105,15 @@
 		},
 		"w024": {
 			"gloss": "who rest",
-			"function": "A participle used as a noun: those resting in Christ."
+			"function": "A participle used as a noun in the dative plural."
 		},
 		"w025": {
 			"gloss": "a place",
-			"function": "The object of “indúlgeas” (w031), six words away. Latin keeps the verb to the very end of the clause."
+			"function": "Accusative object of “indúlgeas” (w031)."
 		},
 		"w026": {
 			"gloss": "of refreshment",
-			"function": "A genitive with “locum” (w025), coordinate with lucis and pacis, which leaves a locative no room at all. Whitaker’s reads the uncontracted form as a locative, because his entry for this noun carries the contracted genitive alone — the same analyzer reads Evangélii as a genitive — and he is set aside by a recorded ruling."
+			"function": "A genitive dependent on “locum” (w025), coordinated with “lucis” (w027) and “pacis” (w029)."
 		},
 		"w027": {
 			"gloss": "of light"
@@ -133,7 +132,7 @@
 		},
 		"w032": {
 			"gloss": "we plead",
-			"function": "A deponent. It stands after the clause it governs, the reverse of the English order."
+			"function": "First-person plural present of a deponent verb."
 		},
 		"w033": {
 			"gloss": "Through"

@@ -3,7 +3,7 @@
 	"text": "ordinarium.memento-defunctorum",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Druga pauza Kanonu. „Cum signo fídei” — ze znakiem wiary — od dawna rozumie się o chrzcie, o pieczęci na nim przyjętej: modlitwa wspomina ochrzczonych. „Dórmiunt in somno pacis” mówi o zmarłych językiem katakumb, gdzie „in pace” było najczęstszą formułą nagrobną, a „refrigérium” — ochłoda — zwykłym słowem na to, o co dla nich proszono. Prośba trzyma się do samego końca: locum znajduje swój czasownik dopiero o sześć słów dalej.",
+	"about": "Wspomnienie zmarłych w Kanonie. Kapłan modli się za sługi i służebnice Boże, którzy odeszli ze znakiem wiary i spoczywają w pokoju, prosząc dla nich oraz dla wszystkich spoczywających w Chrystusie o miejsce ochłody, światła i pokoju.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -31,11 +31,10 @@
 	"words": {
 		"w001": {
 			"gloss": "pamiętaj",
-			"function": "Rozkaźnik czasu przyszłego, jak we wspomnieniu żywych."
+			"function": "Druga osoba liczby pojedynczej trybu rozkazującego czasu przyszłego."
 		},
 		"w002": {
-			"gloss": "też",
-			"function": "Jedno słowo odróżnia tę modlitwę od jej bliźniaczki sprzed konsekracji."
+			"gloss": "też"
 		},
 		"w003": {
 			"gloss": "Panie"
@@ -48,7 +47,7 @@
 		},
 		"w006": {
 			"gloss": "Twoich",
-			"function": "Tu mszał drukuje N. et N.. To wydanie nie drukuje pustego miejsca, więc zdanie względne, które następuje, opisuje wprost sługi i służebnice. Pauza na wspomnienie imion przychodzi dopiero po „dórmiunt in somno pacis”."
+			"function": "Dopełniacz liczby mnogiej rodzaju żeńskiego. Zgadza się z „famularúmque” (w005)."
 		},
 		"w007": {
 			"gloss": "którzy"
@@ -74,7 +73,7 @@
 		},
 		"w014": {
 			"gloss": "śpią",
-			"function": "Czas teraźniejszy obok czasu przeszłego: poprzedzili nas kiedyś, a śpią teraz."
+			"function": "Czas teraźniejszy po perfectum „præcessérunt” (w009)."
 		},
 		"w015": {
 			"gloss": "w"
@@ -87,7 +86,7 @@
 		},
 		"w018": {
 			"gloss": "im",
-			"function": "Celownik przy „indúlgeas” (w031): komu ma zostać dane."
+			"function": "Celownik zależny od „indúlgeas” (w031)."
 		},
 		"w019": {
 			"gloss": "Panie"
@@ -106,15 +105,15 @@
 		},
 		"w024": {
 			"gloss": "spoczywającym",
-			"function": "Imiesłów użyty rzeczownikowo: spoczywający w Chrystusie."
+			"function": "Imiesłów użyty rzeczownikowo w celowniku liczby mnogiej."
 		},
 		"w025": {
 			"gloss": "miejsce",
-			"function": "Dopełnienie „indúlgeas” (w031), oddalone o sześć słów. Łacina odkłada czasownik na sam koniec swojego zdania podrzędnego."
+			"function": "Biernik jako dopełnienie „indúlgeas” (w031)."
 		},
 		"w026": {
 			"gloss": "ochłody",
-			"function": "Dopełniacz przy „locum” (w025), współrzędny z lucis i pacis, co nie zostawia locativowi żadnego miejsca. Whitaker czyta tę nieściągniętą formę jako locativus, bo jego hasło dla tego rzeczownika niesie tylko dopełniacz ściągnięty — ten sam analizator czyta Evangélii jako dopełniacz — i został odsunięty zapisaną regułą."
+			"function": "Dopełniacz zależny od „locum” (w025), współrzędny z „lucis” (w027) i „pacis” (w029)."
 		},
 		"w027": {
 			"gloss": "światła"
@@ -133,7 +132,7 @@
 		},
 		"w032": {
 			"gloss": "błagamy",
-			"function": "Czasownik deponentny. Stoi po zdaniu, którym rządzi — kolejność odwrotna niż w polszczyźnie."
+			"function": "Pierwsza osoba liczby mnogiej czasu teraźniejszego czasownika deponentnego."
 		},
 		"w033": {
 			"gloss": "Przez"
