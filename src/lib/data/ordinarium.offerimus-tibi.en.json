@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "The priest takes the chalice, wine and water now mixed in it, and raises it."
+			"narrative": "The priest takes the chalice and offers it, saying:"
 		},
 		"s02": {
 			"translation": "We offer Thee, Lord, the chalice of salvation, beseeching Thy clemency: that it may go up with a sweet fragrance in the sight of Thy divine majesty, for our salvation and that of the whole world. Amen."
@@ -22,7 +22,7 @@
 	"words": {
 		"w001": {
 			"gloss": "we offer",
-			"function": "Plural: at solemn Mass the deacon says this prayer with the priest — unlike over the host, where it was “óffero”. At low Mass the priest says it alone, for all."
+			"function": "Plural: at Solemn Mass the deacon says this prayer with the priest."
 		},
 		"w002": {
 			"gloss": "Thee"
@@ -36,7 +36,7 @@
 		},
 		"w005": {
 			"gloss": "of salvation",
-			"function": "The genitive of the noun salutáre (salvation), not the adjective: an adjective would have to agree with “cálicem” (w004), which stands in the accusative. The same phrase returns in the priest's verses before Communion."
+			"function": "Genitive of the neuter noun “salutáre”, dependent on “cálicem” (w004)."
 		},
 		"w006": {
 			"gloss": "Thy",

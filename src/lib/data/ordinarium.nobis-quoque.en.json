@@ -40,15 +40,14 @@
 	"words": {
 		"w001": {
 			"gloss": "to us",
-			"function": "A dative right at the head, thirteen words before its verb. And these are the only three words of the Canon the people hear, apart from the closing Per ómnia."
+			"function": "Dative governed by “donáre” (w015), placed at the head of the petition."
 		},
 		"w002": {
 			"gloss": "also",
-			"function": "“Also”, because the prayer before asked for the dead. Now it asks for those standing at the altar."
+			"function": "Links this petition to the preceding commemoration of the dead."
 		},
 		"w003": {
-			"gloss": "sinners",
-			"function": "The priest strikes his breast as he says these words — the rubric ties the gesture to the whole phrase."
+			"gloss": "sinners"
 		},
 		"w004": {
 			"gloss": "servants",
@@ -65,7 +64,7 @@
 		},
 		"w008": {
 			"gloss": "of mercies",
-			"function": "Not the feeling of pity but its exercise — particular acts, hence the plural."
+			"function": "Genitive plural dependent on “multitúdine” (w007)."
 		},
 		"w009": {
 			"gloss": "Thy"
@@ -78,8 +77,7 @@
 			"gloss": "part"
 		},
 		"w012": {
-			"gloss": "some",
-			"function": "The “some” is not vagueness but humility: any part at all, however small."
+			"gloss": "some"
 		},
 		"w013": {
 			"gloss": "and"
@@ -116,7 +114,7 @@
 		},
 		"w024": {
 			"gloss": "John",
-			"function": "Usually taken to be the Baptist, who is named nowhere else in the Canon — the two Johns of the Communicántes being the Apostle and the martyr who stands with Paul."
+			"function": "Usually identified as John the Baptist, though the identification is not certain."
 		},
 		"w025": {
 			"gloss": "Stephen"
@@ -132,14 +130,14 @@
 		},
 		"w029": {
 			"gloss": "Alexander",
-			"function": "Usually taken to be Pope Alexander I, though the identification is disputed — as with John."
+			"function": "Usually identified as Pope Alexander I, though the identification is not certain."
 		},
 		"w030": {
 			"gloss": "Marcellinus"
 		},
 		"w031": {
 			"gloss": "Peter",
-			"function": "Not the apostle: this is Peter the exorcist, whose name goes paired with Marcellinus in the Roman calendar."
+			"function": "Peter the Exorcist, companion of Marcellinus, not the Apostle."
 		},
 		"w032": {
 			"gloss": "Felicity"
@@ -185,14 +183,13 @@
 		},
 		"w046": {
 			"gloss": "company",
-			"function": "From cum and sors, lot: consórtes are those to whom the same lot has fallen. The preposition intra stands before the relative, and the noun it governs only after it."
+			"function": "Accusative object of “intra” (w043)."
 		},
 		"w047": {
 			"gloss": "not"
 		},
 		"w048": {
-			"gloss": "a weigher",
-			"function": "A nominative in apposition to the unexpressed subject of “admítte” (w054) — the reading both translations give. The vocative, identical in form, remains the competing reading and the word carries the disputed flag."
+			"gloss": "a weigher"
 		},
 		"w049": {
 			"gloss": "of merit"
@@ -202,7 +199,7 @@
 		},
 		"w051": {
 			"gloss": "of pardon",
-			"function": "A genitive with “largítor” (w053): a giver not of wages but of pardon."
+			"function": "Genitive dependent on “largítor” (w053)."
 		},
 		"w052": {
 			"gloss": "we beseech"
@@ -211,8 +208,7 @@
 			"gloss": "a bountiful giver"
 		},
 		"w054": {
-			"gloss": "admit",
-			"function": "The imperative comes last, after the eleven words that precede it."
+			"gloss": "admit"
 		},
 		"w055": {
 			"gloss": "Through"
@@ -225,7 +221,7 @@
 		},
 		"w058": {
 			"gloss": "our",
-			"function": "This prayer does not end in an Amen: the sentence runs on into Per quem hæc ómnia."
+			"function": "No Amen follows. The sentence continues with Per quem hæc ómnia."
 		}
 	}
 }

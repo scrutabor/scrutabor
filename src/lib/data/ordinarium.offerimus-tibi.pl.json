@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Kapłan bierze kielich, w którym jest już wino zmieszane z wodą, i unosi go."
+			"narrative": "Kapłan bierze kielich i ofiaruje go, mówiąc:"
 		},
 		"s02": {
 			"translation": "Składamy Tobie, Panie, kielich zbawienia, błagając Twojej łaskawości: aby przed obliczem Twego boskiego majestatu za nasze i całego świata zbawienie wstąpił z wonią wdzięczności. Amen."
@@ -22,7 +22,7 @@
 	"words": {
 		"w001": {
 			"gloss": "składamy",
-			"function": "Liczba mnoga: we Mszy uroczystej diakon wypowiada tę modlitwę razem z kapłanem — inaczej niż nad hostią, gdzie było „óffero”. We Mszy cichej kapłan mówi ją sam, w imieniu wszystkich."
+			"function": "Liczba mnoga: we Mszy uroczystej diakon odmawia tę modlitwę razem z kapłanem."
 		},
 		"w002": {
 			"gloss": "tobie"
@@ -36,7 +36,7 @@
 		},
 		"w005": {
 			"gloss": "zbawienia",
-			"function": "Dopełniacz rzeczownika salutáre (zbawienie), nie przymiotnik: przymiotnik musiałby zgadzać się z „cálicem” (w004), a ten stoi w bierniku. Ten sam zwrot wraca w wersetach kapłana przed Komunią."
+			"function": "Dopełniacz rzeczownika nijakiego „salutáre”, zależny od „cálicem” (w004)."
 		},
 		"w006": {
 			"gloss": "twojej",
