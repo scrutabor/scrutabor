@@ -3340,7 +3340,6 @@
 				"to defend",
 				"to wall in"
 			],
-			"note": "From mœnia, city walls; to muníre is to wall something round.",
 			"derivatives": [
 				"munition",
 				"ammunition"
@@ -3379,6 +3378,9 @@
 				"renaissance"
 			]
 		},
+		"nam": {
+			"senses": ["for"]
+		},
 		"ne": {
 			"senses": [
 				"not (in prohibitions and negative petitions)",
@@ -3390,14 +3392,13 @@
 				"nor",
 				"and not"
 			],
-			"note": "A shortened neque. The pair nec non does not mean nor not: two negatives cancel, and it reads as an emphatic and also."
+			"note": "The phrase nec non means “and also”."
 		},
 		"negligentia": {
 			"senses": [
 				"negligence",
 				"carelessness"
 			],
-			"note": "The fault of omission — what was left undone.",
 			"derivatives": [
 				"negligence",
 				"negligee (from neglegere)"
@@ -3414,14 +3415,13 @@
 			"senses": [
 				"wickedness",
 				"worthlessness"
-			],
-			"note": "From nequam, a good-for-nothing."
+			]
 		},
 		"nihil": {
 			"senses": [
 				"nothing"
 			],
-			"note": "Indeclinable. From ne and hilum, the speck on a bean — not even that much.",
+			"note": "Indeclinable.",
 			"derivatives": [
 				"nihilism",
 				"annihilate"
@@ -3476,6 +3476,12 @@
 				"innovate"
 			]
 		},
+		"nox": {
+			"senses": ["night"]
+		},
+		"nubes": {
+			"senses": ["cloud"]
+		},
 		"numero": {
 			"senses": [
 				"to number",
@@ -3490,8 +3496,7 @@
 		"numquam": {
 			"senses": [
 				"never"
-			],
-			"note": "Ne and umquam, not ever; the negation is built into the word."
+			]
 		},
 		"nunc": {
 			"senses": [
@@ -3526,7 +3531,6 @@
 				"service rendered to another",
 				"compliance"
 			],
-			"note": "From ob and sequor — to follow after; hence the service shown to the one followed.",
 			"derivatives": [
 				"obsequious",
 				"obsequies"

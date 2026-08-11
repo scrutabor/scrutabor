@@ -3008,7 +3008,6 @@
 				"umocnić",
 				"obronić"
 			],
-			"note": "Od mœnia — mury miasta; muníre to otoczyć murem.",
 			"derivatives": [
 				"amunicja"
 			]
@@ -3043,6 +3042,9 @@
 				"renesans"
 			]
 		},
+		"nam": {
+			"senses": ["bowiem"]
+		},
 		"ne": {
 			"senses": [
 				"nie (w zakazach i prośbach przeczących)",
@@ -3054,14 +3056,13 @@
 				"ani",
 				"i nie"
 			],
-			"note": "Skrócone neque. Zestawienie nec non nie znaczy „ani nie”, lecz mocne „a także”: dwa przeczenia znoszą się."
+			"note": "Wyrażenie nec non znaczy „a także”."
 		},
 		"negligentia": {
 			"senses": [
 				"zaniedbanie",
 				"niedbałość"
 			],
-			"note": "Wina przez zaniechanie — to, czego nie zrobiono.",
 			"derivatives": [
 				"negliż (od negligere)"
 			]
@@ -3077,14 +3078,13 @@
 			"senses": [
 				"nikczemność",
 				"przewrotność"
-			],
-			"note": "Od nequam — nicpoń, ktoś nic niewart."
+			]
 		},
 		"nihil": {
 			"senses": [
 				"nic"
 			],
-			"note": "Nieodmienne. Ze złożenia ne + hilum, gdzie hilum to znamię na ziarnie fasoli — „ani tyle”.",
+			"note": "Nieodmienne.",
 			"derivatives": [
 				"nihilizm"
 			]
@@ -3139,6 +3139,12 @@
 				"innowacja"
 			]
 		},
+		"nox": {
+			"senses": ["noc"]
+		},
+		"nubes": {
+			"senses": ["obłok"]
+		},
 		"numero": {
 			"senses": [
 				"liczyć",
@@ -3152,8 +3158,7 @@
 		"numquam": {
 			"senses": [
 				"nigdy"
-			],
-			"note": "Ne + umquam — nie kiedykolwiek; przeczenie jest wbudowane w słowo."
+			]
 		},
 		"nunc": {
 			"senses": [
@@ -3187,7 +3192,6 @@
 				"służba oddana komuś",
 				"posłuszeństwo"
 			],
-			"note": "Od ob + sequor — iść za kimś; stąd służba okazywana temu, za kim się idzie.",
 			"derivatives": [
 				"obsekwie"
 			]
