@@ -1799,6 +1799,11 @@
 			"pos": "verb",
 			"conj": 1
 		},
+		"levo": {
+			"head": "levo, leváre, levávi, levátum",
+			"pos": "verb",
+			"conj": 1
+		},
 		"lex": {
 			"head": "lex, legis",
 			"pos": "noun",
@@ -1841,6 +1846,12 @@
 			"pos": "noun",
 			"gender": "n",
 			"decl": 3
+		},
+		"luna": {
+			"head": "luna, -æ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
 		},
 		"lux": {
 			"head": "lux, lucis",
@@ -1890,6 +1901,12 @@
 			"pos": "noun",
 			"gender": "f",
 			"decl": 4
+		},
+		"mare": {
+			"head": "mare, maris",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 3
 		},
 		"martyr": {
 			"head": "martyr, mártyris",
