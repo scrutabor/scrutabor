@@ -55,14 +55,14 @@
 		},
 		"w011": {
 			"gloss": "zasadzkom",
-			"function": "Rzeczownik występuje tylko w liczbie mnogiej — po łacinie zasadzka jest zawsze wieloma zasadzkami."
+			"function": "Rzeczownik występujący tylko w liczbie mnogiej (plurale tantum)."
 		},
 		"w012": {
 			"gloss": "diabła"
 		},
 		"w013": {
 			"gloss": "bądź",
-			"function": "Tryb rozkazujący czasu przyszłego — forma, której łacina używa do poleceń mających obowiązywać odtąd, nie tylko w tej chwili. Zwykły rozkaz brzmiałby „es”."
+			"function": "Tryb rozkazujący czasu przyszłego od „sum”. Tryb rozkazujący czasu teraźniejszego ma formę „es”."
 		},
 		"w014": {
 			"gloss": "obroną"
@@ -79,7 +79,7 @@
 		},
 		"w018": {
 			"gloss": "pokornie",
-			"function": "Przymiotnik w mianowniku liczby mnogiej — „my, pokorni, prosimy” — oddany przysłówkiem."
+			"function": "Przymiotnik w mianowniku liczby mnogiej, odnoszący się do domyślnego podmiotu „deprecámur” (w019)."
 		},
 		"w019": {
 			"gloss": "prosimy",
@@ -87,7 +87,7 @@
 		},
 		"w020": {
 			"gloss": "A Ty",
-			"function": "Zaimek wypowiedziany, choć łacina zwykle go opuszcza — bo zdanie odwraca się tu od Boga z powrotem do Michała. Do zaimka doczepiono spójnik -que."
+			"function": "Jawny zaimek podmiotowy. Enklityka „-que” łączy to zdanie z poprzednim."
 		},
 		"w021": {
 			"gloss": "Książę"
@@ -97,14 +97,14 @@
 		},
 		"w023": {
 			"gloss": "niebieskiego",
-			"function": "Dopełniacz: zgadza się z „milítiæ” (w022), nie z „Princeps” (w021). Niebieskie jest wojsko, nie jego wódz."
+			"function": "Dopełniacz liczby pojedynczej. Zgadza się z „milítiæ” (w022)."
 		},
 		"w024": {
 			"gloss": "szatana"
 		},
 		"w025": {
 			"gloss": "i inne",
-			"function": "Zaimkowa odmiana: dopełniacz brzmi „alíus”, celownik „álii”, nie jak u przymiotników na -us, -a, -um. Doczepione -que łączy z „sátanam” (w024)."
+			"function": "Biernik liczby mnogiej. Zgadza się ze „spíritus” (w026). Enklityka „-que” łączy tę frazę z „sátanam” (w024)."
 		},
 		"w026": {
 			"gloss": "duchy"
