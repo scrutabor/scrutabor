@@ -5211,6 +5211,9 @@
 				"institute"
 			]
 		},
+		"stella": {
+			"senses": ["star"]
+		},
 		"sto": {
 			"senses": [
 				"to stand"
@@ -5276,7 +5279,7 @@
 				"highest",
 				"greatest"
 			],
-			"note": "The superlative of súperus (upper); it has no positive degree of its own.",
+			"note": "The superlative of súperus.",
 			"derivatives": [
 				"sum",
 				"summit",
@@ -5306,6 +5309,9 @@
 				"supple"
 			]
 		},
+		"supervenio": {
+			"senses": ["come upon"]
+		},
 		"supra": {
 			"senses": [
 				"above",
@@ -5332,8 +5338,7 @@
 			"senses": [
 				"upwards",
 				"on high"
-			],
-			"note": "A contraction of sub-vórsum, turned upward; an adverb of direction, not a preposition."
+			]
 		},
 		"suscipio": {
 			"senses": [
@@ -5350,7 +5355,7 @@
 				"to fear",
 				"to surmise"
 			],
-			"note": "Deponent: passive in form, active in meaning. Literally to look up from under (sub + spécere) — the sidelong glance out of which suspicion grows.",
+			"note": "A deponent verb: passive in form and active in meaning.",
 			"derivatives": [
 				"suspicion (from suspício)",
 				"suspect (from suspícere)"
@@ -5361,7 +5366,6 @@
 				"to sigh",
 				"to sigh for"
 			],
-			"note": "A compound of sub and spiro: breath drawn from below.",
 			"derivatives": [
 				"suspire"
 			]
@@ -5380,7 +5384,6 @@
 				"tabernacle",
 				"dwelling"
 			],
-			"note": "A diminutive of tabérna — a hut, a booth; in Scripture the tent of meeting.",
 			"derivatives": [
 				"tabernacle"
 			]
@@ -5410,17 +5413,22 @@
 				"detect (from detego)"
 			]
 		},
+		"templum": {
+			"senses": ["temple"]
+		},
 		"temporalis": {
 			"senses": [
 				"temporal",
 				"lasting a time",
 				"passing"
 			],
-			"note": "From tempus, time; in Church Latin the standing opposite of ætérnus.",
 			"derivatives": [
 				"temporal",
 				"temporary (from temporárius)"
 			]
+		},
+		"tempus": {
+			"senses": ["time"]
 		},
 		"tenebrae": {
 			"senses": [
