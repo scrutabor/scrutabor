@@ -53,7 +53,7 @@
 		},
 		"w006": {
 			"gloss": "zawsze",
-			"function": "Przysłówek określa tu wyjątkowo rzeczownik: „semper Virgo” — „zawsze Dziewica” — stały tytuł maryjny, traktowany jak całość."
+			"function": "Wraz z „Vírgini” (w007) tworzy tytuł „zawsze Dziewica”."
 		},
 		"w007": {
 			"gloss": "Dziewicy",
@@ -68,7 +68,7 @@
 		},
 		"w010": {
 			"gloss": "Archaniołowi",
-			"function": "Apozycja (dopowiedzenie) do „Michaéli” (w009): ten sam przypadek, bo dopowiedzenie dziedziczy przypadek po swoim rzeczowniku."
+			"function": "Celownik w apozycji do „Michaéli” (w009)."
 		},
 		"w011": {
 			"gloss": "błogosławionemu",
@@ -86,12 +86,11 @@
 			"function": "Zgadza się z „Apóstolis” (w015)."
 		},
 		"w015": {
-			"gloss": "Apostołom",
-			"function": "Dalszy ciąg listy adresatów wyznania."
+			"gloss": "Apostołom"
 		},
 		"w016": {
 			"gloss": "Piotrowi",
-			"function": "Apozycja (dopowiedzenie) do „Apóstolis” (w015) — apostołowie wymienieni z imienia."
+			"function": "Wraz z “Paulo” (w018) tworzy apozycję do “Apóstolis” (w015)."
 		},
 		"w017": {
 			"gloss": "i"
@@ -108,24 +107,22 @@
 			"gloss": "Świętym"
 		},
 		"w021": {
-			"gloss": "i",
-			"function": "Domyka listę adresatów i dołącza ostatnich: stojących przed ołtarzem."
+			"gloss": "i"
 		},
 		"w022": {
 			"gloss": "wam",
-			"function": "Kapłan wyznaje winę także ludziom, którzy stoją przed nim — liczba mnoga, bo mówi do wszystkich obecnych."
+			"function": "Celownik liczby mnogiej, ostatnie dopełnienie „Confíteor” (w001)."
 		},
 		"w023": {
 			"gloss": "bracia",
-			"function": "Wołacz, choć w liczbie mnogiej brzmi tak samo jak mianownik i biernik: to bezpośredni zwrot, nie kolejny element wyliczenia. Kapłan nazywa braćmi tych, którzy jemu odpowiedzą „ojcze”."
+			"function": "Wołacz liczby mnogiej użyty w bezpośrednim zwrocie."
 		},
 		"w024": {
 			"gloss": "że",
-			"function": "Wprowadza treść wyznania: „że zgrzeszyłem” — choć współbrzmi tu i klasyczne „bo zgrzeszyłem”."
+			"function": "Wprowadza zdanie „quia peccávi”, które wskazuje treść wyznania."
 		},
 		"w025": {
-			"gloss": "zgrzeszyłem",
-			"function": "Czynność dokonana, której skutek trwa — stąd wyznanie."
+			"gloss": "zgrzeszyłem"
 		},
 		"w026": {
 			"gloss": "bardzo"
@@ -149,7 +146,7 @@
 		},
 		"w032": {
 			"gloss": "wina",
-			"function": "Forma pisana nie odróżnia mianownika (culpă) od ablativu (culpā) — rozstrzyga sens: ablativus przyczyny, „z mojej winy”."
+			"function": "Ablativus przyczyny: „z mojej winy”."
 		},
 		"w033": {
 			"gloss": "moja"
@@ -165,8 +162,7 @@
 			"function": "Zgadza się z „culpa” (w037)."
 		},
 		"w037": {
-			"gloss": "wina",
-			"function": "Trzykrotne „mea culpa” narasta: wina — wina — największa wina."
+			"gloss": "wina"
 		},
 		"w038": {
 			"gloss": "przeto",
