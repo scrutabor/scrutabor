@@ -116,6 +116,30 @@ test('pronunciation line shows both traditions on the Polish interface', async (
 	await expect(pron).toContainText('/ˈtsɛ.lis/');
 });
 
+test('a pronunciation moves to the next line as one unit', async ({ page }) => {
+	// At the largest reading size Sanctificétur used to split the Roman IPA
+	// inside /…/ when the remaining part of the line was too short. A label,
+	// transcription and its preceding middot travel together instead.
+	await page.setViewportSize({ width: 800, height: 600 });
+	await page.goto('/app/pl/orationes/pater-noster?w=w007');
+	await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
+	await page.reload();
+	await settled(page);
+
+	const units = page.locator('aside .pron-unit');
+	await expect(units).toHaveCount(2);
+	const fragments = await units.evaluateAll((items) =>
+		items.map((item) => item.getClientRects().length)
+	);
+	expect(fragments, 'an IPA transcription split across lines').toEqual([1, 1]);
+	expect(
+		await page.evaluate(
+			() => document.documentElement.scrollWidth > document.documentElement.clientWidth
+		),
+		'keeping the transcription together caused horizontal scrolling'
+	).toBe(false);
+});
+
 test('pronunciation line shows Roman only on the English interface', async ({ page }) => {
 	await page.goto('/app/en/orationes/pater-noster?w=w006');
 	const pron = page.locator('aside .pron');

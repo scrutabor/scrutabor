@@ -18,17 +18,22 @@
 </script>
 
 <p class="pron" class:centered>
-	<span lang="la">{syllabized(form)}</span>
+	<span class="syllables" lang="la">{syllabized(form)}</span>
 	{#if lang === 'pl' && pron.differ}
-		· <a href="/app/{lang}/grammatica/pronuntiatio" title={hint}
-			><span class="smallcaps">rz.</span> /{pron.roman}/</a
-		>
-		·
-		<a href="/app/{lang}/grammatica/pronuntiatio" title={hint}
-			><span class="smallcaps">pol.</span> /{pron.polish}/</a
-		>
+		<span class="pron-unit">
+			· <a href="/app/{lang}/grammatica/pronuntiatio" title={hint}
+				><span class="smallcaps">rz.</span> /{pron.roman}/</a
+			>
+		</span>
+		<span class="pron-unit">
+			· <a href="/app/{lang}/grammatica/pronuntiatio" title={hint}
+				><span class="smallcaps">pol.</span> /{pron.polish}/</a
+			>
+		</span>
 	{:else}
-		· <a href="/app/{lang}/grammatica/pronuntiatio" title={hint}>/{pron.roman}/</a>
+		<span class="pron-unit">
+			· <a href="/app/{lang}/grammatica/pronuntiatio" title={hint}>/{pron.roman}/</a>
+		</span>
 	{/if}
 </p>
 
@@ -47,6 +52,16 @@
 
 	.pron a:hover {
 		color: var(--ink);
+	}
+
+	/* A transcription is one word-shaped reading aid. If it no longer fits
+	   beside the syllables, move the whole labelled unit to the next line;
+	   splitting inside /…/ makes the IPA look like two separate forms. The
+	   middot belongs to the unit as well, so it cannot be orphaned above it. */
+	.syllables,
+	.pron-unit {
+		display: inline-block;
+		white-space: nowrap;
 	}
 
 	.pron .smallcaps {
