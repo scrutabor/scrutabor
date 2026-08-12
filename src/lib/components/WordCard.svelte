@@ -240,8 +240,8 @@
 
 	.layer {
 		display: grid;
-		grid-template-columns: 5.8rem minmax(0, 1fr);
-		column-gap: 1.15rem;
+		grid-template-columns: 4.4rem minmax(0, 1fr);
+		column-gap: 0.8rem;
 		margin: 0.75rem 0 0;
 		padding-top: 0.7rem;
 		border-top: 1px solid var(--border);

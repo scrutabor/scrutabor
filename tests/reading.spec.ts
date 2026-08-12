@@ -78,6 +78,36 @@ test('word panel separates context, dictionary, grammar and verification', async
 	await expect(verification.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
 });
 
+test('dictionary and grammar layers keep a modest shared indent', async ({ page }) => {
+	// The label column used to grow into a broad empty field at the largest
+	// reading size. Keep the two bodies aligned, but close enough to their
+	// short labels that they still read as one row.
+	await page.setViewportSize({ width: 1280, height: 800 });
+	await page.goto('/app/pl/orationes/pater-noster?w=w007');
+	await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
+	await page.reload();
+	await settled(page);
+
+	const geometry = await page.locator('aside .layer:not(.context-layer)').evaluateAll((layers) => {
+		const root = parseFloat(getComputedStyle(document.documentElement).fontSize);
+		return {
+			root,
+			rows: layers.map((layer) => {
+				const row = layer.getBoundingClientRect();
+				const body = layer.querySelector('.layer-body')!.getBoundingClientRect();
+				return { indent: body.left - row.left, left: body.left };
+			})
+		};
+	});
+	expect(geometry.rows).toHaveLength(2);
+	expect(geometry.rows[0].left).toBeCloseTo(geometry.rows[1].left, 1);
+	for (const row of geometry.rows) {
+		expect(row.indent, 'the label column became an oversized empty field').toBeLessThanOrEqual(
+			geometry.root * 5.3
+		);
+	}
+});
+
 test('a proper name absent from one analyzer names its true confirmers', async ({ page }) => {
 	await page.goto('/app/pl/ordinarium/confiteor?w=w009'); // Michaéli
 	const meta = page.locator('aside .meta');
