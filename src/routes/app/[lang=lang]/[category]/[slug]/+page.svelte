@@ -12,6 +12,7 @@
 	import TextBody from '$lib/components/TextBody.svelte';
 	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
+	import { prayerForm } from '$lib/prayer-form.svelte';
 	import { ribbon } from '$lib/ribbon.svelte';
 	import { docWordPanel } from '$lib/wordpanel.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
@@ -31,8 +32,10 @@
 	// nothing, so it is not offered — Quod ore súmpsimus is the priest's
 	// alone from beginning to end.
 	const takesPart = $derived(
-		new Set(doc.segments.filter((sg) => sg.type === 'verse' && sg.speaker).map((sg) => sg.speaker))
-			.size > 1
+		data.category === 'ordinarium' &&
+			new Set(
+				doc.segments.filter((sg) => sg.type === 'verse' && sg.speaker).map((sg) => sg.speaker)
+			).size > 1
 	);
 	const gloss = $derived(data.gloss);
 	const sectionLabel = $derived(sectionFor(data.category)?.label[lang] ?? '');
@@ -40,6 +43,15 @@
 	// that is the liturgical sequence, so a reader can follow the Mass
 	// text to text without returning to the catalog.
 	const around = $derived(neighborsOf(data.category, data.slug));
+	const repeatedSegments = $derived(
+		data.category === 'orationes' && data.slug === 'angelus-domini' ? ['ave1', 'ave2', 'ave3'] : []
+	);
+	const hasDevotionalLeader = $derived(
+		doc.segments.some((sg) => sg.type === 'verse' && sg.speaker === 'ductor')
+	);
+	const hasPrayerForms = $derived(
+		data.category === 'orationes' && data.slug === 'sub-tuum-praesidium'
+	);
 
 	// Three verbosity states:
 	// 0 = text only · 1 = + interlinear glosses · 2 = + translations (as
@@ -179,18 +191,54 @@
 		</header>
 
 		<main class:panel-open={selectedWord !== null || panel.keepPad}>
-			<TextBody
-				{doc}
-				{gloss}
-				{lang}
-				{helpLevel}
-				selectedId={panel.id}
-				ontap={tapWord}
-				onmark={openLegend}
-				verses={data.verses}
-				onverse={data.verses ? tapVerse : undefined}
-				{citedVerse}
-			/>
+			{#if hasPrayerForms}
+				<section class="prayer-forms">
+					<div class="form-tabs" role="group" aria-label={msgs.prayerFormsLabel}>
+						<button
+							class:active={prayerForm.value === 'basic'}
+							aria-pressed={prayerForm.value === 'basic'}
+							onclick={() => prayerForm.set('basic')}
+						>
+							{msgs.prayerFormShort}
+						</button>
+						<button
+							class:active={prayerForm.value === 'extended'}
+							aria-pressed={prayerForm.value === 'extended'}
+							onclick={() => prayerForm.set('extended')}
+						>
+							{msgs.prayerFormLong}
+						</button>
+					</div>
+					<TextBody
+						doc={prayerForm.value === 'extended'
+							? doc
+							: { ...doc, segments: doc.segments.slice(0, 1) }}
+						{gloss}
+						{lang}
+						{helpLevel}
+						selectedId={panel.id}
+						ontap={tapWord}
+					/>
+				</section>
+			{:else}
+				<TextBody
+					{doc}
+					{gloss}
+					{lang}
+					{helpLevel}
+					selectedId={panel.id}
+					ontap={tapWord}
+					onmark={openLegend}
+					verses={data.verses}
+					onverse={data.verses ? tapVerse : undefined}
+					{citedVerse}
+					collapsedSegments={repeatedSegments}
+					collapsedLabel={msgs.repeatedPrayer}
+					collapsedShow={msgs.repeatedPrayerShow}
+					collapsedHide={msgs.repeatedPrayerHide}
+					showSpeakerNames={!hasDevotionalLeader}
+				/>
+			{/if}
 
 			<Pager
 				{lang}
@@ -219,7 +267,7 @@
 		{/if}
 
 		{#if legendOpen}
-			<MarkLegend {lang} onclose={() => (legendOpen = false)} />
+			<MarkLegend {lang} devotional={hasDevotionalLeader} onclose={() => (legendOpen = false)} />
 		{/if}
 
 		{#if selectedWord && selectedAnalysis}
@@ -245,6 +293,62 @@
 
 	main.panel-open {
 		padding-bottom: 45vh;
+	}
+
+	.form-tabs {
+		display: flex;
+		width: fit-content;
+		max-width: 100%;
+		margin: 0 auto 1.75rem;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		overflow: hidden;
+	}
+
+	.form-tabs button {
+		padding: 0.48rem 1.15rem;
+		border: 0;
+		background: transparent;
+		color: var(--ink-soft);
+		font: inherit;
+		font-size: 0.95rem;
+		cursor: pointer;
+	}
+
+	.form-tabs button + button {
+		border-inline-start: 1px solid var(--border);
+	}
+
+	.form-tabs button.active {
+		background: var(--wash);
+		color: var(--ink);
+	}
+
+	.form-tabs button:focus-visible {
+		outline: 2px solid var(--rubric);
+		outline-offset: -2px;
+	}
+
+	.form-tabs button:first-child {
+		border-start-start-radius: 999px;
+		border-end-start-radius: 999px;
+	}
+
+	.form-tabs button:last-child {
+		border-start-end-radius: 999px;
+		border-end-end-radius: 999px;
+	}
+
+	@media (max-width: 430px) {
+		.form-tabs {
+			width: 100%;
+		}
+
+		.form-tabs button {
+			flex: 1;
+			padding-inline: 0.55rem;
+			font-size: 0.82rem;
+		}
 	}
 
 	/* The about pill opens the shared bottom sheet, so the reading layout

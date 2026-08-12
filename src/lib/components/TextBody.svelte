@@ -21,7 +21,12 @@
 		onmark,
 		verses,
 		onverse,
-		citedVerse = null
+		citedVerse = null,
+		collapsedSegments = [],
+		collapsedLabel,
+		collapsedShow,
+		collapsedHide,
+		showSpeakerNames = true
 	}: {
 		doc: TextDocument;
 		gloss: GlossDocument;
@@ -41,6 +46,15 @@
 		 * the cited verse is marked; without it they are print. */
 		onverse?: (no: number) => void;
 		citedVerse?: number | null;
+		/** Optional reading-page folds for repeated, already-familiar prayers.
+		 * The text remains in the HTML and in the corpus; details merely keeps
+		 * repetition from dominating the visual hierarchy. */
+		collapsedSegments?: string[];
+		collapsedLabel?: string;
+		collapsedShow?: string;
+		collapsedHide?: string;
+		/** Some devotional dialogues are already clear from V./R. alone. */
+		showSpeakerNames?: boolean;
 	} = $props();
 
 	// A dot, not a colon: it is unreserved in a URL, so `?w=credo.w001`
@@ -69,6 +83,7 @@
 	// around it.
 	const MARKS: Record<string, string> = {
 		sacerdos: 'V.',
+		ductor: 'V.',
 		minister: 'R.',
 		populus: 'R.',
 		omnes: 'O.',
@@ -110,7 +125,20 @@
 	>{/snippet}
 
 {#each doc.segments as seg, i (seg.id)}
-	{#if seg.type === 'rubric'}
+	{#if collapsedSegments.includes(seg.id)}
+		<details class="repeated-prayer">
+			<summary>
+				<span class="repeated-title" lang="la">{collapsedLabel}</span>
+				<span class="repeated-action smallcaps">
+					<span class="when-closed">{collapsedShow}</span>
+					<span class="when-open">{collapsedHide}</span>
+				</span>
+			</summary>
+			<div class="repeated-body">
+				{@render verse(seg, i)}
+			</div>
+		</details>
+	{:else if seg.type === 'rubric'}
 		<div class="rubric" id={segmentId(seg.id)}>
 			<p class="rubric-la" lang="la">{seg.text}</p>
 			<!-- Narratives ride with any help (reading-ux §5): knowing what
@@ -122,6 +150,12 @@
 			{/if}
 		</div>
 	{:else}
+		{@render verse(seg, i)}
+	{/if}
+{/each}
+
+{#snippet verse(seg: TextDocument['segments'][number], i: number)}
+	{#if seg.type === 'verse'}
 		<!-- Who says it, and how loudly. Absent attribution renders as
 		     nothing at all: the corpus says "not read yet" by leaving the
 		     field out, and a missal that guessed would be worse than one
@@ -139,9 +173,9 @@
 		     the celebrant's lines keep his name for everyone. -->
 		{@const yours = mine && role.value === 'populus'}
 		{@const everyones = mine && isEveryonesResponse(seg, massForm.value)}
-		{#if namesSpeaker(i) || showVoice}
+		{#if (showSpeakerNames && namesSpeaker(i)) || showVoice}
 			<p class="who" class:yours={mine}>
-				{#if namesSpeaker(i) && (yours || seg.speaker)}<span class="who-name"
+				{#if showSpeakerNames && namesSpeaker(i) && (yours || seg.speaker)}<span class="who-name"
 						>{yours ? M[lang].faithful : M[lang].speakers[seg.speaker!]}</span
 					>{/if}
 				<!-- The first degree: the short responses the instruction asks
@@ -220,9 +254,89 @@
 			</div>
 		{/if}
 	{/if}
-{/each}
+{/snippet}
 
 <style>
+	.repeated-prayer {
+		margin: calc(var(--reading) * 0.55) 0;
+	}
+
+	/* A repeated prayer begins with the same summary whether it is folded or
+	   open. With glosses visible, the preceding gloss is painted below its
+	   verse box, where the box model cannot see it; keep the summary clear of
+	   that ink in BOTH states so opening the prayer never makes its heading
+	   jump toward the preceding response. */
+	.verse.glossed + .repeated-prayer {
+		margin-top: calc(var(--reading) * 0.98);
+	}
+
+	.repeated-prayer:not([open]):has(+ .verse.glossed) {
+		margin-bottom: calc(var(--reading) * 0.32);
+	}
+
+	.repeated-prayer summary {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		width: fit-content;
+		max-width: 100%;
+		padding: 0.25rem 0;
+		color: var(--ink-soft);
+		cursor: pointer;
+		list-style: none;
+	}
+
+	.repeated-prayer summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.repeated-prayer summary::before {
+		content: '›';
+		color: var(--rubric);
+		font-size: 0.9em;
+		line-height: 1;
+		transition: transform 120ms ease;
+	}
+
+	.repeated-prayer[open] summary::before {
+		transform: rotate(90deg);
+	}
+
+	.repeated-title {
+		font-size: calc(var(--reading) * 0.86);
+		font-style: italic;
+		line-height: 1.2;
+		color: var(--ink);
+	}
+
+	.repeated-action {
+		font-size: calc(var(--reading) * 0.47);
+		letter-spacing: 0.09em;
+		line-height: 1;
+		color: var(--rubric);
+	}
+
+	.when-open {
+		display: none;
+	}
+
+	.repeated-prayer[open] .when-open {
+		display: inline;
+	}
+
+	.repeated-prayer[open] .when-closed {
+		display: none;
+	}
+
+	.repeated-body {
+		margin-top: calc(var(--reading) * 0.45);
+	}
+
+	.repeated-prayer summary:focus-visible {
+		outline: 2px solid var(--rubric);
+		outline-offset: 3px;
+	}
+
 	/* The attribution line: small caps, quiet, above the words it names —
 	   the shape a missal uses for its S. and M. */
 	.who {

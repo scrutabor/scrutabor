@@ -52,11 +52,11 @@ export interface Messages {
 	derivativesLabel: string;
 	pronunciationHint: string;
 	/** Who says a line, and how loudly (corpus 0.9.0). */
-	speakers: Record<'sacerdos' | 'minister' | 'populus' | 'omnes' | 'schola', string>;
+	speakers: Record<'sacerdos' | 'ductor' | 'minister' | 'populus' | 'omnes' | 'schola', string>;
 	/** What the red mark beside a line stands for, for a reader meeting it
 	 * for the first time. Shown on hover; the abbreviation is Latin and the
 	 * expansion names both the word and who says the line. */
-	markTitle: Record<'sacerdos' | 'minister' | 'populus' | 'omnes' | 'schola', string>;
+	markTitle: Record<'sacerdos' | 'ductor' | 'minister' | 'populus' | 'omnes' | 'schola', string>;
 	/** The key to the marks, opened by tapping one. */
 	markLegendTitle: string;
 	markLegendNote: string;
@@ -83,6 +83,12 @@ export interface Messages {
 	quietReveal: string;
 	quietHide: string;
 	quietAside: string;
+	prayerFormsLabel: string;
+	prayerFormShort: string;
+	prayerFormLong: string;
+	repeatedPrayer: string;
+	repeatedPrayerShow: string;
+	repeatedPrayerHide: string;
 }
 
 const MESSAGES: Record<Lang, Messages> = {
@@ -137,6 +143,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		derivativesLabel: 'w polszczyźnie',
 		speakers: {
 			sacerdos: 'kapłan',
+			ductor: 'prowadzący',
 			minister: 'ministrant',
 			populus: 'lud',
 			omnes: 'wszyscy',
@@ -144,6 +151,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		},
 		markTitle: {
 			sacerdos: 'Versículus — werset, który mówi kapłan',
+			ductor: 'Versículus — werset osoby prowadzącej modlitwę',
 			minister: 'Responsórium — odpowiedź ministranta i wiernych',
 			populus: 'Responsórium — odpowiedź wiernych',
 			omnes: 'Omnes — mówią wszyscy razem',
@@ -173,6 +181,12 @@ const MESSAGES: Record<Lang, Messages> = {
 		quietReveal: 'pokaż',
 		quietHide: 'ukryj',
 		quietAside: 'modlitwa kapłana',
+		prayerFormsLabel: 'forma modlitwy',
+		prayerFormShort: 'antyfona',
+		prayerFormLong: 'forma rozszerzona',
+		repeatedPrayer: 'Ave María, grátia plena…',
+		repeatedPrayerShow: 'pokaż tekst',
+		repeatedPrayerHide: 'ukryj tekst',
 		pronunciationHint: 'zasady wymowy'
 	},
 	en: {
@@ -226,6 +240,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		derivativesLabel: 'in English',
 		speakers: {
 			sacerdos: 'priest',
+			ductor: 'leader',
 			minister: 'server',
 			populus: 'people',
 			omnes: 'all',
@@ -233,6 +248,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		},
 		markTitle: {
 			sacerdos: 'Versículus — the verse the priest says',
+			ductor: 'Versículus — the verse said by the prayer leader',
 			minister: 'Responsórium — the answer of the server and the faithful',
 			populus: 'Responsórium — the answer of the faithful',
 			omnes: 'Omnes — said by all together',
@@ -266,6 +282,12 @@ const MESSAGES: Record<Lang, Messages> = {
 		quietReveal: 'show',
 		quietHide: 'hide',
 		quietAside: 'the priest’s prayer',
+		prayerFormsLabel: 'prayer form',
+		prayerFormShort: 'antiphon',
+		prayerFormLong: 'extended form',
+		repeatedPrayer: 'Ave María, grátia plena…',
+		repeatedPrayerShow: 'show text',
+		repeatedPrayerHide: 'hide text',
 		pronunciationHint: 'pronunciation guide'
 	}
 };

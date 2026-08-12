@@ -25,19 +25,31 @@ const CATALOG_SOURCE: CatalogSection[] = [
 				category: 'orationes',
 				slug: 'pater-noster',
 				title: 'Pater noster',
-				note: { pl: 'Modlitwa Pańska', en: "the Lord's Prayer" }
+				note: { pl: 'modlitwa Pańska', en: "the Lord's Prayer" }
 			},
 			{
 				category: 'orationes',
 				slug: 'ave-maria',
 				title: 'Ave María',
-				note: { pl: 'Pozdrowienie anielskie', en: 'the Hail Mary' }
+				note: { pl: 'pozdrowienie anielskie', en: 'the Hail Mary' }
 			},
 			{
 				category: 'orationes',
 				slug: 'gloria-patri',
 				title: 'Glória Patri',
 				note: { pl: 'doksologia mniejsza', en: 'the lesser doxology' }
+			},
+			{
+				category: 'orationes',
+				slug: 'angelus-domini',
+				title: 'Ángelus Dómini',
+				note: { pl: 'Anioł Pański', en: 'the Angelus' }
+			},
+			{
+				category: 'orationes',
+				slug: 'sub-tuum-praesidium',
+				title: 'Sub tuum præsídium',
+				note: { pl: 'Pod Twoją obronę', en: 'under your protection' }
 			},
 			{
 				category: 'orationes',
