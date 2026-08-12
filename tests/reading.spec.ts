@@ -51,6 +51,7 @@ test('word panel separates context, dictionary, grammar and verification', async
 	await expect(panel.locator('.pronunciation-lead .pron')).toBeVisible();
 	await expect(panel.locator('.layer .pron')).toHaveCount(0);
 	await expect(panel.locator('.layer-label')).toHaveText(['hasło', 'forma']);
+	await expect(panel.locator('.head')).not.toContainText('›');
 	// The answer to the reading question comes first.
 	await expect(panel.locator('.context-layer')).toHaveAttribute(
 		'aria-label',

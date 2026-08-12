@@ -85,9 +85,8 @@
 		<a href="/app/{lang}/lemma/{word.lemma}" title={M[lang].lemmaPageHint}
 			><i lang="la">{lemmaEntry?.head ?? word.lemma}</i>{#if lemmaEntry?.gender}&nbsp;<span
 					class="gender">{GENDER_MARK[lemmaEntry.gender]}</span
-				>{/if}
-			<span class="head-arrow" aria-hidden="true">›</span></a
-		>{#if senseEntry}<span class="head-senses"> — {senseEntry.senses.join(', ')}</span>{/if}
+				>{/if}</a
+		>{#if senseEntry}<span class="head-senses">— {senseEntry.senses.join(', ')}</span>{/if}
 	</p>
 	{#if senseEntry?.note}
 		<p class="note">{senseEntry.note}</p>
@@ -161,11 +160,8 @@
 		color: var(--rubric);
 	}
 
-	.head-arrow {
-		font-style: normal;
-	}
-
 	.head-senses {
+		margin-inline-start: 0.2em;
 		font-style: normal;
 	}
 
@@ -280,7 +276,7 @@
 	}
 
 	.layers .function {
-		margin-top: 0.35rem;
+		margin-top: 0.6rem;
 	}
 
 	.layers .head,
