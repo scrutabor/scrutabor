@@ -3,7 +3,30 @@
 // downloaded folder is the book alone — so the whole file is @online.
 // Its axe sweep lives with the others in a11y.spec.
 import pkg from '../package.json' with { type: 'json' };
+import type { Locator } from '@playwright/test';
 import { atRoute, expect, test } from './fixtures';
+
+async function analysisTree(locator: Locator) {
+	return locator.evaluate((root) => {
+		function serialize(node: Node): unknown {
+			if (node.nodeType === Node.TEXT_NODE) {
+				const text = node.textContent?.replace(/\s+/g, ' ').trim();
+				return text || null;
+			}
+			if (!(node instanceof Element)) return null;
+			return {
+				tag: node.tagName.toLowerCase(),
+				attributes: Object.fromEntries(
+					[...node.attributes]
+						.map(({ name, value }) => [name, value] as const)
+						.sort(([a], [b]) => a.localeCompare(b))
+				),
+				children: [...node.childNodes].map(serialize).filter((child) => child !== null)
+			};
+		}
+		return serialize(root);
+	});
+}
 
 test.describe('landing @online', () => {
 	test('the CTA opens the book in the landing language', async ({ page }) => {
@@ -74,24 +97,35 @@ test.describe('landing @online', () => {
 
 	test('the analysis box stands open on scrutábor, and taps re-aim it', async ({ page }) => {
 		await page.goto('/pl');
-		// pre-selected on the name-word: the analysis is already in the
-		// page — a box, not a sheet, with nothing to close
-		await expect(page.locator('.word-box-form')).toHaveText('scrutábor');
-		await expect(page.locator('.word-box a[href="/app/pl/lemma/scrutor"]')).toBeVisible();
-		// The permanent specimen stays compact; the explicit section map is
-		// for the modal sheet, where unlike this exhibit the layers compete.
-		await expect(page.locator('.word-box .layer-label')).toHaveCount(0);
-		await expect(page.locator('aside')).toHaveCount(0);
+		// Pre-selected on the name-word: the app's actual WordPanel is
+		// already in the page. Only its placement changes, so it has no close
+		// button and does not overlay the verse.
+		const panel = page.locator('aside.word-panel-inline');
+		await expect(panel.locator('.form')).toHaveText('scrutábor');
+		await expect(panel.locator('a[href="/app/pl/lemma/scrutor"]')).toBeVisible();
+		await expect(panel.locator('.layer-label')).toHaveText(['hasło', 'forma']);
+		await expect(panel.locator('.pronunciation-lead .pron')).toBeVisible();
+		await expect(panel.locator('.close')).toHaveCount(0);
+		expect(await panel.evaluate((el) => getComputedStyle(el).position)).toBe('static');
 		// the tapped word carries the selection wash
 		await expect(page.locator('#w016')).toHaveClass(/selected/);
 		// a tap re-aims the box at another word
 		await page.locator('#w017').click();
-		await expect(page.locator('.word-box-form')).toHaveText('legem');
+		await expect(panel.locator('.form')).toHaveText('legem');
 		// and a cross-reference in the note re-aims it too: scrutábor's
 		// note points at the Da it answers
 		await page.locator('#w016').click();
-		await page.locator('.word-box .xref').click();
-		await expect(page.locator('.word-box-form')).toHaveText('Da');
+		await panel.locator('.xref').click();
+		await expect(panel.locator('.form')).toHaveText('Da');
+	});
+
+	test('the landing and reader render one analysis component', async ({ page }) => {
+		await page.goto('/pl');
+		const landing = await analysisTree(page.locator('.word-panel-inline .word-analysis'));
+
+		await page.goto('/app/pl/psalmi/118-he?w=w016');
+		const reader = await analysisTree(page.locator('aside.panel .word-analysis'));
+		expect(landing).toEqual(reader);
 	});
 
 	test('a cross-reference outside the verse opens the psalm page at its word', async ({ page }) => {
@@ -100,13 +134,13 @@ test.describe('landing @online', () => {
 		// specimen does not carry, so the reference leaves the landing for
 		// the real page, deep-linked at the cited word
 		await page.locator('#w020').click();
-		await expect(page.locator('.word-box-form')).toHaveText('custódiam');
+		await expect(page.locator('.word-panel-inline .form')).toHaveText('custódiam');
 		// the note cites two witnesses: scrutábor within the verse (re-aims
 		// the box) and exquíram beyond it (leaves for the psalm page)
-		await page.locator('.word-box .xref', { hasText: 'scrutábor' }).click();
-		await expect(page.locator('.word-box-form')).toHaveText('scrutábor');
+		await page.locator('.word-panel-inline .xref', { hasText: 'scrutábor' }).click();
+		await expect(page.locator('.word-panel-inline .form')).toHaveText('scrutábor');
 		await page.locator('#w020').click();
-		await page.locator('.word-box .xref', { hasText: 'exquíram' }).click();
+		await page.locator('.word-panel-inline .xref', { hasText: 'exquíram' }).click();
 		await page.waitForURL(atRoute('/app/pl/psalmi/118-he', '?w=w009'));
 		await expect(page.locator('aside')).toContainText('exquíram');
 	});
@@ -114,7 +148,7 @@ test.describe('landing @online', () => {
 	test('a sourced word note keeps its reference one disclosure away', async ({ page }) => {
 		await page.goto('/pl');
 		await page.locator('#w020').click();
-		const sources = page.locator('.word-box details.source-notes');
+		const sources = page.locator('.word-panel-inline details.source-notes');
 		await expect(sources.locator('summary')).toHaveText('źródła');
 		await expect(sources.getByRole('link')).not.toBeVisible();
 		await sources.locator('summary').click();

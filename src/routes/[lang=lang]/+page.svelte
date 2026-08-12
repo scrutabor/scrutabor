@@ -8,7 +8,7 @@
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
-	import WordCard from '$lib/components/WordCard.svelte';
+	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { bindProse } from '$lib/polish';
 
@@ -237,10 +237,9 @@
 		<section class="specimen-section">
 			<p class="lead">{t.specimenLead}</p>
 
-			<!-- The book itself, for one verse: the real slider over the
-			     real corpus text, and beneath them the analysis box — the
-			     word panel's content, standing open in the page. A tap
-			     chooses which word it explains; nothing closes. -->
+			<!-- The book itself, for one verse: the real slider, corpus text
+			     and WordPanel. The panel changes only its placement here: it
+			     stands permanently in the page instead of covering it. -->
 			<div class="specimen">
 				<div class="specimen-help">
 					<HelpLevels {lang} bind:value={helpLevel} />
@@ -257,25 +256,23 @@
 					ontap={(id) => (selected = id)}
 				/>
 				{#if selWord && selAnalysis}
-					<div class="word-box">
-						<p class="word-box-form" lang="la">{selWord.form}</p>
-						<WordCard
-							word={selWord}
-							gloss={selGloss}
-							analysis={selAnalysis}
-							lex={data.specimen.lex}
-							{lang}
-							onnavigate={(id) => {
-								// A note may cite a word from another verse of the
-								// stanza (custódiam cites exquíram); the specimen
-								// carries only its own verse, so such a reference
-								// opens the real page at the cited word instead of
-								// silently re-aiming the box at the fallback.
-								if (wordsOf.has(id)) selected = id;
-								else goto(`/app/${lang}/psalmi/118-he?w=${id}`);
-							}}
-						/>
-					</div>
+					<WordPanel
+						word={selWord}
+						gloss={selGloss}
+						analysis={selAnalysis}
+						lex={data.specimen.lex}
+						{lang}
+						inline
+						onnavigate={(id) => {
+							// A note may cite a word from another verse of the
+							// stanza (custódiam cites exquíram); the specimen
+							// carries only its own verse, so such a reference
+							// opens the real page at the cited word instead of
+							// silently re-aiming the panel at the fallback.
+							if (wordsOf.has(id)) selected = id;
+							else goto(`/app/${lang}/psalmi/118-he?w=${id}`);
+						}}
+					/>
 				{/if}
 			</div>
 		</section>
@@ -443,23 +440,6 @@
 
 	.specimen-help {
 		margin: 0 0 1.6rem;
-	}
-
-	/* The analysis box: the word panel's content, set in the page like a
-	   quotation from the app — same surface, same border, no way to close
-	   it, because on this page it IS the exhibit. */
-	.word-box {
-		margin: 1.6rem 0 0;
-		padding: 1rem 1.3rem 1.1rem;
-		border: 1px solid var(--border);
-		border-radius: 0.6rem;
-		background: var(--surface);
-	}
-
-	.word-box-form {
-		margin: 0;
-		font-size: 1.7rem;
-		font-weight: 500;
 	}
 
 	/* The citation stands over its verse like a title — under the box it

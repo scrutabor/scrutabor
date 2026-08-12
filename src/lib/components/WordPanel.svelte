@@ -13,15 +13,19 @@
 		lex,
 		lang,
 		onclose,
-		onnavigate
+		onnavigate,
+		inline = false
 	}: {
 		word: Word;
 		gloss: WordGloss | null;
 		analysis: Analysis;
 		lex: { lemmata: Record<string, LemmaEntry>; senses: Record<string, SenseEntry> };
 		lang: Lang;
-		onclose: () => void;
+		onclose?: () => void;
 		onnavigate: (id: string) => void;
+		/** The landing keeps the panel open as part of the page; every other
+		 * surface uses the dismissible bottom-sheet placement. */
+		inline?: boolean;
 	} = $props();
 </script>
 
@@ -31,8 +35,18 @@
 
 <!-- the reading page pads its foot to this height so the tapped word is
      never left underneath the sheet — see .panel-open -->
-<Sheet {lang} {onclose} label={M[lang].panelAria} extra="panel" max="45vh" {lead}>
-	<WordCard {word} {gloss} {analysis} {lex} {lang} {onnavigate} sectioned />
+<Sheet
+	{lang}
+	{onclose}
+	label={M[lang].panelAria}
+	extra={inline ? 'panel word-panel-inline' : 'panel'}
+	max="45vh"
+	{lead}
+	{inline}
+>
+	<div class="word-analysis">
+		<WordCard {word} {gloss} {analysis} {lex} {lang} {onnavigate} />
+	</div>
 </Sheet>
 
 <style>

@@ -21,6 +21,7 @@
 		// than one constant, and the pairing is why (see .panel-open).
 		max = '55vh',
 		extra = '',
+		inline = false,
 		title,
 		lead,
 		children
@@ -28,10 +29,14 @@
 		lang: Lang;
 		/** what the sheet is, for a reader who cannot see it */
 		label: string;
-		onclose: () => void;
+		onclose?: () => void;
 		max?: string;
 		/** a class for the page to address this sheet by */
 		extra?: string;
+		/** Keep the same sheet frame in the document flow. Used by the
+		 * landing specimen, where the analysis is permanent content rather
+		 * than a dismissible overlay. */
+		inline?: boolean;
 		/** the small label at the top left, for a sheet that wants one */
 		title?: string;
 		/** …or the whole left side of the header, for one that does not */
@@ -46,14 +51,15 @@
 	// control that re-renders on click (the theme toggle swaps its icon)
 	// detaches the clicked node before the event reaches window.
 	function outside(e: MouseEvent) {
+		if (inline) return;
 		const interactive = e
 			.composedPath()
 			.some((n) => n instanceof Element && n.matches('a, button, input, select, textarea, aside'));
-		if (!interactive) onclose();
+		if (!interactive) onclose?.();
 	}
 
 	function escape(e: KeyboardEvent) {
-		if (e.key === 'Escape') onclose();
+		if (!inline && e.key === 'Escape') onclose?.();
 	}
 
 	// A long analysis outgrows the sheet and the sheet scrolls, which is
@@ -76,15 +82,17 @@
 
 <svelte:window onclick={outside} onkeydown={escape} />
 
-<aside class="sheet {extra}" aria-label={label}>
+<aside class="sheet {extra}" class:inline aria-label={label}>
 	<div
 		class="inner"
-		style:max-height={max}
+		style:max-height={inline ? undefined : max}
 		onscroll={(e) => (scrolled = e.currentTarget.scrollTop > 0)}
 	>
 		<header class:scrolled>
 			{#if lead}{@render lead()}{:else}<span class="smallcaps title">{title}</span>{/if}
-			<button class="close" onclick={onclose} aria-label={M[lang].close}>×</button>
+			{#if !inline && onclose}
+				<button class="close" onclick={onclose} aria-label={M[lang].close}>×</button>
+			{/if}
 		</header>
 		{@render children()}
 	</div>
@@ -112,6 +120,28 @@
 			border-bottom: none;
 			border-radius: 0.9rem 0.9rem 0 0;
 		}
+	}
+
+	/* The landing shows the very same sheet as permanent content. Only its
+	   placement changes: it participates in the page flow, does not cast an
+	   overlay shadow, and never becomes its own scroll region. */
+	.sheet.inline {
+		position: static;
+		inset: auto;
+		z-index: auto;
+		max-width: 42rem;
+		margin: 1.6rem auto 0;
+		border: 1px solid var(--border);
+		border-radius: 0.9rem;
+		box-shadow: none;
+	}
+
+	.sheet.inline .inner {
+		overflow: visible;
+	}
+
+	.sheet.inline header {
+		position: static;
 	}
 
 	/* This box still both scrolls and carries the height the page reserves,

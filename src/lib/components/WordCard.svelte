@@ -1,8 +1,8 @@
 <script lang="ts">
 	// The word analysis itself — everything the panel says about a word,
-	// without deciding where it is said. The reading surfaces present it
-	// in a sheet (WordPanel); the landing presents it in a box that never
-	// closes, because there its whole purpose is to be looked at.
+	// without deciding where it is said. WordPanel decides whether the
+	// shared analysis sits in a dismissible sheet or permanently in the
+	// landing page; there is deliberately only one information layout.
 	import Pronunciation from '$lib/components/Pronunciation.svelte';
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import type { Analysis, LemmaEntry, SenseEntry, Word, WordGloss } from '$lib/corpus';
@@ -15,8 +15,7 @@
 		analysis,
 		lex,
 		lang,
-		onnavigate,
-		sectioned = false
+		onnavigate
 	}: {
 		word: Word;
 		gloss: WordGloss | null;
@@ -26,9 +25,6 @@
 		lex: { lemmata: Record<string, LemmaEntry>; senses: Record<string, SenseEntry> };
 		lang: Lang;
 		onnavigate: (id: string) => void;
-		/** The reading sheet names each information layer. The landing
-		 * specimen keeps the compact, uninterrupted presentation. */
-		sectioned?: boolean;
 	} = $props();
 
 	// Cross-references in function prose are authored as „form” (wNNN)
@@ -113,35 +109,27 @@
 	</p>
 {/snippet}
 
-{#if sectioned}
-	<div class="pronunciation-lead">
-		<Pronunciation form={word.form} {lang} />
-	</div>
-	<div class="layers">
-		{#if gloss}
-			<section class="layer context-layer" aria-label={M[lang].wordContextLabel}>
-				<div class="layer-body">{@render context()}</div>
-			</section>
-		{/if}
-		<section class="layer" aria-labelledby="word-entry-label">
-			<h3 class="layer-label smallcaps" id="word-entry-label">{M[lang].wordEntryLabel}</h3>
-			<div class="layer-body">{@render entry()}</div>
-		</section>
-		<section class="layer" aria-labelledby="word-form-label">
-			<h3 class="layer-label smallcaps" id="word-form-label">{M[lang].wordFormLabel}</h3>
-			<div class="layer-body">{@render grammar()}</div>
-		</section>
-		<div class="verification">
-			{@render verification()}
-		</div>
-	</div>
-{:else}
-	{@render entry()}
-	{@render grammar()}
+<div class="pronunciation-lead">
 	<Pronunciation form={word.form} {lang} />
-	{@render context()}
-	{@render verification()}
-{/if}
+</div>
+<div class="layers">
+	{#if gloss}
+		<section class="layer context-layer" aria-label={M[lang].wordContextLabel}>
+			<div class="layer-body">{@render context()}</div>
+		</section>
+	{/if}
+	<section class="layer" aria-labelledby="word-entry-label">
+		<h3 class="layer-label smallcaps" id="word-entry-label">{M[lang].wordEntryLabel}</h3>
+		<div class="layer-body">{@render entry()}</div>
+	</section>
+	<section class="layer" aria-labelledby="word-form-label">
+		<h3 class="layer-label smallcaps" id="word-form-label">{M[lang].wordFormLabel}</h3>
+		<div class="layer-body">{@render grammar()}</div>
+	</section>
+	<div class="verification">
+		{@render verification()}
+	</div>
+</div>
 
 <style>
 	.head {
