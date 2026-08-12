@@ -102,7 +102,6 @@
 					href="/app/{lang}/grammatica/{part.concept}">{part.text}</a
 				>{:else}{part.text}{/if}{/each}
 	</p>
-	<Pronunciation form={word.form} {lang} />
 {/snippet}
 
 {#snippet verification()}
@@ -116,6 +115,9 @@
 {/snippet}
 
 {#if sectioned}
+	<div class="pronunciation-lead">
+		<Pronunciation form={word.form} {lang} />
+	</div>
 	<div class="layers">
 		{#if gloss}
 			<section class="layer context-layer" aria-label={M[lang].wordContextLabel}>
@@ -137,6 +139,7 @@
 {:else}
 	{@render entry()}
 	{@render grammar()}
+	<Pronunciation form={word.form} {lang} />
 	{@render context()}
 	{@render verification()}
 {/if}

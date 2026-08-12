@@ -46,6 +46,10 @@ test('word panel separates context, dictionary, grammar and verification', async
 	await page.locator('#w019').click(); // Mater
 	const panel = page.locator('aside');
 	await expect(panel.locator('.form')).toHaveText('Mater');
+	// Pronunciation belongs to the selected form and is available before
+	// contextual or reference material requires any scrolling.
+	await expect(panel.locator('.pronunciation-lead .pron')).toBeVisible();
+	await expect(panel.locator('.layer .pron')).toHaveCount(0);
 	await expect(panel.locator('.layer-label')).toHaveText(['hasło', 'forma']);
 	// The answer to the reading question comes first.
 	await expect(panel.locator('.context-layer')).toHaveAttribute(
