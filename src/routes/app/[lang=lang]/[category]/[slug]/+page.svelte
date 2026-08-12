@@ -31,8 +31,10 @@
 	// nothing, so it is not offered — Quod ore súmpsimus is the priest's
 	// alone from beginning to end.
 	const takesPart = $derived(
-		new Set(doc.segments.filter((sg) => sg.type === 'verse' && sg.speaker).map((sg) => sg.speaker))
-			.size > 1
+		data.category === 'ordinarium' &&
+			new Set(
+				doc.segments.filter((sg) => sg.type === 'verse' && sg.speaker).map((sg) => sg.speaker)
+			).size > 1
 	);
 	const gloss = $derived(data.gloss);
 	const sectionLabel = $derived(sectionFor(data.category)?.label[lang] ?? '');
@@ -40,6 +42,16 @@
 	// that is the liturgical sequence, so a reader can follow the Mass
 	// text to text without returning to the catalog.
 	const around = $derived(neighborsOf(data.category, data.slug));
+	const repeatedSegments = $derived(
+		data.category === 'orationes' && data.slug === 'angelus-domini' ? ['ave1', 'ave2', 'ave3'] : []
+	);
+	const hasDevotionalLeader = $derived(
+		doc.segments.some((sg) => sg.type === 'verse' && sg.speaker === 'ductor')
+	);
+	const hasPrayerForms = $derived(
+		data.category === 'orationes' && data.slug === 'sub-tuum-praesidium'
+	);
+	let longFormOpen = $state(false);
 
 	// Three verbosity states:
 	// 0 = text only · 1 = + interlinear glosses · 2 = + translations (as
@@ -179,18 +191,51 @@
 		</header>
 
 		<main class:panel-open={selectedWord !== null || panel.keepPad}>
-			<TextBody
-				{doc}
-				{gloss}
-				{lang}
-				{helpLevel}
-				selectedId={panel.id}
-				ontap={tapWord}
-				onmark={openLegend}
-				verses={data.verses}
-				onverse={data.verses ? tapVerse : undefined}
-				{citedVerse}
-			/>
+			{#if hasPrayerForms}
+				<section class="prayer-forms">
+					<div class="form-tabs" role="group" aria-label={msgs.prayerFormsLabel}>
+						<button
+							class:active={!longFormOpen}
+							aria-pressed={!longFormOpen}
+							onclick={() => (longFormOpen = false)}
+						>
+							{msgs.prayerFormShort}
+						</button>
+						<button
+							class:active={longFormOpen}
+							aria-pressed={longFormOpen}
+							onclick={() => (longFormOpen = true)}
+						>
+							{msgs.prayerFormLong}
+						</button>
+					</div>
+					<TextBody
+						doc={longFormOpen ? doc : { ...doc, segments: doc.segments.slice(0, 1) }}
+						{gloss}
+						{lang}
+						{helpLevel}
+						selectedId={panel.id}
+						ontap={tapWord}
+					/>
+				</section>
+			{:else}
+				<TextBody
+					{doc}
+					{gloss}
+					{lang}
+					{helpLevel}
+					selectedId={panel.id}
+					ontap={tapWord}
+					onmark={openLegend}
+					verses={data.verses}
+					onverse={data.verses ? tapVerse : undefined}
+					{citedVerse}
+					collapsedSegments={repeatedSegments}
+					collapsedLabel={msgs.repeatedPrayer}
+					collapsedShow={msgs.repeatedPrayerShow}
+					collapsedHide={msgs.repeatedPrayerHide}
+				/>
+			{/if}
 
 			<Pager
 				{lang}
@@ -219,7 +264,7 @@
 		{/if}
 
 		{#if legendOpen}
-			<MarkLegend {lang} onclose={() => (legendOpen = false)} />
+			<MarkLegend {lang} devotional={hasDevotionalLeader} onclose={() => (legendOpen = false)} />
 		{/if}
 
 		{#if selectedWord && selectedAnalysis}
@@ -245,6 +290,42 @@
 
 	main.panel-open {
 		padding-bottom: 45vh;
+	}
+
+	.form-tabs {
+		display: flex;
+		gap: 0.15rem;
+		width: fit-content;
+		max-width: 100%;
+		margin: 0 0 1.55rem;
+		padding: 0.18rem;
+		border: 1px solid var(--rule);
+		border-radius: 999px;
+		background: var(--wash);
+	}
+
+	.form-tabs button {
+		padding: 0.34rem 0.8rem 0.3rem;
+		border: 0;
+		border-radius: 999px;
+		background: transparent;
+		color: var(--ink-soft);
+		font: inherit;
+		font-size: 0.7rem;
+		letter-spacing: 0.1em;
+		font-variant: small-caps;
+		cursor: pointer;
+	}
+
+	.form-tabs button.active {
+		background: var(--paper);
+		color: var(--rubric);
+		box-shadow: 0 1px 3px color-mix(in srgb, var(--ink) 11%, transparent);
+	}
+
+	.form-tabs button:focus-visible {
+		outline: 2px solid var(--rubric);
+		outline-offset: 2px;
 	}
 
 	/* The about pill opens the shared bottom sheet, so the reading layout

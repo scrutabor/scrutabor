@@ -218,9 +218,14 @@ test('no token ever fragments across lines, any text, narrow viewport', async ({
 		'/app/pl/ordinarium/confiteor',
 		'/app/pl/orationes/pater-noster',
 		'/app/pl/orationes/ave-maria',
-		'/app/pl/orationes/gloria-patri'
+		'/app/pl/orationes/gloria-patri',
+		'/app/pl/orationes/angelus-domini',
+		'/app/pl/orationes/sub-tuum-praesidium'
 	]) {
 		await page.goto(path);
+		await page.locator('details.repeated-prayer').evaluateAll((details) => {
+			for (const detail of details) (detail as HTMLDetailsElement).open = true;
+		});
 		await expect(page.locator('.verse .token').first()).toBeVisible();
 		const fragmented = await page.evaluate(() =>
 			[...document.querySelectorAll('.verse .token')]
@@ -229,6 +234,38 @@ test('no token ever fragments across lines, any text, narrow viewport', async ({
 		);
 		expect(fragmented, path).toEqual([]);
 	}
+});
+
+test('Angelus keeps responses visible and folds the repeated Ave Maria texts', async ({ page }) => {
+	await page.goto('/app/pl/orationes/angelus-domini');
+	await expect(page.getByRole('button', { name: /Versículus.*prowadzącej/ }).first()).toBeVisible();
+	await expect(page.getByRole('button', { name: /Responsórium.*wiernych/ }).first()).toBeVisible();
+	await page
+		.getByRole('button', { name: /Versículus.*prowadzącej/ })
+		.first()
+		.click();
+	await expect(page.getByText('werset osoby prowadzącej modlitwę')).toBeVisible();
+	await expect(page.getByText('mówią wszyscy razem')).toBeVisible();
+	await page.getByRole('button', { name: 'Zamknij' }).click();
+	const repetitions = page.locator('details.repeated-prayer');
+	await expect(repetitions).toHaveCount(3);
+	await expect(repetitions.first()).not.toHaveAttribute('open', '');
+	await repetitions.first().locator('summary').click();
+	await expect(repetitions.first()).toHaveAttribute('open', '');
+	await expect(repetitions.first().getByRole('button', { name: /^Ave / })).toBeVisible();
+});
+
+test('Sub tuum separates the antiphon from the customary Polish continuation', async ({ page }) => {
+	await page.goto('/app/pl/orationes/sub-tuum-praesidium');
+	const shortForm = page.getByRole('button', { name: 'antyfona' });
+	const longForm = page.getByRole('button', { name: 'zwyczajowa forma polska' });
+	await expect(shortForm).toHaveAttribute('aria-pressed', 'true');
+	await expect(longForm).toHaveAttribute('aria-pressed', 'false');
+	await expect(page.locator('button#w025')).toHaveCount(0);
+	await longForm.click();
+	await expect(longForm).toHaveAttribute('aria-pressed', 'true');
+	await expect(page.locator('button#w001')).toHaveCount(1);
+	await expect(page.locator('button#w025')).toBeVisible();
 });
 
 test('the about sheet is closed at every slider position, opens on demand', async ({ page }) => {

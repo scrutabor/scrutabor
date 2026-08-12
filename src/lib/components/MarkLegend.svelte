@@ -10,9 +10,17 @@
 	import Sheet from '$lib/components/Sheet.svelte';
 	import { M, type Lang } from '$lib/i18n';
 
-	let { lang, onclose }: { lang: Lang; onclose: () => void } = $props();
+	let {
+		lang,
+		onclose,
+		devotional = false
+	}: { lang: Lang; onclose: () => void; devotional?: boolean } = $props();
 	const msgs = $derived(M[lang]);
-	const KEYS = ['sacerdos', 'minister', 'omnes'] as const;
+	const KEYS = $derived(
+		devotional
+			? (['ductor', 'populus', 'omnes'] as const)
+			: (['sacerdos', 'minister', 'omnes'] as const)
+	);
 </script>
 
 <Sheet
@@ -26,7 +34,9 @@
 	<dl>
 		{#each KEYS as k (k)}
 			<div class="row">
-				<dt class="mark" lang="la">{k === 'sacerdos' ? 'V.' : k === 'minister' ? 'R.' : 'O.'}</dt>
+				<dt class="mark" lang="la">
+					{k === 'sacerdos' || k === 'ductor' ? 'V.' : k === 'omnes' ? 'O.' : 'R.'}
+				</dt>
 				<dd>{msgs.markTitle[k]}</dd>
 			</div>
 		{/each}
