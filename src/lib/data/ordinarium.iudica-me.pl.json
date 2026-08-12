@@ -160,7 +160,18 @@
 		},
 		"w030": {
 			"gloss": "smutny",
-			"function": "To zdanie nie rozstrzyga, czy forma jest rodzaju męskiego, czy żeńskiego."
+			"function": "Mianownik rodzaju męskiego. Sama forma łacińska może być także żeńska, lecz odpowiadające jej formy hebrajska i grecka są męskie.",
+			"function_citations": [
+				{
+					"title": "Biblia Hebraica Stuttgartensia",
+					"locator": "Psalm 43, 2"
+				},
+				{
+					"title": "Septuaginta, ed. Rahlfs–Hanhart",
+					"locator": "Psalm 42, 2",
+					"url": "https://www.die-bibel.de/bibel/LXX/PSA.42"
+				}
+			]
 		},
 		"w031": {
 			"gloss": "chodzę"

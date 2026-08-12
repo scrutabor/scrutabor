@@ -62,7 +62,14 @@
 		},
 		"w013": {
 			"gloss": "before the eyes",
-			"function": "The form may be dative or ablative. The sentence does not determine the case."
+			"function": "Dative depending on “óbtuli” (w017). The phrase means “I offered before the eyes of Thy majesty.”",
+			"function_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. offero",
+					"url": "https://cld.bbaw.de/lemma/lat/offero"
+				}
+			]
 		},
 		"w014": {
 			"gloss": "of Thy"

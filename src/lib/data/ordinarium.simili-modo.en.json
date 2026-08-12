@@ -230,7 +230,19 @@
 		},
 		"w042": {
 			"gloss": "the mystery",
-			"function": "Nominative singular. The syntactic relation of “mystérium fídei” to the rest of the formula remains disputed."
+			"function": "An independent nominative apposition to the words about the chalice of the Blood: Christ's Blood is present in the sacrament as a mystery held by faith.",
+			"function_citations": [
+				{
+					"title": "Thomas Aquinas, Summa theologiae",
+					"locator": "III, q. 78, a. 3, ad 5–6",
+					"url": "https://www.corpusthomisticum.org/sth4078.html"
+				},
+				{
+					"title": "Paulus VI, Mysterium fidei",
+					"locator": "introduction",
+					"url": "https://www.vatican.va/content/paul-vi/la/encyclicals/documents/hf-p_vi_enc_03091965_mysterium.html"
+				}
+			]
 		},
 		"w043": {
 			"gloss": "of faith"

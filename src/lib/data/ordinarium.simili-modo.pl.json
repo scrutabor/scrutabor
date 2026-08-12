@@ -230,7 +230,19 @@
 		},
 		"w042": {
 			"gloss": "tajemnica",
-			"function": "Mianownik liczby pojedynczej. Związek składniowy zwrotu „mystérium fídei” z resztą formuły pozostaje sporny."
+			"function": "Samodzielne dopowiedzenie w mianowniku do słów o kielichu Krwi: obecność Krwi Chrystusa w sakramencie jest tajemnicą przyjmowaną wiarą.",
+			"function_citations": [
+				{
+					"title": "Thomas Aquinas, Summa theologiae",
+					"locator": "III, q. 78, a. 3, ad 5–6",
+					"url": "https://www.corpusthomisticum.org/sth4078.html"
+				},
+				{
+					"title": "Paulus VI, Mysterium fidei",
+					"locator": "introduction",
+					"url": "https://www.vatican.va/content/paul-vi/la/encyclicals/documents/hf-p_vi_enc_03091965_mysterium.html"
+				}
+			]
 		},
 		"w043": {
 			"gloss": "wiary"
