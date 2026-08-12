@@ -13,6 +13,7 @@ import {
 	hasAnswers,
 	hasParticipation,
 	isDialogue,
+	isSharedPrayer,
 	marked,
 	namesSpeaker,
 	namesVoice,
@@ -30,6 +31,11 @@ const verse = (speaker?: string, opts: { voice?: string; words?: number } = {}):
 		words: Array.from({ length: opts.words ?? 5 }, (_, i) => ({ id: `w${i}` }))
 	}) as unknown as Segment;
 const rubric = (): Segment => ({ id: `r${++n}`, type: 'rubric', text: '…' }) as unknown as Segment;
+const participating = (speaker: string, forms: ('cantu' | 'lecta')[]): Segment =>
+	({
+		...verse(speaker),
+		participation: Object.fromEntries(forms.map((form) => [form, { source: 'DMS' }]))
+	}) as Segment;
 
 // A prayer: one voice throughout, and the answer at the end.
 const PRAYER = [verse('sacerdos'), verse('sacerdos'), verse('sacerdos'), verse('minister')];
@@ -51,6 +57,32 @@ describe('telling a prayer from a dialogue', () => {
 		const alone = [verse('sacerdos'), verse('sacerdos')];
 		expect(turns(alone)).toBe(0);
 		expect(hasAnswers(alone)).toBe(false);
+	});
+});
+
+describe('a prayer shared with the faithful', () => {
+	it('recognises a whole Ordinary part in the applicable Mass form', () => {
+		const credo = [
+			participating('sacerdos', ['cantu', 'lecta']),
+			participating('sacerdos', ['cantu', 'lecta'])
+		];
+		expect(isSharedPrayer(credo, 'cantu')).toBe(true);
+		expect(isSharedPrayer(credo, 'lecta')).toBe(true);
+	});
+
+	it('recognises an alternating Ordinary when every line belongs to the faithful', () => {
+		const kyrie = [participating('sacerdos', ['cantu']), participating('minister', ['cantu'])];
+		expect(isSharedPrayer(kyrie, 'cantu')).toBe(true);
+		expect(isSharedPrayer(kyrie, 'lecta')).toBe(false);
+	});
+
+	it('keeps a one-line fixed response distinct', () => {
+		expect(isSharedPrayer([participating('minister', ['lecta'])], 'lecta')).toBe(false);
+	});
+
+	it('does not generalise from only part of a longer prayer', () => {
+		const pater = [participating('sacerdos', ['lecta']), verse('sacerdos')];
+		expect(isSharedPrayer(pater, 'lecta')).toBe(false);
 	});
 });
 

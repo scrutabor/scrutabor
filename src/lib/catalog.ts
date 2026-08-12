@@ -37,20 +37,32 @@ const CATALOG_SOURCE: CatalogSection[] = [
 				category: 'orationes',
 				slug: 'gloria-patri',
 				title: 'Glória Patri',
-				note: { pl: 'doksologia mniejsza', en: 'the lesser doxology' }
+				note: { pl: 'Doksologia mniejsza', en: 'the lesser doxology' }
+			},
+			{
+				category: 'orationes',
+				slug: 'angelus-domini',
+				title: 'Ángelus Dómini',
+				note: { pl: 'Anioł Pański', en: 'the Angelus' }
+			},
+			{
+				category: 'orationes',
+				slug: 'sub-tuum-praesidium',
+				title: 'Sub tuum præsídium',
+				note: { pl: 'Pod Twoją obronę', en: 'under your protection' }
 			},
 			{
 				category: 'orationes',
 				slug: 'salve-regina',
 				title: 'Salve Regína',
-				note: { pl: 'antyfona maryjna, po Mszy cichej', en: 'the Marian antiphon, after low Mass' }
+				note: { pl: 'Antyfona maryjna, po Mszy cichej', en: 'the Marian antiphon, after low Mass' }
 			},
 			{
 				category: 'orationes',
 				slug: 'regina-caeli',
 				title: 'Regína cæli',
 				note: {
-					pl: 'antyfona maryjna okresu wielkanocnego',
+					pl: 'Antyfona maryjna okresu wielkanocnego',
 					en: 'the Marian antiphon of Paschaltide'
 				}
 			},
@@ -59,7 +71,7 @@ const CATALOG_SOURCE: CatalogSection[] = [
 				slug: 'sancte-michael',
 				title: 'Sancte Míchaël',
 				note: {
-					pl: 'modlitwa do świętego Michała Archanioła',
+					pl: 'Modlitwa do świętego Michała Archanioła',
 					en: 'the prayer to St Michael the Archangel'
 				}
 			}
@@ -73,37 +85,37 @@ const CATALOG_SOURCE: CatalogSection[] = [
 				category: 'ordinarium',
 				slug: 'confiteor',
 				title: 'Confíteor (Ministrórum)',
-				note: { pl: 'spowiedź powszechna', en: 'the general confession' }
+				note: { pl: 'Spowiedź powszechna', en: 'the general confession' }
 			},
 			{
 				category: 'ordinarium',
 				slug: 'kyrie',
 				title: 'Kýrie, eléison',
-				note: { pl: 'wezwania o zmiłowanie', en: 'the plea for mercy' }
+				note: { pl: 'Wezwania o zmiłowanie', en: 'the plea for mercy' }
 			},
 			{
 				category: 'ordinarium',
 				slug: 'gloria',
 				title: 'Glória in excélsis',
-				note: { pl: 'hymn anielski', en: 'the angelic hymn' }
+				note: { pl: 'Hymn anielski', en: 'the angelic hymn' }
 			},
 			{
 				category: 'ordinarium',
 				slug: 'credo',
 				title: 'Credo',
-				note: { pl: 'wyznanie wiary', en: 'the profession of faith' }
+				note: { pl: 'Wyznanie wiary', en: 'the profession of faith' }
 			},
 			{
 				category: 'ordinarium',
 				slug: 'sanctus',
 				title: 'Sanctus',
-				note: { pl: 'przed Kanonem', en: 'before the Canon' }
+				note: { pl: 'Przed Kanonem', en: 'before the Canon' }
 			},
 			{
 				category: 'ordinarium',
 				slug: 'agnus-dei',
 				title: 'Agnus Dei',
-				note: { pl: 'przed Komunią', en: 'before Communion' }
+				note: { pl: 'Przed Komunią', en: 'before Communion' }
 			}
 		]
 	},
@@ -119,7 +131,7 @@ const CATALOG_SOURCE: CatalogSection[] = [
 				category: 'psalmi',
 				slug: '118-he',
 				title: 'Psalmus 118, HE',
-				note: { pl: 'wersety 33-40, z mottem', en: 'verses 33-40, with the motto' }
+				note: { pl: 'Wersety 33-40, z mottem', en: 'verses 33-40, with the motto' }
 			}
 		]
 	}

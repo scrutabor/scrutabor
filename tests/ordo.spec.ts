@@ -327,8 +327,7 @@ test('the reader is told which lines are theirs, and at which Mass', async ({ pa
 
 	// at a low Mass the same lines are the faithful's, by n. 31 b
 	await page.locator('.option[data-word="cicha"]').click();
-	await expect(names().filter({ hasText: 'ministrant' })).toHaveCount(0);
-	await expect(names().filter({ hasText: 'wierni' }).first()).toBeVisible();
+	await expect(names().filter({ hasText: 'ministrant i wierni' }).first()).toBeVisible();
 
 	// and a server still sees the rubrical speaker, which is what he needs
 	await page.locator('.option[data-word="ministranta"]').click();

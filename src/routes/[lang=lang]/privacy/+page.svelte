@@ -27,7 +27,7 @@
 			lede: 'Scrutabor nie wymaga rejestracji, nie zbiera danych i niczego nie śledzi.',
 			points: [
 				'Nie używamy plików cookie, analityki, reklam ani żadnych skryptów osób trzecich. Strona nie mierzy odwiedzin i nie buduje żadnych profili.',
-				'Ustawienia czytelnika — język, motyw, wielkość pisma, wybrana rola we Mszy, miejsce w lekturze — są zapisywane wyłącznie w pamięci przeglądarki i nigdy nie opuszczają urządzenia. Zainstalowana aplikacja przechowuje na urządzeniu całą książkę, aby działała także bez połączenia z internetem.',
+				'Ustawienia czytelnika — język, motyw, wielkość pisma, wybrana rola i forma modlitwy, miejsce w lekturze — są zapisywane wyłącznie w pamięci przeglądarki i nigdy nie opuszczają urządzenia. Zainstalowana aplikacja przechowuje na urządzeniu całą książkę, aby działała także bez połączenia z internetem.',
 				'Strona to zbiór statycznych plików serwowanych przez Cloudflare Pages. Jak każdy serwer WWW, Cloudflare widzi adres IP, na który dostarcza pliki. My nie prowadzimy dzienników odwiedzin i nie przechowujemy niczego, co mogłoby zostać przekazane osobom trzecim.'
 			],
 			contact: 'Uwagi i poprawki: github.com/scrutabor.',
@@ -39,7 +39,7 @@
 			lede: 'Scrutabor requires no registration, collects no data, and tracks nothing.',
 			points: [
 				'There are no cookies, no analytics, no ads, and no third-party scripts. The site does not count visits and builds no profiles.',
-				'A reader’s settings — language, theme, text size, the chosen part at Mass, the place in the reading — are stored only in the browser’s own storage and never leave the device. The installed app keeps the whole book on the device so that it works offline.',
+				'A reader’s settings — language, theme, text size, the chosen part and prayer form, the place in the reading — are stored only in the browser’s own storage and never leave the device. The installed app keeps the whole book on the device so that it works offline.',
 				'The site is a set of static files served by Cloudflare Pages. Like any web server, Cloudflare sees the IP address it delivers files to. We keep no visit logs and hold nothing that could be handed over.'
 			],
 			contact: 'Questions and corrections: github.com/scrutabor.',

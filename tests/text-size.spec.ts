@@ -17,7 +17,13 @@ const size = (page: Page) =>
 		root: getComputedStyle(document.documentElement).fontSize,
 		latin: parseFloat(getComputedStyle(document.querySelector('.verse')!).fontSize),
 		gloss: parseFloat(getComputedStyle(document.querySelector('.verse rt')!).fontSize),
-		mark: parseFloat(getComputedStyle(document.querySelector('.verse .mark')!).fontSize)
+		// A shared Ordinary prayer deliberately has no V./R. mark: the whole
+		// text is the faithful's part, so there is no dialogue to distinguish.
+		// Tests which need the mark use a marked text; persistence checks need
+		// only the root and must not assume every reading surface has one.
+		mark: document.querySelector('.verse .mark')
+			? parseFloat(getComputedStyle(document.querySelector('.verse .mark')!).fontSize)
+			: Number.NaN
 	}));
 
 test('the control says what it is on, and what else it could be', async ({ page }) => {

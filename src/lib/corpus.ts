@@ -54,7 +54,7 @@ export interface Word {
 /** Who says a line. Absent means the sources have not been read for it
  * yet (corpus SCHEMA.md 0.9.0) — which must be rendered as unmarked, not
  * guessed at. */
-export type Speaker = 'sacerdos' | 'minister' | 'populus' | 'omnes' | 'schola';
+export type Speaker = 'sacerdos' | 'ductor' | 'minister' | 'populus' | 'omnes' | 'schola';
 
 /** How loudly: aloud, raised-but-not-full, silent, sung. */
 export type Voice = 'clara' | 'submissa' | 'secreto' | 'cantus';

@@ -91,6 +91,44 @@ test('a dialogue is marked V. and R. down the page, as the books mark it', async
 	expect(await marks.first().evaluate((el) => getComputedStyle(el).color)).not.toBe('');
 });
 
+test('an Ordinary prayer shared with the faithful is named without a false versicle mark', async ({
+	page
+}) => {
+	// The Missale gives the Credo to the celebrant; the 1958 Instruction
+	// gives the faithful the whole Ordinary too (25 b at sung Mass, 31 c at
+	// low Mass). Both are true. A V. plus the former label “wierni” made
+	// those truths look contradictory and called a profession a versicle.
+	for (const slug of ['gloria', 'credo', 'sanctus', 'agnus-dei']) {
+		await page.goto(`/app/pl/ordinarium/${slug}`);
+		await expect(page.locator('.who-name').first()).toHaveText('kapłan i wierni');
+		await expect(page.locator('.verse .mark')).toHaveCount(0);
+	}
+
+	// Changing viewpoint changes the attribution, not the nature of the
+	// text: Credo still is not a V./R. exchange when the priest is reading.
+	// A one-voice text has no reason to show the role picker, so set the
+	// persisted viewpoint directly and revisit it as a priest would.
+	await page.evaluate(() => localStorage.setItem('scrutabor-role', 'sacerdos'));
+	await page.goto('/app/pl/ordinarium/credo');
+	await expect(page.locator('.who-name').first()).toHaveText('kapłan');
+	await expect(page.locator('.verse .mark')).toHaveCount(0);
+	await page.evaluate(() => localStorage.setItem('scrutabor-role', 'populus'));
+
+	// The sung Kyrie is likewise the faithful's whole Ordinary; at low Mass
+	// they have the server's alternating lines, so V./R. remain useful there.
+	await page.goto('/app/pl/ordinarium/kyrie');
+	await expect(page.locator('.who-name').first()).toHaveText('wierni');
+	await expect(page.locator('.verse .mark')).toHaveCount(0);
+	await page.locator('.option[data-word="cicha"]').click();
+	await expect(page.locator('.verse .mark').first()).toHaveText('V.');
+
+	// The ministers' Confiteor becomes a shared prayer only in a low Mass
+	// (31 b), and names both the rubrical and participating voices.
+	await page.goto('/app/pl/ordinarium/confiteor');
+	await expect(page.locator('.who-name').first()).toHaveText('ministrant i wierni');
+	await expect(page.locator('.verse .mark')).toHaveCount(0);
+});
+
 test('the reader can change their part from a text page, and the marks follow', async ({
 	page
 }) => {

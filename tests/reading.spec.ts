@@ -218,9 +218,14 @@ test('no token ever fragments across lines, any text, narrow viewport', async ({
 		'/app/pl/ordinarium/confiteor',
 		'/app/pl/orationes/pater-noster',
 		'/app/pl/orationes/ave-maria',
-		'/app/pl/orationes/gloria-patri'
+		'/app/pl/orationes/gloria-patri',
+		'/app/pl/orationes/angelus-domini',
+		'/app/pl/orationes/sub-tuum-praesidium'
 	]) {
 		await page.goto(path);
+		await page.locator('details.repeated-prayer').evaluateAll((details) => {
+			for (const detail of details) (detail as HTMLDetailsElement).open = true;
+		});
 		await expect(page.locator('.verse .token').first()).toBeVisible();
 		const fragmented = await page.evaluate(() =>
 			[...document.querySelectorAll('.verse .token')]
@@ -229,6 +234,93 @@ test('no token ever fragments across lines, any text, narrow viewport', async ({
 		);
 		expect(fragmented, path).toEqual([]);
 	}
+});
+
+test('Angelus keeps responses visible and folds the repeated Ave Maria texts', async ({ page }) => {
+	await page.goto('/app/pl/orationes/angelus-domini');
+	await expect(page.getByRole('button', { name: /Versículus.*prowadzącej/ }).first()).toBeVisible();
+	await expect(page.getByRole('button', { name: /Responsórium.*wiernych/ }).first()).toBeVisible();
+	await expect(page.locator('.who-name')).toHaveCount(0);
+	await page
+		.getByRole('button', { name: /Versículus.*prowadzącej/ })
+		.first()
+		.click();
+	await expect(page.getByText('werset osoby prowadzącej modlitwę')).toBeVisible();
+	await expect(page.getByText('mówią wszyscy razem')).toHaveCount(0);
+	await page.getByRole('button', { name: 'Zamknij' }).click();
+	const repetitions = page.locator('details.repeated-prayer');
+	await expect(repetitions).toHaveCount(3);
+	await expect(repetitions.first().locator('summary')).toContainText('Ave María, grátia plena…');
+	const foldGeometry = await repetitions.first().evaluate((detail) => {
+		const title = detail.querySelector<HTMLElement>('.repeated-title')!;
+		const action = detail.querySelector<HTMLElement>('.repeated-action')!;
+		const previous = detail.previousElementSibling!;
+		const next = detail.nextElementSibling!;
+		const titleRect = title.getBoundingClientRect();
+		const actionRect = action.getBoundingClientRect();
+		const previousGlosses = [...previous.querySelectorAll('rt')].map((rt) =>
+			rt.getBoundingClientRect()
+		);
+		const nextLatin = next.querySelector<HTMLElement>('.base')!.getBoundingClientRect();
+		return {
+			controlOffset:
+				Math.abs(titleRect.top + titleRect.bottom - actionRect.top - actionRect.bottom) / 2,
+			spaceOffset: Math.abs(
+				titleRect.top -
+					Math.max(...previousGlosses.map((rect) => rect.bottom)) -
+					(nextLatin.top - titleRect.bottom)
+			)
+		};
+	});
+	expect(foldGeometry.controlOffset).toBeLessThanOrEqual(1);
+	// The self-contained file artifact uses a slightly different font metric,
+	// but the two pieces of whitespace must still read as one balanced gap.
+	expect(foldGeometry.spaceOffset).toBeLessThanOrEqual(8);
+	await expect(repetitions.first()).not.toHaveAttribute('open', '');
+	const summaryGap = () =>
+		repetitions.first().evaluate((detail) => {
+			const summary = detail.querySelector('summary')!;
+			return (
+				summary.getBoundingClientRect().top -
+				detail.previousElementSibling!.getBoundingClientRect().bottom
+			);
+		});
+	const foldedSummaryGap = await summaryGap();
+	await repetitions.first().locator('summary').click();
+	await expect(repetitions.first()).toHaveAttribute('open', '');
+	const openSummaryGap = await summaryGap();
+	expect(Math.abs(openSummaryGap - foldedSummaryGap)).toBeLessThanOrEqual(1);
+	await expect(repetitions.first().locator('.mark')).toHaveCount(0);
+	await expect(repetitions.first().getByRole('button', { name: /^Ave / })).toBeVisible();
+});
+
+test('Sub tuum separates the antiphon from the extended form', async ({ page }) => {
+	await page.goto('/app/pl/orationes/sub-tuum-praesidium');
+	const shortForm = page.getByRole('button', { name: 'antyfona' });
+	const longForm = page.getByRole('button', { name: 'forma rozszerzona' });
+	await expect(shortForm).toHaveAttribute('aria-pressed', 'true');
+	await expect(longForm).toHaveAttribute('aria-pressed', 'false');
+	await expect(page.locator('button#w025')).toHaveCount(0);
+	await longForm.click();
+	await expect(longForm).toHaveAttribute('aria-pressed', 'true');
+	await expect(page.locator('button#w001')).toHaveCount(1);
+	await expect(page.locator('button#w025')).toBeVisible();
+	await page.getByRole('button', { name: 'o modlitwie' }).click();
+	await expect(page.getByRole('complementary', { name: 'o modlitwie' })).toContainText(
+		'Podstawową formę stanowi antyfona'
+	);
+	await page.goto('/app/pl/orationes/angelus-domini');
+	await page.goto('/app/pl/orationes/sub-tuum-praesidium');
+	await expect(page.getByRole('button', { name: 'forma rozszerzona' })).toHaveAttribute(
+		'aria-pressed',
+		'true'
+	);
+	await page.reload();
+	await expect(page.getByRole('button', { name: 'forma rozszerzona' })).toHaveAttribute(
+		'aria-pressed',
+		'true'
+	);
+	await expect(page.locator('button#w025')).toBeVisible();
 });
 
 test('the about sheet is closed at every slider position, opens on demand', async ({ page }) => {

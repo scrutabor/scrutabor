@@ -10,7 +10,7 @@
  * count the marks on it. They are pure functions of the segments, so they
  * are here instead, with the reasons and the tests beside them.
  */
-import type { Segment } from '$lib/corpus';
+import type { MassForm, Segment } from '$lib/corpus';
 
 /** How often the voice changes hands over the whole text. */
 export function turns(segments: Segment[]): number {
@@ -81,6 +81,28 @@ export function saidByEveryone(segments: Segment[]): boolean {
 		segments.filter((s) => s.type === 'verse' && s.speaker).map((s) => s.speaker)
 	);
 	return voices.size === 1 && voices.has('omnes');
+}
+
+/**
+ * Is this one continuous prayer which the faithful say with its rubrical
+ * speaker in the selected form of Mass?
+ *
+ * The Missale's `speaker` and the 1958 Instruction's `participation` answer
+ * different questions. In the Credo, for example, every segment belongs to
+ * the celebrant in the rubrics, while *De musica sacra* 25 b and 31 c give
+ * the whole text to the faithful too. Printing V. over that prayer calls it
+ * a versicle and then labelling the same line “the faithful” contradicts
+ * itself. Words can name the shared participation once; no V./R. exchange
+ * exists from the reader's place in the pew.
+ *
+ * A one-line fixed response is deliberately excluded: its R. is useful and
+ * accurate. The Kyrie consequently keeps its alternating marks at low Mass,
+ * where the faithful have the server's lines, but loses them at sung Mass,
+ * where n. 25 b gives them the whole Ordinary.
+ */
+export function isSharedPrayer(segments: Segment[], form: MassForm): boolean {
+	const verses = segments.filter((segment) => segment.type === 'verse');
+	return verses.length >= 2 && verses.every((segment) => segment.participation?.[form]);
 }
 
 /** Segment index where each speaker first appears. */

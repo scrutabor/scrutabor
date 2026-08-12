@@ -8,6 +8,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { CONCEPTS } from './grammar';
+import { CATALOG } from './catalog';
 import { M } from './i18n';
 import { ORDO } from './ordo';
 
@@ -70,5 +71,14 @@ describe('the words the app says', () => {
 			.filter(({ text }) => hedges.test(text))
 			.map(({ where, text }) => `${where}: ${text.slice(0, 60)}`);
 		expect(offenders, `say what the rite says:\n  ${offenders.join('\n  ')}`).toEqual([]);
+	});
+
+	it('gives every Polish table-of-contents subtitle sentence-style capitalization', () => {
+		const subtitles = [
+			...CATALOG.flatMap((section) => section.texts.map((text) => text.note.pl)),
+			...ORDO.map((movement) => movement.label.pl)
+		];
+		const lowercase = subtitles.filter((subtitle) => !/^[A-ZĄĆĘŁŃÓŚŹŻ]/.test(subtitle));
+		expect(lowercase, 'catalog and Ordo subtitles').toEqual([]);
 	});
 });

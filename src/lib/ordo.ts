@@ -125,7 +125,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 	{
 		id: 'praeparatio',
 		title: 'Præparátio',
-		label: { pl: 'modlitwy u stopni ołtarza', en: 'prayers at the foot of the altar' },
+		label: { pl: 'Modlitwy u stopni ołtarza', en: 'prayers at the foot of the altar' },
 		part: 'praeparatio',
 		entries: [
 			{
@@ -227,7 +227,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 	{
 		id: 'catechumenorum',
 		title: 'Missa Catechumenórum',
-		label: { pl: 'msza katechumenów', en: 'mass of the catechumens' },
+		label: { pl: 'Msza katechumenów', en: 'mass of the catechumens' },
 		part: 'catechumenorum',
 		entries: [
 			{
@@ -342,7 +342,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 	{
 		id: 'offertorium',
 		title: 'Offertórium',
-		label: { pl: 'ofiarowanie', en: 'the offertory' },
+		label: { pl: 'Ofiarowanie', en: 'the offertory' },
 		part: 'fidelium',
 		entries: [
 			{
@@ -446,7 +446,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 	{
 		id: 'canon',
 		title: 'Canon Missæ',
-		label: { pl: 'kanon', en: 'the canon' },
+		label: { pl: 'Kanon', en: 'the canon' },
 		part: 'fidelium',
 		entries: [
 			{
@@ -628,7 +628,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 	{
 		id: 'communio',
 		title: 'Commúnio',
-		label: { pl: 'komunia', en: 'communion' },
+		label: { pl: 'Komunia', en: 'communion' },
 		part: 'fidelium',
 		entries: [
 			{
@@ -778,7 +778,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 	{
 		id: 'conclusio',
 		title: 'Conclúsio',
-		label: { pl: 'zakończenie', en: 'the conclusion' },
+		label: { pl: 'Zakończenie', en: 'the conclusion' },
 		part: 'fidelium',
 		entries: [
 			{
