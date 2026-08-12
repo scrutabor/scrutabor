@@ -77,7 +77,7 @@
 			specimenLead:
 				'Werset, od którego Scrutabor bierze nazwę, w postaci, jaką ma w modlitewniku: suwak pomocy prowadzi od samej łaciny do pełnego przekładu, a dotknięcie słowa otwiera jego analizę.',
 			stanzaLink: 'Psalm\u00a0118, He — w.\u00a034',
-			privacyLine: 'Bez rejestracji, bez śledzenia, bez reklam.',
+			privacyLine: 'Bez rejestracji, bez plików cookie, bez reklam.',
 			privacyLink: 'prywatność',
 			supportLink: 'pomoc',
 			editioLink: 'jak powstaje to wydanie',
@@ -96,7 +96,7 @@
 			specimenLead:
 				'The verse Scrutabor takes its name from, exactly as it stands in the prayer book: the help slider moves from bare Latin to a full translation, and a tap on any word opens its analysis.',
 			stanzaLink: 'Psalm\u00a0118, He — v.\u00a034',
-			privacyLine: 'No registration, no tracking, no ads.',
+			privacyLine: 'No registration, no cookies, no ads.',
 			privacyLink: 'privacy',
 			supportLink: 'support',
 			editioLink: 'how this edition is made',

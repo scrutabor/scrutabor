@@ -30,6 +30,7 @@ import {
 	writeFileSync
 } from 'node:fs';
 import { join, relative, sep } from 'node:path';
+import { BEACON_BLOCK, BEACON_HOST } from './beacon-block.mjs';
 
 /** The package version, single-sourced from package.json (the release
  * ritual bumps it with `npm version`, which also cuts the tag). It goes
@@ -143,6 +144,13 @@ for (const [path, up] of pages) {
 		return `${attr}="${up}${stripped.slice(1)}${suffix}${tail}"`;
 	});
 
+	// The visit counter belongs to the SITE. Its own gates already keep it
+	// silent on a file:// page, but README.txt promises that nothing here
+	// calls home, and that should be true of the bytes and not merely of
+	// what they would decide to do. The pattern is tempered so that it can
+	// never run past a </script> into the theme block above it.
+	html = html.replace(BEACON_BLOCK, '');
+
 	// Head links with nothing behind them any more. The font preloads carry
 	// `crossorigin`, which on a file:// URL fails the CORS check and prints
 	// an error for every face — and the offline runtime inlines the reading
@@ -191,6 +199,17 @@ for (const [path, up] of pages) {
 			'<script>\n\t\t\t\t{\n\t\t\t\t\t__sveltekit'
 	);
 	writeFileSync(path, html);
+}
+
+// "Nothing here calls home" is the last line of the README and the reason
+// anyone keeps a copy. The counter is cut from every page above, so this
+// walks the finished package — pages, bundles, assets — and refuses to
+// build one where the name survived anywhere at all.
+for (const path of walk(OUT)) {
+	if (readFileSync(path).includes(BEACON_HOST)) {
+		console.error(`the visit counter reached the offline package: ${path}`);
+		process.exit(1);
+	}
 }
 
 writeFileSync(

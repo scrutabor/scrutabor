@@ -30,6 +30,37 @@
 				/* keep the static default */
 			}
 		</script>
+		<script>
+			// Counting visits, and refusing to do anything more.
+			//
+			// Cloudflare Web Analytics: no cookie, no local storage, no
+			// identifier of any kind, so there is nothing to consent to and no
+			// banner to show. What it can answer is how many pages were opened
+			// and which ones — which is the whole question, since our URLs
+			// already name the language and the prayer.
+			//
+			// Five gates, and the beacon loads only if it passes all of them.
+			// The token is stamped in at build time and is empty everywhere but
+			// the production build, so a dev server, a preview deployment and a
+			// downloaded copy of the book are silent by construction.
+			(function () {
+				var token = '%app.beacon%';
+				// A token is a plain id. Anything else was not one, and is not
+				// going into the page.
+				if (!/^[0-9a-z]{16,64}$/i.test(token)) return;
+				// The site itself, never a wrapper, a preview or a disk.
+				if (location.hostname !== 'scrutabor.org') return;
+				// A reader who has asked not to be counted is not counted.
+				if (navigator.doNotTrack === '1' || navigator.globalPrivacyControl) return;
+				// Airplane mode: do not ask for a script that cannot arrive.
+				if (navigator.onLine === false) return;
+				var s = document.createElement('script');
+				s.defer = true;
+				s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+				s.setAttribute('data-cf-beacon', '{"token":"' + token + '"}');
+				document.head.appendChild(s);
+			})();
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

@@ -1,8 +1,26 @@
+import { env } from '$env/dynamic/private';
 import type { Handle } from '@sveltejs/kit';
+
+/** The Cloudflare Web Analytics site token.
+ *
+ * Read through `$env/dynamic/private` rather than the static twin, because
+ * ABSENT IS THE NORMAL CASE — it is set on the production Pages project and
+ * nowhere else, and the static module turns a missing variable into a build
+ * error. Being unset is what keeps a dev server, a preview deployment and
+ * the downloadable copy of the book silent without anyone remembering to
+ * switch anything off. Dynamic here also means the whole value is resolved
+ * at build, since every page of this site is prerendered.
+ *
+ * Private, though it ends up in public HTML: the name is not a secret, it
+ * is a destination. Going through the private module keeps it out of the
+ * client bundle, so the one place it can appear is the page the hook
+ * stamps. The page checks its shape again before using it (src/app.html). */
+const BEACON = env.CF_BEACON_TOKEN ?? '';
 
 // Stamps the page language into <html lang> at render time — with full
 // prerendering this runs at build, so every static page carries its language.
 export const handle: Handle = ({ event, resolve }) =>
 	resolve(event, {
-		transformPageChunk: ({ html }) => html.replace('%app.lang%', event.params.lang ?? 'pl')
+		transformPageChunk: ({ html }) =>
+			html.replace('%app.lang%', event.params.lang ?? 'pl').replace('%app.beacon%', BEACON)
 	});

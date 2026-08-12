@@ -206,10 +206,13 @@ test.describe('landing @online', () => {
 	test('the privacy page states the promise in both languages', async ({ page }) => {
 		await page.goto('/pl/privacy');
 		await expect(page.locator('h1')).toHaveText('Prywatność');
-		await expect(page.locator('.lede')).toContainText('nie zbiera danych');
+		// The promise as it now stands: no cookie, no tracking. Counting
+		// pages opened is not either of those, and the page says so in full
+		// a paragraph down (tests/privacy.spec.ts).
+		await expect(page.locator('.lede')).toContainText('nie używa plików cookie');
 		await page.goto('/en/privacy');
 		await expect(page.locator('h1')).toHaveText('Privacy');
-		await expect(page.locator('.lede')).toContainText('collects no data');
+		await expect(page.locator('.lede')).toContainText('uses no cookies');
 		await expect(page.locator('.trail a.back')).toHaveAttribute('href', '/en');
 		// the store-facing URL must not silently become a 404 shell
 		expect((await page.request.get('/en/privacy')).status()).toBe(200);
