@@ -48,6 +48,14 @@
 		letter-spacing: 0.06em;
 	}
 
+	summary::marker {
+		font-size: 0.78em;
+	}
+
+	summary::-webkit-details-marker {
+		font-size: 0.78em;
+	}
+
 	.centered summary {
 		margin-inline: auto;
 	}

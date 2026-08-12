@@ -46,8 +46,12 @@ test('word panel separates context, dictionary, grammar and verification', async
 	await page.locator('#w019').click(); // Mater
 	const panel = page.locator('aside');
 	await expect(panel.locator('.form')).toHaveText('Mater');
-	await expect(panel.locator('.layer-label')).toHaveText(['w tym miejscu', 'hasło', 'forma']);
+	await expect(panel.locator('.layer-label')).toHaveText(['hasło', 'forma']);
 	// The answer to the reading question comes first.
+	await expect(panel.locator('.context-layer')).toHaveAttribute(
+		'aria-label',
+		'znaczenie w\u00a0kontekście'
+	);
 	await expect(panel.locator('.context-layer .gloss')).toHaveText('Matko');
 	await expect(panel.locator('.context-layer .function')).toContainText('Apozycja');
 	// The dictionary identity is a separate layer.

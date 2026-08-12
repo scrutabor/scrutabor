@@ -118,8 +118,7 @@
 {#if sectioned}
 	<div class="layers">
 		{#if gloss}
-			<section class="layer context-layer" aria-labelledby="word-context-label">
-				<h3 class="layer-label smallcaps" id="word-context-label">{M[lang].wordContextLabel}</h3>
+			<section class="layer context-layer" aria-label={M[lang].wordContextLabel}>
 				<div class="layer-body">{@render context()}</div>
 			</section>
 		{/if}
@@ -256,6 +255,10 @@
 		border-top: 0;
 	}
 
+	.context-layer .layer-body {
+		grid-column: 1 / -1;
+	}
+
 	.layer-label {
 		margin: 0;
 		color: var(--ink-soft);
@@ -300,6 +303,14 @@
 		font-family: 'EB Garamond Label', 'EB Garamond', serif;
 		font-size: 0.7rem;
 		letter-spacing: 0.11em;
+	}
+
+	.verification summary::marker {
+		font-size: 0.78em;
+	}
+
+	.verification summary::-webkit-details-marker {
+		font-size: 0.78em;
 	}
 
 	.verification .meta {
