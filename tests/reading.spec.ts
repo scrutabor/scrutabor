@@ -41,26 +41,34 @@ test('a received translation identifies its source beside the verse', async ({ p
 	);
 });
 
-test('word panel shows all three layers', async ({ page }) => {
+test('word panel separates context, dictionary, grammar and verification', async ({ page }) => {
 	await page.goto(AVE);
 	await page.locator('#w019').click(); // Mater
 	const panel = page.locator('aside');
 	await expect(panel.locator('.form')).toHaveText('Mater');
-	// layer 1: lexicon — dictionary head linking to the lemma page, senses
+	await expect(panel.locator('.layer-label')).toHaveText(['w tym miejscu', 'hasło', 'forma']);
+	// The answer to the reading question comes first.
+	await expect(panel.locator('.context-layer .gloss')).toHaveText('Matko');
+	await expect(panel.locator('.context-layer .function')).toContainText('Apozycja');
+	// The dictionary identity is a separate layer.
 	await expect(panel.locator('.head a')).toHaveAttribute('href', '/app/pl/lemma/mater');
 	await expect(panel.locator('.head')).toContainText('mater, matris');
 	await expect(panel.locator('.head')).toContainText('— matka');
-	// layer 2: parse line with a concept-linked term
+	// So is the strict parse, with its concept-linked term.
 	await expect(panel.locator('.morph')).toContainText('wołacz');
 	await expect(panel.locator('.morph a.concept')).toHaveAttribute(
 		'href',
 		'/app/pl/grammatica/vocativus'
 	);
-	// layer 3: the contextual note
-	await expect(panel.locator('.function')).toContainText('Apozycja');
-	// provenance names the machine confirmers (schema 0.7.0 word default)
-	await expect(panel.locator('.meta')).toContainText('zaakceptowane');
-	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
+	// Technical provenance remains present, but does not compete with the
+	// meaning until the reader asks for it.
+	const verification = panel.locator('.verification');
+	await expect(verification.locator('summary')).toHaveText('weryfikacja');
+	await expect(verification.locator('.meta')).not.toBeVisible();
+	await verification.locator('summary').click();
+	await expect(verification.locator('.meta')).toBeVisible();
+	await expect(verification.locator('.meta')).toContainText('zaakceptowane');
+	await expect(verification.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
 });
 
 test('a proper name absent from one analyzer names its true confirmers', async ({ page }) => {

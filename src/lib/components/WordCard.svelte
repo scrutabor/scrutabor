@@ -15,7 +15,8 @@
 		analysis,
 		lex,
 		lang,
-		onnavigate
+		onnavigate,
+		sectioned = false
 	}: {
 		word: Word;
 		gloss: WordGloss | null;
@@ -25,6 +26,9 @@
 		lex: { lemmata: Record<string, LemmaEntry>; senses: Record<string, SenseEntry> };
 		lang: Lang;
 		onnavigate: (id: string) => void;
+		/** The reading sheet names each information layer. The landing
+		 * specimen keeps the compact, uninterrupted presentation. */
+		sectioned?: boolean;
 	} = $props();
 
 	// Cross-references in function prose are authored as „form” (wNNN)
@@ -56,49 +60,88 @@
 	let senseEntry = $derived(lex.senses[word.lemma]);
 </script>
 
-<p class="head">
-	<a href="/app/{lang}/lemma/{word.lemma}" title={M[lang].lemmaPageHint}
-		><i lang="la">{lemmaEntry?.head ?? word.lemma}</i>{#if lemmaEntry?.gender}&nbsp;<span
-				class="gender">{GENDER_MARK[lemmaEntry.gender]}</span
-			>{/if}
-		<span class="head-arrow" aria-hidden="true">›</span></a
-	>{#if senseEntry}<span class="head-senses"> — {senseEntry.senses.join(', ')}</span>{/if}
-</p>
-<p class="morph">
-	{#each describeMorphParts(word.morph, lang) as part, i (i)}{#if part.concept}<a
-				class="concept"
-				href="/app/{lang}/grammatica/{part.concept}">{part.text}</a
-			>{:else}{part.text}{/if}{/each}
-</p>
-<Pronunciation form={word.form} {lang} />
-{#if gloss}
-	<p class="gloss">{gloss.gloss}</p>
-{/if}
-{#if senseEntry?.note}
-	<p class="note">{senseEntry.note}</p>
-	<SourceNotes citations={senseEntry.note_citations} {lang} />
-{/if}
-{#if gloss?.function}
-	<p class="function">
-		{#each functionParts as part, i (i)}
-			{#if 'id' in part}
-				<button class="xref" onclick={() => onnavigate(part.id)}
-					>{part.open}<span lang="la">{part.form}</span>”</button
-				>
-			{:else}
-				{part.text}
-			{/if}
-		{/each}
+{#snippet context()}
+	{#if gloss}
+		<p class="gloss">{gloss.gloss}</p>
+	{/if}
+	{#if gloss?.function}
+		<p class="function">
+			{#each functionParts as part, i (i)}
+				{#if 'id' in part}
+					<button class="xref" onclick={() => onnavigate(part.id)}
+						>{part.open}<span lang="la">{part.form}</span>”</button
+					>
+				{:else}
+					{part.text}
+				{/if}
+			{/each}
+		</p>
+		<SourceNotes citations={gloss.function_citations} {lang} />
+	{/if}
+{/snippet}
+
+{#snippet entry()}
+	<p class="head">
+		<a href="/app/{lang}/lemma/{word.lemma}" title={M[lang].lemmaPageHint}
+			><i lang="la">{lemmaEntry?.head ?? word.lemma}</i>{#if lemmaEntry?.gender}&nbsp;<span
+					class="gender">{GENDER_MARK[lemmaEntry.gender]}</span
+				>{/if}
+			<span class="head-arrow" aria-hidden="true">›</span></a
+		>{#if senseEntry}<span class="head-senses"> — {senseEntry.senses.join(', ')}</span>{/if}
 	</p>
-	<SourceNotes citations={gloss.function_citations} {lang} />
+	{#if senseEntry?.note}
+		<p class="note">{senseEntry.note}</p>
+		<SourceNotes citations={senseEntry.note_citations} {lang} />
+	{/if}
+{/snippet}
+
+{#snippet grammar()}
+	<p class="morph">
+		{#each describeMorphParts(word.morph, lang) as part, i (i)}{#if part.concept}<a
+					class="concept"
+					href="/app/{lang}/grammatica/{part.concept}">{part.text}</a
+				>{:else}{part.text}{/if}{/each}
+	</p>
+	<Pronunciation form={word.form} {lang} />
+{/snippet}
+
+{#snippet verification()}
+	<p class="meta smallcaps">
+		{#each describeAnalysisParts(analysis, lang) as part, i (i)}{#if part.href}<a
+					href={part.href}
+					target={part.external ? '_blank' : undefined}
+					rel={part.external ? 'external noopener' : undefined}>{part.text}</a
+				>{:else}{part.text}{/if}{/each}
+	</p>
+{/snippet}
+
+{#if sectioned}
+	<div class="layers">
+		{#if gloss}
+			<section class="layer context-layer" aria-labelledby="word-context-label">
+				<h3 class="layer-label smallcaps" id="word-context-label">{M[lang].wordContextLabel}</h3>
+				<div class="layer-body">{@render context()}</div>
+			</section>
+		{/if}
+		<section class="layer" aria-labelledby="word-entry-label">
+			<h3 class="layer-label smallcaps" id="word-entry-label">{M[lang].wordEntryLabel}</h3>
+			<div class="layer-body">{@render entry()}</div>
+		</section>
+		<section class="layer" aria-labelledby="word-form-label">
+			<h3 class="layer-label smallcaps" id="word-form-label">{M[lang].wordFormLabel}</h3>
+			<div class="layer-body">{@render grammar()}</div>
+		</section>
+		<details class="verification">
+			<summary class="smallcaps">{M[lang].wordVerificationLabel}</summary>
+			{@render verification()}
+		</details>
+	</div>
+{:else}
+	{@render entry()}
+	{@render grammar()}
+	{@render context()}
+	{@render verification()}
 {/if}
-<p class="meta smallcaps">
-	{#each describeAnalysisParts(analysis, lang) as part, i (i)}{#if part.href}<a
-				href={part.href}
-				target={part.external ? '_blank' : undefined}
-				rel={part.external ? 'external noopener' : undefined}>{part.text}</a
-			>{:else}{part.text}{/if}{/each}
-</p>
 
 <style>
 	.head {
@@ -192,5 +235,84 @@
 
 	.meta a:hover {
 		color: var(--ink);
+	}
+
+	.layers {
+		padding-top: 0.15rem;
+	}
+
+	.layer {
+		display: grid;
+		grid-template-columns: 5.8rem minmax(0, 1fr);
+		column-gap: 1.15rem;
+		margin: 0.75rem 0 0;
+		padding-top: 0.7rem;
+		border-top: 1px solid var(--border);
+	}
+
+	.context-layer {
+		margin-top: 0.25rem;
+		padding-top: 0;
+		border-top: 0;
+	}
+
+	.layer-label {
+		margin: 0;
+		color: var(--ink-soft);
+		font-family: 'EB Garamond Label', 'EB Garamond', serif;
+		font-size: 0.7rem;
+		font-weight: 400;
+		line-height: 1;
+		letter-spacing: 0.11em;
+	}
+
+	.layer-body {
+		min-width: 0;
+	}
+
+	.layers .gloss {
+		margin-top: 0.25rem;
+	}
+
+	.layers .function {
+		margin-top: 0.35rem;
+	}
+
+	.layers .head,
+	.layers .morph {
+		margin-top: 0;
+	}
+
+	.layers .morph {
+		color: var(--ink);
+	}
+
+	.verification {
+		margin: 0.8rem 0 0;
+		padding-top: 0.65rem;
+		border-top: 1px solid var(--border);
+		color: var(--ink-soft);
+	}
+
+	.verification summary {
+		width: max-content;
+		cursor: pointer;
+		font-family: 'EB Garamond Label', 'EB Garamond', serif;
+		font-size: 0.7rem;
+		letter-spacing: 0.11em;
+	}
+
+	.verification .meta {
+		margin-top: 0.45rem;
+	}
+
+	@media (max-width: 36rem) {
+		.layer {
+			display: block;
+		}
+
+		.layer-body {
+			margin-top: 0.25rem;
+		}
 	}
 </style>

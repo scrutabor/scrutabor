@@ -78,6 +78,9 @@ test.describe('landing @online', () => {
 		// page — a box, not a sheet, with nothing to close
 		await expect(page.locator('.word-box-form')).toHaveText('scrutábor');
 		await expect(page.locator('.word-box a[href="/app/pl/lemma/scrutor"]')).toBeVisible();
+		// The permanent specimen stays compact; the explicit section map is
+		// for the modal sheet, where unlike this exhibit the layers compete.
+		await expect(page.locator('.word-box .layer-label')).toHaveCount(0);
 		await expect(page.locator('aside')).toHaveCount(0);
 		// the tapped word carries the selection wash
 		await expect(page.locator('#w016')).toHaveClass(/selected/);

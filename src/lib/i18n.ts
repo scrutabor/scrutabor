@@ -20,6 +20,10 @@ export interface Messages {
 	langMenuAria: string;
 	close: string;
 	panelAria: string;
+	wordContextLabel: string;
+	wordEntryLabel: string;
+	wordFormLabel: string;
+	wordVerificationLabel: string;
 	working: string;
 	lemmaPageHint: string;
 	occurrences: string;
@@ -97,6 +101,10 @@ const MESSAGES: Record<Lang, Messages> = {
 		langMenuAria: 'wybór języka',
 		close: 'Zamknij',
 		panelAria: 'Analiza słowa',
+		wordContextLabel: 'w tym miejscu',
+		wordEntryLabel: 'hasło',
+		wordFormLabel: 'forma',
+		wordVerificationLabel: 'weryfikacja',
 		working: 'wydanie robocze · przed przeglądem eksperckim',
 		lemmaPageHint: 'otwórz hasło',
 		occurrences: 'w tekstach',
@@ -183,6 +191,10 @@ const MESSAGES: Record<Lang, Messages> = {
 		langMenuAria: 'language selection',
 		close: 'Close',
 		panelAria: 'Word analysis',
+		wordContextLabel: 'here',
+		wordEntryLabel: 'dictionary entry',
+		wordFormLabel: 'form',
+		wordVerificationLabel: 'verification',
 		working: 'working edition · awaiting expert review',
 		lemmaPageHint: 'open the entry',
 		occurrences: 'in the texts',

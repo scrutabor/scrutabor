@@ -26,17 +26,18 @@
 </script>
 
 {#snippet lead()}
-	<span class="form" lang="la">{word.form}</span>
+	<h2 class="form" lang="la">{word.form}</h2>
 {/snippet}
 
 <!-- the reading page pads its foot to this height so the tapped word is
      never left underneath the sheet — see .panel-open -->
 <Sheet {lang} {onclose} label={M[lang].panelAria} extra="panel" max="45vh" {lead}>
-	<WordCard {word} {gloss} {analysis} {lex} {lang} {onnavigate} />
+	<WordCard {word} {gloss} {analysis} {lex} {lang} {onnavigate} sectioned />
 </Sheet>
 
 <style>
 	.form {
+		margin: 0;
 		font-size: 1.7rem;
 		font-weight: 500;
 	}
