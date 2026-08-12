@@ -831,6 +831,12 @@
 				"angel"
 			]
 		},
+		"ancilla": {
+			"senses": [
+				"handmaid",
+				"female servant"
+			]
+		},
 		"anima": {
 			"senses": [
 				"soul",
@@ -1442,6 +1448,12 @@
 				"confession"
 			]
 		},
+		"confugio": {
+			"senses": [
+				"flee for refuge",
+				"seek protection"
+			]
+		},
 		"confundo": {
 			"senses": [
 				"put to shame"
@@ -1456,6 +1468,12 @@
 			"senses": [
 				"to glorify together",
 				"to glorify along with"
+			]
+		},
+		"concipio": {
+			"senses": [
+				"conceive",
+				"receive"
 			]
 		},
 		"congruus": {
@@ -1638,6 +1656,11 @@
 				"crucifixion"
 			]
 		},
+		"crux": {
+			"senses": [
+				"cross"
+			]
+		},
 		"cubile": {
 			"senses": [
 				"bed"
@@ -1803,6 +1826,12 @@
 			"derivatives": [
 				"descent",
 				"descendant"
+			]
+		},
+		"despicio": {
+			"senses": [
+				"despise",
+				"disregard"
 			]
 		},
 		"detrudo": {
@@ -2931,6 +2960,11 @@
 				"incarnation"
 			]
 		},
+		"incarnatio": {
+			"senses": [
+				"incarnation"
+			]
+		},
 		"incedo": {
 			"senses": [
 				"to walk",
@@ -3015,6 +3049,12 @@
 		"induo": {
 			"senses": [
 				"clothe"
+			]
+		},
+		"infundo": {
+			"senses": [
+				"pour in",
+				"infuse"
 			]
 		},
 		"inferi": {
@@ -4015,6 +4055,12 @@
 				"lest, that … not (opening a negative purpose clause)"
 			]
 		},
+		"necessitas": {
+			"senses": [
+				"need",
+				"necessity"
+			]
+		},
 		"nec": {
 			"senses": [
 				"nor",
@@ -4128,6 +4174,12 @@
 		"numquam": {
 			"senses": [
 				"never"
+			]
+		},
+		"nuntio": {
+			"senses": [
+				"announce",
+				"declare"
 			]
 		},
 		"nunc": {

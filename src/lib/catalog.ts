@@ -41,6 +41,21 @@ const CATALOG_SOURCE: CatalogSection[] = [
 			},
 			{
 				category: 'orationes',
+				slug: 'angelus-domini',
+				title: 'Ángelus Dómini',
+				note: {
+					pl: 'Anioł Pański, poza okresem wielkanocnym',
+					en: 'the Angelus, outside Paschaltide'
+				}
+			},
+			{
+				category: 'orationes',
+				slug: 'sub-tuum-praesidium',
+				title: 'Sub tuum præsídium',
+				note: { pl: 'Pod Twoją obronę', en: 'Under Your Protection' }
+			},
+			{
+				category: 'orationes',
 				slug: 'salve-regina',
 				title: 'Salve Regína',
 				note: { pl: 'antyfona maryjna, po Mszy cichej', en: 'the Marian antiphon, after low Mass' }

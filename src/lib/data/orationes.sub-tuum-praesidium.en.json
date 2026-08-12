@@ -1,0 +1,105 @@
+{
+	"schema_version": "0.12.0",
+	"text": "orationes.sub-tuum-praesidium",
+	"lang": "en",
+	"status": "working-edition",
+	"about": "The familiar longer Polish continuation is not part of this Latin text.",
+	"about_citations": [
+		{
+			"title": "Compendium of the Catechism of the Catholic Church",
+			"locator": "Appendix A: Common Prayers — Sub tuum praesidium",
+			"url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_sv.html"
+		},
+		{
+			"title": "Konferencja Episkopatu Polski, Akta KEP 32",
+			"locator": "Pod Twoją obronę",
+			"url": "https://episkopat.pl/files/24.bkt/04/04/242488_HSZP_32_Akta_KEP_2020.pdf"
+		}
+	],
+	"analysis_defaults": {
+		"confidence": "high",
+		"sources": [
+			"editorial"
+		],
+		"review": "pending"
+	},
+	"segments": {
+		"s01": {
+			"translation": "We fly to thy protection, O holy Mother of God; despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin."
+		}
+	},
+	"words": {
+		"w001": {
+			"gloss": "under"
+		},
+		"w002": {
+			"gloss": "thy"
+		},
+		"w003": {
+			"gloss": "protection"
+		},
+		"w004": {
+			"gloss": "we flee"
+		},
+		"w005": {
+			"gloss": "holy"
+		},
+		"w006": {
+			"gloss": "of God"
+		},
+		"w007": {
+			"gloss": "Mother"
+		},
+		"w008": {
+			"gloss": "our"
+		},
+		"w009": {
+			"gloss": "petitions"
+		},
+		"w010": {
+			"gloss": "not"
+		},
+		"w011": {
+			"gloss": "despise"
+		},
+		"w012": {
+			"gloss": "in"
+		},
+		"w013": {
+			"gloss": "necessities"
+		},
+		"w014": {
+			"gloss": "but"
+		},
+		"w015": {
+			"gloss": "from"
+		},
+		"w016": {
+			"gloss": "dangers"
+		},
+		"w017": {
+			"gloss": "all"
+		},
+		"w018": {
+			"gloss": "deliver"
+		},
+		"w019": {
+			"gloss": "us"
+		},
+		"w020": {
+			"gloss": "always"
+		},
+		"w021": {
+			"gloss": "Virgin"
+		},
+		"w022": {
+			"gloss": "glorious"
+		},
+		"w023": {
+			"gloss": "and"
+		},
+		"w024": {
+			"gloss": "blessed"
+		}
+	}
+}

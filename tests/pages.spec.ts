@@ -229,6 +229,8 @@ test('the sitemap lists both languages of every surface', async ({ request }) =>
 	expect(xml).toContain('<loc>https://scrutabor.org/pl</loc>');
 	expect(xml).toContain('<loc>https://scrutabor.org/en/privacy</loc>');
 	expect(xml).toContain('<loc>https://scrutabor.org/app/pl/orationes/pater-noster</loc>');
+	expect(xml).toContain('<loc>https://scrutabor.org/app/pl/orationes/angelus-domini</loc>');
+	expect(xml).toContain('<loc>https://scrutabor.org/app/en/orationes/sub-tuum-praesidium</loc>');
 	expect(xml).toContain('<loc>https://scrutabor.org/app/en/lemma/oro</loc>');
 	expect(xml).toContain('<loc>https://scrutabor.org/app/en/grammatica/pronuntiatio</loc>');
 	expect(xml).toContain('<loc>https://scrutabor.org/app/pl/bibliographia</loc>');

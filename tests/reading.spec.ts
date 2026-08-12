@@ -218,7 +218,9 @@ test('no token ever fragments across lines, any text, narrow viewport', async ({
 		'/app/pl/ordinarium/confiteor',
 		'/app/pl/orationes/pater-noster',
 		'/app/pl/orationes/ave-maria',
-		'/app/pl/orationes/gloria-patri'
+		'/app/pl/orationes/gloria-patri',
+		'/app/pl/orationes/angelus-domini',
+		'/app/pl/orationes/sub-tuum-praesidium'
 	]) {
 		await page.goto(path);
 		await expect(page.locator('.verse .token').first()).toBeVisible();
