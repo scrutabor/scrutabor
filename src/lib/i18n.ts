@@ -23,7 +23,6 @@ export interface Messages {
 	wordContextLabel: string;
 	wordEntryLabel: string;
 	wordFormLabel: string;
-	wordVerificationLabel: string;
 	working: string;
 	lemmaPageHint: string;
 	occurrences: string;
@@ -104,7 +103,6 @@ const MESSAGES: Record<Lang, Messages> = {
 		wordContextLabel: 'znaczenie w kontekście',
 		wordEntryLabel: 'hasło',
 		wordFormLabel: 'forma',
-		wordVerificationLabel: 'weryfikacja',
 		working: 'wydanie robocze · przed przeglądem eksperckim',
 		lemmaPageHint: 'otwórz hasło',
 		occurrences: 'w tekstach',
@@ -194,7 +192,6 @@ const MESSAGES: Record<Lang, Messages> = {
 		wordContextLabel: 'meaning in context',
 		wordEntryLabel: 'dictionary entry',
 		wordFormLabel: 'form',
-		wordVerificationLabel: 'verification',
 		working: 'working edition · awaiting expert review',
 		lemmaPageHint: 'open the entry',
 		occurrences: 'in the texts',

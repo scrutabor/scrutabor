@@ -130,10 +130,9 @@
 			<h3 class="layer-label smallcaps" id="word-form-label">{M[lang].wordFormLabel}</h3>
 			<div class="layer-body">{@render grammar()}</div>
 		</section>
-		<details class="verification">
-			<summary class="smallcaps">{M[lang].wordVerificationLabel}</summary>
+		<div class="verification">
 			{@render verification()}
-		</details>
+		</div>
 	</div>
 {:else}
 	{@render entry()}
@@ -297,24 +296,8 @@
 		color: var(--ink-soft);
 	}
 
-	.verification summary {
-		width: max-content;
-		cursor: pointer;
-		font-family: 'EB Garamond Label', 'EB Garamond', serif;
-		font-size: 0.7rem;
-		letter-spacing: 0.11em;
-	}
-
-	.verification summary::marker {
-		font-size: 0.78em;
-	}
-
-	.verification summary::-webkit-details-marker {
-		font-size: 0.78em;
-	}
-
 	.verification .meta {
-		margin-top: 0.45rem;
+		margin-top: 0;
 	}
 
 	@media (max-width: 36rem) {

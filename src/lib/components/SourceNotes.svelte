@@ -11,7 +11,11 @@
 
 {#if citations?.length}
 	<details class="source-notes" class:centered>
-		<summary class="smallcaps">{M[lang].sourcesLabel}</summary>
+		<summary class="smallcaps"
+			><svg class="disclosure" viewBox="0 0 8 8" aria-hidden="true"
+				><path d="M2 1l4 3-4 3z"></path></svg
+			>{M[lang].sourcesLabel}</summary
+		>
 		<ol>
 			{#each citations as citation (`${citation.title}:${citation.locator}`)}
 				<li>
@@ -26,15 +30,17 @@
 				</li>
 			{/each}
 		</ol>
-		<p class="bibliography-link">
-			<a href="/app/{lang}/bibliographia">{M[lang].bibliographyLink}</a>
+		<p class="bibliography-link smallcaps">
+			<a href="/app/{lang}/bibliographia"
+				>{M[lang].bibliographyLink}<span aria-hidden="true">›</span></a
+			>
 		</p>
 	</details>
 {/if}
 
 <style>
 	.source-notes {
-		margin: 0.55rem 0 0;
+		margin: 0.78rem 0 0;
 		color: var(--ink-soft);
 		font-size: 0.8rem;
 		line-height: 1.45;
@@ -42,18 +48,30 @@
 
 	summary {
 		width: max-content;
+		display: flex;
+		align-items: center;
+		gap: 0.38rem;
 		cursor: pointer;
 		color: var(--rubric);
 		font-size: 0.72rem;
 		letter-spacing: 0.06em;
+		list-style: none;
 	}
 
-	summary::marker {
-		font-size: 0.78em;
+	.disclosure {
+		width: 0.42rem;
+		height: 0.42rem;
+		fill: currentColor;
+		flex: none;
+		transition: transform 120ms ease;
 	}
 
 	summary::-webkit-details-marker {
-		font-size: 0.78em;
+		display: none;
+	}
+
+	details[open] > summary .disclosure {
+		transform: rotate(90deg);
 	}
 
 	.centered summary {
@@ -76,7 +94,16 @@
 	}
 
 	.bibliography-link {
-		margin: 0.45rem 0 0;
+		margin: 0.65rem 0 0;
+		font-family: 'EB Garamond Label', 'EB Garamond', serif;
+		font-size: 0.72rem;
+		letter-spacing: 0.07em;
+		text-align: right;
+	}
+
+	.bibliography-link span {
+		margin-inline-start: 0.35rem;
+		font-size: 1.05em;
 	}
 
 	a {

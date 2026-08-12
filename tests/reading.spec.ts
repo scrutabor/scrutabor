@@ -64,12 +64,10 @@ test('word panel separates context, dictionary, grammar and verification', async
 		'href',
 		'/app/pl/grammatica/vocativus'
 	);
-	// Technical provenance remains present, but does not compete with the
-	// meaning until the reader asks for it.
+	// The short technical provenance line remains visible without acquiring
+	// another heading of its own.
 	const verification = panel.locator('.verification');
-	await expect(verification.locator('summary')).toHaveText('weryfikacja');
-	await expect(verification.locator('.meta')).not.toBeVisible();
-	await verification.locator('summary').click();
+	await expect(verification.locator('summary')).toHaveCount(0);
 	await expect(verification.locator('.meta')).toBeVisible();
 	await expect(verification.locator('.meta')).toContainText('zaakceptowane');
 	await expect(verification.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
