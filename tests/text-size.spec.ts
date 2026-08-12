@@ -135,23 +135,29 @@ test('the control is wherever the reader is', async ({ page }) => {
 	}
 });
 
-test('the mark sits in the middle of its pill', async ({ page }) => {
+test('the mark is optically centred in its pill', async ({ page }) => {
 	// EB Garamond's ascent is taller than its em, so a line box of it
-	// centres visibly high inside a round button — which is what the owner
-	// saw. app.css keeps a copy of the face with normalised metrics for
-	// exactly this (.trim-label); without it the mark rides about a
-	// pixel and a half above centre and the button looks broken.
+	// centres visibly high inside a round button. app.css first normalises
+	// those metrics; the capitals' ink still carries slightly more weight
+	// above the middle, so the mark receives one small downward optical
+	// correction. Keep that correction proportional as reading size grows.
 	await page.goto('/app/en/ordinarium/credo');
-	const off = await page.evaluate(() => {
+	const alignment = await page.evaluate(() => {
 		const btn = [...document.querySelectorAll('button')].find((b) =>
 			(b.getAttribute('aria-label') || '').startsWith('text size')
 		)!;
-		const mark = btn.querySelector('.aa')!;
+		const mark = btn.querySelector<HTMLElement>('.aa')!;
 		const b = btn.getBoundingClientRect();
 		const m = mark.getBoundingClientRect();
-		return Math.abs(m.top + m.height / 2 - (b.top + b.height / 2));
+		return {
+			displacement: m.top + m.height / 2 - (b.top + b.height / 2),
+			expected: parseFloat(getComputedStyle(mark).fontSize) * 0.03
+		};
 	});
-	expect(off, 'the mark is off the pill’s centre line').toBeLessThan(0.6);
+	expect(alignment.displacement, 'the mark lost its optical correction').toBeCloseTo(
+		alignment.expected,
+		1
+	);
 });
 
 test('largest print on the smallest phone still holds together', async ({ page }) => {

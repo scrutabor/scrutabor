@@ -76,6 +76,11 @@
 		gap: 0.05em;
 		font-size: 0.78rem;
 		line-height: 1;
+		/* The normalized line box is mathematically centred, but two bare
+		   capitals still carry a little more visible weight above its middle.
+		   A sub-pixel optical correction settles the ink without moving the
+		   button, chevron, or samples in the menu. */
+		transform: translateY(0.03em);
 	}
 
 	.big {
