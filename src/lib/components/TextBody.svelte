@@ -433,6 +433,24 @@
 		margin-bottom: calc(var(--reading) * -0.26);
 	}
 
+	/* A raised initial reaches above the ordinary verse's line box. The
+	   compact label-to-verse correction above therefore puts its ink into
+	   the label's cap-height zone even though the boxes still appear spaced.
+	   Give that exceptional first line visible clearance. A little air above
+	   the label preserves the stronger gap on that side, so it still plainly
+	   names the prayer below rather than the preceding passage. */
+	.who:has(+ .verse .initial) {
+		padding-top: calc(var(--reading) * 0.16);
+	}
+
+	.who:has(+ .verse:not(.glossed) .initial) {
+		margin-bottom: calc(var(--reading) * 0.75);
+	}
+
+	.who:has(+ .verse.glossed .initial) {
+		margin-bottom: calc(var(--reading) * 0.39);
+	}
+
 	/* Set like the voice mark it sits beside — the same size and tracking,
 	   in the rubric's red, because it says something about the reader's own
 	   part rather than about the celebrant's. */

@@ -74,6 +74,23 @@ test('a suppressed opening rubric leaves no empty ritual step', async ({ page })
 	expect(gap).toBeLessThan(8);
 });
 
+test('a speaker label clears the raised initial below it', async ({ page }) => {
+	for (const width of [390, 1280]) {
+		await page.setViewportSize({ width, height: 900 });
+		await page.goto('/app/pl/ordinarium/confiteor');
+
+		for (const help of ['0', '1']) {
+			await page.locator('input[type="range"]').fill(help);
+			const clearance = await page.evaluate(() => {
+				const label = document.querySelector('main .who')!.getBoundingClientRect();
+				const initial = document.querySelector('main .initial')!.getBoundingClientRect();
+				return initial.top - label.bottom;
+			});
+			expect(clearance, `${width}px viewport, help ${help}`).toBeGreaterThan(1.5);
+		}
+	}
+});
+
 test('a received translation identifies its source beside the verse', async ({ page }) => {
 	await page.goto('/app/pl/psalmi/118-he');
 	await page.locator('input[type="range"]').fill('2');
