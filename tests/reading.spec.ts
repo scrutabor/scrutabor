@@ -48,8 +48,25 @@ test('word panel separates context, dictionary, grammar and verification', async
 	await expect(panel.locator('.form')).toHaveText('Mater');
 	// Pronunciation belongs to the selected form and is available before
 	// contextual or reference material requires any scrolling.
-	await expect(panel.locator('.pronunciation-lead .pron')).toBeVisible();
+	await expect(panel.locator('header .pronunciation-lead .pron')).toBeVisible();
 	await expect(panel.locator('.layer .pron')).toHaveCount(0);
+	const headingRows = await panel.locator('header').evaluate((header) => {
+		const title = header.querySelector('.form')!.getBoundingClientRect();
+		const pronunciation = header.querySelector('.pronunciation-lead')!.getBoundingClientRect();
+		const titleStyle = getComputedStyle(header.querySelector('.form')!);
+		const pronunciationStyle = getComputedStyle(header.querySelector('.pronunciation-lead')!);
+		return {
+			titleCenter: title.top + title.height / 2,
+			pronunciationCenter: pronunciation.top + pronunciation.height / 2,
+			titleAlign: titleStyle.textAlign,
+			pronunciationAlign: pronunciationStyle.textAlign
+		};
+	});
+	expect(Math.abs(headingRows.pronunciationCenter - headingRows.titleCenter)).toBeLessThanOrEqual(
+		3
+	);
+	expect(headingRows.titleAlign).toBe('left');
+	expect(headingRows.pronunciationAlign).toBe('left');
 	await expect(panel.locator('.layer-label')).toHaveText(['hasło', 'forma']);
 	await expect(panel.locator('.head')).not.toContainText('›');
 	// The answer to the reading question comes first.
@@ -59,6 +76,37 @@ test('word panel separates context, dictionary, grammar and verification', async
 	);
 	await expect(panel.locator('.context-layer .gloss')).toHaveText('Matko');
 	await expect(panel.locator('.context-layer .function')).toContainText('Apozycja');
+	// Meaning and explanation read as one ordinary editorial line, like the
+	// dictionary prose below. Weight and the dash express their hierarchy;
+	// wrapping is left to normal inline text flow.
+	const contextType = await panel.locator('.context-layer').evaluate((layer) => {
+		const gloss = getComputedStyle(layer.querySelector('.gloss')!);
+		const fn = getComputedStyle(layer.querySelector('.function')!);
+		const copyStyle = getComputedStyle(layer.querySelector('.context-copy')!);
+		const copy = layer.querySelector('.context-copy')!.getBoundingClientRect();
+		const title = layer.closest('aside')!.querySelector('.form')!.getBoundingClientRect();
+		return {
+			glossFamily: gloss.fontFamily,
+			functionFamily: fn.fontFamily,
+			glossSize: parseFloat(gloss.fontSize),
+			functionSize: parseFloat(fn.fontSize),
+			glossStyle: gloss.fontStyle,
+			glossWeight: Number(gloss.fontWeight),
+			functionWeight: Number(fn.fontWeight),
+			functionColor: fn.color,
+			functionLineHeight: fn.lineHeight,
+			copyDisplay: copyStyle.display,
+			copyLeft: copy.left,
+			titleLeft: title.left
+		};
+	});
+	expect(contextType.glossFamily).toBe(contextType.functionFamily);
+	expect(contextType.glossSize).toBeCloseTo(contextType.functionSize, 1);
+	expect(contextType.glossStyle).toBe('normal');
+	expect(contextType.glossWeight).toBeGreaterThan(contextType.functionWeight);
+	expect(contextType.copyDisplay).toBe('block');
+	expect(contextType.copyLeft).toBeCloseTo(contextType.titleLeft, 1);
+	await expect(panel.locator('.context-separator')).toHaveText('—');
 	// The dictionary identity is a separate layer.
 	await expect(panel.locator('.head a')).toHaveAttribute('href', '/app/pl/lemma/mater');
 	await expect(panel.locator('.head')).toContainText('mater, matris');
@@ -69,6 +117,43 @@ test('word panel separates context, dictionary, grammar and verification', async
 		'href',
 		'/app/pl/grammatica/vocativus'
 	);
+	const referenceType = await panel.evaluate((card) => {
+		const head = getComputedStyle(card.querySelector('.head')!);
+		const morph = getComputedStyle(card.querySelector('.morph')!);
+		return {
+			headSize: parseFloat(head.fontSize),
+			morphSize: parseFloat(morph.fontSize),
+			headColor: head.color,
+			morphColor: morph.color,
+			headLineHeight: head.lineHeight,
+			morphLineHeight: morph.lineHeight
+		};
+	});
+	expect(referenceType.headSize).toBeCloseTo(referenceType.morphSize, 1);
+	expect(referenceType.headColor).toBe(referenceType.morphColor);
+	expect(referenceType.headLineHeight).toBe(referenceType.morphLineHeight);
+	expect(contextType.functionSize).toBeCloseTo(referenceType.headSize, 1);
+	expect(contextType.functionColor).toBe(referenceType.headColor);
+	expect(contextType.functionLineHeight).toBe(referenceType.headLineHeight);
+	// The compact heading is a wide-panel improvement. On a phone the full
+	// pronunciation gets its own row instead of being squeezed beside the
+	// selected form and the close button.
+	await page.setViewportSize({ width: 375, height: 800 });
+	const narrowHeading = await panel.locator('header').evaluate((header) => {
+		const title = header.querySelector('.form')!.getBoundingClientRect();
+		const pronunciation = header.querySelector('.pronunciation-lead')!.getBoundingClientRect();
+		const copy = header
+			.parentElement!.querySelector('.context-layer .context-copy')!
+			.getBoundingClientRect();
+		return {
+			titleBottom: title.bottom,
+			pronunciationTop: pronunciation.top,
+			titleLeft: title.left,
+			copyLeft: copy.left
+		};
+	});
+	expect(narrowHeading.pronunciationTop).toBeGreaterThanOrEqual(narrowHeading.titleBottom);
+	expect(narrowHeading.copyLeft).toBeCloseTo(narrowHeading.titleLeft, 1);
 	// The short technical provenance line remains visible without acquiring
 	// another heading of its own.
 	const verification = panel.locator('.verification');
@@ -117,7 +202,23 @@ test('a proper name absent from one analyzer names its true confirmers', async (
 
 test('a lemma-level note appears on every token of the lemma', async ({ page }) => {
 	await page.goto(`${AVE}?w=w031`); // Amen
-	await expect(page.locator('aside .note')).toContainText('Hebrajskie');
+	const panel = page.locator('aside');
+	await expect(panel.locator('.note')).toContainText('Hebrajskie');
+	const dictionaryType = await panel.evaluate((card) => {
+		const head = getComputedStyle(card.querySelector('.head')!);
+		const note = getComputedStyle(card.querySelector('.note')!);
+		return {
+			headSize: parseFloat(head.fontSize),
+			noteSize: parseFloat(note.fontSize),
+			headColor: head.color,
+			noteColor: note.color,
+			headLineHeight: head.lineHeight,
+			noteLineHeight: note.lineHeight
+		};
+	});
+	expect(dictionaryType.noteSize).toBeCloseTo(dictionaryType.headSize, 1);
+	expect(dictionaryType.noteColor).toBe(dictionaryType.headColor);
+	expect(dictionaryType.noteLineHeight).toBe(dictionaryType.headLineHeight);
 });
 
 test('cross-references in notes jump to the referenced word', async ({ page }) => {

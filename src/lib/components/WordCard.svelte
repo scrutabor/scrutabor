@@ -3,7 +3,6 @@
 	// without deciding where it is said. WordPanel decides whether the
 	// shared analysis sits in a dismissible sheet or permanently in the
 	// landing page; there is deliberately only one information layout.
-	import Pronunciation from '$lib/components/Pronunciation.svelte';
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import type { Analysis, LemmaEntry, SenseEntry, Word, WordGloss } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
@@ -58,20 +57,22 @@
 
 {#snippet context()}
 	{#if gloss}
-		<p class="gloss">{gloss.gloss}</p>
+		<p class="context-copy">
+			<span class="gloss">{gloss.gloss}</span>
+			{#if gloss.function}<span class="context-separator">—</span><span class="function">
+					{#each functionParts as part, i (i)}
+						{#if 'id' in part}
+							<button class="xref" onclick={() => onnavigate(part.id)}
+								>{part.open}<span lang="la">{part.form}</span>”</button
+							>
+						{:else}
+							{part.text}
+						{/if}
+					{/each}
+				</span>{/if}
+		</p>
 	{/if}
 	{#if gloss?.function}
-		<p class="function">
-			{#each functionParts as part, i (i)}
-				{#if 'id' in part}
-					<button class="xref" onclick={() => onnavigate(part.id)}
-						>{part.open}<span lang="la">{part.form}</span>”</button
-					>
-				{:else}
-					{part.text}
-				{/if}
-			{/each}
-		</p>
 		<SourceNotes citations={gloss.function_citations} {lang} />
 	{/if}
 {/snippet}
@@ -109,9 +110,6 @@
 	</p>
 {/snippet}
 
-<div class="pronunciation-lead">
-	<Pronunciation form={word.form} {lang} />
-</div>
 <div class="layers">
 	{#if gloss}
 		<section class="layer context-layer" aria-label={M[lang].wordContextLabel}>
@@ -134,8 +132,8 @@
 <style>
 	.head {
 		margin: 0.15rem 0 0;
-		color: var(--ink-soft);
-		font-size: 1.05rem;
+		color: var(--ink);
+		font-size: 1rem;
 	}
 
 	.head a {
@@ -159,9 +157,8 @@
 
 	.note {
 		margin: 0.35rem 0 0;
-		color: var(--ink-soft);
-		font-size: 0.95rem;
-		line-height: 1.5;
+		color: var(--ink);
+		font-size: 1rem;
 	}
 
 	.morph {
@@ -180,16 +177,18 @@
 		border-bottom-style: solid;
 	}
 
-	.gloss {
-		margin: 0.6rem 0 0;
-		font-size: 1.25rem;
-		font-style: italic;
+	.context-copy {
+		margin: 0;
+		font-size: 1rem;
 	}
 
-	.function {
-		margin: 0.45rem 0 0;
-		font-size: 1.05rem;
-		line-height: 1.55;
+	.gloss {
+		font-weight: 500;
+	}
+
+	.context-separator {
+		margin-inline: 0.38em;
+		color: var(--ink-soft);
 	}
 
 	.xref {
@@ -223,7 +222,7 @@
 	}
 
 	.layers {
-		padding-top: 0.15rem;
+		padding-top: 0;
 	}
 
 	.layer {
@@ -236,7 +235,7 @@
 	}
 
 	.context-layer {
-		margin-top: 0.25rem;
+		margin-top: 0.35rem;
 		padding-top: 0;
 		border-top: 0;
 	}
@@ -257,14 +256,6 @@
 
 	.layer-body {
 		min-width: 0;
-	}
-
-	.layers .gloss {
-		margin-top: 0.25rem;
-	}
-
-	.layers .function {
-		margin-top: 0.6rem;
 	}
 
 	.layers .head,
@@ -290,6 +281,10 @@
 	@media (max-width: 36rem) {
 		.layer {
 			display: block;
+		}
+
+		.context-layer .layer-body {
+			margin-top: 0;
 		}
 
 		.layer-body {
