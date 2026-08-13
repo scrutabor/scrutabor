@@ -26,16 +26,21 @@
 	const msgs = $derived(M[lang]);
 	const doc = $derived(data.doc);
 
-	// A page whose text is spoken by one voice throughout has nothing for
-	// the reader's part to change: no line is marked as theirs and nothing
-	// folds. Offering the choice there is offering a control that does
-	// nothing, so it is not offered — Quod ore súmpsimus is the priest's
-	// alone from beginning to end.
+	// Show the role and Mass choices whenever either can change what the
+	// reader is told. Different rubrical speakers are one reason; sourced
+	// lay participation is another. The ministers' Confiteor has only one
+	// Missale speaker, yet at Low Mass DMS 31 b gives it to the faithful
+	// with the server — hiding the controls made the sung-Mass label
+	// "server" look like an unconditional claim.
 	const takesPart = $derived(
 		data.category === 'ordinarium' &&
-			new Set(
+			(new Set(
 				doc.segments.filter((sg) => sg.type === 'verse' && sg.speaker).map((sg) => sg.speaker)
-			).size > 1
+			).size > 1 ||
+				doc.segments.some(
+					(sg) =>
+						sg.type === 'verse' && sg.participation && Object.keys(sg.participation).length > 0
+				))
 	);
 	const gloss = $derived(data.gloss);
 	// A reading names the text itself ("Chwała Ojcu"), not merely
@@ -179,7 +184,7 @@
 	</div>
 {:else}
 	<div class="page reading">
-		<header>
+		<header class:without-opening-rubric={data.category === 'ordinarium'}>
 			<PageNav {lang} />
 			<h1 lang="la">{doc.title}</h1>
 			<p class="subtitle smallcaps">{readingLabel}</p>
@@ -244,6 +249,7 @@
 					collapsedShow={msgs.repeatedPrayerShow}
 					collapsedHide={msgs.repeatedPrayerHide}
 					showSpeakerNames={!hasDevotionalLeader}
+					hideOpeningRubric={data.category === 'ordinarium'}
 				/>
 			{/if}
 
@@ -296,6 +302,14 @@
 	   about sheet's header too and opened a 3rem hole under its label. */
 	.page > header {
 		padding-bottom: 3rem;
+	}
+
+	/* The ordinary reading rhythm reserved this full step for the opening
+	   process rubric. Standalone Mass prayers now leave that rubric to the
+	   Ordo, so keeping its entire approach made the prayer appear to begin
+	   one absent block too low. */
+	.page > header.without-opening-rubric {
+		padding-bottom: 1.5rem;
 	}
 
 	main.panel-open {

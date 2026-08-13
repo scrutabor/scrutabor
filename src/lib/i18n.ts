@@ -150,7 +150,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		speakers: {
 			sacerdos: 'kapłan',
 			ductor: 'prowadzący',
-			minister: 'ministrant',
+			minister: 'usługujący',
 			populus: 'lud',
 			omnes: 'wszyscy',
 			schola: 'schola'
@@ -158,7 +158,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		markTitle: {
 			sacerdos: 'Versículus — werset, który mówi kapłan',
 			ductor: 'Versículus — werset osoby prowadzącej modlitwę',
-			minister: 'Responsórium — odpowiedź ministranta i wiernych',
+			minister: 'Responsórium — odpowiedź usługującego i wiernych',
 			populus: 'Responsórium — odpowiedź wiernych',
 			omnes: 'Omnes — mówią wszyscy razem',
 			schola: 'Responsórium — śpiewa schola'
@@ -168,27 +168,27 @@ const MESSAGES: Record<Lang, Messages> = {
 			'Znak stoi tam, gdzie zmienia się mówiący, i powtarza się po każdej rubryce. Wiersze bez znaku należą do głosu powyżej.',
 		voices: { submissa: 'półgłosem', secreto: 'po cichu', cantus: 'śpiew' },
 		verseAria: (n) => `odnośnik do wersetu ${n}`,
-		roleLabel: 'teksty dla',
+		roleLabel: 'rola',
 		massLabel: 'Msza',
 		massForms: { cantu: 'śpiewana', lecta: 'cicha' },
 		massHint: {
 			cantu: 'wierni śpiewają odpowiedzi i części stałe',
-			lecta: 'wierni odpowiadają razem z ministrantem i odmawiają części stałe'
+			lecta: 'wierni odpowiadają razem z usługującym i odmawiają części stałe'
 		},
 		everyone: 'odpowiadają wszyscy',
 		faithful: 'wierni',
 		faithfulWith: {
 			sacerdos: 'kapłan i wierni',
 			ductor: 'prowadzący i wierni',
-			minister: 'ministrant i wierni',
+			minister: 'usługujący i wierni',
 			populus: 'wierni',
 			omnes: 'wszyscy',
 			schola: 'schola i wierni'
 		},
-		roles: { populus: 'wiernych', minister: 'ministranta', sacerdos: 'kapłana' },
+		roles: { populus: 'wierni', minister: 'usługujący', sacerdos: 'kapłan' },
 		roleHint: {
 			populus: 'części odmawiane głośno, z odpowiedziami wiernych',
-			minister: 'części odmawiane głośno, z pełnymi odpowiedziami ministranta',
+			minister: 'części odmawiane głośno, z pełnymi odpowiedziami usługującego',
 			sacerdos: 'całe Ordo Missæ, wraz z modlitwami odmawianymi po cichu'
 		},
 		quietCollapsed: 'kapłan modli się po cichu',

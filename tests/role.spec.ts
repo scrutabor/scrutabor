@@ -45,8 +45,8 @@ test('a server and a priest are shown everything from the start', async ({ page 
 
 test('the role survives leaving the page', async ({ page }) => {
 	await page.goto('/app/pl/ordo');
-	await page.getByRole('radio', { name: 'ministranta' }).click();
-	await expect(page.getByRole('radio', { name: 'ministranta' })).toHaveAttribute(
+	await page.getByRole('radio', { name: 'usługujący' }).click();
+	await expect(page.getByRole('radio', { name: 'usługujący' })).toHaveAttribute(
 		'aria-checked',
 		'true'
 	);
@@ -125,7 +125,10 @@ test('an Ordinary prayer shared with the faithful is named without a false versi
 	// The ministers' Confiteor becomes a shared prayer only in a low Mass
 	// (31 b), and names both the rubrical and participating voices.
 	await page.goto('/app/pl/ordinarium/confiteor');
-	await expect(page.locator('.who-name').first()).toHaveText('ministrant i wierni');
+	await page.locator('.option[data-word="śpiewana"]').click();
+	await expect(page.locator('.who-name').first()).toHaveText('usługujący');
+	await page.locator('.option[data-word="cicha"]').click();
+	await expect(page.locator('.who-name').first()).toHaveText('usługujący i wierni');
 	await expect(page.locator('.verse .mark')).toHaveCount(0);
 });
 
@@ -146,7 +149,7 @@ test('the reader can change their part from a text page, and the marks follow', 
 	expect((await answered()).filter(Boolean)).toContain('R.');
 	expect((await answered()).filter(Boolean)).not.toContain('V.');
 
-	await page.getByRole('radio', { name: 'kapłana' }).click();
+	await page.getByRole('radio', { name: 'kapłan' }).click();
 
 	// as the celebrant, his own are — and he does not "answer" them
 	expect((await answered()).filter(Boolean)).toContain('V.');
@@ -329,7 +332,7 @@ test('the reader’s own lines are the red ones, and the other voice recedes', a
 	expect(pew.some((c) => c.mark === 'V.' && !c.red)).toBe(true);
 
 	// as the celebrant, it is the other way round
-	await page.getByRole('radio', { name: 'kapłana' }).click();
+	await page.getByRole('radio', { name: 'kapłan' }).click();
 	const priest = await colours();
 	expect(priest.filter((c) => c.red).every((c) => c.mark === 'V.')).toBe(true);
 	expect(priest.some((c) => c.mark === 'R.' && !c.red)).toBe(true);

@@ -323,15 +323,15 @@ test('the reader is told which lines are theirs, and at which Mass', async ({ pa
 	// celebrated at all it is usually the Sunday Mass, and n. 26 asks that
 	// the Sunday parish Mass be sung
 	await expect(page.locator('.picker .option.on', { hasText: 'śpiewana' })).toBeVisible();
-	await expect(names().filter({ hasText: 'ministrant' }).first()).toBeVisible();
+	await expect(names().filter({ hasText: 'usługujący' }).first()).toBeVisible();
 
 	// at a low Mass the same lines are the faithful's, by n. 31 b
 	await page.locator('.option[data-word="cicha"]').click();
-	await expect(names().filter({ hasText: 'ministrant i wierni' }).first()).toBeVisible();
+	await expect(names().filter({ hasText: 'usługujący i wierni' }).first()).toBeVisible();
 
 	// and a server still sees the rubrical speaker, which is what he needs
-	await page.locator('.option[data-word="ministranta"]').click();
-	await expect(names().filter({ hasText: 'ministrant' }).first()).toBeVisible();
+	await page.locator('.option[data-word="usługujący"]').click();
+	await expect(names().filter({ hasText: 'usługujący' }).first()).toBeVisible();
 });
 
 test('the responses everyone makes are marked as such', async ({ page }) => {
@@ -345,7 +345,7 @@ test('the responses everyone makes are marked as such', async ({ page }) => {
 	await expect(everyone.first()).toHaveText('odpowiadają wszyscy');
 
 	// a server is not "everyone": the mark belongs to the pew's view
-	await page.locator('.option[data-word="kapłana"]').click();
+	await page.locator('.option[data-word="kapłan"]').click();
 	await expect(everyone).toHaveCount(0);
 });
 

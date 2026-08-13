@@ -26,7 +26,8 @@
 		collapsedLabel,
 		collapsedShow,
 		collapsedHide,
-		showSpeakerNames = true
+		showSpeakerNames = true,
+		hideOpeningRubric = false
 	}: {
 		doc: TextDocument;
 		gloss: GlossDocument;
@@ -55,6 +56,9 @@
 		collapsedHide?: string;
 		/** Some devotional dialogues are already clear from V./R. alone. */
 		showSpeakerNames?: boolean;
+		/** A standalone Mass prayer keeps the opening rubric's deep-link
+		 * anchor, while leaving its continuous-rite direction to the Ordo. */
+		hideOpeningRubric?: boolean;
 	} = $props();
 
 	// A dot, not a colon: it is unreserved in a URL, so `?w=credo.w001`
@@ -154,6 +158,11 @@
 				{@render verse(seg, i)}
 			</div>
 		</details>
+	{:else if seg.type === 'rubric' && hideOpeningRubric && i === 0}
+		<!-- Bibliography backlinks cite this exact segment. The direction is
+		     hidden here, not deleted: its anchor still resolves at the prayer's
+		     opening and the Ordo renders the complete segment. -->
+		<span class="rubric-anchor" id={segmentId(seg.id)} aria-hidden="true"></span>
 	{:else if seg.type === 'rubric'}
 		<div class="rubric" id={segmentId(seg.id)}>
 			<p class="rubric-la" lang="la">{seg.text}</p>
@@ -286,6 +295,17 @@
 {/snippet}
 
 <style>
+	.rubric-anchor {
+		display: block;
+		height: 0;
+	}
+
+	/* With the opening process rubric absent, the first speaker name is the
+	   beginning of the standalone prayer, not a new section after prose. */
+	.rubric-anchor + .who {
+		margin-top: 0.3rem;
+	}
+
 	.repeated-prayer {
 		margin: calc(var(--reading) * 0.55) 0;
 	}

@@ -25,6 +25,55 @@ test('help slider walks the three-step ladder', async ({ page }) => {
 	await expect(page.locator('.rubric-narrative').first()).toBeVisible();
 });
 
+test('standalone Ordinary prayers omit process rubrics but keep textual directions', async ({
+	page
+}) => {
+	// The catalogue is a shelf of prayers, not a second walk through Mass.
+	// Opening rubrics depend on the preceding action ("then", "when the
+	// Preface is finished") and belong in Ordo Missæ. Directions attached
+	// to words within a prayer still help when that prayer is opened alone.
+	for (const slug of ['kyrie', 'gloria', 'sanctus']) {
+		await page.goto(`/app/pl/ordinarium/${slug}`);
+		await expect(page.locator('main > .rubric')).toHaveCount(0);
+	}
+
+	await page.goto('/app/pl/ordinarium/confiteor');
+	await expect(page.locator('main > .rubric')).toHaveCount(1);
+	await expect(page.locator('main > .rubric')).toContainText('Percutiunt sibi pectus ter');
+
+	await page.goto('/app/pl/ordinarium/credo');
+	await expect(page.locator('main > .rubric')).toHaveCount(1);
+	await expect(page.locator('main > .rubric')).toContainText('Hic genuflectitur');
+
+	await page.goto('/app/pl/ordinarium/agnus-dei');
+	await expect(page.locator('main > .rubric')).toHaveCount(1);
+	await expect(page.locator('main > .rubric')).toContainText('In Missis Defunctorum');
+
+	// The continuous Ordo retains the complete ritual context.
+	await page.goto('/app/pl/ordo/catechumenorum');
+	await expect(
+		page.locator('.rubric-la', {
+			hasText: 'Qua finita, iunctis manibus, et alternatim cum Ministris, dicit'
+		})
+	).toBeVisible();
+});
+
+test('the standalone Kyrie does not contradict its participation label', async ({ page }) => {
+	await page.goto('/app/pl/ordinarium/kyrie');
+	await expect(page.locator('.rubric-narrative')).toHaveCount(0);
+	await expect(page.locator('.who-name')).toHaveText('wierni');
+});
+
+test('a suppressed opening rubric leaves no empty ritual step', async ({ page }) => {
+	await page.goto('/app/pl/ordinarium/kyrie');
+	const gap = await page.evaluate(() => {
+		const header = document.querySelector('header')!.getBoundingClientRect();
+		const first = document.querySelector('main > :not(.rubric-anchor)')!.getBoundingClientRect();
+		return first.top - header.bottom;
+	});
+	expect(gap).toBeLessThan(8);
+});
+
 test('a received translation identifies its source beside the verse', async ({ page }) => {
 	await page.goto('/app/pl/psalmi/118-he');
 	await page.locator('input[type="range"]').fill('2');
@@ -867,6 +916,11 @@ test('the part control appears only where it changes something', async ({ page }
 	// control that does nothing is worse than not offering it.
 	await page.goto('/app/en/ordinarium/praefatio-dialogus');
 	await expect(page.getByRole('radio', { name: 'faithful' })).toBeVisible();
+	// One missal speaker, but a real participation change: at Low Mass the
+	// faithful may say the ministers' Confiteor with the server (DMS 31 b).
+	await page.goto('/app/en/ordinarium/confiteor');
+	await expect(page.getByRole('radio', { name: 'faithful' })).toBeVisible();
+	await expect(page.getByRole('radio', { name: 'low' })).toBeVisible();
 
 	await page.goto('/app/en/ordinarium/quod-ore-sumpsimus'); // the priest's, throughout
 	await expect(page.getByRole('radio', { name: 'faithful' })).toHaveCount(0);
