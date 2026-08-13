@@ -222,6 +222,22 @@ test('landing shows the catalog and a quiet grammar link', async ({ page }) => {
 	await expect(page.locator('.motto')).toContainText('scrutabor legem tuam');
 });
 
+test('every reading names itself below its Latin title', async ({ page }) => {
+	for (const section of CATALOG) {
+		for (const text of section.texts) {
+			for (const lang of ['pl', 'en'] as const) {
+				await page.goto(`/app/${lang}/${text.category}/${text.slug}`);
+				await expect(page.locator('header .subtitle')).toHaveText(text.localizedTitle[lang]);
+				await expect(page.locator('header .subtitle')).not.toHaveText(section.label[lang]);
+			}
+		}
+	}
+
+	// Ordo movements already carry a useful, more specific structural label.
+	await page.goto('/app/pl/ordo/praeparatio');
+	await expect(page.locator('header .subtitle')).toHaveText('Modlitwy u stopni ołtarza');
+});
+
 test('lemma page shows the headword pronunciation', async ({ page }) => {
 	await page.goto('/app/pl/lemma/oro');
 	await expect(page.locator('.pron')).toContainText('o-ro');

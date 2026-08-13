@@ -7,7 +7,7 @@ export interface CatalogText {
 	category: string;
 	slug: string;
 	title: string;
-	note: Record<Lang, string>;
+	localizedTitle: Record<Lang, string>;
 }
 
 export interface CatalogSection {
@@ -25,54 +25,51 @@ const CATALOG_SOURCE: CatalogSection[] = [
 				category: 'orationes',
 				slug: 'pater-noster',
 				title: 'Pater noster',
-				note: { pl: 'Modlitwa Pańska', en: "the Lord's Prayer" }
+				localizedTitle: { pl: 'Ojcze nasz', en: 'Our Father' }
 			},
 			{
 				category: 'orationes',
 				slug: 'ave-maria',
 				title: 'Ave María',
-				note: { pl: 'Pozdrowienie anielskie', en: 'the Hail Mary' }
+				localizedTitle: { pl: 'Zdrowaś Maryjo', en: 'Hail Mary' }
 			},
 			{
 				category: 'orationes',
 				slug: 'gloria-patri',
 				title: 'Glória Patri',
-				note: { pl: 'Doksologia mniejsza', en: 'the lesser doxology' }
+				localizedTitle: { pl: 'Chwała Ojcu', en: 'Glory Be' }
 			},
 			{
 				category: 'orationes',
 				slug: 'angelus-domini',
 				title: 'Ángelus Dómini',
-				note: { pl: 'Anioł Pański', en: 'the Angelus' }
+				localizedTitle: { pl: 'Anioł Pański', en: 'The Angelus' }
 			},
 			{
 				category: 'orationes',
 				slug: 'sub-tuum-praesidium',
 				title: 'Sub tuum præsídium',
-				note: { pl: 'Pod Twoją obronę', en: 'under your protection' }
+				localizedTitle: { pl: 'Pod Twoją obronę', en: 'We Fly to Thy Protection' }
 			},
 			{
 				category: 'orationes',
 				slug: 'salve-regina',
 				title: 'Salve Regína',
-				note: { pl: 'Antyfona maryjna, po Mszy cichej', en: 'the Marian antiphon, after low Mass' }
+				localizedTitle: { pl: 'Witaj, Królowo', en: 'Hail, Holy Queen' }
 			},
 			{
 				category: 'orationes',
 				slug: 'regina-caeli',
 				title: 'Regína cæli',
-				note: {
-					pl: 'Antyfona maryjna okresu wielkanocnego',
-					en: 'the Marian antiphon of Paschaltide'
-				}
+				localizedTitle: { pl: 'Królowo nieba', en: 'Queen of Heaven' }
 			},
 			{
 				category: 'orationes',
 				slug: 'sancte-michael',
 				title: 'Sancte Míchaël',
-				note: {
-					pl: 'Modlitwa do świętego Michała Archanioła',
-					en: 'the prayer to St Michael the Archangel'
+				localizedTitle: {
+					pl: 'Święty Michale Archaniele',
+					en: 'Saint Michael the Archangel'
 				}
 			}
 		]
@@ -85,37 +82,37 @@ const CATALOG_SOURCE: CatalogSection[] = [
 				category: 'ordinarium',
 				slug: 'confiteor',
 				title: 'Confíteor (Ministrórum)',
-				note: { pl: 'Spowiedź powszechna', en: 'the general confession' }
+				localizedTitle: { pl: 'Spowiadam się', en: 'I Confess' }
 			},
 			{
 				category: 'ordinarium',
 				slug: 'kyrie',
 				title: 'Kýrie, eléison',
-				note: { pl: 'Wezwania o zmiłowanie', en: 'the plea for mercy' }
+				localizedTitle: { pl: 'Panie, zmiłuj się', en: 'Lord, Have Mercy' }
 			},
 			{
 				category: 'ordinarium',
 				slug: 'gloria',
 				title: 'Glória in excélsis',
-				note: { pl: 'Hymn anielski', en: 'the angelic hymn' }
+				localizedTitle: { pl: 'Chwała na wysokości Bogu', en: 'Glory to God in the Highest' }
 			},
 			{
 				category: 'ordinarium',
 				slug: 'credo',
 				title: 'Credo',
-				note: { pl: 'Wyznanie wiary', en: 'the profession of faith' }
+				localizedTitle: { pl: 'Wierzę w jednego Boga', en: 'I Believe in One God' }
 			},
 			{
 				category: 'ordinarium',
 				slug: 'sanctus',
 				title: 'Sanctus',
-				note: { pl: 'Przed Kanonem', en: 'before the Canon' }
+				localizedTitle: { pl: 'Święty, Święty, Święty', en: 'Holy, Holy, Holy' }
 			},
 			{
 				category: 'ordinarium',
 				slug: 'agnus-dei',
 				title: 'Agnus Dei',
-				note: { pl: 'Przed Komunią', en: 'before Communion' }
+				localizedTitle: { pl: 'Baranku Boży', en: 'Lamb of God' }
 			}
 		]
 	},
@@ -131,7 +128,7 @@ const CATALOG_SOURCE: CatalogSection[] = [
 				category: 'psalmi',
 				slug: '118-he',
 				title: 'Psalmus 118, HE',
-				note: { pl: 'Wersety 33-40, z mottem', en: 'verses 33-40, with the motto' }
+				localizedTitle: { pl: 'Doskonałość Prawa Bożego', en: "The Perfection of God's Law" }
 			}
 		]
 	}
@@ -143,6 +140,12 @@ export const CATALOG: CatalogSection[] = bindPlFields(CATALOG_SOURCE);
 
 export function sectionFor(category: string): CatalogSection | undefined {
 	return CATALOG.find((s) => s.category === category);
+}
+
+/** The familiar localized name belongs to the individual reading, unlike
+ * the section label ("prayers", "psalms"), which only names its shelf. */
+export function textFor(category: string, slug: string): CatalogText | undefined {
+	return sectionFor(category)?.texts.find((text) => text.slug === slug);
 }
 
 /** The book's reading order: catalog sections flattened — within

@@ -39,7 +39,7 @@
 					{#each section.texts as t (t.slug)}
 						<a class="card" href="/app/{lang}/{t.category}/{t.slug}">
 							<span class="card-title" lang="la">{t.title}</span>
-							<span class="hung-note">{t.note[lang]}</span>
+							<span class="hung-note">{t.localizedTitle[lang]}</span>
 						</a>
 					{/each}
 				</div>

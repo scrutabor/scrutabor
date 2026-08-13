@@ -75,10 +75,22 @@ describe('the words the app says', () => {
 
 	it('gives every Polish table-of-contents subtitle sentence-style capitalization', () => {
 		const subtitles = [
-			...CATALOG.flatMap((section) => section.texts.map((text) => text.note.pl)),
+			...CATALOG.flatMap((section) => section.texts.map((text) => text.localizedTitle.pl)),
 			...ORDO.map((movement) => movement.label.pl)
 		];
 		const lowercase = subtitles.filter((subtitle) => !/^[A-ZĄĆĘŁŃÓŚŹŻ]/.test(subtitle));
 		expect(lowercase, 'catalog and Ordo subtitles').toEqual([]);
+	});
+
+	it('uses names, not placement instructions, for catalogue subtitles', () => {
+		const contextual = /\b(przed|po Mszy|okresu|wersety|before|after|verses|Paschaltide)\b/i;
+		const offenders = CATALOG.flatMap((section) =>
+			section.texts.flatMap((text) =>
+				(['pl', 'en'] as const)
+					.filter((lang) => contextual.test(text.localizedTitle[lang]))
+					.map((lang) => `${text.category}/${text.slug}.${lang}: ${text.localizedTitle[lang]}`)
+			)
+		);
+		expect(offenders, 'catalogue subtitles identify the text itself').toEqual([]);
 	});
 });

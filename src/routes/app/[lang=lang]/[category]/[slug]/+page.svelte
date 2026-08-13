@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto, replaceState } from '$app/navigation';
 	import { arrowNav } from '$lib/arrow-nav';
-	import { neighborsOf, sectionFor } from '$lib/catalog';
+	import { neighborsOf, sectionFor, textFor } from '$lib/catalog';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import Pager from '$lib/components/Pager.svelte';
@@ -38,7 +38,14 @@
 			).size > 1
 	);
 	const gloss = $derived(data.gloss);
-	const sectionLabel = $derived(sectionFor(data.category)?.label[lang] ?? '');
+	// A reading names the text itself ("Chwała Ojcu"), not merely
+	// the shelf it came from ("Modlitwy"). Non-catalogue corpus texts retain
+	// the section name as a safe fallback when reached by a direct link.
+	const readingLabel = $derived(
+		textFor(data.category, data.slug)?.localizedTitle[lang] ??
+			sectionFor(data.category)?.label[lang] ??
+			''
+	);
 	// Book navigation: the catalog's flattened order — within ordinarium
 	// that is the liturgical sequence, so a reader can follow the Mass
 	// text to text without returning to the catalog.
@@ -175,7 +182,7 @@
 		<header>
 			<PageNav {lang} />
 			<h1 lang="la">{doc.title}</h1>
-			<p class="subtitle smallcaps">{sectionLabel}</p>
+			<p class="subtitle smallcaps">{readingLabel}</p>
 			<div class="help-row">
 				<HelpLevels {lang} bind:value={helpLevel} />
 				{#if takesPart}<RolePicker {lang} compact /><RolePicker {lang} compact kind="mass" />{/if}
