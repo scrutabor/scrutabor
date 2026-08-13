@@ -12,6 +12,8 @@ export interface Messages {
 	workingEdition: string;
 	/** The colophon's word for an edition of the app. */
 	edition: string;
+	/** Accessible name for the compact home control inside the prayer book. */
+	bookHome: string;
 	levels: [string, string, string];
 	levelsAria: string;
 	themeAria: { toLight: string; toDark: string };
@@ -101,6 +103,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		mottoRef: 'ps\u00a0118,\u00a034',
 		workingEdition: 'wydanie robocze',
 		edition: 'wydanie',
+		bookHome: 'strona główna modlitewnika',
 		levels: ['sama łacina', 'słowo po słowie', 'pełny przekład'],
 		levelsAria: 'Poziom pomocy',
 		themeAria: { toLight: 'przełącz na tryb jasny', toDark: 'przełącz na tryb ciemny' },
@@ -206,6 +209,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		mottoRef: 'ps\u00a0118\u00a0(119),\u00a034',
 		workingEdition: 'working edition',
 		edition: 'edition',
+		bookHome: 'prayer book home',
 		levels: ['Latin only', 'word by word', 'full translation'],
 		levelsAria: 'Help level',
 		themeAria: { toLight: 'switch to light mode', toDark: 'switch to dark mode' },

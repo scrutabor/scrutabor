@@ -119,6 +119,19 @@ test.describe('landing @online', () => {
 		await expect(panel.locator('.form')).toHaveText('Da');
 	});
 
+	test('a lemma opened from the specimen has a stable prayer-book home', async ({ page }) => {
+		await page.goto('/pl');
+		await page.locator('aside.word-panel-inline a[href="/app/pl/lemma/scrutor"]').click();
+		await page.waitForURL(atRoute('/app/pl/lemma/scrutor'));
+		const trail = page.locator('nav .trail');
+		await expect(trail.locator('a')).toHaveCount(1);
+		await expect(trail.locator('a.home')).toHaveAttribute('href', '/app/pl');
+		await expect(trail.locator('a.home')).toHaveAttribute(
+			'aria-label',
+			'strona główna modlitewnika'
+		);
+	});
+
 	test('the landing and reader render one analysis component', async ({ page }) => {
 		await page.goto('/pl');
 		const landing = await analysisTree(page.locator('.word-panel-inline .word-analysis'));

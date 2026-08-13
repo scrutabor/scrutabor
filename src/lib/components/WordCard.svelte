@@ -3,6 +3,7 @@
 	// without deciding where it is said. WordPanel decides whether the
 	// shared analysis sits in a dismissible sheet or permanently in the
 	// landing page; there is deliberately only one information layout.
+	import AnalysisRow from '$lib/components/AnalysisRow.svelte';
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import type { Analysis, LemmaEntry, SenseEntry, Word, WordGloss } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
@@ -116,14 +117,8 @@
 			<div class="layer-body">{@render context()}</div>
 		</section>
 	{/if}
-	<section class="layer" aria-labelledby="word-entry-label">
-		<h3 class="layer-label smallcaps" id="word-entry-label">{M[lang].wordEntryLabel}</h3>
-		<div class="layer-body">{@render entry()}</div>
-	</section>
-	<section class="layer" aria-labelledby="word-form-label">
-		<h3 class="layer-label smallcaps" id="word-form-label">{M[lang].wordFormLabel}</h3>
-		<div class="layer-body">{@render grammar()}</div>
-	</section>
+	<AnalysisRow label={M[lang].wordEntryLabel} id="word-entry-label">{@render entry()}</AnalysisRow>
+	<AnalysisRow label={M[lang].wordFormLabel} id="word-form-label">{@render grammar()}</AnalysisRow>
 	<div class="verification">
 		{@render verification()}
 	</div>
@@ -222,19 +217,14 @@
 	}
 
 	.layers {
-		padding-top: 0;
-	}
-
-	.layer {
 		display: grid;
 		grid-template-columns: 4.4rem minmax(0, 1fr);
 		column-gap: 0.8rem;
-		margin: 0.75rem 0 0;
-		padding-top: 0.7rem;
-		border-top: 1px solid var(--border);
+		padding-top: 0;
 	}
 
 	.context-layer {
+		grid-column: 1 / -1;
 		margin-top: 0.35rem;
 		padding-top: 0;
 		border-top: 0;
@@ -242,20 +232,6 @@
 
 	.context-layer .layer-body {
 		grid-column: 1 / -1;
-	}
-
-	.layer-label {
-		margin: 0;
-		color: var(--ink-soft);
-		font-family: 'EB Garamond Label', 'EB Garamond', serif;
-		font-size: 0.7rem;
-		font-weight: 400;
-		line-height: 1;
-		letter-spacing: 0.11em;
-	}
-
-	.layer-body {
-		min-width: 0;
 	}
 
 	.layers .head,
@@ -268,6 +244,7 @@
 	}
 
 	.verification {
+		grid-column: 1 / -1;
 		margin: 0.8rem 0 0;
 		padding-top: 0.65rem;
 		border-top: 1px solid var(--border);
@@ -279,16 +256,12 @@
 	}
 
 	@media (max-width: 36rem) {
-		.layer {
+		.layers {
 			display: block;
 		}
 
 		.context-layer .layer-body {
 			margin-top: 0;
-		}
-
-		.layer-body {
-			margin-top: 0.25rem;
 		}
 	}
 </style>

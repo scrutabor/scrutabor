@@ -21,6 +21,7 @@ const PAGES = [
 	'/app/pl/ordinarium/credo', // the longest text
 	'/app/pl/lemma/mater', // a concordance
 	'/app/pl/grammatica', // a card index
+	'/app/pl/grammatica/nominativus', // the longest three-level breadcrumb
 	'/app/pl/grammatica/pronuntiatio', // a prose page with tables
 	'/app/en/ordo', // the same shapes with English words in them
 	'/app/en/ordinarium/credo'

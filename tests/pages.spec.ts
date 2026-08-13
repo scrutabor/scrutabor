@@ -1,7 +1,7 @@
 // The educational surfaces around the reading view: lemma pages,
 // grammar-concept pages, and the landing.
 import pkg from '../package.json' with { type: 'json' };
-import { atRoute, expect, test } from './fixtures';
+import { atRoute, expect, offlineUrl, test } from './fixtures';
 import { CATALOG } from '../src/lib/catalog';
 
 test('lemma page shows head, senses, derivatives and concordance', async ({ page }) => {
@@ -9,10 +9,43 @@ test('lemma page shows head, senses, derivatives and concordance', async ({ page
 	await expect(page.locator('h1')).toHaveText('panis');
 	await expect(page.locator('.head')).toContainText('panis, panis');
 	await expect(page.locator('.head')).toContainText('m.');
-	await expect(page.locator('.pos')).toHaveText('rzeczownik, deklinacja III');
-	await expect(page.locator('.senses')).toHaveText('chleb');
+	await expect(page.locator('[aria-labelledby="lemma-entry-label"]')).toContainText('chleb');
+	await expect(page.locator('.grammar')).toHaveText('rzeczownik, deklinacja III');
 	await expect(page.locator('.derivatives')).toContainText('kompan, kompania');
 	await expect(page.locator('a[href="/app/pl/orationes/pater-noster?w=w022"]')).toHaveText('Panem');
+});
+
+test('lemma summary shares the word panel hierarchy without becoming a panel', async ({ page }) => {
+	await page.goto('/app/pl/lemma/scrutor');
+	const identity = page.locator('main > .identity');
+	await expect(identity.locator('h1')).toHaveText('scrutor');
+	await expect(identity.locator('.pron')).toContainText('/ˈskru.tɔr/');
+	await expect(page.locator('.lexical-summary .layer-label')).toHaveText([
+		'hasło',
+		'gramatyka',
+		'w polszczyźnie'
+	]);
+	await expect(page.locator('.lexical-summary .head')).toContainText(
+		'scrutor, scrutári, scrutátus sum — badać, przeszukiwać, dociekać'
+	);
+	await expect(page.locator('aside')).toHaveCount(0);
+	const summary = await page.locator('.lexical-summary').evaluate((element) => {
+		const style = getComputedStyle(element);
+		const rows = [...element.querySelectorAll('.layer')];
+		const labels = rows.map((row) => row.querySelector('.layer-label')!.getBoundingClientRect());
+		const bodies = rows.map((row) => row.querySelector('.layer-body')!.getBoundingClientRect());
+		return {
+			background: style.backgroundColor,
+			pageBackground: getComputedStyle(document.body).backgroundColor,
+			labelRights: labels.map((label) => label.right),
+			bodyLefts: bodies.map((body) => body.left)
+		};
+	});
+	expect(summary.background).not.toBe(summary.pageBackground);
+	expect(new Set(summary.bodyLefts).size).toBe(1);
+	for (const labelRight of summary.labelRights) {
+		expect(labelRight).toBeLessThanOrEqual(summary.bodyLefts[0]);
+	}
 });
 
 test('the external dictionary link opens in a new tab', async ({ page }) => {
@@ -49,7 +82,7 @@ test('grammatica index lists the concept tranche in groups', async ({ page }) =>
 	await expect(page.locator('a[href="/app/pl/grammatica/ablativus"]')).toBeVisible();
 });
 
-test('a page one level down names its parent without renaming the book', async ({ page }) => {
+test('the prayer-book trail uses one stable local home', async ({ page }) => {
 	// The corner held ONE link, the way back — so the grammar pages, whose
 	// way back is their own index, relabelled it, and on those pages the
 	// book appeared to have been renamed "gramatyka" (owner, 2026-08-07).
@@ -57,15 +90,15 @@ test('a page one level down names its parent without renaming the book', async (
 	await page.goto('/app/pl/grammatica/nominativus');
 	const trail = page.locator('nav .trail');
 	await expect(trail.locator('li')).toHaveCount(2);
-	await expect(trail.locator('a').first()).toHaveText('scrutabor');
-	await expect(trail.locator('a').first()).toHaveAttribute('href', '/app/pl');
-	await expect(trail.locator('a').nth(1)).toHaveText('gramatyka');
+	await expect(trail.locator('a.home')).toHaveAttribute('href', '/app/pl');
+	await expect(trail.locator('a.home')).toHaveAttribute('aria-label', 'strona główna modlitewnika');
+	await expect(trail.locator('a').last()).toHaveText('gramatyka');
 
-	// the second crumb is the way up, and one level up there is only the book
-	await trail.locator('a').nth(1).click();
+	// The last crumb is the way up; one level up only local home remains.
+	await trail.locator('a').last().click();
 	await expect(page).toHaveURL(atRoute('/app/pl/grammatica'));
 	await expect(page.locator('nav .trail li')).toHaveCount(1);
-	await expect(page.locator('nav .trail a')).toHaveText('scrutabor');
+	await expect(page.locator('nav .trail a.home')).toHaveAttribute('href', '/app/pl');
 
 	// The Ordo's movements are the other page one level down, and they used
 	// a device of their own for it — a centred link under the nav — so the
@@ -76,17 +109,64 @@ test('a page one level down names its parent without renaming the book', async (
 	await page.goto('/app/pl/ordo/offertorium');
 	const ordo = page.locator('nav .trail');
 	await expect(ordo.locator('li')).toHaveCount(2);
-	await expect(ordo.locator('a').nth(1)).toHaveText('Ordo Missæ');
-	await expect(ordo.locator('a').nth(1)).toHaveAttribute('lang', 'la');
+	await expect(ordo.locator('a').last()).toHaveText('Ordo Missæ');
+	await expect(ordo.locator('a').last()).toHaveAttribute('lang', 'la');
 	// …and RENDERS in one case, whatever case it is written in. small-caps
 	// shrinks lowercase letters and leaves capitals at full height, so the
 	// O and the M of "Ordo Missæ" stood over small letters and the crumb
 	// read as though it were set larger than "scrutabor" (owner,
 	// 2026-08-07 — it is not: both compute to 13.6px). The DOM keeps the
 	// proper name; only the paint is lowercased.
-	expect(await ordo.locator('a').nth(1).innerText()).toBe('ordo missæ');
-	await ordo.locator('a').nth(1).click();
+	expect(await ordo.locator('a').last().innerText()).toBe('ordo missæ');
+	await ordo.locator('a').last().click();
 	await expect(page).toHaveURL(atRoute('/app/pl/ordo'));
+});
+
+test('the home control keeps its place and centres every crumb', async ({ page }) => {
+	const box = async (selector: string) => {
+		const rect = await page.locator(selector).boundingBox();
+		expect(rect).not.toBeNull();
+		return rect!;
+	};
+	const centre = (rect: { y: number; height: number }) => rect.y + rect.height / 2;
+
+	await page.goto('/app/pl/orationes/gloria-patri');
+	const plainHome = await box('nav .trail a.home');
+
+	for (const url of ['/app/pl/grammatica/nominativus', '/app/pl/ordo/offertorium']) {
+		await page.goto(url);
+		const home = await box('nav .trail a.home');
+		const separator = await box('nav .trail .sep');
+		const parent = await box('nav .trail li:nth-child(2) a');
+
+		expect(home.x).toBeCloseTo(plainHome.x, 1);
+		expect(home.y).toBeCloseTo(plainHome.y, 1);
+		expect(Math.abs(centre(separator) - centre(home))).toBeLessThan(1);
+		expect(Math.abs(centre(parent) - centre(home))).toBeLessThan(1);
+	}
+});
+
+test('the home control opens the catalogue in every edition', async ({ page }) => {
+	await page.goto('/app/pl/lemma/scrutor');
+	const home = page.locator('nav .trail a.home');
+	await expect(home).toHaveAttribute('href', '/app/pl');
+	await home.click();
+	await expect(page).toHaveURL(atRoute('/app/pl'));
+	await expect(page.locator('.flow-title')).toHaveText('Ordo Missæ');
+});
+
+test('downloaded HTML points home before hydration', async ({ browser }, testInfo) => {
+	test.skip(testInfo.project.name !== 'offline', 'the hosted HTML is covered by the shared test');
+	const page = await browser.newPage({ javaScriptEnabled: false });
+	const root = testInfo.config.configFile!.replace(/[/\\][^/\\]+$/, '');
+	await page.goto(offlineUrl(root, '/app/pl/lemma/scrutor'));
+	const home = page.locator('nav .trail a.home');
+	expect(await home.evaluate((anchor) => (anchor as HTMLAnchorElement).href)).toMatch(
+		/^file:\/\/.*\/build-offline\/app\/pl\.html$/
+	);
+	await home.click();
+	await expect(page).toHaveURL(atRoute('/app/pl'));
+	await page.close();
 });
 
 test('every kind of page opens on the same line', async ({ page }) => {

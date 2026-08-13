@@ -305,7 +305,7 @@ test('the Gloria reads with narrative, panel and provenance', async ({ page }) =
 	await expect(panel.locator('.gloss')).toHaveText('Most High');
 	await panel.locator('.head a').click();
 	await expect(page).toHaveURL(atRoute('lemma/altus'));
-	await expect(page.locator('.senses')).toContainText('high');
+	await expect(page.locator('.head-senses')).toContainText('high');
 });
 
 test('no token ever fragments across lines, any text, narrow viewport', async ({ page }) => {
@@ -807,7 +807,7 @@ test('the book keeps a ribbon: reopening a text resumes the position', async ({ 
 		)
 		.not.toBeNull();
 	// leave for the catalog and come back — the ribbon holds
-	await page.locator('a.back').click();
+	await page.getByRole('link', { name: 'strona główna modlitewnika' }).click();
 	await expect(page).toHaveURL(atRoute('/app/pl'));
 	await page.locator('a[href="/app/pl/ordinarium/credo"]').click();
 	await expect(page).toHaveURL(/credo/);

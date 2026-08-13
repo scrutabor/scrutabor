@@ -6,18 +6,17 @@
 	//
 	// The word panel and the lemma page had a copy each, and they had
 	// already drifted: only one of them named the labels for a reader who
-	// hovers them.
+	// hovers them. WordIdentity now decides the placement around this one
+	// pronunciation line.
 	import { M, type Lang } from '$lib/i18n';
 	import { pronunciations, syllabized } from '$lib/pronunciation';
 
-	// The lemma page centres its head block; the word panel sets it ranged
-	// left. That is the only difference there ever was between the two.
-	let { form, lang, centered = false }: { form: string; lang: Lang; centered?: boolean } = $props();
+	let { form, lang }: { form: string; lang: Lang } = $props();
 	const pron = $derived(pronunciations(form));
 	const hint = $derived(M[lang].pronunciationHint);
 </script>
 
-<p class="pron" class:centered>
+<p class="pron">
 	<span class="syllables" lang="la">{syllabized(form)}</span>
 	{#if lang === 'pl' && pron.differ}
 		<span class="pron-unit">
@@ -66,9 +65,5 @@
 
 	.pron .smallcaps {
 		font-size: 0.75rem;
-	}
-
-	.centered {
-		text-align: center;
 	}
 </style>

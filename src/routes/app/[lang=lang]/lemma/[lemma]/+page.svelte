@@ -1,7 +1,8 @@
 <script lang="ts">
+	import AnalysisRow from '$lib/components/AnalysisRow.svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
-	import Pronunciation from '$lib/components/Pronunciation.svelte';
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
+	import WordIdentity from '$lib/components/WordIdentity.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { GENDER_MARK, describeLemma } from '$lib/morph';
 
@@ -36,28 +37,32 @@
 		</main>
 	{:else}
 		<main>
-			<h1 lang="la">{headword}</h1>
-			<p class="head">
-				<i lang="la">{entry.head}</i>{#if entry.gender}&nbsp;<span class="gender"
-						>{GENDER_MARK[entry.gender]}</span
-					>{/if}
-			</p>
-			<p class="pos">{describeLemma(entry, lang)}</p>
-			<Pronunciation form={headword} {lang} centered />
+			<WordIdentity form={headword} {lang} level={1} placement="page" />
 
-			{#if sense}
-				<p class="senses">{sense.senses.join(', ')}</p>
-				{#if sense.note}
-					<p class="note">{sense.note}</p>
-					<SourceNotes citations={sense.note_citations} {lang} centered />
-				{/if}
-				{#if sense.derivatives}
-					<p class="derivatives">
-						<span class="label smallcaps">{msgs.derivativesLabel}</span>
-						{sense.derivatives.join(', ')}
+			<div class="lexical-summary">
+				<AnalysisRow label={msgs.wordEntryLabel} id="lemma-entry-label" level={2} first>
+					<p class="head">
+						<i lang="la">{entry.head}</i>{#if entry.gender}&nbsp;<span class="gender"
+								>{GENDER_MARK[entry.gender]}</span
+							>{/if}{#if sense}<span class="head-senses">{' — '}{sense.senses.join(', ')}</span
+							>{/if}
 					</p>
+					{#if sense?.note}
+						<p class="note">{sense.note}</p>
+						<SourceNotes citations={sense.note_citations} {lang} />
+					{/if}
+				</AnalysisRow>
+
+				<AnalysisRow label={msgs.grammarTitle} id="lemma-grammar-label" level={2}>
+					<p class="grammar">{describeLemma(entry, lang)}</p>
+				</AnalysisRow>
+
+				{#if sense?.derivatives}
+					<AnalysisRow label={msgs.derivativesLabel} id="lemma-derivatives-label" level={2}>
+						<p class="derivatives">{sense.derivatives.join(', ')}</p>
+					</AnalysisRow>
 				{/if}
-			{/if}
+			</div>
 
 			{#if texts.length > 0}
 				<section class="occurrences in-two">
@@ -88,57 +93,45 @@
 </div>
 
 <style>
+	.lexical-summary {
+		display: grid;
+		grid-template-columns: max-content minmax(0, 1fr);
+		column-gap: 0.8rem;
+		margin: 1.25rem auto 0;
+		padding: 1.15rem 1.4rem 1.25rem;
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: 0.9rem;
+	}
+
 	.head {
-		margin: 0.4rem 0 0;
-		text-align: center;
-		color: var(--ink-soft);
-		font-size: 1.15rem;
+		margin: 0;
+		font-size: 1rem;
 	}
 
 	.gender {
-		font-size: 0.95rem;
+		font-size: 0.9rem;
 	}
 
-	.pos {
-		margin: 0.2rem 0 0;
-		text-align: center;
-		color: var(--rubric);
-		font-size: 0.95rem;
+	.head-senses {
+		font-style: normal;
 	}
 
-	.senses {
-		margin: 1.6rem 0 0;
-		text-align: center;
-		font-size: 1.3rem;
-		font-style: italic;
+	.grammar,
+	.derivatives {
+		margin: 0;
+		font-size: 1rem;
 	}
 
 	.note {
-		margin: 0.7rem auto 0;
-		max-width: 28rem;
-		text-align: center;
-		color: var(--ink-soft);
-		font-size: 0.98rem;
-		line-height: 1.55;
-	}
-
-	.derivatives {
-		margin: 0.9rem auto 0;
-		max-width: 28rem;
-		text-align: center;
-		font-size: 0.98rem;
-	}
-
-	.derivatives .label {
-		color: var(--ink-soft);
-		font-size: 0.75rem;
-		margin-right: 0.35rem;
+		margin: 0.35rem 0 0;
+		font-size: 1rem;
 	}
 
 	/* 77 occurrences of dóminus across 44 texts: the one list here long
 	   enough that halving its height is worth a column — see .in-two */
 	.occurrences {
-		margin: 2.6rem auto 0;
+		margin: 2.4rem auto 0;
 	}
 
 	.occ-row {
@@ -193,5 +186,12 @@
 
 	.external a:hover {
 		color: var(--ink);
+	}
+
+	@media (max-width: 36rem) {
+		.lexical-summary {
+			display: block;
+			padding: 1rem 1.05rem 1.1rem;
+		}
 	}
 </style>
