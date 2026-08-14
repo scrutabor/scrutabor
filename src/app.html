@@ -25,7 +25,9 @@
 				// are mirrored in lib/reading.svelte.ts.
 				var r = localStorage.getItem('scrutabor-reading');
 				var steps = { normal: '100%', larger: '120%', largest: '140%' };
-				if (steps[r]) document.documentElement.style.fontSize = steps[r];
+				if (!steps[r]) r = 'normal';
+				document.documentElement.dataset.reading = r;
+				document.documentElement.style.fontSize = steps[r];
 			} catch (e) {
 				/* keep the static default */
 			}

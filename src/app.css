@@ -310,6 +310,29 @@ h1.wordmark {
 	text-align: right;
 }
 
+/* Every Latin-and-gloss token in a litany stays whole. A narrow screen
+   eventually cannot hold the longest token in both fixed columns, so the
+   pair stacks before it can overlap or create sideways scrolling. These
+   root-setting selectors live here because component styles deliberately
+   do not use :global; the 390px normal-size layout remains two columns. */
+@media (max-width: 30rem) {
+	html[data-reading='largest'] .litany-pair {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+@media (max-width: 26rem) {
+	html[data-reading='larger'] .litany-pair {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+@media (max-width: 22rem) {
+	html[data-reading='normal'] .litany-pair {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
 /* Every h2 in the book is a small rubric label over a list — the sections
    of the catalogue, the groups of the grammar, "where it occurs" on a
    lemma. Five copies, drifted into two margins that nobody chose. */

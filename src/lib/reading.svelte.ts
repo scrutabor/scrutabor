@@ -39,6 +39,7 @@ function stored(): Step {
 
 /** One number: every size in the app is a multiple of the root. */
 function apply(step: Step) {
+	document.documentElement.dataset.reading = step;
 	document.documentElement.style.fontSize = STEPS[step];
 }
 

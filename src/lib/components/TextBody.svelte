@@ -3,7 +3,7 @@
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { massForm } from '$lib/mass-form.svelte';
-	import { collectTranslationCitations, repeatedResponsePlan } from '$lib/reading-text';
+	import { collectTranslationCitations, litanyRows, type LitanyRow } from '$lib/reading-text';
 	import { isEveryonesResponse, isYours, role } from '$lib/role.svelte';
 	import { initialFit } from '$lib/reading-geometry';
 	import * as marks from '$lib/speaker-marks';
@@ -27,7 +27,7 @@
 		collapsedLabel,
 		collapsedShow,
 		collapsedHide,
-		compactRepeatedResponses = false,
+		litanyColumns = false,
 		showSpeakerNames = true,
 		hideOpeningRubric = false
 	}: {
@@ -56,8 +56,8 @@
 		collapsedLabel?: string;
 		collapsedShow?: string;
 		collapsedHide?: string;
-		/** Prayer-book setting for long litany series: print the response once. */
-		compactRepeatedResponses?: boolean;
+		/** Prayer-book setting: pair each litany invocation with its response. */
+		litanyColumns?: boolean;
 		/** Some devotional dialogues are already clear from V./R. alone. */
 		showSpeakerNames?: boolean;
 		/** A standalone Mass prayer keeps the opening rubric's deep-link
@@ -127,14 +127,10 @@
 	const namesVoice = (i: number) => marks.namesVoice(segs, i);
 	const firstVerse = $derived(marks.firstVerseWithInitial(segs));
 	const segmentId = (id: string) => (idPrefix ? `${idPrefix}-${id}` : id);
-	const repeatedResponses = $derived(
-		compactRepeatedResponses
-			? repeatedResponsePlan(segs)
-			: { continued: [] as string[], omitted: [] as string[] }
+	const rows: LitanyRow[] = $derived(
+		litanyColumns ? litanyRows(segs) : segs.map((_, primary) => ({ primary }))
 	);
 	const translationCitations = $derived(collectTranslationCitations(segs, gloss));
-	const selectedIn = (seg: TextDocument['segments'][number]) =>
-		seg.words?.some((word) => domId(word.id) === selectedId) ?? false;
 </script>
 
 {#snippet face(id: string, form: string, post = '', raised = false, sink = 0)}{@const fit =
@@ -156,11 +152,8 @@
 			>{/if}</ruby
 	>{/snippet}
 
-{#each doc.segments as seg, i (seg.id)}
-	{#if repeatedResponses.omitted.includes(seg.id) && !selectedIn(seg)}
-		<!-- Its first occurrence carries the response and the continuation mark. -->
-		<span class="compacted-response-anchor" id={segmentId(seg.id)} aria-hidden="true"></span>
-	{:else if collapsedSegments.includes(seg.id)}
+{#snippet segment(seg: TextDocument['segments'][number], i: number)}
+	{#if collapsedSegments.includes(seg.id)}
 		<details class="repeated-prayer">
 			<summary>
 				<span class="repeated-title" lang="la">{collapsedLabel}</span>
@@ -191,6 +184,22 @@
 		</div>
 	{:else}
 		{@render verse(seg, i)}
+	{/if}
+{/snippet}
+
+{#each rows as row (doc.segments[row.primary].id)}
+	{@const primary = doc.segments[row.primary]}
+	{#if row.response !== undefined}
+		<div class="litany-pair">
+			<div class="litany-cell litany-invocation">
+				{@render segment(primary, row.primary)}
+			</div>
+			<div class="litany-cell litany-response">
+				{@render segment(doc.segments[row.response], row.response)}
+			</div>
+		</div>
+	{:else}
+		{@render segment(primary, row.primary)}
 	{/if}
 {/each}
 
@@ -249,7 +258,6 @@
 			</p>
 		{/if}
 		{@const showMark = !sharedPrayer && marked(i)}
-		{@const responseContinues = repeatedResponses.continued.includes(seg.id)}
 		{@const verseNo = seg.speaker ? undefined : verses?.[seg.id]}
 		<!-- The gloss row of a verse whose initial reaches below the line
 		     sinks together, so the glosses stay level with each other. -->
@@ -305,10 +313,7 @@
 						>{:else}<span class="word"
 							>{@render face(w.id, w.form, w.post ?? '', raised, sink)}</span
 						>{/if}</span
-				>{' '}{/each}{#if responseContinues}<span class="response-continuation"
-					><span aria-hidden="true">…</span><span class="sr-only">{M[lang].repeatedResponse}</span
-					></span
-				>{/if}
+				>{' '}{/each}
 		</p>
 		{#if helpLevel >= 2 && gloss.segments[seg.id]?.translation}
 			<div class="seg-extra">
@@ -328,15 +333,22 @@
 		margin: calc(var(--reading) * 1.1) 0 calc(var(--reading) * 0.55);
 	}
 
-	.response-continuation {
-		margin-inline-start: 0.08em;
-		color: var(--rubric);
-		font-size: 0.82em;
+	.litany-pair {
+		display: grid;
+		grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+		column-gap: calc(var(--reading) * 0.55);
+		align-items: start;
 	}
 
-	.compacted-response-anchor {
-		display: block;
-		height: 0;
+	.litany-cell {
+		min-width: 0;
+	}
+
+	@media (max-width: 30rem) {
+		.litany-pair {
+			grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
+			column-gap: calc(var(--reading) * 0.4);
+		}
 	}
 
 	/* With the opening process rubric absent, the first speaker name is the
