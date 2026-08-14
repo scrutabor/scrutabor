@@ -22,7 +22,7 @@ const DATA = 'src/lib/data';
 // `proprium` catalog category or reading route for it. Importing those files
 // early would ship unreachable data and make a normal re-vendor silently
 // widen the product. Add the category here only when its app surface lands.
-const CATEGORIES = new Set(['orationes', 'ordinarium', 'psalmi']);
+const CATEGORIES = new Set(['orationes', 'defunctorum', 'litaniae', 'ordinarium', 'psalmi']);
 
 const read = (path) => JSON.parse(readFileSync(path, 'utf8'));
 

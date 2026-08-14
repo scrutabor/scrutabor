@@ -2,7 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { TEXTS } from './corpus';
 import { ipa, pronunciations, stressIndex, syllabify, syllabized } from './pronunciation';
 
-const ACCENTED = /[áéíóúýǽ]/i;
+const ACCENTED = /[áéíóúýǽ]|\u0301/i;
+const UNACCENTED_POLYSYLLABLES = new Set(['israël']);
 
 describe('syllabify', () => {
 	it('divides in the liturgical (maximal-onset) style', () => {
@@ -53,6 +54,7 @@ describe('syllabify', () => {
 				for (const w of seg.words ?? []) {
 					const n = syllabify(w.form).length;
 					const accented = ACCENTED.test(w.form);
+					if (UNACCENTED_POLYSYLLABLES.has(w.form.toLowerCase())) continue;
 					if (n >= 3) expect(accented, `${w.form} (${n} syllables)`).toBe(true);
 					else expect(accented, `${w.form} (${n} syllables)`).toBe(false);
 				}

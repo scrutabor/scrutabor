@@ -618,10 +618,10 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	await expect(pager.locator('a', { hasText: 'Kýrie' })).toBeVisible();
 	await pager.locator('a', { hasText: 'Credo' }).click();
 	await expect(page).toHaveURL(atRoute('ordinarium/credo'));
-	// crossing the section boundary backwards, into the last of the prayers
+	// crossing the section boundary backwards, into the last litany
 	await page.goto('/app/pl/ordinarium/confiteor');
-	await pager.locator('a', { hasText: 'Míchaël' }).click();
-	await expect(page).toHaveURL(atRoute('orationes/sancte-michael'));
+	await pager.locator('a', { hasText: 'Nóminis Iesu' }).click();
+	await expect(page).toHaveURL(atRoute('litaniae/sanctissimi-nominis-iesu'));
 	// arrow keys page too, but never while the slider owns them.
 	// The URL arriving is not the page being ready to answer a key: this
 	// navigation was a CLICK, so it did not go through the fixture's goto,

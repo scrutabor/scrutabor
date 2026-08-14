@@ -79,7 +79,14 @@ def faces() -> list[tuple[str, str, str]]:
                 raise SystemExit(f"cannot read {css}: upstream layout changed")
             if src.group(1) in UNUSED:
                 continue
-            out.append((src.group(1), style, rng.group(1).strip()))
+            unicode_range = rng.group(1).strip()
+            # Ecclesiastical Latin needs a decomposed acute after œ in forms
+            # such as fœ́deris. Google Fonts' upstream CSS omits U+0301 because
+            # its usual Latin accents are precomposed, so assign the mark to
+            # the Latin-ext face explicitly.
+            if src.group(1) == "latin-ext":
+                unicode_range += ",U+0301"
+            out.append((src.group(1), style, unicode_range))
     return out
 
 

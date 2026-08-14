@@ -75,6 +75,54 @@ const CATALOG_SOURCE: CatalogSection[] = [
 		]
 	},
 	{
+		category: 'defunctorum',
+		label: { pl: 'za zmarłych', en: 'for the dead' },
+		texts: [
+			{
+				category: 'defunctorum',
+				slug: 'requiem-aeternam',
+				title: 'Réquiem ætérnam',
+				localizedTitle: { pl: 'Wieczny odpoczynek', en: 'Eternal Rest' }
+			},
+			{
+				category: 'defunctorum',
+				slug: 'de-profundis',
+				title: 'De profúndis',
+				localizedTitle: { pl: 'Z głębokości', en: 'Out of the Depths' }
+			}
+		]
+	},
+	{
+		category: 'litaniae',
+		label: { pl: 'litanie', en: 'litanies' },
+		texts: [
+			{
+				category: 'litaniae',
+				slug: 'lauretanae',
+				title: 'Litániæ Lauretanæ',
+				localizedTitle: { pl: 'Litania loretańska', en: 'Litany of Loreto' }
+			},
+			{
+				category: 'litaniae',
+				slug: 'sacratissimi-cordis-iesu',
+				title: 'Litániæ Sacratíssimi Cordis Iesu',
+				localizedTitle: {
+					pl: 'Litania do Najświętszego Serca Pana Jezusa',
+					en: 'Litany of the Most Sacred Heart of Jesus'
+				}
+			},
+			{
+				category: 'litaniae',
+				slug: 'sanctissimi-nominis-iesu',
+				title: 'Litániæ Sanctíssimi Nóminis Iesu',
+				localizedTitle: {
+					pl: 'Litania do Najświętszego Imienia Jezus',
+					en: 'Litany of the Most Holy Name of Jesus'
+				}
+			}
+		]
+	},
+	{
 		category: 'ordinarium',
 		label: { pl: 'ordinarium missæ', en: 'ordinarium missæ' },
 		texts: [
