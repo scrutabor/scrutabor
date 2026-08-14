@@ -18,7 +18,7 @@ test('print carries the chosen reading settings without application chrome', asy
 	});
 	await page.emulateMedia({ media: 'print' });
 	await page.setViewportSize({ width: 760, height: 900 });
-	await page.goto('/app/en/ordinarium/confiteor?w=w014');
+	await page.goto('/app/pl/ordinarium/confiteor?w=w014');
 
 	for (const selector of [
 		'.page.reading > header nav',
@@ -55,13 +55,19 @@ test('print carries the chosen reading settings without application chrome', asy
 
 	const settings = page.locator('.help-row');
 	await expect(settings).toBeVisible();
-	await expect(settings.locator('.picker[data-kind="role"] .option.on .real')).toHaveText(
-		'faithful'
+	await expect(settings.locator('.picker[data-kind="role"] .option.on .real')).toHaveText('wierni');
+	await expect(settings.locator('.picker[data-kind="mass"] .option.on .real')).toHaveText(
+		'śpiewana'
 	);
-	await expect(settings.locator('.picker[data-kind="mass"] .option.on .real')).toHaveText('sung');
 	for (const option of await settings.locator('.option:not(.on)').all()) {
 		await expect(option).toBeHidden();
 	}
+	const metadataFont = await settings.locator('.picker[data-kind="role"]').evaluate((picker) => ({
+		label: parseFloat(getComputedStyle(picker.querySelector('.label')!).fontSize),
+		value: parseFloat(getComputedStyle(picker.querySelector('.option.on')!).fontSize)
+	}));
+	expect(metadataFont.label, 'print metadata label stays at 5.5pt').toBeCloseTo((5.5 * 4) / 3, 2);
+	expect(metadataFont.value, 'print metadata value stays at 6.5pt').toBeCloseTo((6.5 * 4) / 3, 2);
 	const settingRows = await settings
 		.locator('.picker')
 		.evaluateAll((pickers) => pickers.map((picker) => picker.getBoundingClientRect().top));

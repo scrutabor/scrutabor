@@ -302,8 +302,9 @@
 		.label,
 		.picker.compact .label {
 			display: inline;
-			font-size: 0.68rem;
+			font-size: 5.5pt;
 			letter-spacing: 0.06em;
+			line-height: 1.1;
 			color: var(--ink-soft);
 		}
 
@@ -330,8 +331,9 @@
 			padding: 0;
 			background: none;
 			color: var(--ink);
-			font-size: 0.75rem;
+			font-size: 6.5pt;
 			font-weight: 600;
+			line-height: 1.1;
 		}
 
 		.picker.compact .ghost {
