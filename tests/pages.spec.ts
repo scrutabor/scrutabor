@@ -4,6 +4,46 @@ import pkg from '../package.json' with { type: 'json' };
 import { atRoute, expect, offlineUrl, test } from './fixtures';
 import { CATALOG } from '../src/lib/catalog';
 
+test('the catalogue becomes a balanced book spread only on large screens', async ({ page }) => {
+	const shape = async () =>
+		page.evaluate(() => {
+			const spread = document.querySelector('.catalog-spread')!.getBoundingClientRect();
+			const hero = document.querySelector('.catalog-hero')!.getBoundingClientRect();
+			const primary = document.querySelector('.catalog-primary')!.getBoundingClientRect();
+			const secondary = document.querySelector('.catalog-secondary')!.getBoundingClientRect();
+			const cards = [...document.querySelectorAll('.catalog-spread .card')].map((card) =>
+				card.getBoundingClientRect()
+			);
+			return {
+				spreadWidth: spread.width,
+				heroTop: hero.top,
+				primaryLeft: primary.left,
+				secondaryLeft: secondary.left,
+				primaryRight: primary.right,
+				cardOverflow: cards.some(
+					(card) => card.left < spread.left - 0.5 || card.right > spread.right + 0.5
+				)
+			};
+		});
+
+	await page.setViewportSize({ width: 1512, height: 1000 });
+	await page.goto('/app/pl');
+	const laptop = await shape();
+	expect(laptop.secondaryLeft).toBeCloseTo(laptop.primaryLeft, 0);
+
+	await page.setViewportSize({ width: 1920, height: 1080 });
+	await page.goto('/app/pl');
+	const desktop = await shape();
+	expect(desktop.spreadWidth).toBeGreaterThan(1200);
+	expect(desktop.secondaryLeft).toBeGreaterThan(desktop.primaryRight + 60);
+	expect(desktop.cardOverflow).toBe(false);
+
+	await page.setViewportSize({ width: 3840, height: 2160 });
+	await page.goto('/app/pl');
+	const fourK = await shape();
+	expect(fourK.heroTop).toBeLessThan(120);
+});
+
 test('lemma page shows head, senses, derivatives and concordance', async ({ page }) => {
 	await page.goto('/app/pl/lemma/panis');
 	await expect(page.locator('h1')).toHaveText('panis');

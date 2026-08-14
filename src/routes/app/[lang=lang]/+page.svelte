@@ -1,12 +1,28 @@
 <script lang="ts">
-	import { CATALOG } from '$lib/catalog';
+	import { CATALOG, type CatalogSection } from '$lib/catalog';
 	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
 	import { M, type Lang } from '$lib/i18n';
 
 	let { data } = $props();
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
+	const primarySections = CATALOG.filter((section) => section.category === 'orationes');
+	const secondarySections = CATALOG.filter((section) => section.category !== 'orationes');
 </script>
+
+{#snippet shelf(section: CatalogSection)}
+	<section>
+		<h2 class="smallcaps">{section.label[lang]}</h2>
+		<div class="cards">
+			{#each section.texts as t (t.slug)}
+				<a class="card" href="/app/{lang}/{t.category}/{t.slug}">
+					<span class="card-title" lang="la">{t.title}</span>
+					<span class="hung-note">{t.localizedTitle[lang]}</span>
+				</a>
+			{/each}
+		</div>
+	</section>
+{/snippet}
 
 <svelte:head>
 	<title>Scrutabor — {msgs.tagline.toLowerCase().replace(/\.$/, '')}</title>
@@ -16,58 +32,73 @@
 <div class="page centered landing">
 	<SurfaceNav {lang} />
 	<main>
-		<h1 class="smallcaps">Scrutabor</h1>
-		<p class="tagline">{msgs.tagline}</p>
-		<p class="motto" lang="la">
-			„Da mihi intellectum, et scrutabor legem tuam, et custodiam illam in toto corde meo.”
-		</p>
-		<p class="motto-ref smallcaps">{msgs.mottoRef}</p>
+		<header class="catalog-hero">
+			<h1 class="smallcaps">Scrutabor</h1>
+			<p class="tagline">{msgs.tagline}</p>
+			<p class="motto" lang="la">
+				„Da mihi intellectum, et scrutabor legem tuam, et custodiam illam in toto corde meo.”
+			</p>
+			<p class="motto-ref smallcaps">{msgs.mottoRef}</p>
+		</header>
 
-		<!-- Two ways to use the book, and they are not used together:
-		     following the whole Mass, or opening one text. The flow is a way
-		     IN, not another text — so it stands apart, above the catalog,
-		     instead of heading a list it does not belong to. -->
-		<a class="flow" href="/app/{lang}/ordo">
-			<span class="flow-title" lang="la">Ordo Missæ</span>
-			<span class="flow-lead">{msgs.ordoLead}</span>
-		</a>
+		<div class="catalog-spread">
+			<div class="catalog-column catalog-primary">
+				<!-- Two ways to use the book, and they are not used together:
+				     following the whole Mass, or opening one text. The flow is a way
+				     IN, not another text — so it stands apart from the shelves. -->
+				<a class="flow" href="/app/{lang}/ordo">
+					<span class="flow-title" lang="la">Ordo Missæ</span>
+					<span class="flow-lead">{msgs.ordoLead}</span>
+				</a>
 
-		{#each CATALOG as section (section.category)}
-			<section>
-				<h2 class="smallcaps">{section.label[lang]}</h2>
-				<div class="cards">
-					{#each section.texts as t (t.slug)}
-						<a class="card" href="/app/{lang}/{t.category}/{t.slug}">
-							<span class="card-title" lang="la">{t.title}</span>
-							<span class="hung-note">{t.localizedTitle[lang]}</span>
-						</a>
-					{/each}
-				</div>
-			</section>
-		{/each}
+				{#each primarySections as section (section.category)}
+					{@render shelf(section)}
+				{/each}
+			</div>
 
-		<p class="grammar-link smallcaps">
-			<a href="/app/{lang}/grammatica">{msgs.grammarTitle} →</a>
-		</p>
-		<p class="working smallcaps"><a href="/app/{lang}/editio">{msgs.working}</a></p>
-		<p class="bibliography-link smallcaps">
-			<a href="/app/{lang}/bibliographia">{msgs.bibliographyTitle}</a>
-		</p>
-		<!-- The colophon: which copy this is, and the way home. A book
-		     names its edition and its printer on the colophon page, not on
-		     every leaf — so it lives here, on the book's own front page,
-		     and nowhere in the reading chrome. In the downloaded folder
-		     the link opens the live site (see offline/shims/navigation):
-		     "is there a new version" is a network question. -->
-		<p class="colophon smallcaps">
-			Scrutabor · {msgs.edition}&nbsp;v{data.version} · <a href="/{lang}">scrutabor.org</a>
-		</p>
+			<div class="catalog-column catalog-secondary">
+				{#each secondarySections as section (section.category)}
+					{@render shelf(section)}
+				{/each}
+			</div>
+		</div>
+
+		<footer class="catalog-footer">
+			<p class="grammar-link smallcaps">
+				<a href="/app/{lang}/grammatica">{msgs.grammarTitle} →</a>
+			</p>
+			<p class="working smallcaps"><a href="/app/{lang}/editio">{msgs.working}</a></p>
+			<p class="bibliography-link smallcaps">
+				<a href="/app/{lang}/bibliographia">{msgs.bibliographyTitle}</a>
+			</p>
+			<!-- The colophon: which copy this is, and the way home. A book
+			     names its edition and its printer on the colophon page, not on
+			     every leaf — so it lives here, on the book's own front page,
+			     and nowhere in the reading chrome. In the downloaded folder
+			     the link opens the live site (see offline/shims/navigation):
+			     "is there a new version" is a network question. -->
+			<p class="colophon smallcaps">
+				Scrutabor · {msgs.edition}&nbsp;v{data.version} · <a href="/{lang}">scrutabor.org</a>
+			</p>
+		</footer>
 	</main>
 </div>
 
 <style>
 	/* The nav row, .tagline, .motto and .motto-ref are shared furniture
 	   (app.css): the same objects on the landing and the routers. */
+	.catalog-hero,
+	.catalog-column,
+	.catalog-footer {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.catalog-spread {
+		width: 100%;
+	}
 
 	section {
 		margin: 2.6rem 0 0;
@@ -160,5 +191,77 @@
 
 	.colophon a:hover {
 		color: var(--ink);
+	}
+
+	/* Past laptop width the catalogue becomes an open spread: the primary
+	   way through the Mass and the prayer shelf on the left, the Ordinary
+	   and Psalms on the right. Reading pages keep their established measure;
+	   only this choosing surface uses the room a large monitor gives it. */
+	@media (min-width: 96rem) {
+		.page.landing {
+			max-width: 88rem;
+			padding-inline: 3rem;
+		}
+
+		.page.landing main {
+			justify-content: flex-start;
+		}
+
+		.catalog-hero {
+			max-width: 42rem;
+			margin-inline: auto;
+			padding-top: 2rem;
+		}
+
+		.catalog-spread {
+			position: relative;
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 5rem;
+			max-width: 82rem;
+			margin: 3.4rem auto 0;
+			text-align: left;
+		}
+
+		.catalog-spread::before {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 50%;
+			width: 1px;
+			content: '';
+			background: var(--border);
+		}
+
+		.catalog-column {
+			align-items: stretch;
+		}
+
+		.catalog-primary {
+			padding-right: 0.3rem;
+		}
+
+		.catalog-secondary {
+			padding-left: 0.3rem;
+		}
+
+		section,
+		.flow {
+			max-width: none;
+		}
+
+		.flow,
+		.catalog-secondary section:first-child {
+			margin-top: 0;
+		}
+
+		.card {
+			min-height: 4.15rem;
+			padding-block: 0.95rem;
+		}
+
+		.catalog-footer {
+			margin-top: 0.8rem;
+		}
 	}
 </style>
