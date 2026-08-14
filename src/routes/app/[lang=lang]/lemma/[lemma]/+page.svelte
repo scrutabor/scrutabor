@@ -146,8 +146,10 @@
 	}
 
 	.occ-title {
+		min-width: 0;
+		max-width: 100%;
 		font-size: 1.05rem;
-		white-space: nowrap;
+		overflow-wrap: anywhere;
 	}
 
 	.occ-forms {
