@@ -91,12 +91,14 @@ test('a speaker label clears the raised initial below it', async ({ page }) => {
 	}
 });
 
-test('a received translation identifies its source beside the verse', async ({ page }) => {
+test('a prayer identifies its translation sources once after the text', async ({ page }) => {
 	await page.goto('/app/pl/psalmi/118-he');
 	await page.locator('input[type="range"]').fill('2');
 	const verse = page.locator('#v34 + .seg-extra');
 	await expect(verse.locator('.translation')).toContainText('Daj mi zrozumienie');
-	const sources = verse.locator('details.source-notes');
+	await expect(page.locator('.seg-extra details.source-notes')).toHaveCount(0);
+	const sources = page.locator('main .translation-sources details.source-notes');
+	await expect(sources).toHaveCount(1);
 	await expect(sources.getByText('źródła', { exact: true })).toBeVisible();
 	await sources.locator('summary').click();
 	await expect(sources).toContainText('Biblia w przekładzie ks. Jakuba Wujka (1923)');
@@ -105,6 +107,34 @@ test('a received translation identifies its source beside the verse', async ({ p
 		'href',
 		'/app/pl/bibliographia'
 	);
+});
+
+test('a litany prints long response series once and keeps deep-linked repetitions available', async ({
+	page
+}) => {
+	await page.goto('/app/pl/litaniae/lauretanae');
+
+	// Four Miserere and fifty-five Ora responses become two prayer-book
+	// conventions: the first response followed by an ellipsis.
+	await expect(page.locator('#s007')).toBeVisible();
+	await expect(page.locator('#s009')).toBeHidden();
+	await expect(page.locator('#s015')).toBeVisible();
+	await expect(page.locator('#s017')).toBeHidden();
+	await expect(page.locator('.response-continuation > [aria-hidden="true"]')).toHaveText([
+		'…',
+		'…'
+	]);
+
+	// Concordance links retain their exact occurrence. Selecting one of the
+	// compacted responses reveals that line and opens the ordinary word panel.
+	await page.goto('/app/pl/litaniae/lauretanae?w=w044');
+	await expect(page.locator('#s017')).toBeVisible();
+	await expect(page.locator('#w044')).toHaveClass(/selected/);
+	await expect(page.locator('aside')).toBeVisible();
+
+	await page.locator('input[type="range"]').fill('2');
+	await expect(page.locator('main .translation-sources details.source-notes')).toHaveCount(1);
+	await expect(page.locator('.seg-extra details.source-notes')).toHaveCount(0);
 });
 
 test('word panel separates context, dictionary, grammar and verification', async ({ page }) => {

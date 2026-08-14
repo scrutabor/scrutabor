@@ -94,6 +94,7 @@ export interface Messages {
 	repeatedPrayer: string;
 	repeatedPrayerShow: string;
 	repeatedPrayerHide: string;
+	repeatedResponse: string;
 }
 
 const MESSAGES: Record<Lang, Messages> = {
@@ -201,6 +202,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		repeatedPrayer: 'Ave María, grátia plena…',
 		repeatedPrayerShow: 'pokaż tekst',
 		repeatedPrayerHide: 'ukryj tekst',
+		repeatedResponse: 'odpowiedź powtarza się po każdym wezwaniu',
 		pronunciationHint: 'zasady wymowy'
 	},
 	en: {
@@ -311,6 +313,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		repeatedPrayer: 'Ave María, grátia plena…',
 		repeatedPrayerShow: 'show text',
 		repeatedPrayerHide: 'hide text',
+		repeatedResponse: 'the response is repeated after each invocation',
 		pronunciationHint: 'pronunciation guide'
 	}
 };

@@ -3,6 +3,7 @@
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { massForm } from '$lib/mass-form.svelte';
+	import { collectTranslationCitations, repeatedResponsePlan } from '$lib/reading-text';
 	import { isEveryonesResponse, isYours, role } from '$lib/role.svelte';
 	import { initialFit } from '$lib/reading-geometry';
 	import * as marks from '$lib/speaker-marks';
@@ -26,6 +27,7 @@
 		collapsedLabel,
 		collapsedShow,
 		collapsedHide,
+		compactRepeatedResponses = false,
 		showSpeakerNames = true,
 		hideOpeningRubric = false
 	}: {
@@ -54,6 +56,8 @@
 		collapsedLabel?: string;
 		collapsedShow?: string;
 		collapsedHide?: string;
+		/** Prayer-book setting for long litany series: print the response once. */
+		compactRepeatedResponses?: boolean;
 		/** Some devotional dialogues are already clear from V./R. alone. */
 		showSpeakerNames?: boolean;
 		/** A standalone Mass prayer keeps the opening rubric's deep-link
@@ -123,6 +127,14 @@
 	const namesVoice = (i: number) => marks.namesVoice(segs, i);
 	const firstVerse = $derived(marks.firstVerseWithInitial(segs));
 	const segmentId = (id: string) => (idPrefix ? `${idPrefix}-${id}` : id);
+	const repeatedResponses = $derived(
+		compactRepeatedResponses
+			? repeatedResponsePlan(segs)
+			: { continued: [] as string[], omitted: [] as string[] }
+	);
+	const translationCitations = $derived(collectTranslationCitations(segs, gloss));
+	const selectedIn = (seg: TextDocument['segments'][number]) =>
+		seg.words?.some((word) => domId(word.id) === selectedId) ?? false;
 </script>
 
 {#snippet face(id: string, form: string, post = '', raised = false, sink = 0)}{@const fit =
@@ -145,7 +157,10 @@
 	>{/snippet}
 
 {#each doc.segments as seg, i (seg.id)}
-	{#if collapsedSegments.includes(seg.id)}
+	{#if repeatedResponses.omitted.includes(seg.id) && !selectedIn(seg)}
+		<!-- Its first occurrence carries the response and the continuation mark. -->
+		<span class="compacted-response-anchor" id={segmentId(seg.id)} aria-hidden="true"></span>
+	{:else if collapsedSegments.includes(seg.id)}
 		<details class="repeated-prayer">
 			<summary>
 				<span class="repeated-title" lang="la">{collapsedLabel}</span>
@@ -178,6 +193,12 @@
 		{@render verse(seg, i)}
 	{/if}
 {/each}
+
+{#if helpLevel >= 2 && translationCitations.length}
+	<div class="translation-sources">
+		<SourceNotes citations={translationCitations} {lang} centered />
+	</div>
+{/if}
 
 {#snippet verse(seg: TextDocument['segments'][number], i: number)}
 	{#if seg.type === 'verse'}
@@ -228,6 +249,7 @@
 			</p>
 		{/if}
 		{@const showMark = !sharedPrayer && marked(i)}
+		{@const responseContinues = repeatedResponses.continued.includes(seg.id)}
 		{@const verseNo = seg.speaker ? undefined : verses?.[seg.id]}
 		<!-- The gloss row of a verse whose initial reaches below the line
 		     sinks together, so the glosses stay level with each other. -->
@@ -283,12 +305,14 @@
 						>{:else}<span class="word"
 							>{@render face(w.id, w.form, w.post ?? '', raised, sink)}</span
 						>{/if}</span
-				>{' '}{/each}
+				>{' '}{/each}{#if responseContinues}<span class="response-continuation"
+					><span aria-hidden="true">…</span><span class="sr-only">{M[lang].repeatedResponse}</span
+					></span
+				>{/if}
 		</p>
 		{#if helpLevel >= 2 && gloss.segments[seg.id]?.translation}
 			<div class="seg-extra">
 				<p class="translation">{gloss.segments[seg.id].translation}</p>
-				<SourceNotes citations={gloss.segments[seg.id].translation_citations} {lang} />
 			</div>
 		{/if}
 	{/if}
@@ -296,6 +320,21 @@
 
 <style>
 	.rubric-anchor {
+		display: block;
+		height: 0;
+	}
+
+	.translation-sources {
+		margin: calc(var(--reading) * 1.1) 0 calc(var(--reading) * 0.55);
+	}
+
+	.response-continuation {
+		margin-inline-start: 0.08em;
+		color: var(--rubric);
+		font-size: 0.82em;
+	}
+
+	.compacted-response-anchor {
 		display: block;
 		height: 0;
 	}

@@ -248,6 +248,7 @@
 					collapsedLabel={msgs.repeatedPrayer}
 					collapsedShow={msgs.repeatedPrayerShow}
 					collapsedHide={msgs.repeatedPrayerHide}
+					compactRepeatedResponses={data.category === 'litaniae'}
 					showSpeakerNames={!hasDevotionalLeader}
 					hideOpeningRubric={data.category === 'ordinarium'}
 				/>
