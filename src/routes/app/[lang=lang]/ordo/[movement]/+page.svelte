@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { flushSync } from 'svelte';
 	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
 	import { arrowNav } from '$lib/arrow-nav';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
@@ -42,15 +41,6 @@
 		return t ? `/app/${lang}/ordo/${t.id}` : undefined;
 	});
 	let legendOpen = $state(false);
-	let printing = $state(false);
-
-	// A screen fold is not an omission from the printed missal. The browser
-	// announces that it is about to compose paper; render every carried text
-	// synchronously for that snapshot, then return to the reader's compact
-	// role-based view when printing closes.
-	function setPrinting(value: boolean) {
-		flushSync(() => (printing = value));
-	}
 
 	function openLegend() {
 		panel.close();
@@ -136,8 +126,6 @@
 
 <svelte:window
 	onpopstate={panel.applyFromLocation}
-	onbeforeprint={() => setPrinting(true)}
-	onafterprint={() => setPrinting(false)}
 	onkeydown={(e) => {
 		const href = onWindowKeydown(e);
 		if (href) goto(href);
@@ -218,7 +206,7 @@
 						</p>
 					{/if}
 				{/if}
-				{#if entry && (words || unfolded[e.id] || printing)}
+				{#if entry && (words || unfolded[e.id])}
 					<div class="part-text">
 						<TextBody
 							doc={entry.doc}
@@ -471,11 +459,15 @@
 			padding-top: 9pt;
 		}
 
-		.part,
-		.part.folded {
+		.part {
 			margin: 0 0 11pt;
 			padding-top: 7pt;
 			break-inside: auto;
+		}
+
+		.part.folded {
+			margin-bottom: 4pt;
+			padding-top: 2pt;
 		}
 
 		.part-head,
@@ -486,7 +478,7 @@
 
 		.part-title,
 		.unfold-title {
-			font-size: 11pt;
+			font-size: 1.1rem;
 		}
 
 		a.part-title {
@@ -494,7 +486,10 @@
 		}
 
 		.unfold {
-			display: block;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: baseline;
+			gap: 0 4pt;
 			padding: 0;
 			cursor: default;
 			color: var(--ink);
@@ -502,14 +497,19 @@
 
 		.unfold-title,
 		.unfold-what {
-			display: block;
+			display: inline;
 		}
 
 		.unfold-what {
-			margin-top: 2pt;
-			font-size: 7.5pt;
+			flex: 1 1 12rem;
+			margin-top: 0;
+			font-size: 0.75rem;
 			line-height: 1.35;
 			color: var(--ink-soft);
+		}
+
+		.unfold-what::before {
+			content: '· ';
 		}
 
 		.unfold-do,
@@ -523,7 +523,7 @@
 		}
 
 		.part-note {
-			font-size: 7.5pt;
+			font-size: 0.75rem;
 			line-height: 1.35;
 		}
 

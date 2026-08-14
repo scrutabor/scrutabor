@@ -279,4 +279,77 @@
 		outline-offset: 3px;
 		border-radius: 0.15rem;
 	}
+
+	@media print {
+		/* A printed prayer needs to say which participation layer produced it,
+		   but the unchosen radio options are controls, not content. Reduce each
+		   picker to one small label/value pair; adjacent role and Mass pairs fit
+		   on one line whenever the paper gives them room. */
+		.picker,
+		.picker.compact {
+			display: inline-flex;
+			flex-wrap: nowrap;
+			align-items: baseline;
+			gap: 0.25rem;
+			width: auto;
+			max-width: none;
+			margin: 0;
+			text-align: start;
+			white-space: nowrap;
+			container-type: normal;
+		}
+
+		.label,
+		.picker.compact .label {
+			display: inline;
+			font-size: 0.68rem;
+			letter-spacing: 0.06em;
+			color: var(--ink-soft);
+		}
+
+		.label::after {
+			content: ':';
+		}
+
+		.options,
+		.picker.compact .options {
+			display: inline-flex;
+			margin: 0;
+			border: 0;
+			border-radius: 0;
+			overflow: visible;
+		}
+
+		.option:not(.on) {
+			display: none;
+		}
+
+		.option.on,
+		.picker.compact .option.on {
+			display: inline;
+			padding: 0;
+			background: none;
+			color: var(--ink);
+			font-size: 0.75rem;
+			font-weight: 600;
+		}
+
+		.picker.compact .ghost {
+			display: none;
+		}
+
+		.picker.compact .slot,
+		.picker.compact .real {
+			position: static;
+			display: inline;
+		}
+
+		.picker.compact .option + .option::before {
+			display: none;
+		}
+
+		.hint {
+			display: none;
+		}
+	}
 </style>

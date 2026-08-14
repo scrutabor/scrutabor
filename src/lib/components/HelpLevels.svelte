@@ -136,4 +136,10 @@
 			width: 100%;
 		}
 	}
+
+	@media print {
+		.help {
+			display: none;
+		}
+	}
 </style>

@@ -598,14 +598,13 @@ a {
 	color: inherit;
 }
 
-/* PAPER IS ITS OWN READING SURFACE. Screen type size is a personal setting
-   for a phone or tablet at arm's length; carrying 140% into an A6 booklet
-   makes the setting consume the page twice. Print therefore has its own
-   compact scale, selected by available paper width rather than by named
-   formats. A4 and Letter share the standard measure, A5 and Half Letter the
-   compact one, A6 and similarly narrow custom sheets the pocket one. There
-   is deliberately no `size` declaration: the reader's printer remains the
-   authority for ISO, North American and custom paper. */
+/* PAPER IS ITS OWN READING SURFACE, but it is still the reader's book. The
+   paper width chooses a useful baseline and the saved normal/larger/largest
+   setting applies its same 100/120/140 progression to that baseline. A4 and
+   Letter share the standard measure, A5 and Half Letter the compact one, A6
+   and similarly narrow custom sheets the pocket one. There is deliberately
+   no `size` declaration: the printer remains the authority for ISO, North
+   American, custom and N-up output. */
 @media print {
 	@page {
 		margin: 10mm;
@@ -627,6 +626,16 @@ a {
 		font-size: 10pt !important;
 		color-scheme: light;
 		background: #fff;
+	}
+
+	html[data-reading='larger'] {
+		--reading: 12.6pt;
+		font-size: 12pt !important;
+	}
+
+	html[data-reading='largest'] {
+		--reading: 14.7pt;
+		font-size: 14pt !important;
 	}
 
 	body {
@@ -655,28 +664,38 @@ a {
 
 	h1 {
 		margin-top: 0;
-		font-size: 18pt;
+		font-size: 1.8rem;
 		line-height: 1.05;
 	}
 
 	.subtitle {
 		margin-top: 2pt;
-		font-size: 7.5pt;
+		font-size: 0.75rem;
 	}
 
 	main.panel-open {
 		padding-bottom: 0 !important;
 	}
 
-	/* Controls which happen to contain printable words are handled by their
-	   components. These objects have no paper meaning at all. */
-	.help-row,
+	/* The slider has no paper meaning. The same row's role and Mass choices
+	   do: their component reduces each to its selected word. */
+	.help,
 	.about-pill,
 	.form-tabs,
 	.pager,
 	.source-notes,
 	.sheet:not(.inline) {
 		display: none !important;
+	}
+
+	.help-row {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: baseline;
+		gap: 2pt 10pt;
+		margin: 5pt 0 0;
+		container-type: normal;
 	}
 
 	p {
@@ -692,8 +711,16 @@ a {
 		--reading: 9.5pt;
 	}
 
+	html[data-reading='larger'] {
+		--reading: 11.4pt;
+	}
+
+	html[data-reading='largest'] {
+		--reading: 13.3pt;
+	}
+
 	h1 {
-		font-size: 16pt;
+		font-size: 1.6rem;
 	}
 }
 
@@ -708,7 +735,15 @@ a {
 		--reading: 8.75pt;
 	}
 
+	html[data-reading='larger'] {
+		--reading: 10.5pt;
+	}
+
+	html[data-reading='largest'] {
+		--reading: 12.25pt;
+	}
+
 	h1 {
-		font-size: 14pt;
+		font-size: 1.4rem;
 	}
 }

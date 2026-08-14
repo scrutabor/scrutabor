@@ -1001,27 +1001,34 @@
 			display: none;
 		}
 
-		/* A disclosure is screen furniture. The repeated Ave Maria is still
-		   prayer text, so paper receives it in full whether the screen fold
-		   happened to be open or closed. */
+		/* The fold is part of the current reading state. A closed repeated
+		   prayer costs one quiet line on paper; one the reader opened remains
+		   open. Only the show/hide affordance disappears. Native details then
+		   gives print exactly the same open state as the screen. */
 		.repeated-prayer {
 			break-inside: avoid;
 			margin: calc(var(--reading) * 0.36) 0;
 		}
 
 		.repeated-prayer > summary {
+			display: flex;
+			gap: 0;
+			padding: 0;
+			cursor: default;
+			break-after: avoid;
+		}
+
+		.repeated-prayer > summary::before,
+		.repeated-action {
 			display: none;
 		}
 
-		.repeated-prayer > .repeated-body {
-			display: block !important;
-			margin-top: 0;
+		.repeated-title {
+			font-size: calc(var(--reading) * 0.78);
 		}
 
-		/* Chromium keeps closed details in a generated content box even when
-		   its child is explicitly displayed. Open that print-only box too. */
-		.repeated-prayer::details-content {
-			content-visibility: visible;
+		.repeated-prayer > .repeated-body {
+			margin-top: calc(var(--reading) * 0.24);
 		}
 
 		.verse,
