@@ -170,4 +170,10 @@
 		line-height: 1;
 		color: var(--border);
 	}
+
+	@media print {
+		nav {
+			display: none;
+		}
+	}
 </style>

@@ -68,4 +68,10 @@
 		position: relative;
 		top: -0.05em;
 	}
+
+	@media print {
+		.pager {
+			display: none;
+		}
+	}
 </style>

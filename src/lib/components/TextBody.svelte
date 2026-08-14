@@ -995,4 +995,102 @@
 		font-size: calc(var(--reading) * 0.724);
 		line-height: 1.55;
 	}
+
+	@media print {
+		.translation-sources {
+			display: none;
+		}
+
+		/* A disclosure is screen furniture. The repeated Ave Maria is still
+		   prayer text, so paper receives it in full whether the screen fold
+		   happened to be open or closed. */
+		.repeated-prayer {
+			break-inside: avoid;
+			margin: calc(var(--reading) * 0.36) 0;
+		}
+
+		.repeated-prayer > summary {
+			display: none;
+		}
+
+		.repeated-prayer > .repeated-body {
+			display: block !important;
+			margin-top: 0;
+		}
+
+		/* Chromium keeps closed details in a generated content box even when
+		   its child is explicitly displayed. Open that print-only box too. */
+		.repeated-prayer::details-content {
+			content-visibility: visible;
+		}
+
+		.verse,
+		.rubric,
+		.seg-extra,
+		.litany-pair {
+			break-inside: avoid;
+		}
+
+		.who {
+			break-after: avoid;
+			margin: calc(var(--reading) * 0.5) 0 calc(var(--reading) * 0.08) !important;
+		}
+
+		.who:has(+ .verse .initial) {
+			padding-top: calc(var(--reading) * 0.12);
+		}
+
+		.verse {
+			line-height: 1.48;
+			margin-bottom: calc(var(--reading) * 0.42);
+		}
+
+		.verse.glossed {
+			line-height: 2.03;
+			margin-bottom: calc(var(--reading) * var(--gloss-gap));
+		}
+
+		rt {
+			font-size: 0.67em;
+		}
+
+		.rubric,
+		.verse.glossed + .rubric,
+		.rubric:has(+ .verse.glossed) {
+			margin-top: calc(var(--reading) * 0.68);
+			margin-bottom: calc(var(--reading) * 0.68);
+		}
+
+		.seg-extra {
+			break-before: avoid;
+			margin: calc(var(--reading) * 0.38) 0 calc(var(--reading) * 0.32);
+		}
+
+		.litany-pair {
+			grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) !important;
+			column-gap: calc(var(--reading) * 0.38);
+		}
+
+		button.word .base::before {
+			display: none;
+		}
+
+		button.word.selected rt {
+			color: var(--ink-soft);
+		}
+
+		button.mark,
+		button.mark:hover {
+			text-decoration: none;
+		}
+	}
+
+	/* Even A6 gains more from complete side-by-side responses at this compact
+	   face. Stack only on genuinely narrower custom stock, where each column
+	   would have less than a useful prayer-book measure. */
+	@media print and (max-width: 85mm) {
+		.litany-pair {
+			grid-template-columns: minmax(0, 1fr) !important;
+		}
+	}
 </style>

@@ -206,4 +206,10 @@
 		outline: 2px solid var(--rubric);
 		outline-offset: 2px;
 	}
+
+	@media print {
+		.sheet:not(.inline) {
+			display: none;
+		}
+	}
 </style>

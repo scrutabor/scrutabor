@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { flushSync } from 'svelte';
 	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
 	import { arrowNav } from '$lib/arrow-nav';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
@@ -41,6 +42,15 @@
 		return t ? `/app/${lang}/ordo/${t.id}` : undefined;
 	});
 	let legendOpen = $state(false);
+	let printing = $state(false);
+
+	// A screen fold is not an omission from the printed missal. The browser
+	// announces that it is about to compose paper; render every carried text
+	// synchronously for that snapshot, then return to the reader's compact
+	// role-based view when printing closes.
+	function setPrinting(value: boolean) {
+		flushSync(() => (printing = value));
+	}
 
 	function openLegend() {
 		panel.close();
@@ -126,6 +136,8 @@
 
 <svelte:window
 	onpopstate={panel.applyFromLocation}
+	onbeforeprint={() => setPrinting(true)}
+	onafterprint={() => setPrinting(false)}
 	onkeydown={(e) => {
 		const href = onWindowKeydown(e);
 		if (href) goto(href);
@@ -206,7 +218,7 @@
 						</p>
 					{/if}
 				{/if}
-				{#if entry && (words || unfolded[e.id])}
+				{#if entry && (words || unfolded[e.id] || printing)}
 					<div class="part-text">
 						<TextBody
 							doc={entry.doc}
@@ -444,5 +456,79 @@
 	/* room for the sheet, so even the last word can rise clear of it */
 	main.panel-open {
 		padding-bottom: 45vh;
+	}
+
+	@media print {
+		.page > header {
+			padding-bottom: 9pt;
+		}
+
+		main.panel-open {
+			padding-bottom: 0;
+		}
+
+		.part:first-of-type {
+			padding-top: 9pt;
+		}
+
+		.part,
+		.part.folded {
+			margin: 0 0 11pt;
+			padding-top: 7pt;
+			break-inside: auto;
+		}
+
+		.part-head,
+		.part-note,
+		.unfold {
+			break-after: avoid;
+		}
+
+		.part-title,
+		.unfold-title {
+			font-size: 11pt;
+		}
+
+		a.part-title {
+			border-bottom: 0;
+		}
+
+		.unfold {
+			display: block;
+			padding: 0;
+			cursor: default;
+			color: var(--ink);
+		}
+
+		.unfold-title,
+		.unfold-what {
+			display: block;
+		}
+
+		.unfold-what {
+			margin-top: 2pt;
+			font-size: 7.5pt;
+			line-height: 1.35;
+			color: var(--ink-soft);
+		}
+
+		.unfold-do,
+		.aside-mark,
+		.refold {
+			display: none;
+		}
+
+		.silent-run {
+			margin-top: 9pt;
+		}
+
+		.part-note {
+			font-size: 7.5pt;
+			line-height: 1.35;
+		}
+
+		.part-text {
+			margin-top: 6pt;
+		}
 	}
 </style>

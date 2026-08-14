@@ -119,4 +119,10 @@
 	cite {
 		font-style: normal;
 	}
+
+	@media print {
+		.source-notes {
+			display: none;
+		}
+	}
 </style>

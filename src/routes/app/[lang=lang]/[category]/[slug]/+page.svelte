@@ -400,4 +400,20 @@
 		line-height: 1.65;
 		color: var(--ink);
 	}
+
+	@media print {
+		.page > header,
+		.page > header.without-opening-rubric {
+			padding-bottom: 9pt;
+		}
+
+		main.panel-open {
+			padding-bottom: 0;
+		}
+
+		.form-tabs,
+		.about-pill {
+			display: none;
+		}
+	}
 </style>

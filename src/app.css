@@ -597,3 +597,118 @@ h2 {
 a {
 	color: inherit;
 }
+
+/* PAPER IS ITS OWN READING SURFACE. Screen type size is a personal setting
+   for a phone or tablet at arm's length; carrying 140% into an A6 booklet
+   makes the setting consume the page twice. Print therefore has its own
+   compact scale, selected by available paper width rather than by named
+   formats. A4 and Letter share the standard measure, A5 and Half Letter the
+   compact one, A6 and similarly narrow custom sheets the pocket one. There
+   is deliberately no `size` declaration: the reader's printer remains the
+   authority for ISO, North American and custom paper. */
+@media print {
+	@page {
+		margin: 10mm;
+	}
+
+	html,
+	html[data-theme='light'],
+	html[data-theme='dark'] {
+		--bg: #fff;
+		--surface: #fff;
+		--ink: #111;
+		--ink-soft: #444;
+		--rubric: #7a1d14;
+		--border: #aaa;
+		--wash: #fff;
+		--wash-strong: #fff;
+		--shadow: none;
+		--reading: 10.5pt;
+		font-size: 10pt !important;
+		color-scheme: light;
+		background: #fff;
+	}
+
+	body {
+		background: #fff;
+		color: var(--ink);
+		transition: none;
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	.page {
+		max-width: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.page.reading > header {
+		break-inside: avoid;
+		break-after: avoid;
+	}
+
+	h1,
+	h2 {
+		break-after: avoid;
+	}
+
+	h1 {
+		margin-top: 0;
+		font-size: 18pt;
+		line-height: 1.05;
+	}
+
+	.subtitle {
+		margin-top: 2pt;
+		font-size: 7.5pt;
+	}
+
+	main.panel-open {
+		padding-bottom: 0 !important;
+	}
+
+	/* Controls which happen to contain printable words are handled by their
+	   components. These objects have no paper meaning at all. */
+	.help-row,
+	.about-pill,
+	.form-tabs,
+	.pager,
+	.source-notes,
+	.sheet:not(.inline) {
+		display: none !important;
+	}
+
+	p {
+		orphans: 3;
+		widows: 3;
+	}
+}
+
+@media print and (max-width: 150mm) {
+	html,
+	html[data-theme='light'],
+	html[data-theme='dark'] {
+		--reading: 9.5pt;
+	}
+
+	h1 {
+		font-size: 16pt;
+	}
+}
+
+@media print and (max-width: 110mm) {
+	@page {
+		margin: 8mm;
+	}
+
+	html,
+	html[data-theme='light'],
+	html[data-theme='dark'] {
+		--reading: 8.75pt;
+	}
+
+	h1 {
+		font-size: 14pt;
+	}
+}
