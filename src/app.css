@@ -310,6 +310,33 @@ h1.wordmark {
 	text-align: right;
 }
 
+/* Litany columns are useful only while the invocations remain compact.
+   Waiting for literal overflow leaves the longest titles as tall ladders
+   of one-word lines, even though every token still technically fits. Stack
+   the complete invocation-response pair as soon as the longest reviewed
+   invocation would wrap; above each breakpoint the full litany fits one
+   invocation line per row. Media-query rems use the browser's initial size,
+   so the three thresholds explicitly follow the 100/120/140% print steps.
+   These root-setting selectors live here because component styles
+   deliberately do not use :global. */
+@media (max-width: 104rem) {
+	html[data-reading='largest'] .litany-pair {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+@media (max-width: 86rem) {
+	html[data-reading='larger'] .litany-pair {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+@media (max-width: 72rem) {
+	html[data-reading='normal'] .litany-pair {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
 /* Every h2 in the book is a small rubric label over a list — the sections
    of the catalogue, the groups of the grammar, "where it occurs" on a
    lemma. Five copies, drifted into two margins that nobody chose. */

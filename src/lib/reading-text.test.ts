@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { GlossDocument, Segment } from './corpus';
-import { collectTranslationCitations, repeatedResponsePlan } from './reading-text';
+import { collectTranslationCitations, litanyRows } from './reading-text';
 
 let nextId = 0;
 const verse = (speaker: Segment['speaker'], text: string): Segment => ({
@@ -17,57 +17,41 @@ const verse = (speaker: Segment['speaker'], text: string): Segment => ({
 const rubric = (): Segment => ({ id: `r${++nextId}`, type: 'rubric', text: '…' });
 
 describe('compact litany responses', () => {
-	it('prints one response for a long alternating series', () => {
-		const first = verse('populus', 'Ora pro nobis.');
-		const second = verse('populus', 'Ora pro nobis.');
-		const third = verse('populus', 'Ora pro nobis.');
+	it('pairs every invocation with its exact adjacent response', () => {
 		const segments = [
-			verse('ductor', 'Sancta Maria.'),
-			first,
+			verse(undefined, 'Kyrie eleison.'),
 			verse('ductor', 'Sancta Dei Genetrix.'),
-			second,
-			verse('ductor', 'Sancta Virgo virginum.'),
-			third
+			verse('populus', 'Ora pro nobis.'),
+			verse('ductor', 'Sancti Petre et Paule.'),
+			verse('populus', 'Orate pro nobis.'),
+			verse('ductor', 'Ut nobis parcas.'),
+			verse('populus', 'Te rogamus audi nos.')
 		];
 
-		expect(repeatedResponsePlan(segments)).toEqual({
-			continued: [first.id],
-			omitted: [second.id, third.id]
-		});
+		expect(litanyRows(segments)).toEqual([
+			{ primary: 0 },
+			{ primary: 1, response: 2 },
+			{ primary: 3, response: 4 },
+			{ primary: 5, response: 6 }
+		]);
 	});
 
-	it('keeps short repetition and starts again after a rubric', () => {
-		const firstPair = [verse('populus', 'Miserere nobis.'), verse('populus', 'Miserere nobis.')];
-		const secondRun = [
+	it('does not pair across a rubric or consume an unpaired verse', () => {
+		const segments = [
+			verse('ductor', 'Fili Deus.'),
+			rubric(),
+			verse('ductor', 'Cor Iesu.'),
 			verse('populus', 'Miserere nobis.'),
-			verse('populus', 'Miserere nobis.'),
+			verse('ductor', 'Cor Iesu.'),
 			verse('populus', 'Miserere nobis.')
 		];
-		const segments = [
-			firstPair[0],
-			verse('ductor', 'Fili Deus.'),
-			firstPair[1],
-			rubric(),
-			secondRun[0],
-			verse('ductor', 'Cor Iesu.'),
-			secondRun[1],
-			verse('ductor', 'Cor Iesu.'),
-			secondRun[2]
-		];
 
-		expect(repeatedResponsePlan(segments)).toEqual({
-			continued: [secondRun[0].id],
-			omitted: [secondRun[1].id, secondRun[2].id]
-		});
-	});
-
-	it('does not treat unattributed Kyrie lines as a response series', () => {
-		const segments = [
-			verse(undefined, 'Kyrie eleison.'),
-			verse(undefined, 'Kyrie eleison.'),
-			verse(undefined, 'Kyrie eleison.')
-		];
-		expect(repeatedResponsePlan(segments)).toEqual({ continued: [], omitted: [] });
+		expect(litanyRows(segments)).toEqual([
+			{ primary: 0 },
+			{ primary: 1 },
+			{ primary: 2, response: 3 },
+			{ primary: 4, response: 5 }
+		]);
 	});
 });
 

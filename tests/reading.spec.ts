@@ -109,24 +109,57 @@ test('a prayer identifies its translation sources once after the text', async ({
 	);
 });
 
-test('a litany prints long response series once and keeps deep-linked repetitions available', async ({
+test('a litany pairs every invocation with its exact response in compact columns', async ({
 	page
 }) => {
+	await page.setViewportSize({ width: 1280, height: 760 });
 	await page.goto('/app/pl/litaniae/lauretanae');
 
-	// Four Miserere and fifty-five Ora responses become two prayer-book
-	// conventions: the first response followed by an ellipsis.
+	// Every response remains present and shares a row with its invocation.
+	// The columns save height without losing the exact formula or its anchor.
+	await expect(page.locator('#s006')).toBeVisible();
 	await expect(page.locator('#s007')).toBeVisible();
-	await expect(page.locator('#s009')).toBeHidden();
+	await expect(page.locator('#s009')).toBeVisible();
 	await expect(page.locator('#s015')).toBeVisible();
-	await expect(page.locator('#s017')).toBeHidden();
-	await expect(page.locator('.response-continuation > [aria-hidden="true"]')).toHaveText([
-		'…',
-		'…'
-	]);
+	await expect(page.locator('#s017')).toBeVisible();
+	await expect(page.locator('.response-continuation')).toHaveCount(0);
 
-	// Concordance links retain their exact occurrence. Selecting one of the
-	// compacted responses reveals that line and opens the ordinary word panel.
+	const paired = await page
+		.locator('.litany-pair')
+		.first()
+		.evaluate((row) => {
+			const invocation = row.querySelector('.litany-invocation .verse')!.getBoundingClientRect();
+			const response = row.querySelector('.litany-response .verse')!.getBoundingClientRect();
+			return {
+				columnCount: getComputedStyle(row).gridTemplateColumns.split(' ').length,
+				topDifference: Math.abs(invocation.top - response.top),
+				responseStartsAfterInvocation: response.left > invocation.left,
+				pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth
+			};
+		});
+	expect(paired.columnCount).toBe(2);
+	expect(paired.topDifference).toBeLessThan(2);
+	expect(paired.responseStartsAfterInvocation).toBe(true);
+	expect(paired.pageOverflow).toBe(0);
+	const maxInvocationLines = () =>
+		page
+			.locator('.litany-pair')
+			.evaluateAll((rows) =>
+				Math.max(
+					...rows.map(
+						(row) =>
+							new Set(
+								[...row.querySelectorAll('.litany-invocation ruby')].map((word) =>
+									Math.round(word.getBoundingClientRect().top)
+								)
+							).size
+					)
+				)
+			);
+	expect(await maxInvocationLines()).toBe(1);
+
+	// Concordance links retain their exact occurrence and open the ordinary
+	// word panel without changing the two-column layout.
 	await page.goto('/app/pl/litaniae/lauretanae?w=w044');
 	await expect(page.locator('#s017')).toBeVisible();
 	await expect(page.locator('#w044')).toHaveClass(/selected/);
@@ -135,6 +168,34 @@ test('a litany prints long response series once and keeps deep-linked repetition
 	await page.locator('input[type="range"]').fill('2');
 	await expect(page.locator('main .translation-sources details.source-notes')).toHaveCount(1);
 	await expect(page.locator('.seg-extra details.source-notes')).toHaveCount(0);
+
+	// Stack before the longest invocation becomes the tall one-word ladder
+	// seen on a tablet. The breakpoint follows the chosen print size; when
+	// columns return, every invocation fits a single Latin-and-gloss line.
+	const compactShape = () =>
+		page
+			.locator('.litany-pair')
+			.first()
+			.evaluate((row) => ({
+				columnCount: getComputedStyle(row).gridTemplateColumns.split(' ').length,
+				pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth
+			}));
+	await page.setViewportSize({ width: 922, height: 760 });
+	await expect.poll(compactShape).toEqual({ columnCount: 1, pageOverflow: 0 });
+	expect(await maxInvocationLines()).toBe(1);
+
+	await page.setViewportSize({ width: 320, height: 760 });
+	await expect.poll(compactShape).toEqual({ columnCount: 1, pageOverflow: 0 });
+
+	await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
+	await page.setViewportSize({ width: 922, height: 760 });
+	await page.goto('/app/pl/litaniae/lauretanae');
+	await expect.poll(compactShape).toEqual({ columnCount: 1, pageOverflow: 0 });
+	expect(await maxInvocationLines()).toBe(1);
+
+	await page.setViewportSize({ width: 1665, height: 760 });
+	await expect.poll(compactShape).toEqual({ columnCount: 2, pageOverflow: 0 });
+	expect(await maxInvocationLines()).toBe(1);
 });
 
 test('word panel separates context, dictionary, grammar and verification', async ({ page }) => {

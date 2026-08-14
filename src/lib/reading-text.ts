@@ -1,71 +1,42 @@
 import type { Citation, GlossDocument, Segment } from '$lib/corpus';
 
-export interface RepeatedResponsePlan {
-	/** The first response in a compacted series, printed with an ellipsis. */
-	continued: string[];
-	/** Later responses in that series, omitted from the ordinary reading. */
-	omitted: string[];
+export interface LitanyRow {
+	/** Index of the invocation or other segment that opens the row. */
+	primary: number;
+	/** Adjacent response, when this is a leader-and-response row. */
+	response?: number;
 }
 
 const RESPONSE_SPEAKERS = new Set(['minister', 'populus', 'omnes', 'schola']);
 const LEADER_SPEAKERS = new Set(['sacerdos', 'ductor']);
 
-function responseKey(segment: Segment): string | undefined {
-	if (
-		segment.type !== 'verse' ||
-		!segment.speaker ||
-		!RESPONSE_SPEAKERS.has(segment.speaker) ||
-		!segment.words?.length
-	)
-		return undefined;
-
-	const text = segment.words.map((word) => `${word.form}${word.post ?? ''}`).join(' ');
-	return `${segment.speaker}:${text}`;
-}
+const hasSpeaker = (segment: Segment, speakers: Set<string>) =>
+	segment.type === 'verse' && segment.speaker !== undefined && speakers.has(segment.speaker);
 
 /**
- * Find long litany response series. A series may be interrupted by the
- * leader's invocations, but a rubric, an unattributed verse, or a different
- * response closes it. Short repetitions remain in full.
+ * Pair each adjacent litany invocation and response without changing either
+ * segment. Unattributed openings, rubrics, and unpaired verses keep a full row.
+ * The exact response remains visible, so singular, plural, and longer formulas
+ * can share one compact prayer-book layout.
  */
-export function repeatedResponsePlan(
-	segments: Segment[],
-	minimumRepetitions = 3
-): RepeatedResponsePlan {
-	const continued: string[] = [];
-	const omitted: string[] = [];
-	let key: string | undefined;
-	let ids: string[] = [];
+export function litanyRows(segments: Segment[]): LitanyRow[] {
+	const rows: LitanyRow[] = [];
 
-	const finish = () => {
-		if (ids.length >= minimumRepetitions) {
-			continued.push(ids[0]);
-			omitted.push(...ids.slice(1));
+	for (let primary = 0; primary < segments.length; primary += 1) {
+		const response = primary + 1;
+		if (
+			hasSpeaker(segments[primary], LEADER_SPEAKERS) &&
+			response < segments.length &&
+			hasSpeaker(segments[response], RESPONSE_SPEAKERS)
+		) {
+			rows.push({ primary, response });
+			primary = response;
+		} else {
+			rows.push({ primary });
 		}
-		key = undefined;
-		ids = [];
-	};
-
-	for (const segment of segments) {
-		const nextKey = responseKey(segment);
-		if (nextKey) {
-			if (nextKey !== key) {
-				finish();
-				key = nextKey;
-			}
-			ids.push(segment.id);
-			continue;
-		}
-
-		const isInvocation =
-			segment.type === 'verse' &&
-			segment.speaker !== undefined &&
-			LEADER_SPEAKERS.has(segment.speaker);
-		if (!isInvocation) finish();
 	}
-	finish();
 
-	return { continued, omitted };
+	return rows;
 }
 
 /** One prayer-level list, grouped by source while retaining every locator. */
