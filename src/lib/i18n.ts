@@ -139,7 +139,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		aboutLabel: 'o modlitwie',
 		sourcesLabel: 'źródła',
 		pagerAria: 'sąsiednie teksty',
-		ordoLead: 'porządek Mszy świętej według Mszału Rzymskiego z 1962 roku',
+		ordoLead: 'Porządek Mszy świętej według Mszału Rzymskiego z 1962 roku',
 		ordoSubtitle: 'Mszał Rzymski z 1962 roku',
 		ordoDescription:
 			'Cały porządek Mszy w rycie z 1962 roku, część po części — z tekstami stałymi i miejscami, w których wchodzą teksty własne dnia.',
@@ -245,7 +245,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		aboutLabel: 'about this prayer',
 		sourcesLabel: 'sources',
 		pagerAria: 'neighboring texts',
-		ordoLead: 'the order of Mass in the Roman Missal of 1962',
+		ordoLead: 'The order of Mass in the Roman Missal of 1962',
 		ordoSubtitle: 'the Roman Missal of 1962',
 		ordoDescription:
 			'The whole order of Mass in the 1962 rite, part by part — the fixed texts, and where the day’s own texts belong.',

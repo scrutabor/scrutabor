@@ -31,7 +31,7 @@
 	<main>
 		<h1 class="minor">{msgs.bibliographyTitle}</h1>
 		<p class="latin-name" lang="la">bibliographia</p>
-		<p class="lead">{lead}</p>
+		<p class="what">{lead}</p>
 
 		<div class="sources">
 			{#each data.sources as source (source.title)}
@@ -75,13 +75,10 @@
 		font-style: italic;
 	}
 
-	.lead,
-	.sources {
-		max-width: 38rem;
-		margin-inline: auto;
-	}
-
-	.lead {
+	/* The opening paragraph takes the shared prose measure (app.css); the
+	   entries beneath it are rows, like the concordance on a lemma page,
+	   so they take the frame. */
+	.what {
 		margin-top: 1.4rem;
 		line-height: 1.65;
 	}

@@ -38,19 +38,27 @@
 			<p class="motto" lang="la">
 				„Da mihi intellectum, et scrutabor legem tuam, et custodiam illam in toto corde meo.”
 			</p>
-			<p class="motto-ref smallcaps">{msgs.mottoRef}</p>
+			<!-- The citation is a door, as it is on the landing: the verse the
+			     edition is named from is IN the book, and the reader who
+			     wonders where the motto comes from should be able to open it
+			     rather than hunt for the psalm shelf at the foot of the page. -->
+			<p class="motto-ref smallcaps">
+				<a href="/app/{lang}/psalmi/118-he?v=34">{msgs.mottoRef}</a>
+			</p>
 		</header>
+
+		<!-- Two ways to use the book, and they are not used together:
+		     following the whole Mass, or opening one text. The flow is a way
+		     IN, not another text — so it stands apart from the shelves, above
+		     the spread and on the page's own centre line rather than at the
+		     head of one of two columns. -->
+		<a class="flow" href="/app/{lang}/ordo">
+			<span class="flow-title" lang="la">Ordo Missæ</span>
+			<span class="flow-lead">{msgs.ordoLead}</span>
+		</a>
 
 		<div class="catalog-spread">
 			<div class="catalog-column catalog-primary">
-				<!-- Two ways to use the book, and they are not used together:
-				     following the whole Mass, or opening one text. The flow is a way
-				     IN, not another text — so it stands apart from the shelves. -->
-				<a class="flow" href="/app/{lang}/ordo">
-					<span class="flow-title" lang="la">Ordo Missæ</span>
-					<span class="flow-lead">{msgs.ordoLead}</span>
-				</a>
-
 				{#each primarySections as section (section.category)}
 					{@render shelf(section)}
 				{/each}
@@ -100,6 +108,18 @@
 		width: 100%;
 	}
 
+	/* The book's own mark for a link that is not a card: the dotted rule
+	   under the ink, as on the colophon below and on the landing. */
+	.motto-ref a {
+		color: inherit;
+		text-decoration: none;
+		border-bottom: 1px dotted var(--border);
+	}
+
+	.motto-ref a:hover {
+		color: var(--ink);
+	}
+
 	section {
 		margin: 2.6rem 0 0;
 		width: 100%;
@@ -110,14 +130,17 @@
 		font-size: 1.35rem;
 	}
 
-	/* The way into the Mass: wider, quieter and set apart from the cards,
-	   so it reads as a door rather than as an entry in a list. */
+	/* The way into the Mass: set apart from the cards by its rubric rule
+	   and its lead, so it reads as a door rather than as an entry in a
+	   list. It is NOT set apart by size — a card's padding and barely more
+	   than a card's title. Standing alone above the spread is emphasis
+	   enough, and a box built to twice a card's height only shouted. */
 	.flow {
 		display: block;
 		width: 100%;
 		max-width: 30rem;
 		margin: 2.8rem 0 0;
-		padding: 1.1rem 1.4rem 1.2rem;
+		padding: 0.8rem 1.4rem 0.9rem;
 		text-align: left;
 		text-decoration: none;
 		border: 1px solid var(--rubric);
@@ -131,7 +154,7 @@
 
 	.flow-title {
 		display: block;
-		font-size: 1.7rem;
+		font-size: 1.45rem;
 		color: var(--rubric);
 	}
 
@@ -193,33 +216,36 @@
 		color: var(--ink);
 	}
 
-	/* Past laptop width the catalogue becomes an open spread: the primary
-	   way through the Mass and the prayer shelf on the left, the Ordinary
-	   and Psalms on the right. Reading pages keep their established measure;
-	   only this choosing surface uses the room a large monitor gives it. */
-	@media (min-width: 96rem) {
-		.page.landing {
-			max-width: 88rem;
-			padding-inline: 3rem;
-		}
+	/* At laptop width the catalogue becomes an open spread: the prayer
+	   shelf on the left, the Ordinary and Psalms on the right, with the way
+	   into the Mass centred above both. 80rem is a 1280px laptop with its
+	   browser chrome, and below it the columns stack.
 
+	   INSIDE THE SHARED FRAME (owner, 2026-08-16). It first widened the
+	   page to 88rem, which made the catalogue the one surface in the book
+	   that did not agree with the others: a reader leaving a prayer for the
+	   index watched the whole page jump 460 pixels wider. A spread is a way
+	   of using the frame, not a reason to break it — so the two columns
+	   divide the same measure every reading page holds. */
+	@media (min-width: 80rem) {
 		.page.landing main {
 			justify-content: flex-start;
 		}
 
 		.catalog-hero {
-			max-width: 42rem;
-			margin-inline: auto;
 			padding-top: 2rem;
+		}
+
+		.flow {
+			margin: 2.8rem auto 0;
 		}
 
 		.catalog-spread {
 			position: relative;
 			display: grid;
 			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 5rem;
-			max-width: 82rem;
-			margin: 3.4rem auto 0;
+			gap: 2.6rem;
+			margin: 3.2rem auto 0;
 			text-align: left;
 		}
 
@@ -245,13 +271,11 @@
 			padding-left: 0.3rem;
 		}
 
-		section,
-		.flow {
+		section {
 			max-width: none;
 		}
 
-		.flow,
-		.catalog-secondary section:first-child {
+		.catalog-column section:first-child {
 			margin-top: 0;
 		}
 

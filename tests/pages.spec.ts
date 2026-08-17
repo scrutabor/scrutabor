@@ -4,11 +4,12 @@ import pkg from '../package.json' with { type: 'json' };
 import { atRoute, expect, offlineUrl, test } from './fixtures';
 import { CATALOG } from '../src/lib/catalog';
 
-test('the catalogue becomes a balanced book spread only on large screens', async ({ page }) => {
+test('the catalogue becomes a balanced book spread from laptop width up', async ({ page }) => {
 	const shape = async () =>
 		page.evaluate(() => {
 			const spread = document.querySelector('.catalog-spread')!.getBoundingClientRect();
 			const hero = document.querySelector('.catalog-hero')!.getBoundingClientRect();
+			const flow = document.querySelector('a.flow')!.getBoundingClientRect();
 			const primary = document.querySelector('.catalog-primary')!.getBoundingClientRect();
 			const secondary = document.querySelector('.catalog-secondary')!.getBoundingClientRect();
 			const cards = [...document.querySelectorAll('.catalog-spread .card')].map((card) =>
@@ -17,6 +18,11 @@ test('the catalogue becomes a balanced book spread only on large screens', async
 			return {
 				spreadWidth: spread.width,
 				heroTop: hero.top,
+				// The way into the Mass stands above the spread, on its centre
+				// line — not at the head of either column.
+				flowBottom: flow.bottom,
+				flowOffCentre: Math.abs((flow.left + flow.right) / 2 - (spread.left + spread.right) / 2),
+				spreadTop: spread.top,
 				primaryLeft: primary.left,
 				secondaryLeft: secondary.left,
 				primaryRight: primary.right,
@@ -26,22 +32,89 @@ test('the catalogue becomes a balanced book spread only on large screens', async
 			};
 		});
 
-	await page.setViewportSize({ width: 1512, height: 1000 });
+	// Below the breakpoint the columns stack, and nothing changes.
+	await page.setViewportSize({ width: 1180, height: 1000 });
 	await page.goto('/app/pl');
-	const laptop = await shape();
-	expect(laptop.secondaryLeft).toBeCloseTo(laptop.primaryLeft, 0);
+	const narrow = await shape();
+	expect(narrow.secondaryLeft).toBeCloseTo(narrow.primaryLeft, 0);
 
-	await page.setViewportSize({ width: 1920, height: 1080 });
-	await page.goto('/app/pl');
-	const desktop = await shape();
-	expect(desktop.spreadWidth).toBeGreaterThan(1200);
-	expect(desktop.secondaryLeft).toBeGreaterThan(desktop.primaryRight + 60);
-	expect(desktop.cardOverflow).toBe(false);
+	for (const width of [1280, 1512, 1920]) {
+		await page.setViewportSize({ width, height: 1000 });
+		await page.goto('/app/pl');
+		const wide = await shape();
+		expect(wide.secondaryLeft).toBeGreaterThan(wide.primaryRight + 30);
+		expect(wide.cardOverflow).toBe(false);
+		expect(wide.flowBottom).toBeLessThanOrEqual(wide.spreadTop);
+		expect(wide.flowOffCentre).toBeLessThan(1);
+	}
 
 	await page.setViewportSize({ width: 3840, height: 2160 });
 	await page.goto('/app/pl');
 	const fourK = await shape();
 	expect(fourK.heroTop).toBeLessThan(120);
+});
+
+// The frame is the book's binding: a reader leaving a prayer for the index,
+// the grammar or the bibliography must not watch the page change width. It
+// drifted once already — four pages carried their own prose caps (30, 32, 34
+// and 38rem) and the catalogue widened its own frame to 88rem — so the
+// invariant is measured rather than remembered.
+test('every page holds the same frame, and prose the same measure', async ({ page }) => {
+	const ROUTES = [
+		'/app/pl',
+		'/app/pl/ordo',
+		'/app/pl/orationes/pater-noster',
+		'/app/pl/litaniae/lauretanae',
+		'/app/pl/psalmi/118-he',
+		'/app/pl/lemma/noster',
+		'/app/pl/grammatica',
+		'/app/pl/grammatica/vocativus',
+		'/app/pl/grammatica/pronuntiatio',
+		'/app/pl/editio',
+		'/app/pl/bibliographia'
+	];
+	await page.setViewportSize({ width: 1512, height: 1000 });
+
+	const frames: Record<string, number> = {};
+	const measures: Record<string, number> = {};
+	for (const route of ROUTES) {
+		await page.goto(route);
+		const seen = await page.evaluate(() => {
+			const el = document.querySelector('.page')!;
+			const box = el.getBoundingClientRect();
+			const cs = getComputedStyle(el);
+			const prose = document.querySelector('main .what, main .spot, main .fine');
+			return {
+				frame: box.width - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight),
+				prose: prose ? prose.getBoundingClientRect().width : null
+			};
+		});
+		frames[route] = Math.round(seen.frame);
+		if (seen.prose !== null) measures[route] = Math.round(seen.prose);
+	}
+
+	const reference = frames['/app/pl/orationes/pater-noster'];
+	expect(reference).toBeGreaterThan(700);
+	for (const [route, width] of Object.entries(frames)) {
+		expect(`${route}: ${width}`).toBe(`${route}: ${reference}`);
+	}
+
+	// Prose is narrower than the frame on purpose, but it is ONE width.
+	const proseWidths = Object.values(measures);
+	expect(proseWidths.length).toBeGreaterThan(2);
+	for (const [route, width] of Object.entries(measures)) {
+		expect(`${route}: ${width}`).toBe(`${route}: ${proseWidths[0]}`);
+		expect(width).toBeLessThan(reference);
+	}
+});
+
+test('the catalogue motto cites the psalm and opens it', async ({ page }) => {
+	await page.goto('/app/pl');
+	const cite = page.locator('.catalog-hero .motto-ref a');
+	await expect(cite).toHaveAttribute('href', /psalmi\/118-he(?:\.html)?\?v=34$/);
+	await cite.click();
+	await expect(page).toHaveURL(atRoute('/app/pl/psalmi/118-he', '?v=34'));
+	await expect(page.locator('h1')).toHaveText('Psalmus 118, HE');
 });
 
 test('lemma page shows head, senses, derivatives and concordance', async ({ page }) => {

@@ -171,10 +171,23 @@ body {
 }
 
 /* THE MEASURE, which is a different thing and no longer moves with the
-   frame. Prose is held to a reading measure in `ch`, so it is stated
-   against its OWN type rather than in a number of rem that is right for
-   one size of it and wrong for the next — and it is centred, because a
-   62-character column left-hugging a 56rem frame reads as a mistake.
+   frame. Prose is held to a reading measure and centred, because a short
+   column left-hugging a 56rem frame reads as a mistake.
+
+   ONE WIDTH, in rem — revised 2026-08-16 (owner: the pages are not the
+   same width). It was 62ch, stated against each block's OWN type so that
+   every prose column held the same NUMBER of characters. That is the
+   right typographic instinct and the wrong result here: the three prose
+   pages set their body at 1rem, 1.05rem and 1.1rem, so 62ch drew three
+   columns of 544, 512 and 480 pixels, and a reader moving between them
+   sees the text change width for no reason they can name. A reader
+   compares pages, not character counts. 34rem is the widest of those
+   three — 62 characters at 1rem, 56 at 1.1rem, both inside the measure
+   a reader wants — and now it is the same column on every page.
+
+   The four per-page caps this replaces (30rem, 32rem, 34rem, 38rem) are
+   gone from the pages themselves: a second number in a component silently
+   wins over this one, which is how they drifted apart in the first place.
 
    NAMED, not structural. The first attempt capped `main > section > p`,
    which is prose on a grammar page and is a CONCORDANCE ROW on a lemma
@@ -185,10 +198,10 @@ body {
 
    Reading pages are not listed: their verses fill the frame, and the
    prose inside them — rubric narratives, translations — carries its own
-   cap in the same unit, from before this rule existed.
+   cap, from before this rule existed.
 
-   NOT headings. Capping an h1 costs nothing — a heading is never 62
-   characters — but `margin-inline: auto` on one does: in the centred
+   NOT headings. Capping an h1 costs nothing — a heading is never that
+   long — but `margin-inline: auto` on one does: in the centred
    flex column of the landing it replaces `align-items: center`, and
    when the heading is WIDER than its column (the wordmark at the
    largest reading size on a 320px phone) auto margins collapse to zero
@@ -199,7 +212,7 @@ body {
 .page .what,
 .page .spot,
 .page .fine {
-	max-width: 62ch;
+	max-width: 34rem;
 	margin-inline: auto;
 }
 

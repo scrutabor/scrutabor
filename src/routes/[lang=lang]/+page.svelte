@@ -245,7 +245,7 @@
 					<HelpLevels {lang} bind:value={helpLevel} />
 				</div>
 				<p class="stanza-link smallcaps">
-					<a href="/app/{lang}/psalmi/118-he?v=34">{t.stanzaLink} ›</a>
+					<a href="/app/{lang}/psalmi/118-he?v=34">{t.stanzaLink}</a>
 				</p>
 				<TextBody
 					{doc}
@@ -453,6 +453,7 @@
 	.stanza-link a {
 		color: var(--ink-soft);
 		text-decoration: none;
+		border-bottom: 1px dotted var(--border);
 	}
 
 	.stanza-link a:hover {

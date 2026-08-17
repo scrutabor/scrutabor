@@ -256,14 +256,14 @@
 
 	.what {
 		margin: 1.4rem auto 0;
-		max-width: 32rem;
 		font-size: 1.05rem;
 		line-height: 1.6;
 	}
 
+	/* The tables are rows, not sentences: they take the frame, as the
+	   concordance and the card indexes do. */
 	section {
 		margin: 2.4rem auto 0;
-		max-width: 34rem;
 	}
 
 	.table-wrap {

@@ -58,16 +58,16 @@
 		font-size: 1.05rem;
 	}
 
+	/* Width comes from the shared measure in app.css, like every other
+	   page of prose in the book. */
 	.what {
 		margin: 1.6rem auto 0;
-		max-width: 30rem;
 		font-size: 1.1rem;
 		line-height: 1.6;
 	}
 
 	.spot {
 		margin: 0.7rem auto 0;
-		max-width: 30rem;
 		color: var(--ink-soft);
 		font-size: 1rem;
 		line-height: 1.55;

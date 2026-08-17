@@ -164,7 +164,7 @@ test('the landing separates following the Mass from opening a text', async ({ pa
 	const flow = page.locator('a.flow');
 	await expect(flow).toContainText('Ordo Missæ');
 	// it says which order of Mass this is — the edition, by name and year
-	await expect(flow).toContainText('the order of Mass in the Roman Missal of 1962');
+	await expect(flow).toContainText('The order of Mass in the Roman Missal of 1962');
 
 	// it stands above the catalog and outside it: no card links to the flow
 	const firstSection = page.locator('main section').first();

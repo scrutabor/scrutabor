@@ -123,7 +123,6 @@
 
 	.what {
 		margin: 1.4rem auto 0;
-		max-width: 34rem;
 		line-height: 1.65;
 	}
 
