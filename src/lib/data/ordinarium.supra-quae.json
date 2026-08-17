@@ -281,7 +281,16 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w021"
+					"head": "w021",
+					"analysis": {
+						"confidence": "medium",
+						"sources": [
+							"editorial",
+							"whitakers",
+							"collatinus"
+						],
+						"review": "disputed"
+					}
 				},
 				{
 					"id": "w021",

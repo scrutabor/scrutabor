@@ -186,6 +186,15 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"analysis": {
+						"confidence": "medium",
+						"sources": [
+							"editorial",
+							"whitakers",
+							"collatinus"
+						],
+						"review": "disputed"
 					}
 				},
 				{
