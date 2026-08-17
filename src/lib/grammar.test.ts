@@ -35,3 +35,14 @@ describe('grammar concepts', () => {
 		}
 	});
 });
+
+// The examples answer to the corpus, and the guard that says so lives in
+// grammar.check — which the concept route runs at prerender. Running it here
+// too means a mismatch fails a unit test in a second rather than a build in
+// two minutes.
+describe('grammar examples against the corpus', () => {
+	it('every example carries the fact its page teaches', async () => {
+		const { assertExamplesResolve } = await import('./grammar.check');
+		expect(() => assertExamplesResolve()).not.toThrow();
+	});
+});
