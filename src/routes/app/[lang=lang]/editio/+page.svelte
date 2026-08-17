@@ -47,12 +47,12 @@
 			</p>
 			<p class="what">
 				Ta weryfikacja czegoś dowodzi, a&nbsp;czegoś nie. Analizatory rozpoznają
-				<em>formę</em>: mówią, jakie rozbiory dana forma dopuszcza. Prawie trzy piąte słów
-				w&nbsp;tym wydaniu ma formę wieloznaczną — „María” dopuszcza dwanaście odczytań — więc
-				zgodność znaczy tyle, że nasz rozbiór jest wśród możliwych, a&nbsp;nie że jest jedynym.
-				Wybór właściwego odczytania w&nbsp;kontekście należy do wydania i&nbsp;to on czeka na
-				przegląd eksperta. Oba analizatory są niezależnymi programami o&nbsp;słownikach w&nbsp;dużej
-				mierze różnych, ale mają wspólne źródło — Lewis&nbsp;&amp; Short.
+				<em>formę</em>: mówią, jakie rozbiory dana forma dopuszcza. Ponad trzy piąte słów w&nbsp;tym
+				wydaniu ma formę wieloznaczną — „María” dopuszcza dwanaście odczytań — więc zgodność znaczy
+				tyle, że nasz rozbiór jest wśród możliwych, a&nbsp;nie że jest jedynym. Wybór właściwego
+				odczytania w&nbsp;kontekście należy do wydania i&nbsp;to on czeka na przegląd eksperta. Oba
+				analizatory są niezależnymi programami o&nbsp;słownikach w&nbsp;dużej mierze różnych, ale
+				mają wspólne źródło — Lewis&nbsp;&amp; Short.
 			</p>
 			<p class="what">
 				„Zaakceptowane” przy słowie znaczy: rozbiór zgodny z&nbsp;głosami analizatorów; „do
@@ -93,7 +93,7 @@
 			</p>
 			<p class="what">
 				It is worth being plain about what that check proves. The analyzers read the
-				<em>form</em>: they say which parses a form admits. Nearly three fifths of the words in this
+				<em>form</em>: they say which parses a form admits. Over three fifths of the words in this
 				edition have an ambiguous form — “María” admits twelve readings — so agreement means our
 				parse is among the possible ones, not that it is the only one. Choosing the right reading in
 				context is the edition's own act, and it is that choice which awaits expert review. The two

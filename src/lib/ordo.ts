@@ -148,8 +148,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'Psalm 42, said in alternation with the server, closed by the Glória Patri and the antiphon again.'
 				},
 				when: {
-					pl: 'opuszcza się w okresie Męki Pańskiej i we Mszach żałobnych — wraz z doksologią i powtórzoną antyfoną',
-					en: 'omitted in Passiontide and at Requiem Masses — with its doxology and the repeated antiphon'
+					pl: 'opuszcza się w okresie Męki Pańskiej i we Mszach za zmarłych — wraz z doksologią i powtórzoną antyfoną',
+					en: 'omitted in Passiontide and at Masses for the Dead — with its doxology and the repeated antiphon'
 				}
 			},
 			{
@@ -259,8 +259,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'At the middle of the altar the priest intones the angelic hymn. At a sung Mass the choir takes it up.'
 				},
 				when: {
-					pl: 'opuszcza się w Adwencie, Przedpościu i Wielkim Poście oraz we Mszach żałobnych, wraca w święta tych okresów',
-					en: 'omitted in Advent, Pre-Lent and Lent and at Requiem Masses, and returns on the feasts of those seasons'
+					pl: 'opuszcza się w Adwencie, Przedpościu i Wielkim Poście oraz we Mszach za zmarłych, wraca w święta tych okresów',
+					en: 'omitted in Advent, Pre-Lent and Lent and at Masses for the Dead, and returns on the feasts of those seasons'
 				}
 			},
 			{
@@ -374,8 +374,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'A drop of water goes into the wine. The prayer said over it is an old Christmas collect.'
 				},
 				when: {
-					pl: 'we Mszach żałobnych wody się nie błogosławi',
-					en: 'at Requiem Masses the water is not blessed'
+					pl: 'we Mszach za zmarłych wody się nie błogosławi',
+					en: 'at Masses for the Dead the water is not blessed'
 				}
 			},
 			{
@@ -408,8 +408,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest washes his fingertips, saying Psalm 25 from the verse that names the altar.'
 				},
 				when: {
-					pl: 'Chwały Ojcu nie odmawia się we Mszach żałobnych ani w okresie Męki Pańskiej',
-					en: 'the Glória Patri is omitted at Requiem Masses and in Passiontide'
+					pl: 'Chwały Ojcu nie odmawia się we Mszach za zmarłych ani w okresie Męki Pańskiej',
+					en: 'the Glória Patri is omitted at Masses for the Dead and in Passiontide'
 				}
 			},
 			{
@@ -681,8 +681,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The invocations come after the breaking of the Host and the greeting of peace, just before Communion.'
 				},
 				when: {
-					pl: 'we Mszach żałobnych zamiast miserére nobis mówi się dona eis réquiem',
-					en: 'at Requiem Masses dona eis réquiem takes the place of miserére nobis'
+					pl: 'we Mszach za zmarłych zamiast miserére nobis mówi się dona eis réquiem',
+					en: 'at Masses for the Dead dona eis réquiem takes the place of miserére nobis'
 				}
 			},
 			{
@@ -695,8 +695,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The first of three silent prayers before Communion, for the peace of the Church. At Solemn Mass the kiss of peace follows it.'
 				},
 				when: {
-					pl: 'we Mszach żałobnych opuszcza się ją wraz z pozdrowieniem pokoju',
-					en: 'at Requiem Masses it is omitted, and so is the peace'
+					pl: 'we Mszach za zmarłych opuszcza się ją wraz z pozdrowieniem pokoju',
+					en: 'at Masses for the Dead it is omitted, and so is the peace'
 				}
 			},
 			{
@@ -813,8 +813,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest turns to the people and dismisses them with Ite, missa est. The server answers Deo grátias.'
 				},
 				when: {
-					pl: 'gdy nie było Glórii, śpiewa się Benedicámus Dómino, a we Mszach żałobnych — Requiéscant in pace',
-					en: 'when the Gloria was not said the dismissal is Benedicámus Dómino, and at Requiems Requiéscant in pace'
+					pl: 'gdy po Mszy następuje procesja, mówi się Benedicámus Dómino, a we Mszach za zmarłych — Requiéscant in pace',
+					en: 'when a procession follows the Mass the dismissal is Benedicámus Dómino, and at Masses for the Dead Requiéscant in pace'
 				}
 			},
 			{
@@ -837,8 +837,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest raises his eyes, extends his hands and blesses the people with one sign of the cross.'
 				},
 				when: {
-					pl: 'we Mszach żałobnych błogosławieństwa się nie udziela',
-					en: 'at Requiem Masses no blessing is given'
+					pl: 'we Mszach za zmarłych błogosławieństwa się nie udziela',
+					en: 'at Masses for the Dead no blessing is given'
 				}
 			},
 			{
