@@ -3,7 +3,7 @@
 	"text": "defunctorum.requiem-aeternam",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Krótka modlitwa za wiernych zmarłych w brzmieniu łacińskiego Enchiridion Indulgentiarum z 1952 r. Polski przekład zachowuje dokładne znaczenie Requiescant in pace — „Niech odpoczywają w pokoju”. Częsty polski dodatek „wiecznym” nie ma odpowiednika w tym zdaniu łacińskim.",
+	"about": "Krótka modlitwa za wiernych zmarłych w brzmieniu łacińskiego Enchiridion Indulgentiarum z 1952 r. Polski tekst jest brzmieniem ujednoliconym przez Konferencję Episkopatu Polski. Dodaje ono „wiecznym”, czego nie ma w tym zdaniu łacińskim — słowo po słowie oddaje je warstwa glos.",
 	"about_citations": [
 		{
 			"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
@@ -29,17 +29,17 @@
 			"translation_citations": [
 				{
 					"title": "Polish Bishops’ Conference, Polish prayer texts",
-					"locator": "Modlitwy za zmarłych, p. 15",
+					"locator": "Wieczny odpoczynek, p. 20",
 					"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
 				}
 			]
 		},
 		"s002": {
-			"translation": "Niech odpoczywają w pokoju.",
+			"translation": "Niech odpoczywają w pokoju wiecznym.",
 			"translation_citations": [
 				{
 					"title": "Polish Bishops’ Conference, Polish prayer texts",
-					"locator": "Modlitwy za zmarłych, p. 15",
+					"locator": "Wieczny odpoczynek, p. 20",
 					"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
 				}
 			]
@@ -49,7 +49,7 @@
 			"translation_citations": [
 				{
 					"title": "Polish Bishops’ Conference, Polish prayer texts",
-					"locator": "Modlitwy za zmarłych, p. 15",
+					"locator": "Wieczny odpoczynek, p. 20",
 					"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
 				}
 			]
