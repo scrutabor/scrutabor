@@ -3,7 +3,7 @@
 	"text": "ordinarium.credo",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Symbol nicejsko-konstantynopolitański, odmawiany po Ewangelii w każdą niedzielę i w większe święta, a opuszczany w Mszach za zmarłych. Na słowa Et incarnátus est, w których Symbol wyznaje Słowo, które stało się ciałem, wszyscy przyklękają. Jego artykuły idą od Ojca i Syna do Ducha Świętego, Kościoła, jednego chrztu, wskrzeszenia umarłych i życia wiecznego.",
+	"about": "Symbol nicejsko-konstantynopolitański, odmawiany po Ewangelii w każdą niedzielę i w większe święta, a opuszczany we Mszach za zmarłych. Na słowa Et incarnátus est, w których Symbol wyznaje Słowo, które stało się ciałem, wszyscy przyklękają. Jego artykuły idą od Ojca i Syna do Ducha Świętego, Kościoła, jednego chrztu, wskrzeszenia umarłych i życia wiecznego.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -13,7 +13,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Na środku ołtarza kapłan wyciąga i unosi ręce, składa je, odmawia Credo, jeśli jest przewidziane, i kontynuuje ze złożonymi rękami."
+			"narrative": "Na środku ołtarza kapłan wyciąga i unosi ręce, składa je, odmawia Credo, jeśli jest przewidziane, i kontynuuje ze złożonymi rękami. Pochyla głowę ku krzyżowi przy in unum Deum, przy Iesum Christum i przy simul adorátur, a przy Et vitam ventúri sǽculi żegna się od czoła do piersi."
 		},
 		"s02": {
 			"translation": "Wierzę w jednego Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, wszystkich rzeczy widzialnych i niewidzialnych."
@@ -34,7 +34,7 @@
 			"translation": "On to dla nas ludzi i dla naszego zbawienia zstąpił z nieba."
 		},
 		"s08": {
-			"narrative": "W tym miejscu przyklęka się i powstaje."
+			"narrative": "W tym miejscu przyklęka się, trwając tak od Et incarnátus est do et homo factus est, i powstaje."
 		},
 		"s09": {
 			"translation": "I za sprawą Ducha Świętego przyjął ciało z Maryi Dziewicy: i stał się człowiekiem."

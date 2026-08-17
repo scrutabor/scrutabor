@@ -3,7 +3,7 @@
 	"text": "ordinarium.ite-missa-est",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Rozesłanie po ostatniej modlitwie pokomunijnej. Kapłan pozdrawia wiernych i mówi „Ite, Missa est”, na co odpowiada się „Deo grátias”. Gdy po Mszy następuje procesja, mówi zamiast tego „Benedicámus Dómino”, a w Mszach za zmarłych „Requiéscant in pace”, na co odpowiada się „Amen”.",
+	"about": "Rozesłanie po ostatniej modlitwie pokomunijnej. Kapłan pozdrawia wiernych i mówi „Ite, Missa est”, na co odpowiada się „Deo grátias”. Gdy po Mszy następuje procesja, mówi zamiast tego „Benedicámus Dómino”, a we Mszach za zmarłych „Requiéscant in pace”, na co odpowiada się „Amen”.",
 	"about_citations": [
 		{
 			"title": "Missale Romanum (1962)",
@@ -34,7 +34,7 @@
 			"translation": "I z duchem twoim."
 		},
 		"s04": {
-			"narrative": "Zależnie od rodzaju Mszy kapłan mówi „Ite, Missa est” albo „Benedicámus Dómino”. Ministrant odpowiada „Deo grátias”."
+			"narrative": "Zwrócony do ludu kapłan mówi „Ite, Missa est”, a ministrant odpowiada „Deo grátias”. Gdy zamiast tego mówi się „Benedicámus Dómino”, kapłan mówi to na środku ołtarza, zwrócony ku niemu."
 		},
 		"s05": {
 			"translation": "Idźcie, Msza się skończyła."
@@ -43,7 +43,7 @@
 			"translation": "Bogu niech będą dzięki."
 		},
 		"s07": {
-			"narrative": "W Mszach za zmarłych mówi zamiast tego: niech odpoczywają w pokoju — a odpowiedź brzmi Amen."
+			"narrative": "We Mszach za zmarłych kapłan, zwrócony ku ołtarzowi, mówi zamiast tego: Requiéscant in pace — a odpowiedź brzmi Amen."
 		}
 	},
 	"words": {

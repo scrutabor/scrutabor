@@ -3,7 +3,7 @@
 	"text": "ordinarium.benedictio",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Kapłan wypowiada pierwszą część błogosławieństwa przy ołtarzu, następnie zwraca się do ludu i kreśli nad nim znak krzyża. Także podczas Mszy uroczystej czyni jeden znak. Potrójne błogosławieństwo należy do Mszy pontyfikalnej. Błogosławieństwo opuszcza się po Benedicámus Dómino oraz w Mszach za zmarłych.",
+	"about": "Kapłan wypowiada pierwszą część błogosławieństwa przy ołtarzu, następnie zwraca się do ludu i kreśli nad nim znak krzyża. Także podczas Mszy uroczystej czyni jeden znak. Potrójne błogosławieństwo należy do Mszy pontyfikalnej. Błogosławieństwo opuszcza się po Benedicámus Dómino oraz we Mszach za zmarłych.",
 	"about_citations": [
 		{
 			"title": "Missale Romanum (1962)",
@@ -30,7 +30,7 @@
 	},
 	"segments": {
 		"s01": {
-			"narrative": "Potem całuje ołtarz, podnosi oczy, wyciąga, unosi i składa ręce, pochyla głowę przed krzyżem i mówi:",
+			"narrative": "Potem kapłan całuje ołtarz, podnosi oczy, wyciąga, unosi i składa ręce, pochyla głowę przed krzyżem i mówi:",
 			"narrative_citations": [
 				{
 					"title": "Missale Romanum (1962)",
@@ -59,7 +59,7 @@
 			"translation": "Amen."
 		},
 		"s05": {
-			"narrative": "W Mszach za zmarłych błogosławieństwa się nie udziela. Po Requiéscant in pace kapłan odmawia Pláceat tibi, sancta Trínitas, całuje ołtarz i czyta Ewangelię św. Jana."
+			"narrative": "We Mszach za zmarłych błogosławieństwa się nie udziela. Po Requiéscant in pace kapłan odmawia Pláceat tibi, sancta Trínitas, całuje ołtarz i, jeśli ostatnia Ewangelia ma być odczytana, czyta Ewangelię św. Jana."
 		}
 	},
 	"words": {
