@@ -165,6 +165,84 @@ const CATALOG_SOURCE: CatalogSection[] = [
 		]
 	},
 	{
+		// The proper is not a list of prayers but ONE Mass, whose parts the
+		// Ordo interleaves with the ordinary — so the shelf is ordered by the
+		// rite and not alphabetically, and the label names the day rather than
+		// the category, because "proper" alone tells a reader nothing about
+		// WHICH proper they are looking at. One formulary today. When there
+		// are dozens this shelf becomes a list of days and the parts move
+		// behind it (BACKLOG, landing scalability).
+		//
+		// The Ordo's own `proper` entries stay unlinked on purpose. They are
+		// day-agnostic — the spine of ANY Mass — and pointing them at Advent I
+		// would tell a reader in June that this is today's introit. Resolving
+		// them is the calendar's work (v1 scope 4).
+		category: 'proprium',
+		label: { pl: 'proprium — I Niedziela Adwentu', en: 'proper — First Sunday of Advent' },
+		texts: [
+			{
+				category: 'proprium',
+				slug: 'dominica-i-adventus-introitus',
+				title: 'Intróitus',
+				localizedTitle: { pl: 'Introit', en: 'Introit' }
+			},
+			{
+				category: 'proprium',
+				slug: 'dominica-i-adventus-collecta',
+				title: 'Collécta',
+				localizedTitle: { pl: 'Kolekta', en: 'Collect' }
+			},
+			{
+				category: 'proprium',
+				slug: 'dominica-i-adventus-epistola',
+				title: 'Epístola',
+				localizedTitle: { pl: 'Lekcja', en: 'Epistle' }
+			},
+			{
+				category: 'proprium',
+				slug: 'dominica-i-adventus-graduale',
+				title: 'Graduále',
+				localizedTitle: { pl: 'Graduał', en: 'Gradual' }
+			},
+			{
+				category: 'proprium',
+				slug: 'dominica-i-adventus-alleluia',
+				title: 'Allelúia',
+				localizedTitle: { pl: 'Alleluja', en: 'Alleluia' }
+			},
+			{
+				category: 'proprium',
+				slug: 'dominica-i-adventus-evangelium',
+				title: 'Evangélium',
+				localizedTitle: { pl: 'Ewangelia', en: 'Gospel' }
+			},
+			{
+				category: 'proprium',
+				slug: 'dominica-i-adventus-offertorium',
+				title: 'Offertórium',
+				localizedTitle: { pl: 'Ofiarowanie', en: 'Offertory' }
+			},
+			{
+				category: 'proprium',
+				slug: 'dominica-i-adventus-secreta',
+				title: 'Secréta',
+				localizedTitle: { pl: 'Sekreta', en: 'Secret' }
+			},
+			{
+				category: 'proprium',
+				slug: 'dominica-i-adventus-communio',
+				title: 'Commúnio',
+				localizedTitle: { pl: 'Komunia', en: 'Communion' }
+			},
+			{
+				category: 'proprium',
+				slug: 'dominica-i-adventus-postcommunio',
+				title: 'Postcommúnio',
+				localizedTitle: { pl: 'Pokomunia', en: 'Postcommunion' }
+			}
+		]
+	},
+	{
 		// The first shelf that is not the Mass. Psalm 118 is an acrostic of
 		// twenty-two stanzas, one per Hebrew letter, so a stanza is the unit
 		// and not the psalm — and this one is here first because verse 34 of

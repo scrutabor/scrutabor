@@ -18,11 +18,19 @@ import { join } from 'node:path';
 
 const CORPUS = '../scrutabor-corpus';
 const DATA = 'src/lib/data';
-// The Proper has entered the corpus, but not yet the app: there is no
-// `proprium` catalog category or reading route for it. Importing those files
-// early would ship unreachable data and make a normal re-vendor silently
-// widen the product. Add the category here only when its app surface lands.
-const CATEGORIES = new Set(['orationes', 'defunctorum', 'litaniae', 'ordinarium', 'psalmi']);
+// The allowlist exists so a re-vendor cannot silently widen the product:
+// data with no surface is data shipped for nobody. `proprium` joined it on
+// 2026-08-18, when the shelf and the label that names the day landed with it.
+// A category added here without a catalog section fails catalog.reach.test.ts
+// rather than reaching a reader as an unlinked page.
+const CATEGORIES = new Set([
+	'orationes',
+	'defunctorum',
+	'litaniae',
+	'ordinarium',
+	'proprium',
+	'psalmi'
+]);
 
 const read = (path) => JSON.parse(readFileSync(path, 'utf8'));
 
