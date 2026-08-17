@@ -599,8 +599,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/nobis-quoque',
 				note: {
-					pl: 'Jedyne słowa Kanonu mówione głośniej: kapłan uderza się w piersi i wymienia siedem świętych kobiet.',
-					en: 'The only words of the Canon said aloud: the priest strikes his breast and names seven women among the saints.'
+					pl: 'Na te trzy słowa kapłan podnosi głos, uderza się w piersi i wymienia siedem świętych kobiet.',
+					en: 'The priest raises his voice for these three words, striking his breast, and names seven women among the saints.'
 				}
 			},
 			{
@@ -637,8 +637,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/pater-noster',
 				note: {
-					pl: 'Modlitwę Pańską kapłan śpiewa lub mówi sam. Ministrant włącza się dopiero na końcu: Sed líbera nos a malo.',
-					en: 'The priest sings or says the Lord’s Prayer alone. The server joins only at the end: Sed líbera nos a malo.'
+					pl: 'Modlitwę Pańską kapłan śpiewa lub mówi, a ministrant odpowiada Sed líbera nos a malo. We Mszy czytanej lud może odmówić z nim całą modlitwę.',
+					en: 'The priest sings or says the Lord’s Prayer and the server answers Sed líbera nos a malo. At low Mass the people may say the whole prayer with him.'
 				}
 			},
 			{
@@ -735,7 +735,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/quid-retribuam',
 				note: {
-					pl: 'Odkrywa kielich, zbiera na patenę okruchy, żegna się kielichem i przyjmuje Krew Pańską.',
+					pl: 'Kapłan odkrywa kielich, zbiera na patenę okruchy, żegna się kielichem i przyjmuje Krew Pańską.',
 					en: 'The priest uncovers the chalice, gathers any fragments onto the paten, signs himself with the chalice and receives the Blood of the Lord.'
 				}
 			},
@@ -760,7 +760,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/quod-ore-sumpsimus',
 				note: {
 					pl: 'Ministrant wlewa wino do kielicha. Kapłan oczyszcza go i spożywa ablucję.',
-					en: 'The server pours wine into the chalice. The priest purifies it and drinks.'
+					en: 'The server pours wine into the chalice. The priest purifies it and consumes the ablution.'
 				}
 			},
 			{
@@ -769,7 +769,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/corpus-tuum',
 				note: {
-					pl: 'Obmywa palce winem z wodą, wyciera kielich i naczynia. Ta druga cicha modlitwa zamyka obrzęd Komunii.',
+					pl: 'Kapłan obmywa palce winem z wodą, wyciera kielich i naczynia. Ta druga cicha modlitwa zamyka obrzęd Komunii.',
 					en: 'The priest washes his fingers with wine and water and dries the chalice and vessels. This second silent prayer closes the Communion rite.'
 				}
 			}
