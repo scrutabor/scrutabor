@@ -2072,7 +2072,8 @@
 						"pos": "noun",
 						"case": "voc",
 						"number": "sg",
-						"gender": "n"
+						"gender": "n",
+						"decl": 3
 					},
 					"id": "w134"
 				},
@@ -2395,7 +2396,8 @@
 						"pos": "noun",
 						"case": "gen",
 						"number": "pl",
-						"gender": "m"
+						"gender": "m",
+						"decl": 3
 					},
 					"id": "w155",
 					"post": "."
@@ -4263,7 +4265,8 @@
 						"pos": "noun",
 						"case": "abl",
 						"number": "sg",
-						"gender": "m"
+						"gender": "m",
+						"decl": 4
 					},
 					"id": "w278"
 				},
@@ -4741,7 +4744,8 @@
 						"pos": "noun",
 						"case": "acc",
 						"number": "pl",
-						"gender": "m"
+						"gender": "m",
+						"decl": 3
 					},
 					"id": "w312"
 				},
@@ -5410,7 +5414,8 @@
 						"pos": "adj",
 						"case": "gen",
 						"number": "sg",
-						"gender": "f"
+						"gender": "f",
+						"degree": "sup"
 					},
 					"head": "w361",
 					"id": "w360"
@@ -6451,7 +6456,8 @@
 						"pos": "noun",
 						"case": "acc",
 						"number": "sg",
-						"gender": "m"
+						"gender": "m",
+						"decl": 4
 					},
 					"id": "w435",
 					"post": ",",
