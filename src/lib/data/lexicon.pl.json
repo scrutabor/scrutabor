@@ -93,6 +93,13 @@
 		"Alexander": {
 			"senses": [
 				"Aleksander"
+			],
+			"note": "Imię greckie, „obrońca mężów”.",
+			"note_citations": [
+				{
+					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
+					"locator": "s.v. alexandros"
+				}
 			]
 		},
 		"Anastasia": {
@@ -119,6 +126,17 @@
 		"Andreas": {
 			"senses": [
 				"Andrzej"
+			],
+			"note": "Imię greckie, „mężny”, od anér — „mąż”.",
+			"note_citations": [
+				{
+					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
+					"locator": "s.v. andreios"
+				},
+				{
+					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
+					"locator": "s.v. aner"
+				}
 			]
 		},
 		"Baptista": {
@@ -130,6 +148,13 @@
 		"Barnabas": {
 			"senses": [
 				"Barnaba"
+			],
+			"note": "Imię nadane mu przez Apostołów. Dz 4,36 tłumaczy je „syn pocieszenia”.",
+			"note_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "Acts of the Apostles 4:36"
+				}
 			]
 		},
 		"Bartholomaeus": {
@@ -140,6 +165,13 @@
 		"Caecilia": {
 			"senses": [
 				"Cecylia"
+			],
+			"note": "Męczennica rzymska, patronka muzyki kościelnej.",
+			"note_citations": [
+				{
+					"title": "The Catholic Encyclopedia",
+					"locator": "s.v. St. Cecilia"
+				}
 			]
 		},
 		"Christus": {
@@ -166,36 +198,93 @@
 		"Chrysogonus": {
 			"senses": [
 				"Chryzogon"
+			],
+			"note": "Imię greckie, „zrodzony ze złota”.",
+			"note_citations": [
+				{
+					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
+					"locator": "s.v. chrysos"
+				},
+				{
+					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
+					"locator": "s.v. gonos"
+				}
 			]
 		},
 		"Clemens": {
 			"senses": [
 				"Klemens"
+			],
+			"note": "Łaciński przymiotnik clemens — „łagodny, miłosierny”.",
+			"note_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. clemens"
+				}
 			]
 		},
 		"Cletus": {
 			"senses": [
 				"Klet"
+			],
+			"note": "Imię greckie, „powołany”.",
+			"note_citations": [
+				{
+					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
+					"locator": "s.v. kletos"
+				}
 			]
 		},
 		"Cornelius": {
 			"senses": [
 				"Korneliusz"
+			],
+			"note": "Imię starego rodu rzymskiego.",
+			"note_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. Cornelius"
+				}
 			]
 		},
 		"Cosmas": {
 			"senses": [
 				"Kosma"
+			],
+			"note": "Imię greckie, „porządek”. Lekarz, umęczony w Cylicji wraz z Damianem.",
+			"note_citations": [
+				{
+					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
+					"locator": "s.v. kosmos"
+				},
+				{
+					"title": "The Catholic Encyclopedia",
+					"locator": "s.v. Sts. Cosmas and Damian"
+				}
 			]
 		},
 		"Cyprianus": {
 			"senses": [
 				"Cyprian"
+			],
+			"note": "„Cypryjczyk”, od łacińskiej nazwy wyspy.",
+			"note_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. Cyprus"
+				}
 			]
 		},
 		"Damianus": {
 			"senses": [
 				"Damian"
+			],
+			"note": "Lekarz, umęczony w Cylicji wraz z Kosmą.",
+			"note_citations": [
+				{
+					"title": "The Catholic Encyclopedia",
+					"locator": "s.v. Sts. Cosmas and Damian"
+				}
 			]
 		},
 		"Eva": {
@@ -213,6 +302,13 @@
 		"Felicitas": {
 			"senses": [
 				"Felicyta"
+			],
+			"note": "Łaciński rzeczownik felicitas — „szczęście”.",
+			"note_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. felicitas"
+				}
 			]
 		},
 		"Iacobus": {
@@ -244,6 +340,13 @@
 		"Ignatius": {
 			"senses": [
 				"Ignacy"
+			],
+			"note": "Trzeci biskup Antiochii, umęczony w Rzymie.",
+			"note_citations": [
+				{
+					"title": "The Catholic Encyclopedia",
+					"locator": "s.v. St. Ignatius of Antioch"
+				}
 			]
 		},
 		"Ioannes": {
@@ -286,21 +389,50 @@
 		"Laurentius": {
 			"senses": [
 				"Wawrzyniec"
+			],
+			"note": "Od Laurentum, miasta w Lacjum.",
+			"note_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. Laurentum"
+				}
 			]
 		},
 		"Linus": {
 			"senses": [
 				"Linus"
+			],
+			"note": "Pierwszy męczennik wymieniony w Kanonie po Apostołach.",
+			"note_citations": [
+				{
+					"title": "Missale Romanum (1962)",
+					"locator": "Canon Missae, Communicantes",
+					"url": "https://archive.org/details/missale_romanum-1962"
+				}
 			]
 		},
 		"Lucia": {
 			"senses": [
 				"Łucja"
+			],
+			"note": "Od lux — „światło”. Imię zrodzonego o świcie.",
+			"note_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. Lucius"
+				}
 			]
 		},
 		"Marcellinus": {
 			"senses": [
 				"Marcelin"
+			],
+			"note": "Od imienia Marcellus, które jest zdrobnieniem od Marcus.",
+			"note_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. Marcellus"
+				}
 			]
 		},
 		"Maria": {
@@ -383,11 +515,25 @@
 		"Paulus": {
 			"senses": [
 				"Paweł"
+			],
+			"note": "Łaciński przymiotnik paulus — „mały”.",
+			"note_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. paulus"
+				}
 			]
 		},
 		"Perpetua": {
 			"senses": [
 				"Perpetua"
+			],
+			"note": "Łaciński przymiotnik perpetua — „nieustanna, ciągła”.",
+			"note_citations": [
+				{
+					"title": "Lewis and Short, A Latin Dictionary",
+					"locator": "s.v. perpetuus"
+				}
 			]
 		},
 		"Petrus": {
@@ -405,6 +551,17 @@
 		"Philippus": {
 			"senses": [
 				"Filip"
+			],
+			"note": "Imię greckie, „miłośnik koni”.",
+			"note_citations": [
+				{
+					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
+					"locator": "s.v. philos"
+				},
+				{
+					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
+					"locator": "s.v. hippos"
+				}
 			]
 		},
 		"Pilatus": {
@@ -452,11 +609,33 @@
 		"Thomas": {
 			"senses": [
 				"Tomasz"
+			],
+			"note": "Jan podaje także grecki przydomek — Dídymus, „bliźniak”.",
+			"note_citations": [
+				{
+					"title": "Biblia Sacra Vulgata",
+					"locator": "John 11:16"
+				},
+				{
+					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
+					"locator": "s.v. didymos"
+				}
 			]
 		},
 		"Xystus": {
 			"senses": [
 				"Sykstus"
+			],
+			"note": "Papież Sykstus II, umęczony w Rzymie w 258 roku. Kanon wymienia jego, a nie wcześniejszego imiennika.",
+			"note_citations": [
+				{
+					"title": "The Catholic Encyclopedia",
+					"locator": "s.v. Pope St. Sixtus II"
+				},
+				{
+					"title": "The Catholic Encyclopedia",
+					"locator": "s.v. Pope St. Sixtus I"
+				}
 			]
 		},
 		"ab": {
@@ -2429,6 +2608,13 @@
 		"eucharistia": {
 			"senses": [
 				"Eucharystia"
+			],
+			"note": "Rzeczownik grecki, „dziękczynienie”.",
+			"note_citations": [
+				{
+					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
+					"locator": "s.v. eucharistia"
+				}
 			]
 		},
 		"evangelista": {
