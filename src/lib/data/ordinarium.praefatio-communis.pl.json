@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.praefatio-communis",
 	"lang": "pl",
 	"status": "working-edition",
@@ -79,7 +79,7 @@
 			"gloss": "dzięki"
 		},
 		"w015": {
-			"gloss": "składali",
+			"gloss": "składać",
 			"function": "Bezokolicznik w konstrukcji „nos tibi grátias ágere”, zależnej od „est” (w005)."
 		},
 		"w016": {
@@ -202,7 +202,7 @@
 			"gloss": "być dopuszczonymi"
 		},
 		"w052": {
-			"gloss": "każ",
+			"gloss": "kazał",
 			"function": "Tryb łączący po ut. Po polsku oddany trybem rozkazującym, ale w łacinie to prośba, nie rozkaz."
 		},
 		"w053": {
@@ -213,7 +213,7 @@
 			"gloss": "kornym"
 		},
 		"w055": {
-			"gloss": "wyznaniu",
+			"gloss": "wyznaniem",
 			"function": "Wyznanie nie winy, lecz chwały — to, co za chwilę wyśpiewa Sanctus."
 		},
 		"w056": {

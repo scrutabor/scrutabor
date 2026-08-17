@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.supplices-te-rogamus",
 	"lang": "pl",
 	"status": "working-edition",
@@ -71,7 +71,7 @@
 			"function": "Biernik liczby mnogiej rodzaju nijakiego: podmiot bezokolicznika „perférri” (w008)."
 		},
 		"w008": {
-			"gloss": "zanieść",
+			"gloss": "być zaniesionymi",
 			"function": "Bezokolicznik strony biernej od „pérfero”: „zostać zaniesionym”."
 		},
 		"w009": {
@@ -106,7 +106,7 @@
 			"gloss": "przed"
 		},
 		"w019": {
-			"gloss": "oblicze"
+			"gloss": "obliczem"
 		},
 		"w020": {
 			"gloss": "boskiego"

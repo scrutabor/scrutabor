@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.per-ipsum",
 	"title": "Per ipsum",
 	"category": "ordinarium",
@@ -56,7 +56,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w002"
 				},
 				{
 					"id": "w002",
@@ -85,7 +86,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w005"
 				},
 				{
 					"id": "w005",
@@ -114,7 +116,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w008"
 				},
 				{
 					"id": "w008",
@@ -206,7 +209,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w012"
 				},
 				{
 					"id": "w014",
@@ -215,7 +219,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w015"
 				},
 				{
 					"id": "w015",
@@ -251,7 +256,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w016"
 				}
 			]
 		},
@@ -283,7 +289,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w019"
 				},
 				{
 					"id": "w019",
@@ -347,7 +354,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w023",
@@ -358,7 +366,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w024",

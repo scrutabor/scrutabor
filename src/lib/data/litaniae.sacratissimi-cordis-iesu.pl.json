@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "litaniae.sacratissimi-cordis-iesu",
 	"lang": "pl",
 	"status": "working-edition",
@@ -1061,10 +1061,10 @@
 			"gloss": "Matki"
 		},
 		"w049": {
-			"gloss": "od"
+			"gloss": "przez"
 		},
 		"w050": {
-			"gloss": "Duch"
+			"gloss": "Ducha"
 		},
 		"w051": {
 			"gloss": "Świętego"
@@ -1166,7 +1166,7 @@
 			"gloss": "Jezusa"
 		},
 		"w084": {
-			"gloss": "domu"
+			"gloss": "dom"
 		},
 		"w085": {
 			"gloss": "Boga"
@@ -1283,7 +1283,7 @@
 			"gloss": "Jezusa"
 		},
 		"w123": {
-			"gloss": "wszelkim"
+			"gloss": "wszelkiej"
 		},
 		"w124": {
 			"gloss": "chwały"
@@ -1340,7 +1340,7 @@
 			"gloss": "są"
 		},
 		"w142": {
-			"gloss": "wszyscy"
+			"gloss": "wszystkie"
 		},
 		"w143": {
 			"gloss": "skarby"
@@ -1403,7 +1403,7 @@
 			"gloss": "którym"
 		},
 		"w163": {
-			"gloss": "Ojcze"
+			"gloss": "Ojciec"
 		},
 		"w164": {
 			"gloss": "sobie"
@@ -1436,7 +1436,7 @@
 			"gloss": "pełni"
 		},
 		"w174": {
-			"gloss": "wszystkich"
+			"gloss": "wszyscy"
 		},
 		"w175": {
 			"gloss": "my"
@@ -1511,7 +1511,7 @@
 			"gloss": "wszystkich"
 		},
 		"w199": {
-			"gloss": "który"
+			"gloss": "którzy"
 		},
 		"w200": {
 			"gloss": "wzywają"
@@ -1565,7 +1565,7 @@
 			"gloss": "grzechy"
 		},
 		"w217": {
-			"gloss": "naszymi"
+			"gloss": "nasze"
 		},
 		"w218": {
 			"gloss": "zmiłuj się"
@@ -1628,7 +1628,7 @@
 			"gloss": "do"
 		},
 		"w238": {
-			"gloss": "śmierć"
+			"gloss": "śmierci"
 		},
 		"w239": {
 			"gloss": "posłuszne"
@@ -1670,7 +1670,7 @@
 			"gloss": "źródło"
 		},
 		"w252": {
-			"gloss": "całego"
+			"gloss": "całej"
 		},
 		"w253": {
 			"gloss": "pociechy"
@@ -1697,7 +1697,7 @@
 			"gloss": "zmartwychwstanie"
 		},
 		"w261": {
-			"gloss": "nasza"
+			"gloss": "nasze"
 		},
 		"w262": {
 			"gloss": "zmiłuj się"
@@ -1721,7 +1721,7 @@
 			"gloss": "pojednanie"
 		},
 		"w269": {
-			"gloss": "nasza"
+			"gloss": "nasze"
 		},
 		"w270": {
 			"gloss": "zmiłuj się"
@@ -1739,7 +1739,7 @@
 			"gloss": "ofiara"
 		},
 		"w275": {
-			"gloss": "grzechów"
+			"gloss": "grzeszników"
 		},
 		"w276": {
 			"gloss": "zmiłuj się"
@@ -1760,7 +1760,7 @@
 			"gloss": "w"
 		},
 		"w282": {
-			"gloss": "ty"
+			"gloss": "Tobie"
 		},
 		"w283": {
 			"gloss": "ufających"
@@ -1784,7 +1784,7 @@
 			"gloss": "w"
 		},
 		"w290": {
-			"gloss": "ty"
+			"gloss": "Tobie"
 		},
 		"w291": {
 			"gloss": "umierających"
@@ -1802,7 +1802,7 @@
 			"gloss": "Jezusa"
 		},
 		"w296": {
-			"gloss": "rozkosz"
+			"gloss": "rozkoszy"
 		},
 		"w297": {
 			"gloss": "Świętych"
@@ -1922,10 +1922,10 @@
 			"gloss": "według"
 		},
 		"w336": {
-			"gloss": "serce"
+			"gloss": "Serca"
 		},
 		"w337": {
-			"gloss": "Twoje"
+			"gloss": "Twego"
 		},
 		"w338": {
 			"gloss": "módlmy się"
@@ -1955,7 +1955,7 @@
 			"gloss": "Syna"
 		},
 		"w347": {
-			"gloss": "Twoi"
+			"gloss": "Twojego"
 		},
 		"w348": {
 			"gloss": "i"
@@ -1964,7 +1964,7 @@
 			"gloss": "w"
 		},
 		"w350": {
-			"gloss": "chwałę"
+			"gloss": "chwały"
 		},
 		"w351": {
 			"gloss": "i"
@@ -1982,7 +1982,7 @@
 			"gloss": "imieniu"
 		},
 		"w356": {
-			"gloss": "grzechów"
+			"gloss": "grzeszników"
 		},
 		"w357": {
 			"gloss": "Tobie"
@@ -1997,13 +1997,13 @@
 			"gloss": "miłosierdzia"
 		},
 		"w361": {
-			"gloss": "Twoją"
+			"gloss": "Twojego"
 		},
 		"w362": {
 			"gloss": "proszącym"
 		},
 		"w363": {
-			"gloss": "ty"
+			"gloss": "Ty"
 		},
 		"w364": {
 			"gloss": "przebaczenia"
@@ -2054,7 +2054,7 @@
 			"gloss": "w"
 		},
 		"w380": {
-			"gloss": "wiek"
+			"gloss": "wieki"
 		},
 		"w381": {
 			"gloss": "wieków"

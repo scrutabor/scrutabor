@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.ite-missa-est",
 	"title": "Ite, Missa est",
 	"category": "ordinarium",
@@ -103,7 +103,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w005"
 				},
 				{
 					"id": "w005",
@@ -127,7 +128,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w005"
 				}
 			],
 			"participation": {

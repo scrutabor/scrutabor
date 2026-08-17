@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.qui-pridie",
 	"lang": "en",
 	"status": "working-edition",
@@ -95,11 +95,11 @@
 			"gloss": "and"
 		},
 		"w014": {
-			"gloss": "lifting up",
+			"gloss": "having been raised",
 			"function": "With “óculis” (w015), it forms an ablative absolute: “lifting up His eyes”."
 		},
 		"w015": {
-			"gloss": "His eyes"
+			"gloss": "eyes"
 		},
 		"w016": {
 			"gloss": "to"

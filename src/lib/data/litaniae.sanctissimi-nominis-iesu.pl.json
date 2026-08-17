@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "litaniae.sanctissimi-nominis-iesu",
 	"lang": "pl",
 	"status": "working-edition",
@@ -2045,7 +2045,7 @@
 			"gloss": "życie"
 		},
 		"w187": {
-			"gloss": "nasza"
+			"gloss": "nasze"
 		},
 		"w188": {
 			"gloss": "zmiłuj się"
@@ -2120,7 +2120,7 @@
 			"gloss": "męstwo"
 		},
 		"w212": {
-			"gloss": "męczenników"
+			"gloss": "Męczenników"
 		},
 		"w213": {
 			"gloss": "zmiłuj się"
@@ -2210,16 +2210,17 @@
 			"gloss": "od"
 		},
 		"w242": {
-			"gloss": "wszelkim"
+			"gloss": "wszelkiego"
 		},
 		"w243": {
-			"gloss": "zła"
+			"gloss": "zła",
+			"note": "Ta sama dwuznaczność co w Ojcze nasz — malum, zło, albo malus, Zły. Ta edycja przyjmuje malum i zaznacza wątpliwość."
 		},
 		"w244": {
 			"gloss": "wybaw"
 		},
 		"w245": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w246": {
 			"gloss": "Jezu"
@@ -2228,7 +2229,7 @@
 			"gloss": "od"
 		},
 		"w248": {
-			"gloss": "wszelkim"
+			"gloss": "wszelkiego"
 		},
 		"w249": {
 			"gloss": "grzechu"
@@ -2237,7 +2238,7 @@
 			"gloss": "wybaw"
 		},
 		"w251": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w252": {
 			"gloss": "Jezu"
@@ -2249,13 +2250,13 @@
 			"gloss": "gniewu"
 		},
 		"w255": {
-			"gloss": "Twoją"
+			"gloss": "Twego"
 		},
 		"w256": {
 			"gloss": "wybaw"
 		},
 		"w257": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w258": {
 			"gloss": "Jezu"
@@ -2273,7 +2274,7 @@
 			"gloss": "wybaw"
 		},
 		"w263": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w264": {
 			"gloss": "Jezu"
@@ -2282,7 +2283,7 @@
 			"gloss": "od"
 		},
 		"w266": {
-			"gloss": "Duch"
+			"gloss": "ducha"
 		},
 		"w267": {
 			"gloss": "nieczystości"
@@ -2291,7 +2292,7 @@
 			"gloss": "wybaw"
 		},
 		"w269": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w270": {
 			"gloss": "Jezu"
@@ -2303,13 +2304,13 @@
 			"gloss": "śmierci"
 		},
 		"w273": {
-			"gloss": "trwałą"
+			"gloss": "wiecznej"
 		},
 		"w274": {
 			"gloss": "wybaw"
 		},
 		"w275": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w276": {
 			"gloss": "Jezu"
@@ -2330,7 +2331,7 @@
 			"gloss": "wybaw"
 		},
 		"w282": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w283": {
 			"gloss": "Jezu"
@@ -2342,19 +2343,19 @@
 			"gloss": "tajemnicę"
 		},
 		"w286": {
-			"gloss": "świętej"
+			"gloss": "świętego"
 		},
 		"w287": {
 			"gloss": "Wcielenia"
 		},
 		"w288": {
-			"gloss": "Twojej"
+			"gloss": "Twojego"
 		},
 		"w289": {
 			"gloss": "wybaw"
 		},
 		"w290": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w291": {
 			"gloss": "Jezu"
@@ -2366,13 +2367,13 @@
 			"gloss": "narodzenie"
 		},
 		"w294": {
-			"gloss": "Twoją"
+			"gloss": "Twoje"
 		},
 		"w295": {
 			"gloss": "wybaw"
 		},
 		"w296": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w297": {
 			"gloss": "Jezu"
@@ -2384,13 +2385,13 @@
 			"gloss": "dziecięctwo"
 		},
 		"w300": {
-			"gloss": "Twoją"
+			"gloss": "Twoje"
 		},
 		"w301": {
 			"gloss": "wybaw"
 		},
 		"w302": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w303": {
 			"gloss": "Jezu"
@@ -2405,13 +2406,13 @@
 			"gloss": "życie"
 		},
 		"w307": {
-			"gloss": "Twoją"
+			"gloss": "Twoje"
 		},
 		"w308": {
 			"gloss": "wybaw"
 		},
 		"w309": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w310": {
 			"gloss": "Jezu"
@@ -2429,7 +2430,7 @@
 			"gloss": "wybaw"
 		},
 		"w315": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w316": {
 			"gloss": "Jezu"
@@ -2453,7 +2454,7 @@
 			"gloss": "wybaw"
 		},
 		"w323": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w324": {
 			"gloss": "Jezu"
@@ -2471,13 +2472,13 @@
 			"gloss": "opuszczenie"
 		},
 		"w329": {
-			"gloss": "Twoją"
+			"gloss": "Twoje"
 		},
 		"w330": {
 			"gloss": "wybaw"
 		},
 		"w331": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w332": {
 			"gloss": "Jezu"
@@ -2495,7 +2496,7 @@
 			"gloss": "wybaw"
 		},
 		"w337": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w338": {
 			"gloss": "Jezu"
@@ -2513,13 +2514,13 @@
 			"gloss": "pogrzeb"
 		},
 		"w343": {
-			"gloss": "Twoją"
+			"gloss": "Twój"
 		},
 		"w344": {
 			"gloss": "wybaw"
 		},
 		"w345": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w346": {
 			"gloss": "Jezu"
@@ -2528,16 +2529,16 @@
 			"gloss": "przez"
 		},
 		"w348": {
-			"gloss": "zmartwychwstania"
+			"gloss": "zmartwychwstanie"
 		},
 		"w349": {
-			"gloss": "Twoją"
+			"gloss": "Twoje"
 		},
 		"w350": {
 			"gloss": "wybaw"
 		},
 		"w351": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w352": {
 			"gloss": "Jezu"
@@ -2549,13 +2550,13 @@
 			"gloss": "wniebowstąpienie"
 		},
 		"w355": {
-			"gloss": "Twoją"
+			"gloss": "Twoje"
 		},
 		"w356": {
 			"gloss": "wybaw"
 		},
 		"w357": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w358": {
 			"gloss": "Jezu"
@@ -2573,13 +2574,13 @@
 			"gloss": "ustanowienie"
 		},
 		"w363": {
-			"gloss": "Twoją"
+			"gloss": "Twoje"
 		},
 		"w364": {
 			"gloss": "wybaw"
 		},
 		"w365": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w366": {
 			"gloss": "Jezu"
@@ -2591,13 +2592,13 @@
 			"gloss": "radości"
 		},
 		"w369": {
-			"gloss": "twój"
+			"gloss": "Twoje"
 		},
 		"w370": {
 			"gloss": "wybaw"
 		},
 		"w371": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w372": {
 			"gloss": "Jezu"
@@ -2615,7 +2616,7 @@
 			"gloss": "wybaw"
 		},
 		"w377": {
-			"gloss": "my"
+			"gloss": "nas"
 		},
 		"w378": {
 			"gloss": "Jezu"
@@ -2747,7 +2748,7 @@
 			"gloss": "otrzymacie"
 		},
 		"w421": {
-			"gloss": "szukać"
+			"gloss": "szukajcie"
 		},
 		"w422": {
 			"gloss": "i"
@@ -2768,7 +2769,7 @@
 			"gloss": "wam"
 		},
 		"w428": {
-			"gloss": "proszę"
+			"gloss": "prosimy"
 		},
 		"w429": {
 			"gloss": "daj"
@@ -2783,7 +2784,7 @@
 			"gloss": "Boskiej"
 		},
 		"w433": {
-			"gloss": "Twojego"
+			"gloss": "Twojej"
 		},
 		"w434": {
 			"gloss": "miłości"
@@ -2792,7 +2793,7 @@
 			"gloss": "uczucie"
 		},
 		"w436": {
-			"gloss": "aby"
+			"gloss": "abyśmy"
 		},
 		"w437": {
 			"gloss": "Ciebie"
@@ -2822,7 +2823,7 @@
 			"gloss": "od"
 		},
 		"w446": {
-			"gloss": "Twoją"
+			"gloss": "Twojej"
 		},
 		"w447": {
 			"gloss": "nigdy"
@@ -2840,7 +2841,7 @@
 			"gloss": "imienia"
 		},
 		"w452": {
-			"gloss": "Twoi"
+			"gloss": "Twojego"
 		},
 		"w453": {
 			"gloss": "Panie"
@@ -2876,10 +2877,10 @@
 			"gloss": "nigdy"
 		},
 		"w464": {
-			"gloss": "Twoją"
+			"gloss": "Twoim"
 		},
 		"w465": {
-			"gloss": "kierownictwa"
+			"gloss": "kierownictwem"
 		},
 		"w466": {
 			"gloss": "pozbawiasz"
@@ -2906,7 +2907,7 @@
 			"gloss": "który"
 		},
 		"w474": {
-			"gloss": "żywych"
+			"gloss": "żyjesz"
 		},
 		"w475": {
 			"gloss": "i"
@@ -2915,10 +2916,10 @@
 			"gloss": "królujesz"
 		},
 		"w477": {
-			"gloss": "w"
+			"gloss": "na"
 		},
 		"w478": {
-			"gloss": "wiek"
+			"gloss": "wieki"
 		},
 		"w479": {
 			"gloss": "wieków"

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.communicantes",
 	"title": "Communicántes",
 	"category": "ordinarium",
@@ -50,7 +50,8 @@
 						"mood": "part",
 						"voice": "act",
 						"conj": 1
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w002",
@@ -86,7 +87,8 @@
 						"mood": "part",
 						"voice": "dep",
 						"conj": 1
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w005",
@@ -95,7 +97,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w006"
 				},
 				{
 					"id": "w006",
@@ -105,7 +108,8 @@
 						"pos": "adj",
 						"case": "abl",
 						"number": "pl"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w007",
@@ -116,7 +120,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w009"
 				},
 				{
 					"id": "w008",
@@ -204,7 +209,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w014"
 				},
 				{
 					"id": "w016",
@@ -263,7 +269,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w021"
 				},
 				{
 					"id": "w021",
@@ -346,7 +353,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w027"
 				},
 				{
 					"id": "w027",
@@ -398,7 +406,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w029"
 				},
 				{
 					"id": "w031",
@@ -898,7 +907,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w061"
 				},
 				{
 					"id": "w061",
@@ -909,7 +919,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w062",
@@ -921,7 +932,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w061"
 				},
 				{
 					"id": "w063",
@@ -988,7 +1000,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w069"
 				},
 				{
 					"id": "w069",
@@ -999,7 +1012,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w070",
@@ -1030,7 +1044,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w070"
 				},
 				{
 					"id": "w072",
@@ -1088,7 +1103,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w075"
 				},
 				{
 					"id": "w075",
@@ -1135,7 +1151,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w077"
 				},
 				{
 					"id": "w079",

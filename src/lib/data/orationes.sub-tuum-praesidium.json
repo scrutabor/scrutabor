@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "orationes.sub-tuum-praesidium",
 	"title": "Sub tuum præsídium",
 	"category": "orationes",
@@ -41,7 +41,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w003"
 				},
 				{
 					"id": "w002",
@@ -52,7 +53,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w003"
 				},
 				{
 					"id": "w003",
@@ -90,7 +92,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w007"
 				},
 				{
 					"id": "w006",
@@ -126,7 +129,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "f"
-					}
+					},
+					"head": "w009"
 				},
 				{
 					"id": "w009",
@@ -169,7 +173,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w013"
 				},
 				{
 					"id": "w013",
@@ -199,7 +204,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w016"
 				},
 				{
 					"id": "w016",
@@ -222,7 +228,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w016"
 				},
 				{
 					"id": "w018",
@@ -278,7 +285,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w021"
 				},
 				{
 					"id": "w023",
@@ -298,7 +306,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w021"
 				}
 			]
 		},
@@ -328,7 +337,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w025"
 				},
 				{
 					"id": "w027",
@@ -360,7 +370,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w027"
 				},
 				{
 					"id": "w029",
@@ -384,7 +395,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w029"
 				},
 				{
 					"id": "w031",
@@ -416,7 +428,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w031"
 				}
 			]
 		},
@@ -433,7 +446,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w034"
 				},
 				{
 					"id": "w034",
@@ -481,7 +495,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w038"
 				},
 				{
 					"id": "w038",
@@ -529,7 +544,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w042"
 				},
 				{
 					"id": "w042",

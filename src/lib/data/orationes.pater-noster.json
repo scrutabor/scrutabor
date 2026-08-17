@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "orationes.pater-noster",
 	"title": "Pater noster",
 	"category": "orationes",
@@ -55,7 +55,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w001"
 				},
 				{
 					"id": "w003",
@@ -88,7 +89,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w006"
 				},
 				{
 					"id": "w006",
@@ -145,7 +147,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w008"
 				}
 			]
 		},
@@ -189,7 +192,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w011"
 				}
 			]
 		},
@@ -232,7 +236,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w014"
 				},
 				{
 					"id": "w016",
@@ -249,7 +254,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w018",
@@ -278,7 +284,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w021"
 				},
 				{
 					"id": "w021",
@@ -320,7 +327,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w022"
 				},
 				{
 					"id": "w024",
@@ -331,7 +339,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w022"
 				},
 				{
 					"id": "w025",
@@ -426,7 +435,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w031"
 				},
 				{
 					"id": "w033",
@@ -490,7 +500,8 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w037"
 				}
 			]
 		},
@@ -545,7 +556,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w044"
 				},
 				{
 					"id": "w044",
@@ -605,7 +617,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w049"
 				},
 				{
 					"id": "w049",
@@ -618,6 +631,15 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"analysis": {
+						"confidence": "medium",
+						"sources": [
+							"editorial",
+							"whitakers",
+							"collatinus"
+						],
+						"review": "disputed"
 					}
 				},
 				{

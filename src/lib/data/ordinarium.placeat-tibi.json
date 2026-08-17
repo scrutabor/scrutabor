@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.placeat-tibi",
 	"title": "Pláceat tibi, sancta Trínitas",
 	"category": "ordinarium",
@@ -83,7 +83,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w004",
@@ -132,7 +133,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w006"
 				},
 				{
 					"id": "w008",
@@ -199,6 +201,15 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"analysis": {
+						"confidence": "medium",
+						"sources": [
+							"editorial",
+							"whitakers",
+							"collatinus"
+						],
+						"review": "disputed"
 					}
 				},
 				{
@@ -210,7 +221,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w015"
 				},
 				{
 					"id": "w015",
@@ -233,7 +245,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w017"
 				},
 				{
 					"id": "w017",
@@ -282,7 +295,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w019"
 				},
 				{
 					"id": "w021",
@@ -311,7 +325,8 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w024",
@@ -320,7 +335,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w025"
 				},
 				{
 					"id": "w025",
@@ -396,7 +412,8 @@
 						"mood": "part",
 						"voice": "dep",
 						"conj": 1
-					}
+					},
+					"head": "w029"
 				},
 				{
 					"id": "w031",
@@ -416,7 +433,8 @@
 							"collatinus"
 						],
 						"review": "accepted"
-					}
+					},
+					"head": "w028"
 				},
 				{
 					"id": "w032",
@@ -425,7 +443,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w033"
 				},
 				{
 					"id": "w033",
@@ -461,7 +480,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w034"
 				},
 				{
 					"id": "w036",

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.perceptio-corporis",
 	"lang": "en",
 	"status": "working-edition",
@@ -20,7 +20,7 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "May the receiving of Your Body and Blood, Lord Jesus Christ, which I, unworthy, presume to receive,"
+			"translation": "May the receiving of Your Body, Lord Jesus Christ, which I, unworthy, presume to receive,"
 		},
 		"s02": {
 			"translation": "not bring me to judgment and condemnation:"

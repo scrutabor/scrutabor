@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.placeat-tibi",
 	"lang": "en",
 	"status": "working-edition",
@@ -69,7 +69,8 @@
 					"locator": "s.v. offero",
 					"url": "https://cld.bbaw.de/lemma/lat/offero"
 				}
-			]
+			],
+			"note": "The form is dative and ablative plural at once. Nothing in the sentence decides whether the sacrifice is offered TO the eyes of Thy majesty or BEFORE them. This edition takes the dative and marks the doubt."
 		},
 		"w014": {
 			"gloss": "of Thy"

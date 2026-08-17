@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.confiteor-sacerdotis",
 	"title": "Confíteor (Sacerdotis)",
 	"category": "ordinarium",
@@ -85,7 +85,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w002"
 				},
 				{
 					"id": "w004",
@@ -96,7 +97,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w005"
 				},
 				{
 					"id": "w005",
@@ -140,7 +142,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w009"
 				},
 				{
 					"id": "w009",
@@ -184,7 +187,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w012"
 				},
 				{
 					"id": "w012",
@@ -220,7 +224,8 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w015"
 				},
 				{
 					"id": "w015",
@@ -276,7 +281,8 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w020"
 				},
 				{
 					"id": "w020",
@@ -288,7 +294,8 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w021",
@@ -436,7 +443,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w032"
 				},
 				{
 					"id": "w032",
@@ -460,7 +468,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w034"
 				},
 				{
 					"id": "w034",
@@ -484,7 +493,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w036",
@@ -496,7 +506,8 @@
 						"number": "sg",
 						"gender": "f",
 						"degree": "sup"
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w037",
@@ -550,7 +561,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w041"
 				},
 				{
 					"id": "w041",
@@ -594,7 +606,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w045"
 				},
 				{
 					"id": "w045",
@@ -638,7 +651,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w048"
 				},
 				{
 					"id": "w048",
@@ -674,7 +688,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w051"
 				},
 				{
 					"id": "w051",
@@ -730,7 +745,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w056"
 				},
 				{
 					"id": "w056",
@@ -742,7 +758,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w057",
@@ -795,7 +812,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w062"
 				},
 				{
 					"id": "w062",
@@ -814,7 +832,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w064"
 				},
 				{
 					"id": "w064",
@@ -850,7 +869,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w065"
 				}
 			]
 		}

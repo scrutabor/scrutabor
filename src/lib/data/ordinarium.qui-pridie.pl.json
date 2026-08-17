@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.qui-pridie",
 	"lang": "pl",
 	"status": "working-edition",
@@ -95,11 +95,11 @@
 			"gloss": "i"
 		},
 		"w014": {
-			"gloss": "podniósłszy",
+			"gloss": "podniesionymi",
 			"function": "Wraz z „óculis” (w015) tworzy ablativus absolutus: „podniósłszy oczy”."
 		},
 		"w015": {
-			"gloss": "oczy"
+			"gloss": "oczami"
 		},
 		"w016": {
 			"gloss": "ku"

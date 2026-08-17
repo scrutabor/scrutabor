@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.orate-fratres",
 	"title": "Oráte, fratres",
 	"category": "ordinarium",
@@ -93,7 +93,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w007"
 				},
 				{
 					"id": "w005",
@@ -112,7 +113,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w007"
 				},
 				{
 					"id": "w007",
@@ -135,7 +137,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w007"
 				},
 				{
 					"id": "w009",
@@ -157,7 +160,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w011"
 				},
 				{
 					"id": "w011",
@@ -193,7 +197,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w012"
 				}
 			]
 		},
@@ -261,7 +266,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w018",
@@ -284,7 +290,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "f"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w020",
@@ -293,7 +300,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w021"
 				},
 				{
 					"id": "w021",
@@ -349,7 +357,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w026",
@@ -358,7 +367,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w027"
 				},
 				{
 					"id": "w027",
@@ -390,7 +400,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w027"
 				},
 				{
 					"id": "w030",
@@ -401,7 +412,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w031"
 				},
 				{
 					"id": "w031",
@@ -424,7 +436,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w031"
 				},
 				{
 					"id": "w033",
@@ -436,7 +449,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w031"
 				}
 			],
 			"participation": {

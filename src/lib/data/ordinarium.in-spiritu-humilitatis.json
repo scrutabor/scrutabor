@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.in-spiritu-humilitatis",
 	"title": "In spíritu humilitátis",
 	"category": "ordinarium",
@@ -56,7 +56,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w002"
 				},
 				{
 					"id": "w002",
@@ -97,7 +98,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w006"
 				},
 				{
 					"id": "w006",
@@ -120,7 +122,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w006"
 				},
 				{
 					"id": "w008",
@@ -143,7 +146,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w010"
 				},
 				{
 					"id": "w010",
@@ -219,7 +223,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w015"
 				},
 				{
 					"id": "w017",
@@ -228,7 +233,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w018",
@@ -251,7 +257,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w020",
@@ -385,7 +392,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w030"
 				},
 				{
 					"id": "w029",
@@ -396,7 +404,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w030"
 				},
 				{
 					"id": "w030",
@@ -496,7 +505,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w036",
@@ -507,7 +517,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w037",
@@ -535,7 +546,8 @@
 						"mood": "part",
 						"voice": "pass",
 						"conj": 1
-					}
+					},
+					"head": "w034"
 				}
 			]
 		}

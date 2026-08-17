@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "psalmi.118-he",
 	"lang": "pl",
 	"status": "working-edition",
@@ -107,7 +107,8 @@
 					"locator": "Psalmus 119 (118), 33",
 					"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
 				}
-			]
+			],
+			"note": "Końcówka -am jest tu zarazem czasem przyszłym i trybem łączącym. „Będę jej szukał” albo „abym jej szukał”, po rozkaźniku pone. Ta edycja przyjmuje czas przyszły i zaznacza wątpliwość."
 		},
 		"w010": {
 			"gloss": "jej",

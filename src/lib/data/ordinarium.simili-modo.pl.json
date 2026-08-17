@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.simili-modo",
 	"lang": "pl",
 	"status": "working-edition",
@@ -84,7 +84,7 @@
 	},
 	"words": {
 		"w001": {
-			"gloss": "podobnie",
+			"gloss": "podobnym",
 			"function": "„Símili modo” to ablativus sposobu: „w podobny sposób”."
 		},
 		"w002": {
@@ -248,7 +248,7 @@
 			"gloss": "wiary"
 		},
 		"w044": {
-			"gloss": "która",
+			"gloss": "który",
 			"function": "„Calix” (w035) i „Sánguinis” (w036) są rodzaju męskiego, więc forma zaimka nie rozstrzyga poprzednika. Polski przekład odnosi go do Krwi."
 		},
 		"w045": {
@@ -267,7 +267,7 @@
 			"gloss": "wielu"
 		},
 		"w050": {
-			"gloss": "będzie wylana",
+			"gloss": "będzie wylany",
 			"function": "Czas przyszły, nie przeszły: w chwili Wieczerzy krew jeszcze nie została wylana."
 		},
 		"w051": {
@@ -293,7 +293,7 @@
 			"gloss": "na"
 		},
 		"w058": {
-			"gloss": "moją",
+			"gloss": "mnie",
 			"function": "Dopełniacz zaimka osobowego: „na pamiątkę mnie”. Polszczyzna oddaje go zaimkiem dzierżawczym „moją”."
 		},
 		"w059": {

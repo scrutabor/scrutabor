@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "defunctorum.requiem-aeternam",
 	"title": "Réquiem ætérnam",
 	"category": "defunctorum",
@@ -55,6 +55,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w001",
 					"id": "w002"
 				},
 				{
@@ -125,6 +126,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w007",
 					"id": "w008"
 				},
 				{
@@ -177,8 +179,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "abl"
 					},
+					"head": "w013",
 					"id": "w012"
 				},
 				{

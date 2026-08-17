@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.offerimus-tibi",
 	"title": "Offérimus tibi, Dómine",
 	"category": "ordinarium",
@@ -120,7 +120,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w008"
 				},
 				{
 					"id": "w007",
@@ -135,7 +136,8 @@
 						"mood": "part",
 						"voice": "dep",
 						"conj": 1
-					}
+					},
+					"head": "w001"
 				},
 				{
 					"id": "w008",
@@ -165,7 +167,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w011"
 				},
 				{
 					"id": "w011",
@@ -188,7 +191,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w013"
 				},
 				{
 					"id": "w013",
@@ -212,7 +216,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w013"
 				},
 				{
 					"id": "w015",
@@ -221,7 +226,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w020"
 				},
 				{
 					"id": "w016",
@@ -232,7 +238,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w020"
 				},
 				{
 					"id": "w017",
@@ -251,7 +258,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w019"
 				},
 				{
 					"id": "w019",
@@ -285,7 +293,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w022"
 				},
 				{
 					"id": "w022",

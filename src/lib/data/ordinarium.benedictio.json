@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.benedictio",
 	"title": "Benedícat vos omnípotens Deus",
 	"category": "ordinarium",
@@ -82,7 +82,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w004",
@@ -182,7 +183,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w009"
 				}
 			]
 		},

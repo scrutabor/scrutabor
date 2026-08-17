@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "orationes.gloria-patri",
 	"title": "Glória Patri",
 	"category": "orationes",
@@ -109,7 +109,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w006"
 				}
 			]
 		},
@@ -145,7 +146,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w011"
 				},
 				{
 					"id": "w011",
@@ -209,7 +211,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w018",

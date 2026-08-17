@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "litaniae.sanctissimi-nominis-iesu",
 	"lang": "en",
 	"status": "working-edition",
@@ -1529,7 +1529,7 @@
 			"gloss": "from"
 		},
 		"w015": {
-			"gloss": "of heaven"
+			"gloss": "heaven"
 		},
 		"w016": {
 			"gloss": "O God"
@@ -2120,7 +2120,7 @@
 			"gloss": "strength"
 		},
 		"w212": {
-			"gloss": "martyrs"
+			"gloss": "of Martyrs"
 		},
 		"w213": {
 			"gloss": "have mercy"
@@ -2213,13 +2213,14 @@
 			"gloss": "all"
 		},
 		"w243": {
-			"gloss": "evil"
+			"gloss": "evil",
+			"note": "The same ambiguity as in the Our Father — malum, evil, or malus, the Evil One. This edition takes malum and marks the doubt."
 		},
 		"w244": {
 			"gloss": "deliver"
 		},
 		"w245": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w246": {
 			"gloss": "O Jesus"
@@ -2237,7 +2238,7 @@
 			"gloss": "deliver"
 		},
 		"w251": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w252": {
 			"gloss": "O Jesus"
@@ -2255,7 +2256,7 @@
 			"gloss": "deliver"
 		},
 		"w257": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w258": {
 			"gloss": "O Jesus"
@@ -2273,7 +2274,7 @@
 			"gloss": "deliver"
 		},
 		"w263": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w264": {
 			"gloss": "O Jesus"
@@ -2282,7 +2283,7 @@
 			"gloss": "from"
 		},
 		"w266": {
-			"gloss": "Spirit"
+			"gloss": "spirit"
 		},
 		"w267": {
 			"gloss": "of fornication"
@@ -2291,7 +2292,7 @@
 			"gloss": "deliver"
 		},
 		"w269": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w270": {
 			"gloss": "O Jesus"
@@ -2303,13 +2304,13 @@
 			"gloss": "death"
 		},
 		"w273": {
-			"gloss": "perpetual"
+			"gloss": "everlasting"
 		},
 		"w274": {
 			"gloss": "deliver"
 		},
 		"w275": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w276": {
 			"gloss": "O Jesus"
@@ -2330,7 +2331,7 @@
 			"gloss": "deliver"
 		},
 		"w282": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w283": {
 			"gloss": "O Jesus"
@@ -2354,7 +2355,7 @@
 			"gloss": "deliver"
 		},
 		"w290": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w291": {
 			"gloss": "O Jesus"
@@ -2372,7 +2373,7 @@
 			"gloss": "deliver"
 		},
 		"w296": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w297": {
 			"gloss": "O Jesus"
@@ -2390,7 +2391,7 @@
 			"gloss": "deliver"
 		},
 		"w302": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w303": {
 			"gloss": "O Jesus"
@@ -2411,7 +2412,7 @@
 			"gloss": "deliver"
 		},
 		"w309": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w310": {
 			"gloss": "O Jesus"
@@ -2429,7 +2430,7 @@
 			"gloss": "deliver"
 		},
 		"w315": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w316": {
 			"gloss": "O Jesus"
@@ -2453,7 +2454,7 @@
 			"gloss": "deliver"
 		},
 		"w323": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w324": {
 			"gloss": "O Jesus"
@@ -2477,7 +2478,7 @@
 			"gloss": "deliver"
 		},
 		"w331": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w332": {
 			"gloss": "O Jesus"
@@ -2495,7 +2496,7 @@
 			"gloss": "deliver"
 		},
 		"w337": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w338": {
 			"gloss": "O Jesus"
@@ -2519,7 +2520,7 @@
 			"gloss": "deliver"
 		},
 		"w345": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w346": {
 			"gloss": "O Jesus"
@@ -2528,7 +2529,7 @@
 			"gloss": "through"
 		},
 		"w348": {
-			"gloss": "the resurrection"
+			"gloss": "resurrection"
 		},
 		"w349": {
 			"gloss": "Thy"
@@ -2537,7 +2538,7 @@
 			"gloss": "deliver"
 		},
 		"w351": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w352": {
 			"gloss": "O Jesus"
@@ -2555,7 +2556,7 @@
 			"gloss": "deliver"
 		},
 		"w357": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w358": {
 			"gloss": "O Jesus"
@@ -2579,7 +2580,7 @@
 			"gloss": "deliver"
 		},
 		"w365": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w366": {
 			"gloss": "O Jesus"
@@ -2597,7 +2598,7 @@
 			"gloss": "deliver"
 		},
 		"w371": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w372": {
 			"gloss": "O Jesus"
@@ -2615,7 +2616,7 @@
 			"gloss": "deliver"
 		},
 		"w377": {
-			"gloss": "we"
+			"gloss": "us"
 		},
 		"w378": {
 			"gloss": "O Jesus"
@@ -2768,7 +2769,7 @@
 			"gloss": "unto you"
 		},
 		"w428": {
-			"gloss": "I beg"
+			"gloss": "we beseech"
 		},
 		"w429": {
 			"gloss": "grant"
@@ -2906,7 +2907,7 @@
 			"gloss": "who"
 		},
 		"w474": {
-			"gloss": "living"
+			"gloss": "livest"
 		},
 		"w475": {
 			"gloss": "and"
@@ -2915,7 +2916,7 @@
 			"gloss": "reignest"
 		},
 		"w477": {
-			"gloss": "in"
+			"gloss": "unto"
 		},
 		"w478": {
 			"gloss": "ages"

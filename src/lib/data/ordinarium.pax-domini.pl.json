@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.pax-domini",
 	"lang": "pl",
 	"status": "working-edition",
@@ -27,7 +27,7 @@
 			"gloss": "Pokój"
 		},
 		"w002": {
-			"gloss": "Pański"
+			"gloss": "Pana"
 		},
 		"w003": {
 			"gloss": "niech będzie",

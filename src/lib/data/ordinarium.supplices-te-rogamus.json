@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.supplices-te-rogamus",
 	"title": "Súpplices te rogámus",
 	"category": "ordinarium",
@@ -58,7 +58,8 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w003"
 				},
 				{
 					"id": "w002",
@@ -94,7 +95,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w005"
 				},
 				{
 					"id": "w005",
@@ -152,7 +154,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w010"
 				},
 				{
 					"id": "w010",
@@ -175,7 +178,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w012"
 				},
 				{
 					"id": "w012",
@@ -198,7 +202,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w012"
 				},
 				{
 					"id": "w014",
@@ -207,7 +212,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w016"
 				},
 				{
 					"id": "w015",
@@ -218,7 +224,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w016"
 				},
 				{
 					"id": "w016",
@@ -242,7 +249,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w016"
 				},
 				{
 					"id": "w018",
@@ -251,7 +259,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w019"
 				},
 				{
 					"id": "w019",
@@ -274,7 +283,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w021"
 				},
 				{
 					"id": "w021",
@@ -298,7 +308,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w021"
 				}
 			]
 		},
@@ -325,7 +336,8 @@
 						"pos": "adj",
 						"case": "nom",
 						"number": "pl"
-					}
+					},
+					"substantive": true
 				}
 			]
 		},
@@ -355,7 +367,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w026"
 				},
 				{
 					"id": "w026",
@@ -401,7 +414,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w032"
 				},
 				{
 					"id": "w030",
@@ -432,7 +446,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w030"
 				}
 			]
 		},
@@ -533,7 +548,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w037",
@@ -556,7 +572,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w039",
@@ -621,7 +638,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w043"
 				},
 				{
 					"id": "w043",
@@ -668,7 +686,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w045"
 				},
 				{
 					"id": "w047",

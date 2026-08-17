@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.nobis-quoque",
 	"title": "Nobis quoque peccatóribus",
 	"category": "ordinarium",
@@ -122,7 +122,8 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w006",
@@ -131,7 +132,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w007"
 				},
 				{
 					"id": "w007",
@@ -166,7 +168,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "f"
-					}
+					},
+					"head": "w008"
 				},
 				{
 					"id": "w010",
@@ -182,7 +185,8 @@
 						"mood": "part",
 						"voice": "act",
 						"conj": 1
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w011",
@@ -261,7 +265,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w020"
 				},
 				{
 					"id": "w018",
@@ -272,7 +277,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w020"
 				},
 				{
 					"id": "w019",
@@ -283,7 +289,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w020"
 				},
 				{
 					"id": "w020",
@@ -333,7 +340,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w024",
@@ -641,7 +649,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w041"
 				},
 				{
 					"id": "w041",
@@ -652,7 +661,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w042",
@@ -664,7 +674,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w041"
 				}
 			]
 		},
@@ -681,7 +692,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w046"
 				},
 				{
 					"id": "w044",
@@ -848,7 +860,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w056"
 				},
 				{
 					"id": "w056",
@@ -884,7 +897,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w057"
 				}
 			]
 		}

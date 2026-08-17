@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.corpus-tuum",
 	"lang": "pl",
 	"status": "working-edition",
@@ -56,7 +56,7 @@
 			"gloss": "wypiłem"
 		},
 		"w010": {
-			"gloss": "niech przylgną",
+			"gloss": "niech przylgnie",
 			"function": "Viscéribus odczytujemy jako celownik liczby mnogiej: Ciało i Krew mają „przylgnąć do moich wnętrzności”."
 		},
 		"w011": {

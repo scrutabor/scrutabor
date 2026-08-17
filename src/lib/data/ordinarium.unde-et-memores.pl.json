@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.unde-et-memores",
 	"lang": "pl",
 	"status": "working-edition",
@@ -103,10 +103,10 @@
 			"gloss": "tak"
 		},
 		"w020": {
-			"gloss": "błogosławioną"
+			"gloss": "błogosławionej"
 		},
 		"w021": {
-			"gloss": "mękę",
+			"gloss": "męki",
 			"function": "Pierwszy z trzech dopełniaczy zależnych od „mémores” (w003)."
 		},
 		"w022": {
@@ -127,7 +127,7 @@
 			"function": "Ablativus liczby mnogiej po „ab” (w025). Wyrażenie „ab ínferis” zależy od „resurrectiónis” (w027)."
 		},
 		"w027": {
-			"gloss": "zmartwychwstanie"
+			"gloss": "zmartwychwstania"
 		},
 		"w028": {
 			"gloss": "a"
@@ -143,10 +143,10 @@
 			"function": "Biernik liczby mnogiej od „cælum”. W liczbie mnogiej rzeczownik ma rodzaj męski."
 		},
 		"w032": {
-			"gloss": "chwalebne"
+			"gloss": "chwalebnego"
 		},
 		"w033": {
-			"gloss": "wniebowstąpienie"
+			"gloss": "wniebowstąpienia"
 		},
 		"w034": {
 			"gloss": "składamy",

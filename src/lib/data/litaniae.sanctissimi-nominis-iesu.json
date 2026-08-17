@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "litaniae.sanctissimi-nominis-iesu",
 	"title": "Litániæ Sanctíssimi Nóminis Iesu",
 	"category": "litaniae",
@@ -251,6 +251,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w015",
 					"id": "w014"
 				},
 				{
@@ -287,7 +288,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -377,7 +378,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -429,6 +430,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w025",
 					"id": "w026",
 					"post": ","
 				},
@@ -453,7 +455,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -493,6 +495,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w031",
 					"id": "w030"
 				},
 				{
@@ -517,6 +520,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w033",
 					"id": "w032"
 				},
 				{
@@ -540,7 +544,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -616,6 +620,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w038",
 					"id": "w039",
 					"post": "."
 				}
@@ -627,7 +632,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -703,7 +708,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -779,6 +784,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w049",
 					"id": "w050",
 					"post": "."
 				}
@@ -790,7 +796,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -866,7 +872,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -942,7 +948,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1030,7 +1036,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1081,6 +1087,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w069",
 					"id": "w070",
 					"post": "."
 				}
@@ -1092,7 +1099,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1143,6 +1150,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w073",
 					"id": "w074",
 					"post": "."
 				}
@@ -1154,7 +1162,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1218,6 +1226,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w078",
 					"id": "w079",
 					"post": "."
 				}
@@ -1229,7 +1238,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1293,6 +1302,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w085",
 					"id": "w084"
 				},
 				{
@@ -1316,7 +1326,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1368,6 +1378,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w090",
 					"id": "w089"
 				},
 				{
@@ -1411,7 +1422,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1463,6 +1474,7 @@
 						"gender": "m",
 						"degree": "sup"
 					},
+					"head": "w094",
 					"id": "w095",
 					"post": "."
 				}
@@ -1474,7 +1486,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1526,6 +1538,7 @@
 						"gender": "m",
 						"degree": "sup"
 					},
+					"head": "w098",
 					"id": "w099",
 					"post": "."
 				}
@@ -1537,7 +1550,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1589,6 +1602,7 @@
 						"gender": "m",
 						"degree": "sup"
 					},
+					"head": "w102",
 					"id": "w103",
 					"post": ".",
 					"analysis": {
@@ -1608,7 +1622,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1660,6 +1674,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w106",
 					"id": "w107"
 				},
 				{
@@ -1679,6 +1694,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w106",
 					"id": "w109"
 				},
 				{
@@ -1702,7 +1718,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1778,7 +1794,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1842,6 +1858,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w119",
 					"id": "w120",
 					"post": "."
 				}
@@ -1853,7 +1870,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1929,7 +1946,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2005,7 +2022,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2080,7 +2097,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2164,7 +2181,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2228,6 +2245,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w144",
 					"id": "w145",
 					"post": "."
 				}
@@ -2239,7 +2257,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2303,6 +2321,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w149",
 					"id": "w150",
 					"post": "."
 				}
@@ -2314,7 +2333,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2389,7 +2408,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2454,7 +2473,8 @@
 						"gender": "m"
 					},
 					"id": "w160",
-					"post": "."
+					"post": ".",
+					"substantive": true
 				}
 			],
 			"speaker": "ductor"
@@ -2464,7 +2484,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2516,6 +2536,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w165",
 					"id": "w164"
 				},
 				{
@@ -2539,7 +2560,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2603,6 +2624,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w169",
 					"id": "w170",
 					"post": "."
 				}
@@ -2614,7 +2636,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2678,6 +2700,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w174",
 					"id": "w175",
 					"post": "."
 				}
@@ -2689,7 +2712,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2753,6 +2776,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w179",
 					"id": "w180",
 					"post": "."
 				}
@@ -2764,7 +2788,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2848,6 +2872,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w186",
 					"id": "w187",
 					"post": "."
 				}
@@ -2859,7 +2884,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2935,7 +2960,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3011,7 +3036,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3087,7 +3112,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3163,7 +3188,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3247,7 +3272,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3323,7 +3348,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3407,7 +3432,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3471,7 +3496,8 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"id": "w227"
+					"id": "w227",
+					"substantive": true
 				},
 				{
 					"form": "ómnium",
@@ -3480,10 +3506,11 @@
 						"pos": "adj",
 						"case": "gen",
 						"number": "pl",
-						"gender": "n"
+						"gender": "m"
 					},
 					"id": "w228",
-					"post": "."
+					"post": ".",
+					"head": "w227"
 				}
 			],
 			"speaker": "ductor"
@@ -3493,7 +3520,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3533,7 +3560,8 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w231"
+					"id": "w231",
+					"head": "w232"
 				},
 				{
 					"form": "esto",
@@ -3617,7 +3645,8 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w236"
+					"id": "w236",
+					"head": "w237"
 				},
 				{
 					"form": "esto",
@@ -3699,6 +3728,7 @@
 						"governs": "abl",
 						"pos": "prep"
 					},
+					"head": "w243",
 					"id": "w241"
 				},
 				{
@@ -3708,8 +3738,9 @@
 						"pos": "adj",
 						"case": "abl",
 						"number": "sg",
-						"gender": "f"
+						"gender": "n"
 					},
+					"head": "w243",
 					"id": "w242"
 				},
 				{
@@ -3723,7 +3754,16 @@
 						"decl": 2
 					},
 					"id": "w243",
-					"post": "."
+					"post": ".",
+					"analysis": {
+						"confidence": "medium",
+						"sources": [
+							"editorial",
+							"whitakers",
+							"collatinus"
+						],
+						"review": "disputed"
+					}
 				}
 			],
 			"speaker": "ductor"
@@ -3751,7 +3791,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w245",
@@ -3783,6 +3823,7 @@
 						"governs": "abl",
 						"pos": "prep"
 					},
+					"head": "w249",
 					"id": "w247"
 				},
 				{
@@ -3792,8 +3833,9 @@
 						"pos": "adj",
 						"case": "abl",
 						"number": "sg",
-						"gender": "f"
+						"gender": "n"
 					},
+					"head": "w249",
 					"id": "w248"
 				},
 				{
@@ -3835,7 +3877,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w251",
@@ -3867,6 +3909,7 @@
 						"governs": "abl",
 						"pos": "prep"
 					},
+					"head": "w254",
 					"id": "w253"
 				},
 				{
@@ -3890,6 +3933,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w254",
 					"id": "w255",
 					"post": "."
 				}
@@ -3919,7 +3963,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w257",
@@ -3951,6 +3995,7 @@
 						"governs": "abl",
 						"pos": "prep"
 					},
+					"head": "w260",
 					"id": "w259"
 				},
 				{
@@ -4004,7 +4049,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w263",
@@ -4036,6 +4081,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w266",
 					"id": "w265"
 				},
 				{
@@ -4089,7 +4135,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w269",
@@ -4121,6 +4167,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w272",
 					"id": "w271"
 				},
 				{
@@ -4144,6 +4191,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w272",
 					"id": "w273",
 					"post": "."
 				}
@@ -4173,7 +4221,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w275",
@@ -4205,6 +4253,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w278",
 					"id": "w277"
 				},
 				{
@@ -4239,6 +4288,7 @@
 						"number": "pl",
 						"gender": "f"
 					},
+					"head": "w279",
 					"id": "w280",
 					"post": "."
 				}
@@ -4268,7 +4318,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w282",
@@ -4300,6 +4350,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w285",
 					"id": "w284"
 				},
 				{
@@ -4323,6 +4374,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w287",
 					"id": "w286"
 				},
 				{
@@ -4346,6 +4398,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w287",
 					"id": "w288",
 					"post": "."
 				}
@@ -4375,7 +4428,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w290",
@@ -4407,6 +4460,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w293",
 					"id": "w292"
 				},
 				{
@@ -4430,6 +4484,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w293",
 					"id": "w294",
 					"post": "."
 				}
@@ -4459,7 +4514,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w296",
@@ -4491,6 +4546,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w299",
 					"id": "w298"
 				},
 				{
@@ -4514,6 +4570,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w299",
 					"id": "w300",
 					"post": "."
 				}
@@ -4543,7 +4600,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w302",
@@ -4575,6 +4632,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w306",
 					"id": "w304"
 				},
 				{
@@ -4587,6 +4645,7 @@
 						"gender": "f",
 						"degree": "sup"
 					},
+					"head": "w306",
 					"id": "w305"
 				},
 				{
@@ -4610,6 +4669,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w306",
 					"id": "w307",
 					"post": "."
 				}
@@ -4639,7 +4699,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w309",
@@ -4671,6 +4731,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w312",
 					"id": "w311"
 				},
 				{
@@ -4693,6 +4754,7 @@
 						"number": "pl",
 						"gender": "m"
 					},
+					"head": "w312",
 					"id": "w313",
 					"post": "."
 				}
@@ -4722,7 +4784,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w315",
@@ -4754,6 +4816,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w318",
 					"id": "w317"
 				},
 				{
@@ -4797,6 +4860,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w320",
 					"id": "w321",
 					"post": "."
 				}
@@ -4826,7 +4890,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w323",
@@ -4858,6 +4922,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w326",
 					"id": "w325"
 				},
 				{
@@ -4909,6 +4974,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w328",
 					"id": "w329",
 					"post": "."
 				}
@@ -4938,7 +5004,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w331",
@@ -4970,6 +5036,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w334",
 					"id": "w333"
 				},
 				{
@@ -4993,6 +5060,7 @@
 						"number": "pl",
 						"gender": "m"
 					},
+					"head": "w334",
 					"id": "w335",
 					"post": "."
 				}
@@ -5022,7 +5090,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w337",
@@ -5054,6 +5122,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w340",
 					"id": "w339"
 				},
 				{
@@ -5097,6 +5166,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w342",
 					"id": "w343",
 					"post": "."
 				}
@@ -5126,7 +5196,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w345",
@@ -5158,6 +5228,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w348",
 					"id": "w347"
 				},
 				{
@@ -5181,6 +5252,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w348",
 					"id": "w349",
 					"post": "."
 				}
@@ -5210,7 +5282,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w351",
@@ -5242,6 +5314,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w354",
 					"id": "w353"
 				},
 				{
@@ -5265,6 +5338,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w354",
 					"id": "w355",
 					"post": "."
 				}
@@ -5294,7 +5368,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w357",
@@ -5326,6 +5400,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w362",
 					"id": "w359"
 				},
 				{
@@ -5337,6 +5412,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w361",
 					"id": "w360"
 				},
 				{
@@ -5372,6 +5448,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w362",
 					"id": "w363",
 					"post": "."
 				}
@@ -5401,7 +5478,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w365",
@@ -5433,6 +5510,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w368",
 					"id": "w367"
 				},
 				{
@@ -5456,6 +5534,7 @@
 						"number": "pl",
 						"gender": "n"
 					},
+					"head": "w368",
 					"id": "w369",
 					"post": "."
 				}
@@ -5485,7 +5564,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w371",
@@ -5517,6 +5596,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w374",
 					"id": "w373"
 				},
 				{
@@ -5540,6 +5620,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w374",
 					"id": "w375",
 					"post": "."
 				}
@@ -5569,7 +5650,7 @@
 					"lemma": "nos",
 					"morph": {
 						"pos": "pron",
-						"case": "nom",
+						"case": "acc",
 						"number": "pl"
 					},
 					"id": "w377",
@@ -5625,7 +5706,7 @@
 					"morph": {
 						"pos": "pron",
 						"case": "nom",
-						"number": "pl",
+						"number": "sg",
 						"gender": "m"
 					},
 					"id": "w381"
@@ -5751,7 +5832,7 @@
 					"morph": {
 						"pos": "pron",
 						"case": "nom",
-						"number": "pl",
+						"number": "sg",
 						"gender": "m"
 					},
 					"id": "w390"
@@ -5877,7 +5958,7 @@
 					"morph": {
 						"pos": "pron",
 						"case": "nom",
-						"number": "pl",
+						"number": "sg",
 						"gender": "m"
 					},
 					"id": "w399"
@@ -6123,7 +6204,7 @@
 					"morph": {
 						"pos": "pron",
 						"case": "nom",
-						"number": "pl",
+						"number": "sg",
 						"gender": "m"
 					},
 					"id": "w416"
@@ -6259,8 +6340,7 @@
 					"morph": {
 						"pos": "pron",
 						"case": "dat",
-						"number": "pl",
-						"gender": "m"
+						"number": "pl"
 					},
 					"id": "w427",
 					"post": ";"
@@ -6324,6 +6404,7 @@
 						"gender": "m",
 						"conj": 3
 					},
+					"head": "w430",
 					"id": "w431"
 				},
 				{
@@ -6336,6 +6417,7 @@
 						"gender": "m",
 						"degree": "sup"
 					},
+					"head": "w434",
 					"id": "w432"
 				},
 				{
@@ -6347,6 +6429,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w434",
 					"id": "w433"
 				},
 				{
@@ -6408,6 +6491,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w439",
 					"id": "w438"
 				},
 				{
@@ -6484,6 +6568,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w448",
 					"id": "w445"
 				},
 				{
@@ -6495,6 +6580,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w448",
 					"id": "w446"
 				},
 				{
@@ -6543,10 +6629,11 @@
 					"lemma": "sanctus",
 					"morph": {
 						"pos": "adj",
-						"case": "nom",
-						"number": "pl",
-						"gender": "m"
+						"case": "gen",
+						"number": "sg",
+						"gender": "n"
 					},
+					"head": "w451",
 					"id": "w450"
 				},
 				{
@@ -6566,10 +6653,11 @@
 					"lemma": "tuus",
 					"morph": {
 						"pos": "adj",
-						"case": "nom",
-						"number": "pl",
-						"gender": "m"
+						"case": "gen",
+						"number": "sg",
+						"gender": "n"
 					},
+					"head": "w451",
 					"id": "w452",
 					"post": ","
 				},
@@ -6669,8 +6757,9 @@
 						"pos": "adj",
 						"case": "acc",
 						"number": "sg",
-						"gender": "n"
+						"gender": "m"
 					},
+					"head": "w457",
 					"id": "w461",
 					"post": ","
 				},
@@ -6699,6 +6788,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w465",
 					"id": "w464"
 				},
 				{
@@ -6742,8 +6832,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "abl"
 					},
+					"head": "w469",
 					"id": "w468"
 				},
 				{
@@ -6767,6 +6859,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w471",
 					"id": "w470"
 				},
 				{
@@ -6810,19 +6903,22 @@
 					"morph": {
 						"pos": "pron",
 						"case": "nom",
-						"number": "pl",
+						"number": "sg",
 						"gender": "m"
 					},
 					"id": "w473"
 				},
 				{
 					"form": "vivis",
-					"lemma": "vivus",
+					"lemma": "vivo",
 					"morph": {
-						"pos": "adj",
-						"case": "abl",
-						"number": "pl",
-						"gender": "m"
+						"pos": "verb",
+						"person": 2,
+						"number": "sg",
+						"tense": "pres",
+						"mood": "ind",
+						"voice": "act",
+						"conj": 3
 					},
 					"id": "w474"
 				},
@@ -6852,8 +6948,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "acc"
 					},
+					"head": "w478",
 					"id": "w477"
 				},
 				{

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.pax-domini",
 	"title": "Pax Dómini",
 	"category": "ordinarium",
@@ -135,7 +135,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w008"
 				},
 				{
 					"id": "w008",
@@ -159,7 +160,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w008"
 				}
 			],
 			"participation": {

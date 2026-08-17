@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.agnus-dei",
 	"lang": "pl",
 	"status": "working-edition",
@@ -53,7 +53,7 @@
 			"function": "Mianownik użyty w bezpośrednim zwrocie. Regularny wołacz brzmiałby agne."
 		},
 		"w002": {
-			"gloss": "Boży"
+			"gloss": "Boga"
 		},
 		"w003": {
 			"gloss": "który"
@@ -78,7 +78,7 @@
 			"gloss": "Baranku"
 		},
 		"w010": {
-			"gloss": "Boży"
+			"gloss": "Boga"
 		},
 		"w011": {
 			"gloss": "który"
@@ -102,7 +102,7 @@
 			"gloss": "Baranku"
 		},
 		"w018": {
-			"gloss": "Boży"
+			"gloss": "Boga"
 		},
 		"w019": {
 			"gloss": "który"

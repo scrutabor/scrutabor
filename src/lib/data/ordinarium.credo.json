@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.credo",
 	"title": "Credo",
 	"category": "ordinarium",
@@ -70,7 +70,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w003",
@@ -81,7 +82,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w004",
@@ -118,7 +120,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w005"
 				},
 				{
 					"id": "w007",
@@ -174,7 +177,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w012"
 				},
 				{
 					"id": "w012",
@@ -185,7 +189,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w013",
@@ -205,7 +210,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w012"
 				}
 			],
 			"participation": {
@@ -240,7 +246,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w017",
@@ -251,7 +258,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w018",
@@ -323,7 +331,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w021"
 				}
 			],
 			"participation": {
@@ -358,7 +367,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w026"
 				},
 				{
 					"id": "w026",
@@ -385,7 +395,8 @@
 						"number": "sg",
 						"gender": "m",
 						"conj": 3
-					}
+					},
+					"head": "w021"
 				},
 				{
 					"id": "w028",
@@ -394,7 +405,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w030"
 				},
 				{
 					"id": "w029",
@@ -405,7 +417,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w030"
 				},
 				{
 					"id": "w030",
@@ -457,7 +470,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w033"
 				},
 				{
 					"id": "w033",
@@ -491,7 +505,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w036"
 				},
 				{
 					"id": "w036",
@@ -527,7 +542,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w039",
@@ -536,7 +552,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w040"
 				},
 				{
 					"id": "w040",
@@ -560,7 +577,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w040"
 				}
 			],
 			"participation": {
@@ -594,7 +612,8 @@
 						"number": "sg",
 						"gender": "m",
 						"conj": 3
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w043",
@@ -618,7 +637,8 @@
 						"number": "sg",
 						"gender": "m",
 						"conj": 3
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w045",
@@ -629,7 +649,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w046",
@@ -651,7 +672,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w048"
 				},
 				{
 					"id": "w048",
@@ -673,7 +695,8 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w050",
@@ -696,7 +719,8 @@
 							"whitakers"
 						],
 						"review": "accepted"
-					}
+					},
+					"head": "w049"
 				},
 				{
 					"id": "w051",
@@ -748,7 +772,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w054"
 				},
 				{
 					"id": "w054",
@@ -787,7 +812,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w059"
 				},
 				{
 					"id": "w058",
@@ -798,7 +824,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w059"
 				},
 				{
 					"id": "w059",
@@ -833,7 +860,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w062"
 				},
 				{
 					"id": "w062",
@@ -900,7 +928,8 @@
 						"number": "sg",
 						"gender": "m",
 						"conj": 1
-					}
+					},
+					"head": "w065"
 				},
 				{
 					"id": "w065",
@@ -922,7 +951,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w067"
 				},
 				{
 					"id": "w067",
@@ -945,7 +975,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w067"
 				},
 				{
 					"id": "w069",
@@ -954,7 +985,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w070"
 				},
 				{
 					"id": "w070",
@@ -1015,6 +1047,7 @@
 						"gender": "m",
 						"conj": 3
 					},
+					"head": "w073",
 					"analysis": {
 						"confidence": "high",
 						"sources": [
@@ -1069,7 +1102,8 @@
 						"number": "sg",
 						"gender": "m",
 						"conj": 3
-					}
+					},
+					"head": "w086"
 				},
 				{
 					"id": "w077",
@@ -1086,7 +1120,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w079"
 				},
 				{
 					"id": "w079",
@@ -1106,7 +1141,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w081"
 				},
 				{
 					"id": "w081",
@@ -1146,7 +1182,8 @@
 						"number": "sg",
 						"gender": "m",
 						"conj": 3
-					}
+					},
+					"head": "w086"
 				},
 				{
 					"id": "w084",
@@ -1169,7 +1206,8 @@
 						"number": "sg",
 						"gender": "m",
 						"conj": 4
-					}
+					},
+					"head": "w086"
 				},
 				{
 					"id": "w086",
@@ -1234,7 +1272,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w090"
 				},
 				{
 					"id": "w090",
@@ -1256,7 +1295,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w092"
 				},
 				{
 					"id": "w092",
@@ -1318,7 +1358,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w096"
 				},
 				{
 					"id": "w096",
@@ -1354,7 +1395,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w099"
 				},
 				{
 					"id": "w099",
@@ -1436,7 +1478,8 @@
 						"number": "sg",
 						"gender": "m",
 						"conj": 4
-					}
+					},
+					"head": "w104"
 				},
 				{
 					"id": "w104",
@@ -1458,7 +1501,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w106"
 				},
 				{
 					"id": "w106",
@@ -1493,7 +1537,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w109",
@@ -1513,7 +1558,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w111",
@@ -1605,7 +1651,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w118"
 				},
 				{
 					"id": "w118",
@@ -1629,7 +1676,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w118"
 				},
 				{
 					"id": "w120",
@@ -1665,7 +1713,8 @@
 						"number": "sg",
 						"gender": "m",
 						"conj": 1
-					}
+					},
+					"head": "w120"
 				},
 				{
 					"id": "w123",
@@ -1685,7 +1734,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w125"
 				},
 				{
 					"id": "w125",
@@ -1762,7 +1812,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w130"
 				},
 				{
 					"id": "w130",
@@ -1873,7 +1924,8 @@
 						"number": "sg",
 						"gender": "m",
 						"conj": 3
-					}
+					},
+					"head": "w137"
 				},
 				{
 					"id": "w139",
@@ -1895,7 +1947,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w141"
 				},
 				{
 					"id": "w141",
@@ -1945,7 +1998,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w148"
 				},
 				{
 					"id": "w144",
@@ -1956,7 +2010,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w148"
 				},
 				{
 					"id": "w145",
@@ -1967,7 +2022,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w148"
 				},
 				{
 					"id": "w146",
@@ -1986,7 +2042,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w148"
 				},
 				{
 					"id": "w148",
@@ -2042,7 +2099,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w151"
 				},
 				{
 					"id": "w151",
@@ -2063,7 +2121,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w153"
 				},
 				{
 					"id": "w153",
@@ -2152,7 +2211,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				}
 			],
 			"participation": {
@@ -2205,7 +2265,8 @@
 						"number": "sg",
 						"gender": "n",
 						"conj": 4
-					}
+					},
+					"head": "w162"
 				},
 				{
 					"id": "w162",

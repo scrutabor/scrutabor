@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "litaniae.sacratissimi-cordis-iesu",
 	"title": "Litániæ Sacratíssimi Cordis Iesu",
 	"category": "litaniae",
@@ -253,6 +253,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w015",
 					"id": "w014"
 				},
 				{
@@ -289,7 +290,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -379,7 +380,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -431,6 +432,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w025",
 					"id": "w026",
 					"post": ","
 				},
@@ -455,7 +457,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -495,6 +497,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w031",
 					"id": "w030"
 				},
 				{
@@ -519,6 +522,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w033",
 					"id": "w032"
 				},
 				{
@@ -542,7 +546,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -636,8 +640,9 @@
 						"pos": "adj",
 						"case": "gen",
 						"number": "sg",
-						"gender": "n"
+						"gender": "m"
 					},
+					"head": "w039",
 					"id": "w040",
 					"post": "."
 				}
@@ -649,7 +654,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -708,8 +713,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "abl"
 					},
+					"head": "w046",
 					"id": "w045"
 				},
 				{
@@ -755,6 +762,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w050",
 					"id": "w049"
 				},
 				{
@@ -778,6 +786,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w050",
 					"id": "w051"
 				},
 				{
@@ -794,7 +803,8 @@
 						"conj": 1
 					},
 					"id": "w052",
-					"post": "."
+					"post": ".",
+					"head": "w043"
 				}
 			],
 			"speaker": "ductor"
@@ -804,7 +814,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -905,7 +915,8 @@
 						"conj": 4
 					},
 					"id": "w060",
-					"post": "."
+					"post": ".",
+					"head": "w055"
 				}
 			],
 			"speaker": "ductor"
@@ -915,7 +926,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -991,6 +1002,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w065",
 					"id": "w066",
 					"post": "."
 				}
@@ -1002,7 +1014,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1090,6 +1102,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w071",
 					"id": "w073",
 					"post": "."
 				}
@@ -1101,7 +1114,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1179,7 +1192,8 @@
 						"degree": "sup"
 					},
 					"id": "w079",
-					"post": "."
+					"post": ".",
+					"substantive": true
 				}
 			],
 			"speaker": "ductor"
@@ -1189,7 +1203,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1249,7 +1263,7 @@
 					"lemma": "domus",
 					"morph": {
 						"pos": "noun",
-						"case": "gen",
+						"case": "nom",
 						"number": "sg",
 						"gender": "f",
 						"decl": 4
@@ -1309,7 +1323,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1389,6 +1403,7 @@
 						"gender": "f",
 						"conj": 2
 					},
+					"head": "w093",
 					"id": "w094"
 				},
 				{
@@ -1412,7 +1427,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1520,7 +1535,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1617,7 +1632,8 @@
 						"gender": "n"
 					},
 					"id": "w111",
-					"post": "."
+					"post": ".",
+					"head": "w106"
 				}
 			],
 			"speaker": "ductor"
@@ -1627,7 +1643,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1703,6 +1719,7 @@
 						"number": "pl",
 						"gender": "f"
 					},
+					"head": "w116",
 					"id": "w117"
 				},
 				{
@@ -1726,7 +1743,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1790,6 +1807,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w124",
 					"id": "w123"
 				},
 				{
@@ -1815,7 +1833,8 @@
 						"degree": "sup"
 					},
 					"id": "w125",
-					"post": "."
+					"post": ".",
+					"head": "w121"
 				}
 			],
 			"speaker": "ductor"
@@ -1825,7 +1844,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -1885,7 +1904,7 @@
 					"lemma": "rex",
 					"morph": {
 						"pos": "noun",
-						"case": "voc",
+						"case": "nom",
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
@@ -1921,6 +1940,7 @@
 						"number": "pl",
 						"gender": "n"
 					},
+					"head": "w134",
 					"id": "w133"
 				},
 				{
@@ -1952,7 +1972,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2011,8 +2031,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "abl"
 					},
+					"head": "w140",
 					"id": "w139"
 				},
 				{
@@ -2022,7 +2044,7 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg",
-						"gender": "m"
+						"gender": "n"
 					},
 					"id": "w140"
 				},
@@ -2048,6 +2070,7 @@
 						"number": "pl",
 						"gender": "m"
 					},
+					"head": "w143",
 					"id": "w142"
 				},
 				{
@@ -2103,7 +2126,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2162,8 +2185,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "abl"
 					},
+					"head": "w152",
 					"id": "w151"
 				},
 				{
@@ -2198,8 +2223,9 @@
 						"pos": "adj",
 						"case": "nom",
 						"number": "sg",
-						"gender": "m"
+						"gender": "f"
 					},
+					"head": "w155",
 					"id": "w154"
 				},
 				{
@@ -2235,7 +2261,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2294,8 +2320,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "abl"
 					},
+					"head": "w162",
 					"id": "w161"
 				},
 				{
@@ -2305,7 +2333,7 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg",
-						"gender": "m"
+						"gender": "n"
 					},
 					"id": "w162"
 				},
@@ -2369,7 +2397,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2431,6 +2459,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w173",
 					"id": "w171"
 				},
 				{
@@ -2440,7 +2469,7 @@
 						"pos": "pron",
 						"case": "gen",
 						"number": "sg",
-						"gender": "m"
+						"gender": "n"
 					},
 					"id": "w172"
 				},
@@ -2461,10 +2490,11 @@
 					"lemma": "omnis",
 					"morph": {
 						"pos": "adj",
-						"case": "acc",
+						"case": "nom",
 						"number": "pl",
 						"gender": "m"
 					},
+					"head": "w175",
 					"id": "w174"
 				},
 				{
@@ -2500,7 +2530,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2586,8 +2616,9 @@
 						"pos": "adj",
 						"case": "gen",
 						"number": "pl",
-						"gender": "n"
+						"gender": "m"
 					},
+					"head": "w182",
 					"id": "w183",
 					"post": "."
 				}
@@ -2599,7 +2630,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2663,6 +2694,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w186",
 					"id": "w188",
 					"analysis": {
 						"confidence": "high",
@@ -2686,10 +2718,11 @@
 					"lemma": "multus",
 					"morph": {
 						"pos": "adj",
-						"case": "nom",
-						"number": "pl",
+						"case": "gen",
+						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w191",
 					"id": "w190"
 				},
 				{
@@ -2713,7 +2746,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2777,14 +2810,17 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w194",
 					"id": "w196"
 				},
 				{
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "acc"
 					},
+					"head": "w198",
 					"id": "w197"
 				},
 				{
@@ -2796,7 +2832,8 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"id": "w198"
+					"id": "w198",
+					"substantive": true
 				},
 				{
 					"form": "qui",
@@ -2842,7 +2879,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -2950,7 +2987,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3024,6 +3061,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w216",
 					"id": "w215"
 				},
 				{
@@ -3047,6 +3085,7 @@
 						"number": "pl",
 						"gender": "n"
 					},
+					"head": "w216",
 					"id": "w217",
 					"post": "."
 				}
@@ -3058,7 +3097,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3126,6 +3165,7 @@
 						"gender": "n",
 						"conj": 1
 					},
+					"head": "w220",
 					"id": "w222"
 				},
 				{
@@ -3149,7 +3189,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3217,6 +3257,7 @@
 						"gender": "n",
 						"conj": 3
 					},
+					"head": "w226",
 					"id": "w228"
 				},
 				{
@@ -3226,6 +3267,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w230",
 					"id": "w229"
 				},
 				{
@@ -3249,6 +3291,7 @@
 						"number": "pl",
 						"gender": "n"
 					},
+					"head": "w230",
 					"id": "w231",
 					"post": "."
 				}
@@ -3260,7 +3303,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3330,6 +3373,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w238",
 					"id": "w237"
 				},
 				{
@@ -3357,7 +3401,8 @@
 						"gender": "n",
 						"conj": 4
 					},
-					"id": "w239"
+					"id": "w239",
+					"head": "w234"
 				},
 				{
 					"form": "factum",
@@ -3373,7 +3418,8 @@
 						"conj": 3
 					},
 					"id": "w240",
-					"post": "."
+					"post": ".",
+					"head": "w234"
 				}
 			],
 			"speaker": "ductor"
@@ -3383,7 +3429,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3463,6 +3509,7 @@
 						"gender": "n",
 						"conj": 1
 					},
+					"head": "w243",
 					"id": "w246",
 					"post": "."
 				}
@@ -3474,7 +3521,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3548,8 +3595,9 @@
 						"pos": "adj",
 						"case": "gen",
 						"number": "sg",
-						"gender": "m"
+						"gender": "f"
 					},
+					"head": "w253",
 					"id": "w252"
 				},
 				{
@@ -3573,7 +3621,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3669,6 +3717,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w260",
 					"id": "w261",
 					"post": "."
 				}
@@ -3680,7 +3729,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3776,6 +3825,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w268",
 					"id": "w269",
 					"post": "."
 				}
@@ -3787,7 +3837,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3856,13 +3906,13 @@
 				},
 				{
 					"form": "peccatórum",
-					"lemma": "peccatum",
+					"lemma": "peccator",
 					"morph": {
 						"pos": "noun",
 						"case": "gen",
 						"number": "pl",
-						"gender": "n",
-						"decl": 2
+						"gender": "m",
+						"decl": 3
 					},
 					"id": "w275",
 					"post": "."
@@ -3875,7 +3925,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -3946,8 +3996,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "abl"
 					},
+					"head": "w282",
 					"id": "w281"
 				},
 				{
@@ -3974,7 +4026,8 @@
 						"conj": 1
 					},
 					"id": "w283",
-					"post": "."
+					"post": ".",
+					"substantive": true
 				}
 			],
 			"speaker": "ductor"
@@ -3984,7 +4037,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -4044,7 +4097,7 @@
 					"lemma": "spes",
 					"morph": {
 						"pos": "noun",
-						"case": "voc",
+						"case": "nom",
 						"number": "sg",
 						"gender": "f",
 						"decl": 5
@@ -4055,8 +4108,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "abl"
 					},
+					"head": "w290",
 					"id": "w289"
 				},
 				{
@@ -4083,7 +4138,8 @@
 						"conj": 3
 					},
 					"id": "w291",
-					"post": "."
+					"post": ".",
+					"substantive": true
 				}
 			],
 			"speaker": "ductor"
@@ -4093,7 +4149,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -4169,7 +4225,8 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"id": "w297"
+					"id": "w297",
+					"substantive": true
 				},
 				{
 					"form": "ómnium",
@@ -4178,10 +4235,11 @@
 						"pos": "adj",
 						"case": "gen",
 						"number": "pl",
-						"gender": "n"
+						"gender": "m"
 					},
 					"id": "w298",
-					"post": "."
+					"post": ".",
+					"head": "w297"
 				}
 			],
 			"speaker": "ductor"
@@ -4191,7 +4249,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -4253,7 +4311,7 @@
 					"morph": {
 						"pos": "pron",
 						"case": "nom",
-						"number": "pl",
+						"number": "sg",
 						"gender": "m"
 					},
 					"id": "w303"
@@ -4380,7 +4438,7 @@
 					"morph": {
 						"pos": "pron",
 						"case": "nom",
-						"number": "pl",
+						"number": "sg",
 						"gender": "m"
 					},
 					"id": "w312"
@@ -4507,7 +4565,7 @@
 					"morph": {
 						"pos": "pron",
 						"case": "nom",
-						"number": "pl",
+						"number": "sg",
 						"gender": "m"
 					},
 					"id": "w321"
@@ -4611,6 +4669,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w327",
 					"id": "w328"
 				},
 				{
@@ -4630,6 +4689,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w327",
 					"id": "w330"
 				},
 				{
@@ -4687,6 +4747,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w333",
 					"id": "w334"
 				},
 				{
@@ -4696,6 +4757,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w336",
 					"id": "w335"
 				},
 				{
@@ -4719,6 +4781,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w336",
 					"id": "w337",
 					"post": "."
 				}
@@ -4759,6 +4822,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w341",
 					"id": "w339"
 				},
 				{
@@ -4770,6 +4834,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w341",
 					"id": "w340"
 				},
 				{
@@ -4803,8 +4868,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "acc"
 					},
+					"head": "w344",
 					"id": "w343"
 				},
 				{
@@ -4829,6 +4896,7 @@
 						"gender": "m",
 						"degree": "sup"
 					},
+					"head": "w346",
 					"id": "w345"
 				},
 				{
@@ -4856,10 +4924,11 @@
 					"lemma": "tuus",
 					"morph": {
 						"pos": "adj",
-						"case": "nom",
-						"number": "pl",
+						"case": "gen",
+						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w346",
 					"id": "w347"
 				},
 				{
@@ -4874,8 +4943,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "acc"
 					},
+					"head": "w350",
 					"id": "w349"
 				},
 				{
@@ -4926,8 +4997,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "abl"
 					},
+					"head": "w355",
 					"id": "w354"
 				},
 				{
@@ -4944,13 +5017,13 @@
 				},
 				{
 					"form": "peccatórum",
-					"lemma": "peccatum",
+					"lemma": "peccator",
 					"morph": {
 						"pos": "noun",
 						"case": "gen",
 						"number": "pl",
-						"gender": "n",
-						"decl": 2
+						"gender": "m",
+						"decl": 3
 					},
 					"id": "w356"
 				},
@@ -4981,12 +5054,12 @@
 				},
 				{
 					"form": "iisque",
-					"lemma": "idem",
+					"lemma": "is",
 					"morph": {
 						"pos": "pron",
-						"case": "abl",
+						"case": "dat",
 						"number": "pl",
-						"gender": "n"
+						"gender": "m"
 					},
 					"id": "w359",
 					"analysis": {
@@ -5019,6 +5092,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w360",
 					"id": "w361"
 				},
 				{
@@ -5035,7 +5109,8 @@
 						"conj": 3
 					},
 					"id": "w362",
-					"post": ","
+					"post": ",",
+					"head": "w359"
 				},
 				{
 					"form": "tu",
@@ -5086,14 +5161,17 @@
 						"gender": "m",
 						"conj": 1
 					},
-					"id": "w366"
+					"id": "w366",
+					"head": "w363"
 				},
 				{
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "abl"
 					},
+					"head": "w368",
 					"id": "w367"
 				},
 				{
@@ -5148,6 +5226,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w370",
 					"id": "w371"
 				},
 				{
@@ -5235,8 +5314,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "acc"
 					},
+					"head": "w380",
 					"id": "w379"
 				},
 				{

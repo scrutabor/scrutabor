@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.suscipe-sancte-pater",
 	"title": "Súscipe, sancte Pater",
 	"category": "ordinarium",
@@ -73,7 +73,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w003"
 				},
 				{
 					"id": "w003",
@@ -97,7 +98,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w003"
 				},
 				{
 					"id": "w005",
@@ -108,7 +110,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w006"
 				},
 				{
 					"id": "w006",
@@ -152,7 +155,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w009"
 				},
 				{
 					"id": "w009",
@@ -197,7 +201,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w013"
 				},
 				{
 					"id": "w013",
@@ -220,7 +225,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w013"
 				},
 				{
 					"id": "w015",
@@ -266,7 +272,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w017"
 				},
 				{
 					"id": "w019",
@@ -277,7 +284,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w017"
 				},
 				{
 					"id": "w020",
@@ -297,7 +305,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w017"
 				},
 				{
 					"id": "w022",
@@ -306,7 +315,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w023",
@@ -317,7 +327,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w024",
@@ -390,7 +401,8 @@
 						"pos": "adj",
 						"case": "abl",
 						"number": "pl"
-					}
+					},
+					"head": "w028"
 				},
 				{
 					"id": "w030",
@@ -407,7 +419,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w033"
 				},
 				{
 					"id": "w032",
@@ -418,7 +431,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w033"
 				},
 				{
 					"id": "w033",
@@ -434,7 +448,8 @@
 						"mood": "part",
 						"voice": "act",
 						"conj": 1
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w034",
@@ -459,7 +474,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w038"
 				},
 				{
 					"id": "w037",
@@ -470,7 +486,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w038"
 				},
 				{
 					"id": "w038",
@@ -481,7 +498,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w039",
@@ -492,7 +510,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w038"
 				},
 				{
 					"id": "w040",
@@ -503,7 +522,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w038"
 				},
 				{
 					"id": "w041",
@@ -531,7 +551,8 @@
 							"whitakers"
 						],
 						"review": "accepted"
-					}
+					},
+					"head": "w038"
 				},
 				{
 					"id": "w043",
@@ -592,7 +613,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w049"
 				},
 				{
 					"id": "w049",
@@ -613,7 +635,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w051"
 				},
 				{
 					"id": "w051",
@@ -637,7 +660,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w051"
 				},
 				{
 					"id": "w053",

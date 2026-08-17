@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.lavabo",
 	"lang": "pl",
 	"status": "working-edition",
@@ -79,7 +79,7 @@
 			"gloss": "ołtarz"
 		},
 		"w009": {
-			"gloss": "twój"
+			"gloss": "Twój"
 		},
 		"w010": {
 			"gloss": "Panie"
@@ -113,7 +113,7 @@
 			"function": "Przymiotnik rodzaju nijakiego w liczbie mnogiej, użyty rzeczownikowo."
 		},
 		"w019": {
-			"gloss": "twoje"
+			"gloss": "Twoje"
 		},
 		"w020": {
 			"gloss": "Panie"
@@ -129,7 +129,7 @@
 			"function": "Dopełniacz liczby pojedynczej zależny od „decórem” (w022)."
 		},
 		"w024": {
-			"gloss": "twego"
+			"gloss": "Twego"
 		},
 		"w025": {
 			"gloss": "i"
@@ -145,7 +145,7 @@
 			"function": "Dopełniacz zależny od „habitatiónis” (w027), które samo zależy od „locum” (w026)."
 		},
 		"w029": {
-			"gloss": "twojej"
+			"gloss": "Twojej"
 		},
 		"w030": {
 			"gloss": "nie",
@@ -181,7 +181,7 @@
 			"gloss": "mężami"
 		},
 		"w040": {
-			"gloss": "krwawymi",
+			"gloss": "krwi",
 			"function": "Dopełniacz liczby mnogiej zależny od „viris” (w039)."
 		},
 		"w041": {
@@ -291,7 +291,7 @@
 			"function": "Pierwsza osoba liczby pojedynczej czasu przyszłego."
 		},
 		"w073": {
-			"gloss": "ciebie"
+			"gloss": "Ciebie"
 		},
 		"w074": {
 			"gloss": "Panie"

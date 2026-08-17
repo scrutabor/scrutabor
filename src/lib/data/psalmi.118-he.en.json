@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "psalmi.118-he",
 	"lang": "en",
 	"status": "working-edition",
@@ -107,7 +107,8 @@
 					"locator": "Psalmus 119 (118), 33",
 					"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
 				}
-			]
+			],
+			"note": "The ending -am is future indicative and present subjunctive at once. I shall seek it, or that I may seek it, after the imperative pone. This edition takes the future and marks the doubt."
 		},
 		"w010": {
 			"gloss": "it",

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.hanc-igitur",
 	"title": "Hanc ígitur",
 	"category": "ordinarium",
@@ -102,7 +102,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w006",
@@ -129,7 +130,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w009"
 				},
 				{
 					"id": "w009",
@@ -153,7 +155,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w009"
 				},
 				{
 					"id": "w011",
@@ -207,7 +210,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w015"
 				},
 				{
 					"id": "w015",
@@ -253,7 +257,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w016"
 				},
 				{
 					"id": "w018",
@@ -262,7 +267,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w020"
 				},
 				{
 					"id": "w019",
@@ -273,7 +279,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w020"
 				},
 				{
 					"id": "w020",
@@ -317,7 +324,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w025"
 				},
 				{
 					"id": "w024",
@@ -328,7 +336,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w025"
 				},
 				{
 					"id": "w025",
@@ -380,7 +389,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w033"
 				},
 				{
 					"id": "w030",
@@ -391,7 +401,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w031",
@@ -402,7 +413,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w030"
 				},
 				{
 					"id": "w032",
@@ -471,7 +483,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w036"
 				},
 				{
 					"id": "w036",
@@ -507,7 +520,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w039",

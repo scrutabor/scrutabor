@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.hanc-igitur",
 	"lang": "pl",
 	"status": "working-edition",
@@ -133,7 +133,7 @@
 			"gloss": "każ"
 		},
 		"w033": {
-			"gloss": "trzody",
+			"gloss": "trzodzie",
 			"function": "Ablativus zależny od „in” (w029): w gronie wybranych."
 		},
 		"w034": {

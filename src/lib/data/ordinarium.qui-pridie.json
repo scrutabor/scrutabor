@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.qui-pridie",
 	"title": "Qui prídie",
 	"category": "ordinarium",
@@ -124,7 +124,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w011"
 				},
 				{
 					"id": "w008",
@@ -135,7 +136,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "f"
-					}
+					},
+					"head": "w011"
 				},
 				{
 					"id": "w009",
@@ -154,7 +156,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "f"
-					}
+					},
+					"head": "w011"
 				},
 				{
 					"id": "w011",
@@ -178,7 +181,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "f"
-					}
+					},
+					"head": "w011"
 				}
 			]
 		},
@@ -223,6 +227,7 @@
 						"voice": "pass",
 						"conj": 1
 					},
+					"head": "w015",
 					"analysis": {
 						"confidence": "high",
 						"sources": [
@@ -252,7 +257,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w017"
 				},
 				{
 					"id": "w017",
@@ -273,7 +279,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w019"
 				},
 				{
 					"id": "w019",
@@ -318,7 +325,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w021"
 				},
 				{
 					"id": "w023",
@@ -330,7 +338,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w021"
 				}
 			]
 		},
@@ -390,7 +399,8 @@
 						"mood": "part",
 						"voice": "act",
 						"conj": 3
-					}
+					},
+					"head": "w005"
 				}
 			]
 		},
@@ -480,7 +490,8 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w030"
 				},
 				{
 					"id": "w032",
@@ -496,7 +507,8 @@
 						"mood": "part",
 						"voice": "act",
 						"conj": 3
-					}
+					},
+					"head": "w005"
 				}
 			]
 		},
@@ -550,7 +562,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w037",
@@ -574,6 +587,7 @@
 						"number": "pl",
 						"gender": "m"
 					},
+					"substantive": true,
 					"analysis": {
 						"confidence": "high",
 						"sources": [
@@ -659,7 +673,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w042"
 				}
 			]
 		},

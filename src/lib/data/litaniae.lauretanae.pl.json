@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "litaniae.lauretanae",
 	"lang": "pl",
 	"status": "working-edition",
@@ -1644,7 +1644,7 @@
 			"gloss": "Matko"
 		},
 		"w090": {
-			"gloss": "dziewicza"
+			"gloss": "nienaruszona"
 		},
 		"w091": {
 			"gloss": "módl się"
@@ -1674,7 +1674,7 @@
 			"gloss": "Matko"
 		},
 		"w100": {
-			"gloss": "godny miłości"
+			"gloss": "godna miłości"
 		},
 		"w101": {
 			"gloss": "módl się"
@@ -1689,7 +1689,7 @@
 			"gloss": "Matko"
 		},
 		"w105": {
-			"gloss": "godny podziwu"
+			"gloss": "godna podziwu"
 		},
 		"w106": {
 			"gloss": "módl się"
@@ -1767,7 +1767,7 @@
 			"gloss": "Panno"
 		},
 		"w131": {
-			"gloss": "czcić"
+			"gloss": "czcigodna"
 		},
 		"w132": {
 			"gloss": "módl się"
@@ -1854,7 +1854,7 @@
 			"gloss": "nami"
 		},
 		"w160": {
-			"gloss": "zasiadasz"
+			"gloss": "stolico"
 		},
 		"w161": {
 			"gloss": "mądrości"
@@ -1887,10 +1887,10 @@
 			"gloss": "nami"
 		},
 		"w171": {
-			"gloss": "przybytku"
+			"gloss": "naczynie"
 		},
 		"w172": {
-			"gloss": "duchowy"
+			"gloss": "duchowe"
 		},
 		"w173": {
 			"gloss": "módl się"
@@ -1902,10 +1902,10 @@
 			"gloss": "nami"
 		},
 		"w176": {
-			"gloss": "przybytku"
+			"gloss": "naczynie"
 		},
 		"w177": {
-			"gloss": "chwalebny"
+			"gloss": "czcigodne"
 		},
 		"w178": {
 			"gloss": "módl się"
@@ -1917,10 +1917,10 @@
 			"gloss": "nami"
 		},
 		"w181": {
-			"gloss": "przybytku"
+			"gloss": "naczynie"
 		},
 		"w182": {
-			"gloss": "sławny"
+			"gloss": "osobliwe"
 		},
 		"w183": {
 			"gloss": "pobożności"
@@ -1980,7 +1980,7 @@
 			"gloss": "nami"
 		},
 		"w202": {
-			"gloss": "domu"
+			"gloss": "domie"
 		},
 		"w203": {
 			"gloss": "złoty"
@@ -2028,7 +2028,7 @@
 			"gloss": "gwiazdo"
 		},
 		"w218": {
-			"gloss": "porannej"
+			"gloss": "poranna"
 		},
 		"w219": {
 			"gloss": "módl się"
@@ -2040,7 +2040,7 @@
 			"gloss": "nami"
 		},
 		"w222": {
-			"gloss": "zbawienie"
+			"gloss": "uzdrowienie"
 		},
 		"w223": {
 			"gloss": "chorych"
@@ -2058,7 +2058,7 @@
 			"gloss": "ucieczko"
 		},
 		"w228": {
-			"gloss": "grzechów"
+			"gloss": "grzeszników"
 		},
 		"w229": {
 			"gloss": "módl się"
@@ -2103,7 +2103,7 @@
 			"gloss": "wspomożenie"
 		},
 		"w243": {
-			"gloss": "wiernych"
+			"gloss": "chrześcijan"
 		},
 		"w244": {
 			"gloss": "módl się"
@@ -2178,7 +2178,7 @@
 			"gloss": "Królowo"
 		},
 		"w268": {
-			"gloss": "męczenników"
+			"gloss": "Męczenników"
 		},
 		"w269": {
 			"gloss": "módl się"
@@ -2304,7 +2304,7 @@
 			"gloss": "Królowo"
 		},
 		"w310": {
-			"gloss": "rodzin"
+			"gloss": "rodziny"
 		},
 		"w311": {
 			"gloss": "módl się"
@@ -2472,7 +2472,7 @@
 			"gloss": "Twoje"
 		},
 		"w366": {
-			"gloss": "proszę"
+			"gloss": "prosimy"
 		},
 		"w367": {
 			"gloss": "Panie"
@@ -2481,7 +2481,7 @@
 			"gloss": "Bóg"
 		},
 		"w369": {
-			"gloss": "trwałą"
+			"gloss": "trwałym"
 		},
 		"w370": {
 			"gloss": "umysłu"
@@ -2535,7 +2535,7 @@
 			"gloss": "i"
 		},
 		"w387": {
-			"gloss": "wieczna"
+			"gloss": "wieczną"
 		},
 		"w388": {
 			"gloss": "cieszyć się w pełni"

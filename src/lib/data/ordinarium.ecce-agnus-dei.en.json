@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.ecce-agnus-dei",
 	"lang": "en",
 	"status": "working-edition",
@@ -118,7 +118,7 @@
 			"gloss": "say"
 		},
 		"w021": {
-			"gloss": "the word"
+			"gloss": "with the word"
 		},
 		"w022": {
 			"gloss": "and"
@@ -169,7 +169,7 @@
 			"gloss": "say"
 		},
 		"w038": {
-			"gloss": "the word"
+			"gloss": "with the word"
 		},
 		"w039": {
 			"gloss": "and"
@@ -220,7 +220,7 @@
 			"gloss": "say"
 		},
 		"w055": {
-			"gloss": "the word"
+			"gloss": "with the word"
 		},
 		"w056": {
 			"gloss": "and"

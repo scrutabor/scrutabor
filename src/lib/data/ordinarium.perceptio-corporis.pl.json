@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.perceptio-corporis",
 	"lang": "pl",
 	"status": "working-edition",
@@ -20,7 +20,7 @@
 	},
 	"segments": {
 		"s01": {
-			"translation": "Panie Jezu Chryste, niech przyjęcie Ciała i Krwi Twojej, które ja niegodny ośmielam się spożyć,"
+			"translation": "Panie Jezu Chryste, niech przyjęcie Ciała Twojego, które ja niegodny ośmielam się spożyć,"
 		},
 		"s02": {
 			"translation": "nie ściągnie na mnie wyroku potępienia:"

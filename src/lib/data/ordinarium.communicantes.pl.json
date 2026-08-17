@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.communicantes",
 	"lang": "pl",
 	"status": "working-edition",
@@ -288,11 +288,11 @@
 			"gloss": "których"
 		},
 		"w064": {
-			"gloss": "zasługom",
+			"gloss": "zasługami",
 			"function": "Ablativus liczby mnogiej, który może wyrażać przyczynę albo narzędzie."
 		},
 		"w065": {
-			"gloss": "i modlitwom"
+			"gloss": "i modlitwami"
 		},
 		"w066": {
 			"gloss": "racz sprawić",

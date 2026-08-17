@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "orationes.deus-refugium",
 	"title": "Deus, refúgium nostrum",
 	"category": "orationes",
@@ -89,7 +89,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w003"
 				},
 				{
 					"id": "w005",
@@ -131,7 +132,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w009"
 				},
 				{
 					"id": "w009",
@@ -156,7 +158,8 @@
 						"mood": "part",
 						"voice": "act",
 						"conj": 1
-					}
+					},
+					"head": "w007"
 				},
 				{
 					"id": "w011",
@@ -167,7 +170,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w012"
 				},
 				{
 					"id": "w012",
@@ -211,7 +215,8 @@
 						"mood": "part",
 						"voice": "act",
 						"conj": 3
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w015",
@@ -223,7 +228,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w016",
@@ -242,7 +248,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w018",
@@ -306,7 +313,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w023",
@@ -317,7 +325,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w024",
@@ -380,7 +389,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w029"
 				},
 				{
 					"id": "w029",
@@ -403,7 +413,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w029"
 				},
 				{
 					"id": "w031",
@@ -455,7 +466,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w036"
 				},
 				{
 					"id": "w036",
@@ -467,7 +479,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				}
 			]
 		},
@@ -493,7 +506,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w039"
 				},
 				{
 					"id": "w039",
@@ -527,7 +541,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w042"
 				},
 				{
 					"id": "w042",
@@ -570,7 +585,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w046"
 				},
 				{
 					"id": "w046",
@@ -639,7 +655,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w053"
 				},
 				{
 					"id": "w051",
@@ -658,7 +675,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w053"
 				},
 				{
 					"id": "w053",
@@ -688,7 +706,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w055"
 				},
 				{
 					"id": "w055",
@@ -735,7 +754,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w057"
 				},
 				{
 					"id": "w059",

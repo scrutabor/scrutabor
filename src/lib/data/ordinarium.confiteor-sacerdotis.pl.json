@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.confiteor-sacerdotis",
 	"lang": "pl",
 	"status": "working-edition",
@@ -183,28 +183,28 @@
 			"gloss": "uczynkiem"
 		},
 		"w031": {
-			"gloss": "moja",
+			"gloss": "moją",
 			"function": "Zgadza się z „culpa” (w032)."
 		},
 		"w032": {
-			"gloss": "wina",
+			"gloss": "winą",
 			"function": "Ablativus przyczyny: „z mojej winy”."
 		},
 		"w033": {
-			"gloss": "moja"
+			"gloss": "moją"
 		},
 		"w034": {
-			"gloss": "wina"
+			"gloss": "winą"
 		},
 		"w035": {
-			"gloss": "moja"
+			"gloss": "moją"
 		},
 		"w036": {
-			"gloss": "największa",
+			"gloss": "największą",
 			"function": "Zgadza się z „culpa” (w037)."
 		},
 		"w037": {
-			"gloss": "wina"
+			"gloss": "winą"
 		},
 		"w038": {
 			"gloss": "przeto",

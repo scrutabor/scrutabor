@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.lavabo",
 	"title": "Lavábo inter innocéntes",
 	"category": "ordinarium",
@@ -70,7 +70,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w003"
 				},
 				{
 					"id": "w003",
@@ -81,7 +82,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w004",
@@ -105,7 +107,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "f"
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w006",
@@ -151,7 +154,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w008"
 				},
 				{
 					"id": "w010",
@@ -252,7 +256,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w018",
@@ -263,7 +268,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w019",
@@ -275,7 +281,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w018"
 				}
 			]
 		},
@@ -345,7 +352,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w023"
 				},
 				{
 					"id": "w025",
@@ -401,7 +409,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w028"
 				}
 			]
 		},
@@ -440,7 +449,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w033"
 				},
 				{
 					"id": "w033",
@@ -452,7 +462,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w034",
@@ -489,7 +500,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w035"
 				},
 				{
 					"id": "w037",
@@ -506,7 +518,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w039"
 				},
 				{
 					"id": "w039",
@@ -554,7 +567,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w041"
 				}
 			]
 		},
@@ -571,7 +585,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w045"
 				},
 				{
 					"id": "w044",
@@ -666,7 +681,8 @@
 						"mood": "part",
 						"voice": "pass",
 						"conj": 2
-					}
+					},
+					"head": "w048"
 				},
 				{
 					"id": "w051",
@@ -727,7 +743,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w056"
 				},
 				{
 					"id": "w056",
@@ -750,7 +767,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w056"
 				},
 				{
 					"id": "w058",
@@ -765,7 +783,8 @@
 						"mood": "part",
 						"voice": "dep",
 						"conj": 3
-					}
+					},
+					"head": "w053"
 				},
 				{
 					"id": "w059",
@@ -867,7 +886,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w065"
 				},
 				{
 					"id": "w067",
@@ -890,7 +910,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w069"
 				},
 				{
 					"id": "w069",
@@ -902,7 +923,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w070",
@@ -911,7 +933,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w071"
 				},
 				{
 					"id": "w071",
@@ -1047,7 +1070,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w080"
 				}
 			]
 		},
@@ -1085,7 +1109,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w085"
 				},
 				{
 					"id": "w085",
@@ -1149,7 +1174,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w092"
 				},
 				{
 					"id": "w092",

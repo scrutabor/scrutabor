@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.nobis-quoque",
 	"lang": "pl",
 	"status": "working-edition",
@@ -211,7 +211,7 @@
 			]
 		},
 		"w049": {
-			"gloss": "zasługę"
+			"gloss": "zasługi"
 		},
 		"w050": {
 			"gloss": "lecz"

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"lang": "en",
 	"status": "working-edition",
 	"analysis_defaults": {
@@ -35,7 +35,7 @@
 			"senses": [
 				"Abraham"
 			],
-			"note": "A Hebrew name; Latin gives it the genitive Ábrahæ but declines the rest of the cases unevenly.",
+			"note": "A Hebrew name. Latin gives it the genitive Ábrahæ but declines the rest of the cases unevenly.",
 			"note_citations": [
 				{
 					"title": "Biblia Sacra Vulgata",
@@ -213,7 +213,7 @@
 			"senses": [
 				"Jesus"
 			],
-			"note": "Through Greek from the Hebrew name Yeshua — “the Lord saves”; irregular declension (nominative Iesus, accusative Iesum, all other cases Iesu).",
+			"note": "Through Greek from the Hebrew name Yeshua — “the Lord saves”. Irregular declension (nominative Iesus, accusative Iesum, all other cases Iesu).",
 			"note_citations": [
 				{
 					"title": "Catechismus Catholicae Ecclesiae",
@@ -381,7 +381,7 @@
 			"senses": [
 				"Peter"
 			],
-			"note": "Aramaic Cephas means “rock”; in John 1:42 the Evangelist interprets it with Greek Pétros.",
+			"note": "Aramaic Cephas means “rock”. In John 1:42 the Evangelist interprets it with Greek Pétros.",
 			"note_citations": [
 				{
 					"title": "Biblia Sacra Vulgata",
@@ -599,7 +599,8 @@
 		},
 		"adsumo": {
 			"senses": [
-				"take up; assume"
+				"take up",
+				"assume"
 			]
 		},
 		"aduno": {
@@ -687,7 +688,8 @@
 		},
 		"affectus": {
 			"senses": [
-				"feeling; disposition"
+				"feeling",
+				"disposition"
 			]
 		},
 		"afflictus": {
@@ -737,7 +739,8 @@
 		},
 		"agonia": {
 			"senses": [
-				"agony; struggle"
+				"agony",
+				"struggle"
 			]
 		},
 		"aliqui": {
@@ -758,7 +761,7 @@
 				"praise the Lord",
 				"alleluia"
 			],
-			"note": "Hebrew hallelu-Yah — “praise the Lord”; the word passed through Greek and is indeclinable in Latin.",
+			"note": "Hebrew hallelu-Yah — “praise the Lord”. The word passed through Greek and is indeclinable in Latin.",
 			"note_citations": [
 				{
 					"title": "Brown–Driver–Briggs, A Hebrew and English Lexicon",
@@ -871,7 +874,7 @@
 				"angel",
 				"messenger"
 			],
-			"note": "Greek ángelos means “messenger”; the word entered Latin through Greek.",
+			"note": "Greek ángelos means “messenger”. The word entered Latin through Greek.",
 			"note_citations": [
 				{
 					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
@@ -983,7 +986,8 @@
 		},
 		"arca": {
 			"senses": [
-				"ark; chest"
+				"ark",
+				"chest"
 			]
 		},
 		"archangelus": {
@@ -1015,8 +1019,7 @@
 				"to climb"
 			],
 			"derivatives": [
-				"ascent",
-				"ascension"
+				"ascent"
 			]
 		},
 		"ascensio": {
@@ -1036,12 +1039,14 @@
 		},
 		"attero": {
 			"senses": [
-				"wear down; crush"
+				"wear down",
+				"crush"
 			]
 		},
 		"auctor": {
 			"senses": [
-				"author; originator"
+				"author",
+				"originator"
 			]
 		},
 		"audeo": {
@@ -1148,7 +1153,7 @@
 			"senses": [
 				"baptism"
 			],
-			"note": "A neuter Greek loanword; genitive baptísmatis.",
+			"note": "A neuter Greek loanword. Genitive baptísmatis.",
 			"note_citations": [
 				{
 					"title": "Lewis and Short, A Latin Dictionary",
@@ -1271,7 +1276,8 @@
 		},
 		"candor": {
 			"senses": [
-				"brightness; radiance"
+				"brightness",
+				"radiance"
 			]
 		},
 		"capio": {
@@ -1282,7 +1288,6 @@
 			],
 			"derivatives": [
 				"capture",
-				"receive",
 				"capable"
 			]
 		},
@@ -1293,7 +1298,8 @@
 		},
 		"caritas": {
 			"senses": [
-				"charity; love"
+				"charity",
+				"love"
 			]
 		},
 		"caro": {
@@ -1403,8 +1409,7 @@
 			],
 			"derivatives": [
 				"claim",
-				"proclaim",
-				"clamour"
+				"proclaim"
 			]
 		},
 		"clamor": {
@@ -1423,8 +1428,7 @@
 				"gentle"
 			],
 			"derivatives": [
-				"clement",
-				"clemency"
+				"clement"
 			]
 		},
 		"clementia": {
@@ -1600,9 +1604,6 @@
 				"to confess",
 				"to acknowledge",
 				"to praise"
-			],
-			"derivatives": [
-				"confession"
 			]
 		},
 		"confugio": {
@@ -1643,7 +1644,8 @@
 		},
 		"consilium": {
 			"senses": [
-				"counsel; plan"
+				"counsel",
+				"plan"
 			]
 		},
 		"consolatio": {
@@ -1663,8 +1665,7 @@
 				"partner"
 			],
 			"derivatives": [
-				"consort",
-				"consortium"
+				"consort"
 			]
 		},
 		"consortium": {
@@ -1757,8 +1758,7 @@
 			],
 			"note": "The passive often has a reflexive sense: “to turn oneself toward someone.”",
 			"derivatives": [
-				"convert",
-				"conversion"
+				"convert"
 			]
 		},
 		"cooperor": {
@@ -1811,7 +1811,7 @@
 				"to believe in",
 				"to entrust"
 			],
-			"note": "With the dative of a person: credo tibi, I believe you; with in and the accusative: I believe in someone.",
+			"note": "With the dative of a person: credo tibi, I believe you. With in and the accusative: I believe in someone.",
 			"derivatives": [
 				"creed",
 				"credit",
@@ -1882,7 +1882,8 @@
 		},
 		"custodia": {
 			"senses": [
-				"watch; guard"
+				"watch",
+				"guard"
 			]
 		},
 		"custodio": {
@@ -1926,7 +1927,7 @@
 				"about, concerning",
 				"according to"
 			],
-			"note": "De can mark separation or motion from above; ex often marks motion from within."
+			"note": "De can mark separation or motion from above. Ex often marks motion from within."
 		},
 		"debitor": {
 			"senses": [
@@ -2043,7 +2044,8 @@
 		},
 		"destituo": {
 			"senses": [
-				"forsake; deprive"
+				"forsake",
+				"deprive"
 			]
 		},
 		"detrudo": {
@@ -2087,7 +2089,7 @@
 			"senses": [
 				"right hand"
 			],
-			"note": "Understand “(manus) déxtera” — the right hand; “at the right hand” is Scripture's place of honor.",
+			"note": "Understand “(manus) déxtera” — the right hand. “At the right hand” is Scripture's place of honor.",
 			"note_citations": [
 				{
 					"title": "Lewis and Short, A Latin Dictionary",
@@ -2128,7 +2130,7 @@
 				"a day's span",
 				"an appointed day"
 			],
-			"note": "One of the few 5th-declension nouns; usually masculine, feminine especially of an appointed day.",
+			"note": "One of the few 5th-declension nouns. Usually masculine, feminine especially of an appointed day.",
 			"derivatives": [
 				"diary",
 				"journal (from diurnális)"
@@ -2149,7 +2151,7 @@
 				"to deign",
 				"to think worthy"
 			],
-			"note": "A deponent verb from dignus — worthy; dignéris means “be pleased to”.",
+			"note": "A deponent verb from dignus — worthy. Dignéris means “be pleased to”.",
 			"derivatives": [
 				"deign"
 			]
@@ -2330,10 +2332,6 @@
 		"donum": {
 			"senses": [
 				"gift"
-			],
-			"derivatives": [
-				"donation",
-				"donor"
 			]
 		},
 		"dormio": {
@@ -2384,7 +2382,7 @@
 				"see here",
 				"look"
 			],
-			"note": "A pointing interjection; standing alone it takes the nominative (ecce homo). It can also point at a whole sentence — then the noun after it may be the object of its own verb."
+			"note": "A pointing interjection. Standing alone it takes the nominative (ecce homo). It can also point at a whole sentence — then the noun after it may be the object of its own verb."
 		},
 		"ecclesia": {
 			"senses": [
@@ -2520,7 +2518,7 @@
 				"to go",
 				"to proceed"
 			],
-			"note": "An irregular verb; plural imperative: ite.",
+			"note": "An irregular verb. Plural imperative: ite.",
 			"derivatives": [
 				"exit",
 				"transit",
@@ -2598,7 +2596,7 @@
 				"from (origin or descent)",
 				"as a result of"
 			],
-			"note": "Before a vowel always “ex”; before a consonant both “e” and “ex” occur (ex María Vírgine)."
+			"note": "Before a vowel always “ex”. Before a consonant both “e” and “ex” occur (ex María Vírgine)."
 		},
 		"exaltatio": {
 			"senses": [
@@ -2644,7 +2642,8 @@
 		},
 		"exemplar": {
 			"senses": [
-				"model; example"
+				"model",
+				"example"
 			]
 		},
 		"exilium": {
@@ -2685,9 +2684,6 @@
 			"senses": [
 				"an exile",
 				"a banished person"
-			],
-			"derivatives": [
-				"exile"
 			]
 		},
 		"exsultatio": {
@@ -2706,7 +2702,7 @@
 				"to make",
 				"to bring about"
 			],
-			"note": "In the present system its passive is supplied by fio (to become); the perfect passive is factus sum.",
+			"note": "In the present system its passive is supplied by fio (to become). The perfect passive is factus sum.",
 			"derivatives": [
 				"fact",
 				"feat",
@@ -2745,9 +2741,6 @@
 			"senses": [
 				"servant",
 				"attendant"
-			],
-			"derivatives": [
-				"family"
 			]
 		},
 		"ficulneus": {
@@ -2772,8 +2765,7 @@
 			],
 			"derivatives": [
 				"fidelity",
-				"confide (from fídere)",
-				"infidel"
+				"confide (from fídere)"
 			]
 		},
 		"filius": {
@@ -2803,7 +2795,7 @@
 				"to come about",
 				"to be done"
 			],
-			"note": "Irregular; serves as the passive of “fácere”, to do or make, in the present system — the perfect passive is factus sum."
+			"note": "Irregular. Serves as the passive of “fácere”, to do or make, in the present system — the perfect passive is factus sum."
 		},
 		"fleo": {
 			"senses": [
@@ -2826,7 +2818,8 @@
 		},
 		"fons": {
 			"senses": [
-				"fountain; source"
+				"fountain",
+				"source"
 			]
 		},
 		"formo": {
@@ -2847,7 +2840,8 @@
 		},
 		"fornicatio": {
 			"senses": [
-				"fornication; unchastity"
+				"fornication",
+				"unchastity"
 			]
 		},
 		"fortis": {
@@ -2900,7 +2894,7 @@
 				"about to be",
 				"still to come"
 			],
-			"note": "The future participle of sum; neuter plural futura means “things to come”.",
+			"note": "The future participle of sum. Neuter plural futura means “things to come”.",
 			"derivatives": [
 				"future"
 			]
@@ -2938,7 +2932,7 @@
 				"mother",
 				"she who bears"
 			],
-			"note": "A noun from gigno, to beget; the spelling genitrix also occurs."
+			"note": "A noun from gigno, to beget. The spelling genitrix also occurs."
 		},
 		"gens": {
 			"senses": [
@@ -3011,7 +3005,8 @@
 		},
 		"gubernatio": {
 			"senses": [
-				"guidance; governance"
+				"guidance",
+				"governance"
 			]
 		},
 		"habeo": {
@@ -3049,13 +3044,13 @@
 				"this",
 				"this one"
 			],
-			"note": "The demonstrative of what is near the speaker; not to be confused with the adverb hic — here."
+			"note": "The demonstrative of what is near the speaker. Not to be confused with the adverb hic — here."
 		},
 		"hic_adverbium": {
 			"senses": [
 				"here"
 			],
-			"note": "The adverb of place; not the demonstrative hic, hæc, hoc — this."
+			"note": "The adverb of place. Not the demonstrative hic, hæc, hoc — this."
 		},
 		"hodie": {
 			"senses": [
@@ -3098,7 +3093,7 @@
 				"hosanna",
 				"save, we pray!"
 			],
-			"note": "A Hebrew cry from Ps 117:25, taken up by the crowd greeting Christ in Mt 21:9. Latin retains it untranslated; the word is indeclinable.",
+			"note": "A Hebrew cry from Ps 117:25, taken up by the crowd greeting Christ in Mt 21:9. Latin retains it untranslated. The word is indeclinable.",
 			"note_citations": [
 				{
 					"title": "Biblia Sacra Vulgata",
@@ -3164,14 +3159,15 @@
 		},
 		"ianua": {
 			"senses": [
-				"gate; door"
+				"gate",
+				"door"
 			]
 		},
 		"idem": {
 			"senses": [
 				"the same"
 			],
-			"note": "It is the pronoun is with the ending -dem; before d the m turns to n (eúndem)."
+			"note": "It is the pronoun is with the ending -dem. Before d the m turns to n (eúndem)."
 		},
 		"ideo": {
 			"senses": [
@@ -3365,7 +3361,7 @@
 				"those below",
 				"the underworld"
 			],
-			"note": "Used substantivally in the plural; ab ínferis means “from among the dead”.",
+			"note": "Used substantivally in the plural. Ab ínferis means “from among the dead”.",
 			"note_citations": [
 				{
 					"title": "Lewis and Short, A Latin Dictionary",
@@ -3404,7 +3400,8 @@
 		},
 		"infirmus": {
 			"senses": [
-				"sick; weak"
+				"sick",
+				"weak"
 			]
 		},
 		"infundo": {
@@ -3512,7 +3509,8 @@
 		},
 		"insignis": {
 			"senses": [
-				"distinguished; singular"
+				"distinguished",
+				"singular"
 			]
 		},
 		"inspiratio": {
@@ -3522,7 +3520,8 @@
 		},
 		"instituo": {
 			"senses": [
-				"establish; train"
+				"establish",
+				"train"
 			]
 		},
 		"institutio": {
@@ -3549,12 +3548,14 @@
 		},
 		"intemeratus": {
 			"senses": [
-				"undefiled; inviolate"
+				"undefiled",
+				"inviolate"
 			]
 		},
 		"intendo": {
 			"senses": [
-				"direct; stretch"
+				"direct",
+				"stretch"
 			]
 		},
 		"inter": {
@@ -3597,7 +3598,7 @@
 				"to enter",
 				"to go in"
 			],
-			"note": "A verb; not to be confused with the identically spelt adverb intro — “inwards.”",
+			"note": "A verb. Not to be confused with the identically spelt adverb intro — “inwards.”",
 			"derivatives": [
 				"enter",
 				"entrance"
@@ -3608,7 +3609,7 @@
 				"to go in",
 				"to enter"
 			],
-			"note": "A compound of intro and eo; it inflects irregularly like eo.",
+			"note": "A compound of intro and eo. It inflects irregularly like eo.",
 			"derivatives": [
 				"introit"
 			]
@@ -3825,12 +3826,14 @@
 		},
 		"labes": {
 			"senses": [
-				"stain; blemish"
+				"stain",
+				"blemish"
 			]
 		},
 		"labor": {
 			"senses": [
-				"labour; toil"
+				"labour",
+				"toil"
 			]
 		},
 		"lacryma": {
@@ -3867,7 +3870,8 @@
 		},
 		"languor": {
 			"senses": [
-				"weakness; suffering"
+				"weakness",
+				"suffering"
 			]
 		},
 		"largitor": {
@@ -3888,10 +3892,6 @@
 		"laus": {
 			"senses": [
 				"praise"
-			],
-			"derivatives": [
-				"laud",
-				"laudable"
 			]
 		},
 		"lavo": {
@@ -3933,8 +3933,7 @@
 			],
 			"note": "Not the noun liber, libri (“book”) or líberi, liberórum (“children”).",
 			"derivatives": [
-				"liberal",
-				"liberty"
+				"liberal"
 			]
 		},
 		"libero": {
@@ -4016,13 +4015,13 @@
 				"blemish"
 			],
 			"derivatives": [
-				"immaculate",
 				"maculate"
 			]
 		},
 		"magister": {
 			"senses": [
-				"master; teacher"
+				"master",
+				"teacher"
 			]
 		},
 		"magnus": {
@@ -4099,7 +4098,7 @@
 			"senses": [
 				"martyr"
 			],
-			"note": "Greek mártys means “witness”; a martyr bears supreme witness to Christ, even unto death.",
+			"note": "Greek mártys means “witness”. A martyr bears supreme witness to Christ, even unto death.",
 			"note_citations": [
 				{
 					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
@@ -4172,11 +4171,7 @@
 				"mindful",
 				"remembering"
 			],
-			"note": "It takes the genitive.",
-			"derivatives": [
-				"memorial",
-				"memory"
-			]
+			"note": "It takes the genitive."
 		},
 		"memoria": {
 			"senses": [
@@ -4206,7 +4201,6 @@
 				"to earn"
 			],
 			"derivatives": [
-				"merit",
 				"meritorious",
 				"emeritus"
 			]
@@ -4235,7 +4229,8 @@
 		},
 		"migro": {
 			"senses": [
-				"migrate; journey"
+				"migrate",
+				"journey"
 			]
 		},
 		"militia": {
@@ -4275,7 +4270,7 @@
 				"to have mercy",
 				"to pity"
 			],
-			"note": "Normally with the genitive (miserére mei, misereátur vestri); liturgical formulas also use the dative (miserére nobis)."
+			"note": "Normally with the genitive (miserére mei, misereátur vestri). Liturgical formulas also use the dative (miserére nobis)."
 		},
 		"misericordia": {
 			"senses": [
@@ -4311,7 +4306,8 @@
 		},
 		"mitis": {
 			"senses": [
-				"meek; gentle"
+				"meek",
+				"gentle"
 			]
 		},
 		"mitto": {
@@ -4407,7 +4403,6 @@
 				"much"
 			],
 			"derivatives": [
-				"multitude",
 				"multiple"
 			]
 		},
@@ -4480,7 +4475,8 @@
 		},
 		"nativitas": {
 			"senses": [
-				"nativity; birth"
+				"nativity",
+				"birth"
 			]
 		},
 		"ne": {
@@ -4671,7 +4667,8 @@
 		},
 		"observo": {
 			"senses": [
-				"mark; observe"
+				"mark",
+				"observe"
 			]
 		},
 		"oculus": {
@@ -4708,7 +4705,7 @@
 				"to present",
 				"to bring before"
 			],
-			"note": "A compound of ob- and fero; it is conjugated irregularly like fero.",
+			"note": "A compound of ob- and fero. It is conjugated irregularly like fero.",
 			"derivatives": [
 				"offer",
 				"offertory"
@@ -4799,7 +4796,6 @@
 			],
 			"note": "The call “Orémus” — let us pray — is the same verb.",
 			"derivatives": [
-				"oration",
 				"oratory"
 			]
 		},
@@ -4819,7 +4815,7 @@
 				"face",
 				"speech"
 			],
-			"note": "Not os, ossis (“bone”); the two nouns share a nominative form but have different stems.",
+			"note": "Not os, ossis (“bone”). The two nouns share a nominative form but have different stems.",
 			"derivatives": [
 				"oral",
 				"orifice"
@@ -4871,7 +4867,8 @@
 		},
 		"pariter": {
 			"senses": [
-				"equally; alike"
+				"equally",
+				"alike"
 			]
 		},
 		"pars": {
@@ -4947,7 +4944,6 @@
 				}
 			],
 			"derivatives": [
-				"passion",
 				"patient",
 				"passive"
 			]
@@ -5039,9 +5035,6 @@
 				"to destroy",
 				"to lose",
 				"to ruin"
-			],
-			"derivatives": [
-				"perdition"
 			]
 		},
 		"perduco": {
@@ -5115,7 +5108,8 @@
 		},
 		"persolvo": {
 			"senses": [
-				"render; pay"
+				"render",
+				"pay"
 			]
 		},
 		"perturbatio": {
@@ -5177,9 +5171,7 @@
 				"gracious"
 			],
 			"derivatives": [
-				"pious",
-				"piety",
-				"pity"
+				"pious"
 			]
 		},
 		"placatus": {
@@ -5277,8 +5269,7 @@
 			],
 			"derivatives": [
 				"postscript",
-				"posterior",
-				"postpone"
+				"posterior"
 			]
 		},
 		"postquam": {
@@ -5350,7 +5341,8 @@
 		},
 		"praedico": {
 			"senses": [
-				"proclaim; praise"
+				"proclaim",
+				"praise"
 			]
 		},
 		"praelium": {
@@ -5447,9 +5439,7 @@
 			],
 			"note": "Most often used in the plural: preces. The singular nominative is not used.",
 			"derivatives": [
-				"pray",
-				"precarious",
-				"deprecate"
+				"precarious"
 			]
 		},
 		"pridie": {
@@ -5476,8 +5466,7 @@
 			],
 			"derivatives": [
 				"prince",
-				"principal",
-				"principle"
+				"principal"
 			]
 		},
 		"principium": {
@@ -5564,7 +5553,8 @@
 		},
 		"propitiatio": {
 			"senses": [
-				"propitiation; merciful forgiveness"
+				"propitiation",
+				"merciful forgiveness"
 			]
 		},
 		"propitius": {
@@ -5652,7 +5642,8 @@
 		},
 		"pulso": {
 			"senses": [
-				"knock; strike"
+				"knock",
+				"strike"
 			]
 		},
 		"puritas": {
@@ -5681,7 +5672,7 @@
 				"I beg",
 				"please"
 			],
-			"note": "A defective verb; chiefly the forms quæso and quǽsumus survive, used in requests."
+			"note": "A defective verb. Chiefly the forms quæso and quǽsumus survive, used in requests."
 		},
 		"quam": {
 			"senses": [
@@ -5801,7 +5792,8 @@
 		},
 		"receptaculum": {
 			"senses": [
-				"receptacle; abode"
+				"receptacle",
+				"abode"
 			]
 		},
 		"recipio": {
@@ -5858,8 +5850,7 @@
 				"to buy back"
 			],
 			"derivatives": [
-				"redeem",
-				"redemption"
+				"redeem"
 			]
 		},
 		"reficio": {
@@ -5945,7 +5936,6 @@
 			],
 			"derivatives": [
 				"relinquish",
-				"relic",
 				"derelict"
 			]
 		},
@@ -6312,12 +6302,14 @@
 		},
 		"satisfactio": {
 			"senses": [
-				"satisfaction; atonement"
+				"satisfaction",
+				"atonement"
 			]
 		},
 		"saturo": {
 			"senses": [
-				"fill; saturate"
+				"fill",
+				"saturate"
 			]
 		},
 		"scelus": {
@@ -6396,6 +6388,15 @@
 				"session"
 			]
 		},
+		"sedes": {
+			"senses": [
+				"seat",
+				"see, throne"
+			],
+			"derivatives": [
+				"see (episcopal)"
+			]
+		},
 		"semita": {
 			"senses": [
 				"path",
@@ -6446,7 +6447,7 @@
 			"senses": [
 				"seraphim"
 			],
-			"note": "A Hebrew plural; the singular is seraph. It is indeclinable in Latin.",
+			"note": "A Hebrew plural. The singular is seraph. It is indeclinable in Latin.",
 			"note_citations": [
 				{
 					"title": "Brown–Driver–Briggs, A Hebrew and English Lexicon",
@@ -6562,7 +6563,8 @@
 		},
 		"sinus": {
 			"senses": [
-				"womb; bosom"
+				"womb",
+				"bosom"
 			]
 		},
 		"societas": {
@@ -6590,7 +6592,8 @@
 		},
 		"solacium": {
 			"senses": [
-				"comfort; consolation"
+				"comfort",
+				"consolation"
 			]
 		},
 		"solemnis": {
@@ -6600,7 +6603,8 @@
 		},
 		"soliditas": {
 			"senses": [
-				"steadfastness; firmness"
+				"steadfastness",
+				"firmness"
 			]
 		},
 		"solus": {
@@ -6648,8 +6652,7 @@
 				"hope"
 			],
 			"derivatives": [
-				"despair",
-				"desperate"
+				"despair"
 			]
 		},
 		"spiritualis": {
@@ -6876,7 +6879,8 @@
 		},
 		"sustineo": {
 			"senses": [
-				"wait; sustain"
+				"wait",
+				"sustain"
 			]
 		},
 		"suus": {
@@ -7119,7 +7123,7 @@
 				"together",
 				"in company"
 			],
-			"note": "An adverb formed from the ablative of unus; una cum means ‘together with’."
+			"note": "An adverb formed from the ablative of unus. Una cum means ‘together with’."
 		},
 		"unde": {
 			"senses": [
@@ -7173,7 +7177,8 @@
 		},
 		"usque": {
 			"senses": [
-				"as far as; continuously"
+				"as far as",
+				"continuously"
 			]
 		},
 		"ut": {
@@ -7181,14 +7186,14 @@
 				"that, so that",
 				"as"
 			],
-			"note": "With the subjunctive it means so that; with the indicative, as."
+			"note": "With the subjunctive it means so that. With the indicative, as."
 		},
 		"uti": {
 			"senses": [
 				"that",
 				"in order that"
 			],
-			"note": "An older form of ut; not to be confused with the infinitive of utor."
+			"note": "An older form of ut. Not to be confused with the infinitive of utor."
 		},
 		"utilitas": {
 			"senses": [
@@ -7348,7 +7353,8 @@
 		},
 		"victima": {
 			"senses": [
-				"victim; sacrificial offering"
+				"victim",
+				"sacrificial offering"
 			]
 		},
 		"video": {
@@ -7375,7 +7381,7 @@
 				"man",
 				"husband"
 			],
-			"note": "Vir is a male; homo is a human being of either sex.",
+			"note": "Vir is a male. Homo is a human being of either sex.",
 			"derivatives": [
 				"virile"
 			]
@@ -7463,7 +7469,6 @@
 			"note": "An irregular verb with neither passive forms nor a supine.",
 			"derivatives": [
 				"volition",
-				"voluntary",
 				"benevolent"
 			]
 		},

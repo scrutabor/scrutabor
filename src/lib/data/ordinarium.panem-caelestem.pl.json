@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.panem-caelestem",
 	"lang": "pl",
 	"status": "working-edition",
@@ -157,7 +157,7 @@
 			"gloss": "imienia"
 		},
 		"w006": {
-			"gloss": "Pańskiego"
+			"gloss": "Pana"
 		},
 		"w007": {
 			"gloss": "wzywać będę"
@@ -203,7 +203,7 @@
 			"gloss": "powiedz"
 		},
 		"w020": {
-			"gloss": "słowo",
+			"gloss": "słowem",
 			"function": "Ablativus narzędzia przy dic."
 		},
 		"w021": {
@@ -257,7 +257,7 @@
 			"gloss": "powiedz"
 		},
 		"w037": {
-			"gloss": "słowo"
+			"gloss": "słowem"
 		},
 		"w038": {
 			"gloss": "a"
@@ -308,7 +308,7 @@
 			"gloss": "powiedz"
 		},
 		"w054": {
-			"gloss": "słowo"
+			"gloss": "słowem"
 		},
 		"w055": {
 			"gloss": "a"

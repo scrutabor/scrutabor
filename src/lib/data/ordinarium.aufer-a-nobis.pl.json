@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.aufer-a-nobis",
 	"lang": "pl",
 	"status": "working-edition",
@@ -74,7 +74,7 @@
 			"function": "Tryb łączący zachęty, pierwsza osoba liczby mnogiej."
 		},
 		"w002": {
-			"gloss": "zgładź",
+			"gloss": "zabierz",
 			"function": "Tryb rozkazujący aufero, czasownika złożonego z ab i fero."
 		},
 		"w003": {
@@ -107,7 +107,7 @@
 			"gloss": "do"
 		},
 		"w011": {
-			"gloss": "Święte",
+			"gloss": "Świętych",
 			"function": "Przymiotnik użyty rzeczownikowo w liczbie mnogiej rodzaju nijakiego: rzeczy święte. Razem z „sanctórum” (w012) tworzy wyrażenie „Święte Świętych”."
 		},
 		"w012": {
@@ -115,7 +115,7 @@
 			"function": "Dopełniacz liczby mnogiej rodzaju nijakiego zależny od urzeczownikowionego „Sancta” (w011), tworzący wyrażenie Święte Świętych."
 		},
 		"w013": {
-			"gloss": "czystym",
+			"gloss": "czystymi",
 			"function": "Zgadza się z „méntibus” (w015) mimo rozdzielenia obu słów."
 		},
 		"w014": {
@@ -123,7 +123,7 @@
 			"function": "Deponens łączące się z bezokolicznikiem „introíre” (w016)."
 		},
 		"w015": {
-			"gloss": "sercem",
+			"gloss": "umysłami",
 			"function": "Ablativus sposobu."
 		},
 		"w016": {
@@ -201,7 +201,7 @@
 			"function": "Dopełniacz zależny od „mérita” (w026), współrzędny z „Sanctórum” (w027)."
 		},
 		"w036": {
-			"gloss": "aby",
+			"gloss": "abyś",
 			"function": "Wprowadza zdanie celu z „dignéris” (w038) w trybie łączącym."
 		},
 		"w037": {
@@ -209,7 +209,7 @@
 			"function": "Bezokolicznik zależny od „dignéris” (w038)."
 		},
 		"w038": {
-			"gloss": "racz",
+			"gloss": "raczył",
 			"function": "Deponens w trybie łączącym po „ut” (w036)."
 		},
 		"w039": {

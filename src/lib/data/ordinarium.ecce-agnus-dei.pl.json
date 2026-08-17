@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.ecce-agnus-dei",
 	"lang": "pl",
 	"status": "working-edition",
@@ -49,7 +49,7 @@
 			"gloss": "Baranek"
 		},
 		"w003": {
-			"gloss": "Boży"
+			"gloss": "Boga"
 		},
 		"w004": {
 			"gloss": "oto"
@@ -118,7 +118,7 @@
 			"gloss": "powiedz"
 		},
 		"w021": {
-			"gloss": "słowo"
+			"gloss": "słowem"
 		},
 		"w022": {
 			"gloss": "a"
@@ -169,7 +169,7 @@
 			"gloss": "powiedz"
 		},
 		"w038": {
-			"gloss": "słowo"
+			"gloss": "słowem"
 		},
 		"w039": {
 			"gloss": "a"
@@ -220,7 +220,7 @@
 			"gloss": "powiedz"
 		},
 		"w055": {
-			"gloss": "słowo"
+			"gloss": "słowem"
 		},
 		"w056": {
 			"gloss": "a"

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.placeat-tibi",
 	"lang": "pl",
 	"status": "working-edition",
@@ -69,7 +69,8 @@
 					"locator": "s.v. offero",
 					"url": "https://cld.bbaw.de/lemma/lat/offero"
 				}
-			]
+			],
+			"note": "Forma jest zarazem celownikiem i ablatiwem liczby mnogiej. Nic w zdaniu nie rozstrzyga, czy ofiara jest złożona OCZOM Twojego majestatu, czy PRZED nimi. Ta edycja przyjmuje celownik i zaznacza wątpliwość."
 		},
 		"w014": {
 			"gloss": "Twego"
@@ -88,7 +89,7 @@
 			"gloss": "Tobie"
 		},
 		"w019": {
-			"gloss": "niech będzie"
+			"gloss": "była"
 		},
 		"w020": {
 			"gloss": "miła",
@@ -117,14 +118,14 @@
 			"gloss": "złożyłem"
 		},
 		"w028": {
-			"gloss": "niech będzie"
+			"gloss": "była"
 		},
 		"w029": {
-			"gloss": "Ty",
+			"gloss": "Tobą",
 			"function": "Razem z „miseránte” (w030) tworzy ablativus absolutus — konstrukcję, którą polszczyzna oddaje zdaniem pobocznym: „gdy Ty się zmiłujesz”."
 		},
 		"w030": {
-			"gloss": "litując się",
+			"gloss": "litującą się",
 			"function": "Imiesłów czasu teraźniejszego od deponentnego „miseror”, o formie czynnej."
 		},
 		"w031": {

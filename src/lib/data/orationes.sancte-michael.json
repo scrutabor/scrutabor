@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "orationes.sancte-michael",
 	"title": "Sancte Míchaël Archángele",
 	"category": "orationes",
@@ -44,7 +44,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w002"
 				},
 				{
 					"id": "w002",
@@ -110,7 +111,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w007"
 				},
 				{
 					"id": "w007",
@@ -132,7 +134,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w009"
 				},
 				{
 					"id": "w009",
@@ -266,7 +269,8 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w019"
 				},
 				{
 					"id": "w019",
@@ -335,7 +339,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w022"
 				},
 				{
 					"id": "w024",
@@ -358,7 +363,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w026"
 				},
 				{
 					"id": "w026",
@@ -382,7 +388,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w026"
 				},
 				{
 					"id": "w028",
@@ -402,7 +409,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w030"
 				},
 				{
 					"id": "w030",
@@ -449,7 +457,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w034"
 				},
 				{
 					"id": "w034",
@@ -473,7 +482,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w036"
 				},
 				{
 					"id": "w036",
@@ -494,7 +504,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w038"
 				},
 				{
 					"id": "w038",

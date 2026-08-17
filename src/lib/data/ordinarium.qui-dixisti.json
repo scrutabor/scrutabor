@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.qui-dixisti",
 	"title": "Dómine Iesu Christe, qui dixísti",
 	"category": "ordinarium",
@@ -132,7 +132,8 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w006"
 				}
 			]
 		},
@@ -200,7 +201,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w011"
 				},
 				{
 					"id": "w013",
@@ -279,7 +281,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w017"
 				},
 				{
 					"id": "w019",
@@ -323,7 +326,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w021"
 				}
 			]
 		},
@@ -351,7 +355,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w025"
 				},
 				{
 					"id": "w025",
@@ -374,7 +379,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w025"
 				},
 				{
 					"id": "w027",
@@ -497,7 +503,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w038"
 				},
 				{
 					"id": "w037",
@@ -508,7 +515,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w038"
 				},
 				{
 					"id": "w038",
@@ -610,7 +618,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w045"
 				},
 				{
 					"id": "w045",
@@ -634,7 +643,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w045"
 				}
 			],
 			"participation": {

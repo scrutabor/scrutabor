@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "orationes.angelus-domini",
 	"lang": "pl",
 	"status": "working-edition",
@@ -109,7 +109,7 @@
 			"gloss": "błogosławiona"
 		},
 		"w017": {
-			"gloss": "ty"
+			"gloss": "Ty"
 		},
 		"w018": {
 			"gloss": "między"
@@ -226,7 +226,7 @@
 			"gloss": "błogosławiona"
 		},
 		"w056": {
-			"gloss": "ty"
+			"gloss": "Ty"
 		},
 		"w057": {
 			"gloss": "między"
@@ -307,10 +307,10 @@
 			"gloss": "ciałem"
 		},
 		"w083": {
-			"gloss": "uczynione"
+			"gloss": "się stało"
 		},
 		"w084": {
-			"gloss": "jest"
+			"gloss": "—"
 		},
 		"w085": {
 			"gloss": "i"
@@ -319,10 +319,10 @@
 			"gloss": "zamieszkało"
 		},
 		"w087": {
-			"gloss": "w"
+			"gloss": "między"
 		},
 		"w088": {
-			"gloss": "nas"
+			"gloss": "nami"
 		},
 		"w089": {
 			"gloss": "Zdrowaś"
@@ -346,7 +346,7 @@
 			"gloss": "błogosławiona"
 		},
 		"w096": {
-			"gloss": "ty"
+			"gloss": "Ty"
 		},
 		"w097": {
 			"gloss": "między"
@@ -439,7 +439,7 @@
 			"gloss": "aby"
 		},
 		"w127": {
-			"gloss": "godni"
+			"gloss": "godnymi"
 		},
 		"w128": {
 			"gloss": "stali się"
@@ -466,7 +466,7 @@
 			"gloss": "Panie"
 		},
 		"w136": {
-			"gloss": "sercom"
+			"gloss": "umysłom"
 		},
 		"w137": {
 			"gloss": "naszym"
@@ -481,10 +481,10 @@
 			"gloss": "którzy"
 		},
 		"w141": {
-			"gloss": "przez anioła"
+			"gloss": "aniołem"
 		},
 		"w142": {
-			"gloss": "zwiastującego"
+			"gloss": "zwiastującym"
 		},
 		"w143": {
 			"gloss": "Chrystusa"

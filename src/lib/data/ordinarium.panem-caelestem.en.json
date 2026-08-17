@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.panem-caelestem",
 	"lang": "en",
 	"status": "working-edition",
@@ -203,7 +203,7 @@
 			"gloss": "say"
 		},
 		"w020": {
-			"gloss": "the word",
+			"gloss": "with the word",
 			"function": "Ablative of means with dic."
 		},
 		"w021": {
@@ -257,7 +257,7 @@
 			"gloss": "say"
 		},
 		"w037": {
-			"gloss": "the word"
+			"gloss": "with the word"
 		},
 		"w038": {
 			"gloss": "and"
@@ -308,7 +308,7 @@
 			"gloss": "say"
 		},
 		"w054": {
-			"gloss": "the word"
+			"gloss": "with the word"
 		},
 		"w055": {
 			"gloss": "and"

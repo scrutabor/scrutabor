@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.pater-noster",
 	"lang": "en",
 	"status": "working-edition",
@@ -323,7 +323,8 @@
 					"locator": "Ordo Missae, embolism after the Lord's Prayer",
 					"url": "https://archive.org/details/missale_romanum-1962"
 				}
-			]
+			],
+			"note": "The form is the ablative of both words at once. It can be malum, evil as a thing, or malus, the Evil One. Neither the form nor the sentence decides, and the tradition reads it both ways. This edition takes malum and marks the doubt."
 		},
 		"w060": {
 			"gloss": "amen",

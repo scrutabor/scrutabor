@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.praefatio-communis",
 	"title": "Præfatio communis",
 	"category": "ordinarium",
@@ -66,7 +66,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w005"
 				},
 				{
 					"id": "w003",
@@ -85,7 +86,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w005"
 				},
 				{
 					"id": "w005",
@@ -110,7 +112,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w005"
 				},
 				{
 					"id": "w007",
@@ -130,7 +133,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w005"
 				},
 				{
 					"id": "w009",
@@ -231,7 +235,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w016"
 				},
 				{
 					"id": "w018",
@@ -255,7 +260,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w020",
@@ -266,7 +272,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w021"
 				},
 				{
 					"id": "w021",
@@ -288,7 +295,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w023"
 				},
 				{
 					"id": "w023",
@@ -324,7 +332,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w024"
 				}
 			]
 		},
@@ -341,7 +350,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w027"
 				},
 				{
 					"id": "w027",
@@ -375,7 +385,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w028"
 				},
 				{
 					"id": "w030",
@@ -527,7 +538,8 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w041"
 				},
 				{
 					"id": "w041",
@@ -549,7 +561,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w043"
 				},
 				{
 					"id": "w043",
@@ -593,7 +606,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w046"
 				},
 				{
 					"id": "w046",
@@ -622,7 +636,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "f"
-					}
+					},
+					"head": "w049"
 				},
 				{
 					"id": "w049",
@@ -695,7 +710,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w055"
 				},
 				{
 					"id": "w055",
@@ -723,7 +739,8 @@
 						"mood": "part",
 						"voice": "act",
 						"conj": 3
-					}
+					},
+					"head": "w053"
 				}
 			]
 		}

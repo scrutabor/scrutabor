@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.sanctus",
 	"lang": "pl",
 	"status": "working-edition",
@@ -130,11 +130,11 @@
 			"gloss": "w"
 		},
 		"w021": {
-			"gloss": "imię",
+			"gloss": "imieniu",
 			"function": "Ablativus po „in” (w020) w stałym zwrocie „in nómine Dómini”: „w imię Pańskie”."
 		},
 		"w022": {
-			"gloss": "Pańskie"
+			"gloss": "Pana"
 		},
 		"w023": {
 			"gloss": "hosanna"

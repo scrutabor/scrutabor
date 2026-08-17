@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.corpus-tuum",
 	"title": "Corpus tuum",
 	"category": "ordinarium",
@@ -71,7 +71,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w001"
 				},
 				{
 					"id": "w003",
@@ -195,7 +196,8 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w011"
 				}
 			]
 		},
@@ -243,7 +245,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w017"
 				},
 				{
 					"id": "w017",
@@ -322,7 +325,8 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w027"
 				},
 				{
 					"id": "w024",
@@ -341,7 +345,8 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w027"
 				},
 				{
 					"id": "w026",
@@ -432,7 +437,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w033"
 				},
 				{
 					"id": "w033",

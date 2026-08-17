@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.suscipe-sancta-trinitas",
 	"title": "Súscipe, sancta Trínitas",
 	"category": "ordinarium",
@@ -73,7 +73,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w003"
 				},
 				{
 					"id": "w003",
@@ -162,7 +163,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w010"
 				},
 				{
 					"id": "w010",
@@ -267,7 +269,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w017"
 				},
 				{
 					"id": "w019",
@@ -284,7 +287,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w021"
 				},
 				{
 					"id": "w021",
@@ -307,7 +311,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w023"
 				},
 				{
 					"id": "w023",
@@ -359,7 +364,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w028"
 				},
 				{
 					"id": "w028",
@@ -403,7 +409,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w032"
 				},
 				{
 					"id": "w032",
@@ -486,7 +493,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w040"
 				},
 				{
 					"id": "w040",
@@ -498,7 +506,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w041",
@@ -540,7 +549,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w045"
 				},
 				{
 					"id": "w045",
@@ -580,7 +590,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w049"
 				},
 				{
 					"id": "w049",
@@ -621,7 +632,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w053"
 				},
 				{
 					"id": "w053",
@@ -666,7 +678,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w057"
 				},
 				{
 					"id": "w057",
@@ -725,7 +738,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w062"
 				},
 				{
 					"id": "w062",
@@ -747,7 +761,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w064"
 				},
 				{
 					"id": "w064",
@@ -794,7 +809,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w066"
 				},
 				{
 					"id": "w068",

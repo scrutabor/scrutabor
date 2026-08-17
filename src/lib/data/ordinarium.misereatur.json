@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.misereatur",
 	"title": "Misereátur",
 	"category": "ordinarium",
@@ -90,7 +90,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w004",
@@ -127,7 +128,8 @@
 						"mood": "part",
 						"voice": "pass",
 						"conj": 3
-					}
+					},
+					"head": "w007"
 				},
 				{
 					"id": "w007",
@@ -151,7 +153,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w007"
 				},
 				{
 					"id": "w009",
@@ -184,7 +187,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w012"
 				},
 				{
 					"id": "w012",
@@ -208,7 +212,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w012"
 				}
 			]
 		},
@@ -324,7 +329,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w019"
 				},
 				{
 					"id": "w021",
@@ -359,7 +365,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w026"
 				},
 				{
 					"id": "w024",
@@ -378,7 +385,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w026"
 				},
 				{
 					"id": "w026",

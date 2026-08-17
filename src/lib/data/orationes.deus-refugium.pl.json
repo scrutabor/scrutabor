@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "orationes.deus-refugium",
 	"lang": "pl",
 	"status": "working-edition",
@@ -82,38 +82,38 @@
 			"gloss": "a"
 		},
 		"w014": {
-			"gloss": "za wstawiennictwem",
+			"gloss": "wstawiającą się",
 			"function": "Ablativus absolutus z „Vírgine” (w018): gdy wstawia się Dziewica."
 		},
 		"w015": {
-			"gloss": "chwalebnej"
+			"gloss": "chwalebną"
 		},
 		"w016": {
 			"gloss": "i"
 		},
 		"w017": {
-			"gloss": "niepokalanej"
+			"gloss": "niepokalaną"
 		},
 		"w018": {
-			"gloss": "Dziewicy",
+			"gloss": "Dziewicą",
 			"function": "Rzeczownik konstrukcji ablativus absolutus. Zgadza się z nim „intercedénte” (w014) oraz oba przymiotniki."
 		},
 		"w019": {
 			"gloss": "Boga"
 		},
 		"w020": {
-			"gloss": "Rodzicielki",
+			"gloss": "Rodzicielką",
 			"function": "Dopowiedzenie do „Vírgine” (w018), w tym samym przypadku."
 		},
 		"w021": {
-			"gloss": "Maryi"
+			"gloss": "Maryją"
 		},
 		"w022": {
 			"gloss": "wraz z",
 			"function": "Przyimek rozpoczynający osobną frazę z ablativem."
 		},
 		"w023": {
-			"gloss": "świętym"
+			"gloss": "błogosławionym"
 		},
 		"w024": {
 			"gloss": "Józefem",
@@ -130,7 +130,7 @@
 			"gloss": "oraz"
 		},
 		"w028": {
-			"gloss": "świętymi"
+			"gloss": "błogosławionymi"
 		},
 		"w029": {
 			"gloss": "Apostołami"

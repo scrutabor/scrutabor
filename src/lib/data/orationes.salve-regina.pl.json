@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "orationes.salve-regina",
 	"lang": "pl",
 	"status": "working-edition",
@@ -85,7 +85,7 @@
 			"function": "Mianownik w apozycji do domyślnego podmiotu „clamámus” (w013)."
 		},
 		"w015": {
-			"gloss": "dzieci"
+			"gloss": "synowie"
 		},
 		"w016": {
 			"gloss": "Ewy"
@@ -227,7 +227,7 @@
 			"gloss": "święta"
 		},
 		"w061": {
-			"gloss": "Boża"
+			"gloss": "Boga"
 		},
 		"w062": {
 			"gloss": "Rodzicielko"
@@ -247,7 +247,7 @@
 			"function": "Ablativus zależny od „digni” (w064)."
 		},
 		"w067": {
-			"gloss": "Chrystusowych"
+			"gloss": "Chrystusa"
 		}
 	}
 }

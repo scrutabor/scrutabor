@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.misereatur",
 	"lang": "pl",
 	"status": "working-edition",
@@ -58,15 +58,15 @@
 			"gloss": "i"
 		},
 		"w006": {
-			"gloss": "odpuszczone",
+			"gloss": "odpuszczonymi",
 			"function": "Imiesłów tworzący z „peccátis” (w007) ablativus absolutus."
 		},
 		"w007": {
-			"gloss": "grzechy",
+			"gloss": "grzechami",
 			"function": "Rzeczownik w konstrukcji ablativus absolutus z „dimíssis” (w006)."
 		},
 		"w008": {
-			"gloss": "wasze"
+			"gloss": "waszymi"
 		},
 		"w009": {
 			"gloss": "niech doprowadzi",

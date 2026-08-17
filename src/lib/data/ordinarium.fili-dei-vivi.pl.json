@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.fili-dei-vivi",
 	"lang": "pl",
 	"status": "working-edition",
@@ -62,14 +62,14 @@
 			"gloss": "Ojca"
 		},
 		"w011": {
-			"gloss": "przy współdziałaniu",
+			"gloss": "współdziałającym",
 			"function": "Imiesłów deponentny tworzący ze „Spíritu” (w012) ablativus absolutus."
 		},
 		"w012": {
-			"gloss": "Ducha"
+			"gloss": "Duchem"
 		},
 		"w013": {
-			"gloss": "Świętego"
+			"gloss": "Świętym"
 		},
 		"w014": {
 			"gloss": "przez"

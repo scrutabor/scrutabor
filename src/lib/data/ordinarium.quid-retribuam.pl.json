@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.quid-retribuam",
 	"lang": "pl",
 	"status": "working-edition",
@@ -87,7 +87,8 @@
 					"locator": "verse 12",
 					"url": "https://bible.usccb.org/bible/psalms/116"
 				}
-			]
+			],
+			"note": "Końcówka -am jest tu zarazem czasem przyszłym i trybem łączącym. „Co oddam” albo „co mam oddać” — pytanie rozważające. Ta edycja przyjmuje tryb łączący i zaznacza wątpliwość."
 		},
 		"w003": {
 			"gloss": "Panu"
@@ -128,7 +129,7 @@
 			"gloss": "imienia"
 		},
 		"w014": {
-			"gloss": "Pańskiego"
+			"gloss": "Pana"
 		},
 		"w015": {
 			"gloss": "wzywać będę"

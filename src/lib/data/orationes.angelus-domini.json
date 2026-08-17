@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "orationes.angelus-domini",
 	"title": "Ángelus Dómini",
 	"category": "orationes",
@@ -122,6 +122,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w008",
 					"id": "w007"
 				},
 				{
@@ -146,6 +147,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w008",
 					"id": "w009"
 				}
 			]
@@ -203,7 +205,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w011"
 				},
 				{
 					"id": "w014",
@@ -237,7 +240,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w017"
 				},
 				{
 					"id": "w017",
@@ -256,7 +260,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w019"
 				},
 				{
 					"id": "w019",
@@ -288,7 +293,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w022"
 				},
 				{
 					"id": "w022",
@@ -323,7 +329,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w023"
 				},
 				{
 					"id": "w025",
@@ -346,7 +353,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w027"
 				},
 				{
 					"id": "w027",
@@ -407,7 +415,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w032"
 				},
 				{
 					"id": "w032",
@@ -455,7 +464,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w037",
@@ -491,7 +501,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w038"
 				},
 				{
 					"id": "w040",
@@ -579,6 +590,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w047",
 					"id": "w046"
 				},
 				{
@@ -603,6 +615,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w047",
 					"id": "w048"
 				}
 			]
@@ -660,7 +673,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w050"
 				},
 				{
 					"id": "w053",
@@ -694,7 +708,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w056"
 				},
 				{
 					"id": "w056",
@@ -713,7 +728,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w058"
 				},
 				{
 					"id": "w058",
@@ -745,7 +761,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w061"
 				},
 				{
 					"id": "w061",
@@ -780,7 +797,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w062"
 				},
 				{
 					"id": "w064",
@@ -803,7 +821,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w066"
 				},
 				{
 					"id": "w066",
@@ -864,7 +883,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w071"
 				},
 				{
 					"id": "w071",
@@ -912,7 +932,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w076"
 				},
 				{
 					"id": "w076",
@@ -948,7 +969,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w077"
 				},
 				{
 					"id": "w079",
@@ -1011,6 +1033,7 @@
 						"gender": "n",
 						"conj": 3
 					},
+					"head": "w081",
 					"id": "w083"
 				},
 				{
@@ -1063,6 +1086,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w088",
 					"id": "w087"
 				},
 				{
@@ -1131,7 +1155,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w090"
 				},
 				{
 					"id": "w093",
@@ -1165,7 +1190,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w096"
 				},
 				{
 					"id": "w096",
@@ -1184,7 +1210,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w098"
 				},
 				{
 					"id": "w098",
@@ -1216,7 +1243,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w101"
 				},
 				{
 					"id": "w101",
@@ -1251,7 +1279,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w102"
 				},
 				{
 					"id": "w104",
@@ -1274,7 +1303,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w106"
 				},
 				{
 					"id": "w106",
@@ -1335,7 +1365,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w111"
 				},
 				{
 					"id": "w111",
@@ -1383,7 +1414,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w116"
 				},
 				{
 					"id": "w116",
@@ -1419,7 +1451,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w117"
 				},
 				{
 					"id": "w119",
@@ -1458,6 +1491,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w122",
 					"id": "w121"
 				},
 				{
@@ -1480,6 +1514,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w125",
 					"id": "w123"
 				},
 				{
@@ -1531,7 +1566,8 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"id": "w127"
+					"id": "w127",
+					"head": "w128"
 				},
 				{
 					"form": "efficiámur",
@@ -1623,6 +1659,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w132",
 					"id": "w133"
 				},
 				{
@@ -1681,6 +1718,7 @@
 						"number": "pl",
 						"gender": "f"
 					},
+					"head": "w136",
 					"id": "w137"
 				},
 				{
@@ -1744,6 +1782,7 @@
 						"gender": "m",
 						"conj": 1
 					},
+					"head": "w141",
 					"id": "w142"
 				},
 				{
@@ -1787,6 +1826,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w144",
 					"id": "w145"
 				},
 				{
@@ -1823,6 +1863,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w149",
 					"id": "w148"
 				},
 				{
@@ -1876,6 +1917,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w155",
 					"id": "w153"
 				},
 				{
@@ -1924,6 +1966,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w158",
 					"id": "w157"
 				},
 				{
@@ -1971,6 +2014,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w160",
 					"id": "w161"
 				},
 				{

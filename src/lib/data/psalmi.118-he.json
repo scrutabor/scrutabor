@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "psalmi.118-he",
 	"title": "Psalmus 118, HE",
 	"category": "psalmi",
@@ -119,7 +119,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "f"
-					}
+					},
+					"head": "w006"
 				},
 				{
 					"id": "w008",
@@ -141,6 +142,15 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"analysis": {
+						"confidence": "medium",
+						"sources": [
+							"editorial",
+							"whitakers",
+							"collatinus"
+						],
+						"review": "disputed"
 					}
 				},
 				{
@@ -251,7 +261,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w017"
 				},
 				{
 					"id": "w019",
@@ -293,7 +304,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w023",
@@ -304,7 +316,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w024",
@@ -328,7 +341,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w024"
 				}
 			]
 		},
@@ -368,7 +382,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w029"
 				},
 				{
 					"id": "w029",
@@ -404,7 +419,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w030"
 				},
 				{
 					"id": "w032",
@@ -481,7 +497,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w036"
 				},
 				{
 					"id": "w038",
@@ -490,7 +507,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w039"
 				},
 				{
 					"id": "w039",
@@ -514,7 +532,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w039"
 				},
 				{
 					"id": "w041",
@@ -539,7 +558,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w044"
 				},
 				{
 					"id": "w044",
@@ -596,7 +616,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w046"
 				},
 				{
 					"id": "w048",
@@ -640,7 +661,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w052"
 				},
 				{
 					"id": "w052",
@@ -663,7 +685,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w052"
 				},
 				{
 					"id": "w054",
@@ -732,7 +755,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w057"
 				},
 				{
 					"id": "w059",
@@ -756,7 +780,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w059"
 				},
 				{
 					"id": "w061",
@@ -765,7 +790,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w062"
 				},
 				{
 					"id": "w062",
@@ -789,7 +815,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w062"
 				}
 			]
 		},
@@ -833,7 +860,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w065"
 				},
 				{
 					"id": "w067",
@@ -859,7 +887,8 @@
 						"gender": "m",
 						"case": "nom",
 						"conj": 1
-					}
+					},
+					"head": "w069"
 				},
 				{
 					"id": "w069",
@@ -904,7 +933,8 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w071"
 				},
 				{
 					"id": "w073",
@@ -916,7 +946,8 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w071"
 				}
 			]
 		},
@@ -970,7 +1001,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w076"
 				},
 				{
 					"id": "w078",
@@ -979,7 +1011,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w079"
 				},
 				{
 					"id": "w079",
@@ -1002,7 +1035,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w079"
 				},
 				{
 					"id": "w081",

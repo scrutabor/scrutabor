@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.panem-caelestem",
 	"title": "Panem cæléstem",
 	"category": "ordinarium",
@@ -70,7 +70,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w001"
 				},
 				{
 					"id": "w003",
@@ -199,7 +200,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w010"
 				}
 			]
 		},
@@ -251,7 +253,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w015"
 				},
 				{
 					"id": "w015",
@@ -275,7 +278,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w015"
 				},
 				{
 					"id": "w017",
@@ -364,7 +368,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w023"
 				}
 			]
 		},
@@ -418,7 +423,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w027"
 				}
 			]
 		},
@@ -470,7 +476,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w032"
 				},
 				{
 					"id": "w032",
@@ -494,7 +501,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w032"
 				},
 				{
 					"id": "w034",
@@ -583,7 +591,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w040"
 				}
 			]
 		},
@@ -637,7 +646,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w044"
 				}
 			]
 		},
@@ -689,7 +699,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w049"
 				},
 				{
 					"id": "w049",
@@ -713,7 +724,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w049"
 				},
 				{
 					"id": "w051",
@@ -802,7 +814,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w057"
 				}
 			]
 		},
@@ -858,7 +871,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w060"
 				},
 				{
 					"id": "w062",
@@ -918,7 +932,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w065"
 				},
 				{
 					"id": "w067",
@@ -927,7 +942,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w068"
 				},
 				{
 					"id": "w068",
@@ -951,7 +967,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w068"
 				},
 				{
 					"id": "w070",

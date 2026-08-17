@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"lang": "pl",
 	"status": "working-edition",
 	"analysis_defaults": {
@@ -14,7 +14,7 @@
 			"senses": [
 				"Abel"
 			],
-			"note": "Hebrajskie imię, w łacinie nieodmienne. Drugi syn Adama; jego ofiara z owiec została przyjęta, ofiara Kaina nie (Rdz 4).",
+			"note": "Hebrajskie imię, w łacinie nieodmienne. Drugi syn Adama. Jego ofiara z owiec została przyjęta, ofiara Kaina nie (Rdz 4).",
 			"note_citations": [
 				{
 					"title": "Brown–Driver–Briggs, A Hebrew and English Lexicon",
@@ -35,7 +35,7 @@
 			"senses": [
 				"Abraham"
 			],
-			"note": "Imię hebrajskie; łacina daje mu dopełniacz Ábrahæ, ale pozostałych przypadków nie odmienia jednolicie.",
+			"note": "Imię hebrajskie. Łacina daje mu dopełniacz Ábrahæ, ale pozostałych przypadków nie odmienia jednolicie.",
 			"note_citations": [
 				{
 					"title": "Biblia Sacra Vulgata",
@@ -215,7 +215,7 @@
 			"senses": [
 				"Jezus"
 			],
-			"note": "Przez grekę z hebrajskiego imienia Jeszua — „Pan zbawia”; odmiana nieregularna (mianownik Iesus, biernik Iesum, pozostałe przypadki Iesu).",
+			"note": "Przez grekę z hebrajskiego imienia Jeszua — „Pan zbawia”. Odmiana nieregularna (mianownik Iesus, biernik Iesum, pozostałe przypadki Iesu).",
 			"note_citations": [
 				{
 					"title": "Catechismus Catholicae Ecclesiae",
@@ -384,7 +384,7 @@
 			"senses": [
 				"Piotr"
 			],
-			"note": "Aramejskie Kefas znaczy „skała”; w J 1,42 Ewangelista objaśnia je greckim Pétros.",
+			"note": "Aramejskie Kefas znaczy „skała”. W J 1,42 Ewangelista objaśnia je greckim Pétros.",
 			"note_citations": [
 				{
 					"title": "Biblia Sacra Vulgata",
@@ -595,7 +595,8 @@
 		},
 		"adsumo": {
 			"senses": [
-				"przyjmować; brać w górę"
+				"przyjmować",
+				"brać w górę"
 			]
 		},
 		"aduno": {
@@ -677,7 +678,8 @@
 		},
 		"affectus": {
 			"senses": [
-				"uczucie; usposobienie"
+				"uczucie",
+				"usposobienie"
 			]
 		},
 		"afflictus": {
@@ -724,7 +726,8 @@
 		},
 		"agonia": {
 			"senses": [
-				"agonia; zmaganie"
+				"agonia",
+				"zmaganie"
 			]
 		},
 		"aliqui": {
@@ -745,7 +748,7 @@
 				"chwalcie Pana",
 				"alleluja"
 			],
-			"note": "Hebrajskie hallelu-Jah — „chwalcie Pana”; wyraz przejęty przez grekę i nieodmienny w łacinie.",
+			"note": "Hebrajskie hallelu-Jah — „chwalcie Pana”. Wyraz przejęty przez grekę i nieodmienny w łacinie.",
 			"note_citations": [
 				{
 					"title": "Brown–Driver–Briggs, A Hebrew and English Lexicon",
@@ -857,7 +860,7 @@
 				"anioł",
 				"posłaniec"
 			],
-			"note": "Greckie ángelos znaczy „posłaniec”; przez grekę słowo weszło do łaciny.",
+			"note": "Greckie ángelos znaczy „posłaniec”. Przez grekę słowo weszło do łaciny.",
 			"note_citations": [
 				{
 					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
@@ -968,7 +971,8 @@
 		},
 		"arca": {
 			"senses": [
-				"arka; skrzynia"
+				"arka",
+				"skrzynia"
 			]
 		},
 		"archangelus": {
@@ -1017,12 +1021,14 @@
 		},
 		"attero": {
 			"senses": [
-				"ścierać; kruszyć"
+				"ścierać",
+				"kruszyć"
 			]
 		},
 		"auctor": {
 			"senses": [
-				"twórca; dawca"
+				"twórca",
+				"dawca"
 			]
 		},
 		"audeo": {
@@ -1116,7 +1122,7 @@
 			"senses": [
 				"chrzest"
 			],
-			"note": "Greckie zapożyczenie rodzaju nijakiego; dopełniacz baptísmatis.",
+			"note": "Greckie zapożyczenie rodzaju nijakiego. Dopełniacz baptísmatis.",
 			"note_citations": [
 				{
 					"title": "Lewis and Short, A Latin Dictionary",
@@ -1232,7 +1238,8 @@
 		},
 		"candor": {
 			"senses": [
-				"blask; jasność"
+				"blask",
+				"jasność"
 			]
 		},
 		"capio": {
@@ -1242,8 +1249,7 @@
 				"przyjmować"
 			],
 			"derivatives": [
-				"koncepcja",
-				"recepcja"
+				"koncepcja"
 			]
 		},
 		"caput": {
@@ -1536,10 +1542,6 @@
 				"wyznawać",
 				"spowiadać się",
 				"wysławiać"
-			],
-			"derivatives": [
-				"konfesjonał",
-				"konfesja"
 			]
 		},
 		"confugio": {
@@ -1580,7 +1582,8 @@
 		},
 		"consilium": {
 			"senses": [
-				"rada; zamysł"
+				"rada",
+				"zamysł"
 			]
 		},
 		"consolatio": {
@@ -1687,7 +1690,6 @@
 			],
 			"note": "Strona bierna często ma znaczenie zwrotne: „zwrócić się ku komuś”.",
 			"derivatives": [
-				"konwersja",
 				"konwertyta"
 			]
 		},
@@ -1738,7 +1740,7 @@
 				"wierzyć w kogoś, w coś",
 				"powierzać, zawierzać"
 			],
-			"note": "Z celownikiem osoby: credo tibi — „wierzę ci”; z in i biernikiem: „wierzę w kogoś”.",
+			"note": "Z celownikiem osoby: credo tibi — „wierzę ci”. Z in i biernikiem: „wierzę w kogoś”.",
 			"derivatives": [
 				"credo",
 				"kredyt"
@@ -1803,7 +1805,8 @@
 		},
 		"custodia": {
 			"senses": [
-				"straż; czuwanie"
+				"straż",
+				"czuwanie"
 			]
 		},
 		"custodio": {
@@ -1842,7 +1845,7 @@
 				"o, na temat",
 				"według, na podstawie"
 			],
-			"note": "De oznacza między innymi oddzielenie lub ruch z góry; ex często wskazuje ruch z wnętrza."
+			"note": "De oznacza między innymi oddzielenie lub ruch z góry. Ex często wskazuje ruch z wnętrza."
 		},
 		"debitor": {
 			"senses": [
@@ -1940,7 +1943,8 @@
 		},
 		"destituo": {
 			"senses": [
-				"opuszczać; pozbawiać"
+				"opuszczać",
+				"pozbawiać"
 			]
 		},
 		"detrudo": {
@@ -1980,7 +1984,7 @@
 				"prawica",
 				"prawa ręka"
 			],
-			"note": "Domyślnie „(manus) déxtera” — prawa ręka; „po prawicy” to w Piśmie miejsce honorowe.",
+			"note": "Domyślnie „(manus) déxtera” — prawa ręka. „Po prawicy” to w Piśmie miejsce honorowe.",
 			"note_citations": [
 				{
 					"title": "Lewis and Short, A Latin Dictionary",
@@ -2020,7 +2024,7 @@
 				"doba",
 				"wyznaczony dzień, termin"
 			],
-			"note": "Jeden z niewielu rzeczowników V deklinacji; zwykle rodzaju męskiego, żeński zwłaszcza wtedy, gdy znaczy dzień wyznaczony, termin.",
+			"note": "Jeden z niewielu rzeczowników V deklinacji. Zwykle rodzaju męskiego, żeński zwłaszcza wtedy, gdy znaczy dzień wyznaczony, termin.",
 			"derivatives": [
 				"diariusz"
 			]
@@ -2039,7 +2043,7 @@
 				"raczyć",
 				"uznawać za godne"
 			],
-			"note": "Czasownik deponens od dignus — godny; dignéris znaczy „racz”."
+			"note": "Czasownik deponens od dignus — godny. Dignéris znaczy „racz”."
 		},
 		"dignus": {
 			"senses": [
@@ -2198,9 +2202,6 @@
 		"donum": {
 			"senses": [
 				"dar"
-			],
-			"derivatives": [
-				"donacja"
 			]
 		},
 		"dormio": {
@@ -2245,7 +2246,7 @@
 				"oto",
 				"patrz"
 			],
-			"note": "Wykrzyknik wskazujący; samodzielnie łączy się z mianownikiem (ecce homo). Może też wskazywać całe zdanie — wtedy rzeczownik po nim bywa dopełnieniem swojego czasownika."
+			"note": "Wykrzyknik wskazujący. Samodzielnie łączy się z mianownikiem (ecce homo). Może też wskazywać całe zdanie — wtedy rzeczownik po nim bywa dopełnieniem swojego czasownika."
 		},
 		"ecclesia": {
 			"senses": [
@@ -2373,7 +2374,7 @@
 				"iść",
 				"udać się"
 			],
-			"note": "Czasownik nieregularny; tryb rozkazujący liczby mnogiej: ite.",
+			"note": "Czasownik nieregularny. Tryb rozkazujący liczby mnogiej: ite.",
 			"derivatives": [
 				"tranzyt",
 				"ambicja"
@@ -2451,7 +2452,7 @@
 				"z, od (pochodzenie)",
 				"wskutek, na podstawie"
 			],
-			"note": "Przed samogłoską zawsze „ex”; przed spółgłoską spotyka się i „e”, i „ex” (ex María Vírgine)."
+			"note": "Przed samogłoską zawsze „ex”. Przed spółgłoską spotyka się i „e”, i „ex” (ex María Vírgine)."
 		},
 		"exaltatio": {
 			"senses": [
@@ -2493,7 +2494,8 @@
 		},
 		"exemplar": {
 			"senses": [
-				"wzór; przykład"
+				"wzór",
+				"przykład"
 			]
 		},
 		"exilium": {
@@ -2542,7 +2544,7 @@
 				"tworzyć, wykonywać",
 				"sprawiać, powodować"
 			],
-			"note": "W czasach opartych na temacie praesentis stronę bierną zastępuje fio (stawać się); w czasach perfectum tworzy ją factus sum.",
+			"note": "W czasach opartych na temacie praesentis stronę bierną zastępuje fio (stawać się). W czasach perfectum tworzy ją factus sum.",
 			"derivatives": [
 				"fakt",
 				"faktura"
@@ -2631,7 +2633,7 @@
 				"dziać się",
 				"być czynionym"
 			],
-			"note": "Czasownik nieregularny; zastępuje stronę bierną „fácere” (czynić) w czasach opartych na temacie praesentis — perfectum bierne to factus sum."
+			"note": "Czasownik nieregularny. Zastępuje stronę bierną „fácere” (czynić) w czasach opartych na temacie praesentis — perfectum bierne to factus sum."
 		},
 		"fleo": {
 			"senses": [
@@ -2667,12 +2669,14 @@
 		},
 		"fornax": {
 			"senses": [
-				"piec; ognisko"
+				"piec",
+				"ognisko"
 			]
 		},
 		"fornicatio": {
 			"senses": [
-				"nieczystość; rozpusta"
+				"nieczystość",
+				"rozpusta"
 			]
 		},
 		"fortis": {
@@ -2720,7 +2724,7 @@
 				"przyszły",
 				"mający nastąpić"
 			],
-			"note": "Imiesłów przyszły czasownika sum; w liczbie mnogiej rodzaju nijakiego futura oznacza „rzeczy przyszłe”."
+			"note": "Imiesłów przyszły czasownika sum. W liczbie mnogiej rodzaju nijakiego futura oznacza „rzeczy przyszłe”."
 		},
 		"gaudeo": {
 			"senses": [
@@ -2750,7 +2754,7 @@
 				"rodzicielka",
 				"matka"
 			],
-			"note": "Rzeczownik od gigno — rodzić; spotyka się też pisownię genitrix."
+			"note": "Rzeczownik od gigno — rodzić. Spotyka się też pisownię genitrix."
 		},
 		"gens": {
 			"senses": [
@@ -2817,7 +2821,8 @@
 		},
 		"gubernatio": {
 			"senses": [
-				"kierowanie; opieka"
+				"kierowanie",
+				"opieka"
 			]
 		},
 		"habeo": {
@@ -2851,14 +2856,14 @@
 				"ta",
 				"to"
 			],
-			"note": "Zaimek wskazujący na to, co jest blisko mówiącego; nie mylić z przysłówkiem hic — tu, tutaj."
+			"note": "Zaimek wskazujący na to, co jest blisko mówiącego. Nie mylić z przysłówkiem hic — tu, tutaj."
 		},
 		"hic_adverbium": {
 			"senses": [
 				"tu",
 				"tutaj"
 			],
-			"note": "Przysłówek miejsca; nie mylić z zaimkiem wskazującym hic, hæc, hoc — ten."
+			"note": "Przysłówek miejsca. Nie mylić z zaimkiem wskazującym hic, hæc, hoc — ten."
 		},
 		"hodie": {
 			"senses": [
@@ -2900,7 +2905,7 @@
 				"hosanna",
 				"ratuj, prosimy!"
 			],
-			"note": "Hebrajski okrzyk z Ps 117, 25, podjęty przez tłum witający Chrystusa w Mt 21, 9. Łacina zachowuje go bez tłumaczenia; słowo jest nieodmienne.",
+			"note": "Hebrajski okrzyk z Ps 117, 25, podjęty przez tłum witający Chrystusa w Mt 21, 9. Łacina zachowuje go bez tłumaczenia. Słowo jest nieodmienne.",
 			"note_citations": [
 				{
 					"title": "Biblia Sacra Vulgata",
@@ -2962,7 +2967,8 @@
 		},
 		"ianua": {
 			"senses": [
-				"brama; drzwi"
+				"brama",
+				"drzwi"
 			]
 		},
 		"idem": {
@@ -2970,7 +2976,7 @@
 				"ten sam",
 				"tenże"
 			],
-			"note": "Zaimek is z dodanym -dem; przed d głoska m przechodzi w n (eúndem)."
+			"note": "Zaimek is z dodanym -dem. Przed d głoska m przechodzi w n (eúndem)."
 		},
 		"ideo": {
 			"senses": [
@@ -3152,7 +3158,7 @@
 				"otchłań",
 				"podziemie"
 			],
-			"note": "Rzeczownikowo występuje w liczbie mnogiej; ab ínferis znaczy „spośród umarłych”.",
+			"note": "Rzeczownikowo występuje w liczbie mnogiej. Ab ínferis znaczy „spośród umarłych”.",
 			"note_citations": [
 				{
 					"title": "Lewis and Short, A Latin Dictionary",
@@ -3190,7 +3196,8 @@
 		},
 		"infirmus": {
 			"senses": [
-				"chory; słaby"
+				"chory",
+				"słaby"
 			]
 		},
 		"infundo": {
@@ -3268,7 +3275,8 @@
 		},
 		"insignis": {
 			"senses": [
-				"znamienity; szczególny"
+				"znamienity",
+				"szczególny"
 			]
 		},
 		"inspiratio": {
@@ -3278,7 +3286,8 @@
 		},
 		"instituo": {
 			"senses": [
-				"ustanawiać; utwierdzać"
+				"ustanawiać",
+				"utwierdzać"
 			]
 		},
 		"institutio": {
@@ -3305,12 +3314,14 @@
 		},
 		"intemeratus": {
 			"senses": [
-				"nienaruszony; nieskalany"
+				"nienaruszony",
+				"nieskalany"
 			]
 		},
 		"intendo": {
 			"senses": [
-				"nakłaniać; kierować"
+				"nakłaniać",
+				"kierować"
 			]
 		},
 		"inter": {
@@ -3347,14 +3358,14 @@
 				"wchodzić",
 				"wstępować"
 			],
-			"note": "Czasownik; nie mylić z identycznie zapisywanym przysłówkiem intro — „do środka”."
+			"note": "Czasownik. Nie mylić z identycznie zapisywanym przysłówkiem intro — „do środka”."
 		},
 		"introeo": {
 			"senses": [
 				"wchodzić",
 				"wstępować"
 			],
-			"note": "Złożenie intro i eo; odmienia się nieregularnie jak eo.",
+			"note": "Złożenie intro i eo. Odmienia się nieregularnie jak eo.",
 			"derivatives": [
 				"introit"
 			]
@@ -3548,12 +3559,14 @@
 		},
 		"labes": {
 			"senses": [
-				"zmaza; skaza"
+				"zmaza",
+				"skaza"
 			]
 		},
 		"labor": {
 			"senses": [
-				"trud; praca"
+				"trud",
+				"praca"
 			]
 		},
 		"lacryma": {
@@ -3587,7 +3600,8 @@
 		},
 		"languor": {
 			"senses": [
-				"słabość; cierpienie"
+				"słabość",
+				"cierpienie"
 			]
 		},
 		"largitor": {
@@ -3727,7 +3741,8 @@
 		},
 		"magister": {
 			"senses": [
-				"mistrz; nauczyciel"
+				"mistrz",
+				"nauczyciel"
 			]
 		},
 		"magnus": {
@@ -3798,7 +3813,7 @@
 			"senses": [
 				"męczennik"
 			],
-			"note": "Greckie mártys znaczy „świadek”; męczennik daje Chrystusowi najwyższe świadectwo, aż do śmierci.",
+			"note": "Greckie mártys znaczy „świadek”. Męczennik daje Chrystusowi najwyższe świadectwo, aż do śmierci.",
 			"note_citations": [
 				{
 					"title": "Liddell–Scott–Jones, A Greek–English Lexicon",
@@ -3865,10 +3880,7 @@
 				"pamiętający",
 				"pomny"
 			],
-			"note": "Łączy się z dopełniaczem.",
-			"derivatives": [
-				"memoriał"
-			]
+			"note": "Łączy się z dopełniaczem."
 		},
 		"memoria": {
 			"senses": [
@@ -3924,7 +3936,8 @@
 		},
 		"migro": {
 			"senses": [
-				"wędrować; migrować"
+				"wędrować",
+				"migrować"
 			]
 		},
 		"militia": {
@@ -3961,7 +3974,7 @@
 				"zmiłować się",
 				"litować się"
 			],
-			"note": "Zwykle z dopełniaczem (miserére mei, misereátur vestri); formuły liturgiczne znają też celownik (miserére nobis)."
+			"note": "Zwykle z dopełniaczem (miserére mei, misereátur vestri). Formuły liturgiczne znają też celownik (miserére nobis)."
 		},
 		"misericordia": {
 			"senses": [
@@ -3993,7 +4006,8 @@
 		},
 		"mitis": {
 			"senses": [
-				"cichy; łagodny"
+				"cichy",
+				"łagodny"
 			]
 		},
 		"mitto": {
@@ -4122,7 +4136,8 @@
 		},
 		"mysticus": {
 			"senses": [
-				"mistyczny; duchowy"
+				"mistyczny",
+				"duchowy"
 			]
 		},
 		"nam": {
@@ -4330,7 +4345,8 @@
 		},
 		"observo": {
 			"senses": [
-				"baczyć; zachowywać"
+				"baczyć",
+				"zachowywać"
 			]
 		},
 		"oculus": {
@@ -4367,7 +4383,7 @@
 				"składać w ofierze",
 				"przynosić"
 			],
-			"note": "Złożenie ob- + fero; odmienia się nieregularnie jak fero.",
+			"note": "Złożenie ob- + fero. Odmienia się nieregularnie jak fero.",
 			"derivatives": [
 				"oferta"
 			]
@@ -4437,7 +4453,8 @@
 		},
 		"originalis": {
 			"senses": [
-				"pierworodny; pierwotny"
+				"pierworodny",
+				"pierwotny"
 			]
 		},
 		"oro": {
@@ -4448,7 +4465,6 @@
 			],
 			"note": "To ten sam czasownik, co w wezwaniu „Orémus” — módlmy się.",
 			"derivatives": [
-				"oracja",
 				"oratorium"
 			]
 		},
@@ -4466,7 +4482,7 @@
 				"twarz",
 				"mowa"
 			],
-			"note": "Nie mylić z os, ossis („kość”); oba rzeczowniki mają taki sam mianownik, lecz różne tematy.",
+			"note": "Nie mylić z os, ossis („kość”). Oba rzeczowniki mają taki sam mianownik, lecz różne tematy.",
 			"derivatives": [
 				"oralny"
 			]
@@ -4511,12 +4527,14 @@
 		},
 		"parco": {
 			"senses": [
-				"oszczędzać; przepuszczać"
+				"oszczędzać",
+				"przepuszczać"
 			]
 		},
 		"pariter": {
 			"senses": [
-				"jednakowo; zarazem"
+				"jednakowo",
+				"zarazem"
 			]
 		},
 		"pars": {
@@ -4589,7 +4607,6 @@
 				}
 			],
 			"derivatives": [
-				"pasja",
 				"pacjent",
 				"pasywny"
 			]
@@ -4738,7 +4755,8 @@
 		},
 		"persolvo": {
 			"senses": [
-				"składać; uiszczać"
+				"składać",
+				"uiszczać"
 			]
 		},
 		"perturbatio": {
@@ -4796,9 +4814,6 @@
 				"pobożny",
 				"łaskawy",
 				"czuły"
-			],
-			"derivatives": [
-				"pietyzm"
 			]
 		},
 		"placatus": {
@@ -4817,7 +4832,8 @@
 		},
 		"placo": {
 			"senses": [
-				"przebłagać; ułagodzić"
+				"przebłagać",
+				"ułagodzić"
 			]
 		},
 		"plebs": {
@@ -4957,7 +4973,8 @@
 		},
 		"praedico": {
 			"senses": [
-				"głosić; wysławiać"
+				"głosić",
+				"wysławiać"
 			]
 		},
 		"praelium": {
@@ -5066,8 +5083,7 @@
 				"książę"
 			],
 			"derivatives": [
-				"pryncypał",
-				"pryncypialny"
+				"pryncypał"
 			]
 		},
 		"principium": {
@@ -5153,7 +5169,8 @@
 		},
 		"propitiatio": {
 			"senses": [
-				"przebłaganie; ubłaganie"
+				"przebłaganie",
+				"ubłaganie"
 			]
 		},
 		"propitius": {
@@ -5232,7 +5249,8 @@
 		},
 		"pulso": {
 			"senses": [
-				"kołatać; uderzać"
+				"kołatać",
+				"uderzać"
 			]
 		},
 		"puritas": {
@@ -5260,7 +5278,7 @@
 				"proszę",
 				"błagam"
 			],
-			"note": "Czasownik ułomny; zachowały się głównie formy quæso i quǽsumus, używane w prośbach."
+			"note": "Czasownik ułomny. Zachowały się głównie formy quæso i quǽsumus, używane w prośbach."
 		},
 		"quam": {
 			"senses": [
@@ -5375,7 +5393,8 @@
 		},
 		"receptaculum": {
 			"senses": [
-				"skarbnica; miejsce przyjęcia"
+				"skarbnica",
+				"miejsce przyjęcia"
 			]
 		},
 		"recipio": {
@@ -5851,7 +5870,8 @@
 		},
 		"scientia": {
 			"senses": [
-				"wiedza; umiejętność"
+				"wiedza",
+				"umiejętność"
 			]
 		},
 		"scio": {
@@ -5918,6 +5938,15 @@
 				"rezydencja"
 			]
 		},
+		"sedes": {
+			"senses": [
+				"siedziba",
+				"stolica, tron"
+			],
+			"derivatives": [
+				"stolica (biskupia)"
+			]
+		},
 		"semita": {
 			"senses": [
 				"ścieżka",
@@ -5954,14 +5983,15 @@
 		},
 		"sepultura": {
 			"senses": [
-				"pogrzeb; złożenie do grobu"
+				"pogrzeb",
+				"złożenie do grobu"
 			]
 		},
 		"seraphim": {
 			"senses": [
 				"serafiny"
 			],
-			"note": "Hebrajska forma liczby mnogiej; liczba pojedyncza: seraph. W łacinie nieodmienna.",
+			"note": "Hebrajska forma liczby mnogiej. Liczba pojedyncza: seraph. W łacinie nieodmienna.",
 			"note_citations": [
 				{
 					"title": "Brown–Driver–Briggs, A Hebrew and English Lexicon",
@@ -6068,7 +6098,8 @@
 		},
 		"sinus": {
 			"senses": [
-				"łono; pierś"
+				"łono",
+				"pierś"
 			]
 		},
 		"societas": {
@@ -6105,7 +6136,8 @@
 		},
 		"soliditas": {
 			"senses": [
-				"stałość; mocny fundament"
+				"stałość",
+				"mocny fundament"
 			]
 		},
 		"solus": {
@@ -6150,9 +6182,6 @@
 		"spes": {
 			"senses": [
 				"nadzieja"
-			],
-			"derivatives": [
-				"desperacja"
 			]
 		},
 		"spiritualis": {
@@ -6194,8 +6223,7 @@
 			"note": "Od stare — stać.",
 			"derivatives": [
 				"statut",
-				"statua",
-				"instytucja"
+				"statua"
 			]
 		},
 		"stella": {
@@ -6358,7 +6386,8 @@
 		},
 		"sustineo": {
 			"senses": [
-				"czekać; podtrzymywać"
+				"czekać",
+				"podtrzymywać"
 			]
 		},
 		"suus": {
@@ -6465,7 +6494,8 @@
 		},
 		"thesaurus": {
 			"senses": [
-				"skarb; skarbiec"
+				"skarb",
+				"skarbiec"
 			]
 		},
 		"timor": {
@@ -6531,7 +6561,8 @@
 		},
 		"tristitia": {
 			"senses": [
-				"smutek; utrapienie"
+				"smutek",
+				"utrapienie"
 			]
 		},
 		"tu": {
@@ -6571,7 +6602,7 @@
 				"razem",
 				"wspólnie"
 			],
-			"note": "Przysłówek utworzony od ablativu unus; una cum znaczy „razem z”."
+			"note": "Przysłówek utworzony od ablativu unus. Una cum znaczy „razem z”."
 		},
 		"unde": {
 			"senses": [
@@ -6624,7 +6655,8 @@
 		},
 		"usque": {
 			"senses": [
-				"aż; nieprzerwanie"
+				"aż",
+				"nieprzerwanie"
 			]
 		},
 		"ut": {
@@ -6633,14 +6665,14 @@
 				"żeby",
 				"jak"
 			],
-			"note": "Z trybem łączącym znaczy aby; z oznajmującym — jak, tak jak."
+			"note": "Z trybem łączącym znaczy aby. Z oznajmującym — jak, tak jak."
 		},
 		"uti": {
 			"senses": [
 				"aby",
 				"żeby"
 			],
-			"note": "Starsza postać ut; nie mylić z bezokolicznikiem od utor."
+			"note": "Starsza postać ut. Nie mylić z bezokolicznikiem od utor."
 		},
 		"utilitas": {
 			"senses": [
@@ -6807,7 +6839,7 @@
 				"mąż",
 				"mężczyzna"
 			],
-			"note": "Vir to mężczyzna; homo to człowiek bez względu na płeć."
+			"note": "Vir to mężczyzna. Homo to człowiek bez względu na płeć."
 		},
 		"virgo": {
 			"senses": [
@@ -6880,7 +6912,7 @@
 				"chcieć",
 				"pragnąć"
 			],
-			"note": "Czasownik nieregularny; nie ma strony biernej ani supinum.",
+			"note": "Czasownik nieregularny. Nie ma strony biernej ani supinum.",
 			"derivatives": [
 				"woluntarny"
 			]

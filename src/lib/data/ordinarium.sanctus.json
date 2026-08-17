@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.sanctus",
 	"title": "Sanctus",
 	"category": "ordinarium",
@@ -59,7 +59,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w002",
@@ -71,7 +72,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w003",
@@ -82,7 +84,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w004",
@@ -153,7 +156,8 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w009"
 				},
 				{
 					"id": "w008",
@@ -230,7 +234,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w012"
 				}
 			],
 			"participation": {
@@ -265,7 +270,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w016"
 				},
 				{
 					"id": "w016",
@@ -277,7 +283,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"substantive": true
 				}
 			],
 			"participation": {
@@ -306,7 +313,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w018",
@@ -340,7 +348,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w021"
 				},
 				{
 					"id": "w021",
@@ -400,7 +409,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w025"
 				},
 				{
 					"id": "w025",
@@ -412,7 +422,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"substantive": true
 				}
 			],
 			"participation": {

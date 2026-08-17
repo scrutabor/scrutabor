@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.quod-ore-sumpsimus",
 	"title": "Quod ore súmpsimus",
 	"category": "ordinarium",
@@ -108,7 +108,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w006"
 				},
 				{
 					"id": "w006",
@@ -152,7 +153,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w010"
 				},
 				{
 					"id": "w010",
@@ -175,7 +177,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w010"
 				},
 				{
 					"id": "w012",
@@ -222,7 +225,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w014"
 				}
 			]
 		},

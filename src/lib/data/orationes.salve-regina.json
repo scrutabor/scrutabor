@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "orationes.salve-regina",
 	"title": "Salve Regína",
 	"category": "orationes",
@@ -143,7 +143,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w008"
 				},
 				{
 					"id": "w010",
@@ -174,7 +175,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w012"
 				},
 				{
 					"id": "w012",
@@ -252,7 +254,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w018",
@@ -291,7 +294,8 @@
 						"mood": "part",
 						"voice": "act",
 						"conj": 3
-					}
+					},
+					"head": "w019"
 				},
 				{
 					"id": "w021",
@@ -314,7 +318,8 @@
 						"mood": "part",
 						"voice": "act",
 						"conj": 2
-					}
+					},
+					"head": "w019"
 				},
 				{
 					"id": "w023",
@@ -323,7 +328,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w024",
@@ -415,7 +421,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w029"
 				},
 				{
 					"id": "w031",
@@ -437,7 +444,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w034"
 				},
 				{
 					"id": "w033",
@@ -448,7 +456,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w034"
 				},
 				{
 					"id": "w034",
@@ -469,7 +478,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w036"
 				},
 				{
 					"id": "w036",
@@ -532,7 +542,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w041"
 				},
 				{
 					"id": "w041",
@@ -568,7 +579,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w042"
 				},
 				{
 					"id": "w044",
@@ -588,7 +600,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w046"
 				},
 				{
 					"id": "w046",
@@ -654,7 +667,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w055"
 				},
 				{
 					"id": "w051",
@@ -674,7 +688,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w055"
 				},
 				{
 					"id": "w053",
@@ -693,7 +708,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w055"
 				},
 				{
 					"id": "w055",
@@ -747,7 +763,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w059"
 				},
 				{
 					"id": "w059",
@@ -769,7 +786,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w062"
 				},
 				{
 					"id": "w061",
@@ -820,7 +838,8 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w065"
 				},
 				{
 					"id": "w065",

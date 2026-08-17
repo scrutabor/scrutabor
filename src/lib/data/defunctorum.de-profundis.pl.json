@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "defunctorum.de-profundis",
 	"lang": "pl",
 	"status": "working-edition",
@@ -138,19 +138,19 @@
 			"gloss": "mój"
 		},
 		"w011": {
-			"gloss": "się stanie"
+			"gloss": "niech będą"
 		},
 		"w012": {
 			"gloss": "uszy"
 		},
 		"w013": {
-			"gloss": "twój"
+			"gloss": "Twoje"
 		},
 		"w014": {
 			"gloss": "nakłonione"
 		},
 		"w015": {
-			"gloss": "w"
+			"gloss": "na"
 		},
 		"w016": {
 			"gloss": "głos"
@@ -204,10 +204,10 @@
 			"gloss": "dla"
 		},
 		"w033": {
-			"gloss": "prawo"
+			"gloss": "prawa"
 		},
 		"w034": {
-			"gloss": "Twoją"
+			"gloss": "Twego"
 		},
 		"w035": {
 			"gloss": "czekałem"
@@ -231,7 +231,7 @@
 			"gloss": "w"
 		},
 		"w042": {
-			"gloss": "słowem"
+			"gloss": "słowie"
 		},
 		"w043": {
 			"gloss": "jego"
@@ -303,7 +303,7 @@
 			"gloss": "u"
 		},
 		"w066": {
-			"gloss": "Go"
+			"gloss": "Niego"
 		},
 		"w067": {
 			"gloss": "odkupienie"

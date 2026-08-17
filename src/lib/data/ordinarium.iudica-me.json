@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.iudica-me",
 	"title": "Psalmus Iúdica me",
 	"category": "ordinarium",
@@ -143,7 +143,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w006"
 				},
 				{
 					"id": "w008",
@@ -152,7 +153,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w009"
 				},
 				{
 					"id": "w009",
@@ -184,7 +186,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w009"
 				},
 				{
 					"id": "w012",
@@ -193,7 +196,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w013"
 				},
 				{
 					"id": "w013",
@@ -216,7 +220,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w013"
 				},
 				{
 					"id": "w015",
@@ -235,7 +240,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w013"
 				},
 				{
 					"id": "w017",
@@ -337,7 +343,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w023"
 				},
 				{
 					"id": "w025",
@@ -397,7 +404,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w031"
 				},
 				{
 					"id": "w031",
@@ -516,7 +524,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w037"
 				},
 				{
 					"id": "w039",
@@ -548,7 +557,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w040"
 				},
 				{
 					"id": "w042",
@@ -615,7 +625,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w048"
 				},
 				{
 					"id": "w048",
@@ -638,7 +649,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w048"
 				},
 				{
 					"id": "w050",
@@ -649,7 +661,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w048"
 				},
 				{
 					"id": "w051",
@@ -666,7 +679,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w053"
 				},
 				{
 					"id": "w053",
@@ -690,7 +704,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w053"
 				}
 			]
 		},
@@ -728,7 +743,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w058"
 				},
 				{
 					"id": "w058",
@@ -762,7 +778,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w061"
 				},
 				{
 					"id": "w061",
@@ -823,7 +840,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w064"
 				}
 			],
 			"participation": {
@@ -870,7 +888,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w069"
 				},
 				{
 					"id": "w069",
@@ -917,10 +936,11 @@
 					"lemma": "meus",
 					"morph": {
 						"pos": "adj",
-						"case": "nom",
+						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w071"
 				},
 				{
 					"id": "w073",
@@ -939,7 +959,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w075"
 				},
 				{
 					"id": "w075",
@@ -977,7 +998,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w076"
 				},
 				{
 					"id": "w078",
@@ -1049,7 +1071,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w084"
 				},
 				{
 					"id": "w084",
@@ -1140,7 +1163,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w090"
 				},
 				{
 					"id": "w092",
@@ -1172,7 +1196,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w093"
 				}
 			],
 			"participation": {
@@ -1264,7 +1289,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w100"
 				}
 			]
 		},
@@ -1302,7 +1328,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w105"
 				},
 				{
 					"id": "w105",
@@ -1366,7 +1393,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w112"
 				},
 				{
 					"id": "w112",
@@ -1449,7 +1477,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w117"
 				},
 				{
 					"id": "w117",
@@ -1491,7 +1520,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w120"
 				},
 				{
 					"id": "w120",
@@ -1552,7 +1582,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w123"
 				}
 			],
 			"participation": {

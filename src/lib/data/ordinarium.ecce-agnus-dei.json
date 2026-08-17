@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.ecce-agnus-dei",
 	"title": "Ecce Agnus Dei",
 	"category": "ordinarium",
@@ -205,7 +205,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w011"
 				},
 				{
 					"id": "w013",
@@ -236,7 +237,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w016"
 				},
 				{
 					"id": "w016",
@@ -260,7 +262,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w016"
 				},
 				{
 					"id": "w018",
@@ -349,7 +352,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w024"
 				}
 			]
 		},
@@ -403,7 +407,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w028"
 				},
 				{
 					"id": "w030",
@@ -434,7 +439,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w033"
 				},
 				{
 					"id": "w033",
@@ -458,7 +464,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w033"
 				},
 				{
 					"id": "w035",
@@ -547,7 +554,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w041"
 				}
 			]
 		},
@@ -601,7 +609,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w045"
 				},
 				{
 					"id": "w047",
@@ -632,7 +641,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w050"
 				},
 				{
 					"id": "w050",
@@ -656,7 +666,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w050"
 				},
 				{
 					"id": "w052",
@@ -745,7 +756,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w058"
 				}
 			]
 		},
@@ -801,7 +813,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w061"
 				},
 				{
 					"id": "w063",
@@ -861,7 +874,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w066"
 				},
 				{
 					"id": "w068",
@@ -870,7 +884,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w069"
 				},
 				{
 					"id": "w069",
@@ -894,7 +909,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w069"
 				},
 				{
 					"id": "w071",

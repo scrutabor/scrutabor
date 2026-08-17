@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "litaniae.lauretanae",
 	"title": "Litániæ Lauretanæ",
 	"category": "litaniae",
@@ -253,6 +253,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w015",
 					"id": "w014"
 				},
 				{
@@ -289,7 +290,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -379,7 +380,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -431,6 +432,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w025",
 					"id": "w026",
 					"post": ","
 				},
@@ -455,7 +457,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -495,6 +497,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w031",
 					"id": "w030"
 				},
 				{
@@ -519,6 +522,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w033",
 					"id": "w032"
 				},
 				{
@@ -542,7 +546,7 @@
 			"type": "verse",
 			"words": [
 				{
-					"form": "miserére",
+					"form": "Miserére",
 					"lemma": "misereor",
 					"morph": {
 						"pos": "verb",
@@ -582,6 +586,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w037",
 					"id": "w036"
 				},
 				{
@@ -625,6 +630,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w040",
 					"id": "w039"
 				},
 				{
@@ -654,6 +660,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w043",
 					"id": "w041"
 				},
 				{
@@ -709,6 +716,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w046",
 					"id": "w045"
 				},
 				{
@@ -738,6 +746,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w048",
 					"id": "w047"
 				},
 				{
@@ -793,6 +802,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w052",
 					"id": "w051"
 				},
 				{
@@ -866,6 +876,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w057",
 					"id": "w056"
 				},
 				{
@@ -939,6 +950,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w062",
 					"id": "w061"
 				},
 				{
@@ -1012,6 +1024,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w067",
 					"id": "w066"
 				},
 				{
@@ -1053,6 +1066,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w070",
 					"id": "w069"
 				},
 				{
@@ -1096,6 +1110,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w073",
 					"id": "w072"
 				},
 				{
@@ -1169,6 +1184,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w078",
 					"id": "w077"
 				},
 				{
@@ -1211,6 +1227,7 @@
 						"gender": "f",
 						"degree": "sup"
 					},
+					"head": "w079",
 					"id": "w080",
 					"post": "."
 				}
@@ -1242,6 +1259,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w083",
 					"id": "w082"
 				},
 				{
@@ -1284,6 +1302,7 @@
 						"gender": "f",
 						"degree": "sup"
 					},
+					"head": "w084",
 					"id": "w085",
 					"post": "."
 				}
@@ -1315,6 +1334,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w088",
 					"id": "w087"
 				},
 				{
@@ -1356,6 +1376,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w089",
 					"id": "w090",
 					"post": "."
 				}
@@ -1387,6 +1408,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w093",
 					"id": "w092"
 				},
 				{
@@ -1428,6 +1450,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w094",
 					"id": "w095",
 					"post": "."
 				}
@@ -1459,6 +1482,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w098",
 					"id": "w097"
 				},
 				{
@@ -1500,6 +1524,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w099",
 					"id": "w100",
 					"post": "."
 				}
@@ -1531,6 +1556,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w103",
 					"id": "w102"
 				},
 				{
@@ -1572,6 +1598,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w104",
 					"id": "w105",
 					"post": "."
 				}
@@ -1603,6 +1630,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w108",
 					"id": "w107"
 				},
 				{
@@ -1644,6 +1672,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w111",
 					"id": "w110"
 				},
 				{
@@ -1695,6 +1724,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w114",
 					"id": "w113"
 				},
 				{
@@ -1768,6 +1798,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w119",
 					"id": "w118"
 				},
 				{
@@ -1841,6 +1872,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w124",
 					"id": "w123"
 				},
 				{
@@ -1883,6 +1915,7 @@
 						"gender": "f",
 						"degree": "sup"
 					},
+					"head": "w125",
 					"id": "w126",
 					"post": "."
 				}
@@ -1914,6 +1947,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w129",
 					"id": "w128"
 				},
 				{
@@ -1959,6 +1993,7 @@
 						"gender": "f",
 						"conj": 1
 					},
+					"head": "w130",
 					"id": "w131",
 					"post": ".",
 					"analysis": {
@@ -1998,6 +2033,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w134",
 					"id": "w133"
 				},
 				{
@@ -2043,6 +2079,7 @@
 						"gender": "f",
 						"conj": 1
 					},
+					"head": "w135",
 					"id": "w136",
 					"post": "."
 				}
@@ -2074,6 +2111,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w139",
 					"id": "w138"
 				},
 				{
@@ -2115,6 +2153,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w140",
 					"id": "w141",
 					"post": "."
 				}
@@ -2146,6 +2185,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w144",
 					"id": "w143"
 				},
 				{
@@ -2187,6 +2227,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w145",
 					"id": "w146",
 					"post": "."
 				}
@@ -2218,6 +2259,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w149",
 					"id": "w148"
 				},
 				{
@@ -2257,8 +2299,9 @@
 						"pos": "adj",
 						"case": "voc",
 						"number": "sg",
-						"gender": "m"
+						"gender": "f"
 					},
+					"head": "w150",
 					"id": "w151",
 					"post": "."
 				}
@@ -2290,6 +2333,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w154",
 					"id": "w153"
 				},
 				{
@@ -2363,6 +2407,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w159",
 					"id": "w158"
 				},
 				{
@@ -2385,15 +2430,13 @@
 			"words": [
 				{
 					"form": "Sedes",
-					"lemma": "sedeo",
+					"lemma": "sedes",
 					"morph": {
-						"pos": "verb",
-						"person": 2,
+						"pos": "noun",
+						"case": "voc",
 						"number": "sg",
-						"tense": "pres",
-						"mood": "ind",
-						"voice": "act",
-						"conj": 2
+						"gender": "f",
+						"decl": 3
 					},
 					"id": "w160"
 				},
@@ -2438,6 +2481,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w164",
 					"id": "w163"
 				},
 				{
@@ -2479,6 +2523,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w167",
 					"id": "w166"
 				},
 				{
@@ -2522,6 +2567,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w170",
 					"id": "w169"
 				},
 				{
@@ -2563,6 +2609,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w171",
 					"id": "w172",
 					"post": "."
 				}
@@ -2594,6 +2641,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w175",
 					"id": "w174"
 				},
 				{
@@ -2635,6 +2683,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w176",
 					"id": "w177",
 					"post": "."
 				}
@@ -2666,6 +2715,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w180",
 					"id": "w179"
 				},
 				{
@@ -2707,6 +2757,7 @@
 						"number": "sg",
 						"gender": "n"
 					},
+					"head": "w181",
 					"id": "w182"
 				},
 				{
@@ -2750,6 +2801,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w186",
 					"id": "w185"
 				},
 				{
@@ -2791,6 +2843,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w187",
 					"id": "w188",
 					"post": "."
 				}
@@ -2822,6 +2875,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w191",
 					"id": "w190"
 				},
 				{
@@ -2862,6 +2916,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w192",
 					"id": "w193",
 					"post": ".",
 					"analysis": {
@@ -2901,6 +2956,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w196",
 					"id": "w195"
 				},
 				{
@@ -2941,6 +2997,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w197",
 					"id": "w198",
 					"post": "."
 				}
@@ -2972,6 +3029,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w201",
 					"id": "w200"
 				},
 				{
@@ -2997,7 +3055,7 @@
 					"lemma": "domus",
 					"morph": {
 						"pos": "noun",
-						"case": "gen",
+						"case": "voc",
 						"number": "sg",
 						"gender": "f",
 						"decl": 4
@@ -3013,6 +3071,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w202",
 					"id": "w203",
 					"post": "."
 				}
@@ -3044,6 +3103,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w206",
 					"id": "w205"
 				},
 				{
@@ -3117,6 +3177,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w211",
 					"id": "w210"
 				},
 				{
@@ -3190,6 +3251,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w216",
 					"id": "w215"
 				},
 				{
@@ -3231,6 +3293,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w217",
 					"id": "w218",
 					"post": "."
 				}
@@ -3262,6 +3325,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w221",
 					"id": "w220"
 				},
 				{
@@ -3304,7 +3368,8 @@
 						"gender": "m"
 					},
 					"id": "w223",
-					"post": "."
+					"post": ".",
+					"substantive": true
 				}
 			],
 			"speaker": "ductor"
@@ -3334,6 +3399,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w226",
 					"id": "w225"
 				},
 				{
@@ -3368,13 +3434,13 @@
 				},
 				{
 					"form": "peccatórum",
-					"lemma": "peccatum",
+					"lemma": "peccator",
 					"morph": {
 						"pos": "noun",
 						"case": "gen",
 						"number": "pl",
-						"gender": "n",
-						"decl": 2
+						"gender": "m",
+						"decl": 3
 					},
 					"id": "w228",
 					"post": "."
@@ -3407,6 +3473,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w231",
 					"id": "w230"
 				},
 				{
@@ -3453,7 +3520,8 @@
 						"conj": 1
 					},
 					"id": "w233",
-					"post": "."
+					"post": ".",
+					"substantive": true
 				}
 			],
 			"speaker": "ductor"
@@ -3483,6 +3551,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w236",
 					"id": "w235"
 				},
 				{
@@ -3532,6 +3601,7 @@
 						"number": "pl",
 						"gender": "m"
 					},
+					"substantive": true,
 					"id": "w238",
 					"post": "."
 				}
@@ -3563,6 +3633,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w241",
 					"id": "w240"
 				},
 				{
@@ -3602,10 +3673,11 @@
 						"pos": "adj",
 						"case": "gen",
 						"number": "pl",
-						"gender": "n"
+						"gender": "m"
 					},
 					"id": "w243",
-					"post": "."
+					"post": ".",
+					"substantive": true
 				}
 			],
 			"speaker": "ductor"
@@ -3635,6 +3707,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w246",
 					"id": "w245"
 				},
 				{
@@ -3708,6 +3781,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w251",
 					"id": "w250"
 				},
 				{
@@ -3781,6 +3855,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w256",
 					"id": "w255"
 				},
 				{
@@ -3854,6 +3929,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w261",
 					"id": "w260"
 				},
 				{
@@ -3927,6 +4003,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w266",
 					"id": "w265"
 				},
 				{
@@ -4008,6 +4085,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w271",
 					"id": "w270"
 				},
 				{
@@ -4081,6 +4159,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w276",
 					"id": "w275"
 				},
 				{
@@ -4154,6 +4233,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w281",
 					"id": "w280"
 				},
 				{
@@ -4195,7 +4275,8 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"id": "w283"
+					"id": "w283",
+					"substantive": true
 				},
 				{
 					"form": "ómnium",
@@ -4204,10 +4285,11 @@
 						"pos": "adj",
 						"case": "gen",
 						"number": "pl",
-						"gender": "n"
+						"gender": "m"
 					},
 					"id": "w284",
-					"post": "."
+					"post": ".",
+					"head": "w283"
 				}
 			],
 			"speaker": "ductor"
@@ -4237,6 +4319,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w287",
 					"id": "w286"
 				},
 				{
@@ -4276,6 +4359,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w290",
 					"id": "w289"
 				},
 				{
@@ -4299,6 +4383,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w290",
 					"id": "w291"
 				},
 				{
@@ -4314,6 +4399,7 @@
 						"gender": "f",
 						"conj": 3
 					},
+					"head": "w288",
 					"id": "w292",
 					"post": "."
 				}
@@ -4345,6 +4431,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w295",
 					"id": "w294"
 				},
 				{
@@ -4381,8 +4468,10 @@
 					"form": "in",
 					"lemma": "in",
 					"morph": {
-						"pos": "prep"
+						"pos": "prep",
+						"governs": "acc"
 					},
+					"head": "w298",
 					"id": "w297"
 				},
 				{
@@ -4410,6 +4499,7 @@
 						"gender": "f",
 						"conj": 3
 					},
+					"head": "w296",
 					"id": "w299",
 					"post": ".",
 					"analysis": {
@@ -4449,6 +4539,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w302",
 					"id": "w301"
 				},
 				{
@@ -4491,6 +4582,7 @@
 						"gender": "n",
 						"degree": "sup"
 					},
+					"head": "w305",
 					"id": "w304",
 					"analysis": {
 						"confidence": "high",
@@ -4542,6 +4634,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w308",
 					"id": "w307"
 				},
 				{
@@ -4615,6 +4708,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w313",
 					"id": "w312"
 				},
 				{
@@ -4688,6 +4782,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w318",
 					"id": "w317"
 				},
 				{
@@ -4768,6 +4863,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w323",
 					"id": "w322"
 				},
 				{
@@ -4819,7 +4915,7 @@
 					"morph": {
 						"pos": "pron",
 						"case": "nom",
-						"number": "pl",
+						"number": "sg",
 						"gender": "m"
 					},
 					"id": "w326"
@@ -4946,7 +5042,7 @@
 					"morph": {
 						"pos": "pron",
 						"case": "nom",
-						"number": "pl",
+						"number": "sg",
 						"gender": "m"
 					},
 					"id": "w335"
@@ -5073,7 +5169,7 @@
 					"morph": {
 						"pos": "pron",
 						"case": "nom",
-						"number": "pl",
+						"number": "sg",
 						"gender": "m"
 					},
 					"id": "w344"
@@ -5177,6 +5273,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w352",
 					"id": "w351"
 				},
 				{
@@ -5199,6 +5296,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w355",
 					"id": "w353"
 				},
 				{
@@ -5250,6 +5348,7 @@
 						"number": "pl",
 						"gender": "m"
 					},
+					"head": "w358",
 					"id": "w357"
 				},
 				{
@@ -5364,6 +5463,7 @@
 						"number": "pl",
 						"gender": "m"
 					},
+					"head": "w364",
 					"id": "w365",
 					"post": ","
 				},
@@ -5406,7 +5506,7 @@
 					"lemma": "deus",
 					"morph": {
 						"pos": "noun",
-						"case": "nom",
+						"case": "voc",
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
@@ -5423,6 +5523,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w373",
 					"id": "w369"
 				},
 				{
@@ -5499,7 +5600,8 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"id": "w376"
+					"id": "w376",
+					"head": "w381"
 				},
 				{
 					"form": "beátæ",
@@ -5510,6 +5612,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w378",
 					"id": "w377"
 				},
 				{
@@ -5564,6 +5667,7 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
+					"head": "w385",
 					"id": "w382"
 				},
 				{
@@ -5575,6 +5679,7 @@
 						"number": "sg",
 						"gender": "f"
 					},
+					"head": "w385",
 					"id": "w383"
 				},
 				{
@@ -5618,7 +5723,8 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"id": "w387"
+					"id": "w387",
+					"head": "w389"
 				},
 				{
 					"form": "pérfrui",
@@ -5652,6 +5758,7 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
+					"head": "w391",
 					"id": "w390"
 				},
 				{
@@ -5687,6 +5794,7 @@
 						"number": "sg",
 						"gender": "m"
 					},
+					"head": "w392",
 					"id": "w393",
 					"post": "."
 				},

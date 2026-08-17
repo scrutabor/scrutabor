@@ -22,6 +22,14 @@ function corpusProse(): { where: string; text: string }[] {
 		const doc = JSON.parse(readFileSync(`${dir}/${file}`, 'utf8'));
 		if (!doc.lang) continue; // the Latin source carries no prose of ours
 		const at = (k: string) => `${file}:${k}`;
+		// The LEXICON keeps its prose at entries[lemma].note, not words[id].note,
+		// so this walk stepped past all 329 of them until 2026-08-16 — and the
+		// lexicon is vendored and rendered, so every one reached a lemma page.
+		for (const [lemma, entry] of Object.entries(doc.entries ?? {}) as [
+			string,
+			Record<string, string>
+		][])
+			if (entry.note) out.push({ where: at(`${lemma}.note`), text: entry.note });
 		if (doc.about) out.push({ where: at('about'), text: doc.about });
 		for (const [sid, seg] of Object.entries(doc.segments ?? {}) as [
 			string,

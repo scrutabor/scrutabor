@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.deus-tu-conversus",
 	"title": "Deus, tu convérsus",
 	"category": "ordinarium",
@@ -84,7 +84,8 @@
 						"mood": "part",
 						"voice": "pass",
 						"conj": 3
-					}
+					},
+					"head": "w002"
 				},
 				{
 					"id": "w004",
@@ -148,7 +149,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w007"
 				},
 				{
 					"id": "w009",
@@ -171,7 +173,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w011"
 				},
 				{
 					"id": "w011",
@@ -258,7 +261,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w015"
 				}
 			]
 		},
@@ -297,7 +301,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w020",
@@ -387,7 +392,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w024"
 				}
 			]
 		},
@@ -426,7 +432,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w027"
 				},
 				{
 					"id": "w029",
@@ -435,7 +442,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w030"
 				},
 				{
 					"id": "w030",
@@ -530,7 +538,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w036"
 				},
 				{
 					"id": "w036",
@@ -554,7 +563,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w036"
 				}
 			],
 			"participation": {

@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.memento-vivorum",
 	"lang": "pl",
 	"status": "working-edition",
@@ -135,7 +135,7 @@
 			"function": "„pro” (w028) wymaga ablativu. Forma „se” sama nie wskazuje liczby ani rodzaju."
 		},
 		"w030": {
-			"gloss": "i za swoich",
+			"gloss": "i swoich",
 			"function": "Ablativus liczby mnogiej po „pro” (w028), z dołączonym spójnikiem „-que”."
 		},
 		"w031": {

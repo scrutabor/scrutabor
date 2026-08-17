@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.adiutorium",
 	"title": "Adiutórium nostrum",
 	"category": "ordinarium",
@@ -70,7 +70,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w001"
 				},
 				{
 					"id": "w003",
@@ -79,7 +80,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w004"
 				},
 				{
 					"id": "w004",

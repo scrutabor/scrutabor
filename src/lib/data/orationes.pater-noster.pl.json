@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "orationes.pater-noster",
 	"lang": "pl",
 	"status": "working-edition",
@@ -251,7 +251,8 @@
 					"locator": "Ordo Missae, embolism after the Lord's Prayer",
 					"url": "https://archive.org/details/missale_romanum-1962"
 				}
-			]
+			],
+			"note": "Forma jest ablatiwem obu słów naraz. Może to być malum — zło, rzecz zła — albo malus — Zły, czyli szatan. Ani forma, ani zdanie nie rozstrzygają, i tradycja czyta to na oba sposoby. Ta edycja przyjmuje malum i zaznacza wątpliwość."
 		},
 		"w050": {
 			"gloss": "amen"

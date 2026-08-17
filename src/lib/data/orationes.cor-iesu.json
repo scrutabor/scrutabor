@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "orationes.cor-iesu",
 	"title": "Cor Iesu sacratíssimum",
 	"category": "orationes",
@@ -69,6 +69,7 @@
 						"gender": "n",
 						"degree": "sup"
 					},
+					"head": "w001",
 					"analysis": {
 						"confidence": "high",
 						"sources": [

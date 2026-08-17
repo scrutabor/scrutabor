@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "orationes.ave-maria",
 	"title": "Ave María",
 	"category": "orationes",
@@ -83,7 +83,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w002"
 				},
 				{
 					"id": "w005",
@@ -117,7 +118,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w008"
 				},
 				{
 					"id": "w008",
@@ -136,7 +138,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w010"
 				},
 				{
 					"id": "w010",
@@ -168,7 +171,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w013"
 				},
 				{
 					"id": "w013",
@@ -203,7 +207,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w014"
 				},
 				{
 					"id": "w016",
@@ -233,7 +238,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w018"
 				},
 				{
 					"id": "w018",
@@ -294,7 +300,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w023"
 				},
 				{
 					"id": "w023",
@@ -342,7 +349,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w028"
 				},
 				{
 					"id": "w028",
@@ -378,7 +386,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w029"
 				},
 				{
 					"id": "w031",

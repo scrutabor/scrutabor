@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.memento-defunctorum",
 	"title": "Meménto étiam (pro defúnctis)",
 	"category": "ordinarium",
@@ -112,7 +112,8 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "f"
-					}
+					},
+					"head": "w005"
 				},
 				{
 					"id": "w007",
@@ -156,7 +157,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w011"
 				},
 				{
 					"id": "w011",
@@ -212,7 +214,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w016"
 				},
 				{
 					"id": "w016",
@@ -302,7 +305,8 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w022",
@@ -311,7 +315,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w023"
 				},
 				{
 					"id": "w023",
@@ -339,7 +344,8 @@
 						"mood": "part",
 						"voice": "act",
 						"conj": 3
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w025",
@@ -473,7 +479,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w034"
 				},
 				{
 					"id": "w034",
@@ -520,7 +527,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w036"
 				},
 				{
 					"id": "w038",

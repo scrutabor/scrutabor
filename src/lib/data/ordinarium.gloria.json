@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.gloria",
 	"title": "Glória in excélsis",
 	"category": "ordinarium",
@@ -68,7 +68,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w003"
 				},
 				{
 					"id": "w003",
@@ -79,7 +80,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w004",
@@ -127,7 +129,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w007"
 				},
 				{
 					"id": "w007",
@@ -174,7 +177,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w011"
 				},
 				{
 					"id": "w011",
@@ -368,7 +372,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w025"
 				},
 				{
 					"id": "w024",
@@ -379,7 +384,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w025"
 				},
 				{
 					"id": "w025",
@@ -403,7 +409,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w025"
 				}
 			],
 			"participation": {
@@ -470,7 +477,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w029"
 				},
 				{
 					"id": "w031",
@@ -506,7 +514,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w032"
 				}
 			],
 			"participation": {
@@ -560,7 +569,8 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w035"
 				},
 				{
 					"id": "w037",
@@ -876,7 +886,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w056"
 				}
 			],
 			"participation": {
@@ -928,7 +939,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w061"
 				},
 				{
 					"id": "w061",
@@ -1033,7 +1045,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w066"
 				},
 				{
 					"id": "w068",
@@ -1045,7 +1058,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w066"
 				},
 				{
 					"id": "w069",
@@ -1066,7 +1080,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w069"
 				},
 				{
 					"id": "w071",
@@ -1100,7 +1115,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w072"
 				},
 				{
 					"id": "w074",
@@ -1113,7 +1129,8 @@
 						"number": "sg",
 						"gender": "m",
 						"degree": "sup"
-					}
+					},
+					"head": "w072"
 				},
 				{
 					"id": "w075",
@@ -1164,7 +1181,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w079"
 				},
 				{
 					"id": "w078",
@@ -1175,7 +1193,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w079"
 				},
 				{
 					"id": "w079",
@@ -1196,7 +1215,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w081"
 				},
 				{
 					"id": "w081",

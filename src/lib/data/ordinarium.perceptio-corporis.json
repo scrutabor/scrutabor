@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.perceptio-corporis",
 	"title": "Percéptio Córporis tui",
 	"category": "ordinarium",
@@ -78,7 +78,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "n"
-					}
+					},
+					"head": "w002"
 				},
 				{
 					"id": "w004",
@@ -146,7 +147,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w008"
 				},
 				{
 					"id": "w010",
@@ -222,7 +224,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w016"
 				},
 				{
 					"id": "w016",
@@ -280,7 +283,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w022"
 				},
 				{
 					"id": "w021",
@@ -291,7 +295,8 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w022"
 				},
 				{
 					"id": "w022",
@@ -335,7 +340,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w026"
 				},
 				{
 					"id": "w026",
@@ -397,7 +403,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w032"
 				},
 				{
 					"id": "w032",
@@ -425,7 +432,8 @@
 						"mood": "part",
 						"voice": "pass",
 						"conj": 3
-					}
+					},
+					"head": "w032"
 				}
 			]
 		},
@@ -489,7 +497,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w039"
 				},
 				{
 					"id": "w039",
@@ -522,7 +531,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w042"
 				},
 				{
 					"id": "w042",
@@ -557,7 +567,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w043"
 				},
 				{
 					"id": "w045",
@@ -579,7 +590,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w048"
 				},
 				{
 					"id": "w047",
@@ -590,7 +602,8 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w048"
 				},
 				{
 					"id": "w048",

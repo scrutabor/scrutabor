@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.offerimus-tibi",
 	"lang": "pl",
 	"status": "working-edition",
@@ -36,7 +36,7 @@
 			"gloss": "składamy"
 		},
 		"w002": {
-			"gloss": "tobie"
+			"gloss": "Tobie"
 		},
 		"w003": {
 			"gloss": "Panie"
@@ -50,7 +50,7 @@
 			"function": "Dopełniacz rzeczownika nijakiego „salutáre”, zależny od „cálicem” (w004)."
 		},
 		"w006": {
-			"gloss": "twojej",
+			"gloss": "Twoją",
 			"function": "Zgadza się z „cleméntiam” (w008)."
 		},
 		"w007": {
@@ -77,7 +77,7 @@
 			"gloss": "majestatu"
 		},
 		"w014": {
-			"gloss": "twego"
+			"gloss": "Twego"
 		},
 		"w015": {
 			"gloss": "za"
@@ -106,11 +106,11 @@
 			"gloss": "wonią"
 		},
 		"w023": {
-			"gloss": "wdzięczności",
+			"gloss": "słodyczy",
 			"function": "Dopełniacz zależny od „odóre” (w022)."
 		},
 		"w024": {
-			"gloss": "niech wstąpi",
+			"gloss": "wstąpił",
 			"function": "Tryb łączący po „ut” (w009), z kielichem jako podmiotem."
 		},
 		"w025": {

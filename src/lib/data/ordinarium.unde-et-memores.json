@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.unde-et-memores",
 	"title": "Unde et mémores",
 	"category": "ordinarium",
@@ -75,7 +75,8 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w006"
 				},
 				{
 					"id": "w004",
@@ -122,7 +123,8 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
-					}
+					},
+					"head": "w006"
 				},
 				{
 					"id": "w008",
@@ -161,7 +163,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w010"
 				},
 				{
 					"id": "w012",
@@ -173,7 +176,8 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w010"
 				},
 				{
 					"id": "w013",
@@ -227,7 +231,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w015"
 				},
 				{
 					"id": "w017",
@@ -250,7 +255,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w017"
 				},
 				{
 					"id": "w019",
@@ -269,7 +275,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w021"
 				},
 				{
 					"id": "w021",
@@ -315,7 +322,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w026"
 				},
 				{
 					"id": "w026",
@@ -365,7 +373,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "acc"
-					}
+					},
+					"head": "w031"
 				},
 				{
 					"id": "w031",
@@ -396,7 +405,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w033"
 				},
 				{
 					"id": "w033",
@@ -441,7 +451,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w036"
 				},
 				{
 					"id": "w036",
@@ -464,7 +475,8 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w036"
 				},
 				{
 					"id": "w038",
@@ -473,7 +485,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w040"
 				},
 				{
 					"id": "w039",
@@ -484,7 +497,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"head": "w040"
 				},
 				{
 					"id": "w040",
@@ -562,7 +576,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w043"
 				},
 				{
 					"id": "w045",
@@ -586,7 +601,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w045"
 				},
 				{
 					"id": "w047",
@@ -610,7 +626,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w047"
 				}
 			]
 		},
@@ -654,7 +671,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w049"
 				},
 				{
 					"id": "w051",
@@ -678,7 +696,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w051"
 				}
 			]
 		},
@@ -743,7 +762,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w055"
 				}
 			]
 		}

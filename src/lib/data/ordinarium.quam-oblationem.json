@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"id": "ordinarium.quam-oblationem",
 	"title": "Quam oblatiónem",
 	"category": "ordinarium",
@@ -90,7 +90,8 @@
 					"morph": {
 						"pos": "prep",
 						"governs": "abl"
-					}
+					},
+					"head": "w006"
 				},
 				{
 					"id": "w006",
@@ -102,7 +103,8 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "n"
-					}
+					},
+					"substantive": true
 				},
 				{
 					"id": "w007",
@@ -157,7 +159,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w002"
 				},
 				{
 					"id": "w009",
@@ -173,7 +176,8 @@
 						"mood": "part",
 						"voice": "pass",
 						"conj": 3
-					}
+					},
+					"head": "w002"
 				},
 				{
 					"id": "w010",
@@ -185,7 +189,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w002"
 				},
 				{
 					"id": "w011",
@@ -197,7 +202,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w002"
 				},
 				{
 					"id": "w012",
@@ -208,7 +214,8 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
-					}
+					},
+					"head": "w002"
 				},
 				{
 					"id": "w013",
@@ -332,7 +339,8 @@
 						"number": "sg",
 						"gender": "m",
 						"degree": "sup"
-					}
+					},
+					"head": "w022"
 				},
 				{
 					"id": "w022",
@@ -363,7 +371,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w022"
 				}
 			]
 		},
@@ -407,7 +416,8 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
-					}
+					},
+					"head": "w024"
 				},
 				{
 					"id": "w026",

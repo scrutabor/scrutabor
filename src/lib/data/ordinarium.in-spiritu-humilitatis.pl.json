@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.12.0",
+	"schema_version": "0.13.0",
 	"text": "ordinarium.in-spiritu-humilitatis",
 	"lang": "pl",
 	"status": "working-edition",
@@ -91,7 +91,7 @@
 			"gloss": "przez"
 		},
 		"w010": {
-			"gloss": "ciebie",
+			"gloss": "Ciebie",
 			"function": "Ablativus sprawcy zależny od „a” (w009)."
 		},
 		"w011": {
@@ -120,7 +120,7 @@
 			"gloss": "obliczem"
 		},
 		"w019": {
-			"gloss": "twoim"
+			"gloss": "Twoim"
 		},
 		"w020": {
 			"gloss": "dzisiaj"
@@ -132,7 +132,7 @@
 			"gloss": "podobała się"
 		},
 		"w023": {
-			"gloss": "tobie",
+			"gloss": "Tobie",
 			"function": "Celownik zależny od „pláceat” (w022)."
 		},
 		"w024": {
@@ -171,7 +171,7 @@
 			"gloss": "ofiarę"
 		},
 		"w035": {
-			"gloss": "twemu"
+			"gloss": "Twemu"
 		},
 		"w036": {
 			"gloss": "świętemu"
