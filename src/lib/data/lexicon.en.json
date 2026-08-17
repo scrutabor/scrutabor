@@ -466,7 +466,7 @@
 		},
 		"abicio": {
 			"senses": [
-				"throw away"
+				"to throw away"
 			]
 		},
 		"absolutio": {
@@ -521,7 +521,8 @@
 			"senses": [
 				"to",
 				"toward",
-				"at"
+				"at",
+				"for (purpose)"
 			]
 		},
 		"adduco": {
@@ -604,8 +605,8 @@
 		},
 		"adsumo": {
 			"senses": [
-				"take up",
-				"assume"
+				"to take up",
+				"to assume"
 			]
 		},
 		"aduno": {
@@ -689,7 +690,8 @@
 		"affectus": {
 			"senses": [
 				"feeling",
-				"disposition"
+				"disposition",
+				"affection"
 			]
 		},
 		"afflictus": {
@@ -809,7 +811,8 @@
 		},
 		"amabilis": {
 			"senses": [
-				"lovable"
+				"lovable",
+				"amiable"
 			]
 		},
 		"amator": {
@@ -819,14 +822,15 @@
 		},
 		"ambulo": {
 			"senses": [
-				"walk",
-				"conduct oneself"
+				"to walk",
+				"to conduct oneself"
 			]
 		},
 		"amen": {
 			"senses": [
 				"so be it",
-				"truly"
+				"truly",
+				"amen (as the liturgical acclamation)"
 			],
 			"note": "A Hebrew word, indeclinable in Latin.",
 			"note_citations": [
@@ -939,7 +943,7 @@
 		},
 		"aperio": {
 			"senses": [
-				"open"
+				"to open"
 			]
 		},
 		"apostolicus": {
@@ -955,7 +959,7 @@
 		},
 		"appropinquo": {
 			"senses": [
-				"draw near"
+				"to draw near"
 			]
 		},
 		"apud": {
@@ -992,14 +996,14 @@
 		},
 		"ardeo": {
 			"senses": [
-				"burn"
+				"to burn"
 			]
 		},
 		"aresco": {
 			"senses": [
-				"dry up",
-				"wither",
-				"languish"
+				"to dry up",
+				"to wither",
+				"to languish"
 			]
 		},
 		"arma": {
@@ -1034,8 +1038,8 @@
 		},
 		"attero": {
 			"senses": [
-				"wear down",
-				"crush"
+				"to wear down",
+				"to crush"
 			]
 		},
 		"auctor": {
@@ -1207,7 +1211,8 @@
 		},
 		"benignitas": {
 			"senses": [
-				"kindness"
+				"kindness",
+				"bounty"
 			]
 		},
 		"benignus": {
@@ -1363,7 +1368,7 @@
 		},
 		"cesso": {
 			"senses": [
-				"cease"
+				"to cease"
 			]
 		},
 		"christianus": {
@@ -1504,7 +1509,7 @@
 		},
 		"complaceo": {
 			"senses": [
-				"be well pleased"
+				"to be well pleased"
 			]
 		},
 		"comprehendo": {
@@ -1537,8 +1542,8 @@
 		},
 		"concipio": {
 			"senses": [
-				"conceive",
-				"receive"
+				"to conceive",
+				"to receive"
 			]
 		},
 		"concupisco": {
@@ -1590,7 +1595,7 @@
 		},
 		"confido": {
 			"senses": [
-				"trust"
+				"to trust"
 			]
 		},
 		"confiteor": {
@@ -1602,13 +1607,13 @@
 		},
 		"confugio": {
 			"senses": [
-				"flee for refuge",
-				"seek protection"
+				"to flee for refuge",
+				"to seek protection"
 			]
 		},
 		"confundo": {
 			"senses": [
-				"put to shame"
+				"to put to shame"
 			]
 		},
 		"confusio": {
@@ -1920,7 +1925,8 @@
 			"senses": [
 				"from, down from",
 				"about, concerning",
-				"according to"
+				"according to",
+				"by (of agency, de Spíritu Sancto)"
 			],
 			"note": "De can mark separation or motion from above. Ex often marks motion from within."
 		},
@@ -1968,7 +1974,7 @@
 			],
 			"derivatives": [
 				"defend",
-				"defence",
+				"defense",
 				"fence"
 			]
 		},
@@ -1988,7 +1994,7 @@
 		},
 		"demonstro": {
 			"senses": [
-				"show"
+				"to show"
 			]
 		},
 		"deprecatio": {
@@ -2033,14 +2039,14 @@
 		},
 		"despicio": {
 			"senses": [
-				"despise",
-				"disregard"
+				"to despise",
+				"to disregard"
 			]
 		},
 		"destituo": {
 			"senses": [
-				"forsake",
-				"deprive"
+				"to forsake",
+				"to deprive"
 			]
 		},
 		"detrudo": {
@@ -2154,7 +2160,8 @@
 		"dignus": {
 			"senses": [
 				"worthy",
-				"fitting"
+				"fitting",
+				"right"
 			]
 		},
 		"dilectio": {
@@ -2400,7 +2407,7 @@
 		},
 		"edoceo": {
 			"senses": [
-				"teach thoroughly"
+				"to teach thoroughly"
 			]
 		},
 		"efficio": {
@@ -2537,7 +2544,7 @@
 		},
 		"erubesco": {
 			"senses": [
-				"be ashamed"
+				"to be ashamed"
 			]
 		},
 		"eruo": {
@@ -2604,10 +2611,10 @@
 		},
 		"exaudio": {
 			"senses": [
-				"to hear favourably",
+				"to hear favorably",
 				"to hearken to"
 			],
-			"note": "In prayer it can mean to hear favourably, not merely to hear.",
+			"note": "In prayer it can mean to hear favorably, not merely to hear.",
 			"note_citations": [
 				{
 					"title": "Lewis and Short, A Latin Dictionary",
@@ -2632,7 +2639,7 @@
 		},
 		"excito": {
 			"senses": [
-				"stir up"
+				"to stir up"
 			]
 		},
 		"exemplar": {
@@ -3065,17 +3072,17 @@
 		},
 		"honor": {
 			"senses": [
-				"honour",
+				"honor",
 				"esteem",
 				"office"
 			],
 			"derivatives": [
-				"honour"
+				"honor"
 			]
 		},
 		"honorabilis": {
 			"senses": [
-				"honourable"
+				"honorable"
 			]
 		},
 		"hora": {
@@ -3212,7 +3219,7 @@
 		},
 		"immineo": {
 			"senses": [
-				"threaten"
+				"to threaten"
 			]
 		},
 		"impero": {
@@ -3242,7 +3249,8 @@
 			"senses": [
 				"in, on (with the ablative — place)",
 				"among (in muliéribus)",
-				"into, unto (with the accusative — direction)"
+				"into, unto (with the accusative — direction)",
+				"before (in conspéctu — in the sight of)"
 			]
 		},
 		"incarnatio": {
@@ -3268,7 +3276,7 @@
 		},
 		"incipio": {
 			"senses": [
-				"begin"
+				"to begin"
 			]
 		},
 		"inclino": {
@@ -3310,7 +3318,8 @@
 			"senses": [
 				"leniency",
 				"kindness",
-				"remission of a penalty"
+				"remission of a penalty",
+				"pardon"
 			],
 			"note": "In Church terminology, it means an indulgence: remission before God of temporal punishment for sins whose guilt has already been forgiven.",
 			"note_citations": [
@@ -3337,7 +3346,7 @@
 		},
 		"induo": {
 			"senses": [
-				"clothe"
+				"to clothe"
 			]
 		},
 		"infantia": {
@@ -3396,8 +3405,8 @@
 		},
 		"infundo": {
 			"senses": [
-				"pour in",
-				"infuse"
+				"to pour in",
+				"to infuse"
 			]
 		},
 		"ingredior": {
@@ -3510,8 +3519,8 @@
 		},
 		"instituo": {
 			"senses": [
-				"establish",
-				"train"
+				"to establish",
+				"to train"
 			]
 		},
 		"institutio": {
@@ -3544,8 +3553,8 @@
 		},
 		"intendo": {
 			"senses": [
-				"direct",
-				"stretch"
+				"to direct",
+				"to stretch"
 			]
 		},
 		"inter": {
@@ -3606,7 +3615,7 @@
 		},
 		"invenio": {
 			"senses": [
-				"find"
+				"to find"
 			]
 		},
 		"inviolatus": {
@@ -3657,7 +3666,7 @@
 		},
 		"irrideo": {
 			"senses": [
-				"mock"
+				"to mock"
 			]
 		},
 		"is": {
@@ -3822,7 +3831,7 @@
 		},
 		"labor": {
 			"senses": [
-				"labour",
+				"labor",
 				"toil"
 			]
 		},
@@ -3895,7 +3904,7 @@
 		},
 		"levo": {
 			"senses": [
-				"raise"
+				"to raise"
 			]
 		},
 		"lex": {
@@ -4223,8 +4232,8 @@
 		},
 		"migro": {
 			"senses": [
-				"migrate",
-				"journey"
+				"to migrate",
+				"to journey"
 			]
 		},
 		"militia": {
@@ -4240,9 +4249,9 @@
 		"mirabilis": {
 			"senses": [
 				"wonderful",
-				"marvellous"
+				"marvelous"
 			],
-			"note": "Substantive mirabília means “wonders” or “marvellous works”.",
+			"note": "Substantive mirabília means “wonders” or “marvelous works”.",
 			"derivatives": [
 				"marvel"
 			]
@@ -4250,7 +4259,7 @@
 		"mirabiliter": {
 			"senses": [
 				"wonderfully",
-				"marvellously"
+				"marvelously"
 			]
 		},
 		"miseratio": {
@@ -4290,7 +4299,8 @@
 		},
 		"missa": {
 			"senses": [
-				"Mass"
+				"Mass",
+				"dismissal, sending away (Ite, missa est)"
 			],
 			"derivatives": [
 				"Mass",
@@ -4350,7 +4360,7 @@
 		},
 		"morior": {
 			"senses": [
-				"die"
+				"to die"
 			]
 		},
 		"mors": {
@@ -4374,7 +4384,7 @@
 		},
 		"moveo": {
 			"senses": [
-				"move"
+				"to move"
 			]
 		},
 		"mulier": {
@@ -4402,7 +4412,7 @@
 		},
 		"mundo": {
 			"senses": [
-				"cleanse"
+				"to cleanse"
 			]
 		},
 		"mundus": {
@@ -4612,8 +4622,8 @@
 		},
 		"nuntio": {
 			"senses": [
-				"announce",
-				"declare"
+				"to announce",
+				"to declare"
 			]
 		},
 		"o": {
@@ -4645,7 +4655,7 @@
 		},
 		"oboedio": {
 			"senses": [
-				"obey"
+				"to obey"
 			]
 		},
 		"obsequium": {
@@ -4661,8 +4671,8 @@
 		},
 		"observo": {
 			"senses": [
-				"mark",
-				"observe"
+				"to mark",
+				"to observe"
 			]
 		},
 		"oculus": {
@@ -4681,16 +4691,16 @@
 				"smell"
 			],
 			"derivatives": [
-				"odour"
+				"odor"
 			]
 		},
 		"offensio": {
 			"senses": [
-				"offence",
+				"offense",
 				"affront"
 			],
 			"derivatives": [
-				"offence (from offensa)"
+				"offense (from offensa)"
 			]
 		},
 		"offero": {
@@ -4856,7 +4866,7 @@
 		},
 		"parco": {
 			"senses": [
-				"spare"
+				"to spare"
 			]
 		},
 		"pariter": {
@@ -4992,7 +5002,8 @@
 			"senses": [
 				"through, by means of",
 				"through (space)",
-				"throughout (time)"
+				"throughout (time)",
+				"for (of duration)"
 			]
 		},
 		"perceptio": {
@@ -5047,12 +5058,12 @@
 		},
 		"perforo": {
 			"senses": [
-				"pierce"
+				"to pierce"
 			]
 		},
 		"perfruor": {
 			"senses": [
-				"enjoy fully"
+				"to enjoy fully"
 			]
 		},
 		"perhibeo": {
@@ -5102,8 +5113,8 @@
 		},
 		"persolvo": {
 			"senses": [
-				"render",
-				"pay"
+				"to render",
+				"to pay"
 			]
 		},
 		"perturbatio": {
@@ -5188,7 +5199,7 @@
 		},
 		"placo": {
 			"senses": [
-				"appease"
+				"to appease"
 			]
 		},
 		"plebs": {
@@ -5335,8 +5346,8 @@
 		},
 		"praedico": {
 			"senses": [
-				"proclaim",
-				"praise"
+				"to proclaim",
+				"to praise"
 			]
 		},
 		"praelium": {
@@ -5398,7 +5409,7 @@
 		},
 		"praetereo": {
 			"senses": [
-				"pass away"
+				"to pass away"
 			]
 		},
 		"praeteritus": {
@@ -5476,7 +5487,8 @@
 			"senses": [
 				"for",
 				"on behalf of",
-				"instead of"
+				"instead of",
+				"by reason of (the ground of a petition)"
 			]
 		},
 		"procedo": {
@@ -5492,7 +5504,7 @@
 		},
 		"produco": {
 			"senses": [
-				"bring forth"
+				"to bring forth"
 			]
 		},
 		"proficio": {
@@ -5554,7 +5566,7 @@
 		"propitius": {
 			"senses": [
 				"gracious",
-				"favourable"
+				"favorable"
 			],
 			"derivatives": [
 				"propitious",
@@ -5604,7 +5616,7 @@
 		},
 		"protego": {
 			"senses": [
-				"protect"
+				"to protect"
 			]
 		},
 		"provenio": {
@@ -5631,8 +5643,8 @@
 		},
 		"pulso": {
 			"senses": [
-				"knock",
-				"strike"
+				"to knock",
+				"to strike"
 			]
 		},
 		"puritas": {
@@ -5653,7 +5665,7 @@
 		},
 		"quaero": {
 			"senses": [
-				"seek"
+				"to seek"
 			]
 		},
 		"quaeso": {
@@ -5715,7 +5727,8 @@
 			"senses": [
 				"for",
 				"since",
-				"because"
+				"because",
+				"that (in church Latin)"
 			]
 		},
 		"quoque": {
@@ -6005,7 +6018,7 @@
 		},
 		"requiesco": {
 			"senses": [
-				"rest"
+				"to rest"
 			]
 		},
 		"respicio": {
@@ -6193,7 +6206,7 @@
 		},
 		"salvator": {
 			"senses": [
-				"saviour"
+				"savior"
 			]
 		},
 		"salveo": {
@@ -6205,7 +6218,7 @@
 		},
 		"salvo": {
 			"senses": [
-				"save"
+				"to save"
 			]
 		},
 		"salvus": {
@@ -6293,8 +6306,8 @@
 		},
 		"saturo": {
 			"senses": [
-				"fill",
-				"saturate"
+				"to fill",
+				"to saturate"
 			]
 		},
 		"scelus": {
@@ -6311,7 +6324,7 @@
 		},
 		"scio": {
 			"senses": [
-				"know"
+				"to know"
 			]
 		},
 		"scriptura": {
@@ -6656,7 +6669,7 @@
 		},
 		"splendor": {
 			"senses": [
-				"splendour"
+				"splendor"
 			]
 		},
 		"sponsus": {
@@ -6786,7 +6799,7 @@
 		},
 		"supervenio": {
 			"senses": [
-				"come upon"
+				"to come upon"
 			]
 		},
 		"supplex": {
@@ -6859,8 +6872,8 @@
 		},
 		"sustineo": {
 			"senses": [
-				"wait",
-				"sustain"
+				"to wait",
+				"to sustain"
 			]
 		},
 		"suus": {
@@ -7015,7 +7028,7 @@
 		},
 		"transeo": {
 			"senses": [
-				"pass away"
+				"to pass away"
 			]
 		},
 		"tremo": {
@@ -7080,7 +7093,7 @@
 		"tutamentum": {
 			"senses": [
 				"safeguard",
-				"defence",
+				"defense",
 				"protection"
 			]
 		},
@@ -7119,7 +7132,7 @@
 		},
 		"unio": {
 			"senses": [
-				"unite"
+				"to unite"
 			]
 		},
 		"unitas": {
@@ -7242,7 +7255,7 @@
 			"senses": [
 				"pardon",
 				"indulgence",
-				"favour"
+				"favor"
 			],
 			"derivatives": [
 				"venial"
@@ -7375,7 +7388,7 @@
 		"virtus": {
 			"senses": [
 				"power",
-				"valour",
+				"valor",
 				"virtue",
 				"a Virtue (choir of angels)"
 			],
