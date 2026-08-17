@@ -3,7 +3,7 @@
 	"text": "ordinarium.introibo",
 	"lang": "pl",
 	"status": "working-edition",
-	"about": "Antyfona „Introíbo ad altáre Dei” pochodzi z Ps 42, 4. Poprzedza psalm, z którego została zaczerpnięta, i jest powtarzana po jego zakończeniu.",
+	"about": "Kapłan żegna się znakiem krzyża i zaczyna Mszę słowami In nómine Patris. Antyfona „Introíbo ad altáre Dei” pochodzi z Ps 42, 4 według numeracji Wulgaty (Ps 43, 4 w numeracji hebrajskiej). Poprzedza psalm, z którego została zaczerpnięta, i jest powtarzana po jego zakończeniu.",
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -124,5 +124,12 @@
 		"w019": {
 			"gloss": "moją"
 		}
-	}
+	},
+	"about_citations": [
+		{
+			"title": "Nova Vulgata, Liber Psalmorum",
+			"locator": "Psalmus 43 (Vg 42), 4",
+			"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+		}
+	]
 }
