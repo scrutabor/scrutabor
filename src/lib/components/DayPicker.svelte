@@ -55,7 +55,7 @@
 	<select value={chosen} onchange={pick} aria-label={msgs.dayLabel}>
 		<option value="">{msgs.dayNone}</option>
 		{#each PROPER_DAYS as d (d.id)}
-			<option value={d.id}>{d.title[lang]}</option>
+			<option value={d.id}>{d.title[lang]}{d.partial ? ` ${msgs.dayPartial}` : ''}</option>
 		{/each}
 	</select>
 	{#if proper.loading}
@@ -68,9 +68,16 @@
 <style>
 	.day {
 		display: inline-flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		align-items: center;
 		gap: 0.4rem;
 		font-size: 0.85rem;
+		/* Never wider than what it sits in. A fixed rem cap is a cap that
+		   grows with the reading size: 14rem is 313px once the largest print
+		   is chosen, and the narrowest phone this edition supports is 320px
+		   wide. The Ordo scrolled sideways. */
+		max-width: 100%;
 	}
 	select {
 		font: inherit;
@@ -79,7 +86,8 @@
 		border: 1px solid var(--rule);
 		border-radius: 0.2rem;
 		padding: 0.1rem 0.3rem;
-		max-width: 14rem;
+		max-width: 100%;
+		min-width: 0;
 	}
 	.state {
 		color: var(--muted);

@@ -4550,6 +4550,22 @@
 			"pos": "noun",
 			"gender": "m",
 			"decl": 3
+		},
+		"adventus": {
+			"head": "advéntus, advéntus",
+			"pos": "noun",
+			"decl": 4,
+			"gender": "m"
+		},
+		"purifico": {
+			"head": "puríficos, purificáre, purificávi, purificátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"servio": {
+			"head": "sérvio, servíre, servívi, servítum",
+			"pos": "verb",
+			"conj": 4
 		}
 	}
 }

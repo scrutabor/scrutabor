@@ -53,6 +53,7 @@ export interface Messages {
 	dayNone: string;
 	dayLoading: string;
 	dayFailed: string;
+	dayPartial: string;
 	ordoPending: string;
 	grammarTitle: string;
 	derivativesLabel: string;
@@ -152,6 +153,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayNone: 'bez formularza',
 		dayLoading: 'wczytywanie',
 		dayFailed: 'nie udało się wczytać',
+		dayPartial: '(część tekstów)',
 		ordoPending: 'wkrótce w tym wydaniu',
 		grammarTitle: 'gramatyka',
 		derivativesLabel: 'w polszczyźnie',
@@ -262,6 +264,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayNone: 'no formulary',
 		dayLoading: 'loading',
 		dayFailed: 'could not be loaded',
+		dayPartial: '(some texts)',
 		ordoPending: 'not yet in this edition',
 		grammarTitle: 'grammar',
 		derivativesLabel: 'in English',

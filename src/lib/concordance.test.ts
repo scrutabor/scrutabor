@@ -75,11 +75,23 @@ describe('what the concordance is built from', () => {
 		// book with no shelf to order it.
 		const proper = everyTextInOrder().filter((k) => k.startsWith('proprium/'));
 		expect(proper.length).toBeGreaterThan(0);
-		const ranks = proper.map((k) => properRank(k.split('/')[1]));
-		expect(ranks).not.toContain(-1);
-		expect([...ranks]).toEqual([...ranks].sort((a, b) => a - b));
-		expect(proper[0]).toMatch(/-introitus$/);
-		expect(proper[proper.length - 1]).toMatch(/-postcommunio$/);
+		// Grouped by DAY, and in rite order inside each day. A global sort was
+		// the right assertion while one formulary existed and the wrong one the
+		// moment a second arrived: Advent II's collect is not out of order
+		// because it follows Advent I's postcommunion.
+		const byDay = new Map<string, number[]>();
+		for (const key of proper) {
+			const slug = key.split('/')[1];
+			const day = slug.replace(/-[^-]+$/, '');
+			expect(properRank(slug), `${slug} names no known part`).not.toBe(-1);
+			byDay.set(day, [...(byDay.get(day) ?? []), properRank(slug)]);
+		}
+		for (const [day, ranks] of byDay) {
+			expect([...ranks], `${day} is out of rite order`).toEqual([...ranks].sort((a, b) => a - b));
+		}
+		// The days themselves keep the order the table declares.
+		const days = [...byDay.keys()];
+		expect(days).toEqual([...days].sort());
 	});
 
 	it('opens with the prayers and reaches the last Gospel at the end', () => {

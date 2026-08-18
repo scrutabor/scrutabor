@@ -71,6 +71,14 @@ export interface ProperDay {
 	season: 'adventus';
 	/** as the Missal names it, and as a reader would */
 	title: Record<'la' | Lang, string>;
+	/** True while the edition carries only some of the day's parts.
+	 *
+	 * A formulary arrives one text at a time, and a reader who picks a day
+	 * must be able to tell "this Mass has no Introit" from "this edition has
+	 * not got there yet". Without the mark the Ordo shows the same generic
+	 * description in both cases, which is the kind of silence this edition
+	 * does not keep. */
+	partial?: boolean;
 }
 
 // One entry per formulary the corpus carries. A day named here without texts
@@ -83,6 +91,16 @@ export const PROPER_DAYS: ProperDay[] = [
 			la: 'Dominica I Adventus',
 			pl: 'I Niedziela Adwentu',
 			en: 'First Sunday of Advent'
+		}
+	},
+	{
+		id: 'dominica-ii-adventus',
+		season: 'adventus',
+		partial: true,
+		title: {
+			la: 'Dominica II Adventus',
+			pl: 'II Niedziela Adwentu',
+			en: 'Second Sunday of Advent'
 		}
 	}
 ];
