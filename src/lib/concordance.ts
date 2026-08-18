@@ -10,7 +10,8 @@
 // though it were all of them. That is the same mistake as prerendering the
 // catalogue instead of the corpus (quality.md): the list a page renders
 // from and the list of what exists are two different lists.
-import { CATALOG, properRank } from './catalog';
+import { CATALOG } from './catalog';
+import { properRank } from './proprium';
 import { TEXTS } from './corpus';
 import { ORDO } from './ordo';
 

@@ -10,11 +10,13 @@
 	import TextBody from '$lib/components/TextBody.svelte';
 	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
-	import { movementById, movementNeighbors, partVoice } from '$lib/ordo';
+	import { movementById, movementNeighbors, partVoice, type OrdoEntry } from '$lib/ordo';
 	import { role, showsWords } from '$lib/role.svelte';
 	import { ribbon } from '$lib/ribbon.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
 	import { wordPanel } from '$lib/wordpanel.svelte';
+	import { proper } from '$lib/proper.svelte';
+	import DayPicker from '$lib/components/DayPicker.svelte';
 
 	// Only this movement's texts, from the server load — never the corpus.
 	let { data } = $props();
@@ -59,10 +61,33 @@
 	// A plain array, not a Set: the lint rule against mutable built-in
 	// collections in components is right — a Set is not reactive, and this
 	// value is rebuilt from scratch whenever the reader changes their part.
+	// What a given part of the spine actually shows. Usually one text, from
+	// this page's own prerendered data. For a `proper` slot it is whatever the
+	// chosen day supplies — nothing at all until a day is chosen, and MORE
+	// THAN ONE where the rite folds several parts into a slot: gradual and
+	// alleluia share the chant between the readings.
+	//
+	// Everything on this page goes through here. Before it existed, three
+	// places each wrote `e.text ? texts[e.text] : undefined` and a fourth
+	// looked words up under `ordinarium/`, which no proper slug matches.
+	const bodiesFor = $derived((e: OrdoEntry) => {
+		if (e.text) {
+			const entry = texts[e.text];
+			return entry ? [{ key: e.text, slug: e.text.split('/')[1], ...entry }] : [];
+		}
+		if (e.kind !== 'proper') return [];
+		return proper.forSlot(e.id).map((part) => ({
+			key: part.key,
+			slug: part.key.split('/')[1],
+			doc: part.doc as TextDocument,
+			gloss: part.gloss as GlossDocument
+		}));
+	});
+
 	const silent = $derived(
 		(movement?.entries ?? [])
 			.filter((e) => {
-				const entry = e.text ? texts[e.text] : undefined;
+				const entry = bodiesFor(e)[0];
 				if (!entry) return false;
 				const voices = entry.doc.segments.filter((sg) => sg.type === 'verse').map((sg) => sg.voice);
 				return !showsWords(voices, partVoice(e.id), role.value);
@@ -75,10 +100,9 @@
 	// share this page, so a word is addressed by text AND id — `credo.w001`
 	// — which is also what the ?w= deep link carries.
 	const inlined = $derived(
-		(movement?.entries ?? []).flatMap((e) => {
-			const entry = e.text ? texts[e.text] : undefined;
-			return entry ? [{ slug: e.text!.split('/')[1], key: e.text!, entry }] : [];
-		})
+		(movement?.entries ?? []).flatMap((e) =>
+			bodiesFor(e).map(({ key, slug, doc, gloss }) => ({ slug, key, entry: { doc, gloss } }))
+		)
 	);
 
 	const wordsById = $derived(
@@ -102,7 +126,21 @@
 	});
 
 	const picked = $derived(panel.id ? (wordsById.get(panel.id) ?? null) : null);
-	const pickedEntry = $derived(picked ? texts[`ordinarium/${picked.slug}`] : null);
+	// By slug among what this page shows, not by a guessed category. The
+	// Proper's slugs are not under `ordinarium/`, and the old lookup would
+	// have returned undefined for every one of them.
+	// The page's own dictionary plus the chosen day's. Merged PER MAP, not by
+	// spreading the pair: `narrowLexicon` returns { lemmata, senses }, so a
+	// shallow spread replaces both wholesale and every word of the Ordinary
+	// loses its entry the moment a day is chosen.
+	const mergedLex = $derived({
+		lemmata: { ...data.lex.lemmata, ...(proper.payload?.lex?.lemmata ?? {}) },
+		senses: { ...data.lex.senses, ...(proper.payload?.lex?.senses ?? {}) }
+	});
+
+	const pickedEntry = $derived(
+		picked ? (inlined.find((i) => i.slug === picked.slug)?.entry ?? null) : null
+	);
 	const pickedGloss = $derived(
 		picked && pickedEntry ? (pickedEntry.gloss.words[picked.word.id] ?? null) : null
 	);
@@ -146,12 +184,14 @@
 			<HelpLevels {lang} bind:value={helpLevel} />
 			<RolePicker {lang} compact />
 			<RolePicker {lang} compact kind="mass" />
+			<DayPicker {lang} />
 		</div>
 	</header>
 
 	<main class:panel-open={picked !== null || panel.keepPad}>
 		{#each movement?.entries ?? [] as e, idx (e.id)}
-			{@const entry = e.text ? texts[e.text] : undefined}
+			{@const bodies = bodiesFor(e)}
+			{@const entry = bodies[0]}
 			{@const voices = (entry?.doc.segments ?? [])
 				.filter((s) => s.type === 'verse')
 				.map((s) => s.voice)}
@@ -177,8 +217,8 @@
 					</button>
 				{:else}
 					<div class="part-head">
-						{#if e.text && entry}
-							<a class="part-title" href="/app/{lang}/{e.text}" lang="la">{e.title}</a>
+						{#if entry}
+							<a class="part-title" href="/app/{lang}/{entry.key}" lang="la">{e.title}</a>
 						{:else}
 							<span class="part-title" lang="la">{e.title}</span>
 						{/if}
@@ -208,16 +248,21 @@
 				{/if}
 				{#if entry && (words || unfolded[e.id])}
 					<div class="part-text">
-						<TextBody
-							doc={entry.doc}
-							gloss={entry.gloss}
-							{lang}
-							{helpLevel}
-							idPrefix={e.text!.split('/')[1]}
-							selectedId={panel.id}
-							ontap={tapWord}
-							onmark={openLegend}
-						/>
+						<!-- One slot can hold more than one text: the chant between
+						     the readings is gradual AND alleluia, and in Lent a
+						     tract instead. Each keeps its own word ids. -->
+						{#each bodies as body (body.key)}
+							<TextBody
+								doc={body.doc}
+								gloss={body.gloss}
+								{lang}
+								{helpLevel}
+								idPrefix={body.slug}
+								selectedId={panel.id}
+								ontap={tapWord}
+								onmark={openLegend}
+							/>
+						{/each}
 					</div>
 				{/if}
 			</section>
@@ -245,7 +290,7 @@
 			word={picked.word}
 			gloss={pickedGloss}
 			analysis={pickedAnalysis}
-			lex={data.lex}
+			lex={mergedLex}
 			{lang}
 			onclose={panel.close}
 			onnavigate={(id) => panel.goTo(`${picked.slug}.${id}`)}

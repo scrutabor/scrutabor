@@ -232,31 +232,3 @@ export function neighborsOf(
 	if (i < 0) return {};
 	return { prev: all[i - 1], next: all[i + 1] };
 }
-
-/** The parts of a Mass proper, in the order the rite says them.
- *
- * Keyed by the part alone, never by the day, so one list orders every
- * formulary there will ever be. The Proper has no shelf (see the `proprium`
- * section above), and without this its texts would reach a lemma page in
- * alphabetical order — alleluia before introit — which is the one place the
- * book would have printed the Mass out of sequence.
- */
-export const PROPER_PARTS = [
-	'introitus',
-	'collecta',
-	'epistola',
-	'graduale',
-	'alleluia',
-	'tractus',
-	'sequentia',
-	'evangelium',
-	'offertorium',
-	'secreta',
-	'communio',
-	'postcommunio'
-];
-
-/** Where a proprium slug falls in the rite, or -1 if it names no known part. */
-export function properRank(slug: string): number {
-	return PROPER_PARTS.findIndex((part) => slug.endsWith(`-${part}`));
-}

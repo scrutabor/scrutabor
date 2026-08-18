@@ -74,6 +74,29 @@ rmSync(OUT, { recursive: true, force: true });
 cpSync(join(SITE, INNER), app, { recursive: true });
 cpSync(join(SITE, '_app'), join(app, '_app'), { recursive: true });
 cpSync(RUNTIME, join(app, '_app', 'offline.js'));
+// The day's own texts, which live outside /app because they are data rather
+// than pages. They must travel: a downloaded book that cannot open today's
+// Mass is a book that fails exactly where offline was supposed to help
+// (decisions #27, revised 2026-08-18). They land INSIDE the app directory
+// because that is where `__scrutabor_up` points, so one path expression
+// serves the site and the copy.
+cpSync(join(SITE, 'artifacts'), join(app, 'artifacts'), { recursive: true });
+
+// …and beside each one, the same day as a CLASSIC SCRIPT.
+//
+// Chrome refuses `fetch()` for file:// outright — "URL scheme file is not
+// supported" — so the site's way of getting a day cannot work in a downloaded
+// copy, however the path is spelled. A classic script CAN be loaded from
+// file://, which is the same reason the offline runtime is an IIFE rather
+// than a module. The reader gets one day at a time either way.
+//
+// The workaround lives here and nowhere else: the site keeps plain JSON, and
+// only the copy that has no origin carries the script form.
+for (const path of walk(join(app, 'artifacts'))) {
+	if (!path.endsWith('.json')) continue;
+	const day = readFileSync(path, 'utf8');
+	writeFileSync(path.replace(/\.json$/, '.js'), `window.__scrutabor_day=${day};\n`);
+}
 
 // The canary for that boundary: the privacy page exists in every language
 // and only on the landing side, so finding it here means the copy widened.

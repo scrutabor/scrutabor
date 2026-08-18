@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { CATALOG, properRank } from './catalog';
+import { CATALOG } from './catalog';
+import { properRank } from './proprium';
 import { everyTextInOrder, occurrencesOf } from './concordance';
 import { TEXTS } from './corpus';
 import { ORDO } from './ordo';

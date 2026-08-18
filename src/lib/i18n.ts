@@ -49,6 +49,10 @@ export interface Messages {
 	ordoSubtitle: string;
 	ordoDescription: string;
 	ordoProper: string;
+	dayLabel: string;
+	dayNone: string;
+	dayLoading: string;
+	dayFailed: string;
 	ordoPending: string;
 	grammarTitle: string;
 	derivativesLabel: string;
@@ -144,6 +148,10 @@ const MESSAGES: Record<Lang, Messages> = {
 		ordoDescription:
 			'Cały porządek Mszy w rycie z 1962 roku, część po części — z tekstami stałymi i miejscami, w których wchodzą teksty własne dnia.',
 		ordoProper: 'z formularza dnia',
+		dayLabel: 'dzień',
+		dayNone: 'bez formularza',
+		dayLoading: 'wczytywanie',
+		dayFailed: 'nie udało się wczytać',
 		ordoPending: 'wkrótce w tym wydaniu',
 		grammarTitle: 'gramatyka',
 		derivativesLabel: 'w polszczyźnie',
@@ -250,6 +258,10 @@ const MESSAGES: Record<Lang, Messages> = {
 		ordoDescription:
 			'The whole order of Mass in the 1962 rite, part by part — the fixed texts, and where the day’s own texts belong.',
 		ordoProper: 'from the day’s formulary',
+		dayLabel: 'day',
+		dayNone: 'no formulary',
+		dayLoading: 'loading',
+		dayFailed: 'could not be loaded',
 		ordoPending: 'not yet in this edition',
 		grammarTitle: 'grammar',
 		derivativesLabel: 'in English',

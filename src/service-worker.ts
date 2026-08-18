@@ -28,10 +28,18 @@ const SHELL_PAGE = /^\/app\/([a-z]{2}(\/(ordo|editio))?)?$/;
 
 const SHELL = [...build, ...files, ...prerendered.filter((path) => SHELL_PAGE.test(path))];
 
-/** The whole book, for a reader who installed it. Only the app subtree:
- * this also leaves out the sitemap and the landing pages, which live at
- * the origin root. */
-const EVERYTHING = [...SHELL, ...prerendered.filter((path) => path.startsWith('/app/'))];
+/** The day's own texts, one file per day per language (decisions #27,
+ * revised 2026-08-18). These are NOT shell: a reader who opened one prayer
+ * in a browser has not asked for the propers of the year, and the web
+ * reader who never picks a date fetches none of them. They belong to the
+ * book, so an installed app can open today's Mass in a basement chapel —
+ * which is the promise that justified offline here at all. */
+const DAYS = prerendered.filter((path) => path.startsWith('/artifacts/proprium/'));
+
+/** The whole book, for a reader who installed it. Only the app subtree and
+ * the day artifacts: this leaves out the sitemap and the landing pages,
+ * which live at the origin root. */
+const EVERYTHING = [...SHELL, ...prerendered.filter((path) => path.startsWith('/app/')), ...DAYS];
 
 sw.addEventListener('install', (event) => {
 	event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL)));
