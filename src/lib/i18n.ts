@@ -56,6 +56,8 @@ export interface Messages {
 	dayLoading: string;
 	dayFailed: string;
 	dayPartial: string;
+	/** What the day setting is doing, as the role and Mass hints do. */
+	dayHint: Record<'none' | 'chosen', string>;
 	/** The seasons of the year, for grouping the day picker. */
 	seasons: Record<Season, string>;
 	ordoPending: string;
@@ -158,6 +160,10 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayLoading: 'wczytywanie',
 		dayFailed: 'nie udało się wczytać',
 		dayPartial: '(część tekstów)',
+		dayHint: {
+			none: 'sam porządek Mszy, bez tekstów zmiennych',
+			chosen: 'teksty tego dnia wypełniają porządek Mszy'
+		},
 		seasons: {
 			adventus: 'Adwent',
 			nativitas: 'Boże Narodzenie',
@@ -276,6 +282,10 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayLoading: 'loading',
 		dayFailed: 'could not be loaded',
 		dayPartial: '(some texts)',
+		dayHint: {
+			none: 'the order of Mass alone, without the day’s own texts',
+			chosen: 'the day’s own texts fill the order of Mass'
+		},
 		seasons: {
 			adventus: 'Advent',
 			nativitas: 'Christmastide',

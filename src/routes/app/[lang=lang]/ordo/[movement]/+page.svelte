@@ -185,16 +185,17 @@
 		<p class="subtitle smallcaps">{movement?.label[lang] ?? ''}</p>
 		<div class="help-row">
 			<HelpLevels {lang} bind:value={helpLevel} />
+			<!-- The day leads the three settings for the same reason it does on
+			     the index, and appears only where it has something to fill:
+			     three of the six movements carry no proper slot at all — the
+			     preparation, the Canon and the communion are the same at every
+			     Mass — and a control that changes nothing on the page in front
+			     of the reader is a control that says the page is broken. -->
+			{#if hasProper}
+				<DayPicker {lang} compact />
+			{/if}
 			<RolePicker {lang} compact />
 			<RolePicker {lang} compact kind="mass" />
-			<!-- Only where a day has something to fill. Three of the six
-			     movements carry no proper slot at all -- the preparation, the
-			     Canon and the communion are the same at every Mass -- and a
-			     control that changes nothing on the page in front of the
-			     reader is a control that says the page is broken. -->
-			{#if hasProper}
-				<DayPicker {lang} />
-			{/if}
 		</div>
 	</header>
 

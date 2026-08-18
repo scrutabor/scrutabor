@@ -7,6 +7,7 @@
 :root,
 [data-theme='light'] {
 	--bg: #f7f1e6;
+	--scheme: light;
 	--surface: #fcf8ef;
 	--ink: #251e12;
 	--ink-soft: #70624a;
@@ -19,6 +20,7 @@
 
 [data-theme='dark'] {
 	--bg: #1a1611;
+	--scheme: dark;
 	--surface: #211c15;
 	--ink: #ddd1bb;
 	--ink-soft: #9a8a6c;

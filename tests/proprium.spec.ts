@@ -49,22 +49,25 @@ test('a shared link restores the day and the word', async ({ page }) => {
 	await expect(page.locator('body')).toContainText('tryb łączący', { timeout: 15000 });
 });
 
-test('picking a day does not resize the control it was picked with', async ({ page }) => {
+test('picking a day does not make the control flicker @online', async ({ page }) => {
 	// The artifact usually arrives in about 30 ms, and a notice that appears
 	// and vanishes inside two frames says nothing while jolting the one part
 	// of the page that is otherwise still: the label went 200px wide to 291px
-	// and back on every pick and every reload.
+	// and straight back on every pick and every reload.
 	//
-	// The rule is conditional, so the test is too. A load fast enough not to
-	// be announced must not move anything. A load slow enough to be announced
-	// may, and that branch has its own test below — which is why this one does
-	// not simply demand one size and go red the first time a cold file:// read
-	// of a 100K script takes longer than the threshold. It did exactly that,
-	// once, on the run after a fresh build.
+	// The load is held for 120 ms rather than left to the machine. Untimed,
+	// this test passed against the defect it exists for — the fetch was so
+	// fast that whether the notice flashed at all depended on which frame the
+	// sampler woke on. 120 ms is comfortably under the 400 ms the notice waits
+	// and comfortably over one frame, so the answer is the same every run.
+	// `@online` because it drives a route: the downloaded copy loads the day
+	// from a classic script and has no request to hold.
+	await page.route('**/artifacts/proprium/**', async (route) => {
+		await new Promise((r) => setTimeout(r, 120));
+		await route.continue();
+	});
 	await page.goto(`/app/en/ordo/catechumenorum`);
 	await settled(page);
-	const label = page.locator('label.day');
-	const before = await label.boundingBox();
 	const watch = page.evaluate(
 		() =>
 			new Promise<{ sizes: string[]; announced: boolean }>((done) => {
@@ -72,21 +75,27 @@ test('picking a day does not resize the control it was picked with', async ({ pa
 				let announced = false;
 				let n = 0;
 				const tick = () => {
-					const el = document.querySelector('label.day');
+					const el = document.querySelector('.picker.day');
 					const r = el?.getBoundingClientRect();
-					sizes.push(r ? `${Math.round(r.width)}x${Math.round(r.height)}` : '-');
+					const size = r ? `${Math.round(r.width)}x${Math.round(r.height)}` : '-';
+					if (sizes[sizes.length - 1] !== size) sizes.push(size);
 					if (el?.querySelector('.state')) announced = true;
 					if (++n < 70) requestAnimationFrame(tick);
-					else done({ sizes: [...new Set(sizes)], announced });
+					else done({ sizes, announced });
 				};
 				requestAnimationFrame(tick);
 			})
 	);
-	await page.selectOption('label.day select', DAY);
+	await page.selectOption('.picker.day select', DAY);
 	const { sizes, announced } = await watch;
-	if (announced) return;
-	expect(sizes).toHaveLength(1);
-	expect(await label.boundingBox()).toEqual(before);
+	// A load this fast is not worth announcing, so nothing is said and nothing
+	// is moved by saying it.
+	expect(announced).toBe(false);
+	// The control may settle wider — the day names are longer than "no proper"
+	// and the chosen one is set in the rubric weight — but it must not take a
+	// size it then abandons, which is what a flicker is.
+	expect(sizes.length, sizes.join(' -> ')).toBeLessThanOrEqual(2);
+	expect(new Set(sizes).size, sizes.join(' -> ')).toBe(sizes.length);
 });
 
 test('a slow day still says it is loading @online', async ({ page }) => {
@@ -98,7 +107,7 @@ test('a slow day still says it is loading @online', async ({ page }) => {
 	});
 	await page.goto(`/app/en/ordo/catechumenorum`);
 	await settled(page);
-	await page.selectOption('label.day select', DAY);
-	await expect(page.locator('label.day .state')).toBeVisible();
-	await expect(page.locator('label.day .state')).toBeHidden({ timeout: 10_000 });
+	await page.selectOption('.picker.day select', DAY);
+	await expect(page.locator('.picker.day .state')).toBeVisible();
+	await expect(page.locator('.picker.day .state')).toBeHidden({ timeout: 10_000 });
 });
