@@ -10,7 +10,7 @@
 // though it were all of them. That is the same mistake as prerendering the
 // catalogue instead of the corpus (quality.md): the list a page renders
 // from and the list of what exists are two different lists.
-import { CATALOG } from './catalog';
+import { CATALOG, properRank } from './catalog';
 import { TEXTS } from './corpus';
 import { ORDO } from './ordo';
 
@@ -46,7 +46,19 @@ export function everyTextInOrder(): string[] {
 	};
 	for (const section of CATALOG) for (const t of section.texts) add(`${t.category}/${t.slug}`);
 	for (const movement of ORDO) for (const e of movement.entries) if (e.text) add(e.text);
-	for (const key of Object.keys(TEXTS).sort()) add(key);
+	// The tail: anything neither shelf nor Ordo names. The Proper lives here
+	// on purpose and must not arrive alphabetically, which would put its
+	// Alleluia before its Introit on every lemma page.
+	const tail = Object.keys(TEXTS).sort((a, b) => {
+		const [ca, sa] = a.split('/');
+		const [cb, sb] = b.split('/');
+		if (ca === 'proprium' && cb === 'proprium') {
+			const day = sa.replace(/-[^-]+$/, '').localeCompare(sb.replace(/-[^-]+$/, ''));
+			return day !== 0 ? day : properRank(sa) - properRank(sb);
+		}
+		return a.localeCompare(b);
+	});
+	for (const key of tail) add(key);
 	return order;
 }
 

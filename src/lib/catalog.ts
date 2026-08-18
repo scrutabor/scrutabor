@@ -165,82 +165,25 @@ const CATALOG_SOURCE: CatalogSection[] = [
 		]
 	},
 	{
-		// The proper is not a list of prayers but ONE Mass, whose parts the
-		// Ordo interleaves with the ordinary — so the shelf is ordered by the
-		// rite and not alphabetically, and the label names the day rather than
-		// the category, because "proper" alone tells a reader nothing about
-		// WHICH proper they are looking at. One formulary today. When there
-		// are dozens this shelf becomes a list of days and the parts move
-		// behind it (BACKLOG, landing scalability).
+		// DECLARED AND EMPTY, on purpose (owner, 2026-08-18). The ten Advent
+		// parts were briefly listed here as ten cards, which read fine for one
+		// Sunday and would be five hundred cards for the year. Listing days is
+		// not the answer either: the reader's question is "what is prayed
+		// today", and the Ordo already carries a slot for every proper part,
+		// labelled *z formularza dnia*. Those slots get filled from a day the
+		// reader picks, and no menu grows at all.
 		//
-		// The Ordo's own `proper` entries stay unlinked on purpose. They are
-		// day-agnostic — the spine of ANY Mass — and pointing them at Advent I
-		// would tell a reader in June that this is today's introit. Resolving
-		// them is the calendar's work (v1 scope 4).
+		// Until that lands the Proper has NO menu entry. It is not orphaned:
+		// 173 lemma pages link into it, and every part keeps its own crawlable
+		// page. The section survives without texts because it still names the
+		// group — a reading reached by a direct link falls back to this label
+		// rather than to nothing — and because an empty declaration says the
+		// absence was chosen, where a deleted one would say nobody thought
+		// about it. `catalog.reach.test.ts` holds the same decision from the
+		// other side.
 		category: 'proprium',
-		label: { pl: 'proprium — I Niedziela Adwentu', en: 'proper — First Sunday of Advent' },
-		texts: [
-			{
-				category: 'proprium',
-				slug: 'dominica-i-adventus-introitus',
-				title: 'Intróitus',
-				localizedTitle: { pl: 'Introit', en: 'Introit' }
-			},
-			{
-				category: 'proprium',
-				slug: 'dominica-i-adventus-collecta',
-				title: 'Collécta',
-				localizedTitle: { pl: 'Kolekta', en: 'Collect' }
-			},
-			{
-				category: 'proprium',
-				slug: 'dominica-i-adventus-epistola',
-				title: 'Epístola',
-				localizedTitle: { pl: 'Lekcja', en: 'Epistle' }
-			},
-			{
-				category: 'proprium',
-				slug: 'dominica-i-adventus-graduale',
-				title: 'Graduále',
-				localizedTitle: { pl: 'Graduał', en: 'Gradual' }
-			},
-			{
-				category: 'proprium',
-				slug: 'dominica-i-adventus-alleluia',
-				title: 'Allelúia',
-				localizedTitle: { pl: 'Alleluja', en: 'Alleluia' }
-			},
-			{
-				category: 'proprium',
-				slug: 'dominica-i-adventus-evangelium',
-				title: 'Evangélium',
-				localizedTitle: { pl: 'Ewangelia', en: 'Gospel' }
-			},
-			{
-				category: 'proprium',
-				slug: 'dominica-i-adventus-offertorium',
-				title: 'Offertórium',
-				localizedTitle: { pl: 'Ofiarowanie', en: 'Offertory' }
-			},
-			{
-				category: 'proprium',
-				slug: 'dominica-i-adventus-secreta',
-				title: 'Secréta',
-				localizedTitle: { pl: 'Sekreta', en: 'Secret' }
-			},
-			{
-				category: 'proprium',
-				slug: 'dominica-i-adventus-communio',
-				title: 'Commúnio',
-				localizedTitle: { pl: 'Komunia', en: 'Communion' }
-			},
-			{
-				category: 'proprium',
-				slug: 'dominica-i-adventus-postcommunio',
-				title: 'Postcommúnio',
-				localizedTitle: { pl: 'Pokomunia', en: 'Postcommunion' }
-			}
-		]
+		label: { pl: 'z formularza dnia', en: "from the day's proper" },
+		texts: []
 	},
 	{
 		// The first shelf that is not the Mass. Psalm 118 is an acrostic of
@@ -288,4 +231,32 @@ export function neighborsOf(
 	const i = all.findIndex((t) => t.category === category && t.slug === slug);
 	if (i < 0) return {};
 	return { prev: all[i - 1], next: all[i + 1] };
+}
+
+/** The parts of a Mass proper, in the order the rite says them.
+ *
+ * Keyed by the part alone, never by the day, so one list orders every
+ * formulary there will ever be. The Proper has no shelf (see the `proprium`
+ * section above), and without this its texts would reach a lemma page in
+ * alphabetical order — alleluia before introit — which is the one place the
+ * book would have printed the Mass out of sequence.
+ */
+export const PROPER_PARTS = [
+	'introitus',
+	'collecta',
+	'epistola',
+	'graduale',
+	'alleluia',
+	'tractus',
+	'sequentia',
+	'evangelium',
+	'offertorium',
+	'secreta',
+	'communio',
+	'postcommunio'
+];
+
+/** Where a proprium slug falls in the rite, or -1 if it names no known part. */
+export function properRank(slug: string): number {
+	return PROPER_PARTS.findIndex((part) => slug.endsWith(`-${part}`));
 }

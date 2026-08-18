@@ -6,8 +6,12 @@
 	let { data } = $props();
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
-	const primarySections = CATALOG.filter((section) => section.category === 'orationes');
-	const secondarySections = CATALOG.filter((section) => section.category !== 'orationes');
+	// A section may be declared with no texts — `proprium` is, because the
+	// day's own texts are reached through the Ordo and not through a shelf
+	// (see lib/catalog). Declared-but-empty must not print a bare heading.
+	const shelves = CATALOG.filter((section) => section.texts.length > 0);
+	const primarySections = shelves.filter((section) => section.category === 'orationes');
+	const secondarySections = shelves.filter((section) => section.category !== 'orationes');
 </script>
 
 {#snippet shelf(section: CatalogSection)}

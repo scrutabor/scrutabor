@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { CATALOG } from './catalog';
+import { CATALOG, properRank } from './catalog';
 import { everyTextInOrder, occurrencesOf } from './concordance';
 import { TEXTS } from './corpus';
 import { ORDO } from './ordo';
@@ -52,14 +52,33 @@ describe('what the concordance is built from', () => {
 
 	it('and something sequences each of them', () => {
 		// Order comes from the shelf and then from the Ordo. A text neither
-		// of them names would fall to the sorted tail here — and it would
-		// have nothing linking to it in the app either, which is the real
-		// thing this catches.
+		// of them names falls to the sorted tail — and would usually have
+		// nothing linking to it in the app either, which is the real thing
+		// this catches.
+		//
+		// `proprium` is the declared exception (owner, 2026-08-18): it has no
+		// shelf, is reached from lemma pages and direct links, and therefore
+		// DOES live in the tail. The test below is what keeps that honest —
+		// the tail must still be in rite order.
 		const sequenced = new Set([
 			...CATALOG.flatMap((s) => s.texts).map((t) => `${t.category}/${t.slug}`),
 			...ORDO.flatMap((m) => m.entries).flatMap((e) => (e.text ? [e.text] : []))
 		]);
-		expect(everyTextInOrder().filter((k) => !sequenced.has(k))).toEqual([]);
+		const unsequenced = everyTextInOrder().filter((k) => !sequenced.has(k));
+		expect(unsequenced.filter((k) => !k.startsWith('proprium/'))).toEqual([]);
+	});
+
+	it('puts the Proper in rite order, not alphabetical order', () => {
+		// Alphabetically the Alleluia precedes the Introit. On a lemma page
+		// that would print the Mass out of sequence, in the one part of the
+		// book with no shelf to order it.
+		const proper = everyTextInOrder().filter((k) => k.startsWith('proprium/'));
+		expect(proper.length).toBeGreaterThan(0);
+		const ranks = proper.map((k) => properRank(k.split('/')[1]));
+		expect(ranks).not.toContain(-1);
+		expect([...ranks]).toEqual([...ranks].sort((a, b) => a - b));
+		expect(proper[0]).toMatch(/-introitus$/);
+		expect(proper[proper.length - 1]).toMatch(/-postcommunio$/);
 	});
 
 	it('opens with the prayers and reaches the last Gospel at the end', () => {
