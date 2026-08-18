@@ -2656,7 +2656,6 @@
 				"to make into"
 			],
 			"derivatives": [
-				"effect",
 				"efficient"
 			]
 		},
@@ -3477,8 +3476,7 @@
 			"note": "Takes the dative for the person commanded.",
 			"derivatives": [
 				"emperor",
-				"imperative",
-				"empire"
+				"imperative"
 			]
 		},
 		"impius": {
@@ -6173,8 +6171,7 @@
 			],
 			"derivatives": [
 				"rector",
-				"regent",
-				"correct"
+				"regent"
 			]
 		},
 		"relinquo": {
@@ -8435,6 +8432,431 @@
 			"senses": [
 				"across",
 				"beyond"
+			]
+		},
+		"Emmanuel": {
+			"senses": [
+				"Emmanuel"
+			]
+		},
+		"cresco": {
+			"senses": [
+				"to grow",
+				"to increase"
+			],
+			"derivatives": [
+				"crescent",
+				"increase"
+			]
+		},
+		"effectus": {
+			"senses": [
+				"effect",
+				"fulfillment"
+			],
+			"derivatives": [
+				"effect"
+			]
+		},
+		"facinus": {
+			"senses": [
+				"a misdeed",
+				"a crime"
+			]
+		},
+		"frequentatio": {
+			"senses": [
+				"frequent use",
+				"repeated celebration"
+			]
+		},
+		"pario": {
+			"senses": [
+				"to bring forth",
+				"to bear"
+			]
+		},
+		"relaxo": {
+			"senses": [
+				"to loosen",
+				"to remit"
+			],
+			"derivatives": [
+				"relax"
+			]
+		},
+		"tardo": {
+			"senses": [
+				"to delay",
+				"to be slow"
+			],
+			"derivatives": [
+				"retard"
+			]
+		},
+		"voco": {
+			"senses": [
+				"to call",
+				"to name"
+			],
+			"derivatives": [
+				"vocation",
+				"vocative"
+			]
+		},
+		"accelero": {
+			"senses": [
+				"to hasten"
+			],
+			"derivatives": [
+				"accelerate"
+			]
+		},
+		"annuntio": {
+			"senses": [
+				"to announce",
+				"to declare"
+			],
+			"derivatives": [
+				"annunciation"
+			]
+		},
+		"desuper": {
+			"senses": [
+				"from above"
+			]
+		},
+		"firmamentum": {
+			"senses": [
+				"the firmament"
+			],
+			"derivatives": [
+				"firmament"
+			]
+		},
+		"germino": {
+			"senses": [
+				"to bud forth",
+				"to sprout"
+			],
+			"derivatives": [
+				"germinate"
+			]
+		},
+		"pluo": {
+			"senses": [
+				"to rain",
+				"to rain down"
+			]
+		},
+		"praepedio": {
+			"senses": [
+				"to hinder",
+				"to block the way of"
+			]
+		},
+		"roro": {
+			"senses": [
+				"to drop dew",
+				"to rain down"
+			]
+		},
+		"abscondo": {
+			"senses": [
+				"to hide",
+				"to conceal"
+			],
+			"derivatives": [
+				"abscond"
+			]
+		},
+		"aut": {
+			"senses": [
+				"or"
+			]
+		},
+		"conscius": {
+			"senses": [
+				"conscious",
+				"aware"
+			],
+			"derivatives": [
+				"conscious"
+			]
+		},
+		"dispensator": {
+			"senses": [
+				"a steward",
+				"a dispenser"
+			]
+		},
+		"existimo": {
+			"senses": [
+				"to reckon",
+				"to account"
+			],
+			"derivatives": [
+				"esteem"
+			]
+		},
+		"itaque": {
+			"senses": [
+				"therefore",
+				"and so"
+			]
+		},
+		"iustifico": {
+			"senses": [
+				"to justify"
+			],
+			"derivatives": [
+				"justify"
+			]
+		},
+		"manifesto": {
+			"senses": [
+				"to make manifest",
+				"to disclose"
+			],
+			"derivatives": [
+				"manifest"
+			]
+		},
+		"meipse": {
+			"senses": [
+				"myself"
+			]
+		},
+		"parvus": {
+			"senses": [
+				"small",
+				"little"
+			]
+		},
+		"quoadusque": {
+			"senses": [
+				"until"
+			]
+		},
+		"unusquisque": {
+			"senses": [
+				"each one",
+				"every one"
+			]
+		},
+		"Abilina": {
+			"senses": [
+				"Abilene"
+			]
+		},
+		"Annas": {
+			"senses": [
+				"Annas"
+			]
+		},
+		"Caesar": {
+			"senses": [
+				"Caesar"
+			],
+			"derivatives": [
+				"caesar",
+				"czar"
+			]
+		},
+		"Caiphas": {
+			"senses": [
+				"Caiphas"
+			]
+		},
+		"Galilaea": {
+			"senses": [
+				"Galilee"
+			]
+		},
+		"Herodes": {
+			"senses": [
+				"Herod"
+			]
+		},
+		"Ituraea": {
+			"senses": [
+				"Iturea"
+			]
+		},
+		"Iudaea": {
+			"senses": [
+				"Judea"
+			]
+		},
+		"Lysanias": {
+			"senses": [
+				"Lysanias"
+			]
+		},
+		"Tiberius": {
+			"senses": [
+				"Tiberius"
+			]
+		},
+		"Trachonitis": {
+			"senses": [
+				"Trachonitis"
+			]
+		},
+		"Zacharias": {
+			"senses": [
+				"Zachary"
+			]
+		},
+		"annus": {
+			"senses": [
+				"a year"
+			],
+			"derivatives": [
+				"annual",
+				"anniversary"
+			]
+		},
+		"asper": {
+			"senses": [
+				"rough",
+				"harsh"
+			],
+			"derivatives": [
+				"asperity",
+				"exasperate"
+			]
+		},
+		"baptismus": {
+			"senses": [
+				"baptism"
+			]
+		},
+		"humilio": {
+			"senses": [
+				"to bring low",
+				"to humble"
+			],
+			"derivatives": [
+				"humiliate"
+			]
+		},
+		"imperium": {
+			"senses": [
+				"rule",
+				"reign"
+			],
+			"derivatives": [
+				"empire",
+				"imperial"
+			]
+		},
+		"impleo": {
+			"senses": [
+				"to fill",
+				"to fulfill"
+			],
+			"derivatives": [
+				"implement"
+			]
+		},
+		"liber_volumen": {
+			"senses": [
+				"a book",
+				"a scroll"
+			],
+			"derivatives": [
+				"library"
+			],
+			"note": "Not the adjective liber, líbera, líberum (“free”), which stands under its own head."
+		},
+		"paenitentia": {
+			"senses": [
+				"penance",
+				"repentance"
+			],
+			"derivatives": [
+				"penitence",
+				"penitential"
+			]
+		},
+		"paro": {
+			"senses": [
+				"to prepare",
+				"to make ready"
+			],
+			"derivatives": [
+				"apparatus"
+			]
+		},
+		"planus": {
+			"senses": [
+				"level",
+				"plain"
+			],
+			"derivatives": [
+				"plain",
+				"plane"
+			]
+		},
+		"pravus": {
+			"senses": [
+				"crooked",
+				"perverse"
+			],
+			"derivatives": [
+				"depraved"
+			]
+		},
+		"procuro": {
+			"senses": [
+				"to govern",
+				"to manage"
+			],
+			"derivatives": [
+				"procure",
+				"proctor"
+			]
+		},
+		"quintusdecimus": {
+			"senses": [
+				"fifteenth"
+			]
+		},
+		"rectus": {
+			"senses": [
+				"straight",
+				"right"
+			],
+			"derivatives": [
+				"rectitude",
+				"correct"
+			]
+		},
+		"regio": {
+			"senses": [
+				"a region",
+				"a district"
+			],
+			"derivatives": [
+				"region"
+			]
+		},
+		"sermo": {
+			"senses": [
+				"speech",
+				"a discourse"
+			],
+			"derivatives": [
+				"sermon"
+			]
+		},
+		"tetrarcha": {
+			"senses": [
+				"a tetrarch"
+			],
+			"derivatives": [
+				"tetrarch"
 			]
 		}
 	}

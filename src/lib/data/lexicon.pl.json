@@ -2518,7 +2518,6 @@
 				"uczynić czymś"
 			],
 			"derivatives": [
-				"efekt",
 				"efektywny"
 			]
 		},
@@ -7856,6 +7855,388 @@
 			"senses": [
 				"za",
 				"poza"
+			]
+		},
+		"Emmanuel": {
+			"senses": [
+				"Emmanuel"
+			]
+		},
+		"cresco": {
+			"senses": [
+				"wzrastać",
+				"rosnąć"
+			]
+		},
+		"effectus": {
+			"senses": [
+				"skutek",
+				"spełnienie"
+			],
+			"derivatives": [
+				"efekt"
+			]
+		},
+		"facinus": {
+			"senses": [
+				"występek",
+				"zbrodnia"
+			]
+		},
+		"frequentatio": {
+			"senses": [
+				"częste sprawowanie",
+				"powtarzanie"
+			],
+			"derivatives": [
+				"frekwencja"
+			]
+		},
+		"pario": {
+			"senses": [
+				"rodzić",
+				"wydawać na świat"
+			]
+		},
+		"relaxo": {
+			"senses": [
+				"rozluźniać",
+				"darować"
+			],
+			"derivatives": [
+				"relaks"
+			]
+		},
+		"tardo": {
+			"senses": [
+				"zwlekać",
+				"opóźniać"
+			]
+		},
+		"voco": {
+			"senses": [
+				"wołać",
+				"nazywać"
+			],
+			"derivatives": [
+				"wokatywny"
+			]
+		},
+		"accelero": {
+			"senses": [
+				"przyspieszać"
+			],
+			"derivatives": [
+				"akceleracja"
+			]
+		},
+		"annuntio": {
+			"senses": [
+				"oznajmiać",
+				"zwiastować"
+			],
+			"derivatives": [
+				"anuncjacja"
+			]
+		},
+		"desuper": {
+			"senses": [
+				"z góry"
+			]
+		},
+		"firmamentum": {
+			"senses": [
+				"firmament",
+				"sklepienie nieba"
+			],
+			"derivatives": [
+				"firmament"
+			]
+		},
+		"germino": {
+			"senses": [
+				"wydawać z siebie",
+				"kiełkować"
+			]
+		},
+		"pluo": {
+			"senses": [
+				"padać deszczem",
+				"spuszczać deszcz"
+			]
+		},
+		"praepedio": {
+			"senses": [
+				"przeszkadzać",
+				"zagradzać drogę"
+			]
+		},
+		"roro": {
+			"senses": [
+				"spuszczać rosę",
+				"spuszczać deszcz"
+			]
+		},
+		"abscondo": {
+			"senses": [
+				"ukrywać",
+				"zakrywać"
+			]
+		},
+		"aut": {
+			"senses": [
+				"albo",
+				"lub"
+			]
+		},
+		"conscius": {
+			"senses": [
+				"świadomy"
+			]
+		},
+		"dispensator": {
+			"senses": [
+				"szafarz",
+				"włodarz"
+			],
+			"derivatives": [
+				"dyspensa"
+			]
+		},
+		"existimo": {
+			"senses": [
+				"uważać",
+				"poczytywać"
+			]
+		},
+		"itaque": {
+			"senses": [
+				"przeto",
+				"a więc"
+			]
+		},
+		"iustifico": {
+			"senses": [
+				"usprawiedliwiać"
+			]
+		},
+		"manifesto": {
+			"senses": [
+				"ujawniać",
+				"objawiać"
+			],
+			"derivatives": [
+				"manifestować"
+			]
+		},
+		"meipse": {
+			"senses": [
+				"ja sam"
+			]
+		},
+		"parvus": {
+			"senses": [
+				"mały",
+				"niewielki"
+			]
+		},
+		"quoadusque": {
+			"senses": [
+				"dopóki nie"
+			]
+		},
+		"unusquisque": {
+			"senses": [
+				"każdy z osobna"
+			]
+		},
+		"Abilina": {
+			"senses": [
+				"Abilena"
+			]
+		},
+		"Annas": {
+			"senses": [
+				"Annasz"
+			]
+		},
+		"Caesar": {
+			"senses": [
+				"Cezar"
+			],
+			"derivatives": [
+				"cesarz"
+			]
+		},
+		"Caiphas": {
+			"senses": [
+				"Kajfasz"
+			]
+		},
+		"Galilaea": {
+			"senses": [
+				"Galilea"
+			]
+		},
+		"Herodes": {
+			"senses": [
+				"Herod"
+			]
+		},
+		"Ituraea": {
+			"senses": [
+				"Itureja"
+			]
+		},
+		"Iudaea": {
+			"senses": [
+				"Judea"
+			]
+		},
+		"Lysanias": {
+			"senses": [
+				"Lizaniasz"
+			]
+		},
+		"Tiberius": {
+			"senses": [
+				"Tyberiusz"
+			]
+		},
+		"Trachonitis": {
+			"senses": [
+				"Trachonitis"
+			]
+		},
+		"Zacharias": {
+			"senses": [
+				"Zachariasz"
+			]
+		},
+		"annus": {
+			"senses": [
+				"rok"
+			],
+			"derivatives": [
+				"anno Domini"
+			]
+		},
+		"asper": {
+			"senses": [
+				"ostry",
+				"nierówny"
+			]
+		},
+		"baptismus": {
+			"senses": [
+				"chrzest"
+			],
+			"derivatives": [
+				"baptysta"
+			]
+		},
+		"humilio": {
+			"senses": [
+				"poniżać",
+				"obniżać"
+			]
+		},
+		"imperium": {
+			"senses": [
+				"panowanie",
+				"władza"
+			],
+			"derivatives": [
+				"imperium"
+			]
+		},
+		"impleo": {
+			"senses": [
+				"napełniać",
+				"wypełniać"
+			]
+		},
+		"liber_volumen": {
+			"senses": [
+				"księga",
+				"zwój"
+			],
+			"derivatives": [
+				"libretto"
+			],
+			"note": "Nie przymiotnik liber, líbera, líberum („wolny”), który stoi pod własnym hasłem."
+		},
+		"paenitentia": {
+			"senses": [
+				"pokuta",
+				"nawrócenie"
+			],
+			"derivatives": [
+				"penitencja"
+			]
+		},
+		"paro": {
+			"senses": [
+				"przygotowywać",
+				"gotować"
+			]
+		},
+		"planus": {
+			"senses": [
+				"równy",
+				"gładki"
+			],
+			"derivatives": [
+				"plan"
+			]
+		},
+		"pravus": {
+			"senses": [
+				"kręty",
+				"przewrotny"
+			]
+		},
+		"procuro": {
+			"senses": [
+				"zarządzać",
+				"sprawować urząd"
+			],
+			"derivatives": [
+				"prokurator"
+			]
+		},
+		"quintusdecimus": {
+			"senses": [
+				"piętnasty"
+			]
+		},
+		"rectus": {
+			"senses": [
+				"prosty",
+				"właściwy"
+			]
+		},
+		"regio": {
+			"senses": [
+				"kraina",
+				"okolica"
+			],
+			"derivatives": [
+				"region"
+			]
+		},
+		"sermo": {
+			"senses": [
+				"mowa",
+				"słowo"
+			]
+		},
+		"tetrarcha": {
+			"senses": [
+				"tetrarcha"
+			],
+			"derivatives": [
+				"tetrarcha"
 			]
 		}
 	}
