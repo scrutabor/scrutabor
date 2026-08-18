@@ -1,9 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "ordinarium.supra-quae",
 	"lang": "pl",
 	"status": "working-edition",
 	"about": "Kapłan prosi Boga, aby łaskawie wejrzał na ofiarę i zechciał ją przyjąć, jak przyjął dary sprawiedliwego Abla, ofiarę Abrahama oraz to, co złożył Melchizedek. Księga Rodzaju nazywa go kapłanem Boga najwyższego, a najwyższym kapłanem nazywa go dopiero Kanon.",
+	"about_citations": [
+		{
+			"title": "Nova Vulgata, Liber Genesis",
+			"locator": "Genesis 14, 18",
+			"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_genesis_lt.html"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -164,12 +171,5 @@
 			"gloss": "hostię",
 			"function": "Drugie dopowiedzenie do „quod” (w028). Żeńskie „hóstiam” i nijakie „quod” łączy przypadek: biernik."
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Nova Vulgata, Liber Genesis",
-			"locator": "Genesis 14, 18",
-			"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_genesis_lt.html"
-		}
-	]
+	}
 }

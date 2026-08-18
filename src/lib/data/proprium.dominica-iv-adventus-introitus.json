@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "proprium.dominica-iv-adventus-introitus",
 	"title": "Roráte, cæli, désuper",
 	"category": "proprium",
 	"section": "missa-catechumenorum",
 	"variant": "dominica-iv-adventus",
 	"sung": true,
-	"status": "working-edition",
 	"ids": {
 		"next": 55
 	},
+	"status": "working-edition",
 	"notes": "The introit of the Fourth Sunday of Advent. The antiphon is repeated after the Gloria Patri.",
 	"source": {
 		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
@@ -38,6 +38,16 @@
 			"type": "verse",
 			"speaker": "schola",
 			"voice": "cantus",
+			"participation": {
+				"lecta": {
+					"gradus": 4,
+					"source": "DMS 31 d"
+				},
+				"cantu": {
+					"gradus": 3,
+					"source": "DMS 25 c"
+				}
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -185,7 +195,13 @@
 						"decl": 3
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s02",
+			"type": "verse",
+			"speaker": "schola",
+			"voice": "cantus",
 			"participation": {
 				"lecta": {
 					"gradus": 4,
@@ -195,13 +211,7 @@
 					"gradus": 3,
 					"source": "DMS 25 c"
 				}
-			}
-		},
-		{
-			"id": "s02",
-			"type": "verse",
-			"speaker": "schola",
-			"voice": "cantus",
+			},
 			"words": [
 				{
 					"id": "w013",
@@ -324,7 +334,13 @@
 						"decl": 2
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s03",
+			"type": "verse",
+			"speaker": "schola",
+			"voice": "cantus",
 			"participation": {
 				"lecta": {
 					"gradus": 4,
@@ -334,13 +350,7 @@
 					"gradus": 3,
 					"source": "DMS 25 c"
 				}
-			}
-		},
-		{
-			"id": "s03",
-			"type": "verse",
-			"speaker": "schola",
-			"voice": "cantus",
+			},
 			"words": [
 				{
 					"id": "w023",
@@ -551,17 +561,7 @@
 						"pos": "intj"
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 4,
-					"source": "DMS 31 d"
-				},
-				"cantu": {
-					"gradus": 3,
-					"source": "DMS 25 c"
-				}
-			}
+			]
 		},
 		{
 			"id": "s04",
@@ -573,6 +573,16 @@
 			"type": "verse",
 			"speaker": "schola",
 			"voice": "cantus",
+			"participation": {
+				"lecta": {
+					"gradus": 4,
+					"source": "DMS 31 d"
+				},
+				"cantu": {
+					"gradus": 3,
+					"source": "DMS 25 c"
+				}
+			},
 			"words": [
 				{
 					"id": "w043",
@@ -720,17 +730,7 @@
 						"decl": 3
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 4,
-					"source": "DMS 31 d"
-				},
-				"cantu": {
-					"gradus": 3,
-					"source": "DMS 25 c"
-				}
-			}
+			]
 		}
 	]
 }

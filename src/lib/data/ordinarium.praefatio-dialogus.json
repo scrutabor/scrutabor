@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "ordinarium.praefatio-dialogus",
 	"title": "Dóminus vobíscum (dialogus Præfationis)",
 	"category": "ordinarium",
 	"section": "missa-fidelium",
 	"variant": "missae",
 	"sung": true,
-	"status": "working-edition",
 	"ids": {
 		"next": 21
 	},
+	"status": "working-edition",
 	"notes": "The dialogue that opens the Preface, sung by priest and people. Its own document because it is a fixed exchange the reader looks up by name, and because everything after it changes with the day. CORDA at w008 is accusative with no verb expressed: the missal's Sursum corda is an elliptical command, and the response supplies the verb (habémus). SURSUM at w007 is the adverb, not a preposition — it governs nothing. DÓMINO DEO NOSTRO at w014-w016 is a dative and its apposition, tagged as such; witness do prints a comma between them, adjudicated in the apparatus with the corpus rulings on appositions. VOBÍSCUM at w002 is the pronoun with its enclitic cum; Collatinus dictionaries the fused form as a lemma of its own and tags it singular, which the pipeline sets aside by a recorded ruling; the parse rests on Whitaker's and the edition, as at ordinarium.pax-domini w005.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
@@ -90,6 +90,16 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "minister",
+			"participation": {
+				"lecta": {
+					"gradus": 1,
+					"source": "DMS 31 a"
+				},
+				"cantu": {
+					"gradus": 1,
+					"source": "DMS 25 a"
+				}
+			},
 			"words": [
 				{
 					"id": "w003",
@@ -134,17 +144,7 @@
 					},
 					"head": "w005"
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 1,
-					"source": "DMS 31 a"
-				},
-				"cantu": {
-					"gradus": 1,
-					"source": "DMS 25 a"
-				}
-			}
+			]
 		},
 		{
 			"id": "s04",
@@ -180,6 +180,16 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "minister",
+			"participation": {
+				"lecta": {
+					"gradus": 1,
+					"source": "DMS 31 a"
+				},
+				"cantu": {
+					"gradus": 1,
+					"source": "DMS 25 a"
+				}
+			},
 			"words": [
 				{
 					"id": "w009",
@@ -218,17 +228,7 @@
 						"decl": 2
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 1,
-					"source": "DMS 31 a"
-				},
-				"cantu": {
-					"gradus": 1,
-					"source": "DMS 25 a"
-				}
-			}
+			]
 		},
 		{
 			"id": "s06",
@@ -306,6 +306,16 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "minister",
+			"participation": {
+				"lecta": {
+					"gradus": 1,
+					"source": "DMS 31 a"
+				},
+				"cantu": {
+					"gradus": 1,
+					"source": "DMS 25 a"
+				}
+			},
 			"words": [
 				{
 					"id": "w017",
@@ -353,17 +363,7 @@
 						"voice": "act"
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 1,
-					"source": "DMS 31 a"
-				},
-				"cantu": {
-					"gradus": 1,
-					"source": "DMS 25 a"
-				}
-			}
+			]
 		}
 	]
 }

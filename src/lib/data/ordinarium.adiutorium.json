@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "ordinarium.adiutorium",
 	"title": "Adiutórium nostrum",
 	"category": "ordinarium",
 	"section": "praeparatio",
 	"variant": "missae",
 	"sung": false,
-	"status": "working-edition",
 	"ids": {
 		"next": 11
 	},
+	"status": "working-edition",
 	"notes": "The versicle and response that close the psalm section and open the confession. It stands as a document of its own because the two texts on either side of it are documents of their own: the psalm before it (ordinarium.iudica-me) is omitted on some days and it is not, and the Confíteor after it is already in the corpus as ordinarium.confiteor. Both witnesses print a cross glyph in the versicle — do after nostrum, handmissal-eo before Adiutórium — a direction for the hand rather than a word; it is stripped, and the disagreement about where to put it is not collated. Neither line has an elliptical verb written out: Adiutórium nostrum in nómine Dómini stands without est.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variant is adjudicated in the apparatus.",
@@ -118,6 +118,12 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "minister",
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w006",
@@ -177,13 +183,7 @@
 						"decl": 1
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 2,
-					"source": "DMS 31 b"
-				}
-			}
+			]
 		}
 	]
 }

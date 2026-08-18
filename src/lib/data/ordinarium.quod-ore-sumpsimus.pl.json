@@ -1,9 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "ordinarium.quod-ore-sumpsimus",
 	"lang": "pl",
 	"status": "working-edition",
 	"about": "Pierwsza z dwóch modlitw przy puryfikacji, odmawiana, gdy ministrant wlewa wino do kielicha. Prosi, aby to, co spożyliśmy ustami, przyjąć czystym sercem i aby dar doczesny stał się dla nas lekarstwem na wieczność.",
+	"about_citations": [
+		{
+			"title": "Missale Romanum (1962)",
+			"locator": "Ritus servandus in celebratione Missae, X, 5",
+			"url": "https://archive.org/details/missale_romanum-1962"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -83,12 +90,5 @@
 		"w015": {
 			"gloss": "wiecznym"
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Missale Romanum (1962)",
-			"locator": "Ritus servandus in celebratione Missae, X, 5",
-			"url": "https://archive.org/details/missale_romanum-1962"
-		}
-	]
+	}
 }

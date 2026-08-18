@@ -1,9 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "proprium.dominica-i-adventus-alleluia",
 	"lang": "pl",
 	"status": "working-edition",
 	"about": "Alleluja I Niedzieli Adwentu, którego werset to Ps 84, 8 według numeracji Wulgaty (Ps 85 w numeracji hebrajskiej). W dni powszednie Adwentu, gdy w ciągu tygodnia powtarza się tę Mszę niedzielną, opuszcza się Alleluja z wersetem i śpiewa się sam graduał.",
+	"about_citations": [
+		{
+			"title": "Missale Romanum (1962)",
+			"locator": "Dominica I Adventus, printed page 2",
+			"url": "https://archive.org/details/missale_romanum-1962"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -66,12 +73,5 @@
 		"w013": {
 			"gloss": "alleluja"
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Missale Romanum (1962)",
-			"locator": "Dominica I Adventus, printed page 2",
-			"url": "https://archive.org/details/missale_romanum-1962"
-		}
-	]
+	}
 }

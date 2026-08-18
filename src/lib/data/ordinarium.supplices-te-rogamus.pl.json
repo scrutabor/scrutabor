@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "ordinarium.supplices-te-rogamus",
 	"lang": "pl",
 	"status": "working-edition",
@@ -18,11 +18,11 @@
 		"s02": {
 			"translation": "Pokornie Cię błagamy, wszechmogący Boże, niech Twój święty Anioł zaniesie tę Ofiarę na ołtarz w niebie przed oblicze Twojego boskiego majestatu:"
 		},
-		"s03": {
-			"narrative": "Kapłan całuje ołtarz."
-		},
 		"s04": {
 			"translation": "abyśmy wszyscy, przyjmując"
+		},
+		"s03": {
+			"narrative": "Kapłan całuje ołtarz."
 		},
 		"s11": {
 			"translation": "z tego ołtarza Najświętsze Ciało i Krew Twojego Syna"

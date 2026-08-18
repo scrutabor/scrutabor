@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "ordinarium.gloria",
 	"title": "Glória in excélsis",
 	"category": "ordinarium",
 	"section": "missa-catechumenorum",
 	"variant": "missae",
 	"sung": true,
-	"status": "working-edition",
 	"ids": {
 		"next": 85
 	},
+	"status": "working-edition",
 	"notes": "The Greater Doxology (hymnus angelicus), opening with the angels' song at Bethlehem (Lc 2:14). Rubric s01 abridges the 1962 rubric as transcribed by witness do (line 89): the bows at the named phrases and the sign of the cross at the end are carried by the narrative layer.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Three accidental variants (two orthography, one punctuation) adjudicated in the apparatus.",
@@ -51,6 +51,16 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"participation": {
+				"lecta": {
+					"gradus": 3,
+					"source": "DMS 31 c"
+				},
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -99,7 +109,13 @@
 						"decl": 2
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s03",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -109,13 +125,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s03",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w005",
@@ -196,7 +206,13 @@
 						"decl": 3
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s04",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -206,13 +222,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s04",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w012",
@@ -314,7 +324,13 @@
 						"number": "sg"
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s05",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -324,13 +340,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s05",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w020",
@@ -415,7 +425,13 @@
 					},
 					"head": "w025"
 				}
-			],
+			]
+		},
+		{
+			"id": "s06",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -425,13 +441,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s06",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w027",
@@ -520,7 +530,13 @@
 					},
 					"head": "w032"
 				}
-			],
+			]
+		},
+		{
+			"id": "s07",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -530,13 +546,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s07",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w034",
@@ -599,7 +609,13 @@
 						"decl": 2
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s08",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -609,13 +625,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s08",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w039",
@@ -692,7 +702,13 @@
 						"decl": 3
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s09",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -702,13 +718,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s09",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w045",
@@ -785,7 +795,13 @@
 						"number": "pl"
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s10",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -795,13 +811,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s10",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w051",
@@ -892,7 +902,13 @@
 					},
 					"head": "w056"
 				}
-			],
+			]
+		},
+		{
+			"id": "s11",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -902,13 +918,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s11",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w058",
@@ -1003,7 +1013,13 @@
 						"number": "pl"
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s12",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -1013,13 +1029,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s12",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w065",
@@ -1159,7 +1169,13 @@
 						"decl": 2
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s13",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -1169,13 +1185,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s13",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w077",
@@ -1267,17 +1277,7 @@
 						"pos": "intj"
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 3,
-					"source": "DMS 31 c"
-				},
-				"cantu": {
-					"gradus": 2,
-					"source": "DMS 25 b"
-				}
-			}
+			]
 		}
 	]
 }

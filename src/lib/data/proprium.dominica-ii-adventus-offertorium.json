@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "proprium.dominica-ii-adventus-offertorium",
 	"title": "Deus, tu convérsus vivificábis nos",
 	"category": "proprium",
 	"section": "missa-fidelium",
 	"variant": "dominica-ii-adventus",
 	"sung": true,
-	"status": "working-edition",
 	"ids": {
 		"next": 22
 	},
+	"status": "working-edition",
 	"notes": "The offertory antiphon of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
 	"source": {
 		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. The witnesses agree with zero divergence, so this text carries no apparatus.",
@@ -37,6 +37,16 @@
 			"type": "verse",
 			"speaker": "schola",
 			"voice": "cantus",
+			"participation": {
+				"lecta": {
+					"gradus": 4,
+					"source": "DMS 31 d"
+				},
+				"cantu": {
+					"gradus": 3,
+					"source": "DMS 25 c"
+				}
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -289,17 +299,7 @@
 						"number": "pl"
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 4,
-					"source": "DMS 31 d"
-				},
-				"cantu": {
-					"gradus": 3,
-					"source": "DMS 25 c"
-				}
-			}
+			]
 		}
 	]
 }

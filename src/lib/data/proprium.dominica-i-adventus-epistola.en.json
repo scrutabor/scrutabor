@@ -1,9 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "proprium.dominica-i-adventus-epistola",
 	"lang": "en",
 	"status": "working-edition",
 	"about": "The Epistle of the First Sunday of Advent, Romans 13:11-14. St Paul tells the Romans that the hour has come to rise from sleep, that the night is far spent and the day at hand, and that they are to put on the Lord Jesus Christ. Fratres, Brethren, is the missal's own opening for a lesson from an Epistle and is not part of the verse.",
+	"about_citations": [
+		{
+			"title": "Missale Romanum (1962)",
+			"locator": "Dominica I Adventus, printed page 2",
+			"url": "https://archive.org/details/missale_romanum-1962"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -207,12 +214,5 @@
 		"w057": {
 			"gloss": "Christ"
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Missale Romanum (1962)",
-			"locator": "Dominica I Adventus, printed page 2",
-			"url": "https://archive.org/details/missale_romanum-1962"
-		}
-	]
+	}
 }

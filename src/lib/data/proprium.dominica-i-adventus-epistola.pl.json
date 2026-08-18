@@ -1,9 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "proprium.dominica-i-adventus-epistola",
 	"lang": "pl",
 	"status": "working-edition",
 	"about": "Epistoła I Niedzieli Adwentu, Rz 13, 11–14. Św. Paweł mówi Rzymianom, że nadeszła godzina powstania ze snu, że noc się posunęła, a dzień się przybliżył, i że mają przyoblec się w Pana Jezusa Chrystusa. Fratres, Bracia, to własne otwarcie mszału dla czytania z Listu, a nie część wersetu.",
+	"about_citations": [
+		{
+			"title": "Missale Romanum (1962)",
+			"locator": "Dominica I Adventus, printed page 2",
+			"url": "https://archive.org/details/missale_romanum-1962"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -207,12 +214,5 @@
 		"w057": {
 			"gloss": "Chrystusa"
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Missale Romanum (1962)",
-			"locator": "Dominica I Adventus, printed page 2",
-			"url": "https://archive.org/details/missale_romanum-1962"
-		}
-	]
+	}
 }

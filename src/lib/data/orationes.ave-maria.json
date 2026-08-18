@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "orationes.ave-maria",
 	"title": "Ave María",
 	"category": "orationes",
 	"section": "orationes-communes",
 	"variant": "devotional",
 	"sung": false,
-	"status": "working-edition",
 	"ids": {
 		"next": 32
 	},
+	"status": "working-edition",
 	"notes": "The Hail Mary: the scriptural greeting (Lk 1:28 + 1:42) and the 16th-century intercessory petition. Wording transcribed verbatim from witness do-horas.",
 	"source": {
 		"method": "Transcribed verbatim from witness do-horas, collated against tpl: zero substantive divergence.",

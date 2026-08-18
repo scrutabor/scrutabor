@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "ordinarium.orate-fratres",
 	"title": "Oráte, fratres",
 	"category": "ordinarium",
 	"section": "missa-fidelium",
 	"variant": "missae",
 	"sung": false,
-	"status": "working-edition",
 	"ids": {
 		"next": 35
 	},
+	"status": "working-edition",
 	"notes": "The one dialogue of the offertory: the priest's invitation, the servers' answer and the priest's Amen. Kept in one document because it is a dialogue, on the pattern of ordinarium.adiutorium — the answer is unintelligible apart from what it answers. Witness do prints nominis without an accent where the same file writes nómini in the Veni sanctificátor and nómine at the Adiutórium; adjudicated in the apparatus. Witness do also prints the rubrical alternative '(vel meis)' inside the answer, for the case where the priest says it himself; the witness header declares the stripping. TOTIÚSQUE at w030 is one written word carrying two: the adjective totíus with the enclitic -que, and it is tagged as the adjective it is built on, as the corpus does for vobíscum at ordinarium.deus-tu-conversus. MEUM at w004 and VESTRUM at w006 are nominative neuter agreeing with sacrifícium, not the accusative masculine the same spellings allow.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants (punctuation, one accent) adjudicated in the apparatus.",
@@ -223,6 +223,12 @@
 			"type": "verse",
 			"speaker": "minister",
 			"voice": "clara",
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w014",
@@ -455,13 +461,7 @@
 					},
 					"head": "w031"
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 2,
-					"source": "DMS 31 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s05",

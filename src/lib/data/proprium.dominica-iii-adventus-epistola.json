@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "proprium.dominica-iii-adventus-epistola",
 	"title": "Gaudéte in Dómino semper",
 	"category": "proprium",
 	"section": "missa-catechumenorum",
 	"variant": "dominica-iii-adventus",
 	"sung": false,
-	"status": "working-edition",
 	"ids": {
 		"next": 53
 	},
+	"status": "working-edition",
 	"notes": "The epistle of the Third Sunday of Advent, from which the day takes its name of Gaudete. The source boundary is recorded in the witness files.",
 	"source": {
 		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",

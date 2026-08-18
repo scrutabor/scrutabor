@@ -1,9 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "ordinarium.quod-ore-sumpsimus",
 	"lang": "en",
 	"status": "working-edition",
 	"about": "The first of the two prayers at the ablutions, said while the minister pours wine into the chalice. It asks that what has passed the lips be taken up with a pure heart, and that a gift given in time become an everlasting remedy.",
+	"about_citations": [
+		{
+			"title": "Missale Romanum (1962)",
+			"locator": "Ritus servandus in celebratione Missae, X, 5",
+			"url": "https://archive.org/details/missale_romanum-1962"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -83,12 +90,5 @@
 		"w015": {
 			"gloss": "everlasting"
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Missale Romanum (1962)",
-			"locator": "Ritus servandus in celebratione Missae, X, 5",
-			"url": "https://archive.org/details/missale_romanum-1962"
-		}
-	]
+	}
 }

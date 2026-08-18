@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "ordinarium.agnus-dei",
 	"title": "Agnus Dei",
 	"category": "ordinarium",
 	"section": "missa-fidelium",
 	"variant": "missae",
 	"sung": true,
-	"status": "working-edition",
 	"ids": {
 		"next": 26
 	},
+	"status": "working-edition",
 	"notes": "The threefold Agnus Dei of the Ordo Missae in its ordinary form, said at the commixture before Communion. Rubric s01 quotes the 1962 rubric as witness do prints it (line 297), with the house i for its j; rubric s05 quotes the rubric for Masses for the dead (line 306), whose variant petitions (dona eis réquiem, sempitérnam) are a different recension and are not encoded here.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence and no accidental variants — the two editions agree token for token, so this text carries no apparatus.",
@@ -50,6 +50,16 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"participation": {
+				"lecta": {
+					"gradus": 3,
+					"source": "DMS 31 c"
+				},
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -151,7 +161,13 @@
 						"number": "pl"
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s03",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -161,13 +177,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s03",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w009",
@@ -269,7 +279,13 @@
 						"number": "pl"
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s04",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -279,13 +295,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s04",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w017",
@@ -399,17 +409,7 @@
 						"decl": 3
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 3,
-					"source": "DMS 31 c"
-				},
-				"cantu": {
-					"gradus": 2,
-					"source": "DMS 25 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s05",

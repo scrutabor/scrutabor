@@ -1,9 +1,21 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "proprium.dominica-i-adventus-postcommunio",
 	"lang": "en",
 	"status": "working-edition",
 	"about": "The Postcommunion of the First Sunday of Advent. It asks that we receive God's mercy in the midst of His temple and so go before the coming solemnities of our redemption with fitting honor, taking its opening words from Psalm 47:10 in the Vulgate numbering (Psalm 48 in Hebrew). Its conclusion is printed in the two words Per Dóminum.",
+	"about_citations": [
+		{
+			"title": "Missale Romanum (1962)",
+			"locator": "Dominica I Adventus, printed page 2",
+			"url": "https://archive.org/details/missale_romanum-1962"
+		},
+		{
+			"title": "Biblia Sacra Vulgatae Editionis (1914)",
+			"locator": "Psalmus 47, 10",
+			"url": "https://archive.org/details/bibliasacravulga00helzuoft"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -73,17 +85,5 @@
 		"w018": {
 			"gloss": "the Lord"
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Missale Romanum (1962)",
-			"locator": "Dominica I Adventus, printed page 2",
-			"url": "https://archive.org/details/missale_romanum-1962"
-		},
-		{
-			"title": "Biblia Sacra Vulgatae Editionis (1914)",
-			"locator": "Psalmus 47, 10",
-			"url": "https://archive.org/details/bibliasacravulga00helzuoft"
-		}
-	]
+	}
 }

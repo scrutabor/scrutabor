@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "ordinarium.laus-tibi-christe",
 	"title": "Laus tibi, Christe",
 	"category": "ordinarium",
 	"section": "missa-catechumenorum",
 	"variant": "missae",
 	"sung": false,
-	"status": "working-edition",
 	"ids": {
 		"next": 4
 	},
+	"status": "working-edition",
 	"notes": "The fixed response after the Gospel. LAUS is nominative in a nominal formula, TIBI dative and CHRISTE vocative. The 1962 Ritus servandus assigns the response to the minister at low Mass. De musica sacra n. 31 a names it among the people's first-degree responses at low Mass, but n. 25 a does not include it in the corresponding list for sung Mass.",
 	"source": {
 		"method": "Compared across the three witnesses below: no substantive variation.",
@@ -36,6 +36,12 @@
 			"id": "s01",
 			"type": "verse",
 			"speaker": "minister",
+			"participation": {
+				"lecta": {
+					"gradus": 1,
+					"source": "DMS 31 a"
+				}
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -73,13 +79,7 @@
 						"decl": 2
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 1,
-					"source": "DMS 31 a"
-				}
-			}
+			]
 		}
 	]
 }

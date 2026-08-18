@@ -1,9 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "proprium.dominica-i-adventus-evangelium",
 	"lang": "en",
 	"status": "working-edition",
 	"about": "The Gospel of the First Sunday of Advent, Luke 21:25-33. The year opens with the signs before the coming of the Son of Man and with the parable of the fig tree. In illo témpore, At that time, is the missal's own opening and is not part of the verse.",
+	"about_citations": [
+		{
+			"title": "Missale Romanum (1962)",
+			"locator": "Dominica I Adventus, printed page 2",
+			"url": "https://archive.org/details/missale_romanum-1962"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -408,12 +415,5 @@
 		"w119": {
 			"gloss": "will pass away"
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Missale Romanum (1962)",
-			"locator": "Dominica I Adventus, printed page 2",
-			"url": "https://archive.org/details/missale_romanum-1962"
-		}
-	]
+	}
 }

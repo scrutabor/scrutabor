@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "proprium.dominica-iv-adventus-evangelium",
 	"lang": "pl",
 	"status": "working-edition",
@@ -209,7 +209,7 @@
 		},
 		"w059": {
 			"gloss": "księdze",
-			"function": "Rzeczownik „liber, libri”, księga, a nie przymiotnik „liber, líbera, líberum”, wolny. Ta edycja rozdziela oba na osobne hasła."
+			"function": "Tu rzeczownik, księga, a nie przymiotnik pod tym samym hasłem słownikowym."
 		},
 		"w060": {
 			"gloss": "mów"

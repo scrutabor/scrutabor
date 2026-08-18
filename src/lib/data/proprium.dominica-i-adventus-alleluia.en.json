@@ -1,9 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "proprium.dominica-i-adventus-alleluia",
 	"lang": "en",
 	"status": "working-edition",
 	"about": "The Alleluia of the First Sunday of Advent, whose verse is Psalm 84:8 in the Vulgate numbering (Psalm 85 in Hebrew). On the ferias of Advent, when this Sunday Mass is used through the week, the Alleluia and its verse are left out and only the Gradual is sung.",
+	"about_citations": [
+		{
+			"title": "Missale Romanum (1962)",
+			"locator": "Dominica I Adventus, printed page 2",
+			"url": "https://archive.org/details/missale_romanum-1962"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -66,12 +73,5 @@
 		"w013": {
 			"gloss": "alleluia"
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Missale Romanum (1962)",
-			"locator": "Dominica I Adventus, printed page 2",
-			"url": "https://archive.org/details/missale_romanum-1962"
-		}
-	]
+	}
 }

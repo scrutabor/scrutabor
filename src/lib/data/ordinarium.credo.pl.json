@@ -1,9 +1,21 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "ordinarium.credo",
 	"lang": "pl",
 	"status": "working-edition",
 	"about": "Symbol nicejsko-konstantynopolitański, odmawiany po Ewangelii w każdą niedzielę i w większe święta, a opuszczany we Mszach za zmarłych. Na słowa Et incarnátus est, w których Symbol wyznaje Słowo, które stało się ciałem, wszyscy przyklękają. Jego artykuły idą od Ojca i Syna do Ducha Świętego, Kościoła, jednego chrztu, wskrzeszenia umarłych i życia wiecznego.",
+	"about_citations": [
+		{
+			"title": "Missale Romanum (1962)",
+			"locator": "Rubricae generales, nn. 475–476",
+			"url": "https://archive.org/details/missale_romanum-1962"
+		},
+		{
+			"title": "Missale Romanum (1962)",
+			"locator": "Rubricae generales, n. 522 a",
+			"url": "https://archive.org/details/missale_romanum-1962"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -579,17 +591,5 @@
 		"w163": {
 			"gloss": "amen"
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Missale Romanum (1962)",
-			"locator": "Rubricae generales, nn. 475–476",
-			"url": "https://archive.org/details/missale_romanum-1962"
-		},
-		{
-			"title": "Missale Romanum (1962)",
-			"locator": "Rubricae generales, n. 522 a",
-			"url": "https://archive.org/details/missale_romanum-1962"
-		}
-	]
+	}
 }

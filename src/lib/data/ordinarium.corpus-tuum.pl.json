@@ -1,8 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "ordinarium.corpus-tuum",
 	"lang": "pl",
 	"status": "working-edition",
+	"about": "Druga z dwóch modlitw przy puryfikacji, odmawiana, gdy kapłan obmywa winem i wodą kciuki i palce wskazujące nad kielichem. Prosi, aby przyjęte Ciało i Krew przylgnęły do wnętrza przyjmującego i aby nie została w nim żadna zmaza grzechu.",
+	"about_citations": [
+		{
+			"title": "Missale Romanum (1962)",
+			"locator": "Ritus servandus in celebratione Missae, X, 5",
+			"url": "https://archive.org/details/missale_romanum-1962"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -139,13 +147,5 @@
 		"w035": {
 			"gloss": "amen"
 		}
-	},
-	"about": "Druga z dwóch modlitw przy puryfikacji, odmawiana, gdy kapłan obmywa winem i wodą kciuki i palce wskazujące nad kielichem. Prosi, aby przyjęte Ciało i Krew przylgnęły do wnętrza przyjmującego i aby nie została w nim żadna zmaza grzechu.",
-	"about_citations": [
-		{
-			"title": "Missale Romanum (1962)",
-			"locator": "Ritus servandus in celebratione Missae, X, 5",
-			"url": "https://archive.org/details/missale_romanum-1962"
-		}
-	]
+	}
 }

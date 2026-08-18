@@ -1,9 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "orationes.sancte-michael",
 	"lang": "pl",
 	"status": "working-edition",
 	"about": "Modlitwa, którą Leon XIII ułożył do modlitw odmawianych po Mszy cichej, gdzie stoi po kolekcie. Prosi św. Michała Archanioła o obronę w walce przeciw niegodziwości i zasadzkom diabła. Następnie prosi, aby Bóg pogromił szatana, i ponownie zwraca się do św. Michała jako wodza wojska niebieskiego, aby mocą Bożą strącił do piekła szatana i inne złe duchy.",
+	"about_citations": [
+		{
+			"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+			"locator": "n. 675, p. 520",
+			"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -153,12 +160,5 @@
 		"w040": {
 			"gloss": "amen"
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
-			"locator": "n. 675, p. 520",
-			"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
-		}
-	]
+	}
 }

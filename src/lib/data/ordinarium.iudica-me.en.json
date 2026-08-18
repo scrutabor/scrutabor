@@ -1,9 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "ordinarium.iudica-me",
 	"lang": "en",
 	"status": "working-edition",
 	"about": "In the prayers at the foot of the altar, Psalm 42 in the Vulgate numbering (Psalm 43 in Hebrew) is said alternately by the priest and server. The antiphon “Introíbo ad altáre Dei” precedes it and is repeated after the doxology. In Masses for the Dead, and at Masses of the season from Passion Sunday through Maundy Thursday, the psalm is left out with its antiphon and the Confiteor follows at once.",
+	"about_citations": [
+		{
+			"title": "Nova Vulgata, Liber Psalmorum",
+			"locator": "Psalmus 43 (Vg 42)",
+			"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -505,12 +512,5 @@
 		"w124": {
 			"gloss": "my"
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Nova Vulgata, Liber Psalmorum",
-			"locator": "Psalmus 43 (Vg 42)",
-			"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
-		}
-	]
+	}
 }

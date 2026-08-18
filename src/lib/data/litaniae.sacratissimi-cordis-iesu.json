@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "litaniae.sacratissimi-cordis-iesu",
 	"title": "Litániæ Sacratíssimi Cordis Iesu",
 	"category": "litaniae",
 	"section": "litaniae-approbatae",
 	"variant": "devotional",
 	"sung": false,
-	"status": "working-edition",
 	"ids": {
 		"next": 383
 	},
+	"status": "working-edition",
 	"notes": "The approved Litany of the Most Sacred Heart of Jesus, including its versicle and concluding collect.",
 	"source": {
 		"method": "Transcribed from the 1952 Enchiridion Indulgentiarum and collated against the independent TPL transcription.",
@@ -146,6 +146,7 @@
 		{
 			"id": "s004",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Christe",
@@ -185,12 +186,12 @@
 					"id": "w009",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s005",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Christe",
@@ -230,12 +231,12 @@
 					"id": "w012",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s006",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Pater",
@@ -285,12 +286,12 @@
 					"id": "w016",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s007",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -317,12 +318,12 @@
 					"id": "w018",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s008",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Fili",
@@ -375,12 +376,12 @@
 					"id": "w022",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s009",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -407,12 +408,12 @@
 					"id": "w024",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s010",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Spíritus",
@@ -452,12 +453,12 @@
 					"id": "w027",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s011",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -484,12 +485,12 @@
 					"id": "w029",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s012",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Sancta",
@@ -541,12 +542,12 @@
 					"id": "w033",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s013",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -573,12 +574,12 @@
 					"id": "w035",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s014",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -649,12 +650,12 @@
 					"id": "w040",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s015",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -681,12 +682,12 @@
 					"id": "w042",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s016",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -809,12 +810,12 @@
 					"post": ".",
 					"head": "w043"
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s017",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -841,12 +842,12 @@
 					"id": "w054",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s018",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -921,12 +922,12 @@
 					"post": ".",
 					"head": "w055"
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s019",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -953,12 +954,12 @@
 					"id": "w062",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s020",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -1009,12 +1010,12 @@
 					"id": "w066",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s021",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -1041,12 +1042,12 @@
 					"id": "w068",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s022",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -1109,12 +1110,12 @@
 					"id": "w073",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s023",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -1141,12 +1142,12 @@
 					"id": "w075",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s024",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -1198,12 +1199,12 @@
 					"post": ".",
 					"substantive": true
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s025",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -1230,12 +1231,12 @@
 					"id": "w081",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s026",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -1318,12 +1319,12 @@
 					"id": "w088",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s027",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -1350,12 +1351,12 @@
 					"id": "w090",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s028",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -1422,12 +1423,12 @@
 					"id": "w095",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s029",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -1454,12 +1455,12 @@
 					"id": "w097",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s030",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -1530,12 +1531,12 @@
 					"id": "w103",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s031",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -1562,12 +1563,12 @@
 					"id": "w105",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s032",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -1638,12 +1639,12 @@
 					"post": ".",
 					"head": "w106"
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s033",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -1670,12 +1671,12 @@
 					"id": "w113",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s034",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -1738,12 +1739,12 @@
 					"id": "w118",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s035",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -1770,12 +1771,12 @@
 					"id": "w120",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s036",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -1839,12 +1840,12 @@
 					"post": ".",
 					"head": "w121"
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s037",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -1871,12 +1872,12 @@
 					"id": "w127",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s038",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -1967,12 +1968,12 @@
 						"review": "accepted"
 					}
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s039",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -1999,12 +2000,12 @@
 					"id": "w136",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s040",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -2121,12 +2122,12 @@
 					"id": "w146",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s041",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -2153,12 +2154,12 @@
 					"id": "w148",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s042",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -2256,12 +2257,12 @@
 					"id": "w156",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s043",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -2288,12 +2289,12 @@
 					"id": "w158",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s044",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -2392,12 +2393,12 @@
 					"id": "w166",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s045",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -2424,12 +2425,12 @@
 					"id": "w168",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s046",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -2525,12 +2526,12 @@
 					"id": "w176",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s047",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -2557,12 +2558,12 @@
 					"id": "w178",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s048",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -2625,12 +2626,12 @@
 					"id": "w183",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s049",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -2657,12 +2658,12 @@
 					"id": "w185",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s050",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -2741,12 +2742,12 @@
 					"id": "w191",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s051",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -2773,12 +2774,12 @@
 					"id": "w193",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s052",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -2874,12 +2875,12 @@
 					"id": "w201",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s053",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -2906,12 +2907,12 @@
 					"id": "w203",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s054",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -2982,12 +2983,12 @@
 					"id": "w209",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s055",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -3014,12 +3015,12 @@
 					"id": "w211",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s056",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -3092,12 +3093,12 @@
 					"id": "w217",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s057",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -3124,12 +3125,12 @@
 					"id": "w219",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s058",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -3184,12 +3185,12 @@
 					"id": "w223",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s059",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -3216,12 +3217,12 @@
 					"id": "w225",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s060",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -3298,12 +3299,12 @@
 					"id": "w231",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s061",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -3330,12 +3331,12 @@
 					"id": "w233",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s062",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -3424,12 +3425,12 @@
 					"post": ".",
 					"head": "w234"
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s063",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -3456,12 +3457,12 @@
 					"id": "w242",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s064",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -3516,12 +3517,12 @@
 					"id": "w246",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s065",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -3548,12 +3549,12 @@
 					"id": "w248",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s066",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -3616,12 +3617,12 @@
 					"id": "w253",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s067",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -3648,12 +3649,12 @@
 					"id": "w255",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s068",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -3724,12 +3725,12 @@
 					"id": "w261",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s069",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -3756,12 +3757,12 @@
 					"id": "w263",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s070",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -3832,12 +3833,12 @@
 					"id": "w269",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s071",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -3864,12 +3865,12 @@
 					"id": "w271",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s072",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -3920,12 +3921,12 @@
 					"id": "w275",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s073",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -3952,12 +3953,12 @@
 					"id": "w277",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s074",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -4032,12 +4033,12 @@
 					"post": ".",
 					"substantive": true
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s075",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -4064,12 +4065,12 @@
 					"id": "w285",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s076",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -4144,12 +4145,12 @@
 					"post": ".",
 					"substantive": true
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s077",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -4176,12 +4177,12 @@
 					"id": "w293",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s078",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Cor",
@@ -4244,12 +4245,12 @@
 					"post": ".",
 					"head": "w297"
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s079",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -4276,12 +4277,12 @@
 					"id": "w300",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s080",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Agnus",
@@ -4358,12 +4359,12 @@
 					"id": "w306",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s081",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Parce",
@@ -4403,12 +4404,12 @@
 					"id": "w309",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s082",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Agnus",
@@ -4485,12 +4486,12 @@
 					"id": "w315",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s083",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Exáudi",
@@ -4530,12 +4531,12 @@
 					"id": "w318",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s084",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Agnus",
@@ -4612,12 +4613,12 @@
 					"id": "w324",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s085",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Miserére",
@@ -4644,12 +4645,12 @@
 					"id": "w326",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s086",
 			"type": "verse",
+			"speaker": "ductor",
 			"words": [
 				{
 					"form": "Iesu",
@@ -4708,12 +4709,12 @@
 					"id": "w331",
 					"post": "."
 				}
-			],
-			"speaker": "ductor"
+			]
 		},
 		{
 			"id": "s087",
 			"type": "verse",
+			"speaker": "populus",
 			"words": [
 				{
 					"form": "Fac",
@@ -4788,8 +4789,7 @@
 					"id": "w337",
 					"post": "."
 				}
-			],
-			"speaker": "populus"
+			]
 		},
 		{
 			"id": "s088",

@@ -1,9 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "orationes.salve-regina",
 	"lang": "en",
 	"status": "working-edition",
 	"about": "The Marian antiphon said after low Mass in the prayers of Leo XIII, and at Compline through the long season after Pentecost. It addresses the Blessed Virgin Mary as Queen and Mother of mercy, and the banished children of Eve ask her to turn her merciful eyes toward them and, after this exile, to show them Jesus. A versicle and response follow the antiphon.",
+	"about_citations": [
+		{
+			"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+			"locator": "n. 675, p. 520",
+			"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -249,12 +256,5 @@
 		"w067": {
 			"gloss": "of Christ"
 		}
-	},
-	"about_citations": [
-		{
-			"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
-			"locator": "n. 675, p. 520",
-			"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
-		}
-	]
+	}
 }

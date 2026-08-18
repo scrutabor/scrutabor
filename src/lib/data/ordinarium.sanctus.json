@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "ordinarium.sanctus",
 	"title": "Sanctus",
 	"category": "ordinarium",
 	"section": "missa-fidelium",
 	"variant": "missae",
 	"sung": true,
-	"status": "working-edition",
 	"ids": {
 		"next": 26
 	},
+	"status": "working-edition",
 	"notes": "The Sanctus with the Benedictus, closing the Preface at the threshold of the Canon: the seraphim's cry of Is 6:3 joined to the acclamation of Mt 21:9. Rubric s01 abridges the 1962 rubric as transcribed by witness do (line 203), which prints the comma at Benedíctus that the apparatus declines for the sung text; the bell is carried by the narrative layer; the bow and the sign of the cross stand in the rubric itself. Benedíctus (w017) is tagged as the lexicalized adjective, not as the perfect passive participle of benedícere: both readings are open to the analyzers, and the adjective follows the corpus ruling at orationes.ave-maria w007 and w012.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Three accidental variants (punctuation) adjudicated in the apparatus.",
@@ -51,6 +51,16 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"participation": {
+				"lecta": {
+					"gradus": 3,
+					"source": "DMS 31 c"
+				},
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -132,7 +142,13 @@
 						"review": "accepted"
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s03",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -142,13 +158,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s03",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w007",
@@ -240,7 +250,13 @@
 					},
 					"head": "w012"
 				}
-			],
+			]
+		},
+		{
+			"id": "s04",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -250,13 +266,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s04",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w014",
@@ -289,7 +299,13 @@
 					},
 					"substantive": true
 				}
-			],
+			]
+		},
+		{
+			"id": "s05",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -299,13 +315,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s05",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w017",
@@ -379,7 +389,13 @@
 						"decl": 2
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s06",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 3,
@@ -389,13 +405,7 @@
 					"gradus": 2,
 					"source": "DMS 25 b"
 				}
-			}
-		},
-		{
-			"id": "s06",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w023",
@@ -428,17 +438,7 @@
 					},
 					"substantive": true
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 3,
-					"source": "DMS 31 c"
-				},
-				"cantu": {
-					"gradus": 2,
-					"source": "DMS 25 b"
-				}
-			}
+			]
 		}
 	]
 }

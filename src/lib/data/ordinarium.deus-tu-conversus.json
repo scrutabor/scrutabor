@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "ordinarium.deus-tu-conversus",
 	"title": "Deus, tu convérsus",
 	"category": "ordinarium",
 	"section": "praeparatio",
 	"variant": "missae",
 	"sung": false,
-	"status": "working-edition",
 	"ids": {
 		"next": 38
 	},
+	"status": "working-edition",
 	"notes": "Four versicle-and-response pairs said bowed at the foot of the altar after the absolutions, the last of them the first Dóminus vobíscum of the Mass. The pairs are drawn from the psalms and follow the shape of the Office's preces. VOBÍSCUM at w033 is one written word carrying two: the preposition cum is written after the pronoun rather than before it, as it always is with the personal pronouns (mecum, tecum, nobíscum). It is tagged as the pronoun it is built on — vos, ablative plural, the case cum governs — and the enclitic is explained in the note. Collatinus dictionaries the fused form as a lemma of its own and tags it singular; the pipeline's recorded ruling sets that analysis aside, and the token records the editorial and Whitaker's confirmation. CONVÉRSUS at w003 is a perfect passive participle used with an active sense (turning, not being turned), a reflexive reading the Latin psalter keeps from its Greek; the tag records the form, the note the sense.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence and no accidental variants — the two editions agree token for token, so this text carries no apparatus.",
@@ -122,6 +122,12 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "minister",
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w006",
@@ -190,13 +196,7 @@
 						"number": "sg"
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 2,
-					"source": "DMS 31 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s04",
@@ -274,6 +274,12 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "minister",
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w017",
@@ -332,13 +338,7 @@
 						"number": "pl"
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 2,
-					"source": "DMS 31 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s06",
@@ -405,6 +405,12 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "minister",
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w026",
@@ -473,13 +479,7 @@
 						"conj": 4
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 2,
-					"source": "DMS 31 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s08",
@@ -525,6 +525,16 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "minister",
+			"participation": {
+				"lecta": {
+					"gradus": 1,
+					"source": "DMS 31 a"
+				},
+				"cantu": {
+					"gradus": 1,
+					"source": "DMS 25 a"
+				}
+			},
 			"words": [
 				{
 					"id": "w034",
@@ -569,17 +579,7 @@
 					},
 					"head": "w036"
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 1,
-					"source": "DMS 31 a"
-				},
-				"cantu": {
-					"gradus": 1,
-					"source": "DMS 25 a"
-				}
-			}
+			]
 		}
 	]
 }

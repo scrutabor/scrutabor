@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "ordinarium.supplices-te-rogamus",
 	"lang": "en",
 	"status": "working-edition",
@@ -18,11 +18,11 @@
 		"s02": {
 			"translation": "In humble prayer we ask You, almighty God: command that these gifts be borne by the hands of Your holy Angel to Your altar on high, in the sight of Your divine majesty:"
 		},
-		"s03": {
-			"narrative": "The priest kisses the altar."
-		},
 		"s04": {
 			"translation": "so that all of us, who"
+		},
+		"s03": {
+			"narrative": "The priest kisses the altar."
 		},
 		"s11": {
 			"translation": "through this participation at the altar receive the most holy Body and Blood of Your Son"

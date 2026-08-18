@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "ordinarium.kyrie",
 	"title": "Kýrie, eléison",
 	"category": "ordinarium",
 	"section": "missa-catechumenorum",
 	"variant": "missae",
 	"sung": true,
-	"status": "working-edition",
 	"ids": {
 		"next": 19
 	},
+	"status": "working-edition",
 	"notes": "Nine invocations in Greek, printed in Latin letters, between the Introit and the Gloria. They are encoded as separate words. Kýrie is parsed as the vocative of κύριος and eléison as the imperative of ἐλεέω; the Greek aorist is not represented in the Latin tense field. Christe is the ordinary Latin vocative of the naturalised Christus.",
 	"source": {
 		"method": "Verified by collation against the independent witnesses below: zero substantive divergence and no accidental variants — the two editions agree token for token, so this text carries no apparatus.",
@@ -50,6 +50,12 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"participation": {
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -84,19 +90,23 @@
 						"voice": "act"
 					}
 				}
-			],
-			"participation": {
-				"cantu": {
-					"gradus": 2,
-					"source": "DMS 25 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s03",
 			"type": "verse",
 			"speaker": "minister",
 			"voice": "clara",
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				},
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w003",
@@ -131,23 +141,19 @@
 						"voice": "act"
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 2,
-					"source": "DMS 31 b"
-				},
-				"cantu": {
-					"gradus": 2,
-					"source": "DMS 25 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s04",
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"participation": {
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w005",
@@ -182,19 +188,23 @@
 						"voice": "act"
 					}
 				}
-			],
-			"participation": {
-				"cantu": {
-					"gradus": 2,
-					"source": "DMS 25 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s05",
 			"type": "verse",
 			"speaker": "minister",
 			"voice": "clara",
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				},
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w007",
@@ -222,23 +232,19 @@
 						"voice": "act"
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 2,
-					"source": "DMS 31 b"
-				},
-				"cantu": {
-					"gradus": 2,
-					"source": "DMS 25 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s06",
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"participation": {
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w009",
@@ -266,19 +272,23 @@
 						"voice": "act"
 					}
 				}
-			],
-			"participation": {
-				"cantu": {
-					"gradus": 2,
-					"source": "DMS 25 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s07",
 			"type": "verse",
 			"speaker": "minister",
 			"voice": "clara",
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				},
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w011",
@@ -306,23 +316,19 @@
 						"voice": "act"
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 2,
-					"source": "DMS 31 b"
-				},
-				"cantu": {
-					"gradus": 2,
-					"source": "DMS 25 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s08",
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"participation": {
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w013",
@@ -357,19 +363,23 @@
 						"voice": "act"
 					}
 				}
-			],
-			"participation": {
-				"cantu": {
-					"gradus": 2,
-					"source": "DMS 25 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s09",
 			"type": "verse",
 			"speaker": "minister",
 			"voice": "clara",
+			"participation": {
+				"lecta": {
+					"gradus": 2,
+					"source": "DMS 31 b"
+				},
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w015",
@@ -404,23 +414,19 @@
 						"voice": "act"
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 2,
-					"source": "DMS 31 b"
-				},
-				"cantu": {
-					"gradus": 2,
-					"source": "DMS 25 b"
-				}
-			}
+			]
 		},
 		{
 			"id": "s10",
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"participation": {
+				"cantu": {
+					"gradus": 2,
+					"source": "DMS 25 b"
+				}
+			},
 			"words": [
 				{
 					"id": "w017",
@@ -455,13 +461,7 @@
 						"voice": "act"
 					}
 				}
-			],
-			"participation": {
-				"cantu": {
-					"gradus": 2,
-					"source": "DMS 25 b"
-				}
-			}
+			]
 		}
 	]
 }

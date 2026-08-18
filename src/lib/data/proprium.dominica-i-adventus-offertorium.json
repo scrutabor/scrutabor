@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "proprium.dominica-i-adventus-offertorium",
 	"title": "Ad te, Dómine, levávi",
 	"category": "proprium",
 	"section": "missa-fidelium",
 	"variant": "dominica-i-adventus",
 	"sung": true,
-	"status": "working-edition",
 	"ids": {
 		"next": 26
 	},
+	"status": "working-edition",
 	"notes": "Part of the proper for the First Sunday of Advent. The biblical or liturgical citation and the source boundary are recorded in the witness files.",
 	"source": {
 		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
@@ -38,6 +38,16 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"participation": {
+				"lecta": {
+					"gradus": 4,
+					"source": "DMS 31 d"
+				},
+				"cantu": {
+					"gradus": 3,
+					"source": "DMS 25 c"
+				}
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -341,17 +351,7 @@
 						"conj": 3
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 4,
-					"source": "DMS 31 d"
-				},
-				"cantu": {
-					"gradus": 3,
-					"source": "DMS 25 c"
-				}
-			}
+			]
 		}
 	]
 }

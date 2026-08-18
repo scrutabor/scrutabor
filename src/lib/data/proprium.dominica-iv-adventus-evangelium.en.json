@@ -1,5 +1,5 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "proprium.dominica-iv-adventus-evangelium",
 	"lang": "en",
 	"status": "working-edition",
@@ -209,7 +209,7 @@
 		},
 		"w059": {
 			"gloss": "the book",
-			"function": "The noun liber, libri, a book, and not the adjective liber, líbera, líberum, free. This edition keeps the two under separate heads."
+			"function": "Here the noun, a book, and not the adjective that shares its spelling."
 		},
 		"w060": {
 			"gloss": "of the sayings"

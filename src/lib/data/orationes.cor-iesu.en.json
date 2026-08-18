@@ -1,8 +1,16 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"text": "orationes.cor-iesu",
 	"lang": "en",
 	"status": "working-edition",
+	"about": "The invocation that closes the prayers of Leo XIII, added to them in 1904 under Pius X. It is said three times. This edition prints it once.",
+	"about_citations": [
+		{
+			"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+			"locator": "n. 675, p. 520",
+			"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+		}
+	],
 	"analysis_defaults": {
 		"confidence": "high",
 		"sources": [
@@ -46,13 +54,5 @@
 				}
 			]
 		}
-	},
-	"about": "The invocation that closes the prayers of Leo XIII, added to them in 1904 under Pius X. It is said three times. This edition prints it once.",
-	"about_citations": [
-		{
-			"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
-			"locator": "n. 675, p. 520",
-			"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
-		}
-	]
+	}
 }

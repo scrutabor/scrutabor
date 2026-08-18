@@ -1,15 +1,15 @@
 {
-	"schema_version": "0.13.0",
+	"schema_version": "0.14.0",
 	"id": "proprium.dominica-i-adventus-graduale",
 	"title": "Univérsi, qui te exspéctant",
 	"category": "proprium",
 	"section": "missa-catechumenorum",
 	"variant": "dominica-i-adventus",
 	"sung": true,
-	"status": "working-edition",
 	"ids": {
 		"next": 19
 	},
+	"status": "working-edition",
 	"notes": "Part of the proper for the First Sunday of Advent. The biblical or liturgical citation and the source boundary are recorded in the witness files.",
 	"source": {
 		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. The witnesses agree with zero divergence, so this text carries no apparatus.",
@@ -37,6 +37,16 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"participation": {
+				"lecta": {
+					"gradus": 4,
+					"source": "DMS 31 d"
+				},
+				"cantu": {
+					"gradus": 3,
+					"source": "DMS 25 c"
+				}
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -123,7 +133,13 @@
 						"pos": "noun"
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "s02",
+			"type": "verse",
+			"speaker": "sacerdos",
+			"voice": "clara",
 			"participation": {
 				"lecta": {
 					"gradus": 4,
@@ -133,13 +149,7 @@
 					"gradus": 3,
 					"source": "DMS 25 c"
 				}
-			}
-		},
-		{
-			"id": "s02",
-			"type": "verse",
-			"speaker": "sacerdos",
-			"voice": "clara",
+			},
 			"words": [
 				{
 					"id": "w008",
@@ -273,17 +283,7 @@
 						"number": "sg"
 					}
 				}
-			],
-			"participation": {
-				"lecta": {
-					"gradus": 4,
-					"source": "DMS 31 d"
-				},
-				"cantu": {
-					"gradus": 3,
-					"source": "DMS 25 c"
-				}
-			}
+			]
 		}
 	]
 }
