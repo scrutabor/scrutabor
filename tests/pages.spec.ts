@@ -1,7 +1,7 @@
 // The educational surfaces around the reading view: lemma pages,
 // grammar-concept pages, and the landing.
 import pkg from '../package.json' with { type: 'json' };
-import { atRoute, expect, offlineUrl, test } from './fixtures';
+import { atRoute, expect, offlineUrl, settled, test } from './fixtures';
 import { CATALOG } from '../src/lib/catalog';
 
 test('the catalogue becomes a balanced book spread from laptop width up', async ({ page }) => {
@@ -489,4 +489,28 @@ test('the provenance sources are clickable', async ({ page }) => {
 	await expect(meta.locator('a[href="/app/pl/editio"]')).toHaveText('opracowanie');
 	await expect(meta.locator('a[href*="whitakers-words"]')).toHaveAttribute('target', '_blank');
 	await expect(meta.locator('a[href*="collatinus"]')).toHaveAttribute('rel', /noopener/);
+});
+
+test('no title outgrows the narrowest phone, at any print size', async ({ page }) => {
+	// The knob scales the root, so a heading grows with the reader's choice
+	// while the screen does not. At the largest print `Missa Catechumenórum`
+	// was one 421px word in a 253px measure and took the page 135px sideways
+	// with it — 43 of 205 surfaces did the same, and it is the large-print
+	// reader who meets them, which is the reader the setting is for.
+	await page.setViewportSize({ width: 320, height: 800 });
+	await page.goto(`/app/en`);
+	await settled(page);
+	await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
+	// the longest title in the book, and the two other surfaces that carry a
+	// heading of a different kind
+	for (const path of ['/app/en/ordo/catechumenorum', '/app/pl/ordo/catechumenorum', '/app/en/ordo']) {
+		await page.goto(path);
+		const measured = await page.evaluate(() => {
+			const de = document.documentElement;
+			const h = document.querySelector('h1')!;
+			return { sideways: de.scrollWidth - de.clientWidth, over: h.scrollWidth - h.clientWidth };
+		});
+		expect(measured.over, `${path}: the title itself`).toBeLessThanOrEqual(0);
+		expect(measured.sideways, `${path}: the page`).toBe(0);
+	}
 });

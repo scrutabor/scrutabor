@@ -329,11 +329,17 @@
 		border-top: 1px solid var(--border);
 	}
 
+	/* The mark takes its own line rather than the margin. At the largest
+	   print on a 320px phone the title and *from the day's formulary* want
+	   more than the measure between them, and `flex: none` meant the mark
+	   went past the right edge and took the page with it, 58px of sideways
+	   scroll on eleven slots. Wrapped, it keeps its side of the line. */
 	.part-head {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: baseline;
 		justify-content: space-between;
-		gap: 1rem;
+		gap: 0.2rem 1rem;
 	}
 
 	/* An opened aside keeps the quiet ink of the fold it came from, so the
@@ -389,6 +395,7 @@
 
 	.mark {
 		flex: none;
+		margin-inline-start: auto;
 		font-size: 0.7rem;
 		color: var(--ink-soft);
 	}
