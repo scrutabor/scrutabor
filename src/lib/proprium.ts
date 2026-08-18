@@ -96,7 +96,6 @@ export const PROPER_DAYS: ProperDay[] = [
 	{
 		id: 'dominica-ii-adventus',
 		season: 'adventus',
-		partial: true,
 		title: {
 			la: 'Dominica II Adventus',
 			pl: 'II Niedziela Adwentu',

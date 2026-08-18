@@ -4566,6 +4566,340 @@
 			"head": "sérvio, servíre, servívi, servítum",
 			"pos": "verb",
 			"conj": 4
+		},
+		"ubi": {
+			"head": "ubi",
+			"pos": "conj"
+		},
+		"nullus": {
+			"head": "nullus, nulla, nullum",
+			"pos": "adj"
+		},
+		"suppeto": {
+			"head": "súppeto, suppétere, suppetívi, suppetítum",
+			"pos": "verb",
+			"conj": 3
+		},
+		"suffragium": {
+			"head": "suffrágium, suffrágii",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
+		"succurro": {
+			"head": "succúrro, succúrrere, succúrri, succúrsum",
+			"pos": "verb",
+			"conj": 3
+		},
+		"Ierusalem": {
+			"head": "Ierúsalem",
+			"pos": "noun",
+			"gender": "f"
+		},
+		"a": {
+			"head": "a, ab",
+			"pos": "prep"
+		},
+		"alimonia": {
+			"head": "alimónia, alimóniæ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
+		},
+		"amo": {
+			"head": "amo, amáre, amávi, amátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"cibus": {
+			"head": "cibus, cibi",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 2
+		},
+		"doceo": {
+			"head": "dóceo, docére, dócui, doctum",
+			"pos": "verb",
+			"conj": 2
+		},
+		"iucunditas": {
+			"head": "iucúnditas, iucunditátis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
+		"terrenus": {
+			"head": "terrénus, terréna, terrénum",
+			"pos": "adj"
+		},
+		"Sion": {
+			"head": "Sion",
+			"pos": "noun",
+			"gender": "f"
+		},
+		"species": {
+			"head": "spécies, speciéi",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 5
+		},
+		"manifeste": {
+			"head": "maniféste",
+			"pos": "adv"
+		},
+		"congrego": {
+			"head": "congrégo, congregáre, congregávi, congregátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"ordino": {
+			"head": "órdino, ordináre, ordinávi, ordinátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"super": {
+			"head": "super",
+			"pos": "prep"
+		},
+		"velut": {
+			"head": "velut",
+			"pos": "adv"
+		},
+		"ovis": {
+			"head": "ovis, ovis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
+		"Iesse": {
+			"head": "Iesse",
+			"pos": "noun",
+			"gender": "m"
+		},
+		"Isaias": {
+			"head": "Isaías, Isaíæ",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 1
+		},
+		"abundo": {
+			"head": "abúndo, abundáre, abundávi, abundátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"aio": {
+			"head": "aio",
+			"pos": "verb"
+		},
+		"alteruter": {
+			"head": "altéruter, altérutra, altérutrum",
+			"pos": "pron"
+		},
+		"canto": {
+			"head": "canto, cantáre, cantávi, cantátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"circumcisio": {
+			"head": "circumcísio, circumcisiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
+		"confirmo": {
+			"head": "confírmo, confirmáre, confirmávi, confirmátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"doctrina": {
+			"head": "doctrína, doctrínæ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
+		},
+		"exsurgo": {
+			"head": "exsúrgo, exsúrgere, exsurréxi, exsurréctum",
+			"pos": "verb",
+			"conj": 3
+		},
+		"honorifico": {
+			"head": "honorífico, honorificáre, honorificávi, honorificátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"honoro": {
+			"head": "honóro, honoráre, honorávi, honorátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"invicem": {
+			"head": "ínvicem",
+			"pos": "adv"
+		},
+		"magnifico": {
+			"head": "magnífico, magnificáre, magnificávi, magnificátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"minister": {
+			"head": "miníster, minístri",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 2
+		},
+		"patientia": {
+			"head": "patiéntia, patiéntiæ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
+		},
+		"propterea": {
+			"head": "proptérea",
+			"pos": "adv"
+		},
+		"quicumque": {
+			"head": "quicúmque, quæcúmque, quodcúmque",
+			"pos": "pron"
+		},
+		"radix": {
+			"head": "radix, radícis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
+		"rursus": {
+			"head": "rursus",
+			"pos": "adv"
+		},
+		"sapio": {
+			"head": "sápio, sápere, sapívi",
+			"pos": "verb",
+			"conj": 3
+		},
+		"scribo": {
+			"head": "scribo, scríbere, scripsi, scriptum",
+			"pos": "verb",
+			"conj": 3
+		},
+		"solatium": {
+			"head": "solátium, solátii",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
+		"unanimis": {
+			"head": "unánimis, unánime",
+			"pos": "adj"
+		},
+		"abeo": {
+			"head": "ábeo, abíre, ábii, ábitum",
+			"pos": "verb"
+		},
+		"agito": {
+			"head": "ágito, agitáre, agitávi, agitátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"an": {
+			"head": "an",
+			"pos": "conj"
+		},
+		"arundo": {
+			"head": "arúndo, arúndinis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
+		"caecus": {
+			"head": "cæcus, cæca, cæcum",
+			"pos": "adj"
+		},
+		"claudus": {
+			"head": "claudus, clauda, claudum",
+			"pos": "adj"
+		},
+		"coepi": {
+			"head": "cœpi, cœpísse",
+			"pos": "verb"
+		},
+		"desertum": {
+			"head": "desértum, desérti",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
+		"duo": {
+			"head": "duo, duæ, duo",
+			"pos": "adj"
+		},
+		"evangelizo": {
+			"head": "evangelízo, evangelizáre, evangelizávi, evangelizátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"exeo": {
+			"head": "éxeo, exíre, éxii, éxitum",
+			"pos": "verb"
+		},
+		"facies": {
+			"head": "fácies, faciéi",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 5
+		},
+		"leprosus": {
+			"head": "leprósus, leprósa, leprósum",
+			"pos": "adj"
+		},
+		"mollis": {
+			"head": "mollis, molle",
+			"pos": "adj"
+		},
+		"plus": {
+			"head": "plus",
+			"pos": "adv"
+		},
+		"renuntio": {
+			"head": "renúntio, renuntiáre, renuntiávi, renuntiátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"respondeo": {
+			"head": "respóndeo, respondére, respóndi, respónsum",
+			"pos": "verb",
+			"conj": 2
+		},
+		"scandalizo": {
+			"head": "scandalízo, scandalizáre, scandalizávi, scandalizátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"surdus": {
+			"head": "surdus, surda, surdum",
+			"pos": "adj"
+		},
+		"turba": {
+			"head": "turba, turbæ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
+		},
+		"ventus": {
+			"head": "ventus, venti",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 2
+		},
+		"vestio": {
+			"head": "véstio, vestíre, vestívi, vestítum",
+			"pos": "verb",
+			"conj": 4
+		},
+		"vinculum": {
+			"head": "vínculum, vínculi",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
 		}
 	}
 }
