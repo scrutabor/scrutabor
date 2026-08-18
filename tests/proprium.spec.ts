@@ -8,7 +8,7 @@
 // page (decisions #27, revised 2026-08-18), and a fetch of an absolute path is
 // exactly the kind of thing that works on the site and silently fails in the
 // zip — which is where offline was supposed to matter most.
-import { expect, test } from './fixtures';
+import { expect, settled, test } from './fixtures';
 
 const DAY = 'dominica-i-adventus';
 
@@ -47,4 +47,58 @@ test('a shared link restores the day and the word', async ({ page }) => {
 	// proves the fetched dictionary reached the panel: without the merge the
 	// parse would be missing even though the word is on the page.
 	await expect(page.locator('body')).toContainText('tryb łączący', { timeout: 15000 });
+});
+
+test('picking a day does not resize the control it was picked with', async ({ page }) => {
+	// The artifact usually arrives in about 30 ms, and a notice that appears
+	// and vanishes inside two frames says nothing while jolting the one part
+	// of the page that is otherwise still: the label went 200px wide to 291px
+	// and back on every pick and every reload.
+	//
+	// The rule is conditional, so the test is too. A load fast enough not to
+	// be announced must not move anything. A load slow enough to be announced
+	// may, and that branch has its own test below — which is why this one does
+	// not simply demand one size and go red the first time a cold file:// read
+	// of a 100K script takes longer than the threshold. It did exactly that,
+	// once, on the run after a fresh build.
+	await page.goto(`/app/en/ordo/catechumenorum`);
+	await settled(page);
+	const label = page.locator('label.day');
+	const before = await label.boundingBox();
+	const watch = page.evaluate(
+		() =>
+			new Promise<{ sizes: string[]; announced: boolean }>((done) => {
+				const sizes: string[] = [];
+				let announced = false;
+				let n = 0;
+				const tick = () => {
+					const el = document.querySelector('label.day');
+					const r = el?.getBoundingClientRect();
+					sizes.push(r ? `${Math.round(r.width)}x${Math.round(r.height)}` : '-');
+					if (el?.querySelector('.state')) announced = true;
+					if (++n < 70) requestAnimationFrame(tick);
+					else done({ sizes: [...new Set(sizes)], announced });
+				};
+				requestAnimationFrame(tick);
+			})
+	);
+	await page.selectOption('label.day select', DAY);
+	const { sizes, announced } = await watch;
+	if (announced) return;
+	expect(sizes).toHaveLength(1);
+	expect(await label.boundingBox()).toEqual(before);
+});
+
+test('a slow day still says it is loading @online', async ({ page }) => {
+	// The notice is delayed, not removed: hold the artifact and it appears,
+	// which is the case it exists for.
+	await page.route('**/artifacts/proprium/**', async (route) => {
+		await new Promise((r) => setTimeout(r, 1500));
+		await route.continue();
+	});
+	await page.goto(`/app/en/ordo/catechumenorum`);
+	await settled(page);
+	await page.selectOption('label.day select', DAY);
+	await expect(page.locator('label.day .state')).toBeVisible();
+	await expect(page.locator('label.day .state')).toBeHidden({ timeout: 10_000 });
 });

@@ -51,8 +51,14 @@ test('no Polish surface leaves a one-letter word before a breakable space @onlin
 			const slider = page.locator('input[type="range"]');
 			const word = page.locator('.word').first();
 			const operable = (await slider.count()) + (await word.count()) > 0;
-			// only a page about to be OPERATED has to be alive
-			if (operable) await settled(page);
+			// only a page about to be OPERATED has to be alive, and it is given
+			// longer here than anywhere else. Measured across all 1,190 pages,
+			// hydration takes 15-42 ms and does not degrade as the sweep goes
+			// on — so a page that has not hydrated in twenty seconds is not a
+			// slow page, it is a runner with nine workers competing on it, and
+			// CI failed exactly once that way. A minute costs nothing when it
+			// is not needed and buys the sweep out of a contention flake.
+			if (operable) await settled(page, 60_000);
 			if (await slider.count()) await slider.fill('2');
 			if (await word.count()) await word.click();
 		});

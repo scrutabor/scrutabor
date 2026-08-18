@@ -98,8 +98,11 @@ function translate(
  * because assertions retry; a KEYSTROKE after one is not, and lands on a
  * page where nothing is listening yet.
  */
-export async function settled(page: import('@playwright/test').Page): Promise<void> {
-	await page.waitForSelector('html[data-hydrated]', { state: 'attached', timeout: 20_000 });
+export async function settled(
+	page: import('@playwright/test').Page,
+	timeout = 20_000
+): Promise<void> {
+	await page.waitForSelector('html[data-hydrated]', { state: 'attached', timeout });
 }
 
 /**

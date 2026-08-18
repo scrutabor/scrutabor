@@ -84,6 +84,35 @@ let payload = $state<ProperPayload | null>(null);
 let loading = $state(false);
 let failed = $state(false);
 
+// A load worth telling the reader about. Not the same thing as a load.
+//
+// The artifact is ~20K and usually comes from the cache or from disk, so the
+// fetch takes about 30 ms — and a notice that appears and vanishes inside two
+// frames tells nobody anything. What it DID do was resize the control it sits
+// in, from 200px to 291px and back, which is a visible jolt on the one page
+// that is otherwise perfectly still. The owner saw it on the first pick and on
+// every reload.
+//
+// So the notice waits. Past this many milliseconds a load is genuinely slow —
+// a phone on a bad signal, which is the case the notice exists for — and the
+// shift it causes is worth what it says.
+const SLOW_AFTER = 400;
+let slow = $state(false);
+let slowTimer: ReturnType<typeof setTimeout> | null = null;
+
+function startTiming(): void {
+	stopTiming();
+	slowTimer = setTimeout(() => {
+		slow = true;
+	}, SLOW_AFTER);
+}
+
+function stopTiming(): void {
+	if (slowTimer !== null) clearTimeout(slowTimer);
+	slowTimer = null;
+	slow = false;
+}
+
 // One day at a time is what a reader looks at, but going back to yesterday
 // should not re-fetch. A plain object, not a Map: nothing renders from this,
 // it only spares the network, and the lint rule against mutable built-in
@@ -100,6 +129,10 @@ export const proper = {
 	get loading(): boolean {
 		return loading;
 	},
+	/** True only once a load has run long enough to be worth announcing. */
+	get slow(): boolean {
+		return slow;
+	},
 	/** True when a day was asked for and could not be had. */
 	get failed(): boolean {
 		return failed;
@@ -112,6 +145,7 @@ export const proper = {
 		day = null;
 		payload = null;
 		failed = false;
+		stopTiming();
 	}
 };
 
@@ -140,6 +174,7 @@ export async function chooseDay(next: string | null, lang: Lang): Promise<void> 
 	}
 	if (!browser) return;
 	loading = true;
+	startTiming();
 	try {
 		const body = await load(next, lang);
 		held[key] = body;
@@ -149,6 +184,7 @@ export async function chooseDay(next: string | null, lang: Lang): Promise<void> 
 		payload = null;
 	} finally {
 		loading = false;
+		stopTiming();
 	}
 }
 

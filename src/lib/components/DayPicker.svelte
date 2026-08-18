@@ -83,7 +83,7 @@
 			{/if}
 		{/each}
 	</select>
-	{#if proper.loading}
+	{#if proper.slow}
 		<span class="state smallcaps">{msgs.dayLoading}</span>
 	{:else if proper.failed}
 		<span class="state smallcaps">{msgs.dayFailed}</span>
