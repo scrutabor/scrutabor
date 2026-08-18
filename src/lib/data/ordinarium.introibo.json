@@ -9,41 +9,50 @@
 	"ids": {
 		"next": 20
 	},
-	"status": "working-edition",
-	"notes": "The opening of the prayers at the foot of the altar: the sign of the cross and the antiphon, said before the psalm. It is a text of its own because the 1962 rubric divides the block exactly here — in Requiem Masses and, in Masses of the season, from Passion Sunday up to but not including Holy Saturday the psalm, the Glória Patri and the repetition of the antiphon are omitted, while In nómine Patris, Introíbo and Adiutórium are still said. What the rubric keeps and what it drops therefore cannot live in one document. The psalm follows as ordinarium.iudica-me, the versicle after it as ordinarium.adiutorium. Witness do prints a cross glyph inside the first sentence and handmissal-eo before it; the glyph is a direction for the hand, not a word, and is stripped as in the other ordinarium texts. FÍLII at w005 is the genitive singular, as the three-genitive formula requires. The Whitaker's port contradicts it — the port resolves filii as locative and plural only, reaching the genitive under the contracted spelling fili — though Whitaker's WORDS itself gives the genitive for filii first. Collatinus reads the form as we do. The divergence is a gap in the port, not a doubt about the case.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Two accidental variants (punctuation, orthography) adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.introibo/",
-		"apparatus": "witnesses/ordinarium.introibo/apparatus.json"
+	"about": {
+		"pl": "Kapłan żegna się znakiem krzyża i zaczyna Mszę słowami In nómine Patris. Antyfona „Introíbo ad altáre Dei” pochodzi z Ps 42, 4 według numeracji Wulgaty (Ps 43, 4 w numeracji hebrajskiej). Poprzedza psalm, z którego została zaczerpnięta, i jest powtarzana po jego zakończeniu.",
+		"en": "The priest signs himself and begins the Mass with In nómine Patris. The antiphon “Introíbo ad altáre Dei” comes from Ps 42:4 in the Vulgate (Ps 43:4 in Hebrew numbering). It precedes the psalm from which it is taken and is repeated after the psalm ends."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 43 (Vg 42), 4",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 43 (Vg 42), 4",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Sacerdos paratus cum ingreditur ad Altare, facta illi debita reverentia, signat se signo crucis a fronte ad pectus, et clara voce dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Kapłan w szatach liturgicznych podchodzi do ołtarza, oddaje mu należną cześć, czyni znak krzyża od czoła do piersi i mówi głośno:",
+				"en": "The vested priest approaches the altar, makes the reverence due to it, signs himself from forehead to breast and says aloud:"
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae, opening rubric",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae, opening rubric",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -51,6 +60,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "W imię Ojca i Syna, i Ducha Świętego. Amen.",
+				"en": "In the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -60,7 +73,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w002",
@@ -72,6 +89,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "imieniu",
+						"en": "the name"
 					}
 				},
 				{
@@ -85,6 +106,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojca",
+						"en": "of the Father"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „nómine” (w002), równoległy do „Fílii” (w005) i „Spíritus” (w007).",
+						"en": "Genitive depending on “nómine” (w002), parallel to “Fílii” (w005) and “Spíritus” (w007)."
 					}
 				},
 				{
@@ -93,6 +122,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -107,13 +140,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Syna",
+						"en": "of the Son"
 					}
 				},
 				{
@@ -122,6 +151,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -134,6 +167,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "Ducha",
+						"en": "of the Spirit"
+					},
+					"function": {
+						"pl": "Forma „Spíritus” może być mianownikiem albo dopełniaczem. Końcówka „Sancti” (w008) wskazuje tutaj dopełniacz.",
+						"en": "“Spíritus” can be nominative or genitive. Agreement with “Sancti” (w008) establishes the genitive here."
 					}
 				},
 				{
@@ -147,7 +188,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "Świętego",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w009",
@@ -156,6 +201,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -164,13 +213,25 @@
 			"id": "s03",
 			"type": "rubric",
 			"text": "Deinde, iunctis manibus ante pectus, incipit Antiphonam:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Ze złożonymi rękami przed piersią kapłan rozpoczyna antyfonę.",
+				"en": "With hands joined before his breast, the priest begins the antiphon."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae rubric before Introibo ad altare Dei",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae rubric before Introibo ad altare Dei",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -178,6 +239,25 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Przystąpię do ołtarza Bożego.",
+				"en": "I will go in unto the altar of God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Missale Meum",
+						"locator": "Ordo Missae, antyfona Introibo",
+						"url": "https://www.missalemeum.com/pl/ordo"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Psalm 42:4"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w010",
@@ -190,6 +270,14 @@
 						"tense": "fut",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "przystąpię",
+						"en": "I will go in"
+					},
+					"function": {
+						"pl": "Pierwsza osoba liczby pojedynczej czasu przyszłego.",
+						"en": "First person singular future."
 					}
 				},
 				{
@@ -200,7 +288,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "do",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w012",
@@ -212,6 +304,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ołtarza",
+						"en": "the altar"
+					},
+					"function": {
+						"pl": "Biernik zależny od „ad” (w011), wyrażającego kierunek.",
+						"en": "Accusative governed by “ad” (w011), which expresses direction."
 					}
 				},
 				{
@@ -225,6 +325,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „altáre” (w012).",
+						"en": "Genitive depending on “altáre” (w012)."
 					}
 				}
 			]
@@ -240,6 +348,10 @@
 					"source": "DMS 31 b"
 				}
 			},
+			"translation": {
+				"pl": "Do Boga, który rozwesela młodość moją.",
+				"en": "To God, who gladdens my youth."
+			},
 			"words": [
 				{
 					"id": "w014",
@@ -249,7 +361,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w015",
@@ -261,6 +377,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				},
 				{
@@ -272,6 +392,14 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
+					},
+					"function": {
+						"pl": "Mianownik jako podmiot „lætíficat” (w017), choć poprzednik „Deum” (w015) stoi w bierniku.",
+						"en": "Nominative as the subject of “lætíficat” (w017), although its antecedent “Deum” (w015) is accusative."
 					}
 				},
 				{
@@ -286,6 +414,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "rozwesela",
+						"en": "gladdens"
 					}
 				},
 				{
@@ -298,6 +430,36 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "młodość",
+						"en": "youth"
+					},
+					"function": {
+						"pl": "Łacińska „młodość” odpowiada greckiemu tekstowi psalmu. Tekst hebrajski mówi w tym miejscu o radości.",
+						"en": "The Latin “youth” corresponds to the Greek text of the psalm. The Hebrew text speaks here of joy."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 42:4"
+							},
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 43:4"
+							}
+						],
+						"en": [
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 42:4"
+							},
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 43:4"
+							}
+						]
 					}
 				},
 				{
@@ -311,9 +473,72 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "moją",
+						"en": "my"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The opening of the prayers at the foot of the altar: the sign of the cross and the antiphon, said before the psalm. It is a text of its own because the 1962 rubric divides the block exactly here — in Requiem Masses and, in Masses of the season, from Passion Sunday up to but not including Holy Saturday the psalm, the Glória Patri and the repetition of the antiphon are omitted, while In nómine Patris, Introíbo and Adiutórium are still said. What the rubric keeps and what it drops therefore cannot live in one document. The psalm follows as ordinarium.iudica-me, the versicle after it as ordinarium.adiutorium. Witness do prints a cross glyph inside the first sentence and handmissal-eo before it; the glyph is a direction for the hand, not a word, and is stripped as in the other ordinarium texts. FÍLII at w005 is the genitive singular, as the three-genitive formula requires. The Whitaker's port contradicts it — the port resolves filii as locative and plural only, reaching the genitive under the contracted spelling fili — though Whitaker's WORDS itself gives the genitive for filii first. Collatinus reads the form as we do. The divergence is a gap in the port, not a doubt about the case.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Two accidental variants (punctuation, orthography) adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.introibo/",
+			"apparatus": "witnesses/ordinarium.introibo/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s03": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w005": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

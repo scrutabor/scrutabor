@@ -9,28 +9,35 @@
 	"ids": {
 		"next": 19
 	},
-	"status": "working-edition",
-	"notes": "Part of the proper for the First Sunday of Advent. The biblical or liturgical citation and the source boundary are recorded in the witness files. The two-word Per Dóminum in the Secret and Postcommunion is the abbreviation printed on the proper page, not a silently expanded common conclusion.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-i-adventus-postcommunio/",
-		"apparatus": "witnesses/proprium.dominica-i-adventus-postcommunio/apparatus.json"
+	"about": {
+		"pl": "Modlitwa po Komunii I Niedzieli Adwentu. Prosi, abyśmy przyjęli miłosierdzie Boże pośród Jego świątyni i godnymi obchodami wyprzedzili nadchodzące uroczystości naszego odkupienia, a jej pierwsze słowa pochodzą z Ps 47, 10 według numeracji Wulgaty (Ps 48 w numeracji hebrajskiej). Zakończenie jest wydrukowane w dwóch słowach Per Dóminum.",
+		"en": "The Postcommunion of the First Sunday of Advent. It asks that we receive God's mercy in the midst of His temple and so go before the coming solemnities of our redemption with fitting honor, taking its opening words from Psalm 47:10 in the Vulgate numbering (Psalm 48 in Hebrew). Its conclusion is printed in the two words Per Dóminum."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Dominica I Adventus, printed page 2",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			},
+			{
+				"title": "Biblia Sacra Vulgatae Editionis (1914)",
+				"locator": "Psalmus 47, 10",
+				"url": "https://archive.org/details/bibliasacravulga00helzuoft"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+		"en": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Dominica I Adventus, printed page 2",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			},
+			{
+				"title": "Biblia Sacra Vulgatae Editionis (1914)",
+				"locator": "Psalmus 47, 10",
+				"url": "https://archive.org/details/bibliasacravulga00helzuoft"
+			}
+		]
 	},
 	"segments": [
 		{
@@ -38,6 +45,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Przyjmijmy, Panie, Twoje miłosierdzie pośrodku Twojej świątyni, abyśmy należną czcią poprzedzili nadchodzące uroczystości naszego odnowienia. Przez Pana.",
+				"en": "May we receive Your mercy, O Lord, in the midst of Your temple, that we may precede the coming solemnities of our restoration with fitting honors. Through the Lord."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -52,6 +63,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "przyjmijmy",
+						"en": "may we receive"
 					}
 				},
 				{
@@ -65,6 +80,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -77,6 +96,10 @@
 						"gender": "f",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "miłosierdzie",
+						"en": "mercy"
 					}
 				},
 				{
@@ -89,7 +112,11 @@
 						"number": "sg",
 						"pos": "adj"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w005",
@@ -99,7 +126,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w006",
@@ -111,7 +142,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "pośrodku",
+						"en": "the midst"
+					}
 				},
 				{
 					"id": "w007",
@@ -123,6 +158,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "świątyni",
+						"en": "of the temple"
 					}
 				},
 				{
@@ -136,7 +175,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "Twojej",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w009",
@@ -144,6 +187,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyśmy",
+						"en": "that"
 					}
 				},
 				{
@@ -156,6 +203,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "odnowienia",
+						"en": "of restoration"
 					}
 				},
 				{
@@ -168,7 +219,11 @@
 						"number": "sg",
 						"pos": "adj"
 					},
-					"head": "w010"
+					"head": "w010",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w012",
@@ -184,7 +239,15 @@
 						"voice": "act",
 						"conj": 4
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "nadchodzące",
+						"en": "coming"
+					},
+					"function": {
+						"pl": "Imiesłów przyszły zgadza się z “solémnia” (w013) i ukazuje uroczystości jako jeszcze nadchodzące.",
+						"en": "The future participle agrees with “solémnia” (w013) and presents the solemnities as still to come."
+					}
 				},
 				{
 					"id": "w013",
@@ -196,7 +259,15 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "uroczystości",
+						"en": "solemnities"
+					},
+					"function": {
+						"pl": "Przymiotnik występuje rzeczownikowo i oznacza nadchodzące uroczyste obchody odnowienia.",
+						"en": "The adjective stands substantivally for the coming solemn celebrations of restoration."
+					}
 				},
 				{
 					"id": "w014",
@@ -208,7 +279,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "należnymi",
+						"en": "fitting"
+					}
 				},
 				{
 					"id": "w015",
@@ -220,6 +295,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "honorami",
+						"en": "honors"
 					}
 				},
 				{
@@ -235,6 +314,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "poprzedzili",
+						"en": "may we precede"
 					}
 				},
 				{
@@ -245,7 +328,11 @@
 						"governs": "acc",
 						"pos": "prep"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w018",
@@ -258,9 +345,38 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "the Lord"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "Part of the proper for the First Sunday of Advent. The biblical or liturgical citation and the source boundary are recorded in the witness files. The two-word Per Dóminum in the Secret and Postcommunion is the abbreviation printed on the proper page, not a silently expanded common conclusion.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-i-adventus-postcommunio/",
+			"apparatus": "witnesses/proprium.dominica-i-adventus-postcommunio/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

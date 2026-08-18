@@ -9,33 +9,34 @@
 	"ids": {
 		"next": 30
 	},
-	"status": "working-edition",
-	"notes": "The Marian antiphon of Paschaltide, which stands from Compline of Holy Saturday to the Saturday after Pentecost — after the Ave Regína cælorum of Lent, before the Salve Regína of the season after Pentecost, with the versicle that follows it. Four lines, each sealed with an allelúia, and two more in the versicle: the word is Hebrew, indeclinable, and this edition prints it with i where witness do prints j, by the house rule in ORTHOGRAPHY.md. The syntax turns on one construction a reader will not guess: DEUM at w017 is the object of ORA at w014, because Latin oro governs the one entreated in the accusative. The line therefore holds both a person prayed TO and, in pro + ablative, the people prayed FOR — it asks God on our behalf, and does not ask for God. QUEM at w006 has no antecedent in the text at all; the antiphon says who it is only by what he did, and both witnesses leave it so. No speaker is recorded: the Marian antiphon file marks the versicle v./R., and outside the Mass this edition reads those as the shape of a versicle rather than as officers (SCHEMA.md).",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence, and six adjudicated variants which are all one word — the Hebrew acclamation, which witness do spells with j at every occurrence.",
-		"witnesses": "witnesses/orationes.regina-caeli/",
-		"apparatus": "witnesses/orationes.regina-caeli/apparatus.json"
+	"about": {
+		"pl": "Antyfona maryjna okresu wielkanocnego, która stoi od komplety Wielkiej Soboty do soboty po Zesłaniu Ducha Świętego i w tym okresie zajmuje miejsce Anioł Pański. Wzywa Najświętszą Maryję Pannę do radości ze zmartwychwstania Jej Syna i prosi Ją o modlitwę za nami. Po antyfonie następuje werset z odpowiedzią, wyznający prawdziwe zmartwychwstanie Pana.",
+		"en": "The Marian antiphon of Paschaltide, which stands from Compline of Holy Saturday to the Saturday after Pentecost and takes the place of the Angelus in that season. It calls the Blessed Virgin Mary to rejoice in the resurrection of her Son and asks her to pray for us. A versicle and response follow the antiphon, professing that the Lord has truly risen."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 331 b, pp. 214–215",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 331 b, pp. 214–215",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "verse",
+			"translation": {
+				"pl": "Królowo nieba, wesel się, alleluja;",
+				"en": "Queen of heaven, rejoice, alleluia;"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -47,6 +48,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
 					}
 				},
 				{
@@ -60,6 +65,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "nieba",
+						"en": "of heaven"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „Regína” (w001).",
+						"en": "Genitive dependent on “Regína” (w001)."
 					}
 				},
 				{
@@ -75,6 +88,14 @@
 						"mood": "imp",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wesel się",
+						"en": "rejoice"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący czasownika deponentnego: forma bierna, znaczenie czynne.",
+						"en": "Imperative of a deponent verb: passive in form and active in meaning."
 					}
 				},
 				{
@@ -84,6 +105,10 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				}
 			]
@@ -91,6 +116,10 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"translation": {
+				"pl": "bo Ten, któregoś nosiła, alleluja,",
+				"en": "for He whom you did merit to bear, alleluia,"
+			},
 			"words": [
 				{
 					"id": "w005",
@@ -98,6 +127,10 @@
 					"lemma": "quia",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "albowiem",
+						"en": "for"
 					}
 				},
 				{
@@ -109,6 +142,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którego",
+						"en": "whom"
+					},
+					"function": {
+						"pl": "Biernik, dopełnienie „portáre” (w008).",
+						"en": "Accusative object of “portáre” (w008)."
 					}
 				},
 				{
@@ -123,6 +164,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zasłużyłaś",
+						"en": "you were counted worthy"
+					},
+					"function": {
+						"pl": "Perfectum indicativi czasownika deponentnego „méreor”. Z bezokolicznikiem znaczy tutaj: byłaś godna, aby coś uczynić.",
+						"en": "Perfect indicative of the deponent “méreor”. With an infinitive, it means here to have been worthy to do something."
 					}
 				},
 				{
@@ -136,6 +185,14 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "nosić",
+						"en": "to bear"
+					},
+					"function": {
+						"pl": "Bezokolicznik zależny od „meruísti” (w007).",
+						"en": "Infinitive dependent on “meruísti” (w007)."
 					}
 				},
 				{
@@ -145,6 +202,10 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				}
 			]
@@ -152,6 +213,10 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"translation": {
+				"pl": "zmartwychpowstał, jak powiedział, alleluja.",
+				"en": "has risen, as He said, alleluia."
+			},
 			"words": [
 				{
 					"id": "w010",
@@ -166,6 +231,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "zmartwychwstał",
+						"en": "has risen"
+					},
+					"function": {
+						"pl": "Orzeczenie zdania głównego. Podmiotem jest domyślny poprzednik „quem” (w006).",
+						"en": "The main verb. Its subject is the understood antecedent of “quem” (w006)."
 					}
 				},
 				{
@@ -174,6 +247,10 @@
 					"lemma": "sicut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "jak",
+						"en": "as"
 					}
 				},
 				{
@@ -189,6 +266,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "powiedział",
+						"en": "He said"
+					},
+					"function": {
+						"pl": "Perfectum indicativi z tym samym podmiotem co „Resurréxit” (w010).",
+						"en": "Perfect indicative with the same subject as “Resurréxit” (w010)."
 					}
 				},
 				{
@@ -198,6 +283,10 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				}
 			]
@@ -205,6 +294,10 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"translation": {
+				"pl": "Módl się za nami do Boga, alleluja.",
+				"en": "Pray to God for us, alleluia."
+			},
 			"words": [
 				{
 					"id": "w014",
@@ -218,6 +311,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący skierowany do Maryi.",
+						"en": "Imperative addressed to Mary."
 					}
 				},
 				{
@@ -228,7 +329,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w016",
@@ -238,6 +343,14 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					},
+					"function": {
+						"pl": "Ablativus po „pro” (w015): ci, w czyjej sprawie się prosi.",
+						"en": "Ablative after “pro” (w015): those on whose behalf the prayer is made."
 					}
 				},
 				{
@@ -251,6 +364,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Biernik, dopełnienie „Ora” (w014). Czasownik „oráre” łączy się z biernikiem osoby proszonej, a fraza pro nobis wskazuje, za kim wstawiana jest prośba.",
+						"en": "Accusative object of “Ora” (w014). The verb “oráre” takes the person entreated in the accusative, while the phrase pro nobis states on whose behalf."
 					}
 				},
 				{
@@ -260,6 +381,10 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				}
 			]
@@ -267,6 +392,10 @@
 		{
 			"id": "s05",
 			"type": "verse",
+			"translation": {
+				"pl": "Raduj się i wesel, Panno Maryjo, alleluja.",
+				"en": "Rejoice and be glad, O Virgin Mary, alleluia."
+			},
 			"words": [
 				{
 					"id": "w019",
@@ -280,6 +409,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "raduj się",
+						"en": "rejoice"
+					},
+					"function": {
+						"pl": "Czynny tryb rozkazujący. Synonimiczne „lætáre” (w021) jest deponentne.",
+						"en": "Active imperative. The synonymous “lætáre” (w021) is deponent."
 					}
 				},
 				{
@@ -288,6 +425,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -303,6 +444,10 @@
 						"mood": "imp",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wesel się",
+						"en": "be glad"
 					}
 				},
 				{
@@ -315,6 +460,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Panno",
+						"en": "Virgin"
 					}
 				},
 				{
@@ -328,6 +477,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryjo",
+						"en": "Mary"
+					},
+					"function": {
+						"pl": "Wołacz. Werset nazywa Maryję, do której zwraca się antyfona.",
+						"en": "Vocative. The versicle names Mary, to whom the antiphon is addressed."
 					}
 				},
 				{
@@ -337,6 +494,10 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				}
 			]
@@ -344,6 +505,10 @@
 		{
 			"id": "s06",
 			"type": "verse",
+			"translation": {
+				"pl": "Bo zmartwychwstał Pan prawdziwie, alleluja.",
+				"en": "For the Lord has truly risen, alleluia."
+			},
 			"words": [
 				{
 					"id": "w025",
@@ -351,6 +516,10 @@
 					"lemma": "quia",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bo",
+						"en": "for"
 					}
 				},
 				{
@@ -365,6 +534,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "zmartwychwstał",
+						"en": "has risen"
+					},
+					"function": {
+						"pl": "Forma od súrgo, bez przedrostka re-. Podobnie jak „Resurréxit” (w010), odnosi się tu do zmartwychwstania Chrystusa.",
+						"en": "A form of súrgo, without the prefix re-. Like “Resurréxit” (w010), it refers here to Christ's Resurrection."
 					}
 				},
 				{
@@ -377,6 +554,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
+					},
+					"function": {
+						"pl": "Mianownik, podmiot „surréxit” (w026).",
+						"en": "Nominative subject of “surréxit” (w026)."
 					}
 				},
 				{
@@ -386,6 +571,10 @@
 					"lemma": "vere",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "prawdziwie",
+						"en": "truly"
 					}
 				},
 				{
@@ -395,9 +584,38 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The Marian antiphon of Paschaltide, which stands from Compline of Holy Saturday to the Saturday after Pentecost — after the Ave Regína cælorum of Lent, before the Salve Regína of the season after Pentecost, with the versicle that follows it. Four lines, each sealed with an allelúia, and two more in the versicle: the word is Hebrew, indeclinable, and this edition prints it with i where witness do prints j, by the house rule in ORTHOGRAPHY.md. The syntax turns on one construction a reader will not guess: DEUM at w017 is the object of ORA at w014, because Latin oro governs the one entreated in the accusative. The line therefore holds both a person prayed TO and, in pro + ablative, the people prayed FOR — it asks God on our behalf, and does not ask for God. QUEM at w006 has no antecedent in the text at all; the antiphon says who it is only by what he did, and both witnesses leave it so. No speaker is recorded: the Marian antiphon file marks the versicle v./R., and outside the Mass this edition reads those as the shape of a versicle rather than as officers (SCHEMA.md).",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence, and six adjudicated variants which are all one word — the Hebrew acclamation, which witness do spells with j at every occurrence.",
+			"witnesses": "witnesses/orationes.regina-caeli/",
+			"apparatus": "witnesses/orationes.regina-caeli/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		}
+	}
 }

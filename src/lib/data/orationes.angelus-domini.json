@@ -9,34 +9,45 @@
 	"ids": {
 		"next": 163
 	},
-	"status": "working-edition",
-	"notes": "The Angelus outside Paschaltide, with all three Hail Marys expanded. Its V. lines are assigned to a leader, not to a priest: the prayer is commonly said in groups and requires no clerical minister. No speaker is assigned to the Hail Marys: devotional practice may say each one together or divide it at Sancta Maria, and the edition does not prescribe either custom. The following Gloria Patri found in some prayer-book presentations is a separate prayer and is not appended here.",
-	"source": {
-		"method": "Transcribed from the Latin appendix to the Compendium of the Catechism; repeated Hail Mary references expanded from the complete formula printed in the same appendix, and collated against TPL.",
-		"witnesses": "witnesses/orationes.angelus-domini/",
-		"apparatus": "witnesses/orationes.angelus-domini/apparatus.json"
+	"about": {
+		"pl": "Anioł Pański odmawia się trzy razy dziennie: o świcie, w południe i pod wieczór, a to wydanie drukuje trzy Zdrowaś Maryjo, które się w nim odmawia. W okresie wielkanocnym jego miejsce zajmuje Regina caeli.",
+		"en": "The Angelus is prayed three times a day, at dawn, at noon and towards evening, and this edition prints the three Hail Marys said in it. In Paschaltide the Regina caeli takes its place."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Enchiridion Indulgentiarum, fourth edition",
+				"locator": "Concessio 17 § 2, Angelus Domini and Regina caeli",
+				"url": "https://www.vatican.va/roman_curia/tribunals/apost_penit/documents/rc_trib_appen_doc_20020826_enchiridion-indulgentiarum_lt.html"
+			},
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 331, pp. 213–215",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+		"en": [
+			{
+				"title": "Enchiridion Indulgentiarum, fourth edition",
+				"locator": "Concessio 17 § 2, Angelus Domini and Regina caeli",
+				"url": "https://www.vatican.va/roman_curia/tribunals/apost_penit/documents/rc_trib_appen_doc_20020826_enchiridion-indulgentiarum_lt.html"
+			},
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 331, pp. 213–215",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Anioł Pański zwiastował Pannie Maryi.",
+				"en": "The Angel of the Lord declared unto Mary."
+			},
 			"words": [
 				{
 					"form": "Ángelus",
@@ -48,7 +59,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w001"
+					"id": "w001",
+					"gloss": {
+						"pl": "anioł",
+						"en": "angel"
+					}
 				},
 				{
 					"form": "Dómini",
@@ -60,7 +75,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w002"
+					"id": "w002",
+					"gloss": {
+						"pl": "Pana",
+						"en": "of the Lord"
+					}
 				},
 				{
 					"form": "nuntiávit",
@@ -74,7 +93,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w003"
+					"id": "w003",
+					"gloss": {
+						"pl": "zwiastował",
+						"en": "declared"
+					}
 				},
 				{
 					"form": "Maríæ",
@@ -87,7 +110,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w004"
+					"id": "w004",
+					"gloss": {
+						"pl": "Maryi",
+						"en": "unto Mary"
+					}
 				}
 			]
 		},
@@ -95,6 +122,10 @@
 			"id": "s02",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "I poczęła z Ducha Świętego.",
+				"en": "And she conceived of the Holy Spirit."
+			},
 			"words": [
 				{
 					"form": "Et",
@@ -102,7 +133,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w005"
+					"id": "w005",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "concépit",
@@ -116,7 +151,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"id": "w006"
+					"id": "w006",
+					"gloss": {
+						"pl": "poczęła",
+						"en": "conceived"
+					}
 				},
 				{
 					"form": "de",
@@ -126,7 +165,11 @@
 						"governs": "abl"
 					},
 					"head": "w008",
-					"id": "w007"
+					"id": "w007",
+					"gloss": {
+						"pl": "z",
+						"en": "of"
+					}
 				},
 				{
 					"form": "Spíritu",
@@ -138,7 +181,11 @@
 						"gender": "m",
 						"decl": 4
 					},
-					"id": "w008"
+					"id": "w008",
+					"gloss": {
+						"pl": "Ducha",
+						"en": "the Spirit"
+					}
 				},
 				{
 					"form": "Sancto",
@@ -151,13 +198,21 @@
 						"gender": "m"
 					},
 					"head": "w008",
-					"id": "w009"
+					"id": "w009",
+					"gloss": {
+						"pl": "Świętego",
+						"en": "Holy"
+					}
 				}
 			]
 		},
 		{
 			"id": "ave1",
 			"type": "verse",
+			"translation": {
+				"pl": "Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.",
+				"en": "Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+			},
 			"words": [
 				{
 					"id": "w010",
@@ -171,6 +226,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zdrowaś",
+						"en": "hail"
 					}
 				},
 				{
@@ -184,6 +243,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryjo",
+						"en": "Mary"
 					}
 				},
 				{
@@ -196,6 +259,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "łaską",
+						"en": "with grace"
 					}
 				},
 				{
@@ -209,7 +276,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "pełna",
+						"en": "full"
+					}
 				},
 				{
 					"id": "w014",
@@ -221,6 +292,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -232,6 +307,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "z Tobą",
+						"en": "with thee"
 					}
 				},
 				{
@@ -244,7 +323,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "błogosławiona",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w017",
@@ -254,6 +337,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "thou"
 					}
 				},
 				{
@@ -264,7 +351,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w019"
+					"head": "w019",
+					"gloss": {
+						"pl": "między",
+						"en": "among"
+					}
 				},
 				{
 					"id": "w019",
@@ -277,6 +368,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "niewiastami",
+						"en": "women"
 					}
 				},
 				{
@@ -285,6 +380,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -297,7 +396,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w022"
+					"head": "w022",
+					"gloss": {
+						"pl": "błogosławiony",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w022",
@@ -309,6 +412,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "owoc",
+						"en": "fruit"
 					}
 				},
 				{
@@ -321,6 +428,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "żywota",
+						"en": "of the womb"
 					}
 				},
 				{
@@ -333,7 +444,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w023"
+					"head": "w023",
+					"gloss": {
+						"pl": "Twojego",
+						"en": "thy"
+					}
 				},
 				{
 					"id": "w025",
@@ -345,6 +460,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezus",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -357,7 +476,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w027"
+					"head": "w027",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w027",
@@ -370,6 +493,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryjo",
+						"en": "Mary"
 					}
 				},
 				{
@@ -382,6 +509,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
 					}
 				},
 				{
@@ -395,6 +526,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -409,6 +544,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
 					}
 				},
 				{
@@ -419,7 +558,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w032"
+					"head": "w032",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w032",
@@ -429,6 +572,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
 					}
 				},
 				{
@@ -442,6 +589,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "grzesznikami",
+						"en": "sinners"
 					}
 				},
 				{
@@ -450,6 +601,10 @@
 					"lemma": "nunc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "teraz",
+						"en": "now"
 					}
 				},
 				{
@@ -458,6 +613,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -468,7 +627,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w037"
+					"head": "w037",
+					"gloss": {
+						"pl": "w",
+						"en": "at"
+					}
 				},
 				{
 					"id": "w037",
@@ -480,6 +643,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "godzinie",
+						"en": "the hour"
 					}
 				},
 				{
@@ -492,6 +659,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "śmierci",
+						"en": "of death"
 					}
 				},
 				{
@@ -505,7 +676,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w038"
+					"head": "w038",
+					"gloss": {
+						"pl": "naszej",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w040",
@@ -514,6 +689,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -522,6 +701,10 @@
 			"id": "s04",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Oto ja, służebnica Pańska.",
+				"en": "Behold the handmaid of the Lord."
+			},
 			"words": [
 				{
 					"form": "Ecce",
@@ -529,7 +712,11 @@
 					"morph": {
 						"pos": "intj"
 					},
-					"id": "w041"
+					"id": "w041",
+					"gloss": {
+						"pl": "oto",
+						"en": "behold"
+					}
 				},
 				{
 					"form": "ancílla",
@@ -541,7 +728,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w042"
+					"id": "w042",
+					"gloss": {
+						"pl": "służebnica",
+						"en": "handmaid"
+					}
 				},
 				{
 					"form": "Dómini",
@@ -554,7 +745,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w043"
+					"id": "w043",
+					"gloss": {
+						"pl": "Pana",
+						"en": "of the Lord"
+					}
 				}
 			]
 		},
@@ -562,6 +757,10 @@
 			"id": "s05",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Niech mi się stanie według słowa Twego.",
+				"en": "Be it done unto me according to thy word."
+			},
 			"words": [
 				{
 					"form": "Fiat",
@@ -574,7 +773,11 @@
 						"mood": "subj",
 						"voice": "act"
 					},
-					"id": "w044"
+					"id": "w044",
+					"gloss": {
+						"pl": "niech się stanie",
+						"en": "be it done"
+					}
 				},
 				{
 					"form": "mihi",
@@ -584,7 +787,11 @@
 						"case": "dat",
 						"number": "sg"
 					},
-					"id": "w045"
+					"id": "w045",
+					"gloss": {
+						"pl": "mi",
+						"en": "unto me"
+					}
 				},
 				{
 					"form": "secúndum",
@@ -594,7 +801,11 @@
 						"governs": "acc"
 					},
 					"head": "w047",
-					"id": "w046"
+					"id": "w046",
+					"gloss": {
+						"pl": "według",
+						"en": "according to"
+					}
 				},
 				{
 					"form": "verbum",
@@ -606,7 +817,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w047"
+					"id": "w047",
+					"gloss": {
+						"pl": "słowa",
+						"en": "word"
+					}
 				},
 				{
 					"form": "tuum",
@@ -619,13 +834,21 @@
 						"gender": "n"
 					},
 					"head": "w047",
-					"id": "w048"
+					"id": "w048",
+					"gloss": {
+						"pl": "Twego",
+						"en": "thy"
+					}
 				}
 			]
 		},
 		{
 			"id": "ave2",
 			"type": "verse",
+			"translation": {
+				"pl": "Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.",
+				"en": "Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+			},
 			"words": [
 				{
 					"id": "w049",
@@ -639,6 +862,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zdrowaś",
+						"en": "hail"
 					}
 				},
 				{
@@ -652,6 +879,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryjo",
+						"en": "Mary"
 					}
 				},
 				{
@@ -664,6 +895,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "łaską",
+						"en": "with grace"
 					}
 				},
 				{
@@ -677,7 +912,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w050"
+					"head": "w050",
+					"gloss": {
+						"pl": "pełna",
+						"en": "full"
+					}
 				},
 				{
 					"id": "w053",
@@ -689,6 +928,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -700,6 +943,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "z Tobą",
+						"en": "with thee"
 					}
 				},
 				{
@@ -712,7 +959,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w056"
+					"head": "w056",
+					"gloss": {
+						"pl": "błogosławiona",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w056",
@@ -722,6 +973,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "thou"
 					}
 				},
 				{
@@ -732,7 +987,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w058"
+					"head": "w058",
+					"gloss": {
+						"pl": "między",
+						"en": "among"
+					}
 				},
 				{
 					"id": "w058",
@@ -745,6 +1004,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "niewiastami",
+						"en": "women"
 					}
 				},
 				{
@@ -753,6 +1016,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -765,7 +1032,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w061"
+					"head": "w061",
+					"gloss": {
+						"pl": "błogosławiony",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w061",
@@ -777,6 +1048,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "owoc",
+						"en": "fruit"
 					}
 				},
 				{
@@ -789,6 +1064,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "żywota",
+						"en": "of the womb"
 					}
 				},
 				{
@@ -801,7 +1080,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w062"
+					"head": "w062",
+					"gloss": {
+						"pl": "Twojego",
+						"en": "thy"
+					}
 				},
 				{
 					"id": "w064",
@@ -813,6 +1096,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezus",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -825,7 +1112,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w066"
+					"head": "w066",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w066",
@@ -838,6 +1129,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryjo",
+						"en": "Mary"
 					}
 				},
 				{
@@ -850,6 +1145,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
 					}
 				},
 				{
@@ -863,6 +1162,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -877,6 +1180,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
 					}
 				},
 				{
@@ -887,7 +1194,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w071"
+					"head": "w071",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w071",
@@ -897,6 +1208,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
 					}
 				},
 				{
@@ -910,6 +1225,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "grzesznikami",
+						"en": "sinners"
 					}
 				},
 				{
@@ -918,6 +1237,10 @@
 					"lemma": "nunc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "teraz",
+						"en": "now"
 					}
 				},
 				{
@@ -926,6 +1249,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -936,7 +1263,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w076"
+					"head": "w076",
+					"gloss": {
+						"pl": "w",
+						"en": "at"
+					}
 				},
 				{
 					"id": "w076",
@@ -948,6 +1279,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "godzinie",
+						"en": "the hour"
 					}
 				},
 				{
@@ -960,6 +1295,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "śmierci",
+						"en": "of death"
 					}
 				},
 				{
@@ -973,7 +1312,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w077"
+					"head": "w077",
+					"gloss": {
+						"pl": "naszej",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w079",
@@ -982,6 +1325,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -990,6 +1337,10 @@
 			"id": "s07",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "A Słowo ciałem się stało.",
+				"en": "And the Word was made flesh."
+			},
 			"words": [
 				{
 					"form": "Et",
@@ -997,7 +1348,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w080"
+					"id": "w080",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "Verbum",
@@ -1009,7 +1364,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w081"
+					"id": "w081",
+					"gloss": {
+						"pl": "Słowo",
+						"en": "the Word"
+					}
 				},
 				{
 					"form": "caro",
@@ -1021,7 +1380,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w082"
+					"id": "w082",
+					"gloss": {
+						"pl": "ciałem",
+						"en": "flesh"
+					}
 				},
 				{
 					"form": "factum",
@@ -1037,7 +1400,11 @@
 						"conj": 3
 					},
 					"head": "w081",
-					"id": "w083"
+					"id": "w083",
+					"gloss": {
+						"pl": "stało",
+						"en": "made"
+					}
 				},
 				{
 					"form": "est",
@@ -1051,7 +1418,11 @@
 						"mood": "ind",
 						"voice": "act"
 					},
-					"id": "w084"
+					"id": "w084",
+					"gloss": {
+						"pl": "się",
+						"en": "was"
+					}
 				}
 			]
 		},
@@ -1059,6 +1430,10 @@
 			"id": "s08",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "I zamieszkało między nami.",
+				"en": "And dwelt among us."
+			},
 			"words": [
 				{
 					"form": "Et",
@@ -1066,7 +1441,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w085"
+					"id": "w085",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "habitávit",
@@ -1080,7 +1459,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w086"
+					"id": "w086",
+					"gloss": {
+						"pl": "zamieszkało",
+						"en": "dwelt"
+					}
 				},
 				{
 					"form": "in",
@@ -1090,7 +1473,11 @@
 						"governs": "abl"
 					},
 					"head": "w088",
-					"id": "w087"
+					"id": "w087",
+					"gloss": {
+						"pl": "między",
+						"en": "among"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1101,13 +1488,21 @@
 						"case": "abl",
 						"number": "pl"
 					},
-					"id": "w088"
+					"id": "w088",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
 		{
 			"id": "ave3",
 			"type": "verse",
+			"translation": {
+				"pl": "Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.",
+				"en": "Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+			},
 			"words": [
 				{
 					"id": "w089",
@@ -1121,6 +1516,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zdrowaś",
+						"en": "hail"
 					}
 				},
 				{
@@ -1134,6 +1533,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryjo",
+						"en": "Mary"
 					}
 				},
 				{
@@ -1146,6 +1549,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "łaską",
+						"en": "with grace"
 					}
 				},
 				{
@@ -1159,7 +1566,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w090"
+					"head": "w090",
+					"gloss": {
+						"pl": "pełna",
+						"en": "full"
+					}
 				},
 				{
 					"id": "w093",
@@ -1171,6 +1582,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -1182,6 +1597,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "z Tobą",
+						"en": "with thee"
 					}
 				},
 				{
@@ -1194,7 +1613,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w096"
+					"head": "w096",
+					"gloss": {
+						"pl": "błogosławiona",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w096",
@@ -1204,6 +1627,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "thou"
 					}
 				},
 				{
@@ -1214,7 +1641,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w098"
+					"head": "w098",
+					"gloss": {
+						"pl": "między",
+						"en": "among"
+					}
 				},
 				{
 					"id": "w098",
@@ -1227,6 +1658,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "niewiastami",
+						"en": "women"
 					}
 				},
 				{
@@ -1235,6 +1670,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1247,7 +1686,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w101"
+					"head": "w101",
+					"gloss": {
+						"pl": "błogosławiony",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w101",
@@ -1259,6 +1702,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "owoc",
+						"en": "fruit"
 					}
 				},
 				{
@@ -1271,6 +1718,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "żywota",
+						"en": "of the womb"
 					}
 				},
 				{
@@ -1283,7 +1734,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w102"
+					"head": "w102",
+					"gloss": {
+						"pl": "Twojego",
+						"en": "thy"
+					}
 				},
 				{
 					"id": "w104",
@@ -1295,6 +1750,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezus",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -1307,7 +1766,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w106"
+					"head": "w106",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w106",
@@ -1320,6 +1783,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryjo",
+						"en": "Mary"
 					}
 				},
 				{
@@ -1332,6 +1799,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
 					}
 				},
 				{
@@ -1345,6 +1816,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -1359,6 +1834,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
 					}
 				},
 				{
@@ -1369,7 +1848,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w111"
+					"head": "w111",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w111",
@@ -1379,6 +1862,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
 					}
 				},
 				{
@@ -1392,6 +1879,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "grzesznikami",
+						"en": "sinners"
 					}
 				},
 				{
@@ -1400,6 +1891,10 @@
 					"lemma": "nunc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "teraz",
+						"en": "now"
 					}
 				},
 				{
@@ -1408,6 +1903,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1418,7 +1917,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w116"
+					"head": "w116",
+					"gloss": {
+						"pl": "w",
+						"en": "at"
+					}
 				},
 				{
 					"id": "w116",
@@ -1430,6 +1933,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "godzinie",
+						"en": "the hour"
 					}
 				},
 				{
@@ -1442,6 +1949,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "śmierci",
+						"en": "of death"
 					}
 				},
 				{
@@ -1455,7 +1966,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w117"
+					"head": "w117",
+					"gloss": {
+						"pl": "naszej",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w119",
@@ -1464,6 +1979,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -1472,6 +1991,10 @@
 			"id": "s10",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Módl się za nami, święta Boża Rodzicielko.",
+				"en": "Pray for us, O holy Mother of God."
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1485,7 +2008,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w120"
+					"id": "w120",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1495,7 +2022,11 @@
 						"governs": "abl"
 					},
 					"head": "w122",
-					"id": "w121"
+					"id": "w121",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1506,7 +2037,11 @@
 						"case": "abl",
 						"number": "pl"
 					},
-					"id": "w122"
+					"id": "w122",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				},
 				{
 					"form": "sancta",
@@ -1518,7 +2053,11 @@
 						"gender": "f"
 					},
 					"head": "w125",
-					"id": "w123"
+					"id": "w123",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"form": "Dei",
@@ -1530,7 +2069,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w124"
+					"id": "w124",
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					}
 				},
 				{
 					"form": "Génetrix",
@@ -1543,7 +2086,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w125"
+					"id": "w125",
+					"gloss": {
+						"pl": "Rodzicielko",
+						"en": "Mother"
+					}
 				}
 			]
 		},
@@ -1551,6 +2098,10 @@
 			"id": "s11",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Abyśmy się stali godnymi obietnic Chrystusowych.",
+				"en": "That we may be made worthy of the promises of Christ."
+			},
 			"words": [
 				{
 					"form": "Ut",
@@ -1558,7 +2109,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w126"
+					"id": "w126",
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
+					}
 				},
 				{
 					"form": "digni",
@@ -1570,7 +2125,11 @@
 						"gender": "m"
 					},
 					"id": "w127",
-					"head": "w128"
+					"head": "w128",
+					"gloss": {
+						"pl": "godnymi",
+						"en": "worthy"
+					}
 				},
 				{
 					"form": "efficiámur",
@@ -1584,7 +2143,11 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"id": "w128"
+					"id": "w128",
+					"gloss": {
+						"pl": "stali się",
+						"en": "we may be made"
+					}
 				},
 				{
 					"form": "promissiónibus",
@@ -1596,7 +2159,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w129"
+					"id": "w129",
+					"gloss": {
+						"pl": "obietnic",
+						"en": "of the promises"
+					}
 				},
 				{
 					"form": "Christi",
@@ -1609,7 +2176,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w130"
+					"id": "w130",
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "of Christ"
+					}
 				}
 			]
 		},
@@ -1617,6 +2188,10 @@
 			"id": "s12",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Módlmy się.",
+				"en": "Let us pray."
+			},
 			"words": [
 				{
 					"form": "Orémus",
@@ -1631,7 +2206,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w131"
+					"id": "w131",
+					"gloss": {
+						"pl": "módlmy się",
+						"en": "let us pray"
+					}
 				}
 			]
 		},
@@ -1639,6 +2218,10 @@
 			"id": "s13",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Wszechmogący Boże, przez zwiastowanie anielskie poznaliśmy wcielenie Chrystusa, Twojego Syna, prosimy Cię, wlej w nasze serca swoją łaskę, abyśmy przez Jego mękę i krzyż zostali doprowadzeni do chwały zmartwychwstania. Przez Chrystusa, Pana naszego. Amen.",
+				"en": "Pour forth, we beseech thee, O Lord, thy grace into our hearts; that we, to whom the Incarnation of Christ, thy Son, was made known by the message of an angel, may by his Passion and Cross be brought to the glory of his Resurrection. Through the same Christ, our Lord. Amen."
+			},
 			"words": [
 				{
 					"form": "Grátiam",
@@ -1650,7 +2233,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w132"
+					"id": "w132",
+					"gloss": {
+						"pl": "łaskę",
+						"en": "grace"
+					}
 				},
 				{
 					"form": "tuam",
@@ -1663,7 +2250,11 @@
 						"gender": "f"
 					},
 					"head": "w132",
-					"id": "w133"
+					"id": "w133",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "thy"
+					}
 				},
 				{
 					"form": "quǽsumus",
@@ -1679,12 +2270,9 @@
 						"conj": 3
 					},
 					"id": "w134",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "prosimy",
+						"en": "we beseech"
 					}
 				},
 				{
@@ -1698,7 +2286,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w135"
+					"id": "w135",
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
+					}
 				},
 				{
 					"form": "méntibus",
@@ -1710,7 +2302,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w136"
+					"id": "w136",
+					"gloss": {
+						"pl": "umysłom",
+						"en": "minds"
+					}
 				},
 				{
 					"form": "nostris",
@@ -1722,7 +2318,11 @@
 						"gender": "f"
 					},
 					"head": "w136",
-					"id": "w137"
+					"id": "w137",
+					"gloss": {
+						"pl": "naszym",
+						"en": "our"
+					}
 				},
 				{
 					"form": "infúnde",
@@ -1737,7 +2337,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"id": "w138"
+					"id": "w138",
+					"gloss": {
+						"pl": "wlej",
+						"en": "pour forth"
+					}
 				},
 				{
 					"form": "ut",
@@ -1745,7 +2349,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w139"
+					"id": "w139",
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
+					}
 				},
 				{
 					"form": "qui",
@@ -1757,7 +2365,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"id": "w140"
+					"id": "w140",
+					"gloss": {
+						"pl": "którzy",
+						"en": "we who"
+					}
 				},
 				{
 					"form": "Ángelo",
@@ -1769,7 +2381,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w141"
+					"id": "w141",
+					"gloss": {
+						"pl": "aniołem",
+						"en": "an angel"
+					}
 				},
 				{
 					"form": "nuntiánte",
@@ -1786,7 +2402,11 @@
 						"conj": 1
 					},
 					"head": "w141",
-					"id": "w142"
+					"id": "w142",
+					"gloss": {
+						"pl": "zwiastującym",
+						"en": "declaring"
+					}
 				},
 				{
 					"form": "Christi",
@@ -1798,7 +2418,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w143"
+					"id": "w143",
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "of Christ"
+					}
 				},
 				{
 					"form": "Fílii",
@@ -1811,13 +2435,9 @@
 						"decl": 2
 					},
 					"id": "w144",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Syna",
+						"en": "Son"
 					}
 				},
 				{
@@ -1830,7 +2450,11 @@
 						"gender": "m"
 					},
 					"head": "w144",
-					"id": "w145"
+					"id": "w145",
+					"gloss": {
+						"pl": "Twego",
+						"en": "thy"
+					}
 				},
 				{
 					"form": "incarnatiónem",
@@ -1842,7 +2466,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w146"
+					"id": "w146",
+					"gloss": {
+						"pl": "wcielenie",
+						"en": "Incarnation"
+					}
 				},
 				{
 					"form": "cognóvimus",
@@ -1857,7 +2485,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"id": "w147"
+					"id": "w147",
+					"gloss": {
+						"pl": "poznaliśmy",
+						"en": "have known"
+					}
 				},
 				{
 					"form": "per",
@@ -1867,7 +2499,11 @@
 						"governs": "acc"
 					},
 					"head": "w149",
-					"id": "w148"
+					"id": "w148",
+					"gloss": {
+						"pl": "przez",
+						"en": "by"
+					}
 				},
 				{
 					"form": "passiónem",
@@ -1879,7 +2515,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w149"
+					"id": "w149",
+					"gloss": {
+						"pl": "mękę",
+						"en": "Passion"
+					}
 				},
 				{
 					"form": "eius",
@@ -1890,7 +2530,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w150"
+					"id": "w150",
+					"gloss": {
+						"pl": "Jego",
+						"en": "his"
+					}
 				},
 				{
 					"form": "et",
@@ -1898,7 +2542,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w151"
+					"id": "w151",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "crucem",
@@ -1911,7 +2559,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w152"
+					"id": "w152",
+					"gloss": {
+						"pl": "krzyż",
+						"en": "Cross"
+					}
 				},
 				{
 					"form": "ad",
@@ -1921,7 +2573,11 @@
 						"governs": "acc"
 					},
 					"head": "w155",
-					"id": "w153"
+					"id": "w153",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"form": "resurrectiónis",
@@ -1933,7 +2589,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w154"
+					"id": "w154",
+					"gloss": {
+						"pl": "zmartwychwstania",
+						"en": "of the Resurrection"
+					}
 				},
 				{
 					"form": "glóriam",
@@ -1945,7 +2605,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w155"
+					"id": "w155",
+					"gloss": {
+						"pl": "chwały",
+						"en": "glory"
+					}
 				},
 				{
 					"form": "perducámur",
@@ -1960,7 +2624,11 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"id": "w156"
+					"id": "w156",
+					"gloss": {
+						"pl": "zostali doprowadzeni",
+						"en": "may be brought"
+					}
 				},
 				{
 					"form": "Per",
@@ -1970,7 +2638,11 @@
 						"governs": "acc"
 					},
 					"head": "w158",
-					"id": "w157"
+					"id": "w157",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"form": "eúndem",
@@ -1981,7 +2653,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w158"
+					"id": "w158",
+					"gloss": {
+						"pl": "tego samego",
+						"en": "the same"
+					}
 				},
 				{
 					"form": "Christum",
@@ -1993,7 +2669,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w159"
+					"id": "w159",
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
+					}
 				},
 				{
 					"form": "Dóminum",
@@ -2005,7 +2685,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w160"
+					"id": "w160",
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
+					}
 				},
 				{
 					"form": "nostrum",
@@ -2018,7 +2702,11 @@
 						"gender": "m"
 					},
 					"head": "w160",
-					"id": "w161"
+					"id": "w161",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"form": "Amen",
@@ -2027,9 +2715,59 @@
 					"morph": {
 						"pos": "intj"
 					},
-					"id": "w162"
+					"id": "w162",
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The Angelus outside Paschaltide, with all three Hail Marys expanded. Its V. lines are assigned to a leader, not to a priest: the prayer is commonly said in groups and requires no clerical minister. No speaker is assigned to the Hail Marys: devotional practice may say each one together or divide it at Sancta Maria, and the edition does not prescribe either custom. The following Gloria Patri found in some prayer-book presentations is a separate prayer and is not appended here.",
+		"source": {
+			"method": "Transcribed from the Latin appendix to the Compendium of the Catechism; repeated Hail Mary references expanded from the complete formula printed in the same appendix, and collated against TPL.",
+			"witnesses": "witnesses/orationes.angelus-domini/",
+			"apparatus": "witnesses/orationes.angelus-domini/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		},
+		"words": {
+			"w134": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "accepted"
+				}
+			},
+			"w144": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

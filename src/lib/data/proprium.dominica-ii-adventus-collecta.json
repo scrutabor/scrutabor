@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 21
 	},
-	"status": "working-edition",
-	"notes": "The collect of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-ii-adventus-collecta/",
-		"apparatus": "witnesses/proprium.dominica-ii-adventus-collecta/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Kolekta II Niedzieli Adwentu. Prosi, aby Bóg poruszył serca do przygotowania dróg swojemu Synowi, i wiąże to przygotowanie z oczyszczeniem umysłu. Obraz dróg pochodzi z wołania Jana Chrzciciela, którego Ewangelia tej niedzieli przywołuje.",
+		"en": "The collect of the Second Sunday of Advent. It asks God to stir the heart toward preparing the ways of His Son, and ties that preparing to a mind made clean. The image of the ways comes from the cry of John the Baptist, whom this Sunday's Gospel recalls."
 	},
 	"segments": [
 		{
@@ -38,6 +19,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Wzbudź, Panie, serca nasze do przygotowania dróg Twego Jednorodzonego, abyśmy przez Jego przyjście zasłużyli służyć Tobie umysłami oczyszczonymi: Który z Tobą.",
+				"en": "Stir up our hearts, O Lord, to prepare the ways of Thine Only-begotten: that by His coming we may deserve to serve Thee with purified minds: Who livest with Thee."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -52,6 +37,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wzbudź",
+						"en": "stir up"
 					}
 				},
 				{
@@ -65,6 +54,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -77,6 +70,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "serca",
+						"en": "hearts"
 					}
 				},
 				{
@@ -89,7 +86,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "nasze",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w005",
@@ -99,7 +100,15 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "do",
+						"en": "for"
+					},
+					"function": {
+						"pl": "ad z gerundiwem wyraża cel: do przygotowania dróg.",
+						"en": "ad with the gerundive states purpose: for the preparing of the ways."
+					}
 				},
 				{
 					"id": "w006",
@@ -115,7 +124,11 @@
 						"mood": "part",
 						"conj": 1
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "przygotowania",
+						"en": "preparing"
+					}
 				},
 				{
 					"id": "w007",
@@ -127,7 +140,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "Jednorodzonego",
+						"en": "of Thy Only-begotten"
+					}
 				},
 				{
 					"id": "w008",
@@ -139,7 +156,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "Twego",
+						"en": "own"
+					}
 				},
 				{
 					"id": "w009",
@@ -152,6 +173,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dróg",
+						"en": "the ways"
 					}
 				},
 				{
@@ -160,6 +185,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyśmy",
+						"en": "that"
 					}
 				},
 				{
@@ -170,7 +199,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w012",
@@ -181,6 +214,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jego",
+						"en": "His"
 					}
 				},
 				{
@@ -194,6 +231,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "przyjście",
+						"en": "coming"
 					}
 				},
 				{
@@ -210,7 +251,15 @@
 						"mood": "part",
 						"conj": 1
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "oczyszczonymi",
+						"en": "purified"
+					},
+					"function": {
+						"pl": "Ablativus narzędzia: umysłami, które zostały oczyszczone — narzędzie służby, nie zdanie oboczne.",
+						"en": "An ablative of means: with minds that have been purified — the instrument of the serving, not a clause standing apart."
+					}
 				},
 				{
 					"id": "w015",
@@ -220,6 +269,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "Thee"
 					}
 				},
 				{
@@ -232,6 +285,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "umysłami",
+						"en": "with minds"
 					}
 				},
 				{
@@ -244,6 +301,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "służyć",
+						"en": "to serve"
 					}
 				},
 				{
@@ -259,6 +320,14 @@
 						"mood": "subj",
 						"voice": "dep",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zasłużyli",
+						"en": "we may deserve"
+					},
+					"function": {
+						"pl": "Tryb łączący po „ut”: zdanie celu — abyśmy zasłużyli.",
+						"en": "Subjunctive after “ut”: a clause of purpose — that we may deserve."
 					}
 				},
 				{
@@ -270,6 +339,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Który",
+						"en": "Who"
 					}
 				},
 				{
@@ -281,9 +354,38 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "z Tobą",
+						"en": "with Thee"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The collect of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-ii-adventus-collecta/",
+			"apparatus": "witnesses/proprium.dominica-ii-adventus-collecta/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

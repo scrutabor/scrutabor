@@ -9,34 +9,65 @@
 	"ids": {
 		"next": 83
 	},
-	"status": "working-edition",
-	"notes": "The stanza of the Hebrew letter HE — psalm 118 is an alphabetic acrostic of twenty-two stanzas of eight verses, one per letter, and every verse of this one begins with H in the Hebrew. Verse 34 is the verse this edition is named from: DA MIHI INTELLECTUM, ET SCRUTABOR LEGEM TUAM. Three constructions are worth naming. LEGEM (w001) is not the object of PONE: the object is VIAM (w005), and legem stands with pone — legem ponere renders the single Greek verb meaning to lay down as law, so the way is what is being laid down, and legem says what it is laid down as. EXQUIRAM (w009) and CUSTODIAM (w020) have forms shared by the future indicative and present subjunctive. This edition reads both as futures. For EXQUIRAM that reading agrees with the speaker's resolved purpose in the Hebrew text and the unambiguous SERVABO of the Nova Vulgata; EAM (w010) refers to VIAM, as the corresponding Greek pronoun refers to HODON. For CUSTODIAM the coordinate SCRUTABOR, unambiguously future, decides it — the same rule that reads accipiam as future beside invocabo in the priest's Communion verses (Ps 115). SUSPICATUS SUM (w068-w069) is a deponent perfect: passive in form, active in meaning, so it says I have feared and not I have been suspected. In the Roman breviary this stanza's verses open the psalmody of Sunday Terce, whose antiphon is drawn from verse 35; the psalm itself runs across all four of Sunday's little hours; it carries no speaker, because a psalm said in choir has none this edition would record.",
-	"source": {
-		"method": "Verified by collation against the two independent witnesses below: zero substantive divergence over all eight verses. The only differences are the consonantal i, which witness do prints as j (iustificatiónum, iudícia, iucúnda), and punctuation.",
-		"witnesses": "witnesses/psalmi.118-he/",
-		"apparatus": "witnesses/psalmi.118-he/apparatus.json"
+	"about": {
+		"pl": "Psalm 118 według numeracji Wulgaty (Psalm 119 w numeracji hebrajskiej) jest akrostychem: dwadzieścia dwie strofy po osiem wersetów, po jednej na każdą literę alfabetu hebrajskiego, a wszystkie osiem wersetów jednej strofy zaczyna się w hebrajskim tą samą literą. To najdłuższy psalm psałterza i niemal każdy jego werset mówi o jednym: o prawie Bożym, które psalm nazywa wieloma imionami — zakonem, świadectwem, ustawą, przykazaniem, sądem, słowem. Ta strofa nosi nazwę litery HE. W brewiarzu rzymskim jej wersety otwierają psalmodię niedzielnej tercji, a antyfona tej godziny w psałterzu bierze z niej werset 35. Cały psalm rozłożony jest na wszystkie cztery godziny mniejsze niedzieli. Werset trzydziesty czwarty — „Da mihi intelléctum, et scrutábor legem tuam” — dał nazwę temu wydaniu. Psalmista prosi w nim Boga o zrozumienie i zapowiada, że będzie zgłębiał Jego prawo oraz zachowywał je całym sercem.",
+		"en": "Psalm 118 in the Vulgate numbering (Psalm 119 in Hebrew) is an acrostic: twenty-two stanzas of eight verses, one stanza for each letter of the Hebrew alphabet, with all eight verses of a stanza beginning with the same letter in the Hebrew. It is the longest psalm in the psalter, and nearly every verse of it speaks about one thing — God's law, which the psalm calls by many names: law, testimony, statute, commandment, judgment, word. This stanza carries the letter HE. In the Roman breviary its verses open the psalmody of Sunday Terce, and the antiphon of that hour in the psalter is drawn from verse 35. The psalm itself runs across all four of Sunday's little hours. Verse thirty-four — “Da mihi intelléctum, et scrutábor legem tuam” — gave this edition its name. In it, the psalmist asks God for understanding and says that he will search His law and keep it with his whole heart."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "United States Conference of Catholic Bishops, Psalm 119",
+				"locator": "introduction",
+				"url": "https://bible.usccb.org/bible/psalms/119"
+			},
+			{
+				"title": "Biblia Sacra Vulgatae Editionis (1914)",
+				"locator": "Psalmus 118, 34",
+				"url": "https://www.sacredbible.org/vulgate1914/VT-21_Psalmi.htm"
+			},
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 119 (118), 33–40, for the stanza",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			},
+			{
+				"title": "Breviarium Romanum (1961)",
+				"locator": "Psalterium, Dominica ad Tertiam",
+				"url": "https://openlibrary.org/works/OL27763277W/Breviarium_Romanum_ex_decreto_ss._Concilii_Tridentini_restitutum"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "United States Conference of Catholic Bishops, Psalm 119",
+				"locator": "introduction",
+				"url": "https://bible.usccb.org/bible/psalms/119"
+			},
+			{
+				"title": "Biblia Sacra Vulgatae Editionis (1914)",
+				"locator": "Psalmus 118, 34",
+				"url": "https://www.sacredbible.org/vulgate1914/VT-21_Psalmi.htm"
+			},
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 119 (118), 33–40, for the stanza",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			},
+			{
+				"title": "Breviarium Romanum (1961)",
+				"locator": "Psalterium, Dominica ad Tertiam",
+				"url": "https://openlibrary.org/works/OL27763277W/Breviarium_Romanum_ex_decreto_ss._Concilii_Tridentini_restitutum"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "verse",
 			"verse": 33,
+			"translation": {
+				"pl": "Ustanów mi za prawo, Panie, drogę Twoich ustaw, a będę jej szukał zawsze.",
+				"en": "Set before me for a law, O Lord, the way of Thy statutes, and I will seek it always."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -48,6 +79,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "za prawo",
+						"en": "for a law"
+					},
+					"function": {
+						"pl": "Orzecznik w bierniku przy „viam” (w005): droga ma zostać ustanowiona jako prawo.",
+						"en": "A predicative accusative with “viam” (w005): the way is to be established as a law."
 					}
 				},
 				{
@@ -62,6 +101,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "postaw",
+						"en": "set"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący. Rządzi dwoma biernikami: „viam” (w005) i orzecznikiem „Legem” (w001).",
+						"en": "An imperative governing two accusatives: “viam” (w005) and the predicate “Legem” (w001)."
 					}
 				},
 				{
@@ -73,6 +120,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mi",
+						"en": "me"
 					}
 				},
 				{
@@ -86,6 +137,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
+					},
+					"function": {
+						"pl": "Wołacz liczby pojedynczej.",
+						"en": "A singular vocative."
 					}
 				},
 				{
@@ -98,6 +157,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "drogę",
+						"en": "the way"
 					}
 				},
 				{
@@ -110,6 +173,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ustaw",
+						"en": "of the statutes"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby mnogiej zależny od „viam” (w005). Tutaj „iustificatiónes” oznacza ustawy.",
+						"en": "A genitive plural depending on “viam” (w005). Here “iustificatiónes” means statutes."
 					}
 				},
 				{
@@ -123,7 +194,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w008",
@@ -131,6 +206,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -146,14 +225,51 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"analysis": {
-						"confidence": "medium",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
+					"gloss": {
+						"pl": "będę szukał",
+						"en": "I will seek"
+					},
+					"function": {
+						"pl": "Forma jest wspólna futurum indicativi i coniunctivus praesentis. Przekład przyjmuje futurum: „będę szukał”. Tekst hebrajski wyraża postanowienie zachowania drogi, a Nova Vulgata oddaje je jednoznacznym futurum „servabo”.",
+						"en": "The form is shared by the future indicative and present subjunctive. This translation reads the future: “I will seek.” The Hebrew expresses a resolve to keep the way, and the Nova Vulgata renders it with the unambiguous future “servabo.”"
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Allen and Greenough, New Latin Grammar",
+								"locator": "§§ 168 d–e, 187",
+								"url": "https://dcc.dickinson.edu/grammar/latin/present-system"
+							},
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 119, 33"
+							},
+							{
+								"title": "Nova Vulgata, Liber Psalmorum",
+								"locator": "Psalmus 119 (118), 33",
+								"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+							}
 						],
-						"review": "disputed"
+						"en": [
+							{
+								"title": "Allen and Greenough, New Latin Grammar",
+								"locator": "§§ 168 d–e, 187",
+								"url": "https://dcc.dickinson.edu/grammar/latin/present-system"
+							},
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 119, 33"
+							},
+							{
+								"title": "Nova Vulgata, Liber Psalmorum",
+								"locator": "Psalmus 119 (118), 33",
+								"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+							}
+						]
+					},
+					"note": {
+						"pl": "Końcówka -am jest tu zarazem czasem przyszłym i trybem łączącym. „Będę jej szukał” albo „abym jej szukał”, po rozkaźniku pone. Ta edycja przyjmuje czas przyszły i zaznacza wątpliwość.",
+						"en": "The ending -am is future indicative and present subjunctive at once. I shall seek it, or that I may seek it, after the imperative pone. This edition takes the future and marks the doubt."
 					}
 				},
 				{
@@ -165,6 +281,30 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "jej",
+						"en": "it"
+					},
+					"function": {
+						"pl": "Zaimek odnosi się do „viam” (w005). Tak samo grecki zaimek αὐτήν odnosi się w Septuagincie do ὁδόν — „drogi”.",
+						"en": "The pronoun refers to “viam” (w005). Likewise, the Greek pronoun αὐτήν in the Septuagint refers to ὁδόν, “the way.”"
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 118, 33",
+								"url": "https://www.die-bibel.de/bibel/LXX/PSA.118"
+							}
+						],
+						"en": [
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 118, 33",
+								"url": "https://www.die-bibel.de/bibel/LXX/PSA.118"
+							}
+						]
 					}
 				},
 				{
@@ -174,6 +314,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "always"
 					}
 				}
 			]
@@ -182,6 +326,24 @@
 			"id": "s02",
 			"type": "verse",
 			"verse": 34,
+			"translation": {
+				"pl": "Daj mi zrozumienie, a będę badał Twoje prawo i zachowam je całym sercem moim.",
+				"en": "Give me understanding, and I will search Thy law, and I will keep it with my whole heart."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Ps 118, 34"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Psalm 118:34"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w012",
@@ -195,6 +357,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "daj",
+						"en": "give"
 					}
 				},
 				{
@@ -205,6 +371,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mi",
+						"en": "me"
 					}
 				},
 				{
@@ -218,6 +388,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "zrozumienie",
+						"en": "understanding"
+					},
+					"function": {
+						"pl": "Dopełnienie prośby „Da” (w012): psalmista prosi Boga o dar zrozumienia.",
+						"en": "The object of the petition “Da” (w012): the psalmist asks God for the gift of understanding."
 					}
 				},
 				{
@@ -226,6 +404,14 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
+					},
+					"function": {
+						"pl": "W tym miejscu spójnik łączy prośbę z zapowiedzią, dlatego w przekładzie ma postać „a”, nie „i”.",
+						"en": "Here the conjunction links the petition to the psalmist's statement of what he will do."
 					}
 				},
 				{
@@ -240,6 +426,14 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "będę badał",
+						"en": "I will search"
+					},
+					"function": {
+						"pl": "Po prośbie „Da” (w012) psalmista zapowiada, że będzie zgłębiał Boże prawo.",
+						"en": "After the petition “Da” (w012), the psalmist says that he will search God's law."
 					}
 				},
 				{
@@ -252,6 +446,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "prawo",
+						"en": "law"
 					}
 				},
 				{
@@ -265,7 +463,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w019",
@@ -273,6 +475,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -287,6 +493,30 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "zachowam",
+						"en": "I will keep"
+					},
+					"function": {
+						"pl": "Forma czasownika jest dwuznaczna jak „exquíram” (w009) — czas przyszły albo tryb łączący — ale tu rozstrzyga współrzędny „scrutábor” (w016), jednoznacznie przyszły: wydanie czyta czas przyszły.",
+						"en": "The verb form is ambiguous like “exquíram” (w009) — future indicative or present subjunctive — but here the coordinate “scrutábor” (w016), unambiguously future, decides: this edition reads the future."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Allen and Greenough, New Latin Grammar",
+								"locator": "§§ 168 d–e, 187",
+								"url": "https://dcc.dickinson.edu/grammar/latin/present-system"
+							}
+						],
+						"en": [
+							{
+								"title": "Allen and Greenough, New Latin Grammar",
+								"locator": "§§ 168 d–e, 187",
+								"url": "https://dcc.dickinson.edu/grammar/latin/present-system"
+							}
+						]
 					}
 				},
 				{
@@ -298,6 +528,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "je",
+						"en": "it"
+					},
+					"function": {
+						"pl": "Biernik rodzaju żeńskiego, bo odnosi się do „legem” (w017). Polskie „prawo” jest nijakie i zaimek musi zmienić rodzaj.",
+						"en": "Feminine accusative, referring to “legem” (w017)."
 					}
 				},
 				{
@@ -308,7 +546,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w023",
@@ -320,7 +562,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "całym",
+						"en": "whole"
+					}
 				},
 				{
 					"id": "w024",
@@ -332,6 +578,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "sercu",
+						"en": "heart"
+					},
+					"function": {
+						"pl": "Ablativus przy „in” (w022). Wyrażenie „in toto corde” podkreśla, że prawo Boże ma być zachowywane całym i niepodzielonym sercem.",
+						"en": "Ablative with “in” (w022). The phrase “in toto corde” stresses that God's law is to be kept with a whole and undivided heart."
 					}
 				},
 				{
@@ -345,7 +599,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "moim",
+						"en": "my"
+					}
 				}
 			]
 		},
@@ -353,6 +611,10 @@
 			"id": "s03",
 			"type": "verse",
 			"verse": 35,
+			"translation": {
+				"pl": "Prowadź mnie na ścieżkę Twoich przykazań, bo jej właśnie chciałem.",
+				"en": "Lead me into the path of Thy commandments, for that is the very thing I have wanted."
+			},
 			"words": [
 				{
 					"id": "w026",
@@ -366,6 +628,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "prowadź",
+						"en": "lead"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący — „Deduc” ma skróconą formę bez końcowego -e, jak „dic” i „duc”.",
+						"en": "Imperative — “Deduc” takes the shortened form without final -e, like “dic” and “duc”."
 					}
 				},
 				{
@@ -376,6 +646,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				},
 				{
@@ -386,7 +660,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "na",
+						"en": "into"
+					}
 				},
 				{
 					"id": "w029",
@@ -398,6 +676,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ścieżkę",
+						"en": "the path"
 					}
 				},
 				{
@@ -410,6 +692,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "przykazań",
+						"en": "of the commandments"
 					}
 				},
 				{
@@ -423,7 +709,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w032",
@@ -431,6 +721,10 @@
 					"lemma": "quia",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bo",
+						"en": "for"
 					}
 				},
 				{
@@ -442,6 +736,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "jej właśnie",
+						"en": "that very one"
+					},
+					"function": {
+						"pl": "Zaimek wzmacniający odnoszący się do „sémitam” (w029): „właśnie jej”.",
+						"en": "An intensive pronoun referring to “sémitam” (w029): that very one."
 					}
 				},
 				{
@@ -456,6 +758,14 @@
 						"tense": "perf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "chciałem",
+						"en": "I have wanted"
+					},
+					"function": {
+						"pl": "Perfectum indicativi w pierwszej osobie liczby pojedynczej.",
+						"en": "A first-person singular perfect indicative."
 					}
 				}
 			]
@@ -464,6 +774,10 @@
 			"id": "s04",
 			"type": "verse",
 			"verse": 36,
+			"translation": {
+				"pl": "Nachyl moje serce ku Twoim świadectwom, a nie ku chciwości.",
+				"en": "Incline my heart to Thy testimonies, and not to greed."
+			},
 			"words": [
 				{
 					"id": "w035",
@@ -477,6 +791,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "nachyl",
+						"en": "incline"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący. Dopełnieniem jest „cor” (w036).",
+						"en": "An imperative whose object is “cor” (w036)."
 					}
 				},
 				{
@@ -489,6 +811,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
 					}
 				},
 				{
@@ -501,7 +827,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "moje",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w038",
@@ -511,7 +841,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w039"
+					"head": "w039",
+					"gloss": {
+						"pl": "ku",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w039",
@@ -523,6 +857,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "świadectwom",
+						"en": "testimonies"
 					}
 				},
 				{
@@ -536,7 +874,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w039"
+					"head": "w039",
+					"gloss": {
+						"pl": "Twoim",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w041",
@@ -544,6 +886,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -552,6 +898,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -562,7 +912,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w044"
+					"head": "w044",
+					"gloss": {
+						"pl": "ku",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w044",
@@ -575,6 +929,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chciwości",
+						"en": "greed"
+					},
+					"function": {
+						"pl": "Biernik po „in” (w043): kierunek, w którym serce mogłoby się nachylić zamiast tamtego.",
+						"en": "Accusative after “in” (w043): the direction the heart might lean instead."
 					}
 				}
 			]
@@ -583,6 +945,10 @@
 			"id": "s05",
 			"type": "verse",
 			"verse": 37,
+			"translation": {
+				"pl": "Odwróć moje oczy, aby nie patrzyły na marność; ożyw mnie na Twojej drodze.",
+				"en": "Turn away my eyes, that they may not look on emptiness; give me life in Thy way."
+			},
 			"words": [
 				{
 					"id": "w045",
@@ -596,6 +962,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "odwróć",
+						"en": "turn away"
 					}
 				},
 				{
@@ -608,6 +978,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "oczy",
+						"en": "eyes"
 					}
 				},
 				{
@@ -620,7 +994,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w046"
+					"head": "w046",
+					"gloss": {
+						"pl": "moje",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w048",
@@ -628,6 +1006,14 @@
 					"lemma": "ne",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby nie",
+						"en": "that not"
+					},
+					"function": {
+						"pl": "Otwiera zdanie celowe zaprzeczone, stąd tryb łączący przy „vídeant” (w049).",
+						"en": "Opens a negative purpose clause, hence the subjunctive at “vídeant” (w049)."
 					}
 				},
 				{
@@ -642,6 +1028,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "patrzyły na",
+						"en": "they may look on"
+					},
+					"function": {
+						"pl": "Tryb łączący po „ne” (w048): nie stwierdzenie, lecz cel, dla którego prosi się o odwrócenie oczu.",
+						"en": "Subjunctive after “ne” (w048): not a statement but the purpose for which the turning is asked."
 					}
 				},
 				{
@@ -655,6 +1049,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "marność",
+						"en": "emptiness"
+					},
+					"function": {
+						"pl": "„Vánitas” oznacza tutaj marność lub pustkę, nie zarozumiałość.",
+						"en": "Here “vánitas” means emptiness or futility, not conceit."
 					}
 				},
 				{
@@ -665,7 +1067,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w052"
+					"head": "w052",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w052",
@@ -677,6 +1083,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "drodze",
+						"en": "way"
 					}
 				},
 				{
@@ -689,7 +1099,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w052"
+					"head": "w052",
+					"gloss": {
+						"pl": "Twojej",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w054",
@@ -703,6 +1117,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "ożyw",
+						"en": "give life to"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący od „vivífico”: „uczyń żywym”.",
+						"en": "An imperative of “vivífico”: make alive."
 					}
 				},
 				{
@@ -714,6 +1136,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				}
 			]
@@ -722,6 +1148,10 @@
 			"id": "s06",
 			"type": "verse",
 			"verse": 38,
+			"translation": {
+				"pl": "Utwierdź słudze Twemu Twoje słowo, w bojaźni Twojej.",
+				"en": "Establish Thy word for Thy servant, in Thy fear."
+			},
 			"words": [
 				{
 					"id": "w056",
@@ -735,6 +1165,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "utwierdź",
+						"en": "establish"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący. Dopełnieniem jest „elóquium” (w059).",
+						"en": "An imperative whose object is “elóquium” (w059)."
 					}
 				},
 				{
@@ -747,6 +1185,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "słudze",
+						"en": "for the servant"
 					}
 				},
 				{
@@ -759,7 +1201,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w057"
+					"head": "w057",
+					"gloss": {
+						"pl": "Twemu",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w059",
@@ -771,6 +1217,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "słowo",
+						"en": "word"
 					}
 				},
 				{
@@ -784,7 +1234,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w059"
+					"head": "w059",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w061",
@@ -794,7 +1248,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w062"
+					"head": "w062",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w062",
@@ -806,6 +1264,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "bojaźni",
+						"en": "fear"
 					}
 				},
 				{
@@ -819,7 +1281,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w062"
+					"head": "w062",
+					"gloss": {
+						"pl": "Twojej",
+						"en": "Thy"
+					}
 				}
 			]
 		},
@@ -827,6 +1293,10 @@
 			"id": "s07",
 			"type": "verse",
 			"verse": 39,
+			"translation": {
+				"pl": "Odetnij hańbę moją, której się obawiałem, bo sądy Twoje są miłe.",
+				"en": "Cut away the reproach I have feared, for Thy judgments are delightful."
+			},
 			"words": [
 				{
 					"id": "w064",
@@ -840,6 +1310,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "odetnij",
+						"en": "cut away"
 					}
 				},
 				{
@@ -852,6 +1326,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "hańbę",
+						"en": "reproach"
+					},
+					"function": {
+						"pl": "„Oppróbrium” oznacza hańbę lub zniewagę.",
+						"en": "“Oppróbrium” means reproach or disgrace."
 					}
 				},
 				{
@@ -864,7 +1346,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w065"
+					"head": "w065",
+					"gloss": {
+						"pl": "moją",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w067",
@@ -875,6 +1361,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "której",
+						"en": "which"
+					},
+					"function": {
+						"pl": "Zaimek względny w bierniku, dopełnienie przy „suspicátus” (w068).",
+						"en": "Relative pronoun in the accusative, object of “suspicátus” (w068)."
 					}
 				},
 				{
@@ -891,7 +1385,15 @@
 						"case": "nom",
 						"conj": 1
 					},
-					"head": "w069"
+					"head": "w069",
+					"gloss": {
+						"pl": "obawiałem",
+						"en": "I have feared"
+					},
+					"function": {
+						"pl": "Imiesłów czasu przeszłego czasownika deponentnego. Razem z „sum” (w069) tworzy formę osobową.",
+						"en": "Perfect participle of a deponent verb. With “sum” (w069) it forms one finite verb."
+					}
 				},
 				{
 					"id": "w069",
@@ -905,6 +1407,14 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "się",
+						"en": "(have)"
+					},
+					"function": {
+						"pl": "Z „suspicátus” (w068) tworzy perfectum czasownika deponentnego: „obawiałem się”.",
+						"en": "With “suspicátus” (w068), it forms the perfect of a deponent verb: I have feared."
 					}
 				},
 				{
@@ -913,6 +1423,10 @@
 					"lemma": "quia",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bo",
+						"en": "for"
 					}
 				},
 				{
@@ -925,6 +1439,14 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "sądy",
+						"en": "judgments"
+					},
+					"function": {
+						"pl": "Mianownik liczby mnogiej. Łącznik „są” pozostaje domyślny.",
+						"en": "A nominative plural with the verb are understood."
 					}
 				},
 				{
@@ -937,7 +1459,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w071"
+					"head": "w071",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w073",
@@ -950,7 +1476,15 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w071"
+					"head": "w071",
+					"gloss": {
+						"pl": "miłe",
+						"en": "delightful"
+					},
+					"function": {
+						"pl": "Orzecznik przy domyślnym „są”, odnoszący się do „iudícia” (w071).",
+						"en": "Predicate to the understood “are”, agreeing with “iudícia” (w071)."
+					}
 				}
 			]
 		},
@@ -958,6 +1492,10 @@
 			"id": "s08",
 			"type": "verse",
 			"verse": 40,
+			"translation": {
+				"pl": "Oto zapragnąłem Twoich przykazań; w sprawiedliwości Twojej ożyw mnie.",
+				"en": "Behold, I have longed for Thy commandments; give me life in Thy justice."
+			},
 			"words": [
 				{
 					"id": "w074",
@@ -966,6 +1504,10 @@
 					"lemma": "ecce",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "oto",
+						"en": "behold"
 					}
 				},
 				{
@@ -980,6 +1522,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "zapragnąłem",
+						"en": "I have longed for"
+					},
+					"function": {
+						"pl": "Dopełnienie „mandáta” (w076) wskazuje, czego psalmista pragnie: Bożych przykazań.",
+						"en": "The object “mandáta” (w076) names what the psalmist longs for: God's commandments."
 					}
 				},
 				{
@@ -992,6 +1542,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "przykazań",
+						"en": "commandments"
 					}
 				},
 				{
@@ -1005,7 +1559,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w076"
+					"head": "w076",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w078",
@@ -1015,7 +1573,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w079"
+					"head": "w079",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w079",
@@ -1027,6 +1589,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "sprawiedliwości",
+						"en": "justice"
+					},
+					"function": {
+						"pl": "Ablativus po przyimku in: „według Twojej sprawiedliwości”.",
+						"en": "An ablative governed by in: “according to thy justice”."
 					}
 				},
 				{
@@ -1039,7 +1609,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w079"
+					"head": "w079",
+					"gloss": {
+						"pl": "Twojej",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w081",
@@ -1053,6 +1627,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "ożyw",
+						"en": "give life to"
+					},
+					"function": {
+						"pl": "Powtarza „vivífica” (w054) z wcześniejszego wersetu.",
+						"en": "It repeats “vivífica” (w054) from the earlier verse."
 					}
 				},
 				{
@@ -1064,9 +1646,51 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The stanza of the Hebrew letter HE — psalm 118 is an alphabetic acrostic of twenty-two stanzas of eight verses, one per letter, and every verse of this one begins with H in the Hebrew. Verse 34 is the verse this edition is named from: DA MIHI INTELLECTUM, ET SCRUTABOR LEGEM TUAM. Three constructions are worth naming. LEGEM (w001) is not the object of PONE: the object is VIAM (w005), and legem stands with pone — legem ponere renders the single Greek verb meaning to lay down as law, so the way is what is being laid down, and legem says what it is laid down as. EXQUIRAM (w009) and CUSTODIAM (w020) have forms shared by the future indicative and present subjunctive. This edition reads both as futures. For EXQUIRAM that reading agrees with the speaker's resolved purpose in the Hebrew text and the unambiguous SERVABO of the Nova Vulgata; EAM (w010) refers to VIAM, as the corresponding Greek pronoun refers to HODON. For CUSTODIAM the coordinate SCRUTABOR, unambiguously future, decides it — the same rule that reads accipiam as future beside invocabo in the priest's Communion verses (Ps 115). SUSPICATUS SUM (w068-w069) is a deponent perfect: passive in form, active in meaning, so it says I have feared and not I have been suspected. In the Roman breviary this stanza's verses open the psalmody of Sunday Terce, whose antiphon is drawn from verse 35; the psalm itself runs across all four of Sunday's little hours; it carries no speaker, because a psalm said in choir has none this edition would record.",
+		"source": {
+			"method": "Verified by collation against the two independent witnesses below: zero substantive divergence over all eight verses. The only differences are the consonantal i, which witness do prints as j (iustificatiónum, iudícia, iucúnda), and punctuation.",
+			"witnesses": "witnesses/psalmi.118-he/",
+			"apparatus": "witnesses/psalmi.118-he/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"words": {
+			"w009": {
+				"analysis": {
+					"confidence": "medium",
+					"sources": [
+						"editorial",
+						"whitakers",
+						"collatinus"
+					],
+					"review": "disputed"
+				}
+			}
+		}
+	}
 }

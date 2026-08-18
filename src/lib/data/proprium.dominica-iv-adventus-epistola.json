@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 80
 	},
-	"status": "working-edition",
-	"notes": "The epistle of the Fourth Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-iv-adventus-epistola/",
-		"apparatus": "witnesses/proprium.dominica-iv-adventus-epistola/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Lekcja IV Niedzieli Adwentu. Paweł odbiera sąd nie tylko Koryntianom, ale i sobie — wyrok należy do Pana, a wydany będzie dopiero wtedy, gdy On przyjdzie.",
+		"en": "The epistle of the Fourth Sunday of Advent. Paul takes the verdict away from the Corinthians and from himself alike — it belongs to the Lord, and it is not given until He comes."
 	},
 	"segments": [
 		{
@@ -38,6 +19,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Bracia: Niech człowiek uważa nas za sługi Chrystusa i szafarzy tajemnic Bożych.",
+				"en": "Brethren: Let a man so account of us as of the ministers of Christ, and the stewards of the mysteries of God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "1 Corinthians 4:1"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "1 Corinthians 4:1"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -50,6 +49,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "bracia",
+						"en": "brethren"
 					}
 				},
 				{
@@ -58,6 +61,10 @@
 					"lemma": "sic",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "tak",
+						"en": "so"
 					}
 				},
 				{
@@ -68,6 +75,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -82,6 +93,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "niech uważa",
+						"en": "let account"
 					}
 				},
 				{
@@ -94,6 +109,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "człowiek",
+						"en": "a man"
 					}
 				},
 				{
@@ -102,6 +121,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "za",
+						"en": "as"
 					}
 				},
 				{
@@ -114,6 +137,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "sługi",
+						"en": "the ministers"
 					}
 				},
 				{
@@ -127,6 +154,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "of Christ"
 					}
 				},
 				{
@@ -135,6 +166,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -147,6 +182,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "szafarzy",
+						"en": "the stewards"
 					}
 				},
 				{
@@ -159,6 +198,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "tajemnic",
+						"en": "of the mysteries"
 					}
 				},
 				{
@@ -172,6 +215,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				}
 			]
@@ -181,6 +228,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Tu zaś od szafarzy wymaga się, aby każdy okazał się wierny.",
+				"en": "Here now it is required among the stewards that a man be found faithful."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "1 Corinthians 4:2"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "1 Corinthians 4:2"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w013",
@@ -188,6 +253,10 @@
 					"lemma": "hic_adverbium",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "tu",
+						"en": "here"
 					}
 				},
 				{
@@ -196,6 +265,10 @@
 					"lemma": "iam",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "już",
+						"en": "now"
 					}
 				},
 				{
@@ -210,6 +283,10 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wymaga się",
+						"en": "is required"
 					}
 				},
 				{
@@ -220,7 +297,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "wśród",
+						"en": "among"
+					}
 				},
 				{
 					"id": "w017",
@@ -233,6 +314,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "szafarzy",
+						"en": "the stewards"
 					}
 				},
 				{
@@ -241,6 +326,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
 					}
 				},
 				{
@@ -253,7 +342,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w020"
+					"head": "w020",
+					"gloss": {
+						"pl": "wierny",
+						"en": "faithful"
+					}
 				},
 				{
 					"id": "w020",
@@ -264,6 +357,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "ktoś",
+						"en": "a man"
 					}
 				},
 				{
@@ -279,6 +376,10 @@
 						"mood": "subj",
 						"voice": "pass",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "się znalazł",
+						"en": "be found"
 					}
 				}
 			]
@@ -288,6 +389,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Dla mnie zaś najmniej znaczy, czy będę sądzony przez was, czy przez sąd ludzki: lecz i sam siebie nie sądzę.",
+				"en": "But to me it is a very small thing to be judged by you, or by man's day: but neither do I judge my own self."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "1 Corinthians 4:3"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "1 Corinthians 4:3"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w022",
@@ -297,6 +416,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "to me"
 					}
 				},
 				{
@@ -305,6 +428,10 @@
 					"lemma": "autem",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "zaś",
+						"en": "but"
 					}
 				},
 				{
@@ -315,7 +442,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w025",
@@ -327,7 +458,15 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "najmniejsze",
+						"en": "the least thing"
+					},
+					"function": {
+						"pl": "Przymiotnik użyty rzeczownikowo: „za rzecz najmniejszą”. Stopień najwyższy od „parvus”.",
+						"en": "An adjective used as a noun: “a very small thing”. It is the superlative of parvus."
+					}
 				},
 				{
 					"id": "w026",
@@ -341,6 +480,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "it is"
 					}
 				},
 				{
@@ -349,6 +492,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abym",
+						"en": "that"
 					}
 				},
 				{
@@ -359,7 +506,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "przez",
+						"en": "by"
+					}
 				},
 				{
 					"id": "w029",
@@ -369,6 +520,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "was",
+						"en": "you"
 					}
 				},
 				{
@@ -384,6 +539,10 @@
 						"mood": "subj",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "był sądzony",
+						"en": "I be judged"
 					}
 				},
 				{
@@ -392,6 +551,10 @@
 					"lemma": "aut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "albo",
+						"en": "or"
 					}
 				},
 				{
@@ -402,7 +565,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "przez",
+						"en": "by"
+					}
 				},
 				{
 					"id": "w033",
@@ -414,7 +581,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "ludzki",
+						"en": "man's"
+					},
+					"function": {
+						"pl": "„Dzień” w znaczeniu sądu, jak w „dniu Pańskim”. Grecki oryginał ma tu „ludzki dzień”, czyli ludzki trybunał.",
+						"en": "Day in the sense of a court sitting, as in the day of the Lord. The Greek behind it says a human day, that is, a human tribunal."
+					}
 				},
 				{
 					"id": "w034",
@@ -427,6 +602,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "dzień",
+						"en": "day"
 					}
 				},
 				{
@@ -435,6 +614,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "lecz",
+						"en": "but"
 					}
 				},
 				{
@@ -443,6 +626,10 @@
 					"lemma": "neque",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "ani",
+						"en": "neither"
 					}
 				},
 				{
@@ -454,6 +641,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "siebie samego",
+						"en": "myself"
 					}
 				},
 				{
@@ -469,6 +660,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "sądzę",
+						"en": "do I judge"
 					}
 				}
 			]
@@ -478,6 +673,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Niczego bowiem nie jestem sobie świadom, ale nie w tym jestem usprawiedliwiony: ten zaś, kto mnie sądzi, jest Panem.",
+				"en": "For I am not conscious to myself of anything: yet am I not hereby justified, but He that judges me is the Lord."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "1 Corinthians 4:4"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "1 Corinthians 4:4"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w039",
@@ -488,6 +701,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "niczego",
+						"en": "of nothing"
 					}
 				},
 				{
@@ -496,6 +713,10 @@
 					"lemma": "enim",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bowiem",
+						"en": "for"
 					}
 				},
 				{
@@ -506,6 +727,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "sobie",
+						"en": "to myself"
 					}
 				},
 				{
@@ -518,7 +743,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w043"
+					"head": "w043",
+					"gloss": {
+						"pl": "świadom",
+						"en": "conscious"
+					}
 				},
 				{
 					"id": "w043",
@@ -532,6 +761,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jestem",
+						"en": "I am"
 					}
 				},
 				{
@@ -540,6 +773,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "lecz",
+						"en": "but"
 					}
 				},
 				{
@@ -548,6 +785,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -558,7 +799,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w047"
+					"head": "w047",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w047",
@@ -569,6 +814,10 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "tym",
+						"en": "this"
 					}
 				},
 				{
@@ -585,7 +834,11 @@
 						"voice": "pass",
 						"conj": 1
 					},
-					"head": "w049"
+					"head": "w049",
+					"gloss": {
+						"pl": "usprawiedliwiony",
+						"en": "justified"
+					}
 				},
 				{
 					"id": "w049",
@@ -599,6 +852,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jestem",
+						"en": "I am"
 					}
 				},
 				{
@@ -610,6 +867,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "kto",
+						"en": "who"
 					}
 				},
 				{
@@ -618,6 +879,10 @@
 					"lemma": "autem",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "zaś",
+						"en": "but"
 					}
 				},
 				{
@@ -632,6 +897,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "sądzi",
+						"en": "judges"
 					}
 				},
 				{
@@ -643,6 +912,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				},
 				{
@@ -655,6 +928,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panem",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -669,6 +946,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
 					}
 				}
 			]
@@ -678,6 +959,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Przeto nie sądźcie przed czasem, dopóki nie przyjdzie Pan: On oświetli to, co ukryte w ciemnościach, i ujawni zamysły serc: a wtedy każdemu przypadnie chwała od Boga.",
+				"en": "Therefore judge not before the time, until the Lord comes: who both will bring to light the hidden things of darkness, and will make manifest the counsels of the hearts: and then shall every man have praise from God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "1 Corinthians 4:5"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "1 Corinthians 4:5"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w056",
@@ -685,6 +984,10 @@
 					"lemma": "itaque",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "przeto",
+						"en": "therefore"
 					}
 				},
 				{
@@ -698,6 +1001,10 @@
 						"tense": "pres",
 						"mood": "imp",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "nie chciejcie",
+						"en": "be not willing"
 					}
 				},
 				{
@@ -708,7 +1015,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w059"
+					"head": "w059",
+					"gloss": {
+						"pl": "przed",
+						"en": "before"
+					}
 				},
 				{
 					"id": "w059",
@@ -720,6 +1031,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "czasem",
+						"en": "the time"
 					}
 				},
 				{
@@ -733,6 +1048,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "sądzić",
+						"en": "to judge"
 					}
 				},
 				{
@@ -741,6 +1060,10 @@
 					"lemma": "quoadusque",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "dopóki nie",
+						"en": "until"
 					}
 				},
 				{
@@ -755,6 +1078,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "przyjdzie",
+						"en": "shall come"
 					}
 				},
 				{
@@ -768,6 +1095,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -779,6 +1110,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -787,6 +1122,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "also"
 					}
 				},
 				{
@@ -801,6 +1140,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "oświetli",
+						"en": "will light up"
 					}
 				},
 				{
@@ -817,7 +1160,15 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "ukryte",
+						"en": "the hidden things"
+					},
+					"function": {
+						"pl": "Imiesłów w liczbie mnogiej użyty rzeczownikowo: „rzeczy ukryte”.",
+						"en": "A plural participle used as a noun: the hidden things."
+					}
 				},
 				{
 					"id": "w068",
@@ -830,6 +1181,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ciemności",
+						"en": "of the darkness"
 					}
 				},
 				{
@@ -838,6 +1193,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -852,6 +1211,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "ujawni",
+						"en": "will make manifest"
 					}
 				},
 				{
@@ -864,6 +1227,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "zamysły",
+						"en": "the counsels"
 					}
 				},
 				{
@@ -877,6 +1244,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "serc",
+						"en": "of hearts"
 					}
 				},
 				{
@@ -885,6 +1256,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -893,6 +1268,10 @@
 					"lemma": "tunc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "wtedy",
+						"en": "then"
 					}
 				},
 				{
@@ -905,6 +1284,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "chwała",
+						"en": "praise"
 					}
 				},
 				{
@@ -918,6 +1301,10 @@
 						"tense": "fut",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "będzie",
+						"en": "shall be"
 					}
 				},
 				{
@@ -929,6 +1316,10 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "każdemu",
+						"en": "to each one"
 					}
 				},
 				{
@@ -939,7 +1330,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w079"
+					"head": "w079",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w079",
@@ -952,9 +1347,38 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The epistle of the Fourth Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-iv-adventus-epistola/",
+			"apparatus": "witnesses/proprium.dominica-iv-adventus-epistola/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

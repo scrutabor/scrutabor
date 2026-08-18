@@ -17,10 +17,10 @@ import { describe, expect, it } from 'vitest';
 function corpusProse(): { where: string; text: string }[] {
 	const dir = 'src/lib/data';
 	const out: { where: string; text: string }[] = [];
+	const LANGS = ['pl', 'en'];
 	for (const file of readdirSync(dir)) {
 		if (!file.endsWith('.json')) continue;
 		const doc = JSON.parse(readFileSync(`${dir}/${file}`, 'utf8'));
-		if (!doc.lang) continue; // the Latin source carries no prose of ours
 		const at = (k: string) => `${file}:${k}`;
 		// The LEXICON keeps its prose at entries[lemma].note, not words[id].note,
 		// so this walk stepped past all 329 of them until 2026-08-16 — and the
@@ -30,15 +30,23 @@ function corpusProse(): { where: string; text: string }[] {
 			Record<string, string>
 		][])
 			if (entry.note) out.push({ where: at(`${lemma}.note`), text: entry.note });
-		if (doc.about) out.push({ where: at('about'), text: doc.about });
-		for (const [sid, seg] of Object.entries(doc.segments ?? {}) as [
-			string,
-			Record<string, string>
-		][])
-			if (seg.narrative) out.push({ where: at(`${sid}.narrative`), text: seg.narrative });
-		for (const [wid, w] of Object.entries(doc.words ?? {}) as [string, Record<string, string>][])
-			for (const k of ['note', 'function'])
-				if (w[k]) out.push({ where: at(`${wid}.${k}`), text: w[k] });
+
+		// One document per text since schema 0.14.0, so every prose value is an
+		// object keyed by language rather than a string in a per-language file.
+		// The walk found 393 strings instead of 2,039 the day the corpus joined,
+		// and the floor below is what said so.
+		const byLang = (value: unknown, where: string) => {
+			for (const lang of LANGS) {
+				const text = (value as Record<string, string> | undefined)?.[lang];
+				if (text) out.push({ where: `${where}.${lang}`, text });
+			}
+		};
+		byLang(doc.about, at('about'));
+		for (const row of (doc.segments ?? []) as Record<string, unknown>[]) {
+			byLang(row.narrative, at(`${row.id}.narrative`));
+			for (const word of (row.words ?? []) as Record<string, unknown>[])
+				for (const key of ['note', 'function']) byLang(word[key], at(`${word.id}.${key}`));
+		}
 	}
 	return out;
 }

@@ -9,41 +9,50 @@
 	"ids": {
 		"next": 39
 	},
-	"status": "working-edition",
-	"notes": "The two short prayers said once both gifts lie on the corporal. They are kept in one document because neither accompanies a new offering: the host and the chalice have been offered, and these complete the act — the first asking that the offerers themselves be received, the second calling the Sanctifier to come and bless what already lies there. Witness handmissal-eo prints them in one paragraph with the chalice prayer; witness do separates them by rubrics, which is the shape followed here. SANCTIFICÁTOR at w027 is a standing divergence: Whitaker's has no such agent noun and reads the form as a future passive imperative of sanctifico, while Collatinus heads sanctificator and reads the vocative; the token's provenance records the disagreement. BÉNEDIC at w032 is one word; witness do prints a cross glyph inside it (béne + dic) and the witness header declares the stripping. TUO at w035 and SANCTO at w036 are dative, agreeing with nómini, not ablative — the same spelling serves both cases.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants (punctuation) adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.in-spiritu-humilitatis/",
-		"apparatus": "witnesses/ordinarium.in-spiritu-humilitatis/apparatus.json"
+	"about": {
+		"pl": "Pierwsza modlitwa ściśle nawiązuje do Dn 3, 39–40. Tekst mszalny odwraca kolejność wyrażeń „in ánimo contríto” i „in spíritu humilitátis”, a zarazem zachowuje liczbę mnogą w „suscipiámur” — „niech będziemy przyjęci”. Druga modlitwa rozpoczyna się wezwaniem „Veni” — „przyjdź” — skierowanym do Uświęciciela.",
+		"en": "The first prayer closely follows Daniel 3:39–40. The Mass reverses the order of “in ánimo contríto” and “in spíritu humilitátis” while retaining the plural “suscipiámur” — “may we be received”. The second prayer begins with “Veni” — “come” — addressed to the Sanctifier."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Prophetia Danielis",
+				"locator": "3, 39–40",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_danielis_lt.html#3"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Prophetia Danielis",
+				"locator": "3, 39–40",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_danielis_lt.html#3"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Deinde facit signum crucis cum Calice, et illum ponit super Corporale, et Palla cooperit: tum, iunctis manibus super Altare, aliquantulum inclinatus, dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Kapłan czyni kielichem znak krzyża, stawia go na korporale i przykrywa palką, a potem, lekko pochylony, ze złożonymi rękami opartymi na ołtarzu, odmawia modlitwę.",
+				"en": "The priest makes the sign of the cross with the chalice, sets it on the corporal and covers it with the pall, then, bowed slightly with hands joined upon the altar, says the prayer."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae rubric before In spiritu humilitatis",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae rubric before In spiritu humilitatis",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -51,6 +60,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Przyjmij nas, Panie, w duchu pokory i z sercem skruszonym; niech nasza ofiara tak się dzisiaj dokona przed Tobą, Panie Boże, aby się Tobie podobała.",
+				"en": "With humble spirit and contrite heart may we be accepted by You, O Lord, and may our sacrifice in Your sight this day be pleasing to You, Lord God."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -60,7 +73,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w002",
@@ -72,6 +89,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "duchu",
+						"en": "a spirit"
 					}
 				},
 				{
@@ -84,6 +105,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "uniżenia",
+						"en": "of humility"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „spíritu” (w002): duch pokory.",
+						"en": "Genitive depending on “spíritu” (w002): a spirit of humility."
 					}
 				},
 				{
@@ -92,6 +121,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -102,7 +135,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w006",
@@ -114,6 +151,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "sercu",
+						"en": "a heart"
 					}
 				},
 				{
@@ -126,7 +167,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "skruszonym",
+						"en": "contrite"
+					},
+					"function": {
+						"pl": "Zgadza się z „ánimo” (w006).",
+						"en": "Agrees with “ánimo” (w006)."
+					}
 				},
 				{
 					"id": "w008",
@@ -140,6 +189,14 @@
 						"mood": "subj",
 						"voice": "pass",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "niech będziemy przyjęci",
+						"en": "may we be received"
+					},
+					"function": {
+						"pl": "Pierwsza osoba liczby mnogiej strony biernej. Prośba dotyczy przyjęcia nas.",
+						"en": "First person plural passive. The petition concerns our being received."
 					}
 				},
 				{
@@ -150,7 +207,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w010"
+					"head": "w010",
+					"gloss": {
+						"pl": "przez",
+						"en": "by"
+					}
 				},
 				{
 					"id": "w010",
@@ -161,6 +222,14 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "Thee"
+					},
+					"function": {
+						"pl": "Ablativus sprawcy zależny od „a” (w009).",
+						"en": "Ablative of agent governed by “a” (w009)."
 					}
 				},
 				{
@@ -174,6 +243,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -182,6 +255,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -190,6 +267,10 @@
 					"lemma": "sic",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "tak",
+						"en": "so"
 					}
 				},
 				{
@@ -203,6 +284,14 @@
 						"tense": "pres",
 						"mood": "subj",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "niech się stanie",
+						"en": "let be made"
+					},
+					"function": {
+						"pl": "„Fio” pełni funkcję strony biernej od „fácere”.",
+						"en": "“Fio” supplies the passive of “fácere”."
 					}
 				},
 				{
@@ -215,6 +304,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "ofiara",
+						"en": "sacrifice"
 					}
 				},
 				{
@@ -227,7 +320,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "nasza",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w017",
@@ -237,7 +334,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "przed",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w018",
@@ -249,6 +350,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "obliczem",
+						"en": "the sight"
 					}
 				},
 				{
@@ -261,7 +366,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "Twoim",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w020",
@@ -270,6 +379,10 @@
 					"lemma": "hodie",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "dzisiaj",
+						"en": "this day"
 					}
 				},
 				{
@@ -278,6 +391,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
 					}
 				},
 				{
@@ -292,6 +409,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "podobała się",
+						"en": "it may please"
 					}
 				},
 				{
@@ -303,6 +424,14 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "Thee"
+					},
+					"function": {
+						"pl": "Celownik zależny od „pláceat” (w022).",
+						"en": "Dative governed by “pláceat” (w022)."
 					}
 				},
 				{
@@ -315,6 +444,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -328,6 +461,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				}
 			]
@@ -336,13 +473,25 @@
 			"id": "s03",
 			"type": "rubric",
 			"text": "Erectus expandit manus, easque in altum porrectas iungens, elevátis ad cælum oculis et statim demissis, dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Kapłan prostuje się, rozkłada ręce, unosi je i składa, podnosząc oczy ku niebu i zaraz je opuszczając.",
+				"en": "The priest stands upright, extends his hands, raises and joins them, lifting his eyes to heaven and at once lowering them."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae rubric before Veni sanctificator",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae rubric before Veni sanctificator",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -350,6 +499,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Przyjdź, Uświęcicielu wszechmogący wieczny Boże:",
+				"en": "Come, Sanctifier, almighty eternal God:"
+			},
 			"words": [
 				{
 					"id": "w026",
@@ -364,6 +517,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "przyjdź",
+						"en": "come"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący liczby pojedynczej od „vénio” — „przyjdź”.",
+						"en": "Second-person singular imperative of “vénio” — “come”."
 					}
 				},
 				{
@@ -377,13 +538,13 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Uświęcicielu",
+						"en": "Sanctifier"
+					},
+					"function": {
+						"pl": "Wołacz liczby pojedynczej, równy mianownikowi.",
+						"en": "Singular vocative, identical in form to the nominative."
 					}
 				},
 				{
@@ -396,7 +557,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "wszechmogący",
+						"en": "almighty"
+					}
 				},
 				{
 					"id": "w029",
@@ -408,7 +573,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "wieczny",
+						"en": "eternal"
+					}
 				},
 				{
 					"id": "w030",
@@ -421,6 +590,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				}
 			]
@@ -429,13 +602,25 @@
 			"id": "s05",
 			"type": "rubric",
 			"text": "Benedicit Oblata, prosequendo:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Kapłan błogosławi dary i kontynuuje modlitwę.",
+				"en": "The priest blesses the offerings and continues the prayer."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae rubric within Veni sanctificator",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae rubric within Veni sanctificator",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -443,6 +628,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "i pobłogosław tę ofiarę, przygotowaną Twojemu świętemu imieniu.",
+				"en": "and bless this sacrifice, prepared for Your holy name."
+			},
 			"words": [
 				{
 					"id": "w031",
@@ -450,6 +639,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -464,6 +657,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "pobłogosław",
+						"en": "bless"
 					}
 				},
 				{
@@ -476,14 +673,9 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
-						],
-						"review": "pending"
+					"gloss": {
+						"pl": "tę",
+						"en": "this"
 					}
 				},
 				{
@@ -497,6 +689,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "ofiarę",
+						"en": "sacrifice"
 					}
 				},
 				{
@@ -509,7 +705,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w037"
+					"head": "w037",
+					"gloss": {
+						"pl": "Twemu",
+						"en": "for Thy"
+					}
 				},
 				{
 					"id": "w036",
@@ -521,7 +721,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w037"
+					"head": "w037",
+					"gloss": {
+						"pl": "świętemu",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w037",
@@ -533,6 +737,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "imieniu",
+						"en": "name"
+					},
+					"function": {
+						"pl": "Celownik zależny od „præparátum” (w038).",
+						"en": "Dative depending on “præparátum” (w038)."
 					}
 				},
 				{
@@ -550,9 +762,97 @@
 						"voice": "pass",
 						"conj": 1
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "przygotowaną",
+						"en": "prepared"
+					},
+					"function": {
+						"pl": "Zgadza się z „sacrifícium” (w034): rodzaj nijaki, liczba pojedyncza, biernik.",
+						"en": "Agrees with “sacrifícium” (w034): neuter singular accusative."
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The two short prayers said once both gifts lie on the corporal. They are kept in one document because neither accompanies a new offering: the host and the chalice have been offered, and these complete the act — the first asking that the offerers themselves be received, the second calling the Sanctifier to come and bless what already lies there. Witness handmissal-eo prints them in one paragraph with the chalice prayer; witness do separates them by rubrics, which is the shape followed here. SANCTIFICÁTOR at w027 is a standing divergence: Whitaker's has no such agent noun and reads the form as a future passive imperative of sanctifico, while Collatinus heads sanctificator and reads the vocative; the token's provenance records the disagreement. BÉNEDIC at w032 is one word; witness do prints a cross glyph inside it (béne + dic) and the witness header declares the stripping. TUO at w035 and SANCTO at w036 are dative, agreeing with nómini, not ablative — the same spelling serves both cases.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants (punctuation) adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.in-spiritu-humilitatis/",
+			"apparatus": "witnesses/ordinarium.in-spiritu-humilitatis/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s03": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s05": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w027": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w033": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers",
+						"collatinus"
+					],
+					"review": "pending"
+				}
+			}
+		}
+	}
 }

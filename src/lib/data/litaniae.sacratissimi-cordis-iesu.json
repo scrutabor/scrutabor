@@ -9,33 +9,60 @@
 	"ids": {
 		"next": 383
 	},
-	"status": "working-edition",
-	"notes": "The approved Litany of the Most Sacred Heart of Jesus, including its versicle and concluding collect.",
-	"source": {
-		"method": "Transcribed from the 1952 Enchiridion Indulgentiarum and collated against the independent TPL transcription.",
-		"witnesses": "witnesses/litaniae.sacratissimi-cordis-iesu/",
-		"apparatus": "witnesses/litaniae.sacratissimi-cordis-iesu/apparatus.json"
+	"about": {
+		"pl": "Litania do Najświętszego Serca Pana Jezusa wraz z wersetem i modlitwą końcową, w recenzji poświadczonej przez Enchiridion Indulgentiarum z 1952 r., które odnotowuje ją pod aktem Kongregacji Obrzędów z 2 kwietnia 1899 r.",
+		"en": "The Litany of the Most Sacred Heart of Jesus with its versicle and concluding collect, in the recension attested by the 1952 Enchiridion Indulgentiarum, which records it under an act of the Sacred Congregation of Rites of 2 April 1899."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 245, pp. 150–153",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			},
+			{
+				"title": "Thesaurus Precum Latinarum",
+				"locator": "Litaniae Sacratissimi Cordis Iesu",
+				"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+			}
 		],
-		"review": "accepted"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 245, pp. 150–153",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			},
+			{
+				"title": "Thesaurus Precum Latinarum",
+				"locator": "Litaniae Sacratissimi Cordis Iesu",
+				"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s001",
 			"type": "verse",
+			"translation": {
+				"pl": "Kyrie eleison.",
+				"en": "Lord, have mercy."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Kýrie",
@@ -48,13 +75,9 @@
 					},
 					"id": "w001",
 					"post": ",",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -68,13 +91,37 @@
 						"voice": "act"
 					},
 					"id": "w002",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				}
 			]
 		},
 		{
 			"id": "s002",
 			"type": "verse",
+			"translation": {
+				"pl": "Christe, eleison.",
+				"en": "Christ, have mercy."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Christe",
@@ -87,7 +134,11 @@
 						"decl": 2
 					},
 					"id": "w003",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Chryste",
+						"en": "Christ"
+					}
 				},
 				{
 					"form": "eléison",
@@ -100,13 +151,37 @@
 						"voice": "act"
 					},
 					"id": "w004",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				}
 			]
 		},
 		{
 			"id": "s003",
 			"type": "verse",
+			"translation": {
+				"pl": "Kyrie eleison.",
+				"en": "Lord, have mercy."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Kýrie",
@@ -119,13 +194,9 @@
 					},
 					"id": "w005",
 					"post": ",",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -139,7 +210,11 @@
 						"voice": "act"
 					},
 					"id": "w006",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				}
 			]
 		},
@@ -147,6 +222,26 @@
 			"id": "s004",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Chryste, usłysz nas.",
+				"en": "Christ, hear us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Christe",
@@ -159,7 +254,11 @@
 						"decl": 2
 					},
 					"id": "w007",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Chryste",
+						"en": "Christ"
+					}
 				},
 				{
 					"form": "audi",
@@ -173,7 +272,11 @@
 						"person": 2,
 						"conj": 4
 					},
-					"id": "w008"
+					"id": "w008",
+					"gloss": {
+						"pl": "usłysz",
+						"en": "hear"
+					}
 				},
 				{
 					"form": "nos",
@@ -184,7 +287,11 @@
 						"number": "pl"
 					},
 					"id": "w009",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -192,6 +299,26 @@
 			"id": "s005",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Chryste, wysłuchaj nas.",
+				"en": "Christ, graciously hear us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Christe",
@@ -204,7 +331,11 @@
 						"decl": 2
 					},
 					"id": "w010",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Chryste",
+						"en": "Christ"
+					}
 				},
 				{
 					"form": "exáudi",
@@ -218,7 +349,11 @@
 						"voice": "act",
 						"conj": 4
 					},
-					"id": "w011"
+					"id": "w011",
+					"gloss": {
+						"pl": "wysłuchaj",
+						"en": "graciously hear"
+					}
 				},
 				{
 					"form": "nos",
@@ -229,7 +364,11 @@
 						"number": "pl"
 					},
 					"id": "w012",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -237,6 +376,26 @@
 			"id": "s006",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Ojcze z nieba, Boże.",
+				"en": "God the Father of heaven."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Pater",
@@ -248,7 +407,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w013"
+					"id": "w013",
+					"gloss": {
+						"pl": "Ojcze",
+						"en": "Father"
+					}
 				},
 				{
 					"form": "de",
@@ -258,7 +421,11 @@
 						"governs": "abl"
 					},
 					"head": "w015",
-					"id": "w014"
+					"id": "w014",
+					"gloss": {
+						"pl": "z",
+						"en": "from"
+					}
 				},
 				{
 					"form": "cælis",
@@ -271,7 +438,11 @@
 						"decl": 2
 					},
 					"id": "w015",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "niebios",
+						"en": "the heavens"
+					}
 				},
 				{
 					"form": "Deus",
@@ -284,7 +455,11 @@
 						"decl": 2
 					},
 					"id": "w016",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
+					}
 				}
 			]
 		},
@@ -292,6 +467,26 @@
 			"id": "s007",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -305,7 +500,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w017"
+					"id": "w017",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -316,7 +515,11 @@
 						"number": "pl"
 					},
 					"id": "w018",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -324,6 +527,26 @@
 			"id": "s008",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Synu, Odkupicielu świata, Boże.",
+				"en": "God the Son, Redeemer of the world."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Fili",
@@ -336,7 +559,11 @@
 						"decl": 2
 					},
 					"id": "w019",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Synu",
+						"en": "Son"
+					}
 				},
 				{
 					"form": "Redémptor",
@@ -348,7 +575,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w020"
+					"id": "w020",
+					"gloss": {
+						"pl": "Odkupicielu",
+						"en": "Redeemer"
+					}
 				},
 				{
 					"form": "mundi",
@@ -361,7 +592,11 @@
 						"decl": 2
 					},
 					"id": "w021",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
+					}
 				},
 				{
 					"form": "Deus",
@@ -374,7 +609,11 @@
 						"decl": 2
 					},
 					"id": "w022",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
+					}
 				}
 			]
 		},
@@ -382,6 +621,26 @@
 			"id": "s009",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -395,7 +654,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w023"
+					"id": "w023",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -406,7 +669,11 @@
 						"number": "pl"
 					},
 					"id": "w024",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -414,6 +681,26 @@
 			"id": "s010",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Duchu Święty, Boże.",
+				"en": "God the Holy Spirit."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Spíritus",
@@ -425,7 +712,11 @@
 						"gender": "m",
 						"decl": 4
 					},
-					"id": "w025"
+					"id": "w025",
+					"gloss": {
+						"pl": "Duchu",
+						"en": "Spirit"
+					}
 				},
 				{
 					"form": "Sancte",
@@ -438,7 +729,11 @@
 					},
 					"head": "w025",
 					"id": "w026",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Święty",
+						"en": "Holy"
+					}
 				},
 				{
 					"form": "Deus",
@@ -451,7 +746,11 @@
 						"decl": 2
 					},
 					"id": "w027",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
+					}
 				}
 			]
 		},
@@ -459,6 +758,26 @@
 			"id": "s011",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -472,7 +791,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w028"
+					"id": "w028",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -483,7 +806,11 @@
 						"number": "pl"
 					},
 					"id": "w029",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -491,6 +818,26 @@
 			"id": "s012",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Święta Trójco, Jedyny Boże.",
+				"en": "Holy Trinity, one God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Sancta",
@@ -502,7 +849,11 @@
 						"gender": "f"
 					},
 					"head": "w031",
-					"id": "w030"
+					"id": "w030",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"form": "Trínitas",
@@ -515,7 +866,11 @@
 						"decl": 3
 					},
 					"id": "w031",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Trójco",
+						"en": "Trinity"
+					}
 				},
 				{
 					"form": "unus",
@@ -527,7 +882,11 @@
 						"gender": "m"
 					},
 					"head": "w033",
-					"id": "w032"
+					"id": "w032",
+					"gloss": {
+						"pl": "jedyny",
+						"en": "one"
+					}
 				},
 				{
 					"form": "Deus",
@@ -540,7 +899,11 @@
 						"decl": 2
 					},
 					"id": "w033",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Bóg",
+						"en": "God"
+					}
 				}
 			]
 		},
@@ -548,6 +911,26 @@
 			"id": "s013",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -561,7 +944,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w034"
+					"id": "w034",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -572,7 +959,11 @@
 						"number": "pl"
 					},
 					"id": "w035",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -580,6 +971,26 @@
 			"id": "s014",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, Syna Ojca Przedwiecznego.",
+				"en": "Heart of Jesus, Son of the Eternal Father."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -591,7 +1002,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w036"
+					"id": "w036",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -603,7 +1018,11 @@
 						"gender": "m"
 					},
 					"id": "w037",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "Fílii",
@@ -616,13 +1035,9 @@
 						"decl": 2
 					},
 					"id": "w038",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Syna",
+						"en": "of the Son"
 					}
 				},
 				{
@@ -635,7 +1050,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w039"
+					"id": "w039",
+					"gloss": {
+						"pl": "Ojca",
+						"en": "of the Father"
+					}
 				},
 				{
 					"form": "ætérni",
@@ -648,7 +1067,11 @@
 					},
 					"head": "w039",
 					"id": "w040",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Przedwiecznego",
+						"en": "the Eternal"
+					}
 				}
 			]
 		},
@@ -656,6 +1079,26 @@
 			"id": "s015",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -669,7 +1112,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w041"
+					"id": "w041",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -680,7 +1127,11 @@
 						"number": "pl"
 					},
 					"id": "w042",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -688,6 +1139,26 @@
 			"id": "s016",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, w łonie Matki Dziewicy przez Ducha Świętego utworzone.",
+				"en": "Heart of Jesus, formed by the Holy Spirit in the womb of the Virgin Mother."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -699,7 +1170,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w043"
+					"id": "w043",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -711,7 +1186,11 @@
 						"gender": "m"
 					},
 					"id": "w044",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "in",
@@ -721,7 +1200,11 @@
 						"governs": "abl"
 					},
 					"head": "w046",
-					"id": "w045"
+					"id": "w045",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"form": "sinu",
@@ -733,7 +1216,11 @@
 						"gender": "m",
 						"decl": 4
 					},
-					"id": "w046"
+					"id": "w046",
+					"gloss": {
+						"pl": "łonie",
+						"en": "the womb"
+					}
 				},
 				{
 					"form": "Vírginis",
@@ -745,7 +1232,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w047"
+					"id": "w047",
+					"gloss": {
+						"pl": "Dziewicy",
+						"en": "of the Virgin"
+					}
 				},
 				{
 					"form": "Matris",
@@ -757,7 +1248,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w048"
+					"id": "w048",
+					"gloss": {
+						"pl": "Matki",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "a",
@@ -767,7 +1262,11 @@
 						"governs": "abl"
 					},
 					"head": "w050",
-					"id": "w049"
+					"id": "w049",
+					"gloss": {
+						"pl": "przez",
+						"en": "by"
+					}
 				},
 				{
 					"form": "Spíritu",
@@ -779,7 +1278,11 @@
 						"gender": "m",
 						"decl": 4
 					},
-					"id": "w050"
+					"id": "w050",
+					"gloss": {
+						"pl": "Ducha",
+						"en": "Spirit"
+					}
 				},
 				{
 					"form": "Sancto",
@@ -791,7 +1294,11 @@
 						"gender": "m"
 					},
 					"head": "w050",
-					"id": "w051"
+					"id": "w051",
+					"gloss": {
+						"pl": "Świętego",
+						"en": "Holy"
+					}
 				},
 				{
 					"form": "formátum",
@@ -808,7 +1315,11 @@
 					},
 					"id": "w052",
 					"post": ".",
-					"head": "w043"
+					"head": "w043",
+					"gloss": {
+						"pl": "utworzone",
+						"en": "formed"
+					}
 				}
 			]
 		},
@@ -816,6 +1327,26 @@
 			"id": "s017",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -829,7 +1360,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w053"
+					"id": "w053",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -840,7 +1375,11 @@
 						"number": "pl"
 					},
 					"id": "w054",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -848,6 +1387,26 @@
 			"id": "s018",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, ze Słowem Bożym istotowo zjednoczone.",
+				"en": "Heart of Jesus, substantially united to the Word of God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -859,7 +1418,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w055"
+					"id": "w055",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -871,7 +1434,11 @@
 						"gender": "m"
 					},
 					"id": "w056",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "Verbo",
@@ -883,7 +1450,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w057"
+					"id": "w057",
+					"gloss": {
+						"pl": "słowem",
+						"en": "word"
+					}
 				},
 				{
 					"form": "Dei",
@@ -895,7 +1466,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w058"
+					"id": "w058",
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					}
 				},
 				{
 					"form": "substantiáliter",
@@ -903,7 +1478,11 @@
 					"morph": {
 						"pos": "adv"
 					},
-					"id": "w059"
+					"id": "w059",
+					"gloss": {
+						"pl": "istotowo",
+						"en": "substantially"
+					}
 				},
 				{
 					"form": "unítum",
@@ -920,7 +1499,11 @@
 					},
 					"id": "w060",
 					"post": ".",
-					"head": "w055"
+					"head": "w055",
+					"gloss": {
+						"pl": "zjednoczone",
+						"en": "united"
+					}
 				}
 			]
 		},
@@ -928,6 +1511,26 @@
 			"id": "s019",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -941,7 +1544,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w061"
+					"id": "w061",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -952,7 +1559,11 @@
 						"number": "pl"
 					},
 					"id": "w062",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -960,6 +1571,26 @@
 			"id": "s020",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, nieskończonego majestatu.",
+				"en": "Heart of Jesus, of infinite majesty."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -971,7 +1602,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w063"
+					"id": "w063",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -983,7 +1618,11 @@
 						"gender": "m"
 					},
 					"id": "w064",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "maiestátis",
@@ -995,7 +1634,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w065"
+					"id": "w065",
+					"gloss": {
+						"pl": "majestatu",
+						"en": "of majesty"
+					}
 				},
 				{
 					"form": "infinítæ",
@@ -1008,7 +1651,11 @@
 					},
 					"head": "w065",
 					"id": "w066",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nieskończonego",
+						"en": "infinite"
+					}
 				}
 			]
 		},
@@ -1016,6 +1663,26 @@
 			"id": "s021",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -1029,7 +1696,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w067"
+					"id": "w067",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1040,7 +1711,11 @@
 						"number": "pl"
 					},
 					"id": "w068",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -1048,6 +1723,26 @@
 			"id": "s022",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, świątynio Boga.",
+				"en": "Heart of Jesus, holy temple of God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -1059,7 +1754,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w069"
+					"id": "w069",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -1071,7 +1770,11 @@
 						"gender": "m"
 					},
 					"id": "w070",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "templum",
@@ -1083,7 +1786,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w071"
+					"id": "w071",
+					"gloss": {
+						"pl": "świątynia",
+						"en": "temple"
+					}
 				},
 				{
 					"form": "Dei",
@@ -1095,7 +1802,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w072"
+					"id": "w072",
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					}
 				},
 				{
 					"form": "sanctum",
@@ -1108,7 +1819,11 @@
 					},
 					"head": "w071",
 					"id": "w073",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "święta",
+						"en": "holy"
+					}
 				}
 			]
 		},
@@ -1116,6 +1831,26 @@
 			"id": "s023",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -1129,7 +1864,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w074"
+					"id": "w074",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1140,7 +1879,11 @@
 						"number": "pl"
 					},
 					"id": "w075",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -1148,6 +1891,26 @@
 			"id": "s024",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, przybytku Najwyższego.",
+				"en": "Heart of Jesus, tabernacle of the Most High."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -1159,7 +1922,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w076"
+					"id": "w076",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -1171,7 +1938,11 @@
 						"gender": "m"
 					},
 					"id": "w077",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "tabernáculum",
@@ -1183,7 +1954,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w078"
+					"id": "w078",
+					"gloss": {
+						"pl": "przybytek",
+						"en": "tabernacle"
+					}
 				},
 				{
 					"form": "Altíssimi",
@@ -1197,7 +1972,11 @@
 					},
 					"id": "w079",
 					"post": ".",
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "Najwyższego",
+						"en": "of the Most High"
+					}
 				}
 			]
 		},
@@ -1205,6 +1984,26 @@
 			"id": "s025",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -1218,7 +2017,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w080"
+					"id": "w080",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1229,7 +2032,11 @@
 						"number": "pl"
 					},
 					"id": "w081",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -1237,6 +2044,26 @@
 			"id": "s026",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, domie Boży i bramo niebios.",
+				"en": "Heart of Jesus, house of God and gate of heaven."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -1248,7 +2075,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w082"
+					"id": "w082",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -1260,7 +2091,11 @@
 						"gender": "m"
 					},
 					"id": "w083",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "domus",
@@ -1272,7 +2107,11 @@
 						"gender": "f",
 						"decl": 4
 					},
-					"id": "w084"
+					"id": "w084",
+					"gloss": {
+						"pl": "dom",
+						"en": "house"
+					}
 				},
 				{
 					"form": "Dei",
@@ -1284,7 +2123,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w085"
+					"id": "w085",
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					}
 				},
 				{
 					"form": "et",
@@ -1292,7 +2135,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w086"
+					"id": "w086",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "porta",
@@ -1304,7 +2151,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w087"
+					"id": "w087",
+					"gloss": {
+						"pl": "brama",
+						"en": "gate"
+					}
 				},
 				{
 					"form": "cæli",
@@ -1317,7 +2168,11 @@
 						"decl": 2
 					},
 					"id": "w088",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nieba",
+						"en": "of heaven"
+					}
 				}
 			]
 		},
@@ -1325,6 +2180,26 @@
 			"id": "s027",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -1338,7 +2213,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w089"
+					"id": "w089",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1349,7 +2228,11 @@
 						"number": "pl"
 					},
 					"id": "w090",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -1357,6 +2240,26 @@
 			"id": "s028",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, gorejące ognisko miłości.",
+				"en": "Heart of Jesus, burning furnace of charity."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -1368,7 +2271,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w091"
+					"id": "w091",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -1380,7 +2287,11 @@
 						"gender": "m"
 					},
 					"id": "w092",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "fornax",
@@ -1392,7 +2303,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w093"
+					"id": "w093",
+					"gloss": {
+						"pl": "ognisko",
+						"en": "furnace"
+					}
 				},
 				{
 					"form": "ardens",
@@ -1408,7 +2323,11 @@
 						"conj": 2
 					},
 					"head": "w093",
-					"id": "w094"
+					"id": "w094",
+					"gloss": {
+						"pl": "gorejące",
+						"en": "burning"
+					}
 				},
 				{
 					"form": "caritátis",
@@ -1421,7 +2340,11 @@
 						"decl": 3
 					},
 					"id": "w095",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "miłości",
+						"en": "of charity"
+					}
 				}
 			]
 		},
@@ -1429,6 +2352,26 @@
 			"id": "s029",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -1442,7 +2385,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w096"
+					"id": "w096",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1453,7 +2400,11 @@
 						"number": "pl"
 					},
 					"id": "w097",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -1461,6 +2412,26 @@
 			"id": "s030",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, sprawiedliwości i miłości skarbnico.",
+				"en": "Heart of Jesus, abode of justice and love."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -1472,7 +2443,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w098"
+					"id": "w098",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -1484,7 +2459,11 @@
 						"gender": "m"
 					},
 					"id": "w099",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "iustítiæ",
@@ -1496,7 +2475,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w100"
+					"id": "w100",
+					"gloss": {
+						"pl": "sprawiedliwości",
+						"en": "of justice"
+					}
 				},
 				{
 					"form": "et",
@@ -1504,7 +2487,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w101"
+					"id": "w101",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "amóris",
@@ -1516,7 +2503,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w102"
+					"id": "w102",
+					"gloss": {
+						"pl": "miłości",
+						"en": "of love"
+					}
 				},
 				{
 					"form": "receptáculum",
@@ -1529,7 +2520,11 @@
 						"decl": 2
 					},
 					"id": "w103",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "skarbnica",
+						"en": "abode"
+					}
 				}
 			]
 		},
@@ -1537,6 +2532,26 @@
 			"id": "s031",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -1550,7 +2565,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w104"
+					"id": "w104",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1561,7 +2580,11 @@
 						"number": "pl"
 					},
 					"id": "w105",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -1569,6 +2592,26 @@
 			"id": "s032",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, dobroci i miłości pełne.",
+				"en": "Heart of Jesus, full of goodness and love."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -1580,7 +2623,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w106"
+					"id": "w106",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -1592,7 +2639,11 @@
 						"gender": "m"
 					},
 					"id": "w107",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "bonitáte",
@@ -1604,7 +2655,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w108"
+					"id": "w108",
+					"gloss": {
+						"pl": "dobroci",
+						"en": "with goodness"
+					}
 				},
 				{
 					"form": "et",
@@ -1612,7 +2667,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w109"
+					"id": "w109",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "amóre",
@@ -1624,7 +2683,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w110"
+					"id": "w110",
+					"gloss": {
+						"pl": "miłości",
+						"en": "with love"
+					}
 				},
 				{
 					"form": "plenum",
@@ -1637,7 +2700,11 @@
 					},
 					"id": "w111",
 					"post": ".",
-					"head": "w106"
+					"head": "w106",
+					"gloss": {
+						"pl": "pełne",
+						"en": "full"
+					}
 				}
 			]
 		},
@@ -1645,6 +2712,26 @@
 			"id": "s033",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -1658,7 +2745,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w112"
+					"id": "w112",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1669,7 +2760,11 @@
 						"number": "pl"
 					},
 					"id": "w113",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -1677,6 +2772,26 @@
 			"id": "s034",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, cnót wszelkich bezdenna głębino.",
+				"en": "Heart of Jesus, abyss of all virtues."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -1688,7 +2803,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w114"
+					"id": "w114",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -1700,7 +2819,11 @@
 						"gender": "m"
 					},
 					"id": "w115",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "virtútum",
@@ -1712,7 +2835,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w116"
+					"id": "w116",
+					"gloss": {
+						"pl": "cnót",
+						"en": "of virtues"
+					}
 				},
 				{
 					"form": "ómnium",
@@ -1724,7 +2851,11 @@
 						"gender": "f"
 					},
 					"head": "w116",
-					"id": "w117"
+					"id": "w117",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					}
 				},
 				{
 					"form": "abýssus",
@@ -1737,7 +2868,11 @@
 						"decl": 2
 					},
 					"id": "w118",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "otchłań",
+						"en": "abyss"
+					}
 				}
 			]
 		},
@@ -1745,6 +2880,26 @@
 			"id": "s035",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -1758,7 +2913,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w119"
+					"id": "w119",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1769,7 +2928,11 @@
 						"number": "pl"
 					},
 					"id": "w120",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -1777,6 +2940,26 @@
 			"id": "s036",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, wszelkiej chwały najgodniejsze.",
+				"en": "Heart of Jesus, most worthy of all praise."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -1788,7 +2971,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w121"
+					"id": "w121",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -1800,7 +2987,11 @@
 						"gender": "m"
 					},
 					"id": "w122",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "omni",
@@ -1812,7 +3003,11 @@
 						"gender": "f"
 					},
 					"head": "w124",
-					"id": "w123"
+					"id": "w123",
+					"gloss": {
+						"pl": "wszelkiej",
+						"en": "all"
+					}
 				},
 				{
 					"form": "laude",
@@ -1824,7 +3019,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w124"
+					"id": "w124",
+					"gloss": {
+						"pl": "chwały",
+						"en": "praise"
+					}
 				},
 				{
 					"form": "digníssimum",
@@ -1838,7 +3037,11 @@
 					},
 					"id": "w125",
 					"post": ".",
-					"head": "w121"
+					"head": "w121",
+					"gloss": {
+						"pl": "najgodniejsze",
+						"en": "most worthy"
+					}
 				}
 			]
 		},
@@ -1846,6 +3049,26 @@
 			"id": "s037",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -1859,7 +3082,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w126"
+					"id": "w126",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1870,7 +3097,11 @@
 						"number": "pl"
 					},
 					"id": "w127",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -1878,6 +3109,26 @@
 			"id": "s038",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, królu i zjednoczenie serc wszystkich.",
+				"en": "Heart of Jesus, king and centre of all hearts."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -1889,7 +3140,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w128"
+					"id": "w128",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -1901,7 +3156,11 @@
 						"gender": "m"
 					},
 					"id": "w129",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "rex",
@@ -1913,7 +3172,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w130"
+					"id": "w130",
+					"gloss": {
+						"pl": "król",
+						"en": "King"
+					}
 				},
 				{
 					"form": "et",
@@ -1921,7 +3184,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w131"
+					"id": "w131",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "centrum",
@@ -1933,7 +3200,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w132"
+					"id": "w132",
+					"gloss": {
+						"pl": "centrum",
+						"en": "center"
+					}
 				},
 				{
 					"form": "ómnium",
@@ -1945,7 +3216,11 @@
 						"gender": "n"
 					},
 					"head": "w134",
-					"id": "w133"
+					"id": "w133",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "of all"
+					}
 				},
 				{
 					"form": "córdium",
@@ -1959,13 +3234,9 @@
 					},
 					"id": "w134",
 					"post": ".",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "serc",
+						"en": "hearts"
 					}
 				}
 			]
@@ -1974,6 +3245,26 @@
 			"id": "s039",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -1987,7 +3278,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w135"
+					"id": "w135",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1998,7 +3293,11 @@
 						"number": "pl"
 					},
 					"id": "w136",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -2006,6 +3305,26 @@
 			"id": "s040",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, w którym są wszystkie skarby mądrości i umiejętności.",
+				"en": "Heart of Jesus, in whom are all treasures of wisdom and knowledge."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -2017,7 +3336,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w137"
+					"id": "w137",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -2029,7 +3352,11 @@
 						"gender": "m"
 					},
 					"id": "w138",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "in",
@@ -2039,7 +3366,11 @@
 						"governs": "abl"
 					},
 					"head": "w140",
-					"id": "w139"
+					"id": "w139",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"form": "quo",
@@ -2050,7 +3381,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"id": "w140"
+					"id": "w140",
+					"gloss": {
+						"pl": "którym",
+						"en": "whom"
+					}
 				},
 				{
 					"form": "sunt",
@@ -2063,7 +3398,11 @@
 						"mood": "ind",
 						"voice": "act"
 					},
-					"id": "w141"
+					"id": "w141",
+					"gloss": {
+						"pl": "są",
+						"en": "are"
+					}
 				},
 				{
 					"form": "omnes",
@@ -2075,7 +3414,11 @@
 						"gender": "m"
 					},
 					"head": "w143",
-					"id": "w142"
+					"id": "w142",
+					"gloss": {
+						"pl": "wszystkie",
+						"en": "all"
+					}
 				},
 				{
 					"form": "thesáuri",
@@ -2087,7 +3430,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w143"
+					"id": "w143",
+					"gloss": {
+						"pl": "skarby",
+						"en": "treasures"
+					}
 				},
 				{
 					"form": "sapiéntiæ",
@@ -2099,7 +3446,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w144"
+					"id": "w144",
+					"gloss": {
+						"pl": "mądrości",
+						"en": "of wisdom"
+					}
 				},
 				{
 					"form": "et",
@@ -2107,7 +3458,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w145"
+					"id": "w145",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "sciéntiæ",
@@ -2120,7 +3475,11 @@
 						"decl": 1
 					},
 					"id": "w146",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "wiedzy",
+						"en": "of knowledge"
+					}
 				}
 			]
 		},
@@ -2128,6 +3487,26 @@
 			"id": "s041",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -2141,7 +3520,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w147"
+					"id": "w147",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2152,7 +3535,11 @@
 						"number": "pl"
 					},
 					"id": "w148",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -2160,6 +3547,26 @@
 			"id": "s042",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, w którym mieszka cała pełnia Bóstwa.",
+				"en": "Heart of Jesus, in whom dwelleth the fullness of divinity."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -2171,7 +3578,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w149"
+					"id": "w149",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -2183,7 +3594,11 @@
 						"gender": "m"
 					},
 					"id": "w150",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "in",
@@ -2193,7 +3608,11 @@
 						"governs": "abl"
 					},
 					"head": "w152",
-					"id": "w151"
+					"id": "w151",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"form": "quo",
@@ -2204,7 +3623,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"id": "w152"
+					"id": "w152",
+					"gloss": {
+						"pl": "którym",
+						"en": "whom"
+					}
 				},
 				{
 					"form": "hábitat",
@@ -2218,7 +3641,11 @@
 						"person": 3,
 						"conj": 1
 					},
-					"id": "w153"
+					"id": "w153",
+					"gloss": {
+						"pl": "mieszka",
+						"en": "dwelleth"
+					}
 				},
 				{
 					"form": "omnis",
@@ -2230,7 +3657,11 @@
 						"gender": "f"
 					},
 					"head": "w155",
-					"id": "w154"
+					"id": "w154",
+					"gloss": {
+						"pl": "wszelka",
+						"en": "all"
+					}
 				},
 				{
 					"form": "plenitúdo",
@@ -2242,7 +3673,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w155"
+					"id": "w155",
+					"gloss": {
+						"pl": "pełnia",
+						"en": "fullness"
+					}
 				},
 				{
 					"form": "divinitátis",
@@ -2255,7 +3690,11 @@
 						"decl": 3
 					},
 					"id": "w156",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Bóstwa",
+						"en": "of divinity"
+					}
 				}
 			]
 		},
@@ -2263,6 +3702,26 @@
 			"id": "s043",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -2276,7 +3735,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w157"
+					"id": "w157",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2287,7 +3750,11 @@
 						"number": "pl"
 					},
 					"id": "w158",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -2295,6 +3762,26 @@
 			"id": "s044",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, w którym sobie Ojciec bardzo upodobał.",
+				"en": "Heart of Jesus, in whom the Father was well pleased."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -2306,7 +3793,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w159"
+					"id": "w159",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -2318,7 +3809,11 @@
 						"gender": "m"
 					},
 					"id": "w160",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "in",
@@ -2328,7 +3823,11 @@
 						"governs": "abl"
 					},
 					"head": "w162",
-					"id": "w161"
+					"id": "w161",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"form": "quo",
@@ -2339,7 +3838,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"id": "w162"
+					"id": "w162",
+					"gloss": {
+						"pl": "którym",
+						"en": "whom"
+					}
 				},
 				{
 					"form": "Pater",
@@ -2351,7 +3854,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w163"
+					"id": "w163",
+					"gloss": {
+						"pl": "Ojciec",
+						"en": "Father"
+					}
 				},
 				{
 					"form": "sibi",
@@ -2361,13 +3868,9 @@
 						"case": "dat"
 					},
 					"id": "w164",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "sobie",
+						"en": "to Himself"
 					}
 				},
 				{
@@ -2376,7 +3879,11 @@
 					"morph": {
 						"pos": "adv"
 					},
-					"id": "w165"
+					"id": "w165",
+					"gloss": {
+						"pl": "bardzo",
+						"en": "well"
+					}
 				},
 				{
 					"form": "complácuit",
@@ -2391,7 +3898,11 @@
 						"conj": 2
 					},
 					"id": "w166",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "upodobał",
+						"en": "was well pleased"
+					}
 				}
 			]
 		},
@@ -2399,6 +3910,26 @@
 			"id": "s045",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -2412,7 +3943,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w167"
+					"id": "w167",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2423,7 +3958,11 @@
 						"number": "pl"
 					},
 					"id": "w168",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -2431,6 +3970,26 @@
 			"id": "s046",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, z którego pełni wszyscyśmy otrzymali.",
+				"en": "Heart of Jesus, of whose fullness we have all received."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -2442,7 +4001,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w169"
+					"id": "w169",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -2454,7 +4017,11 @@
 						"gender": "m"
 					},
 					"id": "w170",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "de",
@@ -2464,7 +4031,11 @@
 						"governs": "abl"
 					},
 					"head": "w173",
-					"id": "w171"
+					"id": "w171",
+					"gloss": {
+						"pl": "z",
+						"en": "from"
+					}
 				},
 				{
 					"form": "cuius",
@@ -2475,7 +4046,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"id": "w172"
+					"id": "w172",
+					"gloss": {
+						"pl": "którego",
+						"en": "whose"
+					}
 				},
 				{
 					"form": "plenitúdine",
@@ -2487,7 +4062,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w173"
+					"id": "w173",
+					"gloss": {
+						"pl": "pełni",
+						"en": "the fullness"
+					}
 				},
 				{
 					"form": "omnes",
@@ -2499,7 +4078,11 @@
 						"gender": "m"
 					},
 					"head": "w175",
-					"id": "w174"
+					"id": "w174",
+					"gloss": {
+						"pl": "wszyscy",
+						"en": "all"
+					}
 				},
 				{
 					"form": "nos",
@@ -2509,7 +4092,11 @@
 						"case": "nom",
 						"number": "pl"
 					},
-					"id": "w175"
+					"id": "w175",
+					"gloss": {
+						"pl": "my",
+						"en": "we"
+					}
 				},
 				{
 					"form": "accépimus",
@@ -2524,7 +4111,11 @@
 						"conj": 3
 					},
 					"id": "w176",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "otrzymaliśmy",
+						"en": "we have received"
+					}
 				}
 			]
 		},
@@ -2532,6 +4123,26 @@
 			"id": "s047",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -2545,7 +4156,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w177"
+					"id": "w177",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2556,7 +4171,11 @@
 						"number": "pl"
 					},
 					"id": "w178",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -2564,6 +4183,26 @@
 			"id": "s048",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, odwieczne upragnienie świata.",
+				"en": "Heart of Jesus, desire of the everlasting hills."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -2575,7 +4214,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w179"
+					"id": "w179",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -2587,7 +4230,11 @@
 						"gender": "m"
 					},
 					"id": "w180",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "desidérium",
@@ -2599,7 +4246,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w181"
+					"id": "w181",
+					"gloss": {
+						"pl": "pragnienie",
+						"en": "desire"
+					}
 				},
 				{
 					"form": "cóllium",
@@ -2611,7 +4262,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w182"
+					"id": "w182",
+					"gloss": {
+						"pl": "wzgórz",
+						"en": "of the hills"
+					}
 				},
 				{
 					"form": "æternórum",
@@ -2624,7 +4279,11 @@
 					},
 					"head": "w182",
 					"id": "w183",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "wiecznych",
+						"en": "the everlasting"
+					}
 				}
 			]
 		},
@@ -2632,6 +4291,26 @@
 			"id": "s049",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -2645,7 +4324,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w184"
+					"id": "w184",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2656,7 +4339,11 @@
 						"number": "pl"
 					},
 					"id": "w185",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -2664,6 +4351,26 @@
 			"id": "s050",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, cierpliwe i wielkiego miłosierdzia.",
+				"en": "Heart of Jesus, patient and most merciful."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -2675,7 +4382,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w186"
+					"id": "w186",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -2687,7 +4398,11 @@
 						"gender": "m"
 					},
 					"id": "w187",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "pátiens",
@@ -2700,13 +4415,9 @@
 					},
 					"head": "w186",
 					"id": "w188",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "cierpliwe",
+						"en": "patient"
 					}
 				},
 				{
@@ -2715,7 +4426,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w189"
+					"id": "w189",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "multæ",
@@ -2727,7 +4442,11 @@
 						"gender": "f"
 					},
 					"head": "w191",
-					"id": "w190"
+					"id": "w190",
+					"gloss": {
+						"pl": "wielkiego",
+						"en": "great"
+					}
 				},
 				{
 					"form": "misericórdiæ",
@@ -2740,7 +4459,11 @@
 						"decl": 1
 					},
 					"id": "w191",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "miłosierdzia",
+						"en": "of mercy"
+					}
 				}
 			]
 		},
@@ -2748,6 +4471,26 @@
 			"id": "s051",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -2761,7 +4504,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w192"
+					"id": "w192",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2772,7 +4519,11 @@
 						"number": "pl"
 					},
 					"id": "w193",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -2780,6 +4531,26 @@
 			"id": "s052",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, hojne dla wszystkich, którzy Cię wzywają.",
+				"en": "Heart of Jesus, rich to all who invoke Thee."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -2791,7 +4562,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w194"
+					"id": "w194",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -2803,7 +4578,11 @@
 						"gender": "m"
 					},
 					"id": "w195",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "dives",
@@ -2815,7 +4594,11 @@
 						"gender": "n"
 					},
 					"head": "w194",
-					"id": "w196"
+					"id": "w196",
+					"gloss": {
+						"pl": "bogate",
+						"en": "rich"
+					}
 				},
 				{
 					"form": "in",
@@ -2825,7 +4608,11 @@
 						"governs": "acc"
 					},
 					"head": "w198",
-					"id": "w197"
+					"id": "w197",
+					"gloss": {
+						"pl": "we",
+						"en": "to"
+					}
 				},
 				{
 					"form": "omnes",
@@ -2837,7 +4624,11 @@
 						"gender": "m"
 					},
 					"id": "w198",
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					}
 				},
 				{
 					"form": "qui",
@@ -2848,7 +4639,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"id": "w199"
+					"id": "w199",
+					"gloss": {
+						"pl": "którzy",
+						"en": "who"
+					}
 				},
 				{
 					"form": "ínvocant",
@@ -2862,7 +4657,11 @@
 						"person": 3,
 						"conj": 1
 					},
-					"id": "w200"
+					"id": "w200",
+					"gloss": {
+						"pl": "wzywają",
+						"en": "invoke"
+					}
 				},
 				{
 					"form": "te",
@@ -2873,7 +4672,11 @@
 						"number": "sg"
 					},
 					"id": "w201",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "Thee"
+					}
 				}
 			]
 		},
@@ -2881,6 +4684,26 @@
 			"id": "s053",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -2894,7 +4717,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w202"
+					"id": "w202",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2905,7 +4732,11 @@
 						"number": "pl"
 					},
 					"id": "w203",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -2913,6 +4744,26 @@
 			"id": "s054",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, źródło życia i świętości.",
+				"en": "Heart of Jesus, fountain of life and holiness."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -2924,7 +4775,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w204"
+					"id": "w204",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -2936,7 +4791,11 @@
 						"gender": "m"
 					},
 					"id": "w205",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "fons",
@@ -2948,7 +4807,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w206"
+					"id": "w206",
+					"gloss": {
+						"pl": "źródło",
+						"en": "fountain"
+					}
 				},
 				{
 					"form": "vitæ",
@@ -2960,7 +4823,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w207"
+					"id": "w207",
+					"gloss": {
+						"pl": "życia",
+						"en": "of life"
+					}
 				},
 				{
 					"form": "et",
@@ -2968,7 +4835,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w208"
+					"id": "w208",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "sanctitátis",
@@ -2981,7 +4852,11 @@
 						"decl": 3
 					},
 					"id": "w209",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "świętości",
+						"en": "of holiness"
+					}
 				}
 			]
 		},
@@ -2989,6 +4864,26 @@
 			"id": "s055",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -3002,7 +4897,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w210"
+					"id": "w210",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3013,7 +4912,11 @@
 						"number": "pl"
 					},
 					"id": "w211",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -3021,6 +4924,26 @@
 			"id": "s056",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, przebłaganie za grzechy nasze.",
+				"en": "Heart of Jesus, propitiation for our sins."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -3032,7 +4955,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w212"
+					"id": "w212",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -3044,7 +4971,11 @@
 						"gender": "m"
 					},
 					"id": "w213",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "propitiátio",
@@ -3056,7 +4987,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w214"
+					"id": "w214",
+					"gloss": {
+						"pl": "ubłaganie",
+						"en": "propitiation"
+					}
 				},
 				{
 					"form": "pro",
@@ -3066,7 +5001,11 @@
 						"governs": "abl"
 					},
 					"head": "w216",
-					"id": "w215"
+					"id": "w215",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "peccátis",
@@ -3078,7 +5017,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w216"
+					"id": "w216",
+					"gloss": {
+						"pl": "grzechy",
+						"en": "sins"
+					}
 				},
 				{
 					"form": "nostris",
@@ -3091,7 +5034,11 @@
 					},
 					"head": "w216",
 					"id": "w217",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nasze",
+						"en": "our"
+					}
 				}
 			]
 		},
@@ -3099,6 +5046,26 @@
 			"id": "s057",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -3112,7 +5079,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w218"
+					"id": "w218",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3123,7 +5094,11 @@
 						"number": "pl"
 					},
 					"id": "w219",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -3131,6 +5106,26 @@
 			"id": "s058",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, zelżywością napełnione.",
+				"en": "Heart of Jesus, loaded down with reproaches."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -3142,7 +5137,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w220"
+					"id": "w220",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -3154,7 +5153,11 @@
 						"gender": "m"
 					},
 					"id": "w221",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "saturátum",
@@ -3170,7 +5173,11 @@
 						"conj": 1
 					},
 					"head": "w220",
-					"id": "w222"
+					"id": "w222",
+					"gloss": {
+						"pl": "napełnione",
+						"en": "filled"
+					}
 				},
 				{
 					"form": "oppróbriis",
@@ -3183,7 +5190,11 @@
 						"decl": 2
 					},
 					"id": "w223",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "zelżywościami",
+						"en": "with reproaches"
+					}
 				}
 			]
 		},
@@ -3191,6 +5202,26 @@
 			"id": "s059",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -3204,7 +5235,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w224"
+					"id": "w224",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3215,7 +5250,11 @@
 						"number": "pl"
 					},
 					"id": "w225",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -3223,6 +5262,26 @@
 			"id": "s060",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, dla nieprawości naszych starte.",
+				"en": "Heart of Jesus, bruised for our offences."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -3234,7 +5293,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w226"
+					"id": "w226",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -3246,7 +5309,11 @@
 						"gender": "m"
 					},
 					"id": "w227",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "attrítum",
@@ -3262,7 +5329,11 @@
 						"conj": 3
 					},
 					"head": "w226",
-					"id": "w228"
+					"id": "w228",
+					"gloss": {
+						"pl": "starte",
+						"en": "bruised"
+					}
 				},
 				{
 					"form": "propter",
@@ -3272,7 +5343,11 @@
 						"governs": "acc"
 					},
 					"head": "w230",
-					"id": "w229"
+					"id": "w229",
+					"gloss": {
+						"pl": "dla",
+						"en": "by reason of"
+					}
 				},
 				{
 					"form": "scélera",
@@ -3284,7 +5359,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w230"
+					"id": "w230",
+					"gloss": {
+						"pl": "nieprawości",
+						"en": "offenses"
+					}
 				},
 				{
 					"form": "nostra",
@@ -3297,7 +5376,11 @@
 					},
 					"head": "w230",
 					"id": "w231",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nasze",
+						"en": "our"
+					}
 				}
 			]
 		},
@@ -3305,6 +5388,26 @@
 			"id": "s061",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -3318,7 +5421,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w232"
+					"id": "w232",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3329,7 +5436,11 @@
 						"number": "pl"
 					},
 					"id": "w233",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -3337,6 +5448,26 @@
 			"id": "s062",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, aż do śmierci posłuszne.",
+				"en": "Heart of Jesus, obedient unto death."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -3348,7 +5479,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w234"
+					"id": "w234",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -3360,7 +5495,11 @@
 						"gender": "m"
 					},
 					"id": "w235",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "usque",
@@ -3368,7 +5507,11 @@
 					"morph": {
 						"pos": "adv"
 					},
-					"id": "w236"
+					"id": "w236",
+					"gloss": {
+						"pl": "aż",
+						"en": "even until"
+					}
 				},
 				{
 					"form": "ad",
@@ -3378,7 +5521,11 @@
 						"governs": "acc"
 					},
 					"head": "w238",
-					"id": "w237"
+					"id": "w237",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"form": "mortem",
@@ -3390,7 +5537,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w238"
+					"id": "w238",
+					"gloss": {
+						"pl": "śmierci",
+						"en": "death"
+					}
 				},
 				{
 					"form": "obœ́diens",
@@ -3406,7 +5557,11 @@
 						"conj": 4
 					},
 					"id": "w239",
-					"head": "w234"
+					"head": "w234",
+					"gloss": {
+						"pl": "posłuszne",
+						"en": "obedient"
+					}
 				},
 				{
 					"form": "factum",
@@ -3423,7 +5578,11 @@
 					},
 					"id": "w240",
 					"post": ".",
-					"head": "w234"
+					"head": "w234",
+					"gloss": {
+						"pl": "uczynione",
+						"en": "made"
+					}
 				}
 			]
 		},
@@ -3431,6 +5590,26 @@
 			"id": "s063",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -3444,7 +5623,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w241"
+					"id": "w241",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3455,7 +5638,11 @@
 						"number": "pl"
 					},
 					"id": "w242",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -3463,6 +5650,26 @@
 			"id": "s064",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, włócznią przebite.",
+				"en": "Heart of Jesus, pierced with a lance."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -3474,7 +5681,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w243"
+					"id": "w243",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -3486,7 +5697,11 @@
 						"gender": "m"
 					},
 					"id": "w244",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "láncea",
@@ -3498,7 +5713,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w245"
+					"id": "w245",
+					"gloss": {
+						"pl": "włócznią",
+						"en": "with a lance"
+					}
 				},
 				{
 					"form": "perforátum",
@@ -3515,7 +5734,11 @@
 					},
 					"head": "w243",
 					"id": "w246",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "przebite",
+						"en": "pierced"
+					}
 				}
 			]
 		},
@@ -3523,6 +5746,26 @@
 			"id": "s065",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -3536,7 +5779,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w247"
+					"id": "w247",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3547,7 +5794,11 @@
 						"number": "pl"
 					},
 					"id": "w248",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -3555,6 +5806,26 @@
 			"id": "s066",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, źródło wszelkiej pociechy.",
+				"en": "Heart of Jesus, source of all consolation."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -3566,7 +5837,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w249"
+					"id": "w249",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -3578,7 +5853,11 @@
 						"gender": "m"
 					},
 					"id": "w250",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "fons",
@@ -3590,7 +5869,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w251"
+					"id": "w251",
+					"gloss": {
+						"pl": "źródło",
+						"en": "fountain"
+					}
 				},
 				{
 					"form": "totíus",
@@ -3602,7 +5885,11 @@
 						"gender": "f"
 					},
 					"head": "w253",
-					"id": "w252"
+					"id": "w252",
+					"gloss": {
+						"pl": "całej",
+						"en": "of the whole"
+					}
 				},
 				{
 					"form": "consolatiónis",
@@ -3615,7 +5902,11 @@
 						"decl": 3
 					},
 					"id": "w253",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "pociechy",
+						"en": "consolation"
+					}
 				}
 			]
 		},
@@ -3623,6 +5914,26 @@
 			"id": "s067",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -3636,7 +5947,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w254"
+					"id": "w254",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3647,7 +5962,11 @@
 						"number": "pl"
 					},
 					"id": "w255",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -3655,6 +5974,26 @@
 			"id": "s068",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, życie i zmartwychwstanie nasze.",
+				"en": "Heart of Jesus, our life and resurrection."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -3666,7 +6005,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w256"
+					"id": "w256",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -3678,7 +6021,11 @@
 						"gender": "m"
 					},
 					"id": "w257",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "vita",
@@ -3690,7 +6037,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w258"
+					"id": "w258",
+					"gloss": {
+						"pl": "życie",
+						"en": "life"
+					}
 				},
 				{
 					"form": "et",
@@ -3698,7 +6049,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w259"
+					"id": "w259",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "resurréctio",
@@ -3710,7 +6065,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w260"
+					"id": "w260",
+					"gloss": {
+						"pl": "zmartwychwstanie",
+						"en": "resurrection"
+					}
 				},
 				{
 					"form": "nostra",
@@ -3723,7 +6082,11 @@
 					},
 					"head": "w260",
 					"id": "w261",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nasze",
+						"en": "our"
+					}
 				}
 			]
 		},
@@ -3731,6 +6094,26 @@
 			"id": "s069",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -3744,7 +6127,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w262"
+					"id": "w262",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3755,7 +6142,11 @@
 						"number": "pl"
 					},
 					"id": "w263",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -3763,6 +6154,26 @@
 			"id": "s070",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, pokoju i pojednanie nasze.",
+				"en": "Heart of Jesus, our peace and reconciliation."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -3774,7 +6185,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w264"
+					"id": "w264",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -3786,7 +6201,11 @@
 						"gender": "m"
 					},
 					"id": "w265",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "pax",
@@ -3798,7 +6217,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w266"
+					"id": "w266",
+					"gloss": {
+						"pl": "pokój",
+						"en": "peace"
+					}
 				},
 				{
 					"form": "et",
@@ -3806,7 +6229,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w267"
+					"id": "w267",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "reconciliátio",
@@ -3818,7 +6245,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w268"
+					"id": "w268",
+					"gloss": {
+						"pl": "pojednanie",
+						"en": "reconciliation"
+					}
 				},
 				{
 					"form": "nostra",
@@ -3831,7 +6262,11 @@
 					},
 					"head": "w268",
 					"id": "w269",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nasze",
+						"en": "our"
+					}
 				}
 			]
 		},
@@ -3839,6 +6274,26 @@
 			"id": "s071",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -3852,7 +6307,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w270"
+					"id": "w270",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3863,7 +6322,11 @@
 						"number": "pl"
 					},
 					"id": "w271",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -3871,6 +6334,26 @@
 			"id": "s072",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, krwawa ofiaro grzeszników.",
+				"en": "Heart of Jesus, victim for sinners."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -3882,7 +6365,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w272"
+					"id": "w272",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -3894,7 +6381,11 @@
 						"gender": "m"
 					},
 					"id": "w273",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "víctima",
@@ -3906,7 +6397,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w274"
+					"id": "w274",
+					"gloss": {
+						"pl": "ofiara",
+						"en": "victim"
+					}
 				},
 				{
 					"form": "peccatórum",
@@ -3919,7 +6414,11 @@
 						"decl": 3
 					},
 					"id": "w275",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "grzeszników",
+						"en": "of sinners"
+					}
 				}
 			]
 		},
@@ -3927,6 +6426,26 @@
 			"id": "s073",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -3940,7 +6459,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w276"
+					"id": "w276",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3951,7 +6474,11 @@
 						"number": "pl"
 					},
 					"id": "w277",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -3959,6 +6486,26 @@
 			"id": "s074",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, zbawienie ufających Tobie.",
+				"en": "Heart of Jesus, salvation of those who trust in Thee."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -3970,7 +6517,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w278"
+					"id": "w278",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -3982,7 +6533,11 @@
 						"gender": "m"
 					},
 					"id": "w279",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "salus",
@@ -3994,7 +6549,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w280"
+					"id": "w280",
+					"gloss": {
+						"pl": "zbawienie",
+						"en": "salvation"
+					}
 				},
 				{
 					"form": "in",
@@ -4004,7 +6563,11 @@
 						"governs": "abl"
 					},
 					"head": "w282",
-					"id": "w281"
+					"id": "w281",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"form": "te",
@@ -4014,7 +6577,11 @@
 						"case": "abl",
 						"number": "sg"
 					},
-					"id": "w282"
+					"id": "w282",
+					"gloss": {
+						"pl": "Tobie",
+						"en": "Thee"
+					}
 				},
 				{
 					"form": "sperántium",
@@ -4031,7 +6598,11 @@
 					},
 					"id": "w283",
 					"post": ".",
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "ufających",
+						"en": "of those who trust"
+					}
 				}
 			]
 		},
@@ -4039,6 +6610,26 @@
 			"id": "s075",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -4052,7 +6643,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w284"
+					"id": "w284",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4063,7 +6658,11 @@
 						"number": "pl"
 					},
 					"id": "w285",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -4071,6 +6670,26 @@
 			"id": "s076",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, nadziejo w Tobie umierających.",
+				"en": "Heart of Jesus, hope of those who die in Thee."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -4082,7 +6701,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w286"
+					"id": "w286",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -4094,7 +6717,11 @@
 						"gender": "m"
 					},
 					"id": "w287",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "spes",
@@ -4106,7 +6733,11 @@
 						"gender": "f",
 						"decl": 5
 					},
-					"id": "w288"
+					"id": "w288",
+					"gloss": {
+						"pl": "nadzieja",
+						"en": "hope"
+					}
 				},
 				{
 					"form": "in",
@@ -4116,7 +6747,11 @@
 						"governs": "abl"
 					},
 					"head": "w290",
-					"id": "w289"
+					"id": "w289",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"form": "te",
@@ -4126,7 +6761,11 @@
 						"case": "abl",
 						"number": "sg"
 					},
-					"id": "w290"
+					"id": "w290",
+					"gloss": {
+						"pl": "Tobie",
+						"en": "Thee"
+					}
 				},
 				{
 					"form": "moriéntium",
@@ -4143,7 +6782,11 @@
 					},
 					"id": "w291",
 					"post": ".",
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "umierających",
+						"en": "of the dying"
+					}
 				}
 			]
 		},
@@ -4151,6 +6794,26 @@
 			"id": "s077",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -4164,7 +6827,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w292"
+					"id": "w292",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4175,7 +6842,11 @@
 						"number": "pl"
 					},
 					"id": "w293",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -4183,6 +6854,26 @@
 			"id": "s078",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Serce Jezusa, rozkoszy wszystkich Świętych.",
+				"en": "Heart of Jesus, delight of all the Saints."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Cor",
@@ -4194,7 +6885,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w294"
+					"id": "w294",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -4206,7 +6901,11 @@
 						"gender": "m"
 					},
 					"id": "w295",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "delíciæ",
@@ -4218,7 +6917,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w296"
+					"id": "w296",
+					"gloss": {
+						"pl": "rozkosze",
+						"en": "delight"
+					}
 				},
 				{
 					"form": "Sanctórum",
@@ -4230,7 +6933,11 @@
 						"gender": "m"
 					},
 					"id": "w297",
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "Świętych",
+						"en": "of the Saints"
+					}
 				},
 				{
 					"form": "ómnium",
@@ -4243,7 +6950,11 @@
 					},
 					"id": "w298",
 					"post": ".",
-					"head": "w297"
+					"head": "w297",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					}
 				}
 			]
 		},
@@ -4251,6 +6962,26 @@
 			"id": "s079",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -4264,7 +6995,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w299"
+					"id": "w299",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4275,7 +7010,11 @@
 						"number": "pl"
 					},
 					"id": "w300",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -4283,6 +7022,26 @@
 			"id": "s080",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Baranku Boży, który gładzisz grzechy świata.",
+				"en": "Lamb of God, who takest away the sins of the world."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Agnus",
@@ -4294,7 +7053,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w301"
+					"id": "w301",
+					"gloss": {
+						"pl": "Baranku",
+						"en": "Lamb"
+					}
 				},
 				{
 					"form": "Dei",
@@ -4307,7 +7070,11 @@
 						"decl": 2
 					},
 					"id": "w302",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					}
 				},
 				{
 					"form": "qui",
@@ -4318,7 +7085,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w303"
+					"id": "w303",
+					"gloss": {
+						"pl": "który",
+						"en": "who"
+					}
 				},
 				{
 					"form": "tollis",
@@ -4332,7 +7103,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"id": "w304"
+					"id": "w304",
+					"gloss": {
+						"pl": "gładzisz",
+						"en": "take away"
+					}
 				},
 				{
 					"form": "peccáta",
@@ -4344,7 +7119,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w305"
+					"id": "w305",
+					"gloss": {
+						"pl": "grzechy",
+						"en": "sins"
+					}
 				},
 				{
 					"form": "mundi",
@@ -4357,7 +7136,11 @@
 						"decl": 2
 					},
 					"id": "w306",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
+					}
 				}
 			]
 		},
@@ -4365,6 +7148,26 @@
 			"id": "s081",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Przepuść nam, Panie.",
+				"en": "Spare us, O Lord."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Parce",
@@ -4378,7 +7181,11 @@
 						"person": 2,
 						"conj": 3
 					},
-					"id": "w307"
+					"id": "w307",
+					"gloss": {
+						"pl": "przepuść",
+						"en": "spare"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4389,7 +7196,11 @@
 						"number": "pl"
 					},
 					"id": "w308",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "nam",
+						"en": "to us"
+					}
 				},
 				{
 					"form": "Dómine",
@@ -4402,7 +7213,11 @@
 						"decl": 2
 					},
 					"id": "w309",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
+					}
 				}
 			]
 		},
@@ -4410,6 +7225,26 @@
 			"id": "s082",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Baranku Boży, który gładzisz grzechy świata.",
+				"en": "Lamb of God, who takest away the sins of the world."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Agnus",
@@ -4421,7 +7256,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w310"
+					"id": "w310",
+					"gloss": {
+						"pl": "Baranku",
+						"en": "Lamb"
+					}
 				},
 				{
 					"form": "Dei",
@@ -4434,7 +7273,11 @@
 						"decl": 2
 					},
 					"id": "w311",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					}
 				},
 				{
 					"form": "qui",
@@ -4445,7 +7288,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w312"
+					"id": "w312",
+					"gloss": {
+						"pl": "który",
+						"en": "who"
+					}
 				},
 				{
 					"form": "tollis",
@@ -4459,7 +7306,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"id": "w313"
+					"id": "w313",
+					"gloss": {
+						"pl": "gładzisz",
+						"en": "take away"
+					}
 				},
 				{
 					"form": "peccáta",
@@ -4471,7 +7322,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w314"
+					"id": "w314",
+					"gloss": {
+						"pl": "grzechy",
+						"en": "sins"
+					}
 				},
 				{
 					"form": "mundi",
@@ -4484,7 +7339,11 @@
 						"decl": 2
 					},
 					"id": "w315",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
+					}
 				}
 			]
 		},
@@ -4492,6 +7351,26 @@
 			"id": "s083",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Wysłuchaj nas, Panie.",
+				"en": "Graciously hear us, O Lord."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Exáudi",
@@ -4505,7 +7384,11 @@
 						"voice": "act",
 						"conj": 4
 					},
-					"id": "w316"
+					"id": "w316",
+					"gloss": {
+						"pl": "wysłuchaj",
+						"en": "graciously hear"
+					}
 				},
 				{
 					"form": "nos",
@@ -4516,7 +7399,11 @@
 						"number": "pl"
 					},
 					"id": "w317",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
+					}
 				},
 				{
 					"form": "Dómine",
@@ -4529,7 +7416,11 @@
 						"decl": 2
 					},
 					"id": "w318",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
+					}
 				}
 			]
 		},
@@ -4537,6 +7428,26 @@
 			"id": "s084",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Baranku Boży, który gładzisz grzechy świata.",
+				"en": "Lamb of God, who takest away the sins of the world."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Agnus",
@@ -4548,7 +7459,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w319"
+					"id": "w319",
+					"gloss": {
+						"pl": "Baranku",
+						"en": "Lamb"
+					}
 				},
 				{
 					"form": "Dei",
@@ -4561,7 +7476,11 @@
 						"decl": 2
 					},
 					"id": "w320",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					}
 				},
 				{
 					"form": "qui",
@@ -4572,7 +7491,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w321"
+					"id": "w321",
+					"gloss": {
+						"pl": "który",
+						"en": "who"
+					}
 				},
 				{
 					"form": "tollis",
@@ -4586,7 +7509,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"id": "w322"
+					"id": "w322",
+					"gloss": {
+						"pl": "gładzisz",
+						"en": "take away"
+					}
 				},
 				{
 					"form": "peccáta",
@@ -4598,7 +7525,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w323"
+					"id": "w323",
+					"gloss": {
+						"pl": "grzechy",
+						"en": "sins"
+					}
 				},
 				{
 					"form": "mundi",
@@ -4611,7 +7542,11 @@
 						"decl": 2
 					},
 					"id": "w324",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
+					}
 				}
 			]
 		},
@@ -4619,6 +7554,26 @@
 			"id": "s085",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -4632,7 +7587,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w325"
+					"id": "w325",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4643,7 +7602,11 @@
 						"number": "pl"
 					},
 					"id": "w326",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -4651,6 +7614,26 @@
 			"id": "s086",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Jezu cichy i pokornego serca.",
+				"en": "Jesus, meek and humble of heart."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Iesu",
@@ -4662,7 +7645,11 @@
 						"gender": "m"
 					},
 					"id": "w327",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Jezu",
+						"en": "Jesus"
+					}
 				},
 				{
 					"form": "mitis",
@@ -4674,7 +7661,11 @@
 						"gender": "m"
 					},
 					"head": "w327",
-					"id": "w328"
+					"id": "w328",
+					"gloss": {
+						"pl": "cichy",
+						"en": "meek"
+					}
 				},
 				{
 					"form": "et",
@@ -4682,7 +7673,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w329"
+					"id": "w329",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "húmilis",
@@ -4694,7 +7689,11 @@
 						"gender": "m"
 					},
 					"head": "w327",
-					"id": "w330"
+					"id": "w330",
+					"gloss": {
+						"pl": "pokorny",
+						"en": "humble"
+					}
 				},
 				{
 					"form": "Corde",
@@ -4707,7 +7706,11 @@
 						"decl": 3
 					},
 					"id": "w331",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "sercem",
+						"en": "in heart"
+					}
 				}
 			]
 		},
@@ -4715,6 +7718,26 @@
 			"id": "s087",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Uczyń serca nasze według Serca Twego.",
+				"en": "Make our hearts like unto Thine."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Fac",
@@ -4728,7 +7751,11 @@
 						"tense": "pres",
 						"voice": "act"
 					},
-					"id": "w332"
+					"id": "w332",
+					"gloss": {
+						"pl": "uczyń",
+						"en": "make"
+					}
 				},
 				{
 					"form": "cor",
@@ -4740,7 +7767,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w333"
+					"id": "w333",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "nostrum",
@@ -4752,7 +7783,11 @@
 						"gender": "n"
 					},
 					"head": "w333",
-					"id": "w334"
+					"id": "w334",
+					"gloss": {
+						"pl": "nasze",
+						"en": "our"
+					}
 				},
 				{
 					"form": "secúndum",
@@ -4762,7 +7797,11 @@
 						"governs": "acc"
 					},
 					"head": "w336",
-					"id": "w335"
+					"id": "w335",
+					"gloss": {
+						"pl": "według",
+						"en": "according to"
+					}
 				},
 				{
 					"form": "Cor",
@@ -4774,7 +7813,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w336"
+					"id": "w336",
+					"gloss": {
+						"pl": "Serca",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "tuum",
@@ -4787,13 +7830,37 @@
 					},
 					"head": "w336",
 					"id": "w337",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Twego",
+						"en": "Thy"
+					}
 				}
 			]
 		},
 		{
 			"id": "s088",
 			"type": "verse",
+			"translation": {
+				"pl": "Módlmy się.",
+				"en": "Let us pray."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Orémus",
@@ -4808,13 +7875,37 @@
 						"conj": 1
 					},
 					"id": "w338",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "módlmy się",
+						"en": "let us pray"
+					}
 				}
 			]
 		},
 		{
 			"id": "s089",
 			"type": "verse",
+			"translation": {
+				"pl": "Wszechmogący, wieczny Boże, wejrzyj na Serce najmilszego Syna swego i na chwałę, i zadośćuczynienie, jakie w imieniu grzeszników Ci składa; daj się przebłagać tym, którzy żebrzą Twojego miłosierdzia, i racz udzielić przebaczenia w imię tegoż Syna swego, Jezusa Chrystusa, który z Tobą żyje i króluje na wieki wieków. Amen.",
+				"en": "Almighty and eternal God, look upon the Heart of Thy most beloved Son and upon the praises and satisfaction which He offers Thee in the name of sinners; and to those who implore Thy mercy, in Thy great goodness grant forgiveness in the name of the same Jesus Christ, Thy Son, who lives and reigns with Thee for ever and ever. Amen."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania do Najświętszego Serca Pana Jezusa, p. 10",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Sacratissimi Cordis Iesu",
+						"url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Omnípotens",
@@ -4826,7 +7917,11 @@
 						"gender": "m"
 					},
 					"head": "w341",
-					"id": "w339"
+					"id": "w339",
+					"gloss": {
+						"pl": "Wszechmogący",
+						"en": "Almighty"
+					}
 				},
 				{
 					"form": "sempitérne",
@@ -4838,7 +7933,11 @@
 						"gender": "m"
 					},
 					"head": "w341",
-					"id": "w340"
+					"id": "w340",
+					"gloss": {
+						"pl": "wieczny",
+						"en": "eternal"
+					}
 				},
 				{
 					"form": "Deus",
@@ -4851,7 +7950,11 @@
 						"decl": 2
 					},
 					"id": "w341",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
+					}
 				},
 				{
 					"form": "réspice",
@@ -4865,7 +7968,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"id": "w342"
+					"id": "w342",
+					"gloss": {
+						"pl": "wejrzyj",
+						"en": "look upon"
+					}
 				},
 				{
 					"form": "in",
@@ -4875,7 +7982,11 @@
 						"governs": "acc"
 					},
 					"head": "w344",
-					"id": "w343"
+					"id": "w343",
+					"gloss": {
+						"pl": "w",
+						"en": "upon"
+					}
 				},
 				{
 					"form": "Cor",
@@ -4887,7 +7998,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w344"
+					"id": "w344",
+					"gloss": {
+						"pl": "serce",
+						"en": "heart"
+					}
 				},
 				{
 					"form": "dilectíssimi",
@@ -4900,7 +8015,11 @@
 						"degree": "sup"
 					},
 					"head": "w346",
-					"id": "w345"
+					"id": "w345",
+					"gloss": {
+						"pl": "najmilszego",
+						"en": "most beloved"
+					}
 				},
 				{
 					"form": "Fílii",
@@ -4913,13 +8032,9 @@
 						"decl": 2
 					},
 					"id": "w346",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Syna",
+						"en": "of the Son"
 					}
 				},
 				{
@@ -4932,7 +8047,11 @@
 						"gender": "m"
 					},
 					"head": "w346",
-					"id": "w347"
+					"id": "w347",
+					"gloss": {
+						"pl": "Twojego",
+						"en": "Thy"
+					}
 				},
 				{
 					"form": "et",
@@ -4940,7 +8059,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w348"
+					"id": "w348",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "in",
@@ -4950,7 +8073,11 @@
 						"governs": "acc"
 					},
 					"head": "w350",
-					"id": "w349"
+					"id": "w349",
+					"gloss": {
+						"pl": "w",
+						"en": "upon"
+					}
 				},
 				{
 					"form": "laudes",
@@ -4962,7 +8089,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w350"
+					"id": "w350",
+					"gloss": {
+						"pl": "chwały",
+						"en": "praises"
+					}
 				},
 				{
 					"form": "et",
@@ -4970,7 +8101,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w351"
+					"id": "w351",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "satisfactiónes",
@@ -4983,7 +8118,11 @@
 						"decl": 3
 					},
 					"id": "w352",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "zadośćuczynienia",
+						"en": "satisfactions"
+					}
 				},
 				{
 					"form": "quas",
@@ -4994,7 +8133,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"id": "w353"
+					"id": "w353",
+					"gloss": {
+						"pl": "które",
+						"en": "which"
+					}
 				},
 				{
 					"form": "in",
@@ -5004,7 +8147,11 @@
 						"governs": "abl"
 					},
 					"head": "w355",
-					"id": "w354"
+					"id": "w354",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"form": "nómine",
@@ -5016,7 +8163,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w355"
+					"id": "w355",
+					"gloss": {
+						"pl": "imieniu",
+						"en": "name"
+					}
 				},
 				{
 					"form": "peccatórum",
@@ -5028,7 +8179,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w356"
+					"id": "w356",
+					"gloss": {
+						"pl": "grzeszników",
+						"en": "of sinners"
+					}
 				},
 				{
 					"form": "tibi",
@@ -5038,7 +8193,11 @@
 						"case": "dat",
 						"number": "sg"
 					},
-					"id": "w357"
+					"id": "w357",
+					"gloss": {
+						"pl": "Tobie",
+						"en": "to Thee"
+					}
 				},
 				{
 					"form": "persólvit",
@@ -5053,7 +8212,11 @@
 						"conj": 3
 					},
 					"id": "w358",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "składa",
+						"en": "offers"
+					}
 				},
 				{
 					"form": "iisque",
@@ -5065,13 +8228,9 @@
 						"gender": "m"
 					},
 					"id": "w359",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "i tym",
+						"en": "and to those"
 					}
 				},
 				{
@@ -5084,7 +8243,11 @@
 						"number": "sg",
 						"pos": "noun"
 					},
-					"id": "w360"
+					"id": "w360",
+					"gloss": {
+						"pl": "miłosierdzia",
+						"en": "mercy"
+					}
 				},
 				{
 					"form": "tuam",
@@ -5096,7 +8259,11 @@
 						"gender": "f"
 					},
 					"head": "w360",
-					"id": "w361"
+					"id": "w361",
+					"gloss": {
+						"pl": "Twojego",
+						"en": "Thy"
+					}
 				},
 				{
 					"form": "peténtibus",
@@ -5113,7 +8280,11 @@
 					},
 					"id": "w362",
 					"post": ",",
-					"head": "w359"
+					"head": "w359",
+					"gloss": {
+						"pl": "proszącym",
+						"en": "those who ask"
+					}
 				},
 				{
 					"form": "tu",
@@ -5123,7 +8294,11 @@
 						"case": "nom",
 						"number": "sg"
 					},
-					"id": "w363"
+					"id": "w363",
+					"gloss": {
+						"pl": "Ty",
+						"en": "Thou"
+					}
 				},
 				{
 					"form": "véniam",
@@ -5135,7 +8310,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w364"
+					"id": "w364",
+					"gloss": {
+						"pl": "przebaczenia",
+						"en": "pardon"
+					}
 				},
 				{
 					"form": "concéde",
@@ -5149,7 +8328,11 @@
 						"number": "sg",
 						"conj": 3
 					},
-					"id": "w365"
+					"id": "w365",
+					"gloss": {
+						"pl": "udziel",
+						"en": "grant"
+					}
 				},
 				{
 					"form": "placátus",
@@ -5165,7 +8348,11 @@
 						"conj": 1
 					},
 					"id": "w366",
-					"head": "w363"
+					"head": "w363",
+					"gloss": {
+						"pl": "przebłagany",
+						"en": "appeased"
+					}
 				},
 				{
 					"form": "in",
@@ -5175,7 +8362,11 @@
 						"governs": "abl"
 					},
 					"head": "w368",
-					"id": "w367"
+					"id": "w367",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"form": "nómine",
@@ -5187,7 +8378,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w368"
+					"id": "w368",
+					"gloss": {
+						"pl": "imieniu",
+						"en": "name"
+					}
 				},
 				{
 					"form": "eiúsdem",
@@ -5198,7 +8393,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w369"
+					"id": "w369",
+					"gloss": {
+						"pl": "tegoż",
+						"en": "of the same"
+					}
 				},
 				{
 					"form": "Fílii",
@@ -5211,13 +8410,9 @@
 						"decl": 2
 					},
 					"id": "w370",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Syna",
+						"en": "of the Son"
 					}
 				},
 				{
@@ -5230,7 +8425,11 @@
 						"gender": "m"
 					},
 					"head": "w370",
-					"id": "w371"
+					"id": "w371",
+					"gloss": {
+						"pl": "Twojego",
+						"en": "Thy"
+					}
 				},
 				{
 					"form": "Iesu",
@@ -5241,7 +8440,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w372"
+					"id": "w372",
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
+					}
 				},
 				{
 					"form": "Christi",
@@ -5254,7 +8457,11 @@
 						"decl": 2
 					},
 					"id": "w373",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "of Christ"
+					}
 				},
 				{
 					"form": "qui",
@@ -5265,7 +8472,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w374"
+					"id": "w374",
+					"gloss": {
+						"pl": "który",
+						"en": "who"
+					}
 				},
 				{
 					"form": "tecum",
@@ -5275,7 +8486,11 @@
 						"case": "abl",
 						"number": "sg"
 					},
-					"id": "w375"
+					"id": "w375",
+					"gloss": {
+						"pl": "z Tobą",
+						"en": "with Thee"
+					}
 				},
 				{
 					"form": "vivit",
@@ -5289,7 +8504,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"id": "w376"
+					"id": "w376",
+					"gloss": {
+						"pl": "żyje",
+						"en": "liveth"
+					}
 				},
 				{
 					"form": "et",
@@ -5297,7 +8516,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w377"
+					"id": "w377",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "regnat",
@@ -5311,7 +8534,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w378"
+					"id": "w378",
+					"gloss": {
+						"pl": "króluje",
+						"en": "reigneth"
+					}
 				},
 				{
 					"form": "in",
@@ -5321,7 +8548,11 @@
 						"governs": "acc"
 					},
 					"head": "w380",
-					"id": "w379"
+					"id": "w379",
+					"gloss": {
+						"pl": "na",
+						"en": "unto"
+					}
 				},
 				{
 					"form": "sǽcula",
@@ -5333,7 +8564,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w380"
+					"id": "w380",
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
+					}
 				},
 				{
 					"form": "sæculórum",
@@ -5346,7 +8581,11 @@
 						"decl": 2
 					},
 					"id": "w381",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
+					}
 				},
 				{
 					"form": "Amen",
@@ -5355,9 +8594,130 @@
 						"pos": "intj"
 					},
 					"id": "w382",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The approved Litany of the Most Sacred Heart of Jesus, including its versicle and concluding collect.",
+		"source": {
+			"method": "Transcribed from the 1952 Enchiridion Indulgentiarum and collated against the independent TPL transcription.",
+			"witnesses": "witnesses/litaniae.sacratissimi-cordis-iesu/",
+			"apparatus": "witnesses/litaniae.sacratissimi-cordis-iesu/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "accepted"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"words": {
+			"w001": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w005": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w038": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w134": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w164": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w188": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w346": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w359": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w370": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

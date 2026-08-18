@@ -9,41 +9,18 @@
 	"ids": {
 		"next": 21
 	},
-	"status": "working-edition",
-	"notes": "The dialogue that opens the Preface, sung by priest and people. Its own document because it is a fixed exchange the reader looks up by name, and because everything after it changes with the day. CORDA at w008 is accusative with no verb expressed: the missal's Sursum corda is an elliptical command, and the response supplies the verb (habémus). SURSUM at w007 is the adverb, not a preposition — it governs nothing. DÓMINO DEO NOSTRO at w014-w016 is a dative and its apposition, tagged as such; witness do prints a comma between them, adjudicated in the apparatus with the corpus rulings on appositions. VOBÍSCUM at w002 is the pronoun with its enclitic cum; Collatinus dictionaries the fused form as a lemma of its own and tags it singular, which the pipeline sets aside by a recorded ruling; the parse rests on Whitaker's and the edition, as at ordinarium.pax-domini w005.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.praefatio-dialogus/",
-		"apparatus": "witnesses/ordinarium.praefatio-dialogus/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Dialog poprzedzający Prefację. W wezwaniu „Sursum corda” czasownik pozostaje domyślny. W odpowiedzi „Habémus ad Dóminum” niewypowiedzianym dopełnieniem są „corda”. Ostatnią odpowiedź kapłan podejmuje słowami „Vere dignum et iustum est”.",
+		"en": "The dialog preceding the Preface. In “Sursum corda” the verb is left understood. In the response “Habémus ad Dóminum”, the unexpressed object is “corda”. The priest takes up the final response with “Vere dignum et iustum est”."
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Præfationem incipit ambabus manibus positis hinc inde super Altare: quas aliquantulum elevat, cum dicit: Sursum corda. Iungit eas ante pectus, et caput inclinat, cum dicit: Grátias agamus Dómino, Deo nostro.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan kładzie obie ręce na ołtarzu, po jego obu stronach, i unosi je nieco, mówiąc „Sursum corda”. Przy „Grátias agámus” składa je przed piersią i pochyla głowę.",
+				"en": "The priest lays both hands on the altar, one on either side, and raises them a little as he says Sursum corda. At Grátias agámus he joins them before his breast and bows his head."
 			}
 		},
 		{
@@ -51,6 +28,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Pan z wami.",
+				"en": "The Lord be with you."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -62,6 +43,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "The Lord"
 					}
 				},
 				{
@@ -74,13 +59,13 @@
 						"case": "abl",
 						"number": "pl"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "z wami",
+						"en": "with you"
+					},
+					"function": {
+						"pl": "Przyimek „cum” stoi po zaimku osobowym: „vobis” + „cum” tworzy „vobíscum”.",
+						"en": "The preposition “cum” follows the personal pronoun: “vobis” + “cum” forms “vobíscum”."
 					}
 				}
 			]
@@ -100,6 +85,10 @@
 					"source": "DMS 25 a"
 				}
 			},
+			"translation": {
+				"pl": "I z duchem twoim.",
+				"en": "And with your spirit."
+			},
 			"words": [
 				{
 					"id": "w003",
@@ -107,6 +96,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -117,7 +110,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w005",
@@ -129,6 +126,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "duchem",
+						"en": "spirit"
 					}
 				},
 				{
@@ -142,7 +143,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "twoim",
+						"en": "your"
+					},
+					"function": {
+						"pl": "Zgadza się ze „spíritu” (w005) w odpowiedzi „Et cum spíritu tuo”.",
+						"en": "Agrees with “spíritu” (w005) in the response “Et cum spíritu tuo”."
+					}
 				}
 			]
 		},
@@ -151,6 +160,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "W górę serca.",
+				"en": "Lift up your hearts."
+			},
 			"words": [
 				{
 					"id": "w007",
@@ -158,6 +171,10 @@
 					"lemma": "sursum",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "w górę",
+						"en": "upwards"
 					}
 				},
 				{
@@ -171,6 +188,14 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "serca",
+						"en": "hearts"
+					},
+					"function": {
+						"pl": "Biernik liczby mnogiej w wezwaniu bez wyrażonego czasownika.",
+						"en": "Accusative plural in a call with no expressed verb."
 					}
 				}
 			]
@@ -190,6 +215,10 @@
 					"source": "DMS 25 a"
 				}
 			},
+			"translation": {
+				"pl": "Wznosimy je do Pana.",
+				"en": "We lift them up to the Lord."
+			},
 			"words": [
 				{
 					"id": "w009",
@@ -203,6 +232,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "mamy",
+						"en": "we have"
+					},
+					"function": {
+						"pl": "Niewypowiedzianym dopełnieniem „habémus” są „corda” z poprzedniego wezwania.",
+						"en": "The unexpressed object of “habémus” is “corda” from the preceding call."
 					}
 				},
 				{
@@ -213,7 +250,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "ku",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w011",
@@ -226,6 +267,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panu",
+						"en": "the Lord"
 					}
 				}
 			]
@@ -235,6 +280,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Dzięki składajmy Panu, Bogu naszemu.",
+				"en": "Let us give thanks to the Lord our God."
+			},
 			"words": [
 				{
 					"id": "w012",
@@ -246,6 +295,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dzięki",
+						"en": "thanks"
+					},
+					"function": {
+						"pl": "„Grátias ágere” to stały łaciński zwrot oznaczający składanie dzięki.",
+						"en": "“Grátias ágere” is the fixed Latin expression for giving thanks."
 					}
 				},
 				{
@@ -260,6 +317,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "składajmy",
+						"en": "let us give"
+					},
+					"function": {
+						"pl": "Tryb łączący w pierwszej osobie liczby mnogiej, użyty jako zachęta.",
+						"en": "A first-person plural subjunctive used as an exhortation."
 					}
 				},
 				{
@@ -272,6 +337,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panu",
+						"en": "to the Lord"
 					}
 				},
 				{
@@ -284,6 +353,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bogu",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Apozycja (dopowiedzenie) do „Dómino” (w014), stąd celownik.",
+						"en": "In apposition to “Dómino” (w014), and so in the dative."
 					}
 				},
 				{
@@ -297,7 +374,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "naszemu",
+						"en": "our"
+					}
 				}
 			]
 		},
@@ -316,6 +397,10 @@
 					"source": "DMS 25 a"
 				}
 			},
+			"translation": {
+				"pl": "Godne to i sprawiedliwe.",
+				"en": "It is right and just."
+			},
 			"words": [
 				{
 					"id": "w017",
@@ -327,7 +412,15 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w020"
+					"head": "w020",
+					"gloss": {
+						"pl": "godne",
+						"en": "right"
+					},
+					"function": {
+						"pl": "Rodzaj nijaki liczby pojedynczej, użyty bez wyrażonego rzeczownika.",
+						"en": "Neuter singular, used without an expressed noun."
+					}
 				},
 				{
 					"id": "w018",
@@ -335,6 +428,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -347,7 +444,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w020"
+					"head": "w020",
+					"gloss": {
+						"pl": "sprawiedliwe",
+						"en": "just"
+					}
 				},
 				{
 					"id": "w020",
@@ -361,9 +462,62 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "it is"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The dialogue that opens the Preface, sung by priest and people. Its own document because it is a fixed exchange the reader looks up by name, and because everything after it changes with the day. CORDA at w008 is accusative with no verb expressed: the missal's Sursum corda is an elliptical command, and the response supplies the verb (habémus). SURSUM at w007 is the adverb, not a preposition — it governs nothing. DÓMINO DEO NOSTRO at w014-w016 is a dative and its apposition, tagged as such; witness do prints a comma between them, adjudicated in the apparatus with the corpus rulings on appositions. VOBÍSCUM at w002 is the pronoun with its enclitic cum; Collatinus dictionaries the fused form as a lemma of its own and tags it singular, which the pipeline sets aside by a recorded ruling; the parse rests on Whitaker's and the edition, as at ordinarium.pax-domini w005.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.praefatio-dialogus/",
+			"apparatus": "witnesses/ordinarium.praefatio-dialogus/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w002": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

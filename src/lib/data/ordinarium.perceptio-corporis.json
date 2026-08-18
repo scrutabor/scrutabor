@@ -9,28 +9,25 @@
 	"ids": {
 		"next": 51
 	},
-	"status": "working-edition",
-	"notes": "The third of the three prayers before Communion. Like the second, it carries no rubric segment: the witnesses print one rubric for all three, and it stands at the head of ordinarium.qui-dixisti. PERCÉPTIO at w001 is absent from Whitaker's lexicon, so its provenance names Collatinus alone. QUOD at w007 is neuter and picks up Córporis, not the feminine Percéptio that governs the sentence : gender decides it, and the neuter antecedent happens also to stand nearer. PERCIPIÉNDAM at w033 is a gerundive, written as SCHEMA.md requires: a future passive participle, mood part, tense fut, voice pass, with the case, number and gender of medélam. PROSIT at w023 is prosum, a compound of sum, so it carries no conjugation.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variants are adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.perceptio-corporis/",
-		"apparatus": "witnesses/ordinarium.perceptio-corporis/apparatus.json"
+	"about": {
+		"pl": "Modlitwa prosi, aby przyjęcie Ciała Chrystusa nie sprowadziło sądu ani potępienia, lecz służyło ochronie i uzdrowieniu. Jej słowa nawiązują do 1 Kor 11, 29, gdzie św. Paweł przestrzega przed niegodnym przyjmowaniem.",
+		"en": "This prayer asks that receiving the Body of Christ bring neither judgment nor condemnation, but protection and healing. Its wording recalls 1 Corinthians 11:29, where St Paul warns against receiving unworthily."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Epistula I ad Corinthios",
+				"locator": "11, 29",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_epist-i-corinthios_lt.html#11"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Epistula I ad Corinthios",
+				"locator": "11, 29",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_epist-i-corinthios_lt.html#11"
+			}
+		]
 	},
 	"segments": [
 		{
@@ -38,6 +35,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Panie Jezu Chryste, niech przyjęcie Ciała Twojego, które ja niegodny ośmielam się spożyć,",
+				"en": "May the receiving of Your Body, Lord Jesus Christ, which I, unworthy, presume to receive,"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -50,13 +51,13 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Przyjęcie",
+						"en": "The partaking"
+					},
+					"function": {
+						"pl": "Podmiot przy provéniat i prosit.",
+						"en": "Subject of provéniat and prosit."
 					}
 				},
 				{
@@ -69,6 +70,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ciała",
+						"en": "of the Body"
 					}
 				},
 				{
@@ -82,7 +87,15 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "Twego",
+						"en": "Thy"
+					},
+					"function": {
+						"pl": "Dopełniacz rodzaju nijakiego liczby pojedynczej, zgadzający się z Córporis.",
+						"en": "Genitive neuter singular agreeing with Córporis."
+					}
 				},
 				{
 					"id": "w004",
@@ -94,6 +107,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -105,6 +122,10 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezu",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -118,6 +139,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chryste",
+						"en": "Christ"
 					}
 				},
 				{
@@ -129,6 +154,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "które",
+						"en": "which"
+					},
+					"function": {
+						"pl": "Zaimek względny rodzaju nijakiego, odnoszący się do Córporis.",
+						"en": "Neuter relative pronoun referring to Córporis."
 					}
 				},
 				{
@@ -139,6 +172,14 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "ja",
+						"en": "I"
+					},
+					"function": {
+						"pl": "Podmiot præsúmo w mianowniku, wyrażony dla podkreślenia.",
+						"en": "Nominative subject of præsúmo, expressed for emphasis."
 					}
 				},
 				{
@@ -151,7 +192,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "niegodny",
+						"en": "unworthy"
+					},
+					"function": {
+						"pl": "Mianownik rodzaju męskiego liczby pojedynczej, zgadzający się z ego.",
+						"en": "Nominative masculine singular agreeing with ego."
+					}
 				},
 				{
 					"id": "w010",
@@ -163,6 +212,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "spożyć",
+						"en": "to receive"
 					}
 				},
 				{
@@ -178,6 +231,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "ośmielam się",
+						"en": "presume"
+					},
+					"function": {
+						"pl": "Præsúmo znaczy tu ośmielam się przyjąć.",
+						"en": "Præsúmo here means to venture or dare to receive."
 					}
 				}
 			]
@@ -187,6 +248,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "nie ściągnie na mnie wyroku potępienia:",
+				"en": "not bring me to judgment and condemnation:"
+			},
 			"words": [
 				{
 					"id": "w012",
@@ -194,6 +259,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -204,6 +273,14 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mi",
+						"en": "to me"
+					},
+					"function": {
+						"pl": "Celownik przy provéniat.",
+						"en": "Dative with provéniat."
 					}
 				},
 				{
@@ -218,6 +295,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "niech wyjdzie",
+						"en": "turn out"
+					},
+					"function": {
+						"pl": "Tryb łączący czasu teraźniejszego w trzeciej osobie. Provénio znaczy tu wyniknąć lub obrócić się.",
+						"en": "Third-person present subjunctive. Provénio here means to turn out or result."
 					}
 				},
 				{
@@ -228,7 +313,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "na",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w016",
@@ -240,6 +329,28 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "sąd",
+						"en": "judgment"
+					},
+					"function": {
+						"pl": "Słowo użyte w 1 Kor 11,29 w odniesieniu do niegodnego przyjmowania.",
+						"en": "The word used in 1 Corinthians 11:29 for unworthy reception."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "1 Corinthians 11:29"
+							}
+						],
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "1 Corinthians 11:29"
+							}
+						]
 					}
 				},
 				{
@@ -248,6 +359,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -261,6 +376,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "potępienie",
+						"en": "condemnation"
+					},
+					"function": {
+						"pl": "Współrzędne z iudícium po „in”.",
+						"en": "Coordinated with iudícium after in."
 					}
 				}
 			]
@@ -270,6 +393,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "lecz dzięki Twemu miłosierdziu niech mnie chroni oraz skutecznie leczy moją duszę i ciało:",
+				"en": "but through Your loving mercy be for me protection in mind and body, and a healing remedy:"
+			},
 			"words": [
 				{
 					"id": "w019",
@@ -277,6 +404,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "lecz",
+						"en": "but"
 					}
 				},
 				{
@@ -287,7 +418,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w022"
+					"head": "w022",
+					"gloss": {
+						"pl": "dzięki",
+						"en": "by"
+					}
 				},
 				{
 					"id": "w021",
@@ -299,7 +434,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w022"
+					"head": "w022",
+					"gloss": {
+						"pl": "Twojej",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w022",
@@ -311,6 +450,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "dobroci",
+						"en": "loving-kindness"
+					},
+					"function": {
+						"pl": "Przyimek „pro” (w020) z ablativem wskazuje tu podstawę prośby: ze względu na Twoją dobroć.",
+						"en": "Here “pro” (w020) with the ablative expresses the ground of the petition: because of Thy loving-kindness."
 					}
 				},
 				{
@@ -324,6 +471,14 @@
 						"tense": "pres",
 						"mood": "subj",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "niech posłuży",
+						"en": "let it profit"
+					},
+					"function": {
+						"pl": "Ma ten sam podmiot co provéniat i wyraża oczekiwany dobry skutek.",
+						"en": "Shares its subject with provéniat and states the positive outcome requested."
 					}
 				},
 				{
@@ -334,6 +489,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mi",
+						"en": "me"
 					}
 				},
 				{
@@ -344,7 +503,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w026"
+					"head": "w026",
+					"gloss": {
+						"pl": "ku",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w026",
@@ -356,6 +519,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "obronie",
+						"en": "a safeguard"
+					},
+					"function": {
+						"pl": "Biernik po ad, od którego zależą dwa następujące dopełniacze.",
+						"en": "Accusative after ad, governing the two genitives that follow."
 					}
 				},
 				{
@@ -368,6 +539,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "umysłu",
+						"en": "of mind"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od tutaméntum, współrzędny z córporis.",
+						"en": "Genitive dependent on tutaméntum and paired with córporis."
 					}
 				},
 				{
@@ -376,6 +555,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -389,6 +572,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ciała",
+						"en": "of body"
 					}
 				},
 				{
@@ -397,6 +584,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "oraz",
+						"en": "and"
 					}
 				},
 				{
@@ -407,7 +598,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w032"
+					"head": "w032",
+					"gloss": {
+						"pl": "ku",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w032",
@@ -419,6 +614,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "uzdrowieniu",
+						"en": "a healing"
 					}
 				},
 				{
@@ -436,7 +635,15 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"head": "w032"
+					"head": "w032",
+					"gloss": {
+						"pl": "które ma być otrzymane",
+						"en": "to be received"
+					},
+					"function": {
+						"pl": "Gerundivum zgadzające się z „medélam” (w032). Z przyimkiem ad wyraża cel.",
+						"en": "A gerundive agreeing with “medélam” (w032). With ad it expresses purpose."
+					}
 				}
 			]
 		},
@@ -445,6 +652,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Który żyjesz i królujesz z Bogiem Ojcem w jedności Ducha Świętego, Bóg, przez wszystkie wieki wieków. Amen.",
+				"en": "Who live and reign with God the Father in the unity of the Holy Spirit, God, for ever and ever. Amen."
+			},
 			"words": [
 				{
 					"id": "w034",
@@ -455,6 +666,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Który",
+						"en": "Who"
 					}
 				},
 				{
@@ -469,6 +684,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "żyjesz",
+						"en": "livest"
 					}
 				},
 				{
@@ -477,6 +696,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -491,6 +714,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "królujesz",
+						"en": "reignest"
 					}
 				},
 				{
@@ -501,7 +728,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w039"
+					"head": "w039",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w039",
@@ -513,6 +744,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bogiem",
+						"en": "God"
 					}
 				},
 				{
@@ -525,6 +760,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojcem",
+						"en": "the Father"
 					}
 				},
 				{
@@ -535,7 +774,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w042"
+					"head": "w042",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w042",
@@ -547,6 +790,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "jedności",
+						"en": "the unity"
 					}
 				},
 				{
@@ -559,6 +806,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "Ducha",
+						"en": "of the Spirit"
 					}
 				},
 				{
@@ -571,7 +822,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w043"
+					"head": "w043",
+					"gloss": {
+						"pl": "Świętego",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w045",
@@ -584,6 +839,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bóg",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Mianownik przy „vivis” i „regnas”.",
+						"en": "Nominative with “vivis” and “regnas”."
 					}
 				},
 				{
@@ -594,7 +857,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w048"
+					"head": "w048",
+					"gloss": {
+						"pl": "przez",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w047",
@@ -606,7 +873,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w048"
+					"head": "w048",
+					"gloss": {
+						"pl": "wszystkie",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w048",
@@ -618,6 +889,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
 					}
 				},
 				{
@@ -631,6 +906,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
 					}
 				},
 				{
@@ -640,9 +919,50 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The third of the three prayers before Communion. Like the second, it carries no rubric segment: the witnesses print one rubric for all three, and it stands at the head of ordinarium.qui-dixisti. PERCÉPTIO at w001 is absent from Whitaker's lexicon, so its provenance names Collatinus alone. QUOD at w007 is neuter and picks up Córporis, not the feminine Percéptio that governs the sentence : gender decides it, and the neuter antecedent happens also to stand nearer. PERCIPIÉNDAM at w033 is a gerundive, written as SCHEMA.md requires: a future passive participle, mood part, tense fut, voice pass, with the case, number and gender of medélam. PROSIT at w023 is prosum, a compound of sum, so it carries no conjugation.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variants are adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.perceptio-corporis/",
+			"apparatus": "witnesses/ordinarium.perceptio-corporis/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"words": {
+			"w001": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

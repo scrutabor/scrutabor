@@ -9,34 +9,35 @@
 	"ids": {
 		"next": 68
 	},
-	"status": "working-edition",
-	"notes": "The Marian antiphon with the versicle that follows it in the prayers of Leo XIII said after low Mass, and at Compline through the long green season. The whole first half is address: the prayer opens on its verb — SALVE — and pours five vocative names after it before the sentence closes on salve again. EIA at w027 passes the accent heuristic on its own merits: two syllables, the i read as a glide (E-ia), below the three-syllable threshold. SALVE at w001 and w010 is the imperative of salveo, not an interjection: the analyzers head the verb. LACRYMÁRUM at w025 names Collatinus alone; Whitaker's carries only the i-spelling of lacrima. EVÆ at w016 needed the name added to the proper-lemma list. GÉNETRIX at w062 follows the corpus's standing ruling that one spelling of the noun is kept throughout, against witness do here. Witness tpl prints an Amen after Virgo María which the Leonine recension does not have; the witness file transcribes it, and a recension header declares that this edition omits it, and why.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence beyond five adjudicated spellings, each of them a real form of the word.",
-		"witnesses": "witnesses/orationes.salve-regina/",
-		"apparatus": "witnesses/orationes.salve-regina/apparatus.json"
+	"about": {
+		"pl": "Antyfona maryjna odmawiana po Mszy cichej w modlitwach Leona XIII, a w komplecie przez długi okres po Zesłaniu Ducha Świętego. Zwraca się do Najświętszej Maryi Panny jako Królowej i Matki miłosierdzia, a wygnańcy, synowie Ewy, proszą Ją, aby zwróciła ku nim swoje miłosierne oczy i po tym wygnaniu ukazała im Jezusa. Po antyfonie następuje werset z odpowiedzią.",
+		"en": "The Marian antiphon said after low Mass in the prayers of Leo XIII, and at Compline through the long season after Pentecost. It addresses the Blessed Virgin Mary as Queen and Mother of mercy, and the banished children of Eve ask her to turn her merciful eyes toward them and, after this exile, to show them Jesus. A versicle and response follow the antiphon."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 675, p. 520",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 675, p. 520",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "verse",
 			"speaker": "omnes",
+			"translation": {
+				"pl": "Witaj, Królowo, Matko miłosierdzia, życie, słodyczy i nadziejo nasza, witaj.",
+				"en": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -50,6 +51,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "witaj",
+						"en": "hail"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący liczby pojedynczej od sálveo, skierowany do „Regína”: dosłownie „bądź zdrowa”, jako pozdrowienie „witaj”.",
+						"en": "Singular imperative of sálveo, addressed to “Regína”: literally “be well”, used as a greeting, “hail”."
 					}
 				},
 				{
@@ -63,6 +72,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
 					}
 				},
 				{
@@ -75,6 +88,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
 					}
 				},
 				{
@@ -88,6 +105,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "miłosierdzia",
+						"en": "of mercy"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „Mater” (w003).",
+						"en": "Genitive dependent on “Mater” (w003)."
 					}
 				},
 				{
@@ -101,6 +126,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "życie",
+						"en": "life"
 					}
 				},
 				{
@@ -114,6 +143,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "słodyczy",
+						"en": "sweetness"
 					}
 				},
 				{
@@ -122,6 +155,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -134,6 +171,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "nadziejo",
+						"en": "hope"
+					},
+					"function": {
+						"pl": "Wołacz w szeregu rozpoczętym przez „Regína” (w002). Czasownikiem zdania jest „Salve” (w001).",
+						"en": "A vocative in the series begun by “Regína” (w002). The verb of the sentence is “Salve” (w001)."
 					}
 				},
 				{
@@ -147,7 +192,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "nasza",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w010",
@@ -162,6 +211,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "witaj",
+						"en": "hail"
 					}
 				}
 			]
@@ -170,6 +223,10 @@
 			"id": "s02",
 			"type": "verse",
 			"speaker": "omnes",
+			"translation": {
+				"pl": "Do Ciebie wołamy wygnańcy, synowie Ewy.",
+				"en": "To thee do we cry, poor banished children of Eve."
+			},
 			"words": [
 				{
 					"id": "w011",
@@ -179,7 +236,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w012",
@@ -189,6 +250,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "thee"
 					}
 				},
 				{
@@ -204,6 +269,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wołamy",
+						"en": "we cry"
 					}
 				},
 				{
@@ -216,6 +285,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "wygnańcy",
+						"en": "exiles"
+					},
+					"function": {
+						"pl": "Mianownik w apozycji do domyślnego podmiotu „clamámus” (w013).",
+						"en": "Nominative in apposition to the understood subject of “clamámus” (w013)."
 					}
 				},
 				{
@@ -228,6 +305,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "synowie",
+						"en": "children"
 					}
 				},
 				{
@@ -241,6 +322,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Ewy",
+						"en": "of Eve"
 					}
 				}
 			]
@@ -249,6 +334,10 @@
 			"id": "s03",
 			"type": "verse",
 			"speaker": "omnes",
+			"translation": {
+				"pl": "Do Ciebie wzdychamy, jęcząc i płacząc na tym łez padole.",
+				"en": "To thee do we send up our sighs, mourning and weeping in this valley of tears."
+			},
 			"words": [
 				{
 					"id": "w017",
@@ -258,7 +347,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w018",
@@ -268,6 +361,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "thee"
 					}
 				},
 				{
@@ -282,6 +379,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wzdychamy",
+						"en": "we sigh"
 					}
 				},
 				{
@@ -298,7 +399,15 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"head": "w019"
+					"head": "w019",
+					"gloss": {
+						"pl": "jęcząc",
+						"en": "groaning"
+					},
+					"function": {
+						"pl": "Imiesłów w mianowniku liczby mnogiej, zgodny z domyślnym podmiotem „suspirámus” (w019).",
+						"en": "Nominative plural participle agreeing with the understood subject of “suspirámus” (w019)."
+					}
 				},
 				{
 					"id": "w021",
@@ -306,6 +415,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -322,7 +435,11 @@
 						"voice": "act",
 						"conj": 2
 					},
-					"head": "w019"
+					"head": "w019",
+					"gloss": {
+						"pl": "płacząc",
+						"en": "weeping"
+					}
 				},
 				{
 					"id": "w023",
@@ -332,7 +449,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w024",
@@ -343,6 +464,10 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "tym",
+						"en": "this"
 					}
 				},
 				{
@@ -356,13 +481,13 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "łez",
+						"en": "of tears"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby mnogiej zależny od „valle” (w026).",
+						"en": "Genitive plural dependent on “valle” (w026)."
 					}
 				},
 				{
@@ -376,6 +501,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "padole",
+						"en": "valley"
 					}
 				}
 			]
@@ -384,6 +513,10 @@
 			"id": "s04",
 			"type": "verse",
 			"speaker": "omnes",
+			"translation": {
+				"pl": "Przeto, Orędowniczko nasza, one miłosierne oczy Twoje na nas zwróć.",
+				"en": "Turn, then, most gracious Advocate, thine eyes of mercy toward us."
+			},
 			"words": [
 				{
 					"id": "w027",
@@ -391,6 +524,10 @@
 					"lemma": "eia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "nuże",
+						"en": "come then"
 					}
 				},
 				{
@@ -400,6 +537,10 @@
 					"lemma": "ergo",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "więc",
+						"en": "therefore"
 					}
 				},
 				{
@@ -412,6 +553,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Orędowniczko",
+						"en": "Advocate"
 					}
 				},
 				{
@@ -425,7 +570,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "nasza",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w031",
@@ -436,6 +585,14 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "one",
+						"en": "those"
+					},
+					"function": {
+						"pl": "Zaimek wskazujący. Zgadza się z „óculos” (w034).",
+						"en": "Demonstrative agreeing with “óculos” (w034)."
 					}
 				},
 				{
@@ -448,7 +605,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "thine"
+					}
 				},
 				{
 					"id": "w033",
@@ -460,7 +621,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "miłosierne",
+						"en": "merciful"
+					}
 				},
 				{
 					"id": "w034",
@@ -472,6 +637,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "oczy",
+						"en": "eyes"
 					}
 				},
 				{
@@ -482,7 +651,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "ku",
+						"en": "upon"
+					}
 				},
 				{
 					"id": "w036",
@@ -492,6 +665,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nam",
+						"en": "us"
 					}
 				},
 				{
@@ -507,6 +684,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "zwróć",
+						"en": "turn"
 					}
 				}
 			]
@@ -515,6 +696,10 @@
 			"id": "s05",
 			"type": "verse",
 			"speaker": "omnes",
+			"translation": {
+				"pl": "A Jezusa, błogosławiony owoc żywota Twojego, po tym wygnaniu nam okaż.",
+				"en": "And after this our exile show unto us the blessed fruit of thy womb, Jesus."
+			},
 			"words": [
 				{
 					"id": "w038",
@@ -522,6 +707,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -534,6 +723,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -546,7 +739,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w041"
+					"head": "w041",
+					"gloss": {
+						"pl": "błogosławiony",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w041",
@@ -558,6 +755,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "owoc",
+						"en": "fruit"
 					}
 				},
 				{
@@ -570,6 +771,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "żywota",
+						"en": "of the womb"
 					}
 				},
 				{
@@ -583,7 +788,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w042"
+					"head": "w042",
+					"gloss": {
+						"pl": "Twojego",
+						"en": "thy"
+					}
 				},
 				{
 					"id": "w044",
@@ -594,6 +803,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nam",
+						"en": "to us"
 					}
 				},
 				{
@@ -604,7 +817,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w046"
+					"head": "w046",
+					"gloss": {
+						"pl": "po",
+						"en": "after"
+					}
 				},
 				{
 					"id": "w046",
@@ -615,6 +832,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "tym",
+						"en": "this"
 					}
 				},
 				{
@@ -628,6 +849,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wygnaniu",
+						"en": "exile"
 					}
 				},
 				{
@@ -643,6 +868,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "okaż",
+						"en": "show"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący skierowany do Maryi. Dopełnieniem jest „Iesum” (w039).",
+						"en": "Imperative addressed to Mary. Its object is “Iesum” (w039)."
 					}
 				}
 			]
@@ -651,6 +884,10 @@
 			"id": "s06",
 			"type": "verse",
 			"speaker": "omnes",
+			"translation": {
+				"pl": "O łaskawa, o litościwa, o słodka Panno Maryjo.",
+				"en": "O clement, O loving, O sweet Virgin Mary."
+			},
 			"words": [
 				{
 					"id": "w049",
@@ -658,6 +895,10 @@
 					"lemma": "o",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "o",
+						"en": "O"
 					}
 				},
 				{
@@ -671,7 +912,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w055"
+					"head": "w055",
+					"gloss": {
+						"pl": "łaskawa",
+						"en": "gracious"
+					}
 				},
 				{
 					"id": "w051",
@@ -679,6 +924,10 @@
 					"lemma": "o",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "o",
+						"en": "O"
 					}
 				},
 				{
@@ -692,7 +941,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w055"
+					"head": "w055",
+					"gloss": {
+						"pl": "litościwa",
+						"en": "loving"
+					}
 				},
 				{
 					"id": "w053",
@@ -700,6 +953,10 @@
 					"lemma": "o",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "o",
+						"en": "O"
 					}
 				},
 				{
@@ -712,7 +969,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w055"
+					"head": "w055",
+					"gloss": {
+						"pl": "słodka",
+						"en": "sweet"
+					}
 				},
 				{
 					"id": "w055",
@@ -724,6 +985,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Panno",
+						"en": "Virgin"
 					}
 				},
 				{
@@ -737,6 +1002,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryjo",
+						"en": "Mary"
 					}
 				}
 			]
@@ -744,6 +1013,10 @@
 		{
 			"id": "s07",
 			"type": "verse",
+			"translation": {
+				"pl": "Módl się za nami, święta Boża Rodzicielko.",
+				"en": "Pray for us, O holy Mother of God."
+			},
 			"words": [
 				{
 					"id": "w057",
@@ -757,6 +1030,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
 					}
 				},
 				{
@@ -767,7 +1044,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w059"
+					"head": "w059",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w059",
@@ -778,6 +1059,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
 					}
 				},
 				{
@@ -790,7 +1075,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w062"
+					"head": "w062",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w061",
@@ -802,6 +1091,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -815,6 +1108,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Rodzicielko",
+						"en": "Mother"
 					}
 				}
 			]
@@ -823,6 +1120,10 @@
 			"id": "s08",
 			"type": "verse",
 			"speaker": "omnes",
+			"translation": {
+				"pl": "Abyśmy się stali godnymi obietnic Chrystusowych.",
+				"en": "That we may be made worthy of the promises of Christ."
+			},
 			"words": [
 				{
 					"id": "w063",
@@ -830,6 +1131,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyśmy",
+						"en": "that"
 					}
 				},
 				{
@@ -842,7 +1147,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w065"
+					"head": "w065",
+					"gloss": {
+						"pl": "godnymi",
+						"en": "worthy"
+					}
 				},
 				{
 					"id": "w065",
@@ -856,6 +1165,14 @@
 						"mood": "subj",
 						"voice": "pass",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "się stali",
+						"en": "we may be made"
+					},
+					"function": {
+						"pl": "Strona bierna: dosłownie, abyśmy zostali uczynieni godnymi.",
+						"en": "Passive: literally, that we may be made worthy."
 					}
 				},
 				{
@@ -868,6 +1185,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "obietnic",
+						"en": "of the promises"
+					},
+					"function": {
+						"pl": "Ablativus zależny od „digni” (w064).",
+						"en": "Ablative dependent on “digni” (w064)."
 					}
 				},
 				{
@@ -881,9 +1206,50 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "of Christ"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The Marian antiphon with the versicle that follows it in the prayers of Leo XIII said after low Mass, and at Compline through the long green season. The whole first half is address: the prayer opens on its verb — SALVE — and pours five vocative names after it before the sentence closes on salve again. EIA at w027 passes the accent heuristic on its own merits: two syllables, the i read as a glide (E-ia), below the three-syllable threshold. SALVE at w001 and w010 is the imperative of salveo, not an interjection: the analyzers head the verb. LACRYMÁRUM at w025 names Collatinus alone; Whitaker's carries only the i-spelling of lacrima. EVÆ at w016 needed the name added to the proper-lemma list. GÉNETRIX at w062 follows the corpus's standing ruling that one spelling of the noun is kept throughout, against witness do here. Witness tpl prints an Amen after Virgo María which the Leonine recension does not have; the witness file transcribes it, and a recension header declares that this edition omits it, and why.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence beyond five adjudicated spellings, each of them a real form of the word.",
+			"witnesses": "witnesses/orationes.salve-regina/",
+			"apparatus": "witnesses/orationes.salve-regina/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"words": {
+			"w025": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

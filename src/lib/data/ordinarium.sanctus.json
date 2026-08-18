@@ -9,41 +9,60 @@
 	"ids": {
 		"next": 26
 	},
-	"status": "working-edition",
-	"notes": "The Sanctus with the Benedictus, closing the Preface at the threshold of the Canon: the seraphim's cry of Is 6:3 joined to the acclamation of Mt 21:9. Rubric s01 abridges the 1962 rubric as transcribed by witness do (line 203), which prints the comma at Benedíctus that the apparatus declines for the sung text; the bell is carried by the narrative layer; the bow and the sign of the cross stand in the rubric itself. Benedíctus (w017) is tagged as the lexicalized adjective, not as the perfect passive participle of benedícere: both readings are open to the analyzers, and the adjective follows the corpus ruling at orationes.ave-maria w007 and w012.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Three accidental variants (punctuation) adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.sanctus/",
-		"apparatus": "witnesses/ordinarium.sanctus/apparatus.json"
+	"about": {
+		"pl": "Aklamacja łączy wołanie serafinów z wizji Izajasza (Iz 6, 3) ze słowami tłumu witającego Chrystusa w Jerozolimie (Mt 21, 9). Trzykrotne Sanctus wielbi Pana, Boga Zastępów, którego chwałą pełne są niebiosa i ziemia. Benedictus błogosławi Tego, który przychodzi w imię Pańskie.",
+		"en": "The acclamation joins the cry of the seraphim in Isaiah's vision (Is 6:3) to the words of the crowd welcoming Christ into Jerusalem (Mt 21:9). The threefold Sanctus praises the Lord God of hosts, whose glory fills heaven and earth. The Benedictus blesses Him who comes in the name of the Lord."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Prophetia Isaiae",
+				"locator": "6, 3",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_isaiae_lt.html#6"
+			},
+			{
+				"title": "Nova Vulgata, Evangelium secundum Matthaeum",
+				"locator": "21, 9",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-matthaeum_lt.html#21"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Prophetia Isaiae",
+				"locator": "6, 3",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_isaiae_lt.html#6"
+			},
+			{
+				"title": "Nova Vulgata, Evangelium secundum Matthaeum",
+				"locator": "21, 9",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-matthaeum_lt.html#21"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Deinde disiungit manus, et disiunctas tenet usque ad finem Præfationis: qua finita, iterum iungit eas, et inclinatus dicit: Sanctus. Et cum dicit: Benedíctus, qui venit, signum crucis sibi producit a fronte ad pectus.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Prefacja dobiega końca. Kapłan składa ręce przed piersią, pochyla się i mówi Sanctus głosem umiarkowanym, a ministrant w tym czasie dzwoni. Przy słowach „Benedíctus qui venit in nómine Dómini” prostuje się i czyni znak krzyża od czoła do piersi. Zaraz potem zaczyna się Kanon, odmawiany po cichu poza kilkoma zdaniami mówionymi głośno.",
+				"en": "The Preface comes to its end. The priest joins his hands before his breast, bows, and says the Sanctus in a moderate voice while the server rings the bell. At the words “Benedíctus qui venit in nómine Dómini” he straightens up and signs himself with the cross from forehead to breast. The Canon begins immediately after, said silently apart from a few sentences spoken aloud."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ritus servandus in celebratione Missae, VII, 8",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ritus servandus in celebratione Missae, VII, 8",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -61,6 +80,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Święty, Święty, Święty Pan Bóg Zastępów.",
+				"en": "Holy, Holy, Holy Lord God of hosts."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -73,7 +96,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "święty",
+						"en": "holy"
+					},
+					"function": {
+						"pl": "Trzykrotnie powtórzone „Sanctus” odnosi się do „Dóminus” (w004), dlatego ma formę mianownika rodzaju męskiego. Łącznik „est” pozostaje domyślny.",
+						"en": "“Sanctus”, repeated three times, refers to “Dóminus” (w004) and is therefore nominative masculine. The copula “est” is understood."
+					}
 				},
 				{
 					"id": "w002",
@@ -86,7 +117,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "święty",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w003",
@@ -98,7 +133,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "święty",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w004",
@@ -110,6 +149,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -122,6 +165,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bóg",
+						"en": "God"
 					}
 				},
 				{
@@ -133,13 +180,37 @@
 						"pos": "noun",
 						"gender": "n"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
+					"gloss": {
+						"pl": "Zastępów",
+						"en": "of hosts"
+					},
+					"function": {
+						"pl": "Forma nie ma końcówki przypadka — hebrajskie słowo weszło do łaciny nieodmienne. W tym tytule pełni funkcję dopełniacza: Pan Bóg Zastępów.",
+						"en": "The form carries no case ending — the Hebrew word entered Latin without inflection. In this title it does a genitive's work: the Lord God of hosts."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Lewis and Short, A Latin Dictionary",
+								"locator": "s.v. Sabaoth",
+								"url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0059"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Isaiah 6:3"
+							}
 						],
-						"review": "accepted"
+						"en": [
+							{
+								"title": "Lewis and Short, A Latin Dictionary",
+								"locator": "s.v. Sabaoth",
+								"url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0059"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Isaiah 6:3"
+							}
+						]
 					}
 				}
 			]
@@ -159,6 +230,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Pełne są niebiosa i ziemia chwały Twojej.",
+				"en": "Heaven and earth are full of Your glory."
+			},
 			"words": [
 				{
 					"id": "w007",
@@ -170,7 +245,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "pełne",
+						"en": "full"
+					},
+					"function": {
+						"pl": "Forma mianownika liczby mnogiej rodzaju męskiego. Zgadza się z „cæli” (w009), pierwszym z dwóch podmiotów.",
+						"en": "Nominative masculine plural, agreeing with “cæli” (w009), the first of the two subjects."
+					}
 				},
 				{
 					"id": "w008",
@@ -183,6 +266,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "są",
+						"en": "are"
 					}
 				},
 				{
@@ -196,13 +283,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "niebiosa",
+						"en": "the heavens"
 					}
 				},
 				{
@@ -211,6 +294,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -223,6 +310,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ziemia",
+						"en": "earth"
 					}
 				},
 				{
@@ -235,6 +326,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwały",
+						"en": "of glory"
+					},
+					"function": {
+						"pl": "Ablativus zależny od „Pleni” (w007). Polszczyzna oddaje tę relację dopełniaczem: „pełne chwały”.",
+						"en": "Ablative governed by “Pleni” (w007). English marks the relation with “of”: “full of glory”."
 					}
 				},
 				{
@@ -248,7 +347,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "Twojej",
+						"en": "Your"
+					}
 				}
 			]
 		},
@@ -267,6 +370,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Hosanna na wysokości.",
+				"en": "Hosanna in the highest."
+			},
 			"words": [
 				{
 					"id": "w014",
@@ -274,6 +381,10 @@
 					"lemma": "hosanna",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "hosanna",
+						"en": "hosanna"
 					}
 				},
 				{
@@ -284,7 +395,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w016",
@@ -297,7 +412,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wysokościach",
+						"en": "the highest"
+					}
 				}
 			]
 		},
@@ -316,6 +435,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Błogosławiony, który idzie w imię Pańskie.",
+				"en": "Blessed is He who comes in the name of the Lord."
+			},
 			"words": [
 				{
 					"id": "w017",
@@ -327,7 +450,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "błogosławiony",
+						"en": "blessed"
+					},
+					"function": {
+						"pl": "Orzecznik z domyślnym „est”. Podmiotem jest zdanie względne rozpoczynające się od „qui” (w018).",
+						"en": "A predicate with an implied “est”. Its subject is the relative clause beginning with “qui” (w018)."
+					}
 				},
 				{
 					"id": "w018",
@@ -338,6 +469,14 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
+					},
+					"function": {
+						"pl": "Zaimek względny rozpoczynający zdanie o znaczeniu „ten, który przychodzi”.",
+						"en": "A relative pronoun beginning a clause with the sense “he who comes”."
 					}
 				},
 				{
@@ -352,6 +491,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "przychodzi",
+						"en": "comes"
+					},
+					"function": {
+						"pl": "Czas teraźniejszy. Perfectum „vēnit” ma tę samą pisownię, lecz inną długość pierwszej samogłoski.",
+						"en": "Present tense. The perfect “vēnit” has the same spelling but a different first-vowel quantity."
 					}
 				},
 				{
@@ -362,7 +509,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w021",
@@ -374,6 +525,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "imieniu",
+						"en": "the name"
+					},
+					"function": {
+						"pl": "Ablativus po „in” (w020) w stałym zwrocie „in nómine Dómini”: „w imię Pańskie”.",
+						"en": "Ablative after “in” (w020) in the fixed phrase “in nómine Dómini”: “in the name of the Lord”."
 					}
 				},
 				{
@@ -387,6 +546,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "of the Lord"
 					}
 				}
 			]
@@ -406,6 +569,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Hosanna na wysokości.",
+				"en": "Hosanna in the highest."
+			},
 			"words": [
 				{
 					"id": "w023",
@@ -413,6 +580,10 @@
 					"lemma": "hosanna",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "hosanna",
+						"en": "hosanna"
 					}
 				},
 				{
@@ -423,7 +594,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w025",
@@ -436,9 +611,72 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wysokościach",
+						"en": "the highest"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The Sanctus with the Benedictus, closing the Preface at the threshold of the Canon: the seraphim's cry of Is 6:3 joined to the acclamation of Mt 21:9. Rubric s01 abridges the 1962 rubric as transcribed by witness do (line 203), which prints the comma at Benedíctus that the apparatus declines for the sung text; the bell is carried by the narrative layer; the bow and the sign of the cross stand in the rubric itself. Benedíctus (w017) is tagged as the lexicalized adjective, not as the perfect passive participle of benedícere: both readings are open to the analyzers, and the adjective follows the corpus ruling at orationes.ave-maria w007 and w012.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Three accidental variants (punctuation) adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.sanctus/",
+			"apparatus": "witnesses/ordinarium.sanctus/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w006": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w009": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

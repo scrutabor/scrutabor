@@ -9,41 +9,18 @@
 	"ids": {
 		"next": 69
 	},
-	"status": "working-edition",
-	"notes": "The prayer said somewhat bowed — aliquantulum inclinatus — at the middle of the altar, gathering the whole offertory into one offering. Its own document: it stands after the Lavábo, between it and the turn to the people. Witness do prints Joannis and Baptistæ without their accents where the same file writes Joánni Baptístæ at the Confíteor; adjudicated in the apparatus. (That witness spells the consonant j throughout, as its own files do; this edition prints i — the apparatus records the difference by declared rule.) ISTÓRUM at w037 is the demonstrative of what is near at hand and refers to the saints whose relics are in the altar — the corpus records the same reference at ordinarium.aufer-a-nobis w029-w032, quorum relíquiæ hic sunt. PROFÍCIAT at w043 with its datives repeats the construction of ordinarium.suscipe-sancte-pater w047, ut mihi et illis profíciat ad salútem. ILLI at w051 is nominative plural, subject of dignéntur, not the dative singular the same form allows; ILLIS at w042 is dative plural. CÆLIS at w057 takes the masculine of the plural, as the corpus records for cælum, neuter in the singular and masculine in the plural. EÚNDEM at w064 is idem, is with the ending -dem, and its m assimilates before d. The demonstrative hic, hæc, hoc carries the plain lemma key hic — SCHEMA.md gives the bare key to the word a reader is likelier to look up — while the adverb lives under hic_adverbium (so at ordinarium.aufer-a-nobis w031). Discriminated keys map back through LEMMA_ALIASES, and the analyzers vote on both.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants (punctuation, orthography and accent) adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.suscipe-sancta-trinitas/",
-		"apparatus": "witnesses/ordinarium.suscipe-sancta-trinitas/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Kapłan prosi Trójcę Świętą o przyjęcie ofiary składanej na pamiątkę męki, zmartwychwstania i wniebowstąpienia Chrystusa oraz ku czci Najświętszej Maryi Panny i świętych. W końcowej prośbie ich wstawiennictwu w niebie odpowiada obchodzenie ich pamiątki na ziemi.",
+		"en": "The priest asks the Holy Trinity to receive the offering made in memory of Christ's passion, resurrection and ascension, and in honor of the Blessed Virgin Mary and the saints. In the final petition, their intercession in heaven corresponds to the keeping of their memory on earth."
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Deinde, aliquantulum inclinatus in medio Altaris, iunctis manibus super eo, dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan, stojąc pośrodku ołtarza, pochyla się nieco i opiera na nim złożone ręce.",
+				"en": "At the middle of the altar, the priest bows slightly and rests his joined hands upon it."
 			}
 		},
 		{
@@ -51,6 +28,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Przyjmij, święta Trójco, tę ofiarę, którą Tobie składamy na pamiątkę męki, zmartwychwstania i wniebowstąpienia Jezusa Chrystusa, Pana naszego: i na cześć błogosławionej Maryi zawsze Dziewicy, i błogosławionego Jana Chrzciciela, i świętych Apostołów Piotra i Pawła, i tych, i wszystkich Świętych: aby im posłużyła ku czci, a nam ku zbawieniu: i niech oni raczą wstawiać się za nami w niebie, których pamiątkę obchodzimy na ziemi. Przez tegoż Chrystusa, Pana naszego. Amen.",
+				"en": "Receive, holy Trinity, this offering, which we offer Thee in memory of the passion, the resurrection and the ascension of Jesus Christ our Lord: and in honor of blessed Mary ever Virgin, and of blessed John the Baptist, and of the holy Apostles Peter and Paul, and of these, and of all the Saints: that it may profit them unto honor and us unto salvation: and may they deign to intercede for us in heaven, whose memory we keep on earth. Through the same Christ our Lord. Amen."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -65,6 +46,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "przyjmij",
+						"en": "receive"
 					}
 				},
 				{
@@ -77,7 +62,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					},
+					"function": {
+						"pl": "Zgadza się z „Trínitas” (w003).",
+						"en": "Agrees with “Trínitas” (w003)."
+					}
 				},
 				{
 					"id": "w003",
@@ -90,6 +83,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Trójco",
+						"en": "Trinity"
+					},
+					"function": {
+						"pl": "Wołacz ma tę samą formę co mianownik. Rozstrzyga o tym zwrot do adresata.",
+						"en": "The vocative is the same as the nominative. The address settles it."
 					}
 				},
 				{
@@ -102,14 +103,9 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
-						],
-						"review": "pending"
+					"gloss": {
+						"pl": "tę",
+						"en": "this"
 					}
 				},
 				{
@@ -123,6 +119,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ofiarę",
+						"en": "offering"
+					},
+					"function": {
+						"pl": "Biernik, dopełnienie „Súscipe” (w001): „tę ofiarę”.",
+						"en": "Accusative object of “Súscipe” (w001): “this offering”."
 					}
 				},
 				{
@@ -134,6 +138,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "którą",
+						"en": "which"
 					}
 				},
 				{
@@ -144,6 +152,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "Thee"
 					}
 				},
 				{
@@ -157,6 +169,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "składamy",
+						"en": "we offer"
 					}
 				},
 				{
@@ -167,7 +183,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w010"
+					"head": "w010",
+					"gloss": {
+						"pl": "dla",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w010",
@@ -179,6 +199,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "pamiątki",
+						"en": "memory"
+					},
+					"function": {
+						"pl": "„Ob” rządzi biernikiem i znaczy „ze względu na”. „memóriam” (w059) powraca przy końcu modlitwy.",
+						"en": "“Ob” governs the accusative and means “on account of”. “memóriam” (w059) returns near the prayer's end."
 					}
 				},
 				{
@@ -192,6 +220,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "męki",
+						"en": "of the passion"
 					}
 				},
 				{
@@ -205,6 +237,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zmartwychwstania",
+						"en": "of the resurrection"
 					}
 				},
 				{
@@ -213,6 +249,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -225,6 +265,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "wniebowstąpienia",
+						"en": "of the ascension"
+					},
+					"function": {
+						"pl": "Trzeci z trzech dopełniaczy zależnych od „memóriam” (w010): Męki, Zmartwychwstania i Wniebowstąpienia.",
+						"en": "The third of three genitives depending on “memóriam” (w010): the Passion, Resurrection and Ascension."
 					}
 				},
 				{
@@ -236,6 +284,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "of Jesus"
 					}
 				},
 				{
@@ -248,6 +300,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -260,6 +316,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -273,7 +333,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w019",
@@ -281,6 +345,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -291,7 +359,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w021",
@@ -303,6 +375,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "cześć",
+						"en": "honor"
+					},
+					"function": {
+						"pl": "„Ob memóriam” odnosi się do Chrystusa, a „in honórem” do świętych.",
+						"en": "“Ob memóriam” refers to Christ, while “in honórem” refers to the saints."
 					}
 				},
 				{
@@ -315,7 +395,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w023"
+					"head": "w023",
+					"gloss": {
+						"pl": "błogosławionej",
+						"en": "of blessed"
+					}
 				},
 				{
 					"id": "w023",
@@ -327,6 +411,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryi",
+						"en": "Mary"
 					}
 				},
 				{
@@ -335,6 +423,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "ever"
 					}
 				},
 				{
@@ -348,6 +440,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Dziewicy",
+						"en": "Virgin"
 					}
 				},
 				{
@@ -356,6 +452,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -368,7 +468,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w028"
+					"head": "w028",
+					"gloss": {
+						"pl": "błogosławionego",
+						"en": "of blessed"
+					}
 				},
 				{
 					"id": "w028",
@@ -380,6 +484,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Jana",
+						"en": "John"
 					}
 				},
 				{
@@ -393,6 +501,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Chrzciciela",
+						"en": "the Baptist"
 					}
 				},
 				{
@@ -401,6 +513,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -413,7 +529,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w032"
+					"head": "w032",
+					"gloss": {
+						"pl": "świętych",
+						"en": "of the holy"
+					}
 				},
 				{
 					"id": "w032",
@@ -425,6 +545,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Apostołów",
+						"en": "Apostles"
 					}
 				},
 				{
@@ -437,6 +561,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Piotra",
+						"en": "Peter"
 					}
 				},
 				{
@@ -445,6 +573,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -458,6 +590,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pawła",
+						"en": "Paul"
+					},
+					"function": {
+						"pl": "Lista odpowiada Confíteor, lecz pomija Michała Archanioła i dodaje „istórum” (w037).",
+						"en": "The list corresponds to the Confíteor but omits Michael the Archangel and adds “istórum” (w037)."
 					}
 				},
 				{
@@ -466,6 +606,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -477,6 +621,10 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "tych",
+						"en": "of these"
 					}
 				},
 				{
@@ -485,6 +633,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -497,7 +649,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w040"
+					"head": "w040",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w040",
@@ -510,7 +666,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "Świętych",
+						"en": "the Saints"
+					}
 				},
 				{
 					"id": "w041",
@@ -518,6 +678,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
 					}
 				},
 				{
@@ -529,6 +693,14 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "im",
+						"en": "them"
+					},
+					"function": {
+						"pl": "Celownik korzyści: świętym ma to przynieść cześć.",
+						"en": "Dative of advantage: it is to be of honor to them."
 					}
 				},
 				{
@@ -543,6 +715,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "posłużyła",
+						"en": "may profit"
 					}
 				},
 				{
@@ -553,7 +729,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w045"
+					"head": "w045",
+					"gloss": {
+						"pl": "ku",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w045",
@@ -566,6 +746,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "czci",
+						"en": "honor"
 					}
 				},
 				{
@@ -576,6 +760,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nam",
+						"en": "us"
 					}
 				},
 				{
@@ -584,6 +772,10 @@
 					"lemma": "autem",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "zaś",
+						"en": "but"
 					}
 				},
 				{
@@ -594,7 +786,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w049"
+					"head": "w049",
+					"gloss": {
+						"pl": "ku",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w049",
@@ -607,6 +803,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zbawieniu",
+						"en": "salvation"
+					},
+					"function": {
+						"pl": "Odpowiada „honórem” (w045): świętym ku czci, nam ku zbawieniu.",
+						"en": "It corresponds to “honórem” (w045): honor to the saints and salvation to us."
 					}
 				},
 				{
@@ -615,6 +819,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -626,6 +834,14 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "oni",
+						"en": "they"
+					},
+					"function": {
+						"pl": "Mianownik liczby mnogiej, podmiot „dignéntur” (w055).",
+						"en": "Nominative plural, the subject of “dignéntur” (w055)."
 					}
 				},
 				{
@@ -636,7 +852,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w053"
+					"head": "w053",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w053",
@@ -646,6 +866,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
 					}
 				},
 				{
@@ -658,6 +882,14 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wstawiać się",
+						"en": "to intercede"
+					},
+					"function": {
+						"pl": "Bezokolicznik dopełniający „dignéntur” (w055): „wstawiać się za nami”.",
+						"en": "The infinitive completing “dignéntur” (w055): “to intercede for us”."
 					}
 				},
 				{
@@ -672,6 +904,10 @@
 						"mood": "subj",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "niech raczą",
+						"en": "may deign"
 					}
 				},
 				{
@@ -682,7 +918,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w057"
+					"head": "w057",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w057",
@@ -695,6 +935,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "niebie",
+						"en": "heaven"
 					}
 				},
 				{
@@ -706,6 +950,10 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "których",
+						"en": "whose"
 					}
 				},
 				{
@@ -718,6 +966,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "pamiątkę",
+						"en": "memory"
 					}
 				},
 				{
@@ -732,6 +984,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "obchodzimy",
+						"en": "we keep"
 					}
 				},
 				{
@@ -742,7 +998,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w062"
+					"head": "w062",
+					"gloss": {
+						"pl": "na",
+						"en": "on"
+					}
 				},
 				{
 					"id": "w062",
@@ -755,6 +1015,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ziemi",
+						"en": "earth"
+					},
+					"function": {
+						"pl": "„cælis” (w057) określa wstawiennictwo świętych, a „terris” obchodzenie ich pamiątki.",
+						"en": "“cælis” (w057) modifies the saints' intercession, while “terris” modifies the keeping of their memory."
 					}
 				},
 				{
@@ -765,7 +1033,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w064"
+					"head": "w064",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w064",
@@ -776,6 +1048,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "tegoż",
+						"en": "the same"
+					},
+					"function": {
+						"pl": "Biernik liczby pojedynczej od „idem”, który zgadza się z „Christum” (w065): „przez tegoż Chrystusa”.",
+						"en": "Accusative singular of “idem”, agreeing with “Christum” (w065): “through the same Christ”."
 					}
 				},
 				{
@@ -788,6 +1068,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -800,6 +1084,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -813,7 +1101,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w066"
+					"head": "w066",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w068",
@@ -822,9 +1114,63 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The prayer said somewhat bowed — aliquantulum inclinatus — at the middle of the altar, gathering the whole offertory into one offering. Its own document: it stands after the Lavábo, between it and the turn to the people. Witness do prints Joannis and Baptistæ without their accents where the same file writes Joánni Baptístæ at the Confíteor; adjudicated in the apparatus. (That witness spells the consonant j throughout, as its own files do; this edition prints i — the apparatus records the difference by declared rule.) ISTÓRUM at w037 is the demonstrative of what is near at hand and refers to the saints whose relics are in the altar — the corpus records the same reference at ordinarium.aufer-a-nobis w029-w032, quorum relíquiæ hic sunt. PROFÍCIAT at w043 with its datives repeats the construction of ordinarium.suscipe-sancte-pater w047, ut mihi et illis profíciat ad salútem. ILLI at w051 is nominative plural, subject of dignéntur, not the dative singular the same form allows; ILLIS at w042 is dative plural. CÆLIS at w057 takes the masculine of the plural, as the corpus records for cælum, neuter in the singular and masculine in the plural. EÚNDEM at w064 is idem, is with the ending -dem, and its m assimilates before d. The demonstrative hic, hæc, hoc carries the plain lemma key hic — SCHEMA.md gives the bare key to the word a reader is likelier to look up — while the adverb lives under hic_adverbium (so at ordinarium.aufer-a-nobis w031). Discriminated keys map back through LEMMA_ALIASES, and the analyzers vote on both.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants (punctuation, orthography and accent) adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.suscipe-sancta-trinitas/",
+			"apparatus": "witnesses/ordinarium.suscipe-sancta-trinitas/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w004": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers",
+						"collatinus"
+					],
+					"review": "pending"
+				}
+			}
+		}
+	}
 }

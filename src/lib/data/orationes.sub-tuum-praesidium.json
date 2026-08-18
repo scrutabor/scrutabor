@@ -9,33 +9,54 @@
 	"ids": {
 		"next": 46
 	},
-	"status": "working-edition",
-	"notes": "An extended devotional form: the antiphon through Virgo gloriosa et benedicta, followed by Domina nostra and the petitions to her Son. The continuation is attested in Latin prayer books beyond Poland and is not presented as part of the ancient antiphon.",
-	"source": {
-		"method": "The antiphon was transcribed from the Latin appendix to the Compendium of the Catechism and collated against the Enchiridion Indulgentiarum. The devotional continuation was collated between the requested Polish form and Christus Regnat; John Paul II's 1991 prayer at Jasna Gora independently attests the same invocations and petitions, with a different order of two titles.",
-		"witnesses": "witnesses/orationes.sub-tuum-praesidium/",
-		"apparatus": "witnesses/orationes.sub-tuum-praesidium/apparatus.json"
+	"about": {
+		"pl": "Podstawową formę stanowi antyfona kończąca się słowami „Panno chwalebna i błogosławiona”: jest to prośba o opiekę Maryi, przyjęcie błagań i wybawienie od niebezpieczeństw. W często używanej w Polsce formie rozszerzonej następują po niej wezwania „O Pani nasza…” i dalsze prośby. Poza polskimi modlitewnikami kontynuację tę poświadcza akt zawierzenia, który Jan Paweł II odmówił na Jasnej Górze w 1991 roku, gdzie dwa z tytułów stoją w odwrotnej kolejności.",
+		"en": "The basic form is the antiphon ending “O glorious and blessed Virgin”: a prayer for Mary's protection, for the petitions of the faithful to be heard, and for deliverance from danger. In the extended form often used in Poland, it is followed by the invocations beginning “Our Lady…” and further petitions. Beyond Polish prayer books that continuation is attested in the act of entrustment John Paul II made at Jasna Góra in 1991, where two of the titles stand in the other order."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Compendium of the Catechism of the Catholic Church",
+				"locator": "Appendix A: Common Prayers — Sub tuum praesidium",
+				"url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html"
+			},
+			{
+				"title": "Konferencja Episkopatu Polski, Akta KEP 32",
+				"locator": "Pod Twoją obronę",
+				"url": "https://episkopat.pl/files/24.bkt/04/04/242488_HSZP_32_Akta_KEP_2020.pdf"
+			},
+			{
+				"title": "John Paul II, Solemn Act of Entrustment of the Young People of the World to Our Lady",
+				"locator": "Jasna Gora, 15 August 1991",
+				"url": "https://www.vatican.va/content/john-paul-ii/it/speeches/1991/august/documents/hf_jp-ii_spe_19910815_affidamento-wyd.html"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+		"en": [
+			{
+				"title": "Compendium of the Catechism of the Catholic Church",
+				"locator": "Appendix A: Common Prayers — Sub tuum praesidium",
+				"url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html"
+			},
+			{
+				"title": "Konferencja Episkopatu Polski, Akta KEP 32",
+				"locator": "Pod Twoją obronę",
+				"url": "https://episkopat.pl/files/24.bkt/04/04/242488_HSZP_32_Akta_KEP_2020.pdf"
+			},
+			{
+				"title": "John Paul II, Solemn Act of Entrustment of the Young People of the World to Our Lady",
+				"locator": "Jasna Gora, 15 August 1991",
+				"url": "https://www.vatican.va/content/john-paul-ii/it/speeches/1991/august/documents/hf_jp-ii_spe_19910815_affidamento-wyd.html"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "verse",
+			"translation": {
+				"pl": "Pod Twoją obronę uciekamy się, Święta Boża Rodzicielko, naszymi prośbami racz nie gardzić w potrzebach naszych, ale od wszelakich złych przygód racz nas zawsze wybawiać, Panno chwalebna i błogosławiona.",
+				"en": "We fly to thy protection, O holy Mother of God; despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -45,7 +66,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "pod",
+						"en": "under"
+					}
 				},
 				{
 					"id": "w002",
@@ -57,7 +82,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "thy"
+					}
 				},
 				{
 					"id": "w003",
@@ -69,6 +98,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "obronę",
+						"en": "protection"
 					}
 				},
 				{
@@ -84,6 +117,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "uciekamy się",
+						"en": "we flee"
 					}
 				},
 				{
@@ -96,7 +133,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w006",
@@ -108,6 +149,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -121,6 +166,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Rodzicielko",
+						"en": "Mother"
 					}
 				},
 				{
@@ -133,7 +182,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "naszymi",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w009",
@@ -145,6 +198,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "prośbami",
+						"en": "petitions"
 					}
 				},
 				{
@@ -153,6 +210,10 @@
 					"lemma": "ne",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -167,6 +228,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "gardź",
+						"en": "despise"
 					}
 				},
 				{
@@ -177,7 +242,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w013",
@@ -190,6 +259,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "potrzebach",
+						"en": "necessities"
 					}
 				},
 				{
@@ -198,6 +271,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "lecz",
+						"en": "but"
 					}
 				},
 				{
@@ -208,7 +285,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w016",
@@ -220,6 +301,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "niebezpieczeństw",
+						"en": "dangers"
 					}
 				},
 				{
@@ -232,7 +317,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w018",
@@ -246,6 +335,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wybaw",
+						"en": "deliver"
 					}
 				},
 				{
@@ -256,6 +349,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -265,6 +362,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "always"
 					}
 				},
 				{
@@ -277,6 +378,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Panno",
+						"en": "Virgin"
 					}
 				},
 				{
@@ -289,7 +394,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "chwalebna",
+						"en": "glorious"
+					}
 				},
 				{
 					"id": "w023",
@@ -297,6 +406,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -310,13 +423,21 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "błogosławiona",
+						"en": "blessed"
+					}
 				}
 			]
 		},
 		{
 			"id": "s02",
 			"type": "verse",
+			"translation": {
+				"pl": "O Pani nasza, Orędowniczko nasza, Pośredniczko nasza, Pocieszycielko nasza.",
+				"en": "Our Lady, our Mediatrix, our Advocate, our Comforter."
+			},
 			"words": [
 				{
 					"id": "w025",
@@ -328,6 +449,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Pani",
+						"en": "Lady"
 					}
 				},
 				{
@@ -341,7 +466,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "nasza",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w027",
@@ -354,13 +483,9 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "pending"
+					"gloss": {
+						"pl": "Pośredniczko",
+						"en": "Mediatrix"
 					}
 				},
 				{
@@ -374,7 +499,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w027"
+					"head": "w027",
+					"gloss": {
+						"pl": "nasza",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w029",
@@ -386,6 +515,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Orędowniczko",
+						"en": "Advocate"
 					}
 				},
 				{
@@ -399,7 +532,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "nasza",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w031",
@@ -412,13 +549,9 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "pending"
+					"gloss": {
+						"pl": "Pocieszycielko",
+						"en": "Comforter"
 					}
 				},
 				{
@@ -432,13 +565,21 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w031"
+					"head": "w031",
+					"gloss": {
+						"pl": "nasza",
+						"en": "our"
+					}
 				}
 			]
 		},
 		{
 			"id": "s03",
 			"type": "verse",
+			"translation": {
+				"pl": "Z Synem swoim nas pojednaj, Synowi swojemu nas polecaj, swojemu Synowi nas oddawaj.",
+				"en": "Reconcile us with thy Son, commend us to thy Son, present us to thy Son."
+			},
 			"words": [
 				{
 					"id": "w033",
@@ -450,7 +591,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "Twojemu",
+						"en": "thy"
+					}
 				},
 				{
 					"id": "w034",
@@ -462,6 +607,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synowi",
+						"en": "Son"
 					}
 				},
 				{
@@ -472,6 +621,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -487,6 +640,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "pojednaj",
+						"en": "reconcile"
 					}
 				},
 				{
@@ -499,7 +656,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w038"
+					"head": "w038",
+					"gloss": {
+						"pl": "Twojemu",
+						"en": "thy"
+					}
 				},
 				{
 					"id": "w038",
@@ -511,6 +672,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synowi",
+						"en": "Son"
 					}
 				},
 				{
@@ -521,6 +686,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -536,6 +705,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "polecaj",
+						"en": "commend"
 					}
 				},
 				{
@@ -548,7 +721,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w042"
+					"head": "w042",
+					"gloss": {
+						"pl": "Twojemu",
+						"en": "thy"
+					}
 				},
 				{
 					"id": "w042",
@@ -560,6 +737,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synowi",
+						"en": "Son"
 					}
 				},
 				{
@@ -570,6 +751,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -585,6 +770,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "przedstaw",
+						"en": "present"
 					}
 				}
 			]
@@ -592,6 +781,10 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"translation": {
+				"pl": "Amen.",
+				"en": "Amen."
+			},
 			"words": [
 				{
 					"id": "w045",
@@ -600,9 +793,60 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "An extended devotional form: the antiphon through Virgo gloriosa et benedicta, followed by Domina nostra and the petitions to her Son. The continuation is attested in Latin prayer books beyond Poland and is not presented as part of the ancient antiphon.",
+		"source": {
+			"method": "The antiphon was transcribed from the Latin appendix to the Compendium of the Catechism and collated against the Enchiridion Indulgentiarum. The devotional continuation was collated between the requested Polish form and Christus Regnat; John Paul II's 1991 prayer at Jasna Gora independently attests the same invocations and petitions, with a different order of two titles.",
+			"witnesses": "witnesses/orationes.sub-tuum-praesidium/",
+			"apparatus": "witnesses/orationes.sub-tuum-praesidium/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		},
+		"words": {
+			"w027": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "pending"
+				}
+			},
+			"w031": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "pending"
+				}
+			}
+		}
+	}
 }

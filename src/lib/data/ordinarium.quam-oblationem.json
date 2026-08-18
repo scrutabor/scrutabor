@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 28
 	},
-	"status": "working-edition",
-	"notes": "The last prayer before the consecration, asking that the offering be made the Body and Blood. Its five adjectives are the crux: BENEDÍCTAM at w008, RATAM at w010, RATIONÁBILEM at w011 and ACCEPTABILÉMQUE at w012 are adjectives, ADSCRÍPTAM at w009 a perfect passive participle of adscríbo — not an inconsistency of ours but of the dictionaries' own drawing: Lewis and Short gives ratus a participial-adjective head with senses of its own and adscriptus a bare participle head, and each token follows the evidence that exists for it. FIAT at w020 is tagged active with the corpus's earlier rulings on fio, whose forms are active and whose sense is passive. CORPUS and SANGUIS at w017 and w019 stand in the nominative though everything around them stands in other cases — genitives and a dative: this edition reads them as predicate nominatives, what the offering is to become, with the offering itself the unspoken singular subject of fiat. That is why the verb is singular, and why both translations say that it may become. Read instead as a compound subject they would want a plural, and the singular would be the exception the grammars allow.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.quam-oblationem/",
-		"apparatus": "witnesses/ordinarium.quam-oblationem/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Kapłan prosi Boga, aby zechciał uczynić ofiarę błogosławioną, przyjętą, prawomocną, doskonałą i miłą. Końcowa prośba brzmi: aby stała się dla nas Ciałem i Krwią umiłowanego Syna Bożego, Pana naszego Jezusa Chrystusa.",
+		"en": "The priest asks God to make the offering blessed, acknowledged, approved, spiritual and acceptable. The final petition asks that it may become for us the Body and Blood of God's most beloved Son, our Lord Jesus Christ."
 	},
 	"segments": [
 		{
@@ -38,6 +19,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Prosimy Cię, Boże, racz tę Ofiarę we wszystkim uczynić",
+				"en": "Be pleased, O God, we pray, to make this offering in every respect"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -48,6 +33,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "tę",
+						"en": "which"
+					},
+					"function": {
+						"pl": "Zaimek względny zgadzający się z „oblatiónem” z poprzedniej modlitwy.",
+						"en": "A relative pronoun agreeing with “oblatiónem” in the preceding prayer."
 					}
 				},
 				{
@@ -60,6 +53,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ofiarę",
+						"en": "oblation"
 					}
 				},
 				{
@@ -71,6 +68,14 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "Thou"
+					},
+					"function": {
+						"pl": "Wyrażony zaimek podmiotu, zwykle w łacinie pomijany, podkreśla adresata prośby, nazwanego zaraz słowem „Deus” (w004).",
+						"en": "The expressed subject pronoun, which Latin usually omits, emphasizes the addressee named immediately as “Deus” (w004)."
 					}
 				},
 				{
@@ -84,6 +89,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				},
 				{
@@ -94,7 +103,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "we",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w006",
@@ -107,7 +120,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wszystkim",
+						"en": "all respects"
+					}
 				},
 				{
 					"id": "w007",
@@ -123,12 +140,9 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "prosimy",
+						"en": "we beseech"
 					}
 				}
 			]
@@ -137,13 +151,9 @@
 			"id": "s02",
 			"type": "rubric",
 			"text": "Signat ter super Oblata.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan czyni trzy znaki krzyża nad darami.",
+				"en": "The priest makes three signs of the cross over the offerings."
 			}
 		},
 		{
@@ -151,6 +161,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "błogosławioną, przyjętą, prawomocną, doskonałą i miłą sobie:",
+				"en": "blessed, acknowledged, approved, spiritual and acceptable:"
+			},
 			"words": [
 				{
 					"id": "w008",
@@ -163,7 +177,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "błogosławioną",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w009",
@@ -180,7 +198,15 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "wpisaną",
+						"en": "enrolled"
+					},
+					"function": {
+						"pl": "Imiesłów bierny czasu przeszłego od „adscríbo”.",
+						"en": "The perfect passive participle of “adscríbo”."
+					}
 				},
 				{
 					"id": "w010",
@@ -193,7 +219,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "prawomocną",
+						"en": "ratified"
+					}
 				},
 				{
 					"id": "w011",
@@ -206,7 +236,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "rozumną",
+						"en": "reasonable"
+					}
 				},
 				{
 					"id": "w012",
@@ -218,7 +252,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "i miłą",
+						"en": "and acceptable"
+					}
 				},
 				{
 					"id": "w013",
@@ -230,6 +268,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "uczynić",
+						"en": "to make"
 					}
 				},
 				{
@@ -245,6 +287,10 @@
 						"mood": "subj",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "racz",
+						"en": "deign"
 					}
 				}
 			]
@@ -253,13 +299,9 @@
 			"id": "s04",
 			"type": "rubric",
 			"text": "Signat semel super Hostiam, et semel super Calicem.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan czyni jeden znak krzyża nad samą Hostią, przy słowie Corpus, i jeden nad samym kielichem, przy Sanguis.",
+				"en": "The priest makes one sign of the cross over the Host alone, at the word Corpus, and one over the chalice alone, at Sanguis."
 			}
 		},
 		{
@@ -267,6 +309,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "aby się stała dla nas Ciałem i Krwią Twojego umiłowanego Syna,",
+				"en": "so that it may become for us the Body and Blood of Your most beloved Son,"
+			},
 			"words": [
 				{
 					"id": "w015",
@@ -274,6 +320,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
 					}
 				},
 				{
@@ -284,6 +334,14 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nam",
+						"en": "for us"
+					},
+					"function": {
+						"pl": "Dativus commodi: „dla nas”.",
+						"en": "A dative of advantage: “for us”."
 					}
 				},
 				{
@@ -297,6 +355,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ciałem",
+						"en": "the Body"
+					},
+					"function": {
+						"pl": "Mianownik. „Corpus” i „Sanguis” są orzecznikami przy „fiat” (w020). Domyślnym podmiotem jest „oblátio” z początku modlitwy, dlatego czasownik stoi w liczbie pojedynczej.",
+						"en": "Nominative. “Corpus” and “Sanguis” are predicate nominatives with “fiat” (w020). The understood subject is the “oblátio” introduced at the beginning of the prayer, so the verb is singular."
 					}
 				},
 				{
@@ -305,6 +371,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -317,6 +387,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Krwią",
+						"en": "Blood"
 					}
 				},
 				{
@@ -330,6 +404,14 @@
 						"tense": "pres",
 						"mood": "subj",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "stała się",
+						"en": "may become"
+					},
+					"function": {
+						"pl": "Tryb łączący czasu teraźniejszego od „fio”, tutaj: „niech się stanie”.",
+						"en": "The present subjunctive of “fio”, here: “may it become”."
 					}
 				},
 				{
@@ -343,7 +425,15 @@
 						"gender": "m",
 						"degree": "sup"
 					},
-					"head": "w022"
+					"head": "w022",
+					"gloss": {
+						"pl": "najmilszego",
+						"en": "most beloved"
+					},
+					"function": {
+						"pl": "Stopień najwyższy od „diléctus”.",
+						"en": "The superlative of “diléctus”."
+					}
 				},
 				{
 					"id": "w022",
@@ -356,13 +446,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Syna",
+						"en": "Son"
 					}
 				},
 				{
@@ -375,7 +461,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w022"
+					"head": "w022",
+					"gloss": {
+						"pl": "Twego",
+						"en": "Thy"
+					}
 				}
 			]
 		},
@@ -383,13 +473,9 @@
 			"id": "s06",
 			"type": "rubric",
 			"text": "Iungit manus.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan składa ręce.",
+				"en": "The priest joins his hands."
 			}
 		},
 		{
@@ -397,6 +483,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Pana naszego Jezusa Chrystusa.",
+				"en": "our Lord Jesus Christ."
+			},
 			"words": [
 				{
 					"id": "w024",
@@ -408,6 +498,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -420,7 +514,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w026",
@@ -431,6 +529,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -444,9 +546,91 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The last prayer before the consecration, asking that the offering be made the Body and Blood. Its five adjectives are the crux: BENEDÍCTAM at w008, RATAM at w010, RATIONÁBILEM at w011 and ACCEPTABILÉMQUE at w012 are adjectives, ADSCRÍPTAM at w009 a perfect passive participle of adscríbo — not an inconsistency of ours but of the dictionaries' own drawing: Lewis and Short gives ratus a participial-adjective head with senses of its own and adscriptus a bare participle head, and each token follows the evidence that exists for it. FIAT at w020 is tagged active with the corpus's earlier rulings on fio, whose forms are active and whose sense is passive. CORPUS and SANGUIS at w017 and w019 stand in the nominative though everything around them stands in other cases — genitives and a dative: this edition reads them as predicate nominatives, what the offering is to become, with the offering itself the unspoken singular subject of fiat. That is why the verb is singular, and why both translations say that it may become. Read instead as a compound subject they would want a plural, and the singular would be the exception the grammars allow.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.quam-oblationem/",
+			"apparatus": "witnesses/ordinarium.quam-oblationem/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s02": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s04": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s06": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w007": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "accepted"
+				}
+			},
+			"w022": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

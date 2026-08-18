@@ -9,41 +9,18 @@
 	"ids": {
 		"next": 37
 	},
-	"status": "working-edition",
-	"notes": "The priest's own prayer after the dismissal, said bowed over the middle of the altar and said secretly: he asks that the service he has just rendered be acceptable, and that the sacrifice he offered unworthily be propitiatory for himself and for all he offered it for. ÓCULIS at w013 is dative with ÓBTULI at w017: the sacrifice is presented to the eyes of the divine majesty, idiomatically in its sight. MISERÁNTE at w030 is the present participle of the deponent miseror, active in form as every deponent's present participle is; te miseránte is an ablative absolute. PROPITIÁBILE at w031 is confirmed by Collatinus alone: the word is rare — attested as early as Ennius — and Whitaker's lexicon does not carry it, so the provenance names only the analyzer that does. MISERÁNTE at w030 is feminine: the ablative absolute's te is the sancta Trínitas addressed, and the corpus tags the agreement as the antecedent shows it. ÓBTULI at w017 and w027 carry no conj: offero is a compound of fero and irregular.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.placeat-tibi/",
-		"apparatus": "witnesses/ordinarium.placeat-tibi/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Kapłan, pochylony przed środkiem ołtarza, odmawia tę modlitwę po cichu. Prosi Trójcę Świętą, aby przyjęła jego służbę i ofiarę oraz aby przez swoje miłosierdzie uczyniła ją przebłagalną dla niego i dla wszystkich, za których została złożona.",
+		"en": "Bowed before the middle of the altar, the priest says this prayer quietly. He asks the Holy Trinity to accept his service and sacrifice and, in mercy, to make it propitiatory for him and for all those for whom it was offered."
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Tunc celebrans inclinat se ante medium altaris, et manibus iunctis super illud, dicit secrete:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Wtedy kapłan pochyla się przed środkiem ołtarza, ręce składa na nim i mówi po cichu:",
+				"en": "Then the celebrant bows before the middle of the altar, joins his hands upon it, and says silently:"
 			}
 		},
 		{
@@ -51,6 +28,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Niech Ci się podoba, Trójco Święta, hołd mojej służby; i spraw, aby ofiara, którą ja, niegodny, złożyłem przed oczyma Twego majestatu, była Tobie miła, a mnie i wszystkim, za których ją złożyłem, niech przez Twoje zmiłowanie wyjedna łaskę. Przez Chrystusa, Pana naszego. Amen.",
+				"en": "May the homage of my service please Thee, O holy Trinity; and grant that the sacrifice which I, unworthy, have offered before the eyes of Thy majesty may be acceptable to Thee, and may win favor, through Thy mercy, for me and for all those for whom I have offered it. Through Christ our Lord. Amen."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -64,6 +45,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "niech się podoba",
+						"en": "may it please"
+					},
+					"function": {
+						"pl": "Podmiotem nie jest kapłan, lecz „obséquium” (w005) — hołd. To on ma się Bogu podobać.",
+						"en": "The subject is not the priest but “obséquium” (w005), the homage — that is what is to please God."
 					}
 				},
 				{
@@ -75,6 +64,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "Thee"
 					}
 				},
 				{
@@ -87,7 +80,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w004",
@@ -100,6 +97,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Trójco",
+						"en": "Trinity"
+					},
+					"function": {
+						"pl": "Wołacz. Modlitwa zwraca się tu do Trójcy po imieniu.",
+						"en": "Vocative. Here the prayer addresses the Trinity by name."
 					}
 				},
 				{
@@ -112,6 +117,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "hołd",
+						"en": "the homage"
 					}
 				},
 				{
@@ -124,6 +133,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "służby",
+						"en": "of service"
 					}
 				},
 				{
@@ -137,7 +150,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "mojej",
+						"en": "my"
+					},
+					"function": {
+						"pl": "Zgadza się z „servitútis” (w006) i wskazuje na pierwszą osobę liczby pojedynczej.",
+						"en": "Agrees with “servitútis” (w006) and marks the first person singular."
+					}
 				},
 				{
 					"id": "w008",
@@ -145,6 +166,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -160,6 +185,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "spraw",
+						"en": "grant"
 					}
 				},
 				{
@@ -168,6 +197,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
 					}
 				},
 				{
@@ -181,6 +214,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "ofiara",
+						"en": "the sacrifice"
 					}
 				},
 				{
@@ -192,6 +229,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "którą",
+						"en": "which"
+					},
+					"function": {
+						"pl": "Rodzaj nijaki, bo zgadza się z „sacrifícium” (w011), choć po polsku wypada rodzaj żeński.",
+						"en": "Neuter, agreeing with “sacrifícium” (w011), and object of “óbtuli” (w017)."
 					}
 				},
 				{
@@ -205,14 +250,33 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "medium",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
+					"gloss": {
+						"pl": "przed oczyma",
+						"en": "before the eyes"
+					},
+					"function": {
+						"pl": "Celownik zależny od „óbtuli” (w017). Wyrażenie znaczy: „złożyłem przed oczyma Twego majestatu”.",
+						"en": "Dative depending on “óbtuli” (w017). The phrase means “I offered before the eyes of Thy majesty.”"
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Lewis and Short, A Latin Dictionary",
+								"locator": "s.v. offero",
+								"url": "https://cld.bbaw.de/lemma/lat/offero"
+							}
 						],
-						"review": "disputed"
+						"en": [
+							{
+								"title": "Lewis and Short, A Latin Dictionary",
+								"locator": "s.v. offero",
+								"url": "https://cld.bbaw.de/lemma/lat/offero"
+							}
+						]
+					},
+					"note": {
+						"pl": "Forma jest zarazem celownikiem i ablatiwem liczby mnogiej. Nic w zdaniu nie rozstrzyga, czy ofiara jest złożona OCZOM Twojego majestatu, czy PRZED nimi. Ta edycja przyjmuje celownik i zaznacza wątpliwość.",
+						"en": "The form is dative and ablative plural at once. Nothing in the sentence decides whether the sacrifice is offered TO the eyes of Thy majesty or BEFORE them. This edition takes the dative and marks the doubt."
 					}
 				},
 				{
@@ -225,7 +289,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "Twego",
+						"en": "of Thy"
+					}
 				},
 				{
 					"id": "w015",
@@ -237,6 +305,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "majestatu",
+						"en": "majesty"
 					}
 				},
 				{
@@ -249,7 +321,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "niegodny",
+						"en": "unworthy"
+					},
+					"function": {
+						"pl": "Mianownik: nie dopowiedzenie do ofiary, lecz określenie tego, kto ją składa — „ja, niegodny, złożyłem”.",
+						"en": "Nominative: it describes the man who offers, not the offering — “I, unworthy, have offered”."
+					}
 				},
 				{
 					"id": "w017",
@@ -263,6 +343,10 @@
 						"tense": "perf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "złożyłem",
+						"en": "I have offered"
 					}
 				},
 				{
@@ -273,6 +357,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "to Thee"
 					}
 				},
 				{
@@ -286,6 +374,10 @@
 						"tense": "pres",
 						"mood": "subj",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "była",
+						"en": "may be"
 					}
 				},
 				{
@@ -299,7 +391,15 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w019"
+					"head": "w019",
+					"gloss": {
+						"pl": "miła",
+						"en": "acceptable"
+					},
+					"function": {
+						"pl": "Rodzaj nijaki, bo orzeka o „sacrifícium” (w011).",
+						"en": "Neuter, because what it says is said of “sacrifícium” (w011)."
+					}
 				},
 				{
 					"id": "w021",
@@ -309,6 +409,14 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "a mnie",
+						"en": "and for me"
+					},
+					"function": {
+						"pl": "Mihi z enklitycznym -que znaczy „i mnie”. Enklityka przesuwa akcent na poprzedzającą sylabę.",
+						"en": "Mihi with enclitic -que means “and for me”. The enclitic shifts the stress to the preceding syllable."
 					}
 				},
 				{
@@ -317,6 +425,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -329,7 +441,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wszystkim",
+						"en": "for all"
+					}
 				},
 				{
 					"id": "w024",
@@ -339,7 +455,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w025",
@@ -350,6 +470,10 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "których",
+						"en": "whom"
 					}
 				},
 				{
@@ -361,6 +485,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "ją",
+						"en": "it"
 					}
 				},
 				{
@@ -375,6 +503,10 @@
 						"tense": "perf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "złożyłem",
+						"en": "I have offered"
 					}
 				},
 				{
@@ -389,6 +521,10 @@
 						"tense": "pres",
 						"mood": "subj",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "była",
+						"en": "may it be"
 					}
 				},
 				{
@@ -399,6 +535,14 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobą",
+						"en": "Thou"
+					},
+					"function": {
+						"pl": "Razem z „miseránte” (w030) tworzy ablativus absolutus — konstrukcję, którą polszczyzna oddaje zdaniem pobocznym: „gdy Ty się zmiłujesz”.",
+						"en": "With “miseránte” (w030) it forms an ablative absolute, which English turns into a clause: “Thou showing mercy”, that is, through Thy mercy."
 					}
 				},
 				{
@@ -416,7 +560,15 @@
 						"voice": "dep",
 						"conj": 1
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "litującą się",
+						"en": "showing mercy"
+					},
+					"function": {
+						"pl": "Imiesłów czasu teraźniejszego od deponentnego „miseror”, o formie czynnej.",
+						"en": "The present participle of deponent “miseror”, active in form."
+					}
 				},
 				{
 					"id": "w031",
@@ -430,13 +582,9 @@
 						"gender": "n"
 					},
 					"head": "w028",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "przebłagalna",
+						"en": "a means of favor"
 					}
 				},
 				{
@@ -447,7 +595,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w033"
+					"head": "w033",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w033",
@@ -459,6 +611,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -471,6 +627,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -484,7 +644,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w036",
@@ -493,9 +657,73 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The priest's own prayer after the dismissal, said bowed over the middle of the altar and said secretly: he asks that the service he has just rendered be acceptable, and that the sacrifice he offered unworthily be propitiatory for himself and for all he offered it for. ÓCULIS at w013 is dative with ÓBTULI at w017: the sacrifice is presented to the eyes of the divine majesty, idiomatically in its sight. MISERÁNTE at w030 is the present participle of the deponent miseror, active in form as every deponent's present participle is; te miseránte is an ablative absolute. PROPITIÁBILE at w031 is confirmed by Collatinus alone: the word is rare — attested as early as Ennius — and Whitaker's lexicon does not carry it, so the provenance names only the analyzer that does. MISERÁNTE at w030 is feminine: the ablative absolute's te is the sancta Trínitas addressed, and the corpus tags the agreement as the antecedent shows it. ÓBTULI at w017 and w027 carry no conj: offero is a compound of fero and irregular.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.placeat-tibi/",
+			"apparatus": "witnesses/ordinarium.placeat-tibi/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w013": {
+				"analysis": {
+					"confidence": "medium",
+					"sources": [
+						"editorial",
+						"whitakers",
+						"collatinus"
+					],
+					"review": "disputed"
+				}
+			},
+			"w031": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

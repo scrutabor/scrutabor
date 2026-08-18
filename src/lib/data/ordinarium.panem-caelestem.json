@@ -9,41 +9,54 @@
 	"ids": {
 		"next": 71
 	},
-	"status": "working-edition",
-	"notes": "The priest's Communion under the species of bread, kept in one document because it is one act: the verse said as he genuflects and rises, the threefold Dómine non sum dignus said striking his breast, and the form said as he signs himself with the Host. The three repetitions are encoded as three sets of words with their own ids, as the Kyrie is; the rubric telling the priest to go on secretly is printed inside each of the three lines and is carried three times, because that is where the change of voice falls. ACCÍPIAM at w003 is future indicative, not present subjunctive, the two being identical in form: it is coordinated with invocábo, which can only be future. TANTUM at w018 is the adverb, not the neuter of tantus. SUB at w014 governs the accusative here, motion under a roof, where the corpus's other token of the word (ordinarium.credo w080) governs the ablative.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variant is adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.panem-caelestem/",
-		"apparatus": "witnesses/ordinarium.panem-caelestem/apparatus.json"
+	"about": {
+		"pl": "Formuła Dómine, non sum dignus opiera się na słowach setnika z Mt 8,8. Zamiast puer meus — sługa mój — występuje w niej ánima mea — dusza moja. Panem cæléstem accípiam podobnie nawiązuje do Ps 115,4 w numeracji Wulgaty (Ps 116,13 w numeracji hebrajskiej): Cálicem salutáris accípiam — kielich zbawienia przyjmę. Kapłan trzykrotnie powtarza Dómine, non sum dignus, rozpoczynając każde wezwanie nieco podniesionym głosem i kontynuując po cichu.",
+		"en": "Dómine, non sum dignus adapts the centurion's words in Matthew 8:8, replacing puer meus — my servant — with ánima mea — my soul. Panem cæléstem accípiam likewise adapts Psalm 115:4 in the Vulgate (Psalm 116:13 in Hebrew numbering): Cálicem salutáris accípiam — I will take the chalice of salvation. The priest repeats Dómine, non sum dignus three times, beginning each invocation in a slightly raised voice and continuing quietly."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Evangelium secundum Matthaeum",
+				"locator": "8, 8",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-matthaeum_lt.html#8"
+			},
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "116, 13 (Vg 115, 4)",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html#PSALMUS%20116"
+			},
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Ritus servandus in celebratione Missae, X, 4",
+				"url": "https://archive.org/details/missale_romanum-1962/page/n63/mode/1up"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Evangelium secundum Matthaeum",
+				"locator": "8, 8",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-matthaeum_lt.html#8"
+			},
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "116, 13 (Vg 115, 4)",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html#PSALMUS%20116"
+			},
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Ritus servandus in celebratione Missae, X, 4",
+				"url": "https://archive.org/details/missale_romanum-1962/page/n63/mode/1up"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Genuflectit, surgit, et dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan przyklęka, wstaje i mówi:",
+				"en": "The priest genuflects, rises, and says:"
 			}
 		},
 		{
@@ -51,6 +64,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Chleb niebiański przyjmę i imienia Pańskiego wzywać będę.",
+				"en": "I will take the Bread of heaven, and will call upon the name of the Lord."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Ps 115, 13"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Psalm 115:13"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -62,6 +93,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Chleb",
+						"en": "Bread"
 					}
 				},
 				{
@@ -74,7 +109,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w001"
+					"head": "w001",
+					"gloss": {
+						"pl": "niebiański",
+						"en": "of heaven"
+					},
+					"function": {
+						"pl": "Przymiotnik zgadzający się z panem.",
+						"en": "An adjective agreeing with panem."
+					}
 				},
 				{
 					"id": "w003",
@@ -89,6 +132,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wezmę",
+						"en": "I will take"
+					},
+					"function": {
+						"pl": "Czas przyszły trybu oznajmującego, co potwierdza współrzędny czasownik invocábo.",
+						"en": "Future indicative, as the coordinated invocábo confirms."
 					}
 				},
 				{
@@ -97,6 +148,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -109,6 +164,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "imienia",
+						"en": "the name"
 					}
 				},
 				{
@@ -121,6 +180,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "of the Lord"
 					}
 				},
 				{
@@ -136,6 +199,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wzywać będę",
+						"en": "I will call upon"
 					}
 				}
 			]
@@ -144,13 +211,9 @@
 			"id": "s03",
 			"type": "rubric",
 			"text": "Deinde parum inclinatus, accipit ambas partes Hostiæ inter pollicem et indicem sinistræ manus, et Patenam inter eundem indicem et medium supponit, et dextera tribus vicibus percutiens pectus, elata aliquantulum voce, ter dicit devote et humiliter:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Lekko pochylony, kapłan bierze obie części Hostii w lewą rękę i podsuwa pod nie patenę. Bijąc się trzykrotnie prawą ręką w piersi, trzykrotnie mówi nieco podniesionym głosem, pobożnie i pokornie:",
+				"en": "Bowing a little, the priest takes both halves of the Host in his left hand and slips the paten beneath them. Striking his breast three times with his right hand, he says the following three times in a slightly raised voice, devoutly and humbly:"
 			}
 		},
 		{
@@ -158,6 +221,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Panie, nie jestem godzien,",
+				"en": "Lord, I am not worthy,"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Mt 8, 8"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Matthew 8:8"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w008",
@@ -170,6 +251,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -178,6 +263,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -191,6 +280,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jestem",
+						"en": "am"
 					}
 				},
 				{
@@ -204,7 +297,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w010"
+					"head": "w010",
+					"gloss": {
+						"pl": "godzien",
+						"en": "worthy"
+					},
+					"function": {
+						"pl": "Pierwsze cztery słowa kapłan wypowiada nieco podniesionym głosem, uderzając się w piersi. Resztę zdania mówi po cichu.",
+						"en": "The priest says the first four words in a slightly raised voice while striking his breast. He continues the sentence under his breath."
+					}
 				}
 			]
 		},
@@ -212,13 +313,25 @@
 			"id": "s05",
 			"type": "rubric",
 			"text": "Et secrete prosequitur:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Kapłan mówi dalej po cichu.",
+				"en": "The priest goes on silently."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ritus servandus in celebratione Missae, X, 4",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ritus servandus in celebratione Missae, X, 4",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -226,6 +339,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.",
+				"en": "that You should enter under my roof: but only say the word, and my soul shall be healed."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Mt 8, 8"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Matthew 8:8"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w012",
@@ -233,6 +364,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyś",
+						"en": "that"
 					}
 				},
 				{
@@ -247,6 +382,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wszedł",
+						"en": "You should enter"
+					},
+					"function": {
+						"pl": "Tryb łączący wymagany przez ut.",
+						"en": "Subjunctive governed by ut."
 					}
 				},
 				{
@@ -257,7 +400,15 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "pod",
+						"en": "under"
+					},
+					"function": {
+						"pl": "Biernik wskazuje ruch pod dach.",
+						"en": "The accusative marks motion under the roof."
+					}
 				},
 				{
 					"id": "w015",
@@ -269,6 +420,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "dach",
+						"en": "roof"
 					}
 				},
 				{
@@ -282,7 +437,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "mój",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w017",
@@ -290,6 +449,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "ale",
+						"en": "but"
 					}
 				},
 				{
@@ -298,6 +461,14 @@
 					"lemma": "tantum",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "tylko",
+						"en": "only"
+					},
+					"function": {
+						"pl": "Przysłówek określający dic.",
+						"en": "An adverb modifying dic."
 					}
 				},
 				{
@@ -312,6 +483,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "powiedz",
+						"en": "say"
 					}
 				},
 				{
@@ -325,6 +500,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "słowem",
+						"en": "with the word"
+					},
+					"function": {
+						"pl": "Ablativus narzędzia przy dic.",
+						"en": "Ablative of means with dic."
 					}
 				},
 				{
@@ -333,6 +516,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -347,6 +534,14 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "będzie uzdrowiona",
+						"en": "shall be healed"
+					},
+					"function": {
+						"pl": "Czas przyszły strony biernej trybu oznajmującego.",
+						"en": "Future passive indicative."
 					}
 				},
 				{
@@ -359,6 +554,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dusza",
+						"en": "soul"
+					},
+					"function": {
+						"pl": "Podmiot przy sanábitur w mianowniku.",
+						"en": "Nominative subject of sanábitur."
 					}
 				},
 				{
@@ -372,7 +575,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w023"
+					"head": "w023",
+					"gloss": {
+						"pl": "moja",
+						"en": "my"
+					}
 				}
 			]
 		},
@@ -381,6 +588,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Panie, nie jestem godzien,",
+				"en": "Lord, I am not worthy,"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Mt 8, 8"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Matthew 8:8"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w025",
@@ -393,6 +618,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -401,6 +630,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -414,6 +647,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jestem",
+						"en": "am"
 					}
 				},
 				{
@@ -427,7 +664,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w027"
+					"head": "w027",
+					"gloss": {
+						"pl": "godzien",
+						"en": "worthy"
+					}
 				}
 			]
 		},
@@ -435,13 +676,25 @@
 			"id": "s08",
 			"type": "rubric",
 			"text": "Et secrete prosequitur:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Kapłan mówi dalej po cichu.",
+				"en": "The priest goes on silently."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ritus servandus in celebratione Missae, X, 4",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ritus servandus in celebratione Missae, X, 4",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -449,6 +702,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.",
+				"en": "that You should enter under my roof: but only say the word, and my soul shall be healed."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Mt 8, 8"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Matthew 8:8"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w029",
@@ -456,6 +727,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyś",
+						"en": "that"
 					}
 				},
 				{
@@ -470,6 +745,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wszedł",
+						"en": "You should enter"
 					}
 				},
 				{
@@ -480,7 +759,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w032"
+					"head": "w032",
+					"gloss": {
+						"pl": "pod",
+						"en": "under"
+					}
 				},
 				{
 					"id": "w032",
@@ -492,6 +775,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "dach",
+						"en": "roof"
 					}
 				},
 				{
@@ -505,7 +792,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w032"
+					"head": "w032",
+					"gloss": {
+						"pl": "mój",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w034",
@@ -513,6 +804,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "ale",
+						"en": "but"
 					}
 				},
 				{
@@ -521,6 +816,10 @@
 					"lemma": "tantum",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "tylko",
+						"en": "only"
 					}
 				},
 				{
@@ -535,6 +834,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "powiedz",
+						"en": "say"
 					}
 				},
 				{
@@ -548,6 +851,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "słowem",
+						"en": "with the word"
 					}
 				},
 				{
@@ -556,6 +863,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -570,6 +881,10 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "będzie uzdrowiona",
+						"en": "shall be healed"
 					}
 				},
 				{
@@ -582,6 +897,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dusza",
+						"en": "soul"
 					}
 				},
 				{
@@ -595,7 +914,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w040"
+					"head": "w040",
+					"gloss": {
+						"pl": "moja",
+						"en": "my"
+					}
 				}
 			]
 		},
@@ -604,6 +927,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Panie, nie jestem godzien,",
+				"en": "Lord, I am not worthy,"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Mt 8, 8"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Matthew 8:8"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w042",
@@ -616,6 +957,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -624,6 +969,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -637,6 +986,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jestem",
+						"en": "am"
 					}
 				},
 				{
@@ -650,7 +1003,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w044"
+					"head": "w044",
+					"gloss": {
+						"pl": "godzien",
+						"en": "worthy"
+					}
 				}
 			]
 		},
@@ -658,13 +1015,25 @@
 			"id": "s11",
 			"type": "rubric",
 			"text": "Et secrete prosequitur:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Kapłan mówi dalej po cichu.",
+				"en": "The priest goes on silently."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ritus servandus in celebratione Missae, X, 4",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ritus servandus in celebratione Missae, X, 4",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -672,6 +1041,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.",
+				"en": "that You should enter under my roof: but only say the word, and my soul shall be healed."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Mt 8, 8"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Matthew 8:8"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w046",
@@ -679,6 +1066,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyś",
+						"en": "that"
 					}
 				},
 				{
@@ -693,6 +1084,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wszedł",
+						"en": "You should enter"
 					}
 				},
 				{
@@ -703,7 +1098,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w049"
+					"head": "w049",
+					"gloss": {
+						"pl": "pod",
+						"en": "under"
+					}
 				},
 				{
 					"id": "w049",
@@ -715,6 +1114,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "dach",
+						"en": "roof"
 					}
 				},
 				{
@@ -728,7 +1131,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w049"
+					"head": "w049",
+					"gloss": {
+						"pl": "mój",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w051",
@@ -736,6 +1143,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "ale",
+						"en": "but"
 					}
 				},
 				{
@@ -744,6 +1155,10 @@
 					"lemma": "tantum",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "tylko",
+						"en": "only"
 					}
 				},
 				{
@@ -758,6 +1173,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "powiedz",
+						"en": "say"
 					}
 				},
 				{
@@ -771,6 +1190,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "słowem",
+						"en": "with the word"
 					}
 				},
 				{
@@ -779,6 +1202,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -793,6 +1220,10 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "będzie uzdrowiona",
+						"en": "shall be healed"
 					}
 				},
 				{
@@ -805,6 +1236,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dusza",
+						"en": "soul"
 					}
 				},
 				{
@@ -818,7 +1253,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w057"
+					"head": "w057",
+					"gloss": {
+						"pl": "moja",
+						"en": "my"
+					}
 				}
 			]
 		},
@@ -826,13 +1265,9 @@
 			"id": "s13",
 			"type": "rubric",
 			"text": "Postea dextera se signans cum Hostia super Patenam, dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan żegna się Hostią nad pateną i mówi:",
+				"en": "The priest signs himself with the Host over the paten, and says:"
 			}
 		},
 		{
@@ -840,6 +1275,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Ciało Pana naszego Jezusa Chrystusa niech strzeże duszy mojej na żywot wieczny. Amen.",
+				"en": "May the Body of our Lord Jesus Christ keep my soul unto life everlasting. Amen."
+			},
 			"words": [
 				{
 					"id": "w059",
@@ -851,6 +1290,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ciało",
+						"en": "The Body"
+					},
+					"function": {
+						"pl": "Podmiot przy custódiat.",
+						"en": "Subject of custódiat."
 					}
 				},
 				{
@@ -863,6 +1310,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "of the Lord"
 					}
 				},
 				{
@@ -875,7 +1326,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w060"
+					"head": "w060",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w062",
@@ -886,6 +1341,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -898,6 +1357,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -912,6 +1375,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "niech strzeże",
+						"en": "may keep"
 					}
 				},
 				{
@@ -924,6 +1391,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "duszy",
+						"en": "soul"
 					}
 				},
 				{
@@ -936,7 +1407,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w065"
+					"head": "w065",
+					"gloss": {
+						"pl": "mojej",
+						"en": "my"
+					},
+					"function": {
+						"pl": "W formule Komunii wiernych w tym miejscu występuje ánimam tuam.",
+						"en": "The Communion formula for the faithful has ánimam tuam in this place."
+					}
 				},
 				{
 					"id": "w067",
@@ -946,7 +1425,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w068"
+					"head": "w068",
+					"gloss": {
+						"pl": "na",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w068",
@@ -958,6 +1441,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "żywot",
+						"en": "life"
 					}
 				},
 				{
@@ -971,7 +1458,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w068"
+					"head": "w068",
+					"gloss": {
+						"pl": "wieczny",
+						"en": "everlasting"
+					}
 				},
 				{
 					"id": "w070",
@@ -980,6 +1471,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -988,14 +1483,107 @@
 			"id": "s15",
 			"type": "rubric",
 			"text": "Et se inclinans, reverenter sumit ambas partes Hostiæ: quibus sumptis, deponit Patenam super Corporale, et erigens se iungit manus, et quiescit aliquantulum in meditatione Sanctissimi Sacramenti.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Pochylony, kapłan przyjmuje z czcią obie części Hostii, kładzie patenę na korporale, składa ręce i przez chwilę trwa w rozmyślaniu o Najświętszym Sakramencie.",
+				"en": "Bowing, the priest reverently receives both halves of the Host, lays the paten on the corporal, joins his hands and rests a while in meditation on the Most Holy Sacrament."
 			}
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The priest's Communion under the species of bread, kept in one document because it is one act: the verse said as he genuflects and rises, the threefold Dómine non sum dignus said striking his breast, and the form said as he signs himself with the Host. The three repetitions are encoded as three sets of words with their own ids, as the Kyrie is; the rubric telling the priest to go on secretly is printed inside each of the three lines and is carried three times, because that is where the change of voice falls. ACCÍPIAM at w003 is future indicative, not present subjunctive, the two being identical in form: it is coordinated with invocábo, which can only be future. TANTUM at w018 is the adverb, not the neuter of tantus. SUB at w014 governs the accusative here, motion under a roof, where the corpus's other token of the word (ordinarium.credo w080) governs the ablative.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variant is adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.panem-caelestem/",
+			"apparatus": "witnesses/ordinarium.panem-caelestem/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s03": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s05": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s08": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s11": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s13": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s15": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		}
+	}
 }

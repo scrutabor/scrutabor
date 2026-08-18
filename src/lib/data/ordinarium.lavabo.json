@@ -9,41 +9,44 @@
 	"ids": {
 		"next": 95
 	},
-	"status": "working-edition",
-	"notes": "Psalm 25:6-12 with the Glória Patri, said while the priest washes his fingers. A document of its own for the same reason as ordinarium.iudica-me: it is a whole psalm portion, and the doxology attached to it falls away on its own days (Masses for the Dead and, in Masses of the season, from Passion Sunday to Holy Thursday) while the psalm stays. Witness do prints the doxology here by reference to its own shared block; the witness header declares the expansion. CIRCÚMDABO at w007 is accented on the antepenult because the a of dare is short — witness handmissal-eo accents the penult, adjudicated in the apparatus. ÁUDIAM at w012 is present subjunctive, not future indicative, which the form equally allows: it stands under ut with enárrem, whose subjunctive is unambiguous. BENEDÍCAM at w072 is the opposite case — future indicative, not subjunctive, standing in a main clause beside the futures Lavábo and circúmdabo. MANUS at w004 is accusative plural (the object of Lavábo) out of six readings the form allows, and DOMUS at w023 genitive singular out of five. MEI at w064 is the genitive of ego, which misereor governs, not the possessive meus — the same trap the corpus records for vestri at ordinarium.misereatur. MIRABÍLIA at w018 and INNOCÉNTES at w003 are adjectives standing as nouns; DIRÉCTO at w069 likewise, a neuter used as a noun after in.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants (punctuation, one accent) adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.lavabo/",
-		"apparatus": "witnesses/ordinarium.lavabo/apparatus.json"
+	"about": {
+		"pl": "Psalm 25, 6–12 według numeracji Wulgaty (Ps 26 w numeracji hebrajskiej), odmawiany podczas obmycia rąk. We Mszach za zmarłych oraz we Mszach okresowych od Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie opuszcza się „Glória Patri”. Sam psalm pozostaje.",
+		"en": "Psalm 25:6–12 in the Vulgate numbering (Psalm 26 in Hebrew), said during the washing of hands. At Masses for the Dead, and at Masses of the season from Passion Sunday through Maundy Thursday, the Glória Patri is omitted. The psalm itself remains."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Ritus servandus in celebratione Missae, VII, 6",
+				"url": "https://archive.org/details/missale_romanum-1962/page/n60/mode/1up"
+			},
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 26 (Vg 25), 6–12",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Ritus servandus in celebratione Missae, VII, 6",
+				"url": "https://archive.org/details/missale_romanum-1962/page/n60/mode/1up"
+			},
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 26 (Vg 25), 6–12",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Sacerdos lavat manus, dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan obmywa końce palców, kciuka i wskazującego, odmawiając psalm.",
+				"en": "The priest washes his fingertips, the thumb and the index, while saying the psalm."
 			}
 		},
 		{
@@ -51,6 +54,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Obmyję ręce moje między niewinnymi i obejdę ołtarz Twój, Panie:",
+				"en": "I will wash my hands among the innocent, and go about Thy altar, Lord:"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -64,6 +71,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "obmyję",
+						"en": "I will wash"
+					},
+					"function": {
+						"pl": "Pierwsza osoba liczby pojedynczej czasu przyszłego.",
+						"en": "First-person singular future."
 					}
 				},
 				{
@@ -74,7 +89,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "między",
+						"en": "among"
+					}
 				},
 				{
 					"id": "w003",
@@ -86,7 +105,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "niewinnymi",
+						"en": "the innocent"
+					},
+					"function": {
+						"pl": "Przymiotnik użyty rzeczownikowo w bierniku liczby mnogiej po „inter” (w002).",
+						"en": "An adjective used as a noun in the accusative plural after “inter” (w002)."
+					}
 				},
 				{
 					"id": "w004",
@@ -98,6 +125,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "ręce",
+						"en": "hands"
+					},
+					"function": {
+						"pl": "Biernik liczby mnogiej jako dopełnienie „Lavábo” (w001).",
+						"en": "Accusative plural as the object of “Lavábo” (w001)."
 					}
 				},
 				{
@@ -111,7 +146,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "moje",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w006",
@@ -119,6 +158,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -133,6 +176,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "obejdę",
+						"en": "I will go about"
 					}
 				},
 				{
@@ -145,6 +192,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ołtarz",
+						"en": "altar"
 					}
 				},
 				{
@@ -158,7 +209,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "Twój",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w010",
@@ -171,6 +226,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				}
 			]
@@ -180,6 +239,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Abym słyszał głos chwały i opowiadał wszystkie cuda Twoje.",
+				"en": "That I may hear the voice of praise, and tell all Thy wonders."
+			},
 			"words": [
 				{
 					"id": "w011",
@@ -187,6 +250,14 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abym",
+						"en": "that"
+					},
+					"function": {
+						"pl": "Otwiera zdanie celowe z czasownikami w trybie łączącym.",
+						"en": "It opens a purpose clause with verbs in the subjunctive."
 					}
 				},
 				{
@@ -201,6 +272,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "słyszał",
+						"en": "I may hear"
+					},
+					"function": {
+						"pl": "Pierwsza osoba liczby pojedynczej trybu łączącego w zdaniu rozpoczętym przez „Ut” (w011).",
+						"en": "First-person singular subjunctive in the clause introduced by “Ut” (w011)."
 					}
 				},
 				{
@@ -213,6 +292,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "głos",
+						"en": "the voice"
 					}
 				},
 				{
@@ -226,6 +309,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "chwały",
+						"en": "of praise"
 					}
 				},
 				{
@@ -234,6 +321,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -248,6 +339,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "opowiadał",
+						"en": "may tell"
+					},
+					"function": {
+						"pl": "Drugi czasownik w trybie łączącym zależny od „Ut” (w011).",
+						"en": "The second subjunctive verb governed by “Ut” (w011)."
 					}
 				},
 				{
@@ -260,7 +359,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "wszystkie",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w018",
@@ -272,7 +375,15 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "cuda",
+						"en": "wonders"
+					},
+					"function": {
+						"pl": "Przymiotnik rodzaju nijakiego w liczbie mnogiej, użyty rzeczownikowo.",
+						"en": "A neuter plural adjective used as a noun."
+					}
 				},
 				{
 					"id": "w019",
@@ -285,7 +396,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					}
 				}
 			]
 		},
@@ -294,6 +409,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Panie, umiłowałem piękno domu Twego i miejsce mieszkania chwały Twojej.",
+				"en": "Lord, I have loved the beauty of Thy house, and the place of the dwelling of Thy glory."
+			},
 			"words": [
 				{
 					"id": "w020",
@@ -306,6 +425,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -320,6 +443,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "umiłowałem",
+						"en": "I have loved"
 					}
 				},
 				{
@@ -332,6 +459,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "piękno",
+						"en": "the beauty"
 					}
 				},
 				{
@@ -344,6 +475,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "domu",
+						"en": "of the house"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby pojedynczej zależny od „decórem” (w022).",
+						"en": "Genitive singular dependent on “decórem” (w022)."
 					}
 				},
 				{
@@ -356,7 +495,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w023"
+					"head": "w023",
+					"gloss": {
+						"pl": "Twego",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w025",
@@ -364,6 +507,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -376,6 +523,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "miejsce",
+						"en": "the place"
 					}
 				},
 				{
@@ -388,6 +539,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "mieszkania",
+						"en": "of the dwelling"
 					}
 				},
 				{
@@ -400,6 +555,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwały",
+						"en": "of glory"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „habitatiónis” (w027), które samo zależy od „locum” (w026).",
+						"en": "A genitive dependent on “habitatiónis” (w027), which itself depends on “locum” (w026)."
 					}
 				},
 				{
@@ -413,7 +576,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w028"
+					"head": "w028",
+					"gloss": {
+						"pl": "Twojej",
+						"en": "Thy"
+					}
 				}
 			]
 		},
@@ -422,6 +589,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Nie zatrać z bezbożnymi, Boże, duszy mojej, a z mężami krwawymi życia mojego:",
+				"en": "Destroy not my soul with the wicked, God, nor my life with men of blood:"
+			},
 			"words": [
 				{
 					"id": "w030",
@@ -429,6 +600,14 @@
 					"lemma": "ne",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "do not"
+					},
+					"function": {
+						"pl": "„Ne” wprowadza przeczącą prośbę.",
+						"en": "“Ne” introduces a negative petition."
 					}
 				},
 				{
@@ -443,6 +622,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "zatrać",
+						"en": "destroy"
+					},
+					"function": {
+						"pl": "Tryb łączący zależny od przeczącego „Ne” (w030).",
+						"en": "A subjunctive governed by negative “Ne” (w030)."
 					}
 				},
 				{
@@ -453,7 +640,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w033"
+					"head": "w033",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w033",
@@ -466,7 +657,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "bezbożnymi",
+						"en": "the wicked"
+					},
+					"function": {
+						"pl": "Przymiotnik użyty rzeczownikowo w ablativie liczby mnogiej po „cum” (w032).",
+						"en": "An adjective used as a noun in the ablative plural after “cum” (w032)."
+					}
 				},
 				{
 					"id": "w034",
@@ -479,6 +678,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				},
 				{
@@ -491,6 +694,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "duszy",
+						"en": "soul"
 					}
 				},
 				{
@@ -504,7 +711,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w035"
+					"head": "w035",
+					"gloss": {
+						"pl": "mojej",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w037",
@@ -512,6 +723,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -522,7 +737,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w039"
+					"head": "w039",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w039",
@@ -534,6 +753,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "mężami",
+						"en": "the men"
 					}
 				},
 				{
@@ -546,6 +769,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "krwi",
+						"en": "of blood"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby mnogiej zależny od „viris” (w039).",
+						"en": "Genitive plural dependent on “viris” (w039)."
 					}
 				},
 				{
@@ -558,6 +789,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "życia",
+						"en": "life"
 					}
 				},
 				{
@@ -571,7 +806,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w041"
+					"head": "w041",
+					"gloss": {
+						"pl": "mojego",
+						"en": "my"
+					}
 				}
 			]
 		},
@@ -580,6 +819,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "W których rękach są nieprawości: prawica ich napełniona jest darami.",
+				"en": "In whose hands are iniquities: their right hand is filled with gifts."
+			},
 			"words": [
 				{
 					"id": "w043",
@@ -589,7 +832,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w045"
+					"head": "w045",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w044",
@@ -600,6 +847,14 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "których",
+						"en": "whose"
+					},
+					"function": {
+						"pl": "Zaimek względny odnosi się do „viris” (w039) z poprzedniego wersetu.",
+						"en": "The relative pronoun refers to “viris” (w039) in the preceding verse."
 					}
 				},
 				{
@@ -612,6 +867,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "rękach",
+						"en": "hands"
 					}
 				},
 				{
@@ -624,6 +883,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "nieprawości",
+						"en": "iniquities"
 					}
 				},
 				{
@@ -638,6 +901,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "są",
+						"en": "are"
 					}
 				},
 				{
@@ -651,13 +918,9 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "prawica",
+						"en": "right hand"
 					}
 				},
 				{
@@ -669,6 +932,10 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "ich",
+						"en": "their"
 					}
 				},
 				{
@@ -685,7 +952,11 @@
 						"voice": "pass",
 						"conj": 2
 					},
-					"head": "w048"
+					"head": "w048",
+					"gloss": {
+						"pl": "napełniona",
+						"en": "filled"
+					}
 				},
 				{
 					"id": "w051",
@@ -698,6 +969,14 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "została",
+						"en": "is"
+					},
+					"function": {
+						"pl": "Z „repléta” (w050) tworzy perfectum strony biernej.",
+						"en": "With “repléta” (w050), it forms a perfect passive."
 					}
 				},
 				{
@@ -711,6 +990,14 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "darami",
+						"en": "with gifts"
+					},
+					"function": {
+						"pl": "Ablativus liczby mnogiej przy „repléta” (w050).",
+						"en": "Ablative plural with “repléta” (w050)."
 					}
 				}
 			]
@@ -720,6 +1007,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Ja zaś chodziłem w niewinności mojej: odkup mnie i zmiłuj się nade mną.",
+				"en": "But I have walked in my innocence: redeem me, and have mercy on me."
+			},
 			"words": [
 				{
 					"id": "w053",
@@ -729,6 +1020,14 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "ja",
+						"en": "I"
+					},
+					"function": {
+						"pl": "Mianownik, wyrażony dla przeciwstawienia mężom opisanym wcześniej.",
+						"en": "Nominative, expressed in contrast with the men described before."
 					}
 				},
 				{
@@ -737,6 +1036,10 @@
 					"lemma": "autem",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "zaś",
+						"en": "but"
 					}
 				},
 				{
@@ -747,7 +1050,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w056"
+					"head": "w056",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w056",
@@ -759,6 +1066,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "niewinności",
+						"en": "innocence"
 					}
 				},
 				{
@@ -771,7 +1082,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w056"
+					"head": "w056",
+					"gloss": {
+						"pl": "mojej",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w058",
@@ -787,7 +1102,15 @@
 						"voice": "dep",
 						"conj": 3
 					},
-					"head": "w053"
+					"head": "w053",
+					"gloss": {
+						"pl": "chodziłem",
+						"en": "have walked"
+					},
+					"function": {
+						"pl": "Łacina buduje ten czas przeszły z imiesłowu i słowa „est”. Polszczyzna oddaje go jednym słowem, więc „est” nie ma tu osobnego odpowiednika.",
+						"en": "Latin builds this perfect from a participle and the verb to be. Polish renders it in one word, so the auxiliary has no separate counterpart there."
+					}
 				},
 				{
 					"id": "w059",
@@ -801,6 +1124,14 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "—",
+						"en": "have"
+					},
+					"function": {
+						"pl": "Z „ingréssus” (w058) tworzy perfectum czasownika deponentnego.",
+						"en": "With “ingréssus” (w058), it forms the perfect of a deponent verb."
 					}
 				},
 				{
@@ -815,6 +1146,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wykup",
+						"en": "redeem"
+					},
+					"function": {
+						"pl": "Druga osoba liczby pojedynczej trybu rozkazującego.",
+						"en": "Second-person singular imperative."
 					}
 				},
 				{
@@ -825,6 +1164,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				},
 				{
@@ -833,6 +1176,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -847,6 +1194,10 @@
 						"mood": "imp",
 						"voice": "dep",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
 					}
 				},
 				{
@@ -858,6 +1209,14 @@
 						"pos": "pron",
 						"case": "gen",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "nade mną",
+						"en": "on me"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby pojedynczej zależny od „miserére” (w063).",
+						"en": "Genitive singular governed by “miserére” (w063)."
 					}
 				}
 			]
@@ -867,6 +1226,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Noga moja stanęła na prostej drodze: w zgromadzeniach będę błogosławił Ciebie, Panie.",
+				"en": "My foot hath stood in the straight way: in the assemblies I will bless Thee, Lord."
+			},
 			"words": [
 				{
 					"id": "w065",
@@ -878,6 +1241,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "noga",
+						"en": "foot"
 					}
 				},
 				{
@@ -890,7 +1257,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w065"
+					"head": "w065",
+					"gloss": {
+						"pl": "moja",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w067",
@@ -904,6 +1275,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "stanęła",
+						"en": "hath stood"
 					}
 				},
 				{
@@ -914,7 +1289,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w069"
+					"head": "w069",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w069",
@@ -927,7 +1306,15 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "prostej drodze",
+						"en": "the straight way"
+					},
+					"function": {
+						"pl": "Przymiotnik rodzaju nijakiego użyty rzeczownikowo po „in” (w068).",
+						"en": "A neuter adjective used as a noun after “in” (w068)."
+					}
 				},
 				{
 					"id": "w070",
@@ -937,7 +1324,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w071"
+					"head": "w071",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w071",
@@ -949,6 +1340,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "zgromadzeniach",
+						"en": "the assemblies"
+					},
+					"function": {
+						"pl": "Ablativus liczby mnogiej po „in” (w070).",
+						"en": "Ablative plural after “in” (w070)."
 					}
 				},
 				{
@@ -963,6 +1362,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "będę błogosławił",
+						"en": "I will bless"
+					},
+					"function": {
+						"pl": "Pierwsza osoba liczby pojedynczej czasu przyszłego.",
+						"en": "First-person singular future."
 					}
 				},
 				{
@@ -974,6 +1381,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "Thee"
 					}
 				},
 				{
@@ -987,6 +1398,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				}
 			]
@@ -996,6 +1411,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Chwała Ojcu i Synowi, i Duchowi Świętemu.",
+				"en": "Glory be to the Father, and to the Son, and to the Holy Spirit."
+			},
 			"words": [
 				{
 					"id": "w075",
@@ -1007,6 +1426,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwała",
+						"en": "glory"
+					},
+					"function": {
+						"pl": "Mianownik w doksologii bez wyrażonego czasownika: domyślnie „niech będzie chwała”.",
+						"en": "Nominative in a verbless doxology: “glory be” is understood."
 					}
 				},
 				{
@@ -1020,6 +1447,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojcu",
+						"en": "to the Father"
 					}
 				},
 				{
@@ -1028,6 +1459,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1041,6 +1476,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synowi",
+						"en": "to the Son"
 					}
 				},
 				{
@@ -1049,6 +1488,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1061,6 +1504,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "Duchowi",
+						"en": "to the Spirit"
 					}
 				},
 				{
@@ -1074,7 +1521,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w080"
+					"head": "w080",
+					"gloss": {
+						"pl": "Świętemu",
+						"en": "Holy"
+					}
 				}
 			]
 		},
@@ -1083,6 +1534,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.",
+				"en": "As it was in the beginning, is now, and ever shall be, world without end. Amen."
+			},
 			"words": [
 				{
 					"id": "w082",
@@ -1090,6 +1545,10 @@
 					"lemma": "sicut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "jak",
+						"en": "as"
 					}
 				},
 				{
@@ -1103,6 +1562,10 @@
 						"tense": "impf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "była",
+						"en": "it was"
 					}
 				},
 				{
@@ -1113,7 +1576,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w085"
+					"head": "w085",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w085",
@@ -1126,6 +1593,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "początku",
+						"en": "the beginning"
 					}
 				},
 				{
@@ -1134,6 +1605,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1143,6 +1618,10 @@
 					"lemma": "nunc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "teraz",
+						"en": "now"
 					}
 				},
 				{
@@ -1151,6 +1630,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1160,6 +1643,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "ever"
 					}
 				},
 				{
@@ -1168,6 +1655,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1178,7 +1669,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w092"
+					"head": "w092",
+					"gloss": {
+						"pl": "na",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w092",
@@ -1190,6 +1685,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
 					}
 				},
 				{
@@ -1203,6 +1702,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
 					}
 				},
 				{
@@ -1212,9 +1715,62 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "Psalm 25:6-12 with the Glória Patri, said while the priest washes his fingers. A document of its own for the same reason as ordinarium.iudica-me: it is a whole psalm portion, and the doxology attached to it falls away on its own days (Masses for the Dead and, in Masses of the season, from Passion Sunday to Holy Thursday) while the psalm stays. Witness do prints the doxology here by reference to its own shared block; the witness header declares the expansion. CIRCÚMDABO at w007 is accented on the antepenult because the a of dare is short — witness handmissal-eo accents the penult, adjudicated in the apparatus. ÁUDIAM at w012 is present subjunctive, not future indicative, which the form equally allows: it stands under ut with enárrem, whose subjunctive is unambiguous. BENEDÍCAM at w072 is the opposite case — future indicative, not subjunctive, standing in a main clause beside the futures Lavábo and circúmdabo. MANUS at w004 is accusative plural (the object of Lavábo) out of six readings the form allows, and DOMUS at w023 genitive singular out of five. MEI at w064 is the genitive of ego, which misereor governs, not the possessive meus — the same trap the corpus records for vestri at ordinarium.misereatur. MIRABÍLIA at w018 and INNOCÉNTES at w003 are adjectives standing as nouns; DIRÉCTO at w069 likewise, a neuter used as a noun after in.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants (punctuation, one accent) adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.lavabo/",
+			"apparatus": "witnesses/ordinarium.lavabo/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w048": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

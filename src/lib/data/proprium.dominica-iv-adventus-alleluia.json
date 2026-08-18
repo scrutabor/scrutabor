@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 14
 	},
-	"status": "working-edition",
-	"notes": "The alleluia verse of the Fourth Sunday of Advent.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-iv-adventus-alleluia/",
-		"apparatus": "witnesses/proprium.dominica-iv-adventus-alleluia/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Werset allelujatyczny IV Niedzieli Adwentu. Ostatnia niedziela przed Bożym Narodzeniem prosi o jedno: żeby nie zwlekał.",
+		"en": "The alleluia verse of the Fourth Sunday of Advent. The last Sunday before Christmas asks one thing, that He not delay."
 	},
 	"segments": [
 		{
@@ -44,6 +25,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Alleluja, alleluja.",
+				"en": "Alleluia, alleluia."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -52,6 +37,10 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				},
 				{
@@ -61,6 +50,10 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				}
 			]
@@ -76,6 +69,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Przyjdź, Panie, i nie zwlekaj: odpuść występki ludu Twego, Izraela.",
+				"en": "Come, O Lord, and delay not: remit the misdeeds of Thy people Israel."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 79:3"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 79:3"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w003",
@@ -90,6 +101,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "przyjdź",
+						"en": "come"
 					}
 				},
 				{
@@ -103,6 +118,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -111,6 +130,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -124,6 +147,10 @@
 						"tense": "pres",
 						"mood": "imp",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "nie chciej",
+						"en": "be not willing"
 					}
 				},
 				{
@@ -137,6 +164,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "zwlekać",
+						"en": "to delay"
 					}
 				},
 				{
@@ -151,6 +182,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "odpuść",
+						"en": "remit"
 					}
 				},
 				{
@@ -163,6 +198,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "występki",
+						"en": "the misdeeds"
 					}
 				},
 				{
@@ -175,6 +214,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ludowi",
+						"en": "of people"
 					}
 				},
 				{
@@ -187,7 +230,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w010"
+					"head": "w010",
+					"gloss": {
+						"pl": "Twemu",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w012",
@@ -199,6 +246,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Izraelowi",
+						"en": "Israel"
 					}
 				}
 			]
@@ -214,6 +265,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Alleluja.",
+				"en": "Alleluia."
+			},
 			"words": [
 				{
 					"id": "w013",
@@ -222,9 +277,38 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The alleluia verse of the Fourth Sunday of Advent.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-iv-adventus-alleluia/",
+			"apparatus": "witnesses/proprium.dominica-iv-adventus-alleluia/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

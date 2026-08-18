@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 28
 	},
-	"status": "working-edition",
-	"notes": "The collect of the Fourth Sunday of Advent.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-iv-adventus-collecta/",
-		"apparatus": "witnesses/proprium.dominica-iv-adventus-collecta/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Kolekta IV Niedzieli Adwentu. Prosi o pośpiech: łaska ma nadejść szybciej, niż zdążą przeszkodzić grzechy.",
+		"en": "The collect of the Fourth Sunday of Advent. It asks for haste, that grace outrun the sins standing in its way."
 	},
 	"segments": [
 		{
@@ -38,6 +19,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Wzbudź, prosimy Cię, Panie, potęgę Twoją i przyjdź: i przyjdź nam z pomocą wielką mocą, aby przez wsparcie Twojej łaski to, co udaremniają nasze grzechy, przyspieszyła pobłażliwość Twojego przebaczenia: Który żyjesz.",
+				"en": "Stir up Thy power, we beseech Thee, O Lord, and come: and succor us with great might, that by the help of Thy grace the indulgence of Thy forgiveness may hasten what our sins hinder: Who livest."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -52,6 +37,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wzbudź",
+						"en": "stir up"
 					}
 				},
 				{
@@ -67,6 +56,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "prosimy",
+						"en": "we beseech"
 					}
 				},
 				{
@@ -80,6 +73,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -92,6 +89,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "potęgę",
+						"en": "power"
 					}
 				},
 				{
@@ -105,7 +106,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w006",
@@ -113,6 +118,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -128,6 +137,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "przyjdź",
+						"en": "come"
 					}
 				},
 				{
@@ -136,6 +149,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -148,7 +165,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "wielką",
+						"en": "with great"
+					}
 				},
 				{
 					"id": "w010",
@@ -158,6 +179,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nam",
+						"en": "to us"
 					}
 				},
 				{
@@ -170,6 +195,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "mocą",
+						"en": "might"
 					}
 				},
 				{
@@ -185,6 +214,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "pospiesz z pomocą",
+						"en": "succor"
 					}
 				},
 				{
@@ -193,6 +226,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
 					}
 				},
 				{
@@ -203,7 +240,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "przez",
+						"en": "by"
+					}
 				},
 				{
 					"id": "w015",
@@ -215,6 +256,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wsparcie",
+						"en": "the help"
 					}
 				},
 				{
@@ -227,6 +272,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "łaski",
+						"en": "of grace"
 					}
 				},
 				{
@@ -240,7 +289,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "Twojej",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w018",
@@ -251,6 +304,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "to co",
+						"en": "what"
+					},
+					"function": {
+						"pl": "Dopełnienie bliższe czasownika „accéleret”: łaska ma przyspieszyć to, czemu grzechy stają na drodze.",
+						"en": "The object of “accéleret”: grace is to hasten the very thing the sins stand in the way of."
 					}
 				},
 				{
@@ -263,7 +324,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w020"
+					"head": "w020",
+					"gloss": {
+						"pl": "nasze",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w020",
@@ -275,6 +340,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "grzechy",
+						"en": "sins"
 					}
 				},
 				{
@@ -290,6 +359,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "udaremniają",
+						"en": "hinder"
 					}
 				},
 				{
@@ -302,6 +375,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "pobłażliwość",
+						"en": "the indulgence"
 					}
 				},
 				{
@@ -314,7 +391,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "Twojego",
+						"en": "of Thy"
+					}
 				},
 				{
 					"id": "w024",
@@ -326,6 +407,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "przebaczenia",
+						"en": "forgiveness"
 					}
 				},
 				{
@@ -341,6 +426,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "przyspieszyła",
+						"en": "may hasten"
 					}
 				},
 				{
@@ -352,6 +441,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Który",
+						"en": "Who"
 					}
 				},
 				{
@@ -367,9 +460,38 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "żyjesz",
+						"en": "livest"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The collect of the Fourth Sunday of Advent.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-iv-adventus-collecta/",
+			"apparatus": "witnesses/proprium.dominica-iv-adventus-collecta/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

@@ -9,27 +9,9 @@
 	"ids": {
 		"next": 22
 	},
-	"status": "working-edition",
-	"notes": "The offertory antiphon of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. The witnesses agree with zero divergence, so this text carries no apparatus.",
-		"witnesses": "witnesses/proprium.dominica-ii-adventus-offertorium/"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Antyfona na ofiarowanie II Niedzieli Adwentu, z Psalmu 84. Te same wersety mówi kapłan u stopni ołtarza na początku każdej Mszy, gdzie są dialogiem między nim a ministrantem. Tutaj tworzą jedną ciągłą prośbę.",
+		"en": "The offertory antiphon of the Second Sunday of Advent, from Psalm 84. The priest says the same verses at the foot of the altar at the beginning of every Mass, where they are a dialogue between him and the server. Here they form one continuous petition."
 	},
 	"segments": [
 		{
@@ -47,6 +29,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Boże, Ty zwróciwszy się ożywisz nas, a lud Twój rozraduje się w Tobie: okaż nam, Panie, miłosierdzie Twoje, a zbawienie Twoje daj nam.",
+				"en": "O God, Thou wilt turn and give us life, and Thy people shall rejoice in Thee: show us Thy mercy, O Lord, and grant us Thy salvation."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 84:7-8"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 84:7-8"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -59,6 +59,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				},
 				{
@@ -69,6 +73,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "Thou"
 					}
 				},
 				{
@@ -85,7 +93,11 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "zwróciwszy się",
+						"en": "having turned"
+					}
 				},
 				{
 					"id": "w004",
@@ -99,6 +111,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "ożywisz",
+						"en": "wilt give life"
 					}
 				},
 				{
@@ -110,6 +126,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -118,6 +138,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -130,6 +154,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "lud",
+						"en": "people"
 					}
 				},
 				{
@@ -142,7 +170,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "Twój",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w009",
@@ -156,6 +188,10 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "rozraduje się",
+						"en": "will rejoice"
 					}
 				},
 				{
@@ -166,7 +202,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w011",
@@ -177,6 +217,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "Thee"
 					}
 				},
 				{
@@ -191,6 +235,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "okaż",
+						"en": "show"
 					}
 				},
 				{
@@ -202,6 +250,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nam",
+						"en": "us"
 					}
 				},
 				{
@@ -215,6 +267,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -227,6 +283,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "miłosierdzie",
+						"en": "mercy"
 					}
 				},
 				{
@@ -240,7 +300,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w017",
@@ -248,6 +312,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -260,6 +328,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zbawienie",
+						"en": "salvation"
 					}
 				},
 				{
@@ -272,7 +344,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w020",
@@ -286,6 +362,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "daj",
+						"en": "grant"
 					}
 				},
 				{
@@ -297,9 +377,37 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nam",
+						"en": "us"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The offertory antiphon of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. The witnesses agree with zero divergence, so this text carries no apparatus.",
+			"witnesses": "witnesses/proprium.dominica-ii-adventus-offertorium/"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

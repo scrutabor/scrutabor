@@ -9,41 +9,18 @@
 	"ids": {
 		"next": 57
 	},
-	"status": "working-edition",
-	"notes": "The common Preface, said on most weekdays — when neither a proper nor an applicable seasonal Preface is assigned. Its own document because it is one of several Prefaces that occupy the same slot; the dialogue before it and the Sanctus after it are separate documents for the same reason. SALUTÁRE at w008 is the neuter of the adjective salutáris, standing in a series with dignum, iustum and æquum, not the noun salutáre (salvation) that the corpus already carries at ordinarium.deus-tu-conversus w018 and ordinarium.iudica-me w089: the agreement report records the divergence, since Whitaker's Words heads only the noun. DOMINATIÓNES at w033 and POTESTÁTES at w035 are nominative subjects of adórant and tremunt, not further objects of laudant; the forms are identical in both cases and the reading rests on the three parallel verbs, each of which needs a subject. SÉRAPHIM at w041 is indeclinable; the case and number are those the sentence requires and that beáta agrees with, not marks the form carries. SÓCIA at w042 is ablative with exsultatióne, not nominative with the subjects. QUIBUS at w046 carries no gender: the antecedent is the whole company of angels, of more than one grammatical gender, and the form marks none. Witness handmissal-eo prints ætérnæ Deus for ætérne Deus; that is a printer's slip, declared as a corrigendum in the witness header and not a variant.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence once the corrigendum declared in the handmissal-eo witness header is applied. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.praefatio-communis/",
-		"apparatus": "witnesses/ordinarium.praefatio-communis/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Prefacja zwykła nie wymienia tajemnicy dnia. Po słowach „przez Chrystusa, Pana naszego” przechodzi do uwielbienia Boga przez chóry anielskie. Jej pierwsze zdanie jest zbudowane wokół „est”, od którego zależy konstrukcja „nos tibi grátias ágere”.",
+		"en": "The Common Preface names no mystery of the day. After “through Christ our Lord” it turns to the angelic choirs' praise of God. Its opening sentence is built around “est”, which governs the construction “nos tibi grátias ágere”."
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Deinde disiungit manus, et disiunctas tenet usque ad finem Præfationis: qua finita, iterum iungit eas, et inclinatus dicit: Sanctus.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan rozłącza ręce i trzyma je rozłożone aż do końca Prefacji.",
+				"en": "The priest parts his hands and holds them apart to the end of the Preface."
 			}
 		},
 		{
@@ -51,6 +28,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Zaprawdę godne to i sprawiedliwe, słuszne i zbawienne, byśmy Tobie zawsze i wszędzie składali dzięki:",
+				"en": "It is truly right and just, our duty and our salvation, always and everywhere to give You thanks:"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -58,6 +39,10 @@
 					"lemma": "vere",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zaprawdę",
+						"en": "truly"
 					}
 				},
 				{
@@ -70,7 +55,15 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "godne",
+						"en": "right"
+					},
+					"function": {
+						"pl": "„Vere dignum et iustum est” podejmuje odpowiedź „Dignum et iustum est”.",
+						"en": "“Vere dignum et iustum est” takes up the answer “Dignum et iustum est”."
+					}
 				},
 				{
 					"id": "w003",
@@ -78,6 +71,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -90,7 +87,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "sprawiedliwe",
+						"en": "just"
+					}
 				},
 				{
 					"id": "w005",
@@ -104,6 +105,14 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "it is"
+					},
+					"function": {
+						"pl": "Jedyne orzeczenie osobowe w tym zdaniu. Jego podmiotem jest konstrukcja „nos tibi grátias ágere”.",
+						"en": "The only finite verb in this sentence. Its subject is the construction “nos tibi grátias ágere”."
 					}
 				},
 				{
@@ -116,7 +125,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "słuszne",
+						"en": "proper"
+					}
 				},
 				{
 					"id": "w007",
@@ -124,6 +137,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -137,7 +154,15 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "zbawienne",
+						"en": "salutary"
+					},
+					"function": {
+						"pl": "Rodzaj nijaki liczby pojedynczej od salutáris, w szeregu z dignum, iustum i æquum. Tutaj jest to przymiotnik „zbawienne”.",
+						"en": "Neuter singular of salutáris, in a series with dignum, iustum and æquum. Here it is the adjective “salutary”."
+					}
 				},
 				{
 					"id": "w009",
@@ -147,6 +172,14 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "byśmy my",
+						"en": "that we"
+					},
+					"function": {
+						"pl": "Biernik jako podmiot bezokolicznika „ágere” (w015) — konstrukcja, której polszczyzna nie ma i oddaje ją zdaniem podrzędnym.",
+						"en": "The accusative subject of the infinitive “ágere” (w015) — a construction English renders with a that-clause."
 					}
 				},
 				{
@@ -157,6 +190,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "to Thee"
 					}
 				},
 				{
@@ -165,6 +202,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "always"
 					}
 				},
 				{
@@ -173,6 +214,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -181,6 +226,10 @@
 					"lemma": "ubique",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "wszędzie",
+						"en": "everywhere"
 					}
 				},
 				{
@@ -193,6 +242,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dzięki",
+						"en": "thanks"
 					}
 				},
 				{
@@ -206,6 +259,14 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "składać",
+						"en": "give"
+					},
+					"function": {
+						"pl": "Bezokolicznik w konstrukcji „nos tibi grátias ágere”, zależnej od „est” (w005).",
+						"en": "The infinitive in “nos tibi grátias ágere”, a construction governed by “est” (w005)."
 					}
 				}
 			]
@@ -215,6 +276,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Panie święty, Ojcze wszechmogący, wieczny Boże: przez Chrystusa Pana naszego.",
+				"en": "Lord, holy Father, almighty and eternal God: through Christ our Lord."
+			},
 			"words": [
 				{
 					"id": "w016",
@@ -226,6 +291,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -239,7 +308,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "święty",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w018",
@@ -251,6 +324,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojcze",
+						"en": "Father"
 					}
 				},
 				{
@@ -264,7 +341,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "wszechmogący",
+						"en": "almighty"
+					}
 				},
 				{
 					"id": "w020",
@@ -276,7 +357,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "wieczny",
+						"en": "eternal"
+					}
 				},
 				{
 					"id": "w021",
@@ -289,6 +374,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				},
 				{
@@ -299,7 +388,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w023"
+					"head": "w023",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w023",
@@ -311,6 +404,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -323,6 +420,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -336,7 +437,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					},
+					"function": {
+						"pl": "W tym miejscu prefacje własne wprowadzają część odnoszącą się do dnia lub tajemnicy.",
+						"en": "At this point the proper prefaces insert a section referring to the day or mystery."
+					}
 				}
 			]
 		},
@@ -345,6 +454,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Przez Niego Twój majestat chwalą Aniołowie, uwielbiają Państwa, z lękiem czczą Potęgi.",
+				"en": "Through Him the Angels praise Your majesty, Dominions adore and Powers tremble before You."
+			},
 			"words": [
 				{
 					"id": "w026",
@@ -354,7 +467,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w027"
+					"head": "w027",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w027",
@@ -365,6 +482,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Niego",
+						"en": "whom"
+					},
+					"function": {
+						"pl": "Zaimek względny odnoszący się do Chrystusa.",
+						"en": "A relative pronoun referring to Christ."
 					}
 				},
 				{
@@ -377,6 +502,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "majestat",
+						"en": "majesty"
+					},
+					"function": {
+						"pl": "Jedno dopełnienie na trzy czasowniki: chwalą go, uwielbiają i drżą przed nim.",
+						"en": "One object for three verbs: they praise it, adore it, tremble before it."
 					}
 				},
 				{
@@ -389,7 +522,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w028"
+					"head": "w028",
+					"gloss": {
+						"pl": "Twój",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w030",
@@ -403,6 +540,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "chwalą",
+						"en": "praise"
 					}
 				},
 				{
@@ -416,6 +557,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Aniołowie",
+						"en": "the Angels"
 					}
 				},
 				{
@@ -430,6 +575,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "uwielbiają",
+						"en": "adore"
 					}
 				},
 				{
@@ -443,6 +592,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Państwa",
+						"en": "the Dominations"
+					},
+					"function": {
+						"pl": "Mianownik, będący podmiotem „adórant”.",
+						"en": "Nominative subject of “adórant”."
 					}
 				},
 				{
@@ -457,6 +614,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "drżą",
+						"en": "tremble"
 					}
 				},
 				{
@@ -470,6 +631,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Zwierzchności",
+						"en": "the Powers"
 					}
 				}
 			]
@@ -479,6 +644,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Niebiosa i Moce niebios oraz błogosławieni Serafini we wspólnej wysławiają radości.",
+				"en": "Heaven and the Virtues of heaven and the blessed Seraphim worship together with exultation."
+			},
 			"words": [
 				{
 					"id": "w036",
@@ -491,13 +660,13 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Niebiosa",
+						"en": "The heavens"
+					},
+					"function": {
+						"pl": "Męska liczba mnoga od nijakiego „cælum”.",
+						"en": "The masculine plural of neuter “cælum”."
 					}
 				},
 				{
@@ -510,6 +679,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "i niebios",
+						"en": "and of the heavens"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „Virtútes” (w038): moce należące do niebios.",
+						"en": "A genitive depending on “Virtútes” (w038): the Virtues belonging to the heavens."
 					}
 				},
 				{
@@ -522,6 +699,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Moce",
+						"en": "the Virtues"
 					}
 				},
 				{
@@ -530,6 +711,10 @@
 					"lemma": "ac",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -542,7 +727,15 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w041"
+					"head": "w041",
+					"gloss": {
+						"pl": "błogosławione",
+						"en": "blessed"
+					},
+					"function": {
+						"pl": "Rodzaj nijaki liczby mnogiej, zgodny z nieodmiennym „Séraphim”.",
+						"en": "Neuter plural agreeing with indeclinable “Séraphim”."
+					}
 				},
 				{
 					"id": "w041",
@@ -553,6 +746,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "Serafiny",
+						"en": "Seraphim"
 					}
 				},
 				{
@@ -565,7 +762,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w043"
+					"head": "w043",
+					"gloss": {
+						"pl": "wspólnym",
+						"en": "shared"
+					},
+					"function": {
+						"pl": "Ablativus sposobu razem z „exsultatióne” (w043), nie mianownik przy podmiotach.",
+						"en": "An ablative of manner with “exsultatióne” (w043), not a nominative with the subjects."
+					}
 				},
 				{
 					"id": "w043",
@@ -577,6 +782,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "uniesieniem",
+						"en": "exultation"
 					}
 				},
 				{
@@ -592,6 +801,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "sławią razem",
+						"en": "celebrate together"
+					},
+					"function": {
+						"pl": "Podmiotem są chóry anielskie: czasownik mówi o ich wspólnym uwielbieniu.",
+						"en": "The subjects are the angelic choirs: the verb describes their shared praise."
 					}
 				}
 			]
@@ -601,6 +818,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Z nimi to, prosimy, dozwól i naszym głosom wołać w pokornym uwielbieniu:",
+				"en": "May our voices, we pray, join with theirs in humble praise, as we acclaim:"
+			},
 			"words": [
 				{
 					"id": "w045",
@@ -610,7 +831,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w046"
+					"head": "w046",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w046",
@@ -620,6 +845,14 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "którymi",
+						"en": "whom"
+					},
+					"function": {
+						"pl": "Ablativus po „cum”, odnoszący się do chórów anielskich.",
+						"en": "Ablative after “cum”, referring to the angelic choirs."
 					}
 				},
 				{
@@ -628,6 +861,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "also"
 					}
 				},
 				{
@@ -640,7 +877,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w049"
+					"head": "w049",
+					"gloss": {
+						"pl": "nasze",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w049",
@@ -652,6 +893,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "głosy",
+						"en": "voices"
+					},
+					"function": {
+						"pl": "Podmiot bezokolicznika „admítti” (w051) w bierniku — „iúbeas” (w052) rządzi całą tą konstrukcją.",
+						"en": "The accusative subject of the infinitive “admítti” (w051) — “iúbeas” (w052) governs the whole construction."
 					}
 				},
 				{
@@ -660,6 +909,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
 					}
 				},
 				{
@@ -672,6 +925,10 @@
 						"mood": "inf",
 						"voice": "pass",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "być dopuszczonymi",
+						"en": "be admitted"
 					}
 				},
 				{
@@ -687,6 +944,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "kazał",
+						"en": "Thou bid"
+					},
+					"function": {
+						"pl": "Tryb łączący po ut. Po polsku oddany trybem rozkazującym, ale w łacinie to prośba, nie rozkaz.",
+						"en": "A subjunctive after ut. The petition is put as a wish rather than a command."
 					}
 				},
 				{
@@ -702,6 +967,14 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "prosimy",
+						"en": "we pray"
+					},
+					"function": {
+						"pl": "Czasownik deponentny: forma bierna, znaczenie czynne.",
+						"en": "A deponent: passive in form, active in meaning."
 					}
 				},
 				{
@@ -714,7 +987,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w055"
+					"head": "w055",
+					"gloss": {
+						"pl": "kornym",
+						"en": "humble"
+					}
 				},
 				{
 					"id": "w055",
@@ -726,6 +1003,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "wyznaniem",
+						"en": "confession"
+					},
+					"function": {
+						"pl": "Wyznanie nie winy, lecz chwały — to, co za chwilę wyśpiewa Sanctus.",
+						"en": "A confession not of guilt but of praise — what the Sanctus is about to sing."
 					}
 				},
 				{
@@ -743,9 +1028,66 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"head": "w053"
+					"head": "w053",
+					"gloss": {
+						"pl": "mówiąc",
+						"en": "saying"
+					},
+					"function": {
+						"pl": "Imiesłów zgadza się z domyślnym „my” i wprowadza Sanctus.",
+						"en": "The participle agrees with the unstated “we” and introduces the Sanctus."
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The common Preface, said on most weekdays — when neither a proper nor an applicable seasonal Preface is assigned. Its own document because it is one of several Prefaces that occupy the same slot; the dialogue before it and the Sanctus after it are separate documents for the same reason. SALUTÁRE at w008 is the neuter of the adjective salutáris, standing in a series with dignum, iustum and æquum, not the noun salutáre (salvation) that the corpus already carries at ordinarium.deus-tu-conversus w018 and ordinarium.iudica-me w089: the agreement report records the divergence, since Whitaker's Words heads only the noun. DOMINATIÓNES at w033 and POTESTÁTES at w035 are nominative subjects of adórant and tremunt, not further objects of laudant; the forms are identical in both cases and the reading rests on the three parallel verbs, each of which needs a subject. SÉRAPHIM at w041 is indeclinable; the case and number are those the sentence requires and that beáta agrees with, not marks the form carries. SÓCIA at w042 is ablative with exsultatióne, not nominative with the subjects. QUIBUS at w046 carries no gender: the antecedent is the whole company of angels, of more than one grammatical gender, and the form marks none. Witness handmissal-eo prints ætérnæ Deus for ætérne Deus; that is a printer's slip, declared as a corrigendum in the witness header and not a variant.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence once the corrigendum declared in the handmissal-eo witness header is applied. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.praefatio-communis/",
+			"apparatus": "witnesses/ordinarium.praefatio-communis/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w036": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

@@ -9,41 +9,18 @@
 	"ids": {
 		"next": 72
 	},
-	"status": "working-edition",
-	"notes": "The Communion of the faithful: the showing of the Host, the priest's threefold Dómine non sum dignus, said facing those about to receive, and the form said to each of them. The three repetitions are encoded as three sets of words with their own ids, as at ordinarium.panem-caelestem and in the Kyrie. The one word that separates the two forms is TUAM at w067, where the priest's own form has meam. ECCE at w001 and w004 is tagged intj; Whitaker's heads it so, Collatinus carries it with no features at all, and the corpus's recorded classification ruling lets an analyzer call an interjection an adverb without counting as a divergence. The rubric at s01 prints ad communicandos as one word in witness do; the corpus sets the space, which the 1962 typical edition prints. Witness do alone prints a Confiteor and an absolution before Ecce Agnus Dei; the hand missal begins at Ecce Agnus Dei, and the 1962 rubrics stand with it — n. 503 has Communion within Mass proceed omissis confessione et absolutione, only the Ecce Agnus Dei and the threefold Dómine non sum dignus being said. What do prints there belongs to the recension before 1961: its Confiteor is the corpus's ordinarium.confiteor, and its absolution is the rail's own form — peccatórum vestrórum, vobis, where ordinarium.misereatur has nostrórum, nobis — which the corpus does not carry.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence in the words. Accidental variants adjudicated in the apparatus; the witnesses' speaker markers diverge at the three petitions, recorded on the handmissal-eo header.",
-		"witnesses": "witnesses/ordinarium.ecce-agnus-dei/",
-		"apparatus": "witnesses/ordinarium.ecce-agnus-dei/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Kapłan ukazuje Hostię i wskazuje Chrystusa jako Baranka Bożego, który gładzi grzechy świata. Następnie trzykrotnie odmawia Dómine, non sum dignus. Każdemu przyjmującemu podaje Najświętszy Sakrament ze słowami prośby, aby Ciało Chrystusa strzegło jego duszy na życie wieczne.",
+		"en": "The priest shows the Host and points to Christ as the Lamb of God who takes away the sins of the world. He then says Dómine, non sum dignus three times. He gives the Blessed Sacrament to each communicant with a prayer that the Body of Christ may preserve that person's soul unto eternal life."
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Postea genuflectens, accipit manu sinistra Pyxidem seu Patenam cum Sacramento, dextera vero sumit unam particulam, quam inter pollicem et indicem tenet aliquantulum elevatam super Pyxidem seu Patenam, et conversus ad communicandos in medio Altaris, dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Następnie kapłan przyklęka. Bierze w lewą rękę puszkę albo patenę z Najświętszym Sakramentem, a w prawą jedną cząstkę. Trzymając ją między kciukiem a palcem wskazującym nieco uniesioną nad naczyniem, pośrodku ołtarza zwraca się do przystępujących do Komunii i mówi:",
+				"en": "Then the priest genuflects and takes the ciborium or paten with the Blessed Sacrament in his left hand and one particle in his right. Holding the particle between his thumb and forefinger slightly above the vessel, he turns at the middle of the altar toward those about to communicate and says:"
 			}
 		},
 		{
@@ -51,6 +28,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Oto Baranek Boży, oto Ten, który gładzi grzechy świata.",
+				"en": "Behold the Lamb of God, behold Him who takes away the sins of the world."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -58,6 +39,14 @@
 					"lemma": "ecce",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "oto",
+						"en": "behold"
+					},
+					"function": {
+						"pl": "Wykrzyknik, po którym stoi tu mianownik „Agnus” (w002).",
+						"en": "Interjection followed here by the nominative “Agnus” (w002)."
 					}
 				},
 				{
@@ -70,6 +59,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Baranek",
+						"en": "the Lamb"
 					}
 				},
 				{
@@ -83,6 +76,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -91,6 +88,10 @@
 					"lemma": "ecce",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "oto",
+						"en": "behold"
 					}
 				},
 				{
@@ -102,6 +103,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Ten, który",
+						"en": "Him who"
 					}
 				},
 				{
@@ -116,6 +121,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "gładzi",
+						"en": "takes away"
+					},
+					"function": {
+						"pl": "Trzecia osoba liczby pojedynczej. Por. drugą osobę „tollis” w Agnus Dei.",
+						"en": "Third-person singular. Compare the second-person “tollis” in the Agnus Dei."
 					}
 				},
 				{
@@ -128,6 +141,28 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "grzechy",
+						"en": "the sins"
+					},
+					"function": {
+						"pl": "W J 1,29 stoi liczba pojedyncza „peccátum mundi”. Tekst liturgiczny ma tu liczbę mnogą „peccáta mundi”.",
+						"en": "John 1:29 has the singular “peccátum mundi”. The liturgical text here has the plural “peccáta mundi”."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "John 1:29"
+							}
+						],
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "John 1:29"
+							}
+						]
 					}
 				},
 				{
@@ -141,6 +176,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
 					}
 				}
 			]
@@ -149,13 +188,9 @@
 			"id": "s03",
 			"type": "rubric",
 			"text": "Deinde dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Następnie kapłan mówi:",
+				"en": "Then the priest says:"
 			}
 		},
 		{
@@ -163,6 +198,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Panie, nie jestem godzien, abyś wszedł pod dach mój, ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.",
+				"en": "Lord, I am not worthy that You should enter under my roof, but only say the word, and my soul shall be healed."
+			},
 			"words": [
 				{
 					"id": "w009",
@@ -175,6 +214,28 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
+					},
+					"function": {
+						"pl": "Słowa zaczerpnięte z wypowiedzi setnika w Mt 8,8. Tekst liturgiczny ma „ánima mea” w miejscu ewangelicznego „puer meus”.",
+						"en": "Adapted from the centurion's words in Matthew 8:8: the liturgical text has “ánima mea” where the Gospel has “puer meus”."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Matthew 8:8"
+							}
+						],
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Matthew 8:8"
+							}
+						]
 					}
 				},
 				{
@@ -183,6 +244,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -196,6 +261,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jestem",
+						"en": "am"
 					}
 				},
 				{
@@ -209,7 +278,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "godzien",
+						"en": "worthy"
+					}
 				},
 				{
 					"id": "w013",
@@ -217,6 +290,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyś",
+						"en": "that"
 					}
 				},
 				{
@@ -231,6 +308,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wszedł",
+						"en": "You should enter"
 					}
 				},
 				{
@@ -241,7 +322,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "pod",
+						"en": "under"
+					}
 				},
 				{
 					"id": "w016",
@@ -253,6 +338,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "dach",
+						"en": "roof"
 					}
 				},
 				{
@@ -266,7 +355,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "mój",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w018",
@@ -274,6 +367,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "ale",
+						"en": "but"
 					}
 				},
 				{
@@ -282,6 +379,10 @@
 					"lemma": "tantum",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "tylko",
+						"en": "only"
 					}
 				},
 				{
@@ -296,6 +397,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "powiedz",
+						"en": "say"
 					}
 				},
 				{
@@ -309,6 +414,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "słowem",
+						"en": "with the word"
 					}
 				},
 				{
@@ -317,6 +426,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -331,6 +444,10 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "będzie uzdrowiona",
+						"en": "shall be healed"
 					}
 				},
 				{
@@ -343,6 +460,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dusza",
+						"en": "soul"
 					}
 				},
 				{
@@ -356,7 +477,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "moja",
+						"en": "my"
+					}
 				}
 			]
 		},
@@ -365,6 +490,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Panie, nie jestem godzien, abyś wszedł pod dach mój, ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.",
+				"en": "Lord, I am not worthy that You should enter under my roof, but only say the word, and my soul shall be healed."
+			},
 			"words": [
 				{
 					"id": "w026",
@@ -377,6 +506,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -385,6 +518,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -398,6 +535,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jestem",
+						"en": "am"
 					}
 				},
 				{
@@ -411,7 +552,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w028"
+					"head": "w028",
+					"gloss": {
+						"pl": "godzien",
+						"en": "worthy"
+					}
 				},
 				{
 					"id": "w030",
@@ -419,6 +564,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyś",
+						"en": "that"
 					}
 				},
 				{
@@ -433,6 +582,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wszedł",
+						"en": "You should enter"
 					}
 				},
 				{
@@ -443,7 +596,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w033"
+					"head": "w033",
+					"gloss": {
+						"pl": "pod",
+						"en": "under"
+					}
 				},
 				{
 					"id": "w033",
@@ -455,6 +612,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "dach",
+						"en": "roof"
 					}
 				},
 				{
@@ -468,7 +629,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w033"
+					"head": "w033",
+					"gloss": {
+						"pl": "mój",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w035",
@@ -476,6 +641,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "ale",
+						"en": "but"
 					}
 				},
 				{
@@ -484,6 +653,10 @@
 					"lemma": "tantum",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "tylko",
+						"en": "only"
 					}
 				},
 				{
@@ -498,6 +671,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "powiedz",
+						"en": "say"
 					}
 				},
 				{
@@ -511,6 +688,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "słowem",
+						"en": "with the word"
 					}
 				},
 				{
@@ -519,6 +700,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -533,6 +718,10 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "będzie uzdrowiona",
+						"en": "shall be healed"
 					}
 				},
 				{
@@ -545,6 +734,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dusza",
+						"en": "soul"
 					}
 				},
 				{
@@ -558,7 +751,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w041"
+					"head": "w041",
+					"gloss": {
+						"pl": "moja",
+						"en": "my"
+					}
 				}
 			]
 		},
@@ -567,6 +764,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Panie, nie jestem godzien, abyś wszedł pod dach mój, ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.",
+				"en": "Lord, I am not worthy that You should enter under my roof, but only say the word, and my soul shall be healed."
+			},
 			"words": [
 				{
 					"id": "w043",
@@ -579,6 +780,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -587,6 +792,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -600,6 +809,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jestem",
+						"en": "am"
 					}
 				},
 				{
@@ -613,7 +826,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w045"
+					"head": "w045",
+					"gloss": {
+						"pl": "godzien",
+						"en": "worthy"
+					}
 				},
 				{
 					"id": "w047",
@@ -621,6 +838,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyś",
+						"en": "that"
 					}
 				},
 				{
@@ -635,6 +856,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wszedł",
+						"en": "You should enter"
 					}
 				},
 				{
@@ -645,7 +870,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w050"
+					"head": "w050",
+					"gloss": {
+						"pl": "pod",
+						"en": "under"
+					}
 				},
 				{
 					"id": "w050",
@@ -657,6 +886,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "dach",
+						"en": "roof"
 					}
 				},
 				{
@@ -670,7 +903,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w050"
+					"head": "w050",
+					"gloss": {
+						"pl": "mój",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w052",
@@ -678,6 +915,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "ale",
+						"en": "but"
 					}
 				},
 				{
@@ -686,6 +927,10 @@
 					"lemma": "tantum",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "tylko",
+						"en": "only"
 					}
 				},
 				{
@@ -700,6 +945,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "powiedz",
+						"en": "say"
 					}
 				},
 				{
@@ -713,6 +962,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "słowem",
+						"en": "with the word"
 					}
 				},
 				{
@@ -721,6 +974,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -735,6 +992,10 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "będzie uzdrowiona",
+						"en": "shall be healed"
 					}
 				},
 				{
@@ -747,6 +1008,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dusza",
+						"en": "soul"
 					}
 				},
 				{
@@ -760,7 +1025,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w058"
+					"head": "w058",
+					"gloss": {
+						"pl": "moja",
+						"en": "my"
+					}
 				}
 			]
 		},
@@ -768,13 +1037,9 @@
 			"id": "s07",
 			"type": "rubric",
 			"text": "Quibus verbis tertio repetitis, accedit ad eorum dexteram, hoc est, ad latus Epistolæ, et unicuique porrigit Sacramentum faciens cum eo signum crucis super Pyxidem vel Patenam, et simul dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Po trzykrotnym powtórzeniu tych słów kapłan przechodzi na ich prawą stronę, czyli stronę lekcji. Każdemu podaje Sakrament, czyniąc nim znak krzyża nad puszką albo pateną i mówiąc:",
+				"en": "After repeating these words three times, the priest goes to their right, the Epistle side, and gives the Sacrament to each, making the sign of the cross with it over the ciborium or paten and saying:"
 			}
 		},
 		{
@@ -782,6 +1047,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Ciało Pana naszego Jezusa Chrystusa niech strzeże duszy twojej na żywot wieczny. Amen.",
+				"en": "May the Body of our Lord Jesus Christ keep thy soul unto life everlasting. Amen."
+			},
 			"words": [
 				{
 					"id": "w060",
@@ -793,6 +1062,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ciało",
+						"en": "The Body"
 					}
 				},
 				{
@@ -805,6 +1078,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "of the Lord"
 					}
 				},
 				{
@@ -817,7 +1094,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w061"
+					"head": "w061",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w063",
@@ -828,6 +1109,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -840,6 +1125,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -854,6 +1143,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "niech strzeże",
+						"en": "may keep"
 					}
 				},
 				{
@@ -866,6 +1159,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "duszy",
+						"en": "soul"
 					}
 				},
 				{
@@ -878,7 +1175,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w066"
+					"head": "w066",
+					"gloss": {
+						"pl": "twojej",
+						"en": "thy"
+					},
+					"function": {
+						"pl": "Odpowiadające mu słowo w formule Komunii kapłana brzmi „meam” („mojej”).",
+						"en": "The corresponding word in the priest's own Communion formula is “meam” (“my”)."
+					}
 				},
 				{
 					"id": "w068",
@@ -888,7 +1193,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w069"
+					"head": "w069",
+					"gloss": {
+						"pl": "na",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w069",
@@ -900,6 +1209,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "żywot",
+						"en": "life"
 					}
 				},
 				{
@@ -913,7 +1226,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w069"
+					"head": "w069",
+					"gloss": {
+						"pl": "wieczny",
+						"en": "everlasting"
+					}
 				},
 				{
 					"id": "w071",
@@ -922,6 +1239,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -930,14 +1251,77 @@
 			"id": "s09",
 			"type": "rubric",
 			"text": "Omnibus communicatis, revertitur ad Altare, nihil dicens: et non dat eis benedictionem, quia illam daturus est in fine Missæ.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Gdy wszyscy przyjęli Komunię, kapłan wraca do ołtarza, nic nie mówiąc, i nie błogosławi ich, bo błogosławieństwo da na końcu Mszy.",
+				"en": "All having communicated, the priest returns to the altar saying nothing, and gives them no blessing, since he will give it at the end of Mass."
 			}
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The Communion of the faithful: the showing of the Host, the priest's threefold Dómine non sum dignus, said facing those about to receive, and the form said to each of them. The three repetitions are encoded as three sets of words with their own ids, as at ordinarium.panem-caelestem and in the Kyrie. The one word that separates the two forms is TUAM at w067, where the priest's own form has meam. ECCE at w001 and w004 is tagged intj; Whitaker's heads it so, Collatinus carries it with no features at all, and the corpus's recorded classification ruling lets an analyzer call an interjection an adverb without counting as a divergence. The rubric at s01 prints ad communicandos as one word in witness do; the corpus sets the space, which the 1962 typical edition prints. Witness do alone prints a Confiteor and an absolution before Ecce Agnus Dei; the hand missal begins at Ecce Agnus Dei, and the 1962 rubrics stand with it — n. 503 has Communion within Mass proceed omissis confessione et absolutione, only the Ecce Agnus Dei and the threefold Dómine non sum dignus being said. What do prints there belongs to the recension before 1961: its Confiteor is the corpus's ordinarium.confiteor, and its absolution is the rail's own form — peccatórum vestrórum, vobis, where ordinarium.misereatur has nostrórum, nobis — which the corpus does not carry.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence in the words. Accidental variants adjudicated in the apparatus; the witnesses' speaker markers diverge at the three petitions, recorded on the handmissal-eo header.",
+			"witnesses": "witnesses/ordinarium.ecce-agnus-dei/",
+			"apparatus": "witnesses/ordinarium.ecce-agnus-dei/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s03": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s07": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s09": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		}
+	}
 }

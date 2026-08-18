@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 22
 	},
-	"status": "working-edition",
-	"notes": "The postcommunion of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-ii-adventus-postcommunio/",
-		"apparatus": "witnesses/proprium.dominica-ii-adventus-postcommunio/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Modlitwa po Komunii II Niedzieli Adwentu. Nie prosi o nic nowego, lecz o to, by przyjęty pokarm zmienił sąd o rzeczach: czym gardzić, a co miłować.",
+		"en": "The postcommunion of the Second Sunday of Advent. It asks for nothing new, but that the food just received should change the judgment of things — what to despise and what to love."
 	},
 	"segments": [
 		{
@@ -38,6 +19,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Napełnieni pokarmem duchowego pożywienia, błagając prosimy Cię, Panie, abyś przez uczestnictwo w tym misterium nauczył nas gardzić tym, co ziemskie, i miłować to, co niebieskie. Przez Pana.",
+				"en": "Filled with the food of spiritual nourishment, we suppliants beseech Thee, O Lord, that by the partaking of this mystery Thou wouldst teach us to despise earthly things and to love heavenly ones. Through our Lord."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -53,7 +38,11 @@
 						"voice": "pass",
 						"conj": 2
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "napełnieni",
+						"en": "filled"
+					}
 				},
 				{
 					"id": "w002",
@@ -65,6 +54,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "pokarmem",
+						"en": "with the food"
 					}
 				},
 				{
@@ -77,7 +70,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "duchowego",
+						"en": "of spiritual"
+					}
 				},
 				{
 					"id": "w004",
@@ -90,6 +87,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "pożywienia",
+						"en": "nourishment"
 					}
 				},
 				{
@@ -102,7 +103,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "błagający",
+						"en": "suppliant"
+					}
 				},
 				{
 					"id": "w006",
@@ -113,6 +118,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "Thee"
 					}
 				},
 				{
@@ -126,6 +135,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -141,6 +154,10 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "prosimy",
+						"en": "we beseech"
 					}
 				},
 				{
@@ -149,6 +166,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyś",
+						"en": "that"
 					}
 				},
 				{
@@ -160,6 +181,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "tego",
+						"en": "of this"
 					}
 				},
 				{
@@ -172,6 +197,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "uczestnictwem",
+						"en": "by the partaking"
 					}
 				},
 				{
@@ -185,6 +214,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "misterium",
+						"en": "mystery"
 					}
 				},
 				{
@@ -199,6 +232,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "nauczył",
+						"en": "Thou wouldst teach"
 					}
 				},
 				{
@@ -209,6 +246,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -221,7 +262,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "ziemskimi",
+						"en": "earthly things"
+					}
 				},
 				{
 					"id": "w016",
@@ -233,6 +278,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "gardzić",
+						"en": "to despise"
 					}
 				},
 				{
@@ -241,6 +290,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -253,6 +306,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "miłować",
+						"en": "to love"
 					}
 				},
 				{
@@ -266,7 +323,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "niebieskie",
+						"en": "heavenly things"
+					}
 				},
 				{
 					"id": "w020",
@@ -276,7 +337,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "przez",
+						"en": "Through"
+					}
 				},
 				{
 					"id": "w021",
@@ -289,9 +354,38 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "the Lord"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The postcommunion of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-ii-adventus-postcommunio/",
+			"apparatus": "witnesses/proprium.dominica-ii-adventus-postcommunio/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

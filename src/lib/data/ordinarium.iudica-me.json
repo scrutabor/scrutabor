@@ -9,54 +9,59 @@
 	"ids": {
 		"next": 125
 	},
-	"status": "working-edition",
-	"notes": "Psalm 42 as the Ordo prints it — verses 1-5, then the Glória Patri, then the antiphon repeated — said alternately by celebrant and ministers at the foot of the altar. It is a document of its own because the rubric omits exactly this much and no more (rubric s01): in Requiem Masses, and in Masses of the season from Passion Sunday through Maundy Thursday inclusive, the psalm, the doxology and the repeated antiphon fall away together while the sign of the cross, the antiphon's first statement and the Adiutórium stay. The transcribed rubric closes a Dominica Passionis usque ad Sabbatum sanctum exclusive — the pre-reform formula — where the 1962 books read usque ad feriam V in Cena Domini inclusive; in the 1962 rite the two mark out the same days, since the reformed Triduum liturgies have no prayers at the foot, and the do header notes it. The psalm text is the Gallican psalter's, translated from the Greek rather than from the Hebrew, which is why w042 is neuter (see its note). TRISTIS at w030 is masculine in context: the Latin form itself is shared by masculine and feminine, but both the Hebrew participle and the Greek participle translated here are masculine. The same word at w074 is feminine because it stands with ánima. meus at w072 is the nominative form: the masculine possessive has no vocative but mi, which the psalter does not use here, so the address is carried by the note (the ruling the corpus made for Agnus). Latin's vocative of meus is mi: the phrase is address, the possessive follows its noun, and the nominative tag stands accepted, both analyzers confirming the form. The doxology here is the missal's setting of the same formula the corpus carries at orationes.gloria-patri, which the Hours punctuate differently (et semper, for et semper:); the two are separate witnesses of one text and are not collated against each other.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence once the hand missal's manifest typographical slip at w105 is set aside (declared in the apparatus and in the witness corrigendum header). Accidental variants (punctuation) adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.iudica-me/",
-		"apparatus": "witnesses/ordinarium.iudica-me/apparatus.json"
+	"about": {
+		"pl": "W modlitwach u stopni ołtarza Psalm 42 według numeracji Wulgaty (Ps 43 w numeracji hebrajskiej) odmawiają na przemian kapłan i ministrant. Poprzedza go antyfona „Introíbo ad altáre Dei”, powtarzana po doksologii. We Mszach za zmarłych oraz we Mszach okresowych od Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie psalm opuszcza się wraz z antyfoną, a od razu następuje Confiteor.",
+		"en": "In the prayers at the foot of the altar, Psalm 42 in the Vulgate numbering (Psalm 43 in Hebrew) is said alternately by the priest and server. The antiphon “Introíbo ad altáre Dei” precedes it and is repeated after the doxology. In Masses for the Dead, and at Masses of the season from Passion Sunday through Maundy Thursday, the psalm is left out with its antiphon and the Confiteor follows at once."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 43 (Vg 42)",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 43 (Vg 42)",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "In Missis Defunctorum, et in Missis de Tempore a Dominica Passionis usque ad Sabbatum sanctum exclusive, omittitur Psalmus Iúdica me, Deus, cum Glória Patri, et repetitione Antiphonæ, sed dicto In nómine Patris, Introíbo, et Adiutórium, fit conféssio.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "We Mszach za zmarłych oraz we Mszach okresowych od Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie opuszcza się psalm, „Glória Patri” i powtórzenie antyfony. Po „In nómine Patris”, antyfonie i „Adiutórium” następuje od razu Confíteor.",
+				"en": "At Masses for the Dead, and at Masses of the season from Passion Sunday through Maundy Thursday, the psalm, the Glória Patri and the repetition of the antiphon are omitted. After In nómine Patris, the antiphon and the Adiutórium, the Confíteor follows at once."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae rubric before Psalm 42",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae rubric before Psalm 42",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
 			"id": "s02",
 			"type": "rubric",
 			"text": "Postea alternatim cum Ministris dicit sequentem:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan odmawia psalm na przemian z ministrantami.",
+				"en": "The priest says the psalm alternately with the ministers."
 			}
 		},
 		{
@@ -64,6 +69,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Osądź mnie, Boże, i odłącz sprawę moją od narodu nieświętego: od człowieka niesprawiedliwego i podstępnego wyrwij mnie.",
+				"en": "Judge me, O God, and set my cause apart from an unholy nation: from the unjust and deceitful man deliver me."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -77,6 +86,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "osądź",
+						"en": "judge"
 					}
 				},
 				{
@@ -88,6 +101,14 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
+					},
+					"function": {
+						"pl": "Biernik jako dopełnienie „Iúdica” (w001).",
+						"en": "Accusative as the object of “Iúdica” (w001)."
 					}
 				},
 				{
@@ -101,6 +122,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Wołacz: psalmista zwraca się do Boga.",
+						"en": "Vocative: the psalmist addresses God."
 					}
 				},
 				{
@@ -109,6 +138,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -123,6 +156,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "oddziel",
+						"en": "distinguish"
 					}
 				},
 				{
@@ -135,6 +172,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "sprawę",
+						"en": "cause"
+					},
+					"function": {
+						"pl": "Biernik jako dopełnienie „discérne” (w005).",
+						"en": "Accusative as the object of “discérne” (w005)."
 					}
 				},
 				{
@@ -147,7 +192,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "moją",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w008",
@@ -157,7 +206,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w009",
@@ -169,6 +222,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "narodu",
+						"en": "the nation"
+					},
+					"function": {
+						"pl": "Ablativus wymagany przez „de” (w008).",
+						"en": "Ablative governed by “de” (w008)."
 					}
 				},
 				{
@@ -177,6 +238,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -190,7 +255,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "świętego",
+						"en": "holy"
+					},
+					"function": {
+						"pl": "Ablativus. Wraz z „gente” (w009) tworzy wyrażenie „naród nieświęty”.",
+						"en": "Ablative. With “gente” (w009), it forms the phrase “an unholy nation”."
+					}
 				},
 				{
 					"id": "w012",
@@ -200,7 +273,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w013",
@@ -212,6 +289,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "człowieka",
+						"en": "the man"
+					},
+					"function": {
+						"pl": "Ablativus wymagany przez „ab” (w012).",
+						"en": "Ablative governed by “ab” (w012)."
 					}
 				},
 				{
@@ -224,7 +309,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "niesprawiedliwego",
+						"en": "unjust"
+					},
+					"function": {
+						"pl": "Ablativus rodzaju męskiego, jak „hómine” (w013).",
+						"en": "Ablative, agreeing with “hómine” (w013)."
+					}
 				},
 				{
 					"id": "w015",
@@ -232,6 +325,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -244,7 +341,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "podstępnego",
+						"en": "deceitful"
+					}
 				},
 				{
 					"id": "w017",
@@ -258,6 +359,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wyrwij",
+						"en": "deliver"
 					}
 				},
 				{
@@ -269,6 +374,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				}
 			]
@@ -284,6 +393,10 @@
 					"source": "DMS 31 b"
 				}
 			},
+			"translation": {
+				"pl": "Bo Ty jesteś, Boże, mocą moją: czemu mnie odrzuciłeś i czemu smutny chodzę, gdy mnie gnębi nieprzyjaciel?",
+				"en": "For Thou art my strength, O God: why hast Thou cast me off, and why do I go about in sadness while the enemy afflicts me?"
+			},
 			"words": [
 				{
 					"id": "w019",
@@ -291,6 +404,10 @@
 					"lemma": "quia",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bo",
+						"en": "for"
 					}
 				},
 				{
@@ -301,6 +418,14 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "Thou"
+					},
+					"function": {
+						"pl": "Wyrażony zaimek podkreśla podmiot: „Ty”.",
+						"en": "The expressed pronoun emphasizes the subject: “Thou”."
 					}
 				},
 				{
@@ -315,6 +440,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jesteś",
+						"en": "art"
 					}
 				},
 				{
@@ -328,6 +457,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				},
 				{
@@ -340,6 +473,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "moc",
+						"en": "strength"
+					},
+					"function": {
+						"pl": "Orzecznik w mianowniku przy „es” (w021).",
+						"en": "A predicate nominative with “es” (w021)."
 					}
 				},
 				{
@@ -353,7 +494,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w023"
+					"head": "w023",
+					"gloss": {
+						"pl": "moja",
+						"en": "my"
+					},
+					"function": {
+						"pl": "Mianownik rodzaju żeńskiego, jak „fortitúdo” (w023).",
+						"en": "Feminine nominative, agreeing with “fortitúdo” (w023)."
+					}
 				},
 				{
 					"id": "w025",
@@ -361,6 +510,10 @@
 					"lemma": "quare",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "czemu",
+						"en": "why"
 					}
 				},
 				{
@@ -371,6 +524,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				},
 				{
@@ -386,6 +543,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "odrzuciłeś",
+						"en": "hast Thou cast off"
+					},
+					"function": {
+						"pl": "Druga osoba liczby pojedynczej perfectum.",
+						"en": "Second-person singular perfect."
 					}
 				},
 				{
@@ -394,6 +559,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -402,6 +571,10 @@
 					"lemma": "quare",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "czemu",
+						"en": "why"
 					}
 				},
 				{
@@ -414,7 +587,39 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w031"
+					"head": "w031",
+					"gloss": {
+						"pl": "smutny",
+						"en": "sad"
+					},
+					"function": {
+						"pl": "Mianownik rodzaju męskiego. Sama forma łacińska może być także żeńska, lecz odpowiadające jej formy hebrajska i grecka są męskie.",
+						"en": "Masculine nominative. The Latin form can also be feminine, but the corresponding Hebrew and Greek forms are masculine."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 43, 2"
+							},
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 42, 2",
+								"url": "https://www.die-bibel.de/bibel/LXX/PSA.42"
+							}
+						],
+						"en": [
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 43, 2"
+							},
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 42, 2",
+								"url": "https://www.die-bibel.de/bibel/LXX/PSA.42"
+							}
+						]
+					}
 				},
 				{
 					"id": "w031",
@@ -429,6 +634,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "chodzę",
+						"en": "do I go about"
 					}
 				},
 				{
@@ -437,6 +646,10 @@
 					"lemma": "dum",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "gdy",
+						"en": "while"
 					}
 				},
 				{
@@ -452,13 +665,9 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "gnębi",
+						"en": "afflicts"
 					}
 				},
 				{
@@ -469,6 +678,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				},
 				{
@@ -482,6 +695,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "nieprzyjaciel",
+						"en": "the enemy"
+					},
+					"function": {
+						"pl": "Mianownik, podmiot „afflígit” (w033).",
+						"en": "Nominative, serving as the subject of “afflígit” (w033)."
 					}
 				}
 			]
@@ -491,6 +712,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Wyślij światło Twoje i prawdę Twoją: one mnie poprowadziły i przywiodły na górę świętą Twoją i do przybytków Twoich.",
+				"en": "Send forth Thy light and Thy truth: they have led me and brought me to Thy holy mountain and into Thy tabernacles."
+			},
 			"words": [
 				{
 					"id": "w036",
@@ -504,6 +729,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wyślij",
+						"en": "send forth"
 					}
 				},
 				{
@@ -516,6 +745,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "światło",
+						"en": "light"
 					}
 				},
 				{
@@ -528,7 +761,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w037"
+					"head": "w037",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w039",
@@ -536,6 +773,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -548,6 +789,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "prawdę",
+						"en": "truth"
 					}
 				},
 				{
@@ -561,7 +806,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w040"
+					"head": "w040",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w042",
@@ -572,6 +821,36 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "one",
+						"en": "they"
+					},
+					"function": {
+						"pl": "Rodzaj nijaki liczby mnogiej odbiega od rodzaju „lucem” (w037) i „veritátem” (w040). Odpowiada greckiemu αὐτά w Septuagincie.",
+						"en": "The neuter plural differs from the gender of “lucem” (w037) and “veritátem” (w040). It corresponds to Greek αὐτά in the Septuagint."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 42:3"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Psalm 42:3"
+							}
+						],
+						"en": [
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 42:3"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Psalm 42:3"
+							}
+						]
 					}
 				},
 				{
@@ -582,6 +861,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				},
 				{
@@ -597,6 +880,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "poprowadziły",
+						"en": "have led"
+					},
+					"function": {
+						"pl": "Trzecia osoba liczby mnogiej perfectum. Podmiotem są „lucem” (w037) i „veritátem” (w040).",
+						"en": "Third-person plural perfect. Its subjects are “lucem” (w037) and “veritátem” (w040)."
 					}
 				},
 				{
@@ -605,6 +896,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -619,6 +914,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "przywiodły",
+						"en": "have brought"
 					}
 				},
 				{
@@ -629,7 +928,15 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w048"
+					"head": "w048",
+					"gloss": {
+						"pl": "na",
+						"en": "to"
+					},
+					"function": {
+						"pl": "„In” z biernikiem wskazuje kierunek ruchu.",
+						"en": "“In” with the accusative marks direction of motion."
+					}
 				},
 				{
 					"id": "w048",
@@ -641,6 +948,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "górę",
+						"en": "the mountain"
 					}
 				},
 				{
@@ -653,7 +964,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w048"
+					"head": "w048",
+					"gloss": {
+						"pl": "świętą",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w050",
@@ -665,7 +980,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w048"
+					"head": "w048",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w051",
@@ -673,6 +992,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -683,7 +1006,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w053"
+					"head": "w053",
+					"gloss": {
+						"pl": "do",
+						"en": "into"
+					}
 				},
 				{
 					"id": "w053",
@@ -695,6 +1022,14 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "przybytków",
+						"en": "the tabernacles"
+					},
+					"function": {
+						"pl": "Biernik liczby mnogiej wymagany przez kierunkowe „in” (w052).",
+						"en": "Accusative plural governed by directional “in” (w052)."
 					}
 				},
 				{
@@ -708,7 +1043,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w053"
+					"head": "w053",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "Thy"
+					}
 				}
 			]
 		},
@@ -723,6 +1062,10 @@
 					"source": "DMS 31 b"
 				}
 			},
+			"translation": {
+				"pl": "I przystąpię do ołtarza Bożego: do Boga, który rozwesela młodość moją.",
+				"en": "And I will go in unto the altar of God: to God, who gladdens my youth."
+			},
 			"words": [
 				{
 					"id": "w055",
@@ -730,6 +1073,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -743,6 +1090,14 @@
 						"tense": "fut",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "przystąpię",
+						"en": "I will go in"
+					},
+					"function": {
+						"pl": "W liturgii mszalnej wiersz ten służy jako antyfona przed psalmem i po nim.",
+						"en": "In the Mass this verse serves as the antiphon before and after the psalm."
 					}
 				},
 				{
@@ -753,7 +1108,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w058"
+					"head": "w058",
+					"gloss": {
+						"pl": "do",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w058",
@@ -765,6 +1124,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ołtarza",
+						"en": "the altar"
 					}
 				},
 				{
@@ -778,6 +1141,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „altáre” (w058): ołtarz Boga.",
+						"en": "A genitive dependent on “altáre” (w058): the altar of God."
 					}
 				},
 				{
@@ -788,7 +1159,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w061"
+					"head": "w061",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w061",
@@ -800,6 +1175,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				},
 				{
@@ -811,6 +1190,14 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
+					},
+					"function": {
+						"pl": "Mianownik i podmiot „lætíficat” (w063). Poprzednik „Deum” (w061) stoi w bierniku.",
+						"en": "Nominative and the subject of “lætíficat” (w063). Its antecedent “Deum” (w061) is accusative."
 					}
 				},
 				{
@@ -825,6 +1212,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "rozwesela",
+						"en": "gladdens"
 					}
 				},
 				{
@@ -837,6 +1228,44 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "młodość",
+						"en": "youth"
+					},
+					"function": {
+						"pl": "Hebrajski tekst mówi o radości, natomiast „młodość” występuje w Septuagincie, za którą podąża tutaj łacina.",
+						"en": "The Hebrew text speaks of joy, while “youth” appears in the Septuagint, which the Latin follows here."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 43:4"
+							},
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 42:4"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Psalm 42:4"
+							}
+						],
+						"en": [
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 43:4"
+							},
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 42:4"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Psalm 42:4"
+							}
+						]
 					}
 				},
 				{
@@ -850,7 +1279,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w064"
+					"head": "w064",
+					"gloss": {
+						"pl": "moją",
+						"en": "my"
+					}
 				}
 			]
 		},
@@ -859,6 +1292,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Będę Cię wysławiał na cytrze, Boże, Boże mój: czemu smutna jesteś, duszo moja, i czemu mnie niepokoisz?",
+				"en": "I will praise Thee on the harp, O God, my God: why art thou sad, my soul, and why dost thou disquiet me?"
+			},
 			"words": [
 				{
 					"id": "w066",
@@ -872,6 +1309,14 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "będę wysławiał",
+						"en": "I will praise"
+					},
+					"function": {
+						"pl": "Czasownik „confitéri” może znaczyć „wyznawać” albo „wysławiać”. Tutaj ma drugie znaczenie.",
+						"en": "The verb “confitéri” can mean “confess” or “praise”. Here it bears the latter sense."
 					}
 				},
 				{
@@ -882,6 +1327,14 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "Thee"
+					},
+					"function": {
+						"pl": "Celownik osoby przy „Confitébor” (w066).",
+						"en": "Dative of the person with “Confitébor” (w066)."
 					}
 				},
 				{
@@ -892,7 +1345,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w069"
+					"head": "w069",
+					"gloss": {
+						"pl": "na",
+						"en": "on"
+					}
 				},
 				{
 					"id": "w069",
@@ -905,6 +1362,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "cytrze",
+						"en": "the harp"
+					},
+					"function": {
+						"pl": "Ablativus wymagany przez „in” (w068).",
+						"en": "Ablative governed by “in” (w068)."
 					}
 				},
 				{
@@ -918,6 +1383,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				},
 				{
@@ -930,6 +1399,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				},
 				{
@@ -943,7 +1416,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w071"
+					"head": "w071",
+					"gloss": {
+						"pl": "mój",
+						"en": "my"
+					},
+					"function": {
+						"pl": "Forma „meus” jest mianownikiem. Zwykły męski wołacz tego zaimka to „mi”, lecz psałterz go tutaj nie używa.",
+						"en": "The form “meus” is nominative. Its regular masculine vocative is “mi”, which the psalter does not use here."
+					}
 				},
 				{
 					"id": "w073",
@@ -951,6 +1432,10 @@
 					"lemma": "quare",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "czemu",
+						"en": "why"
 					}
 				},
 				{
@@ -963,7 +1448,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w075"
+					"head": "w075",
+					"gloss": {
+						"pl": "smutna",
+						"en": "sad"
+					},
+					"function": {
+						"pl": "Rodzaj żeński wynika ze zgody z „ánima” (w076).",
+						"en": "Feminine through agreement with “ánima” (w076)."
+					}
 				},
 				{
 					"id": "w075",
@@ -977,6 +1470,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jesteś",
+						"en": "art thou"
 					}
 				},
 				{
@@ -989,6 +1486,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "duszo",
+						"en": "soul"
+					},
+					"function": {
+						"pl": "Wołacz: psalmista zwraca się do własnej duszy.",
+						"en": "Vocative: the psalmist addresses his own soul."
 					}
 				},
 				{
@@ -1002,7 +1507,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w076"
+					"head": "w076",
+					"gloss": {
+						"pl": "moja",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w078",
@@ -1010,6 +1519,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1018,6 +1531,10 @@
 					"lemma": "quare",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "czemu",
+						"en": "why"
 					}
 				},
 				{
@@ -1032,6 +1549,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "niepokoisz",
+						"en": "dost thou disquiet"
 					}
 				},
 				{
@@ -1043,6 +1564,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				}
 			]
@@ -1058,6 +1583,10 @@
 					"source": "DMS 31 b"
 				}
 			},
+			"translation": {
+				"pl": "Miej nadzieję w Bogu, bo jeszcze wysławiać Go będę: zbawienie oblicza mojego i Bóg mój.",
+				"en": "Hope in God, for I will praise Him still: the salvation of my countenance, and my God."
+			},
 			"words": [
 				{
 					"id": "w082",
@@ -1071,6 +1600,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "miej nadzieję",
+						"en": "hope"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący skierowany do ánima mea w poprzednim zdaniu.",
+						"en": "An imperative addressed to ánima mea in the preceding sentence."
 					}
 				},
 				{
@@ -1081,7 +1618,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w084"
+					"head": "w084",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w084",
@@ -1094,6 +1635,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bogu",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Ablativus wymagany przez „in” (w083).",
+						"en": "Ablative governed by “in” (w083)."
 					}
 				},
 				{
@@ -1102,6 +1651,10 @@
 					"lemma": "quoniam",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bo",
+						"en": "for"
 					}
 				},
 				{
@@ -1110,6 +1663,10 @@
 					"lemma": "adhuc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "jeszcze",
+						"en": "still"
 					}
 				},
 				{
@@ -1124,6 +1681,10 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "będę wysławiał",
+						"en": "I will praise"
 					}
 				},
 				{
@@ -1136,6 +1697,14 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Go",
+						"en": "Him"
+					},
+					"function": {
+						"pl": "Celownik osoby przy „confitébor” (w087).",
+						"en": "Dative of the person with “confitébor” (w087)."
 					}
 				},
 				{
@@ -1148,6 +1717,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zbawienie",
+						"en": "the salvation"
+					},
+					"function": {
+						"pl": "Mianownik w dopowiedzeniu odnoszącym się do „illi” (w088).",
+						"en": "Nominative in an apposition referring to “illi” (w088)."
 					}
 				},
 				{
@@ -1160,6 +1737,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "oblicza",
+						"en": "of countenance"
+					},
+					"function": {
+						"pl": "Dopełniacz deklinacji IV, o tej samej postaci co mianownik. Przypadek potwierdza „mei” (w091).",
+						"en": "A 4th-declension genitive, with the same form as the nominative. “mei” (w091) confirms the case."
 					}
 				},
 				{
@@ -1173,7 +1758,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w090"
+					"head": "w090",
+					"gloss": {
+						"pl": "mojego",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w092",
@@ -1181,6 +1770,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1193,6 +1786,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bóg",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Mianownik. Razem z „salutáre” (w089) odnosi się do „illi” (w088).",
+						"en": "Nominative. Together with “salutáre” (w089), it refers to “illi” (w088)."
 					}
 				},
 				{
@@ -1206,7 +1807,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w093"
+					"head": "w093",
+					"gloss": {
+						"pl": "mój",
+						"en": "my"
+					}
 				}
 			]
 		},
@@ -1215,6 +1820,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Chwała Ojcu i Synowi, i Duchowi Świętemu.",
+				"en": "Glory be to the Father, and to the Son, and to the Holy Spirit."
+			},
 			"words": [
 				{
 					"id": "w095",
@@ -1226,6 +1835,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwała",
+						"en": "glory"
+					},
+					"function": {
+						"pl": "Mianownik w zdaniu bez czasownika. Domyślne brzmienie: niech będzie chwała.",
+						"en": "Nominative in a verbless sentence. The sense is: may glory be."
 					}
 				},
 				{
@@ -1239,6 +1856,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojcu",
+						"en": "to the Father"
+					},
+					"function": {
+						"pl": "Celownik wskazujący adresata chwały.",
+						"en": "Dative marking the recipient of glory."
 					}
 				},
 				{
@@ -1247,6 +1872,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1260,6 +1889,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synowi",
+						"en": "to the Son"
 					}
 				},
 				{
@@ -1268,6 +1901,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1280,6 +1917,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "Duchowi",
+						"en": "to the Spirit"
 					}
 				},
 				{
@@ -1293,7 +1934,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w100"
+					"head": "w100",
+					"gloss": {
+						"pl": "Świętemu",
+						"en": "Holy"
+					}
 				}
 			]
 		},
@@ -1308,6 +1953,10 @@
 					"source": "DMS 31 b"
 				}
 			},
+			"translation": {
+				"pl": "Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.",
+				"en": "As it was in the beginning, is now, and ever shall be, world without end. Amen."
+			},
 			"words": [
 				{
 					"id": "w102",
@@ -1315,6 +1964,10 @@
 					"lemma": "sicut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "jak",
+						"en": "as"
 					}
 				},
 				{
@@ -1328,6 +1981,10 @@
 						"tense": "impf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "była",
+						"en": "it was"
 					}
 				},
 				{
@@ -1338,7 +1995,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w105"
+					"head": "w105",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w105",
@@ -1351,6 +2012,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "początku",
+						"en": "the beginning"
+					},
+					"function": {
+						"pl": "Ablativus wymagany przez czasowe „in” (w104).",
+						"en": "Ablative governed by temporal “in” (w104)."
 					}
 				},
 				{
@@ -1359,6 +2028,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1368,6 +2041,10 @@
 					"lemma": "nunc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "teraz",
+						"en": "now"
 					}
 				},
 				{
@@ -1376,6 +2053,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1385,6 +2066,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "ever"
 					}
 				},
 				{
@@ -1393,6 +2078,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1403,7 +2092,15 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w112"
+					"head": "w112",
+					"gloss": {
+						"pl": "na",
+						"en": "unto"
+					},
+					"function": {
+						"pl": "Przyimek z biernikiem, należący do wyrażenia „na wieki wieków”.",
+						"en": "A preposition with the accusative, forming part of the phrase “unto ages of ages”."
+					}
 				},
 				{
 					"id": "w112",
@@ -1415,6 +2112,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
 					}
 				},
 				{
@@ -1428,6 +2129,14 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby mnogiej zależny od „sǽcula” (w112).",
+						"en": "Genitive plural dependent on “sǽcula” (w112)."
 					}
 				},
 				{
@@ -1437,6 +2146,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -1445,13 +2158,9 @@
 			"id": "s11",
 			"type": "rubric",
 			"text": "Sacerdos repetit Antiphonam:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan powtarza antyfonę.",
+				"en": "The priest repeats the antiphon."
 			}
 		},
 		{
@@ -1459,6 +2168,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Przystąpię do ołtarza Bożego.",
+				"en": "I will go in unto the altar of God."
+			},
 			"words": [
 				{
 					"id": "w115",
@@ -1471,6 +2184,10 @@
 						"tense": "fut",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "przystąpię",
+						"en": "I will go in"
 					}
 				},
 				{
@@ -1481,7 +2198,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w117"
+					"head": "w117",
+					"gloss": {
+						"pl": "do",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w117",
@@ -1493,6 +2214,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ołtarza",
+						"en": "the altar"
 					}
 				},
 				{
@@ -1506,6 +2231,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				}
 			]
@@ -1521,6 +2250,10 @@
 					"source": "DMS 31 b"
 				}
 			},
+			"translation": {
+				"pl": "Do Boga, który rozwesela młodość moją.",
+				"en": "To God, who gladdens my youth."
+			},
 			"words": [
 				{
 					"id": "w119",
@@ -1530,7 +2263,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w120"
+					"head": "w120",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w120",
@@ -1542,6 +2279,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				},
 				{
@@ -1553,6 +2294,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -1567,6 +2312,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "rozwesela",
+						"en": "gladdens"
 					}
 				},
 				{
@@ -1579,6 +2328,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "młodość",
+						"en": "youth"
 					}
 				},
 				{
@@ -1592,9 +2345,82 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w123"
+					"head": "w123",
+					"gloss": {
+						"pl": "moją",
+						"en": "my"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "Psalm 42 as the Ordo prints it — verses 1-5, then the Glória Patri, then the antiphon repeated — said alternately by celebrant and ministers at the foot of the altar. It is a document of its own because the rubric omits exactly this much and no more (rubric s01): in Requiem Masses, and in Masses of the season from Passion Sunday through Maundy Thursday inclusive, the psalm, the doxology and the repeated antiphon fall away together while the sign of the cross, the antiphon's first statement and the Adiutórium stay. The transcribed rubric closes a Dominica Passionis usque ad Sabbatum sanctum exclusive — the pre-reform formula — where the 1962 books read usque ad feriam V in Cena Domini inclusive; in the 1962 rite the two mark out the same days, since the reformed Triduum liturgies have no prayers at the foot, and the do header notes it. The psalm text is the Gallican psalter's, translated from the Greek rather than from the Hebrew, which is why w042 is neuter (see its note). TRISTIS at w030 is masculine in context: the Latin form itself is shared by masculine and feminine, but both the Hebrew participle and the Greek participle translated here are masculine. The same word at w074 is feminine because it stands with ánima. meus at w072 is the nominative form: the masculine possessive has no vocative but mi, which the psalter does not use here, so the address is carried by the note (the ruling the corpus made for Agnus). Latin's vocative of meus is mi: the phrase is address, the possessive follows its noun, and the nominative tag stands accepted, both analyzers confirming the form. The doxology here is the missal's setting of the same formula the corpus carries at orationes.gloria-patri, which the Hours punctuate differently (et semper, for et semper:); the two are separate witnesses of one text and are not collated against each other.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence once the hand missal's manifest typographical slip at w105 is set aside (declared in the apparatus and in the witness corrigendum header). Accidental variants (punctuation) adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.iudica-me/",
+			"apparatus": "witnesses/ordinarium.iudica-me/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s02": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s11": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w033": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

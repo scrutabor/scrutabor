@@ -9,27 +9,25 @@
 	"ids": {
 		"next": 79
 	},
-	"status": "working-edition",
-	"notes": "Part of the proper for the First Sunday of Advent. The biblical or liturgical citation and the source boundary are recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. The witnesses agree with zero divergence, so this text carries no apparatus.",
-		"witnesses": "witnesses/proprium.dominica-i-adventus-introitus/"
+	"about": {
+		"pl": "Introit I Niedzieli Adwentu, Mszy otwierającej rok liturgiczny. Antyfona to Ps 24, 1–3 według numeracji Wulgaty (Ps 25 w numeracji hebrajskiej), a werset — czwarty werset tego samego psalmu. Offertorium tej Mszy wraca do tych samych trzech wersetów.",
+		"en": "The Introit of the First Sunday of Advent, the Mass that opens the liturgical year. Its antiphon is Psalm 24:1-3 in the Vulgate numbering (Psalm 25 in Hebrew) and its verse is the fourth verse of the same psalm. The Offertory of this Mass returns to the same three verses."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Dominica I Adventus, printed page 2",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+		"en": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Dominica I Adventus, printed page 2",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
+		]
 	},
 	"segments": [
 		{
@@ -47,6 +45,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Do Ciebie, Boże mój, wznoszę moją duszę. Tobie ufam. Niech nie doznam zawodu i niech nie szydzą ze mnie moi wrogowie, bo nikt, kto Ciebie oczekuje, nie będzie zawstydzony.",
+				"en": "To You, O my God, I lift up my soul. In You I trust. Let me not be put to shame, nor let my enemies mock me, for none who await You shall be put to shame."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -56,7 +58,11 @@
 						"governs": "acc",
 						"pos": "prep"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w002",
@@ -66,6 +72,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "Thou"
 					}
 				},
 				{
@@ -80,6 +90,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wzniosłem",
+						"en": "I lifted"
 					}
 				},
 				{
@@ -92,6 +106,10 @@
 						"gender": "f",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "duszę",
+						"en": "soul"
 					}
 				},
 				{
@@ -105,7 +123,11 @@
 						"number": "sg",
 						"pos": "adj"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "moją",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w006",
@@ -117,6 +139,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				},
 				{
@@ -130,7 +156,11 @@
 						"number": "sg",
 						"pos": "adj"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "mój",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w008",
@@ -140,7 +170,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w009",
@@ -150,6 +184,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "Thou"
 					}
 				},
 				{
@@ -165,6 +203,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "ufam",
+						"en": "I trust"
 					}
 				},
 				{
@@ -173,6 +215,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -189,14 +235,41 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"analysis": {
-						"confidence": "medium",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
+					"gloss": {
+						"pl": "zawstydzę się",
+						"en": "be put to shame"
+					},
+					"function": {
+						"pl": "Teraźniejszy tryb łączący w prośbie: psalmista prosi, aby nie doznał zawodu. Odczytanie błagalne potwierdzają hebrajska forma życzeniowa i grecki optativus.",
+						"en": "Present subjunctive in a petition: the psalmist asks not to be put to shame. The Hebrew volitive form and Greek optative confirm this reading."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 25, 2"
+							},
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 24, 2",
+								"url": "https://www.die-bibel.de/bibel/LXX/PSA.24"
+							}
 						],
-						"review": "disputed"
+						"en": [
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 25, 2"
+							},
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 24, 2",
+								"url": "https://www.die-bibel.de/bibel/LXX/PSA.24"
+							}
+						]
+					},
+					"note": {
+						"pl": "Końcówka -am jest tu zarazem czasem przyszłym i trybem łączącym. Ta edycja przyjmuje tryb łączący i zaznacza wątpliwość.",
+						"en": "The ending -am is future indicative and present subjunctive at once. This edition takes the subjunctive and marks the doubt."
 					}
 				},
 				{
@@ -205,6 +278,10 @@
 					"lemma": "neque",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "ani",
+						"en": "nor"
 					}
 				},
 				{
@@ -219,6 +296,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "niech szydzą ze",
+						"en": "mock"
 					}
 				},
 				{
@@ -229,6 +310,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				},
 				{
@@ -241,6 +326,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wrogowie",
+						"en": "enemies"
 					}
 				},
 				{
@@ -254,7 +343,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "moi",
+						"en": "my"
+					},
+					"function": {
+						"pl": "Mianownik liczby mnogiej rodzaju męskiego, zgadzający się z „inimíci” (w016).",
+						"en": "A masculine nominative plural agreeing with “inimíci” (w016)."
+					}
 				},
 				{
 					"id": "w018",
@@ -262,6 +359,10 @@
 					"lemma": "etenim",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bowiem",
+						"en": "for indeed"
 					}
 				},
 				{
@@ -275,7 +376,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w020"
+					"head": "w020",
+					"gloss": {
+						"pl": "wszyscy",
+						"en": "all"
+					},
+					"function": {
+						"pl": "Przymiotnik występuje rzeczownikowo jako „wszyscy”. Zdanie względne wskazuje, że chodzi o oczekujących Pana.",
+						"en": "The adjective stands substantivally for all people. Its relative clause identifies them as those who await the Lord."
+					}
 				},
 				{
 					"id": "w020",
@@ -286,6 +395,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którzy",
+						"en": "who"
 					}
 				},
 				{
@@ -296,6 +409,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "Thou"
 					}
 				},
 				{
@@ -311,6 +428,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "oczekują",
+						"en": "await"
 					}
 				},
 				{
@@ -319,6 +440,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -334,6 +459,10 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "będą zawstydzeni",
+						"en": "shall be put to shame"
 					}
 				}
 			]
@@ -353,6 +482,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Ukaż mi swoje drogi, Panie, i naucz mnie swoich ścieżek.",
+				"en": "Make Your ways known to me, O Lord, and teach me Your paths."
+			},
 			"words": [
 				{
 					"id": "w025",
@@ -364,6 +497,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "drogi",
+						"en": "ways"
 					}
 				},
 				{
@@ -377,7 +514,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w027",
@@ -390,6 +531,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -404,6 +549,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "ukaż",
+						"en": "make known"
 					}
 				},
 				{
@@ -415,6 +564,10 @@
 						"case": "dat",
 						"number": "sg",
 						"pos": "pron"
+					},
+					"gloss": {
+						"pl": "mi",
+						"en": "to me"
 					}
 				},
 				{
@@ -423,6 +576,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -435,6 +592,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ścieżki",
+						"en": "paths"
 					}
 				},
 				{
@@ -447,7 +608,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w031"
+					"head": "w031",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w033",
@@ -461,6 +626,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "naucz",
+						"en": "teach"
 					}
 				},
 				{
@@ -472,6 +641,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				}
 			]
@@ -491,6 +664,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.",
+				"en": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+			},
 			"words": [
 				{
 					"id": "w035",
@@ -502,6 +679,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwała",
+						"en": "glory"
+					},
+					"function": {
+						"pl": "Doksologia nie ma wyrażonego czasownika. Z użycia liturgicznego trzeba dopowiedzieć życzenie „chwała niech będzie”.",
+						"en": "The doxology has no expressed verb. It supplies the wish “glory be” from liturgical usage."
 					}
 				},
 				{
@@ -515,6 +700,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Ojcu",
+						"en": "to the Father"
 					}
 				},
 				{
@@ -523,6 +712,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -536,6 +729,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synowi",
+						"en": "to the Son"
 					}
 				},
 				{
@@ -544,6 +741,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -556,6 +757,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Duchowi",
+						"en": "to the Spirit"
 					}
 				},
 				{
@@ -569,7 +774,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w040"
+					"head": "w040",
+					"gloss": {
+						"pl": "Świętemu",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w042",
@@ -577,6 +786,10 @@
 					"lemma": "sicut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "jak",
+						"en": "as"
 					}
 				},
 				{
@@ -590,6 +803,10 @@
 						"pos": "verb",
 						"tense": "impf",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "była",
+						"en": "it was"
 					}
 				},
 				{
@@ -600,7 +817,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w045"
+					"head": "w045",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w045",
@@ -613,6 +834,10 @@
 						"gender": "n",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "początku",
+						"en": "the beginning"
 					}
 				},
 				{
@@ -621,6 +846,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -630,6 +859,10 @@
 					"lemma": "nunc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "teraz",
+						"en": "now"
 					}
 				},
 				{
@@ -638,6 +871,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -647,6 +884,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "always"
 					}
 				},
 				{
@@ -655,6 +896,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -665,7 +910,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w052"
+					"head": "w052",
+					"gloss": {
+						"pl": "na",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w052",
@@ -677,6 +926,10 @@
 						"gender": "n",
 						"number": "pl",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
 					}
 				},
 				{
@@ -690,6 +943,10 @@
 						"gender": "n",
 						"number": "pl",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
 					}
 				},
 				{
@@ -699,6 +956,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -707,14 +968,9 @@
 			"id": "s04",
 			"type": "rubric",
 			"text": "Quo finito, repetitur Ad te levávi usque ad psalmum.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"mr",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Po doksologii kapłan powtarza antyfonę na wejście od Ad te levávi do wersetu psalmu.",
+				"en": "After the doxology the priest repeats the Introit antiphon from Ad te levávi to the psalm verse."
 			}
 		},
 		{
@@ -732,6 +988,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Do Ciebie, Boże mój, wznoszę moją duszę. Tobie ufam. Niech nie doznam zawodu i niech nie szydzą ze mnie moi wrogowie, bo nikt, kto Ciebie oczekuje, nie będzie zawstydzony.",
+				"en": "To You, O my God, I lift up my soul. In You I trust. Let me not be put to shame, nor let my enemies mock me, for none who await You shall be put to shame."
+			},
 			"words": [
 				{
 					"id": "w055",
@@ -741,7 +1001,11 @@
 						"governs": "acc",
 						"pos": "prep"
 					},
-					"head": "w056"
+					"head": "w056",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w056",
@@ -751,6 +1015,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "Thou"
 					}
 				},
 				{
@@ -765,6 +1033,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wzniosłem",
+						"en": "I lifted"
 					}
 				},
 				{
@@ -777,6 +1049,10 @@
 						"gender": "f",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "duszę",
+						"en": "soul"
 					}
 				},
 				{
@@ -790,7 +1066,11 @@
 						"number": "sg",
 						"pos": "adj"
 					},
-					"head": "w058"
+					"head": "w058",
+					"gloss": {
+						"pl": "moją",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w060",
@@ -802,6 +1082,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				},
 				{
@@ -815,7 +1099,11 @@
 						"number": "sg",
 						"pos": "adj"
 					},
-					"head": "w060"
+					"head": "w060",
+					"gloss": {
+						"pl": "mój",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w062",
@@ -825,7 +1113,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w063"
+					"head": "w063",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w063",
@@ -835,6 +1127,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "Thou"
 					}
 				},
 				{
@@ -850,6 +1146,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "ufam",
+						"en": "I trust"
 					}
 				},
 				{
@@ -858,6 +1158,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -874,14 +1178,41 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"analysis": {
-						"confidence": "medium",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
+					"gloss": {
+						"pl": "zawstydzę się",
+						"en": "be put to shame"
+					},
+					"function": {
+						"pl": "Teraźniejszy tryb łączący w prośbie: psalmista prosi, aby nie doznał zawodu. Odczytanie błagalne potwierdzają hebrajska forma życzeniowa i grecki optativus.",
+						"en": "Present subjunctive in a petition: the psalmist asks not to be put to shame. The Hebrew volitive form and Greek optative confirm this reading."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 25, 2"
+							},
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 24, 2",
+								"url": "https://www.die-bibel.de/bibel/LXX/PSA.24"
+							}
 						],
-						"review": "disputed"
+						"en": [
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 25, 2"
+							},
+							{
+								"title": "Septuaginta, ed. Rahlfs–Hanhart",
+								"locator": "Psalm 24, 2",
+								"url": "https://www.die-bibel.de/bibel/LXX/PSA.24"
+							}
+						]
+					},
+					"note": {
+						"pl": "Końcówka -am jest tu zarazem czasem przyszłym i trybem łączącym. Ta edycja przyjmuje tryb łączący i zaznacza wątpliwość.",
+						"en": "The ending -am is future indicative and present subjunctive at once. This edition takes the subjunctive and marks the doubt."
 					}
 				},
 				{
@@ -890,6 +1221,10 @@
 					"lemma": "neque",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "ani",
+						"en": "nor"
 					}
 				},
 				{
@@ -904,6 +1239,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "niech szydzą ze",
+						"en": "mock"
 					}
 				},
 				{
@@ -914,6 +1253,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				},
 				{
@@ -926,6 +1269,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wrogowie",
+						"en": "enemies"
 					}
 				},
 				{
@@ -939,7 +1286,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w070"
+					"head": "w070",
+					"gloss": {
+						"pl": "moi",
+						"en": "my"
+					},
+					"function": {
+						"pl": "Mianownik liczby mnogiej rodzaju męskiego, zgadzający się z „inimíci” (w070).",
+						"en": "A masculine nominative plural agreeing with “inimíci” (w070)."
+					}
 				},
 				{
 					"id": "w072",
@@ -947,6 +1302,10 @@
 					"lemma": "etenim",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bowiem",
+						"en": "for indeed"
 					}
 				},
 				{
@@ -960,7 +1319,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w074"
+					"head": "w074",
+					"gloss": {
+						"pl": "wszyscy",
+						"en": "all"
+					},
+					"function": {
+						"pl": "Przymiotnik występuje rzeczownikowo jako „wszyscy”. Zdanie względne wskazuje, że chodzi o oczekujących Pana.",
+						"en": "The adjective stands substantivally for all people. Its relative clause identifies them as those who await the Lord."
+					}
 				},
 				{
 					"id": "w074",
@@ -971,6 +1338,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którzy",
+						"en": "who"
 					}
 				},
 				{
@@ -981,6 +1352,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "Thou"
 					}
 				},
 				{
@@ -996,6 +1371,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "oczekują",
+						"en": "await"
 					}
 				},
 				{
@@ -1004,6 +1383,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -1019,9 +1402,74 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "będą zawstydzeni",
+						"en": "shall be put to shame"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "Part of the proper for the First Sunday of Advent. The biblical or liturgical citation and the source boundary are recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. The witnesses agree with zero divergence, so this text carries no apparatus.",
+			"witnesses": "witnesses/proprium.dominica-i-adventus-introitus/"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		},
+		"segments": {
+			"s04": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"mr",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w012": {
+				"analysis": {
+					"confidence": "medium",
+					"sources": [
+						"editorial",
+						"whitakers",
+						"collatinus"
+					],
+					"review": "disputed"
+				}
+			},
+			"w066": {
+				"analysis": {
+					"confidence": "medium",
+					"sources": [
+						"editorial",
+						"whitakers",
+						"collatinus"
+					],
+					"review": "disputed"
+				}
+			}
+		}
+	}
 }

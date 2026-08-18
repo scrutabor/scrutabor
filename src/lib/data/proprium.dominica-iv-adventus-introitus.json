@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 55
 	},
-	"status": "working-edition",
-	"notes": "The introit of the Fourth Sunday of Advent. The antiphon is repeated after the Gloria Patri.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-iv-adventus-introitus/",
-		"apparatus": "witnesses/proprium.dominica-iv-adventus-introitus/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Introit IV Niedzieli Adwentu, od którego cały adwentowy zwyczaj Rorat bierze nazwę. Antyfona wraca po psalmie i po Chwała Ojcu, tak jak każe rubryka pod nią.",
+		"en": "The introit of the Fourth Sunday of Advent, the antiphon the Rorate Masses of Advent are named from. It returns after the psalm verse and the Gloria Patri, as the rubric under it directs."
 	},
 	"segments": [
 		{
@@ -48,6 +29,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Spuszczajcie rosę, niebiosa, z góry, a obłoki niech spuszczą deszczem Sprawiedliwego: niech się otworzy ziemia i zrodzi Zbawiciela.",
+				"en": "Drop down dew, ye heavens, from above, and let the clouds rain down the Just One: let the earth be opened and bud forth a Savior."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Isaiah 45:8"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Isaiah 45:8"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -62,6 +61,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "spuszczajcie rosę",
+						"en": "drop down dew"
 					}
 				},
 				{
@@ -75,6 +78,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "niebiosa",
+						"en": "ye heavens"
+					},
+					"function": {
+						"pl": "Wołacz od „cælum”. Ten rzeczownik zmienia rodzaj wewnątrz własnej odmiany, z nijakiego na męski, więc wołacz brzmi cæli, a nie cæla.",
+						"en": "The vocative of cælum. The noun changes gender inside its own paradigm, from neuter to masculine, so the form is cæli and not cæla."
 					}
 				},
 				{
@@ -84,6 +95,10 @@
 					"lemma": "desuper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "z góry",
+						"en": "from above"
 					}
 				},
 				{
@@ -92,6 +107,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -104,6 +123,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "obłoki",
+						"en": "let the clouds"
 					}
 				},
 				{
@@ -118,6 +141,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "niech spuszczą deszczem",
+						"en": "rain down"
 					}
 				},
 				{
@@ -131,7 +158,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "Sprawiedliwego",
+						"en": "the Just One"
+					}
 				},
 				{
 					"id": "w008",
@@ -145,6 +176,10 @@
 						"mood": "subj",
 						"voice": "pass",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "niech się otworzy",
+						"en": "let be opened"
 					}
 				},
 				{
@@ -158,6 +193,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ziemia",
+						"en": "the earth"
 					}
 				},
 				{
@@ -166,6 +205,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -180,6 +223,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "niech wyda",
+						"en": "let it bud forth"
 					}
 				},
 				{
@@ -193,6 +240,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Zbawiciela",
+						"en": "the Savior"
 					}
 				}
 			]
@@ -212,6 +263,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Niebiosa opowiadają chwałę Boga, a dzieła rąk Jego oznajmia firmament.",
+				"en": "The heavens declare the glory of God: and the firmament proclaims the work of His hands."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 18:2"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 18:2"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w013",
@@ -223,6 +292,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "niebiosa",
+						"en": "the heavens"
 					}
 				},
 				{
@@ -237,6 +310,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "opowiadają",
+						"en": "declare"
 					}
 				},
 				{
@@ -249,6 +326,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwałę",
+						"en": "the glory"
 					}
 				},
 				{
@@ -262,6 +343,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -270,6 +355,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -282,6 +371,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "dzieła",
+						"en": "the works"
 					}
 				},
 				{
@@ -294,6 +387,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "rąk",
+						"en": "of hands"
 					}
 				},
 				{
@@ -305,6 +402,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jego",
+						"en": "His"
 					}
 				},
 				{
@@ -319,6 +420,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "oznajmia",
+						"en": "proclaims"
 					}
 				},
 				{
@@ -332,6 +437,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "firmament",
+						"en": "the firmament"
 					}
 				}
 			]
@@ -351,6 +460,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.",
+				"en": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+			},
 			"words": [
 				{
 					"id": "w023",
@@ -362,6 +475,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwała",
+						"en": "glory"
 					}
 				},
 				{
@@ -375,6 +492,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Ojcu",
+						"en": "to the Father"
 					}
 				},
 				{
@@ -383,6 +504,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -396,6 +521,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synowi",
+						"en": "to the Son"
 					}
 				},
 				{
@@ -404,6 +533,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -416,6 +549,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Duchowi",
+						"en": "to the Spirit"
 					}
 				},
 				{
@@ -429,7 +566,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w028"
+					"head": "w028",
+					"gloss": {
+						"pl": "Świętemu",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w030",
@@ -437,6 +578,10 @@
 					"lemma": "sicut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "jak",
+						"en": "as"
 					}
 				},
 				{
@@ -450,6 +595,10 @@
 						"pos": "verb",
 						"tense": "impf",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "była",
+						"en": "it was"
 					}
 				},
 				{
@@ -460,7 +609,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w033"
+					"head": "w033",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w033",
@@ -473,6 +626,10 @@
 						"gender": "n",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "początku",
+						"en": "the beginning"
 					}
 				},
 				{
@@ -481,6 +638,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -490,6 +651,10 @@
 					"lemma": "nunc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "teraz",
+						"en": "now"
 					}
 				},
 				{
@@ -498,6 +663,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -507,6 +676,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "always"
 					}
 				},
 				{
@@ -515,6 +688,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -525,7 +702,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w040"
+					"head": "w040",
+					"gloss": {
+						"pl": "na",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w040",
@@ -537,6 +718,10 @@
 						"gender": "n",
 						"number": "pl",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
 					}
 				},
 				{
@@ -550,6 +735,10 @@
 						"gender": "n",
 						"number": "pl",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
 					}
 				},
 				{
@@ -559,6 +748,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -583,6 +776,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Spuszczajcie rosę, niebiosa, z góry, a obłoki niech spuszczą deszczem Sprawiedliwego: niech się otworzy ziemia i zrodzi Zbawiciela.",
+				"en": "Drop down dew, ye heavens, from above, and let the clouds rain down the Just One: let the earth be opened and bud forth a Savior."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Isaiah 45:8"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Isaiah 45:8"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w043",
@@ -597,6 +808,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "spuszczajcie rosę",
+						"en": "drop down dew"
 					}
 				},
 				{
@@ -610,6 +825,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "niebiosa",
+						"en": "ye heavens"
 					}
 				},
 				{
@@ -619,6 +838,10 @@
 					"lemma": "desuper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "z góry",
+						"en": "from above"
 					}
 				},
 				{
@@ -627,6 +850,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -639,6 +866,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "obłoki",
+						"en": "let the clouds"
 					}
 				},
 				{
@@ -653,6 +884,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "niech spuszczą deszczem",
+						"en": "rain down"
 					}
 				},
 				{
@@ -666,7 +901,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "Sprawiedliwego",
+						"en": "the Just One"
+					}
 				},
 				{
 					"id": "w050",
@@ -680,6 +919,10 @@
 						"mood": "subj",
 						"voice": "pass",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "niech się otworzy",
+						"en": "let be opened"
 					}
 				},
 				{
@@ -693,6 +936,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ziemia",
+						"en": "the earth"
 					}
 				},
 				{
@@ -701,6 +948,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -715,6 +966,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "niech wyda",
+						"en": "let it bud forth"
 					}
 				},
 				{
@@ -728,9 +983,38 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Zbawiciela",
+						"en": "the Savior"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The introit of the Fourth Sunday of Advent. The antiphon is repeated after the Gloria Patri.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-iv-adventus-introitus/",
+			"apparatus": "witnesses/proprium.dominica-iv-adventus-introitus/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

@@ -9,41 +9,34 @@
 	"ids": {
 		"next": 11
 	},
-	"status": "working-edition",
-	"notes": "The versicle and response that close the psalm section and open the confession. It stands as a document of its own because the two texts on either side of it are documents of their own: the psalm before it (ordinarium.iudica-me) is omitted on some days and it is not, and the Confíteor after it is already in the corpus as ordinarium.confiteor. Both witnesses print a cross glyph in the versicle — do after nostrum, handmissal-eo before Adiutórium — a direction for the hand rather than a word; it is stripped, and the disagreement about where to put it is not collated. Neither line has an elliptical verb written out: Adiutórium nostrum in nómine Dómini stands without est.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variant is adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.adiutorium/",
-		"apparatus": "witnesses/ordinarium.adiutorium/apparatus.json"
+	"about": {
+		"pl": "Werset i odpowiedź tworzą ostatni werset Psalmu 123 według numeracji Wulgaty (Ps 124, 8 w numeracji hebrajskiej). Pierwsza część ma domyślny łącznik, a druga własne orzeczenie: fecit.",
+		"en": "The versicle and response form the final verse of Psalm 123 in the Vulgate numbering (Psalm 124:8 in Hebrew). The first part has an understood copula, while the second has its own verb, fecit."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 124 (Vg 123), 8",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 124 (Vg 123), 8",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Signat se, dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan czyni znak krzyża.",
+				"en": "The priest makes the sign of the cross."
 			}
 		},
 		{
@@ -51,6 +44,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Wspomożenie nasze w imieniu Pana,",
+				"en": "Our help is in the name of the Lord,"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -62,6 +59,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wspomożenie",
+						"en": "help"
+					},
+					"function": {
+						"pl": "Mianownik podmiotu z domyślnym łącznikiem.",
+						"en": "Nominative subject with an understood copula."
 					}
 				},
 				{
@@ -74,7 +79,15 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w001"
+					"head": "w001",
+					"gloss": {
+						"pl": "nasze",
+						"en": "our"
+					},
+					"function": {
+						"pl": "Zgadza się z „Adiutórium” (w001).",
+						"en": "Agrees with “Adiutórium” (w001)."
+					}
 				},
 				{
 					"id": "w003",
@@ -84,7 +97,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w004",
@@ -96,6 +113,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "imieniu",
+						"en": "the name"
+					},
+					"function": {
+						"pl": "Ablativus zależny od „in” (w003).",
+						"en": "Ablative governed by “in” (w003)."
 					}
 				},
 				{
@@ -109,6 +134,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "of the Lord"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „nómine” (w004).",
+						"en": "Genitive dependent on “nómine” (w004)."
 					}
 				}
 			]
@@ -124,6 +157,10 @@
 					"source": "DMS 31 b"
 				}
 			},
+			"translation": {
+				"pl": "który stworzył niebo i ziemię.",
+				"en": "who made heaven and earth."
+			},
 			"words": [
 				{
 					"id": "w006",
@@ -134,6 +171,14 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
+					},
+					"function": {
+						"pl": "Zaimek względny. Jego poprzednikiem jest „Dómini” (w005), a mianownik wynika z funkcji podmiotu przy „fecit” (w007).",
+						"en": "Relative pronoun. Its antecedent is “Dómini” (w005), while the nominative marks its role as the subject of “fecit” (w007)."
 					}
 				},
 				{
@@ -148,6 +193,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "uczynił",
+						"en": "made"
+					},
+					"function": {
+						"pl": "Perfectum indicativi. Podmiotem jest „Qui” (w006).",
+						"en": "Perfect indicative, with “Qui” (w006) as its subject."
 					}
 				},
 				{
@@ -160,6 +213,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "niebo",
+						"en": "heaven"
 					}
 				},
 				{
@@ -168,6 +225,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -181,9 +242,50 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ziemię",
+						"en": "earth"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The versicle and response that close the psalm section and open the confession. It stands as a document of its own because the two texts on either side of it are documents of their own: the psalm before it (ordinarium.iudica-me) is omitted on some days and it is not, and the Confíteor after it is already in the corpus as ordinarium.confiteor. Both witnesses print a cross glyph in the versicle — do after nostrum, handmissal-eo before Adiutórium — a direction for the hand rather than a word; it is stripped, and the disagreement about where to put it is not collated. Neither line has an elliptical verb written out: Adiutórium nostrum in nómine Dómini stands without est.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variant is adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.adiutorium/",
+			"apparatus": "witnesses/ordinarium.adiutorium/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		}
+	}
 }

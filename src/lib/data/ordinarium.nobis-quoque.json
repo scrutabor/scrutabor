@@ -9,41 +9,34 @@
 	"ids": {
 		"next": 59
 	},
-	"status": "working-edition",
-	"notes": "The opening words said aloud — the only words of the Canon the people hear besides the closing Per ómnia (RG 511 i lists both) — and the one prayer at which the priest strikes his breast; the raised voice is the rubric's own elata aliquantulum voce, a manner of the clara voce the law prescribes. Its list of saints answers the list in Communicántes: John (usually taken to be the Baptist), Stephen, Matthias, Barnabas, Ignatius, Alexander, Marcellinus, Peter, then seven women — Felicity, Perpetua, Agatha, Lucy, Agnes, Cecilia, Anastasia. ÆSTIMÁTOR at w048 and LARGÍTOR at w053 are nominative, in apposition to the unexpressed subject of admítte — the classical construction beside a second-person imperative, and the reading both translations give; the vocative address is the competing reading, the forms are identical, and both words stand flagged for review. ÁLIQUAM at w012 is tagged pronoun with both analyzers. PERPÉTUA at w033 is the martyr's name; Whitaker's Words knows only the adjective perpétuus and contradicts the reading, which the agreement report records.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.nobis-quoque/",
-		"apparatus": "witnesses/ordinarium.nobis-quoque/apparatus.json"
+	"about": {
+		"pl": "Przy słowach „Nobis quoque peccatóribus” rubryka nakazuje kapłanowi nieco podnieść głos i uderzyć się w piersi. Modlitwa prosi, by grzeszni słudzy Boga zostali dopuszczeni do wspólnoty ze Świętymi.",
+		"en": "At “Nobis quoque peccatóribus” the rubric directs the priest to raise his voice a little and strike his breast. The prayer asks that God's sinful servants be admitted to fellowship with the Saints."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Canon Missae, Nobis quoque peccatoribus",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Canon Missae, Nobis quoque peccatoribus",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Manu dextera percutit sibi pectus, elata aliquantulum voce dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan uderza się prawą ręką w piersi i mówi głosem nieco podniesionym:",
+				"en": "The priest strikes his breast with his right hand and says, with his voice raised a little:"
 			}
 		},
 		{
@@ -51,6 +44,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Również nam, Twoim grzesznym sługom,",
+				"en": "To us, also, Your servants, who, though sinners,"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -60,6 +57,14 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nam",
+						"en": "to us"
+					},
+					"function": {
+						"pl": "Celownik zależny od „donáre” (w015), umieszczony na początku prośby.",
+						"en": "Dative governed by “donáre” (w015), placed at the head of the petition."
 					}
 				},
 				{
@@ -68,6 +73,14 @@
 					"lemma": "quoque",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "także",
+						"en": "also"
+					},
+					"function": {
+						"pl": "Łączy tę prośbę z poprzedzającym wspomnieniem zmarłych.",
+						"en": "Links this petition to the preceding commemoration of the dead."
 					}
 				},
 				{
@@ -80,6 +93,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "grzesznikom",
+						"en": "sinners"
 					}
 				}
 			]
@@ -88,13 +105,9 @@
 			"id": "s03",
 			"type": "rubric",
 			"text": "Extensis manibus ut prius, secrete prosequitur:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan rozkłada ręce jak przedtem i mówi dalej po cichu.",
+				"en": "The priest spreads his hands as before and goes on silently."
 			}
 		},
 		{
@@ -102,6 +115,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "ufającym w Twoje wielkie miłosierdzie, daj udział we wspólnocie z Twoimi świętymi Apostołami i Męczennikami:",
+				"en": "hope in Your abundant mercies, graciously grant some share and fellowship with Your holy Apostles and Martyrs:"
+			},
 			"words": [
 				{
 					"id": "w004",
@@ -113,6 +130,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "sługom",
+						"en": "servants"
+					},
+					"function": {
+						"pl": "Apozycja (dopowiedzenie) do „Nobis” (w001).",
+						"en": "In apposition to “Nobis” (w001)."
 					}
 				},
 				{
@@ -126,7 +151,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "Twoim",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w006",
@@ -136,7 +165,15 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					},
+					"function": {
+						"pl": "Zwrot „speráre de” podaje podstawę ufności, a nie miejsce: ufamy, opierając się na mnóstwie Bożych zmiłowań. Obie tradycje oddają to przez „w”.",
+						"en": "The idiom “speráre de” names the ground of hope rather than a place: we hope on the strength of the multitude of God's mercies. Both traditions render it “in”."
+					}
 				},
 				{
 					"id": "w007",
@@ -148,6 +185,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "mnóstwo",
+						"en": "the multitude"
 					}
 				},
 				{
@@ -160,6 +201,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zmiłowań",
+						"en": "of mercies"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby mnogiej zależny od „multitúdine” (w007).",
+						"en": "Genitive plural dependent on “multitúdine” (w007)."
 					}
 				},
 				{
@@ -172,7 +221,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w010",
@@ -189,7 +242,15 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "ufającym",
+						"en": "who hope"
+					},
+					"function": {
+						"pl": "Imiesłów zgadza się z „Nobis” (w001) i „fámulis” (w004): to my ufamy.",
+						"en": "The participle agrees with “Nobis” (w001) and “fámulis” (w004): it is we who hope."
+					}
 				},
 				{
 					"id": "w011",
@@ -201,6 +262,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "cząstkę",
+						"en": "part"
 					}
 				},
 				{
@@ -212,6 +277,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "jakąś",
+						"en": "some"
 					}
 				},
 				{
@@ -220,6 +289,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -232,6 +305,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "wspólnotę",
+						"en": "fellowship"
 					}
 				},
 				{
@@ -244,6 +321,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "dać",
+						"en": "to grant"
 					}
 				},
 				{
@@ -259,6 +340,10 @@
 						"mood": "subj",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "racz",
+						"en": "deign"
 					}
 				},
 				{
@@ -269,7 +354,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w020"
+					"head": "w020",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w018",
@@ -281,7 +370,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w020"
+					"head": "w020",
+					"gloss": {
+						"pl": "Twoimi",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w019",
@@ -293,7 +386,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w020"
+					"head": "w020",
+					"gloss": {
+						"pl": "świętymi",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w020",
@@ -305,6 +402,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Apostołami",
+						"en": "Apostles"
 					}
 				},
 				{
@@ -313,6 +414,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -326,6 +431,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Męczennikami",
+						"en": "Martyrs"
 					}
 				}
 			]
@@ -335,6 +444,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Janem Chrzcicielem, Szczepanem, Maciejem, Barnabą, Ignacym, Aleksandrem, Marcelinem, Piotrem, Felicytą, Perpetuą, Agatą, Łucją, Agnieszką, Cecylią, Anastazją i wszystkimi Twoimi Świętymi:",
+				"en": "with John the Baptist, Stephen, Matthias, Barnabas, Ignatius, Alexander, Marcellinus, Peter, Felicity, Perpetua, Agatha, Lucy, Agnes, Cecilia, Anastasia and all Your Saints:"
+			},
 			"words": [
 				{
 					"id": "w023",
@@ -344,7 +457,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w024",
@@ -357,6 +474,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Janem",
+						"en": "John"
 					}
 				},
 				{
@@ -371,13 +492,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Szczepanem",
+						"en": "Stephen"
 					}
 				},
 				{
@@ -392,13 +509,9 @@
 						"gender": "m",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Maciejem",
+						"en": "Matthias"
 					}
 				},
 				{
@@ -413,13 +526,9 @@
 						"gender": "m",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Barnabą",
+						"en": "Barnabas"
 					}
 				},
 				{
@@ -434,13 +543,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Ignacym",
+						"en": "Ignatius"
 					}
 				},
 				{
@@ -454,6 +559,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Aleksandrem",
+						"en": "Alexander"
 					}
 				},
 				{
@@ -468,13 +577,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Marcelinem",
+						"en": "Marcellinus"
 					}
 				},
 				{
@@ -488,6 +593,28 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Piotrem",
+						"en": "Peter"
+					},
+					"function": {
+						"pl": "Piotr Egzorcysta, towarzysz Marcelina, nie Apostoł.",
+						"en": "Peter the Exorcist, companion of Marcellinus, not the Apostle."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Martyrologium Romanum (1960)",
+								"locator": "2 June, Saints Marcellinus and Peter"
+							}
+						],
+						"en": [
+							{
+								"title": "Martyrologium Romanum (1960)",
+								"locator": "2 June, Saints Marcellinus and Peter"
+							}
+						]
 					}
 				},
 				{
@@ -502,12 +629,9 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Felicytą",
+						"en": "Felicity"
 					}
 				},
 				{
@@ -522,12 +646,9 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Perpetuą",
+						"en": "Perpetua"
 					}
 				},
 				{
@@ -542,13 +663,9 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Agatą",
+						"en": "Agatha"
 					}
 				},
 				{
@@ -563,13 +680,9 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Łucją",
+						"en": "Lucy"
 					}
 				},
 				{
@@ -584,13 +697,9 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Agnieszką",
+						"en": "Agnes"
 					}
 				},
 				{
@@ -605,13 +714,9 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Cecylią",
+						"en": "Cecilia"
 					}
 				},
 				{
@@ -626,13 +731,9 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Anastazją",
+						"en": "Anastasia"
 					}
 				},
 				{
@@ -641,6 +742,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -653,7 +758,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w041"
+					"head": "w041",
+					"gloss": {
+						"pl": "wszystkimi",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w041",
@@ -665,7 +774,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "Świętymi",
+						"en": "Saints"
+					}
 				},
 				{
 					"id": "w042",
@@ -678,7 +791,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w041"
+					"head": "w041",
+					"gloss": {
+						"pl": "Twoimi",
+						"en": "Thy"
+					}
 				}
 			]
 		},
@@ -687,6 +804,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "prosimy Cię, dopuść nas do ich grona nie z powodu naszych zasług, lecz dzięki Twojemu przebaczeniu.",
+				"en": "admit us, we beseech You, into their company, not weighing our merits, but granting us Your pardon."
+			},
 			"words": [
 				{
 					"id": "w043",
@@ -696,7 +817,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w046"
+					"head": "w046",
+					"gloss": {
+						"pl": "do",
+						"en": "into"
+					}
 				},
 				{
 					"id": "w044",
@@ -707,6 +832,10 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "których",
+						"en": "whose"
 					}
 				},
 				{
@@ -717,6 +846,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -730,6 +863,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "grona",
+						"en": "company"
+					},
+					"function": {
+						"pl": "Biernik jako dopełnienie „intra” (w043).",
+						"en": "Accusative object of “intra” (w043)."
 					}
 				},
 				{
@@ -738,6 +879,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -750,6 +895,30 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ten, kto szacuje",
+						"en": "a weigher"
+					},
+					"function": {
+						"pl": "Mianownik przy „admítte” (w054) w trybie rozkazującym, równoległy do „largítor” (w053).",
+						"en": "Nominative beside the second-person imperative “admítte” (w054), parallel to “largítor” (w053)."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Allen and Greenough, New Latin Grammar",
+								"locator": "§ 340 a",
+								"url": "https://dcc.dickinson.edu/grammar/latin/vocative"
+							}
+						],
+						"en": [
+							{
+								"title": "Allen and Greenough, New Latin Grammar",
+								"locator": "§ 340 a",
+								"url": "https://dcc.dickinson.edu/grammar/latin/vocative"
+							}
+						]
 					}
 				},
 				{
@@ -763,6 +932,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "zasługi",
+						"en": "of merit"
 					}
 				},
 				{
@@ -771,6 +944,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "lecz",
+						"en": "but"
 					}
 				},
 				{
@@ -784,6 +961,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "przebaczenia",
+						"en": "of pardon"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „largítor” (w053).",
+						"en": "Genitive dependent on “largítor” (w053)."
 					}
 				},
 				{
@@ -800,12 +985,9 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "prosimy",
+						"en": "we beseech"
 					}
 				},
 				{
@@ -818,6 +1000,30 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "szczodry dawca",
+						"en": "a bountiful giver"
+					},
+					"function": {
+						"pl": "Mianownik w dopowiedzeniu do niewyrażonego podmiotu „admítte” (w054). Łacina dopuszcza taką konstrukcję przy trybie rozkazującym.",
+						"en": "Nominative in apposition to the unexpressed subject of “admítte” (w054). Latin can use this construction beside an imperative."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Allen and Greenough, New Latin Grammar",
+								"locator": "§ 340 a",
+								"url": "https://dcc.dickinson.edu/grammar/latin/vocative"
+							}
+						],
+						"en": [
+							{
+								"title": "Allen and Greenough, New Latin Grammar",
+								"locator": "§ 340 a",
+								"url": "https://dcc.dickinson.edu/grammar/latin/vocative"
+							}
+						]
 					}
 				},
 				{
@@ -833,6 +1039,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "dopuść",
+						"en": "admit"
 					}
 				}
 			]
@@ -841,13 +1051,9 @@
 			"id": "s07",
 			"type": "rubric",
 			"text": "Iungit manus.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan składa ręce.",
+				"en": "The priest joins his hands."
 			}
 		},
 		{
@@ -855,6 +1061,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Przez Chrystusa Pana naszego.",
+				"en": "Through Christ our Lord."
+			},
 			"words": [
 				{
 					"id": "w055",
@@ -864,7 +1074,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w056"
+					"head": "w056",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w056",
@@ -876,6 +1090,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -888,6 +1106,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -901,9 +1123,203 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w057"
+					"head": "w057",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					},
+					"function": {
+						"pl": "Modlitwa nie kończy się słowem Amen. Zdanie biegnie dalej w Per quem hæc ómnia.",
+						"en": "No Amen follows. The sentence continues with Per quem hæc ómnia."
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The opening words said aloud — the only words of the Canon the people hear besides the closing Per ómnia (RG 511 i lists both) — and the one prayer at which the priest strikes his breast; the raised voice is the rubric's own elata aliquantulum voce, a manner of the clara voce the law prescribes. Its list of saints answers the list in Communicántes: John (usually taken to be the Baptist), Stephen, Matthias, Barnabas, Ignatius, Alexander, Marcellinus, Peter, then seven women — Felicity, Perpetua, Agatha, Lucy, Agnes, Cecilia, Anastasia. ÆSTIMÁTOR at w048 and LARGÍTOR at w053 are nominative, in apposition to the unexpressed subject of admítte — the classical construction beside a second-person imperative, and the reading both translations give; the vocative address is the competing reading, the forms are identical, and both words stand flagged for review. ÁLIQUAM at w012 is tagged pronoun with both analyzers. PERPÉTUA at w033 is the martyr's name; Whitaker's Words knows only the adjective perpétuus and contradicts the reading, which the agreement report records.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.nobis-quoque/",
+			"apparatus": "witnesses/ordinarium.nobis-quoque/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s03": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s07": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w025": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w026": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w027": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w028": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w030": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w032": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "accepted"
+				}
+			},
+			"w033": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "accepted"
+				}
+			},
+			"w034": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w035": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w036": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w037": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w038": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w052": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

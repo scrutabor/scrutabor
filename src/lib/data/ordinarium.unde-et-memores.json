@@ -9,41 +9,18 @@
 	"ids": {
 		"next": 57
 	},
-	"status": "working-edition",
-	"notes": "The anamnesis: the offering made in memory of the Passion, Resurrection and Ascension. MÉMORES at w003 governs the three genitives (passiónis, resurrectiónis, ascensiónis), the first of them seventeen words away — a long reach, though the corpus's longest is the Communicántes chain. FÍLII at w015 is the genitive singular the chain requires — eiúsdem Christi Fílii tui, Dómini nostri, four genitives in apposition — and Collatinus reads it so. Whitaker's carries filius with the contracted genitive only and so offers a plural or a locative; that is his entry's own coding, not a rule about -ius nouns, and the overruling is recorded in the pipeline's rulings. DATIS at w042 is tagged as the noun datum, with both analyzers, rather than as a participle of do. ÍNFERIS at w026 is the plural noun ínferi, those below; the phrase ab ínferis is the descéndit ad ínferos of the Apostles' Creed — a text this corpus does not carry — seen from the other side. CÆLOS at w031 is the masculine plural of cælum, neuter in its singular, which the lexicon carries. Witness do capitalises Hóstiam in the threefold naming of the victim; the edition prints it lowercase with witness handmissal-eo, adjudicated in the apparatus.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.unde-et-memores/",
-		"apparatus": "witnesses/ordinarium.unde-et-memores/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Kościół wspomina błogosławioną mękę, zmartwychwstanie i chwalebne wniebowstąpienie Chrystusa. Z darów otrzymanych od Boga ofiaruje Jego majestatowi Hostię czystą, Hostię świętą, Hostię niepokalaną, święty Chleb życia wiecznego oraz Kielich wiecznego zbawienia.",
+		"en": "The Church remembers Christ's blessed Passion, Resurrection, and glorious Ascension. From the gifts received from God, it offers to His majesty a pure Victim, a holy Victim, a spotless Victim, the holy Bread of eternal life and the Chalice of everlasting salvation."
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Deinde disiunctis manibus dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan rozłącza ręce.",
+				"en": "The priest parts his hands."
 			}
 		},
 		{
@@ -51,6 +28,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Boże Ojcze, my, Twoi słudzy, oraz lud Twój święty, wspominając błogosławioną mękę tegoż Chrystusa, Twojego Syna, naszego Pana, Jego zmartwychwstanie oraz chwalebne wniebowstąpienie:",
+				"en": "Therefore, O Lord, we, Your servants and Your holy people, celebrating the memorial of the same Christ, Your Son, our Lord — of His blessed Passion, His Resurrection from the dead, and His glorious Ascension into heaven —"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -58,6 +39,14 @@
 					"lemma": "unde",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "przeto",
+						"en": "wherefore"
+					},
+					"function": {
+						"pl": "Spójnik łączący tę modlitwę z poprzedzającym tekstem: „przeto”.",
+						"en": "A connective joining this prayer to the preceding text: wherefore."
 					}
 				},
 				{
@@ -66,6 +55,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "too"
 					}
 				},
 				{
@@ -79,7 +72,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "pomni",
+						"en": "mindful"
+					},
+					"function": {
+						"pl": "Rządzi trzema dopełniaczami: „passiónis” (w021), „resurrectiónis” (w027) i „ascensiónis” (w033).",
+						"en": "It governs three genitives: “passiónis” (w021), “resurrectiónis” (w027), and “ascensiónis” (w033)."
+					}
 				},
 				{
 					"id": "w004",
@@ -92,6 +93,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -102,6 +107,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "my",
+						"en": "we"
 					}
 				},
 				{
@@ -114,6 +123,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "słudzy",
+						"en": "servants"
+					},
+					"function": {
+						"pl": "Apozycja (dopowiedzenie) do „nos” (w005): my — słudzy Twoi.",
+						"en": "In apposition to “nos” (w005): we, thy servants."
 					}
 				},
 				{
@@ -127,7 +144,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "Twoi",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w008",
@@ -135,6 +156,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "but"
 					}
 				},
 				{
@@ -143,6 +168,14 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "także",
+						"en": "also"
+					},
+					"function": {
+						"pl": "„Sed et” rozszerza podmiot od „nos servi tui” do „plebs tua sancta”.",
+						"en": "“Sed et” extends the subject from “nos servi tui” to “plebs tua sancta”."
 					}
 				},
 				{
@@ -155,6 +188,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "lud",
+						"en": "people"
 					}
 				},
 				{
@@ -167,7 +204,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w010"
+					"head": "w010",
+					"gloss": {
+						"pl": "Twój",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w012",
@@ -180,7 +221,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w010"
+					"head": "w010",
+					"gloss": {
+						"pl": "święty",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w013",
@@ -191,6 +236,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "tegoż",
+						"en": "of the same"
 					}
 				},
 				{
@@ -203,6 +252,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -216,13 +269,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Syna",
+						"en": "Son"
 					}
 				},
 				{
@@ -235,7 +284,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "Twego",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w017",
@@ -247,6 +300,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -259,7 +316,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w019",
@@ -267,6 +328,10 @@
 					"lemma": "tam",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "tak",
+						"en": "so"
 					}
 				},
 				{
@@ -279,7 +344,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "błogosławionej",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w021",
@@ -292,6 +361,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "męki",
+						"en": "Passion"
+					},
+					"function": {
+						"pl": "Pierwszy z trzech dopełniaczy zależnych od „mémores” (w003).",
+						"en": "The first of the three genitives depending on “mémores” (w003)."
 					}
 				},
 				{
@@ -300,6 +377,10 @@
 					"lemma": "nec",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "ani",
+						"en": "nor"
 					}
 				},
 				{
@@ -308,6 +389,14 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
+					},
+					"function": {
+						"pl": "Wyrażenie „nec non” tworzy całość znaczącą „a także”.",
+						"en": "The phrase “nec non” forms a unit meaning and also."
 					}
 				},
 				{
@@ -316,6 +405,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -326,7 +419,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w026"
+					"head": "w026",
+					"gloss": {
+						"pl": "spośród",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w026",
@@ -338,6 +435,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "umarłych",
+						"en": "the dead"
+					},
+					"function": {
+						"pl": "Ablativus liczby mnogiej po „ab” (w025). Wyrażenie „ab ínferis” zależy od „resurrectiónis” (w027).",
+						"en": "An ablative plural after “ab” (w025). The phrase “ab ínferis” depends on “resurrectiónis” (w027)."
 					}
 				},
 				{
@@ -351,6 +456,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zmartwychwstania",
+						"en": "rising"
 					}
 				},
 				{
@@ -359,6 +468,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "but"
 					}
 				},
 				{
@@ -367,6 +480,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "także",
+						"en": "also"
 					}
 				},
 				{
@@ -377,7 +494,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w031"
+					"head": "w031",
+					"gloss": {
+						"pl": "do",
+						"en": "into"
+					}
 				},
 				{
 					"id": "w031",
@@ -390,13 +511,13 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "niebios",
+						"en": "heaven"
+					},
+					"function": {
+						"pl": "Biernik liczby mnogiej od „cælum”. W liczbie mnogiej rzeczownik ma rodzaj męski.",
+						"en": "The accusative plural of “cælum”. The noun is masculine in the plural."
 					}
 				},
 				{
@@ -409,7 +530,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w033"
+					"head": "w033",
+					"gloss": {
+						"pl": "chwalebnego",
+						"en": "glorious"
+					}
 				},
 				{
 					"id": "w033",
@@ -422,6 +547,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "wniebowstąpienia",
+						"en": "Ascension"
 					}
 				}
 			]
@@ -431,6 +560,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "składamy Twojemu najwyższemu majestatowi z otrzymanych od Ciebie darów",
+				"en": "offer to Your glorious majesty, from the gifts that You have given us,"
+			},
 			"words": [
 				{
 					"id": "w034",
@@ -443,6 +576,14 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "składamy",
+						"en": "we offer"
+					},
+					"function": {
+						"pl": "Orzeczenie, którego podmiotem jest wcześniejsze „nos servi tui, sed et plebs tua sancta”.",
+						"en": "The finite verb whose subject is the earlier “nos servi tui, sed et plebs tua sancta”."
 					}
 				},
 				{
@@ -455,7 +596,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "przesławnemu",
+						"en": "most excellent"
+					}
 				},
 				{
 					"id": "w036",
@@ -467,6 +612,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "majestatowi",
+						"en": "majesty"
 					}
 				},
 				{
@@ -479,7 +628,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "Twemu",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w038",
@@ -489,7 +642,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w040"
+					"head": "w040",
+					"gloss": {
+						"pl": "z",
+						"en": "of"
+					}
 				},
 				{
 					"id": "w039",
@@ -501,7 +658,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w040"
+					"head": "w040",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "Thine own"
+					}
 				},
 				{
 					"id": "w040",
@@ -513,6 +674,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "darów",
+						"en": "gifts"
 					}
 				},
 				{
@@ -521,6 +686,10 @@
 					"lemma": "ac",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -534,6 +703,14 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "danin",
+						"en": "grants"
+					},
+					"function": {
+						"pl": "Rzeczownikowe użycie imiesłowu od „do”: „to, co dane”. Łączy się z „donis” (w040).",
+						"en": "The participle of “do” used as a noun: things given. It is joined to “donis” (w040)."
 					}
 				}
 			]
@@ -542,13 +719,9 @@
 			"id": "s04",
 			"type": "rubric",
 			"text": "Iungit manus, et signat ter super Hostiam, et Calicem simul, dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan składa ręce i czyni trzy znaki krzyża nad Hostią i kielichem jednocześnie.",
+				"en": "The priest joins his hands and makes three signs of the cross over the Host and chalice together."
 			}
 		},
 		{
@@ -556,6 +729,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Ofiarę czystą, świętą i doskonałą,",
+				"en": "this pure victim, this holy victim, this spotless victim,"
+			},
 			"words": [
 				{
 					"id": "w043",
@@ -567,6 +744,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "hostię",
+						"en": "victim"
+					},
+					"function": {
+						"pl": "„Hóstia” oznacza ofiarę lub żertwę ofiarną.",
+						"en": "“Hóstia” means a sacrifice or sacrificial victim."
 					}
 				},
 				{
@@ -580,7 +765,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w043"
+					"head": "w043",
+					"gloss": {
+						"pl": "czystą",
+						"en": "pure"
+					}
 				},
 				{
 					"id": "w045",
@@ -592,6 +781,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "hostię",
+						"en": "victim"
 					}
 				},
 				{
@@ -605,7 +798,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w045"
+					"head": "w045",
+					"gloss": {
+						"pl": "świętą",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w047",
@@ -617,6 +814,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "hostię",
+						"en": "victim"
 					}
 				},
 				{
@@ -630,7 +831,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w047"
+					"head": "w047",
+					"gloss": {
+						"pl": "niepokalaną",
+						"en": "unspotted"
+					}
 				}
 			]
 		},
@@ -638,13 +843,9 @@
 			"id": "s06",
 			"type": "rubric",
 			"text": "Signat semel super Hostiam, dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan czyni jeden znak krzyża nad Hostią.",
+				"en": "The priest makes one sign of the cross over the Host."
 			}
 		},
 		{
@@ -652,6 +853,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Chleb święty życia wiecznego",
+				"en": "the holy Bread of eternal life"
+			},
 			"words": [
 				{
 					"id": "w049",
@@ -663,6 +868,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Chleb",
+						"en": "Bread"
 					}
 				},
 				{
@@ -675,7 +884,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w049"
+					"head": "w049",
+					"gloss": {
+						"pl": "święty",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w051",
@@ -687,6 +900,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "życia",
+						"en": "of life"
 					}
 				},
 				{
@@ -700,7 +917,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w051"
+					"head": "w051",
+					"gloss": {
+						"pl": "wiecznego",
+						"en": "eternal"
+					}
 				}
 			]
 		},
@@ -708,13 +929,9 @@
 			"id": "s08",
 			"type": "rubric",
 			"text": "Et semel super Calicem, dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan czyni jeden znak krzyża nad kielichem.",
+				"en": "The priest makes one sign of the cross over the chalice."
 			}
 		},
 		{
@@ -722,6 +939,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "i Kielich wiekuistego zbawienia.",
+				"en": "and the Chalice of everlasting salvation."
+			},
 			"words": [
 				{
 					"id": "w053",
@@ -729,6 +950,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -741,6 +966,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Kielich",
+						"en": "Chalice"
 					}
 				},
 				{
@@ -753,6 +982,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zbawienia",
+						"en": "of salvation"
 					}
 				},
 				{
@@ -766,9 +999,106 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w055"
+					"head": "w055",
+					"gloss": {
+						"pl": "wiecznego",
+						"en": "everlasting"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby pojedynczej zgadzający się z „salútis” (w055).",
+						"en": "A genitive singular agreeing with “salútis” (w055)."
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The anamnesis: the offering made in memory of the Passion, Resurrection and Ascension. MÉMORES at w003 governs the three genitives (passiónis, resurrectiónis, ascensiónis), the first of them seventeen words away — a long reach, though the corpus's longest is the Communicántes chain. FÍLII at w015 is the genitive singular the chain requires — eiúsdem Christi Fílii tui, Dómini nostri, four genitives in apposition — and Collatinus reads it so. Whitaker's carries filius with the contracted genitive only and so offers a plural or a locative; that is his entry's own coding, not a rule about -ius nouns, and the overruling is recorded in the pipeline's rulings. DATIS at w042 is tagged as the noun datum, with both analyzers, rather than as a participle of do. ÍNFERIS at w026 is the plural noun ínferi, those below; the phrase ab ínferis is the descéndit ad ínferos of the Apostles' Creed — a text this corpus does not carry — seen from the other side. CÆLOS at w031 is the masculine plural of cælum, neuter in its singular, which the lexicon carries. Witness do capitalises Hóstiam in the threefold naming of the victim; the edition prints it lowercase with witness handmissal-eo, adjudicated in the apparatus.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.unde-et-memores/",
+			"apparatus": "witnesses/ordinarium.unde-et-memores/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s04": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s06": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s08": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w015": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w031": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

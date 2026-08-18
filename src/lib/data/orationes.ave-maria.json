@@ -9,33 +9,34 @@
 	"ids": {
 		"next": 32
 	},
-	"status": "working-edition",
-	"notes": "The Hail Mary: the scriptural greeting (Lk 1:28 + 1:42) and the 16th-century intercessory petition. Wording transcribed verbatim from witness do-horas.",
-	"source": {
-		"method": "Transcribed verbatim from witness do-horas, collated against tpl: zero substantive divergence.",
-		"witnesses": "witnesses/orationes.ave-maria/",
-		"apparatus": "witnesses/orationes.ave-maria/apparatus.json"
+	"about": {
+		"pl": "Pierwsza część Pozdrowienia anielskiego łączy słowa Gabriela (Łk 1, 28) i Elżbiety (Łk 1, 42), a w żadnym z tych wersetów nie ma imion Maryja i Jezus, które dodaje modlitwa. Druga część, prośba skierowana do Maryi, pochodzi z XVI wieku.",
+		"en": "The first part of the Hail Mary joins Gabriel's words (Lk 1:28) to Elizabeth's (Lk 1:42), and neither verse carries the names Maria and Iesus that the prayer supplies. The second part, the petition addressed to Mary, is of the sixteenth century."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Evangelium secundum Lucam",
+				"locator": "1, 28; 1, 42",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-lucam_lt.html#1"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Evangelium secundum Lucam",
+				"locator": "1, 28; 1, 42",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-lucam_lt.html#1"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "verse",
+			"translation": {
+				"pl": "Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus.",
+				"en": "Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -49,6 +50,28 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zdrowaś",
+						"en": "hail"
+					},
+					"function": {
+						"pl": "Pozdrowienie anioła w Łk 1, 28.",
+						"en": "The angel's greeting in Lk 1:28."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Luke 1:28"
+							}
+						],
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Luke 1:28"
+							}
+						]
 					}
 				},
 				{
@@ -62,6 +85,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryjo",
+						"en": "Mary"
 					}
 				},
 				{
@@ -74,6 +101,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "łaską",
+						"en": "with grace"
+					},
+					"function": {
+						"pl": "Ablativus zależny od „plena” (w004).",
+						"en": "Ablative complement of “plena” (w004)."
 					}
 				},
 				{
@@ -87,7 +122,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "pełna",
+						"en": "full"
+					},
+					"function": {
+						"pl": "Zgadza się z „María” (w002) i łączy z „grátia” (w003).",
+						"en": "Agrees with “María” (w002) and takes “grátia” (w003)."
+					}
 				},
 				{
 					"id": "w005",
@@ -99,6 +142,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
+					},
+					"function": {
+						"pl": "Podmiot zdania z domyślnym „est”: Pan [jest] z Tobą.",
+						"en": "Subject with an understood “est”: the Lord [is] with thee."
 					}
 				},
 				{
@@ -110,6 +161,14 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "z Tobą",
+						"en": "with thee"
+					},
+					"function": {
+						"pl": "Połączenie „te” i „cum”. Przy zaimkach osobowych „cum” stoi po zaimku.",
+						"en": "A combination of “te” and “cum”. With personal pronouns, “cum” follows the pronoun."
 					}
 				},
 				{
@@ -122,7 +181,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "błogosławiona",
+						"en": "blessed"
+					},
+					"function": {
+						"pl": "„Benedícta [es] tu” — z domyślnym „es”.",
+						"en": "“Benedícta [es] tu” — with “es” understood."
+					}
 				},
 				{
 					"id": "w008",
@@ -132,6 +199,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "thou"
 					}
 				},
 				{
@@ -142,7 +213,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w010"
+					"head": "w010",
+					"gloss": {
+						"pl": "między",
+						"en": "among"
+					}
 				},
 				{
 					"id": "w010",
@@ -155,6 +230,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "niewiastami",
+						"en": "women"
 					}
 				},
 				{
@@ -163,6 +242,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -175,7 +258,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "błogosławiony",
+						"en": "blessed"
+					},
+					"function": {
+						"pl": "Zgadza się z „fructus” (w013) i dlatego ma rodzaj męski.",
+						"en": "Masculine in agreement with “fructus” (w013)."
+					}
 				},
 				{
 					"id": "w013",
@@ -187,6 +278,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "owoc",
+						"en": "fruit"
 					}
 				},
 				{
@@ -199,6 +294,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "żywota",
+						"en": "of the womb"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „fructus” (w013).",
+						"en": "A genitive dependent on “fructus” (w013)."
 					}
 				},
 				{
@@ -211,7 +314,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w014"
+					"head": "w014",
+					"gloss": {
+						"pl": "Twojego",
+						"en": "thy"
+					},
+					"function": {
+						"pl": "Zgadza się z „ventris” (w014).",
+						"en": "Agrees with “ventris” (w014)."
+					}
 				},
 				{
 					"id": "w016",
@@ -223,6 +334,14 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezus",
+						"en": "Jesus"
+					},
+					"function": {
+						"pl": "Apozycja (dopowiedzenie) do „fructus” (w013): owoc… — Jezus.",
+						"en": "Apposition to “fructus” (w013): the fruit… — Iesus."
 					}
 				}
 			]
@@ -231,6 +350,10 @@
 			"id": "s02",
 			"type": "verse",
 			"speaker": "omnes",
+			"translation": {
+				"pl": "Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.",
+				"en": "Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+			},
 			"words": [
 				{
 					"id": "w017",
@@ -242,7 +365,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					},
+					"function": {
+						"pl": "Zgadza się z „María” (w018).",
+						"en": "Agrees with “María” (w018)."
+					}
 				},
 				{
 					"id": "w018",
@@ -255,6 +386,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryjo",
+						"en": "Mary"
 					}
 				},
 				{
@@ -267,6 +402,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					},
+					"function": {
+						"pl": "Apozycja (dopowiedzenie) do „María” (w018).",
+						"en": "Apposition to “María” (w018)."
 					}
 				},
 				{
@@ -280,6 +423,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „Mater”: Matka Boga.",
+						"en": "Genitive dependent on “Mater”: Mother of God."
 					}
 				},
 				{
@@ -294,6 +445,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
 					}
 				},
 				{
@@ -304,7 +459,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w023"
+					"head": "w023",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w023",
@@ -314,6 +473,14 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					},
+					"function": {
+						"pl": "Ablativus po „pro” (w022).",
+						"en": "Ablative after “pro” (w022)."
 					}
 				},
 				{
@@ -327,6 +494,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "grzesznikami",
+						"en": "sinners"
+					},
+					"function": {
+						"pl": "Apozycja (dopowiedzenie) do „nobis” (w023).",
+						"en": "Apposition to “nobis” (w023)."
 					}
 				},
 				{
@@ -335,6 +510,10 @@
 					"lemma": "nunc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "teraz",
+						"en": "now"
 					}
 				},
 				{
@@ -343,6 +522,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -353,7 +536,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w028"
+					"head": "w028",
+					"gloss": {
+						"pl": "w",
+						"en": "at"
+					}
 				},
 				{
 					"id": "w028",
@@ -365,6 +552,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "godzinie",
+						"en": "the hour"
+					},
+					"function": {
+						"pl": "Ablativus po „in” (w027) w określeniu czasu.",
+						"en": "Ablative after “in” (w027) in a temporal phrase."
 					}
 				},
 				{
@@ -377,6 +572,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "śmierci",
+						"en": "of death"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „hora” (w028).",
+						"en": "Genitive dependent on “hora” (w028)."
 					}
 				},
 				{
@@ -390,7 +593,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "naszej",
+						"en": "our"
+					},
+					"function": {
+						"pl": "Zgadza się z „mortis” (w029).",
+						"en": "Agrees with “mortis” (w029)."
+					}
 				},
 				{
 					"id": "w031",
@@ -399,9 +610,38 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The Hail Mary: the scriptural greeting (Lk 1:28 + 1:42) and the 16th-century intercessory petition. Wording transcribed verbatim from witness do-horas.",
+		"source": {
+			"method": "Transcribed verbatim from witness do-horas, collated against tpl: zero substantive divergence.",
+			"witnesses": "witnesses/orationes.ave-maria/",
+			"apparatus": "witnesses/orationes.ave-maria/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		}
+	}
 }

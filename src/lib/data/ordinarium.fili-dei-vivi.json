@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 64
 	},
-	"status": "working-edition",
-	"notes": "The second of the three prayers before Communion, and the priest's own throughout: líbera me, iniquitátibus meis, fac me. This document carries no rubric segment. The witnesses print one rubric for all three prayers — dicit secrete sequentes Orationes — and it stands at the head of the first, ordinarium.qui-dixisti; repeating it here would claim a direction the page does not give twice. VIVIFICÁSTI at w018 is the syncopated perfect of vivificávisti; the Whitaker's analyzer does not resolve the contracted form, so of the analyzers only Collatinus confirms it. COOPERÁNTE at w011 is a deponent participle: passive in form, active in meaning, and the corpus tags it voice dep as the schema requires. TUUM at w027 agrees with Sánguinem alone, though the sense covers Corpus too.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variant is adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.fili-dei-vivi/",
-		"apparatus": "witnesses/ordinarium.fili-dei-vivi/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Kapłan zwraca się do Jezusa Chrystusa, Syna Boga żywego. Wspomina dzieło zbawienia dokonane przez śmierć Chrystusa z woli Ojca i przy współdziałaniu Ducha Świętego. Prosi o uwolnienie od nieprawości i zła, o wierność przykazaniom oraz o to, by nigdy nie został odłączony od Chrystusa.",
+		"en": "The priest addresses Jesus Christ, the Son of the living God. He recalls the work of salvation accomplished through Christ's death, by the will of the Father and with the cooperation of the Holy Spirit. He asks to be delivered from iniquity and evil, to remain faithful to the commandments, and never to be separated from Christ."
 	},
 	"segments": [
 		{
@@ -38,6 +19,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Panie Jezu Chryste, Synu Boga Żywego,",
+				"en": "Lord Jesus Christ, Son of the living God,"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -49,6 +34,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -60,6 +49,10 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezu",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -73,6 +66,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chryste",
+						"en": "Christ"
 					}
 				},
 				{
@@ -85,6 +82,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synu",
+						"en": "Son"
+					},
+					"function": {
+						"pl": "Wołacz liczby pojedynczej od filius.",
+						"en": "Singular vocative of filius."
 					}
 				},
 				{
@@ -97,6 +102,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -110,7 +119,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "żywego",
+						"en": "living"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby pojedynczej, zgadzający się z „Dei” (w005).",
+						"en": "Genitive singular agreeing with “Dei” (w005)."
+					}
 				}
 			]
 		},
@@ -119,6 +136,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Ty z woli Ojca, za współdziałaniem Ducha Świętego, przez swoją śmierć dałeś życie światu:",
+				"en": "who by the will of the Father and the work of the Holy Spirit, through Your Death gave life to the world:"
+			},
 			"words": [
 				{
 					"id": "w007",
@@ -129,6 +150,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -139,7 +164,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "z",
+						"en": "out of"
+					}
 				},
 				{
 					"id": "w009",
@@ -151,6 +180,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "woli",
+						"en": "the will"
 					}
 				},
 				{
@@ -164,6 +197,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojca",
+						"en": "of the Father"
 					}
 				},
 				{
@@ -180,7 +217,15 @@
 						"voice": "dep",
 						"conj": 1
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "współdziałającym",
+						"en": "cooperating"
+					},
+					"function": {
+						"pl": "Imiesłów deponentny tworzący ze „Spíritu” (w012) ablativus absolutus.",
+						"en": "Deponent participle forming an ablative absolute with “Spíritu” (w012)."
+					}
 				},
 				{
 					"id": "w012",
@@ -192,6 +237,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "Duchem",
+						"en": "Spirit"
 					}
 				},
 				{
@@ -205,7 +254,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "Świętym",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w014",
@@ -215,7 +268,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w015",
@@ -227,6 +284,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "śmierć",
+						"en": "death"
 					}
 				},
 				{
@@ -239,7 +300,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w017",
@@ -251,6 +316,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "świat",
+						"en": "the world"
+					},
+					"function": {
+						"pl": "Dopełnienie „vivificásti” (w018).",
+						"en": "Object of “vivificásti” (w018)."
 					}
 				},
 				{
@@ -267,13 +340,13 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "ożywiłeś",
+						"en": "hast given life to"
+					},
+					"function": {
+						"pl": "Ściągnięta forma perfectum: vivificásti = vivificávisti.",
+						"en": "Contracted perfect form: vivificásti = vivificávisti."
 					}
 				}
 			]
@@ -283,6 +356,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "wybaw mnie przez najświętsze Ciało i Krew Twoją od wszystkich nieprawości moich i od wszelkiego zła:",
+				"en": "free me by this, Your most holy Body and Blood, from all my sins and from every evil:"
+			},
 			"words": [
 				{
 					"id": "w019",
@@ -296,6 +373,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wybaw",
+						"en": "deliver"
 					}
 				},
 				{
@@ -306,6 +387,14 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
+					},
+					"function": {
+						"pl": "Od tego miejsca modlitwa pozostaje w pierwszej osobie liczby pojedynczej.",
+						"en": "From this point the prayer remains in the first person singular."
 					}
 				},
 				{
@@ -316,7 +405,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w022"
+					"head": "w022",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w022",
@@ -327,6 +420,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "to",
+						"en": "this"
+					},
+					"function": {
+						"pl": "Rodzaj nijaki, zgadza się z „Corpus” (w024).",
+						"en": "Neuter, agreeing with “Corpus” (w024)."
 					}
 				},
 				{
@@ -339,7 +440,15 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "najświętsze",
+						"en": "most holy"
+					},
+					"function": {
+						"pl": "Zgadza się z „Corpus” (w024): „to najświętsze Ciało”.",
+						"en": "Agrees with “Corpus” (w024): “this most holy Body”."
+					}
 				},
 				{
 					"id": "w024",
@@ -351,6 +460,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ciało",
+						"en": "Body"
 					}
 				},
 				{
@@ -359,6 +472,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -371,6 +488,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Krew",
+						"en": "Blood"
 					}
 				},
 				{
@@ -383,7 +504,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w026"
+					"head": "w026",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "Thy"
+					},
+					"function": {
+						"pl": "Zgadza się z „Sánguinem” (w026). Znaczeniowo odnosi się do Ciała i Krwi.",
+						"en": "Agrees with “Sánguinem” (w026). In sense it qualifies both Body and Blood."
+					}
 				},
 				{
 					"id": "w028",
@@ -393,7 +522,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w029",
@@ -405,7 +538,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w030",
@@ -417,6 +554,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "nieprawości",
+						"en": "iniquities"
 					}
 				},
 				{
@@ -430,7 +571,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "moich",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w032",
@@ -438,6 +583,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -450,7 +599,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "wszelkiego",
+						"en": "all manner of"
+					}
 				},
 				{
 					"id": "w034",
@@ -463,6 +616,14 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "zła",
+						"en": "evils"
+					},
+					"function": {
+						"pl": "Rzeczownik rodzaju nijakiego w liczbie mnogiej: wszelkie zło, nie źli ludzie.",
+						"en": "Neuter plural noun: evils, not evil men."
 					}
 				}
 			]
@@ -472,6 +633,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "spraw także, abym zawsze zachowywał Twoje przykazania i nie dozwól mi nigdy odłączyć się od Ciebie:",
+				"en": "keep me always faithful to Your commandments, and never let me be parted from You:"
+			},
 			"words": [
 				{
 					"id": "w035",
@@ -479,6 +644,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -493,6 +662,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "spraw",
+						"en": "make"
 					}
 				},
 				{
@@ -503,6 +676,14 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
+					},
+					"function": {
+						"pl": "Biernik jako podmiot bezokolicznika „inhærére” (w040).",
+						"en": "Accusative subject of the infinitive “inhærére” (w040)."
 					}
 				},
 				{
@@ -515,7 +696,15 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w041"
+					"head": "w041",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "Thy"
+					},
+					"function": {
+						"pl": "Zgadza się z „mandátis” (w041).",
+						"en": "Agrees with “mandátis” (w041)."
+					}
 				},
 				{
 					"id": "w039",
@@ -523,6 +712,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "always"
 					}
 				},
 				{
@@ -535,6 +728,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "trwać",
+						"en": "to cling"
 					}
 				},
 				{
@@ -548,6 +745,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "przykazaniach",
+						"en": "commandments"
 					}
 				},
 				{
@@ -556,6 +757,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -566,7 +771,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w044"
+					"head": "w044",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w044",
@@ -576,6 +785,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "Thee"
 					}
 				},
 				{
@@ -584,6 +797,10 @@
 					"lemma": "numquam",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nigdy",
+						"en": "never"
 					}
 				},
 				{
@@ -596,6 +813,14 @@
 						"mood": "inf",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "być odłączonym",
+						"en": "to be parted"
+					},
+					"function": {
+						"pl": "Bezokolicznik strony biernej zależny od „permíttas” (w047).",
+						"en": "Passive infinitive depending on “permíttas” (w047)."
 					}
 				},
 				{
@@ -611,6 +836,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "dopuść",
+						"en": "allow"
+					},
+					"function": {
+						"pl": "Tryb łączący wyrażający prośbę, z przeczeniem „numquam” (w045).",
+						"en": "Subjunctive expressing a petition, negated by “numquam” (w045)."
 					}
 				}
 			]
@@ -620,6 +853,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Który z tymże Bogiem Ojcem i Duchem Świętym żyjesz i królujesz, Bóg, na wieki wieków. Amen.",
+				"en": "Who with the same God the Father and the Holy Spirit live and reign, God, for ever and ever. Amen."
+			},
 			"words": [
 				{
 					"id": "w048",
@@ -630,6 +867,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Który",
+						"en": "Who"
 					}
 				},
 				{
@@ -640,7 +881,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w050"
+					"head": "w050",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w050",
@@ -651,6 +896,14 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "tymże",
+						"en": "the same"
+					},
+					"function": {
+						"pl": "Zgadza się z „Deo” (w051) i odsyła do wcześniej nazwanego Boga Ojca.",
+						"en": "Agrees with “Deo” (w051) and points back to God the Father named earlier."
 					}
 				},
 				{
@@ -663,6 +916,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bogiem",
+						"en": "God"
 					}
 				},
 				{
@@ -675,6 +932,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojcem",
+						"en": "the Father"
 					}
 				},
 				{
@@ -683,6 +944,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -695,6 +960,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "Duchem",
+						"en": "the Spirit"
 					}
 				},
 				{
@@ -707,7 +976,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w054"
+					"head": "w054",
+					"gloss": {
+						"pl": "Świętym",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w056",
@@ -721,6 +994,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "żyjesz",
+						"en": "livest"
 					}
 				},
 				{
@@ -729,6 +1006,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -743,6 +1024,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "królujesz",
+						"en": "reignest"
 					}
 				},
 				{
@@ -755,6 +1040,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bóg",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Mianownik w apozycji do „Qui” (w048).",
+						"en": "Nominative in apposition to “Qui” (w048)."
 					}
 				},
 				{
@@ -765,7 +1058,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w061"
+					"head": "w061",
+					"gloss": {
+						"pl": "na",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w061",
@@ -777,6 +1074,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
 					}
 				},
 				{
@@ -790,6 +1091,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
 					}
 				},
 				{
@@ -799,9 +1104,50 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The second of the three prayers before Communion, and the priest's own throughout: líbera me, iniquitátibus meis, fac me. This document carries no rubric segment. The witnesses print one rubric for all three prayers — dicit secrete sequentes Orationes — and it stands at the head of the first, ordinarium.qui-dixisti; repeating it here would claim a direction the page does not give twice. VIVIFICÁSTI at w018 is the syncopated perfect of vivificávisti; the Whitaker's analyzer does not resolve the contracted form, so of the analyzers only Collatinus confirms it. COOPERÁNTE at w011 is a deponent participle: passive in form, active in meaning, and the corpus tags it voice dep as the schema requires. TUUM at w027 agrees with Sánguinem alone, though the sense covers Corpus too.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variant is adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.fili-dei-vivi/",
+			"apparatus": "witnesses/ordinarium.fili-dei-vivi/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"words": {
+			"w018": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

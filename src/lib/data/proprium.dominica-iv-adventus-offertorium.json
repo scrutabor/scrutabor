@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 16
 	},
-	"status": "working-edition",
-	"notes": "The offertory antiphon of the Fourth Sunday of Advent, the angel's greeting.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-iv-adventus-offertorium/",
-		"apparatus": "witnesses/proprium.dominica-iv-adventus-offertorium/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Antyfona na ofiarowanie IV Niedzieli Adwentu. Pozdrowienie anioła, słowo w słowo z Ewangelii Łukasza, i pierwsza połowa Zdrowaś Maryjo.",
+		"en": "The offertory antiphon of the Fourth Sunday of Advent. The angel's greeting word for word from Luke's gospel, and the first half of the Hail Mary."
 	},
 	"segments": [
 		{
@@ -48,6 +29,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego.",
+				"en": "Hail Mary, full of grace: the Lord is with thee: blessed art thou among women, and blessed is the fruit of thy womb."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Luke 1:28"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Luke 1:28"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -61,6 +60,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "bądź pozdrowiona",
+						"en": "hail"
 					}
 				},
 				{
@@ -74,6 +77,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryjo",
+						"en": "Mary"
 					}
 				},
 				{
@@ -86,6 +93,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "łaski",
+						"en": "of grace"
 					}
 				},
 				{
@@ -99,7 +110,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "pełna",
+						"en": "full"
+					}
 				},
 				{
 					"id": "w005",
@@ -111,6 +126,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -122,6 +141,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "z Tobą",
+						"en": "with thee"
 					}
 				},
 				{
@@ -134,7 +157,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "błogosławiona",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w008",
@@ -144,6 +171,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "thou"
 					}
 				},
 				{
@@ -154,7 +185,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w010"
+					"head": "w010",
+					"gloss": {
+						"pl": "między",
+						"en": "among"
+					}
 				},
 				{
 					"id": "w010",
@@ -167,6 +202,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "niewiastami",
+						"en": "women"
 					}
 				},
 				{
@@ -175,6 +214,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -187,7 +230,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "błogosławiony",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w013",
@@ -199,6 +246,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "owoc",
+						"en": "the fruit"
 					}
 				},
 				{
@@ -211,6 +262,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "łona",
+						"en": "of womb"
 					}
 				},
 				{
@@ -224,9 +279,38 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w014"
+					"head": "w014",
+					"gloss": {
+						"pl": "Twego",
+						"en": "thy"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The offertory antiphon of the Fourth Sunday of Advent, the angel's greeting.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-iv-adventus-offertorium/",
+			"apparatus": "witnesses/proprium.dominica-iv-adventus-offertorium/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

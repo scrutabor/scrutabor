@@ -9,41 +9,44 @@
 	"ids": {
 		"next": 164
 	},
-	"status": "working-edition",
-	"notes": "The Nicene-Constantinopolitan Creed as sung in the 1962 Mass. Rubric s01 abridges the 1962 rubric as transcribed by witness do (line 142); the bows at the holy names and the sign of the cross at the end are carried by the narrative layer. Rubric s08 is DO's inline '(Hic genuflectitur)' as its own segment.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence (handmissal-eo under its declared fold-xs orthography, substantive-only profile). Four accidental variants against do — three of them this edition's i/j orthography, one a missing accent — adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.credo/",
-		"apparatus": "witnesses/ordinarium.credo/apparatus.json"
+	"about": {
+		"pl": "Symbol nicejsko-konstantynopolitański, odmawiany po Ewangelii w każdą niedzielę i w większe święta, a opuszczany we Mszach za zmarłych. Na słowa Et incarnátus est, w których Symbol wyznaje Słowo, które stało się ciałem, wszyscy przyklękają. Jego artykuły idą od Ojca i Syna do Ducha Świętego, Kościoła, jednego chrztu, wskrzeszenia umarłych i życia wiecznego.",
+		"en": "The Nicene-Constantinopolitan Creed, said after the Gospel on every Sunday and on the greater feasts, and left out in Masses for the Dead. All genuflect at Et incarnátus est, where the Creed confesses the Word made flesh. Its articles run from the Father and the Son to the Holy Spirit, the Church, one baptism, the resurrection of the dead and the life of the world to come."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Rubricae generales, nn. 475–476",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			},
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Rubricae generales, n. 522 a",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Rubricae generales, nn. 475–476",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			},
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Rubricae generales, n. 522 a",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Deinde ad medium Altaris extendens, elevans et iungens manus, dicit, si dicendum est, Credo in unum Deum, et prosequitur iunctis manibus.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Na środku ołtarza kapłan wyciąga i unosi ręce, składa je, odmawia Credo, jeśli jest przewidziane, i kontynuuje ze złożonymi rękami. Pochyla głowę ku krzyżowi przy in unum Deum, przy Iesum Christum i przy simul adorátur, a przy Et vitam ventúri sǽculi żegna się od czoła do piersi.",
+				"en": "At the middle of the altar, the priest extends and raises his hands, joins them, says the Creed if prescribed, and continues with hands joined. The priest bows his head to the cross at in unum Deum, at Iesum Christum and at simul adorátur, and signs himself from forehead to breast at Et vitam ventúri sǽculi."
 			}
 		},
 		{
@@ -61,6 +64,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Wierzę w jednego Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, wszystkich rzeczy widzialnych i niewidzialnych.",
+				"en": "I believe in one God, the Father almighty, maker of heaven and earth, of all things visible and invisible."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -74,6 +81,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wierzę",
+						"en": "I believe"
+					},
+					"function": {
+						"pl": "Łączy się z „in” (w002) i biernikiem.",
+						"en": "Takes “in” (w002) with the accusative."
 					}
 				},
 				{
@@ -84,7 +99,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w003",
@@ -96,7 +115,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "jednego",
+						"en": "one"
+					}
 				},
 				{
 					"id": "w004",
@@ -109,6 +132,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				},
 				{
@@ -121,6 +148,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojca",
+						"en": "the Father"
 					}
 				},
 				{
@@ -134,7 +165,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "wszechmogącego",
+						"en": "almighty"
+					}
 				},
 				{
 					"id": "w007",
@@ -146,6 +181,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "twórcę",
+						"en": "maker"
 					}
 				},
 				{
@@ -158,6 +197,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "nieba",
+						"en": "of heaven"
 					}
 				},
 				{
@@ -166,6 +209,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -179,6 +226,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ziemi",
+						"en": "of earth"
 					}
 				},
 				{
@@ -191,7 +242,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "widzialnych",
+						"en": "visible"
+					}
 				},
 				{
 					"id": "w012",
@@ -203,7 +258,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "of all things"
+					}
 				},
 				{
 					"id": "w013",
@@ -211,6 +270,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -224,7 +287,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "niewidzialnych",
+						"en": "invisible"
+					}
 				}
 			]
 		},
@@ -243,6 +310,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "I w jednego Pana, Jezusa Chrystusa, Syna Bożego jednorodzonego.",
+				"en": "And in one Lord, Jesus Christ, the only-begotten Son of God."
+			},
 			"words": [
 				{
 					"id": "w015",
@@ -250,6 +321,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -260,7 +335,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w017",
@@ -272,7 +351,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "jednego",
+						"en": "one"
+					}
 				},
 				{
 					"id": "w018",
@@ -284,6 +367,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -295,6 +382,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -308,6 +399,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -320,6 +415,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Syna",
+						"en": "the Son"
 					}
 				},
 				{
@@ -332,6 +431,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -345,7 +448,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "jednorodzonego",
+						"en": "only-begotten"
+					}
 				}
 			]
 		},
@@ -364,6 +471,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Który z Ojca jest zrodzony przed wszystkimi wiekami.",
+				"en": "And born of the Father before all ages."
+			},
 			"words": [
 				{
 					"id": "w024",
@@ -371,6 +482,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -381,7 +496,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w026"
+					"head": "w026",
+					"gloss": {
+						"pl": "z",
+						"en": "of"
+					}
 				},
 				{
 					"id": "w026",
@@ -393,6 +512,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojca",
+						"en": "the Father"
 					}
 				},
 				{
@@ -409,7 +532,15 @@
 						"gender": "m",
 						"conj": 3
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "zrodzonego",
+						"en": "born"
+					},
+					"function": {
+						"pl": "Imiesłów zgadzający się z „Fílium” (w021).",
+						"en": "Participle agreeing with “Fílium” (w021)."
+					}
 				},
 				{
 					"id": "w028",
@@ -419,7 +550,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "przed",
+						"en": "before"
+					}
 				},
 				{
 					"id": "w029",
@@ -431,7 +566,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "wszystkimi",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w030",
@@ -444,6 +583,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wiekami",
+						"en": "ages"
 					}
 				}
 			]
@@ -463,6 +606,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Bóg z Boga, Światłość ze Światłości, Bóg prawdziwy z Boga prawdziwego.",
+				"en": "God from God, Light from Light, true God from true God."
+			},
 			"words": [
 				{
 					"id": "w031",
@@ -474,6 +621,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				},
 				{
@@ -484,7 +635,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w033"
+					"head": "w033",
+					"gloss": {
+						"pl": "z",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w033",
@@ -497,6 +652,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				},
 				{
@@ -509,6 +668,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Światłość",
+						"en": "Light"
 					}
 				},
 				{
@@ -519,7 +682,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "ze",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w036",
@@ -532,6 +699,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Światłości",
+						"en": "Light"
 					}
 				},
 				{
@@ -544,6 +715,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				},
 				{
@@ -556,7 +731,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w037"
+					"head": "w037",
+					"gloss": {
+						"pl": "prawdziwego",
+						"en": "true"
+					}
 				},
 				{
 					"id": "w039",
@@ -566,7 +745,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w040"
+					"head": "w040",
+					"gloss": {
+						"pl": "z",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w040",
@@ -578,6 +761,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				},
 				{
@@ -591,7 +778,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w040"
+					"head": "w040",
+					"gloss": {
+						"pl": "prawdziwego",
+						"en": "true"
+					}
 				}
 			]
 		},
@@ -610,6 +801,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Zrodzony, a nie stworzony, współistotny Ojcu, a przez Niego wszystko się stało.",
+				"en": "Begotten, not made, consubstantial with the Father: through Him all things were made."
+			},
 			"words": [
 				{
 					"id": "w042",
@@ -626,7 +821,15 @@
 						"gender": "m",
 						"conj": 3
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "zrodzonego",
+						"en": "begotten"
+					},
+					"function": {
+						"pl": "Biernik. Zgadza się z „Fílium” (w021) i jest przeciwstawiony „factum” (w044).",
+						"en": "Accusative agreeing with “Fílium” (w021), contrasted with “factum” (w044)."
+					}
 				},
 				{
 					"id": "w043",
@@ -634,6 +837,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -651,7 +858,11 @@
 						"gender": "m",
 						"conj": 3
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "uczynionego",
+						"en": "made"
+					}
 				},
 				{
 					"id": "w045",
@@ -663,7 +874,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "współistotnego",
+						"en": "consubstantial"
+					},
+					"function": {
+						"pl": "Łączy się z celownikiem „Patri” (w046).",
+						"en": "Takes the dative “Patri” (w046)."
+					}
 				},
 				{
 					"id": "w046",
@@ -676,6 +895,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojcu",
+						"en": "with the Father"
 					}
 				},
 				{
@@ -686,7 +909,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w048"
+					"head": "w048",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w048",
@@ -697,6 +924,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którego",
+						"en": "whom"
 					}
 				},
 				{
@@ -709,7 +940,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wszystko",
+						"en": "all things"
+					}
 				},
 				{
 					"id": "w050",
@@ -726,13 +961,13 @@
 						"conj": 3
 					},
 					"head": "w049",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "uczynione",
+						"en": "made"
+					},
+					"function": {
+						"pl": "Z „sunt” (w051) tworzy stronę bierną perfectum „facta sunt”: „zostały uczynione”.",
+						"en": "With “sunt” (w051), forms the perfect passive “facta sunt”: “were made”."
 					}
 				},
 				{
@@ -747,6 +982,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "zostało",
+						"en": "were"
 					}
 				}
 			]
@@ -766,6 +1005,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "On to dla nas ludzi i dla naszego zbawienia zstąpił z nieba.",
+				"en": "For us men and for our salvation He came down from heaven."
+			},
 			"words": [
 				{
 					"id": "w052",
@@ -776,6 +1019,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -786,7 +1033,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w054"
+					"head": "w054",
+					"gloss": {
+						"pl": "dla",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w054",
@@ -796,6 +1047,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -808,6 +1063,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ludzi",
+						"en": "men"
 					}
 				},
 				{
@@ -816,6 +1075,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -826,7 +1089,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w059"
+					"head": "w059",
+					"gloss": {
+						"pl": "dla",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w058",
@@ -838,7 +1105,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w059"
+					"head": "w059",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w059",
@@ -850,6 +1121,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zbawienia",
+						"en": "salvation"
 					}
 				},
 				{
@@ -864,6 +1139,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "zstąpił",
+						"en": "came down"
+					},
+					"function": {
+						"pl": "Perfectum: „zstąpił”.",
+						"en": "Perfect here: “came down”."
 					}
 				},
 				{
@@ -874,7 +1157,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w062"
+					"head": "w062",
+					"gloss": {
+						"pl": "z",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w062",
@@ -887,6 +1174,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "niebios",
+						"en": "the heavens"
 					}
 				}
 			]
@@ -895,13 +1186,9 @@
 			"id": "s08",
 			"type": "rubric",
 			"text": "Hic genuflectitur.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "W tym miejscu przyklęka się, trwając tak od Et incarnátus est do et homo factus est, i powstaje.",
+				"en": "Here a genuflection is made, held from Et incarnátus est through et homo factus est, and then all rise."
 			}
 		},
 		{
@@ -919,6 +1206,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "I za sprawą Ducha Świętego przyjął ciało z Maryi Dziewicy: i stał się człowiekiem.",
+				"en": "And was incarnate by the Holy Spirit, of the Virgin Mary: and was made man."
+			},
 			"words": [
 				{
 					"id": "w063",
@@ -926,6 +1217,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -942,7 +1237,15 @@
 						"gender": "m",
 						"conj": 1
 					},
-					"head": "w065"
+					"head": "w065",
+					"gloss": {
+						"pl": "wcielony",
+						"en": "made flesh"
+					},
+					"function": {
+						"pl": "Z „est” (w065) tworzy perfectum „incarnátus est”: „wcielił się”.",
+						"en": "With “est” (w065), forms the perfect “incarnátus est”: “was made flesh”."
+					}
 				},
 				{
 					"id": "w065",
@@ -955,6 +1258,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "został",
+						"en": "was"
 					}
 				},
 				{
@@ -965,7 +1272,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w067"
+					"head": "w067",
+					"gloss": {
+						"pl": "za sprawą",
+						"en": "by"
+					}
 				},
 				{
 					"id": "w067",
@@ -977,6 +1288,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "Ducha",
+						"en": "the Spirit"
 					}
 				},
 				{
@@ -989,7 +1304,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w067"
+					"head": "w067",
+					"gloss": {
+						"pl": "Świętego",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w069",
@@ -999,7 +1318,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w070"
+					"head": "w070",
+					"gloss": {
+						"pl": "z",
+						"en": "of"
+					}
 				},
 				{
 					"id": "w070",
@@ -1011,6 +1334,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryi",
+						"en": "Mary"
 					}
 				},
 				{
@@ -1024,6 +1351,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Dziewicy",
+						"en": "the Virgin"
 					}
 				},
 				{
@@ -1032,6 +1363,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1044,6 +1379,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "człowiekiem",
+						"en": "man"
 					}
 				},
 				{
@@ -1061,13 +1400,13 @@
 						"conj": 3
 					},
 					"head": "w073",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "stał",
+						"en": "made"
+					},
+					"function": {
+						"pl": "Z „est” (w075) tworzy perfectum „factus est”. „homo” (w073) jest orzecznikiem w mianowniku.",
+						"en": "With “est” (w075), forms the perfect “factus est”. “homo” (w073) is the predicate nominative."
 					}
 				},
 				{
@@ -1082,6 +1421,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "się",
+						"en": "was"
 					}
 				}
 			]
@@ -1101,6 +1444,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Ukrzyżowany również za nas, pod Poncjuszem Piłatem został umęczony i pogrzebany.",
+				"en": "Crucified also for us: under Pontius Pilate He suffered and was buried."
+			},
 			"words": [
 				{
 					"id": "w076",
@@ -1116,7 +1463,15 @@
 						"gender": "m",
 						"conj": 3
 					},
-					"head": "w086"
+					"head": "w086",
+					"gloss": {
+						"pl": "ukrzyżowany",
+						"en": "crucified"
+					},
+					"function": {
+						"pl": "Łączy się ze wspólnym „est” (w086), podobnie jak „passus” (w083) i „sepúltus” (w085).",
+						"en": "Shares “est” (w086) with “passus” (w083) and “sepúltus” (w085)."
+					}
 				},
 				{
 					"id": "w077",
@@ -1124,6 +1479,10 @@
 					"lemma": "etiam",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "także",
+						"en": "also"
 					}
 				},
 				{
@@ -1134,7 +1493,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w079"
+					"head": "w079",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w079",
@@ -1145,6 +1508,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -1155,7 +1522,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w081"
+					"head": "w081",
+					"gloss": {
+						"pl": "pod",
+						"en": "under"
+					}
 				},
 				{
 					"id": "w081",
@@ -1167,6 +1538,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Poncjuszem",
+						"en": "Pontius"
 					}
 				},
 				{
@@ -1179,6 +1554,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Piłatem",
+						"en": "Pilate"
 					}
 				},
 				{
@@ -1196,7 +1575,15 @@
 						"gender": "m",
 						"conj": 3
 					},
-					"head": "w086"
+					"head": "w086",
+					"gloss": {
+						"pl": "umęczony",
+						"en": "having suffered"
+					},
+					"function": {
+						"pl": "Imiesłów czasownika deponentnego — forma bierna, znaczenie czynne: ten, który cierpiał.",
+						"en": "Participle of a deponent verb — passive form, active meaning: the one who suffered."
+					}
 				},
 				{
 					"id": "w084",
@@ -1204,6 +1591,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1220,7 +1611,11 @@
 						"gender": "m",
 						"conj": 4
 					},
-					"head": "w086"
+					"head": "w086",
+					"gloss": {
+						"pl": "pogrzebany",
+						"en": "buried"
+					}
 				},
 				{
 					"id": "w086",
@@ -1234,6 +1629,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "został",
+						"en": "was"
 					}
 				}
 			]
@@ -1253,6 +1652,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "I zmartwychwstał dnia trzeciego, jak oznajmia Pismo.",
+				"en": "And rose again on the third day, in accordance with the Scriptures."
+			},
 			"words": [
 				{
 					"id": "w087",
@@ -1260,6 +1663,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1274,6 +1681,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "zmartwychwstał",
+						"en": "rose again"
 					}
 				},
 				{
@@ -1286,7 +1697,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w090"
+					"head": "w090",
+					"gloss": {
+						"pl": "trzeciego",
+						"en": "on the third"
+					}
 				},
 				{
 					"id": "w090",
@@ -1299,6 +1714,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "dnia",
+						"en": "day"
+					},
+					"function": {
+						"pl": "Ablativus czasu. Tutaj rodzaj żeński. Zgadza się z „tértia” (w089).",
+						"en": "Ablative of time. Feminine here, agreeing with “tértia” (w089)."
 					}
 				},
 				{
@@ -1309,7 +1732,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w092"
+					"head": "w092",
+					"gloss": {
+						"pl": "według",
+						"en": "according to"
+					}
 				},
 				{
 					"id": "w092",
@@ -1322,6 +1749,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Pism",
+						"en": "the Scriptures"
 					}
 				}
 			]
@@ -1341,6 +1772,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "I wstąpił do nieba: siedzi po prawicy Ojca.",
+				"en": "And ascended into heaven: He sits at the right hand of the Father."
+			},
 			"words": [
 				{
 					"id": "w093",
@@ -1348,6 +1783,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1362,6 +1801,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wstąpił",
+						"en": "ascended"
+					},
+					"function": {
+						"pl": "Perfectum: „wstąpił”.",
+						"en": "Perfect here: “ascended”."
 					}
 				},
 				{
@@ -1372,7 +1819,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w096"
+					"head": "w096",
+					"gloss": {
+						"pl": "do",
+						"en": "into"
+					}
 				},
 				{
 					"id": "w096",
@@ -1385,6 +1836,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "nieba",
+						"en": "heaven"
 					}
 				},
 				{
@@ -1399,6 +1854,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "siedzi",
+						"en": "He sits"
 					}
 				},
 				{
@@ -1409,7 +1868,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w099"
+					"head": "w099",
+					"gloss": {
+						"pl": "po",
+						"en": "at"
+					}
 				},
 				{
 					"id": "w099",
@@ -1422,13 +1885,9 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "prawicy",
+						"en": "the right hand"
 					}
 				},
 				{
@@ -1442,6 +1901,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojca",
+						"en": "of the Father"
 					}
 				}
 			]
@@ -1461,6 +1924,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "I powtórnie przyjdzie w chwale sądzić żywych i umarłych: a Królestwu Jego nie będzie końca.",
+				"en": "And He will come again in glory to judge the living and the dead: and His kingdom will have no end."
+			},
 			"words": [
 				{
 					"id": "w101",
@@ -1468,6 +1935,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1476,6 +1947,10 @@
 					"lemma": "iterum",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "powtórnie",
+						"en": "again"
 					}
 				},
 				{
@@ -1492,7 +1967,15 @@
 						"gender": "m",
 						"conj": 4
 					},
-					"head": "w104"
+					"head": "w104",
+					"gloss": {
+						"pl": "mający przyjść",
+						"en": "about to come"
+					},
+					"function": {
+						"pl": "Imiesłów przyszły z „est” (w104): „przyjdzie”.",
+						"en": "Future participle with “est” (w104): “will come”."
+					}
 				},
 				{
 					"id": "w104",
@@ -1505,6 +1988,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
 					}
 				},
 				{
@@ -1515,7 +2002,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w106"
+					"head": "w106",
+					"gloss": {
+						"pl": "w",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w106",
@@ -1527,6 +2018,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwale",
+						"en": "glory"
 					}
 				},
 				{
@@ -1539,6 +2034,14 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "sądzić",
+						"en": "to judge"
+					},
+					"function": {
+						"pl": "Bezokolicznik określa cel przyjścia: „przyjdzie sądzić żywych i umarłych”.",
+						"en": "The infinitive states the purpose of His coming: “He will come to judge the living and the dead”."
 					}
 				},
 				{
@@ -1551,7 +2054,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "żywych",
+						"en": "the living"
+					}
 				},
 				{
 					"id": "w109",
@@ -1559,6 +2066,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1572,7 +2083,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "umarłych",
+						"en": "the dead"
+					}
 				},
 				{
 					"id": "w111",
@@ -1583,6 +2098,14 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którego",
+						"en": "of whose"
+					},
+					"function": {
+						"pl": "Dopełniacz posiadacza określający „regni” (w112). Jego poprzednikiem jest Chrystus.",
+						"en": "Possessive genitive modifying “regni” (w112), with Christ as its antecedent."
 					}
 				},
 				{
@@ -1595,6 +2118,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "królestwa",
+						"en": "kingdom"
 					}
 				},
 				{
@@ -1603,6 +2130,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "no"
 					}
 				},
 				{
@@ -1616,6 +2147,10 @@
 						"tense": "fut",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "będzie",
+						"en": "there will be"
 					}
 				},
 				{
@@ -1629,6 +2164,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "końca",
+						"en": "end"
 					}
 				}
 			]
@@ -1648,6 +2187,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Wierzę w Ducha Świętego, Pana i Ożywiciela: który od Ojca i Syna pochodzi.",
+				"en": "I believe in the Holy Spirit, the Lord, the giver of life: who proceeds from the Father and the Son."
+			},
 			"words": [
 				{
 					"id": "w116",
@@ -1655,6 +2198,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1665,7 +2212,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w118"
+					"head": "w118",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w118",
@@ -1677,6 +2228,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "Ducha",
+						"en": "the Spirit"
 					}
 				},
 				{
@@ -1690,7 +2245,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w118"
+					"head": "w118",
+					"gloss": {
+						"pl": "Świętego",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w120",
@@ -1702,6 +2261,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -1710,6 +2273,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1727,7 +2294,15 @@
 						"gender": "m",
 						"conj": 1
 					},
-					"head": "w120"
+					"head": "w120",
+					"gloss": {
+						"pl": "Ożywiciela",
+						"en": "giver of life"
+					},
+					"function": {
+						"pl": "Imiesłów czasu teraźniejszego w roli tytułu: dosłownie „ożywiającego” — Tego, który daje życie.",
+						"en": "A present participle serving as a title: literally “the one giving life”."
+					}
 				},
 				{
 					"id": "w123",
@@ -1738,6 +2313,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -1748,7 +2327,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w125"
+					"head": "w125",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w125",
@@ -1760,6 +2343,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojca",
+						"en": "the Father"
 					}
 				},
 				{
@@ -1772,6 +2359,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "i Syna",
+						"en": "and the Son"
+					},
+					"function": {
+						"pl": "Enklityczny spójnik „-que” znaczy „i”: „ex Patre Filióque”, „od Ojca i Syna”.",
+						"en": "The enclitic conjunction “-que” means “and”: “ex Patre Filióque”, “from the Father and the Son”."
 					}
 				},
 				{
@@ -1787,6 +2382,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "pochodzi",
+						"en": "proceeds"
 					}
 				}
 			]
@@ -1806,6 +2405,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Który z Ojcem i Synem wspólnie odbiera uwielbienie i chwałę: który mówił przez Proroków.",
+				"en": "Who with the Father and the Son is adored and glorified: who has spoken through the Prophets."
+			},
 			"words": [
 				{
 					"id": "w128",
@@ -1816,6 +2419,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -1826,7 +2433,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w130"
+					"head": "w130",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w130",
@@ -1838,6 +2449,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojcem",
+						"en": "the Father"
 					}
 				},
 				{
@@ -1846,6 +2461,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1858,6 +2477,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synem",
+						"en": "the Son"
 					}
 				},
 				{
@@ -1866,6 +2489,10 @@
 					"lemma": "simul",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "wspólnie",
+						"en": "together"
 					}
 				},
 				{
@@ -1880,6 +2507,10 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "odbiera uwielbienie",
+						"en": "is adored"
 					}
 				},
 				{
@@ -1888,6 +2519,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1904,13 +2539,9 @@
 						"voice": "pass",
 						"conj": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "odbiera chwałę",
+						"en": "is glorified"
 					}
 				},
 				{
@@ -1922,6 +2553,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -1938,7 +2573,15 @@
 						"gender": "m",
 						"conj": 3
 					},
-					"head": "w137"
+					"head": "w137",
+					"gloss": {
+						"pl": "mówił",
+						"en": "spoke"
+					},
+					"function": {
+						"pl": "Imiesłów deponentny z „est” (w139): locútus est — „przemówił, mówił”. Forma bierna, znaczenie czynne.",
+						"en": "A deponent participle with “est” (w139): locútus est — “spoke”. Passive form, active meaning."
+					}
 				},
 				{
 					"id": "w139",
@@ -1951,6 +2594,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "—",
+						"en": "has"
 					}
 				},
 				{
@@ -1961,7 +2608,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w141"
+					"head": "w141",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w141",
@@ -1974,6 +2625,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Proroków",
+						"en": "the Prophets"
 					}
 				}
 			]
@@ -1993,6 +2648,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Wierzę w jeden, święty, powszechny i apostolski Kościół.",
+				"en": "I believe in one, holy, catholic and apostolic Church."
+			},
 			"words": [
 				{
 					"id": "w142",
@@ -2000,6 +2659,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -2012,7 +2675,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w148"
+					"head": "w148",
+					"gloss": {
+						"pl": "jeden",
+						"en": "one"
+					}
 				},
 				{
 					"id": "w144",
@@ -2024,7 +2691,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w148"
+					"head": "w148",
+					"gloss": {
+						"pl": "święty",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w145",
@@ -2036,7 +2707,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w148"
+					"head": "w148",
+					"gloss": {
+						"pl": "katolicki",
+						"en": "catholic"
+					}
 				},
 				{
 					"id": "w146",
@@ -2044,6 +2719,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -2056,7 +2735,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w148"
+					"head": "w148",
+					"gloss": {
+						"pl": "apostolski",
+						"en": "apostolic"
+					}
 				},
 				{
 					"id": "w148",
@@ -2069,6 +2752,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Kościół",
+						"en": "Church"
 					}
 				}
 			]
@@ -2088,6 +2775,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Wyznaję jeden chrzest na odpuszczenie grzechów.",
+				"en": "I confess one baptism for the forgiveness of sins."
+			},
 			"words": [
 				{
 					"id": "w149",
@@ -2101,6 +2792,10 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "wyznaję",
+						"en": "I confess"
 					}
 				},
 				{
@@ -2113,7 +2808,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w151"
+					"head": "w151",
+					"gloss": {
+						"pl": "jeden",
+						"en": "one"
+					}
 				},
 				{
 					"id": "w151",
@@ -2125,6 +2824,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "chrzest",
+						"en": "baptism"
 					}
 				},
 				{
@@ -2135,7 +2838,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w153"
+					"head": "w153",
+					"gloss": {
+						"pl": "na",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w153",
@@ -2147,6 +2854,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "odpuszczenie",
+						"en": "the remission"
 					}
 				},
 				{
@@ -2160,6 +2871,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "grzechów",
+						"en": "of sins"
 					}
 				}
 			]
@@ -2179,6 +2894,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "I oczekuję wskrzeszenia umarłych.",
+				"en": "And I look forward to the resurrection of the dead."
+			},
 			"words": [
 				{
 					"id": "w155",
@@ -2186,6 +2905,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -2200,6 +2923,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "oczekuję",
+						"en": "I await"
 					}
 				},
 				{
@@ -2212,6 +2939,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zmartwychwstania",
+						"en": "the resurrection"
 					}
 				},
 				{
@@ -2225,7 +2956,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "umarłych",
+						"en": "of the dead"
+					}
 				}
 			]
 		},
@@ -2244,6 +2979,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "I życia wiecznego w przyszłym świecie. Amen.",
+				"en": "And the life of the world to come. Amen."
+			},
 			"words": [
 				{
 					"id": "w159",
@@ -2251,6 +2990,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -2263,6 +3006,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "życia",
+						"en": "the life"
 					}
 				},
 				{
@@ -2279,7 +3026,15 @@
 						"gender": "n",
 						"conj": 4
 					},
-					"head": "w162"
+					"head": "w162",
+					"gloss": {
+						"pl": "przyszłego",
+						"en": "to come"
+					},
+					"function": {
+						"pl": "Imiesłów przyszły w dopełniaczu — zgadza się ze „sǽculi” (w162): dosłownie „wieku, który ma nadejść”.",
+						"en": "The future participle in the genitive, agreeing with “sǽculi” (w162): literally “of the age that is to come”."
+					}
 				},
 				{
 					"id": "w162",
@@ -2292,6 +3047,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieku",
+						"en": "of the age"
 					}
 				},
 				{
@@ -2301,9 +3060,102 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The Nicene-Constantinopolitan Creed as sung in the 1962 Mass. Rubric s01 abridges the 1962 rubric as transcribed by witness do (line 142); the bows at the holy names and the sign of the cross at the end are carried by the narrative layer. Rubric s08 is DO's inline '(Hic genuflectitur)' as its own segment.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence (handmissal-eo under its declared fold-xs orthography, substantive-only profile). Four accidental variants against do — three of them this edition's i/j orthography, one a missing accent — adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.credo/",
+			"apparatus": "witnesses/ordinarium.credo/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s08": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w050": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w074": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w099": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w136": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

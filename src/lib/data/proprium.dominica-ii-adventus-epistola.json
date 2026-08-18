@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 143
 	},
-	"status": "working-edition",
-	"notes": "The epistle of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-ii-adventus-epistola/",
-		"apparatus": "witnesses/proprium.dominica-ii-adventus-epistola/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Lekcja II Niedzieli Adwentu, z Listu do Rzymian. Paweł czyta Pisma jako napisane dla nas — po to, by z cierpliwości i pociechy rodziła się nadzieja — i kończy szeregiem cytatów, w których narody chwalą Boga razem z Izraelem.",
+		"en": "The epistle of the Second Sunday of Advent, from Romans. Paul reads the Scriptures as written for us — so that patience and comfort should breed hope — and ends with a chain of quotations in which the nations praise God together with Israel."
 	},
 	"segments": [
 		{
@@ -38,6 +19,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Bracia: Cokolwiek napisano, ku naszemu pouczeniu napisano: abyśmy przez cierpliwość i pociechę Pism nadzieję mieli.",
+				"en": "Brethren: Whatsoever things were written, were written for our learning: that through patience and the comfort of the Scriptures we might have hope."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -50,6 +49,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "bracia",
+						"en": "brethren"
 					}
 				},
 				{
@@ -61,6 +64,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "jakiekolwiek",
+						"en": "whatsoever things"
 					}
 				},
 				{
@@ -77,7 +84,11 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "napisane",
+						"en": "written"
+					}
 				},
 				{
 					"id": "w004",
@@ -91,6 +102,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "zostało",
+						"en": "were"
 					}
 				},
 				{
@@ -101,7 +116,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "ku",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w006",
@@ -113,7 +132,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "naszemu",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w007",
@@ -125,6 +148,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "pouczeniu",
+						"en": "learning"
 					}
 				},
 				{
@@ -141,7 +168,11 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "napisane",
+						"en": "written"
+					}
 				},
 				{
 					"id": "w009",
@@ -155,6 +186,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "zostało",
+						"en": "were"
 					}
 				},
 				{
@@ -163,6 +198,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyśmy",
+						"en": "that"
 					}
 				},
 				{
@@ -173,7 +212,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w012",
@@ -186,6 +229,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "cierpliwość",
+						"en": "patience"
 					}
 				},
 				{
@@ -194,6 +241,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -206,6 +257,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "pociechę",
+						"en": "the comfort"
 					}
 				},
 				{
@@ -219,6 +274,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Pism",
+						"en": "of the Scriptures"
 					}
 				},
 				{
@@ -231,6 +290,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "nadzieję",
+						"en": "hope"
 					}
 				},
 				{
@@ -246,6 +309,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "mieli",
+						"en": "we might have"
 					}
 				}
 			]
@@ -255,6 +322,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "A Bóg cierpliwości i pokrzepienia niech wam da to samo rozumieć między sobą według Jezusa Chrystusa: abyście jednomyślni jednymi usty wysławiali Boga i Ojca Pana naszego Jezusa Chrystusa.",
+				"en": "Now the God of patience and of comfort grant you to be of one mind toward one another according to Jesus Christ: that with one mind and with one mouth you may glorify God and the Father of our Lord Jesus Christ."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w018",
@@ -266,6 +351,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bóg",
+						"en": "God"
 					}
 				},
 				{
@@ -274,6 +363,10 @@
 					"lemma": "autem",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "zaś",
+						"en": "now"
 					}
 				},
 				{
@@ -287,6 +380,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "cierpliwości",
+						"en": "of patience"
 					}
 				},
 				{
@@ -295,6 +392,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -308,6 +409,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "pokrzepienia",
+						"en": "of comfort"
 					}
 				},
 				{
@@ -322,6 +427,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "niech da",
+						"en": "may grant"
 					}
 				},
 				{
@@ -332,6 +441,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "wam",
+						"en": "you"
 					}
 				},
 				{
@@ -343,6 +456,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "to samo",
+						"en": "the same thing"
 					}
 				},
 				{
@@ -355,6 +472,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "rozumieć",
+						"en": "to be of one mind"
 					}
 				},
 				{
@@ -365,7 +486,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w028"
+					"head": "w028",
+					"gloss": {
+						"pl": "między",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w028",
@@ -376,6 +501,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "sobą",
+						"en": "one another"
 					}
 				},
 				{
@@ -386,7 +515,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "według",
+						"en": "according to"
+					}
 				},
 				{
 					"id": "w030",
@@ -397,6 +530,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -410,6 +547,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -418,6 +559,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyście",
+						"en": "that"
 					}
 				},
 				{
@@ -431,7 +576,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "jednomyślni",
+						"en": "of one mind"
+					}
 				},
 				{
 					"id": "w034",
@@ -443,7 +592,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w035"
+					"head": "w035",
+					"gloss": {
+						"pl": "jednym",
+						"en": "with one"
+					}
 				},
 				{
 					"id": "w035",
@@ -455,6 +608,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "usty",
+						"en": "mouth"
 					}
 				},
 				{
@@ -469,6 +626,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wysławiali",
+						"en": "you may glorify"
 					}
 				},
 				{
@@ -481,6 +642,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				},
 				{
@@ -489,6 +654,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -501,6 +670,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojca",
+						"en": "the Father"
 					}
 				},
 				{
@@ -513,6 +686,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "of Lord"
 					}
 				},
 				{
@@ -525,7 +702,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w040"
+					"head": "w040",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w042",
@@ -536,6 +717,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -549,6 +734,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				}
 			]
@@ -558,6 +747,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Dlatego przyjmujcie jeden drugiego, jak i Chrystus przyjął was ku czci Boga.",
+				"en": "Wherefore receive one another, as Christ also hath received you unto the honor of God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w044",
@@ -567,7 +774,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w045"
+					"head": "w045",
+					"gloss": {
+						"pl": "dlatego",
+						"en": "because of"
+					}
 				},
 				{
 					"id": "w045",
@@ -578,6 +789,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "co",
+						"en": "which"
 					}
 				},
 				{
@@ -592,6 +807,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "przyjmujcie",
+						"en": "receive"
 					}
 				},
 				{
@@ -601,6 +820,10 @@
 					"lemma": "invicem",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "jeden drugiego",
+						"en": "one another"
 					}
 				},
 				{
@@ -609,6 +832,10 @@
 					"lemma": "sicut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "jak",
+						"en": "as"
 					}
 				},
 				{
@@ -617,6 +844,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "also"
 					}
 				},
 				{
@@ -629,6 +860,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystus",
+						"en": "Christ"
 					}
 				},
 				{
@@ -643,6 +878,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "przyjął",
+						"en": "received"
 					}
 				},
 				{
@@ -653,6 +892,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "was",
+						"en": "you"
 					}
 				},
 				{
@@ -663,7 +906,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w054"
+					"head": "w054",
+					"gloss": {
+						"pl": "ku",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w054",
@@ -675,6 +922,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "czci",
+						"en": "the honor"
 					}
 				},
 				{
@@ -688,6 +939,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				}
 			]
@@ -697,6 +952,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Mówię bowiem, że Chrystus Jezus był sługą obrzezania dla prawdy Bożej, aby utwierdzić obietnice ojców: narody zaś za miłosierdzie mają czcić Boga, jak napisano: Dlatego będę Cię wysławiał wśród narodów, Panie, i imieniu Twemu będę śpiewał.",
+				"en": "For I say that Christ Jesus was minister of the circumcision for the truth of God, to confirm the promises made unto the fathers: but that the Gentiles are to glorify God for His mercy, as it is written: Therefore will I confess to Thee among the Gentiles, O Lord, and will sing to Thy name."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w056",
@@ -710,6 +983,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "mówię",
+						"en": "I say"
 					}
 				},
 				{
@@ -718,6 +995,10 @@
 					"lemma": "enim",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bowiem",
+						"en": "for"
 					}
 				},
 				{
@@ -730,6 +1011,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystus",
+						"en": "Christ"
 					}
 				},
 				{
@@ -741,6 +1026,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezus",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -753,6 +1042,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "sługą",
+						"en": "minister"
 					}
 				},
 				{
@@ -764,6 +1057,10 @@
 						"tense": "perf",
 						"mood": "inf",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "był",
+						"en": "to have been"
 					}
 				},
 				{
@@ -776,6 +1073,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "obrzezania",
+						"en": "of the circumcision"
 					}
 				},
 				{
@@ -786,7 +1087,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w064"
+					"head": "w064",
+					"gloss": {
+						"pl": "dla",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w064",
@@ -798,6 +1103,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "prawdy",
+						"en": "the truth"
 					}
 				},
 				{
@@ -811,6 +1120,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -821,7 +1134,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w068"
+					"head": "w068",
+					"gloss": {
+						"pl": "aby",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w067",
@@ -837,7 +1154,11 @@
 						"voice": "pass",
 						"conj": 1
 					},
-					"head": "w068"
+					"head": "w068",
+					"gloss": {
+						"pl": "utwierdzić",
+						"en": "confirm"
+					}
 				},
 				{
 					"id": "w068",
@@ -849,6 +1170,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "obietnice",
+						"en": "the promises"
 					}
 				},
 				{
@@ -862,6 +1187,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ojców",
+						"en": "of the fathers"
 					}
 				},
 				{
@@ -874,6 +1203,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "narody",
+						"en": "the nations"
 					}
 				},
 				{
@@ -882,6 +1215,10 @@
 					"lemma": "autem",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "zaś",
+						"en": "now"
 					}
 				},
 				{
@@ -892,7 +1229,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w073"
+					"head": "w073",
+					"gloss": {
+						"pl": "z powodu",
+						"en": "concerning"
+					}
 				},
 				{
 					"id": "w073",
@@ -904,6 +1245,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "miłosierdzia",
+						"en": "mercy"
 					}
 				},
 				{
@@ -916,6 +1261,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "czcić",
+						"en": "to honor"
 					}
 				},
 				{
@@ -929,6 +1278,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				},
 				{
@@ -937,6 +1290,10 @@
 					"lemma": "sicut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "jak",
+						"en": "as"
 					}
 				},
 				{
@@ -953,7 +1310,11 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"head": "w078"
+					"head": "w078",
+					"gloss": {
+						"pl": "napisane",
+						"en": "written"
+					}
 				},
 				{
 					"id": "w078",
@@ -967,6 +1328,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "it is"
 					}
 				},
 				{
@@ -975,6 +1340,10 @@
 					"lemma": "propterea",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "dlatego",
+						"en": "therefore"
 					}
 				},
 				{
@@ -989,6 +1358,10 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "będę Cię wysławiał",
+						"en": "I will confess"
 					}
 				},
 				{
@@ -999,6 +1372,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "to Thee"
 					}
 				},
 				{
@@ -1009,7 +1386,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w083"
+					"head": "w083",
+					"gloss": {
+						"pl": "wśród",
+						"en": "among"
+					}
 				},
 				{
 					"id": "w083",
@@ -1022,6 +1403,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "narodów",
+						"en": "the nations"
 					}
 				},
 				{
@@ -1035,6 +1420,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -1043,6 +1432,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1055,6 +1448,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "imieniu",
+						"en": "to name"
 					}
 				},
 				{
@@ -1067,7 +1464,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w086"
+					"head": "w086",
+					"gloss": {
+						"pl": "Twemu",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w088",
@@ -1082,6 +1483,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "będę śpiewał",
+						"en": "I will sing"
 					}
 				}
 			]
@@ -1091,6 +1496,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "I znowu mówi: Weselcie się, narody, z ludem Jego.",
+				"en": "And again he saith: Rejoice, ye Gentiles, with His people."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w089",
@@ -1098,6 +1521,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1106,6 +1533,10 @@
 					"lemma": "iterum",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "znowu",
+						"en": "again"
 					}
 				},
 				{
@@ -1121,6 +1552,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "mówi",
+						"en": "he saith"
 					}
 				},
 				{
@@ -1136,6 +1571,10 @@
 						"mood": "imp",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "weselcie się",
+						"en": "rejoice"
 					}
 				},
 				{
@@ -1149,6 +1588,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "narody",
+						"en": "nations"
 					}
 				},
 				{
@@ -1159,7 +1602,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w095"
+					"head": "w095",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w095",
@@ -1171,6 +1618,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ludem",
+						"en": "the people"
 					}
 				},
 				{
@@ -1183,6 +1634,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jego",
+						"en": "His"
 					}
 				}
 			]
@@ -1192,6 +1647,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "I znowu: Chwalcie Pana, wszystkie narody, i wielbijcie Go, wszystkie ludy.",
+				"en": "And again: Praise the Lord, all ye Gentiles, and magnify Him, all ye peoples."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w097",
@@ -1199,6 +1672,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1208,6 +1685,10 @@
 					"lemma": "iterum",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "znowu",
+						"en": "again"
 					}
 				},
 				{
@@ -1222,6 +1703,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "chwalcie",
+						"en": "praise"
 					}
 				},
 				{
@@ -1234,7 +1719,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w101"
+					"head": "w101",
+					"gloss": {
+						"pl": "wszystkie",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w101",
@@ -1246,6 +1735,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "narody",
+						"en": "nations"
 					}
 				},
 				{
@@ -1259,6 +1752,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -1267,6 +1764,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1281,6 +1782,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wielbijcie",
+						"en": "magnify"
 					}
 				},
 				{
@@ -1292,6 +1797,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Go",
+						"en": "Him"
 					}
 				},
 				{
@@ -1304,7 +1813,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w107"
+					"head": "w107",
+					"gloss": {
+						"pl": "wszystkie",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w107",
@@ -1317,6 +1830,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "ludy",
+						"en": "peoples"
 					}
 				}
 			]
@@ -1326,6 +1843,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "I na powrót Izajasz mówi: Będzie korzeń Jessego, i który powstanie, aby rządzić narodami, w Nim narody nadzieję położą.",
+				"en": "And again Isaias saith: There shall be a root of Jesse, and He that shall rise up to rule the Gentiles, in Him the Gentiles shall hope."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w108",
@@ -1333,6 +1868,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1341,6 +1880,10 @@
 					"lemma": "rursus",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "na powrót",
+						"en": "again"
 					}
 				},
 				{
@@ -1353,6 +1896,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Izajasz",
+						"en": "Isaias"
 					}
 				},
 				{
@@ -1367,6 +1914,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "mówi",
+						"en": "saith"
 					}
 				},
 				{
@@ -1380,6 +1931,10 @@
 						"tense": "fut",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "będzie",
+						"en": "there shall be"
 					}
 				},
 				{
@@ -1392,6 +1947,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "korzeń",
+						"en": "a root"
 					}
 				},
 				{
@@ -1404,6 +1963,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jessego",
+						"en": "of Jesse"
 					}
 				},
 				{
@@ -1412,6 +1975,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1423,6 +1990,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -1437,6 +2008,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "powstanie",
+						"en": "shall rise up"
 					}
 				},
 				{
@@ -1449,6 +2024,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "rządzić",
+						"en": "to rule"
 					}
 				},
 				{
@@ -1462,6 +2041,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "narodami",
+						"en": "the nations"
 					}
 				},
 				{
@@ -1472,7 +2055,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w121"
+					"head": "w121",
+					"gloss": {
+						"pl": "w",
+						"en": "on"
+					}
 				},
 				{
 					"id": "w121",
@@ -1483,6 +2070,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Niego",
+						"en": "Him"
 					}
 				},
 				{
@@ -1495,6 +2086,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "narody",
+						"en": "the nations"
 					}
 				},
 				{
@@ -1510,6 +2105,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "nadzieję położą",
+						"en": "shall hope"
 					}
 				}
 			]
@@ -1519,6 +2118,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "A Bóg nadziei niech was napełni wszelką radością i pokojem w wierzeniu: abyście obfitowali w nadziei i mocy Ducha Świętego.",
+				"en": "Now the God of hope fill you with all joy and peace in believing: that you may abound in hope and in the power of the Holy Ghost."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Romans 15:4-13"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w124",
@@ -1530,6 +2147,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bóg",
+						"en": "God"
 					}
 				},
 				{
@@ -1538,6 +2159,10 @@
 					"lemma": "autem",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "zaś",
+						"en": "now"
 					}
 				},
 				{
@@ -1550,6 +2175,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "nadziei",
+						"en": "of hope"
 					}
 				},
 				{
@@ -1564,6 +2193,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "niech napełni",
+						"en": "may fill"
 					}
 				},
 				{
@@ -1574,6 +2207,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "was",
+						"en": "you"
 					}
 				},
 				{
@@ -1586,7 +2223,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w130"
+					"head": "w130",
+					"gloss": {
+						"pl": "wszelką",
+						"en": "with all"
+					}
 				},
 				{
 					"id": "w130",
@@ -1599,6 +2240,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "radością",
+						"en": "joy"
 					}
 				},
 				{
@@ -1607,6 +2252,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1619,6 +2268,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "pokojem",
+						"en": "peace"
 					}
 				},
 				{
@@ -1629,7 +2282,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w134"
+					"head": "w134",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w134",
@@ -1645,6 +2302,10 @@
 						"mood": "ger",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wierzeniu",
+						"en": "believing"
 					}
 				},
 				{
@@ -1653,6 +2314,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyście",
+						"en": "that"
 					}
 				},
 				{
@@ -1667,6 +2332,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "obfitowali",
+						"en": "you may abound"
 					}
 				},
 				{
@@ -1677,7 +2346,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w138"
+					"head": "w138",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w138",
@@ -1690,6 +2363,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "nadziei",
+						"en": "hope"
 					}
 				},
 				{
@@ -1698,6 +2375,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1710,6 +2391,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "mocy",
+						"en": "the power"
 					}
 				},
 				{
@@ -1722,6 +2407,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "Ducha",
+						"en": "of the Spirit"
 					}
 				},
 				{
@@ -1735,9 +2424,38 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w141"
+					"head": "w141",
+					"gloss": {
+						"pl": "Świętego",
+						"en": "Holy"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The epistle of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-ii-adventus-epistola/",
+			"apparatus": "witnesses/proprium.dominica-ii-adventus-epistola/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

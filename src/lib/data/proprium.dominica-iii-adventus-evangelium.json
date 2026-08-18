@@ -9,28 +9,31 @@
 	"ids": {
 		"next": 154
 	},
-	"status": "working-edition",
-	"notes": "The gospel of the Third Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-iii-adventus-evangelium/",
-		"apparatus": "witnesses/proprium.dominica-iii-adventus-evangelium/apparatus.json"
+	"about": {
+		"pl": "Ewangelia III Niedzieli Adwentu. Poselstwo z Jerozolimy pyta trzy razy, a odpowiedzi Jana są coraz krótsze: nie jestem ja Chrystusem, nie jestem, nie. Dopiero potem mówi, kim jest, i mówi to słowami Izajasza. Betania z ostatniego zdania leży za Jordanem i nie jest tą pod Jerozolimą, w której mieszkały Marta i Maria.",
+		"en": "The gospel of the Third Sunday of Advent. The delegation from Jerusalem asks three times, and John's answers grow shorter each time: I am not the Christ, I am not, no. Only after that does he say who he is, and he says it in Isaiah's words. The Bethania of the last sentence lies beyond the Jordan and is not the one near Jerusalem where Martha and Mary lived."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Biblia Sacra Vulgata",
+				"locator": "John 1:28"
+			},
+			{
+				"title": "Biblia Sacra Vulgata",
+				"locator": "John 11:1, 11:18"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+		"en": [
+			{
+				"title": "Biblia Sacra Vulgata",
+				"locator": "John 1:28"
+			},
+			{
+				"title": "Biblia Sacra Vulgata",
+				"locator": "John 11:1, 11:18"
+			}
+		]
 	},
 	"segments": [
 		{
@@ -38,6 +41,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "W owym czasie: Posłali Żydzi z Jerozolimy kapłanów i lewitów do Jana, aby go zapytali:",
+				"en": "At that time: The Jews sent priests and Levites from Jerusalem to John, to ask him:"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:19"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:19"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -47,7 +68,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w002",
@@ -58,6 +83,10 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "owym",
+						"en": "that"
 					}
 				},
 				{
@@ -71,6 +100,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "czasie",
+						"en": "time"
 					}
 				},
 				{
@@ -85,6 +118,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "posłali",
+						"en": "sent"
 					}
 				},
 				{
@@ -97,6 +134,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Żydzi",
+						"en": "the Jews"
 					}
 				},
 				{
@@ -107,7 +148,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "z",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w007",
@@ -119,6 +164,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Jerozolimy",
+						"en": "Jerusalem"
 					}
 				},
 				{
@@ -131,6 +180,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "kapłanów",
+						"en": "priests"
 					}
 				},
 				{
@@ -139,6 +192,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -151,6 +208,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "lewitów",
+						"en": "Levites"
 					}
 				},
 				{
@@ -161,7 +222,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w012",
@@ -174,6 +239,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Jana",
+						"en": "John"
 					}
 				},
 				{
@@ -182,6 +251,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
 					}
 				},
 				{
@@ -196,6 +269,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "zapytali",
+						"en": "they might ask"
 					}
 				},
 				{
@@ -208,6 +285,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "go",
+						"en": "him"
 					}
 				}
 			]
@@ -217,6 +298,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Kim ty jesteś?",
+				"en": "Who are you?"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:19"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:19"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w016",
@@ -226,6 +325,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "ty",
+						"en": "you"
 					}
 				},
 				{
@@ -237,6 +340,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "kim",
+						"en": "who"
 					}
 				},
 				{
@@ -251,6 +358,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jesteś",
+						"en": "are"
 					}
 				}
 			]
@@ -260,6 +371,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "I wyznał, a nie zaprzeczył, i wyznał: Nie jestem ja Chrystusem.",
+				"en": "And he confessed and did not deny, and he confessed: I am not the Christ."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:20"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:20"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w019",
@@ -267,6 +396,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -283,7 +416,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "wyznał",
+						"en": "confessed"
+					}
 				},
 				{
 					"id": "w021",
@@ -297,6 +434,14 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "—",
+						"en": "(has)"
+					},
+					"function": {
+						"pl": "Z „conféssus” (w020) tworzy perfectum czasownika deponentnego. Polszczyzna oddaje je jednym słowem i dla łacińskiego „est” nie ma osobnej komórki.",
+						"en": "With “conféssus” (w020) this forms the perfect of a deponent verb. English builds the same tense with an auxiliary, which this cell supplies."
 					}
 				},
 				{
@@ -305,6 +450,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -313,6 +462,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -328,6 +481,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "zaprzeczył",
+						"en": "denied"
 					}
 				},
 				{
@@ -336,6 +493,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -352,7 +513,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"head": "w027"
+					"head": "w027",
+					"gloss": {
+						"pl": "wyznał",
+						"en": "confessed"
+					}
 				},
 				{
 					"id": "w027",
@@ -366,6 +531,14 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "—",
+						"en": "(has)"
+					},
+					"function": {
+						"pl": "To samo złożone perfectum co przy pierwszym „conféssus”, powtórzone.",
+						"en": "The same compound perfect as at the first “conféssus”, repeated."
 					}
 				},
 				{
@@ -374,6 +547,14 @@
 					"lemma": "quia",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "że",
+						"en": "that"
+					},
+					"function": {
+						"pl": "Wprowadza mowę niezależną, a nie zdanie podrzędne. Grecki oryginał stawia tu „hóti” przed cytatem, a łacina oddaje je słowo w słowo. Przekład je pomija, bo polszczyzna otwiera cytat dwukropkiem.",
+						"en": "It opens direct speech rather than a subordinate clause. The Greek puts “hoti” before the quotation and the Latin renders it word for word. The translation drops it, because English opens a quotation with the colon alone."
 					}
 				},
 				{
@@ -382,6 +563,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -395,6 +580,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jestem",
+						"en": "am"
 					}
 				},
 				{
@@ -405,6 +594,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "ja",
+						"en": "I"
 					}
 				},
 				{
@@ -418,6 +611,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusem",
+						"en": "the Christ"
 					}
 				}
 			]
@@ -427,6 +624,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "I zapytali go: Co więc? Czy ty jesteś Eliaszem?",
+				"en": "And they asked him: What then? Are you Elijah?"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:21"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:21"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w033",
@@ -434,6 +649,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -448,6 +667,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "zapytali",
+						"en": "they asked"
 					}
 				},
 				{
@@ -460,6 +683,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "go",
+						"en": "him"
 					}
 				},
 				{
@@ -471,6 +698,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "co",
+						"en": "what"
 					}
 				},
 				{
@@ -480,6 +711,10 @@
 					"lemma": "ergo",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "więc",
+						"en": "then"
 					}
 				},
 				{
@@ -492,6 +727,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Eliaszem",
+						"en": "Elijah"
 					}
 				},
 				{
@@ -505,6 +744,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jesteś",
+						"en": "are"
 					}
 				},
 				{
@@ -516,6 +759,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "ty",
+						"en": "you"
 					}
 				}
 			]
@@ -525,6 +772,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "I rzekł: Nie jestem. Czy ty jesteś prorokiem? I odpowiedział: Nie.",
+				"en": "And he said: I am not. Are you the prophet? And he answered: No."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:21"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:21"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w041",
@@ -532,6 +797,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -547,6 +816,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "rzekł",
+						"en": "he said"
 					}
 				},
 				{
@@ -555,6 +828,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -569,6 +846,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jestem",
+						"en": "I am"
 					}
 				},
 				{
@@ -581,6 +862,28 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "prorokiem",
+						"en": "the prophet"
+					},
+					"function": {
+						"pl": "Łacina nie ma rodzajnika, więc sama nie rozstrzyga, czy pytają o jakiegoś proroka, czy o Proroka zapowiedzianego Mojżeszowi. Grecki oryginał ma rodzajnik określony i to jego czyta ta edycja. Polszczyzna nie ma rodzajników i nie potrafi tego rozróżnienia zapisać w samym słowie.",
+						"en": "Latin has no article, so by itself it cannot say whether they ask about a prophet or about the Prophet promised to Moses. The Greek behind it has the definite article, and this edition reads it so — the gloss says the prophet."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Deuteronomy 18:15"
+							}
+						],
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Deuteronomy 18:15"
+							}
+						]
 					}
 				},
 				{
@@ -594,6 +897,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jesteś",
+						"en": "are"
 					}
 				},
 				{
@@ -605,6 +912,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "ty",
+						"en": "you"
 					}
 				},
 				{
@@ -613,6 +924,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -628,6 +943,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "odpowiedział",
+						"en": "he answered"
 					}
 				},
 				{
@@ -637,6 +956,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "no"
 					}
 				}
 			]
@@ -646,6 +969,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Rzekli mu więc: Kim jesteś, abyśmy dali odpowiedź tym, którzy nas posłali? Co mówisz sam o sobie?",
+				"en": "They said therefore to him: Who are you, that we may give an answer to those who sent us? What do you say of yourself?"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:22"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:22"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w051",
@@ -659,6 +1000,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "rzekli",
+						"en": "they said"
 					}
 				},
 				{
@@ -667,6 +1012,10 @@
 					"lemma": "ergo",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "więc",
+						"en": "therefore"
 					}
 				},
 				{
@@ -679,6 +1028,10 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "mu",
+						"en": "to him"
 					}
 				},
 				{
@@ -690,6 +1043,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "kim",
+						"en": "who"
 					}
 				},
 				{
@@ -704,6 +1061,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jesteś",
+						"en": "are"
 					}
 				},
 				{
@@ -712,6 +1073,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyśmy",
+						"en": "that"
 					}
 				},
 				{
@@ -724,6 +1089,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "odpowiedź",
+						"en": "an answer"
 					}
 				},
 				{
@@ -738,6 +1107,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "dali",
+						"en": "we may give"
 					}
 				},
 				{
@@ -750,6 +1123,10 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "tym",
+						"en": "to those"
 					}
 				},
 				{
@@ -761,6 +1138,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którzy",
+						"en": "who"
 					}
 				},
 				{
@@ -775,6 +1156,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "posłali",
+						"en": "sent"
 					}
 				},
 				{
@@ -786,6 +1171,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -797,6 +1186,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "co",
+						"en": "what"
 					}
 				},
 				{
@@ -811,6 +1204,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "mówisz",
+						"en": "do you say"
 					}
 				},
 				{
@@ -821,7 +1218,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w066"
+					"head": "w066",
+					"gloss": {
+						"pl": "o",
+						"en": "of"
+					}
 				},
 				{
 					"id": "w066",
@@ -831,6 +1232,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "tobie",
+						"en": "you"
 					}
 				},
 				{
@@ -843,6 +1248,10 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "samym",
+						"en": "yourself"
 					}
 				}
 			]
@@ -852,6 +1261,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Rzekł: Jam głos wołającego na pustyni: Prostujcie drogę Pańską, jak powiedział prorok Izajasz.",
+				"en": "He said: I am the voice of one crying in the wilderness: Make straight the way of the Lord, as the prophet Isaiah said."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:23"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:23"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w068",
@@ -865,6 +1292,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "rzekł",
+						"en": "he said"
 					}
 				},
 				{
@@ -875,6 +1306,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "ja",
+						"en": "I"
 					}
 				},
 				{
@@ -887,6 +1322,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "głos",
+						"en": "the voice"
 					}
 				},
 				{
@@ -903,7 +1342,15 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wołającego",
+						"en": "of one crying"
+					},
+					"function": {
+						"pl": "Imiesłów w dopełniaczu użyty rzeczownikowo: „tego, który woła”.",
+						"en": "A genitive participle used as a noun: “of one who is crying”."
+					}
 				},
 				{
 					"id": "w072",
@@ -913,7 +1360,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w073"
+					"head": "w073",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w073",
@@ -926,6 +1377,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "pustyni",
+						"en": "the wilderness"
 					}
 				},
 				{
@@ -940,6 +1395,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "prostujcie",
+						"en": "make straight"
 					}
 				},
 				{
@@ -952,6 +1411,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "drogę",
+						"en": "the way"
 					}
 				},
 				{
@@ -965,6 +1428,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "of the Lord"
 					}
 				},
 				{
@@ -973,6 +1440,10 @@
 					"lemma": "sicut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "jak",
+						"en": "as"
 					}
 				},
 				{
@@ -987,6 +1458,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "powiedział",
+						"en": "said"
 					}
 				},
 				{
@@ -999,6 +1474,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Izajasz",
+						"en": "Isaiah"
 					}
 				},
 				{
@@ -1012,6 +1491,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "prorok",
+						"en": "the prophet"
 					}
 				}
 			]
@@ -1021,6 +1504,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "A ci, którzy byli posłani, byli z faryzeuszów.",
+				"en": "And those who had been sent were of the Pharisees."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:24"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:24"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w081",
@@ -1028,6 +1529,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -1039,6 +1544,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którzy",
+						"en": "who"
 					}
 				},
 				{
@@ -1055,7 +1564,11 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"head": "w084"
+					"head": "w084",
+					"gloss": {
+						"pl": "posłani",
+						"en": "sent"
+					}
 				},
 				{
 					"id": "w084",
@@ -1069,6 +1582,14 @@
 						"tense": "plup",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "byli",
+						"en": "had been"
+					},
+					"function": {
+						"pl": "Plusquamperfectum strony biernej zbudowane z „fúerant”, nie z „erant”.",
+						"en": "A pluperfect passive built on “fúerant” rather than on “erant”."
 					}
 				},
 				{
@@ -1082,6 +1603,10 @@
 						"tense": "impf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "byli",
+						"en": "were"
 					}
 				},
 				{
@@ -1092,7 +1617,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w087"
+					"head": "w087",
+					"gloss": {
+						"pl": "z",
+						"en": "of"
+					}
 				},
 				{
 					"id": "w087",
@@ -1105,6 +1634,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "faryzeuszów",
+						"en": "the Pharisees"
 					}
 				}
 			]
@@ -1114,6 +1647,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "I zapytali go, i rzekli mu: Czemu więc chrzcisz, jeśli ty nie jesteś Chrystusem ani Eliaszem, ani prorokiem?",
+				"en": "And they asked him and said to him: Why then do you baptize, if you are not the Christ, nor Elijah, nor the prophet?"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:25"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:25"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w088",
@@ -1121,6 +1672,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1135,6 +1690,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "zapytali",
+						"en": "they asked"
 					}
 				},
 				{
@@ -1147,6 +1706,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "go",
+						"en": "him"
 					}
 				},
 				{
@@ -1155,6 +1718,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1169,6 +1736,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "rzekli",
+						"en": "they said"
 					}
 				},
 				{
@@ -1181,6 +1752,10 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "mu",
+						"en": "to him"
 					}
 				},
 				{
@@ -1192,6 +1767,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "co",
+						"en": "what"
 					}
 				},
 				{
@@ -1200,6 +1779,10 @@
 					"lemma": "ergo",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "więc",
+						"en": "then"
 					}
 				},
 				{
@@ -1215,6 +1798,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "chrzcisz",
+						"en": "do you baptize"
 					}
 				},
 				{
@@ -1223,6 +1810,10 @@
 					"lemma": "si",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "jeśli",
+						"en": "if"
 					}
 				},
 				{
@@ -1233,6 +1824,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "ty",
+						"en": "you"
 					}
 				},
 				{
@@ -1241,6 +1836,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -1254,6 +1853,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jesteś",
+						"en": "are"
 					}
 				},
 				{
@@ -1267,6 +1870,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusem",
+						"en": "the Christ"
 					}
 				},
 				{
@@ -1275,6 +1882,10 @@
 					"lemma": "neque",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "ani",
+						"en": "nor"
 					}
 				},
 				{
@@ -1288,6 +1899,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Eliaszem",
+						"en": "Elijah"
 					}
 				},
 				{
@@ -1296,6 +1911,10 @@
 					"lemma": "neque",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "ani",
+						"en": "nor"
 					}
 				},
 				{
@@ -1309,6 +1928,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "prorokiem",
+						"en": "the prophet"
 					}
 				}
 			]
@@ -1318,6 +1941,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Odpowiedział im Jan, mówiąc: Ja chrzczę wodą, a pośród was stanął Ten, którego wy nie znacie.",
+				"en": "John answered them, saying: I baptize with water, but there has stood in your midst one whom you do not know."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:26"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:26"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w106",
@@ -1331,6 +1972,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "odpowiedział",
+						"en": "answered"
 					}
 				},
 				{
@@ -1342,6 +1987,10 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "im",
+						"en": "them"
 					}
 				},
 				{
@@ -1355,6 +2004,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Jan",
+						"en": "John"
 					}
 				},
 				{
@@ -1372,7 +2025,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"head": "w106"
+					"head": "w106",
+					"gloss": {
+						"pl": "mówiąc",
+						"en": "saying"
+					}
 				},
 				{
 					"id": "w110",
@@ -1382,6 +2039,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "ja",
+						"en": "I"
 					}
 				},
 				{
@@ -1396,6 +2057,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "chrzczę",
+						"en": "baptize"
 					}
 				},
 				{
@@ -1406,7 +2071,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w113"
+					"head": "w113",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w113",
@@ -1419,6 +2088,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "wodzie",
+						"en": "water"
 					}
 				},
 				{
@@ -1431,7 +2104,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w117"
+					"head": "w117",
+					"gloss": {
+						"pl": "pośrodku",
+						"en": "in the midst"
+					},
+					"function": {
+						"pl": "Przymiotnik orzecznikowy przy „stetit”, rządzący dopełniaczem cząstkowym „vestrum” (w116).",
+						"en": "A predicate adjective with “stetit”, governing the partitive genitive “vestrum” (w116)."
+					}
 				},
 				{
 					"id": "w115",
@@ -1439,6 +2120,10 @@
 					"lemma": "autem",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "zaś",
+						"en": "but"
 					}
 				},
 				{
@@ -1449,6 +2134,14 @@
 						"pos": "pron",
 						"case": "gen",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "was",
+						"en": "of you"
+					},
+					"function": {
+						"pl": "Dopełniacz cząstkowy od „vos”, a nie zaimek dzierżawczy „vester”.",
+						"en": "The partitive genitive of “vos”, not the possessive “vester”."
 					}
 				},
 				{
@@ -1464,6 +2157,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "stanął",
+						"en": "has stood"
 					}
 				},
 				{
@@ -1475,6 +2172,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którego",
+						"en": "whom"
 					}
 				},
 				{
@@ -1485,6 +2186,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "wy",
+						"en": "you"
 					}
 				},
 				{
@@ -1500,6 +2205,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "nie znacie",
+						"en": "do not know"
 					}
 				}
 			]
@@ -1509,6 +2218,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "On jest tym, który po mnie przyjdzie, który przede mną się stał, a ja nie jestem godzien rozwiązać rzemyka u obuwia jego.",
+				"en": "He it is who is to come after me, who was made before me, and I am not worthy to loosen the strap of his shoe."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:27"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:27"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w121",
@@ -1519,6 +2246,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "On",
+						"en": "He"
 					}
 				},
 				{
@@ -1533,6 +2264,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
 					}
 				},
 				{
@@ -1544,6 +2279,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -1554,7 +2293,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w125"
+					"head": "w125",
+					"gloss": {
+						"pl": "po",
+						"en": "after"
+					}
 				},
 				{
 					"id": "w125",
@@ -1564,6 +2307,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				},
 				{
@@ -1580,7 +2327,11 @@
 						"voice": "act",
 						"conj": 4
 					},
-					"head": "w127"
+					"head": "w127",
+					"gloss": {
+						"pl": "mający przyjść",
+						"en": "to come"
+					}
 				},
 				{
 					"id": "w127",
@@ -1594,6 +2345,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
 					}
 				},
 				{
@@ -1605,6 +2360,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -1615,7 +2374,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w130"
+					"head": "w130",
+					"gloss": {
+						"pl": "przede",
+						"en": "before"
+					}
 				},
 				{
 					"id": "w130",
@@ -1625,6 +2388,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mną",
+						"en": "me"
 					}
 				},
 				{
@@ -1641,7 +2408,11 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"head": "w132"
+					"head": "w132",
+					"gloss": {
+						"pl": "stał",
+						"en": "made"
+					}
 				},
 				{
 					"id": "w132",
@@ -1655,6 +2426,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "się",
+						"en": "was"
 					}
 				},
 				{
@@ -1666,6 +2441,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którego",
+						"en": "whose"
 					}
 				},
 				{
@@ -1676,6 +2455,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "ja",
+						"en": "I"
 					}
 				},
 				{
@@ -1684,6 +2467,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -1697,6 +2484,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jestem",
+						"en": "am"
 					}
 				},
 				{
@@ -1709,7 +2500,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w134"
+					"head": "w134",
+					"gloss": {
+						"pl": "godzien",
+						"en": "worthy"
+					}
 				},
 				{
 					"id": "w138",
@@ -1717,6 +2512,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abym",
+						"en": "that"
 					}
 				},
 				{
@@ -1731,6 +2530,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "rozwiązał",
+						"en": "I should loosen"
 					}
 				},
 				{
@@ -1742,6 +2545,14 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "jego",
+						"en": "his"
+					},
+					"function": {
+						"pl": "Powtórzenie tego, co już powiedziało „cuius” (w133). Ta podwójna wskazówka jest kalką składni hebrajskiej.",
+						"en": "It repeats what “cuius” (w133) has already said. The doubled pointer follows Hebrew syntax."
 					}
 				},
 				{
@@ -1754,6 +2565,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "rzemyk",
+						"en": "strap"
 					}
 				},
 				{
@@ -1767,6 +2582,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "obuwia",
+						"en": "of the shoe"
 					}
 				}
 			]
@@ -1776,6 +2595,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "To działo się w Betanii za Jordanem, gdzie Jan chrzcił.",
+				"en": "These things were done in Bethania beyond the Jordan, where John was baptizing."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:28"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "John 1:28"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w143",
@@ -1786,6 +2623,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "to",
+						"en": "these things"
 					}
 				},
 				{
@@ -1796,7 +2637,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w145"
+					"head": "w145",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w145",
@@ -1808,6 +2653,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Betanii",
+						"en": "Bethania"
 					}
 				},
 				{
@@ -1824,7 +2673,11 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"head": "w147"
+					"head": "w147",
+					"gloss": {
+						"pl": "stało",
+						"en": "done"
+					}
 				},
 				{
 					"id": "w147",
@@ -1837,6 +2690,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "się",
+						"en": "were"
 					}
 				},
 				{
@@ -1847,7 +2704,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w149"
+					"head": "w149",
+					"gloss": {
+						"pl": "za",
+						"en": "beyond"
+					}
 				},
 				{
 					"id": "w149",
@@ -1860,6 +2721,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Jordanem",
+						"en": "the Jordan"
 					}
 				},
 				{
@@ -1868,6 +2733,10 @@
 					"lemma": "ubi",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "gdzie",
+						"en": "where"
 					}
 				},
 				{
@@ -1881,6 +2750,10 @@
 						"tense": "impf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "był",
+						"en": "was"
 					}
 				},
 				{
@@ -1893,6 +2766,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Jan",
+						"en": "John"
 					}
 				},
 				{
@@ -1910,9 +2787,38 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"head": "w152"
+					"head": "w152",
+					"gloss": {
+						"pl": "chrzcząc",
+						"en": "baptizing"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The gospel of the Third Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-iii-adventus-evangelium/",
+			"apparatus": "witnesses/proprium.dominica-iii-adventus-evangelium/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

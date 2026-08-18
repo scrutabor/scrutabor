@@ -9,41 +9,34 @@
 	"ids": {
 		"next": 67
 	},
-	"status": "working-edition",
-	"notes": "The priest's own confession, said bowed at the foot of the altar before the ministers repeat it. The corpus already carries the ministers' branch as ordinarium.confiteor (variant ministrorum); this is its counterpart, and the two differ in exactly two places: vobis, fratres at w022-w023 and vos, fratres at w058-w059, where the ministers say tibi, pater and te, pater. Witness do prints both branches in full — the ministers' at its own line — and carries the substitution rubric besides (et ubi a Sacerdote dicebatur vobis, fratres, et vos, fratres, a Ministris dicitur tibi, pater, et te, pater); the shared words were verified by collating the two printings independently. MICHAÉLI at w009 and MICHAÉLEM at w045 carry a name Whitaker's lexicon lacks entirely — the book heads Ioannes but no Michael — so of the analyzers only Collatinus confirms them. The answer to this confession is ordinarium.misereatur-tui, not ordinarium.misereatur: the ministers say Misereátur tui back to the priest, and the priest says Misereátur vestri over them after their own confession. FRATRES at w023 and w059 is tagged vocative although the plural of frater is identical in the nominative, the accusative and the vocative; the case rests on the address, exactly as pater does in the ministers' branch. Rubric s04 is DO's inline '(Percutit sibi pectus ter, dicens:)' as its own segment, here in the singular the missal prints for the priest.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants (punctuation, orthography, capital accents) adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.confiteor-sacerdotis/",
-		"apparatus": "witnesses/ordinarium.confiteor-sacerdotis/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Kapłan odmawia Confiteor jako pierwszy, głęboko pochylony. Zwraca się do usługujących słowami „vobis, fratres” i „vos, fratres”. Oni odmawiają potem własne wyznanie, mówiąc „tibi, pater” i „te, pater” tam, gdzie kapłan mówił „vobis, fratres” i „vos, fratres”.",
+		"en": "The priest says the Confiteor first, bowed low. He addresses the ministers with “vobis, fratres” and “vos, fratres”. They then make their own confession, saying “tibi, pater” and “te, pater” where he said “vobis, fratres” and “vos, fratres”."
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Deinde iunctis manibus profunde inclinatus facit Confessionem.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Kapłan składa ręce, głęboko się pochyla i odmawia Confíteor.",
+				"en": "The priest joins his hands, bows deeply, and recites the Confiteor."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae, rubric before the priest's Confiteor",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae, rubric before the priest's Confiteor",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -51,6 +44,26 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Spowiadam się Bogu wszechmogącemu, Najświętszej Maryi zawsze Dziewicy, świętemu Michałowi Archaniołowi, świętemu Janowi Chrzcicielowi, świętym Apostołom Piotrowi i Pawłowi, wszystkim Świętym i wam, bracia:",
+				"en": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, brethren:"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Missale Meum",
+						"locator": "Ordo Missae, Confiteor",
+						"url": "https://www.missalemeum.com/pl/ordo"
+					}
+				],
+				"en": [
+					{
+						"title": "Latin-English Hand Missal for the Traditional Latin Mass (1962)",
+						"locator": "p. 3, priest's Confiteor",
+						"url": "https://extraordinaryform.org/handmissals/HandMissalChant.pdf"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -64,6 +77,14 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "spowiadam się",
+						"en": "I confess"
+					},
+					"function": {
+						"pl": "Łączy się z następującym dalej szeregiem celowników.",
+						"en": "Governs the chain of datives that follows."
 					}
 				},
 				{
@@ -76,6 +97,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bogu",
+						"en": "to God"
+					},
+					"function": {
+						"pl": "Celownik, pierwsze dopełnienie „Confíteor” (w001).",
+						"en": "Dative, the first complement of “Confíteor” (w001)."
 					}
 				},
 				{
@@ -89,7 +118,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "wszechmogącemu",
+						"en": "almighty"
+					},
+					"function": {
+						"pl": "Zgadza się z „Deo” (w002).",
+						"en": "Agrees with “Deo” (w002)."
+					}
 				},
 				{
 					"id": "w004",
@@ -101,7 +138,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "błogosławionej",
+						"en": "to blessed"
+					},
+					"function": {
+						"pl": "Zgadza się z „Maríæ” (w005).",
+						"en": "Agrees with “Maríæ” (w005)."
+					}
 				},
 				{
 					"id": "w005",
@@ -113,6 +158,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryi",
+						"en": "Mary"
 					}
 				},
 				{
@@ -121,6 +170,14 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "ever"
+					},
+					"function": {
+						"pl": "Wraz z „Vírgini” (w007) tworzy tytuł „zawsze Dziewica”.",
+						"en": "Together with “Vírgini” (w007), forms the title “ever Virgin”."
 					}
 				},
 				{
@@ -134,6 +191,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Dziewicy",
+						"en": "Virgin"
+					},
+					"function": {
+						"pl": "Dopowiedzenie tytułu do „Maríæ” (w005).",
+						"en": "The title in apposition to “Maríæ” (w005)."
 					}
 				},
 				{
@@ -146,7 +211,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "błogosławionemu",
+						"en": "to blessed"
+					},
+					"function": {
+						"pl": "Zgadza się z następującym imieniem „Michaéli” (w009).",
+						"en": "Agrees with the name that follows, “Michaéli” (w009)."
+					}
 				},
 				{
 					"id": "w009",
@@ -159,13 +232,9 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Michałowi",
+						"en": "Michael"
 					}
 				},
 				{
@@ -179,6 +248,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Archaniołowi",
+						"en": "the Archangel"
+					},
+					"function": {
+						"pl": "Celownik w apozycji do „Michaéli” (w009).",
+						"en": "Dative in apposition to “Michaéli” (w009)."
 					}
 				},
 				{
@@ -191,7 +268,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "błogosławionemu",
+						"en": "to blessed"
+					},
+					"function": {
+						"pl": "Zgadza się z następującym „Ioánni” (w012).",
+						"en": "Agrees with the following “Ioánni” (w012)."
+					}
 				},
 				{
 					"id": "w012",
@@ -203,6 +288,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Janowi",
+						"en": "John"
 					}
 				},
 				{
@@ -216,6 +305,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Chrzcicielowi",
+						"en": "the Baptist"
+					},
+					"function": {
+						"pl": "Apozycja (dopowiedzenie) do „Ioánni” (w012).",
+						"en": "Apposition to “Ioánni” (w012)."
 					}
 				},
 				{
@@ -228,7 +325,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "świętym",
+						"en": "to the holy"
+					},
+					"function": {
+						"pl": "Zgadza się z „Apóstolis” (w015).",
+						"en": "Agrees with “Apóstolis” (w015)."
+					}
 				},
 				{
 					"id": "w015",
@@ -240,6 +345,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Apostołom",
+						"en": "Apostles"
 					}
 				},
 				{
@@ -252,6 +361,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Piotrowi",
+						"en": "Peter"
+					},
+					"function": {
+						"pl": "Wraz z “Paulo” (w018) tworzy apozycję do “Apóstolis” (w015).",
+						"en": "Together with “Paulo” (w018), in apposition to “Apóstolis” (w015)."
 					}
 				},
 				{
@@ -260,6 +377,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -273,6 +394,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pawłowi",
+						"en": "Paul"
+					},
+					"function": {
+						"pl": "Apozycja (dopowiedzenie) do „Apóstolis” (w015).",
+						"en": "Apposition to “Apóstolis” (w015)."
 					}
 				},
 				{
@@ -285,7 +414,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w020"
+					"head": "w020",
+					"gloss": {
+						"pl": "wszystkim",
+						"en": "to all"
+					},
+					"function": {
+						"pl": "Zgadza się z „Sanctis” (w020).",
+						"en": "Agrees with “Sanctis” (w020)."
+					}
 				},
 				{
 					"id": "w020",
@@ -298,7 +435,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "Świętym",
+						"en": "the Saints"
+					}
 				},
 				{
 					"id": "w021",
@@ -306,6 +447,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -317,6 +462,14 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "wam",
+						"en": "to you"
+					},
+					"function": {
+						"pl": "Celownik liczby mnogiej, ostatnie dopełnienie „Confíteor” (w001).",
+						"en": "Dative plural, the final complement of “Confíteor” (w001)."
 					}
 				},
 				{
@@ -330,6 +483,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "bracia",
+						"en": "brethren"
+					},
+					"function": {
+						"pl": "Wołacz liczby mnogiej użyty w bezpośrednim zwrocie.",
+						"en": "Vocative plural used in direct address."
 					}
 				}
 			]
@@ -339,6 +500,26 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "że bardzo zgrzeszyłem myślą, mową i uczynkiem:",
+				"en": "that I have sinned exceedingly in thought, word and deed:"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Missale Meum",
+						"locator": "Ordo Missae, Confiteor",
+						"url": "https://www.missalemeum.com/pl/ordo"
+					}
+				],
+				"en": [
+					{
+						"title": "Latin-English Hand Missal for the Traditional Latin Mass (1962)",
+						"locator": "p. 3, priest's Confiteor",
+						"url": "https://extraordinaryform.org/handmissals/HandMissalChant.pdf"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w024",
@@ -346,6 +527,14 @@
 					"lemma": "quia",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "że",
+						"en": "that"
+					},
+					"function": {
+						"pl": "Wprowadza zdanie „quia peccávi”, które wskazuje treść wyznania.",
+						"en": "Introduces the clause “quia peccávi”, which states what is confessed."
 					}
 				},
 				{
@@ -360,6 +549,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "zgrzeszyłem",
+						"en": "I have sinned"
 					}
 				},
 				{
@@ -368,6 +561,10 @@
 					"lemma": "nimis",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "bardzo",
+						"en": "exceedingly"
 					}
 				},
 				{
@@ -381,6 +578,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "myślą",
+						"en": "in thought"
+					},
+					"function": {
+						"pl": "Pierwszy z trzech ablativów narzędzia: myślą, mową i uczynkiem.",
+						"en": "The first of three ablatives of means: by thought, word, and deed."
 					}
 				},
 				{
@@ -393,6 +598,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "mową",
+						"en": "in word"
 					}
 				},
 				{
@@ -401,6 +610,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -414,6 +627,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "uczynkiem",
+						"en": "in deed"
 					}
 				}
 			]
@@ -422,13 +639,25 @@
 			"id": "s04",
 			"type": "rubric",
 			"text": "Percutit sibi pectus ter, dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Kapłan trzykrotnie uderza się w piersi.",
+				"en": "The priest strikes his breast three times."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae, rubric at mea culpa",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae, rubric at mea culpa",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -436,6 +665,26 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "moja wina, moja wina, moja bardzo wielka wina.",
+				"en": "through my fault, through my fault, through my most grievous fault."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Missale Meum",
+						"locator": "Ordo Missae, Confiteor",
+						"url": "https://www.missalemeum.com/pl/ordo"
+					}
+				],
+				"en": [
+					{
+						"title": "Latin-English Hand Missal for the Traditional Latin Mass (1962)",
+						"locator": "p. 3, priest's Confiteor",
+						"url": "https://extraordinaryform.org/handmissals/HandMissalChant.pdf"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w031",
@@ -447,7 +696,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w032"
+					"head": "w032",
+					"gloss": {
+						"pl": "moją",
+						"en": "my"
+					},
+					"function": {
+						"pl": "Zgadza się z „culpa” (w032).",
+						"en": "Agrees with “culpa” (w032)."
+					}
 				},
 				{
 					"id": "w032",
@@ -460,6 +717,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "winą",
+						"en": "fault"
+					},
+					"function": {
+						"pl": "Ablativus przyczyny: „z mojej winy”.",
+						"en": "Ablative of cause: “through my fault”."
 					}
 				},
 				{
@@ -472,7 +737,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "moją",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w034",
@@ -485,6 +754,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "winą",
+						"en": "fault"
 					}
 				},
 				{
@@ -497,7 +770,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w037"
+					"head": "w037",
+					"gloss": {
+						"pl": "moją",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w036",
@@ -510,7 +787,15 @@
 						"gender": "f",
 						"degree": "sup"
 					},
-					"head": "w037"
+					"head": "w037",
+					"gloss": {
+						"pl": "największą",
+						"en": "greatest"
+					},
+					"function": {
+						"pl": "Zgadza się z „culpa” (w037).",
+						"en": "Agrees with “culpa” (w037)."
+					}
 				},
 				{
 					"id": "w037",
@@ -523,6 +808,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "winą",
+						"en": "fault"
 					}
 				}
 			]
@@ -532,6 +821,26 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Przeto błagam Najświętszą Maryję zawsze Dziewicę, świętego Michała Archanioła, świętego Jana Chrzciciela, świętych Apostołów Piotra i Pawła, wszystkich Świętych i was, bracia, o modlitwę za mnie do Pana Boga naszego.",
+				"en": "Therefore I beseech blessed Mary ever Virgin, blessed Michael the Archangel, blessed John the Baptist, the holy Apostles Peter and Paul, all the Saints, and you, brethren, to pray for me to the Lord our God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Missale Meum",
+						"locator": "Ordo Missae, Confiteor",
+						"url": "https://www.missalemeum.com/pl/ordo"
+					}
+				],
+				"en": [
+					{
+						"title": "Latin-English Hand Missal for the Traditional Latin Mass (1962)",
+						"locator": "p. 3, priest's Confiteor",
+						"url": "https://extraordinaryform.org/handmissals/HandMissalChant.pdf"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w038",
@@ -539,6 +848,14 @@
 					"lemma": "ideo",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "przeto",
+						"en": "therefore"
+					},
+					"function": {
+						"pl": "Łączy wyznanie win z następującą po nim prośbą o wstawiennictwo.",
+						"en": "Links the confession to the request for intercession that follows."
 					}
 				},
 				{
@@ -553,6 +870,14 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "błagam",
+						"en": "I beseech"
+					},
+					"function": {
+						"pl": "Łączy się z biernikiem osoby i bezokolicznikiem: błagać kogoś, aby coś uczynił.",
+						"en": "Takes an accusative of the person and an infinitive: to beseech someone to do something."
 					}
 				},
 				{
@@ -565,7 +890,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w041"
+					"head": "w041",
+					"gloss": {
+						"pl": "błogosławioną",
+						"en": "blessed"
+					},
+					"function": {
+						"pl": "Zgadza się z „Maríam” (w041). Por. celownik „beátæ” (w004).",
+						"en": "Agrees with “Maríam” (w041). Compare the dative “beátæ” (w004)."
+					}
 				},
 				{
 					"id": "w041",
@@ -577,6 +910,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryję",
+						"en": "Mary"
+					},
+					"function": {
+						"pl": "Biernik jako dopełnienie „precor” (w039).",
+						"en": "Accusative object of “precor” (w039)."
 					}
 				},
 				{
@@ -585,6 +926,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "ever"
 					}
 				},
 				{
@@ -598,6 +943,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Dziewicę",
+						"en": "Virgin"
+					},
+					"function": {
+						"pl": "Por. „Vírgini” (w007) — ta sama formuła, tam w celowniku.",
+						"en": "Compare “Vírgini” (w007) — the same formula, there in the dative."
 					}
 				},
 				{
@@ -610,7 +963,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w045"
+					"head": "w045",
+					"gloss": {
+						"pl": "błogosławionego",
+						"en": "blessed"
+					},
+					"function": {
+						"pl": "Zgadza się z „Michaélem” (w045).",
+						"en": "Agrees with “Michaélem” (w045)."
+					}
 				},
 				{
 					"id": "w045",
@@ -623,13 +984,9 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Michała",
+						"en": "Michael"
 					}
 				},
 				{
@@ -643,6 +1000,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Archanioła",
+						"en": "the Archangel"
+					},
+					"function": {
+						"pl": "Apozycja (dopowiedzenie) do „Michaélem” (w045).",
+						"en": "Apposition to “Michaélem” (w045)."
 					}
 				},
 				{
@@ -655,7 +1020,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w048"
+					"head": "w048",
+					"gloss": {
+						"pl": "błogosławionego",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w048",
@@ -667,6 +1036,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Jana",
+						"en": "John"
 					}
 				},
 				{
@@ -680,6 +1053,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Chrzciciela",
+						"en": "the Baptist"
+					},
+					"function": {
+						"pl": "Apozycja (dopowiedzenie) do „Ioánnem” (w048).",
+						"en": "Apposition to “Ioánnem” (w048)."
 					}
 				},
 				{
@@ -692,7 +1073,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w051"
+					"head": "w051",
+					"gloss": {
+						"pl": "świętych",
+						"en": "the holy"
+					},
+					"function": {
+						"pl": "Zgadza się z „Apóstolos” (w051).",
+						"en": "Agrees with “Apóstolos” (w051)."
+					}
 				},
 				{
 					"id": "w051",
@@ -704,6 +1093,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Apostołów",
+						"en": "Apostles"
 					}
 				},
 				{
@@ -716,6 +1109,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Piotra",
+						"en": "Peter"
+					},
+					"function": {
+						"pl": "Wraz z „Paulum” (w054) tworzy apozycję do „Apóstolos” (w051).",
+						"en": "Together with “Paulum” (w054), in apposition to “Apóstolos” (w051)."
 					}
 				},
 				{
@@ -724,6 +1125,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -737,6 +1142,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pawła",
+						"en": "Paul"
 					}
 				},
 				{
@@ -749,7 +1158,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w056"
+					"head": "w056",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					},
+					"function": {
+						"pl": "Zgadza się z „Sanctos” (w056).",
+						"en": "Agrees with “Sanctos” (w056)."
+					}
 				},
 				{
 					"id": "w056",
@@ -762,7 +1179,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "Świętych",
+						"en": "the Saints"
+					}
 				},
 				{
 					"id": "w057",
@@ -770,6 +1191,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -781,6 +1206,14 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "was",
+						"en": "you"
+					},
+					"function": {
+						"pl": "Biernik jako dopełnienie „precor” (w039). Por. celownik „vobis” (w022).",
+						"en": "Accusative object of “precor” (w039). Compare the dative “vobis” (w022)."
 					}
 				},
 				{
@@ -794,6 +1227,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "bracia",
+						"en": "brethren"
+					},
+					"function": {
+						"pl": "Wołacz liczby mnogiej, powtórzenie „fratres” (w023).",
+						"en": "Vocative plural, repeating “fratres” (w023)."
 					}
 				},
 				{
@@ -806,6 +1247,14 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "modlić się",
+						"en": "to pray"
+					},
+					"function": {
+						"pl": "Bezokolicznik dopełniający „precor” (w039): błagać kogoś, aby się modlił.",
+						"en": "Infinitive completing “precor” (w039): to beseech someone to pray."
 					}
 				},
 				{
@@ -816,7 +1265,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w062"
+					"head": "w062",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w062",
@@ -826,6 +1279,14 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
+					},
+					"function": {
+						"pl": "Ablativus po „pro” (w061).",
+						"en": "Ablative after “pro” (w061)."
 					}
 				},
 				{
@@ -836,7 +1297,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w064"
+					"head": "w064",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w064",
@@ -848,6 +1313,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "the Lord"
+					},
+					"function": {
+						"pl": "Biernik rządzony przez „ad” (w063).",
+						"en": "Accusative governed by “ad” (w063)."
 					}
 				},
 				{
@@ -860,6 +1333,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Apozycja do „Dóminum” (w064).",
+						"en": "In apposition to “Dóminum” (w064)."
 					}
 				},
 				{
@@ -873,9 +1354,86 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w065"
+					"head": "w065",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					},
+					"function": {
+						"pl": "Zgadza się z „Deum” (w065).",
+						"en": "Agrees with “Deum” (w065)."
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The priest's own confession, said bowed at the foot of the altar before the ministers repeat it. The corpus already carries the ministers' branch as ordinarium.confiteor (variant ministrorum); this is its counterpart, and the two differ in exactly two places: vobis, fratres at w022-w023 and vos, fratres at w058-w059, where the ministers say tibi, pater and te, pater. Witness do prints both branches in full — the ministers' at its own line — and carries the substitution rubric besides (et ubi a Sacerdote dicebatur vobis, fratres, et vos, fratres, a Ministris dicitur tibi, pater, et te, pater); the shared words were verified by collating the two printings independently. MICHAÉLI at w009 and MICHAÉLEM at w045 carry a name Whitaker's lexicon lacks entirely — the book heads Ioannes but no Michael — so of the analyzers only Collatinus confirms them. The answer to this confession is ordinarium.misereatur-tui, not ordinarium.misereatur: the ministers say Misereátur tui back to the priest, and the priest says Misereátur vestri over them after their own confession. FRATRES at w023 and w059 is tagged vocative although the plural of frater is identical in the nominative, the accusative and the vocative; the case rests on the address, exactly as pater does in the ministers' branch. Rubric s04 is DO's inline '(Percutit sibi pectus ter, dicens:)' as its own segment, here in the singular the missal prints for the priest.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants (punctuation, orthography, capital accents) adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.confiteor-sacerdotis/",
+			"apparatus": "witnesses/ordinarium.confiteor-sacerdotis/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s04": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w009": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w045": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

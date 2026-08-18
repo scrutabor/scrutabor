@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 68
 	},
-	"status": "working-edition",
-	"notes": "The introit of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-ii-adventus-introitus/",
-		"apparatus": "witnesses/proprium.dominica-ii-adventus-introitus/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Introit II Niedzieli Adwentu, z Izajasza, z wersetem Psalmu 79. Antyfona zwraca się do ludu Syjonu i mówi, po co Pan przychodzi — zbawić narody, i dać usłyszeć swój głos.",
+		"en": "The introit of the Second Sunday of Advent, from Isaiah, with a verse of Psalm 79. The antiphon addresses the people of Sion and says what the Lord comes for — to save the nations, and to let His voice be heard."
 	},
 	"segments": [
 		{
@@ -48,6 +29,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Ludu Syjonu, oto Pan przyjdzie, aby zbawić narody: i da usłyszeć Pan chwałę głosu swego w radości serca waszego.",
+				"en": "O people of Sion, behold the Lord shall come to save the nations: and the Lord shall make the glory of His voice to be heard in the gladness of your heart."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Isaiah 30:30"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Isaiah 30:30"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -59,6 +58,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "lud",
+						"en": "people"
 					}
 				},
 				{
@@ -71,6 +74,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "Syjonu",
+						"en": "of Sion"
 					}
 				},
 				{
@@ -79,6 +86,10 @@
 					"lemma": "ecce",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "oto",
+						"en": "behold"
 					}
 				},
 				{
@@ -91,6 +102,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -105,6 +120,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "przyjdzie",
+						"en": "shall come"
 					}
 				},
 				{
@@ -115,7 +134,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "aby",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w007",
@@ -131,7 +154,11 @@
 						"voice": "pass",
 						"conj": 1
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "zbawić",
+						"en": "save"
+					}
 				},
 				{
 					"id": "w008",
@@ -144,6 +171,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "narody",
+						"en": "the nations"
 					}
 				},
 				{
@@ -152,6 +183,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -168,7 +203,11 @@
 						"voice": "pass",
 						"conj": 4
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "usłyszaną",
+						"en": "heard"
+					}
 				},
 				{
 					"id": "w011",
@@ -182,6 +221,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "uczyni",
+						"en": "shall make"
 					}
 				},
 				{
@@ -194,6 +237,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -206,6 +253,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwałę",
+						"en": "the glory"
 					}
 				},
 				{
@@ -218,6 +269,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "głosu",
+						"en": "of voice"
 					}
 				},
 				{
@@ -230,7 +285,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w014"
+					"head": "w014",
+					"gloss": {
+						"pl": "swego",
+						"en": "His"
+					}
 				},
 				{
 					"id": "w016",
@@ -240,7 +299,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w017",
@@ -252,6 +315,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "radości",
+						"en": "the gladness"
 					}
 				},
 				{
@@ -264,6 +331,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "serca",
+						"en": "of heart"
 					}
 				},
 				{
@@ -277,7 +348,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "waszego",
+						"en": "your"
+					}
 				}
 			]
 		},
@@ -296,6 +371,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Który rządzisz Izraelem, nakłoń ucha: który prowadzisz Józefa jak owcę.",
+				"en": "Thou that rulest Israel, give ear: Thou that leadest Joseph like a sheep."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 79:2"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 79:2"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w020",
@@ -306,6 +399,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -320,6 +417,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "rządzisz",
+						"en": "rulest"
 					}
 				},
 				{
@@ -332,6 +433,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Izraelem",
+						"en": "Israel"
 					}
 				},
 				{
@@ -347,6 +452,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "nakłoń ucha",
+						"en": "give ear"
 					}
 				},
 				{
@@ -358,6 +467,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -373,6 +486,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "prowadzisz",
+						"en": "leadest"
 					}
 				},
 				{
@@ -381,6 +498,10 @@
 					"lemma": "velut",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "jak",
+						"en": "like"
 					}
 				},
 				{
@@ -394,6 +515,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "owcę",
+						"en": "a sheep"
 					}
 				},
 				{
@@ -406,6 +531,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Józefa",
+						"en": "Joseph"
 					}
 				}
 			]
@@ -425,6 +554,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.",
+				"en": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+			},
 			"words": [
 				{
 					"id": "w029",
@@ -436,6 +569,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwała",
+						"en": "glory"
+					},
+					"function": {
+						"pl": "Doksologia nie ma wyrażonego czasownika. Z użycia liturgicznego trzeba dopowiedzieć życzenie „chwała niech będzie”.",
+						"en": "The doxology has no expressed verb. It supplies the wish “glory be” from liturgical usage."
 					}
 				},
 				{
@@ -449,6 +590,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Ojcu",
+						"en": "to the Father"
 					}
 				},
 				{
@@ -457,6 +602,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -470,6 +619,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synowi",
+						"en": "to the Son"
 					}
 				},
 				{
@@ -478,6 +631,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -490,6 +647,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Duchowi",
+						"en": "to the Spirit"
 					}
 				},
 				{
@@ -503,7 +664,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "Świętemu",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w036",
@@ -511,6 +676,10 @@
 					"lemma": "sicut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "jak",
+						"en": "as"
 					}
 				},
 				{
@@ -524,6 +693,10 @@
 						"pos": "verb",
 						"tense": "impf",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "była",
+						"en": "it was"
 					}
 				},
 				{
@@ -534,7 +707,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w039"
+					"head": "w039",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w039",
@@ -547,6 +724,10 @@
 						"gender": "n",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "początku",
+						"en": "the beginning"
 					}
 				},
 				{
@@ -555,6 +736,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -564,6 +749,10 @@
 					"lemma": "nunc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "teraz",
+						"en": "now"
 					}
 				},
 				{
@@ -572,6 +761,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -581,6 +774,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "always"
 					}
 				},
 				{
@@ -589,6 +786,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -599,7 +800,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w046"
+					"head": "w046",
+					"gloss": {
+						"pl": "na",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w046",
@@ -611,6 +816,10 @@
 						"gender": "n",
 						"number": "pl",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
 					}
 				},
 				{
@@ -624,6 +833,10 @@
 						"gender": "n",
 						"number": "pl",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
 					}
 				},
 				{
@@ -633,6 +846,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -657,6 +874,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Ludu Syjonu, oto Pan przyjdzie, aby zbawić narody: i da usłyszeć Pan chwałę głosu swego w radości serca waszego.",
+				"en": "O people of Sion, behold the Lord shall come to save the nations: and the Lord shall make the glory of His voice to be heard in the gladness of your heart."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Isaiah 30:30"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Isaiah 30:30"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w049",
@@ -668,6 +903,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "lud",
+						"en": "people"
 					}
 				},
 				{
@@ -680,6 +919,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "Syjonu",
+						"en": "of Sion"
 					}
 				},
 				{
@@ -688,6 +931,10 @@
 					"lemma": "ecce",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "oto",
+						"en": "behold"
 					}
 				},
 				{
@@ -700,6 +947,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -714,6 +965,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "przyjdzie",
+						"en": "shall come"
 					}
 				},
 				{
@@ -724,7 +979,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w056"
+					"head": "w056",
+					"gloss": {
+						"pl": "aby",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w055",
@@ -740,7 +999,11 @@
 						"voice": "pass",
 						"conj": 1
 					},
-					"head": "w056"
+					"head": "w056",
+					"gloss": {
+						"pl": "zbawić",
+						"en": "save"
+					}
 				},
 				{
 					"id": "w056",
@@ -753,6 +1016,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "narody",
+						"en": "the nations"
 					}
 				},
 				{
@@ -761,6 +1028,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -777,7 +1048,11 @@
 						"voice": "pass",
 						"conj": 4
 					},
-					"head": "w061"
+					"head": "w061",
+					"gloss": {
+						"pl": "usłyszaną",
+						"en": "heard"
+					}
 				},
 				{
 					"id": "w059",
@@ -791,6 +1066,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "uczyni",
+						"en": "shall make"
 					}
 				},
 				{
@@ -803,6 +1082,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -815,6 +1098,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwałę",
+						"en": "the glory"
 					}
 				},
 				{
@@ -827,6 +1114,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "głosu",
+						"en": "of voice"
 					}
 				},
 				{
@@ -839,7 +1130,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w062"
+					"head": "w062",
+					"gloss": {
+						"pl": "swego",
+						"en": "His"
+					}
 				},
 				{
 					"id": "w064",
@@ -849,7 +1144,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w065"
+					"head": "w065",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w065",
@@ -861,6 +1160,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "radości",
+						"en": "the gladness"
 					}
 				},
 				{
@@ -873,6 +1176,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "serca",
+						"en": "of heart"
 					}
 				},
 				{
@@ -886,9 +1193,38 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w066"
+					"head": "w066",
+					"gloss": {
+						"pl": "waszego",
+						"en": "your"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The introit of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-ii-adventus-introitus/",
+			"apparatus": "witnesses/proprium.dominica-ii-adventus-introitus/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

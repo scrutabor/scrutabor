@@ -9,27 +9,25 @@
 	"ids": {
 		"next": 10
 	},
-	"status": "working-edition",
-	"notes": "Part of the proper for the First Sunday of Advent. The biblical or liturgical citation and the source boundary are recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. The witnesses agree with zero divergence, so this text carries no apparatus.",
-		"witnesses": "witnesses/proprium.dominica-i-adventus-communio/"
+	"about": {
+		"pl": "Antyfona na Komunię I Niedzieli Adwentu, Ps 84, 13 według numeracji Wulgaty (Ps 85 w numeracji hebrajskiej) — z psalmu, z którego śpiewało już Alleluja tej Mszy.",
+		"en": "The Communion of the First Sunday of Advent, Psalm 84:13 in the Vulgate numbering (Psalm 85 in Hebrew) — the psalm the Alleluia of this Mass has already sung from."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Dominica I Adventus, printed page 2",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+		"en": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Dominica I Adventus, printed page 2",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
+		]
 	},
 	"segments": [
 		{
@@ -47,6 +45,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Pan obdarzy błogosławieństwem, a nasza ziemia wyda swój owoc.",
+				"en": "The Lord will bestow His bounty, and our earth shall yield its increase."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -58,6 +60,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -72,6 +78,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "da",
+						"en": "will give"
 					}
 				},
 				{
@@ -85,6 +95,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "dobroć",
+						"en": "bounty"
 					}
 				},
 				{
@@ -93,6 +107,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -105,6 +123,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ziemia",
+						"en": "earth"
 					}
 				},
 				{
@@ -117,7 +139,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "nasza",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w007",
@@ -131,6 +157,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "da",
+						"en": "will give"
 					}
 				},
 				{
@@ -143,6 +173,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "owoc",
+						"en": "fruit"
 					}
 				},
 				{
@@ -156,9 +190,37 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "swój",
+						"en": "its"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "Part of the proper for the First Sunday of Advent. The biblical or liturgical citation and the source boundary are recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. The witnesses agree with zero divergence, so this text carries no apparatus.",
+			"witnesses": "witnesses/proprium.dominica-i-adventus-communio/"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

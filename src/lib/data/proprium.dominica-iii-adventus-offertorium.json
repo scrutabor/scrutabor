@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 12
 	},
-	"status": "working-edition",
-	"notes": "The offertory antiphon of the Third Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-iii-adventus-offertorium/",
-		"apparatus": "witnesses/proprium.dominica-iii-adventus-offertorium/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Antyfona na ofiarowanie III Niedzieli Adwentu, z Psalmu 84. Pierwsze dwa zdania śpiewa się już w introicie tej samej Mszy.",
+		"en": "The offertory antiphon of the Third Sunday of Advent, from Psalm 84. Its first two clauses are already sung at the introit of the same Mass."
 	},
 	"segments": [
 		{
@@ -48,6 +29,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Pobłogosławiłeś, Panie, ziemię Twoją: odwróciłeś niewolę Jakuba: odpuściłeś nieprawość ludu Twego.",
+				"en": "Thou hast blessed, O Lord, Thy land: Thou hast turned away the captivity of Jacob: Thou hast forgiven the iniquity of Thy people."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 84:2"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 84:2"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -62,6 +61,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "pobłogosławiłeś",
+						"en": "Thou hast blessed"
 					}
 				},
 				{
@@ -75,6 +78,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -87,6 +94,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ziemię",
+						"en": "land"
 					}
 				},
 				{
@@ -100,7 +111,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w005",
@@ -114,6 +129,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "odwróciłeś",
+						"en": "Thou hast turned away"
 					}
 				},
 				{
@@ -126,6 +145,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "niewolę",
+						"en": "the captivity"
 					}
 				},
 				{
@@ -138,6 +161,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jakuba",
+						"en": "of Jacob"
 					}
 				},
 				{
@@ -152,6 +179,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "odpuściłeś",
+						"en": "Thou hast forgiven"
 					}
 				},
 				{
@@ -164,6 +195,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "nieprawość",
+						"en": "the iniquity"
 					}
 				},
 				{
@@ -176,6 +211,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ludu",
+						"en": "of people"
 					}
 				},
 				{
@@ -189,9 +228,38 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w010"
+					"head": "w010",
+					"gloss": {
+						"pl": "Twego",
+						"en": "Thy"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The offertory antiphon of the Third Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-iii-adventus-offertorium/",
+			"apparatus": "witnesses/proprium.dominica-iii-adventus-offertorium/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

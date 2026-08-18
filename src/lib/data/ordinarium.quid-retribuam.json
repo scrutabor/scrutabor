@@ -9,41 +9,44 @@
 	"ids": {
 		"next": 37
 	},
-	"status": "working-edition",
-	"notes": "The priest's Communion under the species of wine: three psalm verses from two psalms — Quid retríbuam said while he gathers the fragments, then Cálicem salutáris and Psalm 17, 4 as he takes the chalice — and the form said as he signs himself with the chalice. RETRÍBUAM at w002 has a form shared by the future indicative and present subjunctive. This edition reads the deliberative subjunctive: the interrogative QUID asks what the speaker is to render, and the following futures ACCÍPIAM and INVOCÁBO answer that question. RETRÍBUIT at w007 is likewise both present and perfect in form; there the sense decides, since the benefits asked about are ones already received, and the corpus claims the perfect. SALUTÁRIS at w010 is the genitive of the neuter noun salutáre, not the adjective — the chalice OF SALVATION, as the corpus already reads it at ordinarium.offerimus-tibi w005. SALVUS at w023 is confirmed by both analyzers, since Collatinus heads the word under its archaic nominative saluos, which the u/v folding cannot reach on its own; the pipeline now carries the alias, and the two votes agree.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variants are adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.quid-retribuam/",
-		"apparatus": "witnesses/ordinarium.quid-retribuam/apparatus.json"
+	"about": {
+		"pl": "Modlitwa przed przyjęciem Krwi Pańskiej łączy Ps 115, 3–4 z Ps 17, 4 według numeracji Wulgaty. Pierwszy werset towarzyszy zebraniu cząstek i wytarciu pateny nad kielichem. Następnie kapłan bierze kielich i wypowiada dalsze wersety. „Salutáris” jest tu rzeczownikiem: „kielich zbawienia”.",
+		"en": "The prayer before the priest receives the Precious Blood joins Psalm 115:3–4 to Psalm 17:4 in the Vulgate numbering. The first verse accompanies the gathering of fragments and the wiping of the paten over the chalice. The priest then takes the chalice and says the remaining verses. “Salutáris” is a noun here: “the chalice of salvation”."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmi 116 (Vg 115), 12–13; 18 (Vg 17), 4",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			},
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Ritus servandus in celebratione Missae, X, 5",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmi 116 (Vg 115), 12–13; 18 (Vg 17), 4",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			},
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Ritus servandus in celebratione Missae, X, 5",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Deinde discooperit Calicem, genuflectit, colligit fragmenta, si quæ sint, extergit Patenam super Calicem, interim dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan odkrywa kielich, przyklęka, zbiera okruchy i wyciera nad kielichem patenę, mówiąc przy tym:",
+				"en": "The priest uncovers the chalice, genuflects, gathers any fragments and wipes the paten clean over the chalice, saying meanwhile:"
 			}
 		},
 		{
@@ -51,6 +54,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Cóż oddam Panu za wszystko, co mi dobrze czynił?",
+				"en": "What shall I render to the Lord for all that He has rendered to me?"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Ps 115, 12"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Psalm 115:12"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -61,6 +82,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "Cóż",
+						"en": "What"
+					},
+					"function": {
+						"pl": "Biernik rodzaju nijakiego, będący dopełnieniem czasownika „retríbuam” (w002).",
+						"en": "Neuter accusative, serving as the object of “retríbuam” (w002)."
 					}
 				},
 				{
@@ -76,14 +105,51 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"analysis": {
-						"confidence": "medium",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
+					"gloss": {
+						"pl": "oddam",
+						"en": "shall I render"
+					},
+					"function": {
+						"pl": "Wydanie analizuje formę jako coniunctivus deliberativus: psalmista pyta, co ma oddać Panu. Ta sama forma może być futurum. Tradycyjny przekład Wujka zachowuje naturalne „Cóż oddam?”.",
+						"en": "This edition parses the form as a deliberative subjunctive: the psalmist asks what he is to render to the Lord. The same form can be future indicative. The received translation retains the natural “What shall I render?”"
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Allen and Greenough, New Latin Grammar",
+								"locator": "§ 444",
+								"url": "https://dcc.dickinson.edu/grammar/latin/deliberative-subjunctive"
+							},
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 116, 12"
+							},
+							{
+								"title": "United States Conference of Catholic Bishops, Psalm 116",
+								"locator": "verse 12",
+								"url": "https://bible.usccb.org/bible/psalms/116"
+							}
 						],
-						"review": "disputed"
+						"en": [
+							{
+								"title": "Allen and Greenough, New Latin Grammar",
+								"locator": "§ 444",
+								"url": "https://dcc.dickinson.edu/grammar/latin/deliberative-subjunctive"
+							},
+							{
+								"title": "Biblia Hebraica Stuttgartensia",
+								"locator": "Psalm 116, 12"
+							},
+							{
+								"title": "United States Conference of Catholic Bishops, Psalm 116",
+								"locator": "verse 12",
+								"url": "https://bible.usccb.org/bible/psalms/116"
+							}
+						]
+					},
+					"note": {
+						"pl": "Końcówka -am jest tu zarazem czasem przyszłym i trybem łączącym. „Co oddam” albo „co mam oddać” — pytanie rozważające. Ta edycja przyjmuje tryb łączący i zaznacza wątpliwość.",
+						"en": "The ending -am is future indicative and present subjunctive at once. What shall I render, or what am I to render — a deliberative question. This edition takes the subjunctive and marks the doubt."
 					}
 				},
 				{
@@ -96,6 +162,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panu",
+						"en": "to the Lord"
 					}
 				},
 				{
@@ -106,7 +176,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w005",
@@ -118,7 +192,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wszystko",
+						"en": "all the things"
+					}
 				},
 				{
 					"id": "w006",
@@ -129,6 +207,14 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "co",
+						"en": "which"
+					},
+					"function": {
+						"pl": "Dopełnienie „retríbuit” (w007), a nie jego podmiot: te rzeczy, które On wyświadczył.",
+						"en": "Object of “retríbuit” (w007), not its subject: the things He rendered."
 					}
 				},
 				{
@@ -143,6 +229,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wyświadczył",
+						"en": "He has rendered"
+					},
+					"function": {
+						"pl": "Forma czasu teraźniejszego i perfectum jest tu taka sama. Kontekst wskazuje na perfectum: „wyświadczył”.",
+						"en": "The present and perfect have the same form here. The context indicates the perfect: “He has rendered”."
 					}
 				},
 				{
@@ -154,6 +248,14 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mi",
+						"en": "to me"
+					},
+					"function": {
+						"pl": "„retríbuam” (w002) i „retríbuit” (w007) to ten sam czasownik: co ja oddam Panu i co On wyświadczył mi.",
+						"en": "“retríbuam” (w002) and “retríbuit” (w007) are forms of the same verb: what I shall render to the Lord and what He has rendered to me."
 					}
 				}
 			]
@@ -163,6 +265,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Kielich zbawienia wezmę i imienia Pańskiego wzywać będę.",
+				"en": "I will take the chalice of salvation, and will call upon the name of the Lord."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Ps 115, 13"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Psalm 115:13"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w009",
@@ -174,6 +294,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Kielich",
+						"en": "The chalice"
 					}
 				},
 				{
@@ -186,6 +310,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zbawienia",
+						"en": "of salvation"
+					},
+					"function": {
+						"pl": "Dopełniacz rzeczownika nijakiego „salutáre”: „kielich zbawienia”.",
+						"en": "Genitive of the neuter noun “salutáre”: “the chalice of salvation”."
 					}
 				},
 				{
@@ -201,6 +333,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wezmę",
+						"en": "I will take"
+					},
+					"function": {
+						"pl": "Czas przyszły trybu oznajmującego, jak przy Hostii: stojące obok „invocábo” (w015) może być tylko przyszłe.",
+						"en": "Future indicative, as at the Host: “invocábo” (w015) beside it can only be future."
 					}
 				},
 				{
@@ -209,6 +349,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -221,6 +365,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "imienia",
+						"en": "the name"
 					}
 				},
 				{
@@ -233,6 +381,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "of the Lord"
 					}
 				},
 				{
@@ -248,6 +400,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wzywać będę",
+						"en": "I will call upon"
 					}
 				}
 			]
@@ -257,6 +413,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Chwaląc wzywać będę Pana i od nieprzyjaciół moich będę wybawiony.",
+				"en": "With praise I will call upon the Lord, and I shall be saved from my enemies."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Ps 17, 4"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Psalm 17:4"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w016",
@@ -272,7 +446,15 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "chwaląc",
+						"en": "praising"
+					},
+					"function": {
+						"pl": "Imiesłów użyty okolicznikowo: „chwaląc, będę wzywał Pana”.",
+						"en": "A participle used adverbially: “praising, I will call upon the Lord”."
+					}
 				},
 				{
 					"id": "w017",
@@ -286,6 +468,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wzywać będę",
+						"en": "I will call upon"
 					}
 				},
 				{
@@ -299,6 +485,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -307,6 +497,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -317,7 +511,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w021",
@@ -329,6 +527,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "nieprzyjaciół",
+						"en": "enemies"
 					}
 				},
 				{
@@ -341,7 +543,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "moich",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w023",
@@ -353,7 +559,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "wybawiony",
+						"en": "safe"
+					},
+					"function": {
+						"pl": "Wraz z „ero” (w024) tworzy orzeczenie w czasie przyszłym: „będę wybawiony”.",
+						"en": "With “ero” (w024), it forms a future predicate: “I shall be safe”."
+					}
 				},
 				{
 					"id": "w024",
@@ -367,6 +581,10 @@
 						"tense": "fut",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "będę",
+						"en": "I shall be"
 					}
 				}
 			]
@@ -375,13 +593,9 @@
 			"id": "s05",
 			"type": "rubric",
 			"text": "Accipit Calicem manu dextera, et eo se signans, dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan bierze kielich w prawą rękę i żegnając się nim, mówi:",
+				"en": "The priest takes the chalice in his right hand and signs himself with it, saying:"
 			}
 		},
 		{
@@ -389,6 +603,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Krew Pana naszego Jezusa Chrystusa niech strzeże duszy mojej na żywot wieczny. Amen.",
+				"en": "May the Blood of our Lord Jesus Christ keep my soul unto life everlasting. Amen."
+			},
 			"words": [
 				{
 					"id": "w025",
@@ -400,6 +618,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Krew",
+						"en": "The Blood"
+					},
+					"function": {
+						"pl": "Formuła odpowiada modlitwie przed przyjęciem Hostii. „Corpus” zostaje tu zastąpione przez „Sanguis”.",
+						"en": "The formula parallels the prayer before receiving the Host. “Corpus” is replaced here by “Sanguis”."
 					}
 				},
 				{
@@ -412,6 +638,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "of the Lord"
 					}
 				},
 				{
@@ -424,7 +654,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w026"
+					"head": "w026",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w028",
@@ -435,6 +669,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -447,6 +685,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -461,6 +703,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "niech strzeże",
+						"en": "may keep"
 					}
 				},
 				{
@@ -473,6 +719,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "duszy",
+						"en": "soul"
 					}
 				},
 				{
@@ -485,7 +735,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w031"
+					"head": "w031",
+					"gloss": {
+						"pl": "mojej",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w033",
@@ -495,7 +749,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "na",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w034",
@@ -507,6 +765,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "żywot",
+						"en": "life"
 					}
 				},
 				{
@@ -520,7 +782,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "wieczny",
+						"en": "everlasting"
+					}
 				},
 				{
 					"id": "w036",
@@ -529,6 +795,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -537,14 +807,80 @@
 			"id": "s07",
 			"type": "rubric",
 			"text": "Et sinistra supponens Patenam Calici, reverenter sumit totum Sanguinem cum particula.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Podtrzymując lewą ręką patenę pod kielichem, kapłan spożywa z czcią całą Krew wraz z cząstką.",
+				"en": "Holding the paten beneath the chalice with his left hand, the priest reverently consumes all the Blood together with the particle."
 			}
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The priest's Communion under the species of wine: three psalm verses from two psalms — Quid retríbuam said while he gathers the fragments, then Cálicem salutáris and Psalm 17, 4 as he takes the chalice — and the form said as he signs himself with the chalice. RETRÍBUAM at w002 has a form shared by the future indicative and present subjunctive. This edition reads the deliberative subjunctive: the interrogative QUID asks what the speaker is to render, and the following futures ACCÍPIAM and INVOCÁBO answer that question. RETRÍBUIT at w007 is likewise both present and perfect in form; there the sense decides, since the benefits asked about are ones already received, and the corpus claims the perfect. SALUTÁRIS at w010 is the genitive of the neuter noun salutáre, not the adjective — the chalice OF SALVATION, as the corpus already reads it at ordinarium.offerimus-tibi w005. SALVUS at w023 is confirmed by both analyzers, since Collatinus heads the word under its archaic nominative saluos, which the u/v folding cannot reach on its own; the pipeline now carries the alias, and the two votes agree.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variants are adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.quid-retribuam/",
+			"apparatus": "witnesses/ordinarium.quid-retribuam/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s05": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s07": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w002": {
+				"analysis": {
+					"confidence": "medium",
+					"sources": [
+						"editorial",
+						"whitakers",
+						"collatinus"
+					],
+					"review": "disputed"
+				}
+			}
+		}
+	}
 }

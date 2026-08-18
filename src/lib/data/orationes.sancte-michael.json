@@ -9,34 +9,35 @@
 	"ids": {
 		"next": 41
 	},
-	"status": "working-edition",
-	"notes": "The prayer Leo XIII composed and assigned to be said after low Mass; it stands fourth among his prayers, after the Salve Regína and the collect. ÍMPERET at w015 carries its accent on the antepenult, which witness do omits as it omits accents on capitals throughout. Three petitions: a plea for defence, a wish that God command the enemy, and a call to Michael himself — TUQUE opens it. ESTO at w013 is the FUTURE imperative of sum — the form that lays a standing duty rather than an immediate one — and names Collatinus alone, Whitaker's not offering the tense. MÍCHAËL at w002 names Collatinus alone, as every form of the name does in this corpus. TUQUE at w020 is the nominative pronoun with the enclitic -que; the pronoun is expressed at all only because the sentence turns from God back to Michael. CÆLÉSTIS at w023 is genitive, agreeing with milítiæ, not nominative with Princeps. PERVAGÁNTUR at w032 and DEPRECÁMUR at w019 are deponents: passive in form, active in meaning.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence beyond one adjudicated spelling, which is a real form of the word.",
-		"witnesses": "witnesses/orationes.sancte-michael/",
-		"apparatus": "witnesses/orationes.sancte-michael/apparatus.json"
+	"about": {
+		"pl": "Modlitwa, którą Leon XIII ułożył do modlitw odmawianych po Mszy cichej, gdzie stoi po kolekcie. Prosi św. Michała Archanioła o obronę w walce przeciw niegodziwości i zasadzkom diabła. Następnie prosi, aby Bóg pogromił szatana, i ponownie zwraca się do św. Michała jako wodza wojska niebieskiego, aby mocą Bożą strącił do piekła szatana i inne złe duchy.",
+		"en": "The prayer Leo XIII composed for the prayers said after low Mass, where it stands after the collect. It asks Saint Michael the Archangel to defend us in battle against the wickedness and snares of the devil. It then prays that God may rebuke the devil, and again addresses Saint Michael, as prince of the heavenly host, asking him by the power of God to cast Satan and the other evil spirits into hell."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 675, p. 520",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 675, p. 520",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "verse",
 			"speaker": "omnes",
+			"translation": {
+				"pl": "Święty Michale Archaniele, wspomagaj nas w walce, a przeciw niegodziwości i zasadzkom złego ducha bądź naszą obroną.",
+				"en": "Saint Michael the Archangel, defend us in battle. Be our protection against the wickedness and snares of the devil."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -48,7 +49,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "święty",
+						"en": "saint"
+					}
 				},
 				{
 					"id": "w002",
@@ -61,13 +66,9 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Michale",
+						"en": "Michael"
 					}
 				},
 				{
@@ -81,6 +82,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Archaniele",
+						"en": "Archangel"
 					}
 				},
 				{
@@ -95,6 +100,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "broń",
+						"en": "defend"
 					}
 				},
 				{
@@ -105,6 +114,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -115,7 +128,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w007",
@@ -128,6 +145,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "walce",
+						"en": "battle"
 					}
 				},
 				{
@@ -138,7 +159,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "przeciw",
+						"en": "against"
+					}
 				},
 				{
 					"id": "w009",
@@ -150,6 +175,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "niegodziwości",
+						"en": "the wickedness"
 					}
 				},
 				{
@@ -158,6 +187,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -170,6 +203,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "zasadzkom",
+						"en": "snares"
+					},
+					"function": {
+						"pl": "Rzeczownik występujący tylko w liczbie mnogiej (plurale tantum).",
+						"en": "A plural-only noun (plurale tantum)."
 					}
 				},
 				{
@@ -182,6 +223,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "diabła",
+						"en": "of the devil"
 					}
 				},
 				{
@@ -196,13 +241,13 @@
 						"mood": "imp",
 						"voice": "act"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "bądź",
+						"en": "be"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący czasu przyszłego od „sum”. Tryb rozkazujący czasu teraźniejszego ma formę „es”.",
+						"en": "Future imperative of “sum”. The present imperative is “es”."
 					}
 				},
 				{
@@ -216,6 +261,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "obroną",
+						"en": "protection"
 					}
 				}
 			]
@@ -224,6 +273,10 @@
 			"id": "s02",
 			"type": "verse",
 			"speaker": "omnes",
+			"translation": {
+				"pl": "Oby go Bóg pogromić raczył, pokornie o to prosimy.",
+				"en": "May God rebuke him, we humbly pray."
+			},
 			"words": [
 				{
 					"id": "w015",
@@ -237,6 +290,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "niech rozkaże",
+						"en": "may command"
+					},
+					"function": {
+						"pl": "Tryb łączący w funkcji życzenia. Podmiotem jest „Deus” (w017), a czasownik rządzi celownikiem „illi” (w016).",
+						"en": "A subjunctive of wish. Its subject is “Deus” (w017), and the verb governs the dative “illi” (w016)."
 					}
 				},
 				{
@@ -248,6 +309,10 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "mu",
+						"en": "him"
 					}
 				},
 				{
@@ -261,6 +326,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bóg",
+						"en": "God"
 					}
 				},
 				{
@@ -273,7 +342,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w019"
+					"head": "w019",
+					"gloss": {
+						"pl": "korni",
+						"en": "suppliant"
+					},
+					"function": {
+						"pl": "Przymiotnik w mianowniku liczby mnogiej, odnoszący się do domyślnego podmiotu „deprecámur” (w019).",
+						"en": "Nominative plural adjective referring to the understood subject of “deprecámur” (w019)."
+					}
 				},
 				{
 					"id": "w019",
@@ -288,6 +365,14 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "prosimy",
+						"en": "we pray"
+					},
+					"function": {
+						"pl": "Deponens: forma bierna, znaczenie czynne.",
+						"en": "A deponent: passive in form, active in meaning."
 					}
 				}
 			]
@@ -296,6 +381,10 @@
 			"id": "s03",
 			"type": "verse",
 			"speaker": "omnes",
+			"translation": {
+				"pl": "A Ty, Wodzu niebieskich zastępów, szatana i inne duchy złe, które na zgubę dusz ludzkich po tym świecie krążą, mocą Bożą strąć do piekła. Amen.",
+				"en": "And do thou, O Prince of the heavenly hosts, by the power of God, thrust into hell Satan, and all the evil spirits, who prowl about the world seeking the ruin of souls. Amen."
+			},
 			"words": [
 				{
 					"id": "w020",
@@ -306,6 +395,14 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "A Ty",
+						"en": "And do thou"
+					},
+					"function": {
+						"pl": "Jawny zaimek podmiotowy. Enklityka „-que” łączy to zdanie z poprzednim.",
+						"en": "Explicit subject pronoun. The enclitic “-que” joins this clause to the preceding one."
 					}
 				},
 				{
@@ -318,6 +415,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Książę",
+						"en": "Prince"
 					}
 				},
 				{
@@ -330,6 +431,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "wojska",
+						"en": "of the host"
 					}
 				},
 				{
@@ -343,7 +448,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w022"
+					"head": "w022",
+					"gloss": {
+						"pl": "niebieskiego",
+						"en": "heavenly"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby pojedynczej. Zgadza się z „milítiæ” (w022).",
+						"en": "Genitive singular agreeing with “milítiæ” (w022)."
+					}
 				},
 				{
 					"id": "w024",
@@ -355,6 +468,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "szatana",
+						"en": "Satan"
 					}
 				},
 				{
@@ -367,7 +484,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w026"
+					"head": "w026",
+					"gloss": {
+						"pl": "i inne",
+						"en": "and the other"
+					},
+					"function": {
+						"pl": "Biernik liczby mnogiej. Zgadza się ze „spíritus” (w026). Enklityka „-que” łączy tę frazę z „sátanam” (w024).",
+						"en": "Accusative plural agreeing with “spíritus” (w026). The enclitic “-que” joins it to “sátanam” (w024)."
+					}
 				},
 				{
 					"id": "w026",
@@ -379,6 +504,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "duchy",
+						"en": "spirits"
 					}
 				},
 				{
@@ -392,7 +521,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w026"
+					"head": "w026",
+					"gloss": {
+						"pl": "złe",
+						"en": "evil"
+					}
 				},
 				{
 					"id": "w028",
@@ -403,6 +536,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "które",
+						"en": "who"
 					}
 				},
 				{
@@ -413,7 +550,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "na",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w030",
@@ -425,6 +566,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zgubę",
+						"en": "the ruin"
 					}
 				},
 				{
@@ -437,6 +582,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dusz",
+						"en": "of souls"
 					}
 				},
 				{
@@ -451,6 +600,14 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "krążą",
+						"en": "roam"
+					},
+					"function": {
+						"pl": "Deponens złożone z per i vagor, oznaczające „przemierzać”.",
+						"en": "A deponent compound of per and vagor, meaning “to roam through”."
 					}
 				},
 				{
@@ -461,7 +618,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "po",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w034",
@@ -474,6 +635,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "świecie",
+						"en": "the world"
 					}
 				},
 				{
@@ -486,7 +651,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "Bożą",
+						"en": "divine"
+					}
 				},
 				{
 					"id": "w036",
@@ -498,6 +667,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "mocą",
+						"en": "by power"
+					},
+					"function": {
+						"pl": "Ablativus narzędzia: „mocą Bożą”.",
+						"en": "Ablative of means: “by divine power”."
 					}
 				},
 				{
@@ -508,7 +685,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w038"
+					"head": "w038",
+					"gloss": {
+						"pl": "do",
+						"en": "into"
+					}
 				},
 				{
 					"id": "w038",
@@ -520,6 +701,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "piekła",
+						"en": "hell"
 					}
 				},
 				{
@@ -535,6 +720,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "strąć",
+						"en": "thrust down"
 					}
 				},
 				{
@@ -544,9 +733,60 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The prayer Leo XIII composed and assigned to be said after low Mass; it stands fourth among his prayers, after the Salve Regína and the collect. ÍMPERET at w015 carries its accent on the antepenult, which witness do omits as it omits accents on capitals throughout. Three petitions: a plea for defence, a wish that God command the enemy, and a call to Michael himself — TUQUE opens it. ESTO at w013 is the FUTURE imperative of sum — the form that lays a standing duty rather than an immediate one — and names Collatinus alone, Whitaker's not offering the tense. MÍCHAËL at w002 names Collatinus alone, as every form of the name does in this corpus. TUQUE at w020 is the nominative pronoun with the enclitic -que; the pronoun is expressed at all only because the sentence turns from God back to Michael. CÆLÉSTIS at w023 is genitive, agreeing with milítiæ, not nominative with Princeps. PERVAGÁNTUR at w032 and DEPRECÁMUR at w019 are deponents: passive in form, active in meaning.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence beyond one adjudicated spelling, which is a real form of the word.",
+			"witnesses": "witnesses/orationes.sancte-michael/",
+			"apparatus": "witnesses/orationes.sancte-michael/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"words": {
+			"w002": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w013": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

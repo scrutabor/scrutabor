@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 125
 	},
-	"status": "working-edition",
-	"notes": "The gospel of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-ii-adventus-evangelium/",
-		"apparatus": "witnesses/proprium.dominica-ii-adventus-evangelium/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Ewangelia II Niedzieli Adwentu. Jan Chrzciciel, już w więzieniu, posyła zapytać, czy to Ten. Odpowiedź nie jest twierdzeniem, lecz listą tego, co widać, i kończy się słowem o samym Janie.",
+		"en": "The gospel of the Second Sunday of Advent. John the Baptist, already in prison, sends to ask whether this is He. The answer is not a claim but a list of what can be seen, and it ends with a word about John himself."
 	},
 	"segments": [
 		{
@@ -38,6 +19,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "W owym czasie: Gdy Jan usłyszał w więzieniu o dziełach Chrystusa, posławszy dwóch spośród uczniów swoich, rzekł Mu:",
+				"en": "At that time: When John had heard in prison the works of Christ, sending two of his disciples he said to Him:"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -47,7 +46,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w002",
@@ -58,6 +61,10 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "owym",
+						"en": "that"
 					}
 				},
 				{
@@ -71,6 +78,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "czasie",
+						"en": "time"
 					}
 				},
 				{
@@ -79,6 +90,10 @@
 					"lemma": "cum",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "gdy",
+						"en": "when"
 					}
 				},
 				{
@@ -93,6 +108,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "usłyszał",
+						"en": "had heard"
 					}
 				},
 				{
@@ -105,6 +124,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Jan",
+						"en": "John"
 					}
 				},
 				{
@@ -115,7 +138,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w008",
@@ -127,6 +154,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "więzach",
+						"en": "chains"
 					}
 				},
 				{
@@ -139,6 +170,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "o dziełach",
+						"en": "the works"
 					}
 				},
 				{
@@ -152,6 +187,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "of Christ"
 					}
 				},
 				{
@@ -168,7 +207,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "posyławszy",
+						"en": "sending"
+					}
 				},
 				{
 					"id": "w012",
@@ -180,7 +223,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "dwóch",
+						"en": "two"
+					}
 				},
 				{
 					"id": "w013",
@@ -190,7 +237,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w014"
+					"head": "w014",
+					"gloss": {
+						"pl": "z",
+						"en": "of"
+					}
 				},
 				{
 					"id": "w014",
@@ -202,6 +253,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "uczniów",
+						"en": "disciples"
 					}
 				},
 				{
@@ -215,7 +270,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w014"
+					"head": "w014",
+					"gloss": {
+						"pl": "swoich",
+						"en": "his"
+					}
 				},
 				{
 					"id": "w016",
@@ -228,6 +287,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "rzekł",
+						"en": "he said"
 					}
 				},
 				{
@@ -240,6 +303,10 @@
 						"case": "dat",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Mu",
+						"en": "to Him"
 					}
 				}
 			]
@@ -249,6 +316,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Tyś jest, który ma przyjść, czy innego oczekujemy?",
+				"en": "Art Thou He that art to come, or look we for another?"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w018",
@@ -258,6 +343,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "Thou"
 					}
 				},
 				{
@@ -272,6 +361,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jesteś",
+						"en": "art"
 					}
 				},
 				{
@@ -283,6 +376,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -299,7 +396,11 @@
 						"voice": "act",
 						"conj": 4
 					},
-					"head": "w022"
+					"head": "w022",
+					"gloss": {
+						"pl": "mający przyjść",
+						"en": "to come"
+					}
 				},
 				{
 					"id": "w022",
@@ -313,6 +414,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jesteś",
+						"en": "art"
 					}
 				},
 				{
@@ -321,6 +426,10 @@
 					"lemma": "an",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "czy",
+						"en": "or"
 					}
 				},
 				{
@@ -333,7 +442,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "innego",
+						"en": "another"
+					}
 				},
 				{
 					"id": "w025",
@@ -348,6 +461,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "oczekujemy",
+						"en": "do we look for"
 					}
 				}
 			]
@@ -357,6 +474,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "A Jezus odpowiadając rzekł im: Idźcie i donieście Janowi, coście usłyszeli i widzieli.",
+				"en": "And Jesus making answer said to them: Go and relate to John what you have heard and seen."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w026",
@@ -364,6 +499,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -380,7 +519,11 @@
 						"voice": "act",
 						"conj": 2
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "odpowiadając",
+						"en": "answering"
+					}
 				},
 				{
 					"id": "w028",
@@ -392,6 +535,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezus",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -405,6 +552,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "rzekł",
+						"en": "said"
 					}
 				},
 				{
@@ -417,6 +568,10 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "im",
+						"en": "to them"
 					}
 				},
 				{
@@ -432,7 +587,11 @@
 						"mood": "part",
 						"voice": "act"
 					},
-					"head": "w032"
+					"head": "w032",
+					"gloss": {
+						"pl": "idąc",
+						"en": "going"
+					}
 				},
 				{
 					"id": "w032",
@@ -446,6 +605,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "donieście",
+						"en": "report"
 					}
 				},
 				{
@@ -459,6 +622,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Janowi",
+						"en": "to John"
 					}
 				},
 				{
@@ -470,6 +637,10 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "które",
+						"en": "what"
 					}
 				},
 				{
@@ -485,6 +656,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "usłyszeliście",
+						"en": "you have heard"
 					}
 				},
 				{
@@ -493,6 +668,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -508,6 +687,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zobaczyliście",
+						"en": "you have seen"
 					}
 				}
 			]
@@ -517,6 +700,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Ślepi widzą, chromi chodzą, trędowaci bywają oczyszczeni, głusi słyszą, umarli powstają, ubogim głosi się dobrą nowinę: a błogosławiony jest, kto się we mnie nie zgorszy.",
+				"en": "The blind see, the lame walk, the lepers are made clean, the deaf hear, the dead rise again, the poor have the gospel preached to them: and blessed is he that shall not be scandalized in Me."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w038",
@@ -528,7 +729,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "ślepi",
+						"en": "the blind"
+					}
 				},
 				{
 					"id": "w039",
@@ -543,6 +748,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "widzą",
+						"en": "see"
 					}
 				},
 				{
@@ -555,7 +764,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "chromi",
+						"en": "the lame"
+					}
 				},
 				{
 					"id": "w041",
@@ -570,6 +783,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "chodzą",
+						"en": "walk"
 					}
 				},
 				{
@@ -582,7 +799,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "trędowaci",
+						"en": "lepers"
+					}
 				},
 				{
 					"id": "w043",
@@ -597,6 +818,10 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "są oczyszczani",
+						"en": "are cleansed"
 					}
 				},
 				{
@@ -609,7 +834,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "głusi",
+						"en": "the deaf"
+					}
 				},
 				{
 					"id": "w045",
@@ -624,6 +853,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "słyszą",
+						"en": "hear"
 					}
 				},
 				{
@@ -636,7 +869,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "umarli",
+						"en": "the dead"
+					}
 				},
 				{
 					"id": "w047",
@@ -651,6 +888,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "powstają",
+						"en": "rise again"
 					}
 				},
 				{
@@ -663,6 +904,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ubodzy",
+						"en": "the poor"
 					}
 				},
 				{
@@ -678,6 +923,10 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "otrzymują dobrą nowinę",
+						"en": "have the gospel preached to them"
 					}
 				},
 				{
@@ -686,6 +935,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -698,7 +951,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "błogosławiony",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w052",
@@ -712,6 +969,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
 					}
 				},
 				{
@@ -723,6 +984,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "kto",
+						"en": "who"
 					}
 				},
 				{
@@ -731,6 +996,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -744,6 +1013,10 @@
 						"tense": "futperf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "będzie",
+						"en": "shall be"
 					}
 				},
 				{
@@ -760,7 +1033,11 @@
 						"voice": "pass",
 						"conj": 1
 					},
-					"head": "w055"
+					"head": "w055",
+					"gloss": {
+						"pl": "zgorszony",
+						"en": "scandalized"
+					}
 				},
 				{
 					"id": "w057",
@@ -770,7 +1047,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w058"
+					"head": "w058",
+					"gloss": {
+						"pl": "we",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w058",
@@ -781,6 +1062,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
 					}
 				}
 			]
@@ -790,6 +1075,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "A gdy oni odchodzili, począł Jezus mówić do rzesz o Janie: Coście wyszli na pustynię oglądać? Trzcinę wiatrem kołysaną?",
+				"en": "And when they went their way, Jesus began to say to the multitudes concerning John: What went you out into the desert to see? A reed shaken with the wind?"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w059",
@@ -800,6 +1103,10 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "nimi",
+						"en": "they"
 					}
 				},
 				{
@@ -808,6 +1115,10 @@
 					"lemma": "autem",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "zaś",
+						"en": "now"
 					}
 				},
 				{
@@ -824,7 +1135,15 @@
 						"mood": "part",
 						"voice": "act"
 					},
-					"head": "w059"
+					"head": "w059",
+					"gloss": {
+						"pl": "odchodzącymi",
+						"en": "going away"
+					},
+					"function": {
+						"pl": "Ablativus absolutus: „gdy oni odchodzili”. Para w narzędniku oddaje konstrukcję, której polszczyzna nie ma.",
+						"en": "An ablative absolute: when they were going away."
+					}
 				},
 				{
 					"id": "w062",
@@ -837,6 +1156,10 @@
 						"tense": "perf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "zaczął",
+						"en": "began"
 					}
 				},
 				{
@@ -848,6 +1171,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezus",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -860,6 +1187,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "mówić",
+						"en": "to say"
 					}
 				},
 				{
@@ -870,7 +1201,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w066"
+					"head": "w066",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w066",
@@ -882,6 +1217,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "rzesz",
+						"en": "the crowds"
 					}
 				},
 				{
@@ -892,7 +1231,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w068"
+					"head": "w068",
+					"gloss": {
+						"pl": "o",
+						"en": "concerning"
+					}
 				},
 				{
 					"id": "w068",
@@ -905,6 +1248,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Janie",
+						"en": "John"
 					}
 				},
 				{
@@ -916,6 +1263,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "co",
+						"en": "what"
 					}
 				},
 				{
@@ -929,6 +1280,10 @@
 						"tense": "perf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "wyszliście",
+						"en": "went you out"
 					}
 				},
 				{
@@ -939,7 +1294,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w072"
+					"head": "w072",
+					"gloss": {
+						"pl": "na",
+						"en": "into"
+					}
 				},
 				{
 					"id": "w072",
@@ -951,6 +1310,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "pustynię",
+						"en": "the desert"
 					}
 				},
 				{
@@ -964,6 +1327,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zobaczyć",
+						"en": "to see"
 					}
 				},
 				{
@@ -976,6 +1343,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "trzcinę",
+						"en": "a reed"
 					}
 				},
 				{
@@ -988,6 +1359,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wiatrem",
+						"en": "with the wind"
 					}
 				},
 				{
@@ -1005,7 +1380,11 @@
 						"voice": "pass",
 						"conj": 1
 					},
-					"head": "w074"
+					"head": "w074",
+					"gloss": {
+						"pl": "kołysaną",
+						"en": "shaken"
+					}
 				}
 			]
 		},
@@ -1014,6 +1393,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Ale coście wyszli oglądać? Człowieka w miękkie szaty odzianego?",
+				"en": "But what went you out to see? A man clothed in soft garments?"
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w077",
@@ -1021,6 +1418,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "lecz",
+						"en": "but"
 					}
 				},
 				{
@@ -1032,6 +1433,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "co",
+						"en": "what"
 					}
 				},
 				{
@@ -1045,6 +1450,10 @@
 						"tense": "perf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "wyszliście",
+						"en": "went you out"
 					}
 				},
 				{
@@ -1058,6 +1467,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zobaczyć",
+						"en": "to see"
 					}
 				},
 				{
@@ -1070,6 +1483,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "człowieka",
+						"en": "a man"
 					}
 				},
 				{
@@ -1082,7 +1499,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "w miękkie",
+						"en": "in soft"
+					}
 				},
 				{
 					"id": "w083",
@@ -1099,7 +1520,11 @@
 						"voice": "pass",
 						"conj": 4
 					},
-					"head": "w081"
+					"head": "w081",
+					"gloss": {
+						"pl": "odzianego",
+						"en": "clothed"
+					}
 				}
 			]
 		},
@@ -1108,6 +1533,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Oto ci, którzy w miękkie szaty się odziewają, w domach królewskich są.",
+				"en": "Behold, they that are clothed in soft garments are in the houses of kings."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w084",
@@ -1115,6 +1558,10 @@
 					"lemma": "ecce",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "oto",
+						"en": "behold"
 					}
 				},
 				{
@@ -1126,6 +1573,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którzy",
+						"en": "they that"
 					}
 				},
 				{
@@ -1138,7 +1589,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "w miękkie",
+						"en": "in soft"
+					}
 				},
 				{
 					"id": "w087",
@@ -1153,6 +1608,10 @@
 						"mood": "ind",
 						"voice": "pass",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "są odziani",
+						"en": "are clothed"
 					}
 				},
 				{
@@ -1163,7 +1622,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w089"
+					"head": "w089",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w089",
@@ -1175,6 +1638,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "domach",
+						"en": "the houses"
 					}
 				},
 				{
@@ -1187,6 +1654,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "królów",
+						"en": "of kings"
 					}
 				},
 				{
@@ -1201,6 +1672,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "są",
+						"en": "are"
 					}
 				}
 			]
@@ -1210,6 +1685,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Ale coście wyszli oglądać? Proroka? Zaiste mówię wam, i więcej niż proroka.",
+				"en": "But what went you out to see? A prophet? Yea, I tell you, and more than a prophet."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w092",
@@ -1217,6 +1710,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "lecz",
+						"en": "but"
 					}
 				},
 				{
@@ -1228,6 +1725,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "co",
+						"en": "what"
 					}
 				},
 				{
@@ -1241,6 +1742,10 @@
 						"tense": "perf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "wyszliście",
+						"en": "went you out"
 					}
 				},
 				{
@@ -1254,6 +1759,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zobaczyć",
+						"en": "to see"
 					}
 				},
 				{
@@ -1267,6 +1776,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "proroka",
+						"en": "a prophet"
 					}
 				},
 				{
@@ -1275,6 +1788,10 @@
 					"lemma": "etiam",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zaiste",
+						"en": "yea"
 					}
 				},
 				{
@@ -1289,6 +1806,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "mówię",
+						"en": "I say"
 					}
 				},
 				{
@@ -1300,6 +1821,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "wam",
+						"en": "to you"
 					}
 				},
 				{
@@ -1308,6 +1833,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -1316,6 +1845,10 @@
 					"lemma": "plus",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "więcej",
+						"en": "more"
 					}
 				},
 				{
@@ -1324,6 +1857,10 @@
 					"lemma": "quam",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "niż",
+						"en": "than"
 					}
 				},
 				{
@@ -1337,6 +1874,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "proroka",
+						"en": "a prophet"
 					}
 				}
 			]
@@ -1346,6 +1887,24 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Ten bowiem jest, o którym napisano: Oto ja posyłam Anioła mego przed obliczem Twoim, który przygotuje drogę Twoją przed Tobą.",
+				"en": "For this is he of whom it is written: Behold, I send My angel before Thy face, who shall prepare Thy way before Thee."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Matthew 11:2-10"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w104",
@@ -1356,6 +1915,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "ten",
+						"en": "this"
 					}
 				},
 				{
@@ -1369,6 +1932,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
 					}
 				},
 				{
@@ -1378,6 +1945,10 @@
 					"lemma": "enim",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bowiem",
+						"en": "for"
 					}
 				},
 				{
@@ -1388,7 +1959,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w108"
+					"head": "w108",
+					"gloss": {
+						"pl": "o",
+						"en": "of"
+					}
 				},
 				{
 					"id": "w108",
@@ -1399,6 +1974,10 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którym",
+						"en": "whom"
 					}
 				},
 				{
@@ -1415,7 +1994,11 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"head": "w110"
+					"head": "w110",
+					"gloss": {
+						"pl": "napisane",
+						"en": "written"
+					}
 				},
 				{
 					"id": "w110",
@@ -1429,6 +2012,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "it is"
 					}
 				},
 				{
@@ -1437,6 +2024,10 @@
 					"lemma": "ecce",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "oto",
+						"en": "behold"
 					}
 				},
 				{
@@ -1447,6 +2038,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "ja",
+						"en": "I"
 					}
 				},
 				{
@@ -1461,6 +2056,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "posyłam",
+						"en": "send"
 					}
 				},
 				{
@@ -1473,6 +2072,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Anioła",
+						"en": "angel"
 					}
 				},
 				{
@@ -1485,7 +2088,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w114"
+					"head": "w114",
+					"gloss": {
+						"pl": "mego",
+						"en": "My"
+					}
 				},
 				{
 					"id": "w116",
@@ -1495,7 +2102,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w117"
+					"head": "w117",
+					"gloss": {
+						"pl": "przed",
+						"en": "before"
+					}
 				},
 				{
 					"id": "w117",
@@ -1507,6 +2118,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "obliczem",
+						"en": "face"
 					}
 				},
 				{
@@ -1520,7 +2135,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w117"
+					"head": "w117",
+					"gloss": {
+						"pl": "Twoim",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w119",
@@ -1531,6 +2150,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -1545,6 +2168,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "przygotuje",
+						"en": "shall prepare"
 					}
 				},
 				{
@@ -1557,6 +2184,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "drogę",
+						"en": "way"
 					}
 				},
 				{
@@ -1569,7 +2200,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w121"
+					"head": "w121",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w123",
@@ -1579,7 +2214,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w124"
+					"head": "w124",
+					"gloss": {
+						"pl": "przed",
+						"en": "before"
+					}
 				},
 				{
 					"id": "w124",
@@ -1590,9 +2229,38 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobą",
+						"en": "Thee"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The gospel of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-ii-adventus-evangelium/",
+			"apparatus": "witnesses/proprium.dominica-ii-adventus-evangelium/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

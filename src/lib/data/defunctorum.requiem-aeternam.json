@@ -9,33 +9,49 @@
 	"ids": {
 		"next": 15
 	},
-	"status": "working-edition",
-	"notes": "The brief suffrage for the faithful departed printed in the Enchiridion Indulgentiarum.",
-	"source": {
-		"method": "Transcribed from the 1952 Enchiridion Indulgentiarum and collated against the current Holy See Enchiridion Indulgentiarum.",
-		"witnesses": "witnesses/defunctorum.requiem-aeternam/",
-		"apparatus": "witnesses/defunctorum.requiem-aeternam/apparatus.json"
+	"about": {
+		"pl": "Krótka modlitwa za wiernych zmarłych w brzmieniu łacińskim Enchiridion Indulgentiarum z 1952 r. Prosi dla nich o wieczny odpoczynek i światłość wiekuistą, a kończy się życzeniem, aby spoczywali w pokoju.",
+		"en": "The brief suffrage for the faithful departed, in the Latin of the 1952 Enchiridion Indulgentiarum. It asks eternal rest and perpetual light for them, and closes with the wish that they rest in peace."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 582, p. 450",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			}
 		],
-		"review": "accepted"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 582, p. 450",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s001",
 			"type": "verse",
+			"translation": {
+				"pl": "Wieczny odpoczynek racz im dać, Panie, a światłość wiekuista niechaj im świeci.",
+				"en": "Eternal rest grant unto them, O Lord, and let perpetual light shine upon them."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Wieczny odpoczynek, p. 20",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Requiem aeternam"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Réquiem",
@@ -47,7 +63,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w001"
+					"id": "w001",
+					"gloss": {
+						"pl": "odpoczynek",
+						"en": "rest"
+					}
 				},
 				{
 					"form": "ætérnam",
@@ -59,7 +79,11 @@
 						"gender": "f"
 					},
 					"head": "w001",
-					"id": "w002"
+					"id": "w002",
+					"gloss": {
+						"pl": "wieczny",
+						"en": "eternal"
+					}
 				},
 				{
 					"form": "dona",
@@ -73,7 +97,11 @@
 						"number": "sg",
 						"conj": 1
 					},
-					"id": "w003"
+					"id": "w003",
+					"gloss": {
+						"pl": "daj",
+						"en": "grant"
+					}
 				},
 				{
 					"form": "eis",
@@ -85,7 +113,11 @@
 						"gender": "m"
 					},
 					"id": "w004",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "im",
+						"en": "unto them"
+					}
 				},
 				{
 					"form": "Dómine",
@@ -98,7 +130,11 @@
 						"decl": 2
 					},
 					"id": "w005",
-					"post": ";"
+					"post": ";",
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
+					}
 				},
 				{
 					"form": "et",
@@ -106,7 +142,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w006"
+					"id": "w006",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "lux",
@@ -118,7 +158,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w007"
+					"id": "w007",
+					"gloss": {
+						"pl": "światłość",
+						"en": "light"
+					}
 				},
 				{
 					"form": "perpétua",
@@ -130,7 +174,11 @@
 						"gender": "f"
 					},
 					"head": "w007",
-					"id": "w008"
+					"id": "w008",
+					"gloss": {
+						"pl": "wiekuista",
+						"en": "perpetual"
+					}
 				},
 				{
 					"form": "lúceat",
@@ -144,7 +192,11 @@
 						"person": 3,
 						"conj": 2
 					},
-					"id": "w009"
+					"id": "w009",
+					"gloss": {
+						"pl": "niech świeci",
+						"en": "may shine"
+					}
 				},
 				{
 					"form": "eis",
@@ -156,13 +208,36 @@
 						"gender": "m"
 					},
 					"id": "w010",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "im",
+						"en": "unto them"
+					}
 				}
 			]
 		},
 		{
 			"id": "s002",
 			"type": "verse",
+			"translation": {
+				"pl": "Niech odpoczywają w pokoju wiecznym.",
+				"en": "May they rest in peace."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Wieczny odpoczynek, p. 20",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Requiem aeternam"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Requiéscant",
@@ -176,7 +251,11 @@
 						"person": 3,
 						"conj": 3
 					},
-					"id": "w011"
+					"id": "w011",
+					"gloss": {
+						"pl": "niech odpoczywają",
+						"en": "may they rest"
+					}
 				},
 				{
 					"form": "in",
@@ -186,7 +265,11 @@
 						"governs": "abl"
 					},
 					"head": "w013",
-					"id": "w012"
+					"id": "w012",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"form": "pace",
@@ -199,13 +282,36 @@
 						"decl": 3
 					},
 					"id": "w013",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "pokoju",
+						"en": "peace"
+					}
 				}
 			]
 		},
 		{
 			"id": "s003",
 			"type": "verse",
+			"translation": {
+				"pl": "Amen.",
+				"en": "Amen."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Wieczny odpoczynek, p. 20",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Requiem aeternam"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Amen",
@@ -214,9 +320,38 @@
 						"pos": "intj"
 					},
 					"id": "w014",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The brief suffrage for the faithful departed printed in the Enchiridion Indulgentiarum.",
+		"source": {
+			"method": "Transcribed from the 1952 Enchiridion Indulgentiarum and collated against the current Holy See Enchiridion Indulgentiarum.",
+			"witnesses": "witnesses/defunctorum.requiem-aeternam/",
+			"apparatus": "witnesses/defunctorum.requiem-aeternam/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "accepted"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		}
+	}
 }

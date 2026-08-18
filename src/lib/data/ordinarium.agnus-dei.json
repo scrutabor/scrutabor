@@ -9,40 +9,44 @@
 	"ids": {
 		"next": 26
 	},
-	"status": "working-edition",
-	"notes": "The threefold Agnus Dei of the Ordo Missae in its ordinary form, said at the commixture before Communion. Rubric s01 quotes the 1962 rubric as witness do prints it (line 297), with the house i for its j; rubric s05 quotes the rubric for Masses for the dead (line 306), whose variant petitions (dona eis réquiem, sempitérnam) are a different recension and are not encoded here.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence and no accidental variants — the two editions agree token for token, so this text carries no apparatus.",
-		"witnesses": "witnesses/ordinarium.agnus-dei/"
+	"about": {
+		"pl": "Aklamacja podejmuje słowa św. Jana Chrzciciela z J 1,29. Ewangeliczne qui tollit peccátum mundi w trzeciej osobie liczby pojedynczej staje się bezpośrednim zwrotem qui tollis peccáta mundi. Według Liber Pontificalis papież Sergiusz I (687–701) nakazał, aby duchowieństwo i lud śpiewali ją podczas łamania Ciała Pańskiego.",
+		"en": "The acclamation adapts Saint John the Baptist's words in John 1:29. The Gospel's third-person singular qui tollit peccátum mundi becomes the direct address qui tollis peccáta mundi. According to the Liber Pontificalis, Pope Sergius I (687–701) ordered the clergy and people to sing it during the breaking of the Lord's Body."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Evangelium secundum Ioannem",
+				"locator": "1, 29",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-ioannem_lt.html#1"
+			},
+			{
+				"title": "Liber Pontificalis, Vita Sergii I",
+				"locator": "n. 14",
+				"url": "https://www.documentacatholicaomnia.eu/01p/0687-0701%2C_SS_Sergius_I%2C_Vita_Operaque_%5BEx_Libro_Pontificali%5D%2C_MLT.pdf#page=10"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Evangelium secundum Ioannem",
+				"locator": "1, 29",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-ioannem_lt.html#1"
+			},
+			{
+				"title": "Liber Pontificalis, Vita Sergii I",
+				"locator": "n. 14",
+				"url": "https://www.documentacatholicaomnia.eu/01p/0687-0701%2C_SS_Sergius_I%2C_Vita_Operaque_%5BEx_Libro_Pontificali%5D%2C_MLT.pdf#page=10"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Cooperit Calicem, genuflectit, surgit, et inclinatus Sacramento, iunctis manibus, et ter pectus percutiens, intellegibili voce dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan przykrywa kielich, przyklęka i wstaje. Pochylony przed Najświętszym Sakramentem, ze złożonymi rękami, mówi Agnus Dei głosem słyszalnym i trzy razy uderza się w piersi — przy każdym „miserére nobis” i przy „dona nobis pacem”. We Mszy śpiewanej Agnus Dei śpiewają wszyscy wierni.",
+				"en": "The priest covers the chalice, genuflects and rises. Bowing before the Blessed Sacrament with joined hands, he says the Agnus Dei in an audible voice and strikes his breast three times — at each “miserére nobis” and at “dona nobis pacem”. At a sung Mass all the faithful sing it."
 			}
 		},
 		{
@@ -60,6 +64,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Baranku Boży, który gładzisz grzechy świata: zmiłuj się nad nami.",
+				"en": "Lamb of God, You take away the sins of the world: have mercy on us."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -71,6 +79,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Baranku",
+						"en": "Lamb"
+					},
+					"function": {
+						"pl": "Mianownik użyty w bezpośrednim zwrocie. Regularny wołacz brzmiałby agne.",
+						"en": "Nominative used in direct address. The regular vocative would be agne."
 					}
 				},
 				{
@@ -84,6 +100,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -95,6 +115,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -109,6 +133,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "gładzisz",
+						"en": "take away"
+					},
+					"function": {
+						"pl": "Druga osoba liczby pojedynczej. Zaimek qui odnosi się do „Agnus” (w001).",
+						"en": "Second-person singular. The relative qui refers to “Agnus” (w001)."
 					}
 				},
 				{
@@ -121,6 +153,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "grzechy",
+						"en": "the sins"
 					}
 				},
 				{
@@ -134,6 +170,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
 					}
 				},
 				{
@@ -148,6 +188,10 @@
 						"mood": "imp",
 						"voice": "dep",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
 					}
 				},
 				{
@@ -159,6 +203,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
 					}
 				}
 			]
@@ -178,6 +226,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Baranku Boży, który gładzisz grzechy świata: zmiłuj się nad nami.",
+				"en": "Lamb of God, You take away the sins of the world: have mercy on us."
+			},
 			"words": [
 				{
 					"id": "w009",
@@ -189,6 +241,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Baranku",
+						"en": "Lamb"
 					}
 				},
 				{
@@ -202,6 +258,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -213,6 +273,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -227,6 +291,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "gładzisz",
+						"en": "take away"
 					}
 				},
 				{
@@ -239,6 +307,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "grzechy",
+						"en": "the sins"
 					}
 				},
 				{
@@ -252,6 +324,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
 					}
 				},
 				{
@@ -266,6 +342,10 @@
 						"mood": "imp",
 						"voice": "dep",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
 					}
 				},
 				{
@@ -277,6 +357,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
 					}
 				}
 			]
@@ -296,6 +380,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Baranku Boży, który gładzisz grzechy świata: obdarz nas pokojem.",
+				"en": "Lamb of God, You take away the sins of the world: grant us peace."
+			},
 			"words": [
 				{
 					"id": "w017",
@@ -307,6 +395,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Baranku",
+						"en": "Lamb"
 					}
 				},
 				{
@@ -320,6 +412,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -331,6 +427,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -345,6 +445,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "gładzisz",
+						"en": "take away"
 					}
 				},
 				{
@@ -357,6 +461,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "grzechy",
+						"en": "the sins"
 					}
 				},
 				{
@@ -370,6 +478,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
 					}
 				},
 				{
@@ -384,6 +496,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "obdarz",
+						"en": "grant"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący łączący się z „nobis” (w024) w celowniku i „pacem” (w025) w bierniku.",
+						"en": "Imperative governing “nobis” (w024) in the dative and “pacem” (w025) in the accusative."
 					}
 				},
 				{
@@ -394,6 +514,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -407,6 +531,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "pokojem",
+						"en": "peace"
 					}
 				}
 			]
@@ -415,14 +543,72 @@
 			"id": "s05",
 			"type": "rubric",
 			"text": "In Missis Defunctorum non dicitur miserére nobis, sed eius loco dona eis requiem, et in tertio additur sempitérnam.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Ta rubryka dotyczy Mszy za zmarłych: zamiast „miserére nobis” mówi się wtedy „dona eis réquiem”, a za trzecim razem „dona eis réquiem sempitérnam”. Kapłan nie uderza się wówczas w piersi, a pocałunku pokoju się nie przekazuje.",
+				"en": "This rubric governs Masses for the Dead: there “dona eis réquiem” takes the place of “miserére nobis”, and the third time “dona eis réquiem sempitérnam”. At those Masses the priest does not strike his breast, and the kiss of peace is not given."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae, rubric at the Agnus Dei in Masses for the dead",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae, rubric at the Agnus Dei in Masses for the dead",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The threefold Agnus Dei of the Ordo Missae in its ordinary form, said at the commixture before Communion. Rubric s01 quotes the 1962 rubric as witness do prints it (line 297), with the house i for its j; rubric s05 quotes the rubric for Masses for the dead (line 306), whose variant petitions (dona eis réquiem, sempitérnam) are a different recension and are not encoded here.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence and no accidental variants — the two editions agree token for token, so this text carries no apparatus.",
+			"witnesses": "witnesses/ordinarium.agnus-dei/"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s05": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		}
+	}
 }

@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 51
 	},
-	"status": "working-edition",
-	"notes": "The commemoration of the living, with the silence in which the priest names those he prays for; the missal marks it N. et N., and the edition omits the slot as it does in Te ígitur, carrying the pause as its own rubric segment. MEMÉNTO at w001 is the future imperative of memini — the only kind that verb has (meménto, plural mementóte); Whitaker's Words tags it present, Collatinus future, so the token stands as an argued divergence in the agreement report. CÓGNITA at w012 and NOTA at w015 are tagged as adjectives, with both analyzers, rather than as participles of cognósco and nosco. SE at w029 carries neither number nor gender: the reflexive marks neither, and only the case is fixed, by pro. Its provenance names Whitaker's alone beside the edition: Collatinus does not carry the bare reflexive ablative, and the token records only the analyzer that confirms it. SUÍSQUE at w030 is masculine on the persons it stands for, not on its own form.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.memento-vivorum/",
-		"apparatus": "witnesses/ordinarium.memento-vivorum/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Modlitwa zaczyna się od prośby, aby Bóg pamiętał o swoich sługach i służebnicach. Kapłan składa wtedy ręce i modli się w milczeniu za tych, których pragnie wspomnieć. Następnie modlitwa obejmuje wszystkich obecnych i wymienia intencje: odkupienie ich dusz, nadzieję zbawienia oraz pomyślność.",
+		"en": "The prayer begins by asking God to remember His servants and handmaids. The priest then joins his hands and prays in silence for those he intends to name. The prayer then embraces all who are present and names its intentions: the redemption of their souls, the hope of salvation, and their well-being."
 	},
 	"segments": [
 		{
@@ -38,6 +19,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Pamiętaj, Boże, o swoich sługach i służebnicach",
+				"en": "Remember, Lord, Your servants and handmaids"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -52,13 +37,13 @@
 						"mood": "imp",
 						"voice": "act"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "pamiętaj",
+						"en": "be mindful"
+					},
+					"function": {
+						"pl": "Druga osoba liczby pojedynczej trybu rozkazującego czasu przyszłego.",
+						"en": "Second-person singular future imperative."
 					}
 				},
 				{
@@ -72,6 +57,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -84,6 +73,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "sług",
+						"en": "servants"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby mnogiej zależny od „Meménto” (w001).",
+						"en": "Genitive plural governed by “Meménto” (w001)."
 					}
 				},
 				{
@@ -96,6 +93,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "i służebnic",
+						"en": "and handmaids"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby mnogiej z dołączonym spójnikiem „-que”.",
+						"en": "Genitive plural with the conjunction “-que” attached."
 					}
 				},
 				{
@@ -108,7 +113,15 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "Thy"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby mnogiej rodzaju żeńskiego. Zgadza się z „famularúmque” (w004).",
+						"en": "Feminine genitive plural, agreeing with “famularúmque” (w004)."
+					}
 				}
 			]
 		},
@@ -116,13 +129,9 @@
 			"id": "s02",
 			"type": "rubric",
 			"text": "Iungit manus, orat aliquantulum pro quibus orare intendit: deinde manibus extensis prosequitur:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan składa ręce i modli się chwilę w milczeniu za tych, których chce wspomnieć. Potem rozkłada ręce i mówi dalej.",
+				"en": "The priest joins his hands and prays a while in silence for those he means to remember, then spreads his hands and goes on."
 			}
 		},
 		{
@@ -130,6 +139,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "i o wszystkich tu zgromadzonych, których wiara i oddanie są Ci znane. Za nich składamy Tobie:",
+				"en": "and all gathered here, whose faith and devotion are known to You. For them we offer to You:"
+			},
 			"words": [
 				{
 					"id": "w006",
@@ -137,6 +150,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -149,7 +166,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w008",
@@ -166,7 +187,15 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "obecnych",
+						"en": "here present"
+					},
+					"function": {
+						"pl": "Imiesłów użyty rzeczownikowo w dopełniaczu liczby mnogiej.",
+						"en": "A participle used as a noun in the genitive plural."
+					}
 				},
 				{
 					"id": "w009",
@@ -177,6 +206,10 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "których",
+						"en": "whose"
 					}
 				},
 				{
@@ -187,6 +220,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ci",
+						"en": "to Thee"
 					}
 				},
 				{
@@ -199,6 +236,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "wiara",
+						"en": "faith"
 					}
 				},
 				{
@@ -211,7 +252,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "znana",
+						"en": "known"
+					}
 				},
 				{
 					"id": "w013",
@@ -224,6 +269,14 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
+					},
+					"function": {
+						"pl": "Wspólne orzeczenie dla „fides cognita” i „nota devótio”.",
+						"en": "The shared verb of “fides cognita” and “nota devótio”."
 					}
 				},
 				{
@@ -232,6 +285,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -244,7 +301,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "wiadoma",
+						"en": "noted"
+					}
 				},
 				{
 					"id": "w016",
@@ -257,6 +318,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "pobożność",
+						"en": "devotion"
 					}
 				},
 				{
@@ -267,7 +332,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w018",
@@ -278,6 +347,10 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "których",
+						"en": "whom"
 					}
 				},
 				{
@@ -288,6 +361,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ci",
+						"en": "to Thee"
 					}
 				},
 				{
@@ -302,6 +379,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "składamy",
+						"en": "we offer"
 					}
 				}
 			]
@@ -311,6 +392,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "albo oni sami składają Tobie tę Ofiarę uwielbienia za siebie oraz za wszystkich swoich bliskich: aby dostąpić odkupienia dusz swoich i osiągnąć zbawienie,",
+				"en": "or they themselves offer You this sacrifice of praise, for themselves and all who are dear to them: for the redemption of their souls, in hope of health and well-being,"
+			},
 			"words": [
 				{
 					"id": "w021",
@@ -318,6 +403,10 @@
 					"lemma": "vel",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "albo",
+						"en": "or"
 					}
 				},
 				{
@@ -329,6 +418,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którzy",
+						"en": "who"
 					}
 				},
 				{
@@ -339,6 +432,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ci",
+						"en": "to Thee"
 					}
 				},
 				{
@@ -352,6 +449,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "składają",
+						"en": "offer"
 					}
 				},
 				{
@@ -363,6 +464,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "tę",
+						"en": "this"
 					}
 				},
 				{
@@ -375,6 +480,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "ofiarę",
+						"en": "sacrifice"
 					}
 				},
 				{
@@ -388,6 +497,36 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "chwały",
+						"en": "of praise"
+					},
+					"function": {
+						"pl": "Wyrażenie „sacrifícium laudis” występuje w Ps 49, 14 i 106, 22.",
+						"en": "The phrase “sacrifícium laudis” occurs in Ps 49:14 and 106:22."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Psalm 49:14"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Psalm 106:22"
+							}
+						],
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Psalm 49:14"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Psalm 106:22"
+							}
+						]
 					}
 				},
 				{
@@ -398,7 +537,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w029",
@@ -408,13 +551,13 @@
 						"pos": "pron",
 						"case": "abl"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "siebie",
+						"en": "themselves"
+					},
+					"function": {
+						"pl": "„pro” (w028) wymaga ablativu. Forma „se” sama nie wskazuje liczby ani rodzaju.",
+						"en": "“pro” (w028) requires the ablative. The form “se” itself marks neither number nor gender."
 					}
 				},
 				{
@@ -427,7 +570,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "i swoich",
+						"en": "and for their own"
+					},
+					"function": {
+						"pl": "Ablativus liczby mnogiej po „pro” (w028), z dołączonym spójnikiem „-que”.",
+						"en": "Ablative plural after “pro” (w028), with the conjunction “-que” attached."
+					}
 				},
 				{
 					"id": "w031",
@@ -440,7 +591,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w032",
@@ -450,7 +605,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w033"
+					"head": "w033",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w033",
@@ -462,6 +621,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "odkupienie",
+						"en": "the redemption"
+					},
+					"function": {
+						"pl": "Ablativus po „pro” (w032): „za odkupienie ich dusz”.",
+						"en": "Ablative after “pro” (w032): “for the redemption of their souls”."
 					}
 				},
 				{
@@ -474,6 +641,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dusz",
+						"en": "of the souls"
 					}
 				},
 				{
@@ -487,7 +658,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "swoich",
+						"en": "their"
+					}
 				},
 				{
 					"id": "w036",
@@ -497,7 +672,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w037"
+					"head": "w037",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w037",
@@ -509,6 +688,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "nadzieję",
+						"en": "the hope"
 					}
 				},
 				{
@@ -521,6 +704,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zbawienia",
+						"en": "of salvation"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „spe” (w037), współrzędny z „incolumitátis” (w040).",
+						"en": "A genitive dependent on “spe” (w037), coordinated with “incolumitátis” (w040)."
 					}
 				},
 				{
@@ -529,6 +720,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -541,6 +736,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "bezpieczeństwa",
+						"en": "of safety"
 					}
 				},
 				{
@@ -554,7 +753,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w040"
+					"head": "w040",
+					"gloss": {
+						"pl": "swego",
+						"en": "their"
+					}
 				}
 			]
 		},
@@ -563,6 +766,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "i wznoszą swoje modlitwy ku Tobie, Bogu wiecznemu, żywemu i prawdziwemu.",
+				"en": "and paying their homage to You, the eternal God, living and true."
+			},
 			"words": [
 				{
 					"id": "w042",
@@ -572,6 +779,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "i Tobie",
+						"en": "and to Thee"
 					}
 				},
 				{
@@ -586,6 +797,36 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "oddają",
+						"en": "they pay"
+					},
+					"function": {
+						"pl": "Wyrażenie „vota réddere” występuje w Ps 115, 14 i 18.",
+						"en": "The phrase “vota réddere” occurs in Ps 115:14 and 18."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Psalm 115:14"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Psalm 115:18"
+							}
+						],
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Psalm 115:14"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Psalm 115:18"
+							}
+						]
 					}
 				},
 				{
@@ -598,6 +839,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "śluby",
+						"en": "vows"
 					}
 				},
 				{
@@ -610,7 +855,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w044"
+					"head": "w044",
+					"gloss": {
+						"pl": "swoje",
+						"en": "their"
+					}
 				},
 				{
 					"id": "w046",
@@ -622,7 +871,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w047"
+					"head": "w047",
+					"gloss": {
+						"pl": "wiecznemu",
+						"en": "eternal"
+					}
 				},
 				{
 					"id": "w047",
@@ -635,6 +888,28 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bogu",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Celownik wskazujący adresata ślubów. Wyrażenie „Deo vivo et vero” występuje w 1 Tes 1, 9.",
+						"en": "Dative marking the recipient of the vows. The phrase “Deo vivo et vero” occurs in 1 Thess 1:9."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "1 Thessalonians 1:9"
+							}
+						],
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "1 Thessalonians 1:9"
+							}
+						]
 					}
 				},
 				{
@@ -647,7 +922,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w047"
+					"head": "w047",
+					"gloss": {
+						"pl": "żywemu",
+						"en": "living"
+					}
 				},
 				{
 					"id": "w049",
@@ -655,6 +934,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -668,9 +951,72 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w047"
+					"head": "w047",
+					"gloss": {
+						"pl": "prawdziwemu",
+						"en": "true"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The commemoration of the living, with the silence in which the priest names those he prays for; the missal marks it N. et N., and the edition omits the slot as it does in Te ígitur, carrying the pause as its own rubric segment. MEMÉNTO at w001 is the future imperative of memini — the only kind that verb has (meménto, plural mementóte); Whitaker's Words tags it present, Collatinus future, so the token stands as an argued divergence in the agreement report. CÓGNITA at w012 and NOTA at w015 are tagged as adjectives, with both analyzers, rather than as participles of cognósco and nosco. SE at w029 carries neither number nor gender: the reflexive marks neither, and only the case is fixed, by pro. Its provenance names Whitaker's alone beside the edition: Collatinus does not carry the bare reflexive ablative, and the token records only the analyzer that confirms it. SUÍSQUE at w030 is masculine on the persons it stands for, not on its own form.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.memento-vivorum/",
+			"apparatus": "witnesses/ordinarium.memento-vivorum/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s02": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w001": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w029": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

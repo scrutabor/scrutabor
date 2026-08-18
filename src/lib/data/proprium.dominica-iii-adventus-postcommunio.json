@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 19
 	},
-	"status": "working-edition",
-	"notes": "The postcommunion of the Third Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-iii-adventus-postcommunio/",
-		"apparatus": "witnesses/proprium.dominica-iii-adventus-postcommunio/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Modlitwa po Komunii III Niedzieli Adwentu. Sakrament nie jest tu celem, lecz przygotowaniem — święta dopiero nadchodzą.",
+		"en": "The postcommunion of the Third Sunday of Advent. The sacrament is not the end here but the preparation — the feasts are still to come."
 	},
 	"segments": [
 		{
@@ -38,6 +19,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Błagamy, Panie, łaskawości Twojej: aby te boskie pomoce oczyściły nas z wad i przygotowały na przyszłe święta. Przez Pana.",
+				"en": "We implore Thy clemency, O Lord: that these divine helps may cleanse us from our vices and prepare us for the coming feasts. Through our Lord."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -52,6 +37,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "błagamy",
+						"en": "we implore"
 					}
 				},
 				{
@@ -65,6 +54,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -77,6 +70,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "łaskawości",
+						"en": "clemency"
 					}
 				},
 				{
@@ -90,7 +87,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "Twojej",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w005",
@@ -98,6 +99,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
 					}
 				},
 				{
@@ -109,6 +114,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "te",
+						"en": "these"
 					}
 				},
 				{
@@ -121,7 +130,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "boskie",
+						"en": "divine"
+					}
 				},
 				{
 					"id": "w008",
@@ -134,6 +147,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "pomoce",
+						"en": "helps"
 					}
 				},
 				{
@@ -144,7 +161,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w010"
+					"head": "w010",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w010",
@@ -156,6 +177,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wad",
+						"en": "vices"
 					}
 				},
 				{
@@ -173,7 +198,11 @@
 						"voice": "pass",
 						"conj": 1
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "oczyszczonych",
+						"en": "cleansed"
+					}
 				},
 				{
 					"id": "w012",
@@ -183,7 +212,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "na",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w013",
@@ -195,6 +228,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "święta",
+						"en": "the feasts"
 					}
 				},
 				{
@@ -211,7 +248,11 @@
 						"voice": "act",
 						"conj": 4
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "przyszłe",
+						"en": "coming"
+					}
 				},
 				{
 					"id": "w015",
@@ -221,6 +262,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -236,6 +281,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "przygotowały",
+						"en": "may prepare"
 					}
 				},
 				{
@@ -246,7 +295,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "przez",
+						"en": "Through"
+					}
 				},
 				{
 					"id": "w018",
@@ -259,9 +312,38 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "the Lord"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The postcommunion of the Third Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-iii-adventus-postcommunio/",
+			"apparatus": "witnesses/proprium.dominica-iii-adventus-postcommunio/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

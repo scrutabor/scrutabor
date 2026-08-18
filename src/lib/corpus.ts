@@ -194,10 +194,111 @@ export function narrowLexicon(
 	return { lemmata, senses };
 }
 
-const entry = (text: unknown, pl: unknown, en: unknown): TextEntry => ({
-	text: text as TextDocument,
-	glosses: { pl: bindProse(pl as GlossDocument), en: en as GlossDocument }
-});
+/** Per-language values that hang off a segment, and off a word. */
+const SEGMENT_LANG = [
+	'translation',
+	'translation_citations',
+	'narrative',
+	'narrative_citations'
+] as const;
+const WORD_LANG = ['gloss', 'function', 'function_citations', 'note'] as const;
+const EDITORIAL = [
+	'status',
+	'notes',
+	'source',
+	'analysis_defaults',
+	'analysis_defaults_words'
+] as const;
+
+/**
+ * One stored document becomes the three the reading code has always read.
+ *
+ * The corpus joined the Latin, both gloss layers and the editorial block at
+ * schema 0.14.0, and the app stores that document. It does not follow that
+ * every surface should learn the new shape on the same day: a component that
+ * asks for the Polish gloss of a word is right to keep asking for exactly
+ * that. So the whole of the app's knowledge of two shapes lives here, in one
+ * function, and everything downstream sees `{ text, glosses }` unchanged.
+ *
+ * When the reading surfaces move to the reader edition, this goes with them.
+ */
+function splitDocument(doc: Record<string, unknown>): TextEntry {
+	const editorial = (doc.editorial ?? {}) as Record<string, Record<string, unknown>>;
+	const version = doc.schema_version;
+
+	const text: Record<string, unknown> = { schema_version: version };
+	for (const [key, value] of Object.entries(doc)) {
+		if (['schema_version', 'segments', 'editorial', 'about', 'about_citations'].includes(key))
+			continue;
+		text[key] = value;
+	}
+	for (const key of EDITORIAL) if (key in editorial) text[key] = editorial[key];
+
+	const layers: Record<Lang, Record<string, unknown>> = { pl: {}, en: {} };
+	for (const lang of ['pl', 'en'] as Lang[]) {
+		const layer: Record<string, unknown> = {
+			schema_version: version,
+			text: doc.id,
+			lang,
+			status: editorial.status ?? 'working-edition'
+		};
+		for (const key of ['about', 'about_citations'] as const) {
+			const byLang = doc[key] as Record<string, unknown> | undefined;
+			if (byLang && lang in byLang) layer[key] = byLang[lang];
+		}
+		layer.analysis_defaults = editorial.analysis_defaults ?? {};
+		layer.segments = {};
+		layer.words = {};
+		layers[lang] = layer;
+	}
+
+	const segments = (doc.segments as Record<string, unknown>[]).map((row) => {
+		const segment: Record<string, unknown> = {};
+		for (const [key, value] of Object.entries(row)) {
+			if ((SEGMENT_LANG as readonly string[]).includes(key) || key === 'words') continue;
+			segment[key] = value;
+		}
+		const rowId = row.id as string;
+		const segEditorial = (editorial.segments as Record<string, { analysis?: unknown }>)?.[rowId];
+		if (segEditorial?.analysis) segment.analysis = segEditorial.analysis;
+		for (const key of SEGMENT_LANG) {
+			for (const [lang, value] of Object.entries((row[key] ?? {}) as Record<string, unknown>)) {
+				const bucket = layers[lang as Lang].segments as Record<string, Record<string, unknown>>;
+				(bucket[rowId] ??= {})[key] = value;
+			}
+		}
+		if (row.words) {
+			segment.words = (row.words as Record<string, unknown>[]).map((cell) => {
+				const word: Record<string, unknown> = {};
+				for (const [key, value] of Object.entries(cell)) {
+					if (!(WORD_LANG as readonly string[]).includes(key)) word[key] = value;
+				}
+				const cellId = cell.id as string;
+				const wordEditorial = (editorial.words as Record<string, { analysis?: unknown }>)?.[cellId];
+				if (wordEditorial?.analysis) word.analysis = wordEditorial.analysis;
+				for (const key of WORD_LANG) {
+					for (const [lang, value] of Object.entries(
+						(cell[key] ?? {}) as Record<string, unknown>
+					)) {
+						const bucket = layers[lang as Lang].words as Record<string, Record<string, unknown>>;
+						(bucket[cellId] ??= {})[key] = value;
+					}
+				}
+				return word;
+			});
+		}
+		return segment;
+	});
+	text.segments = segments;
+
+	return {
+		text: text as unknown as TextDocument,
+		glosses: {
+			pl: bindProse(layers.pl as unknown as GlossDocument),
+			en: layers.en as unknown as GlossDocument
+		}
+	};
+}
 
 /**
  * Keyed by `category/slug`, matching the reading route params — derived
@@ -214,12 +315,11 @@ function buildIndex(): Record<string, TextEntry> {
 	const texts: Record<string, TextEntry> = {};
 	for (const [path, module] of Object.entries(files)) {
 		const name = path.slice('./data/'.length, -'.json'.length);
-		// glosses (id.pl / id.en) and the three lexicon files are not texts
-		if (name.startsWith('lexicon') || /\.(pl|en)$/.test(name)) continue;
-		const pl = files[`./data/${name}.pl.json`];
-		const en = files[`./data/${name}.en.json`];
-		if (!pl || !en) throw new Error(`${name} is missing a gloss — re-run vendor-corpus`);
-		texts[name.replace('.', '/')] = entry(module.default, pl.default, en.default);
+		// the three lexicon files are not texts
+		if (name.startsWith('lexicon')) continue;
+		const doc = module.default as Record<string, unknown>;
+		if (!doc.segments) throw new Error(`${name} has no segments — re-run vendor-corpus`);
+		texts[name.replace('.', '/')] = splitDocument(doc);
 	}
 	return texts;
 }

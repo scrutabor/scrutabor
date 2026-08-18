@@ -51,88 +51,16 @@ const copy = (name, value) => {
 	writeFileSync(join(DATA, name), JSON.stringify(value, null, '\t') + '\n');
 };
 
-// The corpus keeps ONE document per text since schema 0.14.0: the Latin, both
-// gloss layers and an editorial block, joined. The app still reads three, and
-// there is no reason for it to change on the same day the corpus did — so the
-// split happens here, at the boundary, and src/lib/data keeps the shape it has
-// always had. When the app moves to the reader edition this whole function
-// goes with it.
-const SEG_LANG = ['translation', 'translation_citations', 'narrative', 'narrative_citations'];
-const WORD_LANG = ['gloss', 'function', 'function_citations', 'note'];
-
-function splitLayers(doc) {
-	const editorial = doc.editorial ?? {};
-	// The split is a shape, not a schema. It carries the version of the
-	// document it came from, or the vendored corpus would claim two.
-	const version = doc.schema_version;
-	const text = { schema_version: version };
-	for (const [key, value] of Object.entries(doc)) {
-		if (['schema_version', 'segments', 'editorial', 'about', 'about_citations'].includes(key))
-			continue;
-		text[key] = value;
-	}
-	for (const key of ['status', 'notes', 'source', 'analysis_defaults', 'analysis_defaults_words']) {
-		if (key in editorial) text[key] = editorial[key];
-	}
-
-	const layers = {};
-	for (const lang of ['pl', 'en']) {
-		// The key order the vendored files have always had, so joining the
-		// corpus shows up as no diff at all on this side.
-		const layer = {
-			schema_version: version,
-			text: doc.id,
-			lang,
-			status: editorial.status ?? 'working-edition'
-		};
-		for (const key of ['about', 'about_citations']) {
-			if (doc[key] && lang in doc[key]) layer[key] = doc[key][lang];
-		}
-		layer.analysis_defaults = editorial.analysis_defaults ?? {};
-		layer.segments = {};
-		layer.words = {};
-		layers[lang] = layer;
-	}
-
-	text.segments = doc.segments.map((row) => {
-		const segment = {};
-		for (const [key, value] of Object.entries(row)) {
-			if (SEG_LANG.includes(key) || key === 'words') continue;
-			segment[key] = value;
-		}
-		if (editorial.segments?.[row.id]?.analysis)
-			segment.analysis = editorial.segments[row.id].analysis;
-		for (const key of SEG_LANG) {
-			for (const [lang, value] of Object.entries(row[key] ?? {})) {
-				(layers[lang].segments[row.id] ??= {})[key] = value;
-			}
-		}
-		if (row.words) {
-			segment.words = row.words.map((cell) => {
-				const word = Object.fromEntries(
-					Object.entries(cell).filter(([key]) => !WORD_LANG.includes(key))
-				);
-				if (editorial.words?.[cell.id]?.analysis) word.analysis = editorial.words[cell.id].analysis;
-				for (const key of WORD_LANG) {
-					for (const [lang, value] of Object.entries(cell[key] ?? {})) {
-						(layers[lang].words[cell.id] ??= {})[key] = value;
-					}
-				}
-				return word;
-			});
-		}
-		return segment;
-	});
-	return { text, layers };
-}
-
+// One document per text, copied as it is. The corpus joined the Latin, both
+// gloss layers and the editorial block at schema 0.14.0, and this vendors that
+// document rather than taking it apart again -- the app stores what the corpus
+// stores. Splitting it into the three shapes the reading code expects happens
+// once, in lib/corpus.ts, and that is the only place in the app that knows
+// both shapes.
 for (const path of textFiles()) {
 	const doc = read(path);
-	const id = doc.id;
-	if (!id) throw new Error(`${path} has no id`);
-	const { text, layers } = splitLayers(doc);
-	copy(`${id}.json`, text);
-	for (const lang of ['pl', 'en']) copy(`${id}.${lang}.json`, layers[lang]);
+	if (!doc.id) throw new Error(`${path} has no id`);
+	copy(`${doc.id}.json`, doc);
 }
 
 copy('lexicon.json', read(join(CORPUS, 'lexicon/lemmata.json')));

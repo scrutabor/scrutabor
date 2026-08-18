@@ -9,41 +9,34 @@
 	"ids": {
 		"next": 47
 	},
-	"status": "working-edition",
-	"notes": "The first of the three prayers the priest says bowed over the altar before receiving; the prayer for peace, followed where the peace is given by the exchange Pax tecum / Et cum spíritu tuo. The prayer and pax are omitted in Masses for the dead, and the corpus carries that rubric as its closing segment. W008-W014 quote John 14:27 verbatim as far as do vobis; there the prayer stops, dropping the rest of the verse, which continues non quomodo mundus dat. EÁMQUE at w023 is the accusative of is with the enclitic -que; two feminine nouns stand within reach of it, fidem and Ecclésiæ, and the corpus does not settle the question in the morphology, which records only the form's own case, number and gender. The two infinitives it governs — to give peace and to gather into one — fit the Church, and that is how the prayer is read; the word's note says so and says why. NE at w015 is the prohibitive adverb, as the corpus rules it elsewhere.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variants are adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.qui-dixisti/",
-		"apparatus": "witnesses/ordinarium.qui-dixisti/apparatus.json"
+	"about": {
+		"pl": "Pierwsza z trzech modlitw odmawianych przez kapłana po cichu przed Komunią. Jej początek przytacza J 14, 27. Kapłan prosi, aby Chrystus nie zważał na jego grzechy, lecz na wiarę Kościoła, i obdarzył Kościół pokojem oraz jednością. Potem, gdzie się go przekazuje, następuje pocałunek pokoju, a we Mszach za zmarłych nie przekazuje się pokoju ani nie odmawia tej modlitwy.",
+		"en": "The first of three prayers said secretly by the priest before Communion. Its opening quotes John 14:27. The priest asks Christ to regard not his sins but the faith of the Church, and to grant the Church peace and unity. The kiss of peace follows where it is given, and in Masses for the Dead neither the peace nor this prayer is said."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Evangelium secundum Ioannem",
+				"locator": "14, 27",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-ioannem_lt.html#14"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Evangelium secundum Ioannem",
+				"locator": "14, 27",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-ioannem_lt.html#14"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Deinde, iunctis manibus super Altare, inclinatus dicit secrete sequentes Orationes:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan pochyla się nad ołtarzem, ręce złożone na nim, i odmawia po cichu trzy następujące modlitwy.",
+				"en": "The priest bows over the altar with his hands joined upon it, and says the three prayers that follow silently."
 			}
 		},
 		{
@@ -51,6 +44,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Panie Jezu Chryste, Ty powiedziałeś swoim Apostołom:",
+				"en": "Lord Jesus Christ, who said to Your Apostles:"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -62,6 +59,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -73,6 +74,14 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezu",
+						"en": "Jesus"
+					},
+					"function": {
+						"pl": "Wołacz liczby pojedynczej od Iesus.",
+						"en": "Singular vocative of Iesus."
 					}
 				},
 				{
@@ -86,6 +95,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chryste",
+						"en": "Christ"
 					}
 				},
 				{
@@ -97,6 +110,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "któryś",
+						"en": "who"
 					}
 				},
 				{
@@ -111,6 +128,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "rzekł",
+						"en": "didst say"
 					}
 				},
 				{
@@ -123,6 +144,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Apostołom",
+						"en": "to the Apostles"
+					},
+					"function": {
+						"pl": "Celownik jako dopełnienie „dixísti” (w005).",
+						"en": "Dative complement of “dixísti” (w005)."
 					}
 				},
 				{
@@ -136,7 +165,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "Twoim",
+						"en": "Thine"
+					}
 				}
 			]
 		},
@@ -145,6 +178,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Pokój wam zostawiam, pokój mój wam daję:",
+				"en": "Peace I leave you, My peace I give you:"
+			},
 			"words": [
 				{
 					"id": "w008",
@@ -156,6 +193,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Pokój",
+						"en": "Peace"
 					}
 				},
 				{
@@ -170,6 +211,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "zostawiam",
+						"en": "I leave"
 					}
 				},
 				{
@@ -181,6 +226,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "wam",
+						"en": "to you"
 					}
 				},
 				{
@@ -193,6 +242,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "pokój",
+						"en": "peace"
 					}
 				},
 				{
@@ -205,7 +258,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "mój",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w013",
@@ -219,6 +276,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "daję",
+						"en": "I give"
 					}
 				},
 				{
@@ -230,6 +291,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "wam",
+						"en": "to you"
 					}
 				}
 			]
@@ -239,6 +304,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "nie zważaj na grzechy moje, lecz na wiarę swojego Kościoła;",
+				"en": "look not on my sins, but on the faith of Your Church;"
+			},
 			"words": [
 				{
 					"id": "w015",
@@ -246,6 +315,14 @@
 					"lemma": "ne",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
+					},
+					"function": {
+						"pl": "Z „respícias” (w016) w trybie łączącym tworzy prośbę przeczącą.",
+						"en": "With the subjunctive “respícias” (w016), it forms a negative petition."
 					}
 				},
 				{
@@ -260,6 +337,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "patrz",
+						"en": "look upon"
 					}
 				},
 				{
@@ -272,6 +353,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "grzechy",
+						"en": "sins"
 					}
 				},
 				{
@@ -285,7 +370,15 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "moje",
+						"en": "my"
+					},
+					"function": {
+						"pl": "Zgadza się z „peccáta” (w017). Kapłan mówi o własnych grzechach.",
+						"en": "Agrees with “peccáta” (w017). The priest speaks of his own sins."
+					}
 				},
 				{
 					"id": "w019",
@@ -293,6 +386,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "lecz",
+						"en": "but"
 					}
 				},
 				{
@@ -305,6 +402,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "wiarę",
+						"en": "the faith"
+					},
+					"function": {
+						"pl": "Drugie dopełnienie „respícias” (w016), przeciwstawione „peccáta” (w017).",
+						"en": "The second object of “respícias” (w016), contrasted with “peccáta” (w017)."
 					}
 				},
 				{
@@ -317,6 +422,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Kościoła",
+						"en": "of the Church"
 					}
 				},
 				{
@@ -330,7 +439,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "Twego",
+						"en": "Thy"
+					}
 				}
 			]
 		},
@@ -339,6 +452,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "i zgodnie z Twoją wolą napełniaj go pokojem i doprowadź do pełnej jedności:",
+				"en": "and graciously grant her peace and unity in accordance with Your will:"
+			},
 			"words": [
 				{
 					"id": "w023",
@@ -349,6 +466,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "i go",
+						"en": "and her"
+					},
+					"function": {
+						"pl": "Zaimek odnosi się do „Ecclésiæ” (w021): prośba o pokój i jedność dotyczy Kościoła.",
+						"en": "The pronoun refers to “Ecclésiæ” (w021): the petition for peace and unity concerns the Church."
 					}
 				},
 				{
@@ -359,7 +484,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "według",
+						"en": "according to"
+					}
 				},
 				{
 					"id": "w025",
@@ -371,6 +500,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "woli",
+						"en": "will"
 					}
 				},
 				{
@@ -383,7 +516,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "Twojej",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w027",
@@ -395,6 +532,14 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "obdarzyć pokojem",
+						"en": "to give peace to"
+					},
+					"function": {
+						"pl": "Pierwszy z dwóch bezokoliczników zależnych od „dignéris” (w030).",
+						"en": "The first of two infinitives depending on “dignéris” (w030)."
 					}
 				},
 				{
@@ -403,6 +548,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -415,6 +564,14 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "zjednoczyć",
+						"en": "to gather into one"
+					},
+					"function": {
+						"pl": "Drugi bezokolicznik zależny od „dignéris” (w030).",
+						"en": "The second infinitive depending on “dignéris” (w030)."
 					}
 				},
 				{
@@ -430,6 +587,14 @@
 						"mood": "subj",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "racz",
+						"en": "vouchsafe"
+					},
+					"function": {
+						"pl": "Tryb łączący wyrażający prośbę. Łączy się z bezokolicznikami „pacificáre” (w027) i „coadunáre” (w029).",
+						"en": "Subjunctive expressing a petition. It takes the infinitives “pacificáre” (w027) and “coadunáre” (w029)."
 					}
 				}
 			]
@@ -439,6 +604,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Który żyjesz i królujesz na wieki wieków. Amen.",
+				"en": "Who live and reign for ever and ever. Amen."
+			},
 			"words": [
 				{
 					"id": "w031",
@@ -449,6 +618,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Który",
+						"en": "Who"
 					}
 				},
 				{
@@ -463,6 +636,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "żyjesz",
+						"en": "livest"
 					}
 				},
 				{
@@ -471,6 +648,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -485,6 +666,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "królujesz",
+						"en": "reignest"
 					}
 				},
 				{
@@ -497,6 +682,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bóg",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Mianownik w apozycji do podmiotu „Qui” (w031).",
+						"en": "Nominative in apposition to the subject “Qui” (w031)."
 					}
 				},
 				{
@@ -507,7 +700,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w038"
+					"head": "w038",
+					"gloss": {
+						"pl": "przez",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w037",
@@ -519,7 +716,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w038"
+					"head": "w038",
+					"gloss": {
+						"pl": "wszystkie",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w038",
@@ -531,6 +732,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
 					}
 				},
 				{
@@ -544,6 +749,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
 					}
 				},
 				{
@@ -553,6 +762,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -561,20 +774,19 @@
 			"id": "s07",
 			"type": "rubric",
 			"text": "Si danda est pax, osculatur Altare, et dans pacem, dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do",
-					"mr-ritus-servandus"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Jeżeli przekazuje się pokój, kapłan całuje ołtarz i mówi:",
+				"en": "If the peace is given, the priest kisses the altar and says:"
 			}
 		},
 		{
 			"id": "s08",
 			"type": "verse",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Pokój z tobą.",
+				"en": "Peace be with you."
+			},
 			"words": [
 				{
 					"id": "w041",
@@ -586,6 +798,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Pokój",
+						"en": "Peace"
 					}
 				},
 				{
@@ -597,6 +813,14 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "z tobą",
+						"en": "with you"
+					},
+					"function": {
+						"pl": "Łączy przyimek „cum” z zaimkiem „tu”.",
+						"en": "Combines the preposition cum with the pronoun tu."
 					}
 				}
 			]
@@ -615,6 +839,10 @@
 					"source": "DMS 25 a"
 				}
 			},
+			"translation": {
+				"pl": "I z duchem twoim.",
+				"en": "And with your spirit."
+			},
 			"words": [
 				{
 					"id": "w043",
@@ -622,6 +850,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -632,7 +864,15 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w045"
+					"head": "w045",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					},
+					"function": {
+						"pl": "Wymaga ablativu: „spíritu” (w045) i „tuo” (w046).",
+						"en": "Takes the ablative: “spíritu” (w045) and “tuo” (w046)."
+					}
 				},
 				{
 					"id": "w045",
@@ -644,6 +884,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "duchem",
+						"en": "spirit"
 					}
 				},
 				{
@@ -657,7 +901,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w045"
+					"head": "w045",
+					"gloss": {
+						"pl": "twoim",
+						"en": "your"
+					}
 				}
 			]
 		},
@@ -665,14 +913,68 @@
 			"id": "s10",
 			"type": "rubric",
 			"text": "In Missis Defunctorum non datur pax, neque dicitur oratio Domine Iesu Christe, qui dixisti.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "We Mszach za zmarłych nie przekazuje się pokoju i tę modlitwę się opuszcza.",
+				"en": "In Masses for the Dead the peace is not given, and this prayer is left out."
 			}
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The first of the three prayers the priest says bowed over the altar before receiving; the prayer for peace, followed where the peace is given by the exchange Pax tecum / Et cum spíritu tuo. The prayer and pax are omitted in Masses for the dead, and the corpus carries that rubric as its closing segment. W008-W014 quote John 14:27 verbatim as far as do vobis; there the prayer stops, dropping the rest of the verse, which continues non quomodo mundus dat. EÁMQUE at w023 is the accusative of is with the enclitic -que; two feminine nouns stand within reach of it, fidem and Ecclésiæ, and the corpus does not settle the question in the morphology, which records only the form's own case, number and gender. The two infinitives it governs — to give peace and to gather into one — fit the Church, and that is how the prayer is read; the word's note says so and says why. NE at w015 is the prohibitive adverb, as the corpus rules it elsewhere.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variants are adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.qui-dixisti/",
+			"apparatus": "witnesses/ordinarium.qui-dixisti/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s07": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do",
+						"mr-ritus-servandus"
+					],
+					"review": "pending"
+				}
+			},
+			"s10": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		}
+	}
 }

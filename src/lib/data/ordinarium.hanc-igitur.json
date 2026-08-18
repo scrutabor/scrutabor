@@ -9,41 +9,18 @@
 	"ids": {
 		"next": 40
 	},
-	"status": "working-edition",
-	"notes": "The prayer said with hands spread over the offerings, and the point at which, by universal custom rather than by rubric, the server's bell announces the approaching consecration. Its second half is the addition the Liber Pontificalis credits to Gregory the Great. PLACÁTUS at w014 is tagged as the adjective, with both analyzers, rather than as a participle of placo; it agrees with the subject of accípias, so the sense is that God receives the offering already appeased. ÉRIPI at w027 and NUMERÁRI at w034 are present passive infinitives depending on iúbeas; the two clauses share that one verb across a long separation.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.hanc-igitur/",
-		"apparatus": "witnesses/ordinarium.hanc-igitur/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Kapłan odmawia tę modlitwę po cichu, trzymając ręce rozłożone nad darami. Prosi Boga, aby przyjął tę ofiarę, napełnił nasze życie pokojem, zachował nas od potępienia i zaliczył do grona wybranych.",
+		"en": "The priest says this prayer secretly, holding his hands spread over the offerings. He asks God to accept this offering, order our days in peace, deliver us from damnation and number us among the elect."
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Tenens manus expansas super Oblata, dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan trzyma rozłożone ręce nad darami, a krótko przed Przeistoczeniem ministrant uprzedza wiernych dzwonkiem.",
+				"en": "The priest holds his hands spread over the offerings, and a little before the Consecration the server warns the faithful with the bell."
 			}
 		},
 		{
@@ -51,6 +28,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Boże, przyjmij łaskawie tę Ofiarę od nas, sług Twoich, i całego ludu Twego;",
+				"en": "Therefore, Lord, we pray: graciously accept this oblation of our service, that of Your whole family;"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -61,6 +42,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "tę",
+						"en": "this"
 					}
 				},
 				{
@@ -69,6 +54,10 @@
 					"lemma": "igitur",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "więc",
+						"en": "therefore"
 					}
 				},
 				{
@@ -81,6 +70,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ofiarę",
+						"en": "oblation"
 					}
 				},
 				{
@@ -93,6 +86,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "służby",
+						"en": "of the service"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „oblatiónem” (w003): „ofiara naszej służby”.",
+						"en": "Genitive dependent on “oblatiónem” (w003): “the offering of our service”."
 					}
 				},
 				{
@@ -106,7 +107,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "naszej",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w006",
@@ -114,6 +119,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -122,6 +131,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "także",
+						"en": "also"
 					}
 				},
 				{
@@ -134,7 +147,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "całej",
+						"en": "the whole"
+					}
 				},
 				{
 					"id": "w009",
@@ -146,6 +163,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "rodziny",
+						"en": "household"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „oblatiónem” (w003), równoległy do „servitútis” (w004).",
+						"en": "Genitive depending on “oblatiónem” (w003), parallel to “servitútis” (w004)."
 					}
 				},
 				{
@@ -159,7 +184,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "Twojej",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w011",
@@ -175,12 +204,13 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "prosimy",
+						"en": "we beseech"
+					},
+					"function": {
+						"pl": "Czasownik prośby, od którego zależy zdanie z „ut” (w013).",
+						"en": "A verb of asking on which the clause with “ut” (w013) depends."
 					}
 				},
 				{
@@ -194,6 +224,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -202,6 +236,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "byś",
+						"en": "that"
 					}
 				},
 				{
@@ -214,7 +252,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "przejednany",
+						"en": "appeased"
+					},
+					"function": {
+						"pl": "Mianownik liczby pojedynczej odnoszący się do domyślnego podmiotu „accípias” (w015).",
+						"en": "Nominative singular referring to the unstated subject of “accípias” (w015)."
+					}
 				},
 				{
 					"id": "w015",
@@ -229,6 +275,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "przyjął",
+						"en": "accept"
 					}
 				}
 			]
@@ -238,6 +288,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "napełnij nasze życie swoim pokojem, zachowaj nas od wiecznego potępienia i dołącz do grona swoich wybranych.",
+				"en": "order our days in Your peace, and command that we be delivered from eternal damnation and counted among the flock of those You have chosen."
+			},
 			"words": [
 				{
 					"id": "w016",
@@ -249,6 +303,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "i dni",
+						"en": "and the days"
+					},
+					"function": {
+						"pl": "Biernik liczby mnogiej. Enklityka „-que” łączy tę prośbę z poprzednią.",
+						"en": "Accusative plural. The enclitic “-que” joins this petition to the preceding one."
 					}
 				},
 				{
@@ -261,7 +323,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "nasze",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w018",
@@ -271,7 +337,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w020"
+					"head": "w020",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w019",
@@ -283,7 +353,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w020"
+					"head": "w020",
+					"gloss": {
+						"pl": "Twoim",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w020",
@@ -295,6 +369,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "pokoju",
+						"en": "peace"
 					}
 				},
 				{
@@ -310,6 +388,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "rozporządził",
+						"en": "dispose"
 					}
 				},
 				{
@@ -318,6 +400,10 @@
 					"lemma": "atque",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -328,7 +414,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w024",
@@ -340,7 +430,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "wiecznego",
+						"en": "eternal"
+					}
 				},
 				{
 					"id": "w025",
@@ -352,6 +446,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "potępienia",
+						"en": "damnation"
 					}
 				},
 				{
@@ -362,6 +460,14 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
+					},
+					"function": {
+						"pl": "Biernik jako podmiot bezokolicznika „éripi” (w027).",
+						"en": "Accusative subject of the infinitive “éripi” (w027)."
 					}
 				},
 				{
@@ -375,6 +481,14 @@
 						"mood": "inf",
 						"voice": "pass",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "być wyrwanymi",
+						"en": "be snatched"
+					},
+					"function": {
+						"pl": "Bezokolicznik bierny zależny od „iúbeas” (w032), podobnie jak „numerári” (w034).",
+						"en": "A passive infinitive depending on “iúbeas” (w032), as does “numerári” (w034)."
 					}
 				},
 				{
@@ -383,6 +497,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -393,7 +511,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w033"
+					"head": "w033",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w030",
@@ -405,7 +527,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wybranych",
+						"en": "of the elect"
+					}
 				},
 				{
 					"id": "w031",
@@ -417,7 +543,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w032",
@@ -431,6 +561,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "każ",
+						"en": "bid"
 					}
 				},
 				{
@@ -443,6 +577,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "trzodzie",
+						"en": "the flock"
+					},
+					"function": {
+						"pl": "Ablativus zależny od „in” (w029): w gronie wybranych.",
+						"en": "Ablative governed by “in” (w029): among the elect."
 					}
 				},
 				{
@@ -456,6 +598,10 @@
 						"mood": "inf",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "być policzonymi",
+						"en": "be numbered"
 					}
 				}
 			]
@@ -464,13 +610,9 @@
 			"id": "s04",
 			"type": "rubric",
 			"text": "Iungit manus.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan składa ręce.",
+				"en": "The priest joins his hands."
 			}
 		},
 		{
@@ -478,6 +620,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Przez Chrystusa Pana naszego. Amen.",
+				"en": "Through Christ our Lord. Amen."
+			},
 			"words": [
 				{
 					"id": "w035",
@@ -487,7 +633,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w036",
@@ -499,6 +649,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -511,6 +665,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -524,7 +682,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w037"
+					"head": "w037",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w039",
@@ -533,9 +695,71 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The prayer said with hands spread over the offerings, and the point at which, by universal custom rather than by rubric, the server's bell announces the approaching consecration. Its second half is the addition the Liber Pontificalis credits to Gregory the Great. PLACÁTUS at w014 is tagged as the adjective, with both analyzers, rather than as a participle of placo; it agrees with the subject of accípias, so the sense is that God receives the offering already appeased. ÉRIPI at w027 and NUMERÁRI at w034 are present passive infinitives depending on iúbeas; the two clauses share that one verb across a long separation.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.hanc-igitur/",
+			"apparatus": "witnesses/ordinarium.hanc-igitur/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s04": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w011": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

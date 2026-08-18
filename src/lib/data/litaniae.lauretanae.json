@@ -9,33 +9,110 @@
 	"ids": {
 		"next": 395
 	},
-	"status": "working-edition",
-	"notes": "The current Roman form. Its historical core is collated against the 1952 Enchiridion; later invocations are supplied from the Holy See documents that inserted them in 1980, 1995 and 2020.",
-	"source": {
-		"method": "The 1952 Enchiridion supplies the historical core; Mater Ecclesiae, Regina familiae, Mater misericordiae, Mater spei and Solacium migrantium are supplied by the respective Holy See decrees of 1980, 1995 and 2020. Regina Poloniae is supplied by the Sacred Congregation of Rites' approval of 14 January 1920 and the current Polish bishops' text. The resulting Roman recension for Poland is collated against TPL and the cited decrees.",
-		"witnesses": "witnesses/litaniae.lauretanae/",
-		"apparatus": "witnesses/litaniae.lauretanae/apparatus.json"
+	"about": {
+		"pl": "Litania loretańska w postaci, w jakiej modli się nią Polska: tekst rzymski z jednym wezwaniem własnym. Do tekstu poświadczonego w Enchiridion Indulgentiarum z 1952 r. Stolica Apostolska dodała Mater Ecclesiae (1980), Regina familiae (1995) oraz w 2020 r. Mater misericordiae, Mater spei i Solacium migrantium, a obok nich Polska mówi Regina Poloniae, zatwierdzone dla niej w 1920 r. Wezwanie Mater misericordiae Polska otrzymała już w 2014 r., a list z 2020 r. przeniósł je na miejsce, które zajmuje tutaj, po Mater Ecclesiae.",
+		"en": "The Litany of Loreto as Poland prays it: the Roman text with one invocation of its own. To the text attested by the 1952 Enchiridion Indulgentiarum the Holy See added Mater Ecclesiae (1980), Regina familiae (1995) and, in 2020, Mater misericordiae, Mater spei and Solacium migrantium, and beside them Poland says Regina Poloniae, approved for it in 1920. Mater misericordiae had already been granted to Poland in 2014, and the letter of 2020 moved it to the place it holds here, after Mater Ecclesiae."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 319, pp. 200–203",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			},
+			{
+				"title": "Notitiae 16 (1980)",
+				"locator": "Mater Ecclesiae, p. 159",
+				"url": "https://www.cultodivino.va/content/dam/cultodivino/rivista-notitiae/1980/notitiae-16-%281980%29/Notitiae-165-1980.pdf"
+			},
+			{
+				"title": "Notitiae 32 (1996)",
+				"locator": "Regina familiae, pp. 189–190; litterae circulares of 31 December 1995",
+				"url": "https://www.cultodivino.va/content/dam/cultodivino/rivista-notitiae/1990/notitiae-32-%281996%29/Notitiae-357-1996.pdf"
+			},
+			{
+				"title": "Congregation for Divine Worship, circular letter",
+				"locator": "20 June 2020",
+				"url": "https://press.vatican.va/content/salastampa/it/bollettino/pubblico/2020/06/20/0350/00805.html"
+			},
+			{
+				"title": "Acta Nuntiaturae Polonae LVII/8",
+				"locator": "Sacred Congregation of Rites approval of 14 January 1920; archival letter, p. 115",
+				"url": "https://pau.krakow.pl/ANP/ANP_LVII_8_2022.pdf"
+			},
+			{
+				"title": "Polish Bishops’ Conference, Polish prayer texts",
+				"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+				"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+			},
+			{
+				"title": "Diocese of Legnica, Litania loretańska — wyjaśnienia dotyczące poprawnej wersji",
+				"locator": "decree of the Congregation for Divine Worship and the Discipline of the Sacraments, 8 November 2014",
+				"url": "https://diecezja.legnica.pl/aktualnosci/informacje,5/litania-loretanska-wyjasnienia-dotyczace-poprawnej-wersji,1839"
+			}
 		],
-		"review": "accepted"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 319, pp. 200–203",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			},
+			{
+				"title": "Notitiae 16 (1980)",
+				"locator": "Mater Ecclesiae, p. 159",
+				"url": "https://www.cultodivino.va/content/dam/cultodivino/rivista-notitiae/1980/notitiae-16-%281980%29/Notitiae-165-1980.pdf"
+			},
+			{
+				"title": "Notitiae 32 (1996)",
+				"locator": "Regina familiae, pp. 189–190; litterae circulares of 31 December 1995",
+				"url": "https://www.cultodivino.va/content/dam/cultodivino/rivista-notitiae/1990/notitiae-32-%281996%29/Notitiae-357-1996.pdf"
+			},
+			{
+				"title": "Congregation for Divine Worship, circular letter",
+				"locator": "20 June 2020",
+				"url": "https://press.vatican.va/content/salastampa/it/bollettino/pubblico/2020/06/20/0350/00805.html"
+			},
+			{
+				"title": "Acta Nuntiaturae Polonae LVII/8",
+				"locator": "Sacred Congregation of Rites approval of 14 January 1920; archival letter, p. 115",
+				"url": "https://pau.krakow.pl/ANP/ANP_LVII_8_2022.pdf"
+			},
+			{
+				"title": "Polish Bishops’ Conference, Polish prayer texts",
+				"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+				"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+			},
+			{
+				"title": "Diocese of Legnica, Litania loretańska — wyjaśnienia dotyczące poprawnej wersji",
+				"locator": "decree of the Congregation for Divine Worship and the Discipline of the Sacraments, 8 November 2014",
+				"url": "https://diecezja.legnica.pl/aktualnosci/informacje,5/litania-loretanska-wyjasnienia-dotyczace-poprawnej-wersji,1839"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s001",
 			"type": "verse",
+			"translation": {
+				"pl": "Kyrie eleison.",
+				"en": "Lord, have mercy."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Kýrie",
@@ -48,13 +125,9 @@
 					},
 					"id": "w001",
 					"post": ",",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -68,13 +141,37 @@
 						"voice": "act"
 					},
 					"id": "w002",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				}
 			]
 		},
 		{
 			"id": "s002",
 			"type": "verse",
+			"translation": {
+				"pl": "Christe, eleison.",
+				"en": "Christ, have mercy."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Christe",
@@ -87,7 +184,11 @@
 						"decl": 2
 					},
 					"id": "w003",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Chryste",
+						"en": "Christ"
+					}
 				},
 				{
 					"form": "eléison",
@@ -100,13 +201,37 @@
 						"voice": "act"
 					},
 					"id": "w004",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				}
 			]
 		},
 		{
 			"id": "s003",
 			"type": "verse",
+			"translation": {
+				"pl": "Kyrie eleison.",
+				"en": "Lord, have mercy."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Kýrie",
@@ -119,13 +244,9 @@
 					},
 					"id": "w005",
 					"post": ",",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -139,7 +260,11 @@
 						"voice": "act"
 					},
 					"id": "w006",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				}
 			]
 		},
@@ -147,6 +272,26 @@
 			"id": "s004",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Chryste, usłysz nas.",
+				"en": "Christ, hear us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Christe",
@@ -159,7 +304,11 @@
 						"decl": 2
 					},
 					"id": "w007",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Chryste",
+						"en": "Christ"
+					}
 				},
 				{
 					"form": "audi",
@@ -173,7 +322,11 @@
 						"person": 2,
 						"conj": 4
 					},
-					"id": "w008"
+					"id": "w008",
+					"gloss": {
+						"pl": "usłysz",
+						"en": "hear"
+					}
 				},
 				{
 					"form": "nos",
@@ -184,7 +337,11 @@
 						"number": "pl"
 					},
 					"id": "w009",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -192,6 +349,26 @@
 			"id": "s005",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Chryste, wysłuchaj nas.",
+				"en": "Christ, graciously hear us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Christe",
@@ -204,7 +381,11 @@
 						"decl": 2
 					},
 					"id": "w010",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Chryste",
+						"en": "Christ"
+					}
 				},
 				{
 					"form": "exáudi",
@@ -218,7 +399,11 @@
 						"voice": "act",
 						"conj": 4
 					},
-					"id": "w011"
+					"id": "w011",
+					"gloss": {
+						"pl": "wysłuchaj",
+						"en": "graciously hear"
+					}
 				},
 				{
 					"form": "nos",
@@ -229,7 +414,11 @@
 						"number": "pl"
 					},
 					"id": "w012",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -237,6 +426,26 @@
 			"id": "s006",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Ojcze z nieba, Boże.",
+				"en": "God the Father of heaven."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Pater",
@@ -248,7 +457,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w013"
+					"id": "w013",
+					"gloss": {
+						"pl": "Ojcze",
+						"en": "Father"
+					}
 				},
 				{
 					"form": "de",
@@ -258,7 +471,11 @@
 						"governs": "abl"
 					},
 					"head": "w015",
-					"id": "w014"
+					"id": "w014",
+					"gloss": {
+						"pl": "z",
+						"en": "from"
+					}
 				},
 				{
 					"form": "cælis",
@@ -271,7 +488,11 @@
 						"decl": 2
 					},
 					"id": "w015",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "niebios",
+						"en": "the heavens"
+					}
 				},
 				{
 					"form": "Deus",
@@ -284,7 +505,11 @@
 						"decl": 2
 					},
 					"id": "w016",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
+					}
 				}
 			]
 		},
@@ -292,6 +517,26 @@
 			"id": "s007",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -305,7 +550,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w017"
+					"id": "w017",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -316,7 +565,11 @@
 						"number": "pl"
 					},
 					"id": "w018",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -324,6 +577,26 @@
 			"id": "s008",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Synu, Odkupicielu świata, Boże.",
+				"en": "God the Son, Redeemer of the world."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Fili",
@@ -336,7 +609,11 @@
 						"decl": 2
 					},
 					"id": "w019",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Synu",
+						"en": "Son"
+					}
 				},
 				{
 					"form": "Redémptor",
@@ -348,7 +625,11 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"id": "w020"
+					"id": "w020",
+					"gloss": {
+						"pl": "Odkupicielu",
+						"en": "Redeemer"
+					}
 				},
 				{
 					"form": "mundi",
@@ -361,7 +642,11 @@
 						"decl": 2
 					},
 					"id": "w021",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
+					}
 				},
 				{
 					"form": "Deus",
@@ -374,7 +659,11 @@
 						"decl": 2
 					},
 					"id": "w022",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
+					}
 				}
 			]
 		},
@@ -382,6 +671,26 @@
 			"id": "s009",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -395,7 +704,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w023"
+					"id": "w023",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -406,7 +719,11 @@
 						"number": "pl"
 					},
 					"id": "w024",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -414,6 +731,26 @@
 			"id": "s010",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Duchu Święty, Boże.",
+				"en": "God the Holy Spirit."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Spíritus",
@@ -425,7 +762,11 @@
 						"gender": "m",
 						"decl": 4
 					},
-					"id": "w025"
+					"id": "w025",
+					"gloss": {
+						"pl": "Duchu",
+						"en": "Spirit"
+					}
 				},
 				{
 					"form": "Sancte",
@@ -438,7 +779,11 @@
 					},
 					"head": "w025",
 					"id": "w026",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Święty",
+						"en": "Holy"
+					}
 				},
 				{
 					"form": "Deus",
@@ -451,7 +796,11 @@
 						"decl": 2
 					},
 					"id": "w027",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
+					}
 				}
 			]
 		},
@@ -459,6 +808,26 @@
 			"id": "s011",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -472,7 +841,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w028"
+					"id": "w028",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -483,7 +856,11 @@
 						"number": "pl"
 					},
 					"id": "w029",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -491,6 +868,26 @@
 			"id": "s012",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Święta Trójco, Jedyny Boże.",
+				"en": "Holy Trinity, one God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Sancta",
@@ -502,7 +899,11 @@
 						"gender": "f"
 					},
 					"head": "w031",
-					"id": "w030"
+					"id": "w030",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"form": "Trínitas",
@@ -515,7 +916,11 @@
 						"decl": 3
 					},
 					"id": "w031",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Trójco",
+						"en": "Trinity"
+					}
 				},
 				{
 					"form": "unus",
@@ -527,7 +932,11 @@
 						"gender": "m"
 					},
 					"head": "w033",
-					"id": "w032"
+					"id": "w032",
+					"gloss": {
+						"pl": "jedyny",
+						"en": "one"
+					}
 				},
 				{
 					"form": "Deus",
@@ -540,7 +949,11 @@
 						"decl": 2
 					},
 					"id": "w033",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Bóg",
+						"en": "God"
+					}
 				}
 			]
 		},
@@ -548,6 +961,26 @@
 			"id": "s013",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -561,7 +994,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w034"
+					"id": "w034",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -572,7 +1009,11 @@
 						"number": "pl"
 					},
 					"id": "w035",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -580,6 +1021,26 @@
 			"id": "s014",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Święta Maryjo.",
+				"en": "Holy Mary."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Sancta",
@@ -591,7 +1052,11 @@
 						"gender": "f"
 					},
 					"head": "w037",
-					"id": "w036"
+					"id": "w036",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"form": "María",
@@ -604,7 +1069,11 @@
 						"decl": 1
 					},
 					"id": "w037",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Maryjo",
+						"en": "Mary"
+					}
 				}
 			]
 		},
@@ -612,6 +1081,26 @@
 			"id": "s015",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -625,7 +1114,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w038"
+					"id": "w038",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -635,7 +1128,11 @@
 						"governs": "abl"
 					},
 					"head": "w040",
-					"id": "w039"
+					"id": "w039",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -646,7 +1143,11 @@
 						"number": "pl"
 					},
 					"id": "w040",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -654,6 +1155,26 @@
 			"id": "s016",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Święta Boża Rodzicielko.",
+				"en": "Holy Mother of God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Sancta",
@@ -665,7 +1186,11 @@
 						"gender": "f"
 					},
 					"head": "w043",
-					"id": "w041"
+					"id": "w041",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"form": "Dei",
@@ -677,7 +1202,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w042"
+					"id": "w042",
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					}
 				},
 				{
 					"form": "Génetrix",
@@ -690,7 +1219,11 @@
 						"decl": 3
 					},
 					"id": "w043",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Rodzicielko",
+						"en": "Mother"
+					}
 				}
 			]
 		},
@@ -698,6 +1231,26 @@
 			"id": "s017",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -711,7 +1264,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w044"
+					"id": "w044",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -721,7 +1278,11 @@
 						"governs": "abl"
 					},
 					"head": "w046",
-					"id": "w045"
+					"id": "w045",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -732,7 +1293,11 @@
 						"number": "pl"
 					},
 					"id": "w046",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -740,6 +1305,26 @@
 			"id": "s018",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Święta Panno nad pannami.",
+				"en": "Holy Virgin of virgins."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Sancta",
@@ -751,7 +1336,11 @@
 						"gender": "f"
 					},
 					"head": "w048",
-					"id": "w047"
+					"id": "w047",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"form": "Virgo",
@@ -763,7 +1352,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w048"
+					"id": "w048",
+					"gloss": {
+						"pl": "Panno",
+						"en": "Virgin"
+					}
 				},
 				{
 					"form": "vírginum",
@@ -776,7 +1369,11 @@
 						"decl": 3
 					},
 					"id": "w049",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Dziewic",
+						"en": "of virgins"
+					}
 				}
 			]
 		},
@@ -784,6 +1381,26 @@
 			"id": "s019",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -797,7 +1414,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w050"
+					"id": "w050",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -807,7 +1428,11 @@
 						"governs": "abl"
 					},
 					"head": "w052",
-					"id": "w051"
+					"id": "w051",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -818,7 +1443,11 @@
 						"number": "pl"
 					},
 					"id": "w052",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -826,6 +1455,26 @@
 			"id": "s020",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko Chrystusowa.",
+				"en": "Mother of Christ."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -837,7 +1486,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w053"
+					"id": "w053",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "Christi",
@@ -850,7 +1503,11 @@
 						"decl": 2
 					},
 					"id": "w054",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "of Christ"
+					}
 				}
 			]
 		},
@@ -858,6 +1515,26 @@
 			"id": "s021",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -871,7 +1548,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w055"
+					"id": "w055",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -881,7 +1562,11 @@
 						"governs": "abl"
 					},
 					"head": "w057",
-					"id": "w056"
+					"id": "w056",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -892,7 +1577,11 @@
 						"number": "pl"
 					},
 					"id": "w057",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -900,6 +1589,26 @@
 			"id": "s022",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko Kościoła.",
+				"en": "Mother of the Church."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -911,7 +1620,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w058"
+					"id": "w058",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "Ecclésiæ",
@@ -924,7 +1637,11 @@
 						"decl": 1
 					},
 					"id": "w059",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Kościoła",
+						"en": "of the Church"
+					}
 				}
 			]
 		},
@@ -932,6 +1649,26 @@
 			"id": "s023",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -945,7 +1682,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w060"
+					"id": "w060",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -955,7 +1696,11 @@
 						"governs": "abl"
 					},
 					"head": "w062",
-					"id": "w061"
+					"id": "w061",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -966,7 +1711,11 @@
 						"number": "pl"
 					},
 					"id": "w062",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -974,6 +1723,26 @@
 			"id": "s024",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko miłosierdzia.",
+				"en": "Mother of mercy."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -985,7 +1754,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w063"
+					"id": "w063",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "misericórdiæ",
@@ -998,7 +1771,11 @@
 						"decl": 1
 					},
 					"id": "w064",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "miłosierdzia",
+						"en": "of mercy"
+					}
 				}
 			]
 		},
@@ -1006,6 +1783,26 @@
 			"id": "s025",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1019,7 +1816,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w065"
+					"id": "w065",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1029,7 +1830,11 @@
 						"governs": "abl"
 					},
 					"head": "w067",
-					"id": "w066"
+					"id": "w066",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1040,7 +1845,11 @@
 						"number": "pl"
 					},
 					"id": "w067",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1048,6 +1857,26 @@
 			"id": "s026",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko łaski Bożej.",
+				"en": "Mother of divine grace."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -1059,7 +1888,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w068"
+					"id": "w068",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "divínæ",
@@ -1071,7 +1904,11 @@
 						"gender": "f"
 					},
 					"head": "w070",
-					"id": "w069"
+					"id": "w069",
+					"gloss": {
+						"pl": "Bożej",
+						"en": "of divine"
+					}
 				},
 				{
 					"form": "grátiæ",
@@ -1084,7 +1921,11 @@
 						"decl": 1
 					},
 					"id": "w070",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "łaski",
+						"en": "grace"
+					}
 				}
 			]
 		},
@@ -1092,6 +1933,26 @@
 			"id": "s027",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1105,7 +1966,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w071"
+					"id": "w071",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1115,7 +1980,11 @@
 						"governs": "abl"
 					},
 					"head": "w073",
-					"id": "w072"
+					"id": "w072",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1126,7 +1995,11 @@
 						"number": "pl"
 					},
 					"id": "w073",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1134,6 +2007,26 @@
 			"id": "s028",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko nadziei.",
+				"en": "Mother of hope."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -1145,7 +2038,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w074"
+					"id": "w074",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "spei",
@@ -1158,7 +2055,11 @@
 						"decl": 5
 					},
 					"id": "w075",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nadziei",
+						"en": "of hope"
+					}
 				}
 			]
 		},
@@ -1166,6 +2067,26 @@
 			"id": "s029",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1179,7 +2100,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w076"
+					"id": "w076",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1189,7 +2114,11 @@
 						"governs": "abl"
 					},
 					"head": "w078",
-					"id": "w077"
+					"id": "w077",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1200,7 +2129,11 @@
 						"number": "pl"
 					},
 					"id": "w078",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1208,6 +2141,26 @@
 			"id": "s030",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko nieskalana.",
+				"en": "Mother most pure."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -1219,7 +2172,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w079"
+					"id": "w079",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "puríssima",
@@ -1233,7 +2190,11 @@
 					},
 					"head": "w079",
 					"id": "w080",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "przeczysta",
+						"en": "most pure"
+					}
 				}
 			]
 		},
@@ -1241,6 +2202,26 @@
 			"id": "s031",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1254,7 +2235,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w081"
+					"id": "w081",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1264,7 +2249,11 @@
 						"governs": "abl"
 					},
 					"head": "w083",
-					"id": "w082"
+					"id": "w082",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1275,7 +2264,11 @@
 						"number": "pl"
 					},
 					"id": "w083",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1283,6 +2276,26 @@
 			"id": "s032",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko najczystsza.",
+				"en": "Mother most chaste."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -1294,7 +2307,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w084"
+					"id": "w084",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "castíssima",
@@ -1308,7 +2325,11 @@
 					},
 					"head": "w084",
 					"id": "w085",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "najczystsza",
+						"en": "most chaste"
+					}
 				}
 			]
 		},
@@ -1316,6 +2337,26 @@
 			"id": "s033",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1329,7 +2370,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w086"
+					"id": "w086",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1339,7 +2384,11 @@
 						"governs": "abl"
 					},
 					"head": "w088",
-					"id": "w087"
+					"id": "w087",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1350,7 +2399,11 @@
 						"number": "pl"
 					},
 					"id": "w088",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1358,6 +2411,26 @@
 			"id": "s034",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko dziewicza.",
+				"en": "Mother inviolate."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -1369,7 +2442,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w089"
+					"id": "w089",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "invioláta",
@@ -1382,7 +2459,11 @@
 					},
 					"head": "w089",
 					"id": "w090",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nienaruszona",
+						"en": "inviolate"
+					}
 				}
 			]
 		},
@@ -1390,6 +2471,26 @@
 			"id": "s035",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1403,7 +2504,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w091"
+					"id": "w091",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1413,7 +2518,11 @@
 						"governs": "abl"
 					},
 					"head": "w093",
-					"id": "w092"
+					"id": "w092",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1424,7 +2533,11 @@
 						"number": "pl"
 					},
 					"id": "w093",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1432,6 +2545,26 @@
 			"id": "s036",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko nienaruszona.",
+				"en": "Mother undefiled."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -1443,7 +2576,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w094"
+					"id": "w094",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "intemeráta",
@@ -1456,7 +2593,11 @@
 					},
 					"head": "w094",
 					"id": "w095",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nieskalana",
+						"en": "undefiled"
+					}
 				}
 			]
 		},
@@ -1464,6 +2605,26 @@
 			"id": "s037",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1477,7 +2638,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w096"
+					"id": "w096",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1487,7 +2652,11 @@
 						"governs": "abl"
 					},
 					"head": "w098",
-					"id": "w097"
+					"id": "w097",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1498,7 +2667,11 @@
 						"number": "pl"
 					},
 					"id": "w098",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1506,6 +2679,26 @@
 			"id": "s038",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko najmilsza.",
+				"en": "Mother most amiable."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -1517,7 +2710,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w099"
+					"id": "w099",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "amábilis",
@@ -1530,7 +2727,11 @@
 					},
 					"head": "w099",
 					"id": "w100",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "godna miłości",
+						"en": "amiable"
+					}
 				}
 			]
 		},
@@ -1538,6 +2739,26 @@
 			"id": "s039",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1551,7 +2772,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w101"
+					"id": "w101",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1561,7 +2786,11 @@
 						"governs": "abl"
 					},
 					"head": "w103",
-					"id": "w102"
+					"id": "w102",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1572,7 +2801,11 @@
 						"number": "pl"
 					},
 					"id": "w103",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1580,6 +2813,26 @@
 			"id": "s040",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko przedziwna.",
+				"en": "Mother most admirable."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -1591,7 +2844,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w104"
+					"id": "w104",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "admirábilis",
@@ -1604,7 +2861,11 @@
 					},
 					"head": "w104",
 					"id": "w105",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "godna podziwu",
+						"en": "admirable"
+					}
 				}
 			]
 		},
@@ -1612,6 +2873,26 @@
 			"id": "s041",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1625,7 +2906,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w106"
+					"id": "w106",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1635,7 +2920,11 @@
 						"governs": "abl"
 					},
 					"head": "w108",
-					"id": "w107"
+					"id": "w107",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1646,7 +2935,11 @@
 						"number": "pl"
 					},
 					"id": "w108",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1654,6 +2947,26 @@
 			"id": "s042",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko dobrej rady.",
+				"en": "Mother of good counsel."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -1665,7 +2978,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w109"
+					"id": "w109",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "boni",
@@ -1677,7 +2994,11 @@
 						"gender": "n"
 					},
 					"head": "w111",
-					"id": "w110"
+					"id": "w110",
+					"gloss": {
+						"pl": "dobrej",
+						"en": "of good"
+					}
 				},
 				{
 					"form": "consílii",
@@ -1691,13 +3012,9 @@
 					},
 					"id": "w111",
 					"post": ".",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "rady",
+						"en": "counsel"
 					}
 				}
 			]
@@ -1706,6 +3023,26 @@
 			"id": "s043",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1719,7 +3056,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w112"
+					"id": "w112",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1729,7 +3070,11 @@
 						"governs": "abl"
 					},
 					"head": "w114",
-					"id": "w113"
+					"id": "w113",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1740,7 +3085,11 @@
 						"number": "pl"
 					},
 					"id": "w114",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1748,6 +3097,26 @@
 			"id": "s044",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko Stworzyciela.",
+				"en": "Mother of our Creator."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -1759,7 +3128,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w115"
+					"id": "w115",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "Creatóris",
@@ -1772,7 +3145,11 @@
 						"decl": 3
 					},
 					"id": "w116",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Stworzyciela",
+						"en": "of the Creator"
+					}
 				}
 			]
 		},
@@ -1780,6 +3157,26 @@
 			"id": "s045",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1793,7 +3190,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w117"
+					"id": "w117",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1803,7 +3204,11 @@
 						"governs": "abl"
 					},
 					"head": "w119",
-					"id": "w118"
+					"id": "w118",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1814,7 +3219,11 @@
 						"number": "pl"
 					},
 					"id": "w119",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1822,6 +3231,26 @@
 			"id": "s046",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Matko Zbawiciela.",
+				"en": "Mother of our Saviour."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Mater",
@@ -1833,7 +3262,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w120"
+					"id": "w120",
+					"gloss": {
+						"pl": "Matko",
+						"en": "Mother"
+					}
 				},
 				{
 					"form": "Salvatóris",
@@ -1846,7 +3279,11 @@
 						"decl": 3
 					},
 					"id": "w121",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Zbawiciela",
+						"en": "of the Savior"
+					}
 				}
 			]
 		},
@@ -1854,6 +3291,26 @@
 			"id": "s047",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1867,7 +3324,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w122"
+					"id": "w122",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1877,7 +3338,11 @@
 						"governs": "abl"
 					},
 					"head": "w124",
-					"id": "w123"
+					"id": "w123",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1888,7 +3353,11 @@
 						"number": "pl"
 					},
 					"id": "w124",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1896,6 +3365,26 @@
 			"id": "s048",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Panno roztropna.",
+				"en": "Virgin most prudent."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Virgo",
@@ -1907,7 +3396,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w125"
+					"id": "w125",
+					"gloss": {
+						"pl": "Panno",
+						"en": "Virgin"
+					}
 				},
 				{
 					"form": "prudentíssima",
@@ -1921,7 +3414,11 @@
 					},
 					"head": "w125",
 					"id": "w126",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "najroztropniejsza",
+						"en": "most prudent"
+					}
 				}
 			]
 		},
@@ -1929,6 +3426,26 @@
 			"id": "s049",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -1942,7 +3459,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w127"
+					"id": "w127",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -1952,7 +3473,11 @@
 						"governs": "abl"
 					},
 					"head": "w129",
-					"id": "w128"
+					"id": "w128",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -1963,7 +3488,11 @@
 						"number": "pl"
 					},
 					"id": "w129",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -1971,6 +3500,26 @@
 			"id": "s050",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Panno czcigodna.",
+				"en": "Virgin most venerable."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Virgo",
@@ -1982,7 +3531,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w130"
+					"id": "w130",
+					"gloss": {
+						"pl": "Panno",
+						"en": "Virgin"
+					}
 				},
 				{
 					"form": "veneránda",
@@ -2000,13 +3553,9 @@
 					"head": "w130",
 					"id": "w131",
 					"post": ".",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "czcigodna",
+						"en": "venerable"
 					}
 				}
 			]
@@ -2015,6 +3564,26 @@
 			"id": "s051",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2028,7 +3597,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w132"
+					"id": "w132",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2038,7 +3611,11 @@
 						"governs": "abl"
 					},
 					"head": "w134",
-					"id": "w133"
+					"id": "w133",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2049,7 +3626,11 @@
 						"number": "pl"
 					},
 					"id": "w134",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2057,6 +3638,26 @@
 			"id": "s052",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Panno wsławiona.",
+				"en": "Virgin most renowned."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Virgo",
@@ -2068,7 +3669,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w135"
+					"id": "w135",
+					"gloss": {
+						"pl": "Panno",
+						"en": "Virgin"
+					}
 				},
 				{
 					"form": "prædicánda",
@@ -2085,7 +3690,11 @@
 					},
 					"head": "w135",
 					"id": "w136",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "wsławiona",
+						"en": "renowned"
+					}
 				}
 			]
 		},
@@ -2093,6 +3702,26 @@
 			"id": "s053",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2106,7 +3735,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w137"
+					"id": "w137",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2116,7 +3749,11 @@
 						"governs": "abl"
 					},
 					"head": "w139",
-					"id": "w138"
+					"id": "w138",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2127,7 +3764,11 @@
 						"number": "pl"
 					},
 					"id": "w139",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2135,6 +3776,26 @@
 			"id": "s054",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Panno można.",
+				"en": "Virgin most powerful."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Virgo",
@@ -2146,7 +3807,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w140"
+					"id": "w140",
+					"gloss": {
+						"pl": "Panno",
+						"en": "Virgin"
+					}
 				},
 				{
 					"form": "potens",
@@ -2159,7 +3824,11 @@
 					},
 					"head": "w140",
 					"id": "w141",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "można",
+						"en": "powerful"
+					}
 				}
 			]
 		},
@@ -2167,6 +3836,26 @@
 			"id": "s055",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2180,7 +3869,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w142"
+					"id": "w142",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2190,7 +3883,11 @@
 						"governs": "abl"
 					},
 					"head": "w144",
-					"id": "w143"
+					"id": "w143",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2201,7 +3898,11 @@
 						"number": "pl"
 					},
 					"id": "w144",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2209,6 +3910,26 @@
 			"id": "s056",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Panno łaskawa.",
+				"en": "Virgin most merciful."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Virgo",
@@ -2220,7 +3941,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w145"
+					"id": "w145",
+					"gloss": {
+						"pl": "Panno",
+						"en": "Virgin"
+					}
 				},
 				{
 					"form": "clemens",
@@ -2233,7 +3958,11 @@
 					},
 					"head": "w145",
 					"id": "w146",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "łaskawa",
+						"en": "gracious"
+					}
 				}
 			]
 		},
@@ -2241,6 +3970,26 @@
 			"id": "s057",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2254,7 +4003,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w147"
+					"id": "w147",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2264,7 +4017,11 @@
 						"governs": "abl"
 					},
 					"head": "w149",
-					"id": "w148"
+					"id": "w148",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2275,7 +4032,11 @@
 						"number": "pl"
 					},
 					"id": "w149",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2283,6 +4044,26 @@
 			"id": "s058",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Panno wierna.",
+				"en": "Virgin most faithful."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Virgo",
@@ -2294,7 +4075,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w150"
+					"id": "w150",
+					"gloss": {
+						"pl": "Panno",
+						"en": "Virgin"
+					}
 				},
 				{
 					"form": "fidélis",
@@ -2307,7 +4092,11 @@
 					},
 					"head": "w150",
 					"id": "w151",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "wierna",
+						"en": "faithful"
+					}
 				}
 			]
 		},
@@ -2315,6 +4104,26 @@
 			"id": "s059",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2328,7 +4137,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w152"
+					"id": "w152",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2338,7 +4151,11 @@
 						"governs": "abl"
 					},
 					"head": "w154",
-					"id": "w153"
+					"id": "w153",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2349,7 +4166,11 @@
 						"number": "pl"
 					},
 					"id": "w154",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2357,6 +4178,26 @@
 			"id": "s060",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Zwierciadło sprawiedliwości.",
+				"en": "Mirror of justice."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Spéculum",
@@ -2368,7 +4209,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w155"
+					"id": "w155",
+					"gloss": {
+						"pl": "zwierciadło",
+						"en": "mirror"
+					}
 				},
 				{
 					"form": "iustítiæ",
@@ -2381,7 +4226,11 @@
 						"decl": 1
 					},
 					"id": "w156",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "sprawiedliwości",
+						"en": "of justice"
+					}
 				}
 			]
 		},
@@ -2389,6 +4238,26 @@
 			"id": "s061",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2402,7 +4271,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w157"
+					"id": "w157",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2412,7 +4285,11 @@
 						"governs": "abl"
 					},
 					"head": "w159",
-					"id": "w158"
+					"id": "w158",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2423,7 +4300,11 @@
 						"number": "pl"
 					},
 					"id": "w159",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2431,6 +4312,26 @@
 			"id": "s062",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Stolico mądrości.",
+				"en": "Seat of wisdom."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Sedes",
@@ -2442,7 +4343,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w160"
+					"id": "w160",
+					"gloss": {
+						"pl": "stolico",
+						"en": "seat"
+					}
 				},
 				{
 					"form": "sapiéntiæ",
@@ -2455,7 +4360,11 @@
 						"decl": 1
 					},
 					"id": "w161",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "mądrości",
+						"en": "of wisdom"
+					}
 				}
 			]
 		},
@@ -2463,6 +4372,26 @@
 			"id": "s063",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2476,7 +4405,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w162"
+					"id": "w162",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2486,7 +4419,11 @@
 						"governs": "abl"
 					},
 					"head": "w164",
-					"id": "w163"
+					"id": "w163",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2497,7 +4434,11 @@
 						"number": "pl"
 					},
 					"id": "w164",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2505,6 +4446,26 @@
 			"id": "s064",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Przyczyno naszej radości.",
+				"en": "Cause of our joy."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Causa",
@@ -2516,7 +4477,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w165"
+					"id": "w165",
+					"gloss": {
+						"pl": "przyczyno",
+						"en": "cause"
+					}
 				},
 				{
 					"form": "nostræ",
@@ -2528,7 +4493,11 @@
 						"gender": "f"
 					},
 					"head": "w167",
-					"id": "w166"
+					"id": "w166",
+					"gloss": {
+						"pl": "naszej",
+						"en": "our"
+					}
 				},
 				{
 					"form": "lætítiæ",
@@ -2541,7 +4510,11 @@
 						"decl": 1
 					},
 					"id": "w167",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "radości",
+						"en": "of gladness"
+					}
 				}
 			]
 		},
@@ -2549,6 +4522,26 @@
 			"id": "s065",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2562,7 +4555,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w168"
+					"id": "w168",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2572,7 +4569,11 @@
 						"governs": "abl"
 					},
 					"head": "w170",
-					"id": "w169"
+					"id": "w169",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2583,7 +4584,11 @@
 						"number": "pl"
 					},
 					"id": "w170",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2591,6 +4596,26 @@
 			"id": "s066",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Przybytku Ducha Świętego.",
+				"en": "Spiritual vessel."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Vas",
@@ -2602,7 +4627,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w171"
+					"id": "w171",
+					"gloss": {
+						"pl": "naczynie",
+						"en": "vessel"
+					}
 				},
 				{
 					"form": "spirituále",
@@ -2615,7 +4644,11 @@
 					},
 					"head": "w171",
 					"id": "w172",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "duchowe",
+						"en": "spiritual"
+					}
 				}
 			]
 		},
@@ -2623,6 +4656,26 @@
 			"id": "s067",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2636,7 +4689,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w173"
+					"id": "w173",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2646,7 +4703,11 @@
 						"governs": "abl"
 					},
 					"head": "w175",
-					"id": "w174"
+					"id": "w174",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2657,7 +4718,11 @@
 						"number": "pl"
 					},
 					"id": "w175",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2665,6 +4730,26 @@
 			"id": "s068",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Przybytku chwalebny.",
+				"en": "Vessel of honour."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Vas",
@@ -2676,7 +4761,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w176"
+					"id": "w176",
+					"gloss": {
+						"pl": "naczynie",
+						"en": "vessel"
+					}
 				},
 				{
 					"form": "honorábile",
@@ -2689,7 +4778,11 @@
 					},
 					"head": "w176",
 					"id": "w177",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "czcigodne",
+						"en": "honorable"
+					}
 				}
 			]
 		},
@@ -2697,6 +4790,26 @@
 			"id": "s069",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2710,7 +4823,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w178"
+					"id": "w178",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2720,7 +4837,11 @@
 						"governs": "abl"
 					},
 					"head": "w180",
-					"id": "w179"
+					"id": "w179",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2731,7 +4852,11 @@
 						"number": "pl"
 					},
 					"id": "w180",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2739,6 +4864,26 @@
 			"id": "s070",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Przybytku sławny pobożności.",
+				"en": "Singular vessel of devotion."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Vas",
@@ -2750,7 +4895,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w181"
+					"id": "w181",
+					"gloss": {
+						"pl": "naczynie",
+						"en": "vessel"
+					}
 				},
 				{
 					"form": "insígne",
@@ -2762,7 +4911,11 @@
 						"gender": "n"
 					},
 					"head": "w181",
-					"id": "w182"
+					"id": "w182",
+					"gloss": {
+						"pl": "osobliwe",
+						"en": "singular"
+					}
 				},
 				{
 					"form": "devotiónis",
@@ -2775,7 +4928,11 @@
 						"decl": 3
 					},
 					"id": "w183",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "pobożności",
+						"en": "of devotion"
+					}
 				}
 			]
 		},
@@ -2783,6 +4940,26 @@
 			"id": "s071",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2796,7 +4973,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w184"
+					"id": "w184",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2806,7 +4987,11 @@
 						"governs": "abl"
 					},
 					"head": "w186",
-					"id": "w185"
+					"id": "w185",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2817,7 +5002,11 @@
 						"number": "pl"
 					},
 					"id": "w186",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2825,6 +5014,26 @@
 			"id": "s072",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Różo duchowna.",
+				"en": "Mystical rose."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Rosa",
@@ -2836,7 +5045,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w187"
+					"id": "w187",
+					"gloss": {
+						"pl": "różo",
+						"en": "rose"
+					}
 				},
 				{
 					"form": "mýstica",
@@ -2849,7 +5062,11 @@
 					},
 					"head": "w187",
 					"id": "w188",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "duchowna",
+						"en": "mystical"
+					}
 				}
 			]
 		},
@@ -2857,6 +5074,26 @@
 			"id": "s073",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2870,7 +5107,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w189"
+					"id": "w189",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2880,7 +5121,11 @@
 						"governs": "abl"
 					},
 					"head": "w191",
-					"id": "w190"
+					"id": "w190",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2891,7 +5136,11 @@
 						"number": "pl"
 					},
 					"id": "w191",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2899,6 +5148,26 @@
 			"id": "s074",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Wieżo Dawidowa.",
+				"en": "Tower of David."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Turris",
@@ -2910,7 +5179,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w192"
+					"id": "w192",
+					"gloss": {
+						"pl": "wieżo",
+						"en": "tower"
+					}
 				},
 				{
 					"form": "Davídica",
@@ -2924,13 +5197,9 @@
 					"head": "w192",
 					"id": "w193",
 					"post": ".",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Dawidowa",
+						"en": "of David"
 					}
 				}
 			]
@@ -2939,6 +5208,26 @@
 			"id": "s075",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -2952,7 +5241,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w194"
+					"id": "w194",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -2962,7 +5255,11 @@
 						"governs": "abl"
 					},
 					"head": "w196",
-					"id": "w195"
+					"id": "w195",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -2973,7 +5270,11 @@
 						"number": "pl"
 					},
 					"id": "w196",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -2981,6 +5282,26 @@
 			"id": "s076",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Wieżo z kości słoniowej.",
+				"en": "Tower of ivory."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Turris",
@@ -2992,7 +5313,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w197"
+					"id": "w197",
+					"gloss": {
+						"pl": "wieżo",
+						"en": "tower"
+					}
 				},
 				{
 					"form": "ebúrnea",
@@ -3005,7 +5330,11 @@
 					},
 					"head": "w197",
 					"id": "w198",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "z kości słoniowej",
+						"en": "of ivory"
+					}
 				}
 			]
 		},
@@ -3013,6 +5342,26 @@
 			"id": "s077",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3026,7 +5375,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w199"
+					"id": "w199",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3036,7 +5389,11 @@
 						"governs": "abl"
 					},
 					"head": "w201",
-					"id": "w200"
+					"id": "w200",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3047,7 +5404,11 @@
 						"number": "pl"
 					},
 					"id": "w201",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3055,6 +5416,26 @@
 			"id": "s078",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Domie złoty.",
+				"en": "House of gold."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Domus",
@@ -3066,7 +5447,11 @@
 						"gender": "f",
 						"decl": 4
 					},
-					"id": "w202"
+					"id": "w202",
+					"gloss": {
+						"pl": "domie",
+						"en": "house"
+					}
 				},
 				{
 					"form": "áurea",
@@ -3079,7 +5464,11 @@
 					},
 					"head": "w202",
 					"id": "w203",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "złoty",
+						"en": "golden"
+					}
 				}
 			]
 		},
@@ -3087,6 +5476,26 @@
 			"id": "s079",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3100,7 +5509,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w204"
+					"id": "w204",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3110,7 +5523,11 @@
 						"governs": "abl"
 					},
 					"head": "w206",
-					"id": "w205"
+					"id": "w205",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3121,7 +5538,11 @@
 						"number": "pl"
 					},
 					"id": "w206",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3129,6 +5550,26 @@
 			"id": "s080",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Arko przymierza.",
+				"en": "Ark of the covenant."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Fœ́deris",
@@ -3140,7 +5581,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w207"
+					"id": "w207",
+					"gloss": {
+						"pl": "przymierza",
+						"en": "of the covenant"
+					}
 				},
 				{
 					"form": "arca",
@@ -3153,7 +5598,11 @@
 						"decl": 1
 					},
 					"id": "w208",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "arko",
+						"en": "ark"
+					}
 				}
 			]
 		},
@@ -3161,6 +5610,26 @@
 			"id": "s081",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3174,7 +5643,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w209"
+					"id": "w209",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3184,7 +5657,11 @@
 						"governs": "abl"
 					},
 					"head": "w211",
-					"id": "w210"
+					"id": "w210",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3195,7 +5672,11 @@
 						"number": "pl"
 					},
 					"id": "w211",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3203,6 +5684,26 @@
 			"id": "s082",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Bramo niebieska.",
+				"en": "Gate of heaven."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Iánua",
@@ -3214,7 +5715,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w212"
+					"id": "w212",
+					"gloss": {
+						"pl": "bramo",
+						"en": "gate"
+					}
 				},
 				{
 					"form": "cæli",
@@ -3227,7 +5732,11 @@
 						"decl": 2
 					},
 					"id": "w213",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nieba",
+						"en": "of heaven"
+					}
 				}
 			]
 		},
@@ -3235,6 +5744,26 @@
 			"id": "s083",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3248,7 +5777,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w214"
+					"id": "w214",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3258,7 +5791,11 @@
 						"governs": "abl"
 					},
 					"head": "w216",
-					"id": "w215"
+					"id": "w215",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3269,7 +5806,11 @@
 						"number": "pl"
 					},
 					"id": "w216",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3277,6 +5818,26 @@
 			"id": "s084",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Gwiazdo zaranna.",
+				"en": "Morning star."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Stella",
@@ -3288,7 +5849,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w217"
+					"id": "w217",
+					"gloss": {
+						"pl": "gwiazdo",
+						"en": "star"
+					}
 				},
 				{
 					"form": "matutína",
@@ -3301,7 +5866,11 @@
 					},
 					"head": "w217",
 					"id": "w218",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "poranna",
+						"en": "morning"
+					}
 				}
 			]
 		},
@@ -3309,6 +5878,26 @@
 			"id": "s085",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3322,7 +5911,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w219"
+					"id": "w219",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3332,7 +5925,11 @@
 						"governs": "abl"
 					},
 					"head": "w221",
-					"id": "w220"
+					"id": "w220",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3343,7 +5940,11 @@
 						"number": "pl"
 					},
 					"id": "w221",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3351,6 +5952,26 @@
 			"id": "s086",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Uzdrowienie chorych.",
+				"en": "Health of the sick."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Salus",
@@ -3362,7 +5983,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w222"
+					"id": "w222",
+					"gloss": {
+						"pl": "uzdrowienie",
+						"en": "health"
+					}
 				},
 				{
 					"form": "infirmórum",
@@ -3375,7 +6000,11 @@
 					},
 					"id": "w223",
 					"post": ".",
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "chorych",
+						"en": "of the sick"
+					}
 				}
 			]
 		},
@@ -3383,6 +6012,26 @@
 			"id": "s087",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3396,7 +6045,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w224"
+					"id": "w224",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3406,7 +6059,11 @@
 						"governs": "abl"
 					},
 					"head": "w226",
-					"id": "w225"
+					"id": "w225",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3417,7 +6074,11 @@
 						"number": "pl"
 					},
 					"id": "w226",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3425,6 +6086,26 @@
 			"id": "s088",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Ucieczko grzesznych.",
+				"en": "Refuge of sinners."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Refúgium",
@@ -3436,7 +6117,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w227"
+					"id": "w227",
+					"gloss": {
+						"pl": "ucieczko",
+						"en": "refuge"
+					}
 				},
 				{
 					"form": "peccatórum",
@@ -3449,7 +6134,11 @@
 						"decl": 3
 					},
 					"id": "w228",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "grzeszników",
+						"en": "of sinners"
+					}
 				}
 			]
 		},
@@ -3457,6 +6146,26 @@
 			"id": "s089",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3470,7 +6179,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w229"
+					"id": "w229",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3480,7 +6193,11 @@
 						"governs": "abl"
 					},
 					"head": "w231",
-					"id": "w230"
+					"id": "w230",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3491,7 +6208,11 @@
 						"number": "pl"
 					},
 					"id": "w231",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3499,6 +6220,26 @@
 			"id": "s090",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Pociecho migrantów.",
+				"en": "Comfort of migrants."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Solácium",
@@ -3510,7 +6251,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w232"
+					"id": "w232",
+					"gloss": {
+						"pl": "pociecho",
+						"en": "comfort"
+					}
 				},
 				{
 					"form": "migrántium",
@@ -3527,7 +6272,11 @@
 					},
 					"id": "w233",
 					"post": ".",
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "migrantów",
+						"en": "of migrants"
+					}
 				}
 			]
 		},
@@ -3535,6 +6284,26 @@
 			"id": "s091",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3548,7 +6317,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w234"
+					"id": "w234",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3558,7 +6331,11 @@
 						"governs": "abl"
 					},
 					"head": "w236",
-					"id": "w235"
+					"id": "w235",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3569,7 +6346,11 @@
 						"number": "pl"
 					},
 					"id": "w236",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3577,6 +6358,26 @@
 			"id": "s092",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Pocieszycielko strapionych.",
+				"en": "Comforter of the afflicted."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Consolátrix",
@@ -3589,13 +6390,9 @@
 						"decl": 3
 					},
 					"id": "w237",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Pocieszycielko",
+						"en": "Comforter"
 					}
 				},
 				{
@@ -3609,7 +6406,11 @@
 					},
 					"substantive": true,
 					"id": "w238",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "strapionych",
+						"en": "of the afflicted"
+					}
 				}
 			]
 		},
@@ -3617,6 +6418,26 @@
 			"id": "s093",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3630,7 +6451,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w239"
+					"id": "w239",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3640,7 +6465,11 @@
 						"governs": "abl"
 					},
 					"head": "w241",
-					"id": "w240"
+					"id": "w240",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3651,7 +6480,11 @@
 						"number": "pl"
 					},
 					"id": "w241",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3659,6 +6492,26 @@
 			"id": "s094",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Wspomożenie wiernych.",
+				"en": "Help of Christians."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Auxílium",
@@ -3670,7 +6523,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w242"
+					"id": "w242",
+					"gloss": {
+						"pl": "wspomożenie",
+						"en": "help"
+					}
 				},
 				{
 					"form": "Christianórum",
@@ -3683,7 +6540,11 @@
 					},
 					"id": "w243",
 					"post": ".",
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "chrześcijan",
+						"en": "of Christians"
+					}
 				}
 			]
 		},
@@ -3691,6 +6552,26 @@
 			"id": "s095",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3704,7 +6585,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w244"
+					"id": "w244",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3714,7 +6599,11 @@
 						"governs": "abl"
 					},
 					"head": "w246",
-					"id": "w245"
+					"id": "w245",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3725,7 +6614,11 @@
 						"number": "pl"
 					},
 					"id": "w246",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3733,6 +6626,26 @@
 			"id": "s096",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo Aniołów.",
+				"en": "Queen of Angels."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -3744,7 +6657,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w247"
+					"id": "w247",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "Angelórum",
@@ -3757,7 +6674,11 @@
 						"decl": 2
 					},
 					"id": "w248",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Aniołów",
+						"en": "of the Angels"
+					}
 				}
 			]
 		},
@@ -3765,6 +6686,26 @@
 			"id": "s097",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3778,7 +6719,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w249"
+					"id": "w249",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3788,7 +6733,11 @@
 						"governs": "abl"
 					},
 					"head": "w251",
-					"id": "w250"
+					"id": "w250",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3799,7 +6748,11 @@
 						"number": "pl"
 					},
 					"id": "w251",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3807,6 +6760,26 @@
 			"id": "s098",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo Patriarchów.",
+				"en": "Queen of Patriarchs."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -3818,7 +6791,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w252"
+					"id": "w252",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "Patriarchárum",
@@ -3831,7 +6808,11 @@
 						"decl": 1
 					},
 					"id": "w253",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Patriarchów",
+						"en": "of the Patriarchs"
+					}
 				}
 			]
 		},
@@ -3839,6 +6820,26 @@
 			"id": "s099",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3852,7 +6853,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w254"
+					"id": "w254",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3862,7 +6867,11 @@
 						"governs": "abl"
 					},
 					"head": "w256",
-					"id": "w255"
+					"id": "w255",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3873,7 +6882,11 @@
 						"number": "pl"
 					},
 					"id": "w256",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3881,6 +6894,26 @@
 			"id": "s100",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo Proroków.",
+				"en": "Queen of Prophets."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -3892,7 +6925,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w257"
+					"id": "w257",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "Prophetárum",
@@ -3905,7 +6942,11 @@
 						"decl": 1
 					},
 					"id": "w258",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Proroków",
+						"en": "of the Prophets"
+					}
 				}
 			]
 		},
@@ -3913,6 +6954,26 @@
 			"id": "s101",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -3926,7 +6987,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w259"
+					"id": "w259",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -3936,7 +7001,11 @@
 						"governs": "abl"
 					},
 					"head": "w261",
-					"id": "w260"
+					"id": "w260",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -3947,7 +7016,11 @@
 						"number": "pl"
 					},
 					"id": "w261",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -3955,6 +7028,26 @@
 			"id": "s102",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo Apostołów.",
+				"en": "Queen of Apostles."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -3966,7 +7059,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w262"
+					"id": "w262",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "Apostolórum",
@@ -3979,7 +7076,11 @@
 						"decl": 2
 					},
 					"id": "w263",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Apostołów",
+						"en": "of the Apostles"
+					}
 				}
 			]
 		},
@@ -3987,6 +7088,26 @@
 			"id": "s103",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -4000,7 +7121,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w264"
+					"id": "w264",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -4010,7 +7135,11 @@
 						"governs": "abl"
 					},
 					"head": "w266",
-					"id": "w265"
+					"id": "w265",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4021,7 +7150,11 @@
 						"number": "pl"
 					},
 					"id": "w266",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -4029,6 +7162,26 @@
 			"id": "s104",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo Męczenników.",
+				"en": "Queen of Martyrs."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -4040,7 +7193,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w267"
+					"id": "w267",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "Mártyrum",
@@ -4054,13 +7211,9 @@
 					},
 					"id": "w268",
 					"post": ".",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Męczenników",
+						"en": "of Martyrs"
 					}
 				}
 			]
@@ -4069,6 +7222,26 @@
 			"id": "s105",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -4082,7 +7255,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w269"
+					"id": "w269",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -4092,7 +7269,11 @@
 						"governs": "abl"
 					},
 					"head": "w271",
-					"id": "w270"
+					"id": "w270",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4103,7 +7284,11 @@
 						"number": "pl"
 					},
 					"id": "w271",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -4111,6 +7296,26 @@
 			"id": "s106",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo Wyznawców.",
+				"en": "Queen of Confessors."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -4122,7 +7327,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w272"
+					"id": "w272",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "Confessórum",
@@ -4135,7 +7344,11 @@
 						"decl": 3
 					},
 					"id": "w273",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Wyznawców",
+						"en": "of Confessors"
+					}
 				}
 			]
 		},
@@ -4143,6 +7356,26 @@
 			"id": "s107",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -4156,7 +7389,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w274"
+					"id": "w274",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -4166,7 +7403,11 @@
 						"governs": "abl"
 					},
 					"head": "w276",
-					"id": "w275"
+					"id": "w275",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4177,7 +7418,11 @@
 						"number": "pl"
 					},
 					"id": "w276",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -4185,6 +7430,26 @@
 			"id": "s108",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo Dziewic.",
+				"en": "Queen of Virgins."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -4196,7 +7461,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w277"
+					"id": "w277",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "Vírginum",
@@ -4209,7 +7478,11 @@
 						"decl": 3
 					},
 					"id": "w278",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Dziewic",
+						"en": "of virgins"
+					}
 				}
 			]
 		},
@@ -4217,6 +7490,26 @@
 			"id": "s109",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -4230,7 +7523,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w279"
+					"id": "w279",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -4240,7 +7537,11 @@
 						"governs": "abl"
 					},
 					"head": "w281",
-					"id": "w280"
+					"id": "w280",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4251,7 +7552,11 @@
 						"number": "pl"
 					},
 					"id": "w281",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -4259,6 +7564,26 @@
 			"id": "s110",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo wszystkich Świętych.",
+				"en": "Queen of all Saints."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -4270,7 +7595,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w282"
+					"id": "w282",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "Sanctórum",
@@ -4282,7 +7611,11 @@
 						"gender": "m"
 					},
 					"id": "w283",
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "Świętych",
+						"en": "of the Saints"
+					}
 				},
 				{
 					"form": "ómnium",
@@ -4295,7 +7628,11 @@
 					},
 					"id": "w284",
 					"post": ".",
-					"head": "w283"
+					"head": "w283",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					}
 				}
 			]
 		},
@@ -4303,6 +7640,26 @@
 			"id": "s111",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -4316,7 +7673,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w285"
+					"id": "w285",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -4326,7 +7687,11 @@
 						"governs": "abl"
 					},
 					"head": "w287",
-					"id": "w286"
+					"id": "w286",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4337,7 +7702,11 @@
 						"number": "pl"
 					},
 					"id": "w287",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -4345,6 +7714,26 @@
 			"id": "s112",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo bez zmazy pierworodnej poczęta.",
+				"en": "Queen conceived without original sin."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -4356,7 +7745,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w288"
+					"id": "w288",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "sine",
@@ -4366,7 +7759,11 @@
 						"governs": "abl"
 					},
 					"head": "w290",
-					"id": "w289"
+					"id": "w289",
+					"gloss": {
+						"pl": "bez",
+						"en": "without"
+					}
 				},
 				{
 					"form": "labe",
@@ -4378,7 +7775,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w290"
+					"id": "w290",
+					"gloss": {
+						"pl": "zmazy",
+						"en": "stain"
+					}
 				},
 				{
 					"form": "origináli",
@@ -4390,7 +7791,11 @@
 						"gender": "f"
 					},
 					"head": "w290",
-					"id": "w291"
+					"id": "w291",
+					"gloss": {
+						"pl": "pierworodnej",
+						"en": "original"
+					}
 				},
 				{
 					"form": "concépta",
@@ -4407,7 +7812,11 @@
 					},
 					"head": "w288",
 					"id": "w292",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "poczęta",
+						"en": "conceived"
+					}
 				}
 			]
 		},
@@ -4415,6 +7824,26 @@
 			"id": "s113",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -4428,7 +7857,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w293"
+					"id": "w293",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -4438,7 +7871,11 @@
 						"governs": "abl"
 					},
 					"head": "w295",
-					"id": "w294"
+					"id": "w294",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4449,7 +7886,11 @@
 						"number": "pl"
 					},
 					"id": "w295",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -4457,6 +7898,26 @@
 			"id": "s114",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo wniebowzięta.",
+				"en": "Queen assumed into heaven."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -4468,7 +7929,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w296"
+					"id": "w296",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "in",
@@ -4478,7 +7943,11 @@
 						"governs": "acc"
 					},
 					"head": "w298",
-					"id": "w297"
+					"id": "w297",
+					"gloss": {
+						"pl": "w",
+						"en": "into"
+					}
 				},
 				{
 					"form": "cælum",
@@ -4490,7 +7959,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w298"
+					"id": "w298",
+					"gloss": {
+						"pl": "niebo",
+						"en": "heaven"
+					}
 				},
 				{
 					"form": "assúmpta",
@@ -4508,13 +7981,9 @@
 					"head": "w296",
 					"id": "w299",
 					"post": ".",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "wzięta",
+						"en": "assumed"
 					}
 				}
 			]
@@ -4523,6 +7992,26 @@
 			"id": "s115",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -4536,7 +8025,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w300"
+					"id": "w300",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -4546,7 +8039,11 @@
 						"governs": "abl"
 					},
 					"head": "w302",
-					"id": "w301"
+					"id": "w301",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4557,7 +8054,11 @@
 						"number": "pl"
 					},
 					"id": "w302",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -4565,6 +8066,26 @@
 			"id": "s116",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo różańca świętego.",
+				"en": "Queen of the most holy Rosary."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -4576,7 +8097,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w303"
+					"id": "w303",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "sacratíssimi",
@@ -4590,13 +8115,9 @@
 					},
 					"head": "w305",
 					"id": "w304",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Najświętszego",
+						"en": "of the Most Holy"
 					}
 				},
 				{
@@ -4610,7 +8131,11 @@
 						"decl": 2
 					},
 					"id": "w305",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "różańca",
+						"en": "the Rosary"
+					}
 				}
 			]
 		},
@@ -4618,6 +8143,26 @@
 			"id": "s117",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -4631,7 +8176,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w306"
+					"id": "w306",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -4641,7 +8190,11 @@
 						"governs": "abl"
 					},
 					"head": "w308",
-					"id": "w307"
+					"id": "w307",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4652,7 +8205,11 @@
 						"number": "pl"
 					},
 					"id": "w308",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -4660,6 +8217,26 @@
 			"id": "s118",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo rodzin.",
+				"en": "Queen of the family."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -4671,7 +8248,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w309"
+					"id": "w309",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "famíliæ",
@@ -4684,7 +8265,11 @@
 						"decl": 1
 					},
 					"id": "w310",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "rodziny",
+						"en": "of the family"
+					}
 				}
 			]
 		},
@@ -4692,6 +8277,26 @@
 			"id": "s119",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -4705,7 +8310,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w311"
+					"id": "w311",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -4715,7 +8324,11 @@
 						"governs": "abl"
 					},
 					"head": "w313",
-					"id": "w312"
+					"id": "w312",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4726,7 +8339,11 @@
 						"number": "pl"
 					},
 					"id": "w313",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -4734,6 +8351,26 @@
 			"id": "s120",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo pokoju.",
+				"en": "Queen of peace."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -4745,7 +8382,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w314"
+					"id": "w314",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "pacis",
@@ -4758,7 +8399,11 @@
 						"decl": 3
 					},
 					"id": "w315",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "pokoju",
+						"en": "of peace"
+					}
 				}
 			]
 		},
@@ -4766,6 +8411,26 @@
 			"id": "s121",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -4779,7 +8444,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w316"
+					"id": "w316",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -4789,7 +8458,11 @@
 						"governs": "abl"
 					},
 					"head": "w318",
-					"id": "w317"
+					"id": "w317",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4800,7 +8473,11 @@
 						"number": "pl"
 					},
 					"id": "w318",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -4808,6 +8485,26 @@
 			"id": "s122",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Królowo Polski.",
+				"en": "Queen of Poland."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Regína",
@@ -4819,7 +8516,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w319"
+					"id": "w319",
+					"gloss": {
+						"pl": "Królowo",
+						"en": "Queen"
+					}
 				},
 				{
 					"form": "Polóniæ",
@@ -4833,12 +8534,9 @@
 					},
 					"id": "w320",
 					"post": ".",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Polski",
+						"en": "of Poland"
 					}
 				}
 			]
@@ -4847,6 +8545,26 @@
 			"id": "s123",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Módl się za nami.",
+				"en": "Pray for us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -4860,7 +8578,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w321"
+					"id": "w321",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -4870,7 +8592,11 @@
 						"governs": "abl"
 					},
 					"head": "w323",
-					"id": "w322"
+					"id": "w322",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4881,7 +8607,11 @@
 						"number": "pl"
 					},
 					"id": "w323",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				}
 			]
 		},
@@ -4889,6 +8619,26 @@
 			"id": "s124",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Baranku Boży, który gładzisz grzechy świata.",
+				"en": "Lamb of God, who takest away the sins of the world."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Agnus",
@@ -4900,7 +8650,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w324"
+					"id": "w324",
+					"gloss": {
+						"pl": "Baranku",
+						"en": "Lamb"
+					}
 				},
 				{
 					"form": "Dei",
@@ -4913,7 +8667,11 @@
 						"decl": 2
 					},
 					"id": "w325",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					}
 				},
 				{
 					"form": "qui",
@@ -4924,7 +8682,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w326"
+					"id": "w326",
+					"gloss": {
+						"pl": "który",
+						"en": "who"
+					}
 				},
 				{
 					"form": "tollis",
@@ -4938,7 +8700,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"id": "w327"
+					"id": "w327",
+					"gloss": {
+						"pl": "gładzisz",
+						"en": "take away"
+					}
 				},
 				{
 					"form": "peccáta",
@@ -4950,7 +8716,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w328"
+					"id": "w328",
+					"gloss": {
+						"pl": "grzechy",
+						"en": "sins"
+					}
 				},
 				{
 					"form": "mundi",
@@ -4963,7 +8733,11 @@
 						"decl": 2
 					},
 					"id": "w329",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
+					}
 				}
 			]
 		},
@@ -4971,6 +8745,26 @@
 			"id": "s125",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Przepuść nam, Panie.",
+				"en": "Spare us, O Lord."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Parce",
@@ -4984,7 +8778,11 @@
 						"person": 2,
 						"conj": 3
 					},
-					"id": "w330"
+					"id": "w330",
+					"gloss": {
+						"pl": "przepuść",
+						"en": "spare"
+					}
 				},
 				{
 					"form": "nobis",
@@ -4995,7 +8793,11 @@
 						"number": "pl"
 					},
 					"id": "w331",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "nam",
+						"en": "to us"
+					}
 				},
 				{
 					"form": "Dómine",
@@ -5008,7 +8810,11 @@
 						"decl": 2
 					},
 					"id": "w332",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
+					}
 				}
 			]
 		},
@@ -5016,6 +8822,26 @@
 			"id": "s126",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Baranku Boży, który gładzisz grzechy świata.",
+				"en": "Lamb of God, who takest away the sins of the world."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Agnus",
@@ -5027,7 +8853,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w333"
+					"id": "w333",
+					"gloss": {
+						"pl": "Baranku",
+						"en": "Lamb"
+					}
 				},
 				{
 					"form": "Dei",
@@ -5040,7 +8870,11 @@
 						"decl": 2
 					},
 					"id": "w334",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					}
 				},
 				{
 					"form": "qui",
@@ -5051,7 +8885,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w335"
+					"id": "w335",
+					"gloss": {
+						"pl": "który",
+						"en": "who"
+					}
 				},
 				{
 					"form": "tollis",
@@ -5065,7 +8903,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"id": "w336"
+					"id": "w336",
+					"gloss": {
+						"pl": "gładzisz",
+						"en": "take away"
+					}
 				},
 				{
 					"form": "peccáta",
@@ -5077,7 +8919,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w337"
+					"id": "w337",
+					"gloss": {
+						"pl": "grzechy",
+						"en": "sins"
+					}
 				},
 				{
 					"form": "mundi",
@@ -5090,7 +8936,11 @@
 						"decl": 2
 					},
 					"id": "w338",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
+					}
 				}
 			]
 		},
@@ -5098,6 +8948,26 @@
 			"id": "s127",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Wysłuchaj nas, Panie.",
+				"en": "Graciously hear us, O Lord."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Exáudi",
@@ -5111,7 +8981,11 @@
 						"voice": "act",
 						"conj": 4
 					},
-					"id": "w339"
+					"id": "w339",
+					"gloss": {
+						"pl": "wysłuchaj",
+						"en": "graciously hear"
+					}
 				},
 				{
 					"form": "nos",
@@ -5122,7 +8996,11 @@
 						"number": "pl"
 					},
 					"id": "w340",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
+					}
 				},
 				{
 					"form": "Dómine",
@@ -5135,7 +9013,11 @@
 						"decl": 2
 					},
 					"id": "w341",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
+					}
 				}
 			]
 		},
@@ -5143,6 +9025,26 @@
 			"id": "s128",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Baranku Boży, który gładzisz grzechy świata.",
+				"en": "Lamb of God, who takest away the sins of the world."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Agnus",
@@ -5154,7 +9056,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w342"
+					"id": "w342",
+					"gloss": {
+						"pl": "Baranku",
+						"en": "Lamb"
+					}
 				},
 				{
 					"form": "Dei",
@@ -5167,7 +9073,11 @@
 						"decl": 2
 					},
 					"id": "w343",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					}
 				},
 				{
 					"form": "qui",
@@ -5178,7 +9088,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"id": "w344"
+					"id": "w344",
+					"gloss": {
+						"pl": "który",
+						"en": "who"
+					}
 				},
 				{
 					"form": "tollis",
@@ -5192,7 +9106,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"id": "w345"
+					"id": "w345",
+					"gloss": {
+						"pl": "gładzisz",
+						"en": "take away"
+					}
 				},
 				{
 					"form": "peccáta",
@@ -5204,7 +9122,11 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"id": "w346"
+					"id": "w346",
+					"gloss": {
+						"pl": "grzechy",
+						"en": "sins"
+					}
 				},
 				{
 					"form": "mundi",
@@ -5217,7 +9139,11 @@
 						"decl": 2
 					},
 					"id": "w347",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
+					}
 				}
 			]
 		},
@@ -5225,6 +9151,26 @@
 			"id": "s129",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Zmiłuj się nad nami.",
+				"en": "Have mercy on us."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Miserére",
@@ -5238,7 +9184,11 @@
 						"voice": "dep",
 						"conj": 2
 					},
-					"id": "w348"
+					"id": "w348",
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
+					}
 				},
 				{
 					"form": "nobis",
@@ -5249,7 +9199,11 @@
 						"number": "pl"
 					},
 					"id": "w349",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
+					}
 				}
 			]
 		},
@@ -5257,6 +9211,26 @@
 			"id": "s130",
 			"type": "verse",
 			"speaker": "ductor",
+			"translation": {
+				"pl": "Módl się za nami, Święta Boża Rodzicielko.",
+				"en": "Pray for us, O holy Mother of God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ora",
@@ -5270,7 +9244,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"id": "w350"
+					"id": "w350",
+					"gloss": {
+						"pl": "módl się",
+						"en": "pray"
+					}
 				},
 				{
 					"form": "pro",
@@ -5280,7 +9258,11 @@
 						"governs": "abl"
 					},
 					"head": "w352",
-					"id": "w351"
+					"id": "w351",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"form": "nobis",
@@ -5291,7 +9273,11 @@
 						"number": "pl"
 					},
 					"id": "w352",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "nami",
+						"en": "us"
+					}
 				},
 				{
 					"form": "sancta",
@@ -5303,7 +9289,11 @@
 						"gender": "f"
 					},
 					"head": "w355",
-					"id": "w353"
+					"id": "w353",
+					"gloss": {
+						"pl": "Święta",
+						"en": "Holy"
+					}
 				},
 				{
 					"form": "Dei",
@@ -5315,7 +9305,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w354"
+					"id": "w354",
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
+					}
 				},
 				{
 					"form": "Génetrix",
@@ -5328,7 +9322,11 @@
 						"decl": 3
 					},
 					"id": "w355",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Rodzicielko",
+						"en": "Mother"
+					}
 				}
 			]
 		},
@@ -5336,6 +9334,26 @@
 			"id": "s131",
 			"type": "verse",
 			"speaker": "populus",
+			"translation": {
+				"pl": "Abyśmy się stali godnymi obietnic Chrystusowych.",
+				"en": "That we may be made worthy of the promises of Christ."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Ut",
@@ -5343,7 +9361,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w356"
+					"id": "w356",
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
+					}
 				},
 				{
 					"form": "digni",
@@ -5355,7 +9377,11 @@
 						"gender": "m"
 					},
 					"head": "w358",
-					"id": "w357"
+					"id": "w357",
+					"gloss": {
+						"pl": "godnymi",
+						"en": "worthy"
+					}
 				},
 				{
 					"form": "efficiámur",
@@ -5369,7 +9395,11 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"id": "w358"
+					"id": "w358",
+					"gloss": {
+						"pl": "stali się",
+						"en": "may be made"
+					}
 				},
 				{
 					"form": "promissiónibus",
@@ -5381,7 +9411,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w359"
+					"id": "w359",
+					"gloss": {
+						"pl": "obietnic",
+						"en": "of the promises"
+					}
 				},
 				{
 					"form": "Christi",
@@ -5394,13 +9428,37 @@
 						"decl": 2
 					},
 					"id": "w360",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "of Christ"
+					}
 				}
 			]
 		},
 		{
 			"id": "s132",
 			"type": "verse",
+			"translation": {
+				"pl": "Módlmy się.",
+				"en": "Let us pray."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Orémus",
@@ -5415,13 +9473,37 @@
 						"conj": 1
 					},
 					"id": "w361",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "módlmy się",
+						"en": "let us pray"
+					}
 				}
 			]
 		},
 		{
 			"id": "s133",
 			"type": "verse",
+			"translation": {
+				"pl": "Panie, nasz Boże, daj nam, sługom swoim, cieszyć się trwałym zdrowiem duszy i ciała, i za wstawiennictwem Najświętszej Maryi, zawsze Dziewicy, uwolnij nas od doczesnych utrapień i obdarz wieczną radością. Przez Chrystusa, Pana naszego. Amen.",
+				"en": "Grant, we beseech Thee, O Lord God, that we Thy servants may enjoy lasting health of mind and body; and by the glorious intercession of Blessed Mary, ever Virgin, be delivered from present sorrow and enjoy eternal gladness. Through Christ our Lord. Amen."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Polish Bishops’ Conference, Polish prayer texts",
+						"locator": "Litania loretańska do Najświętszej Maryi Panny, pp. 16–17",
+						"url": "https://liturgia.wiara.pl/files/20/09/25/064005_XV5X_Modlitewnik_polski.pdf"
+					}
+				],
+				"en": [
+					{
+						"title": "Thesaurus Precum Latinarum",
+						"locator": "Litaniae Lauretanae",
+						"url": "https://www.preces-latinae.org/thesaurus/BVM/Laurentanae.html"
+					}
+				]
+			},
 			"words": [
 				{
 					"form": "Concéde",
@@ -5435,7 +9517,11 @@
 						"person": 2,
 						"conj": 3
 					},
-					"id": "w362"
+					"id": "w362",
+					"gloss": {
+						"pl": "udziel",
+						"en": "grant"
+					}
 				},
 				{
 					"form": "nos",
@@ -5445,7 +9531,11 @@
 						"case": "acc",
 						"number": "pl"
 					},
-					"id": "w363"
+					"id": "w363",
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
+					}
 				},
 				{
 					"form": "fámulos",
@@ -5457,7 +9547,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w364"
+					"id": "w364",
+					"gloss": {
+						"pl": "sług",
+						"en": "servants"
+					}
 				},
 				{
 					"form": "tuos",
@@ -5470,7 +9564,11 @@
 					},
 					"head": "w364",
 					"id": "w365",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "thine"
+					}
 				},
 				{
 					"form": "quǽsumus",
@@ -5486,12 +9584,9 @@
 					},
 					"id": "w366",
 					"post": ",",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "prosimy",
+						"en": "we beseech"
 					}
 				},
 				{
@@ -5504,7 +9599,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w367"
+					"id": "w367",
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
+					}
 				},
 				{
 					"form": "Deus",
@@ -5517,7 +9616,11 @@
 						"decl": 2
 					},
 					"id": "w368",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
+					}
 				},
 				{
 					"form": "perpétua",
@@ -5529,7 +9632,11 @@
 						"gender": "f"
 					},
 					"head": "w373",
-					"id": "w369"
+					"id": "w369",
+					"gloss": {
+						"pl": "trwałym",
+						"en": "perpetual"
+					}
 				},
 				{
 					"form": "mentis",
@@ -5541,7 +9648,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w370"
+					"id": "w370",
+					"gloss": {
+						"pl": "umysłu",
+						"en": "of mind"
+					}
 				},
 				{
 					"form": "et",
@@ -5549,7 +9660,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w371"
+					"id": "w371",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "córporis",
@@ -5561,7 +9676,11 @@
 						"gender": "n",
 						"decl": 3
 					},
-					"id": "w372"
+					"id": "w372",
+					"gloss": {
+						"pl": "ciała",
+						"en": "of body"
+					}
 				},
 				{
 					"form": "sanitáte",
@@ -5573,7 +9692,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w373"
+					"id": "w373",
+					"gloss": {
+						"pl": "zdrowiem",
+						"en": "with health"
+					}
 				},
 				{
 					"form": "gaudére",
@@ -5586,7 +9709,11 @@
 						"tense": "pres"
 					},
 					"id": "w374",
-					"post": ";"
+					"post": ";",
+					"gloss": {
+						"pl": "cieszyć się",
+						"en": "to enjoy"
+					}
 				},
 				{
 					"form": "et",
@@ -5594,7 +9721,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w375"
+					"id": "w375",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "gloriósa",
@@ -5606,7 +9737,11 @@
 						"gender": "f"
 					},
 					"id": "w376",
-					"head": "w381"
+					"head": "w381",
+					"gloss": {
+						"pl": "chwalebnym",
+						"en": "glorious"
+					}
 				},
 				{
 					"form": "beátæ",
@@ -5618,7 +9753,11 @@
 						"gender": "f"
 					},
 					"head": "w378",
-					"id": "w377"
+					"id": "w377",
+					"gloss": {
+						"pl": "błogosławionej",
+						"en": "of blessed"
+					}
 				},
 				{
 					"form": "Maríæ",
@@ -5630,7 +9769,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w378"
+					"id": "w378",
+					"gloss": {
+						"pl": "Maryi",
+						"en": "Mary"
+					}
 				},
 				{
 					"form": "semper",
@@ -5638,7 +9781,11 @@
 					"morph": {
 						"pos": "adv"
 					},
-					"id": "w379"
+					"id": "w379",
+					"gloss": {
+						"pl": "zawsze",
+						"en": "ever"
+					}
 				},
 				{
 					"form": "Vírginis",
@@ -5650,7 +9797,11 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"id": "w380"
+					"id": "w380",
+					"gloss": {
+						"pl": "Dziewicy",
+						"en": "Virgin"
+					}
 				},
 				{
 					"form": "intercessióne",
@@ -5663,7 +9814,11 @@
 						"decl": 3
 					},
 					"id": "w381",
-					"post": ","
+					"post": ",",
+					"gloss": {
+						"pl": "wstawiennictwem",
+						"en": "by the intercession"
+					}
 				},
 				{
 					"form": "a",
@@ -5673,7 +9828,11 @@
 						"governs": "abl"
 					},
 					"head": "w385",
-					"id": "w382"
+					"id": "w382",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"form": "præsénti",
@@ -5685,7 +9844,11 @@
 						"gender": "f"
 					},
 					"head": "w385",
-					"id": "w383"
+					"id": "w383",
+					"gloss": {
+						"pl": "doczesnego",
+						"en": "present"
+					}
 				},
 				{
 					"form": "liberári",
@@ -5697,7 +9860,11 @@
 						"conj": 1,
 						"tense": "pres"
 					},
-					"id": "w384"
+					"id": "w384",
+					"gloss": {
+						"pl": "być uwolnionymi",
+						"en": "to be delivered"
+					}
 				},
 				{
 					"form": "tristítia",
@@ -5709,7 +9876,11 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"id": "w385"
+					"id": "w385",
+					"gloss": {
+						"pl": "smutku",
+						"en": "sorrow"
+					}
 				},
 				{
 					"form": "et",
@@ -5717,7 +9888,11 @@
 					"morph": {
 						"pos": "conj"
 					},
-					"id": "w386"
+					"id": "w386",
+					"gloss": {
+						"pl": "i",
+						"en": "and"
+					}
 				},
 				{
 					"form": "ætérna",
@@ -5729,7 +9904,11 @@
 						"gender": "f"
 					},
 					"id": "w387",
-					"head": "w389"
+					"head": "w389",
+					"gloss": {
+						"pl": "wieczną",
+						"en": "eternal"
+					}
 				},
 				{
 					"form": "pérfrui",
@@ -5741,7 +9920,11 @@
 						"voice": "dep",
 						"conj": 3
 					},
-					"id": "w388"
+					"id": "w388",
+					"gloss": {
+						"pl": "cieszyć się w pełni",
+						"en": "enjoy fully"
+					}
 				},
 				{
 					"form": "lætítia",
@@ -5754,7 +9937,11 @@
 						"decl": 1
 					},
 					"id": "w389",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "radością",
+						"en": "gladness"
+					}
 				},
 				{
 					"form": "Per",
@@ -5764,7 +9951,11 @@
 						"governs": "acc"
 					},
 					"head": "w391",
-					"id": "w390"
+					"id": "w390",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"form": "Christum",
@@ -5776,7 +9967,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w391"
+					"id": "w391",
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
+					}
 				},
 				{
 					"form": "Dóminum",
@@ -5788,7 +9983,11 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"id": "w392"
+					"id": "w392",
+					"gloss": {
+						"pl": "Pana",
+						"en": "the Lord"
+					}
 				},
 				{
 					"form": "nostrum",
@@ -5801,7 +10000,11 @@
 					},
 					"head": "w392",
 					"id": "w393",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"form": "Amen",
@@ -5810,9 +10013,148 @@
 						"pos": "intj"
 					},
 					"id": "w394",
-					"post": "."
+					"post": ".",
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The current Roman form. Its historical core is collated against the 1952 Enchiridion; later invocations are supplied from the Holy See documents that inserted them in 1980, 1995 and 2020.",
+		"source": {
+			"method": "The 1952 Enchiridion supplies the historical core; Mater Ecclesiae, Regina familiae, Mater misericordiae, Mater spei and Solacium migrantium are supplied by the respective Holy See decrees of 1980, 1995 and 2020. Regina Poloniae is supplied by the Sacred Congregation of Rites' approval of 14 January 1920 and the current Polish bishops' text. The resulting Roman recension for Poland is collated against TPL and the cited decrees.",
+			"witnesses": "witnesses/litaniae.lauretanae/",
+			"apparatus": "witnesses/litaniae.lauretanae/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "accepted"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"words": {
+			"w001": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w005": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w111": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w131": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w193": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w237": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w268": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w299": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w304": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w320": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "accepted"
+				}
+			},
+			"w366": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

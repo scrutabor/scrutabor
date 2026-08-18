@@ -9,28 +9,25 @@
 	"ids": {
 		"next": 38
 	},
-	"status": "working-edition",
-	"notes": "Part of the proper for the First Sunday of Advent. The biblical or liturgical citation and the source boundary are recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-i-adventus-collecta/",
-		"apparatus": "witnesses/proprium.dominica-i-adventus-collecta/apparatus.json"
+	"about": {
+		"pl": "Kolekta I Niedzieli Adwentu. Prosi Boga, aby wzbudził swoją potęgę i przyszedł, abyśmy zostali wyrwani z niebezpieczeństw, które sprowadzają nasze grzechy, i zbawieni Jego wybawieniem. W tej Mszy nie mówi się Gloria, podobnie jak w żadnej Mszy okresu aż do Bożego Narodzenia.",
+		"en": "The Collect of the First Sunday of Advent. It asks God to stir up His power and come, so that we may be snatched from the dangers our sins bring near and saved by His deliverance. The Gloria is not said in this Mass, nor in any Mass of the season until Christmas."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Dominica I Adventus, printed page 2",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+		"en": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Dominica I Adventus, printed page 2",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
+		]
 	},
 	"segments": [
 		{
@@ -38,6 +35,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Wzbudź swą potęgę, prosimy Cię, Panie, i przybądź, abyśmy pod Twoją opieką zasłużyli na wyrwanie z grożących niebezpieczeństw naszych grzechów i przez Twoje wyzwolenie dostąpili zbawienia. Który żyjesz i królujesz z Bogiem Ojcem w jedności Ducha Świętego, Bóg, przez wszystkie wieki wieków. Amen.",
+				"en": "Stir up Your power, we beseech You, O Lord, and come, that we may deserve to be rescued from the threatening dangers of our sins under Your protection and to be saved by Your deliverance. Who live and reign with God the Father in the unity of the Holy Spirit, God, for ever and ever. Amen."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -52,6 +53,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wzbudź",
+						"en": "stir up"
 					}
 				},
 				{
@@ -68,12 +73,9 @@
 						"tense": "pres",
 						"voice": "act"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "prosimy",
+						"en": "we beseech"
 					}
 				},
 				{
@@ -87,6 +89,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -99,6 +105,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "potęgę",
+						"en": "power"
 					}
 				},
 				{
@@ -112,7 +122,11 @@
 						"number": "sg",
 						"pos": "adj"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w006",
@@ -120,6 +134,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -135,6 +153,10 @@
 						"pos": "verb",
 						"tense": "pres",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "przybądź",
+						"en": "come"
 					}
 				},
 				{
@@ -143,6 +165,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
 					}
 				},
 				{
@@ -153,7 +179,11 @@
 						"governs": "abl",
 						"pos": "prep"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w010",
@@ -169,7 +199,15 @@
 						"case": "abl",
 						"gender": "n"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "grożących",
+						"en": "threatening"
+					},
+					"function": {
+						"pl": "Imiesłów określa niebezpieczeństwa jako już grożące. Cała grupa stoi po przyimku ab.",
+						"en": "The participle qualifies the dangers as already threatening. The whole phrase follows the preposition ab."
+					}
 				},
 				{
 					"id": "w011",
@@ -181,6 +219,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "grzechów",
+						"en": "of sins"
 					}
 				},
 				{
@@ -193,7 +235,11 @@
 						"number": "pl",
 						"pos": "adj"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "naszych",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w013",
@@ -206,6 +252,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "niebezpieczeństw",
+						"en": "dangers"
 					}
 				},
 				{
@@ -216,6 +266,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobą",
+						"en": "Thou"
 					}
 				},
 				{
@@ -230,6 +284,10 @@
 						"pos": "verb",
 						"tense": "pres",
 						"voice": "dep"
+					},
+					"gloss": {
+						"pl": "zasłużyli",
+						"en": "may we deserve"
 					}
 				},
 				{
@@ -246,7 +304,15 @@
 						"case": "abl",
 						"gender": "m"
 					},
-					"head": "w014"
+					"head": "w014",
+					"gloss": {
+						"pl": "chroniącym",
+						"en": "protecting"
+					},
+					"function": {
+						"pl": "Z pierwszym te tworzy ablativus absolutus: gdy Ty chronisz. Określa okoliczność wyrwania.",
+						"en": "With the first te it forms an ablative absolute: with You protecting. It gives the circumstance of the rescue."
+					}
 				},
 				{
 					"id": "w017",
@@ -259,6 +325,10 @@
 						"pos": "verb",
 						"tense": "pres",
 						"voice": "pass"
+					},
+					"gloss": {
+						"pl": "być wyrwanymi",
+						"en": "to be rescued"
 					}
 				},
 				{
@@ -269,6 +339,10 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobą",
+						"en": "Thou"
 					}
 				},
 				{
@@ -285,7 +359,15 @@
 						"case": "abl",
 						"gender": "m"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "wyzwalającym",
+						"en": "delivering"
+					},
+					"function": {
+						"pl": "Tworzy z te drugi ablativus absolutus, równoległy do ochrony i określający okoliczność zbawienia.",
+						"en": "It forms a second ablative absolute with te, parallel to the protecting clause and governing the circumstance of salvation."
+					}
 				},
 				{
 					"id": "w020",
@@ -298,6 +380,10 @@
 						"mood": "inf",
 						"voice": "pass",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "być zbawionymi",
+						"en": "to be saved"
 					}
 				},
 				{
@@ -309,6 +395,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -323,6 +413,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "żyjesz",
+						"en": "You live"
 					}
 				},
 				{
@@ -331,6 +425,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -345,6 +443,10 @@
 						"pos": "verb",
 						"tense": "pres",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "królujesz",
+						"en": "reign"
 					}
 				},
 				{
@@ -355,7 +457,11 @@
 						"governs": "abl",
 						"pos": "prep"
 					},
-					"head": "w026"
+					"head": "w026",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w026",
@@ -367,6 +473,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bogiem",
+						"en": "God"
 					}
 				},
 				{
@@ -379,6 +489,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Ojcem",
+						"en": "the Father"
 					}
 				},
 				{
@@ -389,7 +503,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w029",
@@ -401,6 +519,10 @@
 						"gender": "f",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "jedności",
+						"en": "the unity"
 					}
 				},
 				{
@@ -413,6 +535,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "Ducha",
+						"en": "of the Spirit"
 					}
 				},
 				{
@@ -426,7 +552,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "Świętego",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w032",
@@ -440,14 +570,13 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "medium",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
-						],
-						"review": "disputed"
+					"gloss": {
+						"pl": "Bóg",
+						"en": "God"
+					},
+					"note": {
+						"pl": "Forma jest zarazem mianownikiem i wołaczem. W tej doksologii może to być apozycja do podmiotu drugiej osoby albo bezpośredni zwrot. Ta edycja przyjmuje mianownik.",
+						"en": "The form is nominative and vocative at once. In this doxology it can be an apposition to the second-person subject or a direct address. This edition takes the nominative."
 					}
 				},
 				{
@@ -458,7 +587,11 @@
 						"governs": "acc",
 						"pos": "prep"
 					},
-					"head": "w035"
+					"head": "w035",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w034",
@@ -470,7 +603,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w035"
+					"head": "w035",
+					"gloss": {
+						"pl": "wszystkie",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w035",
@@ -482,6 +619,10 @@
 						"gender": "n",
 						"number": "pl",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
 					}
 				},
 				{
@@ -495,6 +636,10 @@
 						"gender": "n",
 						"number": "pl",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
 					}
 				},
 				{
@@ -504,9 +649,60 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "Part of the proper for the First Sunday of Advent. The biblical or liturgical citation and the source boundary are recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-i-adventus-collecta/",
+			"apparatus": "witnesses/proprium.dominica-i-adventus-collecta/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		},
+		"words": {
+			"w002": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "accepted"
+				}
+			},
+			"w032": {
+				"analysis": {
+					"confidence": "medium",
+					"sources": [
+						"editorial",
+						"whitakers",
+						"collatinus"
+					],
+					"review": "disputed"
+				}
+			}
+		}
+	}
 }

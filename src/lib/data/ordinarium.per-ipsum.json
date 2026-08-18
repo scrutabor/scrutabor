@@ -9,41 +9,34 @@
 	"ids": {
 		"next": 27
 	},
-	"status": "working-edition",
-	"notes": "The doxology that closes the Canon, said with the Host held over the chalice — the minor elevation, so called against the elevations after each consecration. Witness do capitalises Ipsum, Ipso and Ipso; the edition prints them lowercase with witness handmissal-eo and the typical edition, adjudicated in the apparatus. EST at w009 is the only verb in the sentence and stands at its middle, at the head of its own clause, before the subjects (honor, glória) that close it. OMNIS at w018 agrees with honor alone, though the sense covers glória too.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.per-ipsum/",
-		"apparatus": "witnesses/ordinarium.per-ipsum/apparatus.json"
+	"about": {
+		"pl": "Ta doksologia zamyka Kanon. Kapłan czyni Hostią trzy znaki krzyża nad kielichem, a następnie dwa między sobą a kielichem. Przy omnis honor et glória nieco unosi kielich wraz z Hostią. Końcowe Per ómnia sǽcula sæculórum wypowiada głosem słyszalnym, a lud odpowiada Amen.",
+		"en": "This doxology closes the Canon. The priest makes three signs of the cross with the Host over the chalice, then two between himself and the chalice. At omnis honor et glória he slightly raises the chalice with the Host. He says the closing Per ómnia sǽcula sæculórum audibly, and the people answer Amen."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Ordo Missae, conclusion of the Canon",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Ordo Missae, conclusion of the Canon",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Discooperit Calicem, genuflectit, accipit Hostiam inter pollicem et indicem manus dexteræ: et tenens sinistra Calicem, cum Hostia signat ter a labio ad labium Calicis, dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan odsłania kielich, przyklęka, bierze Hostię w prawą rękę, a kielich w lewą, po czym czyni Hostią trzy znaki krzyża od brzegu do brzegu kielicha.",
+				"en": "The priest uncovers the chalice, genuflects, takes the Host in his right hand and the chalice in his left, and makes three signs of the cross with the Host from rim to rim of the chalice."
 			}
 		},
 		{
@@ -51,6 +44,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Przez Chrystusa, z Chrystusem i w Chrystusie,",
+				"en": "Through Him, and with Him, and in Him,"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -60,7 +57,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w002",
@@ -72,6 +73,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Niego",
+						"en": "Him"
+					},
+					"function": {
+						"pl": "Ipsum odnosi się do Chrystusa wymienionego w poprzedniej modlitwie.",
+						"en": "Ipsum refers to Christ, named in the preceding prayer."
 					}
 				},
 				{
@@ -80,6 +89,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -90,7 +103,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w005",
@@ -102,6 +119,10 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Nim",
+						"en": "Him"
 					}
 				},
 				{
@@ -110,6 +131,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -120,7 +145,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w008",
@@ -132,6 +161,10 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Nim",
+						"en": "Him"
 					}
 				}
 			]
@@ -140,13 +173,9 @@
 			"id": "s03",
 			"type": "rubric",
 			"text": "Cum ipsa Hostia signat bis inter se et Calicem, dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Hostią kapłan czyni dwa znaki krzyża między sobą a kielichem.",
+				"en": "With the Host the priest makes two signs of the cross between himself and the chalice."
 			}
 		},
 		{
@@ -154,6 +183,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Tobie, Boże, Ojcze wszechmogący, w jedności Ducha Świętego,",
+				"en": "O God, almighty Father, in the unity of the Holy Spirit,"
+			},
 			"words": [
 				{
 					"id": "w009",
@@ -166,6 +199,14 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
+					},
+					"function": {
+						"pl": "Jedyne orzeczenie w zdaniu, umieszczone przed podmiotami honor i glória.",
+						"en": "The sentence's only verb, placed before its subjects honor and glória."
 					}
 				},
 				{
@@ -176,6 +217,14 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "to Thee"
+					},
+					"function": {
+						"pl": "Celownik posiadacza przy est: Tobie należy się cześć i chwała.",
+						"en": "Dative of possession with est: honor and glory belong to Thee."
 					}
 				},
 				{
@@ -188,6 +237,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bogu",
+						"en": "God"
 					}
 				},
 				{
@@ -200,6 +253,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojcu",
+						"en": "the Father"
 					}
 				},
 				{
@@ -213,7 +270,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "wszechmogącemu",
+						"en": "almighty"
+					}
 				},
 				{
 					"id": "w014",
@@ -223,7 +284,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w015",
@@ -235,6 +300,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "jedności",
+						"en": "the unity"
 					}
 				},
 				{
@@ -247,6 +316,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "Ducha",
+						"en": "of the Spirit"
 					}
 				},
 				{
@@ -260,7 +333,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "Świętego",
+						"en": "Holy"
+					}
 				}
 			]
 		},
@@ -268,13 +345,9 @@
 			"id": "s05",
 			"type": "rubric",
 			"text": "Elevans parum Calicem cum Hostia, dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan unosi nieco kielich wraz z Hostią.",
+				"en": "The priest raises the chalice a little, with the Host."
 			}
 		},
 		{
@@ -282,6 +355,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "wszelka cześć i chwała,",
+				"en": "all glory and honor is Yours,"
+			},
 			"words": [
 				{
 					"id": "w018",
@@ -293,7 +370,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w019"
+					"head": "w019",
+					"gloss": {
+						"pl": "wszelka",
+						"en": "all"
+					},
+					"function": {
+						"pl": "Omnis zgadza się z bliższym rzeczownikiem honor i określa łącznie honor oraz glória.",
+						"en": "Omnis agrees with the nearer honor and modifies honor and glória together."
+					}
 				},
 				{
 					"id": "w019",
@@ -306,6 +391,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "cześć",
+						"en": "honor"
 					}
 				},
 				{
@@ -314,6 +403,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -327,6 +420,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwała",
+						"en": "glory"
 					}
 				}
 			]
@@ -335,13 +432,9 @@
 			"id": "s07",
 			"type": "rubric",
 			"text": "Ponit Hostiam, Calicem Palla cooperit, genuflectit, surgit, et dicit intellegibili voce vel cantat:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan odkłada Hostię, nakrywa kielich palką, przyklęka, wstaje i mówi głosem słyszalnym albo śpiewa:",
+				"en": "The priest sets down the Host, covers the chalice with the pall, genuflects, rises, and says in an audible voice or sings:"
 			}
 		},
 		{
@@ -349,6 +442,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "przez wszystkie wieki wieków.",
+				"en": "for ever and ever."
+			},
 			"words": [
 				{
 					"id": "w022",
@@ -358,7 +455,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "przez",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w023",
@@ -370,7 +471,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "wszystkie",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w024",
@@ -382,6 +487,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
 					}
 				},
 				{
@@ -395,6 +504,14 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby mnogiej podwaja poprzedzający go biernik.",
+						"en": "The genitive plural doubles the accusative before it."
 					}
 				}
 			]
@@ -414,6 +531,10 @@
 					"source": "DMS 25 a"
 				}
 			},
+			"translation": {
+				"pl": "Amen.",
+				"en": "Amen."
+			},
 			"words": [
 				{
 					"id": "w026",
@@ -422,9 +543,84 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
+					},
+					"function": {
+						"pl": "We Mszy cichej tej odpowiedzi udziela ministrant.",
+						"en": "At Low Mass the server gives this response."
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The doxology that closes the Canon, said with the Host held over the chalice — the minor elevation, so called against the elevations after each consecration. Witness do capitalises Ipsum, Ipso and Ipso; the edition prints them lowercase with witness handmissal-eo and the typical edition, adjudicated in the apparatus. EST at w009 is the only verb in the sentence and stands at its middle, at the head of its own clause, before the subjects (honor, glória) that close it. OMNIS at w018 agrees with honor alone, though the sense covers glória too.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.per-ipsum/",
+			"apparatus": "witnesses/ordinarium.per-ipsum/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s03": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s05": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s07": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		}
+	}
 }

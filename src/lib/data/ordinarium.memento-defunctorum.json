@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 39
 	},
-	"status": "working-edition",
-	"notes": "The commemoration of the dead, with its own pause. As in the Meménto of the living, the missal's name slot N. et N. is omitted; because the edition does not print the names, the relative clause that follows describes the servants and handmaids themselves and takes no comma, which is also witness handmissal-eo's pointing. QUIESCÉNTIBUS at w024 is a participle used as a noun — those resting — and takes its dative from indúlgeas. LOCUM at w025 is the object of indúlgeas across the intervening ut, which stands late in its own clause. SIGNO FÍDEI at w011-w012 is understood of baptism — the seal received in it — and the note says so. REFRIGÉRII at w026 is the genitive singular: it stands coordinate with lucis and pacis, which leaves a locative no room at all, Lewis and Short head the noun refrigerium, ii, and Collatinus reads the genitive. Whitaker's carries THIS ENTRY with the contracted genitive only and so offers a locative — a choice made in his dictionary entry, not a rule about -ium nouns, since the same analyzer reads Evangélii as a genitive singular. The overruling is recorded in the pipeline's rulings.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.memento-defunctorum/",
-		"apparatus": "witnesses/ordinarium.memento-defunctorum/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Wspomnienie zmarłych w Kanonie. Kapłan modli się za sługi i służebnice Boże, którzy odeszli ze znakiem wiary i spoczywają w pokoju, a potem składa ręce i modli się w milczeniu za tych, których pragnie wspomnieć. Prosi dla nich oraz dla wszystkich spoczywających w Chrystusie o miejsce ochłody, światła i pokoju.",
+		"en": "The commemoration of the dead in the Canon. The priest prays for God's servants and handmaids who have gone before with the sign of faith and rest in peace, then joins his hands and prays in silence for those he intends to remember. He asks for them and for all who rest in Christ a place of refreshment, light, and peace."
 	},
 	"segments": [
 		{
@@ -38,6 +19,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Pamiętaj też, Boże, o swoich sługach i służebnicach, którzy przed nami odeszli ze znakiem wiary i śpią w pokoju.",
+				"en": "Remember also, Lord, Your servants and handmaids who have gone before us with the sign of faith and rest in the sleep of peace."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -51,13 +36,13 @@
 						"mood": "imp",
 						"voice": "act"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "pamiętaj",
+						"en": "be mindful"
+					},
+					"function": {
+						"pl": "Druga osoba liczby pojedynczej trybu rozkazującego czasu przyszłego.",
+						"en": "Second-person singular future imperative."
 					}
 				},
 				{
@@ -67,6 +52,10 @@
 					"lemma": "etiam",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "też",
+						"en": "also"
 					}
 				},
 				{
@@ -80,6 +69,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -92,6 +85,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "sług",
+						"en": "of servants"
 					}
 				},
 				{
@@ -104,6 +101,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "i służebnic",
+						"en": "and of handmaids"
 					}
 				},
 				{
@@ -116,7 +117,15 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "Thy"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby mnogiej rodzaju żeńskiego. Zgadza się z „famularúmque” (w005).",
+						"en": "Feminine genitive plural, agreeing with “famularúmque” (w005)."
+					}
 				},
 				{
 					"id": "w007",
@@ -127,6 +136,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którzy",
+						"en": "who"
 					}
 				},
 				{
@@ -137,6 +150,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				},
 				{
@@ -151,6 +168,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "poprzedzili",
+						"en": "have gone before"
 					}
 				},
 				{
@@ -161,7 +182,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "ze",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w011",
@@ -173,6 +198,40 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "znakiem",
+						"en": "the sign"
+					},
+					"function": {
+						"pl": "Ablativus po „cum” (w010): „ze znakiem wiary”. KKK 1274 odnosi to wyrażenie do wiary otrzymanej na chrzcie i dochowanej aż do śmierci.",
+						"en": "Ablative after “cum” (w010): “with the sign of faith”. CCC 1274 relates the phrase to baptismal faith kept until death."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Catechismus Catholicae Ecclesiae",
+								"locator": "n. 1274",
+								"url": "https://www.vatican.va/archive/catechism_lt/index_lt.htm"
+							},
+							{
+								"title": "Missale Romanum (1962)",
+								"locator": "Canon Missae, Memento defunctorum",
+								"url": "https://archive.org/details/missale_romanum-1962"
+							}
+						],
+						"en": [
+							{
+								"title": "Catechismus Catholicae Ecclesiae",
+								"locator": "n. 1274",
+								"url": "https://www.vatican.va/archive/catechism_lt/index_lt.htm"
+							},
+							{
+								"title": "Missale Romanum (1962)",
+								"locator": "Canon Missae, Memento defunctorum",
+								"url": "https://archive.org/details/missale_romanum-1962"
+							}
+						]
 					}
 				},
 				{
@@ -186,6 +245,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "wiary",
+						"en": "of faith"
 					}
 				},
 				{
@@ -194,6 +257,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -208,6 +275,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "śpią",
+						"en": "sleep"
+					},
+					"function": {
+						"pl": "Czas teraźniejszy po perfectum „præcessérunt” (w009).",
+						"en": "Present tense after the perfect “præcessérunt” (w009)."
 					}
 				},
 				{
@@ -218,7 +293,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w016",
@@ -230,6 +309,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "śnie",
+						"en": "the sleep"
 					}
 				},
 				{
@@ -243,6 +326,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "pokoju",
+						"en": "of peace"
 					}
 				}
 			]
@@ -251,13 +338,9 @@
 			"id": "s02",
 			"type": "rubric",
 			"text": "Iungit manus, orat aliquantulum pro iis defunctis, pro quibus orare intendit, deinde extensis manibus prosequitur:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan składa ręce i modli się chwilę w milczeniu za tych zmarłych, których chce wspomnieć. Potem rozkłada ręce i mówi dalej.",
+				"en": "The priest joins his hands and prays a while in silence for those dead he means to remember, then spreads his hands and goes on."
 			}
 		},
 		{
@@ -265,6 +348,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Błagamy Cię, daj tym zmarłym oraz wszystkim spoczywającym w Chrystusie miejsce ochłody, światłości i pokoju.",
+				"en": "Grant them, O Lord, we pray, and all who sleep in Christ, a place of refreshment, light and peace."
+			},
 			"words": [
 				{
 					"id": "w018",
@@ -276,6 +363,14 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "im",
+						"en": "to them"
+					},
+					"function": {
+						"pl": "Celownik zależny od „indúlgeas” (w031).",
+						"en": "A dative governed by “indúlgeas” (w031)."
 					}
 				},
 				{
@@ -289,6 +384,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -297,6 +396,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -309,7 +412,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "wszystkim",
+						"en": "to all"
+					}
 				},
 				{
 					"id": "w022",
@@ -319,7 +426,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w023"
+					"head": "w023",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w023",
@@ -331,6 +442,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusie",
+						"en": "Christ"
 					}
 				},
 				{
@@ -348,7 +463,15 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "spoczywającym",
+						"en": "who rest"
+					},
+					"function": {
+						"pl": "Imiesłów użyty rzeczownikowo w celowniku liczby mnogiej.",
+						"en": "A participle used as a noun in the dative plural."
+					}
 				},
 				{
 					"id": "w025",
@@ -360,6 +483,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "miejsce",
+						"en": "a place"
+					},
+					"function": {
+						"pl": "Biernik jako dopełnienie „indúlgeas” (w031).",
+						"en": "Accusative object of “indúlgeas” (w031)."
 					}
 				},
 				{
@@ -374,13 +505,13 @@
 						"gender": "n",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "ochłody",
+						"en": "of refreshment"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od „locum” (w025), współrzędny z „lucis” (w027) i „pacis” (w029).",
+						"en": "A genitive dependent on “locum” (w025), coordinated with “lucis” (w027) and “pacis” (w029)."
 					}
 				},
 				{
@@ -393,6 +524,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "światła",
+						"en": "of light"
 					}
 				},
 				{
@@ -401,6 +536,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -414,6 +553,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "pokoju",
+						"en": "of peace"
 					}
 				},
 				{
@@ -422,6 +565,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "byś",
+						"en": "that"
 					}
 				},
 				{
@@ -437,6 +584,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "dał",
+						"en": "Thou grant"
 					}
 				},
 				{
@@ -452,6 +603,14 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "błagamy",
+						"en": "we plead"
+					},
+					"function": {
+						"pl": "Pierwsza osoba liczby mnogiej czasu teraźniejszego czasownika deponentnego.",
+						"en": "First-person plural present of a deponent verb."
 					}
 				}
 			]
@@ -460,13 +619,9 @@
 			"id": "s04",
 			"type": "rubric",
 			"text": "Iungit manus, et caput inclinat, dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan składa ręce i pochyla głowę.",
+				"en": "The priest joins his hands and bows his head."
 			}
 		},
 		{
@@ -474,6 +629,10 @@
 			"type": "verse",
 			"voice": "secreto",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Przez tegoż Chrystusa Pana naszego. Amen.",
+				"en": "Through the same Christ our Lord. Amen."
+			},
 			"words": [
 				{
 					"id": "w033",
@@ -483,7 +642,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w034"
+					"head": "w034",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w034",
@@ -494,6 +657,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "tegoż",
+						"en": "the same"
 					}
 				},
 				{
@@ -506,6 +673,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -518,6 +689,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -531,7 +706,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w038",
@@ -540,9 +719,82 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The commemoration of the dead, with its own pause. As in the Meménto of the living, the missal's name slot N. et N. is omitted; because the edition does not print the names, the relative clause that follows describes the servants and handmaids themselves and takes no comma, which is also witness handmissal-eo's pointing. QUIESCÉNTIBUS at w024 is a participle used as a noun — those resting — and takes its dative from indúlgeas. LOCUM at w025 is the object of indúlgeas across the intervening ut, which stands late in its own clause. SIGNO FÍDEI at w011-w012 is understood of baptism — the seal received in it — and the note says so. REFRIGÉRII at w026 is the genitive singular: it stands coordinate with lucis and pacis, which leaves a locative no room at all, Lewis and Short head the noun refrigerium, ii, and Collatinus reads the genitive. Whitaker's carries THIS ENTRY with the contracted genitive only and so offers a locative — a choice made in his dictionary entry, not a rule about -ium nouns, since the same analyzer reads Evangélii as a genitive singular. The overruling is recorded in the pipeline's rulings.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.memento-defunctorum/",
+			"apparatus": "witnesses/ordinarium.memento-defunctorum/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s02": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s04": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w001": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w026": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

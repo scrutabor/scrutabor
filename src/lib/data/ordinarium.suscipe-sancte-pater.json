@@ -9,41 +9,18 @@
 	"ids": {
 		"next": 54
 	},
-	"status": "working-edition",
-	"notes": "The prayer over the host, said as the priest raises the paten. Its own document because it accompanies one physical offering and is followed by a change of place at the altar. The demonstrative hic, hæc, hoc carries the plain lemma key hic — SCHEMA.md gives the bare key to the word a reader is likelier to look up — while the adverb lives under hic_adverbium (so at ordinarium.aufer-a-nobis w031). Discriminated keys map back through LEMMA_ALIASES, and the analyzers vote on both. NEGLIGÉNTIIS at w028 is the reading of the printed 1962 books and of witness handmissal-eo; witness do sets the classical spelling neglegéntiis, adjudicated in the apparatus as an orthographic variant. MEIS at w029 carries no gender: the possessive covers three nouns of two genders (peccátis neuter, offensiónibus and negligéntiis feminine), the form marks none, and nothing else settles it. ÓMNIBUS at w032 and w037 is tagged masculine on the substantives it stands with, not on its own form. DEFÚNCTIS at w042 is tagged as the adjective defunctus rather than as a participle of defungor: it stands paired with vivis, an adjective, and both analyzers read the form under an adjectival head — the corpus already treats benedictus the same way. ILLIS at w046 is dative plural masculine by the sense of the sentence: the form marks neither the case against the ablative nor the gender.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence; one orthographic and the accidental punctuation variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.suscipe-sancte-pater/",
-		"apparatus": "witnesses/ordinarium.suscipe-sancte-pater/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Kapłan ofiaruje Bogu Ojcu hostię za własne grzechy, przewinienia i zaniedbania, za wszystkich obecnych oraz za wszystkich wiernych chrześcijan, żywych i umarłych. Prosi, aby ofiara posłużyła jemu i im ku zbawieniu na życie wieczne.",
+		"en": "The priest offers the host to God the Father for his own sins, offenses, and negligences, for all who are present, and for all faithful Christians, living and dead. He asks that the offering may avail both him and them unto salvation and eternal life."
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Quo dicto, si est Missa sollemnis, Diaconus porrigit Celebranti Patenam cum Hostia: si privata, Sacerdos ipse accipit Patenam cum Hostia, quam offerens, dicit:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "We Mszy uroczystej diakon podaje celebransowi patenę z Hostią. We Mszy cichej kapłan bierze ją sam i ofiaruje, odmawiając modlitwę.",
+				"en": "At Solemn Mass the deacon hands the celebrant the paten with the Host. At Low Mass the priest takes it himself and offers it while saying the prayer."
 			}
 		},
 		{
@@ -51,6 +28,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Przyjmij, Ojcze święty, wszechmogący wieczny Boże, tę niepokalaną Hostię, którą ja, niegodny sługa Twój, składam Tobie, Bogu memu żywemu i prawdziwemu, za niezliczone grzechy, zniewagi i zaniedbania moje, i za wszystkich tu obecnych, a także za wszystkich wiernych chrześcijan żywych i umarłych: aby mnie i im posłużyła ku zbawieniu na życie wieczne. Amen.",
+				"en": "Receive, holy Father, almighty eternal God, this spotless Host, which I, Thy unworthy servant, offer to Thee, my living and true God, for my innumerable sins, offenses and negligences, and for all here present, and also for all faithful Christians living and dead: that it may profit me and them unto salvation, into life everlasting. Amen."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -65,6 +46,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "przyjmij",
+						"en": "receive"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący. Dopełnieniem jest „hóstiam” (w009).",
+						"en": "An imperative. Its object is “hóstiam” (w009)."
 					}
 				},
 				{
@@ -77,7 +66,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "święty",
+						"en": "holy"
+					},
+					"function": {
+						"pl": "Zgadza się z „Pater” (w003).",
+						"en": "Agrees with “Pater” (w003)."
+					}
 				},
 				{
 					"id": "w003",
@@ -90,6 +87,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojcze",
+						"en": "Father"
 					}
 				},
 				{
@@ -102,7 +103,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "wszechmogący",
+						"en": "almighty"
+					},
+					"function": {
+						"pl": "Wołacz przymiotnika III deklinacji brzmi tak samo jak mianownik. Rozstrzyga o tym zwrot do Ojca.",
+						"en": "The vocative of a 3rd declension adjective is identical with the nominative. The address to the Father settles it."
+					}
 				},
 				{
 					"id": "w005",
@@ -114,7 +123,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "wieczny",
+						"en": "eternal"
+					}
 				},
 				{
 					"id": "w006",
@@ -127,6 +140,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
+					},
+					"function": {
+						"pl": "„Pater” (w003) i „Deus” są w wołaczu wraz z określającymi je przymiotnikami.",
+						"en": "“Pater” (w003) and “Deus” are vocative together with their modifying adjectives."
 					}
 				},
 				{
@@ -139,14 +160,13 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
-						],
-						"review": "pending"
+					"gloss": {
+						"pl": "tę",
+						"en": "this"
+					},
+					"function": {
+						"pl": "Zgadza się z „hóstiam” (w009) i wskazuje na Hostię na patenie.",
+						"en": "It agrees with “hóstiam” (w009) and points to the Host on the paten."
 					}
 				},
 				{
@@ -159,7 +179,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "niepokalaną",
+						"en": "spotless"
+					}
 				},
 				{
 					"id": "w009",
@@ -172,6 +196,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "hostię",
+						"en": "host"
+					},
+					"function": {
+						"pl": "Dopełnienie „Súscipe” (w001).",
+						"en": "The object of “Súscipe” (w001)."
 					}
 				},
 				{
@@ -183,6 +215,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "którą",
+						"en": "which"
+					},
+					"function": {
+						"pl": "Zaimek względny w bierniku, bo jest dopełnieniem „óffero” (w015). Rodzaj i liczbę bierze od „hóstiam” (w009).",
+						"en": "A relative in the accusative because it is the object of “óffero” (w015). It takes gender and number from “hóstiam” (w009)."
 					}
 				},
 				{
@@ -193,6 +233,14 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "ja",
+						"en": "I"
+					},
+					"function": {
+						"pl": "Wyrażony zaimek podmiotu, określony przez „indígnus” (w012) i „fámulus” (w013).",
+						"en": "An expressed subject pronoun, modified by “indígnus” (w012) and “fámulus” (w013)."
 					}
 				},
 				{
@@ -205,7 +253,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "niegodny",
+						"en": "unworthy"
+					}
 				},
 				{
 					"id": "w013",
@@ -217,6 +269,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "sługa",
+						"en": "servant"
+					},
+					"function": {
+						"pl": "Apozycja (dopowiedzenie) do „ego” (w011): ja — sługa twój.",
+						"en": "Apposition to “ego” (w011): I, thy servant."
 					}
 				},
 				{
@@ -229,7 +289,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "Twój",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w015",
@@ -242,6 +306,14 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "składam",
+						"en": "offer"
+					},
+					"function": {
+						"pl": "Orzeczenie zdania względnego rozpoczynającego się od „quam” (w010).",
+						"en": "The verb of the relative clause beginning with “quam” (w010)."
 					}
 				},
 				{
@@ -252,6 +324,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "to Thee"
 					}
 				},
 				{
@@ -264,6 +340,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bogu",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Apozycja (dopowiedzenie) do „tibi” (w016), stąd celownik.",
+						"en": "Apposition to “tibi” (w016), hence the dative."
 					}
 				},
 				{
@@ -276,7 +360,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "memu",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w019",
@@ -288,7 +376,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "żywemu",
+						"en": "living"
+					},
+					"function": {
+						"pl": "Zgadza się z „Deo” (w017).",
+						"en": "Agrees with “Deo” (w017)."
+					}
 				},
 				{
 					"id": "w020",
@@ -296,6 +392,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -309,7 +409,29 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "prawdziwemu",
+						"en": "true"
+					},
+					"function": {
+						"pl": "Zwrot „Deo vivo et vero” występuje także w 1 Tes 1,9.",
+						"en": "The phrase “Deo vivo et vero” also occurs in 1 Thessalonians 1:9."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "1 Thessalonians 1:9"
+							}
+						],
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "1 Thessalonians 1:9"
+							}
+						]
+					}
 				},
 				{
 					"id": "w022",
@@ -319,7 +441,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w023",
@@ -331,7 +457,15 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "niezliczone",
+						"en": "innumerable"
+					},
+					"function": {
+						"pl": "Zgadza się z „peccátis” (w024).",
+						"en": "Agrees with “peccátis” (w024)."
+					}
 				},
 				{
 					"id": "w024",
@@ -344,6 +478,14 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "grzechy",
+						"en": "sins"
+					},
+					"function": {
+						"pl": "Forma jest zarazem celownikiem i ablativem. Rozstrzyga przyimek „pro” (w022), który rządzi ablativem.",
+						"en": "The form is dative as well as ablative. The preposition “pro” (w022), which governs the ablative, decides."
 					}
 				},
 				{
@@ -352,6 +494,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -365,6 +511,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zniewagi",
+						"en": "offenses"
 					}
 				},
 				{
@@ -373,6 +523,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -386,13 +540,13 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "zaniedbania",
+						"en": "negligences"
+					},
+					"function": {
+						"pl": "Oznacza to, co zaniedbano lub czego zaniechano.",
+						"en": "It denotes what was neglected or left undone."
 					}
 				},
 				{
@@ -405,7 +559,15 @@
 						"case": "abl",
 						"number": "pl"
 					},
-					"head": "w028"
+					"head": "w028",
+					"gloss": {
+						"pl": "moje",
+						"en": "my"
+					},
+					"function": {
+						"pl": "Ablativus liczby mnogiej, w tym samym przypadku co wszystkie trzy poprzednie rzeczowniki.",
+						"en": "Ablative plural, sharing its case with all three preceding nouns."
+					}
 				},
 				{
 					"id": "w030",
@@ -413,6 +575,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -423,7 +589,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w033"
+					"head": "w033",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w032",
@@ -435,7 +605,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w033"
+					"head": "w033",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					},
+					"function": {
+						"pl": "Zgadza się z „circumstántibus” (w033).",
+						"en": "Agrees with “circumstántibus” (w033)."
+					}
 				},
 				{
 					"id": "w033",
@@ -452,7 +630,15 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "obecnych",
+						"en": "here present"
+					},
+					"function": {
+						"pl": "Imiesłów użyty rzeczownikowo: „stojący wokół”, czyli obecni.",
+						"en": "A participle used as a noun: “those standing around”, meaning those present."
+					}
 				},
 				{
 					"id": "w034",
@@ -460,6 +646,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "lecz",
+						"en": "but"
 					}
 				},
 				{
@@ -468,6 +658,14 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "także",
+						"en": "also"
+					},
+					"function": {
+						"pl": "W zwrocie „sed et” rozszerza wyliczenie: „a także”.",
+						"en": "In the phrase “sed et”, it expands the list: “and also”."
 					}
 				},
 				{
@@ -478,7 +676,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w038"
+					"head": "w038",
+					"gloss": {
+						"pl": "za",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w037",
@@ -490,7 +692,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w038"
+					"head": "w038",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w038",
@@ -502,7 +708,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wiernych",
+						"en": "faithful"
+					}
 				},
 				{
 					"id": "w039",
@@ -514,7 +724,15 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w038"
+					"head": "w038",
+					"gloss": {
+						"pl": "chrześcijan",
+						"en": "Christians"
+					},
+					"function": {
+						"pl": "Oba przymiotniki są tu użyte rzeczownikowo: wierni chrześcijanie.",
+						"en": "Both adjectives stand as nouns here: the faithful Christian people."
+					}
 				},
 				{
 					"id": "w040",
@@ -526,7 +744,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w038"
+					"head": "w038",
+					"gloss": {
+						"pl": "żywych",
+						"en": "living"
+					}
 				},
 				{
 					"id": "w041",
@@ -534,6 +756,10 @@
 					"lemma": "atque",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -548,13 +774,13 @@
 						"gender": "m"
 					},
 					"head": "w038",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "umarłych",
+						"en": "dead"
+					},
+					"function": {
+						"pl": "Imiesłów użyty rzeczownikowo: „zmarli”.",
+						"en": "A participle used as a noun: “the deceased”."
 					}
 				},
 				{
@@ -563,6 +789,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
 					}
 				},
 				{
@@ -574,6 +804,14 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
+					},
+					"function": {
+						"pl": "Celownik korzyści przy „profíciat” (w047): komu ma to wyjść na pożytek.",
+						"en": "Dative of advantage with “profíciat” (w047): to whom it is to be of profit."
 					}
 				},
 				{
@@ -582,6 +820,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -593,6 +835,14 @@
 						"case": "dat",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "im",
+						"en": "them"
+					},
+					"function": {
+						"pl": "Celownik liczby mnogiej przy „profíciat” (w047), równoległy do „mihi” (w044).",
+						"en": "Dative plural with “profíciat” (w047), parallel to “mihi” (w044)."
 					}
 				},
 				{
@@ -607,6 +857,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "posłużyła",
+						"en": "may profit"
+					},
+					"function": {
+						"pl": "Tryb łączący po „ut” (w043). Podmiotem jest ofiara nazwana wcześniej „hóstiam” (w009).",
+						"en": "Subjunctive after “ut” (w043). Its subject is the offering previously named “hóstiam” (w009)."
 					}
 				},
 				{
@@ -617,7 +875,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w049"
+					"head": "w049",
+					"gloss": {
+						"pl": "ku",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w049",
@@ -629,6 +891,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zbawieniu",
+						"en": "salvation"
 					}
 				},
 				{
@@ -639,7 +905,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w051"
+					"head": "w051",
+					"gloss": {
+						"pl": "ku",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w051",
@@ -651,6 +921,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "życiu",
+						"en": "life"
 					}
 				},
 				{
@@ -664,7 +938,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w051"
+					"head": "w051",
+					"gloss": {
+						"pl": "wiecznemu",
+						"en": "everlasting"
+					},
+					"function": {
+						"pl": "Zgadza się z „vitam” (w051).",
+						"en": "Agrees with “vitam” (w051)."
+					}
 				},
 				{
 					"id": "w053",
@@ -673,9 +955,83 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The prayer over the host, said as the priest raises the paten. Its own document because it accompanies one physical offering and is followed by a change of place at the altar. The demonstrative hic, hæc, hoc carries the plain lemma key hic — SCHEMA.md gives the bare key to the word a reader is likelier to look up — while the adverb lives under hic_adverbium (so at ordinarium.aufer-a-nobis w031). Discriminated keys map back through LEMMA_ALIASES, and the analyzers vote on both. NEGLIGÉNTIIS at w028 is the reading of the printed 1962 books and of witness handmissal-eo; witness do sets the classical spelling neglegéntiis, adjudicated in the apparatus as an orthographic variant. MEIS at w029 carries no gender: the possessive covers three nouns of two genders (peccátis neuter, offensiónibus and negligéntiis feminine), the form marks none, and nothing else settles it. ÓMNIBUS at w032 and w037 is tagged masculine on the substantives it stands with, not on its own form. DEFÚNCTIS at w042 is tagged as the adjective defunctus rather than as a participle of defungor: it stands paired with vivis, an adjective, and both analyzers read the form under an adjectival head — the corpus already treats benedictus the same way. ILLIS at w046 is dative plural masculine by the sense of the sentence: the form marks neither the case against the ablative nor the gender.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence; one orthographic and the accidental punctuation variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.suscipe-sancte-pater/",
+			"apparatus": "witnesses/ordinarium.suscipe-sancte-pater/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w007": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers",
+						"collatinus"
+					],
+					"review": "pending"
+				}
+			},
+			"w028": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			},
+			"w042": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

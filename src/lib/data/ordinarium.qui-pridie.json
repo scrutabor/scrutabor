@@ -9,41 +9,18 @@
 	"ids": {
 		"next": 44
 	},
-	"status": "working-edition",
-	"notes": "The consecration of the bread. The words of consecration are set as the typical edition prints them — Hoc est enim Corpus meum — with a capital only on the opening word and on Corpus. Both hand missals set the whole formula in capitals, and this edition followed them until the typical edition itself could be read; the authority's own practice governs, and the hand missals' capitals are recorded in the apparatus rather than corrected. The accents follow the corpus's rule, which handmissal-eo also prints and do does not. ELEVÁTIS ÓCULIS at w014-w015 is an ablative absolute; elevátis is a participle here rather than an adjective, since neither analyzer heads one. OMNES at w038 is nominative, agreeing with the unstated subject of the two imperatives — all of you, take and eat — and not a vocative address, though the two forms are identical. QUAM at w003 is the conjunction that follows prídie, not the relative pronoun whose accusative is spelt the same.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.qui-pridie/",
-		"apparatus": "witnesses/ordinarium.qui-pridie/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Opowiadanie o ustanowieniu i konsekracja chleba. Kapłan bierze Hostię, podnosi oczy ku niebu i wypowiada nad nią słowa konsekracji cicho, wyraźnie i uważnie. Następnie przyklęka, ukazuje konsekrowaną Hostię ludowi i ponownie przyklęka. Od tej chwili nie rozłącza kciuków i palców wskazujących, chyba że dotyka Hostii, aż do obmycia palców.",
+		"en": "The institution narrative and the consecration of the bread. The priest takes the Host, raises his eyes to heaven, and pronounces the words of consecration over it quietly, distinctly, and attentively. He then genuflects, shows the consecrated Host to the people, and genuflects again. From this point he does not separate his thumbs and forefingers, except when handling the Host, until the ablution of his fingers."
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Accipit Hostiam.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan bierze Hostię.",
+				"en": "The priest takes the Host."
 			}
 		},
 		{
@@ -51,6 +28,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "On to w dzień przed męką wziął chleb w swoje święte i czcigodne ręce,",
+				"en": "On the day before He was to suffer, He took bread in His holy and venerable hands,"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -61,6 +42,14 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Który",
+						"en": "Who"
+					},
+					"function": {
+						"pl": "Zaimek względny odnosi się do Chrystusa, wymienionego na końcu poprzedniej modlitwy.",
+						"en": "The relative refers to Christ, named at the end of the preceding prayer."
 					}
 				},
 				{
@@ -69,6 +58,14 @@
 					"lemma": "pridie",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "dzień wcześniej",
+						"en": "the day before"
+					},
+					"function": {
+						"pl": "Razem z „quam” (w003) tworzy wyrażenie „dzień przed tym, nim”.",
+						"en": "Together with “quam” (w003), it forms the expression “the day before”."
 					}
 				},
 				{
@@ -77,6 +74,14 @@
 					"lemma": "quam",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "niż",
+						"en": "than"
+					},
+					"function": {
+						"pl": "Spójnik dopełniający „prídie” (w002): „przed tym, nim cierpiał”.",
+						"en": "The conjunction completing “prídie” (w002): “before He suffered”."
 					}
 				},
 				{
@@ -92,6 +97,14 @@
 						"mood": "subj",
 						"voice": "dep",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "cierpiał",
+						"en": "He suffered"
+					},
+					"function": {
+						"pl": "Czasownik deponentny w trybie łączącym: forma bierna, znaczenie czynne.",
+						"en": "A deponent in the subjunctive: passive in form, active in meaning."
 					}
 				},
 				{
@@ -106,6 +119,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wziął",
+						"en": "He took"
 					}
 				},
 				{
@@ -118,6 +135,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "chleb",
+						"en": "bread"
 					}
 				},
 				{
@@ -128,7 +149,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "w",
+						"en": "into"
+					}
 				},
 				{
 					"id": "w008",
@@ -140,7 +165,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "święte",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w009",
@@ -148,6 +177,10 @@
 					"lemma": "ac",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -160,7 +193,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "czcigodne",
+						"en": "venerable"
+					}
 				},
 				{
 					"id": "w011",
@@ -172,6 +209,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "ręce",
+						"en": "hands"
+					},
+					"function": {
+						"pl": "Biernik liczby mnogiej. Przydawki „sanctas” i „suas” mają tę samą liczbę i przypadek.",
+						"en": "Accusative plural. The adjectives “sanctas” and “suas” have the same number and case."
 					}
 				},
 				{
@@ -185,7 +230,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "swoje",
+						"en": "His"
+					}
 				}
 			]
 		},
@@ -193,13 +242,9 @@
 			"id": "s03",
 			"type": "rubric",
 			"text": "Elevat oculos ad cælum.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan wznosi oczy ku niebu.",
+				"en": "The priest raises his eyes to heaven."
 			}
 		},
 		{
@@ -207,6 +252,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "podniósł oczy ku niebu, do Ciebie, Boga, swojego Ojca wszechmogącego,",
+				"en": "and with eyes raised to heaven to You, O God, His almighty Father,"
+			},
 			"words": [
 				{
 					"id": "w013",
@@ -214,6 +263,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -231,14 +284,13 @@
 						"conj": 1
 					},
 					"head": "w015",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
-						],
-						"review": "pending"
+					"gloss": {
+						"pl": "podniesionymi",
+						"en": "having been raised"
+					},
+					"function": {
+						"pl": "Wraz z „óculis” (w015) tworzy ablativus absolutus: „podniósłszy oczy”.",
+						"en": "With “óculis” (w015), it forms an ablative absolute: “lifting up His eyes”."
 					}
 				},
 				{
@@ -251,6 +303,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "oczami",
+						"en": "eyes"
 					}
 				},
 				{
@@ -261,7 +317,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "ku",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w017",
@@ -273,6 +333,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "niebu",
+						"en": "heaven"
 					}
 				},
 				{
@@ -283,7 +347,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w019"
+					"head": "w019",
+					"gloss": {
+						"pl": "ku",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w019",
@@ -293,6 +361,14 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "Thee"
+					},
+					"function": {
+						"pl": "Kanon nadal zwraca się do Ojca, opowiadając o słowach i czynach Chrystusa.",
+						"en": "The Canon continues to address the Father while recounting the words and actions of Christ."
 					}
 				},
 				{
@@ -305,6 +381,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bogu",
+						"en": "God"
 					}
 				},
 				{
@@ -317,6 +397,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojcu",
+						"en": "Father"
 					}
 				},
 				{
@@ -329,7 +413,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "swemu",
+						"en": "His"
+					}
 				},
 				{
 					"id": "w023",
@@ -342,7 +430,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "wszechmogącemu",
+						"en": "almighty"
+					}
 				}
 			]
 		},
@@ -350,14 +442,9 @@
 			"id": "s05",
 			"type": "rubric",
 			"text": "Caput inclinat.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do",
-					"mr"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan pochyla głowę.",
+				"en": "The priest bows his head."
 			}
 		},
 		{
@@ -365,6 +452,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "i dzięki Tobie składając,",
+				"en": "giving You thanks,"
+			},
 			"words": [
 				{
 					"id": "w024",
@@ -374,6 +465,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ci",
+						"en": "to Thee"
 					}
 				},
 				{
@@ -386,6 +481,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dzięki",
+						"en": "thanks"
 					}
 				},
 				{
@@ -403,7 +502,15 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "składając",
+						"en": "giving"
+					},
+					"function": {
+						"pl": "Imiesłów odnoszący się do Chrystusa: składając Tobie dzięki.",
+						"en": "A participle referring to Christ: giving thanks to Thee."
+					}
 				}
 			]
 		},
@@ -411,14 +518,9 @@
 			"id": "s07",
 			"type": "rubric",
 			"text": "Signat super Hostiam.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do",
-					"mr"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan czyni znak krzyża nad Hostią.",
+				"en": "The priest makes the sign of the cross over the Host."
 			}
 		},
 		{
@@ -426,6 +528,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "błogosławił, łamał i rozdawał swoim uczniom, mówiąc:",
+				"en": "He said the blessing, broke the bread and gave it to His disciples, saying:"
+			},
 			"words": [
 				{
 					"id": "w027",
@@ -440,6 +546,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "pobłogosławił",
+						"en": "He blessed"
 					}
 				},
 				{
@@ -455,6 +565,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "połamał",
+						"en": "He broke"
 					}
 				},
 				{
@@ -469,6 +583,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "i dał",
+						"en": "and He gave"
+					},
+					"function": {
+						"pl": "Końcowe „-que” łączy „dedit” z poprzednimi czasownikami: „pobłogosławił, połamał i dał”.",
+						"en": "The final “-que” joins “dedit” to the preceding verbs: “He blessed, broke and gave”."
 					}
 				},
 				{
@@ -481,6 +603,14 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "uczniom",
+						"en": "to the disciples"
+					},
+					"function": {
+						"pl": "Celownik liczby mnogiej przy „dedítque” (w029): ci, którym podał.",
+						"en": "A dative plural with “dedítque” (w029): those to whom He gave."
 					}
 				},
 				{
@@ -494,7 +624,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "swoim",
+						"en": "His"
+					}
 				},
 				{
 					"id": "w032",
@@ -511,7 +645,11 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "mówiąc",
+						"en": "saying"
+					}
 				}
 			]
 		},
@@ -520,6 +658,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Bierzcie i jedzcie z tego wszyscy:",
+				"en": "Take this, all of you, and eat of it:"
+			},
 			"words": [
 				{
 					"id": "w033",
@@ -534,6 +676,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "bierzcie",
+						"en": "take"
 					}
 				},
 				{
@@ -542,6 +688,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -556,6 +706,36 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "jedzcie",
+						"en": "eat"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący. Kanon mówi „manducáte” za 1 Kor 11, 24, tam gdzie Mt 26, 26 ma „comédite”.",
+						"en": "An imperative. The Canon says “manducáte” with 1 Cor 11:24, where Mt 26:26 has “comédite”."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "1 Corinthians 11:24"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Matthew 26:26"
+							}
+						],
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "1 Corinthians 11:24"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Matthew 26:26"
+							}
+						]
 					}
 				},
 				{
@@ -566,7 +746,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w037"
+					"head": "w037",
+					"gloss": {
+						"pl": "z",
+						"en": "of"
+					}
 				},
 				{
 					"id": "w037",
@@ -577,6 +761,10 @@
 						"case": "abl",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "tego",
+						"en": "this"
 					}
 				},
 				{
@@ -591,14 +779,13 @@
 						"gender": "m"
 					},
 					"substantive": true,
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
-						],
-						"review": "pending"
+					"gloss": {
+						"pl": "wszyscy",
+						"en": "all of you"
+					},
+					"function": {
+						"pl": "Forma mianownika i wołacza liczby mnogiej jest tu taka sama. Sens: „wy wszyscy”.",
+						"en": "The nominative and vocative plural have the same form here. The sense is “you all”."
 					}
 				}
 			]
@@ -607,13 +794,9 @@
 			"id": "s10",
 			"type": "rubric",
 			"text": "Tenens ambabus manibus Hostiam inter indices et pollices, profert verba consecrationis secrete, distincte et attente super Hostiam, et simul super omnes, si plures sint consecrandæ.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan trzyma Hostię obiema rękami między palcami wskazującymi a kciukami i wymawia słowa konsekracji po cichu, wyraźnie i uważnie nad Hostią, a jeśli Hostii jest więcej — nad wszystkimi razem.",
+				"en": "The priest holds the Host with both hands between his forefingers and thumbs and speaks the words of consecration silently, distinctly and attentively over it, and over all the hosts together if there are more to be consecrated."
 			}
 		},
 		{
@@ -621,6 +804,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "To jest bowiem Ciało moje.",
+				"en": "For this is My Body."
+			},
 			"words": [
 				{
 					"id": "w039",
@@ -631,6 +818,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "to",
+						"en": "this"
 					}
 				},
 				{
@@ -644,6 +835,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
 					}
 				},
 				{
@@ -652,6 +847,14 @@
 					"lemma": "enim",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bowiem",
+						"en": "for"
+					},
+					"function": {
+						"pl": "„Enim” nie rozpoczyna zdania. Tutaj następuje po „Hoc est”.",
+						"en": "“Enim” does not begin its clause. Here it follows “Hoc est”."
 					}
 				},
 				{
@@ -664,6 +867,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ciało",
+						"en": "Body"
 					}
 				},
 				{
@@ -677,7 +884,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w042"
+					"head": "w042",
+					"gloss": {
+						"pl": "moje",
+						"en": "My"
+					}
 				}
 			]
 		},
@@ -685,14 +896,123 @@
 			"id": "s12",
 			"type": "rubric",
 			"text": "Quibus verbis prolatis, statim Hostiam consecratam genuflexus adorat: surgit, ostendit populo, reponit super Corporale, et genuflexus iterum adorat: nec amplius pollices et indices disiungit, nisi quando Hostia tractanda est, usque ad ablutionem digitorum.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Po wymówieniu tych słów kapłan przyklęka i adoruje konsekrowaną Hostię, wstaje, ukazuje ją ludowi — to podniesienie, przy którym ministrant trzykrotnie dzwoni — składa na korporale i znów przyklęka. Odtąd aż do obmycia palców trzyma kciuk i palec wskazujący złączone, rozłączając je tylko do dotknięcia Hostii.",
+				"en": "The words spoken, the priest genuflects and adores the consecrated Host, rises, shows it to the people — the elevation, at which the server rings the bell three times — lays it on the corporal and genuflects again. From now until the ablution of the fingers he keeps thumb and forefinger joined, parting them only to handle the Host."
 			}
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The consecration of the bread. The words of consecration are set as the typical edition prints them — Hoc est enim Corpus meum — with a capital only on the opening word and on Corpus. Both hand missals set the whole formula in capitals, and this edition followed them until the typical edition itself could be read; the authority's own practice governs, and the hand missals' capitals are recorded in the apparatus rather than corrected. The accents follow the corpus's rule, which handmissal-eo also prints and do does not. ELEVÁTIS ÓCULIS at w014-w015 is an ablative absolute; elevátis is a participle here rather than an adjective, since neither analyzer heads one. OMNES at w038 is nominative, agreeing with the unstated subject of the two imperatives — all of you, take and eat — and not a vocative address, though the two forms are identical. QUAM at w003 is the conjunction that follows prídie, not the relative pronoun whose accusative is spelt the same.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.qui-pridie/",
+			"apparatus": "witnesses/ordinarium.qui-pridie/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s03": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s05": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do",
+						"mr"
+					],
+					"review": "pending"
+				}
+			},
+			"s07": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do",
+						"mr"
+					],
+					"review": "pending"
+				}
+			},
+			"s10": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s12": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w014": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers",
+						"collatinus"
+					],
+					"review": "pending"
+				}
+			},
+			"w038": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers",
+						"collatinus"
+					],
+					"review": "pending"
+				}
+			}
+		}
+	}
 }

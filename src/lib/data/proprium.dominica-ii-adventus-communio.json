@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 16
 	},
-	"status": "working-edition",
-	"notes": "The communion antiphon of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-ii-adventus-communio/",
-		"apparatus": "witnesses/proprium.dominica-ii-adventus-communio/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Antyfona na komunię II Niedzieli Adwentu, złożona z dwóch miejsc Barucha. Miasto ma wstać i patrzeć, skąd przychodzi radość — nie ku sobie, lecz ku Bogu.",
+		"en": "The communion antiphon of the Second Sunday of Advent, made of two places in Baruch. The city is to rise and look for where the joy comes from — not toward itself, but toward God."
 	},
 	"segments": [
 		{
@@ -48,6 +29,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Jeruzalem, powstań i stań na wysokości, i zobacz radość, która przyjdzie tobie od Boga twego.",
+				"en": "Jerusalem, arise and stand on high, and behold the joy that shall come to thee from thy God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Baruch 5:5; 4:36"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Baruch 5:5; 4:36"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -58,6 +57,10 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "Jeruzalem",
+						"en": "Jerusalem"
 					}
 				},
 				{
@@ -73,6 +76,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "powstań",
+						"en": "arise"
 					}
 				},
 				{
@@ -81,6 +88,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -95,6 +106,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "stań",
+						"en": "stand"
 					}
 				},
 				{
@@ -105,7 +120,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "na",
+						"en": "on"
+					}
 				},
 				{
 					"id": "w006",
@@ -118,7 +137,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wysokości",
+						"en": "high"
+					}
 				},
 				{
 					"id": "w007",
@@ -126,6 +149,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -140,6 +167,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zobacz",
+						"en": "see"
 					}
 				},
 				{
@@ -153,6 +184,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "radość",
+						"en": "the joy"
 					}
 				},
 				{
@@ -164,6 +199,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "która",
+						"en": "which"
 					}
 				},
 				{
@@ -178,6 +217,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "przyjdzie",
+						"en": "shall come"
 					}
 				},
 				{
@@ -188,6 +231,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "tobie",
+						"en": "to thee"
 					}
 				},
 				{
@@ -198,7 +245,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w014"
+					"head": "w014",
+					"gloss": {
+						"pl": "od",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w014",
@@ -210,6 +261,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				},
 				{
@@ -223,9 +278,38 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w014"
+					"head": "w014",
+					"gloss": {
+						"pl": "twego",
+						"en": "thy"
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The communion antiphon of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-ii-adventus-communio/",
+			"apparatus": "witnesses/proprium.dominica-ii-adventus-communio/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

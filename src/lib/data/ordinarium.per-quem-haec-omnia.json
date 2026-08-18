@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 15
 	},
-	"status": "working-edition",
-	"notes": "Four verbs over the gifts, and the shortest prayer of the Canon. The relative quem at w002 reaches back to Iesus Christ, named at the end of the prayer before it — the Canon's paragraphs are one sentence more often than they look. HÆC ÓMNIA at w003-w004 and BONA at w007 are all accusative neuter plurals: God creates these things always good, and then hallows, quickens, blesses and bestows them.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.per-quem-haec-omnia/",
-		"apparatus": "witnesses/ordinarium.per-quem-haec-omnia/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Modlitwa wyznaje, że przez Chrystusa Bóg nieustannie stwarza te wszystkie dobra, uświęca je, ożywia, błogosławi i nam ich udziela. Zaimek „quem” odnosi się do Chrystusa, wymienionego na końcu poprzedniej modlitwy.",
+		"en": "The prayer professes that through Christ God continually creates all these good things, sanctifies them, gives them life, blesses them, and bestows them upon us. The relative “quem” refers to Christ, named at the end of the preceding prayer."
 	},
 	"segments": [
 		{
@@ -38,6 +19,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Przez którego, Boże, wszystkie te dobra ustawicznie stwarzasz,",
+				"en": "Through whom You continue to make all these good things, O Lord;"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -47,7 +32,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w002",
@@ -58,6 +47,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którego",
+						"en": "whom"
+					},
+					"function": {
+						"pl": "Quem odnosi się do Chrystusa wymienionego na końcu poprzedniej modlitwy.",
+						"en": "Quem refers to Christ, named at the end of the preceding prayer."
 					}
 				},
 				{
@@ -69,6 +66,10 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "to",
+						"en": "these"
 					}
 				},
 				{
@@ -82,7 +83,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wszystko",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w005",
@@ -95,6 +100,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -103,6 +112,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "ever"
 					}
 				},
 				{
@@ -115,7 +128,15 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "dobrymi",
+						"en": "good"
+					},
+					"function": {
+						"pl": "Orzecznik przy creas: stwarzasz je dobrymi.",
+						"en": "Predicative complement with creas: You create them good."
+					}
 				},
 				{
 					"id": "w008",
@@ -130,6 +151,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "stwarzasz",
+						"en": "Thou dost create"
 					}
 				}
 			]
@@ -138,13 +163,9 @@
 			"id": "s02",
 			"type": "rubric",
 			"text": "Signat ter super Hostiam, et Calicem simul, dicens:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan czyni trzy znaki krzyża nad Hostią i kielichem jednocześnie.",
+				"en": "The priest makes three signs of the cross over the Host and chalice together."
 			}
 		},
 		{
@@ -152,6 +173,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "uświęcasz, ożywiasz, błogosławisz i nam ich udzielasz.",
+				"en": "You sanctify them, fill them with life, bless them, and bestow them upon us."
+			},
 			"words": [
 				{
 					"id": "w009",
@@ -166,6 +191,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "uświęcasz",
+						"en": "Thou dost hallow"
 					}
 				},
 				{
@@ -181,6 +210,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "ożywiasz",
+						"en": "Thou dost quicken"
 					}
 				},
 				{
@@ -195,6 +228,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "błogosławisz",
+						"en": "Thou dost bless"
 					}
 				},
 				{
@@ -203,6 +240,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -217,6 +258,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "udzielasz",
+						"en": "Thou dost bestow"
 					}
 				},
 				{
@@ -228,9 +273,50 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nam",
+						"en": "upon us"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "Four verbs over the gifts, and the shortest prayer of the Canon. The relative quem at w002 reaches back to Iesus Christ, named at the end of the prayer before it — the Canon's paragraphs are one sentence more often than they look. HÆC ÓMNIA at w003-w004 and BONA at w007 are all accusative neuter plurals: God creates these things always good, and then hallows, quickens, blesses and bestows them.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.per-quem-haec-omnia/",
+			"apparatus": "witnesses/ordinarium.per-quem-haec-omnia/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s02": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		}
+	}
 }

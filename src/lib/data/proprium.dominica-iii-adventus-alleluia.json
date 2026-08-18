@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 14
 	},
-	"status": "working-edition",
-	"notes": "The alleluia verse of the Third Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-iii-adventus-alleluia/",
-		"apparatus": "witnesses/proprium.dominica-iii-adventus-alleluia/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Werset allelujatyczny III Niedzieli Adwentu. Powtarza wołanie, którym zaczyna się kolekta I Niedzieli — o potęgę, która ma przyjść.",
+		"en": "The alleluia verse of the Third Sunday of Advent. It repeats the cry the collect of the First Sunday opens with — for a power that is to come."
 	},
 	"segments": [
 		{
@@ -44,6 +25,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Alleluja, alleluja.",
+				"en": "Alleluia, alleluia."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -52,6 +37,10 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				},
 				{
@@ -61,6 +50,10 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				}
 			]
@@ -76,6 +69,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Wzbudź, Panie, potęgę Twoją i przyjdź, abyś nas zbawił.",
+				"en": "Stir up Thy power, O Lord, and come, that Thou mayest save us."
+			},
 			"words": [
 				{
 					"id": "w003",
@@ -90,6 +87,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wzbudź",
+						"en": "stir up"
 					}
 				},
 				{
@@ -103,6 +104,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -115,6 +120,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "potęgę",
+						"en": "power"
 					}
 				},
 				{
@@ -128,7 +137,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w007",
@@ -136,6 +149,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -151,6 +168,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "przyjdź",
+						"en": "come"
 					}
 				},
 				{
@@ -159,6 +180,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyś",
+						"en": "that"
 					}
 				},
 				{
@@ -171,7 +196,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "zbawionymi",
+						"en": "safe"
+					}
 				},
 				{
 					"id": "w011",
@@ -185,6 +214,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "uczynił",
+						"en": "Thou mayest make"
 					}
 				},
 				{
@@ -196,6 +229,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				}
 			]
@@ -211,6 +248,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Alleluja.",
+				"en": "Alleluia."
+			},
 			"words": [
 				{
 					"id": "w013",
@@ -219,9 +260,38 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The alleluia verse of the Third Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-iii-adventus-alleluia/",
+			"apparatus": "witnesses/proprium.dominica-iii-adventus-alleluia/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

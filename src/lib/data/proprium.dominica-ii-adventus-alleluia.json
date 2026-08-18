@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 16
 	},
-	"status": "working-edition",
-	"notes": "The alleluia verse of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-ii-adventus-alleluia/",
-		"apparatus": "witnesses/proprium.dominica-ii-adventus-alleluia/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Werset allelujatyczny II Niedzieli Adwentu, z Psalmu 121 — pieśni pielgrzymów idących do Jerozolimy. Radość bierze się nie z przybycia, lecz z samej wiadomości, że się pójdzie.",
+		"en": "The alleluia verse of the Second Sunday of Advent, from Psalm 121 — a song of pilgrims going up to Jerusalem. The joy comes not from arriving but from the word that they will go."
 	},
 	"segments": [
 		{
@@ -44,6 +25,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Alleluja, alleluja.",
+				"en": "Alleluia, alleluia."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -52,6 +37,10 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				},
 				{
@@ -61,6 +50,10 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				}
 			]
@@ -75,6 +68,24 @@
 					"gradus": 3,
 					"source": "DMS 25 c"
 				}
+			},
+			"translation": {
+				"pl": "Uradowałem się z tego, co mi powiedziano: pójdziemy do domu Pańskiego.",
+				"en": "I rejoiced at the things that were said to me: we shall go into the house of the Lord."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 121:1"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 121:1"
+					}
+				]
 			},
 			"words": [
 				{
@@ -91,7 +102,15 @@
 						"voice": "dep",
 						"conj": 1
 					},
-					"head": "w004"
+					"head": "w004",
+					"gloss": {
+						"pl": "uradowałem",
+						"en": "I rejoiced"
+					},
+					"function": {
+						"pl": "Imiesłów czasu przeszłego czasownika deponens. Z „sum” (w004) tworzy jedno orzeczenie.",
+						"en": "Perfect participle of a deponent verb. With “sum” (w004) it forms one finite verb."
+					}
 				},
 				{
 					"id": "w004",
@@ -104,6 +123,14 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "się",
+						"en": "(have)"
+					},
+					"function": {
+						"pl": "Z „Lætátus” (w003) tworzy czas przeszły czasownika deponens: uradowałem się.",
+						"en": "With “Lætátus” (w003), it forms the perfect of a deponent verb: I rejoiced."
 					}
 				},
 				{
@@ -114,7 +141,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w006",
@@ -126,6 +157,10 @@
 						"case": "abl",
 						"number": "pl",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "tych",
+						"en": "these things"
 					}
 				},
 				{
@@ -137,6 +172,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "które",
+						"en": "which"
 					}
 				},
 				{
@@ -153,7 +192,11 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "powiedziane",
+						"en": "were said"
+					}
 				},
 				{
 					"id": "w009",
@@ -166,6 +209,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "zostały",
+						"en": "(were)"
 					}
 				},
 				{
@@ -177,6 +224,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mi",
+						"en": "to me"
 					}
 				},
 				{
@@ -187,7 +238,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "do",
+						"en": "into"
+					}
 				},
 				{
 					"id": "w012",
@@ -199,6 +254,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "domu",
+						"en": "the house"
 					}
 				},
 				{
@@ -211,6 +270,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pańskiego",
+						"en": "of the Lord"
 					}
 				},
 				{
@@ -225,6 +288,10 @@
 						"tense": "fut",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "pójdziemy",
+						"en": "we shall go"
 					}
 				}
 			]
@@ -240,6 +307,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Alleluja.",
+				"en": "Alleluia."
+			},
 			"words": [
 				{
 					"id": "w015",
@@ -248,9 +319,38 @@
 					"lemma": "alleluia",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "alleluja",
+						"en": "alleluia"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The alleluia verse of the Second Sunday of Advent. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-ii-adventus-alleluia/",
+			"apparatus": "witnesses/proprium.dominica-ii-adventus-alleluia/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

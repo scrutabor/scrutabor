@@ -9,33 +9,34 @@
 	"ids": {
 		"next": 60
 	},
-	"status": "working-edition",
-	"notes": "The collect of the prayers of Leo XIII, said after the Salve Regína and its versicle. One long sentence on two imperatives, RÉSPICE at w012 and EXÁUDI at w053, each held back until everything that qualifies it has been said. Three constructions a reader will stall on. PROPÍTIUS at w011 is an adjective where English and Polish want an adverb: Latin says the one who looks is favourable, not that he looks favourably. INTERCEDÉNTE at w014 heads an ablative absolute — the Virgin's intercession is the circumstance under which the asking is done, not another thing asked for. QUAS at w037 stands eleven words before its own antecedent PRECES at w048, which is ordinary Latin and very hard to read forward: the prayers we pour out for the conversion of sinners are the object of exáudi. GENETRÍCE at w020 follows the corpus's standing ruling that one spelling of the noun is kept throughout, against both witnesses. IOSEPH at w024 is the indeclinable form, with witness do and with the corpus's own reading of the name in the Canon; the hand missal declines it, and the apparatus records that as the one substantive difference between the two pages.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: one substantive divergence, in the declension of a Hebrew name, adjudicated; the rest orthography of the two declared classes.",
-		"witnesses": "witnesses/orationes.deus-refugium/",
-		"apparatus": "witnesses/orationes.deus-refugium/apparatus.json"
+	"about": {
+		"pl": "Kolekta modlitw Leona XIII odmawianych po Mszy cichej, następująca po Salve Regína i jej wersecie. Prosi Boga, aby łaskawie wejrzał na wołający do Niego lud i wysłuchał próśb zanoszonych za wstawiennictwem Najświętszej Maryi Panny, św. Józefa, Apostołów Piotra i Pawła oraz wszystkich świętych. Wymienia dwie intencje: nawrócenie grzeszników oraz wolność i wywyższenie Kościoła.",
+		"en": "The collect of the prayers of Leo XIII said after low Mass, which follows the Salve Regína and its versicle. It asks God to look graciously upon the people who cry to Him and to hear the petitions offered through the intercession of the Blessed Virgin Mary, Saint Joseph, the Apostles Peter and Paul, and all the saints. It names two intentions: the conversion of sinners and the freedom and exaltation of the Church."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 675, p. 520",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Enchiridion Indulgentiarum: Preces et Pia Opera (1952)",
+				"locator": "n. 675, p. 520",
+				"url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "verse",
+			"translation": {
+				"pl": "Módlmy się.",
+				"en": "Let us pray."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -50,6 +51,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "módlmy się",
+						"en": "let us pray"
+					},
+					"function": {
+						"pl": "Tryb łączący wyrażający zachętę do wspólnej modlitwy.",
+						"en": "A subjunctive expressing an exhortation to pray together."
 					}
 				}
 			]
@@ -57,6 +66,10 @@
 		{
 			"id": "s02",
 			"type": "verse",
+			"translation": {
+				"pl": "Boże, ucieczko nasza i mocy, wejrzyj łaskawie na lud wołający do Ciebie;",
+				"en": "O God, our refuge and our strength, look with favor upon the people crying out to Thee;"
+			},
 			"words": [
 				{
 					"id": "w002",
@@ -69,6 +82,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Wołacz, równy tu mianownikowi.",
+						"en": "Vocative, identical here to the nominative."
 					}
 				},
 				{
@@ -81,6 +102,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "ucieczko",
+						"en": "refuge"
+					},
+					"function": {
+						"pl": "Dopowiedzenie do „Deus” (w002). Refugium może oznaczać zarówno szukanie schronienia, jak i samo miejsce schronienia. Tutaj nazywa Boga.",
+						"en": "In apposition to “Deus” (w002). Refugium can denote both the act of taking refuge and a place of refuge. Here it names God."
 					}
 				},
 				{
@@ -93,7 +122,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "nasza",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w005",
@@ -101,6 +134,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -114,6 +151,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "mocy",
+						"en": "strength"
+					},
+					"function": {
+						"pl": "Drugi człon dopowiedzenia — „nostrum” (w004) obejmuje oba.",
+						"en": "The second half of the apposition — “nostrum” (w004) covers both."
 					}
 				},
 				{
@@ -126,6 +171,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "na lud",
+						"en": "the people"
+					},
+					"function": {
+						"pl": "Biernik, dopełnienie „réspice” (w012).",
+						"en": "Accusative object of “réspice” (w012)."
 					}
 				},
 				{
@@ -136,7 +189,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "do",
+						"en": "to"
+					}
 				},
 				{
 					"id": "w009",
@@ -146,6 +203,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "Thee"
 					}
 				},
 				{
@@ -162,7 +223,15 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "wołający",
+						"en": "crying out"
+					},
+					"function": {
+						"pl": "Imiesłów w bierniku. Zgadza się z „pópulum” (w007).",
+						"en": "An accusative participle agreeing with “pópulum” (w007)."
+					}
 				},
 				{
 					"id": "w011",
@@ -174,7 +243,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "łaskawy",
+						"en": "favorable"
+					},
+					"function": {
+						"pl": "Orzecznik odnoszący się do domyślnego podmiotu „réspice” (w012).",
+						"en": "A predicate adjective referring to the understood subject of “réspice” (w012)."
+					}
 				},
 				{
 					"id": "w012",
@@ -189,6 +266,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wejrzyj",
+						"en": "look upon"
 					}
 				}
 			]
@@ -196,6 +277,10 @@
 		{
 			"id": "s03",
 			"type": "verse",
+			"translation": {
+				"pl": "a za wstawiennictwem chwalebnej i niepokalanej Dziewicy, Bożej Rodzicielki Maryi,",
+				"en": "and by the intercession of the glorious and immaculate Virgin Mary, Mother of God,"
+			},
 			"words": [
 				{
 					"id": "w013",
@@ -203,6 +288,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -219,7 +308,15 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "wstawiającą się",
+						"en": "interceding"
+					},
+					"function": {
+						"pl": "Ablativus absolutus z „Vírgine” (w018): gdy wstawia się Dziewica.",
+						"en": "An ablative absolute with “Vírgine” (w018): the Virgin interceding."
+					}
 				},
 				{
 					"id": "w015",
@@ -232,7 +329,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "chwalebną",
+						"en": "glorious"
+					}
 				},
 				{
 					"id": "w016",
@@ -240,6 +341,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -252,7 +357,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "niepokalaną",
+						"en": "immaculate"
+					}
 				},
 				{
 					"id": "w018",
@@ -264,6 +373,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Dziewicą",
+						"en": "Virgin"
+					},
+					"function": {
+						"pl": "Rzeczownik konstrukcji ablativus absolutus. Zgadza się z nim „intercedénte” (w014) oraz oba przymiotniki.",
+						"en": "The noun of the ablative absolute. “intercedénte” (w014) and both adjectives agree with it."
 					}
 				},
 				{
@@ -276,6 +393,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -288,6 +409,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Rodzicielką",
+						"en": "Mother"
+					},
+					"function": {
+						"pl": "Dopowiedzenie do „Vírgine” (w018), w tym samym przypadku.",
+						"en": "In apposition to “Vírgine” (w018), in the same case."
 					}
 				},
 				{
@@ -301,6 +430,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryją",
+						"en": "Mary"
 					}
 				}
 			]
@@ -308,6 +441,10 @@
 		{
 			"id": "s04",
 			"type": "verse",
+			"translation": {
+				"pl": "wraz ze świętym Józefem, Jej Oblubieńcem, oraz świętymi Apostołami Twoimi Piotrem i Pawłem, i wszystkimi Świętymi,",
+				"en": "with blessed Joseph her Spouse, and Thy blessed Apostles Peter and Paul, and all the Saints,"
+			},
 			"words": [
 				{
 					"id": "w022",
@@ -317,7 +454,15 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "wraz z",
+						"en": "with"
+					},
+					"function": {
+						"pl": "Przyimek rozpoczynający osobną frazę z ablativem.",
+						"en": "A preposition beginning a separate phrase with the ablative."
+					}
 				},
 				{
 					"id": "w023",
@@ -329,7 +474,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "błogosławionym",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w024",
@@ -342,13 +491,13 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Józefem",
+						"en": "Joseph"
+					},
+					"function": {
+						"pl": "Imię nieodmienne, tutaj w ablativie. Jeden ze świadków ma „Josepho”, odmianę formy „Iosephus”.",
+						"en": "An indeclinable name, here in the ablative. One witness has “Josepho”, an inflection of “Iosephus”."
 					}
 				},
 				{
@@ -360,6 +509,14 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "Jej",
+						"en": "her"
+					},
+					"function": {
+						"pl": "Dopełniacz zaimka wskazującego: wskazuje na Maryję z poprzedniego wiersza.",
+						"en": "The genitive of the demonstrative, pointing back to Mary in the line before."
 					}
 				},
 				{
@@ -373,6 +530,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Oblubieńcem",
+						"en": "Spouse"
 					}
 				},
 				{
@@ -381,6 +542,10 @@
 					"lemma": "ac",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "oraz",
+						"en": "and"
 					}
 				},
 				{
@@ -393,7 +558,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "błogosławionymi",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w029",
@@ -405,6 +574,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Apostołami",
+						"en": "Apostles"
 					}
 				},
 				{
@@ -417,7 +590,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "Twoimi",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w031",
@@ -429,6 +606,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Piotrem",
+						"en": "Peter"
 					}
 				},
 				{
@@ -437,6 +618,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -450,6 +635,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pawłem",
+						"en": "Paul"
 					}
 				},
 				{
@@ -458,6 +647,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -470,7 +663,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "wszystkimi",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w036",
@@ -483,13 +680,25 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "Świętymi",
+						"en": "the Saints"
+					},
+					"function": {
+						"pl": "Przymiotnik użyty rzeczownikowo: święci.",
+						"en": "An adjective used substantivally: the saints."
+					}
 				}
 			]
 		},
 		{
 			"id": "s05",
 			"type": "verse",
+			"translation": {
+				"pl": "modlitwy, które zanosimy o nawrócenie grzeszników, o wolność i wywyższenie świętej Matki Kościoła,",
+				"en": "the prayers we pour out for the conversion of sinners, for the freedom and exaltation of holy Mother Church,"
+			},
 			"words": [
 				{
 					"id": "w037",
@@ -500,6 +709,14 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "które",
+						"en": "which"
+					},
+					"function": {
+						"pl": "Zaimek względny w bierniku liczby mnogiej rodzaju żeńskiego. Odnosi się do „preces” (w048), które pojawia się dalej.",
+						"en": "A feminine accusative plural relative pronoun. It refers to “preces” (w048), which appears later."
 					}
 				},
 				{
@@ -510,7 +727,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w039"
+					"head": "w039",
+					"gloss": {
+						"pl": "o",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w039",
@@ -522,6 +743,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "nawrócenie",
+						"en": "the conversion"
 					}
 				},
 				{
@@ -535,6 +760,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "grzeszników",
+						"en": "of sinners"
 					}
 				},
 				{
@@ -545,7 +774,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w042"
+					"head": "w042",
+					"gloss": {
+						"pl": "o",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w042",
@@ -557,6 +790,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "wolność",
+						"en": "the freedom"
 					}
 				},
 				{
@@ -565,6 +802,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -577,6 +818,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "wywyższenie",
+						"en": "exaltation"
 					}
 				},
 				{
@@ -589,7 +834,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w046"
+					"head": "w046",
+					"gloss": {
+						"pl": "świętej",
+						"en": "of holy"
+					}
 				},
 				{
 					"id": "w046",
@@ -601,6 +850,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Matki",
+						"en": "Mother"
 					}
 				},
 				{
@@ -614,6 +867,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Kościoła",
+						"en": "Church"
+					},
+					"function": {
+						"pl": "Dopełniacz zależny od “libertáte” (w042) i “exaltatióne” (w044).",
+						"en": "Genitive dependent on “libertáte” (w042) and “exaltatióne” (w044)."
 					}
 				},
 				{
@@ -626,6 +887,14 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "modlitwy",
+						"en": "the prayers"
+					},
+					"function": {
+						"pl": "Poprzednik zaimka “quas” (w037) i dopełnienie “exáudi” (w053).",
+						"en": "The antecedent of “quas” (w037) and the object of “exáudi” (w053)."
 					}
 				},
 				{
@@ -641,6 +910,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "zanosimy",
+						"en": "we pour out"
+					},
+					"function": {
+						"pl": "Dosłownie: wylewamy. Pierwsza osoba liczby mnogiej.",
+						"en": "Literally, we pour out. First person plural."
 					}
 				}
 			]
@@ -648,6 +925,10 @@
 		{
 			"id": "s06",
 			"type": "verse",
+			"translation": {
+				"pl": "wysłuchaj miłościwie i łaskawie.",
+				"en": "hear in mercy and kindness."
+			},
 			"words": [
 				{
 					"id": "w050",
@@ -659,7 +940,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w053"
+					"head": "w053",
+					"gloss": {
+						"pl": "miłosierny",
+						"en": "merciful"
+					}
 				},
 				{
 					"id": "w051",
@@ -667,6 +952,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -679,7 +968,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w053"
+					"head": "w053",
+					"gloss": {
+						"pl": "łaskawy",
+						"en": "kind"
+					},
+					"function": {
+						"pl": "Orzecznik odnoszący się do domyślnego podmiotu “exáudi” (w053), podobnie jak “miséricors” (w050).",
+						"en": "A predicate adjective referring to the understood subject of “exáudi” (w053), as is “miséricors” (w050)."
+					}
 				},
 				{
 					"id": "w053",
@@ -694,6 +991,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "wysłuchaj",
+						"en": "hear"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący z “preces” (w048) jako dopełnieniem.",
+						"en": "Imperative with “preces” (w048) as its object."
 					}
 				}
 			]
@@ -701,6 +1006,10 @@
 		{
 			"id": "s07",
 			"type": "verse",
+			"translation": {
+				"pl": "Przez tegoż Chrystusa, Pana naszego. Amen.",
+				"en": "Through the same Christ our Lord. Amen."
+			},
 			"words": [
 				{
 					"id": "w054",
@@ -710,7 +1019,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w055"
+					"head": "w055",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w055",
@@ -721,6 +1034,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "tegoż",
+						"en": "the same"
+					},
+					"function": {
+						"pl": "Zaimek „eúndem” odnosi się do Syna przywołanego wcześniej w tytule „Genetríce” (w020) — Rodzicielki Boga.",
+						"en": "The pronoun “eúndem” refers to the Son evoked earlier by the title “Genetríce” (w020) — Mother of God."
 					}
 				},
 				{
@@ -733,6 +1054,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -745,6 +1070,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -758,7 +1087,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w057"
+					"head": "w057",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w059",
@@ -767,9 +1100,50 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The collect of the prayers of Leo XIII, said after the Salve Regína and its versicle. One long sentence on two imperatives, RÉSPICE at w012 and EXÁUDI at w053, each held back until everything that qualifies it has been said. Three constructions a reader will stall on. PROPÍTIUS at w011 is an adjective where English and Polish want an adverb: Latin says the one who looks is favourable, not that he looks favourably. INTERCEDÉNTE at w014 heads an ablative absolute — the Virgin's intercession is the circumstance under which the asking is done, not another thing asked for. QUAS at w037 stands eleven words before its own antecedent PRECES at w048, which is ordinary Latin and very hard to read forward: the prayers we pour out for the conversion of sinners are the object of exáudi. GENETRÍCE at w020 follows the corpus's standing ruling that one spelling of the noun is kept throughout, against both witnesses. IOSEPH at w024 is the indeclinable form, with witness do and with the corpus's own reading of the name in the Canon; the hand missal declines it, and the apparatus records that as the one substantive difference between the two pages.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: one substantive divergence, in the declension of a Hebrew name, adjudicated; the rest orthography of the two declared classes.",
+			"witnesses": "witnesses/orationes.deus-refugium/",
+			"apparatus": "witnesses/orationes.deus-refugium/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"words": {
+			"w024": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

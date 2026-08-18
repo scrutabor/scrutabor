@@ -9,40 +9,44 @@
 	"ids": {
 		"next": 38
 	},
-	"status": "working-edition",
-	"notes": "Four versicle-and-response pairs said bowed at the foot of the altar after the absolutions, the last of them the first Dóminus vobíscum of the Mass. The pairs are drawn from the psalms and follow the shape of the Office's preces. VOBÍSCUM at w033 is one written word carrying two: the preposition cum is written after the pronoun rather than before it, as it always is with the personal pronouns (mecum, tecum, nobíscum). It is tagged as the pronoun it is built on — vos, ablative plural, the case cum governs — and the enclitic is explained in the note. Collatinus dictionaries the fused form as a lemma of its own and tags it singular; the pipeline's recorded ruling sets that analysis aside, and the token records the editorial and Whitaker's confirmation. CONVÉRSUS at w003 is a perfect passive participle used with an active sense (turning, not being turned), a reflexive reading the Latin psalter keeps from its Greek; the tag records the form, the note the sense.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence and no accidental variants — the two editions agree token for token, so this text carries no apparatus.",
-		"witnesses": "witnesses/ordinarium.deus-tu-conversus/"
+	"about": {
+		"pl": "Pierwsze trzy wezwania pochodzą z Ps 84, 7–8 i Ps 101, 2 według numeracji Wulgaty, z psałterza gallikańskiego, którym posługuje się Msza: zaczyna on pierwsze z nich słowami Deus, tu convérsus, gdzie późniejsze wydania mają Nonne tu convérsus. Ostatnie to liturgiczne pozdrowienie „Dóminus vobíscum” i odpowiedź na nie.",
+		"en": "The first three exchanges are Psalm 84:7-8 and Psalm 101:2 in the Vulgate numbering, from the Gallican psalter the Mass uses: it opens the first of them Deus, tu convérsus where later editions read Nonne tu convérsus. The last is the liturgical greeting “Dóminus vobíscum” and its response."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 85 (Vg 84), 7–8",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			},
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 102 (Vg 101), 2",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 85 (Vg 84), 7–8",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			},
+			{
+				"title": "Nova Vulgata, Liber Psalmorum",
+				"locator": "Psalmus 102 (Vg 101), 2",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Et inclinatus prosequitur:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan, pochylony, mówi dalej.",
+				"en": "Bowed, the priest continues."
 			}
 		},
 		{
@@ -50,6 +54,24 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Boże, Ty, zwróciwszy się ku nam, ożywisz nas.",
+				"en": "O God, Thou wilt turn and give us life."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Ps 84, 7"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Psalm 84:7"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -62,6 +84,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				},
 				{
@@ -72,6 +98,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "Thou"
 					}
 				},
 				{
@@ -88,7 +118,15 @@
 						"voice": "pass",
 						"conj": 3
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "zwróciwszy się",
+						"en": "having turned"
+					},
+					"function": {
+						"pl": "Imiesłów o formie biernej użyty zwrotnie: „zwróciwszy się”.",
+						"en": "A passive participle used reflexively: “having turned”."
+					}
 				},
 				{
 					"id": "w004",
@@ -102,6 +140,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "ożywisz",
+						"en": "wilt give life"
+					},
+					"function": {
+						"pl": "Czas przyszły, tryb oznajmujący.",
+						"en": "Future indicative."
 					}
 				},
 				{
@@ -113,6 +159,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
 					}
 				}
 			]
@@ -128,6 +178,24 @@
 					"source": "DMS 31 b"
 				}
 			},
+			"translation": {
+				"pl": "A lud Twój rozraduje się w Tobie.",
+				"en": "And Thy people will rejoice in Thee."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Ps 84, 7"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Psalm 84:7"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w006",
@@ -135,6 +203,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -147,6 +219,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "lud",
+						"en": "people"
 					}
 				},
 				{
@@ -159,7 +235,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "Twój",
+						"en": "Thy"
+					},
+					"function": {
+						"pl": "Zgadza się z „plebs” (w007).",
+						"en": "Agrees with “plebs” (w007)."
+					}
 				},
 				{
 					"id": "w009",
@@ -173,6 +257,14 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "rozraduje się",
+						"en": "will rejoice"
+					},
+					"function": {
+						"pl": "Czas przyszły, równoległy do „vivificábis” (w004): lud będzie się radował w Bogu.",
+						"en": "A future parallel to “vivificábis” (w004): the people will rejoice in God."
 					}
 				},
 				{
@@ -183,7 +275,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w011",
@@ -194,6 +290,14 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "Thee"
+					},
+					"function": {
+						"pl": "Ablativus po „in” (w010).",
+						"en": "Ablative after “in” (w010)."
 					}
 				}
 			]
@@ -203,6 +307,24 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Okaż nam, Panie, miłosierdzie Twoje.",
+				"en": "Show us, O Lord, Thy mercy."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Ps 84, 8"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Psalm 84:8"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w012",
@@ -216,6 +338,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "okaż",
+						"en": "show"
 					}
 				},
 				{
@@ -227,6 +353,14 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nam",
+						"en": "us"
+					},
+					"function": {
+						"pl": "Celownik przy „Osténde” (w012).",
+						"en": "Dative with “Osténde” (w012)."
 					}
 				},
 				{
@@ -240,6 +374,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -252,6 +390,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "miłosierdzie",
+						"en": "mercy"
+					},
+					"function": {
+						"pl": "Dopełnienie „Osténde” (w012) w bierniku.",
+						"en": "Accusative object of “Osténde” (w012)."
 					}
 				},
 				{
@@ -265,7 +411,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w015"
+					"head": "w015",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					},
+					"function": {
+						"pl": "Zgadza się z „misericórdiam” (w015).",
+						"en": "Agrees with “misericórdiam” (w015)."
+					}
 				}
 			]
 		},
@@ -280,6 +434,24 @@
 					"source": "DMS 31 b"
 				}
 			},
+			"translation": {
+				"pl": "I daj nam zbawienie Twoje.",
+				"en": "And grant us Thy salvation."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Ps 84, 8"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Psalm 84:8"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w017",
@@ -287,6 +459,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -299,6 +475,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zbawienie",
+						"en": "salvation"
+					},
+					"function": {
+						"pl": "Przymiotnik rodzaju nijakiego użyty rzeczownikowo. Dopełnienie „da” (w020) w bierniku.",
+						"en": "Neuter adjective used substantively. Accusative object of “da” (w020)."
 					}
 				},
 				{
@@ -311,7 +495,15 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					},
+					"function": {
+						"pl": "Rodzaj nijaki, zgadza się z „salutáre” (w018).",
+						"en": "Neuter, agreeing with “salutáre” (w018)."
+					}
 				},
 				{
 					"id": "w020",
@@ -325,6 +517,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "daj",
+						"en": "grant"
 					}
 				},
 				{
@@ -336,6 +532,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nam",
+						"en": "us"
 					}
 				}
 			]
@@ -345,6 +545,24 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Panie, wysłuchaj modlitwy mojej.",
+				"en": "O Lord, hear my prayer."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Ps 101, 2"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Psalm 101:2"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w022",
@@ -357,6 +575,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -371,6 +593,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "wysłuchaj",
+						"en": "hear favorably"
 					}
 				},
 				{
@@ -383,6 +609,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "modlitwy",
+						"en": "prayer"
 					}
 				},
 				{
@@ -396,7 +626,15 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "mojej",
+						"en": "my"
+					},
+					"function": {
+						"pl": "Zgadza się z „oratiónem” (w024).",
+						"en": "Agrees with “oratiónem” (w024)."
+					}
 				}
 			]
 		},
@@ -411,6 +649,24 @@
 					"source": "DMS 31 b"
 				}
 			},
+			"translation": {
+				"pl": "A wołanie moje niech do Ciebie przyjdzie.",
+				"en": "And let my cry come unto Thee."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia w przekładzie ks. Jakuba Wujka (1923)",
+						"locator": "Ps 101, 2"
+					}
+				],
+				"en": [
+					{
+						"title": "Douay-Rheims Bible (Challoner)",
+						"locator": "Psalm 101:2"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w026",
@@ -418,6 +674,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -430,6 +690,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "wołanie",
+						"en": "cry"
+					},
+					"function": {
+						"pl": "Podmiot „véniat” (w031) w mianowniku.",
+						"en": "Nominative subject of “véniat” (w031)."
 					}
 				},
 				{
@@ -442,7 +710,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w027"
+					"head": "w027",
+					"gloss": {
+						"pl": "moje",
+						"en": "my"
+					},
+					"function": {
+						"pl": "Zgadza się z „clamor” (w027).",
+						"en": "Agrees with “clamor” (w027)."
+					}
 				},
 				{
 					"id": "w029",
@@ -452,7 +728,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w030"
+					"head": "w030",
+					"gloss": {
+						"pl": "do",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w030",
@@ -462,6 +742,14 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ciebie",
+						"en": "Thee"
+					},
+					"function": {
+						"pl": "Biernik po „ad” (w029).",
+						"en": "Accusative after “ad” (w029)."
 					}
 				},
 				{
@@ -477,6 +765,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "niech przyjdzie",
+						"en": "let come"
+					},
+					"function": {
+						"pl": "Praesens coniunctivi wyrażające prośbę.",
+						"en": "Present subjunctive expressing a petition."
 					}
 				}
 			]
@@ -486,6 +782,10 @@
 			"type": "verse",
 			"voice": "clara",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Pan z wami.",
+				"en": "The Lord be with you."
+			},
 			"words": [
 				{
 					"id": "w032",
@@ -497,6 +797,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
+					},
+					"function": {
+						"pl": "Zdanie nominalne bez wyrażonego czasownika.",
+						"en": "Nominal clause without an expressed verb."
 					}
 				},
 				{
@@ -509,13 +817,13 @@
 						"case": "abl",
 						"number": "pl"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "z wami",
+						"en": "with you"
+					},
+					"function": {
+						"pl": "Przyimek „cum” następuje po zaimku osobowym: „vobís-cum”.",
+						"en": "The preposition “cum” follows the personal pronoun: “vobís-cum”."
 					}
 				}
 			]
@@ -535,6 +843,10 @@
 					"source": "DMS 25 a"
 				}
 			},
+			"translation": {
+				"pl": "I z duchem twoim.",
+				"en": "And with your spirit."
+			},
 			"words": [
 				{
 					"id": "w034",
@@ -542,6 +854,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -552,7 +868,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "z",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w036",
@@ -564,6 +884,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "duchem",
+						"en": "spirit"
+					},
+					"function": {
+						"pl": "Ablativus po „cum” (w035), należący do stałej odpowiedzi „Et cum spíritu tuo”.",
+						"en": "An ablative after “cum” (w035), in the fixed response “Et cum spíritu tuo”."
 					}
 				},
 				{
@@ -577,9 +905,65 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "twoim",
+						"en": "your"
+					},
+					"function": {
+						"pl": "Zgadza się z „spíritu” (w036).",
+						"en": "Agrees with “spíritu” (w036)."
+					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "Four versicle-and-response pairs said bowed at the foot of the altar after the absolutions, the last of them the first Dóminus vobíscum of the Mass. The pairs are drawn from the psalms and follow the shape of the Office's preces. VOBÍSCUM at w033 is one written word carrying two: the preposition cum is written after the pronoun rather than before it, as it always is with the personal pronouns (mecum, tecum, nobíscum). It is tagged as the pronoun it is built on — vos, ablative plural, the case cum governs — and the enclitic is explained in the note. Collatinus dictionaries the fused form as a lemma of its own and tags it singular; the pipeline's recorded ruling sets that analysis aside, and the token records the editorial and Whitaker's confirmation. CONVÉRSUS at w003 is a perfect passive participle used with an active sense (turning, not being turned), a reflexive reading the Latin psalter keeps from its Greek; the tag records the form, the note the sense.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence and no accidental variants — the two editions agree token for token, so this text carries no apparatus.",
+			"witnesses": "witnesses/ordinarium.deus-tu-conversus/"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w033": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

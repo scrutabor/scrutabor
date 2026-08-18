@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 25
 	},
-	"status": "working-edition",
-	"notes": "The gradual of the Fourth Sunday of Advent.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-iv-adventus-graduale/",
-		"apparatus": "witnesses/proprium.dominica-iv-adventus-graduale/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Graduał IV Niedzieli Adwentu, z Psalmu 144. Bliskość jest tu warunkowa: Pan jest blisko tych, którzy wzywają Go prawdziwie.",
+		"en": "The gradual of the Fourth Sunday of Advent, from Psalm 144. The nearness is conditional — He is near to those who call upon Him in truth."
 	},
 	"segments": [
 		{
@@ -48,6 +29,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Bliski jest Pan wszystkim, którzy Go wzywają, wszystkim, którzy wzywają Go w prawdzie.",
+				"en": "The Lord is near to all who call upon Him: to all who call upon Him in truth."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 144:18"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 144:18"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -55,6 +54,10 @@
 					"lemma": "prope",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "blisko",
+						"en": "near"
 					}
 				},
 				{
@@ -68,6 +71,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
 					}
 				},
 				{
@@ -80,6 +87,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -92,7 +103,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w005"
+					"head": "w005",
+					"gloss": {
+						"pl": "wszystkim",
+						"en": "to all"
+					}
 				},
 				{
 					"id": "w005",
@@ -108,7 +123,11 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wzywającym",
+						"en": "those calling upon"
+					}
 				},
 				{
 					"id": "w006",
@@ -120,6 +139,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Go",
+						"en": "Him"
 					}
 				},
 				{
@@ -132,7 +155,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wszystkim",
+						"en": "to all"
+					}
 				},
 				{
 					"id": "w008",
@@ -143,6 +170,10 @@
 						"case": "nom",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którzy",
+						"en": "who"
 					}
 				},
 				{
@@ -157,6 +188,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wzywają",
+						"en": "call upon"
 					}
 				},
 				{
@@ -168,6 +203,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Go",
+						"en": "Him"
 					}
 				},
 				{
@@ -178,7 +217,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w012"
+					"head": "w012",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w012",
@@ -191,6 +234,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "prawdzie ",
+						"en": "truth "
 					}
 				}
 			]
@@ -210,6 +257,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Chwałę Pańską głosić będą usta moje, a wszelkie ciało niech błogosławi święte imię Jego.",
+				"en": "My mouth shall speak the praise of the Lord: and let all flesh bless His holy name."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 144:21"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 144:21"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w013",
@@ -221,6 +286,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "chwałę",
+						"en": "the praise"
 					}
 				},
 				{
@@ -233,6 +302,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pańską",
+						"en": "of the Lord"
 					}
 				},
 				{
@@ -247,6 +320,10 @@
 						"mood": "ind",
 						"voice": "dep",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "będą głosić",
+						"en": "shall speak"
 					}
 				},
 				{
@@ -259,6 +336,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "usta",
+						"en": "mouth"
 					}
 				},
 				{
@@ -272,7 +353,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "moje",
+						"en": "my"
+					}
 				},
 				{
 					"id": "w018",
@@ -280,6 +365,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -294,6 +383,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "niech błogosławi",
+						"en": "let bless"
 					}
 				},
 				{
@@ -306,7 +399,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "wszelkie",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w021",
@@ -318,6 +415,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ciało",
+						"en": "flesh"
 					}
 				},
 				{
@@ -330,6 +431,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "imię",
+						"en": "the name"
 					}
 				},
 				{
@@ -342,7 +447,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w022"
+					"head": "w022",
+					"gloss": {
+						"pl": "święte",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w024",
@@ -354,9 +463,38 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jego",
+						"en": "His"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The gradual of the Fourth Sunday of Advent.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-iv-adventus-graduale/",
+			"apparatus": "witnesses/proprium.dominica-iv-adventus-graduale/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

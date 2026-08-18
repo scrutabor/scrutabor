@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 86
 	},
-	"status": "working-edition",
-	"notes": "The introit of the Third Sunday of Advent, which gives the day its name of Gaudete. The source boundary is recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-iii-adventus-introitus/",
-		"apparatus": "witnesses/proprium.dominica-iii-adventus-introitus/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+	"about": {
+		"pl": "Introit III Niedzieli Adwentu, od którego niedziela bierze nazwę Gaudete. Antyfona to początek lekcji tej samej Mszy, a werset psalmu — początek antyfony na ofiarowanie: jedna Msza mówi to samo trzy razy, coraz pełniej.",
+		"en": "The introit of the Third Sunday of Advent, from which the day takes its name of Gaudete. The antiphon is the opening of the same Mass's epistle, and the psalm verse the opening of its offertory: one Mass says the same thing three times, each time more fully."
 	},
 	"segments": [
 		{
@@ -48,6 +29,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Radujcie się zawsze w Panu: powtórnie mówię, radujcie się. Skromność wasza niech będzie znana wszystkim ludziom: Pan bowiem jest blisko. O nic się nie troszczcie: ale w każdej modlitwie niech prośby wasze będą znane u Boga.",
+				"en": "Rejoice in the Lord always: again I say, rejoice. Let your modesty be known to all men: for the Lord is nigh. Be nothing solicitous: but in everything by prayer let your petitions be made known to God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Philippians 4:4-6"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Philippians 4:4-6"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -61,6 +60,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "radujcie się",
+						"en": "rejoice"
 					}
 				},
 				{
@@ -71,7 +74,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w003",
@@ -83,6 +90,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panu",
+						"en": "Lord"
 					}
 				},
 				{
@@ -92,6 +103,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "always"
 					}
 				},
 				{
@@ -100,6 +115,10 @@
 					"lemma": "iterum",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "znowu",
+						"en": "again"
 					}
 				},
 				{
@@ -115,6 +134,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "mówię",
+						"en": "I say"
 					}
 				},
 				{
@@ -130,6 +153,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "radujcie się",
+						"en": "rejoice"
 					}
 				},
 				{
@@ -142,6 +169,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "skromność",
+						"en": "modesty"
 					}
 				},
 				{
@@ -154,7 +185,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "wasza",
+						"en": "your"
+					}
 				},
 				{
 					"id": "w010",
@@ -166,7 +201,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w008"
+					"head": "w008",
+					"gloss": {
+						"pl": "znana",
+						"en": "known"
+					}
 				},
 				{
 					"id": "w011",
@@ -179,6 +218,10 @@
 						"tense": "pres",
 						"mood": "subj",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "niech będzie",
+						"en": "let be"
 					}
 				},
 				{
@@ -191,7 +234,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w013"
+					"head": "w013",
+					"gloss": {
+						"pl": "wszystkim",
+						"en": "to all"
+					}
 				},
 				{
 					"id": "w013",
@@ -204,6 +251,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ludziom",
+						"en": "men"
 					}
 				},
 				{
@@ -216,6 +267,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -224,6 +279,10 @@
 					"lemma": "enim",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bowiem",
+						"en": "for"
 					}
 				},
 				{
@@ -232,6 +291,10 @@
 					"lemma": "prope",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "blisko",
+						"en": "near"
 					}
 				},
 				{
@@ -246,6 +309,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
 					}
 				},
 				{
@@ -257,6 +324,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "o nic",
+						"en": "nothing"
 					}
 				},
 				{
@@ -269,7 +340,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w020"
+					"head": "w020",
+					"gloss": {
+						"pl": "zatroskani",
+						"en": "anxious"
+					}
 				},
 				{
 					"id": "w020",
@@ -283,6 +358,10 @@
 						"tense": "pres",
 						"mood": "subj",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "nie bądźcie",
+						"en": "be ye not"
 					}
 				},
 				{
@@ -291,6 +370,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "lecz",
+						"en": "but"
 					}
 				},
 				{
@@ -301,7 +384,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w023",
@@ -313,7 +400,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "każdej",
+						"en": "every"
+					}
 				},
 				{
 					"id": "w024",
@@ -325,6 +416,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "modlitwie",
+						"en": "prayer"
 					}
 				},
 				{
@@ -337,6 +432,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "prośby",
+						"en": "petitions"
 					}
 				},
 				{
@@ -349,7 +448,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "wasze",
+						"en": "your"
+					}
 				},
 				{
 					"id": "w027",
@@ -363,6 +466,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "niech staną się znane",
+						"en": "let become known"
 					}
 				},
 				{
@@ -373,7 +480,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "u",
+						"en": "before"
+					}
 				},
 				{
 					"id": "w029",
@@ -386,6 +497,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				}
 			]
@@ -405,6 +520,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Pobłogosławiłeś, Panie, ziemię Twoją: odwróciłeś niewolę Jakuba.",
+				"en": "Thou hast blessed, O Lord, Thy land: Thou hast turned away the captivity of Jacob."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 84:2"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Psalm 84:2"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w030",
@@ -419,6 +552,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "pobłogosławiłeś",
+						"en": "Thou hast blessed"
 					}
 				},
 				{
@@ -432,6 +569,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -444,6 +585,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ziemię",
+						"en": "land"
 					}
 				},
 				{
@@ -457,7 +602,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w032"
+					"head": "w032",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w034",
@@ -471,6 +620,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "odwróciłeś",
+						"en": "Thou hast turned away"
 					}
 				},
 				{
@@ -483,6 +636,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "niewolę",
+						"en": "the captivity"
 					}
 				},
 				{
@@ -495,6 +652,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jakuba",
+						"en": "of Jacob"
 					}
 				}
 			]
@@ -514,6 +675,10 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.",
+				"en": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+			},
 			"words": [
 				{
 					"id": "w037",
@@ -525,6 +690,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwała",
+						"en": "glory"
+					},
+					"function": {
+						"pl": "Doksologia nie ma wyrażonego czasownika. Z użycia liturgicznego trzeba dopowiedzieć życzenie „chwała niech będzie”.",
+						"en": "The doxology has no expressed verb. It supplies the wish “glory be” from liturgical usage."
 					}
 				},
 				{
@@ -538,6 +711,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Ojcu",
+						"en": "to the Father"
 					}
 				},
 				{
@@ -546,6 +723,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -559,6 +740,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synowi",
+						"en": "to the Son"
 					}
 				},
 				{
@@ -567,6 +752,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -579,6 +768,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Duchowi",
+						"en": "to the Spirit"
 					}
 				},
 				{
@@ -592,7 +785,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w042"
+					"head": "w042",
+					"gloss": {
+						"pl": "Świętemu",
+						"en": "Holy"
+					}
 				},
 				{
 					"id": "w044",
@@ -600,6 +797,10 @@
 					"lemma": "sicut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "jak",
+						"en": "as"
 					}
 				},
 				{
@@ -613,6 +814,10 @@
 						"pos": "verb",
 						"tense": "impf",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "była",
+						"en": "it was"
 					}
 				},
 				{
@@ -623,7 +828,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w047"
+					"head": "w047",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w047",
@@ -636,6 +845,10 @@
 						"gender": "n",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "początku",
+						"en": "the beginning"
 					}
 				},
 				{
@@ -644,6 +857,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -653,6 +870,10 @@
 					"lemma": "nunc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "teraz",
+						"en": "now"
 					}
 				},
 				{
@@ -661,6 +882,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -670,6 +895,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "always"
 					}
 				},
 				{
@@ -678,6 +907,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -688,7 +921,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w054"
+					"head": "w054",
+					"gloss": {
+						"pl": "na",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w054",
@@ -700,6 +937,10 @@
 						"gender": "n",
 						"number": "pl",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
 					}
 				},
 				{
@@ -713,6 +954,10 @@
 						"gender": "n",
 						"number": "pl",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
 					}
 				},
 				{
@@ -722,6 +967,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -746,6 +995,24 @@
 					"source": "DMS 25 c"
 				}
 			},
+			"translation": {
+				"pl": "Radujcie się zawsze w Panu: powtórnie mówię, radujcie się. Skromność wasza niech będzie znana wszystkim ludziom: Pan bowiem jest blisko. O nic się nie troszczcie: ale w każdej modlitwie niech prośby wasze będą znane u Boga.",
+				"en": "Rejoice in the Lord always: again I say, rejoice. Let your modesty be known to all men: for the Lord is nigh. Be nothing solicitous: but in everything by prayer let your petitions be made known to God."
+			},
+			"translation_citations": {
+				"pl": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Philippians 4:4-6"
+					}
+				],
+				"en": [
+					{
+						"title": "Biblia Sacra Vulgata",
+						"locator": "Philippians 4:4-6"
+					}
+				]
+			},
 			"words": [
 				{
 					"id": "w057",
@@ -759,6 +1026,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "radujcie się",
+						"en": "rejoice"
 					}
 				},
 				{
@@ -769,7 +1040,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w059"
+					"head": "w059",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w059",
@@ -781,6 +1056,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panu",
+						"en": "Lord"
 					}
 				},
 				{
@@ -790,6 +1069,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "always"
 					}
 				},
 				{
@@ -798,6 +1081,10 @@
 					"lemma": "iterum",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "znowu",
+						"en": "again"
 					}
 				},
 				{
@@ -813,6 +1100,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "mówię",
+						"en": "I say"
 					}
 				},
 				{
@@ -828,6 +1119,10 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "radujcie się",
+						"en": "rejoice"
 					}
 				},
 				{
@@ -840,6 +1135,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "skromność",
+						"en": "modesty"
 					}
 				},
 				{
@@ -852,7 +1151,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w064"
+					"head": "w064",
+					"gloss": {
+						"pl": "wasza",
+						"en": "your"
+					}
 				},
 				{
 					"id": "w066",
@@ -864,7 +1167,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w064"
+					"head": "w064",
+					"gloss": {
+						"pl": "znana",
+						"en": "known"
+					}
 				},
 				{
 					"id": "w067",
@@ -877,6 +1184,10 @@
 						"tense": "pres",
 						"mood": "subj",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "niech będzie",
+						"en": "let be"
 					}
 				},
 				{
@@ -889,7 +1200,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w069"
+					"head": "w069",
+					"gloss": {
+						"pl": "wszystkim",
+						"en": "to all"
+					}
 				},
 				{
 					"id": "w069",
@@ -902,6 +1217,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ludziom",
+						"en": "men"
 					}
 				},
 				{
@@ -914,6 +1233,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pan",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -922,6 +1245,10 @@
 					"lemma": "enim",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bowiem",
+						"en": "for"
 					}
 				},
 				{
@@ -930,6 +1257,10 @@
 					"lemma": "prope",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "blisko",
+						"en": "near"
 					}
 				},
 				{
@@ -944,6 +1275,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
 					}
 				},
 				{
@@ -955,6 +1290,10 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "o nic",
+						"en": "nothing"
 					}
 				},
 				{
@@ -967,7 +1306,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w076"
+					"head": "w076",
+					"gloss": {
+						"pl": "zatroskani",
+						"en": "anxious"
+					}
 				},
 				{
 					"id": "w076",
@@ -981,6 +1324,10 @@
 						"tense": "pres",
 						"mood": "subj",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "nie bądźcie",
+						"en": "be ye not"
 					}
 				},
 				{
@@ -989,6 +1336,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "lecz",
+						"en": "but"
 					}
 				},
 				{
@@ -999,7 +1350,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w080"
+					"head": "w080",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w079",
@@ -1011,7 +1366,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w080"
+					"head": "w080",
+					"gloss": {
+						"pl": "każdej",
+						"en": "every"
+					}
 				},
 				{
 					"id": "w080",
@@ -1023,6 +1382,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "modlitwie",
+						"en": "prayer"
 					}
 				},
 				{
@@ -1035,6 +1398,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "prośby",
+						"en": "petitions"
 					}
 				},
 				{
@@ -1047,7 +1414,11 @@
 						"number": "pl",
 						"gender": "f"
 					},
-					"head": "w081"
+					"head": "w081",
+					"gloss": {
+						"pl": "wasze",
+						"en": "your"
+					}
 				},
 				{
 					"id": "w083",
@@ -1061,6 +1432,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "niech staną się znane",
+						"en": "let become known"
 					}
 				},
 				{
@@ -1071,7 +1446,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w085"
+					"head": "w085",
+					"gloss": {
+						"pl": "u",
+						"en": "before"
+					}
 				},
 				{
 					"id": "w085",
@@ -1084,9 +1463,38 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "God"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The introit of the Third Sunday of Advent, which gives the day its name of Gaudete. The source boundary is recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-iii-adventus-introitus/",
+			"apparatus": "witnesses/proprium.dominica-iii-adventus-introitus/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		}
+	}
 }

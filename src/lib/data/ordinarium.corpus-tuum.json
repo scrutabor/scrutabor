@@ -9,48 +9,41 @@
 	"ids": {
 		"next": 36
 	},
-	"status": "working-edition",
-	"notes": "The second of the two prayers at the ablutions, said while the priest washes his thumbs and index fingers with wine and water over the chalice. QUEM at w022 is the crux of the prayer: it is masculine accusative singular and therefore cannot agree with the feminine mácula standing beside it, nor with the neuter plural sacraménta that follows. It reaches back over both to ME at w017 — let no stain remain in me, whom the pure and holy sacraments have refreshed. The corpus tags it with its own case, number and gender and leaves the reaching-back to the word's note. The rubric witness do prints before this prayer ends with deinde prosequitur, and the corpus splits it: the ablution belongs to the prayer before, and the two words that hand the priest on belong here, at s01. VISCÉRIBUS at w011 is dative, governed by adhǽreat, which takes the dative as inhærére does at ordinarium.fili-dei-vivi w040.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variant is adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.corpus-tuum/",
-		"apparatus": "witnesses/ordinarium.corpus-tuum/apparatus.json"
+	"about": {
+		"pl": "Druga z dwóch modlitw przy puryfikacji, odmawiana, gdy kapłan obmywa winem i wodą kciuki i palce wskazujące nad kielichem. Prosi, aby przyjęte Ciało i Krew przylgnęły do wnętrza przyjmującego i aby nie została w nim żadna zmaza grzechu.",
+		"en": "The second of the two prayers at the ablutions, said while the priest washes his thumbs and forefingers with wine and water over the chalice. It asks that the Body and Blood just received cleave to the one who received them and that no stain of sin remain in him."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Ritus servandus in celebratione Missae, X, 5",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Ritus servandus in celebratione Missae, X, 5",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
-			"text": "Deinde prosequitur:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
-			}
+			"text": "Deinde prosequitur:"
 		},
 		{
 			"id": "s02",
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Ciało Twoje, Panie, które przyjąłem, i Krew, którą wypiłem, niech przylgnie do wnętrzności moich:",
+				"en": "May Thy Body, O Lord, which I have received, and the Blood which I have drunk, cleave to my inmost parts:"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -62,6 +55,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ciało",
+						"en": "Body"
+					},
+					"function": {
+						"pl": "Pierwszy z dwóch podmiotów czasownika „adhǽreat” (w010), który występuje w liczbie pojedynczej.",
+						"en": "The first of the two subjects of “adhǽreat” (w010), which is singular."
 					}
 				},
 				{
@@ -75,7 +76,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w001"
+					"head": "w001",
+					"gloss": {
+						"pl": "Twoje",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w003",
@@ -88,6 +93,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -99,6 +108,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "które",
+						"en": "which"
+					},
+					"function": {
+						"pl": "Rodzaj nijaki, zgadza się z „Corpus” (w001).",
+						"en": "Neuter, agreeing with “Corpus” (w001)."
 					}
 				},
 				{
@@ -114,6 +131,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "przyjąłem",
+						"en": "I have received"
 					}
 				},
 				{
@@ -122,6 +143,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -135,6 +160,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Krew",
+						"en": "the Blood"
 					}
 				},
 				{
@@ -146,6 +175,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którą",
+						"en": "which"
+					},
+					"function": {
+						"pl": "Rodzaj męski, zgadza się z „Sanguis” (w007).",
+						"en": "Masculine, agreeing with “Sanguis” (w007)."
 					}
 				},
 				{
@@ -161,6 +198,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wypiłem",
+						"en": "I have drunk"
 					}
 				},
 				{
@@ -175,6 +216,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "niech przylgnie",
+						"en": "may cleave"
+					},
+					"function": {
+						"pl": "Viscéribus odczytujemy jako celownik liczby mnogiej: Ciało i Krew mają „przylgnąć do moich wnętrzności”.",
+						"en": "Viscéribus is read as a plural dative: the Body and Blood are to “cleave to my inmost parts”."
 					}
 				},
 				{
@@ -187,6 +236,14 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "do wnętrzności",
+						"en": "to the inmost parts"
+					},
+					"function": {
+						"pl": "Celownik po „adhǽreat” (w010).",
+						"en": "Dative after “adhǽreat” (w010)."
 					}
 				},
 				{
@@ -200,7 +257,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "moich",
+						"en": "my"
+					}
 				}
 			]
 		},
@@ -209,6 +270,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "i spraw, aby we mnie, którego posiliły czyste i święte sakramenty, nie pozostała zmaza grzechów:",
+				"en": "and grant that no stain of sins remain in me, whom pure and holy sacraments have refreshed:"
+			},
 			"words": [
 				{
 					"id": "w013",
@@ -216,6 +281,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -231,6 +300,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "spraw",
+						"en": "grant"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący. Rządzi zdaniem wprowadzonym przez „ut” (w015).",
+						"en": "Imperative governing the clause introduced by “ut” (w015)."
 					}
 				},
 				{
@@ -239,6 +316,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "aby",
+						"en": "that"
 					}
 				},
 				{
@@ -249,7 +330,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "we",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w017",
@@ -259,6 +344,14 @@
 						"pos": "pron",
 						"case": "abl",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "mnie",
+						"en": "me"
+					},
+					"function": {
+						"pl": "Ablativus po „in” (w016). Poprzednik „quem” (w022).",
+						"en": "Ablative after “in” (w016). Antecedent of “quem” (w022)."
 					}
 				},
 				{
@@ -267,6 +360,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -281,6 +378,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "pozostała",
+						"en": "may remain"
 					}
 				},
 				{
@@ -293,6 +394,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "grzechów",
+						"en": "of sins"
 					}
 				},
 				{
@@ -306,6 +411,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "zmaza",
+						"en": "stain"
+					},
+					"function": {
+						"pl": "Podmiot „remáneat” (w019) w rodzaju żeńskim i liczbie pojedynczej.",
+						"en": "Feminine singular subject of “remáneat” (w019)."
 					}
 				},
 				{
@@ -317,6 +430,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "którego",
+						"en": "whom"
+					},
+					"function": {
+						"pl": "Zaimek względny rodzaju męskiego w liczbie pojedynczej. Odnosi się do „me” (w017), nie do żeńskiego „mácula” (w021) ani nijakiego „sacraménta” (w027).",
+						"en": "Masculine singular relative pronoun referring to “me” (w017), not feminine “mácula” (w021) or neuter plural “sacraménta” (w027)."
 					}
 				},
 				{
@@ -329,7 +450,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w027"
+					"head": "w027",
+					"gloss": {
+						"pl": "czyste",
+						"en": "pure"
+					}
 				},
 				{
 					"id": "w024",
@@ -337,6 +462,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -349,7 +478,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w027"
+					"head": "w027",
+					"gloss": {
+						"pl": "święte",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w026",
@@ -363,6 +496,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "posiliły",
+						"en": "have refreshed"
 					}
 				},
 				{
@@ -376,6 +513,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "sakramenty",
+						"en": "sacraments"
 					}
 				}
 			]
@@ -385,6 +526,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Który żyjesz i królujesz na wieki wieków. Amen.",
+				"en": "Who livest and reignest for ever and ever. Amen."
+			},
 			"words": [
 				{
 					"id": "w028",
@@ -395,6 +540,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Który",
+						"en": "Who"
 					}
 				},
 				{
@@ -409,6 +558,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "żyjesz",
+						"en": "livest"
 					}
 				},
 				{
@@ -417,6 +570,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -431,6 +588,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "królujesz",
+						"en": "reignest"
 					}
 				},
 				{
@@ -441,7 +602,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w033"
+					"head": "w033",
+					"gloss": {
+						"pl": "na",
+						"en": "unto"
+					}
 				},
 				{
 					"id": "w033",
@@ -453,6 +618,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieki",
+						"en": "ages"
 					}
 				},
 				{
@@ -466,6 +635,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "wieków",
+						"en": "of ages"
 					}
 				},
 				{
@@ -475,6 +648,10 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
@@ -483,14 +660,57 @@
 			"id": "s05",
 			"type": "rubric",
 			"text": "Abluit et extergit digitos, ac sumit ablutionem: extergit os et Calicem, quem, plicato Corporali, operit et collocat in Altari ut prius: deinde prosequitur Missam.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan obmywa i wyciera palce, spożywa ablucję, ociera usta i kielich, składa korporał, nakrywa kielich, stawia go na ołtarzu i kontynuuje Mszę.",
+				"en": "The priest washes and dries his fingers, consumes the ablution, wipes his mouth and the chalice, folds the corporal, covers the chalice, replaces it on the altar, and then continues the Mass."
 			}
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The second of the two prayers at the ablutions, said while the priest washes his thumbs and index fingers with wine and water over the chalice. QUEM at w022 is the crux of the prayer: it is masculine accusative singular and therefore cannot agree with the feminine mácula standing beside it, nor with the neuter plural sacraménta that follows. It reaches back over both to ME at w017 — let no stain remain in me, whom the pure and holy sacraments have refreshed. The corpus tags it with its own case, number and gender and leaves the reaching-back to the word's note. The rubric witness do prints before this prayer ends with deinde prosequitur, and the corpus splits it: the ablution belongs to the prayer before, and the two words that hand the priest on belong here, at s01. VISCÉRIBUS at w011 is dative, governed by adhǽreat, which takes the dative as inhærére does at ordinarium.fili-dei-vivi w040.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. The accidental variant is adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.corpus-tuum/",
+			"apparatus": "witnesses/ordinarium.corpus-tuum/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			},
+			"s05": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		}
+	}
 }

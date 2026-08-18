@@ -9,41 +9,50 @@
 	"ids": {
 		"next": 85
 	},
-	"status": "working-edition",
-	"notes": "The Greater Doxology (hymnus angelicus), opening with the angels' song at Bethlehem (Lc 2:14). Rubric s01 abridges the 1962 rubric as transcribed by witness do (line 89): the bows at the named phrases and the sign of the cross at the end are carried by the narrative layer.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Three accidental variants (two orthography, one punctuation) adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.gloria/",
-		"apparatus": "witnesses/ordinarium.gloria/apparatus.json"
+	"about": {
+		"pl": "Hymn rozpoczyna się słowami pieśni aniołów przy narodzeniu Chrystusa. Wielbi Boga Ojca, a następnie zwraca się do Jezusa Chrystusa, Jednorodzonego Syna i Baranka Bożego, prosząc Go o miłosierdzie i przyjęcie modlitwy. Kończy się wyznaniem chwały Chrystusa wraz z Duchem Świętym w chwale Boga Ojca.",
+		"en": "The hymn begins with the song of the angels at the birth of Christ. It praises God the Father and then addresses Jesus Christ, the only-begotten Son and Lamb of God, asking Him to have mercy on us and receive our prayer. It ends by professing the glory of Christ with the Holy Spirit in the glory of God the Father."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Evangelium secundum Lucam",
+				"locator": "2, 13–14",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-lucam_lt.html#2"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Evangelium secundum Lucam",
+				"locator": "2, 13–14",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-lucam_lt.html#2"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Postea in medio Altaris extendens et iungens manus, caputque aliquantulum inclínans, dicit, si dicendum est, Glória in excélsis Deo, et prosequitur iunctis manibus.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
+			"narrative": {
+				"pl": "Na środku ołtarza kapłan rozkłada i składa ręce, lekko pochyla głowę i, jeśli hymn należy odmówić, rozpoczyna go słowami „Glória in excélsis Deo”. Odmawia dalszy ciąg ze złożonymi rękami, pochylając głowę ku krzyżowi przy Deo, przy Adorámus te, przy Grátias ágimus tibi, przy obu Iesu Christe i przy Súscipe deprecatiónem nostram, a przy Cum Sancto Spíritu żegnając się od czoła do piersi.",
+				"en": "At the middle of the altar, the priest extends and joins his hands, bows his head slightly and, if the hymn is to be said, begins it with “Glória in excélsis Deo”, continuing with hands joined. The priest bows his head to the cross at Deo, at Adorámus te, at Grátias ágimus tibi, at both Iesu Christe and at Súscipe deprecatiónem nostram, and signs himself from forehead to breast at Cum Sancto Spíritu."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae rubric before Gloria in excelsis",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Ordo Missae rubric before Gloria in excelsis",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -61,6 +70,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Chwała na wysokości Bogu.",
+				"en": "Glory to God in the highest."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -72,6 +85,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwała",
+						"en": "glory"
+					},
+					"function": {
+						"pl": "Zdanie nominalne z domyślnym „niech będzie”. „Deo” (w004) wskazuje odbiorcę chwały.",
+						"en": "A nominal sentence with “let there be” understood. “Deo” (w004) identifies the recipient of the glory."
 					}
 				},
 				{
@@ -82,7 +103,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w003"
+					"head": "w003",
+					"gloss": {
+						"pl": "na",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w003",
@@ -94,7 +119,15 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wysokościach",
+						"en": "the highest"
+					},
+					"function": {
+						"pl": "Przymiotnik rodzaju nijakiego użyty rzeczownikowo: „w najwyższych [miejscach]”.",
+						"en": "A neuter adjective used substantively: “in the highest [places]”."
+					}
 				},
 				{
 					"id": "w004",
@@ -107,6 +140,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Bogu",
+						"en": "to God"
 					}
 				}
 			]
@@ -126,6 +163,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "A na ziemi pokój ludziom dobrej woli.",
+				"en": "And on earth peace to people of good will."
+			},
 			"words": [
 				{
 					"id": "w005",
@@ -133,6 +174,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -143,7 +188,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w007"
+					"head": "w007",
+					"gloss": {
+						"pl": "na",
+						"en": "on"
+					}
 				},
 				{
 					"id": "w007",
@@ -155,6 +204,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ziemi",
+						"en": "earth"
 					}
 				},
 				{
@@ -167,6 +220,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "pokój",
+						"en": "peace"
 					}
 				},
 				{
@@ -179,6 +236,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "ludziom",
+						"en": "to men"
 					}
 				},
 				{
@@ -191,7 +252,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w011"
+					"head": "w011",
+					"gloss": {
+						"pl": "dobrej",
+						"en": "of good"
+					}
 				},
 				{
 					"id": "w011",
@@ -204,6 +269,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "woli",
+						"en": "will"
+					},
+					"function": {
+						"pl": "Z „bonæ” (w010) tworzy dopełniacz cechy określający „homínibus” (w009).",
+						"en": "With “bonæ” (w010), it forms a genitive of quality modifying “homínibus” (w009)."
 					}
 				}
 			]
@@ -223,6 +296,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Chwalimy Cię. Błogosławimy Cię. Wielbimy Cię. Wysławiamy Cię.",
+				"en": "We praise You. We bless You. We adore You. We glorify You."
+			},
 			"words": [
 				{
 					"id": "w012",
@@ -236,6 +313,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "chwalimy",
+						"en": "we praise"
 					}
 				},
 				{
@@ -247,6 +328,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Cię",
+						"en": "You"
 					}
 				},
 				{
@@ -261,6 +346,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "błogosławimy",
+						"en": "we bless"
 					}
 				},
 				{
@@ -272,6 +361,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Cię",
+						"en": "You"
 					}
 				},
 				{
@@ -286,6 +379,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "wielbimy",
+						"en": "we adore"
 					}
 				},
 				{
@@ -297,6 +394,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Cię",
+						"en": "You"
 					}
 				},
 				{
@@ -311,6 +412,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "sławimy",
+						"en": "we glorify"
 					}
 				},
 				{
@@ -322,6 +427,10 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Cię",
+						"en": "You"
 					}
 				}
 			]
@@ -341,6 +450,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Dzięki Ci składamy, bo wielka jest chwała Twoja.",
+				"en": "We give You thanks for Your great glory."
+			},
 			"words": [
 				{
 					"id": "w020",
@@ -352,6 +465,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "dzięki",
+						"en": "thanks"
 					}
 				},
 				{
@@ -366,6 +483,14 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "składamy",
+						"en": "we give"
+					},
+					"function": {
+						"pl": "Z „Grátias” (w020) tworzy stały zwrot „grátias ágere” — składać dzięki.",
+						"en": "With “Grátias” (w020), it forms the fixed expression “grátias ágere” — to give thanks."
 					}
 				},
 				{
@@ -376,6 +501,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Tobie",
+						"en": "to You"
 					}
 				},
 				{
@@ -386,7 +515,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "ze względu na",
+						"en": "for"
+					}
 				},
 				{
 					"id": "w024",
@@ -398,7 +531,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "wielką",
+						"en": "great"
+					}
 				},
 				{
 					"id": "w025",
@@ -410,6 +547,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwałę",
+						"en": "glory"
 					}
 				},
 				{
@@ -423,7 +564,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w025"
+					"head": "w025",
+					"gloss": {
+						"pl": "Twoją",
+						"en": "Your"
+					}
 				}
 			]
 		},
@@ -442,6 +587,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Panie Boże, Królu nieba, Boże Ojcze wszechmogący.",
+				"en": "Lord God, heavenly King, O God, almighty Father."
+			},
 			"words": [
 				{
 					"id": "w027",
@@ -453,6 +602,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -466,6 +619,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
+					},
+					"function": {
+						"pl": "Forma „Deus” jest jednakowa w mianowniku i wołaczu. Tutaj jest wołaczem, równoległym do „Dómine” (w027).",
+						"en": "“Deus” has the same form in the nominative and vocative. Here it is vocative, parallel to “Dómine” (w027)."
 					}
 				},
 				{
@@ -478,6 +639,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Królu",
+						"en": "King"
 					}
 				},
 				{
@@ -491,7 +656,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "niebieski",
+						"en": "heavenly"
+					}
 				},
 				{
 					"id": "w031",
@@ -503,6 +672,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				},
 				{
@@ -515,6 +688,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojcze",
+						"en": "Father"
 					}
 				},
 				{
@@ -528,7 +705,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w032"
+					"head": "w032",
+					"gloss": {
+						"pl": "wszechmogący",
+						"en": "almighty"
+					}
 				}
 			]
 		},
@@ -547,6 +728,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Panie, Synu Jednorodzony, Jezu Chryste.",
+				"en": "Lord Jesus Christ, Only Begotten Son."
+			},
 			"words": [
 				{
 					"id": "w034",
@@ -558,6 +743,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -570,6 +759,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synu",
+						"en": "Son"
+					},
+					"function": {
+						"pl": "Wołacz liczby pojedynczej od „fílius”.",
+						"en": "Singular vocative of “fílius”."
 					}
 				},
 				{
@@ -583,7 +780,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w035"
+					"head": "w035",
+					"gloss": {
+						"pl": "Jednorodzony",
+						"en": "only-begotten"
+					}
 				},
 				{
 					"id": "w037",
@@ -594,6 +795,10 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezu",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -607,6 +812,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chryste",
+						"en": "Christ"
 					}
 				}
 			]
@@ -626,6 +835,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Panie Boże, Baranku Boży, Synu Ojca.",
+				"en": "Lord God, Lamb of God, Son of the Father."
+			},
 			"words": [
 				{
 					"id": "w039",
@@ -637,6 +850,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panie",
+						"en": "Lord"
 					}
 				},
 				{
@@ -650,6 +867,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boże",
+						"en": "God"
 					}
 				},
 				{
@@ -662,6 +883,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Baranku",
+						"en": "Lamb"
+					},
+					"function": {
+						"pl": "Mianownik użyty jako zawołanie w szeregu po „Dómine” (w039) i „Deus” (w040).",
+						"en": "Nominative used as an address in the series following “Dómine” (w039) and “Deus” (w040)."
 					}
 				},
 				{
@@ -675,6 +904,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -687,6 +920,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Synu",
+						"en": "Son"
+					},
+					"function": {
+						"pl": "Mianownik użyty jako zawołanie, równoległe do „Agnus” (w041).",
+						"en": "Nominative used as an address, parallel to “Agnus” (w041)."
 					}
 				},
 				{
@@ -700,6 +941,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojca",
+						"en": "of the Father"
 					}
 				}
 			]
@@ -719,6 +964,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Który gładzisz grzechy świata, zmiłuj się nad nami.",
+				"en": "You take away the sins of the world, have mercy on us."
+			},
 			"words": [
 				{
 					"id": "w045",
@@ -729,6 +978,14 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
+					},
+					"function": {
+						"pl": "Podmiot „tollis” (w046). Druga osoba wynika z bezpośredniego zwrotu do Chrystusa.",
+						"en": "Subject of “tollis” (w046). The second person follows from the direct address to Christ."
 					}
 				},
 				{
@@ -743,6 +1000,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "gładzisz",
+						"en": "take away"
 					}
 				},
 				{
@@ -755,6 +1016,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "grzechy",
+						"en": "the sins"
 					}
 				},
 				{
@@ -768,6 +1033,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
 					}
 				},
 				{
@@ -782,6 +1051,10 @@
 						"mood": "imp",
 						"voice": "dep",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
 					}
 				},
 				{
@@ -793,6 +1066,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
 					}
 				}
 			]
@@ -812,6 +1089,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Który gładzisz grzechy świata, przyjm błaganie nasze.",
+				"en": "You take away the sins of the world, receive our prayer."
+			},
 			"words": [
 				{
 					"id": "w051",
@@ -822,6 +1103,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -836,6 +1121,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "gładzisz",
+						"en": "take away"
 					}
 				},
 				{
@@ -848,6 +1137,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "grzechy",
+						"en": "the sins"
 					}
 				},
 				{
@@ -861,6 +1154,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "świata",
+						"en": "of the world"
 					}
 				},
 				{
@@ -875,6 +1172,14 @@
 						"mood": "imp",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "przyjmij",
+						"en": "receive"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący. Dopełnieniem jest „deprecatiónem” (w056).",
+						"en": "Imperative. Its object is “deprecatiónem” (w056)."
 					}
 				},
 				{
@@ -887,6 +1192,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "błaganie",
+						"en": "the plea"
 					}
 				},
 				{
@@ -900,7 +1209,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w056"
+					"head": "w056",
+					"gloss": {
+						"pl": "nasze",
+						"en": "our"
+					}
 				}
 			]
 		},
@@ -919,6 +1232,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Który siedzisz po prawicy Ojca, zmiłuj się nad nami.",
+				"en": "You are seated at the right hand of the Father, have mercy on us."
+			},
 			"words": [
 				{
 					"id": "w058",
@@ -929,6 +1246,10 @@
 						"case": "nom",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "który",
+						"en": "who"
 					}
 				},
 				{
@@ -943,6 +1264,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zasiadasz",
+						"en": "sit"
 					}
 				},
 				{
@@ -953,7 +1278,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w061"
+					"head": "w061",
+					"gloss": {
+						"pl": "po",
+						"en": "at"
+					}
 				},
 				{
 					"id": "w061",
@@ -966,13 +1295,13 @@
 						"gender": "f",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "prawicy",
+						"en": "the right hand"
+					},
+					"function": {
+						"pl": "„ad” (w060) z biernikiem określa tu położenie: po prawicy Ojca.",
+						"en": "“ad” (w060) with the accusative marks position here: at the right hand of the Father."
 					}
 				},
 				{
@@ -986,6 +1315,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojca",
+						"en": "of the Father"
 					}
 				},
 				{
@@ -1000,6 +1333,10 @@
 						"mood": "imp",
 						"voice": "dep",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "zmiłuj się",
+						"en": "have mercy"
 					}
 				},
 				{
@@ -1011,6 +1348,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nad nami",
+						"en": "on us"
 					}
 				}
 			]
@@ -1030,6 +1371,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Albowiem tylko Tyś jest święty. Tylko Tyś jest Panem. Tylko Tyś Najwyższy, Jezu Chryste.",
+				"en": "For You alone are the Holy One. You alone are the Lord. You alone are the Most High, Jesus Christ."
+			},
 			"words": [
 				{
 					"id": "w065",
@@ -1037,6 +1382,10 @@
 					"lemma": "quoniam",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "albowiem",
+						"en": "for"
 					}
 				},
 				{
@@ -1047,6 +1396,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "You"
 					}
 				},
 				{
@@ -1059,7 +1412,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w066"
+					"head": "w066",
+					"gloss": {
+						"pl": "sam",
+						"en": "alone"
+					},
+					"function": {
+						"pl": "Z „tu” (w066) tworzy zdanie bez wyrażonego czasownika: „Ty sam [jesteś] Święty”. Taką samą budowę mają dwa dalsze solus.",
+						"en": "With “tu” (w066) it forms a sentence without an expressed verb: “Thou alone [art] holy”. The next two occurrences of solus have the same construction."
+					}
 				},
 				{
 					"id": "w068",
@@ -1072,7 +1433,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w066"
+					"head": "w066",
+					"gloss": {
+						"pl": "święty",
+						"en": "holy"
+					}
 				},
 				{
 					"id": "w069",
@@ -1082,6 +1447,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "You"
 					}
 				},
 				{
@@ -1094,7 +1463,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w069"
+					"head": "w069",
+					"gloss": {
+						"pl": "sam",
+						"en": "alone"
+					}
 				},
 				{
 					"id": "w071",
@@ -1107,6 +1480,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Panem",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -1117,6 +1494,10 @@
 						"pos": "pron",
 						"case": "nom",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ty",
+						"en": "You"
 					}
 				},
 				{
@@ -1129,7 +1510,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w072"
+					"head": "w072",
+					"gloss": {
+						"pl": "sam",
+						"en": "alone"
+					}
 				},
 				{
 					"id": "w074",
@@ -1143,7 +1528,11 @@
 						"gender": "m",
 						"degree": "sup"
 					},
-					"head": "w072"
+					"head": "w072",
+					"gloss": {
+						"pl": "Najwyższy",
+						"en": "Most High"
+					}
 				},
 				{
 					"id": "w075",
@@ -1154,6 +1543,10 @@
 						"case": "voc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezu",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -1167,6 +1560,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chryste",
+						"en": "Christ"
 					}
 				}
 			]
@@ -1186,6 +1583,10 @@
 					"source": "DMS 25 b"
 				}
 			},
+			"translation": {
+				"pl": "Z Duchem Świętym w chwale Boga Ojca. Amen.",
+				"en": "With the Holy Spirit in the glory of God the Father. Amen."
+			},
 			"words": [
 				{
 					"id": "w077",
@@ -1195,7 +1596,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w079"
+					"head": "w079",
+					"gloss": {
+						"pl": "ze",
+						"en": "with"
+					}
 				},
 				{
 					"id": "w078",
@@ -1207,7 +1612,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w079"
+					"head": "w079",
+					"gloss": {
+						"pl": "Świętym",
+						"en": "The Holy"
+					}
 				},
 				{
 					"id": "w079",
@@ -1219,6 +1628,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "Duchem",
+						"en": "Spirit"
 					}
 				},
 				{
@@ -1229,7 +1642,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w081"
+					"head": "w081",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w081",
@@ -1241,6 +1658,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "chwale",
+						"en": "the glory"
 					}
 				},
 				{
@@ -1253,6 +1674,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -1266,6 +1691,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Ojca",
+						"en": "the Father"
 					}
 				},
 				{
@@ -1275,9 +1704,62 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The Greater Doxology (hymnus angelicus), opening with the angels' song at Bethlehem (Lc 2:14). Rubric s01 abridges the 1962 rubric as transcribed by witness do (line 89): the bows at the named phrases and the sign of the cross at the end are carried by the narrative layer.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Three accidental variants (two orthography, one punctuation) adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.gloria/",
+			"apparatus": "witnesses/ordinarium.gloria/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w061": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

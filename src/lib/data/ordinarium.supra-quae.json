@@ -9,41 +9,34 @@
 	"ids": {
 		"next": 39
 	},
-	"status": "working-edition",
-	"notes": "The prayer that sets this sacrifice beside those of Abel, Abraham and Melchisedech — the only place in the Ordinary of the Mass where the Old Testament sacrifices are named (the Lauda Sion of Corpus Christi names its own three in the propers). SÍCUTI at w012 is accented on the antepenult: sicut plus the enclitic i, whose u is short, so the stress cannot fall on it; witness do accents the penult, adjudicated in the apparatus. ABEL at w021 and MELCHÍSEDECH at w034 are indeclinable and carry no declension; ÁBRAHÆ at w026 has a Latin genitive but a declension the corpus does not label. Whitaker's Words knows none of the three names — nor summus, which it heads only under superus — while Collatinus knows all four, and the provenance of those tokens records it. QUOD at w028 is a relative with no expressed antecedent — that which Melchisedech offered — and its two appositions (sacrifícium, hóstiam) close the sentence.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
-		"witnesses": "witnesses/ordinarium.supra-quae/",
-		"apparatus": "witnesses/ordinarium.supra-quae/apparatus.json"
+	"about": {
+		"pl": "Kapłan prosi Boga, aby łaskawie wejrzał na ofiarę i zechciał ją przyjąć, jak przyjął dary sprawiedliwego Abla, ofiarę Abrahama oraz to, co złożył Melchizedek. Księga Rodzaju nazywa go kapłanem Boga najwyższego, a najwyższym kapłanem nazywa go dopiero Kanon.",
+		"en": "The priest asks God to look favorably upon the offering and accept it, as He accepted the gifts of the just Abel, the sacrifice of Abraham, and what Melchisedech offered to Him. Genesis calls Melchisedech a priest of God most high, and it is the Canon that calls him a high priest."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Nova Vulgata, Liber Genesis",
+				"locator": "Genesis 14, 18",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_genesis_lt.html"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+		"en": [
+			{
+				"title": "Nova Vulgata, Liber Genesis",
+				"locator": "Genesis 14, 18",
+				"url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_genesis_lt.html"
+			}
+		]
 	},
 	"segments": [
 		{
 			"id": "s01",
 			"type": "rubric",
 			"text": "Extensis manibus prosequitur:",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do"
-				],
-				"review": "pending"
+			"narrative": {
+				"pl": "Kapłan rozkłada ręce i mówi dalej.",
+				"en": "The priest spreads his hands and goes on."
 			}
 		},
 		{
@@ -51,6 +44,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Racz wejrzeć na nie z miłością i łaskawie przyjąć, podobnie jak przyjąłeś dary swojego sługi, sprawiedliwego Abla, i ofiarę naszego Patriarchy Abrahama:",
+				"en": "Be pleased to look upon these offerings with a serene and kindly countenance, and to accept them, as once You were pleased to accept the gifts of Your servant Abel the just, and the sacrifice of Abraham, our father in faith:"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -60,7 +57,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w002"
+					"head": "w002",
+					"gloss": {
+						"pl": "na",
+						"en": "upon"
+					}
 				},
 				{
 					"id": "w002",
@@ -71,6 +72,14 @@
 						"case": "acc",
 						"number": "pl",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "które",
+						"en": "these"
+					},
+					"function": {
+						"pl": "Zaimek względny odsyłający do darów wymienionych w poprzedniej modlitwie.",
+						"en": "A relative pronoun referring to the offerings named in the preceding prayer."
 					}
 				},
 				{
@@ -83,7 +92,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "łaskawym",
+						"en": "gracious"
+					},
+					"function": {
+						"pl": "Wraz z „seréno” (w005) określa „vultu” (w006): obliczem łaskawym i pogodnym.",
+						"en": "Together with “seréno” (w005), it modifies “vultu” (w006): with a gracious and serene countenance."
+					}
 				},
 				{
 					"id": "w004",
@@ -91,6 +108,10 @@
 					"lemma": "ac",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -103,7 +124,15 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "pogodnym",
+						"en": "serene"
+					},
+					"function": {
+						"pl": "Wraz z „propítio” (w003) określa „vultu” (w006).",
+						"en": "Together with “propítio” (w003), it modifies “vultu” (w006)."
+					}
 				},
 				{
 					"id": "w006",
@@ -115,6 +144,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 4
+					},
+					"gloss": {
+						"pl": "obliczem",
+						"en": "countenance"
 					}
 				},
 				{
@@ -127,6 +160,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "wejrzeć",
+						"en": "to look"
 					}
 				},
 				{
@@ -142,6 +179,14 @@
 						"mood": "subj",
 						"voice": "dep",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "racz",
+						"en": "deign"
+					},
+					"function": {
+						"pl": "Rządzi dwoma bezokolicznikami: „respícere” (w007) i „habére” (w011).",
+						"en": "It governs two infinitives: “respícere” (w007) and “habére” (w011)."
 					}
 				},
 				{
@@ -150,6 +195,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -162,7 +211,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "za przyjęte",
+						"en": "as accepted"
+					}
 				},
 				{
 					"id": "w011",
@@ -175,6 +228,14 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "mieć",
+						"en": "to hold"
+					},
+					"function": {
+						"pl": "W zwrocie „accépta habére”: „uznać za przyjęte”.",
+						"en": "In the phrase “accépta habére”: “to regard as accepted”."
 					}
 				},
 				{
@@ -183,6 +244,10 @@
 					"lemma": "sicuti",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "tak jak",
+						"en": "as"
 					}
 				},
 				{
@@ -195,7 +260,11 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"head": "w017"
+					"head": "w017",
+					"gloss": {
+						"pl": "za przyjęte",
+						"en": "as accepted"
+					}
 				},
 				{
 					"id": "w014",
@@ -207,6 +276,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 2
+					},
+					"gloss": {
+						"pl": "mieć",
+						"en": "to hold"
 					}
 				},
 				{
@@ -223,7 +296,15 @@
 						"voice": "dep",
 						"conj": 1
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "raczyłeś",
+						"en": "Thou didst deign"
+					},
+					"function": {
+						"pl": "Imiesłów czasu przeszłego czasownika deponentnego „dignor”. Wraz z „es” (w016) tworzy czas przeszły dokonany.",
+						"en": "The perfect participle of the deponent verb “dignor”. With “es” (w016), it forms the perfect tense."
+					}
 				},
 				{
 					"id": "w016",
@@ -236,6 +317,10 @@
 						"tense": "pres",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "—",
+						"en": "hast"
 					}
 				},
 				{
@@ -248,6 +333,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "dary",
+						"en": "the gifts"
 					}
 				},
 				{
@@ -260,6 +349,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "sługi",
+						"en": "of the servant"
+					},
+					"function": {
+						"pl": "W tym miejscu „puer” znaczy „sługa”.",
+						"en": "Here “puer” means “servant”."
 					}
 				},
 				{
@@ -272,7 +369,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w018"
+					"head": "w018",
+					"gloss": {
+						"pl": "Twego",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w020",
@@ -285,14 +386,13 @@
 						"gender": "m"
 					},
 					"head": "w021",
-					"analysis": {
-						"confidence": "medium",
-						"sources": [
-							"editorial",
-							"whitakers",
-							"collatinus"
-						],
-						"review": "disputed"
+					"gloss": {
+						"pl": "sprawiedliwego",
+						"en": "just"
+					},
+					"note": {
+						"pl": "Przydawka może należeć do púeri — Twojego sprawiedliwego sługi — albo do samego imienia Abel. Oba odczytania są w tradycji przekładów. Ta edycja wiąże ją z imieniem.",
+						"en": "The adjective may belong to púeri, Thy just servant, or to the name Abel itself. Both readings stand in the translation tradition. This edition attaches it to the name."
 					}
 				},
 				{
@@ -306,13 +406,13 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Abla",
+						"en": "Abel"
+					},
+					"function": {
+						"pl": "Imię nieodmienne: dopełniacz widać tylko po „púeri” (w018), z którym stoi w apozycji (dopowiedzeniu).",
+						"en": "An indeclinable name: only “púeri” (w018), which it stands in apposition to, shows the genitive."
 					}
 				},
 				{
@@ -321,6 +421,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -333,6 +437,10 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "ofiarę",
+						"en": "the sacrifice"
 					}
 				},
 				{
@@ -345,6 +453,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "patriarchy",
+						"en": "of the patriarch"
 					}
 				},
 				{
@@ -357,7 +469,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w024"
+					"head": "w024",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w026",
@@ -370,13 +486,13 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Abrahama",
+						"en": "Abraham"
+					},
+					"function": {
+						"pl": "Jedyne z trzech imion, które łacina odmienia: Ábraham, Ábrahæ.",
+						"en": "The one of the three names Latin declines: Ábraham, Ábrahæ."
 					}
 				}
 			]
@@ -386,6 +502,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "oraz tę ofiarę, którą Ci złożył najwyższy Twój kapłan Melchizedek — świętą ofiarę, niepokalaną Hostię.",
+				"en": "and the offering of Your high priest Melchisedech, a holy sacrifice, a spotless victim."
+			},
 			"words": [
 				{
 					"id": "w027",
@@ -393,6 +513,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -404,6 +528,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "n"
+					},
+					"gloss": {
+						"pl": "to, co",
+						"en": "that which"
+					},
+					"function": {
+						"pl": "Zaimek względny bez wyrażonego poprzednika: „to, co ofiarował”. Po nim następują dwa dopowiedzenia.",
+						"en": "A relative pronoun without an expressed antecedent: “that which he offered”. Two appositions follow it."
 					}
 				},
 				{
@@ -414,6 +546,10 @@
 						"pos": "pron",
 						"case": "dat",
 						"number": "sg"
+					},
+					"gloss": {
+						"pl": "Ci",
+						"en": "to Thee"
 					}
 				},
 				{
@@ -427,6 +563,10 @@
 						"tense": "perf",
 						"mood": "ind",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "ofiarował",
+						"en": "offered"
 					}
 				},
 				{
@@ -440,13 +580,27 @@
 						"gender": "m"
 					},
 					"head": "w032",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
+					"gloss": {
+						"pl": "najwyższy",
+						"en": "high"
+					},
+					"function": {
+						"pl": "Określa „sacérdos” (w032). W Rdz 14,18 Melchizedek jest nazwany „sacérdos Dei altíssimi” — „kapłanem Boga Najwyższego”.",
+						"en": "It modifies “sacérdos” (w032). In Genesis 14:18 Melchisedech is called “sacérdos Dei altíssimi” — “priest of God most high”."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Genesis 14:18"
+							}
 						],
-						"review": "accepted"
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Genesis 14:18"
+							}
+						]
 					}
 				},
 				{
@@ -459,6 +613,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "kapłan",
+						"en": "priest"
 					}
 				},
 				{
@@ -471,7 +629,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w032"
+					"head": "w032",
+					"gloss": {
+						"pl": "Twój",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w034",
@@ -484,13 +646,27 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
+					"gloss": {
+						"pl": "Melchizedek",
+						"en": "Melchisedech"
+					},
+					"function": {
+						"pl": "Imię nieodmienne, w mianowniku jako dopowiedzenie do „sacérdos” (w032). Melchizedek jest podmiotem „óbtulit” (w030). Rdz 14, 18 mówi, że wyniósł chleb i wino.",
+						"en": "An indeclinable name, nominative in apposition to “sacérdos” (w032). Melchisedech is the subject of “óbtulit” (w030). Genesis 14:18 says that he brought out bread and wine."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Genesis 14:18"
+							}
 						],
-						"review": "accepted"
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Genesis 14:18"
+							}
+						]
 					}
 				},
 				{
@@ -503,7 +679,11 @@
 						"number": "sg",
 						"gender": "n"
 					},
-					"head": "w036"
+					"head": "w036",
+					"gloss": {
+						"pl": "świętą",
+						"en": "a holy"
+					}
 				},
 				{
 					"id": "w036",
@@ -516,6 +696,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "ofiarę",
+						"en": "sacrifice"
+					},
+					"function": {
+						"pl": "Pierwsze dopowiedzenie do „quod” (w028): „święta ofiara”.",
+						"en": "The first apposition to “quod” (w028): “a holy sacrifice”."
 					}
 				},
 				{
@@ -528,7 +716,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w038"
+					"head": "w038",
+					"gloss": {
+						"pl": "niepokalaną",
+						"en": "an unspotted"
+					}
 				},
 				{
 					"id": "w038",
@@ -541,9 +733,107 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "hostię",
+						"en": "victim"
+					},
+					"function": {
+						"pl": "Drugie dopowiedzenie do „quod” (w028). Żeńskie „hóstiam” i nijakie „quod” łączy przypadek: biernik.",
+						"en": "The second apposition to “quod” (w028). Feminine “hóstiam” and neuter “quod” share the accusative case."
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The prayer that sets this sacrifice beside those of Abel, Abraham and Melchisedech — the only place in the Ordinary of the Mass where the Old Testament sacrifices are named (the Lauda Sion of Corpus Christi names its own three in the propers). SÍCUTI at w012 is accented on the antepenult: sicut plus the enclitic i, whose u is short, so the stress cannot fall on it; witness do accents the penult, adjudicated in the apparatus. ABEL at w021 and MELCHÍSEDECH at w034 are indeclinable and carry no declension; ÁBRAHÆ at w026 has a Latin genitive but a declension the corpus does not label. Whitaker's Words knows none of the three names — nor summus, which it heads only under superus — while Collatinus knows all four, and the provenance of those tokens records it. QUOD at w028 is a relative with no expressed antecedent — that which Melchisedech offered — and its two appositions (sacrifícium, hóstiam) close the sentence.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence. Accidental variants adjudicated in the apparatus.",
+			"witnesses": "witnesses/ordinarium.supra-quae/",
+			"apparatus": "witnesses/ordinarium.supra-quae/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s01": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w020": {
+				"analysis": {
+					"confidence": "medium",
+					"sources": [
+						"editorial",
+						"whitakers",
+						"collatinus"
+					],
+					"review": "disputed"
+				}
+			},
+			"w021": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w026": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w031": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w034": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

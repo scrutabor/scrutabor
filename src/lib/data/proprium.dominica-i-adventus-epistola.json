@@ -9,28 +9,25 @@
 	"ids": {
 		"next": 58
 	},
-	"status": "working-edition",
-	"notes": "Part of the proper for the First Sunday of Advent. The biblical or liturgical citation and the source boundary are recorded in the witness files.",
-	"source": {
-		"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
-		"witnesses": "witnesses/proprium.dominica-i-adventus-epistola/",
-		"apparatus": "witnesses/proprium.dominica-i-adventus-epistola/apparatus.json"
+	"about": {
+		"pl": "Epistoła I Niedzieli Adwentu, Rz 13, 11–14. Św. Paweł mówi Rzymianom, że nadeszła godzina powstania ze snu, że noc się posunęła, a dzień się przybliżył, i że mają przyoblec się w Pana Jezusa Chrystusa. Fratres, Bracia, to własne otwarcie mszału dla czytania z Listu, a nie część wersetu.",
+		"en": "The Epistle of the First Sunday of Advent, Romans 13:11-14. St Paul tells the Romans that the hour has come to rise from sleep, that the night is far spent and the day at hand, and that they are to put on the Lord Jesus Christ. Fratres, Brethren, is the missal's own opening for a lesson from an Epistle and is not part of the verse."
 	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
+	"about_citations": {
+		"pl": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Dominica I Adventus, printed page 2",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
 		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "pending"
+		"en": [
+			{
+				"title": "Missale Romanum (1962)",
+				"locator": "Dominica I Adventus, printed page 2",
+				"url": "https://archive.org/details/missale_romanum-1962"
+			}
+		]
 	},
 	"segments": [
 		{
@@ -38,6 +35,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Bracia, wiedzcie, że już nadeszła dla nas godzina powstania ze snu.",
+				"en": "Brothers, knowing that it is now the hour for us to awake from sleep."
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -50,6 +51,10 @@
 						"gender": "m",
 						"number": "pl",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "bracia",
+						"en": "brothers"
 					}
 				},
 				{
@@ -66,7 +71,15 @@
 						"case": "nom",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wiedząc",
+						"en": "knowing"
+					},
+					"function": {
+						"pl": "Imiesłów w mianowniku liczby mnogiej odnoszący się do adresatów wezwania.",
+						"en": "A nominative plural participle referring to those addressed by the exhortation."
+					}
 				},
 				{
 					"id": "w003",
@@ -74,6 +87,10 @@
 					"lemma": "quia",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "że",
+						"en": "that"
 					}
 				},
 				{
@@ -86,6 +103,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "godzina",
+						"en": "hour"
+					},
+					"function": {
+						"pl": "Jest podmiotem est. Następujący biernik z bezokolicznikiem objaśnia, jaka to godzina: godzina naszego powstania.",
+						"en": "It is the subject of est. The following accusative and infinitive explain what hour it is: the hour for us to rise."
 					}
 				},
 				{
@@ -99,6 +124,10 @@
 						"pos": "verb",
 						"tense": "pres",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
 					}
 				},
 				{
@@ -107,6 +136,10 @@
 					"lemma": "iam",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "już",
+						"en": "now"
 					}
 				},
 				{
@@ -117,6 +150,14 @@
 						"pos": "pron",
 						"case": "acc",
 						"number": "pl"
+					},
+					"gloss": {
+						"pl": "nas",
+						"en": "us"
+					},
+					"function": {
+						"pl": "Biernikowy podmiot bezokolicznika surgere, nie dopełnienie czasownika osobowego.",
+						"en": "Accusative subject of the infinitive surgere, not the object of the finite verb."
 					}
 				},
 				{
@@ -127,7 +168,11 @@
 						"governs": "abl",
 						"pos": "prep"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "ze",
+						"en": "from"
+					}
 				},
 				{
 					"id": "w009",
@@ -139,6 +184,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "snu",
+						"en": "sleep"
 					}
 				},
 				{
@@ -152,6 +201,10 @@
 						"mood": "inf",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "powstać",
+						"en": "to rise"
 					}
 				}
 			]
@@ -161,6 +214,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Teraz bowiem zbawienie jest bliżej nas niż wtedy, gdyśmy uwierzyli.",
+				"en": "For our salvation is nearer now than when we first believed."
+			},
 			"words": [
 				{
 					"id": "w011",
@@ -168,6 +225,10 @@
 					"lemma": "nunc",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "teraz",
+						"en": "now"
 					}
 				},
 				{
@@ -176,6 +237,10 @@
 					"lemma": "enim",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "bowiem",
+						"en": "for"
 					}
 				},
 				{
@@ -190,13 +255,13 @@
 						"degree": "comp"
 					},
 					"head": "w016",
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "bliższe",
+						"en": "nearer"
+					},
+					"function": {
+						"pl": "Stopień wyższy orzeka o zbawieniu i porównuje je z wcześniejszą chwilą wprowadzoną przez quam.",
+						"en": "The comparative predicates salvation and takes the earlier time introduced by quam as its point of comparison."
 					}
 				},
 				{
@@ -210,6 +275,10 @@
 						"pos": "verb",
 						"tense": "pres",
 						"voice": "act"
+					},
+					"gloss": {
+						"pl": "jest",
+						"en": "is"
 					}
 				},
 				{
@@ -222,7 +291,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w016"
+					"head": "w016",
+					"gloss": {
+						"pl": "nasze",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w016",
@@ -235,6 +308,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zbawienie",
+						"en": "salvation"
 					}
 				},
 				{
@@ -243,6 +320,10 @@
 					"lemma": "quam",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "niż",
+						"en": "than"
 					}
 				},
 				{
@@ -251,6 +332,10 @@
 					"lemma": "cum",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "gdy",
+						"en": "when"
 					}
 				},
 				{
@@ -266,6 +351,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "uwierzyliśmy",
+						"en": "we believed"
 					}
 				}
 			]
@@ -275,6 +364,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Noc się posunęła, a przybliżył się dzień.",
+				"en": "The night is advanced. The day is at hand."
+			},
 			"words": [
 				{
 					"id": "w020",
@@ -286,6 +379,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "noc",
+						"en": "night"
 					}
 				},
 				{
@@ -301,6 +398,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "przeminęła",
+						"en": "has passed"
 					}
 				},
 				{
@@ -313,6 +414,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "dzień",
+						"en": "day"
 					}
 				},
 				{
@@ -321,6 +426,10 @@
 					"lemma": "autem",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "zaś",
+						"en": "but"
 					}
 				},
 				{
@@ -336,6 +445,10 @@
 						"mood": "ind",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "przybliżył się",
+						"en": "has drawn near"
 					}
 				}
 			]
@@ -345,6 +458,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Odrzućmy więc uczynki ciemności, a przyobleczmy się w zbroję światła.",
+				"en": "Let us then throw off the works of darkness and put on the armor of light."
+			},
 			"words": [
 				{
 					"id": "w025",
@@ -359,12 +476,13 @@
 						"voice": "act",
 						"conj": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "odrzućmy",
+						"en": "let us cast off"
+					},
+					"function": {
+						"pl": "Coniunctivus zachęty. Rozpoczyna parę wezwań: odrzucić ciemność i przyoblec światło.",
+						"en": "A hortatory subjunctive. It begins the paired appeal to cast off darkness and put on light."
 					}
 				},
 				{
@@ -373,6 +491,10 @@
 					"lemma": "ergo",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "więc",
+						"en": "therefore"
 					}
 				},
 				{
@@ -385,6 +507,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "uczynki",
+						"en": "works"
 					}
 				},
 				{
@@ -398,6 +524,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "ciemności",
+						"en": "of darkness"
 					}
 				},
 				{
@@ -406,6 +536,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -420,6 +554,14 @@
 						"mood": "subj",
 						"voice": "pass",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "przyobleczmy się",
+						"en": "let us put on"
+					},
+					"function": {
+						"pl": "Forma bierna ma sens zwrotny: przyobleczmy samych siebie. Odpowiada poprzedniemu coniunctivowi zachęty.",
+						"en": "The passive form is used reflexively: let us clothe ourselves. It balances the preceding hortatory subjunctive."
 					}
 				},
 				{
@@ -432,6 +574,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "zbroję",
+						"en": "armor"
 					}
 				},
 				{
@@ -445,6 +591,10 @@
 						"gender": "f",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "światła",
+						"en": "of light"
 					}
 				}
 			]
@@ -454,6 +604,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "clara",
+			"translation": {
+				"pl": "Żyjmy przyzwoicie jak w jasny dzień, nie w hulankach i pijatykach, nie w rozpuście i wyuzdaniu, nie w kłótni i zazdrości, ale przyobleczcie się w Pana Jezusa Chrystusa.",
+				"en": "Let us conduct ourselves properly as in the day, not in carousing and drunkenness, not in promiscuity and shameless acts, not in rivalry and jealousy, but put on the Lord Jesus Christ."
+			},
 			"words": [
 				{
 					"id": "w033",
@@ -461,6 +615,10 @@
 					"lemma": "sicut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "jak",
+						"en": "as"
 					}
 				},
 				{
@@ -471,7 +629,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w035"
+					"head": "w035",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w035",
@@ -483,6 +645,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 5
+					},
+					"gloss": {
+						"pl": "dniu",
+						"en": "day"
 					}
 				},
 				{
@@ -491,6 +657,10 @@
 					"lemma": "honeste",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "przyzwoicie",
+						"en": "honorably"
 					}
 				},
 				{
@@ -506,6 +676,10 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 1
+					},
+					"gloss": {
+						"pl": "postępujmy",
+						"en": "let us walk"
 					}
 				},
 				{
@@ -514,6 +688,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -524,7 +702,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w040"
+					"head": "w040",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w040",
@@ -538,13 +720,9 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"whitakers"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "hulankach",
+						"en": "carousing"
 					}
 				},
 				{
@@ -553,6 +731,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -566,6 +748,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "pijatykach",
+						"en": "drunkenness"
 					}
 				},
 				{
@@ -574,6 +760,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -584,7 +774,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w045"
+					"head": "w045",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w045",
@@ -597,6 +791,10 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "łożach",
+						"en": "bedchambers"
 					}
 				},
 				{
@@ -605,6 +803,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -618,6 +820,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "wyuzdaniu",
+						"en": "shameless acts"
 					}
 				},
 				{
@@ -626,6 +832,10 @@
 					"lemma": "non",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "nie",
+						"en": "not"
 					}
 				},
 				{
@@ -636,7 +846,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w050"
+					"head": "w050",
+					"gloss": {
+						"pl": "w",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w050",
@@ -649,6 +863,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "kłótni",
+						"en": "strife"
 					}
 				},
 				{
@@ -657,6 +875,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -670,6 +892,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "zazdrości",
+						"en": "jealousy"
 					}
 				},
 				{
@@ -678,6 +904,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "lecz",
+						"en": "but"
 					}
 				},
 				{
@@ -692,6 +922,14 @@
 						"mood": "imp",
 						"voice": "pass",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "przyobleczcie się",
+						"en": "put on"
+					},
+					"function": {
+						"pl": "Tryb rozkazujący w formie biernej ma sens zwrotny: przyobleczcie samych siebie w Pana Jezusa Chrystusa.",
+						"en": "A passive-form imperative used reflexively: clothe yourselves in the Lord Jesus Christ."
 					}
 				},
 				{
@@ -704,6 +942,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "the Lord"
 					}
 				},
 				{
@@ -715,6 +957,10 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -728,9 +974,69 @@
 						"gender": "m",
 						"number": "sg",
 						"pos": "noun"
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "Part of the proper for the First Sunday of Advent. The biblical or liturgical citation and the source boundary are recorded in the witness files.",
+		"source": {
+			"method": "Verified by collation against the 1962 typical edition and Divinum Officium. Every divergence is declared in the apparatus.",
+			"witnesses": "witnesses/proprium.dominica-i-adventus-epistola/",
+			"apparatus": "witnesses/proprium.dominica-i-adventus-epistola/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "pending"
+		},
+		"words": {
+			"w013": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w025": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "accepted"
+				}
+			},
+			"w040": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"whitakers"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }

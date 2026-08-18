@@ -9,28 +9,9 @@
 	"ids": {
 		"next": 80
 	},
-	"status": "working-edition",
-	"notes": "The prayer that joins the offering to the saints — Our Lady, Ioseph, the twelve, and twelve martyrs of the Roman church: the popes Linus, Cletus, Clement, Sixtus and Cornelius, the bishop of Carthage Cyprian, the deacon Lawrence, Chrysogonus, John and Paul, Cosmas and Damian. The list is a single chain of genitives depending on memóriam venerántes, and every name in it is tagged genitive on that syntax, since several of the forms could as well be nominative plural. COMMUNICÁNTES at w001 and VENERÁNTES at w004 are nominative plural masculine, agreeing with a subject the sentence never states: the priest and those with him. IOSEPH at w021 is indeclinable and carries no declension; its case is the one beáti agrees with. GENETRÍCIS at w011 is the reading of the typical edition and of witness do; witness handmissal-eo prints Genitrícis, and both are real spellings of the word, so the difference is ruled in the apparatus rather than passed over. ÓMNIBUS at w069 is neuter — in all things, not among all men. CLETI at w046, COSMÆ at w056 and DAMIÁNI at w058 are unknown to both analyzers; their parses rest on the edition alone and say so in their provenance. MÁRTYRUM at w029, LINI at w045 and CLEMÉNTIS at w047 rest on Collatinus alone, because Whitaker's fails at each in a way his own dictionary explains: a genitive singular for mártyrum, which that form cannot carry (the singular is mártyris) — a porting artefact; flax, linum, in place of the pope Linus; and only the adjective clemens where the pope's name stands. None of the three is a question about the Latin, and the overrulings are recorded in the pipeline's rulings.",
-	"source": {
-		"method": "Verified by collation against the independent witnesses below: zero substantive divergence; the one genuine spelling variant (Genetrícis/Genitrícis) and the accidental variants are adjudicated in the apparatus. The typical edition itself (witness mr) agrees with this text at every token, punctuation included.",
-		"witnesses": "witnesses/ordinarium.communicantes/",
-		"apparatus": "witnesses/ordinarium.communicantes/apparatus.json"
-	},
-	"analysis_defaults": {
-		"confidence": "high",
-		"sources": [
-			"editorial"
-		],
-		"review": "pending"
-	},
-	"analysis_defaults_words": {
-		"confidence": "high",
-		"sources": [
-			"editorial",
-			"whitakers",
-			"collatinus"
-		],
-		"review": "accepted"
+	"about": {
+		"pl": "Modlitwa wspomina w jedności z całym Kościołem Najświętszą Maryję Pannę, św. Józefa, Apostołów i męczenników. Po wymienieniu świętych prosi Boga, aby przez ich zasługi i modlitwy otaczał wiernych swoją opieką.",
+		"en": "In communion with the whole Church, the prayer honors the memory of the Blessed Virgin Mary, Saint Joseph, the Apostles, and the martyrs. After naming the saints, it asks God to surround the faithful with His protection through their merits and prayers."
 	},
 	"segments": [
 		{
@@ -38,6 +19,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Zjednoczeni z całym Kościołem, ze czcią wspominamy najpierw pełną chwały Maryję, zawsze Dziewicę, Matkę Boga i naszego Pana Jezusa Chrystusa:",
+				"en": "In communion with those whose memory we venerate, especially the glorious ever-Virgin Mary, Mother of our God and Lord, Jesus Christ:"
+			},
 			"words": [
 				{
 					"id": "w001",
@@ -54,7 +39,15 @@
 						"voice": "act",
 						"conj": 1
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "zjednoczeni",
+						"en": "in communion with"
+					},
+					"function": {
+						"pl": "Imiesłów w mianowniku liczby mnogiej. Podmiot pozostaje niewyrażony.",
+						"en": "A nominative plural participle. Its subject is left unexpressed."
+					}
 				},
 				{
 					"id": "w002",
@@ -62,6 +55,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -74,6 +71,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "pamięć",
+						"en": "the memory"
 					}
 				},
 				{
@@ -91,7 +92,15 @@
 						"voice": "dep",
 						"conj": 1
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "czcząc",
+						"en": "venerating"
+					},
+					"function": {
+						"pl": "Imiesłów deponentny, od którego zależy następujący dalej łańcuch dopełniaczy.",
+						"en": "Deponent participle governing the chain of genitives that follows."
+					}
 				},
 				{
 					"id": "w005",
@@ -101,7 +110,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w006"
+					"head": "w006",
+					"gloss": {
+						"pl": "przede",
+						"en": "first"
+					}
 				},
 				{
 					"id": "w006",
@@ -112,7 +125,11 @@
 						"case": "abl",
 						"number": "pl"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wszystkim",
+						"en": "of all"
+					}
 				},
 				{
 					"id": "w007",
@@ -124,7 +141,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w009"
+					"head": "w009",
+					"gloss": {
+						"pl": "chwalebnej",
+						"en": "glorious"
+					}
 				},
 				{
 					"id": "w008",
@@ -132,6 +153,10 @@
 					"lemma": "semper",
 					"morph": {
 						"pos": "adv"
+					},
+					"gloss": {
+						"pl": "zawsze",
+						"en": "ever"
 					}
 				},
 				{
@@ -144,6 +169,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Dziewicy",
+						"en": "Virgin"
+					},
+					"function": {
+						"pl": "Razem z „semper” (w008) słowo Vírginis tworzy tytuł zawsze Dziewicy.",
+						"en": "Together with “semper” (w008), Vírginis forms the title ever-Virgin."
 					}
 				},
 				{
@@ -157,6 +190,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Maryi",
+						"en": "Mary"
 					}
 				},
 				{
@@ -169,6 +206,14 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Rodzicielki",
+						"en": "Mother"
+					},
+					"function": {
+						"pl": "„Genetríx” znaczy „Rodzicielka”. Dopełniacz „Dei” określa, czyją jest Rodzicielką: „Boża Rodzicielka”.",
+						"en": "“Genetríx” means “Mother”. With the genitive “Dei”, the title means “Mother of God”."
 					}
 				},
 				{
@@ -181,6 +226,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Boga",
+						"en": "of God"
 					}
 				},
 				{
@@ -189,6 +238,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -201,6 +254,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -213,7 +270,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w014"
+					"head": "w014",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w016",
@@ -224,6 +285,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "Jezusa",
+						"en": "Jesus"
 					}
 				},
 				{
@@ -237,6 +302,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				}
 			]
@@ -246,6 +315,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "a także świętego Józefa, Oblubieńca tejże Dziewicy,",
+				"en": "and blessed Joseph, Spouse of the same Virgin,"
+			},
 			"words": [
 				{
 					"id": "w018",
@@ -253,6 +326,10 @@
 					"lemma": "sed",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "a",
+						"en": "and"
 					}
 				},
 				{
@@ -261,6 +338,14 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "także",
+						"en": "also"
+					},
+					"function": {
+						"pl": "Razem z „sed” (w018) słowo et dołącza Józefa do wyliczenia: a także.",
+						"en": "Together with “sed” (w018), et adds Joseph to the list: but also."
 					}
 				},
 				{
@@ -273,7 +358,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w021"
+					"head": "w021",
+					"gloss": {
+						"pl": "błogosławionego",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w021",
@@ -286,13 +375,13 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Józefa",
+						"en": "Joseph"
+					},
+					"function": {
+						"pl": "Imię nieodmienne: przypadek widać tylko po „beáti” (w020), które się z nim zgadza.",
+						"en": "An indeclinable name: only “beáti” (w020), which agrees with it, shows the case."
 					}
 				},
 				{
@@ -304,6 +393,10 @@
 						"case": "gen",
 						"number": "sg",
 						"gender": "f"
+					},
+					"gloss": {
+						"pl": "tejże",
+						"en": "the same"
 					}
 				},
 				{
@@ -316,6 +409,10 @@
 						"number": "sg",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Dziewicy",
+						"en": "Virgin"
 					}
 				},
 				{
@@ -329,6 +426,14 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Oblubieńca",
+						"en": "Spouse"
+					},
+					"function": {
+						"pl": "Dopełniacz w dopowiedzeniu do „Ioseph” (w021): przy nieodmiennym imieniu przypadek widać w beáti i w Sponsi.",
+						"en": "A genitive in apposition to “Ioseph” (w021): with the name indeclinable, the case shows in beáti and in Sponsi."
 					}
 				}
 			]
@@ -338,6 +443,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "oraz Twoich świętych Apostołów i Męczenników: Piotra i Pawła, Andrzeja, Jakuba, Jana, Tomasza, Jakuba, Filipa, Bartłomieja, Mateusza, Szymona i Tadeusza:",
+				"en": "Your blessed Apostles and Martyrs, Peter and Paul, Andrew, James, John, Thomas, James, Philip, Bartholomew, Matthew, Simon and Jude (Thaddeus):"
+			},
 			"words": [
 				{
 					"id": "w025",
@@ -345,6 +454,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -357,7 +470,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w027"
+					"head": "w027",
+					"gloss": {
+						"pl": "błogosławionych",
+						"en": "blessed"
+					}
 				},
 				{
 					"id": "w027",
@@ -369,6 +486,10 @@
 						"number": "pl",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "apostołów",
+						"en": "apostles"
 					}
 				},
 				{
@@ -377,6 +498,10 @@
 					"lemma": "ac",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -390,13 +515,13 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "męczenników",
+						"en": "martyrs"
+					},
+					"function": {
+						"pl": "Dopełniacz liczby mnogiej zależny od „memóriam” (w003).",
+						"en": "Genitive plural dependent on “memóriam” (w003)."
 					}
 				},
 				{
@@ -410,7 +535,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w029"
+					"head": "w029",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w031",
@@ -422,6 +551,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Piotra",
+						"en": "Peter"
 					}
 				},
 				{
@@ -430,6 +563,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -443,6 +580,38 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pawła",
+						"en": "Paul"
+					},
+					"function": {
+						"pl": "Wyliczenie obejmuje dwunastu Apostołów, w tym Pawła zamiast Macieja.",
+						"en": "The list names twelve Apostles, including Paul rather than Matthias."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Missale Romanum (1962)",
+								"locator": "Canon Missae, Communicantes",
+								"url": "https://archive.org/details/missale_romanum-1962"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Acts 1:26"
+							}
+						],
+						"en": [
+							{
+								"title": "Missale Romanum (1962)",
+								"locator": "Canon Missae, Communicantes",
+								"url": "https://archive.org/details/missale_romanum-1962"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Acts 1:26"
+							}
+						]
 					}
 				},
 				{
@@ -456,6 +625,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 1
+					},
+					"gloss": {
+						"pl": "Andrzeja",
+						"en": "Andrew"
 					}
 				},
 				{
@@ -470,13 +643,35 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
+					"gloss": {
+						"pl": "Jakuba",
+						"en": "James"
+					},
+					"function": {
+						"pl": "Pierwszy z dwóch Jakubów — brat Jana, syn Zebedeusza.",
+						"en": "The first of the two Jameses — the brother of John, son of Zebedee."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Matthew 4:21"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Mark 1:19"
+							}
 						],
-						"review": "accepted"
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Matthew 4:21"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Mark 1:19"
+							}
+						]
 					}
 				},
 				{
@@ -490,6 +685,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Jana",
+						"en": "John"
 					}
 				},
 				{
@@ -504,13 +703,9 @@
 						"gender": "m",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Tomasza",
+						"en": "Thomas"
 					}
 				},
 				{
@@ -525,13 +720,35 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
+					"gloss": {
+						"pl": "Jakuba",
+						"en": "James"
+					},
+					"function": {
+						"pl": "Drugi Jakub jest synem Alfeusza. Miejsce w wyliczeniu odróżnia go od „Iacóbi” (w035).",
+						"en": "The second James is the son of Alphaeus. His place in the list distinguishes him from “Iacóbi” (w035)."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Matthew 10:3"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Mark 3:18"
+							}
 						],
-						"review": "accepted"
+						"en": [
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Matthew 10:3"
+							},
+							{
+								"title": "Biblia Sacra Vulgata",
+								"locator": "Mark 3:18"
+							}
+						]
 					}
 				},
 				{
@@ -545,6 +762,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Filipa",
+						"en": "Philip"
 					}
 				},
 				{
@@ -559,13 +780,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Bartłomieja",
+						"en": "Bartholomew"
 					}
 				},
 				{
@@ -580,13 +797,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Mateusza",
+						"en": "Matthew"
 					}
 				},
 				{
@@ -600,13 +813,9 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Szymona",
+						"en": "Simon"
 					}
 				},
 				{
@@ -615,6 +824,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -629,13 +842,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Tadeusza",
+						"en": "Thaddeus"
 					}
 				}
 			]
@@ -645,6 +854,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "Linusa, Kleta, Klemensa, Sykstusa, Korneliusza, Cypriana, Wawrzyńca, Chryzogona, Jana i Pawła, Kosmy i Damiana:",
+				"en": "Linus, Cletus, Clement, Sixtus, Cornelius, Cyprian, Lawrence, Chrysogonus, John and Paul, Cosmas and Damian:"
+			},
 			"words": [
 				{
 					"id": "w045",
@@ -658,13 +871,13 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Linusa",
+						"en": "Linus"
+					},
+					"function": {
+						"pl": "Od Linusa rozpoczyna się druga grupa dwunastu imion w tej modlitwie.",
+						"en": "Linus begins the second group of twelve names in this prayer."
 					}
 				},
 				{
@@ -679,12 +892,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "pending"
+					"gloss": {
+						"pl": "Kleta",
+						"en": "Cletus"
 					}
 				},
 				{
@@ -699,13 +909,9 @@
 						"gender": "m",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Klemensa",
+						"en": "Clement"
 					}
 				},
 				{
@@ -719,6 +925,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Sykstusa",
+						"en": "Sixtus"
 					}
 				},
 				{
@@ -733,13 +943,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Korneliusza",
+						"en": "Cornelius"
 					}
 				},
 				{
@@ -754,13 +960,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Cypriana",
+						"en": "Cyprian"
 					}
 				},
 				{
@@ -775,13 +977,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Wawrzyńca",
+						"en": "Lawrence"
 					}
 				},
 				{
@@ -796,13 +994,9 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "Chryzogona",
+						"en": "Chrysogonus"
 					}
 				},
 				{
@@ -815,6 +1009,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "Jana",
+						"en": "John"
 					}
 				},
 				{
@@ -823,6 +1021,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -836,6 +1038,38 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pawła",
+						"en": "Paul"
+					},
+					"function": {
+						"pl": "Święci Jan i Paweł to wspominani razem męczennicy rzymscy, nie Apostołowie wymienieni wyżej.",
+						"en": "Saints John and Paul are Roman martyrs commemorated together, not the Apostles named above."
+					},
+					"function_citations": {
+						"pl": [
+							{
+								"title": "Martyrologium Romanum (1960)",
+								"locator": "26 June"
+							},
+							{
+								"title": "Missale Romanum (1962)",
+								"locator": "Canon Missae, Communicantes",
+								"url": "https://archive.org/details/missale_romanum-1962"
+							}
+						],
+						"en": [
+							{
+								"title": "Martyrologium Romanum (1960)",
+								"locator": "26 June"
+							},
+							{
+								"title": "Missale Romanum (1962)",
+								"locator": "Canon Missae, Communicantes",
+								"url": "https://archive.org/details/missale_romanum-1962"
+							}
+						]
 					}
 				},
 				{
@@ -849,12 +1083,9 @@
 						"gender": "m",
 						"decl": 1
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "pending"
+					"gloss": {
+						"pl": "Kosmy",
+						"en": "Cosmas"
 					}
 				},
 				{
@@ -863,6 +1094,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -877,12 +1112,13 @@
 						"gender": "m",
 						"decl": 2
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial"
-						],
-						"review": "pending"
+					"gloss": {
+						"pl": "Damiana",
+						"en": "Damian"
+					},
+					"function": {
+						"pl": "Cosmæ i Damiáni są dopełniaczami w szeregu imion zależnym od „memóriam” (w003).",
+						"en": "Cosmæ and Damiáni are genitives in the list of names dependent on “memóriam” (w003)."
 					}
 				}
 			]
@@ -892,6 +1128,10 @@
 			"type": "verse",
 			"speaker": "sacerdos",
 			"voice": "secreto",
+			"translation": {
+				"pl": "i wszystkich Twoich Świętych. Przez ich zasługi i modlitwy otaczaj nas we wszystkim swoją przemożną opieką.",
+				"en": "and all Your Saints; we ask that through their merits and prayers, in all things we may be defended by Your protecting help."
+			},
 			"words": [
 				{
 					"id": "w059",
@@ -899,6 +1139,10 @@
 					"lemma": "et",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "i",
+						"en": "and"
 					}
 				},
 				{
@@ -911,7 +1155,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w061"
+					"head": "w061",
+					"gloss": {
+						"pl": "wszystkich",
+						"en": "all"
+					}
 				},
 				{
 					"id": "w061",
@@ -923,7 +1171,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "Świętych",
+						"en": "Saints"
+					}
 				},
 				{
 					"id": "w062",
@@ -936,7 +1188,11 @@
 						"number": "pl",
 						"gender": "m"
 					},
-					"head": "w061"
+					"head": "w061",
+					"gloss": {
+						"pl": "Twoich",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w063",
@@ -947,6 +1203,10 @@
 						"case": "gen",
 						"number": "pl",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "których",
+						"en": "whose"
 					}
 				},
 				{
@@ -959,6 +1219,14 @@
 						"number": "pl",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "zasługami",
+						"en": "merits"
+					},
+					"function": {
+						"pl": "Ablativus liczby mnogiej, który może wyrażać przyczynę albo narzędzie.",
+						"en": "Ablative plural, which may express cause or means."
 					}
 				},
 				{
@@ -971,6 +1239,10 @@
 						"number": "pl",
 						"gender": "f",
 						"decl": 3
+					},
+					"gloss": {
+						"pl": "i modlitwami",
+						"en": "and prayers"
 					}
 				},
 				{
@@ -986,6 +1258,14 @@
 						"mood": "subj",
 						"voice": "act",
 						"conj": 3
+					},
+					"gloss": {
+						"pl": "racz sprawić",
+						"en": "grant"
+					},
+					"function": {
+						"pl": "Tryb łączący użyty jako prośba.",
+						"en": "Subjunctive used as a petition."
 					}
 				},
 				{
@@ -994,6 +1274,10 @@
 					"lemma": "ut",
 					"morph": {
 						"pos": "conj"
+					},
+					"gloss": {
+						"pl": "abyśmy",
+						"en": "that"
 					}
 				},
 				{
@@ -1004,7 +1288,11 @@
 						"pos": "prep",
 						"governs": "abl"
 					},
-					"head": "w069"
+					"head": "w069",
+					"gloss": {
+						"pl": "we",
+						"en": "in"
+					}
 				},
 				{
 					"id": "w069",
@@ -1016,7 +1304,15 @@
 						"number": "pl",
 						"gender": "n"
 					},
-					"substantive": true
+					"substantive": true,
+					"gloss": {
+						"pl": "wszystkim",
+						"en": "all things"
+					},
+					"function": {
+						"pl": "Rodzaj nijaki: „we wszystkich rzeczach”, nie „wśród wszystkich ludzi”.",
+						"en": "Neuter: in all things, not among all men."
+					}
 				},
 				{
 					"id": "w070",
@@ -1029,13 +1325,9 @@
 						"gender": "f",
 						"decl": 3
 					},
-					"analysis": {
-						"confidence": "high",
-						"sources": [
-							"editorial",
-							"collatinus"
-						],
-						"review": "accepted"
+					"gloss": {
+						"pl": "opieki",
+						"en": "of protection"
 					}
 				},
 				{
@@ -1048,7 +1340,11 @@
 						"number": "sg",
 						"gender": "f"
 					},
-					"head": "w070"
+					"head": "w070",
+					"gloss": {
+						"pl": "Twojej",
+						"en": "Thy"
+					}
 				},
 				{
 					"id": "w072",
@@ -1062,6 +1358,10 @@
 						"mood": "subj",
 						"voice": "pass",
 						"conj": 4
+					},
+					"gloss": {
+						"pl": "byli obwarowani",
+						"en": "we may be defended"
 					}
 				},
 				{
@@ -1075,6 +1375,14 @@
 						"number": "sg",
 						"gender": "n",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "pomocą",
+						"en": "by the help"
+					},
+					"function": {
+						"pl": "Ablativus narzędzia zależny od „muniámur” (w072).",
+						"en": "Ablative of means dependent on “muniámur” (w072)."
 					}
 				}
 			]
@@ -1083,14 +1391,25 @@
 			"id": "s06",
 			"type": "rubric",
 			"text": "Iungit manus.",
-			"analysis": {
-				"confidence": "high",
-				"sources": [
-					"editorial",
-					"do",
-					"mr"
+			"narrative": {
+				"pl": "Kapłan składa ręce.",
+				"en": "The priest joins his hands."
+			},
+			"narrative_citations": {
+				"pl": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Canon Missae, rubric at Per eundem Christum",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
 				],
-				"review": "pending"
+				"en": [
+					{
+						"title": "Missale Romanum (1962)",
+						"locator": "Canon Missae, rubric at Per eundem Christum",
+						"url": "https://archive.org/details/missale_romanum-1962"
+					}
+				]
 			}
 		},
 		{
@@ -1098,6 +1417,10 @@
 			"type": "verse",
 			"voice": "secreto",
 			"speaker": "sacerdos",
+			"translation": {
+				"pl": "Przez tegoż Chrystusa Pana naszego. Amen.",
+				"en": "Through the same Christ our Lord. Amen."
+			},
 			"words": [
 				{
 					"id": "w074",
@@ -1107,7 +1430,11 @@
 						"pos": "prep",
 						"governs": "acc"
 					},
-					"head": "w075"
+					"head": "w075",
+					"gloss": {
+						"pl": "przez",
+						"en": "through"
+					}
 				},
 				{
 					"id": "w075",
@@ -1118,6 +1445,14 @@
 						"case": "acc",
 						"number": "sg",
 						"gender": "m"
+					},
+					"gloss": {
+						"pl": "tegoż",
+						"en": "the same"
+					},
+					"function": {
+						"pl": "Zaimek wskazujący odnoszący się do „Christi” (w017).",
+						"en": "Demonstrative referring back to “Christi” (w017)."
 					}
 				},
 				{
@@ -1130,6 +1465,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Chrystusa",
+						"en": "Christ"
 					}
 				},
 				{
@@ -1142,6 +1481,10 @@
 						"number": "sg",
 						"gender": "m",
 						"decl": 2
+					},
+					"gloss": {
+						"pl": "Pana",
+						"en": "Lord"
 					}
 				},
 				{
@@ -1155,7 +1498,11 @@
 						"number": "sg",
 						"gender": "m"
 					},
-					"head": "w077"
+					"head": "w077",
+					"gloss": {
+						"pl": "naszego",
+						"en": "our"
+					}
 				},
 				{
 					"id": "w079",
@@ -1164,9 +1511,240 @@
 					"lemma": "amen",
 					"morph": {
 						"pos": "intj"
+					},
+					"gloss": {
+						"pl": "amen",
+						"en": "amen"
 					}
 				}
 			]
 		}
-	]
+	],
+	"editorial": {
+		"status": "working-edition",
+		"notes": "The prayer that joins the offering to the saints — Our Lady, Ioseph, the twelve, and twelve martyrs of the Roman church: the popes Linus, Cletus, Clement, Sixtus and Cornelius, the bishop of Carthage Cyprian, the deacon Lawrence, Chrysogonus, John and Paul, Cosmas and Damian. The list is a single chain of genitives depending on memóriam venerántes, and every name in it is tagged genitive on that syntax, since several of the forms could as well be nominative plural. COMMUNICÁNTES at w001 and VENERÁNTES at w004 are nominative plural masculine, agreeing with a subject the sentence never states: the priest and those with him. IOSEPH at w021 is indeclinable and carries no declension; its case is the one beáti agrees with. GENETRÍCIS at w011 is the reading of the typical edition and of witness do; witness handmissal-eo prints Genitrícis, and both are real spellings of the word, so the difference is ruled in the apparatus rather than passed over. ÓMNIBUS at w069 is neuter — in all things, not among all men. CLETI at w046, COSMÆ at w056 and DAMIÁNI at w058 are unknown to both analyzers; their parses rest on the edition alone and say so in their provenance. MÁRTYRUM at w029, LINI at w045 and CLEMÉNTIS at w047 rest on Collatinus alone, because Whitaker's fails at each in a way his own dictionary explains: a genitive singular for mártyrum, which that form cannot carry (the singular is mártyris) — a porting artefact; flax, linum, in place of the pope Linus; and only the adjective clemens where the pope's name stands. None of the three is a question about the Latin, and the overrulings are recorded in the pipeline's rulings.",
+		"source": {
+			"method": "Verified by collation against the independent witnesses below: zero substantive divergence; the one genuine spelling variant (Genetrícis/Genitrícis) and the accidental variants are adjudicated in the apparatus. The typical edition itself (witness mr) agrees with this text at every token, punctuation included.",
+			"witnesses": "witnesses/ordinarium.communicantes/",
+			"apparatus": "witnesses/ordinarium.communicantes/apparatus.json"
+		},
+		"analysis_defaults": {
+			"confidence": "high",
+			"sources": [
+				"editorial"
+			],
+			"review": "pending"
+		},
+		"analysis_defaults_words": {
+			"confidence": "high",
+			"sources": [
+				"editorial",
+				"whitakers",
+				"collatinus"
+			],
+			"review": "accepted"
+		},
+		"segments": {
+			"s06": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"do",
+						"mr"
+					],
+					"review": "pending"
+				}
+			}
+		},
+		"words": {
+			"w021": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w029": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w035": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w037": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w038": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w040": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w041": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w042": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w044": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w045": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w046": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "pending"
+				}
+			},
+			"w047": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w049": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w050": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w051": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w052": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			},
+			"w056": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "pending"
+				}
+			},
+			"w058": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial"
+					],
+					"review": "pending"
+				}
+			},
+			"w070": {
+				"analysis": {
+					"confidence": "high",
+					"sources": [
+						"editorial",
+						"collatinus"
+					],
+					"review": "accepted"
+				}
+			}
+		}
+	}
 }
