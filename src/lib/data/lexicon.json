@@ -4900,6 +4900,258 @@
 			"pos": "noun",
 			"gender": "n",
 			"decl": 2
+		},
+		"Iacob": {
+			"head": "Iacob",
+			"pos": "noun",
+			"gender": "m"
+		},
+		"cherubim": {
+			"head": "chérubim",
+			"pos": "noun",
+			"gender": "m"
+		},
+		"captivitas": {
+			"head": "captívitas, captivitátis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
+		"remitto": {
+			"head": "remítto, remíttere, remísi, remíssum",
+			"pos": "verb",
+			"conj": 3
+		},
+		"pusillanimis": {
+			"head": "pusillánimis, pusillánime",
+			"pos": "adj"
+		},
+		"conforto": {
+			"head": "confórto, confortáre, confortávi, confortátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"nolo": {
+			"head": "nolo, nolle, nólui",
+			"pos": "verb"
+		},
+		"timeo": {
+			"head": "tímeo, timére, tímui",
+			"pos": "verb",
+			"conj": 2
+		},
+		"accommodo": {
+			"head": "accómmodo, accommodáre, accommodávi, accommodátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"expio": {
+			"head": "éxpio, expiáre, expiávi, expiátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"festum": {
+			"head": "festum, festi",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
+		"illustro": {
+			"head": "illústro, illustráre, illustrávi, illustrátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"immolo": {
+			"head": "ímmolo, immoláre, immolávi, immolátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"imploro": {
+			"head": "ímploro, imploráre, implorávi, implorátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"institutum": {
+			"head": "institútum, institúti",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
+		"iugiter": {
+			"head": "iúgiter",
+			"pos": "adv"
+		},
+		"operor": {
+			"head": "óperor, operári, operátus sum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"perago": {
+			"head": "pérago, perágere, perégi, peráctum",
+			"pos": "verb",
+			"conj": 3
+		},
+		"subsidium": {
+			"head": "subsídium, subsídii",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
+		"visitatio": {
+			"head": "visitátio, visitatiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
+		"vitium": {
+			"head": "vítium, vítii",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
+		"modestia": {
+			"head": "modéstia, modéstiæ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
+		},
+		"sollicitus": {
+			"head": "sollícitus, sollícita, sollícitum",
+			"pos": "adj"
+		},
+		"obsecratio": {
+			"head": "obsecrátio, obsecratiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
+		"actio": {
+			"head": "áctio, actiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
+		"petitio": {
+			"head": "petítio, petitiónis",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 3
+		},
+		"innotesco": {
+			"head": "innotésco, innotéscere, innótui",
+			"pos": "verb",
+			"conj": 3
+		},
+		"exsupero": {
+			"head": "exsúpero, exsuperáre, exsuperávi, exsuperátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"sensus": {
+			"head": "sensus, sensus",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 4
+		},
+		"intelligentia": {
+			"head": "intelligéntia, intelligéntiæ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
+		},
+		"Bethania": {
+			"head": "Bethánia, -æ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
+		},
+		"Elias": {
+			"head": "Elías, Elíæ",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 1
+		},
+		"Ierosolyma": {
+			"head": "Ierosólyma, -órum",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
+		"Iordanes": {
+			"head": "Iordánes, Iordánis",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 3
+		},
+		"Iudaeus": {
+			"head": "Iudǽus, -i",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 2
+		},
+		"baptizo": {
+			"head": "baptízo, baptizáre, baptizávi, baptizátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"calceamentum": {
+			"head": "calceaméntum, -i",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
+		"corrigia": {
+			"head": "corrígia, -æ",
+			"pos": "noun",
+			"gender": "f",
+			"decl": 1
+		},
+		"dirigo": {
+			"head": "dírigo, dirígere, diréxi, diréctum",
+			"pos": "verb",
+			"conj": 3
+		},
+		"interrogo": {
+			"head": "intérrogo, interrogáre, interrogávi, interrogátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"levita": {
+			"head": "levíta, -æ",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 1
+		},
+		"nego": {
+			"head": "nego, negáre, negávi, negátum",
+			"pos": "verb",
+			"conj": 1
+		},
+		"nescio": {
+			"head": "néscio, nescíre, nescívi, nescítum",
+			"pos": "verb",
+			"conj": 4
+		},
+		"pharisaeus": {
+			"head": "pharisǽus, -i",
+			"pos": "noun",
+			"gender": "m",
+			"decl": 2
+		},
+		"responsum": {
+			"head": "respónsum, -i",
+			"pos": "noun",
+			"gender": "n",
+			"decl": 2
+		},
+		"solvo": {
+			"head": "solvo, sólvere, solvi, solútum",
+			"pos": "verb",
+			"conj": 3
+		},
+		"trans": {
+			"head": "trans",
+			"pos": "prep"
 		}
 	}
 }

@@ -5890,8 +5890,7 @@
 				"pytać"
 			],
 			"derivatives": [
-				"rogacja",
-				"interrogacja"
+				"rogacja"
 			]
 		},
 		"rosa": {
@@ -7588,6 +7587,275 @@
 			"senses": [
 				"więzy",
 				"kajdany"
+			]
+		},
+		"Iacob": {
+			"senses": [
+				"Jakub"
+			]
+		},
+		"cherubim": {
+			"senses": [
+				"cherubiny"
+			]
+		},
+		"captivitas": {
+			"senses": [
+				"niewola"
+			]
+		},
+		"remitto": {
+			"senses": [
+				"odpuszczać",
+				"darować"
+			]
+		},
+		"pusillanimis": {
+			"senses": [
+				"małoduszny"
+			]
+		},
+		"conforto": {
+			"senses": [
+				"umacniać",
+				"krzepić"
+			]
+		},
+		"nolo": {
+			"senses": [
+				"nie chcieć"
+			]
+		},
+		"timeo": {
+			"senses": [
+				"bać się",
+				"lękać się"
+			]
+		},
+		"accommodo": {
+			"senses": [
+				"nakłaniać",
+				"dostosować"
+			]
+		},
+		"expio": {
+			"senses": [
+				"oczyszczać",
+				"zmazywać"
+			]
+		},
+		"festum": {
+			"senses": [
+				"święto"
+			]
+		},
+		"illustro": {
+			"senses": [
+				"oświecać"
+			]
+		},
+		"immolo": {
+			"senses": [
+				"składać w ofierze"
+			]
+		},
+		"imploro": {
+			"senses": [
+				"błagać"
+			]
+		},
+		"institutum": {
+			"senses": [
+				"ustanowienie",
+				"obrzęd"
+			]
+		},
+		"iugiter": {
+			"senses": [
+				"nieustannie"
+			]
+		},
+		"operor": {
+			"senses": [
+				"działać",
+				"sprawiać"
+			]
+		},
+		"perago": {
+			"senses": [
+				"dopełniać",
+				"wykonywać"
+			]
+		},
+		"subsidium": {
+			"senses": [
+				"pomoc",
+				"wsparcie"
+			]
+		},
+		"visitatio": {
+			"senses": [
+				"nawiedzenie"
+			]
+		},
+		"vitium": {
+			"senses": [
+				"wada",
+				"grzech"
+			]
+		},
+		"modestia": {
+			"senses": [
+				"skromność",
+				"umiarkowanie"
+			]
+		},
+		"sollicitus": {
+			"senses": [
+				"zatroskany"
+			]
+		},
+		"obsecratio": {
+			"senses": [
+				"błaganie"
+			]
+		},
+		"actio": {
+			"senses": [
+				"czynienie",
+				"czynność"
+			]
+		},
+		"petitio": {
+			"senses": [
+				"prośba"
+			]
+		},
+		"innotesco": {
+			"senses": [
+				"stawać się znanym"
+			]
+		},
+		"exsupero": {
+			"senses": [
+				"przewyższać"
+			]
+		},
+		"sensus": {
+			"senses": [
+				"zmysł",
+				"rozum"
+			]
+		},
+		"intelligentia": {
+			"senses": [
+				"rozumienie",
+				"myśl"
+			]
+		},
+		"Bethania": {
+			"senses": [
+				"Betania"
+			]
+		},
+		"Elias": {
+			"senses": [
+				"Eliasz"
+			]
+		},
+		"Ierosolyma": {
+			"senses": [
+				"Jerozolima"
+			],
+			"note": "Odmienna nazwa tego samego miasta, rodzaju nijakiego w liczbie mnogiej. Forma nieodmienna stoi pod Ierusalem."
+		},
+		"Iordanes": {
+			"senses": [
+				"Jordan"
+			]
+		},
+		"Iudaeus": {
+			"senses": [
+				"Żyd"
+			]
+		},
+		"baptizo": {
+			"senses": [
+				"chrzcić"
+			]
+		},
+		"calceamentum": {
+			"senses": [
+				"obuwie",
+				"but"
+			]
+		},
+		"corrigia": {
+			"senses": [
+				"rzemyk",
+				"sznurowadło"
+			]
+		},
+		"dirigo": {
+			"senses": [
+				"prostować",
+				"kierować"
+			],
+			"derivatives": [
+				"dyrygować"
+			]
+		},
+		"interrogo": {
+			"senses": [
+				"pytać",
+				"wypytywać"
+			],
+			"derivatives": [
+				"interrogacja"
+			]
+		},
+		"levita": {
+			"senses": [
+				"lewita"
+			]
+		},
+		"nego": {
+			"senses": [
+				"zaprzeczać",
+				"odmawiać"
+			],
+			"derivatives": [
+				"negacja",
+				"negować"
+			]
+		},
+		"nescio": {
+			"senses": [
+				"nie znać",
+				"nie wiedzieć"
+			]
+		},
+		"pharisaeus": {
+			"senses": [
+				"faryzeusz"
+			]
+		},
+		"responsum": {
+			"senses": [
+				"odpowiedź"
+			]
+		},
+		"solvo": {
+			"senses": [
+				"rozwiązywać",
+				"rozluźniać",
+				"spłacać"
+			]
+		},
+		"trans": {
+			"senses": [
+				"za",
+				"poza"
 			]
 		}
 	}

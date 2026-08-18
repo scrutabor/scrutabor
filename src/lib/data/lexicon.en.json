@@ -6324,7 +6324,6 @@
 			],
 			"derivatives": [
 				"rogation",
-				"interrogate",
 				"arrogant"
 			]
 		},
@@ -8155,6 +8154,287 @@
 			"senses": [
 				"chain",
 				"bond"
+			]
+		},
+		"Iacob": {
+			"senses": [
+				"Jacob"
+			]
+		},
+		"cherubim": {
+			"senses": [
+				"cherubim"
+			]
+		},
+		"captivitas": {
+			"senses": [
+				"captivity"
+			]
+		},
+		"remitto": {
+			"senses": [
+				"to forgive",
+				"to remit"
+			]
+		},
+		"pusillanimis": {
+			"senses": [
+				"fainthearted"
+			]
+		},
+		"conforto": {
+			"senses": [
+				"to strengthen",
+				"to comfort"
+			]
+		},
+		"nolo": {
+			"senses": [
+				"to be unwilling"
+			]
+		},
+		"timeo": {
+			"senses": [
+				"to fear"
+			]
+		},
+		"accommodo": {
+			"senses": [
+				"to incline",
+				"to apply"
+			]
+		},
+		"expio": {
+			"senses": [
+				"to cleanse",
+				"to expiate"
+			]
+		},
+		"festum": {
+			"senses": [
+				"feast"
+			]
+		},
+		"illustro": {
+			"senses": [
+				"to enlighten"
+			]
+		},
+		"immolo": {
+			"senses": [
+				"to offer",
+				"to immolate"
+			]
+		},
+		"imploro": {
+			"senses": [
+				"to implore"
+			]
+		},
+		"institutum": {
+			"senses": [
+				"ordinance",
+				"institution"
+			]
+		},
+		"iugiter": {
+			"senses": [
+				"continually"
+			]
+		},
+		"operor": {
+			"senses": [
+				"to work",
+				"to bring about"
+			]
+		},
+		"perago": {
+			"senses": [
+				"to accomplish",
+				"to carry through"
+			]
+		},
+		"subsidium": {
+			"senses": [
+				"help",
+				"support"
+			]
+		},
+		"visitatio": {
+			"senses": [
+				"visitation"
+			]
+		},
+		"vitium": {
+			"senses": [
+				"vice",
+				"fault"
+			]
+		},
+		"modestia": {
+			"senses": [
+				"modesty",
+				"moderation"
+			]
+		},
+		"sollicitus": {
+			"senses": [
+				"anxious",
+				"solicitous"
+			]
+		},
+		"obsecratio": {
+			"senses": [
+				"supplication"
+			]
+		},
+		"actio": {
+			"senses": [
+				"act",
+				"giving"
+			]
+		},
+		"petitio": {
+			"senses": [
+				"petition",
+				"request"
+			]
+		},
+		"innotesco": {
+			"senses": [
+				"to become known"
+			]
+		},
+		"exsupero": {
+			"senses": [
+				"to surpass"
+			]
+		},
+		"sensus": {
+			"senses": [
+				"sense",
+				"understanding"
+			]
+		},
+		"intelligentia": {
+			"senses": [
+				"understanding",
+				"mind"
+			]
+		},
+		"Bethania": {
+			"senses": [
+				"Bethania",
+				"Bethany"
+			]
+		},
+		"Elias": {
+			"senses": [
+				"Elijah"
+			]
+		},
+		"Ierosolyma": {
+			"senses": [
+				"Jerusalem"
+			],
+			"note": "The city's declinable name, neuter plural. The indeclinable form stands at Ierusalem."
+		},
+		"Iordanes": {
+			"senses": [
+				"the Jordan"
+			]
+		},
+		"Iudaeus": {
+			"senses": [
+				"a Jew"
+			]
+		},
+		"baptizo": {
+			"senses": [
+				"to baptize"
+			],
+			"derivatives": [
+				"baptize",
+				"baptism"
+			]
+		},
+		"calceamentum": {
+			"senses": [
+				"a shoe",
+				"footwear"
+			]
+		},
+		"corrigia": {
+			"senses": [
+				"strap",
+				"shoelace"
+			]
+		},
+		"dirigo": {
+			"senses": [
+				"to make straight",
+				"to direct"
+			]
+		},
+		"interrogo": {
+			"senses": [
+				"to question",
+				"to ask"
+			],
+			"derivatives": [
+				"interrogate",
+				"interrogation"
+			]
+		},
+		"levita": {
+			"senses": [
+				"a Levite"
+			]
+		},
+		"nego": {
+			"senses": [
+				"to deny",
+				"to refuse"
+			],
+			"derivatives": [
+				"negate",
+				"negative"
+			]
+		},
+		"nescio": {
+			"senses": [
+				"not to know"
+			]
+		},
+		"pharisaeus": {
+			"senses": [
+				"a Pharisee"
+			],
+			"derivatives": [
+				"pharisaic"
+			]
+		},
+		"responsum": {
+			"senses": [
+				"an answer",
+				"a reply"
+			]
+		},
+		"solvo": {
+			"senses": [
+				"to loosen",
+				"to untie",
+				"to pay"
+			],
+			"derivatives": [
+				"solve",
+				"dissolve"
+			]
+		},
+		"trans": {
+			"senses": [
+				"across",
+				"beyond"
 			]
 		}
 	}

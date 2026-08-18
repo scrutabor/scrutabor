@@ -101,6 +101,15 @@ export const PROPER_DAYS: ProperDay[] = [
 			pl: 'II Niedziela Adwentu',
 			en: 'Second Sunday of Advent'
 		}
+	},
+	{
+		id: 'dominica-iii-adventus',
+		season: 'adventus',
+		title: {
+			la: 'Dominica III Adventus',
+			pl: 'III Niedziela Adwentu',
+			en: 'Third Sunday of Advent'
+		}
 	}
 ];
 
