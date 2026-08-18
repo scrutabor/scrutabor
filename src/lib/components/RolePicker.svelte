@@ -78,19 +78,6 @@
 </div>
 
 <style>
-	.picker {
-		margin: 1.6rem auto 0;
-		max-width: 34rem;
-		text-align: center;
-	}
-
-	.label {
-		display: block;
-		font-size: 0.72rem;
-		letter-spacing: 0.1em;
-		color: var(--ink-soft);
-	}
-
 	.options {
 		display: inline-flex;
 		margin-top: 0.5rem;

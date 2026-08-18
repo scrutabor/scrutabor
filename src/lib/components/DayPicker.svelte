@@ -121,19 +121,6 @@
 	   also keeps the phone's own picker, the keyboard, and the screen reader,
 	   none of which a hand-built listbox would give back for free.
 	   What is styled away is only the browser's idea of a form field. */
-	.picker {
-		margin: 1.6rem auto 0;
-		max-width: 34rem;
-		text-align: center;
-	}
-
-	.label {
-		display: block;
-		font-size: 0.72rem;
-		letter-spacing: 0.1em;
-		color: var(--ink-soft);
-	}
-
 	/* The caret is drawn here rather than left to the browser: the native one
 	   is a different mark on every platform, and this is the only control on
 	   the page. The field is what carries it, because a select cannot hold a

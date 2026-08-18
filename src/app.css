@@ -172,6 +172,27 @@ body {
 	padding: 1.25rem 1.5rem 4rem;
 }
 
+/* THE SETTINGS FRAME. The reader's part, the kind of Mass and the day are
+   three answers to the same sort of question, and they are one visual family:
+   a small-caps caption over a control, centred, with a hint beneath. The two
+   components that draw them (lib/components/RolePicker.svelte and
+   DayPicker.svelte) held identical copies of this block, which the clone check
+   was right to call duplication — a family that is only a coincidence of two
+   stylesheets stops being one the first time somebody edits one of them. The
+   frame lives here and each component styles its own control. */
+.picker {
+	margin: 1.6rem auto 0;
+	max-width: 34rem;
+	text-align: center;
+}
+
+.picker .label {
+	display: block;
+	font-size: 0.72rem;
+	letter-spacing: 0.1em;
+	color: var(--ink-soft);
+}
+
 /* THE MEASURE, which is a different thing and no longer moves with the
    frame. Prose is held to a reading measure and centred, because a short
    column left-hugging a 56rem frame reads as a mistake.
