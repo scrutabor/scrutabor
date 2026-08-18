@@ -18,8 +18,13 @@ test('no Polish surface leaves a one-letter word before a breakable space @onlin
 	page,
 	request
 }) => {
-	test.setTimeout(180_000);
-
+	// A fixed budget for a sweep whose work grows with the corpus is a red
+	// main waiting for a season to be added, and it has now been exactly
+	// that twice. So the budget is derived from the work: measured at ~55 ms
+	// a page on the machine this was written on, and CI's runners are
+	// slower, so the allowance is 400 ms with a floor for the fixed cost of
+	// starting. It is set below, once the sitemap says how many pages there
+	// are — until then the default stands.
 	const sitemap = await (await request.get('/sitemap.xml')).text();
 	// The full pathname after the origin, or the lazy prefix would eat the
 	// /app segment and this sweep would knock on landing doors that are
@@ -32,6 +37,7 @@ test('no Polish surface leaves a one-letter word before a breakable space @onlin
 	// deliberately leaves out
 	paths.push('/pl/404');
 	expect(paths.length).toBeGreaterThan(150);
+	test.setTimeout(40_000 + paths.length * 400);
 
 	const offences: string[] = [];
 	for (const path of paths) {
