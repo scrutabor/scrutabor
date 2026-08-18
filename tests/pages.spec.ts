@@ -503,7 +503,11 @@ test('no title outgrows the narrowest phone, at any print size', async ({ page }
 	await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
 	// the longest title in the book, and the two other surfaces that carry a
 	// heading of a different kind
-	for (const path of ['/app/en/ordo/catechumenorum', '/app/pl/ordo/catechumenorum', '/app/en/ordo']) {
+	for (const path of [
+		'/app/en/ordo/catechumenorum',
+		'/app/pl/ordo/catechumenorum',
+		'/app/en/ordo'
+	]) {
 		await page.goto(path);
 		const measured = await page.evaluate(() => {
 			const de = document.documentElement;
