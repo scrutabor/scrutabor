@@ -16,19 +16,32 @@
 	import { replaceState } from '$app/navigation';
 	import { browser } from '$app/environment';
 	import { M, type Lang } from '$lib/i18n';
-	import { DAY_PARAM, chooseDay, proper } from '$lib/proper.svelte';
-	import { PROPER_DAYS } from '$lib/proprium';
+	import { DAY_PARAM, chooseDay, proper, rememberDay, storedDay } from '$lib/proper.svelte';
+	import { PROPER_DAYS, SEASONS } from '$lib/proprium';
 
 	let { lang }: { lang: Lang } = $props();
 	const msgs = $derived(M[lang]);
 
 	let chosen = $state('');
 
-	// On arrival, and after a history traversal: the URL is the truth.
+	// On arrival, and after a history traversal. The URL wins where it
+	// speaks — a link someone was sent names its day on purpose — and the
+	// remembered choice answers where it does not, which is every step
+	// through the six movement pages.
+	//
+	// It READS here and never writes. `replaceState` needs SvelteKit's router,
+	// and at mount the router does not exist yet: a first draft wrote the
+	// remembered day into the address bar here and threw on every arrival,
+	// leaving the select empty and the slots unfilled. The word panel's `?w=`
+	// has always read on arrival and written only from a tap, and this follows
+	// it. What keeps the address bar truthful instead is that every link out
+	// of a page carries the day with it (`dayHref` in lib/proper.svelte).
 	export function applyFromLocation(): void {
 		if (!browser) return;
-		const day = new URL(location.href).searchParams.get(DAY_PARAM) ?? '';
+		const named = new URL(location.href).searchParams.get(DAY_PARAM);
+		const day = named ?? storedDay();
 		chosen = day;
+		rememberDay(day);
 		void chooseDay(day || null, lang);
 	}
 
@@ -39,6 +52,7 @@
 	function pick(event: Event) {
 		const value = (event.currentTarget as HTMLSelectElement).value;
 		chosen = value;
+		rememberDay(value);
 		const url = new URL(location.href);
 		if (value) url.searchParams.set(DAY_PARAM, value);
 		else url.searchParams.delete(DAY_PARAM);
@@ -54,8 +68,19 @@
 	<span class="smallcaps">{msgs.dayLabel}</span>
 	<select value={chosen} onchange={pick} aria-label={msgs.dayLabel}>
 		<option value="">{msgs.dayNone}</option>
-		{#each PROPER_DAYS as d (d.id)}
-			<option value={d.id}>{d.title[lang]}{d.partial ? ` ${msgs.dayPartial}` : ''}</option>
+		<!-- Grouped by season, which is how a reader holds the year and how
+		     `ProperDay.season` was declared to be used. A flat list is fine
+		     for one season and unreadable for the twelve months this will
+		     become. -->
+		{#each SEASONS as season (season)}
+			{@const days = PROPER_DAYS.filter((d) => d.season === season)}
+			{#if days.length}
+				<optgroup label={msgs.seasons[season]}>
+					{#each days as d (d.id)}
+						<option value={d.id}>{d.title[lang]}{d.partial ? ` ${msgs.dayPartial}` : ''}</option>
+					{/each}
+				</optgroup>
+			{/if}
 		{/each}
 	</select>
 	{#if proper.loading}

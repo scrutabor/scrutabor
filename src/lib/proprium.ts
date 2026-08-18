@@ -64,11 +64,17 @@ export const SLOT_OF: Record<ProperPart, string> = {
 	postcommunio: 'postcommunio'
 };
 
+/** The seasons of the year, in the order the Missal walks them. A picker
+ * groups by these, so the list stays readable as days are added: one season
+ * is a flat list of four, and the year is not. */
+export const SEASONS = ['adventus', 'nativitas', 'quadragesima', 'paschale', 'per-annum'] as const;
+export type Season = (typeof SEASONS)[number];
+
 export interface ProperDay {
 	/** matches the corpus `variant`, and the slug prefix of every part */
 	id: string;
 	/** the season this day belongs to, for grouping a picker */
-	season: 'adventus';
+	season: Season;
 	/** as the Missal names it, and as a reader would */
 	title: Record<'la' | Lang, string>;
 	/** True while the edition carries only some of the day's parts.

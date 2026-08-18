@@ -1,6 +1,8 @@
 <script lang="ts">
 	import PageNav from '$lib/components/PageNav.svelte';
 	import RolePicker from '$lib/components/RolePicker.svelte';
+	import DayPicker from '$lib/components/DayPicker.svelte';
+	import { dayHref } from '$lib/proper.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { ORDO } from '$lib/ordo';
 
@@ -44,10 +46,16 @@
 		     them, which is where it is of any use. -->
 		<RolePicker {lang} />
 		<RolePicker {lang} kind="mass" />
+		<!-- The day belongs beside them: it answers the same sort of question,
+		     it is the setting a reader most wants to make ONCE, and the index
+		     is the page they pass through on the way in. Nothing here shows a
+		     proper, so the picker fills nothing on this page -- it sets the
+		     day the six movements will carry. -->
+		<div class="day-row"><DayPicker {lang} /></div>
 
 		<div class="movements">
 			{#each movements as m (m.id)}
-				<a class="movement" href="/app/{lang}/ordo/{m.id}">
+				<a class="movement" href={dayHref(`/app/${lang}/ordo/${m.id}`)}>
 					<span class="movement-head">
 						<span class="movement-title" lang="la">{m.title}</span>
 						<span class="hung-note">{m.label[lang]}</span>
@@ -67,6 +75,13 @@
 		text-align: center;
 		color: var(--ink-soft);
 		font-size: 0.85rem;
+	}
+
+	/* The role and Mass-kind pickers centre themselves; this one is an
+	   inline-flex label and would sit against the left margin beside them. */
+	.day-row {
+		margin-top: 1.1rem;
+		text-align: center;
 	}
 
 	.movements {

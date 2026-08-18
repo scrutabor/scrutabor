@@ -1,5 +1,7 @@
 // UI strings live here; corpus content lives in the gloss layers.
 import { bindProse } from './polish';
+import type { Season } from './proprium';
+
 export type Lang = 'pl' | 'en';
 
 // English first, everywhere a language list renders (owner rule).
@@ -54,6 +56,8 @@ export interface Messages {
 	dayLoading: string;
 	dayFailed: string;
 	dayPartial: string;
+	/** The seasons of the year, for grouping the day picker. */
+	seasons: Record<Season, string>;
 	ordoPending: string;
 	grammarTitle: string;
 	derivativesLabel: string;
@@ -154,6 +158,13 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayLoading: 'wczytywanie',
 		dayFailed: 'nie udało się wczytać',
 		dayPartial: '(część tekstów)',
+		seasons: {
+			adventus: 'Adwent',
+			nativitas: 'Boże Narodzenie',
+			quadragesima: 'Wielki Post',
+			paschale: 'Okres wielkanocny',
+			'per-annum': 'Okres zwykły'
+		},
 		ordoPending: 'wkrótce w tym wydaniu',
 		grammarTitle: 'gramatyka',
 		derivativesLabel: 'w polszczyźnie',
@@ -265,6 +276,13 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayLoading: 'loading',
 		dayFailed: 'could not be loaded',
 		dayPartial: '(some texts)',
+		seasons: {
+			adventus: 'Advent',
+			nativitas: 'Christmastide',
+			quadragesima: 'Lent',
+			paschale: 'Eastertide',
+			'per-annum': 'Time after Pentecost'
+		},
 		ordoPending: 'not yet in this edition',
 		grammarTitle: 'grammar',
 		derivativesLabel: 'in English',

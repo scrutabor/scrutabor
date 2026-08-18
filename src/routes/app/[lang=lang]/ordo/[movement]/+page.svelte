@@ -17,6 +17,7 @@
 	import { wordPanel } from '$lib/wordpanel.svelte';
 	import { proper } from '$lib/proper.svelte';
 	import DayPicker from '$lib/components/DayPicker.svelte';
+	import { dayHref } from '$lib/proper.svelte';
 
 	// Only this movement's texts, from the server load — never the corpus.
 	let { data } = $props();
@@ -25,6 +26,8 @@
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
 	const movement = $derived(movementById(data.movement));
+	// Whether this movement has a slot the day fills.
+	const hasProper = $derived((movement?.entries ?? []).some((e) => e.kind === 'proper'));
 	const around = $derived(movementNeighbors(data.movement));
 
 	// The flow shares the reading page's help ladder and its stored setting.
@@ -184,7 +187,14 @@
 			<HelpLevels {lang} bind:value={helpLevel} />
 			<RolePicker {lang} compact />
 			<RolePicker {lang} compact kind="mass" />
-			<DayPicker {lang} />
+			<!-- Only where a day has something to fill. Three of the six
+			     movements carry no proper slot at all -- the preparation, the
+			     Canon and the communion are the same at every Mass -- and a
+			     control that changes nothing on the page in front of the
+			     reader is a control that says the page is broken. -->
+			{#if hasProper}
+				<DayPicker {lang} />
+			{/if}
 		</div>
 	</header>
 
@@ -271,11 +281,11 @@
 		<Pager
 			{lang}
 			prev={around.prev && {
-				href: `/app/${lang}/ordo/${around.prev.id}`,
+				href: dayHref(`/app/${lang}/ordo/${around.prev.id}`),
 				title: around.prev.title
 			}}
 			next={around.next && {
-				href: `/app/${lang}/ordo/${around.next.id}`,
+				href: dayHref(`/app/${lang}/ordo/${around.next.id}`),
 				title: around.next.title
 			}}
 		/>

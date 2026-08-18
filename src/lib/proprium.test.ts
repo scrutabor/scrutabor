@@ -3,6 +3,7 @@ import { TEXTS } from './corpus';
 import {
 	PROPER_DAYS,
 	PROPER_PARTS,
+	SEASONS,
 	SLOT_OF,
 	artifactPath,
 	dayById,
@@ -92,5 +93,38 @@ describe('lookups', () => {
 		expect(artifactPath('dominica-i-adventus', 'pl')).toBe(
 			'/artifacts/proprium/pl/dominica-i-adventus.json'
 		);
+	});
+});
+
+describe('a day is offered only where it can act', () => {
+	it('names the season of every day, and only seasons the picker groups by', () => {
+		// The picker groups by season, so a day whose season is not in the
+		// list would be offered under no group at all — present in the data
+		// and absent from the control.
+		for (const day of PROPER_DAYS) {
+			expect(SEASONS, day.id).toContain(day.season);
+		}
+	});
+
+	it('knows which movements carry a proper slot, and which carry none', () => {
+		// The picker is hidden where nothing fills. That is a claim about the
+		// spine, and the spine changes: if a proper slot is ever added to the
+		// Canon this fails and someone decides on purpose.
+		const withProper = ORDO.filter((m) => m.entries.some((e) => e.kind === 'proper')).map(
+			(m) => m.id
+		);
+		expect(withProper).toEqual(['catechumenorum', 'offertorium', 'conclusio']);
+	});
+
+	it('leaves no movement showing a proper slot it cannot fill', () => {
+		// Every slot a movement carries must be one the day artifacts answer,
+		// or the reader picks a day and a labelled slot stays empty with no
+		// account of why.
+		const slots = new Set(Object.values(SLOT_OF));
+		for (const m of ORDO) {
+			for (const e of m.entries.filter((x) => x.kind === 'proper')) {
+				expect(slots, `${m.id}/${e.id}`).toContain(e.id);
+			}
+		}
 	});
 });

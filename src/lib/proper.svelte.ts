@@ -9,6 +9,12 @@
 // The choice lives in the URL, not only in memory. A reader who sends someone
 // the page they are looking at must send the day with it, and a reader who
 // reloads must not lose it.
+//
+// It ALSO lives in localStorage, because the Ordo is six pages and a reader
+// walks them. Picking the day on the Introit and losing it at the Offertory
+// is the same defect as losing the role would be, and the role has been
+// remembered all along. The URL still wins where it speaks: a link someone
+// was sent names a day on purpose, and that day is what they must see.
 
 import { browser } from '$app/environment';
 import { artifactPath, dayById } from '$lib/proprium';
@@ -32,6 +38,46 @@ export interface ProperPayload {
 
 /** The query parameter that carries the choice. */
 export const DAY_PARAM = 'dies';
+
+const KEY = 'scrutabor-day';
+
+/** The day this reader last chose, or '' — never validated here, because the
+ * list of days is the picker's business and a stale id simply fails to
+ * resolve. Prerender has no localStorage, so the served HTML is always the
+ * dayless view and the reader's own choice is applied once the page is
+ * alive, exactly as the role is. */
+export function storedDay(): string {
+	if (!browser) return '';
+	try {
+		return localStorage.getItem(KEY) ?? '';
+	} catch {
+		return '';
+	}
+}
+
+/** A link out of a page, carrying the day the reader is on.
+ *
+ * The address bar has to tell the truth about what is displayed, and the day
+ * cannot be written there on arrival — that needs the router, which does not
+ * exist yet at mount. So the day travels in the links instead: walking the six
+ * movements keeps it, and any of those URLs can be sent to someone else and
+ * opens the same Mass. */
+export function dayHref(href: string): string {
+	if (!day) return href;
+	const join = href.includes('?') ? '&' : '?';
+	return `${href}${join}${DAY_PARAM}=${encodeURIComponent(day)}`;
+}
+
+export function rememberDay(id: string): void {
+	if (!browser) return;
+	try {
+		if (id) localStorage.setItem(KEY, id);
+		else localStorage.removeItem(KEY);
+	} catch {
+		// A reader who has blocked storage still gets the day they picked,
+		// for as long as the page lives. Nothing here is worth an error.
+	}
+}
 
 let day = $state<string | null>(null);
 let payload = $state<ProperPayload | null>(null);
