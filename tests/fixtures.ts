@@ -77,6 +77,49 @@ function guard(page: import('@playwright/test').Page, reachedOut: string[]) {
 	});
 }
 
+/**
+ * A day to run the whole suite as if it were.
+ *
+ * `SCRUTABOR_TODAY=2026-11-29 npm run test:e2e` runs every spec on the First
+ * Sunday of Advent. The book opens on today, so a date the edition CARRIES is
+ * a different product: the picker fills the Ordo's slots, every link grows a
+ * `?dies=`, and the folded control reads "dziś · I Niedziela Adwentu". None of
+ * that is exercised by a suite running in August, and all of it is what a
+ * reader meets in the season the book is most used.
+ *
+ * The clock is OFFSET, not frozen. Freezing it makes every elapsed-time
+ * measurement zero, and the book measures elapsed time: the reading ribbon
+ * expires after twelve hours and its own test plants a stale entry to prove
+ * it. Under a frozen clock that test failed on any date at all — which is a
+ * fault in the instrument, not in the book, and the kind that would have been
+ * filed against the season.
+ *
+ * The wall clock is still the default. This is the second run, not the first.
+ */
+const PINNED = (globalThis as { process?: { env: Record<string, string | undefined> } }).process
+	?.env.SCRUTABOR_TODAY;
+
+async function pinClock(page: import('@playwright/test').Page) {
+	if (!PINNED) return;
+	await page.addInitScript((iso: string) => {
+		const shift = new Date(iso).valueOf() - Date.now();
+		const Real = Date;
+		// eslint-disable-next-line no-global-assign
+		(globalThis as unknown as { Date: unknown }).Date = class extends Real {
+			constructor(...args: ConstructorParameters<typeof Date>) {
+				super(
+					...(args.length
+						? args
+						: ([Real.now() + shift] as unknown as ConstructorParameters<typeof Date>))
+				);
+			}
+			static now() {
+				return Real.now() + shift;
+			}
+		};
+	}, `${PINNED}T10:00:00`);
+}
+
 function translate(
 	page: import('@playwright/test').Page,
 	testInfo: import('@playwright/test').TestInfo
@@ -132,6 +175,7 @@ export const bare = base.extend<object>({
 	page: async ({ page }, use, testInfo) => {
 		const reachedOut: string[] = [];
 		await guard(page, reachedOut);
+		await pinClock(page);
 		translate(page, testInfo);
 		await use(page);
 		expect(reachedOut, 'the page tried to reach the network').toEqual([]);
@@ -149,6 +193,7 @@ export const test = base.extend<object>({
 		// being quietly dropped.
 		const reachedOut: string[] = [];
 		await guard(page, reachedOut);
+		await pinClock(page);
 		translate(page, testInfo);
 
 		const goto = page.goto.bind(page);
@@ -181,7 +226,13 @@ export function atRoute(path: string, query = ''): RegExp {
 	// `.html` for the older folder shape is kept optional rather than removed:
 	// it costs nothing and it is what a route assertion means either way.
 	const route = escape(path.replace(/^\/app(?=\/|$)/, '')).replace(/^/, '(/app)?');
-	return new RegExp(`${route}(\\.html)?${escape(query)}$`);
+	// A caller that names no query is asking WHERE THE READER IS, not what
+	// else the address carries. Since the book opens on today, every link out
+	// of a page carries the day with it — so on a Sunday this edition holds,
+	// an assertion anchored at `$` failed for the one reason the test was not
+	// about. A caller that DOES name a query still gets it matched exactly.
+	const tail = query ? `${escape(query)}$` : '([?#].*)?$';
+	return new RegExp(`${route}(\\.html)?${tail}`);
 }
 
 export { expect };

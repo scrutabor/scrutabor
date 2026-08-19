@@ -8,6 +8,7 @@
 // no content, exactly as the catalog holds none.
 
 import type { Lang } from './i18n';
+import { bindPlFields } from './polish';
 import { dayOf, isoDate, type Kalendar } from './kalendarium';
 
 /** The parts of a Mass proper, in the order the rite says them.
@@ -90,7 +91,7 @@ export interface ProperDay {
 
 // One entry per formulary the corpus carries. A day named here without texts
 // behind it, or texts with no day named here, is a defect the tests catch.
-export const PROPER_DAYS: ProperDay[] = [
+const PROPER_DAYS_SOURCE: ProperDay[] = [
 	{
 		id: 'dominica-i-adventus',
 		season: 'adventus',
@@ -128,6 +129,13 @@ export const PROPER_DAYS: ProperDay[] = [
 		}
 	}
 ];
+
+/** Polish one-letter words bound to what follows (lib/polish), exactly as the
+ * catalogue's own titles are. Without it "I Niedziela Adwentu" can break after
+ * the numeral — in the picker, and in the sentence the hint builds around it —
+ * which is the binding decisions #30 already holds the rest of the book to.
+ * The Latin titles and the English in the same objects are untouched. */
+export const PROPER_DAYS: ProperDay[] = bindPlFields(PROPER_DAYS_SOURCE);
 
 export function dayById(id: string): ProperDay | undefined {
 	return PROPER_DAYS.find((d) => d.id === id);

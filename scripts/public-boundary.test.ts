@@ -6,16 +6,18 @@
 // file here lands nowhere.
 //
 // An external review found sixteen of these across both public repositories on
-// 2026-08-19. They had accumulated one comment at a time, each individually
-// harmless, which is exactly the shape a rule needs a gate for. The fix in
-// every case was to say the thing rather than to cite it.
+// 2026-08-19, and a re-review found three more that the FIRST VERSION OF THIS
+// GATE could not see: it matched `BACKLOG.md` with the extension, and the
+// survivors wrote the bare word. A gate that certifies a boundary it cannot
+// see past is worse than none, so the pattern now takes the word under any
+// casing. The fix in every case was to say the thing rather than to cite it.
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
 /** The private workbench's own documents, by the names they are cited under. */
 const PRIVATE =
-	/reviews\/[A-Z][A-Z0-9-]*\.md|notes\/[a-z-]+\.md|\bBACKLOG\.md|\bPLAYBOOK\b|\bOWNER-QUEUE\b|scrutabor-workbench/;
+	/reviews\/[A-Z][A-Z0-9-]*\.md|notes\/[a-z-]+\.md|\bbacklog\b|\bplaybook\b|\bowner-queue\b|scrutabor-workbench/i;
 
 /** This file names them in order to forbid them. */
 const EXEMPT = new Set(['scripts/public-boundary.test.ts']);
