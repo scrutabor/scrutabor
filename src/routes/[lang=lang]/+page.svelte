@@ -79,10 +79,10 @@
 			stanzaLink: 'Psalm\u00a0118, He — w.\u00a034',
 			privacyLine: 'Bez rejestracji, bez plików cookie, bez reklam.',
 			privacyLink: 'prywatność',
-			supportLink: 'pomoc',
-			editioLink: 'jak powstaje to wydanie',
+			supportLink: 'kontakt',
+			editioLink: 'o wydaniu',
 			bibliographyLink: 'bibliografia',
-			sourcesLink: 'źródła na GitHubie'
+			sourcesLink: 'kod źródłowy na GitHubie'
 		}),
 		en: {
 			title: 'Scrutabor — prayer in Latin, with understanding',
@@ -99,9 +99,9 @@
 			privacyLine: 'No registration, no cookies, no ads.',
 			privacyLink: 'privacy',
 			supportLink: 'support',
-			editioLink: 'how this edition is made',
+			editioLink: 'about this edition',
 			bibliographyLink: 'bibliography',
-			sourcesLink: 'source on GitHub'
+			sourcesLink: 'source code on GitHub'
 		}
 	};
 

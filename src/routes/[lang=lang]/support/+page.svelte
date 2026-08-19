@@ -26,7 +26,7 @@
 
 	const T: Record<Lang, Copy> = {
 		pl: bindProse({
-			title: 'Pomoc',
+			title: 'Kontakt',
 			description: 'Pytania, uwagi i zgłoszenia błędów — GitHub albo e-mail.',
 			lede: 'Pytania, uwagi i zgłoszenia błędów są mile widziane.',
 			appIssues: 'błędy i propozycje dotyczące aplikacji',

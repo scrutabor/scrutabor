@@ -122,17 +122,17 @@ const MESSAGES: Record<Lang, Messages> = {
 		edition: 'wydanie',
 		bookHome: 'strona główna modlitewnika',
 		levels: ['sama łacina', 'słowo po słowie', 'pełny przekład'],
-		levelsAria: 'Poziom pomocy',
+		levelsAria: 'poziom pomocy',
 		themeAria: { toLight: 'przełącz na tryb jasny', toDark: 'przełącz na tryb ciemny' },
 		textSizeAria: 'wielkość pisma',
 		textSizes: { normal: 'normalne', larger: 'większe', largest: 'największe' },
 		langMenuAria: 'wybór języka',
-		close: 'Zamknij',
-		panelAria: 'Analiza słowa',
+		close: 'zamknij',
+		panelAria: 'analiza słowa',
 		wordContextLabel: 'znaczenie w kontekście',
 		wordEntryLabel: 'hasło',
 		wordFormLabel: 'forma',
-		working: 'wydanie robocze · przed przeglądem eksperckim',
+		working: 'o wydaniu · wydanie robocze przed przeglądem eksperckim',
 		lemmaPageHint: 'otwórz hasło',
 		occurrences: 'w tekstach',
 		externalDict: 'słownik zewnętrzny',
@@ -151,7 +151,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		readingDescription:
 			'{title} — tekst łaciński z analizą słowo po słowie, przekładem i objaśnieniami gramatycznymi.',
 		pageNotFound: 'Ta strona nie istnieje.',
-		errorGeneric: 'Coś poszło nie tak.',
+		errorGeneric: 'Wystąpił błąd.',
 		goHome: 'wróć na stronę główną',
 		aboutLabel: 'o modlitwie',
 		sourcesLabel: 'źródła',
@@ -176,12 +176,12 @@ const MESSAGES: Record<Lang, Messages> = {
 		},
 		seasons: {
 			adventus: 'Adwent',
-			nativitas: 'Boże Narodzenie',
+			nativitas: 'Okres Bożego Narodzenia',
 			quadragesima: 'Wielki Post',
 			paschale: 'Okres wielkanocny',
-			'per-annum': 'Okres zwykły'
+			'per-annum': 'Po Zesłaniu Ducha Świętego'
 		},
-		ordoPending: 'wkrótce w tym wydaniu',
+		ordoPending: 'jeszcze nie w tym wydaniu',
 		grammarTitle: 'gramatyka',
 		derivativesLabel: 'w polszczyźnie',
 		speakers: {
@@ -195,10 +195,10 @@ const MESSAGES: Record<Lang, Messages> = {
 		markTitle: {
 			sacerdos: 'Versículus — werset, który mówi kapłan',
 			ductor: 'Versículus — werset osoby prowadzącej modlitwę',
-			minister: 'Responsórium — odpowiedź usługującego i wiernych',
-			populus: 'Responsórium — odpowiedź wiernych',
+			minister: 'Respónsum — odpowiedź usługującego i wiernych',
+			populus: 'Respónsum — odpowiedź wiernych',
 			omnes: 'Omnes — mówią wszyscy razem',
-			schola: 'Responsórium — śpiewa schola'
+			schola: 'Respónsum — śpiewa schola'
 		},
 		markLegendTitle: 'znaki przy wierszach',
 		markLegendNote:
@@ -248,17 +248,17 @@ const MESSAGES: Record<Lang, Messages> = {
 		edition: 'edition',
 		bookHome: 'prayer book home',
 		levels: ['Latin only', 'word by word', 'full translation'],
-		levelsAria: 'Help level',
+		levelsAria: 'help level',
 		themeAria: { toLight: 'switch to light mode', toDark: 'switch to dark mode' },
 		textSizeAria: 'text size',
 		textSizes: { normal: 'normal', larger: 'larger', largest: 'largest' },
 		langMenuAria: 'language selection',
-		close: 'Close',
-		panelAria: 'Word analysis',
+		close: 'close',
+		panelAria: 'word analysis',
 		wordContextLabel: 'meaning in context',
 		wordEntryLabel: 'dictionary entry',
 		wordFormLabel: 'form',
-		working: 'working edition · awaiting expert review',
+		working: 'about this edition · working edition awaiting expert review',
 		lemmaPageHint: 'open the entry',
 		occurrences: 'in the texts',
 		externalDict: 'external dictionary',
@@ -273,7 +273,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		bibliographyLink: 'complete bibliography',
 		grammarDescription: 'Latin grammar concepts explained with examples from the prayers.',
 		pronunciationDescription:
-			'How to pronounce ecclesiastical Latin, in the Roman tradition, with transcriptions.',
+			'How to pronounce ecclesiastical Latin — the Roman and Polish traditions, with transcriptions.',
 		readingDescription:
 			'{title} — the Latin text with word-by-word analysis, translation, and grammar notes.',
 		pageNotFound: 'This page does not exist.',
@@ -295,7 +295,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayPartial: '(some texts)',
 		dayIsToday: 'today ·',
 		dayAhead: 'today’s formulary is not here yet — choose another day',
-		dayWeekOf: 'today is a weekday — the last Sunday was',
+		dayWeekOf: 'today is a weekday — the last Sunday:',
 		dayHint: {
 			none: 'the order of Mass alone, without the day’s own texts',
 			chosen: 'the day’s own texts fill the order of Mass'
@@ -321,17 +321,17 @@ const MESSAGES: Record<Lang, Messages> = {
 		markTitle: {
 			sacerdos: 'Versículus — the verse the priest says',
 			ductor: 'Versículus — the verse said by the prayer leader',
-			minister: 'Responsórium — the answer of the server and the faithful',
-			populus: 'Responsórium — the answer of the faithful',
+			minister: 'Respónsum — the answer of the server and the faithful',
+			populus: 'Respónsum — the answer of the faithful',
 			omnes: 'Omnes — said by all together',
-			schola: 'Responsórium — sung by the choir'
+			schola: 'Respónsum — sung by the choir'
 		},
 		markLegendTitle: 'the marks beside the lines',
 		markLegendNote:
 			'A mark stands where the voice changes, and again after every rubric. Lines without one belong to the voice above them.',
 		voices: { submissa: 'in a low voice', secreto: 'silently', cantus: 'sung' },
 		verseAria: (n) => `link to verse ${n}`,
-		roleLabel: 'texts for',
+		roleLabel: 'part',
 		massLabel: 'Mass',
 		massForms: { cantu: 'sung', lecta: 'low' },
 		massHint: {

@@ -79,7 +79,9 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 	const remaining = ORDO.find((m) => m.entries.some((e) => e.kind === 'pending'));
 	if (remaining) {
 		await page.goto(`/app/pl/ordo/${remaining.id}`);
-		await expect(page.locator('.mark', { hasText: 'wkrótce w tym wydaniu' }).first()).toBeVisible();
+		await expect(
+			page.locator('.mark', { hasText: 'jeszcze nie w tym wydaniu' }).first()
+		).toBeVisible();
 		const pending = page
 			.locator('.part')
 			.filter({ has: page.locator('.mark') })

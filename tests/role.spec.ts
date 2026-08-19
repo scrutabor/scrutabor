@@ -301,7 +301,7 @@ test('the mark explains itself when asked', async ({ page }) => {
 	const legend = page.locator('.legend');
 	await expect(legend).toBeVisible();
 	await expect(legend).toContainText('Versículus');
-	await expect(legend).toContainText('Responsórium');
+	await expect(legend).toContainText('Respónsum');
 	await expect(legend).toContainText('Omnes');
 
 	// it closes, and it does not sit on top of the word panel

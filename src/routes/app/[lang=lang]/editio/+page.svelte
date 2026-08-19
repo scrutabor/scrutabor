@@ -24,7 +24,7 @@
 				Teksty tego wydania są przepisane litera po literze ze źródeł publicznie dostępnych —
 				świadków tekstu, czyli ksiąg i&nbsp;wydań liturgii z&nbsp;1962 roku — a&nbsp;następnie
 				porównane z&nbsp;nimi słowo po słowie. W&nbsp;samych literach nie dopuszczamy żadnej
-				rozbieżności; różnice drugorzędne (interpunkcja, wielkie litery) są rozstrzygane,
+				rozbieżności. Różnice drugorzędne (interpunkcja, wielkie litery) są rozstrzygane,
 				a&nbsp;każde rozstrzygnięcie jest zapisane wraz z&nbsp;uzasadnieniem w&nbsp;aparacie
 				krytycznym. Źródła, aparat krytyczny i&nbsp;wszystkie dane wydania są jawne w&nbsp;<a
 					href="https://github.com/scrutabor/scrutabor-corpus"
@@ -42,8 +42,8 @@
 					href="https://outils.biblissima.fr/en/collatinus/"
 					target="_blank"
 					rel="external noopener">Collatinus</a
-				>. Przy każdym słowie panel wymienia, kto potwierdził jego rozbiór; „opracowanie” to praca
-				własna wydania — glosy, przekłady i&nbsp;objaśnienia.
+				>. Przy każdym słowie panel wymienia, kto potwierdził jego rozbiór. „Opracowanie” to praca
+				własna wydania — glosy, przekłady, objaśnienia i&nbsp;rozstrzygnięcia.
 			</p>
 			<p class="what">
 				Ta weryfikacja czegoś dowodzi, a&nbsp;czegoś nie. Analizatory rozpoznają
@@ -55,9 +55,9 @@
 				mają wspólne źródło — Lewis&nbsp;&amp; Short.
 			</p>
 			<p class="what">
-				„Zaakceptowane” przy słowie znaczy: rozbiór zgodny z&nbsp;głosami analizatorów; „do
-				przeglądu” — ta część czeka jeszcze na weryfikację. Całość pozostaje
-				<strong>wydaniem roboczym</strong> do czasu przeglądu przez latynistę; błędy są możliwe, a&nbsp;uwagi
+				„Zaakceptowane” przy słowie znaczy: rozbiór potwierdzony przez analizatory. „Do przeglądu” —
+				ta część czeka jeszcze na weryfikację. Całość pozostaje
+				<strong>wydaniem roboczym</strong> do czasu przeglądu przez latynistę. Błędy są możliwe, a&nbsp;uwagi
 				mile widziane.
 			</p>
 			<p class="what">
@@ -69,7 +69,7 @@
 				The texts of this edition are transcribed letter for letter from publicly available
 				witnesses — books and editions of the 1962 liturgy — and collated: no divergence in the
 				letters themselves is tolerated, and accidental differences (punctuation, capitals) carry
-				recorded rulings in a critical apparatus. The witnesses, critical apparatus and all edition
+				recorded rulings in a critical apparatus. The witnesses, critical apparatus, and all edition
 				data are open in the
 				<a
 					href="https://github.com/scrutabor/scrutabor-corpus"
@@ -78,7 +78,7 @@
 				>.
 			</p>
 			<p class="what">
-				Every word's analysis — lemma and parse — is checked mechanically by two independent open
+				Every word’s analysis — lemma and parse — is checked mechanically by two independent open
 				Latin analyzers:
 				<a href="https://github.com/mk270/whitakers-words" target="_blank" rel="external noopener"
 					>Whitaker's Words</a
@@ -88,22 +88,22 @@
 					href="https://outils.biblissima.fr/en/collatinus/"
 					target="_blank"
 					rel="external noopener">Collatinus</a
-				>. The word panel names each word's confirmers, and “editorial” is the edition's own work —
-				the glosses, translations, notes and rulings.
+				>. The word panel names who confirmed each parse, and “editorial” is the edition’s own work
+				— the glosses, translations, notes, and rulings.
 			</p>
 			<p class="what">
-				It is worth being plain about what that check proves. The analyzers read the
+				That check proves some things and not others. The analyzers read the
 				<em>form</em>: they say which parses a form admits. More than half of the words in this
 				edition have an ambiguous form — “María” admits twelve readings — so agreement means our
 				parse is among the possible ones, not that it is the only one. Choosing the right reading in
-				context is the edition's own act, and it is that choice which awaits expert review. The two
+				context is the edition’s own act, and it is that choice which awaits expert review. The two
 				analyzers are independent programs with largely different dictionaries, but they share one
 				source: Lewis &amp; Short.
 			</p>
 			<p class="what">
-				“Accepted” on a word means its parse agrees with the analyzers’ votes; “awaiting review”
+				“Accepted” on a word means its parse agrees with the analyzers’ votes. “Awaiting review”
 				marks a layer still to be verified. The whole remains a <strong>working edition</strong>
-				until review by a Latinist; errors are possible and corrections welcome.
+				until review by a Latinist. Errors are possible and corrections welcome.
 			</p>
 			<p class="what">
 				External sources supporting the explanations are named beside them and collected in the

@@ -48,7 +48,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 		},
 		spot: {
 			pl: 'To forma słownikowa rzeczownika w liczbie pojedynczej — ta, która stoi w haśle.',
-			en: 'It is the dictionary form of a noun in the singular — the one you find in the entry.'
+			en: 'It is the dictionary form of a noun in the singular — the one that stands in the entry.'
 		},
 		examples: [
 			{
@@ -220,7 +220,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 				wordId: 'w027',
 				note: {
 					pl: 'zgrzeszyłem czym — myślą, mową, uczynkiem: trzy ablativy narzędzia.',
-					en: 'sinned by what — by thought, word and deed: three ablatives of means.'
+					en: 'sinned by what — by thought, word, and deed: three ablatives of means.'
 				}
 			},
 			{
@@ -247,7 +247,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 		label: { pl: 'wołacz', en: 'vocative' },
 		what: {
 			pl: 'Przypadek bezpośredniego zwrotu: tak wołamy kogoś po imieniu. Modlitwa żyje wołaczem — od „Pater noster” po „Sancta María”.',
-			en: 'The case of direct address: how you call someone by name. Prayer lives in the vocative — from “Pater noster” to “Sancta María”.'
+			en: 'The case of direct address: calling someone by name. Prayer lives in the vocative — from “Pater noster” to “Sancta María”.'
 		},
 		examples: [
 			{
@@ -348,7 +348,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 				textKey: 'orationes/ave-maria',
 				wordId: 'w001',
 				note: {
-					pl: 'rozkaźnik jako pozdrowienie: witaj.',
+					pl: 'tryb rozkazujący jako pozdrowienie: witaj.',
 					en: 'an imperative as a greeting: hail.'
 				}
 			}

@@ -75,21 +75,21 @@
 			<p class="what">
 				Podział na sylaby jest w&nbsp;obu tradycjach ten sam — w&nbsp;śpiewie każda sylaba dostaje
 				swoją nutę i&nbsp;„grá-ti-a” ma trzy sylaby w&nbsp;Rzymie i&nbsp;w&nbsp;Polsce. W&nbsp;mowie
-				potocznej polszczyzna ściąga „-tia” do jednej sylaby („gracja”); nasze transkrypcje
+				potocznej polszczyzna ściąga „-tia” do jednej sylaby („gracja”), a&nbsp;nasze transkrypcje
 				zachowują podział śpiewany. Polska tradycja nie jest też jednolita — różni się między
-				regionami i&nbsp;pokoleniami; zapisujemy jej najczęstszą postać.
+				regionami i&nbsp;pokoleniami, więc zapisujemy jej najczęstszą postać.
 			</p>
 		{:else}
 			<p class="what">
 				We transcribe the <strong>Roman</strong> (ecclesiastical, “Italianate”) pronunciation — the one
-				the 1962 books are sung in by Gregorian scholas. Under saint Pius&nbsp;X, Rome encouraged the
-				whole Church toward the Roman pronunciation; national traditions (the Polish one among them) survive
-				in parishes, and the Polish interface of this app shows both where they differ.
+				the 1962 books and the Gregorian scholas sing. Under Saint Pius&nbsp;X, Rome encouraged the whole
+				Church toward the Roman pronunciation. National traditions, the Polish one among them, survive
+				in parishes, and the table below shows both.
 			</p>
 			<p class="what">
-				Syllable division is identical in every tradition — chant gives each syllable its own note,
-				so “grá-ti-a” has three syllables everywhere. Spoken habits may contract; our transcriptions
-				keep the sung division.
+				Syllable division is identical in both traditions — chant gives each syllable its own note,
+				so “grá-ti-a” has three syllables everywhere. In ordinary speech Polish contracts “-tia” to
+				one syllable (“gracja”), and our transcriptions keep the sung division.
 			</p>
 		{/if}
 

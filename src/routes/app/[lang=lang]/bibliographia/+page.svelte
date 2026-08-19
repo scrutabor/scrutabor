@@ -9,7 +9,7 @@
 	const copy = $derived(
 		lang === 'pl'
 			? {
-					lead: 'Zestawienie obejmuje źródła przywołane w objaśnieniach widocznych dla czytelnika. Dokładny odsyłacz pozostaje także przy każdym objaśnieniu. Świadkowie tekstu i aparat krytyczny są udostępnione osobno w repozytorium korpusu.',
+					lead: 'Zestawienie obejmuje źródła przywołane w objaśnieniach widocznych dla czytelnika. Dokładny odsyłacz pozostaje także przy każdym objaśnieniu. Świadków tekstu i aparat krytyczny udostępniamy osobno w repozytorium korpusu.',
 					usedAt: 'przywołano przy',
 					typeface: [
 						'Wydanie złożono krojem EB Garamond (Georg Duffner, Octavio Pardo), udostępnionym na licencji ',

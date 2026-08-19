@@ -497,7 +497,7 @@ test('no token ever fragments across lines, any text, narrow viewport', async ({
 test('Angelus keeps responses visible and folds the repeated Ave Maria texts', async ({ page }) => {
 	await page.goto('/app/pl/orationes/angelus-domini');
 	await expect(page.getByRole('button', { name: /Versículus.*prowadzącej/ }).first()).toBeVisible();
-	await expect(page.getByRole('button', { name: /Responsórium.*wiernych/ }).first()).toBeVisible();
+	await expect(page.getByRole('button', { name: /Respónsum.*wiernych/ }).first()).toBeVisible();
 	await expect(page.locator('.who-name')).toHaveCount(0);
 	await page
 		.getByRole('button', { name: /Versículus.*prowadzącej/ })
@@ -505,7 +505,7 @@ test('Angelus keeps responses visible and folds the repeated Ave Maria texts', a
 		.click();
 	await expect(page.getByText('werset osoby prowadzącej modlitwę')).toBeVisible();
 	await expect(page.getByText('mówią wszyscy razem')).toHaveCount(0);
-	await page.getByRole('button', { name: 'Zamknij' }).click();
+	await page.getByRole('button', { name: 'zamknij' }).click();
 	const repetitions = page.locator('details.repeated-prayer');
 	await expect(repetitions).toHaveCount(3);
 	await expect(repetitions.first().locator('summary')).toContainText('Ave María, grátia plena…');

@@ -289,7 +289,7 @@ test.describe('landing @online', () => {
 
 	test('the support page offers real contact in both languages', async ({ page }) => {
 		await page.goto('/pl/support');
-		await expect(page.locator('h1')).toHaveText('Pomoc');
+		await expect(page.locator('h1')).toHaveText('Kontakt');
 		// the way back stands top-left as on every page of the book, but
 		// here home is the landing, not the catalog
 		await expect(page.locator('.trail a.back')).toHaveAttribute('href', '/pl');
@@ -354,7 +354,7 @@ test.describe('landing @online', () => {
 
 	test('the footer reaches the public source', async ({ page }) => {
 		await page.goto('/en');
-		await expect(page.getByRole('link', { name: 'source on GitHub' })).toHaveAttribute(
+		await expect(page.getByRole('link', { name: 'source code on GitHub' })).toHaveAttribute(
 			'href',
 			'https://github.com/scrutabor'
 		);

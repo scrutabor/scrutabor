@@ -120,7 +120,7 @@ const LABELS: Record<Lang, MorphLabels> = {
 		decl: (d) => `${ORDINAL[d - 1]}\u00a0declension`,
 		conj: (c) => `${ORDINAL[c - 1]}\u00a0conjugation`,
 		prep: (governs) => `preposition (with the ${governs === 'acc' ? 'accusative' : 'ablative'})`,
-		undecided: 'the form does not decide'
+		undecided: 'form undecided'
 	}
 };
 
@@ -226,13 +226,17 @@ export function describeMorph(m: Morph, lang: Lang): string {
 		.join('');
 }
 
+// `sources` names the ANALYZERS that confirm a parse, and it sits three lines
+// above the bibliographic `sourcesLabel` of a source note (SourceNotes). One
+// word for both made the panel read as if Whitaker's had written the citation,
+// so this line says what it is: a confirmation, not a reference.
 const ANALYSIS_LABELS: Record<
 	Lang,
 	{ confidence: string; sources: string; values: Record<string, string> }
 > = {
 	pl: {
 		confidence: 'pewność',
-		sources: 'źródła',
+		sources: 'potwierdzenie',
 		values: {
 			high: 'wysoka',
 			medium: 'średnia',
@@ -248,7 +252,7 @@ const ANALYSIS_LABELS: Record<
 	},
 	en: {
 		confidence: 'confidence',
-		sources: 'sources',
+		sources: 'confirmed by',
 		values: {
 			high: 'high',
 			medium: 'medium',

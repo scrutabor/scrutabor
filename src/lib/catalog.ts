@@ -182,7 +182,7 @@ const CATALOG_SOURCE: CatalogSection[] = [
 		// about it. `catalog.reach.test.ts` holds the same decision from the
 		// other side.
 		category: 'proprium',
-		label: { pl: 'z formularza dnia', en: "from the day's proper" },
+		label: { pl: 'z formularza dnia', en: 'from the day’s formulary' },
 		texts: []
 	},
 	{
@@ -197,7 +197,7 @@ const CATALOG_SOURCE: CatalogSection[] = [
 				category: 'psalmi',
 				slug: '118-he',
 				title: 'Psalmus 118, HE',
-				localizedTitle: { pl: 'Doskonałość Prawa Bożego', en: "The Perfection of God's Law" }
+				localizedTitle: { pl: 'Doskonałość Prawa Bożego', en: 'The Perfection of God’s Law' }
 			}
 		]
 	}

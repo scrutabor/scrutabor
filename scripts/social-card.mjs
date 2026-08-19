@@ -22,7 +22,7 @@ const INK = '#251e12';
 const SOFT = '#70624a';
 const RUBRIC = '#9e2b1e';
 
-// Dotless on display (notes/brand.md), as the landing prints them.
+// Dotless on display, as the landing prints them.
 const TAGLINE = {
 	pl: 'Modlitwa po łacinie ze zrozumieniem',
 	en: 'Prayer in Latin, with understanding'

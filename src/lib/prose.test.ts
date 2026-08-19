@@ -48,7 +48,7 @@ describe('the words the app says', () => {
 				`${table} was not reached`
 			).toBe(true);
 		// and it reaches the deep ones, not just the top level
-		expect(all.some(({ text }) => text.includes('Ministrant dzwoni przy każdym geście'))).toBe(
+		expect(all.some(({ text }) => text.includes('Usługujący dzwoni przy każdym geście'))).toBe(
 			true
 		);
 	});
