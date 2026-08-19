@@ -13,33 +13,35 @@
 // builds on main. Fonts first, then measure.
 //
 // THE SAME SPECS RUN TWICE. The `offline` project points them at
-// build-offline/ over file://, where the book has no server, no router and
-// no origin. Three bugs reached that edition while lint, types and all 174
-// tests were green — the Ordo index asking a router that was not there, a
-// panel that walked back out of the prayer when closed, a stylesheet looked
-// for one directory too high — and every one of them would have been caught
-// here. A path is translated to the file it is: /en/orationes/ave-maria
-// becomes app/en/orationes/ave-maria.html, and the query rides along.
+// build-offline/ over file://, where the book has no server and no origin.
+// Four bugs reached that edition while lint, types and every test were green
+// — the Ordo index asking a router that was not there, a panel that walked
+// back out of the prayer when closed, a stylesheet looked for one directory
+// too high, a 404 that answered a Polish reader in English — and every one
+// of them would have been caught here. A path is translated to the address
+// the folder keeps it at: /pl/orationes/ave-maria becomes
+// index.html#/pl/orationes/ave-maria, and the query rides along.
 import { test as base, expect } from '@playwright/test';
 
-/** A site path as it exists in the downloaded folder. The project root
+/** A site path as it is addressed in the downloaded folder. The project root
  * comes from Playwright's own config file — `rootDir` is the TEST
  * directory, which is one level too deep — so this file needs no node
  * types to find it.
  *
- * Only the book is in the folder: the site's /app prefix IS the app/
- * directory, and the app's front door is the package root's index.html.
- * The landing pages at the origin root are deliberately not packaged, so
- * a test that asks for one offline is asking for the wrong artifact —
- * loudly, not by opening some other file. */
+ * The folder is ONE document and the route is its hash: the whole book
+ * renders from the corpus the runtime carries, so /app/pl/x/y is
+ * index.html#/pl/x/y. Only the book is in the folder — the landing pages at
+ * the origin root are deliberately not packaged, so a test that asks for one
+ * offline is asking for the wrong artifact, loudly rather than by opening
+ * some other file. */
 export function offlineUrl(root: string, path: string): string {
 	const [, route = '/', query = ''] = /^([^?#]*)([?#].*)?$/.exec(path) ?? [];
-	const base = `file://${root}/build-offline`;
-	if (route === '/app' || route === '/app/') return `${base}/index.html${query}`;
+	const base = `file://${root}/build-offline/index.html`;
+	if (route === '/app' || route === '/app/') return `${base}${query}`;
 	if (!route.startsWith('/app/')) {
 		throw new Error(`not in the downloaded folder (landing or root): ${path}`);
 	}
-	return `${base}${route}.html${query}`;
+	return `${base}#${route.slice('/app'.length)}${query}`;
 }
 
 /**
@@ -81,8 +83,19 @@ function translate(
 ) {
 	if (testInfo.project.name !== 'offline') return;
 	const goto = page.goto.bind(page);
-	page.goto = (url: string, options?: Parameters<typeof goto>[1]) =>
-		goto(url.startsWith('/') ? offlineUrl(projectRoot(testInfo), url) : url, options);
+	page.goto = async (url: string, options?: Parameters<typeof goto>[1]) => {
+		if (!url.startsWith('/')) return goto(url, options);
+		// `about:blank` first, and not for tidiness. On the site every goto is
+		// a document load: the reader arrives with nothing remembered. In the
+		// folder the whole book is one document and a goto differing only in
+		// the hash is a same-document navigation — or, when the address is
+		// unchanged, no navigation at all. Two tests said so before this did:
+		// an about sheet that stayed open through what the test called a fresh
+		// load, and a deep link that never opened its word. Clearing the
+		// document first makes the translation exact.
+		await goto('about:blank');
+		return goto(offlineUrl(projectRoot(testInfo), url), options);
+	};
 }
 
 /**
@@ -155,15 +168,20 @@ export const test = base.extend<object>({
 /**
  * A URL assertion that holds for BOTH editions.
  *
- * Hosted, a route is a path: /pl/orationes/pater-noster. In the folder it
- * is the file that path is kept in: …/app/pl/orationes/pater-noster.html.
- * A test that anchors on the path alone is asserting the shape of a URL
- * rather than where the reader ended up, and it fails on the folder for a
- * reason that has nothing to do with the book.
+ * Hosted, a route is a path under /app: /app/pl/orationes/pater-noster. In
+ * the folder the whole book is one document and the route is its hash, which
+ * names no /app because there is no site to be a part of:
+ * index.html#/pl/orationes/pater-noster. A test that anchors on either
+ * spelling is asserting the shape of a URL rather than where the reader ended
+ * up, and it fails on the other edition for a reason that has nothing to do
+ * with the book.
  */
 export function atRoute(path: string, query = ''): RegExp {
 	const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-	return new RegExp(`${escape(path)}(\\.html)?${escape(query)}$`);
+	// `.html` for the older folder shape is kept optional rather than removed:
+	// it costs nothing and it is what a route assertion means either way.
+	const route = escape(path.replace(/^\/app(?=\/|$)/, '')).replace(/^/, '(/app)?');
+	return new RegExp(`${route}(\\.html)?${escape(query)}$`);
 }
 
 export { expect };

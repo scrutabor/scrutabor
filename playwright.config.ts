@@ -28,7 +28,11 @@ export default defineConfig({
 	projects: [
 		{
 			name: 'hosted',
-			use: { baseURL: 'http://localhost:4173' }
+			use: { baseURL: 'http://localhost:4173' },
+			// The mirror of @online below: a handful of properties belong to
+			// the folder alone — what it does with scripting turned off, and
+			// that it is styled before its script has run.
+			grepInvert: /@folder/
 		},
 		{
 			name: 'offline',

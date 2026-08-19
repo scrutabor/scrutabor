@@ -268,17 +268,23 @@ test('the home control opens the catalogue in every edition', async ({ page }) =
 	await expect(page.locator('.flow-title')).toHaveText('Ordo Missæ');
 });
 
-test('downloaded HTML points home before hydration', async ({ browser }, testInfo) => {
-	test.skip(testInfo.project.name !== 'offline', 'the hosted HTML is covered by the shared test');
+test('the downloaded copy is dressed before its script runs @folder', async ({
+	browser
+}, testInfo) => {
+	// It replaced a test that read the prerendered HTML of a folder page, and
+	// the folder has no prerendered pages any more. What is worth holding in
+	// its place is the property that replaced it: the shell LINKS the one
+	// stylesheet rather than letting the runtime inject it. Injected, the
+	// document computes its styles twice — the browser's defaults, then ours —
+	// and `body` carries a quarter second `color` transition for the theme
+	// toggle, so every page in the copy opened by fading up from black. With
+	// scripting off nothing can inject anything, which is exactly the state
+	// that tells the two apart.
 	const page = await browser.newPage({ javaScriptEnabled: false });
 	const root = testInfo.config.configFile!.replace(/[/\\][^/\\]+$/, '');
-	await page.goto(offlineUrl(root, '/app/pl/lemma/scrutor'));
-	const home = page.locator('nav .trail a.home');
-	expect(await home.evaluate((anchor) => (anchor as HTMLAnchorElement).href)).toMatch(
-		/^file:\/\/.*\/build-offline\/app\/pl\.html$/
-	);
-	await home.click();
-	await expect(page).toHaveURL(atRoute('/app/pl'));
+	await page.goto(offlineUrl(root, '/app/pl'));
+	const ground = await page.evaluate(() => getComputedStyle(document.body).backgroundColor);
+	expect(ground, 'the shell painted the browser default, not the book').toBe('rgb(247, 241, 230)');
 	await page.close();
 });
 

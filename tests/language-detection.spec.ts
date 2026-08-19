@@ -88,11 +88,25 @@ noScript.describe('no javascript', () => {
 		await expect(cards.first()).toContainText('English');
 	});
 
-	noScript('the app router still offers both languages, English first', async ({ page }) => {
+	noScript(
+		'the app router still offers both languages, English first @online',
+		async ({ page }) => {
+			await page.goto('/app/');
+			const cards = page.locator('.lang-card');
+			await expect(cards).toHaveCount(2);
+			await expect(cards.first()).toContainText('English');
+		}
+	);
+
+	// The folder's answer to the same question, and it is a different answer:
+	// there is no prerendered page to fall back to, because the whole book is
+	// built from the corpus the runtime carries. That is the one thing this
+	// edition gives up, and it says so instead of showing a blank window.
+	noScript('the downloaded copy says what it needs @folder', async ({ page }) => {
 		await page.goto('/app/');
-		const cards = page.locator('.lang-card');
-		await expect(cards).toHaveCount(2);
-		await expect(cards.first()).toContainText('English');
+		const notice = page.locator('.noscript');
+		await expect(notice.locator('[lang="pl"]')).toContainText('potrzebuje JavaScriptu');
+		await expect(notice.locator('[lang="en"]')).toContainText('needs JavaScript');
 	});
 });
 

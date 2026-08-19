@@ -25,6 +25,14 @@ export default defineConfig({
 	],
 	resolve: {
 		alias: {
+			// BEFORE $lib, and that is not cosmetic: Vite takes the first alias
+			// whose prefix matches, so `$lib` listed first would swallow this
+			// one and the copy would quietly keep the site's stub — which it
+			// did, and the day then tried to fetch itself off a disk.
+			//
+			// Not a SvelteKit module: the one place where the copy answers a
+			// question the site sends over a transport. See the stub's comment.
+			'$lib/proper-local': here('./offline/shims/proper-local.ts'),
 			$lib: here('./src/lib'),
 			// SvelteKit's virtual modules are the router's own surface, and
 			// there is no router here. Each shim is an explicit answer to
@@ -39,12 +47,21 @@ export default defineConfig({
 	build: {
 		outDir: 'build-offline-runtime',
 		emptyOutDir: true,
-		// The opposite of the site's rule. This bundle injects its own copy
-		// of the stylesheet, and a `url()` inside an injected <style> resolves
-		// against the DOCUMENT — so a relative path would mean something
-		// different on every page depth. Inlined, the reading face cannot be
-		// looked for in the wrong place.
+		// The opposite of the site's rule. Every asset is inlined, so the
+		// reading face travels inside the stylesheet as a data URI and cannot
+		// be looked for in the wrong place — which under file://, where a
+		// page's own location is wherever the reader unzipped the book, is
+		// the only way it is certain to be found at all.
 		assetsInlineLimit: () => true,
+		// ONE stylesheet, written as a file, and the shell links it.
+		// Code-split CSS is injected by the runtime instead, which means the
+		// document computes its styles once with the browser's own defaults
+		// and again when the script has run — and `body` carries a quarter
+		// second `color` transition for the theme toggle, so every page in
+		// the downloaded copy opened by fading up from black. It cost nothing
+		// on the site, where the stylesheet is a link in the head, and it was
+		// invisible in the old folder edition for the same reason.
+		cssCodeSplit: false,
 		rollupOptions: {
 			input: here('./offline/entry.ts'),
 			output: {

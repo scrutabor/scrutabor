@@ -17,6 +17,7 @@
 // was sent names a day on purpose, and that day is what they must see.
 
 import { browser } from '$app/environment';
+import { localDay } from '$lib/proper-local';
 import { artifactPath, dayById } from '$lib/proprium';
 import type { Lang } from '$lib/i18n';
 
@@ -188,51 +189,21 @@ export async function chooseDay(next: string | null, lang: Lang): Promise<void> 
 	}
 }
 
-/** Whether this copy of the book has an origin to fetch from.
+/** One day, from wherever this copy of the book keeps it.
  *
- * The offline build injects `__scrutabor_up` on every page. Its presence is
- * also the signal that there is no server here — the book is wherever the
- * reader unzipped it.
+ * The site fetches a prerendered file. A downloaded copy carries the whole
+ * corpus in its runtime and answers from memory (see $lib/proper-local) —
+ * which is also the only thing that can work there, since Chrome refuses
+ * `fetch()` for file:// outright: "URL scheme file is not supported".
+ *
+ * It replaced a classic-script transport that loaded one `window.__scrutabor
+ * _day=…` file per day. That worked, and at the whole church year it would
+ * have been 400 files and about 8 MB of what the runtime already holds.
  */
-function downloaded(): boolean {
-	return (globalThis as { __scrutabor_up?: string }).__scrutabor_up !== undefined;
-}
-
-function load(day: string, lang: Lang): Promise<ProperPayload> {
-	return downloaded() ? loadByScript(day, lang) : loadByFetch(day, lang);
-}
-
-async function loadByFetch(day: string, lang: Lang): Promise<ProperPayload> {
+async function load(day: string, lang: Lang): Promise<ProperPayload> {
+	const here = localDay(day, lang);
+	if (here) return here as ProperPayload;
 	const response = await fetch(artifactPath(day, lang));
 	if (!response.ok) throw new Error(String(response.status));
 	return (await response.json()) as ProperPayload;
-}
-
-/** The downloaded copy's way in.
- *
- * Chrome refuses `fetch()` for file:// — "URL scheme file is not supported" —
- * so a downloaded book cannot ask for a day the way the site does. A classic
- * script still loads, which is the same reason the offline runtime is an IIFE
- * and not a module, and the offline build writes one of these beside every
- * day's JSON. Still one day at a time: this is a different transport, not a
- * different amount of data.
- */
-function loadByScript(day: string, lang: Lang): Promise<ProperPayload> {
-	return new Promise((resolve, reject) => {
-		const holder = globalThis as { __scrutabor_day?: ProperPayload };
-		const script = document.createElement('script');
-		script.src = artifactPath(day, lang).replace(/\.json$/, '.js');
-		script.onload = () => {
-			const body = holder.__scrutabor_day;
-			delete holder.__scrutabor_day;
-			script.remove();
-			if (body) resolve(body);
-			else reject(new Error('the day loaded nothing'));
-		};
-		script.onerror = () => {
-			script.remove();
-			reject(new Error('the day could not be loaded'));
-		};
-		document.head.append(script);
-	});
 }

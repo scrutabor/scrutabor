@@ -2,7 +2,7 @@
 // work happens HERE, at prerender time. The browser receives the finished
 // rows and the one entry it shows — never the snapshot itself.
 import { LEXICON } from '$lib/corpus';
-import { occurrencesOf } from '$lib/concordance';
+import { lemmaData } from '$lib/loaders';
 import { LANGS, type Lang } from '$lib/i18n';
 import type { EntryGenerator, PageServerLoad } from './$types';
 
@@ -11,13 +11,4 @@ import type { EntryGenerator, PageServerLoad } from './$types';
 export const entries: EntryGenerator = () =>
 	LANGS.flatMap((lang) => Object.keys(LEXICON.lemmata).map((lemma) => ({ lang, lemma })));
 
-export const load: PageServerLoad = ({ params }) => {
-	const lang = params.lang as Lang;
-	const lemma = params.lemma;
-	return {
-		lemma,
-		entry: LEXICON.lemmata[lemma] ?? null,
-		sense: LEXICON.senses[lang][lemma] ?? null,
-		occurrences: occurrencesOf(lemma)
-	};
-};
+export const load: PageServerLoad = ({ params }) => lemmaData(params.lang as Lang, params.lemma);

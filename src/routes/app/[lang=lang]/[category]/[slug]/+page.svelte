@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { pageUrl } from '$lib/url';
 	import { goto, replaceState } from '$app/navigation';
 	import { arrowNav } from '$lib/arrow-nav';
 	import { neighborsOf, sectionFor, textFor } from '$lib/catalog';
@@ -86,7 +87,7 @@
 	ribbon(
 		() => `scrutabor-pos:${data.category}/${data.slug}`,
 		() => {
-			const q = new URL(location.href).searchParams;
+			const q = pageUrl().searchParams;
 			return q.has('w') || q.has('v');
 		}
 	);
@@ -100,7 +101,7 @@
 
 	function applyVerseFromLocation() {
 		if (!data.verses) return;
-		const raw = new URL(location.href).searchParams.get('v');
+		const raw = pageUrl().searchParams.get('v');
 		const n = raw === null ? null : Number(raw);
 		citedVerse = n !== null && Object.values(data.verses).includes(n) ? n : null;
 		const target = citedVerse;
@@ -118,7 +119,7 @@
 
 	function tapVerse(no: number) {
 		citedVerse = citedVerse === no ? null : no;
-		const url = new URL(location.href);
+		const url = pageUrl();
 		if (citedVerse === null) url.searchParams.delete('v');
 		else url.searchParams.set('v', String(citedVerse));
 		replaceState(url, {});

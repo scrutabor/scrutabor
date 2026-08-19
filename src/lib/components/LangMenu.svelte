@@ -2,6 +2,7 @@
 	import Flag from './Flag.svelte';
 	import Menu from './Menu.svelte';
 	import { LANGS, M, type Lang } from '$lib/i18n';
+	import { pageUrl } from '$lib/url';
 	import { where } from '$lib/where.svelte';
 
 	// `base` is what stands before the language segment: the book lives
@@ -12,10 +13,10 @@
 	// The same page in the other language. The path within a language comes
 	// from the layout (see $lib/where) rather than from location.pathname,
 	// which is a FILE path in a downloaded copy and has no language prefix
-	// to cut. The query still comes from location: an open word panel
-	// travels as ?w=, and shallow routing updates only the real URL.
+	// to cut. The query comes from the page's own URL (see $lib/url): an open
+	// word panel travels as ?w=, and offline that query is inside the hash.
 	function pathFor(l: Lang): string {
-		return `${base}/${l}${where.path}${location.search}`;
+		return `${base}/${l}${where.path}${pageUrl().search}`;
 	}
 </script>
 

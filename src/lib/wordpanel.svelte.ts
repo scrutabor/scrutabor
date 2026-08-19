@@ -10,6 +10,7 @@
 // share one page and their word ids collide.
 
 import { untrack } from 'svelte';
+import { pageUrl } from './url';
 import { pushState, replaceState } from '$app/navigation';
 import type { GlossDocument, TextDocument } from './corpus';
 
@@ -83,8 +84,7 @@ export function wordPanel(host: WordPanelHost) {
 	function urlWith(id: string | null): URL {
 		// A throwaway value handed straight to the router — never held in
 		// state, so it needs none of SvelteURL's reactivity.
-		// eslint-disable-next-line svelte/prefer-svelte-reactivity
-		const url = new URL(location.href);
+		const url = pageUrl();
 		if (id) url.searchParams.set('w', id);
 		else url.searchParams.delete('w');
 		return url;
@@ -146,8 +146,7 @@ export function wordPanel(host: WordPanelHost) {
 	// location, because after a history traversal to a shallow-modified
 	// entry page.url can lag behind the real URL.
 	function applyFromLocation() {
-		// eslint-disable-next-line svelte/prefer-svelte-reactivity
-		const w = new URL(location.href).searchParams.get('w');
+		const w = pageUrl().searchParams.get('w');
 		const target = w && host.has(w) ? w : null;
 		// The browser's own back also just closes the panel — the page stays
 		// where the reader is, not where they were when it opened. untrack:

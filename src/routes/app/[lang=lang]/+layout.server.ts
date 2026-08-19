@@ -10,14 +10,11 @@
 // A SERVER load, so the value is serialized into the page at prerender.
 // A universal load would re-run in the browser, which means a page that
 // cannot run loads — one opened from a folder — would not have it.
-import pkg from '../../../../package.json' with { type: 'json' };
+import { layoutData } from '$lib/loaders';
 import type { LayoutServerLoad } from './$types';
 
-export const load: LayoutServerLoad = ({ params, url }) => ({
-	lang: params.lang,
-	// the edition, for the catalog's colophon — one source, package.json
-	version: pkg.version,
-	// the language-relative path, for the canonical and hreflang links;
-	// a ?w= deep link canonicalizes to its page, so the query is dropped
-	path: url.pathname.replace(/^\/app\/(pl|en)/, '')
-});
+export const load: LayoutServerLoad = ({ params, url }) =>
+	// The edition for the catalog's colophon, and the language-relative path
+	// for the canonical and hreflang links — a ?w= deep link canonicalizes to
+	// its page, so the query is dropped.
+	layoutData(params.lang, url.pathname.replace(/^\/app\/(pl|en)/, ''));

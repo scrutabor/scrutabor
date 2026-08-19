@@ -794,3 +794,17 @@ a {
 		font-size: 1.4rem;
 	}
 }
+
+/* The downloaded copy's one confession. It is one document that builds the
+   book from the corpus it carries, so it needs a script to run — where the
+   site, every route of which is a prerendered file, does not. The block is
+   written into the shell by scripts/build-offline.mjs and exists nowhere
+   else, but the rule lives here because this is where the book's type is. */
+.noscript {
+	max-width: 32rem;
+	margin: 4rem auto;
+	padding: 0 1.5rem;
+	color: var(--ink);
+	line-height: 1.6;
+	text-align: center;
+}

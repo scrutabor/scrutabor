@@ -134,15 +134,11 @@ export function dayById(id: string): ProperDay | undefined {
 
 /** The artifact URL for one day in one language.
  *
- * Absolute on the site. In a DOWNLOADED copy there is no origin — the book is
- * wherever the reader unzipped it — so the offline build injects
- * `window.__scrutabor_up`, the way back to the root from the page currently
- * open, and the same hook that lets its pages find `_app/`. Without this the
- * fetch would ask for `file:///artifacts/…`, the day would never arrive, and
- * the installed book would silently lose the one thing offline was for.
+ * The SITE's address, and only the site's. A downloaded copy carries the whole
+ * corpus in its runtime and builds the day from it ($lib/proper-local), so it
+ * never asks for this — which is just as well, because Chrome refuses
+ * `fetch()` for file:// outright.
  */
 export function artifactPath(day: string, lang: Lang): string {
-	const up = (globalThis as { __scrutabor_up?: string }).__scrutabor_up;
-	const tail = `artifacts/proprium/${lang}/${day}.json`;
-	return up === undefined ? `/${tail}` : `${up}${tail}`;
+	return `/artifacts/proprium/${lang}/${day}.json`;
 }

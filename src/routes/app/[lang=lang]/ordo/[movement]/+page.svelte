@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { pageUrl } from '$lib/url';
 	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
 	import { arrowNav } from '$lib/arrow-nav';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
@@ -161,7 +162,7 @@
 		() => `scrutabor-pos:ordo/${data.movement}`,
 		// a deep link into a word outranks the ribbon — that reader asked
 		// for a place, the same rule the reading pages follow
-		() => new URL(location.href).searchParams.has('w')
+		() => pageUrl().searchParams.has('w')
 	);
 </script>
 

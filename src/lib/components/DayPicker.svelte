@@ -13,6 +13,7 @@
 	// component that reaches for `$app/state` throws there — the select
 	// changed, the handler died on its first line, and nothing else happened.
 	// The word panel's `?w=` has always read location for exactly this reason.
+	import { pageUrl } from '$lib/url';
 	import { replaceState } from '$app/navigation';
 	import { browser } from '$app/environment';
 	import { M, type Lang } from '$lib/i18n';
@@ -53,7 +54,7 @@
 	// of a page carries the day with it (`dayHref` in lib/proper.svelte).
 	export function applyFromLocation(): void {
 		if (!browser) return;
-		const named = new URL(location.href).searchParams.get(DAY_PARAM);
+		const named = pageUrl().searchParams.get(DAY_PARAM);
 		const day = named ?? storedDay();
 		chosen = day;
 		rememberDay(day);
@@ -68,7 +69,7 @@
 		const value = (event.currentTarget as HTMLSelectElement).value;
 		chosen = value;
 		rememberDay(value);
-		const url = new URL(location.href);
+		const url = pageUrl();
 		if (value) url.searchParams.set(DAY_PARAM, value);
 		else url.searchParams.delete(DAY_PARAM);
 		// Shallow: the page stays, the address bar catches up.

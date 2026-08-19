@@ -1,32 +1,36 @@
 /**
- * Starting a page without SvelteKit's router.
+ * The book, running from data, in one document.
  *
- * SvelteKit's `start()` does two things at once: it hydrates the page, and
- * it takes over navigation. The second needs an origin — it builds URLs and
- * compares them — and `file://` has none, so `start()` throws before the
- * page ever comes alive. A book someone downloaded could render and never
- * respond to a tap.
+ * The site prerenders every route: 2,381 files, each carrying its own copy of
+ * the dictionary entries its words need. Downloaded, that came to 12.7 MB for
+ * the Ordinary and one Sunday. This renders the same components from the same
+ * corpus at 2 MB, and the whole church year projects to 12 MB — about what one
+ * season costs today (notes/corpus-structure-2026-08-18.md §10-11).
  *
- * Only the first half is wanted. Every navigation in this book is a
- * document load anyway: a URL path is a file, exactly as on the site. So
- * this hydrates SvelteKit's own generated root component with the data
- * already sitting in the page, and no router is started at all.
+ * What `file://` refuses decides the shape, and it was measured rather than
+ * assumed: `fetch()` of a sibling file is blocked outright, ES modules are
+ * blocked by CORS against origin `null`, and a document has no path it can
+ * trust — under file:// its own location is wherever the reader unzipped it.
+ * A classic script works. So the runtime is one IIFE, the data rides inside
+ * it, and the route lives in the HASH, which needs no server and no origin.
  *
- * It reads SvelteKit's GENERATED manifest rather than a list of its own, so
- * a new route needs no change here.
+ * SvelteKit's own client router is what cannot be used here: `start()`
+ * hydrates AND takes over navigation, and the second half builds and compares
+ * URLs, which throws before the page ever comes alive. What it does with the
+ * route, though, is exactly what this does — read the component ids from the
+ * generated manifest, run the loads, mount the pyramid — and it does it
+ * against SvelteKit's own `dictionary`, so a route renamed in src/routes
+ * fails here at boot rather than rendering the wrong page.
  */
-// `root` here is SvelteKit's own export: root.svelte wrapped in
-// `asClassComponent`. Calling Svelte 5's `hydrate()` on the raw component
-// instead looked equivalent and was not — it appended a fresh copy of
-// everything in <svelte:head> beside the copy the build had already
-// written, so every page carried two canonicals, two descriptions and six
-// hreflangs. The wrapper is what claims them. SvelteKit constructs it
-// exactly this way, and matching that is also what keeps this file from
-// drifting away from the framework it borrows.
-import { nodes, root } from '../.svelte-kit/generated/client/app.js';
-import { asFile } from './shims/navigation';
+import { dictionary, nodes, root } from '../.svelte-kit/generated/client/app.js';
+import { LANGS, type Lang } from '$lib/i18n';
+import { pageUrl } from '$lib/url';
+import { layoutData } from '$lib/loaders';
+import { layoutFor, match, pageData, type RouteMatch } from './routes';
+import { asFile, navigated } from './shims/navigation';
+import { page as pageState } from './shims/state';
 
-type Payload = { type: string; data: Record<string, unknown> } | null;
+type Component = { component: unknown };
 
 /** The store shape root.svelte expects: subscribe/set, plus notify. */
 function store<T>(value: T) {
@@ -47,114 +51,171 @@ function store<T>(value: T) {
 	};
 }
 
-export async function start(options: {
-	node_ids: number[];
-	data: Payload[];
-	element: Element;
-	params?: Record<string, string>;
-}) {
-	const { node_ids, data, element } = options;
-	const modules = await Promise.all(node_ids.map((id) => nodes[id]()));
+/**
+ * Which components a route mounts: the root layout, then its own layouts,
+ * then its page — read from SvelteKit's generated manifest rather than from a
+ * list kept here.
+ *
+ * The manifest encodes "this node has a server load" by negating the index
+ * (`~12` is -13), which is a fact about where data comes from and not about
+ * which component to mount, so it is undone.
+ */
+function nodeIds(key: string): number[] {
+	const entry = dictionary[key as keyof typeof dictionary] as [number, number[]?] | undefined;
+	if (!entry) throw new Error(`offline/routes.ts names ${key}, which SvelteKit does not have`);
+	const [page, layouts = []] = entry;
+	return [0, ...layouts, page < 0 ? ~page : page];
+}
 
-	// Each level sees its parent's data merged into its own, which is what
-	// SvelteKit's own runtime hands a layout and then its page.
+/** The language this reader last chose, else the one their browser asks for. */
+function preferredLang(): Lang {
+	try {
+		const stored = localStorage.getItem('scrutabor-lang');
+		if (stored && (LANGS as string[]).includes(stored)) return stored as Lang;
+	} catch {
+		/* a browser that refuses storage still gets a language */
+	}
+	for (const tag of navigator.languages ?? [navigator.language]) {
+		const code = tag.slice(0, 2).toLowerCase();
+		if ((LANGS as string[]).includes(code)) return code as Lang;
+	}
+	return 'en';
+}
+
+/** The route the hash names, with its query stripped — `?w=` and `?dies=`
+ * change what a page shows, never which page it is. */
+function routePath(): string {
+	return (location.hash.slice(1) || '/').split('?')[0];
+}
+
+let instance: { $destroy: () => void } | null = null;
+let mountedPath: string | null = null;
+const stores = { page: store<unknown>(null), navigating: store(null), updated: store(false) };
+
+/** Routes whose page cannot render without data the corpus may not have. */
+const NEEDS_DATA = new Set(['reading', 'movement', 'lemma']);
+
+/**
+ * What to mount, and what to give it.
+ *
+ * A route the book does not have still renders inside the book: the root
+ * layout, the app chrome and the language layout, with SvelteKit's own error
+ * component (node 1) where the page would be. That is better than a bare
+ * error page — the reader keeps the nav and the way back, and sees it in
+ * their own language — and it also keeps the pyramid four deep, which matters
+ * for the reason the next comment gives.
+ */
+function plan(found: RouteMatch | null, path: string) {
+	const lang = /^\/(pl|en)\b/.exec(path)?.[1] as Lang | undefined;
+	const data = found ? pageData(found) : null;
+	const missing = !found || (data === null && NEEDS_DATA.has(found.name));
+	if (!missing) return { ids: nodeIds(found!.key), layout: layoutFor(found!), data, ok: true };
+
+	const inBook = nodeIds('/app/[lang=lang]');
+	const ids = lang ? [...inBook.slice(0, -1), 1] : [0, 1];
+	const layout = lang ? layoutData(lang, '') : null;
+	return { ids, layout, data: null, ok: false };
+}
+
+/**
+ * Every route's components, resolved once at boot.
+ *
+ * They are dynamic imports in SvelteKit's manifest and all of them are inside
+ * this bundle already, so resolving them is a promise and not a download —
+ * but a promise is enough to lose a race. Awaiting one inside the hashchange
+ * handler left the address bar naming the new route while the old page was
+ * still mounted and still listening, and an arrow key pressed in that gap
+ * paged the book from the prayer the reader had already left.
+ */
+let loaded: Component[] = [];
+
+function render(found: RouteMatch | null, path: string): void {
+	const { ids, layout, data, ok } = plan(found, path);
+	const constructors = ids.map((id) => loaded[id].component);
+
+	const layers: (Record<string, unknown> | null)[] = ids.map(() => null);
+	if (layout) layers[layers.length - 2] = layout;
+	layers[layers.length - 1] = data;
+
 	const merged: Record<string, unknown>[] = [];
 	let acc: Record<string, unknown> = {};
-	for (const entry of data) {
-		acc = { ...acc, ...(entry?.data ?? {}) };
+	for (const layer of layers) {
+		acc = { ...acc, ...(layer ?? {}) };
 		merged.push(acc);
 	}
 
-	// Params are derived from the data the routes now carry (see
-	// [lang=lang]/+layout.server.ts) rather than parsed out of a URL that,
-	// under file://, is a filesystem path.
-	const params = options.params ?? {
-		...(acc.lang ? { lang: acc.lang as string } : {}),
-		...(acc.category ? { category: acc.category as string } : {}),
-		...(acc.slug ? { slug: acc.slug as string } : {}),
-		...(acc.movement ? { movement: acc.movement as string } : {}),
-		...(acc.concept ? { concept: acc.concept as string } : {}),
-		...(acc.lemma ? { lemma: acc.lemma as string } : {})
-	};
-
 	const page = {
-		url: new URL('https://scrutabor.invalid/'),
-		params,
-		route: { id: null },
-		status: 200,
-		error: null,
+		url: pageUrl(),
+		params: ok ? (found?.params ?? {}) : {},
+		route: { id: ok ? (found?.key ?? null) : null },
+		status: ok ? 200 : 404,
+		error: ok ? null : { message: 'not found' },
 		data: acc,
 		form: null,
 		state: {}
 	};
+	// The `$app/state` shim is a plain object the error page reads at render.
+	Object.assign(pageState, page);
 
-	dedupeHead();
-	new root({
-		target: element as HTMLElement,
-		hydrate: true,
-		// asynchronous instantiation, as SvelteKit does it: no flushSync
+	const props: Record<string, unknown> = {
+		page,
+		constructors,
+		components: [],
+		form: null,
+		...Object.fromEntries(constructors.map((_, i) => [`data_${i}`, merged[i] ?? null]))
+	};
+	// The pyramid takes data_0…data_3; a stale one left set would hand a
+	// deeper route's data to a shallower page.
+	for (let i = constructors.length; i < 4; i++) props[`data_${i}`] = null;
+
+	// A FRESH TREE every time, which is what the site gives: there each route
+	// is its own document, so a page starts with no memory of the last one.
+	// Updating in place — what SvelteKit's own client does, and the first
+	// thing tried here — reuses a component whose constructor has not changed,
+	// and two reading pages have the same constructor. The reader then carried
+	// the previous prayer's open about-sheet into the next one, and the
+	// keyboard pager moved two prayers on one press. It also broke outright
+	// when the depth shrank, because Svelte sets the new props before it swaps
+	// the components and a page one level deeper read the null meant for
+	// nobody.
+	//
+	// Mounting again costs the layouts, which are the nav bar and two menus.
+	// The page is the expensive part and is rebuilt either way.
+	instance?.$destroy();
+	stores.page.set(page);
+	instance = new root({
+		target: document.getElementById('scrutabor') as HTMLElement,
+		// Nothing is prerendered here: the shell is an empty frame, so this
+		// mounts rather than hydrates.
+		hydrate: false,
 		sync: false,
-		props: {
-			stores: { page: store(page), navigating: store(null), updated: store(false) },
-			page,
-			constructors: modules.map((m: { component: unknown }) => m.component),
-			components: [],
-			form: null,
-			// One data_N per level of the route tree, however deep it is.
-			// A hard-coded trio held until the book moved under /app and
-			// every reading page gained a fourth level (root layout · app
-			// layout · language layout · page) — the level left without
-			// its data made hydration throw, and no page ever woke.
-			...Object.fromEntries(node_ids.map((_, i) => [`data_${i}`, merged[i] ?? null]))
-		}
-	});
+		props: { stores, ...props }
+	}) as { $destroy: () => void };
+	mountedPath = path;
 }
 
-/**
- * The same shape SvelteKit's own `kit.start(app, element, options)` has, so
- * that preparing a page for offline reading is ONE substitution: the two
- * dynamic imports it awaits are replaced by this object. Everything else in
- * the page SvelteKit wrote — the node ids, the data, the call itself —
- * stands exactly as built.
- */
-/**
- * The head, once the page is alive.
- *
- * Hydration adds a second copy of everything in `<svelte:head>` — canonical,
- * description, the three hreflangs — beside the copy the build wrote.
- * SvelteKit's own client does not, and matching it exactly was not worth
- * more of the framework's internals than this: nothing offline reads a
- * canonical link, so the duplicates are invisible to a reader and only
- * wrong on principle.
- *
- * Called BEFORE hydration, removing what the build wrote so that the live
- * copy — the one that stays correct if anything ever changes it — is the
- * only one left.
- */
-function dedupeHead() {
-	for (const selector of [
-		'link[rel="canonical"]',
-		'link[rel="alternate"]',
-		'meta[name="description"]',
-		'meta[property^="og:"]'
-	]) {
-		document.head.querySelectorAll(selector).forEach((node) => node.remove());
+function navigate(): void {
+	const path = routePath();
+	if (path === '/' || path === '') {
+		location.replace(`#/${preferredLang()}`);
+		return;
 	}
+	// A query-only change is the word panel opening or the day being picked.
+	// Re-rendering there would throw away the page the reader is looking at.
+	if (path === mountedPath) return;
+	render(match(path), path);
+	// A new page starts at its top, as a document load would.
+	window.scrollTo({ top: 0, behavior: 'auto' });
+	navigated();
 }
 
 /**
  * Links, once the page is alive.
  *
- * Rewriting the built HTML gets the links that were prerendered, and misses
- * every link a component renders when it hydrates — the pager writes
- * `href="/pl/orationes/ave-maria"` from its own template, and no
- * post-processing can reach it. So the runtime translates them at the
- * moment of the click: a root-absolute path becomes a path relative to this
- * page, with the `.html` the build already wrote.
- *
- * The depth is stamped into each page by the build script, because a page
- * cannot work it out for itself: under file:// its pathname is wherever the
- * reader happened to unzip the book.
+ * Components write site paths — the pager renders `/app/pl/orationes/ave-maria`
+ * from its own template — and no post-processing of the built HTML can reach
+ * those, because they are written at render. So the runtime translates at the
+ * moment of the click.
  */
 function interceptLinks() {
 	addEventListener(
@@ -171,17 +232,17 @@ function interceptLinks() {
 	);
 }
 
-const kit = {
-	start(_app: unknown, element: Element, options: { node_ids: number[]; data: Payload[] }) {
-		interceptLinks();
-		return start({ ...options, element });
-	}
-};
+async function boot(): Promise<void> {
+	loaded = (await Promise.all(nodes.map((load) => load()))) as Component[];
+	interceptLinks();
+	addEventListener('hashchange', () => navigate());
+	navigate();
+}
 
 declare global {
 	interface Window {
-		__scrutabor_kit?: typeof kit;
+		__scrutabor_boot?: typeof boot;
 	}
 }
 
-window.__scrutabor_kit = kit;
+window.__scrutabor_boot = boot;
