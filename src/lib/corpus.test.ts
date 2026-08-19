@@ -1,12 +1,11 @@
-// Consistency of the vendored corpus snapshot (src/lib/data). The corpus
-// repo runs the authoritative checks; these mirror the ones a stale or
-// partial vendor would break, so a bad snapshot fails CI here instead of
-// surfacing at runtime. Drops away with the artifact pipeline.
+// Consistency of the vendored reader edition (src/lib/data). The corpus repo
+// runs the authoritative checks — including the round trip that proves the
+// edition reconstructs the documents it came from — and these mirror the ones
+// a stale or partial vendor would break, so a bad snapshot fails CI here
+// instead of surfacing at runtime.
 import { describe, expect, it } from 'vitest';
 import { LEXICON, TEXTS } from './corpus';
-import lexiconEn from './data/lexicon.en.json';
-import lexiconLemmata from './data/lexicon.json';
-import lexiconPl from './data/lexicon.pl.json';
+import manifest from './data/manifest.json';
 
 const allWords = (key: string) => TEXTS[key].text.segments.flatMap((s) => s.words ?? []);
 
@@ -21,11 +20,7 @@ describe('vendored corpus snapshot', () => {
 	});
 
 	it('carries one schema version across every document', () => {
-		const versions = new Set<string>([
-			lexiconLemmata.schema_version,
-			lexiconPl.schema_version,
-			lexiconEn.schema_version
-		]);
+		const versions = new Set<string>([manifest.corpus_schema]);
 		for (const key of textKeys) {
 			versions.add(TEXTS[key].text.schema_version);
 			versions.add(TEXTS[key].glosses.pl.schema_version);

@@ -1,4 +1,4 @@
-// The app ships 114 files it did not write. This is what it can say about them.
+// The app ships 117 files it did not write. This is what it can say about them.
 //
 // It lives in scripts/ and not src/lib/ because it reads the filesystem, and
 // `node:fs` under src/ type-checks locally and fails on CI — the lesson
@@ -21,11 +21,19 @@ import { describe, expect, it } from 'vitest';
 const DATA = 'src/lib/data';
 const provenance = JSON.parse(readFileSync(`${DATA}/provenance.json`, 'utf8'));
 
-/** Exactly what the vendor script hashed: every file it wrote, in name order. */
+/** Exactly what the vendor script hashed: every file it wrote, in name order.
+ *
+ * The texts sit in `t/`, so the name hashed is the relative path and not the
+ * basename — `join()` on the vendor side, `t/x.json` here, and the two must
+ * spell it the same way or the digest is a comparison of two different walks.
+ */
 function digestOfVendoredData(): { sha256: string; files: number } {
-	const names = readdirSync(DATA)
-		.filter((name) => name.endsWith('.json') && name !== 'provenance.json')
-		.sort();
+	const names = [
+		...readdirSync(DATA).filter((name) => name.endsWith('.json') && name !== 'provenance.json'),
+		...readdirSync(`${DATA}/t`)
+			.filter((name) => name.endsWith('.json'))
+			.map((name) => `t/${name}`)
+	].sort();
 	const digest = createHash('sha256');
 	for (const name of names) {
 		digest.update(name);
@@ -38,6 +46,9 @@ describe('the corpus this app ships', () => {
 	it('says which commit it came from', () => {
 		expect(provenance.corpus.commit).toMatch(/^[0-9a-f]{40}$/);
 		expect(provenance.schema_version).toMatch(/^\d+\.\d+\.\d+$/);
+		expect(provenance.edition, 'the reader edition names its own version').toMatch(
+			/^\d+\.\d+\.\d+$/
+		);
 	});
 
 	it('was vendored from a clean corpus', () => {

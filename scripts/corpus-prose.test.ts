@@ -18,23 +18,29 @@ function corpusProse(): { where: string; text: string }[] {
 	const dir = 'src/lib/data';
 	const out: { where: string; text: string }[] = [];
 	const LANGS = ['pl', 'en'];
-	for (const file of readdirSync(dir)) {
-		if (!file.endsWith('.json')) continue;
-		const doc = JSON.parse(readFileSync(`${dir}/${file}`, 'utf8'));
-		const at = (k: string) => `${file}:${k}`;
-		// The LEXICON keeps its prose at entries[lemma].note, not words[id].note,
-		// so this walk stepped past all 329 of them until 2026-08-16 — and the
-		// lexicon is vendored and rendered, so every one reached a lemma page.
-		for (const [lemma, entry] of Object.entries(doc.entries ?? {}) as [
+	const read = (path: string) => JSON.parse(readFileSync(`${dir}/${path}`, 'utf8'));
+
+	// The LEXICON keeps its prose at entries[lemma].note, not words[id].note,
+	// so this walk stepped past all 329 of them until 2026-08-16 — and the
+	// lexicon is vendored and rendered, so every one reached a lemma page.
+	const lexicon = read('lex.json');
+	for (const lang of LANGS) {
+		for (const [lemma, entry] of Object.entries(lexicon.s[lang] ?? {}) as [
 			string,
 			Record<string, string>
-		][])
-			if (entry.note) out.push({ where: at(`${lemma}.note`), text: entry.note });
+		][]) {
+			if (entry.note) out.push({ where: `lex.json:${lang}.${lemma}.note`, text: entry.note });
+		}
+	}
 
-		// One document per text since schema 0.14.0, so every prose value is an
-		// object keyed by language rather than a string in a per-language file.
-		// The walk found 393 strings instead of 2,039 the day the corpus joined,
-		// and the floor below is what said so.
+	// One document per text, and every prose value keyed by language: `about`
+	// on the text, `nr` on a rubric segment, `fn` and `nt` on a word. The keys
+	// are short because this is the reader edition — the shape the corpus
+	// emits rather than the shape it stores.
+	for (const file of readdirSync(`${dir}/t`)) {
+		if (!file.endsWith('.json')) continue;
+		const doc = read(`t/${file}`);
+		const at = (k: string) => `${file}:${k}`;
 		const byLang = (value: unknown, where: string) => {
 			for (const lang of LANGS) {
 				const text = (value as Record<string, string> | undefined)?.[lang];
@@ -42,10 +48,16 @@ function corpusProse(): { where: string; text: string }[] {
 			}
 		};
 		byLang(doc.about, at('about'));
-		for (const row of (doc.segments ?? []) as Record<string, unknown>[]) {
-			byLang(row.narrative, at(`${row.id}.narrative`));
-			for (const word of (row.words ?? []) as Record<string, unknown>[])
-				for (const key of ['note', 'function']) byLang(word[key], at(`${word.id}.${key}`));
+		for (const row of (doc.seg ?? []) as Record<string, unknown>[]) {
+			byLang(row.nr, at(`${row.id}.narrative`));
+			for (const key of ['fn', 'nt']) {
+				for (const lang of LANGS) {
+					const byWord = (row[key] as Record<string, Record<string, string>>)?.[lang] ?? {};
+					for (const [id, text] of Object.entries(byWord)) {
+						out.push({ where: at(`${id}.${key}.${lang}`), text });
+					}
+				}
+			}
 		}
 	}
 	return out;

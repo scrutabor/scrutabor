@@ -1,16 +1,23 @@
-// Corpus access: a vendored snapshot of the scrutabor-corpus data (the
-// two-layer format documented in that repo's SCHEMA.md), copied in by
-// scripts/vendor-corpus.mjs. Once the corpus build publishes versioned
-// JSON artifacts, this switches to downloaded packages and the snapshot
-// goes away.
+// Corpus access: the READER EDITION of scrutabor-corpus, vendored by
+// scripts/vendor-corpus.mjs from that repo's own `python build.py`.
 //
-// The index is built from the files rather than written out by hand:
-// every text names its own id, and a hand-kept list of 160 imports beside
-// 160 files is a list that drifts. Server-side only — the reading routes
-// load through +page.server.ts, so none of this reaches the browser.
-import lexiconLemmata from './data/lexicon.json';
-import lexiconPl from './data/lexicon.pl.json';
-import lexiconEn from './data/lexicon.en.json';
+// The corpus is authored to be read by a philologist in a diff — every
+// editorial claim visible, the parse written out at each of 6,143 words. The
+// reader edition is the same book with the apparatus left behind and the
+// three repeated layers — parse, analysis, citation — replaced by indices
+// into tables the whole corpus shares. It is 39% fewer bytes to parse and it
+// puts 412 parse objects on the heap where the corpus has 6,143, because
+// `expandDocument` hands out the table's own object rather than a copy.
+//
+// The index is built from the files rather than written out by hand: every
+// text names its own id, and a hand-kept list of 111 imports beside 111 files
+// is a list that drifts. Server-side only — the reading routes load through
+// +page.server.ts, so none of this reaches the browser.
+import manifest from './data/manifest.json';
+import parseTable from './data/m.json';
+import analysisTable from './data/a.json';
+import citationTable from './data/c.json';
+import lexicon from './data/lex.json';
 import type { Lang } from './i18n';
 import { bindProse } from './polish';
 
@@ -161,12 +168,12 @@ export interface Lexicon {
 }
 
 export const LEXICON: Lexicon = {
-	lemmata: lexiconLemmata.entries as Record<string, LemmaEntry>,
+	lemmata: lexicon.h as unknown as Record<string, LemmaEntry>,
 	senses: {
 		// Polish prose is bound on the way in (lib/polish); the corpus itself
 		// stores ordinary spaces, and its own checks forbid anything else.
-		pl: bindProse(lexiconPl.entries as Record<string, SenseEntry>),
-		en: lexiconEn.entries as Record<string, SenseEntry>
+		pl: bindProse(lexicon.s.pl as unknown as Record<string, SenseEntry>),
+		en: lexicon.s.en as unknown as Record<string, SenseEntry>
 	}
 };
 
@@ -194,107 +201,144 @@ export function narrowLexicon(
 	return { lemmata, senses };
 }
 
-/** Per-language values that hang off a segment, and off a word. */
-const SEGMENT_LANG = [
-	'translation',
-	'translation_citations',
-	'narrative',
-	'narrative_citations'
-] as const;
-const WORD_LANG = ['gloss', 'function', 'function_citations', 'note'] as const;
-const EDITORIAL = [
-	'status',
-	'notes',
-	'source',
-	'analysis_defaults',
-	'analysis_defaults_words'
-] as const;
+/**
+ * The corpus-wide tables, and the point of the whole edition.
+ *
+ * Three layers repeat themselves hard enough to be worth addressing by index
+ * rather than writing out: 412 parses carry 6,143 words, 9 analyses carry
+ * 499 of them, 232 citations carry 1,327 references. Expanding a text hands
+ * out the table's OWN object at every site, so the sharing survives into the
+ * heap rather than ending at the file.
+ */
+const PARSES = parseTable as unknown as Morph[];
+const ANALYSES = analysisTable as unknown as Analysis[];
+const CITATIONS = citationTable as unknown as Citation[];
+
+/** One artifact row: the emitter's short keys, spelled out once here. */
+interface WordCell {
+	i: string;
+	f: string;
+	l: string;
+	p?: string;
+	m: number;
+	h?: string;
+	s?: boolean;
+	a?: number;
+}
+interface SegmentRow {
+	id: string;
+	type: 'verse' | 'rubric';
+	an?: number;
+	w?: WordCell[];
+	g?: Record<Lang, string[]>;
+	fn?: Record<Lang, Record<string, string>>;
+	nt?: Record<Lang, Record<string, string>>;
+	fc?: Record<Lang, Record<string, number[]>>;
+	tr?: Record<Lang, string>;
+	tc?: Record<Lang, number[]>;
+	nr?: Record<Lang, string>;
+	nc?: Record<Lang, number[]>;
+	[key: string]: unknown;
+}
+interface Artifact {
+	id: string;
+	st: string;
+	ad: number;
+	adw?: number;
+	about: Record<Lang, string>;
+	ac?: Record<Lang, number[]>;
+	seg: SegmentRow[];
+	[key: string]: unknown;
+}
+
+const ROW_KEYS = new Set(['w', 'g', 'fn', 'nt', 'fc', 'tr', 'tc', 'nr', 'nc', 'an']);
+const DOC_KEYS = new Set(['st', 'ad', 'adw', 'about', 'ac', 'seg']);
+const LANGS: Lang[] = ['pl', 'en'];
 
 /**
- * One stored document becomes the three the reading code has always read.
+ * One artifact becomes the three documents the reading code reads.
  *
- * The corpus joined the Latin, both gloss layers and the editorial block at
- * schema 0.14.0, and the app stores that document. It does not follow that
- * every surface should learn the new shape on the same day: a component that
+ * The mirror of `expand()` in the corpus's build_reader/emit.py, and it must
+ * stay one: that function is what the corpus's own `verify()` runs over all
+ * 111 texts to prove the edition lost nothing, so the shape this returns is
+ * the shape the corpus has already checked itself against. A component that
  * asks for the Polish gloss of a word is right to keep asking for exactly
- * that. So the whole of the app's knowledge of two shapes lives here, in one
- * function, and everything downstream sees `{ text, glosses }` unchanged.
- *
- * When the reading surfaces move to the reader edition, this goes with them.
+ * that, and does — the whole of the app's knowledge of two shapes is here.
  */
-function splitDocument(doc: Record<string, unknown>): TextEntry {
-	const editorial = (doc.editorial ?? {}) as Record<string, Record<string, unknown>>;
-	const version = doc.schema_version;
+function expandDocument(artifact: Artifact): TextEntry {
+	const cited = (indices?: number[]) => indices?.map((i) => CITATIONS[i]);
 
-	const text: Record<string, unknown> = { schema_version: version };
-	for (const [key, value] of Object.entries(doc)) {
-		if (['schema_version', 'segments', 'editorial', 'about', 'about_citations'].includes(key))
-			continue;
-		text[key] = value;
+	const text: Record<string, unknown> = { schema_version: manifest.corpus_schema };
+	for (const [key, value] of Object.entries(artifact)) {
+		if (!DOC_KEYS.has(key)) text[key] = value;
 	}
-	for (const key of EDITORIAL) if (key in editorial) text[key] = editorial[key];
+	text.status = artifact.st;
+	text.analysis_defaults = ANALYSES[artifact.ad];
+	if (artifact.adw !== undefined) text.analysis_defaults_words = ANALYSES[artifact.adw];
 
-	const layers: Record<Lang, Record<string, unknown>> = { pl: {}, en: {} };
-	for (const lang of ['pl', 'en'] as Lang[]) {
-		const layer: Record<string, unknown> = {
-			schema_version: version,
-			text: doc.id,
+	const layers = Object.fromEntries(
+		LANGS.map((lang) => [
 			lang,
-			status: editorial.status ?? 'working-edition'
-		};
-		for (const key of ['about', 'about_citations'] as const) {
-			const byLang = doc[key] as Record<string, unknown> | undefined;
-			if (byLang && lang in byLang) layer[key] = byLang[lang];
-		}
-		layer.analysis_defaults = editorial.analysis_defaults ?? {};
-		layer.segments = {};
-		layer.words = {};
-		layers[lang] = layer;
-	}
+			{
+				schema_version: manifest.corpus_schema,
+				text: artifact.id,
+				lang,
+				status: artifact.st,
+				about: artifact.about[lang],
+				about_citations: cited(artifact.ac?.[lang]),
+				analysis_defaults: ANALYSES[artifact.ad],
+				segments: {} as Record<string, Record<string, unknown>>,
+				words: {} as Record<string, Record<string, unknown>>
+			}
+		])
+	) as Record<Lang, ReturnType<typeof Object.fromEntries> & Record<string, unknown>>;
 
-	const segments = (doc.segments as Record<string, unknown>[]).map((row) => {
+	text.segments = artifact.seg.map((row) => {
 		const segment: Record<string, unknown> = {};
 		for (const [key, value] of Object.entries(row)) {
-			if ((SEGMENT_LANG as readonly string[]).includes(key) || key === 'words') continue;
-			segment[key] = value;
+			if (!ROW_KEYS.has(key)) segment[key] = value;
 		}
-		const rowId = row.id as string;
-		const segEditorial = (editorial.segments as Record<string, { analysis?: unknown }>)?.[rowId];
-		if (segEditorial?.analysis) segment.analysis = segEditorial.analysis;
-		for (const key of SEGMENT_LANG) {
-			for (const [lang, value] of Object.entries((row[key] ?? {}) as Record<string, unknown>)) {
-				const bucket = layers[lang as Lang].segments as Record<string, Record<string, unknown>>;
-				(bucket[rowId] ??= {})[key] = value;
+		if (row.an !== undefined) segment.analysis = ANALYSES[row.an];
+
+		for (const lang of LANGS) {
+			const bucket: Record<string, unknown> = {};
+			if (row.tr?.[lang]) bucket.translation = row.tr[lang];
+			if (row.tc?.[lang]) bucket.translation_citations = cited(row.tc[lang]);
+			if (row.nr?.[lang]) bucket.narrative = row.nr[lang];
+			if (row.nc?.[lang]) bucket.narrative_citations = cited(row.nc[lang]);
+			if (Object.keys(bucket).length) {
+				(layers[lang].segments as Record<string, unknown>)[row.id] = bucket;
 			}
 		}
-		if (row.words) {
-			segment.words = (row.words as Record<string, unknown>[]).map((cell) => {
-				const word: Record<string, unknown> = {};
-				for (const [key, value] of Object.entries(cell)) {
-					if (!(WORD_LANG as readonly string[]).includes(key)) word[key] = value;
-				}
-				const cellId = cell.id as string;
-				const wordEditorial = (editorial.words as Record<string, { analysis?: unknown }>)?.[cellId];
-				if (wordEditorial?.analysis) word.analysis = wordEditorial.analysis;
-				for (const key of WORD_LANG) {
-					for (const [lang, value] of Object.entries(
-						(cell[key] ?? {}) as Record<string, unknown>
-					)) {
-						const bucket = layers[lang as Lang].words as Record<string, Record<string, unknown>>;
-						(bucket[cellId] ??= {})[key] = value;
-					}
+
+		if (row.w) {
+			segment.words = row.w.map((cell, position) => {
+				const word: Record<string, unknown> = { id: cell.i, form: cell.f, lemma: cell.l };
+				if (cell.p) word.post = cell.p;
+				word.morph = PARSES[cell.m];
+				if (cell.h) word.head = cell.h;
+				if (cell.s) word.substantive = true;
+				if (cell.a !== undefined) word.analysis = ANALYSES[cell.a];
+				for (const lang of LANGS) {
+					const entry: Record<string, unknown> = { gloss: row.g?.[lang]?.[position] ?? '' };
+					const fn = row.fn?.[lang]?.[cell.i];
+					if (fn) entry.function = fn;
+					const note = row.nt?.[lang]?.[cell.i];
+					if (note) entry.note = note;
+					const cites = row.fc?.[lang]?.[cell.i];
+					if (cites) entry.function_citations = cited(cites);
+					(layers[lang].words as Record<string, unknown>)[cell.i] = entry;
 				}
 				return word;
 			});
 		}
 		return segment;
 	});
-	text.segments = segments;
 
 	return {
 		text: text as unknown as TextDocument,
 		glosses: {
-			pl: bindProse(layers.pl as unknown as GlossDocument),
+			pl: bindProse(layers.pl) as unknown as GlossDocument,
 			en: layers.en as unknown as GlossDocument
 		}
 	};
@@ -302,24 +346,27 @@ function splitDocument(doc: Record<string, unknown>): TextEntry {
 
 /**
  * Keyed by `category/slug`, matching the reading route params — derived
- * from each document's own id (`ordinarium.pater-noster`), so vendoring a
+ * from each artifact's own id (`ordinarium.pater-noster`), so vendoring a
  * text is a file copy and nothing else.
  */
 export const TEXTS: Record<string, TextEntry> = buildIndex();
 
 function buildIndex(): Record<string, TextEntry> {
-	const files = import.meta.glob('./data/*.json', { eager: true }) as Record<
+	const files = import.meta.glob('./data/t/*.json', { eager: true }) as Record<
 		string,
 		{ default: unknown }
 	>;
 	const texts: Record<string, TextEntry> = {};
 	for (const [path, module] of Object.entries(files)) {
-		const name = path.slice('./data/'.length, -'.json'.length);
-		// the lexicon files and the provenance record are not texts
-		if (name.startsWith('lexicon') || name === 'provenance') continue;
-		const doc = module.default as Record<string, unknown>;
-		if (!doc.segments) throw new Error(`${name} has no segments — re-run vendor-corpus`);
-		texts[name.replace('.', '/')] = splitDocument(doc);
+		const name = path.slice('./data/t/'.length, -'.json'.length);
+		const artifact = module.default as Artifact;
+		if (!artifact.seg) throw new Error(`${name} has no segments — re-run vendor-corpus`);
+		texts[name.replace('.', '/')] = expandDocument(artifact);
+	}
+	if (Object.keys(texts).length !== manifest.texts.length) {
+		throw new Error(
+			`${Object.keys(texts).length} texts vendored, ${manifest.texts.length} in the manifest`
+		);
 	}
 	return texts;
 }
