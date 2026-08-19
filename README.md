@@ -2,6 +2,8 @@
 
 _Prayer in Latin, with understanding._
 
+**Live at [scrutabor.org](https://scrutabor.org).**
+
 A reading and prayer companion for Latin sacral texts — the traditional
 Roman liturgy (1962) first, the Church's common prayers next — in which
 the text itself is the interface: every Latin word can be tapped for its
