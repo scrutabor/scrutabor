@@ -18,7 +18,7 @@
 	import { browser } from '$app/environment';
 	import { M, type Lang } from '$lib/i18n';
 	import { DAY_PARAM, chooseDay, proper, rememberDay, storedDay } from '$lib/proper.svelte';
-	import { PROPER_DAYS, SEASONS, dayToday } from '$lib/proprium';
+	import { PROPER_DAYS, SEASONS, dayHint, dayToday } from '$lib/proprium';
 
 	// `compact` is the form the control takes on a page being read rather than
 	// chosen from, exactly as the role and Mass-kind picker has: label and
@@ -48,44 +48,27 @@
 		return `${isToday ? `${msgs.dayIsToday} ` : ''}${day.title[lang]}${partial}`;
 	});
 
-	/** When the reader arrives on a day this edition cannot open, the honest
-	 * answer is to say which day it is — better than an empty control, and
-	 * much better than showing a Sunday from another season as though it were
-	 * this one. Two different cases, and they must not be told alike:
+	/** The line under the control. The decision lives in $lib/proprium so that
+	 * every combination of "what today is" and "what the reader picked" can be
+	 * enumerated in a unit test — it got the order wrong once and shipped,
+	 * and a template branch is not a thing that can be enumerated.
 	 *
-	 * · today HAS a Mass of its own and the edition has not written it yet;
-	 * · today is a FERIA, which has no Mass in the temporal table at all, and
-	 *   the Sunday of its week is here.
-	 *
-	 * The second says so without claiming the Sunday's Mass is today's. Which
-	 * Mass an Advent or Lenten feria takes is a rubric this edition has not
-	 * read, and the picker does not guess at it.
-	 *
-	 * BOTH ARE ABOUT THE DEFAULT, and neither has anything to say once the
-	 * reader has chosen. They depend on `chosen` for that reason: without it
-	 * the note that today is not here outlived every choice made after it, and
-	 * since today is outside Advent for eleven months of the year, the hint sat
-	 * frozen on "wybierz inny dzień" while the reader was looking at the day
-	 * they had just picked. */
-	const weekSunday = $derived.by(() => {
-		if (chosen || !now || now.id || now.on) return null;
-		const sunday = now.week && PROPER_DAYS.find((d) => d.id === now?.week?.formulary);
-		return sunday || null;
-	});
-	const missing = $derived(!chosen && now && !now.id && !weekSunday ? (now.on ?? now.week) : null);
-
-	/** The line under the control, as ONE string.
-	 *
-	 * Built here rather than branched in the template, because a branch that
-	 * spans lines puts the newlines and tabs between them into the text a
-	 * reader's tools see: the sentence rendered correctly on the page while
-	 * `textContent` came back with a line break and four tabs in the middle of
-	 * it. Invisible to a reader and a trap for anything that reads the DOM. */
+	 * Built as ONE string rather than branched across template lines: a branch
+	 * that spans lines puts the newlines and tabs between them into the text.
+	 * The sentence rendered correctly on the page while `textContent` came
+	 * back with a line break and four tabs in the middle of it. */
 	const hint = $derived.by(() => {
-		if (chosen) return msgs.dayHint.chosen;
-		if (weekSunday) return `${msgs.dayWeekOf} ${weekSunday.title[lang]}`;
-		if (missing) return msgs.dayAhead;
-		return msgs.dayHint.none;
+		const which = dayHint(chosen, now);
+		switch (which.kind) {
+			case 'chosen':
+				return msgs.dayHint.chosen;
+			case 'week':
+				return `${msgs.dayWeekOf} ${which.sunday.title[lang]}`;
+			case 'ahead':
+				return msgs.dayAhead;
+			default:
+				return msgs.dayHint.none;
+		}
 	});
 
 	// On arrival, and after a history traversal. The URL wins where it

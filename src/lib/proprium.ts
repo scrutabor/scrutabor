@@ -163,3 +163,45 @@ export function dayToday(when: Date = new Date()): {
 export function artifactPath(day: string, lang: Lang): string {
 	return `/artifacts/proprium/${lang}/${day}.json`;
 }
+
+/** What today is, as `dayToday` reports it. */
+export type Today = ReturnType<typeof dayToday>;
+
+/**
+ * Which line belongs under the day picker.
+ *
+ * A DECISION, and therefore a function rather than four branches in a
+ * template. It got the order wrong once and shipped: the two notes about
+ * today were derived from the clock alone and printed ahead of the branch
+ * that reads the choice, so a reader who picked a day was still told that
+ * today's formulary is not here — for eleven months of the year, since that
+ * is how long today spends outside the Sundays this edition carries.
+ *
+ * The order is what the control is DOING, then what it would do if left
+ * alone:
+ *
+ * · `chosen` — the reader picked a day, and that is the whole answer.
+ * · `week` — nothing is picked, and today is a FERIA, which has no Mass in
+ *   the temporal table at all. The week's Sunday is named and nothing is
+ *   claimed: which Mass an Advent or Lenten feria takes is a rubric this
+ *   edition has not read.
+ * · `ahead` — nothing is picked, today HAS a Mass of its own, and this
+ *   edition has not written it yet.
+ * · `none` — nothing is picked and nothing is owed. Today is either carried
+ *   already or is a day the picker has no more to say about.
+ */
+export type DayHint =
+	{ kind: 'chosen' } | { kind: 'week'; sunday: ProperDay } | { kind: 'ahead' } | { kind: 'none' };
+
+export function dayHint(chosen: string, now: Today | null): DayHint {
+	if (chosen) return { kind: 'chosen' };
+	if (!now || now.id) return { kind: 'none' };
+	if (!now.on) {
+		// A feria. It is worth naming only if the edition can open the Sunday
+		// it belongs to — otherwise the reader is told about a week they
+		// cannot read either, which says nothing.
+		const sunday = now.week && dayById(now.week.formulary);
+		return sunday ? { kind: 'week', sunday } : { kind: 'ahead' };
+	}
+	return { kind: 'ahead' };
+}
