@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { M, type Lang } from '$lib/i18n';
+	import { writeStored } from '$lib/storage';
 
 	let { lang }: { lang: Lang } = $props();
 
@@ -19,7 +20,7 @@
 		document
 			.querySelector('meta[name="theme-color"]')
 			?.setAttribute('content', dark ? '#1a1611' : '#f7f1e6');
-		localStorage.setItem('scrutabor-theme', theme);
+		writeStored('scrutabor-theme', theme);
 	}
 </script>
 

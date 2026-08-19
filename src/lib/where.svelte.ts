@@ -13,6 +13,8 @@
  * and puts it here, so every surface reads the same fact rather than
  * deriving it from something that is only sometimes true.
  */
+import { writeStored } from '$lib/storage';
+
 export const where = $state({ path: '' });
 
 /**
@@ -26,5 +28,5 @@ export const where = $state({ path: '' });
 export function adoptLanguage(lang: string, path: string): void {
 	where.path = path;
 	document.documentElement.lang = lang;
-	localStorage.setItem('scrutabor-lang', lang);
+	writeStored('scrutabor-lang', lang);
 }

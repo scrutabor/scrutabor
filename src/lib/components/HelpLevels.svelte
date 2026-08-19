@@ -1,18 +1,19 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { M, type Lang } from '$lib/i18n';
+	import { readStored, writeStored } from '$lib/storage';
 
 	let { lang, value = $bindable(2) }: { lang: Lang; value?: number } = $props();
 
 	onMount(() => {
-		const raw = localStorage.getItem('scrutabor-help');
+		const raw = readStored('scrutabor-help');
 		if (raw === null) return;
 		const stored = Number(raw);
 		if (Number.isInteger(stored)) value = Math.max(0, Math.min(stored, 2));
 	});
 
 	function persist() {
-		localStorage.setItem('scrutabor-help', String(value));
+		writeStored('scrutabor-help', String(value));
 	}
 </script>
 

@@ -15,6 +15,7 @@
 // in, and the default should be the common case rather than the simple one.
 
 import { browser } from '$app/environment';
+import { readStored, writeStored } from '$lib/storage';
 import type { MassForm } from '$lib/corpus';
 
 export const MASS_FORMS = ['cantu', 'lecta'] as const;
@@ -23,7 +24,7 @@ const KEY = 'scrutabor-mass-form';
 
 function stored(): MassForm {
 	if (!browser) return 'cantu';
-	const saved = localStorage.getItem(KEY);
+	const saved = readStored(KEY);
 	return (MASS_FORMS as readonly string[]).includes(saved ?? '') ? (saved as MassForm) : 'cantu';
 }
 
@@ -38,7 +39,7 @@ export const massForm = {
 	},
 	set(next: MassForm) {
 		current = next;
-		if (browser) localStorage.setItem(KEY, next);
+		if (browser) writeStored(KEY, next);
 	}
 };
 

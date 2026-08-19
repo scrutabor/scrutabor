@@ -1,4 +1,5 @@
 import { browser } from '$app/environment';
+import { readStored, writeStored } from '$lib/storage';
 
 /** The text size, as three steps rather than a slider: it is set once and
  * it wants to be predictable, and three named values are testable in a way
@@ -33,8 +34,10 @@ const KEY = 'scrutabor-reading';
 
 function stored(): Step {
 	if (!browser) return 'normal';
-	const raw = localStorage.getItem(KEY);
-	return raw && raw in STEPS ? (raw as Step) : 'normal';
+	const raw = readStored(KEY);
+	// hasOwn, not `in`: `in` walks the prototype chain, so a stored
+	// "constructor" would clear the root font size.
+	return raw && Object.hasOwn(STEPS, raw) ? (raw as Step) : 'normal';
 }
 
 /** One number: every size in the app is a multiple of the root. */
@@ -58,7 +61,7 @@ export const reading = (() => {
 		set(next: Step) {
 			value = next;
 			apply(next);
-			if (browser) localStorage.setItem(KEY, next);
+			if (browser) writeStored(KEY, next);
 		},
 		/** One button, three steps: the nav has room for an icon, not a
 		 * segmented control, and the reader is choosing along one axis. */

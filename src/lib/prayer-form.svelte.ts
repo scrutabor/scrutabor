@@ -3,6 +3,7 @@
 // rather than a disclosure that should reset every time the page is opened.
 
 import { browser } from '$app/environment';
+import { readStored, writeStored } from '$lib/storage';
 
 export const PRAYER_FORMS = ['basic', 'extended'] as const;
 export type PrayerForm = (typeof PRAYER_FORMS)[number];
@@ -11,7 +12,7 @@ const KEY = 'scrutabor-prayer-form';
 
 function stored(): PrayerForm {
 	if (!browser) return 'basic';
-	const saved = localStorage.getItem(KEY);
+	const saved = readStored(KEY);
 	return (PRAYER_FORMS as readonly string[]).includes(saved ?? '')
 		? (saved as PrayerForm)
 		: 'basic';
@@ -27,7 +28,7 @@ export const prayerForm = {
 	},
 	set(next: PrayerForm) {
 		current = next;
-		if (browser) localStorage.setItem(KEY, next);
+		if (browser) writeStored(KEY, next);
 	}
 };
 

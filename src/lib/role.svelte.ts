@@ -11,6 +11,7 @@
 // visits, not chrome that sits over the text while they pray.
 
 import { browser } from '$app/environment';
+import { readStored, writeStored } from '$lib/storage';
 import type { MassForm, Segment } from '$lib/corpus';
 
 export const ROLES = ['populus', 'minister', 'sacerdos'] as const;
@@ -20,7 +21,7 @@ const KEY = 'scrutabor-role';
 
 function stored(): Role {
 	if (!browser) return 'populus';
-	const saved = localStorage.getItem(KEY);
+	const saved = readStored(KEY);
 	return (ROLES as readonly string[]).includes(saved ?? '') ? (saved as Role) : 'populus';
 }
 
@@ -37,7 +38,7 @@ export const role = {
 	},
 	set(next: Role) {
 		current = next;
-		if (browser) localStorage.setItem(KEY, next);
+		if (browser) writeStored(KEY, next);
 	}
 };
 
