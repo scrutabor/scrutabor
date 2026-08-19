@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { M, type Lang } from '$lib/i18n';
-	import { pageUrl } from '$lib/url';
+	import { langOfPath, pageUrl } from '$lib/url';
 
 	// The client-side error boundary (a stale in-app link to a page that
 	// was never prerendered, for example); direct hits on unknown URLs
@@ -9,11 +9,11 @@
 	// the path being attempted, defaulting to English — and it comes through
 	// $lib/url, because in a downloaded copy the path is in the hash and
 	// `location.pathname` is wherever the reader unzipped the book, which
-	// answered English to a Polish reader every time.
+	// answered English to a Polish reader every time. It is read by SEGMENT
+	// (langOfPath), because a substring test answered Polish to English
+	// readers on /en/lemma/plenus.
 	const lang: Lang = $derived(
-		(typeof location !== 'undefined' ? pageUrl().pathname : page.url.pathname).includes('/pl')
-			? 'pl'
-			: 'en'
+		langOfPath(typeof location !== 'undefined' ? pageUrl().pathname : page.url.pathname)
 	);
 	const message = $derived(page.status === 404 ? M[lang].pageNotFound : M[lang].errorGeneric);
 </script>

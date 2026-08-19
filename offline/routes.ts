@@ -85,7 +85,14 @@ export function match(path: string): RouteMatch | null {
 		const found = route.pattern.exec(clean);
 		if (!found) continue;
 		const params: Record<string, string> = {};
-		route.params.forEach((name, i) => (params[name] = decodeURIComponent(found[i + 1])));
+		try {
+			route.params.forEach((name, i) => (params[name] = decodeURIComponent(found[i + 1])));
+		} catch {
+			// %-garbage in a hash is not a route. Falling through lets the
+			// copy show its own not-found instead of dying before boot on a
+			// URIError — which rendered zero characters and no way back.
+			continue;
+		}
 		return { name: route.name, key: route.key, params, path: clean };
 	}
 	return null;

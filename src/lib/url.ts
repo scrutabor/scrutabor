@@ -24,7 +24,26 @@ function offline(): boolean {
  */
 export function pageUrl(): URL {
 	if (!offline()) return new URL(location.href);
-	return new URL(location.hash.slice(1) || '/', 'https://scrutabor.invalid');
+	try {
+		return new URL(location.hash.slice(1) || '/', 'https://scrutabor.invalid');
+	} catch {
+		// A mangled hash (#//, #/%…) is not a page, and must not take the
+		// copy down before it boots. The root is the honest fallback.
+		return new URL('/', 'https://scrutabor.invalid');
+	}
+}
+
+/** The language a path speaks, read from its SEGMENTS.
+ *
+ * Not a substring test: `'/app/en/lemma/plenus'.includes('/pl')` is true, so
+ * the error page answered Polish to English readers on every lemma beginning
+ * pl- (plenus, plebs, placeat…). English is the default for paths that name
+ * no language, matching the x-default the site declares. */
+export function langOfPath(pathname: string): 'pl' | 'en' {
+	const segments = pathname.split('/');
+	if (segments.includes('en')) return 'en';
+	if (segments.includes('pl')) return 'pl';
+	return 'en';
 }
 
 /** The path and query of a logical URL, without the origin — what a link

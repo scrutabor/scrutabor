@@ -128,3 +128,22 @@ test('the status bar colour follows the chosen theme @online', async ({ page }) 
 	await page.reload();
 	await expect(meta).toHaveAttribute('content', '#1a1611');
 });
+
+test('a mangled hash boots the copy to its 404, not to a blank @folder', async ({ page }) => {
+	// %-garbage in the hash used to throw URIError inside the route matcher
+	// before boot completed: zero characters, zero controls, no way back but
+	// the address bar. A hash that names nothing is a 404, not a crash.
+	await page.goto('/app/pl/lemma/%');
+	await expect(page.locator('.errorpage .status')).toHaveText('404');
+	// the boundary reads the language by segment, in the hash as on the site
+	await expect(page.locator('.errorpage .line')).toContainText('Ta strona nie istnieje.');
+});
+
+test('a hash mangled after boot lands on the 404 too @folder', async ({ page }) => {
+	await page.goto('/app/pl/ordinarium/pater-noster');
+	await expect(page.locator('body')).toContainText('Pater noster');
+	await page.evaluate(() => {
+		location.hash = '#/pl/lemma/%E0%A4%A';
+	});
+	await expect(page.locator('.errorpage .status')).toHaveText('404');
+});
