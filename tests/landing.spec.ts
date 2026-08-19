@@ -325,6 +325,33 @@ test.describe('landing @online', () => {
 		}
 	});
 
+	test('nothing runs off a 320px screen at the largest reading size', async ({ page }) => {
+		// The sweep in small-screens.spec walks the BOOK: every page it names
+		// sits under /app, so the landing and its subpages were the one shape
+		// nobody measured at a phone's width — and two faults were waiting
+		// there at once. The help slider under the specimen never took its
+		// narrow layout, because its container query had no container to
+		// answer and "full translation" ran off the edge of an English phone.
+		// The support page sets its channels as a grid on a track that cannot
+		// break, and pushed the whole page 40px sideways. Largest print on the
+		// narrowest phone is the reader this book is set for.
+		await page.setViewportSize({ width: 320, height: 568 });
+		await page.goto('/pl');
+		await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
+		const damage: string[] = [];
+		for (const path of ['/pl', '/en', '/pl/support', '/en/support']) {
+			await page.goto(path);
+			// the setting took: 22.4px is the largest of the three steps
+			await expect(page.locator('html')).toHaveCSS('font-size', '22.4px');
+			const over = await page.evaluate(() => {
+				const de = document.documentElement;
+				return de.scrollWidth - de.clientWidth;
+			});
+			if (over > 0) damage.push(`${path}: +${over}px`);
+		}
+		expect(damage, `the page scrolls sideways:\n  ${damage.join('\n  ')}`).toEqual([]);
+	});
+
 	test('the footer reaches the public source', async ({ page }) => {
 		await page.goto('/en');
 		await expect(page.getByRole('link', { name: 'source on GitHub' })).toHaveAttribute(

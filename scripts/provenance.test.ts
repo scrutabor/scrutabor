@@ -1,4 +1,5 @@
-// The app ships 117 files it did not write. This is what it can say about them.
+// The app ships the vendored corpus, which it did not write. This is what it
+// can say about those files.
 //
 // It lives in scripts/ and not src/lib/ because it reads the filesystem:
 // `node:fs` under src/ type-checks locally and fails on CI, which is a lesson

@@ -96,6 +96,17 @@
 		   child aligns start — without this the whole block sits left of
 		   the viewport centre on wide screens. */
 		margin-inline: auto;
+		/* A container, so the channel list below can lay itself out by the
+		   room it actually has. The reading size changes that room as much
+		   as the window does: the same phone offers 17rem of column at the
+		   default size and 11.3rem at the largest.
+		   The width goes WITH the container. `container-type: inline-size`
+		   applies `contain: inline-size`, so the contents stop contributing
+		   a width — and the auto inline margins that centre this block also
+		   stop it stretching, which left it sized by contents that no longer
+		   count. It collapsed to a hundred pixels of column. */
+		width: 100%;
+		container-type: inline-size;
 	}
 
 	.lede {
@@ -128,6 +139,27 @@
 		grid-template-columns: subgrid;
 		align-items: baseline;
 		justify-items: start;
+	}
+
+	/* The two columns need 14.6rem: the longer tracker name beside the
+	   widest word of its description. Below that the first track cannot
+	   give way — it is sized to a link, and a link does not break — so the
+	   row carried the page 40px off a 320px screen at the largest reading
+	   size. The description goes under its link instead, which is what a
+	   list of links and notes reads as anyway. */
+	@container (max-width: 15rem) {
+		.channels,
+		.channels li {
+			display: block;
+		}
+
+		.channels li + li {
+			margin-top: 1rem;
+		}
+
+		.channel-note {
+			display: block;
+		}
 	}
 
 	.channels a {

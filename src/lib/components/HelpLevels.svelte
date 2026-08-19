@@ -112,8 +112,14 @@
 	   the track spans beneath them. Breaking "translation" across lines to
 	   keep it inline was the first attempt and it looked broken. The
 	   threshold is in rem, so it grows with the text: what matters is
-	   whether the words fit, not how many device pixels there are. */
-	@container (max-width: 18rem) {
+	   whether the words fit, not how many device pixels there are.
+	   NAMED, as the parts control is. Unnamed, this asks whatever container
+	   happens to stand above it — and on the landing, where the specimen
+	   carries the real slider, nothing did: the query never matched, the
+	   labels never stacked, and "full translation" ran six pixels off the
+	   edge of an English phone. Every surface that holds this control names
+	   the container `help` (app.css, and the landing's specimen). */
+	@container help (max-width: 18rem) {
 		.help {
 			flex-wrap: wrap;
 			/* The row gap has to clear the THUMB, not the track: the track is

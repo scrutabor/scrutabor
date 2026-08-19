@@ -569,8 +569,10 @@ h2 {
 
 .help-row {
 	/* a container, so the slider inside can lay itself out by the room it
-	   actually has — which depends on the text size as much as the window */
-	container-type: inline-size;
+	   actually has — which depends on the text size as much as the window.
+	   NAMED, because the slider stands on the landing too and its query has
+	   to find a container there as well (HelpLevels.svelte). */
+	container: help / inline-size;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -742,7 +744,9 @@ a {
 		align-items: baseline;
 		gap: 2pt 10pt;
 		margin: 5pt 0 0;
-		container-type: normal;
+		/* the name goes with the type: on paper there is no room to answer
+		   and nothing left to answer it */
+		container: none;
 	}
 
 	p {

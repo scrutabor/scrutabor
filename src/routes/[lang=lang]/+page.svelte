@@ -454,7 +454,12 @@
 		text-align: left;
 	}
 
+	/* The slider's own container, as .help-row is inside the book: the
+	   control stacks its labels by the room it has, and on this page it had
+	   no container to ask, so it never stacked and "full translation" ran
+	   off the edge of a 320px screen at the largest reading size. */
 	.specimen-help {
+		container: help / inline-size;
 		margin: 0 0 1.6rem;
 	}
 

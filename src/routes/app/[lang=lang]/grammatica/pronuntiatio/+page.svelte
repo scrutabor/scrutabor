@@ -11,6 +11,15 @@
 	// Rule rows: grapheme, Roman, Polish, example (corpus deep link when we
 	// have one). Kept as data so the table stays honest and greppable.
 
+	// The names of the three value columns, wanted in two places: over the
+	// columns, and beside each value where the table stands as a stack of
+	// blocks instead (see the container query below).
+	const cols = $derived(
+		lang === 'pl'
+			? { roman: 'rzymska', polish: 'polska', example: 'przykład' }
+			: { roman: 'Roman', polish: 'Polish', example: 'example' }
+	);
+
 	// The ~20 symbols a reader meets, each with an anchor word.
 	const symbols: { s: string; pl: string; en: string }[] = bindPlFields([
 		{
@@ -87,22 +96,22 @@
 		<section>
 			<h2 class="smallcaps">{lang === 'pl' ? 'reguły' : 'the rules'}</h2>
 			<div class="table-wrap">
-				<table>
+				<table class="rules">
 					<thead>
 						<tr>
 							<th lang="la">littera</th>
-							<th>{lang === 'pl' ? 'rzymska' : 'Roman'}</th>
-							<th>{lang === 'pl' ? 'polska' : 'Polish'}</th>
-							<th>{lang === 'pl' ? 'przykład' : 'example'}</th>
+							<th>{cols.roman}</th>
+							<th>{cols.polish}</th>
+							<th>{cols.example}</th>
 						</tr>
 					</thead>
 					<tbody>
 						{#each rules as r (r.grapheme)}
 							<tr>
 								<td lang="la">{r.grapheme}</td>
-								<td>{r.roman}</td>
-								<td>{r.polish}</td>
-								<td>
+								<td data-label={cols.roman}>{r.roman}</td>
+								<td data-label={cols.polish}>{r.polish}</td>
+								<td data-label={cols.example}>
 									{#if r.href}
 										<a lang="la" href="/app/{lang}{r.href}">{r.example}</a>
 									{:else}
@@ -162,6 +171,10 @@
 	}
 
 	.table-wrap {
+		/* a container, so the rule table can lay itself out by the room it
+		   actually has — which the reading size changes as much as the
+		   window does */
+		container-type: inline-size;
 		overflow-x: auto;
 	}
 
@@ -205,6 +218,77 @@
 	.sym {
 		white-space: nowrap;
 		font-weight: 500;
+	}
+
+	/* THE RULES, WHERE FOUR COLUMNS WILL NOT FIT. The table wants 16.9rem
+	   of room — the letter, two pronunciations, and an example with its
+	   transcription, which cannot break inside a slash. A 320px phone
+	   offers 17rem of column at the default reading size, 13.7rem at the
+	   middle one and 11.3rem at the largest, so from the middle size up it
+	   kept the example column off the screen behind a bar no phone draws,
+	   and the cell wrapping out there stretched the visible rows around 150
+	   pixels of nothing. Each rule stands as its own block instead, its
+	   columns named in the margin, and every letter of it is on the screen.
+	   The threshold is in rem, so it answers the reading size as well as the
+	   window, and it stands at 18rem rather than 17: a table that fits by
+	   one pixel does not fit. */
+	@container (max-width: 18rem) {
+		.rules thead {
+			display: none;
+		}
+
+		.rules,
+		.rules tbody,
+		.rules tr,
+		.rules td {
+			display: block;
+		}
+
+		.rules tr {
+			padding: 0.55rem 0;
+			border-bottom: 1px solid var(--border);
+		}
+
+		.rules td {
+			padding: 0;
+			border: 0;
+		}
+
+		.rules td:first-child {
+			margin-bottom: 0.25rem;
+			font-weight: 500;
+		}
+
+		/* The column's name beside its value, in the margin the letter
+		   above stands in: three transcriptions in a row say nothing
+		   about which tradition each belongs to. */
+		.rules td[data-label] {
+			position: relative;
+			padding-inline-start: 5.5rem;
+		}
+
+		.rules td[data-label]::before {
+			content: attr(data-label);
+			position: absolute;
+			inset-inline-start: 0;
+			color: var(--ink-soft);
+			font-size: 0.85rem;
+		}
+
+		/* The example takes the whole block and wears its name over it
+		   instead of beside it. In the margin's column it had 130px, and a
+		   transcription broke inside its own slashes there — "…ta.tsi" on
+		   one line and "ˈɔ.nɛ/" on the next, the stress mark parted from
+		   the syllable it marks, which is the one break a pronunciation
+		   page may not print. Nothing breaks at the full width. */
+		.rules td:last-child {
+			padding-inline-start: 0;
+		}
+
+		.rules td:last-child::before {
+			position: static;
+			display: block;
+		}
 	}
 
 	.fine {
