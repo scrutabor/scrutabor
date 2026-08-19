@@ -60,6 +60,41 @@ test('a day this edition has not reached is named, not guessed at', async ({ pag
 	);
 });
 
+test('the note about today gives way to the day the reader picks', async ({ page }) => {
+	// It did not, and the owner found it on the live page. The note explaining
+	// that today's formulary is not here yet was derived from the clock alone,
+	// and sat ahead of the branch that reads the choice — so once today fell
+	// outside the four Sundays this edition carries, which is eleven months of
+	// the year, the hint stayed frozen on "wybierz inny dzień" while the reader
+	// was looking at the day they had just chosen.
+	//
+	// A fixed date OUTSIDE Advent, because that is the state the defect needs
+	// and the real clock only offers it for most of the year rather than all.
+	await asIfItWere(page, '2026-08-19T10:00:00');
+	await page.goto('/app/pl/ordo');
+	const picker = page.locator('.picker.day').first();
+	await expect(picker.locator('.hint')).toHaveText(/wybierz inny dzień/);
+
+	await picker.locator('select').selectOption(DAY);
+	await expect(picker.locator('.hint')).toHaveText('teksty tego dnia wypełniają porządek Mszy');
+
+	// …and it comes back when the choice is dropped, because then it is the
+	// default again and the default is what it describes.
+	await picker.locator('select').selectOption('');
+	await expect(picker.locator('.hint')).toHaveText(/wybierz inny dzień/);
+});
+
+test('choosing a day silences the weekday note too', async ({ page }) => {
+	// The other half of the same rule: a feria names the week it falls in
+	// while nothing is chosen, and says nothing once something is.
+	await asIfItWere(page, '2026-12-15T10:00:00');
+	await page.goto('/app/pl/ordo');
+	const picker = page.locator('.picker.day').first();
+	await expect(picker.locator('.hint')).toHaveText(/ostatnia niedziela to III Niedziela Adwentu/);
+	await picker.locator('select').selectOption(DAY);
+	await expect(picker.locator('.hint')).toHaveText('teksty tego dnia wypełniają porządek Mszy');
+});
+
 test('a day chosen yesterday does not still be showing tomorrow', async ({ page }) => {
 	// Walking the six movements has to keep the day. A choice made last Sunday
 	// must not still be showing Advent in Lent, now that the book can say what
