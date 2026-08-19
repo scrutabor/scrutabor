@@ -17,6 +17,11 @@
      app whose first document sat outside it could not open offline. -->
 <svelte:head>
 	<title>Scrutabor</title>
+	<meta
+		name="description"
+		content="A Latin missal and prayer book with word-by-word analysis. Łaciński mszalik i modlitewnik z analizą słowo po słowie."
+	/>
+	<link rel="canonical" href="https://scrutabor.org/app/" />
 	<link rel="alternate" hreflang="en" href="https://scrutabor.org/app/en" />
 	<link rel="alternate" hreflang="pl" href="https://scrutabor.org/app/pl" />
 	<link rel="alternate" hreflang="x-default" href="https://scrutabor.org/app/en" />

@@ -200,6 +200,11 @@
 <svelte:head>
 	<title>{t.title}</title>
 	<meta name="description" content={t.description} />
+	<!-- Spelled out rather than left to the scrapers' title fallback: the
+	     landing is the page an announcement links, so its card is the one
+	     that has to be right everywhere. -->
+	<meta property="og:title" content={t.title} />
+	<meta property="og:description" content={t.description} />
 </svelte:head>
 
 <div class="page centered landing">

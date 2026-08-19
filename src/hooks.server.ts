@@ -19,8 +19,12 @@ const BEACON = env.CF_BEACON_TOKEN ?? '';
 
 // Stamps the page language into <html lang> at render time — with full
 // prerendering this runs at build, so every static page carries its language.
+// The pages with no language of their own — the two routers, the 404 — fall
+// back to English: it is their declared x-default, and the 404 itself speaks
+// both languages English first. The old 'pl' default put lang="pl" on the
+// PWA's start_url.
 export const handle: Handle = ({ event, resolve }) =>
 	resolve(event, {
 		transformPageChunk: ({ html }) =>
-			html.replace('%app.lang%', event.params.lang ?? 'pl').replace('%app.beacon%', BEACON)
+			html.replace('%app.lang%', event.params.lang ?? 'en').replace('%app.beacon%', BEACON)
 	});

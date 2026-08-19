@@ -812,3 +812,15 @@ a {
 	line-height: 1.6;
 	text-align: center;
 }
+
+/* The site's own quieter version: the prerendered page reads fine without
+   scripting, so this is a note about the controls, not an apology for the
+   page. Both language layouts render it, so the rule lives here once. */
+.noscript-note {
+	max-width: 34rem;
+	margin: 1rem auto 0;
+	padding: 0 1.5rem;
+	text-align: center;
+	color: var(--ink-soft);
+	font-size: 0.95rem;
+}
