@@ -91,7 +91,7 @@
 			open: 'Open the prayer book',
 			openNote: 'in the browser, no installation',
 			zipTitle: 'ZIP file',
-			zipNote: 'a copy to download',
+			zipNote: 'a copy to keep',
 			soonNote: 'coming soon',
 			specimenLead:
 				'The verse Scrutabor takes its name from, exactly as it stands in the prayer book: the help slider moves from bare Latin to a full translation, and a tap on any word opens its analysis.',
@@ -326,7 +326,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		/* FROM THE TOP, not from the middle. The tiles are all one height,
+		   but their contents were centred inside it — so the download tile,
+		   which carries a fourth line naming the edition, pushed its own
+		   icon and title nine pixels above every other tile's. The boxes
+		   lined up and nothing inside them did, which is the misalignment
+		   the owner saw (2026-08-07). Aligned to the top, the icons share a
+		   line, the names share a line, and the version simply hangs below
+		   its own. */
+		justify-content: flex-start;
 		gap: 0.1rem;
 		padding: 0.7rem 0.9rem 0.8rem;
 		border: 1px solid var(--border);
@@ -403,9 +411,17 @@
 	/* Not ready yet: named, and unmistakably inert — unfilled, its frame
 	   dashed like a plate reserved on the page, and not a link, because a
 	   door that opens nothing must not invite the hand. */
+	/* THE THREE THAT ARE NOT DOORS YET. A border and a surface are what
+	   say "press me", so the announced channels have neither: they stand in
+	   the row, named, as the plates they will become, and nothing about them
+	   invites the hand. A dashed border said the same thing too quietly to
+	   read at a glance (owner, 2026-08-07: "the unavailable tiles look
+	   active"). They are also not links, which the markup has always had
+	   right — this is the part a reader sees rather than the part a screen
+	   reader hears. */
 	.way.soon {
-		background: transparent;
-		border-style: dashed;
+		background: none;
+		border-color: transparent;
 	}
 
 	.way.soon .way-title {

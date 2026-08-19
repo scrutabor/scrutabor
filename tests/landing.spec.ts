@@ -200,6 +200,62 @@ test.describe('landing @online', () => {
 		}
 	});
 
+	test('the row of ways lines up, whatever each tile carries', async ({ page }) => {
+		// The tiles were all one height and their contents were centred inside
+		// it, so the download tile — the only one with a fourth line, naming
+		// the edition — sat nine pixels above every other tile's icon and
+		// title. The boxes lined up and nothing in them did, which is what the
+		// owner saw (2026-08-07) and what no test could see. Both languages,
+		// because the English notes are the longer ones.
+		for (const lang of ['pl', 'en']) {
+			await page.setViewportSize({ width: 1280, height: 900 });
+			await page.goto(`/${lang}`);
+			const bands = await page.locator('.ways').evaluate((row) => {
+				const round = (n: number) => Math.round(n);
+				return [...row.querySelectorAll('.way')].map((way) => ({
+					icon: round(way.querySelector('svg')!.getBoundingClientRect().top),
+					title: round(way.querySelector('.way-title')!.getBoundingClientRect().top),
+					note: round(way.querySelector('.way-note')!.getBoundingClientRect().top)
+				}));
+			});
+			expect(bands.length).toBe(5);
+			for (const band of ['icon', 'title', 'note'] as const) {
+				const tops = bands.map((b) => b[band]);
+				// A pixel of slack, and no more. Icons of different shapes round
+				// their heights differently and that is invisible; the defect
+				// this holds was nine pixels, and so is anything like it.
+				expect(
+					Math.max(...tops) - Math.min(...tops),
+					`${lang}: the ${band}s do not share a line — ${tops.join(', ')}`
+				).toBeLessThanOrEqual(1);
+			}
+		}
+	});
+
+	test('the ways that are not open yet are not dressed as buttons', async ({ page }) => {
+		// A border and a filled surface are what say "press me". The announced
+		// channels have neither — they stand in the row as the names they are
+		// (owner, 2026-08-07: "the unavailable tiles look active"). The markup
+		// has always had them as non-links, which is the half a screen reader
+		// hears; this is the half everyone else sees.
+		await page.goto('/pl');
+		const dressed = await page.locator('.ways').evaluate((row) =>
+			[...row.querySelectorAll('.way')].map((way) => {
+				const style = getComputedStyle(way);
+				return {
+					soon: way.classList.contains('soon'),
+					bordered: style.borderTopWidth !== '0px' && style.borderTopColor !== 'rgba(0, 0, 0, 0)',
+					filled: style.backgroundColor !== 'rgba(0, 0, 0, 0)'
+				};
+			})
+		);
+		for (const way of dressed) {
+			if (way.soon)
+				expect(way.bordered || way.filled, 'an announced channel looks live').toBe(false);
+			else expect(way.bordered, 'an open door has lost its plate').toBe(true);
+		}
+	});
+
 	test('the download door points at its own version of the release asset', async ({ page }) => {
 		// The zip travels with each GitHub release under a versioned name,
 		// and the landing (deployed only on release) links the exact asset
@@ -212,7 +268,7 @@ test.describe('landing @online', () => {
 			'href',
 			`https://github.com/scrutabor/scrutabor/releases/download/v${version}/Scrutabor-v${version}.zip`
 		);
-		await expect(zip).toContainText('a copy to download');
+		await expect(zip).toContainText('a copy to keep');
 		await expect(zip).toContainText(`v${version}`);
 	});
 
