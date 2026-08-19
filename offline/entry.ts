@@ -27,7 +27,7 @@ import { LANGS, type Lang } from '$lib/i18n';
 import { pageUrl } from '$lib/url';
 import { layoutData } from '$lib/loaders';
 import { layoutFor, match, pageData, type RouteMatch } from './routes';
-import { asFile, navigated } from './shims/navigation';
+import { asFile, go, navigated } from './shims/navigation';
 import { page as pageState } from './shims/state';
 
 type Component = { component: unknown };
@@ -226,7 +226,7 @@ function interceptLinks() {
 			const href = anchor?.getAttribute('href');
 			if (!href || !href.startsWith('/')) return;
 			event.preventDefault();
-			location.href = asFile(href);
+			go(asFile(href));
 		},
 		true
 	);

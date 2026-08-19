@@ -51,6 +51,34 @@ export function asFile(href: string): string {
 }
 
 /**
+ * Going somewhere, from a link click or from code.
+ *
+ * The address changes and the router runs IN THE SAME TASK. Assigning a hash
+ * updates `location` at once but queues `hashchange` for later, and until that
+ * arrives the address names a page that is not yet on screen — so a key
+ * pressed in the gap is answered by the page the reader has already left. The
+ * pager did exactly that: one press after a link click walked two prayers on,
+ * because the prayer left behind was still listening while the address said
+ * otherwise. It failed on CI, where the gap is wider, and passed on every
+ * local run until the sequence was reproduced directly.
+ *
+ * The browser's own `hashchange` still arrives afterwards. The router sees the
+ * route it has already rendered and does nothing, which is what makes
+ * dispatching this one safe rather than a second navigation.
+ */
+export function go(target: string) {
+	if (!target.startsWith('#')) {
+		location.href = target;
+		return;
+	}
+	// A reader who asks for the page they are on should not be met with
+	// nothing at all, and an unchanged hash fires no event of its own.
+	if (target === location.hash) return;
+	location.href = target;
+	dispatchEvent(new HashChangeEvent('hashchange'));
+}
+
+/**
  * A real navigation, because that is what every link does here.
  *
  * The pager moves with the arrow keys and the language menu switches through
@@ -59,11 +87,7 @@ export function asFile(href: string): string {
  * were broken by it.
  */
 export async function goto(url: string | URL) {
-	const target = asFile(String(url));
-	// Assigning an unchanged hash fires no event, and a reader who asks for
-	// the page they are on should not be met with nothing at all.
-	if (target === location.hash) return;
-	location.href = target;
+	go(asFile(String(url)));
 }
 
 /**

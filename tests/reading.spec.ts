@@ -702,6 +702,25 @@ test('a tapped word near the viewport bottom rises above the panel', async ({ pa
 		.toBe(true);
 });
 
+test('the folder answers a key with the page it is showing @folder', async ({ page }) => {
+	// Changing the hash updates the address at once and queues `hashchange`
+	// for a later task. Until that arrives the address names a page not yet on
+	// screen, and the page the reader has left is still listening — so one
+	// arrow key after a link click walked TWO prayers on. It failed on CI,
+	// where the gap is wider, and passed on every local run until the sequence
+	// was driven directly, which is what this does: the click and the key in
+	// one task, the widest the gap can be.
+	await page.goto('/app/pl/ordinarium/confiteor');
+	await page.evaluate(() => {
+		const link = [...document.querySelectorAll('.pager a')].find((a) =>
+			/Nóminis Iesu/.test(a.textContent ?? '')
+		) as HTMLAnchorElement;
+		link.click();
+		dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+	});
+	await expect(page).toHaveURL(atRoute('ordinarium/confiteor'));
+});
+
 test('the pager walks the book in liturgical order', async ({ page }) => {
 	await page.goto('/app/pl/ordinarium/gloria');
 	const pager = page.locator('.pager');
