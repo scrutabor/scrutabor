@@ -10,11 +10,19 @@
 		lang === 'pl'
 			? {
 					lead: 'Zestawienie obejmuje źródła przywołane w objaśnieniach widocznych dla czytelnika. Dokładny odsyłacz pozostaje także przy każdym objaśnieniu. Świadkowie tekstu i aparat krytyczny są udostępnione osobno w repozytorium korpusu.',
-					usedAt: 'przywołano przy'
+					usedAt: 'przywołano przy',
+					typeface: [
+						'Wydanie złożono krojem EB Garamond (Georg Duffner, Octavio Pardo), udostępnionym na licencji ',
+						'.'
+					]
 				}
 			: {
 					lead: 'This list contains the sources cited by explanations visible to the reader. The exact reference also remains beside each explanation. Textual witnesses and the critical apparatus are published separately in the corpus repository.',
-					usedAt: 'cited at'
+					usedAt: 'cited at',
+					typeface: [
+						'This edition is set in EB Garamond (Georg Duffner, Octavio Pardo), released under the ',
+						'.'
+					]
 				}
 	);
 	const lead = $derived(lang === 'pl' ? bindProse(copy.lead) : copy.lead);
@@ -69,6 +77,19 @@
 				</section>
 			{/each}
 		</div>
+
+		<!-- The face itself is a source: the OFL asks that its licence travel
+		     with the font, and the subsets this edition ships are the font.
+		     The URL is absolute so the sentence stays true in a downloaded
+		     copy, which carries the same text as OFL.txt beside its README. -->
+		<p class="fine typeface">
+			{copy.typeface[0]}<a
+				class="external"
+				href="https://scrutabor.org/OFL.txt"
+				target="_blank"
+				rel="external noopener license">SIL Open Font License</a
+			>{copy.typeface[1]}
+		</p>
 	</main>
 </div>
 
@@ -131,5 +152,11 @@
 
 	.uses {
 		color: var(--ink-soft);
+	}
+
+	.typeface {
+		margin-top: 2.2rem;
+		color: var(--ink-soft);
+		font-size: 0.95rem;
 	}
 </style>

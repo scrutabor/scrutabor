@@ -15,9 +15,11 @@
 //   node scripts/build-offline.mjs --zip     → …and Scrutabor-v<version>.zip
 //
 // What the reader opens has to be obvious at a glance, so the folder holds
-// three things and no more:
+// four things and no more:
 //
 //   README.txt     what this is
+//   OFL.txt        the typeface's licence — EB Garamond travels in app/,
+//                  and the Open Font License asks that its text travel too
 //   index.html     ← the one to open
 //   app/           the runtime, which nobody needs to look at
 //
@@ -152,19 +154,37 @@ for (const path of walk(OUT)) {
 	}
 }
 
+// Both languages, Polish first: the zip is offered from the Polish landing
+// too, and the shell's own <noscript> above has always spoken both. The
+// JavaScript sentence is the README earning the noscript's honesty — this
+// file is what a reader opens BEFORE index.html.
 writeFileSync(
 	join(OUT, 'README.txt'),
-	`Scrutabor — a Latin missal and prayer book with a word-by-word layer.
+	`Scrutabor — łaciński mszalik i modlitewnik z warstwą słowo po słowie.
+Scrutabor — a Latin missal and prayer book with a word-by-word layer.
 Edition v${VERSION}.
 
-    Open index.html.
+    Otwórz / Open: index.html
 
-It works in any browser, with no internet: tap a word for its dictionary
-entry and its grammar, move the slider for more or less help, choose
-whose parts you are following at Mass.
+Działa w każdej przeglądarce, bez internetu. Potrzebuje tylko włączonego
+JavaScriptu, bo tę kopię księgi składa sama przeglądarka. Dotknij słowa,
+aby zobaczyć jego hasło i gramatykę. Suwak daje więcej lub mniej pomocy.
+Można też wybrać, czyje części Mszy się śledzi.
+
+It works in any browser, with no internet. It only needs JavaScript
+turned on, because the browser itself assembles this copy of the book.
+Tap a word for its dictionary entry and its grammar, move the slider for
+more or less help, choose whose parts you are following at Mass.
+
+Folder "app" to sama księga — nie ma w nim nic do oglądania ani do
+instalowania. OFL.txt to licencja kroju pisma EB Garamond.
 
 The "app" folder holds the book itself. There is nothing to look at in
-there, and nothing to install.
+there, and nothing to install. OFL.txt is the licence of the typeface,
+EB Garamond.
+
+Ta kopia jest Twoja. Nic stąd nie łączy się z siecią, nic nie wygasa,
+a księga będzie działać, nawet jeśli strona kiedyś przestanie.
 
 This copy is yours. Nothing here calls home, nothing expires, and it will
 keep working if the website one day does not.
@@ -172,6 +192,11 @@ keep working if the website one day does not.
 scrutabor.org
 `
 );
+
+// The reading face rides inside the runtime as data URIs, so the font IS
+// distributed with this folder, and the OFL's one ask is that its text
+// come along. The same text the site serves at /OFL.txt.
+writeFileSync(join(OUT, 'OFL.txt'), readFileSync('src/lib/fonts/LICENSE'));
 
 const bytes = [...walk(OUT)].reduce((sum, path) => sum + statSync(path).size, 0);
 console.log(`${OUT}/ — ${(bytes / 1048576).toFixed(1)} MB`);
