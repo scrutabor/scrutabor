@@ -219,3 +219,60 @@ test('a slow day still says it is loading @online', async ({ page }) => {
 	await expect(page.locator('.picker.day .state')).toBeVisible();
 	await expect(page.locator('.picker.day .state')).toBeHidden({ timeout: 10_000 });
 });
+
+test('a corrected pick is not overtaken by the first one @online', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	// The reader picks a Sunday and corrects themselves while the first
+	// artifact is still in flight. Responses come back in whatever order the
+	// network pleases — and the FIRST one used to land last and win, so the
+	// control read one Sunday over another Sunday's Introit, eight times out
+	// of eight in review. The first day's artifact is held long enough that
+	// the wrong order is certain rather than likely.
+	await page.route('**/artifacts/proprium/en/dominica-i-adventus.json', async (route) => {
+		await new Promise((r) => setTimeout(r, 1200));
+		await route.continue();
+	});
+	await page.goto('/app/en/ordo/catechumenorum');
+	await settled(page);
+	await page.selectOption('.picker.day select', 'dominica-i-adventus');
+	await page.waitForTimeout(100);
+	await page.selectOption('.picker.day select', 'dominica-ii-adventus');
+	// Advent II's own Introit…
+	await expect(page.locator('body')).toContainText('Pópulus Sion', { timeout: 10_000 });
+	// …and still Advent II's after the held response finally lands.
+	await page.waitForTimeout(1500);
+	await expect(page.locator('.picker.day select')).toHaveValue('dominica-ii-adventus');
+	await expect(page.locator('body')).toContainText('Pópulus Sion');
+	await expect(page.locator('body')).not.toContainText('Ad te levávi');
+});
+
+test('a mangled ?dies= is answered and not remembered', async ({ page }) => {
+	// Pinned to a Sunday the edition carries, because the second half of the
+	// question is whether the book still opens on today AFTER meeting the bad
+	// link — one visit used to write the value into storage and blank the
+	// day until midnight.
+	await asIfItWere(page, '2026-12-13T10:00:00');
+	await page.goto('/app/pl/ordo/catechumenorum?dies=garbage-day');
+	await settled(page);
+	// The dayless view: an id that names nothing is a mangled link, and
+	// "could not be loaded" would promise a retry that cannot succeed.
+	await expect(page.locator('.picker.day select').first()).toHaveValue('');
+	await expect(page.locator('.picker.day .state')).toHaveCount(0);
+	await page.goto('/app/pl/ordo');
+	await settled(page);
+	await expect(page.locator('.picker.day select').first()).toHaveValue('dominica-iii-adventus');
+});
+
+test('a real day this edition has not written says so', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	// in-octava-nativitatis is in the calendar's own table — a REAL day, not
+	// a typo — so the answer names the absence instead of reporting a failure
+	// or silently substituting another Mass.
+	await page.goto('/app/en/ordo/catechumenorum?dies=in-octava-nativitatis');
+	await settled(page);
+	await expect(page.locator('.picker.day .state').first()).toHaveText('not yet in this edition');
+	// and it is not remembered: the next arrival is the reader's own book
+	await page.goto('/app/en/ordo');
+	await settled(page);
+	await expect(page.locator('.picker.day select').first()).toHaveValue('');
+});

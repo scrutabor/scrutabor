@@ -55,6 +55,9 @@ export interface Messages {
 	dayNone: string;
 	dayLoading: string;
 	dayFailed: string;
+	/** A real day of the calendar whose Mass this edition has not written.
+	 * A different absence from `dayFailed`: nothing went wrong. */
+	dayUnwritten: string;
 	dayPartial: string;
 	dayIsToday: string;
 	dayAhead: string;
@@ -162,6 +165,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayNone: 'bez formularza',
 		dayLoading: 'wczytywanie',
 		dayFailed: 'nie udało się wczytać',
+		dayUnwritten: 'jeszcze nie w tym wydaniu',
 		dayPartial: '(część tekstów)',
 		dayIsToday: 'dziś ·',
 		dayAhead: 'formularza na dziś jeszcze tu nie ma — wybierz inny dzień',
@@ -287,6 +291,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayNone: 'no formulary',
 		dayLoading: 'loading',
 		dayFailed: 'could not be loaded',
+		dayUnwritten: 'not yet in this edition',
 		dayPartial: '(some texts)',
 		dayIsToday: 'today ·',
 		dayAhead: 'today’s formulary is not here yet — choose another day',

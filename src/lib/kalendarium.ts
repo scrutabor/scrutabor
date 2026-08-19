@@ -91,3 +91,12 @@ export function dayOf(iso: string): { on: Kalendar | null; week: Kalendar | null
 
 /** The years the table covers, as the manifest declares them. */
 export const COVERS: [number, number] = [SPAN[0], SPAN[SPAN.length - 1]];
+
+/** Whether the table knows a formulary by this name, on any day of any year.
+ *
+ * The picker uses it to tell two absences apart: a REAL day this edition has
+ * not written yet, and an id that names nothing — a mangled link. The first
+ * deserves a note, the second the dayless view. */
+export function formularyExists(id: string): boolean {
+	return (kal.f as string[]).includes(id);
+}

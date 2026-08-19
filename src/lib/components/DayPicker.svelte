@@ -18,7 +18,7 @@
 	import { browser } from '$app/environment';
 	import { M, type Lang } from '$lib/i18n';
 	import { DAY_PARAM, chooseDay, proper, rememberDay, storedDay } from '$lib/proper.svelte';
-	import { PROPER_DAYS, SEASONS, dayHint, dayToday } from '$lib/proprium';
+	import { PROPER_DAYS, SEASONS, dayById, dayHint, dayToday } from '$lib/proprium';
 
 	// `compact` is the form the control takes on a page being read rather than
 	// chosen from, exactly as the role and Mass-kind picker has: label and
@@ -85,14 +85,34 @@
 	// of a page carries the day with it (`dayHref` in lib/proper.svelte).
 	export function applyFromLocation(): void {
 		if (!browser) return;
-		now = dayToday();
+		// Written once and then read through the LOCAL, never back through
+		// the state: this runs inside an $effect, and an effect that writes
+		// `now` (a fresh object every call) and then reads it depends on its
+		// own write and re-runs forever. Storage kept the old shape from
+		// looping by accident — the second run short-circuited on the
+		// remembered day before reaching `now.id` — so the loop surfaced
+		// exactly where storage is denied.
+		const today = dayToday();
+		now = today;
 		// The order is the order of how deliberate each answer is. A link
 		// someone was sent names its day on purpose. A choice made today is
 		// the reader's own and holds until midnight. Failing both, the book
 		// opens on today — which is the question this whole layer exists to
 		// answer, and the reason the calendar was built.
+		//
+		// Only what the shelf can honour is REMEMBERED. A link naming a day
+		// this edition has not written (or nothing at all) is answered on the
+		// spot and forgotten: one bad link must not blank the reader's day
+		// until midnight, which is the poisoning the review reproduced.
+		const usable = (id: string | null): id is string => id !== null && (id === '' || !!dayById(id));
 		const named = pageUrl().searchParams.get(DAY_PARAM);
-		const day = named ?? storedDay() ?? now.id;
+		if (named !== null && !usable(named)) {
+			chosen = '';
+			void chooseDay(named, lang);
+			return;
+		}
+		const stored = storedDay();
+		const day = named ?? (usable(stored) ? stored : today.id);
 		chosen = day;
 		rememberDay(day);
 		void chooseDay(day || null, lang);
@@ -101,6 +121,14 @@
 	$effect(() => {
 		applyFromLocation();
 	});
+
+	// A downloaded copy navigates by hash, and a hash change that stays on
+	// the same page never re-renders it (offline/entry.ts) — so a ?dies=
+	// arriving that way would name a day the page does not show. The site
+	// never fires this: its query changes are shallow replaceState.
+	function onHashChange() {
+		applyFromLocation();
+	}
 
 	function pick(event: Event) {
 		const value = (event.currentTarget as HTMLSelectElement).value;
@@ -116,6 +144,8 @@
 		void chooseDay(value || null, lang);
 	}
 </script>
+
+<svelte:window onhashchange={onHashChange} />
 
 <div class="picker day" class:compact class:on={!!chosen}>
 	<span class="label smallcaps" id={labelId}>{msgs.dayLabel}</span>
@@ -146,6 +176,8 @@
 		<span class="state smallcaps">{msgs.dayLoading}</span>
 	{:else if proper.failed}
 		<span class="state smallcaps">{msgs.dayFailed}</span>
+	{:else if proper.unwritten}
+		<span class="state smallcaps">{msgs.dayUnwritten}</span>
 	{/if}
 	{#if !compact}<p class="hint">{hint}</p>{/if}
 </div>

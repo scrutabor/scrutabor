@@ -19,6 +19,7 @@
 import { browser } from '$app/environment';
 import { localDay } from '$lib/proper-local';
 import { artifactPath, dayById } from '$lib/proprium';
+import { formularyExists } from '$lib/kalendarium';
 import type { Lang } from '$lib/i18n';
 
 export interface ProperPartPayload {
@@ -110,6 +111,16 @@ let day = $state<string | null>(null);
 let payload = $state<ProperPayload | null>(null);
 let loading = $state(false);
 let failed = $state(false);
+let unwritten = $state(false);
+
+// Choices supersede one another. Two picks can be in flight at once — the
+// second is the reader correcting themselves — and the responses come back in
+// whatever order the network pleases. Without this, the FIRST response landed
+// last and won: the control read one Sunday over another Sunday's Introit,
+// reproduced eight times out of eight in review. Only the call that is still
+// current may write the shared state; a superseded response still fills the
+// cache, because the data is true even when the moment for it has passed.
+let current = 0;
 
 // A load worth telling the reader about. Not the same thing as a load.
 //
@@ -164,14 +175,22 @@ export const proper = {
 	get failed(): boolean {
 		return failed;
 	},
+	/** True when the day asked for is real and this edition has not written
+	 * its Mass yet. A different absence from `failed`: nothing went wrong. */
+	get unwritten(): boolean {
+		return unwritten;
+	},
 	/** The texts for one Ordo slot, in rite order. Empty when no day is chosen. */
 	forSlot(slot: string): ProperPartPayload[] {
 		return payload?.parts.filter((p) => p.slot === slot) ?? [];
 	},
 	clear(): void {
+		current += 1;
 		day = null;
 		payload = null;
 		failed = false;
+		unwritten = false;
+		loading = false;
 		stopTiming();
 	}
 };
@@ -183,13 +202,25 @@ export const proper = {
  * Ordo rather than a broken page.
  */
 export async function chooseDay(next: string | null, lang: Lang): Promise<void> {
+	const mine = ++current;
+	// Superseding a flight also takes over its notices: the superseded
+	// finally below declines to touch shared state, so it is settled here.
+	loading = false;
+	stopTiming();
 	failed = false;
+	unwritten = false;
 	if (!next) {
 		proper.clear();
 		return;
 	}
 	if (!dayById(next)) {
-		failed = true;
+		// Two different absences. A real day of the calendar whose Mass this
+		// edition has not written is said so. An id that names nothing is a
+		// mangled link and gets the dayless view — "could not be loaded"
+		// would promise a retry that cannot succeed.
+		day = null;
+		payload = null;
+		unwritten = formularyExists(next);
 		return;
 	}
 	day = next;
@@ -205,13 +236,17 @@ export async function chooseDay(next: string | null, lang: Lang): Promise<void> 
 	try {
 		const body = await load(next, lang);
 		held[key] = body;
+		if (mine !== current) return;
 		payload = body;
 	} catch {
+		if (mine !== current) return;
 		failed = true;
 		payload = null;
 	} finally {
-		loading = false;
-		stopTiming();
+		if (mine === current) {
+			loading = false;
+			stopTiming();
+		}
 	}
 }
 
@@ -229,7 +264,9 @@ export async function chooseDay(next: string | null, lang: Lang): Promise<void> 
 async function load(day: string, lang: Lang): Promise<ProperPayload> {
 	const here = localDay(day, lang);
 	if (here) return here as ProperPayload;
-	const response = await fetch(artifactPath(day, lang));
+	// Bounded: a request that never answers would otherwise leave the
+	// loading notice up forever, with re-picking as the only way out.
+	const response = await fetch(artifactPath(day, lang), { signal: AbortSignal.timeout(15_000) });
 	if (!response.ok) throw new Error(String(response.status));
 	return (await response.json()) as ProperPayload;
 }
