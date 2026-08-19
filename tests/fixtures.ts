@@ -235,4 +235,19 @@ export function atRoute(path: string, query = ''): RegExp {
 	return new RegExp(`${route}(\\.html)?${tail}`);
 }
 
+/**
+ * The address carries no open word.
+ *
+ * `atRoute` deliberately tolerates a query — the book opens on today, so every
+ * link carries the day with it — which means it can no longer speak for the
+ * ABSENCE of one. Five tests of the word panel had been saying "closes and
+ * cleans the URL" through `atRoute` alone, and after that widening the cleaning
+ * half went unchecked: a close that left `?w=` behind would have passed, and a
+ * reader who shared or reloaded that address would reopen a panel they had
+ * closed. Where the absence is the point, say the absence.
+ */
+export function noWordInTheAddress(page: import('@playwright/test').Page) {
+	return expect(page, 'the closed panel left ?w= in the address').not.toHaveURL(/[?&]w=/);
+}
+
 export { expect };

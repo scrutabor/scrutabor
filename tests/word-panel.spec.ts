@@ -2,7 +2,7 @@
 // shipped behavior or a regression that actually happened (2026-08-04:
 // taps reverted by the deep-link effect; panel not restored on back from
 // a concept page) — keep them green.
-import { atRoute, expect, test } from './fixtures';
+import { atRoute, expect, noWordInTheAddress, test } from './fixtures';
 
 const PATER = '/app/pl/orationes/pater-noster';
 const panel = 'aside';
@@ -21,6 +21,7 @@ test('tapping the same word closes and cleans the URL', async ({ page }) => {
 	await page.locator('#w008').click();
 	await expect(page.locator(panel)).toHaveCount(0);
 	await expect(page).toHaveURL(atRoute('pater-noster'));
+	await noWordInTheAddress(page);
 });
 
 test('switching words replaces history instead of pushing', async ({ page }) => {
@@ -32,6 +33,7 @@ test('switching words replaces history instead of pushing', async ({ page }) => 
 	await page.goBack();
 	await expect(page.locator(panel)).toHaveCount(0);
 	await expect(page).toHaveURL(atRoute('pater-noster'));
+	await noWordInTheAddress(page);
 });
 
 test('back closes the panel, forward reopens it', async ({ page }) => {
@@ -41,6 +43,7 @@ test('back closes the panel, forward reopens it', async ({ page }) => {
 	await page.goBack();
 	await expect(page.locator(panel)).toHaveCount(0);
 	await expect(page).toHaveURL(atRoute('pater-noster'));
+	await noWordInTheAddress(page);
 	await page.goForward();
 	await expect(page.locator(panelWord)).toHaveText('Panem');
 	await expect(page).toHaveURL(/\?w=w022$/);
@@ -52,6 +55,7 @@ test('clicking outside the sheet closes it', async ({ page }) => {
 	await page.locator('h1').click();
 	await expect(page.locator(panel)).toHaveCount(0);
 	await expect(page).toHaveURL(atRoute('pater-noster'));
+	await noWordInTheAddress(page);
 });
 
 test('Escape closes the sheet', async ({ page }) => {
@@ -72,6 +76,7 @@ test('closing a deep-linked panel strips ?w= without leaving the page', async ({
 	await page.locator('h1').click();
 	await expect(page.locator(panel)).toHaveCount(0);
 	await expect(page).toHaveURL(atRoute('pater-noster'));
+	await noWordInTheAddress(page);
 	await expect(page.locator('h1')).toHaveText('Pater noster');
 });
 

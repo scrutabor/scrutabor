@@ -4,7 +4,16 @@ import type { Lang } from './i18n';
 export interface BibliographyUse {
 	title: string;
 	href: string;
+	/** How many notes in that text rest on this locator. One link is listed
+	 * per text, because the exact backlink already stands beside every note —
+	 * this page is the list of SOURCES, and the litany that cites one work at
+	 * 146 words was rendering 146 identical links, 3,526 px of them on a
+	 * phone. The count is what those 146 were actually saying. */
+	notes: number;
 }
+
+/** What a caller hands in: where the note is. The counting is this module's. */
+type Where = Omit<BibliographyUse, 'notes'>;
 
 export interface BibliographyLocator {
 	locator: string;
@@ -31,7 +40,7 @@ interface MutableSource {
 export function buildBibliography(lang: Lang): BibliographySource[] {
 	const sources = new Map<string, MutableSource>();
 
-	function add(citation: Citation, use: BibliographyUse) {
+	function add(citation: Citation, use: Where) {
 		let source = sources.get(citation.title);
 		if (!source) {
 			source = { title: citation.title, locators: new Map() };
@@ -44,7 +53,11 @@ export function buildBibliography(lang: Lang): BibliographySource[] {
 			locator = { locator: citation.locator, url: citation.url, uses: [] };
 			source.locators.set(locatorKey, locator);
 		}
-		if (!locator.uses.some((existing) => existing.href === use.href)) locator.uses.push(use);
+		// By TEXT, not by anchor. Every cited word inside one text produced its
+		// own href and its own list entry, all reading the same title.
+		const already = locator.uses.find((existing) => existing.title === use.title);
+		if (already) already.notes += 1;
+		else locator.uses.push({ ...use, notes: 1 });
 	}
 
 	for (const [key, entry] of Object.entries(TEXTS)) {

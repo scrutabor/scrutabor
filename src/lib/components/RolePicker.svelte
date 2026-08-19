@@ -93,14 +93,23 @@
 	   its contents. It collapsed, the query matched at every window width,
 	   and the control stacked on a 1800px screen. */
 	.picker:not(.compact) {
-		container-type: inline-size;
+		container: picker / inline-size;
 	}
 
 	/* Three parts side by side need about 15rem of room. Below that — a
 	   narrow phone, or a wide one at the largest reading size — they stack
 	   instead of running off the page. A segmented control set as a column
-	   is still a segmented control; one that overflows is not. */
-	@container (max-width: 15rem) {
+	   is still a segmented control; one that overflows is not.
+	   NAMED, and that is the whole point. An unnamed query resolves against
+	   the nearest ancestor container, and the compact picker is deliberately
+	   not one (see above) — so its query was answered by `.help-row` instead.
+	   At the largest reading size 15rem is 336px and `.help-row` measures
+	   253-347px on a phone, so every compact picker took the full picker's
+	   stacking rules ON TOP OF its own: horizontal rules and middots at once,
+	   and a header a thousand pixels tall before the first Latin word. On the
+	   one setting the book offers for reading at arm's length in a dim nave.
+	   A named container only matches an ancestor that carries the name. */
+	@container picker (max-width: 15rem) {
 		.options {
 			display: flex;
 			flex-direction: column;

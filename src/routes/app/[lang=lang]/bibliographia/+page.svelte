@@ -53,10 +53,15 @@
 								{/if}
 								<span class="uses">
 									— {copy.usedAt}
-									{#each locator.uses as use, i (use.href)}
-										{#if i > 0},
-										{/if}<a href={use.href} lang="la">{use.title}</a>
-									{/each}
+									<!-- The separator lives inside the expression: a template
+									     `{#if i > 0},{/if}` puts the comma against the next
+									     title with no space, because Svelte trims the newline
+									     after it — and the run then became one unbreakable
+									     token that scrolled the page sideways at 320px. -->
+									{#each locator.uses as use, i (use.title)}{i > 0 ? ', ' : ''}<a
+											href={use.href}
+											lang="la">{use.title}</a
+										>{use.notes > 1 ? ` (${use.notes})` : ''}{/each}
 								</span>
 							</li>
 						{/each}
