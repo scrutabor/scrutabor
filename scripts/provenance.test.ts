@@ -1,8 +1,8 @@
 // The app ships 117 files it did not write. This is what it can say about them.
 //
-// It lives in scripts/ and not src/lib/ because it reads the filesystem, and
-// `node:fs` under src/ type-checks locally and fails on CI — the lesson
-// notes/conventions.md already records, and which `npm run check` caught here
+// It lives in scripts/ and not src/lib/ because it reads the filesystem:
+// `node:fs` under src/ type-checks locally and fails on CI, which is a lesson
+// this repository has learned before and which `npm run check` caught here
 // within a minute of the file being written.
 //
 // Until 2026-08-19 the answer was nothing: no record of which corpus commit

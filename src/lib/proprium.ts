@@ -183,8 +183,9 @@ export type Today = ReturnType<typeof dayToday>;
  * · `chosen` — the reader picked a day, and that is the whole answer.
  * · `week` — nothing is picked, and today is a FERIA, which has no Mass in
  *   the temporal table at all. The week's Sunday is named and nothing is
- *   claimed: which Mass an Advent or Lenten feria takes is a rubric this
- *   edition has not read.
+ *   claimed: the Missale prints a Mass for every day of Lent and none between
+ *   the Sundays of Advent, and no rule this edition has transcribed settles
+ *   the second case.
  * · `ahead` — nothing is picked, today HAS a Mass of its own, and this
  *   edition has not written it yet.
  * · `none` — nothing is picked and nothing is owed. Today is either carried

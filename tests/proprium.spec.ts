@@ -11,13 +11,11 @@
 import { expect, settled, test } from './fixtures';
 
 const DAY = 'dominica-i-adventus';
-
-test('the Ordo shows placeholders until a day is chosen', async ({ page }) => {
-	await page.goto('/app/pl/ordo/catechumenorum');
-	// The slot is named and described, and carries no text of its own.
-	await expect(page.getByText('z formularza dnia').first()).toBeVisible();
-	await expect(page.locator('body')).not.toContainText('wzniosłem');
-});
+/** A date this edition has no formulary for, so the picker opens empty. Every
+ * test here pins the clock — the book opens on TODAY, so what the control
+ * shows otherwise depends on the day the machine happens to hold.
+ * scripts/clock-pinned.test.ts holds that rule over this file. */
+const OUTSIDE_ADVENT = '2026-08-19T10:00:00';
 
 // The whole reason the calendar was built: a reader at Mass on Sunday morning
 // opens the book and the proper is already right. The clock is fixed rather
@@ -38,6 +36,19 @@ async function asIfItWere(page: import('@playwright/test').Page, when: string): 
 		};
 	}, when);
 }
+
+test('the Ordo shows placeholders until a day is chosen', async ({ page }) => {
+	// PINNED, like every other test here. It was left on the wall clock, and
+	// since the book now opens on today there are no placeholders left to see
+	// on a Sunday this edition carries: it would have gone red on 2026-11-29
+	// and every Advent Sunday after it. A failure that arrives with the season
+	// and clears by Monday is the kind that teaches everyone to ignore a gate.
+	await asIfItWere(page, '2026-08-19T10:00:00');
+	await page.goto('/app/pl/ordo/catechumenorum');
+	// The slot is named and described, and carries no text of its own.
+	await expect(page.getByText('z formularza dnia').first()).toBeVisible();
+	await expect(page.locator('body')).not.toContainText('wzniosłem');
+});
 
 test('the book opens on today when today is a day it carries', async ({ page }) => {
 	await asIfItWere(page, '2026-12-13T10:00:00');
@@ -112,6 +123,7 @@ test('a day chosen yesterday does not still be showing tomorrow', async ({ page 
 });
 
 test('choosing a day fills the slots without leaving the page', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo/catechumenorum');
 	const marker = await page.evaluate(() => performance.getEntriesByType('navigation')[0].startTime);
 
@@ -125,6 +137,7 @@ test('choosing a day fills the slots without leaving the page', async ({ page })
 });
 
 test('the chant slot carries gradual and alleluia together', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto(`/app/pl/ordo/catechumenorum?dies=${DAY}`);
 	// One Ordo slot, two texts: Univérsi is the gradual, Osténde the alleluia.
 	await expect(page.locator('body')).toContainText('Univérsi', { timeout: 15000 });
@@ -132,6 +145,7 @@ test('the chant slot carries gradual and alleluia together', async ({ page }) =>
 });
 
 test('a shared link restores the day and the word', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto(`/app/pl/ordo/catechumenorum?dies=${DAY}&w=${DAY}-introitus.w014`);
 	// The day arrived…
 	await expect(page.locator('body')).toContainText('wzniosłem', { timeout: 15000 });
@@ -142,6 +156,7 @@ test('a shared link restores the day and the word', async ({ page }) => {
 });
 
 test('picking a day does not make the control flicker @online', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
 	// The artifact usually arrives in about 30 ms, and a notice that appears
 	// and vanishes inside two frames says nothing while jolting the one part
 	// of the page that is otherwise still: the label went 200px wide to 291px
@@ -191,6 +206,7 @@ test('picking a day does not make the control flicker @online', async ({ page })
 });
 
 test('a slow day still says it is loading @online', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
 	// The notice is delayed, not removed: hold the artifact and it appears,
 	// which is the case it exists for.
 	await page.route('**/artifacts/proprium/**', async (route) => {

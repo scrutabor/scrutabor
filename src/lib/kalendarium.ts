@@ -10,9 +10,11 @@
 //
 // What the table holds is the days that have a Mass of their own: the Sundays
 // and the feasts of the Lord that belong to the season. Ferias are absent on
-// purpose — in Advent and Lent they have Masses of their own rather than the
-// Sunday's, so the honest answer for a Tuesday is the WEEK it falls in, which
-// is what `dayOf` returns alongside.
+// purpose, and the honest answer for a Tuesday is the WEEK it falls in, which
+// is what `dayOf` returns alongside. Which Mass that Tuesday actually takes
+// depends on the season — the Missale prints one for every day of Lent and
+// none between the Sundays of Advent — and no rule the corpus has transcribed
+// settles the second case, so the week is named and nothing is claimed.
 import kal from './data/kal.json';
 
 export interface Kalendar {
@@ -22,8 +24,11 @@ export interface Kalendar {
 	 * formulary where a feast took the Sunday's place or n. 18 moved a Mass. */
 	position: string;
 	season: string;
-	/** First or second class (Rubricae generales n. 8). A first-class Sunday
-	 * yields to nothing, which is why the table's answer is complete for it. */
+	/** First or second class (Rubricae generales n. 8). A Sunday of the first
+	 * class yields to nothing but the one feast n. 15 itself excepts, the
+	 * Immaculate Conception, which the table carries — so for those Sundays
+	 * the answer is complete. A Sunday of the second class can be taken by any
+	 * first-class feast (n. 16 a), and the table has no sanctoral to check. */
 	dies: 1 | 2;
 	/** The date this day falls on. */
 	when: string;

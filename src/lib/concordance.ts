@@ -8,7 +8,7 @@
 // ablutions and the last Gospel contributed nothing, and a reader tapping
 // Dóminus was shown a fraction of its occurrences on a page that reads as
 // though it were all of them. That is the same mistake as prerendering the
-// catalogue instead of the corpus (quality.md): the list a page renders
+// catalogue instead of the corpus: the list a page renders
 // from and the list of what exists are two different lists.
 import { CATALOG } from './catalog';
 import { properRank } from './proprium';

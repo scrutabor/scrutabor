@@ -174,7 +174,7 @@ const CATALOG_SOURCE: CatalogSection[] = [
 		// reader picks, and no menu grows at all.
 		//
 		// Until that lands the Proper has NO menu entry. It is not orphaned:
-		// 173 lemma pages link into it, and every part keeps its own crawlable
+		// 489 lemma pages link into it, and every part keeps its own crawlable
 		// page. The section survives without texts because it still names the
 		// group — a reading reached by a direct link falls back to this label
 		// rather than to nothing — and because an empty declaration says the

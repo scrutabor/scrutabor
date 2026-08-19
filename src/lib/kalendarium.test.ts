@@ -27,8 +27,9 @@ describe('the calendar this edition ships', () => {
 	});
 
 	it('keeps the day apart from the week it falls in', () => {
-		// A Tuesday in the second week of Advent. In Advent and Lent a feria
-		// has a Mass of its own, so the Sunday's is offered and never claimed.
+		// A Tuesday in the second week of Advent. What Mass a feria takes
+		// depends on the season and the table does not carry it either way, so
+		// the Sunday's is offered and never claimed.
 		const tuesday = dayOf('2025-12-09');
 		expect(tuesday.on, 'a feria has no Mass in this table').toBeNull();
 		expect(tuesday.week?.formulary).toBe('dominica-ii-adventus');
@@ -40,6 +41,19 @@ describe('the calendar this edition ships', () => {
 		// value changes meaning.
 		const lateOnSunday = new Date(2025, 10, 30, 23, 30);
 		expect(isoDate(lateOnSunday)).toBe('2025-11-30');
+	});
+
+	it('carries the days a reader would otherwise be told are ordinary weekdays', () => {
+		// All found by an external review, all inside the scope the calendar
+		// claimed to be exact about. Christmas Eve is the one a reader meets
+		// first: without it the picker called 24 December a weekday.
+		expect(dayOn('2026-12-24')?.formulary).toBe('vigilia-nativitatis');
+		expect(dayOn('2027-01-01')?.formulary).toBe('in-octava-nativitatis');
+		expect(dayOn('2028-12-31')?.formulary).toBe('dominica-infra-octavam-nativitatis');
+		// n. 15 excepts one feast of the saints from the rule that a Sunday of
+		// Advent yields to nothing. Without it the book opened on Advent II.
+		expect(dayOn('2030-12-08')?.formulary).toBe('immaculata-conceptio');
+		expect(dayOn('2030-12-08')?.position).toBe('dominica-ii-adventus');
 	});
 
 	it('says which formulary today has, and says nothing when the edition lacks it', () => {
