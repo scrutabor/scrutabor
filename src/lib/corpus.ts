@@ -315,8 +315,8 @@ function buildIndex(): Record<string, TextEntry> {
 	const texts: Record<string, TextEntry> = {};
 	for (const [path, module] of Object.entries(files)) {
 		const name = path.slice('./data/'.length, -'.json'.length);
-		// the three lexicon files are not texts
-		if (name.startsWith('lexicon')) continue;
+		// the lexicon files and the provenance record are not texts
+		if (name.startsWith('lexicon') || name === 'provenance') continue;
 		const doc = module.default as Record<string, unknown>;
 		if (!doc.segments) throw new Error(`${name} has no segments — re-run vendor-corpus`);
 		texts[name.replace('.', '/')] = splitDocument(doc);

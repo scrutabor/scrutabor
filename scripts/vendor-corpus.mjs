@@ -13,6 +13,8 @@
 //
 // It is a copy, not a merge: anything in src/lib/data that the corpus no
 // longer has is deleted, so a renamed text cannot linger as a ghost.
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -75,4 +77,34 @@ for (const file of readdirSync(DATA)) {
 	}
 }
 
+// WHICH CORPUS THIS IS. Until now the app carried 114 files it could not
+// account for: nothing said which commit they came from, so a release could
+// not be traced to the edition it published, and a hand-edit under
+// src/lib/data would have gone unnoticed by every gate.
+//
+// The commit answers the first question and the content hash answers the
+// second. Neither needs the corpus to be a submodule or a package — those
+// change where the files come from, and this records what arrived.
+const corpusCommit = execFileSync('git', ['-C', CORPUS, 'rev-parse', 'HEAD'], {
+	encoding: 'utf8'
+}).trim();
+const dirty =
+	execFileSync('git', ['-C', CORPUS, 'status', '--porcelain'], { encoding: 'utf8' }).trim() !== '';
+
+const digest = createHash('sha256');
+for (const name of [...written].sort()) {
+	digest.update(name);
+	digest.update(readFileSync(join(DATA, name)));
+}
+
+const provenance = {
+	note: 'Written by scripts/vendor-corpus.mjs. Checked by scripts/provenance.test.ts.',
+	corpus: { repository: 'scrutabor-corpus', commit: corpusCommit, dirty },
+	schema_version: read(join(CORPUS, 'lexicon/lemmata.json')).schema_version,
+	files: written.size,
+	sha256: digest.digest('hex')
+};
+writeFileSync(join(DATA, 'provenance.json'), JSON.stringify(provenance, null, '\t') + '\n');
+
 console.log(`vendored ${written.size} files from the corpus, removed ${removed} stale`);
+console.log(`  corpus ${corpusCommit.slice(0, 7)}${dirty ? ' (working tree dirty)' : ''}`);
