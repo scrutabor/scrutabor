@@ -285,16 +285,23 @@
 			     token (inline-block): the line breaker may only break at the
 			     spaces BETWEEN tokens, never between a word and its comma or
 			     period. Guarded by the one-rect e2e invariant. -->
+			<!-- The button OPENS THE LEGEND, so its accessible name says so —
+			     a name that only described the mark promised nothing and
+			     delivered a dialog. The line's speaker is announced by the
+			     sr-only span beside it, with the SAME name the sighted
+			     reader sees: naming the rubrical speaker there while the
+			     visible label says "the faithful" contradicted the role
+			     setting exactly where it does its work. -->
 			{#if showMark && seg.speaker && MARKS[seg.speaker]}{#if onmark}<button
 						type="button"
 						class="mark"
 						class:yours={mine}
-						aria-label={M[lang].markTitle[seg.speaker]}
+						aria-label={`${M[lang].markTitle[seg.speaker]} — ${M[lang].markLegendTitle}`}
 						onclick={onmark}><span class="ink">{MARKS[seg.speaker]}</span></button
 					>{:else}<span class="mark" class:yours={mine} aria-hidden="true"
 						>{MARKS[seg.speaker]}</span
 					>{/if}<span class="sr-only"
-					>{M[lang].speakers[seg.speaker]}:
+					>{speakerName ?? M[lang].speakers[seg.speaker]}:
 				</span>{:else if verseNo !== undefined}{#if onverse}<button
 						type="button"
 						class="mark"
