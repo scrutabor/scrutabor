@@ -42,18 +42,45 @@ export const DAY_PARAM = 'dies';
 
 const KEY = 'scrutabor-day';
 
-/** The day this reader last chose, or '' — never validated here, because the
- * list of days is the picker's business and a stale id simply fails to
- * resolve. Prerender has no localStorage, so the served HTML is always the
- * dayless view and the reader's own choice is applied once the page is
- * alive, exactly as the role is. */
-export function storedDay(): string {
-	if (!browser) return '';
+/** The day this reader chose TODAY, or null if they have not chosen one today.
+ *
+ * Never validated here: the list of days is the picker's business and a stale
+ * id simply fails to resolve. Prerender has no localStorage, so the served
+ * HTML is always the dayless view and the reader's own choice is applied once
+ * the page is alive, exactly as the role is.
+ *
+ * It expires at midnight, and that is the whole point of storing the date
+ * beside it. Walking the six movements of the Ordo must keep the day — losing
+ * it at the Offertory is the defect the memory exists to prevent — but a
+ * choice made last Sunday must not still be showing Advent in Lent, now that
+ * the calendar can say what today is. The reading ribbon reasons the same way
+ * and for the same reason (lib/ribbon).
+ *
+ * An empty string is a real answer: the reader asked for no formulary, and
+ * that holds for the day too. `null` means they have not said.
+ */
+export function storedDay(): string | null {
+	if (!browser) return null;
 	try {
-		return localStorage.getItem(KEY) ?? '';
+		const raw = localStorage.getItem(KEY);
+		if (raw === null) return null;
+		// Before the date was stored beside it the value was the bare id.
+		// Treat that as spent rather than as chosen today.
+		if (!raw.startsWith('{')) return null;
+		const { d, on } = JSON.parse(raw);
+		return typeof d === 'string' && on === today() ? d : null;
 	} catch {
-		return '';
+		return null;
 	}
+}
+
+/** The reader's own date, not the world's. `toISOString` converts to UTC
+ * first, which hands back yesterday for anyone east of Greenwich after
+ * midnight — and midnight is exactly when this value changes meaning. */
+function today(): string {
+	const now = new Date();
+	const pad = (n: number) => String(n).padStart(2, '0');
+	return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
 }
 
 /** A link out of a page, carrying the day the reader is on.
@@ -72,8 +99,7 @@ export function dayHref(href: string): string {
 export function rememberDay(id: string): void {
 	if (!browser) return;
 	try {
-		if (id) localStorage.setItem(KEY, id);
-		else localStorage.removeItem(KEY);
+		localStorage.setItem(KEY, JSON.stringify({ d: id, on: today() }));
 	} catch {
 		// A reader who has blocked storage still gets the day they picked,
 		// for as long as the page lives. Nothing here is worth an error.

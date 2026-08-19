@@ -74,7 +74,15 @@ const copy = (name, from) => {
 	writeFileSync(join(DATA, name), readFileSync(from));
 };
 
-for (const name of ['manifest.json', 'm.json', 'a.json', 'c.json', 'x.json', 'lex.json']) {
+for (const name of [
+	'manifest.json',
+	'm.json',
+	'a.json',
+	'c.json',
+	'x.json',
+	'lex.json',
+	'kal.json'
+]) {
 	copy(name, join(BUILD, name));
 }
 for (const file of readdirSync(join(BUILD, 't'))) {

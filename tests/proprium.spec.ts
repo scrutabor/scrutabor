@@ -19,6 +19,63 @@ test('the Ordo shows placeholders until a day is chosen', async ({ page }) => {
 	await expect(page.locator('body')).not.toContainText('wzniosłem');
 });
 
+// The whole reason the calendar was built: a reader at Mass on Sunday morning
+// opens the book and the proper is already right. The clock is fixed rather
+// than waited for — the real one spends most of the year outside the four
+// Sundays this edition carries.
+async function asIfItWere(page: import('@playwright/test').Page, when: string): Promise<void> {
+	await page.addInitScript((iso: string) => {
+		const fixed = new Date(iso).valueOf();
+		const Real = Date;
+		// eslint-disable-next-line no-global-assign
+		(globalThis as unknown as { Date: unknown }).Date = class extends Real {
+			constructor(...args: ConstructorParameters<typeof Date>) {
+				super(...(args.length ? args : ([fixed] as unknown as ConstructorParameters<typeof Date>)));
+			}
+			static now() {
+				return fixed;
+			}
+		};
+	}, when);
+}
+
+test('the book opens on today when today is a day it carries', async ({ page }) => {
+	await asIfItWere(page, '2026-12-13T10:00:00');
+	await page.goto('/app/pl/ordo');
+	const picker = page.locator('.picker.day').first();
+	await expect(picker.locator('select')).toHaveValue('dominica-iii-adventus');
+	await expect(picker.locator('.sizer')).toHaveText(/dziś/);
+});
+
+test('a day this edition has not reached is named, not guessed at', async ({ page }) => {
+	// A Tuesday in Advent. The temporal cycle gives a feria no Mass of its own,
+	// and which Mass it takes is a rubric this edition has not read — so the
+	// week is named and nothing is claimed.
+	await asIfItWere(page, '2026-12-15T10:00:00');
+	await page.goto('/app/pl/ordo');
+	const picker = page.locator('.picker.day').first();
+	await expect(picker.locator('select')).toHaveValue('');
+	await expect(picker.locator('.hint')).toHaveText(
+		'dziś dzień powszedni — ostatnia niedziela to III Niedziela Adwentu'
+	);
+});
+
+test('a day chosen yesterday does not still be showing tomorrow', async ({ page }) => {
+	// Walking the six movements has to keep the day. A choice made last Sunday
+	// must not still be showing Advent in Lent, now that the book can say what
+	// today is.
+	await page.goto('/app/pl/ordo');
+	await page.evaluate(() =>
+		localStorage.setItem(
+			'scrutabor-day',
+			JSON.stringify({ d: 'dominica-i-adventus', on: '2020-01-01' })
+		)
+	);
+	await asIfItWere(page, '2026-12-13T10:00:00');
+	await page.goto('/app/pl/ordo');
+	await expect(page.locator('.picker.day select').first()).toHaveValue('dominica-iii-adventus');
+});
+
 test('choosing a day fills the slots without leaving the page', async ({ page }) => {
 	await page.goto('/app/pl/ordo/catechumenorum');
 	const marker = await page.evaluate(() => performance.getEntriesByType('navigation')[0].startTime);

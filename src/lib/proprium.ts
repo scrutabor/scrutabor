@@ -8,6 +8,7 @@
 // no content, exactly as the catalog holds none.
 
 import type { Lang } from './i18n';
+import { dayOf, isoDate, type Kalendar } from './kalendarium';
 
 /** The parts of a Mass proper, in the order the rite says them.
  *
@@ -130,6 +131,26 @@ export const PROPER_DAYS: ProperDay[] = [
 
 export function dayById(id: string): ProperDay | undefined {
 	return PROPER_DAYS.find((d) => d.id === id);
+}
+
+/** Today's formulary, if this edition carries it.
+ *
+ * The corpus computes the whole temporal cycle and ships it (lib/kalendarium);
+ * this asks it what today is and then asks the shelf whether that Mass has
+ * been written yet. Both halves matter: a reader at Mass on Sunday morning
+ * should find the proper already right, and a reader on a day the edition has
+ * not reached should be told which day it is rather than shown someone else's.
+ */
+export function dayToday(when: Date = new Date()): {
+	/** the id of today's formulary, or '' if this edition has not got there */
+	id: string;
+	/** what today is, whether or not the edition carries it */
+	on: Kalendar | null;
+	/** the Sunday whose week today falls in, when today is a feria */
+	week: Kalendar | null;
+} {
+	const { on, week } = dayOf(isoDate(when));
+	return { id: on && dayById(on.formulary) ? on.formulary : '', on, week };
 }
 
 /** The artifact URL for one day in one language.

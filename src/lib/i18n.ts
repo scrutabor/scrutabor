@@ -56,6 +56,9 @@ export interface Messages {
 	dayLoading: string;
 	dayFailed: string;
 	dayPartial: string;
+	dayIsToday: string;
+	dayAhead: string;
+	dayWeekOf: string;
 	/** What the day setting is doing, as the role and Mass hints do. */
 	dayHint: Record<'none' | 'chosen', string>;
 	/** The seasons of the year, for grouping the day picker. */
@@ -160,6 +163,9 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayLoading: 'wczytywanie',
 		dayFailed: 'nie udało się wczytać',
 		dayPartial: '(część tekstów)',
+		dayIsToday: 'dziś ·',
+		dayAhead: 'formularza na dziś jeszcze tu nie ma — wybierz inny dzień',
+		dayWeekOf: 'dziś dzień powszedni — ostatnia niedziela to',
 		dayHint: {
 			none: 'sam porządek Mszy, bez tekstów zmiennych',
 			chosen: 'teksty tego dnia wypełniają porządek Mszy'
@@ -282,6 +288,9 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayLoading: 'loading',
 		dayFailed: 'could not be loaded',
 		dayPartial: '(some texts)',
+		dayIsToday: 'today ·',
+		dayAhead: 'today’s formulary is not here yet — choose another day',
+		dayWeekOf: 'today is a weekday — the last Sunday was',
 		dayHint: {
 			none: 'the order of Mass alone, without the day’s own texts',
 			chosen: 'the day’s own texts fill the order of Mass'

@@ -18,7 +18,7 @@
 	import { browser } from '$app/environment';
 	import { M, type Lang } from '$lib/i18n';
 	import { DAY_PARAM, chooseDay, proper, rememberDay, storedDay } from '$lib/proper.svelte';
-	import { PROPER_DAYS, SEASONS } from '$lib/proprium';
+	import { PROPER_DAYS, SEASONS, dayToday } from '$lib/proprium';
 
 	// `compact` is the form the control takes on a page being read rather than
 	// chosen from, exactly as the role and Mass-kind picker has: label and
@@ -30,15 +30,42 @@
 	const labelId = $derived(`day-label-${compact ? 'compact' : 'full'}`);
 
 	let chosen = $state('');
+
+	/** What today is, whether or not this edition carries its Mass. Read once
+	 * per mount rather than per render: it cannot change while a page is open,
+	 * and reading the clock in a derived would make every keystroke ask. */
+	let now = $state(browser ? dayToday() : null);
+
 	// What the folded control is showing. A select takes the width of its
 	// WIDEST option rather than its chosen one, so "bez formularza" sat in the
 	// room "III Niedziela Adwentu" needs and trailed dead space. The sizer
 	// below is this text, hidden, and the select is laid over it.
+	const isToday = $derived(!!chosen && chosen === now?.id);
 	const shown = $derived.by(() => {
 		const day = PROPER_DAYS.find((d) => d.id === chosen);
 		if (!day) return msgs.dayNone;
-		return `${day.title[lang]}${day.partial ? ` ${msgs.dayPartial}` : ''}`;
+		const partial = day.partial ? ` ${msgs.dayPartial}` : '';
+		return `${isToday ? `${msgs.dayIsToday} ` : ''}${day.title[lang]}${partial}`;
 	});
+
+	/** When the reader arrives on a day this edition cannot open, the honest
+	 * answer is to say which day it is — better than an empty control, and
+	 * much better than showing a Sunday from another season as though it were
+	 * this one. Two different cases, and they must not be told alike:
+	 *
+	 * · today HAS a Mass of its own and the edition has not written it yet;
+	 * · today is a FERIA, which has no Mass in the temporal table at all, and
+	 *   the Sunday of its week is here.
+	 *
+	 * The second says so without claiming the Sunday's Mass is today's. Which
+	 * Mass an Advent or Lenten feria takes is a rubric this edition has not
+	 * read, and the picker does not guess at it. */
+	const weekSunday = $derived.by(() => {
+		if (!now || now.id || now.on) return null;
+		const sunday = now.week && PROPER_DAYS.find((d) => d.id === now?.week?.formulary);
+		return sunday || null;
+	});
+	const missing = $derived(now && !now.id && !weekSunday ? (now.on ?? now.week) : null);
 
 	// On arrival, and after a history traversal. The URL wins where it
 	// speaks — a link someone was sent names its day on purpose — and the
@@ -54,8 +81,14 @@
 	// of a page carries the day with it (`dayHref` in lib/proper.svelte).
 	export function applyFromLocation(): void {
 		if (!browser) return;
+		now = dayToday();
+		// The order is the order of how deliberate each answer is. A link
+		// someone was sent names its day on purpose. A choice made today is
+		// the reader's own and holds until midnight. Failing both, the book
+		// opens on today — which is the question this whole layer exists to
+		// answer, and the reason the calendar was built.
 		const named = pageUrl().searchParams.get(DAY_PARAM);
-		const day = named ?? storedDay();
+		const day = named ?? storedDay() ?? now.id;
 		chosen = day;
 		rememberDay(day);
 		void chooseDay(day || null, lang);
@@ -110,7 +143,14 @@
 	{:else if proper.failed}
 		<span class="state smallcaps">{msgs.dayFailed}</span>
 	{/if}
-	{#if !compact}<p class="hint">{chosen ? msgs.dayHint.chosen : msgs.dayHint.none}</p>{/if}
+	{#if !compact}
+		<p class="hint">
+			{#if weekSunday && !chosen}{msgs.dayWeekOf}
+				{weekSunday.title[lang]}{:else if missing}{msgs.dayAhead}{:else}{chosen
+					? msgs.dayHint.chosen
+					: msgs.dayHint.none}{/if}
+		</p>
+	{/if}
 </div>
 
 <style>
