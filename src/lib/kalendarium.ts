@@ -47,6 +47,15 @@ const DAYS: Row[] = SPAN.flatMap((year) => YEARS[String(year)]).sort((a, b) =>
 	a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0
 );
 
+/** The last date the table can still answer for: the final row's week runs
+ * six days past the row itself. Computed at noon so no time zone can move
+ * the date under the arithmetic. */
+const EXTENT = (() => {
+	const past = new Date(`${DAYS[DAYS.length - 1][0]}T12:00:00`);
+	past.setDate(past.getDate() + 6);
+	return isoDate(past);
+})();
+
 function shape(row: Row): Kalendar {
 	return {
 		when: row[0],
@@ -81,12 +90,18 @@ export function dayOn(iso: string): Kalendar | null {
  */
 export function dayOf(iso: string): { on: Kalendar | null; week: Kalendar | null } {
 	const on = dayOn(iso);
-	let week: Kalendar | null = null;
+	// Past the table's end the honest answer is silence, not the last row: a
+	// clock in 2102 is not forever in the twenty-fourth week after Pentecost
+	// of 2101. The last Sunday's own week still counts — it runs six days
+	// past the last row, to the eve of an Advent the table no longer holds.
+	// (Before the first row both answers are null the same way.)
+	if (iso > EXTENT) return { on: null, week: null };
+	let week: Row | null = null;
 	for (const row of DAYS) {
 		if (row[0] > iso) break;
-		week = shape(row);
+		week = row;
 	}
-	return { on, week };
+	return { on, week: week && shape(week) };
 }
 
 /** The years the table covers, as the manifest declares them. */

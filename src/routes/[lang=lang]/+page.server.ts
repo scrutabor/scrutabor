@@ -30,12 +30,17 @@ export const load: PageServerLoad = ({ params }) => {
 	const doc: TextDocument = { ...entry.text, segments: [verse] };
 	const full = entry.glosses[lang];
 	const ids = new Set((verse.words ?? []).map((w) => w.id));
+	// The verse's own segment gloss, verified present rather than spread in
+	// blind: `{ [id]: maybeUndefined }` would store undefined under a key
+	// the type promises is a SegmentGloss.
+	const verseGloss = full.segments[verse.id];
+	if (!verseGloss) error(500, 'the specimen verse has no gloss in the corpus snapshot');
 	const gloss: GlossDocument = {
 		...full,
 		// the stanza's introduction belongs to its own page, not the landing
 		about: undefined,
 		about_citations: undefined,
-		segments: { [verse.id]: full.segments[verse.id] },
+		segments: { [verse.id]: verseGloss },
 		words: Object.fromEntries(Object.entries(full.words).filter(([id]) => ids.has(id)))
 	};
 

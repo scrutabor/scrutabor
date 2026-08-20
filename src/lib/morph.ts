@@ -5,8 +5,13 @@ import type { Analysis, Morph } from './corpus';
 import { bindOrphans } from './polish';
 import type { Lang } from './i18n';
 
+// Five covers Latin's declensions and one more than its conjugations; a
+// number beyond either table falls back to the plain numeral rather than
+// printing "deklinacja undefined" into a word panel.
 const ROMAN = ['I', 'II', 'III', 'IV', 'V'];
 const ORDINAL = ['1st', '2nd', '3rd', '4th', '5th'];
+const roman = (n: number) => ROMAN[n - 1] ?? String(n);
+const ordinal = (n: number) => ORDINAL[n - 1] ?? `${n}th`;
 
 interface MorphLabels {
 	pos: Record<string, string>;
@@ -69,9 +74,19 @@ const LABELS: Record<Lang, MorphLabels> = {
 		},
 		degree: { comp: 'stopień wyższy', sup: 'stopień najwyższy' },
 		person: (p) => `${p}.\u00a0os.`,
-		decl: (d) => `deklinacja\u00a0${ROMAN[d - 1]}`,
-		conj: (c) => `koniugacja\u00a0${ROMAN[c - 1]}`,
-		prep: (governs) => `przyimek (z ${governs === 'acc' ? 'biernikiem' : 'ablativem'})`,
+		decl: (d) => `deklinacja\u00a0${roman(d)}`,
+		conj: (c) => `koniugacja\u00a0${roman(c)}`,
+		prep: (governs) => {
+			// Only a case the parse actually names: `governs` is optional, and
+			// a preposition parsed without one must not be told it takes the
+			// ablative by a binary that only ever heard of two cases.
+			const by: Record<string, string> = {
+				acc: 'biernikiem',
+				abl: 'ablativem',
+				gen: 'dopełniaczem'
+			};
+			return governs && by[governs] ? `przyimek (z ${by[governs]})` : 'przyimek';
+		},
 		undecided: 'forma niejednoznaczna'
 	},
 	en: {
@@ -116,10 +131,13 @@ const LABELS: Record<Lang, MorphLabels> = {
 			dep: 'deponent (passive form, active meaning)'
 		},
 		degree: { comp: 'comparative', sup: 'superlative' },
-		person: (p) => `${ORDINAL[p - 1]}\u00a0person`,
-		decl: (d) => `${ORDINAL[d - 1]}\u00a0declension`,
-		conj: (c) => `${ORDINAL[c - 1]}\u00a0conjugation`,
-		prep: (governs) => `preposition (with the ${governs === 'acc' ? 'accusative' : 'ablative'})`,
+		person: (p) => `${ordinal(p)}\u00a0person`,
+		decl: (d) => `${ordinal(d)}\u00a0declension`,
+		conj: (c) => `${ordinal(c)}\u00a0conjugation`,
+		prep: (governs) => {
+			const by: Record<string, string> = { acc: 'accusative', abl: 'ablative', gen: 'genitive' };
+			return governs && by[governs] ? `preposition (with the ${by[governs]})` : 'preposition';
+		},
 		undecided: 'ambiguous form'
 	}
 };
@@ -297,10 +315,4 @@ export function describeAnalysisParts(a: Analysis, lang: Lang): AnalysisPart[] {
 		else parts.push({ text });
 	});
 	return parts;
-}
-
-export function describeAnalysis(a: Analysis, lang: Lang): string {
-	return describeAnalysisParts(a, lang)
-		.map((p) => p.text)
-		.join('');
 }

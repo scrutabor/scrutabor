@@ -6,7 +6,9 @@
 // stated here in a form that fails in a second, so the next wrong constant
 // is caught before anyone has to notice a letter touching its neighbour.
 import { describe, expect, it } from 'vitest';
-import { GLOSS_GAP, initialFit, sinkFor } from './reading-geometry';
+import { GLOSS_GAP, initialFit, measuredInitial, sinkFor } from './reading-geometry';
+import { TEXTS } from './corpus';
+import { firstVerseWithInitial } from './speaker-marks';
 
 // Q is the only letter in the corpus whose tail reaches below the line;
 // L and A are the two whose ink crosses their advance sideways.
@@ -114,5 +116,24 @@ describe('fitting the initial', () => {
 		for (const [name, value] of Object.entries(fit)) {
 			expect(Number.isFinite(value), `${name} is ${value}`).toBe(true);
 		}
+	});
+});
+
+describe('the tables against the corpus', () => {
+	it('hold a measured row for every initial the book actually raises', () => {
+		// The soft fallback in initialFit is for the READER — a crash over a
+		// margin would be absurd — and this is where it stops being silent:
+		// twelve texts (Réquiem, Regína, four Advent epistles' Fratres, the
+		// Éxcita collects) had already shipped or vendored on the [0,0] row,
+		// each initial under-cleared and poking out of its own wash. The set
+		// of opening capitals grows with every Sunday; this walks them all.
+		const unmeasured: string[] = [];
+		for (const [key, entry] of Object.entries(TEXTS)) {
+			const at = firstVerseWithInitial(entry.text.segments);
+			if (at === -1) continue;
+			const letter = entry.text.segments[at].words?.[0]?.form.slice(0, 1) ?? '';
+			if (letter && !measuredInitial(letter)) unmeasured.push(`${key}: ${letter}`);
+		}
+		expect(unmeasured).toEqual([]);
 	});
 });

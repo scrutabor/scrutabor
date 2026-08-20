@@ -9,6 +9,7 @@
 // mid-Mass resumes, next Sunday opens at the top.
 
 import { afterNavigate } from '$app/navigation';
+import { readStored, removeStored, writeStored } from '$lib/storage';
 
 const TTL = 12 * 60 * 60 * 1000;
 
@@ -21,9 +22,9 @@ const DWELL = 1200;
 const FLOOR = 200;
 
 function read(key: string): number | null {
+	const raw = readStored(key);
+	if (!raw) return null;
 	try {
-		const raw = localStorage.getItem(key);
-		if (!raw) return null;
 		const { y, t } = JSON.parse(raw);
 		if (typeof y !== 'number' || typeof t !== 'number') return null;
 		return Date.now() - t > TTL ? null : y;
@@ -40,12 +41,10 @@ export function ribbon(key: () => string, skip: () => boolean = () => false) {
 		const onScroll = () => {
 			clearTimeout(timer);
 			timer = window.setTimeout(() => {
-				try {
-					if (window.scrollY < FLOOR) localStorage.removeItem(k);
-					else localStorage.setItem(k, JSON.stringify({ y: window.scrollY, t: Date.now() }));
-				} catch {
-					// storage unavailable (private mode) — the ribbon just doesn't hold
-				}
+				// storage unavailable (private mode) — the ribbon just doesn't
+				// hold; $lib/storage swallows the denial in the one place
+				if (window.scrollY < FLOOR) removeStored(k);
+				else writeStored(k, JSON.stringify({ y: window.scrollY, t: Date.now() }));
 			}, DWELL);
 		};
 		window.addEventListener('scroll', onScroll, { passive: true });

@@ -76,6 +76,27 @@ describe('vendored corpus snapshot', () => {
 		}
 	});
 
+	it('expands the word-level editorial note in both languages', () => {
+		// The disputed list's reader-facing notes travel as `nt` and were
+		// once expanded into a field no interface held and no component
+		// read — sixteen words told the reader "disputed" and withheld the
+		// dispute. The Pater's malo is the canary: if its note is here, the
+		// channel is open end to end.
+		let carried = 0;
+		for (const key of textKeys) {
+			const withNote = (lang: 'pl' | 'en') =>
+				Object.entries(TEXTS[key].glosses[lang].words)
+					.filter(([, e]) => typeof e.note === 'string' && e.note.length > 0)
+					.map(([id]) => id)
+					.sort();
+			const pl = withNote('pl');
+			expect(pl, key).toEqual(withNote('en'));
+			carried += pl.length;
+		}
+		expect(carried).toBeGreaterThan(0);
+		expect(TEXTS['orationes/pater-noster'].glosses.pl.words['w049'].note).toContain('malum');
+	});
+
 	it('keeps reader-facing citations exact and attached to prose', () => {
 		for (const key of textKeys) {
 			const citations = (lang: 'pl' | 'en') => {

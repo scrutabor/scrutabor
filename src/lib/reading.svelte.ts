@@ -60,13 +60,13 @@ export const reading = (() => {
 		},
 		set(next: Step) {
 			value = next;
-			apply(next);
-			if (browser) writeStored(KEY, next);
-		},
-		/** One button, three steps: the nav has room for an icon, not a
-		 * segmented control, and the reader is choosing along one axis. */
-		next() {
-			this.set(ORDER[(ORDER.indexOf(value) + 1) % ORDER.length]);
+			if (browser) {
+				apply(next);
+				writeStored(KEY, next);
+			}
 		}
+		// A cycling next() lived here once; the owner tried it and chose a
+		// menu instead (TextSize.svelte records why), and the method sat
+		// unused with a comment claiming the opposite decision.
 	};
 })();

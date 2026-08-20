@@ -25,6 +25,12 @@ const BEACON = env.CF_BEACON_TOKEN ?? '';
 // PWA's start_url.
 export const handle: Handle = ({ event, resolve }) =>
 	resolve(event, {
+		// Function replacements: with a string, `$` sequences in the value are
+		// substitution patterns. A language code and a hex token carry none
+		// today, but an environment value substituted into HTML should not
+		// depend on staying that lucky.
 		transformPageChunk: ({ html }) =>
-			html.replace('%app.lang%', event.params.lang ?? 'en').replace('%app.beacon%', BEACON)
+			html
+				.replace('%app.lang%', () => event.params.lang ?? 'en')
+				.replace('%app.beacon%', () => BEACON)
 	});

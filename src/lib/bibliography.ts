@@ -97,15 +97,21 @@ export function buildBibliography(lang: Lang): BibliographySource[] {
 		}
 	}
 
+	// The collation is pinned to the page's own language: a bare
+	// localeCompare reads the BUILD MACHINE's locale, and a prerendered
+	// page's ordering must not depend on where it was built. (pl and en
+	// agree on today's titles — the pin is so that staying equal is not
+	// load-bearing.)
+	const by = (a: string, b: string) => a.localeCompare(b, lang);
 	return [...sources.values()]
 		.map((source) => ({
 			title: source.title,
 			locators: [...source.locators.values()]
 				.map((locator) => ({
 					...locator,
-					uses: locator.uses.sort((a, b) => a.title.localeCompare(b.title))
+					uses: locator.uses.sort((a, b) => by(a.title, b.title))
 				}))
-				.sort((a, b) => a.locator.localeCompare(b.locator))
+				.sort((a, b) => by(a.locator, b.locator))
 		}))
-		.sort((a, b) => a.title.localeCompare(b.title));
+		.sort((a, b) => by(a.title, b.title));
 }

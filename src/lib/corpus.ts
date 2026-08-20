@@ -55,6 +55,12 @@ export interface Word {
 	post?: string;
 	lemma: string;
 	morph: Morph;
+	/** The word this one leans on (corpus SCHEMA.md). No component reads
+	 * these two yet — they are expanded because `expandDocument` must stay
+	 * the exact mirror of the corpus's own `expand()`, and a field the type
+	 * cannot hold is how the word-level note went missing for a month. */
+	head?: string;
+	substantive?: boolean;
 	analysis?: Analysis;
 }
 
@@ -111,6 +117,11 @@ export interface WordGloss {
 	// and the lexicon carry everything else.
 	function?: string;
 	function_citations?: Citation[];
+	/** The editorial note on THIS word in THIS place — every disputed
+	 * reading carries one naming the competing readings and which one
+	 * this edition takes. A panel that says "disputed" without it ships
+	 * the doubt and withholds the note of it. */
+	note?: string;
 	analysis?: Analysis;
 }
 
@@ -205,14 +216,29 @@ export function narrowLexicon(
  * The corpus-wide tables, and the point of the whole edition.
  *
  * Three layers repeat themselves hard enough to be worth addressing by index
- * rather than writing out: 412 parses carry 6,143 words, 9 analyses carry
- * 499 of them, 232 citations carry 1,327 references. Expanding a text hands
- * out the table's OWN object at every site, so the sharing survives into the
- * heap rather than ending at the file.
+ * rather than writing out — a few hundred parses carry all six thousand
+ * words, a handful of analysis shapes carry every provenance claim, and one
+ * citation table carries every reference. (Exact counts live in the vendored
+ * data, not here: two earlier versions of this comment went stale.)
+ * Expanding a text hands out the table's OWN object at every site, so the
+ * sharing survives into the heap rather than ending at the file.
  */
 const PARSES = parseTable as unknown as Morph[];
 const ANALYSES = analysisTable as unknown as Analysis[];
 const CITATIONS = citationTable as unknown as Citation[];
+
+/** A table index that resolves to nothing is a vendoring defect — a stale
+ * or truncated table beside newer documents — and has to fail HERE, at
+ * module init on the build machine, not as a TypeError in the first word
+ * panel a reader opens. The provenance test hashes the files; this is the
+ * only check that they agree with each other. */
+function at<T>(table: T[], index: number, what: string): T {
+	const hit = table[index];
+	if (hit === undefined) {
+		throw new Error(`${what}[${index}] resolves to nothing — re-run vendor-corpus`);
+	}
+	return hit;
+}
 
 /** One artifact row: the emitter's short keys, spelled out once here. */
 interface WordCell {
@@ -266,15 +292,16 @@ const LANGS: Lang[] = ['pl', 'en'];
  * that, and does — the whole of the app's knowledge of two shapes is here.
  */
 function expandDocument(artifact: Artifact): TextEntry {
-	const cited = (indices?: number[]) => indices?.map((i) => CITATIONS[i]);
+	const cited = (indices?: number[]) => indices?.map((i) => at(CITATIONS, i, 'citations'));
 
 	const text: Record<string, unknown> = { schema_version: manifest.corpus_schema };
 	for (const [key, value] of Object.entries(artifact)) {
 		if (!DOC_KEYS.has(key)) text[key] = value;
 	}
 	text.status = artifact.st;
-	text.analysis_defaults = ANALYSES[artifact.ad];
-	if (artifact.adw !== undefined) text.analysis_defaults_words = ANALYSES[artifact.adw];
+	text.analysis_defaults = at(ANALYSES, artifact.ad, 'analyses');
+	if (artifact.adw !== undefined)
+		text.analysis_defaults_words = at(ANALYSES, artifact.adw, 'analyses');
 
 	const layers = Object.fromEntries(
 		LANGS.map((lang) => [
@@ -286,7 +313,7 @@ function expandDocument(artifact: Artifact): TextEntry {
 				status: artifact.st,
 				about: artifact.about[lang],
 				about_citations: cited(artifact.ac?.[lang]),
-				analysis_defaults: ANALYSES[artifact.ad],
+				analysis_defaults: at(ANALYSES, artifact.ad, 'analyses'),
 				segments: {} as Record<string, Record<string, unknown>>,
 				words: {} as Record<string, Record<string, unknown>>
 			}
@@ -298,7 +325,7 @@ function expandDocument(artifact: Artifact): TextEntry {
 		for (const [key, value] of Object.entries(row)) {
 			if (!ROW_KEYS.has(key)) segment[key] = value;
 		}
-		if (row.an !== undefined) segment.analysis = ANALYSES[row.an];
+		if (row.an !== undefined) segment.analysis = at(ANALYSES, row.an, 'analyses');
 
 		for (const lang of LANGS) {
 			const bucket: Record<string, unknown> = {};
@@ -315,10 +342,10 @@ function expandDocument(artifact: Artifact): TextEntry {
 			segment.words = row.w.map((cell, position) => {
 				const word: Record<string, unknown> = { id: cell.i, form: cell.f, lemma: cell.l };
 				if (cell.p) word.post = cell.p;
-				word.morph = PARSES[cell.m];
+				word.morph = at(PARSES, cell.m, 'parses');
 				if (cell.h) word.head = cell.h;
 				if (cell.s) word.substantive = true;
-				if (cell.a !== undefined) word.analysis = ANALYSES[cell.a];
+				if (cell.a !== undefined) word.analysis = at(ANALYSES, cell.a, 'analyses');
 				for (const lang of LANGS) {
 					const entry: Record<string, unknown> = { gloss: row.g?.[lang]?.[position] ?? '' };
 					const fn = row.fn?.[lang]?.[cell.i];

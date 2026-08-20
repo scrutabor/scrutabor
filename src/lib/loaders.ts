@@ -14,6 +14,7 @@ import { buildBibliography } from './bibliography';
 import { occurrencesOf } from './concordance';
 import { LEXICON, TEXTS, narrowLexicon, type TextDocument } from './corpus';
 import type { Lang } from './i18n';
+import { conceptById } from './grammar';
 import { movementById } from './ordo';
 import { PROPER_DAYS, SLOT_OF, partOf, properRank } from './proprium';
 import pkg from '../../package.json' with { type: 'json' };
@@ -60,12 +61,22 @@ export function ordoData(lang: Lang, movement: string) {
 }
 
 export function lemmaData(lang: Lang, lemma: string) {
+	// Null for a lemma the lexicon has never heard of — the same answer the
+	// other loaders give for a bad slug, so the two editions cannot differ:
+	// the site 404s (the route is only prerendered for real entries) and
+	// the downloaded copy must not answer the same address with a page.
+	if (!LEXICON.lemmata[lemma]) return null;
 	return {
 		lemma,
-		entry: LEXICON.lemmata[lemma] ?? null,
+		entry: LEXICON.lemmata[lemma],
 		sense: LEXICON.senses[lang][lemma] ?? null,
 		occurrences: occurrencesOf(lemma)
 	};
+}
+
+export function conceptData(concept: string) {
+	// The same parity rule as lemmaData, for the grammar pages.
+	return conceptById(concept) ? { concept } : null;
 }
 
 export function bibliographyData(lang: Lang) {
@@ -85,8 +96,17 @@ export function properData(day: string, lang: Lang) {
 	const found = PROPER_DAYS.find((d) => d.id === day);
 	if (!found) return null;
 
+	// Membership by the exact day id, not by prefix: the slug is the day id
+	// plus a known part suffix, and a prefix match would let a day whose id
+	// begins with another's (nativitas / nativitas-vigilia) pull the other
+	// day's parts into its Mass.
 	const keys = Object.keys(TEXTS)
-		.filter((key) => key.startsWith(`proprium/${found.id}-`))
+		.filter((key) => {
+			const [category, slug] = key.split('/');
+			if (category !== 'proprium') return false;
+			const part = partOf(slug);
+			return part !== undefined && slug.slice(0, -(part.length + 1)) === found.id;
+		})
 		.sort((a, b) => properRank(a.split('/')[1]) - properRank(b.split('/')[1]));
 	if (!keys.length) return null;
 

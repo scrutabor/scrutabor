@@ -6,8 +6,9 @@
 //
 // The caller supplies the lookup: an id here is whatever the surface uses
 // to address one word. A reading page uses the corpus id (`w001`); the
-// flow prefixes it with the text (`credo:w001`), because several texts
-// share one page and their word ids collide.
+// flow prefixes it with the text (`credo.w001` — the dot is unreserved in
+// a URL, TextBody records why), because several texts share one page and
+// their word ids collide.
 
 import { untrack } from 'svelte';
 import { pageUrl } from './url';
@@ -72,6 +73,34 @@ export function wordPanel(host: WordPanelHost) {
 	let selectedId = $state<string | null>(null);
 	let keepPad = $state(false);
 
+	// The pins preserveScroll schedules must not outlive the page: an
+	// un-cancelled pin from a closing panel can fire against the NEXT
+	// document if the reader navigates within a frame or two. Held here so
+	// a newer pin cancels an older one, and torn down with the component.
+	let pinTimer: ReturnType<typeof setTimeout> | null = null;
+	let pinRaf = 0;
+	function cancelPin() {
+		if (pinTimer !== null) clearTimeout(pinTimer);
+		pinTimer = null;
+		if (pinRaf) cancelAnimationFrame(pinRaf);
+		pinRaf = 0;
+	}
+	$effect(() => cancelPin);
+
+	// The kept padding is needed only while the reader still sits in the
+	// zone the sheet's padding made reachable; the moment they scroll back
+	// above it, the page can give the space up without moving under them.
+	$effect(() => {
+		if (!keepPad) return;
+		const relax = () => {
+			const pad = window.innerHeight * 0.45;
+			const maxAfter = document.documentElement.scrollHeight - pad - window.innerHeight;
+			if (window.scrollY <= maxAfter) keepPad = false;
+		};
+		window.addEventListener('scroll', relax, { passive: true });
+		return () => window.removeEventListener('scroll', relax);
+	});
+
 	// Bottom-sheet history model (one entry per panel session, the Material
 	// convention): OPENING pushes a ?w= entry, so back closes it; SWITCHING
 	// words replaces, so browsing ten words never costs ten back presses;
@@ -100,11 +129,16 @@ export function wordPanel(host: WordPanelHost) {
 		const maxAfter = document.documentElement.scrollHeight - pad - window.innerHeight;
 		if (y > maxAfter) keepPad = true;
 		const pin = () => window.scrollTo({ top: y, behavior: 'auto' });
-		setTimeout(pin, 0);
-		requestAnimationFrame(() => requestAnimationFrame(pin));
+		cancelPin();
+		pinTimer = setTimeout(pin, 0);
+		pinRaf = requestAnimationFrame(() => {
+			pinRaf = requestAnimationFrame(pin);
+		});
 	}
 
 	function open(id: string) {
+		// The sheet's own padding is back — the kept one has done its work.
+		keepPad = false;
 		if (selectedId === null) {
 			pushState(urlWith(id), {});
 			openedByPush = true;
@@ -153,13 +187,17 @@ export function wordPanel(host: WordPanelHost) {
 		// reading selectedId plainly here would make the caller's navigation
 		// effect depend on it, re-running on every tap (the documented
 		// read-after-write regression class).
-		if (!target && untrack(() => selectedId) !== null) preserveScroll();
+		const applied = untrack(() => selectedId);
+		if (!target && applied !== null) preserveScroll();
 		if (!target) openedByPush = false;
 		selectedId = target;
 		// The router resets scroll AFTER this runs on client-side
 		// navigations — schedule the centering behind it, or deep links into
-		// long texts land at the top.
-		if (target) {
+		// long texts land at the top. Only when the selection actually
+		// CHANGED: this re-runs whenever the surface's words change, and a
+		// day's proper arriving must not yank the page back to a word the
+		// reader opened, read, and scrolled away from.
+		if (target && target !== applied) {
 			requestAnimationFrame(() =>
 				document.getElementById(target)?.scrollIntoView({ block: 'center' })
 			);

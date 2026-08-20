@@ -17,6 +17,7 @@
 // was sent names a day on purpose, and that day is what they must see.
 
 import { browser } from '$app/environment';
+import { readStored, writeStored } from '$lib/storage';
 import { localDay } from '$lib/proper-local';
 import { artifactPath, dayById } from '$lib/proprium';
 import { formularyExists } from '$lib/kalendarium';
@@ -62,12 +63,14 @@ const KEY = 'scrutabor-day';
  */
 export function storedDay(): string | null {
 	if (!browser) return null;
+	// Through $lib/storage like every other module: the guard against a
+	// storage that THROWS on access lives there and only there. The parse
+	// guard here is for a malformed value, which is a different failure.
+	const raw = readStored(KEY);
+	// Before the date was stored beside it the value was the bare id.
+	// Treat that as spent rather than as chosen today.
+	if (raw === null || !raw.startsWith('{')) return null;
 	try {
-		const raw = localStorage.getItem(KEY);
-		if (raw === null) return null;
-		// Before the date was stored beside it the value was the bare id.
-		// Treat that as spent rather than as chosen today.
-		if (!raw.startsWith('{')) return null;
 		const { d, on } = JSON.parse(raw);
 		return typeof d === 'string' && on === today() ? d : null;
 	} catch {
@@ -99,12 +102,9 @@ export function dayHref(href: string): string {
 
 export function rememberDay(id: string): void {
 	if (!browser) return;
-	try {
-		localStorage.setItem(KEY, JSON.stringify({ d: id, on: today() }));
-	} catch {
-		// A reader who has blocked storage still gets the day they picked,
-		// for as long as the page lives. Nothing here is worth an error.
-	}
+	// A reader who has blocked storage still gets the day they picked, for
+	// as long as the page lives — writeStored swallows the denial.
+	writeStored(KEY, JSON.stringify({ d: id, on: today() }));
 }
 
 let day = $state<string | null>(null);

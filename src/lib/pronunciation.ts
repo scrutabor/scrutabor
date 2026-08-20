@@ -186,14 +186,18 @@ export function syllabify(form: string): string[] {
 
 /** Index of the stressed syllable: the one carrying the printed accent;
  * initial for unaccented one- and two-syllable words (Latin stresses the
- * penult, which is the first of two). */
+ * penult, which is the first of two). An unaccented longer word is -1 \u2014 the
+ * book printed no accent, so the edition has no claim to make, and a
+ * first-syllable default would print in IPA as a claim it never made.
+ * (One form reaches this today: Isra\u00ebl, whose Hebrew stress the 1962
+ * books leave unmarked.) */
 export function stressIndex(syllables: string[]): number {
 	for (let i = 0; i < syllables.length; i++) {
 		for (const ch of syllables[i].toLowerCase()) {
 			if (ACCENTED.has(ch) || ch === '\u0301') return i;
 		}
 	}
-	return 0;
+	return syllables.length <= 2 ? 0 : -1;
 }
 
 /** "Con-fí-te-or" — the reading aid shown beside the form. */

@@ -73,6 +73,14 @@ describe('stress', () => {
 		expect(stressIndex(syllabify('mater'))).toBe(0);
 		expect(stressIndex(syllabify('et'))).toBe(0);
 	});
+
+	it('claims nothing for an unaccented longer word', () => {
+		// The book printed no accent on Israël, so neither does the IPA: a
+		// first-syllable default happens to be right for this word and would
+		// be a fabricated claim on the next one.
+		expect(stressIndex(syllabify('Israël'))).toBe(-1);
+		expect(ipa('Israël', 'roman')).toBe('i.sra.ɛl');
+	});
 });
 
 describe('ipa', () => {

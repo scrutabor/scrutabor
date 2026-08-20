@@ -23,3 +23,11 @@ export function writeStored(key: string, value: string): void {
 		// nothing here is worth an error
 	}
 }
+
+export function removeStored(key: string): void {
+	try {
+		localStorage.removeItem(key);
+	} catch {
+		// nothing here is worth an error
+	}
+}

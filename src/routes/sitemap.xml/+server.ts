@@ -26,13 +26,18 @@ const app: string[] = [
 	...Object.keys(LEXICON.lemmata).map((lemma) => `/lemma/${lemma}`)
 ];
 
+// The keys are interpolated into XML and into URLs, so they need both
+// treatments — today no lemma or text key needs either (checked), but the
+// bibliography already percent-encodes the same keys, and two modules that
+// disagree about the same strings is how one of them ends up wrong.
 function urlEntry(base: string, lang: string, path: string): string {
+	const escaped = path.split('/').map(encodeURIComponent).join('/').replace(/&/g, '&amp;');
 	const alternates = LANGS.map(
-		(l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${ORIGIN}${base}/${l}${path}"/>`
+		(l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${ORIGIN}${base}/${l}${escaped}"/>`
 	).join('');
 	return (
-		`<url><loc>${ORIGIN}${base}/${lang}${path}</loc>${alternates}` +
-		`<xhtml:link rel="alternate" hreflang="x-default" href="${ORIGIN}${base}/en${path}"/></url>`
+		`<url><loc>${ORIGIN}${base}/${lang}${escaped}</loc>${alternates}` +
+		`<xhtml:link rel="alternate" hreflang="x-default" href="${ORIGIN}${base}/en${escaped}"/></url>`
 	);
 }
 

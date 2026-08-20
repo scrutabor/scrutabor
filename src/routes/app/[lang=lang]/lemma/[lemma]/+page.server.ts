@@ -4,11 +4,16 @@
 import { LEXICON } from '$lib/corpus';
 import { lemmaData } from '$lib/loaders';
 import { LANGS, type Lang } from '$lib/i18n';
+import { error } from '@sveltejs/kit';
 import type { EntryGenerator, PageServerLoad } from './$types';
 
 // Lemma pages are reached from the word panel (client-side), so the
 // prerender crawler cannot discover them — enumerate every entry.
 export const entries: EntryGenerator = () =>
-	LANGS.flatMap((lang) => Object.keys(LEXICON.lemmata).map((lemma) => ({ lang, lemma })));
+	Object.keys(LEXICON.lemmata).flatMap((lemma) => LANGS.map((lang) => ({ lang, lemma })));
 
-export const load: PageServerLoad = ({ params }) => lemmaData(params.lang as Lang, params.lemma);
+// The 404 is unreachable at prerender (entries() enumerates the lexicon)
+// and live on the dev server — the same answer the reading route gives a
+// bad slug, in the expression form because the guard is the whole body.
+export const load: PageServerLoad = ({ params }) =>
+	lemmaData(params.lang as Lang, params.lemma) ?? error(404, 'no such entry');

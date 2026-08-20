@@ -76,6 +76,13 @@
 	{#if gloss?.function}
 		<SourceNotes citations={gloss.function_citations} {lang} />
 	{/if}
+	{#if gloss?.note}
+		<!-- The editorial note on this word in this place. Every disputed
+		     reading carries one; a panel that reports "disputed" in the
+		     verification line and withholds the reason is exactly the
+		     edition the corpus doctrine refuses to be. -->
+		<p class="note">{gloss.note}</p>
+	{/if}
 {/snippet}
 
 {#snippet entry()}

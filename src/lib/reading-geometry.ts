@@ -43,12 +43,29 @@ const SB: Record<string, [number, number]> = {
 	N: [0.012, 0.01],
 	V: [0.0, -0.006],
 	T: [0.027, 0.002],
-	U: [0.024, 0.01]
+	U: [0.024, 0.01],
+	// Measured 2026-08-20, same method (canvas actualBoundingBox against
+	// the advance, EB Garamond Variable 400, validated by re-deriving P, E,
+	// C, Q and T to the third decimal first). R and F had opened twelve
+	// texts on the silent [0,0] fallback — two of them in production — and
+	// the accented capitals carry the acute's own ink, which is why they
+	// cannot borrow their base letter's row.
+	R: [0.024, -0.005],
+	F: [0.03, 0.027],
+	Á: [-0.002, -0.005],
+	É: [0.037, 0.025],
+	Í: [0.019, 0.018],
+	Ó: [0.045, 0.045],
+	Ú: [0.024, 0.01]
 };
 
-// DESCENT below the baseline, in the letter's own em. Q is the only
-// capital that opens a prayer in this corpus and reaches below the
-// line, and at 1.75 its tail put 3.6px into the gloss underneath.
+// DESCENT below the baseline, in the letter's own em. Q reaches furthest
+// below the line — at 1.75 its tail put 3.6px into the gloss underneath.
+// (An earlier comment here called Q "the only capital that opens a prayer
+// in this corpus and reaches below the line", which was stale in a
+// load-bearing way: the set of opening capitals grows with every Sunday
+// added, and the coverage test in reading-geometry.test.ts is what now
+// holds the tables to the corpus, not a sentence.)
 //
 // Shrinking it was the wrong answer — the owner's, and he is right: a Q
 // two-thirds the size of every other initial is a worse fault than the
@@ -83,7 +100,18 @@ const INK: Record<string, [number, number]> = {
 	N: [0.658, 0.017],
 	V: [0.653, 0.012],
 	T: [0.694, 0.005],
-	U: [0.653, 0.014]
+	U: [0.653, 0.014],
+	// Measured with the SB additions above. The acute carries the accented
+	// capitals' ink to 0.838em — a quarter above the plain cap height —
+	// which is exactly the clearance the fallback was silently not giving
+	// Éxcita.
+	R: [0.657, 0.021],
+	F: [0.66, 0.005],
+	Á: [0.838, 0.005],
+	É: [0.838, 0.005],
+	Í: [0.838, 0.005],
+	Ó: [0.838, 0.014],
+	Ú: [0.838, 0.014]
 };
 // how far the base's own box reaches, measured, less the padding it
 // already carries
@@ -138,6 +166,14 @@ export function sinkFor(letter: string, glossed: boolean): number {
 /** [font-size, margin-start, margin-end, gloss lift] for an initial, all
  * in the initial's own em except the lift and the sink, which are in the
  * reading size's em. */
+/** Whether a letter has measured metrics in BOTH tables. The renderer
+ * degrades softly on an unmeasured letter (a reader must never crash over
+ * a margin), so this is how the build stays loud about it instead: the
+ * coverage test walks every initial the corpus actually opens with. */
+export function measuredInitial(letter: string): boolean {
+	return letter in SB && letter in INK;
+}
+
 export function initialFit(letter: string, glossed: boolean) {
 	const scale = RAISED;
 	const [sbStart, sbEnd] = SB[letter] ?? [0, 0];

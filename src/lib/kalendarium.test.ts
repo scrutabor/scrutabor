@@ -35,6 +35,19 @@ describe('the calendar this edition ships', () => {
 		expect(tuesday.week?.formulary).toBe('dominica-ii-adventus');
 	});
 
+	it('falls silent past either end of the table instead of answering with its edge', () => {
+		// A device whose clock reset to 1970 or drifted past 2101 is not in
+		// any week this table knows. The last row's own week still counts —
+		// it runs six days past the row, to the eve of an Advent the table
+		// no longer holds — and the day after that is nobody's.
+		expect(dayOf('1970-01-01')).toEqual({ on: null, week: null });
+		expect(dayOf('2200-01-01')).toEqual({ on: null, week: null });
+		const lastWeekday = dayOf('2101-11-26');
+		expect(lastWeekday.on).toBeNull();
+		expect(lastWeekday.week?.formulary, 'the final week is still covered').toBeTruthy();
+		expect(dayOf('2101-11-27')).toEqual({ on: null, week: null });
+	});
+
 	it('reads the local date, not the world’s', () => {
 		// `toISOString` converts to UTC first and hands back yesterday for
 		// anyone east of Greenwich after midnight — which is exactly when this

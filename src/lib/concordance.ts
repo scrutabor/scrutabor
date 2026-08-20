@@ -11,7 +11,7 @@
 // catalogue instead of the corpus: the list a page renders
 // from and the list of what exists are two different lists.
 import { CATALOG } from './catalog';
-import { properRank } from './proprium';
+import { PROPER_DAYS, partOf, properRank } from './proprium';
 import { TEXTS } from './corpus';
 import { ORDO } from './ordo';
 
@@ -48,13 +48,25 @@ export function everyTextInOrder(): string[] {
 	for (const section of CATALOG) for (const t of section.texts) add(`${t.category}/${t.slug}`);
 	for (const movement of ORDO) for (const e of movement.entries) if (e.text) add(e.text);
 	// The tail: anything neither shelf nor Ordo names. The Proper lives here
-	// on purpose and must not arrive alphabetically, which would put its
-	// Alleluia before its Introit on every lemma page.
+	// on purpose and must not arrive alphabetically — not its parts, which
+	// would put an Alleluia before its Introit, and not its days, which
+	// PROPER_DAYS already holds in the year's own order. Roman numerals
+	// sorted as strings put Advent II before Easter II before Advent III;
+	// they are right for i/ii/iii/iv alone, which is one season's luck.
+	// The day id is the slug less its part suffix — exact, not a prefix
+	// match, so a day whose id begins with another day's id cannot be
+	// mistaken for it.
+	const dayRank = (slug: string): number => {
+		const part = partOf(slug);
+		const day = part ? slug.slice(0, -(part.length + 1)) : slug;
+		const at = PROPER_DAYS.findIndex((d) => d.id === day);
+		return at === -1 ? PROPER_DAYS.length : at;
+	};
 	const tail = Object.keys(TEXTS).sort((a, b) => {
 		const [ca, sa] = a.split('/');
 		const [cb, sb] = b.split('/');
 		if (ca === 'proprium' && cb === 'proprium') {
-			const day = sa.replace(/-[^-]+$/, '').localeCompare(sb.replace(/-[^-]+$/, ''));
+			const day = dayRank(sa) - dayRank(sb);
 			return day !== 0 ? day : properRank(sa) - properRank(sb);
 		}
 		return a.localeCompare(b);
