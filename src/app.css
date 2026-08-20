@@ -151,10 +151,33 @@ body {
 /* EB Garamond's roman carries an OpenType locl rule for the Latin language
    system that substitutes u -> v ("qvia", "cvlpa") — triggered by lang="la".
    The 1962 liturgical orthography distinguishes u/v, so the feature is
-   disabled; the semantic lang attribute stays (the italic face has no such
-   rule). */
+   disabled; the semantic lang attribute stays. */
 :lang(la) {
 	font-feature-settings: 'locl' 0;
+}
+
+/* NO ITALICS IN THIS BOOK (owner, 2026-08-21). Continuous italic reads
+   measurably slower, EB Garamond's is a true Renaissance cursive that
+   reads slower still, and the slant is invisible to the contrast metric —
+   so italic text always has less real margin than its measured Lc. The
+   glosses learned this first (see the rt rule in TextBody: upright since
+   the slope "was doing no work"), and the 1962 Missale itself sets its
+   rubrics in red ROMAN — italic rubrics and italic translations were web
+   habits, not the book's tradition. Every voice keeps its other channels:
+   red for rubrics, size + soft ink + the hairline for translations,
+   weight for emphasis. The semantic elements stay — an <i lang="la"> is
+   the right markup for a Latin term — they just stand upright, which
+   also lets the italic font subsets leave the payload entirely. */
+em,
+i,
+cite,
+dfn,
+var {
+	font-style: normal;
+}
+
+em {
+	font-weight: 500;
 }
 
 /* THE ONE KNOB. Every size and every space on a reading surface is a
@@ -377,7 +400,6 @@ h1.minor {
 	margin-inline-start: auto;
 	font-size: 0.9rem;
 	color: var(--ink-soft);
-	font-style: italic;
 	text-align: right;
 }
 
@@ -507,7 +529,6 @@ h2 {
 
 .motto {
 	margin: 2.6rem 0 0;
-	font-style: italic;
 	font-size: 1.1rem;
 	line-height: 1.6;
 	max-width: 28rem;
@@ -552,7 +573,6 @@ h2 {
 .card-note {
 	font-size: 0.95rem;
 	color: var(--ink-soft);
-	font-style: italic;
 }
 
 /* …and what a centred page says: a status, then a line with the way

@@ -70,17 +70,20 @@ test('the reading face stays small @online', async ({ request }) => {
 			faces.add(new URL(m[1].replace(/["']/g, ''), `http://localhost${sheet}`).pathname);
 		}
 	}
-	// Eight: latin, latin-ext, greek and greek-ext, roman and italic.
-	expect(faces.size).toBe(8);
+	// Four: latin, latin-ext, greek and greek-ext — roman only, since the
+	// book sets no italic anywhere (owner, 2026-08-21; the no-italics rule
+	// in app.css carries the reasons).
+	expect(faces.size).toBe(4);
 
 	let total = 0;
 	for (const face of faces) total += (await (await request.get(face)).body()).length;
-	// Upstream is 480K across fourteen files. A regeneration that quietly
-	// stopped subsetting would sail past every other test in this suite.
+	// Upstream is 480K across fourteen files; the four roman subsets are
+	// 55K. A regeneration that quietly stopped subsetting — or that let
+	// the italic faces back in — would sail past every other test here.
 	expect(
 		Math.round(total / 1024),
 		'font subsets have grown — did a regeneration lose its charset?'
-	).toBeLessThan(140);
+	).toBeLessThan(70);
 });
 
 test('Latin text still refuses the locl substitution @online', async ({ page }) => {

@@ -433,10 +433,6 @@
 		color: var(--ink-soft);
 	}
 
-	.way.soon .way-note {
-		font-style: italic;
-	}
-
 	/* Wider than the app's catalog column: the landing is read on
 	   whatever screen finds it, and the specimen wants room for a whole
 	   verse before it wraps. */

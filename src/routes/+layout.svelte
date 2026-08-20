@@ -14,8 +14,6 @@
 	// only a handful of pages set a Greek word.
 	import ebLatin from '$lib/fonts/eb-garamond-latin-wght-normal.woff2?url';
 	import ebLatinExt from '$lib/fonts/eb-garamond-latin-ext-wght-normal.woff2?url';
-	import ebLatinItalic from '$lib/fonts/eb-garamond-latin-wght-italic.woff2?url';
-	import ebLatinExtItalic from '$lib/fonts/eb-garamond-latin-ext-wght-italic.woff2?url';
 
 	let { children } = $props();
 
@@ -27,7 +25,7 @@
 		document.documentElement.dataset.hydrated = 'true';
 	});
 
-	const fonts = [ebLatin, ebLatinExt, ebLatinItalic, ebLatinExtItalic];
+	const fonts = [ebLatin, ebLatinExt];
 </script>
 
 <svelte:head>

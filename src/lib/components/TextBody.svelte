@@ -411,7 +411,6 @@
 
 	.repeated-title {
 		font-size: calc(var(--reading) * 0.86);
-		font-style: italic;
 		line-height: 1.2;
 		color: var(--ink);
 	}
@@ -514,10 +513,6 @@
 	   part rather than about the celebrant's. */
 	.who-all {
 		color: var(--rubric);
-	}
-
-	.who-voice {
-		font-style: italic;
 	}
 
 	/* The speaker's mark, in the red the books use for everything that is
@@ -951,7 +946,6 @@
 	.rubric-la {
 		margin: 0;
 		color: var(--rubric);
-		font-style: italic;
 		font-size: calc(var(--reading) * 0.724);
 	}
 
@@ -991,26 +985,25 @@
 	}
 
 	.translation {
-		/* 0.09 of a line of air above, as PADDING because a margin here
-		   collapses into the verse's own bottom margin and buys nothing.
-		   The 0.78 size bump raised the first line's ascenders and ate the
-		   daylight the ink-gap test guards (CI measured 9px where >10 is
-		   the floor). The value is CENTRED in a genuinely narrow window:
-		   two tests bound this same gap from opposite sides — the ink
-		   clearance wants more air (>10px, binding on CI's tighter render)
-		   and the belongs-to-its-verse ratio wants less (next/own > 1.25,
-		   binding locally) — and 0.14 of a line sat exactly on the ratio's
-		   edge. Both bounds now carry at least a pixel of margin in both
+		/* 0.09 of a line of air on BOTH sides, as PADDING because a margin
+		   here collapses into the verse's own bottom margin and buys
+		   nothing. The 0.78 size bump made the block taller and ate the
+		   daylight two geometry tests guard from opposite sides: the ink
+		   clearance above (>10px, binding on CI's tighter render) and the
+		   belongs-to-its-verse ratio (next/own > 1.25), whose window the
+		   top padding alone narrowed to fractions of a pixel. The bottom
+		   half gives the ratio's numerator back, so the translation sits a
+		   touch further from the NEXT verse — which is the very attachment
+		   the ratio asserts — and both bounds carry real margin in both
 		   environments. */
 		margin: 0;
-		padding-top: calc(var(--reading) * 0.09);
+		padding-block: calc(var(--reading) * 0.09);
 		/* No measure of its own — it ends where the Latin above it ends;
 		   see the rule over .rubric-la. This is the block that started
 		   that change: capped, it broke at little more than half the width
 		   the line above it used, and a psalm verse of 77 characters
 		   wrapped where its own Latin had not. */
 		color: var(--ink-soft);
-		font-style: italic;
 		/* 0.78, up from 0.724 (readability audit 2026-08-20): at 0.724 the
 		   translation was optically ~13px — EB Garamond's x-height is 0.405
 		   against the ~0.52 the size norms assume — and APCA wanted either

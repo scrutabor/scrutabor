@@ -113,10 +113,6 @@
 		font-size: 0.9rem;
 	}
 
-	.head-senses {
-		font-style: normal;
-	}
-
 	.grammar,
 	.derivatives {
 		margin: 0;

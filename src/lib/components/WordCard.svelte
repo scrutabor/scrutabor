@@ -150,7 +150,6 @@
 
 	.head-senses {
 		margin-inline-start: 0.2em;
-		font-style: normal;
 	}
 
 	.gender {

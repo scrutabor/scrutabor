@@ -121,10 +121,6 @@
 		color: var(--ink);
 	}
 
-	cite {
-		font-style: normal;
-	}
-
 	@media print {
 		.source-notes {
 			display: none;

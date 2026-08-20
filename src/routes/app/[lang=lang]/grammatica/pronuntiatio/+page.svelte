@@ -166,7 +166,6 @@
 		margin: 0.3rem 0 0;
 		text-align: center;
 		color: var(--ink-soft);
-		font-style: italic;
 		font-size: 1.05rem;
 	}
 

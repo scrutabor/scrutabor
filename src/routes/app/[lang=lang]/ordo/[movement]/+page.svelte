@@ -508,7 +508,6 @@
 	.when {
 		display: block;
 		margin-top: 0.2rem;
-		font-style: italic;
 		font-size: 0.9rem;
 	}
 

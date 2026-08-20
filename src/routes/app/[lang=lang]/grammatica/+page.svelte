@@ -65,6 +65,5 @@
 	.card-note {
 		font-size: 0.9rem;
 		color: var(--ink-soft);
-		font-style: italic;
 	}
 </style>

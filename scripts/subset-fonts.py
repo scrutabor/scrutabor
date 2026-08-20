@@ -68,9 +68,16 @@ def characters_in_build() -> set[str]:
 
 
 def faces() -> list[tuple[str, str, str]]:
-    """(subset, style, unicode-range) for every face we keep, from upstream."""
+    """(subset, style, unicode-range) for every face we keep, from upstream.
+
+    Roman only, since 2026-08-21: the book sets no italic anywhere (the
+    owner's ruling, recorded at the no-italics rule in app.css), so the
+    italic faces would be 59 KB of dead weight in every cold load and in
+    the offline copy. If an italic ever returns by design, restore the
+    ("italic", "wght-italic.css") pair here and regenerate.
+    """
     out = []
-    for style, css in (("normal", "wght.css"), ("italic", "wght-italic.css")):
+    for style, css in (("normal", "wght.css"),):
         text = (UPSTREAM / css).read_text(encoding="utf-8")
         for block in text.split("@font-face")[1:]:
             src = re.search(r"url\(\./files/eb-garamond-(.+?)-wght-", block)

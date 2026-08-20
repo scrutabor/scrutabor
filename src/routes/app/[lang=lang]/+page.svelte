@@ -166,7 +166,6 @@
 		display: block;
 		margin-top: 0.15rem;
 		font-size: 0.95rem;
-		font-style: italic;
 		color: var(--ink-soft);
 	}
 

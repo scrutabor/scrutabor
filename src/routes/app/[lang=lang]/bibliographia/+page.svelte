@@ -98,7 +98,6 @@
 		margin: 0.2rem 0 0;
 		text-align: center;
 		color: var(--rubric);
-		font-style: italic;
 	}
 
 	/* The opening paragraph takes the shared prose measure (app.css); the
@@ -127,10 +126,6 @@
 		   inherit a centred red heading nothing else on the page has. */
 		text-align: start;
 		color: var(--ink);
-	}
-
-	cite {
-		font-style: normal;
 	}
 
 	ul {
