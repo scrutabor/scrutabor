@@ -456,7 +456,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/praefatio-dialogus',
 				note: {
 					pl: 'Dialog, którym zaczyna się prefacja — kapłan rozkłada ręce i podnosi je przy „Sursum corda”.',
-					en: 'The dialogue that opens the preface — the priest spreads his hands and raises them at Sursum corda.'
+					en: 'The dialog that opens the preface — the priest spreads his hands and raises them at Sursum corda.'
 				}
 			},
 			{
@@ -510,7 +510,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/communicantes',
 				note: {
 					pl: 'Lista świętych: Maryja, dwunastu apostołów i dwunastu męczenników rzymskich. Świętego Józefa dopisał tu Jan XXIII w 1962 roku.',
-					en: 'The list of saints: Mary, twelve apostles, and twelve Roman martyrs. John XXIII added St Joseph here in 1962.'
+					en: 'The list of saints: Mary, twelve apostles, and twelve Roman martyrs. John XXIII added Saint Joseph here in 1962.'
 				}
 			},
 			{
@@ -848,7 +848,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/evangelium-ultimum',
 				note: {
 					pl: 'Przy ołtarzu po stronie Ewangelii kapłan czyta prolog świętego Jana. Na słowa Et Verbum caro factum est wszyscy przyklękają.',
-					en: 'At the Gospel side the priest reads the prologue of St John. At Et Verbum caro factum est everyone genuflects.'
+					en: 'At the Gospel side the priest reads the prologue of Saint John. At Et Verbum caro factum est everyone genuflects.'
 				}
 			},
 			// The prayers of Leo XIII, prescribed in 1884 and said kneeling at

@@ -218,13 +218,13 @@ test('the index answers a change of part in the book’s own voice', async ({ pa
 	// parts are marked where the reader meets them instead.
 	await page.goto('/app/en/ordo');
 	const hint = page.locator('.picker[data-kind="role"]:not(.compact) .hint');
-	await expect(hint).toHaveText('the parts said aloud, with the answers of the faithful');
+	await expect(hint).toHaveText('what is said aloud, with the answers of the faithful');
 
 	await page.getByRole('radio', { name: 'priest' }).click();
 	await expect(hint).toHaveText('the whole Ordo Missæ, including the prayers said silently');
 
 	await page.getByRole('radio', { name: 'faithful' }).click();
-	await expect(hint).toHaveText('the parts said aloud, with the answers of the faithful');
+	await expect(hint).toHaveText('what is said aloud, with the answers of the faithful');
 
 	// and nothing counts at the reader
 	await expect(page.locator('.role-part')).toHaveCount(0);

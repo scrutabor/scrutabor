@@ -36,7 +36,7 @@
 			back: 'wróć na stronę główną'
 		}),
 		en: {
-			title: 'Support',
+			title: 'Contact',
 			description: 'Questions, feedback, and bug reports — GitHub or e-mail.',
 			lede: 'Questions, feedback, and bug reports are welcome.',
 			appIssues: 'bugs and suggestions about the app',

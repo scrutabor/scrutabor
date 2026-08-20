@@ -306,7 +306,7 @@ test.describe('landing @online', () => {
 		// the readers both get the same door
 		await expect(page.locator('a[href="mailto:contact@scrutabor.org"]')).toBeVisible();
 		await page.goto('/en/support');
-		await expect(page.locator('h1')).toHaveText('Support');
+		await expect(page.locator('h1')).toHaveText('Contact');
 		expect((await page.request.get('/en/support')).status()).toBe(200);
 	});
 

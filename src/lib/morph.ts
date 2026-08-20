@@ -120,7 +120,7 @@ const LABELS: Record<Lang, MorphLabels> = {
 		decl: (d) => `${ORDINAL[d - 1]}\u00a0declension`,
 		conj: (c) => `${ORDINAL[c - 1]}\u00a0conjugation`,
 		prep: (governs) => `preposition (with the ${governs === 'acc' ? 'accusative' : 'ablative'})`,
-		undecided: 'form undecided'
+		undecided: 'ambiguous form'
 	}
 };
 

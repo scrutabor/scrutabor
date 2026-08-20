@@ -69,7 +69,16 @@ export const SLOT_OF: Record<ProperPart, string> = {
 /** The seasons of the year, in the order the Missal walks them. A picker
  * groups by these, so the list stays readable as days are added: one season
  * is a flat list of four, and the year is not. */
-export const SEASONS = ['adventus', 'nativitas', 'quadragesima', 'paschale', 'per-annum'] as const;
+export const SEASONS = [
+	'adventus',
+	'nativitas',
+	'epiphania',
+	'septuagesima',
+	'quadragesima',
+	'passionis',
+	'paschale',
+	'per-annum'
+] as const;
 export type Season = (typeof SEASONS)[number];
 
 export interface ProperDay {

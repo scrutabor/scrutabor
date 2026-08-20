@@ -82,9 +82,10 @@
 		{:else}
 			<p class="what">
 				We transcribe the <strong>Roman</strong> (ecclesiastical, “Italianate”) pronunciation — the one
-				the 1962 books and the Gregorian scholas sing. Under Saint Pius&nbsp;X, Rome encouraged the whole
-				Church toward the Roman pronunciation. National traditions, the Polish one among them, survive
-				in parishes, and the table below shows both.
+				the Gregorian scholas use when they sing from the 1962 books. Under Saint Pius&nbsp;X, Rome encouraged
+				the whole Church toward the Roman pronunciation. National traditions, the Polish one among them,
+				survive in parishes, and the table below shows both. The Polish tradition is not uniform either
+				— it varies by region and generation, and the transcriptions give its most common form.
 			</p>
 			<p class="what">
 				Syllable division is identical in both traditions — chant gives each syllable its own note,
