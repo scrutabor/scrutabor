@@ -58,7 +58,10 @@ test('no Polish surface leaves a one-letter word before a breakable space @onlin
 			// slow page, it is a runner with nine workers competing on it, and
 			// CI failed exactly once that way. A minute costs nothing when it
 			// is not needed and buys the sweep out of a contention flake.
-			if (operable) await settled(page, 60_000);
+			// Sixty seconds then failed the same way twice more in one day —
+			// nine workers on a four-core runner can starve one page past a
+			// minute — so the allowance is two, on the same reasoning.
+			if (operable) await settled(page, 120_000);
 			if (await slider.count()) await slider.fill('2');
 			if (await word.count()) await word.click();
 		});
