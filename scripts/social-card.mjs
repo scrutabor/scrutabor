@@ -10,17 +10,24 @@
 //
 //   node scripts/social-card.mjs
 import { chromium } from 'playwright-core';
+import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const fonts = join(root, 'src', 'lib', 'fonts');
 
-// The site's own light palette (src/app.css :root).
+// The site's own light palette (src/app.css :root). The mark is NOT drawn
+// here: it is the shipped app icon itself (static/icon-512.png), so the
+// card's tile is pixel-identical to the favicon family — a hand-drawn CSS
+// copy sat the S too small and off its optical centre (owner, 2026-08-20).
 const BG = '#f7f1e6';
 const INK = '#251e12';
 const SOFT = '#70624a';
-const RUBRIC = '#9e2b1e';
+
+// The shipped app icon, inlined: a file:// subresource is blocked from a
+// setContent page, and a data URI cannot be.
+const ICON = `data:image/png;base64,${readFileSync(join(root, 'static', 'icon-512.png')).toString('base64')}`;
 
 // Dotless on display, as the landing prints them.
 const TAGLINE = {
@@ -52,12 +59,6 @@ const page_ = (lang) => `<!doctype html>
 	}
 	.mark {
 		width: 132px; height: 132px;
-		background: ${RUBRIC}; border-radius: 30px;
-		display: flex; align-items: center; justify-content: center;
-	}
-	.mark span {
-		color: ${BG}; font-size: 104px; font-weight: 640;
-		transform: translateY(-6px);
 	}
 	h1 {
 		margin-top: 34px;
@@ -70,7 +71,7 @@ const page_ = (lang) => `<!doctype html>
 	}
 </style></head>
 <body>
-	<div class="mark"><span>S</span></div>
+	<img class="mark" src="${ICON}" alt="" />
 	<h1>Scrutabor</h1>
 	<p>${TAGLINE[lang]}</p>
 </body></html>`;
