@@ -198,6 +198,26 @@ scrutabor.org
 // come along. The same text the site serves at /OFL.txt.
 writeFileSync(join(OUT, 'OFL.txt'), readFileSync('src/lib/fonts/LICENSE'));
 
+// The folder's promises, verified against the BYTES rather than trusted to
+// the writes above — the beacon check already learned that lesson. A copy
+// without the font licence may not be distributed, and a README that lost
+// either language or the OFL mention would ship a folder whose only prose
+// breaks its own word. Watched red on a planted empty licence.
+const readme = readFileSync(join(OUT, 'README.txt'), 'utf8');
+const ofl = readFileSync(join(OUT, 'OFL.txt'), 'utf8');
+for (const [ok, why] of [
+	[ofl.includes('SIL OPEN FONT LICENSE'), 'OFL.txt does not carry the licence text'],
+	[readme.includes('Otwórz'), 'README.txt lost its Polish'],
+	[readme.includes('Open'), 'README.txt lost its English'],
+	[readme.includes('OFL.txt'), 'README.txt no longer names the licence file'],
+	[readme.includes('JavaScript'), 'README.txt hides the one requirement']
+]) {
+	if (!ok) {
+		console.error(`the package breaks its own word: ${why}`);
+		process.exit(1);
+	}
+}
+
 const bytes = [...walk(OUT)].reduce((sum, path) => sum + statSync(path).size, 0);
 console.log(`${OUT}/ — ${(bytes / 1048576).toFixed(1)} MB`);
 
