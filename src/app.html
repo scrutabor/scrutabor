@@ -1,5 +1,10 @@
 <!doctype html>
-<html lang="%app.lang%" data-theme="light">
+<!-- No static data-theme: the pre-paint script below stamps one before
+     first paint whenever scripts run, and with them off the attribute's
+     absence is what lets the prefers-color-scheme fallback in app.css
+     answer — a hard-coded "light" here overrode a dark-preferring reader
+     exactly where nothing else could. -->
+<html lang="%app.lang%">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -73,10 +73,20 @@
 		   size on a 320px phone, 9.5rem is 213px of a 253px column and the
 		   row pushed the page sideways. */
 		width: min(9.5rem, 38%);
-		height: 2px;
-		background: var(--border);
+		/* The INPUT is the touch target and the LINE is only its paint: as a
+		   2px-tall element this was a control operable to the thumb's own
+		   15px and nothing else, on the row a reader works in a dim nave —
+		   WCAG 2.5.8 asks 24px. The box is 1.5rem and the 2px track is
+		   drawn down its centre. */
+		height: 1.5rem;
+		background: linear-gradient(var(--border), var(--border)) center / 100% 2px no-repeat;
 		border-radius: 1px;
 		cursor: pointer;
+	}
+
+	input::-webkit-slider-runnable-track {
+		height: 100%;
+		background: transparent;
 	}
 
 	input::-webkit-slider-thumb {
@@ -86,7 +96,8 @@
 		border-radius: 50%;
 		background: var(--rubric);
 		border: none;
-		margin-top: 0;
+		/* centres the thumb in the full-height track */
+		margin-top: calc((1.5rem - 0.95rem) / 2);
 	}
 
 	input::-moz-range-thumb {
@@ -105,7 +116,7 @@
 
 	input:focus-visible {
 		outline: 2px solid var(--rubric);
-		outline-offset: 6px;
+		outline-offset: 2px;
 	}
 
 	/* Where the three of them will not share a line — the largest reading

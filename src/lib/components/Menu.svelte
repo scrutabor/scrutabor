@@ -32,17 +32,24 @@
 	// LAST pill's list runs off the right. So the list is placed against
 	// the VIEWPORT — it prefers to hang off the end of its pill and gives
 	// that up only as far as it must to stay on screen. Measured on open,
-	// because none of it is known until then.
+	// and again on resize: a phone rotated with the list open keeps the
+	// offset computed for the old width otherwise.
 	$effect(() => {
 		if (!open || !pop || !root) return;
-		const gap = 8;
-		const menu = root.getBoundingClientRect();
-		const width = pop.offsetWidth;
-		const room = document.documentElement.clientWidth;
-		const wanted = menu.right - width;
-		const x = Math.min(Math.max(wanted, gap), Math.max(gap, room - width - gap));
-		pop.style.left = `${x - menu.left}px`;
-		pop.style.right = 'auto';
+		const place = () => {
+			if (!pop || !root) return;
+			const gap = 8;
+			const menu = root.getBoundingClientRect();
+			const width = pop.offsetWidth;
+			const room = document.documentElement.clientWidth;
+			const wanted = menu.right - width;
+			const x = Math.min(Math.max(wanted, gap), Math.max(gap, room - width - gap));
+			pop.style.left = `${x - menu.left}px`;
+			pop.style.right = 'auto';
+		};
+		place();
+		window.addEventListener('resize', place);
+		return () => window.removeEventListener('resize', place);
 	});
 
 	function onWindowClick(e: MouseEvent) {
@@ -56,18 +63,19 @@
 
 <svelte:window onclick={onWindowClick} onkeydown={onKey} />
 
+<!-- A DISCLOSURE, not a listbox: a button that shows a plain list of links
+     or buttons, each doing its own job. It wore role="listbox" once, which
+     promises arrow keys and aria-activedescendant and owned options — a
+     whole keyboard contract nothing here implements — and the rows were
+     list items, not options, so the tree was invalid on top of dishonest.
+     aria-expanded on the button is the entire pattern. -->
 <div class="menu" bind:this={root}>
-	<button
-		aria-label={label}
-		aria-haspopup="listbox"
-		aria-expanded={open}
-		onclick={() => (open = !open)}
-	>
+	<button aria-label={label} aria-expanded={open} onclick={() => (open = !open)}>
 		{@render trigger()}
 		<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
 	</button>
 	{#if open}
-		<ul bind:this={pop} role="listbox" aria-label={label}>
+		<ul bind:this={pop} aria-label={label}>
 			{@render children(() => (open = false))}
 		</ul>
 	{/if}

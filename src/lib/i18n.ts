@@ -11,7 +11,6 @@ export interface Messages {
 	langName: string;
 	tagline: string;
 	mottoRef: string;
-	workingEdition: string;
 	/** The colophon's word for an edition of the app. */
 	edition: string;
 	/** Accessible name for the compact home control inside the prayer book. */
@@ -58,6 +57,8 @@ export interface Messages {
 	/** A real day of the calendar whose Mass this edition has not written.
 	 * A different absence from `dayFailed`: nothing went wrong. */
 	dayUnwritten: string;
+	/** Announced when the picked day's texts have landed in the page. */
+	dayInPlace: string;
 	dayPartial: string;
 	dayIsToday: string;
 	dayAhead: string;
@@ -82,7 +83,6 @@ export interface Messages {
 	voices: Record<'submissa' | 'secreto' | 'cantus', string>;
 	/** A verse number that cites its verse in the URL (the psalter). */
 	verseAria: (n: number) => string;
-	/** Marks a line the reader answers with, so it can be found at a glance. */
 	/** The reader's part at Mass, and the control that sets it. */
 	roleLabel: string;
 	roles: Record<'populus' | 'minister' | 'sacerdos', string>;
@@ -118,7 +118,6 @@ const MESSAGES: Record<Lang, Messages> = {
 		langName: 'Polski',
 		tagline: 'Modlitwa po łacinie ze zrozumieniem',
 		mottoRef: 'ps\u00a0118,\u00a034',
-		workingEdition: 'wydanie robocze',
 		edition: 'wydanie',
 		bookHome: 'strona główna modlitewnika',
 		levels: ['sama łacina', 'słowo po słowie', 'pełny przekład'],
@@ -166,6 +165,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayLoading: 'wczytywanie',
 		dayFailed: 'nie udało się wczytać',
 		dayUnwritten: 'jeszcze nie w tym wydaniu',
+		dayInPlace: 'teksty dnia są na stronie',
 		dayPartial: '(część tekstów)',
 		dayIsToday: 'dziś ·',
 		dayAhead: 'formularza na dziś jeszcze tu nie ma — wybierz inny dzień',
@@ -247,7 +247,6 @@ const MESSAGES: Record<Lang, Messages> = {
 		langName: 'English',
 		tagline: 'Prayer in Latin with understanding',
 		mottoRef: 'ps\u00a0118\u00a0(119),\u00a034',
-		workingEdition: 'working edition',
 		edition: 'edition',
 		bookHome: 'prayer book home',
 		levels: ['Latin only', 'word by word', 'full translation'],
@@ -295,6 +294,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayLoading: 'loading',
 		dayFailed: 'could not be loaded',
 		dayUnwritten: 'not yet in this edition',
+		dayInPlace: 'the day’s texts are on the page',
 		dayPartial: '(some texts)',
 		dayIsToday: 'today ·',
 		dayAhead: 'today’s formulary is not here yet — choose another day',
@@ -381,7 +381,3 @@ const MESSAGES: Record<Lang, Messages> = {
 // Polish one-letter words are bound to what follows them (see lib/polish);
 // English needs nothing of the kind.
 export const M: Record<Lang, Messages> = { en: MESSAGES.en, pl: bindProse(MESSAGES.pl) };
-
-export function otherLang(lang: Lang): Lang {
-	return lang === 'pl' ? 'en' : 'pl';
-}

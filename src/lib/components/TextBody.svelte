@@ -272,7 +272,7 @@
 			class:answer={mine}
 			class:marked={showMark || verseNo !== undefined}
 			class:cited={verseNo !== undefined && verseNo === citedVerse}
-			id={verseNo !== undefined ? `v${verseNo}` : segmentId(seg.id)}
+			id={verseNo !== undefined ? segmentId(`v${verseNo}`) : segmentId(seg.id)}
 			lang="la"
 		>
 			<!-- The mark the books print in red beside the line, and then the

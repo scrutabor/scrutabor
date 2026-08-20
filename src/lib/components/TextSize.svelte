@@ -42,11 +42,13 @@
 	{#snippet children(close)}
 		{#each ORDER as step (step)}
 			<li>
+				<!-- aria-current, the same mark the language rows carry: an
+				     option without a listbox is an invalid tree, and the menu
+				     is a disclosure, not a listbox (Menu.svelte). -->
 				<button
 					class="menu-row"
 					type="button"
-					role="option"
-					aria-selected={step === reading.value}
+					aria-current={step === reading.value ? 'true' : undefined}
 					onclick={() => {
 						reading.set(step);
 						close();

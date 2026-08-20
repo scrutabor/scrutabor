@@ -17,7 +17,12 @@
 			>{M[lang].sourcesLabel}</summary
 		>
 		<ol>
-			{#each citations as citation (`${citation.title}:${citation.locator}`)}
+			<!-- The key carries the url too: the grouping upstream (reading-text)
+		     distinguishes citations by title + url, so two entries can share
+		     a title and a locator and differ only there — and a duplicate
+		     each-key does not degrade, it throws, on hydration, in
+		     production. -->
+			{#each citations as citation (`${citation.title}:${citation.locator}:${citation.url ?? ''}`)}
 				<li>
 					{#if citation.url}<a
 							href={citation.url}

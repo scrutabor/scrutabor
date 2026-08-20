@@ -45,16 +45,23 @@
 	} = $props();
 
 	// Tapping the quiet parts of the page dismisses the sheet; interactive
-	// chrome (the language menu, the theme toggle, the help slider, links)
-	// does its own job without also closing it, and the sheet's own
-	// controls are inside the aside. composedPath, not target.closest: a
-	// control that re-renders on click (the theme toggle swaps its icon)
-	// detaches the clicked node before the event reaches window.
+	// chrome (the language menu, the theme toggle, the help slider, links,
+	// a source-note disclosure) does its own job without also closing it,
+	// and the sheet's own controls are inside the aside. composedPath, not
+	// target.closest: a control that re-renders on click (the theme toggle
+	// swaps its icon) detaches the clicked node before the event reaches
+	// window. `details` covers the whole open disclosure, not only its
+	// summary — a reader engaging with the sources is not tapping the
+	// quiet page, and opening one used to cost them the panel.
 	function outside(e: MouseEvent) {
 		if (inline) return;
 		const interactive = e
 			.composedPath()
-			.some((n) => n instanceof Element && n.matches('a, button, input, select, textarea, aside'));
+			.some(
+				(n) =>
+					n instanceof Element &&
+					n.matches('a, button, input, select, textarea, label, summary, details, aside')
+			);
 		if (!interactive) onclose?.();
 	}
 
@@ -78,11 +85,51 @@
 	// behind the header, so a short panel keeps the plain look it has now
 	// and a scrolled one says plainly where the fixed part ends.
 	let scrolled = $state(false);
+
+	// A dismissible sheet is a non-modal dialog and has to behave like one
+	// for a keyboard: focus moves INTO it when it opens — the mark legend's
+	// × used to be four hundred tab stops from the mark that opened it —
+	// and back to the control that opened it when it closes, so the next
+	// Tab continues from where the reader was, not from the top of the
+	// Mass. preventScroll, because the panel's own raise() is what manages
+	// the page's position. Non-modal on purpose: the prayer stays readable
+	// and reachable behind it, so there is no aria-modal and no focus trap.
+	let frame = $state<HTMLElement | null>(null);
+	$effect(() => {
+		if (inline || !frame) return;
+		const sheet = frame;
+		const invoker = document.activeElement;
+		sheet.focus({ preventScroll: true });
+		return () => {
+			// Only when the reader has not already moved on: closing after
+			// browsing other words (focus long since elsewhere) must not
+			// yank them back to the first word they tapped.
+			const now = document.activeElement;
+			const inSheet = now === sheet || sheet.contains(now);
+			if (
+				(inSheet || now === document.body) &&
+				invoker instanceof HTMLElement &&
+				invoker.isConnected
+			) {
+				invoker.focus({ preventScroll: true });
+			}
+		};
+	});
 </script>
 
 <svelte:window onclick={outside} onkeydown={escape} />
 
-<aside class="sheet {extra}" class:inline aria-label={label}>
+<!-- The tabindex is -1 — a focus TARGET, never a tab stop — and only on
+     the dialog variant; the analyzer cannot see through the ternary. -->
+<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+<aside
+	class="sheet {extra}"
+	class:inline
+	role={inline ? undefined : 'dialog'}
+	aria-label={label}
+	tabindex={inline ? undefined : -1}
+	bind:this={frame}
+>
 	<div
 		class="inner"
 		style:max-height={inline ? undefined : max}

@@ -96,7 +96,7 @@ test('every menu opens onto the screen, not off the edge of it', async ({ page }
 			for (const name of ['wybór języka', 'wielkość pisma']) {
 				await page.getByRole('button', { name: new RegExp(name) }).click();
 				const box = await page.evaluate(() => {
-					const r = document.querySelector('[role="listbox"]')!.getBoundingClientRect();
+					const r = document.querySelector('.menu ul')!.getBoundingClientRect();
 					return { left: r.left, right: r.right, vw: document.documentElement.clientWidth };
 				});
 				if (box.left < -0.5 || box.right > box.vw + 0.5)

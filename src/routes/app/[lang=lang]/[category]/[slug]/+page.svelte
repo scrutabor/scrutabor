@@ -318,6 +318,13 @@
 		padding-bottom: 45vh;
 	}
 
+	/* Named, like the pickers' own containers and for their reason: the
+	   query answers the room the tabs actually have, which the reading-size
+	   knob changes and a px media query cannot see. */
+	.prayer-forms {
+		container: tabs / inline-size;
+	}
+
 	.form-tabs {
 		display: flex;
 		width: fit-content;
@@ -362,7 +369,10 @@
 		border-end-end-radius: 999px;
 	}
 
-	@media (max-width: 430px) {
+	/* 27rem is the old 430px, now answering the reading size too: at the
+	   largest print a wide phone has the same shortage of room the query
+	   was written for, and a px breakpoint kept the wide treatment there. */
+	@container tabs (max-width: 27rem) {
 		.form-tabs {
 			width: 100%;
 		}

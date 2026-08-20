@@ -564,7 +564,9 @@ test('Sub tuum separates the antiphon from the extended form', async ({ page }) 
 	await expect(page.locator('button#w001')).toHaveCount(1);
 	await expect(page.locator('button#w025')).toBeVisible();
 	await page.getByRole('button', { name: 'o modlitwie' }).click();
-	await expect(page.getByRole('complementary', { name: 'o modlitwie' })).toContainText(
+	// dialog, not complementary: the sheet declares itself since the a11y
+	// review — a dismissible panel that takes focus is a non-modal dialog
+	await expect(page.getByRole('dialog', { name: 'o modlitwie' })).toContainText(
 		'Podstawową formę stanowi antyfona'
 	);
 	await page.goto('/app/pl/orationes/angelus-domini');

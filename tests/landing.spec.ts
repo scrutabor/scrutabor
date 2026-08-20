@@ -40,7 +40,7 @@ test.describe('landing @online', () => {
 	test('the language menu switches the landing, not the book', async ({ page }) => {
 		await page.goto('/pl');
 		await page.getByRole('button', { name: 'wybór języka' }).click();
-		await page.locator('[role="listbox"] a', { hasText: 'English' }).click();
+		await page.locator('.menu ul a', { hasText: 'English' }).click();
 		await page.waitForURL(atRoute('/en'));
 		await expect(page.getByRole('link', { name: 'Open the prayer book' })).toBeVisible();
 	});

@@ -40,10 +40,18 @@ for (const theme of ['light', 'dark'] as const) {
 			{ t: theme, names: [...INK, ...SURFACES, '--wash-strong'] }
 		);
 
+		// EVERY token proves its shape before any ratio is computed — the
+		// surfaces too, not only the inks. contrast() of a missing or
+		// non-hex value is NaN, and NaN < AA is false: a renamed --surface
+		// or a wash rewritten as color-mix() left this gate green while it
+		// compared nothing.
+		for (const name of [...INK, ...SURFACES, '--wash-strong']) {
+			expect(tokens[name], `${name} must be a hex token`).toMatch(/^#[0-9a-f]{6}$/i);
+		}
+
 		const failures: string[] = [];
 		for (const ink of INK) {
 			for (const surface of SURFACES) {
-				expect(tokens[ink], `${ink} must be a hex token`).toMatch(/^#[0-9a-f]{6}$/i);
 				const ratio = contrast(tokens[ink], tokens[surface]);
 				if (ratio < AA) failures.push(`${ink} on ${surface}: ${ratio.toFixed(2)}`);
 			}

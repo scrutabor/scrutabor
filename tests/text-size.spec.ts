@@ -4,9 +4,18 @@ import type { Page } from '@playwright/test';
 
 const trigger = (page: Page) => page.getByRole('button', { name: /text size/i });
 
+// The rows are plain buttons in a disclosure, not options in a listbox:
+// the menu wore role="listbox" once without implementing its keyboard
+// contract, and the a11y review replaced the costume with honest
+// aria-expanded + aria-current (Menu.svelte). By ACCESSIBLE NAME, not by
+// text: each row's text also holds its aria-hidden sample letter, which
+// the name correctly omits.
+const row = (page: Page, name: string) =>
+	page.locator('.menu ul').getByRole('button', { name, exact: true });
+
 async function choose(page: Page, name: string) {
 	await trigger(page).click();
-	await page.getByRole('option', { name, exact: true }).click();
+	await row(page, name).click();
 }
 
 const size = (page: Page) =>
@@ -36,20 +45,17 @@ test('the control says what it is on, and what else it could be', async ({ page 
 	await trigger(page).click();
 	// the accessible names, not the text: each row also carries a sample
 	// letter, which is aria-hidden because it says nothing a reader needs
-	const options = page.getByRole('option');
+	const options = page.locator('.menu-row');
 	await expect(options).toHaveCount(3);
 	for (const [i, name] of ['normal', 'larger', 'largest'].entries()) {
 		await expect(options.nth(i)).toHaveAccessibleName(name);
 	}
-	await expect(options.nth(0)).toHaveAttribute('aria-selected', 'true');
+	await expect(options.nth(0)).toHaveAttribute('aria-current', 'true');
 
-	await page.getByRole('option', { name: 'largest', exact: true }).click();
+	await row(page, 'largest').click();
 	await expect(trigger(page)).toHaveAccessibleName('text size: largest');
 	await trigger(page).click();
-	await expect(page.getByRole('option', { name: 'largest', exact: true })).toHaveAttribute(
-		'aria-selected',
-		'true'
-	);
+	await expect(row(page, 'largest')).toHaveAttribute('aria-current', 'true');
 });
 
 test('it answers on the pages with no Latin on them too', async ({ page }) => {

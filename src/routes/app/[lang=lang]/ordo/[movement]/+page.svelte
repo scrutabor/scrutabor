@@ -41,10 +41,12 @@
 
 	// The Ordo is exactly where paging by key is worth having — the reader
 	// is walking the Mass movement by movement — and it was the one surface
-	// without it (owner, 2026-08-09).
+	// without it (owner, 2026-08-09). Through dayHref like the pager below:
+	// the address bar has to tell the truth about what is displayed, and an
+	// arrow key must not be the one way of turning the page that drops it.
 	const onWindowKeydown = arrowNav((dir) => {
 		const t = dir === 'prev' ? around.prev : around.next;
-		return t ? `/app/${lang}/ordo/${t.id}` : undefined;
+		return t ? dayHref(`/app/${lang}/ordo/${t.id}`) : undefined;
 	});
 	let legendOpen = $state(false);
 
@@ -181,7 +183,12 @@
 
 <div class="page reading">
 	<header>
-		<PageNav {lang} parent="/app/{lang}/ordo" parentLabel="Ordo Missæ" parentLang="la" />
+		<PageNav
+			{lang}
+			parent={dayHref(`/app/${lang}/ordo`)}
+			parentLabel="Ordo Missæ"
+			parentLang="la"
+		/>
 		<h1 lang="la">{movement?.title ?? ''}</h1>
 		<p class="subtitle smallcaps">{movement?.label[lang] ?? ''}</p>
 		<div class="help-row">
@@ -371,7 +378,11 @@
 	}
 
 	.part.revealed .part-text {
-		border-inline-start: 2px solid var(--rule);
+		/* --wash-strong, the same quiet ink .seg-extra uses: --rule stood
+		   here once and is not a token, and an invalid var() silently voids
+		   the whole shorthand — the rule this comment promises was not
+		   being painted at all. */
+		border-inline-start: 2px solid var(--wash-strong);
 		padding-inline-start: 1rem;
 	}
 

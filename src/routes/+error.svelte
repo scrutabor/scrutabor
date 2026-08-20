@@ -12,10 +12,15 @@
 	// answered English to a Polish reader every time. It is read by SEGMENT
 	// (langOfPath), because a substring test answered Polish to English
 	// readers on /en/lemma/plenus.
-	const lang: Lang = $derived(
-		langOfPath(typeof location !== 'undefined' ? pageUrl().pathname : page.url.pathname)
-	);
+	const path = $derived(typeof location !== 'undefined' ? pageUrl().pathname : page.url.pathname);
+	const lang: Lang = $derived(langOfPath(path));
 	const message = $derived(page.status === 404 ? M[lang].pageNotFound : M[lang].errorGeneric);
+	// The door leads back into whichever side the reader was on. An error
+	// inside the book offers the book — on the site, /{lang} would be an
+	// unnoticed exit to the landing (the trap PageNav exists to prevent),
+	// and in the downloaded copy it is worse: a link out of the folder to
+	// scrutabor.org, in a copy whose whole point is working with no signal.
+	const home = $derived(path.startsWith('/app') ? `/app/${lang}` : `/${lang}`);
 </script>
 
 <svelte:head>
@@ -27,7 +32,7 @@
 		<p class="status">{page.status}</p>
 		<p class="line" {lang}>
 			{message}
-			<a href="/{lang}">{M[lang].goHome} ›</a>
+			<a href={home}>{M[lang].goHome} ›</a>
 		</p>
 	</main>
 </div>

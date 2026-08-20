@@ -2,6 +2,7 @@
 	// Which part the reader has at Mass. Three buttons, no menu: the choice
 	// is small, it is made once, and a reader about to pray should not have
 	// to open anything to see what it is set to.
+	import { tick } from 'svelte';
 	import type { MassForm } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
 	import { MASS_FORMS, massForm } from '$lib/mass-form.svelte';
@@ -36,16 +37,49 @@
 	// Several of these can be on one page (the Ordo index shows both in full
 	// form); a radiogroup must not point at an id that is not its own.
 	const labelId = $derived(`${kind}-label-${compact ? 'compact' : 'full'}`);
+
+	// The radiogroup contract, not only its costume: one tab stop (the
+	// checked radio), and the arrows move the check. arrow-nav already
+	// yields the arrow keys to role="radio" on the promise that the radios
+	// use them — a promise this control wore for a while without keeping,
+	// so a keyboard heard "radio button, 1 of 3", pressed Right, and
+	// nothing moved.
+	let group = $state<HTMLElement | undefined>();
+	async function onGroupKey(e: KeyboardEvent) {
+		const delta =
+			e.key === 'ArrowRight' || e.key === 'ArrowDown'
+				? 1
+				: e.key === 'ArrowLeft' || e.key === 'ArrowUp'
+					? -1
+					: 0;
+		if (!delta) return;
+		e.preventDefault();
+		const at = options.indexOf(current);
+		choose(options[(at + delta + options.length) % options.length]);
+		await tick();
+		group?.querySelector<HTMLButtonElement>('[aria-checked="true"]')?.focus();
+	}
 </script>
 
 <div class="picker" class:compact data-kind={kind}>
 	<span class="label smallcaps" id={labelId}>{label}</span>
-	<div class="options" role="radiogroup" aria-labelledby={labelId}>
+	<!-- Roving tabindex: the CHECKED radio inside carries tabindex 0,
+	     which is the APG radiogroup pattern; the group itself is never a
+	     tab stop. -->
+	<!-- svelte-ignore a11y_interactive_supports_focus -->
+	<div
+		class="options"
+		role="radiogroup"
+		aria-labelledby={labelId}
+		bind:this={group}
+		onkeydown={onGroupKey}
+	>
 		{#each options as r (r)}
 			<button
 				type="button"
 				role="radio"
 				aria-checked={current === r}
+				tabindex={current === r ? 0 : -1}
 				class="option"
 				class:on={current === r}
 				data-word={word(r)}
@@ -209,7 +243,12 @@
 	   between the words.) */
 	.picker.compact .option {
 		font-size: 0.9rem;
-		padding: 0 0.15rem;
+		/* The block padding is the touch target and the negative margin
+		   gives the space back to the row: the words alone were a 19px
+		   target on the control row of a book read at arm's length, and
+		   WCAG 2.5.8 asks 24px. The row keeps its visual density. */
+		padding: 0.3rem 0.15rem;
+		margin-block: -0.25rem;
 		color: var(--ink-soft);
 	}
 

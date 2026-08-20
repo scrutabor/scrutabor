@@ -121,6 +121,12 @@
 		margin: 0;
 		font-size: 1.05rem;
 		font-weight: 600;
+		/* The global h2 is "a small rubric label over a list" — centred, in
+		   the rubric red — and these are source TITLES over left-ranged
+		   entries: they take the page's own ink and alignment, or they
+		   inherit a centred red heading nothing else on the page has. */
+		text-align: start;
+		color: var(--ink);
 	}
 
 	cite {

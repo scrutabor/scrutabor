@@ -172,13 +172,24 @@
 			{/each}
 		</select>
 	</span>
-	{#if proper.slow}
-		<span class="state smallcaps">{msgs.dayLoading}</span>
-	{:else if proper.failed}
-		<span class="state smallcaps">{msgs.dayFailed}</span>
-	{:else if proper.unwritten}
-		<span class="state smallcaps">{msgs.dayUnwritten}</span>
-	{/if}
+	<!-- One PERSISTENT live region for everything the pick changes off-screen:
+	     a live region added together with its content is not reliably
+	     announced, so the span is always in the tree. A sighted reader sees
+	     the slots fill above and below; this is that fact for everyone else —
+	     the states while they last, and the day's arrival when it lands,
+	     which otherwise changed five slots of Latin around the reader's
+	     cursor with nothing said at all. -->
+	<span class="states" aria-live="polite">
+		{#if proper.slow}
+			<span class="state smallcaps">{msgs.dayLoading}</span>
+		{:else if proper.failed}
+			<span class="state smallcaps">{msgs.dayFailed}</span>
+		{:else if proper.unwritten}
+			<span class="state smallcaps">{msgs.dayUnwritten}</span>
+		{:else if chosen && proper.payload?.day === chosen}
+			<span class="sr-only">{shown} — {msgs.dayInPlace}</span>
+		{/if}
+	</span>
 	{#if !compact}<p class="hint">{hint}</p>{/if}
 </div>
 
@@ -321,7 +332,11 @@
 	.picker.compact .sizer,
 	.picker.compact select {
 		font-size: 0.9rem;
-		padding: 0 1.05rem 0 0;
+		/* Block padding for the touch target (WCAG 2.5.8's 24px — the bare
+		   line was 19), given back to the row by the margin so the control
+		   row keeps its density, the same trade the role words make. */
+		padding: 0.3rem 1.05rem 0.3rem 0;
+		margin-block: -0.25rem;
 	}
 
 	/* The width has to be the CHOSEN weight, or setting a day thickens the

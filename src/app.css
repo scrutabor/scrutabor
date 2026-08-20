@@ -31,6 +31,30 @@
 	--shadow: 0 -10px 34px rgba(0, 0, 0, 0.45);
 }
 
+/* THE TWIN of the block above, for a dark-preferring reader with scripts
+   off: the pre-paint script stamps data-theme before first paint whenever
+   it runs, so this only ever answers when no attribute was stamped at all
+   — a stored or system choice always wins. Kept byte-identical to the
+   block above by scripts/theme-twin.test.ts; edit them together. The
+   clone check is told so — this is the one duplication in the book that
+   is correct BECAUSE it is a duplication. */
+/* jscpd:ignore-start */
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) {
+		--bg: #1a1611;
+		--scheme: dark;
+		--surface: #211c15;
+		--ink: #ddd1bb;
+		--ink-soft: #9a8a6c;
+		--rubric: #ce7460;
+		--border: #372e20;
+		--wash: #2b2417;
+		--wash-strong: #3a3120;
+		--shadow: 0 -10px 34px rgba(0, 0, 0, 0.45);
+	}
+}
+/* jscpd:ignore-end */
+
 * {
 	box-sizing: border-box;
 }
@@ -93,6 +117,10 @@ html {
 		'EB Garamond Variable', 'EB Garamond', 'EB Garamond Fallback', 'EB Garamond Fallback Times',
 		Georgia, 'Times New Roman', serif;
 	font-optical-sizing: auto;
+	/* Native UI — scrollbars, the day select's popup, form controls —
+	   follows the palette instead of staying light against a dark page.
+	   The token tracks the theme in both blocks above. */
+	color-scheme: var(--scheme);
 }
 
 body {
@@ -309,10 +337,9 @@ body {
 /* The title of a page of the book. Ten routes wrote out this rule, in
    three sizes that are a real scale and not an accident — so the scale
    is stated once: the texts at full size, the apparatus around them (the
-   grammar, the colophon) a size smaller. The two landings set their
-   wordmark themselves; it is not a title. */
-/* A TITLE MAY NOT OUT-GROW THE SCREEN, which is the same rule the wordmark
-   below already keeps and for the same reason. The knob scales the root, so
+   grammar, the colophon) a size smaller. The two landings size their
+   wordmark in their own pages; it is not a title. */
+/* A TITLE MAY NOT OUT-GROW THE SCREEN. The knob scales the root, so
    2.6rem is 58px at the largest print — and *Missa Catechumenórum* is one
    421px word in a 253px measure on a 320px phone, which put 43 of 205
    surfaces through the margin and scrolled the page sideways by as much as
@@ -331,17 +358,6 @@ h1 {
 
 h1.minor {
 	font-size: min(2.2rem, 9vw);
-}
-
-/* The wordmark on the two landings. Nine letter-spaced capitals: it grows
-   with the text size like everything else, but it may not out-grow the
-   screen — at the largest size on a 320px phone 3.4rem put SCRUTABOR
-   through both margins. */
-h1.wordmark {
-	margin: 0;
-	font-size: min(3.4rem, 12vw);
-	letter-spacing: 0.12em;
-	text-align: center;
 }
 
 /* A note hung off the right of a title — the Polish name beside a Latin
@@ -420,8 +436,7 @@ h2 {
 	background: var(--wash);
 }
 
-.menu-row[aria-current='true'],
-.menu-row[aria-selected='true'] {
+.menu-row[aria-current='true'] {
 	background: var(--wash-strong);
 }
 
@@ -581,9 +596,9 @@ h2 {
 }
 
 /* For a reader who cannot see the page: present to a screen reader,
-   absent from the layout. Two components need it — the speaker's name
-   beside its mark, and the reading size announcing where it stands — and
-   there is only one way to write it. */
+   absent from the layout — the speaker's name beside its mark, the day's
+   arrival in the picker's live region. There is only one way to write it,
+   so it is written once. */
 .sr-only {
 	position: absolute;
 	width: 1px;

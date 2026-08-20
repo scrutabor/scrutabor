@@ -96,23 +96,34 @@
 
 		<section>
 			<h2 class="smallcaps">{lang === 'pl' ? 'reguły' : 'the rules'}</h2>
+			<!-- The roles are written out although they are the elements' own:
+			     the stacked narrow layout sets display:block on all of them,
+			     and a table whose display is not table-anything LOSES its
+			     table semantics in the accessibility tree — precisely on the
+			     large-print phone the breakpoint exists for. Explicit roles
+			     survive any display. -->
 			<div class="table-wrap">
-				<table class="rules">
-					<thead>
-						<tr>
-							<th lang="la">littera</th>
-							<th>{cols.roman}</th>
-							<th>{cols.polish}</th>
-							<th>{cols.example}</th>
+				<!-- svelte-ignore a11y_no_redundant_roles -->
+				<table class="rules" role="table">
+					<!-- svelte-ignore a11y_no_redundant_roles -->
+					<thead role="rowgroup">
+						<!-- svelte-ignore a11y_no_redundant_roles -->
+						<tr role="row">
+							<th role="columnheader" lang="la">littera</th>
+							<th role="columnheader">{cols.roman}</th>
+							<th role="columnheader">{cols.polish}</th>
+							<th role="columnheader">{cols.example}</th>
 						</tr>
 					</thead>
-					<tbody>
+					<!-- svelte-ignore a11y_no_redundant_roles -->
+					<tbody role="rowgroup">
 						{#each rules as r (r.grapheme)}
-							<tr>
-								<td lang="la">{r.grapheme}</td>
-								<td data-label={cols.roman}>{r.roman}</td>
-								<td data-label={cols.polish}>{r.polish}</td>
-								<td data-label={cols.example}>
+							<!-- svelte-ignore a11y_no_redundant_roles -->
+							<tr role="row">
+								<td role="cell" lang="la">{r.grapheme}</td>
+								<td role="cell" data-label={cols.roman}>{r.roman}</td>
+								<td role="cell" data-label={cols.polish}>{r.polish}</td>
+								<td role="cell" data-label={cols.example}>
 									{#if r.href}
 										<a lang="la" href="/app/{lang}{r.href}">{r.example}</a>
 									{:else}
