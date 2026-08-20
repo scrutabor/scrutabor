@@ -130,11 +130,15 @@
 	const rows: LitanyRow[] = $derived(
 		litanyColumns ? litanyRows(segs) : segs.map((_, primary) => ({ primary }))
 	);
+	// przekład (help 2) reads as a bilingual missal: plain Latin beside the
+	// verse translation where the room allows, stacked where it does not.
+	// The litany keeps its own two-column convention either way.
+	const bilingual = $derived(helpLevel === 2 && !litanyColumns);
 	const translationCitations = $derived(collectTranslationCitations(segs, gloss));
 </script>
 
 {#snippet face(id: string, form: string, post = '', raised = false, sink = 0)}{@const fit =
-		initialFit(form.slice(0, 1), helpLevel >= 1)}<ruby
+		initialFit(form.slice(0, 1), helpLevel === 1)}<ruby
 		><span
 			class="base"
 			style:padding-top={raised ? `${fit.padTop}em` : null}
@@ -145,7 +149,7 @@
 					style:margin-inline-start="{fit.start}em"
 					style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
 				>{form.slice(1)}{:else}{form}{/if}{post}</span
-		>{#if helpLevel >= 1}<rt
+		>{#if helpLevel === 1}<rt
 				style:top="calc(var(--reading) * (var(--gloss-gap) + {sink - (raised ? fit.lift : 0)}))"
 				class="shifted"
 				{lang}>{gloss.words[id]?.gloss}</rt
@@ -187,21 +191,35 @@
 	{/if}
 {/snippet}
 
-{#each rows as row (doc.segments[row.primary].id)}
-	{@const primary = doc.segments[row.primary]}
-	{#if row.response !== undefined}
-		<div class="litany-pair">
-			<div class="litany-cell litany-invocation">
-				{@render segment(primary, row.primary)}
+{#snippet flow()}
+	{#each rows as row (doc.segments[row.primary].id)}
+		{@const primary = doc.segments[row.primary]}
+		{#if row.response !== undefined}
+			<div class="litany-pair">
+				<div class="litany-cell litany-invocation">
+					{@render segment(primary, row.primary)}
+				</div>
+				<div class="litany-cell litany-response">
+					{@render segment(doc.segments[row.response], row.response)}
+				</div>
 			</div>
-			<div class="litany-cell litany-response">
-				{@render segment(doc.segments[row.response], row.response)}
-			</div>
-		</div>
-	{:else}
-		{@render segment(primary, row.primary)}
-	{/if}
-{/each}
+		{:else}
+			{@render segment(primary, row.primary)}
+		{/if}
+	{/each}
+{/snippet}
+
+{#if bilingual}
+	<!-- The container the column query answers to: rem in a container
+	     query scales with the reading knob, so bigger text correctly
+	     demands more room before the page splits (the pickers' own
+	     pattern). The grid itself lives on .columns below. -->
+	<div class="bilingual">
+		<div class="columns">{@render flow()}</div>
+	</div>
+{:else}
+	{@render flow()}
+{/if}
 
 {#if helpLevel >= 2 && translationCitations.length}
 	<div class="translation-sources">
@@ -259,15 +277,20 @@
 		{/if}
 		{@const showMark = !sharedPrayer && marked(i)}
 		{@const verseNo = seg.speaker ? undefined : verses?.[seg.id]}
+		<!-- In the bilingual columns the reservation is skipped: the grid's
+		     row-gap already clears the initial's rise, and an inline margin
+		     here would defeat the baseline alignment that keeps a verse and
+		     its translation on one line (it did — the first row sat 10px
+		     off until this condition). -->
 		<!-- The gloss row of a verse whose initial reaches below the line
 		     sinks together, so the glosses stay level with each other. -->
 		{@const fit0 =
-			i === firstVerse ? initialFit(seg.words?.[0]?.form.slice(0, 1) ?? '', helpLevel >= 1) : null}
+			i === firstVerse ? initialFit(seg.words?.[0]?.form.slice(0, 1) ?? '', helpLevel === 1) : null}
 		{@const sink = fit0?.sink ?? 0}
 		<p
 			class="verse"
-			style:margin-top={fit0 ? `calc(var(--reading) * ${fit0.padTop})` : null}
-			class:glossed={helpLevel >= 1}
+			style:margin-top={fit0 && !bilingual ? `calc(var(--reading) * ${fit0.padTop})` : null}
+			class:glossed={helpLevel === 1}
 			class:quiet={seg.voice === 'secreto'}
 			class:answer={mine}
 			class:marked={showMark || verseNo !== undefined}
@@ -642,6 +665,9 @@
 		line-height: 1.75;
 		margin: 0 0 calc(var(--reading) * 0.759);
 		padding-inline-start: calc(var(--reading) * 1.379);
+		/* no last word alone on its line (Glorificámus / te.) — a
+		   progressive nicety where the engine has it */
+		text-wrap: pretty;
 	}
 
 	/* Only a line that carries a mark hangs out to the left for it. A line
@@ -959,45 +985,43 @@
 	/* Translations get the same typographic treatment as rubric narratives —
 	   a thin vertical hairline with an indent — so the page stays layered
 	   text, not cards: red hairline = what happens, neutral = what it means. */
-	/* A translation belongs to the verse above it, and the page has ONE
-	   rhythm — so it sits a line's distance under the gloss row and the
-	   next verse sits a line's distance under it, not jammed against one
-	   and marooned from the other.
-	   (It used to pull itself UP by 0.45rem, which worked while a glossed
-	   verse carried 1.42rem of margin beneath it. That margin is 0.22rem
-	   now — one rhythm — so the same negative pulled the translation into
-	   the gloss row.)
-	   Its rule stands in the gutter where the speaker marks hang, and its
-	   text starts on the same left edge as the Latin: it is that verse in
-	   another language, so it belongs in that verse's column. */
-	/* The gloss row hangs past the box this margin hangs from, so 0.345 of
-	   a line bought 7px of daylight and the translation sat almost on the
-	   glosses (owner, 2026-08-09).
-	   Half a step more, and no further: it is bounded above as well as
-	   below, because a translation that is equally far from both verses
-	   has stopped saying which one it translates. 0.621 was tried and
-	   reached 1.22 of the gap to the next verse, inside the 1.25 the
-	   e2e guard holds; this sits at 1.34. */
+	/* THE TRANSLATION'S TWO HOMES (przekład is the only mode that renders
+	   one, so everything here describes that mode).
+
+	   STACKED — a narrow container, or a phone: the translation sits
+	   close under its own verse and clearly further from the next, in a
+	   quieter voice than the Latin (a touch smaller, soft ink) because
+	   interleaved same-size roman in two languages blurs whose line is
+	   whose at a glance. The old spacing compensated for a gloss row that
+	   no longer exists in this mode — the mode change retired a year of
+	   margin archaeology (0.345, 0.621, the 0.09 paddings) along with the
+	   hairline, whose work the alternation now does.
+
+	   COLUMNS — see .bilingual below: the translation becomes a PEER of
+	   the Latin, same size, same ink, same leading, position doing all
+	   the distinguishing. */
 	.seg-extra {
-		margin: calc(var(--reading) * 0.517) 0 calc(var(--reading) * 0.379);
-		border-inline-start: 2px solid var(--wash-strong);
-		padding-inline-start: calc(var(--reading) * 1.379 - 2px);
+		margin: 0 0 calc(var(--reading) * 0.9);
+		padding-inline-start: calc(var(--reading) * 1.379);
+	}
+
+	/* The verse gives up part of its own bottom margin when a translation
+	   follows: attachment is the point, and margins between siblings
+	   collapse to the LARGER one, so the verse's 0.759 would otherwise
+	   hold the translation a full rhythm away. */
+	.verse:has(+ .seg-extra) {
+		/* slightly NEGATIVE, priced from ink measurements: the verse's own
+		   1.75 leading already leaves ~9px of half-leading below its last
+		   baseline and the translation brings ~5px of its own above, so a
+		   zero box-gap still reads as ~20px of air — more than half the
+		   gap to the NEXT verse, which blurred whose translation it was.
+		   −0.06 of a line lands the ink gap near 17px against ~37 below:
+		   attached, unmistakably. */
+		margin-bottom: calc(var(--reading) * -0.06);
 	}
 
 	.translation {
-		/* 0.09 of a line of air on BOTH sides, as PADDING because a margin
-		   here collapses into the verse's own bottom margin and buys
-		   nothing. The 0.78 size bump made the block taller and ate the
-		   daylight two geometry tests guard from opposite sides: the ink
-		   clearance above (>10px, binding on CI's tighter render) and the
-		   belongs-to-its-verse ratio (next/own > 1.25), whose window the
-		   top padding alone narrowed to fractions of a pixel. The bottom
-		   half gives the ratio's numerator back, so the translation sits a
-		   touch further from the NEXT verse — which is the very attachment
-		   the ratio asserts — and both bounds carry real margin in both
-		   environments. */
 		margin: 0;
-		padding-block: calc(var(--reading) * 0.09);
 		/* No measure of its own — it ends where the Latin above it ends;
 		   see the rule over .rubric-la. This is the block that started
 		   that change: capped, it broke at little more than half the width
@@ -1010,6 +1034,54 @@
 		   more size or more ink for continuous reading. It got both. */
 		font-size: calc(var(--reading) * 0.78);
 		line-height: 1.55;
+		text-wrap: pretty;
+	}
+
+	/* THE BILINGUAL SPREAD. Above ~54rem of container the przekład mode
+	   splits into the two columns of a hand missal, verse against verse.
+	   rem here scales with the reading knob, so larger print correctly
+	   demands a wider room before the page splits.
+
+	   Baseline alignment is what makes the rows TRUE: the first baseline
+	   of the translation sits on the first baseline of its verse — raised
+	   initial, wrapped lines and all — because with equal type and equal
+	   leading the grid can align what the eye actually reads. The row gap
+	   carries the rhythm the verse margins carry when stacked; inside the
+	   grid those margins are zeroed so no row is taller than its content
+	   from either column's side. */
+	.bilingual {
+		container: bilingual / inline-size;
+	}
+
+	@container bilingual (min-width: 54rem) {
+		.columns {
+			display: grid;
+			grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+			column-gap: 2.6rem;
+			align-items: baseline;
+			row-gap: calc(var(--reading) * 0.62);
+		}
+
+		.columns > * {
+			grid-column: 1 / -1;
+		}
+
+		.columns > .verse {
+			grid-column: 1;
+			margin-block: 0;
+		}
+
+		.columns > .seg-extra {
+			grid-column: 2;
+			margin: 0;
+			padding-inline-start: 0;
+		}
+
+		.columns > .seg-extra .translation {
+			font-size: var(--reading);
+			line-height: 1.75;
+			color: var(--ink);
+		}
 	}
 
 	@media print {

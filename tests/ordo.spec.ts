@@ -1,5 +1,5 @@
 // The flow view: the Mass in order, for a reader following it in the pew.
-import { atRoute, expect, settled, test } from './fixtures';
+import { setHelp, atRoute, expect, settled, test } from './fixtures';
 import { ORDO } from '../src/lib/ordo';
 
 test('the ordo is a map of six movements, walked in order', async ({ page }) => {
@@ -40,7 +40,7 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 	// the texts this edition carries are inlined in full (read at the bare
 	// step, where the interlinear glosses do not interleave with the Latin)
 	await page.goto('/app/pl/ordo/praeparatio');
-	await page.locator('input[type="range"]').fill('0');
+	await setHelp(page, 0);
 	// two Confiteors stand here now; this is the ministers', the one the
 	// faithful say
 	const confiteor = page.locator('.part', { hasText: 'Confíteor (Ministrórum)' }).first();
@@ -144,21 +144,22 @@ test('the flow and the reading page number their words apart', async ({ page }) 
 	expect(await page.locator('.word').first().getAttribute('id')).toBe('w001');
 });
 
-test('the help ladder governs the whole flow', async ({ page }) => {
+test('the reading modes govern the whole flow', async ({ page }) => {
 	await page.goto('/app/en/ordo/catechumenorum');
-	const slider = page.locator('input[type="range"]');
 
-	// default: interlinear glosses and the what-happens lines
+	// default (words): interlinear glosses and the what-happens lines
 	await expect(page.locator('.part-text rt').first()).toBeVisible();
 	await expect(page.locator('.part-note').first()).toBeVisible();
 	await expect(page.locator('.translation')).toHaveCount(0);
 
-	await slider.fill('0');
+	await setHelp(page, 0);
 	await expect(page.locator('.part-text rt')).toHaveCount(0);
 	await expect(page.locator('.part-note')).toHaveCount(0);
 
-	await slider.fill('2');
+	await setHelp(page, 2);
 	await expect(page.locator('.translation').first()).toBeVisible();
+	// przekład is the bilingual view: the interlinear yields to it
+	await expect(page.locator('.part-text rt')).toHaveCount(0);
 });
 
 test('the landing separates following the Mass from opening a text', async ({ page }) => {

@@ -181,7 +181,7 @@
 	<meta name="description" content={msgs.ordoDescription} />
 </svelte:head>
 
-<div class="page reading">
+<div class="page reading" class:bilingual={helpLevel === 2}>
 	<header>
 		<PageNav
 			{lang}

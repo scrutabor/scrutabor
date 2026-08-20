@@ -9,7 +9,7 @@
 // page happens to put on screen and the tokens must hold everywhere.
 import AxeBuilder from '@axe-core/playwright';
 import type { Page } from '@playwright/test';
-import { expect, test } from './fixtures';
+import { setHelp, expect, test } from './fixtures';
 
 // One of each surface, not one of each page: the templates are what can
 // be wrong, and the prerendered pages all come from these few — the
@@ -119,7 +119,7 @@ test('the help slider at its fullest meets WCAG 2.1 AA', async ({ page }) => {
 	// The top step puts every layer on screen at once — translations,
 	// narrative, interlinear gloss — which is the densest the app ever gets.
 	await page.goto('/app/pl/ordinarium/credo');
-	await page.locator('input[type="range"]').fill('2');
+	await setHelp(page, 2);
 	expect(await violations(page), 'reading page at full help').toEqual([]);
 });
 

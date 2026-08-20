@@ -1,28 +1,31 @@
 // The reading experience: help ladder, panel layers, cross-reference jumps.
 import type { Page } from '@playwright/test';
-import { atRoute, expect, settled, test } from './fixtures';
+import { setHelp, atRoute, expect, settled, test } from './fixtures';
 
 const AVE = '/app/pl/orationes/ave-maria';
 const CONFITEOR = '/app/pl/ordinarium/confiteor';
 
-test('help slider walks the three-step ladder', async ({ page }) => {
+test('the control walks the three reading modes', async ({ page }) => {
 	await page.goto(CONFITEOR);
-	const slider = page.locator('input[type="range"]');
 
-	// default (1): interlinear glosses and rubric narratives, no translations
+	// default (słowa): interlinear glosses and rubric narratives, no
+	// translations
 	await expect(page.locator('rt').first()).toBeVisible();
 	await expect(page.locator('.rubric-narrative').first()).toBeVisible();
 	await expect(page.locator('.translation')).toHaveCount(0);
 
-	// 0: bare Latin
-	await slider.fill('0');
+	// łacina: bare Latin
+	await setHelp(page, 0);
 	await expect(page.locator('rt')).toHaveCount(0);
 	await expect(page.locator('.rubric-narrative')).toHaveCount(0);
 
-	// 2: translations join
-	await slider.fill('2');
+	// przekład: the bilingual view — translations and narratives, and the
+	// interlinear yields (it is słowa's own layer now; the word panel keeps
+	// the word-by-word one tap away in every mode)
+	await setHelp(page, 2);
 	await expect(page.locator('.translation').first()).toBeVisible();
 	await expect(page.locator('.rubric-narrative').first()).toBeVisible();
+	await expect(page.locator('rt')).toHaveCount(0);
 });
 
 test('standalone Ordinary prayers omit process rubrics but keep textual directions', async ({
@@ -79,8 +82,8 @@ test('a speaker label clears the raised initial below it', async ({ page }) => {
 		await page.setViewportSize({ width, height: 900 });
 		await page.goto('/app/pl/ordinarium/confiteor');
 
-		for (const help of ['0', '1']) {
-			await page.locator('input[type="range"]').fill(help);
+		for (const help of [0, 1] as const) {
+			await setHelp(page, help);
 			const clearance = await page.evaluate(() => {
 				const label = document.querySelector('main .who')!.getBoundingClientRect();
 				const initial = document.querySelector('main .initial')!.getBoundingClientRect();
@@ -93,7 +96,7 @@ test('a speaker label clears the raised initial below it', async ({ page }) => {
 
 test('a prayer identifies its translation sources once after the text', async ({ page }) => {
 	await page.goto('/app/pl/psalmi/118-he');
-	await page.locator('input[type="range"]').fill('2');
+	await setHelp(page, 2);
 	const verse = page.locator('#v34 + .seg-extra');
 	await expect(verse.locator('.translation')).toContainText('Daj mi zrozumienie');
 	await expect(page.locator('.seg-extra details.source-notes')).toHaveCount(0);
@@ -165,7 +168,7 @@ test('a litany pairs every invocation with its exact response in compact columns
 	await expect(page.locator('#w044')).toHaveClass(/selected/);
 	await expect(page.locator('aside')).toBeVisible();
 
-	await page.locator('input[type="range"]').fill('2');
+	await setHelp(page, 2);
 	await expect(page.locator('main .translation-sources details.source-notes')).toHaveCount(1);
 	await expect(page.locator('.seg-extra details.source-notes')).toHaveCount(0);
 
@@ -587,10 +590,9 @@ test('the about sheet is closed at every slider position, opens on demand', asyn
 	await page.goto('/app/pl/ordinarium/gloria');
 	const pill = page.locator('.about-pill');
 	const sheet = page.locator('aside.about-sheet');
-	const slider = page.locator('input[type="range"]');
-	// closed by default at all three help levels
-	for (const level of ['1', '0', '2']) {
-		await slider.fill(level);
+	// closed by default in all three reading modes
+	for (const level of [1, 0, 2] as const) {
+		await setHelp(page, level);
 		await expect(pill).toBeVisible();
 		await expect(sheet).not.toBeVisible();
 	}
@@ -748,9 +750,12 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	// here, where the assertion is that NOTHING happens: an unhydrated page
 	// would give exactly that answer for the wrong reason
 	await settled(page);
-	await page.locator('input[type="range"]').focus();
+	// the reading-mode radios own the arrows while focused: the key moves
+	// the check (slowa -> przekład), never the page
+	await page.locator('.help [role="radio"][aria-checked="true"]').focus();
 	await page.keyboard.press('ArrowRight');
 	await expect(page).toHaveURL(atRoute('ordinarium/confiteor'));
+	await expect(page.locator('.help [role="radio"]').nth(2)).toHaveAttribute('aria-checked', 'true');
 	// first text has no previous
 	await page.goto('/app/pl/orationes/pater-noster');
 	await expect(page.locator('.pager a')).toHaveCount(1);
@@ -1053,17 +1058,15 @@ test('the part control appears only where it changes something', async ({ page }
 
 	await page.goto('/app/en/ordinarium/quod-ore-sumpsimus'); // the priest's, throughout
 	await expect(page.getByRole('radio', { name: 'faithful' })).toHaveCount(0);
-	// and the help slider, which always does something, stays
-	await expect(page.locator('input[type="range"]')).toBeVisible();
+	// and the reading-mode control, which always does something, stays
+	await expect(page.locator('.help [role="radiogroup"]')).toBeVisible();
 });
 
 test('the header sits on one centre line', async ({ page }) => {
-	// The two labels of the slider are different lengths in both languages
-	// — "Latin only" against "full translation", "sama łacina" against
-	// "pełny przekład" — so sizing them to their text put the track, and
-	// with it the middle stop, off the page's centre. Measured, not
-	// eyeballed, and in both languages, because the label lengths differ
-	// differently in each.
+	// The row's controls centre on the title's own line — measured, not
+	// eyeballed, and in both languages, because the words' lengths differ
+	// differently in each (the rule survives the slider it was written
+	// for: the mode words replaced the track, the centring stays).
 	for (const url of [
 		'/app/en/ordinarium/praefatio-dialogus',
 		'/app/pl/ordinarium/praefatio-dialogus'
@@ -1078,7 +1081,7 @@ test('the header sits on one centre line', async ({ page }) => {
 			};
 			return {
 				title: mid('h1'),
-				track: mid('input[type="range"]'),
+				help: mid('.help'),
 				part: mid('.picker.compact'),
 				about: mid('.about-pill')
 			};
@@ -1410,7 +1413,9 @@ test('a reading page takes the screen it is given', async ({ page }) => {
 
 	await page.setViewportSize({ width: 1512, height: 982 });
 	await page.goto('/app/pl/ordinarium/credo');
-	await page.locator('input[type="range"]').fill('2');
+	// słowa: this test is about the GLOSSED measure the frame clamp was
+	// sized for (przekład has its own frame and its own test below)
+	await setHelp(page, 1);
 	const wide = await measure();
 	expect(wide.column, 'the column grows past the prose measure').toBeGreaterThan(38 * 16);
 	expect(wide.latinChars, 'and the Latin line reaches a real measure').toBeGreaterThan(40);
@@ -1496,11 +1501,14 @@ test('Latin, gloss and translation share one left edge', async ({ page }) => {
 	//
 	// Measured with a zero-width marker, which is the only thing that sees
 	// where text actually starts inside a ruby.
+	// At słowa the two layers are the Latin and its glosses; at stacked
+	// przekład the Latin and its translation. Both pairs share one left
+	// edge — the raggedness this test was written against.
 	for (const url of ['/app/en/orationes/pater-noster', '/app/pl/ordinarium/credo']) {
 		await page.setViewportSize({ width: 760, height: 1200 });
 		await page.goto(url);
-		await page.locator('input[type="range"]').fill('2');
-		const edges = await page.evaluate(() => {
+		await setHelp(page, 1);
+		const glossed = await page.evaluate(() => {
 			const boxStart = (el: Element) => {
 				const s = document.createElement('span');
 				s.style.cssText = 'display:inline-block;width:0;height:1em;vertical-align:baseline';
@@ -1510,31 +1518,52 @@ test('Latin, gloss and translation share one left edge', async ({ page }) => {
 				return x;
 			};
 			const verse = document.querySelector('.verse.glossed')!;
+			return {
+				latin: Math.round(boxStart(verse.querySelector('.base')!)),
+				gloss: Math.round(boxStart(verse.querySelector('rt')!))
+			};
+		});
+		expect(
+			Math.abs(glossed.latin - glossed.gloss),
+			`${url}: gloss ragged against its Latin — ${JSON.stringify(glossed)}`
+		).toBeLessThan(2);
+
+		await setHelp(page, 2);
+		const stacked = await page.evaluate(() => {
+			const boxStart = (el: Element) => {
+				const s = document.createElement('span');
+				s.style.cssText = 'display:inline-block;width:0;height:1em;vertical-align:baseline';
+				el.insertBefore(s, el.firstChild);
+				const x = s.getBoundingClientRect().left;
+				s.remove();
+				return x;
+			};
+			const verse = document.querySelector('.verse')!;
 			const extra = verse.nextElementSibling?.classList.contains('seg-extra')
 				? verse.nextElementSibling
 				: document.querySelector('.seg-extra')!;
 			return {
 				latin: Math.round(boxStart(verse.querySelector('.base')!)),
-				gloss: Math.round(boxStart(verse.querySelector('rt')!)),
 				translation: Math.round(boxStart(extra.querySelector('.translation')!))
 			};
 		});
-		const spread = Math.max(...Object.values(edges)) - Math.min(...Object.values(edges));
-		expect(spread, `${url}: the three layers are ragged — ${JSON.stringify(edges)}`).toBeLessThan(
-			2
-		);
+		expect(
+			Math.abs(stacked.latin - stacked.translation),
+			`${url}: translation ragged against its Latin — ${JSON.stringify(stacked)}`
+		).toBeLessThan(2);
 	}
 });
 
-test('a translation belongs to the verse above it', async ({ page }) => {
-	// It sits one line-step under its own gloss row and clearly further
-	// from the next verse. It used to pull itself UP by 0.45rem, which was
-	// right while a glossed verse carried 1.42rem beneath it; once the
-	// rhythm became uniform that negative jammed the translation into the
-	// gloss row and marooned the next verse.
+test('a stacked translation belongs to the verse above it', async ({ page }) => {
+	// The narrow face of przekład: the translation sits close under its
+	// own verse and clearly further from the next. There is no gloss row
+	// in this mode any more — the margins that spent a year compensating
+	// for one were retired with it, and the bounds here were set from ink
+	// measurements of the fresh spacing (about 15-20px above against ~37
+	// below at the default size).
 	await page.setViewportSize({ width: 760, height: 1200 });
 	await page.goto('/app/en/orationes/pater-noster');
-	await page.locator('input[type="range"]').fill('2');
+	await setHelp(page, 2);
 	const gaps = await page.evaluate(() => {
 		const c = document.createElement('canvas').getContext('2d')!;
 		const ink = (el: Element) => {
@@ -1548,18 +1577,53 @@ test('a translation belongs to the verse above it', async ({ page }) => {
 			probe.remove();
 			return { top: b - m.actualBoundingBoxAscent, bottom: b + m.actualBoundingBoxDescent };
 		};
-		const verses = [...document.querySelectorAll('.verse.glossed')];
+		const verses = [...document.querySelectorAll('.verse')];
 		const tr = document.querySelector('.seg-extra .translation')!;
-		const lastRt = [...verses[0].querySelectorAll('rt')].pop()!;
+		const lastBase = [...verses[0].querySelectorAll('.base')].pop()!;
 		return {
-			toItsOwnVerse: ink(tr).top - ink(lastRt).bottom,
+			toItsOwnVerse: ink(tr).top - ink(lastBase).bottom,
 			toTheNextVerse: ink(verses[1].querySelector('.base')!).top - ink(tr).bottom
 		};
 	});
-	expect(gaps.toItsOwnVerse, 'not jammed into the gloss row').toBeGreaterThan(8);
+	expect(gaps.toItsOwnVerse, 'not touching its own verse').toBeGreaterThan(8);
+	expect(gaps.toItsOwnVerse, 'not drifting from its own verse').toBeLessThan(26);
 	expect(gaps.toTheNextVerse, 'and nearer its own verse than the next').toBeGreaterThan(
-		gaps.toItsOwnVerse * 1.25
+		gaps.toItsOwnVerse * 1.5
 	);
+});
+
+test('the bilingual columns align verse and translation on one baseline', async ({ page }) => {
+	// The wide face of przekład: the missal spread. Parity of type and
+	// leading is what MAKES the rows true, and this holds it — the first
+	// baseline of every translation sits on the first baseline of its own
+	// verse, the raised initial's row included (the initial skips its
+	// margin reservation in columns for exactly this reason). Probe spans
+	// on the baseline, the one measurement a tall glyph cannot poison.
+	await page.setViewportSize({ width: 1512, height: 1000 });
+	await page.goto('/app/pl/ordinarium/gloria');
+	await setHelp(page, 2);
+	await expect(page.locator('.columns')).toBeVisible();
+	const deltas = await page.evaluate(() => {
+		const baselineOf = (el: Element) => {
+			const probe = document.createElement('span');
+			probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+			el.prepend(probe);
+			const y = probe.getBoundingClientRect().top;
+			probe.remove();
+			return y;
+		};
+		const out: number[] = [];
+		document.querySelectorAll('.columns > .verse').forEach((v) => {
+			const sx = v.nextElementSibling;
+			if (!sx || !sx.classList.contains('seg-extra')) return;
+			const tr = sx.querySelector('.translation')!;
+			const p = v.querySelector('p') ?? v;
+			out.push(Math.abs(baselineOf(tr) - baselineOf(p)));
+		});
+		return out;
+	});
+	expect(deltas.length, 'the Gloria pairs its verses').toBeGreaterThan(8);
+	for (const d of deltas) expect(d, 'a row drifted off its baseline').toBeLessThan(0.6);
 });
 
 test('the reading size is the only knob', async ({ page }) => {
@@ -1714,7 +1778,7 @@ test('the highlight marks the word AND its gloss', async ({ page }) => {
 
 	// with no gloss showing, there is nothing to mark but the word
 	await page.goto('/app/pl/orationes/pater-noster?w=w013');
-	await page.locator('input[type="range"]').fill('0');
+	await setHelp(page, 0);
 	await expect(page.locator('.word.selected rt')).toHaveCount(0);
 	const bare = await page.evaluate(
 		() =>
@@ -1818,8 +1882,8 @@ test('a rubric sits centrally between the verses it parts', async ({ page }) => 
 	// line-height.
 	await page.goto('/app/pl/ordinarium/confiteor');
 
-	for (const help of ['0', '1', '2']) {
-		await page.locator('input[type="range"]').fill(help);
+	for (const help of [0, 1, 2] as const) {
+		await setHelp(page, help);
 		const { rubrics } = await inkGaps(page);
 		expect(rubrics.length, `a rubric stands between verses at help ${help}`).toBeGreaterThan(0);
 		for (const g of rubrics) {
@@ -1863,26 +1927,24 @@ test('a verse reserves the space its raised initial paints', async ({ page }) =>
 });
 
 test('a translation is attached to its verse without touching it', async ({ page }) => {
-	// 0.345 of a line of margin bought 7px of daylight, because the gloss
-	// row it follows hangs past the box that margin hangs from — the
-	// translation sat almost on the glosses (owner, 2026-08-09).
-	//
-	// Both bounds matter. Too little air and it touches; too much and it
+	// The stacked przekład, on a text with rubrics between the verses.
+	// Both bounds matter: too little air and it touches, too much and it
 	// stops belonging to the verse above, which is the one thing its
-	// position has to say.
+	// position has to say. The viewport is pinned narrow — wide, przekład
+	// becomes the columns, whose alignment has its own test.
+	await page.setViewportSize({ width: 760, height: 1200 });
 	await page.goto('/app/pl/ordinarium/confiteor');
-	await page.locator('input[type="range"]').fill('2');
+	await setHelp(page, 2);
 	const { translations } = await inkGaps(page);
 
 	expect(translations.length, 'the text has translations between verses').toBeGreaterThan(0);
 	for (const g of translations) {
-		expect(g.above, `"${g.txt}" clears the gloss row (${Math.round(g.above)}px)`).toBeGreaterThan(
-			10
-		);
+		expect(g.above, `"${g.txt}" touches its verse (${Math.round(g.above)}px)`).toBeGreaterThan(10);
+		expect(g.above, `"${g.txt}" drifts from its verse (${Math.round(g.above)}px)`).toBeLessThan(26);
 		expect(
 			g.below / g.above,
 			`"${g.txt}" is nearer its own verse (${Math.round(g.above)} above, ${Math.round(g.below)} below)`
-		).toBeGreaterThan(1.4);
+		).toBeGreaterThan(1.5);
 	}
 });
 
@@ -1896,8 +1958,8 @@ test('a speaker label belongs to the verse below it', async ({ page }) => {
 	// line of leading over its first glyph below.
 	await page.goto('/app/pl/ordo/praeparatio');
 
-	for (const help of ['0', '1', '2']) {
-		await page.locator('input[type="range"]').fill(help);
+	for (const help of [0, 1, 2] as const) {
+		await setHelp(page, help);
 		const { labels } = await inkGaps(page);
 		expect(labels.length, `a label stands over a verse at help ${help}`).toBeGreaterThan(0);
 		for (const g of labels) {
@@ -1922,9 +1984,12 @@ test('every kind of text ends where the Latin ends', async ({ page }) => {
 	// three per-block `ch` caps tuned to land together — and `ch` is the
 	// width of a zero in whatever font actually loaded, so the three that
 	// sat within 4px on a Mac sat 40px apart on the Linux runner.
-	await page.setViewportSize({ width: 1440, height: 900 });
+	// Pinned to the STACKED przekład: in the bilingual columns the two
+	// languages have a right edge each, by design — the one-margin rule
+	// is the one-column rule.
+	await page.setViewportSize({ width: 760, height: 900 });
 	await page.goto('/app/pl/ordinarium/orate-fratres');
-	await page.locator('input[type=range]').fill('2');
+	await setHelp(page, 2);
 
 	const edges = await page.evaluate(() => {
 		// the right edge of a block's CONTENT box — where its line can reach
@@ -1960,23 +2025,45 @@ test('every kind of text ends where the Latin ends', async ({ page }) => {
 	}
 });
 
-test('a translation does not wrap where its own Latin did not', async ({ page }) => {
-	// The symptom that started it: capped at 56ch, the translation broke at
-	// little more than half the width the line above it used, and each of
-	// this psalm's verses wrapped though its Latin had not.
-	await page.setViewportSize({ width: 1440, height: 900 });
+test('a translation wraps to its column, never to a private cap', async ({ page }) => {
+	// The symptom that started this rule: capped at 56ch, translations
+	// broke at little more than half the width their column offered. The
+	// original assertion — "does not wrap where its Latin did not" — was
+	// only ever true on wide screens: Polish runs longer than its Latin,
+	// so on a narrow page an UNCAPPED translation can honestly wrap under
+	// a one-line verse. What is invariant at every width is the cap's
+	// absence itself: a translation that wraps used its whole measure
+	// first. (text-wrap: pretty may hold the last word back — one word of
+	// slack is the difference between an orphan spared and a cap.)
+	await page.setViewportSize({ width: 760, height: 900 });
 	await page.goto('/app/pl/ordinarium/lavabo');
-	await page.locator('input[type=range]').fill('2');
+	await setHelp(page, 2);
 
 	const m = await page.evaluate(() => {
-		const all = [...document.querySelectorAll('.translation')] as HTMLElement[];
-		const lh = parseFloat(getComputedStyle(all[0]).lineHeight);
-		return {
-			wrapped: all.filter((t) => Math.round(t.getBoundingClientRect().height / lh) > 1).length,
-			total: all.length
-		};
+		const offences: string[] = [];
+		let total = 0;
+		document.querySelectorAll('.seg-extra .translation').forEach((tr) => {
+			total += 1;
+			// line boxes come from a RANGE — a block's own getClientRects is
+			// one rect, and a first version of this test skipped every
+			// translation through that hole
+			const range = document.createRange();
+			range.selectNodeContents(tr);
+			const lines = [...range.getClientRects()].filter((r) => r.height > 4);
+			if (lines.length < 2) return;
+			const box = tr.getBoundingClientRect();
+			const cs = getComputedStyle(tr);
+			const avail = box.width - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+			const widest = Math.max(...lines.map((r) => r.width));
+			if (widest < avail * 0.8) {
+				offences.push(
+					`${tr.textContent!.trim().slice(0, 40)} (${Math.round(widest)}/${Math.round(avail)})`
+				);
+			}
+		});
+		return { offences, total };
 	});
 
 	expect(m.total, 'the psalm carries its translations').toBeGreaterThan(5);
-	expect(m.wrapped, `${m.wrapped} of ${m.total} wrapped where their Latin did not`).toBe(0);
+	expect(m.offences, 'a translation broke short of its measure').toEqual([]);
 });

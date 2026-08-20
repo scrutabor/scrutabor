@@ -231,6 +231,19 @@ em {
 	padding: 1.25rem 1.5rem 4rem;
 }
 
+/* At przekład the reading pages widen (owner's ruling, 2026-08-21 —
+   variant B of the bilingual prototype): two true columns of Latin and
+   translation deserve the room a large screen has, and 56rem would cut
+   the Latin's measure to ~35 characters. Only the bilingual mode pays
+   the width; the other modes keep the one-column frame above. Screen
+   only — on paper the print block's own `.page` reset must win, and
+   this selector outweighs it. */
+@media screen {
+	.page.bilingual {
+		max-width: clamp(38rem, 82vw, 72rem);
+	}
+}
+
 /* THE SETTINGS FRAME. The reader's part, the kind of Mass and the day are
    three answers to the same sort of question, and they are one visual family:
    a small-caps caption over a control, centred, with a hint beneath. The two

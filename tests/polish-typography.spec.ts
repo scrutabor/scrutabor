@@ -48,9 +48,9 @@ test('no Polish surface leaves a one-letter word before a breakable space @onlin
 			// Reading pages keep their fullest prose behind the help slider; read
 			// at the top step so translations and narratives are in the DOM, and
 			// open a word so gloss, lemma note and contextual note render too.
-			const slider = page.locator('input[type="range"]');
+			const modes = page.locator('.help [role="radio"]');
 			const word = page.locator('.word').first();
-			const operable = (await slider.count()) + (await word.count()) > 0;
+			const operable = (await modes.count()) + (await word.count()) > 0;
 			// only a page about to be OPERATED has to be alive, and it is given
 			// longer here than anywhere else. Measured across all 1,190 pages,
 			// hydration takes 15-42 ms and does not degrade as the sweep goes
@@ -62,42 +62,51 @@ test('no Polish surface leaves a one-letter word before a breakable space @onlin
 			// nine workers on a four-core runner can starve one page past a
 			// minute — so the allowance is two, on the same reasoning.
 			if (operable) await settled(page, 120_000);
-			if (await slider.count()) await slider.fill('2');
 			if (await word.count()) await word.click();
 		});
 
-		offences.push(
-			...(
-				await page.evaluate(() => {
-					const bad: string[] = [];
-					const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-					const measure = document.createRange();
-					for (let n = walker.nextNode(); n; n = walker.nextNode()) {
-						// Only text that is actually laid out can break across a
-						// line. This drops metadata the framework mirrors into the
-						// body (the document title among it) without having to
-						// enumerate tag names.
-						measure.selectNodeContents(n);
-						if (measure.getClientRects().length === 0) continue;
-						// The document title is metadata; while the framework hoists
-						// it into <head> a copy can sit in the body mid-hydration.
-						// It never line-wraps, and it carries Latin incipits.
-						if (n.textContent === document.title) continue;
-						// Only Polish is governed by this convention. Text in another
-						// language declares itself: Latin prose has its own one-letter
-						// words (a fronte, e regione) and IPA rows are transcription,
-						// not language at all (und-fonipa).
-						const declared = n.parentElement?.closest('[lang]')?.getAttribute('lang');
-						if (!declared?.startsWith('pl')) continue;
-						const text = n.textContent ?? '';
-						for (const m of text.matchAll(/(?:^|\s|[„“"(])([aiouwzAIOUWZ])[ \t]/g)) {
-							bad.push(`"${m[1]}" in: ${text.trim().slice(0, 70)}`);
+		// No single mode shows every Polish layer any more: słowa carries
+		// the glosses and narratives, przekład the translations — and the
+		// stored choice persists across the sweep's shared page, so both
+		// are set explicitly and both DOMs are scanned.
+		const passes = (await page.locator('.help [role="radio"]').count()) ? [1, 2] : [null];
+		for (const mode of passes) {
+			if (mode !== null) {
+				await page.locator('.help [role="radio"]').nth(mode).click();
+			}
+			offences.push(
+				...(
+					await page.evaluate(() => {
+						const bad: string[] = [];
+						const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+						const measure = document.createRange();
+						for (let n = walker.nextNode(); n; n = walker.nextNode()) {
+							// Only text that is actually laid out can break across a
+							// line. This drops metadata the framework mirrors into the
+							// body (the document title among it) without having to
+							// enumerate tag names.
+							measure.selectNodeContents(n);
+							if (measure.getClientRects().length === 0) continue;
+							// The document title is metadata; while the framework hoists
+							// it into <head> a copy can sit in the body mid-hydration.
+							// It never line-wraps, and it carries Latin incipits.
+							if (n.textContent === document.title) continue;
+							// Only Polish is governed by this convention. Text in another
+							// language declares itself: Latin prose has its own one-letter
+							// words (a fronte, e regione) and IPA rows are transcription,
+							// not language at all (und-fonipa).
+							const declared = n.parentElement?.closest('[lang]')?.getAttribute('lang');
+							if (!declared?.startsWith('pl')) continue;
+							const text = n.textContent ?? '';
+							for (const m of text.matchAll(/(?:^|\s|[„“"(])([aiouwzAIOUWZ])[ \t]/g)) {
+								bad.push(`"${m[1]}" in: ${text.trim().slice(0, 70)}`);
+							}
 						}
-					}
-					return bad;
-				})
-			).map((f) => `${path} — ${f}`)
-		);
+						return bad;
+					})
+				).map((f) => `${path} — ${f}`)
+			);
+		}
 	}
 
 	expect(offences).toEqual([]);

@@ -69,29 +69,33 @@ test.describe('landing @online', () => {
 		expect(root).toContain('hreflang="en" href="https://scrutabor.org/en"');
 	});
 
-	test('the specimen is the book itself: the real slider over the real verse', async ({ page }) => {
+	test('the specimen is the book itself: the real control over the real verse', async ({
+		page
+	}) => {
 		// Not a picture of the mechanism — the mechanism: psalmi.118-he's
-		// verse 34 from the corpus, TextBody, and the same slider a
-		// reading page carries.
+		// verse 34 from the corpus, TextBody, and the same reading-mode
+		// control a reading page carries.
 		await page.goto('/pl');
-		const slider = page.locator('.specimen input[type="range"]');
-		await expect(slider).toHaveValue('1');
+		const radios = page.locator('.specimen .help [role="radio"]');
+		await expect(radios.nth(1)).toHaveAttribute('aria-checked', 'true');
 		// the real corpus text: liturgical accents, and the colon the
 		// witnesses print where the brand motto prints a comma
 		await expect(page.locator('.specimen')).toContainText('scrutábor');
 		await expect(page.locator('.specimen')).toContainText('tuam:');
-		// bare Latin
-		await slider.fill('0');
+		// łacina: bare
+		await radios.nth(0).click();
 		await expect(page.locator('.specimen rt')).toHaveCount(0);
-		// the full step: all fourteen glosses (the consecutive et as "a")
-		// and the verse's own translation
-		await slider.fill('2');
+		// słowa: all fourteen glosses (the consecutive et as "a")
+		await radios.nth(1).click();
 		await expect(page.locator('.specimen rt')).toHaveCount(14);
 		await expect(page.locator('.specimen rt').nth(3)).toHaveText('a');
+		// przekład: the verse's own translation, the glosses yielding
+		await radios.nth(2).click();
 		await expect(page.locator('.specimen .translation')).toContainText('Daj mi zrozumienie');
+		await expect(page.locator('.specimen rt')).toHaveCount(0);
 
 		await page.goto('/en');
-		await page.locator('.specimen input[type="range"]').fill('2');
+		await page.locator('.specimen .help [role="radio"]').nth(2).click();
 		await expect(page.locator('.specimen .translation')).toContainText('Give me understanding');
 	});
 

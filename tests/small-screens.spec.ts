@@ -133,8 +133,6 @@ test('a wide screen keeps every control in its unstacked form', async ({ page })
 				new Set(
 					[...document.querySelectorAll(sel)].map((e) => Math.round(e.getBoundingClientRect().top))
 				).size;
-			const help = document.querySelector('.help')!.getBoundingClientRect();
-			const track = document.querySelector('input[type="range"]')!.getBoundingClientRect();
 			return {
 				// per control: two of them sit in this row now, the reader's
 				// part and the kind of Mass, and each must keep its own
@@ -144,13 +142,13 @@ test('a wide screen keeps every control in its unstacked form', async ({ page })
 					rows('.picker.compact[data-kind="mass"] .option')
 				),
 				labelLines: document.querySelector('.picker.compact .label')!.getClientRects().length,
-				trackSpansTheRow: track.width > help.width * 0.9
+				modeRows: rows('.help .option')
 			};
 		});
 		const at = `${width}px/${size}`;
 		expect(shape.partRows, `${at}: the parts control stacked with room to spare`).toBe(1);
 		expect(shape.labelLines, `${at}: its label wrapped with room to spare`).toBe(1);
-		expect(shape.trackSpansTheRow, `${at}: the help slider stacked with room to spare`).toBe(false);
+		expect(shape.modeRows, `${at}: the mode words wrapped with room to spare`).toBe(1);
 	}
 
 	// and on the index, each full picker keeps its own options side by side.

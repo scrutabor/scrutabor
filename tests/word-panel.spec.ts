@@ -2,7 +2,7 @@
 // shipped behavior or a regression that actually happened (2026-08-04:
 // taps reverted by the deep-link effect; panel not restored on back from
 // a concept page) — keep them green.
-import { atRoute, expect, noWordInTheAddress, test } from './fixtures';
+import { setHelp, atRoute, expect, noWordInTheAddress, test } from './fixtures';
 
 const PATER = '/app/pl/orationes/pater-noster';
 const panel = 'aside';
@@ -114,7 +114,7 @@ test('interactive chrome does not dismiss the sheet', async ({ page }) => {
 	await page.locator('button[aria-label="przełącz na tryb ciemny"]').click();
 	await expect(page.locator(panelWord)).toHaveText('nomen');
 	// help slider adjusts, panel stays
-	await page.locator('input[type="range"]').fill('2');
+	await setHelp(page, 2);
 	await expect(page.locator(panelWord)).toHaveText('nomen');
 });
 

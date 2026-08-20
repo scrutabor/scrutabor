@@ -184,7 +184,7 @@
 		<p><a href="/app/{lang}">Scrutabor</a></p>
 	</div>
 {:else}
-	<div class="page reading">
+	<div class="page reading" class:bilingual={helpLevel === 2}>
 		<header class:without-opening-rubric={data.category === 'ordinarium'}>
 			<PageNav {lang} />
 			<h1 lang="la">{doc.title}</h1>

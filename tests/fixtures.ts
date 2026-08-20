@@ -250,4 +250,19 @@ export function noWordInTheAddress(page: import('@playwright/test').Page) {
 	return expect(page, 'the closed panel left ?w= in the address').not.toHaveURL(/[?&]w=/);
 }
 
+/**
+ * Choose the reading mode — łacina (0), słowa (1), przekład (2).
+ *
+ * The control is the settings row's segmented radiogroup (it was a range
+ * input until 2026-08-21; the additive slider died when przekład became
+ * the bilingual view). Driven by INDEX so the tests read the same in both
+ * languages, and waits for the check to land before returning — the mode
+ * swap re-renders the whole text body.
+ */
+export async function setHelp(page: import('@playwright/test').Page, level: 0 | 1 | 2) {
+	const radio = page.locator('.help [role="radio"]').nth(level);
+	await radio.click();
+	await expect(radio).toHaveAttribute('aria-checked', 'true');
+}
+
 export { expect };

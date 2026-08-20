@@ -1,9 +1,24 @@
 <script lang="ts">
+	// The reading mode: łacina, słowa, przekład. It was a SLIDER for its
+	// first year, and the slider outlived two meanings — built for a
+	// hand-judged difficulty ladder (superseded 2026-08-03), reread as
+	// additive help, and retired when the additive model died too (owner,
+	// 2026-08-21): once full position became the bilingual view, the stops
+	// were not "more" of anything but three different READINGS, and a
+	// slider whose positions are modes is a segmented control in a slider's
+	// costume. Now it is what the row's other settings already were — a
+	// question answered with a word, in the role picker's own clothes.
+	//
+	// The stored key and its values did not change: 0, 1, 2 under
+	// scrutabor-help, so every reader's saved choice survives the control.
 	import { onMount } from 'svelte';
 	import { M, type Lang } from '$lib/i18n';
+	import { radiogroupKeydown } from '$lib/radio-nav';
 	import { readStored, writeStored } from '$lib/storage';
 
 	let { lang, value = $bindable(2) }: { lang: Lang; value?: number } = $props();
+
+	const LEVELS = [0, 1, 2] as const;
 
 	onMount(() => {
 		const raw = readStored('scrutabor-help');
@@ -12,152 +27,122 @@
 		if (Number.isInteger(stored)) value = Math.max(0, Math.min(stored, 2));
 	});
 
-	function persist() {
+	function choose(level: number) {
+		value = level;
 		writeStored('scrutabor-help', String(value));
 	}
+
+	let group = $state<HTMLElement | undefined>();
+	const onGroupKey = radiogroupKeydown({
+		options: () => LEVELS,
+		current: () => value as 0 | 1 | 2,
+		choose,
+		group: () => group
+	});
 </script>
 
 <div class="help">
-	<span class="end smallcaps">{M[lang].levels[0]}</span>
-	<input
-		type="range"
-		min="0"
-		max="2"
-		step="1"
-		bind:value
-		oninput={persist}
-		aria-label={M[lang].levelsAria}
-		aria-valuetext={M[lang].levels[value]}
-	/>
-	<span class="end smallcaps">{M[lang].levels[2]}</span>
+	<span class="label smallcaps" id="help-label">{M[lang].levelsAria}</span>
+	<!-- Roving tabindex, as in RolePicker: the checked radio is the one
+	     tab stop and the arrows move the check (lib/radio-nav). -->
+	<!-- svelte-ignore a11y_interactive_supports_focus -->
+	<div
+		class="options"
+		role="radiogroup"
+		aria-labelledby="help-label"
+		bind:this={group}
+		onkeydown={onGroupKey}
+	>
+		{#each LEVELS as level (level)}
+			<button
+				type="button"
+				role="radio"
+				aria-checked={value === level}
+				tabindex={value === level ? 0 : -1}
+				class="option"
+				class:on={value === level}
+				onclick={() => choose(level)}
+			>
+				<span class="slot">
+					<span class="ghost" aria-hidden="true">{M[lang].levels[level]}</span>
+					<span class="real">{M[lang].levels[level]}</span>
+				</span>
+			</button>
+		{/each}
+	</div>
 </div>
 
 <style>
-	/* The two labels are different lengths — "Latin only" against "full
-	   translation", "sama łacina" against "pełny przekład" — so sizing them
-	   to their text puts the track wherever the longer one pushes it, and
-	   the middle stop of the slider lands off the page's centre line. They
-	   share the width equally instead and face inward, which puts the track
-	   in the middle of the control and its middle stop under the middle of
-	   the title. */
+	/* The role picker's compact clothes, cut for this control: label and
+	   three words on one line, the reader's own in ink, the others quiet.
+	   The ghost under each word holds the width of its bold form so the
+	   row never shifts as the choice moves (the same device RolePicker
+	   documents at length). */
 	.help {
-		display: flex;
-		align-items: center;
-		gap: 0.7rem;
-		width: min(100%, 30rem);
-		margin-inline: auto;
+		display: inline-flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: baseline;
+		gap: 0.2rem 0.6rem;
 	}
 
-	.end {
-		flex: 1 1 0;
-		min-width: 0;
-		font-size: 0.75rem;
+	.label {
+		font-size: 0.68rem;
+		letter-spacing: 0.1em;
 		color: var(--ink-soft);
 	}
 
-	.end:first-child {
-		text-align: end;
+	.options {
+		display: inline-flex;
+		gap: 0.1rem;
 	}
 
-	.end:last-child {
-		text-align: start;
-	}
-
-	input {
+	.option {
 		appearance: none;
-		-webkit-appearance: none;
-		flex: none;
-		/* The track is a control, not text. It grows with the reading size
-		   like everything else, but it may not take so much of a narrow
-		   column that the two labels have nowhere to go — at the largest
-		   size on a 320px phone, 9.5rem is 213px of a 253px column and the
-		   row pushed the page sideways. */
-		width: min(9.5rem, 38%);
-		/* The INPUT is the touch target and the LINE is only its paint: as a
-		   2px-tall element this was a control operable to the thumb's own
-		   15px and nothing else, on the row a reader works in a dim nave —
-		   WCAG 2.5.8 asks 24px. The box is 1.5rem and the 2px track is
-		   drawn down its centre. */
-		height: 1.5rem;
-		background: linear-gradient(var(--border), var(--border)) center / 100% 2px no-repeat;
-		border-radius: 1px;
+		border: 0;
+		background: transparent;
+		color: var(--ink-soft);
+		font: inherit;
+		font-size: 0.9rem;
+		/* the block padding is the touch target (WCAG 2.5.8's 24px), the
+		   margin gives the room back to the row — the same trade the role
+		   words make */
+		padding: 0.3rem 0.15rem;
+		margin-block: -0.25rem;
 		cursor: pointer;
 	}
 
-	input::-webkit-slider-runnable-track {
-		height: 100%;
-		background: transparent;
+	.option + .option::before {
+		content: '·';
+		margin-inline-end: 0.3rem;
+		color: var(--ink-soft);
 	}
 
-	input::-webkit-slider-thumb {
-		-webkit-appearance: none;
-		width: 0.95rem;
-		height: 0.95rem;
-		border-radius: 50%;
-		background: var(--rubric);
-		border: none;
-		/* centres the thumb in the full-height track */
-		margin-top: calc((1.5rem - 0.95rem) / 2);
+	.slot {
+		position: relative;
+		display: inline-block;
 	}
 
-	input::-moz-range-thumb {
-		width: 0.95rem;
-		height: 0.95rem;
-		border-radius: 50%;
-		background: var(--rubric);
-		border: none;
+	.ghost {
+		visibility: hidden;
+		font-weight: 600;
 	}
 
-	input::-moz-range-track {
-		height: 2px;
-		background: var(--border);
-		border-radius: 1px;
+	.real {
+		position: absolute;
+		inset-inline-start: 0;
+		top: 0;
+		width: 100%;
+		text-align: center;
 	}
 
-	input:focus-visible {
+	.option.on .real {
+		font-weight: 600;
+		color: var(--ink);
+	}
+
+	.option:focus-visible {
 		outline: 2px solid var(--rubric);
 		outline-offset: 2px;
-	}
-
-	/* Where the three of them will not share a line — the largest reading
-	   size on the narrowest phone — the labels take the ends of one row and
-	   the track spans beneath them. Breaking "translation" across lines to
-	   keep it inline was the first attempt and it looked broken. The
-	   threshold is in rem, so it grows with the text: what matters is
-	   whether the words fit, not how many device pixels there are.
-	   NAMED, as the parts control is. Unnamed, this asks whatever container
-	   happens to stand above it — and on the landing, where the specimen
-	   carries the real slider, nothing did: the query never matched, the
-	   labels never stacked, and "full translation" ran six pixels off the
-	   edge of an English phone. Every surface that holds this control names
-	   the container `help` (app.css, and the landing's specimen). */
-	@container help (max-width: 18rem) {
-		.help {
-			flex-wrap: wrap;
-			/* The row gap has to clear the THUMB, not the track: the track is
-			   2px tall and the thumb 0.95rem, so it overhangs by about half
-			   of that either side and was touching the labels above it. */
-			gap: 0.75rem 0.7rem;
-		}
-
-		.end:first-child {
-			text-align: start;
-		}
-
-		.end:last-child {
-			text-align: end;
-		}
-
-		input {
-			order: 3;
-			flex: 1 1 100%;
-			width: 100%;
-		}
-	}
-
-	@media print {
-		.help {
-			display: none;
-		}
 	}
 </style>

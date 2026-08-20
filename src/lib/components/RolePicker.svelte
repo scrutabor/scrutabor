@@ -2,8 +2,8 @@
 	// Which part the reader has at Mass. Three buttons, no menu: the choice
 	// is small, it is made once, and a reader about to pray should not have
 	// to open anything to see what it is set to.
-	import { tick } from 'svelte';
 	import type { MassForm } from '$lib/corpus';
+	import { radiogroupKeydown } from '$lib/radio-nav';
 	import { M, type Lang } from '$lib/i18n';
 	import { MASS_FORMS, massForm } from '$lib/mass-form.svelte';
 	import { ROLES, role, type Role } from '$lib/role.svelte';
@@ -38,27 +38,17 @@
 	// form); a radiogroup must not point at an id that is not its own.
 	const labelId = $derived(`${kind}-label-${compact ? 'compact' : 'full'}`);
 
-	// The radiogroup contract, not only its costume: one tab stop (the
-	// checked radio), and the arrows move the check. arrow-nav already
-	// yields the arrow keys to role="radio" on the promise that the radios
-	// use them — a promise this control wore for a while without keeping,
-	// so a keyboard heard "radio button, 1 of 3", pressed Right, and
-	// nothing moved.
+	// The radiogroup contract, not only its costume (lib/radio-nav): one
+	// tab stop, the arrows move the check — the promise arrow-nav yields
+	// the arrow keys on, which this control wore for a while without
+	// keeping.
 	let group = $state<HTMLElement | undefined>();
-	async function onGroupKey(e: KeyboardEvent) {
-		const delta =
-			e.key === 'ArrowRight' || e.key === 'ArrowDown'
-				? 1
-				: e.key === 'ArrowLeft' || e.key === 'ArrowUp'
-					? -1
-					: 0;
-		if (!delta) return;
-		e.preventDefault();
-		const at = options.indexOf(current);
-		choose(options[(at + delta + options.length) % options.length]);
-		await tick();
-		group?.querySelector<HTMLButtonElement>('[aria-checked="true"]')?.focus();
-	}
+	const onGroupKey = radiogroupKeydown({
+		options: () => options,
+		current: () => current,
+		choose,
+		group: () => group
+	});
 </script>
 
 <div class="picker" class:compact data-kind={kind}>

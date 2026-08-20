@@ -196,42 +196,45 @@ test('largest print on the smallest phone still holds together', async ({ page }
 				.filter((r) => r.getClientRects().length > 1)
 				.map((r) => r.textContent?.trim()),
 			overflowing: document.documentElement.scrollWidth > document.documentElement.clientWidth,
-			trackSpans: (() => {
-				const help = document.querySelector('.help');
-				const track = document.querySelector('input[type="range"]');
-				if (!help || !track) return true;
-				return track.getBoundingClientRect().width > help.getBoundingClientRect().width * 0.9;
+			modeRows: (() => {
+				const options = [...document.querySelectorAll('.help .option')];
+				if (!options.length) return 1;
+				return new Set(options.map((o) => Math.round(o.getBoundingClientRect().top))).size;
 			})()
 		}));
 		expect(damage.root, `${url}: the size did not take`).toBe('22.4px');
 		expect(damage.splitTokens, `${url}: a token fragmented`).toEqual([]);
 		expect(damage.brokenGlosses, `${url}: a gloss broke across lines`).toEqual([]);
 		expect(damage.overflowing, `${url}: the page scrolls sideways`).toBe(false);
-		// and it fits by STACKING the slider, not by breaking words inside
-		// its labels — the first attempt did the latter and read as broken
-		expect(damage.trackSpans, `${url}: the help slider did not stack`).toBe(true);
+		// and the three mode words hold one line — the control fits by the
+		// row wrapping as a whole, never by a word fragmenting off
+		expect(damage.modeRows, `${url}: the mode words broke across lines`).toBe(1);
 	}
 });
 
-test('the slider’s thumb clears the labels above it', async ({ page }) => {
-	// When the control stacks, the row gap has to clear the THUMB and not
-	// the track: the track is 2px tall and the thumb 0.95rem, so it
-	// overhangs by about half of that either side. At 0.3rem of gap it sat
-	// on top of the label above it.
+test('the mode words hold their row at the smallest screen and the largest print', async ({
+	page
+}) => {
+	// The slider this test guarded had a thumb to clear; the word row has
+	// words to keep whole and on-screen. 320px at the largest print is
+	// where every control has the least room in the book.
 	await page.setViewportSize({ width: 320, height: 800 });
 	await page.goto('/app/pl/ordo/praeparatio');
 	await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
 	await page.reload();
 	await settled(page);
-	const clearance = await page.evaluate(() => {
-		const input = document.querySelector('input[type="range"]')!;
-		const track = input.getBoundingClientRect();
-		const root = parseFloat(getComputedStyle(document.documentElement).fontSize);
-		const thumbTop = track.top + track.height / 2 - (root * 0.95) / 2;
-		const lowestLabel = Math.max(
-			...[...document.querySelectorAll('.help .end')].map((e) => e.getBoundingClientRect().bottom)
-		);
-		return thumbTop - lowestLabel;
+	const shape = await page.evaluate(() => {
+		const options = [...document.querySelectorAll('.help .option')];
+		return {
+			rows: new Set(options.map((o) => Math.round(o.getBoundingClientRect().top))).size,
+			inside: options.every((o) => {
+				const b = o.getBoundingClientRect();
+				return b.left >= 0 && b.right <= document.documentElement.clientWidth;
+			}),
+			tappable: options.every((o) => o.getBoundingClientRect().height >= 23)
+		};
 	});
-	expect(clearance, 'the thumb overlaps the label above it').toBeGreaterThan(2);
+	expect(shape.rows, 'the mode words broke across lines').toBe(1);
+	expect(shape.inside, 'a mode word left the screen').toBe(true);
+	expect(shape.tappable, 'a mode word fell under the touch floor').toBe(true);
 });
