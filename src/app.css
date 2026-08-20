@@ -1,16 +1,24 @@
 /* Design tokens. Light: warm paper. Dark: warm, low-brightness — also the
    in-pew mode (a separate "church" theme was folded into it, owner 2026-08-03).
    Every text colour clears WCAG AA (4.5:1) against every surface it is set
-   on, including the tinted wash behind a tapped word — checked by the
-   contrast guard in tests/contrast.spec.ts, which reads the tokens from
-   the rendered page rather than trusting this comment. */
+   on, including the tinted wash behind a tapped word — and since the
+   readability audit of 2026-08-20 the reading layers also carry APCA
+   floors (the size-and-weight-aware WCAG 3 draft metric), because WCAG 2
+   rated the old dark quiet ink as fine while readers got half the
+   perceptual contrast of light. Both checks live in
+   tests/contrast.spec.ts, which reads the tokens from the rendered page
+   rather than trusting this comment. The quiet layers were retuned on
+   the audit's numbers (owner, 2026-08-20): light soft #70624a -> #5a4e3b
+   (Lc 72 -> 80, the layer that carried the solarized feel — and now past
+   WCAG AAA), dark soft #9a8a6c -> #c1b8a6 (Lc 39.5 -> 63.5), dark rubric
+   #ce7460 -> #e1a99c (Lc 40 -> 62). */
 :root,
 [data-theme='light'] {
 	--bg: #f7f1e6;
 	--scheme: light;
 	--surface: #fcf8ef;
 	--ink: #251e12;
-	--ink-soft: #70624a;
+	--ink-soft: #5a4e3b;
 	--rubric: #9e2b1e;
 	--border: #e0d4ba;
 	--wash: #ede2c9;
@@ -23,8 +31,8 @@
 	--scheme: dark;
 	--surface: #211c15;
 	--ink: #ddd1bb;
-	--ink-soft: #9a8a6c;
-	--rubric: #ce7460;
+	--ink-soft: #c1b8a6;
+	--rubric: #e1a99c;
 	--border: #372e20;
 	--wash: #2b2417;
 	--wash-strong: #3a3120;
@@ -45,8 +53,8 @@
 		--scheme: dark;
 		--surface: #211c15;
 		--ink: #ddd1bb;
-		--ink-soft: #9a8a6c;
-		--rubric: #ce7460;
+		--ink-soft: #c1b8a6;
+		--rubric: #e1a99c;
 		--border: #372e20;
 		--wash: #2b2417;
 		--wash-strong: #3a3120;

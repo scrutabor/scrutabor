@@ -991,7 +991,19 @@
 	}
 
 	.translation {
+		/* 0.09 of a line of air above, as PADDING because a margin here
+		   collapses into the verse's own bottom margin and buys nothing.
+		   The 0.78 size bump raised the first line's ascenders and ate the
+		   daylight the ink-gap test guards (CI measured 9px where >10 is
+		   the floor). The value is CENTRED in a genuinely narrow window:
+		   two tests bound this same gap from opposite sides — the ink
+		   clearance wants more air (>10px, binding on CI's tighter render)
+		   and the belongs-to-its-verse ratio wants less (next/own > 1.25,
+		   binding locally) — and 0.14 of a line sat exactly on the ratio's
+		   edge. Both bounds now carry at least a pixel of margin in both
+		   environments. */
 		margin: 0;
+		padding-top: calc(var(--reading) * 0.09);
 		/* No measure of its own — it ends where the Latin above it ends;
 		   see the rule over .rubric-la. This is the block that started
 		   that change: capped, it broke at little more than half the width
@@ -999,7 +1011,11 @@
 		   wrapped where its own Latin had not. */
 		color: var(--ink-soft);
 		font-style: italic;
-		font-size: calc(var(--reading) * 0.724);
+		/* 0.78, up from 0.724 (readability audit 2026-08-20): at 0.724 the
+		   translation was optically ~13px — EB Garamond's x-height is 0.405
+		   against the ~0.52 the size norms assume — and APCA wanted either
+		   more size or more ink for continuous reading. It got both. */
+		font-size: calc(var(--reading) * 0.78);
 		line-height: 1.55;
 	}
 

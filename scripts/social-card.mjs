@@ -23,7 +23,7 @@ const fonts = join(root, 'src', 'lib', 'fonts');
 // copy sat the S too small and off its optical centre (owner, 2026-08-20).
 const BG = '#f7f1e6';
 const INK = '#251e12';
-const SOFT = '#70624a';
+const SOFT = '#5a4e3b';
 
 // The shipped app icon, inlined: a file:// subresource is blocked from a
 // setContent page, and a data URI cannot be.
