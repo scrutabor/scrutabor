@@ -47,8 +47,8 @@
 <noscript>
 	<p class="noscript-note">
 		{lang === 'pl'
-			? 'Ta strona czyta się bez JavaScriptu, ale jej przełączniki — próbka, motyw, wielkość pisma — wymagają jego włączenia.'
-			: 'The page reads without JavaScript, but its controls — the specimen, the theme, the text size — need it turned on.'}
+			? 'Ta strona czyta się bez JavaScriptu, ale jej przełączniki — próbka, język, motyw, wielkość pisma — wymagają jego włączenia.'
+			: 'The page reads without JavaScript, but its controls — the specimen, the language, the theme, the text size — need it turned on.'}
 	</p>
 </noscript>
 

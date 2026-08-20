@@ -177,9 +177,12 @@ const MESSAGES: Record<Lang, Messages> = {
 		seasons: {
 			adventus: 'Adwent',
 			nativitas: 'Okres Bożego Narodzenia',
+			epiphania: 'Okres Objawienia Pańskiego',
+			septuagesima: 'Przedpoście',
 			quadragesima: 'Wielki Post',
+			passionis: 'Okres Męki Pańskiej',
 			paschale: 'Okres wielkanocny',
-			'per-annum': 'Po Zesłaniu Ducha Świętego'
+			'per-annum': 'Okres w ciągu roku'
 		},
 		ordoPending: 'jeszcze nie w tym wydaniu',
 		grammarTitle: 'gramatyka',
@@ -224,8 +227,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		},
 		roles: { populus: 'wierni', minister: 'usługujący', sacerdos: 'kapłan' },
 		roleHint: {
-			populus: 'części odmawiane głośno, z odpowiedziami wiernych',
-			minister: 'części odmawiane głośno, z pełnymi odpowiedziami usługującego',
+			populus: 'to, co odmawiane głośno, z odpowiedziami wiernych',
+			minister: 'to, co odmawiane głośno, z pełnymi odpowiedziami usługującego',
 			sacerdos: 'całe Ordo Missæ, wraz z modlitwami odmawianymi po cichu'
 		},
 		quietCollapsed: 'kapłan modli się po cichu',
@@ -303,9 +306,12 @@ const MESSAGES: Record<Lang, Messages> = {
 		seasons: {
 			adventus: 'Advent',
 			nativitas: 'Christmastide',
+			epiphania: 'Epiphanytide',
+			septuagesima: 'Septuagesima',
 			quadragesima: 'Lent',
+			passionis: 'Passiontide',
 			paschale: 'Eastertide',
-			'per-annum': 'Time after Pentecost'
+			'per-annum': 'Through the year'
 		},
 		ordoPending: 'not yet in this edition',
 		grammarTitle: 'grammar',
@@ -354,8 +360,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		// English rather than as three repetitions of "the".
 		roles: { populus: 'faithful', minister: 'server', sacerdos: 'priest' },
 		roleHint: {
-			populus: 'the parts said aloud, with the answers of the faithful',
-			minister: 'the parts said aloud, with the server’s answers in full',
+			populus: 'what is said aloud, with the answers of the faithful',
+			minister: 'what is said aloud, with the server’s answers in full',
 			sacerdos: 'the whole Ordo Missæ, including the prayers said silently'
 		},
 		quietCollapsed: 'the priest prays silently',

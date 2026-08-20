@@ -296,7 +296,7 @@
 						type="button"
 						class="mark"
 						class:yours={mine}
-						aria-label={`${M[lang].markTitle[seg.speaker]} — ${M[lang].markLegendTitle}`}
+						aria-label={`${M[lang].markTitle[seg.speaker]}, ${M[lang].markLegendTitle}`}
 						onclick={onmark}><span class="ink">{MARKS[seg.speaker]}</span></button
 					>{:else}<span class="mark" class:yours={mine} aria-hidden="true"
 						>{MARKS[seg.speaker]}</span

@@ -98,7 +98,7 @@
 			stanzaLink: 'Psalm\u00a0118, He — v.\u00a034',
 			privacyLine: 'No registration, no cookies, no ads.',
 			privacyLink: 'privacy',
-			supportLink: 'support',
+			supportLink: 'contact',
 			editioLink: 'about this edition',
 			bibliographyLink: 'bibliography',
 			sourcesLink: 'source code on GitHub'

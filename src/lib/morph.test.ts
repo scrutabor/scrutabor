@@ -133,7 +133,7 @@ describe('a verb whose form does not settle its tense or mood', () => {
 			'czasownik — 1. os., l. poj., forma niejednoznaczna, strona czynna, koniugacja III'
 		);
 		expect(describeMorph(retribuam, 'en')).toBe(
-			'verb — 1st person, singular, form undecided, active, 3rd conjugation'
+			'verb — 1st person, singular, ambiguous form, active, 3rd conjugation'
 		);
 	});
 

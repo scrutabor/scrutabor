@@ -180,11 +180,11 @@ Folder "app" to sama księga — nie ma w nim nic do oglądania ani do
 instalowania. OFL.txt to licencja kroju pisma EB Garamond.
 
 The "app" folder holds the book itself. There is nothing to look at in
-there, and nothing to install. OFL.txt is the licence of the typeface,
+there, and nothing to install. OFL.txt is the license of the typeface,
 EB Garamond.
 
 Ta kopia jest Twoja. Nic stąd nie łączy się z siecią, nic nie wygasa,
-a księga będzie działać, nawet jeśli strona kiedyś przestanie.
+a księga będzie działać, nawet jeśli strona kiedyś przestanie działać.
 
 This copy is yours. Nothing here calls home, nothing expires, and it will
 keep working if the website one day does not.
