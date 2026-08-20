@@ -52,6 +52,17 @@ describe('the corpus this app ships', () => {
 		);
 	});
 
+	it('is the shape expandDocument was written against', () => {
+		// EXACT versions, not shapes of versions: `expandDocument` is a hand
+		// mirror of the corpus's own expand(), keyed on hand-kept ROW_KEYS
+		// and DOC_KEYS sets. A corpus that changes shape must arrive as a
+		// red build and a deliberate re-read of the emitter — not as a new
+		// short key falling through the sets and a layer quietly missing
+		// from the reader's page. Bump these WITH the mirror, never alone.
+		expect(provenance.schema_version).toBe('0.14.0');
+		expect(provenance.edition).toBe('1.0.0');
+	});
+
 	it('was vendored from a clean corpus', () => {
 		// A release built from an uncommitted corpus cannot be reproduced, and
 		// the edition it publishes exists nowhere but one laptop.

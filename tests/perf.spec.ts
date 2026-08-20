@@ -4,7 +4,10 @@
 // fallback in app.css must keep the swap invisible.
 import { bare as test, expect } from './fixtures';
 
-test('cold load swaps fonts without layout shift', async ({ page }) => {
+// @online: the folder edition renders from an empty frame with inline
+// styles and data-URI fonts — CDP network throttling against file:// says
+// nothing about the metric-matched fallback, so its run was decorative.
+test('cold load swaps fonts without layout shift @online', async ({ page }) => {
 	const cdp = await page.context().newCDPSession(page);
 	await cdp.send('Network.setCacheDisabled', { cacheDisabled: true });
 	await cdp.send('Network.emulateNetworkConditions', {

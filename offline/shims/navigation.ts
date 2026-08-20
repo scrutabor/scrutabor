@@ -4,6 +4,7 @@
 // (offline/entry.ts) — what it does not have is an origin, so every address
 // lives in the hash and every one of these has to translate.
 
+import { onDestroy } from 'svelte';
 import { ORIGIN } from '$lib/site';
 import { routeOf } from '$lib/url';
 
@@ -19,9 +20,16 @@ export function navigated() {
 /** Fires after each navigation, and immediately for a caller that registers
  * after the first one has already happened — the reading ribbon restores the
  * reader's place, and a ribbon mounted by the route that just rendered would
- * otherwise wait for a navigation that has been and gone. */
+ * otherwise wait for a navigation that has been and gone.
+ *
+ * Scoped to the registering component, like the real one: SvelteKit's
+ * afterNavigate unregisters when the component is destroyed, and the copy's
+ * router destroys and re-mounts the whole tree on every navigation — without
+ * this, every page ever visited leaves its callback behind, and the tenth
+ * navigation replays ten stale scroll restorations. */
 export function afterNavigate(fn: (nav?: unknown) => void) {
 	listeners.add(fn);
+	onDestroy(() => listeners.delete(fn));
 	if (arrived) queueMicrotask(() => fn(undefined));
 }
 
@@ -74,8 +82,21 @@ export function go(target: string) {
 	// A reader who asks for the page they are on should not be met with
 	// nothing at all, and an unchanged hash fires no event of its own.
 	if (target === location.hash) return;
+	intended = true;
 	location.href = target;
 	dispatchEvent(new HashChangeEvent('hashchange'));
+}
+
+/** Set by go() for the navigation it starts, consumed by the router: a
+ * followed link opens the new page at its top, a history traversal (Back,
+ * Forward) does not — the browser restores the reader's own place there,
+ * and a scroll to the top would erase it. */
+let intended = false;
+
+export function consumeIntent(): boolean {
+	const was = intended;
+	intended = false;
+	return was;
 }
 
 /**

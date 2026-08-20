@@ -15,7 +15,17 @@ const sw = readFileSync('src/service-worker.ts', 'utf8');
 
 describe('what an install downloads', () => {
 	it('keeps the day artifacts out of the shell', () => {
-		const shell = sw.slice(sw.indexOf('const SHELL ='), sw.indexOf('const DAYS'));
+		// The slice's own footing first: with `const DAYS` declared ABOVE
+		// `const SHELL` — an ordinary readability reshuffle — the end index
+		// precedes the start, the slice is '', and `expect('').not.toContain`
+		// passes on a worker doing exactly what this test forbids. A
+		// source-reading gate has to prove it read something.
+		const start = sw.indexOf('const SHELL =');
+		const end = sw.indexOf('const DAYS');
+		expect(start, 'SHELL declaration found').toBeGreaterThanOrEqual(0);
+		expect(end, 'DAYS declared after SHELL').toBeGreaterThan(start);
+		const shell = sw.slice(start, end);
+		expect(shell).toContain('SHELL');
 		expect(shell).not.toContain('artifacts');
 	});
 

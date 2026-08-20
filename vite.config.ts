@@ -13,6 +13,18 @@ export default defineConfig({
 
 			adapter: adapter(),
 
+			typescript: {
+				// The offline runtime and the build scripts' tests are code
+				// like any other and were the only code no type-checker read:
+				// a planted `const wrong: number = 'x'` in offline/routes.ts
+				// passed `npm run check` clean, because the generated include
+				// covers src/ and tests/ alone. The runtime that renders the
+				// whole downloaded book does not get to be the exception.
+				config: (config) => {
+					config.include.push('../offline/**/*.ts', '../scripts/**/*.ts');
+				}
+			},
+
 			serviceWorker: {
 				// Registered by src/routes/app/+layout.svelte with scope /app/,
 				// so the worker serves the book and never the landing pages.

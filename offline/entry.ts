@@ -4,8 +4,9 @@
  * The site prerenders every route: 2,381 files, each carrying its own copy of
  * the dictionary entries its words need. Downloaded, that came to 12.7 MB for
  * the Ordinary and one Sunday. This renders the same components from the same
- * corpus at 2 MB, and the whole church year projects to 12 MB — about what one
- * season costs today (notes/corpus-structure-2026-08-18.md §10-11).
+ * corpus at 2 MB, and the whole church year projects to about 12 MB — the
+ * prerendered shape would have passed a gigabyte, because each of the five
+ * hundred pages a year of Sundays needs repeats its slice of the dictionary.
  *
  * What `file://` refuses decides the shape, and it was measured rather than
  * assumed: `fetch()` of a sibling file is blocked outright, ES modules are
@@ -27,7 +28,7 @@ import { LANGS, type Lang } from '$lib/i18n';
 import { pageUrl } from '$lib/url';
 import { layoutData } from '$lib/loaders';
 import { layoutFor, match, pageData, type RouteMatch } from './routes';
-import { asFile, go, navigated } from './shims/navigation';
+import { asFile, consumeIntent, go, navigated } from './shims/navigation';
 import { page as pageState } from './shims/state';
 
 type Component = { component: unknown };
@@ -93,7 +94,7 @@ let mountedPath: string | null = null;
 const stores = { page: store<unknown>(null), navigating: store(null), updated: store(false) };
 
 /** Routes whose page cannot render without data the corpus may not have. */
-const NEEDS_DATA = new Set(['reading', 'movement', 'lemma']);
+const NEEDS_DATA = new Set(['reading', 'movement', 'lemma', 'concept']);
 
 /**
  * What to mount, and what to give it.
@@ -189,7 +190,12 @@ function render(found: RouteMatch | null, path: string): void {
 		// mounts rather than hydrates.
 		hydrate: false,
 		sync: false,
-		props: { stores, ...props }
+		// The spread erases the keys from the type: `props` holds page,
+		// constructors, form and the data_N pyramid (built above), but a
+		// Record spread cannot prove it to root.svelte's generated props
+		// type. Asserted rather than rebuilt — the object IS complete, and
+		// listing the keys twice is how one of the lists goes stale.
+		props: { stores, ...props } as unknown as ConstructorParameters<typeof root>[0]['props']
 	}) as { $destroy: () => void };
 	mountedPath = path;
 }
@@ -204,8 +210,11 @@ function navigate(): void {
 	// Re-rendering there would throw away the page the reader is looking at.
 	if (path === mountedPath) return;
 	render(match(path), path);
-	// A new page starts at its top, as a document load would.
-	window.scrollTo({ top: 0, behavior: 'auto' });
+	// A FOLLOWED LINK starts the new page at its top, as a document load
+	// would. A history traversal does not: the browser restores the
+	// reader's own place on Back, and scrolling to the top over it loses
+	// where they were.
+	if (consumeIntent()) window.scrollTo({ top: 0, behavior: 'auto' });
 	navigated();
 }
 
@@ -221,7 +230,19 @@ function interceptLinks() {
 	addEventListener(
 		'click',
 		(event) => {
-			if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey) return;
+			// Every modifier stands down, not only the new-tab pair: shift asks
+			// for a new window and alt for a download, and swallowing either
+			// navigates in place against the reader's stated intent.
+			if (
+				event.defaultPrevented ||
+				event.button !== 0 ||
+				event.metaKey ||
+				event.ctrlKey ||
+				event.shiftKey ||
+				event.altKey
+			) {
+				return;
+			}
 			const anchor = (event.target as Element | null)?.closest?.('a');
 			const href = anchor?.getAttribute('href');
 			if (!href || !href.startsWith('/')) return;

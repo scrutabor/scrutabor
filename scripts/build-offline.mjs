@@ -8,8 +8,8 @@
 //
 // The copy now ships the BOOK and renders it: one shell, one runtime carrying
 // the components and the whole reader edition, and the route in the hash.
-// 2 MB for what 12.7 MB used to hold, and the whole year projects to about 12
-// (notes/corpus-structure-2026-08-18.md §10-11).
+// 2 MB for what 12.7 MB used to hold, and the whole year projects to about
+// 12, where the prerendered shape would have passed a gigabyte.
 //
 //   node scripts/build-offline.mjs           → build-offline/
 //   node scripts/build-offline.mjs --zip     → …and Scrutabor-v<version>.zip
@@ -35,9 +35,10 @@ import {
 	readdirSync,
 	rmSync,
 	statSync,
+	utimesSync,
 	writeFileSync
 } from 'node:fs';
-import { join } from 'node:path';
+import { join, relative } from 'node:path';
 import { BEACON_BLOCK, BEACON_HOST } from './beacon-block.mjs';
 
 /** The package version, single-sourced from package.json (the release
@@ -46,6 +47,21 @@ import { BEACON_BLOCK, BEACON_HOST } from './beacon-block.mjs';
  * before anyone unzips them — and into the README; the folder inside
  * stays plain `Scrutabor`, so unzipping always yields the same shape. */
 const VERSION = JSON.parse(readFileSync('package.json', 'utf8')).version;
+
+/** The commit this package was built from, stamped into the README the
+ * way vendor-corpus stamps provenance.json: the zip is the one artifact
+ * readers keep for years, and until now nothing tied a copy on a disk to
+ * what built it. `dirty` is declared rather than hidden — a zip of
+ * uncommitted work must say so on its face. */
+const COMMIT = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
+const DIRTY = execFileSync('git', ['status', '--porcelain'], { encoding: 'utf8' }).trim() !== '';
+/** The commit's own time, given to every file in the archive: zip stores
+ * mtimes, so fresh cpSync timestamps made two builds of byte-identical
+ * content differ — the recorded SHA-256 of a release asset could be
+ * verified only by keeping the file, never by rebuilding it. */
+const COMMIT_TIME = new Date(
+	execFileSync('git', ['log', '-1', '--format=%cI'], { encoding: 'utf8' }).trim()
+);
 
 const SITE = 'build';
 const RUNTIME = 'build-offline-runtime/offline.js';
@@ -145,15 +161,6 @@ for (const path of walk(OUT)) {
 	}
 }
 
-// The landing pages are the SITE's, never the book's. The canary is the
-// privacy page, which exists in every language and only on the landing side.
-for (const path of walk(OUT)) {
-	if (/[/\\]privacy\.html$/.test(path)) {
-		console.error(`landing page in the package: ${path}`);
-		process.exit(1);
-	}
-}
-
 // Both languages, Polish first: the zip is offered from the Polish landing
 // too, and the shell's own <noscript> above has always spoken both. The
 // JavaScript sentence is the README earning the noscript's honesty — this
@@ -162,7 +169,7 @@ writeFileSync(
 	join(OUT, 'README.txt'),
 	`Scrutabor — łaciński mszalik i modlitewnik z warstwą słowo po słowie.
 Scrutabor — a Latin missal and prayer book with a word-by-word layer.
-Edition v${VERSION}.
+Edition v${VERSION} · ${COMMIT.slice(0, 12)}${DIRTY ? ' (modified)' : ''}.
 
     Otwórz / Open: index.html
 
@@ -218,6 +225,21 @@ for (const [ok, why] of [
 	}
 }
 
+// The folder holds EXACTLY what the comment at the top promises — four
+// files, nothing else. This replaced a privacy-page canary from the
+// prerendered-folder era: once the package stopped copying pages at all,
+// that check could no longer fail on anything. A whitelist fails on both
+// mistakes — a landing page copied in, and a build step quietly dropping
+// extras in beside the book.
+{
+	const expected = ['OFL.txt', 'README.txt', join('app', 'offline.js'), 'index.html'].sort();
+	const actual = [...walk(OUT)].map((path) => relative(OUT, path)).sort();
+	if (actual.join('\n') !== expected.join('\n')) {
+		console.error(`the package is not the four files it promises:\n  ${actual.join('\n  ')}`);
+		process.exit(1);
+	}
+}
+
 const bytes = [...walk(OUT)].reduce((sum, path) => sum + statSync(path).size, 0);
 console.log(`${OUT}/ — ${(bytes / 1048576).toFixed(1)} MB`);
 
@@ -231,7 +253,15 @@ if (process.argv.includes('--zip')) {
 		if (/^Scrutabor(-v.*)?\.zip$/.test(stale)) rmSync(stale);
 	}
 	cpSync(OUT, staged, { recursive: true });
-	execFileSync('zip', ['-qr', zip, staged]);
+	// The commit's time on every entry — directories too, they are entries
+	// in the archive — and no platform extras (-X): two builds of one
+	// commit now produce byte-identical archives, so the recorded digest
+	// of a release asset is verifiable by rebuilding.
+	for (const name of readdirSync(staged, { recursive: true })) {
+		utimesSync(join(staged, String(name)), COMMIT_TIME, COMMIT_TIME);
+	}
+	utimesSync(staged, COMMIT_TIME, COMMIT_TIME);
+	execFileSync('zip', ['-qrX', zip, staged]);
 	rmSync(staged, { recursive: true, force: true });
 	console.log(`${zip} — ${(statSync(zip).size / 1048576).toFixed(1)} MB`);
 }

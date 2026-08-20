@@ -4,7 +4,14 @@
 // The site has one file per route and needs no router at all. A downloaded
 // copy is ONE document: the route lives in the hash, and this says which
 // SvelteKit route it is and what data that route's page gets.
-import { bibliographyData, layoutData, lemmaData, ordoData, readingData } from '$lib/loaders';
+import {
+	bibliographyData,
+	conceptData,
+	layoutData,
+	lemmaData,
+	ordoData,
+	readingData
+} from '$lib/loaders';
 import type { Lang } from '$lib/i18n';
 
 export interface RouteMatch {
@@ -116,7 +123,7 @@ export function pageData(found: RouteMatch): Record<string, unknown> | null {
 		case 'lemma':
 			return lemmaData(lang, found.params.lemma);
 		case 'concept':
-			return { concept: found.params.concept };
+			return conceptData(found.params.concept);
 		case 'bibliographia':
 			return bibliographyData(lang);
 		default:

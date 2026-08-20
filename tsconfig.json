@@ -3,7 +3,12 @@
 	"compilerOptions": {
 		"rewriteRelativeImportExtensions": true,
 		"allowJs": true,
-		"checkJs": true,
+		// checkJs off since the offline runtime joined the program
+		// (2026-08-20): entry.ts imports SvelteKit's generated client
+		// manifest, checkJs follows imports past every exclude, and the
+		// generated JS then reports ITS implicit anys as our errors.
+		// Everything of ours in the program is TypeScript.
+		"checkJs": false,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"resolveJsonModule": true,

@@ -147,3 +147,40 @@ test('a hash mangled after boot lands on the 404 too @folder', async ({ page }) 
 	});
 	await expect(page.locator('.errorpage .status')).toHaveText('404');
 });
+
+test('walking the book after a dwell does not drag old positions along @folder', async ({
+	page
+}) => {
+	// The copy is ONE document, so anything a page registers globally
+	// outlives it. The ribbon's afterNavigate callback did: every text ever
+	// opened left a live listener whose scrollTo replayed on each later
+	// navigation, clamped to the new page's height — dwell once below the
+	// fold and every prayer after it opened at its bottom. The fixture's
+	// goto resets the document (about:blank first), so only IN-DOCUMENT
+	// clicks — the way a reader actually walks the folder — can see this.
+	await page.goto('/app/pl/ordinarium/credo');
+	await expect
+		.poll(
+			async () => {
+				await page.evaluate(() => {
+					window.scrollTo(0, 0);
+					window.scrollTo(0, 600);
+				});
+				return page.evaluate(() => localStorage.getItem('scrutabor-pos:ordinarium/credo'));
+			},
+			{ intervals: [1400, 1400, 1400, 1400], timeout: 15000 }
+		)
+		.not.toBeNull();
+
+	// Two in-document navigations, each to a DIFFERENT text: through the
+	// book's own home, exactly as a reader browses.
+	for (const slug of ['sanctus', 'agnus-dei']) {
+		await page.getByRole('link', { name: 'strona główna modlitewnika' }).click();
+		await page.locator(`a[href="/app/pl/ordinarium/${slug}"]`).click();
+		await expect(page.locator('.page.reading h1')).toBeVisible();
+		// A followed link opens the new page at its top; the Credo's stale
+		// scroll must not land it hundreds of pixels down.
+		await page.waitForTimeout(250);
+		expect(await page.evaluate(() => window.scrollY), slug).toBeLessThan(10);
+	}
+});

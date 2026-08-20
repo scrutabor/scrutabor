@@ -11,13 +11,20 @@
 // survivors wrote the bare word. A gate that certifies a boundary it cannot
 // see past is worse than none, so the pattern now takes the word under any
 // casing. The fix in every case was to say the thing rather than to cite it.
+//
+// A SECOND version had the same disease in the file-name halves (found by
+// mutation on 2026-08-20): `notes\/[a-z-]+` could not cross a digit and
+// `reviews\/[A-Z][A-Z0-9-]*` could not cross lowercase, so a date-stamped
+// note and a versioned report both walked through — and two citations of a
+// date-stamped workbench note were live in this repository while the gate
+// showed green. Both halves now take any plausible file name.
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
 /** The private workbench's own documents, by the names they are cited under. */
 const PRIVATE =
-	/reviews\/[A-Z][A-Z0-9-]*\.md|notes\/[a-z-]+\.md|\bbacklog\b|\bplaybook\b|\bowner-queue\b|scrutabor-workbench/i;
+	/reviews\/[\w.-]+\.md|notes\/[\w.-]+\.md|\bbacklog\b|\bplaybook\b|\bowner-queue\b|scrutabor-workbench/i;
 
 /** This file names them in order to forbid them. */
 const EXEMPT = new Set(['scripts/public-boundary.test.ts']);

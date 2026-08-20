@@ -55,19 +55,34 @@ sw.addEventListener('activate', (event) => {
 	);
 });
 
-async function fetchTheBook(): Promise<void> {
-	const cache = await caches.open(CACHE);
-	const missing = [];
-	for (const path of EVERYTHING) {
-		if (!(await cache.match(path, { ignoreSearch: true }))) missing.push(path);
-	}
-	// A few at a time: this runs while someone is reading, and a stampede of
-	// a thousand requests would compete with the page in front of them.
-	for (let i = 0; i < missing.length; i += 6) {
-		await cache.addAll(missing.slice(i, i + 6)).catch(() => {
-			/* one bad path must not abandon the rest */
-		});
-	}
+// One run at a time: the install signal can arrive twice on a fresh install
+// (the appinstalled event and the standalone check both fire), and two runs
+// racing each other each computed `missing` before the other had filled
+// anything — the whole book fetched twice.
+let fetching: Promise<void> | null = null;
+
+function fetchTheBook(): Promise<void> {
+	fetching ??= (async () => {
+		try {
+			const cache = await caches.open(CACHE);
+			const missing = [];
+			for (const path of EVERYTHING) {
+				if (!(await cache.match(path, { ignoreSearch: true }))) missing.push(path);
+			}
+			// A few at a time: this runs while someone is reading, and a
+			// stampede of a thousand requests would compete with the page in
+			// front of them. Each path fetched SINGLY — addAll is atomic, so
+			// batching through it meant one bad path silently dropped the five
+			// innocent files sharing its batch, and the book had quiet holes.
+			for (let i = 0; i < missing.length; i += 6) {
+				await Promise.allSettled(missing.slice(i, i + 6).map((path) => cache.add(path)));
+			}
+		} finally {
+			// A later signal may retry what this run could not fetch.
+			fetching = null;
+		}
+	})();
+	return fetching;
 }
 
 // The browser tells the page, not the worker, so the page forwards it.

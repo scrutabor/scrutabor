@@ -12,6 +12,10 @@ import { defineConfig } from '@playwright/test';
 // second run, or it rots the first time someone touches a route.
 export default defineConfig({
 	testDir: 'tests',
+	// A stray .only left in a spec narrows CI to one test of five hundred
+	// and reports green. Vitest refuses that under CI by its own default;
+	// Playwright only when told.
+	forbidOnly: !!process.env.CI,
 	webServer: {
 		// Both artifacts, from one command, so they can never disagree about
 		// which corpus or which runtime they were built from. (The offline
