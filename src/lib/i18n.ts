@@ -242,7 +242,7 @@ const MESSAGES: Record<Lang, Messages> = {
 	},
 	en: {
 		langName: 'English',
-		tagline: 'Prayer in Latin, with understanding',
+		tagline: 'Prayer in Latin with understanding',
 		mottoRef: 'ps\u00a0118\u00a0(119),\u00a034',
 		workingEdition: 'working edition',
 		edition: 'edition',

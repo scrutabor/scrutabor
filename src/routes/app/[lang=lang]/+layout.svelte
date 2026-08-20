@@ -29,7 +29,7 @@
 		property="og:image:alt"
 		content={lang === 'pl'
 			? 'Scrutabor — modlitwa po łacinie ze zrozumieniem'
-			: 'Scrutabor — prayer in Latin, with understanding'}
+			: 'Scrutabor — prayer in Latin with understanding'}
 	/>
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>

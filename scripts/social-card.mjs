@@ -25,7 +25,7 @@ const RUBRIC = '#9e2b1e';
 // Dotless on display, as the landing prints them.
 const TAGLINE = {
 	pl: 'Modlitwa po łacinie ze zrozumieniem',
-	en: 'Prayer in Latin, with understanding'
+	en: 'Prayer in Latin with understanding'
 };
 
 const page_ = (lang) => `<!doctype html>

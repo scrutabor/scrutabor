@@ -1,6 +1,6 @@
 # Scrutabor
 
-_Prayer in Latin, with understanding._
+_Prayer in Latin with understanding._
 
 **Live at [scrutabor.org](https://scrutabor.org).**
 

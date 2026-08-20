@@ -85,7 +85,7 @@
 			sourcesLink: 'kod źródłowy na GitHubie'
 		}),
 		en: {
-			title: 'Scrutabor — prayer in Latin, with understanding',
+			title: 'Scrutabor — prayer in Latin with understanding',
 			description:
 				'A free Latin prayer book with word-by-word analysis: translation, grammar, and pronunciation for every word. The 1962 Ordo Missæ and common prayers, downloadable too.',
 			open: 'Open the prayer book',
