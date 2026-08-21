@@ -42,6 +42,14 @@
 				// stored value at init, so hydration is the ONE re-render.
 				var h = localStorage.getItem('scrutabor-help');
 				document.documentElement.dataset.help = h === '0' || h === '2' ? h : '1';
+				// A failed application chunk must not turn the static prayer into
+				// a blank page forever. Normal hydration clears the hold in a few
+				// frames; after two seconds the prerendered interlinear is the
+				// safer fallback, even if it briefly differs from the stored mode.
+				setTimeout(function () {
+					if (document.documentElement.dataset.hydrated !== 'true')
+						document.documentElement.dataset.modeHold = 'released';
+				}, 2000);
 			} catch (e) {
 				/* keep the static default */
 			}

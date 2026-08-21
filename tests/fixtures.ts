@@ -104,7 +104,6 @@ async function pinClock(page: import('@playwright/test').Page) {
 	await page.addInitScript((iso: string) => {
 		const shift = new Date(iso).valueOf() - Date.now();
 		const Real = Date;
-		// eslint-disable-next-line no-global-assign
 		(globalThis as unknown as { Date: unknown }).Date = class extends Real {
 			constructor(...args: ConstructorParameters<typeof Date>) {
 				super(

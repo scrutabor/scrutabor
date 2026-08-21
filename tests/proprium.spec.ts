@@ -25,7 +25,6 @@ async function asIfItWere(page: import('@playwright/test').Page, when: string): 
 	await page.addInitScript((iso: string) => {
 		const fixed = new Date(iso).valueOf();
 		const Real = Date;
-		// eslint-disable-next-line no-global-assign
 		(globalThis as unknown as { Date: unknown }).Date = class extends Real {
 			constructor(...args: ConstructorParameters<typeof Date>) {
 				super(...(args.length ? args : ([fixed] as unknown as ConstructorParameters<typeof Date>)));
@@ -167,6 +166,22 @@ test('a shared link restores the day and the word', async ({ page }) => {
 	// proves the fetched dictionary reached the panel: without the merge the
 	// parse would be missing even though the word is on the page.
 	await expect(page.locator('body')).toContainText('tryb łączący', { timeout: 15000 });
+	await expect(page.locator('[id="dominica-i-adventus-introitus.w014"]')).toBeInViewport();
+});
+
+test('a gesture before the proper arrives ends deep-link settling @online', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	await page.route('**/artifacts/proprium/pl/dominica-i-adventus.json', async (route) => {
+		await new Promise((resolve) => setTimeout(resolve, 2500));
+		await route.continue();
+	});
+	await page.goto(`/app/pl/ordo/catechumenorum?dies=${DAY}&w=${DAY}-introitus.w014`);
+	await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+	await page.mouse.wheel(0, 200);
+
+	const word = page.locator('[id="dominica-i-adventus-introitus.w014"]');
+	await expect(word).toBeVisible({ timeout: 10_000 });
+	await expect(word).not.toBeInViewport();
 });
 
 test('picking a day does not make the control flicker @online', async ({ page }) => {

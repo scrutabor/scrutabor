@@ -1173,7 +1173,7 @@
 		/* between two full-width children only the first's bottom margin
 		   speaks, as collapse decided; two rubrics keep the extra
 		   --gloss-gap their flow pair spends */
-		.columns > :is(.rubric, .who, .repeated-prayer) + :is(.rubric, .who, .repeated-prayer) {
+		.columns > :is(.rubric, .repeated-prayer) + :is(.rubric, .who, .repeated-prayer) {
 			margin-top: 0;
 		}
 

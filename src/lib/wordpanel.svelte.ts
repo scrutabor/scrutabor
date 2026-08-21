@@ -76,6 +76,12 @@ export function wordPanel(host: WordPanelHost) {
 	// and until the reader acts the centering promise is ours to keep
 	// (see applyFromLocation).
 	let settling = false;
+	// The URL word whose landing window `settling` describes. It is recorded
+	// before the word exists, so a gesture while a delayed proper is still in
+	// flight ends that same window instead of letting its arrival start a new
+	// one. Taps update it themselves because shallow routing does not re-run
+	// the location effect.
+	let settlingWord: string | null = null;
 
 	// The pins preserveScroll schedules must not outlive the page: an
 	// un-cancelled pin from a closing panel can fire against the NEXT
@@ -155,6 +161,8 @@ export function wordPanel(host: WordPanelHost) {
 	function open(id: string) {
 		// The sheet's own padding is back — the kept one has done its work.
 		keepPad = false;
+		settlingWord = id;
+		settling = false;
 		if (selectedId === null) {
 			pushState(urlWith(id), {});
 			openedByPush = true;
@@ -166,6 +174,8 @@ export function wordPanel(host: WordPanelHost) {
 
 	function close() {
 		preserveScroll();
+		settlingWord = null;
+		settling = false;
 		if (openedByPush) {
 			openedByPush = false;
 			history.back();
@@ -197,6 +207,10 @@ export function wordPanel(host: WordPanelHost) {
 	// entry page.url can lag behind the real URL.
 	function applyFromLocation() {
 		const w = pageUrl().searchParams.get('w');
+		if (w !== settlingWord) {
+			settlingWord = w;
+			settling = w !== null;
+		}
 		const target = w && host.has(w) ? w : null;
 		// The browser's own back also just closes the panel — the page stays
 		// where the reader is, not where they were when it opened. untrack:
@@ -205,7 +219,7 @@ export function wordPanel(host: WordPanelHost) {
 		// read-after-write regression class).
 		const applied = untrack(() => selectedId);
 		if (!target && applied !== null) preserveScroll();
-		if (!target) {
+		if (!w) {
 			openedByPush = false;
 			settling = false;
 		}
@@ -224,12 +238,7 @@ export function wordPanel(host: WordPanelHost) {
 		// read, and scrolled away from — so the reader's own first gesture
 		// (wheel, touch, key, pointer — things a programmatic
 		// scrollIntoView never fires) ends the settling window for good.
-		if (target && target !== applied) {
-			settling = true;
-			requestAnimationFrame(() =>
-				document.getElementById(target)?.scrollIntoView({ block: 'center' })
-			);
-		} else if (target && settling) {
+		if (target && settling) {
 			requestAnimationFrame(() =>
 				document.getElementById(target)?.scrollIntoView({ block: 'center' })
 			);

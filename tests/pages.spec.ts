@@ -1,7 +1,7 @@
 // The educational surfaces around the reading view: lemma pages,
 // grammar-concept pages, and the landing.
 import pkg from '../package.json' with { type: 'json' };
-import { atRoute, expect, offlineUrl, settled, test } from './fixtures';
+import { atRoute, bare as bareTest, expect, offlineUrl, settled, test } from './fixtures';
 import { CATALOG } from '../src/lib/catalog';
 
 test('the catalogue becomes a balanced book spread from laptop width up', async ({ page }) => {
@@ -286,6 +286,16 @@ test('the downloaded copy is dressed before its script runs @folder', async ({
 	const ground = await page.evaluate(() => getComputedStyle(document.body).backgroundColor);
 	expect(ground, 'the shell painted the browser default, not the book').toBe('rgb(247, 241, 230)');
 	await page.close();
+});
+
+bareTest('a failed application chunk releases the stored-mode hold @online', async ({ page }) => {
+	await page.addInitScript(() => localStorage.setItem('scrutabor-help', '0'));
+	await page.route('**/_app/immutable/**/*.js', (route) => route.abort());
+	await page.goto('/app/pl/orationes/pater-noster');
+
+	await expect(page.locator('html')).not.toHaveAttribute('data-hydrated', 'true');
+	await expect(page.locator('main')).toContainText('Sanctificétur');
+	await expect(page.locator('main')).toBeVisible({ timeout: 5_000 });
 });
 
 test('every kind of page opens on the same line', async ({ page }) => {

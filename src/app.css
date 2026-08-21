@@ -806,10 +806,10 @@ h2 {
    mode, the text waits unpainted. Mode-1 readers and no-JS readers (no
    stamp) see the static text immediately. visibility, not display: the
    page keeps its height and nothing jumps. */
-html[data-help='0']:not([data-hydrated='true']) .page.reading main,
-html[data-help='2']:not([data-hydrated='true']) .page.reading main,
-html[data-help='0']:not([data-hydrated='true']) .specimen,
-html[data-help='2']:not([data-hydrated='true']) .specimen {
+html[data-help='0']:not([data-hydrated='true']):not([data-mode-hold='released']) .page.reading main,
+html[data-help='2']:not([data-hydrated='true']):not([data-mode-hold='released']) .page.reading main,
+html[data-help='0']:not([data-hydrated='true']):not([data-mode-hold='released']) .specimen,
+html[data-help='2']:not([data-hydrated='true']):not([data-mode-hold='released']) .specimen {
 	visibility: hidden;
 }
 
