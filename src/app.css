@@ -242,6 +242,20 @@ em {
 	.page.bilingual {
 		max-width: clamp(38rem, 82vw, 72rem);
 	}
+
+	/* CHROME DOES NOT WIDEN WITH THE TEXT (owner, 2026-08-21: flipping
+	   the mode moved the topbar's corners, and a control that jumps when
+	   a setting changes reads as breakage). The nav row and the pager
+	   keep the standard frame's content width in every mode, here and on
+	   every other page — so the chrome is one shape across modes AND
+	   across routes, and przekład widens exactly one thing: the text
+	   block. A text block outspanning its running head is ordinary book
+	   typography. */
+	.page.bilingual > header > nav,
+	.page.bilingual .pager {
+		max-width: calc(clamp(38rem, 60vw, 56rem) - 3rem);
+		margin-inline: auto;
+	}
 }
 
 /* THE SETTINGS FRAME. The reader's part, the kind of Mass and the day are

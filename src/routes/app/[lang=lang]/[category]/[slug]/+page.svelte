@@ -184,7 +184,11 @@
 		<p><a href="/app/{lang}">Scrutabor</a></p>
 	</div>
 {:else}
-	<div class="page reading" class:bilingual={helpLevel === 2}>
+	<!-- The litany keeps the standard frame in every mode: it renders its
+	     own paired columns, never the verse|translation spread the wide
+	     frame exists for, and at 72rem the pairs splayed while the
+	     unpaired opening lines sat far off the title's axis. -->
+	<div class="page reading" class:bilingual={helpLevel === 2 && data.category !== 'litaniae'}>
 		<header class:without-opening-rubric={data.category === 'ordinarium'}>
 			<PageNav {lang} />
 			<h1 lang="la">{doc.title}</h1>
