@@ -1101,6 +1101,24 @@
 		margin-inline: auto;
 	}
 
+	/* The mode wrappers' edges defer to the margins OUTSIDE them, the way
+	   flow collapse always did — in BOTH faces of przekład, because the
+	   landing's flex specimen collapses nothing either: without this the
+	   first rubric's margin stacked on the section seam in columns (the
+	   owner's find, measured by the campaign), and the last translation's
+	   margin pushed the landing's analysis box 43px from text the other
+	   modes keep at 26 (the owner's second find, same page). The drop-cap
+	   reservation is an inline style and outranks the first-child zero. */
+	.columns > :first-child,
+	.measure > :first-child {
+		margin-top: 0;
+	}
+
+	.columns > :last-child,
+	.measure > :last-child {
+		margin-bottom: 0;
+	}
+
 	@container bilingual (min-width: 44rem) {
 		.columns {
 			max-width: none;
@@ -1153,19 +1171,6 @@
 
 		.columns > .rubric + .rubric {
 			margin-top: calc(var(--reading) * var(--gloss-gap));
-		}
-
-		/* the grid's edges defer to the margins OUTSIDE it, the way flow
-		   collapse always did — without this the first rubric's margin
-		   stacked on top of the container's own seam and the section note
-		   drifted a full rubric-margin away in przekład alone (the
-		   owner's find, measured by the campaign) */
-		.columns > :first-child {
-			margin-top: 0;
-		}
-
-		.columns > :last-child {
-			margin-bottom: 0;
 		}
 
 		.columns > * {
