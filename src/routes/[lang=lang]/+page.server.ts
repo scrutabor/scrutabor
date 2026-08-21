@@ -4,7 +4,7 @@
 // its text (decisions #27: the corpus never reaches the browser bundle;
 // a page receives its own words and the lexicon entries they can ask
 // about, nothing more). The demonstration is therefore the mechanism
-// itself: the same slider, the same panel, the same data.
+// itself: the same mode control, the same panel, the same data.
 import { TEXTS, narrowLexicon, type GlossDocument, type TextDocument } from '$lib/corpus';
 import type { Lang } from '$lib/i18n';
 import { error } from '@sveltejs/kit';

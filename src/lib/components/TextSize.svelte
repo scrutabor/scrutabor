@@ -1,8 +1,8 @@
 <script lang="ts">
 	// How large the reading face is set. It sits with the theme and the
-	// language, not on the reading page beside the help slider: this is a
+	// language, not on the reading page beside the reading-mode control: this is a
 	// preference a reader sets once, like the theme, and the reading
-	// surfaces stay quiet (decisions #20). The help slider is the other
+	// surfaces stay quiet (decisions #20). The reading mode is the other
 	// kind of control — it belongs to the text in front of you.
 	//
 	// It matters more here than in most apps. The people this is for skew

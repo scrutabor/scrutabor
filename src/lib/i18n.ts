@@ -18,7 +18,7 @@ export interface Messages {
 	/** The three reading modes, as the words the control shows: bare
 	 * Latin, the word-by-word, the bilingual view. */
 	levels: [string, string, string];
-	levelsAria: string;
+	levelsLabel: string;
 	themeAria: { toLight: string; toDark: string };
 	textSizeAria: string;
 	textSizes: { normal: string; larger: string; largest: string };
@@ -66,7 +66,7 @@ export interface Messages {
 	dayAhead: string;
 	dayWeekOf: string;
 	/** What the day setting is doing, as the role and Mass hints do. */
-	dayHint: Record<'none' | 'chosen', string>;
+	dayHint: Record<'none', string>;
 	/** The seasons of the year, for grouping the day picker. */
 	seasons: Record<Season, string>;
 	ordoPending: string;
@@ -91,7 +91,6 @@ export interface Messages {
 	/** Which kind of Mass the reader is at — the people's parts differ. */
 	massLabel: string;
 	massForms: Record<'cantu' | 'lecta', string>;
-	massHint: Record<'cantu' | 'lecta', string>;
 	/** Marks the responses EVERYONE makes, the first degree of the 1958
 	 * instruction — the answer to a newcomer's real question. */
 	everyone: string;
@@ -102,7 +101,6 @@ export interface Messages {
 	/** Reader-facing attribution when the faithful make a line whose
 	 * rubrical speaker is someone else. Both truths remain visible. */
 	faithfulWith: Record<'sacerdos' | 'ductor' | 'minister' | 'populus' | 'omnes' | 'schola', string>;
-	roleHint: Record<'populus' | 'minister' | 'sacerdos', string>;
 	quietCollapsed: string;
 	quietReveal: string;
 	quietHide: string;
@@ -122,8 +120,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		mottoRef: 'ps\u00a0118,\u00a034',
 		edition: 'wydanie',
 		bookHome: 'strona główna modlitewnika',
-		levels: ['łacina', 'słowa', 'przekład'],
-		levelsAria: 'pomoc',
+		levels: ['łacina', 'interlinearnie', 'przekład'],
+		levelsLabel: 'tryb',
 		themeAria: { toLight: 'przełącz na tryb jasny', toDark: 'przełącz na tryb ciemny' },
 		textSizeAria: 'wielkość pisma',
 		textSizes: { normal: 'normalne', larger: 'większe', largest: 'największe' },
@@ -173,8 +171,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayAhead: 'formularza na dziś jeszcze tu nie ma — wybierz inny dzień',
 		dayWeekOf: 'dziś dzień powszedni — ostatnia niedziela to',
 		dayHint: {
-			none: 'sam porządek Mszy, bez tekstów zmiennych',
-			chosen: 'teksty tego dnia wypełniają porządek Mszy'
+			none: 'sam porządek Mszy, bez tekstów zmiennych'
 		},
 		seasons: {
 			adventus: 'Adwent',
@@ -211,12 +208,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		voices: { submissa: 'półgłosem', secreto: 'po cichu', cantus: 'śpiew' },
 		verseAria: (n) => `odnośnik do wersetu ${n}`,
 		roleLabel: 'rola',
-		massLabel: 'Msza',
+		massLabel: 'msza',
 		massForms: { cantu: 'śpiewana', lecta: 'cicha' },
-		massHint: {
-			cantu: 'wierni śpiewają odpowiedzi i części stałe',
-			lecta: 'wierni odpowiadają razem z usługującym i odmawiają części stałe'
-		},
 		everyone: 'odpowiadają wszyscy',
 		faithful: 'wierni',
 		faithfulWith: {
@@ -228,11 +221,6 @@ const MESSAGES: Record<Lang, Messages> = {
 			schola: 'schola i wierni'
 		},
 		roles: { populus: 'wierni', minister: 'usługujący', sacerdos: 'kapłan' },
-		roleHint: {
-			populus: 'to, co odmawiane głośno, z odpowiedziami wiernych',
-			minister: 'to, co odmawiane głośno, z pełnymi odpowiedziami usługującego',
-			sacerdos: 'całe Ordo Missæ, wraz z modlitwami odmawianymi po cichu'
-		},
 		quietCollapsed: 'kapłan modli się po cichu',
 		quietReveal: 'pokaż',
 		quietHide: 'ukryj',
@@ -251,8 +239,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		mottoRef: 'ps\u00a0118\u00a0(119),\u00a034',
 		edition: 'edition',
 		bookHome: 'prayer book home',
-		levels: ['Latin', 'words', 'translation'],
-		levelsAria: 'help',
+		levels: ['Latin', 'interlinear', 'translation'],
+		levelsLabel: 'mode',
 		themeAria: { toLight: 'switch to light mode', toDark: 'switch to dark mode' },
 		textSizeAria: 'text size',
 		textSizes: { normal: 'normal', larger: 'larger', largest: 'largest' },
@@ -302,8 +290,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayAhead: 'today’s formulary is not here yet — choose another day',
 		dayWeekOf: 'today is a weekday — the last Sunday:',
 		dayHint: {
-			none: 'the order of Mass alone, without the day’s own texts',
-			chosen: 'the day’s own texts fill the order of Mass'
+			none: 'the order of Mass alone, without the day’s own texts'
 		},
 		seasons: {
 			adventus: 'Advent',
@@ -342,10 +329,6 @@ const MESSAGES: Record<Lang, Messages> = {
 		roleLabel: 'part',
 		massLabel: 'Mass',
 		massForms: { cantu: 'sung', lecta: 'low' },
-		massHint: {
-			cantu: 'the faithful sing the responses and the Ordinary',
-			lecta: 'the faithful answer with the server and say the Ordinary'
-		},
 		everyone: 'everyone answers',
 		faithful: 'the faithful',
 		faithfulWith: {
@@ -361,11 +344,6 @@ const MESSAGES: Record<Lang, Messages> = {
 		// The article belongs in the sentence underneath, where it reads as
 		// English rather than as three repetitions of "the".
 		roles: { populus: 'faithful', minister: 'server', sacerdos: 'priest' },
-		roleHint: {
-			populus: 'what is said aloud, with the answers of the faithful',
-			minister: 'what is said aloud, with the server’s answers in full',
-			sacerdos: 'the whole Ordo Missæ, including the prayers said silently'
-		},
 		quietCollapsed: 'the priest prays silently',
 		quietReveal: 'show',
 		quietHide: 'hide',

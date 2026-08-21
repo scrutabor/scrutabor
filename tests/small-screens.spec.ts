@@ -7,7 +7,7 @@
 // one that fits at the largest size breaks on a narrower phone. Nine of
 // these were found in one sweep — the wordmark, the parts control twice,
 // the folded rows of the ordo, the catalogue cards, the movement heads,
-// the concordance rows, the help slider, the nav itself — and not one of
+// the concordance rows, the mode control, the nav itself — and not one of
 // them was visible at the size and width a developer happens to be using.
 import { expect, settled, test } from './fixtures';
 
@@ -138,10 +138,10 @@ test('a wide screen keeps every control in its unstacked form', async ({ page })
 				// part and the kind of Mass, and each must keep its own
 				// options on one line
 				partRows: Math.max(
-					rows('.picker.compact[data-kind="role"] .option'),
-					rows('.picker.compact[data-kind="mass"] .option')
+					rows('.picker[data-kind="role"] .option'),
+					rows('.picker[data-kind="mass"] .option')
 				),
-				labelLines: document.querySelector('.picker.compact .label')!.getClientRects().length,
+				labelLines: document.querySelector('.picker .label')!.getClientRects().length,
 				modeRows: rows('.help .option')
 			};
 		});
@@ -151,7 +151,7 @@ test('a wide screen keeps every control in its unstacked form', async ({ page })
 		expect(shape.modeRows, `${at}: the mode words wrapped with room to spare`).toBe(1);
 	}
 
-	// and on the index, each full picker keeps its own options side by side.
+	// and on the index, each tabella row keeps its own options side by side.
 	// Two of them stand there — the reader's part and the kind of Mass — so
 	// this counts rows WITHIN a control, not across the pair, which of
 	// course sit on two rows because they are two settings.
@@ -161,17 +161,17 @@ test('a wide screen keeps every control in its unstacked form', async ({ page })
 		['role', 'mass'].map(
 			(kind) =>
 				new Set(
-					[...document.querySelectorAll(`.picker:not(.compact)[data-kind="${kind}"] .option`)].map(
-						(e) => Math.round(e.getBoundingClientRect().top)
+					[...document.querySelectorAll(`.picker[data-kind="${kind}"] .option`)].map((e) =>
+						Math.round(e.getBoundingClientRect().top)
 					)
 				).size
 		)
 	);
-	expect(fullRows, 'a full picker stacked on a wide screen').toEqual([1, 1]);
+	expect(fullRows, 'a tabella row stacked on a wide screen').toEqual([1, 1]);
 });
 
 test('each part is drawn in its own slot, not over its separator', async ({ page }) => {
-	// The compact control keeps every part at the width of its BOLD form so
+	// The row keeps every part at the width of its BOLD form so
 	// that choosing one does not nudge its neighbours: a hidden copy sets
 	// the width and the visible word is laid over it. The word was laid
 	// over the whole BUTTON, which also holds the middot before it — so
@@ -195,7 +195,7 @@ test('each part is drawn in its own slot, not over its separator', async ({ page
 
 		const slots = () =>
 			page.evaluate(() =>
-				[...document.querySelectorAll('.picker.compact .option')].map((o) => {
+				[...document.querySelectorAll('.picker .option')].map((o) => {
 					const ghost = o.querySelector('.ghost')!.getBoundingClientRect();
 					const real = o.querySelector('.real')!.getBoundingClientRect();
 					return {
@@ -212,7 +212,7 @@ test('each part is drawn in its own slot, not over its separator', async ({ page
 				0.5
 			);
 
-		await page.locator('.picker.compact .option').last().click();
+		await page.locator('.picker .option').last().click();
 		const after = await slots();
 		expect(
 			after.map((s) => s.x),

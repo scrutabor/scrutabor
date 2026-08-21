@@ -3,7 +3,7 @@
 	// per language, in the book's own face and voice. The specimen is the
 	// book itself for one verse — verse 34 of Psalm 118, the motto's own,
 	// straight from the corpus (see +page.server.ts) with the app's real
-	// slider and the app's real word panel, fully alive.
+	// mode control and the app's real word panel, fully alive.
 	import { goto } from '$app/navigation';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
@@ -18,7 +18,7 @@
 	const doc = $derived(data.specimen.doc);
 	const gloss = $derived(data.specimen.gloss);
 
-	// The same three verbosity states as every reading page; the slider
+	// The same three reading modes as every reading page; the control
 	// itself restores the reader's stored choice on mount.
 	let helpLevel = $state(1);
 
@@ -75,7 +75,7 @@
 			zipNote: 'kopia do pobrania',
 			soonNote: 'wkrótce',
 			specimenLead:
-				'Werset, od którego Scrutabor bierze nazwę, w postaci, jaką ma w modlitewniku: suwak pomocy prowadzi od samej łaciny do pełnego przekładu, a dotknięcie słowa otwiera jego analizę.',
+				'Werset, od którego Scrutabor bierze nazwę, w postaci, jaką ma w modlitewniku: tryb czytania wybiera samą łacinę, pełny przekład albo interlinearnie, czyli słowo po słowie, a dotknięcie słowa otwiera jego pełny opis.',
 			stanzaLink: 'Psalm\u00a0118, He — w.\u00a034',
 			privacyLine: 'Bez rejestracji, bez plików cookie, bez reklam.',
 			privacyLink: 'prywatność',
@@ -94,7 +94,7 @@
 			zipNote: 'a copy to keep',
 			soonNote: 'coming soon',
 			specimenLead:
-				'The verse Scrutabor takes its name from, exactly as it stands in the prayer book: the help slider moves from bare Latin to a full translation, and a tap on any word opens its analysis.',
+				'The verse Scrutabor takes its name from, exactly as it stands in the prayer book: the reading mode chooses bare Latin, a full translation, or the interlinear, and a tap on any word opens its analysis.',
 			stanzaLink: 'Psalm\u00a0118, He — v.\u00a034',
 			privacyLine: 'No registration, no cookies, no ads.',
 			privacyLink: 'privacy',
@@ -242,12 +242,14 @@
 		<section class="specimen-section">
 			<p class="lead">{t.specimenLead}</p>
 
-			<!-- The book itself, for one verse: the real slider, corpus text
+			<!-- The book itself, for one verse: the real mode control, corpus text
 			     and WordPanel. The panel changes only its placement here: it
 			     stands permanently in the page instead of covering it. -->
 			<div class="specimen">
 				<div class="specimen-help">
-					<HelpLevels {lang} bind:value={helpLevel} />
+					<div class="tabella">
+						<HelpLevels {lang} bind:value={helpLevel} />
+					</div>
 				</div>
 				<p class="stanza-link smallcaps">
 					<a href="/app/{lang}/psalmi/118-he?v=34">{t.stanzaLink}</a>
@@ -447,7 +449,7 @@
 		line-height: 1.65;
 	}
 
-	/* The specimen is the reading surface itself — TextBody, the slider
+	/* The specimen is the reading surface itself — TextBody, the mode control
 	   and the panel carry their own styles — so all this page adds is the
 	   frame. Left-set, as the book is. */
 	.specimen {
@@ -455,12 +457,14 @@
 		text-align: left;
 	}
 
-	/* The slider's own container, as .help-row is inside the book: the
+	/* The mode control's own container, as .help-row is inside the book: the
 	   control stacks its labels by the room it has, and on this page it had
 	   no container to ask, so it never stacked and "full translation" ran
 	   off the edge of a 320px screen at the largest reading size. */
 	.specimen-help {
 		container: help / inline-size;
+		display: flex;
+		justify-content: center;
 		margin: 0 0 1.6rem;
 	}
 

@@ -66,7 +66,7 @@ test('a day this edition has not reached is named, not guessed at', async ({ pag
 	await page.goto('/app/pl/ordo');
 	const picker = page.locator('.picker.day').first();
 	await expect(picker.locator('select')).toHaveValue('');
-	await expect(picker.locator('.hint')).toHaveText(
+	await expect(page.locator('.tabella-hint')).toHaveText(
 		'dziś dzień powszedni — ostatnia niedziela to III Niedziela Adwentu'
 	);
 });
@@ -84,15 +84,18 @@ test('the note about today gives way to the day the reader picks', async ({ page
 	await asIfItWere(page, '2026-08-19T10:00:00');
 	await page.goto('/app/pl/ordo');
 	const picker = page.locator('.picker.day').first();
-	await expect(picker.locator('.hint')).toHaveText(/wybierz inny dzień/);
+	const hint = page.locator('.tabella-hint');
+	await expect(hint).toHaveText(/wybierz inny dzień/);
 
+	// a chosen day says nothing — the table already names it (owner,
+	// 2026-08-21: drop the trivial hints)
 	await picker.locator('select').selectOption(DAY);
-	await expect(picker.locator('.hint')).toHaveText('teksty tego dnia wypełniają porządek Mszy');
+	await expect(hint).toHaveCount(0);
 
-	// …and it comes back when the choice is dropped, because then it is the
-	// default again and the default is what it describes.
+	// …and the note comes back when the choice is dropped, because then it
+	// is the default again and the default is what it describes.
 	await picker.locator('select').selectOption('');
-	await expect(picker.locator('.hint')).toHaveText(/wybierz inny dzień/);
+	await expect(hint).toHaveText(/wybierz inny dzień/);
 });
 
 test('choosing a day silences the weekday note too', async ({ page }) => {
@@ -101,9 +104,10 @@ test('choosing a day silences the weekday note too', async ({ page }) => {
 	await asIfItWere(page, '2026-12-15T10:00:00');
 	await page.goto('/app/pl/ordo');
 	const picker = page.locator('.picker.day').first();
-	await expect(picker.locator('.hint')).toHaveText(/ostatnia niedziela to III Niedziela Adwentu/);
+	const hint = page.locator('.tabella-hint');
+	await expect(hint).toHaveText(/ostatnia niedziela to III Niedziela Adwentu/);
 	await picker.locator('select').selectOption(DAY);
-	await expect(picker.locator('.hint')).toHaveText('teksty tego dnia wypełniają porządek Mszy');
+	await expect(hint).toHaveCount(0);
 });
 
 test('a day chosen yesterday does not still be showing tomorrow', async ({ page }) => {

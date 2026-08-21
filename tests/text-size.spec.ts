@@ -215,26 +215,30 @@ test('largest print on the smallest phone still holds together', async ({ page }
 test('the mode words hold their row at the smallest screen and the largest print', async ({
 	page
 }) => {
-	// The slider this test guarded had a thumb to clear; the word row has
-	// words to keep whole and on-screen. 320px at the largest print is
-	// where every control has the least room in the book.
+	// 320px at the largest print is where every control has the least
+	// room in the book. The words must hold ONE line and their INK must
+	// stay inside the tabella's own frame — the frame clips its overflow,
+	// so a viewport check alone cannot see a word being cut (a reviewer
+	// caught exactly that hole). Both languages, because the English row
+	// is the longest.
 	await page.setViewportSize({ width: 320, height: 800 });
-	await page.goto('/app/pl/ordo/praeparatio');
-	await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
-	await page.reload();
-	await settled(page);
-	const shape = await page.evaluate(() => {
-		const options = [...document.querySelectorAll('.help .option')];
-		return {
-			rows: new Set(options.map((o) => Math.round(o.getBoundingClientRect().top))).size,
-			inside: options.every((o) => {
-				const b = o.getBoundingClientRect();
-				return b.left >= 0 && b.right <= document.documentElement.clientWidth;
-			}),
-			tappable: options.every((o) => o.getBoundingClientRect().height >= 23)
-		};
-	});
-	expect(shape.rows, 'the mode words broke across lines').toBe(1);
-	expect(shape.inside, 'a mode word left the screen').toBe(true);
-	expect(shape.tappable, 'a mode word fell under the touch floor').toBe(true);
+	for (const lang of ['pl', 'en']) {
+		await page.goto(`/app/${lang}/ordo/praeparatio`);
+		await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
+		await page.reload();
+		await settled(page);
+		const shape = await page.evaluate(() => {
+			const frame = document.querySelector('.tabella')!.getBoundingClientRect();
+			const options = [...document.querySelectorAll('.help .option')];
+			const inks = options.map((o) => o.querySelector('.real')!.getBoundingClientRect());
+			return {
+				rows: new Set(options.map((o) => Math.round(o.getBoundingClientRect().top))).size,
+				insideFrame: inks.every((b) => b.left >= frame.left + 1 && b.right <= frame.right - 1),
+				tappable: options.every((o) => o.getBoundingClientRect().height >= 23)
+			};
+		});
+		expect(shape.rows, `${lang}: the mode words broke across lines`).toBe(1);
+		expect(shape.insideFrame, `${lang}: a mode word was clipped by the frame`).toBe(true);
+		expect(shape.tappable, `${lang}: a mode word fell under the touch floor`).toBe(true);
+	}
 });

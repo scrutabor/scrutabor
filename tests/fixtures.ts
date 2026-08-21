@@ -251,7 +251,7 @@ export function noWordInTheAddress(page: import('@playwright/test').Page) {
 }
 
 /**
- * Choose the reading mode — łacina (0), słowa (1), przekład (2).
+ * Choose the reading mode — łacina (0), interlinearnie (1), przekład (2).
  *
  * The control is the settings row's segmented radiogroup (it was a range
  * input until 2026-08-21; the additive slider died when przekład became
@@ -260,7 +260,10 @@ export function noWordInTheAddress(page: import('@playwright/test').Page) {
  * swap re-renders the whole text body.
  */
 export async function setHelp(page: import('@playwright/test').Page, level: 0 | 1 | 2) {
-	const radio = page.locator('.help [role="radio"]').nth(level);
+	// By the level's own identity, not its position: the display order is
+	// łacina · przekład · interlinearnie (owner, 2026-08-21), while the stored
+	// values 0/1/2 keep their meaning.
+	const radio = page.locator(`.help [data-level="${level}"]`);
 	await radio.click();
 	await expect(radio).toHaveAttribute('aria-checked', 'true');
 }

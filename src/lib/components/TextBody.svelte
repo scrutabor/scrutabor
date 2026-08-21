@@ -178,10 +178,13 @@
 	{:else if seg.type === 'rubric'}
 		<div class="rubric" id={segmentId(seg.id)}>
 			<p class="rubric-la" lang="la">{seg.text}</p>
-			<!-- Narratives ride with any help (reading-ux §5): knowing what
-			     happens at the altar is word-level-grade help; translations
-			     alone stay at the top step. -->
-			{#if helpLevel >= 1 && gloss.segments[seg.id]?.narrative}
+			<!-- Narratives ride in EVERY mode (owner, 2026-08-21): what
+			     happens at the altar is the prayer book's own layer, not
+			     translation help — łacina without it read as lacking, while
+			     labels like "z formularza dnia" stayed, so the mode was
+			     never "pure Latin" to begin with. The mode governs language
+			     help on the prayers alone. -->
+			{#if gloss.segments[seg.id]?.narrative}
 				<p class="rubric-narrative">{gloss.segments[seg.id].narrative}</p>
 				<SourceNotes citations={gloss.segments[seg.id].narrative_citations} {lang} />
 			{/if}
@@ -217,6 +220,12 @@
 	<div class="bilingual">
 		<div class="columns">{@render flow()}</div>
 	</div>
+{:else if helpLevel === 0 && !litanyColumns}
+	<!-- Bare Latin keeps a book measure: at the bare scale the frame's
+	     full content runs ~85 characters, far past the 45-75 a book sets.
+	     The litany is excluded — its paired columns are their own layout
+	     with their own width. -->
+	<div class="measure">{@render flow()}</div>
 {:else}
 	{@render flow()}
 {/if}
@@ -289,7 +298,7 @@
 		{@const sink = fit0?.sink ?? 0}
 		<p
 			class="verse"
-			style:margin-top={fit0 && !bilingual ? `calc(var(--reading) * ${fit0.padTop})` : null}
+			style:margin-top={fit0 && !bilingual ? `${fit0.reserve}em` : null}
 			class:glossed={helpLevel === 1}
 			class:quiet={seg.voice === 'secreto'}
 			class:answer={mine}
@@ -654,16 +663,27 @@
 	   rises out of the top of its line and into whatever stands above it.
 	   Every speaker label on a movement sat 20px clear of its verse except
 	   the four before a drop cap, which had 13 (owner, 2026-08-10).
-	   The margin is set from `initialFit().padTop`, the same measured
-	   number the wash is padded by, so the space reserved and the space
-	   painted cannot drift apart. Compensating in the label instead would
+	   The margin is set from `initialFit().reserve` — the wash's own
+	   measured padTop plus the half-leading the bare modes' tighter
+	   leading takes back — so the space reserved and the space painted
+	   cannot drift apart. Compensating in the label instead would
 	   have meant compensating in the rubric and the translation too, and
 	   in whatever comes next: the fault is the verse's, so the verse pays.
 	   The mirror of --gloss-gap, which is ink hanging BELOW its box. */
 	.verse {
-		font-size: var(--reading);
-		line-height: 1.75;
-		margin: 0 0 calc(var(--reading) * 0.759);
+		font-size: var(--reading-bare);
+		/* 1.5, down from 1.75 (owner, 2026-08-21): the bare modes read as
+		   a prayer book, and printed missals set their verses close to
+		   solid — 1.75 was the interlinear's air bleeding into modes that
+		   have no glosses to make room for. Glossed verses override to 2.3
+		   below, so this number never renders under interlinearnie. At 1.5 a
+		   wrapped verse holds together as one unit and the verse margin
+		   finally reads as structure, not as one more line gap. */
+		line-height: 1.5;
+		/* the bare modes' own rhythm — priced on the bare scale the text
+		   reads at (the study margin sat here first, and under 19.5px
+		   text it read as a blank line between every verse) */
+		margin: 0 0 calc(var(--reading-bare) * 0.62);
 		padding-inline-start: calc(var(--reading) * 1.379);
 		/* no last word alone on its line (Glorificámus / te.) — a
 		   progressive nicety where the engine has it */
@@ -698,7 +718,9 @@
 	   column is flush; what says a verse has begun is its capital, its
 	   stop, and the mark when the voice changes. */
 	.verse.glossed {
+		font-size: var(--reading);
 		line-height: 2.3;
+		margin-bottom: calc(var(--reading) * 0.759);
 		/* The gloss row is shifted down by GLOSS_GAP, and a relative shift
 		   moves paint without moving layout — so the last gloss of a verse
 		   hangs below the box that carries the margin, and the verse gives
@@ -1001,23 +1023,24 @@
 	   the Latin, same size, same ink, same leading, position doing all
 	   the distinguishing. */
 	.seg-extra {
-		margin: 0 0 calc(var(--reading) * 0.9);
+		margin: 0 0 calc(var(--reading-bare) * 0.9);
 		padding-inline-start: calc(var(--reading) * 1.379);
 	}
 
 	/* The verse gives up part of its own bottom margin when a translation
 	   follows: attachment is the point, and margins between siblings
-	   collapse to the LARGER one, so the verse's 0.759 would otherwise
-	   hold the translation a full rhythm away. */
+	   collapse to the LARGER one, so the verse's own bottom margin would
+	   otherwise hold the translation a full rhythm away. */
 	.verse:has(+ .seg-extra) {
-		/* slightly NEGATIVE, priced from ink measurements: the verse's own
-		   1.75 leading already leaves ~9px of half-leading below its last
-		   baseline and the translation brings ~5px of its own above, so a
-		   zero box-gap still reads as ~20px of air — more than half the
-		   gap to the NEXT verse, which blurred whose translation it was.
-		   −0.06 of a line lands the ink gap near 17px against ~37 below:
-		   attached, unmistakably. */
-		margin-bottom: calc(var(--reading) * -0.06);
+		/* Priced from ink measurements AT THE BARE SCALE (repriced
+		   2026-08-21 when the bare modes tightened to 1.5 leading — the
+		   first price was −0.06 against 1.75's deeper half-leading, and
+		   at 1.5 it left 7.6px of ink air, under the 10px the attachment
+		   bounds hold). The verse's 1.5 leading leaves ~5px below its
+		   last baseline and the translation brings ~4px of its own
+		   above; +0.09 of a line lands the ink gap near 12px against
+		   ~28 below: attached, unmistakably. */
+		margin-bottom: calc(var(--reading) * 0.09);
 	}
 
 	.translation {
@@ -1028,18 +1051,28 @@
 		   the line above it used, and a psalm verse of 77 characters
 		   wrapped where its own Latin had not. */
 		color: var(--ink-soft);
-		/* 0.78, up from 0.724 (readability audit 2026-08-20): at 0.724 the
-		   translation was optically ~13px — EB Garamond's x-height is 0.405
-		   against the ~0.52 the size norms assume — and APCA wanted either
-		   more size or more ink for continuous reading. It got both. */
-		font-size: calc(var(--reading) * 0.78);
+		/* 0.9 of the BARE verse above it: the subordinate voice follows
+		   the text it translates, and soft ink plus the indent carry the
+		   hierarchy that size used to overstate. (Its history in one line:
+		   0.724 of the study size until the readability audit of
+		   2026-08-20 found it optically ~13px, 0.78 after, and rebased on
+		   the bare scale when the modes split — 17.6px today, above the
+		   audit's soft-ink floor.) */
+		font-size: calc(var(--reading-bare) * 0.9);
 		line-height: 1.55;
 		text-wrap: pretty;
 	}
 
-	/* THE BILINGUAL SPREAD. Above ~54rem of container the przekład mode
-	   splits into the two columns of a hand missal, verse against verse.
-	   rem here scales with the reading knob, so larger print correctly
+	/* THE BILINGUAL SPREAD. Above ~44rem of container the przekład mode
+	   splits into the two columns of a hand missal, verse against verse —
+	   INSIDE the standard frame, at the bare reading scale (--reading-bare,
+	   app.css). One frame for every mode was the owner's ruling
+	   (2026-08-21, second morning): the first cut widened the page to
+	   72rem instead, and the text outgrowing its own chrome read as a
+	   leftward shift. At the bare scale the Latin column runs 42-49
+	   characters in the frame's half — Missale Meum's own desktop
+	   geometry, measured (two ~420px columns in a 900px text area).
+	   rem in the query scales with the root knob, so larger print
 	   demands a wider room before the page splits.
 
 	   Baseline alignment is what makes the rows TRUE: the first baseline
@@ -1053,13 +1086,34 @@
 		container: bilingual / inline-size;
 	}
 
-	@container bilingual (min-width: 54rem) {
+	/* The book measure for bare text that is not in columns: ~66
+	   characters at the bare scale, centred on the title's own axis.
+	   rem, so the root knob widens it with the type. Shared by łacina
+	   and by przekład's stacked face below the column threshold. */
+	.measure,
+	.columns {
+		max-width: 36rem;
+		margin-inline: auto;
+	}
+
+	@container bilingual (min-width: 44rem) {
 		.columns {
+			max-width: none;
+			margin-inline: 0;
 			display: grid;
-			grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+			/* EQUAL columns (owner, 2026-08-21: with 1.12fr/1fr the Polish
+			   read as a bigger face — same type both sides, measured to the
+			   glyph, but the longer language sat in the narrower column and
+			   filled its lines fuller). Equal halves are also Missale
+			   Meum's own desktop shape, and they put the seam on the
+			   title's axis. */
+			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 			column-gap: 2.6rem;
 			align-items: baseline;
-			row-gap: calc(var(--reading) * 0.62);
+			/* priced on the BARE scale the text actually reads at — on the
+			   study scale this was a third too much air between verses
+			   (owner, same morning) */
+			row-gap: calc(var(--reading-bare) * 0.55);
 		}
 
 		.columns > * {
@@ -1078,8 +1132,10 @@
 		}
 
 		.columns > .seg-extra .translation {
-			font-size: var(--reading);
-			line-height: 1.75;
+			font-size: var(--reading-bare);
+			/* parity of leading with the verse column — equal type AND equal
+			   rhythm is what lets the grid align what the eye reads */
+			line-height: 1.5;
 			color: var(--ink);
 		}
 	}

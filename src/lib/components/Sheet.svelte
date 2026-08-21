@@ -45,7 +45,7 @@
 	} = $props();
 
 	// Tapping the quiet parts of the page dismisses the sheet; interactive
-	// chrome (the language menu, the theme toggle, the help slider, links,
+	// chrome (the language menu, the theme toggle, the mode control, links,
 	// a source-note disclosure) does its own job without also closing it,
 	// and the sheet's own controls are inside the aside. composedPath, not
 	// target.closest: a control that re-renders on click (the theme toggle

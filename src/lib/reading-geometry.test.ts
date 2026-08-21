@@ -43,7 +43,7 @@ describe('sinking the gloss row for a tail', () => {
 	});
 
 	it('does nothing at all when no gloss is showing', () => {
-		// nothing to clear: the slider is at bare Latin
+		// nothing to clear: the mode is bare Latin
 		expect(sinkFor(TAILED, false)).toBe(0);
 	});
 });

@@ -113,7 +113,7 @@ test('interactive chrome does not dismiss the sheet', async ({ page }) => {
 	// theme toggle does its job, panel stays
 	await page.locator('button[aria-label="przełącz na tryb ciemny"]').click();
 	await expect(page.locator(panelWord)).toHaveText('nomen');
-	// help slider adjusts, panel stays
+	// reading mode changes, panel stays
 	await setHelp(page, 2);
 	await expect(page.locator(panelWord)).toHaveText('nomen');
 });

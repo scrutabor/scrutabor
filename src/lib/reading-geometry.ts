@@ -148,6 +148,14 @@ const DESCENT: Record<string, number> = { Q: 0.248 };
 export const GLOSS_GAP = 0.152;
 const ROOM_BELOW = 0.272 + GLOSS_GAP;
 const RAISED = 1.75;
+// The verse leadings, named here because the RESERVATION below depends on
+// them: the box constants were measured under 1.75, and a block's first
+// line box loses half of what the leading loses. Must match .verse and
+// .verse.glossed in TextBody.svelte — 'the reading size is the only knob'
+// and the label-clearance test hold the render to these numbers.
+const LEADING_MEASURED = 1.75;
+const LEADING_BARE = 1.5;
+const LEADING_GLOSSED = 2.3;
 // A large letter wants more room around it than its metrics ask for:
 // the one judgement in all of this, and what stops A reading as touching
 // the word before it while measuring as neutral on both sides.
@@ -179,6 +187,9 @@ export function initialFit(letter: string, glossed: boolean) {
 	const [sbStart, sbEnd] = SB[letter] ?? [0, 0];
 	const air = AIR / scale;
 	const side = (sb: number) => (sb < 0 ? -sb + air : (-(scale - 1) / scale) * sb + air);
+	// how far the letter's ink rises above the base's own box — the wash
+	// pads by exactly this, and the reservation builds on it
+	const rise = Math.max(PAD, (INK[letter]?.[0] ?? 0) * scale - BOX_ASC + COVER);
 	return {
 		scale,
 		start: side(sbStart),
@@ -190,7 +201,16 @@ export function initialFit(letter: string, glossed: boolean) {
 		lift: (scale - 1) * 0.23,
 		sink: sinkFor(letter, glossed),
 		// the wash has to cover the whole letter, top and tail
-		padTop: Math.max(PAD, (INK[letter]?.[0] ?? 0) * scale - BOX_ASC + COVER),
-		padBottom: Math.max(PAD, (INK[letter]?.[1] ?? 0) * scale - BOX_DESC + COVER)
+		padTop: rise,
+		padBottom: Math.max(PAD, (INK[letter]?.[1] ?? 0) * scale - BOX_DESC + COVER),
+		// The margin that RESERVES the rise above the verse block. padTop
+		// is protrusion above the INLINE box — pure font metric, true at
+		// any leading — but the block's first line box top sits half the
+		// leading's loss closer to the ink than it did at the leading the
+		// constants were measured under. The bare modes' 1.5 owes that
+		// half back or the label above lands on the letter's ink (found
+		// at 1.39px on the Iudica me); glossed leading exceeds 1.75, so
+		// it owes nothing.
+		reserve: rise + Math.max(0, (LEADING_MEASURED - (glossed ? LEADING_GLOSSED : LEADING_BARE)) / 2)
 	};
 }

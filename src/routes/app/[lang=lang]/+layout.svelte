@@ -42,8 +42,8 @@
 <noscript>
 	<p class="noscript-note">
 		{lang === 'pl'
-			? 'Ten tekst czyta się bez JavaScriptu, ale wybory — dzień, rola, suwak pomocy, wielkość pisma, analiza słowa — wymagają jego włączenia.'
-			: 'The text reads without JavaScript, but the choices — the day, the part, the help slider, the text size, the word analysis — need it turned on.'}
+			? 'Ten tekst czyta się bez JavaScriptu, ale wybory — dzień, rola, tryb czytania, wielkość pisma, analiza słowa — wymagają jego włączenia.'
+			: 'The text reads without JavaScript, but the choices — the day, the part, the reading mode, the text size, the word analysis — need it turned on.'}
 	</p>
 </noscript>
 

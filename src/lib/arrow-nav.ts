@@ -21,7 +21,7 @@ export function arrowNav(hrefFor: (dir: 'prev' | 'next') => string | undefined) 
 		const el = document.activeElement as HTMLElement | null;
 		const tag = el?.tagName;
 		if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
-		// The help slider and the role picker are radio groups: the arrows
+		// The reading-mode control and the role picker are radio groups: the arrows
 		// move between their options and belong to them while they hold
 		// focus.
 		//

@@ -175,13 +175,15 @@ Edition v${VERSION} · ${COMMIT.slice(0, 12)}${DIRTY ? ' (modified)' : ''}.
 
 Działa w każdej przeglądarce, bez internetu. Potrzebuje tylko włączonego
 JavaScriptu, bo tę kopię księgi składa sama przeglądarka. Dotknij słowa,
-aby zobaczyć jego hasło i gramatykę. Suwak daje więcej lub mniej pomocy.
+aby zobaczyć jego hasło i gramatykę. Tryb czytania wybiera samą łacinę,
+pełny przekład albo interlinearnie, czyli słowo po słowie.
 Można też wybrać, czyje części Mszy się śledzi.
 
 It works in any browser, with no internet. It only needs JavaScript
 turned on, because the browser itself assembles this copy of the book.
-Tap a word for its dictionary entry and its grammar, move the slider for
-more or less help, choose whose parts you are following at Mass.
+Tap a word for its dictionary entry and its grammar. The reading mode
+chooses bare Latin, the full translation, or the interlinear word by
+word. You can also choose whose parts you are following at Mass.
 
 Folder "app" to sama księga — nie ma w nim nic do oglądania ani do
 instalowania. OFL.txt to licencja kroju pisma EB Garamond.

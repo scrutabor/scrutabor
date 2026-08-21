@@ -76,26 +76,28 @@ test.describe('landing @online', () => {
 		// verse 34 from the corpus, TextBody, and the same reading-mode
 		// control a reading page carries.
 		await page.goto('/pl');
-		const radios = page.locator('.specimen .help [role="radio"]');
-		await expect(radios.nth(1)).toHaveAttribute('aria-checked', 'true');
+		// by the level's identity, not its position: the display order is
+		// łacina · przekład · interlinearnie while the stored values keep meaning
+		const radio = (level: number) => page.locator(`.specimen .help [data-level="${level}"]`);
+		await expect(radio(1)).toHaveAttribute('aria-checked', 'true');
 		// the real corpus text: liturgical accents, and the colon the
 		// witnesses print where the brand motto prints a comma
 		await expect(page.locator('.specimen')).toContainText('scrutábor');
 		await expect(page.locator('.specimen')).toContainText('tuam:');
 		// łacina: bare
-		await radios.nth(0).click();
+		await radio(0).click();
 		await expect(page.locator('.specimen rt')).toHaveCount(0);
-		// słowa: all fourteen glosses (the consecutive et as "a")
-		await radios.nth(1).click();
+		// interlinearnie: all fourteen glosses (the consecutive et as "a")
+		await radio(1).click();
 		await expect(page.locator('.specimen rt')).toHaveCount(14);
 		await expect(page.locator('.specimen rt').nth(3)).toHaveText('a');
 		// przekład: the verse's own translation, the glosses yielding
-		await radios.nth(2).click();
+		await radio(2).click();
 		await expect(page.locator('.specimen .translation')).toContainText('Daj mi zrozumienie');
 		await expect(page.locator('.specimen rt')).toHaveCount(0);
 
 		await page.goto('/en');
-		await page.locator('.specimen .help [role="radio"]').nth(2).click();
+		await page.locator('.specimen .help [data-level="2"]').click();
 		await expect(page.locator('.specimen .translation')).toContainText('Give me understanding');
 	});
 

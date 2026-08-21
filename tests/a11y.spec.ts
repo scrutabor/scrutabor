@@ -115,7 +115,7 @@ test.describe('at the largest reading size', () => {
 	}
 });
 
-test('the help slider at its fullest meets WCAG 2.1 AA', async ({ page }) => {
+test('the fullest reading mode meets WCAG 2.1 AA', async ({ page }) => {
 	// The top step puts every layer on screen at once — translations,
 	// narrative, interlinear gloss — which is the densest the app ever gets.
 	await page.goto('/app/pl/ordinarium/credo');
@@ -179,7 +179,7 @@ test('everything the keyboard reaches wears the house focus ring', async ({ page
 test('a focus ring is drawn round the ink, not round the box it aligns in', async ({ page }) => {
 	// Two boxes on a reading surface are deliberately bigger than what they
 	// print. A speaker mark is a fixed 1.379 of the reading size, the width
-	// the Latin column is indented by; a role option in the compact picker
+	// the Latin column is indented by; a role option in the tabella
 	// carries the separator that precedes it. Ringing either box drew a
 	// rectangle around a lot of nothing, and the mark's reached over the
 	// first word of its line (owner, 2026-08-09).
@@ -191,7 +191,7 @@ test('a focus ring is drawn round the ink, not round the box it aligns in', asyn
 			return r ? { w: r.width, left: r.left } : null;
 		};
 		const mark = document.querySelector('button.mark');
-		const option = [...document.querySelectorAll('.picker.compact .option')].find(
+		const option = [...document.querySelectorAll('.picker .option')].find(
 			(o) => o.previousElementSibling // one that carries the separator
 		);
 		return {

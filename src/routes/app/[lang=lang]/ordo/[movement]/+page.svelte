@@ -181,7 +181,7 @@
 	<meta name="description" content={msgs.ordoDescription} />
 </svelte:head>
 
-<div class="page reading" class:bilingual={helpLevel === 2}>
+<div class="page reading">
 	<header>
 		<PageNav
 			{lang}
@@ -192,18 +192,20 @@
 		<h1 lang="la">{movement?.title ?? ''}</h1>
 		<p class="subtitle smallcaps">{movement?.label[lang] ?? ''}</p>
 		<div class="help-row">
-			<HelpLevels {lang} bind:value={helpLevel} />
-			<!-- The day leads the three settings for the same reason it does on
-			     the index, and appears only where it has something to fill:
-			     three of the six movements carry no proper slot at all — the
-			     preparation, the Canon and the communion are the same at every
-			     Mass — and a control that changes nothing on the page in front
-			     of the reader is a control that says the page is broken. -->
-			{#if hasProper}
-				<DayPicker {lang} compact />
-			{/if}
-			<RolePicker {lang} compact />
-			<RolePicker {lang} compact kind="mass" />
+			<div class="tabella">
+				<HelpLevels {lang} bind:value={helpLevel} />
+				<!-- The day appears only where it has something to fill: three
+				     of the six movements carry no proper slot at all — the
+				     preparation, the Canon and the communion are the same at
+				     every Mass — and a control that changes nothing on the
+				     page in front of the reader is a control that says the
+				     page is broken. -->
+				{#if hasProper}
+					<DayPicker {lang} />
+				{/if}
+				<RolePicker {lang} />
+				<RolePicker {lang} kind="mass" />
+			</div>
 		</div>
 	</header>
 
@@ -231,7 +233,7 @@
 					     for their own next line. Folded, never hidden. -->
 					<button class="unfold" onclick={() => (unfolded[e.id] = true)}>
 						<span class="unfold-title" lang="la">{e.title}</span>
-						{#if helpLevel >= 1}<span class="unfold-what">{e.note[lang]}</span>{/if}
+						<span class="unfold-what">{e.note[lang]}</span>
 						<span class="unfold-do smallcaps">{msgs.quietReveal}</span>
 					</button>
 				{:else}
@@ -257,13 +259,12 @@
 							>
 						{/if}
 					</div>
-					<!-- The what-happens line rides with any help, like the rubric
-						     narratives it continues (reading-ux §5). -->
-					{#if helpLevel >= 1}
-						<p class="part-note">
-							{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
-						</p>
-					{/if}
+					<!-- The what-happens line rides in EVERY mode, like the rubric
+					     narratives it continues (owner, 2026-08-21): the altar's
+					     story is the book's own layer, not translation help. -->
+					<p class="part-note">
+						{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
+					</p>
 				{/if}
 				{#if entry && (words || unfolded[e.id])}
 					<div class="part-text">

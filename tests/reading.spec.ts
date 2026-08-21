@@ -8,19 +8,20 @@ const CONFITEOR = '/app/pl/ordinarium/confiteor';
 test('the control walks the three reading modes', async ({ page }) => {
 	await page.goto(CONFITEOR);
 
-	// default (słowa): interlinear glosses and rubric narratives, no
+	// default (interlinearnie): glosses and rubric narratives, no
 	// translations
 	await expect(page.locator('rt').first()).toBeVisible();
 	await expect(page.locator('.rubric-narrative').first()).toBeVisible();
 	await expect(page.locator('.translation')).toHaveCount(0);
 
-	// łacina: bare Latin
+	// łacina: the prayers bare of language help — the narrative layer
+	// stays, in every mode (owner, 2026-08-21)
 	await setHelp(page, 0);
 	await expect(page.locator('rt')).toHaveCount(0);
-	await expect(page.locator('.rubric-narrative')).toHaveCount(0);
+	await expect(page.locator('.rubric-narrative').first()).toBeVisible();
 
 	// przekład: the bilingual view — translations and narratives, and the
-	// interlinear yields (it is słowa's own layer now; the word panel keeps
+	// interlinear yields (it is the interlinearnie mode's own layer; the word panel keeps
 	// the word-by-word one tap away in every mode)
 	await setHelp(page, 2);
 	await expect(page.locator('.translation').first()).toBeVisible();
@@ -586,7 +587,7 @@ test('Sub tuum separates the antiphon from the extended form', async ({ page }) 
 	await expect(page.locator('button#w025')).toBeVisible();
 });
 
-test('the about sheet is closed at every slider position, opens on demand', async ({ page }) => {
+test('the about sheet is closed in every reading mode, opens on demand', async ({ page }) => {
 	await page.goto('/app/pl/ordinarium/gloria');
 	const pill = page.locator('.about-pill');
 	const sheet = page.locator('aside.about-sheet');
@@ -736,7 +737,7 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	await page.goto('/app/pl/ordinarium/confiteor');
 	await pager.locator('a', { hasText: 'Nóminis Iesu' }).click();
 	await expect(page).toHaveURL(atRoute('litaniae/sanctissimi-nominis-iesu'));
-	// arrow keys page too, but never while the slider owns them.
+	// arrow keys page too, but never while the mode radios own them.
 	// The URL arriving is not the page being ready to answer a key: this
 	// navigation was a CLICK, so it did not go through the fixture's goto,
 	// and in the folder it is a real document load. An assertion after one
@@ -751,11 +752,13 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	// would give exactly that answer for the wrong reason
 	await settled(page);
 	// the reading-mode radios own the arrows while focused: the key moves
-	// the check (slowa -> przekład), never the page
+	// the check, never the page. The default interlinear is the LAST
+	// segment of the display order (łacina · przekład · interlinearnie), so
+	// ArrowRight wraps to łacina — level 0.
 	await page.locator('.help [role="radio"][aria-checked="true"]').focus();
 	await page.keyboard.press('ArrowRight');
 	await expect(page).toHaveURL(atRoute('ordinarium/confiteor'));
-	await expect(page.locator('.help [role="radio"]').nth(2)).toHaveAttribute('aria-checked', 'true');
+	await expect(page.locator('.help [data-level="0"]')).toHaveAttribute('aria-checked', 'true');
 	// first text has no previous
 	await page.goto('/app/pl/orationes/pater-noster');
 	await expect(page.locator('.pager a')).toHaveCount(1);
@@ -1082,7 +1085,7 @@ test('the header sits on one centre line', async ({ page }) => {
 			return {
 				title: mid('h1'),
 				help: mid('.help'),
-				part: mid('.picker.compact'),
+				part: mid('.picker'),
 				about: mid('.about-pill')
 			};
 		});
@@ -1413,8 +1416,9 @@ test('a reading page takes the screen it is given', async ({ page }) => {
 
 	await page.setViewportSize({ width: 1512, height: 982 });
 	await page.goto('/app/pl/ordinarium/credo');
-	// słowa: this test is about the GLOSSED measure the frame clamp was
-	// sized for (przekład has its own frame and its own test below)
+	// interlinearnie: this test is about the GLOSSED measure the frame clamp was
+	// sized for (the bare modes read at their own scale and measure,
+	// asserted by the columns and book-measure tests)
 	await setHelp(page, 1);
 	const wide = await measure();
 	expect(wide.column, 'the column grows past the prose measure').toBeGreaterThan(38 * 16);
@@ -1624,6 +1628,48 @@ test('the bilingual columns align verse and translation on one baseline', async 
 	});
 	expect(deltas.length, 'the Gloria pairs its verses').toBeGreaterThan(8);
 	for (const d of deltas) expect(d, 'a row drifted off its baseline').toBeLessThan(0.6);
+});
+
+test('the bare modes read at the bare scale, on the book measure', async ({ page }) => {
+	// The day's two headline numbers, pinned: the bare modes read at 0.84
+	// of the study size with 1.5 leading (the study face stays 1.45rem
+	// with its glossed 2.3), and uncolumned bare text is capped at the
+	// 36rem book measure, centred on the title's axis. Nothing else
+	// asserted these — the geometry shipped ungated for half a day.
+	await page.setViewportSize({ width: 1512, height: 982 });
+	await page.goto('/app/pl/ordinarium/credo');
+
+	await setHelp(page, 0);
+	const bare = await page.evaluate(() => {
+		const v = document.querySelector('.measure .verse')!;
+		const cs = getComputedStyle(v);
+		const root = parseFloat(getComputedStyle(document.documentElement).fontSize);
+		const m = document.querySelector('.measure')!.getBoundingClientRect();
+		const page = document.querySelector('.page h1')!.getBoundingClientRect();
+		return {
+			font: parseFloat(cs.fontSize) / root,
+			leading: parseFloat(cs.lineHeight) / parseFloat(cs.fontSize),
+			measureRem: m.width / root,
+			offCentre: Math.abs((m.left + m.right) / 2 - (page.left + page.right) / 2)
+		};
+	});
+	expect(bare.font, 'the bare scale is 0.84 of the reading size').toBeCloseTo(1.45 * 0.84, 2);
+	expect(bare.leading, 'the bare leading is 1.5').toBeCloseTo(1.5, 2);
+	expect(bare.measureRem, 'bare text is capped at the book measure').toBeLessThanOrEqual(36.01);
+	expect(bare.offCentre, 'the measure sits on the title axis').toBeLessThan(1);
+
+	// and the study face is untouched by the bare knob
+	await setHelp(page, 1);
+	const study = await page.evaluate(() => {
+		const cs = getComputedStyle(document.querySelector('.verse.glossed')!);
+		const root = parseFloat(getComputedStyle(document.documentElement).fontSize);
+		return {
+			font: parseFloat(cs.fontSize) / root,
+			leading: parseFloat(cs.lineHeight) / parseFloat(cs.fontSize)
+		};
+	});
+	expect(study.font, 'the study face keeps the full reading size').toBeCloseTo(1.45, 2);
+	expect(study.leading, 'the glossed leading stays 2.3').toBeCloseTo(2.3, 2);
 });
 
 test('the reading size is the only knob', async ({ page }) => {
@@ -1878,8 +1924,7 @@ test('a rubric sits centrally between the verses it parts', async ({ page }) => 
 	// it drifted back to 26/45 as soon as the glosses were showing, because
 	// the correction was sized for the gloss row's overhang alone and the
 	// leading is the larger half of it (owner, 2026-08-09). Balanced at
-	// every position of the help slider, since each shows a different
-	// line-height.
+	// every reading mode, since each shows a different line-height.
 	await page.goto('/app/pl/ordinarium/confiteor');
 
 	for (const help of [0, 1, 2] as const) {

@@ -1,3 +1,39 @@
+<script module lang="ts">
+	import { M, type Lang } from '$lib/i18n';
+	import { dayHint, dayToday, type Today } from '$lib/proprium';
+
+	// The line under the index's table for the day setting. The decision
+	// lives in $lib/proprium so that every combination of "what today is"
+	// and "what the reader picked" can be enumerated in a unit test — it
+	// got the order wrong once and shipped. Exported at module level so
+	// the Ordo index can render it as the tabella's one hint line without
+	// duplicating the mapping (the tabella shows ONE hint, for the setting
+	// last touched — owner, 2026-08-21, direction D).
+	//
+	// Built as ONE string rather than branched across template lines: a
+	// branch that spans lines puts the newlines and tabs between them into
+	// the text. The sentence rendered correctly on the page while
+	// `textContent` came back with a line break and four tabs in the
+	// middle of it.
+	export function dayHintText(lang: Lang, chosen: string, now: Today | null): string {
+		const msgs = M[lang];
+		const which = dayHint(chosen, now);
+		switch (which.kind) {
+			case 'chosen':
+				// nothing: the table already names the chosen day in the
+				// rubric, and "its texts fill the order" taught nobody
+				// anything (owner, 2026-08-21 — drop the trivial hints)
+				return '';
+			case 'week':
+				return `${msgs.dayWeekOf} ${which.sunday.title[lang]}`;
+			case 'ahead':
+				return msgs.dayAhead;
+			default:
+				return msgs.dayHint.none;
+		}
+	}
+</script>
+
 <script lang="ts">
 	// Which day's Mass the reader is at. Sits with the role and the kind of
 	// Mass because it answers the same sort of question — not what the book
@@ -16,20 +52,17 @@
 	import { pageUrl } from '$lib/url';
 	import { replaceState } from '$app/navigation';
 	import { browser } from '$app/environment';
-	import { M, type Lang } from '$lib/i18n';
 	import { DAY_PARAM, chooseDay, proper, rememberDay, storedDay } from '$lib/proper.svelte';
-	import { PROPER_DAYS, SEASONS, dayById, dayHint, dayToday } from '$lib/proprium';
+	import { PROPER_DAYS, SEASONS, dayById } from '$lib/proprium';
 
-	// `compact` is the form the control takes on a page being read rather than
-	// chosen from, exactly as the role and Mass-kind picker has: label and
-	// value on one line, no box, no hint.
-	let { lang, compact = false }: { lang: Lang; compact?: boolean } = $props();
+	// ONE FORM, a row of the tabella (owner, 2026-08-21 — direction D): the
+	// boxed pill of the index and the bare line of the reading pages were
+	// two costumes for one control, and the inconsistency was the defect.
+	// `chosen` is bindable so the index can build the table's single hint
+	// line from the same value this control is actually showing.
+	let { lang, chosen = $bindable('') }: { lang: Lang; chosen?: string } = $props();
 	const msgs = $derived(M[lang]);
-	// Both forms can stand on one page, and a label must not be pointed at by
-	// a control that is not its own.
-	const labelId = $derived(`day-label-${compact ? 'compact' : 'full'}`);
-
-	let chosen = $state('');
+	const labelId = 'day-label';
 
 	/** What today is, whether or not this edition carries its Mass. Read once
 	 * per mount rather than per render: it cannot change while a page is open,
@@ -46,29 +79,6 @@
 		if (!day) return msgs.dayNone;
 		const partial = day.partial ? ` ${msgs.dayPartial}` : '';
 		return `${isToday ? `${msgs.dayIsToday} ` : ''}${day.title[lang]}${partial}`;
-	});
-
-	/** The line under the control. The decision lives in $lib/proprium so that
-	 * every combination of "what today is" and "what the reader picked" can be
-	 * enumerated in a unit test — it got the order wrong once and shipped,
-	 * and a template branch is not a thing that can be enumerated.
-	 *
-	 * Built as ONE string rather than branched across template lines: a branch
-	 * that spans lines puts the newlines and tabs between them into the text.
-	 * The sentence rendered correctly on the page while `textContent` came
-	 * back with a line break and four tabs in the middle of it. */
-	const hint = $derived.by(() => {
-		const which = dayHint(chosen, now);
-		switch (which.kind) {
-			case 'chosen':
-				return msgs.dayHint.chosen;
-			case 'week':
-				return `${msgs.dayWeekOf} ${which.sunday.title[lang]}`;
-			case 'ahead':
-				return msgs.dayAhead;
-			default:
-				return msgs.dayHint.none;
-		}
 	});
 
 	// On arrival, and after a history traversal. The URL wins where it
@@ -147,7 +157,7 @@
 
 <svelte:window onhashchange={onHashChange} />
 
-<div class="picker day" class:compact class:on={!!chosen}>
+<div class="picker day row" class:on={!!chosen}>
 	<span class="label smallcaps" id={labelId}>{msgs.dayLabel}</span>
 	<span class="field">
 		<!-- The width-setter. The same trick the role picker uses for its own
@@ -190,39 +200,36 @@
 			<span class="sr-only">{shown} — {msgs.dayInPlace}</span>
 		{/if}
 	</span>
-	{#if !compact}<p class="hint">{hint}</p>{/if}
 </div>
 
 <style>
-	/* The day belongs to the same family as the reader's part and the kind of
-	   Mass (lib/components/RolePicker.svelte), so it wears their clothes: the
-	   label above in small caps, the control as a pill, a hint beneath saying
-	   what the setting is doing. It cannot be their row of words — three parts
-	   fit on a line and sixty days do not — so it stays a native select, which
-	   also keeps the phone's own picker, the keyboard, and the screen reader,
-	   none of which a hand-built listbox would give back for free.
-	   What is styled away is only the browser's idea of a form field. */
-	/* The caret is drawn here rather than left to the browser: the native one
-	   is a different mark on every platform, and this is the only control on
-	   the page. The field is what carries it, because a select cannot hold a
-	   pseudo-element of its own. */
+	/* A ROW OF THE TABELLA, like the role and the Mass beneath it. It
+	   cannot be their row of words — three parts fit on a line and sixty
+	   days do not — so it stays a native select, which keeps the phone's
+	   own picker, the keyboard, and the screen reader, none of which a
+	   hand-built listbox would give back for free. What is styled away is
+	   only the browser's idea of a form field. */
+	/* The caret is drawn here rather than left to the browser: the native
+	   one is a different mark on every platform. The field carries it,
+	   because a select cannot hold a pseudo-element of its own. */
 	.field {
 		position: relative;
 		display: inline-flex;
-		margin-top: 0.5rem;
-		border: 1px solid var(--border);
-		border-radius: 999px;
 		max-width: 100%;
 	}
 
-	/* Hidden, and the only thing that has a size. Both it and the select carry
-	   the same padding, so the box is the chosen text plus the room the caret
-	   needs and nothing else. */
+	/* Hidden, and the only thing that has a size. Both it and the select
+	   carry the same padding, so the box is the chosen text plus the room
+	   the caret needs and nothing else. */
 	.sizer,
 	select {
 		font: inherit;
-		font-size: 0.95rem;
-		padding: 0.35rem 2.2rem 0.35rem 1.1rem;
+		font-size: 0.92rem;
+		/* Block padding for the touch target (WCAG 2.5.8's 24px — the bare
+		   line was 19), given back to the row by the margin so the row
+		   keeps its density, the same trade the role words make. */
+		padding: 0.3rem 1.05rem 0.3rem 0;
+		margin-block: -0.25rem;
 	}
 
 	.sizer {
@@ -234,12 +241,12 @@
 	.field::after {
 		content: '';
 		position: absolute;
-		inset-inline-end: 1rem;
+		inset-inline-end: 0.1rem;
 		top: 50%;
-		width: 0.36em;
-		height: 0.36em;
-		border-inline-end: 1.5px solid currentColor;
-		border-bottom: 1.5px solid currentColor;
+		width: 0.3em;
+		height: 0.3em;
+		border-inline-end: 1.2px solid currentColor;
+		border-bottom: 1.2px solid currentColor;
 		transform: translateY(-70%) rotate(45deg);
 		color: var(--ink-soft);
 		pointer-events: none;
@@ -253,26 +260,35 @@
 		color: var(--ink-soft);
 		background: transparent;
 		border: 0;
-		border-radius: inherit;
 		cursor: pointer;
 		/* The list itself is drawn by the platform, so it has to be told which
 		   way the page is lit or a dark reader gets a white menu. */
 		color-scheme: var(--scheme);
 	}
 
-	/* Chosen reads as chosen, the way a segmented option does: the pill fills
-	   and the word comes forward. A reader glancing down should see whether
-	   the Mass in front of them is a day's or the bare order. */
-	.picker.on .field {
-		background: var(--wash);
+	/* The width has to be the CHOSEN weight, or setting a day thickens the
+	   word and nudges the row. Chosen reads as chosen the way the words
+	   do: the rubric, and heavier. */
+	.picker.on .sizer {
+		font-weight: 600;
 	}
 
 	.picker.on select {
-		color: var(--ink);
+		color: var(--rubric);
+		font-weight: 600;
 	}
 
-	/* The ring traces the control, with room to breathe. On the select it sat
-	   hard against the letters, because the select IS the text box now. */
+	.picker.on .field::after {
+		color: var(--rubric);
+	}
+
+	select:hover {
+		color: var(--rubric);
+	}
+
+	/* The same standoff the role picker gives its own words. Inset, the
+	   ring sat hard against the letters and read as a form field being
+	   validated rather than as the house focus mark. */
 	select:focus-visible {
 		outline: none;
 	}
@@ -280,12 +296,7 @@
 	.field:has(select:focus-visible) {
 		outline: 2px solid var(--rubric);
 		outline-offset: 3px;
-	}
-
-	.hint {
-		margin: 0.5rem 0 0;
-		font-size: 0.9rem;
-		color: var(--ink-soft);
+		border-radius: 0.15rem;
 	}
 
 	.state {
@@ -295,106 +306,11 @@
 		color: var(--ink-soft);
 	}
 
-	/* On a page being read rather than chosen from, the same rule as the role
-	   and the Mass: no box. The label and the day on one line, the day in the
-	   rubric when it is set, so the three settings above the text read as one
-	   row of words and not as a row of words with a form control on the end. */
-	.picker.compact {
-		margin: 0;
-		display: inline-flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: baseline;
-		/* the same breathing space the role and Mass rows keep between their
-		   label and their words */
-		gap: 0.2rem 0.6rem;
-		max-width: 100%;
-	}
-
-	.picker.compact .label {
-		display: inline;
-		font-size: 0.68rem;
-	}
-
-	.picker.compact .field {
-		margin-top: 0;
-		border: 0;
-		background: none;
-	}
-
-	.picker.compact .field::after {
-		inset-inline-end: 0.1rem;
-		width: 0.3em;
-		height: 0.3em;
-		border-width: 1.2px;
-	}
-
-	.picker.compact .sizer,
-	.picker.compact select {
-		font-size: 0.9rem;
-		/* Block padding for the touch target (WCAG 2.5.8's 24px — the bare
-		   line was 19), given back to the row by the margin so the control
-		   row keeps its density, the same trade the role words make. */
-		padding: 0.3rem 1.05rem 0.3rem 0;
-		margin-block: -0.25rem;
-	}
-
-	/* The width has to be the CHOSEN weight, or setting a day thickens the
-	   word and nudges the row. */
-	.picker.compact.on .sizer {
-		font-weight: 600;
-	}
-
-	/* The same standoff the role picker gives its own words. Inset, the ring
-	   sat hard against the letters and read as a form field being validated
-	   rather than as the house focus mark. */
-	.picker.compact .field:has(select:focus-visible) {
-		outline-offset: 3px;
-		border-radius: 0.15rem;
-	}
-
-	.picker.compact.on select {
-		color: var(--rubric);
-		font-weight: 600;
-	}
-
-	.picker.compact.on .field::after {
-		color: var(--rubric);
-	}
-
-	select:hover {
-		color: var(--rubric);
-	}
-
 	@media print {
 		/* A printed prayer says which day produced it, and nothing that was
 		   not chosen. The select cannot be reduced the way a radio group can,
 		   so the field is hidden and the day is printed from its own value. */
-		.picker,
-		.picker.compact {
-			display: inline-flex;
-			flex-wrap: nowrap;
-			align-items: baseline;
-			gap: 0.25rem;
-			margin: 0;
-			max-width: none;
-			white-space: nowrap;
-		}
-
-		.label,
-		.picker.compact .label {
-			display: inline;
-			font-size: 5.5pt;
-			letter-spacing: 0.06em;
-			color: var(--ink-soft);
-		}
-
-		.label::after {
-			content: ':';
-		}
-
-		.field,
-		.picker.compact .field {
+		.field {
 			border: 0;
 			background: none;
 			margin: 0;
@@ -408,18 +324,16 @@
 			display: none;
 		}
 
-		select,
-		.picker.compact select,
-		.picker.compact.on select {
+		select {
 			position: static;
 			width: auto;
 			padding: 0;
+			margin: 0;
 			font-size: 6.5pt;
 			font-weight: 600;
 			color: var(--ink);
 		}
 
-		.hint,
 		.state {
 			display: none;
 		}

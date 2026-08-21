@@ -1,24 +1,36 @@
 <script lang="ts">
-	// The reading mode: łacina, słowa, przekład. It was a SLIDER for its
-	// first year, and the slider outlived two meanings — built for a
-	// hand-judged difficulty ladder (superseded 2026-08-03), reread as
+	// The reading mode: łacina, przekład, interlinearnie. It was a SLIDER
+	// for its first year, and the slider outlived two meanings — built for
+	// a hand-judged difficulty ladder (superseded 2026-08-03), reread as
 	// additive help, and retired when the additive model died too (owner,
 	// 2026-08-21): once full position became the bilingual view, the stops
-	// were not "more" of anything but three different READINGS, and a
-	// slider whose positions are modes is a segmented control in a slider's
-	// costume. Now it is what the row's other settings already were — a
-	// question answered with a word, in the role picker's own clothes.
+	// were not "more" of anything but three different READINGS. It wore the
+	// role picker's quiet clothes for a morning and a capsule for an
+	// afternoon; the owner then chose the TABELLA (the D direction of the
+	// 2026-08-21 canvas): every setting is a row of one framed table, and
+	// this control is its first row — set apart by the surface tint and a
+	// step of size, not by a different kind of object.
 	//
-	// The stored key and its values did not change: 0, 1, 2 under
-	// scrutabor-help, so every reader's saved choice survives the control.
+	// DISPLAY ORDER is łacina · przekład · interlinearnie (owner): the
+	// first two share the bare reading scale, so walking left to right the
+	// type holds still once and changes once, at the study view. The word
+	// is the genre's own (owner): Biblia interlinearna is the accepted
+	// Polish name for exactly this kind of edition. The STORED values did
+	// not change — 0, 1, 2 under scrutabor-help mean what they always
+	// meant, so every reader's saved choice survives both the reordering
+	// and the renaming.
 	import { onMount } from 'svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { radiogroupKeydown } from '$lib/radio-nav';
 	import { readStored, writeStored } from '$lib/storage';
 
-	let { lang, value = $bindable(2) }: { lang: Lang; value?: number } = $props();
+	// The fallback matches every page's own initial state (interlinearnie,
+	// level 1) — the Ordo index renders this control unbound, and with a
+	// different fallback a first visit showed przekład there while every
+	// movement page opened at interlinearnie.
+	let { lang, value = $bindable(1) }: { lang: Lang; value?: number } = $props();
 
-	const LEVELS = [0, 1, 2] as const;
+	const LEVELS = [0, 2, 1] as const;
 
 	onMount(() => {
 		const raw = readStored('scrutabor-help');
@@ -41,8 +53,8 @@
 	});
 </script>
 
-<div class="help">
-	<span class="label smallcaps" id="help-label">{M[lang].levelsAria}</span>
+<div class="help row">
+	<span class="label smallcaps" id="help-label">{M[lang].levelsLabel}</span>
 	<!-- Roving tabindex, as in RolePicker: the checked radio is the one
 	     tab stop and the arrows move the check (lib/radio-nav). -->
 	<!-- svelte-ignore a11y_interactive_supports_focus -->
@@ -61,6 +73,7 @@
 				tabindex={value === level ? 0 : -1}
 				class="option"
 				class:on={value === level}
+				data-level={level}
 				onclick={() => choose(level)}
 			>
 				<span class="slot">
@@ -73,76 +86,34 @@
 </div>
 
 <style>
-	/* The role picker's compact clothes, cut for this control: label and
-	   three words on one line, the reader's own in ink, the others quiet.
-	   The ghost under each word holds the width of its bold form so the
-	   row never shifts as the choice moves (the same device RolePicker
-	   documents at length). */
-	.help {
-		display: inline-flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: baseline;
-		gap: 0.2rem 0.6rem;
-	}
-
-	.label {
-		font-size: 0.68rem;
-		letter-spacing: 0.1em;
-		color: var(--ink-soft);
-	}
-
+	/* THE TABELLA'S FIRST ROW. The one control that changes what the page
+	   IS leads the framed table every reading surface carries (.tabella,
+	   app.css): the label column shared with the rows below, the choice as
+	   words with the reader's own in the rubric, the row itself lifted by
+	   the surface tint and one step of size. The ghost under each word
+	   holds the width of its emphasized form so the row never changes
+	   shape as the choice moves (RolePicker documents the device). */
 	.options {
-		display: inline-flex;
-		gap: 0.1rem;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		font-size: 1rem;
 	}
 
-	.option {
-		appearance: none;
-		border: 0;
-		background: transparent;
-		color: var(--ink-soft);
-		font: inherit;
-		font-size: 0.9rem;
-		/* the block padding is the touch target (WCAG 2.5.8's 24px), the
-		   margin gives the room back to the row — the same trade the role
-		   words make */
-		padding: 0.3rem 0.15rem;
-		margin-block: -0.25rem;
-		cursor: pointer;
-	}
-
-	.option + .option::before {
-		content: '·';
-		margin-inline-end: 0.3rem;
-		color: var(--ink-soft);
-	}
-
-	.slot {
-		position: relative;
-		display: inline-block;
-	}
-
-	.ghost {
-		visibility: hidden;
-		font-weight: 600;
-	}
-
-	.real {
-		position: absolute;
-		inset-inline-start: 0;
-		top: 0;
-		width: 100%;
-		text-align: center;
-	}
-
-	.option.on .real {
-		font-weight: 600;
-		color: var(--ink);
-	}
-
-	.option:focus-visible {
-		outline: 2px solid var(--rubric);
-		outline-offset: 2px;
+	/* The squeezed table (the row skeleton in app.css stacks the label):
+	   at 320px under the 140% root the three mode words need every pixel
+	   the frame can give, so they give back one step of size. */
+	@container help (max-width: 26rem) {
+		.options {
+			font-size: 0.9rem;
+			/* safe: if a future word ever outgrows the frame, one edge
+			   clips and the other stays reachable — plain center hides
+			   both ends at once */
+			justify-content: safe center;
+			/* the three words are ONE line by contract (the text-size suite
+			   pins it): unbreakable, so the table sizes to them instead of
+			   folding them */
+			flex-wrap: nowrap;
+		}
 	}
 </style>

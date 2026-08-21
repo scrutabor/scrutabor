@@ -45,8 +45,8 @@ test('no Polish surface leaves a one-letter word before a breakable space @onlin
 		// that costs a CI round trip to diagnose. It cost two.
 		await test.step(path, async () => {
 			await page.goto(path);
-			// Reading pages keep their fullest prose behind the help slider; read
-			// at the top step so translations and narratives are in the DOM, and
+			// Reading pages keep their fullest prose behind the reading mode;
+			// scan przekład so translations and narratives are in the DOM, and
 			// open a word so gloss, lemma note and contextual note render too.
 			const modes = page.locator('.help [role="radio"]');
 			const word = page.locator('.word').first();
@@ -65,8 +65,8 @@ test('no Polish surface leaves a one-letter word before a breakable space @onlin
 			if (await word.count()) await word.click();
 		});
 
-		// No single mode shows every Polish layer any more: słowa carries
-		// the glosses and narratives, przekład the translations — and the
+		// No single mode shows every Polish layer any more: interlinearnie
+		// carries the glosses, przekład the translations — and the
 		// stored choice persists across the sweep's shared page, so both
 		// are set explicitly and both DOMs are scanned.
 		const passes = (await page.locator('.help [role="radio"]').count()) ? [1, 2] : [null];

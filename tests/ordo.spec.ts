@@ -152,9 +152,11 @@ test('the reading modes govern the whole flow', async ({ page }) => {
 	await expect(page.locator('.part-note').first()).toBeVisible();
 	await expect(page.locator('.translation')).toHaveCount(0);
 
+	// łacina strips the glosses alone: the what-happens lines are the
+	// book's own layer and stand in every mode (owner, 2026-08-21)
 	await setHelp(page, 0);
 	await expect(page.locator('.part-text rt')).toHaveCount(0);
-	await expect(page.locator('.part-note')).toHaveCount(0);
+	await expect(page.locator('.part-note').first()).toBeVisible();
 
 	await setHelp(page, 2);
 	await expect(page.locator('.translation').first()).toBeVisible();
@@ -209,27 +211,6 @@ test('every prayer the Ordo links to is actually built', async ({ page, request 
 		if (!res.ok()) missing.push(`${href} → ${res.status()}`);
 	}
 	expect(missing).toEqual([]);
-});
-
-test('the index answers a change of part in the book’s own voice', async ({ page }) => {
-	// The picker's hint is the WHOLE answer the index gives. It stood under
-	// a second line that counted the reader's places — "You answer at 16
-	// places, and say in full: …" — which said the same thing in the second
-	// person, on a page meant for browsing, and no missal does that. The
-	// parts are marked where the reader meets them instead.
-	await page.goto('/app/en/ordo');
-	const hint = page.locator('.picker[data-kind="role"]:not(.compact) .hint');
-	await expect(hint).toHaveText('what is said aloud, with the answers of the faithful');
-
-	await page.getByRole('radio', { name: 'priest' }).click();
-	await expect(hint).toHaveText('the whole Ordo Missæ, including the prayers said silently');
-
-	await page.getByRole('radio', { name: 'faithful' }).click();
-	await expect(hint).toHaveText('what is said aloud, with the answers of the faithful');
-
-	// and nothing counts at the reader
-	await expect(page.locator('.role-part')).toHaveCount(0);
-	await expect(page.locator('main')).not.toContainText('You answer at');
 });
 
 test('the narrative names the priest rather than calling him "he"', async ({ page }) => {

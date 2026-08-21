@@ -72,6 +72,10 @@ export function docWordPanel(
 export function wordPanel(host: WordPanelHost) {
 	let selectedId = $state<string | null>(null);
 	let keepPad = $state(false);
+	// A deep link is still landing: content arriving may shift its word,
+	// and until the reader acts the centering promise is ours to keep
+	// (see applyFromLocation).
+	let settling = false;
 
 	// The pins preserveScroll schedules must not outlive the page: an
 	// un-cancelled pin from a closing panel can fire against the NEXT
@@ -86,6 +90,18 @@ export function wordPanel(host: WordPanelHost) {
 		pinRaf = 0;
 	}
 	$effect(() => cancelPin);
+
+	// The reader's first own gesture ends the settling window (see
+	// applyFromLocation): these are exactly the inputs a programmatic
+	// scrollIntoView cannot fire, so the two scroll promises never fight.
+	$effect(() => {
+		const acts = () => (settling = false);
+		const kinds = ['wheel', 'touchstart', 'pointerdown', 'keydown'] as const;
+		for (const kind of kinds) window.addEventListener(kind, acts, { passive: true });
+		return () => {
+			for (const kind of kinds) window.removeEventListener(kind, acts);
+		};
+	});
 
 	// The kept padding is needed only while the reader still sits in the
 	// zone the sheet's padding made reachable; the moment they scroll back
@@ -189,15 +205,31 @@ export function wordPanel(host: WordPanelHost) {
 		// read-after-write regression class).
 		const applied = untrack(() => selectedId);
 		if (!target && applied !== null) preserveScroll();
-		if (!target) openedByPush = false;
+		if (!target) {
+			openedByPush = false;
+			settling = false;
+		}
 		selectedId = target;
 		// The router resets scroll AFTER this runs on client-side
 		// navigations — schedule the centering behind it, or deep links into
-		// long texts land at the top. Only when the selection actually
-		// CHANGED: this re-runs whenever the surface's words change, and a
-		// day's proper arriving must not yank the page back to a word the
-		// reader opened, read, and scrolled away from.
+		// long texts land at the top.
+		//
+		// TWO PROMISES share this scroll and the `settling` window is what
+		// reconciles them. A deep link LANDS ON ITS WORD — and on a day
+		// with a formulary the proper arrives after the first centering and
+		// shifts the word out of view (found by the pinned-clock suite on
+		// Advent I: the Introit injects above the Kyrie), so while the link
+		// is still settling, every re-run re-centers. And a day's proper
+		// arriving must NOT yank the page back to a word the reader opened,
+		// read, and scrolled away from — so the reader's own first gesture
+		// (wheel, touch, key, pointer — things a programmatic
+		// scrollIntoView never fires) ends the settling window for good.
 		if (target && target !== applied) {
+			settling = true;
+			requestAnimationFrame(() =>
+				document.getElementById(target)?.scrollIntoView({ block: 'center' })
+			);
+		} else if (target && settling) {
 			requestAnimationFrame(() =>
 				document.getElementById(target)?.scrollIntoView({ block: 'center' })
 			);

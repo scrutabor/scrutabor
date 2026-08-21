@@ -460,11 +460,14 @@ test('choosing a part does not shift the parts beside it', async ({ page }) => {
 	// correctly disappeared with it.
 	await page.goto('/app/en/ordinarium/iudica-me');
 	const lefts = () =>
-		page.$$eval('.picker.compact .option', (els) =>
+		page.$$eval('.picker .option', (els) =>
 			els.map((e) => Math.round(e.getBoundingClientRect().left))
 		);
 
 	const first = await lefts();
+	// the gate must never pass by matching nothing — it did once, when the
+	// selector outlived the compact form it named
+	expect(first.length).toBeGreaterThan(0);
 	for (const name of ['server', 'priest', 'faithful']) {
 		await page.getByRole('radio', { name }).click();
 		expect(await lefts(), `the row moved after choosing ${name}`).toEqual(first);
