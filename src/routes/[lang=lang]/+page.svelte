@@ -5,7 +5,7 @@
 	// straight from the corpus (see +page.server.ts) with the app's real
 	// mode control and the app's real word panel, fully alive.
 	import { goto } from '$app/navigation';
-	import HelpLevels from '$lib/components/HelpLevels.svelte';
+	import HelpLevels, { initialHelp } from '$lib/components/HelpLevels.svelte';
 	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
 	import WordPanel from '$lib/components/WordPanel.svelte';
@@ -20,7 +20,7 @@
 
 	// The same three reading modes as every reading page; the control
 	// itself restores the reader's stored choice on mount.
-	let helpLevel = $state(1);
+	let helpLevel = $state(initialHelp());
 
 	// The specimen's analysis lives in a box that is ALWAYS open — its
 	// whole purpose is to be looked at, so there is nothing to close and
@@ -255,6 +255,7 @@
 					<a href="/app/{lang}/psalmi/118-he?v=34">{t.stanzaLink}</a>
 				</p>
 				<TextBody
+					showTranslationSources={false}
 					{doc}
 					{gloss}
 					{lang}

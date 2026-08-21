@@ -1,39 +1,3 @@
-<script module lang="ts">
-	import { M, type Lang } from '$lib/i18n';
-	import { dayHint, dayToday, type Today } from '$lib/proprium';
-
-	// The line under the index's table for the day setting. The decision
-	// lives in $lib/proprium so that every combination of "what today is"
-	// and "what the reader picked" can be enumerated in a unit test — it
-	// got the order wrong once and shipped. Exported at module level so
-	// the Ordo index can render it as the tabella's one hint line without
-	// duplicating the mapping (the tabella shows ONE hint, for the setting
-	// last touched — owner, 2026-08-21, direction D).
-	//
-	// Built as ONE string rather than branched across template lines: a
-	// branch that spans lines puts the newlines and tabs between them into
-	// the text. The sentence rendered correctly on the page while
-	// `textContent` came back with a line break and four tabs in the
-	// middle of it.
-	export function dayHintText(lang: Lang, chosen: string, now: Today | null): string {
-		const msgs = M[lang];
-		const which = dayHint(chosen, now);
-		switch (which.kind) {
-			case 'chosen':
-				// nothing: the table already names the chosen day in the
-				// rubric, and "its texts fill the order" taught nobody
-				// anything (owner, 2026-08-21 — drop the trivial hints)
-				return '';
-			case 'week':
-				return `${msgs.dayWeekOf} ${which.sunday.title[lang]}`;
-			case 'ahead':
-				return msgs.dayAhead;
-			default:
-				return msgs.dayHint.none;
-		}
-	}
-</script>
-
 <script lang="ts">
 	// Which day's Mass the reader is at. Sits with the role and the kind of
 	// Mass because it answers the same sort of question — not what the book
@@ -52,17 +16,24 @@
 	import { pageUrl } from '$lib/url';
 	import { replaceState } from '$app/navigation';
 	import { browser } from '$app/environment';
+	import { M, type Lang } from '$lib/i18n';
+	import Sheet from '$lib/components/Sheet.svelte';
 	import { DAY_PARAM, chooseDay, proper, rememberDay, storedDay } from '$lib/proper.svelte';
-	import { PROPER_DAYS, SEASONS, dayById } from '$lib/proprium';
+	import { PROPER_DAYS, SEASONS, dayById, dayHint, dayToday } from '$lib/proprium';
 
 	// ONE FORM, a row of the tabella (owner, 2026-08-21 — direction D): the
 	// boxed pill of the index and the bare line of the reading pages were
 	// two costumes for one control, and the inconsistency was the defect.
-	// `chosen` is bindable so the index can build the table's single hint
-	// line from the same value this control is actually showing.
-	let { lang, chosen = $bindable('') }: { lang: Lang; chosen?: string } = $props();
+	let { lang }: { lang: Lang } = $props();
 	const msgs = $derived(M[lang]);
 	const labelId = 'day-label';
+
+	let chosen = $state('');
+	// True after the first read of the URL and the stored choice. The
+	// status icon waits for it: rendered from the initial empty state it
+	// flashed "sam porządek Mszy" for the frame before the remembered day
+	// arrived (owner, 2026-08-21 — the flicker).
+	let applied = $state(false);
 
 	/** What today is, whether or not this edition carries its Mass. Read once
 	 * per mount rather than per render: it cannot change while a page is open,
@@ -79,6 +50,37 @@
 		if (!day) return msgs.dayNone;
 		const partial = day.partial ? ` ${msgs.dayPartial}` : '';
 		return `${isToday ? `${msgs.dayIsToday} ` : ''}${day.title[lang]}${partial}`;
+	});
+
+	/* THE DAY'S STATUS, one tap away. It stood under the table as an
+	   always-visible line and the owner sent it behind an icon (2026-08-21
+	   evening): the labels explain themselves, and a standing sentence
+	   is noise — but which week a feria falls in, or that today's
+	   formulary is not written yet, is real information when asked for.
+	   The decision table lives in $lib/proprium so every combination of
+	   "what today is" and "what the reader picked" can be enumerated in
+	   a unit test — it got the order wrong once and shipped. Built as ONE
+	   string: a branch that spans template lines puts the newlines and
+	   tabs between them into the text. A chosen day says nothing — the
+	   row already names it. */
+	const status = $derived.by(() => {
+		const which = dayHint(chosen, now);
+		switch (which.kind) {
+			case 'chosen':
+				return '';
+			case 'week':
+				return `${msgs.dayWeekOf} ${which.sunday.title[lang]}`;
+			case 'ahead':
+				return msgs.dayAhead;
+			default:
+				return msgs.dayHint.none;
+		}
+	});
+	let statusOpen = $state(false);
+	// Picking a day while the sheet is open removes the sheet's subject:
+	// it closes rather than standing empty.
+	$effect(() => {
+		if (!status) statusOpen = false;
 	});
 
 	// On arrival, and after a history traversal. The URL wins where it
@@ -118,12 +120,14 @@
 		const named = pageUrl().searchParams.get(DAY_PARAM);
 		if (named !== null && !usable(named)) {
 			chosen = '';
+			applied = true;
 			void chooseDay(named, lang);
 			return;
 		}
 		const stored = storedDay();
 		const day = named ?? (usable(stored) ? stored : today.id);
 		chosen = day;
+		applied = true;
 		rememberDay(day);
 		void chooseDay(day || null, lang);
 	}
@@ -159,28 +163,49 @@
 
 <div class="picker day row" class:on={!!chosen}>
 	<span class="label smallcaps" id={labelId}>{msgs.dayLabel}</span>
-	<span class="field">
-		<!-- The width-setter. The same trick the role picker uses for its own
-		     words, and for the same reason: the box must be the size of what
-		     is actually shown. -->
-		<span class="sizer" aria-hidden="true">{shown}</span>
-		<select value={chosen} onchange={pick} aria-labelledby={labelId}>
-			<option value="">{msgs.dayNone}</option>
-			<!-- Grouped by season, which is how a reader holds the year and how
+	<!-- The select and the status icon are ONE line in every layout: the
+	     squeezed table stacks the row's parts, and the icon wrapping under
+	     the select read as a stray (owner, 2026-08-21). -->
+	<span class="field-line">
+		<span class="field">
+			<!-- The width-setter. The same trick the role picker uses for its
+			     own words, and for the same reason: the box must be the size
+			     of what is actually shown. -->
+			<span class="sizer" aria-hidden="true">{shown}</span>
+			<select value={chosen} onchange={pick} aria-labelledby={labelId}>
+				<option value="">{msgs.dayNone}</option>
+				<!-- Grouped by season, which is how a reader holds the year and how
 			     `ProperDay.season` was declared to be used. A flat list is fine
 			     for one season and unreadable for the twelve months this will
 			     become. -->
-			{#each SEASONS as season (season)}
-				{@const days = PROPER_DAYS.filter((d) => d.season === season)}
-				{#if days.length}
-					<optgroup label={msgs.seasons[season]}>
-						{#each days as d (d.id)}
-							<option value={d.id}>{d.title[lang]}{d.partial ? ` ${msgs.dayPartial}` : ''}</option>
-						{/each}
-					</optgroup>
-				{/if}
-			{/each}
-		</select>
+				{#each SEASONS as season (season)}
+					{@const days = PROPER_DAYS.filter((d) => d.season === season)}
+					{#if days.length}
+						<optgroup label={msgs.seasons[season]}>
+							{#each days as d (d.id)}
+								<option value={d.id}>{d.title[lang]}{d.partial ? ` ${msgs.dayPartial}` : ''}</option
+								>
+							{/each}
+						</optgroup>
+					{/if}
+				{/each}
+			</select>
+		</span>
+		{#if applied && status}
+			<!-- Drawn, not an emoji: the same lowercase i a printed note
+			     wears, ringed by a hairline. The button's padding is the
+			     touch target and the margin gives the room back to the row,
+			     the options' own trade. -->
+			<button
+				type="button"
+				class="status-why"
+				aria-label={msgs.dayStatusLabel}
+				aria-expanded={statusOpen}
+				onclick={() => (statusOpen = true)}
+			>
+				<span class="status-ring" aria-hidden="true">i</span>
+			</button>
+		{/if}
 	</span>
 	<!-- One PERSISTENT live region for everything the pick changes off-screen:
 	     a live region added together with its content is not reliably
@@ -202,6 +227,18 @@
 	</span>
 </div>
 
+{#if statusOpen && status}
+	<Sheet
+		{lang}
+		label={msgs.dayStatusLabel}
+		title={msgs.dayStatusLabel}
+		extra="day-status-sheet"
+		onclose={() => (statusOpen = false)}
+	>
+		<p class="status-text">{status}</p>
+	</Sheet>
+{/if}
+
 <style>
 	/* A ROW OF THE TABELLA, like the role and the Mass beneath it. It
 	   cannot be their row of words — three parts fit on a line and sixty
@@ -209,6 +246,11 @@
 	   own picker, the keyboard, and the screen reader, none of which a
 	   hand-built listbox would give back for free. What is styled away is
 	   only the browser's idea of a form field. */
+	/* the status icon positions against the row itself */
+	.picker {
+		position: relative;
+	}
+
 	/* The caret is drawn here rather than left to the browser: the native
 	   one is a different mark on every platform. The field carries it,
 	   because a select cannot hold a pseudo-element of its own. */
@@ -299,6 +341,60 @@
 		border-radius: 0.15rem;
 	}
 
+	.field-line {
+		display: inline-flex;
+		align-items: center;
+		max-width: 100%;
+	}
+
+	/* Pinned to the row's right border, clear of the chevron (owner,
+	   2026-08-21: beside it the two marks crowded each other). Absolute,
+	   so the stacked narrow layout cannot wrap it onto its own line —
+	   the row is the containing block in both layouts. */
+	.status-why {
+		appearance: none;
+		border: 0;
+		background: transparent;
+		color: var(--ink-soft);
+		position: absolute;
+		inset-inline-end: 0.55rem;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 0.3rem;
+		cursor: pointer;
+	}
+
+	.status-why:hover .status-ring {
+		color: var(--rubric);
+		border-color: var(--rubric);
+	}
+
+	.status-ring {
+		display: grid;
+		place-items: center;
+		width: 1.1rem;
+		height: 1.1rem;
+		border: 1px solid var(--border);
+		border-radius: 50%;
+		font-size: 0.7rem;
+		line-height: 1;
+	}
+
+	.status-why:focus-visible {
+		outline: none;
+	}
+
+	.status-why:focus-visible .status-ring {
+		outline: 2px solid var(--rubric);
+		outline-offset: 2px;
+	}
+
+	.status-text {
+		margin: 0;
+		font-size: 0.95rem;
+		color: var(--ink);
+	}
+
 	.state {
 		margin-inline-start: 0.5rem;
 		font-size: 0.72rem;
@@ -334,7 +430,8 @@
 			color: var(--ink);
 		}
 
-		.state {
+		.state,
+		.status-why {
 			display: none;
 		}
 	}

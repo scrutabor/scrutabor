@@ -3,7 +3,7 @@
 	import { pageUrl } from '$lib/url';
 	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
 	import { arrowNav } from '$lib/arrow-nav';
-	import HelpLevels from '$lib/components/HelpLevels.svelte';
+	import HelpLevels, { initialHelp } from '$lib/components/HelpLevels.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import Pager from '$lib/components/Pager.svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
@@ -32,7 +32,7 @@
 	const around = $derived(movementNeighbors(data.movement));
 
 	// The flow shares the reading page's help ladder and its stored setting.
-	let helpLevel = $state(1);
+	let helpLevel = $state(initialHelp());
 
 	// Parts the reader has opened for themselves this visit. Folding is a
 	// default, never a refusal: one tap and the words are there, and they
@@ -513,7 +513,12 @@
 	}
 
 	.part-text {
-		margin-top: 1.2rem;
+		/* the seam's own ruler: exactly a rubric's top margin, so the note
+		   above stands equally far from the text in EVERY mode — in flow
+		   the first rubric's margin collapses up to this same number, and
+		   in przekład's grid (which collapses nothing) the edge children
+		   defer to it (TextBody zeroes the grid's first top margin) */
+		margin-top: calc(var(--reading) * (1 + var(--gloss-gap)));
 	}
 
 	/* room for the sheet, so even the last word can rise clear of it */

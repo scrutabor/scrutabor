@@ -66,7 +66,10 @@ test('a day this edition has not reached is named, not guessed at', async ({ pag
 	await page.goto('/app/pl/ordo');
 	const picker = page.locator('.picker.day').first();
 	await expect(picker.locator('select')).toHaveValue('');
-	await expect(page.locator('.tabella-hint')).toHaveText(
+	// the status lives behind the day row's icon now (owner, 2026-08-21):
+	// one tap, a sheet, and the week is named
+	await picker.locator('.status-why').click();
+	await expect(page.locator('.day-status-sheet')).toContainText(
 		'dziś dzień powszedni — ostatnia niedziela to III Niedziela Adwentu'
 	);
 });
@@ -84,18 +87,22 @@ test('the note about today gives way to the day the reader picks', async ({ page
 	await asIfItWere(page, '2026-08-19T10:00:00');
 	await page.goto('/app/pl/ordo');
 	const picker = page.locator('.picker.day').first();
-	const hint = page.locator('.tabella-hint');
-	await expect(hint).toHaveText(/wybierz inny dzień/);
+	const why = picker.locator('.status-why');
+	await why.click();
+	await expect(page.locator('.day-status-sheet')).toContainText(/można wybrać inny dzień/);
 
-	// a chosen day says nothing — the table already names it (owner,
-	// 2026-08-21: drop the trivial hints)
+	// a chosen day says nothing — the row already names it (owner,
+	// 2026-08-21: drop the trivial hints): the icon leaves, and the open
+	// sheet leaves with its subject
 	await picker.locator('select').selectOption(DAY);
-	await expect(hint).toHaveCount(0);
+	await expect(page.locator('.day-status-sheet')).toHaveCount(0);
+	await expect(why).toHaveCount(0);
 
-	// …and the note comes back when the choice is dropped, because then it
+	// …and the icon comes back when the choice is dropped, because then it
 	// is the default again and the default is what it describes.
 	await picker.locator('select').selectOption('');
-	await expect(hint).toHaveText(/wybierz inny dzień/);
+	await why.click();
+	await expect(page.locator('.day-status-sheet')).toContainText(/można wybrać inny dzień/);
 });
 
 test('choosing a day silences the weekday note too', async ({ page }) => {
@@ -104,10 +111,13 @@ test('choosing a day silences the weekday note too', async ({ page }) => {
 	await asIfItWere(page, '2026-12-15T10:00:00');
 	await page.goto('/app/pl/ordo');
 	const picker = page.locator('.picker.day').first();
-	const hint = page.locator('.tabella-hint');
-	await expect(hint).toHaveText(/ostatnia niedziela to III Niedziela Adwentu/);
+	await picker.locator('.status-why').click();
+	await expect(page.locator('.day-status-sheet')).toContainText(
+		/ostatnia niedziela to III Niedziela Adwentu/
+	);
 	await picker.locator('select').selectOption(DAY);
-	await expect(hint).toHaveCount(0);
+	await expect(page.locator('.day-status-sheet')).toHaveCount(0);
+	await expect(picker.locator('.status-why')).toHaveCount(0);
 });
 
 test('a day chosen yesterday does not still be showing tomorrow', async ({ page }) => {

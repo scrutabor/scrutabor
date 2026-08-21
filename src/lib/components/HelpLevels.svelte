@@ -1,3 +1,18 @@
+<script module lang="ts">
+	import { readStored } from '$lib/storage';
+
+	/** The stored reading mode, clamped — read at component INIT, not at
+	 * mount: mounted-later reads made every page render the interlinear
+	 * first and swap after, a whole-text flash once the bare modes got
+	 * their own scale (owner, 2026-08-21). Exported for the pages that
+	 * hold the mode as their own state and bind it here. */
+	export function initialHelp(): number {
+		const raw = readStored('scrutabor-help');
+		const stored = raw === null ? NaN : Number(raw);
+		return Number.isInteger(stored) ? Math.max(0, Math.min(stored, 2)) : 1;
+	}
+</script>
+
 <script lang="ts">
 	// The reading mode: łacina, przekład, interlinearnie. It was a SLIDER
 	// for its first year, and the slider outlived two meanings — built for
@@ -19,25 +34,16 @@
 	// not change — 0, 1, 2 under scrutabor-help mean what they always
 	// meant, so every reader's saved choice survives both the reordering
 	// and the renaming.
-	import { onMount } from 'svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { radiogroupKeydown } from '$lib/radio-nav';
-	import { readStored, writeStored } from '$lib/storage';
+	import { writeStored } from '$lib/storage';
 
-	// The fallback matches every page's own initial state (interlinearnie,
-	// level 1) — the Ordo index renders this control unbound, and with a
-	// different fallback a first visit showed przekład there while every
-	// movement page opened at interlinearnie.
-	let { lang, value = $bindable(1) }: { lang: Lang; value?: number } = $props();
+	// The fallback is the stored mode itself, read at init (above) — the
+	// Ordo index renders this control unbound, and every bound page passes
+	// the same initialHelp(), so there is exactly one first render.
+	let { lang, value = $bindable(initialHelp()) }: { lang: Lang; value?: number } = $props();
 
 	const LEVELS = [0, 2, 1] as const;
-
-	onMount(() => {
-		const raw = readStored('scrutabor-help');
-		if (raw === null) return;
-		const stored = Number(raw);
-		if (Number.isInteger(stored)) value = Math.max(0, Math.min(stored, 2));
-	});
 
 	function choose(level: number) {
 		value = level;

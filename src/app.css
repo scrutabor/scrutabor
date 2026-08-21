@@ -270,16 +270,6 @@ em {
 	text-align: start;
 }
 
-/* The index's ONE hint line: what the setting last touched means, in the
-   book's voice, under the table rather than under each row. */
-.tabella-hint {
-	margin: 0;
-	font-size: 0.9rem;
-	color: var(--ink-soft);
-	text-align: center;
-	max-width: 34rem;
-}
-
 .tabella .row {
 	display: flex;
 	align-items: baseline;
@@ -304,7 +294,32 @@ em {
 	text-align: end;
 	font-size: 0.68rem;
 	letter-spacing: 0.1em;
+	/* its own line, not the body's 1.6: the inherited leading hung six
+	   empty pixels under a stacked label (owner, 2026-08-21 — the air
+	   under "tryb" on a phone) */
+	line-height: 1.2;
 	color: var(--ink-soft);
+	/* centred on the row, not on the words' baseline: a small-caps label
+	   whose baseline sits on a larger line reads as hanging low beside
+	   the words' ascenders (owner, 2026-08-21) — a side label wants the
+	   optical centre */
+	align-self: center;
+}
+
+/* A table of ONE row has no column to align: the reading pages' mode-only
+   table wore the shared label column as dead room on its left (owner,
+   2026-08-21). Alone, the label hugs its words and the pair centres as
+   one line. The squeezed query below still stacks it on narrow screens. */
+.tabella > .row:only-child {
+	justify-content: center;
+	/* alone, the label needs its own air: the 0.8rem that reads right
+	   inside the aligned column read tight beside centred words */
+	gap: 1.15rem;
+}
+
+.tabella > .row:only-child > .label {
+	flex: none;
+	text-align: start;
 }
 
 /* THE WORD OPTIONS every row shares — the mode's and the part's alike:
@@ -394,6 +409,13 @@ em {
    column and the words take the whole row's width (the mode words must
    hold ONE line there, which the text-size suite pins). */
 @container help (max-width: 26rem) {
+	/* On a narrow screen the content-width table stood as a pillar with
+	   paper on both sides (owner, 2026-08-21): squeezed, it takes the
+	   container's whole width, and its margins are the page's own. */
+	.tabella {
+		width: 100%;
+	}
+
 	.tabella .row {
 		flex-direction: column;
 		align-items: center;
@@ -777,6 +799,20 @@ h2 {
 	font-size: 0.85rem;
 }
 
+/* THE MODE HOLD, for the frame between paint and hydration. The
+   prerendered markup is the interlinear; a reader whose stored mode is
+   another (the pre-paint stamp in app.html knows) would watch the whole
+   prayer flash and swap — so until hydration re-renders it in their
+   mode, the text waits unpainted. Mode-1 readers and no-JS readers (no
+   stamp) see the static text immediately. visibility, not display: the
+   page keeps its height and nothing jumps. */
+html[data-help='0']:not([data-hydrated='true']) .page.reading main,
+html[data-help='2']:not([data-hydrated='true']) .page.reading main,
+html[data-help='0']:not([data-hydrated='true']) .specimen,
+html[data-help='2']:not([data-hydrated='true']) .specimen {
+	visibility: hidden;
+}
+
 .help-row {
 	/* a container, so the tabella inside can lay itself out by the room it
 	   actually has — which depends on the text size as much as the window.
@@ -989,10 +1025,6 @@ a {
 
 	.tabella .row > .label::after {
 		content: ':';
-	}
-
-	.tabella-hint {
-		display: none;
 	}
 
 	p {

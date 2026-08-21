@@ -51,6 +51,11 @@
 		color: var(--ink-soft);
 		text-decoration: none;
 		font-size: 1.05rem;
+		/* the block padding is the touch target (WCAG 2.5.8's 24px — the
+		   bare line measured 22, the geometry campaign's find), the
+		   margin gives the room back to the row */
+		padding-block: 0.25rem;
+		margin-block: -0.25rem;
 	}
 
 	.pager-link:hover {

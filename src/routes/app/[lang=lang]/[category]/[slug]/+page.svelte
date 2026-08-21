@@ -3,7 +3,7 @@
 	import { goto, replaceState } from '$app/navigation';
 	import { arrowNav } from '$lib/arrow-nav';
 	import { neighborsOf, sectionFor, textFor } from '$lib/catalog';
-	import HelpLevels from '$lib/components/HelpLevels.svelte';
+	import HelpLevels, { initialHelp } from '$lib/components/HelpLevels.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import Pager from '$lib/components/Pager.svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
@@ -69,7 +69,7 @@
 	// Three verbosity states:
 	// 0 = text only · 1 = + interlinear glosses · 2 = + translations (as
 	// always-open boxes, no toggles) and rubric narratives
-	let helpLevel = $state(1);
+	let helpLevel = $state(initialHelp());
 
 	// The panel behaves the same here as in the flow and on the landing's
 	// specimen — one document, one wiring (see lib/wordpanel).

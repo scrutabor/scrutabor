@@ -1,29 +1,16 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import PageNav from '$lib/components/PageNav.svelte';
 	import RolePicker from '$lib/components/RolePicker.svelte';
-	import DayPicker, { dayHintText } from '$lib/components/DayPicker.svelte';
+	import DayPicker from '$lib/components/DayPicker.svelte';
 	import HelpLevels from '$lib/components/HelpLevels.svelte';
 	import { dayHref } from '$lib/proper.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { ORDO } from '$lib/ordo';
-	import { dayToday } from '$lib/proprium';
 
 	let { data } = $props();
 
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
-
-	// THE DAY'S STATUS LINE. One line under the table, and it speaks only
-	// for the day: which formulary fills the order in front of the reader,
-	// or that today has none and another day can be picked. It NEVER
-	// explains the other settings — a first cut re-aimed it at whichever
-	// row was last touched, and the owner found the shifting subject
-	// confusing where the labels already say what the rows are
-	// (owner, 2026-08-21, evening).
-	let dayChosen = $state('');
-	const today = browser ? dayToday() : null;
-	const hintLine = $derived(dayHintText(lang, dayChosen, today));
 
 	// The Mass at a glance: six movements, each its own page. This is also
 	// the answer to "where am I" — a reader who looks up mid-Mass finds the
@@ -59,15 +46,10 @@
 		<div class="help-row">
 			<div class="tabella">
 				<HelpLevels {lang} />
-				<DayPicker {lang} bind:chosen={dayChosen} />
+				<DayPicker {lang} />
 				<RolePicker {lang} />
 				<RolePicker {lang} kind="mass" />
 			</div>
-			<!-- The day's status, and only when it is news: no formulary
-			     today, a feria's week, a day ahead. A chosen day says
-			     nothing — the table already names it. aria-live, because
-			     picking a day changes it with no other announcement. -->
-			{#if hintLine}<p class="tabella-hint" aria-live="polite">{hintLine}</p>{/if}
 		</div>
 
 		<div class="movements">

@@ -33,6 +33,15 @@
 				if (!steps[r]) r = 'normal';
 				document.documentElement.dataset.reading = r;
 				document.documentElement.style.fontSize = steps[r];
+				// …and the reading MODE. The prerendered markup is the
+				// interlinear (the default); a reader whose stored mode is
+				// another would watch it flash and swap at mount, now that
+				// the bare modes read at their own scale. The stamp lets a
+				// CSS rule hold the text back until hydration re-renders it
+				// in their mode (app.css), and the components read the same
+				// stored value at init, so hydration is the ONE re-render.
+				var h = localStorage.getItem('scrutabor-help');
+				document.documentElement.dataset.help = h === '0' || h === '2' ? h : '1';
 			} catch (e) {
 				/* keep the static default */
 			}

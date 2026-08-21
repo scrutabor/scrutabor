@@ -29,7 +29,8 @@
 		collapsedHide,
 		litanyColumns = false,
 		showSpeakerNames = true,
-		hideOpeningRubric = false
+		hideOpeningRubric = false,
+		showTranslationSources = true
 	}: {
 		doc: TextDocument;
 		gloss: GlossDocument;
@@ -63,6 +64,10 @@
 		/** A standalone Mass prayer keeps the opening rubric's deep-link
 		 * anchor, while leaving its continuous-rite direction to the Ordo. */
 		hideOpeningRubric?: boolean;
+		/** The landing specimen favours the always-open analysis box: its
+		 * translation-sources disclosure pushed the box below the fold
+		 * (owner, 2026-08-21), and the panel carries its own sources row. */
+		showTranslationSources?: boolean;
 	} = $props();
 
 	// A dot, not a colon: it is unreserved in a URL, so `?w=credo.w001`
@@ -230,7 +235,7 @@
 	{@render flow()}
 {/if}
 
-{#if helpLevel >= 2 && translationCitations.length}
+{#if helpLevel >= 2 && showTranslationSources && translationCitations.length}
 	<div class="translation-sources">
 		<SourceNotes citations={translationCitations} {lang} centered />
 	</div>
@@ -1110,10 +1115,57 @@
 			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 			column-gap: 2.6rem;
 			align-items: baseline;
-			/* priced on the BARE scale the text actually reads at — on the
-			   study scale this was a third too much air between verses
-			   (owner, same morning) */
-			row-gap: calc(var(--reading-bare) * 0.55);
+		}
+
+		/* NO BLANKET ROW-GAP. A grid inserts its gap between EVERY row and
+		   collapses no margins — so the rubrics, the speaker labels and
+		   the folded prayers, whose flow margins were priced for collapse,
+		   all drifted apart in columns (the geometry campaign measured
+		   49px where flow shows 23). The verse rows carry the rhythm
+		   themselves — priced on the BARE scale (owner: on the study scale
+		   it was a third too much air) — and the pair rules below give the
+		   full-width children exactly the distances flow's collapse gave
+		   them. */
+		.columns > .verse,
+		.columns > .seg-extra {
+			margin-bottom: calc(var(--reading-bare) * 0.55);
+		}
+
+		/* before a full-width child, the verse ROW yields its margin — in
+		   flow it collapsed into the child's larger one. Both cells of a
+		   translated row must yield: the verse's next sibling is its own
+		   translation, so the rubric hides one sibling further on, and a
+		   verse that kept its margin stretched the row track and pushed
+		   the rubric 50px from ink the flow keeps at 29 (the campaign's
+		   probe, then the centrality test). */
+		.columns > .verse:has(+ :is(.rubric, .who, .repeated-prayer)),
+		.columns > .verse:has(+ .seg-extra + :is(.rubric, .who, .repeated-prayer)),
+		.columns > .seg-extra:has(+ :is(.rubric, .who, .repeated-prayer)) {
+			margin-bottom: 0;
+		}
+
+		/* between two full-width children only the first's bottom margin
+		   speaks, as collapse decided; two rubrics keep the extra
+		   --gloss-gap their flow pair spends */
+		.columns > :is(.rubric, .who, .repeated-prayer) + :is(.rubric, .who, .repeated-prayer) {
+			margin-top: 0;
+		}
+
+		.columns > .rubric + .rubric {
+			margin-top: calc(var(--reading) * var(--gloss-gap));
+		}
+
+		/* the grid's edges defer to the margins OUTSIDE it, the way flow
+		   collapse always did — without this the first rubric's margin
+		   stacked on top of the container's own seam and the section note
+		   drifted a full rubric-margin away in przekład alone (the
+		   owner's find, measured by the campaign) */
+		.columns > :first-child {
+			margin-top: 0;
+		}
+
+		.columns > :last-child {
+			margin-bottom: 0;
 		}
 
 		.columns > * {
@@ -1122,12 +1174,12 @@
 
 		.columns > .verse {
 			grid-column: 1;
-			margin-block: 0;
+			margin-top: 0;
 		}
 
 		.columns > .seg-extra {
 			grid-column: 2;
-			margin: 0;
+			margin-top: 0;
 			padding-inline-start: 0;
 		}
 

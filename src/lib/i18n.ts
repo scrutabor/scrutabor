@@ -53,6 +53,8 @@ export interface Messages {
 	ordoDescription: string;
 	ordoProper: string;
 	dayLabel: string;
+	/** The day-status icon and its sheet: which week, or why no texts. */
+	dayStatusLabel: string;
 	dayNone: string;
 	dayLoading: string;
 	dayFailed: string;
@@ -161,6 +163,7 @@ const MESSAGES: Record<Lang, Messages> = {
 			'Cały porządek Mszy w rycie z 1962 roku, część po części — z tekstami stałymi i miejscami, w których wchodzą teksty własne dnia.',
 		ordoProper: 'z formularza dnia',
 		dayLabel: 'dzień',
+		dayStatusLabel: 'o dniu',
 		dayNone: 'bez formularza',
 		dayLoading: 'wczytywanie',
 		dayFailed: 'nie udało się wczytać',
@@ -168,7 +171,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayInPlace: 'teksty dnia są na stronie',
 		dayPartial: '(część tekstów)',
 		dayIsToday: 'dziś ·',
-		dayAhead: 'formularza na dziś jeszcze tu nie ma — wybierz inny dzień',
+		dayAhead: 'formularz na ten dzień nie jest jeszcze w tym wydaniu — można wybrać inny dzień',
 		dayWeekOf: 'dziś dzień powszedni — ostatnia niedziela to',
 		dayHint: {
 			none: 'sam porządek Mszy, bez tekstów zmiennych'
@@ -280,6 +283,7 @@ const MESSAGES: Record<Lang, Messages> = {
 			'The whole order of Mass in the 1962 rite, part by part — the fixed texts, and where the day’s own texts belong.',
 		ordoProper: 'from the day’s formulary',
 		dayLabel: 'day',
+		dayStatusLabel: 'about the day',
 		dayNone: 'no formulary',
 		dayLoading: 'loading',
 		dayFailed: 'could not be loaded',
@@ -287,7 +291,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayInPlace: 'the day’s texts are on the page',
 		dayPartial: '(some texts)',
 		dayIsToday: 'today ·',
-		dayAhead: 'today’s formulary is not here yet — choose another day',
+		dayAhead: 'the formulary for this day is not yet in this edition — another day can be chosen',
 		dayWeekOf: 'today is a weekday — the last Sunday:',
 		dayHint: {
 			none: 'the order of Mass alone, without the day’s own texts'
