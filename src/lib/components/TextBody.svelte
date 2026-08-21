@@ -1119,6 +1119,14 @@
 		margin-bottom: 0;
 	}
 
+	/* …and in a translated LAST row both cells yield, or the verse's row
+	   margin stretches the final track and the seam grows by exactly one
+	   verse-rhythm in the columns face alone (measured 36.3 where every
+	   other mode reads 25.6). */
+	.columns > .verse:has(+ .seg-extra:last-child) {
+		margin-bottom: 0;
+	}
+
 	@container bilingual (min-width: 44rem) {
 		.columns {
 			max-width: none;

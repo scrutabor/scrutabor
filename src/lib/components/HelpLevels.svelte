@@ -48,6 +48,9 @@
 	function choose(level: number) {
 		value = level;
 		writeStored('scrutabor-help', String(value));
+		// the pre-paint stamp stays LIVE, so mode-aware page CSS (the
+		// specimen's ink-equal panel seam, app.css) follows the control
+		document.documentElement.dataset.help = String(value);
 	}
 
 	let group = $state<HTMLElement | undefined>();

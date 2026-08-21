@@ -813,6 +813,18 @@ html[data-help='2']:not([data-hydrated='true']) .specimen {
 	visibility: hidden;
 }
 
+/* THE SPECIMEN SEAM IS INK-EQUAL IN EVERY MODE. The interlinear's gloss
+   row hangs below the last verse's box by --gloss-gap, eating the inline
+   panel's seam to 22px of ink where the other modes read 25.6 — and the
+   owner watched the analysis box jitter as the modes toggled. The stamp
+   is live (choose() re-writes it), so the study mode pays the hang back
+   and the panel keeps one distance from the lowest ink, whatever mode
+   painted it. */
+html[data-help='1'] .sheet.inline.word-panel-inline {
+	/* outweighs the component's own .sheet.inline margin shorthand */
+	margin-top: calc(1.6rem + var(--reading) * var(--gloss-gap));
+}
+
 .help-row {
 	/* a container, so the tabella inside can lay itself out by the room it
 	   actually has — which depends on the text size as much as the window.
