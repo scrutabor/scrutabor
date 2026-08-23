@@ -476,11 +476,14 @@ test('the shared bibliography exposes exact sources and their uses', async ({ pa
 	const wujek = page.locator('section', {
 		hasText: 'Biblia w przekładzie ks. Jakuba Wujka (1923)'
 	});
-	const namingVerse = wujek.locator('li', { hasText: 'Ps 118, 34' });
-	await expect(namingVerse).toContainText('Ps 118, 34');
+	const namingStanza = wujek.locator('li', {
+		hasText: 'Psalm 118:33–40, DjVu scan 588'
+	});
+	await expect(namingStanza).toContainText('Psalm 118:33–40, DjVu scan 588');
+	await expect(namingStanza).toContainText('(8)');
 	await expect(
-		namingVerse.getByRole('link', { name: 'Psalmus 118, HE', exact: true })
-	).toHaveAttribute('href', /psalmi\/118-he(?:\.html)?#v34$/);
+		namingStanza.getByRole('link', { name: 'Psalmus 118, HE', exact: true })
+	).toHaveAttribute('href', /psalmi\/118-he(?:\.html)?#v33$/);
 });
 
 test('the edition page explains the sources and carries the working label', async ({ page }) => {

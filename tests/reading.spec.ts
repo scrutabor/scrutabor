@@ -106,7 +106,7 @@ test('a prayer identifies its translation sources once after the text', async ({
 	await expect(sources.getByText('źródła', { exact: true })).toBeVisible();
 	await sources.locator('summary').click();
 	await expect(sources).toContainText('Biblia w przekładzie ks. Jakuba Wujka (1923)');
-	await expect(sources).toContainText('Ps 118, 34');
+	await expect(sources).toContainText('Psalm 118:33–40, DjVu scan 588');
 	await expect(sources.getByRole('link', { name: 'pełna bibliografia' })).toHaveAttribute(
 		'href',
 		'/app/pl/bibliographia'
