@@ -85,6 +85,15 @@ export type MassForm = 'cantu' | 'lecta';
 export interface Participation {
 	gradus?: number;
 	source: string;
+	/** A faculty subject to preparation or selection, not an unconditional
+	 * congregational response (corpus SCHEMA.md 0.15.0). */
+	conditional?: true;
+}
+
+/** A form-specific exception to a segment's base ritual delivery. */
+export interface Delivery {
+	speaker?: Speaker;
+	voice?: Voice;
 }
 
 export interface Segment {
@@ -93,6 +102,7 @@ export interface Segment {
 	verse?: number;
 	speaker?: Speaker;
 	voice?: Voice;
+	delivery?: Partial<Record<MassForm, Delivery>>;
 	text?: string;
 	words?: Word[];
 	analysis?: Analysis;

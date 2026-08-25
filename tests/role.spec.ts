@@ -71,6 +71,32 @@ test('a line the reader answers is marked as theirs', async ({ page }) => {
 	expect(await page.locator('.verse.answer').count()).toBeGreaterThan(0);
 });
 
+test('a Proper chant resolves delivery and conditional participation by Mass form', async ({
+	page
+}) => {
+	await page.goto('/app/pl/proprium/dominica-iv-adventus-introitus');
+
+	// Proper pages need the controls because both the delivery and the
+	// faithful's faculty change with the form of Mass.
+	await expect(page.getByRole('radio', { name: 'wierni' })).toBeVisible();
+	await expect(page.getByRole('radio', { name: 'śpiewana' })).toBeVisible();
+
+	// At sung Mass the schola delivers the chant. DMS 25 c permits trained
+	// faithful to join; it does not make the line their unconditional answer.
+	await expect(page.locator('.who-name').first()).toHaveText('schola');
+	await expect(page.locator('.who-join').first()).toHaveText('wierni mogą dołączyć');
+	await expect(page.locator('.verse.answer')).toHaveCount(0);
+	await expect(page.locator('.verse .mark').first()).toHaveText('R.');
+
+	// The same text is read by the priest at low Mass, while the fourth-degree
+	// faculty remains explicitly conditional.
+	await page.getByRole('radio', { name: 'cicha' }).click();
+	await expect(page.locator('.who-name').first()).toHaveText('kapłan');
+	await expect(page.locator('.who-join').first()).toHaveText('wierni mogą dołączyć');
+	await expect(page.locator('.verse.answer')).toHaveCount(0);
+	await expect(page.locator('.verse .mark').first()).toHaveText('V.');
+});
+
 test('a dialogue is marked V. and R. down the page, as the books mark it', async ({ page }) => {
 	// versiculus and responsum, in red, on EVERY line of an exchange — the
 	// marks the typical edition prints and the ones this corpus's own

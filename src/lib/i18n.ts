@@ -96,6 +96,9 @@ export interface Messages {
 	/** Marks the responses EVERYONE makes, the first degree of the 1958
 	 * instruction — the answer to a newcomer's real question. */
 	everyone: string;
+	/** A conditional faculty: available to the faithful, but not their
+	 * unconditional response. */
+	mayJoin: string;
 	/** What the reader in the pew is called over their own lines. The
 	 * corpus's own word for that speaker is `populus`, printed as lud; this
 	 * is the word the picker uses, so that the setting and the page agree. */
@@ -214,6 +217,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		massLabel: 'msza',
 		massForms: { cantu: 'śpiewana', lecta: 'cicha' },
 		everyone: 'odpowiadają wszyscy',
+		mayJoin: 'wierni mogą dołączyć',
 		faithful: 'wierni',
 		faithfulWith: {
 			sacerdos: 'kapłan i wierni',
@@ -334,6 +338,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		massLabel: 'Mass',
 		massForms: { cantu: 'sung', lecta: 'low' },
 		everyone: 'everyone answers',
+		mayJoin: 'the faithful may join',
 		faithful: 'the faithful',
 		faithfulWith: {
 			sacerdos: 'priest and faithful',

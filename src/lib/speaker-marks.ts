@@ -12,6 +12,13 @@
  */
 import type { MassForm, Segment } from '$lib/corpus';
 
+/** Resolve who delivers a segment in the selected form of Mass. The stored
+ * speaker and voice are the low-Mass base; the corpus names only exceptions. */
+export function inMassForm(segment: Segment, form: MassForm): Segment {
+	const delivery = segment.delivery?.[form];
+	return delivery ? { ...segment, ...delivery } : segment;
+}
+
 /** How often the voice changes hands over the whole text. */
 export function turns(segments: Segment[]): number {
 	const speakers = segments.filter((s) => s.type === 'verse' && s.speaker).map((s) => s.speaker);
@@ -102,7 +109,30 @@ export function saidByEveryone(segments: Segment[]): boolean {
  */
 export function isSharedPrayer(segments: Segment[], form: MassForm): boolean {
 	const verses = segments.filter((segment) => segment.type === 'verse');
-	return verses.length >= 2 && verses.every((segment) => segment.participation?.[form]);
+	return (
+		verses.length >= 2 &&
+		verses.every((segment) => {
+			const participation = segment.participation?.[form];
+			return participation !== undefined && participation.conditional !== true;
+		})
+	);
+}
+
+/** Name a conditional faculty at the start of each uninterrupted run, and
+ * again after a rubric has broken the reader's place in the text. */
+export function namesConditionalParticipation(
+	segments: Segment[],
+	i: number,
+	form: MassForm
+): boolean {
+	if (segments[i]?.participation?.[form]?.conditional !== true) return false;
+	if (afterRubric(segments, i)) return true;
+	for (let j = i - 1; j >= 0; j--) {
+		if (segments[j].type === 'verse') {
+			return segments[j].participation?.[form]?.conditional !== true;
+		}
+	}
+	return true;
 }
 
 /** Segment index where each speaker first appears. */

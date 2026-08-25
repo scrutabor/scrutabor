@@ -12,9 +12,11 @@ import {
 	firstVerseWithInitial,
 	hasAnswers,
 	hasParticipation,
+	inMassForm,
 	isDialogue,
 	isSharedPrayer,
 	marked,
+	namesConditionalParticipation,
 	namesSpeaker,
 	namesVoice,
 	saidByEveryone,
@@ -83,6 +85,52 @@ describe('a prayer shared with the faithful', () => {
 	it('does not generalise from only part of a longer prayer', () => {
 		const pater = [participating('sacerdos', ['lecta']), verse('sacerdos')];
 		expect(isSharedPrayer(pater, 'lecta')).toBe(false);
+	});
+
+	it('does not turn a conditional faculty into a shared prayer', () => {
+		const proper = [
+			{
+				...participating('sacerdos', ['cantu']),
+				participation: { cantu: { source: 'DMS 25 c', conditional: true } }
+			},
+			{
+				...participating('sacerdos', ['cantu']),
+				participation: { cantu: { source: 'DMS 25 c', conditional: true } }
+			}
+		] as Segment[];
+		expect(isSharedPrayer(proper, 'cantu')).toBe(false);
+	});
+});
+
+describe('delivery in each form of Mass', () => {
+	it('keeps the low-Mass base and applies the sung-Mass override', () => {
+		const proper = {
+			...verse('sacerdos', { voice: 'clara' }),
+			delivery: { cantu: { speaker: 'schola', voice: 'cantus' } }
+		} as Segment;
+		expect(inMassForm(proper, 'lecta').speaker).toBe('sacerdos');
+		expect(inMassForm(proper, 'lecta').voice).toBe('clara');
+		expect(inMassForm(proper, 'cantu').speaker).toBe('schola');
+		expect(inMassForm(proper, 'cantu').voice).toBe('cantus');
+	});
+});
+
+describe('naming a conditional faculty', () => {
+	const conditional = (): Segment =>
+		({
+			...verse('sacerdos'),
+			participation: { lecta: { source: 'DMS 31 d', conditional: true } }
+		}) as Segment;
+
+	it('names only the start of an uninterrupted run', () => {
+		const segs = [conditional(), conditional()];
+		expect(namesConditionalParticipation(segs, 0, 'lecta')).toBe(true);
+		expect(namesConditionalParticipation(segs, 1, 'lecta')).toBe(false);
+	});
+
+	it('names it again after a rubric', () => {
+		const segs = [conditional(), rubric(), conditional()];
+		expect(namesConditionalParticipation(segs, 2, 'lecta')).toBe(true);
 	});
 });
 

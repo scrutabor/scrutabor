@@ -34,14 +34,11 @@
 	// with the server — hiding the controls made the sung-Mass label
 	// "server" look like an unconditional claim.
 	const takesPart = $derived(
-		data.category === 'ordinarium' &&
-			(new Set(
-				doc.segments.filter((sg) => sg.type === 'verse' && sg.speaker).map((sg) => sg.speaker)
-			).size > 1 ||
-				doc.segments.some(
-					(sg) =>
-						sg.type === 'verse' && sg.participation && Object.keys(sg.participation).length > 0
-				))
+		new Set(doc.segments.filter((sg) => sg.type === 'verse' && sg.speaker).map((sg) => sg.speaker))
+			.size > 1 ||
+			doc.segments.some(
+				(sg) => sg.type === 'verse' && sg.participation && Object.keys(sg.participation).length > 0
+			)
 	);
 	const gloss = $derived(data.gloss);
 	// A reading names the text itself ("Chwała Ojcu"), not merely

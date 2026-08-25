@@ -101,8 +101,17 @@ const OWNED: Record<Role, ReadonlySet<string>> = {
  * are at, which is why the form is asked for (corpus SCHEMA.md 0.10.0).
  */
 export function isYours(seg: Segment, of: Role, form: MassForm): boolean {
-	if (of === 'populus') return seg.participation?.[form] !== undefined;
+	if (of === 'populus') {
+		const participation = seg.participation?.[form];
+		return participation !== undefined && participation.conditional !== true;
+	}
 	return seg.speaker !== undefined && OWNED[of].has(seg.speaker);
+}
+
+/** The faithful are permitted to join, but the line is not presented as
+ * their unconditional answer. */
+export function mayJoin(seg: Segment, form: MassForm): boolean {
+	return seg.participation?.[form]?.conditional === true;
 }
 
 /**
@@ -113,5 +122,6 @@ export function isYours(seg: Segment, of: Role, form: MassForm): boolean {
  * that is this one.
  */
 export function isEveryonesResponse(seg: Segment, form: MassForm): boolean {
-	return seg.participation?.[form]?.gradus === 1;
+	const participation = seg.participation?.[form];
+	return participation?.gradus === 1 && participation.conditional !== true;
 }

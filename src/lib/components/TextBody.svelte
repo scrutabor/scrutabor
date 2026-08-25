@@ -4,7 +4,7 @@
 	import { M, type Lang } from '$lib/i18n';
 	import { massForm } from '$lib/mass-form.svelte';
 	import { collectTranslationCitations, litanyRows, type LitanyRow } from '$lib/reading-text';
-	import { isEveryonesResponse, isYours, role } from '$lib/role.svelte';
+	import { isEveryonesResponse, isYours, mayJoin, role } from '$lib/role.svelte';
 	import { initialFit } from '$lib/reading-geometry';
 	import * as marks from '$lib/speaker-marks';
 
@@ -107,7 +107,7 @@
 	// opens with the initial — are pure functions of the segments and live in
 	// $lib/speaker-marks with their reasons and their tests. What is here is
 	// only the binding of them to this document.
-	const segs = $derived(doc.segments);
+	const segs = $derived(doc.segments.map((segment) => marks.inMassForm(segment, massForm.value)));
 	// A one-line fixed response has only one rubrical speaker, but its
 	// participation still makes it an answer the reader needs identified.
 	const answers = $derived(marks.hasAnswers(segs) || marks.hasParticipation(segs));
@@ -200,15 +200,15 @@
 {/snippet}
 
 {#snippet flow()}
-	{#each rows as row (doc.segments[row.primary].id)}
-		{@const primary = doc.segments[row.primary]}
+	{#each rows as row (segs[row.primary].id)}
+		{@const primary = segs[row.primary]}
 		{#if row.response !== undefined}
 			<div class="litany-pair">
 				<div class="litany-cell litany-invocation">
 					{@render segment(primary, row.primary)}
 				</div>
 				<div class="litany-cell litany-response">
-					{@render segment(doc.segments[row.response], row.response)}
+					{@render segment(segs[row.response], row.response)}
 				</div>
 			</div>
 		{:else}
@@ -260,6 +260,10 @@
 		     the celebrant's lines keep his name for everyone. -->
 		{@const yours = mine && role.value === 'populus'}
 		{@const everyones = mine && isEveryonesResponse(seg, massForm.value)}
+		{@const joinable =
+			role.value === 'populus' &&
+			mayJoin(seg, massForm.value) &&
+			marks.namesConditionalParticipation(segs, i, massForm.value)}
 		{@const nameSpeaker = sharedPrayer ? i === firstSharedVerse : namesSpeaker(i)}
 		{@const speakerName =
 			yours && sharedPrayer && sharedSpeaker
@@ -273,7 +277,7 @@
 							: seg.speaker
 								? M[lang].speakers[seg.speaker]
 								: undefined}
-		{#if (showSpeakerNames && nameSpeaker) || showVoice}
+		{#if (showSpeakerNames && nameSpeaker) || showVoice || joinable}
 			<p class="who" class:yours={mine}>
 				{#if showSpeakerNames && nameSpeaker && speakerName}<span class="who-name"
 						>{speakerName}</span
@@ -284,6 +288,7 @@
 				     which ones everybody is about to, and this is the answer
 				     to that one. -->
 				{#if everyones}<span class="who-all">{M[lang].everyone}</span>{/if}
+				{#if joinable}<span class="who-join">{M[lang].mayJoin}</span>{/if}
 				{#if showVoice && seg.voice && seg.voice !== 'clara'}<span class="who-voice"
 						>{M[lang].voices[seg.voice]}</span
 					>{/if}
