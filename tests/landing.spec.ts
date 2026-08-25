@@ -125,13 +125,12 @@ test.describe('landing @online', () => {
 		await expect(panel.locator('.form')).toHaveText('Da');
 	});
 
-	test('changing the specimen word keeps the tall-screen composition still', async ({ page }) => {
-		// The landing is vertically composed as one title page. Its inline
-		// analysis varies substantially by word; if that changing height feeds
-		// the page's centring calculation, everything above it moves one way and
-		// the footer moves the other on a tall monitor. Walk every word in both
-		// languages and at both ends of the reading-size control, rather than
-		// protecting only the three forms that first exposed the movement.
+	test('the specimen grows downward without moving preceding content', async ({ page }) => {
+		// The inline analysis varies substantially by word. It belongs to normal
+		// document flow: content preceding it must stay anchored, while the footer
+		// must follow its real height. Walk every word in both languages and at
+		// both ends of the reading-size control rather than protecting only the
+		// three forms that first exposed the movement on a tall monitor.
 		await page.setViewportSize({ width: 3840, height: 2160 });
 		for (const size of ['normal', 'largest']) {
 			for (const lang of ['pl', 'en']) {
@@ -150,13 +149,19 @@ test.describe('landing @online', () => {
 							document.querySelector(selector)!.getBoundingClientRect().top + scrollY;
 						const specimen = top('.specimen');
 						const panel = top('.word-panel-inline');
+						const panelHeight = document
+							.querySelector('.word-panel-inline')!
+							.getBoundingClientRect().height;
+						const footer = top('footer');
 						return {
 							title: top('main h1'),
 							ways: top('.ways'),
 							specimen: top('.specimen-section'),
 							panel,
+							panelHeight,
 							panelOffset: panel - specimen,
-							footer: top('footer'),
+							footer,
+							footerAfterPanel: footer - panel - panelHeight,
 							analysisHeight: document
 								.querySelector('.word-panel-inline .inner')!
 								.getBoundingClientRect().height
@@ -177,16 +182,24 @@ test.describe('landing @online', () => {
 					spread(samples, 'analysisHeight'),
 					`${lang}/${size}: the test words did not exercise different analysis heights`
 				).toBeGreaterThan(20);
-				for (const anchor of ['title', 'ways', 'specimen', 'panel', 'footer']) {
+				for (const anchor of ['title', 'ways', 'specimen', 'panel']) {
 					expect(
 						spread(samples, anchor),
 						`${lang}/${size}: ${anchor} moved when the selected word changed`
 					).toBeLessThanOrEqual(1);
 				}
+				expect(
+					spread(samples, 'footer'),
+					`${lang}/${size}: the footer did not follow the changing analysis height`
+				).toBeGreaterThan(20);
+				expect(
+					spread(samples, 'footerAfterPanel'),
+					`${lang}/${size}: the spacing after the analysis changed`
+				).toBeLessThanOrEqual(1);
 
-				// The reading modes change the height above the panel as well. That
-				// movement belongs inside the reserved specimen; it must not re-aim
-				// the title-page composition around the new total height.
+				// Reading modes change the text above the panel. The panel and footer
+				// should both move down in flow, without re-aiming the title or the
+				// start of the specimen around the new total height.
 				const modeSamples: Array<Record<string, number>> = [];
 				for (const level of [0, 1, 2]) {
 					await page.locator(`.specimen .help [data-level="${level}"]`).click();
@@ -196,12 +209,22 @@ test.describe('landing @online', () => {
 					spread(modeSamples, 'panelOffset'),
 					`${lang}/${size}: the modes did not exercise different text heights`
 				).toBeGreaterThan(20);
-				for (const anchor of ['title', 'ways', 'specimen', 'footer']) {
+				for (const anchor of ['title', 'ways', 'specimen']) {
 					expect(
 						spread(modeSamples, anchor),
 						`${lang}/${size}: ${anchor} moved when the reading mode changed`
 					).toBeLessThanOrEqual(1);
 				}
+				for (const follower of ['panel', 'footer']) {
+					expect(
+						spread(modeSamples, follower),
+						`${lang}/${size}: ${follower} did not follow the changing specimen text`
+					).toBeGreaterThan(20);
+				}
+				expect(
+					spread(modeSamples, 'footerAfterPanel'),
+					`${lang}/${size}: the spacing after the panel changed with the reading mode`
+				).toBeLessThanOrEqual(1);
 			}
 		}
 	});
