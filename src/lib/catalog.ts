@@ -59,6 +59,12 @@ const CATALOG_SOURCE: CatalogSection[] = [
 			},
 			{
 				category: 'orationes',
+				slug: 'magnificat',
+				title: 'Magníficat',
+				localizedTitle: { pl: 'Magnificat (Pieśń Maryi)', en: 'The Magnificat' }
+			},
+			{
+				category: 'orationes',
 				slug: 'angelus-domini',
 				title: 'Ángelus Dómini',
 				localizedTitle: { pl: 'Anioł Pański', en: 'The Angelus' }
