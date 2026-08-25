@@ -41,6 +41,12 @@ const CATALOG_SOURCE: CatalogSection[] = [
 			},
 			{
 				category: 'orationes',
+				slug: 'signum-crucis',
+				title: 'Signum crucis',
+				localizedTitle: { pl: 'Znak krzyża', en: 'Sign of the Cross' }
+			},
+			{
+				category: 'orationes',
 				slug: 'symbolum-apostolorum',
 				title: 'Symbolum Apostolórum',
 				localizedTitle: { pl: 'Skład Apostolski', en: 'Apostles’ Creed' }
