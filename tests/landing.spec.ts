@@ -125,6 +125,87 @@ test.describe('landing @online', () => {
 		await expect(panel.locator('.form')).toHaveText('Da');
 	});
 
+	test('changing the specimen word keeps the tall-screen composition still', async ({ page }) => {
+		// The landing is vertically composed as one title page. Its inline
+		// analysis varies substantially by word; if that changing height feeds
+		// the page's centring calculation, everything above it moves one way and
+		// the footer moves the other on a tall monitor. Walk every word in both
+		// languages and at both ends of the reading-size control, rather than
+		// protecting only the three forms that first exposed the movement.
+		await page.setViewportSize({ width: 3840, height: 2160 });
+		for (const size of ['normal', 'largest']) {
+			for (const lang of ['pl', 'en']) {
+				await page.goto(`/${lang}`);
+				await page.evaluate((step) => localStorage.setItem('scrutabor-reading', step), size);
+				await page.reload();
+
+				const ids = await page
+					.locator('.specimen button[id^="w"]')
+					.evaluateAll((words) => words.map((word) => word.id));
+				expect(ids).toHaveLength(14);
+
+				const readGeometry = () =>
+					page.evaluate(() => {
+						const top = (selector: string) =>
+							document.querySelector(selector)!.getBoundingClientRect().top + scrollY;
+						const specimen = top('.specimen');
+						const panel = top('.word-panel-inline');
+						return {
+							title: top('main h1'),
+							ways: top('.ways'),
+							specimen: top('.specimen-section'),
+							panel,
+							panelOffset: panel - specimen,
+							footer: top('footer'),
+							analysisHeight: document
+								.querySelector('.word-panel-inline .inner')!
+								.getBoundingClientRect().height
+						};
+					});
+
+				const samples: Array<Record<string, number>> = [];
+				for (const id of ids) {
+					await page.locator(`#${id}`).click();
+					samples.push(await readGeometry());
+				}
+
+				const spread = (rows: Array<Record<string, number>>, field: string) => {
+					const values = rows.map((sample) => sample[field]);
+					return Math.max(...values) - Math.min(...values);
+				};
+				expect(
+					spread(samples, 'analysisHeight'),
+					`${lang}/${size}: the test words did not exercise different analysis heights`
+				).toBeGreaterThan(20);
+				for (const anchor of ['title', 'ways', 'specimen', 'panel', 'footer']) {
+					expect(
+						spread(samples, anchor),
+						`${lang}/${size}: ${anchor} moved when the selected word changed`
+					).toBeLessThanOrEqual(1);
+				}
+
+				// The reading modes change the height above the panel as well. That
+				// movement belongs inside the reserved specimen; it must not re-aim
+				// the title-page composition around the new total height.
+				const modeSamples: Array<Record<string, number>> = [];
+				for (const level of [0, 1, 2]) {
+					await page.locator(`.specimen .help [data-level="${level}"]`).click();
+					modeSamples.push(await readGeometry());
+				}
+				expect(
+					spread(modeSamples, 'panelOffset'),
+					`${lang}/${size}: the modes did not exercise different text heights`
+				).toBeGreaterThan(20);
+				for (const anchor of ['title', 'ways', 'specimen', 'footer']) {
+					expect(
+						spread(modeSamples, anchor),
+						`${lang}/${size}: ${anchor} moved when the reading mode changed`
+					).toBeLessThanOrEqual(1);
+				}
+			}
+		}
+	});
+
 	test('a lemma opened from the specimen has a stable prayer-book home', async ({ page }) => {
 		await page.goto('/pl');
 		await page.locator('aside.word-panel-inline a[href="/app/pl/lemma/scrutor"]').click();

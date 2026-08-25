@@ -458,6 +458,23 @@
 		text-align: left;
 	}
 
+	/* A STABLE STAGE for the live specimen. The page is vertically composed
+	   as one title page, so letting the specimen's changing intrinsic height
+	   feed that centring calculation moves every preceding line by half the
+	   difference and the footer by half in the opposite direction. The
+	   specimen therefore reserves its tallest real state once there is room:
+	   all fourteen words, both languages, all three reading modes and every
+	   reading-size step fit within 36.5rem at the panel's desktop measure.
+	   rem is deliberate — the reservation grows with the same root-size knob
+	   as the analysis it contains. Narrow screens already exceed the viewport
+	   and flow from the top; withholding the reservation there avoids adding
+	   empty scrolling space where centring cannot cause the fault. */
+	@media (min-width: 48rem) {
+		.specimen {
+			min-block-size: 36.5rem;
+		}
+	}
+
 	/* The mode control's own container, as .help-row is inside the book: the
 	   control stacks its labels by the room it has, and on this page it had
 	   no container to ask, so it never stacked and "full translation" ran
