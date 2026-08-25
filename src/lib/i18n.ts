@@ -24,6 +24,9 @@ export interface Messages {
 	textSizes: { normal: string; larger: string; largest: string };
 	langMenuAria: string;
 	close: string;
+	updateAvailable: string;
+	updateReload: string;
+	updateReloading: string;
 	panelAria: string;
 	wordContextLabel: string;
 	wordEntryLabel: string;
@@ -132,6 +135,9 @@ const MESSAGES: Record<Lang, Messages> = {
 		textSizes: { normal: 'normalne', larger: 'większe', largest: 'największe' },
 		langMenuAria: 'wybór języka',
 		close: 'zamknij',
+		updateAvailable: 'Nowa wersja jest gotowa.',
+		updateReload: 'Wczytaj',
+		updateReloading: 'Wczytywanie…',
 		panelAria: 'analiza słowa',
 		wordContextLabel: 'znaczenie w kontekście',
 		wordEntryLabel: 'hasło',
@@ -253,6 +259,9 @@ const MESSAGES: Record<Lang, Messages> = {
 		textSizes: { normal: 'normal', larger: 'larger', largest: 'largest' },
 		langMenuAria: 'language selection',
 		close: 'close',
+		updateAvailable: 'A new version is ready.',
+		updateReload: 'Reload',
+		updateReloading: 'Reloading…',
 		panelAria: 'word analysis',
 		wordContextLabel: 'meaning in context',
 		wordEntryLabel: 'dictionary entry',

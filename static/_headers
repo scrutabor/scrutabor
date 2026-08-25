@@ -8,6 +8,12 @@
 /_app/immutable/*
 	Cache-Control: public, max-age=31536000, immutable
 
+# The worker is the version switch for the offline book. Its own update check
+# must always reach the deployed release; the pages and hashed assets it owns
+# remain cached according to their separate policies.
+/service-worker.js
+	Cache-Control: no-cache, no-store, must-revalidate
+
 # HSTS: the http:// request already 301s to https, but without this header
 # the FIRST request of every new visitor is unprotected. www is the only
 # subdomain and serves this same project over https.

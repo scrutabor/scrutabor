@@ -5,6 +5,10 @@
 import { expect, test } from './fixtures';
 
 test('a first web visit installs the shell, not the book @online', async ({ page }) => {
+	await page.addInitScript(() => {
+		const key = 'scrutabor-test-document-loads';
+		sessionStorage.setItem(key, String(Number(sessionStorage.getItem(key) ?? '0') + 1));
+	});
 	await page.goto('/app/en');
 	const scope = await page.evaluate(() =>
 		navigator.serviceWorker.ready.then((r) => new URL(r.scope).pathname)
@@ -28,6 +32,12 @@ test('a first web visit installs the shell, not the book @online', async ({ page
 	// nor is the landing, which lives outside the worker's world entirely
 	expect(cached.filter((p) => /^\/(pl|en)(\/|$)|^\/$/.test(p))).toEqual([]);
 	expect(cached.length).toBeLessThan(120);
+
+	await expect.poll(() => page.evaluate(() => !!navigator.serviceWorker.controller)).toBe(true);
+	expect(await page.evaluate(() => sessionStorage.getItem('scrutabor-test-document-loads'))).toBe(
+		'1'
+	);
+	await expect(page.locator('.update-notice')).toHaveCount(0);
 });
 
 test('a page the reader opens is kept for them @online', async ({ page, context }) => {

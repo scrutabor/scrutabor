@@ -51,6 +51,7 @@ sw.addEventListener('activate', (event) => {
 			for (const key of await caches.keys()) {
 				if (key !== CACHE) await caches.delete(key);
 			}
+			await sw.clients.claim();
 		})()
 	);
 });
@@ -88,6 +89,7 @@ function fetchTheBook(): Promise<void> {
 // The browser tells the page, not the worker, so the page forwards it.
 sw.addEventListener('message', (event) => {
 	if (event.data === 'cache-the-book') event.waitUntil(fetchTheBook());
+	if (event.data === 'activate-release') event.waitUntil(sw.skipWaiting());
 });
 
 sw.addEventListener('fetch', (event) => {

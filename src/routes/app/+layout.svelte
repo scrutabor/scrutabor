@@ -3,11 +3,29 @@
 	// layout, not the root one: the landing pages above it are plain web
 	// pages, and editing them must never touch the app's offline promise.
 	import { dev } from '$app/environment';
+	import type { Lang } from '$lib/i18n';
+	import { M } from '$lib/i18n';
 	import { loadMassForm } from '$lib/mass-form.svelte';
 	import { loadPrayerForm } from '$lib/prayer-form.svelte';
 	import { loadRole } from '$lib/role.svelte';
+	import { langOfPath } from '$lib/url';
 
 	let { children } = $props();
+	let waitingWorker = $state<ServiceWorker | null>(null);
+	let updateLang = $state<Lang>('en');
+	let reloading = $state(false);
+	const updateCopy = $derived(M[updateLang]);
+
+	function offerUpdate(worker: ServiceWorker) {
+		updateLang = langOfPath(location.pathname);
+		waitingWorker = worker;
+	}
+
+	function acceptUpdate() {
+		if (!waitingWorker || reloading) return;
+		reloading = true;
+		waitingWorker.postMessage('activate-release');
+	}
 
 	// The reader's part at Mass, applied once the page is alive (the
 	// prerendered HTML is always the pew's view).
@@ -28,10 +46,50 @@
 	$effect(() => {
 		if (dev || !('serviceWorker' in navigator)) return;
 		if (!/^https?:$/.test(location.protocol)) return;
-		navigator.serviceWorker.register('/service-worker.js', { scope: '/app/' }).catch(() => {
-			// a browser that refuses (old, or private mode) still gets the
-			// hosted book — it just is not offline-capable
-		});
+
+		const serviceWorkers = navigator.serviceWorker;
+		const hadController = !!serviceWorkers.controller;
+		let registration: ServiceWorkerRegistration | null = null;
+		let installing: ServiceWorker | null = null;
+		let disposed = false;
+
+		const onStateChange = () => {
+			if (!disposed && installing?.state === 'installed' && serviceWorkers.controller) {
+				offerUpdate(installing);
+			}
+		};
+		const watch = (worker: ServiceWorker | null) => {
+			installing?.removeEventListener('statechange', onStateChange);
+			installing = worker;
+			installing?.addEventListener('statechange', onStateChange);
+			onStateChange();
+		};
+		const onUpdateFound = () => watch(registration?.installing ?? null);
+		const onControllerChange = () => {
+			if (hadController) location.reload();
+		};
+
+		serviceWorkers.addEventListener('controllerchange', onControllerChange);
+		void serviceWorkers
+			.register('/service-worker.js', { scope: '/app/', updateViaCache: 'none' })
+			.then((value) => {
+				if (disposed) return;
+				registration = value;
+				registration.addEventListener('updatefound', onUpdateFound);
+				if (registration.waiting && serviceWorkers.controller) offerUpdate(registration.waiting);
+				watch(registration.installing);
+			})
+			.catch(() => {
+				// a browser that refuses (old, or private mode) still gets the
+				// hosted book — it just is not offline-capable
+			});
+
+		return () => {
+			disposed = true;
+			installing?.removeEventListener('statechange', onStateChange);
+			registration?.removeEventListener('updatefound', onUpdateFound);
+			serviceWorkers.removeEventListener('controllerchange', onControllerChange);
+		};
 	});
 
 	// The offline promise belongs to the installed app, not to a first web
@@ -58,3 +116,65 @@
 </svelte:head>
 
 {@render children()}
+
+{#if waitingWorker}
+	<aside class="update-notice" role="status" aria-live="polite" aria-atomic="true">
+		<p>{updateCopy.updateAvailable}</p>
+		<button type="button" onclick={acceptUpdate} disabled={reloading}>
+			{reloading ? updateCopy.updateReloading : updateCopy.updateReload}
+		</button>
+	</aside>
+{/if}
+
+<style>
+	.update-notice {
+		position: fixed;
+		z-index: 100;
+		inset-inline: 50% auto;
+		bottom: max(1rem, env(safe-area-inset-bottom));
+		transform: translateX(-50%);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		width: min(28rem, calc(100vw - 2rem));
+		padding: 0.7rem 0.75rem 0.7rem 1rem;
+		border: 1px solid var(--border);
+		border-radius: 0.65rem;
+		background: var(--surface);
+		box-shadow: var(--shadow);
+		color: var(--ink);
+	}
+
+	.update-notice p {
+		margin: 0;
+		line-height: 1.3;
+	}
+
+	.update-notice button {
+		min-height: 2.75rem;
+		padding: 0.4rem 0.85rem;
+		border: 1px solid var(--rubric);
+		border-radius: 0.45rem;
+		background: transparent;
+		color: var(--rubric);
+		font: inherit;
+		font-weight: 600;
+		white-space: nowrap;
+		cursor: pointer;
+	}
+
+	.update-notice button:disabled {
+		cursor: default;
+		opacity: 0.7;
+	}
+
+	@media (max-width: 24rem) {
+		.update-notice {
+			align-items: stretch;
+			flex-direction: column;
+			gap: 0.6rem;
+			padding: 0.85rem;
+		}
+	}
+</style>
