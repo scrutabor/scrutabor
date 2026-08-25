@@ -53,6 +53,12 @@ const CATALOG_SOURCE: CatalogSection[] = [
 			},
 			{
 				category: 'orationes',
+				slug: 'memorare',
+				title: 'Memoráre',
+				localizedTitle: { pl: 'Pomnij, o Najświętsza Panno Maryjo', en: 'Memorare' }
+			},
+			{
+				category: 'orationes',
 				slug: 'angelus-domini',
 				title: 'Ángelus Dómini',
 				localizedTitle: { pl: 'Anioł Pański', en: 'The Angelus' }
