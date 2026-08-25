@@ -14,7 +14,7 @@
 </script>
 
 <script lang="ts">
-	// The reading mode: łacina, przekład, interlinearnie. It was a SLIDER
+	// The reading mode: Latin, bilingual, interlinear. It was a SLIDER
 	// for its first year, and the slider outlived two meanings — built for
 	// a hand-judged difficulty ladder (superseded 2026-08-03), reread as
 	// additive help, and retired when the additive model died too (owner,
@@ -26,7 +26,7 @@
 	// this control is its first row — set apart by the surface tint and a
 	// step of size, not by a different kind of object.
 	//
-	// DISPLAY ORDER is łacina · przekład · interlinearnie (owner): the
+	// DISPLAY ORDER is Latin · bilingual · interlinear (owner): the
 	// first two share the bare reading scale, so walking left to right the
 	// type holds still once and changes once, at the study view. The word
 	// is the genre's own (owner): Biblia interlinearna is the accepted
@@ -114,7 +114,13 @@
 	   the frame can give, so they give back one step of size. */
 	@container help (max-width: 26rem) {
 		.options {
-			font-size: 0.9rem;
+			/* The Polish adjectives are now the longest set. Keep the normal
+			   0.9rem until their actual container needs less, then scale from
+			   that room rather than from a device-width exception. At the
+			   narrowest supported frame and largest reading size this resolves
+			   to about 15.8px: enough room for the stricter Linux font metrics,
+			   and still above the surrounding apparatus text. */
+			font-size: min(0.9rem, 6.25cqi);
 			/* safe: if a future word ever outgrows the frame, one edge
 			   clips and the other stays reachable — plain center hides
 			   both ends at once */

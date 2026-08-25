@@ -135,7 +135,7 @@
 	const rows: LitanyRow[] = $derived(
 		litanyColumns ? litanyRows(segs) : segs.map((_, primary) => ({ primary }))
 	);
-	// przekład (help 2) reads as a bilingual missal: plain Latin beside the
+	// Bilingual (help 2) reads as a bilingual missal: plain Latin beside the
 	// verse translation where the room allows, stacked where it does not.
 	// The litany keeps its own two-column convention either way.
 	const bilingual = $derived(helpLevel === 2 && !litanyColumns);
@@ -681,7 +681,7 @@
 		   a prayer book, and printed missals set their verses close to
 		   solid — 1.75 was the interlinear's air bleeding into modes that
 		   have no glosses to make room for. Glossed verses override to 2.3
-		   below, so this number never renders under interlinearnie. At 1.5 a
+		   below, so this number never renders in interlinear mode. At 1.5 a
 		   wrapped verse holds together as one unit and the verse margin
 		   finally reads as structure, not as one more line gap. */
 		line-height: 1.5;
@@ -1012,7 +1012,7 @@
 	/* Translations get the same typographic treatment as rubric narratives —
 	   a thin vertical hairline with an indent — so the page stays layered
 	   text, not cards: red hairline = what happens, neutral = what it means. */
-	/* THE TRANSLATION'S TWO HOMES (przekład is the only mode that renders
+	/* THE TRANSLATION'S TWO HOMES (bilingual is the only mode that renders
 	   one, so everything here describes that mode).
 
 	   STACKED — a narrow container, or a phone: the translation sits
@@ -1068,7 +1068,7 @@
 		text-wrap: pretty;
 	}
 
-	/* THE BILINGUAL SPREAD. Above ~44rem of container the przekład mode
+	/* THE BILINGUAL SPREAD. Above ~44rem of container the bilingual mode
 	   splits into the two columns of a hand missal, verse against verse —
 	   INSIDE the standard frame, at the bare reading scale (--reading-bare,
 	   app.css). One frame for every mode was the owner's ruling
@@ -1093,8 +1093,8 @@
 
 	/* The book measure for bare text that is not in columns: ~66
 	   characters at the bare scale, centred on the title's own axis.
-	   rem, so the root knob widens it with the type. Shared by łacina
-	   and by przekład's stacked face below the column threshold. */
+	   rem, so the root knob widens it with the type. Shared by Latin
+	   and by bilingual's stacked face below the column threshold. */
 	.measure,
 	.columns {
 		max-width: 36rem;

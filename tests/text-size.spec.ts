@@ -219,8 +219,8 @@ test('the mode words hold their row at the smallest screen and the largest print
 	// room in the book. The words must hold ONE line and their INK must
 	// stay inside the tabella's own frame — the frame clips its overflow,
 	// so a viewport check alone cannot see a word being cut (a reviewer
-	// caught exactly that hole). Both languages, because the English row
-	// is the longest.
+	// caught exactly that hole). Both languages, because their font metrics
+	// and labels impose different bounds (the Polish row is now longest).
 	await page.setViewportSize({ width: 320, height: 800 });
 	for (const lang of ['pl', 'en']) {
 		await page.goto(`/app/${lang}/ordo/praeparatio`);
@@ -233,11 +233,13 @@ test('the mode words hold their row at the smallest screen and the largest print
 			const inks = options.map((o) => o.querySelector('.real')!.getBoundingClientRect());
 			return {
 				rows: new Set(options.map((o) => Math.round(o.getBoundingClientRect().top))).size,
+				inkRows: new Set(inks.map((b) => Math.round(b.top))).size,
 				insideFrame: inks.every((b) => b.left >= frame.left + 1 && b.right <= frame.right - 1),
 				tappable: options.every((o) => o.getBoundingClientRect().height >= 23)
 			};
 		});
 		expect(shape.rows, `${lang}: the mode words broke across lines`).toBe(1);
+		expect(shape.inkRows, `${lang}: a separator and its word split internally`).toBe(1);
 		expect(shape.insideFrame, `${lang}: a mode word was clipped by the frame`).toBe(true);
 		expect(shape.tappable, `${lang}: a mode word fell under the touch floor`).toBe(true);
 	}

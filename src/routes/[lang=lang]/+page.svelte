@@ -75,7 +75,7 @@
 			zipNote: 'kopia do pobrania',
 			soonNote: 'wkrótce',
 			specimenLead:
-				'Werset, od którego Scrutabor bierze nazwę, w postaci, jaką ma w modlitewniku: tryb czytania wybiera samą łacinę, pełny przekład albo interlinearnie, czyli słowo po słowie, a dotknięcie słowa otwiera jego pełny opis.',
+				'Werset, od którego Scrutabor bierze nazwę, w postaci, jaką ma w modlitewniku: można wybrać tryb łaciński, dwujęzyczny albo interlinearny, czyli słowo po słowie, a dotknięcie słowa otwiera jego pełny opis.',
 			stanzaLink: 'Psalm\u00a0118, He — w.\u00a034',
 			privacyLine: 'Bez rejestracji, bez plików cookie, bez reklam.',
 			privacyLink: 'prywatność',
@@ -94,7 +94,7 @@
 			zipNote: 'a copy to keep',
 			soonNote: 'coming soon',
 			specimenLead:
-				'The verse Scrutabor takes its name from, exactly as it stands in the prayer book: the reading mode chooses bare Latin, a full translation, or the interlinear, and a tap on any word opens its analysis.',
+				'The verse Scrutabor takes its name from, exactly as it stands in the prayer book: you can choose Latin, bilingual, or interlinear mode, and a tap on any word opens its analysis.',
 			stanzaLink: 'Psalm\u00a0118, He — v.\u00a034',
 			privacyLine: 'No registration, no cookies, no ads.',
 			privacyLink: 'privacy',

@@ -516,7 +516,7 @@
 		/* the seam's own ruler: exactly a rubric's top margin, so the note
 		   above stands equally far from the text in EVERY mode — in flow
 		   the first rubric's margin collapses up to this same number, and
-		   in przekład's grid (which collapses nothing) the edge children
+		   in the bilingual grid (which collapses nothing) the edge children
 		   defer to it (TextBody zeroes the grid's first top margin) */
 		margin-top: calc(var(--reading) * (1 + var(--gloss-gap)));
 	}

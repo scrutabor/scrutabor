@@ -77,26 +77,36 @@ test.describe('landing @online', () => {
 		// control a reading page carries.
 		await page.goto('/pl');
 		// by the level's identity, not its position: the display order is
-		// łacina · przekład · interlinearnie while the stored values keep meaning
+		// łaciński · dwujęzyczny · interlinearny while the stored values keep meaning
 		const radio = (level: number) => page.locator(`.specimen .help [data-level="${level}"]`);
+		await expect(page.locator('.specimen .help .real')).toHaveText([
+			'łaciński',
+			'dwujęzyczny',
+			'interlinearny'
+		]);
 		await expect(radio(1)).toHaveAttribute('aria-checked', 'true');
 		// the real corpus text: liturgical accents, and the colon the
 		// witnesses print where the brand motto prints a comma
 		await expect(page.locator('.specimen')).toContainText('scrutábor');
 		await expect(page.locator('.specimen')).toContainText('tuam:');
-		// łacina: bare
+		// łaciński: bare
 		await radio(0).click();
 		await expect(page.locator('.specimen rt')).toHaveCount(0);
-		// interlinearnie: all fourteen glosses (the consecutive et as "a")
+		// interlinearny: all fourteen glosses (the consecutive et as "a")
 		await radio(1).click();
 		await expect(page.locator('.specimen rt')).toHaveCount(14);
 		await expect(page.locator('.specimen rt').nth(3)).toHaveText('a');
-		// przekład: the verse's own translation, the glosses yielding
+		// dwujęzyczny: the verse's own translation, the glosses yielding
 		await radio(2).click();
 		await expect(page.locator('.specimen .translation')).toContainText('Daj mi zrozumienie');
 		await expect(page.locator('.specimen rt')).toHaveCount(0);
 
 		await page.goto('/en');
+		await expect(page.locator('.specimen .help .real')).toHaveText([
+			'Latin',
+			'bilingual',
+			'interlinear'
+		]);
 		await page.locator('.specimen .help [data-level="2"]').click();
 		await expect(page.locator('.specimen .translation')).toContainText('Give me understanding');
 	});

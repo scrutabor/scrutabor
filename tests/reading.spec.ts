@@ -753,8 +753,8 @@ test('the pager walks the book in liturgical order', async ({ page }) => {
 	await settled(page);
 	// the reading-mode radios own the arrows while focused: the key moves
 	// the check, never the page. The default interlinear is the LAST
-	// segment of the display order (łacina · przekład · interlinearnie), so
-	// ArrowRight wraps to łacina — level 0.
+	// segment of the display order (Latin · bilingual · interlinear), so
+	// ArrowRight wraps to Latin — level 0.
 	await page.locator('.help [role="radio"][aria-checked="true"]').focus();
 	await page.keyboard.press('ArrowRight');
 	await expect(page).toHaveURL(atRoute('ordinarium/confiteor'));

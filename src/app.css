@@ -189,8 +189,8 @@ em {
 :root {
 	--reading: 1.45rem;
 	/* THE BARE SCALE. The study size above was chosen FOR the interlinear,
-	   whose 0.64em glosses need a large base; the bare modes — łacina and
-	   przekład — carry no glosses and read at 0.84 of it (~19.5px), which
+	   whose 0.64em glosses need a large base; the bare modes — Latin and
+	   bilingual — carry no glosses and read at 0.84 of it (~19.5px), which
 	   the familiar surfaces agree on, measured 2026-08-21: Missale Meum
 	   sets 16px Merriweather (optically ~21.5px of this face — its
 	   x-height is 0.545 against EB Garamond's 0.405) and Divinum Officium
@@ -338,6 +338,12 @@ em {
 
 .tabella .option {
 	appearance: none;
+	/* A separator and its word are one option. Flex may wrap BETWEEN
+	   options where a row permits it, never inside one: at the narrowest
+	   mode control the middot otherwise took one line and the adjective
+	   another while all three button boxes still reported the same row. */
+	flex: none;
+	white-space: nowrap;
 	border: 0;
 	background: transparent;
 	color: var(--ink-soft);
@@ -429,7 +435,7 @@ em {
 	}
 
 	/* Every inline cost shrinks with the room: the words must hold one
-	   line at 320px under the 140% root, in both languages (the English
+	   line at 320px under the 140% root, in both languages (the Polish
 	   row is the longest), and the separators and paddings were what
 	   broke it to two. */
 	.tabella .option {

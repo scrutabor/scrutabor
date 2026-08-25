@@ -250,17 +250,17 @@ export function noWordInTheAddress(page: import('@playwright/test').Page) {
 }
 
 /**
- * Choose the reading mode — łacina (0), interlinearnie (1), przekład (2).
+ * Choose the reading mode — Latin (0), interlinear (1), bilingual (2).
  *
  * The control is the settings row's segmented radiogroup (it was a range
- * input until 2026-08-21; the additive slider died when przekład became
+ * input until 2026-08-21; the additive slider died when level 2 became
  * the bilingual view). Driven by INDEX so the tests read the same in both
  * languages, and waits for the check to land before returning — the mode
  * swap re-renders the whole text body.
  */
 export async function setHelp(page: import('@playwright/test').Page, level: 0 | 1 | 2) {
 	// By the level's own identity, not its position: the display order is
-	// łacina · przekład · interlinearnie (owner, 2026-08-21), while the stored
+	// Latin · bilingual · interlinear (owner, 2026-08-21), while the stored
 	// values 0/1/2 keep their meaning.
 	const radio = page.locator(`.help [data-level="${level}"]`);
 	await radio.click();
