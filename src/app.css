@@ -668,7 +668,7 @@ h2 {
 	background: var(--wash-strong);
 }
 
-/* Full search and the keyboard switcher share one result vocabulary. */
+/* Search results share one visual vocabulary across result types. */
 .search-results-list {
 	margin: 0;
 	padding: 0;
@@ -677,10 +677,6 @@ h2 {
 	border-radius: 0.7rem;
 	background: color-mix(in srgb, var(--surface) 72%, transparent);
 	overflow: hidden;
-}
-
-.search-results-list.compact {
-	background: color-mix(in srgb, var(--bg) 45%, transparent);
 }
 
 .search-results-list > li + li {
@@ -698,12 +694,6 @@ h2 {
 
 .search-result:hover {
 	background: var(--wash);
-}
-
-.search-result.compact {
-	grid-template-columns: minmax(0, 1fr);
-	gap: 0.1rem;
-	padding: 0.7rem 0.85rem;
 }
 
 .search-result > strong {
@@ -730,12 +720,6 @@ h2 {
 	overflow-wrap: anywhere;
 }
 
-.search-result.compact .search-result-detail {
-	grid-column: 1;
-	color: var(--ink-soft);
-	font-size: 0.84rem;
-}
-
 .search-result-context {
 	color: var(--ink-soft);
 	font-size: 0.72rem;
@@ -753,7 +737,7 @@ h2 {
 }
 
 @media (max-width: 28rem) {
-	.search-result:not(.compact) {
+	.search-result {
 		grid-template-columns: minmax(0, 1fr);
 		padding: 0.8rem 0.85rem;
 	}
@@ -764,7 +748,7 @@ h2 {
 		min-width: 0;
 	}
 
-	.search-result:not(.compact) .search-result-detail {
+	.search-result .search-result-detail {
 		grid-column: 1;
 	}
 }

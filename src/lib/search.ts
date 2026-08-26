@@ -249,13 +249,6 @@ function titlesFor(query: string[], lang: Lang, exactLatinForm: boolean): TitleS
 		});
 }
 
-/** Fast title-only search for the keyboard switcher. */
-export function searchTitles(rawQuery: string, lang: Lang): TitleSearchResult[] {
-	const query = tokenizeSearch(rawQuery);
-	if (!query.length || normalizeSearch(rawQuery).length < 2) return [];
-	return titlesFor(query, lang, false);
-}
-
 async function languageConcordance(lang: Lang): Promise<LanguageConcordance> {
 	let pending = LANGUAGE_CONCORDANCES.get(lang);
 	if (!pending) {

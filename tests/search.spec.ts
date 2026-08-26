@@ -7,18 +7,6 @@ async function openSearchPage(page: import('@playwright/test').Page, language: '
 	return field;
 }
 
-async function openQuickSearch(
-	page: import('@playwright/test').Page,
-	language: 'pl' | 'en' = 'pl'
-) {
-	await page.goto(`/app/${language}`);
-	await page.keyboard.press('Control+k');
-	const dialog = page.getByRole('dialog');
-	await expect(dialog).toBeVisible();
-	await expect(dialog.getByRole('searchbox')).toBeFocused();
-	return dialog;
-}
-
 test('the visible search control opens a stable dedicated page', async ({ page }) => {
 	await page.goto('/app/pl');
 	const trigger = page.getByRole('link', { name: 'szukaj' });
@@ -169,47 +157,15 @@ test('Back restores the query, results, and scroll position before a second resu
 	await expect(page).not.toHaveURL(atRoute('/app/pl/search', '?q=Pater'));
 });
 
-test('Ctrl+K opens the title switcher and its footer hands the query to full search', async ({
-	page
-}) => {
-	const dialog = await openQuickSearch(page);
-	await expect(dialog.getByRole('heading')).toHaveText('Szybkie przejście');
-	await dialog.getByRole('searchbox').fill('Pater');
-	await expect(dialog.getByRole('link', { name: /Ojcze nasz/ }).first()).toBeVisible();
-	await expect(dialog.getByText('fragmenty tekstów')).toHaveCount(0);
-	await dialog.getByRole('link', { name: 'Pokaż wszystkie wyniki →' }).click();
-	await settled(page);
-	await expect(page).toHaveURL(atRoute('/app/pl/search', '?q=Pater'));
-	await expect(page.getByRole('searchbox')).toHaveValue('Pater');
-});
-
-test('the quick switcher closes with Escape, its close button, and the backdrop', async ({
-	page
-}) => {
-	await page.goto('/app/pl');
-	const trigger = page.getByRole('link', { name: 'szukaj' });
-	await trigger.focus();
-	await page.keyboard.press('Control+k');
-	const dialog = page.getByRole('dialog');
-	await page.keyboard.press('Escape');
-	await expect(dialog).not.toBeVisible();
-	await expect(trigger).toBeFocused();
-
-	await page.keyboard.press('Control+k');
-	await dialog.getByRole('button', { name: 'zamknij' }).click();
-	await expect(dialog).not.toBeVisible();
-
-	await page.keyboard.press('Control+k');
-	await page.mouse.click(1, 1);
-	await expect(dialog).not.toBeVisible();
-});
-
-test('Ctrl+K on the full search page focuses its field instead of opening another surface', async ({
+test('the visible search control refocuses the full search field without losing its query', async ({
 	page
 }) => {
 	const field = await openSearchPage(page);
+	await field.fill('Pater');
+	await expect(field).toHaveValue('Pater');
 	await page.getByRole('link', { name: 'strona główna modlitewnika' }).focus();
-	await page.keyboard.press('Control+k');
+	await page.getByRole('link', { name: 'szukaj' }).click();
 	await expect(field).toBeFocused();
+	await expect(field).toHaveValue('Pater');
 	await expect(page.getByRole('dialog')).not.toBeVisible();
 });

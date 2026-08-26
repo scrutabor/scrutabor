@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import { replaceState } from '$app/navigation';
 	import { onDestroy, onMount, tick } from 'svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
@@ -20,7 +19,6 @@
 	let results = $state<Results | null>(null);
 	let pending = $state(false);
 	let failed = $state(false);
-	let shortcut = $state('Ctrl K');
 	let timer: ReturnType<typeof setTimeout> | undefined;
 	let request = 0;
 	let restoreY: number | undefined;
@@ -92,7 +90,6 @@
 
 	onMount(async () => {
 		query = pageUrl().searchParams.get('q') ?? '';
-		shortcut = navigator.platform.includes('Mac') ? '⌘K' : 'Ctrl K';
 		try {
 			const saved = JSON.parse(readSession(RETURN_POSITION) ?? 'null') as {
 				route?: string;
@@ -142,7 +139,6 @@
 			/>
 			<div class="search-notes">
 				<p id="search-hint">{msgs.searchHint}</p>
-				{#if browser}<p class="shortcut">{msgs.searchShortcutHint(shortcut)}</p>{/if}
 			</div>
 		</header>
 
@@ -183,10 +179,6 @@
 		margin: 0;
 	}
 
-	.shortcut {
-		margin-inline-start: auto;
-	}
-
 	@media (max-width: 34rem) {
 		.search-head {
 			padding-top: 0.1rem;
@@ -194,10 +186,6 @@
 
 		h1 {
 			margin-block: 1.15rem 0.8rem;
-		}
-
-		.shortcut {
-			display: none;
 		}
 	}
 

@@ -25,10 +25,6 @@ export interface Messages {
 	langMenuAria: string;
 	searchLabel: string;
 	searchTitle: string;
-	searchQuickTitle: string;
-	searchQuickHint: string;
-	searchAllResults: string;
-	searchShortcutHint: (shortcut: string) => string;
 	searchClear: string;
 	searchHint: string;
 	searchLoading: string;
@@ -161,10 +157,6 @@ const MESSAGES: Record<Lang, Messages> = {
 		langMenuAria: 'wybór języka',
 		searchLabel: 'szukaj',
 		searchTitle: 'Wyszukiwanie',
-		searchQuickTitle: 'Szybkie przejście',
-		searchQuickHint: 'Wpisz tytuł modlitwy.',
-		searchAllResults: 'Pokaż wszystkie wyniki',
-		searchShortcutHint: (shortcut) => `Szybkie przejście z dowolnej strony: ${shortcut}.`,
 		searchClear: 'wyczyść wyszukiwanie',
 		searchHint: 'Wpisz tytuł modlitwy, znany fragment albo łacińskie słowo.',
 		searchLoading: 'szukam…',
@@ -322,10 +314,6 @@ const MESSAGES: Record<Lang, Messages> = {
 		langMenuAria: 'language selection',
 		searchLabel: 'search',
 		searchTitle: 'Search',
-		searchQuickTitle: 'Quick prayer switcher',
-		searchQuickHint: 'Enter a prayer title.',
-		searchAllResults: 'Show all results',
-		searchShortcutHint: (shortcut) => `Quick switcher from any page: ${shortcut}.`,
 		searchClear: 'clear search',
 		searchHint: 'Enter a prayer title, a remembered phrase, or a Latin word.',
 		searchLoading: 'searching…',

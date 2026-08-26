@@ -3,13 +3,11 @@
 
 	let {
 		href,
-		compact = false,
 		saveBeforeNavigation = false,
 		onResult,
 		children
 	}: {
 		href: string;
-		compact?: boolean;
 		saveBeforeNavigation?: boolean;
 		onResult?: (event: Event) => void;
 		children: Snippet;
@@ -26,7 +24,6 @@
 
 <a
 	class="search-result"
-	class:compact
 	{href}
 	onpointerdown={saveBeforeNavigation ? prepare : undefined}
 	onclick={prepare}

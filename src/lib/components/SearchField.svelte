@@ -4,7 +4,6 @@
 		label,
 		clearLabel,
 		describedby,
-		variant = 'page',
 		value = $bindable(),
 		field = $bindable(),
 		oninput,
@@ -14,7 +13,6 @@
 		label: string;
 		clearLabel: string;
 		describedby?: string;
-		variant?: 'page' | 'dialog';
 		value: string;
 		field: HTMLInputElement;
 		oninput: (event: Event) => void;
@@ -22,11 +20,7 @@
 	} = $props();
 </script>
 
-<form
-	class={variant === 'page' ? 'search-page-field' : 'search-dialog-field'}
-	role="search"
-	onsubmit={(event) => event.preventDefault()}
->
+<form class="search-page-field" role="search" onsubmit={(event) => event.preventDefault()}>
 	<label class="sr-only" for={id}>{label}</label>
 	<svg viewBox="0 0 24 24" aria-hidden="true">
 		<circle cx="10.8" cy="10.8" r="6.4" />
@@ -53,10 +47,6 @@
 <style>
 	form {
 		position: relative;
-	}
-
-	form.search-dialog-field {
-		margin: 0 1.25rem;
 	}
 
 	form > svg {
@@ -161,12 +151,6 @@
 	@media (max-width: 34rem) {
 		form.search-page-field input {
 			height: 3.35rem;
-		}
-	}
-
-	@media (max-width: 28rem) {
-		form.search-dialog-field {
-			margin-inline: 0.75rem;
 		}
 	}
 </style>
