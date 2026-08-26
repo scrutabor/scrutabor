@@ -95,6 +95,12 @@ const CATALOG_SOURCE: CatalogSection[] = [
 			},
 			{
 				category: 'orationes',
+				slug: 'alma-redemptoris-mater',
+				title: 'Alma Redemptóris Mater',
+				localizedTitle: { pl: 'Alma Redemptoris Mater', en: 'Alma Redemptoris Mater' }
+			},
+			{
+				category: 'orationes',
 				slug: 'angelus-domini',
 				title: 'Ángelus Dómini',
 				localizedTitle: { pl: 'Anioł Pański', en: 'The Angelus' }
