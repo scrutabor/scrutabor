@@ -51,12 +51,13 @@ export default defineConfig({
 			grepInvert: /@online/
 		},
 		{
-			// The typography sweep keeps one browser alive while it visits every
-			// Polish surface. Running it beside the ordinary scenarios can starve
-			// a navigation even when the page itself is sound, so it starts only
-			// after both editions have released their workers.
+			// The typography sweep visits every Polish surface. Running it beside
+			// the ordinary scenarios can starve a navigation even when the page
+			// itself is sound, so it starts only after both editions have released
+			// their workers and keeps its own batches on one worker.
 			name: 'hosted-sweep',
 			dependencies: ['hosted', 'offline'],
+			workers: 1,
 			use: { baseURL: 'http://localhost:4173' },
 			grep: /@sweep/
 		}
