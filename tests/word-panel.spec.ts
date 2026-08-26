@@ -15,6 +15,23 @@ test('tap opens the panel and mirrors the word into ?w=', async ({ page }) => {
 	await expect(page).toHaveURL(/\?w=w008$/);
 });
 
+test('opening focus does not ring the whole sheet', async ({ page }) => {
+	await page.goto(PATER);
+	await page.locator('#w008').focus();
+	await page.keyboard.press('Enter');
+
+	const sheet = page.locator('aside.sheet');
+	await expect(sheet).toBeFocused();
+	expect(await sheet.evaluate((el) => getComputedStyle(el).outlineStyle)).toBe('none');
+
+	// The frame loses only its redundant ring. A real control still receives
+	// the shared visible keyboard focus treatment.
+	const close = sheet.locator('.close');
+	await close.focus();
+	await expect(close).toBeFocused();
+	expect(await close.evaluate((el) => getComputedStyle(el).outlineStyle)).toBe('solid');
+});
+
 test('tapping the same word closes and cleans the URL', async ({ page }) => {
 	await page.goto(PATER);
 	await page.locator('#w008').click();

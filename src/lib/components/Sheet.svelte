@@ -156,6 +156,15 @@
 		box-shadow: var(--shadow);
 	}
 
+	/* Focus moves here when the sheet opens so assistive technology starts
+	   inside the dialog. The frame itself is not an operable control and the
+	   newly appeared surface already makes that move visible, so the global
+	   focus rule must not draw a second, rubric-red border around the card.
+	   Tabbing onward still gives every link and button its normal ring. */
+	.sheet:focus-visible {
+		outline: none;
+	}
+
 	/* On a wide screen a full-viewport sheet leaves the close button
 	   stranded between the text column and the screen edge — so the sheet
 	   becomes a centred card and the corner is a real corner. */
