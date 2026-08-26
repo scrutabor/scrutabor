@@ -110,19 +110,19 @@ test('every menu opens onto the screen, not off the edge of it', async ({ page }
 	expect(damage, `a menu opened off the screen:\n  ${damage.join('\n  ')}`).toEqual([]);
 });
 
-test('search and its longest familiar titles stay inside a phone', async ({ page }) => {
+test('search results and their longest familiar titles stay inside a phone', async ({ page }) => {
 	const damage: string[] = [];
 	for (const size of SIZES) {
-		await page.goto('/app/pl');
+		await page.goto('/app/pl/search');
 		await page.evaluate((value) => localStorage.setItem('scrutabor-reading', value), size);
 		for (const width of [320, 375, 390]) {
 			await page.setViewportSize({ width, height: 800 });
-			await page.goto('/app/pl');
-			await page.getByRole('button', { name: 'szukaj' }).click();
-			const dialog = page.getByRole('dialog');
-			await dialog.getByRole('searchbox').fill('Najświętsza Panmo');
-			await expect(dialog).toContainText('Pomnij, o Najświętsza Panno Maryjo');
-			const overflow = await dialog.evaluate((element) => {
+			await page.goto('/app/pl/search');
+			await page.getByRole('searchbox').fill('Najświętsza Panmo');
+			await expect(page.locator('.search-page #search-titles + ul')).toContainText(
+				'Pomnij, o Najświętsza Panno Maryjo'
+			);
+			const overflow = await page.locator('.search-page').evaluate((element) => {
 				const rect = element.getBoundingClientRect();
 				return {
 					left: rect.left,
@@ -133,7 +133,6 @@ test('search and its longest familiar titles stay inside a phone', async ({ page
 			if (overflow.left < -0.5 || overflow.right > 0.5 || overflow.inside > 1) {
 				damage.push(`${width}px/${size}: ${JSON.stringify(overflow)}`);
 			}
-			await page.keyboard.press('Escape');
 		}
 	}
 	expect(damage, `search runs off the phone:\n  ${damage.join('\n  ')}`).toEqual([]);

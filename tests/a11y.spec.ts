@@ -94,23 +94,21 @@ test('the word panel meets WCAG 2.1 AA, open and interactive', async ({ page }) 
 });
 
 test('search meets WCAG 2.1 AA with all result groups open', async ({ page }) => {
-	await page.goto('/app/pl');
-	await page.getByRole('button', { name: 'szukaj' }).click();
-	const dialog = page.getByRole('dialog');
-	await dialog.getByRole('searchbox').fill('Pater');
-	await expect(dialog.locator('.results h3')).toHaveCount(3);
-	expect(await violations(page), 'search dialog with results').toEqual([]);
+	await page.goto('/app/pl/search');
+	await page.getByRole('searchbox').fill('Pater');
+	await expect(page.locator('.results h2')).toHaveCount(3);
+	expect(await violations(page), 'search page with results').toEqual([]);
 });
 
-test('search meets WCAG 2.1 AA on a phone', async ({ page }) => {
+test('the quick prayer switcher meets WCAG 2.1 AA on a phone', async ({ page }) => {
 	await page.setViewportSize({ width: 375, height: 800 });
 	await page.goto('/app/pl');
-	await page.getByRole('button', { name: 'szukaj' }).click();
+	await page.keyboard.press('Control+k');
 	const dialog = page.getByRole('dialog');
 	const pious = 'Duszo Chrystusowa';
 	await dialog.getByRole('searchbox').fill(pious);
 	await expect(dialog).toContainText(pious);
-	expect(await violations(page), 'search dialog on a phone').toEqual([]);
+	expect(await violations(page), 'quick switcher on a phone').toEqual([]);
 });
 
 // The reading size is a knob a reader turns precisely because the print is

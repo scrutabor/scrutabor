@@ -31,3 +31,28 @@ export function removeStored(key: string): void {
 		// nothing here is worth an error
 	}
 }
+
+/** Session-only state uses the same privacy-mode guard as durable settings. */
+export function readSession(key: string): string | null {
+	try {
+		return sessionStorage.getItem(key);
+	} catch {
+		return null;
+	}
+}
+
+export function writeSession(key: string, value: string): void {
+	try {
+		sessionStorage.setItem(key, value);
+	} catch {
+		// a blocked session still has a fully usable search page
+	}
+}
+
+export function removeSession(key: string): void {
+	try {
+		sessionStorage.removeItem(key);
+	} catch {
+		// nothing here is worth an error
+	}
+}

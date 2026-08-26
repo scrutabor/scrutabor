@@ -3,18 +3,20 @@
 // and one unguarded read during hydration used to kill SvelteKit's router
 // before it initialised: the word panel dead, the day picker dead, silently,
 // on every page — for exactly the readers most likely to have set it.
-// Every read and write now goes through $lib/storage, which is what these
+// Every local or session read and write goes through $lib/storage, which is what these
 // hold in place. The prerendered text was never at risk; the settings simply
 // last only as long as the page, which is the most the book can offer.
 import { expect, settled, test } from './fixtures';
 
 test.beforeEach(async ({ page }) => {
 	await page.addInitScript(() => {
-		Object.defineProperty(window, 'localStorage', {
-			get() {
-				throw new DOMException('denied', 'SecurityError');
-			}
-		});
+		for (const name of ['localStorage', 'sessionStorage']) {
+			Object.defineProperty(window, name, {
+				get() {
+					throw new DOMException('denied', 'SecurityError');
+				}
+			});
+		}
 	});
 });
 
@@ -42,4 +44,12 @@ test('the controls above the text still answer', async ({ page }) => {
 		.click();
 	const after = await page.evaluate(() => document.documentElement.dataset.theme ?? 'light');
 	expect(after).not.toBe(before);
+});
+
+test('search still finds a prayer when return-position storage is unavailable', async ({
+	page
+}) => {
+	await page.goto('/app/pl/search');
+	await page.getByRole('searchbox').fill('Duszo Chrystusowa');
+	await expect(page.locator('#search-titles + ul li').first()).toContainText('Duszo Chrystusowa');
 });

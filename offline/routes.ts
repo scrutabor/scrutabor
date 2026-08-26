@@ -40,6 +40,12 @@ export interface RouteMatch {
  */
 export const ROUTES: { name: string; key: string; pattern: RegExp; params: string[] }[] = [
 	{ name: 'home', key: '/app/[lang=lang]', pattern: route('/?'), params: ['lang'] },
+	{
+		name: 'search',
+		key: '/app/[lang=lang]/search',
+		pattern: route('/search/?'),
+		params: ['lang']
+	},
 	{ name: 'ordo', key: '/app/[lang=lang]/ordo', pattern: route('/ordo/?'), params: ['lang'] },
 	{
 		name: 'movement',

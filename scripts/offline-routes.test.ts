@@ -62,6 +62,7 @@ describe('the downloaded copy covers the whole site', () => {
 		// would swallow every other three-part address in the book.
 		const cases: [string, string][] = [
 			['/pl', 'home'],
+			['/pl/search', 'search'],
 			['/en/ordo', 'ordo'],
 			['/pl/ordo/canon', 'movement'],
 			['/pl/grammatica', 'grammatica'],

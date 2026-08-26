@@ -249,6 +249,13 @@ function titlesFor(query: string[], lang: Lang, exactLatinForm: boolean): TitleS
 		});
 }
 
+/** Fast title-only search for the keyboard switcher. */
+export function searchTitles(rawQuery: string, lang: Lang): TitleSearchResult[] {
+	const query = tokenizeSearch(rawQuery);
+	if (!query.length || normalizeSearch(rawQuery).length < 2) return [];
+	return titlesFor(query, lang, false);
+}
+
 async function languageConcordance(lang: Lang): Promise<LanguageConcordance> {
 	let pending = LANGUAGE_CONCORDANCES.get(lang);
 	if (!pending) {
@@ -379,10 +386,9 @@ function latinSnippet(entry: TextEntry, segmentId: string, query: string[]): Sni
 	const parts: SnippetPart[] = [];
 	if (start > 0) parts.push({ text: '… ', hit: false });
 	words.slice(start, stop).forEach((word, index) => {
-		parts.push({
-			text: `${index ? ' ' : ''}${word.form}${word.post ?? ''}`,
-			hit: isHit(normalizeSearch(word.form), query)
-		});
+		if (index) parts.push({ text: ' ', hit: false });
+		parts.push({ text: word.form, hit: isHit(normalizeSearch(word.form), query) });
+		if (word.post) parts.push({ text: word.post, hit: false });
 	});
 	if (stop < words.length) parts.push({ text: ' …', hit: false });
 	return compactParts(parts);

@@ -1,33 +1,76 @@
 <script lang="ts">
-	import { tick } from 'svelte';
+	import { onDestroy, tick } from 'svelte';
+	import SearchField from '$lib/components/SearchField.svelte';
+	import SearchOutcome from '$lib/components/SearchOutcome.svelte';
+	import SearchTitleResults from '$lib/components/SearchTitleResults.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { loadSearch } from '$lib/search-loader';
-	import type { SearchResults } from '$lib/search';
+	import type { TitleSearchResult } from '$lib/search';
 
 	let { lang }: { lang: Lang } = $props();
 	const msgs = $derived(M[lang]);
 
 	let dialog: HTMLDialogElement;
-	let field: HTMLInputElement;
+	let field = $state<HTMLInputElement>(null!);
 	let query = $state('');
-	let results = $state<SearchResults | null>(null);
+	const searchHref = $derived(`/app/${lang}/search`);
+	const allResultsHref = $derived(`${searchHref}?q=${encodeURIComponent(query.trim())}`);
+	let results = $state<TitleSearchResult[] | null>(null);
 	let pending = $state(false);
 	let failed = $state(false);
 	let timer: ReturnType<typeof setTimeout> | undefined;
 	let request = 0;
-
-	const count = $derived(
-		(results?.titles.length ?? 0) + (results?.contents.length ?? 0) + (results?.grammar.length ?? 0)
-	);
+	let returnFocus: HTMLElement | null = null;
 
 	async function open() {
-		dialog.showModal();
+		const pageField = document.getElementById('book-search-page') as HTMLInputElement | null;
+		if (pageField) {
+			pageField.focus({ preventScroll: true });
+			return;
+		}
+		if (!dialog.open) {
+			returnFocus = document.activeElement as HTMLElement | null;
+			dialog.showModal();
+		}
 		await tick();
 		field.focus();
 	}
 
 	function close() {
-		dialog.close();
+		if (dialog.open) dialog.close();
+	}
+
+	function closed() {
+		clearTimeout(timer);
+		request += 1;
+		pending = false;
+		returnFocus?.focus();
+		returnFocus = null;
+	}
+
+	function clickBackdrop(event: MouseEvent) {
+		if (event.target !== dialog) return;
+		const box = dialog.getBoundingClientRect();
+		if (
+			event.clientX < box.left ||
+			event.clientX > box.right ||
+			event.clientY < box.top ||
+			event.clientY > box.bottom
+		) {
+			close();
+		}
+	}
+
+	function shortcut(event: KeyboardEvent) {
+		if (
+			event.key.toLocaleLowerCase() !== 'k' ||
+			(!event.metaKey && !event.ctrlKey) ||
+			event.altKey
+		) {
+			return;
+		}
+		event.preventDefault();
+		void open();
 	}
 
 	function clearQuery() {
@@ -52,8 +95,8 @@
 		pending = true;
 		timer = setTimeout(async () => {
 			try {
-				const { searchBook } = await loadSearch();
-				const found = await searchBook(query, lang);
+				const { searchTitles } = await loadSearch();
+				const found = searchTitles(query, lang).slice(0, 6);
 				if (turn === request) results = found;
 			} catch {
 				if (turn === request) failed = true;
@@ -62,26 +105,29 @@
 			}
 		}, 250);
 	}
+
+	onDestroy(() => clearTimeout(timer));
 </script>
 
-<button
-	type="button"
-	class="search-trigger"
-	aria-label={msgs.searchLabel}
-	title={msgs.searchLabel}
-	aria-haspopup="dialog"
-	onclick={open}
->
+<svelte:window onkeydown={shortcut} />
+
+<a class="search-trigger" href={searchHref} aria-label={msgs.searchLabel} title={msgs.searchLabel}>
 	<svg viewBox="0 0 24 24" aria-hidden="true">
 		<circle cx="10.8" cy="10.8" r="6.4" />
 		<path d="m15.6 15.6 4.2 4.2" />
 	</svg>
-</button>
+</a>
 
-<dialog bind:this={dialog} aria-labelledby="search-title" onclose={() => clearTimeout(timer)}>
-	<div class="search-shell">
+<dialog
+	bind:this={dialog}
+	aria-labelledby="quick-search-title"
+	aria-describedby="quick-search-hint quick-search-status"
+	onclick={clickBackdrop}
+	onclose={closed}
+>
+	<div class="quick-shell">
 		<header>
-			<h2 id="search-title">{msgs.searchTitle}</h2>
+			<h2 id="quick-search-title">{msgs.searchQuickTitle}</h2>
 			<button
 				type="button"
 				class="close"
@@ -95,111 +141,33 @@
 			</button>
 		</header>
 
-		<form role="search" onsubmit={(event) => event.preventDefault()}>
-			<label class="sr-only" for="book-search">{msgs.searchTitle}</label>
-			<svg viewBox="0 0 24 24" aria-hidden="true">
-				<circle cx="10.8" cy="10.8" r="6.4" />
-				<path d="m15.6 15.6 4.2 4.2" />
-			</svg>
-			<input
-				bind:this={field}
-				bind:value={query}
-				id="book-search"
-				type="search"
-				autocomplete="off"
-				aria-describedby="search-hint search-status"
-				oninput={queueSearch}
-			/>
-			{#if query}
-				<button type="button" class="clear" aria-label={msgs.searchClear} onclick={clearQuery}>
-					<svg viewBox="0 0 24 24" aria-hidden="true">
-						<path d="M7 7l10 10M17 7 7 17" />
-					</svg>
-				</button>
-			{/if}
-		</form>
-		<p id="search-hint" class="hint">{msgs.searchHint}</p>
-		<p id="search-status" class="sr-only" role="status" aria-live="polite">
-			{pending ? msgs.searchLoading : results ? msgs.searchCount(count) : ''}
-		</p>
+		<SearchField
+			id="quick-book-search"
+			label={msgs.searchQuickTitle}
+			clearLabel={msgs.searchClear}
+			variant="dialog"
+			bind:value={query}
+			bind:field
+			oninput={queueSearch}
+			onclear={clearQuery}
+		/>
+		<p id="quick-search-hint" class="hint">{msgs.searchQuickHint}</p>
+		<SearchOutcome
+			{lang}
+			statusId="quick-search-status"
+			{pending}
+			{failed}
+			ready={results !== null}
+			empty={results?.length === 0}
+			count={results?.length ?? 0}
+			variant="dialog"
+		>
+			{#if results}<SearchTitleResults {lang} {results} compact onResult={close} />{/if}
+		</SearchOutcome>
 
-		<div class="results" aria-busy={pending}>
-			{#if failed}
-				<p class="empty">{msgs.searchFailed}</p>
-			{:else if pending && !results}
-				<p class="empty">{msgs.searchLoading}</p>
-			{:else if results && count === 0}
-				<p class="empty">{msgs.searchNoResults}</p>
-			{:else if results}
-				{#if results.titles.length}
-					<section aria-labelledby="search-titles">
-						<h3 id="search-titles" class="smallcaps">{msgs.searchTitles}</h3>
-						<ul>
-							{#each results.titles as result (result.textKey)}
-								<li>
-									<a href={result.href} onclick={close}>
-										<span class="badge">{msgs.searchResultTitle}</span>
-										<strong>{result.title}</strong>
-										{#if result.latinTitle !== result.title}<span class="latin" lang="la"
-												>{result.latinTitle}</span
-											>{/if}
-										{#if result.matchedAlias}<span class="alias"
-												>{msgs.searchMatchedAlias}: {result.matchedAlias}</span
-											>{/if}
-										<span class="context smallcaps">{result.context}</span>
-									</a>
-								</li>
-							{/each}
-						</ul>
-					</section>
-				{/if}
-
-				{#if results.contents.length}
-					<section aria-labelledby="search-contents">
-						<h3 id="search-contents" class="smallcaps">{msgs.searchContents}</h3>
-						<ul>
-							{#each results.contents as result (`${result.source}:${result.textKey}:${result.segmentId}`)}
-								<li>
-									<a href={result.href} onclick={close}>
-										<span class="badge"
-											>{result.source === 'la'
-												? msgs.searchResultLatin
-												: msgs.searchResultTranslation}</span
-										>
-										<strong>{result.title}</strong>
-										<span class="snippet" lang={result.source === 'la' ? 'la' : lang}
-											>{#each result.parts as part, index (`${index}:${part.hit}`)}{#if part.hit}<mark
-														>{part.text}</mark
-													>{:else}{part.text}{/if}{/each}</span
-										>
-										<span class="context smallcaps">{result.context}</span>
-									</a>
-								</li>
-							{/each}
-						</ul>
-					</section>
-				{/if}
-
-				{#if results.grammar.length}
-					<section aria-labelledby="search-grammar">
-						<h3 id="search-grammar" class="smallcaps">{msgs.searchGrammar}</h3>
-						<ul>
-							{#each results.grammar as result (result.lemma)}
-								<li>
-									<a href={result.href} onclick={close}>
-										<span class="badge">{msgs.searchResultGrammar}</span>
-										<strong lang="la">{result.head}</strong>
-										{#if result.senses.length}<span class="snippet"
-												>{result.senses.join(' · ')}</span
-											>{/if}
-									</a>
-								</li>
-							{/each}
-						</ul>
-					</section>
-				{/if}
-			{/if}
-		</div>
+		{#if query.trim().length >= 2}
+			<a class="all-results" href={allResultsHref} onclick={close}>{msgs.searchAllResults} →</a>
+		{/if}
 	</div>
 </dialog>
 
@@ -214,7 +182,7 @@
 		border-radius: 999px;
 		background: none;
 		color: var(--ink-soft);
-		font: inherit;
+		text-decoration: none;
 		cursor: pointer;
 	}
 
@@ -223,8 +191,7 @@
 		color: var(--ink);
 	}
 
-	.search-trigger svg,
-	form > svg {
+	.search-trigger svg {
 		width: 1.05rem;
 		height: 1.05rem;
 		fill: none;
@@ -234,7 +201,7 @@
 	}
 
 	dialog {
-		width: min(42rem, calc(100vw - 2rem));
+		width: min(36rem, calc(100vw - 2rem));
 		max-width: none;
 		max-height: calc(100dvh - 2rem);
 		padding: 0;
@@ -250,7 +217,7 @@
 		backdrop-filter: blur(3px);
 	}
 
-	.search-shell {
+	.quick-shell {
 		display: flex;
 		max-height: calc(100dvh - 2rem);
 		flex-direction: column;
@@ -261,15 +228,16 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
-		padding: 1.35rem 1.35rem 0.9rem 1.5rem;
+		padding: 1.25rem 1.25rem 0.85rem 1.4rem;
 	}
 
 	h2 {
 		margin: 0;
 		color: var(--ink);
-		font-size: 1.35rem;
+		font-size: 1.25rem;
 		font-weight: 500;
 		line-height: 1.15;
+		text-align: start;
 	}
 
 	.close {
@@ -301,186 +269,23 @@
 		color: var(--ink);
 	}
 
-	form {
-		position: relative;
-		margin: 0 1.35rem;
-	}
-
-	form > svg {
-		position: absolute;
-		top: 50%;
-		left: 1rem;
-		transform: translateY(-50%);
-		color: var(--ink-soft);
-		pointer-events: none;
-		transition: color 120ms ease;
-	}
-
-	form:focus-within > svg {
-		color: var(--ink);
-	}
-
-	input {
-		width: 100%;
-		height: 3.15rem;
-		padding: 0.55rem 2.85rem 0.55rem 2.85rem;
-		border: 1px solid var(--border);
-		border-radius: 0.7rem;
-		background: var(--bg);
-		color: var(--ink);
-		font: inherit;
-		font-size: 1.08rem;
-		line-height: 1;
-		transition:
-			border-color 120ms ease,
-			box-shadow 120ms ease;
-	}
-
-	input:focus-visible {
-		outline: none;
-		border-color: var(--ink-soft);
-		box-shadow: 0 0 0 3px color-mix(in srgb, var(--ink-soft) 14%, transparent);
-	}
-
-	input::-webkit-search-cancel-button {
-		appearance: none;
-	}
-
-	.clear {
-		position: absolute;
-		top: 50%;
-		right: 0.55rem;
-		display: grid;
-		width: 2rem;
-		height: 2rem;
-		transform: translateY(-50%);
-		place-items: center;
-		padding: 0;
-		border: 0;
-		border-radius: 999px;
-		background: transparent;
-		color: var(--ink-soft);
-		cursor: pointer;
-	}
-
-	.clear:hover {
-		background: var(--wash);
-		color: var(--ink);
-	}
-
-	.clear svg {
-		width: 0.8rem;
-		height: 0.8rem;
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-width: 1.8;
-	}
-
 	.hint {
-		margin: 0.55rem 1.5rem 0.9rem;
+		margin: 0.5rem 1.4rem 0.8rem;
 		color: var(--ink-soft);
-		font-size: 0.86rem;
+		font-size: 0.84rem;
 		line-height: 1.3;
 	}
 
-	.results {
-		min-height: 5rem;
-		overflow-y: auto;
-		padding: 0 1.35rem 1.35rem;
-		overscroll-behavior: contain;
-	}
-
-	section + section {
-		margin-top: 1.15rem;
-	}
-
-	h3 {
-		margin: 0 0 0.4rem;
-		color: var(--ink-soft);
-		font-size: 0.78rem;
-		font-weight: 500;
-		letter-spacing: 0.06em;
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		border: 1px solid var(--border);
-		border-radius: 0.7rem;
-		background: color-mix(in srgb, var(--bg) 45%, transparent);
-		overflow: hidden;
-	}
-
-	li + li {
-		border-top: 1px solid var(--border);
-	}
-
-	li a {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		gap: 0.2rem 0.65rem;
-		padding: 0.75rem 0.85rem;
-		color: inherit;
+	.all-results {
+		align-self: flex-end;
+		margin: 0.8rem 1.4rem 1.2rem;
+		color: var(--rubric);
+		font-size: 0.86rem;
 		text-decoration: none;
 	}
 
-	li a:hover {
-		background: var(--wash);
-	}
-
-	.badge {
-		grid-row: 1 / span 3;
-		align-self: start;
-		min-width: 5.6rem;
-		padding: 0.16rem 0.35rem;
-		border: 1px solid var(--border);
-		border-radius: 0.25rem;
-		color: var(--rubric);
-		font-size: 0.72rem;
-		line-height: 1.2;
-		text-align: center;
-	}
-
-	strong {
-		font-weight: 600;
-		line-height: 1.2;
-	}
-
-	.latin,
-	.alias,
-	.snippet,
-	.context {
-		grid-column: 2;
-	}
-
-	.latin,
-	.alias,
-	.context {
-		color: var(--ink-soft);
-		font-size: 0.84rem;
-	}
-
-	.snippet {
-		line-height: 1.35;
-	}
-
-	.context {
-		font-size: 0.72rem;
-		letter-spacing: 0.05em;
-	}
-
-	mark {
-		background: var(--wash-strong);
-		color: inherit;
-		border-radius: 0.1rem;
-	}
-
-	.empty {
-		margin: 1.4rem 0;
-		text-align: center;
-		color: var(--ink-soft);
+	.all-results:hover {
+		text-decoration: underline;
 	}
 
 	@media (max-width: 28rem) {
@@ -489,7 +294,7 @@
 			max-height: calc(100dvh - 1rem);
 		}
 
-		.search-shell {
+		.quick-shell {
 			max-height: calc(100dvh - 1rem);
 		}
 
@@ -497,37 +302,8 @@
 			padding: 1rem 1rem 0.75rem 1.1rem;
 		}
 
-		h2 {
-			font-size: 1.2rem;
-		}
-
-		form {
-			margin-inline: 0.75rem;
-		}
-
 		.hint {
 			margin-inline: 1rem;
-		}
-
-		.results {
-			padding-inline: 0.75rem;
-		}
-
-		li a {
-			grid-template-columns: 1fr;
-		}
-
-		.badge {
-			grid-row: auto;
-			width: fit-content;
-			min-width: 0;
-		}
-
-		.latin,
-		.alias,
-		.snippet,
-		.context {
-			grid-column: 1;
 		}
 	}
 
