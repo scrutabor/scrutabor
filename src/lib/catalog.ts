@@ -101,6 +101,12 @@ const CATALOG_SOURCE: CatalogSection[] = [
 			},
 			{
 				category: 'orationes',
+				slug: 'ave-regina-caelorum',
+				title: 'Ave Regína cælórum',
+				localizedTitle: { pl: 'Witaj, Królowo niebios', en: 'Hail, Queen of the Heavens' }
+			},
+			{
+				category: 'orationes',
 				slug: 'angelus-domini',
 				title: 'Ángelus Dómini',
 				localizedTitle: { pl: 'Anioł Pański', en: 'The Angelus' }
