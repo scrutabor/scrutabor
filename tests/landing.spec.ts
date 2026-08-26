@@ -119,7 +119,7 @@ test.describe('landing @online', () => {
 		const panel = page.locator('aside.word-panel-inline');
 		await expect(panel.locator('.form')).toHaveText('scrutábor');
 		await expect(panel.locator('a[href="/app/pl/lemma/scrutor"]')).toBeVisible();
-		await expect(panel.locator('.layer-label')).toHaveText(['kontekst', 'hasło', 'forma']);
+		await expect(panel.locator('.layer-label')).toHaveText(['hasło', 'forma']);
 		await expect(panel.locator('.pronunciation-lead .pron')).toBeVisible();
 		await expect(panel.locator('.close')).toHaveCount(0);
 		expect(await panel.evaluate((el) => getComputedStyle(el).position)).toBe('static');

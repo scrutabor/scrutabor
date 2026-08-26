@@ -51,7 +51,6 @@ export interface Messages {
 	wordContextLabel: string;
 	wordEntryLabel: string;
 	wordFormLabel: string;
-	wordVerificationLabel: string;
 	working: string;
 	lemmaPageHint: string;
 	occurrences: string;
@@ -192,10 +191,9 @@ const MESSAGES: Record<Lang, Messages> = {
 		updateReload: 'Wczytaj',
 		updateReloading: 'Wczytywanie…',
 		panelAria: 'analiza słowa',
-		wordContextLabel: 'kontekst',
+		wordContextLabel: 'znaczenie w kontekście',
 		wordEntryLabel: 'hasło',
 		wordFormLabel: 'forma',
-		wordVerificationLabel: 'weryfikacja',
 		working: 'o wydaniu · wydanie robocze przed przeglądem eksperckim',
 		lemmaPageHint: 'otwórz hasło',
 		occurrences: 'w tekstach',
@@ -347,10 +345,9 @@ const MESSAGES: Record<Lang, Messages> = {
 		updateReload: 'Reload',
 		updateReloading: 'Reloading…',
 		panelAria: 'word analysis',
-		wordContextLabel: 'context',
+		wordContextLabel: 'meaning in context',
 		wordEntryLabel: 'dictionary entry',
 		wordFormLabel: 'form',
-		wordVerificationLabel: 'verification',
 		working: 'about this edition · working edition awaiting expert review',
 		lemmaPageHint: 'open the entry',
 		occurrences: 'in the texts',

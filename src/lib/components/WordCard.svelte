@@ -108,31 +108,24 @@
 	</p>
 {/snippet}
 
-{#snippet verification()}
-	<p class="meta smallcaps">
-		{#each describeAnalysisParts(analysis, lang) as part, i (i)}{#if part.href}<a
-					href={part.href}
-					target={part.external ? '_blank' : undefined}
-					rel={part.external ? 'external noopener' : undefined}>{part.text}</a
-				>{:else}{part.text}{/if}{/each}
-	</p>
-{/snippet}
+{#if gloss}
+	<section class="context-layer" aria-label={M[lang].wordContextLabel}>
+		{@render context()}
+	</section>
+{/if}
 
 <div class="layers">
-	{#if gloss}
-		<AnalysisRow label={M[lang].wordContextLabel} id="word-context-label" first>
-			{@render context()}
-		</AnalysisRow>
-	{/if}
 	<AnalysisRow label={M[lang].wordEntryLabel} id="word-entry-label">{@render entry()}</AnalysisRow>
 	<AnalysisRow label={M[lang].wordFormLabel} id="word-form-label">{@render grammar()}</AnalysisRow>
-	<details
-		class="verification"
-		open={analysis.review === 'disputed' || analysis.confidence !== 'high'}
-	>
-		<summary class="smallcaps">{M[lang].wordVerificationLabel}</summary>
-		{@render verification()}
-	</details>
+	<div class="verification">
+		<p class="meta smallcaps">
+			{#each describeAnalysisParts(analysis, lang) as part, i (i)}{#if part.href}<a
+						href={part.href}
+						target={part.external ? '_blank' : undefined}
+						rel={part.external ? 'external noopener' : undefined}>{part.text}</a
+					>{:else}{part.text}{/if}{/each}
+		</p>
+	</div>
 </div>
 
 <style>
@@ -198,6 +191,10 @@
 		color: var(--ink-soft);
 	}
 
+	.context-layer {
+		padding-top: 0.35rem;
+	}
+
 	.xref {
 		font: inherit;
 		background: none;
@@ -250,26 +247,6 @@
 		padding-top: 0.65rem;
 		border-top: 1px solid var(--border);
 		color: var(--ink-soft);
-	}
-
-	.verification summary {
-		width: max-content;
-		color: var(--ink-soft);
-		font-family: 'EB Garamond Label', 'EB Garamond', serif;
-		font-size: 0.7rem;
-		font-weight: 400;
-		line-height: 1;
-		letter-spacing: 0.11em;
-		cursor: pointer;
-	}
-
-	.verification summary:hover {
-		color: var(--ink);
-	}
-
-	.verification summary:focus-visible {
-		outline: 2px solid var(--rubric);
-		outline-offset: 0.2rem;
 	}
 
 	.verification .meta {

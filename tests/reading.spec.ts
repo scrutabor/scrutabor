@@ -252,11 +252,14 @@ test('word panel separates context, dictionary, grammar and verification', async
 	);
 	expect(headingRows.titleAlign).toBe('left');
 	expect(headingRows.pronunciationAlign).toBe('left');
-	await expect(panel.locator('.layer-label')).toHaveText(['kontekst', 'hasło', 'forma']);
+	await expect(panel.locator('.layer-label')).toHaveText(['hasło', 'forma']);
 	await expect(panel.locator('.head')).not.toContainText('›');
 	// The short reading aid comes first. A genuinely useful explanation is a
-	// separate, quieter paragraph rather than a dash followed by grammar.
-	const context = panel.locator('#word-context-label').locator('..');
+	// separate, quieter paragraph rather than a dash followed by grammar. It
+	// aligns with the selected word instead of entering the technical grid.
+	const context = panel.locator('.context-layer');
+	await expect(context).toHaveAttribute('aria-label', /^znaczenie w.kontekście$/);
+	await expect(panel.locator('#word-context-label')).toHaveCount(0);
 	await expect(context.locator('.gloss')).toHaveText('korzeniu');
 	await expect(context.locator('.explanation')).toContainText('zbawcze Światło — Chrystus');
 	const contextType = await context.evaluate((layer) => {
@@ -304,6 +307,13 @@ test('word panel separates context, dictionary, grammar and verification', async
 	expect(referenceType.headLineHeight).toBe(referenceType.morphLineHeight);
 	expect(contextType.explanationSize).toBeCloseTo(referenceType.headSize, 1);
 	expect(contextType.explanationColor).not.toBe(referenceType.headColor);
+	const wideAlignment = await panel.evaluate((card) => ({
+		titleLeft: card.querySelector('header .form')!.getBoundingClientRect().left,
+		glossLeft: card.querySelector('.context-layer .gloss')!.getBoundingClientRect().left,
+		entryLeft: card.querySelector('.head')!.getBoundingClientRect().left
+	}));
+	expect(wideAlignment.glossLeft).toBeCloseTo(wideAlignment.titleLeft, 1);
+	expect(wideAlignment.entryLeft).toBeGreaterThan(wideAlignment.glossLeft);
 	// The compact heading is a wide-panel improvement. On a phone the full
 	// pronunciation gets its own row instead of being squeezed beside the
 	// selected form and the close button.
@@ -321,13 +331,10 @@ test('word panel separates context, dictionary, grammar and verification', async
 	});
 	expect(narrowHeading.pronunciationTop).toBeGreaterThanOrEqual(narrowHeading.titleBottom);
 	expect(narrowHeading.copyLeft).toBeCloseTo(narrowHeading.titleLeft, 1);
-	// Routine verification remains available without competing with the
-	// prayer's meaning. It opens automatically only for a disputed reading.
+	// Verification is short and useful trust information, so it remains
+	// visible without an otherwise nearly equal-height disclosure control.
 	const verification = panel.locator('.verification');
-	await expect(verification.locator('summary')).toHaveText('weryfikacja');
-	await expect(verification).not.toHaveAttribute('open', '');
-	await expect(verification.locator('.meta')).not.toBeVisible();
-	await verification.locator('summary').click();
+	await expect(verification.locator('summary')).toHaveCount(0);
 	await expect(verification.locator('.meta')).toBeVisible();
 	await expect(verification.locator('.meta')).toContainText('zaakceptowane');
 	await expect(verification.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
@@ -354,7 +361,7 @@ test('dictionary and grammar layers keep a modest shared indent', async ({ page 
 			})
 		};
 	});
-	expect(geometry.rows).toHaveLength(3);
+	expect(geometry.rows).toHaveLength(2);
 	expect(geometry.rows[0].left).toBeCloseTo(geometry.rows[1].left, 1);
 	for (const row of geometry.rows) {
 		expect(row.indent, 'the label column became an oversized empty field').toBeLessThanOrEqual(
@@ -465,12 +472,10 @@ test('the Gloria reads with narrative, panel and provenance', async ({ page }) =
 	// terse pseudo-explanation beside the prayer's meaning.
 	await expect(panel.locator('.morph')).toContainText('mianownik');
 	await expect(panel.locator('.explanation')).toHaveCount(0);
-	await panel.locator('.verification summary').click();
 	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
 	// single-analyzer override: déxteram is confirmed by Whitaker's alone,
 	// against the document's both-analyzers default
 	await page.goto('/app/pl/ordinarium/gloria?w=w061');
-	await panel.locator('.verification summary').click();
 	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker');
 	await expect(panel.locator('.meta')).not.toContainText('Collatinus');
 	// the superlative links its grammar concept and the lemma page resolves
