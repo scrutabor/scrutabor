@@ -26,7 +26,13 @@ const CACHE = `scrutabor-${version}`;
 // them, and they must not sit in the book's cache.
 const SHELL_PAGE = /^\/app\/([a-z]{2}(\/(ordo|editio))?)?$/;
 
-const SHELL = [...build, ...files, ...prerendered.filter((path) => SHELL_PAGE.test(path))];
+// Vite gives independently loadable corpus JSON facades their own directory
+// (vite.config.ts). They are build artifacts, but not shell: search and
+// reading fetch only the candidates a reader asks for. An installed book
+// still receives the complete set below.
+const LAZY_CORPUS = build.filter((path) => path.includes('/immutable/corpus/'));
+const SHELL_BUILD = build.filter((path) => !path.includes('/immutable/corpus/'));
+const SHELL = [...SHELL_BUILD, ...files, ...prerendered.filter((path) => SHELL_PAGE.test(path))];
 
 /** The day's own texts, one file per day per language (decisions #27,
  * revised 2026-08-18). These are NOT shell: a reader who opened one prayer
@@ -39,7 +45,12 @@ const DAYS = prerendered.filter((path) => path.startsWith('/artifacts/proprium/'
 /** The whole book, for a reader who installed it. Only the app subtree and
  * the day artifacts: this leaves out the sitemap and the landing pages,
  * which live at the origin root. */
-const EVERYTHING = [...SHELL, ...prerendered.filter((path) => path.startsWith('/app/')), ...DAYS];
+const EVERYTHING = [
+	...SHELL,
+	...LAZY_CORPUS,
+	...prerendered.filter((path) => path.startsWith('/app/')),
+	...DAYS
+];
 
 sw.addEventListener('install', (event) => {
 	event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL)));

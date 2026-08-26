@@ -2,13 +2,34 @@
 // packs. A reading route imports one base text, the selected language's text,
 // and that language's lexicon/citation tables. No other language crosses the
 // loader boundary.
-import manifestData from './data/manifest.json';
 import analysisTable from './data/tables/analysis.json';
 import sharedCitationTable from './data/tables/citations.json';
 import parseTable from './data/tables/morphology.json';
 import headsData from './data/lexicon/heads.json';
 import { LANGS, type Lang } from './i18n';
 import { bindProse } from './polish';
+import {
+	ROOT_MANIFEST as manifest,
+	TEXT_KEYS,
+	TEXT_METADATA,
+	hasText,
+	languageResourcePaths,
+	languageTextEntries,
+	languageTextMetadataFor,
+	textKeysFor,
+	textMetadataFor
+} from './corpus-metadata';
+export {
+	TEXT_KEYS,
+	TEXT_METADATA,
+	hasText,
+	languageConcordancePath,
+	languageTextMetadataFor,
+	textKeysFor,
+	textMetadataFor,
+	type LanguageTextMetadata,
+	type TextMetadata
+} from './corpus-metadata';
 
 export interface Morph {
 	pos: string;
@@ -136,73 +157,8 @@ export interface SenseEntry {
 	analysis?: Analysis;
 }
 
-export interface TextMetadata {
-	id: string;
-	path: string;
-	title: string;
-}
-
-interface LanguageTextMetadata {
-	id: string;
-	path: string;
-}
-
-interface LanguageManifest {
-	schema_version: string;
-	corpus_schema: string;
-	language: Lang;
-	direction: 'ltr' | 'rtl';
-	texts: LanguageTextMetadata[];
-	lexicon: string;
-	citations: string;
-}
-
-interface RootManifest {
-	schema_version: string;
-	corpus_schema: string;
-	texts: TextMetadata[];
-	languages: { id: Lang; direction: 'ltr' | 'rtl'; path: string }[];
-}
-
 type JsonModule = { default: unknown };
 type JsonImport = () => Promise<JsonModule>;
-
-const manifest = manifestData as unknown as RootManifest;
-const LANGUAGE_MANIFEST_MODULES = import.meta.glob('./data/languages/*/manifest.json', {
-	eager: true
-}) as Record<string, JsonModule>;
-const LANGUAGE_MANIFESTS = Object.fromEntries(
-	manifest.languages.map(({ id, path }) => {
-		const module = LANGUAGE_MANIFEST_MODULES[`./data/${path}`];
-		if (!module) throw new Error(`${id} names ${path}, which was not vendored`);
-		const languageManifest = module.default as LanguageManifest;
-		if (languageManifest.language !== id)
-			throw new Error(`${path} calls itself ${languageManifest.language}`);
-		return [id, languageManifest];
-	})
-) as Record<Lang, LanguageManifest>;
-
-if (manifest.languages.map(({ id }) => id).join(',') !== LANGS.join(',')) {
-	throw new Error('the reader-edition languages and the interface-language registry differ');
-}
-
-export const TEXT_METADATA = manifest.texts;
-export const TEXT_KEYS = TEXT_METADATA.map(({ id }) => id.replace('.', '/'));
-const METADATA_BY_KEY = new Map(TEXT_METADATA.map((entry) => [entry.id.replace('.', '/'), entry]));
-const LANGUAGE_TEXTS = Object.fromEntries(
-	LANGS.map((language) => [
-		language,
-		new Map(LANGUAGE_MANIFESTS[language].texts.map((entry) => [entry.id.replace('.', '/'), entry]))
-	])
-) as Record<Lang, Map<string, LanguageTextMetadata>>;
-
-export function textKeysFor(language: Lang): string[] {
-	return LANGUAGE_MANIFESTS[language].texts.map(({ id }) => id.replace('.', '/'));
-}
-
-export function hasText(key: string, language?: Lang): boolean {
-	return language ? LANGUAGE_TEXTS[language].has(key) : METADATA_BY_KEY.has(key);
-}
 
 const PARSES = parseTable as unknown as (Morph | null)[];
 const ANALYSES = analysisTable as unknown as (Analysis | null)[];
@@ -371,9 +327,9 @@ const LANGUAGE_RESOURCES = new Map<
 async function loadLanguageResources(language: Lang) {
 	let pending = LANGUAGE_RESOURCES.get(language);
 	if (!pending) {
-		const languageManifest = LANGUAGE_MANIFESTS[language];
-		const lexiconImport = LANGUAGE_LEXICON_MODULES[`./data/${languageManifest.lexicon}`];
-		const citationImport = LANGUAGE_CITATION_MODULES[`./data/${languageManifest.citations}`];
+		const paths = languageResourcePaths(language);
+		const lexiconImport = LANGUAGE_LEXICON_MODULES[`./data/${paths.lexicon}`];
+		const citationImport = LANGUAGE_CITATION_MODULES[`./data/${paths.citations}`];
 		if (!lexiconImport || !citationImport) throw new Error(`${language} package is incomplete`);
 		pending = Promise.all([lexiconImport(), citationImport()]).then(
 			([lexiconModule, citationModule]) => {
@@ -432,7 +388,7 @@ for (const entry of TEXT_METADATA) {
 		throw new Error(`${entry.id} names an absent base text`);
 }
 for (const language of LANGS) {
-	for (const entry of LANGUAGE_MANIFESTS[language].texts) {
+	for (const entry of languageTextEntries(language)) {
 		if (!LANGUAGE_TEXT_MODULES[`./data/${entry.path}`]) {
 			throw new Error(`${language}:${entry.id} names an absent language text`);
 		}
@@ -440,7 +396,7 @@ for (const language of LANGS) {
 }
 
 async function loadCore(key: string): Promise<CoreArtifact | undefined> {
-	const metadata = METADATA_BY_KEY.get(key);
+	const metadata = textMetadataFor(key);
 	if (!metadata) return undefined;
 	let pending = CORE_CACHE.get(key);
 	if (!pending) {
@@ -480,7 +436,7 @@ export function loadedTextKeys(): string[] {
 }
 
 export function loadText(key: string, language: Lang): Promise<TextEntry | undefined> {
-	const localizedMetadata = LANGUAGE_TEXTS[language].get(key);
+	const localizedMetadata = languageTextMetadataFor(key, language);
 	if (!localizedMetadata) return Promise.resolve(undefined);
 	const cacheKey = `${language}:${key}`;
 	let pending = TEXT_CACHE.get(cacheKey);

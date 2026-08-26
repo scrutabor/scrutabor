@@ -47,6 +47,10 @@ One origin, one build, two surfaces:
 - **Lemma pages** (`/app/pl/lemma/oro`) with a concordance — every place
   the word appears across the texts, each occurrence a deep link that
   opens the reading view on that word.
+- **Book search** ranks familiar and Latin titles first, remembered text
+  passages second, and grammatical analysis last. Matching ignores case and
+  diacritics, tolerates small spelling mistakes, and links passages to their
+  exact segment.
 - **Grammar pages** (`/app/pl/grammatica`) — the cases, moods, and
   constructions of the prayers, every example drawn from the corpus.
 - Polish and English interfaces, light and dark themes, and typography
@@ -83,19 +87,19 @@ dependencies are deliberately minimal.
 `scripts/vendor-corpus.mjs` mirrors the corpus reader edition under
 `src/lib/data/`. Shared Latin and analysis data live in the neutral base;
 `languages/<lang>/` holds a separate manifest, text layers, lexicon senses and
-citations for each target language. A language manifest may list any complete
-subset of the Latin texts, so adding one translated prayer neither edits the
-other languages nor requires translating the remaining corpus.
+citations, titles, aliases and search concordance for each target language. A
+language manifest may list any complete subset of the Latin texts, so adding
+one translated prayer neither edits the other languages nor requires
+translating the remaining corpus.
 
 JSON keeps one logical record per line and uses descriptive paths. A reading
 loads one neutral text, one matching language text and that language's shared
 resources, then caches them independently. `concordance.json` maps Latin
-lemmata and normalized forms to stable text/word addresses, so lemma pages and
-future search choose candidates before opening texts. A future localized
-file-candidate index belongs inside its language package and can be named by
-that package's manifest; it does not require another text-layout migration.
-The same root and language manifests are package recipes for a mobile client or
-for offline archives containing only selected languages.
+lemmata and normalized forms to stable text, segment and word addresses; each
+language package carries the corresponding index for its translations. Search
+loads those small indexes first, then opens only candidate text files. The same
+root and language manifests are package recipes for a mobile client or for
+offline archives containing only selected languages.
 
 ## License
 

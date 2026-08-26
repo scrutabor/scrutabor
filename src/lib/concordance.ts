@@ -31,20 +31,22 @@ export interface TextOccurrences {
 
 export interface ConcordanceAddress {
 	textKey: string;
+	segmentId: string;
 	wordId: string;
+	position: number;
 }
 
-type Posting = [number, string];
-interface ConcordanceData {
+export type LatinPosting = [number, string, string, number];
+export interface ConcordanceData {
 	schema_version: string;
 	texts: (string | null)[];
 	latin: {
-		lemmata: Record<string, Posting[]>;
-		forms: Record<string, Posting[]>;
+		lemmata: Record<string, LatinPosting[]>;
+		forms: Record<string, LatinPosting[]>;
 	};
 }
 
-const DATA = concordance as unknown as ConcordanceData;
+export const CONCORDANCE = concordance as unknown as ConcordanceData;
 
 /** The same normalization the corpus uses when it emits form search keys. */
 export function normalizeLatin(value: string): string {
@@ -57,19 +59,21 @@ export function normalizeLatin(value: string): string {
 }
 
 function textKey(number: number): string | undefined {
-	return DATA.texts[number]?.replace('.', '/');
+	return CONCORDANCE.texts[number]?.replace('.', '/');
 }
 
-function candidateKeys(postings: Posting[]): string[] {
+function candidateKeys(postings: LatinPosting[]): string[] {
 	return [...new Set(postings.map(([number]) => textKey(number)).filter(Boolean))] as string[];
 }
 
 /** Stable word addresses for exact Latin-form results in a future search UI. */
 export function addressesForLatinForm(form: string): ConcordanceAddress[] {
-	return (DATA.latin.forms[normalizeLatin(form)] ?? []).flatMap(([number, wordId]) => {
-		const key = textKey(number);
-		return key ? [{ textKey: key, wordId }] : [];
-	});
+	return (CONCORDANCE.latin.forms[normalizeLatin(form)] ?? []).flatMap(
+		([number, segmentId, wordId, position]) => {
+			const key = textKey(number);
+			return key ? [{ textKey: key, segmentId, wordId, position }] : [];
+		}
+	);
 }
 
 /** Candidate texts for a future Latin search, without opening any text. */
@@ -124,10 +128,11 @@ export function everyTextInOrder(): string[] {
 }
 
 export async function occurrencesOf(lemma: string): Promise<TextOccurrences[]> {
-	const postings = DATA.latin.lemmata[lemma] ?? [];
+	const postings = CONCORDANCE.latin.lemmata[lemma] ?? [];
 	const texts = await loadCoreTexts(candidateKeys(postings));
 	const byText = new Map<string, string[]>();
-	for (const [number, wordId] of postings) {
+	for (const posting of postings) {
+		const [number, , wordId] = posting;
 		const key = textKey(number);
 		if (!key) continue;
 		const ids = byText.get(key) ?? [];
