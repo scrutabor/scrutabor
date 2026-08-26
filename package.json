@@ -14,8 +14,9 @@
 		"lint": "prettier --check . && eslint . && stylelint \"src/**/*.{css,svelte}\"",
 		"lint:clones": "jscpd src",
 		"test:unit": "vitest run",
+		"test:font-subsets": "node scripts/check-font-subsets.mjs",
 		"test:e2e": "playwright test",
-		"test": "npm run test:unit && npm run test:e2e",
+		"test": "npm run test:font-subsets && npm run test:unit && npm run test:e2e",
 		"build:offline-runtime": "vite build --config vite.offline.config.ts",
 		"build:offline": "npm run build && npm run build:offline-runtime && node scripts/build-offline.mjs"
 	},

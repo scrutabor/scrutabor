@@ -186,44 +186,75 @@ test('a gesture before the proper arrives ends deep-link settling @online', asyn
 
 test('picking a day does not make the control flicker @online', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	// The artifact usually arrives in about 30 ms, and a notice that appears
-	// and vanishes inside two frames says nothing while jolting the one part
-	// of the page that is otherwise still: the label went 200px wide to 291px
-	// and straight back on every pick and every reload.
-	//
-	// The load is held for 120 ms rather than left to the machine. Untimed,
-	// this test passed against the defect it exists for — the fetch was so
-	// fast that whether the notice flashed at all depended on which frame the
-	// sampler woke on. 120 ms is comfortably under the 400 ms the notice waits
-	// and comfortably over one frame, so the answer is the same every run.
-	// `@online` because it drives a route: the downloaded copy loads the day
-	// from a classic script and has no request to hold.
-	await page.route('**/artifacts/proprium/**', async (route) => {
-		await new Promise((r) => setTimeout(r, 120));
-		await route.continue();
-	});
+	// Give the page a response already held in memory, then freeze its clock:
+	// the 400 ms slow-load timer cannot win because the runner was starved.
+	// A MutationObserver sees every state inserted into the live region, even
+	// if it is removed before a screenshot or animation-frame sampler wakes.
+	const artifactPath = '/artifacts/proprium/en/dominica-i-adventus.json';
+	const artifact = await page.request.get(artifactPath);
+	expect(artifact.ok()).toBe(true);
+	const artifactBody = await artifact.body();
+	await page.route(`**${artifactPath}`, (route) =>
+		route.fulfill({ status: 200, contentType: 'application/json', body: artifactBody })
+	);
 	await page.goto(`/app/en/ordo/catechumenorum`);
 	await settled(page);
-	const watch = page.evaluate(
-		() =>
-			new Promise<{ sizes: string[]; announced: boolean }>((done) => {
-				const sizes: string[] = [];
-				let announced = false;
-				let n = 0;
-				const tick = () => {
-					const el = document.querySelector('.picker.day');
-					const r = el?.getBoundingClientRect();
-					const size = r ? `${Math.round(r.width)}x${Math.round(r.height)}` : '-';
-					if (sizes[sizes.length - 1] !== size) sizes.push(size);
-					if (el?.querySelector('.state')) announced = true;
-					if (++n < 70) requestAnimationFrame(tick);
-					else done({ sizes, announced });
-				};
-				requestAnimationFrame(tick);
-			})
-	);
+	await page.evaluate(() => document.fonts.ready);
+	await page.clock.install();
+	await page.clock.pauseAt(await page.evaluate(() => Date.now()));
+	await page.evaluate(() => {
+		const picker = document.querySelector('.picker.day');
+		if (!(picker instanceof HTMLElement)) throw new Error('day picker not found');
+		const probe = {
+			sizes: [] as string[],
+			announced: false,
+			observer: null as MutationObserver | null
+		};
+		const record = () => {
+			const r = picker.getBoundingClientRect();
+			const size = `${Math.round(r.width)}x${Math.round(r.height)}`;
+			if (probe.sizes.at(-1) !== size) probe.sizes.push(size);
+			if (picker.querySelector('.state')) probe.announced = true;
+		};
+		probe.observer = new MutationObserver((records) => {
+			for (const mutation of records) {
+				for (const node of mutation.addedNodes) {
+					if (node instanceof Element && (node.matches('.state') || node.querySelector('.state')))
+						probe.announced = true;
+				}
+			}
+			record();
+		});
+		probe.observer.observe(picker, {
+			attributes: true,
+			characterData: true,
+			childList: true,
+			subtree: true
+		});
+		record();
+		(
+			window as unknown as {
+				__dayPickerProbe: typeof probe & { record: () => void };
+			}
+		).__dayPickerProbe = Object.assign(probe, { record });
+	});
 	await page.selectOption('.picker.day select', DAY);
-	const { sizes, announced } = await watch;
+	await expect(page.locator('body')).toContainText('Ad te levávi');
+	const { sizes, announced } = await page.evaluate(() => {
+		const probe = (
+			window as unknown as {
+				__dayPickerProbe: {
+					sizes: string[];
+					announced: boolean;
+					observer: MutationObserver;
+					record: () => void;
+				};
+			}
+		).__dayPickerProbe;
+		probe.record();
+		probe.observer.disconnect();
+		return { sizes: probe.sizes, announced: probe.announced };
+	});
 	// A load this fast is not worth announcing, so nothing is said and nothing
 	// is moved by saying it.
 	expect(announced).toBe(false);
@@ -253,23 +284,34 @@ test('a corrected pick is not overtaken by the first one @online', async ({ page
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	// The reader picks a Sunday and corrects themselves while the first
 	// artifact is still in flight. Responses come back in whatever order the
-	// network pleases — and the FIRST one used to land last and win, so the
-	// control read one Sunday over another Sunday's Introit, eight times out
-	// of eight in review. The first day's artifact is held long enough that
-	// the wrong order is certain rather than likely.
+	// network pleases. Hold the first response on an explicit promise, wait for
+	// the second day to be fully in place, then release the first and wait for
+	// its response and the browser's next render turn. No wall-clock pause can
+	// pass before the superseded response has actually been processed.
+	let sawFirstRequest!: () => void;
+	let releaseFirstRequest!: () => void;
+	const firstRequested = new Promise<void>((resolve) => (sawFirstRequest = resolve));
+	const firstReleased = new Promise<void>((resolve) => (releaseFirstRequest = resolve));
 	await page.route('**/artifacts/proprium/en/dominica-i-adventus.json', async (route) => {
-		await new Promise((r) => setTimeout(r, 1200));
+		sawFirstRequest();
+		await firstReleased;
 		await route.continue();
 	});
 	await page.goto('/app/en/ordo/catechumenorum');
 	await settled(page);
 	await page.selectOption('.picker.day select', 'dominica-i-adventus');
-	await page.waitForTimeout(100);
+	await firstRequested;
 	await page.selectOption('.picker.day select', 'dominica-ii-adventus');
 	// Advent II's own Introit…
 	await expect(page.locator('body')).toContainText('Pópulus Sion', { timeout: 10_000 });
-	// …and still Advent II's after the held response finally lands.
-	await page.waitForTimeout(1500);
+	// …and still Advent II's after the held response has really landed and
+	// the page has had a render turn in which to apply it.
+	const firstResponse = page.waitForResponse((response) =>
+		response.url().endsWith('/proprium/en/dominica-i-adventus.json')
+	);
+	releaseFirstRequest();
+	await (await firstResponse).finished();
+	await page.evaluate(() => new Promise<void>((resolve) => requestAnimationFrame(() => resolve())));
 	await expect(page.locator('.picker.day select')).toHaveValue('dominica-ii-adventus');
 	await expect(page.locator('body')).toContainText('Pópulus Sion');
 	await expect(page.locator('body')).not.toContainText('Ad te levávi');

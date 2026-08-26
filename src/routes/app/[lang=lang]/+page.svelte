@@ -78,7 +78,7 @@
 
 		<footer class="catalog-footer">
 			<p class="grammar-link smallcaps">
-				<a href="/app/{lang}/grammatica">{msgs.grammarTitle} →</a>
+				<a href="/app/{lang}/grammatica">{msgs.grammarTitle} ›</a>
 			</p>
 			<p class="working smallcaps"><a href="/app/{lang}/editio">{msgs.working}</a></p>
 			<p class="bibliography-link smallcaps">

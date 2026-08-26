@@ -21,6 +21,10 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r scripts/font-requirements.txt
       - run: npm ci
       - run: npm run lint
       # A copy of something is how the reading surfaces drift apart: one

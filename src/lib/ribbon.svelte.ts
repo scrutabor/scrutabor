@@ -26,10 +26,15 @@ function read(key: string): number | null {
 	if (!raw) return null;
 	try {
 		const { y, t } = JSON.parse(raw);
-		if (typeof y !== 'number' || typeof t !== 'number') return null;
-		return Date.now() - t > TTL ? null : y;
+		if (typeof y !== 'number' || typeof t !== 'number' || Date.now() - t > TTL) {
+			removeStored(key);
+			return null;
+		}
+		return y;
 	} catch {
-		// a malformed entry is as good as none
+		// A malformed entry is as good as none, and must not be re-read on
+		// every visit as though it could become valid later.
+		removeStored(key);
 		return null;
 	}
 }

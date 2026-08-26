@@ -1042,7 +1042,12 @@ test('the book keeps a ribbon: reopening a text resumes the position', async ({ 
 		);
 	});
 	await page.goto('/app/pl/ordinarium/credo');
-	await page.waitForTimeout(200);
+	// Processing the expired entry is the signal. A fixed wait could inspect
+	// the initial top-of-page state before a starved afterNavigate callback had
+	// read the ribbon at all and therefore pass without exercising expiry.
+	await expect
+		.poll(() => page.evaluate(() => localStorage.getItem('scrutabor-pos:ordinarium/credo')))
+		.toBeNull();
 	expect(await page.evaluate(() => window.scrollY)).toBeLessThan(10);
 });
 
