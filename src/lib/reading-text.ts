@@ -1,4 +1,4 @@
-import type { Citation, GlossDocument, Segment } from '$lib/corpus';
+import type { Citation, GlossDocument, Segment, TranslationRelationship } from '$lib/corpus';
 
 export interface LitanyRow {
 	/** Index of the invocation or other segment that opens the row. */
@@ -59,4 +59,17 @@ export function collectTranslationCitations(segments: Segment[], gloss: GlossDoc
 		...citation,
 		locator: locators.join('; ')
 	}));
+}
+
+/** The distinct source relationships used by this text, in reading order. */
+export function collectTranslationRelationships(
+	segments: Segment[],
+	gloss: GlossDocument
+): TranslationRelationship[] {
+	const found = new Set<TranslationRelationship>();
+	for (const segment of segments) {
+		const relationship = gloss.segments[segment.id]?.translation_relationship;
+		if (relationship) found.add(relationship);
+	}
+	return [...found];
 }

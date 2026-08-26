@@ -37,7 +37,7 @@
   null,
   {"locator":"printed p. 440","title":"Francis X. Lasance, The Catholic Girl's Guide (1906)","url":"https://archive.org/details/catholicgirlsgui00lasa"},
   null,
-  {"locator":"printed p. 117","title":"Katolik w modlitwie (1902)","url":"https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"},
+  null,
   {"locator":"printed pp. 183 and 185","title":"Key of Heaven (1901)","url":"https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu"},
   null,
   null,
@@ -65,7 +65,7 @@
   null,
   {"locator":"printed p. 10","title":"Key of Heaven (1901)","url":"https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu"},
   null,
-  {"locator":"printed p. 139","title":"Katolik w modlitwie (1902)","url":"https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"},
+  null,
   {"locator":"printed pp. 189 and 191","title":"Key of Heaven (1901)","url":"https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu"},
   null,
   {"locator":"printed p. 89","title":"The Raccolta (1910)","url":"https://archive.org/details/theraccoltaorcol00unknuoft"},
@@ -404,5 +404,7 @@
   null,
   null,
   null,
-  null
+  null,
+  {"locator":"printed pp. 590–591","title":"Francis X. Lasance, The Catholic Girl's Guide (1906)","url":"https://archive.org/details/catholicgirlsgui00lasa"},
+  {"locator":"printed pp. 592–593","title":"Francis X. Lasance, The Catholic Girl's Guide (1906)","url":"https://archive.org/details/catholicgirlsgui00lasa"}
 ]

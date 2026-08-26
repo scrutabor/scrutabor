@@ -4,19 +4,19 @@
   "about":"Formuła Dómine, non sum dignus opiera się na słowach setnika z Mt 8, 8. Zamiast puer meus — sługa mój — występuje w niej ánima mea — dusza moja. Panem cæléstem accípiam podobnie nawiązuje do Ps 115, 4 w numeracji Wulgaty (Ps 116, 13 w numeracji hebrajskiej): Cálicem salutáris accípiam — kielich zbawienia przyjmę. Kapłan trzykrotnie powtarza Dómine, non sum dignus, rozpoczynając każde wezwanie nieco podniesionym głosem i kontynuując po cichu.",
   "seg":[
     {"id":"s01","nr":"Kapłan przyklęka, wstaje i mówi:"},
-    {"id":"s02","tr":"Przyjmę chleb niebieski i będę wzywał imienia Pana.","tc":[266],"g":["Chleb","niebiański","wezmę","i","imienia","Pana","wzywać będę"],"fn":{"w002":"Przymiotnik zgadzający się z panem.","w003":"Czas przyszły trybu oznajmującego, co potwierdza współrzędny czasownik invocábo."}},
+    {"id":"s02","tr":"Przyjmę chleb niebieski i będę wzywał imienia Pana.","tc":[266],"tb":"revised","g":["Chleb","niebiański","wezmę","i","imienia","Pana","wzywać będę"],"fn":{"w002":"Przymiotnik zgadzający się z panem.","w003":"Czas przyszły trybu oznajmującego, co potwierdza współrzędny czasownik invocábo."}},
     {"id":"s03","nr":"Lekko pochylony, kapłan bierze obie części Hostii w lewą rękę i podsuwa pod nie patenę. Bijąc się trzykrotnie prawą ręką w piersi, trzykrotnie mówi nieco podniesionym głosem, pobożnie i pokornie:"},
-    {"id":"s04","tr":"Panie, nie jestem godzien,","tc":[266],"g":["Panie","nie","jestem","godzien"],"fn":{"w011":"Pierwsze cztery słowa kapłan wypowiada nieco podniesionym głosem, uderzając się w piersi. Resztę zdania mówi po cichu."}},
+    {"id":"s04","tr":"Panie, nie jestem godzien,","tc":[266],"tb":"revised","g":["Panie","nie","jestem","godzien"],"fn":{"w011":"Pierwsze cztery słowa kapłan wypowiada nieco podniesionym głosem, uderzając się w piersi. Resztę zdania mówi po cichu."}},
     {"id":"s05","nr":"Kapłan mówi dalej po cichu."},
-    {"id":"s06","tr":"abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.","tc":[266],"g":["abyś","wszedł","pod","dach","mój","ale","tylko","powiedz","słowem","a","będzie uzdrowiona","dusza","moja"],"fn":{"w013":"Tryb łączący wymagany przez ut.","w014":"Biernik wskazuje ruch pod dach.","w018":"Przysłówek określający dic.","w020":"Ablativus narzędzia przy dic.","w022":"Czas przyszły strony biernej trybu oznajmującego.","w023":"Podmiot przy sanábitur w mianowniku."}},
-    {"id":"s07","tr":"Panie, nie jestem godzien,","tc":[266],"g":["Panie","nie","jestem","godzien"]},
+    {"id":"s06","tr":"abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.","tc":[266],"tb":"revised","g":["abyś","wszedł","pod","dach","mój","ale","tylko","powiedz","słowem","a","będzie uzdrowiona","dusza","moja"],"fn":{"w013":"Tryb łączący wymagany przez ut.","w014":"Biernik wskazuje ruch pod dach.","w018":"Przysłówek określający dic.","w020":"Ablativus narzędzia przy dic.","w022":"Czas przyszły strony biernej trybu oznajmującego.","w023":"Podmiot przy sanábitur w mianowniku."}},
+    {"id":"s07","tr":"Panie, nie jestem godzien,","tc":[266],"tb":"revised","g":["Panie","nie","jestem","godzien"]},
     {"id":"s08","nr":"Kapłan mówi dalej po cichu."},
-    {"id":"s09","tr":"abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.","tc":[266],"g":["abyś","wszedł","pod","dach","mój","ale","tylko","powiedz","słowem","a","będzie uzdrowiona","dusza","moja"]},
-    {"id":"s10","tr":"Panie, nie jestem godzien,","tc":[266],"g":["Panie","nie","jestem","godzien"]},
+    {"id":"s09","tr":"abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.","tc":[266],"tb":"revised","g":["abyś","wszedł","pod","dach","mój","ale","tylko","powiedz","słowem","a","będzie uzdrowiona","dusza","moja"]},
+    {"id":"s10","tr":"Panie, nie jestem godzien,","tc":[266],"tb":"revised","g":["Panie","nie","jestem","godzien"]},
     {"id":"s11","nr":"Kapłan mówi dalej po cichu."},
-    {"id":"s12","tr":"abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.","tc":[266],"g":["abyś","wszedł","pod","dach","mój","ale","tylko","powiedz","słowem","a","będzie uzdrowiona","dusza","moja"]},
+    {"id":"s12","tr":"abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.","tc":[266],"tb":"revised","g":["abyś","wszedł","pod","dach","mój","ale","tylko","powiedz","słowem","a","będzie uzdrowiona","dusza","moja"]},
     {"id":"s13","nr":"Kapłan żegna się Hostią nad pateną i mówi:"},
-    {"id":"s14","tr":"Ciało Pana naszego Jezusa Chrystusa niech strzeże mojej duszy na życie wieczne. Amen.","tc":[266],"g":["Ciało","Pana","naszego","Jezusa","Chrystusa","niech strzeże","duszy","mojej","na","żywot","wieczny","amen"],"fn":{"w059":"Podmiot przy custódiat.","w066":"W formule Komunii wiernych w tym miejscu występuje ánimam tuam."}},
+    {"id":"s14","tr":"Ciało Pana naszego Jezusa Chrystusa niech strzeże mojej duszy na życie wieczne. Amen.","tc":[266],"tb":"revised","g":["Ciało","Pana","naszego","Jezusa","Chrystusa","niech strzeże","duszy","mojej","na","żywot","wieczny","amen"],"fn":{"w059":"Podmiot przy custódiat.","w066":"W formule Komunii wiernych w tym miejscu występuje ánimam tuam."}},
     {"id":"s15","nr":"Pochylony, kapłan przyjmuje z czcią obie części Hostii, kładzie patenę na korporale, składa ręce i przez chwilę trwa w rozmyślaniu o Najświętszym Sakramencie."}
   ]
 }

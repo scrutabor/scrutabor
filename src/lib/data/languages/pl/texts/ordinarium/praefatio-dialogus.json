@@ -4,11 +4,11 @@
   "about":"Dialog poprzedzający Prefację. W wezwaniu „Sursum corda” czasownik pozostaje domyślny. W odpowiedzi „Habémus ad Dóminum” niewypowiedzianym dopełnieniem są „corda”. Ostatnią odpowiedź kapłan podejmuje słowami „Vere dignum et iustum est”.",
   "seg":[
     {"id":"s01","nr":"Kapłan kładzie obie ręce na ołtarzu, po jego obu stronach, i unosi je nieco, mówiąc „Sursum corda”. Przy „Grátias agámus” składa je przed piersią i pochyla głowę."},
-    {"id":"s02","tr":"Pan z wami.","tc":[297],"g":["Pan","z wami"],"fn":{"w002":"Przyimek „cum” stoi po zaimku osobowym: „vobis” + „cum” tworzy „vobíscum”."}},
-    {"id":"s03","tr":"I z duchem twoim.","tc":[297],"g":["i","z","duchem","twoim"],"fn":{"w006":"Zgadza się ze „spíritu” (w005) w odpowiedzi „Et cum spíritu tuo”."}},
-    {"id":"s04","tr":"W górę serca.","tc":[300],"g":["w górę","serca"],"fn":{"w008":"Biernik liczby mnogiej w wezwaniu bez wyrażonego czasownika."}},
-    {"id":"s05","tr":"Wznosimy je do Pana.","tc":[295],"g":["mamy","ku","Panu"],"fn":{"w009":"Niewypowiedzianym dopełnieniem „habémus” są „corda” z poprzedniego wezwania."}},
-    {"id":"s06","tr":"Dzięki składajmy Panu, Bogu naszemu.","tc":[295],"g":["dzięki","składajmy","Panu","Bogu","naszemu"],"fn":{"w012":"„Grátias ágere” to stały łaciński zwrot oznaczający składanie dzięki.","w013":"Tryb łączący w pierwszej osobie liczby mnogiej, użyty jako zachęta.","w015":"Apozycja (dopowiedzenie) do „Dómino” (w014), stąd celownik."}},
+    {"id":"s02","tr":"Pan z wami.","tc":[297],"tb":"normalized","g":["Pan","z wami"],"fn":{"w002":"Przyimek „cum” stoi po zaimku osobowym: „vobis” + „cum” tworzy „vobíscum”."}},
+    {"id":"s03","tr":"I z duchem twoim.","tc":[297],"tb":"normalized","g":["i","z","duchem","twoim"],"fn":{"w006":"Zgadza się ze „spíritu” (w005) w odpowiedzi „Et cum spíritu tuo”."}},
+    {"id":"s04","tr":"W górę serca.","tc":[300],"tb":"exact","g":["w górę","serca"],"fn":{"w008":"Biernik liczby mnogiej w wezwaniu bez wyrażonego czasownika."}},
+    {"id":"s05","tr":"Wznosimy je do Pana.","tc":[295],"tb":"normalized","g":["mamy","ku","Panu"],"fn":{"w009":"Niewypowiedzianym dopełnieniem „habémus” są „corda” z poprzedniego wezwania."}},
+    {"id":"s06","tr":"Dzięki składajmy Panu, Bogu naszemu.","tc":[295],"tb":"normalized","g":["dzięki","składajmy","Panu","Bogu","naszemu"],"fn":{"w012":"„Grátias ágere” to stały łaciński zwrot oznaczający składanie dzięki.","w013":"Tryb łączący w pierwszej osobie liczby mnogiej, użyty jako zachęta.","w015":"Apozycja (dopowiedzenie) do „Dómino” (w014), stąd celownik."}},
     {"id":"s07","tr":"Godne to i sprawiedliwe.","g":["godne","i","sprawiedliwe","jest"],"fn":{"w017":"Rodzaj nijaki liczby pojedynczej, użyty bez wyrażonego rzeczownika."}}
   ]
 }

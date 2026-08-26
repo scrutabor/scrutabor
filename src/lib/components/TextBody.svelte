@@ -3,7 +3,12 @@
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { massForm } from '$lib/mass-form.svelte';
-	import { collectTranslationCitations, litanyRows, type LitanyRow } from '$lib/reading-text';
+	import {
+		collectTranslationCitations,
+		collectTranslationRelationships,
+		litanyRows,
+		type LitanyRow
+	} from '$lib/reading-text';
 	import { isEveryonesResponse, isYours, mayJoin, role } from '$lib/role.svelte';
 	import { initialFit } from '$lib/reading-geometry';
 	import * as marks from '$lib/speaker-marks';
@@ -143,6 +148,7 @@
 	// The litany keeps its own two-column convention either way.
 	const bilingual = $derived(helpLevel === 2 && !litanyColumns);
 	const translationCitations = $derived(collectTranslationCitations(segs, gloss));
+	const translationRelationships = $derived(collectTranslationRelationships(segs, gloss));
 </script>
 
 {#snippet face(id: string, form: string, post = '', raised = false, sink = 0)}{@const fit =
@@ -245,7 +251,12 @@
 
 {#if helpLevel >= 2 && showTranslationSources && translationCitations.length}
 	<div class="translation-sources">
-		<SourceNotes citations={translationCitations} {lang} centered />
+		<SourceNotes
+			citations={translationCitations}
+			relationships={translationRelationships}
+			{lang}
+			centered
+		/>
 	</div>
 {/if}
 

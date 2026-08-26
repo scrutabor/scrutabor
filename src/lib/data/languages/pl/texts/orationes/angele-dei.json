@@ -3,11 +3,11 @@
   "language":"pl",
   "about":"Angele Dei jest indywidualną modlitwą do Anioła Stróża. Mówiący uznaje, że został powierzony jego opiece z dobroci Bożej, i prosi go kolejno o oświecenie, strzeżenie, rządzenie i prowadzenie.",
   "seg":[
-    {"id":"s01","tr":"Aniele Boży,","tc":[41],"g":["aniele","Boży"],"fn":{"w001":"Wołacz rozpoczynający bezpośrednie zwrócenie się do Anioła Stróża.","w002":"Dopełniacz zależny od „Ángele” określa przynależność i posłannictwo anioła."}},
-    {"id":"s02","tr":"Stróżu mój,","tc":[41],"g":["który","stróż","jesteś","mój"],"fn":{"w003":"Zaimek względny odnosi się do anioła z pierwszego segmentu i jest podmiotem „es”.","w004":"Orzecznik przy „es”, określający anioła jako stróża mówiącego.","w006":"Dopełniacz zaimka pierwszej osoby zależy od „custos” i wskazuje osobę pozostającą pod opieką."}},
-    {"id":"s03","tr":"mnie, Tobie powierzonego","tc":[41],"g":["mnie","Tobie","powierzonego"],"fn":{"w007":"Wspólne dopełnienie czterech form czasownika. „Commíssum” opisuje tę samą osobę.","w009":"Imiesłów bierny zgadza się z „me”. Rodzaj męski zachowuje gramatyczną postać wybranej recenzji."}},
-    {"id":"s04","tr":"z dobroci Bożej,","tc":[41],"g":["z dobroci","Bożej"],"fn":{"w010":"Ablativus przyczyny lub sprawczej troski wyjaśnia, dzięki czemu mówiący został powierzony aniołowi.","w011":"Przymiotnik wskazuje niebieskie, a więc Boże, źródło dobroci."}},
-    {"id":"s05","tr":"oświecaj, strzeż,","tc":[41],"g":["oświecaj","strzeż"],"fn":{"w012":"Pierwsza z czterech równorzędnych próśb skierowanych do anioła."}},
-    {"id":"s06","tr":"rządź i prowadź. Amen.","tc":[41],"g":["rządź","i","prowadź","amen"],"fn":{"w014":"Trzecia prośba dotyczy kierowania życiem mówiącego pod prawowitą opieką.","w016":"Ostatnia forma czasownika dopełnia sekwencję próśb o stałe prowadzenie."}}
+    {"id":"s01","tr":"Aniele Boży,","tc":[41],"tb":"revised","g":["aniele","Boży"],"fn":{"w001":"Wołacz rozpoczynający bezpośrednie zwrócenie się do Anioła Stróża.","w002":"Dopełniacz zależny od „Ángele” określa przynależność i posłannictwo anioła."}},
+    {"id":"s02","tr":"Stróżu mój,","tc":[41],"tb":"revised","g":["który","stróż","jesteś","mój"],"fn":{"w003":"Zaimek względny odnosi się do anioła z pierwszego segmentu i jest podmiotem „es”.","w004":"Orzecznik przy „es”, określający anioła jako stróża mówiącego.","w006":"Dopełniacz zaimka pierwszej osoby zależy od „custos” i wskazuje osobę pozostającą pod opieką."}},
+    {"id":"s03","tr":"mnie, Tobie powierzonego","tc":[41],"tb":"revised","g":["mnie","Tobie","powierzonego"],"fn":{"w007":"Wspólne dopełnienie czterech form czasownika. „Commíssum” opisuje tę samą osobę.","w009":"Imiesłów bierny zgadza się z „me”. Rodzaj męski zachowuje gramatyczną postać wybranej recenzji."}},
+    {"id":"s04","tr":"z dobroci Bożej,","tc":[41],"tb":"revised","g":["z dobroci","Bożej"],"fn":{"w010":"Ablativus przyczyny lub sprawczej troski wyjaśnia, dzięki czemu mówiący został powierzony aniołowi.","w011":"Przymiotnik wskazuje niebieskie, a więc Boże, źródło dobroci."}},
+    {"id":"s05","tr":"oświecaj, strzeż,","tc":[41],"tb":"revised","g":["oświecaj","strzeż"],"fn":{"w012":"Pierwsza z czterech równorzędnych próśb skierowanych do anioła."}},
+    {"id":"s06","tr":"rządź i prowadź. Amen.","tc":[41],"tb":"revised","g":["rządź","i","prowadź","amen"],"fn":{"w014":"Trzecia prośba dotyczy kierowania życiem mówiącego pod prawowitą opieką.","w016":"Ostatnia forma czasownika dopełnia sekwencję próśb o stałe prowadzenie."}}
   ]
 }

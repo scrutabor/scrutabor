@@ -3,12 +3,12 @@
   "language":"en",
   "about":"The priest asks God to make the offering blessed, duly recognized, ratified, spiritual and acceptable. The final petition asks that it may become for us the Body and Blood of God's dearly beloved Son, our Lord Jesus Christ.",
   "seg":[
-    {"id":"s01","tr":"O God, we ask You graciously to make this offering in all respects","tc":[303,304],"g":["which","oblation","Thou","God","in","all respects","we beseech"],"fn":{"w001":"A relative pronoun agreeing with “oblatiónem” in the preceding prayer.","w003":"The expressed subject pronoun, which Latin usually omits, emphasizes the addressee named immediately as “Deus” (w004)."}},
+    {"id":"s01","tr":"O God, we ask You graciously to make this offering in all respects","tc":[303,304],"tb":"revised","g":["which","oblation","Thou","God","in","all respects","we beseech"],"fn":{"w001":"A relative pronoun agreeing with “oblatiónem” in the preceding prayer.","w003":"The expressed subject pronoun, which Latin usually omits, emphasizes the addressee named immediately as “Deus” (w004)."}},
     {"id":"s02","nr":"The priest makes three signs of the cross over the offerings."},
-    {"id":"s03","tr":"blessed, duly recognized, ratified, spiritual, and acceptable to You:","tc":[303,304],"g":["blessed","enrolled","ratified","reasonable","and acceptable","to make","deign"],"fn":{"w009":"The perfect passive participle of “adscríbo”."}},
+    {"id":"s03","tr":"blessed, duly recognized, ratified, spiritual, and acceptable to You:","tc":[303,304],"tb":"revised","g":["blessed","enrolled","ratified","reasonable","and acceptable","to make","deign"],"fn":{"w009":"The perfect passive participle of “adscríbo”."}},
     {"id":"s04","nr":"The priest makes one sign of the cross over the Host alone, at the word Corpus, and one over the chalice alone, at Sanguis."},
-    {"id":"s05","tr":"so that for us it may become the Body and Blood of Your dearly beloved Son,","tc":[303,304],"g":["that","for us","the Body","and","Blood","may become","most beloved","Son","Thy"],"fn":{"w016":"A dative of advantage: “for us”.","w017":"Nominative. “Corpus” and “Sanguis” are predicate nominatives with “fiat” (w020). The understood subject is the “oblátio” introduced at the beginning of the prayer, so the verb is singular.","w020":"The present subjunctive of “fio”, here: “may it become”.","w021":"The superlative of “diléctus”."}},
+    {"id":"s05","tr":"so that for us it may become the Body and Blood of Your dearly beloved Son,","tc":[303,304],"tb":"revised","g":["that","for us","the Body","and","Blood","may become","most beloved","Son","Thy"],"fn":{"w016":"A dative of advantage: “for us”.","w017":"Nominative. “Corpus” and “Sanguis” are predicate nominatives with “fiat” (w020). The understood subject is the “oblátio” introduced at the beginning of the prayer, so the verb is singular.","w020":"The present subjunctive of “fio”, here: “may it become”.","w021":"The superlative of “diléctus”."}},
     {"id":"s06","nr":"The priest joins his hands."},
-    {"id":"s07","tr":"our Lord Jesus Christ.","tc":[303,304],"g":["Lord","our","Jesus","Christ"]}
+    {"id":"s07","tr":"our Lord Jesus Christ.","tc":[303,304],"tb":"revised","g":["Lord","our","Jesus","Christ"]}
   ]
 }

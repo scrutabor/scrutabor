@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import type { GlossDocument, Segment } from './corpus';
-import { collectTranslationCitations, litanyRows } from './reading-text';
+import {
+	collectTranslationCitations,
+	collectTranslationRelationships,
+	litanyRows
+} from './reading-text';
 
 let nextId = 0;
 const verse = (speaker: Segment['speaker'], text: string): Segment => ({
@@ -70,6 +74,21 @@ describe('prayer-level translation sources', () => {
 
 		expect(collectTranslationCitations(segments, gloss)).toEqual([
 			{ ...source, locator: 'p. 1; p. 2' }
+		]);
+	});
+
+	it('keeps distinct wording relationships in reading order', () => {
+		const segments = [verse(undefined, 'Primus.'), verse(undefined, 'Secundus.')];
+		const gloss = {
+			segments: {
+				[segments[0].id]: { translation_relationship: 'traditional-composite' },
+				[segments[1].id]: { translation_relationship: 'revised' }
+			}
+		} as unknown as GlossDocument;
+
+		expect(collectTranslationRelationships(segments, gloss)).toEqual([
+			'traditional-composite',
+			'revised'
 		]);
 	});
 });

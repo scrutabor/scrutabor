@@ -3,8 +3,8 @@
   "language":"en",
   "about":"The prayer professes that through Christ God continually creates all these things as good, sanctifies them, gives them life, blesses them, and gives them to us. The relative “quem” refers to Christ, named at the end of the preceding prayer.",
   "seg":[
-    {"id":"s01","tr":"Through Him, Lord, You always create all these things as good,","tc":[279,280],"g":["through","whom","these","all","Lord","ever","good","Thou dost create"],"fn":{"w002":"Quem refers to Christ, named at the end of the preceding prayer.","w007":"Predicative complement with creas: You create them good."}},
+    {"id":"s01","tr":"Through Him, Lord, You always create all these things as good,","tc":[279,280],"tb":"revised","g":["through","whom","these","all","Lord","ever","good","Thou dost create"],"fn":{"w002":"Quem refers to Christ, named at the end of the preceding prayer.","w007":"Predicative complement with creas: You create them good."}},
     {"id":"s02","nr":"The priest makes three signs of the cross over the Host and chalice together."},
-    {"id":"s03","tr":"sanctify them, give them life, bless them, and give them to us.","tc":[279,280],"g":["Thou dost hallow","Thou dost quicken","Thou dost bless","and","Thou dost bestow","upon us"]}
+    {"id":"s03","tr":"sanctify them, give them life, bless them, and give them to us.","tc":[279,280],"tb":"revised","g":["Thou dost hallow","Thou dost quicken","Thou dost bless","and","Thou dost bestow","upon us"]}
   ]
 }

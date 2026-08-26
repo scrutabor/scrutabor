@@ -70,6 +70,11 @@ export interface Messages {
 	goHome: string;
 	aboutLabel: string;
 	sourcesLabel: string;
+	translationRelationshipLabel: string;
+	translationRelationships: Record<
+		'exact' | 'normalized' | 'revised' | 'traditional-composite',
+		string
+	>;
 	pagerAria: string;
 	ordoLead: string;
 	ordoSubtitle: string;
@@ -212,6 +217,16 @@ const MESSAGES: Record<Lang, Messages> = {
 		goHome: 'wróć na stronę główną',
 		aboutLabel: 'o modlitwie',
 		sourcesLabel: 'źródła',
+		translationRelationshipLabel: 'relacja z brzmieniem historycznym',
+		translationRelationships: {
+			exact: 'Brzmienie jest zgodne ze wskazanym świadectwem historycznym.',
+			normalized:
+				'Brzmienie zachowuje świadectwo historyczne po jawnej normalizacji pisowni lub interpunkcji.',
+			revised:
+				'Przekład został zredagowany bezpośrednio z łaciny z wykorzystaniem wskazanych świadectw historycznych.',
+			'traditional-composite':
+				'Brzmienie zachowuje znaną formułę tradycyjną, zestawioną z poświadczonych wariantów i jawnych modernizacji.'
+		},
 		pagerAria: 'sąsiednie teksty',
 		ordoLead: 'Porządek Mszy świętej według Mszału Rzymskiego z 1962 roku',
 		ordoSubtitle: 'Mszał Rzymski z 1962 roku',
@@ -356,6 +371,16 @@ const MESSAGES: Record<Lang, Messages> = {
 		goHome: 'go to the home page',
 		aboutLabel: 'about this prayer',
 		sourcesLabel: 'sources',
+		translationRelationshipLabel: 'relationship to historical wording',
+		translationRelationships: {
+			exact: 'The wording matches the cited historical witness.',
+			normalized:
+				'The wording preserves the historical witness after stated spelling or punctuation normalization.',
+			revised:
+				'The translation was edited directly from the Latin with the cited historical witnesses as controls.',
+			'traditional-composite':
+				'The wording preserves a familiar traditional formula assembled from attested variants and stated modernizations.'
+		},
 		pagerAria: 'neighboring texts',
 		ordoLead: 'The order of Mass in the Roman Missal of 1962',
 		ordoSubtitle: 'the Roman Missal of 1962',

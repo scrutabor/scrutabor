@@ -3,7 +3,7 @@
   "language":"pl",
   "about":"Glória Patri to krótka doksologia trynitarna. Kończy niemal każdy psalm i kantyk oficjum, a w tej książce czytelnik spotyka ją u stopni ołtarza, przy Lavábo i w introicie Mszy adwentowej.",
   "seg":[
-    {"id":"s01","tr":"Chwała Ojcu i Synowi, i Duchowi Świętemu.","tc":[74,75],"g":["chwała","Ojcu","i","Synowi","i","Duchowi","Świętemu"],"fn":{"w001":"Z domyślnym „sit”: chwała [niech będzie].","w002":"Celownik zależny od „Glória” (w001).","w007":"Zgadza się ze „Spirítui” (w006). Jako przymiotnik pierwszej i drugiej deklinacji ma w celowniku formę „Sancto”."}},
-    {"id":"s02","tr":"Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.","tc":[74,75],"g":["jak","była","na","początku","i","teraz","i","zawsze","i","na","wieki","wieków","amen"],"fn":{"w009":"Imperfectum indicativi z domyślnym podmiotem „glória”.","w017":"Przyimek „in” z biernikiem w wyrażeniu „in sǽcula”: na wieki.","w019":"Dopełniacz zależny od „sǽcula” (w018)."}}
+    {"id":"s01","tr":"Chwała Ojcu i Synowi, i Duchowi Świętemu.","tc":[74,75],"tb":"traditional-composite","g":["chwała","Ojcu","i","Synowi","i","Duchowi","Świętemu"],"fn":{"w001":"Z domyślnym „sit”: chwała [niech będzie].","w002":"Celownik zależny od „Glória” (w001).","w007":"Zgadza się ze „Spirítui” (w006). Jako przymiotnik pierwszej i drugiej deklinacji ma w celowniku formę „Sancto”."}},
+    {"id":"s02","tr":"Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.","tc":[74,75],"tb":"traditional-composite","g":["jak","była","na","początku","i","teraz","i","zawsze","i","na","wieki","wieków","amen"],"fn":{"w009":"Imperfectum indicativi z domyślnym podmiotem „glória”.","w017":"Przyimek „in” z biernikiem w wyrażeniu „in sǽcula”: na wieki.","w019":"Dopełniacz zależny od „sǽcula” (w018)."}}
   ]
 }

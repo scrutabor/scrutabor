@@ -3,9 +3,9 @@
   "language":"pl",
   "about":"Podstawową formę stanowi antyfona kończąca się słowami „Panno chwalebna i błogosławiona”: jest to prośba o opiekę Maryi, przyjęcie błagań i wybawienie od niebezpieczeństw. W często używanej w Polsce formie rozszerzonej następują po niej wezwania „O Pani nasza…” i dalsze prośby. Poza polskimi modlitewnikami kontynuację tę poświadcza akt zawierzenia, który Jan Paweł II odmówił na Jasnej Górze w 1991 roku, gdzie dwa z tytułów stoją w odwrotnej kolejności.",
   "seg":[
-    {"id":"s01","tr":"Pod Twoją obronę uciekamy się, Święta Boża Rodzicielko, naszymi prośbami racz nie gardzić w potrzebach naszych, ale od wszelakich złych przygód racz nas zawsze wybawiać, Panno chwalebna i błogosławiona.","tc":[113],"g":["pod","Twoją","obronę","uciekamy się","Święta","Boga","Rodzicielko","naszymi","prośbami","nie","gardź","w","potrzebach","lecz","od","niebezpieczeństw","wszystkich","wybaw","nas","zawsze","Panno","chwalebna","i","błogosławiona"]},
-    {"id":"s02","tr":"O Pani nasza, Orędowniczko nasza, Pośredniczko nasza, Pocieszycielko nasza.","tc":[113],"g":["Pani","nasza","Pośredniczko","nasza","Orędowniczko","nasza","Pocieszycielko","nasza"]},
-    {"id":"s03","tr":"Z Synem swoim nas pojednaj, Synowi swojemu nas polecaj, swojemu Synowi nas oddawaj.","tc":[113],"g":["Twojemu","Synowi","nas","pojednaj","Twojemu","Synowi","nas","polecaj","Twojemu","Synowi","nas","przedstaw"]},
+    {"id":"s01","tr":"Pod Twoją obronę uciekamy się, Święta Boża Rodzicielko, naszymi prośbami racz nie gardzić w potrzebach naszych, ale od wszelakich złych przygód racz nas zawsze wybawiać, Panno chwalebna i błogosławiona.","tc":[113],"tb":"normalized","g":["pod","Twoją","obronę","uciekamy się","Święta","Boga","Rodzicielko","naszymi","prośbami","nie","gardź","w","potrzebach","lecz","od","niebezpieczeństw","wszystkich","wybaw","nas","zawsze","Panno","chwalebna","i","błogosławiona"]},
+    {"id":"s02","tr":"O Pani nasza, Orędowniczko nasza, Pośredniczko nasza, Pocieszycielko nasza.","tc":[113],"tb":"normalized","g":["Pani","nasza","Pośredniczko","nasza","Orędowniczko","nasza","Pocieszycielko","nasza"]},
+    {"id":"s03","tr":"Z Synem swoim nas pojednaj, Synowi swojemu nas polecaj, swojemu Synowi nas oddawaj.","tc":[113],"tb":"normalized","g":["Twojemu","Synowi","nas","pojednaj","Twojemu","Synowi","nas","polecaj","Twojemu","Synowi","nas","przedstaw"]},
     {"id":"s04","tr":"Amen.","g":["amen"]}
   ]
 }

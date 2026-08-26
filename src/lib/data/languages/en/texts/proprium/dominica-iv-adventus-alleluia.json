@@ -3,8 +3,8 @@
   "language":"en",
   "about":"The alleluia verse of the Fourth Sunday of Advent. The last Sunday before Christmas asks one thing, that He not delay.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia.","tc":[142],"g":["alleluia","alleluia"]},
-    {"id":"s02","tr":"Come, O Lord, and do not delay; forgive the offenses of Your people Israel.","tc":[142],"g":["come","Lord","and","be not willing","to delay","remit","the misdeeds","of people","Thy","Israel"]},
-    {"id":"s03","tr":"Alleluia.","tc":[142],"g":["alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia.","tc":[142],"tb":"revised","g":["alleluia","alleluia"]},
+    {"id":"s02","tr":"Come, O Lord, and do not delay; forgive the offenses of Your people Israel.","tc":[142],"tb":"revised","g":["come","Lord","and","be not willing","to delay","remit","the misdeeds","of people","Thy","Israel"]},
+    {"id":"s03","tr":"Alleluia.","tc":[142],"tb":"revised","g":["alleluia"]}
   ]
 }

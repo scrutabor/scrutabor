@@ -3,9 +3,9 @@
   "language":"en",
   "about":"The epistle of the Third Sunday of Advent, from which the day takes its name of Gaudéte. The call to rejoice stands beside a call to modesty and to freedom from anxiety — three things Paul binds together because “the Lord is nigh”.",
   "seg":[
-    {"id":"s01","tr":"Brethren: Rejoice in the Lord always; again I say, rejoice.","tc":[142],"g":["brethren","rejoice","in","the Lord","always","again","I say","rejoice"]},
-    {"id":"s02","tr":"Let your gentleness be known to all people; the Lord is near.","tc":[142],"g":["modesty","your","known","let be","to all","men","the Lord","near","is"]},
-    {"id":"s03","tr":"Be anxious about nothing, but in every prayer and supplication, with thanksgiving, make your petitions known to God.","tc":[142],"g":["nothing","anxious","be ye not","but","in","every","prayer","and","supplication","with","of thanks","giving","petitions","your","let become known","before","God"]},
-    {"id":"s04","tr":"And may the peace of God, which surpasses all understanding, guard your hearts and minds in Christ Jesus our Lord.","tc":[142],"g":["and","the peace","of God","which","surpasseth","all","understanding","let guard","hearts","your","and","minds","your","in","Christ","Jesus","Lord","our"]}
+    {"id":"s01","tr":"Brethren: Rejoice in the Lord always; again I say, rejoice.","tc":[142],"tb":"revised","g":["brethren","rejoice","in","the Lord","always","again","I say","rejoice"]},
+    {"id":"s02","tr":"Let your gentleness be known to all people; the Lord is near.","tc":[142],"tb":"revised","g":["modesty","your","known","let be","to all","men","the Lord","near","is"]},
+    {"id":"s03","tr":"Be anxious about nothing, but in every prayer and supplication, with thanksgiving, make your petitions known to God.","tc":[142],"tb":"revised","g":["nothing","anxious","be ye not","but","in","every","prayer","and","supplication","with","of thanks","giving","petitions","your","let become known","before","God"]},
+    {"id":"s04","tr":"And may the peace of God, which surpasses all understanding, guard your hearts and minds in Christ Jesus our Lord.","tc":[142],"tb":"revised","g":["and","the peace","of God","which","surpasseth","all","understanding","let guard","hearts","your","and","minds","your","in","Christ","Jesus","Lord","our"]}
   ]
 }

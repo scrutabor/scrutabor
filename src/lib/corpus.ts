@@ -58,6 +58,8 @@ export interface Citation {
 	url?: string;
 }
 
+export type TranslationRelationship = 'exact' | 'normalized' | 'revised' | 'traditional-composite';
+
 export interface Word {
 	id: string;
 	form: string;
@@ -117,6 +119,7 @@ export interface WordGloss {
 export interface SegmentGloss {
 	translation?: string;
 	translation_citations?: Citation[];
+	translation_relationship?: TranslationRelationship;
 	narrative?: string;
 	narrative_citations?: Citation[];
 }
@@ -208,6 +211,7 @@ interface LanguageSegmentRow {
 	nt?: Record<string, string>;
 	tr?: string;
 	tc?: number[];
+	tb?: TranslationRelationship;
 	nr?: string;
 }
 
@@ -278,6 +282,7 @@ function expandDocument(
 		const segmentGloss: SegmentGloss = {};
 		if (languageRow.tr) segmentGloss.translation = languageRow.tr;
 		if (languageRow.tc) segmentGloss.translation_citations = localized(languageRow.tc);
+		if (languageRow.tb) segmentGloss.translation_relationship = languageRow.tb;
 		if (languageRow.nr) segmentGloss.narrative = languageRow.nr;
 		if (row.nc) segmentGloss.narrative_citations = shared(row.nc);
 		if (Object.keys(segmentGloss).length) gloss.segments[row.id] = segmentGloss;

@@ -3,18 +3,18 @@
   "language":"en",
   "about":"The Anima Christi is a Christ-centered devotional prayer built from brief invocations. It asks Christ's soul, body, blood, the water from his side, and his Passion for sanctification, salvation, inebriation, cleansing, and strength, and asks Jesus to hear, hide the speaker within his wounds, defend, call at the hour of death, and receive the speaker into everlasting praise with the saints.",
   "seg":[
-    {"id":"s01","tr":"Soul of Christ, sanctify me.","tc":[57,58],"g":["soul","of Christ","sanctify","me"],"fn":{"w001":"A vocative opening the first address. The genitive “Christi” identifies whose soul is invoked."}},
-    {"id":"s02","tr":"Body of Christ, save me.","tc":[57,58],"g":["body","of Christ","save","me"]},
-    {"id":"s03","tr":"Blood of Christ, inebriate me.","tc":[57,58],"g":["blood","of Christ","inebriate","me"],"fn":{"w011":"An imperative petition for spiritual inebriation by Christ's blood. The verb is stronger than a neutral “fill”."}},
-    {"id":"s04","tr":"Water from the side of Christ, wash me.","tc":[57,58],"g":["water","from the side","of Christ","wash","me"],"fn":{"w014":"A genitive of source and belonging expresses the water that comes from Christ's side."}},
-    {"id":"s05","tr":"Passion of Christ, strengthen me.","tc":[57,58],"g":["Passion","of Christ","strengthen","me"]},
-    {"id":"s06","tr":"O good Jesus, hear me.","tc":[57,58],"g":["O","good","Jesus","hear","me"],"fn":{"w025":"“Exáudi” asks not merely for audibility but for a favorable hearing of the petition."}},
-    {"id":"s07","tr":"Within your wounds hide me.","tc":[57,58],"g":["within","your","wounds","hide","me"]},
-    {"id":"s08","tr":"Do not permit me to be separated from you.","tc":[57,58],"g":["do not","permit","me","to be separated","from","you"],"fn":{"w032":"Negates the subjunctive “permíttas” to form a negative petition.","w034":"The accusative is the subject of the dependent passive infinitive “separári”."}},
-    {"id":"s09","tr":"Defend me from the evil enemy.","tc":[57,58],"g":["from","enemy","evil","defend","me"],"fn":{"w039":"“Hostis” means an enemy. The traditional Polish wording identifies this foe as the evil spirit."}},
-    {"id":"s10","tr":"At the hour of my death, call me.","tc":[57,58],"g":["in","the hour","of death","my","call","me"]},
-    {"id":"s11","tr":"And bid me come to you,","tc":[57,58],"g":["and","bid","me","come","to","you"],"fn":{"w051":"The accusative is the subject of the dependent infinitive “veníre”."}},
-    {"id":"s12","tr":"that I may praise you with your saints","tc":[57,58],"g":["that","with","saints","your","may praise","you"],"fn":{"w055":"Introduces the purpose clause dependent on the petition “iube me veníre”.","w059":"The first-person subjunctive belongs to the speaker and is required by purpose “ut”."}},
-    {"id":"s13","tr":"for ever and ever. Amen.","tc":[57,58],"g":["for","ages","of ages","amen"]}
+    {"id":"s01","tr":"Soul of Christ, sanctify me.","tc":[57,58],"tb":"revised","g":["soul","of Christ","sanctify","me"],"fn":{"w001":"A vocative opening the first address. The genitive “Christi” identifies whose soul is invoked."}},
+    {"id":"s02","tr":"Body of Christ, save me.","tc":[57,58],"tb":"revised","g":["body","of Christ","save","me"]},
+    {"id":"s03","tr":"Blood of Christ, inebriate me.","tc":[57,58],"tb":"revised","g":["blood","of Christ","inebriate","me"],"fn":{"w011":"An imperative petition for spiritual inebriation by Christ's blood. The verb is stronger than a neutral “fill”."}},
+    {"id":"s04","tr":"Water from the side of Christ, wash me.","tc":[57,58],"tb":"revised","g":["water","from the side","of Christ","wash","me"],"fn":{"w014":"A genitive of source and belonging expresses the water that comes from Christ's side."}},
+    {"id":"s05","tr":"Passion of Christ, strengthen me.","tc":[57,58],"tb":"revised","g":["Passion","of Christ","strengthen","me"]},
+    {"id":"s06","tr":"O good Jesus, hear me.","tc":[57,58],"tb":"revised","g":["O","good","Jesus","hear","me"],"fn":{"w025":"“Exáudi” asks not merely for audibility but for a favorable hearing of the petition."}},
+    {"id":"s07","tr":"Within your wounds hide me.","tc":[57,58],"tb":"revised","g":["within","your","wounds","hide","me"]},
+    {"id":"s08","tr":"Do not permit me to be separated from you.","tc":[57,58],"tb":"revised","g":["do not","permit","me","to be separated","from","you"],"fn":{"w032":"Negates the subjunctive “permíttas” to form a negative petition.","w034":"The accusative is the subject of the dependent passive infinitive “separári”."}},
+    {"id":"s09","tr":"Defend me from the evil enemy.","tc":[57,58],"tb":"revised","g":["from","enemy","evil","defend","me"],"fn":{"w039":"“Hostis” means an enemy. The traditional Polish wording identifies this foe as the evil spirit."}},
+    {"id":"s10","tr":"At the hour of my death, call me.","tc":[57,58],"tb":"revised","g":["in","the hour","of death","my","call","me"]},
+    {"id":"s11","tr":"And bid me come to you,","tc":[57,58],"tb":"revised","g":["and","bid","me","come","to","you"],"fn":{"w051":"The accusative is the subject of the dependent infinitive “veníre”."}},
+    {"id":"s12","tr":"that I may praise you with your saints","tc":[57,58],"tb":"revised","g":["that","with","saints","your","may praise","you"],"fn":{"w055":"Introduces the purpose clause dependent on the petition “iube me veníre”.","w059":"The first-person subjunctive belongs to the speaker and is required by purpose “ut”."}},
+    {"id":"s13","tr":"for ever and ever. Amen.","tc":[57,58],"tb":"revised","g":["for","ages","of ages","amen"]}
   ]
 }

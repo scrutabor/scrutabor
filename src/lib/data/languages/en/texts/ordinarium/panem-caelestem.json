@@ -4,19 +4,19 @@
   "about":"Dómine, non sum dignus adapts the centurion's words in Matthew 8:8, replacing puer meus — my servant — with ánima mea — my soul. Panem cæléstem accípiam likewise adapts Psalm 115:4 in the Vulgate (Psalm 116:13 in Hebrew numbering): Cálicem salutáris accípiam — I will take the chalice of salvation. The priest repeats Dómine, non sum dignus three times, beginning each invocation in a slightly raised voice and continuing quietly.",
   "seg":[
     {"id":"s01","nr":"The priest genuflects, rises, and says:"},
-    {"id":"s02","tr":"I will receive the Bread of heaven and call upon the name of the Lord.","tc":[142],"g":["Bread","of heaven","I will take","and","the name","of the Lord","I will call upon"],"fn":{"w002":"An adjective agreeing with panem.","w003":"Future indicative, as the coordinated invocábo confirms."}},
+    {"id":"s02","tr":"I will receive the Bread of heaven and call upon the name of the Lord.","tc":[142],"tb":"revised","g":["Bread","of heaven","I will take","and","the name","of the Lord","I will call upon"],"fn":{"w002":"An adjective agreeing with panem.","w003":"Future indicative, as the coordinated invocábo confirms."}},
     {"id":"s03","nr":"Bowing a little, the priest takes both halves of the Host in his left hand and slips the paten beneath them. Striking his breast three times with his right hand, he says the following three times in a slightly raised voice, devoutly and humbly:"},
-    {"id":"s04","tr":"Lord, I am not worthy,","tc":[142],"g":["Lord","not","am","worthy"],"fn":{"w011":"The priest says the first four words in a slightly raised voice while striking his breast. He continues the sentence under his breath."}},
+    {"id":"s04","tr":"Lord, I am not worthy,","tc":[142],"tb":"revised","g":["Lord","not","am","worthy"],"fn":{"w011":"The priest says the first four words in a slightly raised voice while striking his breast. He continues the sentence under his breath."}},
     {"id":"s05","nr":"The priest goes on silently."},
-    {"id":"s06","tr":"that You should enter under my roof: but only say the word, and my soul shall be healed.","tc":[142],"g":["that","You should enter","under","roof","my","but","only","say","with the word","and","shall be healed","soul","my"],"fn":{"w013":"Subjunctive governed by ut.","w014":"The accusative marks motion under the roof.","w018":"An adverb modifying dic.","w020":"Ablative of means with dic.","w022":"Future passive indicative.","w023":"Nominative subject of sanábitur."}},
-    {"id":"s07","tr":"Lord, I am not worthy,","tc":[142],"g":["Lord","not","am","worthy"]},
+    {"id":"s06","tr":"that You should enter under my roof: but only say the word, and my soul shall be healed.","tc":[142],"tb":"revised","g":["that","You should enter","under","roof","my","but","only","say","with the word","and","shall be healed","soul","my"],"fn":{"w013":"Subjunctive governed by ut.","w014":"The accusative marks motion under the roof.","w018":"An adverb modifying dic.","w020":"Ablative of means with dic.","w022":"Future passive indicative.","w023":"Nominative subject of sanábitur."}},
+    {"id":"s07","tr":"Lord, I am not worthy,","tc":[142],"tb":"revised","g":["Lord","not","am","worthy"]},
     {"id":"s08","nr":"The priest goes on silently."},
-    {"id":"s09","tr":"that You should enter under my roof: but only say the word, and my soul shall be healed.","tc":[142],"g":["that","You should enter","under","roof","my","but","only","say","with the word","and","shall be healed","soul","my"]},
-    {"id":"s10","tr":"Lord, I am not worthy,","tc":[142],"g":["Lord","not","am","worthy"]},
+    {"id":"s09","tr":"that You should enter under my roof: but only say the word, and my soul shall be healed.","tc":[142],"tb":"revised","g":["that","You should enter","under","roof","my","but","only","say","with the word","and","shall be healed","soul","my"]},
+    {"id":"s10","tr":"Lord, I am not worthy,","tc":[142],"tb":"revised","g":["Lord","not","am","worthy"]},
     {"id":"s11","nr":"The priest goes on silently."},
-    {"id":"s12","tr":"that You should enter under my roof: but only say the word, and my soul shall be healed.","tc":[142],"g":["that","You should enter","under","roof","my","but","only","say","with the word","and","shall be healed","soul","my"]},
+    {"id":"s12","tr":"that You should enter under my roof: but only say the word, and my soul shall be healed.","tc":[142],"tb":"revised","g":["that","You should enter","under","roof","my","but","only","say","with the word","and","shall be healed","soul","my"]},
     {"id":"s13","nr":"The priest signs himself with the Host over the paten, and says:"},
-    {"id":"s14","tr":"May the Body of our Lord Jesus Christ preserve my soul for eternal life. Amen.","tc":[142],"g":["The Body","of the Lord","our","Jesus","Christ","may keep","soul","my","unto","life","everlasting","amen"],"fn":{"w059":"Subject of custódiat.","w066":"The Communion formula for the faithful has ánimam tuam in this place."}},
+    {"id":"s14","tr":"May the Body of our Lord Jesus Christ preserve my soul for eternal life. Amen.","tc":[142],"tb":"revised","g":["The Body","of the Lord","our","Jesus","Christ","may keep","soul","my","unto","life","everlasting","amen"],"fn":{"w059":"Subject of custódiat.","w066":"The Communion formula for the faithful has ánimam tuam in this place."}},
     {"id":"s15","nr":"Bowing, the priest reverently receives both halves of the Host, lays the paten on the corporal, joins his hands and rests a while in meditation on the Most Holy Sacrament."}
   ]
 }

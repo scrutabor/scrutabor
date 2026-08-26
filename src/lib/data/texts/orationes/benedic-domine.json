@@ -12,7 +12,7 @@
   "seg":[
     {"id":"s01","type":"verse","w":[{"i":"w001","f":"Bénedic","l":"benedico","p":",","m":86},{"i":"w002","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w003","f":"nos","l":"nos","m":49}]},
     {"id":"s02","type":"verse","w":[{"i":"w004","f":"et","l":"et","m":15},{"i":"w005","f":"hæc","l":"hic","m":166},{"i":"w006","f":"tua","l":"tuus","m":129,"h":"w007"},{"i":"w007","f":"dona","l":"donum","p":",","m":85}]},
-    {"id":"s03","type":"verse","w":[{"i":"w008","f":"quæ","l":"qui","m":166,"h":"w012"},{"i":"w009","f":"de","l":"de","m":0,"h":"w011"},{"i":"w010","f":"tua","l":"tuus","m":31,"h":"w011"},{"i":"w011","f":"largitáte","l":"largitas","m":45},{"i":"w012","f":"sumus","l":"sum","m":208},{"i":"w013","f":"sumptúri","l":"sumo","p":".","m":209,"h":"w012"}]},
+    {"id":"s03","type":"verse","w":[{"i":"w008","f":"quæ","l":"qui","m":166,"h":"w007"},{"i":"w009","f":"de","l":"de","m":0,"h":"w011"},{"i":"w010","f":"tua","l":"tuus","m":31,"h":"w011"},{"i":"w011","f":"largitáte","l":"largitas","m":45},{"i":"w012","f":"sumus","l":"sum","m":208},{"i":"w013","f":"sumptúri","l":"sumo","p":".","m":209,"h":"w012"}]},
     {"id":"s04","type":"verse","w":[{"i":"w014","f":"Per","l":"per","m":3,"h":"w015"},{"i":"w015","f":"Christum","l":"Christus","m":35},{"i":"w016","f":"Dóminum","l":"dominus","m":35},{"i":"w017","f":"nostrum","l":"noster","p":".","m":96,"h":"w016"},{"i":"w018","f":"Amen","l":"amen","p":".","m":46}]}
   ]
 }

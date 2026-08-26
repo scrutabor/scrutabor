@@ -113,6 +113,31 @@ test('a prayer identifies its translation sources once after the text', async ({
 	);
 });
 
+test('a cited translation states how its wording relates to the historical source', async ({
+	page
+}) => {
+	await page.goto('/app/pl/orationes/benedic-domine');
+	await setHelp(page, 2);
+	const translations = page.locator('main .translation');
+	await expect(translations.nth(0)).toHaveText(/Pobłogosław,\s+o\s+Panie,\s+nas/);
+	await expect(translations.nth(1)).toHaveText(/i\s+te dary Twoje,/);
+	await expect(translations.nth(2)).toHaveText(/które z\s+Twej dobroci spożywać będziemy\./);
+	await expect(translations.nth(3)).toHaveText(/Przez Chrystusa Pana naszego\. Amen\./);
+	let sources = page.locator('main .translation-sources details.source-notes');
+	await sources.locator('summary').click();
+	await expect(sources).toContainText('relacja z brzmieniem historycznym');
+	await expect(sources).toContainText('znaną formułę tradycyjną');
+	await expect(sources).toContainText('Katechizm religji rzymsko-katolickiej (1925)');
+
+	await page.goto('/app/en/orationes/benedic-domine');
+	await setHelp(page, 2);
+	sources = page.locator('main .translation-sources details.source-notes');
+	await sources.locator('summary').click();
+	await expect(sources).toContainText('relationship to historical wording');
+	await expect(sources).toContainText('edited directly from the Latin');
+	await expect(sources).toContainText("Francis X. Lasance, The Catholic Girl's Guide (1906)");
+});
+
 test('a litany pairs every invocation with its exact response in compact columns', async ({
 	page
 }) => {

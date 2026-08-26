@@ -4,11 +4,11 @@
   "about":"Rozesłanie po ostatniej modlitwie pokomunijnej. Kapłan pozdrawia wiernych i mówi „Ite, Missa est”, na co odpowiada się „Deo grátias”. Gdy po Mszy następuje procesja, mówi zamiast tego „Benedicámus Dómino”, a we Mszach za zmarłych „Requiéscant in pace”, na co odpowiada się „Amen”.",
   "seg":[
     {"id":"s01","nr":"Po ostatniej modlitwie pokomunijnej kapłan mówi:"},
-    {"id":"s02","tr":"Pan z wami.","tc":[141],"g":["Pan","z wami"],"fn":{"w002":"Przyimek „cum” stoi po zaimku osobowym i łączy się z nim: „vobis” + „cum”."}},
-    {"id":"s03","tr":"I z duchem twoim.","tc":[141],"g":["i","z","duchem","twoim"]},
+    {"id":"s02","tr":"Pan z wami.","tc":[141],"tb":"revised","g":["Pan","z wami"],"fn":{"w002":"Przyimek „cum” stoi po zaimku osobowym i łączy się z nim: „vobis” + „cum”."}},
+    {"id":"s03","tr":"I z duchem twoim.","tc":[141],"tb":"revised","g":["i","z","duchem","twoim"]},
     {"id":"s04","nr":"Zwrócony do ludu kapłan mówi „Ite, Missa est”, a usługujący odpowiada „Deo grátias”. Gdy zamiast tego mówi się „Benedicámus Dómino”, kapłan mówi to na środku ołtarza, zwrócony ku niemu."},
-    {"id":"s05","tr":"Idźcie, ofiara spełniona.","tc":[141],"g":["idźcie","rozesłanie","dokonuje się"],"fn":{"w007":"Tryb rozkazujący liczby mnogiej, skierowany do zgromadzenia.","w008":"Rzeczownik w mianowniku, będący podmiotem „est” (w009)."},"nt":{"w008":"Może to być rzeczownik missa — odesłanie, rozesłanie — albo imiesłów bierny od mitto z domyślnym podmiotem, co jest historycznym źródłem formuły. Ta edycja przyjmuje rzeczownik."}},
-    {"id":"s06","tr":"Bogu niech będą dzięki.","tc":[141],"g":["Bogu","dzięki"],"fn":{"w010":"Celownik: Bogu składane są dzięki.","w011":"Biernik liczby mnogiej. Czasownik oznaczający składanie dzięki pozostaje domyślny."}},
+    {"id":"s05","tr":"Idźcie, ofiara spełniona.","tc":[141],"tb":"revised","g":["idźcie","rozesłanie","dokonuje się"],"fn":{"w007":"Tryb rozkazujący liczby mnogiej, skierowany do zgromadzenia.","w008":"Rzeczownik w mianowniku, będący podmiotem „est” (w009)."},"nt":{"w008":"Może to być rzeczownik missa — odesłanie, rozesłanie — albo imiesłów bierny od mitto z domyślnym podmiotem, co jest historycznym źródłem formuły. Ta edycja przyjmuje rzeczownik."}},
+    {"id":"s06","tr":"Bogu niech będą dzięki.","tc":[141],"tb":"revised","g":["Bogu","dzięki"],"fn":{"w010":"Celownik: Bogu składane są dzięki.","w011":"Biernik liczby mnogiej. Czasownik oznaczający składanie dzięki pozostaje domyślny."}},
     {"id":"s07","nr":"We Mszach za zmarłych kapłan, zwrócony ku ołtarzowi, mówi zamiast tego: Requiéscant in pace — a odpowiedź brzmi Amen."}
   ]
 }

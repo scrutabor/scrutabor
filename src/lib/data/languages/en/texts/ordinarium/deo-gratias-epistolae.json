@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The response at the end of the Epistle.",
   "seg":[
-    {"id":"s01","tr":"Thanks be to God.","tc":[173],"g":["to God","thanks"],"fn":{"w002":"The verb of giving thanks is understood."}}
+    {"id":"s01","tr":"Thanks be to God.","tc":[173],"tb":"exact","g":["to God","thanks"],"fn":{"w002":"The verb of giving thanks is understood."}}
   ]
 }

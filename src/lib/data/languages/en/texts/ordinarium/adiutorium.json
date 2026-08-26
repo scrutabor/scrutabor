@@ -4,7 +4,7 @@
   "about":"The versicle and response form the final verse of Psalm 123 in the Vulgate numbering (Psalm 124:8 in Hebrew). The first part has an understood copula, while the second has its own verb, fecit.",
   "seg":[
     {"id":"s01","nr":"The priest makes the sign of the cross."},
-    {"id":"s02","tr":"Our help is in the name of the Lord.","tc":[125,126],"g":["help","our","in","the name","of the Lord"],"fn":{"w001":"Nominative subject with an understood copula.","w002":"Agrees with “Adiutórium” (w001).","w004":"Ablative governed by “in” (w003).","w005":"Genitive dependent on “nómine” (w004)."}},
-    {"id":"s03","tr":"Who made heaven and earth.","tc":[125,126],"g":["who","made","heaven","and","earth"],"fn":{"w006":"Relative pronoun. Its antecedent is “Dómini” (w005), while the nominative marks its role as the subject of “fecit” (w007).","w007":"Perfect indicative, with “Qui” (w006) as its subject."}}
+    {"id":"s02","tr":"Our help is in the name of the Lord.","tc":[125,126],"tb":"exact","g":["help","our","in","the name","of the Lord"],"fn":{"w001":"Nominative subject with an understood copula.","w002":"Agrees with “Adiutórium” (w001).","w004":"Ablative governed by “in” (w003).","w005":"Genitive dependent on “nómine” (w004)."}},
+    {"id":"s03","tr":"Who made heaven and earth.","tc":[125,126],"tb":"exact","g":["who","made","heaven","and","earth"],"fn":{"w006":"Relative pronoun. Its antecedent is “Dómini” (w005), while the nominative marks its role as the subject of “fecit” (w007).","w007":"Perfect indicative, with “Qui” (w006) as its subject."}}
   ]
 }

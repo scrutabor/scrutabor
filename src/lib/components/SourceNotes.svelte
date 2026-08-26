@@ -1,12 +1,18 @@
 <script lang="ts">
-	import type { Citation } from '$lib/corpus';
+	import type { Citation, TranslationRelationship } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
 
 	let {
 		citations,
+		relationships,
 		lang,
 		centered = false
-	}: { citations?: Citation[]; lang: Lang; centered?: boolean } = $props();
+	}: {
+		citations?: Citation[];
+		relationships?: TranslationRelationship[];
+		lang: Lang;
+		centered?: boolean;
+	} = $props();
 </script>
 
 {#if citations?.length}
@@ -16,6 +22,14 @@
 				><path d="M2 1l4 3-4 3z"></path></svg
 			>{M[lang].sourcesLabel}</summary
 		>
+		{#if relationships?.length}
+			<div class="relationships">
+				<p class="relationship-label smallcaps">{M[lang].translationRelationshipLabel}</p>
+				{#each relationships as relationship (relationship)}
+					<p>{M[lang].translationRelationships[relationship]}</p>
+				{/each}
+			</div>
+		{/if}
 		<ol>
 			<!-- The key carries the url too: the grouping upstream (reading-text)
 		     distinguishes citations by title + url, so two entries can share
@@ -86,6 +100,33 @@
 	ol {
 		margin: 0.45rem 0 0;
 		padding-inline-start: 1.35rem;
+	}
+
+	.relationships {
+		max-width: 32rem;
+		margin: 0.55rem 0 0;
+		padding: 0.58rem 0.7rem 0.62rem;
+		border-inline-start: 2px solid var(--border);
+		background: color-mix(in srgb, var(--wash) 58%, transparent);
+	}
+
+	.centered .relationships {
+		margin-inline: auto;
+		text-align: left;
+	}
+
+	.relationships p {
+		margin: 0;
+	}
+
+	.relationships p + p {
+		margin-top: 0.3rem;
+	}
+
+	.relationship-label {
+		color: var(--rubric);
+		font-size: 0.68rem;
+		letter-spacing: 0.06em;
 	}
 
 	.centered ol {
