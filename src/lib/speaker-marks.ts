@@ -216,10 +216,11 @@ export function namesVoice(segments: Segment[], i: number): boolean {
  * Which verse gets the opening initial, or -1 for none.
  *
  * A dialogue gets none, as the books give none. Otherwise the first verse
- * with something to say: "Orémus." on its own is a call to pray, and the
- * book gives the initial to the prayer that follows it, not to it.
+ * with more than the one-word call "Orémus.": the book gives the initial to
+ * the prayer that follows that call, while a short opening such as "Ángele
+ * Dei" is already the prayer and keeps its initial.
  */
 export function firstVerseWithInitial(segments: Segment[]): number {
 	if (isDialogue(segments)) return -1;
-	return segments.findIndex((s) => s.type === 'verse' && (s.words?.length ?? 0) >= 3);
+	return segments.findIndex((s) => s.type === 'verse' && (s.words?.length ?? 0) >= 2);
 }

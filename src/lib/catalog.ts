@@ -77,6 +77,12 @@ const CATALOG_SOURCE: CatalogSection[] = [
 			},
 			{
 				category: 'orationes',
+				slug: 'angele-dei',
+				title: 'Ángele Dei',
+				localizedTitle: { pl: 'Aniele Boży', en: 'Angel of God' }
+			},
+			{
+				category: 'orationes',
 				slug: 'angelus-domini',
 				title: 'Ángelus Dómini',
 				localizedTitle: { pl: 'Anioł Pański', en: 'The Angelus' }

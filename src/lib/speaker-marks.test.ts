@@ -273,6 +273,11 @@ describe('which verse opens with the initial', () => {
 		expect(firstVerseWithInitial(segs)).toBe(1);
 	});
 
+	it('keeps a short opening that is already the prayer', () => {
+		const segs = [verse('omnes', { words: 2 }), verse('omnes', { words: 4 })];
+		expect(firstVerseWithInitial(segs)).toBe(0);
+	});
+
 	it('and none at all in a dialogue, as the books give none', () => {
 		expect(firstVerseWithInitial(DIALOGUE)).toBe(-1);
 	});
