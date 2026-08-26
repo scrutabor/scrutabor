@@ -82,7 +82,8 @@ test('every page holds the same frame, and prose the same measure', async ({ pag
 		'/app/pl/grammatica/vocativus',
 		'/app/pl/grammatica/pronuntiatio',
 		'/app/pl/editio',
-		'/app/pl/bibliographia'
+		'/app/pl/bibliographia',
+		'/app/pl/search'
 	];
 	await page.setViewportSize({ width: 1512, height: 1000 });
 
