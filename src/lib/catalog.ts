@@ -71,6 +71,12 @@ const CATALOG_SOURCE: CatalogSection[] = [
 			},
 			{
 				category: 'orationes',
+				slug: 'actus-contritionis',
+				title: 'Actus contritiónis',
+				localizedTitle: { pl: 'Akt żalu', en: 'Act of Contrition' }
+			},
+			{
+				category: 'orationes',
 				slug: 'angelus-domini',
 				title: 'Ángelus Dómini',
 				localizedTitle: { pl: 'Anioł Pański', en: 'The Angelus' }
