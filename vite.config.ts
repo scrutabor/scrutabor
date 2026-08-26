@@ -31,7 +31,24 @@ export default defineConfig({
 				// The framework's own registration knows no scope.
 				register: false
 			}
-		})
+		}),
+		{
+			name: 'name-lazy-corpus-chunks',
+			apply: 'build',
+			outputOptions(options) {
+				// Candidate texts and language resources are genuine lazy entry
+				// points. Give their JSON facades a stable directory boundary so
+				// the service worker can keep them out of a first web visit while
+				// still packaging every one for an installed book.
+				options.chunkFileNames = (chunk) => {
+					const facade = chunk.facadeModuleId?.split('?')[0];
+					const corpusResource = facade?.includes('/src/lib/data/') && facade.endsWith('.json');
+					return corpusResource
+						? '_app/immutable/corpus/[name].[hash].js'
+						: '_app/immutable/chunks/[name].[hash].js';
+				};
+			}
+		}
 	],
 	build: {
 		// Keep font files as files. Vite inlines assets under 4 KB as data

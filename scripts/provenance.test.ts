@@ -58,7 +58,7 @@ describe('the corpus this app ships', () => {
 		// short key falling through the sets and a layer quietly missing
 		// from the reader's page. Bump these WITH the mirror, never alone.
 		expect(provenance.schema_version).toBe('0.16.0');
-		expect(provenance.edition).toBe('3.0.0');
+		expect(provenance.edition).toBe('3.1.0');
 	});
 
 	it('was vendored from a clean corpus', () => {

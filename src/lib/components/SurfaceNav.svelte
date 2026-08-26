@@ -4,6 +4,7 @@
 	// the book (base defaults to /app) and the landing pages wear it at
 	// the origin root (base ""). The row's layout rule lives in app.css.
 	import LangMenu from './LangMenu.svelte';
+	import Search from './Search.svelte';
 	import TextSize from './TextSize.svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
 	import type { Lang } from '$lib/i18n';
@@ -12,6 +13,7 @@
 </script>
 
 <nav>
+	{#if base === '/app'}<Search {lang} />{/if}
 	<LangMenu {lang} {base} />
 	<TextSize {lang} />
 	<ThemeToggle {lang} />

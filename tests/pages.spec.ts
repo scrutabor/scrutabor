@@ -1,8 +1,19 @@
 // The educational surfaces around the reading view: lemma pages,
 // grammar-concept pages, and the landing.
 import pkg from '../package.json' with { type: 'json' };
+import rootManifest from '../src/lib/data/manifest.json' with { type: 'json' };
+import englishManifest from '../src/lib/data/languages/en/manifest.json' with { type: 'json' };
+import polishManifest from '../src/lib/data/languages/pl/manifest.json' with { type: 'json' };
+import { CATALOG_ORDER } from '../src/lib/catalog-order';
 import { atRoute, bare as bareTest, expect, offlineUrl, settled, test } from './fixtures';
-import { CATALOG } from '../src/lib/catalog';
+
+const LATIN_TITLES = new Map(
+	rootManifest.texts.map((text) => [text.id.replace('.', '/'), text.title])
+);
+const LANGUAGE_TITLES = {
+	pl: new Map(polishManifest.texts.map((text) => [text.id.replace('.', '/'), text.title])),
+	en: new Map(englishManifest.texts.map((text) => [text.id.replace('.', '/'), text.title]))
+};
 
 test('the catalogue becomes a balanced book spread from laptop width up', async ({ page }) => {
 	const shape = async () =>
@@ -339,12 +350,15 @@ test('a concept example deep-links into the prayer', async ({ page }) => {
 test('landing shows the catalog and a quiet grammar link', async ({ page }) => {
 	await page.goto('/app/pl');
 	// exactly the catalog, nothing dropped and nothing invented
-	const texts = CATALOG.flatMap((s) => s.texts);
+	const texts = CATALOG_ORDER.flatMap((section) =>
+		section.texts.map((slug) => ({ category: section.category, slug }))
+	);
 	// the cards are the texts and nothing else — the flow is not one of them
 	await expect(page.locator('.card')).toHaveCount(texts.length);
 	for (const t of texts) {
+		const key = `${t.category}/${t.slug}`;
 		await expect(page.locator(`.card[href="/app/pl/${t.category}/${t.slug}"]`)).toContainText(
-			t.title
+			LATIN_TITLES.get(key)!
 		);
 	}
 	await expect(page.locator('a[href="/app/pl/grammatica"]')).toBeVisible();
@@ -352,12 +366,13 @@ test('landing shows the catalog and a quiet grammar link', async ({ page }) => {
 });
 
 test('every reading names itself below its Latin title', async ({ page }) => {
-	for (const section of CATALOG) {
-		for (const text of section.texts) {
+	for (const section of CATALOG_ORDER) {
+		for (const slug of section.texts) {
+			const key = `${section.category}/${slug}`;
 			for (const lang of ['pl', 'en'] as const) {
-				await page.goto(`/app/${lang}/${text.category}/${text.slug}`);
+				await page.goto(`/app/${lang}/${section.category}/${slug}`);
 				await expect(page.locator('header .subtitle')).toHaveText(
-					text.localizedTitle[lang] ?? text.title
+					LANGUAGE_TITLES[lang].get(key) ?? LATIN_TITLES.get(key)!
 				);
 				await expect(page.locator('header .subtitle')).not.toHaveText(section.label[lang]);
 			}

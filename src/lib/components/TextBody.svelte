@@ -23,6 +23,7 @@
 		verses,
 		onverse,
 		citedVerse = null,
+		citedSegment = null,
 		collapsedSegments = [],
 		collapsedLabel,
 		collapsedShow,
@@ -50,6 +51,8 @@
 		 * the cited verse is marked; without it they are print. */
 		onverse?: (no: number) => void;
 		citedVerse?: number | null;
+		/** Segment named by a search-result deep link. */
+		citedSegment?: string | null;
 		/** Optional reading-page folds for repeated, already-familiar prayers.
 		 * The text remains in the HTML and in the corpus; details merely keeps
 		 * repetition from dominating the visual hierarchy. */
@@ -179,9 +182,14 @@
 		<!-- Bibliography backlinks cite this exact segment. The direction is
 		     hidden here, not deleted: its anchor still resolves at the prayer's
 		     opening and the Ordo renders the complete segment. -->
-		<span class="rubric-anchor" id={segmentId(seg.id)} aria-hidden="true"></span>
+		<span
+			class="rubric-anchor"
+			class:search-hit={seg.id === citedSegment}
+			id={segmentId(seg.id)}
+			aria-hidden="true"
+		></span>
 	{:else if seg.type === 'rubric'}
-		<div class="rubric" id={segmentId(seg.id)}>
+		<div class="rubric" class:search-hit={seg.id === citedSegment} id={segmentId(seg.id)}>
 			<p class="rubric-la" lang="la">{seg.text}</p>
 			<!-- Narratives ride in EVERY mode (owner, 2026-08-21): what
 			     happens at the altar is the prayer book's own layer, not
@@ -314,9 +322,15 @@
 			class:answer={mine}
 			class:marked={showMark || verseNo !== undefined}
 			class:cited={verseNo !== undefined && verseNo === citedVerse}
+			class:search-hit={seg.id === citedSegment}
 			id={verseNo !== undefined ? segmentId(`v${verseNo}`) : segmentId(seg.id)}
 			lang="la"
 		>
+			{#if verseNo !== undefined}<span
+					class="segment-anchor"
+					id={segmentId(seg.id)}
+					aria-hidden="true"
+				></span>{/if}
 			<!-- The mark the books print in red beside the line, and then the
 			     words with NO text node between: a space there would push the
 			     first line one space past the lines it wraps onto, and the
@@ -376,6 +390,16 @@
 	.rubric-anchor {
 		display: block;
 		height: 0;
+	}
+
+	.segment-anchor {
+		position: absolute;
+	}
+
+	.search-hit {
+		outline: 1px solid var(--rubric);
+		outline-offset: calc(var(--reading) * 0.12);
+		border-radius: 0.15rem;
 	}
 
 	.translation-sources {

@@ -8,7 +8,9 @@ describe('lazy corpus loading', () => {
 		expect(textsForLatinForm('Dóminus').length).toBeGreaterThan(1);
 		expect(addressesForLatinForm('cælos')).toContainEqual({
 			textKey: 'orationes/symbolum-apostolorum',
-			wordId: 'w047'
+			segmentId: 's07',
+			wordId: 'w047',
+			position: 2
 		});
 		expect(loadedTextKeys()).toEqual([]);
 	});

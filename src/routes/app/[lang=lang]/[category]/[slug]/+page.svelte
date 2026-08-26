@@ -85,7 +85,7 @@
 		() => `scrutabor-pos:${data.category}/${data.slug}`,
 		() => {
 			const q = pageUrl().searchParams;
-			return q.has('w') || q.has('v');
+			return q.has('w') || q.has('v') || q.has('s');
 		}
 	);
 
@@ -95,6 +95,7 @@
 	// replaceState, not push: citing is a bookmarkable state, not a step
 	// a reader should have to back out of.
 	let citedVerse = $state<number | null>(null);
+	let citedSegment = $state<string | null>(null);
 
 	function applyVerseFromLocation() {
 		if (!data.verses) return;
@@ -109,9 +110,21 @@
 		}
 	}
 
+	function applySegmentFromLocation() {
+		const raw = pageUrl().searchParams.get('s');
+		citedSegment = raw && doc.segments.some((segment) => segment.id === raw) ? raw : null;
+		const target = citedSegment;
+		if (target) {
+			requestAnimationFrame(() =>
+				document.getElementById(target)?.scrollIntoView({ block: 'center' })
+			);
+		}
+	}
+
 	$effect(() => {
 		void data.verses;
 		applyVerseFromLocation();
+		applySegmentFromLocation();
 	});
 
 	function tapVerse(no: number) {
@@ -162,6 +175,7 @@
 	onpopstate={() => {
 		panel.applyFromLocation();
 		applyVerseFromLocation();
+		applySegmentFromLocation();
 	}}
 	onkeydown={(e) => {
 		const href = onWindowKeydown(e);
@@ -230,6 +244,7 @@
 						{helpLevel}
 						selectedId={panel.id}
 						ontap={tapWord}
+						{citedSegment}
 					/>
 				</section>
 			{:else}
@@ -244,6 +259,7 @@
 					verses={data.verses}
 					onverse={data.verses ? tapVerse : undefined}
 					{citedVerse}
+					{citedSegment}
 					collapsedSegments={repeatedSegments}
 					collapsedLabel={msgs.repeatedPrayer}
 					collapsedShow={msgs.repeatedPrayerShow}

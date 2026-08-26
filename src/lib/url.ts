@@ -3,7 +3,7 @@
 // On the site that is `location.href` and nothing else. A downloaded copy is
 // one document — there are no per-route files to open — so the route lives in
 // the hash, and `location.search` there is always empty while the query the
-// page cares about (`?w=`, `?dies=`, `?v=`) sits after the hash instead.
+// page cares about (`?w=`, `?dies=`, `?v=`, `?s=`) sits after the hash instead.
 //
 // Reading `location.href` directly worked while both editions had real URLs
 // and would silently return nothing in the copy, which is the quiet kind of

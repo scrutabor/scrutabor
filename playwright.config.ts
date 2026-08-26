@@ -36,7 +36,7 @@ export default defineConfig({
 			// The mirror of @online below: a handful of properties belong to
 			// the folder alone — what it does with scripting turned off, and
 			// that it is styled before its script has run.
-			grepInvert: /@folder/
+			grepInvert: /@folder|@sweep/
 		},
 		{
 			name: 'offline',
@@ -49,6 +49,17 @@ export default defineConfig({
 			// the server's own 404, and the language redirect a server does
 			// with a Location header.
 			grepInvert: /@online/
+		},
+		{
+			// The typography sweep visits every Polish surface. Running it beside
+			// the ordinary scenarios can starve a navigation even when the page
+			// itself is sound, so it starts only after both editions have released
+			// their workers and keeps its own batches on one worker.
+			name: 'hosted-sweep',
+			dependencies: ['hosted', 'offline'],
+			workers: 1,
+			use: { baseURL: 'http://localhost:4173' },
+			grep: /@sweep/
 		}
 	]
 });

@@ -25,6 +25,7 @@ export default defineConfig({
 	],
 	resolve: {
 		alias: {
+			'$lib/search-loader': here('./offline/shims/search-loader.ts'),
 			// BEFORE $lib, and that is not cosmetic: Vite takes the first alias
 			// whose prefix matches, so `$lib` listed first would swallow this
 			// one and the copy would quietly keep the site's stub — which it
