@@ -89,6 +89,12 @@ const CATALOG_SOURCE: CatalogSection[] = [
 			},
 			{
 				category: 'orationes',
+				slug: 'agimus-tibi-gratias',
+				title: 'Ágimus tibi grátias',
+				localizedTitle: { pl: 'Dziękczynienie', en: 'Thanksgiving' }
+			},
+			{
+				category: 'orationes',
 				slug: 'angelus-domini',
 				title: 'Ángelus Dómini',
 				localizedTitle: { pl: 'Anioł Pański', en: 'The Angelus' }
