@@ -48,6 +48,14 @@ describe('book search', () => {
 		expect(loadedTextKeys().filter((key) => !before.has(key)).length).toBeLessThanOrEqual(12);
 	});
 
+	it('marks only the matched Latin word, never its spacing or punctuation', async () => {
+		const results = await searchBook('Da', 'pl');
+		const parts = results.contents.flatMap((result) => result.parts).filter((part) => part.hit);
+		expect(parts.length).toBeGreaterThan(0);
+		expect(parts.every((part) => part.text === part.text.trim())).toBe(true);
+		expect(parts.some((part) => part.text.toLocaleLowerCase() === 'da')).toBe(true);
+	});
+
 	it('matches a Latin phrase with typed-out ligatures', async () => {
 		const results = await searchBook('Qui es in caelis', 'en');
 		expect(results.contents[0]).toMatchObject({

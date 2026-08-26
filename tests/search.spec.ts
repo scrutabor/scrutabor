@@ -1,34 +1,31 @@
 import { atRoute, expect, settled, test } from './fixtures';
 
-async function openSearch(page: import('@playwright/test').Page, language: 'pl' | 'en' = 'pl') {
+async function openSearchPage(page: import('@playwright/test').Page, language: 'pl' | 'en' = 'pl') {
+	await page.goto(`/app/${language}/search`);
+	const field = page.getByRole('searchbox');
+	await expect(field).toBeFocused();
+	return field;
+}
+
+async function openQuickSearch(
+	page: import('@playwright/test').Page,
+	language: 'pl' | 'en' = 'pl'
+) {
 	await page.goto(`/app/${language}`);
-	await page.getByRole('button', { name: language === 'pl' ? 'szukaj' : 'search' }).click();
+	await page.keyboard.press('Control+k');
 	const dialog = page.getByRole('dialog');
 	await expect(dialog).toBeVisible();
+	await expect(dialog.getByRole('searchbox')).toBeFocused();
 	return dialog;
 }
 
-test('title, passage, and grammar results remain visibly separate', async ({ page }) => {
-	const dialog = await openSearch(page);
-	await dialog.getByRole('searchbox').fill('Pater');
-
-	const headings = dialog.locator('.results h3');
-	await expect(headings).toHaveText(['tytuły modlitw', 'fragmenty tekstów', 'analiza gramatyczna']);
-	await expect(dialog.getByText('tytuł', { exact: true }).first()).toBeVisible();
-	await expect(dialog.getByText('tekst łaciński', { exact: true }).first()).toBeVisible();
-	await expect(dialog.getByText('gramatyka', { exact: true }).first()).toBeVisible();
-	await expect(dialog.locator('#search-titles + ul li').first()).toContainText('Ojcze nasz');
-});
-
-test('search controls are centred and the focused field stays visually neutral', async ({
-	page
-}) => {
-	const trigger = page.getByRole('button', { name: 'szukaj' });
+test('the visible search control opens a stable dedicated page', async ({ page }) => {
 	await page.goto('/app/pl');
+	const trigger = page.getByRole('link', { name: 'szukaj' });
 	await expect(trigger).toBeVisible();
-	const triggerCentres = await trigger.evaluate((button) => {
-		const control = button.getBoundingClientRect();
-		const icon = button.querySelector('svg')!.getBoundingClientRect();
+	const triggerCentres = await trigger.evaluate((link) => {
+		const control = link.getBoundingClientRect();
+		const icon = link.querySelector('svg')!.getBoundingClientRect();
 		return {
 			x: Math.abs((control.left + control.right - icon.left - icon.right) / 2),
 			y: Math.abs((control.top + control.bottom - icon.top - icon.bottom) / 2)
@@ -38,30 +35,36 @@ test('search controls are centred and the focused field stays visually neutral',
 	expect(triggerCentres.y).toBeLessThan(0.6);
 
 	await trigger.click();
-	const dialog = page.getByRole('dialog');
-	const field = dialog.getByRole('searchbox');
+	await settled(page);
+	await expect(page).toHaveURL(atRoute('/app/pl/search'));
+	await expect(page.getByRole('heading', { level: 1 })).toHaveText('Wyszukiwanie');
+	const field = page.getByRole('searchbox');
 	await expect(field).toBeFocused();
 	await expect(field).not.toHaveAttribute('placeholder');
-	expect(await field.evaluate((input) => getComputedStyle(input).outlineStyle)).toBe('none');
 
-	const close = dialog.getByRole('button', { name: 'zamknij' });
-	const closeCentres = await close.evaluate((button) => {
-		const control = button.getBoundingClientRect();
-		const icon = button.querySelector('svg')!.getBoundingClientRect();
-		return {
-			x: Math.abs((control.left + control.right - icon.left - icon.right) / 2),
-			y: Math.abs((control.top + control.bottom - icon.top - icon.bottom) / 2)
-		};
-	});
-	expect(closeCentres.x).toBeLessThan(0.6);
-	expect(closeCentres.y).toBeLessThan(0.6);
+	const before = await field.evaluate((input) => input.getBoundingClientRect().top);
+	await field.fill('Pater');
+	await expect(page.locator('#search-titles + ul')).toContainText('Ojcze nasz');
+	const after = await field.evaluate((input) => input.getBoundingClientRect().top);
+	expect(Math.abs(after - before)).toBeLessThan(0.6);
+});
+
+test('title, passage, and grammar results remain visibly separate', async ({ page }) => {
+	const field = await openSearchPage(page);
+	await field.fill('Pater');
+
+	const headings = page.locator('.results h2');
+	await expect(headings).toHaveText(['tytuły modlitw', 'fragmenty tekstów', 'analiza gramatyczna']);
+	await expect(page.getByText('tytuł', { exact: true }).first()).toBeVisible();
+	await expect(page.getByText('tekst łaciński', { exact: true }).first()).toBeVisible();
+	await expect(page.getByText('gramatyka', { exact: true }).first()).toBeVisible();
+	await expect(page.locator('#search-titles + ul li').first()).toContainText('Ojcze nasz');
 });
 
 test('completed results remain visible until their replacement is ready', async ({ page }) => {
-	const dialog = await openSearch(page);
-	const field = dialog.getByRole('searchbox');
+	const field = await openSearchPage(page);
 	await field.fill('Pater');
-	const titles = dialog.locator('#search-titles + ul');
+	const titles = page.locator('#search-titles + ul');
 	await expect(titles).toContainText('Ojcze nasz');
 
 	await field.fill('Duszo Chrystusowa');
@@ -72,18 +75,28 @@ test('completed results remain visible until their replacement is ready', async 
 test('search is case-insensitive while results retain devotional capitalization', async ({
 	page
 }) => {
-	const dialog = await openSearch(page);
+	const field = await openSearchPage(page);
 	const pious = 'Duszo Chrystusowa';
-	await dialog.getByRole('searchbox').fill(pious.toLocaleUpperCase('pl'));
-	const title = dialog.locator('#search-titles + ul li').first();
+	await field.fill(pious.toLocaleUpperCase('pl'));
+	const title = page.locator('#search-titles + ul li').first();
 	await expect(title).toContainText(pious);
 	await expect(title).toContainText('Ánima Christi');
 });
 
+test('highlighting marks the found word without its preceding space', async ({ page }) => {
+	const field = await openSearchPage(page);
+	await field.fill('Da');
+	const mark = page.locator('#search-contents + ul mark').first();
+	await expect(mark).toBeVisible();
+	const found = await mark.textContent();
+	expect(found).toBe(found?.trim());
+	expect(found?.toLocaleLowerCase()).toBe('da');
+});
+
 test('a translation passage opens and marks the exact segment', async ({ page }) => {
-	const dialog = await openSearch(page);
-	await dialog.getByRole('searchbox').fill('Uświęć mnie');
-	const passage = dialog.locator('#search-contents + ul a[href*="anima-christi?s=s01"]');
+	const field = await openSearchPage(page);
+	await field.fill('Uświęć mnie');
+	const passage = page.locator('#search-contents + ul a[href*="anima-christi?s=s01"]');
 	await expect(passage).toContainText('Duszo Chrystusowa');
 	await passage.click();
 	await settled(page);
@@ -92,30 +105,111 @@ test('a translation passage opens and marks the exact segment', async ({ page })
 });
 
 test('minor mistakes and missing diacritics still find a familiar title', async ({ page }) => {
-	const dialog = await openSearch(page);
-	await dialog.getByRole('searchbox').fill('Najświętsza Panmo');
-	await expect(dialog.locator('#search-titles + ul li').first()).toContainText(
+	const field = await openSearchPage(page);
+	await field.fill('Najświętsza Panmo');
+	await expect(page.locator('#search-titles + ul li').first()).toContainText(
 		'Pomnij, o Najświętsza Panno Maryjo'
 	);
-	await dialog.getByRole('searchbox').fill('Najswietsza Panno');
-	await expect(dialog.locator('#search-titles + ul li').first()).toContainText(
+	await field.fill('Najswietsza Panno');
+	await expect(page.locator('#search-titles + ul li').first()).toContainText(
 		'Pomnij, o Najświętsza Panno Maryjo'
 	);
 });
 
 test('a Latin inflection offers the dictionary entry last', async ({ page }) => {
-	const dialog = await openSearch(page, 'en');
-	await dialog.getByRole('searchbox').fill('Patris');
-	const grammar = dialog.locator('#search-grammar + ul li').first();
+	const field = await openSearchPage(page, 'en');
+	await field.fill('Patris');
+	const grammar = page.locator('#search-grammar + ul li').first();
 	await expect(grammar).toContainText('pater, patris');
 	await grammar.getByRole('link').click();
 	await settled(page);
 	await expect(page).toHaveURL(atRoute('/app/en/lemma/pater'));
 });
 
-test('Escape closes search and returns focus to the page', async ({ page }) => {
-	const dialog = await openSearch(page);
+test('typing replaces one query entry instead of filling browser history', async ({ page }) => {
+	await page.goto('/app/pl');
+	await page.getByRole('link', { name: 'szukaj' }).click();
+	await settled(page);
+	await page.getByRole('searchbox').pressSequentially('Pater', { delay: 35 });
+	await expect(page).toHaveURL(atRoute('/app/pl/search', '?q=Pater'));
+	await page.goBack();
+	await settled(page);
+	await expect(page).toHaveURL(atRoute('/app/pl'));
+});
+
+test('Back restores the query, results, and scroll position before a second result is opened', async ({
+	page
+}) => {
+	await page.setViewportSize({ width: 1280, height: 520 });
+	const field = await openSearchPage(page);
+	await field.fill('Pater');
+	const hits = page.locator('#search-contents + ul a');
+	await expect(hits.nth(5)).toBeVisible();
+	const firstHref = await hits.nth(4).getAttribute('href');
+	const secondHref = await hits.nth(5).getAttribute('href');
+	expect(secondHref).not.toBe(firstHref);
+	await hits.nth(4).evaluate((element) => element.scrollIntoView({ block: 'center' }));
+	await hits.nth(4).click();
+	await settled(page);
+	const before = await page.evaluate(() => {
+		const saved = sessionStorage.getItem('scrutabor-search-return');
+		return saved ? (JSON.parse(saved).y as number) : -1;
+	});
+	expect(before).toBeGreaterThan(0);
+
+	await page.goBack();
+	await settled(page);
+	await expect(page).toHaveURL(atRoute('/app/pl/search', '?q=Pater'));
+	await expect(page.getByRole('searchbox')).toHaveValue('Pater');
+	await expect(page.locator('#search-contents + ul a').nth(5)).toHaveAttribute('href', secondHref!);
+	await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThanOrEqual(before - 2);
+
+	await page.locator('#search-contents + ul a').nth(5).click();
+	await settled(page);
+	await expect(page).not.toHaveURL(atRoute('/app/pl/search', '?q=Pater'));
+});
+
+test('Ctrl+K opens the title switcher and its footer hands the query to full search', async ({
+	page
+}) => {
+	const dialog = await openQuickSearch(page);
+	await expect(dialog.getByRole('heading')).toHaveText('Szybkie przejście');
+	await dialog.getByRole('searchbox').fill('Pater');
+	await expect(dialog.getByRole('link', { name: /Ojcze nasz/ }).first()).toBeVisible();
+	await expect(dialog.getByText('fragmenty tekstów')).toHaveCount(0);
+	await dialog.getByRole('link', { name: 'Pokaż wszystkie wyniki →' }).click();
+	await settled(page);
+	await expect(page).toHaveURL(atRoute('/app/pl/search', '?q=Pater'));
+	await expect(page.getByRole('searchbox')).toHaveValue('Pater');
+});
+
+test('the quick switcher closes with Escape, its close button, and the backdrop', async ({
+	page
+}) => {
+	await page.goto('/app/pl');
+	const trigger = page.getByRole('link', { name: 'szukaj' });
+	await trigger.focus();
+	await page.keyboard.press('Control+k');
+	const dialog = page.getByRole('dialog');
 	await page.keyboard.press('Escape');
 	await expect(dialog).not.toBeVisible();
-	await expect(page.getByRole('button', { name: 'szukaj' })).toBeFocused();
+	await expect(trigger).toBeFocused();
+
+	await page.keyboard.press('Control+k');
+	await dialog.getByRole('button', { name: 'zamknij' }).click();
+	await expect(dialog).not.toBeVisible();
+
+	await page.keyboard.press('Control+k');
+	await page.mouse.click(1, 1);
+	await expect(dialog).not.toBeVisible();
+});
+
+test('Ctrl+K on the full search page focuses its field instead of opening another surface', async ({
+	page
+}) => {
+	const field = await openSearchPage(page);
+	await page.getByRole('link', { name: 'strona główna modlitewnika' }).focus();
+	await page.keyboard.press('Control+k');
+	await expect(field).toBeFocused();
+	await expect(page.getByRole('dialog')).not.toBeVisible();
 });
