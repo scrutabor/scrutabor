@@ -7,5 +7,5 @@ import type { LayoutServerLoad } from './$types';
 export const load: LayoutServerLoad = ({ params, url }) => ({
 	lang: params.lang,
 	// the language-relative path, for the canonical and hreflang links
-	path: url.pathname.replace(/^\/(pl|en)/, '')
+	path: url.pathname.replace(`/${params.lang}`, '')
 });

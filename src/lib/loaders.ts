@@ -11,17 +11,20 @@
 // belongs to a request — a URL, headers, the `error()` helper — stays in the
 // route file, so that what is shared is only the part both editions can run.
 import { buildBibliography } from './bibliography';
+import { neighborsOf } from './catalog';
 import { occurrencesOf } from './concordance';
 import {
 	LEXICON,
-	TEXT_KEYS,
+	hasText,
+	loadSenses,
 	loadAllTexts,
 	loadText,
 	loadTexts,
 	narrowLexicon,
+	textKeysFor,
 	type TextDocument
 } from './corpus';
-import type { Lang } from './i18n';
+import { LANGS, type Lang } from './i18n';
 import { conceptById } from './grammar';
 import { movementById } from './ordo';
 import { PROPER_DAYS, SLOT_OF, partOf, properRank } from './proprium';
@@ -33,8 +36,34 @@ export function layoutData(lang: string, path: string) {
 	return { lang, version: pkg.version, path };
 }
 
+/** Languages that can render this exact app path. Shared interface pages are
+ * available everywhere; readings and lemma pages follow their package
+ * manifests, so language switching never points at a page that was not built. */
+export async function appLayoutData(lang: string, path: string) {
+	let languages: Lang[] = LANGS;
+	const textMatch = path.match(/^\/([^/]+)\/([^/]+)$/);
+	if (textMatch) {
+		const key = `${textMatch[1]}/${textMatch[2]}`;
+		if (hasText(key)) languages = LANGS.filter((language) => hasText(key, language));
+	}
+	const lemmaMatch = path.match(/^\/lemma\/([^/]+)$/);
+	if (lemmaMatch) {
+		const lemma = decodeURIComponent(lemmaMatch[1]);
+		languages = (
+			await Promise.all(
+				LANGS.map(async (language) => ((await loadSenses(language))[lemma] ? language : null))
+			)
+		).filter((language): language is Lang => language !== null);
+	}
+	return { ...layoutData(lang, path), languages };
+}
+
+export function catalogData(lang: Lang) {
+	return { available: textKeysFor(lang) };
+}
+
 export async function readingData(lang: Lang, category: string, slug: string) {
-	const entry = await loadText(`${category}/${slug}`);
+	const entry = await loadText(`${category}/${slug}`, lang);
 	if (!entry) return null;
 
 	const numbered = entry.text.segments.filter((seg) => seg.verse !== undefined);
@@ -46,10 +75,11 @@ export async function readingData(lang: Lang, category: string, slug: string) {
 		category,
 		slug,
 		doc: entry.text,
-		gloss: entry.glosses[lang],
+		gloss: entry.gloss,
 		// Just the entries this text can ask about, not the whole dictionary.
-		lex: narrowLexicon([entry.text], lang),
-		verses
+		lex: await narrowLexicon([entry.text], lang),
+		verses,
+		around: neighborsOf(category, slug, new Set(textKeysFor(lang)))
 	};
 }
 
@@ -58,17 +88,18 @@ export async function ordoData(lang: Lang, movement: string) {
 	if (!found) return null;
 
 	const loaded = await loadTexts(
-		found.entries.flatMap((entry) => (entry.text ? [entry.text] : []))
+		found.entries.flatMap((entry) => (entry.text ? [entry.text] : [])),
+		lang
 	);
 	const texts: Record<string, { doc: unknown; gloss: unknown }> = {};
 	const docs: TextDocument[] = [];
 	for (const e of found.entries) {
 		const entry = e.text ? loaded[e.text] : undefined;
 		if (!entry) continue;
-		texts[e.text!] = { doc: entry.text, gloss: entry.glosses[lang] };
+		texts[e.text!] = { doc: entry.text, gloss: entry.gloss };
 		docs.push(entry.text);
 	}
-	return { movement, texts, lex: narrowLexicon(docs, lang) };
+	return { movement, texts, lex: await narrowLexicon(docs, lang) };
 }
 
 export async function lemmaData(lang: Lang, lemma: string) {
@@ -77,10 +108,11 @@ export async function lemmaData(lang: Lang, lemma: string) {
 	// the site 404s (the route is only prerendered for real entries) and
 	// the downloaded copy must not answer the same address with a page.
 	if (!LEXICON.lemmata[lemma]) return null;
+	const senses = await loadSenses(lang);
 	return {
 		lemma,
 		entry: LEXICON.lemmata[lemma],
-		sense: LEXICON.senses[lang][lemma] ?? null,
+		sense: senses[lemma] ?? null,
 		occurrences: await occurrencesOf(lemma)
 	};
 }
@@ -91,7 +123,9 @@ export function conceptData(concept: string) {
 }
 
 export async function bibliographyData(lang: Lang) {
-	return { sources: buildBibliography(lang, await loadAllTexts()) };
+	return {
+		sources: buildBibliography(lang, await loadAllTexts(lang), await loadSenses(lang))
+	};
 }
 
 /**
@@ -111,15 +145,17 @@ export async function properData(day: string, lang: Lang) {
 	// plus a known part suffix, and a prefix match would let a day whose id
 	// begins with another's (nativitas / nativitas-vigilia) pull the other
 	// day's parts into its Mass.
-	const keys = TEXT_KEYS.filter((key) => {
-		const [category, slug] = key.split('/');
-		if (category !== 'proprium') return false;
-		const part = partOf(slug);
-		return part !== undefined && slug.slice(0, -(part.length + 1)) === found.id;
-	}).sort((a, b) => properRank(a.split('/')[1]) - properRank(b.split('/')[1]));
+	const keys = textKeysFor(lang)
+		.filter((key) => {
+			const [category, slug] = key.split('/');
+			if (category !== 'proprium') return false;
+			const part = partOf(slug);
+			return part !== undefined && slug.slice(0, -(part.length + 1)) === found.id;
+		})
+		.sort((a, b) => properRank(a.split('/')[1]) - properRank(b.split('/')[1]));
 	if (!keys.length) return null;
 
-	const loaded = await loadTexts(keys);
+	const loaded = await loadTexts(keys, lang);
 	const docs: TextDocument[] = [];
 	const parts = keys.map((key) => {
 		const entry = loaded[key];
@@ -135,11 +171,17 @@ export async function properData(day: string, lang: Lang) {
 			// and tract together.
 			slot: SLOT_OF[part],
 			doc: entry.text,
-			gloss: entry.glosses[lang]
+			gloss: entry.gloss
 		};
 	});
 
 	// Only the dictionary this day's own words can ask about, the same slice a
 	// reading page gets. The whole lexicon would defeat the point.
-	return { day: found.id, title: found.title, lang, parts, lex: narrowLexicon(docs, lang) };
+	return {
+		day: found.id,
+		title: found.title,
+		lang,
+		parts,
+		lex: await narrowLexicon(docs, lang)
+	};
 }

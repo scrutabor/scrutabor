@@ -11,7 +11,7 @@
 // from and the list of what exists are two different lists.
 import { CATALOG } from './catalog';
 import { PROPER_DAYS, partOf, properRank } from './proprium';
-import { TEXT_KEYS, hasText, loadTexts } from './corpus';
+import { TEXT_KEYS, hasText, loadCoreTexts } from './corpus';
 import { ORDO } from './ordo';
 import concordance from './data/concordance.json';
 
@@ -125,7 +125,7 @@ export function everyTextInOrder(): string[] {
 
 export async function occurrencesOf(lemma: string): Promise<TextOccurrences[]> {
 	const postings = DATA.latin.lemmata[lemma] ?? [];
-	const texts = await loadTexts(candidateKeys(postings));
+	const texts = await loadCoreTexts(candidateKeys(postings));
 	const byText = new Map<string, string[]>();
 	for (const [number, wordId] of postings) {
 		const key = textKey(number);
@@ -141,15 +141,15 @@ export async function occurrencesOf(lemma: string): Promise<TextOccurrences[]> {
 		const entry = texts[key];
 		if (!ids || !entry) continue;
 		const wanted = new Set(ids);
-		const words = entry.text.segments
+		const words = entry.segments
 			.flatMap((segment) => segment.words ?? [])
 			.filter((word) => wanted.has(word.id));
 		grouped.push({
 			textKey: key,
-			title: entry.text.title,
+			title: entry.title,
 			items: words.map((word) => ({
 				textKey: key,
-				title: entry.text.title,
+				title: entry.title,
 				wordId: word.id,
 				form: word.form
 			}))

@@ -1,0 +1,15 @@
+{
+  "id":"orationes.salve-regina",
+  "language":"pl",
+  "about":"Antyfona maryjna odmawiana po Mszy cichej w modlitwach Leona XIII, a w komplecie przez długi okres po Zesłaniu Ducha Świętego. Zwraca się do Najświętszej Maryi Panny jako Królowej i Matki miłosierdzia, a wygnańcy, synowie Ewy, proszą Ją, aby zwróciła ku nim swoje miłosierne oczy i po tym wygnaniu ukazała im Jezusa. Po antyfonie następuje werset z odpowiedzią.",
+  "seg":[
+    {"id":"s01","tr":"Witaj, Królowo, Matko miłosierdzia, życie, słodyczy i nadziejo nasza, witaj.","tc":[104,105],"g":["witaj","Królowo","Matko","miłosierdzia","życie","słodyczy","i","nadziejo","nasza","witaj"],"fn":{"w001":"Tryb rozkazujący liczby pojedynczej od sálveo, skierowany do „Regína”: dosłownie „bądź zdrowa”, jako pozdrowienie „witaj”.","w004":"Dopełniacz zależny od „Mater” (w003).","w008":"Wołacz w szeregu rozpoczętym przez „Regína” (w002). Czasownikiem zdania jest „Salve” (w001)."}},
+    {"id":"s02","tr":"Do Ciebie wołamy wygnańcy, synowie Ewy.","tc":[104,105],"g":["do","Ciebie","wołamy","wygnańcy","synowie","Ewy"],"fn":{"w014":"Mianownik w apozycji do domyślnego podmiotu „clamámus” (w013)."}},
+    {"id":"s03","tr":"Do Ciebie wzdychamy, jęcząc i płacząc na tym łez padole.","tc":[104,105],"g":["do","Ciebie","wzdychamy","jęcząc","i","płacząc","na","tym","łez","padole"],"fn":{"w020":"Imiesłów w mianowniku liczby mnogiej, zgodny z domyślnym podmiotem „suspirámus” (w019).","w025":"Dopełniacz liczby mnogiej zależny od „valle” (w026)."}},
+    {"id":"s04","tr":"Przeto, Orędowniczko nasza, one miłosierne oczy Twoje na nas zwróć.","tc":[104,105],"g":["nuże","więc","Orędowniczko","nasza","one","Twoje","miłosierne","oczy","ku","nam","zwróć"],"fn":{"w031":"Zaimek wskazujący. Zgadza się z „óculos” (w034)."}},
+    {"id":"s05","tr":"A Jezusa, błogosławiony owoc żywota Twojego, po tym wygnaniu nam okaż.","tc":[104,105],"g":["a","Jezusa","błogosławiony","owoc","żywota","Twojego","nam","po","tym","wygnaniu","okaż"],"fn":{"w048":"Tryb rozkazujący skierowany do Maryi. Dopełnieniem jest „Iesum” (w039)."}},
+    {"id":"s06","tr":"O łaskawa, o litościwa, o słodka Panno Maryjo.","tc":[104,105],"g":["o","łaskawa","o","litościwa","o","słodka","Panno","Maryjo"]},
+    {"id":"s07","tr":"Módl się za nami, święta Boża Rodzicielko.","tc":[108,100],"g":["módl się","za","nami","Święta","Boga","Rodzicielko"]},
+    {"id":"s08","tr":"Abyśmy się stali godnymi obietnic Chrystusowych.","tc":[108,100],"g":["abyśmy","godnymi","się stali","obietnic","Chrystusa"],"fn":{"w065":"Strona bierna: dosłownie, abyśmy zostali uczynieni godnymi.","w066":"Ablativus zależny od „digni” (w064)."}}
+  ]
+}

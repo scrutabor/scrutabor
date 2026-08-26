@@ -1,0 +1,8 @@
+{
+  "id":"ordinarium.laus-tibi-christe",
+  "language":"en",
+  "about":"The response at the end of the Gospel.",
+  "seg":[
+    {"id":"s01","tr":"Praise to You, O Christ.","tc":[228,229,230],"g":["Praise","to You","Christ"],"fn":{"w001":"Nominative in a response without an expressed verb."}}
+  ]
+}

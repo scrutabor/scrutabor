@@ -1,0 +1,9 @@
+{
+  "id":"orationes.ave-maria",
+  "language":"pl",
+  "about":"Pierwsza część Pozdrowienia anielskiego łączy słowa Gabriela (Łk 1, 28) i Elżbiety (Łk 1, 42), a w żadnym z tych wersetów nie ma imion Maryja i Jezus, które dodaje modlitwa. Druga część, prośba skierowana do Maryi, pochodzi z XVI wieku.",
+  "seg":[
+    {"id":"s01","tr":"Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus.","tc":[46,47],"g":["zdrowaś","Maryjo","łaski","pełna","Pan","z Tobą","błogosławiona","Ty","między","niewiastami","i","błogosławiony","owoc","żywota","Twojego","Jezus"],"fn":{"w001":"Pozdrowienie anioła w Łk 1, 28.","w003":"Ablativus zależny od „plena” (w004). Po polsku dopełniacz: „łaski pełna”.","w004":"Zgadza się z „María” (w002) i łączy z „grátia” (w003).","w005":"Podmiot zdania z domyślnym „est”: Pan [jest] z Tobą.","w006":"Połączenie „te” i „cum”. Przy zaimkach osobowych „cum” stoi po zaimku.","w007":"„Benedícta [es] tu” — z domyślnym „es”.","w012":"Zgadza się z „fructus” (w013) i dlatego ma rodzaj męski.","w014":"Dopełniacz zależny od „fructus” (w013).","w015":"Zgadza się z „ventris” (w014).","w016":"Apozycja (dopowiedzenie) do „fructus” (w013): owoc… — Jezus."}},
+    {"id":"s02","tr":"Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.","tc":[63,47],"g":["Święta","Maryjo","Matko","Boga","módl się","za","nami","grzesznikami","teraz","i","w","godzinie","śmierci","naszej","amen"],"fn":{"w017":"Zgadza się z „María” (w018).","w019":"Apozycja (dopowiedzenie) do „María” (w018).","w020":"Dopełniacz zależny od „Mater”: Matka Boga.","w023":"Ablativus po „pro” (w022).","w024":"Apozycja (dopowiedzenie) do „nobis” (w023).","w028":"Ablativus po „in” (w027) w określeniu czasu.","w029":"Dopełniacz zależny od „hora” (w028).","w030":"Zgadza się z „mortis” (w029)."}}
+  ]
+}

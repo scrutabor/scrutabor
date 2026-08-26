@@ -25,7 +25,7 @@
 		<Flag {lang} />
 	{/snippet}
 	{#snippet children(close)}
-		{#each LANGS as l (l)}
+		{#each LANGS.filter((candidate) => where.languages.includes(candidate)) as l (l)}
 			<li>
 				<a
 					class="menu-row"

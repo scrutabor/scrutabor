@@ -2,7 +2,7 @@
 	import { pageUrl } from '$lib/url';
 	import { goto, replaceState } from '$app/navigation';
 	import { arrowNav } from '$lib/arrow-nav';
-	import { neighborsOf, sectionFor, textFor } from '$lib/catalog';
+	import { sectionFor, textFor } from '$lib/catalog';
 	import HelpLevels, { initialHelp } from '$lib/components/HelpLevels.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import Pager from '$lib/components/Pager.svelte';
@@ -52,7 +52,7 @@
 	// Book navigation: the catalog's flattened order — within ordinarium
 	// that is the liturgical sequence, so a reader can follow the Mass
 	// text to text without returning to the catalog.
-	const around = $derived(neighborsOf(data.category, data.slug));
+	const around = $derived(data.around);
 	const repeatedSegments = $derived(
 		data.category === 'orationes' && data.slug === 'angelus-domini' ? ['ave1', 'ave2', 'ave3'] : []
 	);

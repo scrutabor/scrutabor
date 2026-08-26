@@ -1,0 +1,12 @@
+{
+  "id":"ordinarium.memento-defunctorum",
+  "language":"en",
+  "about":"The commemoration of the dead in the Canon. The priest prays for God's servants, men and women, who went before with the sign of faith and now sleep the sleep of peace, then joins his hands and prays in silence for those he intends to remember. He asks for them and for all who rest in Christ a place of refreshment, light, and peace.",
+  "seg":[
+    {"id":"s01","tr":"Remember also, O Lord, Your servants, men and women, who went before us bearing the sign of faith and now sleep the sleep of peace.","tc":[244,245,246],"g":["be mindful","also","Lord","of servants","and of handmaids","Thy","who","us","have gone before","with","the sign","of faith","and","sleep","in","the sleep","of peace"],"fn":{"w001":"Second-person singular future imperative.","w006":"Feminine genitive plural, agreeing with “famularúmque” (w005).","w011":"Ablative after “cum” (w010): “with the sign of faith”. CCC 1274 relates the phrase to baptismal faith kept until death.","w014":"Present tense after the perfect “præcessérunt” (w009)."}},
+    {"id":"s02","nr":"The priest joins his hands and prays a while in silence for those dead he means to remember, then spreads his hands and goes on."},
+    {"id":"s03","tr":"We implore You, O Lord, to grant them and all who rest in Christ a place of refreshment, light, and peace.","tc":[244,245,246],"g":["to them","Lord","and","to all","in","Christ","who rest","a place","of refreshment","of light","and","of peace","that","Thou grant","we plead"],"fn":{"w018":"A dative governed by “indúlgeas” (w031).","w024":"A participle used as a noun in the dative plural.","w025":"Accusative object of “indúlgeas” (w031).","w026":"A genitive dependent on “locum” (w025), coordinated with “lucis” (w027) and “pacis” (w029).","w032":"First-person plural present of a deponent verb."}},
+    {"id":"s04","nr":"The priest joins his hands and bows his head."},
+    {"id":"s05","tr":"Through the same Christ our Lord. Amen.","tc":[244,245,246],"g":["through","the same","Christ","Lord","our","amen"]}
+  ]
+}

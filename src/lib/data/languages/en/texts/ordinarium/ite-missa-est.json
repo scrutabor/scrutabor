@@ -1,0 +1,14 @@
+{
+  "id":"ordinarium.ite-missa-est",
+  "language":"en",
+  "about":"The dismissal after the last prayer following Communion. The priest greets the faithful and says “Ite, Missa est”, answered by “Deo grátias”. When a procession follows the Mass he says “Benedicámus Dómino” instead, and in Masses for the Dead “Requiéscant in pace”, answered by “Amen”.",
+  "seg":[
+    {"id":"s01","nr":"After the last prayer following Communion the priest says:"},
+    {"id":"s02","tr":"The Lord be with you.","tc":[142],"g":["The Lord","with you"],"fn":{"w002":"The preposition “cum” follows and joins the personal pronoun: “vobis” + “cum”."}},
+    {"id":"s03","tr":"And with your spirit.","tc":[142],"g":["and","with","spirit","your"]},
+    {"id":"s04","nr":"Turned toward the people, the priest says “Ite, Missa est”, and the server answers “Deo grátias”. Where “Benedicámus Dómino” is said instead, he says it at the middle of the altar, facing it."},
+    {"id":"s05","tr":"Go forth, the Mass is ended.","tc":[142],"g":["go","the dismissal","is made"],"fn":{"w007":"A plural imperative addressed to the assembly.","w008":"A nominative noun serving as the subject of “est” (w009)."},"nt":{"w008":"This can be the noun missa, the dismissal, or a perfect passive participle of mitto with an understood subject, which is the formula's historical origin. This edition takes the noun."}},
+    {"id":"s06","tr":"Thanks be to God.","tc":[142],"g":["to God","thanks"],"fn":{"w010":"Dative: thanks are given to God.","w011":"Accusative plural. The verb of giving thanks is understood."}},
+    {"id":"s07","nr":"In Masses for the Dead the priest says instead, facing the altar: Requiéscant in pace — and the answer is Amen."}
+  ]
+}

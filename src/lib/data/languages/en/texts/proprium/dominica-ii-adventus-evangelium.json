@@ -1,0 +1,16 @@
+{
+  "id":"proprium.dominica-ii-adventus-evangelium",
+  "language":"en",
+  "about":"The gospel of the Second Sunday of Advent. John the Baptist, already in prison, sends to ask whether this is He. The answer is not a claim but a list of what can be seen, and it ends with a word about John himself.",
+  "seg":[
+    {"id":"s01","tr":"At that time, when John heard in prison of the works of Christ, he sent two of his disciples and asked Him:","tc":[142],"g":["in","that","time","when","had heard","John","in","chains","the works","of Christ","sending","two","of","disciples","his","he said","to Him"]},
+    {"id":"s02","tr":"Are You the One who is to come, or should we look for another?","tc":[142],"g":["Thou","art","who","to come","art","or","another","do we look for"]},
+    {"id":"s03","tr":"Jesus answered them: Go and report to John what you have heard and seen.","tc":[142],"g":["and","answering","Jesus","said","to them","going","report","to John","what","you have heard","and","you have seen"]},
+    {"id":"s04","tr":"The blind see, the lame walk, lepers are cleansed, the deaf hear, the dead rise, and the Gospel is preached to the poor; blessed is the one who does not stumble because of Me.","tc":[142],"g":["the blind","see","the lame","walk","lepers","are cleansed","the deaf","hear","the dead","rise again","the poor","have the gospel preached to them","and","blessed","is","who","not","shall be","scandalized","in","me"]},
+    {"id":"s05","tr":"As they went away, Jesus began to speak to the crowds about John: What did you go out into the desert to see? A reed shaken by the wind?","tc":[142],"g":["they","now","going away","began","Jesus","to say","to","the crowds","concerning","John","what","went you out","into","the desert","to see","a reed","with the wind","shaken"],"fn":{"w061":"An ablative absolute: when they were going away."}},
+    {"id":"s06","tr":"What then did you go out to see? A man dressed in soft garments?","tc":[142],"g":["but","what","went you out","to see","a man","in soft","clothed"]},
+    {"id":"s07","tr":"Behold, those who wear soft garments live in royal houses.","tc":[142],"g":["behold","they that","in soft","are clothed","in","the houses","of kings","are"]},
+    {"id":"s08","tr":"What then did you go out to see? A prophet? Yes, I tell you, and more than a prophet.","tc":[142],"g":["but","what","went you out","to see","a prophet","yea","I say","to you","and","more","than","a prophet"]},
+    {"id":"s09","tr":"For this is the one of whom it is written: Behold, I send My messenger before Your face, who will prepare Your way before You.","tc":[142],"g":["this","is","for","of","whom","written","it is","behold","I","send","angel","My","before","face","Thy","who","shall prepare","way","Thy","before","Thee"]}
+  ]
+}

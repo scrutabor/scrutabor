@@ -1,0 +1,12 @@
+{
+  "id":"ordinarium.memento-vivorum",
+  "language":"pl",
+  "about":"Modlitwa zaczyna się od prośby, aby Bóg pamiętał o swoich sługach i służebnicach. Kapłan składa wtedy ręce i modli się w milczeniu za tych, których pragnie wspomnieć. Następnie modlitwa obejmuje wszystkich obecnych i wymienia intencje: odkupienie ich dusz, nadzieję zbawienia oraz pomyślność.",
+  "seg":[
+    {"id":"s01","tr":"Pamiętaj, Panie, o Twoich sługach i służebnicach","tc":[247],"g":["pamiętaj","Panie","sług","i służebnic","Twoich"],"fn":{"w001":"Druga osoba liczby pojedynczej trybu rozkazującego czasu przyszłego.","w003":"Dopełniacz liczby mnogiej zależny od „Meménto” (w001).","w004":"Dopełniacz liczby mnogiej z dołączonym spójnikiem „-que”.","w005":"Dopełniacz liczby mnogiej rodzaju żeńskiego. Zgadza się z „famularúmque” (w004)."}},
+    {"id":"s02","nr":"Kapłan składa ręce i modli się chwilę w milczeniu za tych, których chce wspomnieć. Potem rozkłada ręce i mówi dalej."},
+    {"id":"s03","tr":"i o wszystkich tu obecnych, których wiara jest Ci znana, a pobożność wiadoma; za nich składamy Ci","tc":[247],"g":["i","wszystkich","obecnych","których","Ci","wiara","znana","jest","i","wiadoma","pobożność","za","których","Ci","składamy"],"fn":{"w008":"Imiesłów użyty rzeczownikowo w dopełniaczu liczby mnogiej.","w013":"Wspólne orzeczenie dla „fides cognita” i „nota devótio”."}},
+    {"id":"s04","tr":"— albo oni sami składają Ci — tę ofiarę chwały za siebie i za wszystkich swoich: za odkupienie swoich dusz, w nadziei zbawienia i pomyślności;","tc":[247],"g":["albo","którzy","Ci","składają","tę","ofiarę","chwały","za","siebie","i swoich","wszystkich","za","odkupienie","dusz","swoich","za","nadzieję","zbawienia","i","bezpieczeństwa","swego"],"fn":{"w027":"Wyrażenie „sacrifícium laudis” występuje w Ps 49, 14 i 106, 22.","w029":"„pro” (w028) wymaga ablativu. Forma „se” sama nie wskazuje liczby ani rodzaju.","w030":"Ablativus liczby mnogiej po „pro” (w028), z dołączonym spójnikiem „-que”.","w033":"Ablativus po „pro” (w032): „za odkupienie ich dusz”.","w038":"Dopełniacz zależny od „spe” (w037), współrzędny z „incolumitátis” (w040)."}},
+    {"id":"s05","tr":"i Tobie, Bogu wiecznemu, żywemu i prawdziwemu, wypełniają swoje śluby.","tc":[247],"g":["i Tobie","oddają","śluby","swoje","wiecznemu","Bogu","żywemu","i","prawdziwemu"],"fn":{"w043":"Wyrażenie „vota réddere” występuje w Ps 115, 14 i 18.","w047":"Celownik wskazujący adresata ślubów. Wyrażenie „Deo vivo et vero” występuje w 1 Tes 1, 9."}}
+  ]
+}

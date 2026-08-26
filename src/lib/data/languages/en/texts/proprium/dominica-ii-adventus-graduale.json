@@ -1,0 +1,9 @@
+{
+  "id":"proprium.dominica-ii-adventus-graduale",
+  "language":"en",
+  "about":"The gradual of the Second Sunday of Advent, from Psalm 49. The chant between the readings: the first half says where God comes from, the second calls for the gathering of those who made His covenant.",
+  "seg":[
+    {"id":"s01","tr":"From Sion the beauty of His splendor will appear; God will come openly.","tc":[142],"g":["out of","Sion","the beauty","of comeliness","his","God","openly","shall come"]},
+    {"id":"s02","tr":"Gather His holy ones to Him, those who made His covenant by sacrifices.","tc":[142],"g":["gather","to Him","holy ones","His","who","have ordained","covenant","His","above","sacrifices"]}
+  ]
+}

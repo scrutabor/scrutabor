@@ -9,7 +9,7 @@
 // punctuation belongs to the text being translated, not to this edition's
 // voice, and the received wording the corpus aligned to is not ours to
 // repunctuate.
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 
 import { describe, expect, it } from 'vitest';
 
@@ -17,46 +17,40 @@ import { describe, expect, it } from 'vitest';
 function corpusProse(): { where: string; text: string }[] {
 	const dir = 'src/lib/data';
 	const out: { where: string; text: string }[] = [];
-	const LANGS = ['pl', 'en'];
 	const read = (path: string) => JSON.parse(readFileSync(`${dir}/${path}`, 'utf8'));
+	const manifest = read('manifest.json') as {
+		languages: { id: string; path: string }[];
+	};
 
 	// The LEXICON keeps its prose at entries[lemma].note, not words[id].note,
 	// so this walk stepped past all 329 of them until 2026-08-16 — and the
 	// lexicon is vendored and rendered, so every one reached a lemma page.
-	const lexicon = read('lexicon.json');
-	for (const lang of LANGS) {
-		for (const [lemma, entry] of Object.entries(lexicon.senses[lang] ?? {}) as [
+	for (const { id: lang, path: manifestPath } of manifest.languages) {
+		const language = read(manifestPath) as {
+			lexicon: string;
+			texts: { id: string; path: string }[];
+		};
+		const lexicon = read(language.lexicon);
+		for (const [lemma, entry] of Object.entries(lexicon.entries ?? {}) as [
 			string,
 			Record<string, string>
 		][]) {
-			if (entry.note) out.push({ where: `lexicon.json:${lang}.${lemma}.note`, text: entry.note });
+			if (entry.note)
+				out.push({ where: `${language.lexicon}:${lang}.${lemma}.note`, text: entry.note });
 		}
-	}
 
-	// One document per text, and every prose value keyed by language: `about`
-	// on the text, `nr` on a rubric segment, `fn` and `nt` on a word. The keys
-	// are short because this is the reader edition — the shape the corpus
-	// emits rather than the shape it stores.
-	for (const category of readdirSync(`${dir}/texts`)) {
-		for (const file of readdirSync(`${dir}/texts/${category}`)) {
-			if (!file.endsWith('.json')) continue;
-			const doc = read(`texts/${category}/${file}`);
-			const at = (k: string) => `${category}/${file}:${k}`;
-			const byLang = (value: unknown, where: string) => {
-				for (const lang of LANGS) {
-					const text = (value as Record<string, string> | undefined)?.[lang];
-					if (text) out.push({ where: `${where}.${lang}`, text });
-				}
-			};
-			byLang(doc.about, at('about'));
+		// Each language text is self-contained: `about` on the artifact, `nr`
+		// on a rubric row, and `fn` / `nt` keyed by stable word id.
+		for (const text of language.texts) {
+			const doc = read(text.path);
+			const at = (key: string) => `${text.path}:${key}.${lang}`;
+			if (doc.about) out.push({ where: at('about'), text: doc.about });
 			for (const row of (doc.seg ?? []) as Record<string, unknown>[]) {
-				byLang(row.nr, at(`${row.id}.narrative`));
+				if (row.nr) out.push({ where: at(`${row.id}.narrative`), text: row.nr as string });
 				for (const key of ['fn', 'nt']) {
-					for (const lang of LANGS) {
-						const byWord = (row[key] as Record<string, Record<string, string>>)?.[lang] ?? {};
-						for (const [id, text] of Object.entries(byWord)) {
-							out.push({ where: at(`${id}.${key}.${lang}`), text });
-						}
+					const byWord = (row[key] as Record<string, string>) ?? {};
+					for (const [id, prose] of Object.entries(byWord)) {
+						out.push({ where: at(`${id}.${key}`), text: prose });
 					}
 				}
 			}

@@ -26,7 +26,7 @@
 import { dictionary, nodes, root } from '../.svelte-kit/generated/client/app.js';
 import { LANGS, type Lang } from '$lib/i18n';
 import { pageUrl } from '$lib/url';
-import { layoutData } from '$lib/loaders';
+import { appLayoutData } from '$lib/loaders';
 import { layoutFor, match, pageData, type RouteMatch } from './routes';
 import { asFile, consumeIntent, go, navigated } from './shims/navigation';
 import { page as pageState } from './shims/state';
@@ -110,14 +110,17 @@ const NEEDS_DATA = new Set(['reading', 'movement', 'lemma', 'concept']);
  * for the reason the next comment gives.
  */
 async function plan(found: RouteMatch | null, path: string) {
-	const lang = /^\/(pl|en)\b/.exec(path)?.[1] as Lang | undefined;
+	const lang = (found?.params.lang ??
+		LANGS.find((candidate) => path === `/${candidate}` || path.startsWith(`/${candidate}/`))) as
+		Lang | undefined;
 	const data = found ? await pageData(found) : null;
 	const missing = !found || (data === null && NEEDS_DATA.has(found.name));
-	if (!missing) return { ids: nodeIds(found!.key), layout: layoutFor(found!), data, ok: true };
+	if (!missing)
+		return { ids: nodeIds(found!.key), layout: await layoutFor(found!), data, ok: true };
 
 	const inBook = nodeIds('/app/[lang=lang]');
 	const ids = lang ? [...inBook.slice(0, -1), 1] : [0, 1];
-	const layout = lang ? layoutData(lang, '') : null;
+	const layout = lang ? await appLayoutData(lang, '') : null;
 	return { ids, layout, data: null, ok: false };
 }
 

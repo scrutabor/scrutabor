@@ -1,0 +1,12 @@
+{
+  "id":"ordinarium.hanc-igitur",
+  "language":"en",
+  "about":"The priest says this prayer secretly, holding his hands spread over the offerings. He asks God to accept this offering, order our days in peace, deliver us from damnation and number us among the elect.",
+  "seg":[
+    {"id":"s01","nr":"The priest holds his hands spread over the offerings, and a little before the Consecration the server warns the faithful with the bell."},
+    {"id":"s02","tr":"We therefore ask You, Lord, to accept with favor this offering of our service and of Your whole household;","tc":[206],"g":["this","therefore","oblation","of the service","our","and","also","the whole","household","Thy","we beseech","Lord","that","appeased","accept"],"fn":{"w004":"Genitive dependent on “oblatiónem” (w003): “the offering of our service”.","w009":"Genitive depending on “oblatiónem” (w003), parallel to “servitútis” (w004).","w011":"A verb of asking on which the clause with “ut” (w013) depends.","w014":"Nominative singular referring to the unstated subject of “accípias” (w015)."}},
+    {"id":"s03","tr":"to arrange our days in Your peace, and to command that we be rescued from eternal damnation and numbered in the flock of Your elect.","tc":[206],"g":["and the days","our","in","Thy","peace","dispose","and","from","eternal","damnation","us","be snatched","and","in","of the elect","Thy","bid","the flock","be numbered"],"fn":{"w016":"Accusative plural. The enclitic “-que” joins this petition to the preceding one.","w026":"Accusative subject of the infinitive “éripi” (w027).","w027":"A passive infinitive depending on “iúbeas” (w032), as does “numerári” (w034).","w033":"Ablative governed by “in” (w029): among the elect."}},
+    {"id":"s04","nr":"The priest joins his hands."},
+    {"id":"s05","tr":"Through Christ our Lord. Amen.","tc":[206],"g":["through","Christ","Lord","our","amen"]}
+  ]
+}

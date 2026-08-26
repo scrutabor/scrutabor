@@ -1,0 +1,8 @@
+{
+  "id":"orationes.signum-crucis",
+  "language":"en",
+  "about":"The Sign of the Cross joins the gesture of the cross to a brief invocation of the Holy Trinity.",
+  "seg":[
+    {"id":"s01","tr":"In the name of the Father, and of the Son, and of the Holy Spirit. Amen.","tc":[111],"g":["in","the name","of the Father","and","of the Son","and","of the Spirit","Holy","amen"],"fn":{"w003":"Genitive depending on “nómine” (w002), parallel to “Fílii” (w005) and “Spíritus” (w007).","w007":"“Spíritus” can be nominative or genitive. Agreement with “Sancti” (w008) establishes the genitive here."}}
+  ]
+}

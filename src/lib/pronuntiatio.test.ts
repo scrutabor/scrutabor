@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { loadAllTexts } from './corpus';
+import { loadAllCoreTexts } from './corpus';
 import { ipa, pronunciations } from './pronunciation';
 import { PRONUNCIATION_RULES } from './pronuntiatio-rules';
 
-const TEXTS = await loadAllTexts();
+const TEXTS = await loadAllCoreTexts();
 
 // The pronunciation page teaches twelve rules and prints a transcription
 // beside each. The transcriptions are hand-written prose on a page, and the
@@ -28,7 +28,7 @@ describe('the pronunciation page and the module agree', () => {
 			const [path, query] = rule.href.split('?');
 			const key = path.replace(/^\//, '');
 			const id = new URLSearchParams(query).get('w');
-			const word = TEXTS[key]?.text.segments.flatMap((s) => s.words ?? []).find((w) => w.id === id);
+			const word = TEXTS[key]?.segments.flatMap((s) => s.words ?? []).find((w) => w.id === id);
 			expect(word, `${rule.grapheme} — ${rule.href}`).toBeDefined();
 			expect(word!.form, `${rule.grapheme} — ${rule.href}`).toBe(rule.example);
 		}

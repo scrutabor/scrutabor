@@ -1,4 +1,4 @@
-import { LEXICON, type Citation, type TextEntry } from './corpus';
+import { LEXICON, type Citation, type SenseEntry, type TextEntry } from './corpus';
 import type { Lang } from './i18n';
 
 export interface BibliographyUse {
@@ -39,7 +39,8 @@ interface MutableSource {
  */
 export function buildBibliography(
 	lang: Lang,
-	texts: Record<string, TextEntry>
+	texts: Record<string, TextEntry>,
+	senses: Record<string, SenseEntry>
 ): BibliographySource[] {
 	const sources = new Map<string, MutableSource>();
 
@@ -64,7 +65,7 @@ export function buildBibliography(
 	}
 
 	for (const [key, entry] of Object.entries(texts)) {
-		const gloss = entry.glosses[lang];
+		const gloss = entry.gloss;
 		const textUse = { title: entry.text.title, href: `/app/${lang}/${key}` };
 		const anchors = new Map(
 			entry.text.segments.map((segment) => [
@@ -91,7 +92,7 @@ export function buildBibliography(
 		}
 	}
 
-	for (const [lemma, sense] of Object.entries(LEXICON.senses[lang])) {
+	for (const [lemma, sense] of Object.entries(senses)) {
 		for (const citation of sense.note_citations ?? []) {
 			add(citation, {
 				title: LEXICON.lemmata[lemma]?.head ?? lemma,

@@ -1,0 +1,16 @@
+{
+  "id":"ordinarium.per-ipsum",
+  "language":"pl",
+  "about":"Ta doksologia zamyka Kanon. Kapłan czyni Hostią trzy znaki krzyża nad kielichem, a następnie dwa między sobą a kielichem. Przy omnis honor et glória nieco unosi kielich wraz z Hostią. Końcowe Per ómnia sǽcula sæculórum wypowiada głosem słyszalnym, a lud odpowiada Amen.",
+  "seg":[
+    {"id":"s01","nr":"Kapłan odsłania kielich, przyklęka, bierze Hostię w prawą rękę, a kielich w lewą, po czym czyni Hostią trzy znaki krzyża od brzegu do brzegu kielicha."},
+    {"id":"s02","tr":"Przez Niego i z Nim, i w Nim,","tc":[271,256],"g":["przez","Niego","i","z","Nim","i","w","Nim"],"fn":{"w002":"Ipsum odnosi się do Chrystusa wymienionego w poprzedniej modlitwie."}},
+    {"id":"s03","nr":"Hostią kapłan czyni dwa znaki krzyża między sobą a kielichem."},
+    {"id":"s04","tr":"należy się Tobie, Bogu Ojcu wszechmogącemu, w jedności Ducha Świętego,","tc":[271,256],"g":["jest","Tobie","Bogu","Ojcu","wszechmogącemu","w","jedności","Ducha","Świętego"],"fn":{"w009":"Jedyne orzeczenie w zdaniu, umieszczone przed podmiotami honor i glória.","w010":"Celownik posiadacza przy est: Tobie należy się cześć i chwała."}},
+    {"id":"s05","nr":"Kapłan unosi nieco kielich wraz z Hostią."},
+    {"id":"s06","tr":"wszelka cześć i chwała,","tc":[271,256],"g":["wszelka","cześć","i","chwała"],"fn":{"w018":"Omnis zgadza się z bliższym rzeczownikiem honor i określa łącznie honor oraz glória."}},
+    {"id":"s07","nr":"Kapłan odkłada Hostię, nakrywa kielich palką, przyklęka, wstaje i mówi głosem słyszalnym albo śpiewa:"},
+    {"id":"s08","tr":"przez wszystkie wieki wieków.","tc":[271,256],"g":["przez","wszystkie","wieki","wieków"],"fn":{"w025":"Dopełniacz liczby mnogiej podwaja poprzedzający go biernik."}},
+    {"id":"s09","tr":"Amen.","tc":[271,256],"g":["amen"],"fn":{"w026":"We Mszy cichej tej odpowiedzi udziela usługujący."}}
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.0.0",
-  "corpus_schema": "0.15.0",
+  "schema_version": "3.0.0",
+  "corpus_schema": "0.16.0",
   "texts": [
     {
       "id": "defunctorum.de-profundis",
@@ -614,9 +614,25 @@
     }
   ],
   "languages": [
-    "pl",
-    "en"
+    {
+      "id": "en",
+      "direction": "ltr",
+      "path": "languages/en/manifest.json"
+    },
+    {
+      "id": "pl",
+      "direction": "ltr",
+      "path": "languages/pl/manifest.json"
+    }
   ],
+  "base": {
+    "concordance": "concordance.json",
+    "calendar": "calendar.json",
+    "lexicon": "lexicon/heads.json",
+    "morphology": "tables/morphology.json",
+    "analysis": "tables/analysis.json",
+    "citations": "tables/citations.json"
+  },
   "morphology": 431,
   "kalendarium": [
     2026,

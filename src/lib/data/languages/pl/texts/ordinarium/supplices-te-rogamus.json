@@ -1,0 +1,18 @@
+{
+  "id":"ordinarium.supplices-te-rogamus",
+  "language":"pl",
+  "about":"Kapłan, głęboko pochylony i ze złożonymi rękami opartymi na ołtarzu, prosi Boga, aby ofiara została zaniesiona przez ręce Jego świętego Anioła na wzniosły ołtarz przed oblicze Bożego majestatu. Modlitwa nie nadaje Aniołowi imienia. Zdanie rozpoczynające się od „ut” prowadzi do „repleámur”: przyjmujący Ciało i Krew Chrystusa proszą o pełnię błogosławieństwa i łaski.",
+  "seg":[
+    {"id":"s01","nr":"Kapłan pochyla się głęboko i kładzie złożone ręce na ołtarzu."},
+    {"id":"s02","tr":"Pokornie Cię prosimy, wszechmogący Boże: rozkaż, aby te dary zostały zaniesione przez ręce Twojego świętego Anioła na Twój ołtarz na wysokości, w obliczu Twojego boskiego majestatu:","tc":[339,241],"g":["korni","Cię","prosimy","wszechmogący","Boże","każ","to","być zaniesionymi","przez","ręce","świętego","Anioła","Twego","na","wysoki","ołtarz","Twój","przed","obliczem","boskiego","majestatu","Twojego"],"fn":{"w001":"Przymiotnik odnoszący się do modlących: „my, korni”. Przekład oddaje go przysłówkiem „pokornie”.","w007":"Biernik liczby mnogiej rodzaju nijakiego: podmiot bezokolicznika „perférri” (w008).","w008":"Bezokolicznik strony biernej od „pérfero”: „zostać zaniesionym”.","w012":"Liczba pojedyncza: jeden, nienazwany anioł. Modlitwa go nie identyfikuje."}},
+    {"id":"s04","tr":"abyśmy wszyscy, którzy","tc":[339,241],"g":["aby","ilukolwiek"],"fn":{"w023":"Wprowadza zdanie z orzeczeniem „repleámur” (w041). Między spójnikiem a orzeczeniem stoi rozbudowane zdanie względne.","w024":"Mianownik liczby mnogiej, będący podmiotem „sumpsérimus” (w035)."}},
+    {"id":"s03","nr":"Kapłan całuje ołtarz."},
+    {"id":"s11","tr":"przez to uczestnictwo w ołtarzu","tc":[339,241,343],"g":["z","tego","ołtarza","uczestnictwa","najświętsze","Syna","Twego"],"fn":{"w028":"Ablativus po „ex” (w025).","w029":"Zgadza się z „Corpus” (w032), które następuje po rubryce: „najświętsze Ciało”."}},
+    {"id":"s05","nr":"Kapłan składa ręce i czyni jeden znak krzyża nad Hostią i jeden nad kielichem."},
+    {"id":"s06","tr":"przyjmiemy Najświętsze Ciało i Krew Twojego Syna,","tc":[339,241,343],"g":["Ciało","i","Krew","przyjmiemy"],"fn":{"w035":"Forma może oznaczać czas przyszły dokonany albo tryb łączący czasu przeszłego. Przekład przyjmuje pierwszą analizę: „przyjmiemy”."}},
+    {"id":"s07","nr":"Kapłan żegna się."},
+    {"id":"s08","tr":"zostali napełnieni wszelkim błogosławieństwem niebieskim i łaską.","tc":[339,241],"g":["wszelkim","błogosławieństwem","niebieskim","i","łaską","zostali napełnieni"],"fn":{"w040":"Ablativus przy „repleámur” (w041): to, czym zostajemy napełnieni."}},
+    {"id":"s09","nr":"Kapłan składa ręce."},
+    {"id":"s10","tr":"Przez tegoż Chrystusa, Pana naszego. Amen.","tc":[339,241],"g":["przez","tegoż","Chrystusa","Pana","naszego","amen"]}
+  ]
+}

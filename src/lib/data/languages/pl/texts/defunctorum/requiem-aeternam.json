@@ -1,0 +1,10 @@
+{
+  "id":"defunctorum.requiem-aeternam",
+  "language":"pl",
+  "about":"Krótka modlitwa za wiernych zmarłych w brzmieniu łacińskim Enchiridion Indulgentiarum z 1952 r. Prosi dla nich o wieczny odpoczynek i światłość wiekuistą, a kończy się życzeniem, aby spoczywali w pokoju.",
+  "seg":[
+    {"id":"s001","tr":"Wieczny odpoczynek racz im dać, Panie, a światłość wiekuista niechaj im świeci.","tc":[2],"g":["odpoczynek","wieczny","daj","im","Panie","i","światłość","wiekuista","niech świeci","im"]},
+    {"id":"s002","tr":"Niech odpoczywają w pokoju wiecznym.","tc":[4],"g":["niech odpoczywają","w","pokoju"]},
+    {"id":"s003","tr":"Amen.","g":["amen"]}
+  ]
+}

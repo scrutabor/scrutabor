@@ -1,0 +1,19 @@
+{
+  "id":"ordinarium.qui-pridie",
+  "language":"en",
+  "about":"The institution narrative and the consecration of the bread. The priest takes the Host, raises his eyes to heaven, and pronounces the words of consecration over it quietly, distinctly, and attentively. He then genuflects, shows the consecrated Host to the people, and genuflects again. From this point he does not separate his thumbs and forefingers, except when handling the Host, until the ablution of his fingers.",
+  "seg":[
+    {"id":"s01","nr":"The priest takes the Host."},
+    {"id":"s02","tr":"Who, on the day before He suffered, took bread into His holy and venerable hands,","tc":[303,310],"g":["Who","the day before","than","He suffered","He took","bread","into","holy","and","venerable","hands","His"],"fn":{"w001":"The relative refers to Christ, named at the end of the preceding prayer.","w002":"Together with “quam” (w003), it forms the expression “the day before”.","w003":"The conjunction completing “prídie” (w002): “before He suffered”.","w004":"A deponent in the subjunctive: passive in form, active in meaning.","w011":"Accusative plural. The adjectives “sanctas” and “suas” have the same number and case."}},
+    {"id":"s03","nr":"The priest raises his eyes to heaven."},
+    {"id":"s04","tr":"and, raising His eyes to heaven, to You, O God, His almighty Father,","tc":[303,310],"g":["and","having been raised","eyes","to","heaven","to","Thee","God","Father","His","almighty"],"fn":{"w014":"With “óculis” (w015), it forms an ablative absolute: “lifting up His eyes”.","w019":"The Canon continues to address the Father while recounting the words and actions of Christ."}},
+    {"id":"s05","nr":"The priest bows his head."},
+    {"id":"s06","tr":"giving thanks to You,","tc":[303,310],"g":["to Thee","thanks","giving"],"fn":{"w026":"A participle referring to Christ: giving thanks to Thee."}},
+    {"id":"s07","nr":"The priest makes the sign of the cross over the Host."},
+    {"id":"s08","tr":"blessed it, broke it, and gave it to His disciples, saying:","tc":[303,310],"g":["He blessed","He broke","and He gave","to the disciples","His","saying"],"fn":{"w029":"The final “-que” joins “dedit” to the preceding verbs: “He blessed, broke and gave”.","w030":"A dative plural with “dedítque” (w029): those to whom He gave."}},
+    {"id":"s09","tr":"Take and eat of this, all of you:","tc":[303,310],"g":["take","and","eat","of","this","all of you"],"fn":{"w035":"An imperative. The Canon says “manducáte” with 1 Cor 11:24, where Mt 26:26 has “comédite”.","w038":"The nominative and vocative plural have the same form here. The sense is “you all”."}},
+    {"id":"s10","nr":"The priest holds the Host with both hands between his forefingers and thumbs and speaks the words of consecration silently, distinctly and attentively over it, and over all the hosts together if there are more to be consecrated."},
+    {"id":"s11","tr":"For this is My Body.","tc":[303,310],"g":["this","is","for","Body","My"],"fn":{"w041":"“Enim” does not begin its clause. Here it follows “Hoc est”."}},
+    {"id":"s12","nr":"The words spoken, the priest genuflects and adores the consecrated Host, rises, shows it to the people — the elevation, at which the server rings the bell three times — lays it on the corporal and genuflects again. From now until the ablution of the fingers he keeps thumb and forefinger joined, parting them only to handle the Host."}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id":"ordinarium.kyrie",
+  "language":"en",
+  "about":"A Greek invocation for mercy. Three repetitions of “Kýrie eléison” lead to three of “Christe eléison”, after which “Kýrie eléison” returns three more times.",
+  "seg":[
+    {"id":"s01","nr":"With hands joined, the priest says the invocations alternately with the ministers. If no one answers him, he says all nine himself."},
+    {"id":"s02","tr":"Lord, have mercy.","tc":[227],"g":["Lord","have mercy"]},
+    {"id":"s03","tr":"Lord, have mercy.","tc":[227],"g":["Lord","have mercy"]},
+    {"id":"s04","tr":"Lord, have mercy.","tc":[227],"g":["Lord","have mercy"]},
+    {"id":"s05","tr":"Christ, have mercy.","tc":[227],"g":["Christ","have mercy"],"fn":{"w007":"A Greek vocative with the same ending as “Kýrie” (w001)."}},
+    {"id":"s06","tr":"Christ, have mercy.","tc":[227],"g":["Christ","have mercy"]},
+    {"id":"s07","tr":"Christ, have mercy.","tc":[227],"g":["Christ","have mercy"]},
+    {"id":"s08","tr":"Lord, have mercy.","tc":[227],"g":["Lord","have mercy"]},
+    {"id":"s09","tr":"Lord, have mercy.","tc":[227],"g":["Lord","have mercy"]},
+    {"id":"s10","tr":"Lord, have mercy.","tc":[227],"g":["Lord","have mercy"]}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id":"orationes.salve-regina",
+  "language":"en",
+  "about":"The Marian antiphon said after low Mass in the prayers of Leo XIII, and at Compline through the long season after Pentecost. It addresses the Blessed Virgin Mary as Queen and Mother of mercy, and the banished children of Eve ask her to turn her merciful eyes toward them and, after this exile, to show them Jesus. A versicle and response follow the antiphon.",
+  "seg":[
+    {"id":"s01","tr":"Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.","tc":[106],"g":["hail","Queen","Mother","of mercy","life","sweetness","and","hope","our","hail"],"fn":{"w001":"Singular imperative of sálveo, addressed to “Regína”: literally “be well”, used as a greeting, “hail”.","w004":"Genitive dependent on “Mater” (w003).","w008":"A vocative in the series begun by “Regína” (w002). The verb of the sentence is “Salve” (w001)."}},
+    {"id":"s02","tr":"To thee do we cry, poor banished children of Eve.","tc":[106],"g":["to","thee","we cry","exiles","children","of Eve"],"fn":{"w014":"Nominative in apposition to the understood subject of “clamámus” (w013)."}},
+    {"id":"s03","tr":"To thee do we send up our sighs, mourning and weeping in this valley of tears.","tc":[106],"g":["to","thee","we sigh","groaning","and","weeping","in","this","of tears","valley"],"fn":{"w020":"Nominative plural participle agreeing with the understood subject of “suspirámus” (w019).","w025":"Genitive plural dependent on “valle” (w026)."}},
+    {"id":"s04","tr":"Turn, then, most gracious Advocate, thine eyes of mercy toward us.","tc":[106],"g":["come then","therefore","Advocate","our","those","thine","merciful","eyes","upon","us","turn"],"fn":{"w031":"Demonstrative agreeing with “óculos” (w034)."}},
+    {"id":"s05","tr":"And after this our exile show unto us the blessed fruit of thy womb, Jesus.","tc":[106],"g":["and","Jesus","blessed","fruit","of the womb","thy","to us","after","this","exile","show"],"fn":{"w048":"Imperative addressed to Mary. Its object is “Iesum” (w039)."}},
+    {"id":"s06","tr":"O clement, O loving, O sweet Virgin Mary.","tc":[107],"g":["O","gracious","O","loving","O","sweet","Virgin","Mary"]},
+    {"id":"s07","tr":"Pray for us, O holy Mother of God.","tc":[106],"g":["pray","for","us","Holy","of God","Mother"]},
+    {"id":"s08","tr":"That we may be made worthy of the promises of Christ.","tc":[106],"g":["that","worthy","we may be made","of the promises","of Christ"],"fn":{"w065":"Passive: literally, that we may be made worthy.","w066":"Ablative dependent on “digni” (w064)."}}
+  ]
+}

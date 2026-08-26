@@ -1,0 +1,16 @@
+{
+  "id":"defunctorum.de-profundis",
+  "language":"en",
+  "about":"Psalm 129 in Vulgate numbering (Psalm 130 in Hebrew numbering), traditionally prayed for the dead. Its Latin is the Gallican psalter, the version the Roman liturgy prays.",
+  "seg":[
+    {"id":"s001","tr":"From the depths I called out to You, O Lord.","g":["from","depths","I have cried","to","Thee","Lord"]},
+    {"id":"s002","tr":"Lord, hear my voice.","g":["Lord","graciously hear","voice","my"]},
+    {"id":"s003","tr":"May Your ears listen closely to my pleading voice.","g":["let be","ears","Thy","attentive","to","voice","of supplication","my"]},
+    {"id":"s004","tr":"If You take note of iniquities, O Lord, Lord, who could stand?","g":["if","iniquities","Thou wilt mark","Lord","Lord","who","shall stand"]},
+    {"id":"s005","tr":"For with You there is forgiveness; for the sake of Your law I have waited for You, O Lord.","g":["for","with","Thee","merciful forgiveness","is","and","by reason of","law","Thy","I have waited","Thee","Lord"]},
+    {"id":"s006","tr":"My soul has waited for His word; my soul has hoped in the Lord.","g":["hath waited","soul","my","in","word","His","hath hoped","soul","my","in","the Lord"]},
+    {"id":"s007","tr":"From the morning watch until night, let Israel hope in the Lord.","g":["from","watch","morning","even until","to","night","let hope","Israel","in","the Lord"]},
+    {"id":"s008","tr":"For mercy is with the Lord, and abundant redemption is with Him.","g":["for","with","the Lord","mercy","and","plentiful","with","Him","redemption"]},
+    {"id":"s009","tr":"And He Himself will redeem Israel from all its iniquities.","g":["and","He","shall redeem","Israel","from","all","iniquities","his"]}
+  ]
+}

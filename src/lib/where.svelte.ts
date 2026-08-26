@@ -13,9 +13,10 @@
  * and puts it here, so every surface reads the same fact rather than
  * deriving it from something that is only sometimes true.
  */
+import { LANGS, type Lang } from '$lib/i18n';
 import { writeStored } from '$lib/storage';
 
-export const where = $state({ path: '' });
+export const where = $state<{ path: string; languages: Lang[] }>({ path: '', languages: LANGS });
 
 /**
  * What every language layout does when its page is alive: record where
@@ -25,8 +26,9 @@ export const where = $state({ path: '' });
  * because the book's layout and the landing's must do exactly the same
  * thing without depending on each other.
  */
-export function adoptLanguage(lang: string, path: string): void {
+export function adoptLanguage(lang: string, path: string, languages: Lang[] = LANGS): void {
 	where.path = path;
+	where.languages = languages;
 	document.documentElement.lang = lang;
 	writeStored('scrutabor-lang', lang);
 }

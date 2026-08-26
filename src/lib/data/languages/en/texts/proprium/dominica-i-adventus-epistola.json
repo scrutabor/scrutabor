@@ -1,0 +1,12 @@
+{
+  "id":"proprium.dominica-i-adventus-epistola",
+  "language":"en",
+  "about":"The epistle of the First Sunday of Advent, Romans 13:11–14. Saint Paul tells the Romans that the hour has come to rise from sleep, that the night is far spent and the day at hand, and that they are to put on the Lord Jesus Christ. Fratres, Brethren, is the missal's own opening for a lesson from an Epistle and is not part of the verse.",
+  "seg":[
+    {"id":"s01","tr":"Brethren, you know that the hour has now come for us to rise from sleep.","tc":[142],"g":["brethren","knowing","that","hour","is","now","us","from","sleep","to rise"],"fn":{"w002":"A nominative plural participle referring to those addressed by the exhortation.","w004":"It is the subject of est. The following accusative and infinitive explain what hour it is: the hour for us to rise.","w007":"Accusative subject of the infinitive surgere, not the object of the finite verb."}},
+    {"id":"s02","tr":"For now our salvation is nearer than when we believed.","tc":[142],"g":["now","for","nearer","is","our","salvation","than","when","we believed"],"fn":{"w013":"The comparative predicates salvation and takes the earlier time introduced by quam as its point of comparison."}},
+    {"id":"s03","tr":"The night is far advanced, and the day has drawn near.","tc":[142],"g":["night","has passed","day","but","has drawn near"]},
+    {"id":"s04","tr":"Let us therefore cast off the works of darkness, and put on the armour of light.","tc":[142],"g":["let us cast off","therefore","works","of darkness","and","let us put on","armor","of light"],"fn":{"w025":"A hortatory subjunctive. It begins the paired appeal to cast off darkness and put on light.","w030":"The passive form is used reflexively: let us clothe ourselves. It balances the preceding hortatory subjunctive."}},
+    {"id":"s05","tr":"Let us walk honorably, as in the day: not in revelry and drunkenness, not in sexual immorality and shamelessness, not in strife and envy; instead, put on the Lord Jesus Christ.","tc":[142],"g":["as","in","day","honorably","let us walk","not","in","carousing","and","drunkenness","not","in","bedchambers","and","shameless acts","not","in","strife","and","jealousy","but","put on","the Lord","Jesus","Christ"],"fn":{"w054":"A passive-form imperative used reflexively: clothe yourselves in the Lord Jesus Christ."}}
+  ]
+}

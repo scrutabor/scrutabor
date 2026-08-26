@@ -1,0 +1,13 @@
+{
+  "id":"ordinarium.misereatur",
+  "language":"en",
+  "about":"Two formulas of petition, the first addressed to almighty God and the second to the almighty and merciful Lord. The first asks mercy, the forgiveness of sins and eternal life, the second pardon, absolution and remission of sins. This is not the sacramental formula Ego te absolvo.",
+  "seg":[
+    {"id":"s01","nr":"With hands joined, the priest says the prayer for forgiveness."},
+    {"id":"s02","tr":"May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life.","tc":[142],"g":["may He have mercy","on you","almighty","God","and","having been forgiven","sins","your","may He bring","you","to","life","everlasting"],"fn":{"w001":"A subjunctive expressing a petition addressed to God.","w002":"Genitive plural governed by “Misereátur” (w001).","w004":"Nominative subject of “Misereátur” (w001) and “perdúcat” (w009).","w006":"A participle forming an ablative absolute with “peccátis” (w007).","w007":"The noun in the ablative absolute with “dimíssis” (w006).","w009":"A second subjunctive, coordinated with “Misereátur” (w001).","w010":"Accusative object of “perdúcat” (w009)."}},
+    {"id":"s03","tr":"Amen.","tc":[142],"g":["amen"]},
+    {"id":"s04","nr":"The priest signs himself and says the second prayer."},
+    {"id":"s05","tr":"May the almighty and merciful Lord grant us pardon, absolution and remission of our sins.","tc":[142],"g":["pardon","absolution","and","remission","of sins","our","may He grant","us","almighty","and","merciful","the Lord"],"fn":{"w015":"The first of three accusative objects of “tríbuat” (w021).","w019":"A genitive depending on “remissiónem” (w018).","w020":"First-person plural: the priest includes himself in the petition.","w021":"A subjunctive governing the three preceding accusative objects.","w022":"Dative recipient of “tríbuat” (w021).","w026":"Nominative subject of “tríbuat” (w021)."}},
+    {"id":"s06","tr":"Amen.","tc":[142],"g":["amen"]}
+  ]
+}

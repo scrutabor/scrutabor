@@ -7,7 +7,10 @@ export interface CatalogText {
 	category: string;
 	slug: string;
 	title: string;
-	localizedTitle: Record<Lang, string>;
+	/** Optional because a language package may add this text before its
+	 * familiar display title has been curated; the Latin title is the safe
+	 * fallback and unrelated catalogue entries need no edit. */
+	localizedTitle: Partial<Record<Lang, string>>;
 }
 
 export interface CatalogSection {
@@ -273,6 +276,16 @@ const CATALOG_SOURCE: CatalogSection[] = [
  * titles and English prose in the same objects are untouched. */
 export const CATALOG: CatalogSection[] = bindPlFields(CATALOG_SOURCE);
 
+/** The same editorial order, narrowed to texts the selected package can
+ * actually render. A newly added language may therefore begin with one text
+ * without exposing dead cards for the other 121. */
+export function catalogFor(available: ReadonlySet<string>): CatalogSection[] {
+	return CATALOG.map((section) => ({
+		...section,
+		texts: section.texts.filter((text) => available.has(`${text.category}/${text.slug}`))
+	}));
+}
+
 export function sectionFor(category: string): CatalogSection | undefined {
 	return CATALOG.find((s) => s.category === category);
 }
@@ -285,15 +298,16 @@ export function textFor(category: string, slug: string): CatalogText | undefined
 
 /** The book's reading order: catalog sections flattened — within
  * ordinarium this IS the liturgical sequence, which the pager relies on. */
-export function orderedTexts(): CatalogText[] {
-	return CATALOG.flatMap((s) => s.texts);
+export function orderedTexts(available?: ReadonlySet<string>): CatalogText[] {
+	return (available ? catalogFor(available) : CATALOG).flatMap((s) => s.texts);
 }
 
 export function neighborsOf(
 	category: string,
-	slug: string
+	slug: string,
+	available?: ReadonlySet<string>
 ): { prev?: CatalogText; next?: CatalogText } {
-	const all = orderedTexts();
+	const all = orderedTexts(available);
 	const i = all.findIndex((t) => t.category === category && t.slug === slug);
 	if (i < 0) return {};
 	return { prev: all[i - 1], next: all[i + 1] };

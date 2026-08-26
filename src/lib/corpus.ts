@@ -1,24 +1,13 @@
-// Corpus access: the READER EDITION of scrutabor-corpus, vendored by
-// scripts/vendor-corpus.mjs from that repo's own `python build.py`.
-//
-// The corpus is authored to be read by a philologist in a diff — every
-// editorial claim visible, the parse written out at each of 6,143 words. The
-// reader edition is the same book with the apparatus left behind and the
-// three repeated layers — parse, analysis, citation — replaced by indices
-// into tables the whole corpus shares. It is 39% fewer bytes to parse and it
-// puts 412 parse objects on the heap where the corpus has 6,143, because
-// `expandDocument` hands out the table's own object rather than a copy.
-//
-// The manifest names the files, and each one is imported only when a route or
-// the concordance asks for it. Server-side reading routes therefore expand one
-// prayer, while the downloaded edition resolves the same import from its one
-// bundled runtime and keeps the result in the same cache.
-import manifest from './data/manifest.json';
-import parseTable from './data/tables/morphology.json';
+// The reader edition is a neutral base plus independently loadable language
+// packs. A reading route imports one base text, the selected language's text,
+// and that language's lexicon/citation tables. No other language crosses the
+// loader boundary.
+import manifestData from './data/manifest.json';
 import analysisTable from './data/tables/analysis.json';
-import citationTable from './data/tables/citations.json';
-import lexicon from './data/lexicon.json';
-import type { Lang } from './i18n';
+import sharedCitationTable from './data/tables/citations.json';
+import parseTable from './data/tables/morphology.json';
+import headsData from './data/lexicon/heads.json';
+import { LANGS, type Lang } from './i18n';
 import { bindProse } from './polish';
 
 export interface Morph {
@@ -42,7 +31,6 @@ export interface Analysis {
 	review: string;
 }
 
-/** A reader-facing source for one exact prose unit (corpus schema 0.11.0). */
 export interface Citation {
 	title: string;
 	locator: string;
@@ -55,42 +43,21 @@ export interface Word {
 	post?: string;
 	lemma: string;
 	morph: Morph;
-	/** The word this one leans on (corpus SCHEMA.md). No component reads
-	 * these two yet — they are expanded because `expandDocument` must stay
-	 * the exact mirror of the corpus's own `expand()`, and a field the type
-	 * cannot hold is how the word-level note went missing for a month. */
 	head?: string;
 	substantive?: boolean;
 	analysis?: Analysis;
 }
 
-/** Who says a line. Absent means the sources have not been read for it
- * yet (corpus SCHEMA.md 0.9.0) — which must be rendered as unmarked, not
- * guessed at. */
 export type Speaker = 'sacerdos' | 'ductor' | 'minister' | 'populus' | 'omnes' | 'schola';
-
-/** How loudly: aloud, raised-but-not-full, silent, sung. */
 export type Voice = 'clara' | 'submissa' | 'secreto' | 'cantus';
-
-/** The two forms of Mass the 1958 instruction grades apart: `lecta` the low
- * Mass (its n. 31), `cantu` the sung Mass (n. 25, extended to the Missa
- * cantata by n. 26 — the form a parish keeps on Sundays). They are not the
- * same event and the people do not have the same parts in them. */
 export type MassForm = 'cantu' | 'lecta';
 
-/** Who among the FAITHFUL says this line, and on whose authority — which is
- * a different question from `speaker`, whom the Missale charges with it.
- * `gradus` is the degree of participation (1-4), absent where the law grants
- * a part without grading it. Corpus SCHEMA.md 0.10.0. */
 export interface Participation {
 	gradus?: number;
 	source: string;
-	/** A faculty subject to preparation or selection, not an unconditional
-	 * congregational response (corpus SCHEMA.md 0.15.0). */
 	conditional?: true;
 }
 
-/** A form-specific exception to a segment's base ritual delivery. */
 export interface Delivery {
 	speaker?: Speaker;
 	voice?: Voice;
@@ -115,24 +82,15 @@ export interface TextDocument {
 	title: string;
 	status: string;
 	analysis_defaults: Analysis;
-	/** Word-token default (schema 0.7.0); segments never read it.
-	 * Resolution: word.analysis ?? analysis_defaults_words ?? analysis_defaults. */
 	analysis_defaults_words?: Analysis;
 	segments: Segment[];
 }
 
 export interface WordGloss {
 	gloss: string;
-	// Contextual-only and OPTIONAL since corpus schema 0.5.0 — the parse line
-	// and the lexicon carry everything else.
 	function?: string;
 	function_citations?: Citation[];
-	/** The editorial note on THIS word in THIS place — every disputed
-	 * reading carries one naming the competing readings and which one
-	 * this edition takes. A panel that says "disputed" without it ships
-	 * the doubt and withholds the note of it. */
 	note?: string;
-	analysis?: Analysis;
 }
 
 export interface SegmentGloss {
@@ -145,9 +103,8 @@ export interface SegmentGloss {
 export interface GlossDocument {
 	schema_version: string;
 	text: string;
-	lang: string;
+	lang: Lang;
 	status: string;
-	/** One-paragraph introduction (schema 0.8.0) — collapsed by default. */
 	about?: string;
 	about_citations?: Citation[];
 	analysis_defaults: Analysis;
@@ -157,12 +114,9 @@ export interface GlossDocument {
 
 export interface TextEntry {
 	text: TextDocument;
-	glosses: Record<Lang, GlossDocument>;
+	gloss: GlossDocument;
 }
 
-// Lexicon: the per-lemma layer (corpus SCHEMA.md 0.5.0). `head` is the
-// reader-facing dictionary head in liturgical orthography; senses live in
-// one file per language.
 export interface LemmaEntry {
 	head: string;
 	pos: string;
@@ -171,86 +125,95 @@ export interface LemmaEntry {
 	decl?: number;
 	conj?: number;
 	analysis?: Analysis;
+	localization?: { note: true; note_citations?: Citation[] };
 }
 
 export interface SenseEntry {
 	senses: string[];
 	note?: string;
 	note_citations?: Citation[];
-	// Target-language words genuinely derived from this lemma — learner
-	// memory hooks (corpus SCHEMA.md 0.6.0).
 	derivatives?: string[];
 	analysis?: Analysis;
 }
 
-export interface Lexicon {
-	lemmata: Record<string, LemmaEntry>;
-	senses: Record<Lang, Record<string, SenseEntry>>;
+export interface TextMetadata {
+	id: string;
+	path: string;
+	title: string;
 }
 
-export const LEXICON: Lexicon = {
-	lemmata: lexicon.heads as unknown as Record<string, LemmaEntry>,
-	senses: {
-		// Polish prose is bound on the way in (lib/polish); the corpus itself
-		// stores ordinary spaces, and its own checks forbid anything else.
-		pl: bindProse(lexicon.senses.pl as unknown as Record<string, SenseEntry>),
-		en: lexicon.senses.en as unknown as Record<string, SenseEntry>
-	}
-};
-
-/**
- * The lexicon entries these texts can ask about, and no others. Every page
- * that shows words does this — the reading route for one text, the ordo
- * movement for a dozen — and it is the whole reason the browser never
- * receives the dictionary (decisions #27). One copy, so that a page cannot
- * quietly ship more of it than the others.
- */
-export function narrowLexicon(
-	docs: Iterable<TextDocument>,
-	lang: Lang
-): { lemmata: Record<string, LemmaEntry>; senses: Record<string, SenseEntry> } {
-	const lemmata: Record<string, LemmaEntry> = {};
-	const senses: Record<string, SenseEntry> = {};
-	for (const doc of docs) {
-		for (const seg of doc.segments) {
-			for (const w of seg.words ?? []) {
-				if (LEXICON.lemmata[w.lemma]) lemmata[w.lemma] = LEXICON.lemmata[w.lemma];
-				if (LEXICON.senses[lang][w.lemma]) senses[w.lemma] = LEXICON.senses[lang][w.lemma];
-			}
-		}
-	}
-	return { lemmata, senses };
+interface LanguageTextMetadata {
+	id: string;
+	path: string;
 }
 
-/**
- * The corpus-wide tables, and the point of the whole edition.
- *
- * Three layers repeat themselves hard enough to be worth addressing by index
- * rather than writing out — a few hundred parses carry all six thousand
- * words, a handful of analysis shapes carry every provenance claim, and one
- * citation table carries every reference. (Exact counts live in the vendored
- * data, not here: two earlier versions of this comment went stale.)
- * Expanding a text hands out the table's OWN object at every site, so the
- * sharing survives into the heap rather than ending at the file.
- */
+interface LanguageManifest {
+	schema_version: string;
+	corpus_schema: string;
+	language: Lang;
+	direction: 'ltr' | 'rtl';
+	texts: LanguageTextMetadata[];
+	lexicon: string;
+	citations: string;
+}
+
+interface RootManifest {
+	schema_version: string;
+	corpus_schema: string;
+	texts: TextMetadata[];
+	languages: { id: Lang; direction: 'ltr' | 'rtl'; path: string }[];
+}
+
+type JsonModule = { default: unknown };
+type JsonImport = () => Promise<JsonModule>;
+
+const manifest = manifestData as unknown as RootManifest;
+const LANGUAGE_MANIFEST_MODULES = import.meta.glob('./data/languages/*/manifest.json', {
+	eager: true
+}) as Record<string, JsonModule>;
+const LANGUAGE_MANIFESTS = Object.fromEntries(
+	manifest.languages.map(({ id, path }) => {
+		const module = LANGUAGE_MANIFEST_MODULES[`./data/${path}`];
+		if (!module) throw new Error(`${id} names ${path}, which was not vendored`);
+		const languageManifest = module.default as LanguageManifest;
+		if (languageManifest.language !== id)
+			throw new Error(`${path} calls itself ${languageManifest.language}`);
+		return [id, languageManifest];
+	})
+) as Record<Lang, LanguageManifest>;
+
+if (manifest.languages.map(({ id }) => id).join(',') !== LANGS.join(',')) {
+	throw new Error('the reader-edition languages and the interface-language registry differ');
+}
+
+export const TEXT_METADATA = manifest.texts;
+export const TEXT_KEYS = TEXT_METADATA.map(({ id }) => id.replace('.', '/'));
+const METADATA_BY_KEY = new Map(TEXT_METADATA.map((entry) => [entry.id.replace('.', '/'), entry]));
+const LANGUAGE_TEXTS = Object.fromEntries(
+	LANGS.map((language) => [
+		language,
+		new Map(LANGUAGE_MANIFESTS[language].texts.map((entry) => [entry.id.replace('.', '/'), entry]))
+	])
+) as Record<Lang, Map<string, LanguageTextMetadata>>;
+
+export function textKeysFor(language: Lang): string[] {
+	return LANGUAGE_MANIFESTS[language].texts.map(({ id }) => id.replace('.', '/'));
+}
+
+export function hasText(key: string, language?: Lang): boolean {
+	return language ? LANGUAGE_TEXTS[language].has(key) : METADATA_BY_KEY.has(key);
+}
+
 const PARSES = parseTable as unknown as (Morph | null)[];
 const ANALYSES = analysisTable as unknown as (Analysis | null)[];
-const CITATIONS = citationTable as unknown as (Citation | null)[];
+const SHARED_CITATIONS = sharedCitationTable as unknown as (Citation | null)[];
 
-/** A table index that resolves to nothing is a vendoring defect — a stale
- * or truncated table beside newer documents — and has to fail HERE, at
- * module init on the build machine, not as a TypeError in the first word
- * panel a reader opens. The provenance test hashes the files; this is the
- * only check that they agree with each other. */
 function at<T>(table: (T | null)[], index: number, what: string): T {
 	const hit = table[index];
-	if (hit == null) {
-		throw new Error(`${what}[${index}] resolves to nothing — re-run vendor-corpus`);
-	}
+	if (hit == null) throw new Error(`${what}[${index}] resolves to nothing — re-run vendor-corpus`);
 	return hit;
 }
 
-/** One artifact row: the emitter's short keys, spelled out once here. */
 interface WordCell {
 	i: string;
 	f: string;
@@ -261,111 +224,121 @@ interface WordCell {
 	s?: boolean;
 	a?: number;
 }
-interface SegmentRow {
+
+interface CoreSegmentRow {
 	id: string;
 	type: 'verse' | 'rubric';
 	an?: number;
 	w?: WordCell[];
-	g?: Record<Lang, string[]>;
-	fn?: Record<Lang, Record<string, string>>;
-	nt?: Record<Lang, Record<string, string>>;
-	fc?: Record<Lang, Record<string, number[]>>;
-	tr?: Record<Lang, string>;
-	tc?: Record<Lang, number[]>;
-	nr?: Record<Lang, string>;
-	nc?: Record<Lang, number[]>;
+	fc?: Record<string, number[]>;
+	nc?: number[];
 	[key: string]: unknown;
 }
-interface Artifact {
+
+interface CoreArtifact {
 	id: string;
 	st: string;
 	ad: number;
 	adw?: number;
-	about: Record<Lang, string>;
-	ac?: Record<Lang, number[]>;
-	seg: SegmentRow[];
+	ac?: number[];
+	seg: CoreSegmentRow[];
 	[key: string]: unknown;
 }
 
-const ROW_KEYS = new Set(['w', 'g', 'fn', 'nt', 'fc', 'tr', 'tc', 'nr', 'nc', 'an']);
-const DOC_KEYS = new Set(['st', 'ad', 'adw', 'about', 'ac', 'seg']);
-const LANGS: Lang[] = ['pl', 'en'];
+interface LanguageSegmentRow {
+	id: string;
+	g?: string[];
+	fn?: Record<string, string>;
+	nt?: Record<string, string>;
+	tr?: string;
+	tc?: number[];
+	nr?: string;
+}
 
-/**
- * One artifact becomes the three documents the reading code reads.
- *
- * The mirror of `expand()` in the corpus's build_reader/emit.py, and it must
- * stay one: that function is what the corpus's own `verify()` runs over all
- * 111 texts to prove the edition lost nothing, so the shape this returns is
- * the shape the corpus has already checked itself against. A component that
- * asks for the Polish gloss of a word is right to keep asking for exactly
- * that, and does — the whole of the app's knowledge of two shapes is here.
- */
-function expandDocument(artifact: Artifact): TextEntry {
-	const cited = (indices?: number[]) => indices?.map((i) => at(CITATIONS, i, 'citations'));
+interface LanguageArtifact {
+	id: string;
+	language: Lang;
+	about: string;
+	seg: LanguageSegmentRow[];
+}
+
+function expandWord(cell: WordCell): Word {
+	const word: Word = {
+		id: cell.i,
+		form: cell.f,
+		lemma: cell.l,
+		morph: at(PARSES, cell.m, 'parses')
+	};
+	if (cell.p) word.post = cell.p;
+	if (cell.h) word.head = cell.h;
+	if (cell.s) word.substantive = true;
+	if (cell.a !== undefined) word.analysis = at(ANALYSES, cell.a, 'analyses');
+	return word;
+}
+
+const CORE_ROW_KEYS = new Set(['w', 'fc', 'nc', 'an']);
+const CORE_DOC_KEYS = new Set(['st', 'ad', 'adw', 'ac', 'seg']);
+
+function expandDocument(
+	artifact: CoreArtifact,
+	languageArtifact: LanguageArtifact,
+	languageCitations: (Citation | null)[]
+): TextEntry {
+	const shared = (indices?: number[]) =>
+		indices?.map((index) => at(SHARED_CITATIONS, index, 'shared citations'));
+	const localized = (indices?: number[]) =>
+		indices?.map((index) => at(languageCitations, index, `${languageArtifact.language} citations`));
 
 	const text: Record<string, unknown> = { schema_version: manifest.corpus_schema };
-	for (const [key, value] of Object.entries(artifact)) {
-		if (!DOC_KEYS.has(key)) text[key] = value;
-	}
+	for (const [key, value] of Object.entries(artifact))
+		if (!CORE_DOC_KEYS.has(key)) text[key] = value;
 	text.status = artifact.st;
 	text.analysis_defaults = at(ANALYSES, artifact.ad, 'analyses');
 	if (artifact.adw !== undefined)
 		text.analysis_defaults_words = at(ANALYSES, artifact.adw, 'analyses');
 
-	const layers = Object.fromEntries(
-		LANGS.map((lang) => [
-			lang,
-			{
-				schema_version: manifest.corpus_schema,
-				text: artifact.id,
-				lang,
-				status: artifact.st,
-				about: artifact.about[lang],
-				about_citations: cited(artifact.ac?.[lang]),
-				analysis_defaults: at(ANALYSES, artifact.ad, 'analyses'),
-				segments: {} as Record<string, Record<string, unknown>>,
-				words: {} as Record<string, Record<string, unknown>>
-			}
-		])
-	) as Record<Lang, ReturnType<typeof Object.fromEntries> & Record<string, unknown>>;
+	const gloss: GlossDocument = {
+		schema_version: manifest.corpus_schema,
+		text: artifact.id,
+		lang: languageArtifact.language,
+		status: artifact.st,
+		about: languageArtifact.about,
+		about_citations: shared(artifact.ac),
+		analysis_defaults: at(ANALYSES, artifact.ad, 'analyses'),
+		segments: {},
+		words: {}
+	};
+	const languageRows = new Map(languageArtifact.seg.map((row) => [row.id, row]));
 
 	text.segments = artifact.seg.map((row) => {
+		const languageRow = languageRows.get(row.id);
+		if (!languageRow)
+			throw new Error(`${artifact.id}:${row.id} is absent from ${languageArtifact.language}`);
 		const segment: Record<string, unknown> = {};
-		for (const [key, value] of Object.entries(row)) {
-			if (!ROW_KEYS.has(key)) segment[key] = value;
-		}
+		for (const [key, value] of Object.entries(row))
+			if (!CORE_ROW_KEYS.has(key)) segment[key] = value;
 		if (row.an !== undefined) segment.analysis = at(ANALYSES, row.an, 'analyses');
 
-		for (const lang of LANGS) {
-			const bucket: Record<string, unknown> = {};
-			if (row.tr?.[lang]) bucket.translation = row.tr[lang];
-			if (row.tc?.[lang]) bucket.translation_citations = cited(row.tc[lang]);
-			if (row.nr?.[lang]) bucket.narrative = row.nr[lang];
-			if (row.nc?.[lang]) bucket.narrative_citations = cited(row.nc[lang]);
-			if (Object.keys(bucket).length) {
-				(layers[lang].segments as Record<string, unknown>)[row.id] = bucket;
-			}
-		}
+		const segmentGloss: SegmentGloss = {};
+		if (languageRow.tr) segmentGloss.translation = languageRow.tr;
+		if (languageRow.tc) segmentGloss.translation_citations = localized(languageRow.tc);
+		if (languageRow.nr) segmentGloss.narrative = languageRow.nr;
+		if (row.nc) segmentGloss.narrative_citations = shared(row.nc);
+		if (Object.keys(segmentGloss).length) gloss.segments[row.id] = segmentGloss;
 
 		if (row.w) {
+			if (!languageRow.g || languageRow.g.length !== row.w.length) {
+				throw new Error(
+					`${artifact.id}:${row.id} has incomplete ${languageArtifact.language} glosses`
+				);
+			}
 			segment.words = row.w.map((cell, position) => {
-				const word: Record<string, unknown> = { id: cell.i, form: cell.f, lemma: cell.l };
-				if (cell.p) word.post = cell.p;
-				word.morph = at(PARSES, cell.m, 'parses');
-				if (cell.h) word.head = cell.h;
-				if (cell.s) word.substantive = true;
-				if (cell.a !== undefined) word.analysis = at(ANALYSES, cell.a, 'analyses');
-				for (const lang of LANGS) {
-					const entry: Record<string, unknown> = { gloss: row.g?.[lang]?.[position] ?? '' };
-					const fn = row.fn?.[lang]?.[cell.i];
-					if (fn) entry.function = fn;
-					const note = row.nt?.[lang]?.[cell.i];
-					if (note) entry.note = note;
-					const cites = row.fc?.[lang]?.[cell.i];
-					if (cites) entry.function_citations = cited(cites);
-					(layers[lang].words as Record<string, unknown>)[cell.i] = entry;
-				}
+				const word = expandWord(cell);
+				const entry: WordGloss = { gloss: languageRow.g![position] };
+				if (languageRow.fn?.[cell.i]) entry.function = languageRow.fn[cell.i];
+				if (languageRow.nt?.[cell.i]) entry.note = languageRow.nt[cell.i];
+				if (row.fc?.[cell.i]) entry.function_citations = shared(row.fc[cell.i]);
+				gloss.words[cell.i] = entry;
 				return word;
 			});
 		}
@@ -374,79 +347,179 @@ function expandDocument(artifact: Artifact): TextEntry {
 
 	return {
 		text: text as unknown as TextDocument,
-		glosses: {
-			pl: bindProse(layers.pl) as unknown as GlossDocument,
-			en: layers.en as unknown as GlossDocument
-		}
+		gloss: (languageArtifact.language === 'pl' ? bindProse(gloss) : gloss) as GlossDocument
 	};
 }
 
-/**
- * The lightweight inventory is synchronous; documents are not. The manifest
- * is also the stable seam for future language-specific search indexes: they
- * return these keys and use the same loader without knowing file paths.
- */
-export interface TextMetadata {
-	id: string;
-	path: string;
-	title: string;
-}
+export const LEXICON: { lemmata: Record<string, LemmaEntry> } = {
+	lemmata: (headsData as unknown as { entries: Record<string, LemmaEntry> }).entries
+};
 
-export const TEXT_METADATA: TextMetadata[] = manifest.texts;
-export const TEXT_KEYS = TEXT_METADATA.map(({ id }) => id.replace('.', '/'));
-const METADATA_BY_KEY = new Map(
-	TEXT_METADATA.map((entry) => [entry.id.replace('.', '/'), entry] as const)
-);
+const LANGUAGE_LEXICON_MODULES = import.meta.glob('./data/languages/*/lexicon.json') as Record<
+	string,
+	JsonImport
+>;
+const LANGUAGE_CITATION_MODULES = import.meta.glob('./data/languages/*/citations.json') as Record<
+	string,
+	JsonImport
+>;
+const LANGUAGE_RESOURCES = new Map<
+	Lang,
+	Promise<{ senses: Record<string, SenseEntry>; citations: (Citation | null)[] }>
+>();
 
-type TextModule = { default: unknown };
-type TextImport = () => Promise<TextModule>;
-const TEXT_MODULES = import.meta.glob('./data/texts/*/*.json') as Record<string, TextImport>;
-const CACHE = new Map<string, Promise<TextEntry>>();
-
-for (const entry of TEXT_METADATA) {
-	const modulePath = `./data/${entry.path}`;
-	if (!TEXT_MODULES[modulePath]) {
-		throw new Error(`${entry.id} names ${entry.path}, which was not vendored`);
-	}
-}
-if (Object.keys(TEXT_MODULES).length !== TEXT_METADATA.length) {
-	throw new Error(
-		`${Object.keys(TEXT_MODULES).length} text files vendored, ${TEXT_METADATA.length} in the manifest`
-	);
-}
-
-export function hasText(key: string): boolean {
-	return METADATA_BY_KEY.has(key);
-}
-
-/** The cache inventory, useful for asserting that an index lookup stayed lazy. */
-export function loadedTextKeys(): string[] {
-	return [...CACHE.keys()];
-}
-
-/** Load and expand one text once. No call imports an unrelated text file. */
-export function loadText(key: string): Promise<TextEntry | undefined> {
-	const metadata = METADATA_BY_KEY.get(key);
-	if (!metadata) return Promise.resolve(undefined);
-	let pending = CACHE.get(key);
+async function loadLanguageResources(language: Lang) {
+	let pending = LANGUAGE_RESOURCES.get(language);
 	if (!pending) {
-		pending = TEXT_MODULES[`./data/${metadata.path}`]().then((module) => {
-			const artifact = module.default as Artifact;
-			if (!artifact.seg) throw new Error(`${metadata.id} has no segments — re-run vendor-corpus`);
-			return expandDocument(artifact);
-		});
-		CACHE.set(key, pending);
+		const languageManifest = LANGUAGE_MANIFESTS[language];
+		const lexiconImport = LANGUAGE_LEXICON_MODULES[`./data/${languageManifest.lexicon}`];
+		const citationImport = LANGUAGE_CITATION_MODULES[`./data/${languageManifest.citations}`];
+		if (!lexiconImport || !citationImport) throw new Error(`${language} package is incomplete`);
+		pending = Promise.all([lexiconImport(), citationImport()]).then(
+			([lexiconModule, citationModule]) => {
+				const raw = (lexiconModule.default as { entries: Record<string, SenseEntry> }).entries;
+				const senses = Object.fromEntries(
+					Object.entries(raw).map(([lemma, value]) => {
+						const entry = { ...value };
+						const noteCitations = LEXICON.lemmata[lemma]?.localization?.note_citations;
+						if (noteCitations) entry.note_citations = noteCitations;
+						return [lemma, entry];
+					})
+				);
+				return {
+					senses: (language === 'pl' ? bindProse(senses) : senses) as Record<string, SenseEntry>,
+					citations: citationModule.default as (Citation | null)[]
+				};
+			}
+		);
+		LANGUAGE_RESOURCES.set(language, pending);
 	}
 	return pending;
 }
 
-export async function loadTexts(keys: Iterable<string>): Promise<Record<string, TextEntry>> {
-	const unique = [...new Set(keys)].filter(hasText);
-	const entries = await Promise.all(unique.map(async (key) => [key, await loadText(key)] as const));
+export async function loadSenses(language: Lang): Promise<Record<string, SenseEntry>> {
+	return (await loadLanguageResources(language)).senses;
+}
+
+export async function narrowLexicon(
+	docs: Iterable<TextDocument>,
+	language: Lang
+): Promise<{ lemmata: Record<string, LemmaEntry>; senses: Record<string, SenseEntry> }> {
+	const languageSenses = await loadSenses(language);
+	const lemmata: Record<string, LemmaEntry> = {};
+	const senses: Record<string, SenseEntry> = {};
+	for (const doc of docs) {
+		for (const segment of doc.segments) {
+			for (const word of segment.words ?? []) {
+				if (LEXICON.lemmata[word.lemma]) lemmata[word.lemma] = LEXICON.lemmata[word.lemma];
+				if (languageSenses[word.lemma]) senses[word.lemma] = languageSenses[word.lemma];
+			}
+		}
+	}
+	return { lemmata, senses };
+}
+
+const CORE_MODULES = import.meta.glob('./data/texts/*/*.json') as Record<string, JsonImport>;
+const LANGUAGE_TEXT_MODULES = import.meta.glob('./data/languages/*/texts/*/*.json') as Record<
+	string,
+	JsonImport
+>;
+const CORE_CACHE = new Map<string, Promise<CoreArtifact>>();
+const TEXT_CACHE = new Map<string, Promise<TextEntry>>();
+
+for (const entry of TEXT_METADATA) {
+	if (!CORE_MODULES[`./data/${entry.path}`])
+		throw new Error(`${entry.id} names an absent base text`);
+}
+for (const language of LANGS) {
+	for (const entry of LANGUAGE_MANIFESTS[language].texts) {
+		if (!LANGUAGE_TEXT_MODULES[`./data/${entry.path}`]) {
+			throw new Error(`${language}:${entry.id} names an absent language text`);
+		}
+	}
+}
+
+async function loadCore(key: string): Promise<CoreArtifact | undefined> {
+	const metadata = METADATA_BY_KEY.get(key);
+	if (!metadata) return undefined;
+	let pending = CORE_CACHE.get(key);
+	if (!pending) {
+		pending = CORE_MODULES[`./data/${metadata.path}`]().then(
+			(module) => module.default as CoreArtifact
+		);
+		CORE_CACHE.set(key, pending);
+	}
+	return pending;
+}
+
+export async function loadCoreText(key: string): Promise<TextDocument | undefined> {
+	const artifact = await loadCore(key);
+	if (!artifact) return undefined;
+	const text: Record<string, unknown> = { schema_version: manifest.corpus_schema };
+	for (const [name, value] of Object.entries(artifact))
+		if (!CORE_DOC_KEYS.has(name)) text[name] = value;
+	text.status = artifact.st;
+	text.analysis_defaults = at(ANALYSES, artifact.ad, 'analyses');
+	if (artifact.adw !== undefined)
+		text.analysis_defaults_words = at(ANALYSES, artifact.adw, 'analyses');
+	text.segments = artifact.seg.map((row) => {
+		const segment: Record<string, unknown> = {};
+		for (const [name, value] of Object.entries(row))
+			if (!CORE_ROW_KEYS.has(name)) segment[name] = value;
+		if (row.an !== undefined) segment.analysis = at(ANALYSES, row.an, 'analyses');
+		if (row.w) {
+			segment.words = row.w.map(expandWord);
+		}
+		return segment;
+	});
+	return text as unknown as TextDocument;
+}
+
+export function loadedTextKeys(): string[] {
+	return [...CORE_CACHE.keys()];
+}
+
+export function loadText(key: string, language: Lang): Promise<TextEntry | undefined> {
+	const localizedMetadata = LANGUAGE_TEXTS[language].get(key);
+	if (!localizedMetadata) return Promise.resolve(undefined);
+	const cacheKey = `${language}:${key}`;
+	let pending = TEXT_CACHE.get(cacheKey);
+	if (!pending) {
+		const languageImport = LANGUAGE_TEXT_MODULES[`./data/${localizedMetadata.path}`];
+		pending = Promise.all([loadCore(key), languageImport(), loadLanguageResources(language)]).then(
+			([base, localized, resources]) => {
+				if (!base) throw new Error(`${key} has a language layer without a base text`);
+				return expandDocument(base, localized.default as LanguageArtifact, resources.citations);
+			}
+		);
+		TEXT_CACHE.set(cacheKey, pending);
+	}
+	return pending;
+}
+
+export async function loadTexts(
+	keys: Iterable<string>,
+	language: Lang
+): Promise<Record<string, TextEntry>> {
+	const unique = [...new Set(keys)].filter((key) => hasText(key, language));
+	const entries = await Promise.all(
+		unique.map(async (key) => [key, await loadText(key, language)] as const)
+	);
 	return Object.fromEntries(entries.filter((entry): entry is [string, TextEntry] => !!entry[1]));
 }
 
-/** Explicitly expensive, reserved for corpus-wide pages and exhaustive tests. */
-export function loadAllTexts(): Promise<Record<string, TextEntry>> {
-	return loadTexts(TEXT_KEYS);
+export async function loadCoreTexts(keys: Iterable<string>): Promise<Record<string, TextDocument>> {
+	const unique = [...new Set(keys)].filter((key) => hasText(key));
+	const entries = await Promise.all(
+		unique.map(async (key) => [key, await loadCoreText(key)] as const)
+	);
+	return Object.fromEntries(entries.filter((entry): entry is [string, TextDocument] => !!entry[1]));
+}
+
+export function loadAllCoreTexts(): Promise<Record<string, TextDocument>> {
+	return loadCoreTexts(TEXT_KEYS);
+}
+
+export function loadAllTexts(language: Lang): Promise<Record<string, TextEntry>> {
+	return loadTexts(textKeysFor(language), language);
 }

@@ -1,0 +1,12 @@
+{
+  "id":"proprium.dominica-iv-adventus-introitus",
+  "language":"en",
+  "about":"The introit of the Fourth Sunday of Advent, the antiphon the Roráte Masses of Advent are named from. It returns after the psalm verse and the Glória Patri, as the rubric under it directs.",
+  "seg":[
+    {"id":"s01","tr":"Drop down dew, O heavens, from above, and let the clouds rain down the Just One; let the earth open and bring forth the Savior.","tc":[142],"g":["drop down dew","ye heavens","from above","and","let the clouds","rain down","the Just One","let be opened","the earth","and","let it bud forth","the Savior"],"fn":{"w002":"The vocative of cælum. The noun changes gender inside its own paradigm, from neuter to masculine, so the form is cæli and not cæla."}},
+    {"id":"s02","tr":"The heavens declare the glory of God, and the firmament proclaims the works of His hands.","tc":[142],"g":["the heavens","declare","the glory","of God","and","the works","of hands","His","proclaims","the firmament"]},
+    {"id":"s03","tr":"Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.","tc":[142],"g":["glory","to the Father","and","to the Son","and","to the Spirit","Holy","as","it was","in","the beginning","and","now","and","always","and","unto","ages","of ages","amen"]},
+    {"id":"s04","nr":"After the doxology the Introit antiphon is repeated from Roráte to the psalm verse — by the choir at a sung Mass, by the priest himself at a low Mass."},
+    {"id":"s05","tr":"Drop down dew, O heavens, from above, and let the clouds rain down the Just One; let the earth open and bring forth the Savior.","tc":[142],"g":["drop down dew","ye heavens","from above","and","let the clouds","rain down","the Just One","let be opened","the earth","and","let it bud forth","the Savior"]}
+  ]
+}

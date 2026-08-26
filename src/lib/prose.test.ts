@@ -75,7 +75,9 @@ describe('the words the app says', () => {
 
 	it('gives every Polish table-of-contents subtitle sentence-style capitalization', () => {
 		const subtitles = [
-			...CATALOG.flatMap((section) => section.texts.map((text) => text.localizedTitle.pl)),
+			...CATALOG.flatMap((section) =>
+				section.texts.map((text) => text.localizedTitle.pl ?? text.title)
+			),
 			...ORDO.map((movement) => movement.label.pl)
 		];
 		const lowercase = subtitles.filter((subtitle) => !/^[A-ZĄĆĘŁŃÓŚŹŻ]/.test(subtitle));
@@ -87,7 +89,7 @@ describe('the words the app says', () => {
 		const offenders = CATALOG.flatMap((section) =>
 			section.texts.flatMap((text) =>
 				(['pl', 'en'] as const)
-					.filter((lang) => contextual.test(text.localizedTitle[lang]))
+					.filter((lang) => contextual.test(text.localizedTitle[lang] ?? text.title))
 					.map((lang) => `${text.category}/${text.slug}.${lang}: ${text.localizedTitle[lang]}`)
 			)
 		);

@@ -1,0 +1,13 @@
+{
+  "id":"ordinarium.sanctus",
+  "language":"pl",
+  "about":"Aklamacja łączy wołanie serafinów z wizji Izajasza (Iz 6, 3) ze słowami tłumu witającego Chrystusa w Jerozolimie (Mt 21, 9). Trzykrotne Sanctus wielbi Pana, Boga Zastępów, którego chwałą pełne są niebiosa i ziemia. Benedíctus błogosławi Tego, który przychodzi w imię Pańskie.",
+  "seg":[
+    {"id":"s01","nr":"Prefacja dobiega końca. Kapłan składa ręce przed piersią, pochyla się i mówi Sanctus głosem umiarkowanym, a usługujący w tym czasie dzwoni. Przy słowach „Benedíctus qui venit in nómine Dómini” prostuje się i czyni znak krzyża od czoła do piersi. Zaraz potem zaczyna się Kanon, odmawiany po cichu poza kilkoma zdaniami mówionymi głośno."},
+    {"id":"s02","tr":"Święty, Święty, Święty Pan Bóg Zastępów.","tc":[320],"g":["święty","święty","święty","Pan","Bóg","Zastępów"],"fn":{"w001":"Trzykrotnie powtórzone „Sanctus” odnosi się do „Dóminus” (w004), dlatego ma formę mianownika rodzaju męskiego. Łącznik „est” pozostaje domyślny.","w006":"Forma nie ma końcówki przypadka — hebrajskie słowo weszło do łaciny nieodmienne. W tym tytule pełni funkcję dopełniacza: Pan Bóg Zastępów."}},
+    {"id":"s03","tr":"Pełne są niebiosa i ziemia chwały Twojej.","tc":[320],"g":["pełne","są","niebiosa","i","ziemia","chwały","Twojej"],"fn":{"w007":"Forma mianownika liczby mnogiej rodzaju męskiego. Zgadza się z „cæli” (w009), pierwszym z dwóch podmiotów.","w012":"Ablativus zależny od „Pleni” (w007). Polszczyzna oddaje tę relację dopełniaczem: „pełne chwały”."}},
+    {"id":"s04","tr":"Hosanna na wysokości.","tc":[320],"g":["hosanna","na","wysokościach"]},
+    {"id":"s05","tr":"Błogosławiony, który idzie w imię Pańskie.","tc":[320],"g":["błogosławiony","który","przychodzi","w","imieniu","Pana"],"fn":{"w017":"Orzecznik z domyślnym „est”. Podmiotem jest zdanie względne rozpoczynające się od „qui” (w018).","w018":"Zaimek względny rozpoczynający zdanie o znaczeniu „ten, który przychodzi”.","w019":"Czas teraźniejszy. Perfectum „vēnit” ma tę samą pisownię, lecz inną długość pierwszej samogłoski.","w021":"Ablativus po „in” (w020) w stałym zwrocie „in nómine Dómini”: „w imię Pańskie”."}},
+    {"id":"s06","tr":"Hosanna na wysokości.","tc":[320],"g":["hosanna","na","wysokościach"]}
+  ]
+}

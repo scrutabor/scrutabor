@@ -1,0 +1,16 @@
+{
+  "id":"ordinarium.ecce-agnus-dei",
+  "language":"en",
+  "about":"The priest shows the Host and points to Christ as the Lamb of God who takes away the sins of the world. He then says Dómine, non sum dignus three times. He gives the Blessed Sacrament to each communicant with a prayer that the Body of Christ may preserve that person's soul unto eternal life.",
+  "seg":[
+    {"id":"s01","nr":"Then the priest genuflects and takes the ciborium or paten with the Blessed Sacrament in his left hand and one particle in his right. Holding the particle between his thumb and forefinger slightly above the vessel, he turns at the middle of the altar toward those about to communicate and says:"},
+    {"id":"s02","tr":"Behold the Lamb of God, behold Him who takes away the sins of the world.","tc":[184],"g":["behold","the Lamb","of God","behold","Him who","takes away","the sins","of the world"],"fn":{"w001":"Interjection followed here by the nominative “Agnus” (w002).","w006":"Third-person singular. Compare the second-person “tollis” in the Agnus Dei.","w007":"John 1:29 has the singular “peccátum mundi”. The liturgical text here has the plural “peccáta mundi”."}},
+    {"id":"s03","nr":"Then the priest says:"},
+    {"id":"s04","tr":"Lord, I am not worthy that You should enter under my roof, but only say the word, and my soul shall be healed.","tc":[184],"g":["Lord","not","am","worthy","that","You should enter","under","roof","my","but","only","say","with the word","and","shall be healed","soul","my"],"fn":{"w009":"Adapted from the centurion's words in Matthew 8:8: the liturgical text has “ánima mea” where the Gospel has “puer meus”."}},
+    {"id":"s05","tr":"Lord, I am not worthy that You should enter under my roof, but only say the word, and my soul shall be healed.","tc":[184],"g":["Lord","not","am","worthy","that","You should enter","under","roof","my","but","only","say","with the word","and","shall be healed","soul","my"]},
+    {"id":"s06","tr":"Lord, I am not worthy that You should enter under my roof, but only say the word, and my soul shall be healed.","tc":[184],"g":["Lord","not","am","worthy","that","You should enter","under","roof","my","but","only","say","with the word","and","shall be healed","soul","my"]},
+    {"id":"s07","nr":"After repeating these words three times, the priest goes to their right, the Epistle side, and gives the Sacrament to each, making the sign of the cross with it over the ciborium or paten and saying:"},
+    {"id":"s08","tr":"May the Body of our Lord Jesus Christ preserve your soul for eternal life. Amen.","tc":[184],"g":["The Body","of the Lord","our","Jesus","Christ","may keep","soul","thy","unto","life","everlasting","amen"],"fn":{"w067":"The corresponding word in the priest's own Communion formula is “meam” (“my”)."}},
+    {"id":"s09","nr":"All having communicated, the priest returns to the altar saying nothing, and gives them no blessing, since he will give it at the end of Mass."}
+  ]
+}

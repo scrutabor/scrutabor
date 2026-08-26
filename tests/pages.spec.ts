@@ -356,7 +356,9 @@ test('every reading names itself below its Latin title', async ({ page }) => {
 		for (const text of section.texts) {
 			for (const lang of ['pl', 'en'] as const) {
 				await page.goto(`/app/${lang}/${text.category}/${text.slug}`);
-				await expect(page.locator('header .subtitle')).toHaveText(text.localizedTitle[lang]);
+				await expect(page.locator('header .subtitle')).toHaveText(
+					text.localizedTitle[lang] ?? text.title
+				);
 				await expect(page.locator('header .subtitle')).not.toHaveText(section.label[lang]);
 			}
 		}

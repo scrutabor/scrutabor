@@ -1,0 +1,11 @@
+{
+  "id":"orationes.benedic-domine",
+  "language":"en",
+  "about":"The Benedic, Domine is a short blessing before a meal. Those gathered ask the Lord to bless both them and the gifts they are about to receive from his bounty, making the petition through Christ.",
+  "seg":[
+    {"id":"s01","tr":"Bless us, O Lord,","tc":[36],"g":["bless","Lord","us"],"fn":{"w001":"The imperative opens a direct petition to the Lord and governs two coordinated objects: “nos” and “hæc tua dona”.","w002":"The vocative identifies the Lord as the prayer's sole addressee.","w003":"The first direct object of “Bénedic” comprises the community of speakers."}},
+    {"id":"s02","tr":"and these your gifts,","tc":[36],"g":["and","these","your","gifts"],"fn":{"w004":"The conjunction joins persons and gifts as coordinate objects of one blessing.","w005":"The demonstrative agrees with “dona” and points to the gifts present at the meal.","w006":"The possessive relates the gifts to the Lord addressed in the prayer.","w007":"The second direct object of “Bénedic”, coordinated with “nos”."}},
+    {"id":"s03","tr":"which we are about to receive from your bounty.","tc":[36],"g":["which","from","your","bounty","we are","about to receive"],"fn":{"w008":"The relative resumes neuter “dona” and serves as the object of the participle “sumptúri” in the predicate with “sumus”.","w009":"The preposition with the ablative marks the source of the gifts received.","w011":"The ablative after “de” names divine bounty as the source of the gifts.","w012":"With “sumptúri”, the auxiliary forms a first-person plural future active periphrastic.","w013":"The future active participle agrees with the understood human speakers and, with “sumus”, expresses imminent reception."}},
+    {"id":"s04","tr":"Through Christ our Lord. Amen.","tc":[36],"g":["through","Christ","Lord","our","amen"],"fn":{"w015":"The accusative governed by “Per” expresses Christ's mediation in the prayer's conclusion.","w016":"An accusative in apposition to “Christum”.","w017":"The adjective agrees with “Dóminum” and includes the same community that spoke as “nos” and “sumus”."}}
+  ]
+}

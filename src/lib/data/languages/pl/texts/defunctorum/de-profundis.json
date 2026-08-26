@@ -1,0 +1,16 @@
+{
+  "id":"defunctorum.de-profundis",
+  "language":"pl",
+  "about":"Psalm 129 według numeracji Wulgaty (Ps 130 w numeracji hebrajskiej), tradycyjnie odmawiany za zmarłych. Jego łacina to psałterz gallikański, wersja, którą modli się liturgia rzymska.",
+  "seg":[
+    {"id":"s001","tr":"Z głębin wołałem do Ciebie, Panie.","g":["z","głębokości","wołałem","do","Ciebie","Panie"]},
+    {"id":"s002","tr":"Panie, wysłuchaj mojego głosu.","g":["Panie","wysłuchaj","głos","mój"]},
+    {"id":"s003","tr":"Niech Twoje uszy uważnie słuchają głosu mojego błagania.","g":["niech będą","uszy","Twoje","wytężone","na","głos","modlitwy","mojej"]},
+    {"id":"s004","tr":"Jeśli będziesz zważał na nieprawości, Panie, Panie, któż się ostoi?","g":["jeżeli","nieprawości","będziesz baczył","Panie","Panie","któż","ostoi się"]},
+    {"id":"s005","tr":"Bo u Ciebie jest przebaczenie; przez wzgląd na Twoje prawo czekałem na Ciebie, Panie.","g":["albowiem","u","Ciebie","ubłaganie","jest","i","dla","prawa","Twego","czekałem","Ciebie","Panie"]},
+    {"id":"s006","tr":"Moja dusza czekała na Jego słowo; moja dusza pokładała nadzieję w Panu.","g":["czekała","dusza","moja","w","słowie","Jego","miała nadzieję","dusza","moja","w","Panu"]},
+    {"id":"s007","tr":"Od porannej straży aż do nocy niech Izrael pokłada nadzieję w Panu.","g":["od","straży","porannej","aż","do","nocy","niech ma nadzieję","Izrael","w","Panu"]},
+    {"id":"s008","tr":"Bo u Pana jest miłosierdzie i u Niego jest obfite odkupienie.","g":["albowiem","u","Pana","miłosierdzie","i","obfite","u","Niego","odkupienie"]},
+    {"id":"s009","tr":"I On sam odkupi Izraela ze wszystkich jego nieprawości.","g":["i","On","odkupi","Izraela","ze","wszystkich","nieprawości","jego"]}
+  ]
+}

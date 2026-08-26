@@ -7,10 +7,10 @@
 // is caught before anyone has to notice a letter touching its neighbour.
 import { describe, expect, it } from 'vitest';
 import { GLOSS_GAP, initialFit, measuredInitial, sinkFor } from './reading-geometry';
-import { loadAllTexts } from './corpus';
+import { loadAllCoreTexts } from './corpus';
 import { firstVerseWithInitial } from './speaker-marks';
 
-const TEXTS = await loadAllTexts();
+const TEXTS = await loadAllCoreTexts();
 
 // Q is the only letter in the corpus whose tail reaches below the line;
 // L and A are the two whose ink crosses their advance sideways.
@@ -131,9 +131,9 @@ describe('the tables against the corpus', () => {
 		// of opening capitals grows with every Sunday; this walks them all.
 		const unmeasured: string[] = [];
 		for (const [key, entry] of Object.entries(TEXTS)) {
-			const at = firstVerseWithInitial(entry.text.segments);
+			const at = firstVerseWithInitial(entry.segments);
 			if (at === -1) continue;
-			const letter = entry.text.segments[at].words?.[0]?.form.slice(0, 1) ?? '';
+			const letter = entry.segments[at].words?.[0]?.form.slice(0, 1) ?? '';
 			if (letter && !measuredInitial(letter)) unmeasured.push(`${key}: ${letter}`);
 		}
 		expect(unmeasured).toEqual([]);

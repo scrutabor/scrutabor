@@ -14,10 +14,10 @@ describe('lazy corpus loading', () => {
 	});
 
 	it('loads and caches exactly the requested text', async () => {
-		const first = await loadText('orationes/memorare');
+		const first = await loadText('orationes/memorare', 'pl');
 		expect(first?.text.title).toBe('Memoráre');
 		expect(loadedTextKeys()).toEqual(['orationes/memorare']);
-		expect(await loadText('orationes/memorare')).toBe(first);
+		expect(await loadText('orationes/memorare', 'pl')).toBe(first);
 		expect(loadedTextKeys()).toEqual(['orationes/memorare']);
 	});
 });

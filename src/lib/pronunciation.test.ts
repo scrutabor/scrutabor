@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { loadAllTexts } from './corpus';
+import { loadAllCoreTexts } from './corpus';
 import { ipa, pronunciations, stressIndex, syllabify, syllabized } from './pronunciation';
 
-const TEXTS = await loadAllTexts();
+const TEXTS = await loadAllCoreTexts();
 
 const ACCENTED = /[áéíóúýǽ]|\u0301/i;
 const UNACCENTED_POLYSYLLABLES = new Set(['israël']);
@@ -39,7 +39,7 @@ describe('syllabify', () => {
 
 	it('reassembles to the original form for every corpus word', () => {
 		for (const key of Object.keys(TEXTS)) {
-			for (const seg of TEXTS[key].text.segments) {
+			for (const seg of TEXTS[key].segments) {
 				for (const w of seg.words ?? []) {
 					expect(syllabify(w.form).join(''), w.form).toBe(w.form);
 				}
@@ -52,7 +52,7 @@ describe('syllabify', () => {
 		// 1-2 carry none. If our division disagrees with the corpus's
 		// counting anywhere, this cross-check fails.
 		for (const key of Object.keys(TEXTS)) {
-			for (const seg of TEXTS[key].text.segments) {
+			for (const seg of TEXTS[key].segments) {
 				for (const w of seg.words ?? []) {
 					const n = syllabify(w.form).length;
 					const accented = ACCENTED.test(w.form);
@@ -141,7 +141,7 @@ describe('ipa', () => {
 
 	it('produces nonempty dotted IPA for every corpus word', () => {
 		for (const key of Object.keys(TEXTS)) {
-			for (const seg of TEXTS[key].text.segments) {
+			for (const seg of TEXTS[key].segments) {
 				for (const w of seg.words ?? []) {
 					for (const tradition of ['roman', 'polish'] as const) {
 						const out = ipa(w.form, tradition);

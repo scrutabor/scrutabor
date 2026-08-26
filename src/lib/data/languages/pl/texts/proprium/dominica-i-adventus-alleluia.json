@@ -1,0 +1,11 @@
+{
+  "id":"proprium.dominica-i-adventus-alleluia",
+  "language":"pl",
+  "about":"Werset allelujatyczny I Niedzieli Adwentu, Ps 84, 8 według numeracji Wulgaty (Ps 85 w numeracji hebrajskiej). W dni powszednie Adwentu, gdy w ciągu tygodnia powtarza się tę Mszę niedzielną, opuszcza się Alleluja z wersetem i odmawia się tylko graduał.",
+  "seg":[
+    {"id":"s01","nr":"Gdy w dzień powszedni Adwentu bierze się Mszę z poprzedniej niedzieli, opuszcza się Alleluja z jego wersetem i odmawia tylko Graduał."},
+    {"id":"s02","tr":"Alleluja, alleluja.","g":["alleluja","alleluja"]},
+    {"id":"s03","tr":"Okaż nam, Panie, miłosierdzie swoje i daj nam swoje zbawienie.","tc":[361],"g":["okaż","nam","Panie","miłosierdzie","Twoje","i","zbawienie","Twoje","daj","nam"],"fn":{"w009":"Przymiotnik rodzaju nijakiego użyty rzeczownikowo: „zbawienie”."}},
+    {"id":"s04","tr":"Alleluja.","g":["alleluja"]}
+  ]
+}

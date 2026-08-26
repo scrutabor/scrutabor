@@ -81,14 +81,21 @@ dependencies are deliberately minimal.
 ### Reader data
 
 `scripts/vendor-corpus.mjs` mirrors the corpus reader edition under
-`src/lib/data/`. Shared tables have descriptive names, JSON keeps one logical
-record per line, and texts live at `texts/<category>/<slug>.json`. The manifest
-is a lightweight inventory; `src/lib/corpus.ts` imports one text on demand and
-caches it. `concordance.json` maps Latin lemmata and normalized forms directly
-to stable text/word addresses, so lemma pages and future search first choose
-candidate texts and then load only those files. Optional Polish and English
-search indexes can be added later under `search/` without changing that loader
-or the vendoring layout.
+`src/lib/data/`. Shared Latin and analysis data live in the neutral base;
+`languages/<lang>/` holds a separate manifest, text layers, lexicon senses and
+citations for each target language. A language manifest may list any complete
+subset of the Latin texts, so adding one translated prayer neither edits the
+other languages nor requires translating the remaining corpus.
+
+JSON keeps one logical record per line and uses descriptive paths. A reading
+loads one neutral text, one matching language text and that language's shared
+resources, then caches them independently. `concordance.json` maps Latin
+lemmata and normalized forms to stable text/word addresses, so lemma pages and
+future search choose candidates before opening texts. A future localized
+file-candidate index belongs inside its language package and can be named by
+that package's manifest; it does not require another text-layout migration.
+The same root and language manifests are package recipes for a mobile client or
+for offline archives containing only selected languages.
 
 ## License
 

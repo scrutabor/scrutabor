@@ -1,0 +1,9 @@
+{
+  "id":"orationes.cor-iesu",
+  "language":"pl",
+  "about":"Wezwanie zamykające modlitwy Leona XIII, dołączone do nich w 1904 r. za Piusa X. Powtarza się je trzy razy. To wydanie drukuje je raz.",
+  "seg":[
+    {"id":"s01","tr":"Najświętsze Serce Jezusa.","tc":[55],"g":["Serce","Jezusa","najświętsze"],"fn":{"w001":"Rodzaj nijaki ma jedną formę mianownika i wołacza. Ta edycja znakuje zwrot jako mianownik, tak jak w Agnus Dei.","w002":"Dopełniacz zależny od „Cor”: Serce Jezusa.","w003":"Stopień najwyższy od „sacrátus”. Zgadza się z „Cor” (w001)."}},
+    {"id":"s02","tr":"Zmiłuj się nad nami.","tc":[55],"g":["zmiłuj się","nad nami"],"fn":{"w004":"Tryb rozkazujący czasownika deponentnego: forma bierna, znaczenie czynne.","w005":"Celownik zależny od „miserére”. W łacinie klasycznej czasownik ten zwykle łączy się z dopełniaczem."}}
+  ]
+}

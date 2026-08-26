@@ -88,8 +88,8 @@ function filesBelow(root, prefix = '') {
 }
 
 // Mirror the edition instead of naming today's folders. A later optional
-// search/pl.json is data with a surface, but it must not require teaching the
-// vendor a new path before the app can use it.
+// language-pack search index is data with a surface, but it must not require
+// teaching the vendor a new path before the app can use it.
 for (const name of filesBelow(BUILD).sort()) {
 	copy(name, join(BUILD, name));
 }

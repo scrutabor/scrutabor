@@ -1,0 +1,10 @@
+{
+  "id":"proprium.dominica-iv-adventus-alleluia",
+  "language":"pl",
+  "about":"Werset allelujatyczny IV Niedzieli Adwentu. Ostatnia niedziela przed Bożym Narodzeniem prosi o jedno: żeby nie zwlekał.",
+  "seg":[
+    {"id":"s01","tr":"Alleluja, alleluja.","g":["alleluja","alleluja"]},
+    {"id":"s02","tr":"Przyjdź, Panie, i nie zwlekaj; odpuść występki swojego ludu Izraela.","g":["przyjdź","Panie","i","nie chciej","zwlekać","odpuść","występki","ludowi","Twemu","Izraelowi"]},
+    {"id":"s03","tr":"Alleluja.","g":["alleluja"]}
+  ]
+}

@@ -8,11 +8,10 @@
   "st":"working-edition",
   "ad":1,
   "adw":2,
-  "about":{"pl":"Krótka modlitwa za wiernych zmarłych w brzmieniu łacińskim Enchiridion Indulgentiarum z 1952 r. Prosi dla nich o wieczny odpoczynek i światłość wiekuistą, a kończy się życzeniem, aby spoczywali w pokoju.","en":"The brief suffrage for the faithful departed, in the Latin of the 1952 Enchiridion Indulgentiarum. It asks eternal rest and perpetual light for them, and closes with the wish that they rest in peace."},
-  "ac":{"pl":[6],"en":[6]},
+  "ac":[6],
   "seg":[
-    {"id":"s001","type":"verse","w":[{"i":"w001","f":"Réquiem","l":"requies","m":7},{"i":"w002","f":"ætérnam","l":"aeternus","m":8,"h":"w001"},{"i":"w003","f":"dona","l":"dono","m":41},{"i":"w004","f":"eis","l":"is","p":",","m":42},{"i":"w005","f":"Dómine","l":"dominus","p":";","m":5},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"lux","l":"lux","m":20},{"i":"w008","f":"perpétua","l":"perpetuus","m":25,"h":"w007"},{"i":"w009","f":"lúceat","l":"luceo","m":43},{"i":"w010","f":"eis","l":"is","p":".","m":42}],"tr":{"pl":"Wieczny odpoczynek racz im dać, Panie, a światłość wiekuista niechaj im świeci.","en":"Eternal rest grant unto them, O Lord, and let perpetual light shine upon them."},"tc":{"pl":[2],"en":[3]},"g":{"pl":["odpoczynek","wieczny","daj","im","Panie","i","światłość","wiekuista","niech świeci","im"],"en":["rest","eternal","grant","unto them","Lord","and","light","perpetual","may shine","unto them"]}},
-    {"id":"s002","type":"verse","w":[{"i":"w011","f":"Requiéscant","l":"requiesco","m":44},{"i":"w012","f":"in","l":"in","m":0,"h":"w013"},{"i":"w013","f":"pace","l":"pax","p":".","m":45}],"tr":{"pl":"Niech odpoczywają w pokoju wiecznym.","en":"May they rest in peace."},"tc":{"pl":[4],"en":[5]},"g":{"pl":["niech odpoczywają","w","pokoju"],"en":["may they rest","in","peace"]}},
-    {"id":"s003","type":"verse","w":[{"i":"w014","f":"Amen","l":"amen","p":".","m":46}],"tr":{"pl":"Amen.","en":"Amen."},"g":{"pl":["amen"],"en":["amen"]}}
+    {"id":"s001","type":"verse","w":[{"i":"w001","f":"Réquiem","l":"requies","m":7},{"i":"w002","f":"ætérnam","l":"aeternus","m":8,"h":"w001"},{"i":"w003","f":"dona","l":"dono","m":41},{"i":"w004","f":"eis","l":"is","p":",","m":42},{"i":"w005","f":"Dómine","l":"dominus","p":";","m":5},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"lux","l":"lux","m":20},{"i":"w008","f":"perpétua","l":"perpetuus","m":25,"h":"w007"},{"i":"w009","f":"lúceat","l":"luceo","m":43},{"i":"w010","f":"eis","l":"is","p":".","m":42}]},
+    {"id":"s002","type":"verse","w":[{"i":"w011","f":"Requiéscant","l":"requiesco","m":44},{"i":"w012","f":"in","l":"in","m":0,"h":"w013"},{"i":"w013","f":"pace","l":"pax","p":".","m":45}]},
+    {"id":"s003","type":"verse","w":[{"i":"w014","f":"Amen","l":"amen","p":".","m":46}]}
   ]
 }

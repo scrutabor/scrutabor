@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { loadAllTexts } from './corpus';
+import { loadAllCoreTexts } from './corpus';
 import { ORDO, partVoice } from './ordo';
 
-const TEXTS = await loadAllTexts();
+const TEXTS = await loadAllCoreTexts();
 
 // The spine states how loudly each part is said, and so does the corpus, one
 // segment at a time. Two layers holding the same fact drift apart unless
@@ -18,7 +18,7 @@ describe('the spine and the corpus agree about the quiet', () => {
 	function voices(textKey: string): string[] {
 		const entry = TEXTS[textKey];
 		if (!entry) return [];
-		return entry.text.segments.filter((s) => s.words?.length).map((s) => s.voice ?? '');
+		return entry.segments.filter((s) => s.words?.length).map((s) => s.voice ?? '');
 	}
 
 	it('covers every part the spine names', () => {

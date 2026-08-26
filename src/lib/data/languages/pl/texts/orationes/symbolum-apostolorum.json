@@ -1,0 +1,19 @@
+{
+  "id":"orationes.symbolum-apostolorum",
+  "language":"pl",
+  "about":"Skład Apostolski jest starożytnym symbolem chrzcielnym Kościoła rzymskiego, tradycyjnie ujmowanym w dwunastu artykułach. W pierwszej osobie wyznaje wiarę w Boga Ojca, Jezusa Chrystusa i Ducha Świętego, a następnie w Kościół, odpuszczenie grzechów, zmartwychwstanie ciała i życie wieczne. Ta recenzja zachowuje powtórzone Credo przed artykułami o Duchu Świętym.",
+  "seg":[
+    {"id":"s01","tr":"Wierzę w Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi.","tc":[119],"g":["wierzę","w","Boga","Ojca","wszechmogącego","Stworzyciela","nieba","i","ziemi"],"fn":{"w004":"Apozycja do „Deum” (w003): Bóg — Ojciec.","w006":"Druga apozycja do „Deum” (w003).","w009":"Wraz z „cæli” (w007) zależy od „Creatórem” (w006)."}},
+    {"id":"s02","tr":"I w Jezusa Chrystusa, Syna Jego jedynego, Pana naszego,","tc":[119],"g":["i","w","Jezusa","Chrystusa","Syna","Jego","jedynego","Pana","naszego"],"fn":{"w011":"Drugi człon zależny od „Credo” (w001).","w013":"Apozycja do imienia „Iesum” (w012).","w014":"Apozycja do imienia i tytułu „Iesum Christum”.","w017":"Kolejna apozycja do imienia i tytułu „Iesum Christum”."}},
+    {"id":"s03","tr":"który się począł z Ducha Świętego, narodził się z Maryi Panny,","tc":[119],"g":["który","poczęty","został","z","Ducha","Świętego","narodzony","z","Maryi","Dziewicy"],"fn":{"w019":"Zaimek względny odnosi się do Jezusa Chrystusa z poprzedniego członu.","w020":"Z „est” (w021) tworzy perfectum strony biernej: „został poczęty”.","w025":"Imiesłów czasownika deponentnego. Współdzieli domyślne „est” (w021).","w028":"Apozycja do „María” (w027)."}},
+    {"id":"s04","tr":"umęczon pod Ponckim Piłatem, ukrzyżowan, umarł i pogrzebion,","tc":[119],"g":["umęczony","pod","Poncjuszem","Piłatem","ukrzyżowany","umarłszy","i","pogrzebany"],"fn":{"w029":"Imiesłów deponentny o znaczeniu czynnym. Współdzieli domyślne „est” (w021).","w032":"Drugi człon imienia „Póntio Piláto”.","w033":"Współdzieli domyślne „est” (w021).","w034":"Imiesłów perfectum czasownika deponentnego „morior”. Z domyślnym „est” (w021) znaczy „umarł”.","w036":"Współdzieli domyślne „est” (w021)."}},
+    {"id":"s05","tr":"zstąpił do piekieł,","tc":[119],"g":["zstąpił","do","otchłani"],"fn":{"w039":"Rzeczownik w liczbie mnogiej po „ad”. Oznacza tych, którzy są niżej, lub ich krainę."}},
+    {"id":"s06","tr":"trzeciego dnia zmartwychwstał,","tc":[119],"g":["trzeciego","dnia","zmartwychwstał","spośród","umarłych"],"fn":{"w041":"Ablativus czasu. Tutaj rodzaj żeński, który zgadza się z „tértia” (w040)."}},
+    {"id":"s07","tr":"wstąpił na niebiosa,","tc":[119],"g":["wstąpił","do","niebios"],"fn":{"w047":"Forma mnoga rzeczownika „caelum”. W liczbie mnogiej ma rodzaj męski."}},
+    {"id":"s08","tr":"siedzi po prawicy Boga Ojca wszechmogącego,","tc":[119,122],"g":["siedzi","po","prawicy","Boga","Ojca","wszechmogącego"],"fn":{"w052":"Apozycja do „Dei” (w051)."}},
+    {"id":"s09","tr":"stamtąd przyjdzie sądzić żywych i umarłych.","tc":[119],"g":["stamtąd","mający przyjść","jest","sądzić","żywych","i","umarłych"],"fn":{"w055":"Imiesłów przyszły z „est” (w056): „przyjdzie”.","w057":"Bezokolicznik określa cel przyszłego przyjścia."}},
+    {"id":"s10","tr":"Wierzę w Ducha Świętego,","tc":[119],"g":["wierzę","w","Ducha","Świętego"],"fn":{"w061":"Powtórzony czasownik otwiera trzecią grupę artykułów w wybranej recenzji dewocyjnej."}},
+    {"id":"s11","tr":"święty Kościół powszechny, świętych obcowanie,","tc":[63],"g":["święty","Kościół","powszechny","świętych","obcowanie"],"fn":{"w069":"„sanctórum” (w068) jest dopełniaczem zależnym od „communiónem”."}},
+    {"id":"s12","tr":"grzechów odpuszczenie, ciała zmartwychwstanie, żywot wieczny. Amen.","tc":[119],"g":["odpuszczenie","grzechów","ciała","zmartwychwstanie","życie","wieczne","amen"],"fn":{"w071":"Dopełniacz zależny od „remissiónem” (w070).","w073":"„carnis” (w072) jest dopełniaczem zależnym od „resurrectiónem”."}}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id":"orationes.angelus-domini",
+  "language":"en",
+  "about":"The Ángelus is prayed three times a day, at dawn, at noon and toward evening, and this edition prints the three Hail Marys said in it. In Paschaltide the Regína cæli takes its place.",
+  "seg":[
+    {"id":"s01","tr":"The Angel of the Lord declared unto Mary.","tc":[45],"g":["angel","of the Lord","declared","unto Mary"]},
+    {"id":"s02","tr":"And she conceived of the Holy Spirit.","tc":[45],"g":["and","conceived","of","the Spirit","Holy"]},
+    {"id":"ave1","tr":"Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.","tc":[48],"g":["hail","Mary","with grace","full","the Lord","with thee","blessed","thou","among","women","and","blessed","fruit","of the womb","thy","Jesus","Holy","Mary","Mother","of God","pray","for","us","sinners","now","and","at","the hour","of death","our","amen"]},
+    {"id":"s04","tr":"Behold the handmaid of the Lord.","tc":[49],"g":["behold","handmaid","of the Lord"]},
+    {"id":"s05","tr":"Be it done unto me according to thy word.","tc":[49],"g":["be it done","unto me","according to","word","thy"]},
+    {"id":"ave2","tr":"Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.","tc":[48],"g":["hail","Mary","with grace","full","the Lord","with thee","blessed","thou","among","women","and","blessed","fruit","of the womb","thy","Jesus","Holy","Mary","Mother","of God","pray","for","us","sinners","now","and","at","the hour","of death","our","amen"]},
+    {"id":"s07","tr":"And the Word was made flesh.","tc":[49],"g":["and","the Word","flesh","made","was"]},
+    {"id":"s08","tr":"And dwelt among us.","tc":[49],"g":["and","dwelt","among","us"]},
+    {"id":"ave3","tr":"Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.","tc":[48],"g":["hail","Mary","with grace","full","the Lord","with thee","blessed","thou","among","women","and","blessed","fruit","of the womb","thy","Jesus","Holy","Mary","Mother","of God","pray","for","us","sinners","now","and","at","the hour","of death","our","amen"]},
+    {"id":"s10","tr":"Pray for us, O holy Mother of God.","tc":[45],"g":["pray","for","us","Holy","of God","Mother"]},
+    {"id":"s11","tr":"That we may be made worthy of the promises of Christ.","tc":[45],"g":["that","worthy","we may be made","of the promises","of Christ"]},
+    {"id":"s12","tr":"Let us pray.","tc":[49],"g":["let us pray"]},
+    {"id":"s13","tr":"Pour forth, we beseech thee, O Lord, thy grace into our hearts; that we, to whom the Incarnation of Christ, thy Son, was made known by the message of an angel, may by his Passion and Cross be brought to the glory of his Resurrection. Through the same Christ, our Lord. Amen.","tc":[52],"g":["grace","thy","we beseech","Lord","minds","our","pour forth","that","we who","an angel","declaring","of Christ","Son","thy","Incarnation","have known","by","Passion","his","and","Cross","to","of the Resurrection","glory","may be brought","through","the same","Christ","Lord","our","amen"]}
+  ]
+}

@@ -1,50 +1,58 @@
-import { LEXICON, TEXT_KEYS } from '$lib/corpus';
+import { loadSenses, textKeysFor } from '$lib/corpus';
 import { CONCEPTS } from '$lib/grammar';
-import { LANGS } from '$lib/i18n';
+import { LANGS, type Lang } from '$lib/i18n';
 import { ORDO } from '$lib/ordo';
 import { ORIGIN } from '$lib/site';
 
 export const prerender = true;
 
-// Two families of surface, one origin. The landing pages live at the
-// root; the book lives under /app. The two routers — / and /app/ — are
-// pure redirects and are left out, as the root always was.
-// Paths are language-relative; each gets one <url> per language carrying
-// the full hreflang pair so crawlers bind the two variants together.
 const landing: string[] = ['', '/privacy', '/support'];
-
-const app: string[] = [
+const sharedApp: string[] = [
 	'',
 	'/ordo',
-	...ORDO.map((m) => `/ordo/${m.id}`),
+	...ORDO.map((movement) => `/ordo/${movement.id}`),
 	'/editio',
 	'/bibliographia',
 	'/grammatica',
 	'/grammatica/pronuntiatio',
-	...TEXT_KEYS.map((key) => `/${key}`),
-	...CONCEPTS.map((c) => `/grammatica/${c.id}`),
-	...Object.keys(LEXICON.lemmata).map((lemma) => `/lemma/${lemma}`)
+	...CONCEPTS.map((concept) => `/grammatica/${concept.id}`)
 ];
 
-// The keys are interpolated into XML and into URLs, so they need both
-// treatments — today no lemma or text key needs either (checked), but the
-// bibliography already percent-encodes the same keys, and two modules that
-// disagree about the same strings is how one of them ends up wrong.
-function urlEntry(base: string, lang: string, path: string): string {
+function urlEntry(base: string, language: Lang, path: string, available: Lang[]): string {
 	const escaped = path.split('/').map(encodeURIComponent).join('/').replace(/&/g, '&amp;');
-	const alternates = LANGS.map(
-		(l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${ORIGIN}${base}/${l}${escaped}"/>`
-	).join('');
+	const alternates = available
+		.map(
+			(candidate) =>
+				`<xhtml:link rel="alternate" hreflang="${candidate}" href="${ORIGIN}${base}/${candidate}${escaped}"/>`
+		)
+		.join('');
+	const fallback = available.includes('en') ? 'en' : available[0];
 	return (
-		`<url><loc>${ORIGIN}${base}/${lang}${escaped}</loc>${alternates}` +
-		`<xhtml:link rel="alternate" hreflang="x-default" href="${ORIGIN}${base}/en${escaped}"/></url>`
+		`<url><loc>${ORIGIN}${base}/${language}${escaped}</loc>${alternates}` +
+		`<xhtml:link rel="alternate" hreflang="x-default" href="${ORIGIN}${base}/${fallback}${escaped}"/></url>`
 	);
 }
 
-export function GET(): Response {
+export async function GET(): Promise<Response> {
+	const appPaths = Object.fromEntries(
+		await Promise.all(
+			LANGS.map(async (language) => [
+				language,
+				new Set([
+					...sharedApp,
+					...textKeysFor(language).map((key) => `/${key}`),
+					...Object.keys(await loadSenses(language)).map((lemma) => `/lemma/${lemma}`)
+				])
+			])
+		)
+	) as Record<Lang, Set<string>>;
+	const allAppPaths = [...new Set(LANGS.flatMap((language) => [...appPaths[language]]))];
 	const entries = [
-		...landing.flatMap((path) => LANGS.map((lang) => urlEntry('', lang, path))),
-		...app.flatMap((path) => LANGS.map((lang) => urlEntry('/app', lang, path)))
+		...landing.flatMap((path) => LANGS.map((language) => urlEntry('', language, path, LANGS))),
+		...allAppPaths.flatMap((path) => {
+			const available = LANGS.filter((language) => appPaths[language].has(path));
+			return available.map((language) => urlEntry('/app', language, path, available));
+		})
 	];
 	const body =
 		'<?xml version="1.0" encoding="UTF-8"?>' +

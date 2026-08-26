@@ -23,12 +23,12 @@ const ZIP = `https://github.com/scrutabor/scrutabor/releases/download/v${pkg.ver
 
 export const load: PageServerLoad = async ({ params }) => {
 	const lang = params.lang as Lang;
-	const entry = await loadText('psalmi/118-he');
+	const entry = await loadText('psalmi/118-he', lang);
 	const verse = entry?.text.segments.find((s) => s.id === VERSE);
 	if (!entry || !verse) error(500, 'the specimen verse is missing from the corpus snapshot');
 
 	const doc: TextDocument = { ...entry.text, segments: [verse] };
-	const full = entry.glosses[lang];
+	const full = entry.gloss;
 	const ids = new Set((verse.words ?? []).map((w) => w.id));
 	// The verse's own segment gloss, verified present rather than spread in
 	// blind: `{ [id]: maybeUndefined }` would store undefined under a key
@@ -45,7 +45,7 @@ export const load: PageServerLoad = async ({ params }) => {
 	};
 
 	return {
-		specimen: { doc, gloss, lex: narrowLexicon([doc], lang) },
+		specimen: { doc, gloss, lex: await narrowLexicon([doc], lang) },
 		zip: ZIP,
 		version: pkg.version
 	};

@@ -1,0 +1,11 @@
+{
+  "id":"orationes.sub-tuum-praesidium",
+  "language":"en",
+  "about":"The basic form is the antiphon ending “O glorious and blessed Virgin”: a prayer for Mary's protection, for the petitions of the faithful to be heard, and for deliverance from danger. In the extended form often used in Poland, it is followed by the invocations beginning “Our Lady…” and further petitions. Beyond Polish prayer books that continuation is attested in the act of entrustment John Paul II made at Jasna Góra in 1991, where two of the titles stand in the other order.",
+  "seg":[
+    {"id":"s01","tr":"We fly to thy protection, O holy Mother of God; despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin.","tc":[114,115],"g":["under","thy","protection","we flee","Holy","of God","Mother","our","petitions","not","despise","in","necessities","but","from","dangers","all","deliver","us","always","Virgin","glorious","and","blessed"]},
+    {"id":"s02","tr":"Our Lady, our Mediatrix, our Advocate, our Comforter.","g":["Lady","our","Mediatrix","our","Advocate","our","Comforter","our"]},
+    {"id":"s03","tr":"Reconcile us with thy Son, commend us to thy Son, present us to thy Son.","g":["thy","Son","us","reconcile","thy","Son","us","commend","thy","Son","us","present"]},
+    {"id":"s04","tr":"Amen.","g":["amen"]}
+  ]
+}

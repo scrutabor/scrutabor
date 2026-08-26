@@ -1,108 +1,134 @@
 // Consistency of the vendored reader edition (src/lib/data). The corpus repo
-// runs the authoritative checks — including the round trip that proves the
-// edition reconstructs the documents it came from — and these mirror the ones
-// a stale or partial vendor would break, so a bad snapshot fails CI here
-// instead of surfacing at runtime.
+// runs the authoritative round-trip checks; these assertions protect the
+// application's package boundary and fail if a partial language pack is
+// internally incomplete.
 import { describe, expect, it } from 'vitest';
-import { LEXICON, loadAllTexts } from './corpus';
+import {
+	LEXICON,
+	loadAllCoreTexts,
+	loadAllTexts,
+	loadSenses,
+	textKeysFor,
+	type TextDocument,
+	type TextEntry
+} from './corpus';
+import { LANGS, type Lang } from './i18n';
 import manifest from './data/manifest.json';
 
-const TEXTS = await loadAllTexts();
+const LANGUAGES = LANGS;
+const CORE = await loadAllCoreTexts();
+const TEXTS = Object.fromEntries(
+	await Promise.all(LANGUAGES.map(async (language) => [language, await loadAllTexts(language)]))
+) as Record<Lang, Record<string, TextEntry>>;
+const SENSES = Object.fromEntries(
+	await Promise.all(LANGUAGES.map(async (language) => [language, await loadSenses(language)]))
+) as Record<Lang, Awaited<ReturnType<typeof loadSenses>>>;
 
-const allWords = (key: string) => TEXTS[key].text.segments.flatMap((s) => s.words ?? []);
-
-const textKeys = Object.keys(TEXTS);
+const allWords = (text: TextDocument) => text.segments.flatMap((segment) => segment.words ?? []);
 
 // The app renders cross-references as „form” (wNNN) / “form” (wNNN) links.
 const XREF = /[„“]([^”“„]+)”\s*\((w\d{3})\)/g;
 
 describe('vendored corpus snapshot', () => {
-	it('has at least the four launch texts', () => {
-		expect(textKeys.length).toBeGreaterThanOrEqual(4);
+	it('has at least the four launch texts in the neutral base', () => {
+		expect(Object.keys(CORE).length).toBeGreaterThanOrEqual(4);
 	});
 
-	it('carries one schema version across every document', () => {
+	it('loads exactly the texts declared by each independent language manifest', () => {
+		for (const language of LANGUAGES) {
+			expect(Object.keys(TEXTS[language]).sort()).toEqual([...textKeysFor(language)].sort());
+		}
+	});
+
+	it('carries one schema version across the base and every installed layer', () => {
 		const versions = new Set<string>([manifest.corpus_schema]);
-		for (const key of textKeys) {
-			versions.add(TEXTS[key].text.schema_version);
-			versions.add(TEXTS[key].glosses.pl.schema_version);
-			versions.add(TEXTS[key].glosses.en.schema_version);
+		for (const text of Object.values(CORE)) versions.add(text.schema_version);
+		for (const language of LANGUAGES) {
+			for (const entry of Object.values(TEXTS[language])) versions.add(entry.gloss.schema_version);
 		}
 		expect([...versions]).toHaveLength(1);
 	});
 
-	it('has unique word ids within every text', () => {
-		for (const key of textKeys) {
-			const ids = allWords(key).map((w) => w.id);
+	it('has unique word ids within every base text', () => {
+		for (const [key, text] of Object.entries(CORE)) {
+			const ids = allWords(text).map((word) => word.id);
 			expect(new Set(ids).size, key).toBe(ids.length);
 		}
 	});
 
-	it('has a lexicon entry in every layer for every lemma', () => {
-		for (const key of textKeys) {
-			for (const w of allWords(key)) {
-				expect(LEXICON.lemmata[w.lemma], `${key}:${w.id} lemma ${w.lemma}`).toBeDefined();
-				expect(LEXICON.senses.pl[w.lemma], `pl senses for ${w.lemma}`).toBeDefined();
-				expect(LEXICON.senses.en[w.lemma], `en senses for ${w.lemma}`).toBeDefined();
-			}
-		}
-	});
-
-	it('has identical lemma key sets across the three lexicon files', () => {
-		const lemmata = Object.keys(LEXICON.lemmata).sort();
-		expect(Object.keys(LEXICON.senses.pl).sort()).toEqual(lemmata);
-		expect(Object.keys(LEXICON.senses.en).sort()).toEqual(lemmata);
-	});
-
-	it('glosses every word in both languages', () => {
-		for (const key of textKeys) {
-			const ids = allWords(key).map((w) => w.id);
-			for (const lang of ['pl', 'en'] as const) {
-				const gloss = TEXTS[key].glosses[lang];
-				expect(Object.keys(gloss.words).sort(), `${key} ${lang}`).toEqual([...ids].sort());
-				for (const id of ids) {
-					expect(gloss.words[id].gloss, `${key} ${lang} ${id}`).toBeTruthy();
+	it('has a neutral lemma and a localized sense for every word a pack exposes', () => {
+		for (const language of LANGUAGES) {
+			for (const [key, { text }] of Object.entries(TEXTS[language])) {
+				for (const word of allWords(text)) {
+					expect(
+						LEXICON.lemmata[word.lemma],
+						`${key}:${word.id} lemma ${word.lemma}`
+					).toBeDefined();
+					expect(
+						SENSES[language][word.lemma],
+						`${language} senses for ${word.lemma}`
+					).toBeDefined();
 				}
 			}
 		}
 	});
 
-	it('keeps function-note presence in parity between languages', () => {
-		for (const key of textKeys) {
-			const withFn = (lang: 'pl' | 'en') =>
-				Object.entries(TEXTS[key].glosses[lang].words)
-					.filter(([, e]) => 'function' in e)
-					.map(([id]) => id)
-					.sort();
-			expect(withFn('pl'), key).toEqual(withFn('en'));
+	it('allows language lexicons to cover only the texts present in their package', () => {
+		for (const language of LANGUAGES) {
+			const required = new Set(
+				Object.values(TEXTS[language]).flatMap(({ text }) =>
+					allWords(text).map((word) => word.lemma)
+				)
+			);
+			for (const lemma of required)
+				expect(SENSES[language][lemma], `${language}:${lemma}`).toBeDefined();
+			expect(Object.keys(SENSES[language]).every((lemma) => lemma in LEXICON.lemmata)).toBe(true);
 		}
 	});
 
-	it('expands the word-level editorial note in both languages', () => {
-		// The disputed list's reader-facing notes travel as `nt` and were
-		// once expanded into a field no interface held and no component
-		// read — sixteen words told the reader "disputed" and withheld the
-		// dispute. The Pater's malo is the canary: if its note is here, the
-		// channel is open end to end.
-		let carried = 0;
-		for (const key of textKeys) {
-			const withNote = (lang: 'pl' | 'en') =>
-				Object.entries(TEXTS[key].glosses[lang].words)
-					.filter(([, e]) => typeof e.note === 'string' && e.note.length > 0)
+	it('fully glosses every word in every included language text', () => {
+		for (const language of LANGUAGES) {
+			for (const [key, entry] of Object.entries(TEXTS[language])) {
+				const ids = allWords(entry.text).map((word) => word.id);
+				expect(Object.keys(entry.gloss.words).sort(), `${key} ${language}`).toEqual(
+					[...ids].sort()
+				);
+				for (const id of ids)
+					expect(entry.gloss.words[id].gloss, `${key} ${language} ${id}`).toBeTruthy();
+				expect(entry.gloss.lang).toBe(language);
+			}
+		}
+	});
+
+	it('keeps shared annotation topology aligned where two packs include the same text', () => {
+		for (const key of textKeysFor('pl').filter((candidate) => candidate in TEXTS.en)) {
+			const withField = (language: Lang, field: 'function' | 'note') =>
+				Object.entries(TEXTS[language][key].gloss.words)
+					.filter(([, entry]) => field in entry)
 					.map(([id]) => id)
 					.sort();
-			const pl = withNote('pl');
-			expect(pl, key).toEqual(withNote('en'));
-			carried += pl.length;
+			expect(withField('pl', 'function'), key).toEqual(withField('en', 'function'));
+			expect(withField('pl', 'note'), key).toEqual(withField('en', 'note'));
+		}
+	});
+
+	it('expands the word-level editorial-note channel', () => {
+		let carried = 0;
+		for (const language of LANGUAGES) {
+			for (const entry of Object.values(TEXTS[language])) {
+				carried += Object.values(entry.gloss.words).filter(
+					(word) => typeof word.note === 'string' && word.note.length > 0
+				).length;
+			}
 		}
 		expect(carried).toBeGreaterThan(0);
-		expect(TEXTS['orationes/pater-noster'].glosses.pl.words['w049'].note).toContain('malum');
+		expect(TEXTS.pl['orationes/pater-noster'].gloss.words.w049.note).toContain('malum');
 	});
 
-	it('keeps reader-facing citations exact and attached to prose', () => {
-		for (const key of textKeys) {
-			const citations = (lang: 'pl' | 'en') => {
-				const gloss = TEXTS[key].glosses[lang];
+	it('keeps shared citations exact and attached to localized prose', () => {
+		for (const key of textKeysFor('pl').filter((candidate) => candidate in TEXTS.en)) {
+			const citations = (language: Lang) => {
+				const gloss = TEXTS[language][key].gloss;
 				return {
 					about: gloss.about_citations,
 					words: Object.fromEntries(
@@ -119,30 +145,31 @@ describe('vendored corpus snapshot', () => {
 			};
 			expect(citations('pl'), key).toEqual(citations('en'));
 
-			for (const lang of ['pl', 'en'] as const) {
-				const gloss = TEXTS[key].glosses[lang];
-				if (gloss.about_citations) expect(gloss.about, `${key} ${lang} about`).toBeTruthy();
+			for (const language of LANGUAGES) {
+				const gloss = TEXTS[language][key].gloss;
+				if (gloss.about_citations) expect(gloss.about, `${key} ${language} about`).toBeTruthy();
 				for (const [id, entry] of Object.entries(gloss.words)) {
-					if (entry.function_citations) expect(entry.function, `${key} ${lang} ${id}`).toBeTruthy();
+					if (entry.function_citations)
+						expect(entry.function, `${key} ${language} ${id}`).toBeTruthy();
 				}
 				for (const [id, entry] of Object.entries(gloss.segments)) {
 					if (entry.narrative_citations)
-						expect(entry.narrative, `${key} ${lang} ${id}`).toBeTruthy();
+						expect(entry.narrative, `${key} ${language} ${id}`).toBeTruthy();
 				}
 			}
 		}
 	});
 
-	it('resolves every cross-reference to a word whose form matches the quote', () => {
-		for (const key of textKeys) {
-			const byId = new Map(allWords(key).map((w) => [w.id, w]));
-			for (const lang of ['pl', 'en'] as const) {
-				for (const [id, entry] of Object.entries(TEXTS[key].glosses[lang].words)) {
-					for (const match of (entry.function ?? '').matchAll(XREF)) {
+	it('resolves every localized cross-reference inside its base text', () => {
+		for (const language of LANGUAGES) {
+			for (const [key, entry] of Object.entries(TEXTS[language])) {
+				const byId = new Map(allWords(entry.text).map((word) => [word.id, word]));
+				for (const [id, wordGloss] of Object.entries(entry.gloss.words)) {
+					for (const match of (wordGloss.function ?? '').matchAll(XREF)) {
 						const [, quoted, ref] = match;
 						const target = byId.get(ref);
-						expect(target, `${key} ${lang} ${id} → ${ref}`).toBeDefined();
-						expect(quoted, `${key} ${lang} ${id} → ${ref}`).toBe(target?.form);
+						expect(target, `${key} ${language} ${id} → ${ref}`).toBeDefined();
+						expect(quoted, `${key} ${language} ${id} → ${ref}`).toBe(target?.form);
 					}
 				}
 			}

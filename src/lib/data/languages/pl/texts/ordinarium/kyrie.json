@@ -1,0 +1,17 @@
+{
+  "id":"ordinarium.kyrie",
+  "language":"pl",
+  "about":"Greckie wezwanie o miłosierdzie. Trzykrotne „Kýrie eléison” prowadzi do trzykrotnego „Christe eléison”, po którym „Kýrie eléison” powraca jeszcze trzy razy.",
+  "seg":[
+    {"id":"s01","nr":"Ze złożonymi rękami kapłan odmawia wezwania na przemian z usługującymi. Jeśli nikt mu nie odpowiada, sam mówi wszystkie dziewięć."},
+    {"id":"s02","tr":"Panie, zmiłuj się.","g":["Panie","zmiłuj się"]},
+    {"id":"s03","tr":"Panie, zmiłuj się.","g":["Panie","zmiłuj się"]},
+    {"id":"s04","tr":"Panie, zmiłuj się.","g":["Panie","zmiłuj się"]},
+    {"id":"s05","tr":"Chryste, zmiłuj się.","g":["Chryste","zmiłuj się"],"fn":{"w007":"Grecki wołacz, z tą samą końcówką co „Kýrie” (w001)."}},
+    {"id":"s06","tr":"Chryste, zmiłuj się.","g":["Chryste","zmiłuj się"]},
+    {"id":"s07","tr":"Chryste, zmiłuj się.","g":["Chryste","zmiłuj się"]},
+    {"id":"s08","tr":"Panie, zmiłuj się.","g":["Panie","zmiłuj się"]},
+    {"id":"s09","tr":"Panie, zmiłuj się.","g":["Panie","zmiłuj się"]},
+    {"id":"s10","tr":"Panie, zmiłuj się.","g":["Panie","zmiłuj się"]}
+  ]
+}

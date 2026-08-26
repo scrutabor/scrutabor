@@ -1,17 +1,18 @@
 <script lang="ts">
-	import { CATALOG, type CatalogSection } from '$lib/catalog';
+	import { catalogFor, type CatalogSection } from '$lib/catalog';
 	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
 	import { M, type Lang } from '$lib/i18n';
 
 	let { data } = $props();
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
+	const available = $derived(new Set(data.available as string[]));
 	// A section may be declared with no texts — `proprium` is, because the
 	// day's own texts are reached through the Ordo and not through a shelf
 	// (see lib/catalog). Declared-but-empty must not print a bare heading.
-	const shelves = CATALOG.filter((section) => section.texts.length > 0);
-	const primarySections = shelves.filter((section) => section.category === 'orationes');
-	const secondarySections = shelves.filter((section) => section.category !== 'orationes');
+	const shelves = $derived(catalogFor(available).filter((section) => section.texts.length > 0));
+	const primarySections = $derived(shelves.filter((section) => section.category === 'orationes'));
+	const secondarySections = $derived(shelves.filter((section) => section.category !== 'orationes'));
 </script>
 
 {#snippet shelf(section: CatalogSection)}
@@ -21,7 +22,7 @@
 			{#each section.texts as t (t.slug)}
 				<a class="card" href="/app/{lang}/{t.category}/{t.slug}">
 					<span class="card-title" lang="la">{t.title}</span>
-					<span class="hung-note">{t.localizedTitle[lang]}</span>
+					<span class="hung-note">{t.localizedTitle[lang] ?? t.title}</span>
 				</a>
 			{/each}
 		</div>

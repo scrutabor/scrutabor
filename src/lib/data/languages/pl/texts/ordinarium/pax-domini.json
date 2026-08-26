@@ -1,0 +1,10 @@
+{
+  "id":"ordinarium.pax-domini",
+  "language":"pl",
+  "about":"Trzymając cząstkę Hostii nad kielichem, kapłan czyni nią trzykrotnie znak krzyża i wypowiada pozdrowienie pokoju. Usługujący odpowiada.",
+  "seg":[
+    {"id":"s01","nr":"Trzymając cząstkę nad kielichem, kapłan czyni nią trzy razy znak krzyża."},
+    {"id":"s02","tr":"Pokój Pański niech zawsze będzie z wami.","tc":[235],"g":["Pokój","Pana","niech będzie","zawsze","z wami"],"fn":{"w003":"Tryb łączący wyrażający życzenie.","w005":"Ablativus liczby mnogiej zaimka vos z przyłączonym -cum."}},
+    {"id":"s03","tr":"I z duchem twoim.","tc":[235],"g":["i","z","duchem","twoim"],"fn":{"w008":"Ablativus po „cum” (w007), należący do odpowiedzi „Et cum spíritu tuo”."}}
+  ]
+}

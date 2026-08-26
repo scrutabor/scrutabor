@@ -1,0 +1,13 @@
+{
+  "id":"ordinarium.in-spiritu-humilitatis",
+  "language":"en",
+  "about":"The first prayer closely follows Daniel 3:39–40. The Mass reverses the order of “in ánimo contríto” and “in spíritu humilitátis” while retaining the plural “suscipiámur” — “may we be received”. The second prayer begins with “Veni” — “come” — addressed to the Sanctifier.",
+  "seg":[
+    {"id":"s01","nr":"The priest makes the sign of the cross with the chalice, sets it on the corporal and covers it with the pall, then, bowed slightly with hands joined upon the altar, says the prayer."},
+    {"id":"s02","tr":"Lord, receive us in a spirit of humility and with a contrite heart; and may our sacrifice in Your sight today be such as to please You, Lord God.","tc":[176,209,178],"g":["in","a spirit","of humility","and","in","a heart","contrite","may we be received","by","Thee","Lord","and","so","let be made","sacrifice","our","in","the sight","Thy","this day","that","it may please","Thee","Lord","God"],"fn":{"w003":"Genitive depending on “spíritu” (w002): a spirit of humility.","w007":"Agrees with “ánimo” (w006).","w008":"First person plural passive. The petition concerns our being received.","w010":"Ablative of agent governed by “a” (w009).","w014":"“Fio” supplies the passive of “fácere”.","w023":"Dative governed by “pláceat” (w022)."}},
+    {"id":"s03","nr":"The priest stands upright, extends his hands, raises and joins them, lifting his eyes to heaven and at once lowering them."},
+    {"id":"s04","tr":"Come, Sanctifier, almighty and eternal God:","tc":[176,209,178],"g":["come","Sanctifier","almighty","eternal","God"],"fn":{"w026":"Second-person singular imperative of “vénio” — “come”.","w027":"Singular vocative, identical in form to the nominative."}},
+    {"id":"s05","nr":"The priest blesses the offerings and continues the prayer."},
+    {"id":"s06","tr":"and bless this sacrifice, prepared for Your holy name.","tc":[176,209,178],"g":["and","bless","this","sacrifice","for Thy","holy","name","prepared"],"fn":{"w037":"Dative depending on “præparátum” (w038).","w038":"Agrees with “sacrifícium” (w034): neuter singular accusative."}}
+  ]
+}
