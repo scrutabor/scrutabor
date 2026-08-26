@@ -5,6 +5,7 @@
 	// one page's chrome to drift away from the rest — the reader sees all
 	// eight, so a difference reads as a fault. It lives here instead.
 	import LangMenu from '$lib/components/LangMenu.svelte';
+	import Search from '$lib/components/Search.svelte';
 	import TextSize from '$lib/components/TextSize.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import { M, type Lang } from '$lib/i18n';
@@ -70,6 +71,7 @@
 		{/if}
 	</ol>
 	<div class="nav-right">
+		{#if base === '/app'}<Search {lang} />{/if}
 		<LangMenu {lang} {base} />
 		<TextSize {lang} />
 		<ThemeToggle {lang} />

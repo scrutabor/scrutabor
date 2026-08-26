@@ -1,64 +1,95 @@
 {
-  "schema_version": "3.0.0",
+  "schema_version": "3.1.0",
   "corpus_schema": "0.16.0",
   "language": "en",
   "direction": "ltr",
   "texts": [
     {
       "id": "defunctorum.de-profundis",
-      "path": "languages/en/texts/defunctorum/de-profundis.json"
+      "path": "languages/en/texts/defunctorum/de-profundis.json",
+      "title": "Out of the Depths"
     },
     {
       "id": "defunctorum.requiem-aeternam",
-      "path": "languages/en/texts/defunctorum/requiem-aeternam.json"
+      "path": "languages/en/texts/defunctorum/requiem-aeternam.json",
+      "title": "Eternal Rest"
     },
     {
       "id": "litaniae.lauretanae",
-      "path": "languages/en/texts/litaniae/lauretanae.json"
+      "path": "languages/en/texts/litaniae/lauretanae.json",
+      "title": "Litany of Loreto"
     },
     {
       "id": "litaniae.sacratissimi-cordis-iesu",
-      "path": "languages/en/texts/litaniae/sacratissimi-cordis-iesu.json"
+      "path": "languages/en/texts/litaniae/sacratissimi-cordis-iesu.json",
+      "title": "Litany of the Most Sacred Heart of Jesus"
     },
     {
       "id": "litaniae.sanctissimi-nominis-iesu",
-      "path": "languages/en/texts/litaniae/sanctissimi-nominis-iesu.json"
+      "path": "languages/en/texts/litaniae/sanctissimi-nominis-iesu.json",
+      "title": "Litany of the Most Holy Name of Jesus"
     },
     {
       "id": "orationes.actus-contritionis",
-      "path": "languages/en/texts/orationes/actus-contritionis.json"
+      "path": "languages/en/texts/orationes/actus-contritionis.json",
+      "title": "Act of Contrition"
     },
     {
       "id": "orationes.agimus-tibi-gratias",
-      "path": "languages/en/texts/orationes/agimus-tibi-gratias.json"
+      "path": "languages/en/texts/orationes/agimus-tibi-gratias.json",
+      "title": "Thanksgiving",
+      "aliases": [
+        "Prayer After Meals",
+        "Thanksgiving After Meals"
+      ]
     },
     {
       "id": "orationes.alma-redemptoris-mater",
-      "path": "languages/en/texts/orationes/alma-redemptoris-mater.json"
+      "path": "languages/en/texts/orationes/alma-redemptoris-mater.json",
+      "title": "Alma Redemptoris Mater",
+      "aliases": [
+        "Loving Mother of the Redeemer"
+      ]
     },
     {
       "id": "orationes.angele-dei",
-      "path": "languages/en/texts/orationes/angele-dei.json"
+      "path": "languages/en/texts/orationes/angele-dei.json",
+      "title": "Angel of God",
+      "aliases": [
+        "Guardian Angel Prayer"
+      ]
     },
     {
       "id": "orationes.angelus-domini",
-      "path": "languages/en/texts/orationes/angelus-domini.json"
+      "path": "languages/en/texts/orationes/angelus-domini.json",
+      "title": "The Angelus"
     },
     {
       "id": "orationes.anima-christi",
-      "path": "languages/en/texts/orationes/anima-christi.json"
+      "path": "languages/en/texts/orationes/anima-christi.json",
+      "title": "Soul of Christ"
     },
     {
       "id": "orationes.ave-maria",
-      "path": "languages/en/texts/orationes/ave-maria.json"
+      "path": "languages/en/texts/orationes/ave-maria.json",
+      "title": "Hail Mary",
+      "aliases": [
+        "Ave Maria"
+      ]
     },
     {
       "id": "orationes.ave-regina-caelorum",
-      "path": "languages/en/texts/orationes/ave-regina-caelorum.json"
+      "path": "languages/en/texts/orationes/ave-regina-caelorum.json",
+      "title": "Hail, Queen of the Heavens"
     },
     {
       "id": "orationes.benedic-domine",
-      "path": "languages/en/texts/orationes/benedic-domine.json"
+      "path": "languages/en/texts/orationes/benedic-domine.json",
+      "title": "Meal Blessing",
+      "aliases": [
+        "Prayer Before Meals",
+        "Bless Us, O Lord"
+      ]
     },
     {
       "id": "orationes.cor-iesu",
@@ -70,43 +101,69 @@
     },
     {
       "id": "orationes.gloria-patri",
-      "path": "languages/en/texts/orationes/gloria-patri.json"
+      "path": "languages/en/texts/orationes/gloria-patri.json",
+      "title": "Glory Be",
+      "aliases": [
+        "Lesser Doxology"
+      ]
     },
     {
       "id": "orationes.magnificat",
-      "path": "languages/en/texts/orationes/magnificat.json"
+      "path": "languages/en/texts/orationes/magnificat.json",
+      "title": "The Magnificat",
+      "aliases": [
+        "Canticle of Mary",
+        "My Soul Magnifies the Lord"
+      ]
     },
     {
       "id": "orationes.memorare",
-      "path": "languages/en/texts/orationes/memorare.json"
+      "path": "languages/en/texts/orationes/memorare.json",
+      "title": "Memorare",
+      "aliases": [
+        "Remember, O Most Gracious Virgin Mary"
+      ]
     },
     {
       "id": "orationes.pater-noster",
-      "path": "languages/en/texts/orationes/pater-noster.json"
+      "path": "languages/en/texts/orationes/pater-noster.json",
+      "title": "Our Father",
+      "aliases": [
+        "The Lord’s Prayer"
+      ]
     },
     {
       "id": "orationes.regina-caeli",
-      "path": "languages/en/texts/orationes/regina-caeli.json"
+      "path": "languages/en/texts/orationes/regina-caeli.json",
+      "title": "Queen of Heaven"
     },
     {
       "id": "orationes.salve-regina",
-      "path": "languages/en/texts/orationes/salve-regina.json"
+      "path": "languages/en/texts/orationes/salve-regina.json",
+      "title": "Hail, Holy Queen"
     },
     {
       "id": "orationes.sancte-michael",
-      "path": "languages/en/texts/orationes/sancte-michael.json"
+      "path": "languages/en/texts/orationes/sancte-michael.json",
+      "title": "Saint Michael the Archangel"
     },
     {
       "id": "orationes.signum-crucis",
-      "path": "languages/en/texts/orationes/signum-crucis.json"
+      "path": "languages/en/texts/orationes/signum-crucis.json",
+      "title": "Sign of the Cross"
     },
     {
       "id": "orationes.sub-tuum-praesidium",
-      "path": "languages/en/texts/orationes/sub-tuum-praesidium.json"
+      "path": "languages/en/texts/orationes/sub-tuum-praesidium.json",
+      "title": "We Fly to Thy Protection"
     },
     {
       "id": "orationes.symbolum-apostolorum",
-      "path": "languages/en/texts/orationes/symbolum-apostolorum.json"
+      "path": "languages/en/texts/orationes/symbolum-apostolorum.json",
+      "title": "Apostles’ Creed",
+      "aliases": [
+        "I Believe in God"
+      ]
     },
     {
       "id": "ordinarium.adiutorium",
@@ -114,7 +171,8 @@
     },
     {
       "id": "ordinarium.agnus-dei",
-      "path": "languages/en/texts/ordinarium/agnus-dei.json"
+      "path": "languages/en/texts/ordinarium/agnus-dei.json",
+      "title": "Lamb of God"
     },
     {
       "id": "ordinarium.aufer-a-nobis",
@@ -134,7 +192,8 @@
     },
     {
       "id": "ordinarium.confiteor",
-      "path": "languages/en/texts/ordinarium/confiteor.json"
+      "path": "languages/en/texts/ordinarium/confiteor.json",
+      "title": "I Confess"
     },
     {
       "id": "ordinarium.corpus-tuum",
@@ -142,7 +201,8 @@
     },
     {
       "id": "ordinarium.credo",
-      "path": "languages/en/texts/ordinarium/credo.json"
+      "path": "languages/en/texts/ordinarium/credo.json",
+      "title": "I Believe in One God"
     },
     {
       "id": "ordinarium.deo-gratias-epistolae",
@@ -170,7 +230,8 @@
     },
     {
       "id": "ordinarium.gloria",
-      "path": "languages/en/texts/ordinarium/gloria.json"
+      "path": "languages/en/texts/ordinarium/gloria.json",
+      "title": "Glory to God in the Highest"
     },
     {
       "id": "ordinarium.haec-commixtio",
@@ -198,7 +259,8 @@
     },
     {
       "id": "ordinarium.kyrie",
-      "path": "languages/en/texts/ordinarium/kyrie.json"
+      "path": "languages/en/texts/ordinarium/kyrie.json",
+      "title": "Lord, Have Mercy"
     },
     {
       "id": "ordinarium.laus-tibi-christe",
@@ -298,7 +360,8 @@
     },
     {
       "id": "ordinarium.sanctus",
-      "path": "languages/en/texts/ordinarium/sanctus.json"
+      "path": "languages/en/texts/ordinarium/sanctus.json",
+      "title": "Holy, Holy, Holy"
     },
     {
       "id": "ordinarium.simili-modo",
@@ -490,9 +553,11 @@
     },
     {
       "id": "psalmi.118-he",
-      "path": "languages/en/texts/psalmi/118-he.json"
+      "path": "languages/en/texts/psalmi/118-he.json",
+      "title": "The Perfection of God’s Law"
     }
   ],
   "lexicon": "languages/en/lexicon.json",
-  "citations": "languages/en/citations.json"
+  "citations": "languages/en/citations.json",
+  "concordance": "languages/en/concordance.json"
 }

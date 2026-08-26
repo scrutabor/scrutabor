@@ -14,7 +14,7 @@ import { bare as test, expect, settled } from './fixtures';
 // Reads sitemap.xml to find every Polish page. A downloaded copy carries
 // no sitemap — nothing there is crawled — so the sweep has nothing to
 // enumerate from and this runs against the served site.
-test('no Polish surface leaves a one-letter word before a breakable space @online', async ({
+test('no Polish surface leaves a one-letter word before a breakable space @online @sweep', async ({
 	page,
 	request
 }) => {

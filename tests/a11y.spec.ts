@@ -93,6 +93,26 @@ test('the word panel meets WCAG 2.1 AA, open and interactive', async ({ page }) 
 	expect(await violations(page), 'reading page with the word panel open').toEqual([]);
 });
 
+test('search meets WCAG 2.1 AA with all result groups open', async ({ page }) => {
+	await page.goto('/app/pl');
+	await page.getByRole('button', { name: 'szukaj' }).click();
+	const dialog = page.getByRole('dialog');
+	await dialog.getByRole('searchbox').fill('Pater');
+	await expect(dialog.locator('.results h3')).toHaveCount(3);
+	expect(await violations(page), 'search dialog with results').toEqual([]);
+});
+
+test('search meets WCAG 2.1 AA on a phone', async ({ page }) => {
+	await page.setViewportSize({ width: 375, height: 800 });
+	await page.goto('/app/pl');
+	await page.getByRole('button', { name: 'szukaj' }).click();
+	const dialog = page.getByRole('dialog');
+	const pious = 'Duszo Chrystusowa';
+	await dialog.getByRole('searchbox').fill(pious);
+	await expect(dialog).toContainText(pious);
+	expect(await violations(page), 'search dialog on a phone').toEqual([]);
+});
+
 // The reading size is a knob a reader turns precisely because the print is
 // too small for them, so the sizes that matter most for accessibility are
 // the ones the checks above never saw. Largest print on the narrowest phone

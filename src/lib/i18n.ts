@@ -23,6 +23,22 @@ export interface Messages {
 	textSizeAria: string;
 	textSizes: { normal: string; larger: string; largest: string };
 	langMenuAria: string;
+	searchLabel: string;
+	searchTitle: string;
+	searchClear: string;
+	searchHint: string;
+	searchLoading: string;
+	searchNoResults: string;
+	searchFailed: string;
+	searchTitles: string;
+	searchContents: string;
+	searchGrammar: string;
+	searchResultTitle: string;
+	searchResultLatin: string;
+	searchResultTranslation: string;
+	searchResultGrammar: string;
+	searchMatchedAlias: string;
+	searchCount: (n: number) => string;
 	close: string;
 	updateAvailable: string;
 	updateReload: string;
@@ -134,6 +150,29 @@ const MESSAGES: Record<Lang, Messages> = {
 		textSizeAria: 'wielkość pisma',
 		textSizes: { normal: 'normalne', larger: 'większe', largest: 'największe' },
 		langMenuAria: 'wybór języka',
+		searchLabel: 'szukaj',
+		searchTitle: 'wyszukiwanie w modlitewniku',
+		searchClear: 'wyczyść wyszukiwanie',
+		searchHint: 'Wpisz tytuł modlitwy, znany fragment albo łacińskie słowo.',
+		searchLoading: 'szukam…',
+		searchNoResults: 'Nie znaleziono pasujących miejsc.',
+		searchFailed: 'Nie udało się przeszukać tego wydania.',
+		searchTitles: 'tytuły modlitw',
+		searchContents: 'fragmenty tekstów',
+		searchGrammar: 'analiza gramatyczna',
+		searchResultTitle: 'tytuł',
+		searchResultLatin: 'tekst łaciński',
+		searchResultTranslation: 'przekład polski',
+		searchResultGrammar: 'gramatyka',
+		searchMatchedAlias: 'znaleziono także jako',
+		searchCount: (n) =>
+			`Znaleziono ${n} ${
+				n === 1
+					? 'wynik'
+					: n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)
+						? 'wyniki'
+						: 'wyników'
+			}.`,
 		close: 'zamknij',
 		updateAvailable: 'Nowa wersja jest gotowa.',
 		updateReload: 'Wczytaj',
@@ -258,6 +297,22 @@ const MESSAGES: Record<Lang, Messages> = {
 		textSizeAria: 'text size',
 		textSizes: { normal: 'normal', larger: 'larger', largest: 'largest' },
 		langMenuAria: 'language selection',
+		searchLabel: 'search',
+		searchTitle: 'search the prayer book',
+		searchClear: 'clear search',
+		searchHint: 'Enter a prayer title, a remembered phrase, or a Latin word.',
+		searchLoading: 'searching…',
+		searchNoResults: 'No matching places were found.',
+		searchFailed: 'This edition could not be searched.',
+		searchTitles: 'prayer titles',
+		searchContents: 'text passages',
+		searchGrammar: 'grammatical analysis',
+		searchResultTitle: 'title',
+		searchResultLatin: 'Latin text',
+		searchResultTranslation: 'English translation',
+		searchResultGrammar: 'grammar',
+		searchMatchedAlias: 'also found as',
+		searchCount: (n) => `${n} ${n === 1 ? 'result' : 'results'} found.`,
 		close: 'close',
 		updateAvailable: 'A new version is ready.',
 		updateReload: 'Reload',

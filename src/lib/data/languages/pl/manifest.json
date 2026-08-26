@@ -1,64 +1,98 @@
 {
-  "schema_version": "3.0.0",
+  "schema_version": "3.1.0",
   "corpus_schema": "0.16.0",
   "language": "pl",
   "direction": "ltr",
   "texts": [
     {
       "id": "defunctorum.de-profundis",
-      "path": "languages/pl/texts/defunctorum/de-profundis.json"
+      "path": "languages/pl/texts/defunctorum/de-profundis.json",
+      "title": "Z głębokości"
     },
     {
       "id": "defunctorum.requiem-aeternam",
-      "path": "languages/pl/texts/defunctorum/requiem-aeternam.json"
+      "path": "languages/pl/texts/defunctorum/requiem-aeternam.json",
+      "title": "Wieczny odpoczynek"
     },
     {
       "id": "litaniae.lauretanae",
-      "path": "languages/pl/texts/litaniae/lauretanae.json"
+      "path": "languages/pl/texts/litaniae/lauretanae.json",
+      "title": "Litania loretańska"
     },
     {
       "id": "litaniae.sacratissimi-cordis-iesu",
-      "path": "languages/pl/texts/litaniae/sacratissimi-cordis-iesu.json"
+      "path": "languages/pl/texts/litaniae/sacratissimi-cordis-iesu.json",
+      "title": "Litania do Najświętszego Serca Pana Jezusa"
     },
     {
       "id": "litaniae.sanctissimi-nominis-iesu",
-      "path": "languages/pl/texts/litaniae/sanctissimi-nominis-iesu.json"
+      "path": "languages/pl/texts/litaniae/sanctissimi-nominis-iesu.json",
+      "title": "Litania do Najświętszego Imienia Jezus"
     },
     {
       "id": "orationes.actus-contritionis",
-      "path": "languages/pl/texts/orationes/actus-contritionis.json"
+      "path": "languages/pl/texts/orationes/actus-contritionis.json",
+      "title": "Akt żalu"
     },
     {
       "id": "orationes.agimus-tibi-gratias",
-      "path": "languages/pl/texts/orationes/agimus-tibi-gratias.json"
+      "path": "languages/pl/texts/orationes/agimus-tibi-gratias.json",
+      "title": "Dziękczynienie",
+      "aliases": [
+        "Modlitwa po posiłku",
+        "Dziękczynienie po posiłku"
+      ]
     },
     {
       "id": "orationes.alma-redemptoris-mater",
-      "path": "languages/pl/texts/orationes/alma-redemptoris-mater.json"
+      "path": "languages/pl/texts/orationes/alma-redemptoris-mater.json",
+      "title": "Alma Redemptoris Mater",
+      "aliases": [
+        "Łaskawa Matko Odkupiciela"
+      ]
     },
     {
       "id": "orationes.angele-dei",
-      "path": "languages/pl/texts/orationes/angele-dei.json"
+      "path": "languages/pl/texts/orationes/angele-dei.json",
+      "title": "Aniele Boży",
+      "aliases": [
+        "Modlitwa do Anioła Stróża"
+      ]
     },
     {
       "id": "orationes.angelus-domini",
-      "path": "languages/pl/texts/orationes/angelus-domini.json"
+      "path": "languages/pl/texts/orationes/angelus-domini.json",
+      "title": "Anioł Pański"
     },
     {
       "id": "orationes.anima-christi",
-      "path": "languages/pl/texts/orationes/anima-christi.json"
+      "path": "languages/pl/texts/orationes/anima-christi.json",
+      "title": "Duszo Chrystusowa"
     },
     {
       "id": "orationes.ave-maria",
-      "path": "languages/pl/texts/orationes/ave-maria.json"
+      "path": "languages/pl/texts/orationes/ave-maria.json",
+      "title": "Zdrowaś Maryjo",
+      "aliases": [
+        "Ave Maria"
+      ]
     },
     {
       "id": "orationes.ave-regina-caelorum",
-      "path": "languages/pl/texts/orationes/ave-regina-caelorum.json"
+      "path": "languages/pl/texts/orationes/ave-regina-caelorum.json",
+      "title": "Witaj, Królowo niebios",
+      "aliases": [
+        "Bądź pozdrowiona, Królowo niebios"
+      ]
     },
     {
       "id": "orationes.benedic-domine",
-      "path": "languages/pl/texts/orationes/benedic-domine.json"
+      "path": "languages/pl/texts/orationes/benedic-domine.json",
+      "title": "Błogosławieństwo posiłku",
+      "aliases": [
+        "Modlitwa przed posiłkiem",
+        "Pobłogosław, Panie"
+      ]
     },
     {
       "id": "orationes.cor-iesu",
@@ -70,43 +104,71 @@
     },
     {
       "id": "orationes.gloria-patri",
-      "path": "languages/pl/texts/orationes/gloria-patri.json"
+      "path": "languages/pl/texts/orationes/gloria-patri.json",
+      "title": "Chwała Ojcu",
+      "aliases": [
+        "Doksologia mała"
+      ]
     },
     {
       "id": "orationes.magnificat",
-      "path": "languages/pl/texts/orationes/magnificat.json"
+      "path": "languages/pl/texts/orationes/magnificat.json",
+      "title": "Magnificat (Pieśń Maryi)",
+      "aliases": [
+        "Pieśń Maryi",
+        "Wielbi dusza moja Pana"
+      ]
     },
     {
       "id": "orationes.memorare",
-      "path": "languages/pl/texts/orationes/memorare.json"
+      "path": "languages/pl/texts/orationes/memorare.json",
+      "title": "Pomnij, o Najświętsza Panno Maryjo",
+      "aliases": [
+        "Pomnij",
+        "Memorare"
+      ]
     },
     {
       "id": "orationes.pater-noster",
-      "path": "languages/pl/texts/orationes/pater-noster.json"
+      "path": "languages/pl/texts/orationes/pater-noster.json",
+      "title": "Ojcze nasz",
+      "aliases": [
+        "Modlitwa Pańska"
+      ]
     },
     {
       "id": "orationes.regina-caeli",
-      "path": "languages/pl/texts/orationes/regina-caeli.json"
+      "path": "languages/pl/texts/orationes/regina-caeli.json",
+      "title": "Królowo nieba"
     },
     {
       "id": "orationes.salve-regina",
-      "path": "languages/pl/texts/orationes/salve-regina.json"
+      "path": "languages/pl/texts/orationes/salve-regina.json",
+      "title": "Witaj, Królowo"
     },
     {
       "id": "orationes.sancte-michael",
-      "path": "languages/pl/texts/orationes/sancte-michael.json"
+      "path": "languages/pl/texts/orationes/sancte-michael.json",
+      "title": "Święty Michale Archaniele"
     },
     {
       "id": "orationes.signum-crucis",
-      "path": "languages/pl/texts/orationes/signum-crucis.json"
+      "path": "languages/pl/texts/orationes/signum-crucis.json",
+      "title": "Znak krzyża"
     },
     {
       "id": "orationes.sub-tuum-praesidium",
-      "path": "languages/pl/texts/orationes/sub-tuum-praesidium.json"
+      "path": "languages/pl/texts/orationes/sub-tuum-praesidium.json",
+      "title": "Pod Twoją obronę"
     },
     {
       "id": "orationes.symbolum-apostolorum",
-      "path": "languages/pl/texts/orationes/symbolum-apostolorum.json"
+      "path": "languages/pl/texts/orationes/symbolum-apostolorum.json",
+      "title": "Skład Apostolski",
+      "aliases": [
+        "Wierzę w Boga",
+        "Credo Apostolskie"
+      ]
     },
     {
       "id": "ordinarium.adiutorium",
@@ -114,7 +176,8 @@
     },
     {
       "id": "ordinarium.agnus-dei",
-      "path": "languages/pl/texts/ordinarium/agnus-dei.json"
+      "path": "languages/pl/texts/ordinarium/agnus-dei.json",
+      "title": "Baranku Boży"
     },
     {
       "id": "ordinarium.aufer-a-nobis",
@@ -134,7 +197,8 @@
     },
     {
       "id": "ordinarium.confiteor",
-      "path": "languages/pl/texts/ordinarium/confiteor.json"
+      "path": "languages/pl/texts/ordinarium/confiteor.json",
+      "title": "Spowiadam się"
     },
     {
       "id": "ordinarium.corpus-tuum",
@@ -142,7 +206,8 @@
     },
     {
       "id": "ordinarium.credo",
-      "path": "languages/pl/texts/ordinarium/credo.json"
+      "path": "languages/pl/texts/ordinarium/credo.json",
+      "title": "Wierzę w jednego Boga"
     },
     {
       "id": "ordinarium.deo-gratias-epistolae",
@@ -170,7 +235,8 @@
     },
     {
       "id": "ordinarium.gloria",
-      "path": "languages/pl/texts/ordinarium/gloria.json"
+      "path": "languages/pl/texts/ordinarium/gloria.json",
+      "title": "Chwała na wysokości Bogu"
     },
     {
       "id": "ordinarium.haec-commixtio",
@@ -198,7 +264,8 @@
     },
     {
       "id": "ordinarium.kyrie",
-      "path": "languages/pl/texts/ordinarium/kyrie.json"
+      "path": "languages/pl/texts/ordinarium/kyrie.json",
+      "title": "Panie, zmiłuj się"
     },
     {
       "id": "ordinarium.laus-tibi-christe",
@@ -298,7 +365,8 @@
     },
     {
       "id": "ordinarium.sanctus",
-      "path": "languages/pl/texts/ordinarium/sanctus.json"
+      "path": "languages/pl/texts/ordinarium/sanctus.json",
+      "title": "Święty, Święty, Święty"
     },
     {
       "id": "ordinarium.simili-modo",
@@ -490,9 +558,11 @@
     },
     {
       "id": "psalmi.118-he",
-      "path": "languages/pl/texts/psalmi/118-he.json"
+      "path": "languages/pl/texts/psalmi/118-he.json",
+      "title": "Doskonałość Prawa Bożego"
     }
   ],
   "lexicon": "languages/pl/lexicon.json",
-  "citations": "languages/pl/citations.json"
+  "citations": "languages/pl/citations.json",
+  "concordance": "languages/pl/concordance.json"
 }
