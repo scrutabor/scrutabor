@@ -83,6 +83,12 @@ const CATALOG_SOURCE: CatalogSection[] = [
 			},
 			{
 				category: 'orationes',
+				slug: 'benedic-domine',
+				title: 'Bénedic, Dómine',
+				localizedTitle: { pl: 'Błogosławieństwo posiłku', en: 'Meal Blessing' }
+			},
+			{
+				category: 'orationes',
 				slug: 'angelus-domini',
 				title: 'Ángelus Dómini',
 				localizedTitle: { pl: 'Anioł Pański', en: 'The Angelus' }
