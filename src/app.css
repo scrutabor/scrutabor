@@ -244,6 +244,9 @@ em {
    the initial's sink and lift all convert through that number — so
    scaling the face would detune the spacing without saying so. */
 .page {
+	/* The outer frame is a book-wide invariant. Route styles may shape
+	   content inside it, but must not give an individual page another
+	   width; scripts/page-frame.test.ts enforces that boundary. */
 	max-width: clamp(38rem, 60vw, 56rem);
 	margin: 0 auto;
 	padding: 1.25rem 1.5rem 4rem;
