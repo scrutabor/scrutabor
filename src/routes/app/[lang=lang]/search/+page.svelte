@@ -151,10 +151,6 @@
 </div>
 
 <style>
-	.search-page {
-		max-width: min(68rem, 92vw);
-	}
-
 	main {
 		width: 100%;
 	}
@@ -192,10 +188,6 @@
 	}
 
 	@media (max-width: 34rem) {
-		.search-page {
-			max-width: none;
-		}
-
 		.search-head {
 			padding-top: 0.1rem;
 		}
