@@ -413,6 +413,33 @@
 		border-radius: 0.15rem;
 	}
 
+	/* A search result names the verse, not the full measure that happens to
+	   contain it. A short verse therefore shrinks to its words, while a long
+	   one still wraps at the book measure. Interlinear annotations hang below
+	   their line box, so the highlighted verse explicitly reserves room for
+	   them; an inset rule cannot trespass on the gloss above. */
+	.verse.search-hit {
+		position: relative;
+		box-sizing: border-box;
+		width: fit-content;
+		max-width: 100%;
+		padding-inline-end: calc(var(--reading) * 0.18);
+		outline: 0;
+	}
+
+	.verse.search-hit::after {
+		position: absolute;
+		inset: calc(var(--reading) * 0.16) 0 0;
+		border: 1px solid var(--rubric);
+		border-radius: 0.15rem;
+		content: '';
+		pointer-events: none;
+	}
+
+	.verse.search-hit.glossed {
+		padding-block-end: calc(var(--reading) * 0.34);
+	}
+
 	.translation-sources {
 		margin: calc(var(--reading) * 1.1) 0 calc(var(--reading) * 0.55);
 	}

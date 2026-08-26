@@ -92,6 +92,50 @@ test('a translation passage opens and marks the exact segment', async ({ page })
 	await expect(page.locator('#s01.search-hit')).toBeVisible();
 });
 
+test('a marked verse fits its text and clears neighbouring interlinear glosses', async ({
+	page
+}) => {
+	await page.setViewportSize({ width: 1280, height: 720 });
+	await page.goto('/app/pl/orationes/angelus-domini?s=s01');
+	const short = await page.locator('#s01.search-hit').evaluate((element) => {
+		const verse = element.getBoundingClientRect();
+		const measure = element.parentElement!.getBoundingClientRect();
+		const tokens = [...element.querySelectorAll('.token')].map((token) =>
+			token.getBoundingClientRect()
+		);
+		const glosses = [...element.querySelectorAll('rt')].map((gloss) =>
+			gloss.getBoundingClientRect()
+		);
+		return {
+			width: verse.width,
+			measure: measure.width,
+			rightAir: verse.right - Math.max(...tokens.map((token) => token.right)),
+			bottomAir: verse.bottom - Math.max(...glosses.map((gloss) => gloss.bottom))
+		};
+	});
+	expect(short.width, 'a short hit inherited the full reading measure').toBeLessThan(
+		short.measure * 0.75
+	);
+	expect(short.rightAir, 'the rule touches the last word').toBeGreaterThan(2);
+	expect(short.bottomAir, 'the rule touches the interlinear gloss').toBeGreaterThan(4);
+
+	await page.goto('/app/pl/orationes/angelus-domini?s=s13');
+	const long = await page.locator('#s13.search-hit').evaluate((element) => {
+		const verse = element.getBoundingClientRect();
+		const rule = getComputedStyle(element, '::after');
+		const preceding = document.querySelectorAll('#s12 rt');
+		return {
+			topAir:
+				verse.top +
+				parseFloat(rule.top) -
+				Math.max(...[...preceding].map((gloss) => gloss.getBoundingClientRect().bottom)),
+			overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth
+		};
+	});
+	expect(long.topAir, 'the rule touches the preceding interlinear gloss').toBeGreaterThan(2);
+	expect(long.overflow, 'the long marked verse widens the page').toBe(0);
+});
+
 test('minor mistakes and missing diacritics still find a familiar title', async ({ page }) => {
 	const field = await openSearchPage(page);
 	await field.fill('Najświętsza Panmo');
