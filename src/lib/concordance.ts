@@ -1,6 +1,5 @@
-// Concordance: where each lemma occurs across the corpus. Derived from the
-// vendored snapshot at module load — the corpus is small enough that the
-// whole index costs less than one prayer's text.
+// Concordance: where each lemma and normalized Latin form occurs. The corpus
+// emits the postings; this module resolves only the text files they name.
 //
 // It is built from EVERY text, not from the catalogue. The catalogue orders
 // a shelf of thirteen; the corpus holds sixty-one, and the concordance was
@@ -12,8 +11,9 @@
 // from and the list of what exists are two different lists.
 import { CATALOG } from './catalog';
 import { PROPER_DAYS, partOf, properRank } from './proprium';
-import { TEXTS } from './corpus';
+import { TEXT_KEYS, hasText, loadTexts } from './corpus';
 import { ORDO } from './ordo';
+import concordance from './data/concordance.json';
 
 export interface Occurrence {
 	/** "category/slug" — the reading route params. */
@@ -29,6 +29,54 @@ export interface TextOccurrences {
 	items: Occurrence[];
 }
 
+export interface ConcordanceAddress {
+	textKey: string;
+	wordId: string;
+}
+
+type Posting = [number, string];
+interface ConcordanceData {
+	schema_version: string;
+	texts: (string | null)[];
+	latin: {
+		lemmata: Record<string, Posting[]>;
+		forms: Record<string, Posting[]>;
+	};
+}
+
+const DATA = concordance as unknown as ConcordanceData;
+
+/** The same normalization the corpus uses when it emits form search keys. */
+export function normalizeLatin(value: string): string {
+	return value
+		.toLocaleLowerCase('la')
+		.replaceAll('æ', 'ae')
+		.replaceAll('œ', 'oe')
+		.normalize('NFKD')
+		.replaceAll(/\p{M}/gu, '');
+}
+
+function textKey(number: number): string | undefined {
+	return DATA.texts[number]?.replace('.', '/');
+}
+
+function candidateKeys(postings: Posting[]): string[] {
+	return [...new Set(postings.map(([number]) => textKey(number)).filter(Boolean))] as string[];
+}
+
+/** Stable word addresses for exact Latin-form results in a future search UI. */
+export function addressesForLatinForm(form: string): ConcordanceAddress[] {
+	return (DATA.latin.forms[normalizeLatin(form)] ?? []).flatMap(([number, wordId]) => {
+		const key = textKey(number);
+		return key ? [{ textKey: key, wordId }] : [];
+	});
+}
+
+/** Candidate texts for a future Latin search, without opening any text. */
+export function textsForLatinForm(form: string): string[] {
+	return [...new Set(addressesForLatinForm(form).map(({ textKey: key }) => key))];
+}
+
 /**
  * Every text in the corpus, in the order a reader meets it: the shelf
  * first, then the Mass from the Ordo's own sequence, and last — sorted, so
@@ -40,7 +88,7 @@ export function everyTextInOrder(): string[] {
 	const seen = new Set<string>();
 	const order: string[] = [];
 	const add = (key: string) => {
-		if (TEXTS[key] && !seen.has(key)) {
+		if (hasText(key) && !seen.has(key)) {
 			seen.add(key);
 			order.push(key);
 		}
@@ -62,7 +110,7 @@ export function everyTextInOrder(): string[] {
 		const at = PROPER_DAYS.findIndex((d) => d.id === day);
 		return at === -1 ? PROPER_DAYS.length : at;
 	};
-	const tail = Object.keys(TEXTS).sort((a, b) => {
+	const tail = [...TEXT_KEYS].sort((a, b) => {
 		const [ca, sa] = a.split('/');
 		const [cb, sb] = b.split('/');
 		if (ca === 'proprium' && cb === 'proprium') {
@@ -75,28 +123,37 @@ export function everyTextInOrder(): string[] {
 	return order;
 }
 
-const INDEX = new Map<string, Occurrence[]>();
-
-for (const key of everyTextInOrder()) {
-	const entry = TEXTS[key];
-	for (const seg of entry.text.segments) {
-		for (const w of seg.words ?? []) {
-			let list = INDEX.get(w.lemma);
-			if (!list) INDEX.set(w.lemma, (list = []));
-			list.push({ textKey: key, title: entry.text.title, wordId: w.id, form: w.form });
-		}
+export async function occurrencesOf(lemma: string): Promise<TextOccurrences[]> {
+	const postings = DATA.latin.lemmata[lemma] ?? [];
+	const texts = await loadTexts(candidateKeys(postings));
+	const byText = new Map<string, string[]>();
+	for (const [number, wordId] of postings) {
+		const key = textKey(number);
+		if (!key) continue;
+		const ids = byText.get(key) ?? [];
+		ids.push(wordId);
+		byText.set(key, ids);
 	}
-}
 
-export function occurrencesOf(lemma: string): TextOccurrences[] {
 	const grouped: TextOccurrences[] = [];
-	for (const occ of INDEX.get(lemma) ?? []) {
-		const last = grouped[grouped.length - 1];
-		if (last && last.textKey === occ.textKey) {
-			last.items.push(occ);
-		} else {
-			grouped.push({ textKey: occ.textKey, title: occ.title, items: [occ] });
-		}
+	for (const key of everyTextInOrder()) {
+		const ids = byText.get(key);
+		const entry = texts[key];
+		if (!ids || !entry) continue;
+		const wanted = new Set(ids);
+		const words = entry.text.segments
+			.flatMap((segment) => segment.words ?? [])
+			.filter((word) => wanted.has(word.id));
+		grouped.push({
+			textKey: key,
+			title: entry.text.title,
+			items: words.map((word) => ({
+				textKey: key,
+				title: entry.text.title,
+				wordId: word.id,
+				form: word.form
+			}))
+		});
 	}
 	return grouped;
 }

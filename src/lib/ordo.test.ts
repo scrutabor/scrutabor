@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { TEXTS } from './corpus';
+import { loadAllTexts } from './corpus';
 import { ORDO, partVoice } from './ordo';
+
+const TEXTS = await loadAllTexts();
 
 // The spine states how loudly each part is said, and so does the corpus, one
 // segment at a time. Two layers holding the same fact drift apart unless

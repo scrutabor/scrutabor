@@ -1,6 +1,6 @@
 // Which day of the church's year a date is.
 //
-// The corpus computes this and ships it as a table (`kal.json`): decision #6
+// The corpus computes this and ships it as a table (`calendar.json`): decision #6
 // says apps never implement movable-feast logic, and there are three readers
 // coming. Everything here is a lookup — the arithmetic of Easter, the
 // displacement of the Fourth Sunday of Advent by the Vigil of the Nativity,
@@ -15,7 +15,7 @@
 // depends on the season — the Missale prints one for every day of Lent and
 // none between the Sundays of Advent — and no rule the corpus has transcribed
 // settles the second case, so the week is named and nothing is claimed.
-import kal from './data/kal.json';
+import calendar from './data/calendar.json';
 
 export interface Kalendar {
 	/** The formulary said on the day — the id a proper's texts are filed under. */
@@ -36,7 +36,7 @@ export interface Kalendar {
 
 type Row = [string, number, number, number, number];
 
-const YEARS = kal.y as unknown as Record<string, Row[]>;
+const YEARS = calendar.years as unknown as Record<string, Row[]>;
 const SPAN = Object.keys(YEARS)
 	.map(Number)
 	.sort((a, b) => a - b);
@@ -59,10 +59,10 @@ const EXTENT = (() => {
 function shape(row: Row): Kalendar {
 	return {
 		when: row[0],
-		formulary: kal.f[row[1]],
-		season: kal.s[row[2]],
+		formulary: calendar.formularies[row[1]],
+		season: calendar.seasons[row[2]],
 		dies: row[3] as 1 | 2,
-		position: kal.f[row[4]]
+		position: calendar.formularies[row[4]]
 	};
 }
 
@@ -113,5 +113,5 @@ export const COVERS: [number, number] = [SPAN[0], SPAN[SPAN.length - 1]];
  * not written yet, and an id that names nothing — a mangled link. The first
  * deserves a note, the second the dayless view. */
 export function formularyExists(id: string): boolean {
-	return (kal.f as string[]).includes(id);
+	return (calendar.formularies as string[]).includes(id);
 }

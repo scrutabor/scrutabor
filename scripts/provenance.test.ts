@@ -22,19 +22,17 @@ import { describe, expect, it } from 'vitest';
 const DATA = 'src/lib/data';
 const provenance = JSON.parse(readFileSync(`${DATA}/provenance.json`, 'utf8'));
 
-/** Exactly what the vendor script hashed: every file it wrote, in name order.
- *
- * The texts sit in `t/`, so the name hashed is the relative path and not the
- * basename — `join()` on the vendor side, `t/x.json` here, and the two must
- * spell it the same way or the digest is a comparison of two different walks.
- */
+/** Exactly what the vendor script hashed: every JSON file it wrote, in name order. */
 function digestOfVendoredData(): { sha256: string; files: number } {
-	const names = [
-		...readdirSync(DATA).filter((name) => name.endsWith('.json') && name !== 'provenance.json'),
-		...readdirSync(`${DATA}/t`)
-			.filter((name) => name.endsWith('.json'))
-			.map((name) => `t/${name}`)
-	].sort();
+	const below = (dir: string, prefix = ''): string[] =>
+		readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+			const name = prefix ? `${prefix}/${entry.name}` : entry.name;
+			if (entry.isDirectory()) return below(`${dir}/${entry.name}`, name);
+			return entry.isFile() && entry.name.endsWith('.json') && name !== 'provenance.json'
+				? [name]
+				: [];
+		});
+	const names = below(DATA).sort();
 	const digest = createHash('sha256');
 	for (const name of names) {
 		digest.update(name);
@@ -60,7 +58,7 @@ describe('the corpus this app ships', () => {
 		// short key falling through the sets and a layer quietly missing
 		// from the reader's page. Bump these WITH the mirror, never alone.
 		expect(provenance.schema_version).toBe('0.15.0');
-		expect(provenance.edition).toBe('1.0.0');
+		expect(provenance.edition).toBe('2.0.0');
 	});
 
 	it('was vendored from a clean corpus', () => {

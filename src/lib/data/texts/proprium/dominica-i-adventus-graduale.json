@@ -1,0 +1,17 @@
+{
+  "id":"proprium.dominica-i-adventus-graduale",
+  "title":"Univérsi, qui te exspéctant",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-i-adventus",
+  "sung":true,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "about":{"pl":"Graduał I Niedzieli Adwentu, Ps 24, 3 i 4 według numeracji Wulgaty (Ps 25 w numeracji hebrajskiej). Śpiewa te dwa wersety, które śpiewał przed chwilą introit, i ma notas fac mihi tam, gdzie introit ma demónstra mihi.","en":"The gradual of the First Sunday of Advent, Psalm 24:3 and 4 in the Vulgate numbering (Psalm 25 in Hebrew). It sings the two verses the introit has just sung, and reads notas fac mihi where the introit reads demónstra mihi."},
+  "ac":{"pl":[362],"en":[362]},
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true},"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Univérsi","l":"universus","p":",","m":87,"s":true},{"i":"w002","f":"qui","l":"qui","m":124},{"i":"w003","f":"te","l":"tu","m":4},{"i":"w004","f":"exspéctant","l":"exspecto","p":",","m":125},{"i":"w005","f":"non","l":"non","m":32},{"i":"w006","f":"confundéntur","l":"confundo","p":",","m":372},{"i":"w007","f":"Dómine","l":"dominus","p":".","m":5}],"tr":{"pl":"Nikt, kto Ciebie oczekuje, nie będzie zawstydzony, Panie.","en":"None who await You shall be put to shame, O Lord."},"tc":{"pl":[366],"en":[142]},"g":{"pl":["wszyscy","którzy","Ciebie","oczekują","nie","będą zawstydzeni","Panie"],"en":["all","who","Thou","await","not","shall be put to shame","Lord"]},"fn":{"pl":{"w001":"Przymiotnik występuje rzeczownikowo jako „wszyscy”. Zdanie względne wskazuje, że chodzi o oczekujących Pana."},"en":{"w001":"The adjective stands substantivally for all people. Its relative clause identifies them as those who await the Lord."}}},
+    {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true},"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w008","f":"Vias","l":"via","m":169},{"i":"w009","f":"tuas","l":"tuus","p":",","m":180,"h":"w008"},{"i":"w010","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w011","f":"notas","l":"notus","m":180,"h":"w008"},{"i":"w012","f":"fac","l":"facio","m":86},{"i":"w013","f":"mihi","l":"ego","p":":","m":139},{"i":"w014","f":"et","l":"et","m":15},{"i":"w015","f":"sémitas","l":"semita","m":169},{"i":"w016","f":"tuas","l":"tuus","m":180,"h":"w015"},{"i":"w017","f":"édoce","l":"edoceo","m":190},{"i":"w018","f":"me","l":"ego","p":".","m":4}],"tr":{"pl":"Ukaż mi swoje drogi, Panie, i naucz mnie swoich ścieżek.","en":"Make Your ways known to me, O Lord, and teach me Your paths."},"tc":{"pl":[366],"en":[142]},"g":{"pl":["drogi","Twoje","Panie","znanymi","uczyń","mi","i","ścieżki","Twoje","naucz","mnie"],"en":["ways","Thy","Lord","known","make","to me","and","paths","Thy","teach","me"]}}
+  ]
+}

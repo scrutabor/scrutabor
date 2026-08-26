@@ -5,7 +5,7 @@
 // a page receives its own words and the lexicon entries they can ask
 // about, nothing more). The demonstration is therefore the mechanism
 // itself: the same mode control, the same panel, the same data.
-import { TEXTS, narrowLexicon, type GlossDocument, type TextDocument } from '$lib/corpus';
+import { loadText, narrowLexicon, type GlossDocument, type TextDocument } from '$lib/corpus';
 import type { Lang } from '$lib/i18n';
 import { error } from '@sveltejs/kit';
 import pkg from '../../../package.json';
@@ -21,9 +21,9 @@ const VERSE = 's02';
 // also cuts the tag this URL names.
 const ZIP = `https://github.com/scrutabor/scrutabor/releases/download/v${pkg.version}/Scrutabor-v${pkg.version}.zip`;
 
-export const load: PageServerLoad = ({ params }) => {
+export const load: PageServerLoad = async ({ params }) => {
 	const lang = params.lang as Lang;
-	const entry = TEXTS['psalmi/118-he'];
+	const entry = await loadText('psalmi/118-he');
 	const verse = entry?.text.segments.find((s) => s.id === VERSE);
 	if (!entry || !verse) error(500, 'the specimen verse is missing from the corpus snapshot');
 

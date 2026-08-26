@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { TEXTS } from './corpus';
+import { TEXT_KEYS } from './corpus';
 import {
 	PROPER_DAYS,
 	PROPER_PARTS,
@@ -12,7 +12,7 @@ import {
 } from './proprium';
 import { ORDO } from './ordo';
 
-const properKeys = Object.keys(TEXTS).filter((k) => k.startsWith('proprium/'));
+const properKeys = TEXT_KEYS.filter((k) => k.startsWith('proprium/'));
 
 describe('the days table and the corpus agree', () => {
 	it('names a day for every proprium text', () => {

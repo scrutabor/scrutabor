@@ -7,6 +7,6 @@
 import { properData } from '$lib/loaders';
 import type { Lang } from '$lib/i18n';
 
-export function localDay(day: string, lang: Lang): unknown | null {
-	return properData(day, lang);
+export async function localDay(day: string, lang: Lang): Promise<unknown | null> {
+	return await properData(day, lang);
 }

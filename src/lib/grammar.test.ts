@@ -43,6 +43,6 @@ describe('grammar concepts', () => {
 describe('grammar examples against the corpus', () => {
 	it('every example carries the fact its page teaches', async () => {
 		const { assertExamplesResolve } = await import('./grammar.check');
-		expect(() => assertExamplesResolve()).not.toThrow();
+		await expect(assertExamplesResolve()).resolves.toBeUndefined();
 	});
 });

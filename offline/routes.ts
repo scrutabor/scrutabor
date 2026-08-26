@@ -113,19 +113,19 @@ export function match(path: string): RouteMatch | null {
  * — a page that would 404 on the site returns null here and the copy shows
  * its own not-found rather than an empty frame.
  */
-export function pageData(found: RouteMatch): Record<string, unknown> | null {
+export async function pageData(found: RouteMatch): Promise<Record<string, unknown> | null> {
 	const lang = found.params.lang as Lang;
 	switch (found.name) {
 		case 'reading':
-			return readingData(lang, found.params.category, found.params.slug);
+			return await readingData(lang, found.params.category, found.params.slug);
 		case 'movement':
-			return ordoData(lang, found.params.movement);
+			return await ordoData(lang, found.params.movement);
 		case 'lemma':
-			return lemmaData(lang, found.params.lemma);
+			return await lemmaData(lang, found.params.lemma);
 		case 'concept':
 			return conceptData(found.params.concept);
 		case 'bibliographia':
-			return bibliographyData(lang);
+			return await bibliographyData(lang);
 		default:
 			return null;
 	}

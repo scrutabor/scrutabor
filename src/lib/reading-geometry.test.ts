@@ -7,8 +7,10 @@
 // is caught before anyone has to notice a letter touching its neighbour.
 import { describe, expect, it } from 'vitest';
 import { GLOSS_GAP, initialFit, measuredInitial, sinkFor } from './reading-geometry';
-import { TEXTS } from './corpus';
+import { loadAllTexts } from './corpus';
 import { firstVerseWithInitial } from './speaker-marks';
+
+const TEXTS = await loadAllTexts();
 
 // Q is the only letter in the corpus whose tail reaches below the line;
 // L and A are the two whose ink crosses their advance sideways.

@@ -23,13 +23,13 @@ function corpusProse(): { where: string; text: string }[] {
 	// The LEXICON keeps its prose at entries[lemma].note, not words[id].note,
 	// so this walk stepped past all 329 of them until 2026-08-16 — and the
 	// lexicon is vendored and rendered, so every one reached a lemma page.
-	const lexicon = read('lex.json');
+	const lexicon = read('lexicon.json');
 	for (const lang of LANGS) {
-		for (const [lemma, entry] of Object.entries(lexicon.s[lang] ?? {}) as [
+		for (const [lemma, entry] of Object.entries(lexicon.senses[lang] ?? {}) as [
 			string,
 			Record<string, string>
 		][]) {
-			if (entry.note) out.push({ where: `lex.json:${lang}.${lemma}.note`, text: entry.note });
+			if (entry.note) out.push({ where: `lexicon.json:${lang}.${lemma}.note`, text: entry.note });
 		}
 	}
 
@@ -37,24 +37,26 @@ function corpusProse(): { where: string; text: string }[] {
 	// on the text, `nr` on a rubric segment, `fn` and `nt` on a word. The keys
 	// are short because this is the reader edition — the shape the corpus
 	// emits rather than the shape it stores.
-	for (const file of readdirSync(`${dir}/t`)) {
-		if (!file.endsWith('.json')) continue;
-		const doc = read(`t/${file}`);
-		const at = (k: string) => `${file}:${k}`;
-		const byLang = (value: unknown, where: string) => {
-			for (const lang of LANGS) {
-				const text = (value as Record<string, string> | undefined)?.[lang];
-				if (text) out.push({ where: `${where}.${lang}`, text });
-			}
-		};
-		byLang(doc.about, at('about'));
-		for (const row of (doc.seg ?? []) as Record<string, unknown>[]) {
-			byLang(row.nr, at(`${row.id}.narrative`));
-			for (const key of ['fn', 'nt']) {
+	for (const category of readdirSync(`${dir}/texts`)) {
+		for (const file of readdirSync(`${dir}/texts/${category}`)) {
+			if (!file.endsWith('.json')) continue;
+			const doc = read(`texts/${category}/${file}`);
+			const at = (k: string) => `${category}/${file}:${k}`;
+			const byLang = (value: unknown, where: string) => {
 				for (const lang of LANGS) {
-					const byWord = (row[key] as Record<string, Record<string, string>>)?.[lang] ?? {};
-					for (const [id, text] of Object.entries(byWord)) {
-						out.push({ where: at(`${id}.${key}.${lang}`), text });
+					const text = (value as Record<string, string> | undefined)?.[lang];
+					if (text) out.push({ where: `${where}.${lang}`, text });
+				}
+			};
+			byLang(doc.about, at('about'));
+			for (const row of (doc.seg ?? []) as Record<string, unknown>[]) {
+				byLang(row.nr, at(`${row.id}.narrative`));
+				for (const key of ['fn', 'nt']) {
+					for (const lang of LANGS) {
+						const byWord = (row[key] as Record<string, Record<string, string>>)?.[lang] ?? {};
+						for (const [id, text] of Object.entries(byWord)) {
+							out.push({ where: at(`${id}.${key}.${lang}`), text });
+						}
 					}
 				}
 			}

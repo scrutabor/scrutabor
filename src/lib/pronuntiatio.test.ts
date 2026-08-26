@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { TEXTS } from './corpus';
+import { loadAllTexts } from './corpus';
 import { ipa, pronunciations } from './pronunciation';
 import { PRONUNCIATION_RULES } from './pronuntiatio-rules';
+
+const TEXTS = await loadAllTexts();
 
 // The pronunciation page teaches twelve rules and prints a transcription
 // beside each. The transcriptions are hand-written prose on a page, and the

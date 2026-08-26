@@ -12,7 +12,15 @@
 // route file, so that what is shared is only the part both editions can run.
 import { buildBibliography } from './bibliography';
 import { occurrencesOf } from './concordance';
-import { LEXICON, TEXTS, narrowLexicon, type TextDocument } from './corpus';
+import {
+	LEXICON,
+	TEXT_KEYS,
+	loadAllTexts,
+	loadText,
+	loadTexts,
+	narrowLexicon,
+	type TextDocument
+} from './corpus';
 import type { Lang } from './i18n';
 import { conceptById } from './grammar';
 import { movementById } from './ordo';
@@ -25,8 +33,8 @@ export function layoutData(lang: string, path: string) {
 	return { lang, version: pkg.version, path };
 }
 
-export function readingData(lang: Lang, category: string, slug: string) {
-	const entry = TEXTS[`${category}/${slug}`];
+export async function readingData(lang: Lang, category: string, slug: string) {
+	const entry = await loadText(`${category}/${slug}`);
 	if (!entry) return null;
 
 	const numbered = entry.text.segments.filter((seg) => seg.verse !== undefined);
@@ -45,14 +53,17 @@ export function readingData(lang: Lang, category: string, slug: string) {
 	};
 }
 
-export function ordoData(lang: Lang, movement: string) {
+export async function ordoData(lang: Lang, movement: string) {
 	const found = movementById(movement);
 	if (!found) return null;
 
+	const loaded = await loadTexts(
+		found.entries.flatMap((entry) => (entry.text ? [entry.text] : []))
+	);
 	const texts: Record<string, { doc: unknown; gloss: unknown }> = {};
 	const docs: TextDocument[] = [];
 	for (const e of found.entries) {
-		const entry = e.text ? TEXTS[e.text] : undefined;
+		const entry = e.text ? loaded[e.text] : undefined;
 		if (!entry) continue;
 		texts[e.text!] = { doc: entry.text, gloss: entry.glosses[lang] };
 		docs.push(entry.text);
@@ -60,7 +71,7 @@ export function ordoData(lang: Lang, movement: string) {
 	return { movement, texts, lex: narrowLexicon(docs, lang) };
 }
 
-export function lemmaData(lang: Lang, lemma: string) {
+export async function lemmaData(lang: Lang, lemma: string) {
 	// Null for a lemma the lexicon has never heard of — the same answer the
 	// other loaders give for a bad slug, so the two editions cannot differ:
 	// the site 404s (the route is only prerendered for real entries) and
@@ -70,7 +81,7 @@ export function lemmaData(lang: Lang, lemma: string) {
 		lemma,
 		entry: LEXICON.lemmata[lemma],
 		sense: LEXICON.senses[lang][lemma] ?? null,
-		occurrences: occurrencesOf(lemma)
+		occurrences: await occurrencesOf(lemma)
 	};
 }
 
@@ -79,8 +90,8 @@ export function conceptData(concept: string) {
 	return conceptById(concept) ? { concept } : null;
 }
 
-export function bibliographyData(lang: Lang) {
-	return { sources: buildBibliography(lang) };
+export async function bibliographyData(lang: Lang) {
+	return { sources: buildBibliography(lang, await loadAllTexts()) };
 }
 
 /**
@@ -92,7 +103,7 @@ export function bibliographyData(lang: Lang) {
  * (decisions #27, revised 2026-08-18). A downloaded copy already holds the
  * whole corpus, so it calls this directly and needs no artifact at all.
  */
-export function properData(day: string, lang: Lang) {
+export async function properData(day: string, lang: Lang) {
 	const found = PROPER_DAYS.find((d) => d.id === day);
 	if (!found) return null;
 
@@ -100,19 +111,18 @@ export function properData(day: string, lang: Lang) {
 	// plus a known part suffix, and a prefix match would let a day whose id
 	// begins with another's (nativitas / nativitas-vigilia) pull the other
 	// day's parts into its Mass.
-	const keys = Object.keys(TEXTS)
-		.filter((key) => {
-			const [category, slug] = key.split('/');
-			if (category !== 'proprium') return false;
-			const part = partOf(slug);
-			return part !== undefined && slug.slice(0, -(part.length + 1)) === found.id;
-		})
-		.sort((a, b) => properRank(a.split('/')[1]) - properRank(b.split('/')[1]));
+	const keys = TEXT_KEYS.filter((key) => {
+		const [category, slug] = key.split('/');
+		if (category !== 'proprium') return false;
+		const part = partOf(slug);
+		return part !== undefined && slug.slice(0, -(part.length + 1)) === found.id;
+	}).sort((a, b) => properRank(a.split('/')[1]) - properRank(b.split('/')[1]));
 	if (!keys.length) return null;
 
+	const loaded = await loadTexts(keys);
 	const docs: TextDocument[] = [];
 	const parts = keys.map((key) => {
-		const entry = TEXTS[key];
+		const entry = loaded[key];
 		docs.push(entry.text);
 		const slug = key.split('/')[1];
 		const part = partOf(slug);

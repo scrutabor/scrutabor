@@ -91,6 +91,9 @@ function routePath(): string {
 
 let instance: { $destroy: () => void } | null = null;
 let mountedPath: string | null = null;
+let pendingPath: string | null = null;
+let navigation = 0;
+let queuedArrow: 'ArrowLeft' | 'ArrowRight' | null = null;
 const stores = { page: store<unknown>(null), navigating: store(null), updated: store(false) };
 
 /** Routes whose page cannot render without data the corpus may not have. */
@@ -106,9 +109,9 @@ const NEEDS_DATA = new Set(['reading', 'movement', 'lemma', 'concept']);
  * their own language — and it also keeps the pyramid four deep, which matters
  * for the reason the next comment gives.
  */
-function plan(found: RouteMatch | null, path: string) {
+async function plan(found: RouteMatch | null, path: string) {
 	const lang = /^\/(pl|en)\b/.exec(path)?.[1] as Lang | undefined;
-	const data = found ? pageData(found) : null;
+	const data = found ? await pageData(found) : null;
 	const missing = !found || (data === null && NEEDS_DATA.has(found.name));
 	if (!missing) return { ids: nodeIds(found!.key), layout: layoutFor(found!), data, ok: true };
 
@@ -130,8 +133,10 @@ function plan(found: RouteMatch | null, path: string) {
  */
 let loaded: Component[] = [];
 
-function render(found: RouteMatch | null, path: string): void {
-	const { ids, layout, data, ok } = plan(found, path);
+type MountPlan = Awaited<ReturnType<typeof plan>>;
+
+function render(found: RouteMatch | null, path: string, prepared: MountPlan): void {
+	const { ids, layout, data, ok } = prepared;
 	const constructors = ids.map((id) => loaded[id].component);
 
 	const layers: (Record<string, unknown> | null)[] = ids.map(() => null);
@@ -200,7 +205,7 @@ function render(found: RouteMatch | null, path: string): void {
 	mountedPath = path;
 }
 
-function navigate(): void {
+async function navigate(): Promise<void> {
 	const path = routePath();
 	if (path === '/' || path === '') {
 		location.replace(`#/${preferredLang()}`);
@@ -208,14 +213,31 @@ function navigate(): void {
 	}
 	// A query-only change is the word panel opening or the day being picked.
 	// Re-rendering there would throw away the page the reader is looking at.
-	if (path === mountedPath) return;
-	render(match(path), path);
+	if (path === mountedPath || path === pendingPath) return;
+	const mine = ++navigation;
+	pendingPath = path;
+	const scroll = consumeIntent();
+	// Stop the page being left before the first lazy text import yields. Its
+	// keyboard listener must not act on the new hash during that promise gap.
+	instance?.$destroy();
+	instance = null;
+	mountedPath = null;
+	const found = match(path);
+	const prepared = await plan(found, path);
+	if (mine !== navigation) return;
+	pendingPath = null;
+	render(found, path, prepared);
 	// A FOLLOWED LINK starts the new page at its top, as a document load
 	// would. A history traversal does not: the browser restores the
 	// reader's own place on Back, and scrolling to the top over it loses
 	// where they were.
-	if (consumeIntent()) window.scrollTo({ top: 0, behavior: 'auto' });
+	if (scroll) window.scrollTo({ top: 0, behavior: 'auto' });
 	navigated();
+	if (queuedArrow) {
+		const key = queuedArrow;
+		queuedArrow = null;
+		dispatchEvent(new KeyboardEvent('keydown', { key, bubbles: true }));
+	}
 }
 
 /**
@@ -253,11 +275,35 @@ function interceptLinks() {
 	);
 }
 
+/** Preserve one paging intent made while a lazy text is resolving.
+ *
+ * The old page has already been destroyed, deliberately, and the new one is
+ * not mounted yet. Replaying after mount makes the page named by the address
+ * answer the key, exactly as the former synchronous router did.
+ */
+function interceptPendingArrow() {
+	addEventListener(
+		'keydown',
+		(event) => {
+			if (!pendingPath || (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight')) return;
+			if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+			const element = document.activeElement as HTMLElement | null;
+			if (['INPUT', 'TEXTAREA', 'SELECT'].includes(element?.tagName ?? '')) return;
+			if (element?.getAttribute('role') === 'radio') return;
+			event.preventDefault();
+			event.stopImmediatePropagation();
+			queuedArrow ??= event.key;
+		},
+		true
+	);
+}
+
 async function boot(): Promise<void> {
 	loaded = (await Promise.all(nodes.map((load) => load()))) as Component[];
 	interceptLinks();
-	addEventListener('hashchange', () => navigate());
-	navigate();
+	interceptPendingArrow();
+	addEventListener('hashchange', () => void navigate());
+	await navigate();
 }
 
 declare global {

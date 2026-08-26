@@ -262,7 +262,7 @@ export async function chooseDay(next: string | null, lang: Lang): Promise<void> 
  * have been 400 files and about 8 MB of what the runtime already holds.
  */
 async function load(day: string, lang: Lang): Promise<ProperPayload> {
-	const here = localDay(day, lang);
+	const here = await localDay(day, lang);
 	if (here) return here as ProperPayload;
 	// Bounded: a request that never answers would otherwise leave the
 	// loading notice up forever, with re-picking as the only way out.

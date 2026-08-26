@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { TEXTS } from './corpus';
+import { loadAllTexts } from './corpus';
 import { ipa, pronunciations, stressIndex, syllabify, syllabized } from './pronunciation';
+
+const TEXTS = await loadAllTexts();
 
 const ACCENTED = /[áéíóúýǽ]|\u0301/i;
 const UNACCENTED_POLYSYLLABLES = new Set(['israël']);

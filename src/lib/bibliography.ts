@@ -1,4 +1,4 @@
-import { LEXICON, TEXTS, type Citation } from './corpus';
+import { LEXICON, type Citation, type TextEntry } from './corpus';
 import type { Lang } from './i18n';
 
 export interface BibliographyUse {
@@ -37,7 +37,10 @@ interface MutableSource {
  * word panel respectively; this is deliberately the bibliography of notes,
  * not an indiscriminate list of everything used to make the edition.
  */
-export function buildBibliography(lang: Lang): BibliographySource[] {
+export function buildBibliography(
+	lang: Lang,
+	texts: Record<string, TextEntry>
+): BibliographySource[] {
 	const sources = new Map<string, MutableSource>();
 
 	function add(citation: Citation, use: Where) {
@@ -60,7 +63,7 @@ export function buildBibliography(lang: Lang): BibliographySource[] {
 		else locator.uses.push({ ...use, notes: 1 });
 	}
 
-	for (const [key, entry] of Object.entries(TEXTS)) {
+	for (const [key, entry] of Object.entries(texts)) {
 		const gloss = entry.glosses[lang];
 		const textUse = { title: entry.text.title, href: `/app/${lang}/${key}` };
 		const anchors = new Map(

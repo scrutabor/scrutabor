@@ -5,7 +5,7 @@
 // own text, its own gloss layer, and only the lexicon entries its own words
 // need: the web stays light, and the installed app fills its cache
 // separately (decisions #27).
-import { TEXTS } from '$lib/corpus';
+import { TEXT_KEYS } from '$lib/corpus';
 import { readingData } from '$lib/loaders';
 import { LANGS, type Lang } from '$lib/i18n';
 import { error } from '@sveltejs/kit';
@@ -19,14 +19,14 @@ import type { EntryGenerator, PageServerLoad } from './$types';
 // linked has to be built.
 export const entries: EntryGenerator = () =>
 	LANGS.flatMap((lang) =>
-		Object.keys(TEXTS).map((key) => {
+		TEXT_KEYS.map((key) => {
 			const [category, slug] = key.split('/');
 			return { lang, category, slug };
 		})
 	);
 
-export const load: PageServerLoad = ({ params }) => {
-	const data = readingData(params.lang as Lang, params.category, params.slug);
+export const load: PageServerLoad = async ({ params }) => {
+	const data = await readingData(params.lang as Lang, params.category, params.slug);
 	if (!data) error(404, 'no such text');
 	return data;
 };

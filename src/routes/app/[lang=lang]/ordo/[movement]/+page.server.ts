@@ -11,8 +11,8 @@ import type { EntryGenerator, PageServerLoad } from './$types';
 export const entries: EntryGenerator = () =>
 	LANGS.flatMap((lang) => ORDO.map((m) => ({ lang, movement: m.id })));
 
-export const load: PageServerLoad = ({ params }) => {
-	const data = ordoData(params.lang as Lang, params.movement ?? '');
+export const load: PageServerLoad = async ({ params }) => {
+	const data = await ordoData(params.lang as Lang, params.movement ?? '');
 	if (!data) error(404, 'no such movement');
 	return data;
 };

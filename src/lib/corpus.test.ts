@@ -4,8 +4,10 @@
 // a stale or partial vendor would break, so a bad snapshot fails CI here
 // instead of surfacing at runtime.
 import { describe, expect, it } from 'vitest';
-import { LEXICON, TEXTS } from './corpus';
+import { LEXICON, loadAllTexts } from './corpus';
 import manifest from './data/manifest.json';
+
+const TEXTS = await loadAllTexts();
 
 const allWords = (key: string) => TEXTS[key].text.segments.flatMap((s) => s.words ?? []);
 

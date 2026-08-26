@@ -25,11 +25,10 @@
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
 
 const CORPUS = '../scrutabor-corpus';
 const DATA = 'src/lib/data';
-const TEXTS = join(DATA, 't');
 // The allowlist exists so a re-vendor cannot silently widen the product:
 // data with no surface is data shipped for nobody. `proprium` joined it on
 // 2026-08-18, when the shelf and the label that names the day landed with it.
@@ -57,13 +56,15 @@ const manifest = read(join(BUILD, 'manifest.json'));
 // its texts, so dropping one here would leave every posting after it pointing
 // at the wrong text — a corpus that grows a category has to be admitted on
 // purpose, and this says so loudly instead of quietly renumbering.
-const unknown = manifest.texts.map((id) => id.split('.')[0]).filter((c) => !CATEGORIES.has(c));
+const unknown = manifest.texts
+	.map((entry) => entry.id.split('.')[0])
+	.filter((category) => !CATEGORIES.has(category));
 if (unknown.length) {
 	throw new Error(`the edition holds categories the app does not list: ${[...new Set(unknown)]}`);
 }
 
-rmSync(TEXTS, { recursive: true, force: true });
-mkdirSync(TEXTS, { recursive: true });
+rmSync(DATA, { recursive: true, force: true });
+mkdirSync(DATA, { recursive: true });
 
 const written = new Set();
 const copy = (name, from) => {
@@ -71,31 +72,26 @@ const copy = (name, from) => {
 	// Byte for byte, so that the app ships exactly what the corpus verified.
 	// Reformatting it here would mean the sha256 below attests to this
 	// script's output rather than to the edition.
-	writeFileSync(join(DATA, name), readFileSync(from));
+	const target = join(DATA, name);
+	mkdirSync(dirname(target), { recursive: true });
+	writeFileSync(target, readFileSync(from));
 };
 
-for (const name of [
-	'manifest.json',
-	'm.json',
-	'a.json',
-	'c.json',
-	'x.json',
-	'lex.json',
-	'kal.json'
-]) {
-	copy(name, join(BUILD, name));
-}
-for (const file of readdirSync(join(BUILD, 't'))) {
-	// A literal slash, not join(): scripts/provenance.test.ts re-walks these
-	// names to check the digest, and the two sides must spell a path the same way.
-	if (file.endsWith('.json')) copy(`t/${file}`, join(BUILD, 't', file));
+function filesBelow(root, prefix = '') {
+	const files = [];
+	for (const entry of readdirSync(root, { withFileTypes: true })) {
+		const name = prefix ? `${prefix}/${entry.name}` : entry.name;
+		if (entry.isDirectory()) files.push(...filesBelow(join(root, entry.name), name));
+		else if (entry.isFile() && entry.name.endsWith('.json')) files.push(name);
+	}
+	return files;
 }
 
-let removed = 0;
-for (const file of readdirSync(DATA)) {
-	if (file === 't' || written.has(file)) continue;
-	rmSync(join(DATA, file), { recursive: true });
-	removed++;
+// Mirror the edition instead of naming today's folders. A later optional
+// search/pl.json is data with a surface, but it must not require teaching the
+// vendor a new path before the app can use it.
+for (const name of filesBelow(BUILD).sort()) {
+	copy(name, join(BUILD, name));
 }
 
 // WHICH CORPUS THIS IS. Until 2026-08-19 the app carried files it could not
@@ -128,5 +124,5 @@ const provenance = {
 };
 writeFileSync(join(DATA, 'provenance.json'), JSON.stringify(provenance, null, '\t') + '\n');
 
-console.log(`vendored ${written.size} files of the reader edition, removed ${removed} stale`);
+console.log(`vendored ${written.size} files of the reader edition`);
 console.log(`  corpus ${corpusCommit.slice(0, 7)}${dirty ? ' (working tree dirty)' : ''}`);

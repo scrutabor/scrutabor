@@ -10,8 +10,8 @@ import type { EntryGenerator, PageServerLoad } from './$types';
 export const entries: EntryGenerator = () =>
 	LANGS.flatMap((lang) => CONCEPTS.map((c) => ({ lang, concept: c.id })));
 
-export const load: PageServerLoad = ({ params }) => {
-	assertExamplesResolve();
+export const load: PageServerLoad = async ({ params }) => {
+	await assertExamplesResolve();
 	const data = conceptData(params.concept);
 	if (!data) error(404, 'no such concept');
 	return data;

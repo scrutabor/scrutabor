@@ -1,13 +1,13 @@
 import { describe, expect, it } from 'vitest';
 import { CATALOG } from './catalog';
 import { properRank } from './proprium';
-import { everyTextInOrder, occurrencesOf } from './concordance';
-import { TEXTS } from './corpus';
+import { everyTextInOrder, occurrencesOf, textsForLatinForm } from './concordance';
+import { TEXT_KEYS } from './corpus';
 import { ORDO } from './ordo';
 
 describe('occurrencesOf', () => {
-	it("groups occurrences by text in the book's own order", () => {
-		const oro = occurrencesOf('oro');
+	it("groups occurrences by text in the book's own order", async () => {
+		const oro = await occurrencesOf('oro');
 		const keys = oro.map((t) => t.textKey);
 		const at = (k: string) => keys.indexOf(k);
 		// the prayers shelf first, in the shelf's order…
@@ -21,8 +21,8 @@ describe('occurrencesOf', () => {
 		expect(oro[0].items.map((o) => o.form)).toEqual(['ora']);
 	});
 
-	it('lists every form of a lemma with its word id', () => {
-		const deus = occurrencesOf('deus');
+	it('lists every form of a lemma with its word id', async () => {
+		const deus = await occurrencesOf('deus');
 		const confiteor = deus.find((t) => t.textKey === 'ordinarium/confiteor');
 		expect(confiteor?.items).toEqual(
 			expect.arrayContaining([
@@ -32,14 +32,19 @@ describe('occurrencesOf', () => {
 		);
 	});
 
-	it('returns an empty list for an unknown lemma', () => {
-		expect(occurrencesOf('nonexistent')).toEqual([]);
+	it('returns an empty list for an unknown lemma', async () => {
+		expect(await occurrencesOf('nonexistent')).toEqual([]);
 	});
 
-	it('covers every lemma of every text', () => {
+	it('covers every lemma of every text', async () => {
 		// The index is derived from the same snapshot as the reading view —
 		// a lemma with zero occurrences would mean the derivation dropped it.
-		expect(occurrencesOf('et').length).toBeGreaterThan(0);
+		expect((await occurrencesOf('et')).length).toBeGreaterThan(0);
+	});
+
+	it('finds normalized Latin forms before loading candidate documents', () => {
+		expect(textsForLatinForm('DÓMINUS')).toContain('ordinarium/gloria');
+		expect(textsForLatinForm('cælos')).toContain('orationes/symbolum-apostolorum');
 	});
 });
 
@@ -48,7 +53,7 @@ describe('what the concordance is built from', () => {
 		// It read the CATALOGUE once, which orders thirteen texts of the
 		// sixty-one that exist, so the whole Canon was missing from every
 		// lemma page — and the page gave no sign of it.
-		expect(everyTextInOrder().length).toBe(Object.keys(TEXTS).length);
+		expect(everyTextInOrder().length).toBe(TEXT_KEYS.length);
 	});
 
 	it('and something sequences each of them', () => {

@@ -1,1 +1,627 @@
-{"schema_version":"1.0.0","corpus_schema":"0.15.0","texts":["defunctorum.de-profundis","defunctorum.requiem-aeternam","litaniae.lauretanae","litaniae.sacratissimi-cordis-iesu","litaniae.sanctissimi-nominis-iesu","orationes.actus-contritionis","orationes.agimus-tibi-gratias","orationes.alma-redemptoris-mater","orationes.angele-dei","orationes.angelus-domini","orationes.anima-christi","orationes.ave-maria","orationes.ave-regina-caelorum","orationes.benedic-domine","orationes.cor-iesu","orationes.deus-refugium","orationes.gloria-patri","orationes.magnificat","orationes.memorare","orationes.pater-noster","orationes.regina-caeli","orationes.salve-regina","orationes.sancte-michael","orationes.signum-crucis","orationes.sub-tuum-praesidium","orationes.symbolum-apostolorum","ordinarium.adiutorium","ordinarium.agnus-dei","ordinarium.aufer-a-nobis","ordinarium.benedictio","ordinarium.communicantes","ordinarium.confiteor-sacerdotis","ordinarium.confiteor","ordinarium.corpus-tuum","ordinarium.credo","ordinarium.deo-gratias-epistolae","ordinarium.deus-qui-humanae","ordinarium.deus-tu-conversus","ordinarium.ecce-agnus-dei","ordinarium.evangelium-ultimum","ordinarium.fili-dei-vivi","ordinarium.gloria","ordinarium.haec-commixtio","ordinarium.hanc-igitur","ordinarium.in-spiritu-humilitatis","ordinarium.introibo","ordinarium.ite-missa-est","ordinarium.iudica-me","ordinarium.kyrie","ordinarium.laus-tibi-christe","ordinarium.lavabo","ordinarium.libera-nos","ordinarium.memento-defunctorum","ordinarium.memento-vivorum","ordinarium.misereatur-tui","ordinarium.misereatur","ordinarium.nobis-quoque","ordinarium.offerimus-tibi","ordinarium.orate-fratres","ordinarium.panem-caelestem","ordinarium.pater-noster","ordinarium.pax-domini","ordinarium.per-ipsum","ordinarium.per-quem-haec-omnia","ordinarium.perceptio-corporis","ordinarium.placeat-tibi","ordinarium.praefatio-communis","ordinarium.praefatio-dialogus","ordinarium.quam-oblationem","ordinarium.qui-dixisti","ordinarium.qui-pridie","ordinarium.quid-retribuam","ordinarium.quod-ore-sumpsimus","ordinarium.sanctus","ordinarium.simili-modo","ordinarium.supplices-te-rogamus","ordinarium.supra-quae","ordinarium.suscipe-sancta-trinitas","ordinarium.suscipe-sancte-pater","ordinarium.te-igitur","ordinarium.unde-et-memores","proprium.dominica-i-adventus-alleluia","proprium.dominica-i-adventus-collecta","proprium.dominica-i-adventus-communio","proprium.dominica-i-adventus-epistola","proprium.dominica-i-adventus-evangelium","proprium.dominica-i-adventus-graduale","proprium.dominica-i-adventus-introitus","proprium.dominica-i-adventus-offertorium","proprium.dominica-i-adventus-postcommunio","proprium.dominica-i-adventus-secreta","proprium.dominica-ii-adventus-alleluia","proprium.dominica-ii-adventus-collecta","proprium.dominica-ii-adventus-communio","proprium.dominica-ii-adventus-epistola","proprium.dominica-ii-adventus-evangelium","proprium.dominica-ii-adventus-graduale","proprium.dominica-ii-adventus-introitus","proprium.dominica-ii-adventus-offertorium","proprium.dominica-ii-adventus-postcommunio","proprium.dominica-ii-adventus-secreta","proprium.dominica-iii-adventus-alleluia","proprium.dominica-iii-adventus-collecta","proprium.dominica-iii-adventus-communio","proprium.dominica-iii-adventus-epistola","proprium.dominica-iii-adventus-evangelium","proprium.dominica-iii-adventus-graduale","proprium.dominica-iii-adventus-introitus","proprium.dominica-iii-adventus-offertorium","proprium.dominica-iii-adventus-postcommunio","proprium.dominica-iii-adventus-secreta","proprium.dominica-iv-adventus-alleluia","proprium.dominica-iv-adventus-collecta","proprium.dominica-iv-adventus-communio","proprium.dominica-iv-adventus-epistola","proprium.dominica-iv-adventus-evangelium","proprium.dominica-iv-adventus-graduale","proprium.dominica-iv-adventus-introitus","proprium.dominica-iv-adventus-offertorium","proprium.dominica-iv-adventus-postcommunio","proprium.dominica-iv-adventus-secreta","psalmi.118-he"],"langs":["pl","en"],"parses":431,"kalendarium":[2026,2101],"analyses":14,"citations":406}
+{
+  "schema_version": "2.0.0",
+  "corpus_schema": "0.15.0",
+  "texts": [
+    {
+      "id": "defunctorum.de-profundis",
+      "path": "texts/defunctorum/de-profundis.json",
+      "title": "De profúndis"
+    },
+    {
+      "id": "defunctorum.requiem-aeternam",
+      "path": "texts/defunctorum/requiem-aeternam.json",
+      "title": "Réquiem ætérnam"
+    },
+    {
+      "id": "litaniae.lauretanae",
+      "path": "texts/litaniae/lauretanae.json",
+      "title": "Litániæ Lauretanæ"
+    },
+    {
+      "id": "litaniae.sacratissimi-cordis-iesu",
+      "path": "texts/litaniae/sacratissimi-cordis-iesu.json",
+      "title": "Litániæ Sacratíssimi Cordis Iesu"
+    },
+    {
+      "id": "litaniae.sanctissimi-nominis-iesu",
+      "path": "texts/litaniae/sanctissimi-nominis-iesu.json",
+      "title": "Litániæ Sanctíssimi Nóminis Iesu"
+    },
+    {
+      "id": "orationes.actus-contritionis",
+      "path": "texts/orationes/actus-contritionis.json",
+      "title": "Actus contritiónis"
+    },
+    {
+      "id": "orationes.agimus-tibi-gratias",
+      "path": "texts/orationes/agimus-tibi-gratias.json",
+      "title": "Ágimus tibi grátias"
+    },
+    {
+      "id": "orationes.alma-redemptoris-mater",
+      "path": "texts/orationes/alma-redemptoris-mater.json",
+      "title": "Alma Redemptóris Mater"
+    },
+    {
+      "id": "orationes.angele-dei",
+      "path": "texts/orationes/angele-dei.json",
+      "title": "Ángele Dei"
+    },
+    {
+      "id": "orationes.angelus-domini",
+      "path": "texts/orationes/angelus-domini.json",
+      "title": "Ángelus Dómini"
+    },
+    {
+      "id": "orationes.anima-christi",
+      "path": "texts/orationes/anima-christi.json",
+      "title": "Ánima Christi"
+    },
+    {
+      "id": "orationes.ave-maria",
+      "path": "texts/orationes/ave-maria.json",
+      "title": "Ave María"
+    },
+    {
+      "id": "orationes.ave-regina-caelorum",
+      "path": "texts/orationes/ave-regina-caelorum.json",
+      "title": "Ave Regína cælórum"
+    },
+    {
+      "id": "orationes.benedic-domine",
+      "path": "texts/orationes/benedic-domine.json",
+      "title": "Bénedic, Dómine"
+    },
+    {
+      "id": "orationes.cor-iesu",
+      "path": "texts/orationes/cor-iesu.json",
+      "title": "Cor Iesu sacratíssimum"
+    },
+    {
+      "id": "orationes.deus-refugium",
+      "path": "texts/orationes/deus-refugium.json",
+      "title": "Deus, refúgium nostrum"
+    },
+    {
+      "id": "orationes.gloria-patri",
+      "path": "texts/orationes/gloria-patri.json",
+      "title": "Glória Patri"
+    },
+    {
+      "id": "orationes.magnificat",
+      "path": "texts/orationes/magnificat.json",
+      "title": "Magníficat"
+    },
+    {
+      "id": "orationes.memorare",
+      "path": "texts/orationes/memorare.json",
+      "title": "Memoráre"
+    },
+    {
+      "id": "orationes.pater-noster",
+      "path": "texts/orationes/pater-noster.json",
+      "title": "Pater noster"
+    },
+    {
+      "id": "orationes.regina-caeli",
+      "path": "texts/orationes/regina-caeli.json",
+      "title": "Regína cæli"
+    },
+    {
+      "id": "orationes.salve-regina",
+      "path": "texts/orationes/salve-regina.json",
+      "title": "Salve Regína"
+    },
+    {
+      "id": "orationes.sancte-michael",
+      "path": "texts/orationes/sancte-michael.json",
+      "title": "Sancte Míchaël Archángele"
+    },
+    {
+      "id": "orationes.signum-crucis",
+      "path": "texts/orationes/signum-crucis.json",
+      "title": "Signum crucis"
+    },
+    {
+      "id": "orationes.sub-tuum-praesidium",
+      "path": "texts/orationes/sub-tuum-praesidium.json",
+      "title": "Sub tuum præsídium"
+    },
+    {
+      "id": "orationes.symbolum-apostolorum",
+      "path": "texts/orationes/symbolum-apostolorum.json",
+      "title": "Symbolum Apostolórum"
+    },
+    {
+      "id": "ordinarium.adiutorium",
+      "path": "texts/ordinarium/adiutorium.json",
+      "title": "Adiutórium nostrum"
+    },
+    {
+      "id": "ordinarium.agnus-dei",
+      "path": "texts/ordinarium/agnus-dei.json",
+      "title": "Agnus Dei"
+    },
+    {
+      "id": "ordinarium.aufer-a-nobis",
+      "path": "texts/ordinarium/aufer-a-nobis.json",
+      "title": "Aufer a nobis"
+    },
+    {
+      "id": "ordinarium.benedictio",
+      "path": "texts/ordinarium/benedictio.json",
+      "title": "Benedícat vos omnípotens Deus"
+    },
+    {
+      "id": "ordinarium.communicantes",
+      "path": "texts/ordinarium/communicantes.json",
+      "title": "Communicántes"
+    },
+    {
+      "id": "ordinarium.confiteor-sacerdotis",
+      "path": "texts/ordinarium/confiteor-sacerdotis.json",
+      "title": "Confíteor (Sacerdotis)"
+    },
+    {
+      "id": "ordinarium.confiteor",
+      "path": "texts/ordinarium/confiteor.json",
+      "title": "Confíteor (Ministrórum)"
+    },
+    {
+      "id": "ordinarium.corpus-tuum",
+      "path": "texts/ordinarium/corpus-tuum.json",
+      "title": "Corpus tuum"
+    },
+    {
+      "id": "ordinarium.credo",
+      "path": "texts/ordinarium/credo.json",
+      "title": "Credo"
+    },
+    {
+      "id": "ordinarium.deo-gratias-epistolae",
+      "path": "texts/ordinarium/deo-gratias-epistolae.json",
+      "title": "Deo grátias (post Epistolam)"
+    },
+    {
+      "id": "ordinarium.deus-qui-humanae",
+      "path": "texts/ordinarium/deus-qui-humanae.json",
+      "title": "Deus, qui humánæ substántiæ"
+    },
+    {
+      "id": "ordinarium.deus-tu-conversus",
+      "path": "texts/ordinarium/deus-tu-conversus.json",
+      "title": "Deus, tu convérsus"
+    },
+    {
+      "id": "ordinarium.ecce-agnus-dei",
+      "path": "texts/ordinarium/ecce-agnus-dei.json",
+      "title": "Ecce Agnus Dei"
+    },
+    {
+      "id": "ordinarium.evangelium-ultimum",
+      "path": "texts/ordinarium/evangelium-ultimum.json",
+      "title": "Evangelium ultimum (Ioann. 1, 1-14)"
+    },
+    {
+      "id": "ordinarium.fili-dei-vivi",
+      "path": "texts/ordinarium/fili-dei-vivi.json",
+      "title": "Dómine Iesu Christe, Fili Dei vivi"
+    },
+    {
+      "id": "ordinarium.gloria",
+      "path": "texts/ordinarium/gloria.json",
+      "title": "Glória in excélsis"
+    },
+    {
+      "id": "ordinarium.haec-commixtio",
+      "path": "texts/ordinarium/haec-commixtio.json",
+      "title": "Hæc commíxtio"
+    },
+    {
+      "id": "ordinarium.hanc-igitur",
+      "path": "texts/ordinarium/hanc-igitur.json",
+      "title": "Hanc ígitur"
+    },
+    {
+      "id": "ordinarium.in-spiritu-humilitatis",
+      "path": "texts/ordinarium/in-spiritu-humilitatis.json",
+      "title": "In spíritu humilitátis"
+    },
+    {
+      "id": "ordinarium.introibo",
+      "path": "texts/ordinarium/introibo.json",
+      "title": "Introíbo ad altáre Dei"
+    },
+    {
+      "id": "ordinarium.ite-missa-est",
+      "path": "texts/ordinarium/ite-missa-est.json",
+      "title": "Ite, Missa est"
+    },
+    {
+      "id": "ordinarium.iudica-me",
+      "path": "texts/ordinarium/iudica-me.json",
+      "title": "Psalmus Iúdica me"
+    },
+    {
+      "id": "ordinarium.kyrie",
+      "path": "texts/ordinarium/kyrie.json",
+      "title": "Kýrie, eléison"
+    },
+    {
+      "id": "ordinarium.laus-tibi-christe",
+      "path": "texts/ordinarium/laus-tibi-christe.json",
+      "title": "Laus tibi, Christe"
+    },
+    {
+      "id": "ordinarium.lavabo",
+      "path": "texts/ordinarium/lavabo.json",
+      "title": "Lavábo inter innocéntes"
+    },
+    {
+      "id": "ordinarium.libera-nos",
+      "path": "texts/ordinarium/libera-nos.json",
+      "title": "Líbera nos"
+    },
+    {
+      "id": "ordinarium.memento-defunctorum",
+      "path": "texts/ordinarium/memento-defunctorum.json",
+      "title": "Meménto étiam (pro defúnctis)"
+    },
+    {
+      "id": "ordinarium.memento-vivorum",
+      "path": "texts/ordinarium/memento-vivorum.json",
+      "title": "Meménto (pro vivis)"
+    },
+    {
+      "id": "ordinarium.misereatur-tui",
+      "path": "texts/ordinarium/misereatur-tui.json",
+      "title": "Misereátur tui"
+    },
+    {
+      "id": "ordinarium.misereatur",
+      "path": "texts/ordinarium/misereatur.json",
+      "title": "Misereátur"
+    },
+    {
+      "id": "ordinarium.nobis-quoque",
+      "path": "texts/ordinarium/nobis-quoque.json",
+      "title": "Nobis quoque peccatóribus"
+    },
+    {
+      "id": "ordinarium.offerimus-tibi",
+      "path": "texts/ordinarium/offerimus-tibi.json",
+      "title": "Offérimus tibi, Dómine"
+    },
+    {
+      "id": "ordinarium.orate-fratres",
+      "path": "texts/ordinarium/orate-fratres.json",
+      "title": "Oráte, fratres"
+    },
+    {
+      "id": "ordinarium.panem-caelestem",
+      "path": "texts/ordinarium/panem-caelestem.json",
+      "title": "Panem cæléstem"
+    },
+    {
+      "id": "ordinarium.pater-noster",
+      "path": "texts/ordinarium/pater-noster.json",
+      "title": "Pater noster (Missæ)"
+    },
+    {
+      "id": "ordinarium.pax-domini",
+      "path": "texts/ordinarium/pax-domini.json",
+      "title": "Pax Dómini"
+    },
+    {
+      "id": "ordinarium.per-ipsum",
+      "path": "texts/ordinarium/per-ipsum.json",
+      "title": "Per ipsum"
+    },
+    {
+      "id": "ordinarium.per-quem-haec-omnia",
+      "path": "texts/ordinarium/per-quem-haec-omnia.json",
+      "title": "Per quem hæc ómnia"
+    },
+    {
+      "id": "ordinarium.perceptio-corporis",
+      "path": "texts/ordinarium/perceptio-corporis.json",
+      "title": "Percéptio Córporis tui"
+    },
+    {
+      "id": "ordinarium.placeat-tibi",
+      "path": "texts/ordinarium/placeat-tibi.json",
+      "title": "Pláceat tibi, sancta Trínitas"
+    },
+    {
+      "id": "ordinarium.praefatio-communis",
+      "path": "texts/ordinarium/praefatio-communis.json",
+      "title": "Præfatio communis"
+    },
+    {
+      "id": "ordinarium.praefatio-dialogus",
+      "path": "texts/ordinarium/praefatio-dialogus.json",
+      "title": "Dóminus vobíscum (dialogus Præfationis)"
+    },
+    {
+      "id": "ordinarium.quam-oblationem",
+      "path": "texts/ordinarium/quam-oblationem.json",
+      "title": "Quam oblatiónem"
+    },
+    {
+      "id": "ordinarium.qui-dixisti",
+      "path": "texts/ordinarium/qui-dixisti.json",
+      "title": "Dómine Iesu Christe, qui dixísti"
+    },
+    {
+      "id": "ordinarium.qui-pridie",
+      "path": "texts/ordinarium/qui-pridie.json",
+      "title": "Qui prídie"
+    },
+    {
+      "id": "ordinarium.quid-retribuam",
+      "path": "texts/ordinarium/quid-retribuam.json",
+      "title": "Quid retríbuam"
+    },
+    {
+      "id": "ordinarium.quod-ore-sumpsimus",
+      "path": "texts/ordinarium/quod-ore-sumpsimus.json",
+      "title": "Quod ore súmpsimus"
+    },
+    {
+      "id": "ordinarium.sanctus",
+      "path": "texts/ordinarium/sanctus.json",
+      "title": "Sanctus"
+    },
+    {
+      "id": "ordinarium.simili-modo",
+      "path": "texts/ordinarium/simili-modo.json",
+      "title": "Símili modo"
+    },
+    {
+      "id": "ordinarium.supplices-te-rogamus",
+      "path": "texts/ordinarium/supplices-te-rogamus.json",
+      "title": "Súpplices te rogámus"
+    },
+    {
+      "id": "ordinarium.supra-quae",
+      "path": "texts/ordinarium/supra-quae.json",
+      "title": "Supra quæ"
+    },
+    {
+      "id": "ordinarium.suscipe-sancta-trinitas",
+      "path": "texts/ordinarium/suscipe-sancta-trinitas.json",
+      "title": "Súscipe, sancta Trínitas"
+    },
+    {
+      "id": "ordinarium.suscipe-sancte-pater",
+      "path": "texts/ordinarium/suscipe-sancte-pater.json",
+      "title": "Súscipe, sancte Pater"
+    },
+    {
+      "id": "ordinarium.te-igitur",
+      "path": "texts/ordinarium/te-igitur.json",
+      "title": "Te ígitur"
+    },
+    {
+      "id": "ordinarium.unde-et-memores",
+      "path": "texts/ordinarium/unde-et-memores.json",
+      "title": "Unde et mémores"
+    },
+    {
+      "id": "proprium.dominica-i-adventus-alleluia",
+      "path": "texts/proprium/dominica-i-adventus-alleluia.json",
+      "title": "Osténde nobis, Dómine"
+    },
+    {
+      "id": "proprium.dominica-i-adventus-collecta",
+      "path": "texts/proprium/dominica-i-adventus-collecta.json",
+      "title": "Éxcita, quǽsumus, Dómine"
+    },
+    {
+      "id": "proprium.dominica-i-adventus-communio",
+      "path": "texts/proprium/dominica-i-adventus-communio.json",
+      "title": "Dóminus dabit benignitátem"
+    },
+    {
+      "id": "proprium.dominica-i-adventus-epistola",
+      "path": "texts/proprium/dominica-i-adventus-epistola.json",
+      "title": "Sciéntes quia hora est"
+    },
+    {
+      "id": "proprium.dominica-i-adventus-evangelium",
+      "path": "texts/proprium/dominica-i-adventus-evangelium.json",
+      "title": "Erunt signa in sole"
+    },
+    {
+      "id": "proprium.dominica-i-adventus-graduale",
+      "path": "texts/proprium/dominica-i-adventus-graduale.json",
+      "title": "Univérsi, qui te exspéctant"
+    },
+    {
+      "id": "proprium.dominica-i-adventus-introitus",
+      "path": "texts/proprium/dominica-i-adventus-introitus.json",
+      "title": "Ad te levávi ánimam meam"
+    },
+    {
+      "id": "proprium.dominica-i-adventus-offertorium",
+      "path": "texts/proprium/dominica-i-adventus-offertorium.json",
+      "title": "Ad te, Dómine, levávi"
+    },
+    {
+      "id": "proprium.dominica-i-adventus-postcommunio",
+      "path": "texts/proprium/dominica-i-adventus-postcommunio.json",
+      "title": "Suscipiámus, Dómine"
+    },
+    {
+      "id": "proprium.dominica-i-adventus-secreta",
+      "path": "texts/proprium/dominica-i-adventus-secreta.json",
+      "title": "Hæc sacra nos, Dómine"
+    },
+    {
+      "id": "proprium.dominica-ii-adventus-alleluia",
+      "path": "texts/proprium/dominica-ii-adventus-alleluia.json",
+      "title": "Lætátus sum in his"
+    },
+    {
+      "id": "proprium.dominica-ii-adventus-collecta",
+      "path": "texts/proprium/dominica-ii-adventus-collecta.json",
+      "title": "Éxcita, Dómine, corda nostra"
+    },
+    {
+      "id": "proprium.dominica-ii-adventus-communio",
+      "path": "texts/proprium/dominica-ii-adventus-communio.json",
+      "title": "Ierúsalem surge, et sta in excélso"
+    },
+    {
+      "id": "proprium.dominica-ii-adventus-epistola",
+      "path": "texts/proprium/dominica-ii-adventus-epistola.json",
+      "title": "Quæcúmque scripta sunt"
+    },
+    {
+      "id": "proprium.dominica-ii-adventus-evangelium",
+      "path": "texts/proprium/dominica-ii-adventus-evangelium.json",
+      "title": "Cum audísset Ioánnes in vínculis"
+    },
+    {
+      "id": "proprium.dominica-ii-adventus-graduale",
+      "path": "texts/proprium/dominica-ii-adventus-graduale.json",
+      "title": "Ex Sion spécies decóris eius"
+    },
+    {
+      "id": "proprium.dominica-ii-adventus-introitus",
+      "path": "texts/proprium/dominica-ii-adventus-introitus.json",
+      "title": "Pópulus Sion, ecce Dóminus véniet"
+    },
+    {
+      "id": "proprium.dominica-ii-adventus-offertorium",
+      "path": "texts/proprium/dominica-ii-adventus-offertorium.json",
+      "title": "Deus, tu convérsus vivificábis nos"
+    },
+    {
+      "id": "proprium.dominica-ii-adventus-postcommunio",
+      "path": "texts/proprium/dominica-ii-adventus-postcommunio.json",
+      "title": "Repléti cibo spirituális alimóniæ"
+    },
+    {
+      "id": "proprium.dominica-ii-adventus-secreta",
+      "path": "texts/proprium/dominica-ii-adventus-secreta.json",
+      "title": "Placáre, quǽsumus, Dómine"
+    },
+    {
+      "id": "proprium.dominica-iii-adventus-alleluia",
+      "path": "texts/proprium/dominica-iii-adventus-alleluia.json",
+      "title": "Éxcita, Dómine, poténtiam tuam"
+    },
+    {
+      "id": "proprium.dominica-iii-adventus-collecta",
+      "path": "texts/proprium/dominica-iii-adventus-collecta.json",
+      "title": "Aurem tuam, quǽsumus, Dómine"
+    },
+    {
+      "id": "proprium.dominica-iii-adventus-communio",
+      "path": "texts/proprium/dominica-iii-adventus-communio.json",
+      "title": "Dícite: pusillánimes confortámini"
+    },
+    {
+      "id": "proprium.dominica-iii-adventus-epistola",
+      "path": "texts/proprium/dominica-iii-adventus-epistola.json",
+      "title": "Gaudéte in Dómino semper"
+    },
+    {
+      "id": "proprium.dominica-iii-adventus-evangelium",
+      "path": "texts/proprium/dominica-iii-adventus-evangelium.json",
+      "title": "Misérunt Iudǽi ab Ierosólymis"
+    },
+    {
+      "id": "proprium.dominica-iii-adventus-graduale",
+      "path": "texts/proprium/dominica-iii-adventus-graduale.json",
+      "title": "Qui sedes, Dómine, super Chérubim"
+    },
+    {
+      "id": "proprium.dominica-iii-adventus-introitus",
+      "path": "texts/proprium/dominica-iii-adventus-introitus.json",
+      "title": "Gaudéte in Dómino semper"
+    },
+    {
+      "id": "proprium.dominica-iii-adventus-offertorium",
+      "path": "texts/proprium/dominica-iii-adventus-offertorium.json",
+      "title": "Benedixísti, Dómine, terram tuam"
+    },
+    {
+      "id": "proprium.dominica-iii-adventus-postcommunio",
+      "path": "texts/proprium/dominica-iii-adventus-postcommunio.json",
+      "title": "Implorámus, Dómine, cleméntiam tuam"
+    },
+    {
+      "id": "proprium.dominica-iii-adventus-secreta",
+      "path": "texts/proprium/dominica-iii-adventus-secreta.json",
+      "title": "Devotiónis nostræ tibi"
+    },
+    {
+      "id": "proprium.dominica-iv-adventus-alleluia",
+      "path": "texts/proprium/dominica-iv-adventus-alleluia.json",
+      "title": "Veni, Dómine, et noli tardáre"
+    },
+    {
+      "id": "proprium.dominica-iv-adventus-collecta",
+      "path": "texts/proprium/dominica-iv-adventus-collecta.json",
+      "title": "Éxcita, quǽsumus, Dómine, poténtiam tuam"
+    },
+    {
+      "id": "proprium.dominica-iv-adventus-communio",
+      "path": "texts/proprium/dominica-iv-adventus-communio.json",
+      "title": "Ecce Virgo concípiet"
+    },
+    {
+      "id": "proprium.dominica-iv-adventus-epistola",
+      "path": "texts/proprium/dominica-iv-adventus-epistola.json",
+      "title": "Sic nos exístimet homo"
+    },
+    {
+      "id": "proprium.dominica-iv-adventus-evangelium",
+      "path": "texts/proprium/dominica-iv-adventus-evangelium.json",
+      "title": "Anno quintodécimo impérii Tibérii Cǽsaris"
+    },
+    {
+      "id": "proprium.dominica-iv-adventus-graduale",
+      "path": "texts/proprium/dominica-iv-adventus-graduale.json",
+      "title": "Prope est Dóminus"
+    },
+    {
+      "id": "proprium.dominica-iv-adventus-introitus",
+      "path": "texts/proprium/dominica-iv-adventus-introitus.json",
+      "title": "Roráte, cæli, désuper"
+    },
+    {
+      "id": "proprium.dominica-iv-adventus-offertorium",
+      "path": "texts/proprium/dominica-iv-adventus-offertorium.json",
+      "title": "Ave María, grátia plena"
+    },
+    {
+      "id": "proprium.dominica-iv-adventus-postcommunio",
+      "path": "texts/proprium/dominica-iv-adventus-postcommunio.json",
+      "title": "Sumptis munéribus"
+    },
+    {
+      "id": "proprium.dominica-iv-adventus-secreta",
+      "path": "texts/proprium/dominica-iv-adventus-secreta.json",
+      "title": "Sacrifíciis præséntibus"
+    },
+    {
+      "id": "psalmi.118-he",
+      "path": "texts/psalmi/118-he.json",
+      "title": "Psalmus 118, HE"
+    }
+  ],
+  "languages": [
+    "pl",
+    "en"
+  ],
+  "morphology": 431,
+  "kalendarium": [
+    2026,
+    2101
+  ],
+  "analyses": 14,
+  "citations": 406
+}

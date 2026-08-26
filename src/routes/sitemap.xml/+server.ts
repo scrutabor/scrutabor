@@ -1,4 +1,4 @@
-import { LEXICON, TEXTS } from '$lib/corpus';
+import { LEXICON, TEXT_KEYS } from '$lib/corpus';
 import { CONCEPTS } from '$lib/grammar';
 import { LANGS } from '$lib/i18n';
 import { ORDO } from '$lib/ordo';
@@ -21,7 +21,7 @@ const app: string[] = [
 	'/bibliographia',
 	'/grammatica',
 	'/grammatica/pronuntiatio',
-	...Object.keys(TEXTS).map((key) => `/${key}`),
+	...TEXT_KEYS.map((key) => `/${key}`),
 	...CONCEPTS.map((c) => `/grammatica/${c.id}`),
 	...Object.keys(LEXICON.lemmata).map((lemma) => `/lemma/${lemma}`)
 ];

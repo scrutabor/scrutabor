@@ -9,15 +9,15 @@
 // puts 412 parse objects on the heap where the corpus has 6,143, because
 // `expandDocument` hands out the table's own object rather than a copy.
 //
-// The index is built from the files rather than written out by hand: every
-// text names its own id, and a hand-kept list of 111 imports beside 111 files
-// is a list that drifts. Server-side only — the reading routes load through
-// +page.server.ts, so none of this reaches the browser.
+// The manifest names the files, and each one is imported only when a route or
+// the concordance asks for it. Server-side reading routes therefore expand one
+// prayer, while the downloaded edition resolves the same import from its one
+// bundled runtime and keeps the result in the same cache.
 import manifest from './data/manifest.json';
-import parseTable from './data/m.json';
-import analysisTable from './data/a.json';
-import citationTable from './data/c.json';
-import lexicon from './data/lex.json';
+import parseTable from './data/tables/morphology.json';
+import analysisTable from './data/tables/analysis.json';
+import citationTable from './data/tables/citations.json';
+import lexicon from './data/lexicon.json';
 import type { Lang } from './i18n';
 import { bindProse } from './polish';
 
@@ -189,12 +189,12 @@ export interface Lexicon {
 }
 
 export const LEXICON: Lexicon = {
-	lemmata: lexicon.h as unknown as Record<string, LemmaEntry>,
+	lemmata: lexicon.heads as unknown as Record<string, LemmaEntry>,
 	senses: {
 		// Polish prose is bound on the way in (lib/polish); the corpus itself
 		// stores ordinary spaces, and its own checks forbid anything else.
-		pl: bindProse(lexicon.s.pl as unknown as Record<string, SenseEntry>),
-		en: lexicon.s.en as unknown as Record<string, SenseEntry>
+		pl: bindProse(lexicon.senses.pl as unknown as Record<string, SenseEntry>),
+		en: lexicon.senses.en as unknown as Record<string, SenseEntry>
 	}
 };
 
@@ -233,18 +233,18 @@ export function narrowLexicon(
  * Expanding a text hands out the table's OWN object at every site, so the
  * sharing survives into the heap rather than ending at the file.
  */
-const PARSES = parseTable as unknown as Morph[];
-const ANALYSES = analysisTable as unknown as Analysis[];
-const CITATIONS = citationTable as unknown as Citation[];
+const PARSES = parseTable as unknown as (Morph | null)[];
+const ANALYSES = analysisTable as unknown as (Analysis | null)[];
+const CITATIONS = citationTable as unknown as (Citation | null)[];
 
 /** A table index that resolves to nothing is a vendoring defect — a stale
  * or truncated table beside newer documents — and has to fail HERE, at
  * module init on the build machine, not as a TypeError in the first word
  * panel a reader opens. The provenance test hashes the files; this is the
  * only check that they agree with each other. */
-function at<T>(table: T[], index: number, what: string): T {
+function at<T>(table: (T | null)[], index: number, what: string): T {
 	const hit = table[index];
-	if (hit === undefined) {
+	if (hit == null) {
 		throw new Error(`${what}[${index}] resolves to nothing — re-run vendor-corpus`);
 	}
 	return hit;
@@ -382,28 +382,71 @@ function expandDocument(artifact: Artifact): TextEntry {
 }
 
 /**
- * Keyed by `category/slug`, matching the reading route params — derived
- * from each artifact's own id (`ordinarium.pater-noster`), so vendoring a
- * text is a file copy and nothing else.
+ * The lightweight inventory is synchronous; documents are not. The manifest
+ * is also the stable seam for future language-specific search indexes: they
+ * return these keys and use the same loader without knowing file paths.
  */
-export const TEXTS: Record<string, TextEntry> = buildIndex();
+export interface TextMetadata {
+	id: string;
+	path: string;
+	title: string;
+}
 
-function buildIndex(): Record<string, TextEntry> {
-	const files = import.meta.glob('./data/t/*.json', { eager: true }) as Record<
-		string,
-		{ default: unknown }
-	>;
-	const texts: Record<string, TextEntry> = {};
-	for (const [path, module] of Object.entries(files)) {
-		const name = path.slice('./data/t/'.length, -'.json'.length);
-		const artifact = module.default as Artifact;
-		if (!artifact.seg) throw new Error(`${name} has no segments — re-run vendor-corpus`);
-		texts[name.replace('.', '/')] = expandDocument(artifact);
+export const TEXT_METADATA: TextMetadata[] = manifest.texts;
+export const TEXT_KEYS = TEXT_METADATA.map(({ id }) => id.replace('.', '/'));
+const METADATA_BY_KEY = new Map(
+	TEXT_METADATA.map((entry) => [entry.id.replace('.', '/'), entry] as const)
+);
+
+type TextModule = { default: unknown };
+type TextImport = () => Promise<TextModule>;
+const TEXT_MODULES = import.meta.glob('./data/texts/*/*.json') as Record<string, TextImport>;
+const CACHE = new Map<string, Promise<TextEntry>>();
+
+for (const entry of TEXT_METADATA) {
+	const modulePath = `./data/${entry.path}`;
+	if (!TEXT_MODULES[modulePath]) {
+		throw new Error(`${entry.id} names ${entry.path}, which was not vendored`);
 	}
-	if (Object.keys(texts).length !== manifest.texts.length) {
-		throw new Error(
-			`${Object.keys(texts).length} texts vendored, ${manifest.texts.length} in the manifest`
-		);
+}
+if (Object.keys(TEXT_MODULES).length !== TEXT_METADATA.length) {
+	throw new Error(
+		`${Object.keys(TEXT_MODULES).length} text files vendored, ${TEXT_METADATA.length} in the manifest`
+	);
+}
+
+export function hasText(key: string): boolean {
+	return METADATA_BY_KEY.has(key);
+}
+
+/** The cache inventory, useful for asserting that an index lookup stayed lazy. */
+export function loadedTextKeys(): string[] {
+	return [...CACHE.keys()];
+}
+
+/** Load and expand one text once. No call imports an unrelated text file. */
+export function loadText(key: string): Promise<TextEntry | undefined> {
+	const metadata = METADATA_BY_KEY.get(key);
+	if (!metadata) return Promise.resolve(undefined);
+	let pending = CACHE.get(key);
+	if (!pending) {
+		pending = TEXT_MODULES[`./data/${metadata.path}`]().then((module) => {
+			const artifact = module.default as Artifact;
+			if (!artifact.seg) throw new Error(`${metadata.id} has no segments — re-run vendor-corpus`);
+			return expandDocument(artifact);
+		});
+		CACHE.set(key, pending);
 	}
-	return texts;
+	return pending;
+}
+
+export async function loadTexts(keys: Iterable<string>): Promise<Record<string, TextEntry>> {
+	const unique = [...new Set(keys)].filter(hasText);
+	const entries = await Promise.all(unique.map(async (key) => [key, await loadText(key)] as const));
+	return Object.fromEntries(entries.filter((entry): entry is [string, TextEntry] => !!entry[1]));
+}
+
+/** Explicitly expensive, reserved for corpus-wide pages and exhaustive tests. */
+export function loadAllTexts(): Promise<Record<string, TextEntry>> {
+	return loadTexts(TEXT_KEYS);
 }

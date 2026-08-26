@@ -78,6 +78,18 @@ SvelteKit with the static adapter — the site prerenders completely; every
 text page is plain HTML before any JavaScript runs. No backend. Runtime
 dependencies are deliberately minimal.
 
+### Reader data
+
+`scripts/vendor-corpus.mjs` mirrors the corpus reader edition under
+`src/lib/data/`. Shared tables have descriptive names, JSON keeps one logical
+record per line, and texts live at `texts/<category>/<slug>.json`. The manifest
+is a lightweight inventory; `src/lib/corpus.ts` imports one text on demand and
+caches it. `concordance.json` maps Latin lemmata and normalized forms directly
+to stable text/word addresses, so lemma pages and future search first choose
+candidate texts and then load only those files. Optional Polish and English
+search indexes can be added later under `search/` without changing that loader
+or the vendoring layout.
+
 ## License
 
 [AGPL-3.0](LICENSE). The liturgical texts and annotations come from

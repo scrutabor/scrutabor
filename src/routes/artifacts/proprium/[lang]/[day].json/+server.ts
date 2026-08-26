@@ -23,10 +23,10 @@ export const prerender = true;
 export const entries: EntryGenerator = () =>
 	LANGS.flatMap((lang) => PROPER_DAYS.map((day) => ({ lang, day: day.id })));
 
-export const GET: RequestHandler = ({ params }) => {
+export const GET: RequestHandler = async ({ params }) => {
 	const lang = params.lang as Lang;
 	if (!LANGS.includes(lang)) error(404, 'no such language');
-	const day = properData(params.day, lang);
+	const day = await properData(params.day, lang);
 	if (!day) error(404, 'no such day, or the day has no texts');
 
 	return json(
