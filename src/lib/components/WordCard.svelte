@@ -27,26 +27,26 @@
 		onnavigate: (id: string) => void;
 	} = $props();
 
-	// Cross-references in function prose are authored as „form” (wNNN)
+	// Cross-references in contextual explanations are authored as „form” (wNNN)
 	// (EN: “form” (wNNN)) — see the corpus repo's SCHEMA.md. Render the
 	// quoted form as a link to that word and hide the id from the reader.
 	const XREF = /([„“])([^”“„]+)”\s*\((w\d{3})\)/g;
 
-	type FnPart = { text: string } | { open: string; form: string; id: string };
+	type ExplanationPart = { text: string } | { open: string; form: string; id: string };
 
-	function parseFunction(fn: string): FnPart[] {
-		const parts: FnPart[] = [];
+	function parseExplanation(text: string): ExplanationPart[] {
+		const parts: ExplanationPart[] = [];
 		let last = 0;
-		for (const m of fn.matchAll(XREF)) {
-			if (m.index > last) parts.push({ text: fn.slice(last, m.index) });
+		for (const m of text.matchAll(XREF)) {
+			if (m.index > last) parts.push({ text: text.slice(last, m.index) });
 			parts.push({ open: m[1], form: m[2], id: m[3] });
 			last = m.index + m[0].length;
 		}
-		if (last < fn.length) parts.push({ text: fn.slice(last) });
+		if (last < text.length) parts.push({ text: text.slice(last) });
 		return parts;
 	}
 
-	let functionParts = $derived(gloss?.function ? parseFunction(gloss.function) : []);
+	let explanationParts = $derived(gloss?.explanation ? parseExplanation(gloss.explanation) : []);
 
 	// The per-lemma layer: dictionary head + gender in the header, senses and
 	// an optional lemma-level note below the contextual gloss. The corpus
@@ -58,23 +58,23 @@
 
 {#snippet context()}
 	{#if gloss}
-		<p class="context-copy">
-			<span class="gloss">{gloss.gloss}</span>
-			{#if gloss.function}<span class="context-separator">—</span><span class="function">
-					{#each functionParts as part, i (i)}
-						{#if 'id' in part}
-							<button class="xref" onclick={() => onnavigate(part.id)}
-								>{part.open}<span lang="la">{part.form}</span>”</button
-							>
-						{:else}
-							{part.text}
-						{/if}
-					{/each}
-				</span>{/if}
-		</p>
+		<p class="gloss">{gloss.gloss}</p>
+		{#if gloss.explanation}
+			<p class="explanation">
+				{#each explanationParts as part, i (i)}
+					{#if 'id' in part}
+						<button class="xref" onclick={() => onnavigate(part.id)}
+							>{part.open}<span lang="la">{part.form}</span>”</button
+						>
+					{:else}
+						{part.text}
+					{/if}
+				{/each}
+			</p>
+		{/if}
 	{/if}
-	{#if gloss?.function}
-		<SourceNotes citations={gloss.function_citations} {lang} />
+	{#if gloss?.explanation}
+		<SourceNotes citations={gloss.explanation_citations} {lang} />
 	{/if}
 	{#if gloss?.note}
 		<!-- The editorial note on this word in this place. Every disputed
@@ -120,15 +120,19 @@
 
 <div class="layers">
 	{#if gloss}
-		<section class="layer context-layer" aria-label={M[lang].wordContextLabel}>
-			<div class="layer-body">{@render context()}</div>
-		</section>
+		<AnalysisRow label={M[lang].wordContextLabel} id="word-context-label" first>
+			{@render context()}
+		</AnalysisRow>
 	{/if}
 	<AnalysisRow label={M[lang].wordEntryLabel} id="word-entry-label">{@render entry()}</AnalysisRow>
 	<AnalysisRow label={M[lang].wordFormLabel} id="word-form-label">{@render grammar()}</AnalysisRow>
-	<div class="verification">
+	<details
+		class="verification"
+		open={analysis.review === 'disputed' || analysis.confidence !== 'high'}
+	>
+		<summary class="smallcaps">{M[lang].wordVerificationLabel}</summary>
 		{@render verification()}
-	</div>
+	</details>
 </div>
 
 <style>
@@ -178,17 +182,19 @@
 		border-bottom-style: solid;
 	}
 
-	.context-copy {
+	.gloss,
+	.explanation {
 		margin: 0;
 		font-size: 1rem;
 	}
 
 	.gloss {
-		font-weight: 500;
+		font-size: 1.12rem;
+		font-weight: 600;
 	}
 
-	.context-separator {
-		margin-inline: 0.38em;
+	.explanation {
+		margin-top: 0.28rem;
 		color: var(--ink-soft);
 	}
 
@@ -229,17 +235,6 @@
 		padding-top: 0;
 	}
 
-	.context-layer {
-		grid-column: 1 / -1;
-		margin-top: 0.35rem;
-		padding-top: 0;
-		border-top: 0;
-	}
-
-	.context-layer .layer-body {
-		grid-column: 1 / -1;
-	}
-
 	.layers .head,
 	.layers .morph {
 		margin-top: 0;
@@ -257,6 +252,26 @@
 		color: var(--ink-soft);
 	}
 
+	.verification summary {
+		width: max-content;
+		color: var(--ink-soft);
+		font-family: 'EB Garamond Label', 'EB Garamond', serif;
+		font-size: 0.7rem;
+		font-weight: 400;
+		line-height: 1;
+		letter-spacing: 0.11em;
+		cursor: pointer;
+	}
+
+	.verification summary:hover {
+		color: var(--ink);
+	}
+
+	.verification summary:focus-visible {
+		outline: 2px solid var(--rubric);
+		outline-offset: 0.2rem;
+	}
+
 	.verification .meta {
 		margin-top: 0;
 	}
@@ -264,10 +279,6 @@
 	@media (max-width: 36rem) {
 		.layers {
 			display: block;
-		}
-
-		.context-layer .layer-body {
-			margin-top: 0;
 		}
 	}
 </style>

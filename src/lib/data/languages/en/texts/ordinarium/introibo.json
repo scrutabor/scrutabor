@@ -4,9 +4,9 @@
   "about":"The priest signs himself and begins the Mass with In nómine Patris. The antiphon “Introíbo ad altáre Dei” comes from Ps 42:4 in the Vulgate (Ps 43:4 in Hebrew numbering). It precedes the psalm from which it is taken and is repeated after the psalm ends.",
   "seg":[
     {"id":"s01","nr":"The vested priest approaches the altar, makes the reverence due to it, signs himself from forehead to breast and says aloud:"},
-    {"id":"s02","tr":"In the name of the Father, and of the Son, and of the Holy Spirit. Amen.","g":["in","the name","of the Father","and","of the Son","and","of the Spirit","Holy","amen"],"fn":{"w003":"Genitive depending on “nómine” (w002), parallel to “Fílii” (w005) and “Spíritus” (w007).","w007":"“Spíritus” can be nominative or genitive. Agreement with “Sancti” (w008) establishes the genitive here."}},
+    {"id":"s02","tr":"In the name of the Father, and of the Son, and of the Holy Spirit. Amen.","g":["in","the name","of the Father","and","of the Son","and","of the Spirit","Holy","amen"],"ex":{"w007":"“Spíritus” can be nominative or genitive. The following “Sancti” (w008) establishes the genitive here: “of the Holy Ghost”."}},
     {"id":"s03","nr":"With hands joined before his breast, the priest begins the antiphon."},
-    {"id":"s04","tr":"I will go to the altar of God.","g":["I will go in","unto","the altar","of God"],"fn":{"w010":"First person singular future.","w012":"Accusative governed by “ad” (w011), which expresses direction.","w013":"Genitive depending on “altáre” (w012)."}},
-    {"id":"s05","tr":"To God, who gladdens my youth.","g":["to","God","who","gladdens","youth","my"],"fn":{"w016":"Nominative as the subject of “lætíficat” (w017), although its antecedent “Deum” (w015) is accusative.","w018":"The Latin “youth” corresponds to the Greek text of the psalm. The Hebrew text speaks here of joy."}}
+    {"id":"s04","tr":"I will go to the altar of God.","g":["I will go in","unto","the altar","of God"]},
+    {"id":"s05","tr":"To God, who gladdens my youth.","g":["to","God","who","gladdens","youth","my"],"ex":{"w018":"The Latin “youth” corresponds to the Greek text of the psalm. The Hebrew text speaks here of joy."}}
   ]
 }

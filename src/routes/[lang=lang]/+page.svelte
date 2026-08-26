@@ -272,11 +272,8 @@
 						{lang}
 						inline
 						onnavigate={(id) => {
-							// A note may cite a word from another verse of the
-							// stanza (custódiam cites exquíram); the specimen
-							// carries only its own verse, so such a reference
-							// opens the real page at the cited word instead of
-							// silently re-aiming the panel at the fallback.
+							// A future note may cite a word outside the specimen;
+							// open the full text rather than re-aiming to a fallback.
 							if (wordsOf.has(id)) selected = id;
 							else goto(`/app/${lang}/psalmi/118-he?w=${id}`);
 						}}

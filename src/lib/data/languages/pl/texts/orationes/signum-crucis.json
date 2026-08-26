@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Znak krzyża łączy gest krzyża z krótkim wezwaniem Trójcy Świętej.",
   "seg":[
-    {"id":"s01","tr":"W imię Ojca i Syna, i Ducha Świętego. Amen.","tc":[110],"tb":"normalized","g":["w","imieniu","Ojca","i","Syna","i","Ducha","Świętego","amen"],"fn":{"w003":"Dopełniacz zależny od „nómine” (w002), równoległy do „Fílii” (w005) i „Spíritus” (w007).","w007":"Forma „Spíritus” może być mianownikiem albo dopełniaczem. Końcówka „Sancti” (w008) wskazuje tutaj dopełniacz."}}
+    {"id":"s01","tr":"W imię Ojca i Syna, i Ducha Świętego. Amen.","tc":[110],"tb":"normalized","g":["w","imieniu","Ojca","i","Syna","i","Ducha","Świętego","amen"],"ex":{"w007":"„Spíritus” może być mianownikiem albo dopełniaczem. Następujące „Sancti” (w008) wskazuje tutaj dopełniacz: „Ducha Świętego”."}}
   ]
 }

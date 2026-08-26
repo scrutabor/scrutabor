@@ -195,9 +195,8 @@ test('a global lemma note does not pretend that a verse is present', async ({ pa
 	await expect(page.locator('.note')).not.toContainText('w tym wersecie');
 
 	await page.goto('/app/pl/psalmi/118-he?w=w014');
-	await expect(page.locator('aside .function')).toContainText(
-		'psalmista prosi Boga o dar zrozumienia'
-	);
+	await expect(page.locator('aside .gloss')).toHaveText('zrozumienie');
+	await expect(page.locator('aside .explanation')).toHaveCount(0);
 });
 
 test('grammatica index lists the concept tranche in groups', async ({ page }) => {

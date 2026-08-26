@@ -58,9 +58,9 @@ describe('binding one-letter words', () => {
 
 	it('leaves language-independent citation metadata unchanged', () => {
 		const citation = { title: 'A Latin Grammar', locator: 'p. 1' };
-		expect(bindProse({ function: 'w zdaniu', function_citations: [citation] })).toEqual({
-			function: `w${NB}zdaniu`,
-			function_citations: [citation]
+		expect(bindProse({ explanation: 'w zdaniu', explanation_citations: [citation] })).toEqual({
+			explanation: `w${NB}zdaniu`,
+			explanation_citations: [citation]
 		});
 	});
 });

@@ -4,9 +4,9 @@
   "about":"Kapłan żegna się znakiem krzyża i zaczyna Mszę słowami In nómine Patris. Antyfona „Introíbo ad altáre Dei” pochodzi z Ps 42, 4 według numeracji Wulgaty (Ps 43, 4 w numeracji hebrajskiej). Poprzedza psalm, z którego została zaczerpnięta, i jest powtarzana po jego zakończeniu.",
   "seg":[
     {"id":"s01","nr":"Kapłan w szatach liturgicznych podchodzi do ołtarza, oddaje mu należną cześć, czyni znak krzyża od czoła do piersi i mówi głośno:"},
-    {"id":"s02","tr":"W imię Ojca i Syna, i Ducha Świętego. Amen.","tc":[110],"tb":"normalized","g":["w","imieniu","Ojca","i","Syna","i","Ducha","Świętego","amen"],"fn":{"w003":"Dopełniacz zależny od „nómine” (w002), równoległy do „Fílii” (w005) i „Spíritus” (w007).","w007":"Forma „Spíritus” może być mianownikiem albo dopełniaczem. Końcówka „Sancti” (w008) wskazuje tutaj dopełniacz."}},
+    {"id":"s02","tr":"W imię Ojca i Syna, i Ducha Świętego. Amen.","tc":[110],"tb":"normalized","g":["w","imieniu","Ojca","i","Syna","i","Ducha","Świętego","amen"],"ex":{"w007":"„Spíritus” może być mianownikiem albo dopełniaczem. Następujące „Sancti” (w008) wskazuje tutaj dopełniacz: „Ducha Świętego”."}},
     {"id":"s03","nr":"Ze złożonymi rękami przed piersią kapłan rozpoczyna antyfonę."},
-    {"id":"s04","tr":"Przystąpię do ołtarza Bożego.","g":["przystąpię","do","ołtarza","Boga"],"fn":{"w010":"Pierwsza osoba liczby pojedynczej czasu przyszłego.","w012":"Biernik zależny od „ad” (w011), wyrażającego kierunek.","w013":"Dopełniacz zależny od „altáre” (w012)."}},
-    {"id":"s05","tr":"Do Boga, który rozwesela moją młodość.","g":["do","Boga","który","rozwesela","młodość","moją"],"fn":{"w016":"Mianownik jako podmiot „lætíficat” (w017), choć poprzednik „Deum” (w015) stoi w bierniku.","w018":"Łacińska „młodość” odpowiada greckiemu tekstowi psalmu. Tekst hebrajski mówi w tym miejscu o radości."}}
+    {"id":"s04","tr":"Przystąpię do ołtarza Bożego.","g":["przystąpię","do","ołtarza","Boga"]},
+    {"id":"s05","tr":"Do Boga, który rozwesela moją młodość.","g":["do","Boga","który","rozwesela","młodość","moją"],"ex":{"w018":"Łacińska „młodość” odpowiada greckiemu tekstowi psalmu. Tekst hebrajski mówi w tym miejscu o radości."}}
   ]
 }

@@ -4,14 +4,14 @@
   "about":"The first of three prayers said secretly by the priest before Communion. Its opening quotes John 14:27. The priest asks Christ to regard not his sins but the faith of the Church, and to grant the Church peace and unity. The kiss of peace follows where it is given, and in Masses for the Dead neither the peace nor this prayer is said.",
   "seg":[
     {"id":"s01","nr":"The priest bows over the altar with his hands joined upon it, and says the three prayers that follow silently."},
-    {"id":"s02","tr":"Lord Jesus Christ, who said to Your Apostles:","tc":[305,306,307,308],"tb":"revised","g":["Lord","Jesus","Christ","who","didst say","to the Apostles","Thine"],"fn":{"w002":"Singular vocative of Iesus.","w006":"Dative complement of “dixísti” (w005)."}},
+    {"id":"s02","tr":"Lord Jesus Christ, who said to Your Apostles:","tc":[305,306,307,308],"tb":"revised","g":["Lord","Jesus","Christ","who","didst say","to the Apostles","Thine"]},
     {"id":"s03","tr":"“Peace I leave you; My peace I give you” —","tc":[305,306,307,308],"tb":"revised","g":["Peace","I leave","to you","peace","my","I give","to you"]},
-    {"id":"s04","tr":"do not regard my sins, but the faith of Your Church;","tc":[305,306,307,308],"tb":"revised","g":["not","look upon","sins","my","but","the faith","of the Church","Thy"],"fn":{"w015":"With the subjunctive “respícias” (w016), it forms a negative petition.","w018":"Agrees with “peccáta” (w017). The priest speaks of his own sins.","w020":"The second object of “respícias” (w016), contrasted with “peccáta” (w017)."}},
-    {"id":"s05","tr":"and graciously grant her peace and unite her according to Your will,","tc":[305,306,307,308],"tb":"revised","g":["and her","according to","will","Thy","to give peace to","and","to gather into one","vouchsafe"],"fn":{"w023":"The pronoun refers to “Ecclésiæ” (w021): the petition for peace and unity concerns the Church.","w027":"The first of two infinitives depending on “dignéris” (w030).","w029":"The second infinitive depending on “dignéris” (w030).","w030":"Subjunctive expressing a petition. It takes the infinitives “pacificáre” (w027) and “coadunáre” (w029)."}},
-    {"id":"s06","tr":"who, being God, live and reign for ever and ever. Amen.","tc":[305,306,307,308],"tb":"revised","g":["Who","livest","and","reignest","God","for","all","ages","of ages","amen"],"fn":{"w035":"Nominative in apposition to the subject “Qui” (w031)."}},
+    {"id":"s04","tr":"do not regard my sins, but the faith of Your Church;","tc":[305,306,307,308],"tb":"revised","g":["not","look upon","sins","my","but","the faith","of the Church","Thy"]},
+    {"id":"s05","tr":"and graciously grant her peace and unite her according to Your will,","tc":[305,306,307,308],"tb":"revised","g":["and her","according to","will","Thy","to give peace to","and","to gather into one","vouchsafe"]},
+    {"id":"s06","tr":"who, being God, live and reign for ever and ever. Amen.","tc":[305,306,307,308],"tb":"revised","g":["Who","livest","and","reignest","God","for","all","ages","of ages","amen"]},
     {"id":"s07","nr":"If the peace is given, the priest kisses the altar and says:"},
-    {"id":"s08","tr":"Peace be with you.","g":["Peace","with you"],"fn":{"w042":"Combines the preposition cum with the pronoun tu."}},
-    {"id":"s09","tr":"And with your spirit.","tc":[237],"tb":"revised","g":["and","with","spirit","your"],"fn":{"w044":"Takes the ablative: “spíritu” (w045) and “tuo” (w046)."}},
+    {"id":"s08","tr":"Peace be with you.","g":["Peace","with you"]},
+    {"id":"s09","tr":"And with your spirit.","tc":[237],"tb":"revised","g":["and","with","spirit","your"]},
     {"id":"s10","nr":"In Masses for the Dead the peace is not given, and this prayer is left out."}
   ]
 }

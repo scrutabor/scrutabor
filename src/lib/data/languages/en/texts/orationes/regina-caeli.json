@@ -3,11 +3,11 @@
   "language":"en",
   "about":"The Marian antiphon of Paschaltide, which stands from Compline of Holy Saturday to the Saturday after Pentecost and takes the place of the Ángelus in that season. It calls the Blessed Virgin Mary to rejoice in the resurrection of her Son and asks her to pray for us. A versicle and response follow the antiphon, professing that the Lord has truly risen.",
   "seg":[
-    {"id":"s01","tr":"Queen of heaven, rejoice, alleluia;","tc":[101],"tb":"traditional-composite","g":["Queen","of heaven","rejoice","alleluia"],"fn":{"w002":"Genitive dependent on “Regína” (w001).","w003":"Imperative of a deponent verb: passive in form and active in meaning."}},
-    {"id":"s02","tr":"for He whom you did merit to bear, alleluia,","tc":[101],"tb":"traditional-composite","g":["for","whom","you were counted worthy","to bear","alleluia"],"fn":{"w006":"Accusative object of “portáre” (w008).","w007":"Perfect indicative of the deponent “méreor”. With an infinitive, it means here to have been worthy to do something.","w008":"Infinitive dependent on “meruísti” (w007)."}},
-    {"id":"s03","tr":"has risen, as He said, alleluia.","tc":[101],"tb":"traditional-composite","g":["has risen","as","He said","alleluia"],"fn":{"w010":"The main verb. Its subject is the understood antecedent of “quem” (w006).","w012":"Perfect indicative with the same subject as “Resurréxit” (w010)."}},
-    {"id":"s04","tr":"Pray for us to God, alleluia.","tc":[101],"tb":"traditional-composite","g":["pray","for","us","God","alleluia"],"fn":{"w014":"Imperative addressed to Mary.","w016":"Ablative after “pro” (w015): those on whose behalf the prayer is made.","w017":"Accusative object of “Ora” (w014). The verb “oráre” takes the person entreated in the accusative, while the phrase pro nobis states on whose behalf."}},
-    {"id":"s05","tr":"Rejoice and be glad, O Virgin Mary, alleluia.","tc":[101],"tb":"traditional-composite","g":["rejoice","and","be glad","Virgin","Mary","alleluia"],"fn":{"w019":"Active imperative. The synonymous “lætáre” (w021) is deponent.","w023":"Vocative. The versicle names Mary, to whom the antiphon is addressed."}},
-    {"id":"s06","tr":"For the Lord has truly risen, alleluia.","tc":[102],"tb":"traditional-composite","g":["for","has risen","the Lord","truly","alleluia"],"fn":{"w026":"A form of súrgo, without the prefix re-. Like “Resurréxit” (w010), it refers here to Christ's Resurrection.","w027":"Nominative subject of “surréxit” (w026)."}}
+    {"id":"s01","tr":"Queen of heaven, rejoice, alleluia;","tc":[101],"tb":"traditional-composite","g":["Queen","of heaven","rejoice","alleluia"]},
+    {"id":"s02","tr":"for He whom you did merit to bear, alleluia,","tc":[101],"tb":"traditional-composite","g":["for","whom","you were counted worthy","to bear","alleluia"]},
+    {"id":"s03","tr":"has risen, as He said, alleluia.","tc":[101],"tb":"traditional-composite","g":["has risen","as","He said","alleluia"]},
+    {"id":"s04","tr":"Pray for us to God, alleluia.","tc":[101],"tb":"traditional-composite","g":["pray","for","us","God","alleluia"]},
+    {"id":"s05","tr":"Rejoice and be glad, O Virgin Mary, alleluia.","tc":[101],"tb":"traditional-composite","g":["rejoice","and","be glad","Virgin","Mary","alleluia"]},
+    {"id":"s06","tr":"For the Lord has truly risen, alleluia.","tc":[102],"tb":"traditional-composite","g":["for","has risen","the Lord","truly","alleluia"],"ex":{"w026":"Like “Resurréxit” (w010), it refers here to Christ's Resurrection."}}
   ]
 }

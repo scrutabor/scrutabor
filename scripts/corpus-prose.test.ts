@@ -40,14 +40,14 @@ function corpusProse(): { where: string; text: string }[] {
 		}
 
 		// Each language text is self-contained: `about` on the artifact, `nr`
-		// on a rubric row, and `fn` / `nt` keyed by stable word id.
+		// on a rubric row, and `ex` / `nt` keyed by stable word id.
 		for (const text of language.texts) {
 			const doc = read(text.path);
 			const at = (key: string) => `${text.path}:${key}.${lang}`;
 			if (doc.about) out.push({ where: at('about'), text: doc.about });
 			for (const row of (doc.seg ?? []) as Record<string, unknown>[]) {
 				if (row.nr) out.push({ where: at(`${row.id}.narrative`), text: row.nr as string });
-				for (const key of ['fn', 'nt']) {
+				for (const key of ['ex', 'nt']) {
 					const byWord = (row[key] as Record<string, string>) ?? {};
 					for (const [id, prose] of Object.entries(byWord)) {
 						out.push({ where: at(`${id}.${key}`), text: prose });
@@ -64,7 +64,10 @@ describe('the words the corpus says', () => {
 		// 589 of these were rewritten on 2026-08-10, after the same sweep
 		// through the app's own tables.
 		const all = corpusProse();
-		expect(all.length, 'the vendored prose is reachable').toBeGreaterThan(2000);
+		// Contextual explanations are deliberately sparse; introductions,
+		// translations, rubrics, notes and the retained explanations still
+		// provide a large enough surface to catch a disconnected reader layer.
+		expect(all.length, 'the vendored prose is reachable').toBeGreaterThan(1000);
 		const offenders = all
 			.filter(({ text }) => text.includes(';'))
 			.map(({ where, text }) => `${where}: ${text.slice(0, 60)}`);

@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The Glória Patri is a short Trinitarian doxology. It closes nearly every psalm and canticle of the Office, and in this book the reader meets it at the foot of the altar, at the Lavábo and in the Introit of the Advent Mass.",
   "seg":[
-    {"id":"s01","tr":"Glory be to the Father, and to the Son, and to the Holy Spirit.","tc":[76],"tb":"traditional-composite","g":["glory","to the Father","and","to the Son","and","to the Spirit","Holy"],"fn":{"w001":"With an understood “sit”: glory [be].","w002":"Dative dependent on “Glória” (w001).","w007":"Agrees with “Spirítui” (w006). As an adjective of the first and second declensions, it has the dative form “Sancto”."}},
-    {"id":"s02","tr":"As it was in the beginning, is now, and ever shall be, world without end. Amen.","tc":[76],"tb":"traditional-composite","g":["as","it was","in","the beginning","and","now","and","ever","and","unto","ages","of ages","amen"],"fn":{"w009":"Imperfect indicative with the understood subject “glória”.","w017":"The preposition “in” with the accusative in the phrase “in sǽcula”: unto the ages.","w019":"Genitive dependent on “sǽcula” (w018)."}}
+    {"id":"s01","tr":"Glory be to the Father, and to the Son, and to the Holy Spirit.","tc":[76],"tb":"traditional-composite","g":["glory","to the Father","and","to the Son","and","to the Spirit","Holy"],"ex":{"w001":"Latin leaves “sit” unspoken: “Glória [sit] Patri” — “glory [be] to the Father”."}},
+    {"id":"s02","tr":"As it was in the beginning, is now, and ever shall be, world without end. Amen.","tc":[76],"tb":"traditional-composite","g":["as","it was","in","the beginning","and","now","and","ever","and","unto","ages","of ages","amen"]}
   ]
 }

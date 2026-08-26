@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The ministers pray for the priest in the singular: “misereátur tui”, “peccátis tuis”, “perdúcat te”, and the priest answers “Amen”. After the ministers' confession the same formula appears in the plural. Only then does the priest add the “Indulgéntiam” prayer.",
   "seg":[
-    {"id":"s01","tr":"May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life.","tc":[142],"tb":"revised","g":["may He have mercy","on you","almighty","God","and","having been forgiven","sins","your","may He bring","you","to","life","everlasting"],"fn":{"w001":"A subjunctive expressing a petition addressed to God.","w002":"Genitive singular governed by “Misereátur” (w001).","w004":"Nominative subject of “Misereátur” (w001) and “perdúcat” (w009).","w006":"A participle forming an ablative absolute with “peccátis” (w007).","w007":"The noun in the ablative absolute with “dimíssis” (w006).","w009":"A second subjunctive, coordinated with “Misereátur” (w001).","w010":"Accusative object of “perdúcat” (w009)."}},
+    {"id":"s01","tr":"May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life.","tc":[142],"tb":"revised","g":["may He have mercy","on you","almighty","God","and","having been forgiven","sins","your","may He bring","you","to","life","everlasting"]},
     {"id":"s02","nr":"The priest answers."},
     {"id":"s03","tr":"Amen.","tc":[142],"tb":"revised","g":["amen"]},
     {"id":"s04","nr":"The priest straightens up. The ministers now repeat the confession — in the same words, with the single change the missal states outright: where the priest said “to you, brethren” and “you, brethren”, they say “to you, father” and “you, father”."}

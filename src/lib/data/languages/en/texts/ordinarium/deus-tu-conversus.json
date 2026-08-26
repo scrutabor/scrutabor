@@ -4,13 +4,13 @@
   "about":"The first three exchanges are Psalm 84:7–8 and Psalm 101:2 in the Vulgate numbering, from the Gallican psalter the Mass uses: it opens the first of them Deus, tu convérsus where later editions read Nonne tu convérsus. The last is the liturgical greeting “Dóminus vobíscum” and its response.",
   "seg":[
     {"id":"s01","nr":"Bowed, the priest continues."},
-    {"id":"s02","tr":"O God, You will turn toward us and give us life.","tc":[142],"tb":"revised","g":["God","Thou","having turned","wilt give life","us"],"fn":{"w003":"A passive participle used reflexively: “having turned”.","w004":"Future indicative."}},
-    {"id":"s03","tr":"And Your people will rejoice in You.","tc":[142],"tb":"revised","g":["and","people","Thy","will rejoice","in","Thee"],"fn":{"w008":"Agrees with “plebs” (w007).","w009":"A future parallel to “vivificábis” (w004): the people will rejoice in God.","w011":"Ablative after “in” (w010)."}},
-    {"id":"s04","tr":"Show us Your mercy, O Lord.","tc":[142],"tb":"revised","g":["show","us","Lord","mercy","Thy"],"fn":{"w013":"Dative with “Osténde” (w012).","w015":"Accusative object of “Osténde” (w012).","w016":"Agrees with “misericórdiam” (w015)."}},
-    {"id":"s05","tr":"And grant us Your salvation.","tc":[142],"tb":"revised","g":["and","salvation","Thy","grant","us"],"fn":{"w018":"Neuter adjective used substantively. Accusative object of “da” (w020).","w019":"Neuter, agreeing with “salutáre” (w018)."}},
-    {"id":"s06","tr":"O Lord, hear my prayer.","tc":[142],"tb":"revised","g":["Lord","hear favorably","prayer","my"],"fn":{"w025":"Agrees with “oratiónem” (w024)."}},
-    {"id":"s07","tr":"And let my cry come to You.","tc":[142],"tb":"revised","g":["and","cry","my","unto","Thee","let come"],"fn":{"w027":"Nominative subject of “véniat” (w031).","w028":"Agrees with “clamor” (w027).","w030":"Accusative after “ad” (w029).","w031":"Present subjunctive expressing a petition."}},
-    {"id":"s08","tr":"The Lord be with you.","tc":[142],"tb":"revised","g":["the Lord","with you"],"fn":{"w032":"Nominal clause without an expressed verb.","w033":"The preposition “cum” follows the personal pronoun: “vobís-cum”."}},
-    {"id":"s09","tr":"And with your spirit.","tc":[142],"tb":"revised","g":["and","with","spirit","your"],"fn":{"w036":"An ablative after “cum” (w035), in the fixed response “Et cum spíritu tuo”.","w037":"Agrees with “spíritu” (w036)."}}
+    {"id":"s02","tr":"O God, You will turn toward us and give us life.","tc":[142],"tb":"revised","g":["God","Thou","having turned","wilt give life","us"]},
+    {"id":"s03","tr":"And Your people will rejoice in You.","tc":[142],"tb":"revised","g":["and","people","Thy","will rejoice","in","Thee"]},
+    {"id":"s04","tr":"Show us Your mercy, O Lord.","tc":[142],"tb":"revised","g":["show","us","Lord","mercy","Thy"]},
+    {"id":"s05","tr":"And grant us Your salvation.","tc":[142],"tb":"revised","g":["and","salvation","Thy","grant","us"]},
+    {"id":"s06","tr":"O Lord, hear my prayer.","tc":[142],"tb":"revised","g":["Lord","hear favorably","prayer","my"]},
+    {"id":"s07","tr":"And let my cry come to You.","tc":[142],"tb":"revised","g":["and","cry","my","unto","Thee","let come"]},
+    {"id":"s08","tr":"The Lord be with you.","tc":[142],"tb":"revised","g":["the Lord","with you"],"ex":{"w032":"In the greeting “Dóminus vobíscum”, Latin leaves the verb unspoken: “the Lord [is] with you”."}},
+    {"id":"s09","tr":"And with your spirit.","tc":[142],"tb":"revised","g":["and","with","spirit","your"]}
   ]
 }

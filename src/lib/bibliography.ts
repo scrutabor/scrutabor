@@ -86,7 +86,7 @@ export function buildBibliography(
 		}
 
 		for (const [wordId, word] of Object.entries(gloss.words)) {
-			for (const citation of word.function_citations ?? []) {
+			for (const citation of word.explanation_citations ?? []) {
 				add(citation, { ...textUse, href: `${textUse.href}?w=${wordId}` });
 			}
 		}

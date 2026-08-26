@@ -4,11 +4,11 @@
   "about":"The dialog preceding the Preface. In “Sursum corda” the verb is left understood. In the response “Habémus ad Dóminum”, the unexpressed object is “corda”. The priest takes up the final response with “Vere dignum et iustum est”.",
   "seg":[
     {"id":"s01","nr":"The priest lays both hands on the altar, one on either side, and raises them a little as he says Sursum corda. At Grátias agámus he joins them before his breast and bows his head."},
-    {"id":"s02","tr":"The Lord be with you.","tc":[298],"tb":"exact","g":["The Lord","with you"],"fn":{"w002":"The preposition “cum” follows the personal pronoun: “vobis” + “cum” forms “vobíscum”."}},
-    {"id":"s03","tr":"And with your spirit.","tc":[299],"tb":"normalized","g":["and","with","spirit","your"],"fn":{"w006":"Agrees with “spíritu” (w005) in the response “Et cum spíritu tuo”."}},
-    {"id":"s04","tr":"Lift up your hearts.","tc":[296],"tb":"normalized","g":["upwards","hearts"],"fn":{"w008":"Accusative plural in a call with no expressed verb."}},
-    {"id":"s05","tr":"We lift them up to the Lord.","tc":[296],"tb":"normalized","g":["we have","to","the Lord"],"fn":{"w009":"The unexpressed object of “habémus” is “corda” from the preceding call."}},
-    {"id":"s06","tr":"Let us give thanks to the Lord our God.","tc":[296],"tb":"normalized","g":["thanks","let us give","to the Lord","God","our"],"fn":{"w012":"“Grátias ágere” is the fixed Latin expression for giving thanks.","w013":"A first-person plural subjunctive used as an exhortation.","w015":"In apposition to “Dómino” (w014), and so in the dative."}},
-    {"id":"s07","tr":"It is right and just.","g":["right","and","just","it is"],"fn":{"w017":"Neuter singular, used without an expressed noun."}}
+    {"id":"s02","tr":"The Lord be with you.","tc":[298],"tb":"exact","g":["The Lord","with you"]},
+    {"id":"s03","tr":"And with your spirit.","tc":[299],"tb":"normalized","g":["and","with","spirit","your"]},
+    {"id":"s04","tr":"Lift up your hearts.","tc":[296],"tb":"normalized","g":["upwards","hearts"],"ex":{"w008":"The call “Sursum corda” leaves its verb unspoken. Literally it says “hearts upward”."}},
+    {"id":"s05","tr":"We lift them up to the Lord.","tc":[296],"tb":"normalized","g":["we have","to","the Lord"]},
+    {"id":"s06","tr":"Let us give thanks to the Lord our God.","tc":[296],"tb":"normalized","g":["thanks","let us give","to the Lord","God","our"]},
+    {"id":"s07","tr":"It is right and just.","g":["right","and","just","it is"]}
   ]
 }

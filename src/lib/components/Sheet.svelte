@@ -71,7 +71,7 @@
 
 	// A long analysis outgrows the sheet and the sheet scrolls, which is
 	// right — but the HEADER was scrolling with it, and the header holds the
-	// only way out. On a phone, a word with several senses and a function
+	// only way out. On a phone, a word with several senses and an explanation
 	// note took the × off the top of the panel entirely (owner, 2026-08-07):
 	// a sheet with no visible way to close it, over the prayer it covers.
 	//

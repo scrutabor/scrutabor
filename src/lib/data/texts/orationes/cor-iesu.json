@@ -11,6 +11,6 @@
   "ac":[71],
   "seg":[
     {"id":"s01","type":"verse","w":[{"i":"w001","f":"Cor","l":"cor","m":97},{"i":"w002","f":"Iesu","l":"Iesus","m":98},{"i":"w003","f":"sacratíssimum","l":"sacratus","p":".","m":112,"h":"w001","a":0}]},
-    {"id":"s02","type":"verse","speaker":"omnes","w":[{"i":"w004","f":"Miserére","l":"misereor","m":52},{"i":"w005","f":"nobis","l":"nos","p":".","m":53}],"fc":{"w005":[70]}}
+    {"id":"s02","type":"verse","speaker":"omnes","w":[{"i":"w004","f":"Miserére","l":"misereor","m":52},{"i":"w005","f":"nobis","l":"nos","p":".","m":53}]}
   ]
 }

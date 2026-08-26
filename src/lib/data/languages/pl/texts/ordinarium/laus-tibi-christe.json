@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Odpowiedź po zakończeniu Ewangelii.",
   "seg":[
-    {"id":"s01","tr":"Chwała Tobie, Chryste.","g":["Chwała","Tobie","Chryste"],"fn":{"w001":"Mianownik w odpowiedzi bez wyrażonego czasownika."}}
+    {"id":"s01","tr":"Chwała Tobie, Chryste.","g":["Chwała","Tobie","Chryste"],"ex":{"w001":"Odpowiedź pomija „sit”: „Laus [sit] tibi, Christe” — „chwała [niech będzie] Tobie, Chryste”."}}
   ]
 }

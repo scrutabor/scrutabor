@@ -128,7 +128,7 @@ test('switching language keeps the panel open on the same word', async ({ page }
 });
 
 test('the way out of a long panel does not scroll away', async ({ page }) => {
-	// A word with senses, a function note and its sources outgrows the
+	// A word with senses, a contextual explanation and its sources outgrows the
 	// sheet on a phone, so the sheet scrolls — and the HEADER scrolled with
 	// it, trimming the word and carrying the × up out of the panel
 	// altogether (owner, 2026-08-07): a sheet covering the prayer with no

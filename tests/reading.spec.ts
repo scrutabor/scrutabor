@@ -228,10 +228,9 @@ test('a litany pairs every invocation with its exact response in compact columns
 });
 
 test('word panel separates context, dictionary, grammar and verification', async ({ page }) => {
-	await page.goto(AVE);
-	await page.locator('#w019').click(); // Mater
+	await page.goto('/app/pl/orationes/ave-regina-caelorum?w=w008'); // radix
 	const panel = page.locator('aside');
-	await expect(panel.locator('.form')).toHaveText('Mater');
+	await expect(panel.locator('.form')).toHaveText('radix');
 	// Pronunciation belongs to the selected form and is available before
 	// contextual or reference material requires any scrolling.
 	await expect(panel.locator('header .pronunciation-lead .pron')).toBeVisible();
@@ -253,50 +252,35 @@ test('word panel separates context, dictionary, grammar and verification', async
 	);
 	expect(headingRows.titleAlign).toBe('left');
 	expect(headingRows.pronunciationAlign).toBe('left');
-	await expect(panel.locator('.layer-label')).toHaveText(['hasło', 'forma']);
+	await expect(panel.locator('.layer-label')).toHaveText(['kontekst', 'hasło', 'forma']);
 	await expect(panel.locator('.head')).not.toContainText('›');
-	// The answer to the reading question comes first.
-	await expect(panel.locator('.context-layer')).toHaveAttribute(
-		'aria-label',
-		'znaczenie w\u00a0kontekście'
-	);
-	await expect(panel.locator('.context-layer .gloss')).toHaveText('Matko');
-	await expect(panel.locator('.context-layer .function')).toContainText('Apozycja');
-	// Meaning and explanation read as one ordinary editorial line, like the
-	// dictionary prose below. Weight and the dash express their hierarchy;
-	// wrapping is left to normal inline text flow.
-	const contextType = await panel.locator('.context-layer').evaluate((layer) => {
+	// The short reading aid comes first. A genuinely useful explanation is a
+	// separate, quieter paragraph rather than a dash followed by grammar.
+	const context = panel.locator('#word-context-label').locator('..');
+	await expect(context.locator('.gloss')).toHaveText('korzeniu');
+	await expect(context.locator('.explanation')).toContainText('zbawcze Światło — Chrystus');
+	const contextType = await context.evaluate((layer) => {
 		const gloss = getComputedStyle(layer.querySelector('.gloss')!);
-		const fn = getComputedStyle(layer.querySelector('.function')!);
-		const copyStyle = getComputedStyle(layer.querySelector('.context-copy')!);
-		const copy = layer.querySelector('.context-copy')!.getBoundingClientRect();
-		const title = layer.closest('aside')!.querySelector('.form')!.getBoundingClientRect();
+		const explanation = getComputedStyle(layer.querySelector('.explanation')!);
 		return {
 			glossFamily: gloss.fontFamily,
-			functionFamily: fn.fontFamily,
+			explanationFamily: explanation.fontFamily,
 			glossSize: parseFloat(gloss.fontSize),
-			functionSize: parseFloat(fn.fontSize),
+			explanationSize: parseFloat(explanation.fontSize),
 			glossStyle: gloss.fontStyle,
 			glossWeight: Number(gloss.fontWeight),
-			functionWeight: Number(fn.fontWeight),
-			functionColor: fn.color,
-			functionLineHeight: fn.lineHeight,
-			copyDisplay: copyStyle.display,
-			copyLeft: copy.left,
-			titleLeft: title.left
+			explanationWeight: Number(explanation.fontWeight),
+			explanationColor: explanation.color
 		};
 	});
-	expect(contextType.glossFamily).toBe(contextType.functionFamily);
-	expect(contextType.glossSize).toBeCloseTo(contextType.functionSize, 1);
+	expect(contextType.glossFamily).toBe(contextType.explanationFamily);
+	expect(contextType.glossSize).toBeGreaterThan(contextType.explanationSize);
 	expect(contextType.glossStyle).toBe('normal');
-	expect(contextType.glossWeight).toBeGreaterThan(contextType.functionWeight);
-	expect(contextType.copyDisplay).toBe('block');
-	expect(contextType.copyLeft).toBeCloseTo(contextType.titleLeft, 1);
-	await expect(panel.locator('.context-separator')).toHaveText('—');
+	expect(contextType.glossWeight).toBeGreaterThan(contextType.explanationWeight);
 	// The dictionary identity is a separate layer.
-	await expect(panel.locator('.head a')).toHaveAttribute('href', '/app/pl/lemma/mater');
-	await expect(panel.locator('.head')).toContainText('mater, matris');
-	await expect(panel.locator('.head')).toContainText('— matka');
+	await expect(panel.locator('.head a')).toHaveAttribute('href', '/app/pl/lemma/radix');
+	await expect(panel.locator('.head')).toContainText('radix, radícis');
+	await expect(panel.locator('.head')).toContainText('— korzeń');
 	// So is the strict parse, with its concept-linked term.
 	await expect(panel.locator('.morph')).toContainText('wołacz');
 	await expect(panel.locator('.morph a.concept')).toHaveAttribute(
@@ -318,9 +302,8 @@ test('word panel separates context, dictionary, grammar and verification', async
 	expect(referenceType.headSize).toBeCloseTo(referenceType.morphSize, 1);
 	expect(referenceType.headColor).toBe(referenceType.morphColor);
 	expect(referenceType.headLineHeight).toBe(referenceType.morphLineHeight);
-	expect(contextType.functionSize).toBeCloseTo(referenceType.headSize, 1);
-	expect(contextType.functionColor).toBe(referenceType.headColor);
-	expect(contextType.functionLineHeight).toBe(referenceType.headLineHeight);
+	expect(contextType.explanationSize).toBeCloseTo(referenceType.headSize, 1);
+	expect(contextType.explanationColor).not.toBe(referenceType.headColor);
 	// The compact heading is a wide-panel improvement. On a phone the full
 	// pronunciation gets its own row instead of being squeezed beside the
 	// selected form and the close button.
@@ -328,9 +311,7 @@ test('word panel separates context, dictionary, grammar and verification', async
 	const narrowHeading = await panel.locator('header').evaluate((header) => {
 		const title = header.querySelector('.form')!.getBoundingClientRect();
 		const pronunciation = header.querySelector('.pronunciation-lead')!.getBoundingClientRect();
-		const copy = header
-			.parentElement!.querySelector('.context-layer .context-copy')!
-			.getBoundingClientRect();
+		const copy = header.parentElement!.querySelector('.gloss')!.getBoundingClientRect();
 		return {
 			titleBottom: title.bottom,
 			pronunciationTop: pronunciation.top,
@@ -340,10 +321,13 @@ test('word panel separates context, dictionary, grammar and verification', async
 	});
 	expect(narrowHeading.pronunciationTop).toBeGreaterThanOrEqual(narrowHeading.titleBottom);
 	expect(narrowHeading.copyLeft).toBeCloseTo(narrowHeading.titleLeft, 1);
-	// The short technical provenance line remains visible without acquiring
-	// another heading of its own.
+	// Routine verification remains available without competing with the
+	// prayer's meaning. It opens automatically only for a disputed reading.
 	const verification = panel.locator('.verification');
-	await expect(verification.locator('summary')).toHaveCount(0);
+	await expect(verification.locator('summary')).toHaveText('weryfikacja');
+	await expect(verification).not.toHaveAttribute('open', '');
+	await expect(verification.locator('.meta')).not.toBeVisible();
+	await verification.locator('summary').click();
 	await expect(verification.locator('.meta')).toBeVisible();
 	await expect(verification.locator('.meta')).toContainText('zaakceptowane');
 	await expect(verification.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
@@ -359,7 +343,7 @@ test('dictionary and grammar layers keep a modest shared indent', async ({ page 
 	await page.reload();
 	await settled(page);
 
-	const geometry = await page.locator('aside .layer:not(.context-layer)').evaluateAll((layers) => {
+	const geometry = await page.locator('aside .layer').evaluateAll((layers) => {
 		const root = parseFloat(getComputedStyle(document.documentElement).fontSize);
 		return {
 			root,
@@ -370,7 +354,7 @@ test('dictionary and grammar layers keep a modest shared indent', async ({ page 
 			})
 		};
 	});
-	expect(geometry.rows).toHaveLength(2);
+	expect(geometry.rows).toHaveLength(3);
 	expect(geometry.rows[0].left).toBeCloseTo(geometry.rows[1].left, 1);
 	for (const row of geometry.rows) {
 		expect(row.indent, 'the label column became an oversized empty field').toBeLessThanOrEqual(
@@ -407,12 +391,11 @@ test('a lemma-level note appears on every token of the lemma', async ({ page }) 
 	expect(dictionaryType.noteLineHeight).toBe(dictionaryType.headLineHeight);
 });
 
-test('cross-references in notes jump to the referenced word', async ({ page }) => {
-	await page.goto(CONFITEOR);
-	await page.locator('#w006').click(); // semper — note points to „Vírgini” (w007)
-	await expect(page.locator('aside .form')).toHaveText('semper');
-	await page.locator('aside .xref', { hasText: 'Vírgini' }).click();
-	await expect(page.locator('aside .form')).toHaveText('Vírgini');
+test('cross-references in explanations jump to the referenced word', async ({ page }) => {
+	await page.goto('/app/pl/ordinarium/corpus-tuum?w=w008'); // quem → Sanguis
+	await expect(page.locator('aside .form')).toHaveText('quem');
+	await page.locator('aside .xref', { hasText: 'Sanguis' }).click();
+	await expect(page.locator('aside .form')).toHaveText('Sanguis');
 	await expect(page.locator('#w007')).toBeInViewport();
 });
 
@@ -478,12 +461,16 @@ test('the Gloria reads with narrative, panel and provenance', async ({ page }) =
 	const panel = page.locator('aside');
 	await expect(panel.locator('.form')).toHaveText('Agnus');
 	await expect(panel.locator('.gloss')).toHaveText('Baranku');
-	// the nominative-as-address note cross-links its vocative anchor
-	await expect(panel.locator('.function')).toContainText('Mianownik');
+	// Routine case information stays in the form row and no longer creates a
+	// terse pseudo-explanation beside the prayer's meaning.
+	await expect(panel.locator('.morph')).toContainText('mianownik');
+	await expect(panel.locator('.explanation')).toHaveCount(0);
+	await panel.locator('.verification summary').click();
 	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
 	// single-analyzer override: déxteram is confirmed by Whitaker's alone,
 	// against the document's both-analyzers default
 	await page.goto('/app/pl/ordinarium/gloria?w=w061');
+	await panel.locator('.verification summary').click();
 	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker');
 	await expect(panel.locator('.meta')).not.toContainText('Collatinus');
 	// the superlative links its grammar concept and the lemma page resolves
@@ -675,7 +662,7 @@ test('the Credo reads with participles in the panel', async ({ page }) => {
 	await expect(panel.locator('.form')).toHaveText('incarnátus');
 	await expect(panel.locator('.morph')).toContainText('imiesłów');
 	await expect(panel.locator('.morph')).toContainText('perfectum');
-	await expect(panel.locator('.function')).toContainText('incarnátus est');
+	await expect(panel.locator('.explanation')).toHaveCount(0);
 	// deponent participle keeps its concept link
 	await page.goto('/app/en/ordinarium/credo?w=w083'); // passus
 	await expect(panel.locator('.morph')).toContainText('participle');
@@ -683,7 +670,13 @@ test('the Credo reads with participles in the panel', async ({ page }) => {
 	// the feminine dies ruling surfaces in the parse line
 	await page.goto('/app/pl/ordinarium/credo?w=w090'); // die
 	await expect(panel.locator('.morph')).toContainText('r. żeński');
-	await expect(panel.locator('.function')).toContainText('tértia');
+	await expect(panel.locator('.explanation')).toHaveCount(0);
+	// A contextual explanation remains where it adds theological meaning that
+	// neither the gloss nor the form row can carry alone.
+	await page.goto('/app/pl/ordinarium/credo?w=w122'); // vivificántem
+	await expect(panel.locator('.explanation')).toContainText(
+		'W Credo staje się tytułem Ducha Świętego: „Ożywiciel”'
+	);
 });
 
 /**

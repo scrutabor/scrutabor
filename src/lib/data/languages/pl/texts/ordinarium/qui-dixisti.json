@@ -4,14 +4,14 @@
   "about":"Pierwsza z trzech modlitw odmawianych przez kapłana po cichu przed Komunią. Jej początek przytacza J 14, 27. Kapłan prosi, aby Chrystus nie zważał na jego grzechy, lecz na wiarę Kościoła, i obdarzył Kościół pokojem oraz jednością. Potem, gdzie się go przekazuje, następuje pocałunek pokoju, a we Mszach za zmarłych nie przekazuje się pokoju ani nie odmawia tej modlitwy.",
   "seg":[
     {"id":"s01","nr":"Kapłan pochyla się nad ołtarzem, ręce złożone na nim, i odmawia po cichu trzy następujące modlitwy."},
-    {"id":"s02","tr":"Panie Jezu Chryste, który powiedziałeś swoim apostołom:","tc":[128],"tb":"revised","g":["Panie","Jezu","Chryste","któryś","rzekł","Apostołom","Twoim"],"fn":{"w002":"Wołacz liczby pojedynczej od Iesus.","w006":"Celownik jako dopełnienie „dixísti” (w005)."}},
+    {"id":"s02","tr":"Panie Jezu Chryste, który powiedziałeś swoim apostołom:","tc":[128],"tb":"revised","g":["Panie","Jezu","Chryste","któryś","rzekł","Apostołom","Twoim"]},
     {"id":"s03","tr":"„Pokój zostawiam wam; pokój mój wam daję” —","tc":[128],"tb":"revised","g":["Pokój","zostawiam","wam","pokój","mój","daję","wam"]},
-    {"id":"s04","tr":"nie zważaj na moje grzechy, lecz na wiarę Twojego Kościoła;","tc":[128],"tb":"revised","g":["nie","patrz","grzechy","moje","lecz","wiarę","Kościoła","Twego"],"fn":{"w015":"Z „respícias” (w016) w trybie łączącym tworzy prośbę przeczącą.","w018":"Zgadza się z „peccáta” (w017). Kapłan mówi o własnych grzechach.","w020":"Drugie dopełnienie „respícias” (w016), przeciwstawione „peccáta” (w017)."}},
-    {"id":"s05","tr":"i zgodnie z Twoją wolą racz obdarzyć go pokojem i jednoczyć,","tc":[128],"tb":"revised","g":["i go","według","woli","Twojej","obdarzyć pokojem","i","zjednoczyć","racz"],"fn":{"w023":"Zaimek odnosi się do „Ecclésiæ” (w021): prośba o pokój i jedność dotyczy Kościoła.","w027":"Pierwszy z dwóch bezokoliczników zależnych od „dignéris” (w030).","w029":"Drugi bezokolicznik zależny od „dignéris” (w030).","w030":"Tryb łączący wyrażający prośbę. Łączy się z bezokolicznikami „pacificáre” (w027) i „coadunáre” (w029)."}},
-    {"id":"s06","tr":"który, będąc Bogiem, żyjesz i królujesz przez wszystkie wieki wieków. Amen.","tc":[128],"tb":"revised","g":["Który","żyjesz","i","królujesz","Bóg","przez","wszystkie","wieki","wieków","amen"],"fn":{"w035":"Mianownik w apozycji do podmiotu „Qui” (w031)."}},
+    {"id":"s04","tr":"nie zważaj na moje grzechy, lecz na wiarę Twojego Kościoła;","tc":[128],"tb":"revised","g":["nie","patrz","grzechy","moje","lecz","wiarę","Kościoła","Twego"]},
+    {"id":"s05","tr":"i zgodnie z Twoją wolą racz obdarzyć go pokojem i jednoczyć,","tc":[128],"tb":"revised","g":["i go","według","woli","Twojej","obdarzyć pokojem","i","zjednoczyć","racz"]},
+    {"id":"s06","tr":"który, będąc Bogiem, żyjesz i królujesz przez wszystkie wieki wieków. Amen.","tc":[128],"tb":"revised","g":["Który","żyjesz","i","królujesz","Bóg","przez","wszystkie","wieki","wieków","amen"]},
     {"id":"s07","nr":"Jeżeli przekazuje się pokój, kapłan całuje ołtarz i mówi:"},
-    {"id":"s08","tr":"Pokój z tobą.","g":["Pokój","z tobą"],"fn":{"w042":"Łączy przyimek „cum” z zaimkiem „tu”."}},
-    {"id":"s09","tr":"I z duchem twoim.","tc":[235],"tb":"revised","g":["i","z","duchem","twoim"],"fn":{"w044":"Wymaga ablativu: „spíritu” (w045) i „tuo” (w046)."}},
+    {"id":"s08","tr":"Pokój z tobą.","g":["Pokój","z tobą"]},
+    {"id":"s09","tr":"I z duchem twoim.","tc":[235],"tb":"revised","g":["i","z","duchem","twoim"]},
     {"id":"s10","nr":"We Mszach za zmarłych nie przekazuje się pokoju i tę modlitwę się opuszcza."}
   ]
 }

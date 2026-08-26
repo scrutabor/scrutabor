@@ -4,9 +4,9 @@
   "about":"Kapłan wypowiada pierwszą część błogosławieństwa przy ołtarzu, następnie zwraca się do ludu i kreśli nad nim znak krzyża. Także podczas Mszy uroczystej czyni jeden znak. Potrójne błogosławieństwo należy do Mszy pontyfikalnej. Błogosławieństwo opuszcza się po Benedicámus Dómino oraz we Mszach za zmarłych.",
   "seg":[
     {"id":"s01","nr":"Potem kapłan całuje ołtarz, podnosi oczy, wyciąga, unosi i składa ręce, pochyla głowę przed krzyżem i mówi:"},
-    {"id":"s02","tr":"Niech was błogosławi Bóg wszechmogący,","tc":[141],"tb":"revised","g":["niech błogosławi","was","wszechmogący","Bóg"],"fn":{"w001":"Tryb łączący życzenia. „Deus” (w004) jest podmiotem, a „vos” (w002) dopełnieniem bliższym.","w003":"Zgadza się z „Deus” (w004), choć stoi przed nim."}},
+    {"id":"s02","tr":"Niech was błogosławi Bóg wszechmogący,","tc":[141],"tb":"revised","g":["niech błogosławi","was","wszechmogący","Bóg"]},
     {"id":"s03","nr":"Kapłan zwraca się do ludu, błogosławi go jeden raz i mówi dalej:"},
-    {"id":"s04","tr":"Ojciec i Syn, i Duch Święty.","tc":[141],"tb":"revised","g":["Ojciec","i","Syn","i","Duch","Święty"],"fn":{"w005":"Mianownik w apozycji do „Deus” (w004), nie wołacz.","w009":"Mianownik liczby pojedynczej w apozycji do „Deus” (w004), obok „Pater” (w005) i „Fílius” (w007)."}},
+    {"id":"s04","tr":"Ojciec i Syn, i Duch Święty.","tc":[141],"tb":"revised","g":["Ojciec","i","Syn","i","Duch","Święty"]},
     {"id":"s06","tr":"Amen.","tc":[141],"tb":"revised","g":["amen"]},
     {"id":"s05","nr":"We Mszach za zmarłych błogosławieństwa się nie udziela. Po Requiéscant in pace kapłan odmawia Pláceat tibi, sancta Trínitas, całuje ołtarz i, jeśli ostatnia Ewangelia ma być odczytana, czyta Ewangelię św. Jana."}
   ]

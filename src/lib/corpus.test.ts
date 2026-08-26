@@ -102,14 +102,23 @@ describe('vendored corpus snapshot', () => {
 
 	it('keeps shared annotation topology aligned where two packs include the same text', () => {
 		for (const key of textKeysFor('pl').filter((candidate) => candidate in TEXTS.en)) {
-			const withField = (language: Lang, field: 'function' | 'note') =>
+			const withField = (language: Lang, field: 'explanation' | 'note') =>
 				Object.entries(TEXTS[language][key].gloss.words)
 					.filter(([, entry]) => field in entry)
 					.map(([id]) => id)
 					.sort();
-			expect(withField('pl', 'function'), key).toEqual(withField('en', 'function'));
+			expect(withField('pl', 'explanation'), key).toEqual(withField('en', 'explanation'));
 			expect(withField('pl', 'note'), key).toEqual(withField('en', 'note'));
 		}
+	});
+
+	it('keeps routine grammar out of contextual explanations', () => {
+		const words = TEXTS.pl['orationes/ave-regina-caelorum'].gloss.words;
+		expect(words.w002.gloss).toBe('Królowo');
+		expect(words.w002.explanation).toBeUndefined();
+		expect(words.w003.explanation).toBeUndefined();
+		expect(words.w005.explanation).toBeUndefined();
+		expect(words.w008.explanation).toContain('zbawcze Światło — Chrystus');
 	});
 
 	it('expands the word-level editorial-note channel', () => {
@@ -133,8 +142,8 @@ describe('vendored corpus snapshot', () => {
 					about: gloss.about_citations,
 					words: Object.fromEntries(
 						Object.entries(gloss.words)
-							.filter(([, entry]) => entry.function_citations)
-							.map(([id, entry]) => [id, entry.function_citations])
+							.filter(([, entry]) => entry.explanation_citations)
+							.map(([id, entry]) => [id, entry.explanation_citations])
 					),
 					segments: Object.fromEntries(
 						Object.entries(gloss.segments)
@@ -149,8 +158,8 @@ describe('vendored corpus snapshot', () => {
 				const gloss = TEXTS[language][key].gloss;
 				if (gloss.about_citations) expect(gloss.about, `${key} ${language} about`).toBeTruthy();
 				for (const [id, entry] of Object.entries(gloss.words)) {
-					if (entry.function_citations)
-						expect(entry.function, `${key} ${language} ${id}`).toBeTruthy();
+					if (entry.explanation_citations)
+						expect(entry.explanation, `${key} ${language} ${id}`).toBeTruthy();
 				}
 				for (const [id, entry] of Object.entries(gloss.segments)) {
 					if (entry.narrative_citations)
@@ -165,7 +174,7 @@ describe('vendored corpus snapshot', () => {
 			for (const [key, entry] of Object.entries(TEXTS[language])) {
 				const byId = new Map(allWords(entry.text).map((word) => [word.id, word]));
 				for (const [id, wordGloss] of Object.entries(entry.gloss.words)) {
-					for (const match of (wordGloss.function ?? '').matchAll(XREF)) {
+					for (const match of (wordGloss.explanation ?? '').matchAll(XREF)) {
 						const [, quoted, ref] = match;
 						const target = byId.get(ref);
 						expect(target, `${key} ${language} ${id} → ${ref}`).toBeDefined();

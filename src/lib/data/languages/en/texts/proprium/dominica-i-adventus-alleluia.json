@@ -5,7 +5,7 @@
   "seg":[
     {"id":"s01","nr":"When a weekday of Advent uses the preceding Sunday's Mass, the Alleluia and its verse are omitted and only the Gradual is said."},
     {"id":"s02","tr":"Alleluia, alleluia.","tc":[142],"tb":"revised","g":["alleluia","alleluia"]},
-    {"id":"s03","tr":"Show us, Lord, Your mercy and grant us Your salvation.","tc":[142],"tb":"revised","g":["show","to us","Lord","mercy","Thy","and","salvation","Thy","give","to us"],"fn":{"w009":"A neuter adjective used substantivally: salvation."}},
+    {"id":"s03","tr":"Show us, Lord, Your mercy and grant us Your salvation.","tc":[142],"tb":"revised","g":["show","to us","Lord","mercy","Thy","and","salvation","Thy","give","to us"]},
     {"id":"s04","tr":"Alleluia.","tc":[142],"tb":"revised","g":["alleluia"]}
   ]
 }

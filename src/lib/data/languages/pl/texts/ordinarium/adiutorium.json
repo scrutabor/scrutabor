@@ -4,7 +4,7 @@
   "about":"Werset i odpowiedź tworzą ostatni werset Psalmu 123 według numeracji Wulgaty (Ps 124, 8 w numeracji hebrajskiej). Pierwsza część ma domyślny łącznik, a druga własne orzeczenie: fecit.",
   "seg":[
     {"id":"s01","nr":"Kapłan czyni znak krzyża."},
-    {"id":"s02","tr":"Wspomożenie nasze w imieniu Pana.","tc":[124],"tb":"revised","g":["wspomożenie","nasze","w","imieniu","Pana"],"fn":{"w001":"Mianownik podmiotu z domyślnym łącznikiem.","w002":"Zgadza się z „Adiutórium” (w001).","w004":"Ablativus zależny od „in” (w003).","w005":"Dopełniacz zależny od „nómine” (w004)."}},
-    {"id":"s03","tr":"Który stworzył niebo i ziemię.","tc":[124],"tb":"exact","g":["który","uczynił","niebo","i","ziemię"],"fn":{"w006":"Zaimek względny. Jego poprzednikiem jest „Dómini” (w005), a mianownik wynika z funkcji podmiotu przy „fecit” (w007).","w007":"Perfectum indicativi. Podmiotem jest „Qui” (w006)."}}
+    {"id":"s02","tr":"Wspomożenie nasze w imieniu Pana.","tc":[124],"tb":"revised","g":["wspomożenie","nasze","w","imieniu","Pana"],"ex":{"w001":"Łacina pomija „est”: „Adiutórium nostrum [est] in nómine Dómini” — „wspomożenie nasze [jest] w imieniu Pana”."}},
+    {"id":"s03","tr":"Który stworzył niebo i ziemię.","tc":[124],"tb":"exact","g":["który","uczynił","niebo","i","ziemię"]}
   ]
 }

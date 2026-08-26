@@ -57,8 +57,8 @@ describe('the corpus this app ships', () => {
 		// red build and a deliberate re-read of the emitter — not as a new
 		// short key falling through the sets and a layer quietly missing
 		// from the reader's page. Bump these WITH the mirror, never alone.
-		expect(provenance.schema_version).toBe('0.16.0');
-		expect(provenance.edition).toBe('3.2.0');
+		expect(provenance.schema_version).toBe('0.17.0');
+		expect(provenance.edition).toBe('3.3.0');
 	});
 
 	it('was vendored from a clean corpus', () => {

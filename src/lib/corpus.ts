@@ -111,8 +111,8 @@ export interface TextDocument {
 
 export interface WordGloss {
 	gloss: string;
-	function?: string;
-	function_citations?: Citation[];
+	explanation?: string;
+	explanation_citations?: Citation[];
 	note?: string;
 }
 
@@ -189,7 +189,7 @@ interface CoreSegmentRow {
 	type: 'verse' | 'rubric';
 	an?: number;
 	w?: WordCell[];
-	fc?: Record<string, number[]>;
+	ec?: Record<string, number[]>;
 	nc?: number[];
 	[key: string]: unknown;
 }
@@ -207,7 +207,7 @@ interface CoreArtifact {
 interface LanguageSegmentRow {
 	id: string;
 	g?: string[];
-	fn?: Record<string, string>;
+	ex?: Record<string, string>;
 	nt?: Record<string, string>;
 	tr?: string;
 	tc?: number[];
@@ -236,7 +236,7 @@ function expandWord(cell: WordCell): Word {
 	return word;
 }
 
-const CORE_ROW_KEYS = new Set(['w', 'fc', 'nc', 'an']);
+const CORE_ROW_KEYS = new Set(['w', 'ec', 'nc', 'an']);
 const CORE_DOC_KEYS = new Set(['st', 'ad', 'adw', 'ac', 'seg']);
 
 function expandDocument(
@@ -296,9 +296,9 @@ function expandDocument(
 			segment.words = row.w.map((cell, position) => {
 				const word = expandWord(cell);
 				const entry: WordGloss = { gloss: languageRow.g![position] };
-				if (languageRow.fn?.[cell.i]) entry.function = languageRow.fn[cell.i];
+				if (languageRow.ex?.[cell.i]) entry.explanation = languageRow.ex[cell.i];
 				if (languageRow.nt?.[cell.i]) entry.note = languageRow.nt[cell.i];
-				if (row.fc?.[cell.i]) entry.function_citations = shared(row.fc[cell.i]);
+				if (row.ec?.[cell.i]) entry.explanation_citations = shared(row.ec[cell.i]);
 				gloss.words[cell.i] = entry;
 				return word;
 			});
