@@ -1,3 +1,4 @@
+import { lemmaSlug } from './lemma-slug';
 import { LEXICON, type Citation, type SenseEntry, type TextEntry } from './corpus';
 import type { Lang } from './i18n';
 
@@ -96,7 +97,7 @@ export function buildBibliography(
 		for (const citation of sense.note_citations ?? []) {
 			add(citation, {
 				title: LEXICON.lemmata[lemma]?.head ?? lemma,
-				href: `/app/${lang}/lemma/${encodeURIComponent(lemma)}`
+				href: `/app/${lang}/lemma/${encodeURIComponent(lemmaSlug(lemma))}`
 			});
 		}
 	}

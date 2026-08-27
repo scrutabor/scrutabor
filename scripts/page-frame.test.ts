@@ -25,11 +25,22 @@ describe('the shared page frame', () => {
 		const violations: string[] = [];
 		for (const path of pages(ROUTES)) {
 			const source = readFileSync(path, 'utf8');
-			const roots = [...source.matchAll(/<div\s+class="page(?:\s+([^"]+))?"/g)].flatMap((match) => [
-				'page',
-				...(match[1]?.split(/\s+/) ?? [])
-			]);
-			if (!roots.length) continue;
+			// ANY element whose class list carries `page`, whatever the tag
+			// and wherever the attribute sits. The first version required a
+			// <div> with class first, so `<main class="page …">` walked past
+			// the gate unexamined — a guard that skips what it cannot parse
+			// certifies nothing.
+			const roots = [...source.matchAll(/<[a-zA-Z][^>]*\bclass="([^"]*)"/g)]
+				.map((match) => match[1].split(/\s+/))
+				.filter((classes) => classes.includes('page'))
+				.flat();
+			if (!roots.length) {
+				expect(
+					/class="[^"]*\bpage\b/.test(source) || /class=\{[^}]*\bpage\b/.test(source),
+					`${path}: a page root this gate cannot read — use a literal class="page …"`
+				).toBe(false);
+				continue;
+			}
 
 			for (const rule of cssRules(source)) {
 				if (!/\bmax-width\s*:/.test(rule.declarations)) continue;
