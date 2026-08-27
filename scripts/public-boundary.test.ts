@@ -1,33 +1,17 @@
-// Nothing here may point at a document only the authors can open.
+// A relative documentation reference must open from this repository.
 //
-// This repository is public. The project's working notes are not: the backlog,
-// the review playbook, the quality taxonomy and the conventions live in a
-// private workbench, and a reader who follows `notes/conventions.md` from a
-// file here lands nowhere.
-//
-// An external review found sixteen of these across both public repositories on
-// 2026-08-19, and a re-review found three more that the FIRST VERSION OF THIS
-// GATE could not see: it matched `BACKLOG.md` with the extension, and the
-// survivors wrote the bare word. A gate that certifies a boundary it cannot
-// see past is worse than none, so the pattern now takes the word under any
-// casing. The fix in every case was to say the thing rather than to cite it.
-//
-// A SECOND version had the same disease in the file-name halves (found by
-// mutation on 2026-08-20): `notes\/[a-z-]+` could not cross a digit and
-// `reviews\/[A-Z][A-Z0-9-]*` could not cross lowercase, so a date-stamped
-// note and a versioned report both walked through — and two citations of a
-// date-stamped workbench note were live in this repository while the gate
-// showed green. Both halves now take any plausible file name.
+// This repository is self-contained: when a comment or an error message
+// points a reader at `notes/<page>.md`, `reviews/<page>.md`, or
+// `docs/<page>.md`, that file must exist here. A pointer a reader cannot
+// follow is worse than none — the first person to trip a check would be told
+// to consult a page that is not there. The rule is the readable one: say the
+// thing, or cite a page this repository actually ships.
 import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
-/** The private workbench's own documents, by the names they are cited under. */
-const PRIVATE =
-	/reviews\/[\w.-]+\.md|notes\/[\w.-]+\.md|\bbacklog\b|\bplaybook\b|\bowner-queue\b|scrutabor-workbench/i;
-
-/** This file names them in order to forbid them. */
-const EXEMPT = new Set(['scripts/public-boundary.test.ts']);
+const DOC_REFERENCE = /\b(?:notes|reviews|docs)\/[A-Za-z0-9][A-Za-z0-9._-]*\.md\b/g;
 
 /** Data we vendor or generate rather than write: the corpus, the lockfile,
  * the font subsets. Their contents are checked where they are produced. */
@@ -36,7 +20,25 @@ const NOT_PROSE = /^(src\/lib\/data\/|static\/|package-lock\.json$)|\.(woff2?|pn
 function tracked(): string[] {
 	return execFileSync('git', ['ls-files'], { encoding: 'utf8' })
 		.split('\n')
-		.filter((name) => name && !EXEMPT.has(name) && !NOT_PROSE.test(name));
+		.filter((name) => name && !NOT_PROSE.test(name));
+}
+
+export function danglingReferences(root: string, names: string[]): string[] {
+	const found: string[] = [];
+	for (const name of names) {
+		let text: string;
+		try {
+			text = readFileSync(join(root, name), 'utf8');
+		} catch {
+			continue;
+		}
+		text.split('\n').forEach((line, i) => {
+			for (const reference of line.match(DOC_REFERENCE) ?? []) {
+				if (!existsSync(join(root, reference))) found.push(`${name}:${i + 1}: ${reference}`);
+			}
+		});
+	}
+	return found;
 }
 
 describe('the public boundary', () => {
@@ -44,21 +46,27 @@ describe('the public boundary', () => {
 		expect(tracked().length, 'git ls-files came back empty').toBeGreaterThan(100);
 	});
 
-	it('cites no document a reader of this repository cannot open', () => {
-		const found: string[] = [];
-		for (const name of tracked()) {
-			let text: string;
-			try {
-				text = readFileSync(name, 'utf8');
-			} catch {
-				continue;
-			}
-			text.split('\n').forEach((line, i) => {
-				if (PRIVATE.test(line)) found.push(`${name}:${i + 1}: ${line.trim().slice(0, 90)}`);
-			});
-		}
-		expect(found, `these point at documents a reader cannot open:\n${found.join('\n')}`).toEqual(
-			[]
-		);
+	it('cites no documentation page this repository does not ship', () => {
+		const found = danglingReferences('.', tracked());
+		expect(
+			found,
+			`these point at documentation a reader cannot open:\n${found.join('\n')}`
+		).toEqual([]);
+	});
+
+	it('can fail', async () => {
+		// The example reference is assembled at runtime so this file's own
+		// text does not carry a dangling literal for the scan above.
+		const { mkdtempSync } = await import('node:fs');
+		const { tmpdir } = await import('node:os');
+		const root = mkdtempSync(join(tmpdir(), 'boundary-'));
+		const reference = ['notes', 'example.md'].join('/');
+		writeFileSync(join(root, 'src.ts'), `// see ${reference} for the rules\n`);
+		const found = danglingReferences(root, ['src.ts']);
+		expect(found).toHaveLength(1);
+		expect(found[0]).toContain(reference);
+		mkdirSync(join(root, 'notes'));
+		writeFileSync(join(root, reference), '# rules\n');
+		expect(danglingReferences(root, ['src.ts'])).toEqual([]);
 	});
 });
