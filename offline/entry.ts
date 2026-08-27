@@ -226,7 +226,17 @@ async function navigate(): Promise<void> {
 	instance = null;
 	mountedPath = null;
 	const found = match(path);
-	const prepared = await plan(found, path);
+	let prepared;
+	try {
+		prepared = await plan(found, path);
+	} catch {
+		// An artifact this copy cannot expand must not wedge navigation on a
+		// blank page with `pendingPath` still set: fall through to the same
+		// not-found plan an unknown address gets, which renders the book's
+		// own frame and keeps every link alive.
+		if (mine !== navigation) return;
+		prepared = await plan(null, path);
+	}
 	if (mine !== navigation) return;
 	pendingPath = null;
 	render(found, path, prepared);
