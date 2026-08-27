@@ -7,7 +7,7 @@
     {"id":"s02","tr":"Holy, Holy, Holy Lord God of hosts.","tc":[323],"tb":"normalized","g":["holy","holy","holy","the Lord","God","of hosts"],"ex":{"w006":"Hebrew “Sábaoth” entered Latin without inflection and means “of hosts”."}},
     {"id":"s03","tr":"Heaven and earth are full of Your glory.","g":["full","are","the heavens","and","earth","of glory","Your"]},
     {"id":"s04","tr":"Hosanna in the highest.","tc":[323],"tb":"normalized","g":["hosanna","in","the highest"]},
-    {"id":"s05","tr":"Blessed is He who comes in the name of the Lord.","g":["blessed","who","comes","in","the name","of the Lord"],"ex":{"w017":"Latin leaves “est” unspoken: “Benedíctus [est] qui venit” — “blessed [is] he that cometh”."}},
+    {"id":"s05","tr":"Blessed is He who comes in the name of the Lord.","g":["blessed","who","comes","in","the name","of the Lord"],"ex":{"w017":"Latin leaves “est” unspoken: “Benedíctus [est] qui venit” — “blessed [is] he that cometh”.","w019":"Read as the present: the One who is coming. The perfect “vēnit” is spelled the same and differs only in the length of the first vowel."}},
     {"id":"s06","tr":"Hosanna in the highest.","tc":[323],"tb":"normalized","g":["hosanna","in","the highest"]}
   ]
 }

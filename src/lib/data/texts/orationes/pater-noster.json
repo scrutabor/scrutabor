@@ -10,7 +10,7 @@
   "adw":2,
   "ac":[97,98],
   "seg":[
-    {"id":"s01","type":"verse","w":[{"i":"w001","f":"Pater","l":"pater","m":50},{"i":"w002","f":"noster","l":"noster","p":",","m":56,"h":"w001"},{"i":"w003","f":"qui","l":"qui","m":18},{"i":"w004","f":"es","l":"sum","m":191},{"i":"w005","f":"in","l":"in","m":0,"h":"w006"},{"i":"w006","f":"cælis","l":"caelum","p":".","m":51}]},
+    {"id":"s01","type":"verse","w":[{"i":"w001","f":"Pater","l":"pater","m":50},{"i":"w002","f":"noster","l":"noster","p":",","m":56,"h":"w001"},{"i":"w003","f":"qui","l":"qui","m":18},{"i":"w004","f":"es","l":"sum","m":191},{"i":"w005","f":"in","l":"in","m":0,"h":"w006"},{"i":"w006","f":"cælis","l":"caelum","p":".","m":51}],"ec":{"w002":[91,92]}},
     {"id":"s02","type":"verse","w":[{"i":"w007","f":"Sanctificétur","l":"sanctifico","m":233},{"i":"w008","f":"nomen","l":"nomen","m":97},{"i":"w009","f":"tuum","l":"tuus","p":".","m":105,"h":"w008"}]},
     {"id":"s03","type":"verse","w":[{"i":"w010","f":"Advéniat","l":"advenio","m":234},{"i":"w011","f":"regnum","l":"regnum","m":104},{"i":"w012","f":"tuum","l":"tuus","p":".","m":105,"h":"w011"}]},
     {"id":"s04","type":"verse","w":[{"i":"w013","f":"Fiat","l":"fio","m":198},{"i":"w014","f":"volúntas","l":"voluntas","m":20},{"i":"w015","f":"tua","l":"tuus","p":",","m":25,"h":"w014"},{"i":"w016","f":"sicut","l":"sicut","m":15},{"i":"w017","f":"in","l":"in","m":0,"h":"w018"},{"i":"w018","f":"cælo","l":"caelum","m":26},{"i":"w019","f":"et","l":"et","m":15},{"i":"w020","f":"in","l":"in","m":0,"h":"w021"},{"i":"w021","f":"terra","l":"terra","p":".","m":30}],"ec":{"w013":[94]}},

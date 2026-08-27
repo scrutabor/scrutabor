@@ -1,6 +1,6 @@
 {
-  "schema_version": "3.3.0",
-  "corpus_schema": "0.17.0",
+  "schema_version": "4.0.0",
+  "corpus_schema": "0.18.0",
   "texts": [
     {
       "id": "defunctorum.de-profundis",
@@ -636,7 +636,8 @@
     "lexicon": "lexicon/heads.json",
     "morphology": "tables/morphology.json",
     "analysis": "tables/analysis.json",
-    "citations": "tables/citations.json"
+    "citations": "tables/citations.json",
+    "normalization": "normalization.json"
   },
   "morphology": 442,
   "kalendarium": [

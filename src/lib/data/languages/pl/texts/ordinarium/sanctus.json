@@ -7,7 +7,7 @@
     {"id":"s02","tr":"Święty, Święty, Święty Pan Bóg Zastępów.","tc":[320],"tb":"normalized","g":["święty","święty","święty","Pan","Bóg","Zastępów"],"ex":{"w006":"Hebrajskie „Sábaoth” weszło do łaciny bez odmiany i znaczy „Zastępów”."}},
     {"id":"s03","tr":"Pełne są niebiosa i ziemia chwały Twojej.","tc":[320],"tb":"normalized","g":["pełne","są","niebiosa","i","ziemia","chwały","Twojej"]},
     {"id":"s04","tr":"Hosanna na wysokości.","tc":[320],"tb":"normalized","g":["hosanna","na","wysokościach"]},
-    {"id":"s05","tr":"Błogosławiony, który idzie w imię Pańskie.","tc":[320],"tb":"normalized","g":["błogosławiony","który","przychodzi","w","imieniu","Pana"],"ex":{"w017":"Łacina pomija „est”: „Benedíctus [est] qui venit” — „błogosławiony [jest], który przychodzi”."}},
+    {"id":"s05","tr":"Błogosławiony, który idzie w imię Pańskie.","tc":[320],"tb":"normalized","g":["błogosławiony","który","przychodzi","w","imieniu","Pana"],"ex":{"w017":"Łacina pomija „est”: „Benedíctus [est] qui venit” — „błogosławiony [jest], który przychodzi”.","w019":"Czytane jako czas teraźniejszy: Ten, który przychodzi. Perfectum „vēnit” pisze się tak samo, różni się tylko iloczasem pierwszej samogłoski."}},
     {"id":"s06","tr":"Hosanna na wysokości.","tc":[320],"tb":"normalized","g":["hosanna","na","wysokościach"]}
   ]
 }

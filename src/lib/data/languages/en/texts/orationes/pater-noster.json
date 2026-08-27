@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The Lord's Prayer, which Jesus taught His disciples (Mt 6:9–13, and in a shorter form at Lk 11:2–4). It addresses God as Father. It asks that His name be hallowed, His kingdom come, and His will be done, and then asks for daily bread, forgiveness, not to be led into temptation, and deliverance from evil.",
   "seg":[
-    {"id":"s01","tr":"Our Father, who art in heaven,","tc":[93],"tb":"normalized","g":["Father","our","who","art","in","the heavens"],"ex":{"w006":"Latin has plural “cælis” here and singular “cælo” later. The received English says “heaven” in both places."}},
+    {"id":"s01","tr":"Our Father, who art in heaven,","tc":[93],"tb":"normalized","g":["Father","our","who","art","in","the heavens"],"ex":{"w002":"The Lord taught a shared prayer: “our”, not “my” — each person prays it in the plural, together with the whole Church.","w006":"Latin has plural “cælis” here and singular “cælo” later. The received English says “heaven” in both places."}},
     {"id":"s02","tr":"hallowed be Thy name.","tc":[93],"tb":"normalized","g":["hallowed be","name","Thy"]},
     {"id":"s03","tr":"Thy kingdom come.","tc":[93],"tb":"normalized","g":["may come","kingdom","Thy"]},
     {"id":"s04","tr":"Thy will be done on earth as it is in heaven.","tc":[93],"tb":"normalized","g":["be done","will","Thy","as","in","heaven","and","on","earth"],"ex":{"w013":"The same form “fiat” occurs in Mary's reply at the Annunciation (Lk 1:38)."}},

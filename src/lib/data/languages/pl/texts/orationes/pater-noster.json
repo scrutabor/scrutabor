@@ -3,7 +3,7 @@
   "language":"pl",
   "about":"Modlitwa Pańska, której Jezus nauczył swoich uczniów (Mt 6, 9–13, a w formie krótszej Łk 11, 2–4). Zwraca się do Boga jako Ojca. Prosi o uświęcenie Jego imienia, przyjście królestwa i spełnienie Jego woli, a następnie o codzienny chleb, przebaczenie, o to, by nie być wodzonym na pokuszenie i wybawienie od zła.",
   "seg":[
-    {"id":"s01","tr":"Ojcze nasz, któryś jest w niebie,","tc":[90],"tb":"normalized","g":["Ojcze","nasz","który","jesteś","w","niebiosach"],"ex":{"w006":"Łacina ma tutaj liczbę mnogą „cælis”, a dalej pojedyncze „cælo”. Utrwalony polski przekład w obu miejscach mówi o jednym niebie."}},
+    {"id":"s01","tr":"Ojcze nasz, któryś jest w niebie,","tc":[90],"tb":"normalized","g":["Ojcze","nasz","który","jesteś","w","niebiosach"],"ex":{"w002":"Pan nauczył modlitwy wspólnej: „nasz”, nie „mój” — każdy odmawia ją w liczbie mnogiej, razem z całym Kościołem.","w006":"Łacina ma tutaj liczbę mnogą „cælis”, a dalej pojedyncze „cælo”. Utrwalony polski przekład w obu miejscach mówi o jednym niebie."}},
     {"id":"s02","tr":"święć się imię Twoje.","tc":[90],"tb":"normalized","g":["niech się święci","imię","Twoje"]},
     {"id":"s03","tr":"Przyjdź królestwo Twoje.","tc":[90],"tb":"normalized","g":["niech przyjdzie","królestwo","Twoje"]},
     {"id":"s04","tr":"Bądź wola Twoja, jako w niebie, tak i na ziemi.","tc":[90],"tb":"normalized","g":["niech się stanie","wola","Twoja","jako","w","niebie","i","na","ziemi"],"ex":{"w013":"Ta sama forma „fiat” występuje w odpowiedzi Maryi przy zwiastowaniu (Łk 1, 38)."}},

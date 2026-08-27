@@ -3,7 +3,7 @@
   "language":"pl",
   "about":"Wezwanie zamykające modlitwy Leona XIII, dołączone do nich w 1904 r. za Piusa X. Powtarza się je trzy razy. To wydanie drukuje je raz.",
   "seg":[
-    {"id":"s01","tr":"Najświętsze Serce Jezusa.","tc":[55],"tb":"exact","g":["Serce","Jezusa","najświętsze"]},
+    {"id":"s01","tr":"Najświętsze Serce Jezusa.","tc":[55],"tb":"exact","g":["Serce","Jezusa","najświętsze"],"ex":{"w001":"Nijakie „Cor” ma jedną formę dla podmiotu i zawołania, a wydanie czyta początkowe wezwanie jako nazwanie w mianowniku, jak w „Agnus Dei”."}},
     {"id":"s02","tr":"Zmiłuj się nad nami.","tc":[55],"tb":"exact","g":["zmiłuj się","nad nami"]}
   ]
 }

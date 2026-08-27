@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The invocation that closes the prayers of Leo XIII, added to them in 1904 under Pius X. It is said three times. This edition prints it once.",
   "seg":[
-    {"id":"s01","tr":"Most Sacred Heart of Jesus.","tc":[69],"tb":"exact","g":["Heart","of Jesus","most sacred"]},
+    {"id":"s01","tr":"Most Sacred Heart of Jesus.","tc":[69],"tb":"exact","g":["Heart","of Jesus","most sacred"],"ex":{"w001":"A neuter has one form for naming and for address, and this edition reads the opening cry as a nominative naming, as in “Agnus Dei”."}},
     {"id":"s02","tr":"Have mercy on us.","tc":[69],"tb":"exact","g":["have mercy","on us"]}
   ]
 }
