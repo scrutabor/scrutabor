@@ -49,6 +49,8 @@ export interface Messages {
 	updateAvailable: string;
 	updateReload: string;
 	updateReloading: string;
+	updateLater: string;
+	updateStale: string;
 	panelAria: string;
 	wordContextLabel: string;
 	wordEntryLabel: string;
@@ -195,6 +197,9 @@ const MESSAGES: Record<Lang, Messages> = {
 		updateAvailable: 'Nowa wersja jest gotowa.',
 		updateReload: 'Wczytaj',
 		updateReloading: 'Wczytywanie…',
+		updateLater: 'później',
+		updateStale:
+			'Ta kopia nie może już pobrać swoich plików. Zastosuj aktualizację, aby czytać dalej.',
 		panelAria: 'analiza słowa',
 		wordContextLabel: 'znaczenie w kontekście',
 		wordEntryLabel: 'hasło',
@@ -352,6 +357,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		updateAvailable: 'A new version is ready.',
 		updateReload: 'Reload',
 		updateReloading: 'Reloading…',
+		updateLater: 'later',
+		updateStale: 'This copy can no longer fetch its files. Apply the update to keep reading.',
 		panelAria: 'word analysis',
 		wordContextLabel: 'meaning in context',
 		wordEntryLabel: 'dictionary entry',

@@ -13,11 +13,21 @@
 // chapel with no signal, so when the browser reports an install (or the page
 // asks in so many words) the worker fetches the whole book in the
 // background. The native wrappers ship the same way.
+//
+// AN UPDATE MUST NOT BURN THE BOOK. Activation used to delete every other
+// cache on the spot — and the whole book with it, minutes or forever before
+// a replacement existed. Now the old caches stay until the new one holds
+// everything they held (each entry re-fetched at this version, or carried
+// over byte-identical when content-addressed); only a completed migration
+// deletes them, and until then the old copy still answers when the network
+// cannot. Whether the reader asked for the whole book is REMEMBERED — in
+// IndexedDB, across versions — never guessed from cache sizes.
 import { build, files, prerendered, version } from '$service-worker';
 
 const sw = self as unknown as ServiceWorkerGlobalScope;
 
-const CACHE = `scrutabor-${version}`;
+const PREFIX = 'scrutabor-';
+const CACHE = `${PREFIX}${version}`;
 
 // Pages that ARE the shell: the app's language router, the two catalogs,
 // the ordo map, the edition page. Everything else — texts, movements, the
@@ -52,6 +62,57 @@ const EVERYTHING = [
 	...DAYS
 ];
 
+/** What this edition can serve at all — the completion bar for a migration:
+ * an old entry either exists here under the same path, or the edition no
+ * longer carries it and nothing can be preserved. */
+const EDITION = new Set([...build, ...files, ...prerendered]);
+
+// ---------------------------------------------------------------------------
+// Remembered intent. localStorage does not exist in a worker; this one flag
+// must survive versions and sessions, so it lives in IndexedDB. Every read
+// and write is wrapped: a browser in a locked-down mode answers "not
+// requested", which only means the book refills lazily instead of eagerly.
+const DB_NAME = 'scrutabor-sw';
+const STORE = 'state';
+
+function database(): Promise<IDBDatabase> {
+	return new Promise((resolve, reject) => {
+		const request = indexedDB.open(DB_NAME, 1);
+		request.onupgradeneeded = () => request.result.createObjectStore(STORE);
+		request.onsuccess = () => resolve(request.result);
+		request.onerror = () => reject(request.error);
+	});
+}
+
+async function readFlag(key: string): Promise<unknown> {
+	try {
+		const db = await database();
+		return await new Promise((resolve, reject) => {
+			const request = db.transaction(STORE, 'readonly').objectStore(STORE).get(key);
+			request.onsuccess = () => resolve(request.result);
+			request.onerror = () => reject(request.error);
+		});
+	} catch {
+		return undefined;
+	}
+}
+
+async function writeFlag(key: string, value: unknown): Promise<void> {
+	try {
+		const db = await database();
+		await new Promise<void>((resolve, reject) => {
+			const transaction = db.transaction(STORE, 'readwrite');
+			transaction.objectStore(STORE).put(value, key);
+			transaction.oncomplete = () => resolve();
+			transaction.onerror = () => reject(transaction.error);
+		});
+	} catch {
+		// A browser that refuses storage still gets a working, lazier book.
+	}
+}
+
+// ---------------------------------------------------------------------------
+
 sw.addEventListener('install', (event) => {
 	event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL)));
 });
@@ -59,13 +120,82 @@ sw.addEventListener('install', (event) => {
 sw.addEventListener('activate', (event) => {
 	event.waitUntil(
 		(async () => {
-			for (const key of await caches.keys()) {
-				if (key !== CACHE) await caches.delete(key);
-			}
 			await sw.clients.claim();
+			// NOT a deletion. The superseded caches are the reader's book
+			// until the new cache holds what they held.
+			await migrate();
 		})()
 	);
 });
+
+async function previousCaches(): Promise<string[]> {
+	return (await caches.keys()).filter((name) => name.startsWith(PREFIX) && name !== CACHE);
+}
+
+// One migration at a time; re-armed by activation, by every page load
+// ('settle-caches'), and by the install signal — so an interrupted refill
+// resumes the next time anything wakes the worker.
+let migrating: Promise<void> | null = null;
+
+function migrate(): Promise<void> {
+	migrating ??= (async () => {
+		try {
+			const old = await previousCaches();
+			if (!old.length) return;
+			const cache = await caches.open(CACHE);
+
+			// One pass over everything the reader held: content-addressed
+			// assets carry over byte-identical — same hash, same bytes, no
+			// network — and every addressed entry is noted for refetching
+			// AT THIS version.
+			const held = new Set<string>();
+			for (const name of old) {
+				const superseded = await caches.open(name);
+				for (const request of await superseded.keys()) {
+					const path = new URL(request.url).pathname;
+					if (!EDITION.has(path)) continue;
+					if (!path.includes('/immutable/')) {
+						held.add(path);
+						continue;
+					}
+					if (await cache.match(path)) continue;
+					const response = await superseded.match(request);
+					if (response) await cache.put(path, response);
+				}
+			}
+
+			// A reader who asked for the whole book gets the whole book; a
+			// partial browser cache refills exactly the pages it held —
+			// partial stays partial.
+			if (await readFlag('book-requested')) {
+				await fetchTheBook();
+			} else {
+				await fetchAll([...held].filter((path) => !SHELL.includes(path)));
+			}
+
+			// Deletion happens ONLY behind a verified migration: every old
+			// entry the edition still carries must now answer from the new
+			// cache. A fetch that failed leaves the old cache in place, and
+			// the next wake retries what is missing.
+			for (const name of old) {
+				const superseded = await caches.open(name);
+				let complete = true;
+				for (const request of await superseded.keys()) {
+					const path = new URL(request.url).pathname;
+					if (!EDITION.has(path)) continue;
+					if (!(await cache.match(path, { ignoreSearch: true }))) {
+						complete = false;
+						break;
+					}
+				}
+				if (complete) await caches.delete(name);
+			}
+		} finally {
+			migrating = null;
+		}
+	})();
+	return migrating;
+}
 
 // One run at a time: the install signal can arrive twice on a fresh install
 // (the appinstalled event and the standalone check both fire), and two runs
@@ -76,19 +206,7 @@ let fetching: Promise<void> | null = null;
 function fetchTheBook(): Promise<void> {
 	fetching ??= (async () => {
 		try {
-			const cache = await caches.open(CACHE);
-			const missing = [];
-			for (const path of EVERYTHING) {
-				if (!(await cache.match(path, { ignoreSearch: true }))) missing.push(path);
-			}
-			// A few at a time: this runs while someone is reading, and a
-			// stampede of a thousand requests would compete with the page in
-			// front of them. Each path fetched SINGLY — addAll is atomic, so
-			// batching through it meant one bad path silently dropped the five
-			// innocent files sharing its batch, and the book had quiet holes.
-			for (let i = 0; i < missing.length; i += 6) {
-				await Promise.allSettled(missing.slice(i, i + 6).map((path) => cache.add(path)));
-			}
+			await fetchAll(EVERYTHING);
 		} finally {
 			// A later signal may retry what this run could not fetch.
 			fetching = null;
@@ -97,9 +215,36 @@ function fetchTheBook(): Promise<void> {
 	return fetching;
 }
 
+async function fetchAll(paths: string[]): Promise<void> {
+	const cache = await caches.open(CACHE);
+	const missing = [];
+	for (const path of paths) {
+		if (!(await cache.match(path, { ignoreSearch: true }))) missing.push(path);
+	}
+	// A few at a time: this runs while someone is reading, and a
+	// stampede of a thousand requests would compete with the page in
+	// front of them. Each path fetched SINGLY — addAll is atomic, so
+	// batching through it meant one bad path silently dropped the five
+	// innocent files sharing its batch, and the book had quiet holes.
+	for (let i = 0; i < missing.length; i += 6) {
+		await Promise.allSettled(missing.slice(i, i + 6).map((path) => cache.add(path)));
+	}
+}
+
 // The browser tells the page, not the worker, so the page forwards it.
 sw.addEventListener('message', (event) => {
-	if (event.data === 'cache-the-book') event.waitUntil(fetchTheBook());
+	if (event.data === 'cache-the-book') {
+		event.waitUntil(
+			(async () => {
+				// The intent is REMEMBERED, so the next version's migration
+				// keeps filling the book without being asked again.
+				await writeFlag('book-requested', true);
+				await migrate();
+				await fetchTheBook();
+			})()
+		);
+	}
+	if (event.data === 'settle-caches') event.waitUntil(migrate());
 	if (event.data === 'activate-release') event.waitUntil(sw.skipWaiting());
 });
 
@@ -114,6 +259,20 @@ sw.addEventListener('fetch', (event) => {
 	if (url.origin !== sw.location.origin) return;
 	event.respondWith(respond(event.request, url));
 });
+
+/** The offline navigation fallback's home, derived from the edition itself
+ * rather than a hardcoded language pair: the path's own language if the
+ * edition ships it, else English, else the first shipped language. */
+const APP_LANGS = prerendered
+	.map((path) => /^\/app\/([a-z]{2})$/.exec(path)?.[1])
+	.filter((lang): lang is string => lang !== undefined);
+
+function homeFor(pathname: string): string {
+	const wanted = /^\/app\/([a-z]{2})(\/|$)/.exec(pathname)?.[1];
+	const lang =
+		wanted && APP_LANGS.includes(wanted) ? wanted : APP_LANGS.includes('en') ? 'en' : APP_LANGS[0];
+	return `/app/${lang}`;
+}
 
 async function respond(request: Request, url: URL): Promise<Response> {
 	const cache = await caches.open(CACHE);
@@ -132,16 +291,43 @@ async function respond(request: Request, url: URL): Promise<Response> {
 		// error page forever.
 		if (response.ok && response.type === 'basic') {
 			await cache.put(request, response.clone());
+		} else if (!response.ok && url.pathname.includes('/immutable/')) {
+			// A content-addressed asset the network no longer has: this copy
+			// of the app is stale past recovering that file. Say so — the
+			// page resurfaces the update notice with the reason — and let
+			// the old caches below still answer if they can.
+			const stale = await matchPrevious(request);
+			if (stale) return stale;
+			await notifyStaleAsset();
 		}
 		return response;
 	} catch (err) {
-		// Offline and never opened. Land the reader in the book rather than
-		// on a browser error page.
-		if (request.mode === 'navigate') {
-			const lang = url.pathname.startsWith('/app/pl') ? '/app/pl' : '/app/en';
-			const home = await cache.match(lang);
+		// Offline. The superseded caches still hold the reader's book while
+		// a migration is underway — stale beats nothing in a basement
+		// chapel — and a navigation nobody ever opened lands in the book.
+		const stale = await matchPrevious(request, isPage);
+		if (stale) return stale;
+		if (isPage) {
+			const home =
+				(await cache.match(homeFor(url.pathname))) ??
+				(await matchPrevious(new Request(homeFor(url.pathname)), true));
 			if (home) return home;
 		}
 		throw err;
+	}
+}
+
+async function matchPrevious(request: Request, isPage = false): Promise<Response | undefined> {
+	for (const name of await previousCaches()) {
+		const superseded = await caches.open(name);
+		const found = await superseded.match(request, { ignoreSearch: isPage });
+		if (found) return found;
+	}
+	return undefined;
+}
+
+async function notifyStaleAsset(): Promise<void> {
+	for (const client of await sw.clients.matchAll({ type: 'window' })) {
+		client.postMessage({ type: 'stale-asset' });
 	}
 }

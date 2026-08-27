@@ -8,12 +8,20 @@
 	import { loadMassForm } from '$lib/mass-form.svelte';
 	import { loadPrayerForm } from '$lib/prayer-form.svelte';
 	import { loadRole } from '$lib/role.svelte';
+	import { readSession, writeSession } from '$lib/storage';
 	import { langOfPath } from '$lib/url';
 
 	let { children } = $props();
 	let waitingWorker = $state<ServiceWorker | null>(null);
 	let updateLang = $state<Lang>('en');
 	let reloading = $state(false);
+	// An ordinary update may be put off for the session; a copy that can no
+	// longer fetch its own assets may not stay quiet about it. The fatal
+	// state re-surfaces the notice past a dismissal, with its reason.
+	const DISMISSED = 'scrutabor-update-dismissed';
+	let dismissed = $state(false);
+	let stale = $state(false);
+	const noticeShown = $derived(waitingWorker !== null && (!dismissed || stale));
 	const updateCopy = $derived(M[updateLang]);
 
 	function offerUpdate(worker: ServiceWorker) {
@@ -25,6 +33,11 @@
 		if (!waitingWorker || reloading) return;
 		reloading = true;
 		waitingWorker.postMessage('activate-release');
+	}
+
+	function dismissUpdate() {
+		dismissed = true;
+		writeSession(DISMISSED, '1');
 	}
 
 	// The reader's part at Mass, applied once the page is alive (the
@@ -69,7 +82,19 @@
 			if (hadController) location.reload();
 		};
 
+		// The worker says when this copy has gone stale past self-repair — a
+		// content-addressed asset the network no longer carries. That turns
+		// the quiet notice into an explained one, past any dismissal, and
+		// asks the registration for the newer worker if none is waiting yet.
+		const onWorkerMessage = (event: MessageEvent) => {
+			if ((event.data as { type?: string } | null)?.type !== 'stale-asset') return;
+			stale = true;
+			if (!waitingWorker) void registration?.update();
+		};
+
 		serviceWorkers.addEventListener('controllerchange', onControllerChange);
+		serviceWorkers.addEventListener('message', onWorkerMessage);
+		dismissed = readSession(DISMISSED) === '1';
 		void serviceWorkers
 			.register('/service-worker.js', { scope: '/app/', updateViaCache: 'none' })
 			.then((value) => {
@@ -78,6 +103,9 @@
 				registration.addEventListener('updatefound', onUpdateFound);
 				if (registration.waiting && serviceWorkers.controller) offerUpdate(registration.waiting);
 				watch(registration.installing);
+				// Each load lets the worker settle an unfinished migration:
+				// idempotent, and the retry an interrupted refill needs.
+				value.active?.postMessage('settle-caches');
 			})
 			.catch(() => {
 				// a browser that refuses (old, or private mode) still gets the
@@ -89,6 +117,7 @@
 			installing?.removeEventListener('statechange', onStateChange);
 			registration?.removeEventListener('updatefound', onUpdateFound);
 			serviceWorkers.removeEventListener('controllerchange', onControllerChange);
+			serviceWorkers.removeEventListener('message', onWorkerMessage);
 		};
 	});
 
@@ -117,19 +146,26 @@
 
 {@render children()}
 
-{#if waitingWorker}
+{#if noticeShown}
 	<aside class="update-notice" role="status" aria-live="polite" aria-atomic="true">
-		<p>{updateCopy.updateAvailable}</p>
+		<p>{stale ? updateCopy.updateStale : updateCopy.updateAvailable}</p>
 		<button type="button" onclick={acceptUpdate} disabled={reloading}>
 			{reloading ? updateCopy.updateReloading : updateCopy.updateReload}
 		</button>
+		{#if !stale}
+			<button type="button" class="later" onclick={dismissUpdate}>
+				{updateCopy.updateLater}
+			</button>
+		{/if}
 	</aside>
 {/if}
 
 <style>
 	.update-notice {
 		position: fixed;
-		z-index: 100;
+		/* Below an open sheet (its aside sits at 10): the panel the reader
+		   opened outranks the housekeeping bar. */
+		z-index: 9;
 		inset-inline: 50% auto;
 		bottom: max(1rem, env(safe-area-inset-bottom));
 		transform: translateX(-50%);
@@ -162,6 +198,14 @@
 		font-weight: 600;
 		white-space: nowrap;
 		cursor: pointer;
+	}
+
+	.update-notice button.later {
+		border: 0;
+		background: none;
+		color: inherit;
+		text-decoration: underline;
+		opacity: 0.8;
 	}
 
 	.update-notice button:disabled {
