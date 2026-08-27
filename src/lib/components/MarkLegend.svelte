@@ -40,6 +40,7 @@
 		{/each}
 	</dl>
 	<p class="note">{msgs.markLegendNote}</p>
+	<p class="range-hint">{msgs.segmentRangeHint}</p>
 </Sheet>
 
 <style>
@@ -70,5 +71,11 @@
 		margin: 0.9rem 0 0;
 		font-size: 0.92rem;
 		color: var(--ink-soft);
+	}
+
+	.range-hint {
+		margin: 0.9rem 0 0;
+		color: var(--ink-soft);
+		font-size: 0.84rem;
 	}
 </style>

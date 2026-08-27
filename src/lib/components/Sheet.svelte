@@ -55,13 +55,16 @@
 	// quiet page, and opening one used to cost them the panel.
 	function outside(e: MouseEvent) {
 		if (inline) return;
-		const interactive = e
-			.composedPath()
-			.some(
-				(n) =>
-					n instanceof Element &&
-					n.matches('a, button, input, select, textarea, label, summary, details, aside')
-			);
+		const interactive = e.composedPath().some(
+			(n) =>
+				n instanceof Element &&
+				// The invisible verse-selection overlay is not chrome: on the
+				// reading page the verses ARE the quiet parts, and a tap on
+				// one both selects and dismisses, as a bare tap always did.
+				n.matches(
+					'a, button:not(.segment-control), input, select, textarea, label, summary, details, aside'
+				)
+		);
 		if (!interactive) onclose?.();
 	}
 

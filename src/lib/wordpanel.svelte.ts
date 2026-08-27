@@ -173,6 +173,7 @@ export function wordPanel(host: WordPanelHost) {
 	}
 
 	function close() {
+		if (selectedId === null && !openedByPush) return;
 		preserveScroll();
 		settlingWord = null;
 		settling = false;

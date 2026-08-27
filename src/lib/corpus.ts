@@ -108,6 +108,8 @@ export interface TextDocument {
 	analysis_defaults: Analysis;
 	analysis_defaults_words?: Analysis;
 	segments: Segment[];
+	/** Retired segment ids and the live segment carrying each one's content. */
+	retired_segments?: Record<string, string>;
 }
 
 export interface WordGloss {
@@ -238,7 +240,7 @@ function expandWord(cell: WordCell): Word {
 }
 
 const CORE_ROW_KEYS = new Set(['w', 'ec', 'nc', 'an']);
-const CORE_DOC_KEYS = new Set(['st', 'ad', 'adw', 'ac', 'seg']);
+const CORE_DOC_KEYS = new Set(['st', 'ad', 'adw', 'ac', 'seg', 'rs']);
 
 function expandDocument(
 	artifact: CoreArtifact,
@@ -254,6 +256,7 @@ function expandDocument(
 	for (const [key, value] of Object.entries(artifact))
 		if (!CORE_DOC_KEYS.has(key)) text[key] = value;
 	text.status = artifact.st;
+	if (artifact.rs) text.retired_segments = artifact.rs;
 	text.analysis_defaults = at(ANALYSES, artifact.ad, 'analyses');
 	if (artifact.adw !== undefined)
 		text.analysis_defaults_words = at(ANALYSES, artifact.adw, 'analyses');

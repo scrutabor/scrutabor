@@ -147,6 +147,24 @@
 	const rows: LitanyRow[] = $derived(
 		litanyColumns ? litanyRows(segs) : segs.map((_, primary) => ({ primary }))
 	);
+	const rowIndexOf = $derived.by(() => {
+		const bySegment: number[] = [];
+		rows.forEach((row, index) => {
+			bySegment[row.primary] = index;
+			if (row.response !== undefined) bySegment[row.response] = index;
+		});
+		return bySegment;
+	});
+	function rowSelected(rowIndex: number): boolean {
+		const row = rows[rowIndex];
+		if (!row) return false;
+		const members = [row.primary, row.response].filter(
+			(index): index is number => index !== undefined
+		);
+		return members.some(
+			(index) => segs[index]?.type === 'verse' && citedSegments.includes(segs[index].id)
+		);
+	}
 	// Bilingual (help 2) reads as a bilingual missal: plain Latin beside the
 	// verse translation where the room allows, stacked where it does not.
 	// The litany keeps its own two-column convention either way.
@@ -154,11 +172,38 @@
 	const translationCitations = $derived(collectTranslationCitations(segs, gloss));
 	const translationRelationships = $derived(collectTranslationRelationships(segs, gloss));
 	let expandedSegments = $state<string[]>([]);
+	// A deep link into a fold opens it: the cited verses and the selected
+	// word's verse join the reader's own toggles. Without this a shared
+	// ?s= painted a four-word incipit and a ?w= opened a panel over words
+	// absent from the page.
+	const selectedWordSegment = $derived(
+		selectedId === null
+			? undefined
+			: segs.find((sg) => sg.words?.some((w) => domId(w.id) === selectedId))?.id
+	);
+	// The citation SEEDS the fold open; it does not pin it. A reader may
+	// fold a cited repetition back down, and that choice is remembered
+	// against the same citation re-opening it on the next effect run.
+	let readerClosed = $state<string[]>([]);
+	$effect(() => {
+		const wanted = [...citedSegments, selectedWordSegment].filter(
+			(id): id is string => id !== undefined && collapsedSegments.includes(id)
+		);
+		const missing = wanted.filter(
+			(id) => !expandedSegments.includes(id) && !readerClosed.includes(id)
+		);
+		if (missing.length) expandedSegments = [...expandedSegments, ...missing];
+	});
+	const openSegments = $derived(new Set(expandedSegments));
 
 	function toggleRepeated(id: string) {
-		expandedSegments = expandedSegments.includes(id)
-			? expandedSegments.filter((segmentId) => segmentId !== id)
-			: [...expandedSegments, id];
+		if (expandedSegments.includes(id)) {
+			expandedSegments = expandedSegments.filter((segmentId) => segmentId !== id);
+			readerClosed = [...readerClosed, id];
+		} else {
+			expandedSegments = [...expandedSegments, id];
+			readerClosed = readerClosed.filter((segmentId) => segmentId !== id);
+		}
 	}
 
 	// A familiar prayer's preview is an incipit, not a second editorial text.
@@ -192,7 +237,7 @@
 
 {#snippet segment(seg: TextDocument['segments'][number], i: number)}
 	{#if collapsedSegments.includes(seg.id)}
-		{@render verse(seg, i, true, expandedSegments.includes(seg.id))}
+		{@render verse(seg, i, true, openSegments.has(seg.id))}
 	{:else if seg.type === 'rubric' && hideOpeningRubric && i === 0}
 		<!-- Bibliography backlinks cite this exact segment. The direction is
 		     hidden here, not deleted: its anchor still resolves at the prayer's
@@ -336,10 +381,13 @@
 		{@const visibleWords =
 			repeated && !repeatedOpen ? (seg.words ?? []).slice(0, 4) : (seg.words ?? [])}
 		{@const selected = citedSegments.includes(seg.id)}
-		{@const joinsSelectedBefore =
-			selected && segs[i - 1]?.type === 'verse' && citedSegments.includes(segs[i - 1].id)}
-		{@const joinsSelectedAfter =
-			selected && segs[i + 1]?.type === 'verse' && citedSegments.includes(segs[i + 1].id)}
+		<!-- Contiguity is decided by RENDER adjacency, not array order: in
+		     the litany's two-column rows an invocation and its response sit
+		     side by side, so each one's vertical neighbour is the previous
+		     or next ROW, not the other half of its own pair. -->
+		{@const rowIndex = rowIndexOf[i] ?? i}
+		{@const joinsSelectedBefore = selected && rowSelected(rowIndex - 1)}
+		{@const joinsSelectedAfter = selected && rowSelected(rowIndex + 1)}
 		<!-- In the bilingual columns the reservation is skipped: the grid's
 		     row-gap already clears the initial's rise, and an inline margin
 		     here would defeat the baseline alignment that keeps a verse and
@@ -372,7 +420,11 @@
 					type="button"
 					class="segment-control"
 					aria-pressed={selected}
-					aria-label={selected ? M[lang].segmentDeselect : M[lang].segmentSelect}
+					aria-label={selected
+						? citedSegments.length === 1
+							? M[lang].segmentDeselect
+							: M[lang].segmentNarrow
+						: M[lang].segmentSelect}
 					onclick={(event) => onsegmentselect?.(seg.id, event.shiftKey)}
 				></button>{/if}
 			{#if verseNo !== undefined}<span
@@ -431,6 +483,9 @@
 							class="word"
 							id={domId(w.id)}
 							class:selected={selectedId === domId(w.id)}
+							aria-label={helpLevel === 1 && gloss.words[w.id]?.gloss
+								? `${w.form} — ${gloss.words[w.id].gloss}`
+								: undefined}
 							onclick={(event) => tapWord(event, domId(w.id), seg.id)}
 							>{@render face(w.id, w.form, post, raised, sink)}</button
 						>{:else}<span class="word">{@render face(w.id, w.form, post, raised, sink)}</span

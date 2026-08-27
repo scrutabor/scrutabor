@@ -27,7 +27,9 @@ export interface Messages {
 	searchTitle: string;
 	searchClear: string;
 	segmentSelect: string;
+	segmentNarrow: string;
 	segmentDeselect: string;
+	segmentRangeHint: string;
 	searchHint: string;
 	searchLoading: string;
 	searchNoResults: string;
@@ -161,8 +163,11 @@ const MESSAGES: Record<Lang, Messages> = {
 		searchLabel: 'szukaj',
 		searchTitle: 'Wyszukiwanie',
 		searchClear: 'wyczyść wyszukiwanie',
-		segmentSelect: 'wybierz ten werset. Shift+klik zaznacza zakres',
-		segmentDeselect: 'usuń wybór zaznaczonych wersetów',
+		segmentSelect: 'wybierz ten werset',
+		segmentNarrow: 'zawęź wybór do tego wersetu',
+		segmentDeselect: 'usuń wybór tego wersetu',
+		segmentRangeHint:
+			'Wybrany werset można udostępnić z adresu strony. Shift z kliknięciem zaznacza zakres wersetów.',
 		searchHint: 'Wpisz tytuł modlitwy, znany fragment albo łacińskie słowo.',
 		searchLoading: 'szukam…',
 		searchNoResults: 'Nie znaleziono pasujących miejsc.',
@@ -322,8 +327,11 @@ const MESSAGES: Record<Lang, Messages> = {
 		searchLabel: 'search',
 		searchTitle: 'Search',
 		searchClear: 'clear search',
-		segmentSelect: 'select this verse. Shift+click selects a range',
-		segmentDeselect: 'clear the selected verses',
+		segmentSelect: 'select this verse',
+		segmentNarrow: 'narrow the selection to this verse',
+		segmentDeselect: 'clear the selected verse',
+		segmentRangeHint:
+			'A selected verse travels in the page address. Shift with a click selects a range of verses.',
 		searchHint: 'Enter a prayer title, a remembered phrase, or a Latin word.',
 		searchLoading: 'searching…',
 		searchNoResults: 'No matching places were found.',

@@ -7,12 +7,27 @@ export function segmentRange(ids: string[], anchor: string, target: string): str
 	return ids.slice(Math.min(a, b), Math.max(a, b) + 1);
 }
 
-export function parseSegmentSelection(raw: string | null, ids: string[]): string[] {
+/** Resolve a shared address to live segments. A retired id — a verse later
+ * merged away — resolves to the surviving segment the edition names for it,
+ * so an old link degrades to its content's new home instead of to nothing. */
+export function parseSegmentSelection(
+	raw: string | null,
+	ids: string[],
+	retired: Record<string, string> = {}
+): string[] {
 	if (!raw) return [];
-	if (ids.includes(raw)) return [raw];
+	const resolve = (token: string): string | undefined => {
+		if (ids.includes(token)) return token;
+		const survivor = retired[token];
+		return survivor && ids.includes(survivor) ? survivor : undefined;
+	};
+	const single = resolve(raw);
+	if (single) return [single];
 	const endpoints = raw.split(RANGE_SEPARATOR);
-	if (endpoints.length !== 2 || !endpoints[0] || !endpoints[1]) return [];
-	return segmentRange(ids, endpoints[0], endpoints[1]);
+	if (endpoints.length !== 2) return [];
+	const [from, to] = [resolve(endpoints[0]), resolve(endpoints[1])];
+	if (!from || !to) return [];
+	return segmentRange(ids, from, to);
 }
 
 export function formatSegmentSelection(selected: string[], ids: string[]): string | null {

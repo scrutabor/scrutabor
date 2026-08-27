@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { untrack } from 'svelte';
 	import { pageUrl } from '$lib/url';
 	import { goto, replaceState } from '$app/navigation';
 	import { arrowNav } from '$lib/arrow-nav';
@@ -82,8 +83,20 @@
 	ribbon(
 		() => `scrutabor-pos:${data.category}/${data.slug}`,
 		() => {
+			// Only a citation that RESOLVES outranks the reading position: a
+			// stale or malformed parameter is about to be stripped from the
+			// address, and it must not also cost the reader their place.
 			const q = pageUrl().searchParams;
-			return q.has('w') || q.has('v') || q.has('s');
+			const w = q.get('w');
+			const wordCited =
+				w !== null && doc.segments.some((sg) => sg.words?.some((word) => word.id === w));
+			const v = q.get('v');
+			const verseCited =
+				v !== null && data.verses !== undefined && Object.values(data.verses).includes(Number(v));
+			const ids = doc.segments.map((segment) => segment.id);
+			const segmentsCited =
+				parseSegmentSelection(q.get('s'), ids, doc.retired_segments ?? {}).length > 0;
+			return wordCited || verseCited || segmentsCited;
 		}
 	);
 
@@ -112,15 +125,52 @@
 	function applySegmentFromLocation(scroll = true) {
 		const raw = pageUrl().searchParams.get('s');
 		const ids = doc.segments.map((segment) => segment.id);
-		const selected = parseSegmentSelection(raw, ids);
+		const selected = parseSegmentSelection(raw, ids, doc.retired_segments ?? {});
+		// The address is canonicalized in place: a retired id resolves to its
+		// survivor, a reversed or degenerate range straightens, and a selector
+		// naming nothing is dropped — so a stale parameter cannot linger and
+		// quietly suppress reading-position restore.
+		const canonical = formatSegmentSelection(selected, ids);
+		if (raw !== null && raw !== canonical) {
+			// After the frame, not during it: on a cold arrival this runs in
+			// the hydration effect flush, where the router is not yet taking
+			// history calls — an immediate replaceState there kills hydration.
+			requestAnimationFrame(() => {
+				const url = pageUrl();
+				if (canonical) url.searchParams.set('s', canonical);
+				else url.searchParams.delete('s');
+				replaceState(url, {});
+			});
+		}
 		const target = selected[0];
 		citedSegments = selected;
 		segmentAnchor = target ?? null;
+		revealSelection(selected);
 		if (target && scroll) {
 			requestAnimationFrame(() =>
 				document.getElementById(target)?.scrollIntoView({ block: 'center' })
 			);
 		}
+	}
+
+	// A link must show what it names. When the target lies outside the basic
+	// prayer form's rendered slice, the page switches itself to the extended
+	// form — the arriving reader cannot know the verse hides behind a tab.
+	// untrack: the reveal answers an ARRIVING address, once. Reading the
+	// form's value reactively made the effect re-extend the moment the
+	// reader switched back by hand — a tab that could not be left.
+	function revealSelection(selected: string[]) {
+		if (!hasPrayerForms || untrack(() => prayerForm.value) === 'extended') return;
+		const visible = new Set(doc.segments.slice(0, 1).map((segment) => segment.id));
+		if (selected.some((id) => !visible.has(id))) prayerForm.set('extended');
+	}
+
+	function revealWordFromLocation() {
+		if (!hasPrayerForms || untrack(() => prayerForm.value) === 'extended') return;
+		const w = pageUrl().searchParams.get('w');
+		if (w === null) return;
+		const owner = doc.segments.find((segment) => segment.words?.some((word) => word.id === w));
+		if (owner && owner.id !== doc.segments[0]?.id) prayerForm.set('extended');
 	}
 
 	function writeSegmentSelection(selected: string[]) {
@@ -131,12 +181,36 @@
 		);
 		if (value) {
 			url.searchParams.set('s', value);
+			// The verse citation and the verse selection are one story: when
+			// the parameter goes, its rendered state goes with it, now.
 			url.searchParams.delete('v');
+			citedVerse = null;
 		} else url.searchParams.delete('s');
 		replaceState(url, {});
 	}
 
 	function selectSegment(id: string, extend: boolean) {
+		if (panel.id !== null) {
+			// A verse tap under an open panel both selects and dismisses. The
+			// panel's close pops its own history entry — writing ?s= first
+			// would put the selection on the entry about to vanish, so the
+			// write waits for the history to settle.
+			panel.close();
+			if (new URL(location.href).searchParams.has('w')) {
+				const once = () => {
+					removeEventListener('popstate', once);
+					applySelection(id, extend);
+				};
+				addEventListener('popstate', once);
+			} else {
+				applySelection(id, extend);
+			}
+			return;
+		}
+		applySelection(id, extend);
+	}
+
+	function applySelection(id: string, extend: boolean) {
 		const ids = doc.segments.map((segment) => segment.id);
 		if (extend && segmentAnchor) {
 			citedSegments = segmentRange(ids, segmentAnchor, id);
@@ -154,6 +228,7 @@
 		void data.verses;
 		applyVerseFromLocation();
 		applySegmentFromLocation();
+		revealWordFromLocation();
 	});
 
 	function tapVerse(no: number) {
