@@ -13,6 +13,7 @@ import {
 	ordoData,
 	readingData
 } from '$lib/loaders';
+import { lemmaOfSlug } from '$lib/lemma-slug';
 import type { Lang } from '$lib/i18n';
 import { LANGS } from '$lib/i18n';
 
@@ -133,8 +134,10 @@ export async function pageData(found: RouteMatch): Promise<Record<string, unknow
 			return await readingData(lang, found.params.category, found.params.slug);
 		case 'movement':
 			return await ordoData(lang, found.params.movement);
-		case 'lemma':
-			return await lemmaData(lang, found.params.lemma);
+		case 'lemma': {
+			const lemma = lemmaOfSlug(decodeURIComponent(found.params.lemma));
+			return lemma ? await lemmaData(lang, lemma) : null;
+		}
 		case 'concept':
 			return conceptData(found.params.concept);
 		case 'bibliographia':

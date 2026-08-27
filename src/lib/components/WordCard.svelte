@@ -7,6 +7,7 @@
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import type { Analysis, LemmaEntry, SenseEntry, Word, WordGloss } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
+	import { lemmaSlug } from '$lib/lemma-slug';
 	import { GENDER_MARK, describeAnalysisParts, describeMorphParts } from '$lib/morph';
 
 	let {
@@ -87,7 +88,9 @@
 
 {#snippet entry()}
 	<p class="head">
-		<a href="/app/{lang}/lemma/{word.lemma}" title={M[lang].lemmaPageHint}
+		<a
+			href="/app/{lang}/lemma/{encodeURIComponent(lemmaSlug(word.lemma))}"
+			title={M[lang].lemmaPageHint}
 			><i lang="la">{lemmaEntry?.head ?? word.lemma}</i>{#if lemmaEntry?.gender}&nbsp;<span
 					class="gender">{GENDER_MARK[lemmaEntry.gender]}</span
 				>{/if}</a

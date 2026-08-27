@@ -8,6 +8,7 @@ import {
 	textMetadataFor
 } from './corpus-metadata';
 import type { Lang } from './i18n';
+import { lemmaSlug } from './lemma-slug';
 import { remember } from './remember';
 import { MAX_QUERY_LENGTH, MAX_QUERY_TOKENS } from './search-limits';
 
@@ -510,7 +511,7 @@ async function grammarResults(
 				lemma,
 				head: LEXICON.lemmata[lemma]?.head ?? lemma,
 				senses: senses[lemma]?.senses ?? [],
-				href: `/app/${lang}/lemma/${encodeURIComponent(lemma)}`
+				href: `/app/${lang}/lemma/${encodeURIComponent(lemmaSlug(lemma))}`
 			}))
 			.sort(
 				(a, b) =>

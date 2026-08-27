@@ -1,3 +1,4 @@
+import { lemmaSlug } from '$lib/lemma-slug';
 import { loadSenses, textKeysFor } from '$lib/corpus';
 import { CONCEPTS } from '$lib/grammar';
 import { LANGS, type Lang } from '$lib/i18n';
@@ -41,7 +42,7 @@ export async function GET(): Promise<Response> {
 				new Set([
 					...sharedApp,
 					...textKeysFor(language).map((key) => `/${key}`),
-					...Object.keys(await loadSenses(language)).map((lemma) => `/lemma/${lemma}`)
+					...Object.keys(await loadSenses(language)).map((lemma) => `/lemma/${lemmaSlug(lemma)}`)
 				])
 			])
 		)

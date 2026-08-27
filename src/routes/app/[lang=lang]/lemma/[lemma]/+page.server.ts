@@ -3,6 +3,7 @@
 // finished rows and the one entry it shows — never the snapshot itself.
 import { loadSenses } from '$lib/corpus';
 import { lemmaData } from '$lib/loaders';
+import { lemmaOfSlug, lemmaSlug } from '$lib/lemma-slug';
 import { LANGS, type Lang } from '$lib/i18n';
 import { error } from '@sveltejs/kit';
 import type { EntryGenerator, PageServerLoad } from './$types';
@@ -13,7 +14,7 @@ export const entries: EntryGenerator = async () =>
 	(
 		await Promise.all(
 			LANGS.map(async (lang) =>
-				Object.keys(await loadSenses(lang)).map((lemma) => ({ lang, lemma }))
+				Object.keys(await loadSenses(lang)).map((lemma) => ({ lang, lemma: lemmaSlug(lemma) }))
 			)
 		)
 	).flat();
@@ -21,5 +22,8 @@ export const entries: EntryGenerator = async () =>
 // The 404 is unreachable at prerender (entries() enumerates the lexicon)
 // and live on the dev server — the same answer the reading route gives a
 // bad slug, in the expression form because the guard is the whole body.
-export const load: PageServerLoad = async ({ params }) =>
-	(await lemmaData(params.lang as Lang, params.lemma)) ?? error(404, 'no such entry');
+export const load: PageServerLoad = async ({ params }) => {
+	const lemma = lemmaOfSlug(params.lemma);
+	if (!lemma) error(404, 'no such entry');
+	return (await lemmaData(params.lang as Lang, lemma)) ?? error(404, 'no such entry');
+};
