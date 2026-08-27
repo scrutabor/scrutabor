@@ -83,3 +83,33 @@ describe('book search', () => {
 		expect(results.grammar.some(({ lemma }) => lemma === 'et')).toBe(true);
 	});
 });
+
+describe('accented-ligature spellings', () => {
+	// The doxology and the collects, by the spellings a reader actually
+	// types. Before the shared-normalizer fix every one of these returned
+	// nothing: the index keyed sǽcula as "sæcula" and quǽsumus as
+	// "quæsumus", spellings no keyboard produces.
+	it('finds saecula, quaesumus and iudaei as typed, at full strength', async () => {
+		for (const [query, expectText] of [
+			['Saecula', 'orationes/gloria-patri'],
+			['Quaesumus', 'orationes/te-deum'],
+			['Iudaei', 'proprium/dominica-iii-adventus-evangelium']
+		] as const) {
+			const results = await searchBook(query, 'pl');
+			expect(results.contents.length, query).toBeGreaterThan(0);
+			expect(
+				results.contents.map(({ textKey }) => textKey),
+				query
+			).toContain(expectText);
+		}
+	});
+
+	it('reads the accented source spelling itself the same way', async () => {
+		const typed = await searchBook('saecula saeculorum', 'en');
+		const pasted = await searchBook('sǽcula sæculórum', 'en');
+		expect(typed.contents.length).toBeGreaterThan(0);
+		expect(pasted.contents.map(({ textKey }) => textKey)).toEqual(
+			typed.contents.map(({ textKey }) => textKey)
+		);
+	});
+});

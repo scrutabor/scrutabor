@@ -48,14 +48,17 @@ export interface ConcordanceData {
 
 export const CONCORDANCE = concordance as unknown as ConcordanceData;
 
-/** The same normalization the corpus uses when it emits form search keys. */
+/** The same normalization the corpus uses when it emits form search keys:
+ * decompose and strip marks first, expand ligatures second, so the
+ * precomposed ǽ (U+01FD) expands like every plain æ. Tested against the
+ * edition's own vectors in src/lib/data/normalization.json. */
 export function normalizeLatin(value: string): string {
 	return value
 		.toLocaleLowerCase('la')
-		.replaceAll('æ', 'ae')
-		.replaceAll('œ', 'oe')
 		.normalize('NFKD')
-		.replaceAll(/\p{M}/gu, '');
+		.replaceAll(/\p{M}/gu, '')
+		.replaceAll('æ', 'ae')
+		.replaceAll('œ', 'oe');
 }
 
 function textKey(number: number): string | undefined {

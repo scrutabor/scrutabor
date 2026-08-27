@@ -83,16 +83,25 @@ const BOOK_ORDER = new Map(everyTextInOrder().map((key, index) => [key, index]))
 const MAX_CONTENT_RESULTS = 12;
 const MAX_GRAMMAR_RESULTS = 8;
 
-/** Matching form only. Authored strings keep their capitalization and accents. */
+/** Matching form only. Authored strings keep their capitalization and accents.
+ *
+ * Decompose and strip marks BEFORE expanding ligatures: ǽ (U+01FD) is a
+ * precomposed accented ligature, so an æ→ae replacement that runs first
+ * never sees it and a bare æ survives into the key — which is how sǽcula
+ * and quǽsumus were unfindable. The corpus emitter normalizes in this same
+ * order and ships the shared vectors this is tested against
+ * (src/lib/data/normalization.json). The explicit 'la' locale keeps a
+ * Turkish host from lowercasing I to ı.
+ */
 export function normalizeSearch(value: string): string {
 	return value
-		.toLocaleLowerCase()
+		.toLocaleLowerCase('la')
+		.normalize('NFKD')
+		.replaceAll(/\p{M}/gu, '')
 		.replaceAll('ß', 'ss')
 		.replaceAll('æ', 'ae')
 		.replaceAll('œ', 'oe')
 		.replaceAll('ł', 'l')
-		.normalize('NFKD')
-		.replaceAll(/\p{M}/gu, '')
 		.replaceAll(/[^\p{L}\p{N}]+/gu, ' ')
 		.trim()
 		.replaceAll(/\s+/g, ' ');
