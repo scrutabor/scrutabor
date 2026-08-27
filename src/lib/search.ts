@@ -8,6 +8,7 @@ import {
 } from './corpus-metadata';
 import type { Lang } from './i18n';
 import { remember } from './remember';
+import { MAX_QUERY_LENGTH, MAX_QUERY_TOKENS } from './search-limits';
 
 export interface SnippetPart {
 	text: string;
@@ -509,13 +510,6 @@ async function grammarResults(
 		)
 		.slice(0, MAX_GRAMMAR_RESULTS);
 }
-
-/** A shared `?q=` link is attacker-sized; the work it starts must not be.
- * Each token costs a full dictionary scan and each candidate site an array
- * per token, so both the raw length and the token count are bounded here,
- * in the search itself — the input's own maxlength is only politeness. */
-export const MAX_QUERY_LENGTH = 120;
-export const MAX_QUERY_TOKENS = 8;
 
 export async function searchBook(rawQuery: string, lang: Lang): Promise<SearchResults> {
 	const bounded = rawQuery.slice(0, MAX_QUERY_LENGTH);

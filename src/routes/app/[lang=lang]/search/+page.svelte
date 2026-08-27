@@ -9,6 +9,7 @@
 	import type { SearchResults as Results } from '$lib/search';
 	import { readSession, removeSession, writeSession } from '$lib/storage';
 	import { pageUrl, routeOf } from '$lib/url';
+	import { MAX_QUERY_LENGTH } from '$lib/search-limits';
 
 	let { data } = $props();
 	const lang = $derived(data.lang as Lang);
@@ -21,11 +22,13 @@
 	let failed = $state(false);
 	let timer: ReturnType<typeof setTimeout> | undefined;
 	let request = 0;
+	let addressPending = false;
 	let restoreY: number | undefined;
 	let restored = false;
 	const RETURN_POSITION = 'scrutabor-search-return';
 
 	function writeQuery() {
+		addressPending = false;
 		const url = pageUrl();
 		if (query) url.searchParams.set('q', query);
 		else url.searchParams.delete('q');
@@ -46,14 +49,22 @@
 		clearTimeout(timer);
 		const turn = ++request;
 		failed = false;
-		if (updateAddress) writeQuery();
+		// One address write per pause, not per keystroke: Safari throttles
+		// History calls, and a throttled throw mid-typing silently dropped
+		// that keystroke's search. The pending write is FLUSHED by
+		// rememberPosition the moment a result is followed, so a fast tap
+		// straight after typing still leaves the query in the address for
+		// Back to restore.
+		if (updateAddress) addressPending = true;
 		if (query.trim().length < 2) {
 			pending = false;
 			results = null;
+			if (updateAddress) timer = setTimeout(writeQuery, delay);
 			return;
 		}
 		pending = true;
 		timer = setTimeout(async () => {
+			if (updateAddress) writeQuery();
 			try {
 				const { searchBook } = await loadSearch();
 				const found = await searchBook(query, lang);
@@ -62,11 +73,25 @@
 					await restorePosition();
 				}
 			} catch {
-				if (turn === request) failed = true;
+				if (turn === request) {
+					// The failure replaces the results: the live region and the
+					// pane must tell one story, and the retry below is the way
+					// back (rejected loads are not memoized).
+					results = null;
+					failed = true;
+				}
 			} finally {
 				if (turn === request) pending = false;
 			}
 		}, delay);
+	}
+
+	function retrySearch() {
+		// A failed lazy chunk is memoized by the browser's own module map —
+		// no re-import of the same address can succeed in this document. The
+		// only retry that always works is a fresh document: the query is
+		// already in the address, so the page comes back searching.
+		location.reload();
 	}
 
 	function clearQuery() {
@@ -82,6 +107,7 @@
 		) {
 			return;
 		}
+		if (addressPending) writeQuery();
 		writeSession(
 			RETURN_POSITION,
 			JSON.stringify({ route: routeOf(pageUrl()), y: window.scrollY, at: Date.now() })
@@ -132,6 +158,7 @@
 				label={msgs.searchTitle}
 				clearLabel={msgs.searchClear}
 				describedby="search-hint search-status"
+				maxlength={MAX_QUERY_LENGTH}
 				bind:value={query}
 				bind:field
 				oninput={() => queueSearch()}
@@ -142,7 +169,14 @@
 			</div>
 		</header>
 
-		<SearchResults {lang} {results} {pending} {failed} onResult={rememberPosition} />
+		<SearchResults
+			{lang}
+			{results}
+			{pending}
+			{failed}
+			onretry={retrySearch}
+			onResult={rememberPosition}
+		/>
 	</main>
 </div>
 

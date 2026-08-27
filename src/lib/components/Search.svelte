@@ -6,6 +6,11 @@
 	const searchHref = $derived(`/app/${lang}/search`);
 
 	function focusPageSearch(event: MouseEvent) {
+		// A modifier or a non-primary button asks the browser for its own
+		// behavior — a new tab, a new window. Only a plain click is ours.
+		if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+			return;
+		}
 		const pageField = document.getElementById('book-search-page') as HTMLInputElement | null;
 		if (!pageField) return;
 		event.preventDefault();

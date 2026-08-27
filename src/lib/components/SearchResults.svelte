@@ -10,12 +10,14 @@
 		results,
 		pending = false,
 		failed = false,
+		onretry,
 		onResult
 	}: {
 		lang: Lang;
 		results: SearchResults | null;
 		pending?: boolean;
 		failed?: boolean;
+		onretry?: () => void;
 		onResult?: (event: Event) => void;
 	} = $props();
 
@@ -30,6 +32,8 @@
 	statusId="search-status"
 	{pending}
 	{failed}
+	{onretry}
+	degraded={results?.degraded ?? false}
 	ready={results !== null}
 	empty={count === 0}
 	{count}

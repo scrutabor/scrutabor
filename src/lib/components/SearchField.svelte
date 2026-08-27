@@ -4,6 +4,7 @@
 		label,
 		clearLabel,
 		describedby,
+		maxlength,
 		value = $bindable(),
 		field = $bindable(),
 		oninput,
@@ -13,6 +14,7 @@
 		label: string;
 		clearLabel: string;
 		describedby?: string;
+		maxlength?: number;
 		value: string;
 		field: HTMLInputElement;
 		oninput: (event: Event) => void;
@@ -32,6 +34,7 @@
 		{id}
 		type="search"
 		autocomplete="off"
+		{maxlength}
 		aria-describedby={describedby}
 		{oninput}
 	/>

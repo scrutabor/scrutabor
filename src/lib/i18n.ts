@@ -32,6 +32,8 @@ export interface Messages {
 	searchLoading: string;
 	searchNoResults: string;
 	searchFailed: string;
+	searchDegraded: string;
+	searchRetry: string;
 	searchTitles: string;
 	searchContents: string;
 	searchGrammar: string;
@@ -165,6 +167,9 @@ const MESSAGES: Record<Lang, Messages> = {
 		searchLoading: 'szukam…',
 		searchNoResults: 'Nie znaleziono pasujących miejsc.',
 		searchFailed: 'Nie udało się przeszukać tego wydania.',
+		searchDegraded:
+			'Wyszukiwanie przekładu jest chwilowo niedostępne. Widać wyniki łacińskie i tytuły.',
+		searchRetry: 'spróbuj ponownie',
 		searchTitles: 'tytuły modlitw',
 		searchContents: 'fragmenty tekstów',
 		searchGrammar: 'analiza gramatyczna',
@@ -323,6 +328,9 @@ const MESSAGES: Record<Lang, Messages> = {
 		searchLoading: 'searching…',
 		searchNoResults: 'No matching places were found.',
 		searchFailed: 'This edition could not be searched.',
+		searchDegraded:
+			'Translation search is unavailable right now. Latin and title results are shown.',
+		searchRetry: 'try again',
 		searchTitles: 'prayer titles',
 		searchContents: 'text passages',
 		searchGrammar: 'grammatical analysis',
