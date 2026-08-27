@@ -94,6 +94,30 @@ for (const name of filesBelow(BUILD).sort()) {
 	copy(name, join(BUILD, name));
 }
 
+// The boundary the mirror must not widen: everything copied is a file the
+// edition's own manifests declare. The closure is manifest-driven, so a
+// future partial-language package needs no new hand-list here — but a stray
+// generated file cannot ride into the public app unnamed. The corpus build
+// enforces the same closure from its side; this refuses to vendor a tree
+// that somehow escaped it.
+const declaredByManifests = new Set(['manifest.json', ...Object.values(manifest.base)]);
+for (const entry of manifest.texts) declaredByManifests.add(entry.path);
+for (const language of manifest.languages) {
+	declaredByManifests.add(language.path);
+	const languageManifest = read(join(BUILD, language.path));
+	for (const key of ['lexicon', 'citations', 'concordance']) {
+		declaredByManifests.add(languageManifest[key]);
+	}
+	for (const entry of languageManifest.texts) declaredByManifests.add(entry.path);
+}
+const undeclared = [...written].filter((name) => !declaredByManifests.has(name));
+const unwritten = [...declaredByManifests].filter((name) => !written.has(name));
+if (undeclared.length || unwritten.length) {
+	throw new Error(
+		`the mirror and the manifests disagree — undeclared: ${undeclared}, missing: ${unwritten}`
+	);
+}
+
 // WHICH CORPUS THIS IS. Until 2026-08-19 the app carried files it could not
 // account for: nothing said which commit they came from, so a release could
 // not be traced to the edition it published, and a hand-edit under
