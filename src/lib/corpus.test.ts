@@ -27,9 +27,14 @@ const SENSES = Object.fromEntries(
 const allWords = (text: TextDocument) => text.segments.flatMap((segment) => segment.words ?? []);
 
 // The app renders cross-references as „form” (wNNN) / “form” (wNNN) links.
-const XREF = /[„“]([^”“„]+)”\s*\((w\d{3})\)/g;
+// Three digits are the minimum width, not a maximum.
+const XREF = /[„“]([^”“„]+)”\s*\((w\d{3,})\)/g;
 
 describe('vendored corpus snapshot', () => {
+	it('recognizes word references beyond w999', () => {
+		expect([...`„Dómini” (w1000)`.matchAll(XREF)][0]?.[2]).toBe('w1000');
+	});
+
 	it('has at least the four launch texts in the neutral base', () => {
 		expect(Object.keys(CORE).length).toBeGreaterThanOrEqual(4);
 	});

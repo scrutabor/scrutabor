@@ -136,7 +136,7 @@ test('the flow and the reading page number their words apart', async ({ page }) 
 	await page.goto('/app/pl/ordo/catechumenorum');
 	// same corpus id in five texts, five distinct DOM ids — no collisions
 	const first = await page.locator('.part-text .word').first().getAttribute('id');
-	expect(first).toMatch(/^[a-z-]+\.w\d{3}$/);
+	expect(first).toMatch(/^[a-z-]+\.w\d{3,}$/);
 	const ids = await page.locator('.part-text .word').evaluateAll((els) => els.map((e) => e.id));
 	expect(new Set(ids).size).toBe(ids.length);
 	// the reading page keeps the bare corpus id, so its deep links are unchanged

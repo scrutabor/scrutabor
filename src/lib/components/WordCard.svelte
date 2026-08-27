@@ -27,10 +27,10 @@
 		onnavigate: (id: string) => void;
 	} = $props();
 
-	// Cross-references in contextual explanations are authored as „form” (wNNN)
-	// (EN: “form” (wNNN)) — see the corpus repo's SCHEMA.md. Render the
+	// Cross-references in contextual explanations are authored as „form” (wNNN…)
+	// (EN: “form” (wNNN…)) — see the corpus repo's SCHEMA.md. Render the
 	// quoted form as a link to that word and hide the id from the reader.
-	const XREF = /([„“])([^”“„]+)”\s*\((w\d{3})\)/g;
+	const XREF = /([„“])([^”“„]+)”\s*\((w\d{3,})\)/g;
 
 	type ExplanationPart = { text: string } | { open: string; form: string; id: string };
 

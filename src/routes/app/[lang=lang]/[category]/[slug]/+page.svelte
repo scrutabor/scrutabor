@@ -52,7 +52,7 @@
 	// text to text without returning to the catalog.
 	const around = $derived(data.around);
 	const repeatedSegments = $derived(
-		data.category === 'orationes' && data.slug === 'angelus-domini' ? ['ave1', 'ave2', 'ave3'] : []
+		data.category === 'orationes' && data.slug === 'angelus-domini' ? ['s03', 's06', 's09'] : []
 	);
 	const hasDevotionalLeader = $derived(
 		doc.segments.some((sg) => sg.type === 'verse' && sg.speaker === 'ductor')
