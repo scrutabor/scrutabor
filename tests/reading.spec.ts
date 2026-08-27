@@ -1858,6 +1858,36 @@ test('the highlight marks the word AND its gloss', async ({ page }) => {
 	expect(bare, 'the word is still marked with the glosses off').not.toBe('rgba(0, 0, 0, 0)');
 });
 
+test('word selection outranks desktop hover and a phone tap', async ({ page }) => {
+	await page.setViewportSize({ width: 375, height: 800 });
+	await page.goto('/app/pl/orationes/angelus-domini?s=s02&w=w008');
+	await setHelp(page, 1);
+
+	const selectedBackground = () =>
+		page.evaluate(
+			() =>
+				getComputedStyle(document.querySelector('.token.word-selected')!, '::before')
+					.backgroundColor
+		);
+	const landed = await selectedBackground();
+	await page.locator('#w008').hover();
+	expect(await selectedBackground(), 'hover does not visually deselect the current word').toBe(
+		landed
+	);
+
+	// A tap leaves :hover sticky in mobile browsers. That transient state
+	// must never dilute the stronger, persistent selection state.
+	await page.locator('#w009').click();
+	await expect(page.locator('#w009')).toHaveClass(/selected/);
+	expect(
+		await page.locator('#w009').evaluate((word) => word.matches(':hover')),
+		'the regression is exercised with sticky hover still active'
+	).toBe(true);
+	expect(await selectedBackground(), 'a tapped word is as distinct as a deep-linked word').toBe(
+		landed
+	);
+});
+
 // The reader measures in GLYPHS; the box model measures in boxes, and on
 // this page they disagree by a lot. A glossed verse carries line-height
 // 2.3, so a third of a line of air sits ABOVE its first Latin glyph,

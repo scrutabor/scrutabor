@@ -959,9 +959,11 @@
 		cursor: pointer;
 	}
 
-	.token:has(> button.word:hover)::before,
-	.token:has(> button.word:focus-visible)::before,
-	.token.word-selected::before {
+	.token:where(
+			:has(> button.word:hover),
+			:has(> button.word:focus-visible),
+			.word-selected
+		)::before {
 		content: '';
 		position: absolute;
 		/* MORE THAN HALF THE GAP between two words, so two tints always meet
@@ -985,6 +987,10 @@
 	}
 
 	.token.word-selected::before {
+		/* Persistent selection outranks transient hover and focus. `:where()`
+		   deliberately keeps the shared surface rule less specific: otherwise
+		   desktop hover and the sticky hover left by a phone tap dilute this
+		   strong wash back to the ordinary affordance colour. */
 		background: var(--wash-strong);
 	}
 
