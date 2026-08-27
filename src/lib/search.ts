@@ -1,9 +1,10 @@
-import { CATALOG, sectionFor } from './catalog';
+import { catalogFor, sectionFor } from './catalog';
 import { CONCORDANCE, everyTextInOrder, type LatinPosting } from './concordance';
 import { LEXICON, loadSenses, loadTexts, type TextEntry } from './corpus';
 import {
 	languageConcordancePath,
 	languageTextMetadataFor,
+	textKeysFor,
 	textMetadataFor
 } from './corpus-metadata';
 import type { Lang } from './i18n';
@@ -214,7 +215,10 @@ function compareNumberTuples(left: number[], right: number[]): number {
 }
 
 function titlesFor(query: string[], lang: Lang, exactLatinForm: boolean): TitleSearchResult[] {
-	const scored = CATALOG.flatMap((section, sectionRank) =>
+	// Titles come from the ACTIVE language package's shelf: a text the
+	// package does not carry has no page to open in this language, and a
+	// result naming it would be a dead end the moment a package is partial.
+	const scored = catalogFor(new Set(textKeysFor(lang))).flatMap((section, sectionRank) =>
 		section.texts.flatMap((text, textRank) => {
 			const textKey = `${text.category}/${text.slug}`;
 			const displayTitle = text.localizedTitle[lang] ?? text.title;
@@ -496,19 +500,24 @@ async function grammarResults(
 	}
 	if (!lemmata.size) return [];
 	const senses = await loadSenses(lang);
-	return [...lemmata]
-		.map(([lemma]) => ({
-			kind: 'grammar' as const,
-			lemma,
-			head: LEXICON.lemmata[lemma]?.head ?? lemma,
-			senses: senses[lemma]?.senses ?? [],
-			href: `/app/${lang}/lemma/${encodeURIComponent(lemma)}`
-		}))
-		.sort(
-			(a, b) =>
-				Number(a.lemma !== term) - Number(b.lemma !== term) || a.lemma.localeCompare(b.lemma)
-		)
-		.slice(0, MAX_GRAMMAR_RESULTS);
+	return (
+		[...lemmata]
+			// A lemma the package has no senses for has no entry to land on in
+			// this language; latent while both packages are complete.
+			.filter(([lemma]) => senses[lemma] !== undefined)
+			.map(([lemma]) => ({
+				kind: 'grammar' as const,
+				lemma,
+				head: LEXICON.lemmata[lemma]?.head ?? lemma,
+				senses: senses[lemma]?.senses ?? [],
+				href: `/app/${lang}/lemma/${encodeURIComponent(lemma)}`
+			}))
+			.sort(
+				(a, b) =>
+					Number(a.lemma !== term) - Number(b.lemma !== term) || a.lemma.localeCompare(b.lemma)
+			)
+			.slice(0, MAX_GRAMMAR_RESULTS)
+	);
 }
 
 export async function searchBook(rawQuery: string, lang: Lang): Promise<SearchResults> {

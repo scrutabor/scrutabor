@@ -15,8 +15,8 @@
 	let { data } = $props();
 	const lang = $derived(data.lang as Lang);
 
-	const doc = $derived(data.specimen.doc);
-	const gloss = $derived(data.specimen.gloss);
+	const doc = $derived(data.specimen?.doc ?? null);
+	const gloss = $derived(data.specimen?.gloss ?? null);
 
 	// The same three reading modes as every reading page; the control
 	// itself restores the reader's stored choice on mount.
@@ -32,10 +32,12 @@
 	const wordsOf = $derived(
 		new Map((doc?.segments ?? []).flatMap((s) => (s.words ?? []).map((w) => [w.id, w] as const)))
 	);
-	const selWord = $derived(wordsOf.get(selected) ?? doc.segments[0]?.words?.[0] ?? null);
-	const selGloss = $derived(selWord ? (gloss.words[selWord.id] ?? null) : null);
+	const selWord = $derived(wordsOf.get(selected) ?? doc?.segments[0]?.words?.[0] ?? null);
+	const selGloss = $derived(selWord ? (gloss?.words[selWord.id] ?? null) : null);
 	const selAnalysis = $derived(
-		selWord ? (selWord.analysis ?? doc.analysis_defaults_words ?? doc.analysis_defaults) : null
+		selWord && doc
+			? (selWord.analysis ?? doc.analysis_defaults_words ?? doc.analysis_defaults)
+			: null
 	);
 
 	interface Copy {
@@ -239,48 +241,50 @@
 			{/each}
 		</div>
 
-		<section class="specimen-section">
-			<p class="lead">{t.specimenLead}</p>
+		{#if data.specimen && doc && gloss}
+			<section class="specimen-section">
+				<p class="lead">{t.specimenLead}</p>
 
-			<!-- The book itself, for one verse: the real mode control, corpus text
+				<!-- The book itself, for one verse: the real mode control, corpus text
 			     and WordPanel. The panel changes only its placement here: it
 			     stands permanently in the page instead of covering it. -->
-			<div class="specimen">
-				<div class="specimen-help">
-					<div class="tabella">
-						<HelpLevels {lang} bind:value={helpLevel} />
+				<div class="specimen">
+					<div class="specimen-help">
+						<div class="tabella">
+							<HelpLevels {lang} bind:value={helpLevel} />
+						</div>
 					</div>
-				</div>
-				<p class="stanza-link smallcaps">
-					<a href="/app/{lang}/psalmi/118-he?v=34">{t.stanzaLink}</a>
-				</p>
-				<TextBody
-					showTranslationSources={false}
-					{doc}
-					{gloss}
-					{lang}
-					{helpLevel}
-					selectedId={selected}
-					ontap={(id) => (selected = id)}
-				/>
-				{#if selWord && selAnalysis}
-					<WordPanel
-						word={selWord}
-						gloss={selGloss}
-						analysis={selAnalysis}
-						lex={data.specimen.lex}
+					<p class="stanza-link smallcaps">
+						<a href="/app/{lang}/psalmi/118-he?v=34">{t.stanzaLink}</a>
+					</p>
+					<TextBody
+						showTranslationSources={false}
+						{doc}
+						{gloss}
 						{lang}
-						inline
-						onnavigate={(id) => {
-							// A future note may cite a word outside the specimen;
-							// open the full text rather than re-aiming to a fallback.
-							if (wordsOf.has(id)) selected = id;
-							else goto(`/app/${lang}/psalmi/118-he?w=${id}`);
-						}}
+						{helpLevel}
+						selectedId={selected}
+						ontap={(id) => (selected = id)}
 					/>
-				{/if}
-			</div>
-		</section>
+					{#if selWord && selAnalysis}
+						<WordPanel
+							word={selWord}
+							gloss={selGloss}
+							analysis={selAnalysis}
+							lex={data.specimen.lex}
+							{lang}
+							inline
+							onnavigate={(id) => {
+								// A future note may cite a word outside the specimen;
+								// open the full text rather than re-aiming to a fallback.
+								if (wordsOf.has(id)) selected = id;
+								else goto(`/app/${lang}/psalmi/118-he?w=${id}`);
+							}}
+						/>
+					{/if}
+				</div>
+			</section>
+		{/if}
 
 		<footer>
 			<p class="privacy-line">{t.privacyLine}</p>
