@@ -17,6 +17,11 @@
 	import { ribbon } from '$lib/ribbon.svelte';
 	import { docWordPanel } from '$lib/wordpanel.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
+	import {
+		formatSegmentSelection,
+		parseSegmentSelection,
+		segmentRange
+	} from '$lib/segment-selection';
 
 	// The corpus arrives from the server load, already narrowed to this text
 	// — the browser never receives the whole snapshot (see +page.server.ts).
@@ -95,14 +100,15 @@
 	// replaceState, not push: citing is a bookmarkable state, not a step
 	// a reader should have to back out of.
 	let citedVerse = $state<number | null>(null);
-	let citedSegment = $state<string | null>(null);
+	let citedSegments = $state<string[]>([]);
+	let segmentAnchor = $state<string | null>(null);
 
 	function applyVerseFromLocation() {
 		if (!data.verses) return;
 		const raw = pageUrl().searchParams.get('v');
 		const n = raw === null ? null : Number(raw);
-		citedVerse = n !== null && Object.values(data.verses).includes(n) ? n : null;
-		const target = citedVerse;
+		const target = n !== null && Object.values(data.verses).includes(n) ? n : null;
+		citedVerse = target;
 		if (target !== null) {
 			requestAnimationFrame(() =>
 				document.getElementById(`v${target}`)?.scrollIntoView({ block: 'center' })
@@ -112,13 +118,43 @@
 
 	function applySegmentFromLocation() {
 		const raw = pageUrl().searchParams.get('s');
-		citedSegment = raw && doc.segments.some((segment) => segment.id === raw) ? raw : null;
-		const target = citedSegment;
+		const ids = doc.segments.map((segment) => segment.id);
+		const selected = parseSegmentSelection(raw, ids);
+		const target = selected[0];
+		citedSegments = selected;
+		segmentAnchor = target ?? null;
 		if (target) {
 			requestAnimationFrame(() =>
 				document.getElementById(target)?.scrollIntoView({ block: 'center' })
 			);
 		}
+	}
+
+	function writeSegmentSelection(selected: string[]) {
+		const url = pageUrl();
+		const value = formatSegmentSelection(
+			selected,
+			doc.segments.map((segment) => segment.id)
+		);
+		if (value) {
+			url.searchParams.set('s', value);
+			url.searchParams.delete('v');
+		} else url.searchParams.delete('s');
+		replaceState(url, {});
+	}
+
+	function selectSegment(id: string, extend: boolean) {
+		const ids = doc.segments.map((segment) => segment.id);
+		if (extend && segmentAnchor) {
+			citedSegments = segmentRange(ids, segmentAnchor, id);
+		} else if (citedSegments.length === 1 && citedSegments[0] === id) {
+			citedSegments = [];
+			segmentAnchor = null;
+		} else {
+			citedSegments = [id];
+			segmentAnchor = id;
+		}
+		writeSegmentSelection(citedSegments);
 	}
 
 	$effect(() => {
@@ -131,7 +167,12 @@
 		citedVerse = citedVerse === no ? null : no;
 		const url = pageUrl();
 		if (citedVerse === null) url.searchParams.delete('v');
-		else url.searchParams.set('v', String(citedVerse));
+		else {
+			url.searchParams.set('v', String(citedVerse));
+			url.searchParams.delete('s');
+			citedSegments = [];
+			segmentAnchor = null;
+		}
 		replaceState(url, {});
 	}
 
@@ -244,7 +285,8 @@
 						{helpLevel}
 						selectedId={panel.id}
 						ontap={tapWord}
-						{citedSegment}
+						{citedSegments}
+						onsegmentselect={selectSegment}
 					/>
 				</section>
 			{:else}
@@ -259,7 +301,8 @@
 					verses={data.verses}
 					onverse={data.verses ? tapVerse : undefined}
 					{citedVerse}
-					{citedSegment}
+					{citedSegments}
+					onsegmentselect={selectSegment}
 					collapsedSegments={repeatedSegments}
 					collapsedLabel={msgs.repeatedPrayer}
 					collapsedShow={msgs.repeatedPrayerShow}

@@ -28,7 +28,8 @@
 		verses,
 		onverse,
 		citedVerse = null,
-		citedSegment = null,
+		citedSegments = [],
+		onsegmentselect,
 		collapsedSegments = [],
 		collapsedLabel,
 		collapsedShow,
@@ -56,8 +57,10 @@
 		 * the cited verse is marked; without it they are print. */
 		onverse?: (no: number) => void;
 		citedVerse?: number | null;
-		/** Segment named by a search-result deep link. */
-		citedSegment?: string | null;
+		/** Segments named by a search result or a reader-created share link. */
+		citedSegments?: string[];
+		/** Selects one segment, or extends the current range with Shift. */
+		onsegmentselect?: (id: string, extend: boolean) => void;
 		/** Optional reading-page folds for repeated, already-familiar prayers.
 		 * The text remains in the HTML and in the corpus; details merely keeps
 		 * repetition from dominating the visual hierarchy. */
@@ -190,12 +193,16 @@
 		     opening and the Ordo renders the complete segment. -->
 		<span
 			class="rubric-anchor"
-			class:search-hit={seg.id === citedSegment}
+			class:segment-selected={citedSegments.includes(seg.id)}
 			id={segmentId(seg.id)}
 			aria-hidden="true"
 		></span>
 	{:else if seg.type === 'rubric'}
-		<div class="rubric" class:search-hit={seg.id === citedSegment} id={segmentId(seg.id)}>
+		<div
+			class="rubric"
+			class:segment-selected={citedSegments.includes(seg.id)}
+			id={segmentId(seg.id)}
+		>
 			<p class="rubric-la" lang="la">{seg.text}</p>
 			<!-- Narratives ride in EVERY mode (owner, 2026-08-21): what
 			     happens at the altar is the prayer book's own layer, not
@@ -328,15 +335,29 @@
 		<p
 			class="verse"
 			style:margin-top={fit0 && !bilingual ? `${fit0.reserve}em` : null}
+			style:--selection-initial-start={fit0 ? `calc(var(--reading) * ${-fit0.reserve})` : null}
 			class:glossed={helpLevel === 1}
 			class:quiet={seg.voice === 'secreto'}
 			class:answer={mine}
 			class:marked={showMark || verseNo !== undefined}
 			class:cited={verseNo !== undefined && verseNo === citedVerse}
-			class:search-hit={seg.id === citedSegment}
+			class:segment-selected={citedSegments.includes(seg.id)}
 			id={verseNo !== undefined ? segmentId(`v${verseNo}`) : segmentId(seg.id)}
 			lang="la"
 		>
+			{#if onsegmentselect}<button
+					type="button"
+					class="segment-handle"
+					class:selected={citedSegments.includes(seg.id)}
+					aria-pressed={citedSegments.includes(seg.id)}
+					aria-label={citedSegments.includes(seg.id)
+						? M[lang].segmentDeselect
+						: M[lang].segmentSelect}
+					title={citedSegments.includes(seg.id) ? M[lang].segmentDeselect : M[lang].segmentSelect}
+					onclick={(event) => onsegmentselect?.(seg.id, event.shiftKey)}
+				>
+					<span class="segment-handle-ink" aria-hidden="true"></span>
+				</button>{/if}
 			{#if verseNo !== undefined}<span
 					class="segment-anchor"
 					id={segmentId(seg.id)}
@@ -377,7 +398,9 @@
 						onclick={() => onverse?.(verseNo)}><span class="ink">{verseNo}</span></button
 					>{:else}<span class="mark">{verseNo}</span
 					>{/if}{/if}{#each seg.words ?? [] as w, wi (w.id)}{@const raised =
-					i === firstVerse && wi === 0}<span class="token"
+					i === firstVerse && wi === 0}<span
+					class="token"
+					class:word-selected={selectedId === domId(w.id)}
 					>{#if ontap}<button
 							class="word"
 							id={domId(w.id)}
@@ -407,37 +430,119 @@
 		position: absolute;
 	}
 
-	.search-hit {
-		outline: 1px solid var(--rubric);
-		outline-offset: calc(var(--reading) * 0.12);
-		border-radius: 0.15rem;
+	.rubric.segment-selected {
+		border-radius: 0.24rem;
+		background: color-mix(in srgb, var(--wash) 78%, var(--bg));
 	}
 
-	/* A search result names the verse, not the full measure that happens to
-	   contain it. A short verse therefore shrinks to its words, while a long
-	   one still wraps at the book measure. Interlinear annotations hang below
-	   their line box, so the highlighted verse explicitly reserves room for
-	   them; an inset rule cannot trespass on the gloss above. */
-	.verse.search-hit {
+	/* Segment selection is a painted layer only. It never changes the verse's
+	   width, padding, line breaks or margins, so following lines cannot jump
+	   when a shared link is opened. The tint reaches down to an interlinear
+	   gloss through paint outside the box rather than reserving new space. */
+	.verse:has(.initial) {
+		--selection-block-start: var(--selection-initial-start);
+	}
+
+	.verse:has(> .segment-handle) {
 		position: relative;
-		box-sizing: border-box;
-		width: fit-content;
-		max-width: 100%;
-		padding-inline-end: calc(var(--reading) * 0.18);
-		outline: 0;
+		isolation: isolate;
 	}
 
-	.verse.search-hit::after {
+	/* The paint layer exists before and after selection. Selection changes its
+	   colour only: no child, pseudo-element or box-model value enters or leaves
+	   the rendered tree when the reader chooses a line. */
+	.verse:has(> .segment-handle)::before {
 		position: absolute;
-		inset: calc(var(--reading) * 0.16) 0 0;
-		border: 1px solid var(--rubric);
-		border-radius: 0.15rem;
+		inset: var(--selection-block-start) 0 var(--selection-block-end) calc(var(--reading) * -0.44);
+		border-radius: 0.24rem;
+		background: transparent;
 		content: '';
 		pointer-events: none;
+		z-index: -2;
 	}
 
-	.verse.search-hit.glossed {
-		padding-block-end: calc(var(--reading) * 0.34);
+	.verse.segment-selected::before,
+	.verse.segment-selected + .seg-extra {
+		/* Opaque blend, although visually as quiet as the former translucent
+		   wash. Adjacent selected lines overlap by a fraction of a pixel to
+		   cover font-metric rounding; an alpha colour made that overlap a
+		   darker horizontal seam. Equal opaque paint remains exactly equal. */
+		background: color-mix(in srgb, var(--wash) 78%, var(--bg));
+	}
+
+	.verse.segment-selected + .seg-extra {
+		border-radius: 0.24rem;
+	}
+
+	.segment-handle {
+		position: absolute;
+		inset-block: var(--selection-block-start) var(--selection-block-end);
+		inset-inline-start: calc(var(--reading) * -0.8);
+		display: grid;
+		width: calc(var(--reading) * 0.72);
+		height: auto;
+		place-items: center;
+		padding: 0;
+		border: 0;
+		background: transparent;
+		cursor: pointer;
+		opacity: 0.38;
+		z-index: 1;
+	}
+
+	.segment-handle-ink {
+		display: block;
+		width: 0.12rem;
+		height: calc(var(--reading) * 0.42);
+		border-radius: 999px;
+		background: var(--ink-soft);
+		transition:
+			height 120ms ease,
+			background-color 120ms ease;
+	}
+
+	.segment-handle:hover,
+	.segment-handle:focus-visible,
+	.segment-handle.selected {
+		opacity: 1;
+	}
+
+	.segment-handle:hover .segment-handle-ink,
+	.segment-handle:focus-visible .segment-handle-ink {
+		height: calc(var(--reading) * 0.58);
+		background: var(--ink);
+	}
+
+	.segment-handle.selected .segment-handle-ink {
+		opacity: 0;
+	}
+
+	.segment-handle.selected {
+		background: linear-gradient(var(--rubric), var(--rubric)) center / 0.12rem 100% no-repeat;
+	}
+
+	.segment-handle:focus-visible {
+		outline: none;
+	}
+
+	.segment-handle.selected:focus-visible {
+		background-size: 0.24rem 100%;
+	}
+
+	.segment-handle:focus-visible .segment-handle-ink {
+		width: 0.24rem;
+		height: calc(var(--reading) * 0.78);
+		background: var(--rubric);
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		.segment-handle:not(.selected):not(:focus-visible) {
+			opacity: 0;
+		}
+
+		.verse:hover > .segment-handle {
+			opacity: 0.68;
+		}
 	}
 
 	.translation-sources {
@@ -743,6 +848,8 @@
 	   in whatever comes next: the fault is the verse's, so the verse pays.
 	   The mirror of --gloss-gap, which is ink hanging BELOW its box. */
 	.verse {
+		--selection-block-start: calc(var(--reading) * 0.14);
+		--selection-block-end: calc(var(--reading) * -0.08);
 		font-size: var(--reading-bare);
 		/* 1.5, down from 1.75 (owner, 2026-08-21): the bare modes read as
 		   a prayer book, and printed missals set their verses close to
@@ -790,6 +897,7 @@
 	   column is flush; what says a verse has begun is its capital, its
 	   stop, and the mark when the voice changes. */
 	.verse.glossed {
+		--selection-block-end: calc(var(--reading) * -0.34);
 		font-size: var(--reading);
 		line-height: 2.3;
 		margin-bottom: calc(var(--reading) * 0.759);
@@ -815,6 +923,8 @@
 
 	.token {
 		display: inline-block;
+		position: relative;
+		isolation: isolate;
 	}
 
 	.word {
@@ -826,23 +936,12 @@
 		color: inherit;
 	}
 
-	/* The highlight hugs the LATIN, not the ruby box. A ruby's box holds
-	   its annotation as well, and once the gloss row was given its own air
-	   the annotation hung below the box that was drawing the highlight —
-	   so a tapped word came back with a wash that started above the letters
-	   and ended in the middle of the gloss beneath them. */
-	/* The wash marks the PAIR — the word and the gloss under it — not the
-	   word alone. A ruby base is stretched to its column and the column is
-	   as wide as the longer of the two, so a short word under a long gloss
-	   („Fiat" under „niech się stanie") came back with a box far wider
-	   than itself and nothing said why. Measured: the glyphs of Fiat are
-	   34px inside an 89px box, and no inner span can hug them — ruby
-	   stretches its base's inline content, and an inline-block that
-	   escaped that would disturb the line box the raised initial needs.
-	   So the box is right and it was the MEANING that was missing: it
-	   covers the gloss too now, which is what the column width was always
-	   describing. The gap between the two is closed by padding, which on
-	   an inline box paints without moving the line. */
+	/* The permanent token is the selection surface for its Latin word and
+	   interlinear gloss. It is as wide as the wider half of that ruby pair,
+	   while its block edges are the physical reading line's edges. The same
+	   block inset variables paint the selected segment and selected word:
+	   one can therefore never protrude beyond the other, and selection still
+	   changes paint only — never padding, line-height or rendered children. */
 	.base {
 		padding: 0.06em 0.069em calc(var(--reading) * var(--gloss-gap));
 		/* The wash wants a little air around the letters; the LETTERS must
@@ -860,26 +959,9 @@
 		cursor: pointer;
 	}
 
-	/* ONE wash, one box, anchored to the BASE. Tinting base and rt
-	   separately relied on the two boxes coming out the same width, and
-	   they only do when the gloss is the longer: the base stretches to
-	   the ruby column, the annotation does not, so a word longer than
-	   its gloss came back as two ragged rectangles (the owner saw it on
-	   scrutábor). The button was the wrong anchor too — its box carries
-	   the line's leading, ~0.4em of air above the glyphs, and a wash
-	   drawn from it reached into the previous line's glosses on a
-	   wrapped verse. The base hugs the letters AND spans the column, so
-	   the rectangle starts just over the capitals and, when the glosses
-	   show, reaches 0.86 of the reading size below the base box —
-	   measured past the shifted gloss row and the hooks of its ę
-	   (pinned by the e2e guards). */
-	.word .base {
-		position: relative;
-	}
-
-	button.word:hover .base::before,
-	button.word:focus-visible .base::before,
-	button.word.selected .base::before {
+	.token:has(> button.word:hover)::before,
+	.token:has(> button.word:focus-visible)::before,
+	.token.word-selected::before {
 		content: '';
 		position: absolute;
 		/* MORE THAN HALF THE GAP between two words, so two tints always meet
@@ -895,20 +977,15 @@
 		   wider of the two rather than for the one in front of me, and the
 		   test states the rule relatively: they meet, and they do not
 		   overlap enough to read as one band. */
-		inset: -0.1em -0.05em;
+		inset-block: var(--selection-block-start) var(--selection-block-end);
+		inset-inline: -0.05em;
 		border-radius: 0.172em;
 		background: var(--wash);
 		z-index: -1;
 	}
 
-	button.word.selected .base::before {
+	.token.word-selected::before {
 		background: var(--wash-strong);
-	}
-
-	.glossed button.word:hover .base::before,
-	.glossed button.word:focus-visible .base::before,
-	.glossed button.word.selected .base::before {
-		bottom: calc(var(--reading) * -0.86);
 	}
 
 	/* On the word under analysis the gloss is the thing being read, and the
@@ -919,25 +996,14 @@
 		color: var(--ink);
 	}
 
-	/* The ring goes on the same rectangle the wash uses, NOT on the button.
-	   The button is an inline box around a ruby, so its own box is the
-	   whole line — 2.3 of the reading size tall — and the ring drew a
-	   rectangle that swallowed the gloss row of the line above and sat
-	   nowhere near the word it meant (owner, 2026-08-09). The base hugs
-	   the letters and reaches down over the gloss, which is exactly the
-	   shape a reader should see marked.
-
-	   The outline is moved, not removed: the button carries none of its
-	   own, and the ::before it draws on is present whenever the word has
-	   focus (see the wash rules above). */
+	/* The ring belongs to the same permanent token surface as its wash, not
+	   to the button's browser outline. It is therefore visible without ever
+	   changing the line box or stealing space from neighbouring words. */
 	button.word:focus-visible {
 		outline: none;
-		/* A stacking context of its own, so nothing paints over the ring.
-		   Tints are pseudo-elements at the same depth, and equal z-index
-		   paints in DOM ORDER — so the word AFTER the focused one drew its
-		   tint across the ring's right stroke, which came back thinner than
-		   the other three (owner, 2026-08-09). Inside this context the tint
-		   is still behind its own letters, which is all the -1 means. */
+	}
+
+	.token:has(> button.word:focus-visible) {
 		position: relative;
 		z-index: 1;
 	}
@@ -949,7 +1015,7 @@
 	   to spare (owner, 2026-08-09). A negative offset the width of the
 	   ring puts its outer edge exactly on the tint's, so the focused word
 	   is one chip and takes no more room than it did unfocused. */
-	button.word:focus-visible .base::before {
+	.token:has(> button.word:focus-visible)::before {
 		outline: 2px solid var(--rubric);
 		outline-offset: -2px;
 	}
@@ -1354,7 +1420,7 @@
 			column-gap: calc(var(--reading) * 0.38);
 		}
 
-		button.word .base::before {
+		.token::before {
 			display: none;
 		}
 

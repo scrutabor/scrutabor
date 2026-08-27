@@ -1,4 +1,4 @@
-import { atRoute, expect, settled, test } from './fixtures';
+import { atRoute, expect, setHelp, settled, test } from './fixtures';
 
 async function openSearchPage(page: import('@playwright/test').Page, language: 'pl' | 'en' = 'pl') {
 	await page.goto(`/app/${language}/search`);
@@ -89,51 +89,194 @@ test('a translation passage opens and marks the exact segment', async ({ page })
 	await passage.click();
 	await settled(page);
 	await expect(page).toHaveURL(atRoute('/app/pl/orationes/anima-christi', '?s=s01'));
-	await expect(page.locator('#s01.search-hit')).toBeVisible();
+	await expect(page.locator('#s01.segment-selected')).toBeVisible();
 });
 
-test('a marked verse fits its text and clears neighbouring interlinear glosses', async ({
-	page
-}) => {
-	await page.setViewportSize({ width: 1280, height: 720 });
-	await page.goto('/app/pl/orationes/angelus-domini?s=s01');
-	const short = await page.locator('#s01.search-hit').evaluate((element) => {
-		const verse = element.getBoundingClientRect();
-		const measure = element.parentElement!.getBoundingClientRect();
-		const tokens = [...element.querySelectorAll('.token')].map((token) =>
-			token.getBoundingClientRect()
-		);
-		const glosses = [...element.querySelectorAll('rt')].map((gloss) =>
-			gloss.getBoundingClientRect()
-		);
-		return {
-			width: verse.width,
-			measure: measure.width,
-			rightAir: verse.right - Math.max(...tokens.map((token) => token.right)),
-			bottomAir: verse.bottom - Math.max(...glosses.map((gloss) => gloss.bottom))
-		};
+test('verse handles create, extend, share, and clear a selection', async ({ page }) => {
+	await page.goto('/app/pl/orationes/angelus-domini');
+	await page.evaluate(() => {
+		const state = window as typeof window & { selectionChildMutations?: number };
+		state.selectionChildMutations = 0;
+		new MutationObserver((records) => {
+			state.selectionChildMutations! += records.filter(
+				(record) => record.type === 'childList'
+			).length;
+		}).observe(document.querySelector('main')!, { childList: true, subtree: true });
 	});
-	expect(short.width, 'a short hit inherited the full reading measure').toBeLessThan(
-		short.measure * 0.75
-	);
-	expect(short.rightAir, 'the rule touches the last word').toBeGreaterThan(2);
-	expect(short.bottomAir, 'the rule touches the interlinear gloss').toBeGreaterThan(4);
+	await page.locator('#s10 .segment-handle').click();
+	await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini', '?s=s10'));
+	await expect(page.locator('#s10.segment-selected')).toBeVisible();
+
+	await page.locator('#s12 .segment-handle').click({ modifiers: ['Shift'] });
+	await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini', '?s=s10-s12'));
+	await expect(page.locator('.segment-selected')).toHaveCount(3);
+	expect(
+		await page.evaluate(
+			() => (window as typeof window & { selectionChildMutations?: number }).selectionChildMutations
+		),
+		'selection added or removed rendered content'
+	).toBe(0);
+
+	await page.reload();
+	await expect(page.locator('.segment-selected')).toHaveCount(3);
+	await page.locator('#s11 .segment-handle').click();
+	await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini', '?s=s11'));
+	await expect(page.locator('.segment-selected')).toHaveCount(1);
+	await expect(page.locator('#s11.segment-selected')).toBeVisible();
+
+	await page.locator('#s11 .segment-handle').click();
+	await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini'));
+	await expect(page.locator('.segment-selected')).toHaveCount(0);
+});
+
+test('selecting a verse changes only paint and clears neighbouring glosses', async ({ page }) => {
+	await page.setViewportSize({ width: 1280, height: 720 });
+	const geometry = async () =>
+		page.locator('#s11, #s12, #s13').evaluateAll((elements) =>
+			elements.map((element) => {
+				const rect = element.getBoundingClientRect();
+				return {
+					x: rect.x,
+					y: rect.y + scrollY,
+					width: rect.width,
+					height: rect.height
+				};
+			})
+		);
+	await page.goto('/app/pl/orationes/angelus-domini');
+	const before = await geometry();
+	await page.goto('/app/pl/orationes/angelus-domini?s=s12');
+	const after = await geometry();
+	expect(after, 'selection changed verse geometry').toEqual(before);
 
 	await page.goto('/app/pl/orationes/angelus-domini?s=s13');
-	const long = await page.locator('#s13.search-hit').evaluate((element) => {
+	const long = await page.locator('#s13.segment-selected').evaluate((element) => {
 		const verse = element.getBoundingClientRect();
-		const rule = getComputedStyle(element, '::after');
+		const wash = getComputedStyle(element, '::before');
 		const preceding = document.querySelectorAll('#s12 rt');
+		const own = element.querySelectorAll('rt');
 		return {
 			topAir:
 				verse.top +
-				parseFloat(rule.top) -
+				parseFloat(wash.top) -
 				Math.max(...[...preceding].map((gloss) => gloss.getBoundingClientRect().bottom)),
+			bottomAir:
+				verse.bottom -
+				parseFloat(wash.bottom) -
+				Math.max(...[...own].map((gloss) => gloss.getBoundingClientRect().bottom)),
 			overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth
 		};
 	});
-	expect(long.topAir, 'the rule touches the preceding interlinear gloss').toBeGreaterThan(2);
-	expect(long.overflow, 'the long marked verse widens the page').toBe(0);
+	expect(long.topAir, 'the wash reaches the preceding interlinear gloss').toBeGreaterThan(2);
+	expect(long.bottomAir, 'the wash cuts through its interlinear gloss').toBeGreaterThan(4);
+	expect(long.overflow, 'the selected verse widens the page').toBe(0);
+
+	await page.goto('/app/pl/orationes/angelus-domini?s=s07');
+	const edge = await page.locator('#s07.segment-selected').evaluate((element) => {
+		const verse = element.getBoundingClientRect();
+		const wash = getComputedStyle(element, '::before');
+		const paint = {
+			left: verse.left + Number.parseFloat(wash.left),
+			top: verse.top + Number.parseFloat(wash.top),
+			bottom: verse.bottom - Number.parseFloat(wash.bottom)
+		};
+		const handle = element.querySelector('.segment-handle')!.getBoundingClientRect();
+		const mark = element.querySelector('.mark')!.getBoundingClientRect();
+		return {
+			leftAttachment: Math.abs((handle.left + handle.right) / 2 - paint.left),
+			topAttachment: Math.abs(handle.top - paint.top),
+			bottomAttachment: Math.abs(handle.bottom - paint.bottom),
+			markAir: mark.left - paint.left
+		};
+	});
+	expect(edge.leftAttachment, 'the handle floats beside the wash').toBeLessThan(0.6);
+	expect(edge.topAttachment, 'the handle starts inside the selected line').toBeLessThan(0.6);
+	expect(edge.bottomAttachment, 'the handle stops inside the selected line').toBeLessThan(0.6);
+	expect(edge.markAir, 'the selected background crowds the V. mark').toBeGreaterThan(8);
+});
+
+test('a selected word and its selected line share exact vertical edges', async ({ page }) => {
+	await page.setViewportSize({ width: 1280, height: 720 });
+	for (const [kind, url] of [
+		['ordinary word', '/app/pl/orationes/angelus-domini?s=s01&w=w002'],
+		['raised initial', '/app/pl/orationes/pater-noster?s=s01&w=w001']
+	] as const) {
+		for (const level of [0, 1, 2] as const) {
+			await page.goto(url);
+			await setHelp(page, level);
+			const edges = await page.evaluate(() => {
+				const line = document.querySelector('.verse.segment-selected')!;
+				const word = document.querySelector('.token.word-selected')!;
+				const painted = (element: Element) => {
+					const rect = element.getBoundingClientRect();
+					const style = getComputedStyle(element, '::before');
+					return {
+						top: rect.top + parseFloat(style.top),
+						bottom: rect.bottom - parseFloat(style.bottom),
+						background: style.backgroundColor
+					};
+				};
+				return { line: painted(line), word: painted(word) };
+			});
+			expect(edges.line.background, `${kind}, mode ${level}: line wash`).not.toBe(
+				'rgba(0, 0, 0, 0)'
+			);
+			expect(edges.word.background, `${kind}, mode ${level}: word wash`).not.toBe(
+				'rgba(0, 0, 0, 0)'
+			);
+			expect(
+				Math.abs(edges.line.top - edges.word.top),
+				`${kind}, mode ${level}: top edges`
+			).toBeLessThan(0.6);
+			expect(
+				Math.abs(edges.line.bottom - edges.word.bottom),
+				`${kind}, mode ${level}: bottom edges`
+			).toBeLessThan(0.6);
+		}
+	}
+});
+
+test('a selected range has one uniform opaque wash without seams', async ({ page }) => {
+	await page.setViewportSize({ width: 1600, height: 800 });
+	await page.goto('/app/pl/orationes/pater-noster?s=s03-s06');
+	const layers = await page.locator('#s03, #s04, #s05, #s06').evaluateAll((elements) => {
+		const alpha = (colour: string) => {
+			const canvas = document.createElement('canvas');
+			canvas.width = canvas.height = 1;
+			const context = canvas.getContext('2d')!;
+			context.fillStyle = colour;
+			context.fillRect(0, 0, 1, 1);
+			return context.getImageData(0, 0, 1, 1).data[3];
+		};
+		return elements.map((element) => {
+			const rect = element.getBoundingClientRect();
+			const own = getComputedStyle(element).backgroundColor;
+			const wash = getComputedStyle(element, '::before');
+			return {
+				ownAlpha: alpha(own),
+				washAlpha: alpha(wash.backgroundColor),
+				washColour: wash.backgroundColor,
+				paintTop: rect.top + parseFloat(wash.top),
+				paintBottom: rect.bottom - parseFloat(wash.bottom)
+			};
+		});
+	});
+
+	expect(
+		layers.every(({ ownAlpha }) => ownAlpha === 0),
+		'the verse adds a second wash'
+	).toBe(true);
+	expect(
+		layers.every(({ washAlpha }) => washAlpha === 255),
+		'the range wash is translucent'
+	).toBe(true);
+	expect(new Set(layers.map(({ washColour }) => washColour)).size).toBe(1);
+	for (let index = 1; index < layers.length; index += 1) {
+		expect(
+			layers[index - 1].paintBottom,
+			`paint gap between selected lines ${index} and ${index + 1}`
+		).toBeGreaterThanOrEqual(layers[index].paintTop);
+	}
 });
 
 test('minor mistakes and missing diacritics still find a familiar title', async ({ page }) => {

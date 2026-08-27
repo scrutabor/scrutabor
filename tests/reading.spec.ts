@@ -813,11 +813,12 @@ test('selecting a word does not take the arrow keys away', async ({ page }) => {
 	);
 });
 
-test('the focus ring marks the word, not the line it sits on', async ({ page }) => {
-	// A word's button is an inline box around a ruby, so its own box is the
-	// whole line — 2.3 of the reading size — and the ring drew a rectangle
-	// that swallowed the gloss row of the line above (owner, 2026-08-09).
-	// It goes on the base, which is the shape the selection wash uses.
+test('the focus ring marks the permanent word surface without changing its line', async ({
+	page
+}) => {
+	// Selection and keyboard focus share the token that permanently wraps a
+	// Latin word and its gloss. The button itself stays unoutlined; the token
+	// pseudo-element is paint only and cannot change the line box.
 	await page.goto('/app/pl/ordinarium/confiteor');
 	await settled(page);
 	// TABBED to, not focused programmatically: :focus-visible is the whole
@@ -829,12 +830,12 @@ test('the focus ring marks the word, not the line it sits on', async ({ page }) 
 
 	const m = await page.evaluate(() => {
 		const w = document.activeElement as HTMLElement;
-		const base = w.querySelector('.base') as HTMLElement;
-		const ring = getComputedStyle(base, '::before');
+		const token = w.closest('.token') as HTMLElement;
+		const ring = getComputedStyle(token, '::before');
 		// where the ring's OUTERMOST edge falls, in page coordinates.
 		// The tint's inset is READ from the rendered pseudo-element rather
 		// than copied from the stylesheet, so the two cannot drift apart.
-		const tint = base.getBoundingClientRect();
+		const tint = token.getBoundingClientRect();
 		const pad = (parseFloat(ring.width) - tint.width) / 2;
 		const offset = parseFloat(ring.outlineOffset);
 		const outer = { left: tint.left - pad - offset, right: tint.right + pad + offset };
@@ -856,11 +857,12 @@ test('the focus ring marks the word, not the line it sits on', async ({ page }) 
 			onTheWord: ring.outlineStyle,
 			offset,
 			width: parseFloat(ring.outlineWidth),
-			lineBox: w.getBoundingClientRect().height,
-			wordBox: tint.height,
 			clearsPrev: prev ? outer.left - prev.right : Infinity,
 			clearsNext: next ? next.left - outer.right : Infinity,
-			stacking: { position: getComputedStyle(w).position, zIndex: getComputedStyle(w).zIndex }
+			stacking: {
+				position: getComputedStyle(token).position,
+				zIndex: getComputedStyle(token).zIndex
+			}
 		};
 	});
 
@@ -868,9 +870,6 @@ test('the focus ring marks the word, not the line it sits on', async ({ page }) 
 	expect(m.focusVisible, 'and gives it a visible focus').toBe(true);
 	expect(m.onTheButton, 'no ring on the line box').toBe('none');
 	expect(m.onTheWord, 'a ring on the word').toBe('solid');
-	// the reason the two are not interchangeable
-	expect(m.lineBox, 'the line box is the taller of the two').toBeGreaterThan(m.wordBox + 8);
-
 	// Drawn INSIDE the tint. Offset outward and the page shows through
 	// between the two, and the ring reaches into the words on either side
 	// (owner, 2026-08-09) — the words are set 1.4px apart, so there is no
@@ -901,7 +900,7 @@ test('two tinted words meet exactly, with no page between them', async ({ page }
 	await page.locator('button.word').first().click();
 
 	const m = await page.evaluate(() => {
-		const sel = document.querySelector('button.word.selected .base')!;
+		const sel = document.querySelector('.token.word-selected')!;
 		// read the inset off the rendered tint, never off the stylesheet
 		const pad =
 			(parseFloat(getComputedStyle(sel, '::before').width) - sel.getBoundingClientRect().width) / 2;
@@ -1209,34 +1208,30 @@ test('the highlight is one box, with air around the letters', async ({ page }) =
 	await page.goto('/app/en/ordinarium/pater-noster?w=w022');
 	const m = await page.evaluate(() => {
 		const w = document.querySelector('button.word.selected')!;
-		const baseEl = w.querySelector('.base')!;
-		const st = getComputedStyle(baseEl, '::before');
-		const b = baseEl.getBoundingClientRect();
+		const token = w.closest('.token')!;
+		const st = getComputedStyle(token, '::before');
+		const b = token.getBoundingClientRect();
 		const box = {
 			left: b.left + parseFloat(st.left),
 			right: b.right - parseFloat(st.right),
 			top: b.top + parseFloat(st.top)
 		};
-		const base = b;
 		return {
 			bg: st.backgroundColor,
 			baseBg: getComputedStyle(w.querySelector('.base')!).backgroundColor,
-			air: { left: base.left - box.left, right: box.right - base.right, top: base.top - box.top }
+			air: { left: b.left - box.left, right: box.right - b.right }
 		};
 	});
 	expect(m.bg, 'the wash paints').not.toBe('rgba(0, 0, 0, 0)');
 	expect(m.baseBg, 'and only once — the base itself carries none').toBe('rgba(0, 0, 0, 0)');
 	expect(m.air.left, 'air before the letters').toBeGreaterThan(0);
 	expect(m.air.right, 'air after them').toBeGreaterThan(0);
-	expect(m.air.top, 'air above them').toBeGreaterThan(0);
 });
 
 test('the highlight covers the whole of a raised initial', async ({ page }) => {
-	// The base box is sized for text at the reading size, so an initial at
-	// 1.75 pokes out of the top of it and Q's tail out of the bottom — the
-	// wash covered the word but not the letter that opens it. Padding on an
-	// inline element grows the box it paints without touching the line, so
-	// the letter is covered and the gloss stays where it is.
+	// A raised initial protrudes beyond the physical line box. Its measured
+	// reservation expands the permanent selection surface without changing
+	// the token's dimensions or the line rhythm.
 	for (const [url, letter] of [
 		['/app/en/ordinarium/libera-nos?w=w001', 'L'], // reaches up
 		['/app/en/ordinarium/quod-ore-sumpsimus?w=w001', 'Q'] // and down
@@ -1257,9 +1252,9 @@ test('the highlight covers the whole of a raised initial', async ({ page }) => {
 			ini.parentElement!.insertBefore(probe, ini.nextSibling);
 			const baseline = probe.getBoundingClientRect().top;
 			probe.remove();
-			const baseEl = w.querySelector('.base')!;
-			const st = getComputedStyle(baseEl, '::before');
-			const b = baseEl.getBoundingClientRect();
+			const token = w.closest('.token')!;
+			const st = getComputedStyle(token, '::before');
+			const b = token.getBoundingClientRect();
 			return {
 				top: baseline - m.actualBoundingBoxAscent - (b.top + parseFloat(st.top)),
 				bottom: b.bottom - parseFloat(st.bottom) - (baseline + m.actualBoundingBoxDescent)
@@ -1822,9 +1817,9 @@ test('the highlight marks the word AND its gloss', async ({ page }) => {
 		await page.goto(url);
 		const m = await page.evaluate(() => {
 			const w = document.querySelector('button.word.selected')!;
-			const baseEl = w.querySelector('.base')!;
-			const st = getComputedStyle(baseEl, '::before');
-			const b = baseEl.getBoundingClientRect();
+			const token = w.closest('.token')!;
+			const st = getComputedStyle(token, '::before');
+			const b = token.getBoundingClientRect();
 			const box = {
 				left: b.left + parseFloat(st.left),
 				right: b.right - parseFloat(st.right),
@@ -1836,10 +1831,12 @@ test('the highlight marks the word AND its gloss', async ({ page }) => {
 				box.right >= r.right - 0.5 &&
 				box.top <= r.top + 0.5 &&
 				box.bottom >= r.bottom - 0.5;
+			const latin = document.createRange();
+			latin.selectNodeContents(w.querySelector('.base')!);
 			const rt = w.querySelector('rt')!.getBoundingClientRect();
 			return {
 				bg: st.backgroundColor,
-				word: covers(w.querySelector('.base')!.getBoundingClientRect()),
+				word: covers(latin.getBoundingClientRect()),
 				gloss: covers(rt),
 				glossAir: box.bottom - rt.bottom
 			};
@@ -1856,8 +1853,7 @@ test('the highlight marks the word AND its gloss', async ({ page }) => {
 	await expect(page.locator('.word.selected rt')).toHaveCount(0);
 	const bare = await page.evaluate(
 		() =>
-			getComputedStyle(document.querySelector('button.word.selected .base')!, '::before')
-				.backgroundColor
+			getComputedStyle(document.querySelector('.token.word-selected')!, '::before').backgroundColor
 	);
 	expect(bare, 'the word is still marked with the glosses off').not.toBe('rgba(0, 0, 0, 0)');
 });
