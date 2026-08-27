@@ -7,6 +7,7 @@ import {
 	textMetadataFor
 } from './corpus-metadata';
 import type { Lang } from './i18n';
+import { remember } from './remember';
 
 export interface SnippetPart {
 	text: string;
@@ -40,7 +41,6 @@ export interface GrammarSearchResult {
 	lemma: string;
 	head: string;
 	senses: string[];
-	forms: string[];
 	href: string;
 }
 
@@ -49,6 +49,8 @@ export interface SearchResults {
 	titles: TitleSearchResult[];
 	contents: ContentSearchResult[];
 	grammar: GrammarSearchResult[];
+	/** The target-language index could not be fetched; Latin and titles only. */
+	degraded?: boolean;
 }
 
 type LanguagePosting = [number, string, number];
@@ -259,19 +261,16 @@ function titlesFor(query: string[], lang: Lang, exactLatinForm: boolean): TitleS
 }
 
 async function languageConcordance(lang: Lang): Promise<LanguageConcordance> {
-	let pending = LANGUAGE_CONCORDANCES.get(lang);
-	if (!pending) {
-		const path = languageConcordancePath(lang);
-		const loader = LANGUAGE_CONCORDANCE_MODULES[`./data/${path}`];
-		if (!loader) throw new Error(`${lang} names absent search index ${path}`);
-		pending = loader().then((module) => {
+	const path = languageConcordancePath(lang);
+	const loader = LANGUAGE_CONCORDANCE_MODULES[`./data/${path}`];
+	if (!loader) throw new Error(`${lang} names absent search index ${path}`);
+	return remember(LANGUAGE_CONCORDANCES, lang, () =>
+		loader().then((module) => {
 			const data = module.default as LanguageConcordance;
 			if (data.language !== lang) throw new Error(`${path} calls itself ${data.language}`);
 			return data;
-		});
-		LANGUAGE_CONCORDANCES.set(lang, pending);
-	}
-	return pending;
+		})
+	);
 }
 
 function keyFor(texts: (string | null)[], number: number): string | undefined {
@@ -497,12 +496,11 @@ async function grammarResults(
 	if (!lemmata.size) return [];
 	const senses = await loadSenses(lang);
 	return [...lemmata]
-		.map(([lemma, forms]) => ({
+		.map(([lemma]) => ({
 			kind: 'grammar' as const,
 			lemma,
 			head: LEXICON.lemmata[lemma]?.head ?? lemma,
 			senses: senses[lemma]?.senses ?? [],
-			forms: [...forms],
 			href: `/app/${lang}/lemma/${encodeURIComponent(lemma)}`
 		}))
 		.sort(
@@ -512,12 +510,32 @@ async function grammarResults(
 		.slice(0, MAX_GRAMMAR_RESULTS);
 }
 
+/** A shared `?q=` link is attacker-sized; the work it starts must not be.
+ * Each token costs a full dictionary scan and each candidate site an array
+ * per token, so both the raw length and the token count are bounded here,
+ * in the search itself — the input's own maxlength is only politeness. */
+export const MAX_QUERY_LENGTH = 120;
+export const MAX_QUERY_TOKENS = 8;
+
 export async function searchBook(rawQuery: string, lang: Lang): Promise<SearchResults> {
-	const query = tokenizeSearch(rawQuery);
-	if (!query.length || normalizeSearch(rawQuery).length < 2) {
+	const bounded = rawQuery.slice(0, MAX_QUERY_LENGTH);
+	const query = tokenizeSearch(bounded).slice(0, MAX_QUERY_TOKENS);
+	if (!query.length || normalizeSearch(bounded).length < 2) {
 		return { query: rawQuery, titles: [], contents: [], grammar: [] };
 	}
-	const localized = await languageConcordance(lang);
+	// The Latin index and the titles live in this chunk; only the target
+	// language's index is a further fetch. When that fetch fails, search
+	// degrades to what is already resident instead of failing whole — the
+	// page says so, and the next attempt retries the fetch (the rejection
+	// is not memoized).
+	let localized: Pick<LanguageConcordance, 'terms' | 'texts'>;
+	let degraded = false;
+	try {
+		localized = await languageConcordance(lang);
+	} catch {
+		localized = { terms: {}, texts: CONCORDANCE.texts };
+		degraded = true;
+	}
 	const sites = [
 		...scoreSites(query, localized.terms, localized.texts, lang),
 		...scoreSites(query, CONCORDANCE.latin.forms, CONCORDANCE.texts, 'la')
@@ -534,6 +552,7 @@ export async function searchBook(rawQuery: string, lang: Lang): Promise<SearchRe
 			query.length === 1 && Boolean(CONCORDANCE.latin.forms[query[0]])
 		),
 		contents: contentResults(sites, loaded, query, lang),
-		grammar: await grammarResults(query, loaded, lang)
+		grammar: await grammarResults(query, loaded, lang),
+		degraded
 	};
 }

@@ -8,6 +8,7 @@ import parseTable from './data/tables/morphology.json';
 import headsData from './data/lexicon/heads.json';
 import { LANGS, type Lang } from './i18n';
 import { bindProse } from './polish';
+import { remember } from './remember';
 import {
 	ROOT_MANIFEST as manifest,
 	TEXT_KEYS,
@@ -330,32 +331,27 @@ const LANGUAGE_RESOURCES = new Map<
 >();
 
 async function loadLanguageResources(language: Lang) {
-	let pending = LANGUAGE_RESOURCES.get(language);
-	if (!pending) {
-		const paths = languageResourcePaths(language);
-		const lexiconImport = LANGUAGE_LEXICON_MODULES[`./data/${paths.lexicon}`];
-		const citationImport = LANGUAGE_CITATION_MODULES[`./data/${paths.citations}`];
-		if (!lexiconImport || !citationImport) throw new Error(`${language} package is incomplete`);
-		pending = Promise.all([lexiconImport(), citationImport()]).then(
-			([lexiconModule, citationModule]) => {
-				const raw = (lexiconModule.default as { entries: Record<string, SenseEntry> }).entries;
-				const senses = Object.fromEntries(
-					Object.entries(raw).map(([lemma, value]) => {
-						const entry = { ...value };
-						const noteCitations = LEXICON.lemmata[lemma]?.localization?.note_citations;
-						if (noteCitations) entry.note_citations = noteCitations;
-						return [lemma, entry];
-					})
-				);
-				return {
-					senses: (language === 'pl' ? bindProse(senses) : senses) as Record<string, SenseEntry>,
-					citations: citationModule.default as (Citation | null)[]
-				};
-			}
-		);
-		LANGUAGE_RESOURCES.set(language, pending);
-	}
-	return pending;
+	const paths = languageResourcePaths(language);
+	const lexiconImport = LANGUAGE_LEXICON_MODULES[`./data/${paths.lexicon}`];
+	const citationImport = LANGUAGE_CITATION_MODULES[`./data/${paths.citations}`];
+	if (!lexiconImport || !citationImport) throw new Error(`${language} package is incomplete`);
+	return remember(LANGUAGE_RESOURCES, language, () =>
+		Promise.all([lexiconImport(), citationImport()]).then(([lexiconModule, citationModule]) => {
+			const raw = (lexiconModule.default as { entries: Record<string, SenseEntry> }).entries;
+			const senses = Object.fromEntries(
+				Object.entries(raw).map(([lemma, value]) => {
+					const entry = { ...value };
+					const noteCitations = LEXICON.lemmata[lemma]?.localization?.note_citations;
+					if (noteCitations) entry.note_citations = noteCitations;
+					return [lemma, entry];
+				})
+			);
+			return {
+				senses: (language === 'pl' ? bindProse(senses) : senses) as Record<string, SenseEntry>,
+				citations: citationModule.default as (Citation | null)[]
+			};
+		})
+	);
 }
 
 export async function loadSenses(language: Lang): Promise<Record<string, SenseEntry>> {
@@ -403,14 +399,9 @@ for (const language of LANGS) {
 async function loadCore(key: string): Promise<CoreArtifact | undefined> {
 	const metadata = textMetadataFor(key);
 	if (!metadata) return undefined;
-	let pending = CORE_CACHE.get(key);
-	if (!pending) {
-		pending = CORE_MODULES[`./data/${metadata.path}`]().then(
-			(module) => module.default as CoreArtifact
-		);
-		CORE_CACHE.set(key, pending);
-	}
-	return pending;
+	return remember(CORE_CACHE, key, () =>
+		CORE_MODULES[`./data/${metadata.path}`]().then((module) => module.default as CoreArtifact)
+	);
 }
 
 export async function loadCoreText(key: string): Promise<TextDocument | undefined> {
@@ -444,18 +435,15 @@ export function loadText(key: string, language: Lang): Promise<TextEntry | undef
 	const localizedMetadata = languageTextMetadataFor(key, language);
 	if (!localizedMetadata) return Promise.resolve(undefined);
 	const cacheKey = `${language}:${key}`;
-	let pending = TEXT_CACHE.get(cacheKey);
-	if (!pending) {
-		const languageImport = LANGUAGE_TEXT_MODULES[`./data/${localizedMetadata.path}`];
-		pending = Promise.all([loadCore(key), languageImport(), loadLanguageResources(language)]).then(
+	const languageImport = LANGUAGE_TEXT_MODULES[`./data/${localizedMetadata.path}`];
+	return remember(TEXT_CACHE, cacheKey, () =>
+		Promise.all([loadCore(key), languageImport(), loadLanguageResources(language)]).then(
 			([base, localized, resources]) => {
 				if (!base) throw new Error(`${key} has a language layer without a base text`);
 				return expandDocument(base, localized.default as LanguageArtifact, resources.citations);
 			}
-		);
-		TEXT_CACHE.set(cacheKey, pending);
-	}
-	return pending;
+		)
+	);
 }
 
 export async function loadTexts(

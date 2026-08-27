@@ -113,3 +113,22 @@ describe('accented-ligature spellings', () => {
 		);
 	});
 });
+
+describe('bounded work', () => {
+	it('a pasted or shared oversized query costs what its first page costs', async () => {
+		// 20,000 tokens froze the tab for ~6 s and allocated over a gigabyte
+		// before the bound existed; ?q= is searched on mount, so a shared
+		// link did this to whoever opened it.
+		const spam = Array.from({ length: 20000 }, (_, i) => `verbum${i}`).join(' ');
+		const started = performance.now();
+		const results = await searchBook(spam, 'pl');
+		expect(performance.now() - started).toBeLessThan(2000);
+		const bounded = await searchBook(spam.slice(0, 120), 'pl');
+		expect(results.contents).toEqual(bounded.contents);
+		expect(results.titles).toEqual(bounded.titles);
+	});
+
+	it('an ordinary query is far below the bound', () => {
+		expect('In saecula saeculorum Amen'.length).toBeLessThan(120);
+	});
+});
