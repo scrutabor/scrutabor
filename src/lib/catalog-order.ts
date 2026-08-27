@@ -27,6 +27,7 @@ export const CATALOG_ORDER: CatalogSectionSource[] = [
 			'agimus-tibi-gratias',
 			'alma-redemptoris-mater',
 			'ave-regina-caelorum',
+			'te-deum',
 			'angelus-domini',
 			'sub-tuum-praesidium',
 			'salve-regina',

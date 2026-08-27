@@ -166,6 +166,15 @@
       ]
     },
     {
+      "id": "orationes.te-deum",
+      "path": "languages/en/texts/orationes/te-deum.json",
+      "title": "Te Deum",
+      "aliases": [
+        "We Praise Thee, O God",
+        "Hymn of Thanksgiving"
+      ]
+    },
+    {
       "id": "ordinarium.adiutorium",
       "path": "languages/en/texts/ordinarium/adiutorium.json"
     },

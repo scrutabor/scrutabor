@@ -133,6 +133,11 @@
       "title": "Symbolum Apostolórum"
     },
     {
+      "id": "orationes.te-deum",
+      "path": "texts/orationes/te-deum.json",
+      "title": "Te Deum laudámus"
+    },
+    {
       "id": "ordinarium.adiutorium",
       "path": "texts/ordinarium/adiutorium.json",
       "title": "Adiutórium nostrum"
@@ -633,11 +638,11 @@
     "analysis": "tables/analysis.json",
     "citations": "tables/citations.json"
   },
-  "morphology": 431,
+  "morphology": 442,
   "kalendarium": [
     2026,
     2101
   ],
   "analyses": 14,
-  "citations": 408
+  "citations": 413
 }

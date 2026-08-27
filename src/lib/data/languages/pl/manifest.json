@@ -171,6 +171,15 @@
       ]
     },
     {
+      "id": "orationes.te-deum",
+      "path": "languages/pl/texts/orationes/te-deum.json",
+      "title": "Ciebie, Boga, wysławiamy",
+      "aliases": [
+        "Te Deum",
+        "Ciebie, Boże, chwalimy"
+      ]
+    },
+    {
       "id": "ordinarium.adiutorium",
       "path": "languages/pl/texts/ordinarium/adiutorium.json"
     },
