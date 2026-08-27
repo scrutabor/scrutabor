@@ -86,6 +86,15 @@
 	// own dotted ids (ordinarium.credo).
 	const domId = (id: string) => (idPrefix ? `${idPrefix}.${id}` : id);
 
+	function tapWord(event: MouseEvent, wordId: string, segmentId: string) {
+		event.stopPropagation();
+		// Shift belongs to range selection. Giving it precedence here makes
+		// every visible part of a line a possible endpoint without opening a
+		// word panel or adding a redundant ?w= to the citation.
+		if (event.shiftKey && onsegmentselect) onsegmentselect(segmentId, true);
+		else ontap?.(wordId);
+	}
+
 	// V. and R. — versiculus and responsum — in red, the marks the 1962
 	// typical edition prints down its dialogue pages and the marks a Polish
 	// reader meets in the Pallottinum Ordo. They are also what this corpus's
@@ -322,6 +331,11 @@
 		{/if}
 		{@const showMark = !sharedPrayer && marked(i)}
 		{@const verseNo = seg.speaker ? undefined : verses?.[seg.id]}
+		{@const selected = citedSegments.includes(seg.id)}
+		{@const joinsSelectedBefore =
+			selected && segs[i - 1]?.type === 'verse' && citedSegments.includes(segs[i - 1].id)}
+		{@const joinsSelectedAfter =
+			selected && segs[i + 1]?.type === 'verse' && citedSegments.includes(segs[i + 1].id)}
 		<!-- In the bilingual columns the reservation is skipped: the grid's
 		     row-gap already clears the initial's rise, and an inline margin
 		     here would defeat the baseline alignment that keeps a verse and
@@ -341,23 +355,20 @@
 			class:answer={mine}
 			class:marked={showMark || verseNo !== undefined}
 			class:cited={verseNo !== undefined && verseNo === citedVerse}
-			class:segment-selected={citedSegments.includes(seg.id)}
+			class:segment-selectable={onsegmentselect !== undefined}
+			class:segment-selected={selected}
+			class:segment-joins-before={joinsSelectedBefore}
+			class:segment-joins-after={joinsSelectedAfter}
 			id={verseNo !== undefined ? segmentId(`v${verseNo}`) : segmentId(seg.id)}
 			lang="la"
 		>
 			{#if onsegmentselect}<button
 					type="button"
-					class="segment-handle"
-					class:selected={citedSegments.includes(seg.id)}
-					aria-pressed={citedSegments.includes(seg.id)}
-					aria-label={citedSegments.includes(seg.id)
-						? M[lang].segmentDeselect
-						: M[lang].segmentSelect}
-					title={citedSegments.includes(seg.id) ? M[lang].segmentDeselect : M[lang].segmentSelect}
+					class="segment-control"
+					aria-pressed={selected}
+					aria-label={selected ? M[lang].segmentDeselect : M[lang].segmentSelect}
 					onclick={(event) => onsegmentselect?.(seg.id, event.shiftKey)}
-				>
-					<span class="segment-handle-ink" aria-hidden="true"></span>
-				</button>{/if}
+				></button>{/if}
 			{#if verseNo !== undefined}<span
 					class="segment-anchor"
 					id={segmentId(seg.id)}
@@ -405,7 +416,7 @@
 							class="word"
 							id={domId(w.id)}
 							class:selected={selectedId === domId(w.id)}
-							onclick={() => ontap?.(domId(w.id))}
+							onclick={(event) => tapWord(event, domId(w.id), seg.id)}
 							>{@render face(w.id, w.form, w.post ?? '', raised, sink)}</button
 						>{:else}<span class="word"
 							>{@render face(w.id, w.form, w.post ?? '', raised, sink)}</span
@@ -443,7 +454,7 @@
 		--selection-block-start: var(--selection-initial-start);
 	}
 
-	.verse:has(> .segment-handle) {
+	.verse.segment-selectable {
 		position: relative;
 		isolation: isolate;
 	}
@@ -451,7 +462,7 @@
 	/* The paint layer exists before and after selection. Selection changes its
 	   colour only: no child, pseudo-element or box-model value enters or leaves
 	   the rendered tree when the reader chooses a line. */
-	.verse:has(> .segment-handle)::before {
+	.verse.segment-selectable::before {
 		position: absolute;
 		inset: var(--selection-block-start) 0 var(--selection-block-end) calc(var(--reading) * -0.44);
 		border-radius: 0.24rem;
@@ -461,88 +472,59 @@
 		z-index: -2;
 	}
 
-	.verse.segment-selected::before,
 	.verse.segment-selected + .seg-extra {
 		/* Opaque blend, although visually as quiet as the former translucent
 		   wash. Adjacent selected lines overlap by a fraction of a pixel to
 		   cover font-metric rounding; an alpha colour made that overlap a
 		   darker horizontal seam. Equal opaque paint remains exactly equal. */
 		background: color-mix(in srgb, var(--wash) 78%, var(--bg));
-	}
-
-	.verse.segment-selected + .seg-extra {
 		border-radius: 0.24rem;
 	}
 
-	.segment-handle {
+	.verse.segment-selected::before {
+		/* A citation keeps the one useful part of the former handle: a quiet
+		   full-height rule attached to the wash. Nothing is painted before the
+		   reader selects the line. */
+		background:
+			linear-gradient(var(--rubric), var(--rubric)) left / 0.12rem 100% no-repeat,
+			color-mix(in srgb, var(--wash) 78%, var(--bg));
+	}
+
+	/* A contiguous citation is one object. Internal corners would cut the
+	   red guide into separate pills even though the wash already joins; only
+	   the two outside ends of the selected range remain rounded. */
+	.verse.segment-selected.segment-joins-before::before {
+		border-start-start-radius: 0;
+		border-start-end-radius: 0;
+	}
+
+	.verse.segment-selected.segment-joins-after::before {
+		border-end-start-radius: 0;
+		border-end-end-radius: 0;
+	}
+
+	/* One real button owns the non-interactive area of the line. It is a
+	   sibling beneath the word and speaker buttons, never their ancestor: the
+	   HTML stays valid, assistive technology gets a labelled control, and a
+	   word tap or text selection remains its own action. */
+	.segment-control {
 		position: absolute;
-		inset-block: var(--selection-block-start) var(--selection-block-end);
-		inset-inline-start: calc(var(--reading) * -0.8);
-		display: grid;
-		width: calc(var(--reading) * 0.72);
-		height: auto;
-		place-items: center;
+		inset: var(--selection-block-start) 0 var(--selection-block-end) calc(var(--reading) * -0.44);
 		padding: 0;
 		border: 0;
 		background: transparent;
 		cursor: pointer;
-		opacity: 0.38;
-		z-index: 1;
+		touch-action: manipulation;
+		z-index: 0;
 	}
 
-	.segment-handle-ink {
-		display: block;
-		width: 0.12rem;
-		height: calc(var(--reading) * 0.42);
-		border-radius: 999px;
-		background: var(--ink-soft);
-		transition:
-			height 120ms ease,
-			background-color 120ms ease;
-	}
-
-	.segment-handle:hover,
-	.segment-handle:focus-visible,
-	.segment-handle.selected {
-		opacity: 1;
-	}
-
-	.segment-handle:hover .segment-handle-ink,
-	.segment-handle:focus-visible .segment-handle-ink {
-		height: calc(var(--reading) * 0.58);
-		background: var(--ink);
-	}
-
-	.segment-handle.selected .segment-handle-ink {
-		opacity: 0;
-	}
-
-	.segment-handle.selected {
-		background: linear-gradient(var(--rubric), var(--rubric)) center / 0.12rem 100% no-repeat;
-	}
-
-	.segment-handle:focus-visible {
+	.segment-control:focus-visible {
 		outline: none;
 	}
 
-	.segment-handle.selected:focus-visible {
-		background-size: 0.24rem 100%;
-	}
-
-	.segment-handle:focus-visible .segment-handle-ink {
-		width: 0.24rem;
-		height: calc(var(--reading) * 0.78);
-		background: var(--rubric);
-	}
-
-	@media (hover: hover) and (pointer: fine) {
-		.segment-handle:not(.selected):not(:focus-visible) {
-			opacity: 0;
-		}
-
-		.verse:hover > .segment-handle {
-			opacity: 0.68;
-		}
+	.verse:has(> .segment-control:focus-visible)::before {
+		background: color-mix(in srgb, var(--wash) 78%, var(--bg));
+		box-shadow: inset 0.24rem 0 var(--rubric);
 	}
 
 	.translation-sources {
@@ -918,12 +900,13 @@
 	   alone; everything inside it starts at zero. */
 	.token,
 	.mark {
+		position: relative;
 		text-indent: 0;
+		z-index: 1;
 	}
 
 	.token {
 		display: inline-block;
-		position: relative;
 		isolation: isolate;
 	}
 
@@ -1011,7 +994,7 @@
 
 	.token:has(> button.word:focus-visible) {
 		position: relative;
-		z-index: 1;
+		z-index: 2;
 	}
 
 	/* Drawn INSIDE the wash, on its own edge. Offset outward by even 1px and

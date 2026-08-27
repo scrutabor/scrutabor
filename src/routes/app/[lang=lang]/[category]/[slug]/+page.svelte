@@ -103,27 +103,27 @@
 	let citedSegments = $state<string[]>([]);
 	let segmentAnchor = $state<string | null>(null);
 
-	function applyVerseFromLocation() {
+	function applyVerseFromLocation(scroll = true) {
 		if (!data.verses) return;
 		const raw = pageUrl().searchParams.get('v');
 		const n = raw === null ? null : Number(raw);
 		const target = n !== null && Object.values(data.verses).includes(n) ? n : null;
 		citedVerse = target;
-		if (target !== null) {
+		if (target !== null && scroll) {
 			requestAnimationFrame(() =>
 				document.getElementById(`v${target}`)?.scrollIntoView({ block: 'center' })
 			);
 		}
 	}
 
-	function applySegmentFromLocation() {
+	function applySegmentFromLocation(scroll = true) {
 		const raw = pageUrl().searchParams.get('s');
 		const ids = doc.segments.map((segment) => segment.id);
 		const selected = parseSegmentSelection(raw, ids);
 		const target = selected[0];
 		citedSegments = selected;
 		segmentAnchor = target ?? null;
-		if (target) {
+		if (target && scroll) {
 			requestAnimationFrame(() =>
 				document.getElementById(target)?.scrollIntoView({ block: 'center' })
 			);
@@ -215,8 +215,11 @@
 <svelte:window
 	onpopstate={() => {
 		panel.applyFromLocation();
-		applyVerseFromLocation();
-		applySegmentFromLocation();
+		// History still restores which line is cited, but it is not a fresh
+		// arrival at that citation. In particular, closing a word panel pops its
+		// shallow history entry and must leave the reader exactly where they are.
+		applyVerseFromLocation(false);
+		applySegmentFromLocation(false);
 	}}
 	onkeydown={(e) => {
 		const href = onWindowKeydown(e);

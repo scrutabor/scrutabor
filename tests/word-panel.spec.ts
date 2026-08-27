@@ -97,6 +97,49 @@ test('closing a deep-linked panel strips ?w= without leaving the page', async ({
 	await expect(page.locator('h1')).toHaveText('Pater noster');
 });
 
+test('closing a word panel does not return to an earlier cited line', async ({ page }) => {
+	await page.addInitScript(() => {
+		const state = window as typeof window & { segmentScrolls?: string[] };
+		state.segmentScrolls = [];
+		const native = Element.prototype.scrollIntoView;
+		Element.prototype.scrollIntoView = function (options) {
+			state.segmentScrolls!.push((this as HTMLElement).id);
+			return native.call(this, options);
+		};
+	});
+	await page.setViewportSize({ width: 375, height: 568 });
+	await page.goto('/app/pl/orationes/angelus-domini?s=s02');
+	await expect
+		.poll(() =>
+			page.evaluate(
+				() => (window as typeof window & { segmentScrolls?: string[] }).segmentScrolls ?? []
+			)
+		)
+		.toContain('s02');
+	await setHelp(page, 1);
+	await page.locator('#w147').click();
+	await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini', '?s=s02&w=w147'));
+	await page.evaluate(() => {
+		(window as typeof window & { segmentScrolls?: string[] }).segmentScrolls = [];
+	});
+
+	await page.locator('aside .close').click();
+	await expect(page.locator(panel)).toHaveCount(0);
+	await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini', '?s=s02'));
+	await page.evaluate(
+		() =>
+			new Promise<void>((resolve) =>
+				requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+			)
+	);
+	expect(
+		await page.evaluate(
+			() => (window as typeof window & { segmentScrolls?: string[] }).segmentScrolls ?? []
+		),
+		'closing treated the retained citation as a fresh arrival'
+	).not.toContain('s02');
+});
+
 test('panel is restored on back from a grammar-concept page', async ({ page }) => {
 	await page.goto(PATER);
 	await page.locator('#w008').click();

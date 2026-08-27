@@ -1,3 +1,4 @@
+import type { Page } from '@playwright/test';
 import { atRoute, expect, setHelp, settled, test } from './fixtures';
 
 async function openSearchPage(page: import('@playwright/test').Page, language: 'pl' | 'en' = 'pl') {
@@ -92,7 +93,15 @@ test('a translation passage opens and marks the exact segment', async ({ page })
 	await expect(page.locator('#s01.segment-selected')).toBeVisible();
 });
 
-test('verse handles create, extend, share, and clear a selection', async ({ page }) => {
+const clickVerseSurface = async (page: Page, id: string) => {
+	const verse = page.locator(`#${id}`);
+	await verse.scrollIntoViewIfNeeded();
+	const box = await verse.boundingBox();
+	expect(box, `${id} has a clickable surface`).not.toBeNull();
+	await page.mouse.click(box!.x + box!.width - 4, box!.y + box!.height / 2);
+};
+
+test('verse surfaces create, extend, share, and clear a selection', async ({ page }) => {
 	await page.goto('/app/pl/orationes/angelus-domini');
 	await page.evaluate(() => {
 		const state = window as typeof window & { selectionChildMutations?: number };
@@ -103,13 +112,16 @@ test('verse handles create, extend, share, and clear a selection', async ({ page
 			).length;
 		}).observe(document.querySelector('main')!, { childList: true, subtree: true });
 	});
-	await page.locator('#s10 .segment-handle').click();
+	await clickVerseSurface(page, 's10');
 	await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini', '?s=s10'));
 	await expect(page.locator('#s10.segment-selected')).toBeVisible();
 
-	await page.locator('#s12 .segment-handle').click({ modifiers: ['Shift'] });
+	// Shift gives the range gesture precedence even on a word: it must not
+	// open the analysis panel or add a redundant ?w= to the citation.
+	await page.locator('#w131').click({ modifiers: ['Shift'] });
 	await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini', '?s=s10-s12'));
 	await expect(page.locator('.segment-selected')).toHaveCount(3);
+	await expect(page.locator('aside')).toHaveCount(0);
 	expect(
 		await page.evaluate(
 			() => (window as typeof window & { selectionChildMutations?: number }).selectionChildMutations
@@ -119,14 +131,54 @@ test('verse handles create, extend, share, and clear a selection', async ({ page
 
 	await page.reload();
 	await expect(page.locator('.segment-selected')).toHaveCount(3);
-	await page.locator('#s11 .segment-handle').click();
+	await clickVerseSurface(page, 's11');
 	await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini', '?s=s11'));
 	await expect(page.locator('.segment-selected')).toHaveCount(1);
 	await expect(page.locator('#s11.segment-selected')).toBeVisible();
 
-	await page.locator('#s11 .segment-handle').click();
+	await clickVerseSurface(page, 's11');
 	await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini'));
 	await expect(page.locator('.segment-selected')).toHaveCount(0);
+});
+
+test('a word remains distinct from an explicitly selected verse', async ({ page }) => {
+	await page.setViewportSize({ width: 375, height: 800 });
+	await page.goto('/app/pl/orationes/angelus-domini');
+	await page.locator('#w008').click();
+
+	await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini', '?w=w008'));
+	await expect(page.locator('#s02')).not.toHaveClass(/segment-selected/);
+	const wash = await page
+		.locator('#s02')
+		.evaluate((verse) => getComputedStyle(verse, '::before').backgroundColor);
+	expect(wash, 'a word selection paints an implicit verse wash').toBe('rgba(0, 0, 0, 0)');
+	await expect(page.locator('#w008')).toHaveClass(/selected/);
+
+	await page.locator('#w009').click();
+	await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini', '?w=w009'));
+	await expect(page.locator('#w009')).toHaveClass(/selected/);
+});
+
+test('the line control fills the row but leaves no idle grip', async ({ page }) => {
+	await page.setViewportSize({ width: 375, height: 800 });
+	await page.goto('/app/pl/orationes/angelus-domini');
+	await expect(page.locator('.segment-handle-ink')).toHaveCount(0);
+
+	const control = await page.locator('#s02 .segment-control').evaluate((button) => {
+		const own = button.getBoundingClientRect();
+		const verse = button.closest('.verse')!.getBoundingClientRect();
+		const style = getComputedStyle(button);
+		return {
+			widthShare: own.width / verse.width,
+			height: own.height,
+			background: style.backgroundColor,
+			border: style.borderTopWidth
+		};
+	});
+	expect(control.widthShare, 'the row, not a narrow gutter, is the target').toBeGreaterThan(0.95);
+	expect(control.height, 'the target has the full line height').toBeGreaterThan(40);
+	expect(control.background, 'the idle control paints a mobile artefact').toBe('rgba(0, 0, 0, 0)');
+	expect(control.border).toBe('0px');
 });
 
 test('selecting a verse changes only paint and clears neighbouring glosses', async ({ page }) => {
@@ -180,18 +232,18 @@ test('selecting a verse changes only paint and clears neighbouring glosses', asy
 			top: verse.top + Number.parseFloat(wash.top),
 			bottom: verse.bottom - Number.parseFloat(wash.bottom)
 		};
-		const handle = element.querySelector('.segment-handle')!.getBoundingClientRect();
+		const control = element.querySelector('.segment-control')!.getBoundingClientRect();
 		const mark = element.querySelector('.mark')!.getBoundingClientRect();
 		return {
-			leftAttachment: Math.abs((handle.left + handle.right) / 2 - paint.left),
-			topAttachment: Math.abs(handle.top - paint.top),
-			bottomAttachment: Math.abs(handle.bottom - paint.bottom),
+			leftAttachment: Math.abs(control.left - paint.left),
+			topAttachment: Math.abs(control.top - paint.top),
+			bottomAttachment: Math.abs(control.bottom - paint.bottom),
 			markAir: mark.left - paint.left
 		};
 	});
-	expect(edge.leftAttachment, 'the handle floats beside the wash').toBeLessThan(0.6);
-	expect(edge.topAttachment, 'the handle starts inside the selected line').toBeLessThan(0.6);
-	expect(edge.bottomAttachment, 'the handle stops inside the selected line').toBeLessThan(0.6);
+	expect(edge.leftAttachment, 'the row control starts away from the wash').toBeLessThan(0.6);
+	expect(edge.topAttachment, 'the row control starts inside the selected line').toBeLessThan(0.6);
+	expect(edge.bottomAttachment, 'the row control stops inside the selected line').toBeLessThan(0.6);
 	expect(edge.markAir, 'the selected background crowds the V. mark').toBeGreaterThan(8);
 });
 
@@ -256,6 +308,10 @@ test('a selected range has one uniform opaque wash without seams', async ({ page
 				ownAlpha: alpha(own),
 				washAlpha: alpha(wash.backgroundColor),
 				washColour: wash.backgroundColor,
+				topLeftRadius: parseFloat(wash.borderTopLeftRadius),
+				topRightRadius: parseFloat(wash.borderTopRightRadius),
+				bottomLeftRadius: parseFloat(wash.borderBottomLeftRadius),
+				bottomRightRadius: parseFloat(wash.borderBottomRightRadius),
 				paintTop: rect.top + parseFloat(wash.top),
 				paintBottom: rect.bottom - parseFloat(wash.bottom)
 			};
@@ -271,6 +327,22 @@ test('a selected range has one uniform opaque wash without seams', async ({ page
 		'the range wash is translucent'
 	).toBe(true);
 	expect(new Set(layers.map(({ washColour }) => washColour)).size).toBe(1);
+	expect(layers[0].topLeftRadius).toBeGreaterThan(0);
+	expect(layers[0].topRightRadius).toBeGreaterThan(0);
+	expect(layers[0].bottomLeftRadius).toBe(0);
+	expect(layers[0].bottomRightRadius).toBe(0);
+	for (const middle of layers.slice(1, -1)) {
+		expect([
+			middle.topLeftRadius,
+			middle.topRightRadius,
+			middle.bottomLeftRadius,
+			middle.bottomRightRadius
+		]).toEqual([0, 0, 0, 0]);
+	}
+	expect(layers.at(-1)!.topLeftRadius).toBe(0);
+	expect(layers.at(-1)!.topRightRadius).toBe(0);
+	expect(layers.at(-1)!.bottomLeftRadius).toBeGreaterThan(0);
+	expect(layers.at(-1)!.bottomRightRadius).toBeGreaterThan(0);
 	for (let index = 1; index < layers.length; index += 1) {
 		expect(
 			layers[index - 1].paintBottom,
