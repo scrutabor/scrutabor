@@ -502,8 +502,8 @@ test('no token ever fragments across lines, any text, narrow viewport', async ({
 		'/app/pl/orationes/sub-tuum-praesidium'
 	]) {
 		await page.goto(path);
-		await page.locator('details.repeated-prayer').evaluateAll((details) => {
-			for (const detail of details) (detail as HTMLDetailsElement).open = true;
+		await page.locator('.repeated-toggle[aria-expanded="false"]').evaluateAll((buttons) => {
+			for (const button of buttons) (button as HTMLButtonElement).click();
 		});
 		await expect(page.locator('.verse .token').first()).toBeVisible();
 		const fragmented = await page.evaluate(() =>
@@ -515,7 +515,7 @@ test('no token ever fragments across lines, any text, narrow viewport', async ({
 	}
 });
 
-test('Angelus keeps responses visible and folds the repeated Ave Maria texts', async ({ page }) => {
+test('Angelus folds each Ave Maria as an ordinary translated verse', async ({ page }) => {
 	await page.goto('/app/pl/orationes/angelus-domini');
 	await expect(page.getByRole('button', { name: /Versículus.*prowadzącej/ }).first()).toBeVisible();
 	await expect(page.getByRole('button', { name: /Respónsum.*wiernych/ }).first()).toBeVisible();
@@ -527,50 +527,76 @@ test('Angelus keeps responses visible and folds the repeated Ave Maria texts', a
 	await expect(page.getByText('werset osoby prowadzącej modlitwę')).toBeVisible();
 	await expect(page.getByText('mówią wszyscy razem')).toHaveCount(0);
 	await page.getByRole('button', { name: 'zamknij' }).click();
-	const repetitions = page.locator('details.repeated-prayer');
+	const repetitions = page.locator('.verse.repeated');
 	await expect(repetitions).toHaveCount(3);
-	await expect(repetitions.first().locator('summary')).toContainText('Ave María, grátia plena…');
-	const foldGeometry = await repetitions.first().evaluate((detail) => {
-		const title = detail.querySelector<HTMLElement>('.repeated-title')!;
-		const action = detail.querySelector<HTMLElement>('.repeated-action')!;
-		const previous = detail.previousElementSibling!;
-		const next = detail.nextElementSibling!;
-		const titleRect = title.getBoundingClientRect();
-		const actionRect = action.getBoundingClientRect();
-		const previousGlosses = [...previous.querySelectorAll('rt')].map((rt) =>
-			rt.getBoundingClientRect()
-		);
+	const first = repetitions.first();
+	const toggle = first.locator('.repeated-toggle');
+	await expect(first.locator('.token')).toHaveCount(4);
+	await expect(first.locator('.base')).toHaveText(['Ave', 'María,', 'grátia', 'plena…']);
+	await expect(first.locator('rt')).toHaveText(['zdrowaś', 'Maryjo', 'łaski', 'pełna']);
+	await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+	await expect(toggle).toHaveAccessibleName('rozwiń powtórzoną modlitwę');
+
+	const foldGeometry = await first.evaluate((verse) => {
+		const previous = verse.previousElementSibling as HTMLElement;
+		const next = verse.nextElementSibling as HTMLElement;
+		const latin = verse.querySelector<HTMLElement>('.base')!.getBoundingClientRect();
+		const previousLatin = previous.querySelector<HTMLElement>('.base')!.getBoundingClientRect();
 		const nextLatin = next.querySelector<HTMLElement>('.base')!.getBoundingClientRect();
+		const mark = verse.querySelector<HTMLElement>('.mark')!.getBoundingClientRect();
+		const previousMark = previous.querySelector<HTMLElement>('.mark')!.getBoundingClientRect();
 		return {
-			controlOffset:
-				Math.abs(titleRect.top + titleRect.bottom - actionRect.top - actionRect.bottom) / 2,
-			spaceOffset: Math.abs(
-				titleRect.top -
-					Math.max(...previousGlosses.map((rect) => rect.bottom)) -
-					(nextLatin.top - titleRect.bottom)
-			)
+			font: parseFloat(getComputedStyle(verse).fontSize),
+			previousFont: parseFloat(getComputedStyle(previous).fontSize),
+			nextFont: parseFloat(getComputedStyle(next).fontSize),
+			latinLeft: latin.left,
+			previousLatinLeft: previousLatin.left,
+			nextLatinLeft: nextLatin.left,
+			markLeft: mark.left,
+			previousMarkLeft: previousMark.left
 		};
 	});
-	expect(foldGeometry.controlOffset).toBeLessThanOrEqual(1);
-	// The self-contained file artifact uses a slightly different font metric,
-	// but the two pieces of whitespace must still read as one balanced gap.
-	expect(foldGeometry.spaceOffset).toBeLessThanOrEqual(8);
-	await expect(repetitions.first()).not.toHaveAttribute('open', '');
-	const summaryGap = () =>
-		repetitions.first().evaluate((detail) => {
-			const summary = detail.querySelector('summary')!;
-			return (
-				summary.getBoundingClientRect().top -
-				detail.previousElementSibling!.getBoundingClientRect().bottom
-			);
-		});
-	const foldedSummaryGap = await summaryGap();
-	await repetitions.first().locator('summary').click();
-	await expect(repetitions.first()).toHaveAttribute('open', '');
-	const openSummaryGap = await summaryGap();
-	expect(Math.abs(openSummaryGap - foldedSummaryGap)).toBeLessThanOrEqual(1);
-	await expect(repetitions.first().locator('.mark')).toHaveCount(0);
-	await expect(repetitions.first().getByRole('button', { name: /^Ave / })).toBeVisible();
+	expect(foldGeometry.font).toBeCloseTo(foldGeometry.previousFont, 2);
+	expect(foldGeometry.font).toBeCloseTo(foldGeometry.nextFont, 2);
+	expect(foldGeometry.latinLeft).toBeCloseTo(foldGeometry.previousLatinLeft, 0);
+	expect(foldGeometry.latinLeft).toBeCloseTo(foldGeometry.nextLatinLeft, 0);
+	expect(foldGeometry.markLeft).toBeCloseTo(foldGeometry.previousMarkLeft, 0);
+
+	await toggle.click();
+	await expect(toggle).toHaveAttribute('aria-expanded', 'true');
+	await expect(toggle).toHaveAccessibleName('zwiń powtórzoną modlitwę');
+	await expect(first.locator('.token')).toHaveCount(31);
+	await expect(first.locator('.base').last()).toHaveText('Amen.');
+	await toggle.click();
+	await expect(first.locator('.token')).toHaveCount(4);
+
+	await setHelp(page, 2);
+	const translation = page.locator('.verse.repeated + .seg-extra').first();
+	await expect(translation).toHaveText('Zdrowaś Maryjo, łaski pełna…');
+	const columns = await first.evaluate((verse) => {
+		const latin = verse.querySelector<HTMLElement>('.base')!.getBoundingClientRect();
+		const translation = verse.nextElementSibling!.querySelector<HTMLElement>('.translation')!;
+		const translated = translation.getBoundingClientRect();
+		return {
+			latinLeft: latin.left,
+			latinTop: latin.top,
+			translatedLeft: translated.left,
+			translatedTop: translated.top
+		};
+	});
+	expect(columns.translatedLeft - columns.latinLeft).toBeGreaterThan(200);
+	expect(Math.abs(columns.translatedTop - columns.latinTop)).toBeLessThanOrEqual(1);
+
+	await toggle.click();
+	await expect(first.locator('.token')).toHaveCount(31);
+	await expect(translation).toContainText('Święta Maryjo, Matko Boża');
+	await expect(page.locator('.verse.repeated + .seg-extra')).toHaveCount(3);
+
+	await page.goto('/app/en/orationes/angelus-domini');
+	await setHelp(page, 2);
+	await expect(page.locator('.verse.repeated + .seg-extra').first()).toHaveText(
+		'Hail Mary, full of grace…'
+	);
 });
 
 test('Sub tuum separates the antiphon from the extended form', async ({ page }) => {

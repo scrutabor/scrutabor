@@ -31,9 +31,6 @@
 		citedSegments = [],
 		onsegmentselect,
 		collapsedSegments = [],
-		collapsedLabel,
-		collapsedShow,
-		collapsedHide,
 		litanyColumns = false,
 		showSpeakerNames = true,
 		hideOpeningRubric = false,
@@ -61,13 +58,8 @@
 		citedSegments?: string[];
 		/** Selects one segment, or extends the current range with Shift. */
 		onsegmentselect?: (id: string, extend: boolean) => void;
-		/** Optional reading-page folds for repeated, already-familiar prayers.
-		 * The text remains in the HTML and in the corpus; details merely keeps
-		 * repetition from dominating the visual hierarchy. */
+		/** Optional reading-page folds for repeated, already-familiar prayers. */
 		collapsedSegments?: string[];
-		collapsedLabel?: string;
-		collapsedShow?: string;
-		collapsedHide?: string;
 		/** Prayer-book setting: pair each litany invocation with its response. */
 		litanyColumns?: boolean;
 		/** Some devotional dialogues are already clear from V./R. alone. */
@@ -161,6 +153,22 @@
 	const bilingual = $derived(helpLevel === 2 && !litanyColumns);
 	const translationCitations = $derived(collectTranslationCitations(segs, gloss));
 	const translationRelationships = $derived(collectTranslationRelationships(segs, gloss));
+	let expandedSegments = $state<string[]>([]);
+
+	function toggleRepeated(id: string) {
+		expandedSegments = expandedSegments.includes(id)
+			? expandedSegments.filter((segmentId) => segmentId !== id)
+			: [...expandedSegments, id];
+	}
+
+	// A familiar prayer's preview is an incipit, not a second editorial text.
+	// Its Latin comes from the first four corpus words; the target-language
+	// incipit comes from the first two clauses of that segment's translation.
+	function translationIncipit(translation: string) {
+		let end = -1;
+		for (let i = 0; i < 2; i += 1) end = translation.indexOf(',', end + 1);
+		return end < 0 ? translation : `${translation.slice(0, end)}…`;
+	}
 </script>
 
 {#snippet face(id: string, form: string, post = '', raised = false, sink = 0)}{@const fit =
@@ -184,18 +192,7 @@
 
 {#snippet segment(seg: TextDocument['segments'][number], i: number)}
 	{#if collapsedSegments.includes(seg.id)}
-		<details class="repeated-prayer">
-			<summary>
-				<span class="repeated-title" lang="la">{collapsedLabel}</span>
-				<span class="repeated-action smallcaps">
-					<span class="when-closed">{collapsedShow}</span>
-					<span class="when-open">{collapsedHide}</span>
-				</span>
-			</summary>
-			<div class="repeated-body">
-				{@render verse(seg, i)}
-			</div>
-		</details>
+		{@render verse(seg, i, true, expandedSegments.includes(seg.id))}
 	{:else if seg.type === 'rubric' && hideOpeningRubric && i === 0}
 		<!-- Bibliography backlinks cite this exact segment. The direction is
 		     hidden here, not deleted: its anchor still resolves at the prayer's
@@ -276,7 +273,12 @@
 	</div>
 {/if}
 
-{#snippet verse(seg: TextDocument['segments'][number], i: number)}
+{#snippet verse(
+	seg: TextDocument['segments'][number],
+	i: number,
+	repeated = false,
+	repeatedOpen = false
+)}
 	{#if seg.type === 'verse'}
 		<!-- Who says it, and how loudly. Absent attribution renders as
 		     nothing at all: the corpus says "not read yet" by leaving the
@@ -331,6 +333,8 @@
 		{/if}
 		{@const showMark = !sharedPrayer && marked(i)}
 		{@const verseNo = seg.speaker ? undefined : verses?.[seg.id]}
+		{@const visibleWords =
+			repeated && !repeatedOpen ? (seg.words ?? []).slice(0, 4) : (seg.words ?? [])}
 		{@const selected = citedSegments.includes(seg.id)}
 		{@const joinsSelectedBefore =
 			selected && segs[i - 1]?.type === 'verse' && citedSegments.includes(segs[i - 1].id)}
@@ -353,7 +357,9 @@
 			class:glossed={helpLevel === 1}
 			class:quiet={seg.voice === 'secreto'}
 			class:answer={mine}
-			class:marked={showMark || verseNo !== undefined}
+			class:marked={showMark || verseNo !== undefined || repeated}
+			class:repeated
+			class:repeated-open={repeatedOpen}
 			class:cited={verseNo !== undefined && verseNo === citedVerse}
 			class:segment-selectable={onsegmentselect !== undefined}
 			class:segment-selected={selected}
@@ -391,7 +397,15 @@
 			     reader sees: naming the rubrical speaker there while the
 			     visible label says "the faithful" contradicted the role
 			     setting exactly where it does its work. -->
-			{#if showMark && seg.speaker && MARKS[seg.speaker]}{#if onmark}<button
+			{#if repeated}<button
+					type="button"
+					class="mark repeated-toggle"
+					aria-expanded={repeatedOpen}
+					aria-label={repeatedOpen ? M[lang].repeatedPrayerHide : M[lang].repeatedPrayerShow}
+					onclick={() => toggleRepeated(seg.id)}
+					><span class="ink" aria-hidden="true">›</span></button
+				>
+			{:else if showMark && seg.speaker && MARKS[seg.speaker]}{#if onmark}<button
 						type="button"
 						class="mark"
 						class:yours={mine}
@@ -408,8 +422,9 @@
 						aria-pressed={verseNo === citedVerse}
 						onclick={() => onverse?.(verseNo)}><span class="ink">{verseNo}</span></button
 					>{:else}<span class="mark">{verseNo}</span
-					>{/if}{/if}{#each seg.words ?? [] as w, wi (w.id)}{@const raised =
-					i === firstVerse && wi === 0}<span
+					>{/if}{/if}{#each visibleWords as w, wi (w.id)}{@const raised =
+					i === firstVerse && wi === 0}{@const post =
+					repeated && !repeatedOpen && wi === visibleWords.length - 1 ? '…' : (w.post ?? '')}<span
 					class="token"
 					class:word-selected={selectedId === domId(w.id)}
 					>{#if ontap}<button
@@ -417,15 +432,17 @@
 							id={domId(w.id)}
 							class:selected={selectedId === domId(w.id)}
 							onclick={(event) => tapWord(event, domId(w.id), seg.id)}
-							>{@render face(w.id, w.form, w.post ?? '', raised, sink)}</button
-						>{:else}<span class="word"
-							>{@render face(w.id, w.form, w.post ?? '', raised, sink)}</span
+							>{@render face(w.id, w.form, post, raised, sink)}</button
+						>{:else}<span class="word">{@render face(w.id, w.form, post, raised, sink)}</span
 						>{/if}</span
 				>{' '}{/each}
 		</p>
-		{#if helpLevel >= 2 && gloss.segments[seg.id]?.translation}
+		{@const translation = gloss.segments[seg.id]?.translation}
+		{#if helpLevel >= 2 && translation}
 			<div class="seg-extra">
-				<p class="translation">{gloss.segments[seg.id].translation}</p>
+				<p class="translation">
+					{repeated && !repeatedOpen ? translationIncipit(translation) : translation}
+				</p>
 			</div>
 		{/if}
 	{/if}
@@ -555,85 +572,6 @@
 		margin-top: 0.3rem;
 	}
 
-	.repeated-prayer {
-		margin: calc(var(--reading) * 0.55) 0;
-	}
-
-	/* A repeated prayer begins with the same summary whether it is folded or
-	   open. With glosses visible, the preceding gloss is painted below its
-	   verse box, where the box model cannot see it; keep the summary clear of
-	   that ink in BOTH states so opening the prayer never makes its heading
-	   jump toward the preceding response. */
-	.verse.glossed + .repeated-prayer {
-		margin-top: calc(var(--reading) * 0.98);
-	}
-
-	.repeated-prayer:not([open]):has(+ .verse.glossed) {
-		margin-bottom: calc(var(--reading) * 0.32);
-	}
-
-	.repeated-prayer summary {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-		width: fit-content;
-		max-width: 100%;
-		padding: 0.25rem 0;
-		color: var(--ink-soft);
-		cursor: pointer;
-		list-style: none;
-	}
-
-	.repeated-prayer summary::-webkit-details-marker {
-		display: none;
-	}
-
-	.repeated-prayer summary::before {
-		content: '›';
-		color: var(--rubric);
-		font-size: 0.9em;
-		line-height: 1;
-		transition: transform 120ms ease;
-	}
-
-	.repeated-prayer[open] summary::before {
-		transform: rotate(90deg);
-	}
-
-	.repeated-title {
-		font-size: calc(var(--reading) * 0.86);
-		line-height: 1.2;
-		color: var(--ink);
-	}
-
-	.repeated-action {
-		font-size: calc(var(--reading) * 0.47);
-		letter-spacing: 0.09em;
-		line-height: 1;
-		color: var(--rubric);
-	}
-
-	.when-open {
-		display: none;
-	}
-
-	.repeated-prayer[open] .when-open {
-		display: inline;
-	}
-
-	.repeated-prayer[open] .when-closed {
-		display: none;
-	}
-
-	.repeated-body {
-		margin-top: calc(var(--reading) * 0.45);
-	}
-
-	.repeated-prayer summary:focus-visible {
-		outline: 2px solid var(--rubric);
-		outline-offset: 3px;
-	}
-
 	/* The attribution line: small caps, quiet, above the words it names —
 	   the shape a missal uses for its S. and M. */
 	.who {
@@ -750,6 +688,22 @@
 	button.mark:hover {
 		text-decoration: underline dotted;
 		text-underline-offset: 0.25em;
+	}
+
+	/* A repeated familiar prayer is still an ordinary verse. Its disclosure
+	   occupies the same fixed gutter as V./R., so folding changes only how many
+	   corpus words are shown — never the line's type, indentation or columns. */
+	.repeated-toggle {
+		color: var(--rubric);
+	}
+
+	.repeated-toggle .ink {
+		display: inline-block;
+		transition: transform 120ms ease;
+	}
+
+	.verse.repeated-open .repeated-toggle .ink {
+		transform: rotate(90deg);
 	}
 
 	/* The ring goes round the LETTER, not the gutter. A mark's box is a
@@ -1266,10 +1220,9 @@
 		}
 
 		/* NO BLANKET ROW-GAP. A grid inserts its gap between EVERY row and
-		   collapses no margins — so the rubrics, the speaker labels and
-		   the folded prayers, whose flow margins were priced for collapse,
-		   all drifted apart in columns (the geometry campaign measured
-		   49px where flow shows 23). The verse rows carry the rhythm
+		   collapses no margins — so rubrics and speaker labels, whose flow
+		   margins were priced for collapse, drift apart in columns. The verse
+		   rows carry the rhythm
 		   themselves — priced on the BARE scale (owner: on the study scale
 		   it was a third too much air) — and the pair rules below give the
 		   full-width children exactly the distances flow's collapse gave
@@ -1286,16 +1239,16 @@
 		   verse that kept its margin stretched the row track and pushed
 		   the rubric 50px from ink the flow keeps at 29 (the campaign's
 		   probe, then the centrality test). */
-		.columns > .verse:has(+ :is(.rubric, .who, .repeated-prayer)),
-		.columns > .verse:has(+ .seg-extra + :is(.rubric, .who, .repeated-prayer)),
-		.columns > .seg-extra:has(+ :is(.rubric, .who, .repeated-prayer)) {
+		.columns > .verse:has(+ :is(.rubric, .who)),
+		.columns > .verse:has(+ .seg-extra + :is(.rubric, .who)),
+		.columns > .seg-extra:has(+ :is(.rubric, .who)) {
 			margin-bottom: 0;
 		}
 
 		/* between two full-width children only the first's bottom margin
 		   speaks, as collapse decided; two rubrics keep the extra
 		   --gloss-gap their flow pair spends */
-		.columns > :is(.rubric, .repeated-prayer) + :is(.rubric, .who, .repeated-prayer) {
+		.columns > .rubric + :is(.rubric, .who) {
 			margin-top: 0;
 		}
 
@@ -1332,34 +1285,9 @@
 			display: none;
 		}
 
-		/* The fold is part of the current reading state. A closed repeated
-		   prayer costs one quiet line on paper; one the reader opened remains
-		   open. Only the show/hide affordance disappears. Native details then
-		   gives print exactly the same open state as the screen. */
-		.repeated-prayer {
-			break-inside: avoid;
-			margin: calc(var(--reading) * 0.36) 0;
-		}
-
-		.repeated-prayer > summary {
-			display: flex;
-			gap: 0;
-			padding: 0;
-			cursor: default;
-			break-after: avoid;
-		}
-
-		.repeated-prayer > summary::before,
-		.repeated-action {
-			display: none;
-		}
-
-		.repeated-title {
-			font-size: calc(var(--reading) * 0.78);
-		}
-
-		.repeated-prayer > .repeated-body {
-			margin-top: calc(var(--reading) * 0.24);
+		/* Printing preserves the current fold state but omits its control. */
+		.repeated-toggle {
+			opacity: 0;
 		}
 
 		.verse,

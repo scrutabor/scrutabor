@@ -307,9 +307,6 @@
 					{citedSegments}
 					onsegmentselect={selectSegment}
 					collapsedSegments={repeatedSegments}
-					collapsedLabel={msgs.repeatedPrayer}
-					collapsedShow={msgs.repeatedPrayerShow}
-					collapsedHide={msgs.repeatedPrayerHide}
 					litanyColumns={data.category === 'litaniae'}
 					showSpeakerNames={!hasDevotionalLeader}
 					hideOpeningRubric={data.category === 'ordinarium'}

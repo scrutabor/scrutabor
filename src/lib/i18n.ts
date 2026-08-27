@@ -139,7 +139,6 @@ export interface Messages {
 	prayerFormsLabel: string;
 	prayerFormShort: string;
 	prayerFormLong: string;
-	repeatedPrayer: string;
 	repeatedPrayerShow: string;
 	repeatedPrayerHide: string;
 }
@@ -299,9 +298,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		prayerFormsLabel: 'forma modlitwy',
 		prayerFormShort: 'antyfona',
 		prayerFormLong: 'forma rozszerzona',
-		repeatedPrayer: 'Ave María, grátia plena…',
-		repeatedPrayerShow: 'pokaż tekst',
-		repeatedPrayerHide: 'ukryj tekst',
+		repeatedPrayerShow: 'rozwiń powtórzoną modlitwę',
+		repeatedPrayerHide: 'zwiń powtórzoną modlitwę',
 		pronunciationHint: 'zasady wymowy'
 	},
 	en: {
@@ -455,9 +453,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		prayerFormsLabel: 'prayer form',
 		prayerFormShort: 'antiphon',
 		prayerFormLong: 'extended form',
-		repeatedPrayer: 'Ave María, grátia plena…',
-		repeatedPrayerShow: 'show text',
-		repeatedPrayerHide: 'hide text',
+		repeatedPrayerShow: 'expand repeated prayer',
+		repeatedPrayerHide: 'collapse repeated prayer',
 		pronunciationHint: 'pronunciation guide'
 	}
 };

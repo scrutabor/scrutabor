@@ -97,21 +97,28 @@ test('print preserves manually opened repeated prayers and leaves the others fol
 }) => {
 	await page.goto('/app/pl/orationes/angelus-domini');
 
-	const repetitions = page.locator('details.repeated-prayer');
+	const repetitions = page.locator('.verse.repeated');
 	await expect(repetitions).toHaveCount(3);
-	await repetitions.first().locator('summary').click();
-	await expect(repetitions.first()).toHaveAttribute('open', '');
+	await repetitions.first().locator('.repeated-toggle').click();
+	await expect(repetitions.first().locator('.repeated-toggle')).toHaveAttribute(
+		'aria-expanded',
+		'true'
+	);
 
 	await page.emulateMedia({ media: 'print' });
-	for (const summary of await repetitions.locator('summary').all()) {
-		await expect(summary).toBeVisible();
+	for (const toggle of await repetitions.locator('.repeated-toggle').all()) {
+		await expect(toggle).toHaveCSS('opacity', '0');
 	}
-	for (const action of await repetitions.locator('.repeated-action').all()) {
-		await expect(action).toBeHidden();
-	}
-	await expect(repetitions.nth(0).locator('.repeated-body')).toBeVisible();
-	await expect(repetitions.nth(1).locator('.repeated-body')).toBeHidden();
-	await expect(repetitions.nth(2).locator('.repeated-body')).toBeHidden();
+	const alignment = await repetitions.first().evaluate((verse) => ({
+		repeated: verse.querySelector<HTMLElement>('.base')!.getBoundingClientRect().left,
+		neighbor: verse
+			.previousElementSibling!.querySelector<HTMLElement>('.base')!
+			.getBoundingClientRect().left
+	}));
+	expect(alignment.repeated).toBeCloseTo(alignment.neighbor, 0);
+	await expect(repetitions.nth(0).locator('.token')).toHaveCount(31);
+	await expect(repetitions.nth(1).locator('.token')).toHaveCount(4);
+	await expect(repetitions.nth(2).locator('.token')).toHaveCount(4);
 });
 
 test('print preserves the current Ordo folds and keeps prayer units intact', async ({ page }) => {
