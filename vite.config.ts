@@ -42,7 +42,13 @@ export default defineConfig({
 				// still packaging every one for an installed book.
 				options.chunkFileNames = (chunk) => {
 					const facade = chunk.facadeModuleId?.split('?')[0];
-					const corpusResource = facade?.includes('/src/lib/data/') && facade.endsWith('.json');
+					// The search module eagerly folds the neutral concordance into
+					// its own chunk, so its facade is a .ts file — and missing it
+					// here put half a megabyte of index into every first visit's
+					// shell precache. The boundary is the data, not the extension.
+					const corpusResource =
+						(facade?.includes('/src/lib/data/') && facade.endsWith('.json')) ||
+						facade?.endsWith('/src/lib/search.ts');
 					return corpusResource
 						? '_app/immutable/corpus/[name].[hash].js'
 						: '_app/immutable/chunks/[name].[hash].js';
