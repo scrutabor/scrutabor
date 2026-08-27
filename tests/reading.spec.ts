@@ -1100,17 +1100,28 @@ test('closing the panel leaves the page where it is', async ({ page }) => {
 });
 
 test('the part control appears only where it changes something', async ({ page }) => {
-	// A page whose text is spoken by one voice from beginning to end has
-	// nothing for the reader's part to change — no line is marked as theirs
-	// and nothing folds — so the choice is not offered there. Offering a
-	// control that does nothing is worse than not offering it.
+	// A Mass dialogue needs the reader's role, but its wording and delivery
+	// need not differ between sung and low Mass.
 	await page.goto('/app/en/ordinarium/praefatio-dialogus');
 	await expect(page.getByRole('radio', { name: 'faithful' })).toBeVisible();
+	await expect(page.locator('.picker[data-kind="mass"]')).toHaveCount(0);
+
 	// One missal speaker, but a real participation change: at Low Mass the
 	// faithful may say the ministers' Confiteor with the server (DMS 31 b).
 	await page.goto('/app/en/ordinarium/confiteor');
 	await expect(page.getByRole('radio', { name: 'faithful' })).toBeVisible();
 	await expect(page.getByRole('radio', { name: 'low' })).toBeVisible();
+
+	// Degree 2 versus 3 is documentary metadata until the reading page names
+	// those degrees; switching it currently changes no visible information.
+	await page.goto('/app/en/ordinarium/gloria');
+	await expect(page.getByRole('radio', { name: 'faithful' })).toBeVisible();
+	await expect(page.locator('.picker[data-kind="mass"]')).toHaveCount(0);
+
+	// The Angelus has a real devotional dialogue, not Mass roles or forms.
+	await page.goto('/app/en/orationes/angelus-domini');
+	await expect(page.locator('.picker[data-kind="role"]')).toHaveCount(0);
+	await expect(page.locator('.picker[data-kind="mass"]')).toHaveCount(0);
 
 	await page.goto('/app/en/ordinarium/quod-ore-sumpsimus'); // the priest's, throughout
 	await expect(page.getByRole('radio', { name: 'faithful' })).toHaveCount(0);

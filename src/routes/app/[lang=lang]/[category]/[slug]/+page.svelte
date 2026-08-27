@@ -22,6 +22,7 @@
 		parseSegmentSelection,
 		segmentRange
 	} from '$lib/segment-selection';
+	import { offersMassFormChoice, offersRoleChoice } from '$lib/reading-settings';
 
 	// The corpus arrives from the server load, already narrowed to this text
 	// — the browser never receives the whole snapshot (see +page.server.ts).
@@ -32,19 +33,11 @@
 	const msgs = $derived(M[lang]);
 	const doc = $derived(data.doc);
 
-	// Show the role and Mass choices whenever either can change what the
-	// reader is told. Different rubrical speakers are one reason; sourced
-	// lay participation is another. The ministers' Confiteor has only one
-	// Missale speaker, yet at Low Mass DMS 31 b gives it to the faithful
-	// with the server — hiding the controls made the sung-Mass label
-	// "server" look like an unconditional claim.
-	const takesPart = $derived(
-		new Set(doc.segments.filter((sg) => sg.type === 'verse' && sg.speaker).map((sg) => sg.speaker))
-			.size > 1 ||
-			doc.segments.some(
-				(sg) => sg.type === 'verse' && sg.participation && Object.keys(sg.participation).length > 0
-			)
-	);
+	// Role and Mass form are independent questions. Each row is offered only
+	// when choosing it changes the rendered text; a devotional V./R. dialogue,
+	// for example, is not thereby a sung/low Mass variant.
+	const hasRoleChoice = $derived(offersRoleChoice(doc.segments));
+	const hasMassFormChoice = $derived(offersMassFormChoice(doc.segments));
 	const gloss = $derived(data.gloss);
 	// A reading names the text itself ("Chwała Ojcu"), not merely
 	// the shelf it came from ("Modlitwy"). Non-catalogue corpus texts retain
@@ -247,7 +240,8 @@
 			<div class="help-row">
 				<div class="tabella">
 					<HelpLevels {lang} bind:value={helpLevel} />
-					{#if takesPart}<RolePicker {lang} /><RolePicker {lang} kind="mass" />{/if}
+					{#if hasRoleChoice}<RolePicker {lang} />{/if}
+					{#if hasMassFormChoice}<RolePicker {lang} kind="mass" />{/if}
 				</div>
 			</div>
 			{#if gloss.about}
