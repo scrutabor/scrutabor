@@ -373,7 +373,7 @@ test('landing shows the catalog and separates reference pages from edition statu
 		'Pojęcia, składnia i wymowa'
 	);
 	await expect(references.locator('a[href="/app/pl/bibliographia"]')).toContainText(
-		'Źródła i dokładne odsyłacze'
+		'Źródła przekładów i objaśnień'
 	);
 	await expect(page.locator('.edition-panel')).toContainText(
 		'Wydanie robocze przed przeglądem eksperckim'
@@ -401,7 +401,7 @@ test('landing shows the catalog and separates reference pages from edition statu
 		'Grammar Concepts, syntax, and pronunciation'
 	);
 	await expect(page.locator('.footer-links')).toContainText(
-		'Bibliography Sources and exact references'
+		'Bibliography Translation and explanatory sources'
 	);
 	await expect(page.locator('.edition-panel')).toContainText(
 		'Working edition awaiting expert review'
@@ -522,7 +522,7 @@ test('the sitemap lists both languages of every surface', async ({ request }) =>
 	expect(xml).not.toContain('/404');
 });
 
-test('the shared bibliography exposes exact sources and their uses', async ({ page }) => {
+test('the shared bibliography exposes the role and location of every source', async ({ page }) => {
 	await page.goto('/app/pl/bibliographia');
 	await expect(page.locator('h1')).toHaveText('Bibliografia');
 	const sources = page.locator('.source details');
@@ -552,14 +552,25 @@ test('the shared bibliography exposes exact sources and their uses', async ({ pa
 		hasText: 'Psalm 118:33–40, DjVu scan 588'
 	});
 	await expect(namingStanza).toContainText('Psalm 118:33–40, DjVu scan 588');
-	await expect(namingStanza).toContainText('(8)');
+	await expect(namingStanza).toContainText('źródło przekładu');
 	await expect(
 		namingStanza.getByRole('link', { name: 'Psalmus 118, HE', exact: true })
-	).toHaveAttribute('href', /psalmi\/118-he(?:\.html)?#v33$/);
+	).toHaveAttribute('href', /psalmi\/118-he(?:\.html)?$/);
+
+	const teIgiturWitness = page.locator('details', {
+		hasText: 'Powściągliwość i Praca (1912)'
+	});
+	await expect(teIgiturWitness.locator('.source-meta')).toHaveText('przekład');
+	await teIgiturWitness.locator('summary').click();
+	await expect(teIgiturWitness).toContainText('źródło przekładu');
+	await expect(
+		teIgiturWitness.getByRole('link', { name: 'Te ígitur', exact: true })
+	).toHaveAttribute('href', /ordinarium\/te-igitur(?:\.html)?$/);
+	await expect(teIgiturWitness).not.toContainText('(5)');
 
 	await page.goto('/app/en/bibliographia');
 	await expect(page.locator('h1')).toHaveText('Bibliography');
-	await expect(page.locator('.source-meta').first()).toHaveText(/\d+ exact references?/);
+	await expect(page.locator('.source-meta').first()).toHaveText('lemmata');
 	await expect(page.locator('.source details[open]')).toHaveCount(0);
 });
 

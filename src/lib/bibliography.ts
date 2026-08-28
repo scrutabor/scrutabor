@@ -2,41 +2,55 @@ import { lemmaSlug } from './lemma-slug';
 import { LEXICON, type Citation, type SenseEntry, type TextEntry } from './corpus';
 import type { Lang } from './i18n';
 
+export type BibliographyRole = 'translation' | 'context' | 'rubric' | 'word' | 'lemma';
+
 export interface BibliographyUse {
 	title: string;
 	href: string;
-	/** How many notes in that text rest on this locator. One link is listed
-	 * per text, because the exact backlink already stands beside every note —
-	 * this page is the list of SOURCES, and the litany that cites one work at
-	 * 146 words was rendering 146 identical links, 3,526 px of them on a
-	 * phone. The count is what those 146 were actually saying. */
-	notes: number;
+	/** The exact Latin word when this use supports a contextual word note. */
+	detail?: string;
 }
 
-/** What a caller hands in: where the note is. The counting is this module's. */
-type Where = Omit<BibliographyUse, 'notes'>;
+export interface BibliographyUseGroup {
+	role: BibliographyRole;
+	uses: BibliographyUse[];
+}
 
 export interface BibliographyLocator {
 	locator: string;
 	url?: string;
-	uses: BibliographyUse[];
+	groups: BibliographyUseGroup[];
 }
 
 export interface BibliographySource {
 	title: string;
+	roles: BibliographyRole[];
 	locators: BibliographyLocator[];
+}
+
+interface MutableLocator {
+	locator: string;
+	url?: string;
+	uses: Map<BibliographyRole, Map<string, BibliographyUse>>;
 }
 
 interface MutableSource {
 	title: string;
-	locators: Map<string, BibliographyLocator>;
+	locators: Map<string, MutableLocator>;
 }
 
+const ROLE_ORDER: BibliographyRole[] = ['translation', 'context', 'rubric', 'word', 'lemma'];
+
 /**
- * Collect the sources which actually support reader-facing prose. Textual
- * witnesses and analyzer provenance belong to the critical apparatus and the
- * word panel respectively; this is deliberately the bibliography of notes,
- * not an indiscriminate list of everything used to make the edition.
+ * Build the reader-facing bibliography. The role is part of every use: an old
+ * prayer book that supplied historically attested translation wording must not
+ * look like a hidden footnote attached to several individual Latin words.
+ *
+ * Translation citations are deliberately collapsed to one use per text and
+ * locator. Context notes likewise point to the text as a whole. Rubric and word
+ * notes retain exact backlinks, because those claims live at an exact segment
+ * or word. Latin textual witnesses and the critical apparatus remain in the
+ * corpus rather than being projected into this page.
  */
 export function buildBibliography(
 	lang: Lang,
@@ -45,7 +59,7 @@ export function buildBibliography(
 ): BibliographySource[] {
 	const sources = new Map<string, MutableSource>();
 
-	function add(citation: Citation, use: Where) {
+	function add(citation: Citation, role: BibliographyRole, use: BibliographyUse) {
 		let source = sources.get(citation.title);
 		if (!source) {
 			source = { title: citation.title, locators: new Map() };
@@ -55,14 +69,17 @@ export function buildBibliography(
 		const locatorKey = `${citation.locator}\u0000${citation.url ?? ''}`;
 		let locator = source.locators.get(locatorKey);
 		if (!locator) {
-			locator = { locator: citation.locator, url: citation.url, uses: [] };
+			locator = { locator: citation.locator, url: citation.url, uses: new Map() };
 			source.locators.set(locatorKey, locator);
 		}
-		// By TEXT, not by anchor. Every cited word inside one text produced its
-		// own href and its own list entry, all reading the same title.
-		const already = locator.uses.find((existing) => existing.title === use.title);
-		if (already) already.notes += 1;
-		else locator.uses.push({ ...use, notes: 1 });
+
+		let roleUses = locator.uses.get(role);
+		if (!roleUses) {
+			roleUses = new Map();
+			locator.uses.set(role, roleUses);
+		}
+		const useKey = `${use.href}\u0000${use.title}\u0000${use.detail ?? ''}`;
+		roleUses.set(useKey, use);
 	}
 
 	for (const [key, entry] of Object.entries(texts)) {
@@ -74,49 +91,71 @@ export function buildBibliography(
 				segment.verse === undefined ? segment.id : `v${segment.verse}`
 			])
 		);
-		for (const citation of gloss.about_citations ?? []) add(citation, textUse);
+		const wordForms = new Map(
+			entry.text.segments
+				.flatMap((segment) => segment.words ?? [])
+				.map((word) => [word.id, word.form])
+		);
+
+		for (const citation of gloss.about_citations ?? []) add(citation, 'context', textUse);
 
 		for (const [segmentId, segment] of Object.entries(gloss.segments)) {
 			const href = `${textUse.href}#${anchors.get(segmentId) ?? segmentId}`;
 			for (const citation of segment.narrative_citations ?? []) {
-				add(citation, { ...textUse, href });
+				add(citation, 'rubric', { ...textUse, href });
 			}
 			for (const citation of segment.translation_citations ?? []) {
-				add(citation, { ...textUse, href });
+				add(citation, 'translation', textUse);
 			}
 		}
 
 		for (const [wordId, word] of Object.entries(gloss.words)) {
 			for (const citation of word.explanation_citations ?? []) {
-				add(citation, { ...textUse, href: `${textUse.href}?w=${wordId}` });
+				add(citation, 'word', {
+					...textUse,
+					href: `${textUse.href}?w=${wordId}`,
+					detail: wordForms.get(wordId)
+				});
 			}
 		}
 	}
 
 	for (const [lemma, sense] of Object.entries(senses)) {
 		for (const citation of sense.note_citations ?? []) {
-			add(citation, {
+			add(citation, 'lemma', {
 				title: LEXICON.lemmata[lemma]?.head ?? lemma,
 				href: `/app/${lang}/lemma/${encodeURIComponent(lemmaSlug(lemma))}`
 			});
 		}
 	}
 
-	// The collation is pinned to the page's own language: a bare
-	// localeCompare reads the BUILD MACHINE's locale, and a prerendered
-	// page's ordering must not depend on where it was built. (pl and en
-	// agree on today's titles — the pin is so that staying equal is not
-	// load-bearing.)
 	const by = (a: string, b: string) => a.localeCompare(b, lang);
+	const rank = (role: BibliographyRole) => ROLE_ORDER.indexOf(role);
 	return [...sources.values()]
-		.map((source) => ({
-			title: source.title,
-			locators: [...source.locators.values()]
+		.map((source) => {
+			const roles = new Set<BibliographyRole>();
+			const locators = [...source.locators.values()]
 				.map((locator) => ({
-					...locator,
-					uses: locator.uses.sort((a, b) => by(a.title, b.title))
+					locator: locator.locator,
+					url: locator.url,
+					groups: [...locator.uses.entries()]
+						.map(([role, uses]) => {
+							roles.add(role);
+							return {
+								role,
+								uses: [...uses.values()].sort(
+									(a, b) => by(a.title, b.title) || by(a.detail ?? '', b.detail ?? '')
+								)
+							};
+						})
+						.sort((a, b) => rank(a.role) - rank(b.role))
 				}))
-				.sort((a, b) => by(a.locator, b.locator))
-		}))
+				.sort((a, b) => by(a.locator, b.locator));
+			return {
+				title: source.title,
+				roles: [...roles].sort((a, b) => rank(a) - rank(b)),
+				locators
+			};
+		})
 		.sort((a, b) => by(a.title, b.title));
 }

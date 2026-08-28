@@ -19,14 +19,14 @@
 			? bindProse({
 					aria: 'Strony pomocnicze i informacje o wydaniu',
 					grammar: 'Pojęcia, składnia i wymowa',
-					bibliography: 'Źródła i dokładne odsyłacze',
+					bibliography: 'Źródła przekładów i objaśnień',
 					edition: 'O wydaniu',
 					status: 'Wydanie robocze przed przeglądem eksperckim'
 				})
 			: {
 					aria: 'Reference pages and edition information',
 					grammar: 'Concepts, syntax, and pronunciation',
-					bibliography: 'Sources and exact references',
+					bibliography: 'Translation and explanatory sources',
 					edition: 'About this edition',
 					status: 'Working edition awaiting expert review'
 				}

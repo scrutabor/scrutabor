@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { BibliographySource } from '$lib/bibliography';
+	import type { BibliographyRole } from '$lib/bibliography';
 	import PageNav from '$lib/components/PageNav.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { bindProse } from '$lib/polish';
@@ -11,16 +11,28 @@
 	const copy = $derived(
 		lang === 'pl'
 			? {
-					lead: 'Źródła przywołane w objaśnieniach są zestawione alfabetycznie. Rozwiń pozycję, aby zobaczyć dokładne odsyłacze i miejsca ich wykorzystania. Świadków tekstu i aparat krytyczny udostępniamy osobno w repozytorium korpusu.',
-					usedAt: 'przywołano przy',
+					lead: 'Bibliografia obejmuje historyczne źródła brzmienia przekładów oraz źródła konkretnych objaśnień. Każdy wpis pokazuje miejsce w wydaniu i rzeczywistą rolę źródła. Łacińskich świadków tekstu i aparat krytyczny udostępniamy osobno w repozytorium korpusu.',
+					roles: {
+						translation: ['przekład', 'źródło przekładu'],
+						context: ['opis', 'opis tekstu'],
+						rubric: ['rubryka', 'objaśnienie rubryki'],
+						word: ['słowa', 'objaśnienie słowa'],
+						lemma: ['hasła', 'nota słownikowa']
+					} satisfies Record<BibliographyRole, [string, string]>,
 					typeface: [
 						'Wydanie złożono krojem EB Garamond (Georg Duffner, Octavio Pardo), udostępnionym na licencji ',
 						'.'
 					]
 				}
 			: {
-					lead: 'Sources cited by the explanations are listed alphabetically. Expand an entry to see its exact references and where they are used. Textual witnesses and the critical apparatus are published separately in the corpus repository.',
-					usedAt: 'cited at',
+					lead: 'The bibliography includes historical sources for translation wording and sources for specific explanations. Each entry shows the place in the edition and the source’s actual role. Latin textual witnesses and the critical apparatus are published separately in the corpus repository.',
+					roles: {
+						translation: ['translation', 'translation source'],
+						context: ['text notes', 'text note'],
+						rubric: ['rubrics', 'rubric note'],
+						word: ['words', 'word explanation'],
+						lemma: ['lemmata', 'dictionary note']
+					} satisfies Record<BibliographyRole, [string, string]>,
 					typeface: [
 						'This edition is set in EB Garamond (Georg Duffner, Octavio Pardo), released under the ',
 						'.'
@@ -28,14 +40,8 @@
 				}
 	);
 	const lead = $derived(lang === 'pl' ? bindProse(copy.lead) : copy.lead);
-
-	function referenceCount(source: BibliographySource): string {
-		const count = source.locators.length;
-		if (lang === 'en') return `${count} exact ${count === 1 ? 'reference' : 'references'}`;
-		if (count === 1) return '1 dokładny odsyłacz';
-		const few = count % 10 >= 2 && count % 10 <= 4 && (count % 100 < 12 || count % 100 > 14);
-		return `${count} ${few ? 'dokładne odsyłacze' : 'dokładnych odsyłaczy'}`;
-	}
+	const shortRole = (role: BibliographyRole) => copy.roles[role][0];
+	const longRole = (role: BibliographyRole) => copy.roles[role][1];
 </script>
 
 <svelte:head>
@@ -57,7 +63,9 @@
 					<details>
 						<summary>
 							<cite lang="und">{source.title}</cite>
-							<span class="source-meta">{referenceCount(source)}</span>
+							<span class="source-meta"
+								>{source.roles.map((role) => shortRole(role)).join(' · ')}</span
+							>
 						</summary>
 						<div class="source-body">
 							<ul class="locators">
@@ -79,18 +87,20 @@
 										{:else}
 											<span class="locator-reference" lang="und">{locator.locator}</span>
 										{/if}
-										<span class="uses">
-											<span class="uses-label">{copy.usedAt}:</span>
-											<!-- The separator lives inside the expression: a template
-									     `{#if i > 0},{/if}` puts the comma against the next
-									     title with no space, because Svelte trims the newline
-									     after it — and the run then became one unbreakable
-									     token that scrolled the page sideways at 320px. -->
-											{#each locator.uses as use, i (use.title)}{i > 0 ? ', ' : ''}<a
-													href={use.href}
-													lang="la">{use.title}</a
-												>{use.notes > 1 ? ` (${use.notes})` : ''}{/each}
-										</span>
+										<div class="use-groups">
+											{#each locator.groups as group (group.role)}
+												<p class="uses">
+													<span class="uses-label">{longRole(group.role)}:</span>
+													{#each group.uses as use, i (`${use.href}:${use.detail ?? ''}`)}{i > 0
+															? ', '
+															: ''}<a href={use.href} lang="la"
+															>{use.title}{#if use.detail}<span class="use-detail">
+																	— {use.detail}</span
+																>{/if}</a
+														>{/each}
+												</p>
+											{/each}
+										</div>
 									</li>
 								{/each}
 							</ul>
@@ -226,15 +236,23 @@
 		stroke-linejoin: round;
 	}
 
+	.use-groups {
+		margin-top: 0.18rem;
+	}
+
 	.uses {
-		display: block;
-		margin-top: 0.12rem;
+		margin: 0;
 		color: var(--ink-soft);
 		font-size: 0.9rem;
 	}
 
+	.uses + .uses {
+		margin-top: 0.12rem;
+	}
+
 	.uses-label {
 		margin-right: 0.25rem;
+		color: var(--ink);
 	}
 
 	.typeface {

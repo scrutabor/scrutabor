@@ -218,7 +218,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		bibliographyTitle: 'bibliografia',
 		bibliographyPageTitle: 'Bibliografia',
 		bibliographyDescription:
-			'Źródła przywołane w objaśnieniach Scrutabor, z dokładnymi odsyłaczami i miejscami ich wykorzystania.',
+			'Źródła przekładów i objaśnień Scrutabor wraz z miejscami w wydaniach i rolą każdego źródła.',
 		bibliographyLink: 'pełna bibliografia',
 		grammarDescription: 'Pojęcia gramatyki łacińskiej objaśnione na przykładach z modlitw.',
 		pronunciationDescription:
@@ -379,7 +379,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		bibliographyTitle: 'bibliography',
 		bibliographyPageTitle: 'Bibliography',
 		bibliographyDescription:
-			'Sources cited by Scrutabor’s explanations, with exact references and the places where they are used.',
+			'Scrutabor’s translation and explanatory sources, with locations in each edition and the role of every source.',
 		bibliographyLink: 'complete bibliography',
 		grammarDescription: 'Latin grammar concepts explained with examples from the prayers.',
 		pronunciationDescription:

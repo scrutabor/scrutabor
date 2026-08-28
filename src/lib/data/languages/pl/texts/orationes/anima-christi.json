@@ -3,18 +3,18 @@
   "language":"pl",
   "about":"Anima Christi jest chrystocentryczną modlitwą dewocyjną zbudowaną z krótkich wezwań. Prosi duszę, ciało, krew, wodę z boku i mękę Chrystusa o uświęcenie, zbawienie, napojenie, obmycie i umocnienie, a Jezusa o wysłuchanie, ukrycie w ranach, obronę, wezwanie w godzinie śmierci i przyjęcie do wiecznej chwały ze świętymi.",
   "seg":[
-    {"id":"s01","tr":"Duszo Chrystusowa, uświęć mnie.","tc":[55,56],"tb":"traditional-composite","g":["duszo","Chrystusowa","uświęć","mnie"]},
-    {"id":"s02","tr":"Ciało Chrystusowe, zbaw mnie.","tc":[55,56],"tb":"traditional-composite","g":["ciało","Chrystusowe","zbaw","mnie"]},
-    {"id":"s03","tr":"Krwi Chrystusowa, napój mnie.","tc":[55,56],"tb":"traditional-composite","g":["krwi","Chrystusowa","napój","mnie"]},
-    {"id":"s04","tr":"Wodo z boku Chrystusowego, obmyj mnie.","tc":[55,56],"tb":"traditional-composite","g":["wodo","z boku","Chrystusowego","obmyj","mnie"]},
-    {"id":"s05","tr":"Męko Chrystusowa, wzmocnij mnie.","tc":[55,56],"tb":"traditional-composite","g":["męko","Chrystusowa","wzmocnij","mnie"]},
-    {"id":"s06","tr":"O dobry Jezu, wysłuchaj mnie.","tc":[55,56],"tb":"traditional-composite","g":["o","dobry","Jezu","wysłuchaj","mnie"],"ex":{"w025":"„Exáudi” prosi nie tylko o usłyszenie głosu, lecz o przychylne wysłuchanie prośby."}},
-    {"id":"s07","tr":"W ranach swoich ukryj mnie.","tc":[55,56],"tb":"traditional-composite","g":["w","swoich","ranach","ukryj","mnie"]},
-    {"id":"s08","tr":"Nie dozwól mi odłączyć się od Ciebie.","tc":[55,56],"tb":"traditional-composite","g":["nie","dozwól","mi","odłączyć się","od","Ciebie"]},
-    {"id":"s09","tr":"Od złego ducha broń mnie.","tc":[55,56],"tb":"traditional-composite","g":["od","ducha","złego","broń","mnie"],"ex":{"w039":"Tradycyjny polski przekład rozpoznaje w tym nieprzyjacielu złego ducha."}},
-    {"id":"s10","tr":"W godzinę śmierci wezwij mnie.","tc":[55,56],"tb":"traditional-composite","g":["w","godzinie","śmierci","mojej","wezwij","mnie"]},
-    {"id":"s11","tr":"I każ mi przyjść do siebie,","tc":[55,56],"tb":"traditional-composite","g":["i","każ","mi","przyjść","do","siebie"]},
-    {"id":"s12","tr":"abym ze świętymi Twoimi chwalił Cię","tc":[55,56],"tb":"traditional-composite","g":["abym","ze","świętymi","Twoimi","chwalił","Cię"]},
-    {"id":"s13","tr":"na wieki wieków. Amen.","tc":[55,56],"tb":"traditional-composite","g":["na","wieki","wieków","amen"]}
+    {"id":"s01","tr":"Duszo Chrystusowa, uświęć mnie.","tc":[55,414],"tb":"traditional-composite","g":["duszo","Chrystusowa","uświęć","mnie"]},
+    {"id":"s02","tr":"Ciało Chrystusowe, zbaw mnie.","tc":[55,414],"tb":"traditional-composite","g":["ciało","Chrystusowe","zbaw","mnie"]},
+    {"id":"s03","tr":"Krwi Chrystusowa, napój mnie.","tc":[55,414],"tb":"traditional-composite","g":["krwi","Chrystusowa","napój","mnie"]},
+    {"id":"s04","tr":"Wodo z boku Chrystusowego, obmyj mnie.","tc":[55,414],"tb":"traditional-composite","g":["wodo","z boku","Chrystusowego","obmyj","mnie"]},
+    {"id":"s05","tr":"Męko Chrystusowa, wzmocnij mnie.","tc":[55,414],"tb":"traditional-composite","g":["męko","Chrystusowa","wzmocnij","mnie"]},
+    {"id":"s06","tr":"O dobry Jezu, wysłuchaj mnie.","tc":[55,414],"tb":"traditional-composite","g":["o","dobry","Jezu","wysłuchaj","mnie"],"ex":{"w025":"„Exáudi” prosi nie tylko o usłyszenie głosu, lecz o przychylne wysłuchanie prośby."}},
+    {"id":"s07","tr":"W ranach swoich ukryj mnie.","tc":[55,414],"tb":"traditional-composite","g":["w","swoich","ranach","ukryj","mnie"]},
+    {"id":"s08","tr":"Nie dozwól mi odłączyć się od Ciebie.","tc":[55,414],"tb":"traditional-composite","g":["nie","dozwól","mi","odłączyć się","od","Ciebie"]},
+    {"id":"s09","tr":"Od złego ducha broń mnie.","tc":[55,414],"tb":"traditional-composite","g":["od","ducha","złego","broń","mnie"],"ex":{"w039":"Tradycyjny polski przekład rozpoznaje w tym nieprzyjacielu złego ducha."}},
+    {"id":"s10","tr":"W godzinę śmierci wezwij mnie.","tc":[55,414],"tb":"traditional-composite","g":["w","godzinie","śmierci","mojej","wezwij","mnie"]},
+    {"id":"s11","tr":"I każ mi przyjść do siebie,","tc":[55,414],"tb":"traditional-composite","g":["i","każ","mi","przyjść","do","siebie"]},
+    {"id":"s12","tr":"abym ze świętymi Twoimi chwalił Cię","tc":[55,414],"tb":"traditional-composite","g":["abym","ze","świętymi","Twoimi","chwalił","Cię"]},
+    {"id":"s13","tr":"na wieki wieków. Amen.","tc":[55,414],"tb":"traditional-composite","g":["na","wieki","wieków","amen"]}
   ]
 }
