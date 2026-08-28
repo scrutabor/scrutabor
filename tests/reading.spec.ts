@@ -1066,7 +1066,12 @@ test('the book keeps a ribbon: reopening a text resumes the position', async ({ 
 			JSON.stringify({ y: 600, t: Date.now() - 13 * 60 * 60 * 1000 })
 		);
 	});
-	await page.goto('/app/pl/ordinarium/credo');
+	// Enter through the book itself. A second top-level page.goto to a URL
+	// already present in browser history may restore that history entry's
+	// scroll before SvelteKit can process the expired ribbon, making this
+	// browser-restoration test instead of a ribbon-expiry test.
+	await page.locator('a[href="/app/pl/ordinarium/credo"]').click();
+	await expect(page).toHaveURL(/credo/);
 	// Processing the expired entry is the signal. A fixed wait could inspect
 	// the initial top-of-page state before a starved afterNavigate callback had
 	// read the ribbon at all and therefore pass without exercising expiry.

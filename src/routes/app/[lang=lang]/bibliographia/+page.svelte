@@ -5,6 +5,7 @@
 	import { bindProse } from '$lib/polish';
 
 	let { data } = $props();
+	const sources = $derived(data.sources);
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
 	const copy = $derived(
@@ -51,7 +52,7 @@
 		<p class="what">{lead}</p>
 
 		<ul class="sources">
-			{#each data.sources as source (source.title)}
+			{#each sources as source (source.title)}
 				<li class="source">
 					<details>
 						<summary>
