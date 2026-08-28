@@ -128,16 +128,20 @@ test('an Ordinary prayer shared with the faithful is named without a false versi
 		await page.goto(`/app/pl/ordinarium/${slug}`);
 		await expect(page.locator('.who-name').first()).toHaveText('kapłan i wierni');
 		await expect(page.locator('.verse .mark')).toHaveCount(0);
+		await expect(page.locator('.picker[data-kind="role"]')).toHaveCount(0);
 	}
 
-	// Changing viewpoint changes the attribution, not the nature of the
-	// text: Credo still is not a V./R. exchange when the priest is reading.
-	// A one-voice text has no reason to show the role picker, so set the
-	// persisted viewpoint directly and revisit it as a priest would.
+	// A persisted viewpoint cannot change the objective attribution or the
+	// nature of the text. It only marks the reader's own part where there is
+	// a real distinction to make.
 	await page.evaluate(() => localStorage.setItem('scrutabor-role', 'sacerdos'));
 	await page.goto('/app/pl/ordinarium/credo');
-	await expect(page.locator('.who-name').first()).toHaveText('kapłan');
+	await expect(page.locator('.who-name').first()).toHaveText('kapłan i wierni');
 	await expect(page.locator('.verse .mark')).toHaveCount(0);
+	await page.evaluate(() => localStorage.setItem('scrutabor-role', 'minister'));
+	await page.goto('/app/pl/ordinarium/sanctus');
+	await expect(page.locator('.who-name').first()).toHaveText('kapłan i wierni');
+	await expect(page.locator('.verse.answer')).toHaveCount(5);
 	await page.evaluate(() => localStorage.setItem('scrutabor-role', 'populus'));
 
 	// The sung Kyrie is likewise the faithful's whole Ordinary; at low Mass
@@ -149,11 +153,14 @@ test('an Ordinary prayer shared with the faithful is named without a false versi
 	await expect(page.locator('.verse .mark').first()).toHaveText('V.');
 
 	// The ministers' Confiteor becomes a shared prayer only in a low Mass
-	// (31 b), and names both the rubrical and participating voices.
+	// (31 b). Its objective attribution remains stable while the reader's
+	// own-part emphasis changes.
 	await page.goto('/app/pl/ordinarium/confiteor');
 	await page.locator('.option[data-word="śpiewana"]').click();
 	await expect(page.locator('.who-name').first()).toHaveText('usługujący');
 	await page.locator('.option[data-word="cicha"]').click();
+	await expect(page.locator('.who-name').first()).toHaveText('usługujący i wierni');
+	await page.locator('.option[data-word="kapłan"]').click();
 	await expect(page.locator('.who-name').first()).toHaveText('usługujący i wierni');
 	await expect(page.locator('.verse .mark')).toHaveCount(0);
 });
@@ -174,6 +181,7 @@ test('the reader can change their part from a text page, and the marks follow', 
 	// in the pew, the answering lines are the reader's
 	expect((await answered()).filter(Boolean)).toContain('R.');
 	expect((await answered()).filter(Boolean)).not.toContain('V.');
+	const attribution = await page.locator('.who').allTextContents();
 
 	await page.getByRole('radio', { name: 'kapłan' }).click();
 
@@ -182,6 +190,9 @@ test('the reader can change their part from a text page, and the marks follow', 
 	expect((await answered()).filter(Boolean)).not.toContain('R.');
 	// and nothing is said about it in words: the marks carry it
 	await expect(page.locator('.who-yours')).toHaveCount(0);
+	// The objective attribution and participation notes do not change with
+	// the reader's viewpoint; only the own-part emphasis does.
+	await expect(page.locator('.who')).toHaveText(attribution);
 });
 
 test('the mark does not collide with the words beside it', async ({ page }) => {

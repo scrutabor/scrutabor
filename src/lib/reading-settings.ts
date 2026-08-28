@@ -35,10 +35,8 @@ function presentation(segments: Segment[], form: MassForm, role: Role): string {
 				segment.speaker ?? null,
 				segment.voice ?? null,
 				mine,
-				mine && role === 'populus' && isEveryonesResponse(segment, form),
-				role === 'populus' &&
-					mayJoin(segment, form) &&
-					marks.namesConditionalParticipation(effective, index, form),
+				isEveryonesResponse(segment, form),
+				mayJoin(segment, form) && marks.namesConditionalParticipation(effective, index, form),
 				sharedPrayer ? index === firstVerse : marks.namesSpeaker(effective, index),
 				!sharedPrayer && marks.marked(effective, index),
 				marks.namesVoice(effective, index),

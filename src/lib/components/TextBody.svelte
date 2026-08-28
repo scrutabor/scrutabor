@@ -9,7 +9,13 @@
 		litanyRows,
 		type LitanyRow
 	} from '$lib/reading-text';
-	import { isEveryonesResponse, isYours, mayJoin, role } from '$lib/role.svelte';
+	import {
+		isEveryonesResponse,
+		isYours,
+		mayJoin,
+		role,
+		sharedWithFaithful
+	} from '$lib/role.svelte';
 	import { initialFit } from '$lib/reading-geometry';
 	import * as marks from '$lib/speaker-marks';
 
@@ -332,33 +338,27 @@
 		     mark, because finding them at a glance is the whole point. -->
 		{@const mine = answers && isYours(seg, role.value, massForm.value)}
 		{@const showVoice = namesVoice(i)}
-		<!-- WHOSE LINE, from where the reader is sitting. The Missale gives
-		     every response at low Mass to the minister, so the label read
-		     ministrant over lines a congregation was about to say — the
-		     wrong answer to the question the reader was asking (owner,
-		     2026-08-09). A reader in the pew is named for their own lines;
-		     a server or a priest still sees the rubrical speaker, which is
-		     what THEY need. Nothing is renamed that is not the reader's:
-		     the celebrant's lines keep his name for everyone. -->
-		{@const yours = mine && role.value === 'populus'}
-		{@const everyones = mine && isEveryonesResponse(seg, massForm.value)}
+		<!-- WHO SAYS THE LINE is an objective fact. The role setting may
+		     emphasize the reader's own part, but it cannot rename the people
+		     who deliver it. The Missal's speaker and the faithful's sourced
+		     participation are therefore combined independently of the chosen
+		     viewpoint. Conditional participation stays in the separate
+		     “may join” note below. -->
+		{@const faithfulShare = sharedWithFaithful(seg, massForm.value)}
+		{@const everyones = isEveryonesResponse(seg, massForm.value)}
 		{@const joinable =
-			role.value === 'populus' &&
-			mayJoin(seg, massForm.value) &&
-			marks.namesConditionalParticipation(segs, i, massForm.value)}
+			mayJoin(seg, massForm.value) && marks.namesConditionalParticipation(segs, i, massForm.value)}
 		{@const nameSpeaker = sharedPrayer ? i === firstSharedVerse : namesSpeaker(i)}
 		{@const speakerName =
-			yours && sharedPrayer && sharedSpeaker
-				? M[lang].faithfulWith[sharedSpeaker]
-				: yours && sharedPrayer
-					? M[lang].faithful
-					: yours && seg.speaker
-						? M[lang].faithfulWith[seg.speaker]
-						: yours
-							? M[lang].faithful
-							: seg.speaker
-								? M[lang].speakers[seg.speaker]
-								: undefined}
+			marks.isSharedPrayer(segs, massForm.value) && !sharedSpeaker
+				? M[lang].faithful
+				: faithfulShare && seg.speaker
+					? M[lang].faithfulWith[seg.speaker]
+					: faithfulShare
+						? M[lang].faithful
+						: seg.speaker
+							? M[lang].speakers[seg.speaker]
+							: undefined}
 		{#if (showSpeakerNames && nameSpeaker) || showVoice || joinable}
 			<p class="who" class:yours={mine}>
 				{#if showSpeakerNames && nameSpeaker && speakerName}<span class="who-name"

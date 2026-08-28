@@ -327,10 +327,12 @@ test('the responses everyone makes are marked as such', async ({ page }) => {
 	const everyone = page.locator('.who-all');
 	await expect(everyone.first()).toBeVisible();
 	await expect(everyone.first()).toHaveText('odpowiadają wszyscy');
+	const objectiveNotices = await everyone.count();
 
-	// a server is not "everyone": the mark belongs to the pew's view
+	// The role setting changes which lines are emphasized as the reader's own.
+	// It cannot erase the objective fact that the congregation answers here.
 	await page.locator('.option[data-word="kapłan"]').click();
-	await expect(everyone).toHaveCount(0);
+	await expect(everyone).toHaveCount(objectiveNotices);
 });
 
 test('the responses after the readings follow the sourced participation lists', async ({

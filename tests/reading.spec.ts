@@ -1118,9 +1118,10 @@ test('the part control appears only where it changes something', async ({ page }
 	await expect(page.getByRole('radio', { name: 'low' })).toBeVisible();
 
 	// Degree 2 versus 3 is documentary metadata until the reading page names
-	// those degrees; switching it currently changes no visible information.
+	// those degrees; every available role participates, so neither setting
+	// changes visible information.
 	await page.goto('/app/en/ordinarium/gloria');
-	await expect(page.getByRole('radio', { name: 'faithful' })).toBeVisible();
+	await expect(page.locator('.picker[data-kind="role"]')).toHaveCount(0);
 	await expect(page.locator('.picker[data-kind="mass"]')).toHaveCount(0);
 
 	// The Angelus has a real devotional dialogue, not Mass roles or forms.

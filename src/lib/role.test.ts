@@ -20,6 +20,8 @@ describe('the faithful’s part', () => {
 	it('owns an unconditional response', () => {
 		const response = segment();
 		expect(isYours(response, 'populus', 'cantu')).toBe(true);
+		expect(isYours(response, 'minister', 'cantu')).toBe(true);
+		expect(isYours(response, 'sacerdos', 'cantu')).toBe(true);
 		expect(isEveryonesResponse(response, 'cantu')).toBe(true);
 		expect(mayJoin(response, 'cantu')).toBe(false);
 	});
@@ -27,6 +29,8 @@ describe('the faithful’s part', () => {
 	it('presents a conditional faculty as permission, not ownership', () => {
 		const proper = segment(true);
 		expect(isYours(proper, 'populus', 'cantu')).toBe(false);
+		expect(isYours(proper, 'minister', 'cantu')).toBe(false);
+		expect(isYours(proper, 'sacerdos', 'cantu')).toBe(true);
 		expect(isEveryonesResponse(proper, 'cantu')).toBe(false);
 		expect(mayJoin(proper, 'cantu')).toBe(true);
 	});

@@ -101,11 +101,22 @@ const OWNED: Record<Role, ReadonlySet<string>> = {
  * are at, which is why the form is asked for (corpus SCHEMA.md 0.10.0).
  */
 export function isYours(seg: Segment, of: Role, form: MassForm): boolean {
-	if (of === 'populus') {
-		const participation = seg.participation?.[form];
-		return participation !== undefined && participation.conditional !== true;
-	}
+	const participation = seg.participation?.[form];
+	const shared = participation !== undefined && participation.conditional !== true;
+	if (of === 'populus') return shared;
+	// A server has his own rubrical answers, but he does not stop being one
+	// of the faithful when the whole congregation is given a part of the
+	// Ordinary. `participation` names that common part; `speaker` still adds
+	// the lines entrusted specifically to the minister.
+	if (of === 'minister' && shared) return true;
 	return seg.speaker !== undefined && OWNED[of].has(seg.speaker);
+}
+
+/** Does the selected Mass form give this line unconditionally to the
+ * faithful? This is an objective attribution, not a reader preference. */
+export function sharedWithFaithful(seg: Segment, form: MassForm): boolean {
+	const participation = seg.participation?.[form];
+	return participation !== undefined && participation.conditional !== true;
 }
 
 /** The faithful are permitted to join, but the line is not presented as

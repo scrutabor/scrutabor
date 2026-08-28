@@ -45,14 +45,15 @@ describe('reading settings that have a visible effect', () => {
 	});
 
 	it('does not expose editorial-only source or degree differences', () => {
-		const ordinary = [
+		const ordinary = [1, 2].map(() =>
 			verse('sacerdos', {
 				participation: {
 					cantu: { gradus: 2, source: 'DMS 25 b' },
 					lecta: { gradus: 3, source: 'DMS 31 c' }
 				}
 			})
-		];
+		);
 		expect(offersMassFormChoice(ordinary)).toBe(false);
+		expect(offersRoleChoice(ordinary)).toBe(false);
 	});
 });
