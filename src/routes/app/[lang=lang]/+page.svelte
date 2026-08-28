@@ -96,19 +96,13 @@
 
 		<footer class="catalog-footer">
 			<nav class="footer-links" aria-label={footerCopy.aria}>
-				<a class="footer-link" href="/app/{lang}/grammatica">
-					<span>
-						<span class="footer-title">{msgs.grammarPageTitle}</span>
-						<span class="footer-note">{footerCopy.grammar}</span>
-					</span>
-					<span class="footer-arrow" aria-hidden="true">›</span>
+				<a class="card footer-link" href="/app/{lang}/grammatica">
+					<span class="card-title">{msgs.grammarPageTitle}</span>
+					<span class="hung-note">{footerCopy.grammar}</span>
 				</a>
-				<a class="footer-link" href="/app/{lang}/bibliographia">
-					<span>
-						<span class="footer-title">{msgs.bibliographyPageTitle}</span>
-						<span class="footer-note">{footerCopy.bibliography}</span>
-					</span>
-					<span class="footer-arrow" aria-hidden="true">›</span>
+				<a class="card footer-link" href="/app/{lang}/bibliographia">
+					<span class="card-title">{msgs.bibliographyPageTitle}</span>
+					<span class="hung-note">{footerCopy.bibliography}</span>
 				</a>
 			</nav>
 			<!-- The colophon: which copy this is, and the way home. A book
@@ -117,15 +111,12 @@
 			     and nowhere in the reading chrome. In the downloaded folder
 			     the link opens the live site (see offline/shims/navigation):
 			     "is there a new version" is a network question. -->
-			<div class="edition-panel">
-				<div>
-					<a class="edition-link smallcaps" href="/app/{lang}/editio">{footerCopy.edition}</a>
-					<p class="edition-status">{footerCopy.status}</p>
-				</div>
-				<p class="colophon smallcaps">
-					Scrutabor · {msgs.edition}&nbsp;v{data.version} · <a href="/{lang}">scrutabor.org</a>
-				</p>
-			</div>
+			<p class="working smallcaps">
+				<a href="/app/{lang}/editio">{footerCopy.edition} · {footerCopy.status}</a>
+			</p>
+			<p class="colophon smallcaps">
+				Scrutabor · {msgs.edition}&nbsp;v{data.version} · <a href="/{lang}">scrutabor.org</a>
+			</p>
 		</footer>
 	</main>
 </div>
@@ -217,82 +208,25 @@
 		gap: 0.7rem;
 	}
 
-	.footer-link {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) auto;
-		gap: 0.75rem;
-		align-items: start;
-		padding: 0.9rem 1rem;
-		text-align: start;
-		text-decoration: none;
-		border: 1px solid var(--border);
-		border-radius: 0.6rem;
-		background: var(--surface);
-	}
-
-	.footer-link:hover {
-		background: var(--wash);
-	}
-
-	.footer-title,
-	.footer-note {
-		display: block;
-	}
-
-	.footer-title {
-		font-size: 1rem;
-		font-weight: 600;
-	}
-
-	.footer-note {
-		margin-top: 0.16rem;
+	.working {
+		margin: 0.85rem 0 0;
+		font-size: 0.75rem;
 		color: var(--ink-soft);
-		font-size: 0.78rem;
-		line-height: 1.35;
 	}
 
-	.footer-arrow {
-		color: var(--rubric);
-		font-size: 1.2rem;
-		line-height: 1;
-	}
-
-	.edition-panel {
-		display: grid;
-		width: 100%;
-		grid-template-columns: minmax(0, 1fr) auto;
-		gap: 0.75rem 1.5rem;
-		align-items: end;
-		margin-top: 0.75rem;
-		padding: 0.9rem 1rem;
-		text-align: start;
-		border-radius: 0.6rem;
-		background: var(--wash);
-	}
-
-	.edition-link {
-		color: var(--rubric);
-		font-size: 0.76rem;
+	.working a {
+		color: inherit;
 		text-decoration: none;
-		border-bottom: 1px dotted var(--border);
 	}
 
-	.edition-link:hover {
+	.working a:hover {
 		color: var(--ink);
 	}
 
-	.edition-status {
-		margin: 0.22rem 0 0;
-		color: var(--ink-soft);
-		font-size: 0.84rem;
-		line-height: 1.35;
-	}
-
 	.colophon {
-		margin: 0;
-		font-size: 0.7rem;
+		margin: 0.4rem 0 0;
+		font-size: 0.75rem;
 		color: var(--ink-soft);
-		text-align: end;
 	}
 
 	.colophon a {
@@ -306,13 +240,8 @@
 	}
 
 	@media (max-width: 34rem) {
-		.footer-links,
-		.edition-panel {
+		.footer-links {
 			grid-template-columns: minmax(0, 1fr);
-		}
-
-		.colophon {
-			text-align: start;
 		}
 	}
 

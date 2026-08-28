@@ -54,7 +54,6 @@
 
 	<main>
 		<h1 class="minor">{msgs.bibliographyPageTitle}</h1>
-		<p class="latin-name" lang="la">bibliographia</p>
 		<p class="what">{lead}</p>
 
 		<ul class="sources">
@@ -126,12 +125,6 @@
 </div>
 
 <style>
-	.latin-name {
-		margin: 0.2rem 0 0;
-		text-align: center;
-		color: var(--rubric);
-	}
-
 	/* The opening paragraph takes the shared prose measure (app.css); the
 	   entries beneath it are rows, like the concordance on a lemma page,
 	   so they take the frame. */

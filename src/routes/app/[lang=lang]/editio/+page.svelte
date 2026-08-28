@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>{lang === 'pl' ? 'o\u00a0wydaniu' : 'about this edition'} — Scrutabor</title>
+	<title>{lang === 'pl' ? 'O\u00a0wydaniu' : 'About this edition'} — Scrutabor</title>
 	<meta name="description" content={msgs.editioDescription} />
 </svelte:head>
 
@@ -16,8 +16,7 @@
 	<PageNav {lang} />
 
 	<main>
-		<h1 class="minor">{lang === 'pl' ? 'o\u00a0wydaniu' : 'about this edition'}</h1>
-		<p class="latin-name" lang="la">de editione</p>
+		<h1 class="minor">{lang === 'pl' ? 'O\u00a0wydaniu' : 'About this edition'}</h1>
 
 		{#if lang === 'pl'}
 			<p class="what">
@@ -114,12 +113,6 @@
 </div>
 
 <style>
-	.latin-name {
-		margin: 0.2rem 0 0;
-		text-align: center;
-		color: var(--rubric);
-	}
-
 	.what {
 		margin: 1.4rem auto 0;
 		line-height: 1.65;

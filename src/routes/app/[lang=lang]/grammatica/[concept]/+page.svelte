@@ -7,10 +7,15 @@
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
 	const concept = $derived(conceptById(data.concept));
+	const pageTitle = $derived(
+		concept
+			? concept.label[lang].replace(/^./u, (letter) => letter.toLocaleUpperCase(lang))
+			: 'Scrutabor'
+	);
 </script>
 
 <svelte:head>
-	<title>{concept ? `${concept.label[lang]} — Scrutabor` : 'Scrutabor'}</title>
+	<title>{concept ? `${pageTitle} — Scrutabor` : pageTitle}</title>
 	{#if concept}
 		<meta name="description" content={concept.what[lang]} />
 	{/if}
@@ -25,7 +30,7 @@
 		</main>
 	{:else}
 		<main>
-			<h1 class="minor">{concept.label[lang]}</h1>
+			<h1 class="minor">{pageTitle}</h1>
 			{#if concept.la !== concept.label[lang]}
 				<p class="latin-name" lang="la">{concept.la}</p>
 			{/if}

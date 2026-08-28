@@ -43,7 +43,7 @@
 			<h2 class="smallcaps">{lang === 'pl' ? 'wymowa' : 'pronunciation'}</h2>
 			<div class="cards in-two">
 				<a class="card" href="/app/{lang}/grammatica/pronuntiatio">
-					<span class="card-title">{lang === 'pl' ? 'Wymowa' : 'Pronunciation'}</span>
+					<span class="card-title">{lang === 'pl' ? 'wymowa' : 'pronunciation'}</span>
 					<span class="card-note" lang="la">pronuntiatio</span>
 				</a>
 			</div>

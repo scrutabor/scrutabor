@@ -5,6 +5,7 @@ import rootManifest from '../src/lib/data/manifest.json' with { type: 'json' };
 import englishManifest from '../src/lib/data/languages/en/manifest.json' with { type: 'json' };
 import polishManifest from '../src/lib/data/languages/pl/manifest.json' with { type: 'json' };
 import { CATALOG_ORDER } from '../src/lib/catalog-order';
+import { CONCEPTS } from '../src/lib/grammar';
 import { atRoute, bare as bareTest, expect, offlineUrl, settled, test } from './fixtures';
 
 const LATIN_TITLES = new Map(
@@ -206,8 +207,29 @@ test('grammatica index lists the concept tranche in groups', async ({ page }) =>
 	await expect(page.locator('h2', { hasText: 'przypadki' })).toBeVisible();
 	await expect(page.locator('a[href="/app/pl/grammatica/ablativus"]')).toBeVisible();
 	await expect(page.locator('a[href="/app/pl/grammatica/pronuntiatio"]')).toHaveText(
-		/Wymowa\s+pronuntiatio/
+		/wymowa\s+pronuntiatio/
 	);
+});
+
+test('reference-page titles consistently begin with a capital letter', async ({ page }) => {
+	const routes = [
+		'search',
+		'grammatica',
+		'grammatica/pronuntiatio',
+		'bibliographia',
+		'editio',
+		...CONCEPTS.map((concept) => `grammatica/${concept.id}`)
+	];
+	for (const lang of ['pl', 'en'] as const) {
+		for (const route of routes) {
+			await page.goto(`/app/${lang}/${route}`);
+			const heading = (await page.locator('h1').textContent())!.trim();
+			const firstLetter = heading.match(/\p{L}/u)?.[0];
+			expect(firstLetter, `${lang}/${route}: ${heading}`).toBe(
+				firstLetter?.toLocaleUpperCase(lang)
+			);
+		}
+	}
 });
 
 test('the prayer-book trail uses one stable local home', async ({ page }) => {
@@ -344,7 +366,7 @@ test('every kind of page opens on the same line', async ({ page }) => {
 
 test('a concept example deep-links into the prayer', async ({ page }) => {
 	await page.goto('/app/en/grammatica/deponens');
-	await expect(page.locator('h1')).toHaveText('deponent');
+	await expect(page.locator('h1')).toHaveText('Deponent');
 	await expect(page.locator('.latin-name')).toHaveText('verbum deponens');
 	await page.locator('a[href="/app/en/ordinarium/confiteor?w=w001"]').click();
 	await expect(page.locator('aside .form')).toHaveText('Confíteor');
@@ -360,7 +382,7 @@ test('landing shows the catalog and separates reference pages from edition statu
 		section.texts.map((slug) => ({ category: section.category, slug }))
 	);
 	// the cards are the texts and nothing else — the flow is not one of them
-	await expect(page.locator('.card')).toHaveCount(texts.length);
+	await expect(page.locator('.catalog-spread .card')).toHaveCount(texts.length);
 	for (const t of texts) {
 		const key = `${t.category}/${t.slug}`;
 		await expect(page.locator(`.card[href="/app/pl/${t.category}/${t.slug}"]`)).toContainText(
@@ -369,13 +391,14 @@ test('landing shows the catalog and separates reference pages from edition statu
 	}
 	const references = page.locator('.footer-links');
 	await expect(references.locator('.footer-link')).toHaveCount(2);
+	await expect(references.locator('.footer-arrow')).toHaveCount(0);
 	await expect(references.locator('a[href="/app/pl/grammatica"]')).toContainText(
 		'Pojęcia, składnia i wymowa'
 	);
 	await expect(references.locator('a[href="/app/pl/bibliographia"]')).toContainText(
 		'Źródła przekładów i objaśnień'
 	);
-	await expect(page.locator('.edition-panel')).toContainText(
+	await expect(page.locator('.working')).toContainText(
 		'Wydanie robocze przed przeglądem eksperckim'
 	);
 	const footerGeometry = await page.locator('.catalog-footer').evaluate((footer) => {
@@ -394,6 +417,22 @@ test('landing shows the catalog and separates reference pages from edition statu
 	expect(Math.abs(footerGeometry.firstLeft - footerGeometry.frameLeft)).toBeLessThanOrEqual(1);
 	expect(Math.abs(footerGeometry.lastRight - footerGeometry.frameRight)).toBeLessThanOrEqual(1);
 	expect(Math.abs(footerGeometry.widths[0] - footerGeometry.widths[1])).toBeLessThanOrEqual(1);
+	const prayerTitleSize = await page
+		.locator('.catalog-spread .card-title')
+		.first()
+		.evaluate((title) => getComputedStyle(title).fontSize);
+	for (const link of await references.locator('.footer-link').all()) {
+		const typography = await link.evaluate((element) => {
+			const title = element.querySelector('.card-title')!;
+			const note = element.querySelector('.hung-note')!;
+			return {
+				titleSize: getComputedStyle(title).fontSize,
+				noteAlign: getComputedStyle(note).textAlign
+			};
+		});
+		expect(typography.titleSize).toBe(prayerTitleSize);
+		expect(typography.noteAlign).toBe('right');
+	}
 	await expect(page.locator('.motto')).toContainText('scrutabor legem tuam');
 
 	await page.goto('/app/en');
@@ -403,9 +442,7 @@ test('landing shows the catalog and separates reference pages from edition statu
 	await expect(page.locator('.footer-links')).toContainText(
 		'Bibliography Translation and explanatory sources'
 	);
-	await expect(page.locator('.edition-panel')).toContainText(
-		'Working edition awaiting expert review'
-	);
+	await expect(page.locator('.working')).toContainText('Working edition awaiting expert review');
 });
 
 test('every reading names itself below its Latin title', async ({ page }) => {
@@ -570,13 +607,15 @@ test('the shared bibliography exposes the role and location of every source', as
 
 	await page.goto('/app/en/bibliographia');
 	await expect(page.locator('h1')).toHaveText('Bibliography');
+	await expect(page.locator('.latin-name')).toHaveCount(0);
 	await expect(page.locator('.source-meta').first()).toHaveText('lemmata');
 	await expect(page.locator('.source details[open]')).toHaveCount(0);
 });
 
 test('the edition page explains the sources and carries the working label', async ({ page }) => {
 	await page.goto('/app/pl/editio');
-	await expect(page.locator('h1')).toHaveText('o wydaniu');
+	await expect(page.locator('h1')).toHaveText('O\u00a0wydaniu');
+	await expect(page.locator('.latin-name')).toHaveCount(0);
 	await expect(page.locator('.what a[href*="whitakers-words"]')).toHaveAttribute(
 		'target',
 		'_blank'
@@ -584,7 +623,7 @@ test('the edition page explains the sources and carries the working label', asyn
 	await expect(page.locator('main')).toContainText('wydaniem roboczym');
 	// the landing's quiet label links here; reading pages no longer carry it
 	await page.goto('/app/pl');
-	await page.locator('.edition-link').click();
+	await page.locator('.working a').click();
 	await expect(page).toHaveURL(atRoute('/app/pl/editio'));
 	await page.goto('/app/pl/ordinarium/credo');
 	await expect(page.locator('.subtitle')).not.toContainText('robocze');
