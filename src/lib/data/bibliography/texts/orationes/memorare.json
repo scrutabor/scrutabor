@@ -4,7 +4,7 @@
   {
    "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
    "digital_item": "item.compendium-of-the-catechism-2005.html",
-   "role": "controlling_official_text",
+   "role": "official_text",
    "locator": {
     "section": "Appendix A — Common Prayers — Memorare"
    },
@@ -20,27 +20,9 @@
    "verified_on": "2026-08-28"
   },
   {
-   "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
-   "digital_item": "item.compendium-of-the-catechism-2005.html",
-   "role": "historical_context",
-   "locator": {
-    "section": "Appendix A — Common Prayers — Memorare"
-   },
-   "entries": [
-    {
-     "id": "use.orationes.memorare.context.compendium2005",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "Prints the selected Latin Memorare and its complete boundary."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
    "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
-   "role": "historical_context",
+   "role": "official_text",
    "locator": {
     "printed": "p. 228",
     "scan": "scan p. 247",

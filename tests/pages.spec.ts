@@ -570,6 +570,11 @@ test('the audited bibliography groups sources by role and loads exact uses on di
 		'Dokumenty urzędowe i historia liturgii',
 		'Pismo Święte, język i opracowania'
 	]);
+	const firstHeading = await page.locator('.source-section h2').first().boundingBox();
+	const firstNote = await page.locator('.source-section > header p').first().boundingBox();
+	expect(firstHeading).not.toBeNull();
+	expect(firstNote).not.toBeNull();
+	expect(firstNote!.y - (firstHeading!.y + firstHeading!.height)).toBeGreaterThanOrEqual(10);
 	const sources = page.locator('.source details');
 	expect(await sources.count()).toBeGreaterThan(0);
 	await expect(page.locator('.source details[open]')).toHaveCount(0);
@@ -586,7 +591,12 @@ test('the audited bibliography groups sources by role and loads exact uses on di
 	await breviary.locator('summary').click();
 	await expect(breviary).toHaveAttribute('open', '');
 	await expect(breviary.locator('.evidence-group').first()).toBeVisible();
-	await expect(breviary).toContainText('bezpośrednie świadectwo w zatwierdzonym wydaniu');
+	await expect(breviary.locator('.source-body')).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+	await expect(breviary.locator('.evidence-group').first()).toHaveCSS(
+		'background-color',
+		'rgba(0, 0, 0, 0)'
+	);
+	await expect(breviary).toContainText('brzmienie w zatwierdzonym wydaniu');
 	await expect(
 		breviary.getByRole('link', { name: 'Magnificat (Pieśń Maryi)' }).first()
 	).toHaveAttribute('href', /orationes\/magnificat/);

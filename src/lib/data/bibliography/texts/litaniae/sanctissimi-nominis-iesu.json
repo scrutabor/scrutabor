@@ -4,7 +4,7 @@
   {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
    "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
-   "role": "controlling_official_text",
+   "role": "official_text",
    "locator": {
     "printed": "n. 114, pp. 52–56",
     "scan": "PDF scans 69–73"
@@ -16,25 +16,6 @@
       "kind": "text"
      },
      "claim": "Direct witness for the selected Latin text and the stated text boundary."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
-   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
-   "role": "historical_context",
-   "locator": {
-    "printed": "n. 114, pp. 52–56",
-    "scan": "PDF scans 69–73"
-   },
-   "entries": [
-    {
-     "id": "use.litaniae.sanctissimi-nominis-iesu.context.ei1952",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "Prints the complete Litany of the Holy Name, including the concluding petitions."
     }
    ],
    "verified_on": "2026-08-28"

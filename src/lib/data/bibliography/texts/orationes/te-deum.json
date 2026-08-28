@@ -16,13 +16,6 @@
       "kind": "text"
      },
      "claim": "Direct witness for the selected Latin text and the stated text boundary."
-    },
-    {
-     "id": "use.orationes.te-deum.breviarium-1902-b",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "Direct witness for the selected Latin text and the stated text boundary."
     }
    ],
    "verified_on": "2026-08-28"
@@ -30,7 +23,7 @@
   {
    "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
    "digital_item": "item.compendium-of-the-catechism-2005.html",
-   "role": "controlling_official_text",
+   "role": "official_text",
    "locator": {
     "section": "Appendix A — Common Prayers — Te Deum"
    },
@@ -41,24 +34,6 @@
       "kind": "text"
      },
      "claim": "Direct witness for the selected Latin text and the stated text boundary."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
-   "digital_item": "item.compendium-of-the-catechism-2005.html",
-   "role": "historical_context",
-   "locator": {
-    "section": "Appendix A — Common Prayers — Te Deum"
-   },
-   "entries": [
-    {
-     "id": "use.orationes.te-deum.context.compendium2005",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "Prints the selected Latin Te Deum and its complete boundary."
     }
    ],
    "verified_on": "2026-08-28"
@@ -228,7 +203,7 @@
   {
    "id": "witness.orationes.te-deum.breviarium-1902-b",
    "text": "orationes.te-deum",
-   "use": "use.orationes.te-deum.breviarium-1902-b",
+   "use": "use.orationes.te-deum.breviarium-1902-a",
    "role": "approved_corroboration",
    "coverage": {
     "kind": "words",

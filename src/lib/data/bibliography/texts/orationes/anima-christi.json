@@ -4,7 +4,7 @@
   {
    "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
    "digital_item": "item.compendium-of-the-catechism-2005.html",
-   "role": "controlling_official_text",
+   "role": "official_text",
    "locator": {
     "section": "Appendix A — Common Prayers — Anima Christi"
    },
@@ -20,27 +20,9 @@
    "verified_on": "2026-08-28"
   },
   {
-   "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
-   "digital_item": "item.compendium-of-the-catechism-2005.html",
-   "role": "historical_context",
-   "locator": {
-    "section": "Appendix A — Common Prayers — Anima Christi"
-   },
-   "entries": [
-    {
-     "id": "use.orationes.anima-christi.context.compendium2005",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "Prints the selected Latin Anima Christi and its text boundary."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
    "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
-   "role": "historical_context",
+   "role": "official_text",
    "locator": {
     "printed": "pp. 73–74",
     "scan": "scan pp. 92–93",

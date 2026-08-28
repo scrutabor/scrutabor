@@ -15,13 +15,12 @@ export type BibliographySectionId =
 	| 'scripture_language_and_scholarship';
 
 export type BibliographyRole =
-	| 'controlling_official_text'
+	| 'official_text'
 	| 'direct_approved_print'
-	| 'historical_context'
 	| 'historical_wording_basis'
 	| 'historical_wording_comparator'
 	| 'official_liturgical_context'
-	| 'scripture_control';
+	| 'scripture_text';
 
 interface WorkRecord {
 	id: string;

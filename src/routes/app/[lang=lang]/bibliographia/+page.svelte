@@ -28,11 +28,11 @@
 	const copy = $derived(
 		lang === 'pl'
 			? {
-					lead: 'Bibliografia jest pogrupowana według rzeczywistej roli źródeł. Obejmuje tylko pozycje, których tożsamość, strony i użycie zostały sprawdzone bezpośrednio. Rozwiń źródło, aby zobaczyć miejsca w wydaniu oraz teksty, dla których stanowi świadectwo.',
+					lead: 'Bibliografia jest pogrupowana według funkcji źródeł. Obejmuje tylko pozycje, których tożsamość, miejsca i użycie zostały sprawdzone bezpośrednio. Rozwiń źródło, aby zobaczyć, co dokładnie poświadcza i gdzie.',
 					sections: {
 						latin_textual_sources: {
 							title: 'Łacińskie świadectwa tekstu',
-							note: 'Wydania kontrolujące łacińskie brzmienie, recenzję i strukturę tekstu.'
+							note: 'Wydania, w których zweryfikowano łacińskie brzmienie i granice tekstu.'
 						},
 						wording_witnesses: {
 							title: 'Świadectwa brzmienia przekładu',
@@ -40,7 +40,7 @@
 						},
 						official_documents_and_liturgical_history: {
 							title: 'Dokumenty urzędowe i historia liturgii',
-							note: 'Źródła poświadczające kontekst, użycie i miejsce tekstu w liturgii.'
+							note: 'Dokumenty poświadczające użycie, status lub miejsce tekstu w liturgii.'
 						},
 						scripture_language_and_scholarship: {
 							title: 'Pismo Święte, język i opracowania',
@@ -48,13 +48,12 @@
 						}
 					} satisfies Record<BibliographySectionId, { title: string; note: string }>,
 					roles: {
-						controlling_official_text: 'tekst urzędowy kontrolujący brzmienie',
-						direct_approved_print: 'bezpośrednie świadectwo w zatwierdzonym wydaniu',
-						historical_context: 'świadectwo kontekstu historycznego',
-						historical_wording_basis: 'historyczna podstawa brzmienia',
-						historical_wording_comparator: 'historyczne brzmienie porównawcze',
-						official_liturgical_context: 'urzędowe świadectwo kontekstu liturgicznego',
-						scripture_control: 'wydanie kontrolujące tekst biblijny'
+						official_text: 'brzmienie w wydaniu urzędowym',
+						direct_approved_print: 'brzmienie w zatwierdzonym wydaniu',
+						historical_wording_basis: 'podstawa brzmienia przekładu',
+						historical_wording_comparator: 'porównanie brzmienia przekładu',
+						official_liturgical_context: 'użycie liturgiczne w wydaniu urzędowym',
+						scripture_text: 'brzmienie w wydaniu biblijnym'
 					} satisfies Record<BibliographyRole, string>,
 					texts: (n: number) => polishCount(n, '1 tekst', 'teksty', 'tekstów'),
 					uses: (n: number) => polishCount(n, '1 użycie', 'użycia', 'użyć'),
@@ -70,11 +69,11 @@
 					]
 				}
 			: {
-					lead: 'The bibliography is grouped by the actual function of each source. It includes only records whose identity, pages, and use have been checked directly. Expand a source to see its locations and the texts for which it serves as evidence.',
+					lead: 'The bibliography is grouped by source function. It includes only records whose identity, locations, and use have been checked directly. Expand a source to see exactly what it supports and where.',
 					sections: {
 						latin_textual_sources: {
 							title: 'Latin textual witnesses',
-							note: 'Editions controlling the Latin wording, recension, and structure of a text.'
+							note: 'Editions in which the Latin wording and text boundaries were verified.'
 						},
 						wording_witnesses: {
 							title: 'Translation wording witnesses',
@@ -82,7 +81,7 @@
 						},
 						official_documents_and_liturgical_history: {
 							title: 'Official documents and liturgical history',
-							note: 'Sources documenting a text’s context, use, and place in the liturgy.'
+							note: 'Documents establishing a text’s use, status, or place in the liturgy.'
 						},
 						scripture_language_and_scholarship: {
 							title: 'Scripture, language, and scholarship',
@@ -90,13 +89,12 @@
 						}
 					} satisfies Record<BibliographySectionId, { title: string; note: string }>,
 					roles: {
-						controlling_official_text: 'official text controlling the wording',
-						direct_approved_print: 'direct witness in an approved edition',
-						historical_context: 'historical context witness',
-						historical_wording_basis: 'historical wording basis',
-						historical_wording_comparator: 'historical wording comparator',
-						official_liturgical_context: 'official liturgical context witness',
-						scripture_control: 'edition controlling the biblical text'
+						official_text: 'wording in an official edition',
+						direct_approved_print: 'wording in an approved edition',
+						historical_wording_basis: 'translation wording basis',
+						historical_wording_comparator: 'translation wording comparator',
+						official_liturgical_context: 'liturgical use in an official edition',
+						scripture_text: 'wording in a biblical edition'
 					} satisfies Record<BibliographyRole, string>,
 					texts: (n: number) => (n === 1 ? '1 text' : `${n} texts`),
 					uses: (n: number) => (n === 1 ? '1 use' : `${n} uses`),
@@ -113,6 +111,8 @@
 				}
 	);
 	const lead = $derived(lang === 'pl' ? bindProse(copy.lead) : copy.lead);
+	const sectionNote = (section: BibliographySectionId) =>
+		lang === 'pl' ? bindProse(copy.sections[section].note) : copy.sections[section].note;
 	const sourceKey = (source: BibliographySource) => `${source.section}:${source.id}`;
 	const location = (use: BibliographyUse) =>
 		use.kind === 'text'
@@ -156,7 +156,7 @@
 				<section class="source-section" aria-labelledby={`section-${section.id}`}>
 					<header>
 						<h2 id={`section-${section.id}`}>{copy.sections[section.id].title}</h2>
-						<p>{copy.sections[section.id].note}</p>
+						<p>{sectionNote(section.id)}</p>
 					</header>
 
 					<ul class="sources">
@@ -259,7 +259,7 @@
 	}
 
 	.source-section > header p {
-		margin: 0.35rem 0 0;
+		margin: 0.7rem 0 0;
 		color: var(--ink-soft);
 		font-size: 0.95rem;
 		line-height: 1.45;
@@ -340,17 +340,21 @@
 	}
 
 	.source-body {
-		padding: 0 1rem 1.2rem 1.9rem;
+		padding: 0.2rem 1rem 1.2rem 1.9rem;
+	}
+
+	.evidence-groups {
+		margin-inline-start: 0.15rem;
+		padding-inline-start: 1rem;
+		border-inline-start: 1px solid var(--border);
 	}
 
 	.evidence-group {
-		padding: 0.8rem 0.9rem;
-		background: color-mix(in srgb, var(--wash) 55%, transparent);
-		border-inline-start: 2px solid var(--border);
+		padding: 0.8rem 0;
 	}
 
 	.evidence-group + .evidence-group {
-		margin-top: 0.75rem;
+		border-top: 1px solid color-mix(in srgb, var(--border) 62%, transparent);
 	}
 
 	.role {

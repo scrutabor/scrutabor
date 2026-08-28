@@ -1,5 +1,5 @@
 {
- "schema_version": "1.2.0",
+ "schema_version": "1.3.0",
  "sections": [
   {
    "id": "latin_textual_sources",
@@ -22,55 +22,62 @@
     {
      "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
      "roles": [
-      "controlling_official_text"
+      "official_text"
      ],
      "texts": [
       {
        "id": "orationes.actus-contritionis",
        "roles": [
-        "controlling_official_text"
+        "official_text"
        ],
        "uses": 1
       },
       {
        "id": "orationes.angele-dei",
        "roles": [
-        "controlling_official_text"
+        "official_text"
        ],
        "uses": 1
       },
       {
        "id": "orationes.anima-christi",
        "roles": [
-        "controlling_official_text"
+        "official_text"
        ],
        "uses": 1
       },
       {
        "id": "orationes.magnificat",
        "roles": [
-        "controlling_official_text"
+        "official_text"
        ],
        "uses": 1
       },
       {
        "id": "orationes.memorare",
        "roles": [
-        "controlling_official_text"
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.sub-tuum-praesidium",
+       "roles": [
+        "official_text"
        ],
        "uses": 1
       },
       {
        "id": "orationes.symbolum-apostolorum",
        "roles": [
-        "controlling_official_text"
+        "official_text"
        ],
        "uses": 1
       },
       {
        "id": "orationes.te-deum",
        "roles": [
-        "controlling_official_text"
+        "official_text"
        ],
        "uses": 1
       }
@@ -108,27 +115,142 @@
        "roles": [
         "direct_approved_print"
        ],
-       "uses": 2
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.key-of-heaven-1901",
+     "roles": [
+      "direct_approved_print"
+     ],
+     "texts": [
+      {
+       "id": "orationes.alma-redemptoris-mater",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.ave-regina-caelorum",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.katolik-w-modlitwie-1902",
+     "roles": [
+      "direct_approved_print"
+     ],
+     "texts": [
+      {
+       "id": "orationes.alma-redemptoris-mater",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.ave-regina-caelorum",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
       }
      ]
     },
     {
      "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
      "roles": [
-      "controlling_official_text"
+      "official_text"
      ],
      "texts": [
       {
+       "id": "defunctorum.requiem-aeternam",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "litaniae.lauretanae",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "litaniae.sacratissimi-cordis-iesu",
        "roles": [
-        "controlling_official_text"
+        "official_text"
        ],
        "uses": 1
       },
       {
        "id": "litaniae.sanctissimi-nominis-iesu",
        "roles": [
-        "controlling_official_text"
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.angelus-domini",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.anima-christi",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.deus-refugium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.memorare",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.enchiridion-indulgentiarum-fourth-edition",
+     "roles": [
+      "official_text"
+     ],
+     "texts": [
+      {
+       "id": "orationes.agimus-tibi-gratias",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.angelus-domini",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.benedic-domine",
+       "roles": [
+        "official_text"
        ],
        "uses": 1
       }
@@ -812,63 +934,6 @@
    "id": "official_documents_and_liturgical_history",
    "entries": [
     {
-     "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
-     "roles": [
-      "historical_context"
-     ],
-     "texts": [
-      {
-       "id": "orationes.actus-contritionis",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.angele-dei",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.anima-christi",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.memorare",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.sub-tuum-praesidium",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.symbolum-apostolorum",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.te-deum",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      }
-     ]
-    },
-    {
      "edition": "edition.breviarium-romanum.1902-pustet",
      "roles": [
       "official_liturgical_context"
@@ -884,98 +949,11 @@
      ]
     },
     {
-     "edition": "edition.key-of-heaven-1901",
-     "roles": [
-      "historical_context"
-     ],
-     "texts": [
-      {
-       "id": "orationes.alma-redemptoris-mater",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.ave-regina-caelorum",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      }
-     ]
-    },
-    {
-     "edition": "edition.katolik-w-modlitwie-1902",
-     "roles": [
-      "historical_context"
-     ],
-     "texts": [
-      {
-       "id": "orationes.alma-redemptoris-mater",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.ave-regina-caelorum",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      }
-     ]
-    },
-    {
      "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
      "roles": [
-      "historical_context",
       "official_liturgical_context"
      ],
      "texts": [
-      {
-       "id": "defunctorum.requiem-aeternam",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "litaniae.lauretanae",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "litaniae.sacratissimi-cordis-iesu",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "litaniae.sanctissimi-nominis-iesu",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.angelus-domini",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.anima-christi",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
       {
        "id": "orationes.cor-iesu",
        "roles": [
@@ -984,23 +962,9 @@
        "uses": 1
       },
       {
-       "id": "orationes.deus-refugium",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.memorare",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
        "id": "orationes.regina-caeli",
        "roles": [
-        "historical_context"
+        "official_liturgical_context"
        ],
        "uses": 1
       },
@@ -1019,35 +983,6 @@
        "uses": 1
       }
      ]
-    },
-    {
-     "edition": "edition.enchiridion-indulgentiarum-fourth-edition",
-     "roles": [
-      "historical_context"
-     ],
-     "texts": [
-      {
-       "id": "orationes.agimus-tibi-gratias",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.angelus-domini",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.benedic-domine",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      }
-     ]
     }
    ]
   },
@@ -1057,13 +992,13 @@
     {
      "edition": "edition.biblia-sacra-vulgatae-editionis-1914",
      "roles": [
-      "scripture_control"
+      "scripture_text"
      ],
      "texts": [
       {
        "id": "defunctorum.de-profundis",
        "roles": [
-        "scripture_control"
+        "scripture_text"
        ],
        "uses": 1
       }
