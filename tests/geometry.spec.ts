@@ -1,4 +1,4 @@
-import { expect, test } from './fixtures';
+import { bare as test, expect } from './fixtures';
 
 const PAGES = [
 	'/app/pl/ordo/catechumenorum',
@@ -86,7 +86,7 @@ test('reading modes preserve the book geometry @online @sweep', async ({ page })
 			for (const mode of MODES) {
 				await page.evaluate((value) => localStorage.setItem('scrutabor-help', String(value)), mode);
 				await page.goto(url);
-				await expect(page.locator('html')).toHaveAttribute('data-hydrated', 'true');
+				await expect(page.locator('html')).toHaveAttribute('data-help', String(mode));
 				await expect(page.locator('main')).toBeVisible();
 				await page.evaluate(() => document.fonts.ready);
 
