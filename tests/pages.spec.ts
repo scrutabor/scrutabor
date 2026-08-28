@@ -596,10 +596,19 @@ test('the audited bibliography groups sources by role and loads exact uses on di
 		'background-color',
 		'rgba(0, 0, 0, 0)'
 	);
-	await expect(breviary).toContainText('brzmienie w zatwierdzonym wydaniu');
+	await expect(breviary).toContainText('świadectwo tekstu łacińskiego');
+	await expect(breviary).not.toContainText('zatwierdzonym wydaniu');
 	await expect(
 		breviary.getByRole('link', { name: 'Magnificat (Pieśń Maryi)' }).first()
 	).toHaveAttribute('href', /orationes\/magnificat/);
+
+	const compendium = page
+		.locator('.source-section')
+		.filter({ has: page.getByRole('heading', { name: 'Łacińskie świadectwa tekstu' }) })
+		.locator('details', { hasText: 'Compendium of the Catechism of the Catholic Church' });
+	await compendium.locator('summary').click();
+	await expect(compendium).toContainText('świadectwo tekstu łacińskiego');
+	await expect(compendium).not.toContainText('wydaniu urzędowym');
 
 	const gazeta = page.locator('details', {
 		hasText: 'Gazeta Kościelna, R. 9, nr 16'

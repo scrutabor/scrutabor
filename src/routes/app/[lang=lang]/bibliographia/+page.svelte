@@ -48,12 +48,12 @@
 						}
 					} satisfies Record<BibliographySectionId, { title: string; note: string }>,
 					roles: {
-						official_text: 'brzmienie w wydaniu urzędowym',
-						direct_approved_print: 'brzmienie w zatwierdzonym wydaniu',
+						official_text: 'świadectwo tekstu łacińskiego',
+						direct_approved_print: 'świadectwo tekstu łacińskiego',
 						historical_wording_basis: 'podstawa brzmienia przekładu',
 						historical_wording_comparator: 'porównanie brzmienia przekładu',
-						official_liturgical_context: 'użycie liturgiczne w wydaniu urzędowym',
-						scripture_text: 'brzmienie w wydaniu biblijnym'
+						official_liturgical_context: 'świadectwo użycia liturgicznego',
+						scripture_text: 'świadectwo tekstu biblijnego'
 					} satisfies Record<BibliographyRole, string>,
 					texts: (n: number) => polishCount(n, '1 tekst', 'teksty', 'tekstów'),
 					uses: (n: number) => polishCount(n, '1 użycie', 'użycia', 'użyć'),
@@ -89,12 +89,12 @@
 						}
 					} satisfies Record<BibliographySectionId, { title: string; note: string }>,
 					roles: {
-						official_text: 'wording in an official edition',
-						direct_approved_print: 'wording in an approved edition',
+						official_text: 'Latin textual witness',
+						direct_approved_print: 'Latin textual witness',
 						historical_wording_basis: 'translation wording basis',
 						historical_wording_comparator: 'translation wording comparator',
-						official_liturgical_context: 'liturgical use in an official edition',
-						scripture_text: 'wording in a biblical edition'
+						official_liturgical_context: 'liturgical-use witness',
+						scripture_text: 'biblical-text witness'
 					} satisfies Record<BibliographyRole, string>,
 					texts: (n: number) => (n === 1 ? '1 text' : `${n} texts`),
 					uses: (n: number) => (n === 1 ? '1 use' : `${n} uses`),
