@@ -39,10 +39,6 @@ export interface Messages {
 	searchTitles: string;
 	searchContents: string;
 	searchGrammar: string;
-	searchResultTitle: string;
-	searchResultLatin: string;
-	searchResultTranslation: string;
-	searchResultGrammar: string;
 	searchMatchedAlias: string;
 	searchCount: (n: number) => string;
 	close: string;
@@ -181,11 +177,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		searchRetry: 'spróbuj ponownie',
 		searchTitles: 'tytuły modlitw',
 		searchContents: 'fragmenty tekstów',
-		searchGrammar: 'analiza gramatyczna',
-		searchResultTitle: 'tytuł',
-		searchResultLatin: 'tekst łaciński',
-		searchResultTranslation: 'przekład polski',
-		searchResultGrammar: 'gramatyka',
+		searchGrammar: 'gramatyka',
 		searchMatchedAlias: 'znaleziono także jako',
 		searchCount: (n) =>
 			`Znaleziono ${n} ${
@@ -350,11 +342,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		searchRetry: 'try again',
 		searchTitles: 'prayer titles',
 		searchContents: 'text passages',
-		searchGrammar: 'grammatical analysis',
-		searchResultTitle: 'title',
-		searchResultLatin: 'Latin text',
-		searchResultTranslation: 'English translation',
-		searchResultGrammar: 'grammar',
+		searchGrammar: 'grammar',
 		searchMatchedAlias: 'also found as',
 		searchCount: (n) => `${n} ${n === 1 ? 'result' : 'results'} found.`,
 		close: 'close',

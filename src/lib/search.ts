@@ -1,4 +1,4 @@
-import { catalogFor, sectionFor } from './catalog';
+import { catalogFor } from './catalog';
 import { CONCORDANCE, everyTextInOrder, type LatinPosting } from './concordance';
 import { LEXICON, loadSenses, loadTexts, type TextEntry } from './corpus';
 import {
@@ -22,7 +22,6 @@ export interface TitleSearchResult {
 	textKey: string;
 	title: string;
 	latinTitle: string;
-	context: string;
 	matchedAlias?: string;
 	href: string;
 }
@@ -33,7 +32,6 @@ export interface ContentSearchResult {
 	segmentId: string;
 	title: string;
 	latinTitle: string;
-	context: string;
 	source: 'la' | Lang;
 	parts: SnippetPart[];
 	href: string;
@@ -247,7 +245,6 @@ function titlesFor(query: string[], lang: Lang, exactLatinForm: boolean): TitleS
 					textKey,
 					title: displayTitle,
 					latinTitle: text.title,
-					context: section.label[lang],
 					matchedAlias: best.alias ? best.value : undefined,
 					href: `/app/${lang}/${textKey}`,
 					_score: [best.rank, Number(best.alias), best.cost, sectionRank, textRank]
@@ -424,16 +421,11 @@ function translatedSnippet(entry: TextEntry, segmentId: string, query: string[])
 	]);
 }
 
-function resultTitle(
-	textKey: string,
-	lang: Lang
-): { title: string; latinTitle: string; context: string } {
-	const [category] = textKey.split('/');
+function resultTitle(textKey: string, lang: Lang): { title: string; latinTitle: string } {
 	const latinTitle = textMetadataFor(textKey)?.title ?? textKey;
 	return {
 		title: languageTextMetadataFor(textKey, lang)?.title ?? latinTitle,
-		latinTitle,
-		context: sectionFor(category)?.label[lang] ?? category
+		latinTitle
 	};
 }
 

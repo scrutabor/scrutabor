@@ -43,10 +43,9 @@ test('title, passage, and grammar results remain visibly separate', async ({ pag
 	await field.fill('Pater');
 
 	const headings = page.locator('.results h2');
-	await expect(headings).toHaveText(['tytuły modlitw', 'fragmenty tekstów', 'analiza gramatyczna']);
-	await expect(page.getByText('tytuł', { exact: true }).first()).toBeVisible();
-	await expect(page.getByText('tekst łaciński', { exact: true }).first()).toBeVisible();
-	await expect(page.getByText('gramatyka', { exact: true }).first()).toBeVisible();
+	await expect(headings).toHaveText(['tytuły modlitw', 'gramatyka', 'fragmenty tekstów']);
+	await expect(page.locator('.search-result-badge')).toHaveCount(0);
+	await expect(page.locator('.search-result-context')).toHaveCount(0);
 	await expect(page.locator('#search-titles + ul li').first()).toContainText('Ojcze nasz');
 });
 

@@ -685,8 +685,8 @@ h2 {
 
 .search-result {
 	display: grid;
-	grid-template-columns: auto minmax(0, 1fr);
-	gap: 0.2rem 0.75rem;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 0.2rem;
 	padding: 0.85rem 1rem;
 	color: inherit;
 	text-decoration: none;
@@ -701,29 +701,14 @@ h2 {
 	line-height: 1.25;
 }
 
-.search-result-badge {
-	grid-row: 1 / span 3;
-	align-self: start;
-	min-width: 6.2rem;
-	padding: 0.16rem 0.35rem;
-	border: 1px solid var(--border);
-	border-radius: 0.25rem;
-	color: var(--rubric);
-	font-size: 0.72rem;
-	line-height: 1.2;
-	text-align: center;
-}
-
 .search-result-detail {
-	grid-column: 2;
 	min-width: 0;
 	overflow-wrap: anywhere;
 }
 
-.search-result-context {
+.matched-alias {
 	color: var(--ink-soft);
-	font-size: 0.72rem;
-	letter-spacing: 0.05em;
+	font-style: italic;
 }
 
 /* A list of links as cards — the catalogue of texts, the grammar index.
@@ -738,18 +723,7 @@ h2 {
 
 @media (max-width: 28rem) {
 	.search-result {
-		grid-template-columns: minmax(0, 1fr);
 		padding: 0.8rem 0.85rem;
-	}
-
-	.search-result-badge {
-		grid-row: auto;
-		width: fit-content;
-		min-width: 0;
-	}
-
-	.search-result .search-result-detail {
-		grid-column: 1;
 	}
 }
 

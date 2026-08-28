@@ -21,15 +21,13 @@
 	{#each results as result (result.textKey)}
 		<li>
 			<SearchResultLink href={result.href} {saveBeforeNavigation} {onResult}>
-				<span class="search-result-badge">{msgs.searchResultTitle}</span>
 				<strong>{result.title}</strong>
 				{#if result.latinTitle !== result.title}<span class="search-result-detail" lang="la"
 						>{result.latinTitle}</span
 					>{/if}
-				{#if result.matchedAlias}<span class="search-result-detail"
+				{#if result.matchedAlias}<span class="search-result-detail matched-alias"
 						>{msgs.searchMatchedAlias}: {result.matchedAlias}</span
 					>{/if}
-				<span class="search-result-detail search-result-context smallcaps">{result.context}</span>
 			</SearchResultLink>
 		</li>
 	{/each}
