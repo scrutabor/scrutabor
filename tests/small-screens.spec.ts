@@ -9,7 +9,7 @@
 // the folded rows of the ordo, the catalogue cards, the movement heads,
 // the concordance rows, the mode control, the nav itself — and not one of
 // them was visible at the size and width a developer happens to be using.
-import { expect, settled, test } from './fixtures';
+import { bare, expect, settled, test } from './fixtures';
 
 // One of each SHAPE of page rather than one of each page: the failures
 // are in the layouts, and the layouts repeat.
@@ -32,17 +32,17 @@ const PAGES = [
 const WIDTHS = [320, 390, 768, 1024];
 const SIZES = ['normal', 'larger', 'largest'];
 
-test('nothing runs off the screen, at any width and any text size', async ({ page }) => {
+bare('nothing runs off the screen, at any width and any text size', async ({ page }) => {
 	// 120 combinations, and each one used to cost TWO page loads: a goto to
 	// get an origin to write localStorage on, then a reload to make the
 	// setting take. The setting outlives a navigation — localStorage is per
 	// origin, not per page — so it is written once per size and every goto
 	// after it already has it. 240 loads become 123.
 	//
-	// That is not tidying. Each load waits for hydration and for the
-	// webfont, which is 8 seconds here and several times that on a CI
-	// runner with two cores, and this sweep ran out of its budget there
-	// while passing locally.
+	// This is a measurement sweep over prerendered surfaces, so it uses the
+	// bare fixture: app.html applies the stored size synchronously, and the
+	// assertions below wait for that exact state and for the webfont. Full
+	// hydration on every cell adds no evidence and can starve under CI load.
 	test.setTimeout(180_000);
 	const damage: string[] = [];
 	for (const size of SIZES) {
@@ -53,6 +53,9 @@ test('nothing runs off the screen, at any width and any text size', async ({ pag
 			for (const url of PAGES) {
 				// named, so a failure says which of the 120 it was on
 				await test.step(`${url} at ${width}px/${size}`, () => page.goto(url));
+				await expect(page.locator('html')).toHaveAttribute('data-reading', size);
+				await expect(page.locator('main')).toBeVisible();
+				await page.evaluate(() => document.fonts.ready);
 				const bad = await page.evaluate(() => {
 					const vw = document.documentElement.clientWidth;
 					const over = document.documentElement.scrollWidth - vw;
