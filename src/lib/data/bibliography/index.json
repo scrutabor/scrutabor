@@ -1,5 +1,5 @@
 {
- "schema_version": "1.1.0",
+ "schema_version": "1.2.0",
  "sections": [
   {
    "id": "latin_textual_sources",
@@ -14,6 +14,63 @@
        "id": "orationes.te-deum",
        "roles": [
         "direct_approved_print"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
+     "roles": [
+      "controlling_official_text"
+     ],
+     "texts": [
+      {
+       "id": "orationes.actus-contritionis",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.angele-dei",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.anima-christi",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.magnificat",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.memorare",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.symbolum-apostolorum",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.te-deum",
+       "roles": [
+        "controlling_official_text"
        ],
        "uses": 1
       }
@@ -56,63 +113,6 @@
      ]
     },
     {
-     "edition": "edition.compendium-ccc.2005",
-     "roles": [
-      "controlling_official_text"
-     ],
-     "texts": [
-      {
-       "id": "orationes.actus-contritionis",
-       "roles": [
-        "controlling_official_text"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.angele-dei",
-       "roles": [
-        "controlling_official_text"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.anima-christi",
-       "roles": [
-        "controlling_official_text"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.magnificat",
-       "roles": [
-        "controlling_official_text"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.memorare",
-       "roles": [
-        "controlling_official_text"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.symbolum-apostolorum",
-       "roles": [
-        "controlling_official_text"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.te-deum",
-       "roles": [
-        "controlling_official_text"
-       ],
-       "uses": 1
-      }
-     ]
-    },
-    {
      "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
      "roles": [
       "controlling_official_text"
@@ -146,43 +146,6 @@
      ],
      "texts": [
       {
-       "id": "orationes.sub-tuum-praesidium",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.symbolum-apostolorum",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      }
-     ]
-    },
-    {
-     "edition": "edition.breviarium-romanum.1902-pustet",
-     "roles": [
-      "official_liturgical_context"
-     ],
-     "texts": [
-      {
-       "id": "orationes.magnificat",
-       "roles": [
-        "official_liturgical_context"
-       ],
-       "uses": 1
-      }
-     ]
-    },
-    {
-     "edition": "edition.compendium-ccc.2005",
-     "roles": [
-      "historical_context"
-     ],
-     "texts": [
-      {
        "id": "orationes.actus-contritionis",
        "roles": [
         "historical_context"
@@ -211,9 +174,38 @@
        "uses": 1
       },
       {
+       "id": "orationes.sub-tuum-praesidium",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.symbolum-apostolorum",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
        "id": "orationes.te-deum",
        "roles": [
         "historical_context"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.breviarium-romanum.1902-pustet",
+     "roles": [
+      "official_liturgical_context"
+     ],
+     "texts": [
+      {
+       "id": "orationes.magnificat",
+       "roles": [
+        "official_liturgical_context"
        ],
        "uses": 1
       }

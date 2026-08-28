@@ -2,11 +2,11 @@
  "id": "orationes.actus-contritionis",
  "source_groups": [
   {
-   "edition": "edition.compendium-ccc.2005",
-   "digital_item": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
+   "digital_item": "item.compendium-of-the-catechism-2005.html",
    "role": "controlling_official_text",
    "locator": {
-    "section": "printed/PDF p. 209, Actus contritionis"
+    "section": "Appendix A — Common Prayers — Actus contritionis"
    },
    "entries": [
     {
@@ -20,11 +20,11 @@
    "verified_on": "2026-08-28"
   },
   {
-   "edition": "edition.compendium-ccc.2005",
-   "digital_item": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
+   "digital_item": "item.compendium-of-the-catechism-2005.html",
    "role": "historical_context",
    "locator": {
-    "section": "Appendix B, Actus contritionis, p. 209"
+    "section": "Appendix A — Common Prayers — Actus contritionis"
    },
    "entries": [
     {

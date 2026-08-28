@@ -1,5 +1,5 @@
 {
- "schema_version": "1.1.0",
+ "schema_version": "1.2.0",
  "sections": [
   {
    "id": "latin_textual_sources",
@@ -20,43 +20,7 @@
      ]
     },
     {
-     "edition": "edition.breviarium-romanum.1902-pustet",
-     "roles": [
-      "direct_approved_print"
-     ],
-     "texts": [
-      {
-       "id": "orationes.agimus-tibi-gratias",
-       "roles": [
-        "direct_approved_print"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.benedic-domine",
-       "roles": [
-        "direct_approved_print"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.magnificat",
-       "roles": [
-        "direct_approved_print"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.te-deum",
-       "roles": [
-        "direct_approved_print"
-       ],
-       "uses": 2
-      }
-     ]
-    },
-    {
-     "edition": "edition.compendium-ccc.2005",
+     "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
      "roles": [
       "controlling_official_text"
      ],
@@ -109,6 +73,42 @@
         "controlling_official_text"
        ],
        "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.breviarium-romanum.1902-pustet",
+     "roles": [
+      "direct_approved_print"
+     ],
+     "texts": [
+      {
+       "id": "orationes.agimus-tibi-gratias",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.benedic-domine",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.magnificat",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.te-deum",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 2
       }
      ]
     },
@@ -1250,43 +1250,6 @@
      ],
      "texts": [
       {
-       "id": "orationes.sub-tuum-praesidium",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "orationes.symbolum-apostolorum",
-       "roles": [
-        "historical_context"
-       ],
-       "uses": 1
-      }
-     ]
-    },
-    {
-     "edition": "edition.breviarium-romanum.1902-pustet",
-     "roles": [
-      "official_liturgical_context"
-     ],
-     "texts": [
-      {
-       "id": "orationes.magnificat",
-       "roles": [
-        "official_liturgical_context"
-       ],
-       "uses": 1
-      }
-     ]
-    },
-    {
-     "edition": "edition.compendium-ccc.2005",
-     "roles": [
-      "historical_context"
-     ],
-     "texts": [
-      {
        "id": "orationes.actus-contritionis",
        "roles": [
         "historical_context"
@@ -1315,9 +1278,38 @@
        "uses": 1
       },
       {
+       "id": "orationes.sub-tuum-praesidium",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.symbolum-apostolorum",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
        "id": "orationes.te-deum",
        "roles": [
         "historical_context"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.breviarium-romanum.1902-pustet",
+     "roles": [
+      "official_liturgical_context"
+     ],
+     "texts": [
+      {
+       "id": "orationes.magnificat",
+       "roles": [
+        "official_liturgical_context"
        ],
        "uses": 1
       }

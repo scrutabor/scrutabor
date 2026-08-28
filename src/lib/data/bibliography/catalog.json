@@ -1,5 +1,5 @@
 {
- "schema_version": "1.1.0",
+ "schema_version": "1.2.0",
  "works": [
   {
    "id": "work.biblia-sacra-vulgatae-editionis",
@@ -10,11 +10,6 @@
    "id": "work.breviarium-romanum",
    "responsible": "Ecclesia Catholica",
    "title": "Breviarium Romanum"
-  },
-  {
-   "id": "work.compendium-catechismi-catholicae-ecclesiae",
-   "responsible": "Ecclesia Catholica",
-   "title": "Compendium Catechismi Catholicae Ecclesiae"
   },
   {
    "id": "work.compendium-of-the-catechism-of-the-catholic-church",
@@ -49,6 +44,9 @@
    "year": "1914",
    "publication_type": "scripture",
    "authority": "scriptural_edition",
+   "languages": [
+    "la"
+   ],
    "rights": {
     "status": "public-domain",
     "basis": "Printing of 1914."
@@ -65,23 +63,12 @@
    "year": "1902",
    "publication_type": "breviary",
    "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "la"
+   ],
    "rights": {
     "status": "public-domain",
     "basis": "The identified 1902 edition is in the public domain."
-   }
-  },
-  {
-   "id": "edition.compendium-ccc.2005",
-   "work": "work.compendium-catechismi-catholicae-ecclesiae",
-   "recension": "Official Latin prayer appendix",
-   "title": "Katalikų Bažnyčios katekizmo santrauka",
-   "edition_statement": "Official Lithuanian edition with Latin appendix",
-   "year": "2005",
-   "publication_type": "official_act",
-   "authority": "official_document",
-   "rights": {
-    "status": "unverified",
-    "basis": "No republication licence is asserted; the graph exposes only bibliographic facts and locators."
    }
   },
   {
@@ -91,6 +78,10 @@
    "year": "2005",
    "publication_type": "official_act",
    "authority": "official_document",
+   "languages": [
+    "en",
+    "la"
+   ],
    "rights": {
     "status": "permission",
     "basis": "Libreria Editrice Vaticana."
@@ -103,6 +94,9 @@
    "year": "1999",
    "publication_type": "official_act",
    "authority": "official_document",
+   "languages": [
+    "la"
+   ],
    "rights": {
     "status": "unverified",
     "basis": "Edition and year not established here."
@@ -118,6 +112,9 @@
    "year": "1952",
    "publication_type": "official_act",
    "authority": "official_document",
+   "languages": [
+    "la"
+   ],
    "rights": {
     "status": "unverified",
     "basis": "No republication licence is asserted; the graph exposes only bibliographic facts and locators."
@@ -131,6 +128,9 @@
    "year": "1902",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "pl"
+   ],
    "rights": {
     "status": "unverified",
     "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
@@ -145,6 +145,9 @@
    "year": "1901",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "en"
+   ],
    "rights": {
     "status": "public-domain",
     "basis": "United States devotional manual published in 1901, before 1931; only wording verified in this edition is cited."
@@ -159,6 +162,10 @@
    "year": "1961",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "en",
+    "la"
+   ],
    "rights": {
     "status": "unverified",
     "basis": "No republication licence is asserted; the graph exposes only bibliographic facts and locators."
@@ -185,17 +192,9 @@
    "access": "open"
   },
   {
-   "id": "item.compendium-ccc.2005.vatican-pdf-lt",
-   "edition": "edition.compendium-ccc.2005",
-   "repository": "The Holy See",
-   "kind": "born-digital",
-   "record_url": "https://www.vatican.va/archive/compendium_ccc/documents/compendium_catech_lit.pdf",
-   "access": "open"
-  },
-  {
    "id": "item.compendium-of-the-catechism-2005.html",
    "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
-   "repository": "Holy See",
+   "repository": "The Holy See",
    "kind": "born-digital",
    "record_url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html",
    "access": "open"

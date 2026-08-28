@@ -8,7 +8,7 @@
   "st":"working-edition",
   "ad":1,
   "adw":2,
-  "ac":[408,409],
+  "ac":[425,409],
   "seg":[
     {"id":"s01","type":"verse","speaker":"omnes","w":[{"i":"w001","f":"Te","l":"tu","m":4},{"i":"w002","f":"Deum","l":"deus","m":35},{"i":"w003","f":"laudámus","l":"laudo","p":":","m":241},{"i":"w004","f":"te","l":"tu","m":4},{"i":"w005","f":"Dóminum","l":"dominus","m":35},{"i":"w006","f":"confitémur","l":"confiteor","p":".","m":431}]},
     {"id":"s02","type":"verse","speaker":"omnes","w":[{"i":"w007","f":"Te","l":"tu","m":4},{"i":"w008","f":"ætérnum","l":"aeternus","m":96,"h":"w009"},{"i":"w009","f":"Patrem","l":"pater","p":",","m":162},{"i":"w010","f":"omnis","l":"omnis","m":25,"h":"w011"},{"i":"w011","f":"terra","l":"terra","m":24},{"i":"w012","f":"venerátur","l":"veneror","p":".","m":432}]},

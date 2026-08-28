@@ -1,5 +1,5 @@
 {
- "schema_version": "1.1.0",
+ "schema_version": "1.2.0",
  "works": [
   {
    "id": "work.dwutygodnik-dyecezalny-wilenski",
@@ -37,6 +37,9 @@
    "year": "1911",
    "publication_type": "periodical",
    "authority": "official_document",
+   "languages": [
+    "pl"
+   ],
    "rights": {
     "status": "unverified",
     "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
@@ -49,6 +52,9 @@
    "year": "1901",
    "publication_type": "periodical",
    "authority": "historical_devotional_edition",
+   "languages": [
+    "pl"
+   ],
    "rights": {
     "status": "unverified",
     "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
@@ -62,6 +68,9 @@
    "year": "1925",
    "publication_type": "other",
    "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "pl"
+   ],
    "rights": {
     "status": "unverified",
     "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
@@ -75,6 +84,9 @@
    "year": "1883",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "pl"
+   ],
    "rights": {
     "status": "unverified",
     "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
@@ -87,6 +99,9 @@
    "year": "1907",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "pl"
+   ],
    "rights": {
     "status": "unverified",
     "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
@@ -100,6 +115,9 @@
    "year": "1903",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "pl"
+   ],
    "rights": {
     "status": "unverified",
     "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
