@@ -201,9 +201,13 @@ test('a global lemma note does not pretend that a verse is present', async ({ pa
 
 test('grammatica index lists the concept tranche in groups', async ({ page }) => {
 	await page.goto('/app/pl/grammatica');
+	await expect(page.locator('h1')).toHaveText('Gramatyka');
 	await expect(page.locator('.card')).toHaveCount(11);
 	await expect(page.locator('h2', { hasText: 'przypadki' })).toBeVisible();
 	await expect(page.locator('a[href="/app/pl/grammatica/ablativus"]')).toBeVisible();
+	await expect(page.locator('a[href="/app/pl/grammatica/pronuntiatio"]')).toHaveText(
+		/Wymowa\s+pronuntiatio/
+	);
 });
 
 test('the prayer-book trail uses one stable local home', async ({ page }) => {
@@ -216,7 +220,7 @@ test('the prayer-book trail uses one stable local home', async ({ page }) => {
 	await expect(trail.locator('li')).toHaveCount(2);
 	await expect(trail.locator('a.home')).toHaveAttribute('href', '/app/pl');
 	await expect(trail.locator('a.home')).toHaveAttribute('aria-label', 'strona główna modlitewnika');
-	await expect(trail.locator('a').last()).toHaveText('gramatyka');
+	await expect(trail.locator('a').last()).toHaveText('Gramatyka');
 
 	// The last crumb is the way up; one level up only local home remains.
 	await trail.locator('a').last().click();
@@ -347,7 +351,9 @@ test('a concept example deep-links into the prayer', async ({ page }) => {
 	await expect(page.locator('.word.selected')).toBeInViewport();
 });
 
-test('landing shows the catalog and a quiet grammar link', async ({ page }) => {
+test('landing shows the catalog and separates reference pages from edition status', async ({
+	page
+}) => {
 	await page.goto('/app/pl');
 	// exactly the catalog, nothing dropped and nothing invented
 	const texts = CATALOG_ORDER.flatMap((section) =>
@@ -361,8 +367,45 @@ test('landing shows the catalog and a quiet grammar link', async ({ page }) => {
 			LATIN_TITLES.get(key)!
 		);
 	}
-	await expect(page.locator('a[href="/app/pl/grammatica"]')).toBeVisible();
+	const references = page.locator('.footer-links');
+	await expect(references.locator('.footer-link')).toHaveCount(2);
+	await expect(references.locator('a[href="/app/pl/grammatica"]')).toContainText(
+		'Pojęcia, składnia i wymowa'
+	);
+	await expect(references.locator('a[href="/app/pl/bibliographia"]')).toContainText(
+		'Źródła i dokładne odsyłacze'
+	);
+	await expect(page.locator('.edition-panel')).toContainText(
+		'Wydanie robocze przed przeglądem eksperckim'
+	);
+	const footerGeometry = await page.locator('.catalog-footer').evaluate((footer) => {
+		const frame = footer.getBoundingClientRect();
+		const links = [...footer.querySelectorAll('.footer-link')].map((link) =>
+			link.getBoundingClientRect()
+		);
+		return {
+			frameLeft: frame.left,
+			frameRight: frame.right,
+			firstLeft: links[0].left,
+			lastRight: links.at(-1)!.right,
+			widths: links.map((link) => link.width)
+		};
+	});
+	expect(Math.abs(footerGeometry.firstLeft - footerGeometry.frameLeft)).toBeLessThanOrEqual(1);
+	expect(Math.abs(footerGeometry.lastRight - footerGeometry.frameRight)).toBeLessThanOrEqual(1);
+	expect(Math.abs(footerGeometry.widths[0] - footerGeometry.widths[1])).toBeLessThanOrEqual(1);
 	await expect(page.locator('.motto')).toContainText('scrutabor legem tuam');
+
+	await page.goto('/app/en');
+	await expect(page.locator('.footer-links')).toContainText(
+		'Grammar Concepts, syntax, and pronunciation'
+	);
+	await expect(page.locator('.footer-links')).toContainText(
+		'Bibliography Sources and exact references'
+	);
+	await expect(page.locator('.edition-panel')).toContainText(
+		'Working edition awaiting expert review'
+	);
 });
 
 test('every reading names itself below its Latin title', async ({ page }) => {
@@ -392,7 +435,7 @@ test('lemma page shows the headword pronunciation', async ({ page }) => {
 
 test('pronuntiatio page carries the rules and links into the prayers', async ({ page }) => {
 	await page.goto('/app/pl/grammatica/pronuntiatio');
-	await expect(page.locator('h1')).toHaveText('wymowa');
+	await expect(page.locator('h1')).toHaveText('Wymowa');
 	await expect(page.locator('table').first()).toContainText('cælis');
 	await page.locator('a[href="/app/pl/orationes/pater-noster?w=w006"]').click();
 	await expect(page.locator('aside .form')).toHaveText('cælis');
@@ -481,18 +524,30 @@ test('the sitemap lists both languages of every surface', async ({ request }) =>
 
 test('the shared bibliography exposes exact sources and their uses', async ({ page }) => {
 	await page.goto('/app/pl/bibliographia');
-	await expect(page.locator('h1')).toHaveText('bibliografia');
-	const missal = page.locator('section', { hasText: 'Missale Romanum (1962)' });
+	await expect(page.locator('h1')).toHaveText('Bibliografia');
+	const sources = page.locator('.source details');
+	expect(await sources.count()).toBeGreaterThan(0);
+	await expect(page.locator('.source details[open]')).toHaveCount(0);
+
+	const missal = page.locator('details', { hasText: 'Missale Romanum (1962)' });
+	await expect(missal.locator('.source-body')).not.toBeVisible();
+	await missal.locator('summary').click();
+	await expect(missal).toHaveAttribute('open', '');
 	await expect(missal).toContainText('Ritus servandus in celebratione Missae');
 	const blessingUse = missal
 		.locator('li', { hasText: 'rubric before Benedicat vos' })
 		.getByRole('link', { name: 'Benedícat vos omnípotens Deus', exact: true });
 	await expect(blessingUse).toHaveAttribute('href', /ordinarium\/benedictio(?:\.html)?#s01$/);
-	await expect(page.getByRole('link', { name: '6, 3' })).toHaveAttribute('rel', /noopener/);
+	const linkedSource = page
+		.locator('details', { has: page.locator('a.locator-reference', { hasText: '6, 3' }) })
+		.first();
+	await linkedSource.locator('summary').click();
+	await expect(linkedSource.getByRole('link', { name: /6, 3/ })).toHaveAttribute('rel', /noopener/);
 
-	const wujek = page.locator('section', {
+	const wujek = page.locator('details', {
 		hasText: 'Biblia w przekładzie ks. Jakuba Wujka (1923)'
 	});
+	await wujek.locator('summary').click();
 	const namingStanza = wujek.locator('li', {
 		hasText: 'Psalm 118:33–40, DjVu scan 588'
 	});
@@ -501,6 +556,11 @@ test('the shared bibliography exposes exact sources and their uses', async ({ pa
 	await expect(
 		namingStanza.getByRole('link', { name: 'Psalmus 118, HE', exact: true })
 	).toHaveAttribute('href', /psalmi\/118-he(?:\.html)?#v33$/);
+
+	await page.goto('/app/en/bibliographia');
+	await expect(page.locator('h1')).toHaveText('Bibliography');
+	await expect(page.locator('.source-meta').first()).toHaveText(/\d+ exact references?/);
+	await expect(page.locator('.source details[open]')).toHaveCount(0);
 });
 
 test('the edition page explains the sources and carries the working label', async ({ page }) => {
@@ -513,7 +573,7 @@ test('the edition page explains the sources and carries the working label', asyn
 	await expect(page.locator('main')).toContainText('wydaniem roboczym');
 	// the landing's quiet label links here; reading pages no longer carry it
 	await page.goto('/app/pl');
-	await page.locator('.working a').click();
+	await page.locator('.edition-link').click();
 	await expect(page).toHaveURL(atRoute('/app/pl/editio'));
 	await page.goto('/app/pl/ordinarium/credo');
 	await expect(page.locator('.subtitle')).not.toContainText('robocze');

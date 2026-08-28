@@ -63,6 +63,7 @@ export interface Messages {
 	catalogDescription: string;
 	editioDescription: string;
 	bibliographyTitle: string;
+	bibliographyPageTitle: string;
 	bibliographyDescription: string;
 	bibliographyLink: string;
 	grammarDescription: string;
@@ -105,6 +106,7 @@ export interface Messages {
 	seasons: Record<Season, string>;
 	ordoPending: string;
 	grammarTitle: string;
+	grammarPageTitle: string;
 	derivativesLabel: string;
 	pronunciationHint: string;
 	/** Who says a line, and how loudly (corpus 0.9.0). */
@@ -214,6 +216,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		editioDescription:
 			'Jak powstaje to wydanie: świadkowie tekstu i ich kolacjonowanie, mechaniczna weryfikacja analiz, etapy przeglądu.',
 		bibliographyTitle: 'bibliografia',
+		bibliographyPageTitle: 'Bibliografia',
 		bibliographyDescription:
 			'Źródła przywołane w objaśnieniach Scrutabor, z dokładnymi odsyłaczami i miejscami ich wykorzystania.',
 		bibliographyLink: 'pełna bibliografia',
@@ -269,6 +272,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		},
 		ordoPending: 'jeszcze nie w tym wydaniu',
 		grammarTitle: 'gramatyka',
+		grammarPageTitle: 'Gramatyka',
 		derivativesLabel: 'w polszczyźnie',
 		speakers: {
 			sacerdos: 'kapłan',
@@ -373,6 +377,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		editioDescription:
 			'How this edition is made: text witnesses and collation, mechanical verification of the analyses, review states.',
 		bibliographyTitle: 'bibliography',
+		bibliographyPageTitle: 'Bibliography',
 		bibliographyDescription:
 			'Sources cited by Scrutabor’s explanations, with exact references and the places where they are used.',
 		bibliographyLink: 'complete bibliography',
@@ -428,6 +433,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		},
 		ordoPending: 'not yet in this edition',
 		grammarTitle: 'grammar',
+		grammarPageTitle: 'Grammar',
 		derivativesLabel: 'in English',
 		speakers: {
 			sacerdos: 'priest',

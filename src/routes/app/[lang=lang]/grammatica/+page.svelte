@@ -16,14 +16,14 @@
 </script>
 
 <svelte:head>
-	<title>{msgs.grammarTitle} — Scrutabor</title>
+	<title>{msgs.grammarPageTitle} — Scrutabor</title>
 	<meta name="description" content={msgs.grammarDescription} />
 </svelte:head>
 
 <div class="page">
 	<PageNav {lang} />
 	<main>
-		<h1 class="minor">{msgs.grammarTitle}</h1>
+		<h1 class="minor">{msgs.grammarPageTitle}</h1>
 		{#each groups as group (group.id)}
 			<section>
 				<h2 class="smallcaps">{group.label}</h2>
@@ -41,9 +41,9 @@
 		{/each}
 		<section>
 			<h2 class="smallcaps">{lang === 'pl' ? 'wymowa' : 'pronunciation'}</h2>
-			<div class="cards">
+			<div class="cards in-two">
 				<a class="card" href="/app/{lang}/grammatica/pronuntiatio">
-					<span class="card-title">{lang === 'pl' ? 'wymowa' : 'pronunciation'}</span>
+					<span class="card-title">{lang === 'pl' ? 'Wymowa' : 'Pronunciation'}</span>
 					<span class="card-note" lang="la">pronuntiatio</span>
 				</a>
 			</div>

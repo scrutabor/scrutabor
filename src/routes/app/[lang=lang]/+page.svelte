@@ -2,6 +2,7 @@
 	import { catalogFor, type CatalogSection } from '$lib/catalog';
 	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
 	import { M, type Lang } from '$lib/i18n';
+	import { bindProse } from '$lib/polish';
 
 	let { data } = $props();
 	const lang = $derived(data.lang as Lang);
@@ -13,6 +14,23 @@
 	const shelves = $derived(catalogFor(available).filter((section) => section.texts.length > 0));
 	const primarySections = $derived(shelves.filter((section) => section.category === 'orationes'));
 	const secondarySections = $derived(shelves.filter((section) => section.category !== 'orationes'));
+	const footerCopy = $derived(
+		lang === 'pl'
+			? bindProse({
+					aria: 'Strony pomocnicze i informacje o wydaniu',
+					grammar: 'Pojęcia, składnia i wymowa',
+					bibliography: 'Źródła i dokładne odsyłacze',
+					edition: 'O wydaniu',
+					status: 'Wydanie robocze przed przeglądem eksperckim'
+				})
+			: {
+					aria: 'Reference pages and edition information',
+					grammar: 'Concepts, syntax, and pronunciation',
+					bibliography: 'Sources and exact references',
+					edition: 'About this edition',
+					status: 'Working edition awaiting expert review'
+				}
+	);
 </script>
 
 {#snippet shelf(section: CatalogSection)}
@@ -77,22 +95,37 @@
 		</div>
 
 		<footer class="catalog-footer">
-			<p class="grammar-link smallcaps">
-				<a href="/app/{lang}/grammatica">{msgs.grammarTitle} ›</a>
-			</p>
-			<p class="working smallcaps"><a href="/app/{lang}/editio">{msgs.working}</a></p>
-			<p class="bibliography-link smallcaps">
-				<a href="/app/{lang}/bibliographia">{msgs.bibliographyTitle}</a>
-			</p>
+			<nav class="footer-links" aria-label={footerCopy.aria}>
+				<a class="footer-link" href="/app/{lang}/grammatica">
+					<span>
+						<span class="footer-title">{msgs.grammarPageTitle}</span>
+						<span class="footer-note">{footerCopy.grammar}</span>
+					</span>
+					<span class="footer-arrow" aria-hidden="true">›</span>
+				</a>
+				<a class="footer-link" href="/app/{lang}/bibliographia">
+					<span>
+						<span class="footer-title">{msgs.bibliographyPageTitle}</span>
+						<span class="footer-note">{footerCopy.bibliography}</span>
+					</span>
+					<span class="footer-arrow" aria-hidden="true">›</span>
+				</a>
+			</nav>
 			<!-- The colophon: which copy this is, and the way home. A book
 			     names its edition and its printer on the colophon page, not on
 			     every leaf — so it lives here, on the book's own front page,
 			     and nowhere in the reading chrome. In the downloaded folder
 			     the link opens the live site (see offline/shims/navigation):
 			     "is there a new version" is a network question. -->
-			<p class="colophon smallcaps">
-				Scrutabor · {msgs.edition}&nbsp;v{data.version} · <a href="/{lang}">scrutabor.org</a>
-			</p>
+			<div class="edition-panel">
+				<div>
+					<a class="edition-link smallcaps" href="/app/{lang}/editio">{footerCopy.edition}</a>
+					<p class="edition-status">{footerCopy.status}</p>
+				</div>
+				<p class="colophon smallcaps">
+					Scrutabor · {msgs.edition}&nbsp;v{data.version} · <a href="/{lang}">scrutabor.org</a>
+				</p>
+			</div>
 		</footer>
 	</main>
 </div>
@@ -170,44 +203,96 @@
 		color: var(--ink-soft);
 	}
 
-	.grammar-link {
-		margin: 3rem 0 0;
-		font-size: 0.8rem;
+	.catalog-footer {
+		max-width: 44rem;
+		margin: 4rem auto 0;
+		padding-top: 1.15rem;
+		border-top: 1px solid var(--border);
 	}
 
-	.grammar-link a {
-		color: var(--ink-soft);
+	.footer-links {
+		display: grid;
+		width: 100%;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.7rem;
+	}
+
+	.footer-link {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 0.75rem;
+		align-items: start;
+		padding: 0.9rem 1rem;
+		text-align: start;
 		text-decoration: none;
+		border: 1px solid var(--border);
+		border-radius: 0.6rem;
+		background: var(--surface);
 	}
 
-	.grammar-link a:hover {
+	.footer-link:hover {
+		background: var(--wash);
+	}
+
+	.footer-title,
+	.footer-note {
+		display: block;
+	}
+
+	.footer-title {
+		font-size: 1rem;
+		font-weight: 600;
+	}
+
+	.footer-note {
+		margin-top: 0.16rem;
+		color: var(--ink-soft);
+		font-size: 0.78rem;
+		line-height: 1.35;
+	}
+
+	.footer-arrow {
+		color: var(--rubric);
+		font-size: 1.2rem;
+		line-height: 1;
+	}
+
+	.edition-panel {
+		display: grid;
+		width: 100%;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 0.75rem 1.5rem;
+		align-items: end;
+		margin-top: 0.75rem;
+		padding: 0.9rem 1rem;
+		text-align: start;
+		border-radius: 0.6rem;
+		background: var(--wash);
+	}
+
+	.edition-link {
+		color: var(--rubric);
+		font-size: 0.76rem;
+		text-decoration: none;
+		border-bottom: 1px dotted var(--border);
+	}
+
+	.edition-link:hover {
 		color: var(--ink);
 	}
 
-	.working {
-		margin: 0.6rem 0 0;
-		font-size: 0.75rem;
+	.edition-status {
+		margin: 0.22rem 0 0;
 		color: var(--ink-soft);
-	}
-
-	.bibliography-link {
-		margin: 0.35rem 0 0;
-		font-size: 0.75rem;
-	}
-
-	.bibliography-link a {
-		color: var(--ink-soft);
-		text-decoration: none;
-	}
-
-	.bibliography-link a:hover {
-		color: var(--ink);
+		font-size: 0.84rem;
+		line-height: 1.35;
 	}
 
 	.colophon {
-		margin: 0.4rem 0 0;
-		font-size: 0.75rem;
+		margin: 0;
+		font-size: 0.7rem;
 		color: var(--ink-soft);
+		text-align: end;
 	}
 
 	.colophon a {
@@ -218,6 +303,17 @@
 
 	.colophon a:hover {
 		color: var(--ink);
+	}
+
+	@media (max-width: 34rem) {
+		.footer-links,
+		.edition-panel {
+			grid-template-columns: minmax(0, 1fr);
+		}
+
+		.colophon {
+			text-align: start;
+		}
 	}
 
 	/* At laptop width the catalogue becomes an open spread: the prayer
@@ -289,7 +385,7 @@
 		}
 
 		.catalog-footer {
-			margin-top: 0.8rem;
+			margin-top: 2.6rem;
 		}
 	}
 </style>

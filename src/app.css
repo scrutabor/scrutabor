@@ -781,7 +781,7 @@ h2 {
    Only for rows WITHOUT a trail: a nav that carries the way back
    (PageNav on the landing's subpages) spreads its two ends itself,
    and this rule outweighs the component's scoped space-between. */
-.page.centered nav:not(:has(.trail)) {
+.page.centered > nav:not(:has(.trail)) {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;

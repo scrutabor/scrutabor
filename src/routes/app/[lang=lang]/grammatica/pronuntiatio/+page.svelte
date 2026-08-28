@@ -7,6 +7,7 @@
 	let { data } = $props();
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
+	const pageTitle = $derived(lang === 'pl' ? 'Wymowa' : 'Pronunciation');
 
 	// Rule rows: grapheme, Roman, Polish, example (corpus deep link when we
 	// have one). Kept as data so the table stays honest and greppable.
@@ -52,15 +53,15 @@
 </script>
 
 <svelte:head>
-	<title>{lang === 'pl' ? 'wymowa' : 'pronunciation'} — Scrutabor</title>
+	<title>{pageTitle} — Scrutabor</title>
 	<meta name="description" content={msgs.pronunciationDescription} />
 </svelte:head>
 
 <div class="page">
-	<PageNav {lang} parent="/app/{lang}/grammatica" parentLabel={msgs.grammarTitle} />
+	<PageNav {lang} parent="/app/{lang}/grammatica" parentLabel={msgs.grammarPageTitle} />
 
 	<main>
-		<h1 class="minor">{lang === 'pl' ? 'wymowa' : 'pronunciation'}</h1>
+		<h1 class="minor">{pageTitle}</h1>
 		<p class="latin-name" lang="la">pronuntiatio</p>
 
 		{#if lang === 'pl'}

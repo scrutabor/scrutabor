@@ -17,7 +17,7 @@
 </svelte:head>
 
 <div class="page">
-	<PageNav {lang} parent="/app/{lang}/grammatica" parentLabel={msgs.grammarTitle} />
+	<PageNav {lang} parent="/app/{lang}/grammatica" parentLabel={msgs.grammarPageTitle} />
 
 	{#if !concept}
 		<main>

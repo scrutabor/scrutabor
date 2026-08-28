@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { BibliographySource } from '$lib/bibliography';
 	import PageNav from '$lib/components/PageNav.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { bindProse } from '$lib/polish';
@@ -9,7 +10,7 @@
 	const copy = $derived(
 		lang === 'pl'
 			? {
-					lead: 'Zestawienie obejmuje źródła przywołane w objaśnieniach widocznych dla czytelnika. Dokładny odsyłacz pozostaje także przy każdym objaśnieniu. Świadków tekstu i aparat krytyczny udostępniamy osobno w repozytorium korpusu.',
+					lead: 'Źródła przywołane w objaśnieniach są zestawione alfabetycznie. Rozwiń pozycję, aby zobaczyć dokładne odsyłacze i miejsca ich wykorzystania. Świadków tekstu i aparat krytyczny udostępniamy osobno w repozytorium korpusu.',
 					usedAt: 'przywołano przy',
 					typeface: [
 						'Wydanie złożono krojem EB Garamond (Georg Duffner, Octavio Pardo), udostępnionym na licencji ',
@@ -17,7 +18,7 @@
 					]
 				}
 			: {
-					lead: 'This list contains the sources cited by explanations visible to the reader. The exact reference also remains beside each explanation. Textual witnesses and the critical apparatus are published separately in the corpus repository.',
+					lead: 'Sources cited by the explanations are listed alphabetically. Expand an entry to see its exact references and where they are used. Textual witnesses and the critical apparatus are published separately in the corpus repository.',
 					usedAt: 'cited at',
 					typeface: [
 						'This edition is set in EB Garamond (Georg Duffner, Octavio Pardo), released under the ',
@@ -26,10 +27,18 @@
 				}
 	);
 	const lead = $derived(lang === 'pl' ? bindProse(copy.lead) : copy.lead);
+
+	function referenceCount(source: BibliographySource): string {
+		const count = source.locators.length;
+		if (lang === 'en') return `${count} exact ${count === 1 ? 'reference' : 'references'}`;
+		if (count === 1) return '1 dokładny odsyłacz';
+		const few = count % 10 >= 2 && count % 10 <= 4 && (count % 100 < 12 || count % 100 > 14);
+		return `${count} ${few ? 'dokładne odsyłacze' : 'dokładnych odsyłaczy'}`;
+	}
 </script>
 
 <svelte:head>
-	<title>{msgs.bibliographyTitle} — Scrutabor</title>
+	<title>{msgs.bibliographyPageTitle} — Scrutabor</title>
 	<meta name="description" content={msgs.bibliographyDescription} />
 </svelte:head>
 
@@ -37,46 +46,58 @@
 	<PageNav {lang} />
 
 	<main>
-		<h1 class="minor">{msgs.bibliographyTitle}</h1>
+		<h1 class="minor">{msgs.bibliographyPageTitle}</h1>
 		<p class="latin-name" lang="la">bibliographia</p>
 		<p class="what">{lead}</p>
 
-		<div class="sources">
+		<ul class="sources">
 			{#each data.sources as source (source.title)}
-				<section>
-					<h2><cite lang="und">{source.title}</cite></h2>
-					<ul>
-						{#each source.locators as locator (`${locator.locator}:${locator.url ?? ''}`)}
-							<li>
-								{#if locator.url}
-									<a
-										class="external"
-										href={locator.url}
-										target="_blank"
-										rel="external noopener"
-										lang="und">{locator.locator}</a
-									>
-								{:else}
-									<span lang="und">{locator.locator}</span>
-								{/if}
-								<span class="uses">
-									— {copy.usedAt}
-									<!-- The separator lives inside the expression: a template
+				<li class="source">
+					<details>
+						<summary>
+							<cite lang="und">{source.title}</cite>
+							<span class="source-meta">{referenceCount(source)}</span>
+						</summary>
+						<div class="source-body">
+							<ul class="locators">
+								{#each source.locators as locator (`${locator.locator}:${locator.url ?? ''}`)}
+									<li>
+										{#if locator.url}
+											<a
+												class="external locator-reference"
+												href={locator.url}
+												target="_blank"
+												rel="external noopener"
+												lang="und"
+												>{locator.locator}<svg
+													class="external-mark"
+													viewBox="0 0 12 12"
+													aria-hidden="true"><path d="M4 2h6v6M10 2 2 10"></path></svg
+												></a
+											>
+										{:else}
+											<span class="locator-reference" lang="und">{locator.locator}</span>
+										{/if}
+										<span class="uses">
+											<span class="uses-label">{copy.usedAt}:</span>
+											<!-- The separator lives inside the expression: a template
 									     `{#if i > 0},{/if}` puts the comma against the next
 									     title with no space, because Svelte trims the newline
 									     after it — and the run then became one unbreakable
 									     token that scrolled the page sideways at 320px. -->
-									{#each locator.uses as use, i (use.title)}{i > 0 ? ', ' : ''}<a
-											href={use.href}
-											lang="la">{use.title}</a
-										>{use.notes > 1 ? ` (${use.notes})` : ''}{/each}
-								</span>
-							</li>
-						{/each}
-					</ul>
-				</section>
+											{#each locator.uses as use, i (use.title)}{i > 0 ? ', ' : ''}<a
+													href={use.href}
+													lang="la">{use.title}</a
+												>{use.notes > 1 ? ` (${use.notes})` : ''}{/each}
+										</span>
+									</li>
+								{/each}
+							</ul>
+						</div>
+					</details>
+				</li>
 			{/each}
-		</div>
+		</ul>
 
 		<!-- The face itself is a source: the OFL asks that its licence travel
 		     with the font, and the subsets this edition ships are the font.
@@ -110,35 +131,76 @@
 
 	.sources {
 		margin-top: 2.2rem;
+		padding: 0;
+		list-style: none;
+		border-top: 1px solid var(--border);
 	}
 
-	section + section {
-		margin-top: 1.8rem;
+	.source {
+		border-bottom: 1px solid var(--border);
 	}
 
-	h2 {
-		margin: 0;
+	summary {
+		display: grid;
+		grid-template-columns: 0.8rem minmax(0, 1fr) auto;
+		align-items: baseline;
+		gap: 0.35rem 0.75rem;
+		padding: 0.9rem 0.25rem;
+		cursor: pointer;
+		list-style: none;
+		border-radius: 0.35rem;
+	}
+
+	summary::-webkit-details-marker {
+		display: none;
+	}
+
+	summary::before {
+		content: '›';
+		color: var(--rubric);
+		font-size: 1.15rem;
+		line-height: 1;
+		transform-origin: center;
+		transition: transform 120ms ease;
+	}
+
+	details[open] summary::before {
+		transform: rotate(90deg);
+	}
+
+	summary:hover {
+		background: var(--wash);
+	}
+
+	summary cite {
 		font-size: 1.05rem;
+		font-style: normal;
 		font-weight: 600;
-		/* The global h2 is "a small rubric label over a list" — centred, in
-		   the rubric red — and these are source TITLES over left-ranged
-		   entries: they take the page's own ink and alignment, or they
-		   inherit a centred red heading nothing else on the page has. */
-		text-align: start;
-		color: var(--ink);
+		line-height: 1.3;
 	}
 
-	ul {
-		margin: 0.55rem 0 0;
-		padding-inline-start: 1.35rem;
+	.source-meta {
+		color: var(--ink-soft);
+		font-size: 0.75rem;
+		letter-spacing: 0.04em;
+		white-space: nowrap;
 	}
 
-	li {
+	.source-body {
+		padding: 0 1rem 1rem 1.95rem;
+	}
+
+	.locators {
+		margin: 0;
+		padding-inline-start: 1.15rem;
+	}
+
+	.locators li {
 		line-height: 1.5;
 	}
 
-	li + li {
-		margin-top: 0.45rem;
+	.locators li + li {
+		margin-top: 0.7rem;
 	}
 
 	a {
@@ -151,13 +213,47 @@
 		color: var(--rubric);
 	}
 
+	.external-mark {
+		display: inline-block;
+		width: 0.65em;
+		height: 0.65em;
+		margin-inline-start: 0.22em;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.35;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
 	.uses {
+		display: block;
+		margin-top: 0.12rem;
 		color: var(--ink-soft);
+		font-size: 0.9rem;
+	}
+
+	.uses-label {
+		margin-right: 0.25rem;
 	}
 
 	.typeface {
 		margin-top: 2.2rem;
 		color: var(--ink-soft);
 		font-size: 0.95rem;
+	}
+
+	@media (max-width: 34rem) {
+		summary {
+			grid-template-columns: 0.8rem minmax(0, 1fr);
+		}
+
+		.source-meta {
+			grid-column: 2;
+			white-space: normal;
+		}
+
+		.source-body {
+			padding-inline: 1.55rem 0.25rem;
+		}
 	}
 </style>
