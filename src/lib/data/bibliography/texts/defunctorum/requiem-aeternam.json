@@ -1,0 +1,25 @@
+{
+ "id": "defunctorum.requiem-aeternam",
+ "source_groups": [
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "historical_context",
+   "locator": {
+    "printed": "n. 582, p. 450",
+    "scan": "PDF scan 471"
+   },
+   "entries": [
+    {
+     "id": "use.defunctorum.requiem-aeternam.context.ei1952",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints Requiem aeternam in the selected recension and boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": []
+}

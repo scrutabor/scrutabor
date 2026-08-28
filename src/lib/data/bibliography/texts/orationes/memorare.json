@@ -1,0 +1,73 @@
+{
+ "id": "orationes.memorare",
+ "source_groups": [
+  {
+   "edition": "edition.compendium-ccc.2005",
+   "digital_item": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "role": "controlling_official_text",
+   "locator": {
+    "section": "printed/PDF p. 204, Memorare"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.memorare.compendium-2005",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.compendium-ccc.2005",
+   "digital_item": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "role": "historical_context",
+   "locator": {
+    "section": "Appendix B, Memorare, p. 204"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.memorare.context.compendium2005",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the selected Latin Memorare and its complete boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "historical_context",
+   "locator": {
+    "printed": "p. 228",
+    "scan": "scan p. 247",
+    "section": "n. 339"
+   },
+   "entries": [
+    {
+     "id": "use.core.59efc84711d7e7672562",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The source prints and identifies Memoráre."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.orationes.memorare.compendium-2005",
+   "text": "orationes.memorare",
+   "use": "use.orationes.memorare.compendium-2005",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
+  }
+ ]
+}

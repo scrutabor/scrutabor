@@ -1,0 +1,26 @@
+{
+ "id": "orationes.signum-crucis",
+ "source_groups": [
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 630",
+    "scan": "scan p. 638"
+   },
+   "entries": [
+    {
+     "id": "use.en.10900187af0e46eb5218",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete orationes.signum-crucis text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

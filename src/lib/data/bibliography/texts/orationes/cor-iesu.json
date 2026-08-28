@@ -1,0 +1,26 @@
+{
+ "id": "orationes.cor-iesu",
+ "source_groups": [
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. 520",
+    "scan": "PDF scan 541",
+    "section": "n. 675"
+   },
+   "entries": [
+    {
+     "id": "use.core.238c8cb41cdab59e8000",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The invocation closes the prayers after low Mass and is directed to be recited three times."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": []
+}

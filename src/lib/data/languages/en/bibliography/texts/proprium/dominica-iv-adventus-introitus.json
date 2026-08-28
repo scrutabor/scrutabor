@@ -1,0 +1,51 @@
+{
+ "id": "proprium.dominica-iv-adventus-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 105",
+    "scan": "PDF p. 117"
+   },
+   "entries": [
+    {
+     "id": "use.en.a18b1e94f20e3ba6a176",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Drop down dew, O heavens, from above, and let the clouds rain down the Just One; let the earth open and bring forth the Savior."
+    },
+    {
+     "id": "use.en.a48eced65f82dae95ead",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Drop down dew, O heavens, from above, and let the clouds rain down the Just One; let the earth open and bring forth the Savior."
+    },
+    {
+     "id": "use.en.bf719b5d667eccd0d3dc",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Drop down dew, O heavens, from above, and let the clouds rain down the Just One; let the earth open and bring forth the Savior."
+    },
+    {
+     "id": "use.en.c6935880551675d7b34b",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Drop down dew, O heavens, from above, and let the clouds rain down the Just One; let the earth open and bring forth the Savior."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

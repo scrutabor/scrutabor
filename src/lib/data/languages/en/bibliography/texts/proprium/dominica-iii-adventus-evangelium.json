@@ -1,0 +1,26 @@
+{
+ "id": "proprium.dominica-iii-adventus-evangelium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 93–94",
+    "scan": "PDF pp. 105–106"
+   },
+   "entries": [
+    {
+     "id": "use.en.24128f6c07307c70101c",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete proprium.dominica-iii-adventus-evangelium text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

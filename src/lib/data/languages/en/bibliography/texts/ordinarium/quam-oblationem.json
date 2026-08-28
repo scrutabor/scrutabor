@@ -1,0 +1,95 @@
+{
+ "id": "ordinarium.quam-oblationem",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 64–65",
+    "scan": "scan pp. 76–77"
+   },
+   "entries": [
+    {
+     "id": "use.en.094add513692eaa36c72",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "O God, we ask You graciously to make this offering in all respects"
+    },
+    {
+     "id": "use.en.1080638d07ec50aea606",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "O God, we ask You graciously to make this offering in all respects"
+    },
+    {
+     "id": "use.en.24e6a5eadd315d87fe80",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "O God, we ask You graciously to make this offering in all respects"
+    },
+    {
+     "id": "use.en.d7d9c4473d283dffde65",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "O God, we ask You graciously to make this offering in all respects"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 25",
+    "scan": "scan p. 51"
+   },
+   "entries": [
+    {
+     "id": "use.en.420067ed7564d8c13e2d",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "O God, we ask You graciously to make this offering in all respects"
+    },
+    {
+     "id": "use.en.4ae28b4b0d6538c60756",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "O God, we ask You graciously to make this offering in all respects"
+    },
+    {
+     "id": "use.en.b0a45364a3ac58ce052b",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "O God, we ask You graciously to make this offering in all respects"
+    },
+    {
+     "id": "use.en.ed49e7563868319acc06",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "O God, we ask You graciously to make this offering in all respects"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

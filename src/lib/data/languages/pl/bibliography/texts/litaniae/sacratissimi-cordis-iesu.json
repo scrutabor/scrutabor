@@ -1,0 +1,668 @@
+{
+ "id": "litaniae.sacratissimi-cordis-iesu",
+ "source_groups": [
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 155–160",
+    "scan": "PDF ss. 157–162",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.006211699279499d8234",
+     "address": {
+      "kind": "segment",
+      "segment": "s046"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, z którego pełni wszyscyśmy otrzymali.”"
+    },
+    {
+     "id": "use.pl.0516583358c9f8c45b8c",
+     "address": {
+      "kind": "segment",
+      "segment": "s047"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.0fd2798dd6cf02a13b07",
+     "address": {
+      "kind": "segment",
+      "segment": "s009"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.19d95b672d5ff9cf17f8",
+     "address": {
+      "kind": "segment",
+      "segment": "s055"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.1ddb7283f2ae3e45ebcb",
+     "address": {
+      "kind": "segment",
+      "segment": "s063"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.1e5cc10473e7d5567ea1",
+     "address": {
+      "kind": "segment",
+      "segment": "s002"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Christe, eleison.”"
+    },
+    {
+     "id": "use.pl.21e082a9af9d0c23d09b",
+     "address": {
+      "kind": "segment",
+      "segment": "s036"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, wszelkiej chwały najgodniejsze.”"
+    },
+    {
+     "id": "use.pl.228872717eadcb60d42c",
+     "address": {
+      "kind": "segment",
+      "segment": "s076"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, nadziejo w Tobie umierających.”"
+    },
+    {
+     "id": "use.pl.23c56f15a37e6fb64fd4",
+     "address": {
+      "kind": "segment",
+      "segment": "s085"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.299540d540ad51b85c61",
+     "address": {
+      "kind": "segment",
+      "segment": "s021"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.2a5f57a13dbfd9fde1fd",
+     "address": {
+      "kind": "segment",
+      "segment": "s003"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Kyrie, eleison.”"
+    },
+    {
+     "id": "use.pl.2b7b0321633f2ef77ccd",
+     "address": {
+      "kind": "segment",
+      "segment": "s071"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.2e601f520b35ea7c72ae",
+     "address": {
+      "kind": "segment",
+      "segment": "s031"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.2f34e57225f948702974",
+     "address": {
+      "kind": "segment",
+      "segment": "s049"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.30297e33f625e2384859",
+     "address": {
+      "kind": "segment",
+      "segment": "s007"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.3ba9fd696feb48f4e03d",
+     "address": {
+      "kind": "segment",
+      "segment": "s064"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, włócznią przebite.”"
+    },
+    {
+     "id": "use.pl.44a1f8d8312758c27430",
+     "address": {
+      "kind": "segment",
+      "segment": "s052"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, hojne dla wszystkich, którzy Cię wzywają.”"
+    },
+    {
+     "id": "use.pl.4e032153e1e0833c8d4a",
+     "address": {
+      "kind": "segment",
+      "segment": "s089"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wszechmogący, wieczny Boże, wejrzyj na Serce najmilszego Syna swego i na chwałę, i zadośćuczynienie, jakie w imieniu grzeszników Ci składa; daj się przebłagać tym, którzy żebrzą Twojego miłosierdzia, i racz udzielić przebaczenia w imię tegoż Syna swego, Jezusa Chrystusa, który z Tobą żyje i króluje na wieki wieków. Amen.”"
+    },
+    {
+     "id": "use.pl.514ecae8bc735be1d430",
+     "address": {
+      "kind": "segment",
+      "segment": "s075"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.5718cdba1a9cdde3d298",
+     "address": {
+      "kind": "segment",
+      "segment": "s005"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chryste, wysłuchaj nas.”"
+    },
+    {
+     "id": "use.pl.5899658f4cb1a7f9b2af",
+     "address": {
+      "kind": "segment",
+      "segment": "s078"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, rozkoszy wszystkich Świętych.”"
+    },
+    {
+     "id": "use.pl.5b67dab325d6c96c17c4",
+     "address": {
+      "kind": "segment",
+      "segment": "s057"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.5d302fc08cb2c584447f",
+     "address": {
+      "kind": "segment",
+      "segment": "s053"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.5e1623a9c8c376eea7f2",
+     "address": {
+      "kind": "segment",
+      "segment": "s004"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chryste, usłysz nas.”"
+    },
+    {
+     "id": "use.pl.67f13106bb9d917f1601",
+     "address": {
+      "kind": "segment",
+      "segment": "s012"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Święta Trójco, Jedyny Boże.”"
+    },
+    {
+     "id": "use.pl.6b4129f912fb408b6a96",
+     "address": {
+      "kind": "segment",
+      "segment": "s024"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, przybytku Najwyższego.”"
+    },
+    {
+     "id": "use.pl.7131747ee416238140ac",
+     "address": {
+      "kind": "segment",
+      "segment": "s032"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, dobroci i miłości pełne.”"
+    },
+    {
+     "id": "use.pl.777de8bde49cf9378014",
+     "address": {
+      "kind": "segment",
+      "segment": "s023"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.7817187e8353b3d6be0d",
+     "address": {
+      "kind": "segment",
+      "segment": "s083"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wysłuchaj nas, Panie.”"
+    },
+    {
+     "id": "use.pl.78ed58640f14b0800456",
+     "address": {
+      "kind": "segment",
+      "segment": "s014"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, Syna Ojca Przedwiecznego.”"
+    },
+    {
+     "id": "use.pl.7a4a013b76e7637f31ef",
+     "address": {
+      "kind": "segment",
+      "segment": "s070"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, pokoju i pojednanie nasze.”"
+    },
+    {
+     "id": "use.pl.7bb70ddd9df0de996eaa",
+     "address": {
+      "kind": "segment",
+      "segment": "s068"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, życie i zmartwychwstanie nasze.”"
+    },
+    {
+     "id": "use.pl.7f807964dedfa8a8f75a",
+     "address": {
+      "kind": "segment",
+      "segment": "s033"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.7fe1da35461bebfc8873",
+     "address": {
+      "kind": "segment",
+      "segment": "s026"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, domie Boży i bramo niebios.”"
+    },
+    {
+     "id": "use.pl.8bbcfaf429401a6dc9ef",
+     "address": {
+      "kind": "segment",
+      "segment": "s086"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Jezu cichy i pokornego serca.”"
+    },
+    {
+     "id": "use.pl.8cb6c74e81dbff538831",
+     "address": {
+      "kind": "segment",
+      "segment": "s006"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ojcze z nieba, Boże.”"
+    },
+    {
+     "id": "use.pl.8f6b3c499015e592de2d",
+     "address": {
+      "kind": "segment",
+      "segment": "s028"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, gorejące ognisko miłości.”"
+    },
+    {
+     "id": "use.pl.8ff12befa2bdf321a79f",
+     "address": {
+      "kind": "segment",
+      "segment": "s061"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.926a03d73408631af529",
+     "address": {
+      "kind": "segment",
+      "segment": "s056"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, przebłaganie za grzechy nasze.”"
+    },
+    {
+     "id": "use.pl.9356c082451736122d09",
+     "address": {
+      "kind": "segment",
+      "segment": "s066"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, źródło wszelkiej pociechy.”"
+    },
+    {
+     "id": "use.pl.943ad6458f3e2e41e35b",
+     "address": {
+      "kind": "segment",
+      "segment": "s022"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, świątynio Boga.”"
+    },
+    {
+     "id": "use.pl.95a906b6d8f775d640fd",
+     "address": {
+      "kind": "segment",
+      "segment": "s045"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.95c80c2b9b13fb497bb9",
+     "address": {
+      "kind": "segment",
+      "segment": "s030"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, sprawiedliwości i miłości skarbnico.”"
+    },
+    {
+     "id": "use.pl.98c322fd67914c25236d",
+     "address": {
+      "kind": "segment",
+      "segment": "s084"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
+    },
+    {
+     "id": "use.pl.9bc48d1bb49ad3c6e5e8",
+     "address": {
+      "kind": "segment",
+      "segment": "s082"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
+    },
+    {
+     "id": "use.pl.9f88eeb596943da08625",
+     "address": {
+      "kind": "segment",
+      "segment": "s088"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módlmy się.”"
+    },
+    {
+     "id": "use.pl.a0a991cf0a437e587bd2",
+     "address": {
+      "kind": "segment",
+      "segment": "s073"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.a849385c7a4a0852b95d",
+     "address": {
+      "kind": "segment",
+      "segment": "s010"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Duchu Święty, Boże.”"
+    },
+    {
+     "id": "use.pl.ac2377c7cad3e738feef",
+     "address": {
+      "kind": "segment",
+      "segment": "s041"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.b245b67dad5fb28b8b50",
+     "address": {
+      "kind": "segment",
+      "segment": "s029"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.b3ee0ba989d0379e8c09",
+     "address": {
+      "kind": "segment",
+      "segment": "s080"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
+    },
+    {
+     "id": "use.pl.bb789e39d1c5e2b06800",
+     "address": {
+      "kind": "segment",
+      "segment": "s042"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, w którym mieszka cała pełnia Bóstwa.”"
+    },
+    {
+     "id": "use.pl.bcadc44673f55c7e22b5",
+     "address": {
+      "kind": "segment",
+      "segment": "s025"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.bd777dea3d01ba8f8aea",
+     "address": {
+      "kind": "segment",
+      "segment": "s067"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.be552be68f275a2060c4",
+     "address": {
+      "kind": "segment",
+      "segment": "s059"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.c15c377650851a7ddc7a",
+     "address": {
+      "kind": "segment",
+      "segment": "s069"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.c18b66b1dee624dbfab5",
+     "address": {
+      "kind": "segment",
+      "segment": "s035"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.c3a367bb1370239fc166",
+     "address": {
+      "kind": "segment",
+      "segment": "s074"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, zbawienie ufających Tobie.”"
+    },
+    {
+     "id": "use.pl.c3c2e50f706ead15284f",
+     "address": {
+      "kind": "segment",
+      "segment": "s039"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.c47eeb56e3d5fd6ca9e4",
+     "address": {
+      "kind": "segment",
+      "segment": "s043"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.c7d9de112c5078eb7c3f",
+     "address": {
+      "kind": "segment",
+      "segment": "s040"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, w którym są wszystkie skarby mądrości i umiejętności.”"
+    },
+    {
+     "id": "use.pl.ca1a5de48308b78898c2",
+     "address": {
+      "kind": "segment",
+      "segment": "s001"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Kyrie, eleison.”"
+    },
+    {
+     "id": "use.pl.cc60873819691ad71a8e",
+     "address": {
+      "kind": "segment",
+      "segment": "s081"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przepuść nam, Panie.”"
+    },
+    {
+     "id": "use.pl.d35384d733d7c13f088e",
+     "address": {
+      "kind": "segment",
+      "segment": "s062"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, aż do śmierci posłuszne.”"
+    },
+    {
+     "id": "use.pl.d3ebf35650ccc195c198",
+     "address": {
+      "kind": "segment",
+      "segment": "s027"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.d41c8bb10e62de19cd9e",
+     "address": {
+      "kind": "segment",
+      "segment": "s013"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.da5be93acd019089b511",
+     "address": {
+      "kind": "segment",
+      "segment": "s037"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.db2156c38178b71eb3ac",
+     "address": {
+      "kind": "segment",
+      "segment": "s017"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.e48dd71d2a45acb26de6",
+     "address": {
+      "kind": "segment",
+      "segment": "s079"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.e7d3f97f6e6bf7f94a54",
+     "address": {
+      "kind": "segment",
+      "segment": "s051"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.e86a666f814cd76ca408",
+     "address": {
+      "kind": "segment",
+      "segment": "s008"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Synu, Odkupicielu świata, Boże.”"
+    },
+    {
+     "id": "use.pl.ed664c160f44b790ebad",
+     "address": {
+      "kind": "segment",
+      "segment": "s011"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.f0b81394b6014ef7bf17",
+     "address": {
+      "kind": "segment",
+      "segment": "s015"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.f372663a14993c8e806c",
+     "address": {
+      "kind": "segment",
+      "segment": "s065"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.f47726e8f472e6438d60",
+     "address": {
+      "kind": "segment",
+      "segment": "s077"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.f4b81a67edcda9c9a5f6",
+     "address": {
+      "kind": "segment",
+      "segment": "s019"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.f8d8299b35cb330b9037",
+     "address": {
+      "kind": "segment",
+      "segment": "s020"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, nieskończonego majestatu.”"
+    },
+    {
+     "id": "use.pl.fb800decc56d37d54421",
+     "address": {
+      "kind": "segment",
+      "segment": "s087"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Uczyń serca nasze według Serca Twego.”"
+    },
+    {
+     "id": "use.pl.fdc69a3fae7dd3d88d3d",
+     "address": {
+      "kind": "segment",
+      "segment": "s016"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, w łonie Matki Dziewicy przez Ducha Świętego utworzone.”"
+    },
+    {
+     "id": "use.pl.fe1069b4782b050a57c6",
+     "address": {
+      "kind": "segment",
+      "segment": "s050"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, cierpliwe i wielkiego miłosierdzia.”"
+    },
+    {
+     "id": "use.pl.ff355fc063d109ea044c",
+     "address": {
+      "kind": "segment",
+      "segment": "s054"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Serce Jezusa, źródło życia i świętości.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

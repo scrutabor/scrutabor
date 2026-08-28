@@ -1,0 +1,216 @@
+{
+ "id": "orationes.angelus-domini",
+ "source_groups": [
+  {
+   "edition": "edition.gazeta-koscielna-r-9-nr-16-1901",
+   "digital_item": "item.gazeta-koscielna-r-9-nr-16-1901.jbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 167",
+    "scan": "PDF s. 3",
+    "page_url": "https://jbc.bj.uj.edu.pl/dlibra/publication/951462/edition/913560/gazeta-koscielna-pismo-poswiecone-sprawom-koscielnym-i-spolecznym-organ-towarzystwa-wzajem-pomocy-kaplanow-r-9-1901-nr-16"
+   },
+   "entries": [
+    {
+     "id": "use.pl.c421fa9c8bbcff8646ef",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „A Słowo ciałem się stało.”"
+    },
+    {
+     "id": "use.pl.e5afacf79c7b5eb214dc",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I zamieszkało między nami.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.ksiazka-do-nabozenstwa-1883",
+   "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "druk. ss. 2–3",
+    "scan": "DjVu ss. 14–15",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu"
+   },
+   "entries": [
+    {
+     "id": "use.pl.0a77527cbc51b8e8ebf8",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.”"
+    },
+    {
+     "id": "use.pl.52013de3bda4e9503a42",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.”"
+    },
+    {
+     "id": "use.pl.98363948dce49407035a",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 11",
+    "scan": "PDF s. 13",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.1f7ab530d52e712ce748",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.”"
+    },
+    {
+     "id": "use.pl.2740ffa1bf711b08c303",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.”"
+    },
+    {
+     "id": "use.pl.d7f1e854dcb6da76d494",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 15",
+    "scan": "PDF s. 17",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.2b2507e00fbe9588909b",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Anioł Pański zwiastował Pannie Maryi.”"
+    },
+    {
+     "id": "use.pl.7175803f0f729e7dd511",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Oto ja, służebnica Pańska.”"
+    },
+    {
+     "id": "use.pl.79976b47f40e419b2b3d",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Abyśmy się stali godnymi obietnic Chrystusowych.”"
+    },
+    {
+     "id": "use.pl.7f3710673090b0fc2e52",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „A Słowo ciałem się stało.”"
+    },
+    {
+     "id": "use.pl.84b0b016190fe87618b0",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módlmy się.”"
+    },
+    {
+     "id": "use.pl.cfc7e79fac0e38f21867",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami, święta Boża Rodzicielko.”"
+    },
+    {
+     "id": "use.pl.d7125c3bd904c1ad4e14",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Niech mi się stanie według słowa Twego.”"
+    },
+    {
+     "id": "use.pl.e023fe1bc23fb6310118",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I zamieszkało między nami.”"
+    },
+    {
+     "id": "use.pl.f28916dffa42d27bc2cd",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I poczęła z Ducha Świętego.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 15–16",
+    "scan": "PDF ss. 17–18",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.aa7cd3f8f094aa5ea985",
+     "address": {
+      "kind": "segment",
+      "segment": "s13"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Łaskę Twoją, prosimy Cię, Panie, racz wlać w serca nasze, abyśmy, którzy za zwiastowaniem anielskim wcielenie Chrystusa, Syna Twego, poznali, przez mękę Jego i krzyż do chwały zmartwychwstania byli doprowadzeni. Przez tegoż Chrystusa, Pana naszego. Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

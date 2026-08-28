@@ -1,0 +1,83 @@
+{
+ "id": "ordinarium.praefatio-dialogus",
+ "source_groups": [
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 78",
+    "scan": "scan p. 109"
+   },
+   "entries": [
+    {
+     "id": "use.en.dbcd8bc6674743dae6aa",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "The Lord be with you."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 79",
+    "scan": "scan p. 110"
+   },
+   "entries": [
+    {
+     "id": "use.en.080e2b18745372091cc8",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Lift up your hearts."
+    },
+    {
+     "id": "use.en.471af456fd95ecf08b1a",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Lift up your hearts."
+    },
+    {
+     "id": "use.en.bb05a3edd2f1dd55306b",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Lift up your hearts."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 78–79",
+    "scan": "scan pp. 109–110"
+   },
+   "entries": [
+    {
+     "id": "use.en.13b4535734f0a8cf2f6d",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "And with your spirit."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

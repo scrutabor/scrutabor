@@ -1,0 +1,28 @@
+{
+ "id": "ordinarium.suscipe-sancte-pater",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 51",
+    "scan": "PDF s. 54",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.ef4b806df52c89b6d56f",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przyjmij, Ojcze święty, wszechmogący wieczny Boże, tę nieskalaną ofiarę, którą ja, Twój niegodny sługa, składam Tobie, mojemu Bogu żywemu i prawdziwemu, za moje niezliczone grzechy, przewinienia i zaniedbania, za wszystkich tu obecnych, a także za wszystkich wiernych chrześcijan, żywych i zmarłych, aby mnie i im przyniosła zbawienie prowadzące do życia wiecznego. Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

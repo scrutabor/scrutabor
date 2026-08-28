@@ -10,14 +10,13 @@
 // They are plain functions of their parameters and nothing else. Anything that
 // belongs to a request — a URL, headers, the `error()` helper — stays in the
 // route file, so that what is shared is only the part both editions can run.
-import { buildBibliography } from './bibliography';
+import { buildBibliography, loadTextBibliography } from './bibliography';
 import { neighborsOf } from './catalog';
 import { occurrencesOf } from './concordance';
 import {
 	LEXICON,
 	hasText,
 	loadSenses,
-	loadAllTexts,
 	loadText,
 	loadTexts,
 	narrowLexicon,
@@ -71,7 +70,8 @@ export function catalogData(lang: Lang) {
 }
 
 export async function readingData(lang: Lang, category: string, slug: string) {
-	const entry = await loadText(`${category}/${slug}`, lang);
+	const key = `${category}/${slug}`;
+	const entry = await loadText(key, lang);
 	if (!entry) return null;
 
 	const numbered = entry.text.segments.filter((seg) => seg.verse !== undefined);
@@ -86,6 +86,7 @@ export async function readingData(lang: Lang, category: string, slug: string) {
 		gloss: entry.gloss,
 		// Just the entries this text can ask about, not the whole dictionary.
 		lex: await narrowLexicon([entry.text], lang),
+		bibliography: await loadTextBibliography(lang, key),
 		verses,
 		around: neighborsOf(category, slug, new Set(textKeysFor(lang)))
 	};
@@ -131,9 +132,7 @@ export function conceptData(concept: string) {
 }
 
 export async function bibliographyData(lang: Lang) {
-	return {
-		sources: buildBibliography(lang, await loadAllTexts(lang), await loadSenses(lang))
-	};
+	return await buildBibliography(lang);
 }
 
 /**

@@ -1,0 +1,26 @@
+{
+ "id": "orationes.angele-dei",
+ "source_groups": [
+  {
+   "edition": "edition.the-raccolta-1910",
+   "digital_item": "item.raccolta-1910.scan",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "p. 267",
+    "scan": "PDF scan 287"
+   },
+   "entries": [
+    {
+     "id": "use.en.comparator.enr-035",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "A prose English paraphrase and a separate rhymed adaptation; semantic comparator only, not current wording."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

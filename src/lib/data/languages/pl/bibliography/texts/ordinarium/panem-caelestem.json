@@ -1,0 +1,84 @@
+{
+ "id": "ordinarium.panem-caelestem",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 64–65",
+    "scan": "PDF ss. 67–68",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.3ee9e20cd6ff276b3208",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przyjmę chleb niebieski i będę wzywał imienia Pana.”"
+    },
+    {
+     "id": "use.pl.4ee457acc8a3dbd98cc5",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.”"
+    },
+    {
+     "id": "use.pl.73e8c7bd0c4adcd51358",
+     "address": {
+      "kind": "segment",
+      "segment": "s14"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ciało Pana naszego Jezusa Chrystusa niech strzeże mojej duszy na życie wieczne. Amen.”"
+    },
+    {
+     "id": "use.pl.a2de98c877e3db3f0008",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, nie jestem godzien,”"
+    },
+    {
+     "id": "use.pl.abb7596c54db16281f21",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.”"
+    },
+    {
+     "id": "use.pl.d44fe4fa0b73bbcbe0dd",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, nie jestem godzien,”"
+    },
+    {
+     "id": "use.pl.de27c289bc1f70131da1",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, nie jestem godzien,”"
+    },
+    {
+     "id": "use.pl.f7ef3a3d95cce36feb61",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „abyś wszedł pod dach mój: ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

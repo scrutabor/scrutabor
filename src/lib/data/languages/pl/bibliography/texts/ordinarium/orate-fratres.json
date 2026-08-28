@@ -1,0 +1,44 @@
+{
+ "id": "ordinarium.orate-fratres",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 54",
+    "scan": "PDF s. 57",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.5de736cad5bfb5350a11",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módlcie się, bracia, aby moją i waszą ofiarę przyjął Bóg Ojciec wszechmogący.”"
+    },
+    {
+     "id": "use.pl.a5646b1b03b7e2a6026c",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Niech Pan przyjmie ofiarę z rąk twoich na cześć i chwałę swojego imienia, a także na pożytek nasz i całego swojego Kościoła świętego.”"
+    },
+    {
+     "id": "use.pl.d028059923279f9bdc5c",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

@@ -1,0 +1,43 @@
+{
+ "id": "ordinarium.orate-fratres",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 52",
+    "scan": "PDF p. 64"
+   },
+   "entries": [
+    {
+     "id": "use.en.1ad32bed036fa8c78928",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Pray, brethren, that my sacrifice and yours may be acceptable to God, the almighty Father."
+    },
+    {
+     "id": "use.en.628d5d664e5262b11ce6",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Pray, brethren, that my sacrifice and yours may be acceptable to God, the almighty Father."
+    },
+    {
+     "id": "use.en.67e86ede6743f69a3631",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Pray, brethren, that my sacrifice and yours may be acceptable to God, the almighty Father."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

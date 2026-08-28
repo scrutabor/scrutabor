@@ -1,0 +1,131 @@
+{
+ "id": "ordinarium.qui-dixisti",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 73",
+    "scan": "scan p. 85"
+   },
+   "entries": [
+    {
+     "id": "use.en.0ef6f4065a5a320af582",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+    },
+    {
+     "id": "use.en.2db1771e6f194ea42a2e",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+    },
+    {
+     "id": "use.en.747b9551591a3bba2246",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+    },
+    {
+     "id": "use.en.e696eebaa2eface38580",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+    },
+    {
+     "id": "use.en.fc236d5faf11faffb15c",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 29",
+    "scan": "scan p. 55"
+   },
+   "entries": [
+    {
+     "id": "use.en.3840c6994ab66e40b8d0",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "And with your spirit."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 30",
+    "scan": "scan p. 56"
+   },
+   "entries": [
+    {
+     "id": "use.en.13c849c20e55142e6a52",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+    },
+    {
+     "id": "use.en.1d6301426e814d830374",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+    },
+    {
+     "id": "use.en.96e6284bcd460fa3c275",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+    },
+    {
+     "id": "use.en.ae0b5f6ed7029fdf5c02",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+    },
+    {
+     "id": "use.en.da81b049b83190dabeee",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

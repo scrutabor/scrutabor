@@ -1,0 +1,27 @@
+{
+ "id": "ordinarium.iudica-me",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 55",
+    "scan": "scan p. 68"
+   },
+   "entries": [
+    {
+     "id": "use.en.fae50c9b1135c7b26a7f",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "As it was in the beginning, is now, and ever shall be, world without end. Amen."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

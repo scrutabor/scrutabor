@@ -8,7 +8,7 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
-  "ac":[161,162],
+  "ac":[161,417],
   "seg":[
     {"id":"s01","type":"rubric","text":"Deinde Ministri repetunt Confessionem.","an":8},
     {"id":"s02","type":"verse","voice":"clara","speaker":"minister","participation":{"lecta":{"gradus":2,"source":"DMS 31 b"}},"w":[{"i":"w001","f":"Confíteor","l":"confiteor","m":263},{"i":"w002","f":"Deo","l":"deus","m":186},{"i":"w003","f":"omnipoténti","l":"omnipotens","p":",","m":216,"h":"w002"},{"i":"w004","f":"beátæ","l":"beatus","m":264,"h":"w005"},{"i":"w005","f":"Maríæ","l":"Maria","m":194},{"i":"w006","f":"semper","l":"semper","m":32},{"i":"w007","f":"Vírgini","l":"virgo","p":",","m":265},{"i":"w008","f":"beáto","l":"beatus","m":216,"h":"w009"},{"i":"w009","f":"Michaéli","l":"Michael","m":214,"a":0},{"i":"w010","f":"Archángelo","l":"archangelus","p":",","m":186},{"i":"w011","f":"beáto","l":"beatus","m":216,"h":"w012"},{"i":"w012","f":"Ioánni","l":"Ioannes","m":214},{"i":"w013","f":"Baptístæ","l":"Baptista","p":",","m":266},{"i":"w014","f":"sanctis","l":"sanctus","m":236,"h":"w015"},{"i":"w015","f":"Apóstolis","l":"apostolus","m":267},{"i":"w016","f":"Petro","l":"Petrus","m":186},{"i":"w017","f":"et","l":"et","m":15},{"i":"w018","f":"Paulo","l":"Paulus","p":",","m":186},{"i":"w019","f":"ómnibus","l":"omnis","m":236,"h":"w020"},{"i":"w020","f":"Sanctis","l":"sanctus","p":",","m":236,"s":true},{"i":"w021","f":"et","l":"et","m":15},{"i":"w022","f":"tibi","l":"tu","p":",","m":139},{"i":"w023","f":"pater","l":"pater","p":":","m":50}]},

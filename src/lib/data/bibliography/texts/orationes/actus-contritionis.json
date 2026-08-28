@@ -1,0 +1,53 @@
+{
+ "id": "orationes.actus-contritionis",
+ "source_groups": [
+  {
+   "edition": "edition.compendium-ccc.2005",
+   "digital_item": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "role": "controlling_official_text",
+   "locator": {
+    "section": "printed/PDF p. 209, Actus contritionis"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.actus-contritionis.compendium-2005",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.compendium-ccc.2005",
+   "digital_item": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "role": "historical_context",
+   "locator": {
+    "section": "Appendix B, Actus contritionis, p. 209"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.actus-contritionis.context.compendium2005",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the selected Latin Actus contritionis."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.orationes.actus-contritionis.compendium-2005",
+   "text": "orationes.actus-contritionis",
+   "use": "use.orationes.actus-contritionis.compendium-2005",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "id": "orationes.alma-redemptoris-mater",
+ "source_groups": [
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 117",
+    "scan": "PDF s. 131",
+    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+   },
+   "entries": [
+    {
+     "id": "use.pl.2f4a336ff9347b54ea50",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „przyjmując owo Ave z ust Gabriela, zmiłuj się nad grzesznikami.”"
+    },
+    {
+     "id": "use.pl.3097423903369bbd6856",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Łaskawa Matko Odkupiciela, która pozostajesz otwartą bramą nieba,”"
+    },
+    {
+     "id": "use.pl.6f91c57c6231e8179db5",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ty, która ku zdumieniu natury zrodziłaś swojego świętego Stworzyciela,”"
+    },
+    {
+     "id": "use.pl.830ed6ab5b5a4a7e27f2",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i gwiazdą morza, wspomóż lud, który upada,”"
+    },
+    {
+     "id": "use.pl.901f115edc01885a283e",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „a pragnie powstać:”"
+    },
+    {
+     "id": "use.pl.e4ead735c5d79ed9c02d",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno przedtem i potem,”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

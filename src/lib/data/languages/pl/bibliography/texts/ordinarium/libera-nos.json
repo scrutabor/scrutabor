@@ -1,0 +1,76 @@
+{
+ "id": "ordinarium.libera-nos",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 62",
+    "scan": "PDF s. 65",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.39de96231d04a75a59cb",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wybaw nas, prosimy Cię, Panie, od wszelkiego zła przeszłego, obecnego i przyszłego; i za wstawiennictwem błogosławionej i chwalebnej Maryi, zawsze Dziewicy, Bożej Rodzicielki, wraz z Twoimi błogosławionymi apostołami Piotrem i Pawłem, Andrzejem i wszystkimi świętymi,”"
+    },
+    {
+     "id": "use.pl.3cb1e3807c7b7cb91090",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „łaskawie udziel nam pokoju w naszych dniach,”"
+    },
+    {
+     "id": "use.pl.4b8836fe24640f5719a7",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „przez wszystkie wieki wieków.”"
+    },
+    {
+     "id": "use.pl.651bd52475cfb0c6de1b",
+     "address": {
+      "kind": "segment",
+      "segment": "s13"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Amen.”"
+    },
+    {
+     "id": "use.pl.78c4ae9410d948916f0d",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez tego samego Pana naszego Jezusa Chrystusa, Twojego Syna,”"
+    },
+    {
+     "id": "use.pl.e2cdd5155a649a8d6f4c",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „abyśmy, wspomożeni Twoim miłosierdziem, zawsze byli wolni od grzechu i chronieni przed wszelkim zamętem.”"
+    },
+    {
+     "id": "use.pl.e8ca1932d7f92665b7dc",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „który, będąc Bogiem, żyje i króluje z Tobą w jedności Ducha Świętego,”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

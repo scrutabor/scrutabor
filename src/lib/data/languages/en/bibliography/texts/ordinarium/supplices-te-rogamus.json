@@ -1,0 +1,127 @@
+{
+ "id": "ordinarium.supplices-te-rogamus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 67–68",
+    "scan": "scan pp. 79–80"
+   },
+   "entries": [
+    {
+     "id": "use.en.7068938f405b4eab6b95",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+    },
+    {
+     "id": "use.en.9e710d91ab99e504f231",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+    },
+    {
+     "id": "use.en.9ead528cbe397fa73c7b",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+    },
+    {
+     "id": "use.en.aebc137962cdea20a03d",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+    },
+    {
+     "id": "use.en.bbeeba177bd06fdba1c9",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+    },
+    {
+     "id": "use.en.d5500526890c50057d88",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 26–27",
+    "scan": "scan pp. 52–53"
+   },
+   "entries": [
+    {
+     "id": "use.en.0a8a9a87b82e7a9fe41d",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+    },
+    {
+     "id": "use.en.676771ab2f1f8c060e85",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+    },
+    {
+     "id": "use.en.88ef30c592b1fb99208d",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+    },
+    {
+     "id": "use.en.b0cddfe68c2307556081",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+    },
+    {
+     "id": "use.en.d3f7c90e5ae89ba855e9",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+    },
+    {
+     "id": "use.en.e0d2b52eaa17dc16e0ca",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -1,0 +1,83 @@
+{
+ "id": "ordinarium.deus-tu-conversus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 39",
+    "scan": "PDF p. 51"
+   },
+   "entries": [
+    {
+     "id": "use.en.3dce80ea48b8af5363f2",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "O God, You will turn toward us and give us life."
+    },
+    {
+     "id": "use.en.67934460abb2e2029f20",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "O God, You will turn toward us and give us life."
+    },
+    {
+     "id": "use.en.8b126457de89915fa547",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "O God, You will turn toward us and give us life."
+    },
+    {
+     "id": "use.en.8b2c5f1aed89d2f8dace",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "O God, You will turn toward us and give us life."
+    },
+    {
+     "id": "use.en.cd4029489c8e09970bea",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "O God, You will turn toward us and give us life."
+    },
+    {
+     "id": "use.en.d66606fa862c600ba276",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "O God, You will turn toward us and give us life."
+    },
+    {
+     "id": "use.en.e74ae84504dc16cafe0c",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "O God, You will turn toward us and give us life."
+    },
+    {
+     "id": "use.en.e7516f540e66ca677d01",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "O God, You will turn toward us and give us life."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

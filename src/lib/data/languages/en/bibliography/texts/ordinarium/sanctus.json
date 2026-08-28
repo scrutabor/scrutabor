@@ -1,0 +1,43 @@
+{
+ "id": "ordinarium.sanctus",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 101",
+    "scan": "scan p. 114"
+   },
+   "entries": [
+    {
+     "id": "use.en.932870123d940f5ffc58",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Holy, Holy, Holy Lord God of hosts."
+    },
+    {
+     "id": "use.en.e322fb2c7db1d38f5243",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Holy, Holy, Holy Lord God of hosts."
+    },
+    {
+     "id": "use.en.ecc2f6ebf1fac3d8a20b",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Holy, Holy, Holy Lord God of hosts."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

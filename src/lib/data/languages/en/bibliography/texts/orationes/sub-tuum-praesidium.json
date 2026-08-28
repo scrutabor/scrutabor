@@ -1,0 +1,47 @@
+{
+ "id": "orationes.sub-tuum-praesidium",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 40",
+    "scan": "scan p. 53"
+   },
+   "entries": [
+    {
+     "id": "use.en.87141d2c6e3115efb5a5",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "We fly to thy protection, O holy Mother of God; despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 52",
+    "scan": "scan p. 83"
+   },
+   "entries": [
+    {
+     "id": "use.en.dc3a41152946d8def94c",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "We fly to thy protection, O holy Mother of God; despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

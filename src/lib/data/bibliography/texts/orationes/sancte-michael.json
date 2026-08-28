@@ -1,0 +1,26 @@
+{
+ "id": "orationes.sancte-michael",
+ "source_groups": [
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. 520",
+    "scan": "PDF scan 541",
+    "section": "n. 675"
+   },
+   "entries": [
+    {
+     "id": "use.core.ee468167b797b725dec5",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Sancte Michael follows the collect in the prayers after low Mass."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": []
+}

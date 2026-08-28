@@ -1,0 +1,92 @@
+{
+ "id": "ordinarium.lavabo",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 52–53",
+    "scan": "PDF ss. 55–56",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.573273021c18499e3db8",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Boże, nie zatracaj mojej duszy razem z bezbożnymi ani mojego życia z ludźmi żądnymi krwi,”"
+    },
+    {
+     "id": "use.pl.8db7b374000c505ecd08",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.”"
+    },
+    {
+     "id": "use.pl.921c1ea554b40cc2daef",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ja zaś postępowałem niewinnie; wykup mnie i zmiłuj się nade mną.”"
+    },
+    {
+     "id": "use.pl.9617a900f07ee9369db8",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, umiłowałem piękno Twojego domu i miejsce, w którym mieszka Twoja chwała.”"
+    },
+    {
+     "id": "use.pl.a69aa48048ab978be40c",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Moja stopa stanęła na równej drodze; w zgromadzeniach będę Cię błogosławił, Panie.”"
+    },
+    {
+     "id": "use.pl.bf26c13b6fb7f6f172e6",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „w których rękach jest nieprawość, a ich prawica pełna jest przekupstwa.”"
+    },
+    {
+     "id": "use.pl.d47a05fc19907df15b79",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chwała Ojcu i Synowi, i Duchowi Świętemu.”"
+    },
+    {
+     "id": "use.pl.d911049ffe60b49582e7",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Obmyję ręce pośród niewinnych i obejdę Twój ołtarz, Panie,”"
+    },
+    {
+     "id": "use.pl.fa9088bb432b09bfaa4a",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „abym usłyszał głos uwielbienia i opowiadał o wszystkich Twoich cudach.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

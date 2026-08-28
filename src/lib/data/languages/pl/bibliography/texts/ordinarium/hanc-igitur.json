@@ -1,0 +1,44 @@
+{
+ "id": "ordinarium.hanc-igitur",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 57",
+    "scan": "PDF s. 60",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.6a7073db15f44a1dcb22",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez Chrystusa Pana naszego. Amen.”"
+    },
+    {
+     "id": "use.pl.88b916a97f83e7881014",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Prosimy Cię więc, Panie, abyś łaskawie przyjął tę ofiarę naszej służby, a także całej Twojej rodziny;”"
+    },
+    {
+     "id": "use.pl.b71a8b5f3cf4e375b765",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „uporządkował nasze dni w Twoim pokoju oraz rozkazał wyrwać nas od wiecznego potępienia i zaliczyć do grona Twoich wybranych.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

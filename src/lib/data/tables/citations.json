@@ -161,7 +161,7 @@
   null,
   {"locator":"Ordo Missae, rubric at mea culpa","title":"Missale Romanum (1962)","url":"https://archive.org/details/missale_romanum-1962"},
   {"locator":"Ritus servandus in celebratione Missae, III, 9–10","title":"Missale Romanum (1962)","url":"https://archive.org/details/missale_romanum-1962"},
-  {"locator":"n. 31 b","title":"Sacra Rituum Congregatio, De musica sacra et sacra liturgia","url":"https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf"},
+  null,
   null,
   null,
   null,
@@ -276,7 +276,7 @@
   {"locator":"nn. 2777-2778","title":"Catechismus Catholicae Ecclesiae","url":"https://www.vatican.va/archive/catechism_lt/index_lt.htm"},
   {"locator":"Ritus servandus in celebratione Missae, X, 1","title":"Missale Romanum (1962)","url":"https://archive.org/details/missale_romanum-1962"},
   {"locator":"Rubricae generales, IX, n. 511 i","title":"Missale Romanum (1962)","url":"https://archive.org/details/missale_romanum-1962/page/n32/mode/1up"},
-  {"locator":"n. 32","title":"Sacra Rituum Congregatio, De musica sacra et sacra liturgia","url":"https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf"},
+  null,
   null,
   null,
   null,
@@ -413,5 +413,9 @@
   null,
   null,
   null,
-  null
+  null,
+  null,
+  null,
+  {"locator":"AAS 50 (1958), p. 642, n. 31 b — participation of the faithful at low Mass","title":"Sacra Rituum Congregatio, De musica sacra et sacra liturgia","url":"https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf#page=642"},
+  {"locator":"AAS 50 (1958), p. 643, n. 32 — Pater noster at low Mass","title":"Sacra Rituum Congregatio, De musica sacra et sacra liturgia","url":"https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf#page=643"}
 ]

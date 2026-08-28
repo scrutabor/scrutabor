@@ -1,0 +1,59 @@
+{
+ "id": "ordinarium.ecce-agnus-dei",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 32–33",
+    "scan": "PDF pp. 58–59"
+   },
+   "entries": [
+    {
+     "id": "use.en.226d68c0d981e19f96c1",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Behold the Lamb of God, behold Him who takes away the sins of the world."
+    },
+    {
+     "id": "use.en.5bbcfc76cc476391052d",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Behold the Lamb of God, behold Him who takes away the sins of the world."
+    },
+    {
+     "id": "use.en.96db86afb339024340e9",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Behold the Lamb of God, behold Him who takes away the sins of the world."
+    },
+    {
+     "id": "use.en.c3057e895c0808a3a308",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Behold the Lamb of God, behold Him who takes away the sins of the world."
+    },
+    {
+     "id": "use.en.ee586cb46418343dc597",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Behold the Lamb of God, behold Him who takes away the sins of the world."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

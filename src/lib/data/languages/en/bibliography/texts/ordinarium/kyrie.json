@@ -1,0 +1,91 @@
+{
+ "id": "ordinarium.kyrie",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 67",
+    "scan": "scan p. 80"
+   },
+   "entries": [
+    {
+     "id": "use.en.0f6f6f386719b1d9d964",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.190f4a449fadfab498f7",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.3c606481f7d547e25ddf",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.6f6f19606be8bd4adfb3",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.7c8e2ab6f40c69f1bde5",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.84dea758cc94c0389330",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.cafda1cfabaccb169e84",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.cca62be50e4ec43d8a84",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.d221e43a3cb377a97499",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Lord, have mercy."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

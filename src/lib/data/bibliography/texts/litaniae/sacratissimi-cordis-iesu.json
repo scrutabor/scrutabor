@@ -1,0 +1,55 @@
+{
+ "id": "litaniae.sacratissimi-cordis-iesu",
+ "source_groups": [
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "controlling_official_text",
+   "locator": {
+    "printed": "n. 245, pp. 150–153",
+    "scan": "PDF scans 167–170"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.sacratissimi-cordis-iesu.enchiridion-1952",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "historical_context",
+   "locator": {
+    "printed": "n. 245, pp. 150–153",
+    "scan": "PDF scans 167–170"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.sacratissimi-cordis-iesu.context.ei1952",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete Litany of the Sacred Heart."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.litaniae.sacratissimi-cordis-iesu.enchiridion-1952",
+   "text": "litaniae.sacratissimi-cordis-iesu",
+   "use": "use.litaniae.sacratissimi-cordis-iesu.enchiridion-1952",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "id": "ordinarium.per-quem-haec-omnia",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 70",
+    "scan": "scan p. 82"
+   },
+   "entries": [
+    {
+     "id": "use.en.ee5623194f1e8ec03db5",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Through Him, Lord, You always create all these things as good,"
+    },
+    {
+     "id": "use.en.f3bfd9b63adc1c4c8e4a",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Through Him, Lord, You always create all these things as good,"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 28",
+    "scan": "scan p. 54"
+   },
+   "entries": [
+    {
+     "id": "use.en.a7ca789129fbd409cd11",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Through Him, Lord, You always create all these things as good,"
+    },
+    {
+     "id": "use.en.c8d63b9f22f8a6aebdc1",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Through Him, Lord, You always create all these things as good,"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

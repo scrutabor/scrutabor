@@ -1,0 +1,26 @@
+{
+ "id": "orationes.salve-regina",
+ "source_groups": [
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. 520",
+    "scan": "PDF scan 541",
+    "section": "n. 675"
+   },
+   "entries": [
+    {
+     "id": "use.core.4e08d08a9d0a58064660",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Salve Regina precedes its versicle and collect in the prayers after low Mass."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": []
+}

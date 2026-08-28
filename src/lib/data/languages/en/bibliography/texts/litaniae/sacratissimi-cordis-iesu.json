@@ -1,0 +1,1423 @@
+{
+ "id": "litaniae.sacratissimi-cordis-iesu",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 256–263",
+    "scan": "scan pp. 269–276"
+   },
+   "entries": [
+    {
+     "id": "use.en.03dc93bfdc3c6bbcfb12",
+     "address": {
+      "kind": "segment",
+      "segment": "s053"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.09990006a43f776e1e5b",
+     "address": {
+      "kind": "segment",
+      "segment": "s006"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.09cb0924922225bcedaa",
+     "address": {
+      "kind": "segment",
+      "segment": "s037"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.0a6fb71a4b632e5d2376",
+     "address": {
+      "kind": "segment",
+      "segment": "s042"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.0d3e8552eabc439dbd30",
+     "address": {
+      "kind": "segment",
+      "segment": "s083"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.10a58ff9c14ba5f2de86",
+     "address": {
+      "kind": "segment",
+      "segment": "s068"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.127dc90b1c81728eee5d",
+     "address": {
+      "kind": "segment",
+      "segment": "s043"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.17a42f284448c5001fb0",
+     "address": {
+      "kind": "segment",
+      "segment": "s026"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.1f4dd1365f49219e9b85",
+     "address": {
+      "kind": "segment",
+      "segment": "s002"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.20dcdce644952d578fcd",
+     "address": {
+      "kind": "segment",
+      "segment": "s033"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.226353602984db7c19dd",
+     "address": {
+      "kind": "segment",
+      "segment": "s030"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.27deb7a6b512e3821b07",
+     "address": {
+      "kind": "segment",
+      "segment": "s013"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.28631d8b267b358de0af",
+     "address": {
+      "kind": "segment",
+      "segment": "s059"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.29f24ce4492d3eb8311c",
+     "address": {
+      "kind": "segment",
+      "segment": "s060"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.2b99ba84badf3f1d17d1",
+     "address": {
+      "kind": "segment",
+      "segment": "s019"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.326756f362d65fe72e52",
+     "address": {
+      "kind": "segment",
+      "segment": "s021"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.3dea61f548ecd4975520",
+     "address": {
+      "kind": "segment",
+      "segment": "s054"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.40c34287079869adb72c",
+     "address": {
+      "kind": "segment",
+      "segment": "s023"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.41aac3e2598b6f229412",
+     "address": {
+      "kind": "segment",
+      "segment": "s029"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.4283a237167ba39dab09",
+     "address": {
+      "kind": "segment",
+      "segment": "s015"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.44a84d7a42ea6607468b",
+     "address": {
+      "kind": "segment",
+      "segment": "s066"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.4522523873cd3d97e3e5",
+     "address": {
+      "kind": "segment",
+      "segment": "s088"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.46ec0000f158adec949a",
+     "address": {
+      "kind": "segment",
+      "segment": "s085"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.4976c6c1f3b882cc0d9b",
+     "address": {
+      "kind": "segment",
+      "segment": "s034"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.4bb83907532edc7feffc",
+     "address": {
+      "kind": "segment",
+      "segment": "s039"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.4c550bb5ce74f614a011",
+     "address": {
+      "kind": "segment",
+      "segment": "s070"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.4fc77f1db40809201560",
+     "address": {
+      "kind": "segment",
+      "segment": "s016"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.50e2269e3f76deced0ed",
+     "address": {
+      "kind": "segment",
+      "segment": "s040"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.5106f6200aa45011cd3f",
+     "address": {
+      "kind": "segment",
+      "segment": "s010"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.513bd9ce76416228eefd",
+     "address": {
+      "kind": "segment",
+      "segment": "s077"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.517b350932317124d8f2",
+     "address": {
+      "kind": "segment",
+      "segment": "s045"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.57180fd89c59c8d9239d",
+     "address": {
+      "kind": "segment",
+      "segment": "s063"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.5a6591656524d3359104",
+     "address": {
+      "kind": "segment",
+      "segment": "s069"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.60e5092b059c4f16bf69",
+     "address": {
+      "kind": "segment",
+      "segment": "s055"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.682756219e57de7ffda2",
+     "address": {
+      "kind": "segment",
+      "segment": "s028"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.6b2a6292d2fd5b460d2b",
+     "address": {
+      "kind": "segment",
+      "segment": "s082"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.6d60b41d9c2d0ec26cff",
+     "address": {
+      "kind": "segment",
+      "segment": "s011"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.6e2720816c5195415c5b",
+     "address": {
+      "kind": "segment",
+      "segment": "s038"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.6fbe7e971e6180a70955",
+     "address": {
+      "kind": "segment",
+      "segment": "s087"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.70850ca369b203a609a4",
+     "address": {
+      "kind": "segment",
+      "segment": "s079"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.71dd2a3379a0b6a9fa38",
+     "address": {
+      "kind": "segment",
+      "segment": "s051"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.7560638d026153f61b17",
+     "address": {
+      "kind": "segment",
+      "segment": "s035"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.79c6a7d869f68e650903",
+     "address": {
+      "kind": "segment",
+      "segment": "s074"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.7cb13693ed455782f0b8",
+     "address": {
+      "kind": "segment",
+      "segment": "s014"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.7d21467c3f13eb42fafb",
+     "address": {
+      "kind": "segment",
+      "segment": "s078"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.7dfa9c4748eea63211d8",
+     "address": {
+      "kind": "segment",
+      "segment": "s031"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.87e5146878d6610cd6d2",
+     "address": {
+      "kind": "segment",
+      "segment": "s005"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.88c0598373a4189a9d0a",
+     "address": {
+      "kind": "segment",
+      "segment": "s065"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.897dfde6d62c069f81b8",
+     "address": {
+      "kind": "segment",
+      "segment": "s089"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.8a56828dce0352d9698e",
+     "address": {
+      "kind": "segment",
+      "segment": "s062"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.8abfc0e624a5849f0dc7",
+     "address": {
+      "kind": "segment",
+      "segment": "s007"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.8b20899ddf1cd5e3a0dd",
+     "address": {
+      "kind": "segment",
+      "segment": "s057"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.8c7ec824843af808acd8",
+     "address": {
+      "kind": "segment",
+      "segment": "s046"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.8d900e592f40090e8d15",
+     "address": {
+      "kind": "segment",
+      "segment": "s022"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.903d418209215b1a1dc9",
+     "address": {
+      "kind": "segment",
+      "segment": "s052"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.94f8c48e632c2beb0a45",
+     "address": {
+      "kind": "segment",
+      "segment": "s064"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.9643e586b3ae9886bb5d",
+     "address": {
+      "kind": "segment",
+      "segment": "s081"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.99729caa6325e2d283f4",
+     "address": {
+      "kind": "segment",
+      "segment": "s003"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.9a75aea6820203d8ba39",
+     "address": {
+      "kind": "segment",
+      "segment": "s067"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.9c210fb3659d1a718309",
+     "address": {
+      "kind": "segment",
+      "segment": "s071"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.9d4e8a2c28bc2f3f3f54",
+     "address": {
+      "kind": "segment",
+      "segment": "s012"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.a6626c21407bd0cb8157",
+     "address": {
+      "kind": "segment",
+      "segment": "s032"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.ac23c455e1ebff830745",
+     "address": {
+      "kind": "segment",
+      "segment": "s084"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.afd315b51f6cf93b6d25",
+     "address": {
+      "kind": "segment",
+      "segment": "s025"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.b4cfabaec2a3cd90bdc8",
+     "address": {
+      "kind": "segment",
+      "segment": "s020"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.b571267d11b11009502f",
+     "address": {
+      "kind": "segment",
+      "segment": "s086"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.b5ff6d04c6b3ef703972",
+     "address": {
+      "kind": "segment",
+      "segment": "s041"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.b656e9de8c42247aa209",
+     "address": {
+      "kind": "segment",
+      "segment": "s004"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.b6dba32cadc3e1652453",
+     "address": {
+      "kind": "segment",
+      "segment": "s018"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.b9b156575c2d6613e45d",
+     "address": {
+      "kind": "segment",
+      "segment": "s036"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.bf25d6bd42a58ce78b44",
+     "address": {
+      "kind": "segment",
+      "segment": "s044"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.c2e5dfb273561678d4ea",
+     "address": {
+      "kind": "segment",
+      "segment": "s009"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.c425c35eb86d9eefc7ba",
+     "address": {
+      "kind": "segment",
+      "segment": "s056"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.c88dd39517fa176e833e",
+     "address": {
+      "kind": "segment",
+      "segment": "s050"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.c93ea55f685fdb1886a3",
+     "address": {
+      "kind": "segment",
+      "segment": "s047"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.d1171708151e0a417e72",
+     "address": {
+      "kind": "segment",
+      "segment": "s017"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.d2eaf4a235f1a670eb0f",
+     "address": {
+      "kind": "segment",
+      "segment": "s048"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.d53bf1d9e6a1e537d44c",
+     "address": {
+      "kind": "segment",
+      "segment": "s076"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.d688c6d27de25a3b84bd",
+     "address": {
+      "kind": "segment",
+      "segment": "s027"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.d91534a0a161b15e428c",
+     "address": {
+      "kind": "segment",
+      "segment": "s049"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.dab159676f257863703b",
+     "address": {
+      "kind": "segment",
+      "segment": "s008"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.dbee92462aabd600ba5c",
+     "address": {
+      "kind": "segment",
+      "segment": "s001"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.eae18822f1de47237976",
+     "address": {
+      "kind": "segment",
+      "segment": "s080"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.eeb2d141a8324c7c91e2",
+     "address": {
+      "kind": "segment",
+      "segment": "s073"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.eee9addb031b93edb1e4",
+     "address": {
+      "kind": "segment",
+      "segment": "s024"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.ef000aad3d84be4c846d",
+     "address": {
+      "kind": "segment",
+      "segment": "s061"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.fcd52ad351fc6b06afbf",
+     "address": {
+      "kind": "segment",
+      "segment": "s075"
+     },
+     "claim": "Lord, have mercy."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-raccolta-1910",
+   "digital_item": "item.raccolta-1910.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 140–143",
+    "scan": "scan pp. 160–163"
+   },
+   "entries": [
+    {
+     "id": "use.en.007d997259a9c2c66485",
+     "address": {
+      "kind": "segment",
+      "segment": "s057"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.058b353ebe384515dd30",
+     "address": {
+      "kind": "segment",
+      "segment": "s089"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.0f07696e7f3da2012fad",
+     "address": {
+      "kind": "segment",
+      "segment": "s008"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.13002e05ce3edba481ac",
+     "address": {
+      "kind": "segment",
+      "segment": "s077"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.16fb3a8c6b2cca63abbe",
+     "address": {
+      "kind": "segment",
+      "segment": "s004"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.1b5538590c0cb18785dc",
+     "address": {
+      "kind": "segment",
+      "segment": "s055"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.200063f258f8a5d48426",
+     "address": {
+      "kind": "segment",
+      "segment": "s069"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.23acf871c722ab27dfa9",
+     "address": {
+      "kind": "segment",
+      "segment": "s039"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.286b016a7d89861b4094",
+     "address": {
+      "kind": "segment",
+      "segment": "s025"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.2bde504bb1962b5fb249",
+     "address": {
+      "kind": "segment",
+      "segment": "s044"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.345a43a331843903bd2f",
+     "address": {
+      "kind": "segment",
+      "segment": "s012"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.3bd95feaa1c120bd35ff",
+     "address": {
+      "kind": "segment",
+      "segment": "s051"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.3e3a7572b68e088d6e27",
+     "address": {
+      "kind": "segment",
+      "segment": "s063"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.41d47c12230e20554e8c",
+     "address": {
+      "kind": "segment",
+      "segment": "s040"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.43ebc8632ba1a17ca545",
+     "address": {
+      "kind": "segment",
+      "segment": "s027"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.445ab58cc473ea3fe594",
+     "address": {
+      "kind": "segment",
+      "segment": "s046"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.4646a6eee4d35039d848",
+     "address": {
+      "kind": "segment",
+      "segment": "s020"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.48a8f6882a3bba293033",
+     "address": {
+      "kind": "segment",
+      "segment": "s033"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.4a1077f1c04cfcada838",
+     "address": {
+      "kind": "segment",
+      "segment": "s022"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.4dc7ef1b89e4f23e1f20",
+     "address": {
+      "kind": "segment",
+      "segment": "s088"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.529d1dc776542f2e578e",
+     "address": {
+      "kind": "segment",
+      "segment": "s023"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.547901f20c20b8ce82bd",
+     "address": {
+      "kind": "segment",
+      "segment": "s078"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.5dec3a0b40747c232436",
+     "address": {
+      "kind": "segment",
+      "segment": "s024"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.5ed610e73a12617ced1d",
+     "address": {
+      "kind": "segment",
+      "segment": "s065"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.61dc91c32e1579446b8f",
+     "address": {
+      "kind": "segment",
+      "segment": "s035"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.62eaf65a6dd86233b3d7",
+     "address": {
+      "kind": "segment",
+      "segment": "s032"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.6319c7a7421f9e192309",
+     "address": {
+      "kind": "segment",
+      "segment": "s061"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.63699e40e66a58be4e3f",
+     "address": {
+      "kind": "segment",
+      "segment": "s029"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.64751d146e446b199d10",
+     "address": {
+      "kind": "segment",
+      "segment": "s066"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.68f960e817fd9ebcb54f",
+     "address": {
+      "kind": "segment",
+      "segment": "s009"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.6bf616551329ad73b98e",
+     "address": {
+      "kind": "segment",
+      "segment": "s043"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.6ddac44721f0f444cfd4",
+     "address": {
+      "kind": "segment",
+      "segment": "s087"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.6e96743ecd65e8f3c849",
+     "address": {
+      "kind": "segment",
+      "segment": "s060"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.6ee8452e71666aa3299d",
+     "address": {
+      "kind": "segment",
+      "segment": "s041"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.7014d15ada79bb5743d9",
+     "address": {
+      "kind": "segment",
+      "segment": "s014"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.76bc38cf1a1f7aac5895",
+     "address": {
+      "kind": "segment",
+      "segment": "s006"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.7bf43080aef51d03d9f5",
+     "address": {
+      "kind": "segment",
+      "segment": "s017"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.7d64700637a451b8c04b",
+     "address": {
+      "kind": "segment",
+      "segment": "s080"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.800a5997ff109ef2bb4f",
+     "address": {
+      "kind": "segment",
+      "segment": "s037"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.802be928c67c66358b90",
+     "address": {
+      "kind": "segment",
+      "segment": "s003"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.81166f87635a7ae3f5b0",
+     "address": {
+      "kind": "segment",
+      "segment": "s070"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.89cac1c0bf7f5773901c",
+     "address": {
+      "kind": "segment",
+      "segment": "s081"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.8d3b9ead04c30e45a403",
+     "address": {
+      "kind": "segment",
+      "segment": "s036"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.909342d3c060b4293f86",
+     "address": {
+      "kind": "segment",
+      "segment": "s018"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.91cec606441a88542344",
+     "address": {
+      "kind": "segment",
+      "segment": "s049"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.993701ce6728e3242f7e",
+     "address": {
+      "kind": "segment",
+      "segment": "s073"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.9ae571f2eb1cc3e3474b",
+     "address": {
+      "kind": "segment",
+      "segment": "s034"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.9f8f8ea9d89dd538040a",
+     "address": {
+      "kind": "segment",
+      "segment": "s054"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.a2d8c213176968ab4fef",
+     "address": {
+      "kind": "segment",
+      "segment": "s050"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.a782f6a89fd2bcd80b4b",
+     "address": {
+      "kind": "segment",
+      "segment": "s074"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.a83a9f3c94a8be52a312",
+     "address": {
+      "kind": "segment",
+      "segment": "s062"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.a86dd1dd24fb79fd630c",
+     "address": {
+      "kind": "segment",
+      "segment": "s011"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.a8fb384467d593507ffc",
+     "address": {
+      "kind": "segment",
+      "segment": "s083"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.aa6473d391341d4e2b8f",
+     "address": {
+      "kind": "segment",
+      "segment": "s085"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.ada3197a07032d033e41",
+     "address": {
+      "kind": "segment",
+      "segment": "s007"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.bc2b2277a617978c96bd",
+     "address": {
+      "kind": "segment",
+      "segment": "s016"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.bd978dfca3481b627ed5",
+     "address": {
+      "kind": "segment",
+      "segment": "s015"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.be76c5f68a6f06842e9c",
+     "address": {
+      "kind": "segment",
+      "segment": "s001"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.c0b0683633dc4508a8d7",
+     "address": {
+      "kind": "segment",
+      "segment": "s030"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.c0b3f4ecd136cf4c94ae",
+     "address": {
+      "kind": "segment",
+      "segment": "s056"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.c1bc61f98da6e18393c5",
+     "address": {
+      "kind": "segment",
+      "segment": "s084"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.c33479d85ff186fc0a07",
+     "address": {
+      "kind": "segment",
+      "segment": "s005"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.c52fea55bddc60d80e30",
+     "address": {
+      "kind": "segment",
+      "segment": "s053"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.c5fca3c152d5a24d6cc2",
+     "address": {
+      "kind": "segment",
+      "segment": "s064"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.ca8ce50ff6f544c17ab4",
+     "address": {
+      "kind": "segment",
+      "segment": "s079"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.cb800f509663de61a741",
+     "address": {
+      "kind": "segment",
+      "segment": "s048"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.cd349a18dce4db3a1c14",
+     "address": {
+      "kind": "segment",
+      "segment": "s047"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.cd61dd1f5e4b335af1b6",
+     "address": {
+      "kind": "segment",
+      "segment": "s002"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.cea1e7fe8c7d5004ac42",
+     "address": {
+      "kind": "segment",
+      "segment": "s045"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.d0eafa0978ca0704b0bc",
+     "address": {
+      "kind": "segment",
+      "segment": "s082"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.d22f788f72a87e419de6",
+     "address": {
+      "kind": "segment",
+      "segment": "s026"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.d5ff67ea26c067d421e3",
+     "address": {
+      "kind": "segment",
+      "segment": "s052"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.dba998973ac68087411e",
+     "address": {
+      "kind": "segment",
+      "segment": "s059"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.e1febfaab4137801b8bb",
+     "address": {
+      "kind": "segment",
+      "segment": "s031"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.e29e5bda183240ac2210",
+     "address": {
+      "kind": "segment",
+      "segment": "s067"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.e575aac3c8660cfdc64f",
+     "address": {
+      "kind": "segment",
+      "segment": "s086"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.e7f12ea52a9c77b2cacd",
+     "address": {
+      "kind": "segment",
+      "segment": "s075"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.e9fadac922872c760839",
+     "address": {
+      "kind": "segment",
+      "segment": "s013"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.eb45966fceec203af908",
+     "address": {
+      "kind": "segment",
+      "segment": "s010"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.ec4c37b9c45d2c13e696",
+     "address": {
+      "kind": "segment",
+      "segment": "s021"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.ee684cd8174d6138f7ff",
+     "address": {
+      "kind": "segment",
+      "segment": "s042"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.f085f3155109b534b0bd",
+     "address": {
+      "kind": "segment",
+      "segment": "s071"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.f27b04c243062229d443",
+     "address": {
+      "kind": "segment",
+      "segment": "s028"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.f9a6dd47e1591cfaaccd",
+     "address": {
+      "kind": "segment",
+      "segment": "s076"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.f9c1dba2f9219cc2c7b8",
+     "address": {
+      "kind": "segment",
+      "segment": "s068"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.fda6fd10ad515131890e",
+     "address": {
+      "kind": "segment",
+      "segment": "s038"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.fef8b98f6ce8d6164991",
+     "address": {
+      "kind": "segment",
+      "segment": "s019"
+     },
+     "claim": "Lord, have mercy."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

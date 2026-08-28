@@ -1,0 +1,26 @@
+{
+ "id": "ordinarium.deo-gratias-epistolae",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 30",
+    "scan": "scan p. 43"
+   },
+   "entries": [
+    {
+     "id": "use.en.951b221c50b92438a6ec",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete ordinarium.deo-gratias-epistolae text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

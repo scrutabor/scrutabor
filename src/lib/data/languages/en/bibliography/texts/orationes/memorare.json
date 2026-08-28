@@ -1,0 +1,128 @@
+{
+ "id": "orationes.memorare",
+ "source_groups": [
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 588",
+    "scan": "scan p. 596"
+   },
+   "entries": [
+    {
+     "id": "use.en.4bef41e3261efe9b8eab",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+    },
+    {
+     "id": "use.en.7cdbbf8ba9310270055a",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+    },
+    {
+     "id": "use.en.85c25d6871519d6458ce",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+    },
+    {
+     "id": "use.en.8bf5d9ad8aa8b5d39888",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+    },
+    {
+     "id": "use.en.db1f328137dba202c1b1",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+    },
+    {
+     "id": "use.en.f1abc8bddee64a1f5d12",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-raccolta-1910",
+   "digital_item": "item.raccolta-1910.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 175",
+    "scan": "scan p. 195",
+    "section": "n. 196"
+   },
+   "entries": [
+    {
+     "id": "use.en.19b5fe67add4f92c6064",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+    },
+    {
+     "id": "use.en.6035432cbc0c64d1f182",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+    },
+    {
+     "id": "use.en.83842a350ce99f2f74c6",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+    },
+    {
+     "id": "use.en.9226ccccfab8ace54e85",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+    },
+    {
+     "id": "use.en.a32cbd19bb96eb87df01",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+    },
+    {
+     "id": "use.en.a796efa439a0b807b7e2",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

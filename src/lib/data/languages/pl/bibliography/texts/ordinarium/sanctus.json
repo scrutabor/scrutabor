@@ -1,0 +1,60 @@
+{
+ "id": "ordinarium.sanctus",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 55",
+    "scan": "PDF s. 58",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.046e7102fc64eed1fca2",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Błogosławiony, który idzie w imię Pańskie.”"
+    },
+    {
+     "id": "use.pl.264a7794132637ca2862",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Pełne są niebiosa i ziemia chwały Twojej.”"
+    },
+    {
+     "id": "use.pl.5ceb75d4b2ca75bef3a9",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Hosanna na wysokości.”"
+    },
+    {
+     "id": "use.pl.dbe545bd45519a947d0f",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Hosanna na wysokości.”"
+    },
+    {
+     "id": "use.pl.fc3c13f02aa741641b06",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Święty, Święty, Święty Pan Bóg Zastępów.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

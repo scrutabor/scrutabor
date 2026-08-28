@@ -1,0 +1,86 @@
+{
+ "id": "ordinarium.praefatio-dialogus",
+ "source_groups": [
+  {
+   "edition": "edition.katechizm-religji-rzymsko-katolickiej-1925",
+   "digital_item": "item.katechizm-religji-rzymsko-katolickiej-1925.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 168",
+    "scan": "PDF s. 173",
+    "page_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej"
+   },
+   "entries": [
+    {
+     "id": "use.pl.9877de2cfe7b591caf04",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „W górę serca.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 54",
+    "scan": "PDF s. 57",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.aa2e909e91d383561354",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I z duchem twoim.”"
+    },
+    {
+     "id": "use.pl.b7cfc899e7e2c33f6cfe",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Pan z wami.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 55",
+    "scan": "PDF s. 58",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.bceabb7afef6f093eba5",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wznosimy je do Pana.”"
+    },
+    {
+     "id": "use.pl.cbb7dbc5db93c31f53f1",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Dzięki składajmy Panu, Bogu naszemu.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

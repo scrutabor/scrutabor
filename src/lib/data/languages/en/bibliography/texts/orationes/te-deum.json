@@ -1,0 +1,26 @@
+{
+ "id": "orationes.te-deum",
+ "source_groups": [
+  {
+   "edition": "edition.blessed-be-god-1925",
+   "digital_item": "item.blessed-be-god-1925.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 500–501",
+    "scan": "scan pp. 550–551"
+   },
+   "entries": [
+    {
+     "id": "use.en.d4a94fc77fb5c8988c64",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete orationes.te-deum text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

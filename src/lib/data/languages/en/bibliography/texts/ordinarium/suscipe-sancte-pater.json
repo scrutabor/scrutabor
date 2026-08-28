@@ -1,0 +1,47 @@
+{
+ "id": "ordinarium.suscipe-sancte-pater",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 46",
+    "scan": "scan p. 58"
+   },
+   "entries": [
+    {
+     "id": "use.en.81d69e144264c8ee54d0",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Holy Father, almighty and eternal God, receive this unblemished sacrificial offering, which I, Your unworthy servant, offer to You, my living and true God, for my countless sins, offenses, and omissions, for all those present, and also for all the Christian faithful, living and departed, so that it may bring me and them salvation leading to eternal life. Amen."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 10",
+    "scan": "scan p. 36"
+   },
+   "entries": [
+    {
+     "id": "use.en.4a2c2339ccc8ddf44a06",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Holy Father, almighty and eternal God, receive this unblemished sacrificial offering, which I, Your unworthy servant, offer to You, my living and true God, for my countless sins, offenses, and omissions, for all those present, and also for all the Christian faithful, living and departed, so that it may bring me and them salvation leading to eternal life. Amen."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

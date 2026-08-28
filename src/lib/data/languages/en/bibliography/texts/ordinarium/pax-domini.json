@@ -1,0 +1,35 @@
+{
+ "id": "ordinarium.pax-domini",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 119",
+    "scan": "scan p. 132"
+   },
+   "entries": [
+    {
+     "id": "use.en.5db11c9f54aca09f8c0f",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "May the peace of the Lord always be with you."
+    },
+    {
+     "id": "use.en.71621e7fbecfd9cbee02",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "May the peace of the Lord always be with you."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "orationes.deus-refugium",
+ "source_groups": [
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 462",
+    "scan": "scan p. 470"
+   },
+   "entries": [
+    {
+     "id": "use.en.adbda0422a3bb521493d",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete orationes.deus-refugium text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

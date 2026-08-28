@@ -1,0 +1,44 @@
+{
+ "id": "orationes.sancte-michael",
+ "source_groups": [
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 107",
+    "scan": "PDF s. 121",
+    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+   },
+   "entries": [
+    {
+     "id": "use.pl.9ba4487ac0ce7b0e108e",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „A Ty, Wodzu niebieskich zastępów, szatana i inne duchy złe, które na zgubę dusz ludzkich po tym świecie krążą, mocą Bożą strąć do piekła. Amen.”"
+    },
+    {
+     "id": "use.pl.a9d966f23cd402b5f8f1",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Oby go Bóg pogromić raczył, pokornie o to prosimy.”"
+    },
+    {
+     "id": "use.pl.f8c28410a4c386a970db",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Święty Michale Archaniele, wspomagaj nas w walce, a przeciw niegodziwości i zasadzkom złego ducha bądź naszą obroną.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

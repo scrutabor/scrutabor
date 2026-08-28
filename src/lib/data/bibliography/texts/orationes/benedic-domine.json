@@ -1,0 +1,56 @@
+{
+ "id": "orationes.benedic-domine",
+ "source_groups": [
+  {
+   "edition": "edition.breviarium-romanum.1902-pustet",
+   "digital_item": "item.breviarium-romanum.1902-pustet.ia-breviariumromanu04cath",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 233, Benedictio Mensae, Ante Prandium",
+    "scan": "PDF scan 877"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.benedic-domine.breviarium-romanum-1902",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.enchiridion-indulgentiarum-fourth-edition",
+   "digital_item": "item.enchiridion-indulgentiarum-1999.scan",
+   "role": "historical_context",
+   "locator": {
+    "printed": "pp. 26–27",
+    "scan": "PDF pp. 26–27",
+    "section": "Concessio 26 §2, 3° — Benedic, Domine"
+   },
+   "entries": [
+    {
+     "id": "use.core.ea37ed10433d61424880",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The source prints and identifies Bénedic, Dómine."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.orationes.benedic-domine.breviarium-romanum-1902",
+   "text": "orationes.benedic-domine",
+   "use": "use.orationes.benedic-domine.breviarium-romanum-1902",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
+  }
+ ]
+}

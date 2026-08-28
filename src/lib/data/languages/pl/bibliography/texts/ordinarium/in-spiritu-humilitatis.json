@@ -1,0 +1,44 @@
+{
+ "id": "ordinarium.in-spiritu-humilitatis",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 52",
+    "scan": "PDF s. 55",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.0def0edbf69c2f13ead6",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, przyjmij nas w duchu pokory i ze skruszonym sercem; niech nasza ofiara będzie dziś przed Tobą taka, aby Ci się podobała, Panie Boże.”"
+    },
+    {
+     "id": "use.pl.7f30f59a96eefd97400f",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i pobłogosław tę ofiarę, przygotowaną dla Twojego świętego imienia.”"
+    },
+    {
+     "id": "use.pl.85fde897fd6e028dbd2c",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przyjdź, Uświęcicielu, wszechmogący i wieczny Boże:”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

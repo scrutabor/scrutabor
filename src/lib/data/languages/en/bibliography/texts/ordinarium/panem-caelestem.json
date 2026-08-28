@@ -1,0 +1,83 @@
+{
+ "id": "ordinarium.panem-caelestem",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 75–76",
+    "scan": "PDF pp. 87–88"
+   },
+   "entries": [
+    {
+     "id": "use.en.19315f03bcd086094f30",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+    },
+    {
+     "id": "use.en.52b69a0397f3dcb539b1",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+    },
+    {
+     "id": "use.en.9943efb91cf9c251bfa8",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+    },
+    {
+     "id": "use.en.b41e616fce21ed6e3667",
+     "address": {
+      "kind": "segment",
+      "segment": "s14"
+     },
+     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+    },
+    {
+     "id": "use.en.b45de02944085115238d",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+    },
+    {
+     "id": "use.en.e1b07c0efb03be54a030",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+    },
+    {
+     "id": "use.en.ee3999ab907b3ec9a2a2",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+    },
+    {
+     "id": "use.en.f5305156610fd58d1052",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

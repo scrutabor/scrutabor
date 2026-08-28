@@ -1,61 +1,72 @@
 {
-  "schema_version": "4.0.0",
+  "schema_version": "5.0.0",
   "corpus_schema": "0.18.0",
   "texts": [
     {
       "id": "defunctorum.de-profundis",
       "path": "texts/defunctorum/de-profundis.json",
-      "title": "De profúndis"
+      "title": "De profúndis",
+      "evidence": "bibliography/texts/defunctorum/de-profundis.json"
     },
     {
       "id": "defunctorum.requiem-aeternam",
       "path": "texts/defunctorum/requiem-aeternam.json",
-      "title": "Réquiem ætérnam"
+      "title": "Réquiem ætérnam",
+      "evidence": "bibliography/texts/defunctorum/requiem-aeternam.json"
     },
     {
       "id": "litaniae.lauretanae",
       "path": "texts/litaniae/lauretanae.json",
-      "title": "Litániæ Lauretanæ"
+      "title": "Litániæ Lauretanæ",
+      "evidence": "bibliography/texts/litaniae/lauretanae.json"
     },
     {
       "id": "litaniae.sacratissimi-cordis-iesu",
       "path": "texts/litaniae/sacratissimi-cordis-iesu.json",
-      "title": "Litániæ Sacratíssimi Cordis Iesu"
+      "title": "Litániæ Sacratíssimi Cordis Iesu",
+      "evidence": "bibliography/texts/litaniae/sacratissimi-cordis-iesu.json"
     },
     {
       "id": "litaniae.sanctissimi-nominis-iesu",
       "path": "texts/litaniae/sanctissimi-nominis-iesu.json",
-      "title": "Litániæ Sanctíssimi Nóminis Iesu"
+      "title": "Litániæ Sanctíssimi Nóminis Iesu",
+      "evidence": "bibliography/texts/litaniae/sanctissimi-nominis-iesu.json"
     },
     {
       "id": "orationes.actus-contritionis",
       "path": "texts/orationes/actus-contritionis.json",
-      "title": "Actus contritiónis"
+      "title": "Actus contritiónis",
+      "evidence": "bibliography/texts/orationes/actus-contritionis.json"
     },
     {
       "id": "orationes.agimus-tibi-gratias",
       "path": "texts/orationes/agimus-tibi-gratias.json",
-      "title": "Ágimus tibi grátias"
+      "title": "Ágimus tibi grátias",
+      "evidence": "bibliography/texts/orationes/agimus-tibi-gratias.json"
     },
     {
       "id": "orationes.alma-redemptoris-mater",
       "path": "texts/orationes/alma-redemptoris-mater.json",
-      "title": "Alma Redemptóris Mater"
+      "title": "Alma Redemptóris Mater",
+      "evidence": "bibliography/texts/orationes/alma-redemptoris-mater.json"
     },
     {
       "id": "orationes.angele-dei",
       "path": "texts/orationes/angele-dei.json",
-      "title": "Ángele Dei"
+      "title": "Ángele Dei",
+      "evidence": "bibliography/texts/orationes/angele-dei.json"
     },
     {
       "id": "orationes.angelus-domini",
       "path": "texts/orationes/angelus-domini.json",
-      "title": "Ángelus Dómini"
+      "title": "Ángelus Dómini",
+      "evidence": "bibliography/texts/orationes/angelus-domini.json"
     },
     {
       "id": "orationes.anima-christi",
       "path": "texts/orationes/anima-christi.json",
-      "title": "Ánima Christi"
+      "title": "Ánima Christi",
+      "evidence": "bibliography/texts/orationes/anima-christi.json"
     },
     {
       "id": "orationes.ave-maria",
@@ -65,22 +76,26 @@
     {
       "id": "orationes.ave-regina-caelorum",
       "path": "texts/orationes/ave-regina-caelorum.json",
-      "title": "Ave Regína cælórum"
+      "title": "Ave Regína cælórum",
+      "evidence": "bibliography/texts/orationes/ave-regina-caelorum.json"
     },
     {
       "id": "orationes.benedic-domine",
       "path": "texts/orationes/benedic-domine.json",
-      "title": "Bénedic, Dómine"
+      "title": "Bénedic, Dómine",
+      "evidence": "bibliography/texts/orationes/benedic-domine.json"
     },
     {
       "id": "orationes.cor-iesu",
       "path": "texts/orationes/cor-iesu.json",
-      "title": "Cor Iesu sacratíssimum"
+      "title": "Cor Iesu sacratíssimum",
+      "evidence": "bibliography/texts/orationes/cor-iesu.json"
     },
     {
       "id": "orationes.deus-refugium",
       "path": "texts/orationes/deus-refugium.json",
-      "title": "Deus, refúgium nostrum"
+      "title": "Deus, refúgium nostrum",
+      "evidence": "bibliography/texts/orationes/deus-refugium.json"
     },
     {
       "id": "orationes.gloria-patri",
@@ -90,12 +105,14 @@
     {
       "id": "orationes.magnificat",
       "path": "texts/orationes/magnificat.json",
-      "title": "Magníficat"
+      "title": "Magníficat",
+      "evidence": "bibliography/texts/orationes/magnificat.json"
     },
     {
       "id": "orationes.memorare",
       "path": "texts/orationes/memorare.json",
-      "title": "Memoráre"
+      "title": "Memoráre",
+      "evidence": "bibliography/texts/orationes/memorare.json"
     },
     {
       "id": "orationes.pater-noster",
@@ -105,17 +122,20 @@
     {
       "id": "orationes.regina-caeli",
       "path": "texts/orationes/regina-caeli.json",
-      "title": "Regína cæli"
+      "title": "Regína cæli",
+      "evidence": "bibliography/texts/orationes/regina-caeli.json"
     },
     {
       "id": "orationes.salve-regina",
       "path": "texts/orationes/salve-regina.json",
-      "title": "Salve Regína"
+      "title": "Salve Regína",
+      "evidence": "bibliography/texts/orationes/salve-regina.json"
     },
     {
       "id": "orationes.sancte-michael",
       "path": "texts/orationes/sancte-michael.json",
-      "title": "Sancte Míchaël Archángele"
+      "title": "Sancte Míchaël Archángele",
+      "evidence": "bibliography/texts/orationes/sancte-michael.json"
     },
     {
       "id": "orationes.signum-crucis",
@@ -125,17 +145,20 @@
     {
       "id": "orationes.sub-tuum-praesidium",
       "path": "texts/orationes/sub-tuum-praesidium.json",
-      "title": "Sub tuum præsídium"
+      "title": "Sub tuum præsídium",
+      "evidence": "bibliography/texts/orationes/sub-tuum-praesidium.json"
     },
     {
       "id": "orationes.symbolum-apostolorum",
       "path": "texts/orationes/symbolum-apostolorum.json",
-      "title": "Symbolum Apostolórum"
+      "title": "Symbolum Apostolórum",
+      "evidence": "bibliography/texts/orationes/symbolum-apostolorum.json"
     },
     {
       "id": "orationes.te-deum",
       "path": "texts/orationes/te-deum.json",
-      "title": "Te Deum laudámus"
+      "title": "Te Deum laudámus",
+      "evidence": "bibliography/texts/orationes/te-deum.json"
     },
     {
       "id": "ordinarium.adiutorium",
@@ -630,6 +653,10 @@
       "path": "languages/pl/manifest.json"
     }
   ],
+  "bibliography": {
+    "catalog": "bibliography/catalog.json",
+    "index": "bibliography/index.json"
+  },
   "base": {
     "concordance": "concordance.json",
     "calendar": "calendar.json",
@@ -645,5 +672,6 @@
     2101
   ],
   "analyses": 14,
-  "citations": 415
+  "citations": 419,
+  "bibliography_schema": "1.1.0"
 }

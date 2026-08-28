@@ -1,0 +1,45 @@
+{
+ "id": "orationes.ave-regina-caelorum",
+ "source_groups": [
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 592–593",
+    "scan": "scan pp. 600–601"
+   },
+   "entries": [
+    {
+     "id": "use.en.720b675dc41e6adfebdb",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete orationes.ave-regina-caelorum text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 189 and 191",
+    "scan": "scan pp. 202 and 204"
+   },
+   "entries": [
+    {
+     "id": "use.en.7900849bb46d977f04d0",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete orationes.ave-regina-caelorum text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

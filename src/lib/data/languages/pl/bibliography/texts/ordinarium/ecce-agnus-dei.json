@@ -1,0 +1,60 @@
+{
+ "id": "ordinarium.ecce-agnus-dei",
+ "source_groups": [
+  {
+   "edition": "edition.katechizm-religji-rzymsko-katolickiej-1925",
+   "digital_item": "item.katechizm-religji-rzymsko-katolickiej-1925.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 115",
+    "scan": "PDF s. 120",
+    "page_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej"
+   },
+   "entries": [
+    {
+     "id": "use.pl.82cacfddb0a9a364a9a9",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ciało Pana naszego Jezusa Chrystusa niech strzeże twojej duszy na życie wieczne. Amen.”"
+    },
+    {
+     "id": "use.pl.9837acaa425d20db2d29",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, nie jestem godzien, abyś wszedł pod dach mój, ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.”"
+    },
+    {
+     "id": "use.pl.dd0f247de0b7b0fa90cf",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, nie jestem godzien, abyś wszedł pod dach mój, ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.”"
+    },
+    {
+     "id": "use.pl.e844c5a82b7f44ef30e3",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Oto Baranek Boży, oto Ten, który gładzi grzechy świata.”"
+    },
+    {
+     "id": "use.pl.f95da2654a8a1d235d38",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, nie jestem godzien, abyś wszedł pod dach mój, ale powiedz tylko słowo, a będzie uzdrowiona dusza moja.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

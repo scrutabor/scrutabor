@@ -1,0 +1,45 @@
+{
+ "id": "orationes.actus-contritionis",
+ "source_groups": [
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "p. 503",
+    "scan": "PDF scan 511"
+   },
+   "entries": [
+    {
+     "id": "use.en.comparator.enr-008",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "A different historical English Act of Contrition recension; semantic comparator only, not current wording."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "pp. 15–16",
+    "scan": "DjVu scans 28–29"
+   },
+   "entries": [
+    {
+     "id": "use.en.comparator.enr-016",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "A different historical English Act of Contrition recension; semantic comparator only, not current wording."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

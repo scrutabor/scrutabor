@@ -1,0 +1,28 @@
+{
+ "id": "ordinarium.suscipe-sancta-trinitas",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 53",
+    "scan": "PDF s. 56",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.bb3244ad8deabbea42eb",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przyjmij, Trójco Święta, tę ofiarę, którą składamy Ci na pamiątkę męki, zmartwychwstania i wniebowstąpienia Jezusa Chrystusa, naszego Pana, oraz ku czci błogosławionej Maryi zawsze Dziewicy, błogosławionego Jana Chrzciciela, świętych Apostołów Piotra i Pawła, tych świętych i wszystkich świętych. Niech przyniesie im cześć, a nam zbawienie; oni zaś, których wspomnienie obchodzimy na ziemi, niech raczą wstawiać się za nami w niebie. Przez tegoż Chrystusa, Pana naszego. Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

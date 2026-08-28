@@ -1,0 +1,156 @@
+{
+ "id": "ordinarium.credo",
+ "source_groups": [
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 59–60",
+    "scan": "PDF ss. 73–74",
+    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+   },
+   "entries": [
+    {
+     "id": "use.pl.14ed82cb7af84d43941b",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I wstąpił do nieba: siedzi po prawicy Ojca.”"
+    },
+    {
+     "id": "use.pl.213d3049c419a07e8233",
+     "address": {
+      "kind": "segment",
+      "segment": "s14"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wierzę w Ducha Świętego, Pana i Ożywiciela: który od Ojca i Syna pochodzi.”"
+    },
+    {
+     "id": "use.pl.3023208d7a76eca946e2",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Który z Ojca jest zrodzony przed wszystkimi wiekami.”"
+    },
+    {
+     "id": "use.pl.4b50b67cb50e0368335d",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zrodzony, a nie stworzony, współistotny Ojcu, a przez Niego wszystko się stało.”"
+    },
+    {
+     "id": "use.pl.4f619821e246fbe02cf1",
+     "address": {
+      "kind": "segment",
+      "segment": "s18"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I oczekuję wskrzeszenia umarłych.”"
+    },
+    {
+     "id": "use.pl.4f6808033a8bb61c9b6c",
+     "address": {
+      "kind": "segment",
+      "segment": "s16"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wierzę w jeden, święty, powszechny i apostolski Kościół.”"
+    },
+    {
+     "id": "use.pl.52f8c55c60909e804519",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I za sprawą Ducha Świętego przyjął ciało z Maryi Dziewicy: i stał się człowiekiem.”"
+    },
+    {
+     "id": "use.pl.7049b0b1bf1b8d698dd2",
+     "address": {
+      "kind": "segment",
+      "segment": "s19"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I życia wiecznego w przyszłym świecie. Amen.”"
+    },
+    {
+     "id": "use.pl.77c2afc5737ed603be34",
+     "address": {
+      "kind": "segment",
+      "segment": "s17"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wyznaję jeden chrzest na odpuszczenie grzechów.”"
+    },
+    {
+     "id": "use.pl.a4a6db8f050e47d24a47",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Bóg z Boga, Światłość ze Światłości, Bóg prawdziwy z Boga prawdziwego.”"
+    },
+    {
+     "id": "use.pl.a987c58a5f2853492954",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wierzę w jednego Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, wszystkich rzeczy widzialnych i niewidzialnych.”"
+    },
+    {
+     "id": "use.pl.ad5fbfd163d274274960",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I w jednego Pana, Jezusa Chrystusa, Syna Bożego jednorodzonego.”"
+    },
+    {
+     "id": "use.pl.bb1cb578de25441a6195",
+     "address": {
+      "kind": "segment",
+      "segment": "s15"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Który z Ojcem i Synem wspólnie odbiera uwielbienie i chwałę: który mówił przez Proroków.”"
+    },
+    {
+     "id": "use.pl.d45bb73b9504300439de",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I zmartwychwstał dnia trzeciego, jak oznajmia Pismo.”"
+    },
+    {
+     "id": "use.pl.d5f9dc0700c6ba9e806e",
+     "address": {
+      "kind": "segment",
+      "segment": "s13"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I powtórnie przyjdzie w chwale sądzić żywych i umarłych: a Królestwu Jego nie będzie końca.”"
+    },
+    {
+     "id": "use.pl.e93d9e669004ec2c8559",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ukrzyżowany również za nas, pod Poncjuszem Piłatem został umęczony i pogrzebany.”"
+    },
+    {
+     "id": "use.pl.faf4801f654c57182b2b",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „On to dla nas ludzi i dla naszego zbawienia zstąpił z nieba.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

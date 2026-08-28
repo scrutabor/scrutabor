@@ -356,7 +356,7 @@
 					{#if hasMassFormChoice}<RolePicker {lang} kind="mass" />{/if}
 				</div>
 			</div>
-			{#if gloss.about}
+			{#if gloss.about || data.bibliography.context.length}
 				<!-- Closed in EVERY reading mode (owner rule): the
 				     introduction is one tap away, never ambient. It opens as
 				     a bottom sheet — the reading layout never reflows. -->
@@ -396,6 +396,7 @@
 						ontap={tapWord}
 						{citedSegments}
 						onsegmentselect={selectSegment}
+						verifiedTranslationCitations={data.bibliography.translation}
 					/>
 				</section>
 			{:else}
@@ -416,6 +417,7 @@
 					litanyColumns={data.category === 'litaniae'}
 					showSpeakerNames={!hasDevotionalLeader}
 					hideOpeningRubric={data.category === 'ordinarium'}
+					verifiedTranslationCitations={data.bibliography.translation}
 				/>
 			{/if}
 
@@ -432,7 +434,7 @@
 			/>
 		</main>
 
-		{#if aboutOpen && gloss.about}
+		{#if aboutOpen && (gloss.about || data.bibliography.context.length)}
 			<Sheet
 				{lang}
 				label={msgs.aboutLabel}
@@ -440,8 +442,8 @@
 				extra="about-sheet"
 				onclose={() => (aboutOpen = false)}
 			>
-				<p class="about-text">{gloss.about}</p>
-				<SourceNotes citations={gloss.about_citations} {lang} />
+				{#if gloss.about}<p class="about-text">{gloss.about}</p>{/if}
+				<SourceNotes citations={data.bibliography.context} {lang} />
 			</Sheet>
 		{/if}
 

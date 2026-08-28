@@ -1,0 +1,47 @@
+{
+ "id": "orationes.ave-maria",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 10",
+    "scan": "scan p. 23"
+   },
+   "entries": [
+    {
+     "id": "use.en.068d2a30eb31df4ee581",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 9–10",
+    "scan": "scan pp. 22–23"
+   },
+   "entries": [
+    {
+     "id": "use.en.499b6add6f453cf79850",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

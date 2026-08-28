@@ -1,0 +1,111 @@
+{
+ "id": "ordinarium.pater-noster",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 115",
+    "scan": "scan p. 128"
+   },
+   "entries": [
+    {
+     "id": "use.en.79bc0482eb9e994cce14",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Let us pray."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 9",
+    "scan": "scan p. 22"
+   },
+   "entries": [
+    {
+     "id": "use.en.1ab65fda5c91a66ef7f4",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Our Father, who art in heaven,"
+    },
+    {
+     "id": "use.en.3559b962f69c49632368",
+     "address": {
+      "kind": "segment",
+      "segment": "s14"
+     },
+     "claim": "Our Father, who art in heaven,"
+    },
+    {
+     "id": "use.en.5fccdb6561f89a672406",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Our Father, who art in heaven,"
+    },
+    {
+     "id": "use.en.6b50b1347c913f8f35eb",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Our Father, who art in heaven,"
+    },
+    {
+     "id": "use.en.7bf15439202c84a8b328",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Our Father, who art in heaven,"
+    },
+    {
+     "id": "use.en.81ea86c4d00cd879dac4",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Our Father, who art in heaven,"
+    },
+    {
+     "id": "use.en.ba0515697e662af0e1a2",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Our Father, who art in heaven,"
+    },
+    {
+     "id": "use.en.cdd1db9c8264db2f88f0",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Our Father, who art in heaven,"
+    },
+    {
+     "id": "use.en.df1ba061996b507d91e6",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "Our Father, who art in heaven,"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

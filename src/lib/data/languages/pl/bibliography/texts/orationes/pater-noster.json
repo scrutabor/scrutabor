@@ -1,0 +1,84 @@
+{
+ "id": "orationes.pater-noster",
+ "source_groups": [
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 10",
+    "scan": "PDF s. 12",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.0b09e3317190ded57baf",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Bądź wola Twoja, jako w niebie, tak i na ziemi.”"
+    },
+    {
+     "id": "use.pl.8273e8cce503b3a26706",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I odpuść nam nasze winy, jako i my odpuszczamy naszym winowajcom.”"
+    },
+    {
+     "id": "use.pl.83289e00dda323bf0106",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „ale nas zbaw ode złego. Amen.”"
+    },
+    {
+     "id": "use.pl.9e36e1bc24c592838039",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I nie wódź nas na pokuszenie,”"
+    },
+    {
+     "id": "use.pl.aa5ea01138e404d1a85d",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chleba naszego powszedniego daj nam dzisiaj.”"
+    },
+    {
+     "id": "use.pl.c376b007c7e91bf803fb",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ojcze nasz, któryś jest w niebie,”"
+    },
+    {
+     "id": "use.pl.cb4f76ffb695bc5ac8b7",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „święć się imię Twoje.”"
+    },
+    {
+     "id": "use.pl.ed060b736a8f14efbc8c",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przyjdź królestwo Twoje.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "proprium.dominica-ii-adventus-alleluia",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 91",
+    "scan": "PDF p. 103"
+   },
+   "entries": [
+    {
+     "id": "use.en.8e73a8e2bdf76597fe89",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete proprium.dominica-ii-adventus-alleluia text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "ordinarium.fili-dei-vivi",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 63–64",
+    "scan": "PDF ss. 66–67",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.1528cf4741f0d7153bf8",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie Jezu Chryste, Synu Boga żywego,”"
+    },
+    {
+     "id": "use.pl.a0b7f05e3bfcca690e03",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „który, będąc Bogiem, żyjesz i królujesz z tym samym Bogiem Ojcem i z Duchem Świętym przez wszystkie wieki wieków. Amen.”"
+    },
+    {
+     "id": "use.pl.ac3da557086733caafe8",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „wybaw mnie przez to najświętsze Ciało i Twoją Krew od wszystkich moich nieprawości i od wszelkiego zła:”"
+    },
+    {
+     "id": "use.pl.dd6f9a183400521f6112",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i spraw, abym zawsze trwał przy Twoich przykazaniach, i nigdy nie dopuść, bym został odłączony od Ciebie:”"
+    },
+    {
+     "id": "use.pl.f97d2f3760cd2674c7cd",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „który z woli Ojca, przy współdziałaniu Ducha Świętego, przez swoją śmierć ożywiłeś świat:”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

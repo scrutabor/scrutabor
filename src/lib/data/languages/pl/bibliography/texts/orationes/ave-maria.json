@@ -1,0 +1,78 @@
+{
+ "id": "orationes.ave-maria",
+ "source_groups": [
+  {
+   "edition": "edition.ksiazka-do-nabozenstwa-1883",
+   "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "druk. s. 3",
+    "scan": "DjVu s. 15",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu"
+   },
+   "entries": [
+    {
+     "id": "use.pl.5470389d2545e8385d21",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.ksiazka-do-nabozenstwa-1883",
+   "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "druk. ss. 2–3",
+    "scan": "DjVu ss. 14–15",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu"
+   },
+   "entries": [
+    {
+     "id": "use.pl.3cba2ac7ae430b4781fe",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 11",
+    "scan": "PDF s. 13",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.8dad1a0f123e87e4a2fa",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej. Amen.”"
+    },
+    {
+     "id": "use.pl.9a9d77794827ad01b07f",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

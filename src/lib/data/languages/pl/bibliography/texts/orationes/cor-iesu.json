@@ -1,0 +1,36 @@
+{
+ "id": "orationes.cor-iesu",
+ "source_groups": [
+  {
+   "edition": "edition.katechizm-religji-rzymsko-katolickiej-1925",
+   "digital_item": "item.katechizm-religji-rzymsko-katolickiej-1925.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 158",
+    "scan": "PDF s. 163",
+    "page_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej"
+   },
+   "entries": [
+    {
+     "id": "use.pl.221ce37166a0355577e1",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.c8defaf138def176fb35",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Najświętsze Serce Jezusa.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

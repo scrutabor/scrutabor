@@ -1,0 +1,52 @@
+{
+ "id": "ordinarium.misereatur",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 44–45",
+    "scan": "PDF ss. 47–48",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.80e0376f58b5595226ef",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Niech się zmiłuje nad wami Bóg wszechmogący, a odpuściwszy wam grzechy, niech was doprowadzi do życia wiecznego.”"
+    },
+    {
+     "id": "use.pl.9ac40480c1e5e0e07264",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Amen.”"
+    },
+    {
+     "id": "use.pl.f068a4b57645e29d4fd9",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przebaczenia, rozgrzeszenia i odpuszczenia grzechów naszych niech nam udzieli wszechmogący i miłosierny Pan.”"
+    },
+    {
+     "id": "use.pl.f602ca585c59f1ea4655",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "ordinarium.te-igitur",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 61–62",
+    "scan": "scan pp. 73–74"
+   },
+   "entries": [
+    {
+     "id": "use.en.087dd160395e32d3352e",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Therefore, most merciful Father, through Jesus Christ, Your Son, our Lord, we humbly pray and beseech You"
+    },
+    {
+     "id": "use.en.323b43286590bd3b340a",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Therefore, most merciful Father, through Jesus Christ, Your Son, our Lord, we humbly pray and beseech You"
+    },
+    {
+     "id": "use.en.591fde3fd439f24e2076",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Therefore, most merciful Father, through Jesus Christ, Your Son, our Lord, we humbly pray and beseech You"
+    },
+    {
+     "id": "use.en.93eeeec463cfdb1d84c8",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Therefore, most merciful Father, through Jesus Christ, Your Son, our Lord, we humbly pray and beseech You"
+    },
+    {
+     "id": "use.en.d1147ade7e1d3a9aa405",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Therefore, most merciful Father, through Jesus Christ, Your Son, our Lord, we humbly pray and beseech You"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

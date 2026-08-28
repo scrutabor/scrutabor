@@ -1,0 +1,159 @@
+{
+ "id": "orationes.angelus-domini",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 26",
+    "scan": "scan p. 39"
+   },
+   "entries": [
+    {
+     "id": "use.en.4af346cf546a5cafa8d5",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "The Angel of the Lord declared unto Mary."
+    },
+    {
+     "id": "use.en.7bf4685135f5e5593ac5",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "The Angel of the Lord declared unto Mary."
+    },
+    {
+     "id": "use.en.d90d59f5d6e2c0b6ffd2",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "The Angel of the Lord declared unto Mary."
+    },
+    {
+     "id": "use.en.f52662261fbda1a05672",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The Angel of the Lord declared unto Mary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 27",
+    "scan": "scan p. 40"
+   },
+   "entries": [
+    {
+     "id": "use.en.2839571ae3cda7715038",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Behold the handmaid of the Lord."
+    },
+    {
+     "id": "use.en.6ecfa002f1baba23ca91",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Behold the handmaid of the Lord."
+    },
+    {
+     "id": "use.en.c0d1ee6035e1572da352",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Behold the handmaid of the Lord."
+    },
+    {
+     "id": "use.en.cd6c7884c6ad1fc687ba",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Behold the handmaid of the Lord."
+    },
+    {
+     "id": "use.en.f0191584feca0c7a8f4b",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Behold the handmaid of the Lord."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 9–10 and 26–27",
+    "scan": "scan pp. 22–23 and 39–40"
+   },
+   "entries": [
+    {
+     "id": "use.en.675e174cad5776c0c67c",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+    },
+    {
+     "id": "use.en.9c6697143509b97d2d46",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+    },
+    {
+     "id": "use.en.b27e1c461b15d85662af",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.patrick-francis-moran-the-catholic-prayer-book-1883",
+   "digital_item": "item.catholic-prayer-book-moran-1883.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 11",
+    "scan": "scan p. 29"
+   },
+   "entries": [
+    {
+     "id": "use.en.650665a2027b4ea8c645",
+     "address": {
+      "kind": "segment",
+      "segment": "s13"
+     },
+     "claim": "Pour forth, we beseech thee, O Lord, thy grace into our hearts; that we, to whom the Incarnation of Christ, thy Son, was made known by the message of an angel, may by his Passion and Cross be brought to the glory of his Resurrection. Through the same Christ, our Lord. Amen."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

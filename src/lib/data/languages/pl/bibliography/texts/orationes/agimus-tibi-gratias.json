@@ -1,0 +1,44 @@
+{
+ "id": "orationes.agimus-tibi-gratias",
+ "source_groups": [
+  {
+   "edition": "edition.katechizm-religji-rzymsko-katolickiej-1925",
+   "digital_item": "item.katechizm-religji-rzymsko-katolickiej-1925.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 153",
+    "scan": "PDF s. 158",
+    "page_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej"
+   },
+   "entries": [
+    {
+     "id": "use.pl.2c50993363db7af3248a",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „który żyjesz i królujesz na wieki wieków. Amen.”"
+    },
+    {
+     "id": "use.pl.615901c688aa41163897",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „za wszystkie Twoje dobrodziejstwa:”"
+    },
+    {
+     "id": "use.pl.90acc19bbaf9a967c119",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Dziękujemy Ci, wszechmogący Boże,”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

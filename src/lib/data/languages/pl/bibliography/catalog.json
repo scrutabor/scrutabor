@@ -1,0 +1,165 @@
+{
+ "schema_version": "1.1.0",
+ "works": [
+  {
+   "id": "work.dwutygodnik-dyecezalny-wilenski",
+   "title": "Dwutygodnik Dyecezalny Wileński"
+  },
+  {
+   "id": "work.gazeta-koscielna-r-9-nr-16",
+   "title": "Gazeta Kościelna"
+  },
+  {
+   "id": "work.katechizm-religji-rzymsko-katolickiej",
+   "responsible": "Komitet Księży Katolickich",
+   "title": "Katechizm religji rzymsko-katolickiej dla użytku szkół polskich w Republice Czechosłowackiej"
+  },
+  {
+   "id": "work.ksiazka-do-nabozenstwa",
+   "responsible": "Karol Antoniewicz",
+   "title": "Książka do nabożeństwa"
+  },
+  {
+   "id": "work.ludwik-skowronek-droga-do-nieba",
+   "responsible": "Ludwik Skowronek",
+   "title": "Droga do Nieba"
+  },
+  {
+   "id": "work.pamiatka-missyi-dla-ludu-katolickiego",
+   "title": "Pamiątka Missyi dla ludu katolickiego"
+  }
+ ],
+ "editions": [
+  {
+   "id": "edition.dwutygodnik-dyecezalny-wilenski-1911",
+   "work": "work.dwutygodnik-dyecezalny-wilenski",
+   "title": "Dwutygodnik Dyecezalny Wileński, nr 20",
+   "year": "1911",
+   "publication_type": "periodical",
+   "authority": "official_document",
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
+   }
+  },
+  {
+   "id": "edition.gazeta-koscielna-r-9-nr-16-1901",
+   "work": "work.gazeta-koscielna-r-9-nr-16",
+   "title": "Gazeta Kościelna, R. 9, nr 16",
+   "year": "1901",
+   "publication_type": "periodical",
+   "authority": "historical_devotional_edition",
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
+   }
+  },
+  {
+   "id": "edition.katechizm-religji-rzymsko-katolickiej-1925",
+   "work": "work.katechizm-religji-rzymsko-katolickiej",
+   "title": "Katechizm religji rzymsko-katolickiej dla użytku szkół polskich w Republice Czechosłowackiej",
+   "place": "Frysztat",
+   "year": "1925",
+   "publication_type": "other",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
+   }
+  },
+  {
+   "id": "edition.ksiazka-do-nabozenstwa-1883",
+   "work": "work.ksiazka-do-nabozenstwa",
+   "title": "Książka do nabożeństwa",
+   "place": "Kraków",
+   "year": "1883",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
+   }
+  },
+  {
+   "id": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "work": "work.ludwik-skowronek-droga-do-nieba",
+   "title": "Droga do Nieba",
+   "year": "1907",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
+   }
+  },
+  {
+   "id": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "work": "work.pamiatka-missyi-dla-ludu-katolickiego",
+   "title": "Pamiątka Missyi dla ludu katolickiego",
+   "publisher": "Fr. Orła i Synów",
+   "year": "1903",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
+   }
+  }
+ ],
+ "digital_items": [
+  {
+   "id": "item.dwutygodnik-dyecezalny-wilenski-1911.pbc",
+   "edition": "edition.dwutygodnik-dyecezalny-wilenski-1911",
+   "repository": "Podlaska Biblioteka Cyfrowa",
+   "kind": "scan",
+   "record_url": "https://pbc.biaman.pl/Content/10710/Dwutygodnik%20Dyecezalny%20Wile%C5%84ski%20Nr%2020%2025%20pa%C5%BAdziernika%20%288%20listopada%29%201911%20rok.pdf",
+   "scan_url": "https://pbc.biaman.pl/Content/10710/Dwutygodnik%20Dyecezalny%20Wile%C5%84ski%20Nr%2020%2025%20pa%C5%BAdziernika%20%288%20listopada%29%201911%20rok.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.gazeta-koscielna-r-9-nr-16-1901.jbc",
+   "edition": "edition.gazeta-koscielna-r-9-nr-16-1901",
+   "repository": "Jagiellońska Biblioteka Cyfrowa",
+   "kind": "scan",
+   "record_url": "https://jbc.bj.uj.edu.pl/dlibra/publication/951462/edition/913560/gazeta-koscielna-pismo-poswiecone-sprawom-koscielnym-i-spolecznym-organ-towarzystwa-wzajem-pomocy-kaplanow-r-9-1901-nr-16",
+   "scan_url": "https://jbc.bj.uj.edu.pl/dlibra/publication/951462/edition/913560/gazeta-koscielna-pismo-poswiecone-sprawom-koscielnym-i-spolecznym-organ-towarzystwa-wzajem-pomocy-kaplanow-r-9-1901-nr-16",
+   "access": "open"
+  },
+  {
+   "id": "item.katechizm-religji-rzymsko-katolickiej-1925.sbc",
+   "edition": "edition.katechizm-religji-rzymsko-katolickiej-1925",
+   "repository": "Śląska Biblioteka Cyfrowa",
+   "kind": "scan",
+   "record_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej",
+   "scan_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej",
+   "access": "open"
+  },
+  {
+   "id": "item.ksiazka-do-nabozenstwa-1883.commons",
+   "edition": "edition.ksiazka-do-nabozenstwa-1883",
+   "repository": "Wikimedia Commons",
+   "kind": "scan",
+   "record_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu",
+   "scan_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu",
+   "access": "open"
+  },
+  {
+   "id": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "repository": "Śląska Biblioteka Cyfrowa",
+   "kind": "scan",
+   "record_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni",
+   "scan_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni",
+   "access": "open"
+  },
+  {
+   "id": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "repository": "Śląska Biblioteka Cyfrowa",
+   "kind": "scan",
+   "record_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego",
+   "scan_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego",
+   "access": "open"
+  }
+ ]
+}

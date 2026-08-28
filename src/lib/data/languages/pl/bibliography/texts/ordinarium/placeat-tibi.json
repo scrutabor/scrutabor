@@ -1,0 +1,28 @@
+{
+ "id": "ordinarium.placeat-tibi",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 66",
+    "scan": "PDF s. 69",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.3a9a76743c4af02e42b1",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Trójco Święta, niech ten akt mojej służby będzie Ci miły. Spraw, aby ofiara, którą ja, choć niegodny, złożyłem przed Twoim majestatem, była Ci miła i dzięki Twemu miłosierdziu stała się przebłaganiem za mnie i za wszystkich, za których ją złożyłem. Przez Chrystusa, Pana naszego. Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

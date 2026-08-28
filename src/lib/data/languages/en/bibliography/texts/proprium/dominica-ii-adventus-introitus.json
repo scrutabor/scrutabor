@@ -1,0 +1,51 @@
+{
+ "id": "proprium.dominica-ii-adventus-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 90",
+    "scan": "PDF p. 102"
+   },
+   "entries": [
+    {
+     "id": "use.en.3db95c19f26b92c22317",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "O people of Sion, behold, the Lord will come to save the nations; the Lord will make the glory of His voice heard for the joy of your hearts."
+    },
+    {
+     "id": "use.en.84d901e39b2c20ff4f9e",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "O people of Sion, behold, the Lord will come to save the nations; the Lord will make the glory of His voice heard for the joy of your hearts."
+    },
+    {
+     "id": "use.en.ad26f1fb105257ad220a",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "O people of Sion, behold, the Lord will come to save the nations; the Lord will make the glory of His voice heard for the joy of your hearts."
+    },
+    {
+     "id": "use.en.c40d4ecf34249c94edec",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "O people of Sion, behold, the Lord will come to save the nations; the Lord will make the glory of His voice heard for the joy of your hearts."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

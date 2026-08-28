@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { GlossDocument, TextDocument } from '$lib/corpus';
+	import type { Citation, GlossDocument, TextDocument } from '$lib/corpus';
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { massForm } from '$lib/mass-form.svelte';
@@ -40,7 +40,8 @@
 		litanyColumns = false,
 		showSpeakerNames = true,
 		hideOpeningRubric = false,
-		showTranslationSources = true
+		showTranslationSources = true,
+		verifiedTranslationCitations
 	}: {
 		doc: TextDocument;
 		gloss: GlossDocument;
@@ -77,6 +78,9 @@
 		 * translation-sources disclosure pushed the box below the fold
 		 * (owner, 2026-08-21), and the panel carries its own sources row. */
 		showTranslationSources?: boolean;
+		/** Audited prayer-level wording witnesses. An empty array deliberately
+		 * suppresses the legacy inline inventory while it is being migrated. */
+		verifiedTranslationCitations?: Citation[];
 	} = $props();
 
 	// A dot, not a colon: it is unreserved in a URL, so `?w=credo.w001`
@@ -175,7 +179,9 @@
 	// verse translation where the room allows, stacked where it does not.
 	// The litany keeps its own two-column convention either way.
 	const bilingual = $derived(helpLevel === 2 && !litanyColumns);
-	const translationCitations = $derived(collectTranslationCitations(segs, gloss));
+	const translationCitations = $derived(
+		verifiedTranslationCitations ?? collectTranslationCitations(segs, gloss)
+	);
 	const translationRelationships = $derived(collectTranslationRelationships(segs, gloss));
 	let expandedSegments = $state<string[]>([]);
 	// A deep link into a fold opens it: the cited verses and the selected

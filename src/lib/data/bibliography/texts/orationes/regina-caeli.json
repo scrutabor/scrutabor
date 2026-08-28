@@ -1,0 +1,25 @@
+{
+ "id": "orationes.regina-caeli",
+ "source_groups": [
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "historical_context",
+   "locator": {
+    "printed": "n. 331 b, pp. 214–215",
+    "scan": "PDF scans 233–234"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.regina-caeli.context.ei1952",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints Regina caeli, its collect and its relation to the Angelus concession."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": []
+}

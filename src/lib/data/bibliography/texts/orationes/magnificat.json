@@ -1,0 +1,119 @@
+{
+ "id": "orationes.magnificat",
+ "source_groups": [
+  {
+   "edition": "edition.breviarium-romanum.1902-pustet",
+   "digital_item": "item.breviarium-romanum.1902-pustet.ia-breviariumromanu04cath",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 143 (canticle and Gloria Patri cue); p. 4 (fixed doxology)",
+    "scan": "PDF scans 187 and 48"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.magnificat.breviarium-1902",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.breviarium-romanum.1902-pustet",
+   "digital_item": "item.breviarium-romanum.1902-pustet.ia-breviariumromanu04cath",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. 143",
+    "scan": "PDF scan 187",
+    "section": "Feria secunda ad Vesperas; Canticum B. Mariae Virg."
+   },
+   "entries": [
+    {
+     "id": "use.core.magnificat-vespers-breviarium-1902",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Breviary identifies Magnificat as the Canticle of the Blessed Virgin at Monday Vespers."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.compendium-ccc.2005",
+   "digital_item": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "role": "controlling_official_text",
+   "locator": {
+    "section": "printed/PDF p. 198, Magnificat"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.magnificat.compendium-2005",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.orationes.magnificat.breviarium-1902",
+   "text": "orationes.magnificat",
+   "use": "use.orationes.magnificat.breviarium-1902",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
+  },
+  {
+   "id": "witness.orationes.magnificat.compendium-2005",
+   "text": "orationes.magnificat",
+   "use": "use.orationes.magnificat.compendium-2005",
+   "role": "controlling",
+   "coverage": {
+    "kind": "words",
+    "words": [
+     "w090",
+     "w091",
+     "w092",
+     "w093",
+     "w094",
+     "w095",
+     "w096",
+     "w097",
+     "w098",
+     "w099",
+     "w100",
+     "w101",
+     "w102",
+     "w103",
+     "w104",
+     "w105",
+     "w106",
+     "w107",
+     "w108",
+     "w109"
+    ]
+   },
+   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
+  }
+ ],
+ "collation": {
+  "id": "collation.orationes.magnificat.br1902-comp2005",
+  "text": "orationes.magnificat",
+  "recension": "Traditional Roman canticle with the fixed doxology independently printed in the 1902 Breviary and 2005 Compendium",
+  "witnesses": [
+   "witness.orationes.magnificat.breviarium-1902",
+   "witness.orationes.magnificat.compendium-2005"
+  ],
+  "apparatus": {
+   "entries": 0,
+   "classes": []
+  }
+ }
+}

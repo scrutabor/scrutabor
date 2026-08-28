@@ -1,0 +1,56 @@
+{
+ "id": "orationes.agimus-tibi-gratias",
+ "source_groups": [
+  {
+   "edition": "edition.breviarium-romanum.1902-pustet",
+   "digital_item": "item.breviarium-romanum.1902-pustet.ia-breviariumromanu04cath",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 233, Benedictio Mensae, Post Prandium",
+    "scan": "PDF scan 877"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.agimus-tibi-gratias.breviarium-romanum-1902",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.enchiridion-indulgentiarum-fourth-edition",
+   "digital_item": "item.enchiridion-indulgentiarum-1999.scan",
+   "role": "historical_context",
+   "locator": {
+    "printed": "p. 27",
+    "scan": "PDF p. 27",
+    "section": "Concessio 26 §2, 3° — Agimus tibi gratias"
+   },
+   "entries": [
+    {
+     "id": "use.core.83f4b5e0cb26c6298acb",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The source prints and identifies Ágimus tibi grátias."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.orationes.agimus-tibi-gratias.breviarium-romanum-1902",
+   "text": "orationes.agimus-tibi-gratias",
+   "use": "use.orationes.agimus-tibi-gratias.breviarium-romanum-1902",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
+  }
+ ]
+}

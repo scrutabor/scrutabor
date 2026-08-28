@@ -1,0 +1,52 @@
+{
+ "id": "ordinarium.praefatio-communis",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 55",
+    "scan": "PDF s. 58",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.064b8b0eaee700ff322c",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie święty, Ojcze wszechmogący, wieczny Boże: przez Chrystusa Pana naszego.”"
+    },
+    {
+     "id": "use.pl.32e0a238acdebce2328c",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez Niego Aniołowie chwalą Twój majestat, Państwa go uwielbiają, a Potęgi przed nim drżą.”"
+    },
+    {
+     "id": "use.pl.38d76f98e673aa77c715",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zaprawdę godne to i sprawiedliwe, słuszne i zbawienne, byśmy Tobie zawsze i wszędzie składali dzięki:”"
+    },
+    {
+     "id": "use.pl.ee32bb7a162ec1c78a41",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Niebiosa, Moce niebios i błogosławieni Serafini wspólnie i radośnie wysławiają Twój majestat.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

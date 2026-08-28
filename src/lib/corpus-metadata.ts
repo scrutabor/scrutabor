@@ -8,6 +8,7 @@ export interface TextMetadata {
 	id: string;
 	path: string;
 	title: string;
+	evidence?: string;
 }
 
 export interface LanguageTextMetadata {
@@ -15,6 +16,12 @@ export interface LanguageTextMetadata {
 	path: string;
 	title?: string;
 	aliases?: string[];
+	evidence?: string;
+}
+
+interface BibliographyResources {
+	catalog: string;
+	index: string;
 }
 
 interface LanguageManifest {
@@ -26,6 +33,7 @@ interface LanguageManifest {
 	lexicon: string;
 	citations: string;
 	concordance: string;
+	bibliography: BibliographyResources;
 }
 
 interface RootManifest {
@@ -33,6 +41,7 @@ interface RootManifest {
 	corpus_schema: string;
 	texts: TextMetadata[];
 	languages: { id: Lang; direction: 'ltr' | 'rtl'; path: string }[];
+	bibliography: BibliographyResources;
 }
 
 type JsonModule = { default: unknown };
@@ -92,6 +101,26 @@ export function languageResourcePaths(language: Lang): {
 } {
 	const { lexicon, citations, concordance } = LANGUAGE_MANIFESTS[language];
 	return { lexicon, citations, concordance };
+}
+
+export function bibliographyResourcePaths(language: Lang): {
+	root: BibliographyResources;
+	language: BibliographyResources;
+} {
+	return {
+		root: ROOT_MANIFEST.bibliography,
+		language: LANGUAGE_MANIFESTS[language].bibliography
+	};
+}
+
+export function bibliographyEvidencePaths(
+	key: string,
+	language: Lang
+): { root?: string; language?: string } {
+	return {
+		root: METADATA_BY_KEY.get(key)?.evidence,
+		language: LANGUAGE_TEXTS[language].get(key)?.evidence
+	};
 }
 
 export function languageConcordancePath(language: Lang): string {

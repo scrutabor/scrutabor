@@ -1,0 +1,60 @@
+{
+ "id": "ordinarium.unde-et-memores",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 59",
+    "scan": "PDF s. 62",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.00a1e0e101e43c000493",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chleb święty życia wiecznego”"
+    },
+    {
+     "id": "use.pl.0ffdbc1a3f0b23f8d987",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przeto i my, Panie, Twoi słudzy, a także Twój lud święty, pomni na błogosławioną mękę tegoż Chrystusa, Twojego Syna, naszego Pana, na Jego zmartwychwstanie spośród umarłych i chwalebne wniebowstąpienie:”"
+    },
+    {
+     "id": "use.pl.27c68e17b587d47ac00a",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „ofiarujemy Twojemu przesławnemu majestatowi z Twoich darów i udzielonych nam dóbr,”"
+    },
+    {
+     "id": "use.pl.3f8c5147d04c07026c1e",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ofiarę czystą, Ofiarę świętą, Ofiarę niepokalaną,”"
+    },
+    {
+     "id": "use.pl.e533ea61480500ac1e3f",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i Kielich wiekuistego zbawienia.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

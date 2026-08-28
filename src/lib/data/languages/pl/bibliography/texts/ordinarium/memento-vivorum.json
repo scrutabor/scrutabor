@@ -1,0 +1,52 @@
+{
+ "id": "ordinarium.memento-vivorum",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 56–57",
+    "scan": "PDF ss. 59–60",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.0e868f1e6c1ae3a42a39",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i Tobie, Bogu wiecznemu, żywemu i prawdziwemu, wypełniają swoje śluby.”"
+    },
+    {
+     "id": "use.pl.1faf61b780c83184b010",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i o wszystkich tu obecnych, których wiara jest Ci znana, a pobożność wiadoma; za nich składamy Ci”"
+    },
+    {
+     "id": "use.pl.9aae7656c0b9ab8730f4",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „— albo oni sami składają Ci — tę ofiarę chwały za siebie i za wszystkich swoich: za odkupienie swoich dusz, w nadziei zbawienia i pomyślności;”"
+    },
+    {
+     "id": "use.pl.ff4c6f8aa9d6927b16e2",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Pamiętaj, Panie, o Twoich sługach i służebnicach”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

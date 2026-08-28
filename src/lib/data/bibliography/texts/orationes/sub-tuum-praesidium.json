@@ -1,0 +1,24 @@
+{
+ "id": "orationes.sub-tuum-praesidium",
+ "source_groups": [
+  {
+   "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
+   "digital_item": "item.compendium-of-the-catechism-2005.html",
+   "role": "historical_context",
+   "locator": {
+    "section": "Appendix A — Sub tuum praesidium"
+   },
+   "entries": [
+    {
+     "id": "use.core.f9e87cc5d5b567cbab11",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The source prints and identifies Sub tuum præsídium."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": []
+}

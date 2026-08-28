@@ -1,0 +1,28 @@
+{
+ "id": "ordinarium.offerimus-tibi",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 52",
+    "scan": "PDF s. 55",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.9314d0a9f60e98cc0177",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ofiarujemy Ci, Panie, kielich zbawienia, błagając o Twoją łaskawość, aby wzniósł się przed Twój boski majestat z miłą wonią, dla naszego zbawienia i dla zbawienia całego świata. Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

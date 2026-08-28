@@ -1,0 +1,26 @@
+{
+ "id": "orationes.deus-refugium",
+ "source_groups": [
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "historical_context",
+   "locator": {
+    "printed": "p. 520",
+    "scan": "scan p. 539",
+    "section": "n. 675"
+   },
+   "entries": [
+    {
+     "id": "use.core.ab8ff3b4c96a69a66480",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The source prints and identifies Deus, refúgium nostrum."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": []
+}

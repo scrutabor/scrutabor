@@ -1,0 +1,95 @@
+{
+ "id": "orationes.salve-regina",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 25–26",
+    "scan": "scan pp. 38–39"
+   },
+   "entries": [
+    {
+     "id": "use.en.007a10ccc7237aa371f4",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope."
+    },
+    {
+     "id": "use.en.1acedec1e0d1cff372c6",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope."
+    },
+    {
+     "id": "use.en.2cfdd00c200901efc584",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope."
+    },
+    {
+     "id": "use.en.9d81fb2d70305195b89c",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope."
+    },
+    {
+     "id": "use.en.a6ee7b72ab3951502a85",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope."
+    },
+    {
+     "id": "use.en.a9a20dfaf6bca22375b0",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope."
+    },
+    {
+     "id": "use.en.a9ae059d9a9a10b985e7",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-raccolta-1910",
+   "digital_item": "item.raccolta-1910.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 167",
+    "scan": "scan p. 187"
+   },
+   "entries": [
+    {
+     "id": "use.en.62715eedbcf5c10db3ef",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "O clement, O loving, O sweet Virgin Mary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

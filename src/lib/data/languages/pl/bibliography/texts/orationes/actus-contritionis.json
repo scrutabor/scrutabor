@@ -1,0 +1,68 @@
+{
+ "id": "orationes.actus-contritionis",
+ "source_groups": [
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 12–13",
+    "scan": "PDF ss. 26–27",
+    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+   },
+   "entries": [
+    {
+     "id": "use.pl.35a4ea2d8d684ce6c80b",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i brzydzę się nimi,”"
+    },
+    {
+     "id": "use.pl.3c566dbc2f4508708ad6",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Boże mój, z całego serca żałuję za wszystkie moje grzechy”"
+    },
+    {
+     "id": "use.pl.408b303c9d35bb0d4c24",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „lecz przede wszystkim dlatego, że obraziłem Ciebie, najwyższe Dobro, godne miłości ponad wszystko.”"
+    },
+    {
+     "id": "use.pl.41b814cd64bf6dd81803",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i unikać bliskich okazji do grzechu. Amen.”"
+    },
+    {
+     "id": "use.pl.5ee5a5ac2ad1562a2f1f",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „ponieważ grzesząc, zasłużyłem nie tylko na kary sprawiedliwie przez Ciebie ustanowione,”"
+    },
+    {
+     "id": "use.pl.80b2d1496eabba0fc97b",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Dlatego mocno postanawiam, z pomocą Twojej łaski, odtąd już nie grzeszyć”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

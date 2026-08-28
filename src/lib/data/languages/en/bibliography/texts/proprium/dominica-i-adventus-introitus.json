@@ -1,0 +1,51 @@
+{
+ "id": "proprium.dominica-i-adventus-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 86–87",
+    "scan": "PDF pp. 98–99"
+   },
+   "entries": [
+    {
+     "id": "use.en.95c7ae6ae324b57dfa24",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "To You, O my God, I lift up my soul. In You I trust. Let me not be put to shame, nor let my enemies mock me, for none who await You shall be put to shame."
+    },
+    {
+     "id": "use.en.97ffb035910a0011b769",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "To You, O my God, I lift up my soul. In You I trust. Let me not be put to shame, nor let my enemies mock me, for none who await You shall be put to shame."
+    },
+    {
+     "id": "use.en.a9971523113fcdb356c0",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "To You, O my God, I lift up my soul. In You I trust. Let me not be put to shame, nor let my enemies mock me, for none who await You shall be put to shame."
+    },
+    {
+     "id": "use.en.acd1d560ecf439310b28",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "To You, O my God, I lift up my soul. In You I trust. Let me not be put to shame, nor let my enemies mock me, for none who await You shall be put to shame."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

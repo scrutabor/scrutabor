@@ -1,0 +1,73 @@
+{
+ "id": "orationes.anima-christi",
+ "source_groups": [
+  {
+   "edition": "edition.compendium-ccc.2005",
+   "digital_item": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "role": "controlling_official_text",
+   "locator": {
+    "section": "printed/PDF p. 204, Anima Christi"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.anima-christi.compendium-2005",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.compendium-ccc.2005",
+   "digital_item": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "role": "historical_context",
+   "locator": {
+    "section": "Appendix B, Anima Christi, p. 204"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.anima-christi.context.compendium2005",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the selected Latin Anima Christi and its text boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "historical_context",
+   "locator": {
+    "printed": "pp. 73–74",
+    "scan": "scan pp. 92–93",
+    "section": "nn. 131–132"
+   },
+   "entries": [
+    {
+     "id": "use.core.1995cc4c1a78cd96b7a1",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The source prints and identifies Ánima Christi."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.orationes.anima-christi.compendium-2005",
+   "text": "orationes.anima-christi",
+   "use": "use.orationes.anima-christi.compendium-2005",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
+  }
+ ]
+}

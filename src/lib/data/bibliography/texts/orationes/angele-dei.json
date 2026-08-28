@@ -1,0 +1,53 @@
+{
+ "id": "orationes.angele-dei",
+ "source_groups": [
+  {
+   "edition": "edition.compendium-ccc.2005",
+   "digital_item": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "role": "controlling_official_text",
+   "locator": {
+    "section": "printed/PDF p. 195, Angele Dei"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.angele-dei.compendium-2005",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.compendium-ccc.2005",
+   "digital_item": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "role": "historical_context",
+   "locator": {
+    "section": "Appendix B, Angele Dei, p. 195"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.angele-dei.context.compendium2005",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the selected Latin Angele Dei."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.orationes.angele-dei.compendium-2005",
+   "text": "orationes.angele-dei",
+   "use": "use.orationes.angele-dei.compendium-2005",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "id": "ordinarium.deus-tu-conversus",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 44–45",
+    "scan": "PDF ss. 47–48",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.188a17f489585bea2c75",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Boże, Ty zwrócisz się ku nam i przywrócisz nam życie.”"
+    },
+    {
+     "id": "use.pl.2a82ee32be1e5342a5fd",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Pan z wami.”"
+    },
+    {
+     "id": "use.pl.4d263c803f2db2d6f3c5",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Okaż nam, Panie, swoje miłosierdzie.”"
+    },
+    {
+     "id": "use.pl.4d487ecfc01948abff1c",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „A Twój lud rozraduje się w Tobie.”"
+    },
+    {
+     "id": "use.pl.b03eb1f5adf595e58d64",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I daj nam swoje zbawienie.”"
+    },
+    {
+     "id": "use.pl.b3a9ea03903ff1874b4b",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „A moje wołanie niech do Ciebie dotrze.”"
+    },
+    {
+     "id": "use.pl.c5fe7474f7b6afa58102",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I z duchem twoim.”"
+    },
+    {
+     "id": "use.pl.fe6d01def6de2b258ca7",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, wysłuchaj mojej modlitwy.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

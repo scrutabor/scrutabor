@@ -1,0 +1,35 @@
+{
+ "id": "ordinarium.misereatur-tui",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 37",
+    "scan": "PDF p. 49"
+   },
+   "entries": [
+    {
+     "id": "use.en.2acf577ab0bd28af3790",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life."
+    },
+    {
+     "id": "use.en.3722acada5722a3c5191",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

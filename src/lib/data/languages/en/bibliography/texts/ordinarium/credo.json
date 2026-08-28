@@ -1,0 +1,155 @@
+{
+ "id": "ordinarium.credo",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 79–83",
+    "scan": "scan pp. 92–96"
+   },
+   "entries": [
+    {
+     "id": "use.en.1b742cca89f661039854",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.236898b6cb5354e70d60",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.35c48805314b36c93e81",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.50fa5d3bab122090e176",
+     "address": {
+      "kind": "segment",
+      "segment": "s15"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.6be9cf82a03c136cceb3",
+     "address": {
+      "kind": "segment",
+      "segment": "s19"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.732113010bef11dbc094",
+     "address": {
+      "kind": "segment",
+      "segment": "s18"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.7ec4ad6b5db0257ae331",
+     "address": {
+      "kind": "segment",
+      "segment": "s13"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.84c7ac9455f82239747b",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.8aadaa22e95dfeed99a8",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.989e46b24dc12d61c262",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.b59e891045219996a176",
+     "address": {
+      "kind": "segment",
+      "segment": "s16"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.c2a4d53c1039a76cc278",
+     "address": {
+      "kind": "segment",
+      "segment": "s14"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.ce8210cab437a6d05382",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.d5d7c1fdfccc2a146e60",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.d6adfbc856dec9592b3f",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.da113ca8311b427a8961",
+     "address": {
+      "kind": "segment",
+      "segment": "s17"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    },
+    {
+     "id": "use.en.e25c4b6e4e478e07f79c",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -1,0 +1,248 @@
+{
+ "schema_version": "1.1.0",
+ "works": [
+  {
+   "id": "work.biblia-sacra-vulgatae-editionis",
+   "responsible": "Michael Hetzenauer",
+   "title": "Biblia Sacra Vulgatae Editionis"
+  },
+  {
+   "id": "work.breviarium-romanum",
+   "responsible": "Ecclesia Catholica",
+   "title": "Breviarium Romanum"
+  },
+  {
+   "id": "work.compendium-catechismi-catholicae-ecclesiae",
+   "responsible": "Ecclesia Catholica",
+   "title": "Compendium Catechismi Catholicae Ecclesiae"
+  },
+  {
+   "id": "work.compendium-of-the-catechism-of-the-catholic-church",
+   "responsible": "Catholic Church",
+   "title": "Compendium of the Catechism of the Catholic Church"
+  },
+  {
+   "id": "work.enchiridion-indulgentiarum",
+   "responsible": "Paenitentiaria Apostolica",
+   "title": "Enchiridion Indulgentiarum"
+  },
+  {
+   "id": "work.katolik-w-modlitwie",
+   "responsible": "ks. Józef Kühn",
+   "title": "Katolik w modlitwie czyli książka do nabożeństwa oraz śpiewnik kościelny"
+  },
+  {
+   "id": "work.key-of-heaven",
+   "title": "Key of Heaven"
+  },
+  {
+   "id": "work.liber-usualis",
+   "responsible": "Abbaye Saint-Pierre de Solesmes",
+   "title": "Liber Usualis"
+  }
+ ],
+ "editions": [
+  {
+   "id": "edition.biblia-sacra-vulgatae-editionis-1914",
+   "work": "work.biblia-sacra-vulgatae-editionis",
+   "title": "Biblia Sacra Vulgatae Editionis",
+   "year": "1914",
+   "publication_type": "scripture",
+   "authority": "scriptural_edition",
+   "rights": {
+    "status": "public-domain",
+    "basis": "Printing of 1914."
+   }
+  },
+  {
+   "id": "edition.breviarium-romanum.1902-pustet",
+   "work": "work.breviarium-romanum",
+   "recension": "Roman Breviary after the recognitions of Clement VIII, Urban VIII and Leo XIII",
+   "title": "Breviarium Romanum ex decreto SS. Concilii Tridentini restitutum",
+   "edition_statement": "Editio nona post typicam, pars autumnalis",
+   "place": "Ratisbonae",
+   "publisher": "Friderici Pustet",
+   "year": "1902",
+   "publication_type": "breviary",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "public-domain",
+    "basis": "The identified 1902 edition is in the public domain."
+   }
+  },
+  {
+   "id": "edition.compendium-ccc.2005",
+   "work": "work.compendium-catechismi-catholicae-ecclesiae",
+   "recension": "Official Latin prayer appendix",
+   "title": "Katalikų Bažnyčios katekizmo santrauka",
+   "edition_statement": "Official Lithuanian edition with Latin appendix",
+   "year": "2005",
+   "publication_type": "official_act",
+   "authority": "official_document",
+   "rights": {
+    "status": "unverified",
+    "basis": "No republication licence is asserted; the graph exposes only bibliographic facts and locators."
+   }
+  },
+  {
+   "id": "edition.compendium-of-the-catechism-of-the-catholic-church",
+   "work": "work.compendium-of-the-catechism-of-the-catholic-church",
+   "title": "Compendium of the Catechism of the Catholic Church",
+   "year": "2005",
+   "publication_type": "official_act",
+   "authority": "official_document",
+   "rights": {
+    "status": "permission",
+    "basis": "Libreria Editrice Vaticana."
+   }
+  },
+  {
+   "id": "edition.enchiridion-indulgentiarum-fourth-edition",
+   "work": "work.enchiridion-indulgentiarum",
+   "title": "Enchiridion Indulgentiarum, editio quarta",
+   "year": "1999",
+   "publication_type": "official_act",
+   "authority": "official_document",
+   "rights": {
+    "status": "unverified",
+    "basis": "Edition and year not established here."
+   }
+  },
+  {
+   "id": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "work": "work.enchiridion-indulgentiarum",
+   "recension": "Preces et Pia Opera",
+   "title": "Enchiridion Indulgentiarum: Preces et Pia Opera",
+   "edition_statement": "Editio altera",
+   "place": "Civitas Vaticana",
+   "year": "1952",
+   "publication_type": "official_act",
+   "authority": "official_document",
+   "rights": {
+    "status": "unverified",
+    "basis": "No republication licence is asserted; the graph exposes only bibliographic facts and locators."
+   }
+  },
+  {
+   "id": "edition.katolik-w-modlitwie-1902",
+   "work": "work.katolik-w-modlitwie",
+   "title": "Katolik w modlitwie czyli książka do nabożeństwa oraz śpiewnik kościelny",
+   "place": "Gliwice",
+   "year": "1902",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
+   }
+  },
+  {
+   "id": "edition.key-of-heaven-1901",
+   "work": "work.key-of-heaven",
+   "title": "Key of Heaven: A Manual of Devotions and Instructions for the Use of Catholics",
+   "place": "Baltimore and New York",
+   "publisher": "John Murphy Company",
+   "year": "1901",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "public-domain",
+    "basis": "United States devotional manual published in 1901, before 1931; only wording verified in this edition is cited."
+   }
+  },
+  {
+   "id": "edition.liber-usualis.1961",
+   "work": "work.liber-usualis",
+   "recension": "Roman chant book with English rubrics",
+   "title": "The Liber Usualis with Introduction and Rubrics in English",
+   "publisher": "Desclée",
+   "year": "1961",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "unverified",
+    "basis": "No republication licence is asserted; the graph exposes only bibliographic facts and locators."
+   }
+  }
+ ],
+ "digital_items": [
+  {
+   "id": "item.biblia-sacra-vulgatae-1914.scan",
+   "edition": "edition.biblia-sacra-vulgatae-editionis-1914",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/bibliasacravulga00helzuoft",
+   "scan_url": "https://archive.org/details/bibliasacravulga00helzuoft",
+   "access": "open"
+  },
+  {
+   "id": "item.breviarium-romanum.1902-pustet.ia-breviariumromanu04cath",
+   "edition": "edition.breviarium-romanum.1902-pustet",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/breviariumromanu04cath",
+   "scan_url": "https://archive.org/download/breviariumromanu04cath/breviariumromanu04cath.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "edition": "edition.compendium-ccc.2005",
+   "repository": "The Holy See",
+   "kind": "born-digital",
+   "record_url": "https://www.vatican.va/archive/compendium_ccc/documents/compendium_catech_lit.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.compendium-of-the-catechism-2005.html",
+   "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
+   "repository": "Holy See",
+   "kind": "born-digital",
+   "record_url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html",
+   "access": "open"
+  },
+  {
+   "id": "item.enchiridion-indulgentiarum-1999.scan",
+   "edition": "edition.enchiridion-indulgentiarum-fourth-edition",
+   "repository": "Holy See",
+   "kind": "scan",
+   "record_url": "https://www.vatican.va/roman_curia/tribunals/apost_penit/documents/rc_trib_appen_doc_20020826_enchiridion-indulgentiarum_lt.html",
+   "access": "open"
+  },
+  {
+   "id": "item.enchiridion-indulgentiarum.1952.ia",
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/enchiridion_indulgentiarum_1952",
+   "scan_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.katolik-w-modlitwie-1902.obc",
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "repository": "Opolska Biblioteka Cyfrowa",
+   "kind": "scan",
+   "record_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny",
+   "scan_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny",
+   "access": "open"
+  },
+  {
+   "id": "item.key-of-heaven-1901.wikimedia-commons",
+   "edition": "edition.key-of-heaven-1901",
+   "repository": "Wikimedia Commons",
+   "kind": "scan",
+   "record_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu",
+   "scan_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/KeyOfHeaven.djvu",
+   "access": "open"
+  },
+  {
+   "id": "item.liber-usualis.1961.ia",
+   "edition": "edition.liber-usualis.1961",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/TheLiberUsualis1961",
+   "scan_url": "https://archive.org/download/TheLiberUsualis1961/liberusualis.pdf",
+   "access": "open"
+  }
+ ]
+}

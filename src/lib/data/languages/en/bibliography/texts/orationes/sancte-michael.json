@@ -1,0 +1,26 @@
+{
+ "id": "orationes.sancte-michael",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 140–141",
+    "scan": "scan pp. 153–154"
+   },
+   "entries": [
+    {
+     "id": "use.en.5258f5264492baf6c8a2",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete orationes.sancte-michael text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

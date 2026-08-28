@@ -1,0 +1,111 @@
+{
+ "id": "ordinarium.aufer-a-nobis",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 39–40",
+    "scan": "scan pp. 51–52"
+   },
+   "entries": [
+    {
+     "id": "use.en.061c3d8f081433860565",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Let us pray."
+    },
+    {
+     "id": "use.en.2829f2de97ef8b20d0a3",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Let us pray."
+    },
+    {
+     "id": "use.en.4714d2ebd4e122c80679",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Let us pray."
+    },
+    {
+     "id": "use.en.5ce24a11d98030c7481b",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Let us pray."
+    },
+    {
+     "id": "use.en.bb91cb460855490b89f9",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Let us pray."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 6",
+    "scan": "scan p. 32"
+   },
+   "entries": [
+    {
+     "id": "use.en.62d6384f11275697baf9",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Let us pray."
+    },
+    {
+     "id": "use.en.7cb0e8bece57fe3f56ba",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Let us pray."
+    },
+    {
+     "id": "use.en.ac9c7a6bd39d21353350",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Let us pray."
+    },
+    {
+     "id": "use.en.cf6cd75ca058ba1916af",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Let us pray."
+    },
+    {
+     "id": "use.en.f8ef9581c83a15113979",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Let us pray."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

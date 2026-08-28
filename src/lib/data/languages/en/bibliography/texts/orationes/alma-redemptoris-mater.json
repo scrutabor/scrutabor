@@ -1,0 +1,45 @@
+{
+ "id": "orationes.alma-redemptoris-mater",
+ "source_groups": [
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 590–591",
+    "scan": "scan pp. 598–599"
+   },
+   "entries": [
+    {
+     "id": "use.en.921c941913f51e91e372",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete orationes.alma-redemptoris-mater text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 183 and 185",
+    "scan": "scan pp. 196 and 198"
+   },
+   "entries": [
+    {
+     "id": "use.en.67396b5c39a30fbea5c7",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete orationes.alma-redemptoris-mater text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

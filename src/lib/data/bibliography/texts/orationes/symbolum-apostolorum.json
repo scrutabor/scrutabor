@@ -1,0 +1,115 @@
+{
+ "id": "orationes.symbolum-apostolorum",
+ "source_groups": [
+  {
+   "edition": "edition.compendium-ccc.2005",
+   "digital_item": "item.compendium-ccc.2005.vatican-pdf-lt",
+   "role": "controlling_official_text",
+   "locator": {
+    "section": "PDF p. 27, Latin column under Symbola fidei"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.symbolum-apostolorum.compendium-2005",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
+   "digital_item": "item.compendium-of-the-catechism-2005.html",
+   "role": "historical_context",
+   "locator": {
+    "section": "Appendix A — The Apostles’ Creed; questions 33–35, especially 35 (CCC 193–195)"
+   },
+   "entries": [
+    {
+     "id": "use.core.c81ffe467613eb6395ac",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The source prints and identifies Symbolum Apostolórum."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.orationes.symbolum-apostolorum.compendium-2005",
+   "text": "orationes.symbolum-apostolorum",
+   "use": "use.orationes.symbolum-apostolorum.compendium-2005",
+   "role": "controlling",
+   "coverage": {
+    "kind": "words",
+    "words": [
+     "w001",
+     "w002",
+     "w003",
+     "w004",
+     "w005",
+     "w006",
+     "w007",
+     "w008",
+     "w009",
+     "w010",
+     "w011",
+     "w012",
+     "w013",
+     "w014",
+     "w015",
+     "w016",
+     "w017",
+     "w018",
+     "w019",
+     "w020",
+     "w021",
+     "w022",
+     "w023",
+     "w024",
+     "w025",
+     "w026",
+     "w027",
+     "w028",
+     "w029",
+     "w030",
+     "w031",
+     "w032",
+     "w033",
+     "w034",
+     "w035",
+     "w036",
+     "w037",
+     "w038",
+     "w039",
+     "w040",
+     "w041",
+     "w042",
+     "w043",
+     "w044",
+     "w045",
+     "w046",
+     "w047",
+     "w048",
+     "w049",
+     "w050",
+     "w051",
+     "w052",
+     "w053",
+     "w054",
+     "w055",
+     "w056",
+     "w057",
+     "w058",
+     "w059",
+     "w060"
+    ]
+   },
+   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
+  }
+ ]
+}

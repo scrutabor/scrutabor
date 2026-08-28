@@ -96,17 +96,15 @@ test('a speaker label clears the raised initial below it', async ({ page }) => {
 });
 
 test('a prayer identifies its translation sources once after the text', async ({ page }) => {
-	await page.goto('/app/pl/psalmi/118-he');
+	await page.goto('/app/pl/orationes/pater-noster');
 	await setHelp(page, 2);
-	const verse = page.locator('#v34 + .seg-extra');
-	await expect(verse.locator('.translation')).toContainText('Daj mi zrozumienie');
 	await expect(page.locator('.seg-extra details.source-notes')).toHaveCount(0);
 	const sources = page.locator('main .translation-sources details.source-notes');
 	await expect(sources).toHaveCount(1);
 	await expect(sources.getByText('źródła', { exact: true })).toBeVisible();
 	await sources.locator('summary').click();
-	await expect(sources).toContainText('Biblia w przekładzie ks. Jakuba Wujka (1923)');
-	await expect(sources).toContainText('Psalm 118:33–40, DjVu scan 588');
+	await expect(sources).toContainText('Droga do Nieba');
+	await expect(sources).toContainText('druk. s. 10 · PDF s. 12');
 	await expect(sources.getByRole('link', { name: 'pełna bibliografia' })).toHaveAttribute(
 		'href',
 		'/app/pl/bibliographia'
@@ -127,7 +125,9 @@ test('a cited translation states how its wording relates to the historical sourc
 	await sources.locator('summary').click();
 	await expect(sources).toContainText('relacja z brzmieniem historycznym');
 	await expect(sources).toContainText('znaną formułę tradycyjną');
-	await expect(sources).toContainText('Katechizm religji rzymsko-katolickiej (1925)');
+	await expect(sources).toContainText(
+		'Katechizm religji rzymsko-katolickiej dla użytku szkół polskich w Republice Czechosłowackiej'
+	);
 
 	await page.goto('/app/en/orationes/benedic-domine');
 	await setHelp(page, 2);
@@ -135,7 +135,7 @@ test('a cited translation states how its wording relates to the historical sourc
 	await sources.locator('summary').click();
 	await expect(sources).toContainText('relationship to historical wording');
 	await expect(sources).toContainText('edited directly from the Latin');
-	await expect(sources).toContainText("Francis X. Lasance, The Catholic Girl's Guide (1906)");
+	await expect(sources).toContainText("The Catholic Girl's Guide");
 });
 
 test('a litany pairs every invocation with its exact response in compact columns', async ({
@@ -674,17 +674,11 @@ test('the about sheet speaks the interface language', async ({ page }) => {
 	await expect(page.locator('aside.about-sheet')).toContainText("Lord's Prayer");
 });
 
-test('a doctrinal distinction shows its exact source only on request', async ({ page }) => {
+test('an unresolved legacy citation is not presented as audited evidence', async ({ page }) => {
 	await page.goto('/app/en/ordinarium/misereatur');
 	await page.locator('.about-pill').click();
-	const sources = page.locator('aside.about-sheet details.source-notes');
-	await expect(sources.locator('summary')).toHaveText('sources');
-	await expect(sources.getByRole('link')).not.toBeVisible();
-	await sources.locator('summary').click();
-	await expect(
-		sources.getByRole('link', { name: 'Catechismus Catholicae Ecclesiae' })
-	).toHaveAttribute('href', 'https://press.vatican.va/archive/catechism_lt/p2s2c2a4_lt.htm');
-	await expect(sources).toContainText('n. 1449');
+	await expect(page.locator('aside.about-sheet')).toContainText('absolution');
+	await expect(page.locator('aside.about-sheet details.source-notes')).toHaveCount(0);
 });
 
 test('the Credo reads with participles in the panel', async ({ page }) => {

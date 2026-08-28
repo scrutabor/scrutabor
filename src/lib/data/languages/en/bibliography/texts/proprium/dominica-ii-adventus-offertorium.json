@@ -1,0 +1,26 @@
+{
+ "id": "proprium.dominica-ii-adventus-offertorium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 92",
+    "scan": "PDF p. 104"
+   },
+   "entries": [
+    {
+     "id": "use.en.58c5bd30692527f8076e",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete proprium.dominica-ii-adventus-offertorium text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

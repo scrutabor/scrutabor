@@ -1,0 +1,79 @@
+{
+ "id": "ordinarium.memento-defunctorum",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 68–69",
+    "scan": "scan pp. 80–81"
+   },
+   "entries": [
+    {
+     "id": "use.en.49bccd269f53d2e6bac5",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Remember also, O Lord, Your servants, men and women, who went before us bearing the sign of faith and now sleep the sleep of peace."
+    },
+    {
+     "id": "use.en.5aed40d65d7f79afd3f4",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Remember also, O Lord, Your servants, men and women, who went before us bearing the sign of faith and now sleep the sleep of peace."
+    },
+    {
+     "id": "use.en.a8d5e1ced956c77641f8",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Remember also, O Lord, Your servants, men and women, who went before us bearing the sign of faith and now sleep the sleep of peace."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 27",
+    "scan": "scan p. 53"
+   },
+   "entries": [
+    {
+     "id": "use.en.92d6ba4b00b41d6cbce0",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Remember also, O Lord, Your servants, men and women, who went before us bearing the sign of faith and now sleep the sleep of peace."
+    },
+    {
+     "id": "use.en.9890b901a26341381cda",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Remember also, O Lord, Your servants, men and women, who went before us bearing the sign of faith and now sleep the sleep of peace."
+    },
+    {
+     "id": "use.en.e7b71254cda55ed86696",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Remember also, O Lord, Your servants, men and women, who went before us bearing the sign of faith and now sleep the sleep of peace."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

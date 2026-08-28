@@ -1,0 +1,81 @@
+{
+ "id": "ordinarium.qui-dixisti",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 62",
+    "scan": "PDF s. 65",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.92de4db608f3ff12efde",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I z duchem twoim.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 63",
+    "scan": "PDF s. 66",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.1ba385668b1810a176f7",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie Jezu Chryste, który powiedziałeś swoim apostołom:”"
+    },
+    {
+     "id": "use.pl.545855601b824f1d7c12",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „„Pokój zostawiam wam; pokój mój wam daję” —”"
+    },
+    {
+     "id": "use.pl.80ca5b9c5e6eecc1144a",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „nie zważaj na moje grzechy, lecz na wiarę Twojego Kościoła;”"
+    },
+    {
+     "id": "use.pl.8a7c652cc10540d1c5df",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „który, będąc Bogiem, żyjesz i królujesz przez wszystkie wieki wieków. Amen.”"
+    },
+    {
+     "id": "use.pl.9bfb949986f6062bc8ee",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i zgodnie z Twoją wolą racz obdarzyć go pokojem i jednoczyć,”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

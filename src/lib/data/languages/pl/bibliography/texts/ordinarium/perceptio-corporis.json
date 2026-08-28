@@ -1,0 +1,52 @@
+{
+ "id": "ordinarium.perceptio-corporis",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 64",
+    "scan": "PDF s. 67",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.3cd986f48af678323f00",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „niech nie sprowadzi na mnie sądu ani potępienia:”"
+    },
+    {
+     "id": "use.pl.47f60aea3d3ef131731f",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „który, będąc Bogiem, żyjesz i królujesz z Bogiem Ojcem w jedności Ducha Świętego przez wszystkie wieki wieków. Amen.”"
+    },
+    {
+     "id": "use.pl.67c42acb61b9544fab3f",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przyjęcie Twojego Ciała, Panie Jezu Chryste, które ja, choć niegodny, ośmielam się przyjąć,”"
+    },
+    {
+     "id": "use.pl.ec80ae3944a82771d51c",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „lecz ze względu na Twoją dobroć niech chroni mój umysł i ciało oraz przyniesie mi uzdrowienie:”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

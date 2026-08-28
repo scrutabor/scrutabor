@@ -1,0 +1,120 @@
+{
+ "id": "ordinarium.gloria",
+ "source_groups": [
+  {
+   "edition": "edition.douay-rheims-bible-challoner",
+   "digital_item": "item.douay-rheims-challoner-1914.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "New Testament p. 67",
+    "scan": "PDF p. 1170",
+    "section": "Luke 2:14"
+   },
+   "entries": [
+    {
+     "id": "use.en.c62860e79634c55296bb",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Glory to God in the highest."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 65",
+    "scan": "scan p. 96"
+   },
+   "entries": [
+    {
+     "id": "use.en.3642a2f8d3ba85d2ea15",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "We give You thanks for Your great glory."
+    },
+    {
+     "id": "use.en.a69bf2aaa2325fe0c523",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "We give You thanks for Your great glory."
+    },
+    {
+     "id": "use.en.b5e5bca4c13e97340ef7",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "We give You thanks for Your great glory."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 66",
+    "scan": "scan p. 97"
+   },
+   "entries": [
+    {
+     "id": "use.en.00c8cd782b363b22826d",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "You who sit at the Father's right hand, have mercy on us."
+    },
+    {
+     "id": "use.en.0524d8c62828c31becdd",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "You who sit at the Father's right hand, have mercy on us."
+    },
+    {
+     "id": "use.en.bc0573a61c0e3ef9ac0d",
+     "address": {
+      "kind": "segment",
+      "segment": "s13"
+     },
+     "claim": "You who sit at the Father's right hand, have mercy on us."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 65–66",
+    "scan": "scan pp. 96–97"
+   },
+   "entries": [
+    {
+     "id": "use.en.95e30e5fbba6cc0ce97b",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "We praise You. We bless You. We adore You. We glorify You."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -1,0 +1,52 @@
+{
+ "id": "orationes.benedic-domine",
+ "source_groups": [
+  {
+   "edition": "edition.katechizm-religji-rzymsko-katolickiej-1925",
+   "digital_item": "item.katechizm-religji-rzymsko-katolickiej-1925.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 153",
+    "scan": "PDF s. 158",
+    "page_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej"
+   },
+   "entries": [
+    {
+     "id": "use.pl.066a63287a4e033359be",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „które z Twej dobroci spożywać będziemy.”"
+    },
+    {
+     "id": "use.pl.386108a26cf994547fbf",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Pobłogosław, o Panie, nas”"
+    },
+    {
+     "id": "use.pl.522718037c26ab4e1755",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i te dary Twoje,”"
+    },
+    {
+     "id": "use.pl.b29d743fd462d399a866",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez Chrystusa Pana naszego. Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

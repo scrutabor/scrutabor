@@ -1,5 +1,5 @@
 {
-  "schema_version": "4.0.0",
+  "schema_version": "5.0.0",
   "corpus_schema": "0.18.0",
   "language": "en",
   "direction": "ltr",
@@ -12,31 +12,37 @@
     {
       "id": "defunctorum.requiem-aeternam",
       "path": "languages/en/texts/defunctorum/requiem-aeternam.json",
+      "evidence": "languages/en/bibliography/texts/defunctorum/requiem-aeternam.json",
       "title": "Eternal Rest"
     },
     {
       "id": "litaniae.lauretanae",
       "path": "languages/en/texts/litaniae/lauretanae.json",
+      "evidence": "languages/en/bibliography/texts/litaniae/lauretanae.json",
       "title": "Litany of Loreto"
     },
     {
       "id": "litaniae.sacratissimi-cordis-iesu",
       "path": "languages/en/texts/litaniae/sacratissimi-cordis-iesu.json",
+      "evidence": "languages/en/bibliography/texts/litaniae/sacratissimi-cordis-iesu.json",
       "title": "Litany of the Most Sacred Heart of Jesus"
     },
     {
       "id": "litaniae.sanctissimi-nominis-iesu",
       "path": "languages/en/texts/litaniae/sanctissimi-nominis-iesu.json",
+      "evidence": "languages/en/bibliography/texts/litaniae/sanctissimi-nominis-iesu.json",
       "title": "Litany of the Most Holy Name of Jesus"
     },
     {
       "id": "orationes.actus-contritionis",
       "path": "languages/en/texts/orationes/actus-contritionis.json",
+      "evidence": "languages/en/bibliography/texts/orationes/actus-contritionis.json",
       "title": "Act of Contrition"
     },
     {
       "id": "orationes.agimus-tibi-gratias",
       "path": "languages/en/texts/orationes/agimus-tibi-gratias.json",
+      "evidence": "languages/en/bibliography/texts/orationes/agimus-tibi-gratias.json",
       "title": "Thanksgiving",
       "aliases": [
         "Prayer After Meals",
@@ -46,6 +52,7 @@
     {
       "id": "orationes.alma-redemptoris-mater",
       "path": "languages/en/texts/orationes/alma-redemptoris-mater.json",
+      "evidence": "languages/en/bibliography/texts/orationes/alma-redemptoris-mater.json",
       "title": "Alma Redemptoris Mater",
       "aliases": [
         "Loving Mother of the Redeemer"
@@ -54,6 +61,7 @@
     {
       "id": "orationes.angele-dei",
       "path": "languages/en/texts/orationes/angele-dei.json",
+      "evidence": "languages/en/bibliography/texts/orationes/angele-dei.json",
       "title": "Angel of God",
       "aliases": [
         "Guardian Angel Prayer"
@@ -62,16 +70,19 @@
     {
       "id": "orationes.angelus-domini",
       "path": "languages/en/texts/orationes/angelus-domini.json",
+      "evidence": "languages/en/bibliography/texts/orationes/angelus-domini.json",
       "title": "The Angelus"
     },
     {
       "id": "orationes.anima-christi",
       "path": "languages/en/texts/orationes/anima-christi.json",
+      "evidence": "languages/en/bibliography/texts/orationes/anima-christi.json",
       "title": "Soul of Christ"
     },
     {
       "id": "orationes.ave-maria",
       "path": "languages/en/texts/orationes/ave-maria.json",
+      "evidence": "languages/en/bibliography/texts/orationes/ave-maria.json",
       "title": "Hail Mary",
       "aliases": [
         "Ave Maria"
@@ -80,11 +91,13 @@
     {
       "id": "orationes.ave-regina-caelorum",
       "path": "languages/en/texts/orationes/ave-regina-caelorum.json",
+      "evidence": "languages/en/bibliography/texts/orationes/ave-regina-caelorum.json",
       "title": "Hail, Queen of the Heavens"
     },
     {
       "id": "orationes.benedic-domine",
       "path": "languages/en/texts/orationes/benedic-domine.json",
+      "evidence": "languages/en/bibliography/texts/orationes/benedic-domine.json",
       "title": "Meal Blessing",
       "aliases": [
         "Prayer Before Meals",
@@ -93,15 +106,18 @@
     },
     {
       "id": "orationes.cor-iesu",
-      "path": "languages/en/texts/orationes/cor-iesu.json"
+      "path": "languages/en/texts/orationes/cor-iesu.json",
+      "evidence": "languages/en/bibliography/texts/orationes/cor-iesu.json"
     },
     {
       "id": "orationes.deus-refugium",
-      "path": "languages/en/texts/orationes/deus-refugium.json"
+      "path": "languages/en/texts/orationes/deus-refugium.json",
+      "evidence": "languages/en/bibliography/texts/orationes/deus-refugium.json"
     },
     {
       "id": "orationes.gloria-patri",
       "path": "languages/en/texts/orationes/gloria-patri.json",
+      "evidence": "languages/en/bibliography/texts/orationes/gloria-patri.json",
       "title": "Glory Be",
       "aliases": [
         "Lesser Doxology"
@@ -110,6 +126,7 @@
     {
       "id": "orationes.magnificat",
       "path": "languages/en/texts/orationes/magnificat.json",
+      "evidence": "languages/en/bibliography/texts/orationes/magnificat.json",
       "title": "The Magnificat",
       "aliases": [
         "Canticle of Mary",
@@ -119,6 +136,7 @@
     {
       "id": "orationes.memorare",
       "path": "languages/en/texts/orationes/memorare.json",
+      "evidence": "languages/en/bibliography/texts/orationes/memorare.json",
       "title": "Memorare",
       "aliases": [
         "Remember, O Most Gracious Virgin Mary"
@@ -127,6 +145,7 @@
     {
       "id": "orationes.pater-noster",
       "path": "languages/en/texts/orationes/pater-noster.json",
+      "evidence": "languages/en/bibliography/texts/orationes/pater-noster.json",
       "title": "Our Father",
       "aliases": [
         "The Lord’s Prayer"
@@ -135,31 +154,37 @@
     {
       "id": "orationes.regina-caeli",
       "path": "languages/en/texts/orationes/regina-caeli.json",
+      "evidence": "languages/en/bibliography/texts/orationes/regina-caeli.json",
       "title": "Queen of Heaven"
     },
     {
       "id": "orationes.salve-regina",
       "path": "languages/en/texts/orationes/salve-regina.json",
+      "evidence": "languages/en/bibliography/texts/orationes/salve-regina.json",
       "title": "Hail, Holy Queen"
     },
     {
       "id": "orationes.sancte-michael",
       "path": "languages/en/texts/orationes/sancte-michael.json",
+      "evidence": "languages/en/bibliography/texts/orationes/sancte-michael.json",
       "title": "Saint Michael the Archangel"
     },
     {
       "id": "orationes.signum-crucis",
       "path": "languages/en/texts/orationes/signum-crucis.json",
+      "evidence": "languages/en/bibliography/texts/orationes/signum-crucis.json",
       "title": "Sign of the Cross"
     },
     {
       "id": "orationes.sub-tuum-praesidium",
       "path": "languages/en/texts/orationes/sub-tuum-praesidium.json",
+      "evidence": "languages/en/bibliography/texts/orationes/sub-tuum-praesidium.json",
       "title": "We Fly to Thy Protection"
     },
     {
       "id": "orationes.symbolum-apostolorum",
       "path": "languages/en/texts/orationes/symbolum-apostolorum.json",
+      "evidence": "languages/en/bibliography/texts/orationes/symbolum-apostolorum.json",
       "title": "Apostles’ Creed",
       "aliases": [
         "I Believe in God"
@@ -168,6 +193,7 @@
     {
       "id": "orationes.te-deum",
       "path": "languages/en/texts/orationes/te-deum.json",
+      "evidence": "languages/en/bibliography/texts/orationes/te-deum.json",
       "title": "Te Deum",
       "aliases": [
         "We Praise Thee, O God",
@@ -176,7 +202,8 @@
     },
     {
       "id": "ordinarium.adiutorium",
-      "path": "languages/en/texts/ordinarium/adiutorium.json"
+      "path": "languages/en/texts/ordinarium/adiutorium.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/adiutorium.json"
     },
     {
       "id": "ordinarium.agnus-dei",
@@ -185,61 +212,75 @@
     },
     {
       "id": "ordinarium.aufer-a-nobis",
-      "path": "languages/en/texts/ordinarium/aufer-a-nobis.json"
+      "path": "languages/en/texts/ordinarium/aufer-a-nobis.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/aufer-a-nobis.json"
     },
     {
       "id": "ordinarium.benedictio",
-      "path": "languages/en/texts/ordinarium/benedictio.json"
+      "path": "languages/en/texts/ordinarium/benedictio.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/benedictio.json"
     },
     {
       "id": "ordinarium.communicantes",
-      "path": "languages/en/texts/ordinarium/communicantes.json"
+      "path": "languages/en/texts/ordinarium/communicantes.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/communicantes.json"
     },
     {
       "id": "ordinarium.confiteor-sacerdotis",
-      "path": "languages/en/texts/ordinarium/confiteor-sacerdotis.json"
+      "path": "languages/en/texts/ordinarium/confiteor-sacerdotis.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/confiteor-sacerdotis.json"
     },
     {
       "id": "ordinarium.confiteor",
       "path": "languages/en/texts/ordinarium/confiteor.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/confiteor.json",
       "title": "I Confess"
     },
     {
       "id": "ordinarium.corpus-tuum",
-      "path": "languages/en/texts/ordinarium/corpus-tuum.json"
+      "path": "languages/en/texts/ordinarium/corpus-tuum.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/corpus-tuum.json"
     },
     {
       "id": "ordinarium.credo",
       "path": "languages/en/texts/ordinarium/credo.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/credo.json",
       "title": "I Believe in One God"
     },
     {
       "id": "ordinarium.deo-gratias-epistolae",
-      "path": "languages/en/texts/ordinarium/deo-gratias-epistolae.json"
+      "path": "languages/en/texts/ordinarium/deo-gratias-epistolae.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/deo-gratias-epistolae.json"
     },
     {
       "id": "ordinarium.deus-qui-humanae",
-      "path": "languages/en/texts/ordinarium/deus-qui-humanae.json"
+      "path": "languages/en/texts/ordinarium/deus-qui-humanae.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/deus-qui-humanae.json"
     },
     {
       "id": "ordinarium.deus-tu-conversus",
-      "path": "languages/en/texts/ordinarium/deus-tu-conversus.json"
+      "path": "languages/en/texts/ordinarium/deus-tu-conversus.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/deus-tu-conversus.json"
     },
     {
       "id": "ordinarium.ecce-agnus-dei",
-      "path": "languages/en/texts/ordinarium/ecce-agnus-dei.json"
+      "path": "languages/en/texts/ordinarium/ecce-agnus-dei.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/ecce-agnus-dei.json"
     },
     {
       "id": "ordinarium.evangelium-ultimum",
-      "path": "languages/en/texts/ordinarium/evangelium-ultimum.json"
+      "path": "languages/en/texts/ordinarium/evangelium-ultimum.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/evangelium-ultimum.json"
     },
     {
       "id": "ordinarium.fili-dei-vivi",
-      "path": "languages/en/texts/ordinarium/fili-dei-vivi.json"
+      "path": "languages/en/texts/ordinarium/fili-dei-vivi.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/fili-dei-vivi.json"
     },
     {
       "id": "ordinarium.gloria",
       "path": "languages/en/texts/ordinarium/gloria.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/gloria.json",
       "title": "Glory to God in the Highest"
     },
     {
@@ -248,11 +289,13 @@
     },
     {
       "id": "ordinarium.hanc-igitur",
-      "path": "languages/en/texts/ordinarium/hanc-igitur.json"
+      "path": "languages/en/texts/ordinarium/hanc-igitur.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/hanc-igitur.json"
     },
     {
       "id": "ordinarium.in-spiritu-humilitatis",
-      "path": "languages/en/texts/ordinarium/in-spiritu-humilitatis.json"
+      "path": "languages/en/texts/ordinarium/in-spiritu-humilitatis.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/in-spiritu-humilitatis.json"
     },
     {
       "id": "ordinarium.introibo",
@@ -260,108 +303,134 @@
     },
     {
       "id": "ordinarium.ite-missa-est",
-      "path": "languages/en/texts/ordinarium/ite-missa-est.json"
+      "path": "languages/en/texts/ordinarium/ite-missa-est.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/ite-missa-est.json"
     },
     {
       "id": "ordinarium.iudica-me",
-      "path": "languages/en/texts/ordinarium/iudica-me.json"
+      "path": "languages/en/texts/ordinarium/iudica-me.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/iudica-me.json"
     },
     {
       "id": "ordinarium.kyrie",
       "path": "languages/en/texts/ordinarium/kyrie.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/kyrie.json",
       "title": "Lord, Have Mercy"
     },
     {
       "id": "ordinarium.laus-tibi-christe",
-      "path": "languages/en/texts/ordinarium/laus-tibi-christe.json"
+      "path": "languages/en/texts/ordinarium/laus-tibi-christe.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/laus-tibi-christe.json"
     },
     {
       "id": "ordinarium.lavabo",
-      "path": "languages/en/texts/ordinarium/lavabo.json"
+      "path": "languages/en/texts/ordinarium/lavabo.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/lavabo.json"
     },
     {
       "id": "ordinarium.libera-nos",
-      "path": "languages/en/texts/ordinarium/libera-nos.json"
+      "path": "languages/en/texts/ordinarium/libera-nos.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/libera-nos.json"
     },
     {
       "id": "ordinarium.memento-defunctorum",
-      "path": "languages/en/texts/ordinarium/memento-defunctorum.json"
+      "path": "languages/en/texts/ordinarium/memento-defunctorum.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/memento-defunctorum.json"
     },
     {
       "id": "ordinarium.memento-vivorum",
-      "path": "languages/en/texts/ordinarium/memento-vivorum.json"
+      "path": "languages/en/texts/ordinarium/memento-vivorum.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/memento-vivorum.json"
     },
     {
       "id": "ordinarium.misereatur-tui",
-      "path": "languages/en/texts/ordinarium/misereatur-tui.json"
+      "path": "languages/en/texts/ordinarium/misereatur-tui.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/misereatur-tui.json"
     },
     {
       "id": "ordinarium.misereatur",
-      "path": "languages/en/texts/ordinarium/misereatur.json"
+      "path": "languages/en/texts/ordinarium/misereatur.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/misereatur.json"
     },
     {
       "id": "ordinarium.nobis-quoque",
-      "path": "languages/en/texts/ordinarium/nobis-quoque.json"
+      "path": "languages/en/texts/ordinarium/nobis-quoque.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/nobis-quoque.json"
     },
     {
       "id": "ordinarium.offerimus-tibi",
-      "path": "languages/en/texts/ordinarium/offerimus-tibi.json"
+      "path": "languages/en/texts/ordinarium/offerimus-tibi.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/offerimus-tibi.json"
     },
     {
       "id": "ordinarium.orate-fratres",
-      "path": "languages/en/texts/ordinarium/orate-fratres.json"
+      "path": "languages/en/texts/ordinarium/orate-fratres.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/orate-fratres.json"
     },
     {
       "id": "ordinarium.panem-caelestem",
-      "path": "languages/en/texts/ordinarium/panem-caelestem.json"
+      "path": "languages/en/texts/ordinarium/panem-caelestem.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/panem-caelestem.json"
     },
     {
       "id": "ordinarium.pater-noster",
-      "path": "languages/en/texts/ordinarium/pater-noster.json"
+      "path": "languages/en/texts/ordinarium/pater-noster.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/pater-noster.json"
     },
     {
       "id": "ordinarium.pax-domini",
-      "path": "languages/en/texts/ordinarium/pax-domini.json"
+      "path": "languages/en/texts/ordinarium/pax-domini.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/pax-domini.json"
     },
     {
       "id": "ordinarium.per-ipsum",
-      "path": "languages/en/texts/ordinarium/per-ipsum.json"
+      "path": "languages/en/texts/ordinarium/per-ipsum.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/per-ipsum.json"
     },
     {
       "id": "ordinarium.per-quem-haec-omnia",
-      "path": "languages/en/texts/ordinarium/per-quem-haec-omnia.json"
+      "path": "languages/en/texts/ordinarium/per-quem-haec-omnia.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/per-quem-haec-omnia.json"
     },
     {
       "id": "ordinarium.perceptio-corporis",
-      "path": "languages/en/texts/ordinarium/perceptio-corporis.json"
+      "path": "languages/en/texts/ordinarium/perceptio-corporis.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/perceptio-corporis.json"
     },
     {
       "id": "ordinarium.placeat-tibi",
-      "path": "languages/en/texts/ordinarium/placeat-tibi.json"
+      "path": "languages/en/texts/ordinarium/placeat-tibi.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/placeat-tibi.json"
     },
     {
       "id": "ordinarium.praefatio-communis",
-      "path": "languages/en/texts/ordinarium/praefatio-communis.json"
+      "path": "languages/en/texts/ordinarium/praefatio-communis.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-communis.json"
     },
     {
       "id": "ordinarium.praefatio-dialogus",
-      "path": "languages/en/texts/ordinarium/praefatio-dialogus.json"
+      "path": "languages/en/texts/ordinarium/praefatio-dialogus.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-dialogus.json"
     },
     {
       "id": "ordinarium.quam-oblationem",
-      "path": "languages/en/texts/ordinarium/quam-oblationem.json"
+      "path": "languages/en/texts/ordinarium/quam-oblationem.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/quam-oblationem.json"
     },
     {
       "id": "ordinarium.qui-dixisti",
-      "path": "languages/en/texts/ordinarium/qui-dixisti.json"
+      "path": "languages/en/texts/ordinarium/qui-dixisti.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/qui-dixisti.json"
     },
     {
       "id": "ordinarium.qui-pridie",
-      "path": "languages/en/texts/ordinarium/qui-pridie.json"
+      "path": "languages/en/texts/ordinarium/qui-pridie.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/qui-pridie.json"
     },
     {
       "id": "ordinarium.quid-retribuam",
-      "path": "languages/en/texts/ordinarium/quid-retribuam.json"
+      "path": "languages/en/texts/ordinarium/quid-retribuam.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/quid-retribuam.json"
     },
     {
       "id": "ordinarium.quod-ore-sumpsimus",
@@ -370,39 +439,48 @@
     {
       "id": "ordinarium.sanctus",
       "path": "languages/en/texts/ordinarium/sanctus.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/sanctus.json",
       "title": "Holy, Holy, Holy"
     },
     {
       "id": "ordinarium.simili-modo",
-      "path": "languages/en/texts/ordinarium/simili-modo.json"
+      "path": "languages/en/texts/ordinarium/simili-modo.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/simili-modo.json"
     },
     {
       "id": "ordinarium.supplices-te-rogamus",
-      "path": "languages/en/texts/ordinarium/supplices-te-rogamus.json"
+      "path": "languages/en/texts/ordinarium/supplices-te-rogamus.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/supplices-te-rogamus.json"
     },
     {
       "id": "ordinarium.supra-quae",
-      "path": "languages/en/texts/ordinarium/supra-quae.json"
+      "path": "languages/en/texts/ordinarium/supra-quae.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/supra-quae.json"
     },
     {
       "id": "ordinarium.suscipe-sancta-trinitas",
-      "path": "languages/en/texts/ordinarium/suscipe-sancta-trinitas.json"
+      "path": "languages/en/texts/ordinarium/suscipe-sancta-trinitas.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/suscipe-sancta-trinitas.json"
     },
     {
       "id": "ordinarium.suscipe-sancte-pater",
-      "path": "languages/en/texts/ordinarium/suscipe-sancte-pater.json"
+      "path": "languages/en/texts/ordinarium/suscipe-sancte-pater.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/suscipe-sancte-pater.json"
     },
     {
       "id": "ordinarium.te-igitur",
-      "path": "languages/en/texts/ordinarium/te-igitur.json"
+      "path": "languages/en/texts/ordinarium/te-igitur.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/te-igitur.json"
     },
     {
       "id": "ordinarium.unde-et-memores",
-      "path": "languages/en/texts/ordinarium/unde-et-memores.json"
+      "path": "languages/en/texts/ordinarium/unde-et-memores.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/unde-et-memores.json"
     },
     {
       "id": "proprium.dominica-i-adventus-alleluia",
-      "path": "languages/en/texts/proprium/dominica-i-adventus-alleluia.json"
+      "path": "languages/en/texts/proprium/dominica-i-adventus-alleluia.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-adventus-alleluia.json"
     },
     {
       "id": "proprium.dominica-i-adventus-collecta",
@@ -414,23 +492,28 @@
     },
     {
       "id": "proprium.dominica-i-adventus-epistola",
-      "path": "languages/en/texts/proprium/dominica-i-adventus-epistola.json"
+      "path": "languages/en/texts/proprium/dominica-i-adventus-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-adventus-epistola.json"
     },
     {
       "id": "proprium.dominica-i-adventus-evangelium",
-      "path": "languages/en/texts/proprium/dominica-i-adventus-evangelium.json"
+      "path": "languages/en/texts/proprium/dominica-i-adventus-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-adventus-evangelium.json"
     },
     {
       "id": "proprium.dominica-i-adventus-graduale",
-      "path": "languages/en/texts/proprium/dominica-i-adventus-graduale.json"
+      "path": "languages/en/texts/proprium/dominica-i-adventus-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-adventus-graduale.json"
     },
     {
       "id": "proprium.dominica-i-adventus-introitus",
-      "path": "languages/en/texts/proprium/dominica-i-adventus-introitus.json"
+      "path": "languages/en/texts/proprium/dominica-i-adventus-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-adventus-introitus.json"
     },
     {
       "id": "proprium.dominica-i-adventus-offertorium",
-      "path": "languages/en/texts/proprium/dominica-i-adventus-offertorium.json"
+      "path": "languages/en/texts/proprium/dominica-i-adventus-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-adventus-offertorium.json"
     },
     {
       "id": "proprium.dominica-i-adventus-postcommunio",
@@ -442,35 +525,43 @@
     },
     {
       "id": "proprium.dominica-ii-adventus-alleluia",
-      "path": "languages/en/texts/proprium/dominica-ii-adventus-alleluia.json"
+      "path": "languages/en/texts/proprium/dominica-ii-adventus-alleluia.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-adventus-alleluia.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-collecta",
-      "path": "languages/en/texts/proprium/dominica-ii-adventus-collecta.json"
+      "path": "languages/en/texts/proprium/dominica-ii-adventus-collecta.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-adventus-collecta.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-communio",
-      "path": "languages/en/texts/proprium/dominica-ii-adventus-communio.json"
+      "path": "languages/en/texts/proprium/dominica-ii-adventus-communio.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-adventus-communio.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-epistola",
-      "path": "languages/en/texts/proprium/dominica-ii-adventus-epistola.json"
+      "path": "languages/en/texts/proprium/dominica-ii-adventus-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-adventus-epistola.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-evangelium",
-      "path": "languages/en/texts/proprium/dominica-ii-adventus-evangelium.json"
+      "path": "languages/en/texts/proprium/dominica-ii-adventus-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-adventus-evangelium.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-graduale",
-      "path": "languages/en/texts/proprium/dominica-ii-adventus-graduale.json"
+      "path": "languages/en/texts/proprium/dominica-ii-adventus-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-adventus-graduale.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-introitus",
-      "path": "languages/en/texts/proprium/dominica-ii-adventus-introitus.json"
+      "path": "languages/en/texts/proprium/dominica-ii-adventus-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-adventus-introitus.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-offertorium",
-      "path": "languages/en/texts/proprium/dominica-ii-adventus-offertorium.json"
+      "path": "languages/en/texts/proprium/dominica-ii-adventus-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-adventus-offertorium.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-postcommunio",
@@ -482,35 +573,43 @@
     },
     {
       "id": "proprium.dominica-iii-adventus-alleluia",
-      "path": "languages/en/texts/proprium/dominica-iii-adventus-alleluia.json"
+      "path": "languages/en/texts/proprium/dominica-iii-adventus-alleluia.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-adventus-alleluia.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-collecta",
-      "path": "languages/en/texts/proprium/dominica-iii-adventus-collecta.json"
+      "path": "languages/en/texts/proprium/dominica-iii-adventus-collecta.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-adventus-collecta.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-communio",
-      "path": "languages/en/texts/proprium/dominica-iii-adventus-communio.json"
+      "path": "languages/en/texts/proprium/dominica-iii-adventus-communio.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-adventus-communio.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-epistola",
-      "path": "languages/en/texts/proprium/dominica-iii-adventus-epistola.json"
+      "path": "languages/en/texts/proprium/dominica-iii-adventus-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-adventus-epistola.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-evangelium",
-      "path": "languages/en/texts/proprium/dominica-iii-adventus-evangelium.json"
+      "path": "languages/en/texts/proprium/dominica-iii-adventus-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-adventus-evangelium.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-graduale",
-      "path": "languages/en/texts/proprium/dominica-iii-adventus-graduale.json"
+      "path": "languages/en/texts/proprium/dominica-iii-adventus-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-adventus-graduale.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-introitus",
-      "path": "languages/en/texts/proprium/dominica-iii-adventus-introitus.json"
+      "path": "languages/en/texts/proprium/dominica-iii-adventus-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-adventus-introitus.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-offertorium",
-      "path": "languages/en/texts/proprium/dominica-iii-adventus-offertorium.json"
+      "path": "languages/en/texts/proprium/dominica-iii-adventus-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-adventus-offertorium.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-postcommunio",
@@ -522,35 +621,43 @@
     },
     {
       "id": "proprium.dominica-iv-adventus-alleluia",
-      "path": "languages/en/texts/proprium/dominica-iv-adventus-alleluia.json"
+      "path": "languages/en/texts/proprium/dominica-iv-adventus-alleluia.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-adventus-alleluia.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-collecta",
-      "path": "languages/en/texts/proprium/dominica-iv-adventus-collecta.json"
+      "path": "languages/en/texts/proprium/dominica-iv-adventus-collecta.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-adventus-collecta.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-communio",
-      "path": "languages/en/texts/proprium/dominica-iv-adventus-communio.json"
+      "path": "languages/en/texts/proprium/dominica-iv-adventus-communio.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-adventus-communio.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-epistola",
-      "path": "languages/en/texts/proprium/dominica-iv-adventus-epistola.json"
+      "path": "languages/en/texts/proprium/dominica-iv-adventus-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-adventus-epistola.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-evangelium",
-      "path": "languages/en/texts/proprium/dominica-iv-adventus-evangelium.json"
+      "path": "languages/en/texts/proprium/dominica-iv-adventus-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-adventus-evangelium.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-graduale",
-      "path": "languages/en/texts/proprium/dominica-iv-adventus-graduale.json"
+      "path": "languages/en/texts/proprium/dominica-iv-adventus-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-adventus-graduale.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-introitus",
-      "path": "languages/en/texts/proprium/dominica-iv-adventus-introitus.json"
+      "path": "languages/en/texts/proprium/dominica-iv-adventus-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-adventus-introitus.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-offertorium",
-      "path": "languages/en/texts/proprium/dominica-iv-adventus-offertorium.json"
+      "path": "languages/en/texts/proprium/dominica-iv-adventus-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-adventus-offertorium.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-postcommunio",
@@ -563,10 +670,15 @@
     {
       "id": "psalmi.118-he",
       "path": "languages/en/texts/psalmi/118-he.json",
+      "evidence": "languages/en/bibliography/texts/psalmi/118-he.json",
       "title": "The Perfection of God’s Law"
     }
   ],
   "lexicon": "languages/en/lexicon.json",
   "citations": "languages/en/citations.json",
-  "concordance": "languages/en/concordance.json"
+  "concordance": "languages/en/concordance.json",
+  "bibliography": {
+    "catalog": "languages/en/bibliography/catalog.json",
+    "index": "languages/en/bibliography/index.json"
+  }
 }

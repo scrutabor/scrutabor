@@ -1,0 +1,68 @@
+{
+ "id": "ordinarium.supplices-te-rogamus",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 59–60",
+    "scan": "PDF ss. 62–63",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.03eb5e0afde6475f3fa9",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez tegoż Chrystusa, Pana naszego. Amen.”"
+    },
+    {
+     "id": "use.pl.2c547b833efb15482ea7",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „przyjmiemy Najświętsze Ciało i Krew Twojego Syna,”"
+    },
+    {
+     "id": "use.pl.3e8879a47ac2dc0292d2",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Pokornie Cię prosimy, wszechmogący Boże: rozkaż, aby te dary zostały zaniesione przez ręce Twojego świętego Anioła na Twój ołtarz na wysokości, w obliczu Twojego boskiego majestatu:”"
+    },
+    {
+     "id": "use.pl.49f4c8f874b96b2a368c",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „zostali napełnieni wszelkim błogosławieństwem niebieskim i łaską.”"
+    },
+    {
+     "id": "use.pl.4f62758664e2017561a9",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „abyśmy wszyscy, którzy”"
+    },
+    {
+     "id": "use.pl.7a96edd1d1f16b57f714",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „przez to uczestnictwo w ołtarzu”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

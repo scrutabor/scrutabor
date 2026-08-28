@@ -1,0 +1,51 @@
+{
+ "id": "ordinarium.confiteor",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 12–13",
+    "scan": "scan pp. 25–26"
+   },
+   "entries": [
+    {
+     "id": "use.en.0459cf173e260dcc2962",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, father:"
+    },
+    {
+     "id": "use.en.410223cd2722146b350e",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, father:"
+    },
+    {
+     "id": "use.en.4cb2b9c00b4b1b4b7173",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, father:"
+    },
+    {
+     "id": "use.en.8ab4aefff694cfc0e41a",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, father:"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

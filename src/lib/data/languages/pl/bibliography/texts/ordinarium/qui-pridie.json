@@ -1,0 +1,68 @@
+{
+ "id": "ordinarium.qui-pridie",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 58",
+    "scan": "PDF s. 61",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.08da4d7bf6b09f9fc44d",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „pobłogosławił, połamał i dał swoim uczniom, mówiąc:”"
+    },
+    {
+     "id": "use.pl.0e818c7da5dada264d20",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „To jest bowiem Ciało moje.”"
+    },
+    {
+     "id": "use.pl.1828896e837fbe07723d",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Bierzcie i jedzcie z tego wszyscy:”"
+    },
+    {
+     "id": "use.pl.1b483035ce04a891910e",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Który w przeddzień swej męki wziął chleb w swe święte i czcigodne ręce,”"
+    },
+    {
+     "id": "use.pl.1e913625fffbd1df5c73",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „składając Ci dzięki,”"
+    },
+    {
+     "id": "use.pl.3547ed7e0571e5a92fde",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „a wzniósłszy oczy ku niebu, ku Tobie, Bogu, swojemu Ojcu wszechmogącemu,”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

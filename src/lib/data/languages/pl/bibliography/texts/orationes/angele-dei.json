@@ -1,0 +1,68 @@
+{
+ "id": "orationes.angele-dei",
+ "source_groups": [
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 22",
+    "scan": "PDF s. 36",
+    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+   },
+   "entries": [
+    {
+     "id": "use.pl.131e6fcf8bc907cdf7c2",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „rządź i prowadź. Amen.”"
+    },
+    {
+     "id": "use.pl.3d7a9d3648f0c5ff0502",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „oświecaj, strzeż,”"
+    },
+    {
+     "id": "use.pl.bd846b80240d97aeaeaa",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „mnie, Tobie powierzonego”"
+    },
+    {
+     "id": "use.pl.dd0144a36f0078e64f7b",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Stróżu mój,”"
+    },
+    {
+     "id": "use.pl.f968ca1f1c0367962b18",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Aniele Boży,”"
+    },
+    {
+     "id": "use.pl.fdcf9df39f643f954199",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „z dobroci Bożej,”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

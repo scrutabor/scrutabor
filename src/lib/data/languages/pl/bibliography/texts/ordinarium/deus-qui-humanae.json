@@ -1,0 +1,28 @@
+{
+ "id": "ordinarium.deus-qui-humanae",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 51",
+    "scan": "PDF s. 54",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.79ad1b189993ce4712dd",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Boże, Ty przedziwnie stworzyłeś godność ludzkiej natury i jeszcze przedziwniej ją odnowiłeś. Spraw, abyśmy przez tajemnicę tej wody i wina mieli udział w bóstwie Jezusa Chrystusa, Twojego Syna, naszego Pana, który raczył stać się uczestnikiem naszego człowieczeństwa i, będąc Bogiem, żyje i króluje z Tobą w jedności Ducha Świętego przez wszystkie wieki wieków. Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

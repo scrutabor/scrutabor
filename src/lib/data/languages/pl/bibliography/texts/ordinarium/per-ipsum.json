@@ -1,0 +1,60 @@
+{
+ "id": "ordinarium.per-ipsum",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 61",
+    "scan": "PDF s. 64",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.124b1e1be0add1bc8bae",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „należy się Tobie, Bogu Ojcu wszechmogącemu, w jedności Ducha Świętego,”"
+    },
+    {
+     "id": "use.pl.8120c05217d1a6c21e73",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez Niego i z Nim, i w Nim,”"
+    },
+    {
+     "id": "use.pl.9f5018f158fd48e8533f",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „wszelka cześć i chwała,”"
+    },
+    {
+     "id": "use.pl.b613b06bd2445c29b96f",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „przez wszystkie wieki wieków.”"
+    },
+    {
+     "id": "use.pl.ba022a0bd1550034daa4",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

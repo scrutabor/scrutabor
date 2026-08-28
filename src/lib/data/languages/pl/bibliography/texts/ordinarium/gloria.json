@@ -1,0 +1,116 @@
+{
+ "id": "ordinarium.gloria",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 46",
+    "scan": "PDF s. 49",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.114f8fbe0049a01aec06",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Albowiem tylko Tyś jest święty. Tylko Tyś jest Panem. Tylko Tyś Najwyższy, Jezu Chryste.”"
+    },
+    {
+     "id": "use.pl.2b4003d55a932a4cdab6",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Który siedzisz po prawicy Ojca, zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.6356ead79c2b0765b1a7",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „A na ziemi pokój ludziom dobrej woli.”"
+    },
+    {
+     "id": "use.pl.69bccc2b0f01d9705c5c",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Który gładzisz grzechy świata, zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.7226b3b875afd7b7083f",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie Boże, Królu nieba, Boże Ojcze wszechmogący.”"
+    },
+    {
+     "id": "use.pl.7bddbbb0be4a2d33ce42",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Dzięki Ci składamy, bo wielka jest chwała Twoja.”"
+    },
+    {
+     "id": "use.pl.82dc7a224d2b169e28e8",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie Boże, Baranku Boży, Synu Ojca.”"
+    },
+    {
+     "id": "use.pl.af90bee5fee85e68d016",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chwalimy Cię. Błogosławimy Cię. Wielbimy Cię. Wysławiamy Cię.”"
+    },
+    {
+     "id": "use.pl.beaf3dc314c2a5237c69",
+     "address": {
+      "kind": "segment",
+      "segment": "s13"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Z Duchem Świętym w chwale Boga Ojca. Amen.”"
+    },
+    {
+     "id": "use.pl.d0dcde466923e585b731",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, Synu Jednorodzony, Jezu Chryste.”"
+    },
+    {
+     "id": "use.pl.e2f3ce0c300bd37cd36b",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Który gładzisz grzechy świata, przyjm błaganie nasze.”"
+    },
+    {
+     "id": "use.pl.f007945bd27d403cd757",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chwała na wysokości Bogu.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

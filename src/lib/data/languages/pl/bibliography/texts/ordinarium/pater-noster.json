@@ -1,0 +1,113 @@
+{
+ "id": "ordinarium.pater-noster",
+ "source_groups": [
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 10",
+    "scan": "PDF s. 12",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.4fa92cad7f47144703f3",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „święć się imię Twoje.”"
+    },
+    {
+     "id": "use.pl.7919334e62cd7cb23dc5",
+     "address": {
+      "kind": "segment",
+      "segment": "s14"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Amen.”"
+    },
+    {
+     "id": "use.pl.795ee326952937d59a5a",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I nie wódź nas na pokuszenie,”"
+    },
+    {
+     "id": "use.pl.9256fece6e3dc8a51514",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chleba naszego powszedniego daj nam dzisiaj.”"
+    },
+    {
+     "id": "use.pl.9763e683501000bbd52c",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „ale nas zbaw ode złego.”"
+    },
+    {
+     "id": "use.pl.9fbcf3348716b3414659",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przyjdź królestwo Twoje.”"
+    },
+    {
+     "id": "use.pl.a947ddbe7f4fad995352",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I odpuść nam nasze winy, jako i my odpuszczamy naszym winowajcom.”"
+    },
+    {
+     "id": "use.pl.ac0ec7c734531db63e14",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Bądź wola Twoja, jako w niebie, tak i na ziemi.”"
+    },
+    {
+     "id": "use.pl.ea1e3ee59804a0f836d3",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ojcze nasz, któryś jest w niebie,”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 61",
+    "scan": "PDF s. 64",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.2887e14b0a6fc4bb84a5",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módlmy się.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

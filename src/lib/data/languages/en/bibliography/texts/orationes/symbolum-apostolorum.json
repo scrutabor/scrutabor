@@ -1,0 +1,45 @@
+{
+ "id": "orationes.symbolum-apostolorum",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 10–11",
+    "scan": "scan pp. 23–24"
+   },
+   "entries": [
+    {
+     "id": "use.en.abf475e69a451714cd21",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete orationes.symbolum-apostolorum text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 2",
+    "scan": "scan p. 33"
+   },
+   "entries": [
+    {
+     "id": "use.en.bf80e0a88b1ef9eddd9f",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete orationes.symbolum-apostolorum text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

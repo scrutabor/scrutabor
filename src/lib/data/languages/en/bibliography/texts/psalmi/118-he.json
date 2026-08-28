@@ -1,0 +1,27 @@
+{
+ "id": "psalmi.118-he",
+ "source_groups": [
+  {
+   "edition": "edition.douay-rheims-bible-challoner",
+   "digital_item": "item.douay-rheims-challoner-1914.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "Old Testament p. 644",
+    "scan": "PDF p. 657",
+    "section": "Psalm 118:33–40 (Vulgate numbering)"
+   },
+   "entries": [
+    {
+     "id": "use.en.ae8b4f6896d8e30feef0",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete psalmi.118-he text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

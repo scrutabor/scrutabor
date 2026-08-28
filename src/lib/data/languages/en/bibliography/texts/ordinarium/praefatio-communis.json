@@ -1,0 +1,43 @@
+{
+ "id": "ordinarium.praefatio-communis",
+ "source_groups": [
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 79",
+    "scan": "scan p. 110"
+   },
+   "entries": [
+    {
+     "id": "use.en.8268be3ab1c7dcfb0b7a",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Holy Lord, almighty Father, eternal God: through Christ our Lord."
+    },
+    {
+     "id": "use.en.a9d7d67773e326dd60dd",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Holy Lord, almighty Father, eternal God: through Christ our Lord."
+    },
+    {
+     "id": "use.en.f5f9a53e7c9593fbebb9",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Holy Lord, almighty Father, eternal God: through Christ our Lord."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

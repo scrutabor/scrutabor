@@ -1,0 +1,1084 @@
+{
+ "schema_version": "1.1.0",
+ "sections": [
+  {
+   "id": "latin_textual_sources",
+   "entries": [
+    {
+     "edition": "edition.liber-usualis.1961",
+     "roles": [
+      "direct_approved_print"
+     ],
+     "texts": [
+      {
+       "id": "orationes.te-deum",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.breviarium-romanum.1902-pustet",
+     "roles": [
+      "direct_approved_print"
+     ],
+     "texts": [
+      {
+       "id": "orationes.agimus-tibi-gratias",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.benedic-domine",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.magnificat",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.te-deum",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 2
+      }
+     ]
+    },
+    {
+     "edition": "edition.compendium-ccc.2005",
+     "roles": [
+      "controlling_official_text"
+     ],
+     "texts": [
+      {
+       "id": "orationes.actus-contritionis",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.angele-dei",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.anima-christi",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.magnificat",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.memorare",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.symbolum-apostolorum",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.te-deum",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+     "roles": [
+      "controlling_official_text"
+     ],
+     "texts": [
+      {
+       "id": "litaniae.sacratissimi-cordis-iesu",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "litaniae.sanctissimi-nominis-iesu",
+       "roles": [
+        "controlling_official_text"
+       ],
+       "uses": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wording_witnesses",
+   "entries": [
+    {
+     "edition": "edition.dwutygodnik-dyecezalny-wilenski-1911",
+     "roles": [
+      "historical_wording_basis"
+     ],
+     "texts": [
+      {
+       "id": "litaniae.sanctissimi-nominis-iesu",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.gazeta-koscielna-r-9-nr-16-1901",
+     "roles": [
+      "historical_wording_basis"
+     ],
+     "texts": [
+      {
+       "id": "orationes.angelus-domini",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      }
+     ]
+    },
+    {
+     "edition": "edition.ksiazka-do-nabozenstwa-1883",
+     "roles": [
+      "historical_wording_comparator"
+     ],
+     "texts": [
+      {
+       "id": "litaniae.lauretanae",
+       "roles": [
+        "historical_wording_comparator"
+       ],
+       "uses": 117
+      },
+      {
+       "id": "orationes.angelus-domini",
+       "roles": [
+        "historical_wording_comparator"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "orationes.ave-maria",
+       "roles": [
+        "historical_wording_comparator"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "orationes.gloria-patri",
+       "roles": [
+        "historical_wording_comparator"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "orationes.magnificat",
+       "roles": [
+        "historical_wording_comparator"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "orationes.symbolum-apostolorum",
+       "roles": [
+        "historical_wording_comparator"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.iudica-me",
+       "roles": [
+        "historical_wording_comparator"
+       ],
+       "uses": 2
+      }
+     ]
+    },
+    {
+     "edition": "edition.katechizm-religji-rzymsko-katolickiej-1925",
+     "roles": [
+      "historical_wording_basis"
+     ],
+     "texts": [
+      {
+       "id": "orationes.agimus-tibi-gratias",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "orationes.anima-christi",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 13
+      },
+      {
+       "id": "orationes.benedic-domine",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "orationes.cor-iesu",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "orationes.memorare",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 6
+      },
+      {
+       "id": "orationes.regina-caeli",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 6
+      },
+      {
+       "id": "orationes.salve-regina",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 8
+      },
+      {
+       "id": "orationes.symbolum-apostolorum",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 11
+      },
+      {
+       "id": "ordinarium.ecce-agnus-dei",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 5
+      },
+      {
+       "id": "ordinarium.praefatio-dialogus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.katolik-w-modlitwie-1902",
+     "roles": [
+      "historical_wording_basis",
+      "historical_wording_comparator"
+     ],
+     "texts": [
+      {
+       "id": "defunctorum.requiem-aeternam",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "litaniae.lauretanae",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.actus-contritionis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 6
+      },
+      {
+       "id": "orationes.alma-redemptoris-mater",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 6
+      },
+      {
+       "id": "orationes.angele-dei",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 6
+      },
+      {
+       "id": "orationes.anima-christi",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 13
+      },
+      {
+       "id": "orationes.ave-regina-caelorum",
+       "roles": [
+        "historical_wording_comparator"
+       ],
+       "uses": 8
+      },
+      {
+       "id": "orationes.deus-refugium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 7
+      },
+      {
+       "id": "orationes.salve-regina",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 8
+      },
+      {
+       "id": "orationes.sancte-michael",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "ordinarium.confiteor",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.confiteor-sacerdotis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.credo",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 17
+      }
+     ]
+    },
+    {
+     "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+     "roles": [
+      "historical_wording_basis"
+     ],
+     "texts": [
+      {
+       "id": "defunctorum.requiem-aeternam",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "litaniae.lauretanae",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 117
+      },
+      {
+       "id": "litaniae.sacratissimi-cordis-iesu",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 81
+      },
+      {
+       "id": "litaniae.sanctissimi-nominis-iesu",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 132
+      },
+      {
+       "id": "orationes.angelus-domini",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 13
+      },
+      {
+       "id": "orationes.ave-maria",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "orationes.gloria-patri",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "orationes.magnificat",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 12
+      },
+      {
+       "id": "orationes.pater-noster",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 8
+      },
+      {
+       "id": "orationes.regina-caeli",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 6
+      },
+      {
+       "id": "orationes.sub-tuum-praesidium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "ordinarium.pater-noster",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 9
+      }
+     ]
+    },
+    {
+     "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+     "roles": [
+      "historical_wording_basis",
+      "historical_wording_comparator"
+     ],
+     "texts": [
+      {
+       "id": "orationes.signum-crucis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.agnus-dei",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.aufer-a-nobis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 5
+      },
+      {
+       "id": "ordinarium.benedictio",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "ordinarium.communicantes",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 5
+      },
+      {
+       "id": "ordinarium.corpus-tuum",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "ordinarium.deus-qui-humanae",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.deus-tu-conversus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 8
+      },
+      {
+       "id": "ordinarium.fili-dei-vivi",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 5
+      },
+      {
+       "id": "ordinarium.gloria",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 12
+      },
+      {
+       "id": "ordinarium.hanc-igitur",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "ordinarium.in-spiritu-humilitatis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "ordinarium.introibo",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.ite-missa-est",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.lavabo",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 9
+      },
+      {
+       "id": "ordinarium.libera-nos",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 7
+      },
+      {
+       "id": "ordinarium.memento-defunctorum",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "ordinarium.memento-vivorum",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.misereatur",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.misereatur-tui",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.nobis-quoque",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 5
+      },
+      {
+       "id": "ordinarium.offerimus-tibi",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.orate-fratres",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "ordinarium.panem-caelestem",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 8
+      },
+      {
+       "id": "ordinarium.pater-noster",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.pax-domini",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.per-ipsum",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 5
+      },
+      {
+       "id": "ordinarium.per-quem-haec-omnia",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.perceptio-corporis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.placeat-tibi",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-communis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.praefatio-dialogus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.quam-oblationem",
+       "roles": [
+        "historical_wording_comparator"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.qui-dixisti",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 6
+      },
+      {
+       "id": "ordinarium.qui-pridie",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 6
+      },
+      {
+       "id": "ordinarium.quid-retribuam",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.sanctus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 5
+      },
+      {
+       "id": "ordinarium.simili-modo",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 7
+      },
+      {
+       "id": "ordinarium.supplices-te-rogamus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 6
+      },
+      {
+       "id": "ordinarium.supra-quae",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.suscipe-sancta-trinitas",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.suscipe-sancte-pater",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.unde-et-memores",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "official_documents_and_liturgical_history",
+   "entries": [
+    {
+     "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
+     "roles": [
+      "historical_context"
+     ],
+     "texts": [
+      {
+       "id": "orationes.sub-tuum-praesidium",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.symbolum-apostolorum",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.breviarium-romanum.1902-pustet",
+     "roles": [
+      "official_liturgical_context"
+     ],
+     "texts": [
+      {
+       "id": "orationes.magnificat",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.compendium-ccc.2005",
+     "roles": [
+      "historical_context"
+     ],
+     "texts": [
+      {
+       "id": "orationes.actus-contritionis",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.angele-dei",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.anima-christi",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.memorare",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.te-deum",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.key-of-heaven-1901",
+     "roles": [
+      "historical_context"
+     ],
+     "texts": [
+      {
+       "id": "orationes.alma-redemptoris-mater",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.ave-regina-caelorum",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.katolik-w-modlitwie-1902",
+     "roles": [
+      "historical_context"
+     ],
+     "texts": [
+      {
+       "id": "orationes.alma-redemptoris-mater",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.ave-regina-caelorum",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+     "roles": [
+      "historical_context",
+      "official_liturgical_context"
+     ],
+     "texts": [
+      {
+       "id": "defunctorum.requiem-aeternam",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "litaniae.lauretanae",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "litaniae.sacratissimi-cordis-iesu",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "litaniae.sanctissimi-nominis-iesu",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.angelus-domini",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.anima-christi",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.cor-iesu",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.deus-refugium",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.memorare",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.regina-caeli",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.salve-regina",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.sancte-michael",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.enchiridion-indulgentiarum-fourth-edition",
+     "roles": [
+      "historical_context"
+     ],
+     "texts": [
+      {
+       "id": "orationes.agimus-tibi-gratias",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.angelus-domini",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.benedic-domine",
+       "roles": [
+        "historical_context"
+       ],
+       "uses": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "scripture_language_and_scholarship",
+   "entries": [
+    {
+     "edition": "edition.biblia-sacra-vulgatae-editionis-1914",
+     "roles": [
+      "scripture_control"
+     ],
+     "texts": [
+      {
+       "id": "defunctorum.de-profundis",
+       "roles": [
+        "scripture_control"
+       ],
+       "uses": 1
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "language": "pl"
+}

@@ -1,0 +1,36 @@
+{
+ "id": "ordinarium.supra-quae",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 59",
+    "scan": "PDF s. 62",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.4705bbb5111186e6e5dc",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Racz wejrzeć na nie łaskawym i pogodnym obliczem oraz uznać je za przyjęte, jak raczyłeś przyjąć dary Twojego sprawiedliwego sługi Abla i ofiarę naszego Patriarchy Abrahama:”"
+    },
+    {
+     "id": "use.pl.e2e9ce2c42b558ac29fd",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i to, co ofiarował Ci Twój najwyższy kapłan Melchizedek: świętą Ofiarę, niepokalaną Hostię.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

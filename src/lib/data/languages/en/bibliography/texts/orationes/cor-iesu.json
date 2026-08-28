@@ -1,0 +1,26 @@
+{
+ "id": "orationes.cor-iesu",
+ "source_groups": [
+  {
+   "edition": "edition.the-raccolta-1910",
+   "digital_item": "item.raccolta-1910.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 89",
+    "scan": "scan p. 109"
+   },
+   "entries": [
+    {
+     "id": "use.en.86e7bc7a914297abfbe7",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete orationes.cor-iesu text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

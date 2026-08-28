@@ -1,0 +1,84 @@
+{
+ "id": "orationes.ave-regina-caelorum",
+ "source_groups": [
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "druk. s. 139",
+    "scan": "PDF s. 153",
+    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+   },
+   "entries": [
+    {
+     "id": "use.pl.01b2450083e337848657",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „raduj się, Panno chwalebna,”"
+    },
+    {
+     "id": "use.pl.477462c4d74deb53f20e",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „piękna ponad wszystkie,”"
+    },
+    {
+     "id": "use.pl.889d0b8c94319f3489ce",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „bądź pozdrowiona, Pani Aniołów:”"
+    },
+    {
+     "id": "use.pl.a9e8eb327d2b26261368",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Bądź pozdrowiona, Królowo niebios,”"
+    },
+    {
+     "id": "use.pl.bd3c55f6497f20b128d9",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „i błagaj Chrystusa za nami.”"
+    },
+    {
+     "id": "use.pl.bedfcf9f94502c0d8e2c",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „witaj, korzeniu, witaj, bramo,”"
+    },
+    {
+     "id": "use.pl.bf99dcbb78d59b15f73b",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „żegnaj, o nader urodziwa,”"
+    },
+    {
+     "id": "use.pl.edd9330eef3625943673",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „z której dla świata wzeszło Światło:”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

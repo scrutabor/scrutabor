@@ -1,0 +1,26 @@
+{
+ "id": "orationes.pater-noster",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 9",
+    "scan": "scan p. 22"
+   },
+   "entries": [
+    {
+     "id": "use.en.b41b0e8ba382f40101c5",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English wording witness for the complete orationes.pater-noster text."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

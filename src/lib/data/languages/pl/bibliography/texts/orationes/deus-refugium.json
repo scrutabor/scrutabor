@@ -1,0 +1,76 @@
+{
+ "id": "orationes.deus-refugium",
+ "source_groups": [
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 107",
+    "scan": "PDF s. 121",
+    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+   },
+   "entries": [
+    {
+     "id": "use.pl.0b2c814d47ecfbb7cf6d",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módlmy się.”"
+    },
+    {
+     "id": "use.pl.43d49323bb199fd8d8bb",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez tegoż Chrystusa, Pana naszego. Amen.”"
+    },
+    {
+     "id": "use.pl.84d0782fd499665fb8ca",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „świętego Józefa, Jej Oblubieńca, Twoich świętych Apostołów Piotra i Pawła oraz wszystkich Świętych,”"
+    },
+    {
+     "id": "use.pl.8c97d97c8054107276fa",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „modlitwy, które zanosimy o nawrócenie grzeszników oraz o wolność i wywyższenie świętej Matki Kościoła,”"
+    },
+    {
+     "id": "use.pl.9afcec00504e8dd15620",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „wysłuchaj w swoim miłosierdziu i dobroci.”"
+    },
+    {
+     "id": "use.pl.e8a528de14241284a45b",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Boże, nasza ucieczko i mocy, łaskawie wejrzyj na lud wołający do Ciebie;”"
+    },
+    {
+     "id": "use.pl.f61299509d5b92dd38e9",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „a za wstawiennictwem chwalebnej i niepokalanej Dziewicy Maryi, Bożej Rodzicielki,”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

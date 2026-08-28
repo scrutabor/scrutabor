@@ -1,0 +1,60 @@
+{
+ "id": "ordinarium.aufer-a-nobis",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 45–46",
+    "scan": "PDF ss. 48–49",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.0245f31ea0ccbe05845a",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módlmy się.”"
+    },
+    {
+     "id": "use.pl.028e242207810783c8fd",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Prosimy Cię, Panie, przez zasługi Twoich świętych,”"
+    },
+    {
+     "id": "use.pl.0eb69fa41012757ad755",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez Chrystusa, Pana naszego. Amen.”"
+    },
+    {
+     "id": "use.pl.3cfca7d18a5845f2c68a",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, prosimy Cię, zabierz od nas nasze nieprawości, abyśmy z czystymi sercami byli godni wejść do Miejsca Najświętszego.”"
+    },
+    {
+     "id": "use.pl.8f9ea7e1772aae6fb424",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „których relikwie są tutaj, a także przez zasługi wszystkich świętych, abyś raczył odpuścić wszystkie moje grzechy. Amen.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

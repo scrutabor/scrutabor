@@ -1,0 +1,64 @@
+{
+ "id": "ordinarium.adiutorium",
+ "source_groups": [
+  {
+   "edition": "edition.douay-rheims-bible-challoner",
+   "digital_item": "item.douay-rheims-challoner-1914.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "Old Testament p. 649",
+    "scan": "PDF p. 662",
+    "section": "Psalm 123:8 (Vulgate numbering)"
+   },
+   "entries": [
+    {
+     "id": "use.en.4125c1f236bf2237fac6",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Our help is in the name of the Lord."
+    },
+    {
+     "id": "use.en.b291904bdf88b045b7ad",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Our help is in the name of the Lord."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 4",
+    "scan": "scan p. 30"
+   },
+   "entries": [
+    {
+     "id": "use.en.91f1a5d8b24ad2430b97",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Our help is in the name of the Lord."
+    },
+    {
+     "id": "use.en.a14988cccfb488b75c29",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Our help is in the name of the Lord."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

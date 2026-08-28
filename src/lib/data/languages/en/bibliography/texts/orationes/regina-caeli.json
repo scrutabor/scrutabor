@@ -1,0 +1,79 @@
+{
+ "id": "orationes.regina-caeli",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 28",
+    "scan": "scan p. 41"
+   },
+   "entries": [
+    {
+     "id": "use.en.15295091bcb868c49a21",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Queen of heaven, rejoice, alleluia;"
+    },
+    {
+     "id": "use.en.2332edd0e0e880da5b7c",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Queen of heaven, rejoice, alleluia;"
+    },
+    {
+     "id": "use.en.86a24c693c7451d54838",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Queen of heaven, rejoice, alleluia;"
+    },
+    {
+     "id": "use.en.a1cc152204d61f707e5b",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Queen of heaven, rejoice, alleluia;"
+    },
+    {
+     "id": "use.en.b3745c4e32031c68a52b",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Queen of heaven, rejoice, alleluia;"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 29 and 193",
+    "scan": "scan pp. 42 and 206"
+   },
+   "entries": [
+    {
+     "id": "use.en.49dfa4378c44e6edb6ba",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "For the Lord has truly risen, alleluia."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

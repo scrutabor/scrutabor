@@ -1,0 +1,241 @@
+{
+ "id": "orationes.anima-christi",
+ "source_groups": [
+  {
+   "edition": "edition.katechizm-religji-rzymsko-katolickiej-1925",
+   "digital_item": "item.katechizm-religji-rzymsko-katolickiej-1925.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 158",
+    "scan": "PDF s. 163",
+    "page_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej"
+   },
+   "entries": [
+    {
+     "id": "use.pl.09e3917dd1806a2fbf6e",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Nie dozwól mi odłączyć się od Ciebie.”"
+    },
+    {
+     "id": "use.pl.0fa9707de469be85173c",
+     "address": {
+      "kind": "segment",
+      "segment": "s13"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „na wieki wieków. Amen.”"
+    },
+    {
+     "id": "use.pl.19e2eedc4213d1963b93",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I każ mi przyjść do siebie,”"
+    },
+    {
+     "id": "use.pl.217f26b5676b7fe00565",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Od złego ducha broń mnie.”"
+    },
+    {
+     "id": "use.pl.5ee822a8624c4738a6c6",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „W ranach swoich ukryj mnie.”"
+    },
+    {
+     "id": "use.pl.6f37fbe980cc067f681d",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „abym ze świętymi Twoimi chwalił Cię”"
+    },
+    {
+     "id": "use.pl.74b00d17ef86e12f4d99",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Męko Chrystusowa, wzmocnij mnie.”"
+    },
+    {
+     "id": "use.pl.d17b10d989fd9c7992d3",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ciało Chrystusowe, zbaw mnie.”"
+    },
+    {
+     "id": "use.pl.d556b09d1fa4870775a0",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wodo z boku Chrystusowego, obmyj mnie.”"
+    },
+    {
+     "id": "use.pl.db155acff9d48bbfc6d3",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Duszo Chrystusowa, uświęć mnie.”"
+    },
+    {
+     "id": "use.pl.db1e294421e2f702246d",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „O dobry Jezu, wysłuchaj mnie.”"
+    },
+    {
+     "id": "use.pl.efa3b1ac0e2f93e976f5",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „W godzinę śmierci wezwij mnie.”"
+    },
+    {
+     "id": "use.pl.f291fd78b684f3bdcc90",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Krwi Chrystusowa, napój mnie.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 157",
+    "scan": "PDF s. 171",
+    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+   },
+   "entries": [
+    {
+     "id": "use.pl.19c420bef352cb6474bb",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Duszo Chrystusowa, uświęć mnie.”"
+    },
+    {
+     "id": "use.pl.2fe059850791342ae47e",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Krwi Chrystusowa, napój mnie.”"
+    },
+    {
+     "id": "use.pl.3f283a2e36834cca6f50",
+     "address": {
+      "kind": "segment",
+      "segment": "s13"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „na wieki wieków. Amen.”"
+    },
+    {
+     "id": "use.pl.4019797bf82e88526ac1",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „W godzinę śmierci wezwij mnie.”"
+    },
+    {
+     "id": "use.pl.4146ab66047967c325e9",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ciało Chrystusowe, zbaw mnie.”"
+    },
+    {
+     "id": "use.pl.44c6e2bf9bc8ac20faaa",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Męko Chrystusowa, wzmocnij mnie.”"
+    },
+    {
+     "id": "use.pl.484738121adac2ecf280",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „abym ze świętymi Twoimi chwalił Cię”"
+    },
+    {
+     "id": "use.pl.5e9a2fe5ab03c2d7c6f1",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „W ranach swoich ukryj mnie.”"
+    },
+    {
+     "id": "use.pl.69f4e203b981e3ef2d1a",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I każ mi przyjść do siebie,”"
+    },
+    {
+     "id": "use.pl.86b12929fec477fb1883",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wodo z boku Chrystusowego, obmyj mnie.”"
+    },
+    {
+     "id": "use.pl.8f06bfa725716457ac58",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „O dobry Jezu, wysłuchaj mnie.”"
+    },
+    {
+     "id": "use.pl.98aedb88b1f0b0d0737a",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Od złego ducha broń mnie.”"
+    },
+    {
+     "id": "use.pl.9c29f9d78b7c376ec0aa",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Nie dozwól mi odłączyć się od Ciebie.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

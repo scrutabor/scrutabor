@@ -1,0 +1,43 @@
+{
+ "id": "ordinarium.benedictio",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 79",
+    "scan": "PDF p. 91"
+   },
+   "entries": [
+    {
+     "id": "use.en.37939bc2389783777c1c",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "May almighty God bless you,"
+    },
+    {
+     "id": "use.en.4144b5078351fcac0f1b",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "May almighty God bless you,"
+    },
+    {
+     "id": "use.en.ce15d6b240d314747bf9",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "May almighty God bless you,"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

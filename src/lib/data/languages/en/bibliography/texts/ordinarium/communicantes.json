@@ -1,0 +1,59 @@
+{
+ "id": "ordinarium.communicantes",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 63–64",
+    "scan": "scan pp. 75–76"
+   },
+   "entries": [
+    {
+     "id": "use.en.6a3c7466bc07ee60a468",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "In communion, we venerate the memory above all of the glorious Mary, ever Virgin, Mother of our God and Lord Jesus Christ:"
+    },
+    {
+     "id": "use.en.6c859c87986295ab5cfa",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "In communion, we venerate the memory above all of the glorious Mary, ever Virgin, Mother of our God and Lord Jesus Christ:"
+    },
+    {
+     "id": "use.en.7848bd93f056a1841222",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "In communion, we venerate the memory above all of the glorious Mary, ever Virgin, Mother of our God and Lord Jesus Christ:"
+    },
+    {
+     "id": "use.en.bb774450d6349d77f12b",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "In communion, we venerate the memory above all of the glorious Mary, ever Virgin, Mother of our God and Lord Jesus Christ:"
+    },
+    {
+     "id": "use.en.eca9d85470dab8bb0ff1",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "In communion, we venerate the memory above all of the glorious Mary, ever Virgin, Mother of our God and Lord Jesus Christ:"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

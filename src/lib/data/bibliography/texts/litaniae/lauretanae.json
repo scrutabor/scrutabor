@@ -1,0 +1,25 @@
+{
+ "id": "litaniae.lauretanae",
+ "source_groups": [
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "historical_context",
+   "locator": {
+    "printed": "n. 319, pp. 200–203",
+    "scan": "PDF scans 219–222"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.context.ei1952",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete Litany of Loreto and its collect."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": []
+}

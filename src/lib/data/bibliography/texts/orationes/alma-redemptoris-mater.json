@@ -1,0 +1,45 @@
+{
+ "id": "orationes.alma-redemptoris-mater",
+ "source_groups": [
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_context",
+   "locator": {
+    "printed": "druk. s. 117",
+    "scan": "PDF s. 131",
+    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+   },
+   "entries": [
+    {
+     "id": "use.neutral.a0a23c585c7b7ac1d97d",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical evidence for the complete Alma Redemptoris Mater antiphon; not a claim of current normative wording."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_context",
+   "locator": {
+    "printed": "pp. 182–185",
+    "scan": "DJVU scans 195–198"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.alma-redemptoris-mater.context.key1901",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints Alma Redemptoris Mater and its associated versicle and collect."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": []
+}

@@ -396,7 +396,7 @@ test('landing shows the catalog and separates reference pages from edition statu
 		'Pojęcia, składnia i wymowa'
 	);
 	await expect(references.locator('a[href="/app/pl/bibliographia"]')).toContainText(
-		'Źródła przekładów i objaśnień'
+		'Świadectwa tekstu, przekładu i kontekstu'
 	);
 	await expect(page.locator('.working')).toContainText(
 		'Wydanie robocze przed przeglądem eksperckim'
@@ -440,7 +440,7 @@ test('landing shows the catalog and separates reference pages from edition statu
 		'Grammar Concepts, syntax, and pronunciation'
 	);
 	await expect(page.locator('.footer-links')).toContainText(
-		'Bibliography Translation and explanatory sources'
+		'Bibliography Textual, translation, and contextual witnesses'
 	);
 	await expect(page.locator('.working')).toContainText('Working edition awaiting expert review');
 });
@@ -559,56 +559,61 @@ test('the sitemap lists both languages of every surface', async ({ request }) =>
 	expect(xml).not.toContain('/404');
 });
 
-test('the shared bibliography exposes the role and location of every source', async ({ page }) => {
+test('the audited bibliography groups sources by role and loads exact uses on disclosure', async ({
+	page
+}) => {
 	await page.goto('/app/pl/bibliographia');
 	await expect(page.locator('h1')).toHaveText('Bibliografia');
+	await expect(page.locator('.source-section h2')).toHaveText([
+		'Łacińskie świadectwa tekstu',
+		'Świadectwa brzmienia przekładu',
+		'Dokumenty urzędowe i historia liturgii',
+		'Pismo Święte, język i opracowania'
+	]);
 	const sources = page.locator('.source details');
 	expect(await sources.count()).toBeGreaterThan(0);
 	await expect(page.locator('.source details[open]')).toHaveCount(0);
+	await expect(page.locator('main')).not.toContainText('Powściągliwość i Praca');
+	await expect(page.locator('main')).not.toContainText('De musica sacra et sacra liturgia');
 
-	const missal = page.locator('details', { hasText: 'Missale Romanum (1962)' });
-	await expect(missal.locator('.source-body')).not.toBeVisible();
-	await missal.locator('summary').click();
-	await expect(missal).toHaveAttribute('open', '');
-	await expect(missal).toContainText('Ritus servandus in celebratione Missae');
-	const blessingUse = missal
-		.locator('li', { hasText: 'rubric before Benedicat vos' })
-		.getByRole('link', { name: 'Benedícat vos omnípotens Deus', exact: true });
-	await expect(blessingUse).toHaveAttribute('href', /ordinarium\/benedictio(?:\.html)?#s01$/);
-	const linkedSource = page
-		.locator('details', { has: page.locator('a.locator-reference', { hasText: '6, 3' }) })
-		.first();
-	await linkedSource.locator('summary').click();
-	await expect(linkedSource.getByRole('link', { name: /6, 3/ })).toHaveAttribute('rel', /noopener/);
-
-	const wujek = page.locator('details', {
-		hasText: 'Biblia w przekładzie ks. Jakuba Wujka (1923)'
-	});
-	await wujek.locator('summary').click();
-	const namingStanza = wujek.locator('li', {
-		hasText: 'Psalm 118:33–40, DjVu scan 588'
-	});
-	await expect(namingStanza).toContainText('Psalm 118:33–40, DjVu scan 588');
-	await expect(namingStanza).toContainText('źródło przekładu');
+	const breviary = page
+		.locator('.source-section')
+		.filter({ has: page.getByRole('heading', { name: 'Łacińskie świadectwa tekstu' }) })
+		.locator('details', {
+			hasText: 'Breviarium Romanum ex decreto SS. Concilii Tridentini restitutum'
+		});
+	await expect(breviary.locator('.source-body')).not.toBeVisible();
+	await breviary.locator('summary').click();
+	await expect(breviary).toHaveAttribute('open', '');
+	await expect(breviary.locator('.evidence-group').first()).toBeVisible();
+	await expect(breviary).toContainText('bezpośrednie świadectwo w zatwierdzonym wydaniu');
 	await expect(
-		namingStanza.getByRole('link', { name: 'Psalmus 118, HE', exact: true })
-	).toHaveAttribute('href', /psalmi\/118-he(?:\.html)?$/);
+		breviary.getByRole('link', { name: 'Magnificat (Pieśń Maryi)' }).first()
+	).toHaveAttribute('href', /orationes\/magnificat/);
 
-	const teIgiturWitness = page.locator('details', {
-		hasText: 'Powściągliwość i Praca (1912)'
+	const gazeta = page.locator('details', {
+		hasText: 'Gazeta Kościelna, R. 9, nr 16'
 	});
-	await expect(teIgiturWitness.locator('.source-meta')).toHaveText('przekład');
-	await teIgiturWitness.locator('summary').click();
-	await expect(teIgiturWitness).toContainText('źródło przekładu');
-	await expect(
-		teIgiturWitness.getByRole('link', { name: 'Te ígitur', exact: true })
-	).toHaveAttribute('href', /ordinarium\/te-igitur(?:\.html)?$/);
-	await expect(teIgiturWitness).not.toContainText('(5)');
+	await gazeta.locator('summary').click();
+	await expect(gazeta).toContainText('druk. s. 167 · PDF s. 3');
+	await expect(gazeta.getByRole('link', { name: /druk\. s\. 167/ })).toHaveAttribute(
+		'href',
+		/edition\/913560/
+	);
+	await expect(gazeta.getByRole('link', { name: 'Anioł Pański' })).toHaveAttribute(
+		'href',
+		/orationes\/angelus-domini\?s=s07-s08$/
+	);
 
 	await page.goto('/app/en/bibliographia');
 	await expect(page.locator('h1')).toHaveText('Bibliography');
 	await expect(page.locator('.latin-name')).toHaveCount(0);
-	await expect(page.locator('.source-meta').first()).toHaveText('lemmata');
+	await expect(page.locator('.source-section h2')).toHaveText([
+		'Latin textual witnesses',
+		'Translation wording witnesses',
+		'Official documents and liturgical history',
+		'Scripture, language, and scholarship'
+	]);
 	await expect(page.locator('.source details[open]')).toHaveCount(0);
 });
 

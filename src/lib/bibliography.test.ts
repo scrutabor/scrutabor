@@ -1,57 +1,71 @@
 import { describe, expect, test } from 'vitest';
-import { buildBibliography } from './bibliography';
-import { loadAllTexts, loadSenses } from './corpus';
+import { buildBibliography, loadBibliographySource } from './bibliography';
+import { loadedTextKeys } from './corpus';
 
 describe('the reader-facing bibliography', () => {
-	test('names a source role instead of counting repeated segment citations', async () => {
-		const sources = buildBibliography('pl', await loadAllTexts('pl'), await loadSenses('pl'));
-		const source = sources.find(({ title }) => title === 'Powściągliwość i Praca (1912)');
+	test('publishes only audited sources and groups them by function', async () => {
+		const bibliography = await buildBibliography('pl');
+		expect(bibliography.sections.map(({ id }) => id)).toEqual([
+			'latin_textual_sources',
+			'wording_witnesses',
+			'official_documents_and_liturgical_history',
+			'scripture_language_and_scholarship'
+		]);
+		const titles = bibliography.sections.flatMap(({ sources }) =>
+			sources.map(({ title }) => title)
+		);
+		expect(titles).toContain('Breviarium Romanum ex decreto SS. Concilii Tridentini restitutum');
+		expect(titles).toContain('Gazeta Kościelna, R. 9, nr 16');
+		expect(titles).not.toContain('Powściągliwość i Praca (1912)');
+		expect(titles.join(' ')).not.toContain('De musica sacra et sacra liturgia');
+	});
 
-		expect(source?.roles).toEqual(['translation']);
-		expect(source?.locators).toHaveLength(1);
-		expect(source?.locators[0].groups).toEqual([
+	test('loads the exact evidence only when a source is opened', async () => {
+		const loadedBefore = loadedTextKeys();
+		const bibliography = await buildBibliography('pl');
+		expect(loadedTextKeys()).toEqual(loadedBefore);
+		const source = bibliography.sections
+			.find(({ id }) => id === 'wording_witnesses')!
+			.sources.find(({ title }) => title === 'Gazeta Kościelna, R. 9, nr 16')!;
+		const details = await loadBibliographySource('pl', source);
+		expect(loadedTextKeys()).toEqual(loadedBefore);
+
+		expect(details).toHaveLength(1);
+		expect(details[0]).toMatchObject({
+			role: 'historical_wording_basis',
+			printed: 'druk. s. 167',
+			scan: 'PDF s. 3',
+			repository: 'Jagiellońska Biblioteka Cyfrowa'
+		});
+		expect(details[0].url).toContain('/edition/913560/');
+		expect(details[0].uses).toEqual([
 			{
-				role: 'translation',
-				uses: [
-					{
-						title: 'Te ígitur',
-						href: '/app/pl/ordinarium/te-igitur'
-					}
-				]
+				key: 'orationes.angelus-domini:s07:s08',
+				title: 'Anioł Pański',
+				href: '/app/pl/orationes/angelus-domini?s=s07-s08',
+				kind: 'range',
+				first: 7,
+				last: 8
 			}
 		]);
 	});
 
-	test('keeps an exact backlink and Latin form for a word explanation', async () => {
-		const sources = buildBibliography('en', await loadAllTexts('en'), await loadSenses('en'));
-		const grammar = sources.find(({ title }) => title === 'Allen and Greenough, New Latin Grammar');
-		const use = grammar?.locators
-			.flatMap(({ groups }) => groups)
-			.filter(({ role }) => role === 'word')
-			.flatMap(({ uses }) => uses)
-			.find(({ detail }) => detail === 'retríbuam');
-
-		expect(use).toEqual({
-			title: 'Quid retríbuam',
-			href: '/app/en/ordinarium/quid-retribuam?w=w002',
-			detail: 'retríbuam'
-		});
-	});
-
-	test('contains no empty, duplicated, or unclassified uses', async () => {
+	test('contains no empty or duplicated source records', async () => {
 		for (const lang of ['pl', 'en'] as const) {
-			const sources = buildBibliography(lang, await loadAllTexts(lang), await loadSenses(lang));
-			for (const source of sources) {
-				const roles = new Set(source.roles);
-				expect(roles.size).toBeGreaterThan(0);
-				for (const locator of source.locators) {
-					for (const group of locator.groups) {
-						expect(roles.has(group.role)).toBe(true);
-						expect(group.uses.length).toBeGreaterThan(0);
-						const keys = group.uses.map(
-							(use) => `${use.href}\u0000${use.title}\u0000${use.detail ?? ''}`
-						);
-						expect(new Set(keys).size).toBe(keys.length);
+			const bibliography = await buildBibliography(lang);
+			expect(bibliography.sourceCount).toBeGreaterThan(0);
+			for (const section of bibliography.sections) {
+				const ids = section.sources.map(({ id }) => id);
+				expect(new Set(ids).size).toBe(ids.length);
+				for (const source of section.sources) {
+					expect(source.roles.length).toBeGreaterThan(0);
+					expect(source.textCount).toBeGreaterThan(0);
+					expect(source.useCount).toBeGreaterThan(0);
+					const details = await loadBibliographySource(lang, source);
+					expect(details.length).toBeGreaterThan(0);
+					for (const detail of details) {
+						expect(detail.uses.length).toBeGreaterThan(0);
+						expect(new Set(detail.uses.map(({ key }) => key)).size).toBe(detail.uses.length);
 					}
 				}
 			}

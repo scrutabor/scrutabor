@@ -1,0 +1,44 @@
+{
+ "id": "ordinarium.memento-defunctorum",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 60",
+    "scan": "PDF s. 63",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.000a58f7d014fa0323b6",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez tegoż Chrystusa, Pana naszego. Amen.”"
+    },
+    {
+     "id": "use.pl.6fa5970c296134fd96e0",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Błagamy Cię, Panie, abyś im i wszystkim spoczywającym w Chrystusie dał miejsce ochłody, światłości i pokoju.”"
+    },
+    {
+     "id": "use.pl.81ca0e68ddaaee982dc6",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Pamiętaj także, Panie, o Twoich sługach i służebnicach, którzy ze znakiem wiary odeszli przed nami i śpią snem pokoju.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

@@ -79,15 +79,28 @@ function filesBelow(root, prefix = '') {
 // generated file cannot ride into the public app unnamed. The corpus build
 // enforces the same closure from its side; this refuses to vendor a tree
 // that somehow escaped it.
-const declaredByManifests = new Set(['manifest.json', ...Object.values(manifest.base)]);
-for (const entry of manifest.texts) declaredByManifests.add(entry.path);
+const declaredByManifests = new Set([
+	'manifest.json',
+	...Object.values(manifest.base),
+	...Object.values(manifest.bibliography)
+]);
+for (const entry of manifest.texts) {
+	declaredByManifests.add(entry.path);
+	if (entry.evidence) declaredByManifests.add(entry.evidence);
+}
 for (const language of manifest.languages) {
 	declaredByManifests.add(language.path);
 	const languageManifest = read(join(BUILD, language.path));
 	for (const key of ['lexicon', 'citations', 'concordance']) {
 		declaredByManifests.add(languageManifest[key]);
 	}
-	for (const entry of languageManifest.texts) declaredByManifests.add(entry.path);
+	for (const resource of Object.values(languageManifest.bibliography)) {
+		declaredByManifests.add(resource);
+	}
+	for (const entry of languageManifest.texts) {
+		declaredByManifests.add(entry.path);
+		if (entry.evidence) declaredByManifests.add(entry.evidence);
+	}
 }
 const editionFiles = filesBelow(BUILD).sort();
 const editionSet = new Set(editionFiles);

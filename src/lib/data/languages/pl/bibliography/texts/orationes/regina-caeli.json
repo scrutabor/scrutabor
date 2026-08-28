@@ -1,0 +1,129 @@
+{
+ "id": "orationes.regina-caeli",
+ "source_groups": [
+  {
+   "edition": "edition.katechizm-religji-rzymsko-katolickiej-1925",
+   "digital_item": "item.katechizm-religji-rzymsko-katolickiej-1925.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 154",
+    "scan": "PDF s. 159",
+    "page_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej"
+   },
+   "entries": [
+    {
+     "id": "use.pl.25023cc88140950cc70c",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „zmartwychpowstał, jak powiedział, alleluja.”"
+    },
+    {
+     "id": "use.pl.7d871dd06e5bcfbc3786",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Bo zmartwychwstał Pan prawdziwie, alleluja.”"
+    },
+    {
+     "id": "use.pl.9efcbc653f19d2eef819",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Raduj się i wesel, Panno Maryjo, alleluja.”"
+    },
+    {
+     "id": "use.pl.db1b56e14a2af7a2cb92",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Królowo nieba, wesel się, alleluja;”"
+    },
+    {
+     "id": "use.pl.db64d803d6018534eb5c",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami do Boga, alleluja.”"
+    },
+    {
+     "id": "use.pl.fd261e84adedd9d0c64c",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „bo Ten, któregoś nosiła, alleluja,”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 16",
+    "scan": "PDF s. 18",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.098d1298b030f8619293",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „bo Ten, któregoś nosiła, alleluja,”"
+    },
+    {
+     "id": "use.pl.0fc6d5c266b95a67bf6c",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Bo zmartwychwstał Pan prawdziwie, alleluja.”"
+    },
+    {
+     "id": "use.pl.2accb907241caa8a1a22",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Raduj się i wesel, Panno Maryjo, alleluja.”"
+    },
+    {
+     "id": "use.pl.2b72de5e0cfad886eabe",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Królowo nieba, wesel się, alleluja;”"
+    },
+    {
+     "id": "use.pl.c88d42444877c0b1eab7",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami do Boga, alleluja.”"
+    },
+    {
+     "id": "use.pl.f8f2ef1593016d26ab44",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „zmartwychpowstał, jak powiedział, alleluja.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

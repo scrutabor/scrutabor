@@ -1,0 +1,52 @@
+{
+ "id": "ordinarium.quam-oblationem",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "druk. s. 58",
+    "scan": "PDF s. 61",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.3c4887b171db3d7431ff",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „naszego Pana Jezusa Chrystusa.”"
+    },
+    {
+     "id": "use.pl.5f5e1d491387644bdcd2",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „aby dla nas stała się Ciałem i Krwią Twojego najmilszego Syna,”"
+    },
+    {
+     "id": "use.pl.7b9b1cb926f9a01589d8",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „błogosławioną, uznaną, zatwierdzoną, rozumną i miłą Tobie:”"
+    },
+    {
+     "id": "use.pl.8e28cb6dca40c989da6a",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Prosimy Cię, Boże, abyś raczył tę ofiarę pod każdym względem uczynić”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

@@ -1,0 +1,158 @@
+{
+ "id": "orationes.magnificat",
+ "source_groups": [
+  {
+   "edition": "edition.ksiazka-do-nabozenstwa-1883",
+   "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "druk. s. 498",
+    "scan": "DjVu s. 510",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu"
+   },
+   "entries": [
+    {
+     "id": "use.pl.9cfd0becc688c1e9104c",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.”"
+    },
+    {
+     "id": "use.pl.f365dfc4c78102f4faab",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Chwała Ojcu i Synowi, i Duchowi Świętemu.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 12",
+    "scan": "PDF s. 14",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.4639ee565cd47f27efbb",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.”"
+    },
+    {
+     "id": "use.pl.fa8b494901ed1bc2ba05",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chwała Ojcu i Synowi, i Duchowi Świętemu.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 324–325",
+    "scan": "PDF ss. 326–327",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.2a3c2ecc8c5981ddda7a",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wielbi dusza moja Pana.”"
+    },
+    {
+     "id": "use.pl.578b7381bece5cf26863",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Głodnych napełnił dobrami, a bogatych odesłał z niczym.”"
+    },
+    {
+     "id": "use.pl.73e5389bd97f0e654067",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Strącił możnych z tronu, a wywyższył pokornych.”"
+    },
+    {
+     "id": "use.pl.88c2dc1fd8323c7951a1",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „A Jego miłosierdzie z pokolenia na pokolenie dla tych, którzy się Go boją.”"
+    },
+    {
+     "id": "use.pl.8e44ece8e83e90b7f325",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Gdyż wielkie rzeczy uczynił mi Ten, który jest potężny, i święte jest Jego imię.”"
+    },
+    {
+     "id": "use.pl.a768941703395898fd3b",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ujął się za Izraelem, swoim sługą, pamiętając o swoim miłosierdziu.”"
+    },
+    {
+     "id": "use.pl.a983b1ee91c112b1f746",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Jak powiedział naszym ojcom, Abrahamowi i jego potomstwu na wieki.”"
+    },
+    {
+     "id": "use.pl.b04d6d6e8efb30a222f0",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Bo wejrzał na uniżenie swojej służebnicy: oto bowiem odtąd wszystkie pokolenia będą mnie zwać błogosławioną.”"
+    },
+    {
+     "id": "use.pl.d1419a2674dfd2399ccb",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Okazał moc swoim ramieniem; rozproszył pyszniących się zamysłami swoich serc.”"
+    },
+    {
+     "id": "use.pl.f961785e7c3f9b2dd157",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I rozradował się duch mój w Bogu, moim Zbawicielu.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

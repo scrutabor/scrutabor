@@ -1,0 +1,44 @@
+{
+ "id": "ordinarium.corpus-tuum",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 65",
+    "scan": "PDF s. 68",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.1a6a7a6120090740d0c1",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „który żyjesz i królujesz przez wszystkie wieki wieków. Amen.”"
+    },
+    {
+     "id": "use.pl.41b2fe9b7b93d6d8d44b",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i spraw, aby we mnie, pokrzepionym czystymi i świętymi sakramentami, nie pozostała żadna skaza grzechów:”"
+    },
+    {
+     "id": "use.pl.d6d0ba10705abbae164b",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Niech Twoje Ciało, Panie, które przyjąłem, i Krew, którą wypiłem, przylgną do mojego wnętrza:”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

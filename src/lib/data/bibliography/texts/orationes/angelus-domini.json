@@ -1,0 +1,45 @@
+{
+ "id": "orationes.angelus-domini",
+ "source_groups": [
+  {
+   "edition": "edition.enchiridion-indulgentiarum-fourth-edition",
+   "digital_item": "item.enchiridion-indulgentiarum-1999.scan",
+   "role": "historical_context",
+   "locator": {
+    "printed": "p. 23",
+    "scan": "PDF p. 23",
+    "section": "Concessio 17 §2, 2° — Angelus Domini and Regina caeli"
+   },
+   "entries": [
+    {
+     "id": "use.core.02848aef2cc6b3dcd25d",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The source prints and identifies Ángelus Dómini."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "historical_context",
+   "locator": {
+    "printed": "n. 331, pp. 213–215",
+    "scan": "PDF scans 232–234"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.angelus-domini.context.ei1952",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the Angelus, its textual variants and collect within the identified prayer unit."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": []
+}

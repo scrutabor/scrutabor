@@ -1,0 +1,91 @@
+{
+ "id": "ordinarium.lavabo",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 50–51",
+    "scan": "PDF pp. 62–63"
+   },
+   "entries": [
+    {
+     "id": "use.en.03e91ce0001c33ff55b2",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
+    },
+    {
+     "id": "use.en.117f0efe32870afb6bcf",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
+    },
+    {
+     "id": "use.en.3cc5b609e5f973e9720a",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
+    },
+    {
+     "id": "use.en.7e5b8ac0316f0022fbde",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
+    },
+    {
+     "id": "use.en.96fb8c57013637514f6e",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
+    },
+    {
+     "id": "use.en.9fe2cd4a45aba81c3238",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
+    },
+    {
+     "id": "use.en.bec94ca1908cdcba01ec",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
+    },
+    {
+     "id": "use.en.cfde609872e277252288",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
+    },
+    {
+     "id": "use.en.d764faf69a1fc67526ce",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

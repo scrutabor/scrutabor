@@ -1,0 +1,60 @@
+{
+ "id": "ordinarium.nobis-quoque",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. ss. 60–61",
+    "scan": "PDF ss. 63–64",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.04e977b73b233100413a",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez Chrystusa, Pana naszego.”"
+    },
+    {
+     "id": "use.pl.05ed8ab2c7ca153687ec",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Twoim sługom, pokładającym nadzieję w obfitości Twoich zmiłowań, racz dać pewien udział i wspólnotę z Twoimi świętymi Apostołami i Męczennikami:”"
+    },
+    {
+     "id": "use.pl.ae5927efb66c527e2575",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Także nam, grzesznikom,”"
+    },
+    {
+     "id": "use.pl.c7ddaa39852535b4d487",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „z Janem, Szczepanem, Maciejem, Barnabą, Ignacym, Aleksandrem, Marcelinem, Piotrem, Felicytą, Perpetuą, Agatą, Łucją, Agnieszką, Cecylią, Anastazją i wszystkimi Twoimi świętymi:”"
+    },
+    {
+     "id": "use.pl.fb4d8de01c87e5fdf10a",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Dopuść nas, prosimy Cię, do ich wspólnoty, nie oceniając zasługi, lecz udzielając przebaczenia.”"
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

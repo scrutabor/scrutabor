@@ -1,0 +1,216 @@
+{
+ "schema_version": "1.1.0",
+ "works": [
+  {
+   "id": "work.blessed-be-god",
+   "responsible": "Charles J. Callan, O.P., and John A. McHugh, O.P.",
+   "title": "Blessed Be God: A Complete Catholic Prayer Book"
+  },
+  {
+   "id": "work.douay-rheims-bible-challoner",
+   "responsible": "Richard Challoner (revision)",
+   "title": "The Holy Bible: Douay-Rheims Version"
+  },
+  {
+   "id": "work.francis-x-lasance-the-catholic-girl-s-guide",
+   "responsible": "Francis X. Lasance",
+   "title": "The Catholic Girl's Guide"
+  },
+  {
+   "id": "work.patrick-francis-moran-the-catholic-prayer-book",
+   "responsible": "Patrick Francis Moran",
+   "title": "The Catholic Prayer Book and Manual of Meditations"
+  },
+  {
+   "id": "work.the-family-prayer-book",
+   "responsible": "John Richard Best (Philalethes)",
+   "title": "The Family Prayer-book"
+  },
+  {
+   "id": "work.the-missal-for-the-laity",
+   "title": "The Missal for the Laity"
+  },
+  {
+   "id": "work.the-missal-for-the-use-of-the-laity",
+   "responsible": "Frederick Charles Husenbeth",
+   "title": "The Missal for the Use of the Laity"
+  },
+  {
+   "id": "work.the-raccolta",
+   "responsible": "Ambrose St John (English translation)",
+   "title": "The Raccolta"
+  }
+ ],
+ "editions": [
+  {
+   "id": "edition.blessed-be-god-1925",
+   "work": "work.blessed-be-god",
+   "title": "Blessed Be God: A Complete Catholic Prayer Book",
+   "year": "1925",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "public-domain",
+    "basis": "The examined United States edition was published and copyrighted in 1925. Reliance is limited to the traditional Te Deum wording verified on its original page images."
+   }
+  },
+  {
+   "id": "edition.douay-rheims-bible-challoner",
+   "work": "work.douay-rheims-bible-challoner",
+   "title": "The Holy Bible: Douay-Rheims Version",
+   "year": "1914",
+   "publication_type": "scripture",
+   "authority": "scriptural_edition",
+   "rights": {
+    "status": "public-domain",
+    "basis": "Challoner revision, 18th century."
+   }
+  },
+  {
+   "id": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "work": "work.francis-x-lasance-the-catholic-girl-s-guide",
+   "title": "The Catholic Girl's Guide",
+   "year": "1906",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "public-domain",
+    "basis": "Original United States edition published and copyrighted in 1906; Francis X. Lasance died in 1946. Only wording verified on the cited original pages, including the Holy Name litany, Deus refugium collect and short grace before meals, is used."
+   }
+  },
+  {
+   "id": "edition.patrick-francis-moran-the-catholic-prayer-book-1883",
+   "work": "work.patrick-francis-moran-the-catholic-prayer-book",
+   "title": "The Catholic Prayer Book and Manual of Meditations",
+   "year": "1883",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "public-domain",
+    "basis": "Patrick Francis Moran died in 1911; only the complete Angelus wording verified on printed p. 11 of the examined 1883 edition is cited."
+   }
+  },
+  {
+   "id": "edition.the-family-prayer-book-1839",
+   "work": "work.the-family-prayer-book",
+   "title": "The Family Prayer-book: Containing All the Public and Private Devotions in Use Amongst English Catholics",
+   "year": "1839",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "public-domain",
+    "basis": "Catholic prayer book published in London in 1839. The Wikimedia Commons record marks the scan public domain; the edition predates any plausible surviving life-plus-70 term."
+   }
+  },
+  {
+   "id": "edition.the-missal-for-the-laity-1846",
+   "work": "work.the-missal-for-the-laity",
+   "title": "The Missal for the Laity, According to the Use of the Holy Roman Church",
+   "year": "1846",
+   "publication_type": "missal",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "public-domain",
+    "basis": "Anonymous Catholic Book Society edition published by Thomas Richardson and Son in 1846."
+   }
+  },
+  {
+   "id": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "work": "work.the-missal-for-the-use-of-the-laity",
+   "title": "The Missal for the Use of the Laity, new edition improved",
+   "year": "1853",
+   "publication_type": "missal",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "public-domain",
+    "basis": "Frederick Charles Husenbeth died in 1872; the examined new edition improved was published in London in 1853."
+   }
+  },
+  {
+   "id": "edition.the-raccolta-1910",
+   "work": "work.the-raccolta",
+   "title": "The Raccolta or Collection of Indulgenced Prayers and Good Works",
+   "year": "1910",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "rights": {
+    "status": "public-domain",
+    "basis": "English translation attributed to Ambrose St John (d. 1875), in an edition published in 1910; only wording verified on the original page image is cited."
+   }
+  }
+ ],
+ "digital_items": [
+  {
+   "id": "item.blessed-be-god-1925.scan",
+   "edition": "edition.blessed-be-god-1925",
+   "repository": "Wikimedia Commons",
+   "kind": "scan",
+   "record_url": "https://commons.wikimedia.org/wiki/File:Blessedbegodcomp00call.pdf",
+   "scan_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Blessedbegodcomp00call.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.catholic-girls-guide-1906.scan",
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "repository": "University of Notre Dame / Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/catholicgirlsgui00lasa",
+   "scan_url": "https://resources.library.nd.edu/repository/Catholic%20Youth%20Literature/catholicgirlsgui00lasa.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.catholic-prayer-book-moran-1883.scan",
+   "edition": "edition.patrick-francis-moran-the-catholic-prayer-book-1883",
+   "repository": "Wikimedia Commons",
+   "kind": "scan",
+   "record_url": "https://commons.wikimedia.org/wiki/File:The_Catholic_prayer_book.djvu",
+   "scan_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20Catholic%20prayer%20book.djvu",
+   "access": "open"
+  },
+  {
+   "id": "item.douay-rheims-challoner-1914.scan",
+   "edition": "edition.douay-rheims-bible-challoner",
+   "repository": "Wikimedia Commons",
+   "kind": "scan",
+   "record_url": "https://commons.wikimedia.org/wiki/File:The_Holy_Bible_-_Douay_Rheims_Version.pdf",
+   "scan_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The_Holy_Bible_-_Douay_Rheims_Version.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.family-prayer-book-1839.scan",
+   "edition": "edition.the-family-prayer-book-1839",
+   "repository": "Wikimedia Commons / Internet Archive",
+   "kind": "scan",
+   "record_url": "https://commons.wikimedia.org/wiki/File:The_family_prayer-book,_containing_all_the_public_and_private_devotions_in_use_amongst_English_Catholics._(IA_TheFamilyPrayerBookContaining).pdf",
+   "scan_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/The_family_prayer-book%2C_containing_all_the_public_and_private_devotions_in_use_amongst_English_Catholics._%28IA_TheFamilyPrayerBookContaining%29.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.missal-for-the-laity-1846.scan",
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/TheMissalForTheLaity",
+   "scan_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/missal_for_use_of_laity_1853-f_c_husenbeth",
+   "scan_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.raccolta-1910.scan",
+   "edition": "edition.the-raccolta-1910",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/theraccoltaorcol00unknuoft",
+   "scan_url": "https://archive.org/download/theraccoltaorcol00unknuoft/theraccoltaorcol00unknuoft.pdf",
+   "access": "open"
+  }
+ ]
+}

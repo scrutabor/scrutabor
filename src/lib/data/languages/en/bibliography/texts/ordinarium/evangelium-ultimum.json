@@ -1,0 +1,99 @@
+{
+ "id": "ordinarium.evangelium-ultimum",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 79–80",
+    "scan": "PDF pp. 91–92"
+   },
+   "entries": [
+    {
+     "id": "use.en.2e75e4813980cbac5910",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "The Lord be with you."
+    },
+    {
+     "id": "use.en.5506d4249036d1a2ac96",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "The Lord be with you."
+    },
+    {
+     "id": "use.en.696bf35bc08cceeb2050",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "The Lord be with you."
+    },
+    {
+     "id": "use.en.6975dfa58b37bc55a802",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "The Lord be with you."
+    },
+    {
+     "id": "use.en.6c1feeb0bc394ab2a9ff",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "The Lord be with you."
+    },
+    {
+     "id": "use.en.73d5d0525f1f802922dc",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "The Lord be with you."
+    },
+    {
+     "id": "use.en.84501dcc1f7d3e749311",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "The Lord be with you."
+    },
+    {
+     "id": "use.en.9ff41f0c5b70439c7823",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "The Lord be with you."
+    },
+    {
+     "id": "use.en.b67d7d280f8e535cb1b9",
+     "address": {
+      "kind": "segment",
+      "segment": "s14"
+     },
+     "claim": "The Lord be with you."
+    },
+    {
+     "id": "use.en.bc059c7a314c5863a091",
+     "address": {
+      "kind": "segment",
+      "segment": "s15"
+     },
+     "claim": "The Lord be with you."
+    }
+   ],
+   "verified_on": "2026-08-28"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}
