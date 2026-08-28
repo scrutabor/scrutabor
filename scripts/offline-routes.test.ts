@@ -12,7 +12,7 @@
 // under src/ type-checks locally and fails on CI.
 import { readdirSync, statSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { ROUTES } from '../offline/routes';
+import { match, pageData, ROUTES } from '../offline/routes';
 
 const ROOT = 'src/routes/app';
 
@@ -43,6 +43,12 @@ function siteRoutes(): string[] {
 const ANSWERED_BY_THE_ROUTER = ['/app'];
 
 describe('the downloaded copy covers the whole site', () => {
+	it('decodes a route parameter exactly once', async () => {
+		const found = match('/pl/lemma/Clemens%25');
+		expect(found?.params.lemma).toBe('Clemens%');
+		await expect(pageData(found!)).resolves.toBeNull();
+	});
+
 	it('has a pattern for every route under /app', () => {
 		const covered = new Set([...ROUTES.map((r) => r.key), ...ANSWERED_BY_THE_ROUTER]);
 		const missing = siteRoutes().filter((id) => !covered.has(id));

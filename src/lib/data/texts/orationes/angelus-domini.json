@@ -9,7 +9,6 @@
   "ad":5,
   "adw":6,
   "ac":[53,54],
-  "rs":{"ave1":"s03","ave2":"s06","ave3":"s09"},
   "seg":[
     {"id":"s01","type":"verse","speaker":"ductor","w":[{"i":"w001","f":"Ángelus","l":"angelus","m":60},{"i":"w002","f":"Dómini","l":"dominus","m":54},{"i":"w003","f":"nuntiávit","l":"nuntio","m":28},{"i":"w004","f":"Maríæ","l":"Maria","p":".","m":194}]},
     {"id":"s02","type":"verse","speaker":"populus","w":[{"i":"w005","f":"Et","l":"et","m":15},{"i":"w006","f":"concépit","l":"concipio","m":195},{"i":"w007","f":"de","l":"de","m":0,"h":"w008"},{"i":"w008","f":"Spíritu","l":"spiritus","m":100},{"i":"w009","f":"Sancto","l":"sanctus","p":".","m":101,"h":"w008"}]},

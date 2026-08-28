@@ -110,6 +110,8 @@ export interface TextDocument {
 	segments: Segment[];
 	/** Retired segment ids and the live segment carrying each one's content. */
 	retired_segments?: Record<string, string>;
+	/** Retired word ids and the segment carrying their former context. */
+	retired_words?: Record<string, string>;
 }
 
 export interface WordGloss {
@@ -203,6 +205,8 @@ interface CoreArtifact {
 	ad: number;
 	adw?: number;
 	ac?: number[];
+	rs?: Record<string, string>;
+	rw?: Record<string, string>;
 	seg: CoreSegmentRow[];
 	[key: string]: unknown;
 }
@@ -240,7 +244,20 @@ function expandWord(cell: WordCell): Word {
 }
 
 const CORE_ROW_KEYS = new Set(['w', 'ec', 'nc', 'an']);
-const CORE_DOC_KEYS = new Set(['st', 'ad', 'adw', 'ac', 'seg', 'rs']);
+const CORE_DOC_KEYS = new Set(['st', 'ad', 'adw', 'ac', 'seg', 'rs', 'rw']);
+
+function expandCoreMetadata(artifact: CoreArtifact): Record<string, unknown> {
+	const text: Record<string, unknown> = { schema_version: manifest.corpus_schema };
+	for (const [key, value] of Object.entries(artifact))
+		if (!CORE_DOC_KEYS.has(key)) text[key] = value;
+	text.status = artifact.st;
+	if (artifact.rs) text.retired_segments = artifact.rs;
+	if (artifact.rw) text.retired_words = artifact.rw;
+	text.analysis_defaults = at(ANALYSES, artifact.ad, 'analyses');
+	if (artifact.adw !== undefined)
+		text.analysis_defaults_words = at(ANALYSES, artifact.adw, 'analyses');
+	return text;
+}
 
 function expandDocument(
 	artifact: CoreArtifact,
@@ -252,14 +269,7 @@ function expandDocument(
 	const localized = (indices?: number[]) =>
 		indices?.map((index) => at(languageCitations, index, `${languageArtifact.language} citations`));
 
-	const text: Record<string, unknown> = { schema_version: manifest.corpus_schema };
-	for (const [key, value] of Object.entries(artifact))
-		if (!CORE_DOC_KEYS.has(key)) text[key] = value;
-	text.status = artifact.st;
-	if (artifact.rs) text.retired_segments = artifact.rs;
-	text.analysis_defaults = at(ANALYSES, artifact.ad, 'analyses');
-	if (artifact.adw !== undefined)
-		text.analysis_defaults_words = at(ANALYSES, artifact.adw, 'analyses');
+	const text = expandCoreMetadata(artifact);
 
 	const gloss: GlossDocument = {
 		schema_version: manifest.corpus_schema,
@@ -410,13 +420,7 @@ async function loadCore(key: string): Promise<CoreArtifact | undefined> {
 export async function loadCoreText(key: string): Promise<TextDocument | undefined> {
 	const artifact = await loadCore(key);
 	if (!artifact) return undefined;
-	const text: Record<string, unknown> = { schema_version: manifest.corpus_schema };
-	for (const [name, value] of Object.entries(artifact))
-		if (!CORE_DOC_KEYS.has(name)) text[name] = value;
-	text.status = artifact.st;
-	text.analysis_defaults = at(ANALYSES, artifact.ad, 'analyses');
-	if (artifact.adw !== undefined)
-		text.analysis_defaults_words = at(ANALYSES, artifact.adw, 'analyses');
+	const text = expandCoreMetadata(artifact);
 	text.segments = artifact.seg.map((row) => {
 		const segment: Record<string, unknown> = {};
 		for (const [name, value] of Object.entries(row))

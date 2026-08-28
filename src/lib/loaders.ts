@@ -28,6 +28,7 @@ import { LANGS, type Lang } from './i18n';
 import { conceptById } from './grammar';
 import { movementById } from './ordo';
 import { PROPER_DAYS, SLOT_OF, partOf, properRank } from './proprium';
+import { lemmaOfSlug } from './lemma-slug';
 import pkg from '../../package.json' with { type: 'json' };
 
 /** The two facts every page under a language needs, and neither of which it
@@ -48,12 +49,19 @@ export async function appLayoutData(lang: string, path: string) {
 	}
 	const lemmaMatch = path.match(/^\/lemma\/([^/]+)$/);
 	if (lemmaMatch) {
-		const lemma = decodeURIComponent(lemmaMatch[1]);
-		languages = (
-			await Promise.all(
-				LANGS.map(async (language) => ((await loadSenses(language))[lemma] ? language : null))
-			)
-		).filter((language): language is Lang => language !== null);
+		let lemma: string | undefined;
+		try {
+			lemma = lemmaOfSlug(decodeURIComponent(lemmaMatch[1]));
+		} catch {
+			lemma = undefined;
+		}
+		languages = lemma
+			? (
+					await Promise.all(
+						LANGS.map(async (language) => ((await loadSenses(language))[lemma] ? language : null))
+					)
+				).filter((language): language is Lang => language !== null)
+			: [];
 	}
 	return { ...layoutData(lang, path), languages };
 }

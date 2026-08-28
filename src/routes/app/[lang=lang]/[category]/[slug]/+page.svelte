@@ -21,6 +21,7 @@
 	import {
 		formatSegmentSelection,
 		parseSegmentSelection,
+		resolveWordAddress,
 		segmentRange
 	} from '$lib/segment-selection';
 	import { offersMassFormChoice, offersRoleChoice } from '$lib/reading-settings';
@@ -78,6 +79,16 @@
 	// Reading is the whole point of this page: hold the screen open.
 	keepAwake();
 
+	function resolveCitedWord(raw: string | null) {
+		return resolveWordAddress(
+			raw,
+			doc.segments.flatMap((segment) => (segment.words ?? []).map((word) => word.id)),
+			doc.segments.map((segment) => segment.id),
+			doc.retired_words ?? {},
+			doc.retired_segments ?? {}
+		);
+	}
+
 	// The book's ribbon, keyed by text (see lib/ribbon): a deep link into a
 	// word or a cited verse outranks it — that reader asked for a place.
 	ribbon(
@@ -87,16 +98,14 @@
 			// stale or malformed parameter is about to be stripped from the
 			// address, and it must not also cost the reader their place.
 			const q = pageUrl().searchParams;
-			const w = q.get('w');
-			const wordCited =
-				w !== null && doc.segments.some((sg) => sg.words?.some((word) => word.id === w));
+			const wordCited = resolveCitedWord(q.get('w'));
 			const v = q.get('v');
 			const verseCited =
 				v !== null && data.verses !== undefined && Object.values(data.verses).includes(Number(v));
 			const ids = doc.segments.map((segment) => segment.id);
 			const segmentsCited =
 				parseSegmentSelection(q.get('s'), ids, doc.retired_segments ?? {}).length > 0;
-			return wordCited || verseCited || segmentsCited;
+			return wordCited !== null || verseCited || segmentsCited;
 		}
 	);
 
@@ -165,12 +174,39 @@
 		if (selected.some((id) => !visible.has(id))) prayerForm.set('extended');
 	}
 
-	function revealWordFromLocation() {
-		if (!hasPrayerForms || untrack(() => prayerForm.value) === 'extended') return;
-		const w = pageUrl().searchParams.get('w');
-		if (w === null) return;
-		const owner = doc.segments.find((segment) => segment.words?.some((word) => word.id === w));
-		if (owner && owner.id !== doc.segments[0]?.id) prayerForm.set('extended');
+	function applyWordFromLocation(scroll = true) {
+		const raw = pageUrl().searchParams.get('w');
+		if (raw === null) return;
+		const resolution = resolveCitedWord(raw);
+		if (resolution?.word) {
+			if (!hasPrayerForms || untrack(() => prayerForm.value) === 'extended') return;
+			const owner = doc.segments.find((segment) =>
+				segment.words?.some((word) => word.id === resolution.word)
+			);
+			if (owner && owner.id !== doc.segments[0]?.id) prayerForm.set('extended');
+			return;
+		}
+
+		// A removed word has no panel left to open. Its permanent tombstone
+		// names the surviving verse, so the address becomes an ordinary verse
+		// citation; a wholly unknown word is simply stripped.
+		const survivor = resolution?.segment;
+		if (survivor) {
+			citedSegments = [survivor];
+			segmentAnchor = survivor;
+			revealSelection([survivor]);
+			if (scroll) {
+				requestAnimationFrame(() =>
+					document.getElementById(survivor)?.scrollIntoView({ block: 'center' })
+				);
+			}
+		}
+		requestAnimationFrame(() => {
+			const url = pageUrl();
+			url.searchParams.delete('w');
+			if (survivor) url.searchParams.set('s', survivor);
+			replaceState(url, {});
+		});
 	}
 
 	function writeSegmentSelection(selected: string[]) {
@@ -228,7 +264,7 @@
 		void data.verses;
 		applyVerseFromLocation();
 		applySegmentFromLocation();
-		revealWordFromLocation();
+		applyWordFromLocation();
 	});
 
 	function tapVerse(no: number) {
@@ -288,6 +324,7 @@
 		// shallow history entry and must leave the reader exactly where they are.
 		applyVerseFromLocation(false);
 		applySegmentFromLocation(false);
+		applyWordFromLocation(false);
 	}}
 	onkeydown={(e) => {
 		const href = onWindowKeydown(e);

@@ -63,20 +63,6 @@ if (unknown.length) {
 	throw new Error(`the edition holds categories the app does not list: ${[...new Set(unknown)]}`);
 }
 
-rmSync(DATA, { recursive: true, force: true });
-mkdirSync(DATA, { recursive: true });
-
-const written = new Set();
-const copy = (name, from) => {
-	written.add(name);
-	// Byte for byte, so that the app ships exactly what the corpus verified.
-	// Reformatting it here would mean the sha256 below attests to this
-	// script's output rather than to the edition.
-	const target = join(DATA, name);
-	mkdirSync(dirname(target), { recursive: true });
-	writeFileSync(target, readFileSync(from));
-};
-
 function filesBelow(root, prefix = '') {
 	const files = [];
 	for (const entry of readdirSync(root, { withFileTypes: true })) {
@@ -85,13 +71,6 @@ function filesBelow(root, prefix = '') {
 		else if (entry.isFile() && entry.name.endsWith('.json')) files.push(name);
 	}
 	return files;
-}
-
-// Mirror the edition instead of naming today's folders. A later optional
-// language-pack search index is data with a surface, but it must not require
-// teaching the vendor a new path before the app can use it.
-for (const name of filesBelow(BUILD).sort()) {
-	copy(name, join(BUILD, name));
 }
 
 // The boundary the mirror must not widen: everything copied is a file the
@@ -110,13 +89,37 @@ for (const language of manifest.languages) {
 	}
 	for (const entry of languageManifest.texts) declaredByManifests.add(entry.path);
 }
-const undeclared = [...written].filter((name) => !declaredByManifests.has(name));
-const unwritten = [...declaredByManifests].filter((name) => !written.has(name));
+const editionFiles = filesBelow(BUILD).sort();
+const editionSet = new Set(editionFiles);
+const undeclared = editionFiles.filter((name) => !declaredByManifests.has(name));
+const unwritten = [...declaredByManifests].filter((name) => !editionSet.has(name));
 if (undeclared.length || unwritten.length) {
 	throw new Error(
 		`the mirror and the manifests disagree — undeclared: ${undeclared}, missing: ${unwritten}`
 	);
 }
+
+// Validate before replacing the current vendor tree. A malformed edition
+// should leave the last known-good copy intact rather than deleting it and
+// failing halfway through the command.
+rmSync(DATA, { recursive: true, force: true });
+mkdirSync(DATA, { recursive: true });
+
+const written = new Set();
+const copy = (name, from) => {
+	written.add(name);
+	// Byte for byte, so that the app ships exactly what the corpus verified.
+	// Reformatting it here would mean the sha256 below attests to this
+	// script's output rather than to the edition.
+	const target = join(DATA, name);
+	mkdirSync(dirname(target), { recursive: true });
+	writeFileSync(target, readFileSync(from));
+};
+
+// Mirror the edition instead of naming today's folders. A later optional
+// language-pack search index is data with a surface, but it must not require
+// teaching the vendor a new path before the app can use it.
+for (const name of editionFiles) copy(name, join(BUILD, name));
 
 // WHICH CORPUS THIS IS. Until 2026-08-19 the app carried files it could not
 // account for: nothing said which commit they came from, so a release could

@@ -82,14 +82,16 @@ test.describe('selector hygiene @online', () => {
 		}
 	});
 
-	test('the oldest published address resolves to its surviving verse', async ({ page }) => {
-		// v0.9 published #ave1 anchors; the retirement record now carries
-		// them to the verse that holds their content, and the address
-		// canonicalizes to the living id.
+	test('pre-contract semantic labels are not kept as aliases', async ({ page }) => {
 		await page.goto('/app/pl/orationes/angelus-domini?s=ave1');
-		await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini', '?s=s03'));
-		await expect(page.locator('#s03.segment-selected')).toBeVisible();
-		await expect(page.locator('#s03 button.word')).toHaveCount(31);
+		await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini'));
+		await expect(page.locator('.segment-selected')).toHaveCount(0);
+	});
+
+	test('an unknown word address is stripped instead of lingering', async ({ page }) => {
+		await page.goto('/app/pl/orationes/angelus-domini?w=w9999');
+		await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini'));
+		await expect(page.locator('.word-panel')).toHaveCount(0);
 	});
 
 	test('selecting verses clears a cited psalter verse, state and address together', async ({

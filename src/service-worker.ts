@@ -23,6 +23,7 @@
 // cannot. Whether the reader asked for the whole book is REMEMBERED — in
 // IndexedDB, across versions — never guessed from cache sizes.
 import { build, files, prerendered, version } from '$service-worker';
+import { cacheContainsAll } from '$lib/cache-completeness';
 
 const sw = self as unknown as ServiceWorkerGlobalScope;
 
@@ -167,11 +168,19 @@ function migrate(): Promise<void> {
 			// A reader who asked for the whole book gets the whole book; a
 			// partial browser cache refills exactly the pages it held —
 			// partial stays partial.
-			if (await readFlag('book-requested')) {
+			const bookRequested = Boolean(await readFlag('book-requested'));
+			if (bookRequested) {
 				await fetchTheBook();
 			} else {
 				await fetchAll([...held].filter((path) => !SHELL.includes(path)));
 			}
+
+			// Preserving the old entries is not enough for an installed book:
+			// newly hashed chunks have no path in common with the old edition.
+			// A failed fetch of one of them must therefore keep the old cache
+			// available and let the next wake retry, instead of deleting the old
+			// book behind an incomplete replacement.
+			if (bookRequested && !(await cacheContainsAll(cache, EVERYTHING))) return;
 
 			// Deletion happens ONLY behind a verified migration: every old
 			// entry the edition still carries must now answer from the new

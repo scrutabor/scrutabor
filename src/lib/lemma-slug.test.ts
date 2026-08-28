@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { LEXICON } from './corpus';
 import { allLemmaSlugs, lemmaOfSlug, lemmaSlug } from './lemma-slug';
+import { appLayoutData } from './loaders';
 
 describe('lemma addresses', () => {
 	it('are collision-free on a case-insensitive disk, by construction', () => {
@@ -35,5 +36,11 @@ describe('lemma addresses', () => {
 	it('answers a stranger with undefined, not a guess', () => {
 		expect(lemmaOfSlug('nonsense')).toBeUndefined();
 		expect(lemmaOfSlug('clemens.3')).toBeUndefined();
+	});
+
+	it('keeps language switching available at disambiguated lemma addresses', async () => {
+		expect((await appLayoutData('pl', '/lemma/clemens.1')).languages).toEqual(['en', 'pl']);
+		expect((await appLayoutData('pl', '/lemma/clemens.2')).languages).toEqual(['en', 'pl']);
+		expect((await appLayoutData('pl', '/lemma/clemens')).languages).toEqual([]);
 	});
 });

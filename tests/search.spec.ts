@@ -394,9 +394,12 @@ test('Back restores the query, results, and scroll position before a second resu
 	await expect(hits.nth(5)).toBeVisible();
 	const firstHref = await hits.nth(4).getAttribute('href');
 	const secondHref = await hits.nth(5).getAttribute('href');
+	expect(firstHref).toBeTruthy();
+	expect(secondHref).toBeTruthy();
 	expect(secondHref).not.toBe(firstHref);
 	await hits.nth(4).evaluate((element) => element.scrollIntoView({ block: 'center' }));
 	await hits.nth(4).click();
+	await expect(page).not.toHaveURL(atRoute('/app/pl/search', '?q=Pater'));
 	await settled(page);
 	const before = await page.evaluate(() => {
 		const saved = sessionStorage.getItem('scrutabor-search-return');
@@ -405,14 +408,15 @@ test('Back restores the query, results, and scroll position before a second resu
 	expect(before).toBeGreaterThan(0);
 
 	await page.goBack();
-	await settled(page);
+	// Do not wait on the document-load hydration marker here. Back may restore
+	// this client-routed page from history without creating a new document;
+	// the assertions below are the exact readiness signals this scenario needs.
 	await expect(page).toHaveURL(atRoute('/app/pl/search', '?q=Pater'));
 	await expect(page.getByRole('searchbox')).toHaveValue('Pater');
 	await expect(page.locator('#search-contents + ul a').nth(5)).toHaveAttribute('href', secondHref!);
 	await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThanOrEqual(before - 2);
 
 	await page.locator('#search-contents + ul a').nth(5).click();
-	await settled(page);
 	await expect(page).not.toHaveURL(atRoute('/app/pl/search', '?q=Pater'));
 });
 

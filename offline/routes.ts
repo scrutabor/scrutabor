@@ -135,7 +135,10 @@ export async function pageData(found: RouteMatch): Promise<Record<string, unknow
 		case 'movement':
 			return await ordoData(lang, found.params.movement);
 		case 'lemma': {
-			const lemma = lemmaOfSlug(decodeURIComponent(found.params.lemma));
+			// `match` decoded every parameter already. Decoding twice makes a
+			// perfectly valid encoded percent sign throw here instead of becoming
+			// an ordinary unknown lemma.
+			const lemma = lemmaOfSlug(found.params.lemma);
 			return lemma ? await lemmaData(lang, lemma) : null;
 		}
 		case 'concept':

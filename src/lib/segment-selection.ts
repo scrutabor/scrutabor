@@ -18,8 +18,15 @@ export function parseSegmentSelection(
 	if (!raw) return [];
 	const resolve = (token: string): string | undefined => {
 		if (ids.includes(token)) return token;
-		const survivor = retired[token];
-		return survivor && ids.includes(survivor) ? survivor : undefined;
+		const seen = new Set<string>();
+		let current = token;
+		while (retired[current]) {
+			if (seen.has(current)) return undefined;
+			seen.add(current);
+			current = retired[current];
+			if (ids.includes(current)) return current;
+		}
+		return undefined;
 	};
 	const single = resolve(raw);
 	if (single) return [single];
@@ -28,6 +35,21 @@ export function parseSegmentSelection(
 	const [from, to] = [resolve(endpoints[0]), resolve(endpoints[1])];
 	if (!from || !to) return [];
 	return segmentRange(ids, from, to);
+}
+
+export function resolveWordAddress(
+	raw: string | null,
+	wordIds: string[],
+	segmentIds: string[],
+	retiredWords: Record<string, string> = {},
+	retiredSegments: Record<string, string> = {}
+): { word?: string; segment?: string } | null {
+	if (!raw) return null;
+	if (wordIds.includes(raw)) return { word: raw };
+	const anchor = retiredWords[raw];
+	if (!anchor) return null;
+	const [segment] = parseSegmentSelection(anchor, segmentIds, retiredSegments);
+	return segment ? { segment } : null;
 }
 
 export function formatSegmentSelection(selected: string[], ids: string[]): string | null {
