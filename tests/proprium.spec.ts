@@ -347,3 +347,211 @@ test('a real day this edition has not written says so', async ({ page }) => {
 	await settled(page);
 	await expect(page.locator('.picker.day select').first()).toHaveValue('');
 });
+
+// THE OPEN LIST IS NOT THE CONTROL.
+//
+// A native list takes its colours from the select it hangs off, so every
+// colour the control wears is inherited by all sixty days and by their
+// season headings. Two rules fed it: the rubric a chosen day puts on the
+// control, and a hover rule that reddened the control under the pointer.
+// Either one turned the whole open year red (owner, 2026-08-29).
+//
+// The list is painted outside the document and no test can read it. What a
+// test CAN read is the inheritance that fed it — the computed colour of
+// every <option> and <optgroup> — and that is where the defect lived.
+//
+// TWO LISTS ARE CHECKED, because the book now has two. Where the engine
+// offers `appearance: base-select` AND the platform stamp asked for it, the
+// list is drawn by the page (Chrome on Windows, whose own list takes no
+// padding and no radius). Everywhere else it is the platform's, and the
+// pick is left to the platform's own highlight. The stamp is an attribute,
+// so BOTH arms run on any machine rather than whichever one the runner
+// happens to be standing on.
+const NATIVE = 'the platform draws the list';
+const STYLED = 'the page draws the list';
+
+/** Every row of the list, and the control it hangs off, as the page has
+ * computed them. The wanted colours are read from a probe carrying the
+ * tokens rather than written here as hex: this asserts what the list is
+ * made of, not what the palette currently measures. */
+async function readList(picker: import('@playwright/test').Locator) {
+	return picker.evaluate((el) => {
+		const probe = document.createElement('span');
+		probe.style.color = 'var(--ink)';
+		probe.style.backgroundColor = 'var(--surface)';
+		probe.style.borderColor = 'var(--ink-soft)';
+		probe.style.outlineColor = 'var(--rubric)';
+		el.append(probe);
+		const probed = getComputedStyle(probe);
+		const want = {
+			ink: probed.color,
+			surface: probed.backgroundColor,
+			soft: probed.borderTopColor,
+			rubric: probed.outlineColor
+		};
+		probe.remove();
+
+		const control = el.querySelector('select')!;
+		const style = (n: Element) => getComputedStyle(n);
+		return {
+			want,
+			rows: [...control.querySelectorAll('option, optgroup')].map((n) => {
+				const option = n instanceof HTMLOptionElement ? n : null;
+				return {
+					kind: option ? 'option' : 'group',
+					name: option
+						? `option:${option.value || '(none)'}`
+						: `group:${(n as HTMLOptGroupElement).label}`,
+					chosen: !!option?.selected,
+					color: style(n).color,
+					background: style(n).backgroundColor
+				};
+			}),
+			options: control.querySelectorAll('option').length,
+			groups: control.querySelectorAll('optgroup').length,
+			control: style(control).color,
+			caret: getComputedStyle(el.querySelector('.field')!, '::after').color
+		};
+	});
+}
+
+for (const theme of ['light', 'dark'] as const) {
+	for (const list of [NATIVE, STYLED] as const) {
+		test(`the day list stays neutral under the pointer — ${theme}, ${list}`, async ({ page }) => {
+			await asIfItWere(page, OUTSIDE_ADVENT);
+			await page.goto('/app/pl/ordo');
+
+			const styled = await page.evaluate(
+				({ t, wantStyled }) => {
+					document.documentElement.dataset.theme = t;
+					// The stamp app.html writes before first paint, set by hand so
+					// both lists are exercised wherever this runs.
+					if (wantStyled) document.documentElement.dataset.platform = 'windows';
+					else delete document.documentElement.dataset.platform;
+					return wantStyled && CSS.supports('appearance', 'base-select');
+				},
+				{ t: theme, wantStyled: list === STYLED }
+			);
+
+			// A run that cannot reach the styled list says so rather than
+			// passing quietly on the other one's assertions.
+			test.skip(list === STYLED && !styled, 'this engine has no appearance: base-select');
+
+			const picker = page.locator('.picker.day').first();
+			const select = picker.locator('select');
+
+			// AT REST: no day chosen, no pointer on the control.
+			await expect(select).toHaveValue('');
+			await page.mouse.move(0, 0);
+			const resting = await readList(picker);
+
+			// The denominator, before any colour is compared. A list of no rows
+			// and a year of no seasons would pass everything below.
+			expect(resting.options, 'the days were examined').toBeGreaterThan(1);
+			expect(resting.groups, 'the season headings were examined').toBeGreaterThan(0);
+			expect(resting.control, 'nothing is chosen, so the control is quiet').toBe(resting.want.soft);
+
+			// UNDER THE POINTER, with a day chosen — the two states that used to
+			// reach inside the list, together.
+			await select.selectOption(DAY);
+			await expect(picker).toHaveClass(/\bon\b/);
+			await select.hover();
+			expect(
+				await select.evaluate((s) => s.matches(':hover')),
+				'the regression needs the pointer actually on the control'
+			).toBe(true);
+			const active = await readList(picker);
+
+			expect(active.control, 'a chosen day is still set in the rubric').toBe(active.want.rubric);
+			expect(active.caret, 'and hover still marks the caret').toBe(active.want.rubric);
+
+			// THE RULE, in one sentence: pointing at the control and choosing a
+			// day may recolour the rows the PICK moved between, and nothing else.
+			// On the platform's list it may recolour nothing at all, because
+			// there the pick is the platform's own highlight to draw.
+			const moved = (key: 'color' | 'chosen') =>
+				active.rows
+					.filter((r, i) => r[key] !== resting.rows[i][key])
+					.map((r) => r.name)
+					.sort();
+			const picked = moved('chosen');
+			expect(picked, 'the pick left the empty row for the day').toEqual(
+				[`option:${DAY}`, 'option:(none)'].sort()
+			);
+			expect(moved('color'), 'only those rows may change colour').toEqual(
+				list === STYLED ? picked : []
+			);
+
+			// AND WHAT THE ROWS ARE MADE OF. A day is the page's own ink; a
+			// season heading is the quiet layer the tabella's labels use; the
+			// list is drawn on the page's surface, not the platform default.
+			const inks = (kind: string) => [
+				...new Set(active.rows.filter((r) => r.kind === kind && !r.chosen).map((r) => r.color))
+			];
+			expect(inks('option'), 'every unchosen day keeps neutral ink').toEqual([active.want.ink]);
+			expect(inks('group'), 'every season heading keeps the quiet ink').toEqual([active.want.soft]);
+			expect(
+				[...new Set(active.rows.map((r) => r.background))],
+				'on the page surface, not the platform default'
+			).toEqual([active.want.surface]);
+
+			const chosen = active.rows.filter((r) => r.chosen);
+			expect(
+				chosen.map((r) => r.name),
+				'exactly one day is chosen'
+			).toEqual([`option:${DAY}`]);
+			expect(chosen[0].color, 'and it is marked as the book marks a choice').toBe(
+				list === STYLED ? active.want.rubric : active.want.ink
+			);
+		});
+	}
+}
+
+// A CONTRAST THEME TAKES THE COLOURS AWAY, and the page's own list has to
+// survive that. Where the page draws the list it marks the chosen day in
+// the rubric on the wash and hides the platform's checkmark, because the
+// book says "this one" in its own voice. Under forced colours both the
+// rubric and the wash are forced to the reader's plain text on plain
+// ground — measured 2026-08-29: every row came back identical — and the
+// mark that was hidden was the only thing left that a contrast theme
+// cannot erase. So it comes back, and this holds it back.
+test('the chosen day is still marked when colour is taken away', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	await page.goto('/app/pl/ordo');
+	// Forced colours are emulated on the page in this Playwright, not
+	// declared as a test option.
+	await page.emulateMedia({ forcedColors: 'active' });
+	const styled = await page.evaluate(() => {
+		document.documentElement.dataset.platform = 'windows';
+		return CSS.supports('appearance', 'base-select');
+	});
+	test.skip(!styled, 'this engine has no appearance: base-select');
+
+	const select = page.locator('.picker.day select');
+	await select.selectOption(DAY);
+
+	const seen = await page.evaluate(() => {
+		const rows = [...document.querySelectorAll('.picker.day option')];
+		const chosen = rows.find((o) => (o as HTMLOptionElement).selected)!;
+		const style = (n: Element, p?: string) => getComputedStyle(n, p);
+		return {
+			forced: matchMedia('(forced-colors: active)').matches,
+			rows: rows.length,
+			inks: [...new Set(rows.map((r) => style(r).color))],
+			grounds: [...new Set(rows.map((r) => style(r).backgroundColor))],
+			mark: style(chosen, '::checkmark').display,
+			weight: style(chosen).fontWeight
+		};
+	});
+
+	// The premise, stated rather than assumed: this really is a page
+	// whose colours have been taken away.
+	expect(seen.forced, 'the contrast theme is in force').toBe(true);
+	expect(seen.rows, 'the days were examined').toBeGreaterThan(1);
+	expect(seen.inks, 'colour can no longer tell one row from another').toHaveLength(1);
+	expect(seen.grounds, 'nor can the ground under it').toHaveLength(1);
+
+	// …so the choice must be carried by something that is not a colour.
+	expect(seen.mark, "the platform's own mark is back").not.toBe('none');
+	expect(seen.weight, 'and the chosen day still carries the heavier weight').toBe('600');
+});

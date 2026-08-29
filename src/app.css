@@ -131,6 +131,113 @@ html {
 	color-scheme: var(--scheme);
 }
 
+/* THE LIST, WHERE THE PLATFORM WILL NOT DRAW IT WELL.
+   Chrome on Windows draws a select's list itself: a square, tight,
+   hairline box that takes no padding and no radius from the page —
+   measured, not assumed (an option padding of 40px changes nothing
+   about it, 2026-08-29). macOS and Android hand the list to the system
+   and it already belongs to the system it is on, so they keep theirs
+   and never reach this block.
+
+   This is STILL THE SAME <select>. `base-select` is the engine's own
+   customizable rendering, not a listbox built out of divs: the keyboard,
+   the accessibility tree, the form and the mobile picker stay where they
+   were. What moves into the page is the paint. The house highlight
+   replaces the platform's blue here, and only here, because a menu can
+   no longer be both. */
+@supports (appearance: base-select) {
+	html[data-platform='windows'] select,
+	html[data-platform='windows'] select::picker(select) {
+		appearance: base-select;
+	}
+
+	/* The caret is already drawn by .field::after, and one control does
+	   not get two of them. */
+	html[data-platform='windows'] select::picker-icon {
+		display: none;
+	}
+
+	html[data-platform='windows'] select::picker(select) {
+		background: var(--surface);
+		border: 1px solid var(--border);
+		/* the tabella's own corner, so the list belongs to the table it
+		   drops out of */
+		border-radius: 0.55rem;
+		box-shadow: var(--shadow);
+		padding: 0.3rem;
+		margin-block-start: 0.3rem;
+		/* the platform put the list hard against the control; this is the
+		   book's own measure */
+		min-width: max-content;
+	}
+
+	html[data-platform='windows'] option {
+		padding: 0.34rem 0.8rem;
+		border-radius: 0.35rem;
+		/* A day is a NAME, not a label. The season heading below is set
+		   as one — small, spaced, uppercase — and an <optgroup> is the
+		   parent of the days it gathers, so every one of them inherited
+		   the heading's costume and the list came up shouting. */
+		font-size: 0.92rem;
+		font-weight: 400;
+		letter-spacing: normal;
+		text-transform: none;
+	}
+
+	html[data-platform='windows'] option::checkmark {
+		display: none;
+	}
+
+	html[data-platform='windows'] option:hover,
+	html[data-platform='windows'] option:focus {
+		background-color: var(--wash);
+		outline: none;
+	}
+
+	html[data-platform='windows'] option:checked {
+		color: var(--rubric);
+		font-weight: 600;
+	}
+
+	/* A season gathers its days the way the tabella's labels gather a
+	   row: quieter than what it names, and set apart by air. */
+	html[data-platform='windows'] optgroup {
+		padding: 0.45rem 0.8rem 0.15rem;
+		font-size: 0.72rem;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--ink-soft);
+	}
+
+	html[data-platform='windows'] optgroup:not(:first-child) {
+		border-top: 1px solid var(--border);
+		margin-block-start: 0.3rem;
+	}
+
+	/* A CONTRAST THEME TAKES THE COLOURS AWAY, and it is entitled to: the
+	   reader asked for their own two. But the page marks the chosen day in
+	   the rubric on the wash, and both are forced to plain text on plain
+	   ground — measured, 2026-08-29: chosen and unchosen rows both came
+	   back rgb(0,0,0) on rgb(255,255,255), leaving weight 600 alone to
+	   carry the choice, and the platform's own checkmark hidden by the rule
+	   above. So the mark comes back, because a shape cannot be forced away,
+	   and the cursor is drawn in the reader's highlight rather than in
+	   ours — an author background here would be forced to the plain ground
+	   and would erase the highlight the engine wanted to paint. */
+	@media (forced-colors: active) {
+		html[data-platform='windows'] option::checkmark {
+			display: revert;
+		}
+
+		html[data-platform='windows'] option:hover,
+		html[data-platform='windows'] option:focus {
+			background-color: Highlight;
+			color: HighlightText;
+		}
+	}
+}
+
 body {
 	margin: 0;
 	background: var(--bg);

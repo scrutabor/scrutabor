@@ -300,12 +300,63 @@
 		inset: 0;
 		width: 100%;
 		color: var(--ink-soft);
-		background: transparent;
+		/* NOT transparent, and not for the closed control's sake — this box
+		   is painted over the row's own paper and looks the same either way.
+		   Firefox draws the open list as a padded, rounded panel and takes
+		   ITS background from the select: left transparent, the rows sat on
+		   the page's paper inside a white jacket (owner, 2026-08-29). The
+		   page colour is the one value that fills that jacket and still
+		   leaves the closed control invisible against the row it lies on. */
+		background-color: var(--bg);
 		border: 0;
 		cursor: pointer;
 		/* The list itself is drawn by the platform, so it has to be told which
 		   way the page is lit or a dark reader gets a white menu. */
 		color-scheme: var(--scheme);
+	}
+
+	/* THE LIST IS NOT THE CONTROL. The popup inherits the select's colour
+	   and paints its own rows with it, so the rubric a chosen day wears
+	   reached inside and set the whole year in red. The list states its own
+	   neutral ink and the page's surface instead — which is also what stops
+	   a dark reader's menu arriving on white paper.
+
+	   Nothing here touches :checked or :hover. The row under the pointer or
+	   under the arrow keys keeps the platform's own highlight, which is the
+	   one thing a native list must not lose and half the reason this is
+	   still a native list. */
+	option,
+	optgroup {
+		background-color: var(--surface);
+	}
+
+	/* A DAY IS A NAME. Every engine dresses a list its own way — Firefox
+	   sets a group label in bold italic and leaves the option that stands
+	   outside a group at whatever weight the control is wearing — so the
+	   book states its own, and the same list arrives in every browser
+	   rather than a different one in each. Chrome's own list ignores the
+	   padding (measured); Firefox honours it, and the rows there stop
+	   touching the frame. */
+	option {
+		color: var(--ink);
+		font-size: 0.92rem;
+		font-weight: 400;
+		font-style: normal;
+		letter-spacing: normal;
+		text-transform: none;
+		padding: 0.34rem 0.8rem;
+	}
+
+	/* A season gathers its days the way the tabella's labels gather a row:
+	   quieter than what it names, and set apart by air. */
+	optgroup {
+		color: var(--ink-soft);
+		font-size: 0.72rem;
+		font-weight: 600;
+		font-style: normal;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		padding: 0.45rem 0.8rem 0.15rem;
 	}
 
 	/* The width has to be the CHOSEN weight, or setting a day thickens the
@@ -324,7 +375,12 @@
 		color: var(--rubric);
 	}
 
-	select:hover {
+	/* HOVER MARKS THE CARET, and nothing else. Colouring the select coloured
+	   the OPEN LIST with it — Chrome on Windows builds the popup out of the
+	   control's own computed style — so the pointer reddened sixty days and
+	   every season heading at once (owner, 2026-08-29). The chevron is the
+	   part that means "there is a list here"; marking it is the whole job. */
+	.field:hover::after {
 		color: var(--rubric);
 	}
 
@@ -401,6 +457,13 @@
 		letter-spacing: 0.1em;
 		color: var(--ink-soft);
 	}
+
+	/* Where the platform will not draw the list well — Chrome on Windows,
+	   whose own list takes no padding and no radius from the page — the page
+	   draws it instead, with `appearance: base-select`. That block keys on
+	   the platform stamp app.html writes before first paint, so it lives in
+	   app.css beside the other stamps rather than here. It is still this
+	   same <select>: only the paint moves. */
 
 	@media print {
 		/* A printed prayer says which day produced it, and nothing that was

@@ -40,6 +40,16 @@
 				// CSS rule hold the text back until hydration re-renders it
 				// in their mode (app.css), and the components read the same
 				// stored value at init, so hydration is the ONE re-render.
+				// …and WHICH PLATFORM draws the native menus. Only one thing
+				// reads it: Chrome on Windows draws a select's list itself,
+				// square and tight, and takes no padding or radius from the
+				// page. macOS and Android hand that list to the system, where
+				// it already looks like the system it is on, so they are left
+				// alone (DayPicker.svelte). Stamped here rather than measured
+				// later because the list must be right on its first opening.
+				var plat =
+					(navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '';
+				if (/win/i.test(plat)) document.documentElement.dataset.platform = 'windows';
 				var h = localStorage.getItem('scrutabor-help');
 				document.documentElement.dataset.help = h === '0' || h === '2' ? h : '1';
 				// A failed application chunk must not turn the static prayer into
