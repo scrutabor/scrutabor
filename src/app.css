@@ -401,6 +401,17 @@ em {
 	/* one shared label column, sized for the longest label in either
 	   language (dzień) */
 	flex: 0 0 3.4rem;
+	/* THE SAME FIGURE AGAIN, as a floor, and not as belt and braces: a
+	   flex basis is enough for a row to LAY OUT at, and not enough for
+	   every engine to size the table AROUND it. Measured 2026-08-29 —
+	   one counts the basis of an item that cannot shrink towards the
+	   row's intrinsic width, the other counts only the word sitting in
+	   it, which is 3rem narrower here. The table shrink-wraps to that
+	   smaller figure and the mode row, which needs every pixel it asks
+	   for, drops its last word onto a second line. A floor says the same
+	   thing in a form both engines read. The squeezed table below gives
+	   the column back and clears this with it. */
+	min-width: 3.4rem;
 	text-align: end;
 	font-size: 0.68rem;
 	letter-spacing: 0.1em;
@@ -541,6 +552,8 @@ em {
 
 	.tabella .row > .label {
 		flex: none;
+		/* the column is given back here, and its floor with it */
+		min-width: 0;
 		text-align: center;
 	}
 
