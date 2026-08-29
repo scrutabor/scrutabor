@@ -256,18 +256,14 @@ test.describe('landing @online', () => {
 		expect(landing).toEqual(reader);
 	});
 
-	test('a sourced word note keeps its reference one disclosure away', async ({ page }) => {
+	test('a rejected word-note citation does not survive on the landing specimen', async ({
+		page
+	}) => {
 		await page.goto('/pl');
 		await page.locator('#w020').click();
 		const sources = page.locator('.word-panel-inline details.source-notes');
-		await expect(sources.locator('summary')).toHaveText('źródła');
-		await expect(sources.getByRole('link')).not.toBeVisible();
-		await sources.locator('summary').click();
-		await expect(sources.getByRole('link', { name: 'Allen and Greenough' })).toHaveAttribute(
-			'href',
-			'https://dcc.dickinson.edu/grammar/latin/present-system'
-		);
-		await expect(sources).toContainText('§§ 168 d–e, 187');
+		await expect(sources).toHaveCount(0);
+		await expect(page.locator('.word-panel-inline')).not.toContainText('Allen and Greenough');
 	});
 
 	test('the specimen citation reaches the psalm page', async ({ page }) => {

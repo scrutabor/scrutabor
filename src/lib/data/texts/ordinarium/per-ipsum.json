@@ -8,7 +8,6 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
-  "ac":[282],
   "seg":[
     {"id":"s01","type":"rubric","text":"Discooperit Calicem, genuflectit, accipit Hostiam inter pollicem et indicem manus dexteræ: et tenens sinistra Calicem, cum Hostia signat ter a labio ad labium Calicis, dicens:","an":8},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w001","f":"Per","l":"per","m":3,"h":"w002"},{"i":"w002","f":"ipsum","l":"ipse","p":",","m":36},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"cum","l":"cum","m":0,"h":"w005"},{"i":"w005","f":"ipso","l":"ipse","p":",","m":289},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"in","l":"in","m":0,"h":"w008"},{"i":"w008","f":"ipso","l":"ipse","p":",","m":289}]},

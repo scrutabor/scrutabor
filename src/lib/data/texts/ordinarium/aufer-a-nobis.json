@@ -9,14 +9,14 @@
   "ad":5,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"rubric","text":"Et extendens ac iungens manus, clara voce dicit:","an":8,"nc":[132]},
+    {"id":"s01","type":"rubric","text":"Et extendens ac iungens manus, clara voce dicit:","an":8},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Orémus","l":"oro","p":".","m":89}]},
-    {"id":"s03","type":"rubric","text":"Et ascendens ad Altare, dicit secreto:","an":8,"nc":[137]},
+    {"id":"s03","type":"rubric","text":"Et ascendens ad Altare, dicit secreto:","an":8},
     {"id":"s04","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w002","f":"Aufer","l":"aufero","m":232},{"i":"w003","f":"a","l":"ab","m":0,"h":"w004"},{"i":"w004","f":"nobis","l":"nos","p":",","m":62},{"i":"w005","f":"quǽsumus","l":"quaeso","p":",","m":92,"a":1},{"i":"w006","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w007","f":"iniquitátes","l":"iniquitas","m":16},{"i":"w008","f":"nostras","l":"noster","p":":","m":180,"h":"w007"},{"i":"w009","f":"ut","l":"ut","m":15},{"i":"w010","f":"ad","l":"ad","m":3,"h":"w011"},{"i":"w011","f":"Sancta","l":"sanctus","m":129,"s":true},{"i":"w012","f":"sanctórum","l":"sanctus","m":114,"s":true},{"i":"w013","f":"puris","l":"purus","m":39,"h":"w015"},{"i":"w014","f":"mereámur","l":"mereor","m":254},{"i":"w015","f":"méntibus","l":"mens","m":40},{"i":"w016","f":"introíre","l":"introeo","p":".","m":228}]},
     {"id":"s05","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w017","f":"Per","l":"per","m":3,"h":"w018"},{"i":"w018","f":"Christum","l":"Christus","m":35},{"i":"w019","f":"Dóminum","l":"dominus","m":35},{"i":"w020","f":"nostrum","l":"noster","p":".","m":96,"h":"w019"},{"i":"w021","f":"Amen","l":"amen","p":".","m":46}]},
-    {"id":"s06","type":"rubric","text":"Deinde, manibus iunctis super Altare, inclinatus dicit:","an":8,"nc":[138]},
+    {"id":"s06","type":"rubric","text":"Deinde, manibus iunctis super Altare, inclinatus dicit:","an":8},
     {"id":"s07","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w022","f":"Orámus","l":"oro","m":241},{"i":"w023","f":"te","l":"tu","p":",","m":4},{"i":"w024","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w025","f":"per","l":"per","m":3,"h":"w026"},{"i":"w026","f":"mérita","l":"meritum","m":85},{"i":"w027","f":"Sanctórum","l":"sanctus","m":76,"s":true},{"i":"w028","f":"tuórum","l":"tuus","p":",","m":76,"h":"w027"}]},
-    {"id":"s08","type":"rubric","text":"Osculatur Altare in medio.","an":8,"nc":[139]},
+    {"id":"s08","type":"rubric","text":"Osculatur Altare in medio.","an":8},
     {"id":"s09","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w029","f":"quorum","l":"qui","m":255},{"i":"w030","f":"relíquiæ","l":"reliquiae","m":134},{"i":"w031","f":"hic","l":"hic_adverbium","m":32},{"i":"w032","f":"sunt","l":"sum","m":117},{"i":"w033","f":"et","l":"et","m":15},{"i":"w034","f":"ómnium","l":"omnis","m":76,"h":"w035"},{"i":"w035","f":"Sanctórum","l":"sanctus","p":":","m":76,"s":true},{"i":"w036","f":"ut","l":"ut","m":15},{"i":"w037","f":"indulgére","l":"indulgeo","m":93},{"i":"w038","f":"dignéris","l":"dignor","m":256},{"i":"w039","f":"ómnia","l":"omnis","m":129,"h":"w040"},{"i":"w040","f":"peccáta","l":"peccatum","m":85},{"i":"w041","f":"mea","l":"meus","p":".","m":129,"h":"w040"},{"i":"w042","f":"Amen","l":"amen","p":".","m":46}]}
   ]
 }

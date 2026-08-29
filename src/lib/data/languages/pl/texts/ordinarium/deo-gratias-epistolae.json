@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Odpowiedź po zakończeniu Epistoły.",
   "seg":[
-    {"id":"s01","tr":"Bogu dzięki.","tc":[172],"tb":"exact","g":["Bogu","dzięki"],"ex":{"w002":"Odpowiedź pomija czasownik. Pełny sens brzmi: „składamy dzięki Bogu”."}}
+    {"id":"s01","tr":"Bogu dzięki.","tb":"exact","g":["Bogu","dzięki"],"ex":{"w002":"Odpowiedź pomija czasownik. Pełny sens brzmi: „składamy dzięki Bogu”."}}
   ]
 }

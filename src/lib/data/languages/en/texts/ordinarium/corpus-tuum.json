@@ -4,9 +4,9 @@
   "about":"The second of the two prayers at the ablutions, said while the priest washes his thumbs and forefingers with wine and water over the chalice. It asks that the Body and Blood just received cleave to the one who received them and that no stain of sin remain in him.",
   "seg":[
     {"id":"s01","nr":"The priest continues:"},
-    {"id":"s02","tr":"May Your Body, Lord, which I have received, and the Blood which I have drunk, cling to my inmost being:","tc":[164,165,166],"tb":"revised","g":["Body","Thy","Lord","which","I have received","and","the Blood","which","I have drunk","may cleave","to the inmost parts","my"],"ex":{"w008":"Latin “quem” is masculine because it refers to “Sanguis” (w007). English shows no corresponding gender distinction."}},
-    {"id":"s03","tr":"and grant that no stain of sin may remain in me, nourished as I have been by pure and holy sacraments:","tc":[164,165,166],"tb":"revised","g":["and","grant","that","in","me","not","may remain","of sins","stain","whom","pure","and","holy","have refreshed","sacraments"]},
-    {"id":"s04","tr":"who live and reign for ever and ever. Amen.","tc":[164,165,166],"tb":"revised","g":["Who","livest","and","reignest","unto","ages","of ages","amen"]},
+    {"id":"s02","tr":"May Your Body, Lord, which I have received, and the Blood which I have drunk, cling to my inmost being:","tc":[164,165],"tb":"revised","g":["Body","Thy","Lord","which","I have received","and","the Blood","which","I have drunk","may cleave","to the inmost parts","my"],"ex":{"w008":"Latin “quem” is masculine because it refers to “Sanguis” (w007). English shows no corresponding gender distinction."}},
+    {"id":"s03","tr":"and grant that no stain of sin may remain in me, nourished as I have been by pure and holy sacraments:","tc":[164,165],"tb":"revised","g":["and","grant","that","in","me","not","may remain","of sins","stain","whom","pure","and","holy","have refreshed","sacraments"]},
+    {"id":"s04","tr":"who live and reign for ever and ever. Amen.","tc":[164,165],"tb":"revised","g":["Who","livest","and","reignest","unto","ages","of ages","amen"]},
     {"id":"s05","nr":"The priest washes and dries his fingers, consumes the ablution, wipes his mouth and the chalice, folds the corporal, covers the chalice, replaces it on the altar, and then continues the Mass."}
   ]
 }

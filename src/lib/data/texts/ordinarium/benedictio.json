@@ -8,11 +8,10 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
-  "ac":[144,145,146],
   "seg":[
-    {"id":"s01","type":"rubric","text":"Deinde osculatur Altare: et elevatis oculis, extendens, elevans et iungens manus, caputque Cruci inclínans, dicit:","an":8,"nc":[140]},
+    {"id":"s01","type":"rubric","text":"Deinde osculatur Altare: et elevatis oculis, extendens, elevans et iungens manus, caputque Cruci inclínans, dicit:","an":8},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Benedícat","l":"benedico","m":257},{"i":"w002","f":"vos","l":"vos","m":49},{"i":"w003","f":"omnípotens","l":"omnipotens","m":59,"h":"w004"},{"i":"w004","f":"Deus","l":"deus","p":",","m":60}]},
-    {"id":"s03","type":"rubric","text":"et versus ad populum, semel tantum benedícens, etiam in Missis sollemnibus; In Missa Pontificali ter benedicitur, ut in Pontificali habetur. Deinde prosequitur:","an":8,"nc":[143]},
+    {"id":"s03","type":"rubric","text":"et versus ad populum, semel tantum benedícens, etiam in Missis sollemnibus; In Missa Pontificali ter benedicitur, ut in Pontificali habetur. Deinde prosequitur:","an":8},
     {"id":"s04","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w005","f":"Pater","l":"pater","p":",","m":113},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"Fílius","l":"filius","p":",","m":60},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"Spíritus","l":"spiritus","m":196},{"i":"w010","f":"Sanctus","l":"sanctus","p":".","m":59,"h":"w009"}]},
     {"id":"s06","type":"verse","speaker":"minister","voice":"clara","participation":{"lecta":{"gradus":1,"source":"DMS 31 a"},"cantu":{"gradus":1,"source":"DMS 25 a"}},"w":[{"i":"w011","f":"Amen","l":"amen","p":".","m":46}]},
     {"id":"s05","type":"rubric","text":"In Missis Defunctorum non datur benedíctio, sed dicto Requiéscant in pace, dicit: Pláceat tibi, sancta Trínitas; deinde osculato Altari, legit Evangelium sancti Ioannis.","an":8}

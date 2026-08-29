@@ -8,12 +8,11 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
-  "ac":[130,131],
   "seg":[
     {"id":"s01","type":"rubric","text":"Cooperit Calicem, genuflectit, surgit, et inclinatus Sacramento, iunctis manibus, et ter pectus percutiens, intellegibili voce dicit:","an":8},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"lecta":{"gradus":3,"source":"DMS 31 c"},"cantu":{"gradus":2,"source":"DMS 25 b"}},"w":[{"i":"w001","f":"Agnus","l":"agnus","m":60},{"i":"w002","f":"Dei","l":"deus","p":",","m":54},{"i":"w003","f":"qui","l":"qui","m":18},{"i":"w004","f":"tollis","l":"tollo","m":84},{"i":"w005","f":"peccáta","l":"peccatum","m":85},{"i":"w006","f":"mundi","l":"mundus","p":":","m":54},{"i":"w007","f":"miserére","l":"misereor","m":52},{"i":"w008","f":"nobis","l":"nos","p":".","m":53}]},
     {"id":"s03","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"lecta":{"gradus":3,"source":"DMS 31 c"},"cantu":{"gradus":2,"source":"DMS 25 b"}},"w":[{"i":"w009","f":"Agnus","l":"agnus","m":60},{"i":"w010","f":"Dei","l":"deus","p":",","m":54},{"i":"w011","f":"qui","l":"qui","m":18},{"i":"w012","f":"tollis","l":"tollo","m":84},{"i":"w013","f":"peccáta","l":"peccatum","m":85},{"i":"w014","f":"mundi","l":"mundus","p":":","m":54},{"i":"w015","f":"miserére","l":"misereor","m":52},{"i":"w016","f":"nobis","l":"nos","p":".","m":53}]},
     {"id":"s04","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"lecta":{"gradus":3,"source":"DMS 31 c"},"cantu":{"gradus":2,"source":"DMS 25 b"}},"w":[{"i":"w017","f":"Agnus","l":"agnus","m":60},{"i":"w018","f":"Dei","l":"deus","p":",","m":54},{"i":"w019","f":"qui","l":"qui","m":18},{"i":"w020","f":"tollis","l":"tollo","m":84},{"i":"w021","f":"peccáta","l":"peccatum","m":85},{"i":"w022","f":"mundi","l":"mundus","p":":","m":54},{"i":"w023","f":"dona","l":"dono","m":41},{"i":"w024","f":"nobis","l":"nos","m":53},{"i":"w025","f":"pacem","l":"pax","p":".","m":7}]},
-    {"id":"s05","type":"rubric","text":"In Missis Defunctorum non dicitur miserére nobis, sed eius loco dona eis requiem, et in tertio additur sempitérnam.","an":8,"nc":[129]}
+    {"id":"s05","type":"rubric","text":"In Missis Defunctorum non dicitur miserére nobis, sed eius loco dona eis requiem, et in tertio additur sempitérnam.","an":8}
   ]
 }

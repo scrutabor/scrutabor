@@ -3,10 +3,10 @@
   "language":"pl",
   "about":"Wspomnienie zmarłych w Kanonie. Kapłan modli się za sługi i służebnice Boże, którzy odeszli ze znakiem wiary i spoczywają w pokoju, a potem składa ręce i modli się w milczeniu za tych, których pragnie wspomnieć. Prosi dla nich oraz dla wszystkich spoczywających w Chrystusie o miejsce ochłody, światła i pokoju.",
   "seg":[
-    {"id":"s01","tr":"Pamiętaj także, Panie, o Twoich sługach i służebnicach, którzy ze znakiem wiary odeszli przed nami i śpią snem pokoju.","tc":[240,241],"tb":"revised","g":["pamiętaj","też","Panie","sług","i służebnic","Twoich","którzy","nas","poprzedzili","ze","znakiem","wiary","i","śpią","w","śnie","pokoju"],"ex":{"w011":"KKK 1274 odnosi to wyrażenie do wiary otrzymanej na chrzcie i dochowanej aż do śmierci."}},
+    {"id":"s01","tr":"Pamiętaj także, Panie, o Twoich sługach i służebnicach, którzy ze znakiem wiary odeszli przed nami i śpią snem pokoju.","tc":[240],"tb":"revised","g":["pamiętaj","też","Panie","sług","i służebnic","Twoich","którzy","nas","poprzedzili","ze","znakiem","wiary","i","śpią","w","śnie","pokoju"],"ex":{"w011":"KKK 1274 odnosi to wyrażenie do wiary otrzymanej na chrzcie i dochowanej aż do śmierci."}},
     {"id":"s02","nr":"Kapłan składa ręce i modli się chwilę w milczeniu za tych zmarłych, których chce wspomnieć. Potem rozkłada ręce i mówi dalej."},
-    {"id":"s03","tr":"Błagamy Cię, Panie, abyś im i wszystkim spoczywającym w Chrystusie dał miejsce ochłody, światłości i pokoju.","tc":[240,241],"tb":"revised","g":["im","Panie","i","wszystkim","w","Chrystusie","spoczywającym","miejsce","ochłody","światła","i","pokoju","byś","dał","błagamy"]},
+    {"id":"s03","tr":"Błagamy Cię, Panie, abyś im i wszystkim spoczywającym w Chrystusie dał miejsce ochłody, światłości i pokoju.","tc":[240],"tb":"revised","g":["im","Panie","i","wszystkim","w","Chrystusie","spoczywającym","miejsce","ochłody","światła","i","pokoju","byś","dał","błagamy"]},
     {"id":"s04","nr":"Kapłan składa ręce i pochyla głowę."},
-    {"id":"s05","tr":"Przez tegoż Chrystusa, Pana naszego. Amen.","tc":[240,241],"tb":"revised","g":["przez","tegoż","Chrystusa","Pana","naszego","amen"]}
+    {"id":"s05","tr":"Przez tegoż Chrystusa, Pana naszego. Amen.","tc":[240],"tb":"revised","g":["przez","tegoż","Chrystusa","Pana","naszego","amen"]}
   ]
 }

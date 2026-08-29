@@ -8,7 +8,6 @@
   "st":"working-edition",
   "ad":5,
   "adw":6,
-  "ac":[362],
   "seg":[
     {"id":"s01","type":"rubric","text":"In feriis Adventus, quando per hebdomadam adhibetur Missa de dominica, non dicitur Allelúia, nec versus sequens, sed tantum graduale.","an":11},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46}]},

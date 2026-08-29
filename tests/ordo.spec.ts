@@ -291,6 +291,26 @@ test('an opened aside says it is one, and can be shut again', async ({ page }) =
 	await expect(page.locator('.part.folded')).toHaveCount(before);
 });
 
+test('the Ordo discloses only bibliography evidence accepted for that text', async ({ page }) => {
+	await page.goto('/app/pl/ordo/canon');
+	await setHelp(page, 2);
+	const teIgitur = page.locator('.part', { hasText: 'Te ígitur' });
+	await teIgitur.locator('.unfold').click();
+	await expect(teIgitur.locator('.part-text')).toBeVisible();
+	await expect(teIgitur.locator('.translation-sources')).toHaveCount(0);
+	await expect(teIgitur).not.toContainText('Powściągliwość i Praca');
+
+	await page.goto('/app/pl/ordo/catechumenorum');
+	await setHelp(page, 2);
+	const gloria = page.locator('.part', {
+		has: page.locator('a.part-title[href="/app/pl/ordinarium/gloria"]')
+	});
+	const sources = gloria.locator('.translation-sources details.source-notes');
+	await expect(sources).toHaveCount(1);
+	await sources.locator('summary').click();
+	await expect(sources).toContainText('Pamiątka Missyi dla ludu katolickiego');
+});
+
 test('the reader is told which lines are theirs, and at which Mass', async ({ page }) => {
 	// The Missale gives every response at low Mass to the minister and says
 	// nothing about the people, so the label read ministrant over lines a

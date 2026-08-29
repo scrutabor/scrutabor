@@ -4,16 +4,16 @@
   "about":"Opowiadanie o ustanowieniu i konsekracja chleba. Kapłan bierze Hostię, podnosi oczy ku niebu i wypowiada nad nią słowa konsekracji cicho, wyraźnie i uważnie. Następnie przyklęka, ukazuje konsekrowaną Hostię ludowi i ponownie przyklęka. Od tej chwili nie rozłącza kciuków i palców wskazujących, chyba że dotyka Hostii, aż do obmycia palców.",
   "seg":[
     {"id":"s01","nr":"Kapłan bierze Hostię."},
-    {"id":"s02","tr":"Który w przeddzień swej męki wziął chleb w swe święte i czcigodne ręce,","tc":[302,301],"tb":"revised","g":["Który","dzień wcześniej","niż","cierpiał","wziął","chleb","w","święte","i","czcigodne","ręce","swoje"]},
+    {"id":"s02","tr":"Który w przeddzień swej męki wziął chleb w swe święte i czcigodne ręce,","tc":[302],"tb":"revised","g":["Który","dzień wcześniej","niż","cierpiał","wziął","chleb","w","święte","i","czcigodne","ręce","swoje"]},
     {"id":"s03","nr":"Kapłan wznosi oczy ku niebu."},
-    {"id":"s04","tr":"a wzniósłszy oczy ku niebu, ku Tobie, Bogu, swojemu Ojcu wszechmogącemu,","tc":[302,301],"tb":"revised","g":["i","podniesionymi","oczami","ku","niebu","ku","Tobie","Bogu","Ojcu","swemu","wszechmogącemu"]},
+    {"id":"s04","tr":"a wzniósłszy oczy ku niebu, ku Tobie, Bogu, swojemu Ojcu wszechmogącemu,","tc":[302],"tb":"revised","g":["i","podniesionymi","oczami","ku","niebu","ku","Tobie","Bogu","Ojcu","swemu","wszechmogącemu"]},
     {"id":"s05","nr":"Kapłan pochyla głowę."},
-    {"id":"s06","tr":"składając Ci dzięki,","tc":[302,301],"tb":"revised","g":["Ci","dzięki","składając"]},
+    {"id":"s06","tr":"składając Ci dzięki,","tc":[302],"tb":"revised","g":["Ci","dzięki","składając"]},
     {"id":"s07","nr":"Kapłan czyni znak krzyża nad Hostią."},
-    {"id":"s08","tr":"pobłogosławił, połamał i dał swoim uczniom, mówiąc:","tc":[302,301],"tb":"revised","g":["pobłogosławił","połamał","i dał","uczniom","swoim","mówiąc"]},
-    {"id":"s09","tr":"Bierzcie i jedzcie z tego wszyscy:","tc":[302,301,311],"tb":"revised","g":["bierzcie","i","jedzcie","z","tego","wszyscy"],"ex":{"w035":"Kanon mówi „manducáte” za 1 Kor 11, 24, tam gdzie Mt 26, 26 ma „comédite”."}},
+    {"id":"s08","tr":"pobłogosławił, połamał i dał swoim uczniom, mówiąc:","tc":[302],"tb":"revised","g":["pobłogosławił","połamał","i dał","uczniom","swoim","mówiąc"]},
+    {"id":"s09","tr":"Bierzcie i jedzcie z tego wszyscy:","tc":[302],"tb":"revised","g":["bierzcie","i","jedzcie","z","tego","wszyscy"],"ex":{"w035":"Kanon mówi „manducáte” za 1 Kor 11, 24, tam gdzie Mt 26, 26 ma „comédite”."}},
     {"id":"s10","nr":"Kapłan trzyma Hostię obiema rękami między palcami wskazującymi a kciukami i wymawia słowa konsekracji po cichu, wyraźnie i uważnie nad Hostią, a jeśli Hostii jest więcej — nad wszystkimi razem."},
-    {"id":"s11","tr":"To jest bowiem Ciało moje.","tc":[302,301,311],"tb":"revised","g":["to","jest","bowiem","Ciało","moje"]},
+    {"id":"s11","tr":"To jest bowiem Ciało moje.","tc":[302],"tb":"revised","g":["to","jest","bowiem","Ciało","moje"]},
     {"id":"s12","nr":"Po wymówieniu tych słów kapłan przyklęka i adoruje konsekrowaną Hostię, wstaje, ukazuje ją ludowi — to podniesienie, przy którym usługujący trzykrotnie dzwoni — składa na korporale i znów przyklęka. Odtąd aż do obmycia palców trzyma kciuk i palec wskazujący złączone, rozłączając je tylko do dotknięcia Hostii."}
   ]
 }

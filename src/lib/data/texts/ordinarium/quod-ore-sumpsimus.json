@@ -8,10 +8,9 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
-  "ac":[167],
   "seg":[
     {"id":"s01","type":"rubric","text":"Postea dicit:","an":8},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w001","f":"Quod","l":"qui","m":189},{"i":"w002","f":"ore","l":"os","m":135},{"i":"w003","f":"súmpsimus","l":"sumo","p":",","m":123},{"i":"w004","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w005","f":"pura","l":"purus","m":31,"h":"w006"},{"i":"w006","f":"mente","l":"mens","m":45},{"i":"w007","f":"capiámus","l":"capio","p":":","m":161},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"de","l":"de","m":0,"h":"w010"},{"i":"w010","f":"múnere","l":"munus","m":135},{"i":"w011","f":"temporáli","l":"temporalis","m":149,"h":"w010"},{"i":"w012","f":"fiat","l":"fio","m":198},{"i":"w013","f":"nobis","l":"nos","m":53},{"i":"w014","f":"remédium","l":"remedium","m":104},{"i":"w015","f":"sempitérnum","l":"sempiternus","p":".","m":105,"h":"w014"}]},
-    {"id":"s03","type":"rubric","text":"Interim porrigit Calicem ministro, qui infundit in eo parum vini, quo se purificat.","an":8,"nc":[318]}
+    {"id":"s03","type":"rubric","text":"Interim porrigit Calicem ministro, qui infundit in eo parum vini, quo se purificat.","an":8}
   ]
 }

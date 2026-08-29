@@ -8,7 +8,6 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
-  "ac":[180,181],
   "seg":[
     {"id":"s01","type":"rubric","text":"Et inclinatus prosequitur:","an":8},
     {"id":"s02","type":"verse","voice":"clara","speaker":"sacerdos","w":[{"i":"w001","f":"Deus","l":"deus","p":",","m":5},{"i":"w002","f":"tu","l":"tu","m":143},{"i":"w003","f":"convérsus","l":"converto","m":251,"h":"w002"},{"i":"w004","f":"vivificábis","l":"vivifico","m":284},{"i":"w005","f":"nos","l":"nos","p":".","m":49}]},

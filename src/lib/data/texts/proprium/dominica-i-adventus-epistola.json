@@ -8,7 +8,6 @@
   "st":"working-edition",
   "ad":5,
   "adw":6,
-  "ac":[362],
   "seg":[
     {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Fratres","l":"frater","p":":","m":268},{"i":"w002","f":"Sciéntes","l":"scio","m":355,"s":true},{"i":"w003","f":"quia","l":"quia","m":15},{"i":"w004","f":"hora","l":"hora","m":24},{"i":"w005","f":"est","l":"sum","m":21},{"i":"w006","f":"iam","l":"iam","m":32},{"i":"w007","f":"nos","l":"nos","m":49},{"i":"w008","f":"de","l":"de","m":0,"h":"w009"},{"i":"w009","f":"somno","l":"somnus","m":29},{"i":"w010","f":"súrgere","l":"surgo","p":".","m":185}]},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w011","f":"Nunc","l":"nunc","m":32},{"i":"w012","f":"enim","l":"enim","m":15},{"i":"w013","f":"própior","l":"propinquus","m":356,"h":"w016","a":0},{"i":"w014","f":"est","l":"sum","m":21},{"i":"w015","f":"nostra","l":"noster","m":25,"h":"w016"},{"i":"w016","f":"salus","l":"salus","p":",","m":20},{"i":"w017","f":"quam","l":"quam","m":15},{"i":"w018","f":"cum","l":"cum","m":15},{"i":"w019","f":"credídimus","l":"credo","p":".","m":123}]},

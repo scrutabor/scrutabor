@@ -19,10 +19,16 @@
 	import { proper } from '$lib/proper.svelte';
 	import DayPicker from '$lib/components/DayPicker.svelte';
 	import { dayHref } from '$lib/proper.svelte';
+	import type { TextBibliographyEvidence } from '$lib/bibliography';
 
 	// Only this movement's texts, from the server load — never the corpus.
 	let { data } = $props();
-	const texts = $derived(data.texts as Record<string, { doc: TextDocument; gloss: GlossDocument }>);
+	const texts = $derived(
+		data.texts as Record<
+			string,
+			{ doc: TextDocument; gloss: GlossDocument; bibliography: TextBibliographyEvidence }
+		>
+	);
 
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
@@ -86,7 +92,8 @@
 			key: part.key,
 			slug: part.key.split('/')[1],
 			doc: part.doc as TextDocument,
-			gloss: part.gloss as GlossDocument
+			gloss: part.gloss as GlossDocument,
+			bibliography: part.bibliography
 		}));
 	});
 
@@ -281,6 +288,7 @@
 								selectedId={panel.id}
 								ontap={tapWord}
 								onmark={openLegend}
+								verifiedTranslationCitations={body.bibliography.translation}
 							/>
 						{/each}
 					</div>

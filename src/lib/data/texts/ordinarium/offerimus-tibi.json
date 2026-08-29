@@ -8,7 +8,6 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
-  "ac":[263,264],
   "seg":[
     {"id":"s01","type":"rubric","text":"Postea accipit Calicem, et offert dicens:","an":8},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w001","f":"Offérimus","l":"offero","m":208},{"i":"w002","f":"tibi","l":"tu","p":",","m":139},{"i":"w003","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w004","f":"cálicem","l":"calix","m":162},{"i":"w005","f":"salutáris","l":"salutare","p":",","m":75},{"i":"w006","f":"tuam","l":"tuus","m":8,"h":"w008"},{"i":"w007","f":"deprecántes","l":"deprecor","m":259,"h":"w001"},{"i":"w008","f":"cleméntiam","l":"clementia","p":":","m":141},{"i":"w009","f":"ut","l":"ut","m":15},{"i":"w010","f":"in","l":"in","m":0,"h":"w011"},{"i":"w011","f":"conspéctu","l":"conspectus","m":100},{"i":"w012","f":"divínæ","l":"divinus","m":14,"h":"w013"},{"i":"w013","f":"maiestátis","l":"maiestas","m":13},{"i":"w014","f":"tuæ","l":"tuus","p":",","m":14,"h":"w013"},{"i":"w015","f":"pro","l":"pro","m":0,"h":"w020"},{"i":"w016","f":"nostra","l":"noster","m":31,"h":"w020"},{"i":"w017","f":"et","l":"et","m":15},{"i":"w018","f":"totíus","l":"totus","m":99,"h":"w019"},{"i":"w019","f":"mundi","l":"mundus","m":54},{"i":"w020","f":"salúte","l":"salus","p":",","m":45},{"i":"w021","f":"cum","l":"cum","m":0,"h":"w022"},{"i":"w022","f":"odóre","l":"odor","m":109},{"i":"w023","f":"suavitátis","l":"suavitas","m":13},{"i":"w024","f":"ascéndat","l":"ascendo","p":".","m":257},{"i":"w025","f":"Amen","l":"amen","p":".","m":46}]}

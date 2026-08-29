@@ -8,7 +8,6 @@
   "st":"working-edition",
   "ad":5,
   "adw":6,
-  "ac":[362],
   "seg":[
     {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true},"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Univérsi","l":"universus","p":",","m":87,"s":true},{"i":"w002","f":"qui","l":"qui","m":124},{"i":"w003","f":"te","l":"tu","m":4},{"i":"w004","f":"exspéctant","l":"exspecto","p":",","m":125},{"i":"w005","f":"non","l":"non","m":32},{"i":"w006","f":"confundéntur","l":"confundo","p":",","m":372},{"i":"w007","f":"Dómine","l":"dominus","p":".","m":5}]},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true},"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w008","f":"Vias","l":"via","m":169},{"i":"w009","f":"tuas","l":"tuus","p":",","m":180,"h":"w008"},{"i":"w010","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w011","f":"notas","l":"notus","m":180,"h":"w008"},{"i":"w012","f":"fac","l":"facio","m":86},{"i":"w013","f":"mihi","l":"ego","p":":","m":139},{"i":"w014","f":"et","l":"et","m":15},{"i":"w015","f":"sémitas","l":"semita","m":169},{"i":"w016","f":"tuas","l":"tuus","m":180,"h":"w015"},{"i":"w017","f":"édoce","l":"edoceo","m":190},{"i":"w018","f":"me","l":"ego","p":".","m":4}]}

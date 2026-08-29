@@ -22,6 +22,7 @@ import { localDay } from '$lib/proper-local';
 import { artifactPath, dayById } from '$lib/proprium';
 import { formularyExists } from '$lib/kalendarium';
 import type { Lang } from '$lib/i18n';
+import type { TextBibliographyEvidence } from '$lib/bibliography';
 
 export interface ProperPartPayload {
 	key: string;
@@ -29,6 +30,7 @@ export interface ProperPartPayload {
 	slot: string;
 	doc: unknown;
 	gloss: unknown;
+	bibliography: TextBibliographyEvidence;
 }
 
 export interface ProperPayload {

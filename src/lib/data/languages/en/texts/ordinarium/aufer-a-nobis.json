@@ -4,13 +4,13 @@
   "about":"As he ascends the altar steps, the priest asks God to take away iniquity so that we may enter the “Sancta sanctórum”, the holy of holies. In the second prayer he asks, in his own name, that his sins be forgiven through the merits of the saints whose relics are in this place, and of all the saints, kissing the altar as he names them.",
   "seg":[
     {"id":"s01","nr":"The priest extends and joins his hands, then says one word aloud."},
-    {"id":"s02","tr":"Let us pray.","tc":[134,135,136],"tb":"exact","g":["let us pray"]},
+    {"id":"s02","tr":"Let us pray.","tc":[134,135],"tb":"exact","g":["let us pray"]},
     {"id":"s03","nr":"The priest ascends the steps to the altar and continues silently."},
-    {"id":"s04","tr":"Lord, we ask You to take away our iniquities, so that with pure minds we may be worthy to enter the Holy of Holies.","tc":[134,135,136],"tb":"revised","g":["take away","from","us","we beseech","Lord","iniquities","our","that","into","the holy","of holies","pure","may we be worthy","minds","to enter"]},
-    {"id":"s05","tr":"Through Christ our Lord. Amen.","tc":[134,135,136],"tb":"exact","g":["through","Christ","Lord","our","amen"]},
+    {"id":"s04","tr":"Lord, we ask You to take away our iniquities, so that with pure minds we may be worthy to enter the Holy of Holies.","tc":[134,135],"tb":"revised","g":["take away","from","us","we beseech","Lord","iniquities","our","that","into","the holy","of holies","pure","may we be worthy","minds","to enter"]},
+    {"id":"s05","tr":"Through Christ our Lord. Amen.","tc":[134,135],"tb":"exact","g":["through","Christ","Lord","our","amen"]},
     {"id":"s06","nr":"With joined hands resting on the altar the priest bows over it and begins the second prayer."},
-    {"id":"s07","tr":"We ask You, Lord, by the merits of Your saints,","tc":[134,135,136],"tb":"revised","g":["we beseech","Thee","Lord","by","the merits","of the Saints","Thy"]},
+    {"id":"s07","tr":"We ask You, Lord, by the merits of Your saints,","tc":[134,135],"tb":"revised","g":["we beseech","Thee","Lord","by","the merits","of the Saints","Thy"]},
     {"id":"s08","nr":"The priest kisses the middle of the altar."},
-    {"id":"s09","tr":"whose relics are here, and by the merits of all the saints, that You may be pleased to forgive all my sins. Amen.","tc":[134,135,136],"tb":"revised","g":["whose","relics","here","are","and","of all","the Saints","that","to forgive","Thou wouldst deign","all","sins","my","amen"]}
+    {"id":"s09","tr":"whose relics are here, and by the merits of all the saints, that You may be pleased to forgive all my sins. Amen.","tc":[134,135],"tb":"revised","g":["whose","relics","here","are","and","of all","the Saints","that","to forgive","Thou wouldst deign","all","sins","my","amen"]}
   ]
 }

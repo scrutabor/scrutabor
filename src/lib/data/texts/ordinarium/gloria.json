@@ -8,9 +8,8 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
-  "ac":[205],
   "seg":[
-    {"id":"s01","type":"rubric","text":"Postea in medio Altaris extendens et iungens manus, caputque aliquantulum inclínans, dicit, si dicendum est, Glória in excélsis Deo, et prosequitur iunctis manibus.","an":8,"nc":[199]},
+    {"id":"s01","type":"rubric","text":"Postea in medio Altaris extendens et iungens manus, caputque aliquantulum inclínans, dicit, si dicendum est, Glória in excélsis Deo, et prosequitur iunctis manibus.","an":8},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"lecta":{"gradus":3,"source":"DMS 31 c"},"cantu":{"gradus":2,"source":"DMS 25 b"}},"w":[{"i":"w001","f":"Glória","l":"gloria","m":24},{"i":"w002","f":"in","l":"in","m":0,"h":"w003"},{"i":"w003","f":"excélsis","l":"excelsus","m":126,"s":true},{"i":"w004","f":"Deo","l":"deus","p":".","m":186}]},
     {"id":"s03","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"lecta":{"gradus":3,"source":"DMS 31 c"},"cantu":{"gradus":2,"source":"DMS 25 b"}},"w":[{"i":"w005","f":"Et","l":"et","m":15},{"i":"w006","f":"in","l":"in","m":0,"h":"w007"},{"i":"w007","f":"terra","l":"terra","m":30},{"i":"w008","f":"pax","l":"pax","m":20},{"i":"w009","f":"homínibus","l":"homo","m":235},{"i":"w010","f":"bonæ","l":"bonus","m":14,"h":"w011"},{"i":"w011","f":"voluntátis","l":"voluntas","p":".","m":13}]},
     {"id":"s04","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"lecta":{"gradus":3,"source":"DMS 31 c"},"cantu":{"gradus":2,"source":"DMS 25 b"}},"w":[{"i":"w012","f":"Laudámus","l":"laudo","m":241},{"i":"w013","f":"te","l":"tu","p":".","m":4},{"i":"w014","f":"Benedícimus","l":"benedico","m":92},{"i":"w015","f":"te","l":"tu","p":".","m":4},{"i":"w016","f":"Adorámus","l":"adoro","m":241},{"i":"w017","f":"te","l":"tu","p":".","m":4},{"i":"w018","f":"Glorificámus","l":"glorifico","m":241},{"i":"w019","f":"te","l":"tu","p":".","m":4}]},

@@ -8,7 +8,6 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
-  "ac":[127],
   "seg":[
     {"id":"s01","type":"rubric","text":"Signat se, dicens:","an":8},
     {"id":"s02","type":"verse","voice":"clara","speaker":"sacerdos","w":[{"i":"w001","f":"Adiutórium","l":"adiutorium","m":104},{"i":"w002","f":"nostrum","l":"noster","m":105,"h":"w001"},{"i":"w003","f":"in","l":"in","m":0,"h":"w004"},{"i":"w004","f":"nómine","l":"nomen","m":135},{"i":"w005","f":"Dómini","l":"dominus","p":".","m":54}]},

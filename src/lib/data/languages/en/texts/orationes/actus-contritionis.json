@@ -3,11 +3,11 @@
   "language":"en",
   "about":"The Actus contritionis is an individual penitential prayer. It expresses repentance for and detestation of every sin, acknowledges just punishment, and makes the offense against God, the supreme Good worthy of love above all things, the foremost motive of contrition. It ends with a firm resolve, helped by grace, to sin no more and to avoid near occasions of sin.",
   "seg":[
-    {"id":"s01","tr":"O my God, with all my heart I repent of all my sins","tc":[32,33],"tb":"revised","g":["God","my","with","all","my heart","I repent","me","all","my","sins"]},
-    {"id":"s02","tr":"and I detest them,","tc":[32,33],"tb":"revised","g":["and them","I detest"],"ex":{"w012":"The speaker does not merely repent but rejects and detests the sins."}},
-    {"id":"s03","tr":"because by sinning, I have deserved not only the punishments justly ordained by you,","tc":[32,33],"tb":"revised","g":["because","by sinning","not","only","punishments","by","you","justly","ordained","I have deserved","I am"]},
-    {"id":"s04","tr":"but above all because I have offended you, the supreme Good, worthy to be loved above all things.","tc":[32,33],"tb":"revised","g":["but","above all","because","I have offended","you","supreme","Good","and","worthy","who","above","all things","to be loved"]},
-    {"id":"s05","tr":"Therefore I firmly resolve, with the help of your grace, henceforth to sin no more","tc":[32,33],"tb":"revised","g":["therefore","firmly","I resolve","helping","grace","your","from","now on","me","not","going to sin"],"ex":{"w040":"The phrase “grátia tua adiuvánte” ascribes future fidelity to the help of God's grace.","w044":"The fixed phrase “de cétero” marks a prospective boundary: henceforth, from now on."}},
-    {"id":"s06","tr":"and to avoid the near occasions of sin. Amen.","tc":[32,33],"tb":"revised","g":["and of sinning","occasions","near","going to flee","amen"],"ex":{"w050":"A moral term denoting near occasions, not every remote circumstance in which sin is possible."}}
+    {"id":"s01","tr":"O my God, with all my heart I repent of all my sins","tb":"revised","g":["God","my","with","all","my heart","I repent","me","all","my","sins"]},
+    {"id":"s02","tr":"and I detest them,","tb":"revised","g":["and them","I detest"],"ex":{"w012":"The speaker does not merely repent but rejects and detests the sins."}},
+    {"id":"s03","tr":"because by sinning, I have deserved not only the punishments justly ordained by you,","tb":"revised","g":["because","by sinning","not","only","punishments","by","you","justly","ordained","I have deserved","I am"]},
+    {"id":"s04","tr":"but above all because I have offended you, the supreme Good, worthy to be loved above all things.","tb":"revised","g":["but","above all","because","I have offended","you","supreme","Good","and","worthy","who","above","all things","to be loved"]},
+    {"id":"s05","tr":"Therefore I firmly resolve, with the help of your grace, henceforth to sin no more","tb":"revised","g":["therefore","firmly","I resolve","helping","grace","your","from","now on","me","not","going to sin"],"ex":{"w040":"The phrase “grátia tua adiuvánte” ascribes future fidelity to the help of God's grace.","w044":"The fixed phrase “de cétero” marks a prospective boundary: henceforth, from now on."}},
+    {"id":"s06","tr":"and to avoid the near occasions of sin. Amen.","tb":"revised","g":["and of sinning","occasions","near","going to flee","amen"],"ex":{"w050":"A moral term denoting near occasions, not every remote circumstance in which sin is possible."}}
   ]
 }

@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { buildBibliography, loadBibliographySource } from './bibliography';
+import { buildBibliography, loadBibliographySource, loadTextBibliography } from './bibliography';
 import { loadedTextKeys } from './corpus';
 
 describe('the reader-facing bibliography', () => {
@@ -70,5 +70,15 @@ describe('the reader-facing bibliography', () => {
 				}
 			}
 		}
+	});
+
+	test('gives reading surfaces only the verified evidence for their exact text', async () => {
+		const rejected = await loadTextBibliography('pl', 'ordinarium/te-igitur');
+		expect(rejected.translation).toEqual([]);
+
+		const accepted = await loadTextBibliography('pl', 'ordinarium/gloria');
+		expect(accepted.translation).toContainEqual(
+			expect.objectContaining({ title: 'Pamiątka Missyi dla ludu katolickiego' })
+		);
 	});
 });

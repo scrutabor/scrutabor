@@ -8,7 +8,6 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
-  "ac":[233,234],
   "seg":[
     {"id":"s01","type":"rubric","text":"Sacerdos lavat manus, dicens:","an":8},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w001","f":"Lavábo","l":"lavo","m":313},{"i":"w002","f":"inter","l":"inter","m":3,"h":"w003"},{"i":"w003","f":"innocéntes","l":"innocens","m":91,"s":true},{"i":"w004","f":"manus","l":"manus","m":314},{"i":"w005","f":"meas","l":"meus","p":":","m":180,"h":"w004"},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"circúmdabo","l":"circumdo","m":313},{"i":"w008","f":"altáre","l":"altare","m":136},{"i":"w009","f":"tuum","l":"tuus","p":",","m":137,"h":"w008"},{"i":"w010","f":"Dómine","l":"dominus","p":":","m":5}]},

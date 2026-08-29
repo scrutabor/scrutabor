@@ -3,12 +3,7 @@
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { massForm } from '$lib/mass-form.svelte';
-	import {
-		collectTranslationCitations,
-		collectTranslationRelationships,
-		litanyRows,
-		type LitanyRow
-	} from '$lib/reading-text';
+	import { collectTranslationRelationships, litanyRows, type LitanyRow } from '$lib/reading-text';
 	import {
 		isEveryonesResponse,
 		isYours,
@@ -41,7 +36,7 @@
 		showSpeakerNames = true,
 		hideOpeningRubric = false,
 		showTranslationSources = true,
-		verifiedTranslationCitations
+		verifiedTranslationCitations = []
 	}: {
 		doc: TextDocument;
 		gloss: GlossDocument;
@@ -179,9 +174,7 @@
 	// verse translation where the room allows, stacked where it does not.
 	// The litany keeps its own two-column convention either way.
 	const bilingual = $derived(helpLevel === 2 && !litanyColumns);
-	const translationCitations = $derived(
-		verifiedTranslationCitations ?? collectTranslationCitations(segs, gloss)
-	);
+	const translationCitations = $derived(verifiedTranslationCitations);
 	const translationRelationships = $derived(collectTranslationRelationships(segs, gloss));
 	let expandedSegments = $state<string[]>([]);
 	// A deep link into a fold opens it: the cited verses and the selected

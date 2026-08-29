@@ -10,7 +10,11 @@
 // They are plain functions of their parameters and nothing else. Anything that
 // belongs to a request — a URL, headers, the `error()` helper — stays in the
 // route file, so that what is shared is only the part both editions can run.
-import { buildBibliography, loadTextBibliography } from './bibliography';
+import {
+	buildBibliography,
+	loadTextBibliography,
+	type TextBibliographyEvidence
+} from './bibliography';
 import { neighborsOf } from './catalog';
 import { occurrencesOf } from './concordance';
 import {
@@ -100,12 +104,24 @@ export async function ordoData(lang: Lang, movement: string) {
 		found.entries.flatMap((entry) => (entry.text ? [entry.text] : [])),
 		lang
 	);
-	const texts: Record<string, { doc: unknown; gloss: unknown }> = {};
+	const texts: Record<
+		string,
+		{ doc: unknown; gloss: unknown; bibliography: TextBibliographyEvidence }
+	> = {};
 	const docs: TextDocument[] = [];
+	const bibliography = Object.fromEntries(
+		await Promise.all(
+			Object.keys(loaded).map(async (key) => [key, await loadTextBibliography(lang, key)] as const)
+		)
+	);
 	for (const e of found.entries) {
 		const entry = e.text ? loaded[e.text] : undefined;
 		if (!entry) continue;
-		texts[e.text!] = { doc: entry.text, gloss: entry.gloss };
+		texts[e.text!] = {
+			doc: entry.text,
+			gloss: entry.gloss,
+			bibliography: bibliography[e.text!]
+		};
 		docs.push(entry.text);
 	}
 	return { movement, texts, lex: await narrowLexicon(docs, lang) };
@@ -162,9 +178,12 @@ export async function properData(day: string, lang: Lang) {
 		.sort((a, b) => properRank(a.split('/')[1]) - properRank(b.split('/')[1]));
 	if (!keys.length) return null;
 
-	const loaded = await loadTexts(keys, lang);
+	const [loaded, bibliography] = await Promise.all([
+		loadTexts(keys, lang),
+		Promise.all(keys.map((key) => loadTextBibliography(lang, key)))
+	]);
 	const docs: TextDocument[] = [];
-	const parts = keys.map((key) => {
+	const parts = keys.map((key, index) => {
 		const entry = loaded[key];
 		docs.push(entry.text);
 		const slug = key.split('/')[1];
@@ -178,7 +197,8 @@ export async function properData(day: string, lang: Lang) {
 			// and tract together.
 			slot: SLOT_OF[part],
 			doc: entry.text,
-			gloss: entry.gloss
+			gloss: entry.gloss,
+			bibliography: bibliography[index]
 		};
 	});
 

@@ -4,15 +4,15 @@
   "about":"Bowed low, with his joined hands resting on the altar, the priest asks God that the offering be carried by the hands of His holy Angel to the altar on high before the divine majesty. The prayer does not name the Angel. The clause beginning with “ut” leads to “repleámur”: those who receive the Body and Blood of Christ ask to be filled with every blessing and grace.",
   "seg":[
     {"id":"s01","nr":"The priest bows low and lays his joined hands upon the altar."},
-    {"id":"s02","tr":"We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:","tc":[340,341,342],"tb":"revised","g":["suppliant","Thee","we beseech","almighty","God","bid","these things","be carried","by","the hands","of holy","Angel","Thy","to","on high","altar","Thine","in","the sight","of divine","majesty","Thy"]},
-    {"id":"s04","tr":"so that all of us who","tc":[340,341,342],"tb":"revised","g":["that","as many as"]},
+    {"id":"s02","tr":"We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:","tc":[340,341],"tb":"revised","g":["suppliant","Thee","we beseech","almighty","God","bid","these things","be carried","by","the hands","of holy","Angel","Thy","to","on high","altar","Thine","in","the sight","of divine","majesty","Thy"]},
+    {"id":"s04","tr":"so that all of us who","tc":[340,341],"tb":"revised","g":["that","as many as"]},
     {"id":"s03","nr":"The priest kisses the altar."},
-    {"id":"s11","tr":"through this participation at the altar","tc":[340,341,342],"tb":"revised","g":["from","this","of the altar","partaking","most holy","of the Son","Thy"]},
+    {"id":"s11","tr":"through this participation at the altar","tc":[340,341],"tb":"revised","g":["from","this","of the altar","partaking","most holy","of the Son","Thy"]},
     {"id":"s05","nr":"The priest joins his hands and makes the sign of the cross once over the Host and once over the chalice."},
-    {"id":"s06","tr":"shall receive the most holy Body and Blood of Your Son,","tc":[340,341,342],"tb":"revised","g":["Body","and","Blood","shall receive"],"ex":{"w035":"The same form can mean “shall receive” or “may have received”. The context establishes the future “shall receive”."}},
+    {"id":"s06","tr":"shall receive the most holy Body and Blood of Your Son,","tc":[340,341],"tb":"revised","g":["Body","and","Blood","shall receive"],"ex":{"w035":"The same form can mean “shall receive” or “may have received”. The context establishes the future “shall receive”."}},
     {"id":"s07","nr":"The priest signs himself."},
-    {"id":"s08","tr":"may be filled with every heavenly blessing and grace.","tc":[340,341,342],"tb":"revised","g":["every","blessing","heavenly","and","grace","may be filled"]},
+    {"id":"s08","tr":"may be filled with every heavenly blessing and grace.","tc":[340,341],"tb":"revised","g":["every","blessing","heavenly","and","grace","may be filled"]},
     {"id":"s09","nr":"The priest joins his hands."},
-    {"id":"s10","tr":"Through the same Christ our Lord. Amen.","tc":[340,341,342],"tb":"revised","g":["through","the same","Christ","Lord","our","amen"]}
+    {"id":"s10","tr":"Through the same Christ our Lord. Amen.","tc":[340,341],"tb":"revised","g":["through","the same","Christ","Lord","our","amen"]}
   ]
 }

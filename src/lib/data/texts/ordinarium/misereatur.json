@@ -8,7 +8,6 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
-  "ac":[254],
   "seg":[
     {"id":"s01","type":"rubric","text":"Postea Sacerdos, iunctis manibus, facit absolutionem, dicens:","an":8},
     {"id":"s02","type":"verse","voice":"clara","speaker":"sacerdos","w":[{"i":"w001","f":"Misereátur","l":"misereor","m":328},{"i":"w002","f":"vestri","l":"vos","m":330,"a":3},{"i":"w003","f":"omnípotens","l":"omnipotens","m":59,"h":"w004"},{"i":"w004","f":"Deus","l":"deus","p":",","m":60},{"i":"w005","f":"et","l":"et","p":",","m":15},{"i":"w006","f":"dimíssis","l":"dimitto","m":329,"h":"w007"},{"i":"w007","f":"peccátis","l":"peccatum","m":1},{"i":"w008","f":"vestris","l":"vester","p":",","m":126,"h":"w007"},{"i":"w009","f":"perdúcat","l":"perduco","m":257},{"i":"w010","f":"vos","l":"vos","m":49},{"i":"w011","f":"ad","l":"ad","m":3,"h":"w012"},{"i":"w012","f":"vitam","l":"vita","m":141},{"i":"w013","f":"ætérnam","l":"aeternus","p":".","m":8,"h":"w012"}]},

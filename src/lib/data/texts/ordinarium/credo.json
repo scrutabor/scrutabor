@@ -8,7 +8,6 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
-  "ac":[170,171],
   "seg":[
     {"id":"s01","type":"rubric","text":"Deinde ad medium Altaris extendens, elevans et iungens manus, dicit, si dicendum est, Credo in unum Deum, et prosequitur iunctis manibus.","an":8},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"lecta":{"gradus":3,"source":"DMS 31 c"},"cantu":{"gradus":2,"source":"DMS 25 b"}},"w":[{"i":"w001","f":"Credo","l":"credo","m":176},{"i":"w002","f":"in","l":"in","m":3,"h":"w004"},{"i":"w003","f":"unum","l":"unus","m":96,"h":"w004"},{"i":"w004","f":"Deum","l":"deus","p":",","m":35},{"i":"w005","f":"Patrem","l":"pater","m":162},{"i":"w006","f":"omnipoténtem","l":"omnipotens","p":",","m":96,"h":"w005"},{"i":"w007","f":"factórem","l":"factor","m":162},{"i":"w008","f":"cæli","l":"caelum","m":68},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"terræ","l":"terra","p":",","m":64},{"i":"w011","f":"visibílium","l":"visibilis","m":114,"h":"w012"},{"i":"w012","f":"ómnium","l":"omnis","m":114,"s":true},{"i":"w013","f":"et","l":"et","m":15},{"i":"w014","f":"invisibílium","l":"invisibilis","p":".","m":114,"h":"w012"}]},

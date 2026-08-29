@@ -4,13 +4,13 @@
   "about":"Kościół wspomina błogosławioną mękę, zmartwychwstanie i chwalebne wniebowstąpienie Chrystusa. Z darów otrzymanych od Boga ofiaruje Jego majestatowi Ofiarę czystą, Ofiarę świętą, Ofiarę niepokalaną, święty Chleb życia wiecznego oraz Kielich wiecznego zbawienia.",
   "seg":[
     {"id":"s01","nr":"Kapłan rozłącza ręce."},
-    {"id":"s02","tr":"Przeto i my, Panie, Twoi słudzy, a także Twój lud święty, pomni na błogosławioną mękę tegoż Chrystusa, Twojego Syna, naszego Pana, na Jego zmartwychwstanie spośród umarłych i chwalebne wniebowstąpienie:","tc":[344,358],"tb":"revised","g":["przeto","i","pomni","Panie","my","słudzy","Twoi","a","także","lud","Twój","święty","tegoż","Chrystusa","Syna","Twego","Pana","naszego","tak","błogosławionej","męki","ani","nie","i","spośród","umarłych","zmartwychwstania","a","także","do","niebios","chwalebnego","wniebowstąpienia"]},
-    {"id":"s03","tr":"ofiarujemy Twojemu przesławnemu majestatowi z Twoich darów i udzielonych nam dóbr,","tc":[344,358],"tb":"revised","g":["składamy","przesławnemu","majestatowi","Twemu","z","Twoich","darów","i","danin"]},
+    {"id":"s02","tr":"Przeto i my, Panie, Twoi słudzy, a także Twój lud święty, pomni na błogosławioną mękę tegoż Chrystusa, Twojego Syna, naszego Pana, na Jego zmartwychwstanie spośród umarłych i chwalebne wniebowstąpienie:","tc":[344],"tb":"revised","g":["przeto","i","pomni","Panie","my","słudzy","Twoi","a","także","lud","Twój","święty","tegoż","Chrystusa","Syna","Twego","Pana","naszego","tak","błogosławionej","męki","ani","nie","i","spośród","umarłych","zmartwychwstania","a","także","do","niebios","chwalebnego","wniebowstąpienia"]},
+    {"id":"s03","tr":"ofiarujemy Twojemu przesławnemu majestatowi z Twoich darów i udzielonych nam dóbr,","tc":[344],"tb":"revised","g":["składamy","przesławnemu","majestatowi","Twemu","z","Twoich","darów","i","danin"]},
     {"id":"s04","nr":"Kapłan składa ręce i czyni trzy znaki krzyża nad Hostią i kielichem jednocześnie."},
-    {"id":"s05","tr":"Ofiarę czystą, Ofiarę świętą, Ofiarę niepokalaną,","tc":[344,358],"tb":"revised","g":["ofiarę","czystą","ofiarę","świętą","ofiarę","niepokalaną"]},
+    {"id":"s05","tr":"Ofiarę czystą, Ofiarę świętą, Ofiarę niepokalaną,","tc":[344],"tb":"revised","g":["ofiarę","czystą","ofiarę","świętą","ofiarę","niepokalaną"]},
     {"id":"s06","nr":"Kapłan czyni jeden znak krzyża nad Hostią."},
-    {"id":"s07","tr":"Chleb święty życia wiecznego","tc":[344,358],"tb":"revised","g":["Chleb","święty","życia","wiecznego"]},
+    {"id":"s07","tr":"Chleb święty życia wiecznego","tc":[344],"tb":"revised","g":["Chleb","święty","życia","wiecznego"]},
     {"id":"s08","nr":"Kapłan czyni jeden znak krzyża nad kielichem."},
-    {"id":"s09","tr":"i Kielich wiekuistego zbawienia.","tc":[344,358],"tb":"revised","g":["i","Kielich","zbawienia","wiecznego"]}
+    {"id":"s09","tr":"i Kielich wiekuistego zbawienia.","tc":[344],"tb":"revised","g":["i","Kielich","zbawienia","wiecznego"]}
   ]
 }

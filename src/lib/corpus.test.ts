@@ -174,6 +174,25 @@ describe('vendored corpus snapshot', () => {
 		}
 	});
 
+	it('publishes the audited citation projection without hiding accepted evidence', () => {
+		// Exact removals from the bibliography audit must disappear from every
+		// reader-facing attachment type, not merely from the bibliography page.
+		expect(TEXTS.pl['orationes/ave-maria'].gloss.words.w001.explanation_citations).toBeUndefined();
+		expect(
+			TEXTS.pl['ordinarium/aufer-a-nobis'].gloss.segments.s01.narrative_citations
+		).toBeUndefined();
+		expect(
+			TEXTS.pl['ordinarium/te-igitur'].gloss.segments.s02.translation_citations
+		).toBeUndefined();
+		expect(LEXICON.lemmata.Abel.localization?.note_citations).toBeUndefined();
+		expect(SENSES.pl.Abel.note_citations).toBeUndefined();
+
+		// Filtering is attachment-specific: accepted evidence remains visible.
+		expect(TEXTS.pl['ordinarium/gloria'].gloss.segments.s12.translation_citations).toContainEqual(
+			expect.objectContaining({ title: 'Pamiątka Missyi dla ludu katolickiego (1903)' })
+		);
+	});
+
 	it('resolves every localized cross-reference inside its base text', () => {
 		for (const language of LANGUAGES) {
 			for (const [key, entry] of Object.entries(TEXTS[language])) {
