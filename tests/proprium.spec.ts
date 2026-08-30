@@ -507,6 +507,32 @@ for (const theme of ['light', 'dark'] as const) {
 	}
 }
 
+test('the Windows day list treatment does not restyle unrelated selects', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	await page.goto('/app/pl/ordo');
+	const appearances = await page.evaluate(() => {
+		document.documentElement.dataset.platform = 'windows';
+		const unrelated = document.createElement('select');
+		unrelated.setAttribute('aria-label', 'test control outside the day picker');
+		unrelated.append(new Option('one', 'one'));
+		document.body.append(unrelated);
+
+		return {
+			supported: CSS.supports('appearance', 'base-select'),
+			day: getComputedStyle(document.querySelector('.picker.day select')!).appearance,
+			unrelated: getComputedStyle(unrelated).appearance
+		};
+	});
+	test.skip(!appearances.supported, 'this engine has no appearance: base-select');
+
+	expect(appearances.day, 'the Windows day list uses the customizable native select').toBe(
+		'base-select'
+	);
+	expect(appearances.unrelated, 'a different form control keeps its native rendering').not.toBe(
+		'base-select'
+	);
+});
+
 // A CONTRAST THEME TAKES THE COLOURS AWAY, and the page's own list has to
 // survive that. Where the page draws the list it marks the chosen day in
 // the rubric on the wash and hides the platform's checkmark, because the

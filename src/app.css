@@ -146,18 +146,18 @@ html {
    replaces the platform's blue here, and only here, because a menu can
    no longer be both. */
 @supports (appearance: base-select) {
-	html[data-platform='windows'] select,
-	html[data-platform='windows'] select::picker(select) {
+	html[data-platform='windows'] .picker.day select,
+	html[data-platform='windows'] .picker.day select::picker(select) {
 		appearance: base-select;
 	}
 
 	/* The caret is already drawn by .field::after, and one control does
 	   not get two of them. */
-	html[data-platform='windows'] select::picker-icon {
+	html[data-platform='windows'] .picker.day select::picker-icon {
 		display: none;
 	}
 
-	html[data-platform='windows'] select::picker(select) {
+	html[data-platform='windows'] .picker.day select::picker(select) {
 		background: var(--surface);
 		border: 1px solid var(--border);
 		/* the tabella's own corner, so the list belongs to the table it
@@ -171,7 +171,7 @@ html {
 		min-width: max-content;
 	}
 
-	html[data-platform='windows'] option {
+	html[data-platform='windows'] .picker.day option {
 		padding: 0.34rem 0.8rem;
 		border-radius: 0.35rem;
 		/* A day is a NAME, not a label. The season heading below is set
@@ -184,24 +184,24 @@ html {
 		text-transform: none;
 	}
 
-	html[data-platform='windows'] option::checkmark {
+	html[data-platform='windows'] .picker.day option::checkmark {
 		display: none;
 	}
 
-	html[data-platform='windows'] option:hover,
-	html[data-platform='windows'] option:focus {
+	html[data-platform='windows'] .picker.day option:hover,
+	html[data-platform='windows'] .picker.day option:focus {
 		background-color: var(--wash);
 		outline: none;
 	}
 
-	html[data-platform='windows'] option:checked {
+	html[data-platform='windows'] .picker.day option:checked {
 		color: var(--rubric);
 		font-weight: 600;
 	}
 
 	/* A season gathers its days the way the tabella's labels gather a
 	   row: quieter than what it names, and set apart by air. */
-	html[data-platform='windows'] optgroup {
+	html[data-platform='windows'] .picker.day optgroup {
 		padding: 0.45rem 0.8rem 0.15rem;
 		font-size: 0.72rem;
 		font-weight: 600;
@@ -210,7 +210,7 @@ html {
 		color: var(--ink-soft);
 	}
 
-	html[data-platform='windows'] optgroup:not(:first-child) {
+	html[data-platform='windows'] .picker.day optgroup:not(:first-child) {
 		border-top: 1px solid var(--border);
 		margin-block-start: 0.3rem;
 	}
@@ -226,12 +226,12 @@ html {
 	   ours — an author background here would be forced to the plain ground
 	   and would erase the highlight the engine wanted to paint. */
 	@media (forced-colors: active) {
-		html[data-platform='windows'] option::checkmark {
+		html[data-platform='windows'] .picker.day option::checkmark {
 			display: revert;
 		}
 
-		html[data-platform='windows'] option:hover,
-		html[data-platform='windows'] option:focus {
+		html[data-platform='windows'] .picker.day option:hover,
+		html[data-platform='windows'] .picker.day option:focus {
 			background-color: Highlight;
 			color: HighlightText;
 		}
@@ -440,6 +440,7 @@ em {
 
 .tabella > .row:only-child > .label {
 	flex: none;
+	min-width: 0;
 	text-align: start;
 }
 
