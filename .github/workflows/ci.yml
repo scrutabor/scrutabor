@@ -54,7 +54,10 @@ jobs:
       # A tarball avoids making the artifact service enumerate thousands of
       # prerendered pages and compresses their repeated markup efficiently.
       - run: npm run build:offline
-      - run: tar -czf e2e-build.tgz build build-offline
+      # SvelteKit's preview server reads its generated server manifest even
+      # for an adapter-static build; carry that small control plane beside
+      # the two public artifacts so a clean shard can serve `build/`.
+      - run: tar -czf e2e-build.tgz .svelte-kit/output build build-offline
       - uses: actions/upload-artifact@v7
         with:
           name: e2e-build
