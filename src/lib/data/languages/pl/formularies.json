@@ -1,0 +1,246 @@
+{
+ "schema_version": "1.0.0",
+ "language": "pl",
+ "titles": [
+  {
+   "id": "assumptio-beatae-mariae-virginis",
+   "title": "Wniebowzięcie Najświętszej Maryi Panny"
+  },
+  {
+   "id": "beata-maria-virgo-regina",
+   "title": "Najświętszej Maryi Panny Królowej"
+  },
+  {
+   "id": "beatae-mariae-virginis-a-rosario",
+   "title": "Najświętszej Maryi Panny Różańcowej"
+  },
+  {
+   "id": "commemoratio-omnium-fidelium-defunctorum-missa-ii",
+   "title": "Wspomnienie Wszystkich Wiernych Zmarłych — Msza II"
+  },
+  {
+   "id": "commemoratio-omnium-fidelium-defunctorum-missa-iii",
+   "title": "Wspomnienie Wszystkich Wiernych Zmarłych — Msza III"
+  },
+  {
+   "id": "commemoratio-omnium-fidelium-defunctorum",
+   "title": "Wspomnienie Wszystkich Wiernych Zmarłych — Msza I"
+  },
+  {
+   "id": "dedicatio-archibasilicae-sanctissimi-salvatoris",
+   "title": "Rocznica Poświęcenia Arcybazyliki Najświętszego Zbawiciela"
+  },
+  {
+   "id": "dedicatio-sancti-michaelis-archangeli",
+   "title": "Poświęcenie Bazyliki św. Michała Archanioła"
+  },
+  {
+   "id": "exaltatio-sanctae-crucis",
+   "title": "Podwyższenie Krzyża Świętego"
+  },
+  {
+   "id": "immaculatum-cor-beatae-mariae-virginis",
+   "title": "Niepokalanego Serca Najświętszej Maryi Panny"
+  },
+  {
+   "id": "maternitas-beatae-mariae-virginis",
+   "title": "Macierzyństwo Najświętszej Maryi Panny"
+  },
+  {
+   "id": "nativitas-beatae-mariae-virginis",
+   "title": "Narodzenie Najświętszej Maryi Panny"
+  },
+  {
+   "id": "nativitas-sancti-ioannis-baptistae",
+   "title": "Narodzenie św. Jana Chrzciciela"
+  },
+  {
+   "id": "omnium-sanctorum",
+   "title": "Wszystkich Świętych"
+  },
+  {
+   "id": "pretiosissimi-sanguinis-domini-nostri-iesu-christi",
+   "title": "Najdroższej Krwi Pana naszego Jezusa Chrystusa"
+  },
+  {
+   "id": "sanctae-annae-matris-beatae-mariae-virginis",
+   "title": "Świętej Anny, Matki Najświętszej Maryi Panny"
+  },
+  {
+   "id": "sancti-bartholomaei-apostoli",
+   "title": "Świętego Bartłomieja Apostoła"
+  },
+  {
+   "id": "sancti-iacobi-apostoli",
+   "title": "Świętego Jakuba Apostoła"
+  },
+  {
+   "id": "sancti-ioachim-confessoris",
+   "title": "Świętego Joachima Wyznawcy"
+  },
+  {
+   "id": "sancti-laurentii-martyris",
+   "title": "Świętego Wawrzyńca Męczennika"
+  },
+  {
+   "id": "sancti-lucae-evangelistae",
+   "title": "Świętego Łukasza Ewangelisty"
+  },
+  {
+   "id": "sancti-matthaei-apostoli-et-evangelistae",
+   "title": "Świętego Mateusza Apostoła i Ewangelisty"
+  },
+  {
+   "id": "sancti-petri-et-pauli-apostolorum",
+   "title": "Świętych Apostołów Piotra i Pawła"
+  },
+  {
+   "id": "sanctorum-simonis-et-iudae-apostolorum",
+   "title": "Świętych Apostołów Szymona i Judy"
+  },
+  {
+   "id": "septem-dolorum-beatae-mariae-virginis",
+   "title": "Siedmiu Boleści Najświętszej Maryi Panny"
+  },
+  {
+   "id": "transfiguratio-domini",
+   "title": "Przemienienie Pańskie"
+  },
+  {
+   "id": "visitatio-beatae-mariae-virginis",
+   "title": "Nawiedzenie Najświętszej Maryi Panny"
+  },
+  {
+   "id": "corporis-christi",
+   "title": "Uroczystość Najświętszego Ciała Chrystusa"
+  },
+  {
+   "id": "d-n-iesu-christi-regis",
+   "title": "Chrystusa Króla"
+  },
+  {
+   "id": "dominica-i-adventus",
+   "title": "I Niedziela Adwentu"
+  },
+  {
+   "id": "dominica-ii-adventus",
+   "title": "II Niedziela Adwentu"
+  },
+  {
+   "id": "dominica-ii-post-pentecosten",
+   "title": "2. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-iii-adventus",
+   "title": "III Niedziela Adwentu"
+  },
+  {
+   "id": "dominica-iii-post-pentecosten",
+   "title": "3. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-iv-adventus",
+   "title": "IV Niedziela Adwentu"
+  },
+  {
+   "id": "dominica-iv-post-pentecosten",
+   "title": "4. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-ix-post-pentecosten",
+   "title": "9. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-v-post-epiphaniam",
+   "title": "Przeniesiona 5. Niedziela po Objawieniu Pańskim"
+  },
+  {
+   "id": "dominica-v-post-pentecosten",
+   "title": "5. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-vi-post-epiphaniam",
+   "title": "Przeniesiona 6. Niedziela po Objawieniu Pańskim"
+  },
+  {
+   "id": "dominica-vi-post-pentecosten",
+   "title": "6. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-vii-post-pentecosten",
+   "title": "7. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-viii-post-pentecosten",
+   "title": "8. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-x-post-pentecosten",
+   "title": "10. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xi-post-pentecosten",
+   "title": "11. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xii-post-pentecosten",
+   "title": "12. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xiii-post-pentecosten",
+   "title": "13. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xiv-post-pentecosten",
+   "title": "14. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xix-post-pentecosten",
+   "title": "19. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xv-post-pentecosten",
+   "title": "15. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xvi-post-pentecosten",
+   "title": "16. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xvii-post-pentecosten",
+   "title": "17. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xviii-post-pentecosten",
+   "title": "18. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xx-post-pentecosten",
+   "title": "20. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xxi-post-pentecosten",
+   "title": "21. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xxii-post-pentecosten",
+   "title": "22. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xxiii-post-pentecosten",
+   "title": "23. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-xxiv-post-pentecosten",
+   "title": "24. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "sacratissimi-cordis-iesu",
+   "title": "Uroczystość Najświętszego Serca Jezusowego"
+  },
+  {
+   "id": "sanctissimae-trinitatis",
+   "title": "Uroczystość Trójcy Przenajświętszej"
+  }
+ ]
+}

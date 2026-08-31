@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { CATALOG } from './catalog';
-import { TEXT_KEYS, hasText } from './corpus';
+import { CORPUS_METRICS, TEXT_KEYS, hasText } from './corpus';
 import { ORDO } from './ordo';
 import { PROPER_DAYS } from './proprium';
 
@@ -24,7 +24,7 @@ describe('every vendored text is reachable, and every named text exists', () => 
 		...ORDO.flatMap((m) => m.entries)
 			.map((e) => e.text)
 			.filter((k): k is string => Boolean(k)),
-		...PROPER_DAYS.flatMap((day) => Object.values(day.parts ?? {}))
+		...PROPER_DAYS.flatMap((day) => day.components.map((component) => component.text))
 	]);
 
 	// Reached by lemma pages and direct links instead of by a shelf.
@@ -55,5 +55,15 @@ describe('every vendored text is reachable, and every named text exists', () => 
 		for (const key of [...shelved, ...inOrdo]) {
 			expect(hasText(key), `${key} is named but not vendored`).toBe(true);
 		}
+	});
+});
+
+describe('the reader metrics are the common denominator', () => {
+	it('counts the exact text and formulary catalogues consumed by the app', () => {
+		expect(CORPUS_METRICS.texts.total).toBe(TEXT_KEYS.length);
+		expect(CORPUS_METRICS.texts.proprium).toBe(
+			TEXT_KEYS.filter((key) => key.startsWith('proprium/')).length
+		);
+		expect(CORPUS_METRICS.formularies.total).toBe(PROPER_DAYS.length);
 	});
 });

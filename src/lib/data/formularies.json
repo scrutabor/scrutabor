@@ -1,0 +1,4875 @@
+{
+ "schema_version": "1.0.0",
+ "formularies": [
+  {
+   "id": "dominica-i-adventus",
+   "order": 0,
+   "collection": "temporale",
+   "season": "adventus",
+   "observance": "dominica-i-adventus",
+   "calendar": {
+    "key": "dominica-i-adventus",
+    "default": true
+   },
+   "title": "Dominica I Adventus",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-i-adventus-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-i-adventus-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-i-adventus-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-i-adventus-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-i-adventus-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-i-adventus-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-i-adventus-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-i-adventus-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-i-adventus-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-i-adventus-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-ii-adventus",
+   "order": 1,
+   "collection": "temporale",
+   "season": "adventus",
+   "observance": "dominica-ii-adventus",
+   "calendar": {
+    "key": "dominica-ii-adventus",
+    "default": true
+   },
+   "title": "Dominica II Adventus",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-ii-adventus-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-ii-adventus-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-ii-adventus-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-ii-adventus-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-ii-adventus-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-ii-adventus-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-ii-adventus-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-ii-adventus-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-ii-adventus-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-ii-adventus-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-iii-adventus",
+   "order": 2,
+   "collection": "temporale",
+   "season": "adventus",
+   "observance": "dominica-iii-adventus",
+   "calendar": {
+    "key": "dominica-iii-adventus",
+    "default": true
+   },
+   "title": "Dominica III Adventus",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-iii-adventus-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-iii-adventus-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-iii-adventus-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-iii-adventus-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-iii-adventus-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-iii-adventus-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-iii-adventus-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-iii-adventus-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-iii-adventus-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-iii-adventus-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-iv-adventus",
+   "order": 3,
+   "collection": "temporale",
+   "season": "adventus",
+   "observance": "dominica-iv-adventus",
+   "calendar": {
+    "key": "dominica-iv-adventus",
+    "default": true
+   },
+   "title": "Dominica IV Adventus",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-iv-adventus-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-iv-adventus-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-iv-adventus-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-iv-adventus-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-iv-adventus-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-iv-adventus-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-iv-adventus-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-iv-adventus-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-iv-adventus-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-iv-adventus-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "sanctissimae-trinitatis",
+   "order": 4,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "sanctissimae-trinitatis",
+   "calendar": {
+    "key": "sanctissimae-trinitatis",
+    "default": true
+   },
+   "title": "In festo Sanctissimæ Trinitatis",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/sanctissimae-trinitatis-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/sanctissimae-trinitatis-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/sanctissimae-trinitatis-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/sanctissimae-trinitatis-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/sanctissimae-trinitatis-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/sanctissimae-trinitatis-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/sanctissimae-trinitatis-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/sanctissimae-trinitatis-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/sanctissimae-trinitatis-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/sanctissimae-trinitatis-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "corporis-christi",
+   "order": 5,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "corporis-christi",
+   "calendar": {
+    "key": "corpus-christi",
+    "default": true
+   },
+   "title": "In festo Sanctissimi Corporis Christi",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/corporis-christi-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/corporis-christi-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/corporis-christi-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/corporis-christi-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/corporis-christi-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "sequentia",
+     "role": "sequentia",
+     "text": "proprium/corporis-christi-sequentia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/corporis-christi-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/corporis-christi-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/corporis-christi-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/corporis-christi-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/corporis-christi-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "sacratissimi-cordis-iesu",
+   "order": 6,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "sacratissimi-cordis-iesu",
+   "calendar": {
+    "key": "sacratissimi-cordis-iesu",
+    "default": true
+   },
+   "title": "In festo Sacratissimi Cordis Iesu",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/sacratissimi-cordis-iesu-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/sacratissimi-cordis-iesu-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/sacratissimi-cordis-iesu-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/sacratissimi-cordis-iesu-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/sacratissimi-cordis-iesu-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/sacratissimi-cordis-iesu-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/sacratissimi-cordis-iesu-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/sacratissimi-cordis-iesu-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sacratissimi-cordis-iesu",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/sacratissimi-cordis-iesu-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/sacratissimi-cordis-iesu-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-ii-post-pentecosten",
+   "order": 7,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-ii-post-pentecosten",
+   "calendar": {
+    "key": "dominica-ii-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica II post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-ii-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-ii-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-ii-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-ii-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-ii-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-ii-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-ii-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-ii-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-ii-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-ii-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-iii-post-pentecosten",
+   "order": 8,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-iii-post-pentecosten",
+   "calendar": {
+    "key": "dominica-iii-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica III post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-iii-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-iii-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-iii-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-iii-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-iii-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-iii-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-iii-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-iii-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-iii-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-iii-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-iv-post-pentecosten",
+   "order": 9,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-iv-post-pentecosten",
+   "calendar": {
+    "key": "dominica-iv-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica IV post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-iv-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-iv-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-iv-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-iv-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-iv-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-iv-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-iv-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-iv-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-iv-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-iv-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-v-post-pentecosten",
+   "order": 10,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-v-post-pentecosten",
+   "calendar": {
+    "key": "dominica-v-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica V post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-v-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-v-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-v-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-v-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-v-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-v-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-v-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-v-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-v-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-v-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-vi-post-pentecosten",
+   "order": 11,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-vi-post-pentecosten",
+   "calendar": {
+    "key": "dominica-vi-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica VI post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-vi-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-vi-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-vi-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-vi-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-vi-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-vi-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-vi-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-vi-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-vi-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-vi-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-vii-post-pentecosten",
+   "order": 12,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-vii-post-pentecosten",
+   "calendar": {
+    "key": "dominica-vii-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica VII post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-vii-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-vii-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-vii-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-vii-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-vii-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-vii-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-vii-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-vii-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-vii-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-vii-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-viii-post-pentecosten",
+   "order": 13,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-viii-post-pentecosten",
+   "calendar": {
+    "key": "dominica-viii-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica VIII post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-viii-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-viii-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-viii-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-viii-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-viii-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-viii-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-viii-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-viii-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-viii-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-viii-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-ix-post-pentecosten",
+   "order": 14,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-ix-post-pentecosten",
+   "calendar": {
+    "key": "dominica-ix-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica IX post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-ix-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-ix-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-ix-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-ix-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-ix-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-ix-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-ix-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-ix-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-ix-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-ix-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-x-post-pentecosten",
+   "order": 15,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-x-post-pentecosten",
+   "calendar": {
+    "key": "dominica-x-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica X post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-x-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-x-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-x-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-x-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-x-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-x-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-i-adventus-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-x-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-x-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-x-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xi-post-pentecosten",
+   "order": 16,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xi-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xi-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XI post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xi-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xi-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xi-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xi-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xi-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xi-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xi-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xi-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xi-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xi-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xii-post-pentecosten",
+   "order": 17,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xii-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xii-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XII post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xii-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xii-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xii-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xii-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xii-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xii-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xii-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xii-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xii-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xii-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xiii-post-pentecosten",
+   "order": 18,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xiii-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xiii-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XIII post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xiii-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xiii-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xiii-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xiii-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xiii-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xiii-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xiii-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xiii-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xiii-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xiii-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xiv-post-pentecosten",
+   "order": 19,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xiv-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xiv-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XIV post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xiv-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xiv-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xiv-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xiv-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xiv-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xiv-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xiv-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xiv-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xiv-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xiv-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xv-post-pentecosten",
+   "order": 20,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xv-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xv-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XV post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xv-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xv-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xv-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xv-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xv-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xv-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xv-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xv-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xv-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xv-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xvi-post-pentecosten",
+   "order": 21,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xvi-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xvi-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XVI post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xvi-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xvi-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xvi-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xvi-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xvi-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xvi-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xvi-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xvi-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xvi-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xvi-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xvii-post-pentecosten",
+   "order": 22,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xvii-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xvii-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XVII post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xvii-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xvii-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xvii-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xvii-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xvii-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xvii-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xvii-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xvii-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xvii-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xvii-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xviii-post-pentecosten",
+   "order": 23,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xviii-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xviii-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XVIII post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xviii-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xviii-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xviii-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xviii-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xviii-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xviii-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xviii-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xviii-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xviii-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xviii-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xix-post-pentecosten",
+   "order": 24,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xix-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xix-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XIX post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xix-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xix-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xix-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xix-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xix-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xix-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xix-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xix-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xix-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xix-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xx-post-pentecosten",
+   "order": 25,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xx-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xx-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XX post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xx-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xx-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xx-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xx-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xx-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xx-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xx-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xx-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xx-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xx-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xxi-post-pentecosten",
+   "order": 26,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xxi-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xxi-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XXI post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xxi-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xxi-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xxi-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xxi-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xxi-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xxi-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xxi-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xxi-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xxi-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xxi-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xxii-post-pentecosten",
+   "order": 27,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xxii-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xxii-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XXII post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xxii-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xxii-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xxii-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xxii-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xxii-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xxii-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xxii-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xxii-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xxii-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xxii-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xxiii-post-pentecosten",
+   "order": 28,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xxiii-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xxiii-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XXIII post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xxiii-post-pentecosten-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xxiii-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xxiii-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xxiii-post-pentecosten-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xxiii-post-pentecosten-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xxiii-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xxiii-post-pentecosten-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xxiii-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xxiii-post-pentecosten-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xxiii-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-xxiv-post-pentecosten",
+   "order": 29,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-xxiv-post-pentecosten",
+   "calendar": {
+    "key": "dominica-xxiv-post-pentecosten",
+    "default": true
+   },
+   "title": "Dominica XXIV post Pentecosten",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xxiii-post-pentecosten-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-xxiv-post-pentecosten-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-xxiv-post-pentecosten-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xxiii-post-pentecosten-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xxiii-post-pentecosten-alleluia",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-xxiv-post-pentecosten-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xxiii-post-pentecosten-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-xxiv-post-pentecosten-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xxiii-post-pentecosten-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-xxiv-post-pentecosten-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-v-post-epiphaniam",
+   "order": 30,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-v-post-epiphaniam",
+   "calendar": {
+    "key": "dominica-v-post-epiphaniam",
+    "default": true
+   },
+   "title": "Dominica V quæ superfuit post Epiphaniam",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xxiii-post-pentecosten-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-v-post-epiphaniam-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-v-post-epiphaniam-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xxiii-post-pentecosten-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xxiii-post-pentecosten-alleluia",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-v-post-epiphaniam-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xxiii-post-pentecosten-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-v-post-epiphaniam-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xxiii-post-pentecosten-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-v-post-epiphaniam-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-vi-post-epiphaniam",
+   "order": 31,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-vi-post-epiphaniam",
+   "calendar": {
+    "key": "dominica-vi-post-epiphaniam",
+    "default": true
+   },
+   "title": "Dominica VI quæ superfuit post Epiphaniam",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xxiii-post-pentecosten-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-vi-post-epiphaniam-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-vi-post-epiphaniam-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xxiii-post-pentecosten-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xxiii-post-pentecosten-alleluia",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-vi-post-epiphaniam-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xxiii-post-pentecosten-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-vi-post-epiphaniam-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xxiii-post-pentecosten-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-vi-post-epiphaniam-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "d-n-iesu-christi-regis",
+   "order": 32,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "d-n-iesu-christi-regis",
+   "calendar": {
+    "key": "d-n-iesu-christi-regis",
+    "default": true
+   },
+   "title": "Domini nostri Iesu Christi Regis",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/d-n-iesu-christi-regis-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/d-n-iesu-christi-regis-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/d-n-iesu-christi-regis-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/d-n-iesu-christi-regis-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/d-n-iesu-christi-regis-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/d-n-iesu-christi-regis-tractus",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/d-n-iesu-christi-regis-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/d-n-iesu-christi-regis-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/d-n-iesu-christi-regis-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-d-n-iesu-christi-regis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/d-n-iesu-christi-regis-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/d-n-iesu-christi-regis-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "beata-maria-virgo-regina",
+   "order": 33,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "beata-maria-virgo-regina",
+   "calendar": {
+    "key": "beata-maria-virgo-regina",
+    "default": true
+   },
+   "title": "Beatæ Mariæ Virginis Reginæ",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/beata-maria-virgo-regina-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/beata-maria-virgo-regina-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/beata-maria-virgo-regina-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/beata-maria-virgo-regina-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/beata-maria-virgo-regina-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/beata-maria-virgo-regina-tractus",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/beata-maria-virgo-regina-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/beata-maria-virgo-regina-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/beata-maria-virgo-regina-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-beatae-mariae-virginis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/beata-maria-virgo-regina-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/beata-maria-virgo-regina-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "nativitas-sancti-ioannis-baptistae",
+   "order": 34,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "nativitas-sancti-ioannis-baptistae",
+   "calendar": {
+    "key": "nativitas-sancti-ioannis-baptistae",
+    "default": true
+   },
+   "title": "In Nativitate Sancti Ioannis Baptistæ",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/nativitas-sancti-ioannis-baptistae-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/nativitas-sancti-ioannis-baptistae-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/nativitas-sancti-ioannis-baptistae-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/nativitas-sancti-ioannis-baptistae-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/nativitas-sancti-ioannis-baptistae-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/nativitas-sancti-ioannis-baptistae-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/nativitas-sancti-ioannis-baptistae-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/nativitas-sancti-ioannis-baptistae-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-communis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/nativitas-sancti-ioannis-baptistae-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/nativitas-sancti-ioannis-baptistae-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "sancti-petri-et-pauli-apostolorum",
+   "order": 35,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "sancti-petri-et-pauli-apostolorum",
+   "calendar": {
+    "key": "sancti-petri-et-pauli-apostolorum",
+    "default": true
+   },
+   "title": "Sanctorum Petri et Pauli Apostolorum",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/sancti-petri-et-pauli-apostolorum-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/sancti-petri-et-pauli-apostolorum-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/sancti-petri-et-pauli-apostolorum-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/sancti-petri-et-pauli-apostolorum-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/sancti-petri-et-pauli-apostolorum-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/sancti-petri-et-pauli-apostolorum-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/sancti-petri-et-pauli-apostolorum-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/sancti-petri-et-pauli-apostolorum-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-apostolorum",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/sancti-petri-et-pauli-apostolorum-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/sancti-petri-et-pauli-apostolorum-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "pretiosissimi-sanguinis-domini-nostri-iesu-christi",
+   "order": 36,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "pretiosissimi-sanguinis-domini-nostri-iesu-christi",
+   "calendar": {
+    "key": "pretiosissimi-sanguinis-domini-nostri-iesu-christi",
+    "default": true
+   },
+   "title": "Pretiosissimi Sanguinis Domini nostri Iesu Christi",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-tractus",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctae-crucis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "visitatio-beatae-mariae-virginis",
+   "order": 37,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "visitatio-beatae-mariae-virginis",
+   "calendar": {
+    "key": "visitatio-beatae-mariae-virginis",
+    "default": true
+   },
+   "title": "In Visitatione Beatæ Mariæ Virginis",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/visitatio-beatae-mariae-virginis-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/visitatio-beatae-mariae-virginis-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/visitatio-beatae-mariae-virginis-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/visitatio-beatae-mariae-virginis-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/visitatio-beatae-mariae-virginis-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/visitatio-beatae-mariae-virginis-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/visitatio-beatae-mariae-virginis-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/visitatio-beatae-mariae-virginis-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-beatae-mariae-virginis-in-visitatione",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/visitatio-beatae-mariae-virginis-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/visitatio-beatae-mariae-virginis-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "sancti-iacobi-apostoli",
+   "order": 38,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "sancti-iacobi-apostoli",
+   "calendar": {
+    "key": "sancti-iacobi-apostoli",
+    "default": true
+   },
+   "title": "Sancti Iacobi Apostoli",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/sancti-iacobi-apostoli-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/sancti-iacobi-apostoli-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/sancti-iacobi-apostoli-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/sancti-petri-et-pauli-apostolorum-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/sancti-iacobi-apostoli-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/sancti-iacobi-apostoli-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/sancti-iacobi-apostoli-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/sancti-iacobi-apostoli-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-apostolorum",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/sancti-iacobi-apostoli-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/sancti-iacobi-apostoli-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "sanctae-annae-matris-beatae-mariae-virginis",
+   "order": 39,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "sanctae-annae-matris-beatae-mariae-virginis",
+   "calendar": {
+    "key": "sanctae-annae-matris-beatae-mariae-virginis",
+    "default": true
+   },
+   "title": "Sanctæ Annæ Matris Beatæ Mariæ Virginis",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-tractus",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-communis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "transfiguratio-domini",
+   "order": 40,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "transfiguratio-domini",
+   "calendar": {
+    "key": "transfiguratio-domini",
+    "default": true
+   },
+   "title": "In Transfiguratione Domini nostri Iesu Christi",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/transfiguratio-domini-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/transfiguratio-domini-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/transfiguratio-domini-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/transfiguratio-domini-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/transfiguratio-domini-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/transfiguratio-domini-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/transfiguratio-domini-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/transfiguratio-domini-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-communis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/transfiguratio-domini-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/transfiguratio-domini-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "sancti-laurentii-martyris",
+   "order": 41,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "sancti-laurentii-martyris",
+   "calendar": {
+    "key": "sancti-laurentii-martyris",
+    "default": true
+   },
+   "title": "Sancti Laurentii Martyris",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/sancti-laurentii-martyris-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/sancti-laurentii-martyris-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/sancti-laurentii-martyris-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/sancti-laurentii-martyris-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/sancti-laurentii-martyris-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/sancti-laurentii-martyris-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/sancti-laurentii-martyris-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/sancti-laurentii-martyris-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-communis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/sancti-laurentii-martyris-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/sancti-laurentii-martyris-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "assumptio-beatae-mariae-virginis",
+   "order": 42,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "assumptio-beatae-mariae-virginis",
+   "calendar": {
+    "key": "assumptio-beatae-mariae-virginis",
+    "default": true
+   },
+   "title": "In Assumptione Beatæ Mariæ Virginis",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/assumptio-beatae-mariae-virginis-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/assumptio-beatae-mariae-virginis-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/assumptio-beatae-mariae-virginis-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/assumptio-beatae-mariae-virginis-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/assumptio-beatae-mariae-virginis-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/assumptio-beatae-mariae-virginis-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/assumptio-beatae-mariae-virginis-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/assumptio-beatae-mariae-virginis-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-beatae-mariae-virginis-in-assumptione",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/assumptio-beatae-mariae-virginis-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/assumptio-beatae-mariae-virginis-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "sancti-ioachim-confessoris",
+   "order": 43,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "sancti-ioachim-confessoris",
+   "calendar": {
+    "key": "sancti-ioachim-confessoris",
+    "default": true
+   },
+   "title": "Sancti Ioachim Confessoris",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/sancti-ioachim-confessoris-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/sancti-ioachim-confessoris-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/sancti-ioachim-confessoris-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/sancti-ioachim-confessoris-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/sancti-ioachim-confessoris-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/sancti-ioachim-confessoris-tractus",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/sancti-ioachim-confessoris-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/sancti-ioachim-confessoris-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/sancti-ioachim-confessoris-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-communis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/sancti-ioachim-confessoris-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/sancti-ioachim-confessoris-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "immaculatum-cor-beatae-mariae-virginis",
+   "order": 44,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "immaculatum-cor-beatae-mariae-virginis",
+   "calendar": {
+    "key": "immaculatum-cor-beatae-mariae-virginis",
+    "default": true
+   },
+   "title": "Immaculati Cordis Beatæ Mariæ Virginis",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/immaculatum-cor-beatae-mariae-virginis-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/immaculatum-cor-beatae-mariae-virginis-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/immaculatum-cor-beatae-mariae-virginis-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/immaculatum-cor-beatae-mariae-virginis-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/immaculatum-cor-beatae-mariae-virginis-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/immaculatum-cor-beatae-mariae-virginis-tractus",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/immaculatum-cor-beatae-mariae-virginis-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/immaculatum-cor-beatae-mariae-virginis-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/immaculatum-cor-beatae-mariae-virginis-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-beatae-mariae-virginis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/immaculatum-cor-beatae-mariae-virginis-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/immaculatum-cor-beatae-mariae-virginis-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "sancti-bartholomaei-apostoli",
+   "order": 45,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "sancti-bartholomaei-apostoli",
+   "calendar": {
+    "key": "sancti-bartholomaei-apostoli",
+    "default": true
+   },
+   "title": "Sancti Bartholomæi Apostoli",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/sancti-iacobi-apostoli-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/sancti-bartholomaei-apostoli-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/sancti-bartholomaei-apostoli-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/sancti-bartholomaei-apostoli-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/sancti-bartholomaei-apostoli-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/sancti-bartholomaei-apostoli-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/sancti-bartholomaei-apostoli-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/sancti-bartholomaei-apostoli-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-apostolorum",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/sancti-iacobi-apostoli-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/sancti-bartholomaei-apostoli-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "nativitas-beatae-mariae-virginis",
+   "order": 46,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "nativitas-beatae-mariae-virginis",
+   "calendar": {
+    "key": "nativitas-beatae-mariae-virginis",
+    "default": true
+   },
+   "title": "In Nativitate Beatæ Mariæ Virginis",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/visitatio-beatae-mariae-virginis-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/nativitas-beatae-mariae-virginis-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/nativitas-beatae-mariae-virginis-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/visitatio-beatae-mariae-virginis-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/visitatio-beatae-mariae-virginis-alleluia",
+     "relation": "reference"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/nativitas-beatae-mariae-virginis-tractus",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/sancti-ioachim-confessoris-evangelium",
+     "relation": "reference"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/visitatio-beatae-mariae-virginis-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/nativitas-beatae-mariae-virginis-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-beatae-mariae-virginis-in-nativitate",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/visitatio-beatae-mariae-virginis-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/visitatio-beatae-mariae-virginis-postcommunio",
+     "relation": "reference"
+    }
+   ]
+  },
+  {
+   "id": "exaltatio-sanctae-crucis",
+   "order": 47,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "exaltatio-sanctae-crucis",
+   "calendar": {
+    "key": "exaltatio-sanctae-crucis",
+    "default": true
+   },
+   "title": "In Exaltatione Sanctæ Crucis",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/exaltatio-sanctae-crucis-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/exaltatio-sanctae-crucis-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/exaltatio-sanctae-crucis-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/exaltatio-sanctae-crucis-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/exaltatio-sanctae-crucis-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/exaltatio-sanctae-crucis-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/exaltatio-sanctae-crucis-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/exaltatio-sanctae-crucis-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctae-crucis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/exaltatio-sanctae-crucis-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/exaltatio-sanctae-crucis-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "septem-dolorum-beatae-mariae-virginis",
+   "order": 48,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "septem-dolorum-beatae-mariae-virginis",
+   "calendar": {
+    "key": "septem-dolorum-beatae-mariae-virginis",
+    "default": true
+   },
+   "title": "Septem Dolorum Beatæ Mariæ Virginis",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/septem-dolorum-beatae-mariae-virginis-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/septem-dolorum-beatae-mariae-virginis-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/septem-dolorum-beatae-mariae-virginis-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/septem-dolorum-beatae-mariae-virginis-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/septem-dolorum-beatae-mariae-virginis-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/nativitas-beatae-mariae-virginis-tractus",
+     "relation": "reference"
+    },
+    {
+     "key": "sequentia",
+     "role": "sequentia",
+     "text": "proprium/septem-dolorum-beatae-mariae-virginis-sequentia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/septem-dolorum-beatae-mariae-virginis-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/septem-dolorum-beatae-mariae-virginis-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/septem-dolorum-beatae-mariae-virginis-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-beatae-mariae-virginis-in-transfixione",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/septem-dolorum-beatae-mariae-virginis-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/septem-dolorum-beatae-mariae-virginis-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "sancti-matthaei-apostoli-et-evangelistae",
+   "order": 49,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "sancti-matthaei-apostoli-et-evangelistae",
+   "calendar": {
+    "key": "sancti-matthaei-apostoli-et-evangelistae",
+    "default": true
+   },
+   "title": "Sancti Matthæi Apostoli et Evangelistæ",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/sancti-matthaei-apostoli-et-evangelistae-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/sancti-matthaei-apostoli-et-evangelistae-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/sancti-matthaei-apostoli-et-evangelistae-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/sancti-matthaei-apostoli-et-evangelistae-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/sancti-matthaei-apostoli-et-evangelistae-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/sancti-matthaei-apostoli-et-evangelistae-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/sancti-matthaei-apostoli-et-evangelistae-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/sancti-matthaei-apostoli-et-evangelistae-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-apostolorum",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/sancti-matthaei-apostoli-et-evangelistae-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/sancti-matthaei-apostoli-et-evangelistae-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dedicatio-sancti-michaelis-archangeli",
+   "order": 50,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "dedicatio-sancti-michaelis-archangeli",
+   "calendar": {
+    "key": "dedicatio-sancti-michaelis-archangeli",
+    "default": true
+   },
+   "title": "In Dedicatione Sancti Michaelis Archangeli",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dedicatio-sancti-michaelis-archangeli-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dedicatio-sancti-michaelis-archangeli-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dedicatio-sancti-michaelis-archangeli-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dedicatio-sancti-michaelis-archangeli-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dedicatio-sancti-michaelis-archangeli-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dedicatio-sancti-michaelis-archangeli-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dedicatio-sancti-michaelis-archangeli-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dedicatio-sancti-michaelis-archangeli-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-communis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dedicatio-sancti-michaelis-archangeli-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dedicatio-sancti-michaelis-archangeli-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "beatae-mariae-virginis-a-rosario",
+   "order": 51,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "beatae-mariae-virginis-a-rosario",
+   "calendar": {
+    "key": "beatae-mariae-virginis-a-rosario",
+    "default": true
+   },
+   "title": "Beatæ Mariæ Virginis a Rosario",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/beatae-mariae-virginis-a-rosario-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/beatae-mariae-virginis-a-rosario-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/beatae-mariae-virginis-a-rosario-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/beatae-mariae-virginis-a-rosario-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/beatae-mariae-virginis-a-rosario-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/nativitas-beatae-mariae-virginis-tractus",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/beatae-mariae-virginis-a-rosario-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/beatae-mariae-virginis-a-rosario-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/beatae-mariae-virginis-a-rosario-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-beatae-mariae-virginis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/beatae-mariae-virginis-a-rosario-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/beatae-mariae-virginis-a-rosario-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "maternitas-beatae-mariae-virginis",
+   "order": 52,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "maternitas-beatae-mariae-virginis",
+   "calendar": {
+    "key": "maternitas-beatae-mariae-virginis",
+    "default": true
+   },
+   "title": "In Maternitate Beatæ Mariæ Virginis",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/maternitas-beatae-mariae-virginis-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/maternitas-beatae-mariae-virginis-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/immaculatum-cor-beatae-mariae-virginis-epistola",
+     "relation": "reference"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/maternitas-beatae-mariae-virginis-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/maternitas-beatae-mariae-virginis-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/nativitas-beatae-mariae-virginis-tractus",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/maternitas-beatae-mariae-virginis-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/maternitas-beatae-mariae-virginis-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/maternitas-beatae-mariae-virginis-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-beatae-mariae-virginis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/visitatio-beatae-mariae-virginis-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/maternitas-beatae-mariae-virginis-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "sancti-lucae-evangelistae",
+   "order": 53,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "sancti-lucae-evangelistae",
+   "calendar": {
+    "key": "sancti-lucae-evangelistae",
+    "default": true
+   },
+   "title": "Sancti Lucæ Evangelistæ",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/sancti-iacobi-apostoli-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/sancti-lucae-evangelistae-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/sancti-lucae-evangelistae-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/sancti-lucae-evangelistae-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/sancti-lucae-evangelistae-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/sancti-lucae-evangelistae-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/sancti-bartholomaei-apostoli-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/sancti-lucae-evangelistae-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-apostolorum",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/sancti-iacobi-apostoli-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/sancti-lucae-evangelistae-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "sanctorum-simonis-et-iudae-apostolorum",
+   "order": 54,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "sanctorum-simonis-et-iudae-apostolorum",
+   "calendar": {
+    "key": "sanctorum-simonis-et-iudae-apostolorum",
+    "default": true
+   },
+   "title": "Sanctorum Simonis et Iudæ Apostolorum",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/sancti-iacobi-apostoli-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/sanctorum-simonis-et-iudae-apostolorum-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/sanctorum-simonis-et-iudae-apostolorum-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/sancti-petri-et-pauli-apostolorum-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/sanctorum-simonis-et-iudae-apostolorum-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/sanctorum-simonis-et-iudae-apostolorum-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/sancti-iacobi-apostoli-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/sanctorum-simonis-et-iudae-apostolorum-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-apostolorum",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/sancti-iacobi-apostoli-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/sanctorum-simonis-et-iudae-apostolorum-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "omnium-sanctorum",
+   "order": 55,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "omnium-sanctorum",
+   "calendar": {
+    "key": "omnium-sanctorum",
+    "default": true
+   },
+   "title": "In Festo Omnium Sanctorum",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/omnium-sanctorum-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/omnium-sanctorum-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/omnium-sanctorum-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/omnium-sanctorum-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/omnium-sanctorum-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/omnium-sanctorum-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/omnium-sanctorum-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/omnium-sanctorum-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-communis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/omnium-sanctorum-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/omnium-sanctorum-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "commemoratio-omnium-fidelium-defunctorum",
+   "order": 56,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "commemoratio-omnium-fidelium-defunctorum",
+   "variant": "missa-i",
+   "text_prefix": "commemoratio-omnium-fidelium-defunctorum-missa-i",
+   "calendar": {
+    "key": "commemoratio-omnium-fidelium-defunctorum",
+    "default": true
+   },
+   "title": "In Commemoratione Omnium Fidelium Defunctorum — Missa I",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-tractus",
+     "relation": "proper"
+    },
+    {
+     "key": "sequentia",
+     "role": "sequentia",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-sequentia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-defunctorum",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "commemoratio-omnium-fidelium-defunctorum-missa-ii",
+   "order": 57,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "commemoratio-omnium-fidelium-defunctorum",
+   "variant": "missa-ii",
+   "calendar": {
+    "key": "commemoratio-omnium-fidelium-defunctorum",
+    "default": false
+   },
+   "title": "In Commemoratione Omnium Fidelium Defunctorum — Missa II",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-ii-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-ii-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-tractus",
+     "relation": "reference"
+    },
+    {
+     "key": "sequentia",
+     "role": "sequentia",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-sequentia",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-ii-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-ii-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-defunctorum",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-ii-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "commemoratio-omnium-fidelium-defunctorum-missa-iii",
+   "order": 58,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "commemoratio-omnium-fidelium-defunctorum",
+   "variant": "missa-iii",
+   "calendar": {
+    "key": "commemoratio-omnium-fidelium-defunctorum",
+    "default": false
+   },
+   "title": "In Commemoratione Omnium Fidelium Defunctorum — Missa III",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-iii-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-tractus",
+     "relation": "reference"
+    },
+    {
+     "key": "sequentia",
+     "role": "sequentia",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-sequentia",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-iii-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-iii-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-defunctorum",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-iii-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dedicatio-archibasilicae-sanctissimi-salvatoris",
+   "order": 59,
+   "collection": "sanctorale",
+   "season": "per-annum",
+   "observance": "dedicatio-archibasilicae-sanctissimi-salvatoris",
+   "calendar": {
+    "key": "dedicatio-archibasilicae-sanctissimi-salvatoris",
+    "default": true
+   },
+   "title": "In Dedicatione Archibasilicæ Sanctissimi Salvatoris",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-graduale",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "tractus",
+     "role": "tractus",
+     "text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-tractus",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-communis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  }
+ ]
+}

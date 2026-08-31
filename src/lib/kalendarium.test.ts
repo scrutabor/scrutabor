@@ -78,6 +78,10 @@ describe('the calendar this edition ships', () => {
 		const june = dayToday(new Date(2026, 5, 21));
 		expect(june.id).toBe('dominica-iv-post-pentecosten');
 		expect(june.on?.formulary).toBeTruthy();
+
+		const corpusChristi = dayToday(new Date(2026, 5, 4));
+		expect(corpusChristi.on?.formulary).toBe('corpus-christi');
+		expect(corpusChristi.id).toBe('corporis-christi');
 	});
 
 	it('offers no day the shelf cannot open', () => {

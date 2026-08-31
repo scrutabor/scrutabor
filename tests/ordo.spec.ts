@@ -185,7 +185,7 @@ test('the landing separates following the Mass from opening a text', async ({ pa
 	await expect(page).toHaveURL(atRoute('/app/en/ordo'));
 });
 
-test('every prayer the Ordo links to is actually built', async ({ page, request }) => {
+test('every prayer the Ordo links to is actually built', async ({ page, request }, testInfo) => {
 	// The prerender list was the CATALOGUE, which orders the shelf but is
 	// not the list of what exists: 27 texts — the whole Canon among them —
 	// were linked from the Ordo and never built, so on the static site
@@ -207,8 +207,16 @@ test('every prayer the Ordo links to is actually built', async ({ page, request 
 
 	const missing: string[] = [];
 	for (const href of seen) {
-		const res = await request.get(href);
-		if (!res.ok()) missing.push(`${href} → ${res.status()}`);
+		if (testInfo.project.name === 'offline') {
+			// The downloaded edition is one file whose routes live behind its
+			// hash, so there is no HTTP response to inspect. Walk each route
+			// through the same router a reader uses and reject its 404 frame.
+			await page.goto(href);
+			if (await page.locator('.errorpage .status').count()) missing.push(`${href} → 404`);
+		} else {
+			const res = await request.get(href);
+			if (!res.ok()) missing.push(`${href} → ${res.status()}`);
+		}
 	}
 	expect(missing).toEqual([]);
 });

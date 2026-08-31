@@ -8,9 +8,9 @@
 // no content, exactly as the catalog holds none.
 
 import type { Lang } from './i18n';
+import { FORMULARY_METADATA, formularyTitle } from './corpus-metadata';
 import { bindPlFields } from './polish';
 import { dayOf, isoDate, type Kalendar } from './kalendarium';
-import { PER_ANNUM_PROPER_DAYS } from './proper-days-per-annum';
 
 /** The parts of a Mass proper, in the order the rite says them.
  *
@@ -85,15 +85,18 @@ export const SEASONS = [
 export type Season = (typeof SEASONS)[number];
 
 export interface ProperDay {
-	/** matches the corpus `variant`, and the slug prefix of every part */
+	/** Stable identity of this particular Mass, including any variant. */
 	id: string;
-	/** Corpus variant used for filename discovery when it differs from `id`.
-	 *
-	 * All Souls keeps its calendar identity while its three permitted Masses
-	 * remain separately selectable corpus variants. */
-	textPrefix?: string;
+	/** Stable liturgical order for the picker and concordance. */
+	order: number;
+	collection: string;
 	/** the season this day belongs to, for grouping a picker */
 	season: Season;
+	/** Groups several permitted Masses for one observance. */
+	observance: string;
+	variant?: string;
+	/** Calendar identity and the variant automatically opened for it. */
+	calendar: { key: string; default: boolean };
 	/** as the Missal names it, and as a reader would */
 	title: Record<'la' | Lang, string>;
 	/** True while the edition carries only some of the day's parts.
@@ -104,98 +107,65 @@ export interface ProperDay {
 	 * description in both cases, which is the kind of silence this edition
 	 * does not keep. */
 	partial?: boolean;
-	/** A day may assign a text outside `proprium` to one of its slots.
-	 *
-	 * Prefaces are shared liturgical texts in `ordinarium`, not copies made
-	 * once per feast. The mapping keeps that identity explicit while the
-	 * usual proper parts continue to be discovered from the day's slug. */
-	parts?: Partial<Record<ProperPart, string>>;
+	/** Canonical ordered assembly, including shared and transferred texts. */
+	components: {
+		key: ProperPart;
+		role: ProperPart;
+		text: string;
+		relation: 'proper' | 'shared' | 'reference';
+	}[];
 }
 
-// One entry per formulary the corpus carries. A day named here without texts
-// behind it, or texts with no day named here, is a defect the tests catch.
-const PROPER_DAYS_SOURCE: ProperDay[] = [
-	{
-		id: 'dominica-i-adventus',
-		season: 'adventus',
-		title: {
-			la: 'Dominica I Adventus',
-			pl: 'I Niedziela Adwentu',
-			en: 'First Sunday of Advent'
+// The corpus owns the editorial catalogue. This projection keeps only the
+// application's checked presentation types and Polish line-breaking rule.
+const PROPER_DAYS_SOURCE: ProperDay[] = FORMULARY_METADATA.map((formulary) => {
+	if (!SEASONS.includes(formulary.season as Season)) {
+		throw new Error(`${formulary.id} names unknown season ${formulary.season}`);
+	}
+	const components = formulary.components.map((component) => {
+		if (!PROPER_PARTS.includes(component.role as ProperPart) || component.key !== component.role) {
+			throw new Error(`${formulary.id} names unknown component ${component.key}`);
 		}
-	},
-	{
-		id: 'dominica-ii-adventus',
-		season: 'adventus',
+		return {
+			...component,
+			key: component.key as ProperPart,
+			role: component.role as ProperPart
+		};
+	});
+	return {
+		id: formulary.id,
+		order: formulary.order,
+		collection: formulary.collection,
+		season: formulary.season as Season,
+		observance: formulary.observance,
+		variant: formulary.variant,
+		calendar: formulary.calendar,
 		title: {
-			la: 'Dominica II Adventus',
-			pl: 'II Niedziela Adwentu',
-			en: 'Second Sunday of Advent'
-		}
-	},
-	{
-		id: 'dominica-iii-adventus',
-		season: 'adventus',
-		title: {
-			la: 'Dominica III Adventus',
-			pl: 'III Niedziela Adwentu',
-			en: 'Third Sunday of Advent'
-		}
-	},
-	{
-		id: 'dominica-iv-adventus',
-		season: 'adventus',
-		title: {
-			la: 'Dominica IV Adventus',
-			pl: 'IV Niedziela Adwentu',
-			en: 'Fourth Sunday of Advent'
-		}
-	},
-	{
-		id: 'sanctissimae-trinitatis',
-		season: 'per-annum',
-		title: {
-			la: 'In festo Sanctissimæ Trinitatis',
-			pl: 'Uroczystość Trójcy Przenajświętszej',
-			en: 'Feast of the Most Holy Trinity'
+			la: formulary.title,
+			pl: formularyTitle(formulary.id, 'pl'),
+			en: formularyTitle(formulary.id, 'en')
 		},
-		parts: {
-			praefatio: 'ordinarium/praefatio-sanctissimae-trinitatis'
-		}
-	},
-	{
-		id: 'corporis-christi',
-		season: 'per-annum',
-		title: {
-			la: 'In festo Sanctissimi Corporis Christi',
-			pl: 'Uroczystość Najświętszego Ciała Chrystusa',
-			en: 'Feast of Corpus Christi'
-		}
-	},
-	{
-		id: 'sacratissimi-cordis-iesu',
-		season: 'per-annum',
-		title: {
-			la: 'In festo Sacratissimi Cordis Iesu',
-			pl: 'Uroczystość Najświętszego Serca Jezusowego',
-			en: 'Feast of the Most Sacred Heart of Jesus'
-		},
-		parts: {
-			praefatio: 'ordinarium/praefatio-sacratissimi-cordis-iesu'
-		}
-	},
-	...PER_ANNUM_PROPER_DAYS
-];
+		partial: formulary.coverage === 'partial' || undefined,
+		components
+	};
+});
 
 /** Polish one-letter words bound to what follows (lib/polish), exactly as the
  * catalogue's own titles are. Without it "I Niedziela Adwentu" can break after
  * the numeral — in the picker, and in the sentence the hint builds around it —
  * which is the binding decisions #30 already holds the rest of the book to.
  * The Latin titles and the English in the same objects are untouched. */
-export const PROPER_DAYS: ProperDay[] = bindPlFields(PROPER_DAYS_SOURCE);
+export const PROPER_DAYS: ProperDay[] = bindPlFields(
+	[...PROPER_DAYS_SOURCE].sort((a, b) => a.order - b.order)
+);
 
 export function dayById(id: string): ProperDay | undefined {
 	return PROPER_DAYS.find((d) => d.id === id);
+}
+
+/** The one Mass a computed calendar identity opens automatically. */
+export function dayByCalendarKey(key: string): ProperDay | undefined {
+	return PROPER_DAYS.find((day) => day.calendar.key === key && day.calendar.default);
 }
 
 /** Today's formulary, if this edition carries it.
@@ -215,7 +185,7 @@ export function dayToday(when: Date = new Date()): {
 	week: Kalendar | null;
 } {
 	const { on, week } = dayOf(isoDate(when));
-	return { id: on && dayById(on.formulary) ? on.formulary : '', on, week };
+	return { id: on ? (dayByCalendarKey(on.formulary)?.id ?? '') : '', on, week };
 }
 
 /** The artifact URL for one day in one language.
@@ -266,7 +236,7 @@ export function dayHint(chosen: string, now: Today | null): DayHint {
 		// A feria. It is worth naming only if the edition can open the Sunday
 		// it belongs to — otherwise the reader is told about a week they
 		// cannot read either, which says nothing.
-		const sunday = now.week && dayById(now.week.formulary);
+		const sunday = now.week && dayByCalendarKey(now.week.formulary);
 		return sunday ? { kind: 'week', sunday } : { kind: 'ahead' };
 	}
 	return { kind: 'ahead' };

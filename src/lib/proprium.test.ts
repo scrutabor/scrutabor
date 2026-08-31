@@ -20,26 +20,29 @@ describe('the days table and the corpus agree', () => {
 		// A text whose day is not in the table can never be chosen, so it is
 		// vendored for nobody — the same defect the shelf test catches for
 		// every other category.
-		const orphans = properKeys.filter(
-			(key) => !PROPER_DAYS.some((d) => key.startsWith(`proprium/${d.id}-`))
+		const assembled = new Set(
+			PROPER_DAYS.flatMap((day) => day.components.map((component) => component.text))
 		);
+		const orphans = properKeys.filter((key) => !assembled.has(key));
 		expect(orphans, 'proprium texts belonging to no named day').toEqual([]);
 	});
 
 	it('has texts for every day it names', () => {
 		// The other direction: a day in the picker with nothing behind it is a
 		// dead option, and the artifact endpoint would 404 on it.
-		const empty = PROPER_DAYS.filter(
-			(d) => !properKeys.some((key) => key.startsWith(`proprium/${d.id}-`))
-		).map((d) => d.id);
+		const empty = PROPER_DAYS.filter((day) => !day.components.length).map((day) => day.id);
 		expect(empty, 'days named with no texts').toEqual([]);
 	});
 
-	it('resolves every explicitly assigned shared part', () => {
+	it('resolves every canonical component', () => {
 		for (const day of PROPER_DAYS) {
-			for (const [part, key] of Object.entries(day.parts ?? {})) {
-				expect(PROPER_PARTS, `${day.id} assigns an unknown ${part}`).toContain(part);
-				expect(TEXT_KEYS, `${day.id}/${part} resolves to no corpus text`).toContain(key);
+			for (const component of day.components) {
+				expect(PROPER_PARTS, `${day.id} assigns an unknown ${component.role}`).toContain(
+					component.role
+				);
+				expect(TEXT_KEYS, `${day.id}/${component.role} resolves to no corpus text`).toContain(
+					component.text
+				);
 			}
 		}
 	});
@@ -103,6 +106,18 @@ describe('lookups', () => {
 		expect(artifactPath('dominica-i-adventus', 'pl')).toBe(
 			'/artifacts/proprium/pl/dominica-i-adventus.json'
 		);
+	});
+
+	it('maps a calendar identity to its canonical default variant', () => {
+		const feast = dayById('corporis-christi');
+		expect(feast?.calendar).toEqual({ key: 'corpus-christi', default: true });
+		const allSouls = PROPER_DAYS.filter(
+			(day) => day.observance === 'commemoratio-omnium-fidelium-defunctorum'
+		);
+		expect(allSouls).toHaveLength(3);
+		expect(allSouls.filter((day) => day.calendar.default).map((day) => day.id)).toEqual([
+			'commemoratio-omnium-fidelium-defunctorum'
+		]);
 	});
 
 	it('assembles a shared preface in its proper rite position', async () => {

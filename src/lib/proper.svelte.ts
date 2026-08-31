@@ -19,7 +19,7 @@
 import { browser } from '$app/environment';
 import { readStored, writeStored } from '$lib/storage';
 import { localDay } from '$lib/proper-local';
-import { artifactPath, dayById } from '$lib/proprium';
+import { artifactPath, dayByCalendarKey, dayById } from '$lib/proprium';
 import { formularyExists } from '$lib/kalendarium';
 import type { Lang } from '$lib/i18n';
 import type { TextBibliographyEvidence } from '$lib/bibliography';
@@ -215,7 +215,8 @@ export async function chooseDay(next: string | null, lang: Lang): Promise<void> 
 		proper.clear();
 		return;
 	}
-	if (!dayById(next)) {
+	const selected = dayById(next) ?? dayByCalendarKey(next);
+	if (!selected) {
 		// Two different absences. A real day of the calendar whose Mass this
 		// edition has not written is said so. An id that names nothing is a
 		// mangled link and gets the dayless view — "could not be loaded"
@@ -225,6 +226,10 @@ export async function chooseDay(next: string | null, lang: Lang): Promise<void> 
 		unwritten = formularyExists(next);
 		return;
 	}
+	// Old and computed links may carry the calendar key, which is deliberately
+	// distinct from a particular Mass id for Corpus Christi and multi-Mass
+	// observances. Resolve it to the canonical default before caching/loading.
+	next = selected.id;
 	day = next;
 	const key = `${lang}/${next}`;
 	const already = held[key];

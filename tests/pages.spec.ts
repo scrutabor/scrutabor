@@ -542,7 +542,7 @@ test('a verse number cites its verse, and the citation is a place', async ({ pag
 	await expect(page.locator('#v40 .mark')).toHaveAttribute('aria-pressed', 'true');
 });
 
-test('the sitemap lists both languages of every surface', async ({ request }) => {
+test('the sitemap lists both languages of every surface @online', async ({ request }) => {
 	const res = await request.get('/sitemap.xml');
 	expect(res.status()).toBe(200);
 	const xml = await res.text();

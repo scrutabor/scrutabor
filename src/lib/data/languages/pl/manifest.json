@@ -1,5 +1,5 @@
 {
-  "schema_version": "5.1.0",
+  "schema_version": "5.3.0",
   "corpus_schema": "0.18.0",
   "language": "pl",
   "direction": "ltr",
@@ -2794,6 +2794,7 @@
   "lexicon": "languages/pl/lexicon.json",
   "citations": "languages/pl/citations.json",
   "concordance": "languages/pl/concordance.json",
+  "formularies": "languages/pl/formularies.json",
   "bibliography": {
     "catalog": "languages/pl/bibliography/catalog.json",
     "index": "languages/pl/bibliography/index.json"

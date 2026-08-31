@@ -1,5 +1,8 @@
 import { defineConfig } from '@playwright/test';
 
+const prebuilt = process.env.SCRUTABOR_E2E_PREBUILT === '1';
+const noServer = process.env.SCRUTABOR_E2E_NO_SERVER === '1';
+
 // Interaction tests run against the real static build (adapter-static
 // output served by vite preview) — the same artifact production serves.
 //
@@ -16,18 +19,20 @@ export default defineConfig({
 	// and reports green. Vitest refuses that under CI by its own default;
 	// Playwright only when told.
 	forbidOnly: !!process.env.CI,
-	webServer: {
-		// Both artifacts, from one command, so they can never disagree about
-		// which corpus or which runtime they were built from. (The offline
-		// zip is not among them: it travels with each GitHub release, and
-		// the landing links the latest release's asset directly.)
-		command: 'npm run build:offline && npm run preview',
-		port: 4173,
-		// A cold CI runner now builds the complete 660-text hosted and folder
-		// editions before preview starts; 60 s is too close to the measured build.
-		timeout: 120_000,
-		reuseExistingServer: !process.env.CI
-	},
+	webServer: noServer
+		? undefined
+		: {
+				// Both artifacts, from one command, so they can never disagree about
+				// which corpus or which runtime they were built from. (The offline
+				// zip is not among them: it travels with each GitHub release, and
+				// the landing links the latest release's asset directly.)
+				command: prebuilt ? 'npm run preview' : 'npm run build:offline && npm run preview',
+				port: 4173,
+				// A cold CI runner now builds the complete 660-text hosted and folder
+				// editions before preview starts; 60 s is too close to the measured build.
+				timeout: 120_000,
+				reuseExistingServer: !process.env.CI
+			},
 	// The corpus is large and the flow pages are long; a 5 s default starts
 	// biting on page loads that are genuinely doing work.
 	timeout: 60_000,
@@ -60,6 +65,9 @@ export default defineConfig({
 			// their workers and keeps its own batches on one worker.
 			name: 'hosted-sweep',
 			dependencies: ['hosted', 'offline'],
+			// Sharding may distribute individual sweep batches across CI jobs,
+			// while each job still walks its assigned pages on one worker.
+			fullyParallel: true,
 			workers: 1,
 			use: { baseURL: 'http://localhost:4173' },
 			grep: /@sweep/

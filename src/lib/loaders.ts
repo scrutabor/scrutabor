@@ -30,7 +30,7 @@ import {
 import { LANGS, type Lang } from './i18n';
 import { conceptById } from './grammar';
 import { movementById } from './ordo';
-import { PROPER_DAYS, PROPER_PARTS, SLOT_OF, partOf, type ProperPart } from './proprium';
+import { PROPER_DAYS, SLOT_OF } from './proprium';
 import { lemmaOfSlug } from './lemma-slug';
 import pkg from '../../package.json' with { type: 'json' };
 
@@ -164,31 +164,7 @@ export async function properData(day: string, lang: Lang) {
 	const found = PROPER_DAYS.find((d) => d.id === day);
 	if (!found) return null;
 
-	// Membership by the exact day id, not by prefix: the slug is the day id
-	// plus a known part suffix, and a prefix match would let a day whose id
-	// begins with another's (nativitas / nativitas-vigilia) pull the other
-	// day's parts into its Mass.
-	const discovered = textKeysFor(lang)
-		.filter((key) => {
-			const [category, slug] = key.split('/');
-			if (category !== 'proprium') return false;
-			const part = partOf(slug);
-			return (
-				part !== undefined && slug.slice(0, -(part.length + 1)) === (found.textPrefix ?? found.id)
-			);
-		})
-		.map((key) => {
-			const part = partOf(key.split('/')[1]);
-			if (!part) throw new Error(`${key} names no known part of a proper`);
-			return { key, part };
-		});
-	const explicit = Object.entries(found.parts ?? {}).map(([part, key]) => ({
-		key,
-		part: part as ProperPart
-	}));
-	const keyedParts = [...discovered, ...explicit].sort(
-		(a, b) => PROPER_PARTS.indexOf(a.part) - PROPER_PARTS.indexOf(b.part)
-	);
+	const keyedParts = found.components.map(({ text: key, role: part }) => ({ key, part }));
 	if (!keyedParts.length) return null;
 	const keys = keyedParts.map(({ key }) => key);
 

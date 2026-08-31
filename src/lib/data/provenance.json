@@ -2,11 +2,11 @@
 	"note": "Written by scripts/vendor-corpus.mjs. Checked by scripts/provenance.test.ts.",
 	"corpus": {
 		"repository": "scrutabor-corpus",
-		"commit": "fcb45bced5765ff951ffacc36395f2f1df066b70",
+		"commit": "794131277b89cbd7627f9b5a9c8a7322955ccc6b",
 		"dirty": false
 	},
-	"edition": "5.1.0",
+	"edition": "5.3.0",
 	"schema_version": "0.18.0",
-	"files": 2742,
-	"sha256": "51ac46741411a8edcc97d56e06df9a46671e0d1dc966192b8ef8cdff182c78e4"
+	"files": 2746,
+	"sha256": "850167183a31a1599dca3886dadccbad2d1c1ebfdd6f6e04b16662b375efbd0f"
 }

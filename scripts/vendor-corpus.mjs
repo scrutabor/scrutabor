@@ -91,7 +91,7 @@ for (const entry of manifest.texts) {
 for (const language of manifest.languages) {
 	declaredByManifests.add(language.path);
 	const languageManifest = read(join(BUILD, language.path));
-	for (const key of ['lexicon', 'citations', 'concordance']) {
+	for (const key of ['lexicon', 'citations', 'concordance', 'formularies']) {
 		declaredByManifests.add(languageManifest[key]);
 	}
 	for (const resource of Object.values(languageManifest.bibliography)) {

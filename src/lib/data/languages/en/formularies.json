@@ -1,0 +1,246 @@
+{
+ "schema_version": "1.0.0",
+ "language": "en",
+ "titles": [
+  {
+   "id": "assumptio-beatae-mariae-virginis",
+   "title": "Assumption of the Blessed Virgin Mary"
+  },
+  {
+   "id": "beata-maria-virgo-regina",
+   "title": "Queenship of the Blessed Virgin Mary"
+  },
+  {
+   "id": "beatae-mariae-virginis-a-rosario",
+   "title": "Blessed Virgin Mary of the Rosary"
+  },
+  {
+   "id": "commemoratio-omnium-fidelium-defunctorum-missa-ii",
+   "title": "Commemoration of All the Faithful Departed — Mass II"
+  },
+  {
+   "id": "commemoratio-omnium-fidelium-defunctorum-missa-iii",
+   "title": "Commemoration of All the Faithful Departed — Mass III"
+  },
+  {
+   "id": "commemoratio-omnium-fidelium-defunctorum",
+   "title": "Commemoration of All the Faithful Departed — Mass I"
+  },
+  {
+   "id": "dedicatio-archibasilicae-sanctissimi-salvatoris",
+   "title": "Dedication of the Archbasilica of the Most Holy Savior"
+  },
+  {
+   "id": "dedicatio-sancti-michaelis-archangeli",
+   "title": "Dedication of Saint Michael the Archangel"
+  },
+  {
+   "id": "exaltatio-sanctae-crucis",
+   "title": "Exaltation of the Holy Cross"
+  },
+  {
+   "id": "immaculatum-cor-beatae-mariae-virginis",
+   "title": "Immaculate Heart of the Blessed Virgin Mary"
+  },
+  {
+   "id": "maternitas-beatae-mariae-virginis",
+   "title": "Maternity of the Blessed Virgin Mary"
+  },
+  {
+   "id": "nativitas-beatae-mariae-virginis",
+   "title": "Nativity of the Blessed Virgin Mary"
+  },
+  {
+   "id": "nativitas-sancti-ioannis-baptistae",
+   "title": "Nativity of Saint John the Baptist"
+  },
+  {
+   "id": "omnium-sanctorum",
+   "title": "All Saints"
+  },
+  {
+   "id": "pretiosissimi-sanguinis-domini-nostri-iesu-christi",
+   "title": "Most Precious Blood of Our Lord Jesus Christ"
+  },
+  {
+   "id": "sanctae-annae-matris-beatae-mariae-virginis",
+   "title": "Saint Anne, Mother of the Blessed Virgin Mary"
+  },
+  {
+   "id": "sancti-bartholomaei-apostoli",
+   "title": "Saint Bartholomew the Apostle"
+  },
+  {
+   "id": "sancti-iacobi-apostoli",
+   "title": "Saint James the Apostle"
+  },
+  {
+   "id": "sancti-ioachim-confessoris",
+   "title": "Saint Joachim, Confessor"
+  },
+  {
+   "id": "sancti-laurentii-martyris",
+   "title": "Saint Lawrence, Martyr"
+  },
+  {
+   "id": "sancti-lucae-evangelistae",
+   "title": "Saint Luke the Evangelist"
+  },
+  {
+   "id": "sancti-matthaei-apostoli-et-evangelistae",
+   "title": "Saint Matthew, Apostle and Evangelist"
+  },
+  {
+   "id": "sancti-petri-et-pauli-apostolorum",
+   "title": "Saints Peter and Paul, Apostles"
+  },
+  {
+   "id": "sanctorum-simonis-et-iudae-apostolorum",
+   "title": "Saints Simon and Jude, Apostles"
+  },
+  {
+   "id": "septem-dolorum-beatae-mariae-virginis",
+   "title": "Seven Sorrows of the Blessed Virgin Mary"
+  },
+  {
+   "id": "transfiguratio-domini",
+   "title": "Transfiguration of Our Lord"
+  },
+  {
+   "id": "visitatio-beatae-mariae-virginis",
+   "title": "Visitation of the Blessed Virgin Mary"
+  },
+  {
+   "id": "corporis-christi",
+   "title": "Feast of Corpus Christi"
+  },
+  {
+   "id": "d-n-iesu-christi-regis",
+   "title": "Christ the King"
+  },
+  {
+   "id": "dominica-i-adventus",
+   "title": "First Sunday of Advent"
+  },
+  {
+   "id": "dominica-ii-adventus",
+   "title": "Second Sunday of Advent"
+  },
+  {
+   "id": "dominica-ii-post-pentecosten",
+   "title": "2nd Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-iii-adventus",
+   "title": "Third Sunday of Advent"
+  },
+  {
+   "id": "dominica-iii-post-pentecosten",
+   "title": "3rd Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-iv-adventus",
+   "title": "Fourth Sunday of Advent"
+  },
+  {
+   "id": "dominica-iv-post-pentecosten",
+   "title": "4th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-ix-post-pentecosten",
+   "title": "9th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-v-post-epiphaniam",
+   "title": "Transferred Fifth Sunday after Epiphany"
+  },
+  {
+   "id": "dominica-v-post-pentecosten",
+   "title": "5th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-vi-post-epiphaniam",
+   "title": "Transferred Sixth Sunday after Epiphany"
+  },
+  {
+   "id": "dominica-vi-post-pentecosten",
+   "title": "6th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-vii-post-pentecosten",
+   "title": "7th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-viii-post-pentecosten",
+   "title": "8th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-x-post-pentecosten",
+   "title": "10th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xi-post-pentecosten",
+   "title": "11th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xii-post-pentecosten",
+   "title": "12th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xiii-post-pentecosten",
+   "title": "13th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xiv-post-pentecosten",
+   "title": "14th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xix-post-pentecosten",
+   "title": "19th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xv-post-pentecosten",
+   "title": "15th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xvi-post-pentecosten",
+   "title": "16th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xvii-post-pentecosten",
+   "title": "17th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xviii-post-pentecosten",
+   "title": "18th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xx-post-pentecosten",
+   "title": "20th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xxi-post-pentecosten",
+   "title": "21st Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xxii-post-pentecosten",
+   "title": "22nd Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xxiii-post-pentecosten",
+   "title": "23rd Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-xxiv-post-pentecosten",
+   "title": "24th Sunday after Pentecost"
+  },
+  {
+   "id": "sacratissimi-cordis-iesu",
+   "title": "Feast of the Most Sacred Heart of Jesus"
+  },
+  {
+   "id": "sanctissimae-trinitatis",
+   "title": "Feast of the Most Holy Trinity"
+  }
+ ]
+}

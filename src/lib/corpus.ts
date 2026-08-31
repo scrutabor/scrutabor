@@ -21,6 +21,7 @@ import {
 	textMetadataFor
 } from './corpus-metadata';
 export {
+	CORPUS_METRICS,
 	TEXT_KEYS,
 	TEXT_METADATA,
 	hasText,
@@ -29,6 +30,7 @@ export {
 	textKeysFor,
 	textMetadataFor,
 	type LanguageTextMetadata,
+	type CorpusMetrics,
 	type TextMetadata
 } from './corpus-metadata';
 

@@ -3,17 +3,15 @@ name: ci
 on:
   push:
     # *-gate: the conventions' pattern for risky work — push a gate
-    # branch, let CI prove it, fast-forward main. Without this line the
-    # pattern silently proved nothing: no workflow ever ran on a gate
-    # branch, and the wait for its verdict could only time out.
+    # branch, let CI prove it, fast-forward main.
     branches: [main, '*-gate']
   pull_request:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  build:
+  quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -32,9 +30,58 @@ jobs:
       # zero, so a new one has to be named rather than merged.
       - run: npm run lint:clones
       - run: npm run check
-      - run: npm run build
-      # The browser download dominates CI time; cache it keyed to the
-      # lockfile so only a Playwright version bump re-downloads.
+      - run: npm run test:font-subsets
+      - run: npm run test:unit
+
+  build-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      # Hosted and folder editions come from one checkout and are built once.
+      # A tarball avoids making the artifact service enumerate thousands of
+      # prerendered pages and compresses their repeated markup efficiently.
+      - run: npm run build:offline
+      - run: tar -czf e2e-build.tgz build build-offline
+      - uses: actions/upload-artifact@v7
+        with:
+          name: e2e-build
+          path: e2e-build.tgz
+          compression-level: 0
+          retention-days: 1
+
+  e2e:
+    name: e2e (${{ matrix.name }})
+    needs: build-artifacts
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: hosted-1, project: hosted, shard: '1/2', no_server: '0' }
+          - { name: hosted-2, project: hosted, shard: '2/2', no_server: '0' }
+          - { name: offline-1, project: offline, shard: '1/2', no_server: '1' }
+          - { name: offline-2, project: offline, shard: '2/2', no_server: '1' }
+          - { name: sweep-1, project: hosted-sweep, shard: '1/4', no_server: '0' }
+          - { name: sweep-2, project: hosted-sweep, shard: '2/4', no_server: '0' }
+          - { name: sweep-3, project: hosted-sweep, shard: '3/4', no_server: '0' }
+          - { name: sweep-4, project: hosted-sweep, shard: '4/4', no_server: '0' }
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@v8
+        with:
+          name: e2e-build
+      - run: tar -xzf e2e-build.tgz
+      # The browser download dominates cold CI time; cache it by lockfile.
       - uses: actions/cache@v6
         id: playwright-cache
         with:
@@ -44,12 +91,18 @@ jobs:
         run: npx playwright install --with-deps chromium
       - if: steps.playwright-cache.outputs.cache-hit == 'true'
         run: npx playwright install-deps chromium
-      - run: npm test
-      # The deployment gate reads this ref over git smart-HTTP (no API
-      # rate limits): its existence IS the green verdict for the sha.
-      # Gate branches get it too: the staging deploy builds their tips
-      # through the same ci-gate, and a verdict names a SHA, not a
-      # branch — a sha green on a gate branch is green on main after
-      # the fast-forward. PRs stay unmarked (forks can't push anyway).
-      - if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || endsWith(github.ref, '-gate'))
-        run: git push origin "HEAD:refs/ci-green/${GITHUB_SHA}"
+      - run: npx playwright test --project=${{ matrix.project }} --no-deps --shard=${{ matrix.shard }}
+        env:
+          SCRUTABOR_E2E_PREBUILT: '1'
+          SCRUTABOR_E2E_NO_SERVER: ${{ matrix.no_server }}
+
+  green:
+    needs: [quality, build-artifacts, e2e]
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || endsWith(github.ref, '-gate'))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      # The deployment gate reads this exact-SHA ref over git smart-HTTP.
+      - run: git push origin "HEAD:refs/ci-green/${GITHUB_SHA}"

@@ -69,7 +69,7 @@ describe('what the concordance is built from', () => {
 		const sequenced = new Set([
 			...CATALOG.flatMap((s) => s.texts).map((t) => `${t.category}/${t.slug}`),
 			...ORDO.flatMap((m) => m.entries).flatMap((e) => (e.text ? [e.text] : [])),
-			...PROPER_DAYS.flatMap((day) => Object.values(day.parts ?? {}))
+			...PROPER_DAYS.flatMap((day) => day.components.map((component) => component.text))
 		]);
 		const unsequenced = everyTextInOrder().filter((k) => !sequenced.has(k));
 		expect(unsequenced.filter((k) => !k.startsWith('proprium/'))).toEqual([]);
@@ -88,8 +88,13 @@ describe('what the concordance is built from', () => {
 		const byDay = new Map<string, number[]>();
 		for (const key of proper) {
 			const slug = key.split('/')[1];
-			const prefix = slug.replace(/-[^-]+$/, '');
-			const day = PROPER_DAYS.find((item) => (item.textPrefix ?? item.id) === prefix)?.id ?? prefix;
+			const owner =
+				PROPER_DAYS.find((day) =>
+					day.components.some(
+						(component) => component.text === key && component.relation === 'proper'
+					)
+				) ?? PROPER_DAYS.find((day) => day.components.some((component) => component.text === key));
+			const day = owner?.id ?? slug;
 			expect(properRank(slug), `${slug} names no known part`).not.toBe(-1);
 			byDay.set(day, [...(byDay.get(day) ?? []), properRank(slug)]);
 		}

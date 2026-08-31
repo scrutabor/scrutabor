@@ -10,7 +10,7 @@
 // catalogue instead of the corpus: the list a page renders
 // from and the list of what exists are two different lists.
 import { CATALOG } from './catalog';
-import { PROPER_DAYS, SLOT_OF, partOf, properRank, type ProperPart } from './proprium';
+import { PROPER_DAYS, SLOT_OF, properRank } from './proprium';
 import { TEXT_KEYS, hasText, loadCoreTexts } from './corpus';
 import { ORDO } from './ordo';
 import concordance from './data/concordance.json';
@@ -104,14 +104,13 @@ export function everyTextInOrder(): string[] {
 	for (const movement of ORDO) {
 		for (const e of movement.entries) {
 			if (e.kind === 'proper') {
-				// A day may fill a proper slot with a shared text outside the
-				// `proprium` category (most notably a proper Preface). Sequence
-				// those assignments at the slot where the rite uses them, in the
-				// calendar's declared day order, instead of leaving them in the
+				// Sequence shared texts at the slot where the rite uses them, in
+				// the corpus's formulary order, instead of leaving them in the
 				// alphabetical tail.
 				for (const day of PROPER_DAYS) {
-					for (const [part, key] of Object.entries(day.parts ?? {})) {
-						if (SLOT_OF[part as ProperPart] === e.id && !key.startsWith('proprium/')) add(key);
+					for (const component of day.components) {
+						if (SLOT_OF[component.role] === e.id && !component.text.startsWith('proprium/'))
+							add(component.text);
 					}
 				}
 			}
@@ -124,14 +123,19 @@ export function everyTextInOrder(): string[] {
 	// PROPER_DAYS already holds in the year's own order. Roman numerals
 	// sorted as strings put Advent II before Easter II before Advent III;
 	// they are right for i/ii/iii/iv alone, which is one season's luck.
-	// The day id is the slug less its part suffix — exact, not a prefix
-	// match, so a day whose id begins with another day's id cannot be
-	// mistaken for it.
+	// Ownership comes from the canonical component relation, not a filename.
+	// A referenced chant belongs at its own formulary, not at the first later
+	// Sunday that transfers it.
 	const dayRank = (slug: string): number => {
-		const part = partOf(slug);
-		const day = part ? slug.slice(0, -(part.length + 1)) : slug;
-		const at = PROPER_DAYS.findIndex((d) => (d.textPrefix ?? d.id) === day);
-		return at === -1 ? PROPER_DAYS.length : at;
+		const key = `proprium/${slug}`;
+		const proper = PROPER_DAYS.findIndex((day) =>
+			day.components.some((component) => component.text === key && component.relation === 'proper')
+		);
+		if (proper !== -1) return proper;
+		const referenced = PROPER_DAYS.findIndex((day) =>
+			day.components.some((component) => component.text === key)
+		);
+		return referenced === -1 ? PROPER_DAYS.length : referenced;
 	};
 	const tail = [...TEXT_KEYS].sort((a, b) => {
 		const [ca, sa] = a.split('/');

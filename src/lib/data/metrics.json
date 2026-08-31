@@ -1,0 +1,23 @@
+{
+ "schema_version": "1.0.0",
+ "texts": {
+  "total": 660,
+  "proprium": 566,
+  "words": 35651,
+  "verse_segments": 1609
+ },
+ "languages": {
+  "en": {
+   "texts": 660
+  },
+  "pl": {
+   "texts": 660
+  }
+ },
+ "formularies": {
+  "total": 60,
+  "observances": 58,
+  "component_uses": 671,
+  "unique_component_texts": 578
+ }
+}
