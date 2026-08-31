@@ -1,0 +1,14 @@
+{
+  "id":"proprium.exaltatio-sanctae-crucis-communio",
+  "title":"Per signum Crucis de inimícis nostris líbera",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"exaltatio-sanctae-crucis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Per","l":"per","m":3,"h":"w002"},{"i":"w002","f":"signum","l":"signum","m":82},{"i":"w003","f":"Crucis","l":"crux","m":13},{"i":"w004","f":"de","l":"de","m":0,"h":"w005"},{"i":"w005","f":"inimícis","l":"inimicus","m":51},{"i":"w006","f":"nostris","l":"noster","m":204,"s":true},{"i":"w007","f":"líbera","l":"libero","m":41},{"i":"w008","f":"nos","l":"nos","p":",","m":49},{"i":"w009","f":"Deus","l":"deus","m":60},{"i":"w010","f":"noster","l":"noster","p":".","m":56,"s":true}]}
+  ]
+}

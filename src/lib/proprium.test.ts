@@ -162,6 +162,50 @@ describe('lookups', () => {
 			'ordinarium/praefatio-sacratissimi-cordis-iesu'
 		);
 	});
+
+	it('keeps the calendar identity of All Souls while exposing all three Masses', async () => {
+		const first = await properData('commemoratio-omnium-fidelium-defunctorum', 'pl');
+		const second = await properData('commemoratio-omnium-fidelium-defunctorum-missa-ii', 'en');
+		const third = await properData('commemoratio-omnium-fidelium-defunctorum-missa-iii', 'en');
+		expect(first?.parts[0].key).toBe(
+			'proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-introitus'
+		);
+		expect(second?.parts[0].key).toBe(
+			'proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-introitus'
+		);
+		expect(third?.parts[0].key).toBe(
+			'proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-introitus'
+		);
+		expect(second?.parts.find(({ part }) => part === 'collecta')?.key).toBe(
+			'proprium/commemoratio-omnium-fidelium-defunctorum-missa-ii-collecta'
+		);
+		expect(third?.parts.find(({ part }) => part === 'collecta')?.key).toBe(
+			'proprium/commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta'
+		);
+		for (const mass of [first, second, third]) {
+			expect(mass?.parts.find(({ part }) => part === 'praefatio')?.key).toBe(
+				'ordinarium/praefatio-defunctorum'
+			);
+		}
+	});
+
+	it('reuses the existing Advent offertory in the tenth Sunday after Pentecost', async () => {
+		const sunday = await properData('dominica-x-post-pentecosten', 'en');
+		expect(sunday?.parts.find(({ part }) => part === 'offertorium')?.key).toBe(
+			'proprium/dominica-i-adventus-offertorium'
+		);
+	});
+
+	it('gives the transferred Epiphany Sundays the seasonal chants printed for them', async () => {
+		for (const id of ['dominica-v-post-epiphaniam', 'dominica-vi-post-epiphaniam']) {
+			const sunday = await properData(id, 'en');
+			for (const part of ['introitus', 'graduale', 'alleluia', 'offertorium', 'communio']) {
+				expect(sunday?.parts.find((item) => item.part === part)?.key).toBe(
+					`proprium/dominica-xxiii-post-pentecosten-${part}`
+				);
+			}
+		}
+	});
 });
 
 describe('a day is offered only where it can act', () => {

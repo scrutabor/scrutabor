@@ -1,0 +1,14 @@
+{
+  "id":"proprium.beata-maria-virgo-regina-offertorium",
+  "title":"Regáli ex progénie María exórta refúlget; cuius",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"beata-maria-virgo-regina",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Regáli","l":"regalis","m":307,"s":true},{"i":"w002","f":"ex","l":"ex","m":0,"h":"w003"},{"i":"w003","f":"progénie","l":"progenies","m":219},{"i":"w004","f":"María","l":"Maria","m":30},{"i":"w005","f":"exórta","l":"exorior","m":520,"s":true},{"i":"w006","f":"refúlget","l":"refulgeo","p":";","m":165},{"i":"w007","f":"cuius","l":"qui","m":192},{"i":"w008","f":"précibus","l":"prex","m":40},{"i":"w009","f":"nos","l":"nos","m":49},{"i":"w010","f":"adiuvári","l":"adiuvo","p":",","m":94},{"i":"w011","f":"mente","l":"mens","m":45},{"i":"w012","f":"et","l":"et","m":15},{"i":"w013","f":"spíritu","l":"spiritus","m":100},{"i":"w014","f":"devotíssime","l":"devote","m":521},{"i":"w015","f":"póscimus","l":"posco","p":".","m":92},{"i":"w016","f":"Allelúia","l":"alleluia","p":".)","m":46}]}
+  ]
+}

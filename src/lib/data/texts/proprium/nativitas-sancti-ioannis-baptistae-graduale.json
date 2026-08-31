@@ -1,0 +1,14 @@
+{
+  "id":"proprium.nativitas-sancti-ioannis-baptistae-graduale",
+  "title":"Priusquam te formárem in útero, novi te",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"nativitas-sancti-ioannis-baptistae",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Priúsquam","l":"priusquam","m":15},{"i":"w002","f":"te","l":"tu","m":131},{"i":"w003","f":"formárem","l":"formo","m":607},{"i":"w004","f":"in","l":"in","m":0,"h":"w005"},{"i":"w005","f":"útero","l":"uterus","p":",","m":29},{"i":"w006","f":"novi","l":"nosco","m":173},{"i":"w007","f":"te","l":"tu","p":":","m":131},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"ántequam","l":"antequam","m":15},{"i":"w010","f":"exíres","l":"exeo","m":757},{"i":"w011","f":"de","l":"de","m":0,"h":"w012"},{"i":"w012","f":"ventre","l":"venter","p":",","m":109},{"i":"w013","f":"sanctificávi","l":"sanctifico","m":2},{"i":"w014","f":"te","l":"tu","p":".","m":131},{"i":"w015","f":"Misit","l":"mitto","m":195},{"i":"w016","f":"Dóminus","l":"dominus","m":60},{"i":"w017","f":"manum","l":"manus","m":377},{"i":"w018","f":"suam","l":"suus","p":",","m":8,"h":"w017"},{"i":"w019","f":"et","l":"et","m":15},{"i":"w020","f":"tétigit","l":"tango","m":195},{"i":"w021","f":"os","l":"os","m":97},{"i":"w022","f":"meum","l":"meus","p":",","m":137,"s":true},{"i":"w023","f":"et","l":"et","m":15},{"i":"w024","f":"dixit","l":"dico","m":195},{"i":"w025","f":"mihi","l":"ego","p":".","m":139}]}
+  ]
+}

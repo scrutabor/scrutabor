@@ -88,7 +88,8 @@ describe('what the concordance is built from', () => {
 		const byDay = new Map<string, number[]>();
 		for (const key of proper) {
 			const slug = key.split('/')[1];
-			const day = slug.replace(/-[^-]+$/, '');
+			const prefix = slug.replace(/-[^-]+$/, '');
+			const day = PROPER_DAYS.find((item) => (item.textPrefix ?? item.id) === prefix)?.id ?? prefix;
 			expect(properRank(slug), `${slug} names no known part`).not.toBe(-1);
 			byDay.set(day, [...(byDay.get(day) ?? []), properRank(slug)]);
 		}

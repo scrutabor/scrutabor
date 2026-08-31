@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-x-post-pentecosten-graduale",
+  "title":"Custódi me, Dómine, ut pupíllam óculi: sub",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-x-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Custódi","l":"custodio","m":6},{"i":"w002","f":"me","l":"ego","p":",","m":4},{"i":"w003","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w004","f":"ut","l":"ut","m":15},{"i":"w005","f":"pupíllam","l":"pupilla","m":141},{"i":"w006","f":"óculi","l":"oculus","p":":","m":118},{"i":"w007","f":"sub","l":"sub","m":0,"h":"w008"},{"i":"w008","f":"umbra","l":"umbra","m":30},{"i":"w009","f":"alárum","l":"ala","m":147},{"i":"w010","f":"tuárum","l":"tuus","m":110,"h":"w009"},{"i":"w011","f":"prótege","l":"protego","m":86},{"i":"w012","f":"me","l":"ego","p":".","m":4},{"i":"w013","f":"De","l":"de","m":0,"h":"w014"},{"i":"w014","f":"vultu","l":"vultus","m":100},{"i":"w015","f":"tuo","l":"tuus","m":101,"s":true},{"i":"w016","f":"iudícium","l":"iudicium","m":82},{"i":"w017","f":"meum","l":"meus","m":105,"s":true},{"i":"w018","f":"pródeat","l":"prodeo","p":":","m":198},{"i":"w019","f":"óculi","l":"oculus","m":118},{"i":"w020","f":"tui","l":"tuus","m":99,"s":true},{"i":"w021","f":"vídeant","l":"video","m":373},{"i":"w022","f":"æquitátem","l":"aequitas","p":".","m":7}]}
+  ]
+}

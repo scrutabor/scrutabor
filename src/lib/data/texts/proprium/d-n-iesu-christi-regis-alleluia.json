@@ -1,0 +1,14 @@
+{
+  "id":"proprium.d-n-iesu-christi-regis-alleluia",
+  "title":"Allelúia, allelúia. Potéstas eius, potéstas ætérna, quæ",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"d-n-iesu-christi-regis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Potéstas","l":"potestas","m":20},{"i":"w004","f":"eius","l":"is","p":",","m":27},{"i":"w005","f":"potéstas","l":"potestas","m":20},{"i":"w006","f":"ætérna","l":"aeternus","p":",","m":25,"h":"w007"},{"i":"w007","f":"quæ","l":"qui","m":143},{"i":"w008","f":"non","l":"non","m":32},{"i":"w009","f":"auferétur","l":"aufero","p":":","m":565},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"regnum","l":"regnum","m":104},{"i":"w012","f":"eius","l":"is","p":",","m":27},{"i":"w013","f":"quod","l":"qui","m":189},{"i":"w014","f":"non","l":"non","m":32},{"i":"w015","f":"corrumpétur","l":"corrumpo","p":".","m":345},{"i":"w016","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

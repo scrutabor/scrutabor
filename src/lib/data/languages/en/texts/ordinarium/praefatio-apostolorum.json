@@ -1,0 +1,12 @@
+{
+  "id":"ordinarium.praefatio-apostolorum",
+  "language":"en",
+  "about":"The Preface of the Apostles. It asks the eternal Shepherd not to forsake His flock, but to preserve it under the protection of the Apostles and their successors.",
+  "seg":[
+    {"id":"s01","nr":"Then the priest separates his hands and holds them apart until the end of the Preface. When it is finished, he joins them again and, bowing, says: Sanctus."},
+    {"id":"s02","tr":"It is truly meet and just, right and profitable for salvation:","g":["truly","right","and","just","is","proper","and","salutary"]},
+    {"id":"s03","tr":"To entreat Thee humbly, O Lord, that Thou, eternal Shepherd, wouldst not forsake Thy flock, but through Thy blessed Apostles wouldst keep it under constant protection:","g":["thee","Lord","suppliantly, in an attitude of humble entreaty","beseech","that","flock","thy","shepherd","eternal","not","forsake","but","through","blessed","Apostleses","thy","continual","protection","guard"]},
+    {"id":"s04","tr":"That it may be governed by those same rulers whom Thou didst appoint over it as pastors and vicars of Thy work.","g":["that","the same","rulers","guide","whom","work","thy","vicars","the same","discuss/debate/confer","preside","shepherds"]},
+    {"id":"s05","tr":"And therefore with Angels and Archangels, with Thrones and Dominions, and with all the hosts of the heavenly army, we sing the hymn of Thy glory, evermore saying:","g":["and","therefore","with","Angelses","and","Archangelses","with","Throneses","and","Dominationses","with","every","host","heavenly","host","hymn","of glory","thy","sing","without","end","saying"]}
+  ]
+}

@@ -1,0 +1,78 @@
+{
+ "id": "proprium.immaculatum-cor-beatae-mariae-virginis-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "pinned source key Sancti/08-22; resolved section [Introitus] with declared inherited references"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.immaculatum-cor-beatae-mariae-virginis-introitus.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+    }
+   ],
+   "verified_on": "2026-08-31"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 647",
+    "scan": "leaf n727 / PDF p. 728",
+    "page_url": "https://archive.org/download/missale_romanum-1962/page/n727/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.immaculatum-cor-beatae-mariae-virginis-introitus.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+    }
+   ],
+   "verified_on": "2026-08-31"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.immaculatum-cor-beatae-mariae-virginis-introitus.do44667ff",
+   "text": "proprium.immaculatum-cor-beatae-mariae-virginis-introitus",
+   "use": "use.proprium.immaculatum-cor-beatae-mariae-virginis-introitus.do44667ff",
+   "role": "derived_comparison",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
+  },
+  {
+   "id": "witness.proprium.immaculatum-cor-beatae-mariae-virginis-introitus.mr1962",
+   "text": "proprium.immaculatum-cor-beatae-mariae-virginis-introitus",
+   "use": "use.proprium.immaculatum-cor-beatae-mariae-virginis-introitus.mr1962",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.immaculatum-cor-beatae-mariae-virginis-introitus.mr1962-do44667ff",
+  "text": "proprium.immaculatum-cor-beatae-mariae-virginis-introitus",
+  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "witnesses": [
+   "witness.proprium.immaculatum-cor-beatae-mariae-virginis-introitus.do44667ff",
+   "witness.proprium.immaculatum-cor-beatae-mariae-virginis-introitus.mr1962"
+  ],
+  "apparatus": {
+   "entries": 0,
+   "classes": []
+  }
+ }
+}

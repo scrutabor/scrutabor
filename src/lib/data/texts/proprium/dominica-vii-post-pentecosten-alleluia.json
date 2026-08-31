@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-vii-post-pentecosten-alleluia",
+  "title":"Allelúia, allelúia. Omnes gentes, pláudite mánibus: iubiláte",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-vii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Omnes","l":"omnis","m":180,"h":"w004"},{"i":"w004","f":"gentes","l":"gens","p":",","m":16},{"i":"w005","f":"pláudite","l":"plaudo","m":155},{"i":"w006","f":"mánibus","l":"manus","p":":","m":317},{"i":"w007","f":"iubiláte","l":"iubilo","m":158},{"i":"w008","f":"Deo","l":"deus","m":186},{"i":"w009","f":"in","l":"in","m":0,"h":"w010"},{"i":"w010","f":"voce","l":"vox","m":45},{"i":"w011","f":"exsultatiónis","l":"exsultatio","p":".","m":13},{"i":"w012","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.commemoratio-omnium-fidelium-defunctorum-missa-ii-collecta",
+  "title":"Deus, indulgentiárum Dómine: da animábus famulórum famularúmque",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"commemoratio-omnium-fidelium-defunctorum-missa-ii",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Deus","l":"deus","p":",","m":60},{"i":"w002","f":"indulgentiárum","l":"indulgentia","m":147},{"i":"w003","f":"Dómine","l":"dominus","p":":","m":5},{"i":"w004","f":"da","l":"do","m":41},{"i":"w005","f":"animábus","l":"anima","m":454},{"i":"w006","f":"famulórum","l":"famulus","m":79},{"i":"w007","f":"famularúmque","l":"famula","m":147},{"i":"w008","f":"tuárum","l":"tuus","m":110,"h":"w007"},{"i":"w009","f":"refrigérii","l":"refrigerium","m":68},{"i":"w010","f":"sedem","l":"sedes","p":",","m":7},{"i":"w011","f":"quiétis","l":"quies","m":13},{"i":"w012","f":"beatitúdinem","l":"beatitudo","m":7},{"i":"w013","f":"et","l":"et","m":15},{"i":"w014","f":"lúminis","l":"lumen","m":75},{"i":"w015","f":"claritátem","l":"claritas","p":".","m":7},{"i":"w016","f":"Per","l":"per","m":3,"h":"w017"},{"i":"w017","f":"Dóminum","l":"dominus","m":35},{"i":"w018","f":"nostrum","l":"noster","m":96,"h":"w019"},{"i":"w019","f":"Iesum","l":"Iesus","m":38},{"i":"w020","f":"Christum","l":"Christus","p":",","m":35},{"i":"w021","f":"Fílium","l":"filius","m":35},{"i":"w022","f":"tuum","l":"tuus","p":":","m":96,"h":"w021"},{"i":"w023","f":"Qui","l":"qui","m":18},{"i":"w024","f":"tecum","l":"tu","m":131},{"i":"w025","f":"vivit","l":"vivo","m":140},{"i":"w026","f":"et","l":"et","m":15},{"i":"w027","f":"regnat","l":"regno","m":119},{"i":"w028","f":"in","l":"in","m":0,"h":"w029"},{"i":"w029","f":"unitáte","l":"unitas","m":45},{"i":"w030","f":"Spíritus","l":"spiritus","m":250},{"i":"w031","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w030"},{"i":"w032","f":"Deus","l":"deus","p":",","m":60},{"i":"w033","f":"per","l":"per","m":3,"h":"w035"},{"i":"w034","f":"ómnia","l":"omnis","m":129,"h":"w035"},{"i":"w035","f":"sǽcula","l":"saeculum","m":85},{"i":"w036","f":"sæculórum","l":"saeculum","p":".","m":145},{"i":"w037","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

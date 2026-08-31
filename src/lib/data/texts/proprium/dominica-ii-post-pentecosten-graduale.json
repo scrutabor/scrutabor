@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-ii-post-pentecosten-graduale",
+  "title":"Ad Dóminum, cum tribulárer, clamávi, et exaudívit",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-ii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Ad","l":"ad","m":3,"h":"w002"},{"i":"w002","f":"Dóminum","l":"dominus","p":",","m":35},{"i":"w003","f":"cum","l":"cum","m":15},{"i":"w004","f":"tribulárer","l":"tribulo","p":",","m":601},{"i":"w005","f":"clamávi","l":"clamo","p":",","m":2},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"exaudívit","l":"exaudio","m":293},{"i":"w008","f":"me","l":"ego","p":".","m":4},{"i":"w009","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w010","f":"líbera","l":"libero","m":41},{"i":"w011","f":"ánimam","l":"anima","m":141},{"i":"w012","f":"meam","l":"meus","m":8,"h":"w011"},{"i":"w013","f":"a","l":"a","m":0,"h":"w014"},{"i":"w014","f":"lábiis","l":"labium","m":1},{"i":"w015","f":"iníquis","l":"iniquus","p":",","m":126,"s":true},{"i":"w016","f":"et","l":"et","m":15},{"i":"w017","f":"a","l":"a","m":0,"h":"w018"},{"i":"w018","f":"lingua","l":"lingua","m":30},{"i":"w019","f":"dolósa","l":"dolosus","p":".","m":31,"s":true}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sanctae-annae-matris-beatae-mariae-virginis-communio",
+  "title":"Diffúsa est grátia in lábiis tuis: proptérea",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sanctae-annae-matris-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Diffúsa","l":"diffundo","m":492,"s":true},{"i":"w002","f":"est","l":"sum","m":21},{"i":"w003","f":"grátia","l":"gratia","m":30},{"i":"w004","f":"in","l":"in","m":0,"h":"w005"},{"i":"w005","f":"lábiis","l":"labium","m":1},{"i":"w006","f":"tuis","l":"tuus","p":":","m":236,"s":true},{"i":"w007","f":"proptérea","l":"propterea","m":32},{"i":"w008","f":"benedíxit","l":"benedico","m":195},{"i":"w009","f":"te","l":"tu","m":131},{"i":"w010","f":"Deus","l":"deus","m":60},{"i":"w011","f":"in","l":"in","m":3,"h":"w012"},{"i":"w012","f":"ætérnum","l":"aeternus","p":",","m":137,"s":true},{"i":"w013","f":"et","l":"et","m":15},{"i":"w014","f":"in","l":"in","m":3,"h":"w015"},{"i":"w015","f":"sǽculum","l":"saeculum","m":82},{"i":"w016","f":"sǽculi","l":"saeculum","p":".","m":68},{"i":"w017","f":"Allelúia","l":"alleluia","p":".)","m":46}]}
+  ]
+}

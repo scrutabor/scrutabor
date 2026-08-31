@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-v-post-pentecosten-offertorium",
+  "title":"Benedícam Dóminum, qui tríbuit mihi intelléctum: providébam",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-v-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Benedícam","l":"benedico","m":320},{"i":"w002","f":"Dóminum","l":"dominus","p":",","m":35},{"i":"w003","f":"qui","l":"qui","m":18},{"i":"w004","f":"tríbuit","l":"tribuo","m":195},{"i":"w005","f":"mihi","l":"ego","m":139},{"i":"w006","f":"intelléctum","l":"intellectus","p":":","m":160},{"i":"w007","f":"providébam","l":"provideo","m":632},{"i":"w008","f":"Deum","l":"deus","m":35},{"i":"w009","f":"in","l":"in","m":0,"h":"w010"},{"i":"w010","f":"conspéctu","l":"conspectus","m":100},{"i":"w011","f":"meo","l":"meus","m":101,"s":true},{"i":"w012","f":"semper","l":"semper","p":":","m":32},{"i":"w013","f":"quóniam","l":"quoniam","m":15},{"i":"w014","f":"a","l":"a","m":0,"h":"w017"},{"i":"w015","f":"dextris","l":"dexter","m":126,"s":true},{"i":"w016","f":"est","l":"sum","m":21},{"i":"w017","f":"mihi","l":"ego","p":",","m":131},{"i":"w018","f":"ne","l":"ne","m":15},{"i":"w019","f":"commóvear","l":"commoveo","p":".","m":633}]}
+  ]
+}

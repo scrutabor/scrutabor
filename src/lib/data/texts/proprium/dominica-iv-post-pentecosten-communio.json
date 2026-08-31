@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-iv-post-pentecosten-communio",
+  "title":"Dóminus firmaméntum meum, et refúgium meum, et",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-iv-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Dóminus","l":"dominus","m":60},{"i":"w002","f":"firmaméntum","l":"firmamentum","m":104},{"i":"w003","f":"meum","l":"meus","p":",","m":137,"s":true},{"i":"w004","f":"et","l":"et","m":15},{"i":"w005","f":"refúgium","l":"refugium","m":71},{"i":"w006","f":"meum","l":"meus","p":",","m":137,"s":true},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"liberátor","l":"liberator","m":113},{"i":"w009","f":"meus","l":"meus","p":":","m":59,"h":"w008"},{"i":"w010","f":"Deus","l":"deus","m":60},{"i":"w011","f":"meus","l":"meus","p":",","m":59,"h":"w012"},{"i":"w012","f":"adiútor","l":"adiutor","m":113},{"i":"w013","f":"meus","l":"meus","p":".","m":59,"h":"w012"}]}
+  ]
+}

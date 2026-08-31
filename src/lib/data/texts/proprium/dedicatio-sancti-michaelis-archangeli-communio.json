@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dedicatio-sancti-michaelis-archangeli-communio",
+  "title":"Benedícite, omnes Angeli Dómini, Dóminum: hymnum dícite",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dedicatio-sancti-michaelis-archangeli",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Benedícite","l":"benedico","p":",","m":155},{"i":"w002","f":"omnes","l":"omnis","m":180,"s":true},{"i":"w003","f":"Ángeli","l":"angelus","m":118},{"i":"w004","f":"Dómini","l":"dominus","p":",","m":54},{"i":"w005","f":"Dóminum","l":"dominus","p":":","m":35},{"i":"w006","f":"hymnum","l":"hymnus","m":35},{"i":"w007","f":"dícite","l":"dico","m":155},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"superexaltáte","l":"superexalto","m":158},{"i":"w010","f":"eum","l":"is","m":36},{"i":"w011","f":"in","l":"in","m":3,"h":"w012"},{"i":"w012","f":"sǽcula","l":"saeculum","p":",","m":85},{"i":"w013","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

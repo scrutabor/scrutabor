@@ -1,0 +1,14 @@
+{
+  "id":"proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-communio",
+  "title":"Lux ætérna lúceat eis, Dómine: Cum Sanctis",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"commemoratio-omnium-fidelium-defunctorum-missa-i",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Lux","l":"lux","m":20},{"i":"w002","f":"ætérna","l":"aeternus","m":25,"h":"w001"},{"i":"w003","f":"lúceat","l":"luceo","m":43},{"i":"w004","f":"eis","l":"is","p":",","m":42},{"i":"w005","f":"Dómine","l":"dominus","p":":","m":5},{"i":"w006","f":"Cum","l":"cum","m":0,"h":"w008"},{"i":"w007","f":"Sanctis","l":"sanctus","m":204,"s":true},{"i":"w008","f":"tuis","l":"tuus","m":204,"s":true},{"i":"w009","f":"in","l":"in","m":3,"h":"w012"},{"i":"w010","f":"ætérnum","l":"aeternus","p":":","m":137,"s":true},{"i":"w011","f":"quia","l":"quia","m":15},{"i":"w012","f":"pius","l":"pius","m":96,"s":true},{"i":"w013","f":"es","l":"sum","p":".","m":191},{"i":"w014","f":"Réquiem","l":"requies","m":7},{"i":"w015","f":"ætérnam","l":"aeternus","m":8,"h":"w014"},{"i":"w016","f":"dona","l":"donum","m":85},{"i":"w017","f":"eis","l":"is","p":",","m":42},{"i":"w018","f":"Dómine","l":"dominus","p":":","m":5},{"i":"w019","f":"et","l":"et","m":15},{"i":"w020","f":"lux","l":"lux","m":20},{"i":"w021","f":"perpétua","l":"perpetuus","m":25,"h":"w020"},{"i":"w022","f":"lúceat","l":"luceo","m":43},{"i":"w023","f":"eis","l":"is","p":".","m":42},{"i":"w024","f":"Cum","l":"cum","m":0,"h":"w026"},{"i":"w025","f":"Sanctis","l":"sanctus","m":204,"s":true},{"i":"w026","f":"tuis","l":"tuus","m":204,"s":true},{"i":"w027","f":"in","l":"in","m":3,"h":"w030"},{"i":"w028","f":"ætérnum","l":"aeternus","p":":","m":137,"s":true},{"i":"w029","f":"quia","l":"quia","m":15},{"i":"w030","f":"pius","l":"pius","m":96,"s":true},{"i":"w031","f":"es","l":"sum","p":".","m":191}]}
+  ]
+}

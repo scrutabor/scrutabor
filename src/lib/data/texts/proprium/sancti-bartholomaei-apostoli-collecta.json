@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-bartholomaei-apostoli-collecta",
+  "title":"Omnípotens sempitérne Deus, qui huius diei venerándam",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-bartholomaei-apostoli",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Omnípotens","l":"omnipotens","m":56,"s":true},{"i":"w002","f":"sempitérne","l":"sempiternus","m":56,"s":true},{"i":"w003","f":"Deus","l":"deus","p":",","m":60},{"i":"w004","f":"qui","l":"qui","m":18},{"i":"w005","f":"huius","l":"hic","m":192},{"i":"w006","f":"díei","l":"dies","m":739},{"i":"w007","f":"venerándam","l":"venero","m":679,"h":"w009"},{"i":"w008","f":"sanctámque","l":"sanctus","m":8,"h":"w009"},{"i":"w009","f":"lætítiam","l":"laetitia","m":141},{"i":"w010","f":"in","l":"in","m":0,"h":"w015"},{"i":"w011","f":"beáti","l":"beatus","m":99,"h":"w012"},{"i":"w012","f":"Apóstoli","l":"apostolus","m":54},{"i":"w013","f":"tui","l":"tuus","m":99,"h":"w014"},{"i":"w014","f":"Bartholomǽi","l":"Bartholomaeus","m":54},{"i":"w015","f":"festivitáte","l":"festivitas","m":45},{"i":"w016","f":"tribuísti","l":"tribuo","p":":","m":154},{"i":"w017","f":"da","l":"do","m":41},{"i":"w018","f":"Ecclésiæ","l":"ecclesia","m":64},{"i":"w019","f":"tuæ","l":"tuus","p":",","m":14,"h":"w018"},{"i":"w020","f":"quǽsumus","l":"quaeso","p":";","m":92},{"i":"w021","f":"et","l":"et","m":15},{"i":"w022","f":"amáre","l":"amo","m":239},{"i":"w023","f":"quod","l":"qui","m":189},{"i":"w024","f":"crédidit","l":"credo","p":",","m":195},{"i":"w025","f":"et","l":"et","m":15},{"i":"w026","f":"prædicáre","l":"praedico","m":239},{"i":"w027","f":"quod","l":"qui","m":189},{"i":"w028","f":"dócuit","l":"doceo","p":".","m":23},{"i":"w029","f":"Per","l":"per","m":3,"h":"w030"},{"i":"w030","f":"Dóminum","l":"dominus","m":35},{"i":"w031","f":"nostrum","l":"noster","m":96,"h":"w032"},{"i":"w032","f":"Iesum","l":"Iesus","m":38},{"i":"w033","f":"Christum","l":"Christus","p":",","m":35},{"i":"w034","f":"Fílium","l":"filius","m":35},{"i":"w035","f":"tuum","l":"tuus","p":":","m":96,"h":"w034"},{"i":"w036","f":"Qui","l":"qui","m":18},{"i":"w037","f":"tecum","l":"tu","m":131},{"i":"w038","f":"vivit","l":"vivo","m":140},{"i":"w039","f":"et","l":"et","m":15},{"i":"w040","f":"regnat","l":"regno","m":119},{"i":"w041","f":"in","l":"in","m":0,"h":"w042"},{"i":"w042","f":"unitáte","l":"unitas","m":45},{"i":"w043","f":"Spíritus","l":"spiritus","m":250},{"i":"w044","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w043"},{"i":"w045","f":"Deus","l":"deus","p":",","m":60},{"i":"w046","f":"per","l":"per","m":3,"h":"w048"},{"i":"w047","f":"ómnia","l":"omnis","m":129,"h":"w048"},{"i":"w048","f":"sǽcula","l":"saeculum","m":85},{"i":"w049","f":"sæculórum","l":"saeculum","p":".","m":145},{"i":"w050","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

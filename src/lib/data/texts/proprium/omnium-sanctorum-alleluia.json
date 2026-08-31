@@ -1,0 +1,14 @@
+{
+  "id":"proprium.omnium-sanctorum-alleluia",
+  "title":"Allelúia, allelúia. Veníte ad me, omnes, qui",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"omnium-sanctorum",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Veníte","l":"venio","m":529},{"i":"w004","f":"ad","l":"ad","m":3,"h":"w005"},{"i":"w005","f":"me","l":"ego","p":",","m":4},{"i":"w006","f":"omnes","l":"omnis","p":",","m":180,"s":true},{"i":"w007","f":"qui","l":"qui","m":18},{"i":"w008","f":"laborátis","l":"laboro","m":669},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"oneráti","l":"onero","m":323,"s":true},{"i":"w011","f":"estis","l":"sum","p":":","m":621},{"i":"w012","f":"et","l":"et","m":15},{"i":"w013","f":"ego","l":"ego","m":143},{"i":"w014","f":"refíciam","l":"reficio","m":320},{"i":"w015","f":"vos","l":"vos","p":".","m":49},{"i":"w016","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

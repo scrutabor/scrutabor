@@ -1,0 +1,14 @@
+{
+  "id":"ordinarium.praefatio-sanctae-crucis",
+  "language":"en",
+  "about":"The Preface of the Holy Cross. It praises the saving tree of the Cross, where the source of death became the source of life and the victor by a tree was overcome upon a tree.",
+  "seg":[
+    {"id":"s01","nr":"Then the priest separates his hands and holds them apart until the end of the Preface. When it is finished, he joins them again and, bowing, says: Sanctus."},
+    {"id":"s02","tr":"It is truly meet and just, right and profitable for salvation, that we should at all times and in all places give thanks unto Thee:","g":["truly","right","and","just","is","proper","and","salutary","us","thee","always","and","everywhere","thankses","give"]},
+    {"id":"s03","tr":"O holy Lord, Father almighty, eternal God:","g":["Lord","holy","Father","almighty","eternal","God"]},
+    {"id":"s04","tr":"Who didst establish the salvation of mankind upon the tree of the Cross, that whence death arose, thence life might rise again, and that he who conquered by a tree might also by a tree be conquered: through Christ our Lord.","g":["who","salvation","human","race","in","tree","cross","establish/create/institute","that","wherefore","death","arise","from there","life","to rise again","and","who","in","tree","conquer","in","tree","also","conquer","through","Christ","the Lord","our"]},
+    {"id":"s05","tr":"Through Whom the Angels praise Thy majesty, the Dominions adore it, and the Powers tremble before it.","g":["through","whom","majesty","thy","praise","angels","adore","the Dominationses","tremble","the Powerses"]},
+    {"id":"s06","tr":"The heavens, the heavenly Virtues, and the blessed Seraphim join in joyful celebration of Thy majesty.","g":["of heaven","and of the heavenses","powerses","and","blessed","Seraphims","shared","exultation","celebrate together"]},
+    {"id":"s07","tr":"We beseech Thee to admit our voices to join theirs as we speak in humble confession:","g":["with","who","and","our","voiceses","that","be admitted","bid","we pray","humble","confession","saying"]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.visitatio-beatae-mariae-virginis-communio",
+  "title":"Beáta víscera Maríæ Vírginis, quæ portavérunt ætérni",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"visitatio-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Beáta","l":"beatus","m":25,"s":true},{"i":"w002","f":"víscera","l":"viscus","m":482},{"i":"w003","f":"Maríæ","l":"Maria","m":64},{"i":"w004","f":"Vírginis","l":"virgo","p":",","m":13},{"i":"w005","f":"quæ","l":"qui","m":122},{"i":"w006","f":"portavérunt","l":"porto","m":408},{"i":"w007","f":"ætérni","l":"aeternus","m":99,"h":"w008"},{"i":"w008","f":"Patris","l":"pater","m":69},{"i":"w009","f":"Fílium","l":"filius","p":".","m":35},{"i":"w010","f":"Allelúia","l":"alleluia","p":".)","m":46}]}
+  ]
+}

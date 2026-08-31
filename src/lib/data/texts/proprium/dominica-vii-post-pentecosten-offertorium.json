@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-vii-post-pentecosten-offertorium",
+  "title":"Sicut in holocáustis aríetum et taurórum, et",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-vii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Sicut","l":"sicut","m":15},{"i":"w002","f":"in","l":"in","m":0,"h":"w003"},{"i":"w003","f":"holocáustis","l":"holocaustum","m":1},{"i":"w004","f":"aríetum","l":"aries","m":77},{"i":"w005","f":"et","l":"et","m":15},{"i":"w006","f":"taurórum","l":"taurus","p":",","m":79},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"sicut","l":"sicut","m":15},{"i":"w009","f":"in","l":"in","m":0,"h":"w010"},{"i":"w010","f":"mílibus","l":"mille","m":650},{"i":"w011","f":"agnórum","l":"agnus","m":79},{"i":"w012","f":"pínguium","l":"pinguis","p":":","m":76,"h":"w011"},{"i":"w013","f":"sic","l":"sic","m":32},{"i":"w014","f":"fiat","l":"fio","m":198},{"i":"w015","f":"sacrifícium","l":"sacrificium","m":104},{"i":"w016","f":"nostrum","l":"noster","m":96,"s":true},{"i":"w017","f":"in","l":"in","m":0,"h":"w018"},{"i":"w018","f":"conspéctu","l":"conspectus","m":100},{"i":"w019","f":"tuo","l":"tuus","m":101,"s":true},{"i":"w020","f":"hódie","l":"hodie","p":",","m":32},{"i":"w021","f":"ut","l":"ut","m":15},{"i":"w022","f":"pláceat","l":"placeo","m":43},{"i":"w023","f":"tibi","l":"tu","p":":","m":139},{"i":"w024","f":"quia","l":"quia","m":15},{"i":"w025","f":"non","l":"non","m":32},{"i":"w026","f":"est","l":"sum","m":21},{"i":"w027","f":"confúsio","l":"confusio","m":20},{"i":"w028","f":"confidéntibus","l":"confido","m":142,"s":true},{"i":"w029","f":"in","l":"in","m":0,"h":"w030"},{"i":"w030","f":"te","l":"tu","p":",","m":131},{"i":"w031","f":"Dómine","l":"dominus","p":".","m":5}]}
+  ]
+}

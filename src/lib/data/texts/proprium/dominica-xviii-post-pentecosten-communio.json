@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xviii-post-pentecosten-communio",
+  "title":"Tóllite hóstias, et introíte in átria eius",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xviii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Tóllite","l":"tollo","m":155},{"i":"w002","f":"hóstias","l":"hostia","p":",","m":169},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"introíte","l":"introeo","m":310},{"i":"w005","f":"in","l":"in","m":3,"h":"w006"},{"i":"w006","f":"átria","l":"atrium","m":85},{"i":"w007","f":"eius","l":"is","p":":","m":27},{"i":"w008","f":"adoráte","l":"adoro","m":158},{"i":"w009","f":"Dóminum","l":"dominus","m":35},{"i":"w010","f":"in","l":"in","m":0,"h":"w011"},{"i":"w011","f":"aula","l":"aula","m":30},{"i":"w012","f":"sancta","l":"sanctus","m":25,"s":true},{"i":"w013","f":"eius","l":"is","p":".","m":27}]}
+  ]
+}

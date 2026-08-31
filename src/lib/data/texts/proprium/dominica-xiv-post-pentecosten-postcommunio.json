@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xiv-post-pentecosten-postcommunio",
+  "title":"Puríficent semper et múniant tua sacraménta nos",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xiv-post-pentecosten",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Puríficent","l":"purifico","m":420},{"i":"w002","f":"semper","l":"semper","m":32},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"múniant","l":"munio","m":589},{"i":"w005","f":"tua","l":"tuus","m":272,"h":"w006"},{"i":"w006","f":"sacraménta","l":"sacramentum","m":274},{"i":"w007","f":"nos","l":"nos","p":",","m":49},{"i":"w008","f":"Deus","l":"deus","p":":","m":60},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"ad","l":"ad","m":3,"h":"w014"},{"i":"w011","f":"perpétuæ","l":"perpetuus","m":14,"s":true},{"i":"w012","f":"ducant","l":"duco","m":44},{"i":"w013","f":"salvatiónis","l":"salvatio","m":13},{"i":"w014","f":"efféctum","l":"effectus","p":".","m":160},{"i":"w015","f":"Per","l":"per","m":3,"h":"w016"},{"i":"w016","f":"Dóminum","l":"dominus","m":35},{"i":"w017","f":"nostrum","l":"noster","m":96,"h":"w018"},{"i":"w018","f":"Iesum","l":"Iesus","m":38},{"i":"w019","f":"Christum","l":"Christus","p":",","m":35},{"i":"w020","f":"Fílium","l":"filius","m":35},{"i":"w021","f":"tuum","l":"tuus","p":":","m":96,"h":"w020"},{"i":"w022","f":"Qui","l":"qui","m":18},{"i":"w023","f":"tecum","l":"tu","m":131},{"i":"w024","f":"vivit","l":"vivo","m":140},{"i":"w025","f":"et","l":"et","m":15},{"i":"w026","f":"regnat","l":"regno","m":119},{"i":"w027","f":"in","l":"in","m":0,"h":"w028"},{"i":"w028","f":"unitáte","l":"unitas","m":45},{"i":"w029","f":"Spíritus","l":"spiritus","m":250},{"i":"w030","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w029"},{"i":"w031","f":"Deus","l":"deus","p":",","m":60},{"i":"w032","f":"per","l":"per","m":3,"h":"w034"},{"i":"w033","f":"ómnia","l":"omnis","m":129,"h":"w034"},{"i":"w034","f":"sǽcula","l":"saeculum","m":85},{"i":"w035","f":"sæculórum","l":"saeculum","p":".","m":145},{"i":"w036","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

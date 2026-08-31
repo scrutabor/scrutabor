@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sanctae-annae-matris-beatae-mariae-virginis-offertorium",
+  "title":"Fíliæ regum in honóre tuo, ástitit regína",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sanctae-annae-matris-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Fíliæ","l":"filia","m":64},{"i":"w002","f":"regum","l":"rex","m":77},{"i":"w003","f":"in","l":"in","m":0,"h":"w004"},{"i":"w004","f":"honóre","l":"honor","m":109},{"i":"w005","f":"tuo","l":"tuus","p":",","m":101,"s":true},{"i":"w006","f":"ástitit","l":"asto","m":28},{"i":"w007","f":"regína","l":"regina","m":61},{"i":"w008","f":"a","l":"a","m":0,"h":"w010"},{"i":"w009","f":"dextris","l":"dexter","m":126,"s":true},{"i":"w010","f":"tuis","l":"tuus","m":204,"s":true},{"i":"w011","f":"in","l":"in","m":0,"h":"w012"},{"i":"w012","f":"vestítu","l":"vestitus","m":100},{"i":"w013","f":"deauráto","l":"deauro","p":",","m":515,"s":true},{"i":"w014","f":"circúmdata","l":"circumdo","m":711,"h":"w015"},{"i":"w015","f":"varietáte","l":"varietas","p":".","m":45},{"i":"w016","f":"Allelúia","l":"alleluia","p":".)","m":46}]}
+  ]
+}

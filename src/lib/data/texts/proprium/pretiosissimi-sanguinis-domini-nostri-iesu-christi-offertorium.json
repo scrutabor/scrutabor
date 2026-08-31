@@ -1,0 +1,14 @@
+{
+  "id":"proprium.pretiosissimi-sanguinis-domini-nostri-iesu-christi-offertorium",
+  "title":"Calix benedictiónis, cui benedícimus, nonne communicátio sánguinis",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"pretiosissimi-sanguinis-domini-nostri-iesu-christi",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Calix","l":"calix","m":113},{"i":"w002","f":"benedictiónis","l":"benedictio","p":",","m":13},{"i":"w003","f":"cui","l":"qui","m":245},{"i":"w004","f":"benedícimus","l":"benedico","p":",","m":92},{"i":"w005","f":"nonne","l":"non","m":32},{"i":"w006","f":"communicátio","l":"communicatio","m":20},{"i":"w007","f":"sánguinis","l":"sanguis","m":69},{"i":"w008","f":"Christi","l":"Christus","m":54},{"i":"w009","f":"est","l":"sum","p":"?","m":21},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"panis","l":"panis","p":",","m":113},{"i":"w012","f":"quem","l":"qui","m":36},{"i":"w013","f":"frángimus","l":"frango","p":",","m":92},{"i":"w014","f":"nonne","l":"non","m":32},{"i":"w015","f":"participátio","l":"participatio","m":20},{"i":"w016","f":"córporis","l":"corpus","m":75},{"i":"w017","f":"Dómini","l":"dominus","m":54},{"i":"w018","f":"est","l":"sum","p":"?","m":21}]}
+  ]
+}

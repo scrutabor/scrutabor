@@ -1,0 +1,14 @@
+{
+  "id":"proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-tractus",
+  "title":"Absólve, Dómine, ánimas ómnium fidélium ab omni",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"commemoratio-omnium-fidelium-defunctorum-missa-i",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Absólve","l":"absolvo","p":",","m":86},{"i":"w002","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w003","f":"ánimas","l":"anima","m":169},{"i":"w004","f":"ómnium","l":"omnis","m":76,"s":true},{"i":"w005","f":"fidélium","l":"fidelis","m":76,"s":true},{"i":"w006","f":"ab","l":"ab","m":0,"h":"w008"},{"i":"w007","f":"omni","l":"omnis","m":31,"s":true},{"i":"w008","f":"vínculo","l":"vinculum","m":26},{"i":"w009","f":"delictórum","l":"delictum","p":".","m":145},{"i":"w010","f":"Et","l":"et","m":15},{"i":"w011","f":"grátia","l":"gratia","m":30},{"i":"w012","f":"tua","l":"tuus","m":31,"h":"w011"},{"i":"w013","f":"illis","l":"ille","m":42},{"i":"w014","f":"succurrénte","l":"succurro","p":",","m":211,"h":"w011"},{"i":"w015","f":"mereántur","l":"mereo","m":550},{"i":"w016","f":"evádere","l":"evado","m":185},{"i":"w017","f":"iudícium","l":"iudicium","m":82},{"i":"w018","f":"ultiónis","l":"ultio","p":".","m":13},{"i":"w019","f":"Et","l":"et","m":15},{"i":"w020","f":"lucis","l":"lux","m":13},{"i":"w021","f":"ætérnæ","l":"aeternus","m":14,"h":"w020"},{"i":"w022","f":"beatitúdine","l":"beatitudo","m":45},{"i":"w023","f":"pérfrui","l":"perfruor","p":".","m":95}]}
+  ]
+}

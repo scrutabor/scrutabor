@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-vii-post-pentecosten-collecta",
+  "title":"Deus, cuius providéntia in sui dispositióne non",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-vii-post-pentecosten",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Deus","l":"deus","p":",","m":60},{"i":"w002","f":"cuius","l":"qui","m":192},{"i":"w003","f":"providéntia","l":"providentia","m":24},{"i":"w004","f":"in","l":"in","m":0,"h":"w006"},{"i":"w005","f":"sui","l":"sui","m":192},{"i":"w006","f":"dispositióne","l":"dispositio","m":45},{"i":"w007","f":"non","l":"non","m":32},{"i":"w008","f":"fállitur","l":"fallo","p":":","m":422},{"i":"w009","f":"te","l":"tu","m":131},{"i":"w010","f":"súpplices","l":"supplex","m":87,"s":true},{"i":"w011","f":"exorámus","l":"exoro","p":";","m":241},{"i":"w012","f":"ut","l":"ut","m":15},{"i":"w013","f":"nóxia","l":"noxius","m":129,"s":true},{"i":"w014","f":"cuncta","l":"cunctus","m":129,"s":true},{"i":"w015","f":"submóveas","l":"submoveo","p":",","m":306},{"i":"w016","f":"et","l":"et","m":15},{"i":"w017","f":"ómnia","l":"omnis","m":129,"s":true},{"i":"w018","f":"nobis","l":"nos","m":53},{"i":"w019","f":"profutúra","l":"prosum","m":646,"s":true},{"i":"w020","f":"concédas","l":"concedo","p":".","m":202},{"i":"w021","f":"Per","l":"per","m":3,"h":"w022"},{"i":"w022","f":"Dóminum","l":"dominus","m":35},{"i":"w023","f":"nostrum","l":"noster","m":96,"h":"w024"},{"i":"w024","f":"Iesum","l":"Iesus","m":38},{"i":"w025","f":"Christum","l":"Christus","p":",","m":35},{"i":"w026","f":"Fílium","l":"filius","m":35},{"i":"w027","f":"tuum","l":"tuus","p":":","m":96,"h":"w026"},{"i":"w028","f":"Qui","l":"qui","m":18},{"i":"w029","f":"tecum","l":"tu","m":131},{"i":"w030","f":"vivit","l":"vivo","m":140},{"i":"w031","f":"et","l":"et","m":15},{"i":"w032","f":"regnat","l":"regno","m":119},{"i":"w033","f":"in","l":"in","m":0,"h":"w034"},{"i":"w034","f":"unitáte","l":"unitas","m":45},{"i":"w035","f":"Spíritus","l":"spiritus","m":250},{"i":"w036","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w035"},{"i":"w037","f":"Deus","l":"deus","p":",","m":60},{"i":"w038","f":"per","l":"per","m":3,"h":"w040"},{"i":"w039","f":"ómnia","l":"omnis","m":129,"h":"w040"},{"i":"w040","f":"sǽcula","l":"saeculum","m":85},{"i":"w041","f":"sæculórum","l":"saeculum","p":".","m":145},{"i":"w042","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

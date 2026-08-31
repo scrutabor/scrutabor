@@ -1,0 +1,14 @@
+{
+  "id":"proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-graduale",
+  "title":"Réquiem ætérnam dona eis, Dómine: et lux",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"commemoratio-omnium-fidelium-defunctorum-missa-i",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Réquiem","l":"requies","m":7},{"i":"w002","f":"ætérnam","l":"aeternus","m":8,"h":"w001"},{"i":"w003","f":"dona","l":"donum","m":85},{"i":"w004","f":"eis","l":"is","p":",","m":42},{"i":"w005","f":"Dómine","l":"dominus","p":":","m":5},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"lux","l":"lux","m":20},{"i":"w008","f":"perpétua","l":"perpetuus","m":25,"h":"w007"},{"i":"w009","f":"lúceat","l":"luceo","m":43},{"i":"w010","f":"eis","l":"is","p":".","m":42},{"i":"w011","f":"In","l":"in","m":0,"h":"w012"},{"i":"w012","f":"memória","l":"memoria","m":30},{"i":"w013","f":"ætérna","l":"aeternus","m":31,"s":true},{"i":"w014","f":"erit","l":"sum","m":277},{"i":"w015","f":"iustus","l":"iustus","p":":","m":59,"s":true},{"i":"w016","f":"ab","l":"ab","m":0,"h":"w017"},{"i":"w017","f":"auditióne","l":"auditio","m":45},{"i":"w018","f":"mala","l":"malus","m":31,"s":true},{"i":"w019","f":"non","l":"non","m":32},{"i":"w020","f":"timébit","l":"timeo","p":".","m":19}]}
+  ]
+}

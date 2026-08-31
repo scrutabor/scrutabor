@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-ix-post-pentecosten-alleluia",
+  "title":"Allelúia, allelúia. Eripe me de inimícis meis",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-ix-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Éripe","l":"eripio","m":86},{"i":"w004","f":"me","l":"ego","m":4},{"i":"w005","f":"de","l":"de","m":0,"h":"w006"},{"i":"w006","f":"inimícis","l":"inimicus","m":51},{"i":"w007","f":"meis","l":"meus","p":",","m":204,"s":true},{"i":"w008","f":"Deus","l":"deus","m":60},{"i":"w009","f":"meus","l":"meus","p":":","m":59,"h":"w008"},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"ab","l":"ab","m":0,"h":"w012"},{"i":"w012","f":"insurgéntibus","l":"insurgo","m":362,"s":true},{"i":"w013","f":"in","l":"in","m":0,"h":"w014"},{"i":"w014","f":"me","l":"ego","m":131},{"i":"w015","f":"líbera","l":"libero","m":41},{"i":"w016","f":"me","l":"ego","p":".","m":4},{"i":"w017","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

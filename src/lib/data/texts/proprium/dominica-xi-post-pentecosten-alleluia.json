@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xi-post-pentecosten-alleluia",
+  "title":"Allelúia, allelúia Exsultáte Deo, adiutóri nostro, iubiláte",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xi-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","m":46},{"i":"w003","f":"Exsultáte","l":"exsulto","m":158},{"i":"w004","f":"Deo","l":"deus","p":",","m":186},{"i":"w005","f":"adiutóri","l":"adiutor","m":214},{"i":"w006","f":"nostro","l":"noster","p":",","m":216,"h":"w005"},{"i":"w007","f":"iubiláte","l":"iubilo","m":158},{"i":"w008","f":"Deo","l":"deus","m":186},{"i":"w009","f":"Iacob","l":"Iacob","p":":","m":98},{"i":"w010","f":"súmite","l":"sumo","m":155},{"i":"w011","f":"psalmum","l":"psalmus","m":35},{"i":"w012","f":"iucúndum","l":"iucundus","m":96,"h":"w011"},{"i":"w013","f":"cum","l":"cum","m":0,"h":"w014"},{"i":"w014","f":"cíthara","l":"cithara","p":".","m":30},{"i":"w015","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

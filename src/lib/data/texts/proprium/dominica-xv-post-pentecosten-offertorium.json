@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xv-post-pentecosten-offertorium",
+  "title":"Exspéctans exspectávi Dóminum, et respéxit me: et",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xv-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Exspéctans","l":"exspecto","m":568,"s":true},{"i":"w002","f":"exspectávi","l":"exspecto","m":2},{"i":"w003","f":"Dóminum","l":"dominus","p":",","m":35},{"i":"w004","f":"et","l":"et","m":15},{"i":"w005","f":"respéxit","l":"respicio","m":195},{"i":"w006","f":"me","l":"ego","p":":","m":4},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"exaudívit","l":"exaudio","m":293},{"i":"w009","f":"deprecatiónem","l":"deprecatio","m":7},{"i":"w010","f":"meam","l":"meus","p":":","m":8,"h":"w009"},{"i":"w011","f":"et","l":"et","m":15},{"i":"w012","f":"immísit","l":"immitto","m":195},{"i":"w013","f":"in","l":"in","m":3,"h":"w014"},{"i":"w014","f":"os","l":"os","m":136},{"i":"w015","f":"meum","l":"meus","m":137,"h":"w016"},{"i":"w016","f":"cánticum","l":"canticum","m":82},{"i":"w017","f":"novum","l":"novus","p":",","m":105,"s":true},{"i":"w018","f":"hymnum","l":"hymnus","m":35},{"i":"w019","f":"Deo","l":"deus","m":186},{"i":"w020","f":"nostro","l":"noster","p":".","m":216,"h":"w019"}]}
+  ]
+}

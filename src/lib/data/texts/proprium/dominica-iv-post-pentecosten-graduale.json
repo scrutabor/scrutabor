@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-iv-post-pentecosten-graduale",
+  "title":"Propítius esto, Dómine, peccátis nostris: ne quando",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-iv-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Propítius","l":"propitius","m":59,"s":true},{"i":"w002","f":"esto","l":"sum","p":",","m":148},{"i":"w003","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w004","f":"peccátis","l":"peccatum","m":1},{"i":"w005","f":"nostris","l":"noster","p":":","m":126,"h":"w004"},{"i":"w006","f":"ne","l":"ne","m":15},{"i":"w007","f":"quando","l":"quando","m":15},{"i":"w008","f":"dicant","l":"dico","m":44},{"i":"w009","f":"gentes","l":"gens","p":":","m":16},{"i":"w010","f":"Ubi","l":"ubi","m":15},{"i":"w011","f":"est","l":"sum","m":21},{"i":"w012","f":"Deus","l":"deus","m":60},{"i":"w013","f":"eórum","l":"is","p":"?","m":255},{"i":"w014","f":"Ádiuva","l":"adiuvo","m":41},{"i":"w015","f":"nos","l":"nos","p":",","m":49},{"i":"w016","f":"Deus","l":"deus","p":",","m":60},{"i":"w017","f":"salutáris","l":"salutare","m":75},{"i":"w018","f":"noster","l":"noster","p":":","m":56,"s":true},{"i":"w019","f":"et","l":"et","m":15},{"i":"w020","f":"propter","l":"propter","m":3,"h":"w021"},{"i":"w021","f":"honórem","l":"honor","m":162},{"i":"w022","f":"nóminis","l":"nomen","m":75},{"i":"w023","f":"tui","l":"tuus","p":",","m":99,"s":true},{"i":"w024","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w025","f":"líbera","l":"libero","m":41},{"i":"w026","f":"nos","l":"nos","p":".","m":49}]}
+  ]
+}

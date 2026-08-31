@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xx-post-pentecosten-communio",
+  "title":"Meménto verbi tui servo tuo, Dómine, in",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xx-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Meménto","l":"memini","m":148},{"i":"w002","f":"verbi","l":"verbum","m":68},{"i":"w003","f":"tui","l":"tuus","m":99,"s":true},{"i":"w004","f":"servo","l":"servus","m":186},{"i":"w005","f":"tuo","l":"tuus","p":",","m":101,"s":true},{"i":"w006","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w007","f":"in","l":"in","m":0,"h":"w008"},{"i":"w008","f":"quo","l":"qui","m":131},{"i":"w009","f":"mihi","l":"ego","m":139},{"i":"w010","f":"spem","l":"spes","m":338},{"i":"w011","f":"dedísti","l":"do","p":":","m":283},{"i":"w012","f":"hæc","l":"hic","m":49},{"i":"w013","f":"me","l":"ego","m":4},{"i":"w014","f":"consoláta","l":"consolo","m":711,"s":true},{"i":"w015","f":"est","l":"sum","m":21},{"i":"w016","f":"in","l":"in","m":0,"h":"w017"},{"i":"w017","f":"humilitáte","l":"humilitas","m":45},{"i":"w018","f":"mea","l":"meus","p":".","m":25,"s":true}]}
+  ]
+}

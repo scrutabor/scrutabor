@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-v-post-pentecosten-graduale",
+  "title":"Protéctor noster, áspice, Deus, et réspice super",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-v-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Protéctor","l":"protector","m":113},{"i":"w002","f":"noster","l":"noster","p":",","m":56,"s":true},{"i":"w003","f":"áspice","l":"aspicio","p":",","m":86},{"i":"w004","f":"Deus","l":"deus","p":",","m":60},{"i":"w005","f":"et","l":"et","m":15},{"i":"w006","f":"réspice","l":"respicio","m":86},{"i":"w007","f":"super","l":"super","m":3,"h":"w008"},{"i":"w008","f":"servos","l":"servus","m":90},{"i":"w009","f":"tuos","l":"tuus","p":".","m":91,"s":true},{"i":"w010","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w011","f":"Deus","l":"deus","m":60},{"i":"w012","f":"virtútum","l":"virtus","p":",","m":63},{"i":"w013","f":"exáudi","l":"exaudio","m":6},{"i":"w014","f":"preces","l":"prex","m":16},{"i":"w015","f":"servórum","l":"servus","m":79},{"i":"w016","f":"tuórum","l":"tuus","p":".","m":76,"h":"w015"}]}
+  ]
+}

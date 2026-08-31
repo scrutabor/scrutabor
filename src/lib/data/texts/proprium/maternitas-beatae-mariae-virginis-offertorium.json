@@ -1,0 +1,14 @@
+{
+  "id":"proprium.maternitas-beatae-mariae-virginis-offertorium",
+  "title":"Cum esset desponsáta mater eius María Ioseph",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"maternitas-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Cum","l":"cum","m":15},{"i":"w002","f":"esset","l":"sum","m":469},{"i":"w003","f":"desponsáta","l":"desponso","m":745,"h":"w004"},{"i":"w004","f":"mater","l":"mater","m":58},{"i":"w005","f":"eius","l":"is","m":27},{"i":"w006","f":"María","l":"Maria","m":24},{"i":"w007","f":"Ioseph","l":"Ioseph","p":",","m":98},{"i":"w008","f":"invénta","l":"invenio","m":746,"s":true},{"i":"w009","f":"est","l":"sum","m":21},{"i":"w010","f":"in","l":"in","m":0,"h":"w011"},{"i":"w011","f":"útero","l":"uterus","m":29},{"i":"w012","f":"habens","l":"habeo","m":575,"s":true},{"i":"w013","f":"de","l":"de","m":0,"h":"w014"},{"i":"w014","f":"Spíritu","l":"spiritus","m":100},{"i":"w015","f":"Sancto","l":"sanctus","p":".","m":216,"s":true}]}
+  ]
+}

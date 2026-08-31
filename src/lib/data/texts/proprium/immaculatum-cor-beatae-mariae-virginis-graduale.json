@@ -1,0 +1,14 @@
+{
+  "id":"proprium.immaculatum-cor-beatae-mariae-virginis-graduale",
+  "title":"Exsultábit cor meum in salutári tuo: cantábo",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"immaculatum-cor-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Exsultábit","l":"exsulto","m":354},{"i":"w002","f":"cor","l":"cor","m":97},{"i":"w003","f":"meum","l":"meus","m":105,"h":"w002"},{"i":"w004","f":"in","l":"in","m":0,"h":"w008"},{"i":"w005","f":"salutári","l":"salutaris","m":101,"s":true},{"i":"w006","f":"tuo","l":"tuus","p":":","m":149,"s":true},{"i":"w007","f":"cantábo","l":"canto","m":313},{"i":"w008","f":"Dómino","l":"dominus","p":",","m":29},{"i":"w009","f":"qui","l":"qui","m":18},{"i":"w010","f":"bona","l":"bonus","m":129,"s":true},{"i":"w011","f":"tríbuit","l":"tribuo","m":195},{"i":"w012","f":"mihi","l":"ego","p":":","m":139},{"i":"w013","f":"et","l":"et","m":15},{"i":"w014","f":"psallam","l":"psallo","m":320},{"i":"w015","f":"nómini","l":"nomen","m":226},{"i":"w016","f":"Dómini","l":"dominus","m":54},{"i":"w017","f":"altíssimi","l":"altus","p":".","m":106,"h":"w016"},{"i":"w018","f":"Mémores","l":"memor","m":87,"s":true},{"i":"w019","f":"erunt","l":"sum","m":360},{"i":"w020","f":"nóminis","l":"nomen","m":75},{"i":"w021","f":"tui","l":"tuus","m":99,"s":true},{"i":"w022","f":"in","l":"in","m":0,"h":"w024"},{"i":"w023","f":"omni","l":"omnis","m":31,"h":"w024"},{"i":"w024","f":"generatióne","l":"generatio","m":45},{"i":"w025","f":"et","l":"et","m":15},{"i":"w026","f":"generatiónem","l":"generatio","p":":","m":7},{"i":"w027","f":"proptérea","l":"propterea","m":32},{"i":"w028","f":"pópuli","l":"populus","m":390},{"i":"w029","f":"confitebúntur","l":"confiteor","m":737},{"i":"w030","f":"tibi","l":"tu","m":139},{"i":"w031","f":"in","l":"in","m":3,"h":"w032"},{"i":"w032","f":"ætérnum","l":"aeternus","p":".","m":137,"s":true}]}
+  ]
+}

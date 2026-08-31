@@ -1,0 +1,14 @@
+{
+  "id":"proprium.nativitas-sancti-ioannis-baptistae-alleluia",
+  "title":"Allelúia, allelúia. Tu, puer, Prophéta Altíssimi vocáberis",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"nativitas-sancti-ioannis-baptistae",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Tu","l":"tu","p":",","m":143},{"i":"w004","f":"puer","l":"puer","p":",","m":60},{"i":"w005","f":"Prophéta","l":"propheta","m":391},{"i":"w006","f":"Altíssimi","l":"altus","m":106,"s":true},{"i":"w007","f":"vocáberis","l":"voco","p":":","m":752},{"i":"w008","f":"præíbis","l":"praeeo","m":614},{"i":"w009","f":"ante","l":"ante","m":3,"h":"w010"},{"i":"w010","f":"Dóminum","l":"dominus","m":35},{"i":"w011","f":"paráre","l":"paro","m":239},{"i":"w012","f":"vias","l":"via","m":169},{"i":"w013","f":"eius","l":"is","p":".","m":27},{"i":"w014","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

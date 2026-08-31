@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-iacobi-apostoli-communio",
+  "title":"Vos, qui secúti estis me, sedébitis super",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sancti-iacobi-apostoli",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Vos","l":"vos","p":",","m":122},{"i":"w002","f":"qui","l":"qui","m":18},{"i":"w003","f":"secúti","l":"sequor","m":299,"h":"w001"},{"i":"w004","f":"estis","l":"sum","m":621},{"i":"w005","f":"me","l":"ego","p":",","m":4},{"i":"w006","f":"sedébitis","l":"sedeo","m":563},{"i":"w007","f":"super","l":"super","m":3,"h":"w009"},{"i":"w008","f":"sedes","l":"sedeo","p":",","m":183},{"i":"w009","f":"iudicántes","l":"iudico","m":728,"s":true},{"i":"w010","f":"duódecim","l":"duodecim","m":91,"s":true},{"i":"w011","f":"tribus","l":"tribus","m":314},{"i":"w012","f":"Ísrael","l":"Israel","p":".","m":34}]}
+  ]
+}

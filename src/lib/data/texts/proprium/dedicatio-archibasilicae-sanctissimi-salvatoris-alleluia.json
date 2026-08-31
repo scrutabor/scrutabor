@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-alleluia",
+  "title":"Allelúia, allelúia. Adorábo ad templum sanctum tuum",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dedicatio-archibasilicae-sanctissimi-salvatoris",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Adorábo","l":"adoro","m":313},{"i":"w004","f":"ad","l":"ad","m":3,"h":"w005"},{"i":"w005","f":"templum","l":"templum","m":82},{"i":"w006","f":"sanctum","l":"sanctus","m":96,"s":true},{"i":"w007","f":"tuum","l":"tuus","p":":","m":96,"s":true},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"confitébor","l":"confiteor","m":312},{"i":"w010","f":"nómini","l":"nomen","m":226},{"i":"w011","f":"tuo","l":"tuus","p":".","m":307,"h":"w010"},{"i":"w012","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

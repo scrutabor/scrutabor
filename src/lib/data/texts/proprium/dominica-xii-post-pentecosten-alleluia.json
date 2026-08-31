@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xii-post-pentecosten-alleluia",
+  "title":"Allelúia, allelúia Dómine, Deus salútis meæ, in",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","m":46},{"i":"w003","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w004","f":"Deus","l":"deus","m":60},{"i":"w005","f":"salútis","l":"salus","m":13},{"i":"w006","f":"meæ","l":"meus","p":",","m":14,"h":"w005"},{"i":"w007","f":"in","l":"in","m":0,"h":"w008"},{"i":"w008","f":"die","l":"dies","m":358},{"i":"w009","f":"clamávi","l":"clamo","m":2},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"nocte","l":"nox","m":45},{"i":"w012","f":"coram","l":"coram","m":0,"h":"w013"},{"i":"w013","f":"te","l":"tu","p":".","m":131},{"i":"w014","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.beata-maria-virgo-regina-alleluia",
+  "title":"Allelúia, allelúia. Salve, Regína misericórdiæ, tu nos",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"beata-maria-virgo-regina",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Salve","l":"salveo","p":",","m":190},{"i":"w004","f":"Regína","l":"regina","m":61},{"i":"w005","f":"misericórdiæ","l":"misericordia","p":",","m":64},{"i":"w006","f":"tu","l":"tu","m":143},{"i":"w007","f":"nos","l":"nos","m":49},{"i":"w008","f":"ab","l":"ab","m":0,"h":"w009"},{"i":"w009","f":"hoste","l":"hostis","m":109},{"i":"w010","f":"prótege","l":"protego","p":",","m":86},{"i":"w011","f":"et","l":"et","m":15},{"i":"w012","f":"mortis","l":"mors","m":13},{"i":"w013","f":"hora","l":"hora","m":30},{"i":"w014","f":"súscipe","l":"suscipio","p":".","m":86},{"i":"w015","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

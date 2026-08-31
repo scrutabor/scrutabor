@@ -69,14 +69,14 @@ describe('the calendar this edition ships', () => {
 		expect(dayOn('2030-12-08')?.position).toBe('dominica-ii-adventus');
 	});
 
-	it('says which formulary today has, and says nothing when the edition lacks it', () => {
-		// Advent is what this edition carries, so a date inside it resolves and
-		// a date outside it names the day without pretending to have its Mass.
+	it('says which formulary today has throughout the span this edition carries', () => {
+		// Both Advent and the completed post-Pentecost cycle now resolve to a
+		// formulary the picker can open.
 		const advent = dayToday(new Date(2025, 11, 14));
 		expect(advent.id).toBe('dominica-iii-adventus');
 
 		const june = dayToday(new Date(2026, 5, 21));
-		expect(june.id, 'the edition has not reached the Sundays after Pentecost').toBe('');
+		expect(june.id).toBe('dominica-iv-post-pentecosten');
 		expect(june.on?.formulary).toBeTruthy();
 	});
 

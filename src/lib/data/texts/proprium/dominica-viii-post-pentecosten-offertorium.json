@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-viii-post-pentecosten-offertorium",
+  "title":"Pópulum húmilem salvum fácies, Dómine, et óculos",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-viii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Pópulum","l":"populus","m":35},{"i":"w002","f":"húmilem","l":"humilis","m":96,"h":"w001"},{"i":"w003","f":"salvum","l":"salvus","m":96,"h":"w001"},{"i":"w004","f":"fácies","l":"facio","p":",","m":517},{"i":"w005","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"óculos","l":"oculus","m":90},{"i":"w008","f":"superbórum","l":"superbus","m":76,"s":true},{"i":"w009","f":"humiliábis","l":"humilio","p":":","m":284},{"i":"w010","f":"quóniam","l":"quoniam","m":15},{"i":"w011","f":"quis","l":"quis","m":18},{"i":"w012","f":"Deus","l":"deus","m":60},{"i":"w013","f":"præter","l":"praeter","m":3,"h":"w014"},{"i":"w014","f":"te","l":"tu","p":",","m":131},{"i":"w015","f":"Dómine","l":"dominus","p":"?","m":5}]}
+  ]
+}

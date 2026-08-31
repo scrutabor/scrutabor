@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-ioachim-confessoris-tractus",
+  "title":"Desidérium ánimæ eius tribuísti ei: et voluntáte",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-ioachim-confessoris",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Desidérium","l":"desiderium","m":104},{"i":"w002","f":"ánimæ","l":"anima","m":64},{"i":"w003","f":"eius","l":"is","m":27},{"i":"w004","f":"tribuísti","l":"tribuo","m":154},{"i":"w005","f":"ei","l":"is","p":":","m":245},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"voluntáte","l":"voluntas","m":45},{"i":"w008","f":"labiórum","l":"labium","m":145},{"i":"w009","f":"eius","l":"is","m":27},{"i":"w010","f":"non","l":"non","m":32},{"i":"w011","f":"fraudásti","l":"fraudo","m":283},{"i":"w012","f":"eum","l":"is","p":".","m":36},{"i":"w013","f":"Quóniam","l":"quoniam","m":15},{"i":"w014","f":"prævenísti","l":"praevenio","m":154},{"i":"w015","f":"eum","l":"is","m":36},{"i":"w016","f":"in","l":"in","m":0,"h":"w017"},{"i":"w017","f":"benedictiónibus","l":"benedictio","m":40},{"i":"w018","f":"dulcédinis","l":"dulcedo","p":".","m":13},{"i":"w019","f":"Posuísti","l":"pono","m":154},{"i":"w020","f":"in","l":"in","m":0,"h":"w021"},{"i":"w021","f":"cápite","l":"caput","m":135},{"i":"w022","f":"eius","l":"is","m":27},{"i":"w023","f":"corónam","l":"corona","m":141},{"i":"w024","f":"de","l":"de","m":0,"h":"w025"},{"i":"w025","f":"lápide","l":"lapis","m":109},{"i":"w026","f":"pretióso","l":"pretiosus","p":".","m":101,"s":true}]}
+  ]
+}

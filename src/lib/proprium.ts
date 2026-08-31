@@ -10,6 +10,7 @@
 import type { Lang } from './i18n';
 import { bindPlFields } from './polish';
 import { dayOf, isoDate, type Kalendar } from './kalendarium';
+import { PER_ANNUM_PROPER_DAYS } from './proper-days-per-annum';
 
 /** The parts of a Mass proper, in the order the rite says them.
  *
@@ -86,6 +87,11 @@ export type Season = (typeof SEASONS)[number];
 export interface ProperDay {
 	/** matches the corpus `variant`, and the slug prefix of every part */
 	id: string;
+	/** Corpus variant used for filename discovery when it differs from `id`.
+	 *
+	 * All Souls keeps its calendar identity while its three permitted Masses
+	 * remain separately selectable corpus variants. */
+	textPrefix?: string;
 	/** the season this day belongs to, for grouping a picker */
 	season: Season;
 	/** as the Missal names it, and as a reader would */
@@ -177,7 +183,8 @@ const PROPER_DAYS_SOURCE: ProperDay[] = [
 		parts: {
 			praefatio: 'ordinarium/praefatio-sacratissimi-cordis-iesu'
 		}
-	}
+	},
+	...PER_ANNUM_PROPER_DAYS
 ];
 
 /** Polish one-letter words bound to what follows (lib/polish), exactly as the

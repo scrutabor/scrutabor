@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-offertorium",
+  "title":"Dómine Deus, in simplicitáte cordis mei lætus",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dedicatio-archibasilicae-sanctissimi-salvatoris",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Dómine","l":"dominus","m":5},{"i":"w002","f":"Deus","l":"deus","p":",","m":60},{"i":"w003","f":"in","l":"in","m":0,"h":"w004"},{"i":"w004","f":"simplicitáte","l":"simplicitas","m":45},{"i":"w005","f":"cordis","l":"cor","m":75},{"i":"w006","f":"mei","l":"meus","m":99,"s":true},{"i":"w007","f":"lætus","l":"laetus","m":59,"h":"w002"},{"i":"w008","f":"óbtuli","l":"offero","m":335},{"i":"w009","f":"univérsa","l":"universus","p":";","m":129,"s":true},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"pópulum","l":"populus","m":35},{"i":"w012","f":"tuum","l":"tuus","p":",","m":96,"h":"w011"},{"i":"w013","f":"qui","l":"qui","m":18},{"i":"w014","f":"repértus","l":"reperio","m":251,"h":"w013"},{"i":"w015","f":"est","l":"sum","p":",","m":21},{"i":"w016","f":"vidi","l":"video","m":22},{"i":"w017","f":"cum","l":"cum","m":0,"h":"w019"},{"i":"w018","f":"ingénti","l":"ingens","m":149,"h":"w019"},{"i":"w019","f":"gáudio","l":"gaudium","p":":","m":26},{"i":"w020","f":"Deus","l":"deus","m":60},{"i":"w021","f":"Ísrael","l":"Israel","p":",","m":34},{"i":"w022","f":"custódi","l":"custodio","m":6},{"i":"w023","f":"hanc","l":"hic","m":291},{"i":"w024","f":"voluntátem","l":"voluntas","p":",","m":7},{"i":"w025","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

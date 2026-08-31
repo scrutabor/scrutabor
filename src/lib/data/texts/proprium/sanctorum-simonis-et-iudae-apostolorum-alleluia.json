@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sanctorum-simonis-et-iudae-apostolorum-alleluia",
+  "title":"Allelúia, allelúia Nimis honoráti sunt amíci tui",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sanctorum-simonis-et-iudae-apostolorum",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","m":46},{"i":"w003","f":"Nimis","l":"nimis","m":32},{"i":"w004","f":"honoráti","l":"honoro","m":323,"s":true},{"i":"w005","f":"sunt","l":"sum","m":117},{"i":"w006","f":"amíci","l":"amicus","m":118},{"i":"w007","f":"tui","l":"tuus","p":",","m":99,"s":true},{"i":"w008","f":"Deus","l":"deus","p":":","m":60},{"i":"w009","f":"nimis","l":"nimis","m":32},{"i":"w010","f":"confortátus","l":"conforto","m":144,"s":true},{"i":"w011","f":"est","l":"sum","m":21},{"i":"w012","f":"principátus","l":"principatus","m":196},{"i":"w013","f":"eórum","l":"is","p":".","m":255},{"i":"w014","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

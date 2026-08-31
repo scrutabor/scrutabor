@@ -1,0 +1,14 @@
+{
+  "id":"proprium.beatae-mariae-virginis-a-rosario-graduale",
+  "title":"Propter veritátem et mansuetúdinem et iustítiam, et",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"beatae-mariae-virginis-a-rosario",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Propter","l":"propter","m":3,"h":"w002"},{"i":"w002","f":"veritátem","l":"veritas","m":7},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"mansuetúdinem","l":"mansuetudo","m":7},{"i":"w005","f":"et","l":"et","m":15},{"i":"w006","f":"iustítiam","l":"iustitia","p":",","m":141},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"dedúcet","l":"deduco","m":37},{"i":"w009","f":"te","l":"tu","m":131},{"i":"w010","f":"mirabíliter","l":"mirabiliter","m":32},{"i":"w011","f":"déxtera","l":"dextera","m":24},{"i":"w012","f":"tua","l":"tuus","p":".","m":25,"h":"w011"},{"i":"w013","f":"Audi","l":"audio","p":",","m":6},{"i":"w014","f":"fília","l":"filia","p":",","m":61},{"i":"w015","f":"et","l":"et","m":15},{"i":"w016","f":"vide","l":"video","p":",","m":190},{"i":"w017","f":"et","l":"et","m":15},{"i":"w018","f":"inclína","l":"inclino","m":41},{"i":"w019","f":"aurem","l":"auris","m":7},{"i":"w020","f":"tuam","l":"tuus","p":":","m":8,"h":"w019"},{"i":"w021","f":"quia","l":"quia","m":15},{"i":"w022","f":"concupívit","l":"concupisco","m":195},{"i":"w023","f":"Rex","l":"rex","m":113},{"i":"w024","f":"spéciem","l":"species","m":338},{"i":"w025","f":"tuam","l":"tuus","p":".","m":8,"h":"w024"}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xiv-post-pentecosten-graduale",
+  "title":"Bonum est confidére in Dómino, quam confidére",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xiv-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Bonum","l":"bonus","m":137,"s":true},{"i":"w002","f":"est","l":"sum","m":21},{"i":"w003","f":"confidére","l":"confido","m":185},{"i":"w004","f":"in","l":"in","m":0,"h":"w005"},{"i":"w005","f":"Dómino","l":"dominus","p":",","m":29},{"i":"w006","f":"quam","l":"quam","m":15},{"i":"w007","f":"confidére","l":"confido","m":185},{"i":"w008","f":"in","l":"in","m":0,"h":"w009"},{"i":"w009","f":"hómine","l":"homo","p":".","m":109},{"i":"w010","f":"Bonum","l":"bonus","m":137,"s":true},{"i":"w011","f":"est","l":"sum","m":21},{"i":"w012","f":"speráre","l":"spero","m":239},{"i":"w013","f":"in","l":"in","m":0,"h":"w014"},{"i":"w014","f":"Dómino","l":"dominus","p":",","m":29},{"i":"w015","f":"quam","l":"quam","m":15},{"i":"w016","f":"speráre","l":"spero","m":239},{"i":"w017","f":"in","l":"in","m":0,"h":"w018"},{"i":"w018","f":"princípibus","l":"princeps","p":".","m":197}]}
+  ]
+}

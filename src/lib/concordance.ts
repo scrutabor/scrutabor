@@ -111,7 +111,7 @@ export function everyTextInOrder(): string[] {
 				// alphabetical tail.
 				for (const day of PROPER_DAYS) {
 					for (const [part, key] of Object.entries(day.parts ?? {})) {
-						if (SLOT_OF[part as ProperPart] === e.id) add(key);
+						if (SLOT_OF[part as ProperPart] === e.id && !key.startsWith('proprium/')) add(key);
 					}
 				}
 			}
@@ -130,7 +130,7 @@ export function everyTextInOrder(): string[] {
 	const dayRank = (slug: string): number => {
 		const part = partOf(slug);
 		const day = part ? slug.slice(0, -(part.length + 1)) : slug;
-		const at = PROPER_DAYS.findIndex((d) => d.id === day);
+		const at = PROPER_DAYS.findIndex((d) => (d.textPrefix ?? d.id) === day);
 		return at === -1 ? PROPER_DAYS.length : at;
 	};
 	const tail = [...TEXT_KEYS].sort((a, b) => {

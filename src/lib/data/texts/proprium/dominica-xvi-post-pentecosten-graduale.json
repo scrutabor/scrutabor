@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xvi-post-pentecosten-graduale",
+  "title":"Timébunt gentes nomen tuum, Dómine, et omnes",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xvi-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Timébunt","l":"timeo","m":365},{"i":"w002","f":"gentes","l":"gens","m":16},{"i":"w003","f":"nomen","l":"nomen","m":97},{"i":"w004","f":"tuum","l":"tuus","p":",","m":137,"s":true},{"i":"w005","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"omnes","l":"omnis","m":180,"h":"w002"},{"i":"w008","f":"reges","l":"rex","m":242},{"i":"w009","f":"terræ","l":"terra","m":64},{"i":"w010","f":"glóriam","l":"gloria","m":141},{"i":"w011","f":"tuam","l":"tuus","p":".","m":8,"h":"w010"},{"i":"w012","f":"Quóniam","l":"quoniam","m":15},{"i":"w013","f":"ædificávit","l":"aedifico","m":28},{"i":"w014","f":"Dóminus","l":"dominus","m":60},{"i":"w015","f":"Sion","l":"Sion","p":",","m":480},{"i":"w016","f":"et","l":"et","m":15},{"i":"w017","f":"vidébitur","l":"video","m":426},{"i":"w018","f":"in","l":"in","m":0,"h":"w019"},{"i":"w019","f":"maiestáte","l":"maiestas","m":45},{"i":"w020","f":"sua","l":"suus","p":".","m":129,"s":true}]}
+  ]
+}

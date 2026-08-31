@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-matthaei-apostoli-et-evangelistae-collecta",
+  "title":"Beáti Apóstoli et Evangelístæ Matthǽi, Dómine, précibus",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-matthaei-apostoli-et-evangelistae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Beáti","l":"beatus","m":99,"h":"w005"},{"i":"w002","f":"Apóstoli","l":"apostolus","m":118},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"Evangelístæ","l":"evangelista","m":603},{"i":"w005","f":"Matthǽi","l":"Matthaeus","p":",","m":54},{"i":"w006","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w007","f":"précibus","l":"prex","m":40},{"i":"w008","f":"adiuvémur","l":"adiuvo","p":":","m":533},{"i":"w009","f":"ut","l":"ut","p":",","m":15},{"i":"w010","f":"quod","l":"qui","m":189},{"i":"w011","f":"possibílitas","l":"possibilitas","m":480},{"i":"w012","f":"nostra","l":"noster","m":25,"h":"w011"},{"i":"w013","f":"non","l":"non","m":32},{"i":"w014","f":"óbtinet","l":"obtineo","p":",","m":165},{"i":"w015","f":"eius","l":"is","m":27},{"i":"w016","f":"nobis","l":"nos","m":53},{"i":"w017","f":"intercessióne","l":"intercessio","m":45},{"i":"w018","f":"donétur","l":"dono","p":".","m":233},{"i":"w019","f":"Per","l":"per","m":3,"h":"w020"},{"i":"w020","f":"Dóminum","l":"dominus","m":35},{"i":"w021","f":"nostrum","l":"noster","m":96,"h":"w022"},{"i":"w022","f":"Iesum","l":"Iesus","m":38},{"i":"w023","f":"Christum","l":"Christus","p":",","m":35},{"i":"w024","f":"Fílium","l":"filius","m":35},{"i":"w025","f":"tuum","l":"tuus","p":":","m":96,"h":"w024"},{"i":"w026","f":"Qui","l":"qui","m":18},{"i":"w027","f":"tecum","l":"tu","m":131},{"i":"w028","f":"vivit","l":"vivo","m":140},{"i":"w029","f":"et","l":"et","m":15},{"i":"w030","f":"regnat","l":"regno","m":119},{"i":"w031","f":"in","l":"in","m":0,"h":"w032"},{"i":"w032","f":"unitáte","l":"unitas","m":45},{"i":"w033","f":"Spíritus","l":"spiritus","m":250},{"i":"w034","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w033"},{"i":"w035","f":"Deus","l":"deus","p":",","m":60},{"i":"w036","f":"per","l":"per","m":3,"h":"w038"},{"i":"w037","f":"ómnia","l":"omnis","m":129,"h":"w038"},{"i":"w038","f":"sǽcula","l":"saeculum","m":85},{"i":"w039","f":"sæculórum","l":"saeculum","p":".","m":145},{"i":"w040","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

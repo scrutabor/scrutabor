@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-ix-post-pentecosten-offertorium",
+  "title":"Iustítiæ Dómini rectæ, lætificántes corda, et iudícia",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-ix-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Iustítiæ","l":"iustitia","m":64},{"i":"w002","f":"Dómini","l":"dominus","m":54},{"i":"w003","f":"rectæ","l":"rectus","p":",","m":14,"h":"w001"},{"i":"w004","f":"lætificántes","l":"laetifico","m":258,"s":true},{"i":"w005","f":"corda","l":"cor","p":",","m":128},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"iudícia","l":"iudicium","m":274},{"i":"w008","f":"eius","l":"is","m":27},{"i":"w009","f":"dulcióra","l":"dulcis","m":591,"h":"w005"},{"i":"w010","f":"super","l":"super","m":3,"h":"w011"},{"i":"w011","f":"mel","l":"mel","m":136},{"i":"w012","f":"et","l":"et","m":15},{"i":"w013","f":"favum","l":"favus","p":":","m":35},{"i":"w014","f":"nam","l":"nam","m":15},{"i":"w015","f":"et","l":"et","m":15},{"i":"w016","f":"servus","l":"servus","m":60},{"i":"w017","f":"tuus","l":"tuus","m":59,"h":"w016"},{"i":"w018","f":"custódit","l":"custodio","m":344},{"i":"w019","f":"ea","l":"is","p":".","m":49}]}
+  ]
+}

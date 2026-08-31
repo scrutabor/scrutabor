@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-vi-post-pentecosten-alleluia",
+  "title":"Allelúia, allelúia. In te, Dómine, sperávi, non",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-vi-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"In","l":"in","m":0,"h":"w004"},{"i":"w004","f":"te","l":"tu","p":",","m":131},{"i":"w005","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w006","f":"sperávi","l":"spero","p":",","m":2},{"i":"w007","f":"non","l":"non","m":32},{"i":"w008","f":"confúndar","l":"confundo","m":441},{"i":"w009","f":"in","l":"in","m":3,"h":"w010"},{"i":"w010","f":"ætérnum","l":"aeternus","p":":","m":137,"s":true},{"i":"w011","f":"in","l":"in","m":0,"h":"w012"},{"i":"w012","f":"iustítia","l":"iustitia","m":30},{"i":"w013","f":"tua","l":"tuus","m":31,"s":true},{"i":"w014","f":"líbera","l":"libero","m":41},{"i":"w015","f":"me","l":"ego","m":4},{"i":"w016","f":"et","l":"et","m":15},{"i":"w017","f":"éripe","l":"eripio","m":86},{"i":"w018","f":"me","l":"ego","p":":","m":4},{"i":"w019","f":"inclína","l":"inclino","m":41},{"i":"w020","f":"ad","l":"ad","m":3,"h":"w021"},{"i":"w021","f":"me","l":"ego","m":4},{"i":"w022","f":"aurem","l":"auris","m":7},{"i":"w023","f":"tuam","l":"tuus","p":",","m":8,"h":"w022"},{"i":"w024","f":"accélera","l":"accelero","p":",","m":41},{"i":"w025","f":"ut","l":"ut","m":15},{"i":"w026","f":"erípias","l":"eripio","m":202},{"i":"w027","f":"me","l":"ego","p":".","m":4},{"i":"w028","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

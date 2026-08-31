@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-ii-post-pentecosten-offertorium",
+  "title":"Dómine, convértere, et éripe ánimam meam: salvum",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-ii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w002","f":"convértere","l":"converto","p":",","m":185},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"éripe","l":"eripio","m":86},{"i":"w005","f":"ánimam","l":"anima","m":141},{"i":"w006","f":"meam","l":"meus","p":":","m":8,"h":"w005"},{"i":"w007","f":"salvum","l":"salvus","m":96,"h":"w008"},{"i":"w008","f":"me","l":"ego","m":4},{"i":"w009","f":"fac","l":"facio","m":86},{"i":"w010","f":"propter","l":"propter","m":3,"h":"w011"},{"i":"w011","f":"misericórdiam","l":"misericordia","m":141},{"i":"w012","f":"tuam","l":"tuus","p":".","m":8,"s":true}]}
+  ]
+}

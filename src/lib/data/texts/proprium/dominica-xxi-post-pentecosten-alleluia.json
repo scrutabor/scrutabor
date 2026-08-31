@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xxi-post-pentecosten-alleluia",
+  "title":"Allelúia, allelúia. In éxitu Israël de Ægýpto",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xxi-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"In","l":"in","m":0,"h":"w004"},{"i":"w004","f":"éxitu","l":"exitus","m":100},{"i":"w005","f":"Ísrael","l":"Israel","m":34},{"i":"w006","f":"de","l":"de","m":0,"h":"w007"},{"i":"w007","f":"Ægýpto","l":"Aegyptus","p":",","m":716},{"i":"w008","f":"domus","l":"domus","m":107},{"i":"w009","f":"Iacob","l":"Iacob","m":98},{"i":"w010","f":"de","l":"de","m":0,"h":"w011"},{"i":"w011","f":"pópulo","l":"populus","m":29},{"i":"w012","f":"bárbaro","l":"barbarus","p":".","m":101,"s":true},{"i":"w013","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

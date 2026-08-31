@@ -1,0 +1,14 @@
+{
+  "id":"ordinarium.praefatio-sanctae-crucis",
+  "language":"pl",
+  "about":"Prefacja o Krzyżu Świętym. Wysławia zbawcze drzewo Krzyża, na którym źródło śmierci stało się źródłem życia, a zwycięzca na drzewie został pokonany.",
+  "seg":[
+    {"id":"s01","nr":"Następnie kapłan rozłącza ręce i trzyma je rozłożone aż do końca Prefacji. Po jej zakończeniu ponownie je składa i pochylony mówi: Sanctus."},
+    {"id":"s02","tr":"Zaprawdę godne to i sprawiedliwe, słuszne i zbawienne, byśmy Tobie zawsze i wszędzie składali dzięki:","g":["prawdziwie","godne","i","sprawiedliwa","jest","słuszna","i","zbawienna","nas","Ci","zawsze","i","wszędzie","dzięki","składać"]},
+    {"id":"s03","tr":"Panie święty, Ojcze wszechmogący, wieczny Boże:","g":["Pani","święty","Ojcze","wszechmogący","wieczne","Boże"]},
+    {"id":"s04","tr":"Który ustanowiłeś zbawienie rodzaju ludzkiego na drzewie Krzyża, aby skąd śmierć wzięła początek, stamtąd i życie zmartwychwstało, i aby ten, który na drzewie zwyciężył, na drzewie również został pokonany: przez Chrystusa, Pana naszego.","g":["który","zbawienie","ludzkiego","rodu","w","drzewiu","krzyża","uzasadniać","aby","przeto","śmierć","powstawać","stamtąd","Życie","powstał","i","który","w","drzewiu","zwyciężać","w","drzewiu","także","zwyciężał","przez","Chrystusa","Pana","nasz"]},
+    {"id":"s05","tr":"Przez Niego Aniołowie chwalą Twój majestat, Państwa go uwielbiają, a Potęgi przed nim drżą.","g":["przez","który","majestat","Twój","chwalą","anieli","uwielbiają","Państwa","drżą","Moce"]},
+    {"id":"s06","tr":"Niebiosa, Moce niebios i błogosławieni Serafini wspólnie i radośnie wysławiają Twój majestat.","g":["nieba","niebios","moce","i","błogosławieni","Serafini","wspólnym","uniesieniem","sławią razem"]},
+    {"id":"s07","tr":"Prosimy Cię, pozwól, aby także nasze głosy dołączyły do ich głosów, gdy z pokorą wyznajemy:","g":["z","którymi","i","nasze","głosy","abyś","być dopuszczonymi","kazał","prosimy","kornym","wyznaniem","mówieni"]}
+  ]
+}

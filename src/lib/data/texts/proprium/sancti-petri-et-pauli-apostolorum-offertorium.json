@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-petri-et-pauli-apostolorum-offertorium",
+  "title":"Constítues eos príncipes super omnem terram: mémores",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sancti-petri-et-pauli-apostolorum",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Constítues","l":"constituo","m":517},{"i":"w002","f":"eos","l":"is","m":163},{"i":"w003","f":"príncipes","l":"princeps","m":242},{"i":"w004","f":"super","l":"super","m":3,"h":"w006"},{"i":"w005","f":"omnem","l":"omnis","m":8,"h":"w006"},{"i":"w006","f":"terram","l":"terra","p":":","m":141},{"i":"w007","f":"mémores","l":"memor","m":87,"s":true},{"i":"w008","f":"erunt","l":"sum","m":360},{"i":"w009","f":"nóminis","l":"nomen","m":75},{"i":"w010","f":"tui","l":"tuus","p":",","m":99,"s":true},{"i":"w011","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w012","f":"in","l":"in","m":0,"h":"w014"},{"i":"w013","f":"omni","l":"omnis","m":31,"h":"w014"},{"i":"w014","f":"progénie","l":"progenies","m":219},{"i":"w015","f":"et","l":"et","m":15},{"i":"w016","f":"generatióne","l":"generatio","p":".","m":45}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xvii-post-pentecosten-communio",
+  "title":"Vovéte et réddite Dómino, Deo vestro, omnes",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xvii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Vovéte","l":"voveo","m":368},{"i":"w002","f":"et","l":"et","m":15},{"i":"w003","f":"réddite","l":"reddo","m":155},{"i":"w004","f":"Dómino","l":"dominus","p":",","m":186},{"i":"w005","f":"Deo","l":"deus","m":186},{"i":"w006","f":"vestro","l":"vester","p":",","m":101,"s":true},{"i":"w007","f":"omnes","l":"omnis","p":",","m":180,"s":true},{"i":"w008","f":"qui","l":"qui","m":18},{"i":"w009","f":"in","l":"in","m":0,"h":"w010"},{"i":"w010","f":"circúitu","l":"circuitus","m":100},{"i":"w011","f":"eius","l":"is","m":27},{"i":"w012","f":"affértis","l":"affero","m":590},{"i":"w013","f":"múnera","l":"munus","p":":","m":128},{"i":"w014","f":"terríbili","l":"terribilis","p":",","m":31,"s":true},{"i":"w015","f":"et","l":"et","m":15},{"i":"w016","f":"ei","l":"is","m":245},{"i":"w017","f":"qui","l":"qui","m":18},{"i":"w018","f":"aufert","l":"aufero","m":21},{"i":"w019","f":"spíritum","l":"spiritus","m":160},{"i":"w020","f":"príncipum","l":"princeps","p":":","m":77},{"i":"w021","f":"terríbili","l":"terribilis","m":149,"s":true},{"i":"w022","f":"apud","l":"apud","m":3,"h":"w024"},{"i":"w023","f":"omnes","l":"omnis","m":180,"s":true},{"i":"w024","f":"reges","l":"rex","m":152},{"i":"w025","f":"terræ","l":"terra","p":".","m":64}]}
+  ]
+}

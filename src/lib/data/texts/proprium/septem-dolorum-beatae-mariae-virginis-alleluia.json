@@ -1,0 +1,14 @@
+{
+  "id":"proprium.septem-dolorum-beatae-mariae-virginis-alleluia",
+  "title":"Allelúia, allelúia. Stabat sancta María, cæli Regína",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"septem-dolorum-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Stabat","l":"sto","m":516},{"i":"w004","f":"sancta","l":"sanctus","m":25,"h":"w005"},{"i":"w005","f":"María","l":"Maria","p":",","m":24},{"i":"w006","f":"cæli","l":"caelum","m":68},{"i":"w007","f":"Regína","l":"regina","m":61},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"mundi","l":"mundus","m":54},{"i":"w010","f":"Dómina","l":"domina","p":",","m":61},{"i":"w011","f":"iuxta","l":"iuxta","m":3,"h":"w012"},{"i":"w012","f":"Crucem","l":"crux","m":7},{"i":"w013","f":"Dómini","l":"dominus","m":54},{"i":"w014","f":"nostri","l":"nos","m":330},{"i":"w015","f":"Iesu","l":"Iesus","m":5},{"i":"w016","f":"Christi","l":"Christus","m":54},{"i":"w017","f":"dolorósa","l":"dolorosus","p":".","m":25,"s":true}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.visitatio-beatae-mariae-virginis-alleluia",
+  "title":"Allelúia, allelúia. Felix es, sacra Virgo María",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"visitatio-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Felix","l":"felix","m":59,"s":true},{"i":"w004","f":"es","l":"sum","p":",","m":191},{"i":"w005","f":"sacra","l":"sacer","m":25,"h":"w006"},{"i":"w006","f":"Virgo","l":"virgo","m":20},{"i":"w007","f":"María","l":"Maria","p":",","m":24},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"omni","l":"omnis","m":31,"h":"w010"},{"i":"w010","f":"laude","l":"laus","m":45},{"i":"w011","f":"digníssima","l":"dignus","p":":","m":512,"h":"w007"},{"i":"w012","f":"quia","l":"quia","m":15},{"i":"w013","f":"ex","l":"ex","m":0,"h":"w014"},{"i":"w014","f":"te","l":"tu","m":131},{"i":"w015","f":"ortus","l":"orior","m":802,"s":true},{"i":"w016","f":"est","l":"sum","m":21},{"i":"w017","f":"sol","l":"sol","m":50},{"i":"w018","f":"iustítiæ","l":"iustitia","p":",","m":64},{"i":"w019","f":"Christus","l":"Christus","p":",","m":60},{"i":"w020","f":"Deus","l":"deus","m":60},{"i":"w021","f":"noster","l":"noster","p":".","m":56,"h":"w017"},{"i":"w022","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-bartholomaei-apostoli-alleluia",
+  "title":"Allelúia, allelúia. Te gloriósus Apostolórum chorus laudat",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-bartholomaei-apostoli",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Te","l":"tu","m":131},{"i":"w004","f":"gloriósus","l":"gloriosus","m":59,"h":"w006"},{"i":"w005","f":"Apostolórum","l":"apostolus","m":79},{"i":"w006","f":"chorus","l":"chorus","m":60},{"i":"w007","f":"laudat","l":"laudo","p":",","m":119},{"i":"w008","f":"Dómine","l":"dominus","p":".","m":5},{"i":"w009","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

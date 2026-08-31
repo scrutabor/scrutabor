@@ -1,0 +1,14 @@
+{
+  "id":"proprium.transfiguratio-domini-alleluia",
+  "title":"Allelúia, allelúia. Candor est lucis ætérnæ, spéculum",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"transfiguratio-domini",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Candor","l":"candor","m":50},{"i":"w004","f":"est","l":"sum","m":21},{"i":"w005","f":"lucis","l":"lux","m":13},{"i":"w006","f":"ætérnæ","l":"aeternus","p":",","m":14,"h":"w005"},{"i":"w007","f":"spéculum","l":"speculum","m":71},{"i":"w008","f":"sine","l":"sine","m":0,"h":"w009"},{"i":"w009","f":"mácula","l":"macula","p":",","m":30},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"imágo","l":"imago","m":20},{"i":"w012","f":"bonitátis","l":"bonitas","m":13},{"i":"w013","f":"illíus","l":"ille","p":".","m":213},{"i":"w014","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

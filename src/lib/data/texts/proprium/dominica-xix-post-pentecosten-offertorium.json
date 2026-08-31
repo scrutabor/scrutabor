@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xix-post-pentecosten-offertorium",
+  "title":"Si ambulávero in médio tribulatiónis, vivificábis me",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xix-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Si","l":"si","m":15},{"i":"w002","f":"ambulávero","l":"ambulo","m":699},{"i":"w003","f":"in","l":"in","m":0,"h":"w007"},{"i":"w004","f":"médio","l":"medius","m":149,"s":true},{"i":"w005","f":"tribulatiónis","l":"tribulatio","p":",","m":13},{"i":"w006","f":"vivificábis","l":"vivifico","m":284},{"i":"w007","f":"me","l":"ego","p":",","m":131},{"i":"w008","f":"Dómine","l":"dominus","p":":","m":5},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"super","l":"super","m":3,"h":"w011"},{"i":"w011","f":"iram","l":"ira","m":141},{"i":"w012","f":"inimicórum","l":"inimicus","m":79},{"i":"w013","f":"meórum","l":"meus","m":114,"s":true},{"i":"w014","f":"exténdes","l":"extendo","m":517},{"i":"w015","f":"manum","l":"manus","m":377},{"i":"w016","f":"tuam","l":"tuus","p":",","m":8,"h":"w015"},{"i":"w017","f":"et","l":"et","m":15},{"i":"w018","f":"salvum","l":"salvus","m":96,"h":"w019"},{"i":"w019","f":"me","l":"ego","m":4},{"i":"w020","f":"fáciet","l":"facio","m":37},{"i":"w021","f":"déxtera","l":"dextera","m":24},{"i":"w022","f":"tua","l":"tuus","p":".","m":25,"h":"w021"}]}
+  ]
+}

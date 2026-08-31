@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-vii-post-pentecosten-graduale",
+  "title":"Veníte, fílii, audíte me: timórem Dómini docébo",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-vii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Veníte","l":"venio","p":",","m":529},{"i":"w002","f":"fílii","l":"filius","p":",","m":54},{"i":"w003","f":"audíte","l":"audio","m":529},{"i":"w004","f":"me","l":"ego","p":":","m":4},{"i":"w005","f":"timórem","l":"timor","m":162},{"i":"w006","f":"Dómini","l":"dominus","m":54},{"i":"w007","f":"docébo","l":"doceo","m":615},{"i":"w008","f":"vos","l":"vos","p":".","m":49},{"i":"w009","f":"Accédite","l":"accedo","m":155},{"i":"w010","f":"ad","l":"ad","m":3,"h":"w011"},{"i":"w011","f":"eum","l":"is","p":",","m":36},{"i":"w012","f":"et","l":"et","m":15},{"i":"w013","f":"illuminámini","l":"illumino","p":":","m":649},{"i":"w014","f":"et","l":"et","m":15},{"i":"w015","f":"fácies","l":"facies","m":461},{"i":"w016","f":"vestræ","l":"vester","m":11,"h":"w015"},{"i":"w017","f":"non","l":"non","m":32},{"i":"w018","f":"confundéntur","l":"confundo","p":".","m":372}]}
+  ]
+}

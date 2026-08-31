@@ -1,0 +1,14 @@
+{
+  "id":"proprium.omnium-sanctorum-graduale",
+  "title":"Timéte Dóminum, omnes Sancti eius: quóniam nihil",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"omnium-sanctorum",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Timéte","l":"timeo","m":368},{"i":"w002","f":"Dóminum","l":"dominus","p":",","m":35},{"i":"w003","f":"omnes","l":"omnis","m":180,"s":true},{"i":"w004","f":"Sancti","l":"sanctus","m":99,"h":"w005"},{"i":"w005","f":"eius","l":"is","p":":","m":27},{"i":"w006","f":"quóniam","l":"quoniam","m":15},{"i":"w007","f":"nihil","l":"nihil","m":290},{"i":"w008","f":"deest","l":"desum","m":21},{"i":"w009","f":"timéntibus","l":"timeo","m":221,"s":true},{"i":"w010","f":"eum","l":"is","p":".","m":36},{"i":"w011","f":"Inquiréntes","l":"inquiro","m":243,"s":true},{"i":"w012","f":"autem","l":"autem","m":15},{"i":"w013","f":"Dóminum","l":"dominus","p":",","m":35},{"i":"w014","f":"non","l":"non","m":32},{"i":"w015","f":"defícient","l":"deficio","m":218},{"i":"w016","f":"omni","l":"omnis","m":31,"s":true},{"i":"w017","f":"bono","l":"bonum","p":".","m":497}]}
+  ]
+}

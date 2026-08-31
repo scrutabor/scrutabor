@@ -1,0 +1,14 @@
+{
+  "id":"proprium.assumptio-beatae-mariae-virginis-graduale",
+  "title":"Audi, fília, et vide, et inclína aurem",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"assumptio-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Audi","l":"audio","p":",","m":6},{"i":"w002","f":"fília","l":"filia","p":",","m":30},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"vide","l":"video","p":",","m":190},{"i":"w005","f":"et","l":"et","m":15},{"i":"w006","f":"inclína","l":"inclino","m":41},{"i":"w007","f":"aurem","l":"auris","m":7},{"i":"w008","f":"tuam","l":"tuus","p":",","m":8,"h":"w007"},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"concupíscet","l":"concupisco","m":37},{"i":"w011","f":"rex","l":"rex","m":113},{"i":"w012","f":"pulchritúdinem","l":"pulchritudo","m":7},{"i":"w013","f":"tuam","l":"tuus","p":".","m":8,"h":"w012"},{"i":"w014","f":"Tota","l":"totus","m":25,"s":true},{"i":"w015","f":"decóra","l":"decorum","m":85},{"i":"w016","f":"ingréditur","l":"ingredior","m":509},{"i":"w017","f":"fília","l":"filia","m":24},{"i":"w018","f":"regis","l":"rex","p":",","m":69},{"i":"w019","f":"textúræ","l":"textura","m":64},{"i":"w020","f":"áureæ","l":"aureus","m":14,"h":"w019"},{"i":"w021","f":"sunt","l":"sum","m":117},{"i":"w022","f":"amíctus","l":"amictus","m":510},{"i":"w023","f":"eius","l":"is","p":".","m":27}]}
+  ]
+}

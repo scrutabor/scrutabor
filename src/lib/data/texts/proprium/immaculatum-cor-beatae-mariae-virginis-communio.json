@@ -1,0 +1,14 @@
+{
+  "id":"proprium.immaculatum-cor-beatae-mariae-virginis-communio",
+  "title":"Dixit Iesus matri suæ: Múlier, ecce fílius",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"immaculatum-cor-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Dixit","l":"dico","m":195},{"i":"w002","f":"Iesus","l":"Iesus","m":34},{"i":"w003","f":"matri","l":"mater","m":265},{"i":"w004","f":"suæ","l":"suus","p":":","m":14,"s":true},{"i":"w005","f":"Múlier","l":"mulier","p":",","m":20},{"i":"w006","f":"ecce","l":"ecce","m":46},{"i":"w007","f":"fílius","l":"filius","m":60},{"i":"w008","f":"tuus","l":"tuus","p":":","m":59,"h":"w007"},{"i":"w009","f":"deínde","l":"deinde","m":32},{"i":"w010","f":"dixit","l":"dico","m":195},{"i":"w011","f":"discípulo","l":"discipulus","p":":","m":186},{"i":"w012","f":"Ecce","l":"ecce","m":46},{"i":"w013","f":"mater","l":"mater","m":58},{"i":"w014","f":"tua","l":"tuus","p":".","m":25,"s":true},{"i":"w015","f":"Et","l":"et","m":15},{"i":"w016","f":"ex","l":"ex","m":0,"h":"w017"},{"i":"w017","f":"illa","l":"ille","m":131},{"i":"w018","f":"hora","l":"hora","m":30},{"i":"w019","f":"accépit","l":"accipio","m":195},{"i":"w020","f":"eam","l":"is","m":291},{"i":"w021","f":"discípulus","l":"discipulus","m":60},{"i":"w022","f":"in","l":"in","m":3,"h":"w023"},{"i":"w023","f":"sua","l":"suus","p":".","m":129,"s":true}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.septem-dolorum-beatae-mariae-virginis-offertorium",
+  "title":"Recordáre, Virgo Mater, in conspéctu Dei, ut",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"septem-dolorum-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Recordáre","l":"recordor","p":",","m":237},{"i":"w002","f":"Virgo","l":"virgo","m":20},{"i":"w003","f":"Mater","l":"mater","p":",","m":58},{"i":"w004","f":"in","l":"in","m":0,"h":"w005"},{"i":"w005","f":"conspéctu","l":"conspectus","m":100},{"i":"w006","f":"Dei","l":"deus","p":",","m":54},{"i":"w007","f":"ut","l":"ut","m":15},{"i":"w008","f":"loquáris","l":"loquor","m":683},{"i":"w009","f":"pro","l":"pro","m":0,"h":"w010"},{"i":"w010","f":"nobis","l":"nos","m":62},{"i":"w011","f":"bona","l":"bonus","p":",","m":129,"s":true},{"i":"w012","f":"et","l":"et","m":15},{"i":"w013","f":"ut","l":"ut","m":15},{"i":"w014","f":"avértat","l":"averto","m":257},{"i":"w015","f":"indignatiónem","l":"indignatio","m":7},{"i":"w016","f":"suam","l":"suus","m":8,"h":"w015"},{"i":"w017","f":"a","l":"a","m":0,"h":"w018"},{"i":"w018","f":"nobis","l":"nos","p":".","m":62}]}
+  ]
+}

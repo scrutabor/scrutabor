@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xxii-post-pentecosten-offertorium",
+  "title":"Recordáre mei, Dómine, omni potentátui dóminans: et",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xxii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Recordáre","l":"recordor","m":237},{"i":"w002","f":"mei","l":"meus","p":",","m":99,"s":true},{"i":"w003","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w004","f":"omni","l":"omnis","m":31,"s":true},{"i":"w005","f":"potentátui","l":"potentatus","m":215},{"i":"w006","f":"dóminans","l":"domino","p":":","m":342,"s":true},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"da","l":"do","m":41},{"i":"w009","f":"sermónem","l":"sermo","m":162},{"i":"w010","f":"rectum","l":"rectus","m":96,"h":"w009"},{"i":"w011","f":"in","l":"in","m":3,"h":"w012"},{"i":"w012","f":"os","l":"os","m":136},{"i":"w013","f":"meum","l":"meus","p":",","m":137,"s":true},{"i":"w014","f":"ut","l":"ut","m":15},{"i":"w015","f":"pláceant","l":"placeo","m":373},{"i":"w016","f":"verba","l":"verbum","m":85},{"i":"w017","f":"mea","l":"meus","m":25,"s":true},{"i":"w018","f":"in","l":"in","m":0,"h":"w019"},{"i":"w019","f":"conspéctu","l":"conspectus","m":100},{"i":"w020","f":"príncipis","l":"princeps","p":".","m":69}]}
+  ]
+}

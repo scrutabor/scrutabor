@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xvi-post-pentecosten-alleluia",
+  "title":"Allelúia, allelúia Cantáte Dómino cánticum novum: quia",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xvi-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","m":46},{"i":"w003","f":"Cantáte","l":"canto","m":158},{"i":"w004","f":"Dómino","l":"dominus","m":186},{"i":"w005","f":"cánticum","l":"canticum","m":82},{"i":"w006","f":"novum","l":"novus","p":":","m":105,"s":true},{"i":"w007","f":"quia","l":"quia","m":15},{"i":"w008","f":"mirabília","l":"mirabilis","m":129,"s":true},{"i":"w009","f":"fecit","l":"facio","m":195},{"i":"w010","f":"Dóminus","l":"dominus","p":".","m":60},{"i":"w011","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

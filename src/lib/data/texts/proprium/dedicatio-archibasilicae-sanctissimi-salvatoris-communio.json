@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-communio",
+  "title":"Domus mea domus oratiónis vocábitur, dicit Dóminus",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dedicatio-archibasilicae-sanctissimi-salvatoris",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Domus","l":"domus","m":107},{"i":"w002","f":"mea","l":"meus","m":25,"h":"w003"},{"i":"w003","f":"domus","l":"domus","m":107},{"i":"w004","f":"oratiónis","l":"oratio","m":13},{"i":"w005","f":"vocábitur","l":"voco","p":",","m":287},{"i":"w006","f":"dicit","l":"dico","m":140},{"i":"w007","f":"Dóminus","l":"dominus","p":":","m":60},{"i":"w008","f":"in","l":"in","m":0,"h":"w009"},{"i":"w009","f":"ea","l":"is","m":131},{"i":"w010","f":"omnis","l":"omnis","p":",","m":25,"s":true},{"i":"w011","f":"qui","l":"qui","m":18},{"i":"w012","f":"petit","l":"peto","p":",","m":140},{"i":"w013","f":"áccipit","l":"accipio","p":";","m":140},{"i":"w014","f":"et","l":"et","m":15},{"i":"w015","f":"qui","l":"qui","m":18},{"i":"w016","f":"quærit","l":"quaero","p":",","m":140},{"i":"w017","f":"invénit","l":"invenio","p":";","m":344},{"i":"w018","f":"et","l":"et","m":15},{"i":"w019","f":"pulsánti","l":"pulso","m":542,"s":true},{"i":"w020","f":"aperiétur","l":"aperio","p":".","m":159},{"i":"w021","f":"Allelúia","l":"alleluia","p":".)","m":46}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xiii-post-pentecosten-offertorium",
+  "title":"In te sperávi, Dómine; dixi: Tu es",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xiii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"In","l":"in","m":0,"h":"w002"},{"i":"w002","f":"te","l":"tu","m":131},{"i":"w003","f":"sperávi","l":"spero","p":",","m":2},{"i":"w004","f":"Dómine","l":"dominus","p":";","m":5},{"i":"w005","f":"dixi","l":"dico","p":":","m":173},{"i":"w006","f":"Tu","l":"tu","m":143},{"i":"w007","f":"es","l":"sum","m":191},{"i":"w008","f":"Deus","l":"deus","m":60},{"i":"w009","f":"meus","l":"meus","p":",","m":59,"h":"w008"},{"i":"w010","f":"in","l":"in","m":0,"h":"w011"},{"i":"w011","f":"mánibus","l":"manus","m":317},{"i":"w012","f":"tuis","l":"tuus","m":236,"s":true},{"i":"w013","f":"témpora","l":"tempus","m":128},{"i":"w014","f":"mea","l":"meus","p":".","m":25,"s":true}]}
+  ]
+}

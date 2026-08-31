@@ -1,0 +1,14 @@
+{
+  "id":"proprium.immaculatum-cor-beatae-mariae-virginis-alleluia",
+  "title":"Allelúia, allelúia. Magníficat ánima mea Dóminum: et",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"immaculatum-cor-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Magníficat","l":"magnifico","m":119},{"i":"w004","f":"ánima","l":"anima","m":24},{"i":"w005","f":"mea","l":"meus","m":25,"h":"w004"},{"i":"w006","f":"Dóminum","l":"dominus","p":":","m":35},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"exsultávit","l":"exsulto","m":28},{"i":"w009","f":"spíritus","l":"spiritus","m":250},{"i":"w010","f":"meus","l":"meus","m":59,"s":true},{"i":"w011","f":"in","l":"in","m":0,"h":"w012"},{"i":"w012","f":"Deo","l":"deus","m":29},{"i":"w013","f":"salutári","l":"salutaris","m":101,"s":true},{"i":"w014","f":"meo","l":"meus","p":".","m":101,"s":true},{"i":"w015","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

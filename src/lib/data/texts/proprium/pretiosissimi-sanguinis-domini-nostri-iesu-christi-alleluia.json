@@ -1,0 +1,14 @@
+{
+  "id":"proprium.pretiosissimi-sanguinis-domini-nostri-iesu-christi-alleluia",
+  "title":"Allelúia, allelúia. Si testimónium hóminum accípimus, testimónium",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"pretiosissimi-sanguinis-domini-nostri-iesu-christi",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Si","l":"si","m":15},{"i":"w004","f":"testimónium","l":"testimonium","m":82},{"i":"w005","f":"hóminum","l":"homo","m":77},{"i":"w006","f":"accípimus","l":"accipio","p":",","m":92},{"i":"w007","f":"testimónium","l":"testimonium","m":82},{"i":"w008","f":"Dei","l":"deus","m":54},{"i":"w009","f":"maius","l":"magnus","m":638,"s":true},{"i":"w010","f":"est","l":"sum","p":".","m":21},{"i":"w011","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

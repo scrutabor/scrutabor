@@ -1,0 +1,14 @@
+{
+  "id":"proprium.visitatio-beatae-mariae-virginis-graduale",
+  "title":"Benedícta et venerábilis es, Virgo María: quæ",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"visitatio-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Benedícta","l":"benedictus","m":25,"s":true},{"i":"w002","f":"et","l":"et","m":15},{"i":"w003","f":"venerábilis","l":"venerabilis","m":59,"s":true},{"i":"w004","f":"es","l":"sum","p":",","m":191},{"i":"w005","f":"Virgo","l":"virgo","m":20},{"i":"w006","f":"María","l":"Maria","p":":","m":24},{"i":"w007","f":"quæ","l":"qui","m":143},{"i":"w008","f":"sine","l":"sine","m":0,"h":"w009"},{"i":"w009","f":"tactu","l":"tactus","m":100},{"i":"w010","f":"pudóris","l":"pudor","m":69},{"i":"w011","f":"invénta","l":"invenio","m":751,"s":true},{"i":"w012","f":"es","l":"sum","m":191},{"i":"w013","f":"Mater","l":"mater","m":58},{"i":"w014","f":"Salvatóris","l":"salvator","p":".","m":69},{"i":"w015","f":"Virgo","l":"virgo","p":",","m":20},{"i":"w016","f":"Dei","l":"deus","m":54},{"i":"w017","f":"Génetrix","l":"genetrix","p":",","m":58},{"i":"w018","f":"quem","l":"qui","m":36},{"i":"w019","f":"totus","l":"totus","m":59,"s":true},{"i":"w020","f":"non","l":"non","m":32},{"i":"w021","f":"capit","l":"capio","m":140},{"i":"w022","f":"orbis","l":"orbis","p":",","m":113},{"i":"w023","f":"in","l":"in","m":3,"h":"w025"},{"i":"w024","f":"tua","l":"tuus","m":129,"s":true},{"i":"w025","f":"se","l":"sui","m":657},{"i":"w026","f":"clausit","l":"claudo","m":195},{"i":"w027","f":"víscera","l":"viscus","m":128},{"i":"w028","f":"factus","l":"facio","m":251,"h":"w029"},{"i":"w029","f":"homo","l":"homo","p":".","m":113}]}
+  ]
+}

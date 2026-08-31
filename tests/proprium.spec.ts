@@ -81,9 +81,9 @@ test('the note about today gives way to the day the reader picks', async ({ page
 	// the year, the hint stayed frozen on "wybierz inny dzień" while the reader
 	// was looking at the day they had just chosen.
 	//
-	// A fixed date OUTSIDE Advent, because that is the state the defect needs
-	// and the real clock only offers it for most of the year rather than all.
-	await asIfItWere(page, '2026-08-19T10:00:00');
+	// Christmas Eve is beyond the temporal cycle currently carried by this
+	// edition, so the default still explains that another day can be selected.
+	await asIfItWere(page, '2026-12-24T10:00:00');
 	await page.goto('/app/pl/ordo');
 	const picker = page.locator('.picker.day').first();
 	const why = picker.locator('.status-why');

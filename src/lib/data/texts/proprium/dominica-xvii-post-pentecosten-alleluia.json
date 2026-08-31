@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xvii-post-pentecosten-alleluia",
+  "title":"Allelúia, allelúia Dómine, exáudi oratiónem meam, et",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xvii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","m":46},{"i":"w003","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w004","f":"exáudi","l":"exaudio","m":6},{"i":"w005","f":"oratiónem","l":"oratio","m":7},{"i":"w006","f":"meam","l":"meus","p":",","m":8,"h":"w005"},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"clamor","l":"clamor","m":113},{"i":"w009","f":"meus","l":"meus","m":59,"h":"w008"},{"i":"w010","f":"ad","l":"ad","m":3,"h":"w011"},{"i":"w011","f":"te","l":"tu","m":4},{"i":"w012","f":"pervéniat","l":"pervenio","p":".","m":257},{"i":"w013","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

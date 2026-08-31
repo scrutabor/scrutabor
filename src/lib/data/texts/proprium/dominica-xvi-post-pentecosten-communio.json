@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xvi-post-pentecosten-communio",
+  "title":"Dómine, memorábor iustítiæ tuæ solíus: Deus, docuísti",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xvi-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w002","f":"memorábor","l":"memoro","m":645},{"i":"w003","f":"iustítiæ","l":"iustitia","m":64},{"i":"w004","f":"tuæ","l":"tuus","m":14,"h":"w003"},{"i":"w005","f":"solíus","l":"solus","p":":","m":99,"s":true},{"i":"w006","f":"Deus","l":"deus","p":",","m":60},{"i":"w007","f":"docuísti","l":"doceo","m":238},{"i":"w008","f":"me","l":"ego","m":4},{"i":"w009","f":"a","l":"a","m":0,"h":"w010"},{"i":"w010","f":"iuventúte","l":"iuventus","m":45},{"i":"w011","f":"mea","l":"meus","p":":","m":25,"s":true},{"i":"w012","f":"et","l":"et","m":15},{"i":"w013","f":"usque","l":"usque","m":32},{"i":"w014","f":"in","l":"in","m":3,"h":"w015"},{"i":"w015","f":"senéctam","l":"senecta","m":141},{"i":"w016","f":"et","l":"et","m":15},{"i":"w017","f":"sénium","l":"senium","p":",","m":82},{"i":"w018","f":"Deus","l":"deus","p":",","m":60},{"i":"w019","f":"ne","l":"ne","m":15},{"i":"w020","f":"derelínquas","l":"derelinquo","m":202},{"i":"w021","f":"me","l":"ego","p":".","m":4}]}
+  ]
+}

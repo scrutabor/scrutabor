@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-vi-post-pentecosten-communio",
+  "title":"Circuíbo et immolábo in tabernáculo eius hóstiam",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-vi-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Circuíbo","l":"circueo","m":309},{"i":"w002","f":"et","l":"et","m":15},{"i":"w003","f":"immolábo","l":"immolo","m":313},{"i":"w004","f":"in","l":"in","m":0,"h":"w005"},{"i":"w005","f":"tabernáculo","l":"tabernaculum","m":26},{"i":"w006","f":"eius","l":"is","m":27},{"i":"w007","f":"hóstiam","l":"hostia","m":141},{"i":"w008","f":"iubilatiónis","l":"iubilatio","p":":","m":13},{"i":"w009","f":"cantábo","l":"canto","m":313},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"psalmum","l":"psalmus","m":35},{"i":"w012","f":"dicam","l":"dico","m":320},{"i":"w013","f":"Dómino","l":"dominus","p":".","m":186}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xi-post-pentecosten-graduale",
+  "title":"In Deo sperávit cor meum, et adiútus",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xi-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"In","l":"in","m":0,"h":"w002"},{"i":"w002","f":"Deo","l":"deus","m":29},{"i":"w003","f":"sperávit","l":"spero","m":28},{"i":"w004","f":"cor","l":"cor","m":136},{"i":"w005","f":"meum","l":"meus","p":",","m":137,"h":"w004"},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"adiútus","l":"adiuvo","m":144,"s":true},{"i":"w008","f":"sum","l":"sum","p":":","m":172},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"reflóruit","l":"refloresco","m":195},{"i":"w011","f":"caro","l":"caro","m":20},{"i":"w012","f":"mea","l":"meus","p":",","m":25,"h":"w011"},{"i":"w013","f":"et","l":"et","m":15},{"i":"w014","f":"ex","l":"ex","m":0,"h":"w015"},{"i":"w015","f":"voluntáte","l":"voluntas","m":45},{"i":"w016","f":"mea","l":"meus","m":25,"h":"w011"},{"i":"w017","f":"confitébor","l":"confiteor","m":312},{"i":"w018","f":"illi","l":"ille","p":".","m":245},{"i":"w019","f":"Ad","l":"ad","m":3,"h":"w020"},{"i":"w020","f":"te","l":"tu","p":",","m":4},{"i":"w021","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w022","f":"clamávi","l":"clamo","p":":","m":2},{"i":"w023","f":"Deus","l":"deus","m":60},{"i":"w024","f":"meus","l":"meus","p":",","m":59,"h":"w023"},{"i":"w025","f":"ne","l":"ne","m":15},{"i":"w026","f":"síleas","l":"sileo","p":",","m":306},{"i":"w027","f":"ne","l":"ne","m":15},{"i":"w028","f":"discédas","l":"discedo","m":202},{"i":"w029","f":"a","l":"a","m":0,"h":"w030"},{"i":"w030","f":"me","l":"ego","p":".","m":131}]}
+  ]
+}

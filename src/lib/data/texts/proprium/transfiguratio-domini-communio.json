@@ -1,0 +1,14 @@
+{
+  "id":"proprium.transfiguratio-domini-communio",
+  "title":"Visiónem, quam vidístis, némini dixéritis, donec a",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"transfiguratio-domini",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Visiónem","l":"visio","p":",","m":7},{"i":"w002","f":"quam","l":"quam","m":15},{"i":"w003","f":"vidístis","l":"video","p":",","m":398},{"i":"w004","f":"némini","l":"nemo","m":214},{"i":"w005","f":"dixéritis","l":"dico","p":",","m":661},{"i":"w006","f":"donec","l":"donec","m":15},{"i":"w007","f":"a","l":"a","m":0,"h":"w010"},{"i":"w008","f":"mórtuis","l":"mortuus","m":204,"s":true},{"i":"w009","f":"resúrgat","l":"resurgo","m":257},{"i":"w010","f":"Fílius","l":"filius","m":29},{"i":"w011","f":"hóminis","l":"homo","p":".","m":69}]}
+  ]
+}

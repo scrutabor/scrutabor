@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dedicatio-sancti-michaelis-archangeli-alleluia",
+  "title":"Allelúia, allelúia. Sancte Míchaël Archángele, defénde nos",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dedicatio-sancti-michaelis-archangeli",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Sancte","l":"sanctus","m":56,"h":"w004"},{"i":"w004","f":"Míchaël","l":"Michael","m":50},{"i":"w005","f":"Archángele","l":"archangelus","p":",","m":5},{"i":"w006","f":"defénde","l":"defendo","m":86},{"i":"w007","f":"nos","l":"nos","m":49},{"i":"w008","f":"in","l":"in","m":0,"h":"w009"},{"i":"w009","f":"prœ́lio","l":"proelium","p":":","m":26},{"i":"w010","f":"ut","l":"ut","m":15},{"i":"w011","f":"non","l":"non","m":32},{"i":"w012","f":"pereámus","l":"pereo","m":324},{"i":"w013","f":"in","l":"in","m":0,"h":"w015"},{"i":"w014","f":"treméndo","l":"tremo","m":580,"s":true},{"i":"w015","f":"iudício","l":"iudicium","p":".","m":26},{"i":"w016","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

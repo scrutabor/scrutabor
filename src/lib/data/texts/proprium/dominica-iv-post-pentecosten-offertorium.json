@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-iv-post-pentecosten-offertorium",
+  "title":"Illúmina óculos meos, ne umquam obdórmiam in",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-iv-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Illúmina","l":"illumino","m":41},{"i":"w002","f":"óculos","l":"oculus","m":90},{"i":"w003","f":"meos","l":"meus","p":",","m":91,"h":"w002"},{"i":"w004","f":"ne","l":"ne","m":15},{"i":"w005","f":"umquam","l":"umquam","m":32},{"i":"w006","f":"obdórmiam","l":"obdormio","m":320},{"i":"w007","f":"in","l":"in","m":0,"h":"w008"},{"i":"w008","f":"morte","l":"mors","p":":","m":45},{"i":"w009","f":"ne","l":"ne","m":15},{"i":"w010","f":"quando","l":"quando","m":15},{"i":"w011","f":"dicat","l":"dico","m":257},{"i":"w012","f":"inimícus","l":"inimicus","m":60},{"i":"w013","f":"meus","l":"meus","p":":","m":59,"h":"w012"},{"i":"w014","f":"Præválui","l":"praevaleo","m":22},{"i":"w015","f":"advérsus","l":"adversus","m":59,"s":true},{"i":"w016","f":"eum","l":"is","p":".","m":36}]}
+  ]
+}

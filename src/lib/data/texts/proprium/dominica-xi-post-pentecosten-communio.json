@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xi-post-pentecosten-communio",
+  "title":"Hónora Dóminum de tua substántia, et de",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xi-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Hónora","l":"honoro","m":41},{"i":"w002","f":"Dóminum","l":"dominus","m":35},{"i":"w003","f":"de","l":"de","m":0,"h":"w005"},{"i":"w004","f":"tua","l":"tuus","m":31,"h":"w005"},{"i":"w005","f":"substántia","l":"substantia","p":",","m":30},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"de","l":"de","m":0,"h":"w008"},{"i":"w008","f":"primítiis","l":"primitia","m":150},{"i":"w009","f":"frugum","l":"frux","m":63},{"i":"w010","f":"tuárum","l":"tuus","p":":","m":110,"h":"w009"},{"i":"w011","f":"et","l":"et","m":15},{"i":"w012","f":"implebúntur","l":"impleo","m":364},{"i":"w013","f":"hórrea","l":"horreum","m":274},{"i":"w014","f":"tua","l":"tuus","m":31,"h":"w015"},{"i":"w015","f":"saturitáte","l":"saturitas","p":",","m":45},{"i":"w016","f":"et","l":"et","m":15},{"i":"w017","f":"vino","l":"vinum","m":26},{"i":"w018","f":"torculária","l":"torcularius","m":129,"s":true},{"i":"w019","f":"redundábunt","l":"redundo","p":".","m":392}]}
+  ]
+}

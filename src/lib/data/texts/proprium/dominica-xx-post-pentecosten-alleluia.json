@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xx-post-pentecosten-alleluia",
+  "title":"Allelúia, allelúia Parátum cor meum, Deus, parátum",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xx-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","m":46},{"i":"w003","f":"Parátum","l":"paro","m":102,"s":true},{"i":"w004","f":"cor","l":"cor","m":136},{"i":"w005","f":"meum","l":"meus","p":",","m":105,"s":true},{"i":"w006","f":"Deus","l":"deus","p":",","m":60},{"i":"w007","f":"parátum","l":"paro","m":102,"s":true},{"i":"w008","f":"cor","l":"cor","m":136},{"i":"w009","f":"meum","l":"meus","p":":","m":137,"h":"w008"},{"i":"w010","f":"cantábo","l":"canto","p":",","m":313},{"i":"w011","f":"et","l":"et","m":15},{"i":"w012","f":"psallam","l":"psallo","m":320},{"i":"w013","f":"tibi","l":"tu","p":",","m":139},{"i":"w014","f":"glória","l":"gloria","m":24},{"i":"w015","f":"mea","l":"meus","p":".","m":25,"h":"w014"},{"i":"w016","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

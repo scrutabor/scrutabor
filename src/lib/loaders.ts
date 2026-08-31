@@ -173,7 +173,9 @@ export async function properData(day: string, lang: Lang) {
 			const [category, slug] = key.split('/');
 			if (category !== 'proprium') return false;
 			const part = partOf(slug);
-			return part !== undefined && slug.slice(0, -(part.length + 1)) === found.id;
+			return (
+				part !== undefined && slug.slice(0, -(part.length + 1)) === (found.textPrefix ?? found.id)
+			);
 		})
 		.map((key) => {
 			const part = partOf(key.split('/')[1]);

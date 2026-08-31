@@ -1,0 +1,14 @@
+{
+  "id":"proprium.d-n-iesu-christi-regis-offertorium",
+  "title":"Póstula a me, et dabo tibi gentes",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"d-n-iesu-christi-regis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Póstula","l":"postulo","m":41},{"i":"w002","f":"a","l":"a","m":0,"h":"w003"},{"i":"w003","f":"me","l":"ego","p":",","m":131},{"i":"w004","f":"et","l":"et","m":15},{"i":"w005","f":"dabo","l":"do","m":313},{"i":"w006","f":"tibi","l":"tu","m":139},{"i":"w007","f":"gentes","l":"gens","m":16},{"i":"w008","f":"hereditátem","l":"hereditas","m":7},{"i":"w009","f":"tuam","l":"tuus","p":",","m":8,"h":"w008"},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"possessiónem","l":"possessio","m":7},{"i":"w012","f":"tuam","l":"tuus","m":8,"h":"w011"},{"i":"w013","f":"términos","l":"terminus","m":90},{"i":"w014","f":"terræ","l":"terra","p":".","m":64}]}
+  ]
+}

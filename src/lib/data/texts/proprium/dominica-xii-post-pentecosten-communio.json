@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xii-post-pentecosten-communio",
+  "title":"De fructu óperum tuórum, Dómine, satiábitur terra",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"De","l":"de","m":0,"h":"w002"},{"i":"w002","f":"fructu","l":"fructus","m":100},{"i":"w003","f":"óperum","l":"opus","m":115},{"i":"w004","f":"tuórum","l":"tuus","p":",","m":76,"s":true},{"i":"w005","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w006","f":"satiábitur","l":"satio","m":287},{"i":"w007","f":"terra","l":"terra","p":":","m":30},{"i":"w008","f":"ut","l":"ut","m":15},{"i":"w009","f":"edúcas","l":"educo","m":202},{"i":"w010","f":"panem","l":"panis","m":162},{"i":"w011","f":"de","l":"de","m":0,"h":"w012"},{"i":"w012","f":"terra","l":"terra","p":",","m":30},{"i":"w013","f":"et","l":"et","m":15},{"i":"w014","f":"vinum","l":"vinum","m":82},{"i":"w015","f":"lætíficet","l":"laetifico","m":33},{"i":"w016","f":"cor","l":"cor","m":97},{"i":"w017","f":"hóminis","l":"homo","p":":","m":69},{"i":"w018","f":"ut","l":"ut","m":15},{"i":"w019","f":"exhílaret","l":"exhilaro","m":33},{"i":"w020","f":"fáciem","l":"facies","m":338},{"i":"w021","f":"in","l":"in","m":0,"h":"w022"},{"i":"w022","f":"óleo","l":"oleum","p":",","m":26},{"i":"w023","f":"et","l":"et","m":15},{"i":"w024","f":"panis","l":"panis","m":113},{"i":"w025","f":"cor","l":"cor","m":136},{"i":"w026","f":"hóminis","l":"homo","m":69},{"i":"w027","f":"confírmet","l":"confirmo","p":".","m":33}]}
+  ]
+}

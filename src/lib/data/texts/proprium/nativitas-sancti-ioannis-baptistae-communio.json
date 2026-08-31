@@ -1,0 +1,14 @@
+{
+  "id":"proprium.nativitas-sancti-ioannis-baptistae-communio",
+  "title":"Tu, puer, Propheta Altíssimi vocaberis: præíbis enim",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"nativitas-sancti-ioannis-baptistae",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Tu","l":"tu","p":",","m":143},{"i":"w002","f":"puer","l":"puer","p":",","m":60},{"i":"w003","f":"Prophéta","l":"propheta","m":391},{"i":"w004","f":"Altíssimi","l":"altus","m":106,"s":true},{"i":"w005","f":"vocáberis","l":"voco","p":":","m":752},{"i":"w006","f":"præíbis","l":"praeeo","m":614},{"i":"w007","f":"enim","l":"enim","m":15},{"i":"w008","f":"ante","l":"ante","m":3,"h":"w009"},{"i":"w009","f":"fáciem","l":"facies","m":338},{"i":"w010","f":"Dómini","l":"dominus","m":54},{"i":"w011","f":"paráre","l":"paro","m":239},{"i":"w012","f":"vias","l":"via","m":169},{"i":"w013","f":"eius","l":"is","p":".","m":27}]}
+  ]
+}

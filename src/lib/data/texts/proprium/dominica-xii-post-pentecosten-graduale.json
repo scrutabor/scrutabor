@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xii-post-pentecosten-graduale",
+  "title":"Benedícam Dóminum in omni témpore: semper laus",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Benedícam","l":"benedico","m":320},{"i":"w002","f":"Dóminum","l":"dominus","m":35},{"i":"w003","f":"in","l":"in","m":0,"h":"w005"},{"i":"w004","f":"omni","l":"omnis","m":31,"s":true},{"i":"w005","f":"témpore","l":"tempus","p":":","m":135},{"i":"w006","f":"semper","l":"semper","m":32},{"i":"w007","f":"laus","l":"laus","m":20},{"i":"w008","f":"eius","l":"is","m":27},{"i":"w009","f":"in","l":"in","m":0,"h":"w010"},{"i":"w010","f":"ore","l":"os","m":135},{"i":"w011","f":"meo","l":"meus","p":".","m":101,"s":true},{"i":"w012","f":"In","l":"in","m":0,"h":"w013"},{"i":"w013","f":"Dómino","l":"dominus","m":29},{"i":"w014","f":"laudábitur","l":"laudo","m":287},{"i":"w015","f":"ánima","l":"anima","m":24},{"i":"w016","f":"mea","l":"meus","p":":","m":25,"h":"w015"},{"i":"w017","f":"áudiant","l":"audio","m":589},{"i":"w018","f":"mansuéti","l":"mansuetus","p":",","m":87,"s":true},{"i":"w019","f":"et","l":"et","m":15},{"i":"w020","f":"læténtur","l":"laeto","p":".","m":673}]}
+  ]
+}

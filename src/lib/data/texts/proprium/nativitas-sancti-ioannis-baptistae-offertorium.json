@@ -1,0 +1,14 @@
+{
+  "id":"proprium.nativitas-sancti-ioannis-baptistae-offertorium",
+  "title":"Iustus ut palma florébit: sicut cedrus, quæ",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"nativitas-sancti-ioannis-baptistae",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Iustus","l":"iustus","m":59,"s":true},{"i":"w002","f":"ut","l":"ut","m":15},{"i":"w003","f":"palma","l":"palma","m":24},{"i":"w004","f":"florébit","l":"floreo","p":":","m":19},{"i":"w005","f":"sicut","l":"sicut","m":15},{"i":"w006","f":"cedrus","l":"cedrus","p":",","m":111},{"i":"w007","f":"quæ","l":"qui","m":143},{"i":"w008","f":"in","l":"in","m":0,"h":"w009"},{"i":"w009","f":"Líbano","l":"Libanus","m":676},{"i":"w010","f":"est","l":"sum","p":",","m":21},{"i":"w011","f":"multiplicábitur","l":"multiplico","p":".","m":287},{"i":"w012","f":"Allelúia","l":"alleluia","p":".)","m":46}]}
+  ]
+}

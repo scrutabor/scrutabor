@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xxii-post-pentecosten-alleluia",
+  "title":"Allelúia, allelúia. Qui timent Dóminum sperent in",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xxii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Qui","l":"qui","m":18},{"i":"w004","f":"timent","l":"timeo","m":399},{"i":"w005","f":"Dóminum","l":"dominus","m":35},{"i":"w006","f":"sperent","l":"spero","m":420},{"i":"w007","f":"in","l":"in","m":0,"h":"w008"},{"i":"w008","f":"eo","l":"is","p":":","m":289},{"i":"w009","f":"adiútor","l":"adiutor","m":113},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"protéctor","l":"protector","m":113},{"i":"w012","f":"eórum","l":"is","m":255},{"i":"w013","f":"est","l":"sum","p":".","m":21},{"i":"w014","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

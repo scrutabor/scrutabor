@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xxiii-post-pentecosten-alleluia",
+  "title":"Allelúia, allelúia. De profúndis clamávi ad te",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xxiii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"De","l":"de","m":0,"h":"w004"},{"i":"w004","f":"profúndis","l":"profundum","m":1},{"i":"w005","f":"clamávi","l":"clamo","m":2},{"i":"w006","f":"ad","l":"ad","m":3,"h":"w007"},{"i":"w007","f":"te","l":"tu","p":",","m":4},{"i":"w008","f":"Dómine","l":"dominus","p":":","m":5},{"i":"w009","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w010","f":"exáudi","l":"exaudio","m":6},{"i":"w011","f":"oratiónem","l":"oratio","m":7},{"i":"w012","f":"meam","l":"meus","p":".","m":8,"h":"w011"},{"i":"w013","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

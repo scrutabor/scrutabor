@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xxii-post-pentecosten-graduale",
+  "title":"Ecce, quam bonum et quam iucúndum, habitáre",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xxii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Ecce","l":"ecce","p":",","m":46},{"i":"w002","f":"quam","l":"quam","m":15},{"i":"w003","f":"bonum","l":"bonus","m":137,"s":true},{"i":"w004","f":"et","l":"et","m":15},{"i":"w005","f":"quam","l":"quam","m":15},{"i":"w006","f":"iucúndum","l":"iucundus","p":",","m":105,"s":true},{"i":"w007","f":"habitáre","l":"habito","m":239},{"i":"w008","f":"fratres","l":"frater","m":268},{"i":"w009","f":"in","l":"in","m":3,"h":"w010"},{"i":"w010","f":"unum","l":"unus","p":"!","m":137,"s":true},{"i":"w011","f":"Sicut","l":"sicut","m":15},{"i":"w012","f":"unguéntum","l":"unguentum","m":104},{"i":"w013","f":"in","l":"in","m":0,"h":"w014"},{"i":"w014","f":"cápite","l":"caput","p":",","m":135},{"i":"w015","f":"quod","l":"qui","m":189},{"i":"w016","f":"descéndit","l":"descendo","m":195},{"i":"w017","f":"in","l":"in","m":3,"h":"w018"},{"i":"w018","f":"barbam","l":"barba","p":",","m":141},{"i":"w019","f":"barbam","l":"barba","m":141},{"i":"w020","f":"Áaron","l":"Aaron","p":".","m":34}]}
+  ]
+}

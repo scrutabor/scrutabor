@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-lucae-evangelistae-graduale",
+  "title":"In omnem terram exívit sonus eórum: et",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-lucae-evangelistae",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"In","l":"in","m":3,"h":"w003"},{"i":"w002","f":"omnem","l":"omnis","m":8,"h":"w003"},{"i":"w003","f":"terram","l":"terra","m":141},{"i":"w004","f":"exívit","l":"exeo","m":292},{"i":"w005","f":"sonus","l":"sonus","m":60},{"i":"w006","f":"eórum","l":"is","p":":","m":255},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"in","l":"in","m":3,"h":"w009"},{"i":"w009","f":"fines","l":"finis","m":152},{"i":"w010","f":"orbis","l":"orbis","m":69},{"i":"w011","f":"terræ","l":"terra","m":64},{"i":"w012","f":"verba","l":"verbum","m":274},{"i":"w013","f":"eórum","l":"is","p":".","m":255},{"i":"w014","f":"Cœli","l":"caelum","m":68},{"i":"w015","f":"enárrant","l":"enarro","m":125},{"i":"w016","f":"glóriam","l":"gloria","m":141},{"i":"w017","f":"Dei","l":"deus","p":":","m":54},{"i":"w018","f":"et","l":"et","m":15},{"i":"w019","f":"ópera","l":"opus","m":128},{"i":"w020","f":"mánuum","l":"manus","m":428},{"i":"w021","f":"eius","l":"is","m":27},{"i":"w022","f":"annúntiat","l":"annuntio","m":119},{"i":"w023","f":"firmaméntum","l":"firmamentum","p":".","m":104}]}
+  ]
+}

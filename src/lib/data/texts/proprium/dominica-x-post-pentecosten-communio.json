@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-x-post-pentecosten-communio",
+  "title":"Acceptábis sacrificium iustítiæ, oblatiónes et holocáusta, super",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-x-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Acceptábis","l":"accepto","m":284},{"i":"w002","f":"sacrifícium","l":"sacrificium","m":82},{"i":"w003","f":"iustítiæ","l":"iustitia","p":",","m":64},{"i":"w004","f":"oblatiónes","l":"oblatio","m":16},{"i":"w005","f":"et","l":"et","m":15},{"i":"w006","f":"holocáusta","l":"holocaustum","p":",","m":85},{"i":"w007","f":"super","l":"super","m":3,"h":"w008"},{"i":"w008","f":"altáre","l":"altare","m":136},{"i":"w009","f":"tuum","l":"tuus","p":",","m":137,"s":true},{"i":"w010","f":"Dómine","l":"dominus","p":".","m":5}]}
+  ]
+}

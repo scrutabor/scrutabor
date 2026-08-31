@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-iii-post-pentecosten-offertorium",
+  "title":"Sperent in te omnes, qui novérunt nomen",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-iii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Sperent","l":"spero","m":420},{"i":"w002","f":"in","l":"in","m":0,"h":"w003"},{"i":"w003","f":"te","l":"tu","m":131},{"i":"w004","f":"omnes","l":"omnis","p":",","m":180,"s":true},{"i":"w005","f":"qui","l":"qui","m":18},{"i":"w006","f":"novérunt","l":"nosco","m":273},{"i":"w007","f":"nomen","l":"nomen","m":97},{"i":"w008","f":"tuum","l":"tuus","p":",","m":137,"s":true},{"i":"w009","f":"Dómine","l":"dominus","p":":","m":5},{"i":"w010","f":"quóniam","l":"quoniam","m":15},{"i":"w011","f":"non","l":"non","m":32},{"i":"w012","f":"derelínquis","l":"derelinquo","m":84},{"i":"w013","f":"quæréntes","l":"quaero","m":243,"s":true},{"i":"w014","f":"te","l":"tu","p":":","m":131},{"i":"w015","f":"psállite","l":"psallo","m":155},{"i":"w016","f":"Dómino","l":"dominus","p":",","m":186},{"i":"w017","f":"qui","l":"qui","m":18},{"i":"w018","f":"hábitat","l":"habito","m":119},{"i":"w019","f":"in","l":"in","m":3,"h":"w020"},{"i":"w020","f":"Sion","l":"Sion","p":":","m":540},{"i":"w021","f":"quóniam","l":"quoniam","m":15},{"i":"w022","f":"non","l":"non","m":32},{"i":"w023","f":"est","l":"sum","m":21},{"i":"w024","f":"oblítus","l":"obliviscor","m":224,"s":true},{"i":"w025","f":"oratiónem","l":"oratio","m":7},{"i":"w026","f":"páuperum","l":"pauper","p":".","m":77}]}
+  ]
+}

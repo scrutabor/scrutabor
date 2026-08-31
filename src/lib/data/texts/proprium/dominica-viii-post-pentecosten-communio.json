@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-viii-post-pentecosten-communio",
+  "title":"Gustáte et vidéte, quóniam suávis est Dóminus",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-viii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Gustáte","l":"gusto","m":158},{"i":"w002","f":"et","l":"et","m":15},{"i":"w003","f":"vidéte","l":"video","p":",","m":368},{"i":"w004","f":"quóniam","l":"quoniam","m":15},{"i":"w005","f":"suávis","l":"suavis","m":59,"s":true},{"i":"w006","f":"est","l":"sum","m":21},{"i":"w007","f":"Dóminus","l":"dominus","p":":","m":60},{"i":"w008","f":"beátus","l":"beatus","m":59,"h":"w009"},{"i":"w009","f":"vir","l":"vir","p":",","m":60},{"i":"w010","f":"qui","l":"qui","m":18},{"i":"w011","f":"sperat","l":"spero","m":119},{"i":"w012","f":"in","l":"in","m":0,"h":"w013"},{"i":"w013","f":"eo","l":"is","p":".","m":289}]}
+  ]
+}

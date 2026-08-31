@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xiii-post-pentecosten-communio",
+  "title":"Panem de cælo dedísti nobis, Dómine, habéntem",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xiii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Panem","l":"panis","m":162},{"i":"w002","f":"de","l":"de","m":0,"h":"w003"},{"i":"w003","f":"cælo","l":"caelum","m":26},{"i":"w004","f":"dedísti","l":"do","m":283},{"i":"w005","f":"nobis","l":"nos","p":",","m":53},{"i":"w006","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w007","f":"habéntem","l":"habeo","m":466,"h":"w012"},{"i":"w008","f":"omne","l":"omnis","m":137,"h":"w009"},{"i":"w009","f":"delectaméntum","l":"delectamentum","m":82},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"omnem","l":"omnis","m":8,"s":true},{"i":"w012","f":"sapórem","l":"sapor","m":162},{"i":"w013","f":"suavitátis","l":"suavitas","p":".","m":13}]}
+  ]
+}

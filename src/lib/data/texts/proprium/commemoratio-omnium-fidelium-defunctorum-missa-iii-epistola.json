@@ -1,0 +1,14 @@
+{
+  "id":"proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-epistola",
+  "title":"In diébus illis: Audívi vocem de cælo",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"commemoratio-omnium-fidelium-defunctorum-missa-iii",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"In","l":"in","m":0,"h":"w002"},{"i":"w002","f":"diébus","l":"dies","m":322},{"i":"w003","f":"illis","l":"ille","p":":","m":42},{"i":"w004","f":"Audívi","l":"audio","m":491},{"i":"w005","f":"vocem","l":"vox","m":7},{"i":"w006","f":"de","l":"de","m":0,"h":"w007"},{"i":"w007","f":"cælo","l":"caelum","p":",","m":26},{"i":"w008","f":"dicéntem","l":"dico","m":229,"s":true},{"i":"w009","f":"mihi","l":"ego","p":":","m":139},{"i":"w010","f":"Scribe","l":"scribo","p":":","m":86},{"i":"w011","f":"Beáti","l":"beatus","m":99,"s":true},{"i":"w012","f":"mórtui","l":"mortuus","p":",","m":87,"s":true},{"i":"w013","f":"qui","l":"qui","m":18},{"i":"w014","f":"in","l":"in","m":0,"h":"w015"},{"i":"w015","f":"Dómino","l":"dominus","m":29},{"i":"w016","f":"moriúntur","l":"morior","p":".","m":558},{"i":"w017","f":"Ámodo","l":"amodo","m":32},{"i":"w018","f":"iam","l":"iam","m":32},{"i":"w019","f":"dicit","l":"dico","m":140},{"i":"w020","f":"Spíritus","l":"spiritus","p":",","m":250},{"i":"w021","f":"ut","l":"ut","m":15},{"i":"w022","f":"requiéscant","l":"requiesco","m":44},{"i":"w023","f":"a","l":"a","m":0,"h":"w024"},{"i":"w024","f":"labóribus","l":"labor","m":197},{"i":"w025","f":"suis","l":"suus","p":":","m":236,"s":true},{"i":"w026","f":"ópera","l":"opus","m":128},{"i":"w027","f":"enim","l":"enim","m":15},{"i":"w028","f":"illórum","l":"ille","m":330},{"i":"w029","f":"sequúntur","l":"sequor","m":558},{"i":"w030","f":"illos","l":"ille","p":".","m":163}]}
+  ]
+}

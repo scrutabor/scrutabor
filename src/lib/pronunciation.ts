@@ -97,6 +97,7 @@ function tokenize(word: string): Unit[] {
 		if (
 			(ch === 'i' || ch === 'í') &&
 			VOWELS.has(word[i + 1] ?? '') &&
+			!(i === 0 && bare(word) === 'iisdem') &&
 			(units[units.length - 1]?.vowel === true || units.length === 0 || afterPrefix(word, i))
 		) {
 			units.push({ text: ch, vowel: false });
@@ -146,7 +147,7 @@ function onsetLength(cluster: Unit[]): number {
 		if (n >= 3 && cluster[n - 3].text === 's') return 3;
 		return 2; // pa-trem
 	}
-	if (prev === 's' && n === 2) return 2; // no-ster, a-scén-dit
+	if (prev === 's' && n === 2 && last !== 'd') return 2; // no-ster, a-scén-dit; but i-ís-dem
 	return 1;
 }
 

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.d-n-iesu-christi-regis-graduale",
+  "title":"Dominábitur a mari usque ad mare, et",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"d-n-iesu-christi-regis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Dominábitur","l":"domino","m":287},{"i":"w002","f":"a","l":"a","m":0,"h":"w003"},{"i":"w003","f":"mari","l":"mare","m":135},{"i":"w004","f":"usque","l":"usque","m":32},{"i":"w005","f":"ad","l":"ad","m":3,"h":"w006"},{"i":"w006","f":"mare","l":"mare","p":",","m":136},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"a","l":"a","m":0,"h":"w009"},{"i":"w009","f":"flúmine","l":"flumen","m":135},{"i":"w010","f":"usque","l":"usque","m":32},{"i":"w011","f":"ad","l":"ad","m":3,"h":"w012"},{"i":"w012","f":"términos","l":"terminus","m":90},{"i":"w013","f":"orbis","l":"orbis","m":69},{"i":"w014","f":"terrárum","l":"terra","p":".","m":147},{"i":"w015","f":"Et","l":"et","m":15},{"i":"w016","f":"adorábunt","l":"adoro","m":392},{"i":"w017","f":"eum","l":"is","m":36},{"i":"w018","f":"omnes","l":"omnis","m":180,"s":true},{"i":"w019","f":"reges","l":"rex","m":242},{"i":"w020","f":"terræ","l":"terra","p":":","m":64},{"i":"w021","f":"omnes","l":"omnis","m":180,"h":"w022"},{"i":"w022","f":"gentes","l":"gens","m":16},{"i":"w023","f":"sérvient","l":"servio","m":363},{"i":"w024","f":"ei","l":"is","p":".","m":245}]}
+  ]
+}

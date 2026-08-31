@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xvi-post-pentecosten-offertorium",
+  "title":"Dómine, in auxílium meum réspice: confundántur et",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xvi-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w002","f":"in","l":"in","m":3,"h":"w003"},{"i":"w003","f":"auxílium","l":"auxilium","m":82},{"i":"w004","f":"meum","l":"meus","m":137,"s":true},{"i":"w005","f":"réspice","l":"respicio","p":":","m":86},{"i":"w006","f":"confundántur","l":"confundo","m":554},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"revereántur","l":"revereor","p":",","m":616},{"i":"w009","f":"qui","l":"qui","m":18},{"i":"w010","f":"quærunt","l":"quaero","m":298},{"i":"w011","f":"ánimam","l":"anima","m":141},{"i":"w012","f":"meam","l":"meus","p":",","m":8,"h":"w011"},{"i":"w013","f":"ut","l":"ut","m":15},{"i":"w014","f":"áuferant","l":"aufero","m":9},{"i":"w015","f":"eam","l":"is","p":":","m":291},{"i":"w016","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w017","f":"in","l":"in","m":3,"h":"w018"},{"i":"w018","f":"auxílium","l":"auxilium","m":82},{"i":"w019","f":"meum","l":"meus","m":137,"s":true},{"i":"w020","f":"réspice","l":"respicio","p":".","m":86}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.beata-maria-virgo-regina-communio",
+  "title":"Regína mundi digníssima, María Virgo perpétua, intercéde",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"beata-maria-virgo-regina",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Regína","l":"regina","m":61},{"i":"w002","f":"mundi","l":"mundus","m":54},{"i":"w003","f":"digníssima","l":"dignus","p":",","m":512,"h":"w004"},{"i":"w004","f":"María","l":"Maria","m":24},{"i":"w005","f":"Virgo","l":"virgo","m":20},{"i":"w006","f":"perpétua","l":"perpetuus","p":",","m":25,"h":"w005"},{"i":"w007","f":"intercéde","l":"intercedo","m":86},{"i":"w008","f":"pro","l":"pro","m":0,"h":"w010"},{"i":"w009","f":"nostra","l":"noster","m":31,"h":"w010"},{"i":"w010","f":"pace","l":"pax","m":45},{"i":"w011","f":"et","l":"et","m":15},{"i":"w012","f":"salúte","l":"salus","p":",","m":45},{"i":"w013","f":"quæ","l":"qui","m":49},{"i":"w014","f":"genuísti","l":"gigno","m":154},{"i":"w015","f":"Christum","l":"Christus","m":35},{"i":"w016","f":"Dóminum","l":"dominus","p":",","m":35},{"i":"w017","f":"Salvatórem","l":"salvator","m":162},{"i":"w018","f":"ómnium","l":"omnis","p":".","m":76,"s":true}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.exaltatio-sanctae-crucis-alleluia",
+  "title":"Allelúia, allelúia. Dulce lignum, dulces clavos, dúlcia",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"exaltatio-sanctae-crucis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Dulce","l":"dulcis","m":137,"h":"w004"},{"i":"w004","f":"lignum","l":"lignum","p":",","m":82},{"i":"w005","f":"dulces","l":"dulcis","m":91,"h":"w006"},{"i":"w006","f":"clavos","l":"clavus","p":",","m":90},{"i":"w007","f":"dúlcia","l":"dulcis","m":129,"h":"w009"},{"i":"w008","f":"ferens","l":"fero","m":231,"s":true},{"i":"w009","f":"póndera","l":"pondus","p":":","m":128},{"i":"w010","f":"quæ","l":"qui","m":49},{"i":"w011","f":"sola","l":"solus","m":272,"s":true},{"i":"w012","f":"fuísti","l":"sum","m":467},{"i":"w013","f":"digna","l":"dignus","m":129,"s":true},{"i":"w014","f":"sustinére","l":"sustineo","m":93},{"i":"w015","f":"Regem","l":"rex","m":162},{"i":"w016","f":"cælórum","l":"caelum","m":79},{"i":"w017","f":"et","l":"et","m":15},{"i":"w018","f":"Dóminum","l":"dominus","p":".","m":35},{"i":"w019","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

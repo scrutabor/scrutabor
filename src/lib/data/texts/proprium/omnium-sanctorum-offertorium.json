@@ -1,0 +1,14 @@
+{
+  "id":"proprium.omnium-sanctorum-offertorium",
+  "title":"Iustórum ánimæ in manu Dei sunt, et",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"omnium-sanctorum",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Iustórum","l":"iustus","m":76,"s":true},{"i":"w002","f":"ánimæ","l":"anima","m":64},{"i":"w003","f":"in","l":"in","m":0,"h":"w004"},{"i":"w004","f":"manu","l":"manus","m":500},{"i":"w005","f":"Dei","l":"deus","m":54},{"i":"w006","f":"sunt","l":"sum","p":",","m":117},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"non","l":"non","m":32},{"i":"w009","f":"tanget","l":"tango","m":37},{"i":"w010","f":"illos","l":"ille","m":163},{"i":"w011","f":"torméntum","l":"tormentum","m":82},{"i":"w012","f":"malítiæ","l":"malitia","p":":","m":64},{"i":"w013","f":"visi","l":"video","m":332,"s":true},{"i":"w014","f":"sunt","l":"sum","m":117},{"i":"w015","f":"óculis","l":"oculus","m":51},{"i":"w016","f":"insipiéntium","l":"insipiens","m":76,"s":true},{"i":"w017","f":"mori","l":"morior","p":":","m":95},{"i":"w018","f":"illi","l":"ille","m":245},{"i":"w019","f":"autem","l":"autem","m":15},{"i":"w020","f":"sunt","l":"sum","m":117},{"i":"w021","f":"in","l":"in","m":0,"h":"w022"},{"i":"w022","f":"pace","l":"pax","p":",","m":45},{"i":"w023","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w024","f":"sed","l":"sed","m":15},{"i":"w025","f":"post","l":"post","m":3,"h":"w026"},{"i":"w026","f":"Septuagésimam","l":"septuagesimus","m":8,"s":true},{"i":"w027","f":"dícitur","l":"dico","p":")","m":422},{"i":"w028","f":"pace","l":"pax","p":".","m":45}]}
+  ]
+}

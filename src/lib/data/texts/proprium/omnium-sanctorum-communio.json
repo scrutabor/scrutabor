@@ -1,0 +1,14 @@
+{
+  "id":"proprium.omnium-sanctorum-communio",
+  "title":"Beáti mundo corde, quóniam ipsi Deum vidébunt",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"omnium-sanctorum",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Beáti","l":"beatus","m":99,"s":true},{"i":"w002","f":"mundo","l":"mundus","m":212},{"i":"w003","f":"corde","l":"cor","p":",","m":135},{"i":"w004","f":"quóniam","l":"quoniam","m":15},{"i":"w005","f":"ipsi","l":"ipse","m":245},{"i":"w006","f":"Deum","l":"deus","m":35},{"i":"w007","f":"vidébunt","l":"video","p":";","m":365},{"i":"w008","f":"beáti","l":"beatus","m":99,"h":"w011"},{"i":"w009","f":"pacífici","l":"pacificus","p":",","m":87,"s":true},{"i":"w010","f":"quóniam","l":"quoniam","m":15},{"i":"w011","f":"fílii","l":"filius","m":54},{"i":"w012","f":"Dei","l":"deus","m":54},{"i":"w013","f":"vocabúntur","l":"voco","p":":","m":730},{"i":"w014","f":"beáti","l":"beatus","p":",","m":99,"s":true},{"i":"w015","f":"qui","l":"qui","m":18},{"i":"w016","f":"persecutiónem","l":"persecutio","m":7},{"i":"w017","f":"patiúntur","l":"patior","m":558},{"i":"w018","f":"propter","l":"propter","m":3,"h":"w019"},{"i":"w019","f":"iustítiam","l":"iustitia","p":",","m":141},{"i":"w020","f":"quóniam","l":"quoniam","m":15},{"i":"w021","f":"ipsórum","l":"ipse","m":330},{"i":"w022","f":"est","l":"sum","m":21},{"i":"w023","f":"regnum","l":"regnum","m":104},{"i":"w024","f":"cælórum","l":"caelum","p":".","m":79}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-laurentii-martyris-communio",
+  "title":"Qui mihi mínistrat, me sequátur: et ubi",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sancti-laurentii-martyris",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Qui","l":"qui","m":18},{"i":"w002","f":"mihi","l":"ego","m":139},{"i":"w003","f":"mínistrat","l":"ministro","p":",","m":119},{"i":"w004","f":"me","l":"ego","m":4},{"i":"w005","f":"sequátur","l":"sequor","p":":","m":628},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"ubi","l":"ubi","m":15},{"i":"w008","f":"ego","l":"ego","m":143},{"i":"w009","f":"sum","l":"sum","p":",","m":172},{"i":"w010","f":"illic","l":"illic","m":32},{"i":"w011","f":"et","l":"et","m":15},{"i":"w012","f":"miníster","l":"minister","m":60},{"i":"w013","f":"meus","l":"meus","m":59,"h":"w012"},{"i":"w014","f":"erit","l":"sum","p":".","m":277}]}
+  ]
+}

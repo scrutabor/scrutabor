@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xxiii-post-pentecosten-communio",
+  "title":"Amen, dico vobis, quidquid orántes pétitis, crédite",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xxiii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Amen","l":"amen","p":",","m":46},{"i":"w002","f":"dico","l":"dico","m":176},{"i":"w003","f":"vobis","l":"vos","p":",","m":53},{"i":"w004","f":"quidquid","l":"quisquis","m":4},{"i":"w005","f":"orántes","l":"oro","m":258,"s":true},{"i":"w006","f":"pétitis","l":"peto","p":",","m":590},{"i":"w007","f":"crédite","l":"credo","p":",","m":155},{"i":"w008","f":"quia","l":"quia","m":15},{"i":"w009","f":"accipiétis","l":"accipio","p":",","m":156},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"fiet","l":"fio","m":277},{"i":"w012","f":"vobis","l":"vos","p":".","m":53}]}
+  ]
+}

@@ -35,6 +35,7 @@ describe('syllabify', () => {
 		expect(syllabized('Paulo')).toBe('Pau-lo'); // au diphthong
 		expect(syllabized('Míchaël')).toBe('Mí-cha-ël'); // ë its own syllable
 		expect(syllabized('tuum')).toBe('tu-um'); // uu is not a diphthong
+		expect(syllabized('iísdem')).toBe('i-ís-dem'); // the Missal prints the ii as a hiatus
 	});
 
 	it('reassembles to the original form for every corpus word', () => {

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xiv-post-pentecosten-alleluia",
+  "title":"Allelúia, allelúia. Veníte, exsultémus Dómino, iubilémus Deo",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-xiv-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Veníte","l":"venio","p":",","m":529},{"i":"w004","f":"exsultémus","l":"exsulto","m":89},{"i":"w005","f":"Dómino","l":"dominus","p":",","m":186},{"i":"w006","f":"iubilémus","l":"iubilo","m":89},{"i":"w007","f":"Deo","l":"deus","p":",","m":186},{"i":"w008","f":"salutári","l":"salutaris","m":101,"s":true},{"i":"w009","f":"nostro","l":"noster","p":".","m":216,"h":"w007"},{"i":"w010","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

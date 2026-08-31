@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xv-post-pentecosten-communio",
+  "title":"Panis, quem ego dédero, caro mea est",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xv-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Panis","l":"panis","p":",","m":113},{"i":"w002","f":"quem","l":"qui","m":36},{"i":"w003","f":"ego","l":"ego","m":143},{"i":"w004","f":"dédero","l":"do","p":",","m":699},{"i":"w005","f":"caro","l":"caro","m":20},{"i":"w006","f":"mea","l":"meus","m":25,"h":"w005"},{"i":"w007","f":"est","l":"sum","m":21},{"i":"w008","f":"pro","l":"pro","m":0,"h":"w010"},{"i":"w009","f":"sǽculi","l":"saeculum","m":68},{"i":"w010","f":"vita","l":"vita","p":".","m":30}]}
+  ]
+}

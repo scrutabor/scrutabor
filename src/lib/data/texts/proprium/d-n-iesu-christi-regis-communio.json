@@ -1,0 +1,14 @@
+{
+  "id":"proprium.d-n-iesu-christi-regis-communio",
+  "title":"Sedébit Dóminus Rex in ætérnum: Dóminus benedícet",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"d-n-iesu-christi-regis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Sedébit","l":"sedeo","m":19},{"i":"w002","f":"Dóminus","l":"dominus","m":60},{"i":"w003","f":"Rex","l":"rex","m":113},{"i":"w004","f":"in","l":"in","m":3,"h":"w006"},{"i":"w005","f":"ætérnum","l":"aeternus","p":":","m":137,"s":true},{"i":"w006","f":"Dóminus","l":"dominus","m":35},{"i":"w007","f":"benedícet","l":"benedico","m":37},{"i":"w008","f":"pópulo","l":"populus","m":186},{"i":"w009","f":"suo","l":"suus","m":101,"s":true},{"i":"w010","f":"in","l":"in","m":0,"h":"w011"},{"i":"w011","f":"pace","l":"pax","p":".","m":45}]}
+  ]
+}

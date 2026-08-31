@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-iv-post-pentecosten-postcommunio",
+  "title":"Mystéria nos, Dómine, quǽsumus, sumpta puríficent: et",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-iv-post-pentecosten",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Mystéria","l":"mysterium","m":85},{"i":"w002","f":"nos","l":"nos","p":",","m":49},{"i":"w003","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w004","f":"quǽsumus","l":"quaeso","p":",","m":92},{"i":"w005","f":"sumpta","l":"sumo","m":462,"s":true},{"i":"w006","f":"puríficent","l":"purifico","p":":","m":420},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"suo","l":"suus","m":101,"s":true},{"i":"w009","f":"múnere","l":"munus","m":135},{"i":"w010","f":"tueántur","l":"tueor","p":".","m":616},{"i":"w011","f":"Per","l":"per","m":3,"h":"w012"},{"i":"w012","f":"Dóminum","l":"dominus","m":35},{"i":"w013","f":"nostrum","l":"noster","m":96,"h":"w014"},{"i":"w014","f":"Iesum","l":"Iesus","m":38},{"i":"w015","f":"Christum","l":"Christus","p":",","m":35},{"i":"w016","f":"Fílium","l":"filius","m":35},{"i":"w017","f":"tuum","l":"tuus","p":":","m":96,"h":"w016"},{"i":"w018","f":"Qui","l":"qui","m":18},{"i":"w019","f":"tecum","l":"tu","m":131},{"i":"w020","f":"vivit","l":"vivo","m":140},{"i":"w021","f":"et","l":"et","m":15},{"i":"w022","f":"regnat","l":"regno","m":119},{"i":"w023","f":"in","l":"in","m":0,"h":"w024"},{"i":"w024","f":"unitáte","l":"unitas","m":45},{"i":"w025","f":"Spíritus","l":"spiritus","m":250},{"i":"w026","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w025"},{"i":"w027","f":"Deus","l":"deus","p":",","m":60},{"i":"w028","f":"per","l":"per","m":3,"h":"w030"},{"i":"w029","f":"ómnia","l":"omnis","m":129,"h":"w030"},{"i":"w030","f":"sǽcula","l":"saeculum","m":85},{"i":"w031","f":"sæculórum","l":"saeculum","p":".","m":145},{"i":"w032","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

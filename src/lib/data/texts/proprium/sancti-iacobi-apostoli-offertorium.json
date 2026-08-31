@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-iacobi-apostoli-offertorium",
+  "title":"In omnem terram exívit sonus eórum: et",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sancti-iacobi-apostoli",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"In","l":"in","m":3,"h":"w003"},{"i":"w002","f":"omnem","l":"omnis","m":8,"h":"w003"},{"i":"w003","f":"terram","l":"terra","m":141},{"i":"w004","f":"exívit","l":"exeo","m":292},{"i":"w005","f":"sonus","l":"sonus","m":60},{"i":"w006","f":"eórum","l":"is","p":":","m":255},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"in","l":"in","m":3,"h":"w009"},{"i":"w009","f":"fines","l":"finis","m":152},{"i":"w010","f":"orbis","l":"orbis","m":69},{"i":"w011","f":"terræ","l":"terra","m":64},{"i":"w012","f":"verba","l":"verbum","m":274},{"i":"w013","f":"eórum","l":"is","p":".","m":255}]}
+  ]
+}

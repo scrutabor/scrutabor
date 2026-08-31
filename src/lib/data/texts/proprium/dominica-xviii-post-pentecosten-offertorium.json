@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xviii-post-pentecosten-offertorium",
+  "title":"Sanctificávit Móyses altáre Dómino, ófferens super illud",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xviii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Sanctificávit","l":"sanctifico","m":28},{"i":"w002","f":"Móyses","l":"Moyses","m":113},{"i":"w003","f":"altáre","l":"altare","m":136},{"i":"w004","f":"Dómino","l":"dominus","p":",","m":186},{"i":"w005","f":"ófferens","l":"offero","m":495,"h":"w003"},{"i":"w006","f":"super","l":"super","m":3,"h":"w007"},{"i":"w007","f":"illud","l":"ille","m":189},{"i":"w008","f":"holocáusta","l":"holocaustum","m":85},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"ímmolans","l":"immolo","m":568,"s":true},{"i":"w011","f":"víctimas","l":"victima","p":":","m":169},{"i":"w012","f":"fecit","l":"facio","m":195},{"i":"w013","f":"sacrifícium","l":"sacrificium","m":82},{"i":"w014","f":"vespertínum","l":"vespertinus","m":96,"s":true},{"i":"w015","f":"in","l":"in","m":3,"h":"w016"},{"i":"w016","f":"odórem","l":"odor","m":162},{"i":"w017","f":"suavitátis","l":"suavitas","m":13},{"i":"w018","f":"Dómino","l":"dominus","m":186},{"i":"w019","f":"Deo","l":"deus","p":",","m":186},{"i":"w020","f":"in","l":"in","m":0,"h":"w021"},{"i":"w021","f":"conspéctu","l":"conspectus","m":100},{"i":"w022","f":"filiórum","l":"filius","m":79},{"i":"w023","f":"Ísrael","l":"Israel","p":".","m":34}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.exaltatio-sanctae-crucis-offertorium",
+  "title":"Prótege, Dómine, plebem tuam per signum sanctæ",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"exaltatio-sanctae-crucis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Prótege","l":"protego","p":",","m":86},{"i":"w002","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w003","f":"plebem","l":"plebs","m":7},{"i":"w004","f":"tuam","l":"tuus","m":8,"h":"w003"},{"i":"w005","f":"per","l":"per","m":3,"h":"w006"},{"i":"w006","f":"signum","l":"signum","m":82},{"i":"w007","f":"sanctæ","l":"sanctus","m":14,"h":"w008"},{"i":"w008","f":"Crucis","l":"crux","m":13},{"i":"w009","f":"ab","l":"ab","m":0,"h":"w011"},{"i":"w010","f":"ómnibus","l":"omnis","m":39,"h":"w011"},{"i":"w011","f":"insídiis","l":"insidiae","m":150},{"i":"w012","f":"inimicórum","l":"inimicus","m":79},{"i":"w013","f":"ómnium","l":"omnis","p":":","m":76,"h":"w012"},{"i":"w014","f":"ut","l":"ut","m":15},{"i":"w015","f":"tibi","l":"tu","m":139},{"i":"w016","f":"gratam","l":"gratus","m":8,"s":true},{"i":"w017","f":"exhibeámus","l":"exhibeo","m":383},{"i":"w018","f":"servitútem","l":"servitus","p":",","m":7},{"i":"w019","f":"et","l":"et","m":15},{"i":"w020","f":"acceptábile","l":"acceptabilis","m":105,"s":true},{"i":"w021","f":"fiat","l":"fio","m":198},{"i":"w022","f":"sacrifícium","l":"sacrificium","m":104},{"i":"w023","f":"nostrum","l":"noster","p":",","m":96,"s":true},{"i":"w024","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

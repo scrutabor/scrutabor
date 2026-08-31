@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-matthaei-apostoli-et-evangelistae-graduale",
+  "title":"Beátus vir, qui timet Dóminum: in mandátis",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-matthaei-apostoli-et-evangelistae",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Beátus","l":"beatus","m":59,"h":"w002"},{"i":"w002","f":"vir","l":"vir","p":",","m":60},{"i":"w003","f":"qui","l":"qui","m":18},{"i":"w004","f":"timet","l":"timeo","m":165},{"i":"w005","f":"Dóminum","l":"dominus","p":":","m":35},{"i":"w006","f":"in","l":"in","m":0,"h":"w007"},{"i":"w007","f":"mandátis","l":"mandatum","m":1},{"i":"w008","f":"eius","l":"is","m":27},{"i":"w009","f":"cupit","l":"cupio","m":140},{"i":"w010","f":"nimis","l":"nimis","p":".","m":32},{"i":"w011","f":"Potens","l":"potens","m":59,"s":true},{"i":"w012","f":"in","l":"in","m":0,"h":"w013"},{"i":"w013","f":"terra","l":"terra","m":30},{"i":"w014","f":"erit","l":"sum","m":277},{"i":"w015","f":"semen","l":"semen","m":97},{"i":"w016","f":"eius","l":"is","p":":","m":27},{"i":"w017","f":"generátio","l":"generatio","m":20},{"i":"w018","f":"rectórum","l":"rector","m":77},{"i":"w019","f":"benedicétur","l":"benedico","p":".","m":345}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xxi-post-pentecosten-communio",
+  "title":"In salutári tuo ánima mea, et in",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xxi-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"In","l":"in","m":0,"h":"w004"},{"i":"w002","f":"salutári","l":"salutaris","m":101,"s":true},{"i":"w003","f":"tuo","l":"tuus","m":149,"s":true},{"i":"w004","f":"ánima","l":"anima","m":30},{"i":"w005","f":"mea","l":"meus","p":",","m":25,"s":true},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"in","l":"in","m":3,"h":"w008"},{"i":"w008","f":"verbum","l":"verbum","m":82},{"i":"w009","f":"tuum","l":"tuus","m":96,"s":true},{"i":"w010","f":"sperávi","l":"spero","p":":","m":2},{"i":"w011","f":"quando","l":"quando","m":15},{"i":"w012","f":"fácies","l":"facio","m":517},{"i":"w013","f":"de","l":"de","m":0,"h":"w015"},{"i":"w014","f":"persequéntibus","l":"persequor","m":717,"s":true},{"i":"w015","f":"me","l":"ego","m":131},{"i":"w016","f":"iudícium","l":"iudicium","p":"?","m":82},{"i":"w017","f":"iníqui","l":"iniquus","m":87,"s":true},{"i":"w018","f":"persecúti","l":"persequor","m":299,"s":true},{"i":"w019","f":"sunt","l":"sum","m":117},{"i":"w020","f":"me","l":"ego","p":",","m":4},{"i":"w021","f":"ádiuva","l":"adiuvo","m":41},{"i":"w022","f":"me","l":"ego","p":",","m":4},{"i":"w023","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w024","f":"Deus","l":"deus","m":60},{"i":"w025","f":"meus","l":"meus","p":".","m":59,"h":"w024"}]}
+  ]
+}

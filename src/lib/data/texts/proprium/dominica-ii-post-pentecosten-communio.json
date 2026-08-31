@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-ii-post-pentecosten-communio",
+  "title":"Cantábo Dómino, qui bona tríbuit mihi: et",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-ii-post-pentecosten",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Cantábo","l":"canto","m":313},{"i":"w002","f":"Dómino","l":"dominus","p":",","m":186},{"i":"w003","f":"qui","l":"qui","m":18},{"i":"w004","f":"bona","l":"bonus","m":129,"s":true},{"i":"w005","f":"tríbuit","l":"tribuo","m":195},{"i":"w006","f":"mihi","l":"ego","p":":","m":139},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"psallam","l":"psallo","m":320},{"i":"w009","f":"nómini","l":"nomen","m":226},{"i":"w010","f":"Dómini","l":"dominus","m":54},{"i":"w011","f":"altíssimi","l":"altus","p":".","m":106,"h":"w010"}]}
+  ]
+}

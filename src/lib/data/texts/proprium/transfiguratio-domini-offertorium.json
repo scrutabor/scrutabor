@@ -1,0 +1,14 @@
+{
+  "id":"proprium.transfiguratio-domini-offertorium",
+  "title":"Glória et divítiæ in domo eius: et",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"transfiguratio-domini",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Glória","l":"gloria","m":24},{"i":"w002","f":"et","l":"et","m":15},{"i":"w003","f":"divítiæ","l":"divitia","m":64},{"i":"w004","f":"in","l":"in","m":0,"h":"w005"},{"i":"w005","f":"domo","l":"domus","m":500},{"i":"w006","f":"eius","l":"is","p":":","m":27},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"iustítia","l":"iustitia","m":24},{"i":"w009","f":"eius","l":"is","m":27},{"i":"w010","f":"manet","l":"maneo","m":165},{"i":"w011","f":"in","l":"in","m":3,"h":"w012"},{"i":"w012","f":"sǽculum","l":"saeculum","m":82},{"i":"w013","f":"sǽculi","l":"saeculum","p":",","m":68},{"i":"w014","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

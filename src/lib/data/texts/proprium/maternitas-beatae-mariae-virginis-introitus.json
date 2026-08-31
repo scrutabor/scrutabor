@@ -1,0 +1,14 @@
+{
+  "id":"proprium.maternitas-beatae-mariae-virginis-introitus",
+  "title":"Ecce Virgo concípiet, et páriet fílium, et",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"maternitas-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Ecce","l":"ecce","m":46},{"i":"w002","f":"Virgo","l":"virgo","m":20},{"i":"w003","f":"concípiet","l":"concipio","p":",","m":37},{"i":"w004","f":"et","l":"et","m":15},{"i":"w005","f":"páriet","l":"pario","m":37},{"i":"w006","f":"fílium","l":"filius","p":",","m":35},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"vocábitur","l":"voco","m":287},{"i":"w009","f":"nomen","l":"nomen","m":97},{"i":"w010","f":"eius","l":"is","m":27},{"i":"w011","f":"Emmánuel","l":"Emmanuel","p":".","m":34},{"i":"w012","f":"Cantáte","l":"canto","m":735,"s":true},{"i":"w013","f":"Dómino","l":"dominus","m":186},{"i":"w014","f":"cánticum","l":"canticum","m":82},{"i":"w015","f":"novum","l":"novus","p":":","m":105,"s":true},{"i":"w016","f":"quia","l":"quia","m":15},{"i":"w017","f":"mirabília","l":"mirabilis","m":129,"s":true},{"i":"w018","f":"fecit","l":"facio","p":".","m":195},{"i":"w019","f":"Glória","l":"gloria","m":24},{"i":"w020","f":"Patri","l":"pater","p":",","m":214},{"i":"w021","f":"et","l":"et","m":15},{"i":"w022","f":"Fílio","l":"filius","p":",","m":186},{"i":"w023","f":"et","l":"et","m":15},{"i":"w024","f":"Spirítui","l":"spiritus","m":215},{"i":"w025","f":"Sancto","l":"sanctus","p":".","m":216,"h":"w024"},{"i":"w026","f":"Sicut","l":"sicut","m":15},{"i":"w027","f":"erat","l":"sum","m":217},{"i":"w028","f":"in","l":"in","m":0,"h":"w029"},{"i":"w029","f":"princípio","l":"principium","p":",","m":26},{"i":"w030","f":"et","l":"et","m":15},{"i":"w031","f":"nunc","l":"nunc","p":",","m":32},{"i":"w032","f":"et","l":"et","m":15},{"i":"w033","f":"semper","l":"semper","p":",","m":32},{"i":"w034","f":"et","l":"et","m":15},{"i":"w035","f":"in","l":"in","m":3,"h":"w036"},{"i":"w036","f":"sǽcula","l":"saeculum","m":85},{"i":"w037","f":"sæculórum","l":"saeculum","p":".","m":145},{"i":"w038","f":"Amen","l":"amen","p":".","m":46},{"i":"w039","f":"Ecce","l":"ecce","m":46},{"i":"w040","f":"Virgo","l":"virgo","m":20},{"i":"w041","f":"concípiet","l":"concipio","p":",","m":37},{"i":"w042","f":"et","l":"et","m":15},{"i":"w043","f":"páriet","l":"pario","m":37},{"i":"w044","f":"fílium","l":"filius","p":",","m":35},{"i":"w045","f":"et","l":"et","m":15},{"i":"w046","f":"vocábitur","l":"voco","m":287},{"i":"w047","f":"nomen","l":"nomen","m":97},{"i":"w048","f":"eius","l":"is","m":27},{"i":"w049","f":"Emmánuel","l":"Emmanuel","p":".","m":34}]}
+  ]
+}

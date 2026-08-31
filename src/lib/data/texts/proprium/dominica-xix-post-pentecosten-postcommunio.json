@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-xix-post-pentecosten-postcommunio",
+  "title":"Tua nos, Dómine, medicinális operátio, et a",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-xix-post-pentecosten",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Tua","l":"tuus","m":25,"h":"w005"},{"i":"w002","f":"nos","l":"nos","p":",","m":49},{"i":"w003","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w004","f":"medicinális","l":"medicinalis","m":25,"h":"w005"},{"i":"w005","f":"operátio","l":"operatio","p":",","m":20},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"a","l":"a","m":0,"h":"w009"},{"i":"w008","f":"nostris","l":"noster","m":204,"s":true},{"i":"w009","f":"perversitátibus","l":"perversitas","m":40},{"i":"w010","f":"cleménter","l":"clementer","m":32},{"i":"w011","f":"expédiat","l":"expedio","p":",","m":257},{"i":"w012","f":"et","l":"et","m":15},{"i":"w013","f":"tuis","l":"tuus","m":236,"s":true},{"i":"w014","f":"semper","l":"semper","m":32},{"i":"w015","f":"fáciat","l":"facio","m":257},{"i":"w016","f":"inhærére","l":"inhaereo","m":93},{"i":"w017","f":"mandátis","l":"mandatum","p":".","m":302},{"i":"w018","f":"Per","l":"per","m":3,"h":"w019"},{"i":"w019","f":"Dóminum","l":"dominus","m":35},{"i":"w020","f":"nostrum","l":"noster","m":96,"h":"w021"},{"i":"w021","f":"Iesum","l":"Iesus","m":38},{"i":"w022","f":"Christum","l":"Christus","p":",","m":35},{"i":"w023","f":"Fílium","l":"filius","m":35},{"i":"w024","f":"tuum","l":"tuus","p":":","m":96,"h":"w023"},{"i":"w025","f":"Qui","l":"qui","m":18},{"i":"w026","f":"tecum","l":"tu","m":131},{"i":"w027","f":"vivit","l":"vivo","m":140},{"i":"w028","f":"et","l":"et","m":15},{"i":"w029","f":"regnat","l":"regno","m":119},{"i":"w030","f":"in","l":"in","m":0,"h":"w031"},{"i":"w031","f":"unitáte","l":"unitas","m":45},{"i":"w032","f":"Spíritus","l":"spiritus","m":250},{"i":"w033","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w032"},{"i":"w034","f":"Deus","l":"deus","p":",","m":60},{"i":"w035","f":"per","l":"per","m":3,"h":"w037"},{"i":"w036","f":"ómnia","l":"omnis","m":129,"h":"w037"},{"i":"w037","f":"sǽcula","l":"saeculum","m":85},{"i":"w038","f":"sæculórum","l":"saeculum","p":".","m":145},{"i":"w039","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

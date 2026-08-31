@@ -1,0 +1,13 @@
+{
+  "id":"ordinarium.praefatio-defunctorum",
+  "language":"pl",
+  "about":"Prefacja za zmarłych. Głosi nadzieję zmartwychwstania i wyznaje, że życie wiernych zmienia się, lecz się nie kończy, a po ziemskim mieszkaniu czeka wieczny dom w niebie.",
+  "seg":[
+    {"id":"s01","nr":"Następnie kapłan rozłącza ręce i trzyma je rozłożone aż do końca Prefacji. Po jej zakończeniu ponownie je składa i pochylony mówi: Sanctus."},
+    {"id":"s02","tr":"Zaprawdę godne to i sprawiedliwe, słuszne i zbawienne, byśmy Tobie zawsze i wszędzie składali dzięki:","g":["prawdziwie","godne","i","sprawiedliwa","jest","słuszna","i","zbawienna","nas","Ci","zawsze","i","wszędzie","dzięki","składać"]},
+    {"id":"s03","tr":"Panie, Ojcze święty, wszechmogący, wieczny Boże: przez Chrystusa, Pana naszego.","g":["Pani","święty","Ojcze","wszechmogący","wieczne","Boże","przez","Chrystusa","Pana","nasz"]},
+    {"id":"s04","tr":"W Nim zabłysła nam nadzieja błogosławionego zmartwychwstania, aby tych, których zasmuca pewny los śmierci, pocieszała obietnica przyszłej nieśmiertelności.","g":["w","której","nam","nadzieja","błogosławionego","zmartwychwstania","zabłysnąć","aby","które","smucić","pewny","umierać","los","same","pocieszał","przyszłej","nieśmiertelności","obietnica"]},
+    {"id":"s05","tr":"Albowiem życie Twoich wiernych, Panie, zmienia się, lecz się nie kończy, a gdy rozpadnie się dom tego ziemskiego pobytu, przygotowane jest wieczne mieszkanie w niebie.","g":["twym","bowiem","wiernymi","Pani","Życie","zmieniać","nie","podnosić","i","rozwiązującej","ziemskiej","tej","pobytu","domem","wieczne","w","niebiosach","mieszkanie","przygotować"]},
+    {"id":"s06","tr":"Przeto z Aniołami i Archaniołami, z Tronami i Państwami oraz ze wszystkimi hufcami wojska niebieskiego śpiewamy hymn ku Twojej chwale, wołając bez końca:","g":["i","przeto","z","Aniołami","i","Archaniołami","z","Tronami","i","Panowaniami","z","każdym","wojskiem","niebieskiej","wojskiej","hymn","chwały","twej","śpiewać","bez","końca","mówieni"]}
+  ]
+}
