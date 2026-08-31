@@ -1,0 +1,15 @@
+{
+  "id":"proprium.sanctissimae-trinitatis-graduale",
+  "title":"Benedíctus es, Dómine",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sanctissimae-trinitatis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Benedíctus","l":"benedictus","m":59,"h":"w002"},{"i":"w002","f":"es","l":"sum","p":",","m":191},{"i":"w003","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w004","f":"qui","l":"qui","m":18},{"i":"w005","f":"intuéris","l":"intueor","m":446},{"i":"w006","f":"abýssos","l":"abyssus","p":",","m":447},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"sedes","l":"sedeo","m":183},{"i":"w009","f":"super","l":"super","m":3,"h":"w010"},{"i":"w010","f":"Chérubim","l":"cherubim","p":",","m":419}]},
+    {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w011","f":"Benedíctus","l":"benedictus","m":59,"h":"w012"},{"i":"w012","f":"es","l":"sum","p":",","m":191},{"i":"w013","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w014","f":"in","l":"in","m":0,"h":"w015"},{"i":"w015","f":"firmaménto","l":"firmamentum","m":26},{"i":"w016","f":"cæli","l":"caelum","p":",","m":68},{"i":"w017","f":"et","l":"et","m":15},{"i":"w018","f":"laudábilis","l":"laudabilis","m":59,"h":"w012"},{"i":"w019","f":"in","l":"in","m":3,"h":"w020"},{"i":"w020","f":"sǽcula","l":"saeculum","p":".","m":85}]}
+  ]
+}

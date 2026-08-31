@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sanctissimae-trinitatis-offertorium",
+  "title":"Benedíctus sit Deus Pater",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sanctissimae-trinitatis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Benedíctus","l":"benedictus","m":59,"h":"w003"},{"i":"w002","f":"sit","l":"sum","m":198},{"i":"w003","f":"Deus","l":"deus","m":60},{"i":"w004","f":"Pater","l":"pater","p":",","m":113},{"i":"w005","f":"unigenitúsque","l":"unigenitus","m":59,"h":"w007"},{"i":"w006","f":"Dei","l":"deus","m":54},{"i":"w007","f":"Fílius","l":"filius","p":",","m":60},{"i":"w008","f":"Sanctus","l":"sanctus","m":59,"h":"w010"},{"i":"w009","f":"quoque","l":"quoque","m":32},{"i":"w010","f":"Spíritus","l":"spiritus","p":":","m":196},{"i":"w011","f":"quia","l":"quia","m":15},{"i":"w012","f":"fecit","l":"facio","m":195},{"i":"w013","f":"nobíscum","l":"nos","m":62},{"i":"w014","f":"misericórdiam","l":"misericordia","m":141},{"i":"w015","f":"suam","l":"suus","p":".","m":8,"h":"w014"}]}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id":"proprium.corporis-christi-alleluia",
+  "title":"Caro mea vere est cibus",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"corporis-christi",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46}]},
+    {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w003","f":"Caro","l":"caro","m":20},{"i":"w004","f":"mea","l":"meus","m":25,"h":"w003"},{"i":"w005","f":"vere","l":"vere","m":32},{"i":"w006","f":"est","l":"sum","m":21},{"i":"w007","f":"cibus","l":"cibus","p":",","m":60},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"sanguis","l":"sanguis","m":113},{"i":"w010","f":"meus","l":"meus","m":59,"h":"w009"},{"i":"w011","f":"vere","l":"vere","m":32},{"i":"w012","f":"est","l":"sum","m":21},{"i":"w013","f":"potus","l":"potus","p":":","m":196},{"i":"w014","f":"qui","l":"qui","m":18},{"i":"w015","f":"mandúcat","l":"manduco","m":119},{"i":"w016","f":"meam","l":"meus","m":8,"h":"w017"},{"i":"w017","f":"carnem","l":"caro","p":",","m":7},{"i":"w018","f":"et","l":"et","m":15},{"i":"w019","f":"bibit","l":"bibo","m":140},{"i":"w020","f":"meum","l":"meus","m":96,"h":"w021"},{"i":"w021","f":"sánguinem","l":"sanguis","p":",","m":162},{"i":"w022","f":"in","l":"in","m":0,"h":"w023"},{"i":"w023","f":"me","l":"ego","m":131},{"i":"w024","f":"manet","l":"maneo","p":",","m":165},{"i":"w025","f":"et","l":"et","m":15},{"i":"w026","f":"ego","l":"ego","m":143},{"i":"w027","f":"in","l":"in","m":0,"h":"w028"},{"i":"w028","f":"eo","l":"is","p":".","m":289}]}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id":"proprium.sanctissimae-trinitatis-alleluia",
+  "title":"Benedíctus es, Dómine, Deus patrum",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sanctissimae-trinitatis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46}]},
+    {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w003","f":"Benedíctus","l":"benedictus","m":59,"h":"w004"},{"i":"w004","f":"es","l":"sum","p":",","m":191},{"i":"w005","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w006","f":"Deus","l":"deus","m":5},{"i":"w007","f":"patrum","l":"pater","m":77},{"i":"w008","f":"nostrórum","l":"noster","p":",","m":76,"h":"w007"},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"laudábilis","l":"laudabilis","m":59,"h":"w004"},{"i":"w011","f":"in","l":"in","m":3,"h":"w012"},{"i":"w012","f":"sǽcula","l":"saeculum","p":".","m":85}]},
+    {"id":"s03","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w013","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

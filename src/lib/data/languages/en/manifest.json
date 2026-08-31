@@ -413,6 +413,14 @@
       "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-dialogus.json"
     },
     {
+      "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
+      "path": "languages/en/texts/ordinarium/praefatio-sacratissimi-cordis-iesu.json"
+    },
+    {
+      "id": "ordinarium.praefatio-sanctissimae-trinitatis",
+      "path": "languages/en/texts/ordinarium/praefatio-sanctissimae-trinitatis.json"
+    },
+    {
       "id": "ordinarium.quam-oblationem",
       "path": "languages/en/texts/ordinarium/quam-oblationem.json",
       "evidence": "languages/en/bibliography/texts/ordinarium/quam-oblationem.json"
@@ -476,6 +484,50 @@
       "id": "ordinarium.unde-et-memores",
       "path": "languages/en/texts/ordinarium/unde-et-memores.json",
       "evidence": "languages/en/bibliography/texts/ordinarium/unde-et-memores.json"
+    },
+    {
+      "id": "proprium.corporis-christi-alleluia",
+      "path": "languages/en/texts/proprium/corporis-christi-alleluia.json"
+    },
+    {
+      "id": "proprium.corporis-christi-collecta",
+      "path": "languages/en/texts/proprium/corporis-christi-collecta.json"
+    },
+    {
+      "id": "proprium.corporis-christi-communio",
+      "path": "languages/en/texts/proprium/corporis-christi-communio.json"
+    },
+    {
+      "id": "proprium.corporis-christi-epistola",
+      "path": "languages/en/texts/proprium/corporis-christi-epistola.json"
+    },
+    {
+      "id": "proprium.corporis-christi-evangelium",
+      "path": "languages/en/texts/proprium/corporis-christi-evangelium.json"
+    },
+    {
+      "id": "proprium.corporis-christi-graduale",
+      "path": "languages/en/texts/proprium/corporis-christi-graduale.json"
+    },
+    {
+      "id": "proprium.corporis-christi-introitus",
+      "path": "languages/en/texts/proprium/corporis-christi-introitus.json"
+    },
+    {
+      "id": "proprium.corporis-christi-offertorium",
+      "path": "languages/en/texts/proprium/corporis-christi-offertorium.json"
+    },
+    {
+      "id": "proprium.corporis-christi-postcommunio",
+      "path": "languages/en/texts/proprium/corporis-christi-postcommunio.json"
+    },
+    {
+      "id": "proprium.corporis-christi-secreta",
+      "path": "languages/en/texts/proprium/corporis-christi-secreta.json"
+    },
+    {
+      "id": "proprium.corporis-christi-sequentia",
+      "path": "languages/en/texts/proprium/corporis-christi-sequentia.json"
     },
     {
       "id": "proprium.dominica-i-adventus-alleluia",
@@ -666,6 +718,86 @@
     {
       "id": "proprium.dominica-iv-adventus-secreta",
       "path": "languages/en/texts/proprium/dominica-iv-adventus-secreta.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-alleluia",
+      "path": "languages/en/texts/proprium/sacratissimi-cordis-iesu-alleluia.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-collecta",
+      "path": "languages/en/texts/proprium/sacratissimi-cordis-iesu-collecta.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-communio",
+      "path": "languages/en/texts/proprium/sacratissimi-cordis-iesu-communio.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-epistola",
+      "path": "languages/en/texts/proprium/sacratissimi-cordis-iesu-epistola.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-evangelium",
+      "path": "languages/en/texts/proprium/sacratissimi-cordis-iesu-evangelium.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-graduale",
+      "path": "languages/en/texts/proprium/sacratissimi-cordis-iesu-graduale.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-introitus",
+      "path": "languages/en/texts/proprium/sacratissimi-cordis-iesu-introitus.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-offertorium",
+      "path": "languages/en/texts/proprium/sacratissimi-cordis-iesu-offertorium.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-postcommunio",
+      "path": "languages/en/texts/proprium/sacratissimi-cordis-iesu-postcommunio.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-secreta",
+      "path": "languages/en/texts/proprium/sacratissimi-cordis-iesu-secreta.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-alleluia",
+      "path": "languages/en/texts/proprium/sanctissimae-trinitatis-alleluia.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-collecta",
+      "path": "languages/en/texts/proprium/sanctissimae-trinitatis-collecta.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-communio",
+      "path": "languages/en/texts/proprium/sanctissimae-trinitatis-communio.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-epistola",
+      "path": "languages/en/texts/proprium/sanctissimae-trinitatis-epistola.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-evangelium",
+      "path": "languages/en/texts/proprium/sanctissimae-trinitatis-evangelium.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-graduale",
+      "path": "languages/en/texts/proprium/sanctissimae-trinitatis-graduale.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-introitus",
+      "path": "languages/en/texts/proprium/sanctissimae-trinitatis-introitus.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-offertorium",
+      "path": "languages/en/texts/proprium/sanctissimae-trinitatis-offertorium.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-postcommunio",
+      "path": "languages/en/texts/proprium/sanctissimae-trinitatis-postcommunio.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-secreta",
+      "path": "languages/en/texts/proprium/sanctissimae-trinitatis-secreta.json"
     },
     {
       "id": "psalmi.118-he",

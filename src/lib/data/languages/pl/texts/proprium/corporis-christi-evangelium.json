@@ -1,0 +1,13 @@
+{
+  "id":"proprium.corporis-christi-evangelium",
+  "language":"pl",
+  "about":"Ewangelia uroczystości Najświętszego Ciała Chrystusa, J 6, 56–59. Chrystus obiecuje trwanie w Nim i życie wieczne tym, którzy spożywają Jego Ciało i piją Jego Krew.",
+  "seg":[
+    {"id":"s01","tr":"W owym czasie Jezus powiedział do tłumów żydowskich: Ciało moje prawdziwie jest pokarmem, a Krew moja prawdziwie jest napojem.","g":["w","owym","czasie","powiedział","Jezus","tłumom","żydowskich","Ciało","moje","prawdziwie","jest","pokarm","i","Krew","moja","prawdziwie","jest","napój"]},
+    {"id":"s02","tr":"Kto spożywa moje Ciało i pije moją Krew, trwa we Mnie, a Ja w nim.","g":["który","spożywa","moje","Ciało","i","pije","moją","Krew","we","Mnie","trwa","i","ja","w","Nim"]},
+    {"id":"s03","tr":"Jak posłał Mnie żyjący Ojciec, a Ja żyję przez Ojca, tak i ten, kto Mnie spożywa, będzie żył przeze Mnie.","g":["jak","posłał","mnie","żyjący","Ojciec","i","ja","żyję","dla","Ojca","i","który","spożywa","mnie","i","On","będzie żył","dla","Mnie"]},
+    {"id":"s04","tr":"To jest Chleb, który zstąpił z nieba.","g":["tutaj","jest","Chleb","który","z","nieba","zstąpił"]},
+    {"id":"s05","tr":"Nie tak jak wasi ojcowie spożywali mannę i pomarli.","g":["nie","jak","spożywali","ojcowie","wasi","mannę","i","umarli","są"]},
+    {"id":"s06","tr":"Kto spożywa ten Chleb, będzie żył na wieki.","g":["który","spożywa","ten","chleba","będzie żył","na","wieczność"]}
+  ]
+}

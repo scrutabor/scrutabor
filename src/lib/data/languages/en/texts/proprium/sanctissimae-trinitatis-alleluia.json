@@ -1,0 +1,10 @@
+{
+  "id":"proprium.sanctissimae-trinitatis-alleluia",
+  "language":"en",
+  "about":"The Alleluia of the feast of the Most Holy Trinity. Its verse, drawn from the song of the three young men, blesses the God of the fathers.",
+  "seg":[
+    {"id":"s01","tr":"Alleluia, alleluia.","g":["alleluia","alleluia"]},
+    {"id":"s02","tr":"Blessed art Thou, O Lord, the God of our fathers, and worthy of praise for ever.","g":["blessed","art","Lord","God","of the fathers","of our","and","admirable","unto","ages"]},
+    {"id":"s03","tr":"Alleluia.","g":["alleluia"]}
+  ]
+}

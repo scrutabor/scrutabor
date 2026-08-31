@@ -84,6 +84,245 @@
      ]
     },
     {
+     "edition": "edition.divinum-officium-missa.44667ff",
+     "roles": [
+      "derived_digital_collation_aid"
+     ],
+     "texts": [
+      {
+       "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-sanctissimae-trinitatis",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-sequentia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
      "edition": "edition.breviarium-romanum.1902-pustet",
      "roles": [
       "direct_approved_print"
@@ -114,6 +353,245 @@
        "id": "orationes.te-deum",
        "roles": [
         "direct_approved_print"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
+     "edition": "edition.missale-romanum.1962-typica",
+     "roles": [
+      "official_text"
+     ],
+     "texts": [
+      {
+       "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-sanctissimae-trinitatis",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-sequentia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-secreta",
+       "roles": [
+        "official_text"
        ],
        "uses": 1
       }

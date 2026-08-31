@@ -1,0 +1,12 @@
+{
+  "id":"proprium.corporis-christi-introitus",
+  "language":"en",
+  "about":"The Introit of the feast of the Most Holy Body of Christ. It presents God feeding His people with the finest wheat and honey from the rock, while the psalm verse summons them to joyful praise.",
+  "seg":[
+    {"id":"s01","tr":"He fed them with the finest wheat, alleluia, and filled them with honey from the rock, alleluia, alleluia, alleluia.","g":["He fed","them","of","the finest part","of wheat","alleluia","and","from","the rock","with honey","He filled","them","alleluia","alleluia","alleluia"]},
+    {"id":"s02","tr":"Rejoice in God our helper; sing aloud unto the God of Jacob.","g":["rejoice ye","to God","helper","our","sing aloud","to God","of Jacob"]},
+    {"id":"s03","tr":"Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.","g":["glory","to the Father","and","to the Son","and","to the Spirit","Holy","as","it was","in","the beginning","and","now","and","always","and","unto","ages","of ages","amen"]},
+    {"id":"s04","nr":"When it is finished, the antiphon Cibávit eos is repeated as far as the psalm."},
+    {"id":"s05","tr":"He fed them with the finest wheat, alleluia, and filled them with honey from the rock, alleluia, alleluia, alleluia.","g":["He fed","them","of","the finest part","of wheat","alleluia","and","from","the rock","with honey","He filled","them","alleluia","alleluia","alleluia"]}
+  ]
+}

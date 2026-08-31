@@ -83,18 +83,22 @@
 	// places each wrote `e.text ? texts[e.text] : undefined` and a fourth
 	// looked words up under `ordinarium/`, which no proper slug matches.
 	const bodiesFor = $derived((e: OrdoEntry) => {
+		if (e.kind === 'proper') {
+			const chosen = proper.forSlot(e.id).map((part) => ({
+				key: part.key,
+				slug: part.key.split('/')[1],
+				doc: part.doc as TextDocument,
+				gloss: part.gloss as GlossDocument,
+				bibliography: part.bibliography
+			}));
+			if (chosen.length) return chosen;
+		}
 		if (e.text) {
 			const entry = texts[e.text];
 			return entry ? [{ key: e.text, slug: e.text.split('/')[1], ...entry }] : [];
 		}
 		if (e.kind !== 'proper') return [];
-		return proper.forSlot(e.id).map((part) => ({
-			key: part.key,
-			slug: part.key.split('/')[1],
-			doc: part.doc as TextDocument,
-			gloss: part.gloss as GlossDocument,
-			bibliography: part.bibliography
-		}));
+		return [];
 	});
 
 	const silent = $derived(

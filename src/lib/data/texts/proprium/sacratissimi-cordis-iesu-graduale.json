@@ -1,0 +1,15 @@
+{
+  "id":"proprium.sacratissimi-cordis-iesu-graduale",
+  "title":"Dulcis et rectus Dóminus",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sacratissimi-cordis-iesu",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Dulcis","l":"dulcis","m":59,"h":"w004"},{"i":"w002","f":"et","l":"et","m":15},{"i":"w003","f":"rectus","l":"rectus","m":59,"h":"w004"},{"i":"w004","f":"Dóminus","l":"dominus","p":",","m":60},{"i":"w005","f":"propter","l":"propter","m":3,"h":"w006"},{"i":"w006","f":"hoc","l":"hic","m":189},{"i":"w007","f":"legem","l":"lex","m":7},{"i":"w008","f":"dabit","l":"do","m":354},{"i":"w009","f":"delinquéntibus","l":"delinquo","m":142,"s":true},{"i":"w010","f":"in","l":"in","m":0,"h":"w011"},{"i":"w011","f":"via","l":"via","p":".","m":30}]},
+    {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w012","f":"Díriget","l":"dirigo","m":37},{"i":"w013","f":"mansuétos","l":"mansuetus","m":91,"s":true},{"i":"w014","f":"in","l":"in","m":0,"h":"w015"},{"i":"w015","f":"iudício","l":"iudicium","p":",","m":26},{"i":"w016","f":"docébit","l":"doceo","m":19},{"i":"w017","f":"mites","l":"mitis","m":91,"s":true},{"i":"w018","f":"vias","l":"via","m":169},{"i":"w019","f":"suas","l":"suus","p":".","m":180,"h":"w018"}]}
+  ]
+}

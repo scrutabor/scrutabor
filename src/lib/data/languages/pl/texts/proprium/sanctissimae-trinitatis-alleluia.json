@@ -1,0 +1,10 @@
+{
+  "id":"proprium.sanctissimae-trinitatis-alleluia",
+  "language":"pl",
+  "about":"Alleluja uroczystości Trójcy Przenajświętszej. Werset zaczerpnięty z pieśni trzech młodzieńców błogosławi Boga ojców.",
+  "seg":[
+    {"id":"s01","tr":"Alleluja, alleluja.","g":["alleluja","alleluja"]},
+    {"id":"s02","tr":"Błogosławiony jesteś, Panie, Boże naszych ojców, i godny chwały na wieki.","g":["błogosławiony","jesteś","Panie","Boże","ojców","naszych","i","godna chwały","na","wieki"]},
+    {"id":"s03","tr":"Alleluja.","g":["alleluja"]}
+  ]
+}

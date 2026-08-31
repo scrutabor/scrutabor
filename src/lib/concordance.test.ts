@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { CATALOG } from './catalog';
-import { properRank } from './proprium';
+import { PROPER_DAYS, properRank } from './proprium';
 import { everyTextInOrder, occurrencesOf, textsForLatinForm } from './concordance';
 import { TEXT_KEYS } from './corpus';
 import { ORDO } from './ordo';
@@ -68,7 +68,8 @@ describe('what the concordance is built from', () => {
 		// the tail must still be in rite order.
 		const sequenced = new Set([
 			...CATALOG.flatMap((s) => s.texts).map((t) => `${t.category}/${t.slug}`),
-			...ORDO.flatMap((m) => m.entries).flatMap((e) => (e.text ? [e.text] : []))
+			...ORDO.flatMap((m) => m.entries).flatMap((e) => (e.text ? [e.text] : [])),
+			...PROPER_DAYS.flatMap((day) => Object.values(day.parts ?? {}))
 		]);
 		const unsequenced = everyTextInOrder().filter((k) => !sequenced.has(k));
 		expect(unsequenced.filter((k) => !k.startsWith('proprium/'))).toEqual([]);
@@ -96,7 +97,7 @@ describe('what the concordance is built from', () => {
 		}
 		// The days themselves keep the order the table declares.
 		const days = [...byDay.keys()];
-		expect(days).toEqual([...days].sort());
+		expect(days).toEqual(PROPER_DAYS.map(({ id }) => id).filter((id) => byDay.has(id)));
 	});
 
 	it('opens with the prayers and reaches the last Gospel at the end', () => {

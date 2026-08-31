@@ -1,0 +1,12 @@
+{
+  "id":"proprium.sanctissimae-trinitatis-epistola",
+  "language":"pl",
+  "about":"Epistoła uroczystości Trójcy Przenajświętszej, Rz 11, 33–36. Apostoł wielbi niezgłębioną mądrość Boga, od którego, przez którego i w którym jest wszystko.",
+  "seg":[
+    {"id":"s01","tr":"O głębokości bogactw mądrości i wiedzy Boga! Jakże niezbadane są Jego wyroki i niezgłębione Jego drogi!","g":["o","głębokości","bogactw","mądrości","i","wiedzy","Boga","jakże","niezbadane","są","sądy","Jego","i","niezgłębione","drogi","Jego"]},
+    {"id":"s02","tr":"Któż bowiem poznał zamysł Pana?","g":["kim","bowiem","poznał","rozum","Pana"]},
+    {"id":"s03","tr":"Albo kto był Jego doradcą?","g":["albo","kim","doradcą","Jego","był"]},
+    {"id":"s04","tr":"Albo kto pierwszy dał Mu coś, aby otrzymać odpłatę?","g":["albo","kim","pierwszy","dał","Mu","i","otrzyma odpłatę","mu"]},
+    {"id":"s05","tr":"Albowiem z Niego, przez Niego i w Nim jest wszystko: Jemu chwała na wieki. Amen.","g":["że","z","Nim","i","przez","Nie (= Słowo)","i","w","Nim","są","wszystkie","Jemu","chwała","na","wieki","amen"]}
+  ]
+}

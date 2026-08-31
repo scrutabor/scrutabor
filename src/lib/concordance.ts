@@ -10,7 +10,7 @@
 // catalogue instead of the corpus: the list a page renders
 // from and the list of what exists are two different lists.
 import { CATALOG } from './catalog';
-import { PROPER_DAYS, partOf, properRank } from './proprium';
+import { PROPER_DAYS, SLOT_OF, partOf, properRank, type ProperPart } from './proprium';
 import { TEXT_KEYS, hasText, loadCoreTexts } from './corpus';
 import { ORDO } from './ordo';
 import concordance from './data/concordance.json';
@@ -101,7 +101,23 @@ export function everyTextInOrder(): string[] {
 		}
 	};
 	for (const section of CATALOG) for (const t of section.texts) add(`${t.category}/${t.slug}`);
-	for (const movement of ORDO) for (const e of movement.entries) if (e.text) add(e.text);
+	for (const movement of ORDO) {
+		for (const e of movement.entries) {
+			if (e.kind === 'proper') {
+				// A day may fill a proper slot with a shared text outside the
+				// `proprium` category (most notably a proper Preface). Sequence
+				// those assignments at the slot where the rite uses them, in the
+				// calendar's declared day order, instead of leaving them in the
+				// alphabetical tail.
+				for (const day of PROPER_DAYS) {
+					for (const [part, key] of Object.entries(day.parts ?? {})) {
+						if (SLOT_OF[part as ProperPart] === e.id) add(key);
+					}
+				}
+			}
+			if (e.text) add(e.text);
+		}
+	}
 	// The tail: anything neither shelf nor Ordo names. The Proper lives here
 	// on purpose and must not arrive alphabetically — not its parts, which
 	// would put an Alleluia before its Introit, and not its days, which

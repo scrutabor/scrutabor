@@ -1,0 +1,16 @@
+{
+  "id":"proprium.sanctissimae-trinitatis-evangelium",
+  "title":"Data est mihi omnis potéstas",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sanctissimae-trinitatis",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"In","l":"in","m":0,"h":"w003"},{"i":"w002","f":"illo","l":"ille","m":116},{"i":"w003","f":"témpore","l":"tempus","p":":","m":135},{"i":"w004","f":"Dixit","l":"dico","m":195},{"i":"w005","f":"Iesus","l":"Iesus","m":34},{"i":"w006","f":"discípulis","l":"discipulus","m":267},{"i":"w007","f":"suis","l":"suus","p":":","m":236,"h":"w006"},{"i":"w008","f":"Data","l":"do","m":445,"h":"w012"},{"i":"w009","f":"est","l":"sum","m":21},{"i":"w010","f":"mihi","l":"ego","m":139},{"i":"w011","f":"omnis","l":"omnis","m":25,"h":"w012"},{"i":"w012","f":"potéstas","l":"potestas","m":20},{"i":"w013","f":"in","l":"in","m":0,"h":"w014"},{"i":"w014","f":"cælo","l":"caelum","m":26},{"i":"w015","f":"et","l":"et","m":15},{"i":"w016","f":"in","l":"in","m":0,"h":"w017"},{"i":"w017","f":"terra","l":"terra","p":".","m":30}]},
+    {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w018","f":"Eúntes","l":"eo","m":396,"s":true},{"i":"w019","f":"ergo","l":"ergo","m":32},{"i":"w020","f":"docéte","l":"doceo","m":368},{"i":"w021","f":"omnes","l":"omnis","m":180,"h":"w022"},{"i":"w022","f":"gentes","l":"gens","p":",","m":16},{"i":"w023","f":"baptizántes","l":"baptizo","m":258,"h":"w020"},{"i":"w024","f":"eos","l":"is","m":163},{"i":"w025","f":"in","l":"in","m":0,"h":"w026"},{"i":"w026","f":"nómine","l":"nomen","m":135},{"i":"w027","f":"Patris","l":"pater","p":",","m":69},{"i":"w028","f":"et","l":"et","m":15},{"i":"w029","f":"Fílii","l":"filius","p":",","m":54},{"i":"w030","f":"et","l":"et","m":15},{"i":"w031","f":"Spíritus","l":"spiritus","m":250},{"i":"w032","f":"Sancti","l":"sanctus","p":":","m":99,"h":"w031"},{"i":"w033","f":"docéntes","l":"doceo","m":244,"h":"w020"},{"i":"w034","f":"eos","l":"is","m":163},{"i":"w035","f":"serváre","l":"servo","m":239},{"i":"w036","f":"ómnia","l":"omnis","p":",","m":129,"s":true},{"i":"w037","f":"quæcúmque","l":"quicumque","m":311},{"i":"w038","f":"mandávi","l":"mando","m":2},{"i":"w039","f":"vobis","l":"vos","p":".","m":53}]},
+    {"id":"s03","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w040","f":"Et","l":"et","m":15},{"i":"w041","f":"ecce","l":"ecce","m":46},{"i":"w042","f":"ego","l":"ego","m":143},{"i":"w043","f":"vobíscum","l":"vos","m":62},{"i":"w044","f":"sum","l":"sum","m":172},{"i":"w045","f":"ómnibus","l":"omnis","m":204,"h":"w046"},{"i":"w046","f":"diébus","l":"dies","m":322},{"i":"w047","f":"usque","l":"usque","m":32},{"i":"w048","f":"ad","l":"ad","m":3,"h":"w049"},{"i":"w049","f":"consummatiónem","l":"consummatio","m":7},{"i":"w050","f":"sǽculi","l":"saeculum","p":".","m":68}]}
+  ]
+}

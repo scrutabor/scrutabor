@@ -460,13 +460,13 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				}
 			},
 			{
-				id: 'praefatio-communis',
-				title: 'Præfátio commúnis',
-				kind: 'text',
+				id: 'praefatio',
+				title: 'Præfátio',
+				kind: 'proper',
 				text: 'ordinarium/praefatio-communis',
 				note: {
-					pl: 'Prefacja wspólna: najkrótsza z rzymskich, nie nazywa żadnej tajemnicy i prowadzi wprost do chórów anielskich.',
-					en: 'The common preface: the shortest of the Roman ones, naming no mystery and leading straight to the choirs of angels.'
+					pl: 'Prefacja własna albo okresowa z formularza dnia. Gdy formularz nie wyznacza innej, pozostaje tu prefacja wspólna.',
+					en: 'The proper or seasonal preface assigned by the day. When the formulary assigns none, the common preface remains here.'
 				},
 				when: {
 					pl: 'w wiele dni roku ustępuje prefacji własnej albo okresowej',

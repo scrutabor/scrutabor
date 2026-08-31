@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sanctissimae-trinitatis-postcommunio",
+  "title":"Profíciat nobis ad salútem",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sanctissimae-trinitatis",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Profíciat","l":"proficio","m":257},{"i":"w002","f":"nobis","l":"nos","m":53},{"i":"w003","f":"ad","l":"ad","m":3,"h":"w004"},{"i":"w004","f":"salútem","l":"salus","m":7},{"i":"w005","f":"córporis","l":"corpus","m":75},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"ánimæ","l":"anima","p":",","m":64},{"i":"w008","f":"Dómine","l":"dominus","m":5},{"i":"w009","f":"Deus","l":"deus","m":5},{"i":"w010","f":"noster","l":"noster","p":",","m":56,"h":"w009"},{"i":"w011","f":"huius","l":"hic","m":121},{"i":"w012","f":"sacraménti","l":"sacramentum","m":68},{"i":"w013","f":"suscéptio","l":"susceptio","p":":","m":20},{"i":"w014","f":"et","l":"et","m":15},{"i":"w015","f":"sempitérnæ","l":"sempiternus","m":14,"h":"w017"},{"i":"w016","f":"sanctæ","l":"sanctus","m":14,"h":"w017"},{"i":"w017","f":"Trinitátis","l":"trinitas","p":",","m":13},{"i":"w018","f":"eiusdémque","l":"idem","m":213},{"i":"w019","f":"indivíduæ","l":"individuus","m":14,"h":"w020"},{"i":"w020","f":"unitátis","l":"unitas","m":13},{"i":"w021","f":"conféssio","l":"confessio","p":".","m":20},{"i":"w022","f":"Per","l":"per","m":3,"h":"w023"},{"i":"w023","f":"Dóminum","l":"dominus","p":".","m":35}]}
+  ]
+}

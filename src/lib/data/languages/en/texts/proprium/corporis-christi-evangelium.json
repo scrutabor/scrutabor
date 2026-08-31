@@ -1,0 +1,13 @@
+{
+  "id":"proprium.corporis-christi-evangelium",
+  "language":"en",
+  "about":"The Gospel of the feast of the Most Holy Body of Christ, John 6:56–59. Christ promises abiding in Him and eternal life to those who eat His Flesh and drink His Blood.",
+  "seg":[
+    {"id":"s01","tr":"At that time Jesus said to the multitudes of the Jews: My Flesh is meat indeed, and My Blood is drink indeed.","g":["in","that","time","said","Jesus","to the multitudes","of the Jews","Flesh","My","truly","is","food","and","Blood","My","truly","is","drink"]},
+    {"id":"s02","tr":"He that eateth My Flesh and drinketh My Blood abideth in Me, and I in him.","g":["who","eateth","My","Flesh","and","drinketh","My","Blood","in","Me","abideth","and","I","in","Him"]},
+    {"id":"s03","tr":"As the living Father hath sent Me, and I live by the Father, so he that eateth Me shall live by Me.","g":["as","sent","me","living","Father","and","I","I live","for","the Father","and","who","eateth","me","and","He","shall live","for","Me"]},
+    {"id":"s04","tr":"This is the Bread which came down from heaven.","g":["here","is","Bread","who","from","heaven","descended"]},
+    {"id":"s05","tr":"Not as your fathers ate manna and died.","g":["not","as","ate","fathers","your","manna","and","the dead","are"]},
+    {"id":"s06","tr":"He that eateth this Bread shall live for ever.","g":["who","eateth","this","bread","shall live","unto","ever"]}
+  ]
+}

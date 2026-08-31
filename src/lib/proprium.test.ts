@@ -11,6 +11,7 @@ import {
 	properRank
 } from './proprium';
 import { ORDO } from './ordo';
+import { properData } from './loaders';
 
 const properKeys = TEXT_KEYS.filter((k) => k.startsWith('proprium/'));
 
@@ -32,6 +33,15 @@ describe('the days table and the corpus agree', () => {
 			(d) => !properKeys.some((key) => key.startsWith(`proprium/${d.id}-`))
 		).map((d) => d.id);
 		expect(empty, 'days named with no texts').toEqual([]);
+	});
+
+	it('resolves every explicitly assigned shared part', () => {
+		for (const day of PROPER_DAYS) {
+			for (const [part, key] of Object.entries(day.parts ?? {})) {
+				expect(PROPER_PARTS, `${day.id} assigns an unknown ${part}`).toContain(part);
+				expect(TEXT_KEYS, `${day.id}/${part} resolves to no corpus text`).toContain(key);
+			}
+		}
 	});
 
 	it('gives every day a name in Latin and both languages', () => {
@@ -94,6 +104,64 @@ describe('lookups', () => {
 			'/artifacts/proprium/pl/dominica-i-adventus.json'
 		);
 	});
+
+	it('assembles a shared preface in its proper rite position', async () => {
+		const trinity = await properData('sanctissimae-trinitatis', 'pl');
+		expect(trinity?.parts.map(({ part }) => part)).toEqual([
+			'introitus',
+			'collecta',
+			'epistola',
+			'graduale',
+			'alleluia',
+			'evangelium',
+			'offertorium',
+			'secreta',
+			'praefatio',
+			'communio',
+			'postcommunio'
+		]);
+		expect(trinity?.parts.find(({ part }) => part === 'praefatio')?.key).toBe(
+			'ordinarium/praefatio-sanctissimae-trinitatis'
+		);
+	});
+
+	it('keeps the mandatory Corpus Christi sequence and the common Preface fallback', async () => {
+		const feast = await properData('corporis-christi', 'en');
+		expect(feast?.parts.map(({ part }) => part)).toEqual([
+			'introitus',
+			'collecta',
+			'epistola',
+			'graduale',
+			'alleluia',
+			'sequentia',
+			'evangelium',
+			'offertorium',
+			'secreta',
+			'communio',
+			'postcommunio'
+		]);
+		expect(feast?.parts.some(({ part }) => part === 'praefatio')).toBe(false);
+	});
+
+	it('assembles the Sacred Heart Preface in the Canon position', async () => {
+		const feast = await properData('sacratissimi-cordis-iesu', 'pl');
+		expect(feast?.parts.map(({ part }) => part)).toEqual([
+			'introitus',
+			'collecta',
+			'epistola',
+			'graduale',
+			'alleluia',
+			'evangelium',
+			'offertorium',
+			'secreta',
+			'praefatio',
+			'communio',
+			'postcommunio'
+		]);
+		expect(feast?.parts.find(({ part }) => part === 'praefatio')?.key).toBe(
+			'ordinarium/praefatio-sacratissimi-cordis-iesu'
+		);
+	});
 });
 
 describe('a day is offered only where it can act', () => {
@@ -109,11 +177,11 @@ describe('a day is offered only where it can act', () => {
 	it('knows which movements carry a proper slot, and which carry none', () => {
 		// The picker is hidden where nothing fills. That is a claim about the
 		// spine, and the spine changes: if a proper slot is ever added to the
-		// Canon this fails and someone decides on purpose.
+		// movement this fails and someone decides on purpose.
 		const withProper = ORDO.filter((m) => m.entries.some((e) => e.kind === 'proper')).map(
 			(m) => m.id
 		);
-		expect(withProper).toEqual(['catechumenorum', 'offertorium', 'conclusio']);
+		expect(withProper).toEqual(['catechumenorum', 'offertorium', 'canon', 'conclusio']);
 	});
 
 	it('leaves no movement showing a proper slot it cannot fill', () => {

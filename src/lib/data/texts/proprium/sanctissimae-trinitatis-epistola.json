@@ -1,0 +1,18 @@
+{
+  "id":"proprium.sanctissimae-trinitatis-epistola",
+  "title":"O altitúdo divitiárum",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sanctissimae-trinitatis",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"O","l":"o","m":46},{"i":"w002","f":"altitúdo","l":"altitudo","m":20},{"i":"w003","f":"divitiárum","l":"divitiae","m":147},{"i":"w004","f":"sapiéntiæ","l":"sapientia","m":64},{"i":"w005","f":"et","l":"et","m":15},{"i":"w006","f":"sciéntiæ","l":"scientia","m":64},{"i":"w007","f":"Dei","l":"deus","p":":","m":54},{"i":"w008","f":"quam","l":"quam","m":15},{"i":"w009","f":"incomprehensibília","l":"incomprehensibilis","m":272,"h":"w011"},{"i":"w010","f":"sunt","l":"sum","m":117},{"i":"w011","f":"iudícia","l":"iudicium","m":274},{"i":"w012","f":"eius","l":"is","p":",","m":27},{"i":"w013","f":"et","l":"et","m":15},{"i":"w014","f":"investigábiles","l":"investigabilis","m":11,"h":"w015"},{"i":"w015","f":"viæ","l":"via","m":134},{"i":"w016","f":"eius","l":"is","p":"!","m":27}]},
+    {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w017","f":"Quis","l":"quis","m":18},{"i":"w018","f":"enim","l":"enim","m":15},{"i":"w019","f":"cognóvit","l":"cognosco","m":195},{"i":"w020","f":"sensum","l":"sensus","m":160},{"i":"w021","f":"Dómini","l":"dominus","p":"?","m":54}]},
+    {"id":"s03","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w022","f":"Aut","l":"aut","m":15},{"i":"w023","f":"quis","l":"quis","m":18},{"i":"w024","f":"consiliárius","l":"consiliarius","m":60},{"i":"w025","f":"eius","l":"is","m":27},{"i":"w026","f":"fuit","l":"sum","p":"?","m":292}]},
+    {"id":"s04","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w027","f":"Aut","l":"aut","m":15},{"i":"w028","f":"quis","l":"quis","m":18},{"i":"w029","f":"prior","l":"prior","m":444,"s":true},{"i":"w030","f":"dedit","l":"do","m":28},{"i":"w031","f":"illi","l":"ille","p":",","m":245},{"i":"w032","f":"et","l":"et","m":15},{"i":"w033","f":"retribuétur","l":"retribuo","m":345},{"i":"w034","f":"ei","l":"is","p":"?","m":245}]},
+    {"id":"s05","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w035","f":"Quóniam","l":"quoniam","m":15},{"i":"w036","f":"ex","l":"ex","m":0,"h":"w037"},{"i":"w037","f":"ipso","l":"ipse","p":",","m":289},{"i":"w038","f":"et","l":"et","m":15},{"i":"w039","f":"per","l":"per","m":3,"h":"w040"},{"i":"w040","f":"ipsum","l":"ipse","p":",","m":36},{"i":"w041","f":"et","l":"et","m":15},{"i":"w042","f":"in","l":"in","m":0,"h":"w043"},{"i":"w043","f":"ipso","l":"ipse","m":289},{"i":"w044","f":"sunt","l":"sum","m":117},{"i":"w045","f":"ómnia","l":"omnis","p":":","m":272,"s":true},{"i":"w046","f":"ipsi","l":"ipse","m":245},{"i":"w047","f":"glória","l":"gloria","m":24},{"i":"w048","f":"in","l":"in","m":3,"h":"w049"},{"i":"w049","f":"sǽcula","l":"saeculum","p":".","m":85},{"i":"w050","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

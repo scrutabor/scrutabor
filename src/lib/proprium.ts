@@ -27,6 +27,7 @@ export const PROPER_PARTS = [
 	'evangelium',
 	'offertorium',
 	'secreta',
+	'praefatio',
 	'communio',
 	'postcommunio'
 ] as const;
@@ -62,6 +63,7 @@ export const SLOT_OF: Record<ProperPart, string> = {
 	evangelium: 'evangelium',
 	offertorium: 'offertorium',
 	secreta: 'secreta',
+	praefatio: 'praefatio',
 	communio: 'communio',
 	postcommunio: 'postcommunio'
 };
@@ -96,6 +98,12 @@ export interface ProperDay {
 	 * description in both cases, which is the kind of silence this edition
 	 * does not keep. */
 	partial?: boolean;
+	/** A day may assign a text outside `proprium` to one of its slots.
+	 *
+	 * Prefaces are shared liturgical texts in `ordinarium`, not copies made
+	 * once per feast. The mapping keeps that identity explicit while the
+	 * usual proper parts continue to be discovered from the day's slug. */
+	parts?: Partial<Record<ProperPart, string>>;
 }
 
 // One entry per formulary the corpus carries. A day named here without texts
@@ -135,6 +143,39 @@ const PROPER_DAYS_SOURCE: ProperDay[] = [
 			la: 'Dominica IV Adventus',
 			pl: 'IV Niedziela Adwentu',
 			en: 'Fourth Sunday of Advent'
+		}
+	},
+	{
+		id: 'sanctissimae-trinitatis',
+		season: 'per-annum',
+		title: {
+			la: 'In festo Sanctissimæ Trinitatis',
+			pl: 'Uroczystość Trójcy Przenajświętszej',
+			en: 'Feast of the Most Holy Trinity'
+		},
+		parts: {
+			praefatio: 'ordinarium/praefatio-sanctissimae-trinitatis'
+		}
+	},
+	{
+		id: 'corporis-christi',
+		season: 'per-annum',
+		title: {
+			la: 'In festo Sanctissimi Corporis Christi',
+			pl: 'Uroczystość Najświętszego Ciała Chrystusa',
+			en: 'Feast of Corpus Christi'
+		}
+	},
+	{
+		id: 'sacratissimi-cordis-iesu',
+		season: 'per-annum',
+		title: {
+			la: 'In festo Sacratissimi Cordis Iesu',
+			pl: 'Uroczystość Najświętszego Serca Jezusowego',
+			en: 'Feast of the Most Sacred Heart of Jesus'
+		},
+		parts: {
+			praefatio: 'ordinarium/praefatio-sacratissimi-cordis-iesu'
 		}
 	}
 ];

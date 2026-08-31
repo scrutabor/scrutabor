@@ -1,0 +1,12 @@
+{
+  "id":"proprium.sanctissimae-trinitatis-introitus",
+  "language":"en",
+  "about":"The Introit of the feast of the Most Holy Trinity. It blesses the Triune God for His mercy and, in the psalm verse, praises His name throughout the earth.",
+  "seg":[
+    {"id":"s01","tr":"Blessed be the Holy Trinity and undivided Unity; we shall praise Him, for He has shown us His mercy.","g":["blessed","let be","Holy","Trinity","and","undivided","unity","we shall praise","to him","for","has done","with us","mercy","His"]},
+    {"id":"s02","tr":"O Lord, our Lord, how wonderful is Thy name throughout all the earth!","g":["Lord","the Lord","our","how","wonderful","is","name","Thy","in","all the","earth"]},
+    {"id":"s03","tr":"Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.","g":["glory","to the Father","and","to the Son","and","to the Spirit","Holy","as","it was","in","the beginning","and","now","and","always","and","unto","ages","of ages","amen"]},
+    {"id":"s04","nr":"When it is finished, the antiphon “Benedícta sit sancta Trínitas” is repeated up to the psalm."},
+    {"id":"s05","tr":"Blessed be the Holy Trinity and undivided Unity; we shall praise Him, for He has shown us His mercy.","g":["blessed","let be","Holy","Trinity","and","undivided","unity","we shall praise","to him","for","has done","with us","mercy","His"]}
+  ]
+}

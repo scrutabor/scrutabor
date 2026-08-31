@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sacratissimi-cordis-iesu-offertorium",
+  "title":"Impropérium exspectávit Cor meum",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sacratissimi-cordis-iesu",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Impropérium","l":"improperium","m":104},{"i":"w002","f":"exspectávit","l":"exspecto","m":28},{"i":"w003","f":"Cor","l":"cor","m":97},{"i":"w004","f":"meum","l":"meus","m":105,"h":"w003"},{"i":"w005","f":"et","l":"et","m":15},{"i":"w006","f":"misériam","l":"miseria","p":",","m":141},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"sustínui","l":"sustineo","m":22},{"i":"w009","f":"qui","l":"qui","m":18},{"i":"w010","f":"simul","l":"simul","m":32},{"i":"w011","f":"mecum","l":"ego","m":131},{"i":"w012","f":"contristarétur","l":"contristo","m":489},{"i":"w013","f":"et","l":"et","m":15},{"i":"w014","f":"non","l":"non","m":32},{"i":"w015","f":"fuit","l":"sum","p":":","m":292},{"i":"w016","f":"consolántem","l":"consolor","m":490,"s":true},{"i":"w017","f":"me","l":"ego","m":131},{"i":"w018","f":"quæsívi","l":"quaero","m":173},{"i":"w019","f":"et","l":"et","m":15},{"i":"w020","f":"non","l":"non","m":32},{"i":"w021","f":"invéni","l":"invenio","p":".","m":491}]}
+  ]
+}

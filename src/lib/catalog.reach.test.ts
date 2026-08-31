@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { CATALOG } from './catalog';
 import { TEXT_KEYS, hasText } from './corpus';
 import { ORDO } from './ordo';
+import { PROPER_DAYS } from './proprium';
 
 // A vendored text a reader cannot reach is data shipped for nobody, and a
 // catalogue entry with no text behind it is a dead link.
@@ -19,11 +20,12 @@ import { ORDO } from './ordo';
 // rule quietly stops applying.
 describe('every vendored text is reachable, and every named text exists', () => {
 	const shelved = new Set(CATALOG.flatMap((s) => s.texts.map((t) => `${t.category}/${t.slug}`)));
-	const inOrdo = new Set(
-		ORDO.flatMap((m) => m.entries)
+	const inOrdo = new Set([
+		...ORDO.flatMap((m) => m.entries)
 			.map((e) => e.text)
-			.filter((k): k is string => Boolean(k))
-	);
+			.filter((k): k is string => Boolean(k)),
+		...PROPER_DAYS.flatMap((day) => Object.values(day.parts ?? {}))
+	]);
 
 	// Reached by lemma pages and direct links instead of by a shelf.
 	const UNSHELVED = new Set(['proprium']);

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.corporis-christi-offertorium",
+  "title":"Sacerdótes Dómini incénsum et panes",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"corporis-christi",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Sacerdótes","l":"sacerdos","m":242},{"i":"w002","f":"Dómini","l":"dominus","m":54},{"i":"w003","f":"incénsum","l":"incensum","m":82},{"i":"w004","f":"et","l":"et","m":15},{"i":"w005","f":"panes","l":"panis","m":152},{"i":"w006","f":"ófferunt","l":"offero","m":117},{"i":"w007","f":"Deo","l":"deus","p":":","m":186},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"ídeo","l":"ideo","m":32},{"i":"w010","f":"sancti","l":"sanctus","m":87,"h":"w001"},{"i":"w011","f":"erunt","l":"sum","m":360},{"i":"w012","f":"Deo","l":"deus","m":186},{"i":"w013","f":"suo","l":"suus","p":",","m":216,"h":"w012"},{"i":"w014","f":"et","l":"et","m":15},{"i":"w015","f":"non","l":"non","m":32},{"i":"w016","f":"pólluent","l":"polluo","m":218},{"i":"w017","f":"nomen","l":"nomen","m":136},{"i":"w018","f":"eius","l":"is","p":",","m":27},{"i":"w019","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

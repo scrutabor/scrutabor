@@ -1,0 +1,14 @@
+{
+  "id":"proprium.corporis-christi-postcommunio",
+  "title":"Fac nos, quǽsumus, Dómine",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"corporis-christi",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Fac","l":"facio","m":86},{"i":"w002","f":"nos","l":"nos","p":",","m":49},{"i":"w003","f":"quǽsumus","l":"quaeso","p":",","m":92},{"i":"w004","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w005","f":"divinitátis","l":"divinitas","m":13},{"i":"w006","f":"tuæ","l":"tuus","m":14,"h":"w005"},{"i":"w007","f":"sempitérna","l":"sempiternus","m":31,"h":"w008"},{"i":"w008","f":"fruitióne","l":"fruitio","m":45},{"i":"w009","f":"repléri","l":"repleo","p":":","m":456},{"i":"w010","f":"quam","l":"qui","m":291},{"i":"w011","f":"pretiósi","l":"pretiosus","m":67,"h":"w012"},{"i":"w012","f":"Córporis","l":"corpus","m":75},{"i":"w013","f":"et","l":"et","m":15},{"i":"w014","f":"Sánguinis","l":"sanguis","m":69},{"i":"w015","f":"tui","l":"tuus","m":99,"h":"w014"},{"i":"w016","f":"temporális","l":"temporalis","m":25,"h":"w017"},{"i":"w017","f":"percéptio","l":"perceptio","m":20},{"i":"w018","f":"præfigúrat","l":"praefiguro","p":":","m":119},{"i":"w019","f":"Qui","l":"qui","m":18},{"i":"w020","f":"vivis","l":"vivo","m":84},{"i":"w021","f":"et","l":"et","m":15},{"i":"w022","f":"regnas","l":"regno","m":164},{"i":"w023","f":"cum","l":"cum","m":0,"h":"w024"},{"i":"w024","f":"Deo","l":"deus","m":29},{"i":"w025","f":"Patre","l":"pater","m":109},{"i":"w026","f":"in","l":"in","m":0,"h":"w027"},{"i":"w027","f":"unitáte","l":"unitas","m":45},{"i":"w028","f":"Spíritus","l":"spiritus","m":250},{"i":"w029","f":"Sancti","l":"sanctus","m":99,"h":"w028"},{"i":"w030","f":"Deus","l":"deus","p":":","m":60},{"i":"w031","f":"per","l":"per","m":3,"h":"w033"},{"i":"w032","f":"ómnia","l":"omnis","m":129,"h":"w033"},{"i":"w033","f":"sǽcula","l":"saeculum","m":85},{"i":"w034","f":"sæculórum","l":"saeculum","p":".","m":145},{"i":"w035","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

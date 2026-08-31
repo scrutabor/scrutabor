@@ -1,0 +1,12 @@
+{
+  "id":"proprium.sanctissimae-trinitatis-epistola",
+  "language":"en",
+  "about":"The Epistle of the feast of the Most Holy Trinity, Romans 11:33–36. The Apostle praises the unsearchable wisdom of God, from whom, through whom, and in whom are all things.",
+  "seg":[
+    {"id":"s01","tr":"O the depth of the riches of the wisdom and knowledge of God! How incomprehensible are His judgments, and how unsearchable His ways!","g":["O","depth","of the riches","of wisdom","and","of knowledge","of God","how","incomprehensible","are","judgments","His","and","unsearchable","ways","His"]},
+    {"id":"s02","tr":"For who hath known the mind of the Lord?","g":["who","for","knew","understanding","of the Lord"]},
+    {"id":"s03","tr":"Or who hath been His counselor?","g":["or","who","counselor","His","there was"]},
+    {"id":"s04","tr":"Or who hath first given to Him, and recompense shall be made him?","g":["or","who","first","He gave","to Him","and","shall be recompensed","to him"]},
+    {"id":"s05","tr":"For of Him, and by Him, and in Him are all things: to Him be glory for ever. Amen.","g":["that","of","Him","and","through","Him","and","in","Him","are","all","to Him","glory","unto","ages","amen"]}
+  ]
+}

@@ -371,6 +371,18 @@
       "title": "Dóminus vobíscum (dialogus Præfationis)"
     },
     {
+      "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
+      "path": "texts/ordinarium/praefatio-sacratissimi-cordis-iesu.json",
+      "title": "Præfatio de Sacratissimo Corde Iesu",
+      "evidence": "bibliography/texts/ordinarium/praefatio-sacratissimi-cordis-iesu.json"
+    },
+    {
+      "id": "ordinarium.praefatio-sanctissimae-trinitatis",
+      "path": "texts/ordinarium/praefatio-sanctissimae-trinitatis.json",
+      "title": "Præfatio de Sanctissima Trinitate",
+      "evidence": "bibliography/texts/ordinarium/praefatio-sanctissimae-trinitatis.json"
+    },
+    {
       "id": "ordinarium.quam-oblationem",
       "path": "texts/ordinarium/quam-oblationem.json",
       "title": "Quam oblatiónem"
@@ -434,6 +446,72 @@
       "id": "ordinarium.unde-et-memores",
       "path": "texts/ordinarium/unde-et-memores.json",
       "title": "Unde et mémores"
+    },
+    {
+      "id": "proprium.corporis-christi-alleluia",
+      "path": "texts/proprium/corporis-christi-alleluia.json",
+      "title": "Caro mea vere est cibus",
+      "evidence": "bibliography/texts/proprium/corporis-christi-alleluia.json"
+    },
+    {
+      "id": "proprium.corporis-christi-collecta",
+      "path": "texts/proprium/corporis-christi-collecta.json",
+      "title": "Deus, qui nobis sub Sacraménto mirábili",
+      "evidence": "bibliography/texts/proprium/corporis-christi-collecta.json"
+    },
+    {
+      "id": "proprium.corporis-christi-communio",
+      "path": "texts/proprium/corporis-christi-communio.json",
+      "title": "Quotiescúmque manducábitis panem hunc",
+      "evidence": "bibliography/texts/proprium/corporis-christi-communio.json"
+    },
+    {
+      "id": "proprium.corporis-christi-epistola",
+      "path": "texts/proprium/corporis-christi-epistola.json",
+      "title": "Ego enim accépi a Dómino",
+      "evidence": "bibliography/texts/proprium/corporis-christi-epistola.json"
+    },
+    {
+      "id": "proprium.corporis-christi-evangelium",
+      "path": "texts/proprium/corporis-christi-evangelium.json",
+      "title": "Caro mea vere est cibus",
+      "evidence": "bibliography/texts/proprium/corporis-christi-evangelium.json"
+    },
+    {
+      "id": "proprium.corporis-christi-graduale",
+      "path": "texts/proprium/corporis-christi-graduale.json",
+      "title": "Oculi ómnium in te sperant",
+      "evidence": "bibliography/texts/proprium/corporis-christi-graduale.json"
+    },
+    {
+      "id": "proprium.corporis-christi-introitus",
+      "path": "texts/proprium/corporis-christi-introitus.json",
+      "title": "Cibávit eos ex ádipe fruménti",
+      "evidence": "bibliography/texts/proprium/corporis-christi-introitus.json"
+    },
+    {
+      "id": "proprium.corporis-christi-offertorium",
+      "path": "texts/proprium/corporis-christi-offertorium.json",
+      "title": "Sacerdótes Dómini incénsum et panes",
+      "evidence": "bibliography/texts/proprium/corporis-christi-offertorium.json"
+    },
+    {
+      "id": "proprium.corporis-christi-postcommunio",
+      "path": "texts/proprium/corporis-christi-postcommunio.json",
+      "title": "Fac nos, quǽsumus, Dómine",
+      "evidence": "bibliography/texts/proprium/corporis-christi-postcommunio.json"
+    },
+    {
+      "id": "proprium.corporis-christi-secreta",
+      "path": "texts/proprium/corporis-christi-secreta.json",
+      "title": "Ecclésiæ tuæ, quǽsumus, Dómine",
+      "evidence": "bibliography/texts/proprium/corporis-christi-secreta.json"
+    },
+    {
+      "id": "proprium.corporis-christi-sequentia",
+      "path": "texts/proprium/corporis-christi-sequentia.json",
+      "title": "Lauda, Sion, Salvatórem",
+      "evidence": "bibliography/texts/proprium/corporis-christi-sequentia.json"
     },
     {
       "id": "proprium.dominica-i-adventus-alleluia",
@@ -636,6 +714,126 @@
       "title": "Sacrifíciis præséntibus"
     },
     {
+      "id": "proprium.sacratissimi-cordis-iesu-alleluia",
+      "path": "texts/proprium/sacratissimi-cordis-iesu-alleluia.json",
+      "title": "Tóllite iugum meum",
+      "evidence": "bibliography/texts/proprium/sacratissimi-cordis-iesu-alleluia.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-collecta",
+      "path": "texts/proprium/sacratissimi-cordis-iesu-collecta.json",
+      "title": "Deus, qui nobis in Corde Fílii tui",
+      "evidence": "bibliography/texts/proprium/sacratissimi-cordis-iesu-collecta.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-communio",
+      "path": "texts/proprium/sacratissimi-cordis-iesu-communio.json",
+      "title": "Unus mílitum láncea latus eius apéruit",
+      "evidence": "bibliography/texts/proprium/sacratissimi-cordis-iesu-communio.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-epistola",
+      "path": "texts/proprium/sacratissimi-cordis-iesu-epistola.json",
+      "title": "Mihi ómnium sanctórum mínimo",
+      "evidence": "bibliography/texts/proprium/sacratissimi-cordis-iesu-epistola.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-evangelium",
+      "path": "texts/proprium/sacratissimi-cordis-iesu-evangelium.json",
+      "title": "Unus mílitum láncea latus eius apéruit",
+      "evidence": "bibliography/texts/proprium/sacratissimi-cordis-iesu-evangelium.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-graduale",
+      "path": "texts/proprium/sacratissimi-cordis-iesu-graduale.json",
+      "title": "Dulcis et rectus Dóminus",
+      "evidence": "bibliography/texts/proprium/sacratissimi-cordis-iesu-graduale.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-introitus",
+      "path": "texts/proprium/sacratissimi-cordis-iesu-introitus.json",
+      "title": "Cogitatiónes Cordis eius",
+      "evidence": "bibliography/texts/proprium/sacratissimi-cordis-iesu-introitus.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-offertorium",
+      "path": "texts/proprium/sacratissimi-cordis-iesu-offertorium.json",
+      "title": "Impropérium exspectávit Cor meum",
+      "evidence": "bibliography/texts/proprium/sacratissimi-cordis-iesu-offertorium.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-postcommunio",
+      "path": "texts/proprium/sacratissimi-cordis-iesu-postcommunio.json",
+      "title": "Prǽbeant nobis, Dómine Iesu",
+      "evidence": "bibliography/texts/proprium/sacratissimi-cordis-iesu-postcommunio.json"
+    },
+    {
+      "id": "proprium.sacratissimi-cordis-iesu-secreta",
+      "path": "texts/proprium/sacratissimi-cordis-iesu-secreta.json",
+      "title": "Réspice, quǽsumus, Dómine",
+      "evidence": "bibliography/texts/proprium/sacratissimi-cordis-iesu-secreta.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-alleluia",
+      "path": "texts/proprium/sanctissimae-trinitatis-alleluia.json",
+      "title": "Benedíctus es, Dómine, Deus patrum",
+      "evidence": "bibliography/texts/proprium/sanctissimae-trinitatis-alleluia.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-collecta",
+      "path": "texts/proprium/sanctissimae-trinitatis-collecta.json",
+      "title": "Omnípotens sempitérne Deus",
+      "evidence": "bibliography/texts/proprium/sanctissimae-trinitatis-collecta.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-communio",
+      "path": "texts/proprium/sanctissimae-trinitatis-communio.json",
+      "title": "Benedícimus Deum cæli",
+      "evidence": "bibliography/texts/proprium/sanctissimae-trinitatis-communio.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-epistola",
+      "path": "texts/proprium/sanctissimae-trinitatis-epistola.json",
+      "title": "O altitúdo divitiárum",
+      "evidence": "bibliography/texts/proprium/sanctissimae-trinitatis-epistola.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-evangelium",
+      "path": "texts/proprium/sanctissimae-trinitatis-evangelium.json",
+      "title": "Data est mihi omnis potéstas",
+      "evidence": "bibliography/texts/proprium/sanctissimae-trinitatis-evangelium.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-graduale",
+      "path": "texts/proprium/sanctissimae-trinitatis-graduale.json",
+      "title": "Benedíctus es, Dómine",
+      "evidence": "bibliography/texts/proprium/sanctissimae-trinitatis-graduale.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-introitus",
+      "path": "texts/proprium/sanctissimae-trinitatis-introitus.json",
+      "title": "Benedícta sit sancta Trínitas",
+      "evidence": "bibliography/texts/proprium/sanctissimae-trinitatis-introitus.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-offertorium",
+      "path": "texts/proprium/sanctissimae-trinitatis-offertorium.json",
+      "title": "Benedíctus sit Deus Pater",
+      "evidence": "bibliography/texts/proprium/sanctissimae-trinitatis-offertorium.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-postcommunio",
+      "path": "texts/proprium/sanctissimae-trinitatis-postcommunio.json",
+      "title": "Profíciat nobis ad salútem",
+      "evidence": "bibliography/texts/proprium/sanctissimae-trinitatis-postcommunio.json"
+    },
+    {
+      "id": "proprium.sanctissimae-trinitatis-secreta",
+      "path": "texts/proprium/sanctissimae-trinitatis-secreta.json",
+      "title": "Sanctífica, quǽsumus, Dómine Deus noster",
+      "evidence": "bibliography/texts/proprium/sanctissimae-trinitatis-secreta.json"
+    },
+    {
       "id": "psalmi.118-he",
       "path": "texts/psalmi/118-he.json",
       "title": "Psalmus 118, HE"
@@ -666,7 +864,7 @@
     "citations": "tables/citations.json",
     "normalization": "normalization.json"
   },
-  "morphology": 442,
+  "morphology": 493,
   "kalendarium": [
     2026,
     2101

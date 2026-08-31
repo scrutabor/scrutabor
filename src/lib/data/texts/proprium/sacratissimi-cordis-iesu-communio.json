@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sacratissimi-cordis-iesu-communio",
+  "title":"Unus mílitum láncea latus eius apéruit",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sacratissimi-cordis-iesu",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Unus","l":"unus","m":59,"s":true},{"i":"w002","f":"mílitum","l":"miles","m":77},{"i":"w003","f":"láncea","l":"lancea","m":30},{"i":"w004","f":"latus","l":"latus","m":136},{"i":"w005","f":"eius","l":"is","m":27},{"i":"w006","f":"apéruit","l":"aperio","p":",","m":293},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"contínuo","l":"continuo","m":32},{"i":"w009","f":"exívit","l":"exeo","m":292},{"i":"w010","f":"sanguis","l":"sanguis","m":113},{"i":"w011","f":"et","l":"et","m":15},{"i":"w012","f":"aqua","l":"aqua","p":".","m":24}]}
+  ]
+}

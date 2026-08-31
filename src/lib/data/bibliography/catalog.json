@@ -17,6 +17,11 @@
    "title": "Compendium of the Catechism of the Catholic Church"
   },
   {
+   "id": "work.divinum-officium",
+   "responsible": "Divinum Officium Project",
+   "title": "Divinum Officium"
+  },
+  {
    "id": "work.enchiridion-indulgentiarum",
    "responsible": "Paenitentiaria Apostolica",
    "title": "Enchiridion Indulgentiarum"
@@ -34,6 +39,11 @@
    "id": "work.liber-usualis",
    "responsible": "Abbaye Saint-Pierre de Solesmes",
    "title": "Liber Usualis"
+  },
+  {
+   "id": "work.missale-romanum",
+   "responsible": "Ecclesia Catholica",
+   "title": "Missale Romanum ex decreto SS. Concilii Tridentini restitutum"
   }
  ],
  "editions": [
@@ -85,6 +95,23 @@
    "rights": {
     "status": "permission",
     "basis": "Libreria Editrice Vaticana."
+   }
+  },
+  {
+   "id": "edition.divinum-officium-missa.44667ff",
+   "work": "work.divinum-officium",
+   "recension": "Latin Mass data at commit 44667ff518b8ff1439780470828b39714f5306a2",
+   "title": "Divinum Officium: Missa, Latin data",
+   "edition_statement": "Pinned source revision",
+   "year": "2026",
+   "publication_type": "web_resource",
+   "authority": "reference_work",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "permission",
+    "basis": "Distributed under the MIT License by the Divinum Officium project."
    }
   },
   {
@@ -170,6 +197,25 @@
     "status": "unverified",
     "basis": "No republication licence is asserted; the graph exposes only bibliographic facts and locators."
    }
+  },
+  {
+   "id": "edition.missale-romanum.1962-typica",
+   "work": "work.missale-romanum",
+   "recension": "Roman Missal governed by the 1960 Code of Rubrics",
+   "title": "Missale Romanum ex decreto SS. Concilii Tridentini restitutum",
+   "edition_statement": "Editio typica",
+   "place": "Civitate Vaticana",
+   "publisher": "Typis Polyglottis Vaticanis",
+   "year": "1962",
+   "publication_type": "missal",
+   "authority": "typical_liturgical_edition",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "public-domain",
+    "basis": "Liturgical Latin of the 1962 typical edition."
+   }
   }
  ],
  "digital_items": [
@@ -197,6 +243,15 @@
    "repository": "The Holy See",
    "kind": "born-digital",
    "record_url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-missa.44667ff.github",
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://github.com/DivinumOfficium/divinum-officium/commit/44667ff518b8ff1439780470828b39714f5306a2",
+   "revision": "44667ff518b8ff1439780470828b39714f5306a2",
    "access": "open"
   },
   {
@@ -241,6 +296,15 @@
    "kind": "scan",
    "record_url": "https://archive.org/details/TheLiberUsualis1961",
    "scan_url": "https://archive.org/download/TheLiberUsualis1961/liberusualis.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.missale-romanum.1962-typica.ia",
+   "edition": "edition.missale-romanum.1962-typica",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/missale_romanum-1962",
+   "scan_url": "https://archive.org/download/missale_romanum-1962/missale-romanum-1962.pdf",
    "access": "open"
   }
  ]

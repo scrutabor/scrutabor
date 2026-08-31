@@ -1,0 +1,10 @@
+{
+  "id":"proprium.sanctissimae-trinitatis-evangelium",
+  "language":"en",
+  "about":"The Gospel of the feast of the Most Holy Trinity, Matthew 28:18–20. The risen Christ sends the disciples to teach and baptize in the name of the Father and of the Son and of the Holy Ghost.",
+  "seg":[
+    {"id":"s01","tr":"At that time Jesus said to His disciples: All power is given to Me in heaven and on earth.","g":["in","that","time","said","Jesus","to the disciples","His","given","is","to me","all","power","in","heaven","and","in","earth"]},
+    {"id":"s02","tr":"Going therefore, teach ye all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost; teaching them to observe all things whatsoever I have commanded you.","g":["going","therefore","teach ye","all","the nations","baptizing","them","in","the name","of the Father","and","of the Son","and","of the Spirit","Holy","teaching","them","to observe","all","whatsoever things","I have commanded","to you"]},
+    {"id":"s03","tr":"And behold, I am with you all days, even to the consummation of the world.","g":["and","behold","I","with you","am","all","days","even until","to","consummation","of the age"]}
+  ]
+}
