@@ -50,11 +50,15 @@ const DAYS: Row[] = SPAN.flatMap((year) => YEARS[String(year)]).sort((a, b) =>
 /** The last date the table can still answer for: the final row's week runs
  * six days past the row itself. Computed at noon so no time zone can move
  * the date under the arithmetic. */
-const EXTENT = (() => {
+export const DATE_MAX = (() => {
 	const past = new Date(`${DAYS[DAYS.length - 1][0]}T12:00:00`);
 	past.setDate(past.getDate() + 6);
 	return isoDate(past);
 })();
+
+/** The first and last civil dates for which the shipped table can answer.
+ * They bound the picker's native date field as well as its month buttons. */
+export const DATE_MIN = DAYS[0][0];
 
 function shape(row: Row): Kalendar {
 	return {
@@ -80,6 +84,15 @@ export function dayOn(iso: string): Kalendar | null {
 	return row ? shape(row) : null;
 }
 
+/** Whether a spelling is a real civil date inside the shipped table. */
+export function calendarCovers(iso: string): boolean {
+	const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+	if (!match || iso < DATE_MIN || iso > DATE_MAX) return false;
+	const [, y, m, d] = match.map(Number);
+	const when = new Date(y, m - 1, d, 12);
+	return when.getFullYear() === y && when.getMonth() === m - 1 && when.getDate() === d;
+}
+
 /**
  * Where the reader is: the day itself if it has a Mass, and the day whose week
  * they are in either way.
@@ -95,13 +108,13 @@ export function dayOf(iso: string): { on: Kalendar | null; week: Kalendar | null
 	// of 2101. The last Sunday's own week still counts — it runs six days
 	// past the last row, to the eve of an Advent the table no longer holds.
 	// (Before the first row both answers are null the same way.)
-	if (iso > EXTENT) return { on: null, week: null };
-	let week: Row | null = null;
-	for (const row of DAYS) {
-		if (row[0] > iso) break;
-		week = row;
-	}
-	return { on, week: week && shape(week) };
+	if (!calendarCovers(iso)) return { on: null, week: null };
+	// A weekday belongs to the Sunday immediately before it, not to the last
+	// row in the table. The latter may be a Monday feast, and used to make the
+	// picker call that feast the whole week's Sunday until the next row.
+	const when = new Date(`${iso}T12:00:00`);
+	when.setDate(when.getDate() - when.getDay());
+	return { on, week: dayOn(isoDate(when)) };
 }
 
 /** The years the table covers, as the manifest declares them. */

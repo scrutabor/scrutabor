@@ -34,7 +34,9 @@ describe('the day picker specs', () => {
 	it('finds the tests it means to check', () => {
 		const all = tests();
 		expect(all.length, 'the parser lost the file').toBeGreaterThan(8);
-		expect(all.map((t) => t.title)).toContain('the Ordo shows placeholders until a day is chosen');
+		expect(all.map((t) => t.title)).toContain(
+			'the Ordo shows placeholders when the chosen date has no resolved formulary'
+		);
 	});
 
 	it('pins the clock in every test that opens a page', () => {

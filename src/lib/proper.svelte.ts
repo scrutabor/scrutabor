@@ -63,18 +63,16 @@ const KEY = 'scrutabor-day';
  * An empty string is a real answer: the reader asked for no formulary, and
  * that holds for the day too. `null` means they have not said.
  */
-export function storedDay(): string | null {
+export function storedChoice(): string | null {
 	if (!browser) return null;
 	// Through $lib/storage like every other module: the guard against a
 	// storage that THROWS on access lives there and only there. The parse
 	// guard here is for a malformed value, which is a different failure.
 	const raw = readStored(KEY);
-	// Before the date was stored beside it the value was the bare id.
-	// Treat that as spent rather than as chosen today.
 	if (raw === null || !raw.startsWith('{')) return null;
 	try {
-		const { d, on } = JSON.parse(raw);
-		return typeof d === 'string' && on === today() ? d : null;
+		const { value, on } = JSON.parse(raw);
+		return typeof value === 'string' && on === today() ? value : null;
 	} catch {
 		return null;
 	}
@@ -97,19 +95,20 @@ function today(): string {
  * movements keeps it, and any of those URLs can be sent to someone else and
  * opens the same Mass. */
 export function dayHref(href: string): string {
-	if (!day) return href;
+	if (!day && !date) return href;
 	const join = href.includes('?') ? '&' : '?';
-	return `${href}${join}${DAY_PARAM}=${encodeURIComponent(day)}`;
+	return `${href}${join}${DAY_PARAM}=${encodeURIComponent(date ?? day ?? '')}`;
 }
 
-export function rememberDay(id: string): void {
+export function rememberChoice(id: string, selectedDate: string | null = null): void {
 	if (!browser) return;
 	// A reader who has blocked storage still gets the day they picked, for
 	// as long as the page lives — writeStored swallows the denial.
-	writeStored(KEY, JSON.stringify({ d: id, on: today() }));
+	writeStored(KEY, JSON.stringify({ value: selectedDate ?? id, on: today() }));
 }
 
 let day = $state<string | null>(null);
+let date = $state<string | null>(null);
 let payload = $state<ProperPayload | null>(null);
 let loading = $state(false);
 let failed = $state(false);
@@ -163,6 +162,10 @@ export const proper = {
 	get day(): string | null {
 		return day;
 	},
+	/** The civil date being viewed, including one with no available proper. */
+	get date(): string | null {
+		return date;
+	},
 	get payload(): ProperPayload | null {
 		return payload;
 	},
@@ -189,6 +192,7 @@ export const proper = {
 	clear(): void {
 		current += 1;
 		day = null;
+		date = null;
 		payload = null;
 		failed = false;
 		unwritten = false;
@@ -203,8 +207,13 @@ export const proper = {
  * `failed`, because a reader whose network died mid-Mass should still see the
  * Ordo rather than a broken page.
  */
-export async function chooseDay(next: string | null, lang: Lang): Promise<void> {
+export async function chooseDay(
+	next: string | null,
+	lang: Lang,
+	selectedDate: string | null = null
+): Promise<void> {
 	const mine = ++current;
+	date = selectedDate;
 	// Superseding a flight also takes over its notices: the superseded
 	// finally below declines to touch shared state, so it is settled here.
 	loading = false;
@@ -212,7 +221,8 @@ export async function chooseDay(next: string | null, lang: Lang): Promise<void> 
 	failed = false;
 	unwritten = false;
 	if (!next) {
-		proper.clear();
+		day = null;
+		payload = null;
 		return;
 	}
 	const selected = dayById(next) ?? dayByCalendarKey(next);
@@ -226,9 +236,9 @@ export async function chooseDay(next: string | null, lang: Lang): Promise<void> 
 		unwritten = formularyExists(next);
 		return;
 	}
-	// Old and computed links may carry the calendar key, which is deliberately
-	// distinct from a particular Mass id for Corpus Christi and multi-Mass
-	// observances. Resolve it to the canonical default before caching/loading.
+	// A calendar result names its formulary key, which is deliberately distinct
+	// from a particular Mass id for multi-Mass observances. Resolve that key to
+	// the canonical default before caching/loading.
 	next = selected.id;
 	day = next;
 	const key = `${lang}/${next}`;

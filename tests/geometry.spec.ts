@@ -175,21 +175,6 @@ test('reading modes preserve the book geometry @online @sweep', async ({ page })
 						}
 					}
 
-					const icon = document.querySelector('.status-why');
-					if (icon) {
-						const iconBox = icon.getBoundingClientRect();
-						for (const field of document.querySelectorAll(
-							'.picker.day .field, .picker.day .label'
-						)) {
-							const fieldBox = field.getBoundingClientRect();
-							const separate =
-								iconBox.right < fieldBox.left + 1 ||
-								iconBox.left > fieldBox.right - 1 ||
-								iconBox.bottom < fieldBox.top + 1 ||
-								iconBox.top > fieldBox.bottom - 1;
-							if (!separate) out.overlaps.push(`status icon overlaps ${classify(field)}`);
-						}
-					}
 					return out;
 				});
 

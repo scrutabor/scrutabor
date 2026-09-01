@@ -30,7 +30,11 @@ test('the word panel still opens', async ({ page }) => {
 test('the day still fills the slots', async ({ page }) => {
 	await page.goto('/app/pl/ordo/catechumenorum');
 	await settled(page);
-	await page.selectOption('.picker.day select', 'dominica-i-adventus');
+	await page.locator('.picker.day .day-open').click();
+	const dialog = page.getByRole('dialog', { name: 'Wybór dnia' });
+	await dialog.getByRole('tab', { name: 'Lista i wyszukiwanie' }).click();
+	await dialog.locator('[data-formulary="dominica-i-adventus"]').click();
+	await dialog.locator('.modal-actions .primary').click();
 	await expect(page.locator('body')).toContainText('wzniosłem', { timeout: 15_000 });
 });
 

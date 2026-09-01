@@ -83,7 +83,7 @@ function guard(page: import('@playwright/test').Page, reachedOut: string[]) {
  * `SCRUTABOR_TODAY=2026-11-29 npm run test:e2e` runs every spec on the First
  * Sunday of Advent. The book opens on today, so a date the edition CARRIES is
  * a different product: the picker fills the Ordo's slots, every link grows a
- * `?dies=`, and the folded control reads "dziś · I Niedziela Adwentu". None of
+ * `?dies=`, and the folded control reads "I Niedziela Adwentu". None of
  * that is exercised by a suite running in August, and all of it is what a
  * reader meets in the season the book is most used.
  *

@@ -8,7 +8,7 @@
 // same question on a Tuesday in Advent, and answering the second as though it
 // were the first would put a Sunday's Mass on a weekday.
 import { describe, expect, it } from 'vitest';
-import { COVERS, dayOf, dayOn, isoDate } from './kalendarium';
+import { COVERS, DATE_MAX, DATE_MIN, calendarCovers, dayOf, dayOn, isoDate } from './kalendarium';
 import { PROPER_DAYS, dayToday } from './proprium';
 
 describe('the calendar this edition ships', () => {
@@ -33,6 +33,21 @@ describe('the calendar this edition ships', () => {
 		const tuesday = dayOf('2025-12-09');
 		expect(tuesday.on, 'a feria has no Mass in this table').toBeNull();
 		expect(tuesday.week?.formulary).toBe('dominica-ii-adventus');
+	});
+
+	it('does not mistake a weekday feast for the Sunday of the week', () => {
+		// The Assumption fell on Saturday in 2026. The following Wednesday is
+		// in the week of Pentecost XII, not in a week named after 15 August.
+		const wednesday = dayOf('2026-08-19');
+		expect(wednesday.on).toBeNull();
+		expect(wednesday.week?.when).toBe('2026-08-16');
+	});
+
+	it('publishes a strict date range for the picker', () => {
+		expect(calendarCovers(DATE_MIN)).toBe(true);
+		expect(calendarCovers(DATE_MAX)).toBe(true);
+		expect(calendarCovers('2026-02-31')).toBe(false);
+		expect(calendarCovers('2200-01-01')).toBe(false);
 	});
 
 	it('falls silent past either end of the table instead of answering with its edge', () => {

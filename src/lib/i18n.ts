@@ -93,11 +93,35 @@ export interface Messages {
 	/** Announced when the picked day's texts have landed in the page. */
 	dayInPlace: string;
 	dayPartial: string;
-	dayIsToday: string;
 	dayAhead: string;
 	dayWeekOf: string;
 	/** What the day setting is doing, as the role and Mass hints do. */
 	dayHint: Record<'none', string>;
+	/** The modal date/formulary picker. Calendar knowledge and text
+	 * availability are deliberately separate reader-facing states. */
+	dayPicker: {
+		title: string;
+		open: string;
+		calendarTab: string;
+		listTab: string;
+		today: string;
+		previousMonth: string;
+		nextMonth: string;
+		searchLabel: string;
+		searchPlaceholder: string;
+		noResults: string;
+		available: string;
+		partial: string;
+		unresolvedTitle: string;
+		unresolvedText: string;
+		unresolvedWeek: string;
+		unwrittenTitle: string;
+		unwrittenText: string;
+		chooseVariant: string;
+		openFormulary: string;
+		openWithout: string;
+		dateOnly: string;
+	};
 	/** The seasons of the year, for grouping the day picker. */
 	seasons: Record<Season, string>;
 	ordoPending: string;
@@ -246,11 +270,35 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayUnwritten: 'jeszcze nie w tym wydaniu',
 		dayInPlace: 'teksty dnia są na stronie',
 		dayPartial: '(część tekstów)',
-		dayIsToday: 'dziś ·',
 		dayAhead: 'formularz na ten dzień nie jest jeszcze w tym wydaniu — można wybrać inny dzień',
 		dayWeekOf: 'dziś dzień powszedni — ostatnia niedziela to',
 		dayHint: {
 			none: 'sam porządek Mszy, bez tekstów zmiennych'
+		},
+		dayPicker: {
+			title: 'Wybór dnia',
+			open: 'wybierz dzień lub formularz',
+			calendarTab: 'Kalendarz',
+			listTab: 'Lista i wyszukiwanie',
+			today: 'Dzisiaj',
+			previousMonth: 'poprzedni miesiąc',
+			nextMonth: 'następny miesiąc',
+			searchLabel: 'szukaj formularza',
+			searchPlaceholder: 'Wpisz nazwę święta lub niedzieli',
+			noResults: 'Nie znaleziono takiego formularza.',
+			available: 'formularz dostępny w tym wydaniu',
+			partial: 'w tym wydaniu dostępna jest część tekstów',
+			unresolvedTitle: 'Kalendarz jeszcze niedostępny',
+			unresolvedText:
+				'To wydanie nie zawiera jeszcze pełnych danych kalendarzowych dla wybranego dnia. Ordo można otworzyć bez tekstów własnych.',
+			unresolvedWeek: 'Dzień należy do tygodnia, którego niedzielą jest',
+			unwrittenTitle: 'Dzień rozpoznany, formularz jeszcze niedostępny',
+			unwrittenText:
+				'Kalendarium rozpoznaje ten dzień, ale jego tekstów nie ma jeszcze w tym wydaniu.',
+			chooseVariant: 'Wybierz formularz Mszy',
+			openFormulary: 'Otwórz formularz',
+			openWithout: 'Otwórz bez formularza',
+			dateOnly: 'bez dostępnego formularza'
 		},
 		seasons: {
 			adventus: 'Adwent',
@@ -403,11 +451,34 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayUnwritten: 'not yet in this edition',
 		dayInPlace: 'the day’s texts are on the page',
 		dayPartial: '(some texts)',
-		dayIsToday: 'today ·',
 		dayAhead: 'the formulary for this day is not yet in this edition — another day can be chosen',
 		dayWeekOf: 'today is a weekday — the last Sunday:',
 		dayHint: {
 			none: 'the order of Mass alone, without the day’s own texts'
+		},
+		dayPicker: {
+			title: 'Choose a day',
+			open: 'choose a day or formulary',
+			calendarTab: 'Calendar',
+			listTab: 'List and search',
+			today: 'Today',
+			previousMonth: 'previous month',
+			nextMonth: 'next month',
+			searchLabel: 'search formularies',
+			searchPlaceholder: 'Enter a feast or Sunday',
+			noResults: 'No such formulary was found.',
+			available: 'formulary available in this edition',
+			partial: 'some of its texts are available in this edition',
+			unresolvedTitle: 'Calendar not yet available',
+			unresolvedText:
+				'This edition does not yet contain complete calendar data for the selected day. The Ordo can be opened without the day’s proper texts.',
+			unresolvedWeek: 'This day belongs to the week whose Sunday is',
+			unwrittenTitle: 'Day resolved, formulary not yet available',
+			unwrittenText: 'The calendar recognises this day, but its texts are not yet in this edition.',
+			chooseVariant: 'Choose the Mass formulary',
+			openFormulary: 'Open formulary',
+			openWithout: 'Open without a formulary',
+			dateOnly: 'no available formulary'
 		},
 		seasons: {
 			adventus: 'Advent',
