@@ -1,0 +1,14 @@
+{
+  "id":"proprium.nativitas-domini-in-aurora-alleluia",
+  "title":"Allelúia, allelúia. Dóminus regnávit, decórem índuit: índuit",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"nativitas-domini-in-aurora",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Dóminus","l":"dominus","m":60},{"i":"w004","f":"regnávit","l":"regno","p":",","m":28},{"i":"w005","f":"decórem","l":"decor","m":162},{"i":"w006","f":"índuit","l":"induo","p":":","m":140},{"i":"w007","f":"índuit","l":"induo","m":195},{"i":"w008","f":"Dóminus","l":"dominus","m":60},{"i":"w009","f":"fortitúdinem","l":"fortitudo","p":",","m":7},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"præcínxit","l":"praecingo","m":195},{"i":"w012","f":"se","l":"sui","m":4,"a":3},{"i":"w013","f":"virtúte","l":"virtus","p":".","m":45},{"i":"w014","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

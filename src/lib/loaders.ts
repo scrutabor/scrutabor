@@ -164,7 +164,11 @@ export async function properData(day: string, lang: Lang) {
 	const found = PROPER_DAYS.find((d) => d.id === day);
 	if (!found) return null;
 
-	const keyedParts = found.components.map(({ text: key, role: part }) => ({ key, part }));
+	const keyedParts = found.components.map(({ text: key, role: part, condition }) => ({
+		key,
+		part,
+		condition
+	}));
 	if (!keyedParts.length) return null;
 	const keys = keyedParts.map(({ key }) => key);
 
@@ -173,12 +177,13 @@ export async function properData(day: string, lang: Lang) {
 		Promise.all(keys.map((key) => loadTextBibliography(lang, key)))
 	]);
 	const docs: TextDocument[] = [];
-	const parts = keyedParts.map(({ key, part }, index) => {
+	const parts = keyedParts.map(({ key, part, condition }, index) => {
 		const entry = loaded[key];
 		docs.push(entry.text);
 		return {
 			key,
 			part,
+			condition,
 			// Where the Ordo shows it. Several parts can share one slot: the
 			// chant between the readings is one slot for gradual, alleluia
 			// and tract together.

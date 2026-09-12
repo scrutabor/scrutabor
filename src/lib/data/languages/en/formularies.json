@@ -235,12 +235,32 @@
    "title": "24th Sunday after Pentecost"
   },
   {
+   "id": "in-octava-nativitatis",
+   "title": "Octave Day of the Nativity of the Lord"
+  },
+  {
+   "id": "nativitas-domini-in-aurora",
+   "title": "Nativity of the Lord — Mass at Dawn"
+  },
+  {
+   "id": "nativitas-domini-in-die",
+   "title": "Nativity of the Lord — Mass during the Day"
+  },
+  {
+   "id": "nativitas-domini-in-nocte",
+   "title": "Nativity of the Lord — Mass during the Night"
+  },
+  {
    "id": "sacratissimi-cordis-iesu",
    "title": "Feast of the Most Sacred Heart of Jesus"
   },
   {
    "id": "sanctissimae-trinitatis",
    "title": "Feast of the Most Holy Trinity"
+  },
+  {
+   "id": "vigilia-nativitatis",
+   "title": "Vigil of the Nativity of the Lord"
   }
  ]
 }

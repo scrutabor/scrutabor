@@ -1,0 +1,14 @@
+{
+  "id":"proprium.vigilia-nativitatis-communio",
+  "title":"Revelábitur glória Dómini: et vidébit omnis caro",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"vigilia-nativitatis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Revelábitur","l":"revelo","m":287},{"i":"w002","f":"glória","l":"gloria","m":24},{"i":"w003","f":"Dómini","l":"dominus","p":":","m":54},{"i":"w004","f":"et","l":"et","m":15},{"i":"w005","f":"vidébit","l":"video","m":19},{"i":"w006","f":"omnis","l":"omnis","m":25,"h":"w007"},{"i":"w007","f":"caro","l":"caro","m":20},{"i":"w008","f":"salutáre","l":"salutaris","m":105,"s":true},{"i":"w009","f":"Dei","l":"deus","m":54},{"i":"w010","f":"nostri","l":"nos","p":".","m":330,"a":3}]}
+  ]
+}

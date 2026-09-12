@@ -1,0 +1,12 @@
+{
+  "id":"ordinarium.praefatio-nativitatis",
+  "language":"en",
+  "about":"The Preface of the Nativity of the Lord. It praises the light of divine glory revealed in the mystery of the Word made flesh.",
+  "seg":[
+    {"id":"s01","nr":"Then the priest separates his hands and holds them apart until the end of the Preface. When it is finished, he joins them again and, bowing, says: Sanctus."},
+    {"id":"s02","tr":"It is truly meet and just, right and profitable for salvation, that we should at all times and in all places give thanks unto Thee:","g":["truly","right","and","just","is","proper","and","salutary","us","thee","always","and","everywhere","thankseses","give"]},
+    {"id":"s03","tr":"O Lord, holy Father, almighty eternal God:","g":["the Lord (of God)","holy","Father","almighty","eternal","God"]},
+    {"id":"s04","tr":"For through the mystery of the Word made flesh, a new light of Thy glory hath shone upon the eyes of our mind, so that while we know God visibly, through Him we may be caught up into the love of things invisible.","g":["for","through","to make flesh","of the Word","mystery","new","of mind","our","eyes","the Light","thy","clarity/vividness","shine upon","that","while","visibly","God","to know","through","this","into","invisible","love","drag off"]},
+    {"id":"s05","tr":"And therefore with Angels and Archangels, with Thrones and Dominions, and with all the hosts of the heavenly army, we sing the hymn of Thy glory, evermore saying:","g":["and","therefore","with","Angelseses","and","Archangelseses","with","Throneseses","and","Dominationseses","with","every","host","heavenly","army","hymn","of glory","thy","sing","without","end","to say"]}
+  ]
+}

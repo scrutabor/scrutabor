@@ -1,0 +1,14 @@
+{
+  "id":"proprium.nativitas-domini-in-die-communio",
+  "title":"Vidérunt omnes fines terræ salutáre Dei nostri",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"nativitas-domini-in-die",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Vidérunt","l":"video","m":486},{"i":"w002","f":"omnes","l":"omnis","m":180,"s":true},{"i":"w003","f":"fines","l":"finis","m":242},{"i":"w004","f":"terræ","l":"terra","m":64},{"i":"w005","f":"salutáre","l":"salutaris","m":105,"s":true},{"i":"w006","f":"Dei","l":"deus","m":54},{"i":"w007","f":"nostri","l":"nos","p":".","m":330,"a":3}]}
+  ]
+}

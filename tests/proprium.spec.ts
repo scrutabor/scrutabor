@@ -110,10 +110,44 @@ test('a resolved day whose texts are absent says exactly that', async ({ page })
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo');
 	const dialog = await openPicker(page);
-	await selectCalendarDate(dialog, '2026-12-24');
+	await selectCalendarDate(dialog, '2026-12-27');
 	await expect(dialog).toContainText('Dzień rozpoznany, formularz jeszcze niedostępny');
 	await dialog.getByRole('button', { name: 'Otwórz bez formularza' }).click();
 	await expect(page.locator('.picker.day .state')).toHaveText('jeszcze nie w tym wydaniu');
+});
+
+test('Christmas Eve and the octave day open directly from their dates', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	await page.goto('/app/pl/ordo/catechumenorum');
+	await pickDate(page, '2026-12-24');
+	await expect(page).toHaveURL(/dies=2026-12-24/);
+	await expect(page.locator('.picker.day .day-open')).toContainText('Wigilia Narodzenia Pańskiego');
+	await expect(page.getByRole('button', { name: /Crástina/ })).toHaveCount(0);
+
+	await pickDate(page, '2027-01-01');
+	await expect(page).toHaveURL(/dies=2027-01-01/);
+	await expect(page.locator('.picker.day .day-open')).toContainText('Oktawa Narodzenia Pańskiego');
+});
+
+test('the Vigil Alleluia appears when Christmas Eve falls on Sunday', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2028-12-24');
+	await expect(page.locator('.picker.day .day-open')).toContainText('Wigilia Narodzenia Pańskiego');
+	await expect(page.getByRole('button', { name: /Crástina/ })).toBeVisible();
+});
+
+test('Christmas Day offers all three Masses and defaults to the Mass in the day', async ({
+	page
+}) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	await page.goto('/app/pl/ordo');
+	const dialog = await openPicker(page);
+	await selectCalendarDate(dialog, '2026-12-25');
+	await expect(dialog.locator('input[name="day-variant"]')).toHaveCount(3);
+	await expect(dialog.locator('input[value="nativitas-domini-in-die"]')).toBeChecked();
+	await dialog.locator('input[value="nativitas-domini-in-nocte"]').check();
+	await dialog.getByRole('button', { name: 'Otwórz formularz' }).click();
+	await expect(page).toHaveURL(/dies=nativitas-domini-in-nocte/);
 });
 
 test('list search finds an observance and its Mass variants', async ({ page }) => {
@@ -438,7 +472,7 @@ test('a choice made yesterday expires at midnight', async ({ page }) => {
 
 test('a real formulary not yet written is distinct from a malformed value', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.goto('/app/en/ordo/catechumenorum?dies=in-octava-nativitatis');
+	await page.goto('/app/en/ordo/catechumenorum?dies=dominica-infra-octavam-nativitatis');
 	await settled(page);
 	await expect(page.locator('.picker.day .state')).toHaveText('not yet in this edition');
 });

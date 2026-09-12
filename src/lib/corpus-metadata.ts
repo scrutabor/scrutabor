@@ -70,6 +70,7 @@ export interface FormularyComponentMetadata {
 	role: string;
 	text: string;
 	relation: 'proper' | 'shared' | 'reference';
+	condition?: { weekday: 'sunday' };
 }
 
 export interface FormularyMetadata {

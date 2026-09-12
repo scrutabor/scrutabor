@@ -1,0 +1,14 @@
+{
+  "id":"proprium.in-octava-nativitatis-evangelium",
+  "title":"In illo témpore: Postquam consummáti sunt dies",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"in-octava-nativitatis",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"In","l":"in","m":0,"h":"w002"},{"i":"w002","f":"illo","l":"ille","m":116},{"i":"w003","f":"témpore","l":"tempus","p":":","m":135},{"i":"w004","f":"Postquam","l":"postquam","m":15},{"i":"w005","f":"consummáti","l":"consummo","m":323,"s":true},{"i":"w006","f":"sunt","l":"sum","m":117},{"i":"w007","f":"dies","l":"dies","m":357},{"i":"w008","f":"octo","l":"octo","p":",","m":87,"s":true},{"i":"w009","f":"ut","l":"ut","m":15},{"i":"w010","f":"circumciderétur","l":"circumcido","m":503},{"i":"w011","f":"Puer","l":"puer","p":":","m":60},{"i":"w012","f":"vocátum","l":"voco","m":102,"s":true},{"i":"w013","f":"est","l":"sum","m":21},{"i":"w014","f":"nomen","l":"nomen","m":97},{"i":"w015","f":"eius","l":"is","m":27},{"i":"w016","f":"Iesus","l":"Iesus","p":",","m":34},{"i":"w017","f":"quod","l":"qui","m":189},{"i":"w018","f":"vocátum","l":"voco","m":102,"h":"w014"},{"i":"w019","f":"est","l":"sum","m":21},{"i":"w020","f":"ab","l":"ab","m":0,"h":"w021"},{"i":"w021","f":"Ángelo","l":"angelus","p":",","m":29},{"i":"w022","f":"priúsquam","l":"priusquam","m":15},{"i":"w023","f":"in","l":"in","m":0,"h":"w024"},{"i":"w024","f":"útero","l":"uterus","m":29},{"i":"w025","f":"conciperétur","l":"concipio","p":".","m":503}]}
+  ]
+}

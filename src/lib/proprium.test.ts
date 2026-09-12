@@ -6,6 +6,7 @@ import {
 	SEASONS,
 	SLOT_OF,
 	artifactPath,
+	componentApplies,
 	dayById,
 	partOf,
 	properRank
@@ -97,6 +98,14 @@ describe('parts reach the spine', () => {
 });
 
 describe('lookups', () => {
+	it('applies a Sunday-only component from the selected civil date', () => {
+		const condition = { weekday: 'sunday' } as const;
+		expect(componentApplies(condition, '2026-12-24')).toBe(false);
+		expect(componentApplies(condition, '2028-12-24')).toBe(true);
+		expect(componentApplies(condition, null)).toBe(true);
+		expect(componentApplies(undefined, '2026-12-24')).toBe(true);
+	});
+
 	it('finds a day by id and refuses one it does not have', () => {
 		expect(dayById(PROPER_DAYS[0].id)?.id).toBe(PROPER_DAYS[0].id);
 		expect(dayById('dominica-nulla')).toBeUndefined();

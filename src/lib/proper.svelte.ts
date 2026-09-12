@@ -19,7 +19,7 @@
 import { browser } from '$app/environment';
 import { readStored, writeStored } from '$lib/storage';
 import { localDay } from '$lib/proper-local';
-import { artifactPath, dayByCalendarKey, dayById } from '$lib/proprium';
+import { artifactPath, componentApplies, dayByCalendarKey, dayById } from '$lib/proprium';
 import { formularyExists } from '$lib/kalendarium';
 import type { Lang } from '$lib/i18n';
 import type { TextBibliographyEvidence } from '$lib/bibliography';
@@ -28,6 +28,7 @@ export interface ProperPartPayload {
 	key: string;
 	part: string;
 	slot: string;
+	condition?: { weekday: 'sunday' };
 	doc: unknown;
 	gloss: unknown;
 	bibliography: TextBibliographyEvidence;
@@ -158,6 +159,12 @@ function stopTiming(): void {
 // collections is right that a Map here would not be reactive anyway.
 const held: Record<string, ProperPayload> = {};
 
+function forDate(source: ProperPayload, selectedDate: string | null): ProperPayload {
+	if (!selectedDate) return source;
+	const parts = source.parts.filter((part) => componentApplies(part.condition, selectedDate));
+	return parts.length === source.parts.length ? source : { ...source, parts };
+}
+
 export const proper = {
 	get day(): string | null {
 		return day;
@@ -244,7 +251,7 @@ export async function chooseDay(
 	const key = `${lang}/${next}`;
 	const already = held[key];
 	if (already) {
-		payload = already;
+		payload = forDate(already, selectedDate);
 		return;
 	}
 	if (!browser) return;
@@ -254,7 +261,7 @@ export async function chooseDay(
 		const body = await load(next, lang);
 		held[key] = body;
 		if (mine !== current) return;
-		payload = body;
+		payload = forDate(body, selectedDate);
 	} catch {
 		if (mine !== current) return;
 		failed = true;

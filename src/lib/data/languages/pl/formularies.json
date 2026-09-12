@@ -235,12 +235,32 @@
    "title": "24. Niedziela po Zesłaniu Ducha Świętego"
   },
   {
+   "id": "in-octava-nativitatis",
+   "title": "Oktawa Narodzenia Pańskiego"
+  },
+  {
+   "id": "nativitas-domini-in-aurora",
+   "title": "Narodzenie Pańskie — Msza o świcie"
+  },
+  {
+   "id": "nativitas-domini-in-die",
+   "title": "Narodzenie Pańskie — Msza w dzień"
+  },
+  {
+   "id": "nativitas-domini-in-nocte",
+   "title": "Narodzenie Pańskie — Msza w nocy"
+  },
+  {
    "id": "sacratissimi-cordis-iesu",
    "title": "Uroczystość Najświętszego Serca Jezusowego"
   },
   {
    "id": "sanctissimae-trinitatis",
    "title": "Uroczystość Trójcy Przenajświętszej"
+  },
+  {
+   "id": "vigilia-nativitatis",
+   "title": "Wigilia Narodzenia Pańskiego"
   }
  ]
 }

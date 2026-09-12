@@ -1,0 +1,14 @@
+{
+  "id":"proprium.in-octava-nativitatis-alleluia",
+  "title":"Allelúia, allelúia. Multifárie olim Deus loquens pátribus",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"in-octava-nativitatis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Multifárie","l":"multifariam","m":32,"a":1},{"i":"w004","f":"olim","l":"olim","m":32},{"i":"w005","f":"Deus","l":"deus","m":5},{"i":"w006","f":"loquens","l":"loquor","m":547,"s":true},{"i":"w007","f":"pátribus","l":"pater","m":235},{"i":"w008","f":"in","l":"in","m":0,"h":"w009"},{"i":"w009","f":"Prophétis","l":"propheta","p":",","m":648},{"i":"w010","f":"novíssime","l":"nove","m":521},{"i":"w011","f":"diébus","l":"dies","m":322},{"i":"w012","f":"istis","l":"iste","m":588},{"i":"w013","f":"locútus","l":"loquor","m":224,"s":true},{"i":"w014","f":"est","l":"sum","m":21},{"i":"w015","f":"nobis","l":"nos","m":53},{"i":"w016","f":"in","l":"in","m":0,"h":"w017"},{"i":"w017","f":"Fílio","l":"filius","p":".","m":29},{"i":"w018","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

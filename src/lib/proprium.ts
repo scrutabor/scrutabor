@@ -113,7 +113,17 @@ export interface ProperDay {
 		role: ProperPart;
 		text: string;
 		relation: 'proper' | 'shared' | 'reference';
+		condition?: { weekday: 'sunday' };
 	}[];
+}
+
+/** Whether a dated occurrence receives a component the Missal makes conditional. */
+export function componentApplies(
+	condition: { weekday: 'sunday' } | undefined,
+	selectedDate: string | null
+): boolean {
+	if (!condition || !selectedDate) return true;
+	return new Date(`${selectedDate}T12:00:00`).getDay() === 0;
 }
 
 // The corpus owns the editorial catalogue. This projection keeps only the

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.vigilia-nativitatis-offertorium",
+  "title":"Tóllite portas, principes, vestras: et elevámini, portæ",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"vigilia-nativitatis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Tóllite","l":"tollo","m":155},{"i":"w002","f":"portas","l":"porta","p":",","m":169},{"i":"w003","f":"príncipes","l":"princeps","p":",","m":268},{"i":"w004","f":"vestras","l":"vester","p":":","m":180,"h":"w002"},{"i":"w005","f":"et","l":"et","m":15},{"i":"w006","f":"elevámini","l":"elevo","p":",","m":649},{"i":"w007","f":"portæ","l":"porta","m":134},{"i":"w008","f":"æternáles","l":"aeternalis","p":",","m":11,"h":"w007","a":0},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"introíbit","l":"introeo","m":277},{"i":"w011","f":"Rex","l":"rex","m":113},{"i":"w012","f":"glóriæ","l":"gloria","p":".","m":64}]}
+  ]
+}

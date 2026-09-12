@@ -419,6 +419,12 @@
       "title": "Dóminus vobíscum (dialogus Præfationis)"
     },
     {
+      "id": "ordinarium.praefatio-nativitatis",
+      "path": "texts/ordinarium/praefatio-nativitatis.json",
+      "title": "Præfatio de Nativitate Domini",
+      "evidence": "bibliography/texts/ordinarium/praefatio-nativitatis.json"
+    },
+    {
       "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
       "path": "texts/ordinarium/praefatio-sacratissimi-cordis-iesu.json",
       "title": "Præfatio de Sacratissimo Corde Iesu",
@@ -2802,6 +2808,36 @@
       "evidence": "bibliography/texts/proprium/immaculatum-cor-beatae-mariae-virginis-tractus.json"
     },
     {
+      "id": "proprium.in-octava-nativitatis-alleluia",
+      "path": "texts/proprium/in-octava-nativitatis-alleluia.json",
+      "title": "Allelúia, allelúia. Multifárie olim Deus loquens pátribus",
+      "evidence": "bibliography/texts/proprium/in-octava-nativitatis-alleluia.json"
+    },
+    {
+      "id": "proprium.in-octava-nativitatis-collecta",
+      "path": "texts/proprium/in-octava-nativitatis-collecta.json",
+      "title": "Deus, qui salútis ætérnæ, beátæ Maríæ virginitáte",
+      "evidence": "bibliography/texts/proprium/in-octava-nativitatis-collecta.json"
+    },
+    {
+      "id": "proprium.in-octava-nativitatis-evangelium",
+      "path": "texts/proprium/in-octava-nativitatis-evangelium.json",
+      "title": "In illo témpore: Postquam consummáti sunt dies",
+      "evidence": "bibliography/texts/proprium/in-octava-nativitatis-evangelium.json"
+    },
+    {
+      "id": "proprium.in-octava-nativitatis-postcommunio",
+      "path": "texts/proprium/in-octava-nativitatis-postcommunio.json",
+      "title": "Hæc nos commúnio, Dómine, purget a crímine",
+      "evidence": "bibliography/texts/proprium/in-octava-nativitatis-postcommunio.json"
+    },
+    {
+      "id": "proprium.in-octava-nativitatis-secreta",
+      "path": "texts/proprium/in-octava-nativitatis-secreta.json",
+      "title": "Munéribus nostris, quǽsumus, Dómine, precibúsque suscéptis: et",
+      "evidence": "bibliography/texts/proprium/in-octava-nativitatis-secreta.json"
+    },
+    {
       "id": "proprium.maternitas-beatae-mariae-virginis-alleluia",
       "path": "texts/proprium/maternitas-beatae-mariae-virginis-alleluia.json",
       "title": "Allelúia, allelúia. Virgo Dei Génitrix, quem totus",
@@ -2872,6 +2908,186 @@
       "path": "texts/proprium/nativitas-beatae-mariae-virginis-tractus.json",
       "title": "Benedícta et venerábilis es, Virgo María: quæ",
       "evidence": "bibliography/texts/proprium/nativitas-beatae-mariae-virginis-tractus.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-aurora-alleluia",
+      "path": "texts/proprium/nativitas-domini-in-aurora-alleluia.json",
+      "title": "Allelúia, allelúia. Dóminus regnávit, decórem índuit: índuit",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-aurora-alleluia.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-aurora-collecta",
+      "path": "texts/proprium/nativitas-domini-in-aurora-collecta.json",
+      "title": "Da nobis, quǽsumus, omnípotens Deus: ut, qui",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-aurora-collecta.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-aurora-communio",
+      "path": "texts/proprium/nativitas-domini-in-aurora-communio.json",
+      "title": "Exsúlta, fília Sion, lauda, fília Ierúsalem: ecce",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-aurora-communio.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-aurora-epistola",
+      "path": "texts/proprium/nativitas-domini-in-aurora-epistola.json",
+      "title": "Caríssime: Appáruit benígnitas et humánitas Salvatóris nostri",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-aurora-epistola.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-aurora-evangelium",
+      "path": "texts/proprium/nativitas-domini-in-aurora-evangelium.json",
+      "title": "In illo témpore: Pastóres loquebántur ad ínvicem",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-aurora-evangelium.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-aurora-graduale",
+      "path": "texts/proprium/nativitas-domini-in-aurora-graduale.json",
+      "title": "Benedíctus, qui venit in nómine Dómini: Deus",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-aurora-graduale.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-aurora-introitus",
+      "path": "texts/proprium/nativitas-domini-in-aurora-introitus.json",
+      "title": "Lux fulgébit hódie super nos: quia natus",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-aurora-introitus.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-aurora-offertorium",
+      "path": "texts/proprium/nativitas-domini-in-aurora-offertorium.json",
+      "title": "Deus firmávit orbem terræ, qui non commovébitur",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-aurora-offertorium.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-aurora-postcommunio",
+      "path": "texts/proprium/nativitas-domini-in-aurora-postcommunio.json",
+      "title": "Huius nos, Dómine, sacraménti semper nóvitas natális",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-aurora-postcommunio.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-aurora-secreta",
+      "path": "texts/proprium/nativitas-domini-in-aurora-secreta.json",
+      "title": "Múnera nostra, quǽsumus, Dómine, Nativitátis hodiérnæ mystériis",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-aurora-secreta.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-die-alleluia",
+      "path": "texts/proprium/nativitas-domini-in-die-alleluia.json",
+      "title": "Allelúia, allelúia. Dies sanctificátus illúxit nobis: veníte",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-die-alleluia.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-die-collecta",
+      "path": "texts/proprium/nativitas-domini-in-die-collecta.json",
+      "title": "Concéde, quǽsumus, omnípotens Deus: ut nos Unigéniti",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-die-collecta.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-die-communio",
+      "path": "texts/proprium/nativitas-domini-in-die-communio.json",
+      "title": "Vidérunt omnes fines terræ salutáre Dei nostri",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-die-communio.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-die-epistola",
+      "path": "texts/proprium/nativitas-domini-in-die-epistola.json",
+      "title": "Multifáriam, multísque modis olim Deus loquens pátribus",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-die-epistola.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-die-evangelium",
+      "path": "texts/proprium/nativitas-domini-in-die-evangelium.json",
+      "title": "In princípio erat Verbum, et Verbum erat",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-die-evangelium.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-die-graduale",
+      "path": "texts/proprium/nativitas-domini-in-die-graduale.json",
+      "title": "Vidérunt omnes fines terræ salutáre Dei nostri",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-die-graduale.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-die-introitus",
+      "path": "texts/proprium/nativitas-domini-in-die-introitus.json",
+      "title": "Puer natus est nobis, et fílius datus",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-die-introitus.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-die-offertorium",
+      "path": "texts/proprium/nativitas-domini-in-die-offertorium.json",
+      "title": "Tui sunt cæli et tua est terra",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-die-offertorium.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-die-postcommunio",
+      "path": "texts/proprium/nativitas-domini-in-die-postcommunio.json",
+      "title": "Præsta, quǽsumus, omnípotens Deus: ut natus hódie",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-die-postcommunio.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-die-secreta",
+      "path": "texts/proprium/nativitas-domini-in-die-secreta.json",
+      "title": "Obláta, Dómine, múnera, nova Unigéniti tui Nativitáte",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-die-secreta.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-nocte-alleluia",
+      "path": "texts/proprium/nativitas-domini-in-nocte-alleluia.json",
+      "title": "Allelúia, allelúia. Dóminus dixit ad me: Fílius",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-nocte-alleluia.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-nocte-collecta",
+      "path": "texts/proprium/nativitas-domini-in-nocte-collecta.json",
+      "title": "Deus, qui hanc sacratíssimam noctem veri lúminis",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-nocte-collecta.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-nocte-communio",
+      "path": "texts/proprium/nativitas-domini-in-nocte-communio.json",
+      "title": "In splendóribus Sanctórum, ex útero ante lucíferum",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-nocte-communio.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-nocte-epistola",
+      "path": "texts/proprium/nativitas-domini-in-nocte-epistola.json",
+      "title": "Caríssime: Appáruit grátia Dei Salvatóris nostri ómnibus",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-nocte-epistola.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-nocte-evangelium",
+      "path": "texts/proprium/nativitas-domini-in-nocte-evangelium.json",
+      "title": "In illo témpore: Exiit edíctum a Cæsare",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-nocte-evangelium.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-nocte-graduale",
+      "path": "texts/proprium/nativitas-domini-in-nocte-graduale.json",
+      "title": "Tecum princípium in die virtútis tuæ: in",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-nocte-graduale.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-nocte-introitus",
+      "path": "texts/proprium/nativitas-domini-in-nocte-introitus.json",
+      "title": "Dóminus dixit ad me: Fílius meus es",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-nocte-introitus.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-nocte-offertorium",
+      "path": "texts/proprium/nativitas-domini-in-nocte-offertorium.json",
+      "title": "Læténtur cæli et exsúltet terra ante fáciem",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-nocte-offertorium.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-nocte-postcommunio",
+      "path": "texts/proprium/nativitas-domini-in-nocte-postcommunio.json",
+      "title": "Da nobis, quǽsumus, Dómine, Deus noster: ut",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-nocte-postcommunio.json"
+    },
+    {
+      "id": "proprium.nativitas-domini-in-nocte-secreta",
+      "path": "texts/proprium/nativitas-domini-in-nocte-secreta.json",
+      "title": "Accépta tibi sit, Dómine, quǽsumus, hodiérnæ festivitátis",
+      "evidence": "bibliography/texts/proprium/nativitas-domini-in-nocte-secreta.json"
     },
     {
       "id": "proprium.nativitas-sancti-ioannis-baptistae-alleluia",
@@ -3798,6 +4014,66 @@
       "evidence": "bibliography/texts/proprium/transfiguratio-domini-secreta.json"
     },
     {
+      "id": "proprium.vigilia-nativitatis-alleluia",
+      "path": "texts/proprium/vigilia-nativitatis-alleluia.json",
+      "title": "Crástina die delébitur iníquitas terræ",
+      "evidence": "bibliography/texts/proprium/vigilia-nativitatis-alleluia.json"
+    },
+    {
+      "id": "proprium.vigilia-nativitatis-collecta",
+      "path": "texts/proprium/vigilia-nativitatis-collecta.json",
+      "title": "Deus, qui nos redemptiónis nostræ ánnua exspectatióne",
+      "evidence": "bibliography/texts/proprium/vigilia-nativitatis-collecta.json"
+    },
+    {
+      "id": "proprium.vigilia-nativitatis-communio",
+      "path": "texts/proprium/vigilia-nativitatis-communio.json",
+      "title": "Revelábitur glória Dómini: et vidébit omnis caro",
+      "evidence": "bibliography/texts/proprium/vigilia-nativitatis-communio.json"
+    },
+    {
+      "id": "proprium.vigilia-nativitatis-epistola",
+      "path": "texts/proprium/vigilia-nativitatis-epistola.json",
+      "title": "Paulus, servus Iesu Christi, vocátus Apóstolus, segregátus",
+      "evidence": "bibliography/texts/proprium/vigilia-nativitatis-epistola.json"
+    },
+    {
+      "id": "proprium.vigilia-nativitatis-evangelium",
+      "path": "texts/proprium/vigilia-nativitatis-evangelium.json",
+      "title": "Cum esset desponsáta Mater Iesu María Ioseph",
+      "evidence": "bibliography/texts/proprium/vigilia-nativitatis-evangelium.json"
+    },
+    {
+      "id": "proprium.vigilia-nativitatis-graduale",
+      "path": "texts/proprium/vigilia-nativitatis-graduale.json",
+      "title": "Hódie sciétis, quia véniet Dóminus et salvábit",
+      "evidence": "bibliography/texts/proprium/vigilia-nativitatis-graduale.json"
+    },
+    {
+      "id": "proprium.vigilia-nativitatis-introitus",
+      "path": "texts/proprium/vigilia-nativitatis-introitus.json",
+      "title": "Hódie sciétis, quia véniet Dóminus et salvábit",
+      "evidence": "bibliography/texts/proprium/vigilia-nativitatis-introitus.json"
+    },
+    {
+      "id": "proprium.vigilia-nativitatis-offertorium",
+      "path": "texts/proprium/vigilia-nativitatis-offertorium.json",
+      "title": "Tóllite portas, principes, vestras: et elevámini, portæ",
+      "evidence": "bibliography/texts/proprium/vigilia-nativitatis-offertorium.json"
+    },
+    {
+      "id": "proprium.vigilia-nativitatis-postcommunio",
+      "path": "texts/proprium/vigilia-nativitatis-postcommunio.json",
+      "title": "Da nobis, quǽsumus, Dómine: unigéniti Fílii tui",
+      "evidence": "bibliography/texts/proprium/vigilia-nativitatis-postcommunio.json"
+    },
+    {
+      "id": "proprium.vigilia-nativitatis-secreta",
+      "path": "texts/proprium/vigilia-nativitatis-secreta.json",
+      "title": "Da nobis, quǽsumus, omnípotens Deus: ut, sicut",
+      "evidence": "bibliography/texts/proprium/vigilia-nativitatis-secreta.json"
+    },
+    {
       "id": "proprium.visitatio-beatae-mariae-virginis-alleluia",
       "path": "texts/proprium/visitatio-beatae-mariae-virginis-alleluia.json",
       "title": "Allelúia, allelúia. Felix es, sacra Virgo María",
@@ -3890,7 +4166,7 @@
     "formularies": "formularies.json",
     "metrics": "metrics.json"
   },
-  "morphology": 803,
+  "morphology": 812,
   "kalendarium": [
     2026,
     2101

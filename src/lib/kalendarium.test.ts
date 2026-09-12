@@ -85,10 +85,15 @@ describe('the calendar this edition ships', () => {
 	});
 
 	it('says which formulary today has throughout the span this edition carries', () => {
-		// Both Advent and the completed post-Pentecost cycle now resolve to a
-		// formulary the picker can open.
+		// Advent, Christmas and the completed post-Pentecost cycle resolve to a
+		// formulary the picker can open. Christmas Day selects the daytime Mass
+		// by default while retaining all three variants in the catalogue.
 		const advent = dayToday(new Date(2025, 11, 14));
 		expect(advent.id).toBe('dominica-iii-adventus');
+
+		expect(dayToday(new Date(2026, 11, 24)).id).toBe('vigilia-nativitatis');
+		expect(dayToday(new Date(2026, 11, 25)).id).toBe('nativitas-domini-in-die');
+		expect(dayToday(new Date(2027, 0, 1)).id).toBe('in-octava-nativitatis');
 
 		const june = dayToday(new Date(2026, 5, 21));
 		expect(june.id).toBe('dominica-iv-post-pentecosten');

@@ -1,0 +1,9 @@
+{
+  "id":"proprium.vigilia-nativitatis-alleluia",
+  "language":"pl",
+  "about":"Alleluja Wigilii Narodzenia Pańskiego, śpiewane tylko wtedy, gdy Wigilia przypada w niedzielę.",
+  "seg":[
+    {"id":"s01","nr":"Odmawia się tylko wtedy, gdy Wigilia przypada w niedzielę."},
+    {"id":"s02","tr":"Alleluja, alleluja. Jutro będzie zgładzona nieprawość ziemi i zakróluje nad nami Zbawiciel świata. Alleluja.","g":["alleluja","alleluja","jutrzejszą","dniem","zacierać","nieprawość","ziemi","i","królować","nad","nas","zbawiciel","świata","alleluja"]}
+  ]
+}
