@@ -444,6 +444,13 @@ em {
 		padding-inline: 0.5rem;
 	}
 
+	/* The desktop-only-child rule has greater specificity than the shared
+	   row rule above. Once the label stacks, its generous horizontal gap
+	   becomes an oversized vertical void unless it is reset explicitly. */
+	.tabella > .row:only-child {
+		gap: 0.2rem;
+	}
+
 	.tabella .row > .label {
 		flex: none;
 		/* the column is given back here, and its floor with it */

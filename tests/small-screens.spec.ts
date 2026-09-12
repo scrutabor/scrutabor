@@ -201,6 +201,20 @@ test('a wide screen keeps every control in its unstacked form', async ({ page })
 	expect(fullRows, 'a tabella row stacked on a wide screen').toEqual([1, 1]);
 });
 
+test('a mode-only table keeps its stacked label close to the choices', async ({ page }) => {
+	await page.setViewportSize({ width: 390, height: 844 });
+	await page.goto('/app/pl/orationes/ave-maria');
+	await settled(page);
+
+	const gap = await page.evaluate(() => {
+		const label = document.querySelector('.help > .label')!.getBoundingClientRect();
+		const choices = document.querySelector('.help > .options')!.getBoundingClientRect();
+		return choices.top - label.bottom;
+	});
+
+	expect(gap, 'the mobile mode label drifted away from its choices').toBeLessThanOrEqual(6);
+});
+
 test('each part is drawn in its own slot, not over its separator', async ({ page }) => {
 	// The row keeps every part at the width of its BOLD form so
 	// that choosing one does not nudge its neighbours: a hidden copy sets
