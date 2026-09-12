@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-iii-post-epiphaniam-alleluia",
+  "title":"Allelúia, allelúia. Dóminus regnávit, exsúltet terra: læténtur",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-iii-post-epiphaniam",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Dóminus","l":"dominus","m":60},{"i":"w004","f":"regnávit","l":"regno","p":",","m":28},{"i":"w005","f":"exsúltet","l":"exsulto","m":33},{"i":"w006","f":"terra","l":"terra","p":":","m":30},{"i":"w007","f":"læténtur","l":"laeto","m":673},{"i":"w008","f":"ínsulæ","l":"insula","m":194},{"i":"w009","f":"multæ","l":"multus","p":".","m":14,"s":true},{"i":"w010","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

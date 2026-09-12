@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-infra-octavam-nativitatis-collecta",
+  "title":"Omnípotens sempitérne Deus, dírige actus nostros in",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-infra-octavam-nativitatis",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Omnípotens","l":"omnipotens","m":56,"s":true},{"i":"w002","f":"sempitérne","l":"sempiternus","m":56,"s":true},{"i":"w003","f":"Deus","l":"deus","p":",","m":60},{"i":"w004","f":"dírige","l":"dirigo","m":86},{"i":"w005","f":"actus","l":"actus","m":248},{"i":"w006","f":"nostros","l":"noster","m":91,"h":"w005"},{"i":"w007","f":"in","l":"in","m":0,"h":"w008"},{"i":"w008","f":"beneplácito","l":"beneplacitum","m":26},{"i":"w009","f":"tuo","l":"tuus","p":":","m":149,"s":true},{"i":"w010","f":"ut","l":"ut","m":15},{"i":"w011","f":"in","l":"in","m":0,"h":"w012"},{"i":"w012","f":"nómine","l":"nomen","m":135},{"i":"w013","f":"dilécti","l":"dilectus","m":99,"h":"w014"},{"i":"w014","f":"Fílii","l":"filius","m":54,"a":0},{"i":"w015","f":"tui","l":"tuus","m":99,"h":"w014"},{"i":"w016","f":"mereámur","l":"mereor","m":254},{"i":"w017","f":"bonis","l":"bonus","m":271,"s":true},{"i":"w018","f":"opéribus","l":"opus","m":319},{"i":"w019","f":"abundáre","l":"abundo","p":":","m":239},{"i":"w020","f":"Qui","l":"qui","m":18},{"i":"w021","f":"tecum","l":"tu","m":131},{"i":"w022","f":"vivit","l":"vivo","m":140},{"i":"w023","f":"et","l":"et","m":15},{"i":"w024","f":"regnat","l":"regno","m":119},{"i":"w025","f":"in","l":"in","m":0,"h":"w026"},{"i":"w026","f":"unitáte","l":"unitas","m":45},{"i":"w027","f":"Spíritus","l":"spiritus","m":250},{"i":"w028","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w027"},{"i":"w029","f":"Deus","l":"deus","p":",","m":60},{"i":"w030","f":"per","l":"per","m":3,"h":"w032"},{"i":"w031","f":"ómnia","l":"omnis","m":129,"h":"w032"},{"i":"w032","f":"sǽcula","l":"saeculum","m":85},{"i":"w033","f":"sæculórum","l":"saeculum","p":".","m":145},{"i":"w034","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

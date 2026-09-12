@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-ii-post-epiphaniam-alleluia",
+  "title":"Allelúia, allelúia. Laudáte Dóminum, omnes Angeli eius",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-ii-post-epiphaniam",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Laudáte","l":"laudo","m":158},{"i":"w004","f":"Dóminum","l":"dominus","p":",","m":35},{"i":"w005","f":"omnes","l":"omnis","m":180,"s":true},{"i":"w006","f":"Ángeli","l":"angelus","m":118},{"i":"w007","f":"eius","l":"is","p":":","m":27},{"i":"w008","f":"laudáte","l":"laudo","m":158},{"i":"w009","f":"eum","l":"is","p":",","m":36},{"i":"w010","f":"omnes","l":"omnis","m":180,"s":true},{"i":"w011","f":"virtútes","l":"virtus","m":10},{"i":"w012","f":"eius","l":"is","p":".","m":27},{"i":"w013","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

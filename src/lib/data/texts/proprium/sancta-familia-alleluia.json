@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancta-familia-alleluia",
+  "title":"Allelúia, allelúia , Vere tu es Rex",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancta-familia",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","m":46},{"i":"w003","f":"Vere","l":"vere","m":32},{"i":"w004","f":"tu","l":"tu","m":143},{"i":"w005","f":"es","l":"sum","m":191},{"i":"w006","f":"Rex","l":"rex","m":113},{"i":"w007","f":"abscónditus","l":"abscondo","p":",","m":251,"h":"w008"},{"i":"w008","f":"Deus","l":"deus","m":60},{"i":"w009","f":"Ísrael","l":"Israel","m":34},{"i":"w010","f":"Salvátor","l":"salvator","p":".","m":113},{"i":"w011","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

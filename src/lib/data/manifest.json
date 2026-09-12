@@ -419,6 +419,12 @@
       "title": "Dóminus vobíscum (dialogus Præfationis)"
     },
     {
+      "id": "ordinarium.praefatio-epiphaniae",
+      "path": "texts/ordinarium/praefatio-epiphaniae.json",
+      "title": "Præfatio de Epiphania Domini",
+      "evidence": "bibliography/texts/ordinarium/praefatio-epiphaniae.json"
+    },
+    {
       "id": "ordinarium.praefatio-nativitatis",
       "path": "texts/ordinarium/praefatio-nativitatis.json",
       "title": "Præfatio de Nativitate Domini",
@@ -692,6 +698,30 @@
       "path": "texts/proprium/beatae-mariae-virginis-a-rosario-secreta.json",
       "title": "Fac nos, quǽsumus, Dómine, his munéribus offeréndis",
       "evidence": "bibliography/texts/proprium/beatae-mariae-virginis-a-rosario-secreta.json"
+    },
+    {
+      "id": "proprium.commemoratio-baptismatis-domini-collecta",
+      "path": "texts/proprium/commemoratio-baptismatis-domini-collecta.json",
+      "title": "Deus, cuius Unigénitus in substántia nostræ carnis",
+      "evidence": "bibliography/texts/proprium/commemoratio-baptismatis-domini-collecta.json"
+    },
+    {
+      "id": "proprium.commemoratio-baptismatis-domini-evangelium",
+      "path": "texts/proprium/commemoratio-baptismatis-domini-evangelium.json",
+      "title": "In illo témpore: Vidit Ioánnes Iesum veniéntem",
+      "evidence": "bibliography/texts/proprium/commemoratio-baptismatis-domini-evangelium.json"
+    },
+    {
+      "id": "proprium.commemoratio-baptismatis-domini-postcommunio",
+      "path": "texts/proprium/commemoratio-baptismatis-domini-postcommunio.json",
+      "title": "Cœlésti lúmine, quǽsumus, Dómine, semper et ubíque",
+      "evidence": "bibliography/texts/proprium/commemoratio-baptismatis-domini-postcommunio.json"
+    },
+    {
+      "id": "proprium.commemoratio-baptismatis-domini-secreta",
+      "path": "texts/proprium/commemoratio-baptismatis-domini-secreta.json",
+      "title": "Hóstias tibi, Dómine, pro nati Fílii tui",
+      "evidence": "bibliography/texts/proprium/commemoratio-baptismatis-domini-secreta.json"
     },
     {
       "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-collecta",
@@ -1128,6 +1158,60 @@
       "title": "Hæc sacra nos, Dómine"
     },
     {
+      "id": "proprium.dominica-i-post-epiphaniam-alleluia",
+      "path": "texts/proprium/dominica-i-post-epiphaniam-alleluia.json",
+      "title": "Allelúia, allelúia Iubiláte Deo, omnis terra: servíte",
+      "evidence": "bibliography/texts/proprium/dominica-i-post-epiphaniam-alleluia.json"
+    },
+    {
+      "id": "proprium.dominica-i-post-epiphaniam-collecta",
+      "path": "texts/proprium/dominica-i-post-epiphaniam-collecta.json",
+      "title": "Vota, quǽsumus, Dómine, supplicántis pópuli cælésti pietáte",
+      "evidence": "bibliography/texts/proprium/dominica-i-post-epiphaniam-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-i-post-epiphaniam-communio",
+      "path": "texts/proprium/dominica-i-post-epiphaniam-communio.json",
+      "title": "Fili, quid fecísti nobis sic? ego et",
+      "evidence": "bibliography/texts/proprium/dominica-i-post-epiphaniam-communio.json"
+    },
+    {
+      "id": "proprium.dominica-i-post-epiphaniam-epistola",
+      "path": "texts/proprium/dominica-i-post-epiphaniam-epistola.json",
+      "title": "Fratres: Obsecro vos per misericórdiam Dei, ut",
+      "evidence": "bibliography/texts/proprium/dominica-i-post-epiphaniam-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-i-post-epiphaniam-graduale",
+      "path": "texts/proprium/dominica-i-post-epiphaniam-graduale.json",
+      "title": "Benedíctus Dóminus, Deus Israël, qui facit mirabília",
+      "evidence": "bibliography/texts/proprium/dominica-i-post-epiphaniam-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-i-post-epiphaniam-introitus",
+      "path": "texts/proprium/dominica-i-post-epiphaniam-introitus.json",
+      "title": "In excélso throno vidi sedére virum, quem",
+      "evidence": "bibliography/texts/proprium/dominica-i-post-epiphaniam-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-i-post-epiphaniam-offertorium",
+      "path": "texts/proprium/dominica-i-post-epiphaniam-offertorium.json",
+      "title": "Iubiláte Deo, omnis terra, servíte Dómino in",
+      "evidence": "bibliography/texts/proprium/dominica-i-post-epiphaniam-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-i-post-epiphaniam-postcommunio",
+      "path": "texts/proprium/dominica-i-post-epiphaniam-postcommunio.json",
+      "title": "Súpplices te rogámus, omnípotens Deus: ut, quos",
+      "evidence": "bibliography/texts/proprium/dominica-i-post-epiphaniam-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-i-post-epiphaniam-secreta",
+      "path": "texts/proprium/dominica-i-post-epiphaniam-secreta.json",
+      "title": "Oblátum tibi, Dómine, sacrifícium vivíficet nos semper",
+      "evidence": "bibliography/texts/proprium/dominica-i-post-epiphaniam-secreta.json"
+    },
+    {
       "id": "proprium.dominica-ii-adventus-alleluia",
       "path": "texts/proprium/dominica-ii-adventus-alleluia.json",
       "title": "Lætátus sum in his"
@@ -1176,6 +1260,66 @@
       "id": "proprium.dominica-ii-adventus-secreta",
       "path": "texts/proprium/dominica-ii-adventus-secreta.json",
       "title": "Placáre, quǽsumus, Dómine"
+    },
+    {
+      "id": "proprium.dominica-ii-post-epiphaniam-alleluia",
+      "path": "texts/proprium/dominica-ii-post-epiphaniam-alleluia.json",
+      "title": "Allelúia, allelúia. Laudáte Dóminum, omnes Angeli eius",
+      "evidence": "bibliography/texts/proprium/dominica-ii-post-epiphaniam-alleluia.json"
+    },
+    {
+      "id": "proprium.dominica-ii-post-epiphaniam-collecta",
+      "path": "texts/proprium/dominica-ii-post-epiphaniam-collecta.json",
+      "title": "Omnípotens sempitérne Deus, qui cæléstia simul et",
+      "evidence": "bibliography/texts/proprium/dominica-ii-post-epiphaniam-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-ii-post-epiphaniam-communio",
+      "path": "texts/proprium/dominica-ii-post-epiphaniam-communio.json",
+      "title": "Dicit Dóminus: Implete hýdrias aqua et ferte",
+      "evidence": "bibliography/texts/proprium/dominica-ii-post-epiphaniam-communio.json"
+    },
+    {
+      "id": "proprium.dominica-ii-post-epiphaniam-epistola",
+      "path": "texts/proprium/dominica-ii-post-epiphaniam-epistola.json",
+      "title": "Fratres: Habéntes donatiónes secúndum grátiam, quæ data",
+      "evidence": "bibliography/texts/proprium/dominica-ii-post-epiphaniam-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-ii-post-epiphaniam-evangelium",
+      "path": "texts/proprium/dominica-ii-post-epiphaniam-evangelium.json",
+      "title": "In illo témpore: Núptiæ factæ sunt in",
+      "evidence": "bibliography/texts/proprium/dominica-ii-post-epiphaniam-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-ii-post-epiphaniam-graduale",
+      "path": "texts/proprium/dominica-ii-post-epiphaniam-graduale.json",
+      "title": "Misit Dóminus verbum suum, et sanávit eos",
+      "evidence": "bibliography/texts/proprium/dominica-ii-post-epiphaniam-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-ii-post-epiphaniam-introitus",
+      "path": "texts/proprium/dominica-ii-post-epiphaniam-introitus.json",
+      "title": "Omnis terra adóret te, Deus, et psallat",
+      "evidence": "bibliography/texts/proprium/dominica-ii-post-epiphaniam-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-ii-post-epiphaniam-offertorium",
+      "path": "texts/proprium/dominica-ii-post-epiphaniam-offertorium.json",
+      "title": "Iubiláte Deo, univérsa terra: psalmum dícite nómini",
+      "evidence": "bibliography/texts/proprium/dominica-ii-post-epiphaniam-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-ii-post-epiphaniam-postcommunio",
+      "path": "texts/proprium/dominica-ii-post-epiphaniam-postcommunio.json",
+      "title": "Augeátur in nobis, quǽsumus, Dómine, tuæ virtútis",
+      "evidence": "bibliography/texts/proprium/dominica-ii-post-epiphaniam-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-ii-post-epiphaniam-secreta",
+      "path": "texts/proprium/dominica-ii-post-epiphaniam-secreta.json",
+      "title": "Oblata, Dómine, múnera sanctífica: nosque a peccatórum",
+      "evidence": "bibliography/texts/proprium/dominica-ii-post-epiphaniam-secreta.json"
     },
     {
       "id": "proprium.dominica-ii-post-pentecosten-alleluia",
@@ -1288,6 +1432,60 @@
       "title": "Devotiónis nostræ tibi"
     },
     {
+      "id": "proprium.dominica-iii-post-epiphaniam-alleluia",
+      "path": "texts/proprium/dominica-iii-post-epiphaniam-alleluia.json",
+      "title": "Allelúia, allelúia. Dóminus regnávit, exsúltet terra: læténtur",
+      "evidence": "bibliography/texts/proprium/dominica-iii-post-epiphaniam-alleluia.json"
+    },
+    {
+      "id": "proprium.dominica-iii-post-epiphaniam-collecta",
+      "path": "texts/proprium/dominica-iii-post-epiphaniam-collecta.json",
+      "title": "Omnípotens sempitérne Deus, infirmitatem nostram propítius réspice",
+      "evidence": "bibliography/texts/proprium/dominica-iii-post-epiphaniam-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-iii-post-epiphaniam-communio",
+      "path": "texts/proprium/dominica-iii-post-epiphaniam-communio.json",
+      "title": "Mirabántur omnes de his, quæ procedébant de",
+      "evidence": "bibliography/texts/proprium/dominica-iii-post-epiphaniam-communio.json"
+    },
+    {
+      "id": "proprium.dominica-iii-post-epiphaniam-epistola",
+      "path": "texts/proprium/dominica-iii-post-epiphaniam-epistola.json",
+      "title": "Fratres: Nolíte esse prudéntes apud vosmetípsos: nulli",
+      "evidence": "bibliography/texts/proprium/dominica-iii-post-epiphaniam-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-iii-post-epiphaniam-evangelium",
+      "path": "texts/proprium/dominica-iii-post-epiphaniam-evangelium.json",
+      "title": "In illo témpore: Cum descendísset Iesus de",
+      "evidence": "bibliography/texts/proprium/dominica-iii-post-epiphaniam-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-iii-post-epiphaniam-introitus",
+      "path": "texts/proprium/dominica-iii-post-epiphaniam-introitus.json",
+      "title": "Adoráte Deum, omnes Angeli eius: audívit, et",
+      "evidence": "bibliography/texts/proprium/dominica-iii-post-epiphaniam-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-iii-post-epiphaniam-offertorium",
+      "path": "texts/proprium/dominica-iii-post-epiphaniam-offertorium.json",
+      "title": "Déxtera Dómini fecit virtutem, déxtera Dómini exaltávit",
+      "evidence": "bibliography/texts/proprium/dominica-iii-post-epiphaniam-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-iii-post-epiphaniam-postcommunio",
+      "path": "texts/proprium/dominica-iii-post-epiphaniam-postcommunio.json",
+      "title": "Quos tantis, Dómine, largíris uti mystériis: quǽsumus",
+      "evidence": "bibliography/texts/proprium/dominica-iii-post-epiphaniam-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-iii-post-epiphaniam-secreta",
+      "path": "texts/proprium/dominica-iii-post-epiphaniam-secreta.json",
+      "title": "Hæc hóstia, Dómine, quǽsumus, emúndet nostra delícta",
+      "evidence": "bibliography/texts/proprium/dominica-iii-post-epiphaniam-secreta.json"
+    },
+    {
       "id": "proprium.dominica-iii-post-pentecosten-alleluia",
       "path": "texts/proprium/dominica-iii-post-pentecosten-alleluia.json",
       "title": "Allelúia, allelúia. Deus iudex iustus, fortis et",
@@ -1348,6 +1546,54 @@
       "evidence": "bibliography/texts/proprium/dominica-iii-post-pentecosten-secreta.json"
     },
     {
+      "id": "proprium.dominica-infra-octavam-nativitatis-collecta",
+      "path": "texts/proprium/dominica-infra-octavam-nativitatis-collecta.json",
+      "title": "Omnípotens sempitérne Deus, dírige actus nostros in",
+      "evidence": "bibliography/texts/proprium/dominica-infra-octavam-nativitatis-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-infra-octavam-nativitatis-communio",
+      "path": "texts/proprium/dominica-infra-octavam-nativitatis-communio.json",
+      "title": "Tolle Púerum et Matrem eius, et vade",
+      "evidence": "bibliography/texts/proprium/dominica-infra-octavam-nativitatis-communio.json"
+    },
+    {
+      "id": "proprium.dominica-infra-octavam-nativitatis-epistola",
+      "path": "texts/proprium/dominica-infra-octavam-nativitatis-epistola.json",
+      "title": "Fratres: Quanto témpore heres párvulus est, nihil",
+      "evidence": "bibliography/texts/proprium/dominica-infra-octavam-nativitatis-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-infra-octavam-nativitatis-evangelium",
+      "path": "texts/proprium/dominica-infra-octavam-nativitatis-evangelium.json",
+      "title": "In illo témpore: Erat Ioseph et María",
+      "evidence": "bibliography/texts/proprium/dominica-infra-octavam-nativitatis-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-infra-octavam-nativitatis-graduale",
+      "path": "texts/proprium/dominica-infra-octavam-nativitatis-graduale.json",
+      "title": "Speciósus forma præ filiis hóminum: diffúsa est",
+      "evidence": "bibliography/texts/proprium/dominica-infra-octavam-nativitatis-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-infra-octavam-nativitatis-introitus",
+      "path": "texts/proprium/dominica-infra-octavam-nativitatis-introitus.json",
+      "title": "Dum médium siléntium tenérent ómnia, et nox",
+      "evidence": "bibliography/texts/proprium/dominica-infra-octavam-nativitatis-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-infra-octavam-nativitatis-postcommunio",
+      "path": "texts/proprium/dominica-infra-octavam-nativitatis-postcommunio.json",
+      "title": "Per huius, Dómine, operatiónem mystérii, et vitia",
+      "evidence": "bibliography/texts/proprium/dominica-infra-octavam-nativitatis-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-infra-octavam-nativitatis-secreta",
+      "path": "texts/proprium/dominica-infra-octavam-nativitatis-secreta.json",
+      "title": "Concéde, quǽsumus, omnípotens Deus: ut óculis tuæ",
+      "evidence": "bibliography/texts/proprium/dominica-infra-octavam-nativitatis-secreta.json"
+    },
+    {
       "id": "proprium.dominica-iv-adventus-alleluia",
       "path": "texts/proprium/dominica-iv-adventus-alleluia.json",
       "title": "Veni, Dómine, et noli tardáre"
@@ -1396,6 +1642,36 @@
       "id": "proprium.dominica-iv-adventus-secreta",
       "path": "texts/proprium/dominica-iv-adventus-secreta.json",
       "title": "Sacrifíciis præséntibus"
+    },
+    {
+      "id": "proprium.dominica-iv-post-epiphaniam-collecta",
+      "path": "texts/proprium/dominica-iv-post-epiphaniam-collecta.json",
+      "title": "Deus, qui nos, in tantis perículis constitútos",
+      "evidence": "bibliography/texts/proprium/dominica-iv-post-epiphaniam-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-iv-post-epiphaniam-epistola",
+      "path": "texts/proprium/dominica-iv-post-epiphaniam-epistola.json",
+      "title": "Fratres: Némini quidquam debeátis, nisi ut ínvicem",
+      "evidence": "bibliography/texts/proprium/dominica-iv-post-epiphaniam-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-iv-post-epiphaniam-evangelium",
+      "path": "texts/proprium/dominica-iv-post-epiphaniam-evangelium.json",
+      "title": "In illo témpore: Ascendénte Iesu in navículam",
+      "evidence": "bibliography/texts/proprium/dominica-iv-post-epiphaniam-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-iv-post-epiphaniam-postcommunio",
+      "path": "texts/proprium/dominica-iv-post-epiphaniam-postcommunio.json",
+      "title": "Múnera tua nos, Deus, a delectatiónibus terrenis",
+      "evidence": "bibliography/texts/proprium/dominica-iv-post-epiphaniam-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-iv-post-epiphaniam-secreta",
+      "path": "texts/proprium/dominica-iv-post-epiphaniam-secreta.json",
+      "title": "Concéde, quǽsumus, omnípotens Deus: ut huius sacrifícii",
+      "evidence": "bibliography/texts/proprium/dominica-iv-post-epiphaniam-secreta.json"
     },
     {
       "id": "proprium.dominica-iv-post-pentecosten-alleluia",
@@ -2682,6 +2958,66 @@
       "evidence": "bibliography/texts/proprium/dominica-xxiv-post-pentecosten-secreta.json"
     },
     {
+      "id": "proprium.epiphania-domini-alleluia",
+      "path": "texts/proprium/epiphania-domini-alleluia.json",
+      "title": "Allelúia, allelúia Vídimus stellam eius in Oriénte",
+      "evidence": "bibliography/texts/proprium/epiphania-domini-alleluia.json"
+    },
+    {
+      "id": "proprium.epiphania-domini-collecta",
+      "path": "texts/proprium/epiphania-domini-collecta.json",
+      "title": "Deus, qui hodiérna die Unigénitum tuum géntibus",
+      "evidence": "bibliography/texts/proprium/epiphania-domini-collecta.json"
+    },
+    {
+      "id": "proprium.epiphania-domini-communio",
+      "path": "texts/proprium/epiphania-domini-communio.json",
+      "title": "Vídimus stellam eius in Oriénte, et vénimus",
+      "evidence": "bibliography/texts/proprium/epiphania-domini-communio.json"
+    },
+    {
+      "id": "proprium.epiphania-domini-epistola",
+      "path": "texts/proprium/epiphania-domini-epistola.json",
+      "title": "Surge, illumináre, Ierúsalem: quia venit lumen tuum",
+      "evidence": "bibliography/texts/proprium/epiphania-domini-epistola.json"
+    },
+    {
+      "id": "proprium.epiphania-domini-evangelium",
+      "path": "texts/proprium/epiphania-domini-evangelium.json",
+      "title": "Cum natus esset Iesus in Béthlehem Iuda",
+      "evidence": "bibliography/texts/proprium/epiphania-domini-evangelium.json"
+    },
+    {
+      "id": "proprium.epiphania-domini-graduale",
+      "path": "texts/proprium/epiphania-domini-graduale.json",
+      "title": "Omnes de Saba vénient, aurum et thus",
+      "evidence": "bibliography/texts/proprium/epiphania-domini-graduale.json"
+    },
+    {
+      "id": "proprium.epiphania-domini-introitus",
+      "path": "texts/proprium/epiphania-domini-introitus.json",
+      "title": "Ecce, advénit dominátor Dóminus: et regnum in",
+      "evidence": "bibliography/texts/proprium/epiphania-domini-introitus.json"
+    },
+    {
+      "id": "proprium.epiphania-domini-offertorium",
+      "path": "texts/proprium/epiphania-domini-offertorium.json",
+      "title": "Reges Tharsis, et ínsulæ múnera ófferent: reges",
+      "evidence": "bibliography/texts/proprium/epiphania-domini-offertorium.json"
+    },
+    {
+      "id": "proprium.epiphania-domini-postcommunio",
+      "path": "texts/proprium/epiphania-domini-postcommunio.json",
+      "title": "Præsta, quǽsumus, omnípotens Deus: ut, quæ sollémni",
+      "evidence": "bibliography/texts/proprium/epiphania-domini-postcommunio.json"
+    },
+    {
+      "id": "proprium.epiphania-domini-secreta",
+      "path": "texts/proprium/epiphania-domini-secreta.json",
+      "title": "Ecclésiæ tuæ, quǽsumus, Dómine, dona propítius intuere",
+      "evidence": "bibliography/texts/proprium/epiphania-domini-secreta.json"
+    },
+    {
       "id": "proprium.exaltatio-sanctae-crucis-alleluia",
       "path": "texts/proprium/exaltatio-sanctae-crucis-alleluia.json",
       "title": "Allelúia, allelúia. Dulce lignum, dulces clavos, dúlcia",
@@ -3336,6 +3672,60 @@
       "evidence": "bibliography/texts/proprium/sacratissimi-cordis-iesu-secreta.json"
     },
     {
+      "id": "proprium.sancta-familia-alleluia",
+      "path": "texts/proprium/sancta-familia-alleluia.json",
+      "title": "Allelúia, allelúia , Vere tu es Rex",
+      "evidence": "bibliography/texts/proprium/sancta-familia-alleluia.json"
+    },
+    {
+      "id": "proprium.sancta-familia-collecta",
+      "path": "texts/proprium/sancta-familia-collecta.json",
+      "title": "Dómine Iesu Christe, qui, Maríæ et Ioseph",
+      "evidence": "bibliography/texts/proprium/sancta-familia-collecta.json"
+    },
+    {
+      "id": "proprium.sancta-familia-communio",
+      "path": "texts/proprium/sancta-familia-communio.json",
+      "title": "Descéndit Iesus cum eis, et venit Názareth",
+      "evidence": "bibliography/texts/proprium/sancta-familia-communio.json"
+    },
+    {
+      "id": "proprium.sancta-familia-evangelium",
+      "path": "texts/proprium/sancta-familia-evangelium.json",
+      "title": "Cum factus esset Iesus annórum duódecim, ascendéntibus",
+      "evidence": "bibliography/texts/proprium/sancta-familia-evangelium.json"
+    },
+    {
+      "id": "proprium.sancta-familia-graduale",
+      "path": "texts/proprium/sancta-familia-graduale.json",
+      "title": "Unam pétii a Dómino, hanc requíram: ut",
+      "evidence": "bibliography/texts/proprium/sancta-familia-graduale.json"
+    },
+    {
+      "id": "proprium.sancta-familia-introitus",
+      "path": "texts/proprium/sancta-familia-introitus.json",
+      "title": "Exsúltet gáudio pater Iusti, gáudeat Pater tuus",
+      "evidence": "bibliography/texts/proprium/sancta-familia-introitus.json"
+    },
+    {
+      "id": "proprium.sancta-familia-offertorium",
+      "path": "texts/proprium/sancta-familia-offertorium.json",
+      "title": "Tulérunt Iesum paréntes eius in Ierúsalem, ut",
+      "evidence": "bibliography/texts/proprium/sancta-familia-offertorium.json"
+    },
+    {
+      "id": "proprium.sancta-familia-postcommunio",
+      "path": "texts/proprium/sancta-familia-postcommunio.json",
+      "title": "Quos cæléstibus réficis sacraméntis, fac, Dómine Iesu",
+      "evidence": "bibliography/texts/proprium/sancta-familia-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancta-familia-secreta",
+      "path": "texts/proprium/sancta-familia-secreta.json",
+      "title": "Placatiónis hostiam offérimus tibi, Dómine, supplíciter ut",
+      "evidence": "bibliography/texts/proprium/sancta-familia-secreta.json"
+    },
+    {
       "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia",
       "path": "texts/proprium/sanctae-annae-matris-beatae-mariae-virginis-alleluia.json",
       "title": "Allelúia, allelúia. Diffúsa est grátia in lábiis",
@@ -3852,6 +4242,60 @@
       "evidence": "bibliography/texts/proprium/sanctissimae-trinitatis-secreta.json"
     },
     {
+      "id": "proprium.sanctissimi-nominis-iesu-alleluia",
+      "path": "texts/proprium/sanctissimi-nominis-iesu-alleluia.json",
+      "title": "Allelúia, allelúia Laudem Dómini loquétur os meum",
+      "evidence": "bibliography/texts/proprium/sanctissimi-nominis-iesu-alleluia.json"
+    },
+    {
+      "id": "proprium.sanctissimi-nominis-iesu-collecta",
+      "path": "texts/proprium/sanctissimi-nominis-iesu-collecta.json",
+      "title": "Deus, qui unigénitum Fílium tuum constituísti humáni",
+      "evidence": "bibliography/texts/proprium/sanctissimi-nominis-iesu-collecta.json"
+    },
+    {
+      "id": "proprium.sanctissimi-nominis-iesu-communio",
+      "path": "texts/proprium/sanctissimi-nominis-iesu-communio.json",
+      "title": "Omnes gentes, quascúmque fecísti, vénient et adorábunt",
+      "evidence": "bibliography/texts/proprium/sanctissimi-nominis-iesu-communio.json"
+    },
+    {
+      "id": "proprium.sanctissimi-nominis-iesu-epistola",
+      "path": "texts/proprium/sanctissimi-nominis-iesu-epistola.json",
+      "title": "In diébus illis: Petrus, replétus Spíritu Sancto",
+      "evidence": "bibliography/texts/proprium/sanctissimi-nominis-iesu-epistola.json"
+    },
+    {
+      "id": "proprium.sanctissimi-nominis-iesu-graduale",
+      "path": "texts/proprium/sanctissimi-nominis-iesu-graduale.json",
+      "title": "Salvos fac nos, Dómine, Deus noster, et",
+      "evidence": "bibliography/texts/proprium/sanctissimi-nominis-iesu-graduale.json"
+    },
+    {
+      "id": "proprium.sanctissimi-nominis-iesu-introitus",
+      "path": "texts/proprium/sanctissimi-nominis-iesu-introitus.json",
+      "title": "In nómine Iesu omne genu flectátur, cæléstium",
+      "evidence": "bibliography/texts/proprium/sanctissimi-nominis-iesu-introitus.json"
+    },
+    {
+      "id": "proprium.sanctissimi-nominis-iesu-offertorium",
+      "path": "texts/proprium/sanctissimi-nominis-iesu-offertorium.json",
+      "title": "Confitébor tibi, Dómine, Deus meus, in toto",
+      "evidence": "bibliography/texts/proprium/sanctissimi-nominis-iesu-offertorium.json"
+    },
+    {
+      "id": "proprium.sanctissimi-nominis-iesu-postcommunio",
+      "path": "texts/proprium/sanctissimi-nominis-iesu-postcommunio.json",
+      "title": "Omnípotens ætérne Deus, qui creásti et redemísti",
+      "evidence": "bibliography/texts/proprium/sanctissimi-nominis-iesu-postcommunio.json"
+    },
+    {
+      "id": "proprium.sanctissimi-nominis-iesu-secreta",
+      "path": "texts/proprium/sanctissimi-nominis-iesu-secreta.json",
+      "title": "Benedíctio tua, clementíssime Deus, qua omnis viget",
+      "evidence": "bibliography/texts/proprium/sanctissimi-nominis-iesu-secreta.json"
+    },
+    {
       "id": "proprium.sanctorum-simonis-et-iudae-apostolorum-alleluia",
       "path": "texts/proprium/sanctorum-simonis-et-iudae-apostolorum-alleluia.json",
       "title": "Allelúia, allelúia Nimis honoráti sunt amíci tui",
@@ -4166,7 +4610,7 @@
     "formularies": "formularies.json",
     "metrics": "metrics.json"
   },
-  "morphology": 812,
+  "morphology": 835,
   "kalendarium": [
     2026,
     2101

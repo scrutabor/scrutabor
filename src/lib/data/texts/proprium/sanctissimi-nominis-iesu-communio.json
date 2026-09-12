@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sanctissimi-nominis-iesu-communio",
+  "title":"Omnes gentes, quascúmque fecísti, vénient et adorábunt",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sanctissimi-nominis-iesu",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Omnes","l":"omnis","m":180,"h":"w002"},{"i":"w002","f":"gentes","l":"gens","p":",","m":16},{"i":"w003","f":"quascúmque","l":"quicumque","m":138},{"i":"w004","f":"fecísti","l":"facio","p":",","m":154},{"i":"w005","f":"vénient","l":"venio","m":363},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"adorábunt","l":"adoro","m":392},{"i":"w008","f":"coram","l":"coram","m":0,"h":"w009"},{"i":"w009","f":"te","l":"tu","p":",","m":131},{"i":"w010","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w011","f":"et","l":"et","m":15},{"i":"w012","f":"glorificábunt","l":"glorifico","m":392},{"i":"w013","f":"nomen","l":"nomen","m":97},{"i":"w014","f":"tuum","l":"tuus","p":":","m":137,"s":true},{"i":"w015","f":"quóniam","l":"quoniam","m":15},{"i":"w016","f":"magnus","l":"magnus","m":59,"s":true},{"i":"w017","f":"es","l":"sum","m":191},{"i":"w018","f":"tu","l":"tu","m":143},{"i":"w019","f":"et","l":"et","m":15},{"i":"w020","f":"fáciens","l":"facio","m":547,"s":true},{"i":"w021","f":"mirabília","l":"mirabilis","p":":","m":129,"s":true},{"i":"w022","f":"tu","l":"tu","m":143},{"i":"w023","f":"es","l":"sum","m":191},{"i":"w024","f":"Deus","l":"deus","m":60},{"i":"w025","f":"solus","l":"solus","p":",","m":59,"h":"w024"},{"i":"w026","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

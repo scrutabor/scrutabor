@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-infra-octavam-nativitatis-communio",
+  "title":"Tolle Púerum et Matrem eius, et vade",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-infra-octavam-nativitatis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Tolle","l":"tollo","m":86},{"i":"w002","f":"Púerum","l":"puer","m":35},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"Matrem","l":"mater","m":7},{"i":"w005","f":"eius","l":"is","p":",","m":27},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"vade","l":"vado","m":86},{"i":"w008","f":"in","l":"in","m":3,"h":"w009"},{"i":"w009","f":"terram","l":"terra","m":141},{"i":"w010","f":"Ísrael","l":"Israel","p":":","m":34},{"i":"w011","f":"defúncti","l":"defunctus","m":87,"s":true,"a":3},{"i":"w012","f":"sunt","l":"sum","m":117},{"i":"w013","f":"enim","l":"enim","p":",","m":15},{"i":"w014","f":"qui","l":"qui","m":18},{"i":"w015","f":"quærébant","l":"quaero","m":620},{"i":"w016","f":"ánimam","l":"anima","m":141},{"i":"w017","f":"Púeri","l":"puer","p":".","m":54}]}
+  ]
+}

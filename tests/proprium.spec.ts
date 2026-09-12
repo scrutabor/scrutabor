@@ -110,7 +110,7 @@ test('a resolved day whose texts are absent says exactly that', async ({ page })
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo');
 	const dialog = await openPicker(page);
-	await selectCalendarDate(dialog, '2026-12-27');
+	await selectCalendarDate(dialog, '2027-01-24');
 	await expect(dialog).toContainText('Dzień rozpoznany, formularz jeszcze niedostępny');
 	await dialog.getByRole('button', { name: 'Otwórz bez formularza' }).click();
 	await expect(page.locator('.picker.day .state')).toHaveText('jeszcze nie w tym wydaniu');
@@ -127,6 +127,21 @@ test('Christmas Eve and the octave day open directly from their dates', async ({
 	await pickDate(page, '2027-01-01');
 	await expect(page).toHaveURL(/dies=2027-01-01/);
 	await expect(page.locator('.picker.day .day-open')).toContainText('Oktawa Narodzenia Pańskiego');
+});
+
+test('the Epiphany cycle opens from dates without requiring the feast name', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2027-01-03');
+	await expect(page.locator('.picker.day .day-open')).toContainText('Najświętszego Imienia Jezus');
+
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2027-01-06');
+	await expect(page.locator('.picker.day .day-open')).toContainText('Objawienie Pańskie');
+
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2027-01-10');
+	await expect(page.locator('.picker.day .day-open')).toContainText('Świętej Rodziny');
+
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2027-01-13');
+	await expect(page.locator('.picker.day .day-open')).toContainText('Wspomnienie Chrztu');
 });
 
 test('the Vigil Alleluia appears when Christmas Eve falls on Sunday', async ({ page }) => {
@@ -472,7 +487,7 @@ test('a choice made yesterday expires at midnight', async ({ page }) => {
 
 test('a real formulary not yet written is distinct from a malformed value', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.goto('/app/en/ordo/catechumenorum?dies=dominica-infra-octavam-nativitatis');
+	await page.goto('/app/en/ordo/catechumenorum?dies=dominica-in-septuagesima');
 	await settled(page);
 	await expect(page.locator('.picker.day .state')).toHaveText('not yet in this edition');
 });

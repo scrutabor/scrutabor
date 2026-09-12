@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-ii-post-epiphaniam-graduale",
+  "title":"Misit Dóminus verbum suum, et sanávit eos",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-ii-post-epiphaniam",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Misit","l":"mitto","m":195},{"i":"w002","f":"Dóminus","l":"dominus","m":60},{"i":"w003","f":"verbum","l":"verbum","m":82},{"i":"w004","f":"suum","l":"suus","p":",","m":137,"h":"w003"},{"i":"w005","f":"et","l":"et","m":15},{"i":"w006","f":"sanávit","l":"sano","m":28},{"i":"w007","f":"eos","l":"is","p":":","m":163},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"erípuit","l":"eripio","m":195},{"i":"w010","f":"eos","l":"is","m":163},{"i":"w011","f":"de","l":"de","m":0,"h":"w012"},{"i":"w012","f":"intéritu","l":"interitus","m":100},{"i":"w013","f":"eórum","l":"is","p":".","m":255},{"i":"w014","f":"Confiteántur","l":"confiteor","m":616},{"i":"w015","f":"Dómino","l":"dominus","m":186},{"i":"w016","f":"misericórdiæ","l":"misericordia","m":64},{"i":"w017","f":"eius","l":"is","p":":","m":27},{"i":"w018","f":"et","l":"et","m":15},{"i":"w019","f":"mirabília","l":"mirabilis","m":129,"s":true},{"i":"w020","f":"eius","l":"is","m":27},{"i":"w021","f":"fíliis","l":"filius","m":267},{"i":"w022","f":"hóminum","l":"homo","p":".","m":77}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sanctissimi-nominis-iesu-offertorium",
+  "title":"Confitébor tibi, Dómine, Deus meus, in toto",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sanctissimi-nominis-iesu",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Confitébor","l":"confiteor","m":312},{"i":"w002","f":"tibi","l":"tu","p":",","m":139},{"i":"w003","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w004","f":"Deus","l":"deus","m":60},{"i":"w005","f":"meus","l":"meus","p":",","m":59,"h":"w004"},{"i":"w006","f":"in","l":"in","m":0,"h":"w008"},{"i":"w007","f":"toto","l":"totus","m":149,"h":"w008"},{"i":"w008","f":"corde","l":"cor","m":135},{"i":"w009","f":"meo","l":"meus","p":",","m":101,"s":true},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"glorificábo","l":"glorifico","m":313},{"i":"w012","f":"nomen","l":"nomen","m":97},{"i":"w013","f":"tuum","l":"tuus","m":137,"s":true},{"i":"w014","f":"in","l":"in","m":3,"h":"w017"},{"i":"w015","f":"ætérnum","l":"aeternus","p":":","m":137,"s":true},{"i":"w016","f":"quóniam","l":"quoniam","m":15},{"i":"w017","f":"tu","l":"tu","p":",","m":4,"a":1},{"i":"w018","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w019","f":"suávis","l":"suavis","m":59,"s":true},{"i":"w020","f":"et","l":"et","m":15},{"i":"w021","f":"mitis","l":"mitis","m":56,"h":"w018"},{"i":"w022","f":"es","l":"sum","p":":","m":191},{"i":"w023","f":"et","l":"et","m":15},{"i":"w024","f":"multæ","l":"multus","m":14,"h":"w025"},{"i":"w025","f":"misericórdiæ","l":"misericordia","m":64},{"i":"w026","f":"ómnibus","l":"omnis","m":236,"s":true},{"i":"w027","f":"invocántibus","l":"invoco","m":331,"s":true},{"i":"w028","f":"te","l":"tu","p":",","m":131},{"i":"w029","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

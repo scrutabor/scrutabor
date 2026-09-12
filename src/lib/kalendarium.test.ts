@@ -84,6 +84,20 @@ describe('the calendar this edition ships', () => {
 		expect(dayOn('2030-12-08')?.position).toBe('dominica-ii-adventus');
 	});
 
+	it('carries the Epiphany cycle and its precedence at 13 January', () => {
+		expect(dayOn('2027-01-03')?.formulary).toBe('sanctissimi-nominis-iesu');
+		expect(dayOn('2027-01-06')?.formulary).toBe('epiphania-domini');
+		expect(dayOn('2027-01-10')?.formulary).toBe('sancta-familia');
+		expect(dayOn('2027-01-10')?.position).toBe('dominica-i-post-epiphaniam');
+		expect(dayOn('2027-01-13')?.formulary).toBe('commemoratio-baptismatis-domini');
+		expect(dayOn('2027-01-17')?.formulary).toBe('dominica-ii-post-epiphaniam');
+
+		// In 2030 the Sunday after Epiphany falls on 13 January. The Holy
+		// Family takes the Sunday, so the Baptism is not added as a second day.
+		expect(dayOn('2030-01-13')?.formulary).toBe('sancta-familia');
+		expect(dayOn('2030-01-13')?.position).toBe('dominica-i-post-epiphaniam');
+	});
+
 	it('says which formulary today has throughout the span this edition carries', () => {
 		// Advent, Christmas and the completed post-Pentecost cycle resolve to a
 		// formulary the picker can open. Christmas Day selects the daytime Mass

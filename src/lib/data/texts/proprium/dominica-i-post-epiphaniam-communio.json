@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-i-post-epiphaniam-communio",
+  "title":"Fili, quid fecísti nobis sic? ego et",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-i-post-epiphaniam",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Fili","l":"filius","p":",","m":5},{"i":"w002","f":"quid","l":"quis","m":4},{"i":"w003","f":"fecísti","l":"facio","m":154},{"i":"w004","f":"nobis","l":"nos","m":53},{"i":"w005","f":"sic","l":"sic","p":"?","m":32},{"i":"w006","f":"ego","l":"ego","m":143},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"pater","l":"pater","m":50},{"i":"w009","f":"tuus","l":"tuus","m":59,"h":"w006"},{"i":"w010","f":"doléntes","l":"doleo","m":244,"s":true},{"i":"w011","f":"quærebámus","l":"quaero","m":742},{"i":"w012","f":"te","l":"tu","p":".","m":131},{"i":"w013","f":"Et","l":"et","m":15},{"i":"w014","f":"quid","l":"quis","m":143},{"i":"w015","f":"est","l":"sum","p":",","m":21},{"i":"w016","f":"quod","l":"qui","m":189},{"i":"w017","f":"me","l":"ego","m":4},{"i":"w018","f":"quærebátis","l":"quaero","p":"?","m":743},{"i":"w019","f":"nesciebátis","l":"nescio","p":",","m":744},{"i":"w020","f":"quia","l":"quia","m":15},{"i":"w021","f":"in","l":"in","m":0,"h":"w022"},{"i":"w022","f":"his","l":"hic","p":",","m":62},{"i":"w023","f":"quæ","l":"qui","m":122},{"i":"w024","f":"Patris","l":"pater","m":69},{"i":"w025","f":"mei","l":"meus","m":99,"h":"w024"},{"i":"w026","f":"sunt","l":"sum","p":",","m":117},{"i":"w027","f":"opórtet","l":"oporteo","m":165},{"i":"w028","f":"me","l":"ego","m":4},{"i":"w029","f":"esse","l":"sum","p":"?","m":228,"a":0}]}
+  ]
+}

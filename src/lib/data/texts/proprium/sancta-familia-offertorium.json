@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancta-familia-offertorium",
+  "title":"Tulérunt Iesum paréntes eius in Ierúsalem, ut",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sancta-familia",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Tulérunt","l":"fero","m":273},{"i":"w002","f":"Iesum","l":"Iesus","m":38},{"i":"w003","f":"paréntes","l":"parens","m":242},{"i":"w004","f":"eius","l":"is","m":27},{"i":"w005","f":"in","l":"in","m":3,"h":"w009"},{"i":"w006","f":"Ierúsalem","l":"Ierusalem","p":",","m":803,"a":0},{"i":"w007","f":"ut","l":"ut","m":15},{"i":"w008","f":"sísterent","l":"sisto","m":295},{"i":"w009","f":"eum","l":"is","m":36},{"i":"w010","f":"Dómino","l":"dominus","p":".","m":186}]}
+  ]
+}

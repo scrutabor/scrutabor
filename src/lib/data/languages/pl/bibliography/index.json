@@ -146,6 +146,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-epiphaniae",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-nativitatis",
        "roles": [
         "derived_digital_collation_aid"
@@ -385,6 +392,34 @@
       },
       {
        "id": "proprium.beatae-mariae-virginis-a-rosario-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-baptismatis-domini-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-baptismatis-domini-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-baptismatis-domini-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-baptismatis-domini-secreta",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -839,6 +874,139 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-i-post-epiphaniam-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-ii-post-pentecosten-alleluia",
        "roles": [
         "derived_digital_collation_aid"
@@ -909,6 +1077,69 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-iii-post-epiphaniam-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-iii-post-pentecosten-alleluia",
        "roles": [
         "derived_digital_collation_aid"
@@ -973,6 +1204,97 @@
       },
       {
        "id": "proprium.dominica-iii-post-pentecosten-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-secreta",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -2477,6 +2799,76 @@
        "uses": 1
       },
       {
+       "id": "proprium.epiphania-domini-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.exaltatio-sanctae-crucis-alleluia",
        "roles": [
         "derived_digital_collation_aid"
@@ -3240,6 +3632,69 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancta-familia-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia",
        "roles": [
         "derived_digital_collation_aid"
@@ -3836,6 +4291,69 @@
       },
       {
        "id": "proprium.sanctissimae-trinitatis-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-secreta",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -4271,6 +4789,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-epiphaniae",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-nativitatis",
        "roles": [
         "official_text"
@@ -4510,6 +5035,34 @@
       },
       {
        "id": "proprium.beatae-mariae-virginis-a-rosario-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-baptismatis-domini-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-baptismatis-domini-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-baptismatis-domini-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-baptismatis-domini-secreta",
        "roles": [
         "official_text"
        ],
@@ -4964,6 +5517,139 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-i-post-epiphaniam-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-ii-post-pentecosten-alleluia",
        "roles": [
         "official_text"
@@ -5034,6 +5720,69 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-iii-post-epiphaniam-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-iii-post-pentecosten-alleluia",
        "roles": [
         "official_text"
@@ -5098,6 +5847,97 @@
       },
       {
        "id": "proprium.dominica-iii-post-pentecosten-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-secreta",
        "roles": [
         "official_text"
        ],
@@ -6602,6 +7442,76 @@
        "uses": 1
       },
       {
+       "id": "proprium.epiphania-domini-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.exaltatio-sanctae-crucis-alleluia",
        "roles": [
         "official_text"
@@ -7365,6 +8275,69 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancta-familia-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia",
        "roles": [
         "official_text"
@@ -7961,6 +8934,69 @@
       },
       {
        "id": "proprium.sanctissimae-trinitatis-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-secreta",
        "roles": [
         "official_text"
        ],

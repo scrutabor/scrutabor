@@ -1,0 +1,14 @@
+{
+  "id":"proprium.epiphania-domini-communio",
+  "title":"Vídimus stellam eius in Oriénte, et vénimus",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"epiphania-domini",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Vídimus","l":"video","m":300},{"i":"w002","f":"stellam","l":"stella","m":141},{"i":"w003","f":"eius","l":"is","m":27},{"i":"w004","f":"in","l":"in","m":0,"h":"w005"},{"i":"w005","f":"Oriénte","l":"oriens","p":",","m":109},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"vénimus","l":"venio","m":714},{"i":"w008","f":"cum","l":"cum","m":0,"h":"w009"},{"i":"w009","f":"munéribus","l":"munus","m":319},{"i":"w010","f":"adoráre","l":"adoro","m":239},{"i":"w011","f":"Dóminum","l":"dominus","p":".","m":35}]}
+  ]
+}

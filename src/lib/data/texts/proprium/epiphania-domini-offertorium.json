@@ -1,0 +1,14 @@
+{
+  "id":"proprium.epiphania-domini-offertorium",
+  "title":"Reges Tharsis, et ínsulæ múnera ófferent: reges",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"epiphania-domini",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Reges","l":"rex","m":242},{"i":"w002","f":"Tharsis","l":"Tharsis","p":",","m":409,"a":0},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"ínsulæ","l":"insula","m":194},{"i":"w005","f":"múnera","l":"munus","m":128},{"i":"w006","f":"ófferent","l":"offero","p":":","m":360},{"i":"w007","f":"reges","l":"rex","m":242},{"i":"w008","f":"Árabum","l":"Arabs","m":77},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"Saba","l":"Saba","m":409,"a":1},{"i":"w011","f":"dona","l":"donum","m":85},{"i":"w012","f":"addúcent","l":"adduco","p":":","m":218},{"i":"w013","f":"et","l":"et","m":15},{"i":"w014","f":"adorábunt","l":"adoro","m":392},{"i":"w015","f":"eum","l":"is","m":36},{"i":"w016","f":"omnes","l":"omnis","m":180,"h":"w020"},{"i":"w017","f":"reges","l":"rex","m":242},{"i":"w018","f":"terræ","l":"terra","p":",","m":64},{"i":"w019","f":"omnes","l":"omnis","m":180,"h":"w020"},{"i":"w020","f":"gentes","l":"gens","m":16},{"i":"w021","f":"sérvient","l":"servio","m":363},{"i":"w022","f":"ei","l":"is","p":".","m":124}]}
+  ]
+}

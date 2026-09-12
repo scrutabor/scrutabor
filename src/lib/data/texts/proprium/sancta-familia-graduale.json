@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancta-familia-graduale",
+  "title":"Unam pétii a Dómino, hanc requíram: ut",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancta-familia",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Unam","l":"unus","m":8,"s":true},{"i":"w002","f":"pétii","l":"peto","m":173,"a":0},{"i":"w003","f":"a","l":"a","m":0,"h":"w004"},{"i":"w004","f":"Dómino","l":"dominus","p":",","m":29},{"i":"w005","f":"hanc","l":"hic","m":291},{"i":"w006","f":"requíram","l":"requiro","p":":","m":320},{"i":"w007","f":"ut","l":"ut","m":15},{"i":"w008","f":"inhábitem","l":"inhabito","m":205},{"i":"w009","f":"in","l":"in","m":0,"h":"w010"},{"i":"w010","f":"domo","l":"domus","m":500},{"i":"w011","f":"Dómini","l":"dominus","m":54},{"i":"w012","f":"ómnibus","l":"omnis","m":204,"h":"w013"},{"i":"w013","f":"diébus","l":"dies","m":322},{"i":"w014","f":"vitæ","l":"vita","m":64},{"i":"w015","f":"meæ","l":"meus","p":".","m":14,"h":"w014"},{"i":"w016","f":"Beáti","l":"beatus","p":",","m":99,"s":true},{"i":"w017","f":"qui","l":"qui","m":18},{"i":"w018","f":"hábitant","l":"habito","m":125},{"i":"w019","f":"in","l":"in","m":0,"h":"w020"},{"i":"w020","f":"domo","l":"domus","m":500},{"i":"w021","f":"tua","l":"tuus","p":",","m":31,"s":true},{"i":"w022","f":"Dómine","l":"dominus","p":":","m":5},{"i":"w023","f":"in","l":"in","m":3,"h":"w024"},{"i":"w024","f":"sǽcula","l":"saeculum","m":85},{"i":"w025","f":"sæculórum","l":"saeculum","m":145},{"i":"w026","f":"laudábunt","l":"laudo","m":392},{"i":"w027","f":"te","l":"tu","p":".","m":131}]}
+  ]
+}

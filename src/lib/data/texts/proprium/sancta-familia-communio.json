@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancta-familia-communio",
+  "title":"Descéndit Iesus cum eis, et venit Názareth",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sancta-familia",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Descéndit","l":"descendo","m":195},{"i":"w002","f":"Iesus","l":"Iesus","m":34},{"i":"w003","f":"cum","l":"cum","m":0,"h":"w004"},{"i":"w004","f":"eis","l":"is","p":",","m":62},{"i":"w005","f":"et","l":"et","m":15},{"i":"w006","f":"venit","l":"venio","m":293},{"i":"w007","f":"Názareth","l":"Nazareth","p":",","m":290},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"erat","l":"sum","m":217},{"i":"w010","f":"súbditus","l":"subdo","m":251,"s":true},{"i":"w011","f":"illis","l":"ille","p":".","m":42}]}
+  ]
+}

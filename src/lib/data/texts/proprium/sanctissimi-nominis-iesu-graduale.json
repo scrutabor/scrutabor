@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sanctissimi-nominis-iesu-graduale",
+  "title":"Salvos fac nos, Dómine, Deus noster, et",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sanctissimi-nominis-iesu",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Salvos","l":"salvus","m":91,"s":true},{"i":"w002","f":"fac","l":"facio","m":86},{"i":"w003","f":"nos","l":"nos","p":",","m":49},{"i":"w004","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w005","f":"Deus","l":"deus","m":60},{"i":"w006","f":"noster","l":"noster","p":",","m":56,"h":"w004"},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"cóngrega","l":"congrego","m":41},{"i":"w009","f":"nos","l":"nos","m":49},{"i":"w010","f":"de","l":"de","m":0,"h":"w011"},{"i":"w011","f":"natiónibus","l":"natio","p":":","m":40},{"i":"w012","f":"ut","l":"ut","m":15},{"i":"w013","f":"confiteámur","l":"confiteor","m":254},{"i":"w014","f":"nómini","l":"nomen","m":226},{"i":"w015","f":"sancto","l":"sanctus","m":216,"s":true},{"i":"w016","f":"tuo","l":"tuus","p":",","m":216,"s":true},{"i":"w017","f":"et","l":"et","m":15},{"i":"w018","f":"gloriémur","l":"glorior","m":525},{"i":"w019","f":"in","l":"in","m":0,"h":"w020"},{"i":"w020","f":"glória","l":"gloria","m":30},{"i":"w021","f":"tua","l":"tuus","p":".","m":31,"s":true},{"i":"w022","f":"Tu","l":"tu","p":",","m":143},{"i":"w023","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w024","f":"Pater","l":"pater","m":50},{"i":"w025","f":"noster","l":"noster","m":56,"h":"w024"},{"i":"w026","f":"et","l":"et","m":15},{"i":"w027","f":"Redémptor","l":"redemptor","m":50},{"i":"w028","f":"noster","l":"noster","p":":","m":56,"h":"w027"},{"i":"w029","f":"a","l":"a","m":0,"h":"w030"},{"i":"w030","f":"sǽculo","l":"saeculum","m":26},{"i":"w031","f":"nomen","l":"nomen","m":97},{"i":"w032","f":"tuum","l":"tuus","p":".","m":137,"s":true}]}
+  ]
+}

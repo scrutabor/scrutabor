@@ -111,6 +111,10 @@
    "title": "Nawiedzenie Najświętszej Maryi Panny"
   },
   {
+   "id": "commemoratio-baptismatis-domini",
+   "title": "Wspomnienie Chrztu Pana naszego Jezusa Chrystusa"
+  },
+  {
    "id": "corporis-christi",
    "title": "Uroczystość Najświętszego Ciała Chrystusa"
   },
@@ -123,8 +127,16 @@
    "title": "I Niedziela Adwentu"
   },
   {
+   "id": "dominica-i-post-epiphaniam",
+   "title": "I Niedziela po Objawieniu Pańskim"
+  },
+  {
    "id": "dominica-ii-adventus",
    "title": "II Niedziela Adwentu"
+  },
+  {
+   "id": "dominica-ii-post-epiphaniam",
+   "title": "II Niedziela po Objawieniu Pańskim"
   },
   {
    "id": "dominica-ii-post-pentecosten",
@@ -135,12 +147,24 @@
    "title": "III Niedziela Adwentu"
   },
   {
+   "id": "dominica-iii-post-epiphaniam",
+   "title": "III Niedziela po Objawieniu Pańskim"
+  },
+  {
    "id": "dominica-iii-post-pentecosten",
    "title": "3. Niedziela po Zesłaniu Ducha Świętego"
   },
   {
+   "id": "dominica-infra-octavam-nativitatis",
+   "title": "Niedziela w Oktawie Narodzenia Pańskiego"
+  },
+  {
    "id": "dominica-iv-adventus",
    "title": "IV Niedziela Adwentu"
+  },
+  {
+   "id": "dominica-iv-post-epiphaniam",
+   "title": "IV Niedziela po Objawieniu Pańskim"
   },
   {
    "id": "dominica-iv-post-pentecosten",
@@ -235,6 +259,10 @@
    "title": "24. Niedziela po Zesłaniu Ducha Świętego"
   },
   {
+   "id": "epiphania-domini",
+   "title": "Objawienie Pańskie"
+  },
+  {
    "id": "in-octava-nativitatis",
    "title": "Oktawa Narodzenia Pańskiego"
   },
@@ -255,8 +283,16 @@
    "title": "Uroczystość Najświętszego Serca Jezusowego"
   },
   {
+   "id": "sancta-familia",
+   "title": "Świętej Rodziny Jezusa, Maryi i Józefa"
+  },
+  {
    "id": "sanctissimae-trinitatis",
    "title": "Uroczystość Trójcy Przenajświętszej"
+  },
+  {
+   "id": "sanctissimi-nominis-iesu",
+   "title": "Najświętszego Imienia Jezus"
   },
   {
    "id": "vigilia-nativitatis",

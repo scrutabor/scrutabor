@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-ii-post-epiphaniam-offertorium",
+  "title":"Iubiláte Deo, univérsa terra: psalmum dícite nómini",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-ii-post-epiphaniam",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Iubiláte","l":"iubilo","m":158},{"i":"w002","f":"Deo","l":"deus","p":",","m":186},{"i":"w003","f":"univérsa","l":"universus","m":31,"h":"w004"},{"i":"w004","f":"terra","l":"terra","p":":","m":30},{"i":"w005","f":"psalmum","l":"psalmus","m":35},{"i":"w006","f":"dícite","l":"dico","m":155},{"i":"w007","f":"nómini","l":"nomen","m":226},{"i":"w008","f":"eius","l":"is","p":":","m":27},{"i":"w009","f":"veníte","l":"venio","m":529},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"audíte","l":"audio","p":",","m":529},{"i":"w012","f":"et","l":"et","m":15},{"i":"w013","f":"narrábo","l":"narro","m":313},{"i":"w014","f":"vobis","l":"vos","p":",","m":53},{"i":"w015","f":"omnes","l":"omnis","m":180,"s":true},{"i":"w016","f":"qui","l":"qui","m":18},{"i":"w017","f":"timétis","l":"timeo","m":642},{"i":"w018","f":"Deum","l":"deus","p":",","m":35},{"i":"w019","f":"quanta","l":"quantus","m":129,"s":true},{"i":"w020","f":"fecit","l":"facio","m":195},{"i":"w021","f":"Dóminus","l":"dominus","m":60},{"i":"w022","f":"ánimæ","l":"anima","m":64},{"i":"w023","f":"meæ","l":"meus","p":",","m":14,"h":"w022"},{"i":"w024","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

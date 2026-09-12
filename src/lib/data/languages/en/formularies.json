@@ -111,6 +111,10 @@
    "title": "Visitation of the Blessed Virgin Mary"
   },
   {
+   "id": "commemoratio-baptismatis-domini",
+   "title": "Commemoration of the Baptism of Our Lord Jesus Christ"
+  },
+  {
    "id": "corporis-christi",
    "title": "Feast of Corpus Christi"
   },
@@ -123,8 +127,16 @@
    "title": "First Sunday of Advent"
   },
   {
+   "id": "dominica-i-post-epiphaniam",
+   "title": "First Sunday after Epiphany"
+  },
+  {
    "id": "dominica-ii-adventus",
    "title": "Second Sunday of Advent"
+  },
+  {
+   "id": "dominica-ii-post-epiphaniam",
+   "title": "Second Sunday after Epiphany"
   },
   {
    "id": "dominica-ii-post-pentecosten",
@@ -135,12 +147,24 @@
    "title": "Third Sunday of Advent"
   },
   {
+   "id": "dominica-iii-post-epiphaniam",
+   "title": "Third Sunday after Epiphany"
+  },
+  {
    "id": "dominica-iii-post-pentecosten",
    "title": "3rd Sunday after Pentecost"
   },
   {
+   "id": "dominica-infra-octavam-nativitatis",
+   "title": "Sunday within the Octave of the Nativity of the Lord"
+  },
+  {
    "id": "dominica-iv-adventus",
    "title": "Fourth Sunday of Advent"
+  },
+  {
+   "id": "dominica-iv-post-epiphaniam",
+   "title": "Fourth Sunday after Epiphany"
   },
   {
    "id": "dominica-iv-post-pentecosten",
@@ -235,6 +259,10 @@
    "title": "24th Sunday after Pentecost"
   },
   {
+   "id": "epiphania-domini",
+   "title": "Epiphany of the Lord"
+  },
+  {
    "id": "in-octava-nativitatis",
    "title": "Octave Day of the Nativity of the Lord"
   },
@@ -255,8 +283,16 @@
    "title": "Feast of the Most Sacred Heart of Jesus"
   },
   {
+   "id": "sancta-familia",
+   "title": "Holy Family of Jesus, Mary and Joseph"
+  },
+  {
    "id": "sanctissimae-trinitatis",
    "title": "Feast of the Most Holy Trinity"
+  },
+  {
+   "id": "sanctissimi-nominis-iesu",
+   "title": "Most Holy Name of Jesus"
   },
   {
    "id": "vigilia-nativitatis",

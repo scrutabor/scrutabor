@@ -187,6 +187,46 @@ describe('lookups', () => {
 		);
 	});
 
+	it('opens every newly completed formulary of the Epiphany cycle', async () => {
+		const ids = [
+			'dominica-infra-octavam-nativitatis',
+			'sanctissimi-nominis-iesu',
+			'epiphania-domini',
+			'sancta-familia',
+			'dominica-i-post-epiphaniam',
+			'commemoratio-baptismatis-domini',
+			'dominica-ii-post-epiphaniam',
+			'dominica-iii-post-epiphaniam',
+			'dominica-iv-post-epiphaniam'
+		];
+
+		for (const id of ids) {
+			expect(dayById(id), `${id} is absent from the picker`).toBeDefined();
+			expect(
+				(await properData(id, 'pl'))?.parts.length,
+				`${id} has no Polish Mass`
+			).toBeGreaterThan(0);
+			expect(
+				(await properData(id, 'en'))?.parts.length,
+				`${id} has no English Mass`
+			).toBeGreaterThan(0);
+		}
+	});
+
+	it('assembles the Epiphany Preface wherever the Missal assigns it', async () => {
+		for (const id of [
+			'epiphania-domini',
+			'sancta-familia',
+			'dominica-i-post-epiphaniam',
+			'commemoratio-baptismatis-domini'
+		]) {
+			const formulary = await properData(id, 'pl');
+			expect(formulary?.parts.find(({ part }) => part === 'praefatio')?.key).toBe(
+				'ordinarium/praefatio-epiphaniae'
+			);
+		}
+	});
+
 	it('keeps the calendar identity of All Souls while exposing all three Masses', async () => {
 		const first = await properData('commemoratio-omnium-fidelium-defunctorum', 'pl');
 		const second = await properData('commemoratio-omnium-fidelium-defunctorum-missa-ii', 'en');
