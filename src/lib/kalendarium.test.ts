@@ -111,6 +111,11 @@ describe('the calendar this edition ships', () => {
 		expect(dayOn('2027-03-07')?.formulary).toBe('dominica-iv-in-quadragesima');
 	});
 
+	it('carries both Sundays of Passiontide', () => {
+		expect(dayOn('2027-03-14')?.formulary).toBe('dominica-i-passionis');
+		expect(dayOn('2027-03-21')?.formulary).toBe('dominica-ii-passionis');
+	});
+
 	it('says which formulary today has throughout the span this edition carries', () => {
 		// Advent, Christmas and the completed post-Pentecost cycle resolve to a
 		// formulary the picker can open. Christmas Day selects the daytime Mass

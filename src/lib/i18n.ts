@@ -130,11 +130,33 @@ export interface Messages {
 	derivativesLabel: string;
 	pronunciationHint: string;
 	/** Who says a line, and how loudly (corpus 0.9.0). */
-	speakers: Record<'sacerdos' | 'ductor' | 'minister' | 'populus' | 'omnes' | 'schola', string>;
+	speakers: Record<
+		| 'sacerdos'
+		| 'ductor'
+		| 'minister'
+		| 'populus'
+		| 'omnes'
+		| 'schola'
+		| 'chronista'
+		| 'christus'
+		| 'synagoga',
+		string
+	>;
 	/** What the red mark beside a line stands for, for a reader meeting it
 	 * for the first time. Shown on hover; the abbreviation is Latin and the
 	 * expansion names both the word and who says the line. */
-	markTitle: Record<'sacerdos' | 'ductor' | 'minister' | 'populus' | 'omnes' | 'schola', string>;
+	markTitle: Record<
+		| 'sacerdos'
+		| 'ductor'
+		| 'minister'
+		| 'populus'
+		| 'omnes'
+		| 'schola'
+		| 'chronista'
+		| 'christus'
+		| 'synagoga',
+		string
+	>;
 	/** The key to the marks, opened by tapping one. */
 	markLegendTitle: string;
 	markLegendNote: string;
@@ -159,7 +181,18 @@ export interface Messages {
 	faithful: string;
 	/** Reader-facing attribution when the faithful make a line whose
 	 * rubrical speaker is someone else. Both truths remain visible. */
-	faithfulWith: Record<'sacerdos' | 'ductor' | 'minister' | 'populus' | 'omnes' | 'schola', string>;
+	faithfulWith: Record<
+		| 'sacerdos'
+		| 'ductor'
+		| 'minister'
+		| 'populus'
+		| 'omnes'
+		| 'schola'
+		| 'chronista'
+		| 'christus'
+		| 'synagoga',
+		string
+	>;
 	quietCollapsed: string;
 	quietReveal: string;
 	quietHide: string;
@@ -320,7 +353,10 @@ const MESSAGES: Record<Lang, Messages> = {
 			minister: 'usługujący',
 			populus: 'lud',
 			omnes: 'wszyscy',
-			schola: 'schola'
+			schola: 'schola',
+			chronista: 'chronista',
+			christus: 'Chrystus',
+			synagoga: 'synagoga'
 		},
 		markTitle: {
 			sacerdos: 'Versículus — werset, który mówi kapłan',
@@ -328,7 +364,10 @@ const MESSAGES: Record<Lang, Messages> = {
 			minister: 'Respónsum — odpowiedź usługującego i wiernych',
 			populus: 'Respónsum — odpowiedź wiernych',
 			omnes: 'Omnes — mówią wszyscy razem',
-			schola: 'Respónsum — śpiewa schola'
+			schola: 'Respónsum — śpiewa schola',
+			chronista: 'Chronista — opowiada wydarzenia Męki Pańskiej',
+			christus: 'Christus — słowa Chrystusa',
+			synagoga: 'Synagoga — słowa pozostałych osób i tłumu'
 		},
 		markLegendTitle: 'znaki przy wierszach',
 		markLegendNote:
@@ -347,7 +386,10 @@ const MESSAGES: Record<Lang, Messages> = {
 			minister: 'usługujący i wierni',
 			populus: 'wierni',
 			omnes: 'wszyscy',
-			schola: 'schola i wierni'
+			schola: 'schola i wierni',
+			chronista: 'chronista i wierni',
+			christus: 'Chrystus i wierni',
+			synagoga: 'synagoga i wierni'
 		},
 		roles: { populus: 'wierni', minister: 'usługujący', sacerdos: 'kapłan' },
 		quietCollapsed: 'kapłan modli się po cichu',
@@ -500,7 +542,10 @@ const MESSAGES: Record<Lang, Messages> = {
 			minister: 'server',
 			populus: 'people',
 			omnes: 'all',
-			schola: 'choir'
+			schola: 'choir',
+			chronista: 'narrator',
+			christus: 'Christ',
+			synagoga: 'synagoga'
 		},
 		markTitle: {
 			sacerdos: 'Versículus — the verse the priest says',
@@ -508,7 +553,10 @@ const MESSAGES: Record<Lang, Messages> = {
 			minister: 'Respónsum — the answer of the server and the faithful',
 			populus: 'Respónsum — the answer of the faithful',
 			omnes: 'Omnes — said by all together',
-			schola: 'Respónsum — sung by the choir'
+			schola: 'Respónsum — sung by the choir',
+			chronista: 'Chronista — the Passion narrator',
+			christus: 'Christus — the words of Christ',
+			synagoga: 'Synagoga — the words of the other speakers and the crowd'
 		},
 		markLegendTitle: 'the marks beside the lines',
 		markLegendNote:
@@ -527,7 +575,10 @@ const MESSAGES: Record<Lang, Messages> = {
 			minister: 'server and faithful',
 			populus: 'the faithful',
 			omnes: 'all',
-			schola: 'choir and faithful'
+			schola: 'choir and faithful',
+			chronista: 'narrator and faithful',
+			christus: 'Christ and faithful',
+			synagoga: 'synagoga and faithful'
 		},
 		// Bare nouns, no article: this is a label, and a label is what the
 		// missals put in the margin beside a line — Priest, Server, Faithful.

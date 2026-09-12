@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-ii-passionis-communio",
+  "title":"Pater, si non potest hic calix transíre",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-ii-passionis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Pater","l":"pater","p":",","m":50,"a":14},{"i":"w002","f":"si","l":"si","m":15,"a":14},{"i":"w003","f":"non","l":"non","m":32,"a":14},{"i":"w004","f":"potest","l":"possum","m":21,"a":14},{"i":"w005","f":"hic","l":"hic","m":18,"a":14},{"i":"w006","f":"calix","l":"calix","m":113,"a":14},{"i":"w007","f":"transíre","l":"transeo","p":",","m":228,"a":14},{"i":"w008","f":"nisi","l":"nisi","m":15,"a":14},{"i":"w009","f":"bibam","l":"bibo","m":320,"a":14},{"i":"w010","f":"illum","l":"ille","p":":","m":36,"a":14},{"i":"w011","f":"fiat","l":"fio","m":198,"a":14},{"i":"w012","f":"volúntas","l":"voluntas","m":20,"a":14},{"i":"w013","f":"tua","l":"tuus","p":".","m":25,"h":"w012","a":14}]}
+  ]
+}

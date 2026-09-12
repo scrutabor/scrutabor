@@ -74,7 +74,16 @@ export interface Word {
 	analysis?: Analysis;
 }
 
-export type Speaker = 'sacerdos' | 'ductor' | 'minister' | 'populus' | 'omnes' | 'schola';
+export type Speaker =
+	| 'sacerdos'
+	| 'ductor'
+	| 'minister'
+	| 'populus'
+	| 'omnes'
+	| 'schola'
+	| 'chronista'
+	| 'christus'
+	| 'synagoga';
 export type Voice = 'clara' | 'submissa' | 'secreto' | 'cantus';
 export type MassForm = 'cantu' | 'lecta';
 

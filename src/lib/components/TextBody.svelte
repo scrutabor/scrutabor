@@ -117,7 +117,10 @@
 		minister: 'R.',
 		populus: 'R.',
 		omnes: 'O.',
-		schola: 'R.'
+		schola: 'R.',
+		chronista: 'C.',
+		christus: '†.',
+		synagoga: 'S.'
 	};
 
 	// The editorial rules — who is marked, whose voice is named, which verse

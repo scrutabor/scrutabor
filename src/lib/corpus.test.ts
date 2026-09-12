@@ -7,6 +7,7 @@ import {
 	LEXICON,
 	loadAllCoreTexts,
 	loadAllTexts,
+	loadText,
 	loadSenses,
 	textKeysFor,
 	type TextDocument,
@@ -31,6 +32,20 @@ const allWords = (text: TextDocument) => text.segments.flatMap((segment) => segm
 const XREF = /[„“]([^”“„]+)”\s*\((w\d{3,})\)/g;
 
 describe('vendored corpus snapshot', () => {
+	it('carries the complete Palm Passion and its sung roles', async () => {
+		const passion = await loadText('proprium/dominica-ii-passionis-evangelium', 'pl');
+		expect(passion).toBeDefined();
+		const verses = passion!.text.segments.filter((segment) => segment.type === 'verse');
+		expect(verses).toHaveLength(94);
+		expect(passion!.text.segments.find((segment) => segment.id === 's92')?.text).toBe(
+			'Hic genuflectitur, et pausatur aliquantulum.'
+		);
+		expect(new Set(verses.map((segment) => segment.speaker))).toEqual(new Set(['sacerdos']));
+		expect(new Set(verses.map((segment) => segment.delivery?.cantu?.speaker))).toEqual(
+			new Set(['chronista', 'christus', 'synagoga'])
+		);
+	});
+
 	it('recognizes word references beyond w999', () => {
 		expect([...`„Dómini” (w1000)`.matchAll(XREF)][0]?.[2]).toBe('w1000');
 	});
