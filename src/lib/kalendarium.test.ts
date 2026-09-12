@@ -116,6 +116,12 @@ describe('the calendar this edition ships', () => {
 		expect(dayOn('2027-03-21')?.formulary).toBe('dominica-ii-passionis');
 	});
 
+	it('carries the Masses from Holy Thursday through Easter Sunday', () => {
+		expect(dayOn('2027-03-25')?.formulary).toBe('feria-v-in-cena-domini');
+		expect(dayOn('2027-03-27')?.formulary).toBe('vigilia-paschalis');
+		expect(dayOn('2027-03-28')?.formulary).toBe('dominica-resurrectionis');
+	});
+
 	it('says which formulary today has throughout the span this edition carries', () => {
 		// Advent, Christmas and the completed post-Pentecost cycle resolve to a
 		// formulary the picker can open. Christmas Day selects the daytime Mass

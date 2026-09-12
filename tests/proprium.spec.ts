@@ -110,7 +110,7 @@ test('a resolved day whose texts are absent says exactly that', async ({ page })
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo');
 	const dialog = await openPicker(page);
-	await selectCalendarDate(dialog, '2027-03-28');
+	await selectCalendarDate(dialog, '2027-04-04');
 	await expect(dialog).toContainText('Dzień rozpoznany, formularz jeszcze niedostępny');
 	await dialog.getByRole('button', { name: 'Otwórz bez formularza' }).click();
 	await expect(page.locator('.picker.day .state')).toHaveText('jeszcze nie w tym wydaniu');
@@ -176,6 +176,21 @@ test('both Passiontide Sundays open from dates without requiring their names', a
 	for (const [date, title] of [
 		['2027-03-14', '1. Niedziela Męki Pańskiej'],
 		['2027-03-21', 'Niedziela Palmowa']
+	]) {
+		await page.goto(`/app/pl/ordo/catechumenorum?dies=${date}`);
+		await expect(page.locator('.picker.day .day-open')).toContainText(title);
+		await expect(page.locator('.picker.day .state')).toHaveCount(0);
+	}
+});
+
+test('the Triduum and Easter Masses open from dates without requiring their names', async ({
+	page
+}) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	for (const [date, title] of [
+		['2027-03-25', 'Wielki Czwartek — Msza Wieczerzy Pańskiej'],
+		['2027-03-27', 'Msza Wigilii Paschalnej'],
+		['2027-03-28', 'Niedziela Zmartwychwstania Pańskiego']
 	]) {
 		await page.goto(`/app/pl/ordo/catechumenorum?dies=${date}`);
 		await expect(page.locator('.picker.day .day-open')).toContainText(title);
@@ -526,7 +541,7 @@ test('a choice made yesterday expires at midnight', async ({ page }) => {
 
 test('a real formulary not yet written is distinct from a malformed value', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.goto('/app/en/ordo/catechumenorum?dies=dominica-resurrectionis');
+	await page.goto('/app/en/ordo/catechumenorum?dies=dominica-in-albis');
 	await settled(page);
 	await expect(page.locator('.picker.day .state')).toHaveText('not yet in this edition');
 });

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-resurrectionis-collecta",
+  "title":"Deus, qui hodiérna die per Unigénitum tuum",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-resurrectionis",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Deus","l":"deus","p":",","m":60},{"i":"w002","f":"qui","l":"qui","m":18},{"i":"w003","f":"hodiérna","l":"hodiernus","m":31,"s":true},{"i":"w004","f":"die","l":"dies","m":358},{"i":"w005","f":"per","l":"per","m":3,"h":"w009"},{"i":"w006","f":"Unigénitum","l":"unigenitus","m":96,"h":"w010"},{"i":"w007","f":"tuum","l":"tuus","m":96,"h":"w010"},{"i":"w008","f":"æternitátis","l":"aeternitas","m":13},{"i":"w009","f":"nobis","l":"nos","m":49,"a":1},{"i":"w010","f":"áditum","l":"aditus","p":",","m":160},{"i":"w011","f":"devícta","l":"devinco","m":492,"h":"w012"},{"i":"w012","f":"morte","l":"mors","p":",","m":45},{"i":"w013","f":"reserásti","l":"resero","p":":","m":283,"a":0},{"i":"w014","f":"vota","l":"votum","m":85},{"i":"w015","f":"nostra","l":"noster","p":",","m":129,"h":"w016"},{"i":"w016","f":"quæ","l":"qui","m":49},{"i":"w017","f":"præveniéndo","l":"praevenio","m":675,"s":true},{"i":"w018","f":"aspíras","l":"aspiro","p":",","m":164},{"i":"w019","f":"étiam","l":"etiam","m":32},{"i":"w020","f":"adiuvándo","l":"adiuvo","m":663,"s":true},{"i":"w021","f":"proséquere","l":"prosequor","p":".","m":783},{"i":"w022","f":"Per","l":"per","m":3,"h":"w023"},{"i":"w023","f":"eúndem","l":"idem","m":36},{"i":"w024","f":"Dóminum","l":"dominus","m":35},{"i":"w025","f":"nostrum","l":"noster","m":96,"h":"w026"},{"i":"w026","f":"Iesum","l":"Iesus","m":38},{"i":"w027","f":"Christum","l":"Christus","p":",","m":35},{"i":"w028","f":"Fílium","l":"filius","m":35},{"i":"w029","f":"tuum","l":"tuus","p":":","m":96,"h":"w028"},{"i":"w030","f":"Qui","l":"qui","m":18},{"i":"w031","f":"tecum","l":"tu","m":131},{"i":"w032","f":"vivit","l":"vivo","m":140},{"i":"w033","f":"et","l":"et","m":15},{"i":"w034","f":"regnat","l":"regno","m":119},{"i":"w035","f":"in","l":"in","m":0,"h":"w036"},{"i":"w036","f":"unitáte","l":"unitas","m":45},{"i":"w037","f":"Spíritus","l":"spiritus","m":250},{"i":"w038","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w037"},{"i":"w039","f":"Deus","l":"deus","p":",","m":60},{"i":"w040","f":"per","l":"per","m":3,"h":"w042"},{"i":"w041","f":"ómnia","l":"omnis","m":129,"h":"w042"},{"i":"w042","f":"sǽcula","l":"saeculum","m":85},{"i":"w043","f":"sæculórum","l":"saeculum","p":".","m":145},{"i":"w044","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

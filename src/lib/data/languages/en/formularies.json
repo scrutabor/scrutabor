@@ -211,6 +211,10 @@
    "title": "9th Sunday after Pentecost"
   },
   {
+   "id": "dominica-resurrectionis",
+   "title": "Easter Sunday"
+  },
+  {
    "id": "dominica-v-post-epiphaniam",
    "title": "Transferred Fifth Sunday after Epiphany"
   },
@@ -299,6 +303,10 @@
    "title": "Epiphany of the Lord"
   },
   {
+   "id": "feria-v-in-cena-domini",
+   "title": "Holy Thursday — Mass of the Lord's Supper"
+  },
+  {
    "id": "in-octava-nativitatis",
    "title": "Octave Day of the Nativity of the Lord"
   },
@@ -333,6 +341,10 @@
   {
    "id": "vigilia-nativitatis",
    "title": "Vigil of the Nativity of the Lord"
+  },
+  {
+   "id": "vigilia-paschalis",
+   "title": "Mass of the Easter Vigil"
   }
  ]
 }

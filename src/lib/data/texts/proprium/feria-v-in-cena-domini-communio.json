@@ -1,0 +1,14 @@
+{
+  "id":"proprium.feria-v-in-cena-domini-communio",
+  "title":"Dóminus Iesus, postquam cœnávit cum discípulis suis",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"feria-v-in-cena-domini",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Dóminus","l":"dominus","m":60},{"i":"w002","f":"Iesus","l":"Iesus","p":",","m":34},{"i":"w003","f":"postquam","l":"postquam","m":15},{"i":"w004","f":"cœnávit","l":"coeno","m":28},{"i":"w005","f":"cum","l":"cum","m":15},{"i":"w006","f":"discípulis","l":"discipulus","m":267},{"i":"w007","f":"suis","l":"suus","p":",","m":236,"h":"w006"},{"i":"w008","f":"lavit","l":"lavo","m":28},{"i":"w009","f":"pedes","l":"pes","m":152},{"i":"w010","f":"eórum","l":"is","p":",","m":255},{"i":"w011","f":"et","l":"et","m":15},{"i":"w012","f":"ait","l":"aio","m":21},{"i":"w013","f":"illis","l":"ille","p":":","m":42},{"i":"w014","f":"Scitis","l":"scio","p":",","m":369},{"i":"w015","f":"quid","l":"quis","m":4},{"i":"w016","f":"fécerim","l":"facio","m":837},{"i":"w017","f":"vobis","l":"vos","m":53},{"i":"w018","f":"ego","l":"ego","p":",","m":143},{"i":"w019","f":"Dóminus","l":"dominus","m":60},{"i":"w020","f":"et","l":"et","m":15},{"i":"w021","f":"Magíster","l":"magister","p":"?","m":5},{"i":"w022","f":"Exémplum","l":"exemplum","m":82},{"i":"w023","f":"dedi","l":"do","m":2},{"i":"w024","f":"vobis","l":"vos","p":",","m":53},{"i":"w025","f":"ut","l":"ut","m":15},{"i":"w026","f":"et","l":"et","m":15},{"i":"w027","f":"vos","l":"vos","m":122},{"i":"w028","f":"ita","l":"ita","m":32},{"i":"w029","f":"faciátis","l":"facio","p":".","m":487}]}
+  ]
+}

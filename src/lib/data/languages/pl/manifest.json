@@ -454,6 +454,14 @@
       "path": "languages/pl/texts/ordinarium/praefatio-nativitatis.json"
     },
     {
+      "id": "ordinarium.praefatio-paschalis-in-die",
+      "path": "languages/pl/texts/ordinarium/praefatio-paschalis-in-die.json"
+    },
+    {
+      "id": "ordinarium.praefatio-paschalis-in-nocte",
+      "path": "languages/pl/texts/ordinarium/praefatio-paschalis-in-nocte.json"
+    },
+    {
       "id": "ordinarium.praefatio-quadragesimae",
       "path": "languages/pl/texts/ordinarium/praefatio-quadragesimae.json"
     },
@@ -1726,6 +1734,42 @@
       "path": "languages/pl/texts/proprium/dominica-ix-post-pentecosten-secreta.json"
     },
     {
+      "id": "proprium.dominica-resurrectionis-alleluia",
+      "path": "languages/pl/texts/proprium/dominica-resurrectionis-alleluia.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-collecta",
+      "path": "languages/pl/texts/proprium/dominica-resurrectionis-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-communio",
+      "path": "languages/pl/texts/proprium/dominica-resurrectionis-communio.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-epistola",
+      "path": "languages/pl/texts/proprium/dominica-resurrectionis-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-evangelium",
+      "path": "languages/pl/texts/proprium/dominica-resurrectionis-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-graduale",
+      "path": "languages/pl/texts/proprium/dominica-resurrectionis-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-introitus",
+      "path": "languages/pl/texts/proprium/dominica-resurrectionis-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-offertorium",
+      "path": "languages/pl/texts/proprium/dominica-resurrectionis-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-sequentia",
+      "path": "languages/pl/texts/proprium/dominica-resurrectionis-sequentia.json"
+    },
+    {
       "id": "proprium.dominica-v-post-epiphaniam-collecta",
       "path": "languages/pl/texts/proprium/dominica-v-post-epiphaniam-collecta.json"
     },
@@ -2580,6 +2624,34 @@
     {
       "id": "proprium.exaltatio-sanctae-crucis-secreta",
       "path": "languages/pl/texts/proprium/exaltatio-sanctae-crucis-secreta.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-collecta",
+      "path": "languages/pl/texts/proprium/feria-v-in-cena-domini-collecta.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-communio",
+      "path": "languages/pl/texts/proprium/feria-v-in-cena-domini-communio.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-epistola",
+      "path": "languages/pl/texts/proprium/feria-v-in-cena-domini-epistola.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-evangelium",
+      "path": "languages/pl/texts/proprium/feria-v-in-cena-domini-evangelium.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-introitus",
+      "path": "languages/pl/texts/proprium/feria-v-in-cena-domini-introitus.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-postcommunio",
+      "path": "languages/pl/texts/proprium/feria-v-in-cena-domini-postcommunio.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-secreta",
+      "path": "languages/pl/texts/proprium/feria-v-in-cena-domini-secreta.json"
     },
     {
       "id": "proprium.immaculatum-cor-beatae-mariae-virginis-alleluia",
@@ -3540,6 +3612,30 @@
     {
       "id": "proprium.vigilia-nativitatis-secreta",
       "path": "languages/pl/texts/proprium/vigilia-nativitatis-secreta.json"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-alleluia",
+      "path": "languages/pl/texts/proprium/vigilia-paschalis-alleluia.json"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-collecta",
+      "path": "languages/pl/texts/proprium/vigilia-paschalis-collecta.json"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-epistola",
+      "path": "languages/pl/texts/proprium/vigilia-paschalis-epistola.json"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-evangelium",
+      "path": "languages/pl/texts/proprium/vigilia-paschalis-evangelium.json"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-postcommunio",
+      "path": "languages/pl/texts/proprium/vigilia-paschalis-postcommunio.json"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-secreta",
+      "path": "languages/pl/texts/proprium/vigilia-paschalis-secreta.json"
     },
     {
       "id": "proprium.visitatio-beatae-mariae-virginis-alleluia",

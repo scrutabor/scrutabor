@@ -211,6 +211,10 @@
    "title": "9. Niedziela po Zesłaniu Ducha Świętego"
   },
   {
+   "id": "dominica-resurrectionis",
+   "title": "Niedziela Zmartwychwstania Pańskiego"
+  },
+  {
    "id": "dominica-v-post-epiphaniam",
    "title": "Przeniesiona 5. Niedziela po Objawieniu Pańskim"
   },
@@ -299,6 +303,10 @@
    "title": "Objawienie Pańskie"
   },
   {
+   "id": "feria-v-in-cena-domini",
+   "title": "Wielki Czwartek — Msza Wieczerzy Pańskiej"
+  },
+  {
    "id": "in-octava-nativitatis",
    "title": "Oktawa Narodzenia Pańskiego"
   },
@@ -333,6 +341,10 @@
   {
    "id": "vigilia-nativitatis",
    "title": "Wigilia Narodzenia Pańskiego"
+  },
+  {
+   "id": "vigilia-paschalis",
+   "title": "Msza Wigilii Paschalnej"
   }
  ]
 }

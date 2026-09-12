@@ -431,6 +431,18 @@
       "evidence": "bibliography/texts/ordinarium/praefatio-nativitatis.json"
     },
     {
+      "id": "ordinarium.praefatio-paschalis-in-die",
+      "path": "texts/ordinarium/praefatio-paschalis-in-die.json",
+      "title": "Vere dignum et iustum est, æquum et",
+      "evidence": "bibliography/texts/ordinarium/praefatio-paschalis-in-die.json"
+    },
+    {
+      "id": "ordinarium.praefatio-paschalis-in-nocte",
+      "path": "texts/ordinarium/praefatio-paschalis-in-nocte.json",
+      "title": "Vere dignum et iustum est, æquum et",
+      "evidence": "bibliography/texts/ordinarium/praefatio-paschalis-in-nocte.json"
+    },
+    {
       "id": "ordinarium.praefatio-quadragesimae",
       "path": "texts/ordinarium/praefatio-quadragesimae.json",
       "title": "Præfatio de Quadragesima",
@@ -2268,6 +2280,60 @@
       "evidence": "bibliography/texts/proprium/dominica-ix-post-pentecosten-secreta.json"
     },
     {
+      "id": "proprium.dominica-resurrectionis-alleluia",
+      "path": "texts/proprium/dominica-resurrectionis-alleluia.json",
+      "title": "Allelúia, allelúia. Pascha nostrum immolátus est Christus",
+      "evidence": "bibliography/texts/proprium/dominica-resurrectionis-alleluia.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-collecta",
+      "path": "texts/proprium/dominica-resurrectionis-collecta.json",
+      "title": "Deus, qui hodiérna die per Unigénitum tuum",
+      "evidence": "bibliography/texts/proprium/dominica-resurrectionis-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-communio",
+      "path": "texts/proprium/dominica-resurrectionis-communio.json",
+      "title": "Pascha nostrum immolátus est Christus, allelúia: itaque",
+      "evidence": "bibliography/texts/proprium/dominica-resurrectionis-communio.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-epistola",
+      "path": "texts/proprium/dominica-resurrectionis-epistola.json",
+      "title": "Fratres: Expurgáte vetus ferméntum, ut sitis nova",
+      "evidence": "bibliography/texts/proprium/dominica-resurrectionis-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-evangelium",
+      "path": "texts/proprium/dominica-resurrectionis-evangelium.json",
+      "title": "In illo témpore: María Magdaléne et María",
+      "evidence": "bibliography/texts/proprium/dominica-resurrectionis-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-graduale",
+      "path": "texts/proprium/dominica-resurrectionis-graduale.json",
+      "title": "Hæc dies, quam fecit Dóminus: exsultémus et",
+      "evidence": "bibliography/texts/proprium/dominica-resurrectionis-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-introitus",
+      "path": "texts/proprium/dominica-resurrectionis-introitus.json",
+      "title": "Resurréxi, et adhuc tecum sum, allelúia: posuísti",
+      "evidence": "bibliography/texts/proprium/dominica-resurrectionis-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-offertorium",
+      "path": "texts/proprium/dominica-resurrectionis-offertorium.json",
+      "title": "Terra trémuit, et quiévit, dum resúrgeret in",
+      "evidence": "bibliography/texts/proprium/dominica-resurrectionis-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-resurrectionis-sequentia",
+      "path": "texts/proprium/dominica-resurrectionis-sequentia.json",
+      "title": "Víctimæ pascháli laudes ímmolent Christiáni. Agnus rédemit",
+      "evidence": "bibliography/texts/proprium/dominica-resurrectionis-sequentia.json"
+    },
+    {
       "id": "proprium.dominica-v-post-epiphaniam-collecta",
       "path": "texts/proprium/dominica-v-post-epiphaniam-collecta.json",
       "title": "Famíliam tuam, quǽsumus, Dómine, contínua pietáte custódi",
@@ -3550,6 +3616,48 @@
       "path": "texts/proprium/exaltatio-sanctae-crucis-secreta.json",
       "title": "Iesu Christi, Dómini nostri, Córpore et Sánguine",
       "evidence": "bibliography/texts/proprium/exaltatio-sanctae-crucis-secreta.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-collecta",
+      "path": "texts/proprium/feria-v-in-cena-domini-collecta.json",
+      "title": "Deus, a quo et Iudas reátus sui",
+      "evidence": "bibliography/texts/proprium/feria-v-in-cena-domini-collecta.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-communio",
+      "path": "texts/proprium/feria-v-in-cena-domini-communio.json",
+      "title": "Dóminus Iesus, postquam cœnávit cum discípulis suis",
+      "evidence": "bibliography/texts/proprium/feria-v-in-cena-domini-communio.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-epistola",
+      "path": "texts/proprium/feria-v-in-cena-domini-epistola.json",
+      "title": "Fratres: Conveniéntibus vobis in unum, iam non",
+      "evidence": "bibliography/texts/proprium/feria-v-in-cena-domini-epistola.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-evangelium",
+      "path": "texts/proprium/feria-v-in-cena-domini-evangelium.json",
+      "title": "Ante diem festum Paschæ, sciens Iesus, quia",
+      "evidence": "bibliography/texts/proprium/feria-v-in-cena-domini-evangelium.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-introitus",
+      "path": "texts/proprium/feria-v-in-cena-domini-introitus.json",
+      "title": "Nos autem gloriári opórtet in Cruce Dómini",
+      "evidence": "bibliography/texts/proprium/feria-v-in-cena-domini-introitus.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-postcommunio",
+      "path": "texts/proprium/feria-v-in-cena-domini-postcommunio.json",
+      "title": "Refécti vitálibus aliméntis, quǽsumus, Dómine, Deus noster",
+      "evidence": "bibliography/texts/proprium/feria-v-in-cena-domini-postcommunio.json"
+    },
+    {
+      "id": "proprium.feria-v-in-cena-domini-secreta",
+      "path": "texts/proprium/feria-v-in-cena-domini-secreta.json",
+      "title": "Ipse tibi, quǽsumus, Dómine sancte, Pater omnípotens",
+      "evidence": "bibliography/texts/proprium/feria-v-in-cena-domini-secreta.json"
     },
     {
       "id": "proprium.immaculatum-cor-beatae-mariae-virginis-alleluia",
@@ -4992,6 +5100,42 @@
       "evidence": "bibliography/texts/proprium/vigilia-nativitatis-secreta.json"
     },
     {
+      "id": "proprium.vigilia-paschalis-alleluia",
+      "path": "texts/proprium/vigilia-paschalis-alleluia.json",
+      "title": "Allelúia. Confitémini Dómino, quóniam bonus: quóniam in",
+      "evidence": "bibliography/texts/proprium/vigilia-paschalis-alleluia.json"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-collecta",
+      "path": "texts/proprium/vigilia-paschalis-collecta.json",
+      "title": "Deus, qui hanc sacratíssimam noctem glória domínicæ",
+      "evidence": "bibliography/texts/proprium/vigilia-paschalis-collecta.json"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-epistola",
+      "path": "texts/proprium/vigilia-paschalis-epistola.json",
+      "title": "Fratres: Si consurrexístis cum Christo, quæ sursum",
+      "evidence": "bibliography/texts/proprium/vigilia-paschalis-epistola.json"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-evangelium",
+      "path": "texts/proprium/vigilia-paschalis-evangelium.json",
+      "title": "Véspere autem sábbati, quæ lucéscit in prima",
+      "evidence": "bibliography/texts/proprium/vigilia-paschalis-evangelium.json"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-postcommunio",
+      "path": "texts/proprium/vigilia-paschalis-postcommunio.json",
+      "title": "Spíritum nobis, Dómine, tuæ caritátis infúnde: ut",
+      "evidence": "bibliography/texts/proprium/vigilia-paschalis-postcommunio.json"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-secreta",
+      "path": "texts/proprium/vigilia-paschalis-secreta.json",
+      "title": "Súscipe, quǽsumus, Dómine, preces pópuli tui cum",
+      "evidence": "bibliography/texts/proprium/vigilia-paschalis-secreta.json"
+    },
+    {
       "id": "proprium.visitatio-beatae-mariae-virginis-alleluia",
       "path": "texts/proprium/visitatio-beatae-mariae-virginis-alleluia.json",
       "title": "Allelúia, allelúia. Felix es, sacra Virgo María",
@@ -5084,7 +5228,7 @@
     "formularies": "formularies.json",
     "metrics": "metrics.json"
   },
-  "morphology": 876,
+  "morphology": 881,
   "kalendarium": [
     2026,
     2101

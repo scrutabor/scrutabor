@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-resurrectionis-offertorium",
+  "title":"Terra trémuit, et quiévit, dum resúrgeret in",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-resurrectionis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Terra","l":"terra","m":30},{"i":"w002","f":"trémuit","l":"tremo","p":",","m":195},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"quiévit","l":"quiesco","p":",","m":195},{"i":"w005","f":"dum","l":"dum","m":15},{"i":"w006","f":"resúrgeret","l":"resurgo","m":468},{"i":"w007","f":"in","l":"in","m":0,"h":"w008"},{"i":"w008","f":"iudício","l":"iudicium","m":26},{"i":"w009","f":"Deus","l":"deus","p":",","m":60},{"i":"w010","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}
