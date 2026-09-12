@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-in-quinquagesima-communio",
+  "title":"Manducavérunt, et saturáti sunt nimis, et desidérium",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-in-quinquagesima",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Manducavérunt","l":"manduco","p":",","m":408},{"i":"w002","f":"et","l":"et","m":15},{"i":"w003","f":"saturáti","l":"saturo","m":323,"s":true},{"i":"w004","f":"sunt","l":"sum","m":117},{"i":"w005","f":"nimis","l":"nimis","p":",","m":32},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"desidérium","l":"desiderium","m":104},{"i":"w008","f":"eórum","l":"is","m":255},{"i":"w009","f":"áttulit","l":"affero","m":195,"a":3},{"i":"w010","f":"eis","l":"is","m":53},{"i":"w011","f":"Dóminus","l":"dominus","p":":","m":60},{"i":"w012","f":"non","l":"non","m":32},{"i":"w013","f":"sunt","l":"sum","m":117},{"i":"w014","f":"fraudáti","l":"fraudo","m":323,"s":true},{"i":"w015","f":"a","l":"a","m":0,"h":"w016"},{"i":"w016","f":"desidério","l":"desiderium","m":26},{"i":"w017","f":"suo","l":"suus","p":".","m":149,"s":true}]}
+  ]
+}

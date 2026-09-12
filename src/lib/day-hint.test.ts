@@ -21,8 +21,8 @@ import { PROPER_DAYS, dayHint, dayToday, type Today } from './proprium';
  * feria's week is not always one the edition can open. */
 const SUNDAY = dayToday(new Date(2026, 11, 13)); // III Advent 2026, carried
 const FERIA = dayToday(new Date(2026, 11, 15)); // the Tuesday after it
-const AHEAD = dayToday(new Date(2027, 0, 24)); // Septuagesima, not written
-const STRANDED = dayToday(new Date(2027, 0, 26)); // a feria in an unwritten Septuagesima week
+const AHEAD = dayToday(new Date(2027, 1, 14)); // Lent I, not written
+const STRANDED = dayToday(new Date(2027, 1, 16)); // a feria in an unwritten Lent I week
 const CHOICE = 'dominica-i-adventus';
 
 describe('the hint under the day picker', () => {
@@ -35,11 +35,11 @@ describe('the hint under the day picker', () => {
 		expect(FERIA.week?.formulary).toBe('dominica-iii-adventus');
 		expect(AHEAD.id, 'a feast this edition has not written').toBe('');
 		expect(AHEAD.on?.formulary, 'which the calendar can still name').toBe(
-			'dominica-in-septuagesima'
+			'dominica-i-in-quadragesima'
 		);
 		expect(STRANDED.on, 'a feria').toBeNull();
 		expect(STRANDED.week?.formulary, 'of a week the edition cannot open either').toBe(
-			'dominica-in-septuagesima'
+			'dominica-i-in-quadragesima'
 		);
 	});
 

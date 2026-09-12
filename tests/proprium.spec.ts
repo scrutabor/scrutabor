@@ -110,7 +110,7 @@ test('a resolved day whose texts are absent says exactly that', async ({ page })
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo');
 	const dialog = await openPicker(page);
-	await selectCalendarDate(dialog, '2027-01-24');
+	await selectCalendarDate(dialog, '2027-02-14');
 	await expect(dialog).toContainText('Dzień rozpoznany, formularz jeszcze niedostępny');
 	await dialog.getByRole('button', { name: 'Otwórz bez formularza' }).click();
 	await expect(page.locator('.picker.day .state')).toHaveText('jeszcze nie w tym wydaniu');
@@ -142,6 +142,18 @@ test('the Epiphany cycle opens from dates without requiring the feast name', asy
 
 	await page.goto('/app/pl/ordo/catechumenorum?dies=2027-01-13');
 	await expect(page.locator('.picker.day .day-open')).toContainText('Wspomnienie Chrztu');
+});
+
+test('the pre-Lent Sundays open from dates without requiring their names', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2027-01-24');
+	await expect(page.locator('.picker.day .day-open')).toContainText('Niedziela Siedemdziesiątnicy');
+
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2027-01-31');
+	await expect(page.locator('.picker.day .day-open')).toContainText('Niedziela Sześćdziesiątnicy');
+
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2027-02-07');
+	await expect(page.locator('.picker.day .day-open')).toContainText('Niedziela Pięćdziesiątnicy');
 });
 
 test('the Vigil Alleluia appears when Christmas Eve falls on Sunday', async ({ page }) => {
@@ -487,7 +499,7 @@ test('a choice made yesterday expires at midnight', async ({ page }) => {
 
 test('a real formulary not yet written is distinct from a malformed value', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.goto('/app/en/ordo/catechumenorum?dies=dominica-in-septuagesima');
+	await page.goto('/app/en/ordo/catechumenorum?dies=dominica-i-in-quadragesima');
 	await settled(page);
 	await expect(page.locator('.picker.day .state')).toHaveText('not yet in this edition');
 });

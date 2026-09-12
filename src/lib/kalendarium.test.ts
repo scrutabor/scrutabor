@@ -98,6 +98,12 @@ describe('the calendar this edition ships', () => {
 		expect(dayOn('2030-01-13')?.position).toBe('dominica-i-post-epiphaniam');
 	});
 
+	it('carries all three pre-Lent Sundays', () => {
+		expect(dayOn('2027-01-24')?.formulary).toBe('dominica-in-septuagesima');
+		expect(dayOn('2027-01-31')?.formulary).toBe('dominica-in-sexagesima');
+		expect(dayOn('2027-02-07')?.formulary).toBe('dominica-in-quinquagesima');
+	});
+
 	it('says which formulary today has throughout the span this edition carries', () => {
 		// Advent, Christmas and the completed post-Pentecost cycle resolve to a
 		// formulary the picker can open. Christmas Day selects the daytime Mass

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-in-quinquagesima-offertorium",
+  "title":"Benedíctus es, Dómine, doce me iustificatiónes tuas",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-in-quinquagesima",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Benedíctus","l":"benedictus","m":59,"s":true},{"i":"w002","f":"es","l":"sum","p":",","m":191},{"i":"w003","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w004","f":"doce","l":"doceo","m":190},{"i":"w005","f":"me","l":"ego","m":4},{"i":"w006","f":"iustificatiónes","l":"iustificatio","m":16},{"i":"w007","f":"tuas","l":"tuus","p":":","m":180,"h":"w006"},{"i":"w008","f":"in","l":"in","m":0,"h":"w009"},{"i":"w009","f":"lábiis","l":"labium","m":1},{"i":"w010","f":"meis","l":"meus","m":39,"s":true},{"i":"w011","f":"pronuntiávi","l":"pronuntio","m":2},{"i":"w012","f":"ómnia","l":"omnis","m":129,"s":true},{"i":"w013","f":"iudícia","l":"iudicium","m":274},{"i":"w014","f":"oris","l":"os","m":75},{"i":"w015","f":"tui","l":"tuus","p":".","m":99,"s":true}]}
+  ]
+}

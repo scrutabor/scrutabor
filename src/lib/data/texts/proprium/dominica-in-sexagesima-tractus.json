@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-in-sexagesima-tractus",
+  "title":"Commovísti, Dómine, terram, et conturbásti eam. Sana",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-in-sexagesima",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Commovísti","l":"commoveo","p":",","m":238},{"i":"w002","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w003","f":"terram","l":"terra","p":",","m":141},{"i":"w004","f":"et","l":"et","m":15},{"i":"w005","f":"conturbásti","l":"conturbo","m":283,"a":0},{"i":"w006","f":"eam","l":"is","p":".","m":291},{"i":"w007","f":"Sana","l":"sanus","m":25,"s":true},{"i":"w008","f":"contritiónes","l":"contritio","m":16,"a":0},{"i":"w009","f":"eius","l":"is","p":",","m":27},{"i":"w010","f":"quia","l":"quia","m":15},{"i":"w011","f":"mota","l":"moveo","m":318,"s":true},{"i":"w012","f":"est","l":"sum","p":".","m":21},{"i":"w013","f":"Ut","l":"ut","m":15},{"i":"w014","f":"fúgiant","l":"fugio","m":44},{"i":"w015","f":"a","l":"a","m":0,"h":"w016"},{"i":"w016","f":"fácie","l":"facies","m":219},{"i":"w017","f":"arcus","l":"arcus","p":":","m":196},{"i":"w018","f":"ut","l":"ut","m":15},{"i":"w019","f":"liberéntur","l":"libero","m":673},{"i":"w020","f":"elécti","l":"eligo","m":416,"s":true},{"i":"w021","f":"tui","l":"tuus","p":".","m":99,"s":true}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-in-sexagesima-communio",
+  "title":"Introíbo ad altáre Dei, ad Deum, qui",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-in-sexagesima",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Introíbo","l":"introeo","m":309},{"i":"w002","f":"ad","l":"ad","m":3,"h":"w003"},{"i":"w003","f":"altáre","l":"altare","m":136},{"i":"w004","f":"Dei","l":"deus","p":",","m":54},{"i":"w005","f":"ad","l":"ad","m":3,"h":"w006"},{"i":"w006","f":"Deum","l":"deus","p":",","m":35},{"i":"w007","f":"qui","l":"qui","m":18},{"i":"w008","f":"lætíficat","l":"laetifico","m":119},{"i":"w009","f":"iuventútem","l":"iuventus","m":7},{"i":"w010","f":"meam","l":"meus","p":".","m":8,"h":"w009"}]}
+  ]
+}

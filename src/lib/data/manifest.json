@@ -1546,6 +1546,162 @@
       "evidence": "bibliography/texts/proprium/dominica-iii-post-pentecosten-secreta.json"
     },
     {
+      "id": "proprium.dominica-in-quinquagesima-collecta",
+      "path": "texts/proprium/dominica-in-quinquagesima-collecta.json",
+      "title": "Preces nostras, quǽsumus, Dómine, cleménter exáudi: atque",
+      "evidence": "bibliography/texts/proprium/dominica-in-quinquagesima-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-in-quinquagesima-communio",
+      "path": "texts/proprium/dominica-in-quinquagesima-communio.json",
+      "title": "Manducavérunt, et saturáti sunt nimis, et desidérium",
+      "evidence": "bibliography/texts/proprium/dominica-in-quinquagesima-communio.json"
+    },
+    {
+      "id": "proprium.dominica-in-quinquagesima-epistola",
+      "path": "texts/proprium/dominica-in-quinquagesima-epistola.json",
+      "title": "Fratres: Si linguis hóminum loquar et Angelórum",
+      "evidence": "bibliography/texts/proprium/dominica-in-quinquagesima-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-in-quinquagesima-evangelium",
+      "path": "texts/proprium/dominica-in-quinquagesima-evangelium.json",
+      "title": "In illo témpore: Assúmpsit Iesus duódecim, et",
+      "evidence": "bibliography/texts/proprium/dominica-in-quinquagesima-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-in-quinquagesima-graduale",
+      "path": "texts/proprium/dominica-in-quinquagesima-graduale.json",
+      "title": "Tu es Deus qui facis mirabília solus",
+      "evidence": "bibliography/texts/proprium/dominica-in-quinquagesima-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-in-quinquagesima-introitus",
+      "path": "texts/proprium/dominica-in-quinquagesima-introitus.json",
+      "title": "Esto mihi in Deum protectórem, et in",
+      "evidence": "bibliography/texts/proprium/dominica-in-quinquagesima-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-in-quinquagesima-offertorium",
+      "path": "texts/proprium/dominica-in-quinquagesima-offertorium.json",
+      "title": "Benedíctus es, Dómine, doce me iustificatiónes tuas",
+      "evidence": "bibliography/texts/proprium/dominica-in-quinquagesima-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-in-quinquagesima-postcommunio",
+      "path": "texts/proprium/dominica-in-quinquagesima-postcommunio.json",
+      "title": "Quǽsumus, omnípotens Deus: ut, qui cæléstia aliménta",
+      "evidence": "bibliography/texts/proprium/dominica-in-quinquagesima-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-in-quinquagesima-tractus",
+      "path": "texts/proprium/dominica-in-quinquagesima-tractus.json",
+      "title": "Iubiláte Deo, omnis terra: servíte Dómino in",
+      "evidence": "bibliography/texts/proprium/dominica-in-quinquagesima-tractus.json"
+    },
+    {
+      "id": "proprium.dominica-in-septuagesima-collecta",
+      "path": "texts/proprium/dominica-in-septuagesima-collecta.json",
+      "title": "Preces pópuli tui, quǽsumus, Dómine, cleménter exáudi",
+      "evidence": "bibliography/texts/proprium/dominica-in-septuagesima-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-in-septuagesima-communio",
+      "path": "texts/proprium/dominica-in-septuagesima-communio.json",
+      "title": "Illúmina fáciem tuam super servum tuum, et",
+      "evidence": "bibliography/texts/proprium/dominica-in-septuagesima-communio.json"
+    },
+    {
+      "id": "proprium.dominica-in-septuagesima-epistola",
+      "path": "texts/proprium/dominica-in-septuagesima-epistola.json",
+      "title": "Fratres: Nescítis, quod ii, qui in stádio",
+      "evidence": "bibliography/texts/proprium/dominica-in-septuagesima-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-in-septuagesima-evangelium",
+      "path": "texts/proprium/dominica-in-septuagesima-evangelium.json",
+      "title": "In illo témpore: Dixit Iesus discípulis suis",
+      "evidence": "bibliography/texts/proprium/dominica-in-septuagesima-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-in-septuagesima-graduale",
+      "path": "texts/proprium/dominica-in-septuagesima-graduale.json",
+      "title": "Adiútor in opportunitátibus, in tribulatióne: sperent in",
+      "evidence": "bibliography/texts/proprium/dominica-in-septuagesima-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-in-septuagesima-introitus",
+      "path": "texts/proprium/dominica-in-septuagesima-introitus.json",
+      "title": "Circumdedérunt me gémitus mortis, dolóres inférni circumdedérunt",
+      "evidence": "bibliography/texts/proprium/dominica-in-septuagesima-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-in-septuagesima-offertorium",
+      "path": "texts/proprium/dominica-in-septuagesima-offertorium.json",
+      "title": "Bonum est confitéri Dómino, et psállere nómini",
+      "evidence": "bibliography/texts/proprium/dominica-in-septuagesima-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-in-septuagesima-postcommunio",
+      "path": "texts/proprium/dominica-in-septuagesima-postcommunio.json",
+      "title": "Fidéles tui, Deus, per tua dona firméntur",
+      "evidence": "bibliography/texts/proprium/dominica-in-septuagesima-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-in-septuagesima-tractus",
+      "path": "texts/proprium/dominica-in-septuagesima-tractus.json",
+      "title": "De profúndis clamávi ad te. Dómine: Dómine",
+      "evidence": "bibliography/texts/proprium/dominica-in-septuagesima-tractus.json"
+    },
+    {
+      "id": "proprium.dominica-in-sexagesima-collecta",
+      "path": "texts/proprium/dominica-in-sexagesima-collecta.json",
+      "title": "Deus, qui cónspicis, quia ex nulla nostra",
+      "evidence": "bibliography/texts/proprium/dominica-in-sexagesima-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-in-sexagesima-communio",
+      "path": "texts/proprium/dominica-in-sexagesima-communio.json",
+      "title": "Introíbo ad altáre Dei, ad Deum, qui",
+      "evidence": "bibliography/texts/proprium/dominica-in-sexagesima-communio.json"
+    },
+    {
+      "id": "proprium.dominica-in-sexagesima-epistola",
+      "path": "texts/proprium/dominica-in-sexagesima-epistola.json",
+      "title": "Fratres: Libénter suffértis insipiéntes: cum sitis ipsi",
+      "evidence": "bibliography/texts/proprium/dominica-in-sexagesima-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-in-sexagesima-evangelium",
+      "path": "texts/proprium/dominica-in-sexagesima-evangelium.json",
+      "title": "In illo témpore: Cum turba plúrima convenírent",
+      "evidence": "bibliography/texts/proprium/dominica-in-sexagesima-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-in-sexagesima-graduale",
+      "path": "texts/proprium/dominica-in-sexagesima-graduale.json",
+      "title": "Sciant gentes, quóniam nomen tibi Deus: tu",
+      "evidence": "bibliography/texts/proprium/dominica-in-sexagesima-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-in-sexagesima-introitus",
+      "path": "texts/proprium/dominica-in-sexagesima-introitus.json",
+      "title": "Exsúrge, quare obdórmis, Dómine? exsúrge, et ne",
+      "evidence": "bibliography/texts/proprium/dominica-in-sexagesima-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-in-sexagesima-secreta",
+      "path": "texts/proprium/dominica-in-sexagesima-secreta.json",
+      "title": "Oblátum tibi, Dómine, sacrifícium, vivíficet nos semper",
+      "evidence": "bibliography/texts/proprium/dominica-in-sexagesima-secreta.json"
+    },
+    {
+      "id": "proprium.dominica-in-sexagesima-tractus",
+      "path": "texts/proprium/dominica-in-sexagesima-tractus.json",
+      "title": "Commovísti, Dómine, terram, et conturbásti eam. Sana",
+      "evidence": "bibliography/texts/proprium/dominica-in-sexagesima-tractus.json"
+    },
+    {
       "id": "proprium.dominica-infra-octavam-nativitatis-collecta",
       "path": "texts/proprium/dominica-infra-octavam-nativitatis-collecta.json",
       "title": "Omnípotens sempitérne Deus, dírige actus nostros in",
@@ -4610,7 +4766,7 @@
     "formularies": "formularies.json",
     "metrics": "metrics.json"
   },
-  "morphology": 835,
+  "morphology": 855,
   "kalendarium": [
     2026,
     2101
