@@ -671,12 +671,16 @@ test('no title outgrows the narrowest phone, at any print size', async ({ page }
 	await page.goto(`/app/en`);
 	await settled(page);
 	await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
+	// Keep the surface under test fixed. If today has a resolved formulary,
+	// the movement also contains that day's complete interlinear Proper; its
+	// word geometry is unrelated to whether these three headings fit.
+	const withoutProper = '?dies=2026-09-12';
 	// the longest title in the book, and the two other surfaces that carry a
 	// heading of a different kind
 	for (const path of [
-		'/app/en/ordo/catechumenorum',
-		'/app/pl/ordo/catechumenorum',
-		'/app/en/ordo'
+		`/app/en/ordo/catechumenorum${withoutProper}`,
+		`/app/pl/ordo/catechumenorum${withoutProper}`,
+		`/app/en/ordo${withoutProper}`
 	]) {
 		await page.goto(path);
 		const measured = await page.evaluate(() => {

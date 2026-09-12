@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-i-in-quadragesima-offertorium",
+  "title":"Scápulis suis obumbrábit tibi Dóminus, et sub",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-i-in-quadragesima",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Scápulis","l":"scapula","m":150},{"i":"w002","f":"suis","l":"suus","m":236,"s":true},{"i":"w003","f":"obumbrábit","l":"obumbro","m":354},{"i":"w004","f":"tibi","l":"tu","m":139},{"i":"w005","f":"Dóminus","l":"dominus","p":",","m":60},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"sub","l":"sub","m":0,"h":"w008"},{"i":"w008","f":"pennis","l":"penna","m":150},{"i":"w009","f":"eius","l":"is","m":27},{"i":"w010","f":"sperábis","l":"spero","p":":","m":284},{"i":"w011","f":"scuto","l":"scutum","m":26},{"i":"w012","f":"circúmdabit","l":"circumdo","m":354},{"i":"w013","f":"te","l":"tu","m":131},{"i":"w014","f":"véritas","l":"veritas","m":20},{"i":"w015","f":"eius","l":"is","p":".","m":27}]}
+  ]
+}

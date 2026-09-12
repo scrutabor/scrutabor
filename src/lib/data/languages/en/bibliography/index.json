@@ -160,6 +160,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-quadragesimae",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
        "roles": [
         "derived_digital_collation_aid"
@@ -874,6 +881,69 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-i-in-quadragesima-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-tractus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-i-post-epiphaniam-alleluia",
        "roles": [
         "derived_digital_collation_aid"
@@ -931,6 +1001,62 @@
       },
       {
        "id": "proprium.dominica-i-post-epiphaniam-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-tractus",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -1071,6 +1197,62 @@
       },
       {
        "id": "proprium.dominica-ii-post-pentecosten-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-tractus",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -1442,6 +1624,62 @@
       },
       {
        "id": "proprium.dominica-infra-octavam-nativitatis-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-tractus",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -4985,6 +5223,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-quadragesimae",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
        "roles": [
         "official_text"
@@ -5699,6 +5944,69 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-i-in-quadragesima-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-tractus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-i-post-epiphaniam-alleluia",
        "roles": [
         "official_text"
@@ -5756,6 +6064,62 @@
       },
       {
        "id": "proprium.dominica-i-post-epiphaniam-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-tractus",
        "roles": [
         "official_text"
        ],
@@ -5896,6 +6260,62 @@
       },
       {
        "id": "proprium.dominica-ii-post-pentecosten-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-tractus",
        "roles": [
         "official_text"
        ],
@@ -6267,6 +6687,62 @@
       },
       {
        "id": "proprium.dominica-infra-octavam-nativitatis-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-tractus",
        "roles": [
         "official_text"
        ],

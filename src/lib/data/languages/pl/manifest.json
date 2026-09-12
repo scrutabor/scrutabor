@@ -454,6 +454,10 @@
       "path": "languages/pl/texts/ordinarium/praefatio-nativitatis.json"
     },
     {
+      "id": "ordinarium.praefatio-quadragesimae",
+      "path": "languages/pl/texts/ordinarium/praefatio-quadragesimae.json"
+    },
+    {
       "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
       "path": "languages/pl/texts/ordinarium/praefatio-sacratissimi-cordis-iesu.json"
     },
@@ -966,6 +970,42 @@
       "path": "languages/pl/texts/proprium/dominica-i-adventus-secreta.json"
     },
     {
+      "id": "proprium.dominica-i-in-quadragesima-collecta",
+      "path": "languages/pl/texts/proprium/dominica-i-in-quadragesima-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-epistola",
+      "path": "languages/pl/texts/proprium/dominica-i-in-quadragesima-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-evangelium",
+      "path": "languages/pl/texts/proprium/dominica-i-in-quadragesima-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-graduale",
+      "path": "languages/pl/texts/proprium/dominica-i-in-quadragesima-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-introitus",
+      "path": "languages/pl/texts/proprium/dominica-i-in-quadragesima-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-offertorium",
+      "path": "languages/pl/texts/proprium/dominica-i-in-quadragesima-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-postcommunio",
+      "path": "languages/pl/texts/proprium/dominica-i-in-quadragesima-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-secreta",
+      "path": "languages/pl/texts/proprium/dominica-i-in-quadragesima-secreta.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-tractus",
+      "path": "languages/pl/texts/proprium/dominica-i-in-quadragesima-tractus.json"
+    },
+    {
       "id": "proprium.dominica-i-post-epiphaniam-alleluia",
       "path": "languages/pl/texts/proprium/dominica-i-post-epiphaniam-alleluia.json"
     },
@@ -1040,6 +1080,38 @@
     {
       "id": "proprium.dominica-ii-adventus-secreta",
       "path": "languages/pl/texts/proprium/dominica-ii-adventus-secreta.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-collecta",
+      "path": "languages/pl/texts/proprium/dominica-ii-in-quadragesima-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-communio",
+      "path": "languages/pl/texts/proprium/dominica-ii-in-quadragesima-communio.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-epistola",
+      "path": "languages/pl/texts/proprium/dominica-ii-in-quadragesima-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-graduale",
+      "path": "languages/pl/texts/proprium/dominica-ii-in-quadragesima-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-introitus",
+      "path": "languages/pl/texts/proprium/dominica-ii-in-quadragesima-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-offertorium",
+      "path": "languages/pl/texts/proprium/dominica-ii-in-quadragesima-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-secreta",
+      "path": "languages/pl/texts/proprium/dominica-ii-in-quadragesima-secreta.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-tractus",
+      "path": "languages/pl/texts/proprium/dominica-ii-in-quadragesima-tractus.json"
     },
     {
       "id": "proprium.dominica-ii-post-epiphaniam-alleluia",
@@ -1160,6 +1232,38 @@
     {
       "id": "proprium.dominica-iii-adventus-secreta",
       "path": "languages/pl/texts/proprium/dominica-iii-adventus-secreta.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-collecta",
+      "path": "languages/pl/texts/proprium/dominica-iii-in-quadragesima-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-communio",
+      "path": "languages/pl/texts/proprium/dominica-iii-in-quadragesima-communio.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-epistola",
+      "path": "languages/pl/texts/proprium/dominica-iii-in-quadragesima-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-evangelium",
+      "path": "languages/pl/texts/proprium/dominica-iii-in-quadragesima-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-graduale",
+      "path": "languages/pl/texts/proprium/dominica-iii-in-quadragesima-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-introitus",
+      "path": "languages/pl/texts/proprium/dominica-iii-in-quadragesima-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-postcommunio",
+      "path": "languages/pl/texts/proprium/dominica-iii-in-quadragesima-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-tractus",
+      "path": "languages/pl/texts/proprium/dominica-iii-in-quadragesima-tractus.json"
     },
     {
       "id": "proprium.dominica-iii-post-epiphaniam-alleluia",
@@ -1412,6 +1516,38 @@
     {
       "id": "proprium.dominica-iv-adventus-secreta",
       "path": "languages/pl/texts/proprium/dominica-iv-adventus-secreta.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-collecta",
+      "path": "languages/pl/texts/proprium/dominica-iv-in-quadragesima-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-communio",
+      "path": "languages/pl/texts/proprium/dominica-iv-in-quadragesima-communio.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-epistola",
+      "path": "languages/pl/texts/proprium/dominica-iv-in-quadragesima-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-evangelium",
+      "path": "languages/pl/texts/proprium/dominica-iv-in-quadragesima-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-introitus",
+      "path": "languages/pl/texts/proprium/dominica-iv-in-quadragesima-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-offertorium",
+      "path": "languages/pl/texts/proprium/dominica-iv-in-quadragesima-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-postcommunio",
+      "path": "languages/pl/texts/proprium/dominica-iv-in-quadragesima-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-tractus",
+      "path": "languages/pl/texts/proprium/dominica-iv-in-quadragesima-tractus.json"
     },
     {
       "id": "proprium.dominica-iv-post-epiphaniam-collecta",

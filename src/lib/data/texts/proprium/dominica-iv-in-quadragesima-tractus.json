@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-iv-in-quadragesima-tractus",
+  "title":"Qui confídunt in Dómino, sicut mons Sion",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-iv-in-quadragesima",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Qui","l":"qui","m":18},{"i":"w002","f":"confídunt","l":"confido","m":298},{"i":"w003","f":"in","l":"in","m":0,"h":"w004"},{"i":"w004","f":"Dómino","l":"dominus","p":",","m":29},{"i":"w005","f":"sicut","l":"sicut","m":15},{"i":"w006","f":"mons","l":"mons","m":113},{"i":"w007","f":"Sion","l":"Sion","p":":","m":480,"a":0},{"i":"w008","f":"non","l":"non","m":32},{"i":"w009","f":"commovébitur","l":"commoveo","m":426},{"i":"w010","f":"in","l":"in","m":3,"h":"w012"},{"i":"w011","f":"ætérnum","l":"aeternus","p":",","m":137,"s":true},{"i":"w012","f":"qui","l":"qui","m":36,"a":1},{"i":"w013","f":"hábitat","l":"habito","m":119},{"i":"w014","f":"in","l":"in","m":0,"h":"w015"},{"i":"w015","f":"Ierúsalem","l":"Ierusalem","p":".","m":407,"a":0},{"i":"w016","f":"Montes","l":"mons","m":152},{"i":"w017","f":"in","l":"in","m":0,"h":"w018"},{"i":"w018","f":"circúitu","l":"circuitus","m":100},{"i":"w019","f":"eius","l":"is","p":":","m":27},{"i":"w020","f":"et","l":"et","m":15},{"i":"w021","f":"Dóminus","l":"dominus","m":60},{"i":"w022","f":"in","l":"in","m":0,"h":"w023"},{"i":"w023","f":"circúitu","l":"circuitus","m":100},{"i":"w024","f":"pópuli","l":"populus","m":390},{"i":"w025","f":"sui","l":"sui","p":",","m":192,"a":3},{"i":"w026","f":"ex","l":"ex","m":0,"h":"w027"},{"i":"w027","f":"hoc","l":"hic","m":116},{"i":"w028","f":"nunc","l":"nunc","m":32},{"i":"w029","f":"et","l":"et","m":15},{"i":"w030","f":"usque","l":"usque","m":32},{"i":"w031","f":"in","l":"in","m":3,"h":"w032"},{"i":"w032","f":"sǽculum","l":"saeculum","p":".","m":82}]}
+  ]
+}

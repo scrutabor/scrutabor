@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-i-in-quadragesima-graduale",
+  "title":"Angelis suis Deus mandávit de te, ut",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-i-in-quadragesima",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Ángelis","l":"angelus","m":51},{"i":"w002","f":"suis","l":"suus","m":236,"s":true},{"i":"w003","f":"Deus","l":"deus","m":60},{"i":"w004","f":"mandávit","l":"mando","m":28},{"i":"w005","f":"de","l":"de","m":0,"h":"w006"},{"i":"w006","f":"te","l":"tu","p":",","m":131},{"i":"w007","f":"ut","l":"ut","m":15},{"i":"w008","f":"custódiant","l":"custodio","m":589},{"i":"w009","f":"te","l":"tu","m":131},{"i":"w010","f":"in","l":"in","m":0,"h":"w012"},{"i":"w011","f":"ómnibus","l":"omnis","m":39,"h":"w012"},{"i":"w012","f":"viis","l":"via","m":150},{"i":"w013","f":"tuis","l":"tuus","p":".","m":236,"s":true},{"i":"w014","f":"In","l":"in","m":0,"h":"w015"},{"i":"w015","f":"mánibus","l":"manus","m":317},{"i":"w016","f":"portábunt","l":"porto","m":392},{"i":"w017","f":"te","l":"tu","p":",","m":131},{"i":"w018","f":"ne","l":"ne","m":15},{"i":"w019","f":"umquam","l":"umquam","m":32},{"i":"w020","f":"offéndas","l":"offendo","m":202},{"i":"w021","f":"ad","l":"ad","m":3,"h":"w022"},{"i":"w022","f":"lápidem","l":"lapis","m":162},{"i":"w023","f":"pedem","l":"pes","m":162},{"i":"w024","f":"tuum","l":"tuus","p":".","m":96,"h":"w023"}]}
+  ]
+}

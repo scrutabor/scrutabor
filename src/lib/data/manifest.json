@@ -431,6 +431,12 @@
       "evidence": "bibliography/texts/ordinarium/praefatio-nativitatis.json"
     },
     {
+      "id": "ordinarium.praefatio-quadragesimae",
+      "path": "texts/ordinarium/praefatio-quadragesimae.json",
+      "title": "Præfatio de Quadragesima",
+      "evidence": "bibliography/texts/ordinarium/praefatio-quadragesimae.json"
+    },
+    {
       "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
       "path": "texts/ordinarium/praefatio-sacratissimi-cordis-iesu.json",
       "title": "Præfatio de Sacratissimo Corde Iesu",
@@ -1158,6 +1164,60 @@
       "title": "Hæc sacra nos, Dómine"
     },
     {
+      "id": "proprium.dominica-i-in-quadragesima-collecta",
+      "path": "texts/proprium/dominica-i-in-quadragesima-collecta.json",
+      "title": "Deus, qui Ecclésiam tuam ánnua quadragesimáli observatióne",
+      "evidence": "bibliography/texts/proprium/dominica-i-in-quadragesima-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-epistola",
+      "path": "texts/proprium/dominica-i-in-quadragesima-epistola.json",
+      "title": "Fratres: Exhortámur vos, ne in vácuum grátiam",
+      "evidence": "bibliography/texts/proprium/dominica-i-in-quadragesima-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-evangelium",
+      "path": "texts/proprium/dominica-i-in-quadragesima-evangelium.json",
+      "title": "In illo témpore: Ductus est Iesus in",
+      "evidence": "bibliography/texts/proprium/dominica-i-in-quadragesima-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-graduale",
+      "path": "texts/proprium/dominica-i-in-quadragesima-graduale.json",
+      "title": "Angelis suis Deus mandávit de te, ut",
+      "evidence": "bibliography/texts/proprium/dominica-i-in-quadragesima-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-introitus",
+      "path": "texts/proprium/dominica-i-in-quadragesima-introitus.json",
+      "title": "Invocábit me, et ego exáudiam eum: erípiam",
+      "evidence": "bibliography/texts/proprium/dominica-i-in-quadragesima-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-offertorium",
+      "path": "texts/proprium/dominica-i-in-quadragesima-offertorium.json",
+      "title": "Scápulis suis obumbrábit tibi Dóminus, et sub",
+      "evidence": "bibliography/texts/proprium/dominica-i-in-quadragesima-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-postcommunio",
+      "path": "texts/proprium/dominica-i-in-quadragesima-postcommunio.json",
+      "title": "Tui nos, Dómine, sacraménti libátio sancta restáuret",
+      "evidence": "bibliography/texts/proprium/dominica-i-in-quadragesima-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-secreta",
+      "path": "texts/proprium/dominica-i-in-quadragesima-secreta.json",
+      "title": "Sacrifícium quadragesimális inítii sollémniter immolámus, te, Dómine",
+      "evidence": "bibliography/texts/proprium/dominica-i-in-quadragesima-secreta.json"
+    },
+    {
+      "id": "proprium.dominica-i-in-quadragesima-tractus",
+      "path": "texts/proprium/dominica-i-in-quadragesima-tractus.json",
+      "title": "Qui hábitat in adiutório Altíssimi, in protectióne",
+      "evidence": "bibliography/texts/proprium/dominica-i-in-quadragesima-tractus.json"
+    },
+    {
       "id": "proprium.dominica-i-post-epiphaniam-alleluia",
       "path": "texts/proprium/dominica-i-post-epiphaniam-alleluia.json",
       "title": "Allelúia, allelúia Iubiláte Deo, omnis terra: servíte",
@@ -1260,6 +1320,54 @@
       "id": "proprium.dominica-ii-adventus-secreta",
       "path": "texts/proprium/dominica-ii-adventus-secreta.json",
       "title": "Placáre, quǽsumus, Dómine"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-collecta",
+      "path": "texts/proprium/dominica-ii-in-quadragesima-collecta.json",
+      "title": "Deus, qui cónspicis omni nos virtúte destítui",
+      "evidence": "bibliography/texts/proprium/dominica-ii-in-quadragesima-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-communio",
+      "path": "texts/proprium/dominica-ii-in-quadragesima-communio.json",
+      "title": "Intéllege clamórem meum: inténde voci oratiónis meæ",
+      "evidence": "bibliography/texts/proprium/dominica-ii-in-quadragesima-communio.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-epistola",
+      "path": "texts/proprium/dominica-ii-in-quadragesima-epistola.json",
+      "title": "Fratres: Rogámus vos et obsecrámus in Dómino",
+      "evidence": "bibliography/texts/proprium/dominica-ii-in-quadragesima-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-graduale",
+      "path": "texts/proprium/dominica-ii-in-quadragesima-graduale.json",
+      "title": "Tribulatiónes cordis mei dilatátæ sunt: de necessitátibus",
+      "evidence": "bibliography/texts/proprium/dominica-ii-in-quadragesima-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-introitus",
+      "path": "texts/proprium/dominica-ii-in-quadragesima-introitus.json",
+      "title": "Reminíscere miseratiónum tuarum, Dómine, et misericórdiæ tuæ",
+      "evidence": "bibliography/texts/proprium/dominica-ii-in-quadragesima-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-offertorium",
+      "path": "texts/proprium/dominica-ii-in-quadragesima-offertorium.json",
+      "title": "Meditábor in mandátis tuis, quæ diléxi valde",
+      "evidence": "bibliography/texts/proprium/dominica-ii-in-quadragesima-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-secreta",
+      "path": "texts/proprium/dominica-ii-in-quadragesima-secreta.json",
+      "title": "Sacrifíciis præséntibus, Dómine, quǽsumus, inténde placátus: ut",
+      "evidence": "bibliography/texts/proprium/dominica-ii-in-quadragesima-secreta.json"
+    },
+    {
+      "id": "proprium.dominica-ii-in-quadragesima-tractus",
+      "path": "texts/proprium/dominica-ii-in-quadragesima-tractus.json",
+      "title": "Confitémini Dómino, quóniam bonus: quóniam in sǽculum",
+      "evidence": "bibliography/texts/proprium/dominica-ii-in-quadragesima-tractus.json"
     },
     {
       "id": "proprium.dominica-ii-post-epiphaniam-alleluia",
@@ -1430,6 +1538,54 @@
       "id": "proprium.dominica-iii-adventus-secreta",
       "path": "texts/proprium/dominica-iii-adventus-secreta.json",
       "title": "Devotiónis nostræ tibi"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-collecta",
+      "path": "texts/proprium/dominica-iii-in-quadragesima-collecta.json",
+      "title": "Quǽsumus, omnípotens Deus, vota humílium réspice: atque",
+      "evidence": "bibliography/texts/proprium/dominica-iii-in-quadragesima-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-communio",
+      "path": "texts/proprium/dominica-iii-in-quadragesima-communio.json",
+      "title": "Passer invénit sibi domum, et turtur nidum",
+      "evidence": "bibliography/texts/proprium/dominica-iii-in-quadragesima-communio.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-epistola",
+      "path": "texts/proprium/dominica-iii-in-quadragesima-epistola.json",
+      "title": "Fratres: Estóte imitatóres Dei, sicut fílii caríssimi",
+      "evidence": "bibliography/texts/proprium/dominica-iii-in-quadragesima-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-evangelium",
+      "path": "texts/proprium/dominica-iii-in-quadragesima-evangelium.json",
+      "title": "In illo témpore: Erat Iesus eiíciens dæmónium",
+      "evidence": "bibliography/texts/proprium/dominica-iii-in-quadragesima-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-graduale",
+      "path": "texts/proprium/dominica-iii-in-quadragesima-graduale.json",
+      "title": "Exsúrge, Dómine, non præváleat homo: iudicéntur gentes",
+      "evidence": "bibliography/texts/proprium/dominica-iii-in-quadragesima-graduale.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-introitus",
+      "path": "texts/proprium/dominica-iii-in-quadragesima-introitus.json",
+      "title": "Oculi mei semper ad Dóminum, quia ipse",
+      "evidence": "bibliography/texts/proprium/dominica-iii-in-quadragesima-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-postcommunio",
+      "path": "texts/proprium/dominica-iii-in-quadragesima-postcommunio.json",
+      "title": "A cunctis nos, quǽsumus, Dómine, reátibus et",
+      "evidence": "bibliography/texts/proprium/dominica-iii-in-quadragesima-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-iii-in-quadragesima-tractus",
+      "path": "texts/proprium/dominica-iii-in-quadragesima-tractus.json",
+      "title": "Ad te levávi óculos meos, qui hábitas",
+      "evidence": "bibliography/texts/proprium/dominica-iii-in-quadragesima-tractus.json"
     },
     {
       "id": "proprium.dominica-iii-post-epiphaniam-alleluia",
@@ -1798,6 +1954,54 @@
       "id": "proprium.dominica-iv-adventus-secreta",
       "path": "texts/proprium/dominica-iv-adventus-secreta.json",
       "title": "Sacrifíciis præséntibus"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-collecta",
+      "path": "texts/proprium/dominica-iv-in-quadragesima-collecta.json",
+      "title": "Concéde, quǽsumus, omnípotens Deus: ut, qui ex",
+      "evidence": "bibliography/texts/proprium/dominica-iv-in-quadragesima-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-communio",
+      "path": "texts/proprium/dominica-iv-in-quadragesima-communio.json",
+      "title": "Ierúsalem, quæ ædificátur ut cívitas, cuius participátio",
+      "evidence": "bibliography/texts/proprium/dominica-iv-in-quadragesima-communio.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-epistola",
+      "path": "texts/proprium/dominica-iv-in-quadragesima-epistola.json",
+      "title": "Fratres: Scriptum est: Quóniam Abraham duos fílios",
+      "evidence": "bibliography/texts/proprium/dominica-iv-in-quadragesima-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-evangelium",
+      "path": "texts/proprium/dominica-iv-in-quadragesima-evangelium.json",
+      "title": "In illo témpore: Abiit Iesus trans mare",
+      "evidence": "bibliography/texts/proprium/dominica-iv-in-quadragesima-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-introitus",
+      "path": "texts/proprium/dominica-iv-in-quadragesima-introitus.json",
+      "title": "Lætáre, Ierúsalem: et convéntum fácite, omnes qui",
+      "evidence": "bibliography/texts/proprium/dominica-iv-in-quadragesima-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-offertorium",
+      "path": "texts/proprium/dominica-iv-in-quadragesima-offertorium.json",
+      "title": "Laudáte Dóminum, quia benígnus est: psállite nómini",
+      "evidence": "bibliography/texts/proprium/dominica-iv-in-quadragesima-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-postcommunio",
+      "path": "texts/proprium/dominica-iv-in-quadragesima-postcommunio.json",
+      "title": "Da nobis, quǽsumus, miséricors Deus: ut sancta",
+      "evidence": "bibliography/texts/proprium/dominica-iv-in-quadragesima-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-iv-in-quadragesima-tractus",
+      "path": "texts/proprium/dominica-iv-in-quadragesima-tractus.json",
+      "title": "Qui confídunt in Dómino, sicut mons Sion",
+      "evidence": "bibliography/texts/proprium/dominica-iv-in-quadragesima-tractus.json"
     },
     {
       "id": "proprium.dominica-iv-post-epiphaniam-collecta",
@@ -4766,7 +4970,7 @@
     "formularies": "formularies.json",
     "metrics": "metrics.json"
   },
-  "morphology": 855,
+  "morphology": 866,
   "kalendarium": [
     2026,
     2101

@@ -104,6 +104,13 @@ describe('the calendar this edition ships', () => {
 		expect(dayOn('2027-02-07')?.formulary).toBe('dominica-in-quinquagesima');
 	});
 
+	it('carries the first four Sundays of Lent', () => {
+		expect(dayOn('2027-02-14')?.formulary).toBe('dominica-i-in-quadragesima');
+		expect(dayOn('2027-02-21')?.formulary).toBe('dominica-ii-in-quadragesima');
+		expect(dayOn('2027-02-28')?.formulary).toBe('dominica-iii-in-quadragesima');
+		expect(dayOn('2027-03-07')?.formulary).toBe('dominica-iv-in-quadragesima');
+	});
+
 	it('says which formulary today has throughout the span this edition carries', () => {
 		// Advent, Christmas and the completed post-Pentecost cycle resolve to a
 		// formulary the picker can open. Christmas Day selects the daytime Mass

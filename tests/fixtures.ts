@@ -119,24 +119,51 @@ async function pinClock(page: import('@playwright/test').Page) {
 	}, `${PINNED}T10:00:00`);
 }
 
-function translate(
+async function translate(
 	page: import('@playwright/test').Page,
 	testInfo: import('@playwright/test').TestInfo
 ) {
 	if (testInfo.project.name !== 'offline') return;
+	const storageBridge = 'scrutabor-e2e-storage:';
+	// file:// storage is not specified consistently across browsers. Preserve
+	// the exact storage snapshot through the deliberate about:blank document,
+	// then restore it before app.html reads the reader's settings. window.name
+	// survives that navigation and an init script runs before any page script.
+	await page.addInitScript((prefix) => {
+		if (location.protocol !== 'file:' || !window.name.startsWith(prefix)) return;
+		try {
+			const entries = JSON.parse(window.name.slice(prefix.length)) as [string, string][];
+			localStorage.clear();
+			for (const [key, value] of entries) localStorage.setItem(key, value);
+		} finally {
+			window.name = '';
+		}
+	}, storageBridge);
+	const stashStorage = () =>
+		page.evaluate((prefix) => {
+			try {
+				window.name = prefix + JSON.stringify(Object.entries(localStorage));
+			} catch {
+				window.name = prefix + '[]';
+			}
+		}, storageBridge);
 	const goto = page.goto.bind(page);
 	page.goto = async (url: string, options?: Parameters<typeof goto>[1]) => {
 		if (!url.startsWith('/')) return goto(url, options);
-		// `about:blank` first, and not for tidiness. On the site every goto is
-		// a document load: the reader arrives with nothing remembered. In the
-		// folder the whole book is one document and a goto differing only in
-		// the hash is a same-document navigation — or, when the address is
-		// unchanged, no navigation at all. Two tests said so before this did:
-		// an about sheet that stayed open through what the test called a fresh
-		// load, and a deep link that never opened its word. Clearing the
-		// document first makes the translation exact.
+		await stashStorage();
+		// On the site every goto is a document load. In the folder the whole book
+		// is one document and a route change is only a hash navigation. Clearing
+		// the document first preserves the fresh-load contract; the bridge above
+		// preserves only the storage that a real navigation would retain.
 		await goto('about:blank');
 		return goto(offlineUrl(projectRoot(testInfo), url), options);
+	};
+	const reload = page.reload.bind(page);
+	page.reload = async (options?: Parameters<typeof reload>[0]) => {
+		// Chromium can also discard file:// storage while reloading the same
+		// document. Carry the snapshot across that fresh load just as goto does.
+		await stashStorage();
+		return reload(options);
 	};
 }
 
@@ -175,7 +202,7 @@ export const bare = base.extend<object>({
 		const reachedOut: string[] = [];
 		await guard(page, reachedOut);
 		await pinClock(page);
-		translate(page, testInfo);
+		await translate(page, testInfo);
 		await use(page);
 		expect(reachedOut, 'the page tried to reach the network').toEqual([]);
 	}
@@ -193,7 +220,7 @@ export const test = base.extend<object>({
 		const reachedOut: string[] = [];
 		await guard(page, reachedOut);
 		await pinClock(page);
-		translate(page, testInfo);
+		await translate(page, testInfo);
 
 		const goto = page.goto.bind(page);
 		page.goto = async (url: string, options?: Parameters<typeof goto>[1]) => {

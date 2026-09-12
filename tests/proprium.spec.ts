@@ -110,7 +110,7 @@ test('a resolved day whose texts are absent says exactly that', async ({ page })
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo');
 	const dialog = await openPicker(page);
-	await selectCalendarDate(dialog, '2027-02-14');
+	await selectCalendarDate(dialog, '2027-03-14');
 	await expect(dialog).toContainText('Dzień rozpoznany, formularz jeszcze niedostępny');
 	await dialog.getByRole('button', { name: 'Otwórz bez formularza' }).click();
 	await expect(page.locator('.picker.day .state')).toHaveText('jeszcze nie w tym wydaniu');
@@ -154,6 +154,21 @@ test('the pre-Lent Sundays open from dates without requiring their names', async
 
 	await page.goto('/app/pl/ordo/catechumenorum?dies=2027-02-07');
 	await expect(page.locator('.picker.day .day-open')).toContainText('Niedziela Pięćdziesiątnicy');
+});
+
+test('the first four Sundays of Lent open from dates without requiring their names', async ({
+	page
+}) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	for (const [date, title] of [
+		['2027-02-14', '1. Niedziela Wielkiego Postu'],
+		['2027-02-21', '2. Niedziela Wielkiego Postu'],
+		['2027-02-28', '3. Niedziela Wielkiego Postu'],
+		['2027-03-07', '4. Niedziela Wielkiego Postu']
+	]) {
+		await page.goto(`/app/pl/ordo/catechumenorum?dies=${date}`);
+		await expect(page.locator('.picker.day .day-open')).toContainText(title);
+	}
 });
 
 test('the Vigil Alleluia appears when Christmas Eve falls on Sunday', async ({ page }) => {
@@ -499,7 +514,7 @@ test('a choice made yesterday expires at midnight', async ({ page }) => {
 
 test('a real formulary not yet written is distinct from a malformed value', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.goto('/app/en/ordo/catechumenorum?dies=dominica-i-in-quadragesima');
+	await page.goto('/app/en/ordo/catechumenorum?dies=dominica-i-passionis');
 	await settled(page);
 	await expect(page.locator('.picker.day .state')).toHaveText('not yet in this edition');
 });

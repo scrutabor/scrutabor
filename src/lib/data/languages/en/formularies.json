@@ -127,12 +127,20 @@
    "title": "First Sunday of Advent"
   },
   {
+   "id": "dominica-i-in-quadragesima",
+   "title": "First Sunday of Lent"
+  },
+  {
    "id": "dominica-i-post-epiphaniam",
    "title": "First Sunday after Epiphany"
   },
   {
    "id": "dominica-ii-adventus",
    "title": "Second Sunday of Advent"
+  },
+  {
+   "id": "dominica-ii-in-quadragesima",
+   "title": "Second Sunday of Lent"
   },
   {
    "id": "dominica-ii-post-epiphaniam",
@@ -145,6 +153,10 @@
   {
    "id": "dominica-iii-adventus",
    "title": "Third Sunday of Advent"
+  },
+  {
+   "id": "dominica-iii-in-quadragesima",
+   "title": "Third Sunday of Lent"
   },
   {
    "id": "dominica-iii-post-epiphaniam",
@@ -173,6 +185,10 @@
   {
    "id": "dominica-iv-adventus",
    "title": "Fourth Sunday of Advent"
+  },
+  {
+   "id": "dominica-iv-in-quadragesima",
+   "title": "Fourth Sunday of Lent"
   },
   {
    "id": "dominica-iv-post-epiphaniam",

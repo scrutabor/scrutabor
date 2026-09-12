@@ -127,12 +127,20 @@
    "title": "I Niedziela Adwentu"
   },
   {
+   "id": "dominica-i-in-quadragesima",
+   "title": "1. Niedziela Wielkiego Postu"
+  },
+  {
    "id": "dominica-i-post-epiphaniam",
    "title": "I Niedziela po Objawieniu Pańskim"
   },
   {
    "id": "dominica-ii-adventus",
    "title": "II Niedziela Adwentu"
+  },
+  {
+   "id": "dominica-ii-in-quadragesima",
+   "title": "2. Niedziela Wielkiego Postu"
   },
   {
    "id": "dominica-ii-post-epiphaniam",
@@ -145,6 +153,10 @@
   {
    "id": "dominica-iii-adventus",
    "title": "III Niedziela Adwentu"
+  },
+  {
+   "id": "dominica-iii-in-quadragesima",
+   "title": "3. Niedziela Wielkiego Postu"
   },
   {
    "id": "dominica-iii-post-epiphaniam",
@@ -173,6 +185,10 @@
   {
    "id": "dominica-iv-adventus",
    "title": "IV Niedziela Adwentu"
+  },
+  {
+   "id": "dominica-iv-in-quadragesima",
+   "title": "4. Niedziela Wielkiego Postu"
   },
   {
    "id": "dominica-iv-post-epiphaniam",

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-iii-in-quadragesima-tractus",
+  "title":"Ad te levávi óculos meos, qui hábitas",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-iii-in-quadragesima",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Ad","l":"ad","m":3,"h":"w002"},{"i":"w002","f":"te","l":"tu","m":4},{"i":"w003","f":"levávi","l":"levo","m":2},{"i":"w004","f":"óculos","l":"oculus","m":90},{"i":"w005","f":"meos","l":"meus","p":",","m":91,"h":"w004"},{"i":"w006","f":"qui","l":"qui","m":18},{"i":"w007","f":"hábitas","l":"habito","m":164},{"i":"w008","f":"in","l":"in","m":0,"h":"w009"},{"i":"w009","f":"cælis","l":"caelum","p":".","m":51},{"i":"w010","f":"Ecce","l":"ecce","p":",","m":46},{"i":"w011","f":"sicut","l":"sicut","m":15},{"i":"w012","f":"óculi","l":"oculus","m":118},{"i":"w013","f":"servórum","l":"servus","m":79},{"i":"w014","f":"in","l":"in","m":0,"h":"w015"},{"i":"w015","f":"mánibus","l":"manus","m":317},{"i":"w016","f":"dominórum","l":"dominus","m":79},{"i":"w017","f":"suórum","l":"suus","p":".","m":76,"h":"w016"},{"i":"w018","f":"Et","l":"et","m":15},{"i":"w019","f":"sicut","l":"sicut","m":15},{"i":"w020","f":"óculi","l":"oculus","m":118},{"i":"w021","f":"ancíllæ","l":"ancilla","m":64},{"i":"w022","f":"in","l":"in","m":0,"h":"w023"},{"i":"w023","f":"mánibus","l":"manus","m":317},{"i":"w024","f":"dóminæ","l":"domina","m":64},{"i":"w025","f":"suæ","l":"suus","p":":","m":14,"h":"w024"},{"i":"w026","f":"ita","l":"ita","m":32},{"i":"w027","f":"óculi","l":"oculus","m":118},{"i":"w028","f":"nostri","l":"nos","m":330,"a":3},{"i":"w029","f":"ad","l":"ad","m":3,"h":"w030"},{"i":"w030","f":"Dóminum","l":"dominus","p":",","m":35},{"i":"w031","f":"Deum","l":"deus","m":35},{"i":"w032","f":"nostrum","l":"noster","p":",","m":96,"h":"w031"},{"i":"w033","f":"donec","l":"donec","m":15},{"i":"w034","f":"misereátur","l":"misereor","m":328},{"i":"w035","f":"nostri","l":"nos","p":".","m":330,"a":3},{"i":"w036","f":"Miserére","l":"misereor","m":52},{"i":"w037","f":"nobis","l":"nos","p":",","m":53},{"i":"w038","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w039","f":"miserére","l":"misereor","m":52},{"i":"w040","f":"nobis","l":"nos","p":".","m":53}]}
+  ]
+}
