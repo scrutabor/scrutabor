@@ -149,7 +149,7 @@ describe('lookups', () => {
 		);
 	});
 
-	it('keeps the mandatory Corpus Christi sequence and the common Preface fallback', async () => {
+	it('keeps the mandatory Corpus Christi sequence and assembles the common Preface', async () => {
 		const feast = await properData('corporis-christi', 'en');
 		expect(feast?.parts.map(({ part }) => part)).toEqual([
 			'introitus',
@@ -161,10 +161,13 @@ describe('lookups', () => {
 			'evangelium',
 			'offertorium',
 			'secreta',
+			'praefatio',
 			'communio',
 			'postcommunio'
 		]);
-		expect(feast?.parts.some(({ part }) => part === 'praefatio')).toBe(false);
+		expect(feast?.parts.find(({ part }) => part === 'praefatio')?.key).toBe(
+			'ordinarium/praefatio-communis'
+		);
 	});
 
 	it('assembles the Sacred Heart Preface in the Canon position', async () => {
