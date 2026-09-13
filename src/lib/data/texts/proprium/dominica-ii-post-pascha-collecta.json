@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-ii-post-pascha-collecta",
+  "title":"Deus, qui in Fílii tui humilitáte iacéntem",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-ii-post-pascha",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Deus","l":"deus","p":",","m":60},{"i":"w002","f":"qui","l":"qui","m":18},{"i":"w003","f":"in","l":"in","m":0,"h":"w006"},{"i":"w004","f":"Fílii","l":"filius","m":54,"a":0},{"i":"w005","f":"tui","l":"tuus","m":99,"s":true},{"i":"w006","f":"humilitáte","l":"humilitas","m":45},{"i":"w007","f":"iacéntem","l":"iaceo","m":478,"s":true},{"i":"w008","f":"mundum","l":"mundus","m":35},{"i":"w009","f":"erexísti","l":"erigo","p":":","m":154},{"i":"w010","f":"fidélibus","l":"fidelis","m":204,"s":true},{"i":"w011","f":"tuis","l":"tuus","m":236,"s":true},{"i":"w012","f":"perpétuam","l":"perpetuus","m":8,"s":true},{"i":"w013","f":"concéde","l":"concedo","m":86},{"i":"w014","f":"lætítiam","l":"laetitia","p":";","m":141},{"i":"w015","f":"ut","l":"ut","p":",","m":15},{"i":"w016","f":"quos","l":"qui","m":49},{"i":"w017","f":"perpétuæ","l":"perpetuus","m":14,"h":"w018"},{"i":"w018","f":"mortis","l":"mors","m":13},{"i":"w019","f":"eripuísti","l":"eripio","m":154},{"i":"w020","f":"cásibus","l":"casus","p":",","m":583},{"i":"w021","f":"gáudiis","l":"gaudium","m":1},{"i":"w022","f":"fácias","l":"facio","m":202},{"i":"w023","f":"pérfrui","l":"perfruor","m":95},{"i":"w024","f":"sempitérnis","l":"sempiternus","p":".","m":236,"s":true},{"i":"w025","f":"Per","l":"per","m":3,"h":"w026"},{"i":"w026","f":"eúndem","l":"idem","m":36},{"i":"w027","f":"Dóminum","l":"dominus","m":35},{"i":"w028","f":"nostrum","l":"noster","m":96,"h":"w029"},{"i":"w029","f":"Iesum","l":"Iesus","m":38},{"i":"w030","f":"Christum","l":"Christus","p":",","m":35},{"i":"w031","f":"Fílium","l":"filius","m":35},{"i":"w032","f":"tuum","l":"tuus","p":":","m":96,"h":"w031"},{"i":"w033","f":"Qui","l":"qui","m":18},{"i":"w034","f":"tecum","l":"tu","m":131},{"i":"w035","f":"vivit","l":"vivo","m":140},{"i":"w036","f":"et","l":"et","m":15},{"i":"w037","f":"regnat","l":"regno","m":119},{"i":"w038","f":"in","l":"in","m":0,"h":"w039"},{"i":"w039","f":"unitáte","l":"unitas","m":45},{"i":"w040","f":"Spíritus","l":"spiritus","m":250},{"i":"w041","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w040"},{"i":"w042","f":"Deus","l":"deus","p":",","m":60},{"i":"w043","f":"per","l":"per","m":3,"h":"w045"},{"i":"w044","f":"ómnia","l":"omnis","m":129,"h":"w045"},{"i":"w045","f":"sǽcula","l":"saeculum","m":85},{"i":"w046","f":"sæculórum","l":"saeculum","p":".","m":145},{"i":"w047","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

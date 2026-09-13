@@ -2360,8 +2360,378 @@
    ]
   },
   {
-   "id": "sanctissimae-trinitatis",
+   "id": "dominica-in-albis",
    "order": 30,
+   "collection": "temporale",
+   "season": "paschale",
+   "observance": "dominica-in-albis",
+   "calendar": {
+    "key": "dominica-in-albis",
+    "default": true
+   },
+   "title": "Dominica in Albis in Octava Paschæ",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-in-albis-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-in-albis-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-in-albis-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-in-albis-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-in-albis-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-in-albis-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-in-albis-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-paschalis-in-die",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-in-albis-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-in-albis-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-ii-post-pascha",
+   "order": 31,
+   "collection": "temporale",
+   "season": "paschale",
+   "observance": "dominica-ii-post-pascha",
+   "calendar": {
+    "key": "dominica-ii-post-pascha",
+    "default": true
+   },
+   "title": "Dominica II post Pascha",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-ii-post-pascha-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-ii-post-pascha-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-ii-post-pascha-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-ii-post-pascha-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-ii-post-pascha-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-ii-post-pascha-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-ii-post-pascha-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-paschalis-in-die",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-ii-post-pascha-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-ii-post-pascha-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-iii-post-pascha",
+   "order": 32,
+   "collection": "temporale",
+   "season": "paschale",
+   "observance": "dominica-iii-post-pascha",
+   "calendar": {
+    "key": "dominica-iii-post-pascha",
+    "default": true
+   },
+   "title": "Dominica III post Pascha",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-iii-post-pascha-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-iii-post-pascha-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-iii-post-pascha-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-iii-post-pascha-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-iii-post-pascha-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-iii-post-pascha-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-iii-post-pascha-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-paschalis-in-die",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-iii-post-pascha-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-iii-post-pascha-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-iv-post-pascha",
+   "order": 33,
+   "collection": "temporale",
+   "season": "paschale",
+   "observance": "dominica-iv-post-pascha",
+   "calendar": {
+    "key": "dominica-iv-post-pascha",
+    "default": true
+   },
+   "title": "Dominica IV post Pascha",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-iv-post-pascha-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-iv-post-pascha-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-iv-post-pascha-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-iv-post-pascha-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-iv-post-pascha-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-iv-post-pascha-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-iv-post-pascha-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-paschalis-in-die",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-iv-post-pascha-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-iv-post-pascha-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-v-post-pascha",
+   "order": 34,
+   "collection": "temporale",
+   "season": "paschale",
+   "observance": "dominica-v-post-pascha",
+   "calendar": {
+    "key": "dominica-v-post-pascha",
+    "default": true
+   },
+   "title": "Dominica V post Pascha",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-v-post-pascha-introitus",
+     "relation": "proper"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-v-post-pascha-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-v-post-pascha-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-v-post-pascha-alleluia",
+     "relation": "proper"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-v-post-pascha-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-v-post-pascha-offertorium",
+     "relation": "proper"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-v-post-pascha-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-paschalis-in-die",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-v-post-pascha-communio",
+     "relation": "proper"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-v-post-pascha-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "sanctissimae-trinitatis",
+   "order": 35,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "sanctissimae-trinitatis",
@@ -2441,7 +2811,7 @@
   },
   {
    "id": "corporis-christi",
-   "order": 31,
+   "order": 36,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "corporis-christi",
@@ -2521,7 +2891,7 @@
   },
   {
    "id": "sacratissimi-cordis-iesu",
-   "order": 32,
+   "order": 37,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "sacratissimi-cordis-iesu",
@@ -2601,7 +2971,7 @@
   },
   {
    "id": "dominica-ii-post-pentecosten",
-   "order": 33,
+   "order": 38,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-ii-post-pentecosten",
@@ -2681,7 +3051,7 @@
   },
   {
    "id": "dominica-iii-post-pentecosten",
-   "order": 34,
+   "order": 39,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-iii-post-pentecosten",
@@ -2761,7 +3131,7 @@
   },
   {
    "id": "dominica-iv-post-pentecosten",
-   "order": 35,
+   "order": 40,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-iv-post-pentecosten",
@@ -2841,7 +3211,7 @@
   },
   {
    "id": "dominica-v-post-pentecosten",
-   "order": 36,
+   "order": 41,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-v-post-pentecosten",
@@ -2921,7 +3291,7 @@
   },
   {
    "id": "dominica-vi-post-pentecosten",
-   "order": 37,
+   "order": 42,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-vi-post-pentecosten",
@@ -3001,7 +3371,7 @@
   },
   {
    "id": "dominica-vii-post-pentecosten",
-   "order": 38,
+   "order": 43,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-vii-post-pentecosten",
@@ -3081,7 +3451,7 @@
   },
   {
    "id": "dominica-viii-post-pentecosten",
-   "order": 39,
+   "order": 44,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-viii-post-pentecosten",
@@ -3161,7 +3531,7 @@
   },
   {
    "id": "dominica-ix-post-pentecosten",
-   "order": 40,
+   "order": 45,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-ix-post-pentecosten",
@@ -3241,7 +3611,7 @@
   },
   {
    "id": "dominica-x-post-pentecosten",
-   "order": 41,
+   "order": 46,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-x-post-pentecosten",
@@ -3321,7 +3691,7 @@
   },
   {
    "id": "dominica-xi-post-pentecosten",
-   "order": 42,
+   "order": 47,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xi-post-pentecosten",
@@ -3401,7 +3771,7 @@
   },
   {
    "id": "dominica-xii-post-pentecosten",
-   "order": 43,
+   "order": 48,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xii-post-pentecosten",
@@ -3481,7 +3851,7 @@
   },
   {
    "id": "dominica-xiii-post-pentecosten",
-   "order": 44,
+   "order": 49,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xiii-post-pentecosten",
@@ -3561,7 +3931,7 @@
   },
   {
    "id": "dominica-xiv-post-pentecosten",
-   "order": 45,
+   "order": 50,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xiv-post-pentecosten",
@@ -3641,7 +4011,7 @@
   },
   {
    "id": "dominica-xv-post-pentecosten",
-   "order": 46,
+   "order": 51,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xv-post-pentecosten",
@@ -3721,7 +4091,7 @@
   },
   {
    "id": "dominica-xvi-post-pentecosten",
-   "order": 47,
+   "order": 52,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xvi-post-pentecosten",
@@ -3801,7 +4171,7 @@
   },
   {
    "id": "dominica-xvii-post-pentecosten",
-   "order": 48,
+   "order": 53,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xvii-post-pentecosten",
@@ -3881,7 +4251,7 @@
   },
   {
    "id": "dominica-xviii-post-pentecosten",
-   "order": 49,
+   "order": 54,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xviii-post-pentecosten",
@@ -3961,7 +4331,7 @@
   },
   {
    "id": "dominica-xix-post-pentecosten",
-   "order": 50,
+   "order": 55,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xix-post-pentecosten",
@@ -4041,7 +4411,7 @@
   },
   {
    "id": "dominica-xx-post-pentecosten",
-   "order": 51,
+   "order": 56,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xx-post-pentecosten",
@@ -4121,7 +4491,7 @@
   },
   {
    "id": "dominica-xxi-post-pentecosten",
-   "order": 52,
+   "order": 57,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xxi-post-pentecosten",
@@ -4201,7 +4571,7 @@
   },
   {
    "id": "dominica-xxii-post-pentecosten",
-   "order": 53,
+   "order": 58,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xxii-post-pentecosten",
@@ -4281,7 +4651,7 @@
   },
   {
    "id": "dominica-xxiii-post-pentecosten",
-   "order": 54,
+   "order": 59,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xxiii-post-pentecosten",
@@ -4361,7 +4731,7 @@
   },
   {
    "id": "dominica-xxiv-post-pentecosten",
-   "order": 55,
+   "order": 60,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xxiv-post-pentecosten",
@@ -4441,7 +4811,7 @@
   },
   {
    "id": "dominica-v-post-epiphaniam",
-   "order": 56,
+   "order": 61,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-v-post-epiphaniam",
@@ -4521,7 +4891,7 @@
   },
   {
    "id": "dominica-vi-post-epiphaniam",
-   "order": 57,
+   "order": 62,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-vi-post-epiphaniam",
@@ -4601,7 +4971,7 @@
   },
   {
    "id": "d-n-iesu-christi-regis",
-   "order": 58,
+   "order": 63,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "d-n-iesu-christi-regis",
@@ -4687,7 +5057,7 @@
   },
   {
    "id": "beata-maria-virgo-regina",
-   "order": 59,
+   "order": 64,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "beata-maria-virgo-regina",
@@ -4773,7 +5143,7 @@
   },
   {
    "id": "nativitas-sancti-ioannis-baptistae",
-   "order": 60,
+   "order": 65,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "nativitas-sancti-ioannis-baptistae",
@@ -4853,7 +5223,7 @@
   },
   {
    "id": "sancti-petri-et-pauli-apostolorum",
-   "order": 61,
+   "order": 66,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-petri-et-pauli-apostolorum",
@@ -4933,7 +5303,7 @@
   },
   {
    "id": "pretiosissimi-sanguinis-domini-nostri-iesu-christi",
-   "order": 62,
+   "order": 67,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "pretiosissimi-sanguinis-domini-nostri-iesu-christi",
@@ -5019,7 +5389,7 @@
   },
   {
    "id": "visitatio-beatae-mariae-virginis",
-   "order": 63,
+   "order": 68,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "visitatio-beatae-mariae-virginis",
@@ -5099,7 +5469,7 @@
   },
   {
    "id": "sancti-iacobi-apostoli",
-   "order": 64,
+   "order": 69,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-iacobi-apostoli",
@@ -5179,7 +5549,7 @@
   },
   {
    "id": "sanctae-annae-matris-beatae-mariae-virginis",
-   "order": 65,
+   "order": 70,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sanctae-annae-matris-beatae-mariae-virginis",
@@ -5265,7 +5635,7 @@
   },
   {
    "id": "transfiguratio-domini",
-   "order": 66,
+   "order": 71,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "transfiguratio-domini",
@@ -5345,7 +5715,7 @@
   },
   {
    "id": "sancti-laurentii-martyris",
-   "order": 67,
+   "order": 72,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-laurentii-martyris",
@@ -5425,7 +5795,7 @@
   },
   {
    "id": "assumptio-beatae-mariae-virginis",
-   "order": 68,
+   "order": 73,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "assumptio-beatae-mariae-virginis",
@@ -5505,7 +5875,7 @@
   },
   {
    "id": "sancti-ioachim-confessoris",
-   "order": 69,
+   "order": 74,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-ioachim-confessoris",
@@ -5591,7 +5961,7 @@
   },
   {
    "id": "immaculatum-cor-beatae-mariae-virginis",
-   "order": 70,
+   "order": 75,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "immaculatum-cor-beatae-mariae-virginis",
@@ -5677,7 +6047,7 @@
   },
   {
    "id": "sancti-bartholomaei-apostoli",
-   "order": 71,
+   "order": 76,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-bartholomaei-apostoli",
@@ -5757,7 +6127,7 @@
   },
   {
    "id": "nativitas-beatae-mariae-virginis",
-   "order": 72,
+   "order": 77,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "nativitas-beatae-mariae-virginis",
@@ -5843,7 +6213,7 @@
   },
   {
    "id": "exaltatio-sanctae-crucis",
-   "order": 73,
+   "order": 78,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "exaltatio-sanctae-crucis",
@@ -5923,7 +6293,7 @@
   },
   {
    "id": "septem-dolorum-beatae-mariae-virginis",
-   "order": 74,
+   "order": 79,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "septem-dolorum-beatae-mariae-virginis",
@@ -6015,7 +6385,7 @@
   },
   {
    "id": "sancti-matthaei-apostoli-et-evangelistae",
-   "order": 75,
+   "order": 80,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-matthaei-apostoli-et-evangelistae",
@@ -6095,7 +6465,7 @@
   },
   {
    "id": "dedicatio-sancti-michaelis-archangeli",
-   "order": 76,
+   "order": 81,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "dedicatio-sancti-michaelis-archangeli",
@@ -6175,7 +6545,7 @@
   },
   {
    "id": "beatae-mariae-virginis-a-rosario",
-   "order": 77,
+   "order": 82,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "beatae-mariae-virginis-a-rosario",
@@ -6261,7 +6631,7 @@
   },
   {
    "id": "maternitas-beatae-mariae-virginis",
-   "order": 78,
+   "order": 83,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "maternitas-beatae-mariae-virginis",
@@ -6347,7 +6717,7 @@
   },
   {
    "id": "sancti-lucae-evangelistae",
-   "order": 79,
+   "order": 84,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-lucae-evangelistae",
@@ -6427,7 +6797,7 @@
   },
   {
    "id": "sanctorum-simonis-et-iudae-apostolorum",
-   "order": 80,
+   "order": 85,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sanctorum-simonis-et-iudae-apostolorum",
@@ -6507,7 +6877,7 @@
   },
   {
    "id": "omnium-sanctorum",
-   "order": 81,
+   "order": 86,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "omnium-sanctorum",
@@ -6587,7 +6957,7 @@
   },
   {
    "id": "commemoratio-omnium-fidelium-defunctorum",
-   "order": 82,
+   "order": 87,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "commemoratio-omnium-fidelium-defunctorum",
@@ -6675,7 +7045,7 @@
   },
   {
    "id": "commemoratio-omnium-fidelium-defunctorum-missa-ii",
-   "order": 83,
+   "order": 88,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "commemoratio-omnium-fidelium-defunctorum",
@@ -6762,7 +7132,7 @@
   },
   {
    "id": "commemoratio-omnium-fidelium-defunctorum-missa-iii",
-   "order": 84,
+   "order": 89,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "commemoratio-omnium-fidelium-defunctorum",
@@ -6849,7 +7219,7 @@
   },
   {
    "id": "dedicatio-archibasilicae-sanctissimi-salvatoris",
-   "order": 85,
+   "order": 90,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "dedicatio-archibasilicae-sanctissimi-salvatoris",

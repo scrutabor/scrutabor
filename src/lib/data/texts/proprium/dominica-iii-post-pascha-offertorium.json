@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-iii-post-pascha-offertorium",
+  "title":"Lauda, ánima mea, Dóminum: laudábo Dóminum in",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-iii-post-pascha",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Lauda","l":"laudo","p":",","m":41},{"i":"w002","f":"ánima","l":"anima","m":24},{"i":"w003","f":"mea","l":"meus","p":",","m":25,"h":"w002"},{"i":"w004","f":"Dóminum","l":"dominus","p":":","m":35},{"i":"w005","f":"laudábo","l":"laudo","m":313},{"i":"w006","f":"Dóminum","l":"dominus","m":35},{"i":"w007","f":"in","l":"in","m":0,"h":"w008"},{"i":"w008","f":"vita","l":"vita","m":30},{"i":"w009","f":"mea","l":"meus","p":":","m":25,"s":true},{"i":"w010","f":"psallam","l":"psallo","m":320},{"i":"w011","f":"Deo","l":"deus","m":186},{"i":"w012","f":"meo","l":"meus","p":",","m":101,"s":true},{"i":"w013","f":"quámdiu","l":"quamdiu","m":32},{"i":"w014","f":"ero","l":"sum","p":",","m":309},{"i":"w015","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

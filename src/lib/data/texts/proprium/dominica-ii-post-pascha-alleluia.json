@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-ii-post-pascha-alleluia",
+  "title":"Allelúia, allelúia. Cognovérunt discípuli Dóminum Iesum in",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-ii-post-pascha",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Cognovérunt","l":"cognosco","m":273},{"i":"w004","f":"discípuli","l":"discipulus","m":118},{"i":"w005","f":"Dóminum","l":"dominus","m":35},{"i":"w006","f":"Iesum","l":"Iesus","m":38},{"i":"w007","f":"in","l":"in","m":0,"h":"w008"},{"i":"w008","f":"fractióne","l":"fractio","m":45},{"i":"w009","f":"panis","l":"panis","p":".","m":113},{"i":"w010","f":"Allelúia","l":"alleluia","m":46},{"i":"w011","f":"Ego","l":"ego","m":143},{"i":"w012","f":"sum","l":"sum","m":172},{"i":"w013","f":"pastor","l":"pastor","m":50},{"i":"w014","f":"bonus","l":"bonus","p":":","m":59,"s":true},{"i":"w015","f":"et","l":"et","m":15},{"i":"w016","f":"cognósco","l":"cognosco","m":176},{"i":"w017","f":"oves","l":"ovis","m":16},{"i":"w018","f":"meas","l":"meus","p":",","m":180,"h":"w017"},{"i":"w019","f":"et","l":"et","m":15},{"i":"w020","f":"cognóscunt","l":"cognosco","m":298},{"i":"w021","f":"me","l":"ego","m":4},{"i":"w022","f":"meæ","l":"meus","p":".","m":14,"s":true},{"i":"w023","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

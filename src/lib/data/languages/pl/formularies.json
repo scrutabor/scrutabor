@@ -155,6 +155,10 @@
    "title": "II Niedziela po Objawieniu Pańskim"
   },
   {
+   "id": "dominica-ii-post-pascha",
+   "title": "2. Niedziela po Wielkanocy"
+  },
+  {
    "id": "dominica-ii-post-pentecosten",
    "title": "2. Niedziela po Zesłaniu Ducha Świętego"
   },
@@ -171,8 +175,16 @@
    "title": "III Niedziela po Objawieniu Pańskim"
   },
   {
+   "id": "dominica-iii-post-pascha",
+   "title": "3. Niedziela po Wielkanocy"
+  },
+  {
    "id": "dominica-iii-post-pentecosten",
    "title": "3. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-in-albis",
+   "title": "Niedziela Biała"
   },
   {
    "id": "dominica-in-quinquagesima",
@@ -203,6 +215,10 @@
    "title": "IV Niedziela po Objawieniu Pańskim"
   },
   {
+   "id": "dominica-iv-post-pascha",
+   "title": "4. Niedziela po Wielkanocy"
+  },
+  {
    "id": "dominica-iv-post-pentecosten",
    "title": "4. Niedziela po Zesłaniu Ducha Świętego"
   },
@@ -217,6 +233,10 @@
   {
    "id": "dominica-v-post-epiphaniam",
    "title": "Przeniesiona 5. Niedziela po Objawieniu Pańskim"
+  },
+  {
+   "id": "dominica-v-post-pascha",
+   "title": "5. Niedziela po Wielkanocy"
   },
   {
    "id": "dominica-v-post-pentecosten",

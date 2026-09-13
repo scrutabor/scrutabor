@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-v-post-pascha-alleluia",
+  "title":"Allelúia, allelúia. Surréxit Christus, et illúxit nobis",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-v-post-pascha",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Surréxit","l":"surgo","m":195},{"i":"w004","f":"Christus","l":"Christus","p":",","m":60},{"i":"w005","f":"et","l":"et","m":15},{"i":"w006","f":"illúxit","l":"illucesco","m":195},{"i":"w007","f":"nobis","l":"nos","p":",","m":53},{"i":"w008","f":"quos","l":"qui","m":49},{"i":"w009","f":"rédemit","l":"redimo","m":195},{"i":"w010","f":"sánguine","l":"sanguis","m":109},{"i":"w011","f":"suo","l":"suus","p":".","m":101,"h":"w010"},{"i":"w012","f":"Allelúia","l":"alleluia","p":".","m":46},{"i":"w013","f":"Exívi","l":"exeo","m":335},{"i":"w014","f":"a","l":"a","m":0,"h":"w015"},{"i":"w015","f":"Patre","l":"pater","p":",","m":109},{"i":"w016","f":"et","l":"et","m":15},{"i":"w017","f":"veni","l":"venio","m":6},{"i":"w018","f":"in","l":"in","m":3,"h":"w019"},{"i":"w019","f":"mundum","l":"mundus","p":":","m":35},{"i":"w020","f":"íterum","l":"iterum","m":32},{"i":"w021","f":"relínquo","l":"relinquo","m":176},{"i":"w022","f":"mundum","l":"mundus","p":",","m":35},{"i":"w023","f":"et","l":"et","m":15},{"i":"w024","f":"vado","l":"vado","m":176},{"i":"w025","f":"ad","l":"ad","m":3,"h":"w026"},{"i":"w026","f":"Patrem","l":"pater","p":".","m":162},{"i":"w027","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

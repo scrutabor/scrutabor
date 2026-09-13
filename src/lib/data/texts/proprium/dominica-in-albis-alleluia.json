@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-in-albis-alleluia",
+  "title":"Allelúia, allelúia. In die resurrectiónis meæ, dicit",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-in-albis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"In","l":"in","m":0,"h":"w004"},{"i":"w004","f":"die","l":"dies","m":358},{"i":"w005","f":"resurrectiónis","l":"resurrectio","m":13},{"i":"w006","f":"meæ","l":"meus","p":",","m":14,"h":"w005"},{"i":"w007","f":"dicit","l":"dico","m":140},{"i":"w008","f":"Dóminus","l":"dominus","p":",","m":60},{"i":"w009","f":"præcédam","l":"praecedo","m":320},{"i":"w010","f":"vos","l":"vos","m":49},{"i":"w011","f":"in","l":"in","m":3,"h":"w012"},{"i":"w012","f":"Galilǽam","l":"Galilaea","p":".","m":141},{"i":"w013","f":"Allelúia","l":"alleluia","p":".","m":46},{"i":"w014","f":"Post","l":"post","m":3,"h":"w015"},{"i":"w015","f":"dies","l":"dies","m":519,"a":1},{"i":"w016","f":"octo","l":"octo","p":",","m":87,"s":true},{"i":"w017","f":"iánuis","l":"ianua","m":150},{"i":"w018","f":"clausis","l":"claudo","p":",","m":496,"h":"w017"},{"i":"w019","f":"stetit","l":"sto","m":28},{"i":"w020","f":"Iesus","l":"Iesus","m":34},{"i":"w021","f":"in","l":"in","m":0,"h":"w027"},{"i":"w022","f":"médio","l":"medius","m":149,"s":true},{"i":"w023","f":"discipulórum","l":"discipulus","m":79},{"i":"w024","f":"suórum","l":"suus","p":",","m":76,"h":"w023"},{"i":"w025","f":"et","l":"et","m":15},{"i":"w026","f":"dixit","l":"dico","p":":","m":195},{"i":"w027","f":"Pax","l":"pax","m":45,"a":1},{"i":"w028","f":"vobis","l":"vos","p":".","m":53},{"i":"w029","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

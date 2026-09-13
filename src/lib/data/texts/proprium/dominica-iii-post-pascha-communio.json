@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-iii-post-pascha-communio",
+  "title":"Módicum, et non vidébitis me, allelúia: íterum",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-iii-post-pascha",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Módicum","l":"modicus","p":",","m":137,"s":true},{"i":"w002","f":"et","l":"et","m":15},{"i":"w003","f":"non","l":"non","m":32},{"i":"w004","f":"vidébitis","l":"video","m":563},{"i":"w005","f":"me","l":"ego","p":",","m":4},{"i":"w006","f":"allelúia","l":"alleluia","p":":","m":46},{"i":"w007","f":"íterum","l":"iterum","m":32},{"i":"w008","f":"módicum","l":"modicus","p":",","m":137,"s":true},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"vidébitis","l":"video","m":563},{"i":"w011","f":"me","l":"ego","p":",","m":4},{"i":"w012","f":"quia","l":"quia","m":15},{"i":"w013","f":"vado","l":"vado","m":176},{"i":"w014","f":"ad","l":"ad","m":3,"h":"w015"},{"i":"w015","f":"Patrem","l":"pater","p":",","m":162},{"i":"w016","f":"allelúia","l":"alleluia","p":",","m":46},{"i":"w017","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

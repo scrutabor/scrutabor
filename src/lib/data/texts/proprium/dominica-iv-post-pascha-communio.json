@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-iv-post-pascha-communio",
+  "title":"Cum vénerit Paráclitus Spíritus veritátis, ille árguet",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-iv-post-pascha",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Cum","l":"cum","m":15},{"i":"w002","f":"vénerit","l":"venio","m":531},{"i":"w003","f":"Paráclitus","l":"paraclitus","m":60},{"i":"w004","f":"Spíritus","l":"spiritus","m":250},{"i":"w005","f":"veritátis","l":"veritas","p":",","m":13},{"i":"w006","f":"ille","l":"ille","m":18},{"i":"w007","f":"árguet","l":"arguo","m":37},{"i":"w008","f":"mundum","l":"mundus","m":35},{"i":"w009","f":"de","l":"de","m":0,"h":"w010"},{"i":"w010","f":"peccáto","l":"peccatum","m":26},{"i":"w011","f":"et","l":"et","m":15},{"i":"w012","f":"de","l":"de","m":0,"h":"w013"},{"i":"w013","f":"iustítia","l":"iustitia","m":30},{"i":"w014","f":"et","l":"et","m":15},{"i":"w015","f":"de","l":"de","m":0,"h":"w016"},{"i":"w016","f":"iudício","l":"iudicium","p":",","m":26},{"i":"w017","f":"allelúia","l":"alleluia","p":",","m":46},{"i":"w018","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

@@ -122,6 +122,14 @@ describe('the calendar this edition ships', () => {
 		expect(dayOn('2027-03-28')?.formulary).toBe('dominica-resurrectionis');
 	});
 
+	it('carries every Sunday after Easter through the Rogation Sunday', () => {
+		expect(dayOn('2027-04-04')?.formulary).toBe('dominica-in-albis');
+		expect(dayOn('2027-04-11')?.formulary).toBe('dominica-ii-post-pascha');
+		expect(dayOn('2027-04-18')?.formulary).toBe('dominica-iii-post-pascha');
+		expect(dayOn('2027-04-25')?.formulary).toBe('dominica-iv-post-pascha');
+		expect(dayOn('2027-05-02')?.formulary).toBe('dominica-v-post-pascha');
+	});
+
 	it('says which formulary today has throughout the span this edition carries', () => {
 		// Advent, Christmas and the completed post-Pentecost cycle resolve to a
 		// formulary the picker can open. Christmas Day selects the daytime Mass
