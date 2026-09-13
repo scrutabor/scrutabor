@@ -1,0 +1,14 @@
+{
+  "id":"proprium.vigilia-pentecostes-alleluia",
+  "title":"Allelúia Confitémini Dómino, quóniam bonus: quóniam in",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"vigilia-pentecostes",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","m":46},{"i":"w002","f":"Confitémini","l":"confiteor","m":689,"a":1},{"i":"w003","f":"Dómino","l":"dominus","p":",","m":186},{"i":"w004","f":"quóniam","l":"quoniam","m":15},{"i":"w005","f":"bonus","l":"bonus","p":":","m":59,"s":true},{"i":"w006","f":"quóniam","l":"quoniam","m":15},{"i":"w007","f":"in","l":"in","m":3,"h":"w008"},{"i":"w008","f":"sǽculum","l":"saeculum","m":82},{"i":"w009","f":"misericórdia","l":"misericordia","m":24},{"i":"w010","f":"eius","l":"is","p":".","m":27}]}
+  ]
+}

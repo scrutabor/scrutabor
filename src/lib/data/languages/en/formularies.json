@@ -111,6 +111,10 @@
    "title": "Visitation of the Blessed Virgin Mary"
   },
   {
+   "id": "ascensio-domini",
+   "title": "Ascension of the Lord"
+  },
+  {
    "id": "commemoratio-baptismatis-domini",
    "title": "Commemoration of the Baptism of Our Lord Jesus Christ"
   },
@@ -225,6 +229,14 @@
   {
    "id": "dominica-ix-post-pentecosten",
    "title": "9th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-pentecostes",
+   "title": "Pentecost Sunday"
+  },
+  {
+   "id": "dominica-post-ascensionem",
+   "title": "Sunday after Ascension"
   },
   {
    "id": "dominica-resurrectionis",
@@ -365,6 +377,10 @@
   {
    "id": "vigilia-paschalis",
    "title": "Mass of the Easter Vigil"
+  },
+  {
+   "id": "vigilia-pentecostes",
+   "title": "Vigil of Pentecost"
   }
  ]
 }

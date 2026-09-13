@@ -97,6 +97,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-ascensionis",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-beatae-mariae-virginis",
        "roles": [
         "derived_digital_collation_aid"
@@ -196,6 +203,76 @@
       },
       {
        "id": "ordinarium.praefatio-sanctissimae-trinitatis",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-spiritus-sancti",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-secreta",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -2254,6 +2331,118 @@
       },
       {
        "id": "proprium.dominica-ix-post-pentecosten-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-sequentia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-secreta",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -5649,6 +5838,76 @@
       },
       {
        "id": "proprium.vigilia-paschalis-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-tractus",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -5776,6 +6035,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-ascensionis",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-beatae-mariae-virginis",
        "roles": [
         "official_text"
@@ -5875,6 +6141,76 @@
       },
       {
        "id": "ordinarium.praefatio-sanctissimae-trinitatis",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-spiritus-sancti",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-secreta",
        "roles": [
         "official_text"
        ],
@@ -7933,6 +8269,118 @@
       },
       {
        "id": "proprium.dominica-ix-post-pentecosten-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-sequentia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-secreta",
        "roles": [
         "official_text"
        ],
@@ -11328,6 +11776,76 @@
       },
       {
        "id": "proprium.vigilia-paschalis-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-tractus",
        "roles": [
         "official_text"
        ],

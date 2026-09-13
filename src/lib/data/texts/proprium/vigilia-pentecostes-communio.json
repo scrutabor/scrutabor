@@ -1,0 +1,14 @@
+{
+  "id":"proprium.vigilia-pentecostes-communio",
+  "title":"Ultimo festivitátis die dicébat Iesus: Qui in",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"vigilia-pentecostes",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Último","l":"ulterior","m":555,"h":"w003","a":3},{"i":"w002","f":"festivitátis","l":"festivitas","m":13},{"i":"w003","f":"die","l":"dies","m":358},{"i":"w004","f":"dicébat","l":"dico","m":502},{"i":"w005","f":"Iesus","l":"Iesus","p":":","m":34},{"i":"w006","f":"Qui","l":"qui","m":18},{"i":"w007","f":"in","l":"in","m":0,"h":"w008"},{"i":"w008","f":"me","l":"ego","m":131},{"i":"w009","f":"credit","l":"credo","p":",","m":140},{"i":"w010","f":"flúmina","l":"flumen","m":128},{"i":"w011","f":"de","l":"de","m":0,"h":"w012"},{"i":"w012","f":"ventre","l":"venter","m":109},{"i":"w013","f":"eius","l":"is","m":27},{"i":"w014","f":"fluent","l":"fluo","m":218},{"i":"w015","f":"aquæ","l":"aqua","m":64},{"i":"w016","f":"vivæ","l":"vivus","p":":","m":14,"h":"w015"},{"i":"w017","f":"hoc","l":"hic","m":189},{"i":"w018","f":"autem","l":"autem","m":15},{"i":"w019","f":"dixit","l":"dico","m":195},{"i":"w020","f":"de","l":"de","m":0,"h":"w021"},{"i":"w021","f":"Spíritu","l":"spiritus","p":",","m":100},{"i":"w022","f":"quem","l":"qui","m":36},{"i":"w023","f":"acceptúri","l":"accipio","m":209,"s":true},{"i":"w024","f":"erant","l":"sum","m":418},{"i":"w025","f":"credéntes","l":"credo","m":243,"s":true},{"i":"w026","f":"in","l":"in","m":3,"h":"w027"},{"i":"w027","f":"eum","l":"is","p":",","m":36},{"i":"w028","f":"allelúia","l":"alleluia","p":",","m":46},{"i":"w029","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

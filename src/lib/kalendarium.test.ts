@@ -130,6 +130,13 @@ describe('the calendar this edition ships', () => {
 		expect(dayOn('2027-05-02')?.formulary).toBe('dominica-v-post-pascha');
 	});
 
+	it('carries Ascension through Pentecost', () => {
+		expect(dayOn('2027-05-06')?.formulary).toBe('ascensio-domini');
+		expect(dayOn('2027-05-09')?.formulary).toBe('dominica-post-ascensionem');
+		expect(dayOn('2027-05-15')?.formulary).toBe('vigilia-pentecostes');
+		expect(dayOn('2027-05-16')?.formulary).toBe('dominica-pentecostes');
+	});
+
 	it('says which formulary today has throughout the span this edition carries', () => {
 		// Advent, Christmas and the completed post-Pentecost cycle resolve to a
 		// formulary the picker can open. Christmas Day selects the daytime Mass

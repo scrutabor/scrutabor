@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-post-ascensionem-alleluia",
+  "title":"Allelúia, allelúia. Regnávit Dóminus super omnes gentes",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"dominica-post-ascensionem",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Regnávit","l":"regno","m":28},{"i":"w004","f":"Dóminus","l":"dominus","m":60},{"i":"w005","f":"super","l":"super","m":3,"h":"w007"},{"i":"w006","f":"omnes","l":"omnis","m":180,"h":"w007"},{"i":"w007","f":"gentes","l":"gens","p":":","m":16},{"i":"w008","f":"Deus","l":"deus","m":60},{"i":"w009","f":"sedet","l":"sedeo","m":165},{"i":"w010","f":"super","l":"super","m":3,"h":"w011"},{"i":"w011","f":"sedem","l":"sedes","m":7},{"i":"w012","f":"sanctam","l":"sanctus","m":8,"s":true},{"i":"w013","f":"suam","l":"suus","p":".","m":8,"s":true},{"i":"w014","f":"Allelúia","l":"alleluia","p":".","m":46},{"i":"w015","f":"Non","l":"non","m":32},{"i":"w016","f":"vos","l":"vos","m":49},{"i":"w017","f":"relínquam","l":"relinquo","m":320},{"i":"w018","f":"órphanos","l":"orphanus","p":":","m":90},{"i":"w019","f":"vado","l":"vado","p":",","m":176},{"i":"w020","f":"et","l":"et","m":15},{"i":"w021","f":"vénio","l":"venio","m":230},{"i":"w022","f":"ad","l":"ad","m":3,"h":"w023"},{"i":"w023","f":"vos","l":"vos","p":",","m":49},{"i":"w024","f":"et","l":"et","m":15},{"i":"w025","f":"gaudébit","l":"gaudeo","m":19},{"i":"w026","f":"cor","l":"cor","m":136},{"i":"w027","f":"vestrum","l":"vester","p":".","m":137,"h":"w026"},{"i":"w028","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

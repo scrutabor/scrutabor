@@ -1,0 +1,14 @@
+{
+  "id":"proprium.dominica-post-ascensionem-communio",
+  "title":"Pater, cum essem cum eis, ego servábam",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"dominica-post-ascensionem",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Pater","l":"pater","p":",","m":50},{"i":"w002","f":"cum","l":"cum","m":15},{"i":"w003","f":"essem","l":"sum","m":838},{"i":"w004","f":"cum","l":"cum","m":0,"h":"w005"},{"i":"w005","f":"eis","l":"is","p":",","m":62},{"i":"w006","f":"ego","l":"ego","m":143},{"i":"w007","f":"servábam","l":"servo","m":840},{"i":"w008","f":"eos","l":"is","p":",","m":163},{"i":"w009","f":"quos","l":"qui","m":49},{"i":"w010","f":"dedísti","l":"do","m":283},{"i":"w011","f":"mihi","l":"ego","p":",","m":139},{"i":"w012","f":"allelúia","l":"alleluia","p":":","m":46},{"i":"w013","f":"nunc","l":"nunc","m":32},{"i":"w014","f":"autem","l":"autem","m":15},{"i":"w015","f":"ad","l":"ad","m":3,"h":"w016"},{"i":"w016","f":"te","l":"tu","m":4},{"i":"w017","f":"vénio","l":"venio","p":":","m":230},{"i":"w018","f":"non","l":"non","m":32},{"i":"w019","f":"rogo","l":"rogo","p":",","m":280},{"i":"w020","f":"ut","l":"ut","m":15},{"i":"w021","f":"tollas","l":"tollo","m":202},{"i":"w022","f":"eos","l":"is","m":163},{"i":"w023","f":"de","l":"de","m":0,"h":"w024"},{"i":"w024","f":"mundo","l":"mundus","p":",","m":29},{"i":"w025","f":"sed","l":"sed","m":15},{"i":"w026","f":"ut","l":"ut","m":15},{"i":"w027","f":"serves","l":"servo","m":286},{"i":"w028","f":"eos","l":"is","m":163},{"i":"w029","f":"a","l":"a","m":0,"h":"w030"},{"i":"w030","f":"malo","l":"malum","p":",","m":26},{"i":"w031","f":"allelúia","l":"alleluia","p":",","m":46},{"i":"w032","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

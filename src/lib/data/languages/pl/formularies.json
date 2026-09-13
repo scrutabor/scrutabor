@@ -111,6 +111,10 @@
    "title": "Nawiedzenie Najświętszej Maryi Panny"
   },
   {
+   "id": "ascensio-domini",
+   "title": "Wniebowstąpienie Pańskie"
+  },
+  {
    "id": "commemoratio-baptismatis-domini",
    "title": "Wspomnienie Chrztu Pana naszego Jezusa Chrystusa"
   },
@@ -225,6 +229,14 @@
   {
    "id": "dominica-ix-post-pentecosten",
    "title": "9. Niedziela po Zesłaniu Ducha Świętego"
+  },
+  {
+   "id": "dominica-pentecostes",
+   "title": "Niedziela Zesłania Ducha Świętego"
+  },
+  {
+   "id": "dominica-post-ascensionem",
+   "title": "Niedziela po Wniebowstąpieniu"
   },
   {
    "id": "dominica-resurrectionis",
@@ -365,6 +377,10 @@
   {
    "id": "vigilia-paschalis",
    "title": "Msza Wigilii Paschalnej"
+  },
+  {
+   "id": "vigilia-pentecostes",
+   "title": "Wigilia Zesłania Ducha Świętego"
   }
  ]
 }

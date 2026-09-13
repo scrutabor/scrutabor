@@ -367,6 +367,12 @@
       "evidence": "bibliography/texts/ordinarium/praefatio-apostolorum.json"
     },
     {
+      "id": "ordinarium.praefatio-ascensionis",
+      "path": "texts/ordinarium/praefatio-ascensionis.json",
+      "title": "Vere dignum et iustum est, æquum et",
+      "evidence": "bibliography/texts/ordinarium/praefatio-ascensionis.json"
+    },
+    {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-assumptione",
       "path": "texts/ordinarium/praefatio-beatae-mariae-virginis-in-assumptione.json",
       "title": "Præfatio de Beata Maria Virgine",
@@ -467,6 +473,12 @@
       "evidence": "bibliography/texts/ordinarium/praefatio-sanctissimae-trinitatis.json"
     },
     {
+      "id": "ordinarium.praefatio-spiritus-sancti",
+      "path": "texts/ordinarium/praefatio-spiritus-sancti.json",
+      "title": "Vere dignum et iustum est, æquum et",
+      "evidence": "bibliography/texts/ordinarium/praefatio-spiritus-sancti.json"
+    },
+    {
       "id": "ordinarium.quam-oblationem",
       "path": "texts/ordinarium/quam-oblationem.json",
       "title": "Quam oblatiónem"
@@ -530,6 +542,60 @@
       "id": "ordinarium.unde-et-memores",
       "path": "texts/ordinarium/unde-et-memores.json",
       "title": "Unde et mémores"
+    },
+    {
+      "id": "proprium.ascensio-domini-alleluia",
+      "path": "texts/proprium/ascensio-domini-alleluia.json",
+      "title": "Allelúia, allelúia. Ascéndit Deus in iubilatióne, et",
+      "evidence": "bibliography/texts/proprium/ascensio-domini-alleluia.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-collecta",
+      "path": "texts/proprium/ascensio-domini-collecta.json",
+      "title": "Concéde, quǽsumus, omnípotens Deus: ut, qui hodiérna",
+      "evidence": "bibliography/texts/proprium/ascensio-domini-collecta.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-communio",
+      "path": "texts/proprium/ascensio-domini-communio.json",
+      "title": "Psállite Dómino, qui ascéndit super cælos cælórum",
+      "evidence": "bibliography/texts/proprium/ascensio-domini-communio.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-epistola",
+      "path": "texts/proprium/ascensio-domini-epistola.json",
+      "title": "Primum quidem sermónem feci de ómnibus, o",
+      "evidence": "bibliography/texts/proprium/ascensio-domini-epistola.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-evangelium",
+      "path": "texts/proprium/ascensio-domini-evangelium.json",
+      "title": "In illo témpore: Recumbéntibus úndecim discípulis, appáruit",
+      "evidence": "bibliography/texts/proprium/ascensio-domini-evangelium.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-introitus",
+      "path": "texts/proprium/ascensio-domini-introitus.json",
+      "title": "Viri Galilǽi, quid admirámini aspiciéntes in cælum?",
+      "evidence": "bibliography/texts/proprium/ascensio-domini-introitus.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-offertorium",
+      "path": "texts/proprium/ascensio-domini-offertorium.json",
+      "title": "Ascéndit Deus in iubilatióne, et Dóminus in",
+      "evidence": "bibliography/texts/proprium/ascensio-domini-offertorium.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-postcommunio",
+      "path": "texts/proprium/ascensio-domini-postcommunio.json",
+      "title": "Præsta nobis, quǽsumus, omnípotens et miséricors Deus",
+      "evidence": "bibliography/texts/proprium/ascensio-domini-postcommunio.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-secreta",
+      "path": "texts/proprium/ascensio-domini-secreta.json",
+      "title": "Súscipe, Dómine, múnera, quæ pro Fílii tui",
+      "evidence": "bibliography/texts/proprium/ascensio-domini-secreta.json"
     },
     {
       "id": "proprium.assumptio-beatae-mariae-virginis-alleluia",
@@ -2494,6 +2560,102 @@
       "path": "texts/proprium/dominica-ix-post-pentecosten-secreta.json",
       "title": "Concéde nobis, quǽsumus, Dómine, hæc digne frequentáre",
       "evidence": "bibliography/texts/proprium/dominica-ix-post-pentecosten-secreta.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-alleluia",
+      "path": "texts/proprium/dominica-pentecostes-alleluia.json",
+      "title": "Allelúia, allelúia. Emítte Spíritum tuum, et creabúntur",
+      "evidence": "bibliography/texts/proprium/dominica-pentecostes-alleluia.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-collecta",
+      "path": "texts/proprium/dominica-pentecostes-collecta.json",
+      "title": "Deus, qui hodiérna die corda fidélium Sancti",
+      "evidence": "bibliography/texts/proprium/dominica-pentecostes-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-communio",
+      "path": "texts/proprium/dominica-pentecostes-communio.json",
+      "title": "Factus est repénte de cælo sonus, tamquam",
+      "evidence": "bibliography/texts/proprium/dominica-pentecostes-communio.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-epistola",
+      "path": "texts/proprium/dominica-pentecostes-epistola.json",
+      "title": "Cum compleréntur dies Pentecóstes, erant omnes discípuli",
+      "evidence": "bibliography/texts/proprium/dominica-pentecostes-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-evangelium",
+      "path": "texts/proprium/dominica-pentecostes-evangelium.json",
+      "title": "In illo témpore: Dixit Iesus discípulis suis",
+      "evidence": "bibliography/texts/proprium/dominica-pentecostes-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-introitus",
+      "path": "texts/proprium/dominica-pentecostes-introitus.json",
+      "title": "Spíritus Dómini replévit orbem terrárum, allelúia: et",
+      "evidence": "bibliography/texts/proprium/dominica-pentecostes-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-offertorium",
+      "path": "texts/proprium/dominica-pentecostes-offertorium.json",
+      "title": "Confírma hoc, Deus, quod operátus es in",
+      "evidence": "bibliography/texts/proprium/dominica-pentecostes-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-sequentia",
+      "path": "texts/proprium/dominica-pentecostes-sequentia.json",
+      "title": "Veni, Sancte Spíritus, et emítte cǽlitus lucis",
+      "evidence": "bibliography/texts/proprium/dominica-pentecostes-sequentia.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-alleluia",
+      "path": "texts/proprium/dominica-post-ascensionem-alleluia.json",
+      "title": "Allelúia, allelúia. Regnávit Dóminus super omnes gentes",
+      "evidence": "bibliography/texts/proprium/dominica-post-ascensionem-alleluia.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-collecta",
+      "path": "texts/proprium/dominica-post-ascensionem-collecta.json",
+      "title": "Omnípotens sempitérne Deus: fac nos tibi semper",
+      "evidence": "bibliography/texts/proprium/dominica-post-ascensionem-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-communio",
+      "path": "texts/proprium/dominica-post-ascensionem-communio.json",
+      "title": "Pater, cum essem cum eis, ego servábam",
+      "evidence": "bibliography/texts/proprium/dominica-post-ascensionem-communio.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-epistola",
+      "path": "texts/proprium/dominica-post-ascensionem-epistola.json",
+      "title": "Caríssimi: Estóte prudéntes et vigiláte in oratiónibus",
+      "evidence": "bibliography/texts/proprium/dominica-post-ascensionem-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-evangelium",
+      "path": "texts/proprium/dominica-post-ascensionem-evangelium.json",
+      "title": "In illo témpore: Dixit Iesus discípulis suis",
+      "evidence": "bibliography/texts/proprium/dominica-post-ascensionem-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-introitus",
+      "path": "texts/proprium/dominica-post-ascensionem-introitus.json",
+      "title": "Exáudi, Dómine, vocem meam, qua clamávi ad",
+      "evidence": "bibliography/texts/proprium/dominica-post-ascensionem-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-postcommunio",
+      "path": "texts/proprium/dominica-post-ascensionem-postcommunio.json",
+      "title": "Repléti, Dómine, munéribus sacris: da, quǽsumus; ut",
+      "evidence": "bibliography/texts/proprium/dominica-post-ascensionem-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-secreta",
+      "path": "texts/proprium/dominica-post-ascensionem-secreta.json",
+      "title": "Sacrifícia nos, Dómine, immaculáta puríficent: et méntibus",
+      "evidence": "bibliography/texts/proprium/dominica-post-ascensionem-secreta.json"
     },
     {
       "id": "proprium.dominica-resurrectionis-alleluia",
@@ -5406,6 +5568,66 @@
       "evidence": "bibliography/texts/proprium/vigilia-paschalis-secreta.json"
     },
     {
+      "id": "proprium.vigilia-pentecostes-alleluia",
+      "path": "texts/proprium/vigilia-pentecostes-alleluia.json",
+      "title": "Allelúia Confitémini Dómino, quóniam bonus: quóniam in",
+      "evidence": "bibliography/texts/proprium/vigilia-pentecostes-alleluia.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-collecta",
+      "path": "texts/proprium/vigilia-pentecostes-collecta.json",
+      "title": "Præsta, quǽsumus, omnípotens Deus: ut claritatis tuæ",
+      "evidence": "bibliography/texts/proprium/vigilia-pentecostes-collecta.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-communio",
+      "path": "texts/proprium/vigilia-pentecostes-communio.json",
+      "title": "Ultimo festivitátis die dicébat Iesus: Qui in",
+      "evidence": "bibliography/texts/proprium/vigilia-pentecostes-communio.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-epistola",
+      "path": "texts/proprium/vigilia-pentecostes-epistola.json",
+      "title": "In diébus illis: Factum est, cum Apóllo",
+      "evidence": "bibliography/texts/proprium/vigilia-pentecostes-epistola.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-evangelium",
+      "path": "texts/proprium/vigilia-pentecostes-evangelium.json",
+      "title": "In illo témpore: Dixit Iesus discípulis suis",
+      "evidence": "bibliography/texts/proprium/vigilia-pentecostes-evangelium.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-introitus",
+      "path": "texts/proprium/vigilia-pentecostes-introitus.json",
+      "title": "Cum sanctificátus fúero in vobis, congregábo vos",
+      "evidence": "bibliography/texts/proprium/vigilia-pentecostes-introitus.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-offertorium",
+      "path": "texts/proprium/vigilia-pentecostes-offertorium.json",
+      "title": "Emítte Spíritum tuum, et creabúntur, et renovábis",
+      "evidence": "bibliography/texts/proprium/vigilia-pentecostes-offertorium.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-postcommunio",
+      "path": "texts/proprium/vigilia-pentecostes-postcommunio.json",
+      "title": "Sancti Spíritus, Dómine, corda nostra mundet infúsio",
+      "evidence": "bibliography/texts/proprium/vigilia-pentecostes-postcommunio.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-secreta",
+      "path": "texts/proprium/vigilia-pentecostes-secreta.json",
+      "title": "Múnera, quǽsumus, Dómine, obláta sanctífica: et corda",
+      "evidence": "bibliography/texts/proprium/vigilia-pentecostes-secreta.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-tractus",
+      "path": "texts/proprium/vigilia-pentecostes-tractus.json",
+      "title": "Laudáte Dóminum, omnes gentes: et collaudáte eum",
+      "evidence": "bibliography/texts/proprium/vigilia-pentecostes-tractus.json"
+    },
+    {
       "id": "proprium.visitatio-beatae-mariae-virginis-alleluia",
       "path": "texts/proprium/visitatio-beatae-mariae-virginis-alleluia.json",
       "title": "Allelúia, allelúia. Felix es, sacra Virgo María",
@@ -5498,7 +5720,7 @@
     "formularies": "formularies.json",
     "metrics": "metrics.json"
   },
-  "morphology": 889,
+  "morphology": 901,
   "kalendarium": [
     2026,
     2101

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.ascensio-domini-communio",
+  "title":"Psállite Dómino, qui ascéndit super cælos cælórum",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"ascensio-domini",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Psállite","l":"psallo","m":155},{"i":"w002","f":"Dómino","l":"dominus","p":",","m":186},{"i":"w003","f":"qui","l":"qui","m":18},{"i":"w004","f":"ascéndit","l":"ascendo","m":195},{"i":"w005","f":"super","l":"super","m":3,"h":"w006"},{"i":"w006","f":"cælos","l":"caelum","m":90,"a":3},{"i":"w007","f":"cælórum","l":"caelum","m":79},{"i":"w008","f":"ad","l":"ad","m":3,"h":"w009"},{"i":"w009","f":"Oriéntem","l":"oriens","p":",","m":162},{"i":"w010","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

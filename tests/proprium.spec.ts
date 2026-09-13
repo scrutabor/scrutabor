@@ -110,7 +110,7 @@ test('a resolved day whose texts are absent says exactly that', async ({ page })
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo');
 	const dialog = await openPicker(page);
-	await selectCalendarDate(dialog, '2027-05-06');
+	await selectCalendarDate(dialog, '2030-12-08');
 	await expect(dialog).toContainText('Dzień rozpoznany, formularz jeszcze niedostępny');
 	await dialog.getByRole('button', { name: 'Otwórz bez formularza' }).click();
 	await expect(page.locator('.picker.day .state')).toHaveText('jeszcze nie w tym wydaniu');
@@ -206,6 +206,22 @@ test('the Sundays after Easter open from dates without requiring their names', a
 		['2027-04-18', '3. Niedziela po Wielkanocy'],
 		['2027-04-25', '4. Niedziela po Wielkanocy'],
 		['2027-05-02', '5. Niedziela po Wielkanocy']
+	]) {
+		await page.goto(`/app/pl/ordo/catechumenorum?dies=${date}`);
+		await expect(page.locator('.picker.day .day-open')).toContainText(title);
+		await expect(page.locator('.picker.day .state')).toHaveCount(0);
+	}
+});
+
+test('Ascension through Pentecost opens from dates without requiring feast names', async ({
+	page
+}) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	for (const [date, title] of [
+		['2027-05-06', 'Wniebowstąpienie Pańskie'],
+		['2027-05-09', 'Niedziela po Wniebowstąpieniu'],
+		['2027-05-15', 'Wigilia Zesłania Ducha Świętego'],
+		['2027-05-16', 'Niedziela Zesłania Ducha Świętego']
 	]) {
 		await page.goto(`/app/pl/ordo/catechumenorum?dies=${date}`);
 		await expect(page.locator('.picker.day .day-open')).toContainText(title);
@@ -556,7 +572,7 @@ test('a choice made yesterday expires at midnight', async ({ page }) => {
 
 test('a real formulary not yet written is distinct from a malformed value', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.goto('/app/en/ordo/catechumenorum?dies=ascensio-domini');
+	await page.goto('/app/en/ordo/catechumenorum?dies=immaculata-conceptio');
 	await settled(page);
 	await expect(page.locator('.picker.day .state')).toHaveText('not yet in this edition');
 });

@@ -408,6 +408,10 @@
       "path": "languages/pl/texts/ordinarium/praefatio-apostolorum.json"
     },
     {
+      "id": "ordinarium.praefatio-ascensionis",
+      "path": "languages/pl/texts/ordinarium/praefatio-ascensionis.json"
+    },
+    {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-assumptione",
       "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-assumptione.json"
     },
@@ -478,6 +482,10 @@
       "path": "languages/pl/texts/ordinarium/praefatio-sanctissimae-trinitatis.json"
     },
     {
+      "id": "ordinarium.praefatio-spiritus-sancti",
+      "path": "languages/pl/texts/ordinarium/praefatio-spiritus-sancti.json"
+    },
+    {
       "id": "ordinarium.quam-oblationem",
       "path": "languages/pl/texts/ordinarium/quam-oblationem.json",
       "evidence": "languages/pl/bibliography/texts/ordinarium/quam-oblationem.json"
@@ -540,6 +548,42 @@
       "id": "ordinarium.unde-et-memores",
       "path": "languages/pl/texts/ordinarium/unde-et-memores.json",
       "evidence": "languages/pl/bibliography/texts/ordinarium/unde-et-memores.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-alleluia",
+      "path": "languages/pl/texts/proprium/ascensio-domini-alleluia.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-collecta",
+      "path": "languages/pl/texts/proprium/ascensio-domini-collecta.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-communio",
+      "path": "languages/pl/texts/proprium/ascensio-domini-communio.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-epistola",
+      "path": "languages/pl/texts/proprium/ascensio-domini-epistola.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-evangelium",
+      "path": "languages/pl/texts/proprium/ascensio-domini-evangelium.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-introitus",
+      "path": "languages/pl/texts/proprium/ascensio-domini-introitus.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-offertorium",
+      "path": "languages/pl/texts/proprium/ascensio-domini-offertorium.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-postcommunio",
+      "path": "languages/pl/texts/proprium/ascensio-domini-postcommunio.json"
+    },
+    {
+      "id": "proprium.ascensio-domini-secreta",
+      "path": "languages/pl/texts/proprium/ascensio-domini-secreta.json"
     },
     {
       "id": "proprium.assumptio-beatae-mariae-virginis-alleluia",
@@ -1876,6 +1920,70 @@
     {
       "id": "proprium.dominica-ix-post-pentecosten-secreta",
       "path": "languages/pl/texts/proprium/dominica-ix-post-pentecosten-secreta.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-alleluia",
+      "path": "languages/pl/texts/proprium/dominica-pentecostes-alleluia.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-collecta",
+      "path": "languages/pl/texts/proprium/dominica-pentecostes-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-communio",
+      "path": "languages/pl/texts/proprium/dominica-pentecostes-communio.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-epistola",
+      "path": "languages/pl/texts/proprium/dominica-pentecostes-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-evangelium",
+      "path": "languages/pl/texts/proprium/dominica-pentecostes-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-introitus",
+      "path": "languages/pl/texts/proprium/dominica-pentecostes-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-offertorium",
+      "path": "languages/pl/texts/proprium/dominica-pentecostes-offertorium.json"
+    },
+    {
+      "id": "proprium.dominica-pentecostes-sequentia",
+      "path": "languages/pl/texts/proprium/dominica-pentecostes-sequentia.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-alleluia",
+      "path": "languages/pl/texts/proprium/dominica-post-ascensionem-alleluia.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-collecta",
+      "path": "languages/pl/texts/proprium/dominica-post-ascensionem-collecta.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-communio",
+      "path": "languages/pl/texts/proprium/dominica-post-ascensionem-communio.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-epistola",
+      "path": "languages/pl/texts/proprium/dominica-post-ascensionem-epistola.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-evangelium",
+      "path": "languages/pl/texts/proprium/dominica-post-ascensionem-evangelium.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-introitus",
+      "path": "languages/pl/texts/proprium/dominica-post-ascensionem-introitus.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-postcommunio",
+      "path": "languages/pl/texts/proprium/dominica-post-ascensionem-postcommunio.json"
+    },
+    {
+      "id": "proprium.dominica-post-ascensionem-secreta",
+      "path": "languages/pl/texts/proprium/dominica-post-ascensionem-secreta.json"
     },
     {
       "id": "proprium.dominica-resurrectionis-alleluia",
@@ -3816,6 +3924,46 @@
     {
       "id": "proprium.vigilia-paschalis-secreta",
       "path": "languages/pl/texts/proprium/vigilia-paschalis-secreta.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-alleluia",
+      "path": "languages/pl/texts/proprium/vigilia-pentecostes-alleluia.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-collecta",
+      "path": "languages/pl/texts/proprium/vigilia-pentecostes-collecta.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-communio",
+      "path": "languages/pl/texts/proprium/vigilia-pentecostes-communio.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-epistola",
+      "path": "languages/pl/texts/proprium/vigilia-pentecostes-epistola.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-evangelium",
+      "path": "languages/pl/texts/proprium/vigilia-pentecostes-evangelium.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-introitus",
+      "path": "languages/pl/texts/proprium/vigilia-pentecostes-introitus.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-offertorium",
+      "path": "languages/pl/texts/proprium/vigilia-pentecostes-offertorium.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-postcommunio",
+      "path": "languages/pl/texts/proprium/vigilia-pentecostes-postcommunio.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-secreta",
+      "path": "languages/pl/texts/proprium/vigilia-pentecostes-secreta.json"
+    },
+    {
+      "id": "proprium.vigilia-pentecostes-tractus",
+      "path": "languages/pl/texts/proprium/vigilia-pentecostes-tractus.json"
     },
     {
       "id": "proprium.visitatio-beatae-mariae-virginis-alleluia",

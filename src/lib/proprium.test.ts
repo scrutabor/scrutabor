@@ -227,6 +227,41 @@ describe('lookups', () => {
 		}
 	});
 
+	it('opens Ascension through Pentecost in both languages', async () => {
+		for (const id of [
+			'ascensio-domini',
+			'dominica-post-ascensionem',
+			'vigilia-pentecostes',
+			'dominica-pentecostes'
+		]) {
+			expect(dayById(id), `${id} is absent from the picker`).toBeDefined();
+			expect((await properData(id, 'pl'))?.parts.length).toBeGreaterThan(0);
+			expect((await properData(id, 'en'))?.parts.length).toBeGreaterThan(0);
+		}
+	});
+
+	it('keeps the two seasonal Prefaces and Pentecost reuses explicit', async () => {
+		for (const id of ['ascensio-domini', 'dominica-post-ascensionem']) {
+			const mass = await properData(id, 'pl');
+			expect(mass?.parts.find(({ part }) => part === 'praefatio')?.key).toBe(
+				'ordinarium/praefatio-ascensionis'
+			);
+		}
+		for (const id of ['vigilia-pentecostes', 'dominica-pentecostes']) {
+			const mass = await properData(id, 'en');
+			expect(mass?.parts.find(({ part }) => part === 'praefatio')?.key).toBe(
+				'ordinarium/praefatio-spiritus-sancti'
+			);
+		}
+		const pentecost = await properData('dominica-pentecostes', 'pl');
+		expect(pentecost?.parts.find(({ part }) => part === 'secreta')?.key).toBe(
+			'proprium/vigilia-pentecostes-secreta'
+		);
+		expect(pentecost?.parts.find(({ part }) => part === 'postcommunio')?.key).toBe(
+			'proprium/vigilia-pentecostes-postcommunio'
+		);
+	});
+
 	it('keeps the calendar identity of All Souls while exposing all three Masses', async () => {
 		const first = await properData('commemoratio-omnium-fidelium-defunctorum', 'pl');
 		const second = await properData('commemoratio-omnium-fidelium-defunctorum-missa-ii', 'en');

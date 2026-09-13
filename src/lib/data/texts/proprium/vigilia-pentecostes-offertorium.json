@@ -1,0 +1,14 @@
+{
+  "id":"proprium.vigilia-pentecostes-offertorium",
+  "title":"Emítte Spíritum tuum, et creabúntur, et renovábis",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"vigilia-pentecostes",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Emítte","l":"emitto","m":86},{"i":"w002","f":"Spíritum","l":"spiritus","m":160},{"i":"w003","f":"tuum","l":"tuus","p":",","m":96,"h":"w002"},{"i":"w004","f":"et","l":"et","m":15},{"i":"w005","f":"creabúntur","l":"creo","p":",","m":730},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"renovábis","l":"renovo","m":284},{"i":"w008","f":"fáciem","l":"facies","m":338},{"i":"w009","f":"terræ","l":"terra","p":":","m":64},{"i":"w010","f":"sit","l":"sum","m":198},{"i":"w011","f":"glória","l":"gloria","m":24},{"i":"w012","f":"Dómini","l":"dominus","m":54},{"i":"w013","f":"in","l":"in","m":3,"h":"w014"},{"i":"w014","f":"sǽcula","l":"saeculum","p":",","m":85},{"i":"w015","f":"allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}
