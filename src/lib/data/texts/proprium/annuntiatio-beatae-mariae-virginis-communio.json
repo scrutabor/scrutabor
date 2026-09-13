@@ -1,0 +1,14 @@
+{
+  "id":"proprium.annuntiatio-beatae-mariae-virginis-communio",
+  "title":"Ecce, Virgo concípiet et páriet fílium: et",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"annuntiatio-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Ecce","l":"ecce","p":",","m":46,"a":14},{"i":"w002","f":"Virgo","l":"virgo","m":20,"a":14},{"i":"w003","f":"concípiet","l":"concipio","m":37,"a":14},{"i":"w004","f":"et","l":"et","m":15,"a":14},{"i":"w005","f":"páriet","l":"pario","m":37,"a":14},{"i":"w006","f":"fílium","l":"filius","p":":","m":35,"a":14},{"i":"w007","f":"et","l":"et","m":15,"a":14},{"i":"w008","f":"vocábitur","l":"voco","m":287,"a":14},{"i":"w009","f":"nomen","l":"nomen","m":97,"a":14},{"i":"w010","f":"eius","l":"is","m":27,"a":14},{"i":"w011","f":"Emmánuel","l":"Emmanuel","p":".","m":34,"a":14}]}
+  ]
+}

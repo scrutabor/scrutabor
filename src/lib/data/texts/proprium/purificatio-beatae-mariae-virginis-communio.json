@@ -1,0 +1,14 @@
+{
+  "id":"proprium.purificatio-beatae-mariae-virginis-communio",
+  "title":"Respónsum accépit Símeon a Spíritu Sancto, non",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"purificatio-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Respónsum","l":"responsum","m":82,"a":14},{"i":"w002","f":"accépit","l":"accipio","m":195,"a":14},{"i":"w003","f":"Símeon","l":"Simeon","m":34,"a":0},{"i":"w004","f":"a","l":"a","m":0,"h":"w005","a":14},{"i":"w005","f":"Spíritu","l":"spiritus","m":100,"a":14},{"i":"w006","f":"Sancto","l":"sanctus","p":",","m":216,"s":true,"a":14},{"i":"w007","f":"non","l":"non","m":32,"a":14},{"i":"w008","f":"visúrum","l":"video","m":903,"s":true,"a":14},{"i":"w009","f":"se","l":"sui","m":4,"a":3},{"i":"w010","f":"mortem","l":"mors","p":",","m":7,"a":14},{"i":"w011","f":"nisi","l":"nisi","m":15,"a":14},{"i":"w012","f":"vidéret","l":"video","m":294,"a":14},{"i":"w013","f":"Christum","l":"Christus","m":35,"a":14},{"i":"w014","f":"Dómini","l":"dominus","p":".","m":54,"a":14}]}
+  ]
+}

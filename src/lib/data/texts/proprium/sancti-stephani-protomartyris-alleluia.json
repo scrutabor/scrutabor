@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-stephani-protomartyris-alleluia",
+  "title":"Allelúia, allelúia. Vídeo cælos apértos, et Iesum",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-stephani-protomartyris",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46,"a":14},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46,"a":14},{"i":"w003","f":"Vídeo","l":"video","m":600,"a":14},{"i":"w004","f":"cælos","l":"caelum","m":90,"a":3},{"i":"w005","f":"apértos","l":"aperio","p":",","m":906,"h":"w004","a":14},{"i":"w006","f":"et","l":"et","m":15,"a":14},{"i":"w007","f":"Iesum","l":"Iesus","m":38,"a":14},{"i":"w008","f":"stantem","l":"sto","m":210,"h":"w007","a":14},{"i":"w009","f":"a","l":"a","m":0,"h":"w010","a":14},{"i":"w010","f":"dextris","l":"dexter","m":126,"s":true,"a":14},{"i":"w011","f":"virtútis","l":"virtus","m":13,"a":14},{"i":"w012","f":"Dei","l":"deus","p":".","m":54,"a":14},{"i":"w013","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14}]}
+  ]
+}

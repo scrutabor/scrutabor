@@ -1,0 +1,14 @@
+{
+  "id":"proprium.purificatio-beatae-mariae-virginis-graduale",
+  "title":"Suscépimus, Deus, misericórdiam tuam in médio templi",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"purificatio-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Suscépimus","l":"suscipio","p":",","m":123,"a":14},{"i":"w002","f":"Deus","l":"deus","p":",","m":60,"a":14},{"i":"w003","f":"misericórdiam","l":"misericordia","m":141,"a":14},{"i":"w004","f":"tuam","l":"tuus","m":8,"h":"w003","a":14},{"i":"w005","f":"in","l":"in","m":0,"h":"w006","a":14},{"i":"w006","f":"médio","l":"medius","m":149,"s":true,"a":14},{"i":"w007","f":"templi","l":"templum","m":68,"a":14},{"i":"w008","f":"tui","l":"tuus","p":":","m":99,"s":true,"a":14},{"i":"w009","f":"secúndum","l":"secundum","m":3,"h":"w010","a":14},{"i":"w010","f":"nomen","l":"nomen","m":136,"a":14},{"i":"w011","f":"tuum","l":"tuus","p":",","m":137,"s":true,"a":14},{"i":"w012","f":"Deus","l":"deus","p":",","m":60,"a":14},{"i":"w013","f":"ita","l":"ita","m":32,"a":14},{"i":"w014","f":"et","l":"et","m":15,"a":14},{"i":"w015","f":"laus","l":"laus","m":20,"a":14},{"i":"w016","f":"tua","l":"tuus","m":25,"h":"w015","a":14},{"i":"w017","f":"in","l":"in","m":3,"h":"w018","a":14},{"i":"w018","f":"fines","l":"finis","m":152,"a":14},{"i":"w019","f":"terræ","l":"terra","p":".","m":64,"a":14},{"i":"w020","f":"Sicut","l":"sicut","m":15,"a":14},{"i":"w021","f":"audívimus","l":"audio","p":",","m":714,"a":14},{"i":"w022","f":"ita","l":"ita","m":32,"a":14},{"i":"w023","f":"et","l":"et","m":15,"a":14},{"i":"w024","f":"vídimus","l":"video","m":300,"a":14},{"i":"w025","f":"in","l":"in","m":0,"h":"w026","a":14},{"i":"w026","f":"civitáte","l":"civitas","m":45,"a":14},{"i":"w027","f":"Dei","l":"deus","m":54,"a":14},{"i":"w028","f":"nostri","l":"nos","p":",","m":330,"a":3},{"i":"w029","f":"in","l":"in","m":0,"h":"w030","a":14},{"i":"w030","f":"monte","l":"mons","m":109,"a":14},{"i":"w031","f":"sancto","l":"sanctus","m":216,"s":true,"a":14},{"i":"w032","f":"eius","l":"is","p":".","m":27,"a":14}]}
+  ]
+}

@@ -1,5 +1,5 @@
 // The flow view: the Mass in order, for a reader following it in the pew.
-import { setHelp, atRoute, expect, settled, test } from './fixtures';
+import { setHelp, atRoute, bare as bareTest, expect, settled, test } from './fixtures';
 import { ORDO } from '../src/lib/ordo';
 
 test('the ordo is a map of six movements, walked in order', async ({ page }) => {
@@ -185,41 +185,49 @@ test('the landing separates following the Mass from opening a text', async ({ pa
 	await expect(page).toHaveURL(atRoute('/app/en/ordo'));
 });
 
-test('every prayer the Ordo links to is actually built', async ({ page, request }, testInfo) => {
-	// The prerender list was the CATALOGUE, which orders the shelf but is
-	// not the list of what exists: 27 texts — the whole Canon among them —
-	// were linked from the Ordo and never built, so on the static site
-	// those titles led to a 404 while the dev server served them happily.
-	// A route that is linked has to be built, and the only way to know is
-	// to follow the links.
-	// as the celebrant, so nothing is folded and every part shows its title
-	// as the link it is
-	await page.addInitScript(() => localStorage.setItem('scrutabor-role', 'sacerdos'));
-	const seen = new Set<string>();
-	for (const m of ORDO) {
-		await page.goto(`/app/pl/ordo/${m.id}`);
-		const hrefs = await page.evaluate(() =>
-			[...document.querySelectorAll('a.part-title')].map((a) => a.getAttribute('href')!)
+bareTest(
+	'every prayer the Ordo links to is actually built',
+	async ({ page, request }, testInfo) => {
+		// This is a corpus-sized sweep, so its budget must grow with the Ordo rather
+		// than silently becoming a ceiling on how many parts the book may contain.
+		testInfo.setTimeout(
+			Math.max(testInfo.timeout, 30_000 + ORDO.flatMap((m) => m.entries).length * 1_000)
 		);
-		for (const href of hrefs) seen.add(href);
-	}
-	expect(seen.size, 'the Ordo links to its texts').toBeGreaterThan(30);
-
-	const missing: string[] = [];
-	for (const href of seen) {
-		if (testInfo.project.name === 'offline') {
-			// The downloaded edition is one file whose routes live behind its
-			// hash, so there is no HTTP response to inspect. Walk each route
-			// through the same router a reader uses and reject its 404 frame.
-			await page.goto(href);
-			if (await page.locator('.errorpage .status').count()) missing.push(`${href} → 404`);
-		} else {
-			const res = await request.get(href);
-			if (!res.ok()) missing.push(`${href} → ${res.status()}`);
+		// The prerender list was the CATALOGUE, which orders the shelf but is
+		// not the list of what exists: 27 texts — the whole Canon among them —
+		// were linked from the Ordo and never built, so on the static site
+		// those titles led to a 404 while the dev server served them happily.
+		// A route that is linked has to be built, and the only way to know is
+		// to follow the links.
+		// as the celebrant, so nothing is folded and every part shows its title
+		// as the link it is
+		await page.addInitScript(() => localStorage.setItem('scrutabor-role', 'sacerdos'));
+		const seen = new Set<string>();
+		for (const m of ORDO) {
+			await page.goto(`/app/pl/ordo/${m.id}`);
+			const hrefs = await page.evaluate(() =>
+				[...document.querySelectorAll('a.part-title')].map((a) => a.getAttribute('href')!)
+			);
+			for (const href of hrefs) seen.add(href);
 		}
+		expect(seen.size, 'the Ordo links to its texts').toBeGreaterThan(30);
+
+		const missing: string[] = [];
+		for (const href of seen) {
+			if (testInfo.project.name === 'offline') {
+				// The downloaded edition is one file whose routes live behind its
+				// hash, so there is no HTTP response to inspect. Walk each route
+				// through the same router a reader uses and reject its 404 frame.
+				await page.goto(href);
+				if (await page.locator('.errorpage .status').count()) missing.push(`${href} → 404`);
+			} else {
+				const res = await request.get(href);
+				if (!res.ok()) missing.push(`${href} → ${res.status()}`);
+			}
+		}
+		expect(missing).toEqual([]);
 	}
-	expect(missing).toEqual([]);
-});
+);
 
 test('the narrative names the priest rather than calling him "he"', async ({ page }) => {
 	// A prayer book's rubrics name him, and a reader lands in the MIDDLE of

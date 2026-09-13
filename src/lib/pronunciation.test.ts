@@ -27,6 +27,7 @@ describe('syllabify', () => {
 		expect(syllabized('monstrum')).toBe('mon-strum'); // s+muta+liquida in a long cluster
 		expect(syllabized('p\u0153\u0301nitens')).toBe('p\u0153\u0301-ni-tens'); // combining acute on \u0153
 		expect(stressIndex(syllabify('p\u0153\u0301nitens'))).toBe(0);
+		expect(syllabized('íerit')).toBe('í-e-rit'); // a marked i is necessarily vocalic
 	});
 
 	it('keeps ligatures, diphthongs and the diaeresis honest', () => {

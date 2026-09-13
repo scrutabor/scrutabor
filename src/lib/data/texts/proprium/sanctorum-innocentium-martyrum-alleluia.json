@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sanctorum-innocentium-martyrum-alleluia",
+  "title":"Allelúia, allelúia. Laudáte, púeri, Dóminum, laudáte nomen",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sanctorum-innocentium-martyrum",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46,"a":14},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46,"a":14},{"i":"w003","f":"Laudáte","l":"laudo","p":",","m":158,"a":14},{"i":"w004","f":"púeri","l":"puer","p":",","m":54,"a":14},{"i":"w005","f":"Dóminum","l":"dominus","p":",","m":35,"a":14},{"i":"w006","f":"laudáte","l":"laudo","m":158,"a":14},{"i":"w007","f":"nomen","l":"nomen","m":97,"a":14},{"i":"w008","f":"Dómini","l":"dominus","p":".","m":54,"a":14},{"i":"w009","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14}]}
+  ]
+}

@@ -3,6 +3,10 @@
  "language": "pl",
  "titles": [
   {
+   "id": "annuntiatio-beatae-mariae-virginis",
+   "title": "Zwiastowanie Najświętszej Maryi Panny"
+  },
+  {
    "id": "assumptio-beatae-mariae-virginis",
    "title": "Wniebowzięcie Najświętszej Maryi Panny"
   },
@@ -13,6 +17,10 @@
   {
    "id": "beatae-mariae-virginis-a-rosario",
    "title": "Najświętszej Maryi Panny Różańcowej"
+  },
+  {
+   "id": "cathedra-sancti-petri",
+   "title": "Katedry Świętego Piotra Apostoła"
   },
   {
    "id": "commemoratio-omnium-fidelium-defunctorum-missa-ii",
@@ -39,6 +47,10 @@
    "title": "Podwyższenie Krzyża Świętego"
   },
   {
+   "id": "immaculata-conceptio",
+   "title": "Niepokalane Poczęcie Najświętszej Maryi Panny"
+  },
+  {
    "id": "immaculatum-cor-beatae-mariae-virginis",
    "title": "Niepokalanego Serca Najświętszej Maryi Panny"
   },
@@ -63,8 +75,16 @@
    "title": "Najdroższej Krwi Pana naszego Jezusa Chrystusa"
   },
   {
+   "id": "purificatio-beatae-mariae-virginis",
+   "title": "Oczyszczenie Najświętszej Maryi Panny"
+  },
+  {
    "id": "sanctae-annae-matris-beatae-mariae-virginis",
    "title": "Świętej Anny, Matki Najświętszej Maryi Panny"
+  },
+  {
+   "id": "sancti-andreae-apostoli",
+   "title": "Świętego Andrzeja Apostoła"
   },
   {
    "id": "sancti-bartholomaei-apostoli",
@@ -79,6 +99,18 @@
    "title": "Świętego Joachima Wyznawcy"
   },
   {
+   "id": "sancti-ioannis-apostoli-et-evangelistae",
+   "title": "Świętego Jana Apostoła i Ewangelisty"
+  },
+  {
+   "id": "sancti-ioseph-opificis",
+   "title": "Świętego Józefa Rzemieślnika"
+  },
+  {
+   "id": "sancti-ioseph-sponsi-beatae-mariae-virginis",
+   "title": "Świętego Józefa, Oblubieńca Najświętszej Maryi Panny"
+  },
+  {
    "id": "sancti-laurentii-martyris",
    "title": "Świętego Wawrzyńca Męczennika"
   },
@@ -87,12 +119,36 @@
    "title": "Świętego Łukasza Ewangelisty"
   },
   {
+   "id": "sancti-marci-evangelistae",
+   "title": "Świętego Marka Ewangelisty"
+  },
+  {
    "id": "sancti-matthaei-apostoli-et-evangelistae",
    "title": "Świętego Mateusza Apostoła i Ewangelisty"
   },
   {
+   "id": "sancti-matthiae-apostoli",
+   "title": "Świętego Macieja Apostoła"
+  },
+  {
    "id": "sancti-petri-et-pauli-apostolorum",
    "title": "Świętych Apostołów Piotra i Pawła"
+  },
+  {
+   "id": "sancti-stephani-protomartyris",
+   "title": "Świętego Szczepana, Pierwszego Męczennika"
+  },
+  {
+   "id": "sancti-thomae-apostoli",
+   "title": "Świętego Tomasza Apostoła"
+  },
+  {
+   "id": "sanctorum-innocentium-martyrum",
+   "title": "Świętych Młodzianków Męczenników"
+  },
+  {
+   "id": "sanctorum-philippi-et-iacobi-apostolorum",
+   "title": "Świętych Apostołów Filipa i Jakuba"
   },
   {
    "id": "sanctorum-simonis-et-iudae-apostolorum",

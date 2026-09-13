@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sanctorum-philippi-et-iacobi-apostolorum-alleluia",
+  "title":"Allelúia, allelúia. Confitebúntur cæli mirabília tua, Dómine",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sanctorum-philippi-et-iacobi-apostolorum",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46,"a":14},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46,"a":14},{"i":"w003","f":"Confitebúntur","l":"confiteor","m":737,"a":14},{"i":"w004","f":"cæli","l":"caelum","m":68,"a":14},{"i":"w005","f":"mirabília","l":"mirabilis","m":129,"s":true,"a":14},{"i":"w006","f":"tua","l":"tuus","p":",","m":129,"s":true,"a":14},{"i":"w007","f":"Dómine","l":"dominus","p":":","m":5,"a":14},{"i":"w008","f":"étenim","l":"etenim","m":15,"a":14},{"i":"w009","f":"veritátem","l":"veritas","m":7,"a":14},{"i":"w010","f":"tuam","l":"tuus","m":8,"h":"w009","a":14},{"i":"w011","f":"in","l":"in","m":0,"h":"w012","a":14},{"i":"w012","f":"ecclésia","l":"ecclesia","m":30,"a":14},{"i":"w013","f":"sanctórum","l":"sanctus","p":".","m":76,"s":true,"a":14},{"i":"w014","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14},{"i":"w015","f":"Tanto","l":"tantus","m":149,"h":"w016","a":14},{"i":"w016","f":"témpore","l":"tempus","m":135,"a":14},{"i":"w017","f":"vobíscum","l":"vos","m":62,"a":3},{"i":"w018","f":"sum","l":"sum","p":",","m":172,"a":14},{"i":"w019","f":"et","l":"et","m":15,"a":14},{"i":"w020","f":"non","l":"non","m":32,"a":14},{"i":"w021","f":"cognovístis","l":"cognosco","m":624,"a":14},{"i":"w022","f":"me","l":"ego","p":"?","m":4,"a":14},{"i":"w023","f":"Philíppe","l":"Philippus","p":",","m":5,"a":14},{"i":"w024","f":"qui","l":"qui","m":18,"a":14},{"i":"w025","f":"videt","l":"video","m":165,"a":14},{"i":"w026","f":"me","l":"ego","p":",","m":4,"a":14},{"i":"w027","f":"videt","l":"video","m":165,"a":14},{"i":"w028","f":"et","l":"et","m":15,"a":14},{"i":"w029","f":"Patrem","l":"pater","m":162,"a":14},{"i":"w030","f":"meum","l":"meus","p":".","m":96,"h":"w029","a":14},{"i":"w031","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14}]}
+  ]
+}

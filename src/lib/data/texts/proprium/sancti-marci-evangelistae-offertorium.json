@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-marci-evangelistae-offertorium",
+  "title":"Confitebúntur cæli mirabília tua, Dómine: et veritátem",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sancti-marci-evangelistae",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Confitebúntur","l":"confiteor","m":737,"a":14},{"i":"w002","f":"cæli","l":"caelum","m":68,"a":14},{"i":"w003","f":"mirabília","l":"mirabilis","m":129,"s":true,"a":14},{"i":"w004","f":"tua","l":"tuus","p":",","m":129,"s":true,"a":14},{"i":"w005","f":"Dómine","l":"dominus","p":":","m":5,"a":14},{"i":"w006","f":"et","l":"et","m":15,"a":14},{"i":"w007","f":"veritátem","l":"veritas","m":7,"a":14},{"i":"w008","f":"tuam","l":"tuus","m":8,"h":"w007","a":14},{"i":"w009","f":"in","l":"in","m":0,"h":"w010","a":14},{"i":"w010","f":"ecclésia","l":"ecclesia","m":30,"a":14},{"i":"w011","f":"sanctórum","l":"sanctus","p":",","m":76,"s":true,"a":14},{"i":"w012","f":"allelúia","l":"alleluia","p":",","m":46,"a":14},{"i":"w013","f":"allelúia","l":"alleluia","p":".","m":46,"a":14}]}
+  ]
+}

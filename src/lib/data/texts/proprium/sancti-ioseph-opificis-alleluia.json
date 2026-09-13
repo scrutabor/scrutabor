@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-ioseph-opificis-alleluia",
+  "title":"Allelúia, allelúia. De quacúmque tribulatióne clamáverint ad",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-ioseph-opificis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46,"a":14},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46,"a":14},{"i":"w003","f":"De","l":"de","m":0,"h":"w004","a":14},{"i":"w004","f":"quacúmque","l":"quicumque","m":206,"a":14},{"i":"w005","f":"tribulatióne","l":"tribulatio","m":45,"a":14},{"i":"w006","f":"clamáverint","l":"clamo","m":698,"a":14},{"i":"w007","f":"ad","l":"ad","m":3,"h":"w008","a":14},{"i":"w008","f":"me","l":"ego","p":",","m":4,"a":14},{"i":"w009","f":"exáudiam","l":"exaudio","m":430,"a":14},{"i":"w010","f":"eos","l":"is","p":",","m":163,"a":14},{"i":"w011","f":"et","l":"et","m":15,"a":14},{"i":"w012","f":"ero","l":"sum","m":309,"a":14},{"i":"w013","f":"protéctor","l":"protector","m":113,"a":14},{"i":"w014","f":"eórum","l":"is","m":255,"a":14},{"i":"w015","f":"semper","l":"semper","p":".","m":32,"a":14},{"i":"w016","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14},{"i":"w017","f":"Fac","l":"facio","m":86,"a":14},{"i":"w018","f":"nos","l":"nos","m":49,"a":14},{"i":"w019","f":"innócuam","l":"innocuus","p":",","m":8,"h":"w022","a":14},{"i":"w020","f":"Ioseph","l":"Ioseph","p":",","m":47,"a":0},{"i":"w021","f":"decúrrere","l":"decurro","m":185,"a":14},{"i":"w022","f":"vitam","l":"vita","p":":","m":141,"a":14},{"i":"w023","f":"sitque","l":"sum","m":198,"a":14},{"i":"w024","f":"tuo","l":"tuus","m":101,"s":true,"a":14},{"i":"w025","f":"semper","l":"semper","m":32,"a":14},{"i":"w026","f":"tuta","l":"tutus","m":25,"s":true,"a":14},{"i":"w027","f":"patrocínio","l":"patrocinium","p":".","m":26,"a":14},{"i":"w028","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14}]}
+  ]
+}

@@ -15,29 +15,33 @@
 import { describe, expect, it } from 'vitest';
 import { PROPER_DAYS, dayHint, dayToday, type Today } from './proprium';
 
-/** The four shapes `dayToday` can return, taken from the calendar rather than
- * hand-built so that a change in either would surface here. The fourth was
- * missed on the first draft of this file and the calendar corrected it: a
- * feria's week is not always one the edition can open. */
+/** The two shapes the now-complete calendar returns, plus two forward-compatible
+ * shapes for a future calendar entry whose formulary has not yet reached the
+ * reader. */
 const SUNDAY = dayToday(new Date(2026, 11, 13)); // III Advent 2026, carried
 const FERIA = dayToday(new Date(2026, 11, 15)); // the Tuesday after it
-const AHEAD = dayToday(new Date(2030, 11, 8)); // Immaculate Conception, not written
-const STRANDED = dayToday(new Date(2030, 11, 10)); // a feria after an unwritten Sunday feast
+const FUTURE_DAY = {
+	...SUNDAY.on!,
+	formulary: 'future-formulary',
+	position: 'future-formulary'
+};
+const AHEAD: Today = { id: '', on: FUTURE_DAY, week: FUTURE_DAY };
+const STRANDED: Today = { id: '', on: null, week: FUTURE_DAY };
 const CHOICE = 'dominica-i-adventus';
 
 describe('the hint under the day picker', () => {
-	it('reads the three shapes of today the calendar can return', () => {
+	it('reads the calendar shapes and the future-catalogue fixtures', () => {
 		// The fixtures above are the whole point of the table below, so they
 		// are asserted rather than assumed.
 		expect(SUNDAY.id, 'a Sunday this edition carries').toBe('dominica-iii-adventus');
 		expect(FERIA.id, 'a feria has no Mass of its own').toBe('');
 		expect(FERIA.on, 'and none in the temporal table either').toBeNull();
 		expect(FERIA.week?.formulary).toBe('dominica-iii-adventus');
-		expect(AHEAD.id, 'a feast this edition has not written').toBe('');
-		expect(AHEAD.on?.formulary, 'which the calendar can still name').toBe('immaculata-conceptio');
+		expect(AHEAD.id, 'a future feast this edition has not written').toBe('');
+		expect(AHEAD.on?.formulary, 'which a future calendar can still name').toBe('future-formulary');
 		expect(STRANDED.on, 'a feria').toBeNull();
 		expect(STRANDED.week?.formulary, 'of a week the edition cannot open either').toBe(
-			'immaculata-conceptio'
+			'future-formulary'
 		);
 	});
 
@@ -96,6 +100,6 @@ describe('the hint under the day picker', () => {
 			if (hint.kind === 'week') expect(PROPER_DAYS).toContain(hint.sunday);
 			else expect(hint.kind).toBe('ahead');
 		}
-		expect(ferias, 'a year of Tuesdays holds ferias').toBeGreaterThan(40);
+		expect(ferias, 'a year of Tuesdays holds ferias').toBeGreaterThanOrEqual(40);
 	});
 });

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-ioannis-apostoli-et-evangelistae-alleluia",
+  "title":"Allelúia, allelúia. Hic est discípulus ille, qui",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-ioannis-apostoli-et-evangelistae",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46,"a":14},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46,"a":14},{"i":"w003","f":"Hic","l":"hic","m":18,"a":14},{"i":"w004","f":"est","l":"sum","m":21,"a":14},{"i":"w005","f":"discípulus","l":"discipulus","m":60,"a":14},{"i":"w006","f":"ille","l":"ille","p":",","m":18,"a":14},{"i":"w007","f":"qui","l":"qui","m":18,"a":14},{"i":"w008","f":"testimónium","l":"testimonium","m":82,"a":14},{"i":"w009","f":"pérhibet","l":"perhibeo","m":165,"a":14},{"i":"w010","f":"de","l":"de","m":0,"h":"w011","a":14},{"i":"w011","f":"his","l":"hic","p":":","m":62,"a":14},{"i":"w012","f":"et","l":"et","m":15,"a":14},{"i":"w013","f":"scimus","l":"scio","p":",","m":442,"a":14},{"i":"w014","f":"quia","l":"quia","m":15,"a":14},{"i":"w015","f":"verum","l":"verus","m":105,"s":true,"a":14},{"i":"w016","f":"est","l":"sum","m":21,"a":14},{"i":"w017","f":"testimónium","l":"testimonium","m":104,"a":14},{"i":"w018","f":"eius","l":"is","p":".","m":27,"a":14},{"i":"w019","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14}]}
+  ]
+}

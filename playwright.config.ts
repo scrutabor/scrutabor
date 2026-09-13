@@ -28,9 +28,10 @@ export default defineConfig({
 				// the landing links the latest release's asset directly.)
 				command: prebuilt ? 'npm run preview' : 'npm run build:offline && npm run preview',
 				port: 4173,
-				// A cold CI runner now builds the complete 660-text hosted and folder
-				// editions before preview starts; 60 s is too close to the measured build.
-				timeout: 120_000,
+				// A cold CI runner builds the complete hosted and folder editions before
+				// preview starts. The full liturgical-year corpus can take nearly two
+				// minutes even on a warm workstation, so leave room for a cold runner.
+				timeout: 240_000,
 				reuseExistingServer: !process.env.CI
 			},
 	// The corpus is large and the flow pages are long; a 5 s default starts

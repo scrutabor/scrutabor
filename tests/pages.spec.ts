@@ -445,7 +445,13 @@ test('landing shows the catalog and separates reference pages from edition statu
 	await expect(page.locator('.working')).toContainText('Working edition awaiting expert review');
 });
 
-test('every reading names itself below its Latin title', async ({ page }) => {
+bareTest('every reading names itself below its Latin title', async ({ page }, testInfo) => {
+	testInfo.setTimeout(
+		Math.max(
+			testInfo.timeout,
+			30_000 + CATALOG_ORDER.reduce((count, section) => count + section.texts.length, 0) * 2_000
+		)
+	);
 	for (const section of CATALOG_ORDER) {
 		for (const slug of section.texts) {
 			const key = `${section.category}/${slug}`;

@@ -3,6 +3,10 @@
  "language": "en",
  "titles": [
   {
+   "id": "annuntiatio-beatae-mariae-virginis",
+   "title": "Annunciation of the Blessed Virgin Mary"
+  },
+  {
    "id": "assumptio-beatae-mariae-virginis",
    "title": "Assumption of the Blessed Virgin Mary"
   },
@@ -13,6 +17,10 @@
   {
    "id": "beatae-mariae-virginis-a-rosario",
    "title": "Blessed Virgin Mary of the Rosary"
+  },
+  {
+   "id": "cathedra-sancti-petri",
+   "title": "Chair of Saint Peter the Apostle"
   },
   {
    "id": "commemoratio-omnium-fidelium-defunctorum-missa-ii",
@@ -39,6 +47,10 @@
    "title": "Exaltation of the Holy Cross"
   },
   {
+   "id": "immaculata-conceptio",
+   "title": "Immaculate Conception of the Blessed Virgin Mary"
+  },
+  {
    "id": "immaculatum-cor-beatae-mariae-virginis",
    "title": "Immaculate Heart of the Blessed Virgin Mary"
   },
@@ -63,8 +75,16 @@
    "title": "Most Precious Blood of Our Lord Jesus Christ"
   },
   {
+   "id": "purificatio-beatae-mariae-virginis",
+   "title": "Purification of the Blessed Virgin Mary"
+  },
+  {
    "id": "sanctae-annae-matris-beatae-mariae-virginis",
    "title": "Saint Anne, Mother of the Blessed Virgin Mary"
+  },
+  {
+   "id": "sancti-andreae-apostoli",
+   "title": "Saint Andrew the Apostle"
   },
   {
    "id": "sancti-bartholomaei-apostoli",
@@ -79,6 +99,18 @@
    "title": "Saint Joachim, Confessor"
   },
   {
+   "id": "sancti-ioannis-apostoli-et-evangelistae",
+   "title": "Saint John, Apostle and Evangelist"
+  },
+  {
+   "id": "sancti-ioseph-opificis",
+   "title": "Saint Joseph the Worker"
+  },
+  {
+   "id": "sancti-ioseph-sponsi-beatae-mariae-virginis",
+   "title": "Saint Joseph, Spouse of the Blessed Virgin Mary"
+  },
+  {
    "id": "sancti-laurentii-martyris",
    "title": "Saint Lawrence, Martyr"
   },
@@ -87,12 +119,36 @@
    "title": "Saint Luke the Evangelist"
   },
   {
+   "id": "sancti-marci-evangelistae",
+   "title": "Saint Mark the Evangelist"
+  },
+  {
    "id": "sancti-matthaei-apostoli-et-evangelistae",
    "title": "Saint Matthew, Apostle and Evangelist"
   },
   {
+   "id": "sancti-matthiae-apostoli",
+   "title": "Saint Matthias the Apostle"
+  },
+  {
    "id": "sancti-petri-et-pauli-apostolorum",
    "title": "Saints Peter and Paul, Apostles"
+  },
+  {
+   "id": "sancti-stephani-protomartyris",
+   "title": "Saint Stephen, the First Martyr"
+  },
+  {
+   "id": "sancti-thomae-apostoli",
+   "title": "Saint Thomas the Apostle"
+  },
+  {
+   "id": "sanctorum-innocentium-martyrum",
+   "title": "The Holy Innocents, Martyrs"
+  },
+  {
+   "id": "sanctorum-philippi-et-iacobi-apostolorum",
+   "title": "Saints Philip and James, Apostles"
   },
   {
    "id": "sanctorum-simonis-et-iudae-apostolorum",

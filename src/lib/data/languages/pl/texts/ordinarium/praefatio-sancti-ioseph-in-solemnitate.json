@@ -1,0 +1,15 @@
+{
+  "id":"ordinarium.praefatio-sancti-ioseph-in-solemnitate",
+  "language":"pl",
+  "about":"Prefacja o świętym Józefie z formułą «Solemnitáte». Wysławia sprawiedliwego Oblubieńca Bogarodzicy, wiernego opiekuna Świętej Rodziny i ziemskiego stróża Syna Bożego.",
+  "seg":[
+    {"id":"s01","nr":"Następnie kapłan rozłącza ręce i trzyma je rozłożone aż do końca Prefacji. Po jej zakończeniu ponownie je składa i pochylony mówi: Sanctus."},
+    {"id":"s02","tr":"Zaprawdę godne to i sprawiedliwe, słuszne i zbawienne, byśmy Tobie zawsze i wszędzie składali dzięki:","g":["prawdziwie","godne","i","sprawiedliwa","jest","słuszna","i","zbawienna","nas","Ci","zawsze","i","wszędzie","dzięki","składać"]},
+    {"id":"s03","tr":"Panie, Ojcze święty, wszechmogący, wieczny Boże:","g":["Pani","święty","Ojcze","wszechmogący","wieczny","Bóg"]},
+    {"id":"s04","tr":"I abyśmy Cię w uroczystość świętego Józefa należnymi pochwałami uwielbiali, błogosławili i wysławiali.","g":["i","Tobą","w","uroczystości","błogosławionej","Józef","będącymi","wielbić","ogłoszeniami","błogosławić","i","głosić"]},
+    {"id":"s05","tr":"On, mąż sprawiedliwy, został przez Ciebie dany Bogarodzicy Dziewicy za Oblubieńca; jako sługa wierny i roztropny został postawiony nad Twoją Rodziną, aby w ojcowskim zastępstwie strzegł Jednorodzonego Syna Twojego, poczętego za sprawą Ducha Świętego, Jezusa Chrystusa, Pana naszego.","g":["który","i","mąż","sprawiedliwy","od","Cię","Bogurodzicy","Dziewicy","oblubieniec","jest","dająca","i","wierna","sługa","i","roztropna","nad","rodzinę","Twe","jest","uzasadniana","aby","jednorodzone","Twe","Świętego","Ducha","osłonieniem","poczynane","ojcowskim","wsi","strzegł","Jezusa","Chrystusa","Pana","nasz"]},
+    {"id":"s06","tr":"Przez Niego Aniołowie chwalą Twój majestat, Państwa go uwielbiają, a Potęgi przed nim drżą.","g":["przez","który","majestat","Twój","chwalą","anieli","uwielbiają","Państwa","drżą","Moce"]},
+    {"id":"s07","tr":"Niebiosa, Moce niebios i błogosławieni Serafini wspólnie i radośnie wysławiają Twój majestat.","g":["nieba","niebios","moce","i","błogosławiona","Serafini","wspólnym","uniesieniem","sławią razem"]},
+    {"id":"s08","tr":"Prosimy Cię, pozwól, aby także nasze głosy dołączyły do ich głosów, gdy z pokorą wyznajemy:","g":["z","którymi","i","nasze","głosy","abyś","być dopuszczonymi","kazał","prosimy","kornym","wyznaniem","mówieni"]}
+  ]
+}

@@ -95,7 +95,7 @@ function tokenize(word: string): Unit[] {
 		// preceding letter: qu and gu are consumed above as consonants, so
 		// the u of quia must not count as the vowel before the i.
 		if (
-			(ch === 'i' || ch === 'í') &&
+			ch === 'i' &&
 			VOWELS.has(word[i + 1] ?? '') &&
 			!(i === 0 && bare(word) === 'iisdem') &&
 			(units[units.length - 1]?.vowel === true || units.length === 0 || afterPrefix(word, i))

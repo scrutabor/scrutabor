@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-thomae-apostoli-alleluia",
+  "title":"Allelúia, allelúia. Gaudéte, iusti, in Dómino: rectos",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-thomae-apostoli",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46,"a":14},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46,"a":14},{"i":"w003","f":"Gaudéte","l":"gaudeo","p":",","m":368,"a":14},{"i":"w004","f":"iusti","l":"iustus","p":",","m":99,"s":true,"a":14},{"i":"w005","f":"in","l":"in","m":0,"h":"w006","a":14},{"i":"w006","f":"Dómino","l":"dominus","p":":","m":29,"a":14},{"i":"w007","f":"rectos","l":"rectus","m":91,"s":true,"a":14},{"i":"w008","f":"decet","l":"decet","m":165,"a":14},{"i":"w009","f":"collaudátio","l":"collaudatio","p":".","m":20,"a":14},{"i":"w010","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14}]}
+  ]
+}

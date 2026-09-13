@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-ioannis-apostoli-et-evangelistae-tractus",
+  "title":"Beátus vir, qui timet Dóminum: in mandátis",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-ioannis-apostoli-et-evangelistae",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Beátus","l":"beatus","m":59,"h":"w002","a":14},{"i":"w002","f":"vir","l":"vir","p":",","m":60,"a":14},{"i":"w003","f":"qui","l":"qui","m":18,"a":14},{"i":"w004","f":"timet","l":"timeo","m":165,"a":14},{"i":"w005","f":"Dóminum","l":"dominus","p":":","m":35,"a":14},{"i":"w006","f":"in","l":"in","m":0,"h":"w007","a":14},{"i":"w007","f":"mandátis","l":"mandatum","m":1,"a":14},{"i":"w008","f":"eius","l":"is","m":27,"a":14},{"i":"w009","f":"cupit","l":"cupio","m":140,"a":14},{"i":"w010","f":"nimis","l":"nimis","p":".","m":32,"a":14},{"i":"w011","f":"Potens","l":"potens","m":59,"s":true,"a":14},{"i":"w012","f":"in","l":"in","m":0,"h":"w013","a":14},{"i":"w013","f":"terra","l":"terra","m":30,"a":14},{"i":"w014","f":"erit","l":"sum","m":277,"a":14},{"i":"w015","f":"semen","l":"semen","m":97,"a":14},{"i":"w016","f":"eius","l":"is","p":":","m":27,"a":14},{"i":"w017","f":"generátio","l":"generatio","m":20,"a":14},{"i":"w018","f":"rectórum","l":"rector","m":77,"a":14},{"i":"w019","f":"benedicétur","l":"benedico","p":".","m":345,"a":14},{"i":"w020","f":"Glória","l":"gloria","m":24,"a":14},{"i":"w021","f":"et","l":"et","m":15,"a":14},{"i":"w022","f":"divítiæ","l":"divitia","m":64,"a":14},{"i":"w023","f":"in","l":"in","m":0,"h":"w024","a":14},{"i":"w024","f":"domo","l":"domus","m":500,"a":14},{"i":"w025","f":"eius","l":"is","p":":","m":27,"a":14},{"i":"w026","f":"et","l":"et","m":15,"a":14},{"i":"w027","f":"iustítia","l":"iustitia","m":24,"a":14},{"i":"w028","f":"eius","l":"is","m":27,"a":14},{"i":"w029","f":"manet","l":"maneo","m":165,"a":14},{"i":"w030","f":"in","l":"in","m":3,"h":"w031","a":14},{"i":"w031","f":"sǽculum","l":"saeculum","m":82,"a":14},{"i":"w032","f":"sǽculi","l":"saeculum","p":".","m":68,"a":14}]}
+  ]
+}

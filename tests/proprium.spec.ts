@@ -106,14 +106,19 @@ test('a date outside the available calendar data is explained plainly', async ({
 	await expect(page).toHaveURL(/\?dies=2026-08-19$/);
 });
 
-test('a resolved day whose texts are absent says exactly that', async ({ page }) => {
+test('a newly completed fixed feast opens directly from its date', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo');
 	const dialog = await openPicker(page);
 	await selectCalendarDate(dialog, '2030-12-08');
-	await expect(dialog).toContainText('Dzień rozpoznany, formularz jeszcze niedostępny');
-	await dialog.getByRole('button', { name: 'Otwórz bez formularza' }).click();
-	await expect(page.locator('.picker.day .state')).toHaveText('jeszcze nie w tym wydaniu');
+	await expect(dialog).toContainText('Niepokalane Poczęcie Najświętszej Maryi Panny');
+	await expect(dialog).toContainText('formularz dostępny w tym wydaniu');
+	await dialog.getByRole('button', { name: 'Otwórz formularz' }).click();
+	await expect(page).toHaveURL(/\?dies=2030-12-08$/);
+	await expect(page.locator('.picker.day .day-open')).toContainText(
+		'Niepokalane Poczęcie Najświętszej Maryi Panny'
+	);
+	await expect(page.locator('.picker.day .state')).toHaveCount(0);
 });
 
 test('Christmas Eve and the octave day open directly from their dates', async ({ page }) => {
@@ -570,9 +575,16 @@ test('a choice made yesterday expires at midnight', async ({ page }) => {
 	await expect(page.locator('.picker.day .day-open')).toContainText('III Niedziela Adwentu');
 });
 
-test('a real formulary not yet written is distinct from a malformed value', async ({ page }) => {
+test('a completed formulary id opens its texts rather than falling back to dayless Ordo', async ({
+	page
+}) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/en/ordo/catechumenorum?dies=immaculata-conceptio');
 	await settled(page);
-	await expect(page.locator('.picker.day .state')).toHaveText('not yet in this edition');
+	await expect(page.locator('.picker.day .day-open')).toContainText(
+		'Immaculate Conception of the Blessed Virgin Mary'
+	);
+	await expect(page.locator('.picker.day .state')).toHaveCount(0);
+	await expect(page.locator('body')).toContainText('Gaudens');
+	await expect(page.locator('body')).toContainText('gaudébo');
 });

@@ -111,7 +111,21 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-annuntiatione",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-beatae-mariae-virginis-in-assumptione",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-conceptione-immaculata",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -202,6 +216,20 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-sancti-ioseph-in-festivitate",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-sancti-ioseph-in-solemnitate",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-sanctissimae-trinitatis",
        "roles": [
         "derived_digital_collation_aid"
@@ -210,6 +238,76 @@
       },
       {
        "id": "ordinarium.praefatio-spiritus-sancti",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-tractus",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -490,6 +588,62 @@
       },
       {
        "id": "proprium.beatae-mariae-virginis-a-rosario-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-tractus",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -4122,6 +4276,76 @@
        "uses": 1
       },
       {
+       "id": "proprium.immaculata-conceptio-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-tractus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.immaculatum-cor-beatae-mariae-virginis-alleluia",
        "roles": [
         "derived_digital_collation_aid"
@@ -4745,6 +4969,76 @@
        "uses": 1
       },
       {
+       "id": "proprium.purificatio-beatae-mariae-virginis-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-tractus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sacratissimi-cordis-iesu-alleluia",
        "roles": [
         "derived_digital_collation_aid"
@@ -4955,6 +5249,55 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-andreae-apostoli-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-bartholomaei-apostoli-alleluia",
        "roles": [
         "derived_digital_collation_aid"
@@ -5151,6 +5494,195 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-tractus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-laurentii-martyris-alleluia",
        "roles": [
         "derived_digital_collation_aid"
@@ -5270,6 +5802,55 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-marci-evangelistae-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-matthaei-apostoli-et-evangelistae-alleluia",
        "roles": [
         "derived_digital_collation_aid"
@@ -5340,6 +5921,55 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-matthiae-apostoli-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-tractus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-petri-et-pauli-apostolorum-alleluia",
        "roles": [
         "derived_digital_collation_aid"
@@ -5404,6 +6034,125 @@
       },
       {
        "id": "proprium.sancti-petri-et-pauli-apostolorum-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-secreta",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -5537,6 +6286,139 @@
       },
       {
        "id": "proprium.sanctissimi-nominis-iesu-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-tractus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-secreta",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -6049,7 +6931,21 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-annuntiatione",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-beatae-mariae-virginis-in-assumptione",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-conceptione-immaculata",
        "roles": [
         "official_text"
        ],
@@ -6140,6 +7036,20 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-sancti-ioseph-in-festivitate",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-sancti-ioseph-in-solemnitate",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-sanctissimae-trinitatis",
        "roles": [
         "official_text"
@@ -6148,6 +7058,76 @@
       },
       {
        "id": "ordinarium.praefatio-spiritus-sancti",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-tractus",
        "roles": [
         "official_text"
        ],
@@ -6428,6 +7408,62 @@
       },
       {
        "id": "proprium.beatae-mariae-virginis-a-rosario-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-tractus",
        "roles": [
         "official_text"
        ],
@@ -10060,6 +11096,76 @@
        "uses": 1
       },
       {
+       "id": "proprium.immaculata-conceptio-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-tractus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.immaculatum-cor-beatae-mariae-virginis-alleluia",
        "roles": [
         "official_text"
@@ -10683,6 +11789,76 @@
        "uses": 1
       },
       {
+       "id": "proprium.purificatio-beatae-mariae-virginis-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-tractus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sacratissimi-cordis-iesu-alleluia",
        "roles": [
         "official_text"
@@ -10893,6 +12069,55 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-andreae-apostoli-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-bartholomaei-apostoli-alleluia",
        "roles": [
         "official_text"
@@ -11089,6 +12314,195 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-tractus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-laurentii-martyris-alleluia",
        "roles": [
         "official_text"
@@ -11208,6 +12622,55 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-marci-evangelistae-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-matthaei-apostoli-et-evangelistae-alleluia",
        "roles": [
         "official_text"
@@ -11278,6 +12741,55 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-matthiae-apostoli-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-tractus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-petri-et-pauli-apostolorum-alleluia",
        "roles": [
         "official_text"
@@ -11342,6 +12854,125 @@
       },
       {
        "id": "proprium.sancti-petri-et-pauli-apostolorum-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-secreta",
        "roles": [
         "official_text"
        ],
@@ -11475,6 +13106,139 @@
       },
       {
        "id": "proprium.sanctissimi-nominis-iesu-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-graduale",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-tractus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-evangelium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-secreta",
        "roles": [
         "official_text"
        ],

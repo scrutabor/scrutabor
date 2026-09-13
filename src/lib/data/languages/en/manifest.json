@@ -411,8 +411,16 @@
       "path": "languages/en/texts/ordinarium/praefatio-ascensionis.json"
     },
     {
+      "id": "ordinarium.praefatio-beatae-mariae-virginis-in-annuntiatione",
+      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-annuntiatione.json"
+    },
+    {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-assumptione",
       "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-assumptione.json"
+    },
+    {
+      "id": "ordinarium.praefatio-beatae-mariae-virginis-in-conceptione-immaculata",
+      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-conceptione-immaculata.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-nativitate",
@@ -475,6 +483,14 @@
     {
       "id": "ordinarium.praefatio-sanctae-crucis",
       "path": "languages/en/texts/ordinarium/praefatio-sanctae-crucis.json"
+    },
+    {
+      "id": "ordinarium.praefatio-sancti-ioseph-in-festivitate",
+      "path": "languages/en/texts/ordinarium/praefatio-sancti-ioseph-in-festivitate.json"
+    },
+    {
+      "id": "ordinarium.praefatio-sancti-ioseph-in-solemnitate",
+      "path": "languages/en/texts/ordinarium/praefatio-sancti-ioseph-in-solemnitate.json"
     },
     {
       "id": "ordinarium.praefatio-sanctissimae-trinitatis",
@@ -548,6 +564,46 @@
       "id": "ordinarium.unde-et-memores",
       "path": "languages/en/texts/ordinarium/unde-et-memores.json",
       "evidence": "languages/en/bibliography/texts/ordinarium/unde-et-memores.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-alleluia.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-collecta",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-collecta.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-communio",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-communio.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-epistola",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-epistola.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-evangelium",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-evangelium.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-introitus.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-offertorium",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-offertorium.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-postcommunio",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-postcommunio.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-secreta",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-secreta.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-tractus",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-tractus.json"
     },
     {
       "id": "proprium.ascensio-domini-alleluia",
@@ -708,6 +764,38 @@
     {
       "id": "proprium.beatae-mariae-virginis-a-rosario-secreta",
       "path": "languages/en/texts/proprium/beatae-mariae-virginis-a-rosario-secreta.json"
+    },
+    {
+      "id": "proprium.cathedra-sancti-petri-collecta",
+      "path": "languages/en/texts/proprium/cathedra-sancti-petri-collecta.json"
+    },
+    {
+      "id": "proprium.cathedra-sancti-petri-epistola",
+      "path": "languages/en/texts/proprium/cathedra-sancti-petri-epistola.json"
+    },
+    {
+      "id": "proprium.cathedra-sancti-petri-graduale",
+      "path": "languages/en/texts/proprium/cathedra-sancti-petri-graduale.json"
+    },
+    {
+      "id": "proprium.cathedra-sancti-petri-introitus",
+      "path": "languages/en/texts/proprium/cathedra-sancti-petri-introitus.json"
+    },
+    {
+      "id": "proprium.cathedra-sancti-petri-offertorium",
+      "path": "languages/en/texts/proprium/cathedra-sancti-petri-offertorium.json"
+    },
+    {
+      "id": "proprium.cathedra-sancti-petri-postcommunio",
+      "path": "languages/en/texts/proprium/cathedra-sancti-petri-postcommunio.json"
+    },
+    {
+      "id": "proprium.cathedra-sancti-petri-secreta",
+      "path": "languages/en/texts/proprium/cathedra-sancti-petri-secreta.json"
+    },
+    {
+      "id": "proprium.cathedra-sancti-petri-tractus",
+      "path": "languages/en/texts/proprium/cathedra-sancti-petri-tractus.json"
     },
     {
       "id": "proprium.commemoratio-baptismatis-domini-collecta",
@@ -2972,6 +3060,46 @@
       "path": "languages/en/texts/proprium/feria-v-in-cena-domini-secreta.json"
     },
     {
+      "id": "proprium.immaculata-conceptio-alleluia",
+      "path": "languages/en/texts/proprium/immaculata-conceptio-alleluia.json"
+    },
+    {
+      "id": "proprium.immaculata-conceptio-collecta",
+      "path": "languages/en/texts/proprium/immaculata-conceptio-collecta.json"
+    },
+    {
+      "id": "proprium.immaculata-conceptio-communio",
+      "path": "languages/en/texts/proprium/immaculata-conceptio-communio.json"
+    },
+    {
+      "id": "proprium.immaculata-conceptio-evangelium",
+      "path": "languages/en/texts/proprium/immaculata-conceptio-evangelium.json"
+    },
+    {
+      "id": "proprium.immaculata-conceptio-graduale",
+      "path": "languages/en/texts/proprium/immaculata-conceptio-graduale.json"
+    },
+    {
+      "id": "proprium.immaculata-conceptio-introitus",
+      "path": "languages/en/texts/proprium/immaculata-conceptio-introitus.json"
+    },
+    {
+      "id": "proprium.immaculata-conceptio-offertorium",
+      "path": "languages/en/texts/proprium/immaculata-conceptio-offertorium.json"
+    },
+    {
+      "id": "proprium.immaculata-conceptio-postcommunio",
+      "path": "languages/en/texts/proprium/immaculata-conceptio-postcommunio.json"
+    },
+    {
+      "id": "proprium.immaculata-conceptio-secreta",
+      "path": "languages/en/texts/proprium/immaculata-conceptio-secreta.json"
+    },
+    {
+      "id": "proprium.immaculata-conceptio-tractus",
+      "path": "languages/en/texts/proprium/immaculata-conceptio-tractus.json"
+    },
+    {
       "id": "proprium.immaculatum-cor-beatae-mariae-virginis-alleluia",
       "path": "languages/en/texts/proprium/immaculatum-cor-beatae-mariae-virginis-alleluia.json"
     },
@@ -3328,6 +3456,46 @@
       "path": "languages/en/texts/proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-tractus.json"
     },
     {
+      "id": "proprium.purificatio-beatae-mariae-virginis-alleluia",
+      "path": "languages/en/texts/proprium/purificatio-beatae-mariae-virginis-alleluia.json"
+    },
+    {
+      "id": "proprium.purificatio-beatae-mariae-virginis-collecta",
+      "path": "languages/en/texts/proprium/purificatio-beatae-mariae-virginis-collecta.json"
+    },
+    {
+      "id": "proprium.purificatio-beatae-mariae-virginis-communio",
+      "path": "languages/en/texts/proprium/purificatio-beatae-mariae-virginis-communio.json"
+    },
+    {
+      "id": "proprium.purificatio-beatae-mariae-virginis-epistola",
+      "path": "languages/en/texts/proprium/purificatio-beatae-mariae-virginis-epistola.json"
+    },
+    {
+      "id": "proprium.purificatio-beatae-mariae-virginis-evangelium",
+      "path": "languages/en/texts/proprium/purificatio-beatae-mariae-virginis-evangelium.json"
+    },
+    {
+      "id": "proprium.purificatio-beatae-mariae-virginis-graduale",
+      "path": "languages/en/texts/proprium/purificatio-beatae-mariae-virginis-graduale.json"
+    },
+    {
+      "id": "proprium.purificatio-beatae-mariae-virginis-offertorium",
+      "path": "languages/en/texts/proprium/purificatio-beatae-mariae-virginis-offertorium.json"
+    },
+    {
+      "id": "proprium.purificatio-beatae-mariae-virginis-postcommunio",
+      "path": "languages/en/texts/proprium/purificatio-beatae-mariae-virginis-postcommunio.json"
+    },
+    {
+      "id": "proprium.purificatio-beatae-mariae-virginis-secreta",
+      "path": "languages/en/texts/proprium/purificatio-beatae-mariae-virginis-secreta.json"
+    },
+    {
+      "id": "proprium.purificatio-beatae-mariae-virginis-tractus",
+      "path": "languages/en/texts/proprium/purificatio-beatae-mariae-virginis-tractus.json"
+    },
+    {
       "id": "proprium.sacratissimi-cordis-iesu-alleluia",
       "path": "languages/en/texts/proprium/sacratissimi-cordis-iesu-alleluia.json"
     },
@@ -3448,6 +3616,34 @@
       "path": "languages/en/texts/proprium/sanctae-annae-matris-beatae-mariae-virginis-tractus.json"
     },
     {
+      "id": "proprium.sancti-andreae-apostoli-alleluia",
+      "path": "languages/en/texts/proprium/sancti-andreae-apostoli-alleluia.json"
+    },
+    {
+      "id": "proprium.sancti-andreae-apostoli-collecta",
+      "path": "languages/en/texts/proprium/sancti-andreae-apostoli-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-andreae-apostoli-communio",
+      "path": "languages/en/texts/proprium/sancti-andreae-apostoli-communio.json"
+    },
+    {
+      "id": "proprium.sancti-andreae-apostoli-epistola",
+      "path": "languages/en/texts/proprium/sancti-andreae-apostoli-epistola.json"
+    },
+    {
+      "id": "proprium.sancti-andreae-apostoli-evangelium",
+      "path": "languages/en/texts/proprium/sancti-andreae-apostoli-evangelium.json"
+    },
+    {
+      "id": "proprium.sancti-andreae-apostoli-postcommunio",
+      "path": "languages/en/texts/proprium/sancti-andreae-apostoli-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-andreae-apostoli-secreta",
+      "path": "languages/en/texts/proprium/sancti-andreae-apostoli-secreta.json"
+    },
+    {
       "id": "proprium.sancti-bartholomaei-apostoli-alleluia",
       "path": "languages/en/texts/proprium/sancti-bartholomaei-apostoli-alleluia.json"
     },
@@ -3560,6 +3756,114 @@
       "path": "languages/en/texts/proprium/sancti-ioachim-confessoris-tractus.json"
     },
     {
+      "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-alleluia",
+      "path": "languages/en/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-alleluia.json"
+    },
+    {
+      "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-collecta",
+      "path": "languages/en/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-communio",
+      "path": "languages/en/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-communio.json"
+    },
+    {
+      "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-epistola",
+      "path": "languages/en/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-epistola.json"
+    },
+    {
+      "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-evangelium",
+      "path": "languages/en/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-evangelium.json"
+    },
+    {
+      "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-graduale",
+      "path": "languages/en/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-graduale.json"
+    },
+    {
+      "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-introitus",
+      "path": "languages/en/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-introitus.json"
+    },
+    {
+      "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-postcommunio",
+      "path": "languages/en/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-secreta",
+      "path": "languages/en/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-tractus",
+      "path": "languages/en/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-tractus.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-opificis-alleluia",
+      "path": "languages/en/texts/proprium/sancti-ioseph-opificis-alleluia.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-opificis-collecta",
+      "path": "languages/en/texts/proprium/sancti-ioseph-opificis-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-opificis-communio",
+      "path": "languages/en/texts/proprium/sancti-ioseph-opificis-communio.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-opificis-epistola",
+      "path": "languages/en/texts/proprium/sancti-ioseph-opificis-epistola.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-opificis-evangelium",
+      "path": "languages/en/texts/proprium/sancti-ioseph-opificis-evangelium.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-opificis-introitus",
+      "path": "languages/en/texts/proprium/sancti-ioseph-opificis-introitus.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-opificis-offertorium",
+      "path": "languages/en/texts/proprium/sancti-ioseph-opificis-offertorium.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-opificis-postcommunio",
+      "path": "languages/en/texts/proprium/sancti-ioseph-opificis-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-opificis-secreta",
+      "path": "languages/en/texts/proprium/sancti-ioseph-opificis-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-collecta",
+      "path": "languages/en/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-communio",
+      "path": "languages/en/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-communio.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-epistola",
+      "path": "languages/en/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-epistola.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-graduale",
+      "path": "languages/en/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-graduale.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-introitus",
+      "path": "languages/en/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-introitus.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-offertorium",
+      "path": "languages/en/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-offertorium.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-postcommunio",
+      "path": "languages/en/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-secreta",
+      "path": "languages/en/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-secreta.json"
+    },
+    {
       "id": "proprium.sancti-laurentii-martyris-alleluia",
       "path": "languages/en/texts/proprium/sancti-laurentii-martyris-alleluia.json"
     },
@@ -3628,6 +3932,34 @@
       "path": "languages/en/texts/proprium/sancti-lucae-evangelistae-secreta.json"
     },
     {
+      "id": "proprium.sancti-marci-evangelistae-alleluia",
+      "path": "languages/en/texts/proprium/sancti-marci-evangelistae-alleluia.json"
+    },
+    {
+      "id": "proprium.sancti-marci-evangelistae-collecta",
+      "path": "languages/en/texts/proprium/sancti-marci-evangelistae-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-marci-evangelistae-communio",
+      "path": "languages/en/texts/proprium/sancti-marci-evangelistae-communio.json"
+    },
+    {
+      "id": "proprium.sancti-marci-evangelistae-introitus",
+      "path": "languages/en/texts/proprium/sancti-marci-evangelistae-introitus.json"
+    },
+    {
+      "id": "proprium.sancti-marci-evangelistae-offertorium",
+      "path": "languages/en/texts/proprium/sancti-marci-evangelistae-offertorium.json"
+    },
+    {
+      "id": "proprium.sancti-marci-evangelistae-postcommunio",
+      "path": "languages/en/texts/proprium/sancti-marci-evangelistae-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-marci-evangelistae-secreta",
+      "path": "languages/en/texts/proprium/sancti-marci-evangelistae-secreta.json"
+    },
+    {
       "id": "proprium.sancti-matthaei-apostoli-et-evangelistae-alleluia",
       "path": "languages/en/texts/proprium/sancti-matthaei-apostoli-et-evangelistae-alleluia.json"
     },
@@ -3668,6 +4000,34 @@
       "path": "languages/en/texts/proprium/sancti-matthaei-apostoli-et-evangelistae-secreta.json"
     },
     {
+      "id": "proprium.sancti-matthiae-apostoli-collecta",
+      "path": "languages/en/texts/proprium/sancti-matthiae-apostoli-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-matthiae-apostoli-epistola",
+      "path": "languages/en/texts/proprium/sancti-matthiae-apostoli-epistola.json"
+    },
+    {
+      "id": "proprium.sancti-matthiae-apostoli-evangelium",
+      "path": "languages/en/texts/proprium/sancti-matthiae-apostoli-evangelium.json"
+    },
+    {
+      "id": "proprium.sancti-matthiae-apostoli-graduale",
+      "path": "languages/en/texts/proprium/sancti-matthiae-apostoli-graduale.json"
+    },
+    {
+      "id": "proprium.sancti-matthiae-apostoli-postcommunio",
+      "path": "languages/en/texts/proprium/sancti-matthiae-apostoli-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-matthiae-apostoli-secreta",
+      "path": "languages/en/texts/proprium/sancti-matthiae-apostoli-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-matthiae-apostoli-tractus",
+      "path": "languages/en/texts/proprium/sancti-matthiae-apostoli-tractus.json"
+    },
+    {
       "id": "proprium.sancti-petri-et-pauli-apostolorum-alleluia",
       "path": "languages/en/texts/proprium/sancti-petri-et-pauli-apostolorum-alleluia.json"
     },
@@ -3706,6 +4066,74 @@
     {
       "id": "proprium.sancti-petri-et-pauli-apostolorum-secreta",
       "path": "languages/en/texts/proprium/sancti-petri-et-pauli-apostolorum-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-stephani-protomartyris-alleluia",
+      "path": "languages/en/texts/proprium/sancti-stephani-protomartyris-alleluia.json"
+    },
+    {
+      "id": "proprium.sancti-stephani-protomartyris-collecta",
+      "path": "languages/en/texts/proprium/sancti-stephani-protomartyris-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-stephani-protomartyris-communio",
+      "path": "languages/en/texts/proprium/sancti-stephani-protomartyris-communio.json"
+    },
+    {
+      "id": "proprium.sancti-stephani-protomartyris-epistola",
+      "path": "languages/en/texts/proprium/sancti-stephani-protomartyris-epistola.json"
+    },
+    {
+      "id": "proprium.sancti-stephani-protomartyris-evangelium",
+      "path": "languages/en/texts/proprium/sancti-stephani-protomartyris-evangelium.json"
+    },
+    {
+      "id": "proprium.sancti-stephani-protomartyris-graduale",
+      "path": "languages/en/texts/proprium/sancti-stephani-protomartyris-graduale.json"
+    },
+    {
+      "id": "proprium.sancti-stephani-protomartyris-introitus",
+      "path": "languages/en/texts/proprium/sancti-stephani-protomartyris-introitus.json"
+    },
+    {
+      "id": "proprium.sancti-stephani-protomartyris-offertorium",
+      "path": "languages/en/texts/proprium/sancti-stephani-protomartyris-offertorium.json"
+    },
+    {
+      "id": "proprium.sancti-stephani-protomartyris-postcommunio",
+      "path": "languages/en/texts/proprium/sancti-stephani-protomartyris-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-stephani-protomartyris-secreta",
+      "path": "languages/en/texts/proprium/sancti-stephani-protomartyris-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-thomae-apostoli-alleluia",
+      "path": "languages/en/texts/proprium/sancti-thomae-apostoli-alleluia.json"
+    },
+    {
+      "id": "proprium.sancti-thomae-apostoli-collecta",
+      "path": "languages/en/texts/proprium/sancti-thomae-apostoli-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-thomae-apostoli-epistola",
+      "path": "languages/en/texts/proprium/sancti-thomae-apostoli-epistola.json"
+    },
+    {
+      "id": "proprium.sancti-thomae-apostoli-evangelium",
+      "path": "languages/en/texts/proprium/sancti-thomae-apostoli-evangelium.json"
+    },
+    {
+      "id": "proprium.sancti-thomae-apostoli-graduale",
+      "path": "languages/en/texts/proprium/sancti-thomae-apostoli-graduale.json"
+    },
+    {
+      "id": "proprium.sancti-thomae-apostoli-postcommunio",
+      "path": "languages/en/texts/proprium/sancti-thomae-apostoli-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-thomae-apostoli-secreta",
+      "path": "languages/en/texts/proprium/sancti-thomae-apostoli-secreta.json"
     },
     {
       "id": "proprium.sanctissimae-trinitatis-alleluia",
@@ -3782,6 +4210,82 @@
     {
       "id": "proprium.sanctissimi-nominis-iesu-secreta",
       "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-secreta.json"
+    },
+    {
+      "id": "proprium.sanctorum-innocentium-martyrum-alleluia",
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-alleluia.json"
+    },
+    {
+      "id": "proprium.sanctorum-innocentium-martyrum-collecta",
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-collecta.json"
+    },
+    {
+      "id": "proprium.sanctorum-innocentium-martyrum-communio",
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-communio.json"
+    },
+    {
+      "id": "proprium.sanctorum-innocentium-martyrum-epistola",
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-epistola.json"
+    },
+    {
+      "id": "proprium.sanctorum-innocentium-martyrum-evangelium",
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-evangelium.json"
+    },
+    {
+      "id": "proprium.sanctorum-innocentium-martyrum-graduale",
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-graduale.json"
+    },
+    {
+      "id": "proprium.sanctorum-innocentium-martyrum-introitus",
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-introitus.json"
+    },
+    {
+      "id": "proprium.sanctorum-innocentium-martyrum-offertorium",
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-offertorium.json"
+    },
+    {
+      "id": "proprium.sanctorum-innocentium-martyrum-postcommunio",
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-postcommunio.json"
+    },
+    {
+      "id": "proprium.sanctorum-innocentium-martyrum-secreta",
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-secreta.json"
+    },
+    {
+      "id": "proprium.sanctorum-innocentium-martyrum-tractus",
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-tractus.json"
+    },
+    {
+      "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-alleluia",
+      "path": "languages/en/texts/proprium/sanctorum-philippi-et-iacobi-apostolorum-alleluia.json"
+    },
+    {
+      "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-collecta",
+      "path": "languages/en/texts/proprium/sanctorum-philippi-et-iacobi-apostolorum-collecta.json"
+    },
+    {
+      "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-communio",
+      "path": "languages/en/texts/proprium/sanctorum-philippi-et-iacobi-apostolorum-communio.json"
+    },
+    {
+      "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-epistola",
+      "path": "languages/en/texts/proprium/sanctorum-philippi-et-iacobi-apostolorum-epistola.json"
+    },
+    {
+      "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-evangelium",
+      "path": "languages/en/texts/proprium/sanctorum-philippi-et-iacobi-apostolorum-evangelium.json"
+    },
+    {
+      "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-introitus",
+      "path": "languages/en/texts/proprium/sanctorum-philippi-et-iacobi-apostolorum-introitus.json"
+    },
+    {
+      "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-postcommunio",
+      "path": "languages/en/texts/proprium/sanctorum-philippi-et-iacobi-apostolorum-postcommunio.json"
+    },
+    {
+      "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-secreta",
+      "path": "languages/en/texts/proprium/sanctorum-philippi-et-iacobi-apostolorum-secreta.json"
     },
     {
       "id": "proprium.sanctorum-simonis-et-iudae-apostolorum-alleluia",

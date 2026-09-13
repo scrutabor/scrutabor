@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-andreae-apostoli-alleluia",
+  "title":"Allelúia, allelúia. Diléxit Andréam Dóminus in odórem",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-andreae-apostoli",
+  "sung":true,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46,"a":14},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46,"a":14},{"i":"w003","f":"Diléxit","l":"diligo","m":195,"a":14},{"i":"w004","f":"Andréam","l":"Andreas","m":247,"a":14},{"i":"w005","f":"Dóminus","l":"dominus","m":60,"a":14},{"i":"w006","f":"in","l":"in","m":3,"h":"w007","a":14},{"i":"w007","f":"odórem","l":"odor","m":162,"a":14},{"i":"w008","f":"suavitátis","l":"suavitas","p":".","m":13,"a":14},{"i":"w009","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14}]}
+  ]
+}

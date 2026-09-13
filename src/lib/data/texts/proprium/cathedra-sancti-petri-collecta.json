@@ -1,0 +1,14 @@
+{
+  "id":"proprium.cathedra-sancti-petri-collecta",
+  "title":"Deus, qui beáto Petro Apóstolo tuo, collátis",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"cathedra-sancti-petri",
+  "sung":false,
+  "st":"working-edition",
+  "ad":1,
+  "adw":2,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Deus","l":"deus","p":",","m":60,"a":14},{"i":"w002","f":"qui","l":"qui","m":18,"a":14},{"i":"w003","f":"beáto","l":"beatus","m":101,"h":"w005","a":14},{"i":"w004","f":"Petro","l":"Petrus","m":186,"a":14},{"i":"w005","f":"Apóstolo","l":"apostolus","m":29,"a":14},{"i":"w006","f":"tuo","l":"tuus","p":",","m":101,"h":"w005","a":14},{"i":"w007","f":"collátis","l":"confero","m":548,"s":true,"a":14},{"i":"w008","f":"clávibus","l":"clavis","m":40,"a":14},{"i":"w009","f":"regni","l":"regnum","m":68,"a":14},{"i":"w010","f":"cæléstis","l":"caelestis","p":",","m":67,"h":"w009","a":14},{"i":"w011","f":"ligándi","l":"ligo","m":652,"h":"w009","a":14},{"i":"w012","f":"atque","l":"atque","m":15,"a":14},{"i":"w013","f":"solvéndi","l":"solvo","m":653,"h":"w009","a":14},{"i":"w014","f":"pontifícium","l":"pontificius","m":137,"s":true,"a":14},{"i":"w015","f":"tradidísti","l":"trado","p":":","m":154,"a":14},{"i":"w016","f":"concéde","l":"concedo","p":";","m":86,"a":14},{"i":"w017","f":"ut","l":"ut","p":",","m":15,"a":14},{"i":"w018","f":"intercessiónis","l":"intercessio","m":13,"a":14},{"i":"w019","f":"eius","l":"is","m":27,"a":14},{"i":"w020","f":"auxílio","l":"auxilium","p":",","m":26,"a":14},{"i":"w021","f":"a","l":"a","m":0,"h":"w024","a":14},{"i":"w022","f":"peccatórum","l":"peccator","m":77,"a":14},{"i":"w023","f":"nostrórum","l":"noster","m":76,"s":true,"a":14},{"i":"w024","f":"néxibus","l":"nexus","m":583,"a":14},{"i":"w025","f":"liberémur","l":"libero","p":":","m":533,"a":14},{"i":"w026","f":"Qui","l":"qui","m":18,"a":14},{"i":"w027","f":"vivis","l":"vivo","m":84,"a":14},{"i":"w028","f":"et","l":"et","m":15,"a":14},{"i":"w029","f":"regnas","l":"regno","m":164,"a":14},{"i":"w030","f":"cum","l":"cum","m":0,"h":"w031","a":14},{"i":"w031","f":"Deo","l":"deus","m":29,"a":14},{"i":"w032","f":"Patre","l":"pater","m":109,"a":14},{"i":"w033","f":"in","l":"in","m":0,"h":"w034","a":14},{"i":"w034","f":"unitáte","l":"unitas","m":45,"a":14},{"i":"w035","f":"Spíritus","l":"spiritus","m":250,"a":14},{"i":"w036","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w035","a":14},{"i":"w037","f":"Deus","l":"deus","p":",","m":60,"a":14},{"i":"w038","f":"per","l":"per","m":3,"h":"w040","a":14},{"i":"w039","f":"ómnia","l":"omnis","m":129,"h":"w040","a":14},{"i":"w040","f":"sǽcula","l":"saeculum","m":85,"a":14},{"i":"w041","f":"sæculórum","l":"saeculum","p":".","m":145,"a":14},{"i":"w042","f":"Amen","l":"amen","p":".","m":46,"a":14}]}
+  ]
+}
