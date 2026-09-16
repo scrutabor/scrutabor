@@ -5,6 +5,7 @@
 import { setHelp, atRoute, expect, noWordInTheAddress, test } from './fixtures';
 
 const PATER = '/app/pl/orationes/pater-noster';
+const ADVENT_I = '/app/pl/formularium/dominica-i-adventus';
 const panel = 'aside';
 const panelWord = 'aside .form';
 
@@ -13,6 +14,20 @@ test('tap opens the panel and mirrors the word into ?w=', async ({ page }) => {
 	await page.locator('#w008').click();
 	await expect(page.locator(panelWord)).toHaveText('nomen');
 	await expect(page).toHaveURL(/\?w=w008$/);
+});
+
+test('tap in a complete formulary opens the analysis for that exact word', async ({ page }) => {
+	await page.goto(ADVENT_I);
+	const word = page.locator('.proper-part .word').first();
+	const id = await word.getAttribute('id');
+	await word.click();
+	await expect(page.locator(panelWord)).toBeVisible();
+	const physical = new URL(page.url());
+	const logical =
+		physical.protocol === 'file:'
+			? new URL(physical.hash.slice(1), 'https://scrutabor.invalid')
+			: physical;
+	expect(logical.searchParams.get('w')).toBe(id);
 });
 
 test('opening focus does not ring the whole sheet', async ({ page }) => {

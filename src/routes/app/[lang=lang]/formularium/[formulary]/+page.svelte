@@ -95,10 +95,10 @@
 		return citedSegment.startsWith(prefix) ? [citedSegment.slice(prefix.length)] : [];
 	}
 
-	function tapWord(slug: string, id: string) {
+	function tapWord(id: string) {
 		aboutKey = null;
 		legendOpen = false;
-		panel.toggle(`${slug}.${id}`);
+		panel.toggle(id);
 	}
 
 	function openLegend() {
@@ -171,7 +171,7 @@
 					{helpLevel}
 					idPrefix={part.slug}
 					selectedId={panel.id}
-					ontap={(id) => tapWord(part.slug, id)}
+					ontap={tapWord}
 					onmark={openLegend}
 					citedSegments={citedFor(part.slug)}
 					verifiedTranslationCitations={part.bibliography.translation}
