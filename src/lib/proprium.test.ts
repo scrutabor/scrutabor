@@ -5,9 +5,11 @@ import {
 	PROPER_PARTS,
 	SEASONS,
 	SLOT_OF,
+	artifactPack,
 	artifactPath,
 	componentApplies,
 	dayById,
+	formularyPacks,
 	partOf,
 	properRank
 } from './proprium';
@@ -112,9 +114,15 @@ describe('lookups', () => {
 	});
 
 	it('builds the artifact path the endpoint actually serves', () => {
-		expect(artifactPath('dominica-i-adventus', 'pl')).toBe(
-			'/artifacts/proprium/pl/dominica-i-adventus.json'
-		);
+		expect(artifactPack('dominica-i-adventus')).toBe('01');
+		expect(artifactPath('dominica-i-adventus', 'pl')).toBe('/artifacts/proprium/pl/pack-01.json');
+		expect(artifactPath('dominica-nulla', 'pl')).toBe('');
+	});
+
+	it('packs every formulary exactly once in small adjacent groups', () => {
+		const packs = formularyPacks();
+		expect(packs.flat().map((day) => day.id)).toEqual(PROPER_DAYS.map((day) => day.id));
+		expect(packs.every((pack) => pack.length > 0 && pack.length <= 5)).toBe(true);
 	});
 
 	it('maps a calendar identity to its canonical default variant', () => {

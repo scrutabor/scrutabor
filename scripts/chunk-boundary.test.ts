@@ -3,7 +3,7 @@
 // and NOWHERE else. A lazy-loading test over the source (`lazy-corpus`)
 // could stay green while a one-line `eager: true` folded both packs into
 // every page's graph; only the built output can say that did not happen.
-import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
@@ -68,11 +68,40 @@ describe('the corpus chunk boundary in the emitted build', () => {
 		}
 	});
 
-	it.skipIf(!measurable)('fits the Cloudflare Pages artifact limit', () => {
-		// The complete year first crossed this limit through thousands of tiny
-		// lazy corpus chunks. Hold the actual artifact, not a source estimate:
-		// prerendered pages, data files and future assets all consume the same
-		// 20,000-file allowance on the serving plan.
-		expect(filesUnder('build')).toBeLessThanOrEqual(20_000);
+	it.skipIf(!measurable)('keeps the complete static reader below one thousand files', () => {
+		// The hosting ceiling is 5,000 by product policy, but the accepted design
+		// target is stricter: enough headroom for several complete editions and
+		// new interface assets without returning to file-count triage.
+		const count = filesUnder('build');
+		expect(count, 'the preferred static-reader budget').toBeLessThanOrEqual(1_000);
+		expect(count, 'the absolute hosting budget').toBeLessThanOrEqual(5_000);
+	});
+
+	it.skipIf(!measurable)('emits no client-router data sidecars', () => {
+		const sidecars: string[] = [];
+		const walk = (dir: string) => {
+			for (const entry of readdirSync(dir, { withFileTypes: true })) {
+				const path = join(dir, entry.name);
+				if (entry.isDirectory()) walk(path);
+				else if (entry.name === '__data.json') sidecars.push(path);
+			}
+		};
+		walk('build');
+		expect(sidecars).toEqual([]);
+	});
+
+	it.skipIf(!measurable)('keeps grouped formulary transports modest', () => {
+		const root = 'build/artifacts/proprium';
+		const packs = readdirSync(root, { recursive: true, withFileTypes: true })
+			.filter((entry) => entry.isFile() && entry.name.endsWith('.json'))
+			.map((entry) => join(entry.parentPath, entry.name));
+		expect(packs.length, 'the year should be grouped, not emitted one day at a time').toBeLessThan(
+			100
+		);
+		for (const pack of packs) {
+			expect(statSync(pack).size, `${pack} is too large for a responsive day choice`).toBeLessThan(
+				2_000_000
+			);
+		}
 	});
 });

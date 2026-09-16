@@ -19,7 +19,8 @@ const PAGES = [
 	'/app/pl/ordo/canon', // the flow: folded rows, marks, the parts control
 	'/app/pl/ordinarium/confiteor-sacerdotis', // the longest title in the book
 	'/app/pl/ordinarium/credo', // the longest text
-	'/app/pl/lemma/mater', // a concordance
+	'/app/pl/formularium/dominica-i-adventus', // a complete Mass in one document
+	'/app/pl/lemma?l=mater', // a concordance
 	'/app/pl/grammatica', // a card index
 	'/app/pl/grammatica/nominativus', // the longest three-level breadcrumb
 	'/app/pl/grammatica/pronuntiatio', // a prose page with tables
@@ -283,8 +284,9 @@ test('a heading stands across the list it names, not beside the first of it', as
 	// otherwise still pass on a phone.
 	for (const width of [390, 1500]) {
 		await page.setViewportSize({ width, height: 900 });
-		for (const url of ['/app/pl/lemma/meus', '/app/pl/grammatica/nominativus']) {
+		for (const url of ['/app/pl/lemma?l=meus', '/app/pl/grammatica/nominativus']) {
 			await page.goto(url);
+			await expect(page.locator('.in-two')).toBeVisible();
 			const shape = await page.evaluate(() => {
 				const list = document.querySelector('.in-two')!;
 				const h2 = list.querySelector(':scope > h2')!;

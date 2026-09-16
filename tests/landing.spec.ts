@@ -118,7 +118,7 @@ test.describe('landing @online', () => {
 		// button and does not overlay the verse.
 		const panel = page.locator('aside.word-panel-inline');
 		await expect(panel.locator('.form')).toHaveText('scrutábor');
-		await expect(panel.locator('a[href="/app/pl/lemma/scrutor"]')).toBeVisible();
+		await expect(panel.locator('a[href="/app/pl/lemma?l=scrutor"]')).toBeVisible();
 		await expect(panel.locator('.layer-label')).toHaveText(['hasło', 'forma']);
 		await expect(panel.locator('.pronunciation-lead .pron')).toBeVisible();
 		await expect(panel.locator('.close')).toHaveCount(0);
@@ -236,8 +236,8 @@ test.describe('landing @online', () => {
 
 	test('a lemma opened from the specimen has a stable prayer-book home', async ({ page }) => {
 		await page.goto('/pl');
-		await page.locator('aside.word-panel-inline a[href="/app/pl/lemma/scrutor"]').click();
-		await page.waitForURL(atRoute('/app/pl/lemma/scrutor'));
+		await page.locator('aside.word-panel-inline a[href="/app/pl/lemma?l=scrutor"]').click();
+		await page.waitForURL(atRoute('/app/pl/lemma', '?l=scrutor'));
 		const trail = page.locator('nav .trail');
 		await expect(trail.locator('a')).toHaveCount(1);
 		await expect(trail.locator('a.home')).toHaveAttribute('href', '/app/pl');

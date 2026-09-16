@@ -11,7 +11,7 @@
 	// `location.pathname` is wherever the reader unzipped the book, which
 	// answered English to a Polish reader every time. It is read by SEGMENT
 	// (langOfPath), because a substring test answered Polish to English
-	// readers on /en/lemma/plenus.
+	// readers on /en/lemma?l=plenus.
 	const path = $derived(typeof location !== 'undefined' ? pageUrl().pathname : page.url.pathname);
 	const lang: Lang = $derived(langOfPath(path));
 	const message = $derived(page.status === 404 ? M[lang].pageNotFound : M[lang].errorGeneric);

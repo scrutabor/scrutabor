@@ -74,7 +74,7 @@ describe('book search', () => {
 		const results = await searchBook('Patris', 'en');
 		expect(results.titles).toEqual([]);
 		expect(results.grammar[0]).toMatchObject({ lemma: 'pater', head: 'pater, patris' });
-		expect(results.grammar[0].href).toBe('/app/en/lemma/pater');
+		expect(results.grammar[0].href).toBe('/app/en/lemma?l=pater');
 	});
 
 	it('does not apply fuzzy matching to very short words', async () => {

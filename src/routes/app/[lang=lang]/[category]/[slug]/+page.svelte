@@ -1,20 +1,20 @@
 <script lang="ts">
 	import { untrack } from 'svelte';
 	import { pageUrl } from '$lib/url';
-	import { goto, replaceState } from '$app/navigation';
+	import { replaceState } from '$app/navigation';
 	import { arrowNav } from '$lib/arrow-nav';
 	import { sectionFor, textFor } from '$lib/catalog';
-	import HelpLevels, { initialHelp } from '$lib/components/HelpLevels.svelte';
+	import { initialHelp } from '$lib/components/HelpLevels.svelte';
+	import AboutSheet from '$lib/components/AboutSheet.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import Pager from '$lib/components/Pager.svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
-	import SourceNotes from '$lib/components/SourceNotes.svelte';
-	import RolePicker from '$lib/components/RolePicker.svelte';
-	import Sheet from '$lib/components/Sheet.svelte';
+	import ReadingControls from '$lib/components/ReadingControls.svelte';
+	import SelectedWordPanel from '$lib/components/SelectedWordPanel.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
-	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { prayerForm } from '$lib/prayer-form.svelte';
+	import { openPage } from '$lib/page-navigation';
 	import { ribbon } from '$lib/ribbon.svelte';
 	import { docWordPanel } from '$lib/wordpanel.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
@@ -328,7 +328,7 @@
 	}}
 	onkeydown={(e) => {
 		const href = onWindowKeydown(e);
-		if (href) goto(href);
+		if (href) openPage(href);
 	}}
 />
 
@@ -349,13 +349,7 @@
 			<PageNav {lang} />
 			<h1 lang="la">{doc.title}</h1>
 			<p class="subtitle smallcaps">{readingLabel}</p>
-			<div class="help-row">
-				<div class="tabella">
-					<HelpLevels {lang} bind:value={helpLevel} />
-					{#if hasRoleChoice}<RolePicker {lang} />{/if}
-					{#if hasMassFormChoice}<RolePicker {lang} kind="mass" />{/if}
-				</div>
-			</div>
+			<ReadingControls {lang} bind:value={helpLevel} {hasRoleChoice} {hasMassFormChoice} />
 			{#if gloss.about || data.bibliography.context.length}
 				<!-- Closed in EVERY reading mode (owner rule): the
 				     introduction is one tap away, never ambient. It opens as
@@ -435,33 +429,27 @@
 		</main>
 
 		{#if aboutOpen && (gloss.about || data.bibliography.context.length)}
-			<Sheet
+			<AboutSheet
 				{lang}
-				label={msgs.aboutLabel}
-				title={msgs.aboutLabel}
-				extra="about-sheet"
+				about={gloss.about}
+				citations={data.bibliography.context}
 				onclose={() => (aboutOpen = false)}
-			>
-				{#if gloss.about}<p class="about-text">{gloss.about}</p>{/if}
-				<SourceNotes citations={data.bibliography.context} {lang} />
-			</Sheet>
+			/>
 		{/if}
 
 		{#if legendOpen}
 			<MarkLegend {lang} devotional={hasDevotionalLeader} onclose={() => (legendOpen = false)} />
 		{/if}
 
-		{#if selectedWord && selectedAnalysis}
-			<WordPanel
-				word={selectedWord}
-				gloss={selectedGloss}
-				analysis={selectedAnalysis}
-				lex={data.lex}
-				{lang}
-				onclose={panel.close}
-				onnavigate={panel.goTo}
-			/>
-		{/if}
+		<SelectedWordPanel
+			word={selectedWord}
+			gloss={selectedGloss}
+			analysis={selectedAnalysis}
+			lex={data.lex}
+			{lang}
+			onclose={panel.close}
+			onnavigate={panel.goTo}
+		/>
 	</div>
 {/if}
 
@@ -569,13 +557,6 @@
 	.about-pill:hover {
 		color: var(--ink);
 		background: var(--wash);
-	}
-
-	.about-text {
-		margin: 0.6rem 0 0;
-		font-size: 1rem;
-		line-height: 1.65;
-		color: var(--ink);
 	}
 
 	@media print {

@@ -74,7 +74,9 @@ test('a line the reader answers is marked as theirs', async ({ page }) => {
 test('a Proper chant resolves delivery and conditional participation by Mass form', async ({
 	page
 }) => {
-	await page.goto('/app/pl/proprium/dominica-iv-adventus-introitus');
+	await page.goto(
+		'/app/pl/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-introitus'
+	);
 
 	// Proper pages need the controls because both the delivery and the
 	// faithful's faculty change with the form of Mass.

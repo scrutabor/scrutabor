@@ -281,7 +281,7 @@ test('word panel separates context, dictionary, grammar and verification', async
 	expect(contextType.glossStyle).toBe('normal');
 	expect(contextType.glossWeight).toBeGreaterThan(contextType.explanationWeight);
 	// The dictionary identity is a separate layer.
-	await expect(panel.locator('.head a')).toHaveAttribute('href', '/app/pl/lemma/radix');
+	await expect(panel.locator('.head a')).toHaveAttribute('href', '/app/pl/lemma?l=radix');
 	await expect(panel.locator('.head')).toContainText('radix, radícis');
 	await expect(panel.locator('.head')).toContainText('— korzeń');
 	// So is the strict parse, with its concept-linked term.
@@ -482,7 +482,7 @@ test('the Gloria reads with narrative, panel and provenance', async ({ page }) =
 	await page.goto('/app/en/ordinarium/gloria?w=w074'); // Altissimus
 	await expect(panel.locator('.gloss')).toHaveText('Most High');
 	await panel.locator('.head a').click();
-	await expect(page).toHaveURL(atRoute('lemma/altus'));
+	await expect(page).toHaveURL(atRoute('/app/en/lemma', '?l=altus'));
 	await expect(page.locator('.head-senses')).toContainText('high');
 });
 

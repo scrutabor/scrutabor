@@ -44,8 +44,8 @@ const ANSWERED_BY_THE_ROUTER = ['/app'];
 
 describe('the downloaded copy covers the whole site', () => {
 	it('decodes a route parameter exactly once', async () => {
-		const found = match('/pl/lemma/Clemens%25');
-		expect(found?.params.lemma).toBe('Clemens%');
+		const found = match('/pl/formularium/Clemens%25');
+		expect(found?.params.formulary).toBe('Clemens%');
 		await expect(pageData(found!)).resolves.toBeNull();
 	});
 
@@ -74,7 +74,8 @@ describe('the downloaded copy covers the whole site', () => {
 			['/pl/grammatica', 'grammatica'],
 			['/pl/grammatica/pronuntiatio', 'pronuntiatio'],
 			['/pl/grammatica/vocativus', 'concept'],
-			['/pl/lemma/dominus', 'lemma'],
+			['/pl/lemma', 'lemma'],
+			['/pl/formularium/dominica-i-adventus', 'formularium'],
 			['/pl/bibliographia', 'bibliographia'],
 			['/pl/editio', 'editio'],
 			['/pl/orationes/pater-noster', 'reading']

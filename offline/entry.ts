@@ -1,12 +1,10 @@
 /**
  * The book, running from data, in one document.
  *
- * The site prerenders every route: 2,381 files, each carrying its own copy of
- * the dictionary entries its words need. Downloaded, that came to 12.7 MB for
- * the Ordinary and one Sunday. This renders the same components from the same
- * corpus at 2 MB, and the whole church year projects to about 12 MB — the
- * prerendered shape would have passed a gigabyte, because each of the five
- * hundred pages a year of Sundays needs repeats its slice of the dictionary.
+ * The hosted site prerenders complete documents and shares its heavier
+ * indexes through lazy chunks. The downloaded edition goes one step further:
+ * it renders the same components from one self-contained runtime, because a
+ * browser will not fetch sibling resources from a file:// origin.
  *
  * What `file://` refuses decides the shape, and it was measured rather than
  * assumed: `fetch()` of a sibling file is blocked outright, ES modules are
@@ -86,7 +84,7 @@ function preferredLang(): Lang {
 /** The route the hash names, with its query stripped — `?w=` and `?dies=`
  * change what a page shows, never which page it is. */
 function routePath(): string {
-	return (location.hash.slice(1) || '/').split('?')[0];
+	return pageUrl().pathname;
 }
 
 let instance: { $destroy: () => void } | null = null;
@@ -97,7 +95,10 @@ let queuedArrow: 'ArrowLeft' | 'ArrowRight' | null = null;
 const stores = { page: store<unknown>(null), navigating: store(null), updated: store(false) };
 
 /** Routes whose page cannot render without data the corpus may not have. */
-const NEEDS_DATA = new Set(['reading', 'movement', 'lemma', 'concept']);
+// The shared lemma document loads the selected entry after mount. It needs no
+// route data; treating its deliberate null like a missing server payload sent
+// every offline dictionary address to the not-found page.
+const NEEDS_DATA = new Set(['reading', 'movement', 'formularium', 'concept']);
 
 /**
  * What to mount, and what to give it.
@@ -240,6 +241,18 @@ async function navigate(): Promise<void> {
 	if (mine !== navigation) return;
 	pendingPath = null;
 	render(found, path, prepared);
+	const fragment = pageUrl().hash.slice(1);
+	if (fragment) {
+		let target = fragment;
+		try {
+			target = decodeURIComponent(fragment);
+		} catch {
+			// A malformed fragment names no element, but must not break the page.
+		}
+		requestAnimationFrame(() =>
+			document.getElementById(target)?.scrollIntoView({ block: 'start' })
+		);
+	}
 	// A FOLLOWED LINK starts the new page at its top, as a document load
 	// would. A history traversal does not: the browser restores the
 	// reader's own place on Back, and scrolling to the top over it loses

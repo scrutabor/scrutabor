@@ -4,7 +4,6 @@
 	// book itself for one verse — verse 34 of Psalm 118, the motto's own,
 	// straight from the corpus (see +page.server.ts) with the app's real
 	// mode control and the app's real word panel, fully alive.
-	import { goto } from '$app/navigation';
 	import HelpLevels, { initialHelp } from '$lib/components/HelpLevels.svelte';
 	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
@@ -278,7 +277,7 @@
 								// A future note may cite a word outside the specimen;
 								// open the full text rather than re-aiming to a fallback.
 								if (wordsOf.has(id)) selected = id;
-								else goto(`/app/${lang}/psalmi/118-he?w=${id}`);
+								else location.assign(`/app/${lang}/psalmi/118-he?w=${id}`);
 							}}
 						/>
 					{/if}

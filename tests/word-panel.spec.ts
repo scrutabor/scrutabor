@@ -153,15 +153,15 @@ test('panel is restored on back from a grammar-concept page', async ({ page }) =
 test('panel is restored on back from a lemma page', async ({ page }) => {
 	await page.goto(PATER);
 	await page.locator('#w008').click();
-	await page.locator('aside a[href="/app/pl/lemma/nomen"]').click();
-	await expect(page).toHaveURL(atRoute('lemma/nomen'));
+	await page.locator('aside a[href="/app/pl/lemma?l=nomen"]').click();
+	await expect(page).toHaveURL(atRoute('/app/pl/lemma', '?l=nomen'));
 	await expect(page.locator('h1')).toHaveText('nomen');
 	await page.goBack();
 	await expect(page.locator(panelWord)).toHaveText('nomen');
 });
 
 test('a concordance link deep-links into the reading view', async ({ page }) => {
-	await page.goto('/app/pl/lemma/oro');
+	await page.goto('/app/pl/lemma?l=oro');
 	await page.locator('a[href="/app/pl/ordinarium/confiteor?w=w060"]').click();
 	await expect(page.locator(panelWord)).toHaveText('oráre');
 	await expect(page.locator('.word.selected')).toBeInViewport();

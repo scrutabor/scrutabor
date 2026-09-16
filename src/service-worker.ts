@@ -45,8 +45,8 @@ const LAZY_CORPUS = build.filter((path) => path.includes('/immutable/corpus/'));
 const SHELL_BUILD = build.filter((path) => !path.includes('/immutable/corpus/'));
 const SHELL = [...SHELL_BUILD, ...files, ...prerendered.filter((path) => SHELL_PAGE.test(path))];
 
-/** The day's own texts, one file per day per language (decisions #27,
- * revised 2026-08-18). These are NOT shell: a reader who opened one prayer
+/** The day's own texts, grouped into a few modest packs per language. These
+ * are NOT shell: a reader who opened one prayer
  * in a browser has not asked for the propers of the year, and the web
  * reader who never picks a date fetches none of them. They belong to the
  * book, so an installed app can open today's Mass in a basement chapel —

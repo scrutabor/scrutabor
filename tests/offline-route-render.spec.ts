@@ -13,7 +13,12 @@ const CLASSES: { name: string; path: string; proof: RegExp }[] = [
 	{ name: 'grammatica', path: '/app/pl/grammatica', proof: /gramaty/i },
 	{ name: 'pronuntiatio', path: '/app/pl/grammatica/pronuntiatio', proof: /wymow|pronuntiati/i },
 	{ name: 'concept', path: '', proof: /./ }, // reached by link below
-	{ name: 'lemma', path: '/app/pl/lemma/misereor', proof: /miséreor/ },
+	{ name: 'lemma', path: '/app/pl/lemma?l=misereor', proof: /miséreor/ },
+	{
+		name: 'formularium',
+		path: '/app/pl/formularium/dominica-i-adventus',
+		proof: /Ad te levávi/
+	},
 	{ name: 'bibliographia', path: '/app/pl/bibliographia', proof: /Breviarium Romanum/ },
 	{ name: 'editio', path: '/app/pl/editio', proof: /wydani/i },
 	{ name: 'reading', path: '/app/pl/orationes/pater-noster', proof: /Pater noster/ }

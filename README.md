@@ -27,7 +27,7 @@ One origin, one build, two surfaces:
   The root is a language router that redirects before first paint.
 - **`/app`** — the book itself, with its own language router at `/app/`
   and every reading surface beneath it (`/app/pl`, `/app/pl/ordo`,
-  `/app/pl/lemma/oro`, …). The web-app manifest and the service worker
+  `/app/pl/lemma?l=oro`, …). The web-app manifest and the service worker
   are scoped to `/app/`, so the installable, offline-capable thing is
   the book alone — a landing edit never touches a reader's offline copy.
 
@@ -44,7 +44,7 @@ One origin, one build, two surfaces:
 - **Ordo Missæ flow** (`/app/pl/ordo`) — the whole order of Mass in six
   movements, with the reader's own part chosen: in the pew, server, or
   priest.
-- **Lemma pages** (`/app/pl/lemma/oro`) with a concordance — every place
+- **Lemma pages** (`/app/pl/lemma?l=oro`) with a concordance — every place
   the word appears across the texts, each occurrence a deep link that
   opens the reading view on that word.
 - **Book search** ranks familiar and Latin titles first, remembered text

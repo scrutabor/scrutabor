@@ -369,7 +369,7 @@ test('a Latin inflection offers the dictionary entry last', async ({ page }) => 
 	await expect(grammar).toContainText('pater, patris');
 	await grammar.getByRole('link').click();
 	await settled(page);
-	await expect(page).toHaveURL(atRoute('/app/en/lemma/pater'));
+	await expect(page).toHaveURL(atRoute('/app/en/lemma', '?l=pater'));
 });
 
 test('typing replaces one query entry instead of filling browser history', async ({ page }) => {

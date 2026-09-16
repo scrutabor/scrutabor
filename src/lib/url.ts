@@ -35,7 +35,7 @@ export function pageUrl(): URL {
 
 /** The language a path speaks, read from its SEGMENTS.
  *
- * Not a substring test: `'/app/en/lemma/plenus'.includes('/pl')` is true, so
+ * Not a substring test: `'/app/en/lemma?l=plenus'.includes('/pl')` is true, so
  * the error page answered Polish to English readers on every lemma beginning
  * pl- (plenus, plebs, placeat…). English is the default for paths that name
  * no language, matching the x-default the site declares. */

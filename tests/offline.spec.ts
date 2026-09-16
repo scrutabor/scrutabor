@@ -28,7 +28,7 @@ test('a first web visit installs the shell, not the book @online', async ({ page
 	// missal. Those pages are kept as they are opened, and the installed app
 	// fetches the rest (decisions #27).
 	expect(cached).not.toContain('/app/en/ordinarium/credo');
-	expect(cached.filter((p) => p.includes('/lemma/'))).toEqual([]);
+	expect(cached.filter((p) => p.endsWith('/lemma'))).toEqual([]);
 	// nor is the landing, which lives outside the worker's world entirely
 	expect(cached.filter((p) => /^\/(pl|en)(\/|$)|^\/$/.test(p))).toEqual([]);
 	expect(cached.length).toBeLessThan(120);
@@ -78,7 +78,7 @@ test('an installed app fetches the whole book @online', async ({ page }) => {
 
 	// the worker fetches in small batches so it does not compete with the
 	// reader, so wait for the pages themselves rather than for a count
-	for (const path of ['/app/en/ordinarium/credo', '/app/pl/ordo/canon', '/app/pl/lemma/mater']) {
+	for (const path of ['/app/en/ordinarium/credo', '/app/pl/ordo/canon', '/app/pl/lemma']) {
 		await expect.poll(() => has(path), { timeout: 90_000, intervals: [1000] }).toBe(true);
 	}
 
@@ -157,7 +157,7 @@ test('a mangled hash boots the copy to its 404, not to a blank @folder', async (
 	// %-garbage in the hash used to throw URIError inside the route matcher
 	// before boot completed: zero characters, zero controls, no way back but
 	// the address bar. A hash that names nothing is a 404, not a crash.
-	await page.goto('/app/pl/lemma/%');
+	await page.goto('/app/pl/formularium/%');
 	await expect(page.locator('.errorpage .status')).toHaveText('404');
 	// the boundary reads the language by segment, in the hash as on the site
 	await expect(page.locator('.errorpage .line')).toContainText('Ta strona nie istnieje.');
@@ -167,9 +167,15 @@ test('a hash mangled after boot lands on the 404 too @folder', async ({ page }) 
 	await page.goto('/app/pl/ordinarium/pater-noster');
 	await expect(page.locator('body')).toContainText('Pater noster');
 	await page.evaluate(() => {
-		location.hash = '#/pl/lemma/%E0%A4%A';
+		location.hash = '#/pl/formularium/%E0%A4%A';
 	});
 	await expect(page.locator('.errorpage .status')).toHaveText('404');
+});
+
+test('an unknown complete formulary lands on the 404 @folder', async ({ page }) => {
+	await page.goto('/app/pl/formularium/no-such-formulary');
+	await expect(page.locator('.errorpage .status')).toHaveText('404');
+	await expect(page.locator('.errorpage .line')).toContainText('Ta strona nie istnieje.');
 });
 
 test('walking the book after a dwell does not drag old positions along @folder', async ({

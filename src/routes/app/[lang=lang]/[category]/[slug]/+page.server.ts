@@ -19,10 +19,12 @@ import type { EntryGenerator, PageServerLoad } from './$types';
 // linked has to be built.
 export const entries: EntryGenerator = () =>
 	LANGS.flatMap((lang) =>
-		textKeysFor(lang).map((key) => {
-			const [category, slug] = key.split('/');
-			return { lang, category, slug };
-		})
+		textKeysFor(lang)
+			.filter((key) => !key.startsWith('proprium/'))
+			.map((key) => {
+				const [category, slug] = key.split('/');
+				return { lang, category, slug };
+			})
 	);
 
 export const load: PageServerLoad = async ({ params }) => {

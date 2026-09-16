@@ -16,11 +16,8 @@ import {
 	type TextBibliographyEvidence
 } from './bibliography';
 import { neighborsOf } from './catalog';
-import { occurrencesOf } from './concordance';
 import {
-	LEXICON,
 	hasText,
-	loadSenses,
 	loadText,
 	loadTexts,
 	narrowLexicon,
@@ -29,9 +26,9 @@ import {
 } from './corpus';
 import { LANGS, type Lang } from './i18n';
 import { conceptById } from './grammar';
+export { lemmaData } from './lemma-data';
 import { movementById } from './ordo';
 import { PROPER_DAYS, SLOT_OF } from './proprium';
-import { lemmaOfSlug } from './lemma-slug';
 import pkg from '../../package.json' with { type: 'json' };
 
 /** The two facts every page under a language needs, and neither of which it
@@ -41,30 +38,14 @@ export function layoutData(lang: string, path: string) {
 }
 
 /** Languages that can render this exact app path. Shared interface pages are
- * available everywhere; readings and lemma pages follow their package
- * manifests, so language switching never points at a page that was not built. */
+ * available everywhere; standalone readings follow their package manifests,
+ * so language switching never points at a page that was not built. */
 export async function appLayoutData(lang: string, path: string) {
 	let languages: Lang[] = LANGS;
 	const textMatch = path.match(/^\/([^/]+)\/([^/]+)$/);
 	if (textMatch) {
 		const key = `${textMatch[1]}/${textMatch[2]}`;
 		if (hasText(key)) languages = LANGS.filter((language) => hasText(key, language));
-	}
-	const lemmaMatch = path.match(/^\/lemma\/([^/]+)$/);
-	if (lemmaMatch) {
-		let lemma: string | undefined;
-		try {
-			lemma = lemmaOfSlug(decodeURIComponent(lemmaMatch[1]));
-		} catch {
-			lemma = undefined;
-		}
-		languages = lemma
-			? (
-					await Promise.all(
-						LANGS.map(async (language) => ((await loadSenses(language))[lemma] ? language : null))
-					)
-				).filter((language): language is Lang => language !== null)
-			: [];
 	}
 	return { ...layoutData(lang, path), languages };
 }
@@ -127,21 +108,6 @@ export async function ordoData(lang: Lang, movement: string) {
 	return { movement, texts, lex: await narrowLexicon(docs, lang) };
 }
 
-export async function lemmaData(lang: Lang, lemma: string) {
-	// Null for a lemma the lexicon has never heard of — the same answer the
-	// other loaders give for a bad slug, so the two editions cannot differ:
-	// the site 404s (the route is only prerendered for real entries) and
-	// the downloaded copy must not answer the same address with a page.
-	if (!LEXICON.lemmata[lemma]) return null;
-	const senses = await loadSenses(lang);
-	return {
-		lemma,
-		entry: LEXICON.lemmata[lemma],
-		sense: senses[lemma] ?? null,
-		occurrences: await occurrencesOf(lemma)
-	};
-}
-
 export function conceptData(concept: string) {
 	// The same parity rule as lemmaData, for the grammar pages.
 	return conceptById(concept) ? { concept } : null;
@@ -154,14 +120,15 @@ export async function bibliographyData(lang: Lang) {
 /**
  * One day's proper: every part the day names, in the order the rite says them.
  *
- * The site prerenders this as a FILE per day per language and fetches it when
- * the reader picks a date — prerendering the day into the Ordo's own pages
- * would re-emit 650K per day and cost 90 MB at the Sundays-and-feasts scope
- * (decisions #27, revised 2026-08-18). A downloaded copy already holds the
- * whole corpus, so it calls this directly and needs no artifact at all.
+ * The site groups a few days into each transport pack and extracts the chosen
+ * day when the reader picks a date — prerendering the day into the Ordo's own
+ * pages would re-emit 650K per day and cost 90 MB at the Sundays-and-feasts
+ * scope. A downloaded copy already holds the whole corpus, so it calls this
+ * directly and needs no artifact at all.
  */
 export async function properData(day: string, lang: Lang) {
-	const found = PROPER_DAYS.find((d) => d.id === day);
+	const dayIndex = PROPER_DAYS.findIndex((candidate) => candidate.id === day);
+	const found = PROPER_DAYS[dayIndex];
 	if (!found) return null;
 
 	const keyedParts = found.components.map(({ text: key, role: part, condition }) => ({
@@ -199,6 +166,17 @@ export async function properData(day: string, lang: Lang) {
 	return {
 		day: found.id,
 		title: found.title,
+		partial: found.partial ?? false,
+		around: {
+			prev: PROPER_DAYS[dayIndex - 1] && {
+				id: PROPER_DAYS[dayIndex - 1].id,
+				title: PROPER_DAYS[dayIndex - 1].title
+			},
+			next: PROPER_DAYS[dayIndex + 1] && {
+				id: PROPER_DAYS[dayIndex + 1].id,
+				title: PROPER_DAYS[dayIndex + 1].title
+			}
+		},
 		lang,
 		parts,
 		lex: await narrowLexicon(docs, lang)

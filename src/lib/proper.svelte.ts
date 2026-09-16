@@ -158,6 +158,7 @@ function stopTiming(): void {
 // it only spares the network, and the lint rule against mutable built-in
 // collections is right that a Map here would not be reactive anyway.
 const held: Record<string, ProperPayload> = {};
+const heldPacks: Record<string, Promise<Record<string, ProperPayload>>> = {};
 
 function forDate(source: ProperPayload, selectedDate: string | null): ProperPayload {
 	if (!selectedDate) return source;
@@ -281,16 +282,34 @@ export async function chooseDay(
  * which is also the only thing that can work there, since Chrome refuses
  * `fetch()` for file:// outright: "URL scheme file is not supported".
  *
- * It replaced a classic-script transport that loaded one `window.__scrutabor
- * _day=…` file per day. That worked, and at the whole church year it would
- * have been 400 files and about 8 MB of what the runtime already holds.
+ * The hosted reader groups several formularies in one transport pack. The
+ * selected day is still the cache unit above, while repeated requests for a
+ * neighbouring day reuse the already downloaded pack.
  */
 async function load(day: string, lang: Lang): Promise<ProperPayload> {
 	const here = await localDay(day, lang);
 	if (here) return here as ProperPayload;
+	const path = artifactPath(day, lang);
+	if (!path) throw new Error('unknown formulary');
 	// Bounded: a request that never answers would otherwise leave the
 	// loading notice up forever, with re-picking as the only way out.
-	const response = await fetch(artifactPath(day, lang), { signal: AbortSignal.timeout(15_000) });
-	if (!response.ok) throw new Error(String(response.status));
-	return (await response.json()) as ProperPayload;
+	const packKey = `${lang}/${path}`;
+	const pending = (heldPacks[packKey] ??= fetch(path, {
+		signal: AbortSignal.timeout(15_000)
+	}).then(async (response) => {
+		if (!response.ok) throw new Error(String(response.status));
+		return ((await response.json()) as { days: Record<string, ProperPayload> }).days;
+	}));
+	let packed: Record<string, ProperPayload>;
+	try {
+		packed = await pending;
+	} catch (cause) {
+		// A failed request is not data. Remove only the promise that failed so a
+		// later choice can retry; do not delete a newer retry racing behind it.
+		if (heldPacks[packKey] === pending) delete heldPacks[packKey];
+		throw cause;
+	}
+	const found = packed[day];
+	if (!found) throw new Error('formulary absent from pack');
+	return found;
 }

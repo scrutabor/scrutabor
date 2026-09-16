@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import { pageUrl } from '$lib/url';
 	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
 	import { arrowNav } from '$lib/arrow-nav';
@@ -8,9 +7,10 @@
 	import Pager from '$lib/components/Pager.svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
 	import RolePicker from '$lib/components/RolePicker.svelte';
+	import SelectedWordPanel from '$lib/components/SelectedWordPanel.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
-	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
+	import { openPage } from '$lib/page-navigation';
 	import { movementById, movementNeighbors, partVoice, type OrdoEntry } from '$lib/ordo';
 	import { role, showsWords } from '$lib/role.svelte';
 	import { ribbon } from '$lib/ribbon.svelte';
@@ -20,6 +20,7 @@
 	import DayPicker from '$lib/components/DayPicker.svelte';
 	import { dayHref } from '$lib/proper.svelte';
 	import type { TextBibliographyEvidence } from '$lib/bibliography';
+	import { textHref } from '$lib/content-url';
 
 	// Only this movement's texts, from the server load — never the corpus.
 	let { data } = $props();
@@ -183,7 +184,7 @@
 	onpopstate={panel.applyFromLocation}
 	onkeydown={(e) => {
 		const href = onWindowKeydown(e);
-		if (href) goto(href);
+		if (href) openPage(href);
 	}}
 />
 
@@ -250,7 +251,7 @@
 				{:else}
 					<div class="part-head">
 						{#if entry}
-							<a class="part-title" href="/app/{lang}/{entry.key}" lang="la">{e.title}</a>
+							<a class="part-title" href={textHref(lang, entry.key)} lang="la">{e.title}</a>
 						{:else}
 							<span class="part-title" lang="la">{e.title}</span>
 						{/if}
@@ -317,17 +318,16 @@
 		<MarkLegend {lang} onclose={() => (legendOpen = false)} />
 	{/if}
 
-	{#if picked && pickedAnalysis}
-		<WordPanel
-			word={picked.word}
-			gloss={pickedGloss}
-			analysis={pickedAnalysis}
-			lex={mergedLex}
-			{lang}
-			onclose={panel.close}
-			onnavigate={(id) => panel.goTo(`${picked.slug}.${id}`)}
-		/>
-	{/if}
+	<SelectedWordPanel
+		word={picked?.word ?? null}
+		gloss={pickedGloss}
+		analysis={pickedAnalysis}
+		lex={mergedLex}
+		{lang}
+		onclose={panel.close}
+		onnavigate={panel.goTo}
+		idPrefix={picked?.slug ?? ''}
+	/>
 </div>
 
 <style>

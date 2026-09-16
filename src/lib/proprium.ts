@@ -198,15 +198,32 @@ export function dayToday(when: Date = new Date()): {
 	return { id: on ? (dayByCalendarKey(on.formulary)?.id ?? '') : '', on, week };
 }
 
-/** The artifact URL for one day in one language.
+/** A few complete formularies per transport file.
  *
- * The SITE's address, and only the site's. A downloaded copy carries the whole
- * corpus in its runtime and builds the day from it ($lib/proper-local), so it
- * never asks for this — which is just as well, because Chrome refuses
- * `fetch()` for file:// outright.
+ * The reader still asks for one day, but a liturgical year no longer costs
+ * one hosted object per day and language. Five keeps each response modest
+ * while reducing 218 objects to 44 for the present edition.
  */
+export const FORMULARIES_PER_ARTIFACT = 5;
+
+export function formularyPacks(): ProperDay[][] {
+	const packs: ProperDay[][] = [];
+	for (let index = 0; index < PROPER_DAYS.length; index += FORMULARIES_PER_ARTIFACT) {
+		packs.push(PROPER_DAYS.slice(index, index + FORMULARIES_PER_ARTIFACT));
+	}
+	return packs;
+}
+
+export function artifactPack(day: string): string | undefined {
+	const index = PROPER_DAYS.findIndex((candidate) => candidate.id === day);
+	return index < 0
+		? undefined
+		: String(Math.floor(index / FORMULARIES_PER_ARTIFACT) + 1).padStart(2, '0');
+}
+
 export function artifactPath(day: string, lang: Lang): string {
-	return `/artifacts/proprium/${lang}/${day}.json`;
+	const pack = artifactPack(day);
+	return pack ? `/artifacts/proprium/${lang}/pack-${pack}.json` : '';
 }
 
 /** What today is, as `dayToday` reports it. */

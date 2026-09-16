@@ -101,7 +101,7 @@ test('a word in the flow opens its analysis, wherever it stands', async ({ page 
 	await agnus.click();
 	const panel = page.locator('aside');
 	await expect(panel.locator('.form')).toHaveText('Agnus');
-	await expect(panel.locator('.head a')).toHaveAttribute('href', '/app/pl/lemma/agnus');
+	await expect(panel.locator('.head a')).toHaveAttribute('href', '/app/pl/lemma?l=agnus');
 
 	// the deep link addresses text and word together, and survives a reload
 	// (a dot is unreserved in a URL, so it makes the round trip unencoded)

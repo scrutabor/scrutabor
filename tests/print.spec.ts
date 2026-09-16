@@ -165,6 +165,26 @@ test('print composes the Ordo day and settings as two stable metadata rows', asy
 	}
 });
 
+test('print lays out a complete formulary as one continuous Mass', async ({ page }) => {
+	await page.emulateMedia({ media: 'print' });
+	await page.setViewportSize({ width: 760, height: 900 });
+	await page.goto('/app/pl/formularium/dominica-i-adventus');
+
+	await expect(page.locator('.proper-part')).toHaveCount(10);
+	await expect(page.locator('.about-pill').first()).toBeHidden();
+	const layout = await page
+		.locator('.proper-part')
+		.first()
+		.evaluate((part) => ({
+			partBreak: getComputedStyle(part).breakInside,
+			headingBreak: getComputedStyle(part.querySelector('.part-heading')!).breakAfter,
+			overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth
+		}));
+	expect(layout.partBreak, 'a long Gospel may continue on the next sheet').toBe('auto');
+	expect(layout.headingBreak, 'a part title stays with the text it names').toBe('avoid-page');
+	expect(layout.overflow, 'the complete Mass fits the paper width').toBeLessThanOrEqual(1);
+});
+
 test('print preserves manually opened repeated prayers and leaves the others folded', async ({
 	page
 }) => {

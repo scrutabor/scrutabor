@@ -78,7 +78,7 @@ test('every page holds the same frame, and prose the same measure', async ({ pag
 		'/app/pl/orationes/pater-noster',
 		'/app/pl/litaniae/lauretanae',
 		'/app/pl/psalmi/118-he',
-		'/app/pl/lemma/noster',
+		'/app/pl/lemma?l=noster',
 		'/app/pl/grammatica',
 		'/app/pl/grammatica/vocativus',
 		'/app/pl/grammatica/pronuntiatio',
@@ -131,7 +131,7 @@ test('the catalogue motto cites the psalm and opens it', async ({ page }) => {
 });
 
 test('lemma page shows head, senses, derivatives and concordance', async ({ page }) => {
-	await page.goto('/app/pl/lemma/panis');
+	await page.goto('/app/pl/lemma?l=panis');
 	await expect(page.locator('h1')).toHaveText('panis');
 	await expect(page.locator('.head')).toContainText('panis, panis');
 	await expect(page.locator('.head')).toContainText('m.');
@@ -142,7 +142,7 @@ test('lemma page shows head, senses, derivatives and concordance', async ({ page
 });
 
 test('lemma summary shares the word panel hierarchy without becoming a panel', async ({ page }) => {
-	await page.goto('/app/pl/lemma/scrutor');
+	await page.goto('/app/pl/lemma?l=scrutor');
 	const identity = page.locator('main > .identity');
 	await expect(identity.locator('h1')).toHaveText('scrutor');
 	await expect(identity.locator('.pron')).toContainText('/ˈskru.tɔr/');
@@ -175,7 +175,7 @@ test('lemma summary shares the word panel hierarchy without becoming a panel', a
 });
 
 test('the external dictionary link opens in a new tab', async ({ page }) => {
-	await page.goto('/app/pl/lemma/oro');
+	await page.goto('/app/pl/lemma?l=oro');
 	const logeion = page.locator('.external a');
 	await expect(logeion).toHaveAttribute('href', 'https://logeion.uchicago.edu/oro');
 	await expect(logeion).toHaveAttribute('target', '_blank');
@@ -184,12 +184,12 @@ test('the external dictionary link opens in a new tab', async ({ page }) => {
 
 test('the lemma page displays its liturgical headword', async ({ page }) => {
 	// the key is bare and normalized (Ioannes); the reader sees it accented
-	await page.goto('/app/pl/lemma/Ioannes');
+	await page.goto('/app/pl/lemma?l=Ioannes');
 	await expect(page.locator('h1')).toHaveText('Ioánnes');
 });
 
 test('a global lemma note does not pretend that a verse is present', async ({ page }) => {
-	await page.goto('/app/pl/lemma/intellectus');
+	await page.goto('/app/pl/lemma?l=intellectus');
 	await expect(page.locator('.note')).toHaveText(
 		'Od intellégere — rozumieć, pojmować, rozeznawać.'
 	);
@@ -297,7 +297,7 @@ test('the home control keeps its place and centres every crumb', async ({ page }
 });
 
 test('the home control opens the catalogue in every edition', async ({ page }) => {
-	await page.goto('/app/pl/lemma/scrutor');
+	await page.goto('/app/pl/lemma?l=scrutor');
 	const home = page.locator('nav .trail a.home');
 	await expect(home).toHaveAttribute('href', '/app/pl');
 	await home.click();
@@ -348,11 +348,13 @@ test('every kind of page opens on the same line', async ({ page }) => {
 		'/app/pl/ordo', // an index
 		'/app/pl/ordo/offertorium', // the flow
 		'/app/pl/ordinarium/credo', // a reading page
+		'/app/pl/formularium/dominica-i-adventus', // a complete formulary
 		'/app/pl/grammatica/nominativus', // one level down
-		'/app/pl/lemma/mater', // a lemma
+		'/app/pl/lemma?l=mater', // a lemma
 		'/app/pl/editio' // the colophon
 	]) {
 		await page.goto(url);
+		await expect(page.locator('h1')).toBeVisible();
 		gaps[url] = await page.evaluate(() => {
 			const nav = document.querySelector('nav')!.getBoundingClientRect();
 			return Math.round(document.querySelector('h1')!.getBoundingClientRect().top - nav.bottom);
@@ -362,6 +364,44 @@ test('every kind of page opens on the same line', async ({ page }) => {
 		new Set(Object.values(gaps)).size,
 		`the pages open differently: ${JSON.stringify(gaps)}`
 	).toBe(1);
+});
+
+bareTest(
+	'a complete formulary remains readable when application scripts fail @online',
+	async ({ page }) => {
+		await page.route('**/_app/immutable/**/*.js', (route) => route.abort());
+		await page.goto('/app/pl/formularium/dominica-i-adventus');
+		await expect(page.locator('html')).not.toHaveAttribute('data-hydrated', 'true');
+		await expect(page.locator('h1')).toHaveText('Dominica I Adventus');
+		await expect(page.locator('main')).toContainText('Ad te levávi');
+		await expect(page.locator('.proper-part')).toHaveCount(10);
+	}
+);
+
+test('static page links request documents and never route data sidecars @online', async ({
+	page
+}) => {
+	const requests: { path: string; document: boolean }[] = [];
+	page.on('request', (request) => {
+		const url = new URL(request.url());
+		if (url.origin !== 'http://localhost:4173') return;
+		requests.push({ path: url.pathname, document: request.isNavigationRequest() });
+	});
+	await page.goto('/app/pl');
+	requests.length = 0;
+	await page.locator('a.card[href="/app/pl/orationes/pater-noster"]').click();
+	await expect(page.locator('h1')).toHaveText('Pater noster');
+
+	expect(requests.some(({ path }) => path.endsWith('/__data.json'))).toBe(false);
+	expect(requests).toContainEqual({ path: '/app/pl/orationes/pater-noster', document: true });
+});
+
+test('a complete formulary fragment opens the named part', async ({ page }) => {
+	const id = 'text-proprium-dominica-i-adventus-evangelium';
+	await page.goto(`/app/pl/formularium/dominica-i-adventus#${id}`);
+	const part = page.locator(`#${id}`);
+	await expect(part).toContainText('Evangélium');
+	await expect(part).toBeInViewport();
 });
 
 test('a concept example deep-links into the prayer', async ({ page }) => {
@@ -471,7 +511,7 @@ bareTest('every reading names itself below its Latin title', async ({ page }, te
 });
 
 test('lemma page shows the headword pronunciation', async ({ page }) => {
-	await page.goto('/app/pl/lemma/oro');
+	await page.goto('/app/pl/lemma?l=oro');
 	await expect(page.locator('.pron')).toContainText('o-ro');
 	await expect(page.locator('.pron')).toContainText('/ˈɔ.rɔ/');
 });
@@ -559,7 +599,8 @@ test('the sitemap lists both languages of every surface @online', async ({ reque
 	expect(xml).toContain('<loc>https://scrutabor.org/app/pl/orationes/pater-noster</loc>');
 	expect(xml).toContain('<loc>https://scrutabor.org/app/pl/orationes/angelus-domini</loc>');
 	expect(xml).toContain('<loc>https://scrutabor.org/app/en/orationes/sub-tuum-praesidium</loc>');
-	expect(xml).toContain('<loc>https://scrutabor.org/app/en/lemma/oro</loc>');
+	expect(xml).toContain('<loc>https://scrutabor.org/app/en/lemma</loc>');
+	expect(xml).toContain('<loc>https://scrutabor.org/app/en/formularium/dominica-i-adventus</loc>');
 	expect(xml).toContain('<loc>https://scrutabor.org/app/en/grammatica/pronuntiatio</loc>');
 	expect(xml).toContain('<loc>https://scrutabor.org/app/pl/bibliographia</loc>');
 	expect(xml).not.toContain('/404');

@@ -1,5 +1,7 @@
 import { catalogFor } from './catalog';
 import { CONCORDANCE, everyTextInOrder, type LatinPosting } from './concordance';
+import { textHref } from './content-url';
+import { lemmaHref } from './lemma-url';
 import { LEXICON, loadSenses, loadTexts, type TextEntry } from './corpus';
 import {
 	languageConcordancePath,
@@ -8,7 +10,6 @@ import {
 	textMetadataFor
 } from './corpus-metadata';
 import type { Lang } from './i18n';
-import { lemmaSlug } from './lemma-slug';
 import { remember } from './remember';
 import { MAX_QUERY_LENGTH, MAX_QUERY_TOKENS } from './search-limits';
 
@@ -246,7 +247,7 @@ function titlesFor(query: string[], lang: Lang, exactLatinForm: boolean): TitleS
 					title: displayTitle,
 					latinTitle: text.title,
 					matchedAlias: best.alias ? best.value : undefined,
-					href: `/app/${lang}/${textKey}`,
+					href: textHref(lang, textKey),
 					_score: [best.rank, Number(best.alias), best.cost, sectionRank, textRank]
 				}
 			];
@@ -451,7 +452,7 @@ function contentResults(
 				...resultTitle(site.textKey, lang),
 				source: site.source,
 				parts,
-				href: `/app/${lang}/${site.textKey}?s=${encodeURIComponent(site.segmentId)}`
+				href: textHref(lang, site.textKey, { segment: site.segmentId })
 			}
 		];
 	});
@@ -503,7 +504,7 @@ async function grammarResults(
 				lemma,
 				head: LEXICON.lemmata[lemma]?.head ?? lemma,
 				senses: senses[lemma]?.senses ?? [],
-				href: `/app/${lang}/lemma/${encodeURIComponent(lemmaSlug(lemma))}`
+				href: lemmaHref(lang, lemma)
 			}))
 			.sort(
 				(a, b) =>

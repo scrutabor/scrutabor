@@ -24,7 +24,11 @@ const SURFACES = [
 	{ name: 'ordo index', path: '/app/pl/ordo' },
 	{ name: 'ordo movement', path: '/app/pl/ordo/communio' },
 	{ name: 'reading page', path: '/app/pl/ordinarium/gloria' },
-	{ name: 'lemma page', path: '/app/pl/lemma/deus' },
+	{
+		name: 'complete formulary',
+		path: '/app/pl/formularium/dominica-i-adventus'
+	},
+	{ name: 'lemma page', path: '/app/pl/lemma?l=deus' },
 	// a concept that EXISTS: /app/pl/grammatica/casus never did, and the
 	// hosted server's 404 fallback let this surface pass for months while
 	// scanning the not-found page under a grammar page's name

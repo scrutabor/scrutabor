@@ -65,8 +65,11 @@ export default defineConfig({
 					// shell precache. The boundary is the data, not the extension.
 					const corpusResource =
 						chunk.name.startsWith('corpus-texts') ||
+						chunk.name === 'concordance' ||
 						(facade?.includes('/src/lib/data/') && facade.endsWith('.json')) ||
-						facade?.endsWith('/src/lib/search.ts');
+						facade?.endsWith('/src/lib/concordance.ts') ||
+						facade?.endsWith('/src/lib/search.ts') ||
+						facade?.endsWith('/src/lib/lemma-data.ts');
 					return corpusResource
 						? '_app/immutable/corpus/[name].[hash].js'
 						: '_app/immutable/chunks/[name].[hash].js';

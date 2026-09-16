@@ -9,11 +9,10 @@ import {
 	catalogData,
 	conceptData,
 	appLayoutData,
-	lemmaData,
 	ordoData,
+	properData,
 	readingData
 } from '$lib/loaders';
-import { lemmaOfSlug } from '$lib/lemma-slug';
 import type { Lang } from '$lib/i18n';
 import { LANGS } from '$lib/i18n';
 
@@ -74,9 +73,15 @@ export const ROUTES: { name: string; key: string; pattern: RegExp; params: strin
 	},
 	{
 		name: 'lemma',
-		key: '/app/[lang=lang]/lemma/[lemma]',
-		pattern: route('/lemma/([^/]+)'),
-		params: ['lang', 'lemma']
+		key: '/app/[lang=lang]/lemma',
+		pattern: route('/lemma/?'),
+		params: ['lang']
+	},
+	{
+		name: 'formularium',
+		key: '/app/[lang=lang]/formularium/[formulary]',
+		pattern: route('/formularium/([^/]+)'),
+		params: ['lang', 'formulary']
 	},
 	{
 		name: 'bibliographia',
@@ -134,13 +139,8 @@ export async function pageData(found: RouteMatch): Promise<Record<string, unknow
 			return await readingData(lang, found.params.category, found.params.slug);
 		case 'movement':
 			return await ordoData(lang, found.params.movement);
-		case 'lemma': {
-			// `match` decoded every parameter already. Decoding twice makes a
-			// perfectly valid encoded percent sign throw here instead of becoming
-			// an ordinary unknown lemma.
-			const lemma = lemmaOfSlug(found.params.lemma);
-			return lemma ? await lemmaData(lang, lemma) : null;
-		}
+		case 'formularium':
+			return await properData(found.params.formulary, lang);
 		case 'concept':
 			return conceptData(found.params.concept);
 		case 'bibliographia':

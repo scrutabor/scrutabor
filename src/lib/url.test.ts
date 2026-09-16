@@ -3,12 +3,12 @@ import { langOfPath } from './url';
 
 describe('langOfPath', () => {
 	it('reads the language by segment, not by substring', () => {
-		// '/app/en/lemma/plenus'.includes('/pl') is true — the defect this
+		// '/app/en/lemma?l=plenus'.includes('/pl') is true — the defect this
 		// function replaced answered Polish to English readers on every lemma
 		// beginning pl- (plenus, plebs, placeat).
-		expect(langOfPath('/app/en/lemma/plenus')).toBe('en');
-		expect(langOfPath('/app/en/lemma/plebs')).toBe('en');
-		expect(langOfPath('/app/en/lemma/placeat')).toBe('en');
+		expect(langOfPath('/app/en/lemma?l=plenus')).toBe('en');
+		expect(langOfPath('/app/en/lemma?l=plebs')).toBe('en');
+		expect(langOfPath('/app/en/lemma?l=placeat')).toBe('en');
 	});
 
 	it('answers each language on its own pages', () => {
@@ -25,7 +25,7 @@ describe('langOfPath', () => {
 	});
 
 	it('is not fooled by a language code inside a longer segment', () => {
-		expect(langOfPath('/app/pl/lemma/entheca')).toBe('pl');
+		expect(langOfPath('/app/pl/lemma?l=entheca')).toBe('pl');
 		expect(langOfPath('/plaza/pl-route')).toBe('en');
 	});
 });

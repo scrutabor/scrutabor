@@ -1,8 +1,8 @@
-import { lemmaSlug } from '$lib/lemma-slug';
-import { loadSenses, textKeysFor } from '$lib/corpus';
+import { textKeysFor } from '$lib/corpus';
 import { CONCEPTS } from '$lib/grammar';
 import { LANGS, type Lang } from '$lib/i18n';
 import { ORDO } from '$lib/ordo';
+import { PROPER_DAYS } from '$lib/proprium';
 import { ORIGIN } from '$lib/site';
 
 export const prerender = true;
@@ -14,6 +14,7 @@ const sharedApp: string[] = [
 	...ORDO.map((movement) => `/ordo/${movement.id}`),
 	'/editio',
 	'/bibliographia',
+	'/lemma',
 	'/grammatica',
 	'/grammatica/pronuntiatio',
 	...CONCEPTS.map((concept) => `/grammatica/${concept.id}`)
@@ -41,8 +42,10 @@ export async function GET(): Promise<Response> {
 				language,
 				new Set([
 					...sharedApp,
-					...textKeysFor(language).map((key) => `/${key}`),
-					...Object.keys(await loadSenses(language)).map((lemma) => `/lemma/${lemmaSlug(lemma)}`)
+					...textKeysFor(language)
+						.filter((key) => !key.startsWith('proprium/'))
+						.map((key) => `/${key}`),
+					...PROPER_DAYS.map((day) => `/formularium/${day.id}`)
 				])
 			])
 		)

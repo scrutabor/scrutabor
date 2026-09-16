@@ -5,36 +5,55 @@
 	import WordIdentity from '$lib/components/WordIdentity.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { GENDER_MARK, describeLemma } from '$lib/morph';
+	import { pageUrl } from '$lib/url';
 
-	// entry, senses and concordance all arrive prerendered (+page.server.ts)
 	let { data } = $props();
-
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
-	const lemma = $derived(data.lemma);
-	const entry = $derived(data.entry);
-	const sense = $derived(data.sense);
-	// The display headword is the first component of the dictionary head
-	// (oro of "oro, oráre, orávi, orátum") — liturgical orthography, unlike
-	// the normalized lemma in the URL.
+	type LemmaPayload = NonNullable<
+		Awaited<ReturnType<(typeof import('$lib/lemma-data'))['lemmaData']>>
+	>;
+	let payload = $state<LemmaPayload | null>(null);
+	let loading = $state(true);
+	let request = 0;
+
+	async function loadEntry() {
+		const mine = ++request;
+		loading = true;
+		payload = null;
+		const lemma = pageUrl().searchParams.get('l') ?? '';
+		const found = lemma ? await (await import('$lib/lemma-data')).lemmaData(lang, lemma) : null;
+		if (mine !== request) return;
+		payload = found;
+		loading = false;
+	}
+
+	$effect(() => {
+		void lang;
+		void loadEntry();
+	});
+
+	const lemma = $derived(payload?.lemma ?? '');
+	const entry = $derived(payload?.entry ?? null);
+	const sense = $derived(payload?.sense ?? null);
 	const headword = $derived((entry?.head ?? lemma).split(',')[0].trim());
-	const texts = $derived(data.occurrences);
+	const texts = $derived(payload?.occurrences ?? []);
 </script>
 
+<svelte:window onpopstate={loadEntry} onhashchange={loadEntry} />
+
 <svelte:head>
-	<title>{headword} — Scrutabor</title>
-	{#if sense}
-		<meta name="description" content={sense.senses.join(', ')} />
-	{/if}
+	<title>{headword ? `${headword} — Scrutabor` : `Scrutabor`}</title>
+	{#if sense}<meta name="description" content={sense.senses.join(', ')} />{/if}
 </svelte:head>
 
 <div class="page">
 	<PageNav {lang} />
 
-	{#if !entry}
-		<main>
-			<p class="notfound">{msgs.notFound}</p>
-		</main>
+	{#if loading}
+		<main><p class="notfound" aria-live="polite">{msgs.working}</p></main>
+	{:else if !entry}
+		<main><p class="notfound">{msgs.notFound}</p></main>
 	{:else}
 		<main>
 			<WordIdentity form={headword} {lang} level={1} placement="page" />
@@ -67,14 +86,14 @@
 			{#if texts.length > 0}
 				<section class="occurrences in-two">
 					<h2 class="smallcaps">{msgs.occurrences}</h2>
-					{#each texts as t (t.textKey)}
+					{#each texts as text (text.textKey)}
 						<p class="occ-row">
-							<span class="occ-title" lang="la">{t.title}</span>
+							<span class="occ-title" lang="la">{text.title}</span>
 							<span class="occ-forms">
-								{#each t.items as occ, i (occ.wordId)}{#if i > 0}{', '}{/if}<a
+								{#each text.items as occurrence, index (occurrence.wordId)}{#if index > 0}{', '}{/if}<a
 										class="occ-form"
 										lang="la"
-										href="/app/{lang}/{t.textKey}?w={occ.wordId}">{occ.form}</a
+										href={occurrence.href}>{occurrence.form}</a
 									>{/each}
 							</span>
 						</p>
@@ -104,7 +123,9 @@
 		border-radius: 0.9rem;
 	}
 
-	.head {
+	.head,
+	.grammar,
+	.derivatives {
 		margin: 0;
 		font-size: 1rem;
 	}
@@ -113,19 +134,11 @@
 		font-size: 0.9rem;
 	}
 
-	.grammar,
-	.derivatives {
-		margin: 0;
-		font-size: 1rem;
-	}
-
 	.note {
 		margin: 0.35rem 0 0;
 		font-size: 1rem;
 	}
 
-	/* 77 occurrences of dóminus across 44 texts: the one list here long
-	   enough that halving its height is worth a column — see .in-two */
 	.occurrences {
 		margin: 2.4rem auto 0;
 	}

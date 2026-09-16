@@ -461,7 +461,7 @@ test('a shared link restores the day and the word', async ({ page }) => {
 
 test('a gesture before the proper arrives ends deep-link settling @online', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.route('**/artifacts/proprium/pl/dominica-i-adventus.json', async (route) => {
+	await page.route('**/artifacts/proprium/pl/pack-01.json', async (route) => {
 		await new Promise((resolve) => setTimeout(resolve, 2500));
 		await route.continue();
 	});
@@ -475,7 +475,7 @@ test('a gesture before the proper arrives ends deep-link settling @online', asyn
 
 test('a quick proper load does not announce a transient state @online', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	const artifactPath = '/artifacts/proprium/en/dominica-i-adventus.json';
+	const artifactPath = '/artifacts/proprium/en/pack-01.json';
 	const artifact = await page.request.get(artifactPath);
 	expect(artifact.ok()).toBe(true);
 	const artifactBody = await artifact.body();
@@ -530,7 +530,7 @@ test('a corrected pick is not overtaken by the first one @online', async ({ page
 	let releaseFirstRequest!: () => void;
 	const firstRequested = new Promise<void>((resolve) => (sawFirstRequest = resolve));
 	const firstReleased = new Promise<void>((resolve) => (releaseFirstRequest = resolve));
-	await page.route('**/artifacts/proprium/en/dominica-i-adventus.json', async (route) => {
+	await page.route('**/artifacts/proprium/en/pack-01.json', async (route) => {
 		sawFirstRequest();
 		await firstReleased;
 		await route.continue();
@@ -539,15 +539,19 @@ test('a corrected pick is not overtaken by the first one @online', async ({ page
 	await settled(page);
 	await pickFormulary(page, 'dominica-i-adventus');
 	await firstRequested;
-	await pickFormulary(page, 'dominica-ii-adventus');
-	await expect(page.locator('body')).toContainText('Pópulus Sion', { timeout: 10_000 });
+	await pickFormulary(page, 'nativitas-domini-in-nocte');
+	await expect(
+		page.locator('[id^="nativitas-domini-in-nocte-introitus.w"] .base').first()
+	).toHaveText('Dóminus', { timeout: 10_000 });
 	const firstResponse = page.waitForResponse((response) =>
-		response.url().endsWith('/proprium/en/dominica-i-adventus.json')
+		response.url().endsWith('/proprium/en/pack-01.json')
 	);
 	releaseFirstRequest();
 	await (await firstResponse).finished();
 	await page.evaluate(() => new Promise<void>((resolve) => requestAnimationFrame(() => resolve())));
-	await expect(page.locator('.picker.day .day-open')).toContainText('Second Sunday of Advent');
+	await expect(page.locator('.picker.day .day-open')).toContainText(
+		'Nativity of the Lord — Mass during the Night'
+	);
 	await expect(page.locator('body')).not.toContainText('Ad te levávi');
 });
 
