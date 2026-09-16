@@ -21,6 +21,13 @@ const LANGUAGE_MARKERS = [
 
 const measurable = existsSync(BUILD);
 
+function filesUnder(dir: string): number {
+	return readdirSync(dir, { withFileTypes: true }).reduce(
+		(count, entry) => count + (entry.isDirectory() ? filesUnder(join(dir, entry.name)) : 1),
+		0
+	);
+}
+
 describe('the corpus chunk boundary in the emitted build', () => {
 	it('was measured against a real build', () => {
 		// `npm test` runs after `npm run build` (package.json wires it, CI
@@ -59,5 +66,13 @@ describe('the corpus chunk boundary in the emitted build', () => {
 				`${marker.slice(0, 24)}… is nowhere in the corpus chunks`
 			).toBe(true);
 		}
+	});
+
+	it.skipIf(!measurable)('fits the Cloudflare Pages artifact limit', () => {
+		// The complete year first crossed this limit through thousands of tiny
+		// lazy corpus chunks. Hold the actual artifact, not a source estimate:
+		// prerendered pages, data files and future assets all consume the same
+		// 20,000-file allowance on the serving plan.
+		expect(filesUnder('build')).toBeLessThanOrEqual(20_000);
 	});
 });

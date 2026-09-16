@@ -36,6 +36,23 @@ export default defineConfig({
 			name: 'name-lazy-corpus-chunks',
 			apply: 'build',
 			outputOptions(options) {
+				// One module per compact text kept each request exquisitely small,
+				// but a complete liturgical year crossed Pages' 20,000-file ceiling.
+				// These JSON modules have no side effects, so gather only the text and
+				// bibliography leaves into modest lazy chunks. Manifests, indexes and
+				// language resources retain their independent loading boundaries.
+				if (options.dir?.replaceAll('\\', '/').endsWith('/client')) {
+					options.codeSplitting = {
+						groups: [
+							{
+								name: 'corpus-texts',
+								test: /\/src\/lib\/data\/(?:texts|bibliography\/texts|languages\/[^/]+\/(?:texts|bibliography\/texts))\//,
+								minSize: 32 * 1024,
+								maxSize: 64 * 1024
+							}
+						]
+					};
+				}
 				// Candidate texts and language resources are genuine lazy entry
 				// points. Give their JSON facades a stable directory boundary so
 				// the service worker can keep them out of a first web visit while
@@ -47,6 +64,7 @@ export default defineConfig({
 					// here put half a megabyte of index into every first visit's
 					// shell precache. The boundary is the data, not the extension.
 					const corpusResource =
+						chunk.name.startsWith('corpus-texts') ||
 						(facade?.includes('/src/lib/data/') && facade.endsWith('.json')) ||
 						facade?.endsWith('/src/lib/search.ts');
 					return corpusResource
