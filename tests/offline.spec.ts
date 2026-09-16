@@ -82,13 +82,27 @@ test('an installed app fetches the whole book @online', async ({ page }) => {
 		await expect.poll(() => has(path), { timeout: 90_000, intervals: [1000] }).toBe(true);
 	}
 
-	// everything fetched, still nothing from outside the book
-	const strays = await page.evaluate(async () => {
+	// everything fetched, still nothing from outside the book. Do not ask
+	// Chromium to materialise every Request in the complete cache here: once
+	// the missal grew past a few thousand entries, Cache.keys() crossed the
+	// browser process's message-size limit. Probe the landing tree itself.
+	const outside = [
+		'/',
+		'/en',
+		'/en/privacy',
+		'/en/support',
+		'/pl',
+		'/pl/privacy',
+		'/pl/support',
+		'/sitemap.xml'
+	];
+	const strays = await page.evaluate(async (paths) => {
 		const cache = await caches.open((await caches.keys())[0]);
-		return (await cache.keys())
-			.map((r) => new URL(r.url).pathname)
-			.filter((p) => /^\/(pl|en)(\/|$)|^\/$|^\/sitemap/.test(p));
-	});
+		const matches = await Promise.all(
+			paths.map(async (path) => ((await cache.match(path, { ignoreSearch: true })) ? path : null))
+		);
+		return matches.filter((path): path is string => path !== null);
+	}, outside);
 	expect(strays).toEqual([]);
 });
 
