@@ -92,6 +92,72 @@ test('print carries the chosen reading settings without application chrome', asy
 	await expect(page.locator('.form-tabs')).toBeHidden();
 });
 
+test('print composes the Ordo day and settings as two stable metadata rows', async ({ page }) => {
+	await page.addInitScript(() => {
+		localStorage.setItem('scrutabor-role', 'populus');
+		localStorage.setItem('scrutabor-mass-form', 'cantu');
+	});
+	await page.emulateMedia({ media: 'print' });
+	await page.setViewportSize({ width: 760, height: 900 });
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2026-09-29');
+
+	const settings = page.locator('.help-row');
+	await expect(settings.locator('#day-value')).toHaveText(
+		'Poświęcenie Bazyliki św. Michała Archanioła'
+	);
+	await expect(settings.locator('.choice-date')).toHaveText('29 września 2026');
+
+	const geometry = await settings.evaluate((element) => {
+		const box = (selector: string) => {
+			const rect = element.querySelector(selector)!.getBoundingClientRect();
+			return { top: rect.top, bottom: rect.bottom, left: rect.left, right: rect.right };
+		};
+		return {
+			day: box('.day'),
+			title: box('.choice-title'),
+			date: box('.choice-date'),
+			role: box('.picker[data-kind="role"]'),
+			mass: box('.picker[data-kind="mass"]')
+		};
+	});
+
+	expect(geometry.day.bottom, 'the day occupies the complete first metadata row').toBeLessThan(
+		geometry.role.top
+	);
+	expect(geometry.role.top, 'role and Mass begin on one second row').toBeCloseTo(
+		geometry.mass.top,
+		0
+	);
+	expect(geometry.role.right, 'the second-row pairs do not overlap').toBeLessThan(
+		geometry.mass.left
+	);
+	expect(geometry.title.top, 'the feast and date share one text line on A4').toBeCloseTo(
+		geometry.date.top,
+		0
+	);
+
+	for (const width of [500, 360]) {
+		await page.setViewportSize({ width, height: 900 });
+		const narrow = await settings.evaluate((element) => {
+			const frame = element.getBoundingClientRect();
+			const day = element.querySelector('.day')!.getBoundingClientRect();
+			const role = element.querySelector('.picker[data-kind="role"]')!.getBoundingClientRect();
+			const mass = element.querySelector('.picker[data-kind="mass"]')!.getBoundingClientRect();
+			return { frame, day, roleTop: role.top, massTop: mass.top };
+		});
+		expect(narrow.day.left, `${width}px day stays inside the print frame`).toBeGreaterThanOrEqual(
+			narrow.frame.left - 1
+		);
+		expect(narrow.day.right, `${width}px day stays inside the print frame`).toBeLessThanOrEqual(
+			narrow.frame.right + 1
+		);
+		expect(narrow.roleTop, `${width}px role and Mass retain their common row`).toBeCloseTo(
+			narrow.massTop,
+			0
+		);
+	}
+});
+
 test('print preserves manually opened repeated prayers and leaves the others folded', async ({
 	page
 }) => {
