@@ -6,8 +6,8 @@
     {"id":"s01","nr":"The priest lays both hands on the altar, one on either side, and raises them a little as he says Sursum corda. At Grátias agámus he joins them before his breast and bows his head."},
     {"id":"s02","tr":"The Lord be with you.","tc":[298],"tb":"exact","g":["The Lord","with you"]},
     {"id":"s03","tr":"And with your spirit.","tc":[299],"tb":"normalized","g":["and","with","spirit","your"]},
-    {"id":"s04","tr":"Lift up your hearts.","tc":[296],"tb":"normalized","g":["upwards","hearts"],"ex":{"w008":"The call “Sursum corda” leaves its verb unspoken. Literally it says “hearts upward”."}},
-    {"id":"s05","tr":"We lift them up to the Lord.","tc":[296],"tb":"normalized","g":["we have","to","the Lord"]},
+    {"id":"s04","tr":"Lift up your hearts.","tc":[296],"tb":"normalized","g":["up","hearts"],"ex":{"w008":"The call “Sursum corda” leaves its verb unspoken. Literally it says “hearts upward”."}},
+    {"id":"s05","tr":"We lift them up to the Lord.","tc":[296],"tb":"normalized","g":["we lift them","to","the Lord"]},
     {"id":"s06","tr":"Let us give thanks to the Lord our God.","tc":[296],"tb":"normalized","g":["thanks","let us give","to the Lord","God","our"]},
     {"id":"s07","tr":"It is right and just.","g":["right","and","just","it is"]}
   ]

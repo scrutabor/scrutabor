@@ -68,7 +68,7 @@ test('the Ordo shows placeholders when the chosen date has no resolved formulary
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo/catechumenorum');
 	await expect(page.getByText('z formularza dnia').first()).toBeVisible();
-	await expect(page.locator('body')).not.toContainText('wzniosłem');
+	await expect(page.locator('body')).not.toContainText('wznoszę');
 	await expect(page.locator('.picker.day .day-open')).toContainText('19 sierpnia 2026');
 });
 
@@ -432,7 +432,7 @@ test('choosing a day fills the slots without leaving the page', async ({ page })
 	await page.goto('/app/pl/ordo/catechumenorum');
 	const marker = await page.evaluate(() => performance.getEntriesByType('navigation')[0].startTime);
 	await pickFormulary(page, DAY);
-	await expect(page.locator('body')).toContainText('wzniosłem', { timeout: 15_000 });
+	await expect(page.locator('body')).toContainText('wznoszę', { timeout: 15_000 });
 	const after = await page.evaluate(() => performance.getEntriesByType('navigation')[0].startTime);
 	expect(after).toBe(marker);
 });
@@ -440,7 +440,7 @@ test('choosing a day fills the slots without leaving the page', async ({ page })
 test('a date link restores the calendar answer and proper', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo/catechumenorum?dies=2025-11-30');
-	await expect(page.locator('body')).toContainText('wzniosłem', { timeout: 15_000 });
+	await expect(page.locator('body')).toContainText('wznoszę', { timeout: 15_000 });
 	await expect(page.locator('.picker.day .day-open')).toContainText('I Niedziela Adwentu');
 });
 
@@ -454,7 +454,7 @@ test('the chant slot carries gradual and alleluia together', async ({ page }) =>
 test('a shared link restores the day and the word', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto(`/app/pl/ordo/catechumenorum?dies=${DAY}&w=${DAY}-introitus.w014`);
-	await expect(page.locator('body')).toContainText('wzniosłem', { timeout: 15_000 });
+	await expect(page.locator('body')).toContainText('wznoszę', { timeout: 15_000 });
 	await expect(page.locator('body')).toContainText('tryb łączący', { timeout: 15_000 });
 	await expect(page.locator(`[id="${DAY}-introitus.w014"]`)).toBeInViewport();
 });

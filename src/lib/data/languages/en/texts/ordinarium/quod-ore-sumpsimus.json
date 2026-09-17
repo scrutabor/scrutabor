@@ -4,7 +4,7 @@
   "about":"The first of the two prayers at the ablutions, said while the minister pours wine into the chalice. It asks that what has passed the lips be taken up with a pure heart, and that a gift given in time become an everlasting remedy.",
   "seg":[
     {"id":"s01","nr":"Afterwards the priest says:"},
-    {"id":"s02","tr":"Lord, may we receive with a pure heart what our mouths have received, and may the gift given in time become for us an everlasting remedy.","g":["What","with the mouth","we have taken","Lord","pure","with a mind","may we receive","and","from","a gift","temporal","may there be","for us","a remedy","everlasting"],"ex":{"w001":"Latin can leave the antecedent unsaid where English needs a word for it.","w006":"The translation renders this interior disposition as “purity of heart”.","w007":"The prayer asks that what has been received by mouth also be received with a pure mind."}},
+    {"id":"s02","tr":"Lord, may we receive with a pure heart what our mouths have received, and may the gift given in time become for us an everlasting remedy.","g":["What","with the mouth","we have received","Lord","pure","with a heart","may we receive","and","from","a gift","temporal","may become","for us","a remedy","everlasting"],"ex":{"w001":"Latin can leave the antecedent unsaid where English needs a word for it.","w006":"The translation renders this interior disposition as “purity of heart”.","w007":"The prayer asks that what has been received by mouth also be received with a pure mind."}},
     {"id":"s03","nr":"Meanwhile the priest holds out the chalice to the server, who pours a little wine into it, and with this the priest purifies himself."}
   ]
 }

@@ -35,7 +35,7 @@ test('the day still fills the slots', async ({ page }) => {
 	await dialog.getByRole('tab', { name: 'Lista i wyszukiwanie' }).click();
 	await dialog.locator('[data-formulary="dominica-i-adventus"]').click();
 	await dialog.locator('.modal-actions .primary').click();
-	await expect(page.locator('body')).toContainText('wzniosłem', { timeout: 15_000 });
+	await expect(page.locator('body')).toContainText('wznoszę', { timeout: 15_000 });
 });
 
 test('the controls above the text still answer', async ({ page }) => {
