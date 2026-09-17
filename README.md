@@ -71,12 +71,15 @@ npm run dev            # dev server
 npm run check          # svelte-check
 npm run lint           # prettier + eslint + stylelint
 npm run test:unit      # vitest (rendering logic, data-snapshot consistency)
-npm run test:e2e       # playwright against the built static site AND the offline folder
+npm run test:e2e       # playwright against the built site, the offline folder and a static host
 npm run build          # static site into build/
 npm run build:offline  # the downloadable folder into build-offline/
 ```
 
-CI runs lint, check, build, and both test suites on every push.
+CI runs lint, check, build, and both test suites on every push. The
+`static-host` Playwright project serves `build/` with the static host's own
+rules (`scripts/static-host.ts`) — the deployed tree, not SvelteKit's
+preview — for history traversal, redirects and the service worker.
 
 SvelteKit with the static adapter — the site prerenders completely; every
 text page is plain HTML before any JavaScript runs. No backend. Runtime

@@ -21,19 +21,34 @@ export default defineConfig({
 	forbidOnly: !!process.env.CI,
 	webServer: noServer
 		? undefined
-		: {
-				// Both artifacts, from one command, so they can never disagree about
-				// which corpus or which runtime they were built from. (The offline
-				// zip is not among them: it travels with each GitHub release, and
-				// the landing links the latest release's asset directly.)
-				command: prebuilt ? 'npm run preview' : 'npm run build:offline && npm run preview',
-				port: 4173,
-				// A cold CI runner builds the complete hosted and folder editions before
-				// preview starts. The full liturgical-year corpus can take nearly two
-				// minutes even on a warm workstation, so leave room for a cold runner.
-				timeout: 240_000,
-				reuseExistingServer: !process.env.CI
-			},
+		: [
+				{
+					// Both artifacts, from one command, so they can never disagree about
+					// which corpus or which runtime they were built from. (The offline
+					// zip is not among them: it travels with each GitHub release, and
+					// the landing links the latest release's asset directly.)
+					command: prebuilt ? 'npm run preview' : 'npm run build:offline && npm run preview',
+					port: 4173,
+					// A cold CI runner builds the complete hosted and folder editions before
+					// preview starts. The full liturgical-year corpus can take nearly two
+					// minutes even on a warm workstation, so leave room for a cold runner.
+					timeout: 240_000,
+					reuseExistingServer: !process.env.CI
+				},
+				{
+					// The deployed tree itself. SvelteKit's preview answers from
+					// .svelte-kit/output, where the route sidecars the build prunes
+					// still exist and a missing page still reaches the server runtime —
+					// two of the differences that hid a broken Back and an offline book
+					// that could never complete. The static-host project runs the
+					// navigation and worker scenarios against build/ alone, with the
+					// four rules the static host applies (scripts/static-host.ts).
+					command: 'node scripts/static-host.ts 4174',
+					port: 4174,
+					timeout: 30_000,
+					reuseExistingServer: !process.env.CI
+				}
+			],
 	// The corpus is large and the flow pages are long; a 5 s default starts
 	// biting on page loads that are genuinely doing work.
 	timeout: 60_000,
@@ -45,7 +60,7 @@ export default defineConfig({
 			// The mirror of @online below: a handful of properties belong to
 			// the folder alone — what it does with scripting turned off, and
 			// that it is styled before its script has run.
-			grepInvert: /@folder|@sweep/
+			grepInvert: /@folder|@sweep|@static-host/
 		},
 		{
 			name: 'offline',
@@ -57,7 +72,15 @@ export default defineConfig({
 			// its caches, the cold-load weight of a first visit over HTTP,
 			// the server's own 404, and the language redirect a server does
 			// with a Location header.
-			grepInvert: /@online/
+			grepInvert: /@online|@static-host/
+		},
+		{
+			// The deployed tree, served as the static host serves it — see the
+			// second web server above. History traversal, redirects and the
+			// worker's whole-book promise are proven here and nowhere else.
+			name: 'static-host',
+			use: { baseURL: 'http://localhost:4174' },
+			grep: /@static-host/
 		},
 		{
 			// The typography sweep visits every Polish surface. Running it beside

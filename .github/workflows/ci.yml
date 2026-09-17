@@ -77,6 +77,10 @@ jobs:
           - { name: hosted-2, project: hosted, shard: '2/2', no_server: '0' }
           - { name: offline-1, project: offline, shard: '1/2', no_server: '1' }
           - { name: offline-2, project: offline, shard: '2/2', no_server: '1' }
+          # The deployed tree served with the static host's own rules: history
+          # traversal, redirects and the worker's whole-book promise are proven
+          # against build/ alone, which preview cannot do.
+          - { name: static-host, project: static-host, shard: '1/1', no_server: '0' }
           - { name: sweep-1, project: hosted-sweep, shard: '1/4', no_server: '0' }
           - { name: sweep-2, project: hosted-sweep, shard: '2/4', no_server: '0' }
           - { name: sweep-3, project: hosted-sweep, shard: '3/4', no_server: '0' }
