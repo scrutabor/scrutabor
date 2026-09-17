@@ -1,16 +1,14 @@
 # Served by Cloudflare Pages as redirects (build output includes this file
-# from static/). Cloudflare allows 2,000 static and 100 dynamic rules.
+# from static/). Pages allows 2,000 static rules and 100 dynamic ones, and
+# counts every rule AFTER the first dynamic one as dynamic — so the static
+# lines come first and the one placeholder rule is last. Its own copy of
+# this accounting is scripts/redirects.test.ts.
 #
 # The previous edition (v0.10.0) published one page per dictionary entry
 # and one page per Proper text, and listed both in its sitemap. This
 # edition reads a dictionary entry on one shared page per language, chosen
 # by query, and a Proper text inside its complete Mass formulary. The old
 # addresses were public — indexed, shared, bookmarked — so they answer.
-#
-# Dictionary: the old slug is the lemma itself for every entry whose
-# casefolded form was unique (all but a handful); a collision slug such as
-# clemens.1 lands on the shared page, which reports no such entry.
-/app/:lang/lemma/:slug  /app/:lang/lemma?l=:slug  301
 
 # The 40 Proper texts v0.10.0 published, in both languages. Later texts
 # were never public under /proprium/ and need no rule.
@@ -94,3 +92,12 @@
 /app/en/proprium/dominica-iv-adventus-offertorium  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-offertorium  301
 /app/en/proprium/dominica-iv-adventus-postcommunio  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-postcommunio  301
 /app/en/proprium/dominica-iv-adventus-secreta  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-secreta  301
+
+# Dictionary: the old slug was the lemma itself for every entry whose
+# casefolded form was unique. The one collision group of v0.10.0 took
+# `<lowercase>.<ordinal>`, ordinals by codepoint order of the authored forms.
+/app/pl/lemma/clemens.1  /app/pl/lemma?l=Clemens  301
+/app/pl/lemma/clemens.2  /app/pl/lemma?l=clemens  301
+/app/en/lemma/clemens.1  /app/en/lemma?l=Clemens  301
+/app/en/lemma/clemens.2  /app/en/lemma?l=clemens  301
+/app/:lang/lemma/:slug  /app/:lang/lemma?l=:slug  301

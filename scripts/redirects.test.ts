@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { textHref } from '../src/lib/content-url';
 import { LANGS, type Lang } from '../src/lib/i18n';
-import { parseRedirects } from './static-host.ts';
+import { parseRedirects, redirectFor } from './static-host.ts';
 
 // The addresses the previous edition published keep answering. The rules
 // are hand-listed — history is not derivable from the current data — so
@@ -14,6 +14,19 @@ describe('the published redirects', () => {
 		const lemma = rules.find((rule) => rule.source === '/app/:lang/lemma/:slug');
 		expect(lemma?.target).toBe('/app/:lang/lemma?l=:slug');
 		expect(lemma?.status).toBe(301);
+		// v0.10.0's one case-insensitive collision took numbered slugs; each
+		// number names its authored form, before the general rule can catch it.
+		for (const lang of LANGS) {
+			expect(redirectFor(rules, `/app/${lang}/lemma/clemens.1`)?.location).toBe(
+				`/app/${lang}/lemma?l=Clemens`
+			);
+			expect(redirectFor(rules, `/app/${lang}/lemma/clemens.2`)?.location).toBe(
+				`/app/${lang}/lemma?l=clemens`
+			);
+			expect(redirectFor(rules, `/app/${lang}/lemma/oro`)?.location).toBe(
+				`/app/${lang}/lemma?l=oro`
+			);
+		}
 	});
 
 	it('send every old Proper address to the formulary the app links it to', () => {
@@ -28,8 +41,12 @@ describe('the published redirects', () => {
 	});
 
 	it('stay within the host’s limits: at most 2,000 static and 100 dynamic rules', () => {
-		const dynamic = rules.filter((rule) => /[:*]/.test(rule.source));
-		expect(dynamic.length).toBeLessThanOrEqual(100);
-		expect(rules.length - dynamic.length).toBeLessThanOrEqual(2000);
+		// Pages counts as dynamic every rule from the first placeholder rule
+		// onwards, whatever its shape — so the placeholder rule must be last,
+		// or a hundred and first static line would be dropped in silence.
+		const firstDynamic = rules.findIndex((rule) => /[:*]/.test(rule.source));
+		const dynamic = firstDynamic < 0 ? 0 : rules.length - firstDynamic;
+		expect(dynamic, 'only the closing placeholder rule is dynamic').toBe(1);
+		expect(rules.length - dynamic).toBeLessThanOrEqual(2000);
 	});
 });
