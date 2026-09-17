@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The tractus of the formulary “The Holy Innocents, Martyrs” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"They have poured out the blood of the Saints like water round about Jerusalem. And there was none to bury them. Avenge, O Lord, the blood of Your Saints, which has been shed upon the earth.","g":["They have poured out","the blood","of the Saints","like","water","round about","[included]","Jerusalem","And","not","there was","one","to bury","Avenge","O Lord","the blood","of the Saints","Thy","which","has been shed","[auxiliary]","upon","the earth"]}
+    {"id":"s01","tr":"They have poured out the blood of the Saints like water round about Jerusalem. And there was none to bury them. Avenge, O Lord, the blood of Your Saints, which has been shed upon the earth.","g":["They have poured out","the blood","of the Saints","like","water",null,null,"Jerusalem","And","not","there was","one","to bury","Avenge","O Lord","the blood","of the Saints","Thy","which",null,null,"upon","the earth"],"a":[{"s":5,"n":2,"a":0,"g":"round about"},{"s":19,"n":2,"a":0,"g":"has been shed"}]}
   ]
 }

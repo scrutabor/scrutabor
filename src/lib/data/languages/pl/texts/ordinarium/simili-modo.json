@@ -4,7 +4,7 @@
   "about":"Konsekracja kielicha. Jej słowa łączą sformułowania z opisów ustanowienia w Mt 26, Mk 14, Łk 22 i 1 Kor 11. Zwrot „mystérium fídei” nie pochodzi z tych opisów, a „ætérni” odpowiada Hbr 13, 20. Końcowe polecenie nawiązuje do Łk 22, 19 i 1 Kor 11, 25–26.",
   "seg":[
     {"id":"s01","nr":"Kapłan odsłania kielich."},
-    {"id":"s02","tr":"Podobnie po wieczerzy,","tc":[326],"tb":"revised","g":["podobnym","sposobem","po","wieczerzy","[czasownik posiłkowy]"]},
+    {"id":"s02","tr":"Podobnie po wieczerzy,","tc":[326],"tb":"revised","g":["podobnym","sposobem","po",null,null],"a":[{"s":3,"n":2,"a":0,"g":"wieczerzy"}]},
     {"id":"s03","nr":"Kapłan bierze kielich obiema rękami."},
     {"id":"s04","tr":"wziął również ten przesławny kielich w swe święte i czcigodne ręce,","tc":[326],"tb":"revised","g":["biorąc","i","ten","przesławny","kielich","w","święte","i","czcigodne","ręce","swoje"],"ex":{"w009":"Przydawka przy „Cálicem” (w010) — echo Ps 22, 5: calix meus inébrians quam præclárus est."}},
     {"id":"s05","nr":"Kapłan znów pochyla głowę."},

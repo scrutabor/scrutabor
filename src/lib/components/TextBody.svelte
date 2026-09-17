@@ -12,6 +12,7 @@
 		sharedWithFaithful
 	} from '$lib/role.svelte';
 	import { initialFit } from '$lib/reading-geometry';
+	import { interlinearRuns } from '$lib/interlinear';
 	import * as marks from '$lib/speaker-marks';
 
 	// The rendered text itself, shared by the reading page and the ordo
@@ -224,22 +225,27 @@
 	}
 </script>
 
-{#snippet face(id: string, form: string, post = '', raised = false, sink = 0)}{@const fit =
+{#snippet baseFace(form: string, post = '', raised = false)}{@const fit = initialFit(
+		form.slice(0, 1),
+		helpLevel === 1
+	)}<span
+		class="base"
+		style:padding-top={raised ? `${fit.padTop}em` : null}
+		style:padding-bottom={raised ? `${fit.padBottom}em` : null}
+		>{#if raised}<span
+				class="initial"
+				style:font-size="{fit.scale}em"
+				style:margin-inline-start="{fit.start}em"
+				style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
+			>{form.slice(1)}{:else}{form}{/if}{post}</span
+	>{/snippet}
+
+{#snippet face(form: string, post = '', raised = false, sink = 0, target?: string)}{@const fit =
 		initialFit(form.slice(0, 1), helpLevel === 1)}<ruby
-		><span
-			class="base"
-			style:padding-top={raised ? `${fit.padTop}em` : null}
-			style:padding-bottom={raised ? `${fit.padBottom}em` : null}
-			>{#if raised}<span
-					class="initial"
-					style:font-size="{fit.scale}em"
-					style:margin-inline-start="{fit.start}em"
-					style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
-				>{form.slice(1)}{:else}{form}{/if}{post}</span
-		>{#if helpLevel === 1}<rt
+		>{@render baseFace(form, post, raised)}{#if helpLevel === 1 && target}<rt
 				style:top="calc(var(--reading) * (var(--gloss-gap) + {sink - (raised ? fit.lift : 0)}))"
 				class="shifted"
-				{lang}>{gloss.words[id]?.gloss}</rt
+				{lang}>{target}</rt
 			>{/if}</ruby
 	>{/snippet}
 
@@ -382,6 +388,7 @@
 		{@const verseNo = seg.speaker ? undefined : verses?.[seg.id]}
 		{@const visibleWords =
 			repeated && !repeatedOpen ? (seg.words ?? []).slice(0, 4) : (seg.words ?? [])}
+		{@const interlinear = interlinearRuns(visibleWords, gloss.segments[seg.id])}
 		{@const selected = citedSegments.includes(seg.id)}
 		<!-- Contiguity is decided by RENDER adjacency, not array order: in
 		     the litany's two-column rows an invocation and its response sit
@@ -476,23 +483,56 @@
 						aria-pressed={verseNo === citedVerse}
 						onclick={() => onverse?.(verseNo)}><span class="ink">{verseNo}</span></button
 					>{:else}<span class="mark">{verseNo}</span
-					>{/if}{/if}{#each visibleWords as w, wi (w.id)}{@const raised =
-					i === firstVerse && wi === 0}{@const post =
-					repeated && !repeatedOpen && wi === visibleWords.length - 1 ? '…' : (w.post ?? '')}<span
-					class="token"
-					class:word-selected={selectedId === domId(w.id)}
-					>{#if ontap}<button
-							class="word"
-							id={domId(w.id)}
-							class:selected={selectedId === domId(w.id)}
-							aria-label={helpLevel === 1 && gloss.words[w.id]?.gloss
-								? `${w.form} — ${gloss.words[w.id].gloss}`
-								: undefined}
-							onclick={(event) => tapWord(event, domId(w.id), seg.id)}
-							>{@render face(w.id, w.form, post, raised, sink)}</button
-						>{:else}<span class="word">{@render face(w.id, w.form, post, raised, sink)}</span
-						>{/if}</span
-				>{' '}{/each}
+					>{/if}{/if}{#each interlinear as run (run.words[0].id)}{#if helpLevel === 1 && run.alignment?.gloss && run.words.length > 1}{@const sharedRaised =
+						i === firstVerse && visibleWords.indexOf(run.words[0]) === 0}{@const sharedFit =
+						initialFit(run.words[0].form.slice(0, 1), helpLevel === 1)}<span class="token-group"
+						><ruby class="shared-gloss"
+							><span class="shared-base"
+								>{#each run.words as w, rwi (w.id)}{@const wi =
+										visibleWords.indexOf(w)}{@const raised =
+										i === firstVerse && wi === 0}{@const post =
+										repeated && !repeatedOpen && wi === visibleWords.length - 1
+											? '…'
+											: (w.post ?? '')}<span
+										class="token"
+										class:word-selected={selectedId === domId(w.id)}
+										>{#if ontap}<button
+												class="word"
+												id={domId(w.id)}
+												class:selected={selectedId === domId(w.id)}
+												aria-label={helpLevel === 1
+													? `${w.form} — ${run.alignment.gloss}`
+													: undefined}
+												onclick={(event) => tapWord(event, domId(w.id), seg.id)}
+												>{@render baseFace(w.form, post, raised)}</button
+											>{:else}<span class="word">{@render baseFace(w.form, post, raised)}</span
+											>{/if}</span
+									>{#if rwi < run.words.length - 1}{' '}{/if}{/each}</span
+							><rt
+								style:top="calc(var(--reading) * (var(--gloss-gap) + {sink -
+									(sharedRaised ? sharedFit.lift : 0)}))"
+								class="shifted"
+								{lang}>{run.alignment.gloss}</rt
+							></ruby
+						></span
+					>{' '}{:else}{#each run.words as w (w.id)}{@const wi =
+							visibleWords.indexOf(w)}{@const raised = i === firstVerse && wi === 0}{@const post =
+							repeated && !repeatedOpen && wi === visibleWords.length - 1
+								? '…'
+								: (w.post ?? '')}{@const target =
+							run.alignment?.gloss ?? gloss.words[w.id]?.gloss}<span
+							class="token"
+							class:word-selected={selectedId === domId(w.id)}
+							>{#if ontap}<button
+									class="word"
+									id={domId(w.id)}
+									class:selected={selectedId === domId(w.id)}
+									aria-label={helpLevel === 1 && target ? `${w.form} — ${target}` : undefined}
+									onclick={(event) => tapWord(event, domId(w.id), seg.id)}
+									>{@render face(w.form, post, raised, sink, target)}</button
+								>{:else}<span class="word">{@render face(w.form, post, raised, sink, target)}</span
+								>{/if}</span
+						>{' '}{/each}{/if}{/each}
 		</p>
 		{@const translation = gloss.segments[seg.id]?.translation}
 		{#if helpLevel >= 2 && translation}
@@ -910,6 +950,7 @@
 	   printing them on top of one another. The indent belongs to the verse
 	   alone; everything inside it starts at zero. */
 	.token,
+	.token-group,
 	.mark {
 		position: relative;
 		text-indent: 0;
@@ -919,6 +960,15 @@
 	.token {
 		display: inline-block;
 		isolation: isolate;
+	}
+
+	.token-group {
+		display: inline-block;
+		isolation: isolate;
+	}
+
+	.shared-base {
+		white-space: nowrap;
 	}
 
 	.word {
@@ -992,7 +1042,8 @@
 	   strong wash is too close to the soft ink for text this size (4.0:1).
 	   Primary ink both clears AA and matches where the reader is looking.
 	   Guarded by tests/contrast.spec and the axe sweep. */
-	button.word.selected rt {
+	button.word.selected rt,
+	.token-group:has(button.word.selected) rt {
 		color: var(--ink);
 	}
 
@@ -1054,10 +1105,10 @@
 		user-select: none;
 		-webkit-user-select: none;
 		/* One Latin word often needs several words to gloss it — 49 of the
-		   163 glosses in the English Credo — and the gloss has to read as
-		   ONE thing under ONE word, or the word-by-word correspondence
-		   that the whole apparatus rests on is broken: "having suffered"
-		   split over two lines reads as two glosses.
+		   163 glosses in the English Credo — and several Latin words may now
+		   share one target expression. Either way, the gloss has to read as
+		   ONE thing under ONE source unit: "having suffered" split over two
+		   lines reads as two glosses, and so would "shall be".
 
 		   The Leipzig Glossing Rules solve this by joining such a gloss
 		   with periods (`come.out`), which is right for a linguistics

@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The tractus of the formulary “Fourth Sunday of Lent” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"They that trust in the Lord shall be as Mount Sion; he shall not be moved for ever who dwelleth in Jerusalem. Mountains are round about it, and the Lord is round about His people, from henceforth now and for ever.","g":["They who","trust","in","the Lord","as","Mount","Sion","not","shall be moved","for","ever","he who","dwelleth","in","Jerusalem","Mountains","round about","[included]","it","and","the Lord","round about","[included]","people","His","from","now","[included]","and","unto","[included]","ever"]}
+    {"id":"s01","tr":"They that trust in the Lord shall be as Mount Sion; he shall not be moved for ever who dwelleth in Jerusalem. Mountains are round about it, and the Lord is round about His people, from henceforth now and for ever.","g":["They who","trust","in","the Lord","as","Mount","Sion","not","shall be moved","for","ever","he who","dwelleth","in","Jerusalem","Mountains",null,null,"it","and","the Lord",null,null,"people","His","from","now",null,"and","unto",null,null],"a":[{"s":16,"n":2,"a":0,"g":"round about"},{"s":21,"n":2,"a":0,"g":"round about"},{"s":27,"n":1,"r":"idiom"},{"s":30,"n":2,"a":1,"g":"ever"}]}
   ]
 }

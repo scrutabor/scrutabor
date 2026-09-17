@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Graduale formularza „Niedziela Palmowa” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Ująłeś mnie za prawą rękę, poprowadziłeś mnie według swojej woli i przyjąłeś mnie z chwałą. Jak dobry jest Bóg Izraela dla ludzi prawego serca! Moje zaś stopy niemal się zachwiały, niemal pośliznęły się moje kroki, bo zazdrościłem grzesznikom, widząc ich pokój.","g":["Ująłeś","rękę","prawą","moją","i","według","woli","Twojej","poprowadziłeś","mnie","i","z","chwałą","przyjąłeś","mnie","Jak","dobry","Izraela","Bóg","prawym","sercem","moje","zaś","prawie","zachwiały się","[dopełnienie]","stopy","prawie","pośliznęły się","[dopełnienie]","kroki","moje","bo","zazdrościłem","[included]","grzesznikom","pokój","ich","widząc"]}
+    {"id":"s01","tr":"Ująłeś mnie za prawą rękę, poprowadziłeś mnie według swojej woli i przyjąłeś mnie z chwałą. Jak dobry jest Bóg Izraela dla ludzi prawego serca! Moje zaś stopy niemal się zachwiały, niemal pośliznęły się moje kroki, bo zazdrościłem grzesznikom, widząc ich pokój.","g":["Ująłeś","rękę","prawą","moją","i","według","woli","Twojej","poprowadziłeś","mnie","i","z","chwałą","przyjąłeś","mnie","Jak","dobry","Izraela","Bóg","prawym","sercem","moje","zaś","prawie",null,null,"stopy","prawie",null,null,"kroki","moje","bo","zazdrościłem",null,null,"pokój","ich","widząc"],"a":[{"s":24,"n":2,"a":0,"g":"zachwiały się"},{"s":28,"n":2,"a":0,"g":"pośliznęły się"},{"s":34,"n":2,"a":1,"g":"grzesznikom"}]}
   ]
 }

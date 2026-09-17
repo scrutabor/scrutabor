@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Tractus formularza „Świętych Młodzianków Męczenników” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Krew Świętych rozlali jak wodę wokół Jeruzalem. I nie było komu pogrzebać. Pomścij, o Panie, krew Świętych Twoich, którą wylano na ziemi.","g":["Rozlali","krew","Świętych","jak","wodę","wokół","[dopełnienie]","Jerozolimy","I","nie","było","kto","pogrzebał","Pomścij","Panie","krew","Świętych","Twoich","która","wylana","została","na","ziemię"]}
+    {"id":"s01","tr":"Krew Świętych rozlali jak wodę wokół Jeruzalem. I nie było komu pogrzebać. Pomścij, o Panie, krew Świętych Twoich, którą wylano na ziemi.","g":["Rozlali","krew","Świętych","jak","wodę",null,null,"Jerozolimy","I","nie","było","kto","pogrzebał","Pomścij","Panie","krew","Świętych","Twoich","która","wylana","została","na","ziemię"],"a":[{"s":5,"n":2,"a":0,"g":"wokół"}]}
   ]
 }

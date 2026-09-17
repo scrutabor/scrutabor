@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Alleluia formularza „7. Niedziela po Zesłaniu Ducha Świętego” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Alleluja, alleluja. Wszystkie narody, klaskajcie w dłonie, wykrzykujcie Bogu głosem radosnym. Alleluja.","g":["Alleluja","alleluja","Wszystkie","narody","klaszczcie","w dłonie","wykrzykujcie","Bogu","[dopełnienie]","głosem","radości","Alleluja"]}
+    {"id":"s01","tr":"Alleluja, alleluja. Wszystkie narody, klaskajcie w dłonie, wykrzykujcie Bogu głosem radosnym. Alleluja.","g":["Alleluja","alleluja","Wszystkie","narody","klaszczcie","w dłonie","wykrzykujcie","Bogu",null,null,"radości","Alleluja"],"a":[{"s":8,"n":2,"a":1,"g":"głosem"}]}
   ]
 }

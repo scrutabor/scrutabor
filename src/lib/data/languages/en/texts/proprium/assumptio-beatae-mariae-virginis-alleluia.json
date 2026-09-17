@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Assumption of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. Mary is taken up into heaven: the choirs of the angels rejoice. Alleluia.","g":["alleluia","alleluia","was taken up","[auxiliary]","Mary","into","heaven","rejoice","the choirs","of the Angels","alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. Mary is taken up into heaven: the choirs of the angels rejoice. Alleluia.","g":["alleluia","alleluia",null,null,"Mary","into","heaven","rejoice","the choirs","of the Angels","alleluia"],"a":[{"s":2,"n":2,"a":0,"g":"was taken up"}]}
   ]
 }

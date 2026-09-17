@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “21st Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"O Lord, You have been our refuge through all generations. Before the mountains were begotten and the earth and the world were brought forth, from everlasting to everlasting You are God.","g":["O Lord","refuge","Thou hast become","[auxiliary]","for us","from","generation","and","generation","Before","mountains","were brought forth","or","were formed","earth","and","the world","from","age","and","even unto","unto","age","Thou","art","God"]}
+    {"id":"s01","tr":"O Lord, You have been our refuge through all generations. Before the mountains were begotten and the earth and the world were brought forth, from everlasting to everlasting You are God.","g":["O Lord","refuge",null,null,"for us","from","generation","and","generation","Before","mountains","were brought forth","or","were formed","earth","and","the world","from","age","and","even unto","unto","age","Thou","art","God"],"a":[{"s":2,"n":2,"a":0,"g":"Thou hast become"}]}
   ]
 }

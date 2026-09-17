@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “The Holy Innocents, Martyrs” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"We were rescued like a bird from the fowlers’ snare. Broken was the snare and we were freed.","g":["Soul","our","like","a sparrow","has been snatched","[auxiliary]","from","the snare","of the fowlers","The snare","broken","[auxiliary]","and","we","freed","were"]}
+    {"id":"s01","tr":"We were rescued like a bird from the fowlers’ snare. Broken was the snare and we were freed.","g":["Soul","our","like","a sparrow",null,null,"from","the snare","of the fowlers","The snare",null,null,"and","we","freed","were"],"a":[{"s":4,"n":2,"a":0,"g":"has been snatched"},{"s":10,"n":2,"a":0,"g":"broken"}]}
   ]
 }

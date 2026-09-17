@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Saint James the Apostle” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"You who have followed Me shall sit on thrones judging the twelve tribes of Israel.","g":["You","who","have followed","[auxiliary]","Me","shall sit","upon","thrones","judging","the twelve","tribes","of Israel"]}
+    {"id":"s01","tr":"You who have followed Me shall sit on thrones judging the twelve tribes of Israel.","g":["You","who",null,null,"Me","shall sit","upon","thrones","judging","the twelve","tribes","of Israel"],"a":[{"s":2,"n":2,"a":0,"g":"have followed"}]}
   ]
 }

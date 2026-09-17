@@ -48,6 +48,12 @@
 	}
 
 	let explanationParts = $derived(gloss?.explanation ? parseExplanation(gloss.explanation) : []);
+	let alignmentText = $derived.by(() => {
+		const alignment = gloss?.alignment;
+		if (!alignment) return undefined;
+		if (alignment.gloss) return M[lang].sharedGloss(alignment.forms.join(' '), alignment.gloss);
+		return alignment.reason ? M[lang].zeroGloss[alignment.reason] : undefined;
+	});
 
 	// The per-lemma layer: dictionary head + gender in the header, senses and
 	// an optional lemma-level note below the contextual gloss. The corpus
@@ -59,7 +65,8 @@
 
 {#snippet context()}
 	{#if gloss}
-		<p class="gloss">{gloss.gloss}</p>
+		{#if gloss.gloss}<p class="gloss">{gloss.gloss}</p>{/if}
+		{#if alignmentText}<p class="alignment">{alignmentText}</p>{/if}
 		{#if gloss.explanation}
 			<p class="explanation">
 				{#each explanationParts as part, i (i)}
@@ -180,6 +187,12 @@
 	.explanation {
 		margin: 0;
 		font-size: 1rem;
+	}
+
+	.alignment {
+		margin: 0.35rem 0 0;
+		color: var(--ink-soft);
+		font-size: 0.95rem;
 	}
 
 	.gloss {

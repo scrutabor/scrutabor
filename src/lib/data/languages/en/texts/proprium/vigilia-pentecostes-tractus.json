@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The tractus of the formulary “Vigil of Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"O praise the Lord, all ye nations; praise Him, all ye peoples. For His mercy is confirmed upon us, and the truth of the Lord remaineth for ever.","g":["Praise","the Lord","all","nations","and","praise","Him","all","peoples","For","has been confirmed","[auxiliary]","upon","us","mercy","His","and","the truth","of the Lord","abideth","for","ever"]}
+    {"id":"s01","tr":"O praise the Lord, all ye nations; praise Him, all ye peoples. For His mercy is confirmed upon us, and the truth of the Lord remaineth for ever.","g":["Praise","the Lord","all","nations","and","praise","Him","all","peoples","For",null,null,"upon","us","mercy","His","and","the truth","of the Lord","abideth","for","ever"],"a":[{"s":10,"n":2,"a":0,"g":"has been confirmed"}]}
   ]
 }

@@ -49,6 +49,8 @@ export interface Messages {
 	updateStale: string;
 	panelAria: string;
 	wordContextLabel: string;
+	sharedGloss: (latin: string, target: string) => string;
+	zeroGloss: Record<'idiom' | 'inflection' | 'punctuation' | 'word-order', string>;
 	wordEntryLabel: string;
 	wordFormLabel: string;
 	working: string;
@@ -253,6 +255,17 @@ const MESSAGES: Record<Lang, Messages> = {
 			'Ta kopia nie może już pobrać swoich plików. Zastosuj aktualizację, aby czytać dalej.',
 		panelAria: 'analiza słowa',
 		wordContextLabel: 'znaczenie w kontekście',
+		sharedGloss: (latin, target) => `Słowa „${latin}” mają tu wspólny odpowiednik: „${target}”.`,
+		zeroGloss: {
+			idiom:
+				'Znaczenie tego słowa zawiera się tu w całym zwrocie. Nie ma ono osobnego polskiego odpowiednika.',
+			inflection:
+				'Znaczenie tego słowa wyraża tu forma sąsiedniego wyrazu. Nie ma ono osobnego polskiego odpowiednika.',
+			punctuation:
+				'Funkcję tego słowa oddaje tu interpunkcja. Nie ma ono osobnego polskiego odpowiednika.',
+			'word-order':
+				'Funkcję tego słowa oddaje tu szyk zdania. Nie ma ono osobnego polskiego odpowiednika.'
+		},
 		wordEntryLabel: 'hasło',
 		wordFormLabel: 'forma',
 		working: 'o wydaniu · wydanie robocze przed przeglądem eksperckim',
@@ -443,6 +456,17 @@ const MESSAGES: Record<Lang, Messages> = {
 		updateStale: 'This copy can no longer fetch its files. Apply the update to keep reading.',
 		panelAria: 'word analysis',
 		wordContextLabel: 'meaning in context',
+		sharedGloss: (latin, target) => `“${latin}” is rendered here as one expression: “${target}”.`,
+		zeroGloss: {
+			idiom:
+				'This word is expressed by the phrase as a whole and has no separate English counterpart here.',
+			inflection:
+				'This word is expressed by the form of a neighbouring word and has no separate English counterpart here.',
+			punctuation:
+				'Punctuation carries this word’s function here. It has no separate English counterpart.',
+			'word-order':
+				'English word order carries this word’s function here. It has no separate English counterpart.'
+		},
 		wordEntryLabel: 'dictionary entry',
 		wordFormLabel: 'form',
 		working: 'about this edition · working edition awaiting expert review',

@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Communio formularza „Święta Rodzina Jezusa, Maryi i Józefa” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Jezus poszedł z nimi, przybył do Nazaretu i był im poddany.","g":["zstąpił","Jezus","z","nimi","i","przybył","do Nazaretu","i","[czasownik posiłkowy]","poddany","im"]}
+    {"id":"s01","tr":"Jezus poszedł z nimi, przybył do Nazaretu i był im poddany.","g":["zstąpił","Jezus","z","nimi","i","przybył","do Nazaretu","i",null,null,"im"],"a":[{"s":8,"n":2,"a":1,"g":"poddany"}]}
   ]
 }

@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Graduale formularza „Świętego Szczepana, Pierwszego Męczennika” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Zasiedli możni i zmówili się przeciw mnie, niesłusznie mię prześladują. Ty wspomóż mnie, Panie, Boże mój, przez miłosierdzie Twoje mnie wybaw.","g":["Zasiedli","książęta","i","przeciw","mnie","mówili","i","nieprawi","prześladowali","[czasownik posiłkowy]","mnie","wspomóż","mnie","Panie","Bóg","mój","ocal","mnie","[dopełnienie]","przez","miłosierdzie","Twoje"]}
+    {"id":"s01","tr":"Zasiedli możni i zmówili się przeciw mnie, niesłusznie mię prześladują. Ty wspomóż mnie, Panie, Boże mój, przez miłosierdzie Twoje mnie wybaw.","g":["Zasiedli","książęta","i","przeciw","mnie","mówili","i","nieprawi",null,null,"mnie","wspomóż","mnie","Panie","Bóg","mój","ocal","mnie",null,"przez","miłosierdzie","Twoje"],"a":[{"s":8,"n":2,"a":0,"g":"prześladowali"},{"s":18,"n":1,"r":"idiom"}]}
   ]
 }

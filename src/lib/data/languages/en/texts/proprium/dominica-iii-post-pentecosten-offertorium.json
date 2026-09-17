@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “3rd Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"They trust in You who cherish Your name, O Lord, for You forsake not those who seek You. Sing praise to the Lord enthroned in Sion, for He has not forgotten the cry of the afflicted.","g":["Let hope","in","Thee","all","who","know","name","Thy","O Lord","for","not","forsake","those who seek","Thee","Sing praise","to the Lord","who","dwelleth","in","Sion","for","not","[auxiliary]","hath forgotten","cry","of the poor"]}
+    {"id":"s01","tr":"They trust in You who cherish Your name, O Lord, for You forsake not those who seek You. Sing praise to the Lord enthroned in Sion, for He has not forgotten the cry of the afflicted.","g":["Let hope","in","Thee","all","who","know","name","Thy","O Lord","for","not","forsake","those who seek","Thee","Sing praise","to the Lord","who","dwelleth","in","Sion","for","not",null,null,"cry","of the poor"],"a":[{"s":22,"n":2,"a":1,"g":"hath forgotten"}]}
   ]
 }

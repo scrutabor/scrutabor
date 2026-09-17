@@ -7,7 +7,7 @@
     {"id":"s02","tr":"He that eateth My Flesh and drinketh My Blood abideth in Me, and I in him.","g":["he who","eateth","My","Flesh","and","drinketh","My","Blood","in","Me","abideth","and","I","in","him"]},
     {"id":"s03","tr":"As the living Father hath sent Me, and I live by the Father, so he that eateth Me shall live by Me.","g":["as","sent","Me","living","the Father","and","I","I live","by","the Father","and","he who","eateth","Me","and","he","shall live","by","Me"]},
     {"id":"s04","tr":"This is the Bread which came down from heaven.","g":["this","is","Bread","which","from","heaven","descended"]},
-    {"id":"s05","tr":"Not as your fathers ate manna and died.","g":["not","as","ate","fathers","your","manna","and","died","[auxiliary]"]},
+    {"id":"s05","tr":"Not as your fathers ate manna and died.","g":["not","as","ate","fathers","your","manna","and",null,null],"a":[{"s":7,"n":2,"a":0,"g":"died"}]},
     {"id":"s06","tr":"He that eateth this Bread shall live for ever.","g":["he who","eateth","this","Bread","shall live","for","ever"]}
   ]
 }

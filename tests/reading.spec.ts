@@ -29,6 +29,24 @@ test('the control walks the three reading modes', async ({ page }) => {
 	await expect(page.locator('rt')).toHaveCount(0);
 });
 
+test('one target gloss spans a multiword Latin construction', async ({ page }) => {
+	for (const [language, target] of [
+		['pl', 'będzie'],
+		['en', 'shall be']
+	] as const) {
+		await page.goto(`/app/${language}/formularium/commemoratio-omnium-fidelium-defunctorum`);
+		await setHelp(page, 1);
+		const group = page.locator('.token-group', { hasText: 'est futúrus' });
+		await expect(group).toHaveCount(1);
+		await expect(group.locator('button.word')).toHaveCount(2);
+		await expect(group.locator('rt')).toHaveText(target);
+
+		await setHelp(page, 0);
+		await expect(page.locator('rt')).toHaveCount(0);
+		await expect(page.locator('button.word', { hasText: 'futúrus' })).toBeVisible();
+	}
+});
+
 test('standalone Ordinary prayers omit process rubrics but keep textual directions', async ({
 	page
 }) => {

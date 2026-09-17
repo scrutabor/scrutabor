@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Octave Day of the Nativity of the Lord” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. At sundry times in the past God spoke to the fathers through the Prophets; in these last days He hath spoken unto us through His Son. Alleluia.","g":["Alleluia","Alleluia","At sundry times","formerly","God","speaking","to the fathers","by","the Prophets","most recently","in days","these","has spoken","[auxiliary]","to us","by","the Son","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. At sundry times in the past God spoke to the fathers through the Prophets; in these last days He hath spoken unto us through His Son. Alleluia.","g":["Alleluia","Alleluia","At sundry times","formerly","God","speaking","to the fathers","by","the Prophets","most recently","in days","these",null,null,"to us","by","the Son","Alleluia"],"a":[{"s":12,"n":2,"a":0,"g":"has spoken"}]}
   ]
 }

@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Communio formularza „Świętego Jakuba Apostoła” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Wy, którzyście ze mną poszli, zasiądźcie na stolicach, sądząc dwanaście pokoleń Izraela.","g":["Wy","którzy","poszli za","[czasownik posiłkowy]","Mną","zasiądziecie","na","tronach","sądząc","dwanaście","pokoleń","Izraela"]}
+    {"id":"s01","tr":"Wy, którzyście ze mną poszli, zasiądźcie na stolicach, sądząc dwanaście pokoleń Izraela.","g":["Wy","którzy",null,null,"Mną","zasiądziecie","na","tronach","sądząc","dwanaście","pokoleń","Izraela"],"a":[{"s":2,"n":2,"a":0,"g":"poszli za"}]}
   ]
 }

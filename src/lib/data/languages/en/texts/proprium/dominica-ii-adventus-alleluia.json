@@ -4,7 +4,7 @@
   "about":"The alleluia verse of the Second Sunday of Advent, from Psalm 121 — a song of pilgrims going up to Jerusalem. The joy comes not from arriving but from the word that they will go.",
   "seg":[
     {"id":"s01","tr":"Alleluia, alleluia.","tc":[142],"tb":"revised","g":["Alleluia","alleluia"]},
-    {"id":"s02","tr":"I rejoiced at the things that were said to me: we shall go into the house of the Lord.","tc":[142],"tb":"revised","g":["I rejoiced","[auxiliary]","at","the things","that","were said","[auxiliary]","to me","into","the house","of the Lord","we shall go"]},
+    {"id":"s02","tr":"I rejoiced at the things that were said to me: we shall go into the house of the Lord.","tc":[142],"tb":"revised","g":[null,null,"at","the things","that",null,null,"to me","into","the house","of the Lord","we shall go"],"a":[{"s":0,"n":2,"a":0,"g":"I rejoiced"},{"s":5,"n":2,"a":0,"g":"were said"}]},
     {"id":"s03","tr":"Alleluia.","tc":[142],"tb":"revised","g":["Alleluia"]}
   ]
 }

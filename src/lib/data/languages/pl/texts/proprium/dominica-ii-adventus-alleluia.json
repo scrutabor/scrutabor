@@ -4,7 +4,7 @@
   "about":"Werset allelujatyczny II Niedzieli Adwentu, z Psalmu 121 — pieśni pielgrzymów idących do Jerozolimy. Radość bierze się nie z przybycia, lecz z samej wiadomości, że się pójdzie.",
   "seg":[
     {"id":"s01","tr":"Alleluja, alleluja.","g":["Alleluja","alleluja"]},
-    {"id":"s02","tr":"Uradowałem się z tego, co mi powiedziano: pójdziemy do domu Pańskiego.","tb":"revised","g":["Uradowałem się","[dopełnienie]","z","tego","co","powiedziano","[dopełnienie]","mi","do","domu","Pańskiego","pójdziemy"]},
+    {"id":"s02","tr":"Uradowałem się z tego, co mi powiedziano: pójdziemy do domu Pańskiego.","tb":"revised","g":[null,null,"z","tego","co",null,null,"mi","do","domu","Pańskiego","pójdziemy"],"a":[{"s":0,"n":2,"a":0,"g":"Uradowałem się"},{"s":5,"n":2,"a":0,"g":"powiedziano"}]},
     {"id":"s03","tr":"Alleluja.","g":["Alleluja"]}
   ]
 }

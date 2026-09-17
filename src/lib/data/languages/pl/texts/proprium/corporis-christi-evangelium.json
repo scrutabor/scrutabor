@@ -7,7 +7,7 @@
     {"id":"s02","tr":"Kto spożywa moje Ciało i pije moją Krew, trwa we Mnie, a Ja w nim.","g":["kto","spożywa","moje","Ciało","i","pije","moją","Krew","we","Mnie","trwa","i","ja","w","nim"]},
     {"id":"s03","tr":"Jak posłał Mnie żyjący Ojciec, a Ja żyję przez Ojca, tak i ten, kto Mnie spożywa, będzie żył przeze Mnie.","g":["jak","posłał","Mnie","żyjący","Ojciec","i","ja","żyję","przez","Ojca","i","ten, który","spożywa","Mnie","i","on","będzie żył","przez","Mnie"]},
     {"id":"s04","tr":"To jest Chleb, który zstąpił z nieba.","g":["ten","jest","Chleb","który","z","nieba","zstąpił"]},
-    {"id":"s05","tr":"Nie tak jak wasi ojcowie spożywali mannę i pomarli.","g":["nie","jak","spożywali","ojcowie","wasi","mannę","i","pomarli","[czasownik posiłkowy]"]},
+    {"id":"s05","tr":"Nie tak jak wasi ojcowie spożywali mannę i pomarli.","g":["nie","jak","spożywali","ojcowie","wasi","mannę","i",null,null],"a":[{"s":7,"n":2,"a":0,"g":"pomarli"}]},
     {"id":"s06","tr":"Kto spożywa ten Chleb, będzie żył na wieki.","g":["kto","spożywa","ten","Chleb","będzie żył","na","wieki"]}
   ]
 }

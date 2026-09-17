@@ -126,10 +126,21 @@ export interface TextDocument {
 }
 
 export interface WordGloss {
-	gloss: string;
+	gloss?: string;
 	explanation?: string;
 	explanation_citations?: Citation[];
 	note?: string;
+	alignment?: InterlinearAlignment;
+}
+
+export type AlignmentReason = 'idiom' | 'inflection' | 'punctuation' | 'word-order';
+
+export interface InterlinearAlignment {
+	words: string[];
+	forms: string[];
+	anchor?: string;
+	gloss?: string;
+	reason?: AlignmentReason;
 }
 
 export interface SegmentGloss {
@@ -138,6 +149,7 @@ export interface SegmentGloss {
 	translation_relationship?: TranslationRelationship;
 	narrative?: string;
 	narrative_citations?: Citation[];
+	alignments?: InterlinearAlignment[];
 }
 
 export interface GlossDocument {
@@ -224,7 +236,8 @@ interface CoreArtifact {
 
 interface LanguageSegmentRow {
 	id: string;
-	g?: string[];
+	g?: (string | null)[];
+	a?: Array<{ s: number; n: number; a?: number; g?: string; r?: AlignmentReason }>;
 	ex?: Record<string, string>;
 	nt?: Record<string, string>;
 	tr?: string;
@@ -310,7 +323,6 @@ function expandDocument(
 		if (languageRow.tb) segmentGloss.translation_relationship = languageRow.tb;
 		if (languageRow.nr) segmentGloss.narrative = languageRow.nr;
 		if (row.nc) segmentGloss.narrative_citations = shared(row.nc);
-		if (Object.keys(segmentGloss).length) gloss.segments[row.id] = segmentGloss;
 
 		if (row.w) {
 			if (!languageRow.g || languageRow.g.length !== row.w.length) {
@@ -318,9 +330,27 @@ function expandDocument(
 					`${artifact.id}:${row.id} has incomplete ${languageArtifact.language} glosses`
 				);
 			}
+			const alignments: InterlinearAlignment[] = (languageRow.a ?? []).map((encoded) => {
+				const cells = row.w!.slice(encoded.s, encoded.s + encoded.n);
+				const alignment: InterlinearAlignment = {
+					words: cells.map((cell) => cell.i),
+					forms: cells.map((cell) => cell.f)
+				};
+				if (encoded.g !== undefined) {
+					alignment.gloss = encoded.g;
+					alignment.anchor = cells[encoded.a ?? 0]?.i;
+				} else alignment.reason = encoded.r;
+				return alignment;
+			});
+			if (alignments.length) segmentGloss.alignments = alignments;
+			const alignmentByWord = new Map(
+				alignments.flatMap((alignment) => alignment.words.map((id) => [id, alignment] as const))
+			);
 			segment.words = row.w.map((cell, position) => {
 				const word = expandWord(cell);
-				const entry: WordGloss = { gloss: languageRow.g![position] };
+				const entry: WordGloss = {};
+				if (languageRow.g![position] !== null) entry.gloss = languageRow.g![position]!;
+				if (alignmentByWord.has(cell.i)) entry.alignment = alignmentByWord.get(cell.i);
 				if (languageRow.ex?.[cell.i]) entry.explanation = languageRow.ex[cell.i];
 				if (languageRow.nt?.[cell.i]) entry.note = languageRow.nt[cell.i];
 				if (row.ec?.[cell.i]) entry.explanation_citations = shared(row.ec[cell.i]);
@@ -328,6 +358,7 @@ function expandDocument(
 				return word;
 			});
 		}
+		if (Object.keys(segmentGloss).length) gloss.segments[row.id] = segmentGloss;
 		return segment;
 	});
 

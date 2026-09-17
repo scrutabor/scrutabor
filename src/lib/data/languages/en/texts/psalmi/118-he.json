@@ -8,8 +8,8 @@
     {"id":"s03","tr":"Lead me along the path of Your commandments, for I have desired it.","tc":[401],"tb":"revised","g":["Lead","me","along","the path","of the commandments","Thy","for","that very one","I have desired"]},
     {"id":"s04","tr":"Incline my heart to Your testimonies and not to greed.","tc":[401],"tb":"revised","g":["Incline","heart","my","to","testimonies","Thy","and","not","to","greed"],"ex":{"w044":"The heart might incline toward covetousness instead of God's testimonies. That direction is marked by “in” (w043)."}},
     {"id":"s05","tr":"Turn away my eyes, that they may not look on emptiness; give me life in Your way.","tc":[401],"tb":"revised","g":["Turn away","eyes","my","that not","they may behold","vanity","in","way","Thy","give life to","me"]},
-    {"id":"s06","tr":"Confirm Your word to Your servant, the word that leads to fear of You.","tc":[401],"tb":"revised","g":["Establish","for Thy servant","[included]","word","Thy","in","fear","Thy"]},
-    {"id":"s07","tr":"Turn away the reproach I fear, for Your judgments are good.","tc":[401],"tb":"revised","g":["Take away","reproach","my","which","I have feared","[auxiliary]","for","judgments","Thy","delightful"],"ex":{"w071":"Latin leaves “are” unspoken: “iudícia tua [sunt] iucúnda” — “Thy judgments [are] delightful”."}},
+    {"id":"s06","tr":"Confirm Your word to Your servant, the word that leads to fear of You.","tc":[401],"tb":"revised","g":["Establish",null,null,"word","Thy","in","fear","Thy"],"a":[{"s":1,"n":2,"a":0,"g":"for Thy servant"}]},
+    {"id":"s07","tr":"Turn away the reproach I fear, for Your judgments are good.","tc":[401],"tb":"revised","g":["Take away","reproach","my","which",null,null,"for","judgments","Thy","delightful"],"a":[{"s":4,"n":2,"a":0,"g":"I have feared"}],"ex":{"w071":"Latin leaves “are” unspoken: “iudícia tua [sunt] iucúnda” — “Thy judgments [are] delightful”."}},
     {"id":"s08","tr":"Behold, I have longed for Your commandments; give me life in Your justice.","tc":[401],"tb":"revised","g":["Behold","I have longed for","commandments","Thy","in","justice","Thy","give life to","me"]}
   ]
 }

@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Second Sunday of Lent” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"The tribulations of my heart are multiplied; deliver me from my necessities, O Lord. See my humiliation and my labor, and forgive all my sins.","g":["tribulations","of heart","my","are multiplied","[auxiliary]","from","necessities","my","deliver","me","Lord","See","humiliation","my","and","labor","my","and","forgive","all","sins","my"]}
+    {"id":"s01","tr":"The tribulations of my heart are multiplied; deliver me from my necessities, O Lord. See my humiliation and my labor, and forgive all my sins.","g":["tribulations","of heart","my",null,null,"from","necessities","my","deliver","me","Lord","See","humiliation","my","and","labor","my","and","forgive","all","sins","my"],"a":[{"s":3,"n":2,"a":0,"g":"are multiplied"}]}
   ]
 }

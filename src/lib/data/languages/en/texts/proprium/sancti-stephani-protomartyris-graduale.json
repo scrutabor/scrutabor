@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Saint Stephen, the First Martyr” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Princes met and talked against me, and the wicked persecuted me wrongfully. Help me, O Lord my God: rescue me because of Your kindness.","g":["Sat","princes","and","against","me","spoke","and","the wicked","persecuted","have","me","help","me","Lord","God","my","save","me","[auxiliary]","because of","mercy","Thy"]}
+    {"id":"s01","tr":"Princes met and talked against me, and the wicked persecuted me wrongfully. Help me, O Lord my God: rescue me because of Your kindness.","g":["Sat","princes","and","against","me","spoke","and","the wicked","persecuted","have","me","help","me","Lord","God","my","save","me",null,"because of","mercy","Thy"],"a":[{"s":18,"n":1,"r":"inflection"}]}
   ]
 }

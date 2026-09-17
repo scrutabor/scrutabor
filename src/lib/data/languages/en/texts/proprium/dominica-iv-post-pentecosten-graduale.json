@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “4th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Pardon our sins, O Lord; why should the nations say, Where is their God? Help us, O God our Savior; because of the glory of Your name, O Lord, deliver us.","g":["Pardon","[connector]","Lord","sins","our","lest","ever","should say","the nations","Where","is","God","their","Help","us","O God","Savior","our","and","for","the glory","of the name","Thy","Lord","deliver","us"]}
+    {"id":"s01","tr":"Pardon our sins, O Lord; why should the nations say, Where is their God? Help us, O God our Savior; because of the glory of Your name, O Lord, deliver us.","g":[null,null,"Lord","sins","our","lest","ever","should say","the nations","Where","is","God","their","Help","us","O God","Savior","our","and","for","the glory","of the name","Thy","Lord","deliver","us"],"a":[{"s":0,"n":2,"a":0,"g":"Pardon"}]}
   ]
 }

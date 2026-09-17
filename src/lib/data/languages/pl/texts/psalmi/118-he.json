@@ -9,7 +9,7 @@
     {"id":"s04","tr":"Skłoń moje serce ku swoim świadectwom, nie ku chciwości.","tb":"revised","g":["Skłoń","serce","moje","ku","świadectwom","Twoim","a","nie","ku","chciwości"],"ex":{"w044":"Serce mogłoby się skłonić ku chciwości zamiast ku Bożym świadectwom. Taki kierunek wskazuje „in” (w043)."}},
     {"id":"s05","tr":"Odwróć moje oczy, by nie patrzyły na marność; ożyw mnie na swojej drodze.","tb":"revised","g":["Odwróć","oczy","moje","aby nie","patrzyły","marność","na","drodze","Twojej","ożyw","mnie"]},
     {"id":"s06","tr":"Utwierdź wobec swojego sługi swoje słowo, które prowadzi do bojaźni przed Tobą.","tb":"revised","g":["Utwierdź","słudze","Twemu","słowo","Twoje","w","bojaźni","Twojej"]},
-    {"id":"s07","tr":"Oddal ode mnie hańbę, której się lękam, bo Twoje wyroki są dobre.","tb":"revised","g":["Oddal","hańbę","moją","której","się lękałem","[czasownik posiłkowy]","bo","wyroki","Twoje","miłe"],"ex":{"w071":"Łacina pomija „są”: „iudícia tua [sunt] iucúnda” — „sądy Twoje [są] wdzięczne”."}},
+    {"id":"s07","tr":"Oddal ode mnie hańbę, której się lękam, bo Twoje wyroki są dobre.","tb":"revised","g":["Oddal","hańbę","moją","której",null,null,"bo","wyroki","Twoje","miłe"],"a":[{"s":4,"n":2,"a":0,"g":"się lękałem"}],"ex":{"w071":"Łacina pomija „są”: „iudícia tua [sunt] iucúnda” — „sądy Twoje [są] wdzięczne”."}},
     {"id":"s08","tr":"Oto pragnę Twoich przykazań; ożyw mnie w swojej sprawiedliwości.","tb":"revised","g":["Oto","pragnąłem","przykazań","Twoich","w","sprawiedliwości","Twojej","ożyw","mnie"]}
   ]
 }

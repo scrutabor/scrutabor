@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Offertorium formularza „2. Niedziela po Zesłaniu Ducha Świętego” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Powróć, o Panie, wyrwij duszę moją, przez miłosierdzie Twoje mnie wybaw.","g":["Panie","powróć","i","wyrwij","duszę","moją","wybaw","mnie","[dopełnienie]","przez","miłosierdzie","Twoje"]}
+    {"id":"s01","tr":"Powróć, o Panie, wyrwij duszę moją, przez miłosierdzie Twoje mnie wybaw.","g":["Panie","powróć","i","wyrwij","duszę","moją","wybaw","mnie",null,"przez","miłosierdzie","Twoje"],"a":[{"s":8,"n":1,"r":"idiom"}]}
   ]
 }

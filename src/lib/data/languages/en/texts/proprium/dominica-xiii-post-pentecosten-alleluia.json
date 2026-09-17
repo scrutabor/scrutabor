@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “13th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. O Lord, You have been our refuge through all generations. Alleluia.","g":["Alleluia","alleluia","Lord","a refuge","Thou hast become","[auxiliary]","for us","from","generation","and","generation","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. O Lord, You have been our refuge through all generations. Alleluia.","g":["Alleluia","alleluia","Lord","a refuge",null,null,"for us","from","generation","and","generation","Alleluia"],"a":[{"s":4,"n":2,"a":0,"g":"Thou hast become"}]}
   ]
 }

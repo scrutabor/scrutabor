@@ -106,18 +106,32 @@ describe('vendored corpus snapshot', () => {
 		}
 	});
 
-	it('fully glosses every word in every included language text', () => {
+	it('realizes every word exactly once in every included language text', () => {
 		for (const language of LANGUAGES) {
 			for (const [key, entry] of Object.entries(TEXTS[language])) {
 				const ids = allWords(entry.text).map((word) => word.id);
 				expect(Object.keys(entry.gloss.words).sort(), `${key} ${language}`).toEqual(
 					[...ids].sort()
 				);
-				for (const id of ids)
-					expect(entry.gloss.words[id].gloss, `${key} ${language} ${id}`).toBeTruthy();
+				for (const id of ids) {
+					const word = entry.gloss.words[id];
+					expect(Boolean(word.gloss) === Boolean(word.alignment), `${key} ${language} ${id}`).toBe(
+						false
+					);
+				}
 				expect(entry.gloss.lang).toBe(language);
 			}
 		}
+	});
+
+	it('does not expose editorial placeholders as interlinear wording', () => {
+		for (const language of LANGUAGES)
+			for (const [key, entry] of Object.entries(TEXTS[language]))
+				for (const [id, word] of Object.entries(entry.gloss.words))
+					if (word.gloss)
+						expect(word.gloss, `${key} ${language} ${id}`).not.toMatch(
+							/^\s*(?:\[[^\]]+\]|[—–-])\s*$/
+						);
 	});
 
 	it('keeps shared annotation topology aligned where two packs include the same text', () => {

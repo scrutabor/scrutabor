@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Dedication of the Archbasilica of the Most Holy Savior” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"This place was made by God, a priceless mystery; it is without reproof. O God, before Whom stands the choir of angels, give ear to the prayers of Your servants.","g":["place","this","by","God","made","[auxiliary]","priceless","mystery","without reproach","is","O God","before Whom","stands before","of the Angels","choir","hear","the prayers","servants","Thy"]}
+    {"id":"s01","tr":"This place was made by God, a priceless mystery; it is without reproof. O God, before Whom stands the choir of angels, give ear to the prayers of Your servants.","g":["place","this","by","God",null,null,"priceless","mystery","without reproach","is","O God","before Whom","stands before","of the Angels","choir","hear","the prayers","servants","Thy"],"a":[{"s":4,"n":2,"a":0,"g":"made"}]}
   ]
 }

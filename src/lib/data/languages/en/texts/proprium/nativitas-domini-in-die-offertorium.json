@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Nativity of the Lord — Mass during the Day” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Thine are the heavens and Thine is the earth; Thou hast founded the world and the fullness thereof. Justice and judgment are the preparation of Thy throne.","g":["Thine","are","the heavens","and","Thine","is","the earth","the world","[included]","and","the fullness","thereof","Thou","hast founded","justice","and","judgment","the foundation","of the throne","Thy"]}
+    {"id":"s01","tr":"Thine are the heavens and Thine is the earth; Thou hast founded the world and the fullness thereof. Justice and judgment are the preparation of Thy throne.","g":["Thine","are","the heavens","and","Thine","is","the earth",null,null,"and","the fullness","thereof","Thou","hast founded","justice","and","judgment","the foundation","of the throne","Thy"],"a":[{"s":7,"n":2,"a":0,"g":"the world"}]}
   ]
 }
