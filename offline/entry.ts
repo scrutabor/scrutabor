@@ -241,6 +241,10 @@ async function navigate(): Promise<void> {
 	if (mine !== navigation) return;
 	pendingPath = null;
 	render(found, path, prepared);
+	// The fragment is answered NOW, as a browser answers it before any script
+	// runs: a page that then centres a cited line does so in its own frame
+	// and wins, exactly as on the site. Answered a frame later, the part's
+	// heading would scroll over the line the address named.
 	const fragment = pageUrl().hash.slice(1);
 	if (fragment) {
 		let target = fragment;
@@ -249,9 +253,7 @@ async function navigate(): Promise<void> {
 		} catch {
 			// A malformed fragment names no element, but must not break the page.
 		}
-		requestAnimationFrame(() =>
-			document.getElementById(target)?.scrollIntoView({ block: 'start' })
-		);
+		document.getElementById(target)?.scrollIntoView({ block: 'start' });
 	}
 	// A FOLLOWED LINK starts the new page at its top, as a document load
 	// would. A history traversal does not: the browser restores the

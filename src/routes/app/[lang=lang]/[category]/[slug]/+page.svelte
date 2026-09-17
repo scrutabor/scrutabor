@@ -3,7 +3,6 @@
 	import { pageUrl } from '$lib/url';
 	import { replaceState } from '$app/navigation';
 	import { arrowNav } from '$lib/arrow-nav';
-	import { sectionFor, textFor } from '$lib/catalog';
 	import { initialHelp } from '$lib/components/HelpLevels.svelte';
 	import AboutSheet from '$lib/components/AboutSheet.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
@@ -41,14 +40,10 @@
 	const hasRoleChoice = $derived(offersRoleChoice(doc.segments));
 	const hasMassFormChoice = $derived(offersMassFormChoice(doc.segments));
 	const gloss = $derived(data.gloss);
-	// A reading names the text itself ("Chwała Ojcu"), not merely
-	// the shelf it came from ("Modlitwy"). Non-catalogue corpus texts retain
-	// the section name as a safe fallback when reached by a direct link.
-	const readingLabel = $derived(
-		textFor(data.category, data.slug)?.localizedTitle[lang] ??
-			sectionFor(data.category)?.label[lang] ??
-			''
-	);
+	// A reading names the text itself ("Chwała Ojcu"), not merely the
+	// shelf it came from ("Modlitwy") — resolved by the load (lib/loaders),
+	// so this page never carries the catalogue.
+	const readingLabel = $derived(data.label);
 	// Book navigation: the catalog's flattened order — within ordinarium
 	// that is the liturgical sequence, so a reader can follow the Mass
 	// text to text without returning to the catalog.
@@ -226,24 +221,9 @@
 	}
 
 	function selectSegment(id: string, extend: boolean) {
-		if (panel.id !== null) {
-			// A verse tap under an open panel both selects and dismisses. The
-			// panel's close pops its own history entry — writing ?s= first
-			// would put the selection on the entry about to vanish, so the
-			// write waits for the history to settle.
-			panel.close();
-			if (new URL(location.href).searchParams.has('w')) {
-				const once = () => {
-					removeEventListener('popstate', once);
-					applySelection(id, extend);
-				};
-				addEventListener('popstate', once);
-			} else {
-				applySelection(id, extend);
-			}
-			return;
-		}
-		applySelection(id, extend);
+		// A verse tap under an open panel both selects and dismisses; the
+		// selection is written once the panel's own history entry is gone.
+		panel.closeThen(() => applySelection(id, extend));
 	}
 
 	function applySelection(id: string, extend: boolean) {

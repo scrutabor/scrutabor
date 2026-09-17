@@ -276,6 +276,25 @@ export function wordPanel(host: WordPanelHost) {
 		},
 		open,
 		close,
+		/** Close, then act once the address has settled. A panel that pushed
+		 * its own history entry closes by popping it, and anything written to
+		 * the address before that pop lands on the entry about to vanish — a
+		 * verse selected under an open panel used to be lost that way. The
+		 * pop is awaited exactly when it happens, and never inferred from the
+		 * address, which the downloaded edition keeps in the hash. */
+		closeThen(action: () => void) {
+			const popping = selectedId !== null && openedByPush;
+			close();
+			if (!popping) {
+				action();
+				return;
+			}
+			const once = () => {
+				removeEventListener('popstate', once);
+				action();
+			};
+			addEventListener('popstate', once);
+		},
 		raise,
 		applyFromLocation,
 		/** Tap on a word: toggles, and lifts it clear of the sheet. */

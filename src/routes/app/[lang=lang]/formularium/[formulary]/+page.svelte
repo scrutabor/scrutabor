@@ -15,8 +15,14 @@
 	import { openPage } from '$lib/page-navigation';
 	import type { ProperPart } from '$lib/proprium';
 	import { offersMassFormChoice, offersRoleChoice } from '$lib/reading-settings';
+	import {
+		formatSegmentSelection,
+		parseSegmentSelection,
+		segmentRange
+	} from '$lib/segment-selection';
 	import { textAnchor } from '$lib/text-anchor';
 	import { pageUrl } from '$lib/url';
+	import { replaceState } from '$app/navigation';
 	import { wordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
 
 	let { data } = $props();
@@ -52,7 +58,12 @@
 	let helpLevel = $state(initialHelp());
 	let legendOpen = $state(false);
 	let aboutKey = $state<string | null>(null);
-	let citedSegment = $state('');
+	// One part's cited lines, exactly as a reading page keeps them: the part
+	// the address names, the verses selected within it, and the anchor a
+	// Shift-extended range grows from. A citation never spans two parts.
+	let citedPart = $state<string | null>(null);
+	let citedSegments = $state<string[]>([]);
+	let segmentAnchor = $state<string | null>(null);
 	const hasRoleChoice = $derived(parts.some((part) => offersRoleChoice(part.doc.segments)));
 	const hasMassFormChoice = $derived(parts.some((part) => offersMassFormChoice(part.doc.segments)));
 
@@ -72,9 +83,56 @@
 	);
 	const panel = wordPanel({ has: (id) => wordsById.has(id) });
 
-	function applyFromLocation() {
+	/** The prefixed address `?s=` carries: `slug.s01` or `slug.s01-s03`. */
+	function partOfSelection(
+		raw: string
+	): { part: (typeof inlined)[number]; selector: string } | null {
+		const dot = raw.indexOf('.');
+		if (dot < 0) return null;
+		const part = inlined.find((candidate) => candidate.slug === raw.slice(0, dot));
+		return part ? { part, selector: raw.slice(dot + 1) } : null;
+	}
+
+	// A search result or a shared link names one line of one part. The line
+	// is marked AND brought into view, as a reading page brings its cited
+	// verse: a Passion runs to a hundred segments, and a link that only
+	// scrolled to the Gospel's heading left the cited words ten screens down.
+	// The address is canonicalized in place, as on a reading page, so a
+	// selector naming nothing cannot linger.
+	function applySegmentFromLocation(scroll = true) {
+		const raw = pageUrl().searchParams.get('s');
+		const found = raw === null ? null : partOfSelection(raw);
+		const ids = found ? found.part.doc.segments.map((segment) => segment.id) : [];
+		const selected = found
+			? parseSegmentSelection(found.selector, ids, found.part.doc.retired_segments ?? {})
+			: [];
+		const canonical = found && formatSegmentSelection(selected, ids);
+		const canonicalRaw = canonical ? `${found.part.slug}.${canonical}` : null;
+		if (raw !== null && raw !== canonicalRaw) {
+			// After the frame, not during it: on a cold arrival this runs in
+			// the hydration effect flush, where the router is not yet taking
+			// history calls — an immediate replaceState there kills hydration.
+			requestAnimationFrame(() => {
+				const url = pageUrl();
+				if (canonicalRaw) url.searchParams.set('s', canonicalRaw);
+				else url.searchParams.delete('s');
+				replaceState(url, {});
+			});
+		}
+		citedPart = selected.length && found ? found.part.slug : null;
+		citedSegments = selected;
+		segmentAnchor = selected[0] ?? null;
+		if (found && selected[0] && scroll) {
+			const target = `${found.part.slug}-${selected[0]}`;
+			requestAnimationFrame(() =>
+				document.getElementById(target)?.scrollIntoView({ block: 'center' })
+			);
+		}
+	}
+
+	function applyFromLocation(scroll = true) {
 		panel.applyFromLocation();
-		citedSegment = pageUrl().searchParams.get('s') ?? '';
+		applySegmentFromLocation(scroll);
 	}
 
 	$effect(() => {
@@ -82,14 +140,44 @@
 		applyFromLocation();
 	});
 
+	function writeSegmentSelection(slug: string, selected: string[], ids: string[]) {
+		const url = pageUrl();
+		const value = formatSegmentSelection(selected, ids);
+		if (value) url.searchParams.set('s', `${slug}.${value}`);
+		else url.searchParams.delete('s');
+		replaceState(url, {});
+	}
+
+	function selectSegment(slug: string, id: string, extend: boolean) {
+		// A verse tap under an open panel both selects and dismisses; the
+		// selection is written once the panel's own history entry is gone.
+		panel.closeThen(() => applySelection(slug, id, extend));
+	}
+
+	function applySelection(slug: string, id: string, extend: boolean) {
+		const part = inlined.find((candidate) => candidate.slug === slug);
+		if (!part) return;
+		const ids = part.doc.segments.map((segment) => segment.id);
+		if (extend && segmentAnchor && citedPart === slug) {
+			citedSegments = segmentRange(ids, segmentAnchor, id);
+		} else if (citedPart === slug && citedSegments.length === 1 && citedSegments[0] === id) {
+			citedSegments = [];
+			segmentAnchor = null;
+		} else {
+			citedSegments = [id];
+			segmentAnchor = id;
+		}
+		citedPart = citedSegments.length ? slug : null;
+		writeSegmentSelection(slug, citedSegments, ids);
+	}
+
 	const picked = $derived(panel.id ? (wordsById.get(panel.id) ?? null) : null);
 	const pickedDetails = $derived(
 		picked ? wordPanelSelection(picked.word, picked.doc, picked.gloss) : null
 	);
 
 	function citedFor(slug: string): string[] {
-		const prefix = `${slug}.`;
-		return citedSegment.startsWith(prefix) ? [citedSegment.slice(prefix.length)] : [];
+		return citedPart === slug ? citedSegments : [];
 	}
 
 	function tapWord(id: string) {
@@ -119,7 +207,12 @@
 </script>
 
 <svelte:window
-	onpopstate={applyFromLocation}
+	onpopstate={() => {
+		// History still restores which line is cited, but it is not a fresh
+		// arrival at that citation: closing a word panel pops its shallow
+		// entry and must leave the reader exactly where they are.
+		applyFromLocation(false);
+	}}
 	onkeydown={(event) => {
 		const href = onWindowKeydown(event);
 		if (href) openPage(href);
@@ -171,6 +264,7 @@
 					ontap={tapWord}
 					onmark={openLegend}
 					citedSegments={citedFor(part.slug)}
+					onsegmentselect={(id, extend) => selectSegment(part.slug, id, extend)}
 					verifiedTranslationCitations={part.bibliography.translation}
 				/>
 			</section>

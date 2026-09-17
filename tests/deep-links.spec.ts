@@ -182,3 +182,74 @@ test.describe('query survives a fast follow @online', () => {
 		expect(new URL(page.url()).searchParams.get('q')).toBe('Ojcze nasz');
 	});
 });
+
+// A Proper text is read inside its complete formulary, so a link into one of
+// its lines carries the part's slug: `?s=<slug>.<segment>`. The line must be
+// marked AND brought into view — a Passion runs to a hundred segments, and a
+// link that only opened the Gospel's heading left the cited words ten
+// screens below the fold.
+test.describe('links into a complete formulary', () => {
+	const PALM = '/app/pl/formularium/dominica-ii-passionis';
+	const GOSPEL = 'dominica-ii-passionis-evangelium';
+	const INTROIT = 'dominica-ii-passionis-introitus';
+
+	/** Tap the line's own control: the free end of the verse, past its words. */
+	async function cite(page: import('@playwright/test').Page, id: string, shift = false) {
+		const verse = page.locator(`#${id}`);
+		await verse.scrollIntoViewIfNeeded();
+		const box = (await verse.boundingBox())!;
+		if (shift) await page.keyboard.down('Shift');
+		await page.mouse.click(box.x + box.width - 4, box.y + box.height / 2);
+		if (shift) await page.keyboard.up('Shift');
+	}
+
+	test('a segment link lands on the cited line of its part', async ({ page }) => {
+		await page.setViewportSize({ width: 390, height: 844 });
+		await page.goto(`${PALM}?s=${GOSPEL}.s40#text-proprium-${GOSPEL}`);
+		const line = page.locator(`#${GOSPEL}-s40`);
+		await expect(line).toHaveClass(/segment-selected/);
+		await expect(line).toBeInViewport();
+		await expect(page.locator('.segment-selected')).toHaveCount(1);
+	});
+
+	test('a line can be cited, extended and released, and the address follows', async ({ page }) => {
+		await page.goto(PALM);
+		await cite(page, `${GOSPEL}-s02`);
+		await expect(page).toHaveURL(atRoute(PALM, `?s=${GOSPEL}.s02`));
+		await expect(page.locator('.segment-selected')).toHaveCount(1);
+
+		await cite(page, `${GOSPEL}-s04`, true);
+		await expect(page).toHaveURL(atRoute(PALM, `?s=${GOSPEL}.s02-s04`));
+		await expect(page.locator('.segment-selected')).toHaveCount(3);
+
+		// A range never crosses into another part: a tap elsewhere starts a
+		// new citation there.
+		await cite(page, `${INTROIT}-s01`);
+		await expect(page).toHaveURL(atRoute(PALM, `?s=${INTROIT}.s01`));
+		await expect(page.locator('.segment-selected')).toHaveCount(1);
+
+		await cite(page, `${INTROIT}-s01`);
+		await expect(page).toHaveURL(atRoute(PALM));
+		await expect(page.locator('.segment-selected')).toHaveCount(0);
+	});
+
+	test('a selector naming no line of the part is dropped', async ({ page }) => {
+		await page.goto(`${PALM}?s=${GOSPEL}.s999`);
+		await expect(page).toHaveURL(atRoute(PALM));
+		await expect(page.locator('.segment-selected')).toHaveCount(0);
+	});
+
+	test('a verse tapped under an open panel is cited once the panel has closed', async ({
+		page
+	}) => {
+		await page.goto(PALM);
+		const word = page.locator(`#${GOSPEL}-s02 button.word`).first();
+		await word.scrollIntoViewIfNeeded();
+		await word.click();
+		await expect(page.locator('aside .form')).toBeVisible();
+		await cite(page, `${GOSPEL}-s03`);
+		await expect(page.locator('aside')).toHaveCount(0);
+		await expect(page).toHaveURL(atRoute(PALM, `?s=${GOSPEL}.s03`));
+		await expect(page).not.toHaveURL(/[?&]w=/);
+	});
+});
