@@ -509,7 +509,7 @@
 											>{/if}</span
 									>{#if rwi < run.words.length - 1}{' '}{/if}{/each}</span
 							><rt
-								style:top="calc(var(--reading) * (var(--gloss-gap) + {sink -
+								style:top="calc(var(--reading) * (var(--gloss-gap) - var(--shared-ruby-offset) + {sink -
 									(sharedRaised ? sharedFit.lift : 0)}))"
 								class="shifted"
 								{lang}>{run.alignment.gloss}</rt
@@ -963,6 +963,13 @@
 	}
 
 	.token-group {
+		/* A shared ruby reverses the ordinary nesting: its independently
+		   clickable word buttons sit inside the ruby base instead of wrapping
+		   one ruby apiece. Chromium counts the base line's lower half-leading a
+		   second time when it places that ruby text. This measured, scale-free
+		   offset puts the shared annotation on the exact row used by its
+		   neighbours at every reading size. */
+		--shared-ruby-offset: 0.576;
 		display: inline-block;
 		isolation: isolate;
 	}
@@ -1028,6 +1035,38 @@
 		border-radius: 0.172em;
 		background: var(--wash);
 		z-index: -1;
+	}
+
+	/* A shared alignment is one reading unit even though every Latin word
+	   remains an independent analysis target. Painting each child separately
+	   produced two touching rounded chips and let their overflow perturb native
+	   ruby placement. Suppress those child surfaces and paint one inert wash on
+	   the wrapper, from the Latin through the shared gloss. */
+	.token-group .token::before {
+		display: none;
+	}
+
+	.token-group:where(
+			:has(button.word:hover),
+			:has(button.word:focus-visible),
+			:has(button.word.selected)
+		)::before {
+		content: '';
+		position: absolute;
+		inset-block: var(--selection-block-start) calc(var(--reading) * 0.284);
+		inset-inline: -0.05em;
+		border-radius: 0.172em;
+		background: var(--wash);
+		z-index: -1;
+	}
+
+	.token-group:has(button.word.selected)::before {
+		background: var(--wash-strong);
+	}
+
+	.token-group:has(button.word:focus-visible)::before {
+		outline: 2px solid var(--rubric);
+		outline-offset: -2px;
 	}
 
 	.token.word-selected::before {
@@ -1445,11 +1484,13 @@
 			column-gap: calc(var(--reading) * 0.38);
 		}
 
-		.token::before {
+		.token::before,
+		.token-group::before {
 			display: none;
 		}
 
-		button.word.selected rt {
+		button.word.selected rt,
+		.token-group:has(button.word.selected) rt {
 			color: var(--ink-soft);
 		}
 

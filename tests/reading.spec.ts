@@ -40,6 +40,51 @@ test('one target gloss spans a multiword Latin construction', async ({ page }) =
 		await expect(group).toHaveCount(1);
 		await expect(group.locator('button.word')).toHaveCount(2);
 		await expect(group.locator('rt')).toHaveText(target);
+		await page.evaluate(() => document.fonts.ready.then(() => true));
+
+		const geometry = () =>
+			group.evaluate((element) => {
+				const shared = element.querySelector('rt')!;
+				const verse = element.closest('.verse')!;
+				const verseTop = verse.getBoundingClientRect().top;
+				const annotations = [...verse.querySelectorAll('rt')];
+				const at = annotations.indexOf(shared);
+				const round = (value: number) => Math.round(value * 100) / 100;
+				const rect = (node: Element) => node.getBoundingClientRect();
+				return {
+					sharedTop: round(rect(shared).top - verseTop),
+					beforeTop: round(rect(annotations[at - 1]).top - verseTop),
+					afterTop: round(rect(annotations[at + 1]).top - verseTop),
+					groupHeight: round(rect(element).height),
+					verseHeight: round(rect(verse).height),
+					nextVerseTop: round(rect(verse.nextElementSibling!).top - verseTop)
+				};
+			});
+
+		const before = await geometry();
+		expect(Math.abs(before.sharedTop - before.beforeTop)).toBeLessThan(0.75);
+		expect(Math.abs(before.sharedTop - before.afterTop)).toBeLessThan(0.75);
+		await group.locator('button.word', { hasText: 'futúrus' }).hover();
+		expect(await geometry(), 'hover changes no line or annotation geometry').toEqual(before);
+		const wash = await group.evaluate((element) => {
+			const shared = element.querySelector('rt')!;
+			const source = element.querySelector('.token')!;
+			const groupStyle = getComputedStyle(element, '::before');
+			const sourceStyle = getComputedStyle(source, '::before');
+			const groupBox = element.getBoundingClientRect();
+			const washBottom = groupBox.bottom - parseFloat(groupStyle.bottom);
+			return {
+				background: groupStyle.backgroundColor,
+				borderRadius: groupStyle.borderRadius,
+				childDisplay: sourceStyle.display,
+				glossClearance: washBottom - shared.getBoundingClientRect().bottom
+			};
+		});
+		expect(wash.background).not.toBe('rgba(0, 0, 0, 0)');
+		expect(wash.borderRadius).not.toBe('0px');
+		expect(wash.childDisplay, 'the alignment has one wash, not one per word').toBe('none');
+		expect(wash.glossClearance, 'the wash ends just below the shared gloss').toBeGreaterThan(1);
+		expect(wash.glossClearance).toBeLessThan(6);
 
 		await setHelp(page, 0);
 		await expect(page.locator('rt')).toHaveCount(0);
