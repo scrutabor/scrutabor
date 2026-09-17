@@ -241,10 +241,17 @@ async function navigate(): Promise<void> {
 	if (mine !== navigation) return;
 	pendingPath = null;
 	render(found, path, prepared);
-	// The fragment is answered NOW, as a browser answers it before any script
-	// runs: a page that then centres a cited line does so in its own frame
-	// and wins, exactly as on the site. Answered a frame later, the part's
-	// heading would scroll over the line the address named.
+	// A FOLLOWED LINK starts the new page at its top, as a document load
+	// would. A history traversal does not: the browser restores the
+	// reader's own place on Back, and scrolling to the top over it loses
+	// where they were.
+	if (scroll) window.scrollTo({ top: 0, behavior: 'auto' });
+	// Then the fragment, in the same order a document load keeps: the top
+	// first and the named element over it. It is answered NOW, as a browser
+	// answers it before any script runs, so a page that then centres a
+	// cited line does so in its own frame and wins, exactly as on the site.
+	// Answered a frame later, the part's heading scrolled over the line the
+	// address named; answered before the top reset, the top reset won.
 	const fragment = pageUrl().hash.slice(1);
 	if (fragment) {
 		let target = fragment;
@@ -255,11 +262,6 @@ async function navigate(): Promise<void> {
 		}
 		document.getElementById(target)?.scrollIntoView({ block: 'start' });
 	}
-	// A FOLLOWED LINK starts the new page at its top, as a document load
-	// would. A history traversal does not: the browser restores the
-	// reader's own place on Back, and scrolling to the top over it loses
-	// where they were.
-	if (scroll) window.scrollTo({ top: 0, behavior: 'auto' });
 	navigated();
 	if (queuedArrow) {
 		const key = queuedArrow;

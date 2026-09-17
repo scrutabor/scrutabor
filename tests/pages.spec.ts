@@ -426,6 +426,19 @@ test('a complete formulary fragment opens the named part', async ({ page }) => {
 	await expect(part).toBeInViewport();
 });
 
+test('a followed link into a part opens on that part', async ({ page }) => {
+	// Followed, not typed: the downloaded edition answers a followed link
+	// with a scroll to the top, and once answered the fragment after that
+	// top reset instead of before it — so every Ordo title into a Proper
+	// part opened the formulary at its head. A goto never sets that intent.
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2025-11-30');
+	const id = 'text-proprium-dominica-i-adventus-evangelium';
+	await page.locator(`a.part-title[href*="${id}"]`).first().click();
+	const part = page.locator(`#${id}`);
+	await expect(part).toContainText('Evangélium');
+	await expect(part).toBeInViewport();
+});
+
 test('a concept example deep-links into the prayer', async ({ page }) => {
 	await page.goto('/app/en/grammatica/deponens');
 	await expect(page.locator('h1')).toHaveText('Deponent');
