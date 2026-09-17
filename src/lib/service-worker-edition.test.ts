@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { editionLists, isRouteDataSidecar } from './service-worker-edition';
+import { editionLists, isHostConfiguration, isRouteDataSidecar } from './service-worker-edition';
 
 // A manifest shaped like the one `$service-worker` hands the worker: the
 // framework lists the route sidecars it prerendered even though the build
@@ -10,7 +10,7 @@ const manifest = {
 		'/_app/immutable/corpus/corpus-texts.def.js',
 		'/_app/immutable/corpus/concordance.ghi.js'
 	],
-	files: ['/manifest.webmanifest', '/icon-192.png'],
+	files: ['/manifest.webmanifest', '/_headers', '/icon-192.png', '/_redirects'],
 	prerendered: [
 		'/app/',
 		'/app/pl',
@@ -40,6 +40,18 @@ describe('the worker derives its promises from the served edition', () => {
 	it('names no pruned sidecar anywhere: shell, book, or completion bar', () => {
 		for (const path of [...lists.shell, ...lists.everything, ...lists.edition]) {
 			expect(isRouteDataSidecar(path), path).toBe(false);
+		}
+	});
+
+	it('names no host configuration file, which the host never serves', () => {
+		expect(isHostConfiguration('/_headers')).toBe(true);
+		expect(isHostConfiguration('/_redirects')).toBe(true);
+		expect(isHostConfiguration('/_routes.json')).toBe(true);
+		expect(isHostConfiguration('/_worker.js')).toBe(true);
+		expect(isHostConfiguration('/manifest.webmanifest')).toBe(false);
+		expect(isHostConfiguration('/app/pl/_headers')).toBe(false);
+		for (const path of [...lists.shell, ...lists.everything, ...lists.edition]) {
+			expect(isHostConfiguration(path), path).toBe(false);
 		}
 	});
 

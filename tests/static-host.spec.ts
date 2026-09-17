@@ -19,6 +19,28 @@ test('the host answers a pruned route sidecar with its 404 page @static-host', a
 	expect(page.status()).toBe(200);
 });
 
+test('the host withholds its configuration files @static-host', async ({ request }) => {
+	// Pages reads _headers and _redirects and then serves neither. A worker
+	// whose shell named them could not install at all — the v0.10.0 worker
+	// never did on the live site — so the host must answer as Pages does.
+	for (const path of ['/_headers', '/_redirects']) {
+		expect((await request.get(path)).status(), path).toBe(404);
+	}
+});
+
+// The shell must be precachable in full: one path the host withholds and
+// `cache.addAll` rejects, the install fails, and the worker is discarded
+// before it controls a page. `ready` resolves only for an active worker.
+test('the worker installs and takes control on the static host @static-host', async ({ page }) => {
+	await page.goto('/app/en');
+	const state = await page.evaluate(async () => {
+		const registration = await navigator.serviceWorker.ready;
+		return { active: !!registration.active, scope: new URL(registration.scope).pathname };
+	});
+	expect(state).toEqual({ active: true, scope: '/app/' });
+	await expect.poll(() => page.evaluate(() => !!navigator.serviceWorker.controller)).toBe(true);
+});
+
 // A tap pushes a shallow `?w=` entry. Reloading that address — or having a
 // phone restore a discarded tab — starts a document that has not navigated
 // yet, so the framework treats the Back press across that entry as a real
@@ -129,8 +151,9 @@ test('an installed book completes without route sidecars and retires the previou
 	expect(await cached(page, '/app/en/ordinarium/credo/__data.json')).toBe(false);
 	expect(await cached(page, '/app/en/formularium/dominica-i-adventus/__data.json')).toBe(false);
 
-	// The next wake settles the migration: the new book is complete, so the
-	// previous edition's cache goes.
+	// The migration behind the install signal already retires the previous
+	// edition's cache once the new book is complete; a later wake finds
+	// nothing left to do. Either way, no superseded cache may remain.
 	await tell(page, 'settle-caches');
 	await expect
 		.poll(() => supersededCaches(page), { timeout: 120_000, intervals: [1000] })

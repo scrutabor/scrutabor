@@ -8,11 +8,19 @@
 // nothing but build/ and the four rules Cloudflare Pages applies to a static
 // project:
 //
-//   1. an exact file is served as it is;
+//   1. an exact file is served as it is — except the host's own
+//      configuration (`_headers`, `_redirects`, `_routes.json`,
+//      `_worker.js`), which Pages reads and then withholds: those are 404;
 //   2. `/a/b` is served from `a/b.html`, then `a/b/index.html`;
-//   3. `static/_redirects` is honoured — exact sources, `:placeholder`
-//      segments and a trailing `*` splat, with the status the line names;
+//   3. `_redirects` is honoured — exact sources, `:placeholder` segments and
+//      a trailing `*` splat, with the status the line names, a trailing
+//      ` # comment` stripped, and the request's query carried to a
+//      destination that names none of its own;
 //   4. everything else is `404.html`, with status 404.
+//
+// It does not normalise trailing slashes or `.html` suffixes the way Pages
+// does (a 308 to the canonical spelling); the book links nothing that
+// needs it.
 //
 //     node scripts/static-host.ts [port]
 //
@@ -49,11 +57,15 @@ export interface RedirectRule {
 export function parseRedirects(text: string): RedirectRule[] {
 	const rules: RedirectRule[] = [];
 	for (const raw of text.split('\n')) {
-		// A comment is a whole line; a `#` inside a destination is a fragment.
-		const line = raw.trim();
+		// A comment is a whole line or follows whitespace; a `#` glued to a
+		// destination is its fragment. A status must be one Pages accepts.
+		const line = raw.replace(/\s+#.*$/, '').trim();
 		if (!line || line.startsWith('#')) continue;
 		const [source, target, status = '302'] = line.split(/\s+/);
 		if (!source || !target) continue;
+		if (!['301', '302', '303', '307', '308'].includes(status)) {
+			throw new Error(`_redirects: unsupported status ${status} for ${source}`);
+		}
 		const names: string[] = [];
 		const pattern = source
 			.split('/')
@@ -80,10 +92,12 @@ export function parseRedirects(text: string): RedirectRule[] {
 	return rules;
 }
 
-/** The redirect for a path, or null when no rule matches. */
+/** The redirect for a path, or null when no rule matches. The request's
+ * own query travels with it unless the destination carries one. */
 export function redirectFor(
 	rules: RedirectRule[],
-	pathname: string
+	pathname: string,
+	search = ''
 ): { location: string; status: number } | null {
 	for (const rule of rules) {
 		const match = rule.regex.exec(pathname);
@@ -92,9 +106,21 @@ export function redirectFor(
 		rule.names.forEach((name, index) => {
 			location = location.replaceAll(`:${name}`, match[index + 1]);
 		});
+		if (search && !location.includes('?')) {
+			const hash = location.indexOf('#');
+			location =
+				hash < 0
+					? `${location}${search}`
+					: `${location.slice(0, hash)}${search}${location.slice(hash)}`;
+		}
 		return { location, status: rule.status };
 	}
 	return null;
+}
+
+/** Whether the host withholds a path it reads as its own configuration. */
+export function isWithheld(pathname: string): boolean {
+	return /^\/_(headers|redirects|routes\.json|worker\.js)$/.test(pathname);
 }
 
 /** The file Pages would serve for a path, or null. */
@@ -118,13 +144,13 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
 	const rules = existsSync(rulesFile) ? parseRedirects(readFileSync(rulesFile, 'utf8')) : [];
 	createServer((request, response) => {
 		const url = new URL(request.url ?? '/', 'http://localhost');
-		const redirect = redirectFor(rules, url.pathname);
+		const redirect = redirectFor(rules, url.pathname, url.search);
 		if (redirect) {
 			response.writeHead(redirect.status, { location: redirect.location });
 			response.end();
 			return;
 		}
-		const file = fileFor(BUILD, url.pathname);
+		const file = isWithheld(url.pathname) ? null : fileFor(BUILD, url.pathname);
 		if (!file) {
 			response.writeHead(404, { 'content-type': TYPES['.html'] });
 			response.end(readFileSync(join(BUILD, '404.html')));

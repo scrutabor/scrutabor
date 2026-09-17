@@ -14,6 +14,20 @@ export function isRouteDataSidecar(path: string): boolean {
 	return path.endsWith('/__data.json');
 }
 
+/** A file the static host reads as configuration and never serves.
+ *
+ * `$service-worker` lists every file under static/, and static/ is where
+ * Cloudflare Pages reads `_headers` and `_redirects` from — then strips
+ * them from the deployed tree, so a request for either is a 404. A shell
+ * that named `/_headers` could not be precached at all: `cache.addAll`
+ * rejects on the first miss, the install fails, and the worker is
+ * discarded before it ever controls a page. That is how the v0.10.0
+ * worker behaved on the live site, unnoticed, because every test server
+ * happily served the file. */
+export function isHostConfiguration(path: string): boolean {
+	return /^\/_(headers|redirects|routes\.json|worker\.js)$/.test(path);
+}
+
 // Pages that ARE the shell: the app's language router, the two catalogs,
 // the ordo map, the edition page. Everything else — texts, movements, the
 // dictionary, the grammar — is a page a reader chooses. The landing pages
@@ -41,15 +55,17 @@ export interface EditionLists {
 }
 
 export function editionLists({ build, files, prerendered }: EditionManifest): EditionLists {
-	// Only documents the host actually serves. The sidecars are pruned from
-	// the emitted build, so they are neither a promise nor a migration goal.
+	// Only what the host actually serves. The sidecars are pruned from the
+	// emitted build and the host keeps its configuration files to itself, so
+	// neither is a promise nor a migration goal.
 	const pages = prerendered.filter((path) => !isRouteDataSidecar(path));
+	const served = files.filter((path) => !isHostConfiguration(path));
 
 	// Vite gives independently loadable corpus JSON facades their own
 	// directory (vite.config.ts). They are build artifacts, but not shell.
 	const lazyCorpus = build.filter((path) => path.includes('/immutable/corpus/'));
 	const shellBuild = build.filter((path) => !path.includes('/immutable/corpus/'));
-	const shell = [...shellBuild, ...files, ...pages.filter((path) => SHELL_PAGE.test(path))];
+	const shell = [...shellBuild, ...served, ...pages.filter((path) => SHELL_PAGE.test(path))];
 	const days = pages.filter((path) => path.startsWith('/artifacts/proprium/'));
 	const everything = [
 		...shell,
@@ -62,6 +78,6 @@ export function editionLists({ build, files, prerendered }: EditionManifest): Ed
 		lazyCorpus,
 		days,
 		everything,
-		edition: new Set([...build, ...files, ...pages])
+		edition: new Set([...build, ...served, ...pages])
 	};
 }
