@@ -82,6 +82,15 @@ test('an installed app fetches the whole book @online', async ({ page }) => {
 		await expect.poll(() => has(path), { timeout: 90_000, intervals: [1000] }).toBe(true);
 	}
 
+	// The framework still lists the route sidecars it prerendered, and this
+	// preview server still answers them; the static host does not, and the
+	// build prunes them. A book that names them can never be complete, so
+	// the worker must not ask for them here either (tests/static-host.spec.ts
+	// proves the rest against the deployed tree).
+	expect(await has('/app/en/ordinarium/credo/__data.json'), 'a pruned sidecar was fetched').toBe(
+		false
+	);
+
 	// everything fetched, still nothing from outside the book. Do not ask
 	// Chromium to materialise every Request in the complete cache here: once
 	// the missal grew past a few thousand entries, Cache.keys() crossed the

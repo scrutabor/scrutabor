@@ -24,49 +24,38 @@
 // IndexedDB, across versions — never guessed from cache sizes.
 import { build, files, prerendered, version } from '$service-worker';
 import { cacheContainsAll } from '$lib/cache-completeness';
+import { editionLists } from '$lib/service-worker-edition';
 
 const sw = self as unknown as ServiceWorkerGlobalScope;
 
 const PREFIX = 'scrutabor-';
 const CACHE = `${PREFIX}${version}`;
 
-// Pages that ARE the shell: the app's language router, the two catalogs,
-// the ordo map, the edition page. Everything else — texts, movements, the
-// dictionary, the grammar — is a page a reader chooses. The landing pages
-// outside /app/ are nobody's shell: this worker's scope never controls
-// them, and they must not sit in the book's cache.
-const SHELL_PAGE = /^\/app\/([a-z]{2}(\/(ordo|editio))?)?$/;
-
-// Vite gives independently loadable corpus JSON facades their own directory
-// (vite.config.ts). They are build artifacts, but not shell: search and
-// reading fetch only the candidates a reader asks for. An installed book
-// still receives the complete set below.
-const LAZY_CORPUS = build.filter((path) => path.includes('/immutable/corpus/'));
-const SHELL_BUILD = build.filter((path) => !path.includes('/immutable/corpus/'));
-const SHELL = [...SHELL_BUILD, ...files, ...prerendered.filter((path) => SHELL_PAGE.test(path))];
-
-/** The day's own texts, grouped into a few modest packs per language. These
- * are NOT shell: a reader who opened one prayer
- * in a browser has not asked for the propers of the year, and the web
- * reader who never picks a date fetches none of them. They belong to the
- * book, so an installed app can open today's Mass in a basement chapel —
- * which is the promise that justified offline here at all. */
-const DAYS = prerendered.filter((path) => path.startsWith('/artifacts/proprium/'));
-
-/** The whole book, for a reader who installed it. Only the app subtree and
- * the day artifacts: this leaves out the sitemap and the landing pages,
- * which live at the origin root. */
-const EVERYTHING = [
-	...SHELL,
-	...LAZY_CORPUS,
-	...prerendered.filter((path) => path.startsWith('/app/')),
-	...DAYS
-];
-
-/** What this edition can serve at all — the completion bar for a migration:
- * an old entry either exists here under the same path, or the edition no
- * longer carries it and nothing can be preserved. */
-const EDITION = new Set([...build, ...files, ...prerendered]);
+// The lists are derived in $lib/service-worker-edition, which knows what the
+// static host serves: the framework reports its pruned `__data.json` route
+// sidecars among the prerendered paths, and a worker that promised them
+// would never see its book complete. What the helper returns:
+//
+// - the SHELL: the app's own code and fonts with the pages that ARE the
+//   shell — the language router, the two catalogs, the ordo map, the
+//   edition page. Everything else is a page a reader chooses. The landing
+//   pages outside /app/ are nobody's shell: this worker's scope never
+//   controls them, and they must not sit in the book's cache;
+// - EVERYTHING: the whole book, for a reader who installed it — the shell,
+//   the lazy corpus facades, every app page and the day packs. It leaves
+//   out the sitemap and the landing pages, which live at the origin root;
+// - the EDITION: what this edition can serve at all, the completion bar for
+//   a migration. An old entry either exists here under the same path, or
+//   the edition no longer carries it and nothing can be preserved.
+const {
+	shell: SHELL,
+	everything: EVERYTHING,
+	edition: EDITION
+} = editionLists({
+	build,
+	files,
+	prerendered
+});
 
 // ---------------------------------------------------------------------------
 // Remembered intent. localStorage does not exist in a worker; this one flag
