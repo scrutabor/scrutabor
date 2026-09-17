@@ -130,8 +130,27 @@
 		}
 	}
 
+	// The previous edition read each Proper text on its own page, where a
+	// word was `?w=w012`. Its addresses redirect here with the part named in
+	// the fragment and the query carried over, so a bare word id beside a
+	// part fragment is that part's word: the address is completed in place
+	// and the panel opens on it, instead of `?w=w012` lingering unanswered.
+	function completeWordAddress(): boolean {
+		const url = pageUrl();
+		const word = url.searchParams.get('w');
+		const part = /^text-proprium-(.+)$/.exec(url.hash.slice(1))?.[1];
+		if (!word || word.includes('.') || !part || !wordsById.has(`${part}.${word}`)) return false;
+		requestAnimationFrame(() => {
+			const completed = pageUrl();
+			completed.searchParams.set('w', `${part}.${word}`);
+			replaceState(completed, {});
+			panel.applyFromLocation();
+		});
+		return true;
+	}
+
 	function applyFromLocation(scroll = true) {
-		panel.applyFromLocation();
+		if (!completeWordAddress()) panel.applyFromLocation();
 		applySegmentFromLocation(scroll);
 	}
 

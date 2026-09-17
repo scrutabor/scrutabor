@@ -151,6 +151,10 @@ export function wordPanel(host: WordPanelHost) {
 	// returns to the page the reader came from, and closing it merely
 	// strips ?w= from the current entry.
 	let openedByPush = false;
+	// What to do once a close's own pop has landed (see closeThen). One slot:
+	// a second gesture before the pop replaces the first, so the last thing
+	// the reader asked for is what the settled address shows.
+	let afterPop: (() => void) | null = null;
 
 	function urlWith(id: string | null): URL {
 		// A throwaway value handed straight to the router — never held in
@@ -285,13 +289,21 @@ export function wordPanel(host: WordPanelHost) {
 		closeThen(action: () => void) {
 			const popping = selectedId !== null && openedByPush;
 			close();
+			if (afterPop !== null) {
+				// A pop is already on its way; this later gesture takes its place.
+				afterPop = action;
+				return;
+			}
 			if (!popping) {
 				action();
 				return;
 			}
+			afterPop = action;
 			const once = () => {
 				removeEventListener('popstate', once);
-				action();
+				const settled = afterPop;
+				afterPop = null;
+				settled?.();
 			};
 			addEventListener('popstate', once);
 		},

@@ -108,7 +108,10 @@ test.describe('selector hygiene @online', () => {
 	});
 });
 
-test.describe('selection interaction @online', () => {
+// In both editions: the folder keeps the address in the hash, where a
+// close that inferred its pending pop from `location.search` saw nothing
+// and wrote the selection onto the entry about to vanish.
+test.describe('selection interaction', () => {
 	test('tapping a verse with the word sheet open selects and dismisses', async ({ page }) => {
 		await page.goto('/app/pl/orationes/angelus-domini');
 		await page.locator('#w001').click();
@@ -120,6 +123,7 @@ test.describe('selection interaction @online', () => {
 		await page.mouse.click(box!.x + box!.width - 4, box!.y + box!.height / 2);
 		await expect(page.locator('#s01.segment-selected')).toBeVisible();
 		await expect(page.locator('aside')).toHaveCount(0);
+		await expect(page).toHaveURL(atRoute('/app/pl/orationes/angelus-domini', '?s=s01'));
 	});
 
 	test('selection names say what activation does', async ({ page }) => {
@@ -231,6 +235,16 @@ test.describe('links into a complete formulary', () => {
 		await cite(page, `${INTROIT}-s01`);
 		await expect(page).toHaveURL(atRoute(PALM));
 		await expect(page.locator('.segment-selected')).toHaveCount(0);
+	});
+
+	test('a bare word id beside a part fragment names that part’s word', async ({ page }) => {
+		// The previous edition's `/proprium/<slug>?w=w005` redirects to the
+		// formulary with the part in the fragment and the query carried over.
+		const introit = 'dominica-i-adventus-introitus';
+		await page.goto(`/app/pl/formularium/dominica-i-adventus?w=w005#text-proprium-${introit}`);
+		await expect(page.locator('aside .form')).toBeVisible();
+		await expect(page.locator(`#${introit}\\.w005.selected`)).toHaveCount(1);
+		await expect(page).toHaveURL(new RegExp(`[?&]w=${introit}\\.w005(#|$)`));
 	});
 
 	test('a selector naming no line of the part is dropped', async ({ page }) => {
