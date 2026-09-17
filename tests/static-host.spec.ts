@@ -159,3 +159,24 @@ test('a returning reader who held a sidecar still migrates to one cache @static-
 		.toEqual([]);
 	expect(await cached(page, '/app/pl/orationes/pater-noster/__data.json')).toBe(false);
 });
+
+// Addresses the previous edition published — every dictionary entry had its
+// own page and every Proper text stood alone — keep answering.
+test('the previous edition’s dictionary and Proper addresses redirect @static-host', async ({
+	request
+}) => {
+	const lemma = await request.get('/app/pl/lemma/oro', { maxRedirects: 0 });
+	expect(lemma.status()).toBe(301);
+	expect(lemma.headers()['location']).toBe('/app/pl/lemma?l=oro');
+
+	const english = await request.get('/app/en/lemma/plenus', { maxRedirects: 0 });
+	expect(english.headers()['location']).toBe('/app/en/lemma?l=plenus');
+
+	const proper = await request.get('/app/pl/proprium/dominica-i-adventus-introitus', {
+		maxRedirects: 0
+	});
+	expect(proper.status()).toBe(301);
+	expect(proper.headers()['location']).toBe(
+		'/app/pl/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-introitus'
+	);
+});

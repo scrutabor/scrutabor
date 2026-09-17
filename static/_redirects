@@ -1,0 +1,96 @@
+# Served by Cloudflare Pages as redirects (build output includes this file
+# from static/). Cloudflare allows 2,000 static and 100 dynamic rules.
+#
+# The previous edition (v0.10.0) published one page per dictionary entry
+# and one page per Proper text, and listed both in its sitemap. This
+# edition reads a dictionary entry on one shared page per language, chosen
+# by query, and a Proper text inside its complete Mass formulary. The old
+# addresses were public — indexed, shared, bookmarked — so they answer.
+#
+# Dictionary: the old slug is the lemma itself for every entry whose
+# casefolded form was unique (all but a handful); a collision slug such as
+# clemens.1 lands on the shared page, which reports no such entry.
+/app/:lang/lemma/:slug  /app/:lang/lemma?l=:slug  301
+
+# The 40 Proper texts v0.10.0 published, in both languages. Later texts
+# were never public under /proprium/ and need no rule.
+/app/pl/proprium/dominica-i-adventus-alleluia  /app/pl/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-alleluia  301
+/app/pl/proprium/dominica-i-adventus-collecta  /app/pl/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-collecta  301
+/app/pl/proprium/dominica-i-adventus-communio  /app/pl/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-communio  301
+/app/pl/proprium/dominica-i-adventus-epistola  /app/pl/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-epistola  301
+/app/pl/proprium/dominica-i-adventus-evangelium  /app/pl/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-evangelium  301
+/app/pl/proprium/dominica-i-adventus-graduale  /app/pl/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-graduale  301
+/app/pl/proprium/dominica-i-adventus-introitus  /app/pl/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-introitus  301
+/app/pl/proprium/dominica-i-adventus-offertorium  /app/pl/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-offertorium  301
+/app/pl/proprium/dominica-i-adventus-postcommunio  /app/pl/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-postcommunio  301
+/app/pl/proprium/dominica-i-adventus-secreta  /app/pl/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-secreta  301
+/app/pl/proprium/dominica-ii-adventus-alleluia  /app/pl/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-alleluia  301
+/app/pl/proprium/dominica-ii-adventus-collecta  /app/pl/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-collecta  301
+/app/pl/proprium/dominica-ii-adventus-communio  /app/pl/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-communio  301
+/app/pl/proprium/dominica-ii-adventus-epistola  /app/pl/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-epistola  301
+/app/pl/proprium/dominica-ii-adventus-evangelium  /app/pl/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-evangelium  301
+/app/pl/proprium/dominica-ii-adventus-graduale  /app/pl/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-graduale  301
+/app/pl/proprium/dominica-ii-adventus-introitus  /app/pl/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-introitus  301
+/app/pl/proprium/dominica-ii-adventus-offertorium  /app/pl/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-offertorium  301
+/app/pl/proprium/dominica-ii-adventus-postcommunio  /app/pl/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-postcommunio  301
+/app/pl/proprium/dominica-ii-adventus-secreta  /app/pl/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-secreta  301
+/app/pl/proprium/dominica-iii-adventus-alleluia  /app/pl/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-alleluia  301
+/app/pl/proprium/dominica-iii-adventus-collecta  /app/pl/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-collecta  301
+/app/pl/proprium/dominica-iii-adventus-communio  /app/pl/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-communio  301
+/app/pl/proprium/dominica-iii-adventus-epistola  /app/pl/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-epistola  301
+/app/pl/proprium/dominica-iii-adventus-evangelium  /app/pl/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-evangelium  301
+/app/pl/proprium/dominica-iii-adventus-graduale  /app/pl/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-graduale  301
+/app/pl/proprium/dominica-iii-adventus-introitus  /app/pl/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-introitus  301
+/app/pl/proprium/dominica-iii-adventus-offertorium  /app/pl/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-offertorium  301
+/app/pl/proprium/dominica-iii-adventus-postcommunio  /app/pl/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-postcommunio  301
+/app/pl/proprium/dominica-iii-adventus-secreta  /app/pl/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-secreta  301
+/app/pl/proprium/dominica-iv-adventus-alleluia  /app/pl/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-alleluia  301
+/app/pl/proprium/dominica-iv-adventus-collecta  /app/pl/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-collecta  301
+/app/pl/proprium/dominica-iv-adventus-communio  /app/pl/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-communio  301
+/app/pl/proprium/dominica-iv-adventus-epistola  /app/pl/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-epistola  301
+/app/pl/proprium/dominica-iv-adventus-evangelium  /app/pl/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-evangelium  301
+/app/pl/proprium/dominica-iv-adventus-graduale  /app/pl/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-graduale  301
+/app/pl/proprium/dominica-iv-adventus-introitus  /app/pl/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-introitus  301
+/app/pl/proprium/dominica-iv-adventus-offertorium  /app/pl/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-offertorium  301
+/app/pl/proprium/dominica-iv-adventus-postcommunio  /app/pl/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-postcommunio  301
+/app/pl/proprium/dominica-iv-adventus-secreta  /app/pl/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-secreta  301
+/app/en/proprium/dominica-i-adventus-alleluia  /app/en/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-alleluia  301
+/app/en/proprium/dominica-i-adventus-collecta  /app/en/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-collecta  301
+/app/en/proprium/dominica-i-adventus-communio  /app/en/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-communio  301
+/app/en/proprium/dominica-i-adventus-epistola  /app/en/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-epistola  301
+/app/en/proprium/dominica-i-adventus-evangelium  /app/en/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-evangelium  301
+/app/en/proprium/dominica-i-adventus-graduale  /app/en/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-graduale  301
+/app/en/proprium/dominica-i-adventus-introitus  /app/en/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-introitus  301
+/app/en/proprium/dominica-i-adventus-offertorium  /app/en/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-offertorium  301
+/app/en/proprium/dominica-i-adventus-postcommunio  /app/en/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-postcommunio  301
+/app/en/proprium/dominica-i-adventus-secreta  /app/en/formularium/dominica-i-adventus#text-proprium-dominica-i-adventus-secreta  301
+/app/en/proprium/dominica-ii-adventus-alleluia  /app/en/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-alleluia  301
+/app/en/proprium/dominica-ii-adventus-collecta  /app/en/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-collecta  301
+/app/en/proprium/dominica-ii-adventus-communio  /app/en/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-communio  301
+/app/en/proprium/dominica-ii-adventus-epistola  /app/en/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-epistola  301
+/app/en/proprium/dominica-ii-adventus-evangelium  /app/en/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-evangelium  301
+/app/en/proprium/dominica-ii-adventus-graduale  /app/en/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-graduale  301
+/app/en/proprium/dominica-ii-adventus-introitus  /app/en/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-introitus  301
+/app/en/proprium/dominica-ii-adventus-offertorium  /app/en/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-offertorium  301
+/app/en/proprium/dominica-ii-adventus-postcommunio  /app/en/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-postcommunio  301
+/app/en/proprium/dominica-ii-adventus-secreta  /app/en/formularium/dominica-ii-adventus#text-proprium-dominica-ii-adventus-secreta  301
+/app/en/proprium/dominica-iii-adventus-alleluia  /app/en/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-alleluia  301
+/app/en/proprium/dominica-iii-adventus-collecta  /app/en/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-collecta  301
+/app/en/proprium/dominica-iii-adventus-communio  /app/en/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-communio  301
+/app/en/proprium/dominica-iii-adventus-epistola  /app/en/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-epistola  301
+/app/en/proprium/dominica-iii-adventus-evangelium  /app/en/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-evangelium  301
+/app/en/proprium/dominica-iii-adventus-graduale  /app/en/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-graduale  301
+/app/en/proprium/dominica-iii-adventus-introitus  /app/en/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-introitus  301
+/app/en/proprium/dominica-iii-adventus-offertorium  /app/en/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-offertorium  301
+/app/en/proprium/dominica-iii-adventus-postcommunio  /app/en/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-postcommunio  301
+/app/en/proprium/dominica-iii-adventus-secreta  /app/en/formularium/dominica-iii-adventus#text-proprium-dominica-iii-adventus-secreta  301
+/app/en/proprium/dominica-iv-adventus-alleluia  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-alleluia  301
+/app/en/proprium/dominica-iv-adventus-collecta  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-collecta  301
+/app/en/proprium/dominica-iv-adventus-communio  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-communio  301
+/app/en/proprium/dominica-iv-adventus-epistola  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-epistola  301
+/app/en/proprium/dominica-iv-adventus-evangelium  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-evangelium  301
+/app/en/proprium/dominica-iv-adventus-graduale  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-graduale  301
+/app/en/proprium/dominica-iv-adventus-introitus  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-introitus  301
+/app/en/proprium/dominica-iv-adventus-offertorium  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-offertorium  301
+/app/en/proprium/dominica-iv-adventus-postcommunio  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-postcommunio  301
+/app/en/proprium/dominica-iv-adventus-secreta  /app/en/formularium/dominica-iv-adventus#text-proprium-dominica-iv-adventus-secreta  301
