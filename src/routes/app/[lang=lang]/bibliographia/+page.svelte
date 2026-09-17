@@ -8,6 +8,7 @@
 		type BibliographyUse
 	} from '$lib/bibliography';
 	import PageNav from '$lib/components/PageNav.svelte';
+	import ContentLoader from '$lib/components/ContentLoader.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { bindProse } from '$lib/polish';
 
@@ -175,11 +176,14 @@
 										>
 									</summary>
 
-									<div class="source-body" aria-live="polite">
+									{#if loading[sourceKey(source)]}
+										<span class="sr-only" role="status" aria-live="polite">{copy.loading}</span>
+									{/if}
+									<div class="source-body" aria-busy={loading[sourceKey(source)] ?? false}>
 										{#if loading[sourceKey(source)]}
-											<p class="state">{copy.loading}</p>
+											<ContentLoader variant="source" />
 										{:else if failed[sourceKey(source)]}
-											<p class="state failure">{copy.failed}</p>
+											<p class="state failure" role="alert">{copy.failed}</p>
 										{:else if details[sourceKey(source)]}
 											<ul class="evidence-groups">
 												{#each details[sourceKey(source)] ?? [] as group (group.key)}

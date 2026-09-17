@@ -1,6 +1,7 @@
 // UI strings live here; corpus content lives in the gloss layers.
 import { bindProse } from './polish';
 import type { Season } from './proprium';
+import type { ConstructionParticipleKind } from './word-construction';
 
 export type Lang = 'pl' | 'en';
 
@@ -48,12 +49,23 @@ export interface Messages {
 	updateLater: string;
 	updateStale: string;
 	panelAria: string;
+	constructionPanelAria: string;
 	wordContextLabel: string;
 	sharedGloss: (latin: string, target: string) => string;
+	sharedConstruction: (latin: string, target: string) => string;
+	auxiliaryParticipleConstruction: (
+		auxiliary: string,
+		participle: string,
+		participleDescription: string,
+		target: string
+	) => string;
+	constructionParticiple: Record<ConstructionParticipleKind, string>;
 	zeroGloss: Record<'idiom' | 'inflection' | 'punctuation' | 'word-order', string>;
 	wordEntryLabel: string;
 	wordFormLabel: string;
 	working: string;
+	lemmaLoading: string;
+	lemmaLoadFailed: string;
 	lemmaPageHint: string;
 	occurrences: string;
 	externalDict: string;
@@ -254,8 +266,20 @@ const MESSAGES: Record<Lang, Messages> = {
 		updateStale:
 			'Ta kopia nie może już pobrać swoich plików. Zastosuj aktualizację, aby czytać dalej.',
 		panelAria: 'analiza słowa',
+		constructionPanelAria: 'analiza konstrukcji',
 		wordContextLabel: 'znaczenie w kontekście',
 		sharedGloss: (latin, target) => `Słowa „${latin}” mają tu wspólny odpowiednik: „${target}”.`,
+		sharedConstruction: (latin, target) =>
+			`Wyrazy „${latin}” tworzą tu jedną całość znaczeniową, oddaną w przekładzie słowo po słowie jako „${target}”.`,
+		auxiliaryParticipleConstruction: (auxiliary, participle, description, target) =>
+			`${auxiliary} pełni tu funkcję czasownika posiłkowego, a ${participle} jest ${description}. Całe wyrażenie oddajemy po polsku jako „${target}”.`,
+		constructionParticiple: {
+			'future-active': 'imiesłowem czasu przyszłego',
+			'perfect-passive': 'imiesłowem biernym czasu przeszłego',
+			'perfect-deponent': 'imiesłowem czasu przeszłego czasownika deponującego',
+			'future-passive': 'imiesłowem przyszłym strony biernej (gerundivum)',
+			'present-active': 'imiesłowem teraźniejszym strony czynnej'
+		},
 		zeroGloss: {
 			idiom:
 				'Znaczenie tego słowa zawiera się tu w całym zwrocie. Nie ma ono osobnego polskiego odpowiednika.',
@@ -269,6 +293,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		wordEntryLabel: 'hasło',
 		wordFormLabel: 'forma',
 		working: 'o wydaniu · wydanie robocze przed przeglądem eksperckim',
+		lemmaLoading: 'Wczytywanie hasła…',
+		lemmaLoadFailed: 'Nie udało się wczytać hasła.',
 		lemmaPageHint: 'otwórz hasło',
 		occurrences: 'w tekstach',
 		externalDict: 'słownik zewnętrzny',
@@ -455,8 +481,20 @@ const MESSAGES: Record<Lang, Messages> = {
 		updateLater: 'later',
 		updateStale: 'This copy can no longer fetch its files. Apply the update to keep reading.',
 		panelAria: 'word analysis',
+		constructionPanelAria: 'construction analysis',
 		wordContextLabel: 'meaning in context',
 		sharedGloss: (latin, target) => `“${latin}” is rendered here as one expression: “${target}”.`,
+		sharedConstruction: (latin, target) =>
+			`The words “${latin}” form a single unit of meaning here, rendered in the word-by-word translation as “${target}”.`,
+		auxiliaryParticipleConstruction: (auxiliary, participle, description, target) =>
+			`${auxiliary} functions here as an auxiliary verb, while ${participle} is ${description}. The whole expression is rendered in English as “${target}”.`,
+		constructionParticiple: {
+			'future-active': 'a future active participle',
+			'perfect-passive': 'a perfect passive participle',
+			'perfect-deponent': 'the perfect participle of a deponent verb',
+			'future-passive': 'a future passive participle (gerundive)',
+			'present-active': 'a present active participle'
+		},
 		zeroGloss: {
 			idiom:
 				'This word is expressed by the phrase as a whole and has no separate English counterpart here.',
@@ -470,6 +508,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		wordEntryLabel: 'dictionary entry',
 		wordFormLabel: 'form',
 		working: 'about this edition · working edition awaiting expert review',
+		lemmaLoading: 'Loading entry…',
+		lemmaLoadFailed: 'The entry could not be loaded.',
 		lemmaPageHint: 'open the entry',
 		occurrences: 'in the texts',
 		externalDict: 'external dictionary',

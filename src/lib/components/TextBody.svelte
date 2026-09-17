@@ -12,7 +12,7 @@
 		sharedWithFaithful
 	} from '$lib/role.svelte';
 	import { initialFit } from '$lib/reading-geometry';
-	import { interlinearRuns } from '$lib/interlinear';
+	import { interlinearRuns, type InterlinearRun } from '$lib/interlinear';
 	import * as marks from '$lib/speaker-marks';
 
 	// The rendered text itself, shared by the reading page and the ordo
@@ -249,6 +249,37 @@
 			>{/if}</ruby
 	>{/snippet}
 
+{#snippet constructionRuby(
+	run: InterlinearRun,
+	target: string,
+	sharedRaised: boolean,
+	sink: number,
+	interactive: boolean,
+	truncated: boolean,
+	lastWordId: string | undefined
+)}{@const sharedFit = initialFit(run.words[0].form.slice(0, 1), helpLevel === 1)}<ruby
+		class="shared-gloss"
+	>
+		<span class="shared-base">
+			{#each run.words as word, index (word.id)}
+				{@const raised = sharedRaised && index === 0}
+				{@const post = truncated && word.id === lastWordId ? '…' : (word.post ?? '')}
+				<span
+					class="token"
+					id={interactive && domId(word.id) !== target ? domId(word.id) : undefined}
+				>
+					<span class:word={!interactive}>{@render baseFace(word.form, post, raised)}</span>
+				</span>{#if index < run.words.length - 1}{' '}{/if}
+			{/each}
+		</span>
+		<rt
+			style:top="calc(var(--reading) * (var(--gloss-gap) - var(--shared-ruby-offset) + {sink -
+				(sharedRaised ? sharedFit.lift : 0)}))"
+			class="shifted"
+			{lang}>{run.alignment?.gloss}</rt
+		>
+	</ruby>{/snippet}
+
 {#snippet segment(seg: TextDocument['segments'][number], i: number)}
 	{#if collapsedSegments.includes(seg.id)}
 		{@render verse(seg, i, true, openSegments.has(seg.id))}
@@ -484,38 +515,48 @@
 						onclick={() => onverse?.(verseNo)}><span class="ink">{verseNo}</span></button
 					>{:else}<span class="mark">{verseNo}</span
 					>{/if}{/if}{#each interlinear as run (run.words[0].id)}{#if helpLevel === 1 && run.alignment?.gloss && run.words.length > 1}{@const sharedRaised =
-						i === firstVerse && visibleWords.indexOf(run.words[0]) === 0}{@const sharedFit =
-						initialFit(run.words[0].form.slice(0, 1), helpLevel === 1)}<span class="token-group"
-						><ruby class="shared-gloss"
-							><span class="shared-base"
-								>{#each run.words as w, rwi (w.id)}{@const wi =
-										visibleWords.indexOf(w)}{@const raised =
-										i === firstVerse && wi === 0}{@const post =
-										repeated && !repeatedOpen && wi === visibleWords.length - 1
-											? '…'
-											: (w.post ?? '')}<span
-										class="token"
-										class:word-selected={selectedId === domId(w.id)}
-										>{#if ontap}<button
-												class="word"
-												id={domId(w.id)}
-												class:selected={selectedId === domId(w.id)}
-												aria-label={helpLevel === 1
-													? `${w.form} — ${run.alignment.gloss}`
-													: undefined}
-												onclick={(event) => tapWord(event, domId(w.id), seg.id)}
-												>{@render baseFace(w.form, post, raised)}</button
-											>{:else}<span class="word">{@render baseFace(w.form, post, raised)}</span
-											>{/if}</span
-									>{#if rwi < run.words.length - 1}{' '}{/if}{/each}</span
-							><rt
-								style:top="calc(var(--reading) * (var(--gloss-gap) - var(--shared-ruby-offset) + {sink -
-									(sharedRaised ? sharedFit.lift : 0)}))"
-								class="shifted"
-								{lang}>{run.alignment.gloss}</rt
-							></ruby
-						></span
-					>{' '}{:else}{#each run.words as w (w.id)}{@const wi =
+						i === firstVerse &&
+						visibleWords.indexOf(run.words[0]) === 0}{@const constructionTarget = domId(
+						run.alignment.anchor ?? run.words[0].id
+					)}{@const constructionSelected = run.words.some(
+						(word) => selectedId === domId(word.id)
+					)}<span class="token-group">
+						{#if ontap}
+							<button
+								type="button"
+								class="word word-construction"
+								id={constructionTarget}
+								class:selected={constructionSelected}
+								aria-label={`${run.words.map((word) => word.form).join(' ')} — ${run.alignment.gloss}`}
+								onclick={(event) =>
+									tapWord(
+										event,
+										constructionSelected && selectedId ? selectedId : constructionTarget,
+										seg.id
+									)}
+							>
+								{@render constructionRuby(
+									run,
+									constructionTarget,
+									sharedRaised,
+									sink,
+									true,
+									repeated && !repeatedOpen,
+									visibleWords.at(-1)?.id
+								)}
+							</button>
+						{:else}
+							{@render constructionRuby(
+								run,
+								constructionTarget,
+								sharedRaised,
+								sink,
+								false,
+								repeated && !repeatedOpen,
+								visibleWords.at(-1)?.id
+							)}
+						{/if}
+					</span>{' '}{:else}{#each run.words as w (w.id)}{@const wi =
 							visibleWords.indexOf(w)}{@const raised = i === firstVerse && wi === 0}{@const post =
 							repeated && !repeatedOpen && wi === visibleWords.length - 1
 								? '…'
@@ -958,6 +999,13 @@
 	}
 
 	.token {
+		/* A raised opening initial enlarges the selection surface of the whole
+		   verse, but that reservation belongs only to the token which actually
+		   contains the initial. Letting the verse-level value inherit into every
+		   later token made a selected word on a wrapped line paint over the gloss
+		   above it. Ordinary words therefore keep the normal line inset; the
+		   initial's own token opts into the measured reservation below. */
+		--word-selection-block-start: calc(var(--reading) * 0.14);
 		display: inline-block;
 		isolation: isolate;
 	}
@@ -970,8 +1018,14 @@
 		   offset puts the shared annotation on the exact row used by its
 		   neighbours at every reading size. */
 		--shared-ruby-offset: 0.576;
+		--word-selection-block-start: calc(var(--reading) * 0.14);
 		display: inline-block;
 		isolation: isolate;
+	}
+
+	.token:has(.initial),
+	.token-group:has(.initial) {
+		--word-selection-block-start: var(--selection-initial-start);
 	}
 
 	.shared-base {
@@ -1010,6 +1064,10 @@
 		cursor: pointer;
 	}
 
+	.word-construction {
+		display: inline;
+	}
+
 	.token:where(
 			:has(> button.word:hover),
 			:has(> button.word:focus-visible),
@@ -1030,7 +1088,7 @@
 		   wider of the two rather than for the one in front of me, and the
 		   test states the rule relatively: they meet, and they do not
 		   overlap enough to read as one band. */
-		inset-block: var(--selection-block-start) var(--selection-block-end);
+		inset-block: var(--word-selection-block-start) var(--selection-block-end);
 		inset-inline: -0.05em;
 		border-radius: 0.172em;
 		background: var(--wash);
@@ -1053,7 +1111,7 @@
 		)::before {
 		content: '';
 		position: absolute;
-		inset-block: var(--selection-block-start) calc(var(--reading) * 0.284);
+		inset-block: var(--word-selection-block-start) calc(var(--reading) * 0.284);
 		inset-inline: -0.05em;
 		border-radius: 0.172em;
 		background: var(--wash);

@@ -13,7 +13,27 @@
 import { untrack } from 'svelte';
 import { pageUrl } from './url';
 import { pushState, replaceState } from '$app/navigation';
-import type { GlossDocument, TextDocument } from './corpus';
+import type { Analysis, GlossDocument, TextDocument, Word, WordGloss } from './corpus';
+import { constructionForWord, type WordConstruction } from './word-construction';
+
+export interface WordPanelSelection {
+	gloss: WordGloss | null;
+	analysis: Analysis;
+	construction: WordConstruction | null;
+}
+
+/** Resolve the data every word panel needs from one selected corpus word. */
+export function wordPanelSelection(
+	word: Word,
+	doc: TextDocument,
+	gloss: GlossDocument
+): WordPanelSelection {
+	return {
+		gloss: gloss.words[word.id] ?? null,
+		analysis: word.analysis ?? doc.analysis_defaults_words ?? doc.analysis_defaults,
+		construction: constructionForWord(doc, gloss, word.id)
+	};
+}
 
 export interface WordPanelHost {
 	/** Does this id address a word on this surface? */

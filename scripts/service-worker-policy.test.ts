@@ -18,6 +18,12 @@ describe('service-worker delivery policy', () => {
 		expect(layout).toMatch(/updateViaCache:\s*'none'/);
 	});
 
+	it('forces a stale production worker to update when localhost runs in dev', () => {
+		expect(layout).toMatch(
+			/if \(dev\)[\s\S]*register\('\/service-worker\.js\?dev'[\s\S]*registration\.update\(\)/
+		);
+	});
+
 	it('scopes the worker to the book, off the landing pages', () => {
 		expect(layout).toMatch(/scope:\s*'\/app\/'/);
 	});

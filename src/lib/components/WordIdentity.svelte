@@ -9,22 +9,26 @@
 		form,
 		lang,
 		level,
-		placement = 'panel'
+		placement = 'panel',
+		showPronunciation = true
 	}: {
 		form: string;
 		lang: Lang;
 		level: 1 | 2;
 		placement?: 'panel' | 'page';
+		showPronunciation?: boolean;
 	} = $props();
 
 	const tag = $derived(level === 1 ? 'h1' : 'h2');
 </script>
 
-<div class="identity identity-{placement}">
+<div class="identity identity-{placement}" class:without-pronunciation={!showPronunciation}>
 	<svelte:element this={tag} class="form" lang="la">{form}</svelte:element>
-	<div class="pronunciation-lead">
-		<Pronunciation {form} {lang} />
-	</div>
+	{#if showPronunciation}
+		<div class="pronunciation-lead">
+			<Pronunciation {form} {lang} />
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -39,6 +43,10 @@
 
 	.identity-panel {
 		flex: 1;
+	}
+
+	.identity.without-pronunciation {
+		display: block;
 	}
 
 	.identity-page {

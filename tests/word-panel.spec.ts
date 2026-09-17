@@ -30,6 +30,64 @@ test('tap in a complete formulary opens the analysis for that exact word', async
 	expect(logical.searchParams.get('w')).toBe(id);
 });
 
+test('a shared gloss opens one panel with a complete analysis of every Latin word', async ({
+	page
+}) => {
+	const sequence = '/app/pl/formularium/commemoratio-omnium-fidelium-defunctorum';
+	await page.goto(sequence);
+	await setHelp(page, 1);
+	const target = page
+		.locator('.token-group', { hasText: 'est futúrus' })
+		.locator(':scope > button.word-construction');
+	await target.click();
+
+	await expect(page.locator('aside .form')).toHaveText('est futúrus');
+	await expect(page.locator('aside .gloss')).toHaveText('będzie');
+	await expect(page.locator('aside .alignment')).toHaveText(
+		'Est pełni tu funkcję czasownika posiłkowego, a futúrus jest imiesłowem czasu przyszłego. Całe wyrażenie oddajemy po polsku jako „będzie”.'
+	);
+	await expect(page.locator('aside .construction-card')).toHaveCount(2);
+	await expect(page.locator('aside .construction-title')).toHaveText(['est', 'futúrus']);
+	await expect(page.locator('aside .layer-label')).toHaveText(['hasło', 'forma', 'hasło', 'forma']);
+	await expect(page).toHaveURL(
+		/\?w=commemoratio-omnium-fidelium-defunctorum-missa-i-sequentia\.w016$/
+	);
+
+	// A link to either constituent opens the same construction. Because the
+	// visible target is one unit, tapping it again also closes either link.
+	await page.goto(`${sequence}?w=commemoratio-omnium-fidelium-defunctorum-missa-i-sequentia.w015`);
+	await expect(page.locator('aside .form')).toHaveText('est futúrus');
+	await target.click();
+	await expect(page.locator(panel)).toHaveCount(0);
+	await noWordInTheAddress(page);
+
+	// A shared idiomatic phrase receives the same interaction without being
+	// mislabeled as an auxiliary construction.
+	await page.goto(
+		`${sequence}?w=commemoratio-omnium-fidelium-defunctorum-missa-i-postcommunio.w020`
+	);
+	await expect(page.locator('aside .form')).toHaveText('fácias esse');
+	await expect(page.locator('aside .construction-title')).toHaveText(['fácias', 'esse']);
+	await expect(page.locator('aside .alignment')).toHaveText(
+		'Wyrazy „fácias esse” tworzą tu jedną całość znaczeniową, oddaną w przekładzie słowo po słowie jako „uczynił”.'
+	);
+
+	await page.goto(
+		`/app/en/formularium/commemoratio-omnium-fidelium-defunctorum?w=commemoratio-omnium-fidelium-defunctorum-missa-i-sequentia.w016`
+	);
+	await expect(page.locator('aside .gloss')).toHaveText('shall be');
+	await expect(page.locator('aside .alignment')).toHaveText(
+		'Est functions here as an auxiliary verb, while futúrus is a future active participle. The whole expression is rendered in English as “shall be”.'
+	);
+});
+
+test('shared constructions use the same panel in Ordo Missae', async ({ page }) => {
+	await page.goto('/app/pl/ordo/catechumenorum?w=credo.w103');
+	await expect(page.locator('aside .form')).toHaveText('ventúrus est');
+	await expect(page.locator('aside .construction-title')).toHaveText(['ventúrus', 'est']);
+	await expect(page.locator('aside .construction-card')).toHaveCount(2);
+});
+
 test('opening focus does not ring the whole sheet', async ({ page }) => {
 	await page.goto(PATER);
 	await page.locator('#w008').focus();

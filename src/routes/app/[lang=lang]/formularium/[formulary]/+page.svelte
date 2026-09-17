@@ -17,7 +17,7 @@
 	import { offersMassFormChoice, offersRoleChoice } from '$lib/reading-settings';
 	import { textAnchor } from '$lib/text-anchor';
 	import { pageUrl } from '$lib/url';
-	import { wordPanel } from '$lib/wordpanel.svelte';
+	import { wordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
 
 	let { data } = $props();
 	const lang = $derived(data.lang as Lang);
@@ -83,11 +83,8 @@
 	});
 
 	const picked = $derived(panel.id ? (wordsById.get(panel.id) ?? null) : null);
-	const pickedGloss = $derived(picked ? (picked.gloss.words[picked.word.id] ?? null) : null);
-	const pickedAnalysis = $derived(
-		picked
-			? (picked.word.analysis ?? picked.doc.analysis_defaults_words ?? picked.doc.analysis_defaults)
-			: null
+	const pickedDetails = $derived(
+		picked ? wordPanelSelection(picked.word, picked.doc, picked.gloss) : null
 	);
 
 	function citedFor(slug: string): string[] {
@@ -203,8 +200,7 @@
 	{/if}
 	<SelectedWordPanel
 		word={picked?.word ?? null}
-		gloss={pickedGloss}
-		analysis={pickedAnalysis}
+		details={pickedDetails}
 		lex={data.lex}
 		{lang}
 		onclose={panel.close}

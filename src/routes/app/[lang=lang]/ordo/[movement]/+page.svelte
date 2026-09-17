@@ -3,6 +3,7 @@
 	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
 	import { arrowNav } from '$lib/arrow-nav';
 	import HelpLevels, { initialHelp } from '$lib/components/HelpLevels.svelte';
+	import ContentLoader from '$lib/components/ContentLoader.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import Pager from '$lib/components/Pager.svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
@@ -15,7 +16,7 @@
 	import { role, showsWords } from '$lib/role.svelte';
 	import { ribbon } from '$lib/ribbon.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
-	import { wordPanel } from '$lib/wordpanel.svelte';
+	import { wordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
 	import { proper } from '$lib/proper.svelte';
 	import DayPicker from '$lib/components/DayPicker.svelte';
 	import { dayHref } from '$lib/proper.svelte';
@@ -159,12 +160,9 @@
 	const pickedEntry = $derived(
 		picked ? (inlined.find((i) => i.slug === picked.slug)?.entry ?? null) : null
 	);
-	const pickedGloss = $derived(
-		picked && pickedEntry ? (pickedEntry.gloss.words[picked.word.id] ?? null) : null
-	);
-	const pickedAnalysis = $derived(
-		picked
-			? (picked.word.analysis ?? picked.doc.analysis_defaults_words ?? picked.doc.analysis_defaults)
+	const pickedDetails = $derived(
+		picked && pickedEntry
+			? wordPanelSelection(picked.word, pickedEntry.doc, pickedEntry.gloss)
 			: null
 	);
 
@@ -221,7 +219,10 @@
 		</div>
 	</header>
 
-	<main class:panel-open={picked !== null || panel.keepPad}>
+	{#if hasProper && proper.loading}
+		<span class="sr-only" role="status" aria-live="polite">{msgs.dayLoading}</span>
+	{/if}
+	<main class:panel-open={picked !== null || panel.keepPad} aria-busy={hasProper && proper.loading}>
 		{#each movement?.entries ?? [] as e, idx (e.id)}
 			{@const bodies = bodiesFor(e)}
 			{@const entry = bodies[0]}
@@ -235,7 +236,8 @@
 				<p class="silent-run smallcaps">{msgs.quietCollapsed}</p>
 			{/if}
 			{@const revealed = !!entry && !words && !!unfolded[e.id]}
-			<section class="part" class:folded class:revealed>
+			{@const partLoading = e.kind === 'proper' && proper.loading}
+			<section class="part" class:folded class:revealed class:loading={partLoading}>
 				{#if folded}
 					<!-- A prayer the reader is not saying costs ONE LINE, not a
 					     card: title, what is happening, and the way in. Twelve of
@@ -278,7 +280,11 @@
 						{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
 					</p>
 				{/if}
-				{#if entry && (words || unfolded[e.id])}
+				{#if partLoading}
+					<div class="part-loading">
+						<ContentLoader variant="text" />
+					</div>
+				{:else if entry && (words || unfolded[e.id])}
 					<div class="part-text">
 						<!-- One slot can hold more than one text: the chant between
 						     the readings is gradual AND alleluia, and in Lent a
@@ -320,8 +326,7 @@
 
 	<SelectedWordPanel
 		word={picked?.word ?? null}
-		gloss={pickedGloss}
-		analysis={pickedAnalysis}
+		details={pickedDetails}
 		lex={mergedLex}
 		{lang}
 		onclose={panel.close}
@@ -530,6 +535,11 @@
 		   the first rubric's margin collapses up to this same number, and
 		   in the bilingual grid (which collapses nothing) the edge children
 		   defer to it (TextBody zeroes the grid's first top margin) */
+		margin-top: calc(var(--reading) * (1 + var(--gloss-gap)));
+	}
+
+	.part-loading {
+		min-height: 4.3rem;
 		margin-top: calc(var(--reading) * (1 + var(--gloss-gap)));
 	}
 

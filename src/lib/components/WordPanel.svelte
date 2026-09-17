@@ -4,8 +4,9 @@
 	import Sheet from '$lib/components/Sheet.svelte';
 	import WordCard from '$lib/components/WordCard.svelte';
 	import WordIdentity from '$lib/components/WordIdentity.svelte';
-	import type { Analysis, LemmaEntry, SenseEntry, Word, WordGloss } from '$lib/corpus';
+	import type { Analysis, Lexicon, Word, WordGloss } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
+	import type { WordConstruction } from '$lib/word-construction';
 
 	let {
 		word,
@@ -15,15 +16,17 @@
 		lang,
 		onclose,
 		onnavigate,
+		construction = null,
 		inline = false
 	}: {
 		word: Word;
 		gloss: WordGloss | null;
 		analysis: Analysis;
-		lex: { lemmata: Record<string, LemmaEntry>; senses: Record<string, SenseEntry> };
+		lex: Lexicon;
 		lang: Lang;
 		onclose?: () => void;
 		onnavigate: (id: string) => void;
+		construction?: WordConstruction | null;
 		/** The landing keeps the panel open as part of the page; every other
 		 * surface uses the dismissible bottom-sheet placement. */
 		inline?: boolean;
@@ -31,7 +34,12 @@
 </script>
 
 {#snippet lead()}
-	<WordIdentity form={word.form} {lang} level={2} />
+	<WordIdentity
+		form={construction ? construction.parts.map((part) => part.word.form).join(' ') : word.form}
+		{lang}
+		level={2}
+		showPronunciation={!construction}
+	/>
 {/snippet}
 
 <!-- the reading page pads its foot to this height so the tapped word is
@@ -39,13 +47,13 @@
 <Sheet
 	{lang}
 	{onclose}
-	label={M[lang].panelAria}
+	label={construction ? M[lang].constructionPanelAria : M[lang].panelAria}
 	extra={inline ? 'panel word-panel-inline' : 'panel'}
 	max="45vh"
 	{lead}
 	{inline}
 >
 	<div class="word-analysis">
-		<WordCard {word} {gloss} {analysis} {lex} {lang} {onnavigate} />
+		<WordCard {word} {gloss} {analysis} {lex} {lang} {onnavigate} {construction} />
 	</div>
 </Sheet>

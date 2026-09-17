@@ -97,6 +97,14 @@ test('the word panel meets WCAG 2.1 AA, open and interactive', async ({ page }) 
 	expect(await violations(page), 'reading page with the word panel open').toEqual([]);
 });
 
+test('a shared construction panel meets WCAG 2.1 AA with both analyses open', async ({ page }) => {
+	await page.goto(
+		'/app/pl/formularium/commemoratio-omnium-fidelium-defunctorum?w=commemoratio-omnium-fidelium-defunctorum-missa-i-sequentia.w016'
+	);
+	await expect(page.locator('aside .construction-card')).toHaveCount(2);
+	expect(await violations(page), 'shared construction panel').toEqual([]);
+});
+
 test('search meets WCAG 2.1 AA with all result groups open', async ({ page }) => {
 	await page.goto('/app/pl/search');
 	await page.getByRole('searchbox').fill('Pater');

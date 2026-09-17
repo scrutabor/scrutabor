@@ -188,6 +188,12 @@ export interface SenseEntry {
 	analysis?: Analysis;
 }
 
+/** The page-sized dictionary subset carried beside rendered texts. */
+export interface Lexicon {
+	lemmata: Record<string, LemmaEntry>;
+	senses: Record<string, SenseEntry>;
+}
+
 type JsonModule = { default: unknown };
 type JsonImport = () => Promise<JsonModule>;
 
@@ -416,7 +422,7 @@ export async function loadSenses(language: Lang): Promise<Record<string, SenseEn
 export async function narrowLexicon(
 	docs: Iterable<TextDocument>,
 	language: Lang
-): Promise<{ lemmata: Record<string, LemmaEntry>; senses: Record<string, SenseEntry> }> {
+): Promise<Lexicon> {
 	const languageSenses = await loadSenses(language);
 	const lemmata: Record<string, LemmaEntry> = {};
 	const senses: Record<string, SenseEntry> = {};

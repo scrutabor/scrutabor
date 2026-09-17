@@ -10,6 +10,7 @@
 	import WordPanel from '$lib/components/WordPanel.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { bindProse } from '$lib/polish';
+	import { constructionForWord } from '$lib/word-construction';
 
 	let { data } = $props();
 	const lang = $derived(data.lang as Lang);
@@ -37,6 +38,9 @@
 		selWord && doc
 			? (selWord.analysis ?? doc.analysis_defaults_words ?? doc.analysis_defaults)
 			: null
+	);
+	const selConstruction = $derived(
+		selWord && doc && gloss ? constructionForWord(doc, gloss, selWord.id) : null
 	);
 
 	interface Copy {
@@ -270,6 +274,7 @@
 							word={selWord}
 							gloss={selGloss}
 							analysis={selAnalysis}
+							construction={selConstruction}
 							lex={data.specimen.lex}
 							{lang}
 							inline

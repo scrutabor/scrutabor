@@ -121,6 +121,19 @@ test('a newly completed fixed feast opens directly from its date', async ({ page
 	await expect(page.locator('.picker.day .state')).toHaveCount(0);
 });
 
+test('the corrected Saint Matthew introit is what the Ordo artifact renders', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	await page.goto(
+		'/app/pl/ordo/catechumenorum?dies=2026-09-21&w=sancti-matthaei-apostoli-et-evangelistae-introitus.w062'
+	);
+	const introit = page.locator('#sancti-matthaei-apostoli-et-evangelistae-introitus-s01');
+	await expect(introit).toContainText('Noli');
+	await expect(introit).not.toContainText('Allelúia');
+	await expect(
+		page.locator('[id="sancti-matthaei-apostoli-et-evangelistae-introitus.w062"]')
+	).toHaveCount(0);
+});
+
 test('Christmas Eve and the octave day open directly from their dates', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo/catechumenorum');
@@ -520,8 +533,13 @@ test('a slow day still says it is loading @online', async ({ page }) => {
 	await page.goto('/app/en/ordo/catechumenorum');
 	await settled(page);
 	await pickFormulary(page, DAY);
+	const main = page.locator('main');
+	await expect(main).toHaveAttribute('aria-busy', 'true');
+	await expect(main.locator('[data-content-loader="text"]')).toHaveCount(5);
 	await expect(page.locator('.picker.day .state')).toBeVisible();
 	await expect(page.locator('.picker.day .state')).toBeHidden({ timeout: 10_000 });
+	await expect(main).toHaveAttribute('aria-busy', 'false');
+	await expect(main.locator('[data-content-loader="text"]')).toHaveCount(0);
 });
 
 test('a corrected pick is not overtaken by the first one @online', async ({ page }) => {

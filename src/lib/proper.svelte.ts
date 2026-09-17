@@ -16,10 +16,10 @@
 // remembered all along. The URL still wins where it speaks: a link someone
 // was sent names a day on purpose, and that day is what they must see.
 
-import { browser } from '$app/environment';
+import { browser, dev } from '$app/environment';
 import { readStored, writeStored } from '$lib/storage';
 import { localDay } from '$lib/proper-local';
-import { artifactPath, componentApplies, dayByCalendarKey, dayById } from '$lib/proprium';
+import { artifactRequestPath, componentApplies, dayByCalendarKey, dayById } from '$lib/proprium';
 import { formularyExists } from '$lib/kalendarium';
 import type { Lang } from '$lib/i18n';
 import type { TextBibliographyEvidence } from '$lib/bibliography';
@@ -249,6 +249,11 @@ export async function chooseDay(
 	// the canonical default before caching/loading.
 	next = selected.id;
 	day = next;
+	// A new heading must never sit over the previous day's prayers while its
+	// artifact is still in flight. Clear without reading the reactive payload:
+	// chooseDay is called inside the picker's effect, and reading it here would
+	// make that effect depend on the response and replay the choice on arrival.
+	payload = null;
 	const key = `${lang}/${next}`;
 	const already = held[key];
 	if (already) {
@@ -289,7 +294,7 @@ export async function chooseDay(
 async function load(day: string, lang: Lang): Promise<ProperPayload> {
 	const here = await localDay(day, lang);
 	if (here) return here as ProperPayload;
-	const path = artifactPath(day, lang);
+	const path = artifactRequestPath(day, lang, dev);
 	if (!path) throw new Error('unknown formulary');
 	// Bounded: a request that never answers would otherwise leave the
 	// loading notice up forever, with re-picking as the only way out.

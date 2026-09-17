@@ -53,15 +53,35 @@
 	// edit can never churn the book's offline cache and a landing visit
 	// never installs anything. The worker file itself stays at the origin
 	// root (the build puts it there); narrowing its scope is allowed,
-	// widening would not be. Not in dev — the worker stands aside there
-	// anyway — and never from a downloaded folder, where there is no
-	// origin to register against.
+	// widening would not be. In dev the same URL serves a tiny neutral worker:
+	// that lets localhost replace a production worker left behind by an earlier
+	// preview, rather than letting its cache impersonate the current Vite app.
+	// Never register from a downloaded folder, where there is no origin.
 	$effect(() => {
-		if (dev || !('serviceWorker' in navigator)) return;
+		if (!('serviceWorker' in navigator)) return;
 		if (!/^https?:$/.test(location.protocol)) return;
 
 		const serviceWorkers = navigator.serviceWorker;
 		const hadController = !!serviceWorkers.controller;
+
+		if (dev) {
+			const onControllerChange = () => {
+				// A stale production worker has just yielded to the neutral dev
+				// worker. Reload once so every lazy module comes from Vite too.
+				if (hadController) location.reload();
+			};
+			serviceWorkers.addEventListener('controllerchange', onControllerChange);
+			void serviceWorkers
+				// A distinct script URL makes this an immediate update even when
+				// the browser would throttle a same-URL worker check for 24 hours.
+				.register('/service-worker.js?dev', { scope: '/app/', updateViaCache: 'none' })
+				.then((registration) => registration.update())
+				.catch(() => {
+					// A browser that refuses workers still gets the ordinary dev app.
+				});
+			return () => serviceWorkers.removeEventListener('controllerchange', onControllerChange);
+		}
+
 		let registration: ServiceWorkerRegistration | null = null;
 		let installing: ServiceWorker | null = null;
 		let disposed = false;

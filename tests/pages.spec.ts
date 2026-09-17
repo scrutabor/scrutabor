@@ -141,6 +141,28 @@ test('lemma page shows head, senses, derivatives and concordance', async ({ page
 	await expect(page.locator('a[href="/app/pl/orationes/pater-noster?w=w022"]')).toHaveText('Panem');
 });
 
+test('the lemma page reserves its shape while the entry is loading @online', async ({ page }) => {
+	let release!: () => void;
+	const held = new Promise<void>((resolve) => (release = resolve));
+	await page.route('**/_app/immutable/corpus/lemma-data.*.js', async (route) => {
+		await held;
+		await route.continue();
+	});
+
+	await page.goto('/app/pl/lemma?l=panis');
+	const loader = page.locator('[data-content-loader="lemma"]');
+	await expect(loader).toBeVisible();
+	await expect(page.locator('main')).toHaveAttribute('aria-busy', 'true');
+	await expect(page.getByRole('status')).toHaveText('Wczytywanie hasła…');
+	const reserved = await loader.boundingBox();
+	expect(reserved).not.toBeNull();
+	expect(reserved!.height).toBeGreaterThan(300);
+
+	release();
+	await expect(page.locator('h1')).toHaveText('panis');
+	await expect(loader).toHaveCount(0);
+});
+
 test('lemma summary shares the word panel hierarchy without becoming a panel', async ({ page }) => {
 	await page.goto('/app/pl/lemma?l=scrutor');
 	const identity = page.locator('main > .identity');
@@ -681,6 +703,32 @@ test('the audited bibliography groups sources by role and loads exact uses on di
 		'Scripture, language, and scholarship'
 	]);
 	await expect(page.locator('.source details[open]')).toHaveCount(0);
+});
+
+test('bibliography details show a reserved loader while their evidence is fetched @online', async ({
+	page
+}) => {
+	await page.goto('/app/pl/bibliographia');
+	let release!: () => void;
+	const held = new Promise<void>((resolve) => (release = resolve));
+	await page.route('**/_app/immutable/corpus/corpus-texts*.js', async (route) => {
+		await held;
+		await route.continue();
+	});
+	const source = page
+		.locator('details', {
+			hasText: 'Breviarium Romanum ex decreto SS. Concilii Tridentini restitutum'
+		})
+		.first();
+	await source.locator('summary').click();
+	const body = source.locator('.source-body');
+	await expect(body).toHaveAttribute('aria-busy', 'true');
+	await expect(body.locator('[data-content-loader="source"]')).toBeVisible();
+	await expect(source.getByRole('status')).toHaveText('Wczytywanie użyć źródła…');
+
+	release();
+	await expect(source.locator('.evidence-group').first()).toBeVisible();
+	await expect(body).toHaveAttribute('aria-busy', 'false');
 });
 
 test('the edition page explains the sources and carries the working label', async ({ page }) => {

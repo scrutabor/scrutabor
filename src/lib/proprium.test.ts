@@ -7,6 +7,7 @@ import {
 	SLOT_OF,
 	artifactPack,
 	artifactPath,
+	artifactRequestPath,
 	componentApplies,
 	dayById,
 	formularyPacks,
@@ -116,6 +117,9 @@ describe('lookups', () => {
 	it('builds the artifact path the endpoint actually serves', () => {
 		expect(artifactPack('dominica-i-adventus')).toBe('01');
 		expect(artifactPath('dominica-i-adventus', 'pl')).toBe('/artifacts/proprium/pl/pack-01.json');
+		expect(artifactRequestPath('dominica-i-adventus', 'pl', true)).toBe(
+			'/artifacts/proprium/pl/pack-01.json?dev=1'
+		);
 		expect(artifactPath('dominica-nulla', 'pl')).toBe('');
 	});
 

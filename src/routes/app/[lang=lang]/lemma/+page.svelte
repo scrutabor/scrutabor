@@ -1,5 +1,6 @@
 <script lang="ts">
 	import AnalysisRow from '$lib/components/AnalysisRow.svelte';
+	import ContentLoader from '$lib/components/ContentLoader.svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import WordIdentity from '$lib/components/WordIdentity.svelte';
@@ -15,17 +16,30 @@
 	>;
 	let payload = $state<LemmaPayload | null>(null);
 	let loading = $state(true);
+	let failed = $state(false);
 	let request = 0;
 
 	async function loadEntry() {
 		const mine = ++request;
 		loading = true;
+		failed = false;
 		payload = null;
 		const lemma = pageUrl().searchParams.get('l') ?? '';
-		const found = lemma ? await (await import('$lib/lemma-data')).lemmaData(lang, lemma) : null;
-		if (mine !== request) return;
-		payload = found;
-		loading = false;
+		try {
+			const found = lemma ? await (await import('$lib/lemma-data')).lemmaData(lang, lemma) : null;
+			if (mine === request) payload = found;
+		} catch {
+			if (mine === request) failed = true;
+		} finally {
+			if (mine === request) loading = false;
+		}
+	}
+
+	function retryEntry() {
+		// Browser module failures may be cached for this document, so repeating
+		// the same import is not a dependable retry. A reload preserves ?l= and
+		// starts with a fresh module graph.
+		location.reload();
 	}
 
 	$effect(() => {
@@ -51,7 +65,17 @@
 	<PageNav {lang} />
 
 	{#if loading}
-		<main><p class="notfound" aria-live="polite">{msgs.working}</p></main>
+		<span class="sr-only" role="status" aria-live="polite">{msgs.lemmaLoading}</span>
+		<main aria-busy="true">
+			<ContentLoader variant="lemma" />
+		</main>
+	{:else if failed}
+		<main>
+			<div class="load-failure" role="alert">
+				<p>{msgs.lemmaLoadFailed}</p>
+				<button type="button" onclick={retryEntry}>{msgs.searchRetry}</button>
+			</div>
+		</main>
 	{:else if !entry}
 		<main><p class="notfound">{msgs.notFound}</p></main>
 	{:else}
@@ -182,6 +206,28 @@
 		margin: 3rem 0;
 		text-align: center;
 		color: var(--ink-soft);
+	}
+
+	.load-failure {
+		margin: 3rem 0;
+		text-align: center;
+		color: var(--ink-soft);
+	}
+
+	.load-failure p {
+		margin: 0;
+	}
+
+	.load-failure button {
+		margin-top: 0.5rem;
+		padding: 0;
+		border: 0;
+		background: none;
+		color: var(--rubric);
+		font: inherit;
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
+		cursor: pointer;
 	}
 
 	.external {

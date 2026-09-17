@@ -16,7 +16,7 @@
 	import { prayerForm } from '$lib/prayer-form.svelte';
 	import { openPage } from '$lib/page-navigation';
 	import { ribbon } from '$lib/ribbon.svelte';
-	import { docWordPanel } from '$lib/wordpanel.svelte';
+	import { docWordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
 	import {
 		formatSegmentSelection,
@@ -312,8 +312,9 @@
 	});
 
 	let selectedWord = $derived(wp.word);
-	let selectedGloss = $derived(wp.gloss);
-	let selectedAnalysis = $derived(wp.analysis);
+	let selectedDetails = $derived(
+		selectedWord ? wordPanelSelection(selectedWord, doc, gloss) : null
+	);
 </script>
 
 <svelte:window
@@ -443,8 +444,7 @@
 
 		<SelectedWordPanel
 			word={selectedWord}
-			gloss={selectedGloss}
-			analysis={selectedAnalysis}
+			details={selectedDetails}
 			lex={data.lex}
 			{lang}
 			onclose={panel.close}

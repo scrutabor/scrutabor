@@ -38,7 +38,9 @@ test('one target gloss spans a multiword Latin construction', async ({ page }) =
 		await setHelp(page, 1);
 		const group = page.locator('.token-group', { hasText: 'est futúrus' });
 		await expect(group).toHaveCount(1);
-		await expect(group.locator('button.word')).toHaveCount(2);
+		const targetButton = group.locator(':scope > button.word-construction');
+		await expect(targetButton).toHaveCount(1);
+		await expect(group.locator('button.word')).toHaveCount(1);
 		await expect(group.locator('rt')).toHaveText(target);
 		await page.evaluate(() => document.fonts.ready.then(() => true));
 
@@ -64,7 +66,7 @@ test('one target gloss spans a multiword Latin construction', async ({ page }) =
 		const before = await geometry();
 		expect(Math.abs(before.sharedTop - before.beforeTop)).toBeLessThan(0.75);
 		expect(Math.abs(before.sharedTop - before.afterTop)).toBeLessThan(0.75);
-		await group.locator('button.word', { hasText: 'futúrus' }).hover();
+		await targetButton.hover();
 		expect(await geometry(), 'hover changes no line or annotation geometry').toEqual(before);
 		const wash = await group.evaluate((element) => {
 			const shared = element.querySelector('rt')!;
@@ -1364,6 +1366,56 @@ test('the highlight covers the whole of a raised initial', async ({ page }) => {
 		expect(cover!.top, `${letter} pokes out of the top of its highlight`).toBeGreaterThan(0);
 		expect(cover!.bottom, `${letter} pokes out of the bottom of its highlight`).toBeGreaterThan(0);
 	}
+});
+
+test('a later word in an initialled verse does not inherit the initial highlight', async ({
+	page
+}) => {
+	// The opening O needs a taller selection surface. Sancto is several wrapped
+	// lines later in that same verse and must keep an ordinary surface: inheriting
+	// the O's reservation made its hover/selection wash cover the gloss above.
+	await page.setViewportSize({ width: 1440, height: 900 });
+	const id = 'sancti-matthaei-apostoli-et-evangelistae-introitus.w032';
+	await page.goto(`/app/pl/formularium/sancti-matthaei-apostoli-et-evangelistae?w=${id}`);
+	await setHelp(page, 1);
+	const selected = page.locator(`[id="${id}"]`);
+	await expect(selected).toHaveClass(/selected/);
+
+	const geometry = await selected.evaluate((word) => {
+		const token = word.closest('.token')!;
+		const verse = token.closest('.verse')!;
+		const tokenBox = token.getBoundingClientRect();
+		const wash = getComputedStyle(token, '::before');
+		const previousTokens = [...verse.querySelectorAll('.token')].filter(
+			(candidate) => candidate.getBoundingClientRect().top < tokenBox.top - 2
+		);
+		const previousLineTop = Math.max(
+			...previousTokens.map((candidate) => candidate.getBoundingClientRect().top)
+		);
+		const previousGlossBottom = Math.max(
+			...previousTokens
+				.filter(
+					(candidate) => Math.abs(candidate.getBoundingClientRect().top - previousLineTop) < 2
+				)
+				.flatMap((candidate) => [...candidate.querySelectorAll('rt')])
+				.map((annotation) => annotation.getBoundingClientRect().bottom)
+		);
+		return {
+			verseHasInitial: verse.querySelector('.initial') !== null,
+			wordHasInitial: token.querySelector('.initial') !== null,
+			washTop: tokenBox.top + Number.parseFloat(wash.top),
+			previousGlossBottom,
+			wordInset: Number.parseFloat(wash.top)
+		};
+	});
+
+	expect(geometry.verseHasInitial).toBe(true);
+	expect(geometry.wordHasInitial).toBe(false);
+	expect(geometry.wordInset, 'the later word inherited the initial reservation').toBeGreaterThan(0);
+	expect(
+		geometry.washTop,
+		'the later word highlight reaches visibly into the gloss above'
+	).toBeGreaterThanOrEqual(geometry.previousGlossBottom - 1.5);
 });
 
 test('a rubric is set apart from the prayer it interrupts', async ({ page }) => {

@@ -1,12 +1,12 @@
 <script lang="ts">
 	import WordPanel from '$lib/components/WordPanel.svelte';
-	import type { Analysis, LemmaEntry, SenseEntry, Word, WordGloss } from '$lib/corpus';
+	import type { Lexicon, Word } from '$lib/corpus';
 	import type { Lang } from '$lib/i18n';
+	import type { WordPanelSelection } from '$lib/wordpanel.svelte';
 
 	let {
 		word,
-		gloss,
-		analysis,
+		details,
 		lex,
 		lang,
 		onclose,
@@ -14,9 +14,8 @@
 		idPrefix = ''
 	}: {
 		word: Word | null;
-		gloss: WordGloss | null;
-		analysis: Analysis | null;
-		lex: { lemmata: Record<string, LemmaEntry>; senses: Record<string, SenseEntry> };
+		details: WordPanelSelection | null;
+		lex: Lexicon;
 		lang: Lang;
 		onclose?: () => void;
 		onnavigate: (id: string) => void;
@@ -24,14 +23,15 @@
 	} = $props();
 </script>
 
-{#if word && analysis}
+{#if word && details}
 	<WordPanel
 		{word}
-		{gloss}
-		{analysis}
+		gloss={details.gloss}
+		analysis={details.analysis}
 		{lex}
 		{lang}
 		{onclose}
+		construction={details.construction}
 		onnavigate={(id) => onnavigate(idPrefix ? `${idPrefix}.${id}` : id)}
 	/>
 {/if}

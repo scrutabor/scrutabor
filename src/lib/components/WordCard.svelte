@@ -5,10 +5,11 @@
 	// landing page; there is deliberately only one information layout.
 	import AnalysisRow from '$lib/components/AnalysisRow.svelte';
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
-	import type { Analysis, LemmaEntry, SenseEntry, Word, WordGloss } from '$lib/corpus';
+	import type { Analysis, Lexicon, Word, WordGloss } from '$lib/corpus';
 	import { lemmaHref } from '$lib/lemma-url';
 	import { M, type Lang } from '$lib/i18n';
 	import { GENDER_MARK, describeAnalysisParts, describeMorphParts } from '$lib/morph';
+	import { describeConstruction, type WordConstruction } from '$lib/word-construction';
 
 	let {
 		word,
@@ -16,16 +17,18 @@
 		analysis,
 		lex,
 		lang,
-		onnavigate
+		onnavigate,
+		construction = null
 	}: {
 		word: Word;
 		gloss: WordGloss | null;
 		analysis: Analysis;
 		/** Only the entries this page's words need — the whole dictionary is
 		 * never sent to the browser (see the route's +page.server.ts). */
-		lex: { lemmata: Record<string, LemmaEntry>; senses: Record<string, SenseEntry> };
+		lex: Lexicon;
 		lang: Lang;
 		onnavigate: (id: string) => void;
+		construction?: WordConstruction | null;
 	} = $props();
 
 	// Cross-references in contextual explanations are authored as „form” (wNNN…)
@@ -47,56 +50,60 @@
 		return parts;
 	}
 
-	let explanationParts = $derived(gloss?.explanation ? parseExplanation(gloss.explanation) : []);
 	let alignmentText = $derived.by(() => {
 		const alignment = gloss?.alignment;
 		if (!alignment) return undefined;
 		if (alignment.gloss) return M[lang].sharedGloss(alignment.forms.join(' '), alignment.gloss);
 		return alignment.reason ? M[lang].zeroGloss[alignment.reason] : undefined;
 	});
-
-	// The per-lemma layer: dictionary head + gender in the header, senses and
-	// an optional lemma-level note below the contextual gloss. The corpus
-	// checks guarantee an entry for every lemma; fall back to the bare lemma
-	// so a stale snapshot degrades visibly instead of crashing.
-	let lemmaEntry = $derived(lex.lemmata[word.lemma]);
-	let senseEntry = $derived(lex.senses[word.lemma]);
 </script>
 
-{#snippet context()}
-	{#if gloss}
-		{#if gloss.gloss}<p class="gloss">{gloss.gloss}</p>{/if}
-		{#if alignmentText}<p class="alignment">{alignmentText}</p>{/if}
-		{#if gloss.explanation}
-			<p class="explanation">
-				{#each explanationParts as part, i (i)}
-					{#if 'id' in part}
-						<button class="xref" onclick={() => onnavigate(part.id)}
-							>{part.open}<span lang="la">{part.form}</span>”</button
-						>
-					{:else}
-						{part.text}
-					{/if}
-				{/each}
-			</p>
-		{/if}
+{#snippet details(itemGloss: WordGloss)}
+	{#if itemGloss.explanation}
+		{@const explanationParts = parseExplanation(itemGloss.explanation)}
+		<p class="explanation">
+			{#each explanationParts as part, i (i)}
+				{#if 'id' in part}
+					<button class="xref" onclick={() => onnavigate(part.id)}
+						>{part.open}<span lang="la">{part.form}</span>”</button
+					>
+				{:else}
+					{part.text}
+				{/if}
+			{/each}
+		</p>
+		<SourceNotes citations={itemGloss.explanation_citations} {lang} />
 	{/if}
-	{#if gloss?.explanation}
-		<SourceNotes citations={gloss.explanation_citations} {lang} />
-	{/if}
-	{#if gloss?.note}
+	{#if itemGloss.note}
 		<!-- The editorial note on this word in this place. Every disputed
 		     reading carries one; a panel that reports "disputed" in the
 		     verification line and withholds the reason is exactly the
 		     edition the corpus doctrine refuses to be. -->
-		<p class="note">{gloss.note}</p>
+		<p class="note">{itemGloss.note}</p>
 	{/if}
 {/snippet}
 
-{#snippet entry()}
+{#snippet context()}
+	{#if construction}
+		<p class="gloss">{construction.gloss}</p>
+		<p class="alignment">{describeConstruction(construction, lang)}</p>
+	{:else if gloss}
+		{#if gloss.gloss}
+			<p class="gloss">{gloss.gloss}</p>
+		{/if}
+		{#if alignmentText}
+			<p class="alignment">{alignmentText}</p>
+		{/if}
+		{@render details(gloss)}
+	{/if}
+{/snippet}
+
+{#snippet entry(item: Word)}
+	{@const lemmaEntry = lex.lemmata[item.lemma]}
+	{@const senseEntry = lex.senses[item.lemma]}
 	<p class="head">
-		<a href={lemmaHref(lang, word.lemma)} title={M[lang].lemmaPageHint}
-			><i lang="la">{lemmaEntry?.head ?? word.lemma}</i>{#if lemmaEntry?.gender}&nbsp;<span
+		<a href={lemmaHref(lang, item.lemma)} title={M[lang].lemmaPageHint}
+			><i lang="la">{lemmaEntry?.head ?? item.lemma}</i>{#if lemmaEntry?.gender}&nbsp;<span
 					class="gender">{GENDER_MARK[lemmaEntry.gender]}</span
 				>{/if}</a
 		>{#if senseEntry}<span class="head-senses">— {senseEntry.senses.join(', ')}</span>{/if}
@@ -107,33 +114,77 @@
 	{/if}
 {/snippet}
 
-{#snippet grammar()}
+{#snippet grammar(item: Word)}
 	<p class="morph">
-		{#each describeMorphParts(word.morph, lang) as part, i (i)}{#if part.concept}<a
+		{#each describeMorphParts(item.morph, lang) as part, i (i)}{#if part.concept}<a
 					class="concept"
 					href="/app/{lang}/grammatica/{part.concept}">{part.text}</a
 				>{:else}{part.text}{/if}{/each}
 	</p>
 {/snippet}
 
-{#if gloss}
+{#if construction || gloss}
 	<section class="context-layer" aria-label={M[lang].wordContextLabel}>
 		{@render context()}
 	</section>
 {/if}
 
-<div class="layers">
-	<AnalysisRow label={M[lang].wordEntryLabel} id="word-entry-label">{@render entry()}</AnalysisRow>
-	<AnalysisRow label={M[lang].wordFormLabel} id="word-form-label">{@render grammar()}</AnalysisRow>
-	<div class="verification">
-		<p class="meta smallcaps">
-			{#each describeAnalysisParts(analysis, lang) as part, i (i)}{#if part.href}<a
-						href={part.href}
-						target={part.external ? '_blank' : undefined}
-						rel={part.external ? 'external noopener' : undefined}>{part.text}</a
-					>{:else}{part.text}{/if}{/each}
-		</p>
-	</div>
+<div class="layers" class:construction-layout={construction}>
+	{#if construction}
+		{#each construction.parts as part (part.word.id)}
+			<section class="construction-card" aria-labelledby={`construction-${part.word.id}-title`}>
+				<h3 class="construction-title" id={`construction-${part.word.id}-title`} lang="la">
+					{part.word.form}
+				</h3>
+				{#if part.gloss.explanation || part.gloss.note}
+					<div class="construction-context">{@render details(part.gloss)}</div>
+				{/if}
+				<div class="construction-layers">
+					<AnalysisRow
+						label={M[lang].wordEntryLabel}
+						id={`construction-${part.word.id}-entry-label`}
+						level={4}
+						first
+					>
+						{@render entry(part.word)}
+					</AnalysisRow>
+					<AnalysisRow
+						label={M[lang].wordFormLabel}
+						id={`construction-${part.word.id}-form-label`}
+						level={4}
+					>
+						{@render grammar(part.word)}
+					</AnalysisRow>
+					<div class="verification">
+						<p class="meta smallcaps">
+							{#each describeAnalysisParts(part.analysis, lang) as analysisPart, i (i)}{#if analysisPart.href}<a
+										href={analysisPart.href}
+										target={analysisPart.external ? '_blank' : undefined}
+										rel={analysisPart.external ? 'external noopener' : undefined}
+										>{analysisPart.text}</a
+									>{:else}{analysisPart.text}{/if}{/each}
+						</p>
+					</div>
+				</div>
+			</section>
+		{/each}
+	{:else}
+		<AnalysisRow label={M[lang].wordEntryLabel} id="word-entry-label"
+			>{@render entry(word)}</AnalysisRow
+		>
+		<AnalysisRow label={M[lang].wordFormLabel} id="word-form-label"
+			>{@render grammar(word)}</AnalysisRow
+		>
+		<div class="verification">
+			<p class="meta smallcaps">
+				{#each describeAnalysisParts(analysis, lang) as part, i (i)}{#if part.href}<a
+							href={part.href}
+							target={part.external ? '_blank' : undefined}
+							rel={part.external ? 'external noopener' : undefined}>{part.text}</a
+						>{:else}{part.text}{/if}{/each}
+			</p>
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -255,6 +306,36 @@
 		color: var(--ink);
 	}
 
+	.construction-card {
+		grid-column: 1 / -1;
+	}
+
+	.construction-card + .construction-card {
+		margin-top: 2.2rem;
+	}
+
+	.layers.construction-layout {
+		margin-top: 1.15rem;
+	}
+
+	.construction-title {
+		margin: 0 0 0.7rem;
+		color: var(--rubric);
+		font-size: 1.18rem;
+		font-weight: 600;
+		line-height: 1.1;
+	}
+
+	.construction-context {
+		margin: -0.1rem 0 0.8rem;
+	}
+
+	.construction-layers {
+		display: grid;
+		grid-template-columns: 4.4rem minmax(0, 1fr);
+		column-gap: 0.8rem;
+	}
+
 	.verification {
 		grid-column: 1 / -1;
 		margin: 0.8rem 0 0;
@@ -268,7 +349,8 @@
 	}
 
 	@media (max-width: 36rem) {
-		.layers {
+		.layers,
+		.construction-layers {
 			display: block;
 		}
 	}

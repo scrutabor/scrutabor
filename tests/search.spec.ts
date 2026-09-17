@@ -49,6 +49,27 @@ test('title, passage, and grammar results remain visibly separate', async ({ pag
 	await expect(page.locator('#search-titles + ul li').first()).toContainText('Ojcze nasz');
 });
 
+test('the first search shows a reserved result skeleton while the search engine loads @online', async ({
+	page
+}) => {
+	const field = await openSearchPage(page);
+	let release!: () => void;
+	const held = new Promise<void>((resolve) => (release = resolve));
+	await page.route('**/_app/immutable/corpus/search.*.js', async (route) => {
+		await held;
+		await route.continue();
+	});
+	await field.fill('Pater');
+	const results = page.locator('.search-page-results');
+	await expect(results).toHaveAttribute('aria-busy', 'true');
+	await expect(results.locator('[data-content-loader="search"]')).toBeVisible();
+	await expect(page.locator('#search-status')).toHaveText('szukam…');
+
+	release();
+	await expect(page.locator('#search-titles + ul')).toContainText('Ojcze nasz');
+	await expect(results).toHaveAttribute('aria-busy', 'false');
+});
+
 test('completed results remain visible until their replacement is ready', async ({ page }) => {
 	const field = await openSearchPage(page);
 	await field.fill('Pater');
@@ -56,8 +77,10 @@ test('completed results remain visible until their replacement is ready', async 
 	await expect(titles).toContainText('Ojcze nasz');
 
 	await field.fill('Duszo Chrystusowa');
+	await expect(page.locator('.search-page-results .update-progress')).toBeVisible();
 	await expect(titles).toContainText('Ojcze nasz');
 	await expect(titles).toContainText('Duszo Chrystusowa');
+	await expect(page.locator('.search-page-results .update-progress')).toHaveCount(0);
 });
 
 test('search is case-insensitive while results retain devotional capitalization', async ({
@@ -249,7 +272,7 @@ test('selecting a verse changes only paint and clears neighbouring glosses', asy
 test('a selected word and its selected line share exact vertical edges', async ({ page }) => {
 	await page.setViewportSize({ width: 1280, height: 720 });
 	for (const [kind, url] of [
-		['ordinary word', '/app/pl/orationes/angelus-domini?s=s01&w=w002'],
+		['ordinary word', '/app/pl/orationes/angelus-domini?s=s02&w=w008'],
 		['raised initial', '/app/pl/orationes/pater-noster?s=s01&w=w001']
 	] as const) {
 		for (const level of [0, 1, 2] as const) {

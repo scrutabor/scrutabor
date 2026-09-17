@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import ContentLoader from '$lib/components/ContentLoader.svelte';
 	import { M, type Lang } from '$lib/i18n';
 
 	let {
@@ -35,7 +36,10 @@
 	{pending ? msgs.searchLoading : failed ? msgs.searchFailed : ready ? msgs.searchCount(count) : ''}
 </p>
 
-<div class="results search-page-results" aria-busy={pending}>
+<div class="results search-page-results" class:updating={pending && ready} aria-busy={pending}>
+	{#if pending && ready}
+		<span class="update-progress" aria-hidden="true"><span></span></span>
+	{/if}
 	{#if failed}
 		<p class="empty">
 			{msgs.searchFailed}
@@ -44,7 +48,7 @@
 			{/if}
 		</p>
 	{:else if pending && !ready}
-		<p class="empty">{msgs.searchLoading}</p>
+		<ContentLoader variant="search" />
 	{:else if ready && empty}
 		<p class="empty">{msgs.searchNoResults}</p>
 	{:else if ready}
@@ -57,7 +61,33 @@
 
 <style>
 	.results.search-page-results {
+		position: relative;
 		padding-block: 0.35rem 3rem;
+	}
+
+	.results.updating > :not(.update-progress) {
+		opacity: 0.72;
+		transition: opacity 120ms ease;
+	}
+
+	.update-progress {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		inset-inline: 0;
+		height: 2px;
+		overflow: hidden;
+		border-radius: 999px;
+		background: var(--wash);
+	}
+
+	.update-progress span {
+		display: block;
+		width: 34%;
+		height: 100%;
+		border-radius: inherit;
+		background: var(--rubric);
+		animation: search-progress 1.15s ease-in-out infinite;
 	}
 
 	.empty {
@@ -82,5 +112,15 @@
 		font: inherit;
 		text-decoration: underline;
 		cursor: pointer;
+	}
+
+	@keyframes search-progress {
+		0% {
+			transform: translateX(-110%);
+		}
+
+		100% {
+			transform: translateX(305%);
+		}
 	}
 </style>

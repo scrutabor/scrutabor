@@ -10,9 +10,15 @@
 		level = 3,
 		first = false,
 		children
-	}: { label: string; id: string; level?: 2 | 3; first?: boolean; children: Snippet } = $props();
+	}: {
+		label: string;
+		id: string;
+		level?: 2 | 3 | 4;
+		first?: boolean;
+		children: Snippet;
+	} = $props();
 
-	const tag = $derived(level === 2 ? 'h2' : 'h3');
+	const tag = $derived(level === 2 ? 'h2' : level === 4 ? 'h4' : 'h3');
 </script>
 
 <section class="layer" class:first aria-labelledby={id}>

@@ -14,6 +14,7 @@ import {
 	type TextEntry
 } from './corpus';
 import { LANGS, type Lang } from './i18n';
+import { constructionForWord } from './word-construction';
 import manifest from './data/manifest.json';
 
 const LANGUAGES = LANGS;
@@ -74,6 +75,34 @@ describe('vendored corpus snapshot', () => {
 			const ids = allWords(text).map((word) => word.id);
 			expect(new Set(ids).size, key).toBe(ids.length);
 		}
+	});
+
+	it('resolves every shared visible gloss as one complete word construction', () => {
+		let groups = 0;
+		let expectedWords = 0;
+		let resolvedWords = 0;
+
+		for (const language of LANGUAGES) {
+			for (const [key, { text, gloss }] of Object.entries(TEXTS[language])) {
+				for (const segment of Object.values(gloss.segments)) {
+					for (const alignment of segment.alignments ?? []) {
+						if (!alignment.gloss || alignment.words.length < 2) continue;
+						groups += 1;
+						expectedWords += alignment.words.length;
+						for (const wordId of alignment.words) {
+							const construction = constructionForWord(text, gloss, wordId);
+							expect(construction, `${language}:${key}:${wordId}`).not.toBeNull();
+							expect(construction?.parts.map((part) => part.word.id)).toEqual(alignment.words);
+							expect(construction?.gloss).toBe(alignment.gloss);
+							resolvedWords += 1;
+						}
+					}
+				}
+			}
+		}
+
+		expect(groups).toBeGreaterThan(800);
+		expect(resolvedWords).toBe(expectedWords);
 	});
 
 	it('has a neutral lemma and a localized sense for every word a pack exposes', () => {

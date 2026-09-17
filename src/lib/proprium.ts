@@ -226,6 +226,19 @@ export function artifactPath(day: string, lang: Lang): string {
 	return pack ? `/artifacts/proprium/${lang}/pack-${pack}.json` : '';
 }
 
+/** The hosted artifact URL used by the reader.
+ *
+ * Production packs are immutable within an edition and may be cached for a
+ * week. Their route names are stable during development, however, so a
+ * browser that has seen one before must not mistake it for today's source.
+ * A distinct dev URL gets past any production response already held under
+ * the origin; the dev route itself answers it with `no-store`.
+ */
+export function artifactRequestPath(day: string, lang: Lang, development = false): string {
+	const path = artifactPath(day, lang);
+	return path && development ? `${path}?dev=1` : path;
+}
+
 /** What today is, as `dayToday` reports it. */
 export type Today = ReturnType<typeof dayToday>;
 

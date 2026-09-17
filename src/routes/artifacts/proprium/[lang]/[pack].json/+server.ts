@@ -4,6 +4,7 @@
 // adjacent formularies only changes the transport boundary: it cuts hundreds
 // of tiny hosted objects to a few dozen without turning a first visit into a
 // download of the whole missal.
+import { dev } from '$app/environment';
 import { properData } from '$lib/loaders';
 import { LANGS, type Lang } from '$lib/i18n';
 import { formularyPacks } from '$lib/proprium';
@@ -29,6 +30,10 @@ export const GET: RequestHandler = async ({ params }) => {
 	);
 	return json(
 		{ days: Object.fromEntries(loaded) },
-		{ headers: { 'cache-control': 'public, max-age=604800, immutable' } }
+		{
+			headers: {
+				'cache-control': dev ? 'no-store' : 'public, max-age=604800, immutable'
+			}
+		}
 	);
 };
