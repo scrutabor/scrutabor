@@ -695,9 +695,13 @@
 		cursor: pointer;
 	}
 
+	/* The neighbouring months' dates are quieter than the month's own, but
+	   they are dates a reader can choose, so their ink still clears AA
+	   (4.5:1) on the sheet: 84% of the soft ink measures 5.1:1 light and
+	   6.5:1 dark, where the former half-opacity gave 2.4:1 and 3.3:1.
+	   Guarded by the day-picker sweep in tests/a11y.spec.ts. */
 	.date-cell.outside {
-		color: var(--ink-soft);
-		opacity: 0.52;
+		color: color-mix(in srgb, var(--ink-soft) 84%, var(--surface));
 	}
 
 	.date-cell.today-date {
