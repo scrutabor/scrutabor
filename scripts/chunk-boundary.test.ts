@@ -92,11 +92,16 @@ describe('the corpus chunk boundary in the emitted build', () => {
 
 	it.skipIf(!measurable)('keeps the catalogue and formulary tables off ordinary pages', () => {
 		// The edition's manifests (every text of every language) and the
-		// formulary table are two chunks that grow with every corpus batch —
-		// three quarters of a megabyte between them at 1,091 texts. A prayer
-		// needs its own label and a grammar page its example links, and both
-		// are resolved at prerender so that neither page downloads the
-		// tables to print them. The catalog and search pages need them.
+		// formulary table grow with every corpus batch — three quarters of a
+		// megabyte between them at 1,091 texts. A prayer needs its own label
+		// and a grammar page its example links, and both are resolved at
+		// prerender so that neither page downloads the tables to print them.
+		// The catalog, search and Ordo pages need them. Held by CONTENT — a
+		// string that exists only in the root manifest and one only in the
+		// formulary table — and by a byte budget, because a bundler names its
+		// chunks as it likes.
+		const TABLE_MARKERS = ['languages/pl/manifest.json', 'unique_component_texts'];
+		const BUDGET = 400 * 1024;
 		const pages = [
 			'build/app/pl/ordinarium/credo.html',
 			'build/app/en/orationes/ave-maria.html',
@@ -105,10 +110,17 @@ describe('the corpus chunk boundary in the emitted build', () => {
 		];
 		for (const page of pages) {
 			const html = readFileSync(page, 'utf8');
-			const scripts = html.match(/_app\/immutable\/[a-z]+\/[\w.-]+\.js/g) ?? [];
+			const scripts = [...new Set(html.match(/_app\/immutable\/[a-z]+\/[\w.-]+\.js/g) ?? [])];
 			expect(scripts.length, `${page} names its scripts`).toBeGreaterThan(0);
-			const tables = scripts.filter((path) => /\/(corpus-metadata|proprium)\./.test(path));
-			expect(tables, `${page} carries the edition tables`).toEqual([]);
+			let bytes = 0;
+			for (const script of scripts) {
+				const text = readFileSync(join('build', script), 'utf8');
+				bytes += text.length;
+				for (const marker of TABLE_MARKERS) {
+					expect(text.includes(marker), `${page} carries ${marker} via ${script}`).toBe(false);
+				}
+			}
+			expect(bytes, `${page} script bytes`).toBeLessThanOrEqual(BUDGET);
 		}
 	});
 

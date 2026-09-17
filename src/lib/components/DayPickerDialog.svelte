@@ -701,6 +701,7 @@
 	   6.5:1 dark, where the former half-opacity gave 2.4:1 and 3.3:1.
 	   Guarded by the day-picker sweep in tests/a11y.spec.ts. */
 	.date-cell.outside {
+		color: var(--ink-soft);
 		color: color-mix(in srgb, var(--ink-soft) 84%, var(--surface));
 	}
 

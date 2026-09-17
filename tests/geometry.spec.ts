@@ -1,4 +1,4 @@
-import { bare as test, expect } from './fixtures';
+import { bare as test, expect, setHelp } from './fixtures';
 
 const PAGES = [
 	'/app/pl/ordo/catechumenorum',
@@ -232,9 +232,7 @@ for (const size of ['normal', 'largest'] as const) {
 			await page.addInitScript((step) => localStorage.setItem('scrutabor-reading', step), size);
 			await page.goto(`/app/${lang}/formularium/${formulary}#text-proprium-${text}`);
 			await page.waitForSelector('html[data-hydrated]', { state: 'attached' });
-			const radio = page.locator('.help [data-level="1"]');
-			await radio.click();
-			await expect(radio).toHaveAttribute('aria-checked', 'true');
+			await setHelp(page, 1);
 			await page.evaluate(() => document.fonts.ready);
 			const rows = await page.evaluate((id) => {
 				const verse = document.getElementById(`text-proprium-${id}`)!.querySelector('.verse')!;
