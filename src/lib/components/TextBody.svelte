@@ -257,9 +257,7 @@
 	interactive: boolean,
 	truncated: boolean,
 	lastWordId: string | undefined
-)}{@const sharedFit = initialFit(run.words[0].form.slice(0, 1), helpLevel === 1)}<ruby
-		class="shared-gloss"
-	>
+)}<ruby class="shared-gloss">
 		<span class="shared-base">
 			{#each run.words as word, index (word.id)}
 				{@const raised = sharedRaised && index === 0}
@@ -272,9 +270,13 @@
 				</span>{#if index < run.words.length - 1}{' '}{/if}
 			{/each}
 		</span>
+		<!-- No lift for a raised initial here, unlike `face`: the initial's
+		     taller box is absorbed by its own inline-block token, so the
+		     shared annotation never rides down with it. Measured: taking the
+		     lift back sat the gloss 4px above its row at the reading size and
+		     5.6px at the largest — exactly the lift, at every size. -->
 		<rt
-			style:top="calc(var(--reading) * (var(--gloss-gap) - var(--shared-ruby-offset) + {sink -
-				(sharedRaised ? sharedFit.lift : 0)}))"
+			style:top="calc(var(--reading) * (var(--gloss-gap) - var(--shared-ruby-offset) + {sink}))"
 			class="shifted"
 			{lang}>{run.alignment?.gloss}</rt
 		>

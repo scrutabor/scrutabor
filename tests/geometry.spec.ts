@@ -215,3 +215,44 @@ test('reading modes preserve the book geometry @online @sweep', async ({ page })
 	expect(emptyRuns, 'every matrix cell must measure adjacent blocks').toEqual([]);
 	expect(findings, findings.join('\n')).toEqual([]);
 });
+
+// A shared gloss under a construction that OPENS the verse sits on the same
+// row as every other gloss of that verse, at every reading size. The raised
+// initial's extra height is absorbed by its own token, so the shared
+// annotation must not take back the lift a single raised word needs; when it
+// did, `stał się` sat 4px above its row and 5.6px at the largest size.
+for (const size of ['normal', 'largest'] as const) {
+	for (const [lang, formulary, text] of [
+		['pl', 'dominica-ii-post-pentecosten', 'dominica-ii-post-pentecosten-introitus'],
+		['en', 'dominica-in-quinquagesima', 'dominica-in-quinquagesima-collecta']
+	] as const) {
+		test(`a shared gloss under a raised initial keeps its row (${lang}, ${size})`, async ({
+			page
+		}) => {
+			await page.addInitScript((step) => localStorage.setItem('scrutabor-reading', step), size);
+			await page.goto(`/app/${lang}/formularium/${formulary}#text-proprium-${text}`);
+			await page.waitForSelector('html[data-hydrated]', { state: 'attached' });
+			const radio = page.locator('.help [data-level="1"]');
+			await radio.click();
+			await expect(radio).toHaveAttribute('aria-checked', 'true');
+			await page.evaluate(() => document.fonts.ready);
+			const rows = await page.evaluate((id) => {
+				const verse = document.getElementById(`text-proprium-${id}`)!.querySelector('.verse')!;
+				const group = verse.querySelector('.token-group')!;
+				const top = verse.getBoundingClientRect().top;
+				const annotations = [...verse.querySelectorAll('rt')];
+				const shared = group.querySelector('rt')!;
+				const next = annotations[annotations.indexOf(shared) + 1];
+				return {
+					opensTheVerse: verse.querySelector('.token-group, .token') === group,
+					raised: !!group.querySelector('.initial'),
+					shared: shared.getBoundingClientRect().top - top,
+					neighbour: next.getBoundingClientRect().top - top
+				};
+			}, text);
+			expect(rows.opensTheVerse).toBe(true);
+			expect(rows.raised, 'the construction carries the raised initial').toBe(true);
+			expect(Math.abs(rows.shared - rows.neighbour)).toBeLessThan(0.75);
+		});
+	}
+}
