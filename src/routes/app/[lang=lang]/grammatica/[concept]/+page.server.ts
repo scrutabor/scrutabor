@@ -3,7 +3,7 @@
 import { assertExamplesResolve } from '$lib/grammar.check';
 import { CONCEPTS } from '$lib/grammar';
 import { conceptData } from '$lib/loaders';
-import { LANGS } from '$lib/i18n';
+import { LANGS, type Lang } from '$lib/i18n';
 import { error } from '@sveltejs/kit';
 import type { EntryGenerator, PageServerLoad } from './$types';
 
@@ -12,7 +12,7 @@ export const entries: EntryGenerator = () =>
 
 export const load: PageServerLoad = async ({ params }) => {
 	await assertExamplesResolve();
-	const data = conceptData(params.concept);
+	const data = conceptData(params.lang as Lang, params.concept);
 	if (!data) error(404, 'no such concept');
 	return data;
 };

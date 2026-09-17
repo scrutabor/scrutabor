@@ -142,7 +142,7 @@ export async function pageData(found: RouteMatch): Promise<Record<string, unknow
 		case 'formularium':
 			return await properData(found.params.formulary, lang);
 		case 'concept':
-			return conceptData(found.params.concept);
+			return conceptData(lang, found.params.concept);
 		case 'bibliographia':
 			return await bibliographyData(lang);
 		default:

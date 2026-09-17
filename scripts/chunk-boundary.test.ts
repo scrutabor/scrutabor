@@ -90,6 +90,28 @@ describe('the corpus chunk boundary in the emitted build', () => {
 		expect(sidecars).toEqual([]);
 	});
 
+	it.skipIf(!measurable)('keeps the catalogue and formulary tables off ordinary pages', () => {
+		// The edition's manifests (every text of every language) and the
+		// formulary table are two chunks that grow with every corpus batch —
+		// three quarters of a megabyte between them at 1,091 texts. A prayer
+		// needs its own label and a grammar page its example links, and both
+		// are resolved at prerender so that neither page downloads the
+		// tables to print them. The catalog and search pages need them.
+		const pages = [
+			'build/app/pl/ordinarium/credo.html',
+			'build/app/en/orationes/ave-maria.html',
+			'build/app/pl/grammatica/nominativus.html',
+			'build/app/pl/formularium/dominica-i-adventus.html'
+		];
+		for (const page of pages) {
+			const html = readFileSync(page, 'utf8');
+			const scripts = html.match(/_app\/immutable\/[a-z]+\/[\w.-]+\.js/g) ?? [];
+			expect(scripts.length, `${page} names its scripts`).toBeGreaterThan(0);
+			const tables = scripts.filter((path) => /\/(corpus-metadata|proprium)\./.test(path));
+			expect(tables, `${page} carries the edition tables`).toEqual([]);
+		}
+	});
+
 	it.skipIf(!measurable)('keeps grouped formulary transports modest', () => {
 		const root = 'build/artifacts/proprium';
 		const packs = readdirSync(root, { recursive: true, withFileTypes: true })

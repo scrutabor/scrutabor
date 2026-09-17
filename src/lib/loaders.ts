@@ -15,7 +15,8 @@ import {
 	loadTextBibliography,
 	type TextBibliographyEvidence
 } from './bibliography';
-import { neighborsOf } from './catalog';
+import { neighborsOf, sectionFor, textFor } from './catalog';
+import { textHref } from './content-url';
 import {
 	hasText,
 	loadText,
@@ -69,6 +70,13 @@ export async function readingData(lang: Lang, category: string, slug: string) {
 		slug,
 		doc: entry.text,
 		gloss: entry.gloss,
+		// A reading names the text itself ("Chwała Ojcu"), not merely the
+		// shelf it came from ("Modlitwy"); a non-catalogue text keeps the
+		// section name as a safe fallback. Resolved HERE so the page never
+		// imports the catalogue — which carries every manifest of the
+		// edition and had grown to three quarters of a megabyte of script
+		// on every prayer, to print one label.
+		label: textFor(category, slug)?.localizedTitle[lang] ?? sectionFor(category)?.label[lang] ?? '',
 		// Just the entries this text can ask about, not the whole dictionary.
 		lex: await narrowLexicon([entry.text], lang),
 		bibliography: await loadTextBibliography(lang, key),
@@ -108,9 +116,21 @@ export async function ordoData(lang: Lang, movement: string) {
 	return { movement, texts, lex: await narrowLexicon(docs, lang) };
 }
 
-export function conceptData(concept: string) {
+export function conceptData(lang: Lang, concept: string) {
 	// The same parity rule as lemmaData, for the grammar pages.
-	return conceptById(concept) ? { concept } : null;
+	const found = conceptById(concept);
+	if (!found) return null;
+	// Where each example reads: a Proper example lives inside its complete
+	// formulary, and naming that page needs the formulary table. Resolved
+	// here, at prerender, so a grammar page does not download the table —
+	// and the catalogue behind it — to build a handful of links.
+	const hrefs = Object.fromEntries(
+		found.examples.map((example) => [
+			`${example.textKey}:${example.wordId}`,
+			textHref(lang, example.textKey, { word: example.wordId })
+		])
+	);
+	return { concept, hrefs };
 }
 
 export async function bibliographyData(lang: Lang) {

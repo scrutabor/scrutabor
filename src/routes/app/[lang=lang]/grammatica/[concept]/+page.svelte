@@ -1,7 +1,6 @@
 <script lang="ts">
 	import PageNav from '$lib/components/PageNav.svelte';
 	import { conceptById } from '$lib/grammar';
-	import { textHref } from '$lib/content-url';
 	import { M, type Lang } from '$lib/i18n';
 
 	let { data } = $props();
@@ -45,7 +44,7 @@
 				{#each concept.examples as ex (ex.textKey + ex.wordId)}
 					<div class="example">
 						<p class="example-la" lang="la">
-							<a href={textHref(lang, ex.textKey, { word: ex.wordId })}>{ex.la}</a>
+							<a href={data.hrefs[`${ex.textKey}:${ex.wordId}`]}>{ex.la}</a>
 						</p>
 						<p class="example-note">{ex.note[lang]}</p>
 					</div>
