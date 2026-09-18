@@ -115,7 +115,7 @@ describe('the corpus chunk boundary in the emitted build', () => {
 			let bytes = 0;
 			for (const script of scripts) {
 				const text = readFileSync(join('build', script), 'utf8');
-				bytes += text.length;
+				bytes += Buffer.byteLength(text, 'utf8');
 				for (const marker of TABLE_MARKERS) {
 					expect(text.includes(marker), `${page} carries ${marker} via ${script}`).toBe(false);
 				}

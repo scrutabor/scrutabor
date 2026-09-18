@@ -247,6 +247,25 @@ test.describe('links into a complete formulary', () => {
 		await expect(page).toHaveURL(new RegExp(`[?&]w=${introit}\\.w005(#|$)`));
 	});
 
+	test('bare verse and word selectors beside a fragment complete together', async ({
+		page
+	}, info) => {
+		await page.goto(`${PALM}?s=s04-s02&w=w005#text-proprium-${GOSPEL}`);
+		await expect(page.locator('.segment-selected')).toHaveCount(3);
+		await expect(page.locator(`#${GOSPEL}-s02`)).toHaveClass(/segment-selected/);
+		await expect(page.locator('aside .form')).toBeVisible();
+		const fragment = info.project.name === 'offline' ? '' : `#text-proprium-${GOSPEL}`;
+		await expect(page).toHaveURL(atRoute(PALM, `?s=${GOSPEL}.s02-s04&w=${GOSPEL}.w005${fragment}`));
+	});
+
+	test('a bare citation without a known part is not guessed', async ({ page }, info) => {
+		await page.goto(`${PALM}?s=s02#text-proprium-missing`);
+		await expect(page.locator('.segment-selected')).toHaveCount(0);
+		await expect(page).toHaveURL(
+			atRoute(PALM, info.project.name === 'offline' ? '' : '#text-proprium-missing')
+		);
+	});
+
 	test('a selector naming no line of the part is dropped', async ({ page }) => {
 		await page.goto(`${PALM}?s=${GOSPEL}.s999`);
 		await expect(page).toHaveURL(atRoute(PALM));

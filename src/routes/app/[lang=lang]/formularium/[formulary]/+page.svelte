@@ -20,7 +20,7 @@
 		parseSegmentSelection,
 		segmentRange
 	} from '$lib/segment-selection';
-	import { textAnchor } from '$lib/text-anchor';
+	import { properOccurrences } from '$lib/proper-occurrences';
 	import { pageUrl } from '$lib/url';
 	import { replaceState } from '$app/navigation';
 	import { wordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
@@ -67,8 +67,8 @@
 	const hasRoleChoice = $derived(parts.some((part) => offersRoleChoice(part.doc.segments)));
 	const hasMassFormChoice = $derived(parts.some((part) => offersMassFormChoice(part.doc.segments)));
 
-	const inlined = $derived(parts.map((part) => ({ ...part, slug: part.key.split('/')[1] })));
-	const aboutPart = $derived(inlined.find((part) => part.key === aboutKey) ?? null);
+	const inlined = $derived(properOccurrences(parts));
+	const aboutPart = $derived(inlined.find((part) => part.slug === aboutKey) ?? null);
 	const wordsById = $derived(
 		new Map<string, { word: Word; doc: TextDocument; slug: string; gloss: GlossDocument }>(
 			inlined.flatMap((part) =>
@@ -83,14 +83,16 @@
 	);
 	const panel = wordPanel({ has: (id) => wordsById.has(id) });
 
-	/** The prefixed address `?s=` carries: `slug.s01` or `slug.s01-s03`. */
+	/** A current prefixed citation, or a former text page's fragment and selector. */
 	function partOfSelection(
-		raw: string
+		raw: string,
+		hash: string
 	): { part: (typeof inlined)[number]; selector: string } | null {
 		const dot = raw.indexOf('.');
-		if (dot < 0) return null;
-		const part = inlined.find((candidate) => candidate.slug === raw.slice(0, dot));
-		return part ? { part, selector: raw.slice(dot + 1) } : null;
+		const part = inlined.find((candidate) =>
+			dot < 0 ? hash === `#${candidate.anchor}` : candidate.slug === raw.slice(0, dot)
+		);
+		return part ? { part, selector: dot < 0 ? raw : raw.slice(dot + 1) } : null;
 	}
 
 	// A search result or a shared link names one line of one part. The line
@@ -99,9 +101,18 @@
 	// scrolled to the Gospel's heading left the cited words ten screens down.
 	// The address is canonicalized in place, as on a reading page, so a
 	// selector naming nothing cannot linger.
-	function applySegmentFromLocation(scroll = true) {
-		const raw = pageUrl().searchParams.get('s');
-		const found = raw === null ? null : partOfSelection(raw);
+	let locationFrame = 0;
+	function cancelLocationFrame() {
+		cancelAnimationFrame(locationFrame);
+		locationFrame = 0;
+	}
+
+	function applyFromLocation(scroll = true) {
+		cancelLocationFrame();
+		const url = pageUrl();
+		const original = url.href;
+		const raw = url.searchParams.get('s');
+		const found = raw === null ? null : partOfSelection(raw, url.hash);
 		const ids = found ? found.part.doc.segments.map((segment) => segment.id) : [];
 		const selected = found
 			? parseSegmentSelection(found.selector, ids, found.part.doc.retired_segments ?? {})
@@ -109,54 +120,40 @@
 		const canonical = found && formatSegmentSelection(selected, ids);
 		const canonicalRaw = canonical ? `${found.part.slug}.${canonical}` : null;
 		if (raw !== null && raw !== canonicalRaw) {
-			// After the frame, not during it: on a cold arrival this runs in
-			// the hydration effect flush, where the router is not yet taking
-			// history calls — an immediate replaceState there kills hydration.
-			requestAnimationFrame(() => {
-				const url = pageUrl();
-				if (canonicalRaw) url.searchParams.set('s', canonicalRaw);
-				else url.searchParams.delete('s');
-				replaceState(url, {});
-			});
+			if (canonicalRaw) url.searchParams.set('s', canonicalRaw);
+			else url.searchParams.delete('s');
 		}
 		citedPart = selected.length && found ? found.part.slug : null;
 		citedSegments = selected;
 		segmentAnchor = selected[0] ?? null;
-		if (found && selected[0] && scroll) {
-			const target = `${found.part.slug}-${selected[0]}`;
-			requestAnimationFrame(() =>
-				document.getElementById(target)?.scrollIntoView({ block: 'center' })
-			);
-		}
-	}
 
-	// The previous edition read each Proper text on its own page, where a
-	// word was `?w=w012`. Its addresses redirect here with the part named in
-	// the fragment and the query carried over, so a bare word id beside a
-	// part fragment is that part's word: the address is completed in place
-	// and the panel opens on it, instead of `?w=w012` lingering unanswered.
-	function completeWordAddress(): boolean {
-		const url = pageUrl();
+		// Redirected text pages carry bare word and verse ids. Complete both
+		// together so neither address update can discard the other's selection.
 		const word = url.searchParams.get('w');
-		const part = /^text-proprium-(.+)$/.exec(url.hash.slice(1))?.[1];
-		if (!word || word.includes('.') || !part || !wordsById.has(`${part}.${word}`)) return false;
-		requestAnimationFrame(() => {
-			const completed = pageUrl();
-			completed.searchParams.set('w', `${part}.${word}`);
-			replaceState(completed, {});
+		const part = inlined.find((candidate) => url.hash === `#${candidate.anchor}`);
+		if (word && !word.includes('.') && part && wordsById.has(`${part.slug}.${word}`)) {
+			url.searchParams.set('w', `${part.slug}.${word}`);
+		}
+		// The router cannot replace history during its hydration flush. A
+		// deferred update belongs only to this address, never a later navigation
+		// or a reader's intervening selection.
+		locationFrame = requestAnimationFrame(() => {
+			locationFrame = 0;
+			if (pageUrl().href !== original) return;
+			if (url.href !== original) replaceState(url, {});
 			panel.applyFromLocation();
+			if (found && selected[0] && scroll) {
+				document
+					.getElementById(`${found.part.slug}-${selected[0]}`)
+					?.scrollIntoView({ block: 'center' });
+			}
 		});
-		return true;
-	}
-
-	function applyFromLocation(scroll = true) {
-		if (!completeWordAddress()) panel.applyFromLocation();
-		applySegmentFromLocation(scroll);
 	}
 
 	$effect(() => {
 		void wordsById;
 		applyFromLocation();
+		return cancelLocationFrame;
 	});
 
 	function writeSegmentSelection(slug: string, selected: string[], ids: string[]) {
@@ -260,15 +257,15 @@
 	</header>
 
 	<main class:panel-open={picked !== null || panel.keepPad}>
-		{#each inlined as part (part.key)}
-			<section class="proper-part" id={textAnchor(part.key)}>
+		{#each inlined as part (part.slug)}
+			<section class="proper-part" id={part.anchor}>
 				<div class="part-heading">
 					<div>
 						<h2 lang="la">{partTitles[part.part]}</h2>
 						<p lang="la">{part.doc.title}</p>
 					</div>
 					{#if part.gloss.about || part.bibliography.context.length}
-						<button class="about-pill smallcaps" onclick={() => openAbout(part.key)}
+						<button class="about-pill smallcaps" onclick={() => openAbout(part.slug)}
 							>{msgs.aboutLabel}</button
 						>
 					{/if}

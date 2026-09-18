@@ -10,6 +10,36 @@ import { expect, settled, test } from './fixtures';
 
 const PATER = '/app/pl/orationes/pater-noster';
 
+for (const language of ['pl', 'en']) {
+	for (const [selector, count] of [
+		['s01', 1],
+		['s03-s01', 3]
+	] as const) {
+		for (const withWord of [false, true]) {
+			test(`redirected ${language} Proper citation ${selector}, word=${withWord} survives hydration @static-host`, async ({
+				page
+			}) => {
+				const slug = 'dominica-i-adventus-introitus';
+				await page.goto(
+					`/app/${language}/proprium/${slug}?s=${selector}${withWord ? '&w=w005' : ''}`
+				);
+				await expect(page.locator('.segment-selected')).toHaveCount(count);
+				await expect(page.locator(`#${slug}-s01`)).toHaveClass(/segment-selected/);
+				expect(new URL(page.url()).searchParams.get('s')).toBe(
+					`${slug}.${count === 1 ? 's01' : 's01-s03'}`
+				);
+				if (withWord) {
+					await expect(page.locator('aside .form')).toBeVisible();
+					expect(new URL(page.url()).searchParams.get('w')).toBe(`${slug}.w005`);
+				}
+				await page.reload();
+				await settled(page);
+				await expect(page.locator('.segment-selected')).toHaveCount(count);
+			});
+		}
+	}
+}
+
 test('the host answers a pruned route sidecar with its 404 page @static-host', async ({
 	request
 }) => {

@@ -23,6 +23,7 @@ import { artifactRequestPath, componentApplies, dayByCalendarKey, dayById } from
 import { formularyExists } from '$lib/kalendarium';
 import type { Lang } from '$lib/i18n';
 import type { TextBibliographyEvidence } from '$lib/bibliography';
+import { properOccurrences } from '$lib/proper-occurrences';
 
 export interface ProperPartPayload {
 	key: string;
@@ -194,8 +195,8 @@ export const proper = {
 		return unwritten;
 	},
 	/** The texts for one Ordo slot, in rite order. Empty when no day is chosen. */
-	forSlot(slot: string): ProperPartPayload[] {
-		return payload?.parts.filter((p) => p.slot === slot) ?? [];
+	forSlot(slot: string) {
+		return properOccurrences(payload?.parts ?? []).filter((p) => p.slot === slot);
 	},
 	clear(): void {
 		current += 1;

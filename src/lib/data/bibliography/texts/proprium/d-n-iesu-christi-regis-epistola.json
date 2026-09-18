@@ -14,18 +14,18 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned Latin Mass data provide a derived comparison witness. The transcription error creatúra is retained in that witness and explicitly corrected against the typical edition."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-18"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "p. 712",
-    "scan": "leaf n792 / PDF p. 793",
+    "printed": "pp. 712–713",
+    "scan": "leaves n792–n793 / PDF pp. 793–794",
     "page_url": "https://archive.org/download/missale_romanum-1962/page/n792/mode/1up"
    },
    "entries": [
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Both cited page images were rechecked. The printed genitive creatúræ corrects the electronic witness's creatúra; capitalization and punctuation differences are recorded in the apparatus."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-18"
   }
  ],
  "witnesses": [
@@ -71,8 +71,12 @@
    "witness.proprium.d-n-iesu-christi-regis-epistola.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 10,
+   "classes": [
+    "capitalization",
+    "orthography",
+    "punctuation"
+   ]
   }
  }
 }

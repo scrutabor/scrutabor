@@ -3,8 +3,8 @@ import { defineConfig } from '@playwright/test';
 const prebuilt = process.env.SCRUTABOR_E2E_PREBUILT === '1';
 const noServer = process.env.SCRUTABOR_E2E_NO_SERVER === '1';
 
-// Interaction tests run against the real static build (adapter-static
-// output served by vite preview) — the same artifact production serves.
+// Most interaction tests use the framework preview. The static-host project
+// separately exercises the deployed build/ tree, without framework fallbacks.
 //
 // And then again, over file://, against the folder edition. That one has
 // no server, no router and no origin, and it broke three times while this

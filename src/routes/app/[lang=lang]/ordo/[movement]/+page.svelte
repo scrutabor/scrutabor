@@ -88,7 +88,7 @@
 		if (e.kind === 'proper') {
 			const chosen = proper.forSlot(e.id).map((part) => ({
 				key: part.key,
-				slug: part.key.split('/')[1],
+				slug: part.slug,
 				doc: part.doc as TextDocument,
 				gloss: part.gloss as GlossDocument,
 				bibliography: part.bibliography
@@ -289,7 +289,7 @@
 						<!-- One slot can hold more than one text: the chant between
 						     the readings is gradual AND alleluia, and in Lent a
 						     tract instead. Each keeps its own word ids. -->
-						{#each bodies as body (body.key)}
+						{#each bodies as body (body.slug)}
 							<TextBody
 								doc={body.doc}
 								gloss={body.gloss}
