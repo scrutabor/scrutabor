@@ -1,16 +1,21 @@
 <script lang="ts">
-	// A date and a formulary are related, but not interchangeable. The calendar
-	// may know the date while this edition lacks its proper, and the reader may
-	// deliberately choose a formulary from the full list without asking about a
-	// civil date. The URL carries either answer in one `?dies=` value.
+	// Every Ordo occurrence has a date. Only a Mass belonging to that date can
+	// override its default; undated reading belongs to the formulary catalogue.
 	import { pageUrl } from '$lib/url';
 	import { replaceState } from '$app/navigation';
 	import { browser } from '$app/environment';
 	import { M, type Lang } from '$lib/i18n';
 	import DayPickerDialog from '$lib/components/DayPickerDialog.svelte';
-	import { DAY_PARAM, chooseDay, proper, rememberChoice, storedChoice } from '$lib/proper.svelte';
-	import { calendarCovers, dayOn, isoDate } from '$lib/kalendarium';
-	import { PROPER_DAYS, dayByCalendarKey, dayById } from '$lib/proprium';
+	import { chooseDay, proper, rememberChoice, storedChoice } from '$lib/proper.svelte';
+	import {
+		DAY_PARAM,
+		MASS_PARAM,
+		resolveOrdoChoice,
+		writeOrdoChoice,
+		type OrdoChoice
+	} from '$lib/ordo-choice';
+	import { isCivilDate, isoDate } from '$lib/kalendarium';
+	import { dayById } from '$lib/proprium';
 
 	let { lang }: { lang: Lang } = $props();
 	const msgs = $derived(M[lang]);
@@ -19,16 +24,17 @@
 	let chosen = $state('');
 	let selectedDate = $state<string | null>(null);
 	let applied = $state(false);
+	let invalid = $state(false);
 	let open = $state(false);
 	let todayDate = $state(browser ? isoDate(new Date()) : '');
 
-	const day = $derived(PROPER_DAYS.find((candidate) => candidate.id === chosen));
+	const day = $derived(dayById(chosen));
 	const shown = $derived.by(() => {
 		if (day) {
 			const partial = day.partial ? ` ${msgs.dayPartial}` : '';
 			return `${day.title[lang]}${partial}`;
 		}
-		if (selectedDate) return msgs.dayPicker.dateOnly;
+		if (selectedDate && !resolveOrdoChoice(selectedDate)?.mass) return msgs.dayPicker.dateOnly;
 		return msgs.dayNone;
 	});
 
@@ -42,68 +48,78 @@
 			: ''
 	);
 
-	type Choice = { id: string; date: string | null; requested: string | null };
-
-	function resolve(value: string): Choice {
-		if (calendarCovers(value)) {
-			const on = dayOn(value);
-			const available = on ? dayByCalendarKey(on.formulary) : undefined;
-			return {
-				id: available?.id ?? '',
-				date: value,
-				requested: available?.id ?? on?.formulary ?? null
-			};
-		}
-		const available = dayById(value);
-		return { id: available?.id ?? '', date: null, requested: available?.id ?? (value || null) };
-	}
-
-	function honour(choice: Choice, remember: boolean): void {
-		chosen = choice.id;
+	function honour(choice: OrdoChoice, remember: boolean): void {
+		chosen = choice.mass ?? '';
 		selectedDate = choice.date;
 		applied = true;
-		if (remember) rememberChoice(choice.id, choice.date);
-		void chooseDay(choice.requested, lang, choice.date);
+		if (remember) rememberChoice(choice);
+		void chooseDay(choice, lang);
 	}
 
 	// A deliberate URL wins, then today's unexpired memory, then today's civil
 	// date. Invalid links are answered once and never allowed to poison memory.
+	let locationFrame = 0;
+	function cancelLocationFrame(): void {
+		cancelAnimationFrame(locationFrame);
+		locationFrame = 0;
+	}
+
+	function publishChoice(choice: OrdoChoice): void {
+		const url = pageUrl();
+		const original = url.href;
+		writeOrdoChoice(url, choice);
+		// The router is not ready during hydration. Do not let this deferred
+		// update overwrite a word selection or navigation made in the meantime.
+		locationFrame = requestAnimationFrame(() => {
+			locationFrame = 0;
+			if (pageUrl().href === original && url.href !== original) replaceState(url, {});
+		});
+	}
+
 	export function applyFromLocation(): void {
 		if (!browser) return;
+		cancelLocationFrame();
 		todayDate = isoDate(new Date());
-		const named = pageUrl().searchParams.get(DAY_PARAM);
-		if (named !== null) {
-			const choice = resolve(named);
-			const usable = calendarCovers(named) || !!dayById(named);
-			honour(choice, usable);
+		const params = pageUrl().searchParams;
+		const named = params.get(DAY_PARAM);
+		const mass = params.get(MASS_PARAM);
+		invalid = false;
+		if (named !== null || mass !== null) {
+			const choice = named === null ? null : resolveOrdoChoice(named, mass);
+			invalid = choice === null;
+			honour(
+				choice ?? { date: named && isCivilDate(named) ? named : todayDate, mass: null },
+				choice !== null
+			);
+			if (choice) publishChoice(choice);
 			return;
 		}
-		const remembered = storedChoice();
-		const value =
-			remembered && (calendarCovers(remembered) || !!dayById(remembered)) ? remembered : todayDate;
-		honour(resolve(value), true);
+		const choice = storedChoice() ?? resolveOrdoChoice(todayDate)!;
+		honour(choice, true);
+		publishChoice(choice);
 	}
 
 	$effect(() => {
 		applyFromLocation();
+		return cancelLocationFrame;
 	});
 
 	function onHashChange(): void {
 		applyFromLocation();
 	}
 
-	function pick(choice: Choice): void {
+	function pick(choice: OrdoChoice): void {
+		cancelLocationFrame();
+		invalid = false;
 		honour(choice, true);
 		const url = pageUrl();
-		const value = choice.date ?? choice.id;
-		if (value) url.searchParams.set(DAY_PARAM, value);
-		else url.searchParams.delete(DAY_PARAM);
+		writeOrdoChoice(url, choice);
 		if (browser) replaceState(url, {});
 		open = false;
 	}
 </script>
 
-<svelte:window onhashchange={onHashChange} />
+<svelte:window onhashchange={onHashChange} onpopstate={applyFromLocation} />
 
 <div class="picker day row" class:on={!!chosen || !!selectedDate}>
 	<span class="label smallcaps" id={labelId}>{msgs.dayLabel}</span>
@@ -133,7 +149,9 @@
 	</button>
 	{#if applied}
 		<span class="states" aria-live="polite">
-			{#if proper.slow}
+			{#if invalid}
+				<span class="state">{msgs.dayPicker.invalidChoice}</span>
+			{:else if proper.slow}
 				<span class="state smallcaps">{msgs.dayLoading}</span>
 			{:else if proper.failed}
 				<span class="state smallcaps">{msgs.dayFailed}</span>

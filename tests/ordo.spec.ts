@@ -95,7 +95,7 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 });
 
 test('a word in the flow opens its analysis, wherever it stands', async ({ page }) => {
-	await page.goto('/app/pl/ordo/communio');
+	await page.goto('/app/pl/ordo/communio?dies=2026-12-25&missa=nativitas-domini-in-nocte');
 	// a word from the LAST inlined text, to prove every text is wired
 	const agnus = page.locator('[id="agnus-dei.w001"]');
 	await agnus.click();
@@ -105,13 +105,16 @@ test('a word in the flow opens its analysis, wherever it stands', async ({ page 
 
 	// the deep link addresses text and word together, and survives a reload
 	// (a dot is unreserved in a URL, so it makes the round trip unencoded)
-	await expect(page).toHaveURL(/\?w=agnus-dei\.w001$/);
+	await expect(page).toHaveURL(
+		/\?dies=2026-12-25&missa=nativitas-domini-in-nocte&w=agnus-dei\.w001$/
+	);
 	await page.reload();
 	await expect(page.locator('aside .form')).toHaveText('Agnus');
 
 	// escape closes it, as everywhere else
 	await page.keyboard.press('Escape');
 	await expect(panel).toHaveCount(0);
+	await expect(page).toHaveURL(/\?dies=2026-12-25&missa=nativitas-domini-in-nocte$/);
 });
 
 test('a deep link into the flow lands on its word, not on the ribbon', async ({ page }) => {

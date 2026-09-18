@@ -65,6 +65,84 @@ for (const theme of ['light', 'dark'] as const) {
 	});
 }
 
+for (const theme of ['light', 'dark'] as const) {
+	test(`calendar availability uses weight and colour with AA contrast — ${theme}`, async ({
+		page
+	}) => {
+		await page.addInitScript((t) => localStorage.setItem('scrutabor-theme', t), theme);
+		await page.goto('/app/pl/ordo?dies=2026-09-16');
+		await page.locator('.picker.day .day-open').click();
+		const dialog = page.getByRole('dialog', { name: 'Wybór dnia' });
+		const inspect = () =>
+			dialog.evaluate((element) => {
+				const canvas = document.createElement('canvas');
+				canvas.width = canvas.height = 1;
+				const context = canvas.getContext('2d')!;
+				// Computed color-mix values use color(srgb ...) rather than hex.
+				// Resolve the browser's actual paint, including alpha, before comparing.
+				const colour = (value: string) => {
+					context.clearRect(0, 0, 1, 1);
+					context.fillStyle = value;
+					context.fillRect(0, 0, 1, 1);
+					const rgba = [...context.getImageData(0, 0, 1, 1).data];
+					return {
+						hex:
+							'#' +
+							rgba
+								.slice(0, 3)
+								.map((n) => n.toString(16).padStart(2, '0'))
+								.join(''),
+						alpha: rgba[3]
+					};
+				};
+				const surface = colour(getComputedStyle(element).backgroundColor);
+				const read = (selector: string) => {
+					const style = getComputedStyle(element.querySelector(selector)!);
+					const background = colour(style.backgroundColor);
+					return {
+						ink: colour(style.color),
+						background: background.alpha === 0 ? surface : background,
+						weight: Number(style.fontWeight),
+						opacity: Number(style.opacity)
+					};
+				};
+				return {
+					available: read('[data-date="2026-09-21"]'),
+					unavailable: read('[data-date="2026-09-22"]'),
+					selected: read('[aria-pressed="true"]'),
+					rubric: colour(getComputedStyle(element).getPropertyValue('--rubric'))
+				};
+			});
+		const before = await inspect();
+		expect(before.available.weight).toBe(500);
+		expect(before.available.weight - before.unavailable.weight).toBeGreaterThanOrEqual(100);
+		expect(before.available.ink.hex).toBe(before.rubric.hex);
+		expect(before.available.ink.hex).not.toBe(before.unavailable.ink.hex);
+		await dialog.locator('[data-date="2026-09-21"]').click();
+		const after = await inspect();
+		const pairs = {
+			available: before.available,
+			unavailable: before.unavailable,
+			selectedWithout: before.selected,
+			selectedWith: after.selected
+		};
+		const ratios = Object.fromEntries(
+			Object.entries(pairs).map(([name, pair]) => {
+				expect(pair.ink.alpha, `${name} ink`).toBe(255);
+				expect(pair.background.alpha, `${name} background`).toBe(255);
+				expect(pair.opacity, `${name} opacity`).toBe(1);
+				const ratio = contrast(pair.ink.hex, pair.background.hex);
+				expect(ratio, `${name} contrast in ${theme}`).toBeGreaterThanOrEqual(AA);
+				return [name, ratio];
+			})
+		);
+		await test.info().attach('calendar-contrast', {
+			body: JSON.stringify(ratios),
+			contentType: 'application/json'
+		});
+	});
+}
+
 // APCA floors beside the WCAG ones, because WCAG 2 is polarity-blind: it
 // rated the pre-retune dark soft ink (5.34:1) a shade BETTER than light's
 // (5.28:1) while APCA — the size-and-weight-aware WCAG 3 draft metric —

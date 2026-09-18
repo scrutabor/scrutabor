@@ -247,7 +247,7 @@
 
 <div class="page reading">
 	<header>
-		<PageNav {lang} parent="/app/{lang}/ordo" parentLabel="Ordo Missæ" parentLang="la" />
+		<PageNav {lang} parent="/app/{lang}/formularium" parentLabel={msgs.dayPicker.catalogTitle} />
 		<h1 lang="la">{day?.title.la ?? ''}</h1>
 		{#if day?.title[lang] !== day?.title.la}
 			<p class="subtitle">{day?.title[lang]}</p>

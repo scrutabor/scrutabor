@@ -105,10 +105,7 @@ test('a shared construction panel meets WCAG 2.1 AA with both analyses open', as
 	expect(await violations(page), 'shared construction panel').toEqual([]);
 });
 
-// The day picker is a modal built from a dialog, tabs, a date grid and a
-// filtered list — more accessible-name and contrast surface than any other
-// control in the book, and none of it on screen until the reader opens it.
-// Both tabs, both themes, and the phone width the pew case reads at.
+// The calendar and its optional Mass choices, in both themes and at phone width.
 for (const theme of ['light', 'dark'] as const) {
 	for (const width of [1280, 375]) {
 		test(`the day picker meets WCAG 2.1 AA — ${theme}, ${width}px`, async ({ page }) => {
@@ -116,16 +113,14 @@ for (const theme of ['light', 'dark'] as const) {
 				localStorage.setItem('scrutabor-theme', t);
 			}, theme);
 			await page.setViewportSize({ width, height: 812 });
-			// The Ordo map carries the picker on every visit; a movement only
-			// where it has a slot the day fills.
-			await page.goto('/app/pl/ordo');
+			await page.goto('/app/pl/ordo?dies=2026-12-24');
 			await expect(page.locator('html')).toHaveAttribute('data-theme', theme);
 			await page.locator('.picker.day .day-open').first().click();
 			await expect(page.locator('dialog.day-dialog')).toBeVisible();
-			expect(await violations(page), `calendar tab in ${theme} at ${width}px`).toEqual([]);
-			await page.locator('#list-tab').click();
-			await expect(page.locator('#list-panel')).toBeVisible();
-			expect(await violations(page), `list tab in ${theme} at ${width}px`).toEqual([]);
+			expect(await violations(page), `calendar in ${theme} at ${width}px`).toEqual([]);
+			await page.locator('[data-date="2026-12-25"]').click();
+			await expect(page.locator('.variants input')).toHaveCount(3);
+			expect(await violations(page), `Mass choices in ${theme} at ${width}px`).toEqual([]);
 		});
 	}
 }

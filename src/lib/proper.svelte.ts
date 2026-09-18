@@ -19,8 +19,9 @@
 import { browser, dev } from '$app/environment';
 import { readStored, writeStored } from '$lib/storage';
 import { localDay } from '$lib/proper-local';
-import { artifactRequestPath, componentApplies, dayByCalendarKey, dayById } from '$lib/proprium';
-import { formularyExists } from '$lib/kalendarium';
+import { artifactRequestPath, componentApplies } from '$lib/proprium';
+import { dayOn, isoDate } from '$lib/kalendarium';
+import { resolveOrdoChoice, ordoHref, type OrdoChoice } from '$lib/ordo-choice';
 import type { Lang } from '$lib/i18n';
 import type { TextBibliographyEvidence } from '$lib/bibliography';
 import { properOccurrences } from '$lib/proper-occurrences';
@@ -43,17 +44,12 @@ export interface ProperPayload {
 	lex: Record<string, unknown>;
 }
 
-/** The query parameter that carries the choice. */
-export const DAY_PARAM = 'dies';
-
 const KEY = 'scrutabor-day';
 
 /** The day this reader chose TODAY, or null if they have not chosen one today.
  *
- * Never validated here: the list of days is the picker's business and a stale
- * id simply fails to resolve. Prerender has no localStorage, so the served
- * HTML is always the dayless view and the reader's own choice is applied once
- * the page is alive, exactly as the role is.
+ * A remembered Mass must still belong to its date. Prerender has no local
+ * date or storage; the choice is applied once the reader is alive.
  *
  * It expires at midnight, and that is the whole point of storing the date
  * beside it. Walking the six movements of the Ordo must keep the day — losing
@@ -62,10 +58,10 @@ const KEY = 'scrutabor-day';
  * the calendar can say what today is. The reading ribbon reasons the same way
  * and for the same reason (lib/ribbon).
  *
- * An empty string is a real answer: the reader asked for no formulary, and
- * that holds for the day too. `null` means they have not said.
+ * `mass: null` remembers an explicit choice of the Ordinary alone, still
+ * attached to a date. A null result means there is no usable memory.
  */
-export function storedChoice(): string | null {
+export function storedChoice(): OrdoChoice | null {
 	if (!browser) return null;
 	// Through $lib/storage like every other module: the guard against a
 	// storage that THROWS on access lives there and only there. The parse
@@ -73,8 +69,10 @@ export function storedChoice(): string | null {
 	const raw = readStored(KEY);
 	if (raw === null || !raw.startsWith('{')) return null;
 	try {
-		const { value, on } = JSON.parse(raw);
-		return typeof value === 'string' && on === today() ? value : null;
+		const { date, mass, on } = JSON.parse(raw);
+		if (on !== today() || typeof date !== 'string') return null;
+		if (mass !== null && typeof mass !== 'string') return null;
+		return resolveOrdoChoice(date, mass ?? 'none');
 	} catch {
 		return null;
 	}
@@ -84,9 +82,7 @@ export function storedChoice(): string | null {
  * first, which hands back yesterday for anyone east of Greenwich after
  * midnight — and midnight is exactly when this value changes meaning. */
 function today(): string {
-	const now = new Date();
-	const pad = (n: number) => String(n).padStart(2, '0');
-	return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+	return isoDate(new Date());
 }
 
 /** A link out of a page, carrying the day the reader is on.
@@ -97,16 +93,15 @@ function today(): string {
  * movements keeps it, and any of those URLs can be sent to someone else and
  * opens the same Mass. */
 export function dayHref(href: string): string {
-	if (!day && !date) return href;
-	const join = href.includes('?') ? '&' : '?';
-	return `${href}${join}${DAY_PARAM}=${encodeURIComponent(date ?? day ?? '')}`;
+	if (!date) return href;
+	return ordoHref(href, { date, mass: day });
 }
 
-export function rememberChoice(id: string, selectedDate: string | null = null): void {
+export function rememberChoice(choice: OrdoChoice): void {
 	if (!browser) return;
 	// A reader who has blocked storage still gets the day they picked, for
 	// as long as the page lives — writeStored swallows the denial.
-	writeStored(KEY, JSON.stringify({ value: selectedDate ?? id, on: today() }));
+	writeStored(KEY, JSON.stringify({ ...choice, on: today() }));
 }
 
 let day = $state<string | null>(null);
@@ -161,8 +156,7 @@ function stopTiming(): void {
 const held: Record<string, ProperPayload> = {};
 const heldPacks: Record<string, Promise<Record<string, ProperPayload>>> = {};
 
-function forDate(source: ProperPayload, selectedDate: string | null): ProperPayload {
-	if (!selectedDate) return source;
+function forDate(source: ProperPayload, selectedDate: string): ProperPayload {
 	const parts = source.parts.filter((part) => componentApplies(part.condition, selectedDate));
 	return parts.length === source.parts.length ? source : { ...source, parts };
 }
@@ -216,39 +210,23 @@ export const proper = {
  * `failed`, because a reader whose network died mid-Mass should still see the
  * Ordo rather than a broken page.
  */
-export async function chooseDay(
-	next: string | null,
-	lang: Lang,
-	selectedDate: string | null = null
-): Promise<void> {
+export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
 	const mine = ++current;
-	date = selectedDate;
+	const selected = resolveOrdoChoice(choice.date, choice.mass ?? 'none');
+	date = selected?.date ?? null;
 	// Superseding a flight also takes over its notices: the superseded
 	// finally below declines to touch shared state, so it is settled here.
 	loading = false;
 	stopTiming();
 	failed = false;
 	unwritten = false;
-	if (!next) {
+	if (!selected?.mass) {
 		day = null;
 		payload = null;
+		unwritten = !!selected && !!dayOn(selected.date) && !resolveOrdoChoice(selected.date)?.mass;
 		return;
 	}
-	const selected = dayById(next) ?? dayByCalendarKey(next);
-	if (!selected) {
-		// Two different absences. A real day of the calendar whose Mass this
-		// edition has not written is said so. An id that names nothing is a
-		// mangled link and gets the dayless view — "could not be loaded"
-		// would promise a retry that cannot succeed.
-		day = null;
-		payload = null;
-		unwritten = formularyExists(next);
-		return;
-	}
-	// A calendar result names its formulary key, which is deliberately distinct
-	// from a particular Mass id for multi-Mass observances. Resolve that key to
-	// the canonical default before caching/loading.
-	next = selected.id;
+	const next = selected.mass;
 	day = next;
 	// A new heading must never sit over the previous day's prayers while its
 	// artifact is still in flight. Clear without reading the reactive payload:
@@ -258,7 +236,7 @@ export async function chooseDay(
 	const key = `${lang}/${next}`;
 	const already = held[key];
 	if (already) {
-		payload = forDate(already, selectedDate);
+		payload = forDate(already, selected.date);
 		return;
 	}
 	if (!browser) return;
@@ -268,7 +246,7 @@ export async function chooseDay(
 		const body = await load(next, lang);
 		held[key] = body;
 		if (mine !== current) return;
-		payload = forDate(body, selectedDate);
+		payload = forDate(body, selected.date);
 	} catch {
 		if (mine !== current) return;
 		failed = true;

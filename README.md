@@ -43,7 +43,13 @@ One origin, one build, two surfaces:
   line link to concept pages.
 - **Ordo Missæ flow** (`/app/pl/ordo`) — the whole order of Mass in six
   movements, with the reader's own part chosen: in the pew, server, or
-  priest.
+  priest. Choose a date, initially today; the supported calendar supplies
+  its formulary. On days with several Masses, choose the Mass as well.
+  Date and Mass stay together in shared links and between movements.
+  Missing calendar entries are not replaced by the preceding Sunday's Mass.
+- **Formulary catalogue** (`/app/pl/formularium`) — browse and search the
+  texts independently of a date, for reading and study. This does not change
+  the dated Mass selected in the Ordo.
 - **Lemma pages** (`/app/pl/lemma?l=oro`) with a concordance — every place
   the word appears across the texts, each occurrence a deep link that
   opens the reading view on that word.

@@ -8,6 +8,7 @@ import { expect, settled, test } from './fixtures';
 test.use({ serviceWorkers: 'block' });
 
 const DAY = 'dominica-i-adventus';
+const DAY_DATE = '2026-11-29';
 const OUTSIDE_ADVENT = '2026-08-19T10:00:00';
 
 async function asIfItWere(page: import('@playwright/test').Page, when: string): Promise<void> {
@@ -31,9 +32,16 @@ async function openPicker(page: import('@playwright/test').Page) {
 }
 
 async function pickFormulary(page: import('@playwright/test').Page, id: string): Promise<void> {
+	const dates: Record<string, string> = {
+		'dominica-i-adventus': DAY_DATE,
+		'nativitas-domini-in-nocte': '2026-12-25'
+	};
+	const date = dates[id];
+	if (!date) throw new Error('no occurrence declared for ' + id);
 	const dialog = await openPicker(page);
-	await dialog.getByRole('tab', { name: /Lista i wyszukiwanie|List and search/ }).click();
-	await dialog.locator(`[data-formulary="${id}"]`).click();
+	await selectCalendarDate(dialog, date);
+	const variant = dialog.locator('input[name="day-variant"][value="' + id + '"]');
+	if (await variant.count()) await variant.check();
 	await dialog.locator('.modal-actions .primary').click();
 }
 
@@ -103,7 +111,7 @@ test('a date outside the available calendar data is explained plainly', async ({
 	await expect(dialog).not.toContainText('zgadywania');
 	await expect(dialog).toContainText('12. Niedziela po Zesłaniu Ducha Świętego');
 	await dialog.getByRole('button', { name: 'Otwórz bez formularza' }).click();
-	await expect(page).toHaveURL(/\?dies=2026-08-19$/);
+	await expect(page).toHaveURL(/\?dies=2026-08-19&missa=none$/);
 });
 
 test('a newly completed fixed feast opens directly from its date', async ({ page }) => {
@@ -112,7 +120,8 @@ test('a newly completed fixed feast opens directly from its date', async ({ page
 	const dialog = await openPicker(page);
 	await selectCalendarDate(dialog, '2030-12-08');
 	await expect(dialog).toContainText('Niepokalane Poczęcie Najświętszej Maryi Panny');
-	await expect(dialog).toContainText('formularz dostępny w tym wydaniu');
+	await expect(dialog.locator('[data-date="2030-12-08"]')).toHaveClass(/has-formulary/);
+	await expect(dialog.getByRole('button', { name: 'Otwórz formularz' })).toBeEnabled();
 	await dialog.getByRole('button', { name: 'Otwórz formularz' }).click();
 	await expect(page).toHaveURL(/\?dies=2030-12-08$/);
 	await expect(page.locator('.picker.day .day-open')).toContainText(
@@ -265,21 +274,26 @@ test('Christmas Day offers all three Masses and defaults to the Mass in the day'
 	await expect(dialog.locator('input[value="nativitas-domini-in-die"]')).toBeChecked();
 	await dialog.locator('input[value="nativitas-domini-in-nocte"]').check();
 	await dialog.getByRole('button', { name: 'Otwórz formularz' }).click();
-	await expect(page).toHaveURL(/dies=nativitas-domini-in-nocte/);
+	await expect(page).toHaveURL(/dies=2026-12-25&missa=nativitas-domini-in-nocte/);
 });
 
-test('list search finds an observance and its Mass variants', async ({ page }) => {
+test('the separate catalogue offers undated study without changing the Ordo choice', async ({
+	page
+}) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.goto('/app/pl/ordo');
-	const dialog = await openPicker(page);
-	await dialog.getByRole('tab', { name: 'Lista i wyszukiwanie' }).click();
-	await dialog.getByPlaceholder('Wpisz nazwę święta lub niedzieli').fill('Wiernych Zmarłych');
-	await expect(dialog.locator('[data-formulary*="commemoratio-omnium"]')).toHaveCount(3);
-	await dialog
+	await page.goto('/app/pl/ordo?dies=2026-12-25&missa=nativitas-domini-in-nocte');
+	await expect(page.locator('.picker.day .day-open')).toContainText('Msza w nocy');
+	await page.getByRole('link', { name: 'Formularze Mszy' }).click();
+	await page.getByPlaceholder('Wpisz nazwę święta lub niedzieli').fill('Wiernych Zmarłych');
+	await expect(page.locator('[data-formulary*="commemoratio-omnium"]')).toHaveCount(3);
+	await page
 		.locator('[data-formulary="commemoratio-omnium-fidelium-defunctorum-missa-ii"]')
 		.click();
-	await dialog.locator('.modal-actions .primary').click();
-	await expect(page).toHaveURL(/dies=commemoratio-omnium-fidelium-defunctorum-missa-ii/);
+	await expect(page).toHaveURL(/formularium\/commemoratio-omnium-fidelium-defunctorum-missa-ii/);
+	await expect(page.locator('.picker.day')).toHaveCount(0);
+	await page.goto('/app/pl/ordo');
+	await expect(page.locator('.picker.day .day-open')).toContainText('Msza w nocy');
+	await expect(page.locator('.choice-date')).toHaveText('25 grudnia 2026');
 });
 
 test('a multi-Mass date offers each Mass without complicating the date URL', async ({ page }) => {
@@ -290,7 +304,88 @@ test('a multi-Mass date offers each Mass without complicating the date URL', asy
 	await expect(dialog.locator('input[name="day-variant"]')).toHaveCount(3);
 	await dialog.locator('input[value="commemoratio-omnium-fidelium-defunctorum-missa-iii"]').check();
 	await dialog.getByRole('button', { name: 'Otwórz formularz' }).click();
-	await expect(page).toHaveURL(/dies=commemoratio-omnium-fidelium-defunctorum-missa-iii/);
+	await expect(page).toHaveURL(
+		/dies=2026-11-02&missa=commemoratio-omnium-fidelium-defunctorum-missa-iii/
+	);
+});
+
+test('a non-default Mass keeps its date through reload, movements, language, and memory', async ({
+	page
+}) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	await page.goto('/app/pl/ordo?dies=2026-12-25&missa=nativitas-domini-in-nocte');
+	await page.reload();
+	await expect(page.locator('.choice-date')).toHaveText('25 grudnia 2026');
+	await expect(page.locator('.choice-title')).toContainText('Msza w nocy');
+	const dialog = await openPicker(page);
+	await expect(dialog.locator('input[value="nativitas-domini-in-nocte"]')).toBeChecked();
+	await expect(dialog.locator('.day-detail h3')).toContainText('Msza w nocy');
+	await dialog.getByRole('button', { name: 'zamknij' }).click();
+	await page.locator('a.movement[href*="praeparatio"]').click();
+	await expect(page.locator('.choice-date')).toHaveText('25 grudnia 2026');
+	await expect(page).toHaveURL(/missa=nativitas-domini-in-nocte/);
+	await page.getByRole('button', { name: 'wybór języka', exact: true }).click();
+	await page.getByRole('link', { name: 'English', exact: true }).click();
+	await expect(page).toHaveURL(
+		/\/en\/ordo\/praeparatio\?dies=2026-12-25&missa=nativitas-domini-in-nocte/
+	);
+	await expect(page.locator('.choice-title')).toContainText('Mass during the Night');
+	await page.goto('/app/en/ordo/catechumenorum');
+	await expect(page.locator('.choice-date')).toHaveText('25 December 2026');
+	await expect(page.locator('[id="nativitas-domini-in-nocte-introitus.w001"]')).toBeVisible();
+});
+
+test('changing the date resets a Mass variant to that date’s own formulary', async ({ page }) => {
+	await asIfItWere(page, '2026-09-18T10:00:00');
+	await page.goto('/app/pl/ordo?dies=2026-12-25&missa=nativitas-domini-in-nocte');
+	const dialog = await openPicker(page);
+	await dialog.locator('[data-date="2026-12-24"]').click();
+	await expect(dialog.locator('.variants')).toHaveCount(0);
+	await dialog.getByRole('button', { name: 'Otwórz formularz', exact: true }).click();
+	await expect(page).toHaveURL(/dies=2026-12-24$/);
+	await expect(page.locator('.choice-title')).toContainText('Wigilia Narodzenia Pańskiego');
+});
+
+test('a Mass from a different observance cannot override a valid date', async ({ page }) => {
+	await asIfItWere(page, '2026-09-18T10:00:00');
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2026-12-13&missa=nativitas-domini-in-nocte');
+	await expect(page.locator('.choice-date')).toHaveText('13 grudnia 2026');
+	await expect(page.locator('.picker.day .state')).toContainText('Nieprawidłowy wybór');
+	await expect(page.locator('[id="nativitas-domini-in-nocte-introitus.w001"]')).toHaveCount(0);
+	const dialog = await openPicker(page);
+	await expect(dialog.locator('.day-detail')).toContainText('III Niedziela Adwentu');
+	await dialog.getByRole('button', { name: 'Otwórz formularz', exact: true }).click();
+	await expect(page).toHaveURL(/dies=2026-12-13$/);
+	await expect(page.locator('.choice-title')).toHaveText('III Niedziela Adwentu');
+});
+
+test('dates outside calendar coverage remain visible and never become an edge occurrence', async ({
+	page
+}) => {
+	await asIfItWere(page, '2026-09-18T10:00:00');
+	await page.goto('/app/pl/ordo?dies=2200-01-01');
+	await expect(page.locator('.choice-date')).toHaveText('1 stycznia 2200');
+	const dialog = await openPicker(page);
+	await expect(dialog.locator('.detail-date')).toContainText('2200');
+	await expect(
+		dialog.getByRole('button', { name: 'Otwórz formularz', exact: true })
+	).toBeDisabled();
+	await dialog.getByRole('button', { name: 'Otwórz bez formularza' }).click();
+	await expect(page).toHaveURL(/dies=2200-01-01&missa=none/);
+});
+
+test('browsing months leaves a keyboard entry point and opening without a formulary can be undone', async ({
+	page
+}) => {
+	await asIfItWere(page, '2026-09-18T10:00:00');
+	await page.goto('/app/pl/ordo?dies=2026-12-25&missa=none');
+	const dialog = await openPicker(page);
+	await dialog.getByRole('button', { name: 'następny miesiąc' }).click();
+	await expect(dialog.locator('.date-cell[tabindex="0"]')).toHaveCount(1);
+	await dialog.getByRole('button', { name: 'poprzedni miesiąc' }).click();
+	await expect(dialog.locator('input[value="nativitas-domini-in-die"]')).toBeChecked();
+	await dialog.getByRole('button', { name: 'Otwórz formularz', exact: true }).click();
+	await expect(page).toHaveURL(/dies=2026-12-25$/);
 });
 
 test('the calendar begins with Sunday and needs no second date control', async ({ page }) => {
@@ -305,11 +400,198 @@ test('the calendar begins with Sunday and needs no second date control', async (
 	).toEqual(['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']);
 	await expect(dialog.locator('.calendar-grid .date-cell').first()).toHaveAttribute(
 		'data-date',
-		'2026-08-30'
+		'2026-09-01'
 	);
 	await expect(
-		dialog.locator('.calendar-footer').getByRole('button', { name: 'Dzisiaj' })
+		dialog.locator('.modal-actions').getByRole('button', { name: 'Dzisiaj' })
 	).toBeVisible();
+});
+
+test('only the viewed month has dates, with empty slots before its first weekday', async ({
+	page
+}) => {
+	await asIfItWere(page, '2026-09-18T10:00:00');
+	for (const [date, count, column] of [
+		['2026-02-01', 28, '1'],
+		['2028-02-01', 29, '3'],
+		['2026-08-01', 31, '7'],
+		['2026-09-01', 30, '3']
+	] as const) {
+		await page.goto(`/app/pl/ordo?dies=${date}`);
+		const dialog = await openPicker(page);
+		const dates = dialog.locator('.date-cell');
+		await expect(dates).toHaveCount(count);
+		await expect(dates.first()).toHaveCSS('grid-column-start', column);
+		const rendered = await dates.evaluateAll((cells) =>
+			cells.map((cell) => cell.getAttribute('data-date'))
+		);
+		expect(rendered).toEqual(
+			Array.from(
+				{ length: count },
+				(_, index) => `${date.slice(0, 8)}${String(index + 1).padStart(2, '0')}`
+			)
+		);
+		await expect(dialog.locator('.date-cell i, .legend')).toHaveCount(0);
+	}
+});
+
+test('dates without a formulary are quieter but remain selectable', async ({ page }) => {
+	await asIfItWere(page, '2026-09-18T10:00:00');
+	await page.goto('/app/pl/ordo?dies=2026-09-21');
+	const dialog = await openPicker(page);
+	await expect(dialog).not.toContainText('formularz dostępny w tym wydaniu');
+	const available = dialog.locator('[data-date="2026-09-20"]');
+	const unavailable = dialog.locator('[data-date="2026-09-22"]');
+	await expect(available).toHaveClass(/has-formulary/);
+	await expect(unavailable).not.toHaveClass(/has-formulary/);
+	const colors = await dialog.evaluate((element) => {
+		const color = (selector: string) => getComputedStyle(element.querySelector(selector)!).color;
+		return {
+			available: color('[data-date="2026-09-20"]'),
+			unavailable: color('[data-date="2026-09-22"]')
+		};
+	});
+	expect(colors.available).not.toBe(colors.unavailable);
+	await unavailable.click();
+	await expect(unavailable).toHaveAttribute('aria-pressed', 'true');
+	await expect(dialog.locator('.detail-date')).toContainText('22 września 2026');
+	await expect(dialog.locator('.primary')).toBeDisabled();
+	await expect(dialog.locator('.confirm-actions .secondary')).toBeEnabled();
+});
+
+test('Today is disabled at today and returns from another month or selected date', async ({
+	page
+}) => {
+	await asIfItWere(page, '2026-09-18T10:00:00');
+	await page.goto('/app/pl/ordo');
+	const dialog = await openPicker(page);
+	const today = dialog.locator('.modal-actions').getByRole('button', { name: 'Dzisiaj' });
+	await expect(dialog.locator('.dialog-header .today')).toHaveCount(0);
+	await expect(today).toHaveClass(/secondary/);
+	await expect(today).toBeDisabled();
+	await expect(today).toHaveCSS('border-top-style', 'solid');
+	await expect(today).toHaveCSS('border-top-width', '1px');
+	await dialog.getByRole('button', { name: 'następny miesiąc' }).click();
+	await expect(dialog.locator('[data-date="2026-09-18"]')).toHaveCount(0);
+	await expect(today).toBeEnabled();
+	await today.click();
+	await expect(dialog.locator('#month-label')).toHaveText('wrzesień 2026');
+	await expect(dialog.locator('[data-date="2026-09-18"]')).toHaveAttribute('aria-current', 'date');
+	await expect(dialog.locator('[data-date="2026-09-18"]')).toHaveAttribute('aria-pressed', 'true');
+	await expect(dialog.locator('[data-date="2026-09-18"]')).toBeFocused();
+	await expect(today).toBeDisabled();
+	await dialog.locator('[data-date="2026-09-21"]').click();
+	await expect(today).toBeEnabled();
+	await today.click();
+	await expect(today).toBeDisabled();
+	await expect(dialog.locator('[data-date="2026-09-18"]')).toBeFocused();
+	await expect(dialog.locator('.detail-date')).toContainText('18 września 2026');
+});
+
+test('keyboard date navigation crosses month boundaries without adjacent-month buttons', async ({
+	page
+}) => {
+	await asIfItWere(page, '2026-09-18T10:00:00');
+	await page.goto('/app/pl/ordo?dies=2026-09-01');
+	const dialog = await openPicker(page);
+	await dialog.locator('[data-date="2026-09-01"]').press('ArrowLeft');
+	await expect(dialog.locator('[data-date="2026-08-31"]')).toBeFocused();
+	await expect(dialog.locator('[data-date="2026-09-01"]')).toHaveCount(0);
+	await dialog.locator('[data-date="2026-08-31"]').press('ArrowRight');
+	await expect(dialog.locator('[data-date="2026-09-01"]')).toBeFocused();
+	await expect(dialog.locator('.date-cell[tabindex="0"]')).toHaveCount(1);
+});
+
+test('all seven calendar columns fit a phone at the largest reading size', async ({ page }) => {
+	await asIfItWere(page, '2026-09-18T10:00:00');
+	await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
+	await page.setViewportSize({ width: 375, height: 812 });
+	await page.goto('/app/pl/ordo?dies=2026-12-25');
+	const dialog = await openPicker(page);
+	const fit = await dialog.evaluate((element) => {
+		const panel = element.querySelector('.calendar-panel')!;
+		const grid = element.querySelector('.calendar-grid')!.getBoundingClientRect();
+		const days = [...element.querySelectorAll('.date-cell')].map((day) =>
+			day.getBoundingClientRect()
+		);
+		const headingsFit = [...element.querySelectorAll('.weekday')].every((heading) => {
+			const range = document.createRange();
+			range.selectNodeContents(heading);
+			return range.getBoundingClientRect().width <= heading.getBoundingClientRect().width;
+		});
+		return {
+			overflow: panel.scrollWidth - panel.clientWidth,
+			columnsFit: days.every((day) => day.left >= grid.left - 1 && day.right <= grid.right + 1),
+			headingsFit
+		};
+	});
+	expect(fit).toEqual({ overflow: 0, columnsFit: true, headingsFit: true });
+	await dialog.locator('input[value="nativitas-domini-in-aurora"]').check();
+	await dialog.getByRole('button', { name: 'Otwórz formularz', exact: true }).click();
+	await expect(page).toHaveURL(/dies=2026-12-25&missa=nativitas-domini-in-aurora/);
+});
+
+for (const lang of ['pl', 'en']) {
+	test(`the calendar header fits a narrow phone with largest type in ${lang}`, async ({ page }) => {
+		await asIfItWere(page, '2026-09-18T10:00:00');
+		await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
+		await page.setViewportSize({ width: 320, height: 812 });
+		await page.goto(`/app/${lang}/ordo?dies=2026-09-21`);
+		const dialog = await openPicker(page);
+		await expect(dialog.locator('h2')).toHaveCSS('text-align', 'start');
+		const fit = await dialog.locator('.dialog-header').evaluate((header) => {
+			const title = header.querySelector('h2')!.getBoundingClientRect();
+			const actions = header.querySelector('.close')!.getBoundingClientRect();
+			return title.right <= actions.left && actions.right <= header.getBoundingClientRect().right;
+		});
+		expect(fit).toBe(true);
+		const footer = await dialog.locator('.modal-actions').evaluate((element) => {
+			const bounds = element.getBoundingClientRect();
+			const today = element.querySelector('.today')!.getBoundingClientRect();
+			return {
+				todayAtLeft: Math.abs(today.left - bounds.left) < 1,
+				buttonsFit: [...element.querySelectorAll('button')].every((button) => {
+					const box = button.getBoundingClientRect();
+					return box.left >= bounds.left - 1 && box.right <= bounds.right + 1;
+				})
+			};
+		});
+		expect(footer).toEqual({ todayAtLeft: true, buttonsFit: true });
+	});
+}
+
+test('the calendar fills a compact desktop modal without moving month navigation', async ({
+	page
+}) => {
+	await asIfItWere(page, '2026-09-18T10:00:00');
+	await page.setViewportSize({ width: 1440, height: 1000 });
+	await page.goto('/app/pl/ordo?dies=2026-02-01');
+	const dialog = await openPicker(page);
+	const layout = await dialog.evaluate((element) => {
+		const box = (selector: string) => element.querySelector(selector)!.getBoundingClientRect();
+		const modal = element.getBoundingClientRect();
+		const panel = box('.calendar-panel');
+		const grid = box('.calendar-grid');
+		const side = box('.calendar-side');
+		return {
+			widthInRem: modal.width / parseFloat(getComputedStyle(document.documentElement).fontSize),
+			leftGap: side.left - panel.left,
+			fill: grid.width / side.width,
+			bodyBottomGap: panel.bottom - grid.bottom
+		};
+	});
+	expect(layout.widthInRem).toBeLessThanOrEqual(42.1);
+	expect(layout.leftGap).toBeLessThan(1);
+	expect(layout.fill).toBeGreaterThan(0.99);
+	expect(layout.bodyBottomGap).toBeLessThan(1);
+	const next = dialog.getByRole('button', { name: 'następny miesiąc' });
+	const before = await next.boundingBox();
+	for (let month = 0; month < 6; month += 1) {
+		await next.click();
+		const after = await next.boundingBox();
+		expect(after!.x).toBeCloseTo(before!.x, 0);
+		expect(after!.y).toBeCloseTo(before!.y, 0);
+	}
 });
 
 test('the folded day control gives its date room without looking like a dropdown', async ({
@@ -338,32 +620,32 @@ test('the folded day control gives its date room without looking like a dropdown
 	await expect(picker.locator('.calendar-icon')).toBeVisible();
 });
 
-test('a formulary without a date keeps its calendar icon centred on the single line', async ({
+test('an undated formulary identifier cannot select a Mass in the Ordo', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	await page.goto('/app/pl/ordo?dies=dominica-iii-adventus');
+	await expect(page.locator('.picker.day .state')).toContainText('Nieprawidłowy wybór');
+	await expect(page.locator('.choice-date')).toHaveText('19 sierpnia 2026');
+	await expect(page.locator('.choice-title')).not.toContainText('III Niedziela Adwentu');
+});
+
+test('opening without a formulary preserves the date, including after a reload', async ({
 	page
 }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.goto('/app/pl/ordo?dies=dominica-iii-adventus');
-	const picker = page.locator('.picker.day .day-open');
-	await expect(picker).toContainText('III Niedziela Adwentu');
-	await expect(picker.locator('.choice-date')).toHaveCount(0);
-	const offset = await picker.evaluate((button) => {
-		const copy = button.querySelector('.choice-copy')!.getBoundingClientRect();
-		const icon = button.querySelector('.calendar-icon')!.getBoundingClientRect();
-		return Math.abs(icon.top + icon.height / 2 - (copy.top + copy.height / 2));
-	});
-	expect(offset).toBeLessThan(0.5);
-});
-
-test('the list offers a quiet way to open the Ordo without a formulary', async ({ page }) => {
-	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.goto(`/app/pl/ordo?dies=${DAY}`);
+	await page.goto('/app/pl/ordo?dies=' + DAY_DATE);
 	const dialog = await openPicker(page);
-	await expect(dialog.locator('.modal-actions').getByRole('button')).toHaveCount(2);
-	await dialog.getByRole('tab', { name: 'Lista i wyszukiwanie' }).click();
+	await expect(dialog.getByRole('tab')).toHaveCount(0);
 	const without = dialog.getByRole('button', { name: 'Otwórz bez formularza' });
 	await expect(without).toHaveClass(/secondary/);
 	await without.click();
-	await expect(page).not.toHaveURL(/dies=/);
+	await expect(page).toHaveURL(/dies=2026-11-29&missa=none/);
+	await expect(page.locator('.choice-title')).toHaveText('bez formularza');
+	await page.reload();
+	await expect(page.locator('.choice-title')).toHaveText('bez formularza');
+	await expect(page.locator('.choice-date')).toHaveText('29 listopada 2026');
+	await page.locator('a.movement[href*="catechumenorum"]').click();
+	await expect(page).toHaveURL(/dies=2026-11-29&missa=none/);
+	await expect(page.locator('body')).not.toContainText('wznoszę');
 });
 
 test('the calendar presents a simple title and a lower-right action bar', async ({ page }) => {
@@ -384,8 +666,9 @@ test('the calendar presents a simple title and a lower-right action bar', async 
 		const box = (selector: string) => element.querySelector(selector)!.getBoundingClientRect();
 		const modal = element.getBoundingClientRect();
 		const actionBar = box('.modal-actions');
-		const secondary = box('.modal-actions .secondary');
+		const secondary = box('.confirm-actions .secondary');
 		const primary = box('.modal-actions .primary');
+		const today = box('.modal-actions .today');
 		const month = box('.month-nav h3');
 		const arrows = [...element.querySelectorAll('.month-nav button')].map((button) =>
 			button.getBoundingClientRect()
@@ -394,6 +677,8 @@ test('the calendar presents a simple title and a lower-right action bar', async 
 			actionsAtRight: Math.abs(actionBar.right - primary.right),
 			actionsAtBottom: modal.bottom - actionBar.bottom,
 			secondaryBeforePrimary: secondary.right < primary.left,
+			todayAtLeft: Math.abs(actionBar.left - today.left),
+			sameRow: Math.abs(today.top - secondary.top),
 			arrowOffsets: arrows.map((arrow) =>
 				Math.abs(arrow.top + arrow.height / 2 - (month.top + month.height / 2))
 			),
@@ -403,25 +688,23 @@ test('the calendar presents a simple title and a lower-right action bar', async 
 	expect(layout.actionsAtRight).toBeLessThan(1);
 	expect(layout.actionsAtBottom).toBeLessThan(40);
 	expect(layout.secondaryBeforePrimary).toBe(true);
+	expect(layout.todayAtLeft).toBeLessThan(1);
+	expect(layout.sameRow).toBeLessThan(1);
 	expect(Math.max(...layout.arrowOffsets)).toBeLessThan(1);
 	expect(layout.title).toBe('Wybór dnia');
 });
 
-test('switching picker views keeps the modal and tabs in place', async ({ page }) => {
-	await asIfItWere(page, OUTSIDE_ADVENT);
+test('changing between a single and multiple Masses keeps the modal in place', async ({ page }) => {
+	await asIfItWere(page, '2026-12-24T10:00:00');
 	await page.goto('/app/pl/ordo');
 	const dialog = await openPicker(page);
-	const tabs = dialog.locator('.tabs');
-	const before = { dialog: await dialog.boundingBox(), tabs: await tabs.boundingBox() };
-	await dialog.getByRole('tab', { name: 'Lista i wyszukiwanie' }).click();
-	const after = { dialog: await dialog.boundingBox(), tabs: await tabs.boundingBox() };
-	expect(before.dialog).not.toBeNull();
-	expect(before.tabs).not.toBeNull();
-	expect(after.dialog).not.toBeNull();
-	expect(after.tabs).not.toBeNull();
-	expect(after.dialog!.y).toBeCloseTo(before.dialog!.y, 0);
-	expect(after.dialog!.height).toBeCloseTo(before.dialog!.height, 0);
-	expect(after.tabs!.y).toBeCloseTo(before.tabs!.y, 0);
+	await expect(dialog.locator('.variants')).toHaveCount(0);
+	const before = await dialog.boundingBox();
+	await dialog.locator('[data-date="2026-12-25"]').click();
+	await expect(dialog.locator('.variants input')).toHaveCount(3);
+	const after = await dialog.boundingBox();
+	expect(after!.y).toBeCloseTo(before!.y, 0);
+	expect(after!.height).toBeCloseTo(before!.height, 0);
 });
 
 test('the modal traps focus, closes with Escape, and returns focus to its opener', async ({
@@ -434,7 +717,7 @@ test('the modal traps focus, closes with Escape, and returns focus to its opener
 	const dialog = await openPicker(page);
 	await expect(dialog).toBeFocused();
 	await dialog.press('Shift+Tab');
-	await expect(dialog.locator('.modal-actions .secondary')).toBeFocused();
+	await expect(dialog.locator('.confirm-actions .secondary')).toBeFocused();
 	await dialog.press('Escape');
 	await expect(dialog).toHaveCount(0);
 	await expect(opener).toBeFocused();
@@ -459,14 +742,14 @@ test('a date link restores the calendar answer and proper', async ({ page }) => 
 
 test('the chant slot carries gradual and alleluia together', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.goto(`/app/pl/ordo/catechumenorum?dies=${DAY}`);
+	await page.goto(`/app/pl/ordo/catechumenorum?dies=${DAY_DATE}`);
 	await expect(page.locator('body')).toContainText('Univérsi', { timeout: 15_000 });
 	await expect(page.locator('body')).toContainText('Osténde');
 });
 
 test('a shared link restores the day and the word', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.goto(`/app/pl/ordo/catechumenorum?dies=${DAY}&w=${DAY}-introitus.w014`);
+	await page.goto(`/app/pl/ordo/catechumenorum?dies=${DAY_DATE}&w=${DAY}-introitus.w014`);
 	await expect(page.locator('body')).toContainText('wznoszę', { timeout: 15_000 });
 	await expect(page.locator('body')).toContainText('tryb łączący', { timeout: 15_000 });
 	await expect(page.locator(`[id="${DAY}-introitus.w014"]`)).toBeInViewport();
@@ -478,7 +761,7 @@ test('a gesture before the proper arrives ends deep-link settling @online', asyn
 		await new Promise((resolve) => setTimeout(resolve, 2500));
 		await route.continue();
 	});
-	await page.goto(`/app/pl/ordo/catechumenorum?dies=${DAY}&w=${DAY}-introitus.w014`);
+	await page.goto(`/app/pl/ordo/catechumenorum?dies=${DAY_DATE}&w=${DAY}-introitus.w014`);
 	await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
 	await page.mouse.wheel(0, 200);
 	const word = page.locator(`[id="${DAY}-introitus.w014"]`);
@@ -578,7 +861,7 @@ test('a malformed day value is answered and not remembered', async ({ page }) =>
 	await page.goto('/app/pl/ordo/catechumenorum?dies=garbage-day');
 	await settled(page);
 	await expect(page.locator('.picker.day .day-open')).toContainText('bez formularza');
-	await expect(page.locator('.picker.day .state')).toHaveCount(0);
+	await expect(page.locator('.picker.day .state')).toContainText('Nieprawidłowy wybór');
 	await page.goto('/app/pl/ordo');
 	await settled(page);
 	await expect(page.locator('.picker.day .day-open')).toContainText('III Niedziela Adwentu');
@@ -589,7 +872,7 @@ test('a choice made yesterday expires at midnight', async ({ page }) => {
 	await page.evaluate(() =>
 		localStorage.setItem(
 			'scrutabor-day',
-			JSON.stringify({ value: 'dominica-i-adventus', on: '2020-01-01' })
+			JSON.stringify({ date: '2026-11-29', mass: 'dominica-i-adventus', on: '2020-01-01' })
 		)
 	);
 	await asIfItWere(page, '2026-12-13T10:00:00');
@@ -597,11 +880,9 @@ test('a choice made yesterday expires at midnight', async ({ page }) => {
 	await expect(page.locator('.picker.day .day-open')).toContainText('III Niedziela Adwentu');
 });
 
-test('a completed formulary id opens its texts rather than falling back to dayless Ordo', async ({
-	page
-}) => {
+test('a completed feast date opens its texts', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	await page.goto('/app/en/ordo/catechumenorum?dies=immaculata-conceptio');
+	await page.goto('/app/en/ordo/catechumenorum?dies=2030-12-08');
 	await settled(page);
 	await expect(page.locator('.picker.day .day-open')).toContainText(
 		'Immaculate Conception of the Blessed Virgin Mary'

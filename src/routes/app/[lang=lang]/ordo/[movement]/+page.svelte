@@ -204,15 +204,9 @@
 		<div class="help-row">
 			<div class="tabella">
 				<HelpLevels {lang} bind:value={helpLevel} />
-				<!-- The day appears only where it has something to fill: three
-				     of the six movements carry no proper slot at all — the
-				     preparation, the Canon and the communion are the same at
-				     every Mass — and a control that changes nothing on the
-				     page in front of the reader is a control that says the
-				     page is broken. -->
-				{#if hasProper}
-					<DayPicker {lang} />
-				{/if}
+				<!-- Keep the dated Mass visible and restore its links even when
+				     this movement contains only texts of the Ordinary. -->
+				<DayPicker {lang} />
 				<RolePicker {lang} />
 				<RolePicker {lang} kind="mass" />
 			</div>

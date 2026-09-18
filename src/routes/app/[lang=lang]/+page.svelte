@@ -80,6 +80,9 @@
 			<span class="flow-lead">{msgs.ordoLead}</span>
 		</a>
 
+		<p class="formulary-catalog">
+			<a href="/app/{lang}/formularium">{msgs.dayPicker.catalogTitle}</a>
+		</p>
 		<div class="catalog-spread">
 			<div class="catalog-column catalog-primary">
 				{#each primarySections as section (section.category)}
@@ -122,6 +125,11 @@
 </div>
 
 <style>
+	.formulary-catalog {
+		font-size: 0.85rem;
+		margin: 0.7rem 0 0;
+	}
+
 	/* The nav row, .tagline, .motto and .motto-ref are shared furniture
 	   (app.css): the same objects on the landing and the routers. */
 	.catalog-hero,

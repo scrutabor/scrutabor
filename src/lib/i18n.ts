@@ -116,8 +116,9 @@ export interface Messages {
 	dayPicker: {
 		title: string;
 		open: string;
-		calendarTab: string;
-		listTab: string;
+		catalogTitle: string;
+		catalogDescription: string;
+		invalidChoice: string;
 		today: string;
 		previousMonth: string;
 		nextMonth: string;
@@ -349,9 +350,11 @@ const MESSAGES: Record<Lang, Messages> = {
 		},
 		dayPicker: {
 			title: 'Wybór dnia',
-			open: 'wybierz dzień lub formularz',
-			calendarTab: 'Kalendarz',
-			listTab: 'Lista i wyszukiwanie',
+			open: 'wybierz datę',
+			catalogTitle: 'Formularze Mszy',
+			catalogDescription:
+				'Teksty do lektury i nauki, bez przypisania do konkretnej daty. Aby przygotować porządek Mszy na wybrany dzień, otwórz Ordo Missae.',
+			invalidChoice: 'Nieprawidłowy wybór dnia lub Mszy w adresie. Wybierz datę w kalendarzu.',
 			today: 'Dzisiaj',
 			previousMonth: 'poprzedni miesiąc',
 			nextMonth: 'następny miesiąc',
@@ -564,9 +567,12 @@ const MESSAGES: Record<Lang, Messages> = {
 		},
 		dayPicker: {
 			title: 'Choose a day',
-			open: 'choose a day or formulary',
-			calendarTab: 'Calendar',
-			listTab: 'List and search',
+			open: 'choose a date',
+			catalogTitle: 'Mass formularies',
+			catalogDescription:
+				'Texts for reading and study, without a specific date. To follow the order of Mass for a chosen day, open the Ordo Missae.',
+			invalidChoice:
+				'The address contains an invalid day or Mass selection. Choose a date in the calendar.',
 			today: 'Today',
 			previousMonth: 'previous month',
 			nextMonth: 'next month',

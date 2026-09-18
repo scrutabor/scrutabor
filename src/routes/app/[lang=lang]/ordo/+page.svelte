@@ -52,6 +52,9 @@
 			</div>
 		</div>
 
+		<p class="formulary-catalog">
+			<a href="/app/{lang}/formularium">{msgs.dayPicker.catalogTitle}</a>
+		</p>
 		<div class="movements">
 			{#each movements as m (m.id)}
 				<a class="movement" href={dayHref(`/app/${lang}/ordo/${m.id}`)}>
@@ -69,6 +72,12 @@
 </div>
 
 <style>
+	.formulary-catalog {
+		text-align: center;
+		font-size: 0.85rem;
+		margin: 0.7rem 0 0;
+	}
+
 	.subtitle {
 		margin: 0.3rem 0 0;
 		text-align: center;

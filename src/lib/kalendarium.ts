@@ -8,13 +8,10 @@
 // November, all of it happened in Python against the Rubricae generales and
 // was verified against the Missal's own table of movable feasts.
 //
-// What the table holds is the days that have a Mass of their own: the Sundays
-// and the feasts of the Lord that belong to the season. Ferias are absent on
-// purpose, and the honest answer for a Tuesday is the WEEK it falls in, which
-// is what `dayOf` returns alongside. Which Mass that Tuesday actually takes
-// depends on the season — the Missale prints one for every day of Lent and
-// none between the Sundays of Advent — and no rule the corpus has transcribed
-// settles the second case, so the week is named and nothing is claimed.
+// The table combines the supported temporal and sanctoral celebrations.
+// It is not a complete daily or local calendar. A missing occurrence must not
+// be replaced by the preceding Sunday's Mass; `dayOf` reports that week only
+// as context, independently of the occurrence on the requested date.
 import calendar from './data/calendar.json';
 
 export interface Kalendar {
@@ -24,11 +21,7 @@ export interface Kalendar {
 	 * formulary where a feast took the Sunday's place or n. 18 moved a Mass. */
 	position: string;
 	season: string;
-	/** First or second class (Rubricae generales n. 8). A Sunday of the first
-	 * class yields to nothing but the one feast n. 15 itself excepts, the
-	 * Immaculate Conception, which the table carries — so for those Sundays
-	 * the answer is complete. A Sunday of the second class can be taken by any
-	 * first-class feast (n. 16 a), and the table has no sanctoral to check. */
+	/** First or second class, after the corpus resolves supported precedence. */
 	dies: 1 | 2;
 	/** The date this day falls on. */
 	when: string;
@@ -84,13 +77,18 @@ export function dayOn(iso: string): Kalendar | null {
 	return row ? shape(row) : null;
 }
 
-/** Whether a spelling is a real civil date inside the shipped table. */
-export function calendarCovers(iso: string): boolean {
+/** Validate the civil date separately from the edition's calendar coverage. */
+export function isCivilDate(iso: string): boolean {
 	const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
-	if (!match || iso < DATE_MIN || iso > DATE_MAX) return false;
+	if (!match) return false;
 	const [, y, m, d] = match.map(Number);
 	const when = new Date(y, m - 1, d, 12);
 	return when.getFullYear() === y && when.getMonth() === m - 1 && when.getDate() === d;
+}
+
+/** Whether a spelling is a real civil date inside the shipped table. */
+export function calendarCovers(iso: string): boolean {
+	return isCivilDate(iso) && iso >= DATE_MIN && iso <= DATE_MAX;
 }
 
 /**

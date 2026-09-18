@@ -10,7 +10,8 @@
 		isoDate,
 		type Kalendar
 	} from '$lib/kalendarium';
-	import { PROPER_DAYS, SEASONS, dayByCalendarKey, dayById, type ProperDay } from '$lib/proprium';
+	import { dayByCalendarKey, type ProperDay } from '$lib/proprium';
+	import { massesOn, resolveOrdoChoice, type OrdoChoice } from '$lib/ordo-choice';
 
 	let {
 		lang,
@@ -24,27 +25,24 @@
 		chosen: string;
 		selectedDate: string | null;
 		todayDate: string;
-		onpick: (choice: { id: string; date: string | null; requested: string | null }) => void;
+		onpick: (choice: OrdoChoice) => void;
 		onclose: () => void;
 	} = $props();
 
 	const msgs = $derived(M[lang]);
 	const locale = $derived(lang === 'pl' ? 'pl-PL' : 'en-GB');
 	function initialValues(): { date: string; day: string } {
-		const today = calendarCovers(todayDate) ? todayDate : DATE_MIN;
+		const date = selectedDate ?? todayDate;
 		return {
-			date: calendarCovers(selectedDate ?? '') ? (selectedDate as string) : today,
-			day: chosen
+			date,
+			day: chosen || resolveOrdoChoice(date)?.mass || ''
 		};
 	}
 	const initial = initialValues();
 	const canChooseToday = $derived(calendarCovers(todayDate));
-	let tab = $state<'calendar' | 'list'>('calendar');
 	let pendingDate = $state(initial.date);
 	let pendingDay = $state(initial.day);
-	let month = $state(initial.date.slice(0, 7));
-	let query = $state('');
-	let listDay = $state(initial.day);
+	let month = $state(clampDate(initial.date).slice(0, 7));
 	let frame = $state<HTMLElement | null>(null);
 
 	function localDate(iso: string): Date {
@@ -85,18 +83,16 @@
 		}
 	}
 
-	function monthCells(value: string): { iso: string; day: number; inMonth: boolean }[] {
+	function monthCells(value: string): { iso: string; day: number; column?: number }[] {
 		const [year, monthNumber] = value.split('-').map(Number);
 		const first = new SvelteDate(year, monthNumber - 1, 1, 12);
-		const offset = first.getDay();
-		first.setDate(first.getDate() - offset);
-		return Array.from({ length: 42 }, (_, index) => {
-			const date = new SvelteDate(first);
-			date.setDate(first.getDate() + index);
+		const length = new SvelteDate(year, monthNumber, 0, 12).getDate();
+		return Array.from({ length }, (_, index) => {
+			const date = new SvelteDate(year, monthNumber - 1, index + 1, 12);
 			return {
 				iso: isoDate(date),
 				day: date.getDate(),
-				inMonth: date.getMonth() === monthNumber - 1
+				column: index === 0 ? first.getDay() + 1 : undefined
 			};
 		});
 	}
@@ -106,15 +102,18 @@
 	}
 
 	const cells = $derived(monthCells(month));
+	const focusDate = $derived(
+		cells.find((cell) => cell.iso === pendingDate)?.iso ??
+			cells.find((cell) => calendarCovers(cell.iso))?.iso
+	);
 	const detail = $derived.by(() => {
 		const place = dayOf(pendingDate);
 		const day = properFor(place.on);
 		const sunday = properFor(place.week);
-		const variants = day
-			? PROPER_DAYS.filter((candidate) => candidate.observance === day.observance)
-			: [];
+		const variants = massesOn(pendingDate);
 		return { ...place, day, sunday, variants };
 	});
+	const displayedDay = $derived(detail.variants.find((day) => day.id === pendingDay) ?? detail.day);
 
 	const monthLabel = $derived(
 		new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric' }).format(
@@ -135,29 +134,16 @@
 		Array.from({ length: 7 }, (_, index) => {
 			const date = new SvelteDate(2026, 0, 4 + index, 12);
 			return {
-				short: new Intl.DateTimeFormat(locale, { weekday: 'short' }).format(date),
+				short:
+					lang === 'pl' && index === 0
+						? 'ndz.'
+						: new Intl.DateTimeFormat(locale, { weekday: 'short' }).format(date),
 				long: new Intl.DateTimeFormat(locale, { weekday: 'long' }).format(date)
 			};
 		})
 	);
 
-	function normalise(value: string): string {
-		return value
-			.toLocaleLowerCase(locale)
-			.normalize('NFD')
-			.replace(/[\u0300-\u036f]/g, '')
-			.replace(/ł/g, 'l');
-	}
-
-	const filtered = $derived.by(() => {
-		const needle = normalise(query.trim());
-		if (!needle) return PROPER_DAYS;
-		return PROPER_DAYS.filter((day) =>
-			normalise(`${day.title[lang]} ${day.title.la}`).includes(needle)
-		);
-	});
-	const listReady = $derived(!!listDay && filtered.some((day) => day.id === listDay));
-	const canOpenFormulary = $derived(tab === 'calendar' ? !!detail.day : listReady);
+	const canOpenFormulary = $derived(detail.variants.some((day) => day.id === pendingDay));
 
 	function cellLabel(iso: string): string {
 		const on = dayOn(iso);
@@ -168,40 +154,12 @@
 	}
 
 	function chooseCalendar(): void {
-		const on = dayOn(pendingDate);
-		const available = pendingDay ? dayById(pendingDay) : undefined;
-		const canonical = properFor(on);
-		// A non-default Mass for a multi-Mass observance is a direct formulary
-		// choice. With one URL value it cannot also pretend to be the calendar's
-		// automatic answer for that date.
-		const date = available && canonical && available.id !== canonical.id ? null : pendingDate;
-		onpick({
-			id: available?.id ?? '',
-			date,
-			requested: available?.id ?? on?.formulary ?? null
-		});
-	}
-
-	function chooseList(): void {
-		const available = dayById(listDay);
-		onpick({ id: available?.id ?? '', date: null, requested: available?.id ?? null });
+		const choice = resolveOrdoChoice(pendingDate, pendingDay);
+		if (choice) onpick(choice);
 	}
 
 	function chooseWithout(): void {
-		if (tab === 'calendar' && !detail.day) {
-			onpick({
-				id: '',
-				date: pendingDate,
-				requested: detail.on?.formulary ?? null
-			});
-			return;
-		}
-		onpick({ id: '', date: null, requested: null });
-	}
-
-	function chooseSelected(): void {
-		if (tab === 'calendar') chooseCalendar();
-		else chooseList();
+		onpick({ date: pendingDate, mass: null });
 	}
 
 	function onDateKey(event: KeyboardEvent, iso: string): void {
@@ -254,15 +212,6 @@
 		}
 	}
 
-	function onTabKey(event: KeyboardEvent, next: 'calendar' | 'list'): void {
-		if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
-		event.preventDefault();
-		if (event.key === 'Home') tab = 'calendar';
-		else if (event.key === 'End') tab = 'list';
-		else tab = next;
-		requestAnimationFrame(() => frame?.querySelector<HTMLElement>(`#${tab}-tab`)?.focus());
-	}
-
 	function backdrop(event: MouseEvent): void {
 		if (event.target === event.currentTarget) onclose();
 	}
@@ -300,179 +249,114 @@
 			<button type="button" class="close" aria-label={msgs.close} onclick={onclose}>×</button>
 		</header>
 
-		<div class="tabs" role="tablist" aria-label={msgs.dayPicker.title}>
-			<button
-				type="button"
-				role="tab"
-				id="calendar-tab"
-				aria-selected={tab === 'calendar'}
-				aria-controls="calendar-panel"
-				tabindex={tab === 'calendar' ? 0 : -1}
-				onkeydown={(event) => onTabKey(event, 'list')}
-				onclick={() => (tab = 'calendar')}>{msgs.dayPicker.calendarTab}</button
-			>
-			<button
-				type="button"
-				role="tab"
-				id="list-tab"
-				aria-selected={tab === 'list'}
-				aria-controls="list-panel"
-				tabindex={tab === 'list' ? 0 : -1}
-				onkeydown={(event) => onTabKey(event, 'calendar')}
-				onclick={() => (tab = 'list')}>{msgs.dayPicker.listTab}</button
-			>
+		<div class="calendar-panel">
+			<div class="calendar-side">
+				<div class="month-nav">
+					<button
+						type="button"
+						aria-label={msgs.dayPicker.previousMonth}
+						disabled={`${month}-01` <= DATE_MIN.slice(0, 7) + '-01'}
+						onclick={() => moveMonth(-1)}
+					>
+						<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+							<path d="m12.5 4-6 6 6 6"></path>
+						</svg></button
+					>
+					<h3 id="month-label" aria-live="polite">{monthLabel}</h3>
+					<button
+						type="button"
+						aria-label={msgs.dayPicker.nextMonth}
+						disabled={month >= DATE_MAX.slice(0, 7)}
+						onclick={() => moveMonth(1)}
+					>
+						<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+							<path d="m7.5 4 6 6-6 6"></path>
+						</svg></button
+					>
+				</div>
+				<div class="calendar-grid" aria-labelledby="month-label">
+					{#each weekdays as weekday (weekday.long)}
+						<abbr class="weekday" title={weekday.long}>{weekday.short}</abbr>
+					{/each}
+					{#each cells as cell (cell.iso)}
+						{@const on = dayOn(cell.iso)}
+						{@const available = properFor(on)}
+						<button
+							type="button"
+							class="date-cell"
+							style:grid-column={cell.column}
+							class:today-date={cell.iso === todayDate}
+							class:selected={cell.iso === pendingDate}
+							class:has-formulary={!!available}
+							data-date={cell.iso}
+							aria-label={cellLabel(cell.iso)}
+							aria-pressed={cell.iso === pendingDate}
+							aria-current={cell.iso === todayDate ? 'date' : undefined}
+							tabindex={cell.iso === focusDate ? 0 : -1}
+							disabled={!calendarCovers(cell.iso)}
+							onclick={() => selectDate(cell.iso)}
+							onkeydown={(event) => onDateKey(event, cell.iso)}
+						>
+							<span>{cell.day}</span>
+						</button>
+					{/each}
+				</div>
+			</div>
+
+			<div class="day-detail">
+				<p class="detail-date smallcaps">{dateLabel(pendingDate, 'full')}</p>
+				{#if displayedDay}
+					<h3>{displayedDay.title[lang]}</h3>
+					{#if displayedDay.partial}<p class="availability">{msgs.dayPicker.partial}</p>{/if}
+					{#if detail.variants.length > 1}
+						<fieldset class="variants">
+							<legend>{msgs.dayPicker.chooseVariant}</legend>
+							{#each detail.variants as variant (variant.id)}
+								<label>
+									<input
+										type="radio"
+										name="day-variant"
+										value={variant.id}
+										checked={pendingDay === variant.id}
+										onchange={() => (pendingDay = variant.id)}
+									/>
+									<span>{variant.title[lang]}</span>
+								</label>
+							{/each}
+						</fieldset>
+					{/if}
+				{:else if detail.on}
+					<h3>{msgs.dayPicker.unwrittenTitle}</h3>
+					<p>{msgs.dayPicker.unwrittenText}</p>
+				{:else}
+					<h3>{msgs.dayPicker.unresolvedTitle}</h3>
+					<p>{msgs.dayPicker.unresolvedText}</p>
+					{#if detail.sunday}
+						<p class="week-note">
+							{msgs.dayPicker.unresolvedWeek} <strong>{detail.sunday.title[lang]}</strong>.
+						</p>
+					{/if}
+				{/if}
+			</div>
 		</div>
 
-		{#if tab === 'calendar'}
-			<div
-				class="calendar-panel"
-				id="calendar-panel"
-				role="tabpanel"
-				aria-labelledby="calendar-tab"
-			>
-				<div class="calendar-side">
-					<div class="month-nav">
-						<button
-							type="button"
-							aria-label={msgs.dayPicker.previousMonth}
-							disabled={`${month}-01` <= DATE_MIN.slice(0, 7) + '-01'}
-							onclick={() => moveMonth(-1)}
-						>
-							<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
-								<path d="m12.5 4-6 6 6 6"></path>
-							</svg></button
-						>
-						<h3 id="month-label" aria-live="polite">{monthLabel}</h3>
-						<button
-							type="button"
-							aria-label={msgs.dayPicker.nextMonth}
-							disabled={month >= DATE_MAX.slice(0, 7)}
-							onclick={() => moveMonth(1)}
-						>
-							<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
-								<path d="m7.5 4 6 6-6 6"></path>
-							</svg></button
-						>
-					</div>
-					<div class="calendar-grid" aria-labelledby="month-label">
-						{#each weekdays as weekday (weekday.long)}
-							<abbr class="weekday" title={weekday.long}>{weekday.short}</abbr>
-						{/each}
-						{#each cells as cell (cell.iso)}
-							{@const on = dayOn(cell.iso)}
-							{@const available = properFor(on)}
-							<button
-								type="button"
-								class="date-cell"
-								class:outside={!cell.inMonth}
-								class:today-date={cell.iso === todayDate}
-								class:selected={cell.iso === pendingDate}
-								class:has-formulary={!!available}
-								data-date={cell.iso}
-								aria-label={cellLabel(cell.iso)}
-								aria-pressed={cell.iso === pendingDate}
-								tabindex={cell.iso === pendingDate ? 0 : -1}
-								disabled={!calendarCovers(cell.iso)}
-								onclick={() => selectDate(cell.iso)}
-								onkeydown={(event) => onDateKey(event, cell.iso)}
-							>
-								<span>{cell.day}</span>
-								{#if available}<i aria-hidden="true"></i>{/if}
-							</button>
-						{/each}
-					</div>
-					<div class="calendar-footer">
-						<button
-							type="button"
-							class="today"
-							disabled={!canChooseToday || pendingDate === todayDate}
-							onclick={() => selectDate(todayDate)}>{msgs.dayPicker.today}</button
-						>
-						<p class="legend"><i aria-hidden="true"></i> {msgs.dayPicker.available}</p>
-					</div>
-				</div>
-
-				<div class="day-detail">
-					<p class="detail-date smallcaps">{dateLabel(pendingDate, 'full')}</p>
-					{#if detail.day}
-						<h3>{detail.day.title[lang]}</h3>
-						<p class="availability">
-							<span class="available-mark" aria-hidden="true"></span>
-							{detail.day.partial ? msgs.dayPicker.partial : msgs.dayPicker.available}
-						</p>
-						{#if detail.variants.length > 1}
-							<fieldset class="variants">
-								<legend>{msgs.dayPicker.chooseVariant}</legend>
-								{#each detail.variants as variant (variant.id)}
-									<label>
-										<input
-											type="radio"
-											name="day-variant"
-											value={variant.id}
-											checked={pendingDay === variant.id}
-											onchange={() => (pendingDay = variant.id)}
-										/>
-										<span>{variant.title[lang]}</span>
-									</label>
-								{/each}
-							</fieldset>
-						{/if}
-					{:else if detail.on}
-						<h3>{msgs.dayPicker.unwrittenTitle}</h3>
-						<p>{msgs.dayPicker.unwrittenText}</p>
-					{:else}
-						<h3>{msgs.dayPicker.unresolvedTitle}</h3>
-						<p>{msgs.dayPicker.unresolvedText}</p>
-						{#if detail.sunday}
-							<p class="week-note">
-								{msgs.dayPicker.unresolvedWeek} <strong>{detail.sunday.title[lang]}</strong>.
-							</p>
-						{/if}
-					{/if}
-				</div>
-			</div>
-		{:else}
-			<div class="list-panel" id="list-panel" role="tabpanel" aria-labelledby="list-tab">
-				<label class="search">
-					<span class="smallcaps">{msgs.dayPicker.searchLabel}</span>
-					<input type="search" bind:value={query} placeholder={msgs.dayPicker.searchPlaceholder} />
-				</label>
-				<div class="formulary-list">
-					{#if filtered.length === 0}
-						<p class="no-results">{msgs.dayPicker.noResults}</p>
-					{:else}
-						{#each SEASONS as season (season)}
-							{@const days = filtered.filter((day) => day.season === season)}
-							{#if days.length}
-								<section class="season-group" aria-labelledby={`season-${season}`}>
-									<h3 id={`season-${season}`} class="smallcaps">{msgs.seasons[season]}</h3>
-									{#each days as day (day.id)}
-										<button
-											type="button"
-											class:selected={listDay === day.id}
-											data-formulary={day.id}
-											aria-pressed={listDay === day.id}
-											onclick={() => (listDay = day.id)}
-										>
-											<span>{day.title[lang]}</span>
-											{#if day.partial}<small>{msgs.dayPartial}</small>{/if}
-										</button>
-									{/each}
-								</section>
-							{/if}
-						{/each}
-					{/if}
-				</div>
-			</div>
-		{/if}
-
 		<div class="modal-actions">
-			<button type="button" class="secondary" onclick={chooseWithout}>
-				{msgs.dayPicker.openWithout}
+			<button
+				type="button"
+				class="today secondary"
+				disabled={!canChooseToday || (pendingDate === todayDate && month === todayDate.slice(0, 7))}
+				onclick={() => selectDate(todayDate, true)}
+			>
+				{msgs.dayPicker.today}
 			</button>
-			<button type="button" class="primary" disabled={!canOpenFormulary} onclick={chooseSelected}>
-				{msgs.dayPicker.openFormulary}
-			</button>
+			<div class="confirm-actions">
+				<button type="button" class="secondary" onclick={chooseWithout}>
+					{msgs.dayPicker.openWithout}
+				</button>
+				<button type="button" class="primary" disabled={!canOpenFormulary} onclick={chooseCalendar}>
+					{msgs.dayPicker.openFormulary}
+				</button>
+			</div>
 		</div>
 	</dialog>
 </div>
@@ -491,7 +375,7 @@
 	.day-dialog {
 		position: relative;
 		display: grid;
-		grid-template-rows: auto auto minmax(0, 1fr) auto;
+		grid-template-rows: auto minmax(0, 1fr) auto;
 		width: 100%;
 		max-height: min(94dvh, 54rem);
 		overflow: hidden;
@@ -511,8 +395,7 @@
 
 	.dialog-header,
 	.month-nav,
-	.calendar-footer,
-	.availability,
+	.confirm-actions,
 	.modal-actions {
 		display: flex;
 		align-items: center;
@@ -521,6 +404,9 @@
 	.dialog-header {
 		justify-content: space-between;
 		gap: 1rem;
+		border-bottom: 1px solid var(--border);
+		padding-block-end: 0.8rem;
+		margin-block-end: 1rem;
 	}
 
 	.detail-date {
@@ -541,6 +427,7 @@
 		font-weight: 500;
 		margin-block-end: 0;
 		line-height: 1.1;
+		text-align: start;
 	}
 
 	.close,
@@ -553,78 +440,23 @@
 	}
 
 	.close {
+		flex-shrink: 0;
 		font-size: 1.65rem;
 		line-height: 1;
 		padding: 0.35rem 0.5rem;
 	}
 
-	.today,
-	.tabs button,
-	.primary,
-	.secondary {
-		font: inherit;
-	}
-
-	.today {
-		appearance: none;
-		border: 0;
-		background: transparent;
-		color: var(--rubric);
-		font-size: 0.82rem;
-		font-weight: 600;
-		padding: 0.3rem 0.4rem;
-		cursor: pointer;
-	}
-
-	.today:not(:disabled):hover {
-		text-decoration: underline;
-		text-underline-offset: 0.14em;
-	}
-
-	.today:disabled {
-		opacity: 0.35;
-		cursor: default;
-	}
-
-	.tabs {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		border-bottom: 1px solid var(--border);
-		margin-block-end: 1rem;
-	}
-
-	.tabs button {
-		appearance: none;
-		border: 0;
-		border-bottom: 2px solid transparent;
-		background: transparent;
-		color: var(--ink-soft);
-		padding: 0.7rem 0.4rem;
-		cursor: pointer;
-	}
-
-	.tabs button[aria-selected='true'] {
-		border-bottom-color: var(--rubric);
-		color: var(--rubric);
-		font-weight: 600;
-	}
-
 	.calendar-side {
+		width: 100%;
 		max-width: 28rem;
 		margin-inline: auto;
+		align-self: start;
 	}
 
-	.calendar-panel,
-	.list-panel {
+	.calendar-panel {
 		height: min(60dvh, 25rem);
 		min-height: 0;
 		overflow-y: auto;
-	}
-
-	.list-panel {
-		display: grid;
-		grid-template-rows: auto minmax(0, 1fr);
-		overflow: hidden;
 	}
 
 	.month-nav {
@@ -668,14 +500,14 @@
 
 	.calendar-grid {
 		display: grid;
-		grid-template-columns: repeat(7, minmax(2.2rem, 1fr));
-		gap: 0.16rem;
+		grid-template-columns: repeat(7, minmax(0, 1fr));
+		gap: 0.12rem;
 	}
 
 	.weekday {
 		text-align: center;
 		text-decoration: none;
-		font-size: 0.69rem;
+		font-size: clamp(0.6rem, 2.8vw, 0.69rem);
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
 		color: var(--ink-soft);
@@ -686,7 +518,9 @@
 		position: relative;
 		appearance: none;
 		aspect-ratio: 1;
-		min-height: 2.25rem;
+		width: 100%;
+		min-width: 0;
+		padding: 0;
 		border: 1px solid transparent;
 		border-radius: 50%;
 		background: transparent;
@@ -695,14 +529,17 @@
 		cursor: pointer;
 	}
 
-	/* The neighbouring months' dates are quieter than the month's own, but
-	   they are dates a reader can choose, so their ink still clears AA
-	   (4.5:1) on the sheet: 84% of the soft ink measures 5.1:1 light and
-	   6.5:1 dark, where the former half-opacity gave 2.4:1 and 3.3:1.
-	   Guarded by the day-picker sweep in tests/a11y.spec.ts. */
-	.date-cell.outside {
+	/* Dates without a formulary remain selectable. Softened ink still
+	   clears AA in both themes; the day-picker accessibility tests check it. */
+	.date-cell:not(.has-formulary) {
 		color: var(--ink-soft);
 		color: color-mix(in srgb, var(--ink-soft) 84%, var(--surface));
+	}
+
+	/* A light weight accent complements the colour without crowding the numerals. */
+	.date-cell.has-formulary {
+		color: var(--rubric);
+		font-weight: 500;
 	}
 
 	.date-cell.today-date {
@@ -719,42 +556,6 @@
 	.date-cell:disabled {
 		opacity: 0.18;
 		cursor: default;
-	}
-
-	.date-cell i,
-	.legend i {
-		display: inline-block;
-		width: 0.25rem;
-		height: 0.25rem;
-		border-radius: 50%;
-		background: var(--rubric);
-	}
-
-	.date-cell i {
-		position: absolute;
-		inset-inline-start: calc(50% - 0.125rem);
-		bottom: 0.2rem;
-	}
-
-	.date-cell.selected i {
-		background: currentcolor;
-	}
-
-	.legend {
-		font-size: 0.77rem;
-		color: var(--ink-soft);
-		margin: 0;
-		text-align: center;
-	}
-
-	.legend i {
-		margin-inline-end: 0.25rem;
-	}
-
-	.calendar-footer {
-		justify-content: space-between;
-		gap: 1rem;
-		margin-block-start: 0.55rem;
 	}
 
 	.day-detail {
@@ -774,21 +575,8 @@
 	}
 
 	.availability {
-		gap: 0.4rem;
 		color: var(--ink-soft);
 		font-size: 0.88rem;
-	}
-
-	.availability span {
-		color: var(--rubric);
-	}
-
-	.available-mark {
-		width: 0.5rem;
-		height: 0.3rem;
-		border-inline-start: 1.5px solid currentcolor;
-		border-bottom: 1.5px solid currentcolor;
-		transform: translateY(-0.1rem) rotate(-45deg);
 	}
 
 	.variants {
@@ -812,6 +600,7 @@
 
 	.primary,
 	.secondary {
+		font: inherit;
 		appearance: none;
 		border: 1px solid var(--rubric);
 		border-radius: 0.5rem;
@@ -830,95 +619,14 @@
 		color: var(--rubric);
 	}
 
-	.primary:disabled {
+	.primary:disabled,
+	.secondary:disabled {
 		opacity: 0.45;
 		cursor: default;
 	}
 
-	.search {
-		display: grid;
-		gap: 0.3rem;
-	}
-
-	.search span {
-		font-size: 0.7rem;
-		letter-spacing: 0.1em;
-		color: var(--ink-soft);
-	}
-
-	.search input {
-		width: 100%;
-		min-height: 2.55rem;
-		border: 1px solid var(--border);
-		border-radius: 0.5rem;
-		background: var(--bg);
-		color: var(--ink);
-		font: inherit;
-		padding: 0.5rem 0.65rem;
-	}
-
-	.formulary-list {
-		min-height: 0;
-		overflow-y: auto;
-		margin-block: 0.8rem;
-		border-block: 1px solid var(--border);
-	}
-
-	.season-group {
-		padding-block: 0.65rem;
-	}
-
-	.season-group + .season-group {
-		border-top: 1px solid var(--border);
-	}
-
-	.season-group h3 {
-		font-size: 0.68rem;
-		letter-spacing: 0.1em;
-		color: var(--ink-soft);
-		margin-block-end: 0.3rem;
-	}
-
-	.season-group button {
-		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
-		gap: 0.8rem;
-		width: 100%;
-		appearance: none;
-		border: 0;
-		border-radius: 0.35rem;
-		background: transparent;
-		color: var(--ink);
-		font: inherit;
-		text-align: start;
-		padding: 0.42rem 0.5rem;
-		cursor: pointer;
-	}
-
-	.season-group button:hover,
-	.season-group button.selected {
-		background: var(--wash);
-	}
-
-	.season-group button.selected {
-		color: var(--rubric);
-		font-weight: 600;
-	}
-
-	.season-group small {
-		font-size: 0.72rem;
-		font-weight: 400;
-		color: var(--ink-soft);
-	}
-
-	.no-results {
-		color: var(--ink-soft);
-		padding: 1rem 0.5rem;
-	}
-
 	.modal-actions {
-		justify-content: flex-end;
+		justify-content: space-between;
 		flex-wrap: wrap;
 		gap: 0.65rem;
 		border-top: 1px solid var(--border);
@@ -926,11 +634,32 @@
 		padding-block-start: 1rem;
 	}
 
+	.confirm-actions {
+		justify-content: flex-end;
+		gap: 0.65rem;
+		margin-inline-start: auto;
+		max-width: 100%;
+		min-width: 0;
+	}
+
 	@media (max-width: 30rem) {
+		.dialog-header {
+			gap: 0.5rem;
+		}
+
+		.dialog-header h2 {
+			font-size: 1.2rem;
+		}
+
 		.modal-actions {
+			gap: 0.5rem;
+		}
+
+		.confirm-actions {
 			display: grid;
 			grid-template-columns: minmax(0, 1.16fr) minmax(0, 1fr);
 			gap: 0.5rem;
+			width: 100%;
 		}
 
 		.modal-actions button {
@@ -947,16 +676,23 @@
 		}
 
 		.day-dialog {
-			max-width: 49rem;
+			max-width: 42rem;
 			border-bottom: 1px solid var(--border);
 			border-radius: 1rem;
-			padding: 1.4rem 1.55rem;
+			padding: 1.1rem 1.2rem;
 		}
 
 		.calendar-panel {
 			display: grid;
-			grid-template-columns: minmax(22rem, 1.15fr) minmax(16rem, 0.85fr);
-			gap: 1.5rem;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 1.2rem;
+			height: auto;
+		}
+
+		.calendar-grid {
+			/* Keep desktop navigation still across months. The phone's fixed
+			   scroll panel needs no reserved rows below its last date. */
+			grid-template-rows: auto repeat(6, 1fr);
 		}
 
 		.day-detail {
@@ -964,7 +700,7 @@
 			border-inline-start: 1px solid var(--border);
 			margin-block-start: 0;
 			padding-block-start: 0.35rem;
-			padding-inline-start: 1.5rem;
+			padding-inline-start: 1.2rem;
 		}
 	}
 
@@ -975,8 +711,8 @@
 			color: HighlightText;
 		}
 
-		.date-cell.has-formulary::after {
-			content: '·';
+		.date-cell:not(.has-formulary):not(.selected) {
+			color: GrayText;
 		}
 	}
 

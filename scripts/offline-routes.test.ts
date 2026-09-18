@@ -75,6 +75,7 @@ describe('the downloaded copy covers the whole site', () => {
 			['/pl/grammatica/pronuntiatio', 'pronuntiatio'],
 			['/pl/grammatica/vocativus', 'concept'],
 			['/pl/lemma', 'lemma'],
+			['/pl/formularium', 'formularies'],
 			['/pl/formularium/dominica-i-adventus', 'formularium'],
 			['/pl/bibliographia', 'bibliographia'],
 			['/pl/editio', 'editio'],

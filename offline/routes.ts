@@ -78,6 +78,12 @@ export const ROUTES: { name: string; key: string; pattern: RegExp; params: strin
 		params: ['lang']
 	},
 	{
+		name: 'formularies',
+		key: '/app/[lang=lang]/formularium',
+		pattern: route('/formularium/?'),
+		params: ['lang']
+	},
+	{
 		name: 'formularium',
 		key: '/app/[lang=lang]/formularium/[formulary]',
 		pattern: route('/formularium/([^/]+)'),
