@@ -76,8 +76,9 @@ interface BibliographyIndex {
 }
 
 interface EvidenceAddress {
-	kind: 'text' | 'segment';
+	kind: 'text' | 'segment' | 'word';
 	segment?: string;
+	word?: string;
 }
 
 interface EvidenceSourceGroup {
@@ -144,7 +145,7 @@ export interface BibliographyUse {
 	key: string;
 	title: string;
 	href: string;
-	kind: 'text' | 'segment' | 'range';
+	kind: 'text' | 'segment' | 'range' | 'word';
 	first?: number;
 	last?: number;
 }
@@ -310,6 +311,16 @@ function compactUses(
 				lang
 			)
 		);
+		for (const word of new Set(
+			addresses.flatMap(({ kind, word }) => (kind === 'word' && word ? [word] : []))
+		)) {
+			out.push({
+				key: `${textId}:${word}`,
+				title,
+				href: `/app/${lang}/${key}?w=${encodeURIComponent(word)}`,
+				kind: 'word'
+			});
+		}
 		return out;
 	});
 }

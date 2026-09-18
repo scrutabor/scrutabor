@@ -59,6 +59,7 @@
 					texts: (n: number) => polishCount(n, '1 tekst', 'teksty', 'tekstów'),
 					uses: (n: number) => polishCount(n, '1 użycie', 'użycia', 'użyć'),
 					wholeText: 'cały tekst',
+					word: 'objaśnienie słowa',
 					verse: (n?: number) => (n ? `werset ${n}` : 'wskazany werset'),
 					verses: (first?: number, last?: number) =>
 						first && last ? `wersety ${first}–${last}` : 'wskazane wersety',
@@ -100,6 +101,7 @@
 					texts: (n: number) => (n === 1 ? '1 text' : `${n} texts`),
 					uses: (n: number) => (n === 1 ? '1 use' : `${n} uses`),
 					wholeText: 'complete text',
+					word: 'word note',
 					verse: (n?: number) => (n ? `verse ${n}` : 'indicated verse'),
 					verses: (first?: number, last?: number) =>
 						first && last ? `verses ${first}–${last}` : 'indicated verses',
@@ -118,9 +120,11 @@
 	const location = (use: BibliographyUse) =>
 		use.kind === 'text'
 			? copy.wholeText
-			: use.kind === 'range'
-				? copy.verses(use.first, use.last)
-				: copy.verse(use.first);
+			: use.kind === 'word'
+				? copy.word
+				: use.kind === 'range'
+					? copy.verses(use.first, use.last)
+					: copy.verse(use.first);
 	const locator = (group: BibliographyDetailGroup) =>
 		[group.section, group.printed, group.scan].filter(Boolean).join(' · ');
 

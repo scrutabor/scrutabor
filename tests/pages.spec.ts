@@ -718,6 +718,25 @@ test('the audited bibliography groups sources by role and loads exact uses on di
 	await expect(page.locator('.source details[open]')).toHaveCount(0);
 });
 
+for (const lang of ['pl', 'en'] as const) {
+	test(`bibliography word evidence opens the contextual note in ${lang}`, async ({ page }) => {
+		await page.goto(`/app/${lang}/bibliographia`);
+		const source = page.locator('.source details', { hasText: 'Catechismus Catholicae Ecclesiae' });
+		await source.locator('summary').click();
+		await expect(source).toContainText('2851, 2854');
+		await expect(source).toContainText(lang === 'pl' ? 'objaśnienie słowa' : 'word note');
+		const link = source.locator('a[href*="orationes/pater-noster"][href*="w=w049"]');
+		await expect(link).toHaveCount(1);
+		await link.click();
+		const context = page.locator('.context-layer');
+		await expect(context).toContainText(/(?:KKK|CCC) 2851/);
+		await expect(context).toContainText(/(?:KKK|CCC) 2854/);
+		await expect(context.locator('.note')).toContainText('malum');
+		await expect(context.locator('.note')).toContainText('malus');
+		await expect(context).not.toContainText(/Wydanie analizuje|Ta edycja|This edition/);
+	});
+}
+
 test('bibliography details show a reserved loader while their evidence is fetched @online', async ({
 	page
 }) => {

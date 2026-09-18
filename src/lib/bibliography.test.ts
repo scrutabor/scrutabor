@@ -50,6 +50,31 @@ describe('the reader-facing bibliography', () => {
 		]);
 	});
 
+	test.each(['pl', 'en'] as const)(
+		'links word-specific evidence to the word card in %s',
+		async (lang) => {
+			const loadedBefore = loadedTextKeys();
+			const bibliography = await buildBibliography(lang);
+			const source = bibliography.sections
+				.flatMap(({ sources }) => sources)
+				.find(({ id }) => id === 'edition.catechismus-catholicae-ecclesiae.latin-1997')!;
+			const details = await loadBibliographySource(lang, source);
+			expect(details).toHaveLength(1);
+			expect(details[0]).toMatchObject({ section: '2851, 2854' });
+			expect(details[0].uses).toEqual([
+				expect.objectContaining({
+					kind: 'word',
+					href: `/app/${lang}/orationes/pater-noster?w=w049`
+				}),
+				expect.objectContaining({
+					kind: 'word',
+					href: `/app/${lang}/ordinarium/pater-noster?w=w059`
+				})
+			]);
+			expect(loadedTextKeys()).toEqual(loadedBefore);
+		}
+	);
+
 	test('contains no empty or duplicated source records', async () => {
 		for (const lang of ['pl', 'en'] as const) {
 			const bibliography = await buildBibliography(lang);

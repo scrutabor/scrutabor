@@ -7,7 +7,7 @@
     {"id":"s02","tr":"The Lord be with you.","tc":[142],"tb":"revised","g":["The Lord","with you"]},
     {"id":"s03","tr":"And with your spirit.","tc":[142],"tb":"revised","g":["and","with","spirit","your"]},
     {"id":"s04","nr":"Turned toward the people, the priest says “Ite, Missa est”, and the server answers “Deo grátias”. Where “Benedicámus Dómino” is said instead, he says it at the middle of the altar, facing it."},
-    {"id":"s05","tr":"Go forth, the Mass is ended.","tc":[142],"tb":"revised","g":["go","the dismissal","is made"],"nt":{"w008":"This can be the noun missa, the dismissal, or a perfect passive participle of mitto with an understood subject, which is the formula's historical origin. This edition takes the noun."}},
+    {"id":"s05","tr":"Go forth, the Mass is ended.","tc":[142],"tb":"revised","g":["go","the dismissal","is made"],"nt":{"w008":"As a noun, “missa” means dismissal. The same form can be a participle of “mitto,” meaning “sent.” A participial reading would require an understood subject that the formula does not name."}},
     {"id":"s06","tr":"Thanks be to God.","tc":[142],"tb":"revised","g":["to God","thanks"],"ex":{"w011":"The response leaves the verb unspoken. Its full sense is “we give thanks to God”."}},
     {"id":"s07","nr":"In Masses for the Dead the priest says instead, facing the altar: Requiéscant in pace — and the answer is Amen."}
   ]

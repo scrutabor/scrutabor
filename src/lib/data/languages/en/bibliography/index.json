@@ -14934,6 +14934,28 @@
    "id": "official_documents_and_liturgical_history",
    "entries": [
     {
+     "edition": "edition.catechismus-catholicae-ecclesiae.latin-1997",
+     "roles": [
+      "official_liturgical_context"
+     ],
+     "texts": [
+      {
+       "id": "orationes.pater-noster",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.pater-noster",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      }
+     ]
+    },
+    {
      "edition": "edition.breviarium-romanum.1902-pustet",
      "roles": [
       "official_liturgical_context"

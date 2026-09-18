@@ -12,6 +12,11 @@
    "title": "Breviarium Romanum"
   },
   {
+   "id": "work.catechismus-catholicae-ecclesiae",
+   "responsible": "Catholic Church",
+   "title": "Catechismus Catholicae Ecclesiae"
+  },
+  {
    "id": "work.compendium-of-the-catechism-of-the-catholic-church",
    "responsible": "Catholic Church",
    "title": "Compendium of the Catechism of the Catholic Church"
@@ -79,6 +84,22 @@
    "rights": {
     "status": "public-domain",
     "basis": "The identified 1902 edition is in the public domain."
+   }
+  },
+  {
+   "id": "edition.catechismus-catholicae-ecclesiae.latin-1997",
+   "work": "work.catechismus-catholicae-ecclesiae",
+   "title": "Catechismus Catholicae Ecclesiae",
+   "edition_statement": "Editio typica Latina",
+   "year": "1997",
+   "publication_type": "official_act",
+   "authority": "official_document",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Copyright Libreria Editrice Vaticana. Cited for doctrinal context only, without reproducing its text or claiming permission to republish it."
    }
   },
   {
@@ -235,6 +256,14 @@
    "kind": "scan",
    "record_url": "https://archive.org/details/breviariumromanu04cath",
    "scan_url": "https://archive.org/download/breviariumromanu04cath/breviariumromanu04cath.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.catechismus-catholicae-ecclesiae.septem-petitiones",
+   "edition": "edition.catechismus-catholicae-ecclesiae.latin-1997",
+   "repository": "The Holy See",
+   "kind": "born-digital",
+   "record_url": "https://www.vatican.va/archive/catechism_lt/p4s2a3_lt.htm",
    "access": "open"
   },
   {

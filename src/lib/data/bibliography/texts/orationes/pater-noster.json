@@ -1,0 +1,25 @@
+{
+ "id": "orationes.pater-noster",
+ "source_groups": [
+  {
+   "edition": "edition.catechismus-catholicae-ecclesiae.latin-1997",
+   "digital_item": "item.catechismus-catholicae-ecclesiae.septem-petitiones",
+   "role": "official_liturgical_context",
+   "locator": {
+    "section": "2851, 2854"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.pater-noster.malo.catechism",
+     "address": {
+      "kind": "word",
+      "word": "w049"
+     },
+     "claim": "The Catechism identifies the Evil One in the final petition as Satan and explains that deliverance from him includes deliverance from every evil. This supports the petition's theological meaning, not an exclusive grammatical analysis of malo."
+    }
+   ],
+   "verified_on": "2026-09-18"
+  }
+ ],
+ "witnesses": []
+}

@@ -117,7 +117,8 @@
     {
       "id": "orationes.pater-noster",
       "path": "texts/orationes/pater-noster.json",
-      "title": "Pater noster"
+      "title": "Pater noster",
+      "evidence": "bibliography/texts/orationes/pater-noster.json"
     },
     {
       "id": "orationes.regina-caeli",
@@ -333,7 +334,8 @@
     {
       "id": "ordinarium.pater-noster",
       "path": "texts/ordinarium/pater-noster.json",
-      "title": "Pater noster (Missæ)"
+      "title": "Pater noster (Missæ)",
+      "evidence": "bibliography/texts/ordinarium/pater-noster.json"
     },
     {
       "id": "ordinarium.pax-domini",
