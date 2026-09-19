@@ -1541,6 +1541,14 @@
 	}
 
 	@media print {
+		/* Screen selection padding cancels its advance with negative margins,
+		   but still paints beyond a line-ending word. Paper has no selection
+		   wash, so remove that horizontal decoration instead of clipping text. */
+		.base {
+			padding-inline: 0;
+			margin-inline: 0;
+		}
+
 		.translation-sources {
 			display: none;
 		}

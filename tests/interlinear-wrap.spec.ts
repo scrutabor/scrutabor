@@ -202,11 +202,17 @@ test('print geometry retains every unit and screen geometry recovers afterwards'
 	const source = await section.locator('.verse .base').allTextContents();
 	const targets = await section.locator('.verse rt').allTextContents();
 	await page.emulateMedia({ media: 'print' });
-	await expect
-		.poll(() => page.evaluate(() => document.documentElement.scrollWidth - innerWidth))
-		.toBe(0);
-	expect(await section.locator('.verse .base').allTextContents()).toEqual(source);
-	expect(await section.locator('.verse rt').allTextContents()).toEqual(targets);
+	// Line endings differ across font rasterizers. Check several nearby
+	// measures so decorative token padding cannot escape the printed page.
+	for (const width of [375, 390, 405]) {
+		await page.setViewportSize({ width, height: 844 });
+		await expect
+			.poll(() => page.evaluate(() => document.documentElement.scrollWidth - innerWidth))
+			.toBe(0);
+		expect(await section.locator('.verse .base').allTextContents()).toEqual(source);
+		expect(await section.locator('.verse rt').allTextContents()).toEqual(targets);
+	}
+	await page.setViewportSize({ width: 390, height: 844 });
 	await page.emulateMedia({ media: 'screen' });
 	await expect(page.locator('.token-group', { hasText: 'Omnis enim, quicúmque' })).toHaveClass(
 		/wrapped-unit/
