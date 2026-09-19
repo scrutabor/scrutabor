@@ -51,8 +51,37 @@ describe('vendored corpus snapshot', () => {
 		expect([...`„Dómini” (w1000)`.matchAll(XREF)][0]?.[2]).toBe('w1000');
 	});
 
+	it('preserves predicate ellipsis and mixed noun declensions from the reader edition', () => {
+		const gradual = CORE['proprium/dominica-infra-octavam-nativitatis-graduale'];
+		const predicate = allWords(gradual).find((word) => word.id === 'w001');
+		expect(predicate?.ellipsis).toBe('predicate');
+		expect(predicate?.substantive).not.toBe(true);
+		expect(predicate?.head).toBeUndefined();
+
+		const gospel = CORE['proprium/dominica-vii-post-pentecosten-evangelium'];
+		const figs = allWords(gospel).find((word) => word.id === 'w037');
+		expect(figs?.morph).toMatchObject({ case: 'acc', number: 'pl', gender: 'f', decl: 4 });
+		const lemma = LEXICON.lemmata[figs!.lemma];
+		expect(lemma).toMatchObject({ decl: 2, decl_alt: 4, gender: 'f', gender_alt: 'm' });
+	});
+
 	it('has at least the four launch texts in the neutral base', () => {
 		expect(Object.keys(CORE).length).toBeGreaterThanOrEqual(4);
+	});
+
+	it('preserves an understood participial subject and both contextual notes', () => {
+		const key = 'proprium/d-n-iesu-christi-regis-epistola';
+		const participle = allWords(CORE[key]).find((word) => word.id === 'w119');
+		expect(participle?.ellipsis).toBe('subject');
+		expect(participle?.morph).toMatchObject({ case: 'nom', gender: 'm', mood: 'part' });
+		expect(participle?.head).toBeUndefined();
+		expect(participle?.substantive).not.toBe(true);
+		for (const language of LANGUAGES) {
+			const words = TEXTS[language][key].gloss.words;
+			expect(words.w108.explanation).toBeTruthy();
+			expect(words.w119.explanation).toBeTruthy();
+			expect(words.w108.explanation).not.toEqual(words.w119.explanation);
+		}
 	});
 
 	it('loads exactly the texts declared by each independent language manifest', () => {

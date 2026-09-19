@@ -2,6 +2,8 @@
 	import type { TextBibliographyEvidence } from '$lib/bibliography';
 	import { arrowNav } from '$lib/arrow-nav';
 	import AboutSheet from '$lib/components/AboutSheet.svelte';
+	import ComponentConditionNote from '$lib/components/ComponentConditionNote.svelte';
+	import type { ComponentCondition } from '$lib/corpus-metadata';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import { initialHelp } from '$lib/components/HelpLevels.svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
@@ -9,18 +11,16 @@
 	import ReadingControls from '$lib/components/ReadingControls.svelte';
 	import SelectedWordPanel from '$lib/components/SelectedWordPanel.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
-	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
+	import type { GlossDocument, TextDocument } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
 	import { keepAwake } from '$lib/keepawake.svelte';
 	import { openPage } from '$lib/page-navigation';
 	import type { ProperPart } from '$lib/proprium';
 	import { offersMassFormChoice, offersRoleChoice } from '$lib/reading-settings';
-	import {
-		formatSegmentSelection,
-		parseSegmentSelection,
-		segmentRange
-	} from '$lib/segment-selection';
-	import { properOccurrences } from '$lib/proper-occurrences';
+	import { formatSegmentSelection, segmentRange } from '$lib/segment-selection';
+	import { resolveCompositeAddress, writeReadingAddress } from '$lib/reading-address';
+	import { presentReadingLocation, readingLocationFrame } from '$lib/reading-location';
+	import { indexOccurrenceWords, properOccurrences } from '$lib/proper-occurrences';
 	import { pageUrl } from '$lib/url';
 	import { replaceState } from '$app/navigation';
 	import { wordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
@@ -33,6 +33,7 @@
 		data.parts as {
 			key: string;
 			part: ProperPart;
+			condition?: ComponentCondition;
 			doc: TextDocument;
 			gloss: GlossDocument;
 			bibliography: TextBibliographyEvidence;
@@ -69,31 +70,8 @@
 
 	const inlined = $derived(properOccurrences(parts));
 	const aboutPart = $derived(inlined.find((part) => part.slug === aboutKey) ?? null);
-	const wordsById = $derived(
-		new Map<string, { word: Word; doc: TextDocument; slug: string; gloss: GlossDocument }>(
-			inlined.flatMap((part) =>
-				part.doc.segments.flatMap((segment) =>
-					(segment.words ?? []).map((word) => [
-						`${part.slug}.${word.id}`,
-						{ word, doc: part.doc, slug: part.slug, gloss: part.gloss }
-					])
-				)
-			)
-		)
-	);
+	const wordsById = $derived(indexOccurrenceWords(inlined));
 	const panel = wordPanel({ has: (id) => wordsById.has(id) });
-
-	/** A current prefixed citation, or a former text page's fragment and selector. */
-	function partOfSelection(
-		raw: string,
-		hash: string
-	): { part: (typeof inlined)[number]; selector: string } | null {
-		const dot = raw.indexOf('.');
-		const part = inlined.find((candidate) =>
-			dot < 0 ? hash === `#${candidate.anchor}` : candidate.slug === raw.slice(0, dot)
-		);
-		return part ? { part, selector: dot < 0 ? raw : raw.slice(dot + 1) } : null;
-	}
 
 	// A search result or a shared link names one line of one part. The line
 	// is marked AND brought into view, as a reading page brings its cited
@@ -101,52 +79,29 @@
 	// scrolled to the Gospel's heading left the cited words ten screens down.
 	// The address is canonicalized in place, as on a reading page, so a
 	// selector naming nothing cannot linger.
-	let locationFrame = 0;
-	function cancelLocationFrame() {
-		cancelAnimationFrame(locationFrame);
-		locationFrame = 0;
-	}
+	const locationFrame = readingLocationFrame();
+	const cancelLocationFrame = locationFrame.cancel;
 
 	function applyFromLocation(scroll = true) {
 		cancelLocationFrame();
 		const url = pageUrl();
 		const original = url.href;
-		const raw = url.searchParams.get('s');
-		const found = raw === null ? null : partOfSelection(raw, url.hash);
-		const ids = found ? found.part.doc.segments.map((segment) => segment.id) : [];
-		const selected = found
-			? parseSegmentSelection(found.selector, ids, found.part.doc.retired_segments ?? {})
-			: [];
-		const canonical = found && formatSegmentSelection(selected, ids);
-		const canonicalRaw = canonical ? `${found.part.slug}.${canonical}` : null;
-		if (raw !== null && raw !== canonicalRaw) {
-			if (canonicalRaw) url.searchParams.set('s', canonicalRaw);
-			else url.searchParams.delete('s');
-		}
-		citedPart = selected.length && found ? found.part.slug : null;
-		citedSegments = selected;
-		segmentAnchor = selected[0] ?? null;
-
-		// Redirected text pages carry bare word and verse ids. Complete both
-		// together so neither address update can discard the other's selection.
-		const word = url.searchParams.get('w');
-		const part = inlined.find((candidate) => url.hash === `#${candidate.anchor}`);
-		if (word && !word.includes('.') && part && wordsById.has(`${part.slug}.${word}`)) {
-			url.searchParams.set('w', `${part.slug}.${word}`);
-		}
+		const resolved = resolveCompositeAddress(
+			inlined,
+			url.searchParams.get('w'),
+			url.searchParams.get('s'),
+			url.hash
+		);
+		writeReadingAddress(url, resolved);
+		citedPart = resolved.part;
+		citedSegments = resolved.segments;
+		segmentAnchor = resolved.segments[0] ?? null;
 		// The router cannot replace history during its hydration flush. A
 		// deferred update belongs only to this address, never a later navigation
 		// or a reader's intervening selection.
-		locationFrame = requestAnimationFrame(() => {
-			locationFrame = 0;
+		locationFrame.schedule(() => {
 			if (pageUrl().href !== original) return;
-			if (url.href !== original) replaceState(url, {});
-			panel.applyFromLocation();
-			if (found && selected[0] && scroll) {
-				document
-					.getElementById(`${found.part.slug}-${selected[0]}`)
-					?.scrollIntoView({ block: 'center' });
-			}
+			presentReadingLocation(url, original, resolved, () => panel.applyFromLocation(), scroll);
 		});
 	}
 
@@ -270,6 +225,9 @@
 						>
 					{/if}
 				</div>
+				{#if part.condition}
+					<ComponentConditionNote condition={part.condition} {lang} />
+				{/if}
 				<TextBody
 					doc={part.doc}
 					gloss={part.gloss}

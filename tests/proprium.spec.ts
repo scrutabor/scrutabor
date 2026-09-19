@@ -263,6 +263,30 @@ test('the Vigil Alleluia appears when Christmas Eve falls on Sunday', async ({ p
 	await expect(page.getByRole('button', { name: /Crástina/ })).toBeVisible();
 });
 
+test('Christmas Vigil selects only the preface appropriate to its weekday', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	for (const [date, expected, absent] of [
+		['2026-12-24', 'praefatio-communis', 'praefatio-sanctissimae-trinitatis'],
+		['2028-12-24', 'praefatio-sanctissimae-trinitatis', 'praefatio-communis']
+	]) {
+		await page.goto(`/app/pl/ordo/canon?dies=${date}`);
+		await expect(page.locator(`[id="${expected}.w001"]`)).toBeVisible();
+		await expect(page.locator(`[id="${absent}.w001"]`)).toHaveCount(0);
+		await expect(page.locator('.component-condition')).toHaveCount(0);
+	}
+});
+
+test('undated study still explains conditional components outside the Ordo', async ({ page }) => {
+	await asIfItWere(page, OUTSIDE_ADVENT);
+	await page.goto('/app/en/formularium/vigilia-nativitatis');
+	await expect(page.locator('.component-condition')).toHaveText([
+		'When this day falls on a Sunday.',
+		'When this day falls on a weekday.',
+		'When this day falls on a Sunday.'
+	]);
+	await expect(page.locator('.picker.day')).toHaveCount(0);
+});
+
 test('Christmas Day offers all three Masses and defaults to the Mass in the day', async ({
 	page
 }) => {

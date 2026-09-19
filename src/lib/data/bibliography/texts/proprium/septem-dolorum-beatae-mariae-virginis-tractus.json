@@ -1,0 +1,104 @@
+{
+ "id": "proprium.septem-dolorum-beatae-mariae-virginis-tractus",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Tempora/Quad5-5.txt [Graduale], body lines 39–41"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.septem-dolorum-beatae-mariae-virginis-tractus.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The exact Passion-week passage supplies a Latin parallel, not a September delegation or another independent printed edition."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "pp. 670–671",
+    "scan": "leaf n751 / PDF p. 752",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n751/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.septem-dolorum-beatae-mariae-virginis-tractus.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The tract begins at the foot of p. 670 and continues on p. 671. A separate continuation use binds the second page."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 671",
+    "scan": "leaf n752 / PDF p. 753",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n752/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.septem-dolorum-beatae-mariae-virginis-tractus.mr1962-continuation",
+     "address": {
+      "kind": "word",
+      "word": "w008"
+     },
+     "claim": "The page begins with -mina, completing Domina from the preceding page, and supplies the rest of the tract through meus before the Paschal alternative."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.septem-dolorum-beatae-mariae-virginis-tractus.do44667ff",
+   "text": "proprium.septem-dolorum-beatae-mariae-virginis-tractus",
+   "use": "use.proprium.septem-dolorum-beatae-mariae-virginis-tractus.do44667ff",
+   "role": "derived_comparison",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Derived pinned Latin comparison, not an independently established printed-edition witness."
+  },
+  {
+   "id": "witness.proprium.septem-dolorum-beatae-mariae-virginis-tractus.mr1962",
+   "text": "proprium.septem-dolorum-beatae-mariae-virginis-tractus",
+   "use": "use.proprium.septem-dolorum-beatae-mariae-virginis-tractus.mr1962",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct transcription from both Benziger 1962 pp. 670–671, including the page break within Domina."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.septem-dolorum-beatae-mariae-virginis-tractus.mr1962-do44667ff",
+  "text": "proprium.septem-dolorum-beatae-mariae-virginis-tractus",
+  "recension": "Benziger 1962 editio iuxta typicam; complete separately printed chant with exact punctuation.",
+  "witnesses": [
+   "witness.proprium.septem-dolorum-beatae-mariae-virginis-tractus.do44667ff",
+   "witness.proprium.septem-dolorum-beatae-mariae-virginis-tractus.mr1962"
+  ],
+  "apparatus": {
+   "entries": 7,
+   "classes": [
+    "accent",
+    "capitalization",
+    "orthography",
+    "punctuation"
+   ]
+  }
+ }
+}

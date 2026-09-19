@@ -1,0 +1,8 @@
+{
+  "id":"proprium.septem-dolorum-beatae-mariae-virginis-tractus",
+  "language":"pl",
+  "about":"Trakt z formularza o Siedmiu Boleściach Najświętszej Maryi Panny w Mszale Rzymskim z 1962 roku. Opis Maryi stojącej przy krzyżu łączy się ze skargą z Lamentacji (Lm 1,12), skierowaną do przechodniów.",
+  "seg":[
+    {"id":"s01","tr":"Święta Maryja, Królowa nieba i Pani świata, stała pełna bólu przy krzyżu naszego Pana Jezusa Chrystusa. Wy wszyscy, którzy przechodzicie drogą, zwróćcie uwagę i zobaczcie, czy jest ból podobny do mojego bólu.","g":["stała","święta","Maryja",null,null,"i",null,null,"przy","krzyżu",null,null,"Jezusa","Chrystusa","pełna bólu",null,"wy","wszyscy","którzy","przechodzicie",null,null,"zwróćcie uwagę","i","zobaczcie","czy","jest","ból","jak",null,null],"a":[{"s":3,"n":2,"a":1,"g":"Królowa nieba"},{"s":6,"n":2,"a":1,"g":"Pani świata"},{"s":10,"n":2,"a":0,"g":"naszego Pana"},{"s":15,"n":1,"r":"idiom"},{"s":20,"n":2,"a":1,"g":"drogą"},{"s":29,"n":2,"a":0,"g":"mój ból"}],"ex":{"w016":"Po opisie Maryi przy krzyżu następuje skarga z Lamentacji (Lm 1,12), skierowana do przechodniów.","w026":"Po wezwaniu „zobaczcie” si wprowadza pytanie „czy jest ból…”, a nie warunek „jeżeli jest ból…”."}}
+  ]
+}

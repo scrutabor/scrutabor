@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The collecta of the formulary “Commemoration of the Baptism of Our Lord Jesus Christ” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"O God, Whose only-begotten Son appeared in the substance of our flesh, grant, we beseech Thee, that we may be inwardly reformed by Him Whom outwardly we have known to be like unto us. Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.","g":["O God","Whose","only-begotten Son","in","substance","our","flesh","appeared","grant","we beseech","that","by","Him","Whom","like","us","outwardly","we have known","inwardly","be reformed","may deserve","who","thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages","amen"]}
+    {"id":"s01","tr":"O God, Whose only-begotten Son appeared in the substance of our flesh, grant, we beseech Thee, that we may be inwardly reformed by Him Whom outwardly we have known to be like unto us. Who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["O God","Whose","only-begotten Son","in","substance","our","flesh","appeared","grant","we beseech","that","by","Him","Whom","like","us","outwardly","we have known","inwardly","be reformed","may deserve","who","with thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages"]},
+    {"id":"s02","tr":"Amen.","g":["amen"]}
   ]
 }

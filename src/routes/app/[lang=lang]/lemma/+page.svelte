@@ -94,6 +94,7 @@
 						<p class="note">{sense.note}</p>
 						<SourceNotes citations={sense.note_citations} {lang} />
 					{/if}
+					<SourceNotes citations={payload?.sources} {lang} />
 				</AnalysisRow>
 
 				<AnalysisRow label={msgs.grammarTitle} id="lemma-grammar-label" level={2}>

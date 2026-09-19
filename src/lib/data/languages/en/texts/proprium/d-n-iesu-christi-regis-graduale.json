@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Christ the King” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"He shall rule from sea to sea, and from the River to the ends of the earth. All kings shall pay Him homage, all nations shall serve Him.","g":["shall rule","from","sea","as far","to","sea","and","from","the River","as far","to","the ends","of the world","of earth","and","shall adore","Him","all","kings","of earth","all","nations","shall serve","Him"]}
+    {"id":"s01","tr":"He shall rule from sea to sea, and from the River to the ends of the earth. All kings of the earth shall pay Him homage, all nations shall serve Him.","g":["shall rule","from","sea",null,null,"sea","and","from","the River",null,null,"the ends","of the world","of earth","and","shall adore","Him","all","kings","of earth","all","nations","shall serve","Him"],"a":[{"s":3,"n":2,"a":1,"g":"as far as"},{"s":9,"n":2,"a":1,"g":"as far as"}]}
   ]
 }

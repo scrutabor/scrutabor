@@ -17,7 +17,7 @@
      "claim": "The pinned Latin Mass data provide a derived comparison witness. The transcription error creatúra is retained in that witness and explicitly corrected against the typical edition."
     }
    ],
-   "verified_on": "2026-09-18"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -25,8 +25,8 @@
    "role": "official_text",
    "locator": {
     "printed": "pp. 712–713",
-    "scan": "leaves n792–n793 / PDF pp. 793–794",
-    "page_url": "https://archive.org/download/missale_romanum-1962/page/n792/mode/1up"
+    "scan": "leaves n793–n794 / PDF pp. 794–795",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n793/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +34,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Both cited page images were rechecked. The printed genitive creatúræ corrects the electronic witness's creatúra; capitalization and punctuation differences are recorded in the apparatus."
+     "claim": "The opening of the complete reading is printed on p.712/n793 and continues on p.713/n794. The genitive creaturae is secure against the electronic typo creatura. The continuation has its own source binding."
     }
    ],
-   "verified_on": "2026-09-18"
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 713",
+    "scan": "leaf n794 / PDF p. 795",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n794/mode/1up",
+    "section": "Continuation of Colossians1 reading, ending before Graduale"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.d-n-iesu-christi-regis-epistola.continuation.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The continuation completes the 137-word reading, including In Christo Iesu Domino nostro. No Amen or oration conclusion is added."
+    }
+   ],
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -49,7 +70,7 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
+   "independence_basis": "One pinned derived digital comparison, including its named macro where present, not an independent approved printed witness."
   },
   {
    "id": "witness.proprium.d-n-iesu-christi-regis-epistola.mr1962",
@@ -59,19 +80,19 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Direct page-image transcription of the identified controlling print, with every composite expansion explicitly declared."
   }
  ],
  "collation": {
   "id": "collation.proprium.d-n-iesu-christi-regis-epistola.mr1962-do44667ff",
   "text": "proprium.d-n-iesu-christi-regis-epistola",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "MR1962 Christ the King reading, complete137words, with declared house accidentals",
   "witnesses": [
    "witness.proprium.d-n-iesu-christi-regis-epistola.do44667ff",
    "witness.proprium.d-n-iesu-christi-regis-epistola.mr1962"
   ],
   "apparatus": {
-   "entries": 10,
+   "entries": 13,
    "classes": [
     "capitalization",
     "orthography",

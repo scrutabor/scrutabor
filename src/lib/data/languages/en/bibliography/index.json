@@ -16,8 +16,16 @@
         "direct_approved_print"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
@@ -81,7 +89,66 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.divinum-officium-horae.44667ff",
+     "roles": [
+      "derived_digital_collation_aid"
+     ],
+     "texts": [
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.septem-dolorum-beatae-mariae-virginis-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      }
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.divinum-officium-missa.44667ff",
@@ -279,11 +346,32 @@
        "uses": 1
       },
       {
-       "id": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
        "roles": [
         "derived_digital_collation_aid"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
       },
       {
        "id": "proprium.annuntiatio-beatae-mariae-virginis-offertorium",
@@ -301,6 +389,13 @@
       },
       {
        "id": "proprium.annuntiatio-beatae-mariae-virginis-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -794,7 +889,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-epistola",
@@ -815,14 +910,14 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-secreta",
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.corporis-christi-alleluia",
@@ -892,7 +987,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.corporis-christi-sequentia",
@@ -1126,6 +1221,20 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-i-adventus-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-i-adventus-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
        "id": "proprium.dominica-i-in-quadragesima-collecta",
        "roles": [
         "derived_digital_collation_aid"
@@ -1320,6 +1429,27 @@
         "derived_digital_collation_aid"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
       },
       {
        "id": "proprium.dominica-ii-in-quadragesima-collecta",
@@ -1642,6 +1772,27 @@
         "derived_digital_collation_aid"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iii-in-quadragesima-collecta",
@@ -2195,6 +2346,27 @@
         "derived_digital_collation_aid"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-collecta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-postcommunio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 3
       },
       {
        "id": "proprium.dominica-iv-in-quadragesima-collecta",
@@ -3076,7 +3248,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-x-post-pentecosten-alleluia",
@@ -5106,7 +5278,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancta-familia-alleluia",
@@ -5239,7 +5411,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-tractus",
@@ -6219,14 +6391,14 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctissimae-trinitatis-secreta",
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctissimi-nominis-iesu-alleluia",
@@ -6478,7 +6650,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.septem-dolorum-beatae-mariae-virginis-communio",
@@ -6534,10 +6706,17 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.septem-dolorum-beatae-mariae-virginis-sequentia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.septem-dolorum-beatae-mariae-virginis-tractus",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -6865,7 +7044,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.breviarium-romanum.1902-pustet",
@@ -6901,11 +7081,13 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.missale-romanum.1962-typica",
      "roles": [
+      "direct_approved_print",
       "official_text"
      ],
      "texts": [
@@ -7066,7 +7248,7 @@
       {
        "id": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -7080,7 +7262,7 @@
       {
        "id": "proprium.annuntiatio-beatae-mariae-virginis-communio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -7099,16 +7281,37 @@
        "uses": 1
       },
       {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-graduale",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.annuntiatio-beatae-mariae-virginis-offertorium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -7127,9 +7330,16 @@
        "uses": 1
       },
       {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.annuntiatio-beatae-mariae-virginis-tractus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -7465,7 +7675,7 @@
       {
        "id": "proprium.cathedra-sancti-petri-tractus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -7514,9 +7724,9 @@
       {
        "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-epistola",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-evangelium",
@@ -7570,7 +7780,7 @@
       {
        "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-tractus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -7614,7 +7824,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-epistola",
@@ -7635,14 +7845,14 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-secreta",
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.corporis-christi-alleluia",
@@ -7712,7 +7922,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.corporis-christi-sequentia",
@@ -7747,7 +7957,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.d-n-iesu-christi-regis-evangelium",
@@ -7871,7 +8081,7 @@
       {
        "id": "proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-tractus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -7944,6 +8154,20 @@
         "official_text"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-adventus-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-i-adventus-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
       },
       {
        "id": "proprium.dominica-i-in-quadragesima-collecta",
@@ -8142,6 +8366,27 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-ii-adventus-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
        "id": "proprium.dominica-ii-in-quadragesima-collecta",
        "roles": [
         "official_text"
@@ -8256,7 +8501,7 @@
       {
        "id": "proprium.dominica-ii-passionis-tractus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -8462,6 +8707,27 @@
         "official_text"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iii-in-quadragesima-collecta",
@@ -9015,6 +9281,27 @@
         "official_text"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 3
       },
       {
        "id": "proprium.dominica-iv-in-quadragesima-collecta",
@@ -9896,7 +10183,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-x-post-pentecosten-alleluia",
@@ -11357,9 +11644,9 @@
       {
        "id": "proprium.nativitas-beatae-mariae-virginis-tractus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-domini-in-aurora-alleluia",
@@ -11569,7 +11856,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-sancti-ioannis-baptistae-alleluia",
@@ -11854,7 +12141,7 @@
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-tractus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -11926,7 +12213,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancta-familia-alleluia",
@@ -11994,7 +12281,7 @@
       {
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -12029,7 +12316,7 @@
       {
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-graduale",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -12059,12 +12346,12 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-tractus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -12785,7 +13072,7 @@
       {
        "id": "proprium.sancti-matthiae-apostoli-tractus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -13039,14 +13326,14 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctissimae-trinitatis-secreta",
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctissimi-nominis-iesu-alleluia",
@@ -13289,14 +13576,14 @@
       {
        "id": "proprium.septem-dolorum-beatae-mariae-virginis-alleluia",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.septem-dolorum-beatae-mariae-virginis-collecta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -13324,7 +13611,7 @@
       {
        "id": "proprium.septem-dolorum-beatae-mariae-virginis-graduale",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -13354,7 +13641,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.septem-dolorum-beatae-mariae-virginis-sequentia",
@@ -13362,6 +13649,13 @@
         "official_text"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.septem-dolorum-beatae-mariae-virginis-tractus",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 2
       },
       {
        "id": "proprium.transfiguratio-domini-alleluia",
@@ -13685,7 +13979,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.key-of-heaven-1901",
@@ -13707,7 +14002,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.katolik-w-modlitwie-1902",
@@ -13729,7 +14025,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
@@ -13793,7 +14090,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.enchiridion-indulgentiarum-fourth-edition",
@@ -13822,7 +14120,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     }
    ]
   },
@@ -13885,7 +14184,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.blessed-be-god-1925",
@@ -13900,7 +14200,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
@@ -13979,7 +14280,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -14170,7 +14472,8 @@
        ],
        "uses": 5
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.the-family-prayer-book-1839",
@@ -14221,7 +14524,8 @@
        ],
        "uses": 5
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.key-of-heaven-1901",
@@ -14404,8 +14708,44 @@
         "historical_wording_basis"
        ],
        "uses": 3
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-offertorium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.patrick-francis-moran-the-catholic-prayer-book-1883",
@@ -14420,7 +14760,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.douay-rheims-bible-challoner",
@@ -14449,7 +14790,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.the-missal-for-the-laity-1846",
@@ -14766,13 +15108,6 @@
        "uses": 1
       },
       {
-       "id": "proprium.dominica-ii-adventus-collecta",
-       "roles": [
-        "historical_wording_basis"
-       ],
-       "uses": 1
-      },
-      {
        "id": "proprium.dominica-ii-adventus-communio",
        "roles": [
         "historical_wording_basis"
@@ -14816,13 +15151,6 @@
       },
       {
        "id": "proprium.dominica-iii-adventus-alleluia",
-       "roles": [
-        "historical_wording_basis"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-iii-adventus-collecta",
        "roles": [
         "historical_wording_basis"
        ],
@@ -14878,13 +15206,6 @@
        "uses": 1
       },
       {
-       "id": "proprium.dominica-iv-adventus-collecta",
-       "roles": [
-        "historical_wording_basis"
-       ],
-       "uses": 1
-      },
-      {
        "id": "proprium.dominica-iv-adventus-communio",
        "roles": [
         "historical_wording_basis"
@@ -14926,7 +15247,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     }
    ]
   },
@@ -14953,7 +15275,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.breviarium-romanum.1902-pustet",
@@ -14968,7 +15291,2229 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.missale-romanum.1962-typica",
+     "roles": [
+      "official_liturgical_context"
+     ],
+     "texts": [
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.annuntiatio-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.ascensio-domini-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.assumptio-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.assumptio-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.assumptio-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.beata-maria-virgo-regina-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.beata-maria-virgo-regina-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.beata-maria-virgo-regina-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.beatae-mariae-virginis-a-rosario-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.beatae-mariae-virginis-a-rosario-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.beatae-mariae-virginis-a-rosario-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-baptismatis-domini-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-baptismatis-domini-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-baptismatis-domini-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-ii-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-ii-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-ii-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.corporis-christi-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.d-n-iesu-christi-regis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.d-n-iesu-christi-regis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.d-n-iesu-christi-regis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dedicatio-sancti-michaelis-archangeli-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dedicatio-sancti-michaelis-archangeli-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dedicatio-sancti-michaelis-archangeli-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-adventus-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-adventus-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-adventus-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-in-quadragesima-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-passionis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-passionis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-passionis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-in-quadragesima-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-passionis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-passionis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-passionis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-epiphaniam-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-pascha-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-pascha-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-pascha-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-in-quadragesima-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-pascha-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-pascha-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-pascha-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-in-albis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-in-albis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-in-albis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-in-quinquagesima-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-in-quinquagesima-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-in-septuagesima-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-in-septuagesima-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-in-sexagesima-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-in-sexagesima-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-in-quadragesima-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-epiphaniam-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-pascha-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-pascha-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-pascha-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ix-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ix-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ix-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-pentecostes-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-resurrectionis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-epiphaniam-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-epiphaniam-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-epiphaniam-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-pascha-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-pascha-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-pascha-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-vi-post-epiphaniam-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-vi-post-epiphaniam-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-vi-post-epiphaniam-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-vi-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-vi-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-vi-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-vii-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-vii-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-vii-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-viii-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-viii-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-viii-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-x-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-x-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-x-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xi-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xi-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xi-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xii-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xii-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xii-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xiii-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xiii-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xiii-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xiv-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xiv-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xiv-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xix-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xix-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xix-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xv-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xv-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xv-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xvi-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xvi-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xvi-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xvii-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xvii-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xvii-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xviii-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xviii-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xviii-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xx-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xx-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xx-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxi-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxi-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxi-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxii-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxii-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxii-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxiii-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxiii-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxiii-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxiv-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxiv-post-pentecosten-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxiv-post-pentecosten-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.exaltatio-sanctae-crucis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.exaltatio-sanctae-crucis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.exaltatio-sanctae-crucis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.feria-v-in-cena-domini-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.feria-v-in-cena-domini-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.feria-v-in-cena-domini-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculata-conceptio-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculatum-cor-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculatum-cor-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.immaculatum-cor-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.in-octava-nativitatis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.in-octava-nativitatis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.in-octava-nativitatis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.maternitas-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.maternitas-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.maternitas-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-domini-in-aurora-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-domini-in-aurora-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-domini-in-aurora-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-domini-in-die-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-domini-in-die-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-domini-in-die-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-domini-in-nocte-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-domini-in-nocte-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-domini-in-nocte-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-sancti-ioannis-baptistae-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-sancti-ioannis-baptistae-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-sancti-ioannis-baptistae-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.omnium-sanctorum-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.omnium-sanctorum-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.omnium-sanctorum-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.pretiosissimi-sanguinis-domini-nostri-iesu-christi-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.pretiosissimi-sanguinis-domini-nostri-iesu-christi-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.pretiosissimi-sanguinis-domini-nostri-iesu-christi-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-andreae-apostoli-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bartholomaei-apostoli-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bartholomaei-apostoli-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bartholomaei-apostoli-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-iacobi-apostoli-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-iacobi-apostoli-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-iacobi-apostoli-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioachim-confessoris-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioachim-confessoris-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioachim-confessoris-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-opificis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-laurentii-martyris-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-laurentii-martyris-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-laurentii-martyris-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-lucae-evangelistae-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-lucae-evangelistae-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-lucae-evangelistae-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-marci-evangelistae-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthaei-apostoli-et-evangelistae-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthaei-apostoli-et-evangelistae-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthaei-apostoli-et-evangelistae-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-matthiae-apostoli-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-et-pauli-apostolorum-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-et-pauli-apostolorum-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-et-pauli-apostolorum-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-thomae-apostoli-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimae-trinitatis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-simonis-et-iudae-apostolorum-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-simonis-et-iudae-apostolorum-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-simonis-et-iudae-apostolorum-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.septem-dolorum-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.septem-dolorum-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.septem-dolorum-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.transfiguratio-domini-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.transfiguratio-domini-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.transfiguratio-domini-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-nativitatis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-nativitatis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-nativitatis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-paschalis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-paschalis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-paschalis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.visitatio-beatae-mariae-virginis-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.visitatio-beatae-mariae-virginis-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.visitatio-beatae-mariae-virginis-secreta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
@@ -15004,13 +17549,3355 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     }
    ]
   },
   {
    "id": "scripture_language_and_scholarship",
    "entries": [
+    {
+     "edition": "edition.lewis-short.1879",
+     "roles": [
+      "lexical_support"
+     ],
+     "texts": [],
+     "lemmas": [
+      {
+       "id": "absolvo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n223"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.absolvo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "absolvo"
+           },
+           "claim": "The entry attests absolvo with a heavy penultimate syllable and the distinct senses of freeing, acquitting, and completing. An ironic usage label is not a lexical meaning."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "absorbeo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n226"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.absorbeo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "absorbeo"
+           },
+           "claim": "Second-conjugation infinitive requires long-ē penult, as shown by L&S n226 conjugation 2."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "actus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n636"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.actus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "actus"
+           },
+           "claim": "The noun includes acts or activity, dramatic performance, a technical right of passage for cattle or carts, and Roman land measures. The land measures have more than one set of dimensions."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "aedificatio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n1134"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.aedificatio.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "aedificatio"
+           },
+           "claim": "The noun includes building or construction and, figuratively, edification or instruction."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "aemulor",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n1227"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.aemulor.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "aemulor"
+           },
+           "claim": "Deponent first-conjugation verb with both emulation and envy senses. In caritas non aemulatur, love is the subject of envying, not its passive object."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "affero",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n1460"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.affero.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "affero"
+           },
+           "claim": "L&S n1460, XML line 1813: af-fĕro, attŭli, allātum, afferre. Infinitive penult is closed; allātum has long ā."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "appareo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n3120 I"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.appareo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "appareo"
+           },
+           "claim": "The entry documents the intransitive sense of appearing or showing oneself; it does not supply prayer-translation wording."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "appendo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n3139"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.appendo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "appendo"
+           },
+           "claim": "Standard third-conjugation transitive verb, attested for hanging and weighing. The rarer appendeo variant is genuine. This lexical identity does not alone decide the poetic image in Proverbs 8:29."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "attendo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n4329"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.attendo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "attendo"
+           },
+           "claim": "The attention and application-of-mind sense supports the command to pay heed."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "beatitudo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n5085"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.beatitudo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "beatitudo"
+           },
+           "claim": "The noun denotes a state of happiness or blessedness, not an act of blessing."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "calamus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n6148"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.calamus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "calamus"
+           },
+           "claim": "The noun calamus denotes a reed and, by metonymy, a reed pen. It is the nominative predicate in lingua mea calamus scribae, not a first-person verb."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "cano",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n6524"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.cano.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "cano"
+           },
+           "claim": "Includes instruments sounding as well as singing, with tubae among the cited instrument subjects."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "carmen",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n6814"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.carmen.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "carmen"
+           },
+           "claim": "The sole current occurrence is dico ego carmen meum Regi after effundit cor meum verbum bonum: an uttered song/poem addressed to the King, not a textile card. L&S carmen1 explicitly covers song, poem and dicere carmen. carmen2 is a genuine different homograph but has no consumer here."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "cathedra",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n7102"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.cathedra.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "cathedra"
+           },
+           "claim": "The ordinary chair or seat sense precedes specialized teaching and ecclesiastical uses."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "cautio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n7225"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.cautio.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "cautio"
+           },
+           "claim": "The noun includes heedfulness, security or a guarantee, and an obligation or bond, written as well as oral."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "collegium",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n9054"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.collegium.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "collegium"
+           },
+           "claim": "Matthias is joined to the apostolic college/company, not enrolled in a school. College itself is valid and is retained; the current college, school equivalence unnecessarily restricts the social/body-of-colleagues sense and misleads in this context."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "columna",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n9199"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.columna.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "columna"
+           },
+           "claim": "The noun denotes a column, pillar or post, also figurative support and a waterspout; the entry explicitly includes a pillar of cloud."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "commercium",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n9357"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.commercium.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "commercium"
+           },
+           "claim": "The entry distinguishes trade from wider exchange, intercourse and fellowship. These senses support the sacred-exchange context; the dictionary is lexical evidence, not a source of either prayer translation."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "comparo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n9532 and n9533"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.comparo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "comparo"
+           },
+           "claim": "The dictionary distinguishes comparison or matching from preparation or procurement in two entries with the same principal parts; both ranges are represented under the shared lemma."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "concilio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n9822"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.concilio.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "concilio"
+           },
+           "claim": "The verb includes bringing together, winning favor or commending, and obtaining or procuring, not only arranging a marriage."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "concilium",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n9823"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.concilium.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "concilium"
+           },
+           "claim": "The ordinary senses include an assembly or council, an association or company, and union or bond."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "concludo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n9872"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.concludo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "concludo"
+           },
+           "claim": "The verb includes enclosing or confining, as well as finishing, composing a sentence, and reasoning to a conclusion."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "congero",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10253"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.congero.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "congero"
+           },
+           "claim": "The verb includes bringing together, heaping up, building and compiling. The separate noun entry is not its lexical identity."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "consequor",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10479"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.consequor.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "consequor"
+           },
+           "claim": "The deponent entry supplies principal parts and both follow and attain or obtain senses; the collect selects the latter sense."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "consisto",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10526"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.consisto.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "consisto"
+           },
+           "claim": "The verb includes standing or taking position, halting, remaining or existing, and depending on or consisting in something."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "consors",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10568"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.consors.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "consors"
+           },
+           "claim": "The substantive includes a sharer, partner, or companion, without restricting the company to women."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "constituo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10632"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.constituo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "constituo"
+           },
+           "claim": "The verb includes placing, establishing, appointing and determining, including appointment of a person to a position."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "constitutio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10633"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.constitutio.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "constitutio"
+           },
+           "claim": "The noun includes constitution, disposition, order and arrangement and is derived from constituo. Establishment in the phrase about the world is a contextual derivational rendering, not a quoted English gloss in this entry."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "consto",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10640"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.consto.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "consto"
+           },
+           "claim": "Omnia in ipso constant has omnia as plural subject: all created things hold together/subsist in Christ. The impersonal it-is-agreed family is legitimate elsewhere but does not explain this actual clause. Full consto covers standing together/firmly, existence and constitution/dependence."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "consuetudo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10674"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.consuetudo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "consuetudo"
+           },
+           "claim": "The ordinary senses include custom, habit and usage; the entry also distinguishes social familiarity from specifically sexual intercourse."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "continentia",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10821"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.continentia.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "continentia"
+           },
+           "claim": "The feminine noun includes restraint of passions and desires, continence, temperance and moderation. The separate neuter plural cross-reference is not this noun."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "contineo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10823"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.contineo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "contineo"
+           },
+           "claim": "The verb includes holding together, retaining, restraining and containing. Closing the ears is a contextual rendering of the enclosure or restraint range, not a verse-specific English quotation from the dictionary."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "contraho",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10877"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.contraho.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "contraho"
+           },
+           "claim": "The verb includes gathering, contraction, incurring consequences or guilt, and making an agreement or relationship; the entry expressly illustrates incurring culpam."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "contrarius",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10883"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.contrarius.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "contrarius"
+           },
+           "claim": "The adjective includes opposite or hostile, with substantival contrary or reverse and the adverbial phrase e contrario."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "conversatio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n10993"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.conversatio.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "conversatio"
+           },
+           "claim": "The entry supports association and frequent use. It is not cited for the later Christian conduct or way-of-life sense, whose evidence is recorded separately."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "corona",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n11234"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.corona.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "corona"
+           },
+           "claim": "The full entry includes a wreath or garland and a royal crown, with reward uses."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "corrumpo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n11310"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.corrumpo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "corrumpo"
+           },
+           "claim": "The verb includes physical destruction or ruin as well as spoiling, moral corruption, bribery and falsification; conrumpo is a spelling variant."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "cultus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n11869"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.cultus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "cultus"
+           },
+           "claim": "The fourth-declension noun includes worship and veneration, cultivation and care, training and culture, and clothing or adornment. The participle and the neighboring cultivated-lands noun are distinct identities."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "cura",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n11978"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.cura.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "cura"
+           },
+           "claim": "The noun includes attentive care, concern or anxiety, administrative charge and medical attendance. Administrative office is not its sole ordinary meaning."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "curatio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n11985"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.curatio.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "curatio"
+           },
+           "claim": "The noun includes healing or medical treatment as well as care, management and administration."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "cursus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n12045"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.cursus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "cursus"
+           },
+           "claim": "Both occurrences are the repeated nox in suo cursu medium iter haberet: the night's course/passage, not a lesson. Full cursus supports physical and temporal course; no local educational consumer."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "defensio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n12671"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.defensio.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "defensio"
+           },
+           "claim": "The noun primarily includes defending or defense, including an argumentative defense. Specialized legal prosecution is a separate attested branch, not the sole meaning."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "defero",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n12677"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.defero.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "defero"
+           },
+           "claim": "The verb includes bringing, offering or conferring something on someone, and reporting. These ordinary senses must not be replaced by rare late senses alone."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "delectatio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n12864"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.delectatio.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "delectatio"
+           },
+           "claim": "The ordinary noun denotes delight, pleasure or enjoyment. The late medical straining sense is separately identified and does not replace that ordinary meaning."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "devoro",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n13630"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.devoro.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "devoro"
+           },
+           "claim": "The verb includes literal devouring or swallowing, consuming property, and figurative suppression or patient endurance."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "dexter",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n13648"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.dexter.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "dexter"
+           },
+           "claim": "The adjective includes the spatial right-hand sense, explicitly with manus, as well as dexterity, favorable circumstances and suitability; the forms dextera and dextra are both attested."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "diffundo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n13895"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.diffundo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "diffundo"
+           },
+           "claim": "L&S n13895, XML line 14272: dif-fundo, fūdi, fūsum, 3. The perfect has no nasal; stress follows closed/long penults."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "dolor",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n14669"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.dolor.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "dolor"
+           },
+           "claim": "The genitive quantity supports dolóris."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "dolorosus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n14670"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.dolorosus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "dolorosus"
+           },
+           "claim": "The vowel quantities support dolorósus; the adjective describes experienced sorrow."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "dominor",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n14697"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.dominor.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "dominor"
+           },
+           "claim": "The ordinary deponent means to rule or exercise dominion, including inanimate subjects and a dative complement. The separately illustrated passive being-ruled use does not describe death exercising dominion in the Easter clause."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "ecce",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n15073"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.ecce.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "ecce"
+           },
+           "claim": "The introductory construction rule and examples allow nominative phrases or clauses and independent accusatives, particularly in early Latin. The noun inside an introduced clause can receive its case from that clause."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "effectus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n15204"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.effectus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "effectus"
+           },
+           "claim": "The noun entry supports result or effect. The collect selects a beneficial result, expressed idiomatically as fruit, not the unrelated supine analysis."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "eructo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n16191"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.eructo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "eructo"
+           },
+           "claim": "The entry supports the first-conjugation principal forms and the figurative pouring-forth sense, including Psalm 44:2. The token perfect is not a noun or a present-tense form."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "evado",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n16426"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.evado.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "evado"
+           },
+           "claim": "The head ē-vādo, si, sum supplies the long vowel in the principal parts; the entry supports the sense of escaping."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "felix",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n17887"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.felix.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "felix"
+           },
+           "claim": "The entry records felicis with long i and favorable or prosperous senses; it supports the head accent and contextual adjective, not a feeling of happiness in this occurrence."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "ficus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n18104"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.ficus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "ficus"
+           },
+           "claim": "Ficus has mixed second- and fourth-declension forms and attested feminine and masculine gender. The Gospel object ficus parallels accusative plural uvas. The lexical alternatives do not establish every occurrence's case or number."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "fideliter",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n18117"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.fideliter.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "fideliter"
+           },
+           "claim": "The adverb is treated under fidelis: faithful or trustworthy action, reliable retention, and secure or firm establishment. The separate ecclesiastical reliance-on-God wording retained on the card is not quoted from this entry."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "filia",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n18173"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.filia.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "filia"
+           },
+           "claim": "L&S n18173, XML line 18564: fīlĭa, ae; short penult i in filiae and house æ ligature. Printed tract fíliæ independently confirms the accent."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "floreo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n18388"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.floreo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "floreo"
+           },
+           "claim": "The second-conjugation infinitive has long e, supporting florére and perfect floruit."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "gens",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n19461 II.F.2.c"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.gens.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "gens"
+           },
+           "claim": "The entry attests the ecclesiastical plural sense referring to pagan peoples alongside the broader senses of race, nation and people; it does not determine every occurrence."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "genus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n19477"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.genus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "genus"
+           },
+           "claim": "The third-declension noun includes descent, race or people, and kinds or classes. Noble birth is only a narrower use; the separate fourth-declension cross-reference belongs to genu."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "gigno",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n19570"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.gigno.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "gigno"
+           },
+           "claim": "The entry explicitly attests a mother as subject, supporting Virgo genuit."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "gladius",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n19607"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.gladius.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "gladius"
+           },
+           "claim": "The principal sense is a sword, with attested figurative death or murder and a remote fish sense. The collected scriptural occurrences select sword, not swordfish."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "hic",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n20640, I"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.hic.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "hic"
+           },
+           "claim": "The demonstrative hic, haec, hoc points to a near or present referent. The separately labeled adverbial section does not supply a free-standing here sense for the inflected pronoun."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "hic_adverbium",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n20640, III.2"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.hic-adverbium.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "hic_adverbium"
+           },
+           "claim": "The indeclinable adverb hic means here, in this place, with extended temporal or situational uses. It is separately identified from the demonstrative in the same dictionary entry."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "ictus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n21333"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.ictus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "ictus"
+           },
+           "claim": "The noun denotes a blow, stroke or thrust, not a verb meaning to push."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "idoneus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n21365"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.idoneus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "idoneus"
+           },
+           "claim": "The adjective denotes suitability, capability or sufficiency. Solvency is a specialized application rather than its sole meaning."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "immortalitas",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n21759"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.immortalitas.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "immortalitas"
+           },
+           "claim": "L&S n21759 gives immortālĭtas, ātis: genitive stress belongs on tā, not li. The compact senses are restricted to exemption from death and imperishableness. An unqualified equivalent meaning divinity is not supported by this entry."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "immuto",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n21790"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.immuto.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "immuto"
+           },
+           "claim": "L&S n21790 gives immūto, āvi, ātum, 1. Long ū in present and long first-conjugation ā in the remaining forms."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "imus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n22110"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.imus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "imus"
+           },
+           "claim": "The entry redirects to inferus, whose superlatives include imus and infimus. The substantivized neuter plural denotes lower things, not a masculine population."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "in",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n22111"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.in.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "in"
+           },
+           "claim": "The accusative temporal subsection attests duration including in aeternum, not only spatial direction."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "inaestimabilis",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n22149"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.inaestimabilis.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "inaestimabilis"
+           },
+           "claim": "The adjective includes what cannot be estimated, inestimable or invaluable. The negative philosophical valuation is explicitly separate and does not displace the affirmative sense."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "incorruptio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n22579"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.incorruptio.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "incorruptio"
+           },
+           "claim": "L&S n22579 gives in-corruptĭo, ōnis; genitive stress on ō."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "incorruptus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n22582"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.incorruptus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "incorruptus"
+           },
+           "claim": "L&S n22582 in-corruptus; closed rup penult determines stress."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "induo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n22939"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.induo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "induo"
+           },
+           "claim": "Includes putting on clothing and figurative assumption, not only clothing another person."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "inspicio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n23931"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.inspicio.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "inspicio"
+           },
+           "claim": "The entry attests the principal parts inspicio, inspicere, inspexi, inspectum and literal inspection or close looking, with figurative consideration. The selected perfect inspexerunt comes from the controlling liturgical print."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "instantia",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n23954"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.instantia.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "instantia"
+           },
+           "claim": "The clause is instantia mea cotidiana, followed by care for all the churches. Daily belongs to the separate adjective cotidiana, not the noun's lexical definition. Preserve pressure, and expose urgency/persistence supported by the full primary entry; no claim that the existing whole phrase daily pressure is a mistranslation."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "intendo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n24136"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.intendo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "intendo"
+           },
+           "claim": "The entry includes absolute exertion and intention as well as transitive stretching or directing; this does not supply an unexpressed horse, chariot, or command to fight. Directing attention, attentive observation and attentive listening are also explicit branches of the entry."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "interventus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n24511"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.interventus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "interventus"
+           },
+           "claim": "The noun includes intervention or occurrence and, in transferred use, mediation or assistance. The closed penult determines its stress."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "invisibil",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n24782"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.invisibil.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "invisibil"
+           },
+           "claim": "The adjective has nominative invisibilis and neuter invisibile, conventionally displayed invisibilis, -e. It denotes what is invisible or unseen; invisibil is only the retained identifier, not a Latin nominative."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "is",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n25029"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.is.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "is"
+           },
+           "claim": "The paradigm is, ea, id includes feminine personal reference as well as masculine and neuter."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "lactens",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n25577"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.lactens.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "lactens"
+           },
+           "claim": "Both repeated occurrences are ex ore infantium et lactentium: children/suckling infants praising God, not sacrificial animals. Full lacteo includes human sucklings as well as animals; the current animal-only expansion is misleading. The corpus lexicalized substantival lactens representation is not changed here."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "mansuetudo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n27919"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.mansuetudo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "mansuetudo"
+           },
+           "claim": "L&S n27919, XML line 28335: mansŭētūdo, ĭnis; long penult tū in nominative."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "meritum",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n28786"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.meritum.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "meritum"
+           },
+           "claim": "The substantive meritum can mean a reward or recompense as well as a meritorious deed; these senses are distinct within the prayer."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "ministerium",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n29148"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.ministerium.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "ministerium"
+           },
+           "claim": "All seven occurrences in six texts concern service or ministry, including angels, Christian ministers and apostolic office. The state-only restriction is false for these contexts; the complete entry explicitly identifies Christian ministry."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "momentum",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n29521"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.momentum.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "momentum"
+           },
+           "claim": "L&S n29521 mōmentum; closed men penult determines stress, regardless of long initial mō. The time-instant sense is directly attested, including in momento, in ictu oculi; the compact card includes that contextual sense."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "multiplico",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n29924"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.multiplico.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "multiplico"
+           },
+           "claim": "The first-conjugation verb means to multiply, increase or augment; its long-vowel endings determine the displayed stress."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "nexus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n30881"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.nexus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "nexus"
+           },
+           "claim": "Both occurrences are the bonds of sins from which petitioners seek release. A creditor/debtor obligation is a genuine secondary legal sense, but the card omits the basic binding/fetter sense needed by both metaphors. The whole nexus2 entry supports literal binding and figurative restraints."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "oporteo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n32775"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.oporteo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "oporteo"
+           },
+           "claim": "L&S n32775 heads the impersonal oportet, uit, 2. Do not display fabricated first-person opórteo or supine oportúitum. Both analyzers link this form under the existing corpus key, so a key migration is not required for this repair. The construction expresses impersonal necessity or obligation, not a personal command."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "parabola",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n33743"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.parabola.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "parabola"
+           },
+           "claim": "All nineteen occurrences in thirteen Gospels concern Jesus' spoken parables, comparisons or figurative teaching. A mathematical curve is not the referent. L&S explicitly gives comparison and ecclesiastical parable; the current technical sense does not cover any reviewed occurrence."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "pertranseo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n35643"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.pertranseo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "pertranseo"
+           },
+           "claim": "The entry supplies the long-i infinitive and perfect and passing-through sense; the collect uses the perfect figuratively of a sword piercing the soul."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "praeconium",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n37456, with its explicit cross-reference to n37457 II"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.praeconium.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "praeconium"
+           },
+           "claim": "The two Joseph prefaces praise God with due praeconiis, and the Innocents proclaim His praise by dying. The full praeconium cross-reference was followed to praeconius II: proclamation and laudation are supported; commercial advertisement alone is misleading."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "prophetia",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n38897"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.prophetia.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "prophetia"
+           },
+           "claim": "The entry records prophecy or prediction and long i in prophetia; it supports the corrected principal form and prophetic sense."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "prospere",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n39070"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.prospere.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "prospere"
+           },
+           "claim": "The adverb prospere is explicitly attested, including its combination with procedere; it is not the vocative adjective in this exhortation."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "proximus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n39243"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.proximus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "proximus"
+           },
+           "claim": "The entry refers to propior, including the superlative and substantive senses of close companions or neighbors."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "pulchritudo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n39488"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.pulchritudo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "pulchritudo"
+           },
+           "claim": "The dictionary marks the long nominative penult of pulchritudo, supporting pulchritúdo."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "recenseo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n40533"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.recenseo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "recenseo"
+           },
+           "claim": "The second-conjugation verb includes recounting or going over something in thought, besides enumerating or reviewing."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "recolo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n40612"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.recolo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "recolo"
+           },
+           "claim": "The entry supports the full principal parts and remembering or celebrating sense; the contextual present is recolimus."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "reconcilio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n40621"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.reconcilio.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "reconcilio"
+           },
+           "claim": "The attested accusative-plus-dative construction supports ima summis as object and counterpart."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "reddo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n40711"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.reddo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "reddo"
+           },
+           "claim": "Restoration is attested alongside returning or rendering, supporting pacem reddidit."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "saturitas",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n42740"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.saturitas.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "saturitas"
+           },
+           "claim": "The one occurrence implebuntur horrea tua saturitate concerns barns filled with abundance, not color saturation. The complete entry expressly cites Prov.3:10 under fullness/plenty/abundance. Color depth is genuinely attested but is not a suitable sole sense for this card's consumer."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "sermo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n43872"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.sermo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "sermo"
+           },
+           "claim": "Includes a single expression, saying or word, not only an extended discourse."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "si",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n44096"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.si.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "si"
+           },
+           "claim": "The transferred use introduces enquiry or doubt, including after seeing or considering; ordinary conditional uses remain distinct."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "sors",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n44805"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.sors.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "sors"
+           },
+           "claim": "The noun includes a cast lot, an allotted share or duty, and one's portion, condition or destiny. These are distinct attested uses, not interchangeable contextual translations."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "species",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n44913"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.species.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "species"
+           },
+           "claim": "The entry explicitly attests beauty as well as appearance; the Eucharistic sense remains separately context-qualified. The aesthetic subsection also attests splendor, within the same related semantic range."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "spiritus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n45053"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.spiritus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "spiritus"
+           },
+           "claim": "The word includes the human spirit, soul or mind as well as breath and the personal use in Spiritus Sanctus."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "sponsa",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n45117"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.sponsa.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "sponsa"
+           },
+           "claim": "The feminine noun sponsa is cross-referenced to spondeo and supplies the bride addressed here."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "stimulus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n45416"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.stimulus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "stimulus"
+           },
+           "claim": "The literal goad and figurative sting support the biblical metaphor as well as transferred incentive uses."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "summus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n46584"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.summus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "summus"
+           },
+           "claim": "The entry redirects to superus and its superlative. The substantivized neuter dative plural summis is the counterpart of ima in the construction with reconcilio."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "supplico",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n46973"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.supplico.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "supplico"
+           },
+           "claim": "The first-conjugation verb has long-vowel endings in its infinitive, perfect and supine, determining the displayed stress."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "testis",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n47980"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.testis.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "testis"
+           },
+           "claim": "All ten occurrences in eight texts concern personal witnesses, including Christ, God, angels, resurrection witnesses and false witnesses. Full testis1 supports witness; testis2 is a genuine anatomical homograph with no local consumer. No anatomical sense is needed in the context-oriented card."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "transeo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n48771"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.transeo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "transeo"
+           },
+           "claim": "The entry includes literal passage across or along a route as well as passing away and omission."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "tribulus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n48997"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.tribulus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "tribulus"
+           },
+           "claim": "Second-declension masculine noun denoting a thorn-bearing plant or a caltrop, distinct from third-declension tribulis, a fellow tribesman."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "tuba",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n49341"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.tuba.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "tuba"
+           },
+           "claim": "L&S n49341 tŭba, ae. House orthography leaves the two-syllable genitive unaccented and uses æ."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "ubi",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n49615"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.ubi.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "ubi"
+           },
+           "claim": "The direct-question use is an interrogative adverb (I.B). Conjunctive uses remain available separately."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "veneror",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n50434"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.veneror.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "veneror"
+           },
+           "claim": "The entry identifies the deponent verb and an attested active collateral form. Venerando in the collect is an active-form ablative gerund, not a passive obligation."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "vero",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n50667"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.vero.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "vero"
+           },
+           "claim": "The adverb section includes transferred adversative and transitional uses, not only affirmative ones."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "victoria",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n50867"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.victoria.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "victoria"
+           },
+           "claim": "L&S n50867 victōrĭa, ae: genitive i is short before the diphthong; stress remains on to; use æ."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "virga",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n51049"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.virga.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "virga"
+           },
+           "claim": "The entry supports botanical shoot and rod senses; the two-syllable genitive virgae needs no acute accent."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      }
+     ]
+    },
     {
      "edition": "edition.biblia-sacra-vulgatae-editionis-1914",
      "roles": [
@@ -15024,7 +20911,8 @@
        ],
        "uses": 1
       }
-     ]
+     ],
+     "lemmas": []
     }
    ]
   }

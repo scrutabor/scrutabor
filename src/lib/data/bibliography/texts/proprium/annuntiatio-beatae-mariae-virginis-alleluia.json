@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/03-25; resolved section [Allelúia] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/03-25.txt [GradualeP], body lines 21, 23, 25"
    },
    "entries": [
     {
@@ -14,19 +14,19 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact proper Paschal section supplies the complete thirty-word pair in the printed verse order. This derived comparison is not another independent printed edition."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
-    "printed": "p. 497",
+    "printed": "p. 496",
     "scan": "leaf n577 / PDF p. 578",
-    "page_url": "https://archive.org/download/missale_romanum-1962/page/n577/mode/1up"
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n577/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The directly viewed page prints the complete Ave Maria / Virga Iesse Paschal pair and directs that it replace both gradual and tract."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -49,7 +49,7 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
+   "independence_basis": "Derived pinned proper Latin comparison, not an independently established printed-edition witness."
   },
   {
    "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-alleluia.mr1962",
@@ -59,20 +59,23 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Direct transcription from the identified Benziger 1962 p. 496 page image."
   }
  ],
  "collation": {
   "id": "collation.proprium.annuntiatio-beatae-mariae-virginis-alleluia.mr1962-do44667ff",
   "text": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "Benziger 1962 editio iuxta typicam, complete Paschal Alleluia pair with exact printed punctuation.",
   "witnesses": [
    "witness.proprium.annuntiatio-beatae-mariae-virginis-alleluia.do44667ff",
    "witness.proprium.annuntiatio-beatae-mariae-virginis-alleluia.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 6,
+   "classes": [
+    "orthography",
+    "punctuation"
+   ]
   }
  }
 }

@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Communio formularza „Świętego Marka Ewangelisty” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Sprawiedliwy weseli się w Panu i do Niego się ucieka, a wszyscy prawego serca się chlubią, alleluja, alleluja.","g":["Weselić się będzie","sprawiedliwy","w","Panu","i","będzie ufał","w","Nim","i","będą pochwaleni","wszyscy","prawego","serca","alleluja","alleluja"]}
+    {"id":"s01","tr":"Sprawiedliwy będzie się radował w Panu i będzie Mu ufał, a wszyscy prawego serca będą chwaleni, alleluja, alleluja.","g":["Weselić się będzie","sprawiedliwy","w","Panu","i","będzie ufał",null,null,"i","będą chwaleni","wszyscy",null,null,"alleluja","alleluja"],"a":[{"s":6,"n":2,"a":1,"g":"Mu"},{"s":11,"n":2,"a":0,"g":"prawego serca"}]}
   ]
 }

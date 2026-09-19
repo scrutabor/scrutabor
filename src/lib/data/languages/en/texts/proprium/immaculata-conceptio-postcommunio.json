@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “Immaculate Conception of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"May the sacrament we have received, O Lord our God, heal in us the wounds of that sin from which by a singular privilege, You kept immaculate the conception of blessed Mary. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.","g":["The Sacraments","which","we have received","O Lord","God","our","of that","in","us","sin","the wounds","may heal","from","which","immaculate","of Blessed","Mary","Conception","in a singular manner","Thou preserved","Through","Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages","Amen"]}
+    {"id":"s01","tr":"May the sacrament we have received, O Lord our God, heal in us the wounds of that sin from which by a singular privilege, You kept immaculate the conception of blessed Mary. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["The Sacraments","which","we have received","O Lord","God","our","of that","in","us","sin","the wounds","may heal","from","which","immaculate","of Blessed","Mary","Conception","in a singular manner","Thou preserved","Through","Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages"]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

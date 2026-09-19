@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “First Sunday of Lent” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"May the holy partaking of Thy Sacrament, O Lord, restore us and, cleansing us from our former state, bring us into fellowship with the saving mystery. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.","g":["Thy","us","O Lord","of the Sacrament","partaking","holy","may restore","and","from","former state","cleansing",null,"mystery","saving","may cause","to pass","into fellowship","through","the Lord","our","Jesus","Christ","Son","Thy","Who","Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages","amen"],"a":[{"s":11,"n":1,"r":"inflection"}]}
+    {"id":"s01","tr":"May the holy partaking of Thy Sacrament, O Lord, restore us and, cleansing us from our former state, bring us into fellowship with the saving mystery. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["Thy","us","O Lord","of the Sacrament","partaking","holy","may restore","and","from","former state","cleansing",null,"mystery","saving","may cause","to pass","into fellowship","through","the Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages"],"a":[{"s":11,"n":1,"r":"inflection"}]},
+    {"id":"s02","tr":"Amen.","g":["amen"]}
   ]
 }

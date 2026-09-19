@@ -1,0 +1,144 @@
+{
+ "id": "proprium.dominica-iii-adventus-collecta",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Latin/Ordo/Prayers.txt lines116-117"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-adventus-collecta.conclusion-macro.do44667ff",
+     "address": {
+      "kind": "word",
+      "word": "w016"
+     },
+     "claim": "Exact selected full conclusion macro and separate response, used with the proper body as one digital comparison witness."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Latin/Tempora/Adv3-0.txt, lines27-28, selected proper and macro cue"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-adventus-collecta.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Pinned proper body and exact selected macro cue. The separately cited formula dependency completes this one derived witness."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "pp. xxxii–xxxiv, 226",
+    "scan": "PDF scans 38–40, 306",
+    "section": "RG 480–481, 511 d/i, 513–514; Ordo conclusion"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-adventus-collecta.oration-boundaries.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p.xviii",
+    "scan": "n23/PDF24",
+    "section": "RG115d",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-adventus-collecta.conclusion-rg115d.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w016"
+     },
+     "claim": "Prescribed full conclusion or its explicit reference to the preceding formula. The composite witness retains literal unaccented RG spelling and list punctuation."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p.4",
+    "scan": "n83/PDF84",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n83/mode/1up",
+    "section": "Proper body and abbreviated conclusion cue; full ending supplied from the separately cited RG115 formula"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-adventus-collecta.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This proper-page locus supplies the body or its continuation and the abbreviated conclusion, not the entire expanded ending."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.dominica-iii-adventus-collecta.do44667ff",
+   "text": "proprium.dominica-iii-adventus-collecta",
+   "use": "use.proprium.dominica-iii-adventus-collecta.do44667ff",
+   "role": "derived_comparison",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Proper body plus prescribed full conclusion, explicitly assembled from the named loci. One controlling printed edition and one derived digital comparison; no second full printed proper witness is asserted."
+  },
+  {
+   "id": "witness.proprium.dominica-iii-adventus-collecta.mr1962",
+   "text": "proprium.dominica-iii-adventus-collecta",
+   "use": "use.proprium.dominica-iii-adventus-collecta.mr1962",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Proper body plus prescribed full conclusion, explicitly assembled from the named loci. One controlling printed edition and one derived digital comparison; no second full printed proper witness is asserted."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.dominica-iii-adventus-collecta.mr1962-do44667ff",
+  "text": "proprium.dominica-iii-adventus-collecta",
+  "recension": "1962 typical-edition proper with its explicitly prescribed complete conclusion",
+  "witnesses": [
+   "witness.proprium.dominica-iii-adventus-collecta.mr1962",
+   "witness.proprium.dominica-iii-adventus-collecta.do44667ff"
+  ],
+  "apparatus": {
+   "entries": 7,
+   "classes": [
+    "accent",
+    "orthography",
+    "punctuation"
+   ]
+  }
+ }
+}

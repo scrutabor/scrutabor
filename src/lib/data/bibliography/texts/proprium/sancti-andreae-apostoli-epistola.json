@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/11-30; resolved section [Lectio] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/11-30.txt [Lectio], line 27"
    },
    "entries": [
     {
@@ -14,10 +14,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned digital text is a comparison witness. Its evangelizándum is a transcription error, explicitly corrected to evangelizántium on the evidence of the printed Missal."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-18"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -25,8 +25,8 @@
    "role": "official_text",
    "locator": {
     "printed": "p. 426",
-    "scan": "leaf n506 / PDF p. 507",
-    "page_url": "https://archive.org/download/missale_romanum-1962/page/n506/mode/1up"
+    "scan": "leaf n507 / PDF p. 508",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n507/mode/1up"
    },
    "entries": [
     {
@@ -37,7 +37,7 @@
      "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-18"
   }
  ],
  "witnesses": [

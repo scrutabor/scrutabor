@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “Palm Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"O Lord, by the working of this mystery may our vices be cleansed and our just desires fulfilled. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.","g":["By","of this","Lord","working","mystery","and","vices","our","may be cleansed","and","just","desires","fulfilled","through","the Lord","our","Jesus","Christ","Son","Thy","Who","Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages","Amen"]}
+    {"id":"s01","tr":"O Lord, by the working of this mystery may our vices be cleansed and our just desires fulfilled. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["By","of this","Lord","working","mystery","and","vices","our","may be cleansed","and","just","desires","fulfilled","through","the Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages"]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

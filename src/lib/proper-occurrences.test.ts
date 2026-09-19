@@ -1,6 +1,22 @@
 import { expect, it } from 'vitest';
-import { properOccurrences } from './proper-occurrences';
+import { indexOccurrenceWords, properOccurrences } from './proper-occurrences';
 import { PROPER_DAYS } from './proprium';
+
+it('indexes repeated words by occurrence while preserving their exact reading data', () => {
+	const word = { id: 'w001', form: 'Amen', lemma: 'amen', morph: { pos: 'intj' } };
+	const doc = { segments: [{ words: [word] }, {}] };
+	const gloss = { language: 'pl' };
+	const first = { slug: 'prayer', doc, gloss };
+	const second = { slug: 'prayer~communio', doc, gloss };
+	const indexed = indexOccurrenceWords([first, second]);
+	expect([...indexed.keys()]).toEqual(['prayer.w001', 'prayer~communio.w001']);
+	expect(indexed.get('prayer.w001')).toEqual({ ...first, word });
+	expect(indexed.get('prayer~communio.w001')).toEqual({ ...second, word });
+	expect(indexed.get('prayer.w001')?.doc).toBe(doc);
+	expect(indexed.get('prayer.w001')?.gloss).toBe(gloss);
+	expect(indexed.get('prayer.w001')?.word).toBe(word);
+	expect(indexOccurrenceWords([]).size).toBe(0);
+});
 
 it('keeps both occurrences without aliasing their word and fragment addresses', () => {
 	const parts = [

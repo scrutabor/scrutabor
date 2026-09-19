@@ -101,8 +101,11 @@ const PINNED = (globalThis as { process?: { env: Record<string, string | undefin
 
 async function pinClock(page: import('@playwright/test').Page) {
 	if (!PINNED) return;
-	await page.addInitScript((iso: string) => {
-		const shift = new Date(iso).valueOf() - Date.now();
+	// Keep one offset across documents. Recomputing it at each load rewinds
+	// time and can reuse the router's Date.now()-based history IDs, restoring
+	// scroll positions from an unrelated page.
+	const shift = new Date(`${PINNED}T10:00:00`).valueOf() - Date.now();
+	await page.addInitScript((shift: number) => {
 		const Real = Date;
 		(globalThis as unknown as { Date: unknown }).Date = class extends Real {
 			constructor(...args: ConstructorParameters<typeof Date>) {
@@ -116,7 +119,7 @@ async function pinClock(page: import('@playwright/test').Page) {
 				return Real.now() + shift;
 			}
 		};
-	}, `${PINNED}T10:00:00`);
+	}, shift);
 }
 
 async function translate(

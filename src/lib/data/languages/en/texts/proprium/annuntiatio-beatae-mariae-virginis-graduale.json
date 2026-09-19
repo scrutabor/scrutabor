@@ -1,0 +1,8 @@
+{
+  "id":"proprium.annuntiatio-beatae-mariae-virginis-graduale",
+  "language":"en",
+  "about":"The gradual of the Annunciation of the Blessed Virgin Mary in the 1962 Roman Missal.",
+  "seg":[
+    {"id":"s01","tr":"Grace has been poured out upon your lips; therefore God has blessed you forever. For the sake of truth and meekness and justice; and your right hand will lead you wondrously.","g":[null,null,"grace","upon",null,null,"therefore","has blessed","you","God",null,null,"for the sake of","the truth","and","meekness","and","justice","and","shall lead","you","wondrously",null,null],"a":[{"s":0,"n":2,"a":0,"g":"has been poured out"},{"s":4,"n":2,"a":0,"g":"your lips"},{"s":10,"n":2,"a":1,"g":"forever"},{"s":22,"n":2,"a":0,"g":"your right hand"}],"ex":{"w013":"The chant selects only this opening phrase of the Psalm verse before the next clause. No verb is expressed here."}}
+  ]
+}

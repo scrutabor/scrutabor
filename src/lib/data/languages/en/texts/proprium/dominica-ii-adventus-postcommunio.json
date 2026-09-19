@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The postcommunion of the Second Sunday of Advent. It asks for nothing new, but that the food just received should change the judgment of things — what to despise and what to love.",
   "seg":[
-    {"id":"s01","tr":"Filled with spiritual food, we humbly ask You, Lord: through our sharing in this mystery, teach us to despise what is earthly and to love what is heavenly. Through the Lord.","g":["Filled","with food","spiritual","nourishment","humbly","Thee","Lord","we beseech","that","of this","by participation","mystery","Thou wouldst teach","us","earthly things","despise","and","to love","heavenly things","Through","the Lord"]}
+    {"id":"s01","tr":"Filled with spiritual food, we humbly ask You, Lord: through our sharing in this mystery, teach us to despise what is earthly and to love what is heavenly. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["Filled","with food","spiritual","nourishment","humbly","Thee","Lord","we beseech","that","of this","by participation","mystery","Thou wouldst teach","us","earthly things","despise","and","to love","heavenly things","Through",null,null,null,null,null,null,null,null,null,null,null,"in","the unity",null,null,"God",null,null,null,null],"a":[{"s":20,"n":2,"a":0,"g":"our Lord"},{"s":22,"n":2,"a":0,"g":"Jesus Christ"},{"s":24,"n":2,"a":0,"g":"Thy Son"},{"s":26,"n":5,"a":2,"g":"who liveth and reigneth with Thee"},{"s":33,"n":2,"a":0,"g":"of the Holy Ghost"},{"s":36,"n":4,"a":2,"g":"world without end"}]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

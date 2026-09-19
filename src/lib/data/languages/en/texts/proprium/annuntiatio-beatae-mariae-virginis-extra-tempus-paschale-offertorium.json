@@ -1,0 +1,8 @@
+{
+  "id":"proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
+  "language":"en",
+  "about":"The Offertory for the Annunciation of the Blessed Virgin Mary outside Eastertide in the 1962 Roman Missal.",
+  "seg":[
+    {"id":"s01","tr":"Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb.","g":["Hail","Mary",null,null,null,null,null,null,"among","women","and",null,null,null,null],"a":[{"s":2,"n":2,"a":1,"g":"full of grace"},{"s":4,"n":2,"a":0,"g":"the Lord is with you"},{"s":6,"n":2,"a":0,"g":"blessed are you"},{"s":11,"n":2,"a":0,"g":"blessed is the fruit"},{"s":13,"n":2,"a":0,"g":"of your womb"}],"ex":{"w014":"Here venter means Mary's womb. Its “fruit” is her child."}}
+  ]
+}

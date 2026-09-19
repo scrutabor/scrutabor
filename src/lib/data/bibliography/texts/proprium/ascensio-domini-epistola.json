@@ -24,9 +24,9 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "p. 345–346",
-    "scan": "leaf n425 / PDF p. 426",
-    "page_url": "https://archive.org/download/missale_romanum-1962/page/n425/mode/1up"
+    "printed": "pp. 345–346",
+    "scan": "leaves n426–n427 / PDF pp. 427–428",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n426/mode/1up"
    },
    "entries": [
     {
@@ -34,7 +34,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Printed pages345–346 identify the selected Ascension epistle. The scalar evidence hash identifies the first page (n426); the continuation is n427. The w037 reading multis was directly verified against the controlling print; full recollation is not newly asserted."
     }
    ],
    "verified_on": "2026-09-12"
@@ -59,7 +59,7 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Controlling printed edition identified at pp. 345–346, n426–n427. The received transcription was checked at w037 against the page image on 2026-09-19; the digital witness has a distinct reading. A fresh complete transcription and full punctuation collation are not asserted."
   }
  ],
  "collation": {

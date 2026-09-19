@@ -71,6 +71,7 @@ export interface Word {
 	morph: Morph;
 	head?: string;
 	substantive?: boolean;
+	ellipsis?: 'predicate' | 'subject';
 	analysis?: Analysis;
 }
 
@@ -174,7 +175,9 @@ export interface LemmaEntry {
 	pos: string;
 	gender?: string;
 	gender_pl?: string;
+	gender_alt?: string;
 	decl?: number;
+	decl_alt?: number;
 	conj?: number;
 	analysis?: Analysis;
 	localization?: { note: true; note_citations?: Citation[] };
@@ -215,6 +218,7 @@ interface WordCell {
 	m: number;
 	h?: string;
 	s?: boolean;
+	el?: 'predicate' | 'subject';
 	a?: number;
 }
 
@@ -269,6 +273,7 @@ function expandWord(cell: WordCell): Word {
 	if (cell.p) word.post = cell.p;
 	if (cell.h) word.head = cell.h;
 	if (cell.s) word.substantive = true;
+	if (cell.el) word.ellipsis = cell.el;
 	if (cell.a !== undefined) word.analysis = at(ANALYSES, cell.a, 'analyses');
 	return word;
 }

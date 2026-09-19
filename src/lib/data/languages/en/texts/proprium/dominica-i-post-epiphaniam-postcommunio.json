@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “Mass of the First Sunday after Epiphany” in the 1962 Roman Missal. This formulary serves the weekdays of that week. On the Sunday itself the feast of the Holy Family takes its place.",
   "seg":[
-    {"id":"s01","tr":"We humbly beseech Thee, almighty God, that we whom Thou refreshest with Thy sacraments may also worthily serve Thee by conduct pleasing unto Thee. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.","g":["Humbly","Thee","we beseech","almighty","God","that","whom","Thy","refreshest","sacraments","unto Thee","also","pleasing","conduct","worthily","serve","grant","through","the Lord","our","Jesus","Christ","Son","Thy","Who","Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages","Amen"]}
+    {"id":"s01","tr":"We humbly beseech Thee, almighty God, that we whom Thou refreshest with Thy sacraments may also worthily serve Thee by conduct pleasing unto Thee. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["Humbly","Thee","we beseech","almighty","God","that","whom","Thy","refreshest","sacraments","unto Thee","also","pleasing","conduct","worthily","serve","grant","through","the Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages"]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

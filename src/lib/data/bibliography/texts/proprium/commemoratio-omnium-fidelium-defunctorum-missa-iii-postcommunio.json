@@ -6,7 +6,25 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/11-02m3; resolved section [Postcommunio] with declared inherited references"
+    "section": "Latin/Ordo/Prayers.txt, lines96-97"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-postcommunio.conclusion-macro.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The complete selected Per Dominum macro and response; together with the proper body it forms one derived witness."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Latin/Sancti/11-02m3.txt, lines31-32"
    },
    "entries": [
     {
@@ -14,19 +32,60 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned raw proper has a different beneficiary clause. It is preserved as a substantive comparison, not asserted to agree with the complete typical-edition text or to prove live runtime selection."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "pp. xxxii–xxxiv, 226",
+    "scan": "PDF scans 38–40, 306",
+    "section": "RG 480–481, 511 d/i, 513–514; Ordo conclusion"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-postcommunio.oration-boundaries.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
+    }
+   ],
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "p. 727",
-    "scan": "leaf n807 / PDF p. 808",
-    "page_url": "https://archive.org/download/missale_romanum-1962/page/n807/mode/1up"
+    "printed": "p.xvii",
+    "scan": "n22/PDF23",
+    "section": "RG115a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-postcommunio.conclusion-rg115a.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The prescribed full conclusion for a prayer addressed to the Father, including the response Amen; the proper page supplies only its cue."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p.727",
+    "scan": "n808/PDF809",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n808/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +93,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The typical-edition proper body and abbreviated conclusion cue. Its general beneficiary clause differs from the digital comparison; the full ending comes from separately identified RG115a."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -49,7 +108,7 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
+   "independence_basis": "One controlling printed edition and one separately maintained digital comparison, each with an explicit full-conclusion dependency. The latter has a different beneficiary reading. No second independent printed edition is asserted."
   },
   {
    "id": "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-postcommunio.mr1962",
@@ -59,20 +118,26 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "One controlling printed edition and one separately maintained digital comparison, each with an explicit full-conclusion dependency. The latter has a different beneficiary reading. No second independent printed edition is asserted."
   }
  ],
  "collation": {
   "id": "collation.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-postcommunio.mr1962-do44667ff",
   "text": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-postcommunio",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "1962 typical-edition proper and prescribed full conclusion; the digital beneficiary variant is retained in the apparatus",
   "witnesses": [
-   "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-postcommunio.do44667ff",
-   "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-postcommunio.mr1962"
+   "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-postcommunio.mr1962",
+   "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-postcommunio.do44667ff"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 17,
+   "classes": [
+    "accent",
+    "capitalization",
+    "orthography",
+    "punctuation",
+    "substantive-span"
+   ]
   }
  }
 }

@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pasc4-0.txt (section [Graduale]); resolved spans: web/www/missa/Latin/Tempora/Pasc4-0.txt (lines 30-34)"
+    "section": "web/www/missa/Latin/Tempora/Pasc4-0.txt [Graduale], lines 30–34"
    },
    "entries": [
     {
@@ -14,10 +14,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned Latin component supplies a derived digital comparison; its spelling and punctuation differences are preserved, not treated as another independent print."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -25,8 +25,8 @@
    "role": "official_text",
    "locator": {
     "printed": "p. 339",
-    "scan": "leaf n419 / PDF p. 420",
-    "page_url": "https://archive.org/download/missale_romanum-1962/page/n419/mode/1up"
+    "scan": "leaf n420 / PDF p. 421",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n420/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The complete 24-word Alleluia pair for the fourth Sunday after Easter at the top of page 339, continuing that Sunday from page 338. The printed comma after mortuis is retained; the fifth Sunday starts later on page 339."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -71,9 +71,10 @@
    "witness.proprium.dominica-iv-post-pascha-alleluia.mr1962"
   ],
   "apparatus": {
-   "entries": 5,
+   "entries": 6,
    "classes": [
-    "orthography"
+    "orthography",
+    "punctuation"
    ]
   }
  }

@@ -8,9 +8,9 @@
 // no content, exactly as the catalog holds none.
 
 import type { Lang } from './i18n';
-import { FORMULARY_METADATA, formularyTitle } from './corpus-metadata';
+import { FORMULARY_METADATA, formularyTitle, type ComponentCondition } from './corpus-metadata';
 import { bindPlFields } from './polish';
-import { dayOf, isoDate, type Kalendar } from './kalendarium';
+import { dayOf, dayOn, isCivilDate, isoDate, type Kalendar } from './kalendarium';
 
 /** The parts of a Mass proper, in the order the rite says them.
  *
@@ -109,21 +109,34 @@ export interface ProperDay {
 	partial?: boolean;
 	/** Canonical ordered assembly, including shared and transferred texts. */
 	components: {
-		key: ProperPart;
+		key: string;
 		role: ProperPart;
 		text: string;
 		relation: 'proper' | 'shared' | 'reference';
-		condition?: { weekday: 'sunday' };
+		condition?: ComponentCondition;
 	}[];
 }
 
 /** Whether a dated occurrence receives a component the Missal makes conditional. */
 export function componentApplies(
-	condition: { weekday: 'sunday' } | undefined,
+	condition: ComponentCondition | undefined,
 	selectedDate: string | null
 ): boolean {
-	if (!condition || !selectedDate) return true;
-	return new Date(`${selectedDate}T12:00:00`).getDay() === 0;
+	if (!condition) return true;
+	// An undated catalogue is a study inventory, not a Mass selected for today.
+	if (selectedDate === null) return true;
+	if (!isCivilDate(selectedDate)) return false;
+	if ('weekday' in condition) {
+		const sunday = new Date(`${selectedDate}T12:00:00`).getDay() === 0;
+		return condition.weekday === 'sunday' ? sunday : !sunday;
+	}
+	if ('season' in condition) {
+		const occurrence = dayOn(selectedDate);
+		if (!occurrence || !SEASONS.includes(occurrence.season as Season)) return false;
+		return (occurrence.season === 'paschale') === (condition.season === 'paschale');
+	}
+	// A source's votive alternative is never a calendar-feast component.
+	return false;
 }
 
 // The corpus owns the editorial catalogue. This projection keeps only the
@@ -133,12 +146,11 @@ const PROPER_DAYS_SOURCE: ProperDay[] = FORMULARY_METADATA.map((formulary) => {
 		throw new Error(`${formulary.id} names unknown season ${formulary.season}`);
 	}
 	const components = formulary.components.map((component) => {
-		if (!PROPER_PARTS.includes(component.role as ProperPart) || component.key !== component.role) {
+		if (!PROPER_PARTS.includes(component.role as ProperPart) || !component.key) {
 			throw new Error(`${formulary.id} names unknown component ${component.key}`);
 		}
 		return {
 			...component,
-			key: component.key as ProperPart,
 			role: component.role as ProperPart
 		};
 	});

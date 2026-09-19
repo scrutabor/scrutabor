@@ -537,11 +537,12 @@ test('the Gloria reads with narrative, panel and provenance', async ({ page }) =
 	await expect(panel.locator('.morph')).toContainText('mianownik');
 	await expect(panel.locator('.explanation')).toHaveCount(0);
 	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
-	// single-analyzer override: déxteram is confirmed by Whitaker's alone,
-	// against the document's both-analyzers default
+	// Both providers confirm this feminine noun. Its pending per-word review
+	// must still override the document's inherited accepted-word default.
 	await page.goto('/app/pl/ordinarium/gloria?w=w061');
-	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker');
-	await expect(panel.locator('.meta')).not.toContainText('Collatinus');
+	await expect(panel.locator('.meta')).toContainText('opracowanie, Whitaker, Collatinus');
+	await expect(panel.locator('.meta')).toContainText('do przeglądu');
+	await expect(panel.locator('.meta')).not.toContainText('zaakceptowane');
 	// the superlative links its grammar concept and the lemma page resolves
 	await page.goto('/app/en/ordinarium/gloria?w=w074'); // Altissimus
 	await expect(panel.locator('.gloss')).toHaveText('Most High');
@@ -1098,12 +1099,16 @@ test('the book keeps a ribbon: reopening a text resumes the position', async ({ 
 			{ intervals: [1400, 1400, 1400, 1400], timeout: 15000 }
 		)
 		.not.toBeNull();
+	const savedAt = await page.evaluate(() => Date.now());
 	// leave for the catalog and come back — the ribbon holds
 	await page.getByRole('link', { name: 'strona główna modlitewnika' }).click();
 	await expect(page).toHaveURL(atRoute('/app/pl'));
 	await page.locator('a[href="/app/pl/ordinarium/credo"]').click();
 	await expect(page).toHaveURL(/credo/);
 	await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(400);
+	// The seasonal test clock must advance across documents, too. Rewinding
+	// it on each navigation collides with the router's history identifiers.
+	expect(await page.evaluate(() => Date.now())).toBeGreaterThan(savedAt);
 	// a deep link outranks the ribbon: the word is centered, not the ribbon restored
 	await page.goto('/app/pl/ordinarium/credo?w=w003');
 	await expect(page.locator('aside')).toBeVisible();

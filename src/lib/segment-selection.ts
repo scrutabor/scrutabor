@@ -20,7 +20,7 @@ export function parseSegmentSelection(
 		if (ids.includes(token)) return token;
 		const seen = new Set<string>();
 		let current = token;
-		while (retired[current]) {
+		while (Object.hasOwn(retired, current)) {
 			if (seen.has(current)) return undefined;
 			seen.add(current);
 			current = retired[current];
@@ -45,11 +45,17 @@ export function resolveWordAddress(
 	retiredSegments: Record<string, string> = {}
 ): { word?: string; segment?: string } | null {
 	if (!raw) return null;
-	if (wordIds.includes(raw)) return { word: raw };
-	const anchor = retiredWords[raw];
-	if (!anchor) return null;
-	const [segment] = parseSegmentSelection(anchor, segmentIds, retiredSegments);
-	return segment ? { segment } : null;
+	const seen = new Set<string>();
+	let current = raw;
+	while (!seen.has(current)) {
+		if (wordIds.includes(current)) return { word: current };
+		seen.add(current);
+		if (!Object.hasOwn(retiredWords, current)) return null;
+		current = retiredWords[current];
+		const segments = parseSegmentSelection(current, segmentIds, retiredSegments);
+		if (segments.length === 1) return { segment: segments[0] };
+	}
+	return null;
 }
 
 export function formatSegmentSelection(selected: string[], ids: string[]): string | null {

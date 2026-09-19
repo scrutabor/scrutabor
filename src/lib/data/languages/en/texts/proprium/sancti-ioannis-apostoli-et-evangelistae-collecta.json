@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The collecta of the formulary “Saint John, Apostle and Evangelist” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"O Lord, graciously shed light upon Your Church, so that, enlightened by the teachings of blessed John, Your Apostle and Evangelist, she may gain Your everlasting rewards. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.","g":["Church","Thy","O Lord","gracious","enlighten","that","blessed","John","Apostle","Thy","and","Evangelist","enlightened","by teachings","to","gifts","may attain","everlasting","through","the Lord","our","Jesus","Christ","Son","Thy","Who","Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages","Amen"]}
+    {"id":"s01","tr":"O Lord, graciously shed light upon Your Church, so that, enlightened by the teachings of blessed John, Your Apostle and Evangelist, she may gain Your everlasting rewards. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["Church","Thy","O Lord","gracious","enlighten","that","blessed","John","Apostle","Thy","and","Evangelist","enlightened","by teachings","to","gifts","may attain","everlasting","through","the Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages"]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

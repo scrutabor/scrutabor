@@ -65,12 +65,18 @@ export interface CorpusMetrics {
 	};
 }
 
+export type ComponentCondition =
+	| { weekday: 'sunday' | 'not-sunday' }
+	| { season: 'paschale' | 'not-paschale' }
+	| { use: 'votive-after-septuagesima' };
+
 export interface FormularyComponentMetadata {
 	key: string;
 	role: string;
 	text: string;
 	relation: 'proper' | 'shared' | 'reference';
-	condition?: { weekday: 'sunday' };
+	recension?: 'paschale' | 'non-paschale';
+	condition?: ComponentCondition;
 }
 
 export interface FormularyMetadata {

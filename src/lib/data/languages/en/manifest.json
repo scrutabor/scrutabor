@@ -1,6 +1,6 @@
 {
-  "schema_version": "5.4.0",
-  "corpus_schema": "0.19.0",
+  "schema_version": "5.6.0",
+  "corpus_schema": "0.20.0",
   "language": "en",
   "direction": "ltr",
   "texts": [
@@ -567,7 +567,8 @@
     },
     {
       "id": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
-      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-alleluia.json"
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-alleluia.json",
+      "evidence": "languages/en/bibliography/texts/proprium/annuntiatio-beatae-mariae-virginis-alleluia.json"
     },
     {
       "id": "proprium.annuntiatio-beatae-mariae-virginis-collecta",
@@ -586,12 +587,28 @@
       "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-evangelium.json"
     },
     {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-graduale",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-graduale.json"
+    },
+    {
       "id": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
-      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-introitus.json"
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/annuntiatio-beatae-mariae-virginis-introitus.json"
     },
     {
       "id": "proprium.annuntiatio-beatae-mariae-virginis-offertorium",
-      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-offertorium.json"
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/annuntiatio-beatae-mariae-virginis-offertorium.json"
     },
     {
       "id": "proprium.annuntiatio-beatae-mariae-virginis-postcommunio",
@@ -600,6 +617,10 @@
     {
       "id": "proprium.annuntiatio-beatae-mariae-virginis-secreta",
       "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-secreta.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
+      "path": "languages/en/texts/proprium/annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.json"
     },
     {
       "id": "proprium.annuntiatio-beatae-mariae-virginis-tractus",
@@ -1234,8 +1255,7 @@
     },
     {
       "id": "proprium.dominica-ii-adventus-collecta",
-      "path": "languages/en/texts/proprium/dominica-ii-adventus-collecta.json",
-      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-adventus-collecta.json"
+      "path": "languages/en/texts/proprium/dominica-ii-adventus-collecta.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-communio",
@@ -1466,8 +1486,7 @@
     },
     {
       "id": "proprium.dominica-iii-adventus-collecta",
-      "path": "languages/en/texts/proprium/dominica-iii-adventus-collecta.json",
-      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-adventus-collecta.json"
+      "path": "languages/en/texts/proprium/dominica-iii-adventus-collecta.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-communio",
@@ -1830,8 +1849,7 @@
     },
     {
       "id": "proprium.dominica-iv-adventus-collecta",
-      "path": "languages/en/texts/proprium/dominica-iv-adventus-collecta.json",
-      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-adventus-collecta.json"
+      "path": "languages/en/texts/proprium/dominica-iv-adventus-collecta.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-communio",
@@ -4354,6 +4372,10 @@
     {
       "id": "proprium.septem-dolorum-beatae-mariae-virginis-sequentia",
       "path": "languages/en/texts/proprium/septem-dolorum-beatae-mariae-virginis-sequentia.json"
+    },
+    {
+      "id": "proprium.septem-dolorum-beatae-mariae-virginis-tractus",
+      "path": "languages/en/texts/proprium/septem-dolorum-beatae-mariae-virginis-tractus.json"
     },
     {
       "id": "proprium.transfiguratio-domini-alleluia",

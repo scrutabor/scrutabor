@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/02-24; resolved section [Tractus] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/02-24.txt [Tractus], tract-only lines 47-49; preceding gradual excluded"
    },
    "entries": [
     {
@@ -14,19 +14,19 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned source corroborates the true tract in the latter part of its compound runtime section, not the preceding gradual."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 480",
-    "scan": "leaf n560 / PDF p. 561",
-    "page_url": "https://archive.org/download/missale_romanum-1962/page/n560/mode/1up"
+    "scan": "leaf n561 / PDF p. 562",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n561/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger 1962 page separately prints the tract Desiderium animae through de lapide pretioso after the gradual; the gradual is excluded from this text."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -59,20 +59,22 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Direct transcription of the separately headed tract from the identified Benziger 1962 editio iuxta typicam page image."
   }
  ],
  "collation": {
   "id": "collation.proprium.sancti-matthiae-apostoli-tractus.mr1962-do44667ff",
   "text": "proprium.sancti-matthiae-apostoli-tractus",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "Tract alone in the Benziger 1962 editio iuxta typicam; preceding gradual excluded; printed punctuation and house i spelling.",
   "witnesses": [
    "witness.proprium.sancti-matthiae-apostoli-tractus.do44667ff",
    "witness.proprium.sancti-matthiae-apostoli-tractus.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 3,
+   "classes": [
+    "orthography"
+   ]
   }
  }
 }

@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The tractus of the formulary “Commemoration of All the Faithful Departed — Mass I” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"O Lord, absolve the souls of all the faithful departed from every bond of sin. And by the help of Your grace may they be worthy to escape the sentence of vengeance. And to enjoy all the beatitude of the light eternal.","g":["absolve","O Lord","the souls","all","of the faithful","from","every","bond","of sins","and","by grace","Thy","to them","helping","may deserve","to escape","the sentence","of vengeance","and","light","eternal","blessedness","to enjoy"]}
+    {"id":"s01","tr":"O Lord, absolve the souls of all the faithful departed from every bond of sin. And with Your grace helping them, may they be worthy to escape the sentence of vengeance and to enjoy fully the blessedness of eternal light.","g":["absolve","O Lord","the souls",null,null,"departed","from","every","bond","of sins","and",null,null,null,null,"may they be worthy","to escape","the sentence","of vengeance","and",null,null,"the blessedness","to enjoy fully"],"a":[{"s":3,"n":2,"a":1,"g":"of all the faithful"},{"s":11,"n":2,"a":0,"g":"with Your grace"},{"s":13,"n":2,"a":1,"g":"helping them"},{"s":20,"n":2,"a":0,"g":"of eternal light"}]}
   ]
 }

@@ -13,6 +13,7 @@
 	} from '$lib/role.svelte';
 	import { initialFit } from '$lib/reading-geometry';
 	import { interlinearRuns, type InterlinearRun } from '$lib/interlinear';
+	import { fitInterlinear } from '$lib/interlinear-layout';
 	import * as marks from '$lib/speaker-marks';
 
 	// The rendered text itself, shared by the reading page and the ordo
@@ -442,6 +443,7 @@
 		{@const sink = fit0?.sink ?? 0}
 		<p
 			class="verse"
+			use:fitInterlinear={helpLevel}
 			style:margin-top={fit0 && !bilingual ? `${fit0.reserve}em` : null}
 			style:--selection-initial-start={fit0 ? `calc(var(--reading) * ${-fit0.reserve})` : null}
 			class:glossed={helpLevel === 1}
@@ -1013,9 +1015,9 @@
 	}
 
 	.token-group {
-		/* A shared ruby reverses the ordinary nesting: its independently
-		   clickable word buttons sit inside the ruby base instead of wrapping
-		   one ruby apiece. Chromium counts the base line's lower half-leading a
+		/* A shared ruby holds several atomic Latin tokens inside one button,
+		   instead of one button wrapping each ruby. Chromium counts the base
+		   line's lower half-leading a
 		   second time when it places that ruby text. This measured, scale-free
 		   offset puts the shared annotation on the exact row used by its
 		   neighbours at every reading size. */
@@ -1069,6 +1071,50 @@
 	.word-construction {
 		display: inline;
 	}
+
+	/* Only a pair wider than the entire content measure takes this path.
+	   It keeps one button and one annotation, with natural word boundaries
+	   inside the pair. Fitting units retain native ruby and its baseline. */
+	/* stylelint-disable selector-pseudo-class-no-unknown -- Svelte global class added by the layout action */
+	:is(.token, .token-group):global(.wrapped-unit) {
+		inline-size: 100%;
+		line-height: 1.35;
+		margin-block: 0.15em 0.25em;
+		text-align: start;
+		/* At the narrowest measure even one Latin word can be too wide.
+		   Keep ordinary word boundaries first, but let that exceptional word
+		   continue without shrinking, clipping or changing its source text. */
+		overflow-wrap: anywhere;
+	}
+
+	:is(.token, .token-group):global(.wrapped-unit) > .word {
+		display: block;
+		inline-size: 100%;
+		text-align: inherit;
+	}
+
+	:global(.wrapped-unit) ruby {
+		display: flex;
+		flex-direction: column;
+	}
+
+	:global(.wrapped-unit) .shared-base {
+		display: block;
+		white-space: normal;
+	}
+
+	:global(.wrapped-unit) .token {
+		max-inline-size: 100%;
+	}
+
+	:global(.wrapped-unit) rt.shifted {
+		position: static;
+		display: block;
+		margin-block-start: calc(var(--reading) * var(--gloss-gap));
+		line-height: 1.35;
+		white-space: normal;
+	}
+	/* stylelint-enable selector-pseudo-class-no-unknown */
 
 	.token:where(
 			:has(> button.word:hover),
@@ -1128,6 +1174,16 @@
 		outline: 2px solid var(--rubric);
 		outline-offset: -2px;
 	}
+
+	/* stylelint-disable selector-pseudo-class-no-unknown -- Svelte global class added by the layout action */
+	:is(.token, .token-group):global(.wrapped-unit):where(
+			:hover,
+			:focus-within,
+			:has(button.word.selected)
+		)::before {
+		inset-block: 0;
+	}
+	/* stylelint-enable selector-pseudo-class-no-unknown */
 
 	.token.word-selected::before {
 		/* Persistent selection outranks transient hover and focus. `:where()`
@@ -1213,9 +1269,9 @@
 		   with periods (`come.out`), which is right for a linguistics
 		   paper and wrong for someone praying — "let.it.be.done" is not
 		   readable. Same guarantee, kept in the layout instead: the words
-		   stay, the break does not. (It happens not to break today even at
-		   280px, because the ruby column sizes to the longer of the two —
-		   this states the invariant rather than relying on that.) */
+		   stay, the break does not. Only a pair wider than the full reading
+		   measure uses the explicit wrapping fallback above: it retains one
+		   source unit, one gloss and one interaction surface. */
 		white-space: nowrap;
 	}
 

@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Nat1-0.txt (section [Graduale]); resolved spans: web/www/missa/Latin/Tempora/Nat1-0.txt (lines 40-42)"
+    "section": "Pinned Tempora/Nat1-0 [Graduale], upstream lines 39–42; retained archive lines 40–43. End at scribentis, before Alleluia."
    },
    "entries": [
     {
@@ -17,7 +17,7 @@
      "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -25,8 +25,8 @@
    "role": "official_text",
    "locator": {
     "printed": "p. 22",
-    "scan": "leaf n100 / PDF p. 101",
-    "page_url": "https://archive.org/download/missale_romanum-1962/page/n100/mode/1up"
+    "scan": "leaf n101 / PDF p. 102",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n101/mode/1up"
    },
    "entries": [
     {
@@ -37,7 +37,7 @@
      "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -71,9 +71,10 @@
    "witness.proprium.dominica-infra-octavam-nativitatis-graduale.mr1962"
   ],
   "apparatus": {
-   "entries": 2,
+   "entries": 3,
    "classes": [
-    "accent"
+    "accent",
+    "capitalization"
    ]
   }
  }

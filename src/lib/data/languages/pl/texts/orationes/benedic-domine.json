@@ -5,7 +5,7 @@
   "seg":[
     {"id":"s01","tr":"Pobłogosław, o Panie, nas","tc":[35],"tb":"traditional-composite","g":["pobłogosław","Panie","nas"]},
     {"id":"s02","tr":"i te dary Twoje,","tc":[35],"tb":"traditional-composite","g":["i","te","Twoje","dary"]},
-    {"id":"s03","tr":"które z Twej dobroci spożywać będziemy.","tc":[35],"tb":"traditional-composite","g":["które","z","Twojej","hojności","jesteśmy","mający spożywać"],"ex":{"w013":"Połączenie „sumptúri sumus” mówi o tym, co modlący się za chwilę będą spożywać."}},
+    {"id":"s03","tr":"które z Twej dobroci spożywać będziemy.","tc":[35],"tb":"traditional-composite","g":["które","z","Twojej","hojności",null,null],"a":[{"s":4,"n":2,"a":1,"g":"mamy spożywać"}],"ex":{"w013":"Połączenie „sumus sumptúri” mówi o tym, co modlący się za chwilę będą spożywać."}},
     {"id":"s04","tr":"Przez Chrystusa Pana naszego. Amen.","tc":[35],"tb":"traditional-composite","g":["przez","Chrystusa","Pana","naszego","amen"]}
   ]
 }

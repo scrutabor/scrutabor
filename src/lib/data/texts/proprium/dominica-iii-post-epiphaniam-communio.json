@@ -9,6 +9,6 @@
   "ad":1,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Mirabántur","l":"miro","m":755},{"i":"w002","f":"omnes","l":"omnis","m":180,"s":true},{"i":"w003","f":"de","l":"de","m":0,"h":"w004"},{"i":"w004","f":"his","l":"hic","p":",","m":62},{"i":"w005","f":"quæ","l":"qui","m":122},{"i":"w006","f":"procedébant","l":"procedo","m":620},{"i":"w007","f":"de","l":"de","m":0,"h":"w008"},{"i":"w008","f":"ore","l":"os","m":135},{"i":"w009","f":"Dei","l":"deus","p":".","m":54}]}
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Mirabántur","l":"miror","m":666,"a":6},{"i":"w002","f":"omnes","l":"omnis","m":87,"s":true,"a":6},{"i":"w003","f":"de","l":"de","m":0,"h":"w004"},{"i":"w004","f":"his","l":"hic","p":",","m":62},{"i":"w005","f":"quæ","l":"qui","m":122},{"i":"w006","f":"procedébant","l":"procedo","m":620},{"i":"w007","f":"de","l":"de","m":0,"h":"w008"},{"i":"w008","f":"ore","l":"os","m":135},{"i":"w009","f":"Dei","l":"deus","p":".","m":54}]}
   ]
 }

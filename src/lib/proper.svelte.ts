@@ -23,6 +23,7 @@ import { artifactRequestPath, componentApplies } from '$lib/proprium';
 import { dayOn, isoDate } from '$lib/kalendarium';
 import { resolveOrdoChoice, ordoHref, type OrdoChoice } from '$lib/ordo-choice';
 import type { Lang } from '$lib/i18n';
+import type { ComponentCondition } from '$lib/corpus-metadata';
 import type { TextBibliographyEvidence } from '$lib/bibliography';
 import { properOccurrences } from '$lib/proper-occurrences';
 
@@ -30,7 +31,7 @@ export interface ProperPartPayload {
 	key: string;
 	part: string;
 	slot: string;
-	condition?: { weekday: 'sunday' };
+	condition?: ComponentCondition;
 	doc: unknown;
 	gloss: unknown;
 	bibliography: TextBibliographyEvidence;

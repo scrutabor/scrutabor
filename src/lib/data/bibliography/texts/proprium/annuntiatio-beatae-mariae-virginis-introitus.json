@@ -2,11 +2,47 @@
  "id": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-horae.44667ff",
+   "digital_item": "item.divinum-officium-horae.44667ff.doc10b",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "horas/Latin/Commune/C10b.txt lines 18-24"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.annuntiatio-beatae-mariae-virginis-introitus.dependency-doc10b",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Exact inherited source or expansion in the declared Mass dependency chain, not another independent printed witness."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/03-25; resolved section [Introitus] with declared inherited references"
+    "section": "missa/Latin/Ordo/Prayers.txt lines 12-14"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.annuntiatio-beatae-mariae-virginis-introitus.dependency-doprayers",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Exact inherited source or expansion in the declared Mass dependency chain, not another independent printed witness."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "missa/Latin/Sancti/03-25.txt [Introitus]; exact inherited dependencies declared separately"
    },
    "entries": [
     {
@@ -14,19 +50,19 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The actual pinned proper delegates to the preserved source chain. Communion supplies eleven words only, without a Paschal Alleluia; no full twelve-word digital agreement is asserted."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
-    "printed": "p. 496",
+    "printed": "p. 495",
     "scan": "leaf n576 / PDF p. 577",
-    "page_url": "https://archive.org/download/missale_romanum-1962/page/n576/mode/1up"
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n576/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +70,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Directly viewed printed proper and seasonal direction; the Introit shared Gloria expansion and repeated antiphon are declared separately."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -49,7 +85,7 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
+   "independence_basis": "Derived pinned source chain, not an independent printed edition; coverage never extends beyond the actual dependency."
   },
   {
    "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-introitus.mr1962",
@@ -59,20 +95,24 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Directly viewed approved printed Missal, with explicitly sourced shared expansion."
   }
  ],
  "collation": {
-  "id": "collation.proprium.annuntiatio-beatae-mariae-virginis-introitus.mr1962-do44667ff",
+  "id": "collation.proprium.annuntiatio-beatae-mariae-virginis-introitus.source-comparison",
   "text": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "Benziger 1962 complete paschale introitus with explicitly expanded shared formulas.",
   "witnesses": [
-   "witness.proprium.annuntiatio-beatae-mariae-virginis-introitus.do44667ff",
-   "witness.proprium.annuntiatio-beatae-mariae-virginis-introitus.mr1962"
+   "witness.proprium.annuntiatio-beatae-mariae-virginis-introitus.mr1962",
+   "witness.proprium.annuntiatio-beatae-mariae-virginis-introitus.do44667ff"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 10,
+   "classes": [
+    "capitalization",
+    "orthography",
+    "punctuation"
+   ]
   }
  }
 }

@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The collect of the Third Sunday of Advent. It asks two things at once, a hearing and a light — not that circumstances change but that seeing does.",
   "seg":[
-    {"id":"s01","tr":"Incline Your ear, O Lord, we pray, to our prayers, and enlighten the darkness of our mind by the grace of Your visitation. You who live.","tc":[142],"tb":"revised","g":["ear","Thy","we beseech","Lord","to prayers","our","incline","and","of mind","our","darkness","by grace","of Thy","visitation","enlighten","Thou Who","livest"]}
+    {"id":"s01","tr":"Incline Your ear, O Lord, we pray, to our prayers, and enlighten the darkness of our mind by the grace of Your visitation. You who live and reign with God the Father in the unity of the Holy Spirit, God, forever and ever.","g":["ear","Thy","we beseech","Lord","to prayers","our","incline","and","of mind","our","darkness","by grace","of Thy","visitation","enlighten",null,null,null,null,null,null,null,"in","the unity",null,null,"God",null,null,null,null],"a":[{"s":15,"n":4,"a":1,"g":"Thou who livest and reignest"},{"s":19,"n":3,"a":2,"g":"with God the Father"},{"s":24,"n":2,"a":0,"g":"of the Holy Ghost"},{"s":27,"n":4,"a":2,"g":"world without end"}],"nt":{"w027":"Deus can be nominative or vocative here: it can describe the One who lives and reigns as God, or address Him as “O God.” Both readings refer to Christ, whom the prayer addresses."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

@@ -1,8 +1,9 @@
 {
   "id":"proprium.dominica-iii-adventus-postcommunio",
   "language":"en",
-  "about":"The postcommunion of the Third Sunday of Advent. The sacrament is not the end here but the preparation — the feasts are still to come.",
+  "about":"The postcommunion of the Third Sunday of Advent asks that divine help cleanse us of our faults and prepare us for the coming feasts.",
   "seg":[
-    {"id":"s01","tr":"We implore Your mercy, Lord: may this divine help cleanse us of our faults and prepare us for the coming feasts. Through the Lord.","g":["We implore","Lord","mercy","Thy","that","these","divine","aids","from","faults","cleansed","for","feasts","coming","us","may prepare","Through","the Lord"]}
+    {"id":"s01","tr":"We implore Your mercy, Lord: may this divine help cleanse us of our faults and prepare us for the coming feasts. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["We implore","Lord","mercy","Thy","that","these","divine","aids","from","faults","cleansed","for","feasts","coming","us","may prepare","Through",null,null,null,null,null,null,null,null,null,null,null,"in","the unity",null,null,"God",null,null,null,null],"a":[{"s":17,"n":2,"a":0,"g":"our Lord"},{"s":19,"n":2,"a":0,"g":"Jesus Christ"},{"s":21,"n":2,"a":0,"g":"Thy Son"},{"s":23,"n":5,"a":2,"g":"who liveth and reigneth with Thee"},{"s":30,"n":2,"a":0,"g":"of the Holy Ghost"},{"s":33,"n":4,"a":2,"g":"world without end"}]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

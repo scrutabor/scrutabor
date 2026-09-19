@@ -1,5 +1,5 @@
 {
- "schema_version": "1.0.0",
+ "schema_version": "1.1.0",
  "formularies": [
   {
    "id": "dominica-i-adventus",
@@ -363,8 +363,20 @@
     {
      "key": "praefatio",
      "role": "praefatio",
+     "text": "ordinarium/praefatio-communis",
+     "relation": "shared",
+     "condition": {
+      "weekday": "not-sunday"
+     }
+    },
+    {
+     "key": "praefatio-sunday",
+     "role": "praefatio",
      "text": "ordinarium/praefatio-sanctissimae-trinitatis",
-     "relation": "shared"
+     "relation": "shared",
+     "condition": {
+      "weekday": "sunday"
+     }
     },
     {
      "key": "communio",
@@ -5907,7 +5919,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -6650,8 +6665,11 @@
     {
      "key": "tractus",
      "role": "tractus",
-     "text": "proprium/nativitas-beatae-mariae-virginis-tractus",
-     "relation": "reference"
+     "text": "proprium/septem-dolorum-beatae-mariae-virginis-tractus",
+     "relation": "proper",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "sequentia",
@@ -8472,10 +8490,23 @@
    "title": "In Annuntiatione Beatæ Mariæ Virginis",
    "components": [
     {
-     "key": "introitus",
+     "key": "introitus-not-paschale",
+     "recension": "extra-tempus-paschale",
+     "role": "introitus",
+     "text": "proprium/annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
+    },
+    {
+     "key": "introitus-paschale",
      "role": "introitus",
      "text": "proprium/annuntiatio-beatae-mariae-virginis-introitus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "paschale"
+     }
     },
     {
      "key": "collecta",
@@ -8492,20 +8523,29 @@
     {
      "key": "graduale",
      "role": "graduale",
-     "text": "proprium/visitatio-beatae-mariae-virginis-graduale",
-     "relation": "reference"
+     "text": "proprium/annuntiatio-beatae-mariae-virginis-graduale",
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
     },
     {
      "key": "alleluia",
      "role": "alleluia",
      "text": "proprium/annuntiatio-beatae-mariae-virginis-alleluia",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "paschale"
+     }
     },
     {
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/annuntiatio-beatae-mariae-virginis-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
     },
     {
      "key": "evangelium",
@@ -8514,10 +8554,23 @@
      "relation": "proper"
     },
     {
-     "key": "offertorium",
+     "key": "offertorium-not-paschale",
+     "recension": "extra-tempus-paschale",
+     "role": "offertorium",
+     "text": "proprium/annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
+    },
+    {
+     "key": "offertorium-paschale",
      "role": "offertorium",
      "text": "proprium/annuntiatio-beatae-mariae-virginis-offertorium",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "paschale"
+     }
     },
     {
      "key": "secreta",
@@ -8532,10 +8585,23 @@
      "relation": "shared"
     },
     {
-     "key": "communio",
+     "key": "communio-not-paschale",
      "role": "communio",
      "text": "proprium/annuntiatio-beatae-mariae-virginis-communio",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
+    },
+    {
+     "key": "communio-paschale",
+     "recension": "tempore-paschali",
+     "role": "communio",
+     "text": "proprium/annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
+     "relation": "proper",
+     "condition": {
+      "season": "paschale"
+     }
     },
     {
      "key": "postcommunio",

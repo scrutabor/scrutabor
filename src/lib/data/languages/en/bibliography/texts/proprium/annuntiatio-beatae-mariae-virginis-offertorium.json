@@ -1,0 +1,27 @@
+{
+ "id": "proprium.annuntiatio-beatae-mariae-virginis-offertorium",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 9–10",
+    "scan": "scan pp. 22–23"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.annuntiatio-beatae-mariae-virginis-offertorium.ave-key-of-heaven-1901",
+     "address": {
+      "kind": "word",
+      "word": "w001"
+     },
+     "claim": "Only w001–w015 inherit the familiar Hail Mary greeting through the fruit of the womb, with among for printed amongst. Punctuation is normalized; the surrounding antiphon or added Alleluia is not attributed to this historical wording."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -1,10 +1,10 @@
 {
   "id":"proprium.dominica-iii-adventus-alleluia",
   "language":"pl",
-  "about":"Werset allelujatyczny III Niedzieli Adwentu. Powtarza wołanie, którym zaczyna się kolekta I Niedzieli — o potęgę, która ma przyjść.",
+  "about":"Werset allelujatyczny III Niedzieli Adwentu powtarza początek kolekty I Niedzieli: prośbę, aby Pan okazał swoją moc i przyszedł nas zbawić.",
   "seg":[
     {"id":"s01","tr":"Alleluja, alleluja.","g":["Alleluja","alleluja"]},
-    {"id":"s02","tr":"Wzbudź, Panie, swoją moc i przyjdź, aby nas zbawić.","tb":"revised","g":["Wzbudź","Panie","moc","swoją","i","przyjdź","aby","zbawionymi","uczynił","nas"]},
+    {"id":"s02","tr":"Wzbudź, Panie, swoją moc i przyjdź, aby nas zbawić.","tb":"revised","g":["Wzbudź","Panie","moc","swoją","i","przyjdź","abyś","zbawionymi","uczynił","nas"]},
     {"id":"s03","tr":"Alleluja.","g":["Alleluja"]}
   ]
 }

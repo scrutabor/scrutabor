@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/07-26; resolved section [Graduale] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/07-22.txt lines 28-29; Graduale section; reached by Sancti/07-26 Graduale delegation"
    },
    "entries": [
     {
@@ -14,19 +14,19 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned dependency supplies this complete chant. Its spelling and punctuation are retained independently; it is a derived comparison, not another independent printed edition."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
-    "printed": "p. 615",
+    "printed": "p. 614",
     "scan": "leaf n695 / PDF p. 696",
-    "page_url": "https://archive.org/download/missale_romanum-1962/page/n695/mode/1up"
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n695/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The directly viewed Benziger page prints this complete 13-word chant separately. Its adjacent rubrics and other chants are not body words."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -59,20 +59,22 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Direct transcription of the separately printed chant on Benziger 1962 p. 614. The adjacent chant and rubric are excluded."
   }
  ],
  "collation": {
   "id": "collation.proprium.sanctae-annae-matris-beatae-mariae-virginis-graduale.mr1962-do44667ff",
   "text": "proprium.sanctae-annae-matris-beatae-mariae-virginis-graduale",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "Benziger 1962 editio iuxta typicam, separately headed chant with exact printed punctuation.",
   "witnesses": [
    "witness.proprium.sanctae-annae-matris-beatae-mariae-virginis-graduale.do44667ff",
    "witness.proprium.sanctae-annae-matris-beatae-mariae-virginis-graduale.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 1,
+   "classes": [
+    "orthography"
+   ]
   }
  }
 }

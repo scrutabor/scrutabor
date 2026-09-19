@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “22nd Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"We who have received the gift of Your blessed sacrament, O Lord, humbly pray that what You have taught us to do in commemoration of You, may profit and help us in our weakness. Who livest and reignest with God the Father in the unity of the Holy Ghost, God, world without end. Amen.","g":["We have received","Lord","of sacred","gifts","mystery","humbly","beseeching","that","the things which","unto","Thy","remembrance","us","to do","Thou hast commanded",null,"of our","may profit","weakness","help","Who","livest","and","reignest","with","God","the Father","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages","Amen"],"a":[{"s":15,"n":1,"r":"idiom"}]}
+    {"id":"s01","tr":"We who have received the gift of Your blessed sacrament, O Lord, humbly pray that what You have taught us to do in commemoration of You, may profit and help us in our weakness. Who livest and reignest with God the Father in the unity of the Holy Ghost, God, world without end.","g":["We have received","Lord","of sacred","gifts","mystery","humbly","beseeching","that","the things which","unto","Thy","remembrance","us","to do","Thou hast commanded",null,"of our","may profit","weakness","help","Who","livest","and","reignest","with","God","the Father","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages"],"a":[{"s":15,"n":1,"r":"idiom"}]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

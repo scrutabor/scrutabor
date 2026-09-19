@@ -6,9 +6,9 @@
   "variant":"annuntiatio-beatae-mariae-virginis",
   "sung":true,
   "st":"working-edition",
-  "ad":1,
-  "adw":2,
+  "ad":5,
+  "adw":6,
   "seg":[
-    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Ave","l":"aveo","p":",","m":190,"a":14},{"i":"w002","f":"María","l":"Maria","p":",","m":61,"a":14},{"i":"w003","f":"grátia","l":"gratia","m":30,"a":14},{"i":"w004","f":"plena","l":"plenus","p":";","m":31,"h":"w003","a":14},{"i":"w005","f":"Dóminus","l":"dominus","m":60,"a":14},{"i":"w006","f":"tecum","l":"tu","p":":","m":131,"a":14},{"i":"w007","f":"benedícta","l":"benedictus","m":25,"h":"w008","a":14},{"i":"w008","f":"tu","l":"tu","m":143,"a":14},{"i":"w009","f":"in","l":"in","m":0,"h":"w010","a":14},{"i":"w010","f":"muliéribus","l":"mulier","p":",","m":40,"a":14},{"i":"w011","f":"et","l":"et","m":15,"a":14},{"i":"w012","f":"benedíctus","l":"benedictus","m":59,"h":"w013","a":14},{"i":"w013","f":"fructus","l":"fructus","m":196,"a":14},{"i":"w014","f":"ventris","l":"venter","m":69,"a":14},{"i":"w015","f":"tui","l":"tuus","p":".","m":99,"h":"w014","a":14},{"i":"w016","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14}]}
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Ave","l":"aveo","p":",","m":190},{"i":"w002","f":"María","l":"Maria","p":",","m":61},{"i":"w003","f":"grátia","l":"gratia","m":30},{"i":"w004","f":"plena","l":"plenus","p":":","m":57,"h":"w002"},{"i":"w005","f":"Dóminus","l":"dominus","m":60},{"i":"w006","f":"tecum","l":"tu","p":":","m":131},{"i":"w007","f":"benedícta","l":"benedictus","m":25,"h":"w008"},{"i":"w008","f":"tu","l":"tu","m":143},{"i":"w009","f":"in","l":"in","m":0,"h":"w010"},{"i":"w010","f":"muliéribus","l":"mulier","p":",","m":40},{"i":"w011","f":"et","l":"et","m":15},{"i":"w012","f":"benedíctus","l":"benedictus","m":59,"h":"w013"},{"i":"w013","f":"fructus","l":"fructus","m":196},{"i":"w014","f":"ventris","l":"venter","m":69},{"i":"w015","f":"tui","l":"tuus","m":99,"h":"w014"},{"i":"w016","f":"Allelúia","l":"alleluia","p":".","m":46}]}
   ]
 }

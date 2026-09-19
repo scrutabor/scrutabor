@@ -1,0 +1,8 @@
+{
+  "id":"proprium.septem-dolorum-beatae-mariae-virginis-tractus",
+  "language":"en",
+  "about":"The tract for votive Masses of the Seven Sorrows of the Blessed Virgin Mary after Septuagesima in the 1962 Roman Missal.",
+  "seg":[
+    {"id":"s01","tr":"Holy Mary, Queen of heaven and Lady of the world, stood in sorrow beside the cross of our Lord Jesus Christ. O all you who pass along the road, pay attention and see whether there is sorrow like my sorrow.","g":["was standing","holy","Mary",null,null,"and",null,null,"beside","the cross",null,null,"Jesus","Christ","sorrowful","O",null,null,"who","pass","along","the road","pay attention","and","see","whether","there is","sorrow","like",null,null],"a":[{"s":3,"n":2,"a":1,"g":"Queen of heaven"},{"s":6,"n":2,"a":1,"g":"Lady of the world"},{"s":10,"n":2,"a":0,"g":"of our Lord"},{"s":16,"n":2,"a":0,"g":"all you"},{"s":29,"n":2,"a":0,"g":"my sorrow"}],"ex":{"w016":"The chant moves from describing Mary to the first-person appeal of Lamentations 1:12.","w026":"The command asks the passersby to consider whether there is comparable sorrow. This is an inquiry, not a condition restricting the command."}}
+  ]
+}

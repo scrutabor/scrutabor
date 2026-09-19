@@ -1,9 +1,11 @@
 <script lang="ts">
+	import { untrack } from 'svelte';
 	import { pageUrl } from '$lib/url';
-	import type { GlossDocument, TextDocument, Word } from '$lib/corpus';
+	import type { GlossDocument, TextDocument } from '$lib/corpus';
 	import { arrowNav } from '$lib/arrow-nav';
 	import HelpLevels, { initialHelp } from '$lib/components/HelpLevels.svelte';
 	import ContentLoader from '$lib/components/ContentLoader.svelte';
+	import ComponentConditionNote from '$lib/components/ComponentConditionNote.svelte';
 	import MarkLegend from '$lib/components/MarkLegend.svelte';
 	import Pager from '$lib/components/Pager.svelte';
 	import PageNav from '$lib/components/PageNav.svelte';
@@ -22,6 +24,11 @@
 	import { dayHref } from '$lib/proper.svelte';
 	import type { TextBibliographyEvidence } from '$lib/bibliography';
 	import { textHref } from '$lib/content-url';
+	import { textAnchor } from '$lib/text-anchor';
+	import { resolveCompositeAddress, writeReadingAddress } from '$lib/reading-address';
+	import { presentReadingLocation, readingLocationFrame } from '$lib/reading-location';
+	import { indexOccurrenceWords } from '$lib/proper-occurrences';
+	import { DAY_PARAM, MASS_PARAM, resolveOrdoChoice, writeOrdoChoice } from '$lib/ordo-choice';
 
 	// Only this movement's texts, from the server load — never the corpus.
 	let { data } = $props();
@@ -46,6 +53,8 @@
 	// default, never a refusal: one tap and the words are there, and they
 	// stay there while the reader is on the page.
 	let unfolded = $state<Record<string, boolean>>({});
+	let citedPart = $state<string | null>(null);
+	let citedSegments = $state<string[]>([]);
 
 	// The Ordo is exactly where paging by key is worth having — the reader
 	// is walking the Mass movement by movement — and it was the one surface
@@ -89,6 +98,8 @@
 			const chosen = proper.forSlot(e.id).map((part) => ({
 				key: part.key,
 				slug: part.slug,
+				anchor: part.anchor,
+				condition: part.condition,
 				doc: part.doc as TextDocument,
 				gloss: part.gloss as GlossDocument,
 				bibliography: part.bibliography
@@ -97,7 +108,17 @@
 		}
 		if (e.text) {
 			const entry = texts[e.text];
-			return entry ? [{ key: e.text, slug: e.text.split('/')[1], ...entry }] : [];
+			return entry
+				? [
+						{
+							key: e.text,
+							slug: e.text.split('/')[1],
+							anchor: textAnchor(e.text),
+							condition: undefined,
+							...entry
+						}
+					]
+				: [];
 		}
 		if (e.kind !== 'proper') return [];
 		return [];
@@ -120,28 +141,101 @@
 	// — which is also what the ?w= deep link carries.
 	const inlined = $derived(
 		(movement?.entries ?? []).flatMap((e) =>
-			bodiesFor(e).map(({ key, slug, doc, gloss }) => ({ slug, key, entry: { doc, gloss } }))
+			bodiesFor(e).map(({ key, slug, anchor, doc, gloss }) => ({
+				slug,
+				key,
+				anchor,
+				doc,
+				slot: e.id,
+				entry: { doc, gloss }
+			}))
 		)
 	);
 
-	const wordsById = $derived(
-		new Map<string, { word: Word; doc: TextDocument; slug: string }>(
-			inlined.flatMap(({ slug, entry }) =>
-				entry.doc.segments.flatMap((seg) =>
-					(seg.words ?? []).map((w): [string, { word: Word; doc: TextDocument; slug: string }] => [
-						`${slug}.${w.id}`,
-						{ word: w, doc: entry.doc, slug }
-					])
-				)
-			)
-		)
-	);
+	const wordsById = $derived(indexOccurrenceWords(inlined));
 
 	const panel = wordPanel({ has: (id) => wordsById.has(id) });
 
+	const locationFrame = readingLocationFrame();
+	const cancelLocationFrame = locationFrame.cancel;
+
+	function properMatchesLocation(url: URL) {
+		if (proper.date === null || proper.loading || proper.failed) return false;
+		if (proper.payload && proper.payload.lang !== lang) return false;
+		const date = url.searchParams.get(DAY_PARAM);
+		const mass = url.searchParams.get(MASS_PARAM);
+		if (date === null && mass === null) return true;
+		const requested = date === null ? null : resolveOrdoChoice(date, mass);
+		// Invalid choices display the Ordinary alone. A previous loaded proper
+		// is not evidence that a citation for the arriving date is stale.
+		return requested
+			? requested.date === proper.date && requested.mass === proper.day
+			: proper.day === null;
+	}
+
+	function withoutDayChoice(url: URL) {
+		const copy = new URL(url);
+		copy.searchParams.delete(DAY_PARAM);
+		copy.searchParams.delete(MASS_PARAM);
+		return copy.href;
+	}
+
+	function applyFromLocation(scroll = true) {
+		cancelLocationFrame();
+		const url = pageUrl();
+		// An absent asynchronous proper is not a stale citation. Keep the
+		// address while loading (or after a failed request) so retry can resolve it.
+		if (hasProper && !properMatchesLocation(url)) {
+			panel.applyFromLocation();
+			return;
+		}
+		const selectedDate = proper.date;
+		const selectedMass = proper.day;
+		const resolved = resolveCompositeAddress(
+			inlined,
+			url.searchParams.get('w'),
+			url.searchParams.get('s'),
+			url.hash
+		);
+		citedPart = resolved.part;
+		citedSegments = resolved.segments;
+		const owners = inlined.filter(
+			(part) => part.slug === resolved.part || resolved.word?.startsWith(`${part.slug}.`)
+		);
+		if (owners.length) {
+			unfolded = {
+				...untrack(() => unfolded),
+				...Object.fromEntries(owners.map((part) => [part.slot, true]))
+			};
+		}
+		locationFrame.schedule(() => {
+			const current = pageUrl();
+			if (withoutDayChoice(current) !== withoutDayChoice(url)) return;
+			if (proper.date !== selectedDate || proper.day !== selectedMass) return;
+			if (hasProper && !properMatchesLocation(current)) return;
+			const original = current.href;
+			// The picker can canonicalize the same date in this frame. Merge the
+			// citation into that URL, and canonicalize the date here too: either
+			// callback order must preserve both changes. Never publish an invalid
+			// requested choice as though it had been accepted.
+			const date = current.searchParams.get(DAY_PARAM);
+			const mass = current.searchParams.get(MASS_PARAM);
+			if (
+				selectedDate &&
+				properMatchesLocation(current) &&
+				((date === null && mass === null) || (date && resolveOrdoChoice(date, mass)))
+			) {
+				writeOrdoChoice(current, { date: selectedDate, mass: selectedMass });
+			}
+			writeReadingAddress(current, resolved);
+			presentReadingLocation(current, original, resolved, () => panel.applyFromLocation(), scroll);
+		});
+	}
+
 	$effect(() => {
 		void wordsById;
-		panel.applyFromLocation();
+		applyFromLocation();
+		return cancelLocationFrame;
 	});
 
 	const picked = $derived(panel.id ? (wordsById.get(panel.id) ?? null) : null);
@@ -174,12 +268,24 @@
 		() => `scrutabor-pos:ordo/${data.movement}`,
 		// a deep link into a word outranks the ribbon — that reader asked
 		// for a place, the same rule the reading pages follow
-		() => pageUrl().searchParams.has('w')
+		() => {
+			const url = pageUrl();
+			if (hasProper && !properMatchesLocation(url)) {
+				return url.searchParams.has('w') || url.searchParams.has('s');
+			}
+			const resolved = resolveCompositeAddress(
+				inlined,
+				url.searchParams.get('w'),
+				url.searchParams.get('s'),
+				url.hash
+			);
+			return resolved.word !== null || resolved.segment !== null;
+		}
 	);
 </script>
 
 <svelte:window
-	onpopstate={panel.applyFromLocation}
+	onpopstate={() => applyFromLocation(false)}
 	onkeydown={(e) => {
 		const href = onWindowKeydown(e);
 		if (href) openPage(href);
@@ -284,6 +390,9 @@
 						     the readings is gradual AND alleluia, and in Lent a
 						     tract instead. Each keeps its own word ids. -->
 						{#each bodies as body (body.slug)}
+							{#if body.condition && !proper.date}
+								<ComponentConditionNote condition={body.condition} {lang} />
+							{/if}
 							<TextBody
 								doc={body.doc}
 								gloss={body.gloss}
@@ -291,6 +400,7 @@
 								{helpLevel}
 								idPrefix={body.slug}
 								selectedId={panel.id}
+								citedSegments={citedPart === body.slug ? citedSegments : []}
 								ontap={tapWord}
 								onmark={openLegend}
 								verifiedTranslationCitations={body.bibliography.translation}

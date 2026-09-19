@@ -1,5 +1,10 @@
 import { describe, expect, test } from 'vitest';
-import { buildBibliography, loadBibliographySource, loadTextBibliography } from './bibliography';
+import {
+	buildBibliography,
+	loadBibliographySource,
+	loadTextBibliography,
+	loadLemmaBibliography
+} from './bibliography';
 import { loadedTextKeys } from './corpus';
 
 describe('the reader-facing bibliography', () => {
@@ -84,7 +89,7 @@ describe('the reader-facing bibliography', () => {
 				expect(new Set(ids).size).toBe(ids.length);
 				for (const source of section.sources) {
 					expect(source.roles.length).toBeGreaterThan(0);
-					expect(source.textCount).toBeGreaterThan(0);
+					expect(source.textCount + source.lemmaCount).toBeGreaterThan(0);
 					expect(source.useCount).toBeGreaterThan(0);
 					const details = await loadBibliographySource(lang, source);
 					expect(details.length).toBeGreaterThan(0);
@@ -96,6 +101,33 @@ describe('the reader-facing bibliography', () => {
 			}
 		}
 	});
+
+	test.each(['pl', 'en'] as const)(
+		'keeps dictionary evidence distinct from text evidence in %s',
+		async (lang) => {
+			const bibliography = await buildBibliography(lang);
+			const source = bibliography.sections
+				.flatMap(({ sources }) => sources)
+				.find(({ id }) => id === 'edition.lewis-short.1879')!;
+			expect(source.textCount).toBe(0);
+			expect(source.lemmaCount).toBeGreaterThan(0);
+			const details = await loadBibliographySource(lang, source);
+			expect(details.flatMap(({ uses }) => uses)).toContainEqual({
+				key: 'lemma:immortalitas',
+				title: 'immortalitas',
+				href: `/app/${lang}/lemma?l=immortalitas`,
+				kind: 'lemma'
+			});
+			const sources = await loadLemmaBibliography(lang, 'immortalitas');
+			expect(sources).toContainEqual(
+				expect.objectContaining({
+					title: 'A Latin Dictionary',
+					locator: 'Perseus TEI entry n21759'
+				})
+			);
+			expect(await loadLemmaBibliography(lang, 'not-a-dictionary-entry')).toEqual([]);
+		}
+	);
 
 	test('gives reading surfaces only the verified evidence for their exact text', async () => {
 		const rejected = await loadTextBibliography('pl', 'ordinarium/te-igitur');

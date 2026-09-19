@@ -41,6 +41,11 @@
    "title": "Key of Heaven"
   },
   {
+   "id": "work.lewis-short.latin-dictionary",
+   "responsible": "Charlton T. Lewis and Charles Short",
+   "title": "A Latin Dictionary"
+  },
+  {
    "id": "work.liber-usualis",
    "responsible": "Abbaye Saint-Pierre de Solesmes",
    "title": "Liber Usualis"
@@ -116,6 +121,23 @@
    "rights": {
     "status": "permission",
     "basis": "Libreria Editrice Vaticana."
+   }
+  },
+  {
+   "id": "edition.divinum-officium-horae.44667ff",
+   "work": "work.divinum-officium",
+   "recension": "Latin Office data at commit 44667ff518b8ff1439780470828b39714f5306a2",
+   "title": "Divinum Officium: Horae, Latin data",
+   "edition_statement": "Pinned source revision",
+   "year": "2026",
+   "publication_type": "web_resource",
+   "authority": "reference_work",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "permission",
+    "basis": "Distributed under the MIT License by the Divinum Officium project."
    }
   },
   {
@@ -202,6 +224,24 @@
    }
   },
   {
+   "id": "edition.lewis-short.1879",
+   "work": "work.lewis-short.latin-dictionary",
+   "title": "A Latin Dictionary",
+   "place": "Oxford",
+   "publisher": "Clarendon Press",
+   "year": "1879",
+   "publication_type": "lexicon",
+   "authority": "reference_work",
+   "languages": [
+    "en",
+    "la"
+   ],
+   "rights": {
+    "status": "public-domain",
+    "basis": "Oxford printing of 1879; the consulted digital transcription has separately declared rights."
+   }
+  },
+  {
    "id": "edition.liber-usualis.1961",
    "work": "work.liber-usualis",
    "recension": "Roman chant book with English rubrics",
@@ -224,12 +264,12 @@
    "work": "work.missale-romanum",
    "recension": "Roman Missal governed by the 1960 Code of Rubrics",
    "title": "Missale Romanum ex decreto SS. Concilii Tridentini restitutum",
-   "edition_statement": "Editio typica",
-   "place": "Civitate Vaticana",
-   "publisher": "Typis Polyglottis Vaticanis",
+   "edition_statement": "Editio iuxta typicam",
+   "place": "New York",
+   "publisher": "Benziger Brothers",
    "year": "1962",
    "publication_type": "missal",
-   "authority": "typical_liturgical_edition",
+   "authority": "approved_ecclesiastical_edition",
    "languages": [
     "la"
    ],
@@ -272,6 +312,60 @@
    "repository": "The Holy See",
    "kind": "born-digital",
    "record_url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-horae.44667ff.doc10",
+   "edition": "edition.divinum-officium-horae.44667ff",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C10.txt",
+   "revision": "44667ff518b8ff1439780470828b39714f5306a2",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-horae.44667ff.doc10a",
+   "edition": "edition.divinum-officium-horae.44667ff",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C10a.txt",
+   "revision": "44667ff518b8ff1439780470828b39714f5306a2",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-horae.44667ff.doc10b",
+   "edition": "edition.divinum-officium-horae.44667ff",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C10b.txt",
+   "revision": "44667ff518b8ff1439780470828b39714f5306a2",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-horae.44667ff.doc11",
+   "edition": "edition.divinum-officium-horae.44667ff",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C11.txt",
+   "revision": "44667ff518b8ff1439780470828b39714f5306a2",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-horae.44667ff.prayers",
+   "edition": "edition.divinum-officium-horae.44667ff",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Psalterium/Common/Prayers.txt",
+   "revision": "44667ff518b8ff1439780470828b39714f5306a2",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-horae.44667ff.sancti-09-15",
+   "edition": "edition.divinum-officium-horae.44667ff",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Sancti/09-15.txt",
+   "revision": "44667ff518b8ff1439780470828b39714f5306a2",
    "access": "open"
   },
   {
@@ -319,6 +413,19 @@
    "access": "open"
   },
   {
+   "id": "item.lewis-short.perseus.40038e4.eng1",
+   "edition": "edition.lewis-short.1879",
+   "repository": "Perseus Digital Library",
+   "kind": "born-digital",
+   "record_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng1.xml",
+   "revision": "40038e40937fa639639802e73dac15e6c938496b",
+   "access": "open",
+   "digitization_rights": {
+    "status": "permission",
+    "basis": "PerseusDL lexica CC BY-SA 4.0, license.md at the pinned revision. Dictionary prose is not reproduced in the reading text."
+   }
+  },
+  {
    "id": "item.liber-usualis.1961.ia",
    "edition": "edition.liber-usualis.1961",
    "repository": "Internet Archive",
@@ -332,8 +439,8 @@
    "edition": "edition.missale-romanum.1962-typica",
    "repository": "Internet Archive",
    "kind": "scan",
-   "record_url": "https://archive.org/details/missale_romanum-1962",
-   "scan_url": "https://archive.org/download/missale_romanum-1962/missale-romanum-1962.pdf",
+   "record_url": "https://archive.org/details/missale-romanum-1962",
+   "scan_url": "https://archive.org/download/missale-romanum-1962/Missale%20Romanum%201962.pdf",
    "access": "open"
   }
  ]

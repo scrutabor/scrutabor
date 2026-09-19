@@ -7,6 +7,7 @@ import {
 import type { Citation } from './corpus';
 import type { Lang } from './i18n';
 import { remember } from './remember';
+import { lemmaHref } from './lemma-url';
 
 export type BibliographySectionId =
 	| 'latin_textual_sources'
@@ -17,10 +18,19 @@ export type BibliographySectionId =
 export type BibliographyRole =
 	| 'official_text'
 	| 'direct_approved_print'
+	| 'corroborating_latin_witness'
+	| 'derived_digital_collation_aid'
 	| 'historical_wording_basis'
 	| 'historical_wording_comparator'
 	| 'official_liturgical_context'
-	| 'scripture_text';
+	| 'rubric_control'
+	| 'liturgical_history'
+	| 'quotation_control'
+	| 'scripture_text'
+	| 'lexical_support'
+	| 'grammatical_support'
+	| 'semantic_comparator'
+	| 'search_aid';
 
 interface WorkRecord {
 	id: string;
@@ -68,6 +78,11 @@ interface IndexEntry {
 	edition: string;
 	roles: BibliographyRole[];
 	texts: IndexText[];
+	lemmas: IndexLemma[];
+}
+
+interface IndexLemma extends IndexText {
+	source_groups: EvidenceSourceGroup[];
 }
 
 interface BibliographyIndex {
@@ -76,9 +91,10 @@ interface BibliographyIndex {
 }
 
 interface EvidenceAddress {
-	kind: 'text' | 'segment' | 'word';
+	kind: 'text' | 'segment' | 'word' | 'lemma';
 	segment?: string;
 	word?: string;
+	lemma?: string;
 }
 
 interface EvidenceSourceGroup {
@@ -127,7 +143,9 @@ export interface BibliographySource {
 	authority: string;
 	roles: BibliographyRole[];
 	texts: IndexText[];
+	lemmas: IndexLemma[];
 	textCount: number;
+	lemmaCount: number;
 	useCount: number;
 }
 
@@ -145,7 +163,7 @@ export interface BibliographyUse {
 	key: string;
 	title: string;
 	href: string;
-	kind: 'text' | 'segment' | 'range' | 'word';
+	kind: 'text' | 'segment' | 'range' | 'word' | 'lemma';
 	first?: number;
 	last?: number;
 }
@@ -230,8 +248,10 @@ export async function buildBibliography(lang: Lang): Promise<BibliographyPageDat
 				authority: edition.authority,
 				roles: entry.roles,
 				texts: entry.texts,
+				lemmas: entry.lemmas,
 				textCount: entry.texts.length,
-				useCount: entry.texts.reduce((total, text) => total + text.uses, 0)
+				lemmaCount: entry.lemmas.length,
+				useCount: [...entry.texts, ...entry.lemmas].reduce((total, item) => total + item.uses, 0)
 			};
 		})
 	}));
@@ -288,16 +308,23 @@ function compactSegments(textId: string, segments: string[], lang: Lang): Biblio
 }
 
 function compactUses(
-	entries: { textId: string; address: EvidenceAddress }[],
+	entries: { textId?: string; address: EvidenceAddress }[],
 	lang: Lang
 ): BibliographyUse[] {
 	const byText = new Map<string, EvidenceAddress[]>();
+	const lemmas = new Set<string>();
 	for (const entry of entries) {
+		if (entry.address.kind === 'lemma') {
+			if (!entry.address.lemma) throw new Error('A lemma use has no dictionary address');
+			lemmas.add(entry.address.lemma);
+			continue;
+		}
+		if (!entry.textId) throw new Error('A text use has no text address');
 		const addresses = byText.get(entry.textId) ?? [];
 		addresses.push(entry.address);
 		byText.set(entry.textId, addresses);
 	}
-	return [...byText.entries()].flatMap(([textId, addresses]) => {
+	const textUses = [...byText.entries()].flatMap(([textId, addresses]) => {
 		const title = localizedTitle(textId, lang);
 		const key = textId.replace('.', '/');
 		const out: BibliographyUse[] = [];
@@ -323,6 +350,15 @@ function compactUses(
 		}
 		return out;
 	});
+	return [
+		...textUses,
+		...[...lemmas].sort().map((lemma): BibliographyUse => ({
+			key: `lemma:${lemma}`,
+			title: lemma,
+			href: lemmaHref(lang, lemma),
+			kind: 'lemma'
+		}))
+	];
 }
 
 export async function loadBibliographySource(
@@ -345,10 +381,19 @@ export async function loadBibliographySource(
 	);
 	const groups = new Map<
 		string,
-		{ source: EvidenceSourceGroup; entries: { textId: string; address: EvidenceAddress }[] }
+		{ source: EvidenceSourceGroup; entries: { textId?: string; address: EvidenceAddress }[] }
 	>();
-	for (const { textId, evidence } of loaded) {
-		for (const group of evidence.source_groups.filter(({ edition }) => edition === source.id)) {
+	const records = [
+		...loaded,
+		...source.lemmas.map((lemma) => ({
+			textId: undefined,
+			evidence: { id: lemma.id, source_groups: lemma.source_groups }
+		}))
+	];
+	for (const { textId, evidence } of records) {
+		for (const group of evidence.source_groups.filter(
+			({ edition, role }) => edition === source.id && source.roles.includes(role)
+		)) {
 			const key = [group.digital_item, group.role, JSON.stringify(group.locator)].join('\u0000');
 			const found = groups.get(key) ?? { source: group, entries: [] };
 			found.entries.push(...group.entries.map(({ address }) => ({ textId, address })));
@@ -395,6 +440,24 @@ function uniqueCitations(citations: Citation[]): Citation[] {
 		found.set(`${citation.title}\u0000${citation.locator}\u0000${citation.url ?? ''}`, citation);
 	}
 	return [...found.values()];
+}
+
+/** Dictionary-level support is not evidence for an entire prayer or translation. */
+export async function loadLemmaBibliography(lang: Lang, lemma: string): Promise<Citation[]> {
+	const { catalog, index } = await resources(lang);
+	const editions = new Map(catalog.editions.map((record) => [record.id, record]));
+	const items = new Map(catalog.digital_items.map((record) => [record.id, record]));
+	return uniqueCitations(
+		index.sections.flatMap((section) =>
+			section.entries.flatMap((entry) =>
+				entry.lemmas
+					.filter(({ id }) => id === lemma)
+					.flatMap((record) =>
+						record.source_groups.map((group) => evidenceCitation(group, editions, items))
+					)
+			)
+		)
+	);
 }
 
 /** Verified source disclosures for one reading page.

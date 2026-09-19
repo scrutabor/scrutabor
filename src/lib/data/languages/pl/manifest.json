@@ -1,6 +1,6 @@
 {
-  "schema_version": "5.4.0",
-  "corpus_schema": "0.19.0",
+  "schema_version": "5.6.0",
+  "corpus_schema": "0.20.0",
   "language": "pl",
   "direction": "ltr",
   "texts": [
@@ -586,6 +586,18 @@
       "path": "languages/pl/texts/proprium/annuntiatio-beatae-mariae-virginis-evangelium.json"
     },
     {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+      "path": "languages/pl/texts/proprium/annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
+      "path": "languages/pl/texts/proprium/annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-graduale",
+      "path": "languages/pl/texts/proprium/annuntiatio-beatae-mariae-virginis-graduale.json"
+    },
+    {
       "id": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
       "path": "languages/pl/texts/proprium/annuntiatio-beatae-mariae-virginis-introitus.json"
     },
@@ -600,6 +612,10 @@
     {
       "id": "proprium.annuntiatio-beatae-mariae-virginis-secreta",
       "path": "languages/pl/texts/proprium/annuntiatio-beatae-mariae-virginis-secreta.json"
+    },
+    {
+      "id": "proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
+      "path": "languages/pl/texts/proprium/annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.json"
     },
     {
       "id": "proprium.annuntiatio-beatae-mariae-virginis-tractus",
@@ -4324,6 +4340,10 @@
     {
       "id": "proprium.septem-dolorum-beatae-mariae-virginis-sequentia",
       "path": "languages/pl/texts/proprium/septem-dolorum-beatae-mariae-virginis-sequentia.json"
+    },
+    {
+      "id": "proprium.septem-dolorum-beatae-mariae-virginis-tractus",
+      "path": "languages/pl/texts/proprium/septem-dolorum-beatae-mariae-virginis-tractus.json"
     },
     {
       "id": "proprium.transfiguratio-domini-alleluia",

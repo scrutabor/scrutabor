@@ -1,0 +1,117 @@
+{
+ "id": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-horae.44667ff",
+   "digital_item": "item.divinum-officium-horae.44667ff.doc10b",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "horas/Latin/Commune/C10b.txt lines 18-24"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.dependency-doc10b",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Exact inherited source or expansion in the declared Mass dependency chain, not another independent printed witness."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "missa/Latin/Ordo/Prayers.txt lines 12-14"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.dependency-doprayers",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Exact inherited source or expansion in the declared Mass dependency chain, not another independent printed witness."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "missa/Latin/Sancti/03-25.txt [Introitus]; exact inherited dependencies declared separately"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The actual pinned proper delegates to the preserved source chain. Communion supplies eleven words only, without a Paschal Alleluia; no full twelve-word digital agreement is asserted."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 495",
+    "scan": "leaf n576 / PDF p. 577",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n576/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Directly viewed printed proper and seasonal direction; the Introit shared Gloria expansion and repeated antiphon are declared separately."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.do44667ff",
+   "text": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+   "use": "use.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.do44667ff",
+   "role": "derived_comparison",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Derived pinned source chain, not an independent printed edition; coverage never extends beyond the actual dependency."
+  },
+  {
+   "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.mr1962",
+   "text": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+   "use": "use.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.mr1962",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Directly viewed approved printed Missal, with explicitly sourced shared expansion."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.source-comparison",
+  "text": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+  "recension": "Benziger 1962 complete not-paschale introitus with explicitly expanded shared formulas.",
+  "witnesses": [
+   "witness.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.mr1962",
+   "witness.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-introitus.do44667ff"
+  ],
+  "apparatus": {
+   "entries": 4,
+   "classes": [
+    "capitalization",
+    "orthography"
+   ]
+  }
+ }
+}

@@ -1,7 +1,7 @@
 {
   "id":"orationes.ave-maria",
   "language":"en",
-  "about":"The first part of the Hail Mary joins Gabriel's words (Lk 1:28) to Elizabeth's (Lk 1:42), and neither verse carries the names Maria and Iesus that the prayer supplies. The second part, the petition addressed to Mary, is of the sixteenth century.",
+  "about":"The first part of the Hail Mary joins Gabriel's words (Lk 1:28) to Elizabeth's (Lk 1:42), and neither verse carries the names Maria and Iesus that the prayer supplies. The second part asks Mary, the Mother of God, to pray for us now and at the hour of our death.",
   "seg":[
     {"id":"s01","tr":"Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus.","tc":[62],"tb":"traditional-composite","g":["hail","Mary","with grace","full","the Lord","with you","blessed","you","among","women","and","blessed","fruit","of the womb","your","Jesus"],"ex":{"w001":"The angel's greeting in Lk 1:28.","w003":"Latin says literally “full with grace”. English keeps the familiar “full of grace”.","w005":"Latin leaves “est” unspoken: “Dóminus [est] tecum” — “the Lord [is] with thee”.","w007":"Here too “es” remains unspoken: “benedícta [es] tu” — “blessed [art] thou”."}},
     {"id":"s02","tr":"Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.","tc":[64],"tb":"traditional-composite","g":["Holy","Mary","Mother","of God","pray","for","us","sinners","now","and","at","the hour","of death","our","amen"]}

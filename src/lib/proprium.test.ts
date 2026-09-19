@@ -101,12 +101,51 @@ describe('parts reach the spine', () => {
 });
 
 describe('lookups', () => {
+	it('uses the actual occurrence season, including the transferred Annunciation', () => {
+		for (const [date, paschal] of [
+			['2026-03-25', false],
+			['2028-03-25', false],
+			['2027-04-05', true]
+		] as const) {
+			expect(componentApplies({ season: 'paschale' }, date)).toBe(paschal);
+			expect(componentApplies({ season: 'not-paschale' }, date)).toBe(!paschal);
+		}
+	});
+
+	it.each(['2026-02-30', '2026-09-19', '2500-04-01', ''])(
+		'never interprets missing occurrence context as non-Paschal: %s',
+		(date) => {
+			expect(componentApplies({ season: 'paschale' }, date)).toBe(false);
+			expect(componentApplies({ season: 'not-paschale' }, date)).toBe(false);
+		}
+	);
+
+	it('keeps source-only votive material only in explicitly undated study', () => {
+		const condition = { use: 'votive-after-septuagesima' } as const;
+		expect(componentApplies(condition, null)).toBe(true);
+		expect(componentApplies(condition, '2027-07-26')).toBe(false);
+		expect(componentApplies(condition, '2026-03-25')).toBe(false);
+	});
+
 	it('applies a Sunday-only component from the selected civil date', () => {
 		const condition = { weekday: 'sunday' } as const;
 		expect(componentApplies(condition, '2026-12-24')).toBe(false);
 		expect(componentApplies(condition, '2028-12-24')).toBe(true);
 		expect(componentApplies(condition, null)).toBe(true);
 		expect(componentApplies(undefined, '2026-12-24')).toBe(true);
+	});
+
+	it.each([
+		['2026-12-24', ['ordinarium/praefatio-communis']],
+		['2028-12-24', ['ordinarium/praefatio-sanctissimae-trinitatis']],
+		[null, ['ordinarium/praefatio-communis', 'ordinarium/praefatio-sanctissimae-trinitatis']]
+	])('retains the correct Christmas Vigil preface for %s', (date, expected) => {
+		const vigil = dayById('vigilia-nativitatis')!;
+		expect(
+			vigil.components
+				.filter((part) => part.role === 'praefatio' && componentApplies(part.condition, date))
+				.map((part) => part.text)
+		).toEqual(expected);
 	});
 
 	it('finds a day by id and refuses one it does not have', () => {

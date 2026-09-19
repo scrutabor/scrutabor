@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The collecta of the formulary “Saint Lawrence, Martyr” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Grant us, we beseech You, almighty God, to extinguish the flames of our sins, as You granted St. Lawrence to overcome the fires of his tortures. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.","g":["Grant","us","we beseech","almighty","O God","of vices","our","the flames","to extinguish","as","blessed","Lawrence","Thou didst grant","of torments","his","the fires","to overcome","through","the Lord","our","Jesus","Christ","Son","Thy","Who","Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages","Amen"]}
+    {"id":"s01","tr":"Grant us, we beseech You, almighty God, to extinguish the flames of our sins, as You granted St. Lawrence to overcome the fires of his tortures. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["Grant","us","we beseech","almighty","O God","of vices","our","the flames","to extinguish","as","blessed","Lawrence","Thou didst grant","of torments","his","the fires","to overcome","through","the Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages"]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

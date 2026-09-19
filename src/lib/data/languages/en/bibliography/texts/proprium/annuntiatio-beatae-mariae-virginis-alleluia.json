@@ -1,0 +1,27 @@
+{
+ "id": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 9–10",
+    "scan": "scan pp. 22–23"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.annuntiatio-beatae-mariae-virginis-alleluia.ave-key-of-heaven-1901",
+     "address": {
+      "kind": "word",
+      "word": "w045"
+     },
+     "claim": "The Hail Mary greeting through women follows the familiar formula attested here, with among for the printed amongst and normalized punctuation. This source supports only the Ave excerpt, not the following Virga Iesse verse."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

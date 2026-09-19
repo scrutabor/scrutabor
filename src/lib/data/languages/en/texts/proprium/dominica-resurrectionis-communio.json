@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Easter Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Christ our Pasch is sacrificed, alleluia; therefore let us feast with the unleavened bread of sincerity and truth, alleluia, alleluia, alleluia.","g":["Pasch","our","sacrificed","is","Christ","alleluia","therefore","let us feast","with","the unleavened bread","of sincerity","and","of truth","alleluia","alleluia","alleluia"]}
+    {"id":"s01","tr":"Christ our Pasch is sacrificed, alleluia; therefore let us feast with the unleavened bread of sincerity and truth, alleluia, alleluia, alleluia.","g":["Pasch","our",null,null,"Christ","alleluia","therefore","let us feast","with","the unleavened bread","of sincerity","and","of truth","alleluia","alleluia","alleluia"],"a":[{"s":2,"n":2,"a":0,"g":"has been sacrificed"}]}
   ]
 }

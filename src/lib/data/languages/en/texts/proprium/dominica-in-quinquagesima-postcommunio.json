@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “Quinquagesima Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"We beseech Thee, almighty God, that we who have received heavenly nourishment may thereby be strengthened against all adversity. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.","g":["We beseech","almighty","God","that","who","heavenly","nourishment","have received","through","these things","against","all","adversity","we may be strengthened","Through",null,null,"Jesus","Christ","Son","Thy","Who","Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages","Amen"],"a":[{"s":15,"n":2,"a":0,"g":"our Lord"}]}
+    {"id":"s01","tr":"We beseech Thee, almighty God, that we who have received heavenly nourishment may thereby be strengthened against all adversity. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["We beseech","almighty","God","that","who","heavenly","nourishment","have received","through","these things","against","all","adversity","we may be strengthened","Through",null,null,"Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages"],"a":[{"s":15,"n":2,"a":0,"g":"our Lord"}]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

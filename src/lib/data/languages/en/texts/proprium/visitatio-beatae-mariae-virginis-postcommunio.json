@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “Visitation of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"O Lord, in celebration of this yearly feast, we have partaken of the sacrament: grant, we beseech You, that it may give us help for life on earth and for life everlasting. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.","g":["We have received","O Lord","of the solemnity","annual","votive","sacraments","grant","we beseech","that","both","of temporal","life","to us","remedies","may provide","and","of eternal life","Through","Lord","our","Jesus","Christ","Son","Thy","Who","Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages","Amen"]}
+    {"id":"s01","tr":"O Lord, in celebration of this yearly feast, we have partaken of the sacrament: grant, we beseech You, that it may give us help for life on earth and for life everlasting. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["We have received","O Lord","of the solemnity","annual","votive","sacraments","grant","we beseech","that","both","of temporal","life","to us","remedies","may provide","and","of eternal life","Through","Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages"]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

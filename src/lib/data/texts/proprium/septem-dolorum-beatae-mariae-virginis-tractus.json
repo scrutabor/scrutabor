@@ -1,0 +1,14 @@
+{
+  "id":"proprium.septem-dolorum-beatae-mariae-virginis-tractus",
+  "title":"Stabat sancta María",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"septem-dolorum-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Stabat","l":"sto","m":516},{"i":"w002","f":"sancta","l":"sanctus","m":25,"h":"w003"},{"i":"w003","f":"María","l":"Maria","p":",","m":24},{"i":"w004","f":"cæli","l":"caelum","m":68},{"i":"w005","f":"Regína","l":"regina","p":",","m":24},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"mundi","l":"mundus","m":54},{"i":"w008","f":"Dómina","l":"domina","p":",","m":24},{"i":"w009","f":"iuxta","l":"iuxta","m":3,"h":"w010"},{"i":"w010","f":"crucem","l":"crux","m":7},{"i":"w011","f":"Dómini","l":"dominus","m":54},{"i":"w012","f":"nostri","l":"noster","m":99,"h":"w011"},{"i":"w013","f":"Iesu","l":"Iesus","m":98},{"i":"w014","f":"Christi","l":"Christus","m":54},{"i":"w015","f":"dolorósa","l":"dolorosus","p":".","m":25,"h":"w003"},{"i":"w016","f":"O","l":"o","m":46},{"i":"w017","f":"vos","l":"vos","m":967,"a":13},{"i":"w018","f":"omnes","l":"omnis","p":",","m":389,"h":"w017"},{"i":"w019","f":"qui","l":"qui","m":124},{"i":"w020","f":"transítis","l":"transeo","m":621},{"i":"w021","f":"per","l":"per","m":3,"h":"w022"},{"i":"w022","f":"viam","l":"via","p":",","m":141},{"i":"w023","f":"atténdite","l":"attendo","p":",","m":155,"a":13},{"i":"w024","f":"et","l":"et","m":15},{"i":"w025","f":"vidéte","l":"video","p":",","m":368},{"i":"w026","f":"si","l":"si","m":15},{"i":"w027","f":"est","l":"sum","m":21},{"i":"w028","f":"dolor","l":"dolor","m":113},{"i":"w029","f":"sicut","l":"sicut","m":15},{"i":"w030","f":"dolor","l":"dolor","m":113},{"i":"w031","f":"meus","l":"meus","p":".","m":59,"h":"w030"}]}
+  ]
+}

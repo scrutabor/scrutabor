@@ -65,7 +65,8 @@ const LABELS: Record<Lang, MorphLabels> = {
 			subj: 'tryb łączący',
 			imp: 'tryb rozkazujący',
 			inf: 'bezokolicznik',
-			part: 'imiesłów'
+			part: 'imiesłów',
+			ger: 'rzeczownik odczasownikowy (gerundium)'
 		},
 		voice: {
 			act: 'strona czynna',
@@ -123,7 +124,8 @@ const LABELS: Record<Lang, MorphLabels> = {
 			subj: 'subjunctive',
 			imp: 'imperative',
 			inf: 'infinitive',
-			part: 'participle'
+			part: 'participle',
+			ger: 'verbal noun (gerund)'
 		},
 		voice: {
 			act: 'active',
@@ -190,16 +192,18 @@ export function describeMorphParts(m: Morph, lang: Lang): MorphPart[] {
 	if (m.pos === 'adv' || m.pos === 'conj' || m.pos === 'intj') return [bind({ text: pos })];
 
 	const parts: MorphPart[] = [];
-	if (m.pos === 'verb' && m.mood === 'part') {
-		// Participles read as verbal adjectives: name the form first, then
-		// its verbal facts (tense, voice), then the nominal agreement.
-		parts.push({ text: t.mood.part });
-		if (m.tense) parts.push({ text: t.tense[m.tense] ?? m.tense });
-		if (m.voice)
-			parts.push({
-				text: t.voice[m.voice] ?? m.voice,
-				concept: m.voice === 'dep' ? 'deponens' : undefined
-			});
+	if (m.pos === 'verb' && (m.mood === 'ger' || m.mood === 'part')) {
+		parts.push({ text: t.mood[m.mood] });
+		// Both forms decline, but only a participle expresses tense and
+		// voice here. A gerund's stored present stem is not a time assertion.
+		if (m.mood === 'part') {
+			if (m.tense) parts.push({ text: t.tense[m.tense] ?? m.tense });
+			if (m.voice)
+				parts.push({
+					text: t.voice[m.voice] ?? m.voice,
+					concept: m.voice === 'dep' ? 'deponens' : undefined
+				});
+		}
 		if (m.case) parts.push({ text: t.case[m.case] ?? m.case, concept: CASE_CONCEPT[m.case] });
 		if (m.number) parts.push({ text: t.number[m.number] ?? m.number });
 		if (m.gender) parts.push({ text: t.gender[m.gender] ?? m.gender });

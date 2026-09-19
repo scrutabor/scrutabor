@@ -1,7 +1,7 @@
 {
   "id":"proprium.dominica-iii-adventus-graduale",
   "language":"en",
-  "about":"The gradual of the Third Sunday of Advent, from Psalm 79. Its verse is word for word the one sung at the introit of the Second Sunday — one sentence, two Sundays, two places in the same Mass.",
+  "about":"The gradual of the Third Sunday of Advent, from Psalm 79. Its verse repeats the psalm verse of the Second Sunday of Advent’s introit.",
   "seg":[
     {"id":"s01","tr":"You who sit above the cherubim, O Lord, stir up Your power and come.","tc":[142],"tb":"revised","g":["Thou Who","sittest","Lord","above","the cherubim","stir up","power","Thy","and","come"]},
     {"id":"s02","tr":"You who shepherd Israel, give ear; You who lead Joseph like a sheep.","tc":[142],"tb":"revised","g":["Thou Who","shepherdest","Israel","give ear","Thou Who","leadest","like","a sheep","Joseph"]}

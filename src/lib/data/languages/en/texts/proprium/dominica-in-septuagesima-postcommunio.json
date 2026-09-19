@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “Septuagesima Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"May Thy faithful, O God, be strengthened by Thy gifts, that in receiving them they may seek them, and in seeking them may receive them without end. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.","g":[null,null,"God","through","Thy","gifts","may be strengthened","that","them","both","by receiving","they may seek","and","by seeking","without","end","they may receive","Through",null,null,"Jesus","Christ","Son","Thy","Who","Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages","Amen"],"a":[{"s":0,"n":2,"a":0,"g":"Thy faithful"},{"s":18,"n":2,"a":0,"g":"our Lord"}]}
+    {"id":"s01","tr":"May Thy faithful, O God, be strengthened by Thy gifts, that in receiving them they may seek them, and in seeking them may receive them without end. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":[null,null,"God","through","Thy","gifts","may be strengthened","that","them","both","by receiving","they may seek","and","by seeking","without","end","they may receive","Through",null,null,"Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages"],"a":[{"s":0,"n":2,"a":0,"g":"Thy faithful"},{"s":18,"n":2,"a":0,"g":"our Lord"}]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

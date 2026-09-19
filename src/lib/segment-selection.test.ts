@@ -68,4 +68,20 @@ describe('retired word addresses', () => {
 		expect(resolveWordAddress('w090', ['w001'], ids)).toBeNull();
 		expect(resolveWordAddress('w090', ['w001'], ids, { w090: 's99' })).toBeNull();
 	});
+
+	it('follows word replacements before resolving a surviving word or segment', () => {
+		expect(resolveWordAddress('w090', ['w001'], ids, { w090: 'w091', w091: 'w001' })).toEqual({
+			word: 'w001'
+		});
+		expect(
+			resolveWordAddress('w090', ['w001'], ids, { w090: 'w091', w091: 's90' }, { s90: 's02' })
+		).toEqual({ segment: 's02' });
+	});
+
+	it('rejects word cycles, ranges and inherited object keys', () => {
+		expect(resolveWordAddress('w090', [], ids, { w090: 'w091', w091: 'w090' })).toBeNull();
+		expect(resolveWordAddress('w090', [], ids, { w090: 's01-s02' })).toBeNull();
+		expect(resolveWordAddress('constructor', [], ids)).toBeNull();
+		expect(parseSegmentSelection('constructor', ids)).toEqual([]);
+	});
 });

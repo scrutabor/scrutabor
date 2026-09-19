@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/11-09; resolved section [Tractus] with declared inherited references"
+    "section": "web/www/horas/Latin/Commune/C8.txt [Tractus], tract-only lines 605–606; preceding gradual excluded"
    },
    "entries": [
     {
@@ -14,19 +14,19 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact named pinned dependency corroborates the tract. Its enclosing runtime section also contains a separately printed gradual, excluded here."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
-    "printed": "p. 42",
-    "scan": "leaf n868 / PDF p. 869",
-    "page_url": "https://archive.org/download/missale_romanum-1962/page/n868/mode/1up"
+    "printed": "p. (42)",
+    "scan": "leaf n869 / PDF p. 870",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n869/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The named Benziger page image(s) print this tract separately from the preceding gradual. Tract from the Common of a church dedication, replacing Alleluia after Septuagesima; not an additional chant in the ordinary November 9 Mass."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -59,20 +59,22 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Direct transcription of the separately headed tract from the identified Benziger 1962 editio iuxta typicam page image(s)."
   }
  ],
  "collation": {
   "id": "collation.proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-tractus.mr1962-do44667ff",
   "text": "proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-tractus",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "Tract alone in the Benziger 1962 editio iuxta typicam; preceding gradual excluded; printed punctuation and house i spelling.",
   "witnesses": [
    "witness.proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-tractus.do44667ff",
    "witness.proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-tractus.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 2,
+   "classes": [
+    "orthography"
+   ]
   }
  }
 }

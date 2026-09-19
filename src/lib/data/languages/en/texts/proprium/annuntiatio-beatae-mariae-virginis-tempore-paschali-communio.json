@@ -1,0 +1,8 @@
+{
+  "id":"proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
+  "language":"en",
+  "about":"The Eastertide Communion for the Annunciation of the Blessed Virgin Mary in the 1962 Roman Missal.",
+  "seg":[
+    {"id":"s01","tr":"Behold, a virgin will conceive and bear a son, and He will be named Emmanuel. Alleluia.","g":["Behold","a virgin","will conceive","and","will bear","a son","and","will be called",null,null,"Emmanuel","Alleluia"],"a":[{"s":8,"n":2,"a":0,"g":"His name"}],"ex":{"w008":"The Latin predicts the child's name without saying who gives it.","w011":"Emmanuel means “God with us”."}}
+  ]
+}

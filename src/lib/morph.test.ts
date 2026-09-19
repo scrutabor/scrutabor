@@ -115,6 +115,36 @@ describe('participles', () => {
 	});
 });
 
+describe('gerunds', () => {
+	const gerund: Morph = {
+		pos: 'verb',
+		mood: 'ger',
+		case: 'abl',
+		number: 'sg',
+		gender: 'n',
+		tense: 'pres',
+		voice: 'act',
+		conj: 3
+	};
+
+	it('names the verbal noun and its case without asserting present time', () => {
+		expect(describeMorph(gerund, 'pl')).toBe(
+			'czasownik — rzeczownik odczasownikowy (gerundium), ablativus, l. poj., r. nijaki, koniugacja III'
+		);
+		expect(describeMorph(gerund, 'en')).toBe(
+			'verb — verbal noun (gerund), ablative, singular, neuter, 3rd conjugation'
+		);
+	});
+
+	it('links its case and never presents a raw mood code', () => {
+		for (const lang of ['pl', 'en'] as const) {
+			const parts = describeMorphParts({ ...gerund, case: 'gen' }, lang);
+			expect(parts.some((p) => p.concept === 'genetivus')).toBe(true);
+			expect(parts.some((p) => p.text === 'ger')).toBe(false);
+		}
+	});
+});
+
 describe('a verb whose form does not settle its tense or mood', () => {
 	// retríbuam (quid-retribuam w002): both analyzers allow future
 	// indicative and present subjunctive, and nothing in the sentence

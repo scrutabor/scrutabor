@@ -5,12 +5,18 @@ import { occurrencesOf } from './concordance';
 import { textHref } from './content-url';
 import { LEXICON, loadSenses } from './corpus';
 import type { Lang } from './i18n';
+import { loadLemmaBibliography } from './bibliography';
 
 export async function lemmaData(lang: Lang, lemma: string) {
 	if (!LEXICON.lemmata[lemma]) return null;
-	const [senses, occurrences] = await Promise.all([loadSenses(lang), occurrencesOf(lemma)]);
+	const [senses, occurrences, sources] = await Promise.all([
+		loadSenses(lang),
+		occurrencesOf(lemma),
+		loadLemmaBibliography(lang, lemma)
+	]);
 	return {
 		lemma,
+		sources,
 		entry: LEXICON.lemmata[lemma],
 		sense: senses[lemma] ?? null,
 		occurrences: occurrences.map((text) => ({

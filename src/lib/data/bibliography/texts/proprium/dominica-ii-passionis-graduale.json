@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quad6-0r.txt (section [Graduale]); resolved spans: web/www/missa/Latin/Tempora/Quad6-0r.txt (line 22); web/www/missa/Latin/Tempora/Quad6-0r.txt (lines 193-195)"
+    "section": "web/www/missa/Latin/Tempora/Quad6-0r.txt [Graduale], lines 193–195; verse bodies 194–195"
    },
    "entries": [
     {
@@ -14,10 +14,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned Latin component supplies a derived digital comparison; its spelling and punctuation differences are preserved, not treated as another independent print."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -25,8 +25,8 @@
    "role": "official_text",
    "locator": {
     "printed": "p. 138",
-    "scan": "leaf n216 / PDF p. 217",
-    "page_url": "https://archive.org/download/missale_romanum-1962/page/n216/mode/1up"
+    "scan": "leaf n217 / PDF p. 218",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n217/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The complete 39-word Palm Sunday gradual on page 138, distinct from the preceding epistle. The exact printed Israël and two pene readings are retained in the witness and disclosed against house spelling."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -71,9 +71,10 @@
    "witness.proprium.dominica-ii-passionis-graduale.mr1962"
   ],
   "apparatus": {
-   "entries": 1,
+   "entries": 3,
    "classes": [
-    "capital-accent"
+    "capital-accent",
+    "orthography"
    ]
   }
  }

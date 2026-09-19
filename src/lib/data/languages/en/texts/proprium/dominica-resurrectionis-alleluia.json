@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Easter Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. Christ our Pasch is sacrificed.","g":["Alleluia","alleluia","Pasch","our","sacrificed","is","Christ"]}
+    {"id":"s01","tr":"Alleluia, alleluia. Christ our Pasch is sacrificed.","g":["Alleluia","alleluia","Pasch","our",null,null,"Christ"],"a":[{"s":4,"n":2,"a":0,"g":"has been sacrificed"}]}
   ]
 }

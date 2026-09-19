@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The tractus of the formulary “Chair of Saint Peter the Apostle” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Let them extol Him in the assembly of the people and praise Him in the council of the elders. Let them give thanks to the Lord for His mercy and for His wondrous deeds to the children of men.","g":["let them exalt","Him","in","the assembly","of the people","and","in","the assembly","of the elders","let them praise","Him","let them give thanks","to the Lord","for the mercy","His","and","wonders","His","sons","of men"]}
+    {"id":"s01","tr":"You are Peter, and on this rock I will build My Church. And the gates of the underworld will not prevail against it; and I will give you the keys of the kingdom of heaven. Whatever you bind on earth will also be bound in heaven. And whatever you loose on earth will also be loosed in heaven.","g":["You","are","Peter","and","on","this","rock","I will build",null,null,"And","the gates","of the underworld",null,null,"against","it","and",null,null,"the keys","of the kingdom","of heaven","Whatever","you bind","on","earth",null,null,"also","in","heaven","And","whatever","you loose","on","earth",null,null,"also","in","heaven"],"a":[{"s":8,"n":2,"a":0,"g":"My Church"},{"s":13,"n":2,"a":1,"g":"will not prevail"},{"s":18,"n":2,"a":1,"g":"I will give you"},{"s":27,"n":2,"a":1,"g":"will be bound"},{"s":37,"n":2,"a":1,"g":"will be loosed"}]}
   ]
 }

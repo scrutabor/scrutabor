@@ -1,7 +1,7 @@
 {
   "id":"proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-sequentia",
   "language":"en",
-  "about":"The sequentia of the formulary “Commemoration of All the Faithful Departed — Mass I” in the 1962 Roman Missal.",
+  "about":"The sequence Dies irae belongs to all three formularies for the Commemoration of All the Faithful Departed. When a priest celebrates three Masses without interruption, he must say it at the principal Mass. Otherwise, he says it at the first Mass. He may omit it at the other Masses unless they are sung (1962 Roman Missal, p. 722).",
   "seg":[
     {"id":"s01","tr":"Dreaded day, that day of ire, When the world shall melt in fire, Told by Sibyl and David’s lyre.","g":["day","of wrath","day","that","shall dissolve","the world","into","ashes","as witness","David","with","the Sibyl"]},
     {"id":"s02","tr":"Fright men’s hearts shall rudely shift, As the Judge through gleaming rift Comes each soul to closely sift.","g":["how great","the trembling",null,null,"when","the Judge",null,null,"all things","strictly","to examine"],"a":[{"s":2,"n":2,"a":1,"g":"shall be"},{"s":6,"n":2,"a":1,"g":"shall come"}]},

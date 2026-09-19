@@ -1,0 +1,27 @@
+{
+ "id": "proprium.annuntiatio-beatae-mariae-virginis-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 55",
+    "scan": "scan p. 68"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.annuntiatio-beatae-mariae-virginis-introitus.gloria-key-of-heaven-1901",
+     "address": {
+      "kind": "word",
+      "word": "w032"
+     },
+     "claim": "Only w032–w051 inherit the familiar Gloria Patri, with Holy Spirit for printed Holy Ghost. Punctuation is normalized; the surrounding antiphon or added Alleluia is not attributed to this historical wording."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -17,6 +17,8 @@
 	import { ribbon } from '$lib/ribbon.svelte';
 	import { docWordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
+	import { resolveDocumentAddress, writeReadingAddress } from '$lib/reading-address';
+	import { presentReadingLocation, readingLocationFrame } from '$lib/reading-location';
 	import {
 		formatSegmentSelection,
 		parseSegmentSelection,
@@ -126,35 +128,32 @@
 		}
 	}
 
-	function applySegmentFromLocation(scroll = true) {
-		const raw = pageUrl().searchParams.get('s');
-		const ids = doc.segments.map((segment) => segment.id);
-		const selected = parseSegmentSelection(raw, ids, doc.retired_segments ?? {});
-		// The address is canonicalized in place: a retired id resolves to its
-		// survivor, a reversed or degenerate range straightens, and a selector
-		// naming nothing is dropped — so a stale parameter cannot linger and
-		// quietly suppress reading-position restore.
-		const canonical = formatSegmentSelection(selected, ids);
-		if (raw !== null && raw !== canonical) {
-			// After the frame, not during it: on a cold arrival this runs in
-			// the hydration effect flush, where the router is not yet taking
-			// history calls — an immediate replaceState there kills hydration.
-			requestAnimationFrame(() => {
-				const url = pageUrl();
-				if (canonical) url.searchParams.set('s', canonical);
-				else url.searchParams.delete('s');
-				replaceState(url, {});
-			});
-		}
-		const target = selected[0];
-		citedSegments = selected;
-		segmentAnchor = target ?? null;
-		revealSelection(selected);
-		if (target && scroll) {
-			requestAnimationFrame(() =>
-				document.getElementById(target)?.scrollIntoView({ block: 'center' })
-			);
-		}
+	const locationFrame = readingLocationFrame();
+	const cancelLocationFrame = locationFrame.cancel;
+
+	function applyAddressFromLocation(scroll = true) {
+		cancelLocationFrame();
+		const url = pageUrl();
+		const original = url.href;
+		const resolved = resolveDocumentAddress(
+			doc,
+			url.searchParams.get('w'),
+			url.searchParams.get('s')
+		);
+		writeReadingAddress(url, resolved);
+		citedSegments = resolved.segments;
+		segmentAnchor = resolved.segments[0] ?? null;
+		const owner = resolved.word
+			? doc.segments.find((segment) => segment.words?.some((word) => word.id === resolved.word))
+			: null;
+		revealSelection([...resolved.segments, ...(owner ? [owner.id] : [])]);
+
+		// One guarded update after hydration preserves an explicit segment
+		// selection while repairing a word, and cannot overwrite a later tap.
+		locationFrame.schedule(() => {
+			if (pageUrl().href !== original) return;
+			presentReadingLocation(url, original, resolved, () => panel.applyFromLocation(), scroll);
+		});
 	}
 
 	// A link must show what it names. When the target lies outside the basic
@@ -167,41 +166,6 @@
 		if (!hasPrayerForms || untrack(() => prayerForm.value) === 'extended') return;
 		const visible = new Set(doc.segments.slice(0, 1).map((segment) => segment.id));
 		if (selected.some((id) => !visible.has(id))) prayerForm.set('extended');
-	}
-
-	function applyWordFromLocation(scroll = true) {
-		const raw = pageUrl().searchParams.get('w');
-		if (raw === null) return;
-		const resolution = resolveCitedWord(raw);
-		if (resolution?.word) {
-			if (!hasPrayerForms || untrack(() => prayerForm.value) === 'extended') return;
-			const owner = doc.segments.find((segment) =>
-				segment.words?.some((word) => word.id === resolution.word)
-			);
-			if (owner && owner.id !== doc.segments[0]?.id) prayerForm.set('extended');
-			return;
-		}
-
-		// A removed word has no panel left to open. Its permanent tombstone
-		// names the surviving verse, so the address becomes an ordinary verse
-		// citation; a wholly unknown word is simply stripped.
-		const survivor = resolution?.segment;
-		if (survivor) {
-			citedSegments = [survivor];
-			segmentAnchor = survivor;
-			revealSelection([survivor]);
-			if (scroll) {
-				requestAnimationFrame(() =>
-					document.getElementById(survivor)?.scrollIntoView({ block: 'center' })
-				);
-			}
-		}
-		requestAnimationFrame(() => {
-			const url = pageUrl();
-			url.searchParams.delete('w');
-			if (survivor) url.searchParams.set('s', survivor);
-			replaceState(url, {});
-		});
 	}
 
 	function writeSegmentSelection(selected: string[]) {
@@ -243,8 +207,8 @@
 	$effect(() => {
 		void data.verses;
 		applyVerseFromLocation();
-		applySegmentFromLocation();
-		applyWordFromLocation();
+		applyAddressFromLocation();
+		return cancelLocationFrame;
 	});
 
 	function tapVerse(no: number) {
@@ -304,8 +268,7 @@
 		// arrival at that citation. In particular, closing a word panel pops its
 		// shallow history entry and must leave the reader exactly where they are.
 		applyVerseFromLocation(false);
-		applySegmentFromLocation(false);
-		applyWordFromLocation(false);
+		applyAddressFromLocation(false);
 	}}
 	onkeydown={(e) => {
 		const href = onWindowKeydown(e);

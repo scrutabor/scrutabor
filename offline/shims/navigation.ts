@@ -126,12 +126,19 @@ export async function goto(url: string | URL) {
  * hash this way fires no `hashchange`, which is exactly right: the route has
  * not changed and the page must not be re-rendered under the reader.
  */
+function shallowAddress(url: string | URL): string {
+	const parsed = new URL(url, 'https://scrutabor.invalid');
+	// The inner fragment can identify the part of a compound reading that
+	// owns a bare word or segment id. Query updates must not erase that context.
+	return `#${routeOf(parsed)}${parsed.hash}`;
+}
+
 export function pushState(url: string | URL, state: unknown = {}) {
-	history.pushState(state, '', `#${routeOf(url)}`);
+	history.pushState(state, '', shallowAddress(url));
 }
 
 export function replaceState(url: string | URL, state: unknown = {}) {
-	history.replaceState(state, '', `#${routeOf(url)}`);
+	history.replaceState(state, '', shallowAddress(url));
 }
 
 export function preloadData() {

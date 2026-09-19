@@ -3,6 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “The Holy Innocents, Martyrs” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"We have partaken, O Lord, of the dedicated gifts: may they, we beseech You, help us through the intercession of Your saints both for this life and life eternal. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end. Amen.","g":["dedicated","Lord","gifts","we have received","which","of the Saints","us","through prayers","both","present","we beseech","life","alike","and","eternal","grant","may bring","help","through","the Lord","our","Jesus","Christ","Son","Thy","Who","Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages","Amen"]}
+    {"id":"s01","tr":"We have partaken, O Lord, of the dedicated gifts: may they, we beseech You, help us through the intercession of Your saints both for this life and life eternal. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["dedicated","Lord","gifts","we have received","which","of the Saints","us","through prayers","both","present","we beseech","life","alike","and","eternal","grant","may bring","help","through","the Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages"]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

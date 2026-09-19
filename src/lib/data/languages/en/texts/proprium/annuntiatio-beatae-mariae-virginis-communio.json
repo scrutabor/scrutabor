@@ -1,8 +1,8 @@
 {
   "id":"proprium.annuntiatio-beatae-mariae-virginis-communio",
   "language":"en",
-  "about":"The communio of the formulary “Annunciation of the Blessed Virgin Mary” in the 1962 Roman Missal.",
+  "about":"The Communion for the Annunciation of the Blessed Virgin Mary outside Eastertide in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Behold a virgin shall be with child, and bear a Son, and shall name Him Emmanuel. (P.T. Alleluia.)","g":["behold","a Virgin","shall conceive","and","shall bring forth","Son","and","shall be called","name","His","Emmanuel"]}
+    {"id":"s01","tr":"Behold, a virgin will conceive and bear a son, and He will be named Emmanuel.","g":["Behold","a virgin","will conceive","and","will bear","a son","and","will be called",null,null,"Emmanuel"],"a":[{"s":8,"n":2,"a":0,"g":"His name"}],"ex":{"w008":"The Latin predicts the child's name without saying who gives it.","w011":"Emmanuel means “God with us”."}}
   ]
 }

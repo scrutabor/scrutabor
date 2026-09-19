@@ -51,15 +51,26 @@
 					roles: {
 						official_text: 'świadectwo tekstu łacińskiego',
 						direct_approved_print: 'świadectwo tekstu łacińskiego',
+						corroborating_latin_witness: 'porównawcze świadectwo łacińskie',
+						derived_digital_collation_aid: 'pomocnicza transkrypcja cyfrowa',
 						historical_wording_basis: 'podstawa brzmienia przekładu',
 						historical_wording_comparator: 'porównanie brzmienia przekładu',
 						official_liturgical_context: 'świadectwo użycia liturgicznego',
-						scripture_text: 'świadectwo tekstu biblijnego'
+						scripture_text: 'świadectwo tekstu biblijnego',
+						rubric_control: 'rubryki liturgiczne',
+						liturgical_history: 'historia liturgii',
+						quotation_control: 'weryfikacja cytatu',
+						lexical_support: 'objaśnienie słownikowe',
+						grammatical_support: 'objaśnienie gramatyczne',
+						semantic_comparator: 'porównanie znaczenia',
+						search_aid: 'pomoc w wyszukiwaniu'
 					} satisfies Record<BibliographyRole, string>,
 					texts: (n: number) => polishCount(n, '1 tekst', 'teksty', 'tekstów'),
+					lemmas: (n: number) => polishCount(n, '1 hasło', 'hasła', 'haseł'),
 					uses: (n: number) => polishCount(n, '1 użycie', 'użycia', 'użyć'),
 					wholeText: 'cały tekst',
 					word: 'objaśnienie słowa',
+					lemma: 'hasło słownikowe',
 					verse: (n?: number) => (n ? `werset ${n}` : 'wskazany werset'),
 					verses: (first?: number, last?: number) =>
 						first && last ? `wersety ${first}–${last}` : 'wskazane wersety',
@@ -93,15 +104,26 @@
 					roles: {
 						official_text: 'Latin textual witness',
 						direct_approved_print: 'Latin textual witness',
+						corroborating_latin_witness: 'corroborating Latin witness',
+						derived_digital_collation_aid: 'supporting digital transcription',
 						historical_wording_basis: 'translation wording basis',
 						historical_wording_comparator: 'translation wording comparator',
 						official_liturgical_context: 'liturgical-use witness',
-						scripture_text: 'biblical-text witness'
+						scripture_text: 'biblical-text witness',
+						rubric_control: 'liturgical rubrics',
+						liturgical_history: 'liturgical history',
+						quotation_control: 'quotation verification',
+						lexical_support: 'dictionary support',
+						grammatical_support: 'grammatical support',
+						semantic_comparator: 'comparison of meaning',
+						search_aid: 'search aid'
 					} satisfies Record<BibliographyRole, string>,
 					texts: (n: number) => (n === 1 ? '1 text' : `${n} texts`),
+					lemmas: (n: number) => (n === 1 ? '1 dictionary entry' : `${n} dictionary entries`),
 					uses: (n: number) => (n === 1 ? '1 use' : `${n} uses`),
 					wholeText: 'complete text',
 					word: 'word note',
+					lemma: 'dictionary entry',
 					verse: (n?: number) => (n ? `verse ${n}` : 'indicated verse'),
 					verses: (first?: number, last?: number) =>
 						first && last ? `verses ${first}–${last}` : 'indicated verses',
@@ -117,14 +139,24 @@
 	const sectionNote = (section: BibliographySectionId) =>
 		lang === 'pl' ? bindProse(copy.sections[section].note) : copy.sections[section].note;
 	const sourceKey = (source: BibliographySource) => `${source.section}:${source.id}`;
+	const sourceCount = (source: BibliographySource) =>
+		[
+			source.textCount ? copy.texts(source.textCount) : '',
+			source.lemmaCount ? copy.lemmas(source.lemmaCount) : '',
+			copy.uses(source.useCount)
+		]
+			.filter(Boolean)
+			.join(' · ');
 	const location = (use: BibliographyUse) =>
-		use.kind === 'text'
-			? copy.wholeText
-			: use.kind === 'word'
-				? copy.word
-				: use.kind === 'range'
-					? copy.verses(use.first, use.last)
-					: copy.verse(use.first);
+		use.kind === 'lemma'
+			? copy.lemma
+			: use.kind === 'text'
+				? copy.wholeText
+				: use.kind === 'word'
+					? copy.word
+					: use.kind === 'range'
+						? copy.verses(use.first, use.last)
+						: copy.verse(use.first);
 	const locator = (group: BibliographyDetailGroup) =>
 		[group.section, group.printed, group.scan].filter(Boolean).join(' · ');
 
@@ -175,9 +207,7 @@
 												<span class="edition-meta" lang="und">{source.meta.join(' · ')}</span>
 											{/if}
 										</span>
-										<span class="source-count"
-											>{copy.texts(source.textCount)} · {copy.uses(source.useCount)}</span
-										>
+										<span class="source-count">{sourceCount(source)}</span>
 									</summary>
 
 									{#if loading[sourceKey(source)]}

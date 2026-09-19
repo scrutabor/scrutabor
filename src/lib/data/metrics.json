@@ -1,23 +1,23 @@
 {
  "schema_version": "1.0.0",
  "texts": {
-  "total": 1091,
-  "proprium": 986,
-  "words": 61522,
-  "verse_segments": 2174
+  "total": 1096,
+  "proprium": 991,
+  "words": 61789,
+  "verse_segments": 2599
  },
  "languages": {
   "en": {
-   "texts": 1091
+   "texts": 1096
   },
   "pl": {
-   "texts": 1091
+   "texts": 1096
   }
  },
  "formularies": {
   "total": 109,
   "observances": 105,
-  "component_uses": 1205,
-  "unique_component_texts": 1009
+  "component_uses": 1209,
+  "unique_component_texts": 1014
  }
 }

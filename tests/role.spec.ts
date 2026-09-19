@@ -82,21 +82,32 @@ test('a Proper chant resolves delivery and conditional participation by Mass for
 	// faithful's faculty change with the form of Mass.
 	await expect(page.getByRole('radio', { name: 'wierni' })).toBeVisible();
 	await expect(page.getByRole('radio', { name: 'śpiewana' })).toBeVisible();
+	const introit = page.locator('#text-proprium-dominica-iv-adventus-introitus');
 
 	// At sung Mass the schola delivers the chant. DMS 25 c permits trained
 	// faithful to join; it does not make the line their unconditional answer.
-	await expect(page.locator('.who-name').first()).toHaveText('schola');
-	await expect(page.locator('.who-join').first()).toHaveText('wierni mogą dołączyć');
-	await expect(page.locator('.verse.answer')).toHaveCount(0);
-	await expect(page.locator('.verse .mark').first()).toHaveText('R.');
+	await expect(introit.locator('.who-name').first()).toHaveText('schola');
+	await expect(introit.locator('.who-join').first()).toHaveText('wierni mogą dołączyć');
+	await expect(introit.locator('.verse.answer')).toHaveCount(0);
+	await expect(introit.locator('.verse .mark').first()).toHaveText('R.');
+	// The other parts do contain unconditional congregational responses:
+	// the Amen after the collect, secret and postcommunion are not the chant.
+	await expect(page.locator('.verse.answer')).toHaveCount(3);
+	for (const part of ['collecta', 'secreta', 'postcommunio']) {
+		const answer = page.locator(`#text-proprium-dominica-iv-adventus-${part} .verse.answer`);
+		await expect(answer).toHaveCount(1);
+		await expect(answer.locator('.token')).toHaveCount(1);
+		await expect(answer.locator('.token .base')).toHaveText('Amen.');
+	}
 
 	// The same text is read by the priest at low Mass, while the fourth-degree
 	// faculty remains explicitly conditional.
 	await page.getByRole('radio', { name: 'cicha' }).click();
-	await expect(page.locator('.who-name').first()).toHaveText('kapłan');
-	await expect(page.locator('.who-join').first()).toHaveText('wierni mogą dołączyć');
-	await expect(page.locator('.verse.answer')).toHaveCount(0);
-	await expect(page.locator('.verse .mark').first()).toHaveText('V.');
+	await expect(introit.locator('.who-name').first()).toHaveText('kapłan');
+	await expect(introit.locator('.who-join').first()).toHaveText('wierni mogą dołączyć');
+	await expect(introit.locator('.verse.answer')).toHaveCount(0);
+	await expect(introit.locator('.verse .mark').first()).toHaveText('V.');
+	await expect(page.locator('.verse.answer')).toHaveCount(3);
 });
 
 test('a dialogue is marked V. and R. down the page, as the books mark it', async ({ page }) => {

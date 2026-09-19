@@ -1,0 +1,144 @@
+{
+ "id": "proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-horae.44667ff",
+   "digital_item": "item.divinum-officium-horae.44667ff.doc10a",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "horas/Latin/Commune/C10a.txt lines 39-41"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.dependency-doc10a",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Exact inherited source or expansion in the declared Mass dependency chain, not another independent printed witness."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "missa/Latin/Sancti/03-25.txt [Communio]; exact inherited dependencies declared separately"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The actual pinned proper delegates to the preserved source chain. Communion supplies eleven words only, without a Paschal Alleluia; no full twelve-word digital agreement is asserted."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.liber-usualis.1961",
+   "digital_item": "item.liber-usualis.1961.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "pp. 1416, 356, 96",
+    "scan": "PDF pp. 1620, 502, 208"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.lu1961",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Annunciation page delegates to the full Ecce virgo lyric and expressly adds the first-tone Paschal Communion Alleluia. The three directly viewed locations form this declared complete comparison."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 496",
+    "scan": "leaf n577 / PDF p. 578",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n577/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Directly viewed printed proper and seasonal direction; the Introit shared Gloria expansion and repeated antiphon are declared separately."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.do44667ff",
+   "text": "proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
+   "use": "use.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.do44667ff",
+   "role": "derived_comparison",
+   "coverage": {
+    "kind": "words",
+    "words": [
+     "w001",
+     "w002",
+     "w003",
+     "w004",
+     "w005",
+     "w006",
+     "w007",
+     "w008",
+     "w009",
+     "w010",
+     "w011"
+    ]
+   },
+   "independence_basis": "Derived pinned source chain, not an independent printed edition; coverage never extends beyond the actual dependency."
+  },
+  {
+   "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.lu1961",
+   "text": "proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
+   "use": "use.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.lu1961",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Separate 1961 printed liturgical book, read at its explicit three-location dependency chain; no assertion of genealogical independence from the Roman liturgical tradition."
+  },
+  {
+   "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.mr1962",
+   "text": "proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
+   "use": "use.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.mr1962",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Directly viewed approved printed Missal, with explicitly sourced shared expansion."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.source-comparison",
+  "text": "proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio",
+  "recension": "Benziger 1962 complete paschale communio with explicitly expanded shared formulas.",
+  "witnesses": [
+   "witness.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.mr1962",
+   "witness.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.do44667ff",
+   "witness.proprium.annuntiatio-beatae-mariae-virginis-tempore-paschali-communio.lu1961"
+  ],
+  "apparatus": {
+   "entries": 7,
+   "classes": [
+    "accent",
+    "capitalization",
+    "orthography",
+    "punctuation"
+   ]
+  }
+ }
+}
