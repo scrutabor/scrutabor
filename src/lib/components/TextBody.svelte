@@ -14,6 +14,7 @@
 	import { initialFit } from '$lib/reading-geometry';
 	import { interlinearRuns, type InterlinearRun } from '$lib/interlinear';
 	import { fitInterlinear } from '$lib/interlinear-layout';
+	import { sourceFaceText, sourceWindow, type SourceFace } from '$lib/source-punctuation';
 	import * as marks from '$lib/speaker-marks';
 
 	// The rendered text itself, shared by the reading page and the ordo
@@ -226,24 +227,29 @@
 	}
 </script>
 
-{#snippet baseFace(form: string, post = '', raised = false)}{@const fit = initialFit(
+{#snippet baseFace(form: string, suffix = '', raised = false, prefix = '')}{@const fit = initialFit(
 		form.slice(0, 1),
 		helpLevel === 1
 	)}<span
 		class="base"
 		style:padding-top={raised ? `${fit.padTop}em` : null}
 		style:padding-bottom={raised ? `${fit.padBottom}em` : null}
-		>{#if raised}<span
+		>{prefix}{#if raised}<span
 				class="initial"
 				style:font-size="{fit.scale}em"
 				style:margin-inline-start="{fit.start}em"
 				style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
-			>{form.slice(1)}{:else}{form}{/if}{post}</span
+			>{form.slice(1)}{:else}{form}{/if}{suffix}</span
 	>{/snippet}
 
-{#snippet face(form: string, post = '', raised = false, sink = 0, target?: string)}{@const fit =
-		initialFit(form.slice(0, 1), helpLevel === 1)}<ruby
-		>{@render baseFace(form, post, raised)}{#if helpLevel === 1 && target}<rt
+{#snippet face(source: SourceFace, raised = false, sink = 0, target?: string)}{@const fit =
+		initialFit(source.word.form.slice(0, 1), helpLevel === 1)}<ruby
+		>{@render baseFace(
+			source.word.form,
+			source.suffix,
+			raised,
+			source.prefix
+		)}{#if helpLevel === 1 && target}<rt
 				style:top="calc(var(--reading) * (var(--gloss-gap) + {sink - (raised ? fit.lift : 0)}))"
 				class="shifted"
 				{lang}>{target}</rt
@@ -256,18 +262,19 @@
 	sharedRaised: boolean,
 	sink: number,
 	interactive: boolean,
-	truncated: boolean,
-	lastWordId: string | undefined
+	faces: Map<string, SourceFace>
 )}<ruby class="shared-gloss">
 		<span class="shared-base">
 			{#each run.words as word, index (word.id)}
 				{@const raised = sharedRaised && index === 0}
-				{@const post = truncated && word.id === lastWordId ? '…' : (word.post ?? '')}
+				{@const source = faces.get(word.id)!}
 				<span
 					class="token"
 					id={interactive && domId(word.id) !== target ? domId(word.id) : undefined}
 				>
-					<span class:word={!interactive}>{@render baseFace(word.form, post, raised)}</span>
+					<span class:word={!interactive}
+						>{@render baseFace(word.form, source.suffix, raised, source.prefix)}</span
+					>
 				</span>{#if index < run.words.length - 1}{' '}{/if}
 			{/each}
 		</span>
@@ -420,8 +427,14 @@
 		{/if}
 		{@const showMark = !sharedPrayer && marked(i)}
 		{@const verseNo = seg.speaker ? undefined : verses?.[seg.id]}
-		{@const visibleWords =
-			repeated && !repeatedOpen ? (seg.words ?? []).slice(0, 4) : (seg.words ?? [])}
+		{@const window = sourceWindow(
+			seg,
+			0,
+			repeated && !repeatedOpen ? 4 : seg.words?.length,
+			(gloss.segments[seg.id]?.alignments ?? []).map((alignment) => alignment.words)
+		)}
+		{@const faces = new Map(window.faces.map((face) => [face.word.id, face]))}
+		{@const visibleWords = window.faces.map((face) => face.word)}
 		{@const interlinear = interlinearRuns(visibleWords, gloss.segments[seg.id])}
 		{@const selected = citedSegments.includes(seg.id)}
 		<!-- Contiguity is decided by RENDER adjacency, not array order: in
@@ -531,7 +544,7 @@
 								class="word word-construction"
 								id={constructionTarget}
 								class:selected={constructionSelected}
-								aria-label={`${run.words.map((word) => word.form).join(' ')} — ${run.alignment.gloss}`}
+								aria-label={`${run.words.map((word) => sourceFaceText(faces.get(word.id)!)).join(' ')} — ${run.alignment.gloss}`}
 								onclick={(event) =>
 									tapWord(
 										event,
@@ -539,32 +552,14 @@
 										seg.id
 									)}
 							>
-								{@render constructionRuby(
-									run,
-									constructionTarget,
-									sharedRaised,
-									sink,
-									true,
-									repeated && !repeatedOpen,
-									visibleWords.at(-1)?.id
-								)}
+								{@render constructionRuby(run, constructionTarget, sharedRaised, sink, true, faces)}
 							</button>
 						{:else}
-							{@render constructionRuby(
-								run,
-								constructionTarget,
-								sharedRaised,
-								sink,
-								false,
-								repeated && !repeatedOpen,
-								visibleWords.at(-1)?.id
-							)}
+							{@render constructionRuby(run, constructionTarget, sharedRaised, sink, false, faces)}
 						{/if}
 					</span>{' '}{:else}{#each run.words as w (w.id)}{@const wi =
-							visibleWords.indexOf(w)}{@const raised = i === firstVerse && wi === 0}{@const post =
-							repeated && !repeatedOpen && wi === visibleWords.length - 1
-								? '…'
-								: (w.post ?? '')}{@const target =
+							visibleWords.indexOf(w)}{@const raised = i === firstVerse && wi === 0}{@const source =
+							faces.get(w.id)!}{@const target =
 							run.alignment?.gloss ?? gloss.words[w.id]?.gloss}<span
 							class="token"
 							class:word-selected={selectedId === domId(w.id)}
@@ -572,12 +567,14 @@
 									class="word"
 									id={domId(w.id)}
 									class:selected={selectedId === domId(w.id)}
-									aria-label={helpLevel === 1 && target ? `${w.form} — ${target}` : undefined}
+									aria-label={helpLevel === 1 && target
+										? `${sourceFaceText(source)} — ${target}`
+										: undefined}
 									onclick={(event) => tapWord(event, domId(w.id), seg.id)}
-									>{@render face(w.form, post, raised, sink, target)}</button
-								>{:else}<span class="word">{@render face(w.form, post, raised, sink, target)}</span
+									>{@render face(source, raised, sink, target)}</button
+								>{:else}<span class="word">{@render face(source, raised, sink, target)}</span
 								>{/if}</span
-						>{' '}{/each}{/if}{/each}
+						>{' '}{/each}{/if}{/each}{#if window.after}…{/if}
 		</p>
 		{@const translation = gloss.segments[seg.id]?.translation}
 		{#if helpLevel >= 2 && translation}

@@ -596,8 +596,30 @@ test('Angelus folds each Ave Maria as an ordinary translated verse', async ({ pa
 	await expect(repetitions).toHaveCount(3);
 	const first = repetitions.first();
 	const toggle = first.locator('.repeated-toggle');
-	await expect(first.locator('.token')).toHaveCount(4);
-	await expect(first.locator('.base')).toHaveText(['Ave', 'María,', 'grátia', 'plena…']);
+	const expectFoldedSource = async (verse: import('@playwright/test').Locator) => {
+		await expect(verse.locator('.token')).toHaveCount(4);
+		await expect(verse.locator('.base')).toHaveText(['Ave', 'María,', 'grátia', 'plena;']);
+		const excerpt = await verse.evaluate((element) => {
+			// Exclude annotations and the fold control, not source punctuation.
+			const source = element.cloneNode(true) as Element;
+			source.querySelectorAll('rt, .mark, .sr-only').forEach((node) => node.remove());
+			return {
+				text: source.textContent!.replace(/\s+/g, ' ').trim(),
+				outsideTokens: [...element.childNodes]
+					.filter((node) => node.nodeType === Node.TEXT_NODE && node.textContent?.includes('…'))
+					.map((node) => node.textContent!.trim()),
+				insideToken: [...element.querySelectorAll('.token')].some((node) =>
+					node.textContent?.includes('…')
+				)
+			};
+		});
+		expect(excerpt).toEqual({
+			text: 'Ave María, grátia plena; …',
+			outsideTokens: ['…'],
+			insideToken: false
+		});
+	};
+	for (const repetition of await repetitions.all()) await expectFoldedSource(repetition);
 	await expect(first.locator('rt')).toHaveText(['zdrowaś', 'Maryjo', 'łaski', 'pełna']);
 	await expect(toggle).toHaveAttribute('aria-expanded', 'false');
 	await expect(toggle).toHaveAccessibleName('rozwiń powtórzoną modlitwę');
@@ -631,9 +653,11 @@ test('Angelus folds each Ave Maria as an ordinary translated verse', async ({ pa
 	await expect(toggle).toHaveAttribute('aria-expanded', 'true');
 	await expect(toggle).toHaveAccessibleName('zwiń powtórzoną modlitwę');
 	await expect(first.locator('.token')).toHaveCount(31);
+	await expect(first.locator('.base').nth(3)).toHaveText('plena;');
 	await expect(first.locator('.base').last()).toHaveText('Amen.');
+	await expect(first).not.toContainText('…');
 	await toggle.click();
-	await expect(first.locator('.token')).toHaveCount(4);
+	await expectFoldedSource(first);
 
 	await setHelp(page, 2);
 	const translation = page.locator('.verse.repeated + .seg-extra').first();

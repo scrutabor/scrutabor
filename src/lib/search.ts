@@ -12,6 +12,7 @@ import {
 import type { Lang } from './i18n';
 import { remember } from './remember';
 import { MAX_QUERY_LENGTH, MAX_QUERY_TOKENS } from './search-limits';
+import { sourceWindow } from './source-punctuation';
 
 export interface SnippetPart {
 	text: string;
@@ -383,19 +384,23 @@ function compactParts(parts: SnippetPart[]): SnippetPart[] {
 	return compacted;
 }
 
-function latinSnippet(entry: TextEntry, segmentId: string, query: string[]): SnippetPart[] {
-	const words = entry.text.segments.find((segment) => segment.id === segmentId)?.words ?? [];
+export function latinSnippet(entry: TextEntry, segmentId: string, query: string[]): SnippetPart[] {
+	const segment = entry.text.segments.find((segment) => segment.id === segmentId);
+	if (!segment) return [];
+	const words = segment.words ?? [];
 	const hitAt = words.findIndex((word) => isHit(normalizeSearch(word.form), query));
 	const start = Math.max(0, hitAt - 8);
 	const stop = Math.min(words.length, Math.max(hitAt, 0) + 13);
+	const window = sourceWindow(segment, start, stop);
 	const parts: SnippetPart[] = [];
-	if (start > 0) parts.push({ text: '… ', hit: false });
-	words.slice(start, stop).forEach((word, index) => {
+	if (window.before) parts.push({ text: '… ', hit: false });
+	window.faces.forEach(({ word, prefix, suffix }, index) => {
 		if (index) parts.push({ text: ' ', hit: false });
+		if (prefix) parts.push({ text: prefix, hit: false });
 		parts.push({ text: word.form, hit: isHit(normalizeSearch(word.form), query) });
-		if (word.post) parts.push({ text: word.post, hit: false });
+		if (suffix) parts.push({ text: suffix, hit: false });
 	});
-	if (stop < words.length) parts.push({ text: ' …', hit: false });
+	if (window.after) parts.push({ text: ' …', hit: false });
 	return compactParts(parts);
 }
 

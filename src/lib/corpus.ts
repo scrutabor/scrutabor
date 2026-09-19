@@ -99,6 +99,12 @@ export interface Delivery {
 	voice?: Voice;
 }
 
+export interface ParenthesisRange {
+	from: string;
+	through: string;
+	closing?: 'after-post';
+}
+
 export interface Segment {
 	id: string;
 	type: 'verse' | 'rubric';
@@ -108,6 +114,8 @@ export interface Segment {
 	delivery?: Partial<Record<MassForm, Delivery>>;
 	text?: string;
 	words?: Word[];
+	/** Inclusive, disjoint source ranges in this verse's word order. */
+	parentheses?: ParenthesisRange[];
 	analysis?: Analysis;
 	participation?: Partial<Record<MassForm, Participation>>;
 }
@@ -294,7 +302,7 @@ function expandCoreMetadata(artifact: CoreArtifact): Record<string, unknown> {
 	return text;
 }
 
-function expandDocument(
+export function expandDocument(
 	artifact: CoreArtifact,
 	languageArtifact: LanguageArtifact,
 	languageCitations: (Citation | null)[]
