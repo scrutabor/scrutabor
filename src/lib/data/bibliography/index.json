@@ -17950,6 +17950,34 @@
        ]
       },
       {
+       "id": "exsisto",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n17222"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.exsisto.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "exsisto"
+           },
+           "claim": "The verb includes coming forth or appearing and, by extension, arising, becoming, existing or being."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
        "id": "felix",
        "roles": [
         "lexical_support"
@@ -18930,6 +18958,34 @@
        ]
       },
       {
+       "id": "opus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n32865"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.opus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "opus"
+           },
+           "claim": "The noun denotes work or a deed and also abstract need or necessity, including the construction opus est. This lexical range does not make every occurrence an expression of need."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
        "id": "parabola",
        "roles": [
         "lexical_support"
@@ -19119,6 +19175,34 @@
             "lemma": "pulchritudo"
            },
            "claim": "The dictionary marks the long nominative penult of pulchritudo, supporting pulchritúdo."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "quisquam",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n40247"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.quisquam.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "quisquam"
+           },
+           "claim": "The indefinite pronoun can refer to a person or a thing; its neuter forms quidquam and quicquam support the meaning anything alongside the personal meanings."
           }
          ],
          "verified_on": "2026-09-19"
@@ -19518,6 +19602,34 @@
        ]
       },
       {
+       "id": "teneo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n47770"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.teneo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "teneo"
+           },
+           "claim": "The verb includes holding and keeping, possession, maintaining or supporting, and restraining. These ranges support the short lexical card, not one uniform translation of every clause."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
        "id": "testis",
        "roles": [
         "lexical_support"
@@ -19567,6 +19679,34 @@
             "lemma": "transeo"
            },
            "claim": "The entry includes literal passage across or along a route as well as passing away and omission."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "transfero",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n48775"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.transfero.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "transfero"
+           },
+           "claim": "The verb includes carrying or transferring across, copying or transcribing, translating, and transforming. Physical or figurative transfer is not restricted to the terminal writing and translation senses."
           }
          ],
          "verified_on": "2026-09-19"
