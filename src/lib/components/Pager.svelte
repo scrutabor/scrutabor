@@ -48,6 +48,10 @@
 	}
 
 	.pager-link {
+		min-inline-size: 0;
+		/* A long title must fit beside the other direction, including at
+		   the largest reading size on a narrow screen. */
+		overflow-wrap: anywhere;
 		color: var(--ink-soft);
 		text-decoration: none;
 		font-size: 1.05rem;
