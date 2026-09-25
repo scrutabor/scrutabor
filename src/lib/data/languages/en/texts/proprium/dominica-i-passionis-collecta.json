@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The collecta of the formulary “First Passion Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"We beseech Thee, almighty God, look graciously upon Thy household, that by Thy bounty it may be governed in body and by Thy protection guarded in mind. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["we beseech","almighty","God","household","Thy","graciously","look upon","that",null,null,"may be governed","in","body","and","Thy","protection","may be guarded","in","mind","through","the Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages"],"a":[{"s":8,"n":2,"a":0,"g":"through Thy bounty"}]},
+    {"id":"s01","tr":"We beseech Thee, almighty God, look graciously upon Thy household, that by Thy bounty it may be governed in body and by Thy protection guarded in mind. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["we beseech","almighty","God","household","Thy","graciously","look upon","that",null,null,"may be governed","in","body","and","Thy","protection","may be guarded","in","mind","through","the Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages"],"a":[{"s":8,"n":2,"a":1,"g":"through Thy bounty"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

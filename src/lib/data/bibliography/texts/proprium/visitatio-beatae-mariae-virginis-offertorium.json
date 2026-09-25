@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/07-02; resolved section [Offertorium] with declared inherited references"
+    "section": "Sancti/07-02 [Offertorium] -> @Commune/C10Pasc [Offertorium], horas/Latin/Commune/C10Pasc source line 15"
    },
    "entries": [
     {
@@ -17,7 +17,7 @@
      "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-25"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -37,7 +37,7 @@
      "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-25"
   }
  ],
  "witnesses": [
@@ -71,8 +71,10 @@
    "witness.proprium.visitatio-beatae-mariae-virginis-offertorium.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 1,
+   "classes": [
+    "capitalization"
+   ]
   }
  }
 }

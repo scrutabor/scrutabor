@@ -40,7 +40,7 @@ for (const [formulary, part, word, latin, sense] of [
 		'curam',
 		'care, attention'
 	],
-	['sancti-bartholomaei-apostoli', 'epistola', 'w027', 'curatíonum', 'healing, medical treatment'],
+	['sancti-bartholomaei-apostoli', 'epistola', 'w027', 'curatiónum', 'healing, medical treatment'],
 	['dominica-ii-passionis', 'introitus', 'w010', 'defensiónem', 'defense, protection'],
 	[
 		'dominica-iv-post-epiphaniam',

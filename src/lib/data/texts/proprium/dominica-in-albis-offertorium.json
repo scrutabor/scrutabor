@@ -1,6 +1,6 @@
 {
   "id":"proprium.dominica-in-albis-offertorium",
-  "title":"Angelus Dómini descéndit de cælo, et dixit",
+  "title":"Ángelus Dómini descéndit de cælo, et dixit",
   "category":"proprium",
   "section":"missa-fidelium",
   "variant":"dominica-in-albis",
@@ -9,6 +9,6 @@
   "ad":1,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Ángelus","l":"angelus","m":60},{"i":"w002","f":"Dómini","l":"dominus","m":54},{"i":"w003","f":"descéndit","l":"descendo","m":195},{"i":"w004","f":"de","l":"de","m":0,"h":"w005"},{"i":"w005","f":"cælo","l":"caelum","p":",","m":26},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"dixit","l":"dico","m":195},{"i":"w008","f":"muliéribus","l":"mulier","p":":","m":40},{"i":"w009","f":"Quem","l":"qui","m":36},{"i":"w010","f":"quǽritis","l":"quaero","p":",","m":590},{"i":"w011","f":"surréxit","l":"surgo","p":",","m":195},{"i":"w012","f":"sicut","l":"sicut","m":15},{"i":"w013","f":"dixit","l":"dico","p":",","m":195},{"i":"w014","f":"allelúia","l":"alleluia","p":".","m":46}]}
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Ángelus","l":"angelus","m":60},{"i":"w002","f":"Dómini","l":"dominus","m":54},{"i":"w003","f":"descéndit","l":"descendo","m":195},{"i":"w004","f":"de","l":"de","m":0,"h":"w005"},{"i":"w005","f":"cælo","l":"caelum","p":",","m":26},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"dixit","l":"dico","m":195},{"i":"w008","f":"muliéribus","l":"mulier","p":":","m":40},{"i":"w009","f":"Quem","l":"qui","m":36},{"i":"w010","f":"quǽritis","l":"quaero","p":",","m":590},{"i":"w011","f":"surréxit","l":"surgo","m":195},{"i":"w012","f":"sicut","l":"sicut","m":15},{"i":"w013","f":"dixit","l":"dico","p":",","m":195},{"i":"w014","f":"allelúia","l":"alleluia","p":".","m":46}]}
   ]
 }

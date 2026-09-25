@@ -1,5 +1,5 @@
 {
- "schema_version": "1.1.0",
+ "schema_version": "1.2.0",
  "formularies": [
   {
    "id": "dominica-i-adventus",
@@ -5341,7 +5341,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/d-n-iesu-christi-regis-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -5394,10 +5397,23 @@
    "title": "Beatæ Mariæ Virginis Reginæ",
    "components": [
     {
-     "key": "introitus",
+     "key": "introitus-not-paschale",
+     "recension": "extra-tempus-paschale",
+     "role": "introitus",
+     "text": "proprium/beata-maria-virgo-regina-extra-tempus-paschale-introitus",
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
+    },
+    {
+     "key": "introitus-paschale",
      "role": "introitus",
      "text": "proprium/beata-maria-virgo-regina-introitus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "paschale"
+     }
     },
     {
      "key": "collecta",
@@ -5415,19 +5431,38 @@
      "key": "graduale",
      "role": "graduale",
      "text": "proprium/beata-maria-virgo-regina-graduale",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
     },
     {
-     "key": "alleluia",
+     "key": "alleluia-not-paschale",
      "role": "alleluia",
      "text": "proprium/beata-maria-virgo-regina-alleluia",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
+    },
+    {
+     "key": "alleluia-paschale",
+     "recension": "tempore-paschali",
+     "role": "alleluia",
+     "text": "proprium/beata-maria-virgo-regina-tempore-paschali-alleluia",
+     "relation": "proper",
+     "condition": {
+      "season": "paschale"
+     }
     },
     {
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/beata-maria-virgo-regina-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -5436,10 +5471,23 @@
      "relation": "proper"
     },
     {
-     "key": "offertorium",
+     "key": "offertorium-not-paschale",
+     "recension": "extra-tempus-paschale",
+     "role": "offertorium",
+     "text": "proprium/beata-maria-virgo-regina-extra-tempus-paschale-offertorium",
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
+    },
+    {
+     "key": "offertorium-paschale",
      "role": "offertorium",
      "text": "proprium/beata-maria-virgo-regina-offertorium",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "paschale"
+     }
     },
     {
      "key": "secreta",
@@ -5454,10 +5502,23 @@
      "relation": "shared"
     },
     {
-     "key": "communio",
+     "key": "communio-not-paschale",
      "role": "communio",
      "text": "proprium/beata-maria-virgo-regina-communio",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
+    },
+    {
+     "key": "communio-paschale",
+     "recension": "tempore-paschali",
+     "role": "communio",
+     "text": "proprium/beata-maria-virgo-regina-tempore-paschali-communio",
+     "relation": "proper",
+     "condition": {
+      "season": "paschale"
+     }
     },
     {
      "key": "postcommunio",
@@ -5673,7 +5734,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -6248,7 +6312,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/sancti-ioachim-confessoris-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -6334,7 +6401,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/immaculatum-cor-beatae-mariae-virginis-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -6500,7 +6570,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/nativitas-beatae-mariae-virginis-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -6921,7 +6994,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/nativitas-beatae-mariae-virginis-tractus",
-     "relation": "reference"
+     "relation": "reference",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -7007,7 +7083,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/nativitas-beatae-mariae-virginis-tractus",
-     "relation": "reference"
+     "relation": "reference",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -7595,7 +7674,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -7761,7 +7843,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/immaculata-conceptio-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -7847,7 +7932,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/sancti-ioachim-confessoris-tractus",
-     "relation": "reference"
+     "relation": "reference",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -7876,8 +7964,8 @@
     {
      "key": "communio",
      "role": "communio",
-     "text": "proprium/dominica-in-albis-communio",
-     "relation": "reference"
+     "text": "proprium/sancti-thomae-apostoli-communio",
+     "relation": "proper"
     },
     {
      "key": "postcommunio",
@@ -7933,7 +8021,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/sancti-ioachim-confessoris-tractus",
-     "relation": "reference"
+     "relation": "reference",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -8019,7 +8110,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/sancti-ioannis-apostoli-et-evangelistae-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -8105,7 +8199,10 @@
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/sanctorum-innocentium-martyrum-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "use": "votive-after-septuagesima"
+     }
     },
     {
      "key": "evangelium",
@@ -8185,13 +8282,19 @@
      "key": "alleluia",
      "role": "alleluia",
      "text": "proprium/purificatio-beatae-mariae-virginis-alleluia",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "not-post-septuagesimam"
+     }
     },
     {
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/purificatio-beatae-mariae-virginis-tractus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "post-septuagesimam"
+     }
     },
     {
      "key": "evangelium",
@@ -8271,7 +8374,10 @@
      "key": "alleluia",
      "role": "alleluia",
      "text": "proprium/sancti-petri-et-pauli-apostolorum-alleluia",
-     "relation": "reference"
+     "relation": "reference",
+     "condition": {
+      "use": "votive-before-septuagesima-or-after-pentecost"
+     }
     },
     {
      "key": "tractus",
@@ -8410,10 +8516,23 @@
    "title": "Sancti Ioseph Sponsi Beatæ Mariæ Virginis",
    "components": [
     {
-     "key": "introitus",
+     "key": "introitus-not-paschale",
+     "recension": "extra-tempus-paschale",
+     "role": "introitus",
+     "text": "proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
+    },
+    {
+     "key": "introitus-paschale",
      "role": "introitus",
      "text": "proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-introitus",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "paschale"
+     }
     },
     {
      "key": "collecta",
@@ -8431,13 +8550,28 @@
      "key": "graduale",
      "role": "graduale",
      "text": "proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-graduale",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-alleluia",
+     "relation": "proper",
+     "condition": {
+      "season": "paschale"
+     }
     },
     {
      "key": "tractus",
      "role": "tractus",
      "text": "proprium/sancti-ioannis-apostoli-et-evangelistae-tractus",
-     "relation": "reference"
+     "relation": "reference",
+     "condition": {
+      "season": "not-paschale"
+     }
     },
     {
      "key": "evangelium",
@@ -8446,10 +8580,23 @@
      "relation": "reference"
     },
     {
-     "key": "offertorium",
+     "key": "offertorium-not-paschale",
+     "recension": "extra-tempus-paschale",
+     "role": "offertorium",
+     "text": "proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
+    },
+    {
+     "key": "offertorium-paschale",
      "role": "offertorium",
      "text": "proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-offertorium",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "paschale"
+     }
     },
     {
      "key": "secreta",
@@ -8464,10 +8611,23 @@
      "relation": "shared"
     },
     {
-     "key": "communio",
+     "key": "communio-not-paschale",
+     "recension": "extra-tempus-paschale",
+     "role": "communio",
+     "text": "proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio",
+     "relation": "proper",
+     "condition": {
+      "season": "not-paschale"
+     }
+    },
+    {
+     "key": "communio-paschale",
      "role": "communio",
      "text": "proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-communio",
-     "relation": "proper"
+     "relation": "proper",
+     "condition": {
+      "season": "paschale"
+     }
     },
     {
      "key": "postcommunio",

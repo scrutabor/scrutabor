@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/11-09; resolved section [Communio] with declared inherited references"
+    "section": "Sancti/11-09, rule ex C8 -> Commune/C8 [Communio], horas/Latin/Commune/C8 source line 638"
    },
    "entries": [
     {
@@ -17,7 +17,7 @@
      "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-25"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -37,7 +37,7 @@
      "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-25"
   }
  ],
  "witnesses": [
@@ -71,8 +71,11 @@
    "witness.proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-communio.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 3,
+   "classes": [
+    "accent",
+    "punctuation"
+   ]
   }
  }
 }

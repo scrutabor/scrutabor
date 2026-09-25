@@ -1,6 +1,6 @@
 {
   "id":"proprium.nativitas-domini-in-nocte-offertorium",
-  "title":"Læténtur cæli et exsúltet terra ante fáciem",
+  "title":"Læténtur cæli, et exsúltet terra ante fáciem",
   "category":"proprium",
   "section":"missa-fidelium",
   "variant":"nativitas-domini-in-nocte",
@@ -9,6 +9,6 @@
   "ad":1,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Læténtur","l":"laeto","m":673},{"i":"w002","f":"cæli","l":"caelum","m":68},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"exsúltet","l":"exsulto","m":33},{"i":"w005","f":"terra","l":"terra","m":30},{"i":"w006","f":"ante","l":"ante","m":3,"h":"w007"},{"i":"w007","f":"fáciem","l":"facies","m":338},{"i":"w008","f":"Dómini","l":"dominus","p":":","m":54},{"i":"w009","f":"quóniam","l":"quoniam","m":15},{"i":"w010","f":"venit","l":"venio","p":".","m":293}]}
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Læténtur","l":"laeto","m":673},{"i":"w002","f":"cæli","l":"caelum","p":",","m":68},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"exsúltet","l":"exsulto","m":33},{"i":"w005","f":"terra","l":"terra","m":30},{"i":"w006","f":"ante","l":"ante","m":3,"h":"w007"},{"i":"w007","f":"fáciem","l":"facies","m":338},{"i":"w008","f":"Dómini","l":"dominus","p":":","m":54},{"i":"w009","f":"quóniam","l":"quoniam","m":15},{"i":"w010","f":"venit","l":"venio","p":".","m":293}]}
   ]
 }

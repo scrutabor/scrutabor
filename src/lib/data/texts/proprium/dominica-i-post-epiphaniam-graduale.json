@@ -1,6 +1,6 @@
 {
   "id":"proprium.dominica-i-post-epiphaniam-graduale",
-  "title":"Benedíctus Dóminus, Deus Israël, qui facit mirabília",
+  "title":"Benedíctus Dóminus Deus Israël, qui facit mirabília",
   "category":"proprium",
   "section":"missa-catechumenorum",
   "variant":"dominica-i-post-epiphaniam",
@@ -9,6 +9,6 @@
   "ad":1,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Benedíctus","l":"benedictus","m":59,"h":"w002"},{"i":"w002","f":"Dóminus","l":"dominus","p":",","m":60},{"i":"w003","f":"Deus","l":"deus","m":60},{"i":"w004","f":"Ísrael","l":"Israel","p":",","m":34},{"i":"w005","f":"qui","l":"qui","m":18},{"i":"w006","f":"facit","l":"facio","m":140},{"i":"w007","f":"mirabília","l":"mirabilis","m":129,"s":true},{"i":"w008","f":"magna","l":"magnus","m":129,"s":true},{"i":"w009","f":"solus","l":"solus","m":59,"s":true},{"i":"w010","f":"a","l":"a","m":0,"h":"w011"},{"i":"w011","f":"sǽculo","l":"saeculum","p":".","m":26},{"i":"w012","f":"Suscípiant","l":"suscipio","m":44},{"i":"w013","f":"montes","l":"mons","m":152},{"i":"w014","f":"pacem","l":"pax","m":7},{"i":"w015","f":"pópulo","l":"populus","m":186},{"i":"w016","f":"tuo","l":"tuus","p":",","m":101,"s":true},{"i":"w017","f":"et","l":"et","m":15},{"i":"w018","f":"colles","l":"collis","m":152},{"i":"w019","f":"iustítiam","l":"iustitia","p":".","m":141}]}
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Benedíctus","l":"benedictus","m":59,"h":"w002"},{"i":"w002","f":"Dóminus","l":"dominus","m":60},{"i":"w003","f":"Deus","l":"deus","m":60},{"i":"w004","f":"Israël","l":"Israel","p":",","m":34,"a":6},{"i":"w005","f":"qui","l":"qui","m":18},{"i":"w006","f":"facit","l":"facio","m":140},{"i":"w007","f":"mirabília","l":"mirabilis","m":129,"s":true},{"i":"w008","f":"magna","l":"magnus","m":129,"s":true},{"i":"w009","f":"solus","l":"solus","m":59,"s":true},{"i":"w010","f":"a","l":"a","m":0,"h":"w011"},{"i":"w011","f":"sǽculo","l":"saeculum","p":".","m":26},{"i":"w012","f":"Suscípiant","l":"suscipio","m":44},{"i":"w013","f":"montes","l":"mons","m":152},{"i":"w014","f":"pacem","l":"pax","m":7},{"i":"w015","f":"pópulo","l":"populus","m":186},{"i":"w016","f":"tuo","l":"tuus","p":",","m":101,"s":true},{"i":"w017","f":"et","l":"et","m":15},{"i":"w018","f":"colles","l":"collis","m":152},{"i":"w019","f":"iustítiam","l":"iustitia","p":".","m":141}]}
   ]
 }

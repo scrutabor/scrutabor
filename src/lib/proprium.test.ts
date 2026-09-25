@@ -120,6 +120,25 @@ describe('lookups', () => {
 		}
 	);
 
+	it('takes the Purification tract only when Feb 2 falls after Septuagesima Sunday', () => {
+		// Septuagesima Sunday is 1 Feb 2026 and 13 Feb 2028.
+		for (const [date, after] of [
+			['2026-02-02', true],
+			['2028-02-02', false]
+		] as const) {
+			expect(componentApplies({ season: 'post-septuagesimam' }, date)).toBe(after);
+			expect(componentApplies({ season: 'not-post-septuagesimam' }, date)).toBe(!after);
+		}
+		expect(componentApplies({ season: 'post-septuagesimam' }, '')).toBe(false);
+		expect(componentApplies({ season: 'not-post-septuagesimam' }, '')).toBe(false);
+	});
+
+	it('never selects an Alleluia printed for votive Masses outside Septuagesima', () => {
+		const condition = { use: 'votive-before-septuagesima-or-after-pentecost' } as const;
+		expect(componentApplies(condition, null)).toBe(true);
+		expect(componentApplies(condition, '2027-02-22')).toBe(false);
+	});
+
 	it('keeps source-only votive material only in explicitly undated study', () => {
 		const condition = { use: 'votive-after-septuagesima' } as const;
 		expect(componentApplies(condition, null)).toBe(true);

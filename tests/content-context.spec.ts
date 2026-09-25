@@ -173,7 +173,7 @@ for (const language of ['pl', 'en']) {
 		await expect(group.locator('rt')).toHaveText(
 			language === 'pl'
 				? 'dzięki wzmożonemu, najłaskawszemu wstawiennictwu jej i jej świętych towarzyszy pod Krzyżem'
-				: 'through the abundant, most loving intercession of Mary and her holy companions beneath the Cross'
+				: 'through the multiplied, most loving intercession of her and her holy companions beneath the Cross'
 		);
 		await expect(group.locator('button')).toHaveCount(1);
 		await group.scrollIntoViewIfNeeded();
@@ -217,7 +217,7 @@ for (const language of ['pl', 'en']) {
 				'grátiæ tuæ operánte virtúte',
 				language === 'pl'
 					? 'dzięki działaniu mocy Twojej łaski'
-					: 'with the power of Your grace at work'
+					: 'with the power of Thy grace at work'
 			],
 			[
 				'præséntis vitæ nos conversatióne',
@@ -279,7 +279,7 @@ for (const [language, distinction, peace] of [
 		await page.goto(`/app/${language}/formularium/sancti-andreae-apostoli`);
 		await setHelp(page, 1);
 		const epistle = page.locator('#text-proprium-sancti-andreae-apostoli-epistola');
-		const group = epistle.locator('.token-group', { hasText: 'Iudǽi et Græci' });
+		const group = epistle.locator('.token-group', { hasText: 'Iudǽi, et Græci' });
 		await expect(group.locator('rt')).toHaveText(distinction);
 		await group.locator('button.word-construction').click();
 		await expect(page.locator('aside .construction-card')).toHaveCount(3);

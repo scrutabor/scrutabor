@@ -1,6 +1,6 @@
 {
   "id":"proprium.dominica-resurrectionis-graduale",
-  "title":"Hæc dies, quam fecit Dóminus: exsultémus et",
+  "title":"Hæc dies, quam fecit Dóminus: exsultémus, et",
   "category":"proprium",
   "section":"missa-catechumenorum",
   "variant":"dominica-resurrectionis",
@@ -9,6 +9,6 @@
   "ad":1,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Hæc","l":"hic","m":143},{"i":"w002","f":"dies","l":"dies","p":",","m":132,"a":6},{"i":"w003","f":"quam","l":"qui","m":291,"a":6},{"i":"w004","f":"fecit","l":"facio","m":195},{"i":"w005","f":"Dóminus","l":"dominus","p":":","m":60},{"i":"w006","f":"exsultémus","l":"exsulto","m":89},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"lætémur","l":"laetor","m":525},{"i":"w009","f":"in","l":"in","m":0,"h":"w010"},{"i":"w010","f":"ea","l":"is","p":".","m":131},{"i":"w011","f":"Confitémini","l":"confiteor","m":929,"a":6},{"i":"w012","f":"Dómino","l":"dominus","p":",","m":186},{"i":"w013","f":"quóniam","l":"quoniam","m":15},{"i":"w014","f":"bonus","l":"bonus","p":":","m":59,"s":true},{"i":"w015","f":"quóniam","l":"quoniam","m":15},{"i":"w016","f":"in","l":"in","m":3,"h":"w017"},{"i":"w017","f":"sǽculum","l":"saeculum","m":82},{"i":"w018","f":"misericórdia","l":"misericordia","m":24},{"i":"w019","f":"eius","l":"is","p":".","m":27}]}
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Hæc","l":"hic","m":143},{"i":"w002","f":"dies","l":"dies","p":",","m":132,"a":6},{"i":"w003","f":"quam","l":"qui","m":291,"a":6},{"i":"w004","f":"fecit","l":"facio","m":195},{"i":"w005","f":"Dóminus","l":"dominus","p":":","m":60},{"i":"w006","f":"exsultémus","l":"exsulto","p":",","m":89},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"lætémur","l":"laetor","m":525},{"i":"w009","f":"in","l":"in","m":0,"h":"w010"},{"i":"w010","f":"ea","l":"is","p":".","m":131},{"i":"w011","f":"Confitémini","l":"confiteor","m":929,"a":6},{"i":"w012","f":"Dómino","l":"dominus","p":",","m":186},{"i":"w013","f":"quóniam","l":"quoniam","m":15},{"i":"w014","f":"bonus","l":"bonus","p":":","m":59,"s":true},{"i":"w015","f":"quóniam","l":"quoniam","m":15},{"i":"w016","f":"in","l":"in","m":3,"h":"w017"},{"i":"w017","f":"sǽculum","l":"saeculum","m":82},{"i":"w018","f":"misericórdia","l":"misericordia","m":24},{"i":"w019","f":"eius","l":"is","p":".","m":27}]}
   ]
 }

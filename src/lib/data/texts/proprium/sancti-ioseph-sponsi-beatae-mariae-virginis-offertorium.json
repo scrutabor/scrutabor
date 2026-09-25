@@ -1,6 +1,6 @@
 {
   "id":"proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-offertorium",
-  "title":"Véritas mea et misericórdia mea cum ipso",
+  "title":"Véritas mea, et misericórdia mea cum ipso",
   "category":"proprium",
   "section":"missa-fidelium",
   "variant":"sancti-ioseph-sponsi-beatae-mariae-virginis",
@@ -9,6 +9,6 @@
   "ad":1,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Véritas","l":"veritas","m":20,"a":14},{"i":"w002","f":"mea","l":"meus","m":25,"h":"w001","a":14},{"i":"w003","f":"et","l":"et","m":15,"a":14},{"i":"w004","f":"misericórdia","l":"misericordia","m":24,"a":14},{"i":"w005","f":"mea","l":"meus","m":25,"h":"w004","a":14},{"i":"w006","f":"cum","l":"cum","m":0,"h":"w007","a":14},{"i":"w007","f":"ipso","l":"ipse","p":":","m":289,"a":14},{"i":"w008","f":"et","l":"et","m":15,"a":14},{"i":"w009","f":"in","l":"in","m":0,"h":"w010","a":14},{"i":"w010","f":"nómine","l":"nomen","m":135,"a":14},{"i":"w011","f":"meo","l":"meus","m":149,"h":"w010","a":15},{"i":"w012","f":"exaltábitur","l":"exalto","m":287,"a":14},{"i":"w013","f":"cornu","l":"cornu","m":775,"a":14},{"i":"w014","f":"eius","l":"is","p":".","m":27,"a":14},{"i":"w015","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14}]}
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Véritas","l":"veritas","m":20,"a":14},{"i":"w002","f":"mea","l":"meus","p":",","m":25,"h":"w001","a":14},{"i":"w003","f":"et","l":"et","m":15,"a":14},{"i":"w004","f":"misericórdia","l":"misericordia","m":24,"a":14},{"i":"w005","f":"mea","l":"meus","m":25,"h":"w004","a":14},{"i":"w006","f":"cum","l":"cum","m":0,"h":"w007","a":14},{"i":"w007","f":"ipso","l":"ipse","p":":","m":289,"a":14},{"i":"w008","f":"et","l":"et","m":15,"a":14},{"i":"w009","f":"in","l":"in","m":0,"h":"w010","a":14},{"i":"w010","f":"nómine","l":"nomen","m":135,"a":14},{"i":"w011","f":"meo","l":"meus","m":149,"h":"w010","a":15},{"i":"w012","f":"exaltábitur","l":"exalto","m":287,"a":14},{"i":"w013","f":"cornu","l":"cornu","m":775,"a":14},{"i":"w014","f":"eius","l":"is","m":27,"a":14},{"i":"w015","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14}]}
   ]
 }

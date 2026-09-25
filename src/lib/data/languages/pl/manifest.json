@@ -718,6 +718,14 @@
       "path": "languages/pl/texts/proprium/beata-maria-virgo-regina-evangelium.json"
     },
     {
+      "id": "proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus",
+      "path": "languages/pl/texts/proprium/beata-maria-virgo-regina-extra-tempus-paschale-introitus.json"
+    },
+    {
+      "id": "proprium.beata-maria-virgo-regina-extra-tempus-paschale-offertorium",
+      "path": "languages/pl/texts/proprium/beata-maria-virgo-regina-extra-tempus-paschale-offertorium.json"
+    },
+    {
       "id": "proprium.beata-maria-virgo-regina-graduale",
       "path": "languages/pl/texts/proprium/beata-maria-virgo-regina-graduale.json"
     },
@@ -736,6 +744,14 @@
     {
       "id": "proprium.beata-maria-virgo-regina-secreta",
       "path": "languages/pl/texts/proprium/beata-maria-virgo-regina-secreta.json"
+    },
+    {
+      "id": "proprium.beata-maria-virgo-regina-tempore-paschali-alleluia",
+      "path": "languages/pl/texts/proprium/beata-maria-virgo-regina-tempore-paschali-alleluia.json"
+    },
+    {
+      "id": "proprium.beata-maria-virgo-regina-tempore-paschali-communio",
+      "path": "languages/pl/texts/proprium/beata-maria-virgo-regina-tempore-paschali-communio.json"
     },
     {
       "id": "proprium.beata-maria-virgo-regina-tractus",
@@ -3818,6 +3834,10 @@
       "path": "languages/pl/texts/proprium/sancti-ioseph-opificis-secreta.json"
     },
     {
+      "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-alleluia",
+      "path": "languages/pl/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-alleluia.json"
+    },
+    {
       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-collecta",
       "path": "languages/pl/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-collecta.json"
     },
@@ -3828,6 +3848,18 @@
     {
       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-epistola",
       "path": "languages/pl/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-epistola.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio",
+      "path": "languages/pl/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+      "path": "languages/pl/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-introitus.json"
+    },
+    {
+      "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
+      "path": "languages/pl/texts/proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-offertorium.json"
     },
     {
       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-graduale",
@@ -4100,6 +4132,10 @@
     {
       "id": "proprium.sancti-thomae-apostoli-collecta",
       "path": "languages/pl/texts/proprium/sancti-thomae-apostoli-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-thomae-apostoli-communio",
+      "path": "languages/pl/texts/proprium/sancti-thomae-apostoli-communio.json"
     },
     {
       "id": "proprium.sancti-thomae-apostoli-epistola",

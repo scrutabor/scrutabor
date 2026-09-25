@@ -1,7 +1,7 @@
 {
   "id":"proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-sequentia",
   "language":"en",
-  "about":"The sequence Dies irae belongs to all three formularies for the Commemoration of All the Faithful Departed. When a priest celebrates three Masses without interruption, he must say it at the principal Mass. Otherwise, he says it at the first Mass. He may omit it at the other Masses unless they are sung (1962 Roman Missal, p. 722).",
+  "about":"The sequence Dies irae belongs to all three formularies for the Commemoration of All the Faithful Departed. When a priest celebrates the three Masses without interruption, he must say it only at the principal Mass, or at the first Mass if none is principal. He may omit it at the other Masses unless they are sung (1962 Roman Missal, p. 722).",
   "seg":[
     {"id":"s01","tr":"Dreaded day, that day of ire, When the world shall melt in fire, Told by Sibyl and David’s lyre.","g":["day","of wrath","day","that","shall dissolve","the world","into","ashes","as witness","David","with","the Sibyl"]},
     {"id":"s02","tr":"Fright men’s hearts shall rudely shift, As the Judge through gleaming rift Comes each soul to closely sift.","g":["how great","the trembling",null,null,"when","the Judge",null,null,"all things","strictly","to examine"],"a":[{"s":2,"n":2,"a":1,"g":"shall be"},{"s":6,"n":2,"a":1,"g":"shall come"}]},
@@ -10,17 +10,17 @@
     {"id":"s05","tr":"Then, before Him shall be placed, That whereon the verdict’s based, Book wherein each deed is traced.","g":["a book","written","shall be brought forth","in","which","all","is contained","from which","the world","shall be judged"]},
     {"id":"s06","tr":"When the Judge His seat shall gain, All that’s hidden shall be plain, Nothing shall unjudged remain.","g":["the Judge","therefore","when","shall sit","whatever","lies hidden","shall appear","nothing","unpunished","shall remain"]},
     {"id":"s07","tr":"Wretched man, what can I plead? Whom to ask to intercede, When the just much mercy need?","g":["what","shall I","wretched","then","say","whom","patron","shall I ask","when","scarcely","the just","shall be","safe"]},
-    {"id":"s08","tr":"You, O awe-inspiring Lord, Saving e’en when unimplored, Save me, mercy’s fount adored.","g":["King","of awe-inspiring","majesty","Who","those to be saved","savest","freely","save","me","fount","of mercy"]},
+    {"id":"s08","tr":"King of dreadful majesty, Who save the saved, and save them free, Fount of mercy, rescue me.","g":["King","of awe-inspiring","majesty","Who","those to be saved","savest","freely","save","me","fount","of mercy"]},
     {"id":"s09","tr":"O sweet Jesus, mindful be, That You came on earth for me: Cast me not from You this day.","g":["Remember","Jesus","kind","that","I am","the cause","Thy","journey","do not","me","destroy","on that","day"]},
-    {"id":"s10","tr":"Seeking me Your strength was spent Ransoming Your limbs were rent: Is this toil to no intent?","g":["seeking","me","Thou didst sit","weary","Thou didst redeem","the Cross","suffering","so great","toil","not","let be","in vain"]},
+    {"id":"s10","tr":"Seeking me, Your strength was spent; Ransoming, Your limbs were rent: Is this toil to no intent?","g":["seeking","me","Thou didst sit","weary","Thou didst redeem","the Cross","suffering","so great","toil","not","let be","in vain"]},
     {"id":"s11","tr":"You, awarding pains condign, Mercy’s ear to me incline, Ere the reckoning You assign.","g":["Just","Judge","of vengeance","the gift","grant","of forgiveness","before","the day","of reckoning"]},
-    {"id":"s12","tr":"I, felon-like, my lot bewail, Suffused cheeks my shame unveil: God! O let my prayer prevail.","g":["I groan","as","guilty","guilt","makes blush","countenance","my","to me as supplicant","spare","O God"]},
+    {"id":"s12","tr":"I, felon-like, my lot bewail, Suffused cheeks my shame unveil: God! O let my prayer prevail.","g":["I groan","as","guilty","guilt","makes blush","countenance","my","to me as supplicant","spare","God"]},
     {"id":"s13","tr":"Mary’s soul You fashioned white, And did to heaven the thief invite; Hope in me these now excite.","g":["Thou Who","Mary","didst absolve","and","the thief","didst hear","me","also","hope","Thou gavest"]},
     {"id":"s14","tr":"Prayers of mine in vain ascend: You are good and will forefend, In quenchless fire my life to end.","g":["prayers","my","not","are","worthy","but","Thou","good","grant","kindly","that I not","everlasting","be burned","fire"]},
     {"id":"s15","tr":"Place amid Your sheep accord, Keep me from the tainted horde, Set me at Your right, O Lord.","g":["among","the sheep","a place","grant","and","from","the goats","me","separate","placing","on","the side","right"]},
     {"id":"s16","tr":"When the cursed by shame oppressed, Enter flames at Your behest, Call me then to join the blessed.","g":["when are confounded","the accursed","to the flames","fierce","consigned","call","me","with","the blessed"]},
-    {"id":"s17","tr":"Prostrate, suppliant, now no more Unrepenting, as of yore, Save me dying, I implore.","g":["I pray","suppliant","and","prostrate","heart","contrite","as","ashes","take","care","of my","end"]},
+    {"id":"s17","tr":"Prostrate, suppliant, I implore, Heart like ashes, crushed and sore: Care for me when life is o’er.","g":["I pray","suppliant","and","prostrate","heart","contrite","as","ashes","take","care","of my","end"]},
     {"id":"s18","tr":"Mournful day that day of sighs, When from dust shall man arise, Stained with guilt his doom to know,","g":["tearful","day","that","on which","shall rise","from","ashes","to be judged","man","guilty"]},
-    {"id":"s19","tr":"Mercy, Lord, on him bestow. Jesus, kind! Your souls release, Led them thence to realms of peace. Amen.","g":["him","therefore","spare","O God","kind","Jesus","Lord","grant","them","rest","amen"]}
+    {"id":"s19","tr":"Mercy, Lord, on him bestow. Jesus, kind! Your souls release, Lead them thence to realms of peace. Amen.","g":["him","therefore","spare","God","kind","Jesus","Lord","grant","them","rest","amen"]}
   ]
 }

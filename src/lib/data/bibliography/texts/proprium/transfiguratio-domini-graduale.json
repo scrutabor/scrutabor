@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/08-06; resolved section [Graduale] with declared inherited references"
+    "section": "Latin/Sancti/08-06.txt [Graduale], lines 29–31 only; following Alleluia excluded"
    },
    "entries": [
     {
@@ -14,10 +14,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned Latin verses corroborate the complete gradual, excluding the separate following Alleluia."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The identified page prints the complete gradual, ending after the Psalm44:2 verse. The following Alleluia is a separate chant."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -49,7 +49,7 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
+   "independence_basis": "Pinned upstream Latin data maintained outside this corpus. Only the two cited Graduale verses are included; the following Alleluia is a separate chant and is excluded."
   },
   {
    "id": "witness.proprium.transfiguratio-domini-graduale.mr1962",
@@ -59,20 +59,22 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Directly viewed printed page 627 of the 1962 typical edition. Complete gradual only; no following Alleluia."
   }
  ],
  "collation": {
   "id": "collation.proprium.transfiguratio-domini-graduale.mr1962-do44667ff",
   "text": "proprium.transfiguratio-domini-graduale",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "The complete 1962 gradual with printed stress and declared digital accent variant",
   "witnesses": [
    "witness.proprium.transfiguratio-domini-graduale.do44667ff",
    "witness.proprium.transfiguratio-domini-graduale.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 1,
+   "classes": [
+    "accent"
+   ]
   }
  }
 }

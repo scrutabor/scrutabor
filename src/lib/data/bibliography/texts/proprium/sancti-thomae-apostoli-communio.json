@@ -1,0 +1,80 @@
+{
+ "id": "proprium.sancti-thomae-apostoli-communio",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Sancti/12-21 [Communio] -> @Tempora/Pasc1-0 [Communio], missa/Latin/Tempora/Pasc1-0 source line 50"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-thomae-apostoli-communio.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Latin data borrow the Low Sunday communion for 21 December; its three Paschaltide Alleluias are declared as recensions and the remaining words corroborate the page."
+    }
+   ],
+   "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 441",
+    "scan": "leaf n522 / PDF p. 523",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n522/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-thomae-apostoli-communio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The cited page image prints the communion for 21 December without the Low Sunday Alleluias."
+    }
+   ],
+   "verified_on": "2026-09-25"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.sancti-thomae-apostoli-communio.do44667ff",
+   "text": "proprium.sancti-thomae-apostoli-communio",
+   "use": "use.proprium.sancti-thomae-apostoli-communio.do44667ff",
+   "role": "derived_comparison",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
+  },
+  {
+   "id": "witness.proprium.sancti-thomae-apostoli-communio.mr1962",
+   "text": "proprium.sancti-thomae-apostoli-communio",
+   "use": "use.proprium.sancti-thomae-apostoli-communio.mr1962",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.sancti-thomae-apostoli-communio.mr1962-do44667ff",
+  "text": "proprium.sancti-thomae-apostoli-communio",
+  "recension": "The 1962 typical-edition communion for 21 December, without the Paschaltide Alleluias of the Low Sunday text",
+  "witnesses": [
+   "witness.proprium.sancti-thomae-apostoli-communio.do44667ff",
+   "witness.proprium.sancti-thomae-apostoli-communio.mr1962"
+  ],
+  "apparatus": {
+   "entries": 2,
+   "classes": [
+    "punctuation"
+   ]
+  }
+ }
+}

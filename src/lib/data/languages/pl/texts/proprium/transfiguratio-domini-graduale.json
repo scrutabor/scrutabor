@@ -1,8 +1,8 @@
 {
   "id":"proprium.transfiguratio-domini-graduale",
   "language":"pl",
-  "about":"Graduale formularza „Przemienienie Pańskie” w Mszale Rzymskim z 1962 roku.",
+  "about":"Graduał święta Przemienienia Pańskiego łączy wersety 3 i 2 Psalmu 44. Psalmiczny obraz Króla przewyższającego ludzi pięknem oraz łaski na Jego wargach liturgia odnosi do Chrystusa. Następujące Alleluja jest osobnym śpiewem.",
   "seg":[
-    {"id":"s01","tr":"Postacią Tyś piękniejszy nad synów ludzkich, wdzięk rozlał się na Twoich wargach. Z mego serca płynie piękne słowo, pieśń moją śpiewam dla Króla.","g":["Piękniejszy","postacią","nad","synów","ludzkich","Rozlana","została","łaska","na","wargach","Twoich","Wydało","serce","moje","słowo","piękne",null,null,"pieśń","moją","Królowi"],"a":[{"s":16,"n":2,"a":0,"g":"śpiewam"}]}
+    {"id":"s01","tr":"Piękniejszy jesteś urodą od synów ludzkich; łaska rozlała się na Twoich wargach. Moje serce wypowiedziało dobre słowo; ja śpiewam Królowi moje pieśni.","g":["Piękniejszy","urodą","od","synów","ludzkich",null,null,"łaska","na","wargach","Twoich","Wypowiedziało","serce","moje","słowo","dobre","śpiewam","ja","pieśni","moje","Królowi"],"a":[{"s":5,"n":2,"a":0,"g":"rozlała się"}],"ex":{"w001":"„Speciósus” oznacza „piękny” i ma stopień równy, a porównanie wprowadza „præ fíliis hóminum”, stąd przekład „piękniejszy od synów ludzkich”. Psalm zwraca się do Króla z domyślnym „Ty jesteś”. W tym graduale słowa te odnoszą się do Chrystusa.","w012":"Serce jest tu obrazem wnętrza człowieka, z którego wypływa wypowiadane słowo. „Eructávit” przedstawia dobre słowo wydobywające się z serca. Nie opisuje tu odruchu ciała.","w019":"„Ópera” to liczba mnoga od „opus”: tutaj utwory poetyckie, czyli pieśni kierowane do Króla. W tym kontekście „dico” oznacza ich głoszenie lub śpiewanie, a „ego” wyraźnie wskazuje mówiącego: „ja”."}}
   ]
 }

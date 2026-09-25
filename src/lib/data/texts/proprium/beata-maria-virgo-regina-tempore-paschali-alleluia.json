@@ -1,0 +1,14 @@
+{
+  "id":"proprium.beata-maria-virgo-regina-tempore-paschali-alleluia",
+  "title":"Beáta es, Virgo María / Nunc cum eo regnas",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"beata-maria-virgo-regina",
+  "sung":true,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Beáta","l":"beatus","m":25,"h":"w004"},{"i":"w004","f":"es","l":"sum","p":",","m":191},{"i":"w005","f":"Virgo","l":"virgo","m":58},{"i":"w006","f":"María","l":"Maria","p":",","m":381},{"i":"w007","f":"quæ","l":"qui","m":182},{"i":"w008","f":"sub","l":"sub","m":0,"h":"w009"},{"i":"w009","f":"cruce","l":"crux","m":45},{"i":"w010","f":"Dómini","l":"dominus","m":54},{"i":"w011","f":"sustinuísti","l":"sustineo","p":",","m":238},{"i":"w012","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w013","f":"Nunc","l":"nunc","m":32},{"i":"w014","f":"cum","l":"cum","m":0,"h":"w015"},{"i":"w015","f":"eo","l":"is","m":289},{"i":"w016","f":"regnas","l":"regno","m":164},{"i":"w017","f":"in","l":"in","m":3,"h":"w018"},{"i":"w018","f":"ætérnum","l":"aeternus","p":".","m":137,"s":true},{"i":"w019","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-alleluia",
+  "title":"Amávit eum Dóminus / Iustus germinábit",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-ioseph-sponsi-beatae-mariae-virginis",
+  "sung":true,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Amávit","l":"amo","m":28},{"i":"w004","f":"eum","l":"is","m":36},{"i":"w005","f":"Dóminus","l":"dominus","p":",","m":60},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"ornávit","l":"orno","m":28},{"i":"w008","f":"eum","l":"is","p":":","m":36},{"i":"w009","f":"stolam","l":"stola","m":141},{"i":"w010","f":"glóriæ","l":"gloria","m":64},{"i":"w011","f":"índuit","l":"induo","m":195},{"i":"w012","f":"eum","l":"is","p":".","m":36},{"i":"w013","f":"Allelúia","l":"alleluia","p":".","m":46},{"i":"w014","f":"Iustus","l":"iustus","m":59,"s":true},{"i":"w015","f":"germinábit","l":"germino","m":354},{"i":"w016","f":"sicut","l":"sicut","m":15},{"i":"w017","f":"lílium","l":"lilium","p":":","m":104},{"i":"w018","f":"et","l":"et","m":15},{"i":"w019","f":"florébit","l":"floreo","m":19},{"i":"w020","f":"in","l":"in","m":3,"h":"w021"},{"i":"w021","f":"ætérnum","l":"aeternus","m":137,"s":true},{"i":"w022","f":"ante","l":"ante","m":3,"h":"w023"},{"i":"w023","f":"Dóminum","l":"dominus","p":".","m":35},{"i":"w024","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+  ]
+}

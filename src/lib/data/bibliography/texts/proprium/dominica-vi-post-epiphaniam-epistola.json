@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Tempora/Epi6-0; resolved section [Lectio] with declared inherited references"
+    "section": "web/www/missa/Latin/Tempora/Epi6-0.txt [Lectio], body line 22"
    },
    "entries": [
     {
@@ -14,10 +14,30 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned digital file supplies a complete comparison body. Its own readings, including substantive variants where present, are retained without claiming it is an independent copy of the controlling 1962 printing."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.liddell-scott-jones.greek-english-lexicon.1940",
+   "digital_item": "item.liddell-scott-jones.greek-english-lexicon.1940.perseus40038e4",
+   "role": "lexical_support",
+   "locator": {
+    "section": "s.v. plērophoria, TEI entry n83833, sense I, expressly citing 1 Thessalonians 1:5; grc.lsj.perseus-eng17.xml",
+    "page_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0057%3Aentry%3Dplhrofori%2Fa"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-vi-post-epiphaniam-epistola.w064.lsj1940",
+     "address": {
+      "kind": "word",
+      "word": "w064"
+     },
+     "claim": "The English lexicon gives assurance or certainty for plērophoria and explicitly cites 1 Thessalonians 1:5. This supports the contextual explanation of Latin plenitudine here; it does not replace the selected Latin wording or supply a target translation."
+    }
+   ],
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,10 +54,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited original page prints the complete component, directly re-collated including its actual grammatical readings and punctuation; no shared expansion is needed."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -59,20 +79,23 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Direct re-collation of the complete component from the identified registered 1962 typical-edition original page image; no OCR wording substituted."
   }
  ],
  "collation": {
   "id": "collation.proprium.dominica-vi-post-epiphaniam-epistola.mr1962-do44667ff",
   "text": "proprium.dominica-vi-post-epiphaniam-epistola",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "The complete 1962 typical-edition component; no shared expansion. Exact printed and pinned digital readings, including punctuation and substantive variants, remain distinguished in the witnesses and apparatus.",
   "witnesses": [
    "witness.proprium.dominica-vi-post-epiphaniam-epistola.do44667ff",
    "witness.proprium.dominica-vi-post-epiphaniam-epistola.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 14,
+   "classes": [
+    "orthography",
+    "punctuation"
+   ]
   }
  }
 }

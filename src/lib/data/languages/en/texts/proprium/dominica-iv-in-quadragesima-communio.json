@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Fourth Sunday of Lent” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Jerusalem, which is built as a city whose sharing is in one fellowship; for thither did the tribes go up, the tribes of the Lord, to praise Thy name, O Lord.","g":["Jerusalem","which","is built","as","a city",null,null,null,null,null,"thither","for","went up","the tribes","the tribes","of the Lord","to","praise","name","Thy","Lord"],"a":[{"s":5,"n":5,"a":0,"g":"joined together as one"}]}
+    {"id":"s01","tr":"Jerusalem, which is built as a city whose sharing is in one fellowship; for thither did the tribes go up, the tribes of the Lord, to praise Thy name, O Lord.","g":["Jerusalem","which","is built","as","a city","whose","sharing",null,null,null,"thither","for","went up","the tribes","the tribes","of the Lord","to","praise","name","Thy","Lord"],"a":[{"s":7,"n":1,"r":"idiom"},{"s":8,"n":2,"a":1,"g":"is in unity"}]}
   ]
 }

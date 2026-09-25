@@ -1,6 +1,6 @@
 {
   "id":"proprium.nativitas-domini-in-die-offertorium",
-  "title":"Tui sunt cæli et tua est terra",
+  "title":"Tui sunt cæli, et tua est terra",
   "category":"proprium",
   "section":"missa-fidelium",
   "variant":"nativitas-domini-in-die",
@@ -9,6 +9,6 @@
   "ad":1,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Tui","l":"tuus","m":99,"s":true},{"i":"w002","f":"sunt","l":"sum","m":117},{"i":"w003","f":"cæli","l":"caelum","m":68},{"i":"w004","f":"et","l":"et","m":15},{"i":"w005","f":"tua","l":"tuus","m":31,"s":true},{"i":"w006","f":"est","l":"sum","m":21},{"i":"w007","f":"terra","l":"terra","p":":","m":30},{"i":"w008","f":"orbem","l":"orbis","m":162},{"i":"w009","f":"terrárum","l":"terra","m":147},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"plenitúdinem","l":"plenitudo","m":7},{"i":"w012","f":"eius","l":"is","m":27},{"i":"w013","f":"tu","l":"tu","m":143},{"i":"w014","f":"fundásti","l":"fundo_stabilio","p":":","m":283,"a":5},{"i":"w015","f":"iustítia","l":"iustitia","m":24},{"i":"w016","f":"et","l":"et","m":15},{"i":"w017","f":"iudícium","l":"iudicium","m":82},{"i":"w018","f":"præparátio","l":"praeparatio","m":20},{"i":"w019","f":"sedis","l":"sedes","m":13},{"i":"w020","f":"tuæ","l":"tuus","p":".","m":14,"h":"w019"}]}
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Tui","l":"tuus","m":87,"h":"w003","a":6},{"i":"w002","f":"sunt","l":"sum","m":117},{"i":"w003","f":"cæli","l":"caelum","p":",","m":118,"a":13},{"i":"w004","f":"et","l":"et","m":15},{"i":"w005","f":"tua","l":"tuus","m":25,"h":"w007","a":6},{"i":"w006","f":"est","l":"sum","m":21},{"i":"w007","f":"terra","l":"terra","p":":","m":24,"a":6},{"i":"w008","f":"orbem","l":"orbis","m":162},{"i":"w009","f":"terrárum","l":"terra","p":",","m":147},{"i":"w010","f":"et","l":"et","m":15},{"i":"w011","f":"plenitúdinem","l":"plenitudo","m":7},{"i":"w012","f":"eius","l":"is","m":27},{"i":"w013","f":"tu","l":"tu","m":143},{"i":"w014","f":"fundásti","l":"fundo_stabilio","p":":","m":283,"a":5},{"i":"w015","f":"iustítia","l":"iustitia","m":24},{"i":"w016","f":"et","l":"et","m":15},{"i":"w017","f":"iudícium","l":"iudicium","m":104,"a":6},{"i":"w018","f":"præparátio","l":"praeparatio","m":20},{"i":"w019","f":"sedis","l":"sedes","m":13},{"i":"w020","f":"tuæ","l":"tuus","p":".","m":14,"h":"w019"}]}
   ]
 }

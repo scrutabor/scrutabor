@@ -37,7 +37,7 @@
      "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-25"
   }
  ],
  "witnesses": [
@@ -71,8 +71,10 @@
    "witness.proprium.beata-maria-virgo-regina-graduale.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 1,
+   "classes": [
+    "punctuation"
+   ]
   }
  }
 }

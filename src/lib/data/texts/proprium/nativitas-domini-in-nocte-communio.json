@@ -1,6 +1,6 @@
 {
   "id":"proprium.nativitas-domini-in-nocte-communio",
-  "title":"In splendóribus Sanctórum, ex útero ante lucíferum",
+  "title":"In splendóribus sanctórum, ex útero ante lucíferum",
   "category":"proprium",
   "section":"missa-fidelium",
   "variant":"nativitas-domini-in-nocte",
@@ -9,6 +9,6 @@
   "ad":1,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"In","l":"in","m":0,"h":"w002"},{"i":"w002","f":"splendóribus","l":"splendor","m":197},{"i":"w003","f":"Sanctórum","l":"sanctus","p":",","m":76,"s":true},{"i":"w004","f":"ex","l":"ex","m":0,"h":"w005"},{"i":"w005","f":"útero","l":"uterus","m":29},{"i":"w006","f":"ante","l":"ante","m":3,"h":"w007"},{"i":"w007","f":"lucíferum","l":"lucifer","m":35},{"i":"w008","f":"génui","l":"gigno","m":173},{"i":"w009","f":"te","l":"tu","p":".","m":131}]}
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true},"lecta":{"gradus":4,"source":"DMS 31 d","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"In","l":"in","m":0,"h":"w002"},{"i":"w002","f":"splendóribus","l":"splendor","m":197},{"i":"w003","f":"sanctórum","l":"sanctus","p":",","m":76,"s":true},{"i":"w004","f":"ex","l":"ex","m":0,"h":"w005"},{"i":"w005","f":"útero","l":"uterus","m":29},{"i":"w006","f":"ante","l":"ante","m":3,"h":"w007"},{"i":"w007","f":"lucíferum","l":"lucifer","m":35},{"i":"w008","f":"génui","l":"gigno","m":173},{"i":"w009","f":"te","l":"tu","p":".","m":131}]}
   ]
 }

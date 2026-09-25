@@ -110,7 +110,10 @@ describe('source parentheses', () => {
 	});
 
 	it('does not alter a legacy full segment or speaker/mass-form identity', () => {
-		const segment = original.text.segments[0];
+		// The edition now prints this epistle's own parenthesis; without it the
+		// segment is the legacy shape the reader must leave untouched.
+		const segment = structuredClone(original.text.segments[0]);
+		delete segment.parentheses;
 		expect(surface(segment)).toBe(
 			segment.words!.map((word) => word.form + (word.post ?? '')).join(' ')
 		);

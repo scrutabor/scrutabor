@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pasc7-0.txt (section [Evangelium]); resolved spans: web/www/missa/Latin/Tempora/Pasc7-0.txt (lines 79-81)"
+    "section": "web/www/missa/Latin/Tempora/Pasc7-0.txt [Evangelium], body line 81"
    },
    "entries": [
     {
@@ -14,10 +14,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned digital file supplies a complete comparison body. Its own readings, including substantive variants where present, are retained without claiming it is an independent copy of the controlling 1962 printing."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,10 +34,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited original page prints the complete component, directly re-collated including its actual grammatical readings and punctuation; no shared expansion is needed."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.valla.elegantiae.1538",
+   "digital_item": "item.valla.elegantiae.1538.mateo",
+   "role": "grammatical_support",
+   "locator": {
+    "printed": "Liber III, caput XIX, pp. 184–186; Gospel example p. 185",
+    "scan": "MATEO/CAMENA images valla184–valla186; Sch 102/218",
+    "page_url": "https://mateo.uni-mannheim.de/itali/valla3/jpg/valla185.jpg"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-pentecostes-evangelium.w038.valla1538",
+     "address": {
+      "kind": "word",
+      "word": "w038"
+     },
+     "claim": "Valla explicitly cites sermonem quem vos audistis, non est meus while explaining an antecedent attracted into the relative pronoun's case. This supports the grammatical explanation of the retained accusative sermonem, not a change to the printed reading."
+    }
+   ],
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -59,21 +80,22 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Direct re-collation of the complete component from the identified registered 1962 typical-edition original page image; no OCR wording substituted."
   }
  ],
  "collation": {
   "id": "collation.proprium.dominica-pentecostes-evangelium.mr1962-do44667ff",
   "text": "proprium.dominica-pentecostes-evangelium",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "The complete 1962 typical-edition component; no shared expansion. Exact printed and pinned digital readings, including punctuation and substantive variants, remain distinguished in the witnesses and apparatus.",
   "witnesses": [
    "witness.proprium.dominica-pentecostes-evangelium.do44667ff",
    "witness.proprium.dominica-pentecostes-evangelium.mr1962"
   ],
   "apparatus": {
-   "entries": 5,
+   "entries": 12,
    "classes": [
-    "orthography"
+    "orthography",
+    "punctuation"
    ]
   }
  }

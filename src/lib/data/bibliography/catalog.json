@@ -51,9 +51,19 @@
    "title": "Liber Usualis"
   },
   {
+   "id": "work.liddell-scott-jones.greek-english-lexicon",
+   "responsible": "Henry George Liddell; Robert Scott; Henry Stuart Jones; Roderick McKenzie",
+   "title": "A Greek-English Lexicon"
+  },
+  {
    "id": "work.missale-romanum",
    "responsible": "Ecclesia Catholica",
    "title": "Missale Romanum ex decreto SS. Concilii Tridentini restitutum"
+  },
+  {
+   "id": "work.valla.elegantiae",
+   "responsible": "Laurentius Valla",
+   "title": "De linguae Latinae elegantia libri sex"
   }
  ],
  "editions": [
@@ -260,6 +270,24 @@
    }
   },
   {
+   "id": "edition.liddell-scott-jones.greek-english-lexicon.1940",
+   "work": "work.liddell-scott-jones.greek-english-lexicon",
+   "title": "A Greek-English Lexicon",
+   "edition_statement": "Revised and augmented throughout by Henry Stuart Jones, with the assistance of Roderick McKenzie",
+   "place": "Oxford",
+   "publisher": "Clarendon Press",
+   "year": "1940",
+   "publication_type": "lexicon",
+   "authority": "reference_work",
+   "languages": [
+    "en"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic and factual reference only. No claim of public-domain status for the 1940 edition or permission to reproduce the printed dictionary is made."
+   }
+  },
+  {
    "id": "edition.missale-romanum.1962-typica",
    "work": "work.missale-romanum",
    "recension": "Roman Missal governed by the 1960 Code of Rubrics",
@@ -276,6 +304,23 @@
    "rights": {
     "status": "public-domain",
     "basis": "Liturgical Latin of the 1962 typical edition."
+   }
+  },
+  {
+   "id": "edition.valla.elegantiae.1538",
+   "work": "work.valla.elegantiae",
+   "title": "De linguae Latinae elegantia libri sex",
+   "place": "Lugduni",
+   "publisher": "Sebastianus Gryphius",
+   "year": "1538",
+   "publication_type": "grammar",
+   "authority": "reference_work",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "public-domain",
+    "basis": "The Latin work and identified 1538 printing are public-domain; no permission to redistribute repository photographs is asserted."
    }
   }
  ],
@@ -435,6 +480,16 @@
    "access": "open"
   },
   {
+   "id": "item.liddell-scott-jones.greek-english-lexicon.1940.perseus40038e4",
+   "edition": "edition.liddell-scott-jones.greek-english-lexicon.1940",
+   "repository": "Perseus Digital Library",
+   "kind": "born-digital",
+   "record_url": "https://github.com/PerseusDL/lexica/tree/40038e40937fa639639802e73dac15e6c938496b",
+   "revision": "40038e40937fa639639802e73dac15e6c938496b",
+   "access": "open",
+   "digitization_rights": "PerseusDL lexica distributes its digital repository under CC-BY-SA 4.0. This reference does not republish the dictionary entry."
+  },
+  {
    "id": "item.missale-romanum.1962-typica.ia",
    "edition": "edition.missale-romanum.1962-typica",
    "repository": "Internet Archive",
@@ -442,6 +497,16 @@
    "record_url": "https://archive.org/details/missale-romanum-1962",
    "scan_url": "https://archive.org/download/missale-romanum-1962/Missale%20Romanum%201962.pdf",
    "access": "open"
+  },
+  {
+   "id": "item.valla.elegantiae.1538.mateo",
+   "edition": "edition.valla.elegantiae.1538",
+   "repository": "University of Mannheim, MATEO/CAMENA, Sch 102/218",
+   "kind": "scan",
+   "record_url": "https://mateo.uni-mannheim.de/itali/autoren/valla_itali.html",
+   "scan_url": "https://mateo.uni-mannheim.de/itali/valla3/jpg/valla185.jpg",
+   "access": "open",
+   "digitization_rights": "Repository photographs are linked as research evidence, not reproduced or licensed for redistribution here."
   }
  ]
 }

@@ -23,6 +23,13 @@
         "direct_approved_print"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.cathedra-sancti-petri-introitus",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
       }
      ],
      "lemmas": []
@@ -577,6 +584,20 @@
        "uses": 1
       },
       {
+       "id": "proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.beata-maria-virgo-regina-extra-tempus-paschale-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.beata-maria-virgo-regina-graduale",
        "roles": [
         "derived_digital_collation_aid"
@@ -606,6 +627,20 @@
       },
       {
        "id": "proprium.beata-maria-virgo-regina-secreta",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.beata-maria-virgo-regina-tempore-paschali-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.beata-maria-virgo-regina-tempore-paschali-communio",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -5799,6 +5834,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-collecta",
        "roles": [
         "derived_digital_collation_aid"
@@ -5814,6 +5856,27 @@
       },
       {
        "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -6296,6 +6359,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-thomae-apostoli-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-thomae-apostoli-epistola",
        "roles": [
         "derived_digital_collation_aid"
@@ -6573,7 +6643,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-introitus",
@@ -7512,6 +7582,20 @@
        "uses": 1
       },
       {
+       "id": "proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.beata-maria-virgo-regina-extra-tempus-paschale-offertorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.beata-maria-virgo-regina-graduale",
        "roles": [
         "official_text"
@@ -7541,6 +7625,20 @@
       },
       {
        "id": "proprium.beata-maria-virgo-regina-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.beata-maria-virgo-regina-tempore-paschali-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.beata-maria-virgo-regina-tempore-paschali-communio",
        "roles": [
         "official_text"
        ],
@@ -12734,6 +12832,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-alleluia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-collecta",
        "roles": [
         "official_text"
@@ -12749,6 +12854,27 @@
       },
       {
        "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-epistola",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-introitus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
        "roles": [
         "official_text"
        ],
@@ -13231,6 +13357,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-thomae-apostoli-communio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-thomae-apostoli-epistola",
        "roles": [
         "official_text"
@@ -13508,7 +13641,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-introitus",
@@ -14283,21 +14416,21 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.cathedra-sancti-petri-postcommunio",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.cathedra-sancti-petri-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.commemoratio-baptismatis-domini-collecta",
@@ -17726,6 +17859,34 @@
        ]
       },
       {
+       "id": "diffamo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n13854"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.diffamo.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "diffamo"
+           },
+           "claim": "The entry distinguishes spreading or publishing a report, including late widespread proclamation, from defaming or maligning a person."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
        "id": "diffundo",
        "roles": [
         "lexical_support"
@@ -18111,6 +18272,62 @@
             "lemma": "floreo"
            },
            "claim": "The second-conjugation infinitive has long e, supporting florére and perfect floruit."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "forma",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n18566"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.forma.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "forma"
+           },
+           "claim": "The entry includes form or appearance, beauty, a model or pattern, and transferred nature or manner. It is not confined to physical shape."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "formido",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n18588"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.formido.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "formido"
+           },
+           "claim": "The verbal entry formido (formidare) means to fear or be afraid, including absolute use. It is distinct from the homonymous noun formido, formidinis."
           }
          ],
          "verified_on": "2026-09-19"
@@ -18762,6 +18979,34 @@
        ]
       },
       {
+       "id": "mansio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n27904"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.mansio.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "mansio"
+           },
+           "claim": "The entry gives staying or remaining and the transferred sense of a dwelling or abode. It explicitly cites both mansionem apud eum faciemus and multae mansiones in John 14."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
        "id": "mansuetudo",
        "roles": [
         "lexical_support"
@@ -18783,6 +19028,34 @@
             "lemma": "mansuetudo"
            },
            "claim": "L&S n27919, XML line 28335: mansŭētūdo, ĭnis; long penult tū in nominative."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "meipse",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entries n15326 (ego) and n24872 (ipse), especially senses n24872.4 and n24872.29"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.meipse.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "meipse"
+           },
+           "claim": "Ego is the first-person personal pronoun; ipse adds emphasis to a personal pronoun and can agree with the subject or object. These entries establish the components, not a separate paradigm headed meipse."
           }
          ],
          "verified_on": "2026-09-19"
@@ -19406,6 +19679,34 @@
        ]
       },
       {
+       "id": "simulacrum",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n44337"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.simulacrum.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "simulacrum"
+           },
+           "claim": "The entry describes a likeness or image, especially statues of gods, as well as a mere semblance. The broad image sense is not intrinsically restricted to idols."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
        "id": "sors",
        "roles": [
         "lexical_support"
@@ -19546,6 +19847,34 @@
        ]
       },
       {
+       "id": "suggero",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n46481"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.suggero.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "suggero"
+           },
+           "claim": "The entry includes suggesting or bringing something to mind, alongside furnishing and adding. These are semantic ranges, not a source of translated prayer wording."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
        "id": "summus",
        "roles": [
         "lexical_support"
@@ -19595,6 +19924,34 @@
             "lemma": "supplico"
            },
            "claim": "The first-conjugation verb has long-vowel endings in its infinitive, perfect and supine, determining the displayed stress."
+          }
+         ],
+         "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "suscito",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n47103"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.suscito.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "suscito"
+           },
+           "claim": "The entry includes waking a sleeper and reviving the dead, as well as raising or inciting. The verb is causative rather than a statement that its subject rises by itself."
           }
          ],
          "verified_on": "2026-09-19"
@@ -19910,6 +20267,38 @@
        ]
       }
      ]
+    },
+    {
+     "edition": "edition.liddell-scott-jones.greek-english-lexicon.1940",
+     "roles": [
+      "lexical_support"
+     ],
+     "texts": [
+      {
+       "id": "proprium.dominica-vi-post-epiphaniam-epistola",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.valla.elegantiae.1538",
+     "roles": [
+      "grammatical_support"
+     ],
+     "texts": [
+      {
+       "id": "proprium.dominica-pentecostes-evangelium",
+       "roles": [
+        "grammatical_support"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
     },
     {
      "edition": "edition.biblia-sacra-vulgatae-editionis-1914",

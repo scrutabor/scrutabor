@@ -248,12 +248,12 @@ test.describe('links into a complete formulary', () => {
 	});
 
 	test('bare verse and word selectors beside a fragment complete together', async ({ page }) => {
-		await page.goto(`${PALM}?s=s04-s02&w=w005#text-proprium-${GOSPEL}`);
+		await page.goto(`${PALM}?s=s04-s02&w=w003#text-proprium-${GOSPEL}`);
 		await expect(page.locator('.segment-selected')).toHaveCount(3);
 		await expect(page.locator(`#${GOSPEL}-s02`)).toHaveClass(/segment-selected/);
 		await expect(page.locator('aside .form')).toBeVisible();
 		const fragment = `#text-proprium-${GOSPEL}`;
-		await expect(page).toHaveURL(atRoute(PALM, `?s=${GOSPEL}.s02-s04&w=${GOSPEL}.w005${fragment}`));
+		await expect(page).toHaveURL(atRoute(PALM, `?s=${GOSPEL}.s02-s04&w=${GOSPEL}.w003${fragment}`));
 	});
 
 	test('a bare citation without a known part is not guessed', async ({ page }) => {

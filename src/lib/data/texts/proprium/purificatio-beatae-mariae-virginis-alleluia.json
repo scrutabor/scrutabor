@@ -1,6 +1,6 @@
 {
   "id":"proprium.purificatio-beatae-mariae-virginis-alleluia",
-  "title":"Allelúia, allelúia. Senex Púerum portábat: Puer autem",
+  "title":"Allelúia, allelúia. Senex púerum portábat: puer autem",
   "category":"proprium",
   "section":"missa-catechumenorum",
   "variant":"purificatio-beatae-mariae-virginis",
@@ -9,6 +9,6 @@
   "ad":1,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46,"a":14},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46,"a":14},{"i":"w003","f":"Senex","l":"senex","m":59,"s":true,"a":14},{"i":"w004","f":"Púerum","l":"puer","m":35,"a":14},{"i":"w005","f":"portábat","l":"porto","p":":","m":516,"a":14},{"i":"w006","f":"Puer","l":"puer","m":60,"a":14},{"i":"w007","f":"autem","l":"autem","m":15,"a":14},{"i":"w008","f":"senem","l":"senex","m":748,"s":true,"a":14},{"i":"w009","f":"regébat","l":"rego","p":".","m":502,"a":14},{"i":"w010","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14}]}
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46,"a":14},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46,"a":14},{"i":"w003","f":"Senex","l":"senex","m":59,"s":true,"a":14},{"i":"w004","f":"púerum","l":"puer","m":35,"a":14},{"i":"w005","f":"portábat","l":"porto","p":":","m":516,"a":14},{"i":"w006","f":"puer","l":"puer","m":60,"a":14},{"i":"w007","f":"autem","l":"autem","m":15,"a":14},{"i":"w008","f":"senem","l":"senex","m":748,"s":true,"a":14},{"i":"w009","f":"regébat","l":"rego","p":".","m":502,"a":14},{"i":"w010","f":"Allelúia","l":"alleluia","p":".","m":46,"a":14}]}
   ]
 }

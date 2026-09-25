@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/10-07; resolved section [Introitus] with declared inherited references"
+    "section": "Latin/Sancti/10-07.txt [Introitus], lines 13–18; &Gloria resolved from Latin/Ordo/Prayers.txt [Gloria], lines 12–14"
    },
    "entries": [
     {
@@ -14,18 +14,19 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned Latin data resolve the antiphon, psalm verse, full Gloria and repeated antiphon through the named sections. This is a derived digital comparison, not an independent page image."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "p. 692",
-    "scan": "leaf n773 / PDF p. 774",
+    "printed": "pp. 692, 1; p. xxix, no. 427",
+    "scan": "leaves n773, n80, n34 / PDF pp. 774, 81, 35",
+    "section": "Proper Introitus; full Gloria and year-round antiphon-repetition rule; general rubric 427",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n773/mode/1up"
    },
    "entries": [
@@ -34,10 +35,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The complete introit is an explicit same-edition composite: the proper antiphon and Psalm44:2 on page 692, the full Gloria on page 1, and the repeated antiphon required by the proper-page incipit, page1's annual repetition rule and general rubric427. These page images establish all recited words without relying on the derived comparison text."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -49,7 +50,7 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
+   "independence_basis": "Pinned upstream Latin data maintained outside this corpus, resolved through the exact cited sections. Full doxology comes from the pinned Prayers section, not from the abbreviated proper page."
   },
   {
    "id": "witness.proprium.beatae-mariae-virginis-a-rosario-introitus.mr1962",
@@ -59,20 +60,23 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Every word is supported by directly viewed pages of the same 1962 edition: the proper antiphon and verse, the full printed Gloria, and explicit annual antiphon-repetition instructions. The component ranges are declared in the header. No expansion is copied from the digital comparison source."
   }
  ],
  "collation": {
   "id": "collation.proprium.beatae-mariae-virginis-a-rosario-introitus.mr1962-do44667ff",
   "text": "proprium.beatae-mariae-virginis-a-rosario-introitus",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "The 1962 introit explicitly composed from the same edition's proper antiphon and psalm, full Gloria, and printed antiphon-repetition instructions",
   "witnesses": [
    "witness.proprium.beatae-mariae-virginis-a-rosario-introitus.do44667ff",
    "witness.proprium.beatae-mariae-virginis-a-rosario-introitus.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 4,
+   "classes": [
+    "orthography",
+    "punctuation"
+   ]
   }
  }
 }

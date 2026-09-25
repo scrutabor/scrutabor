@@ -1,0 +1,80 @@
+{
+ "id": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Sancti/03-19 [Communio], missa/Latin/Sancti/03-19 source line 58"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Latin data give the same chant; the parenthesized Paschaltide Alleluia is applied according to the witness's declared seasonal mode."
+    }
+   ],
+   "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 492",
+    "scan": "leaf n573 / PDF p. 574",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n573/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The directly viewed page (p. 492) prints this component; its conditional (T. P.) marks are framing for the declared recension."
+    }
+   ],
+   "verified_on": "2026-09-25"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio.do44667ff",
+   "text": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio",
+   "use": "use.proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio.do44667ff",
+   "role": "derived_comparison",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
+  },
+  {
+   "id": "witness.proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio.mr1962",
+   "text": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio",
+   "use": "use.proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio.mr1962",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio.mr1962-do44667ff",
+  "text": "proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio",
+  "recension": "The 1962 communion outside Paschaltide, without the conditional (T. P.) Alleluia",
+  "witnesses": [
+   "witness.proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio.do44667ff",
+   "witness.proprium.sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio.mr1962"
+  ],
+  "apparatus": {
+   "entries": 2,
+   "classes": [
+    "orthography"
+   ]
+  }
+ }
+}

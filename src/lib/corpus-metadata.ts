@@ -67,8 +67,8 @@ export interface CorpusMetrics {
 
 export type ComponentCondition =
 	| { weekday: 'sunday' | 'not-sunday' }
-	| { season: 'paschale' | 'not-paschale' }
-	| { use: 'votive-after-septuagesima' };
+	| { season: 'paschale' | 'not-paschale' | 'post-septuagesimam' | 'not-post-septuagesimam' }
+	| { use: 'votive-after-septuagesima' | 'votive-before-septuagesima-or-after-pentecost' };
 
 export interface FormularyComponentMetadata {
 	key: string;

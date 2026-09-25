@@ -3,7 +3,9 @@
   "language":"en",
   "about":"The postcommunio of the formulary “Chair of Saint Peter the Apostle” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"O Lord, may the gift we offer bring us joy, that as we praise Your wondrous work in Your Apostle Peter, so through him may we share Your generous forgiveness. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["may bring joy","us","Lord","the gift","offered","that","as","in","Apostle","Thy","Peter","Thee","wonderful","we proclaim","so","through","him","Thy","may receive","forgiveness","abundance","through","the Lord","our","Jesus","Christ","Son","thy","who","with thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages"]},
+    {"id":"s01","tr":"May the gift we have offered gladden us, O Lord, so that, as we proclaim You wonderful in Your Apostle Peter, so through him we may receive the abundance of Your pardon.","g":["may bring joy","us","Lord","the gift","offered","that","as","in","Apostle","Thy","Peter","Thee","wonderful","we proclaim","so","through","him","Thy","may receive","forgiveness","abundance"]},
+    {"id":"s03","nr":"The priest at once adds the commemoration of Saint Paul, who is always remembered together with Saint Peter. A single conclusion closes both prayers."},
+    {"id":"s04","tr":"Sanctified by the saving mystery, O Lord, we beseech You that we may not lack the prayer of him under whose patronage You have granted us to be guided. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["sanctified","Lord","saving","by the mystery","we beseech","that","to us","his","not","may be lacking","the prayer","by whose","us","Thou hast granted","patronage","to be guided","through","the Lord","our","Jesus","Christ","Son","Thy","who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages"]},
     {"id":"s02","tr":"Amen.","g":["amen"]}
   ]
 }

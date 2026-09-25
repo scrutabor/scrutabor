@@ -84,6 +84,10 @@ export const SEASONS = [
 ] as const;
 export type Season = (typeof SEASONS)[number];
 
+// A printed "post Septuagesimam" rubric covers Septuagesima Sunday until
+// Easter: the Purification's tract on the years its date falls there.
+const POST_SEPTUAGESIMAM: readonly Season[] = ['septuagesima', 'quadragesima', 'passionis'];
+
 export interface ProperDay {
 	/** Stable identity of this particular Mass, including any variant. */
 	id: string;
@@ -133,7 +137,11 @@ export function componentApplies(
 	if ('season' in condition) {
 		const occurrence = dayOn(selectedDate);
 		if (!occurrence || !SEASONS.includes(occurrence.season as Season)) return false;
-		return (occurrence.season === 'paschale') === (condition.season === 'paschale');
+		const season = occurrence.season as Season;
+		if (condition.season === 'paschale' || condition.season === 'not-paschale') {
+			return (season === 'paschale') === (condition.season === 'paschale');
+		}
+		return POST_SEPTUAGESIMAM.includes(season) === (condition.season === 'post-septuagesimam');
 	}
 	// A source's votive alternative is never a calendar-feast component.
 	return false;

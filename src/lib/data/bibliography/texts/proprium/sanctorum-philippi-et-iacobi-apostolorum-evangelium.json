@@ -6,7 +6,27 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/05-01; resolved section [Evangelium] with declared inherited references"
+    "section": "Latin/Sancti/05-01.txt, [Evangelium], line 39 (Ioannes 14:7)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/05-01.txt#L39"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctorum-philippi-et-iacobi-apostolorum-evangelium.w104.do44667ff",
+     "address": {
+      "kind": "word",
+      "word": "w104"
+     },
+     "claim": "The pinned digital Gospel reads cognoscátis, present active subjunctive, second person plural. This is a variant from, not an exact transcription of, the printed cognoscétis at this word."
+    }
+   ],
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Sancti/05-01.txt [Evangelium], body line 39"
    },
    "entries": [
     {
@@ -14,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned digital file supplies a complete comparison body. Its own readings, including substantive variants where present, are retained without claiming it is an independent copy of the controlling 1962 printing."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,10 +54,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited original page prints the complete component, directly re-collated including its actual grammatical readings and punctuation; no shared expansion is needed."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 527, SS. Philippi et Iacobi Apostolorum, Evangelium (Io. 14, 7)",
+    "scan": "Archive.org leaf n608; PDF page 609",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n608/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctorum-philippi-et-iacobi-apostolorum-evangelium.w104.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w104"
+     },
+     "claim": "The printed Gospel reads cognoscétis, future active indicative, second person plural; this is the selected reading at this word."
+    }
+   ],
+   "verified_on": "2026-09-19"
   }
  ],
  "witnesses": [
@@ -59,20 +100,26 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Direct re-collation of the complete component from the identified registered 1962 typical-edition original page image; no OCR wording substituted."
   }
  ],
  "collation": {
   "id": "collation.proprium.sanctorum-philippi-et-iacobi-apostolorum-evangelium.mr1962-do44667ff",
   "text": "proprium.sanctorum-philippi-et-iacobi-apostolorum-evangelium",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "The complete 1962 typical-edition component; no shared expansion. Exact printed and pinned digital readings, including punctuation and substantive variants, remain distinguished in the witnesses and apparatus.",
   "witnesses": [
    "witness.proprium.sanctorum-philippi-et-iacobi-apostolorum-evangelium.do44667ff",
    "witness.proprium.sanctorum-philippi-et-iacobi-apostolorum-evangelium.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 24,
+   "classes": [
+    "accent",
+    "capitalization",
+    "orthography",
+    "punctuation",
+    "substantive"
+   ]
   }
  }
 }

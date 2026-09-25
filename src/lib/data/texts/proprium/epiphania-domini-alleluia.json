@@ -1,6 +1,6 @@
 {
   "id":"proprium.epiphania-domini-alleluia",
-  "title":"Allelúia, allelúia Vídimus stellam eius in Oriénte",
+  "title":"Allelúia, allelúia. Vídimus stellam eius in Oriénte",
   "category":"proprium",
   "section":"missa-catechumenorum",
   "variant":"epiphania-domini",
@@ -9,6 +9,6 @@
   "ad":1,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","m":46},{"i":"w003","f":"Vídimus","l":"video","m":300},{"i":"w004","f":"stellam","l":"stella","m":141},{"i":"w005","f":"eius","l":"is","m":27},{"i":"w006","f":"in","l":"in","m":0,"h":"w007"},{"i":"w007","f":"Oriénte","l":"oriens","p":",","m":109},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"vénimus","l":"venio","m":714},{"i":"w010","f":"cum","l":"cum","m":0,"h":"w011"},{"i":"w011","f":"munéribus","l":"munus","m":319},{"i":"w012","f":"adoráre","l":"adoro","m":239},{"i":"w013","f":"Dóminum","l":"dominus","p":".","m":35},{"i":"w014","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Vídimus","l":"video","m":300},{"i":"w004","f":"stellam","l":"stella","m":141},{"i":"w005","f":"eius","l":"is","m":27},{"i":"w006","f":"in","l":"in","m":0,"h":"w007"},{"i":"w007","f":"Oriénte","l":"oriens","p":",","m":109},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"vénimus","l":"venio","m":714},{"i":"w010","f":"cum","l":"cum","m":0,"h":"w011"},{"i":"w011","f":"munéribus","l":"munus","m":319},{"i":"w012","f":"adoráre","l":"adoro","m":239},{"i":"w013","f":"Dóminum","l":"dominus","p":".","m":35},{"i":"w014","f":"Allelúia","l":"alleluia","p":".","m":46}]}
   ]
 }

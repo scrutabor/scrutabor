@@ -1,6 +1,6 @@
 {
   "id":"proprium.sanctissimi-nominis-iesu-alleluia",
-  "title":"Allelúia, allelúia Laudem Dómini loquétur os meum",
+  "title":"Allelúia, allelúia. Laudem Dómini loquétur os meum",
   "category":"proprium",
   "section":"missa-catechumenorum",
   "variant":"sanctissimi-nominis-iesu",
@@ -9,6 +9,6 @@
   "ad":1,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","m":46},{"i":"w003","f":"Laudem","l":"laus","m":7},{"i":"w004","f":"Dómini","l":"dominus","m":54},{"i":"w005","f":"loquétur","l":"loquor","m":427},{"i":"w006","f":"os","l":"os","m":136},{"i":"w007","f":"meum","l":"meus","p":",","m":105,"s":true},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"benedícat","l":"benedico","m":257},{"i":"w010","f":"omnis","l":"omnis","m":25,"h":"w011"},{"i":"w011","f":"caro","l":"caro","m":20},{"i":"w012","f":"nomen","l":"nomen","m":97},{"i":"w013","f":"sanctum","l":"sanctus","m":105,"h":"w012"},{"i":"w014","f":"eius","l":"is","p":".","m":27},{"i":"w015","f":"Allelúia","l":"alleluia","p":".","m":46}]}
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","participation":{"cantu":{"gradus":3,"source":"DMS 25 c","conditional":true}},"delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"w":[{"i":"w001","f":"Allelúia","l":"alleluia","p":",","m":46},{"i":"w002","f":"allelúia","l":"alleluia","p":".","m":46},{"i":"w003","f":"Laudem","l":"laus","m":7},{"i":"w004","f":"Dómini","l":"dominus","m":54},{"i":"w005","f":"loquétur","l":"loquor","m":427},{"i":"w006","f":"os","l":"os","m":136},{"i":"w007","f":"meum","l":"meus","p":",","m":105,"s":true},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"benedícat","l":"benedico","m":257},{"i":"w010","f":"omnis","l":"omnis","m":25,"h":"w011"},{"i":"w011","f":"caro","l":"caro","m":20},{"i":"w012","f":"nomen","l":"nomen","m":97},{"i":"w013","f":"sanctum","l":"sanctus","m":105,"h":"w012"},{"i":"w014","f":"eius","l":"is","p":".","m":27},{"i":"w015","f":"Allelúia","l":"alleluia","p":".","m":46}]}
   ]
 }

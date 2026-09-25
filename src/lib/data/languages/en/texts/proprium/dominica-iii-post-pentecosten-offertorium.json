@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “3rd Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"May all who know Your name hope in You, Lord, for You do not abandon those who seek You. Sing praise to the Lord enthroned in Sion, for He has not forgotten the cry of the afflicted.","g":["may hope","in","You","all","who","know",null,null,"O Lord","for","not","forsake","those who seek","Thee","Sing praise","to the Lord","who","dwelleth","in","Sion","for","not",null,null,"cry","of the poor"],"a":[{"s":6,"n":2,"a":0,"g":"Your name"},{"s":22,"n":2,"a":1,"g":"hath forgotten"}],"ex":{"w001":"A jussive subjunctive: all who know the Lord’s name are asked to hope in Him. The subject omnes follows the verb in Latin."}}
+    {"id":"s01","tr":"May all who know Your name hope in You, Lord, for You do not abandon those who seek You. Sing praise to the Lord, who dwells in Sion, for He has not forgotten the prayer of the poor.","g":["may hope","in","Thee","all","who","know",null,null,"Lord","for","not","forsakest","those who seek","Thee","Sing praise","to the Lord","who","dwelleth","in","Sion","for","not",null,null,"prayer","of the poor"],"a":[{"s":6,"n":2,"a":0,"g":"Thy name"},{"s":22,"n":2,"a":1,"g":"hath forgotten"}],"ex":{"w001":"An optative subjunctive: the psalmist, addressing the Lord, wishes that all who know His name may hope in Him. The subject omnes follows the verb in Latin."}}
   ]
 }

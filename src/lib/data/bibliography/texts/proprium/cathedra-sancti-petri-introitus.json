@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/02-22; resolved section [Introitus] with declared inherited references"
+    "section": "horas/Latin/Commune/C2.txt [Introitus], lines 349–355; &Gloria resolved from missa/Latin/Ordo/Prayers.txt [Gloria], lines 12–14"
    },
    "entries": [
     {
@@ -14,19 +14,39 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned Latin data give the Statuit antiphon, psalm verse, full Gloria and repeated antiphon in the Common whose chant the typical edition prints. The digital proper for 22 February resolves to a different introit (In virtute tua, @Commune/C2a), so this attests the chant text, not that assignment. This is a derived digital comparison, not an independent page image."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.liber-usualis.1961",
+   "digital_item": "item.liber-usualis.1961.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "pp. 1390, 1330–1331, 1182",
+    "scan": "PDF pp. 1594, 1530–1531, 1376"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.cathedra-sancti-petri-introitus.lu1961",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "22 February directs the Mass of St Peter's Chair at Rome, whose Introit is Statuit on page 1182. The directly viewed antiphon and psalm verse form this declared partial comparison."
+    }
+   ],
+   "verified_on": "2026-09-25"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "p. 478",
-    "scan": "leaf n559 / PDF p. 560",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n559/mode/1up"
+    "printed": "pp. 477, 1; p. xxix, no. 427",
+    "scan": "leaves n558, n80, n34 / PDF pp. 559, 81, 35",
+    "section": "Proper Introitus; full Gloria and year-round antiphon-repetition rule; general rubric 427",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n558/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +54,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The complete introit is an explicit same-edition composite: the proper antiphon Statuit and Psalm131:1 on page 477, the full Gloria on page 1, and the repeated antiphon required by the proper-page incipit, page1's annual repetition rule and general rubric427. These page images establish all recited words without relying on the derived comparison text."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-09-25"
   }
  ],
  "witnesses": [
@@ -49,7 +69,42 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
+   "independence_basis": "Pinned upstream Latin data maintained outside this corpus, resolved through the exact cited Common sections. Full doxology comes from the pinned Prayers section, not from the abbreviated proper page."
+  },
+  {
+   "id": "witness.proprium.cathedra-sancti-petri-introitus.lu1961",
+   "text": "proprium.cathedra-sancti-petri-introitus",
+   "use": "use.proprium.cathedra-sancti-petri-introitus.lu1961",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "words",
+    "words": [
+     "w069",
+     "w070",
+     "w071",
+     "w072",
+     "w073",
+     "w074",
+     "w075",
+     "w076",
+     "w077",
+     "w078",
+     "w079",
+     "w080",
+     "w081",
+     "w082",
+     "w083",
+     "w084",
+     "w085",
+     "w086",
+     "w087",
+     "w088",
+     "w089",
+     "w090",
+     "w091"
+    ]
+   },
+   "independence_basis": "Separate 1961 printed liturgical book, read at its explicit three-location delegation chain; no assertion of genealogical independence from the Roman liturgical tradition."
   },
   {
    "id": "witness.proprium.cathedra-sancti-petri-introitus.mr1962",
@@ -59,20 +114,25 @@
    "coverage": {
     "kind": "full"
    },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+   "independence_basis": "Every word is supported by directly viewed pages of the same 1962 edition: the proper antiphon and verse, the full printed Gloria, and explicit annual antiphon-repetition instructions. The component ranges are declared in the header. No expansion is copied from the digital comparison source."
   }
  ],
  "collation": {
-  "id": "collation.proprium.cathedra-sancti-petri-introitus.mr1962-do44667ff",
+  "id": "collation.proprium.cathedra-sancti-petri-introitus.source-comparison",
   "text": "proprium.cathedra-sancti-petri-introitus",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
+  "recension": "The 1962 introit explicitly composed from the same edition's proper antiphon and psalm (page 477), full Gloria, and printed antiphon-repetition instructions",
   "witnesses": [
    "witness.proprium.cathedra-sancti-petri-introitus.do44667ff",
+   "witness.proprium.cathedra-sancti-petri-introitus.lu1961",
    "witness.proprium.cathedra-sancti-petri-introitus.mr1962"
   ],
   "apparatus": {
-   "entries": 0,
-   "classes": []
+   "entries": 11,
+   "classes": [
+    "accent",
+    "orthography",
+    "punctuation"
+   ]
   }
  }
 }

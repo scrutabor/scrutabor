@@ -1,0 +1,80 @@
+{
+ "id": "proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Sancti/05-31 [Introitus], missa/Latin/Sancti/05-31 source lines 11-15, with &Gloria from Ordo/Prayers [Gloria] source lines 13-14"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Latin data give the same chant; the parenthesized Paschaltide Alleluia is applied according to the witness's declared seasonal mode, and any omission or slip is declared in the apparatus."
+    }
+   ],
+   "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 543",
+    "scan": "leaf n624 / PDF p. 625",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n624/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The directly viewed page (p. 543) prints this component; its conditional (T. P.) marks are framing for the declared recension."
+    }
+   ],
+   "verified_on": "2026-09-25"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus.do44667ff",
+   "text": "proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus",
+   "use": "use.proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus.do44667ff",
+   "role": "derived_comparison",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
+  },
+  {
+   "id": "witness.proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus.mr1962",
+   "text": "proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus",
+   "use": "use.proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus.mr1962",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus.mr1962-do44667ff",
+  "text": "proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus",
+  "recension": "The 1962 introit outside Paschaltide, without the conditional (T. P.) Alleluias",
+  "witnesses": [
+   "witness.proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus.do44667ff",
+   "witness.proprium.beata-maria-virgo-regina-extra-tempus-paschale-introitus.mr1962"
+  ],
+  "apparatus": {
+   "entries": 2,
+   "classes": [
+    "capital-accent"
+   ]
+  }
+ }
+}
