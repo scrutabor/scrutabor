@@ -323,7 +323,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		translationRelationships: {
 			exact: 'Brzmienie jest zgodne ze wskazanym świadectwem historycznym.',
 			normalized:
-				'Brzmienie zachowuje świadectwo historyczne po jawnej normalizacji pisowni lub interpunkcji.',
+				'Brzmienie zachowuje świadectwo historyczne po jawnym uwspółcześnieniu pisowni, wielkich liter, interpunkcji i dawnych form wyrazów.',
 			revised:
 				'Przekład został zredagowany bezpośrednio z łaciny z wykorzystaniem wskazanych świadectw historycznych.',
 			'traditional-composite':
@@ -540,7 +540,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		translationRelationships: {
 			exact: 'The wording matches the cited historical witness.',
 			normalized:
-				'The wording preserves the historical witness after stated spelling or punctuation normalization.',
+				'The wording preserves the historical witness after stated modernization of spelling, capitalization, punctuation and archaic word forms.',
 			revised:
 				'The translation was edited directly from the Latin with the cited historical witnesses as controls.',
 			'traditional-composite':
