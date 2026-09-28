@@ -10,11 +10,11 @@
     {"id":"s05","tr":"We give You thanks for Your great glory.","tc":[203],"tb":"normalized","g":["thanks","we give","to Thee","for","great","glory","Thy"],"ex":{"w021":"With “Grátias” (w020), it forms the fixed expression “grátias ágere” — to give thanks."}},
     {"id":"s06","tr":"Lord God, King of heaven, God the Father almighty.","g":["Lord","God","King","heavenly","God","Father","almighty"]},
     {"id":"s07","tr":"Lord Jesus Christ, Only Begotten Son.","g":["Lord","Son","only-begotten","Jesus","Christ"]},
-    {"id":"s08","tr":"Lord God, Lamb of God, Son of the Father.","tc":[203],"tb":"normalized","g":["Lord","God","Lamb","of God","Son","of the Father"]},
-    {"id":"s09","tr":"You who take away the sins of the world, have mercy on us.","tc":[203],"tb":"normalized","g":["who","take away","the sins","of the world","have mercy","on us"]},
-    {"id":"s10","tr":"You who take away the sins of the world, receive our supplication.","g":["who","take away","the sins","of the world","receive","the plea","our"]},
-    {"id":"s11","tr":"You who sit at the Father’s right hand, have mercy on us.","tc":[204],"tb":"normalized","g":["who","sit","at","the right hand","of the Father","have mercy","on us"]},
-    {"id":"s12","tr":"For You alone are holy. You alone are Lord. You alone are Most High, Jesus Christ.","tc":[204],"tb":"normalized","g":["for","Thou","alone","holy","Thou","alone","the Lord","Thou","alone","Most High","Jesus","Christ"],"ex":{"w067":"With “tu” (w066) it forms a sentence without an expressed verb: “Thou alone [art] holy”."}},
-    {"id":"s13","tr":"With the Holy Spirit in the glory of God the Father. Amen.","tc":[204],"tb":"normalized","g":["with","Holy","Spirit","in","the glory","of God","the Father","amen"]}
+    {"id":"s08","tr":"Lord God, Lamb of God, Son of the Father.","tc":[203],"tb":"revised","g":["Lord","God","Lamb","of God","Son","of the Father"]},
+    {"id":"s09","tr":"You who take away the sins of the world, have mercy on us.","tc":[203],"tb":"revised","g":["who","take away","the sins","of the world","have mercy","on us"]},
+    {"id":"s10","tr":"You who take away the sins of the world, receive our supplication.","g":["who","take away","the sins","of the world","receive","plea","our"]},
+    {"id":"s11","tr":"You who sit at the Father’s right hand, have mercy on us.","tc":[203],"tb":"revised","g":["who","sit","at","the right hand","of the Father","have mercy","on us"]},
+    {"id":"s12","tr":"For You alone are holy. You alone are Lord. You alone are Most High, Jesus Christ.","tc":[204],"tb":"revised","g":["for","Thou","alone","holy","Thou","alone","the Lord","Thou","alone","Most High","Jesus","Christ"],"ex":{"w067":"With “tu” (w066) it forms a sentence without an expressed verb: “Thou alone [art] holy”."}},
+    {"id":"s13","tr":"With the Holy Spirit in the glory of God the Father. Amen.","tc":[204],"tb":"revised","g":["with","Holy","Spirit","in","the glory","of God","the Father","amen"]}
   ]
 }

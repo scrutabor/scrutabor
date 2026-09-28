@@ -11,14 +11,23 @@
    },
    "entries": [
     {
-     "id": "use.en.4af86ecc7798fe27d0b2",
+     "id": "use.en.01a8243651167843cd97",
      "address": {
-      "kind": "text"
+      "kind": "segment",
+      "segment": "s01"
      },
-     "claim": "Historical English wording witness for the complete ordinarium.perceptio-corporis text."
+     "claim": "The reception of Your Body, Lord Jesus Christ, which I, though unworthy, dare to receive,"
+    },
+    {
+     "id": "use.en.bfb87d660a019bed917c",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "who, being God, live and reign with God the Father in the unity of the Holy Spirit for ever and ever. Amen."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -26,18 +35,27 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 31",
-    "scan": "scan p. 57"
+    "scan": "scan p. 58"
    },
    "entries": [
     {
-     "id": "use.en.25526c7d1619721466e2",
+     "id": "use.en.884c011e068ca08120e8",
      "address": {
-      "kind": "text"
+      "kind": "segment",
+      "segment": "s04"
      },
-     "claim": "Historical English wording witness for the complete ordinarium.perceptio-corporis text."
+     "claim": "who, being God, live and reign with God the Father in the unity of the Holy Spirit for ever and ever. Amen."
+    },
+    {
+     "id": "use.en.ae2a57afffe5b191cd02",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The reception of Your Body, Lord Jesus Christ, which I, though unworthy, dare to receive,"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

@@ -9,13 +9,13 @@
   "ad":5,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"rubric","text":"Discooperit Calicem, genuflectit, accipit Hostiam inter pollicem et indicem manus dexteræ: et tenens sinistra Calicem, cum Hostia signat ter a labio ad labium Calicis, dicens:","an":8},
+    {"id":"s01","type":"rubric","text":"Discooperit calicem, genuflectit, accipit hostiam inter pollicem et indicem manus dexteræ: et tenens sinistra calicem, cum hostia signat ter a labio ad labium calicis, dicens:","an":8},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w001","f":"Per","l":"per","m":3,"h":"w002"},{"i":"w002","f":"ipsum","l":"ipse","p":",","m":36},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"cum","l":"cum","m":0,"h":"w005"},{"i":"w005","f":"ipso","l":"ipse","p":",","m":289},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"in","l":"in","m":0,"h":"w008"},{"i":"w008","f":"ipso","l":"ipse","p":",","m":289}]},
-    {"id":"s03","type":"rubric","text":"Cum ipsa Hostia signat bis inter se et Calicem, dicens:","an":8},
+    {"id":"s03","type":"rubric","text":"Cum ipsa hostia signat bis inter se et calicem, dicens:","an":8},
     {"id":"s04","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w009","f":"est","l":"sum","m":21},{"i":"w010","f":"tibi","l":"tu","m":139},{"i":"w011","f":"Deo","l":"deus","m":186},{"i":"w012","f":"Patri","l":"pater","m":214},{"i":"w013","f":"omnipoténti","l":"omnipotens","p":",","m":216,"h":"w012"},{"i":"w014","f":"in","l":"in","m":0,"h":"w015"},{"i":"w015","f":"unitáte","l":"unitas","m":45},{"i":"w016","f":"Spíritus","l":"spiritus","m":250},{"i":"w017","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w016"}]},
-    {"id":"s05","type":"rubric","text":"Elevans parum Calicem cum Hostia, dicit:","an":8},
+    {"id":"s05","type":"rubric","text":"Elevans parum calicem cum hostia, dicit:","an":8},
     {"id":"s06","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w018","f":"omnis","l":"omnis","m":59,"h":"w019"},{"i":"w019","f":"honor","l":"honor","p":",","m":113},{"i":"w020","f":"et","l":"et","m":15},{"i":"w021","f":"glória","l":"gloria","p":".","m":24}]},
-    {"id":"s07","type":"rubric","text":"Ponit Hostiam, Calicem Palla cooperit, genuflectit, surgit, et dicit intellegibili voce vel cantat:","an":8},
+    {"id":"s07","type":"rubric","text":"Reponit hostiam, calicem palla cooperit, genuflectit, surgit, et dicit intellegibili voce, vel cantat:","an":8},
     {"id":"s08","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w022","f":"Per","l":"per","m":3,"h":"w024"},{"i":"w023","f":"ómnia","l":"omnis","m":129,"h":"w024"},{"i":"w024","f":"sǽcula","l":"saeculum","m":85},{"i":"w025","f":"sæculórum","l":"saeculum","p":".","m":145}]},
     {"id":"s09","type":"verse","speaker":"minister","voice":"clara","participation":{"lecta":{"gradus":1,"source":"DMS 31 a"},"cantu":{"gradus":1,"source":"DMS 25 a"}},"w":[{"i":"w026","f":"Amen","l":"amen","p":".","m":46}]}
   ]

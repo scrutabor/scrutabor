@@ -5,7 +5,7 @@
   "seg":[
     {"id":"s01","tr":"Niech się zmiłuje nad tobą Bóg wszechmogący, a odpuściwszy ci grzechy, niech cię doprowadzi do życia wiecznego.","tc":[179],"tb":"revised","g":["niech się zmiłuje","nad tobą","wszechmogący","Bóg","i","odpuściwszy","grzechy","twoje","niech doprowadzi","cię","do","życia","wiecznego"]},
     {"id":"s02","nr":"Kapłan odpowiada."},
-    {"id":"s03","tr":"Amen.","tc":[179],"tb":"revised","g":["amen"]},
+    {"id":"s03","tr":"Amen.","tc":[179],"tb":"exact","g":["Amen"]},
     {"id":"s04","nr":"Kapłan się prostuje. Teraz spowiedź powtarzają usługujący — tymi samymi słowami, z jedyną zmianą, którą mszał podaje wprost: gdzie kapłan mówił „wam, bracia” i „was, bracia”, oni mówią „tobie, ojcze” i „ciebie, ojcze”."}
   ]
 }

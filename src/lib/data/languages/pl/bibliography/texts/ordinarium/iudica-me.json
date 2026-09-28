@@ -4,7 +4,7 @@
   {
    "edition": "edition.ksiazka-do-nabozenstwa-1883",
    "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
-   "role": "historical_wording_comparator",
+   "role": "historical_wording_basis",
    "locator": {
     "printed": "druk. s. 498",
     "scan": "DjVu s. 510",
@@ -17,7 +17,7 @@
       "kind": "segment",
       "segment": "s09"
      },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Chwała Ojcu i Synowi, i Duchowi Świętemu.”"
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chwała Ojcu i Synowi, i Duchowi Świętemu.”"
     },
     {
      "id": "use.pl.9cb11688d6bbf769329d",
@@ -25,10 +25,10 @@
       "kind": "segment",
       "segment": "s10"
      },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.”"
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

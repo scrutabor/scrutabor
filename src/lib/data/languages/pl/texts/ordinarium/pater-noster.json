@@ -5,7 +5,7 @@
   "seg":[
     {"id":"s01","nr":"Kapłan składa ręce."},
     {"id":"s02","tr":"Módlmy się.","tc":[271],"tb":"normalized","g":["módlmy się"]},
-    {"id":"s03","tr":"Pouczeni zbawiennymi nakazami i ukształtowani przez Bożą naukę, ośmielamy się powiedzieć:","g":["przykazaniami","zbawiennymi","pouczeni","i","Bożym","ustanowieniem","ukształtowani","ośmielamy się","mówić"],"ex":{"w009":"„Audémus dícere” wyraża synowską śmiałość: pouczeni przez Chrystusa, ośmielamy się powiedzieć „Ojcze nasz”."}},
+    {"id":"s03","tr":"Pouczeni zbawiennymi nakazami i ukształtowani przez Bożą naukę, ośmielamy się powiedzieć:","g":["przykazaniami","zbawiennymi","pouczeni","i","Bożą","nauką","ukształtowani","ośmielamy się","mówić"],"ex":{"w009":"„Audémus dícere” wyraża synowską śmiałość: pouczeni przez Chrystusa, ośmielamy się powiedzieć „Ojcze nasz”."}},
     {"id":"s04","nr":"Kapłan rozkłada ręce i tak je trzyma przez całą modlitwę."},
     {"id":"s05","tr":"Ojcze nasz, któryś jest w niebie,","tc":[90],"tb":"normalized","g":["Ojcze","nasz","który","jesteś","w","niebiosach"],"ex":{"w016":"Łacina mówi tu o „niebiosach” w liczbie mnogiej. Tradycyjny przekład zachowuje znajome „w niebie”."}},
     {"id":"s06","tr":"święć się imię Twoje.","tc":[90],"tb":"normalized","g":["niech się święci","imię","Twoje"]},
@@ -14,8 +14,8 @@
     {"id":"s09","tr":"Chleba naszego powszedniego daj nam dzisiaj.","tc":[90],"tb":"normalized","g":["chleba","naszego","powszedniego","daj","nam","dzisiaj"],"ex":{"w032":"Łacina mówi dosłownie „daj nam nasz chleb”. Polski przekład zachowuje formę „daj nam chleba”."}},
     {"id":"s10","tr":"I odpuść nam nasze winy, jako i my odpuszczamy naszym winowajcom.","tc":[90],"tb":"normalized","g":["i","odpuść","nam","winy","nasze","jako","i","my","odpuszczamy","winowajcom","naszym"],"ex":{"w041":"Łacińskie „débita” znaczy dosłownie „długi”. Tradycyjny przekład mówi o „winach”.","w047":"Dosłownie: dłużnikom, czyli tym, którzy są nam coś winni. Tradycyjny przekład mówi o winowajcach."}},
     {"id":"s11","tr":"I nie wódź nas na pokuszenie,","tc":[90],"tb":"normalized","g":["i","nie","nas","wódź","na","pokuszenie"]},
-    {"id":"s12","tr":"ale nas zbaw ode złego.","tc":[90],"tb":"normalized","g":["ale","wybaw","nas","od","złego"],"ex":{"w059":"Katechizm wyjaśnia tę prośbę jako modlitwę o wybawienie od Złego, czyli szatana (KKK 2851). Obejmuje ona także uwolnienie od wszelkiego zła (KKK 2854)."},"nt":{"w059":"Łacińskie „malo” może pochodzić zarówno od rzeczownika „malum” — zło, jak i od użytego rzeczownikowo „malus” — Zły. Sama forma nie rozróżnia tych znaczeń. Opis gramatyczny odpowiada tu pierwszemu z nich, nie wykluczając osobowego sensu prośby."}},
+    {"id":"s12","tr":"ale nas zbaw ode złego.","tc":[90],"tb":"normalized","g":["ale","zbaw","nas","od","złego"],"ex":{"w059":"Katechizm wyjaśnia tę prośbę jako modlitwę o wybawienie od Złego, czyli szatana (KKK 2851). Obejmuje ona także uwolnienie od wszelkiego zła (KKK 2854)."},"nt":{"w059":"Łacińskie „malo” może pochodzić zarówno od rzeczownika „malum” — zło, jak i od użytego rzeczownikowo „malus” — Zły. Sama forma nie rozróżnia tych znaczeń. Opis gramatyczny odpowiada tu pierwszemu z nich, nie wykluczając osobowego sensu prośby."}},
     {"id":"s13","nr":"Kapłan mówi po cichu Amen."},
-    {"id":"s14","tr":"Amen.","tc":[90],"tb":"normalized","g":["amen"]}
+    {"id":"s14","tr":"Amen.","tc":[90],"tb":"normalized","g":["Amen"]}
   ]
 }

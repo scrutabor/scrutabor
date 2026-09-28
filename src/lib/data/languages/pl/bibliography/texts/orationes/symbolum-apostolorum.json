@@ -105,7 +105,7 @@
   {
    "edition": "edition.ksiazka-do-nabozenstwa-1883",
    "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
-   "role": "historical_wording_comparator",
+   "role": "historical_wording_basis",
    "locator": {
     "printed": "druk. s. 3",
     "scan": "DjVu s. 15",
@@ -118,10 +118,10 @@
       "kind": "segment",
       "segment": "s11"
      },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „święty Kościół powszechny, świętych obcowanie,”"
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „święty Kościół powszechny, świętych obcowanie,”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

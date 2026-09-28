@@ -10,7 +10,7 @@
   "adw":2,
   "seg":[
     {"id":"s01","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w001","f":"Per","l":"per","m":3,"h":"w002"},{"i":"w002","f":"quem","l":"qui","m":36},{"i":"w003","f":"hæc","l":"hic","m":166},{"i":"w004","f":"ómnia","l":"omnis","p":",","m":129,"s":true},{"i":"w005","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w006","f":"semper","l":"semper","m":32},{"i":"w007","f":"bona","l":"bonus","m":129,"h":"w004"},{"i":"w008","f":"creas","l":"creo","p":",","m":164}]},
-    {"id":"s02","type":"rubric","text":"Signat ter super Hostiam, et Calicem simul, dicens:","an":8},
-    {"id":"s03","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w009","f":"sanctíficas","l":"sanctifico","p":",","m":164},{"i":"w010","f":"vivíficas","l":"vivifico","p":",","m":164},{"i":"w011","f":"benedícis","l":"benedico","m":84},{"i":"w012","f":"et","l":"et","m":15},{"i":"w013","f":"præstas","l":"praesto","m":164},{"i":"w014","f":"nobis","l":"nos","p":".","m":53}]}
+    {"id":"s02","type":"rubric","text":"Signat ter super hostiam, et calicem simul, dicens:","an":8},
+    {"id":"s03","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w009","f":"sanctíficas","l":"sanctifico","p":",","m":164},{"i":"w010","f":"vivíficas","l":"vivifico","p":",","m":164},{"i":"w011","f":"benedícis","l":"benedico","p":",","m":84},{"i":"w012","f":"et","l":"et","m":15},{"i":"w013","f":"præstas","l":"praesto","m":164},{"i":"w014","f":"nobis","l":"nos","p":".","m":53}]}
   ]
 }

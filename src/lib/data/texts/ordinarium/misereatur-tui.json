@@ -12,6 +12,6 @@
     {"id":"s01","type":"verse","voice":"clara","speaker":"minister","participation":{"lecta":{"gradus":2,"source":"DMS 31 b"}},"w":[{"i":"w001","f":"Misereátur","l":"misereor","m":328},{"i":"w002","f":"tui","l":"tu","m":192},{"i":"w003","f":"omnípotens","l":"omnipotens","m":59,"h":"w004"},{"i":"w004","f":"Deus","l":"deus","p":",","m":60},{"i":"w005","f":"et","l":"et","p":",","m":15},{"i":"w006","f":"dimíssis","l":"dimitto","m":329,"h":"w007"},{"i":"w007","f":"peccátis","l":"peccatum","m":1},{"i":"w008","f":"tuis","l":"tuus","p":",","m":126,"h":"w007"},{"i":"w009","f":"perdúcat","l":"perduco","m":257},{"i":"w010","f":"te","l":"tu","m":4},{"i":"w011","f":"ad","l":"ad","m":3,"h":"w012"},{"i":"w012","f":"vitam","l":"vita","m":141},{"i":"w013","f":"ætérnam","l":"aeternus","p":".","m":8,"h":"w012"}]},
     {"id":"s02","type":"rubric","text":"Sacerdos dicit:","an":8},
     {"id":"s03","type":"verse","voice":"clara","speaker":"sacerdos","w":[{"i":"w014","f":"Amen","l":"amen","p":".","m":46}]},
-    {"id":"s04","type":"rubric","text":"Et erigit se. Deinde Ministri repetunt Confessionem: et ubi a Sacerdote dicebatur vobis, fratres, et vos, fratres, a Ministris dicitur tibi, pater, et te, pater.","an":8}
+    {"id":"s04","type":"rubric","text":"Et erigit se. Deinde ministri repetunt confessionem: et ubi a sacerdote dicebatur vobis, fratres, et vos, fratres, a ministris dicitur tibi, pater, et te, pater.","an":8}
   ]
 }

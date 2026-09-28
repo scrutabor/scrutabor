@@ -196,7 +196,7 @@ for (const language of ['pl', 'en']) {
 		await expect(translation).toContainText(
 			language === 'pl' ? 'jej świętych towarzyszy' : 'her holy companions'
 		);
-		await expect(translation).toContainText(language === 'pl' ? 'nagrody' : 'reward');
+		await expect(translation).toContainText(language === 'pl' ? 'nagrodę' : 'reward');
 	});
 }
 
@@ -270,8 +270,8 @@ test('the English offering verb has its ordinary dictionary senses', async ({ pa
 });
 
 for (const [language, distinction, peace] of [
-	['pl', 'między Żydem a Grekiem', 'którzy zwiastują pokój'],
-	['en', 'between Jew and Greek', 'who bring good news of peace']
+	['pl', 'między Żydem a Grekiem', 'zwiastujących pokój'],
+	['en', 'between Jew and Greek', 'who bring the good news of peace']
 ] as const) {
 	test(`${language}: Andrew's epistle keeps the distinction and both Gospel objects`, async ({
 		page
@@ -289,7 +289,7 @@ for (const [language, distinction, peace] of [
 		await setHelp(page, 2);
 		await expect(epistle.locator('.translation')).toContainText(peace);
 		await expect(epistle.locator('.translation')).toContainText(
-			language === 'pl' ? 'którzy zwiastują dobro' : 'who bring good news of good things'
+			language === 'pl' ? 'zwiastujących dobro' : 'who bring the good news of good things'
 		);
 	});
 }
@@ -323,9 +323,9 @@ test('the sequence translations stay attached to the correct Latin stanza', asyn
 	await setHelp(page, 2);
 	const translation = (id: string) =>
 		page.locator(`#${slug}-${id}`).locator('xpath=following-sibling::div[1]/p');
-	await expect(translation('s15')).toContainText('Your sheep');
-	await expect(translation('s15')).toContainText('Your right');
-	await expect(translation('s16')).toContainText('the cursed');
+	await expect(translation('s15')).toContainText('among the sheep');
+	await expect(translation('s15')).toContainText('on the right side');
+	await expect(translation('s16')).toContainText('the accursed');
 	await expect(translation('s16')).toContainText('the blessed');
 });
 
@@ -428,7 +428,7 @@ for (const language of ['pl', 'en']) {
 			await setHelp(page, 2);
 			await expect(
 				page.locator('#text-proprium-ascensio-domini-epistola .translation')
-			).toContainText('dał wiele dowodów, że żyje');
+			).toContainText('licznymi dowodami okazał się żywy');
 		}
 	});
 }

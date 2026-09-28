@@ -1,6 +1,6 @@
 {
   "id":"ordinarium.ite-missa-est",
-  "title":"Ite, Missa est",
+  "title":"Ite, missa est",
   "category":"ordinarium",
   "section":"missa-fidelium",
   "variant":"missae",
@@ -9,12 +9,12 @@
   "ad":5,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"rubric","text":"Dicto, post ultimam Orationem,","an":8},
+    {"id":"s01","type":"rubric","text":"Dicto, post ultimam orationem,","an":8},
     {"id":"s02","type":"verse","voice":"clara","speaker":"sacerdos","w":[{"i":"w001","f":"Dóminus","l":"dominus","m":60},{"i":"w002","f":"vobíscum","l":"vos","p":".","m":62,"a":3}]},
     {"id":"s03","type":"verse","voice":"clara","speaker":"minister","participation":{"lecta":{"gradus":1,"source":"DMS 31 a"},"cantu":{"gradus":1,"source":"DMS 25 a"}},"w":[{"i":"w003","f":"Et","l":"et","m":15},{"i":"w004","f":"cum","l":"cum","m":0,"h":"w005"},{"i":"w005","f":"spíritu","l":"spiritus","m":100},{"i":"w006","f":"tuo","l":"tuus","p":".","m":101,"h":"w005"}]},
-    {"id":"s04","type":"rubric","text":"dicit pro Missæ qualitate, vel Ite, Missa est, vel Benedicámus Dómino. Deo grátias.","an":8},
-    {"id":"s05","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w007","f":"Ite","l":"eo","p":",","m":310},{"i":"w008","f":"Missa","l":"missa","m":24,"a":4},{"i":"w009","f":"est","l":"sum","p":".","m":21}]},
+    {"id":"s04","type":"rubric","text":"dicit Ite, missa est vel, si aliqua liturgica processio sequatur, Benedicámus Dómino.","an":8},
+    {"id":"s05","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w007","f":"Ite","l":"eo","p":",","m":310},{"i":"w008","f":"missa","l":"missa","m":24,"a":4},{"i":"w009","f":"est","l":"sum","p":".","m":21}]},
     {"id":"s06","type":"verse","speaker":"minister","voice":"clara","participation":{"lecta":{"gradus":1,"source":"DMS 31 a"},"cantu":{"gradus":1,"source":"DMS 25 a"}},"w":[{"i":"w010","f":"Deo","l":"deus","m":186},{"i":"w011","f":"grátias","l":"gratia","p":".","m":169}]},
-    {"id":"s07","type":"rubric","text":"In Missis Defunctorum dicit: Requiéscant in pace. Amen.","an":8}
+    {"id":"s07","type":"rubric","text":"In Missis defunctorum dicit: Requiéscant in pace. Amen.","an":8}
   ]
 }

@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Tractus formularza „4. Niedziela Wielkiego Postu” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Ci, którzy ufają Panu, są jak góra Syjon; nie zachwieje się na wieki ten, kto mieszka w Jeruzalem. Góry otaczają je, a Pan otacza swój lud, teraz i na wieki.","g":["Ci, którzy","ufają",null,null,"jak","góra","Syjon","nie","zachwieje się","na","wieki","ten, kto","mieszka","w","Jeruzalem","Góry",null,null,"niej","a","Pan",null,null,"ludu","swego","od","teraz",null,"i","aż","na","wieki"],"a":[{"s":2,"n":2,"a":1,"g":"w Panu"},{"s":16,"n":2,"a":0,"g":"wokół"},{"s":21,"n":2,"a":0,"g":"wokół"},{"s":27,"n":1,"r":"idiom"}]}
+    {"id":"s01","tr":"Ci, którzy ufają Panu, są jak góra Syjon: nie zachwieje się na wieki ten, kto mieszka w Jeruzalem. Góry wokół niego, a Pan wokół swojego ludu, odtąd i aż na wieki.","g":["Ci, którzy","ufają","w","Panu","jak","góra","Syjon","nie","zachwieje się","na","wieki","ten, kto","mieszka","w","Jeruzalem","Góry",null,null,"niego","a","Pan",null,null,"ludu","swego",null,null,null,"i","aż","na","wieki"],"a":[{"s":16,"n":2,"a":0,"g":"wokół"},{"s":21,"n":2,"a":0,"g":"wokół"},{"s":25,"n":3,"a":2,"g":"odtąd"}]}
   ]
 }

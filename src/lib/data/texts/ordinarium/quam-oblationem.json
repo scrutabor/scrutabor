@@ -10,9 +10,9 @@
   "adw":2,
   "seg":[
     {"id":"s01","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w001","f":"Quam","l":"qui","m":291},{"i":"w002","f":"oblatiónem","l":"oblatio","m":7},{"i":"w003","f":"tu","l":"tu","p":",","m":143},{"i":"w004","f":"Deus","l":"deus","p":",","m":5},{"i":"w005","f":"in","l":"in","m":0,"h":"w006"},{"i":"w006","f":"ómnibus","l":"omnis","p":",","m":126,"s":true},{"i":"w007","f":"quǽsumus","l":"quaeso","p":",","m":92,"a":1}]},
-    {"id":"s02","type":"rubric","text":"Signat ter super Oblata.","an":8},
+    {"id":"s02","type":"rubric","text":"Signat ter super oblata.","an":8},
     {"id":"s03","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w008","f":"benedíctam","l":"benedictus","p":",","m":8,"h":"w002"},{"i":"w009","f":"adscríptam","l":"adscribo","p":",","m":337,"h":"w002"},{"i":"w010","f":"ratam","l":"ratus","p":",","m":8,"h":"w002"},{"i":"w011","f":"rationábilem","l":"rationabilis","p":",","m":8,"h":"w002"},{"i":"w012","f":"acceptabilémque","l":"acceptabilis","m":8,"h":"w002"},{"i":"w013","f":"fácere","l":"facio","m":185},{"i":"w014","f":"dignéris","l":"dignor","p":":","m":256}]},
-    {"id":"s04","type":"rubric","text":"Signat semel super Hostiam, et semel super Calicem.","an":8},
+    {"id":"s04","type":"rubric","text":"Signat semel super hostiam, et semel super calicem.","an":8},
     {"id":"s05","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w015","f":"ut","l":"ut","m":15},{"i":"w016","f":"nobis","l":"nos","m":53},{"i":"w017","f":"Corpus","l":"corpus","p":",","m":97},{"i":"w018","f":"et","l":"et","m":15},{"i":"w019","f":"Sanguis","l":"sanguis","m":113},{"i":"w020","f":"fiat","l":"fio","m":198},{"i":"w021","f":"dilectíssimi","l":"dilectus","m":106,"h":"w022"},{"i":"w022","f":"Fílii","l":"filius","m":54,"a":0},{"i":"w023","f":"tui","l":"tuus","m":99,"h":"w022"}]},
     {"id":"s06","type":"rubric","text":"Iungit manus.","an":8},
     {"id":"s07","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w024","f":"Dómini","l":"dominus","m":54},{"i":"w025","f":"nostri","l":"noster","m":99,"h":"w024"},{"i":"w026","f":"Iesu","l":"Iesus","m":98},{"i":"w027","f":"Christi","l":"Christus","p":".","m":54}]}

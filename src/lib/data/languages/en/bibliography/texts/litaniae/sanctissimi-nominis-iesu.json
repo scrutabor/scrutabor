@@ -6,6 +6,98 @@
    "digital_item": "item.catholic-girls-guide-1906.scan",
    "role": "historical_wording_basis",
    "locator": {
+    "printed": "p. 553",
+    "scan": "scan 561"
+   },
+   "entries": [
+    {
+     "id": "use.en.299e91d760e0cf264e20",
+     "address": {
+      "kind": "segment",
+      "segment": "s002"
+     },
+     "claim": "Christ, have mercy."
+    },
+    {
+     "id": "use.en.a46199988bc72260491c",
+     "address": {
+      "kind": "segment",
+      "segment": "s003"
+     },
+     "claim": "Lord, have mercy."
+    },
+    {
+     "id": "use.en.b74e2d30307e61d3518a",
+     "address": {
+      "kind": "segment",
+      "segment": "s001"
+     },
+     "claim": "Lord, have mercy."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 556",
+    "scan": "scan 564"
+   },
+   "entries": [
+    {
+     "id": "use.en.0f33245776709c807526",
+     "address": {
+      "kind": "segment",
+      "segment": "s104"
+     },
+     "claim": "From everlasting death."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 557",
+    "scan": "scan 565"
+   },
+   "entries": [
+    {
+     "id": "use.en.6409749a65f5987ee36e",
+     "address": {
+      "kind": "segment",
+      "segment": "s108"
+     },
+     "claim": "Through the mystery of Thy holy Incarnation."
+    },
+    {
+     "id": "use.en.aa81fa501049e60aa770",
+     "address": {
+      "kind": "segment",
+      "segment": "s110"
+     },
+     "claim": "Through Thy nativity."
+    },
+    {
+     "id": "use.en.c0eca2753a74b8818864",
+     "address": {
+      "kind": "segment",
+      "segment": "s124"
+     },
+     "claim": "Through Thy death and burial."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
     "printed": "pp. 543–546",
     "scan": "scan pp. 551–554"
    },
@@ -75,26 +167,10 @@
      "claim": "Lord, have mercy."
     },
     {
-     "id": "use.en.0d6489fe0a6ac3aa6105",
-     "address": {
-      "kind": "segment",
-      "segment": "s022"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.10776c4c0e86595d810e",
      "address": {
       "kind": "segment",
       "segment": "s073"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.1143c4cd2324b4955139",
-     "address": {
-      "kind": "segment",
-      "segment": "s120"
      },
      "claim": "Lord, have mercy."
     },
@@ -111,22 +187,6 @@
      "address": {
       "kind": "segment",
       "segment": "s113"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.19598346dc78e5440602",
-     "address": {
-      "kind": "segment",
-      "segment": "s128"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.19ad00aa8e7c2af3096b",
-     "address": {
-      "kind": "segment",
-      "segment": "s122"
      },
      "claim": "Lord, have mercy."
     },
@@ -227,14 +287,6 @@
      "claim": "Lord, have mercy."
     },
     {
-     "id": "use.en.32c917ee7f28cb806776",
-     "address": {
-      "kind": "segment",
-      "segment": "s110"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.332e728d1553ba68bb84",
      "address": {
       "kind": "segment",
@@ -315,14 +367,6 @@
      "claim": "Lord, have mercy."
     },
     {
-     "id": "use.en.42d0d0873a384b889d18",
-     "address": {
-      "kind": "segment",
-      "segment": "s108"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.4aa6292e911b277d3757",
      "address": {
       "kind": "segment",
@@ -395,14 +439,6 @@
      "claim": "Lord, have mercy."
     },
     {
-     "id": "use.en.5e901d1a245935a9a82b",
-     "address": {
-      "kind": "segment",
-      "segment": "s090"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.61dd036864bada34b8d3",
      "address": {
       "kind": "segment",
@@ -423,22 +459,6 @@
      "address": {
       "kind": "segment",
       "segment": "s001"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.63e764aaf40d7a63d6ce",
-     "address": {
-      "kind": "segment",
-      "segment": "s132"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.6534613d3177f1d0f798",
-     "address": {
-      "kind": "segment",
-      "segment": "s114"
      },
      "claim": "Lord, have mercy."
     },
@@ -491,14 +511,6 @@
      "claim": "Lord, have mercy."
     },
     {
-     "id": "use.en.6ebef2ceefaaaef189f3",
-     "address": {
-      "kind": "segment",
-      "segment": "s126"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.716199dc8478e7593195",
      "address": {
       "kind": "segment",
@@ -523,26 +535,10 @@
      "claim": "Lord, have mercy."
     },
     {
-     "id": "use.en.7521704b3212da26d3c2",
-     "address": {
-      "kind": "segment",
-      "segment": "s112"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.75423223a75b5a1f189f",
      "address": {
       "kind": "segment",
       "segment": "s025"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.7647eac93370e0081a58",
-     "address": {
-      "kind": "segment",
-      "segment": "s104"
      },
      "claim": "Lord, have mercy."
     },
@@ -731,14 +727,6 @@
      "claim": "Lord, have mercy."
     },
     {
-     "id": "use.en.a333bf60469530fc133b",
-     "address": {
-      "kind": "segment",
-      "segment": "s052"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.a3fd6598fb8f87061b7a",
      "address": {
       "kind": "segment",
@@ -851,14 +839,6 @@
      "claim": "Lord, have mercy."
     },
     {
-     "id": "use.en.bda2f2962e9932ab6428",
-     "address": {
-      "kind": "segment",
-      "segment": "s134"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.bddf40ca462d947cdd1e",
      "address": {
       "kind": "segment",
@@ -923,14 +903,6 @@
      "claim": "Lord, have mercy."
     },
     {
-     "id": "use.en.c906efa58abcc92c89d4",
-     "address": {
-      "kind": "segment",
-      "segment": "s092"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.ca370c4065675e20b7e4",
      "address": {
       "kind": "segment",
@@ -951,14 +923,6 @@
      "address": {
       "kind": "segment",
       "segment": "s036"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.cd17bf1a39f014ba27c8",
-     "address": {
-      "kind": "segment",
-      "segment": "s124"
      },
      "claim": "Lord, have mercy."
     },
@@ -1107,26 +1071,10 @@
      "claim": "Lord, have mercy."
     },
     {
-     "id": "use.en.ef264788e634c423bbce",
-     "address": {
-      "kind": "segment",
-      "segment": "s116"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.ef80ac9fcb3517c3cf2b",
      "address": {
       "kind": "segment",
       "segment": "s081"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.f14bc7bedbccee12d38b",
-     "address": {
-      "kind": "segment",
-      "segment": "s118"
      },
      "claim": "Lord, have mercy."
     },
@@ -1172,6 +1120,502 @@
     }
    ],
    "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "pp. 543–546",
+    "scan": "scan pp. 551–554"
+   },
+   "entries": [
+    {
+     "id": "use.en.0d6489fe0a6ac3aa6105",
+     "address": {
+      "kind": "segment",
+      "segment": "s022"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.1143c4cd2324b4955139",
+     "address": {
+      "kind": "segment",
+      "segment": "s120"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.19598346dc78e5440602",
+     "address": {
+      "kind": "segment",
+      "segment": "s128"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.19ad00aa8e7c2af3096b",
+     "address": {
+      "kind": "segment",
+      "segment": "s122"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.32c917ee7f28cb806776",
+     "address": {
+      "kind": "segment",
+      "segment": "s110"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.42d0d0873a384b889d18",
+     "address": {
+      "kind": "segment",
+      "segment": "s108"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.5e901d1a245935a9a82b",
+     "address": {
+      "kind": "segment",
+      "segment": "s090"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.63e764aaf40d7a63d6ce",
+     "address": {
+      "kind": "segment",
+      "segment": "s132"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.6534613d3177f1d0f798",
+     "address": {
+      "kind": "segment",
+      "segment": "s114"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.6ebef2ceefaaaef189f3",
+     "address": {
+      "kind": "segment",
+      "segment": "s126"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.7521704b3212da26d3c2",
+     "address": {
+      "kind": "segment",
+      "segment": "s112"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.7647eac93370e0081a58",
+     "address": {
+      "kind": "segment",
+      "segment": "s104"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.a333bf60469530fc133b",
+     "address": {
+      "kind": "segment",
+      "segment": "s052"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.bda2f2962e9932ab6428",
+     "address": {
+      "kind": "segment",
+      "segment": "s134"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.c906efa58abcc92c89d4",
+     "address": {
+      "kind": "segment",
+      "segment": "s092"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.cd17bf1a39f014ba27c8",
+     "address": {
+      "kind": "segment",
+      "segment": "s124"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.ef264788e634c423bbce",
+     "address": {
+      "kind": "segment",
+      "segment": "s116"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    },
+    {
+     "id": "use.en.f14bc7bedbccee12d38b",
+     "address": {
+      "kind": "segment",
+      "segment": "s118"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 18",
+    "scan": "scan 31"
+   },
+   "entries": [
+    {
+     "id": "use.en.d0860a1c54cf957cfc9b",
+     "address": {
+      "kind": "segment",
+      "segment": "s022"
+     },
+     "claim": "Jesus, sun of justice."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 19",
+    "scan": "scan 32"
+   },
+   "entries": [
+    {
+     "id": "use.en.1b6022ff1501c32b6dac",
+     "address": {
+      "kind": "segment",
+      "segment": "s052"
+     },
+     "claim": "Jesus, model of virtues."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 21",
+    "scan": "scan 34"
+   },
+   "entries": [
+    {
+     "id": "use.en.10ab6df6d2338a69ba5f",
+     "address": {
+      "kind": "segment",
+      "segment": "s112"
+     },
+     "claim": "Through Thy infancy."
+    },
+    {
+     "id": "use.en.31acaa265ee21f93a293",
+     "address": {
+      "kind": "segment",
+      "segment": "s116"
+     },
+     "claim": "Through Thy labors."
+    },
+    {
+     "id": "use.en.32df1b8bbd5e8e759285",
+     "address": {
+      "kind": "segment",
+      "segment": "s126"
+     },
+     "claim": "Through Thy resurrection."
+    },
+    {
+     "id": "use.en.34ae2b3268f61cf3d6af",
+     "address": {
+      "kind": "segment",
+      "segment": "s110"
+     },
+     "claim": "Through Thy nativity."
+    },
+    {
+     "id": "use.en.4eb5c949053106c57d9e",
+     "address": {
+      "kind": "segment",
+      "segment": "s118"
+     },
+     "claim": "Through Thy agony and passion."
+    },
+    {
+     "id": "use.en.912af8cc65d42d4bf6fa",
+     "address": {
+      "kind": "segment",
+      "segment": "s124"
+     },
+     "claim": "Through Thy death and burial."
+    },
+    {
+     "id": "use.en.9a82f24ae9976795606d",
+     "address": {
+      "kind": "segment",
+      "segment": "s114"
+     },
+     "claim": "Through Thy most divine life."
+    },
+    {
+     "id": "use.en.9c6d9625069a408d27ad",
+     "address": {
+      "kind": "segment",
+      "segment": "s104"
+     },
+     "claim": "From everlasting death."
+    },
+    {
+     "id": "use.en.b48fe3cd43a1c1b52a1e",
+     "address": {
+      "kind": "segment",
+      "segment": "s108"
+     },
+     "claim": "Through the mystery of Thy holy Incarnation."
+    },
+    {
+     "id": "use.en.fd9b51d81fe97ca281d6",
+     "address": {
+      "kind": "segment",
+      "segment": "s122"
+     },
+     "claim": "Through Thy sufferings."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 22",
+    "scan": "scan 35"
+   },
+   "entries": [
+    {
+     "id": "use.en.3d9ef35091460ef5c331",
+     "address": {
+      "kind": "segment",
+      "segment": "s128"
+     },
+     "claim": "Through Thy ascension."
+    },
+    {
+     "id": "use.en.6c36a3653a9b5ff48314",
+     "address": {
+      "kind": "segment",
+      "segment": "s132"
+     },
+     "claim": "Through Thy joys."
+    },
+    {
+     "id": "use.en.8a177ffb471633a1f0de",
+     "address": {
+      "kind": "segment",
+      "segment": "s134"
+     },
+     "claim": "Through Thy glory."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.the-raccolta-1910",
+   "digital_item": "item.raccolta-1910.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 51",
+    "scan": "scan 71"
+   },
+   "entries": [
+    {
+     "id": "use.en.5bf0c8270401317e2987",
+     "address": {
+      "kind": "segment",
+      "segment": "s022"
+     },
+     "claim": "Jesus, sun of justice."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.the-raccolta-1910",
+   "digital_item": "item.raccolta-1910.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 52",
+    "scan": "scan 72"
+   },
+   "entries": [
+    {
+     "id": "use.en.0c0171dceb6ad9cb3f51",
+     "address": {
+      "kind": "segment",
+      "segment": "s092"
+     },
+     "claim": "Be merciful unto us."
+    },
+    {
+     "id": "use.en.4196740a5e4659208cdb",
+     "address": {
+      "kind": "segment",
+      "segment": "s090"
+     },
+     "claim": "Be merciful unto us."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.the-raccolta-1910",
+   "digital_item": "item.raccolta-1910.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 53",
+    "scan": "scan 73"
+   },
+   "entries": [
+    {
+     "id": "use.en.01b039bac6f9578f7065",
+     "address": {
+      "kind": "segment",
+      "segment": "s120"
+     },
+     "claim": "Through Thy cross and dereliction."
+    },
+    {
+     "id": "use.en.0bb1c967e5ac156f1bf3",
+     "address": {
+      "kind": "segment",
+      "segment": "s118"
+     },
+     "claim": "Through Thy agony and passion."
+    },
+    {
+     "id": "use.en.199023d788173ecf774d",
+     "address": {
+      "kind": "segment",
+      "segment": "s126"
+     },
+     "claim": "Through Thy resurrection."
+    },
+    {
+     "id": "use.en.289e1e6581c29ad21bc5",
+     "address": {
+      "kind": "segment",
+      "segment": "s112"
+     },
+     "claim": "Through Thy infancy."
+    },
+    {
+     "id": "use.en.7991ff52a9e77c8bf90b",
+     "address": {
+      "kind": "segment",
+      "segment": "s128"
+     },
+     "claim": "Through Thy ascension."
+    },
+    {
+     "id": "use.en.7a9d2b88e44a688375f9",
+     "address": {
+      "kind": "segment",
+      "segment": "s104"
+     },
+     "claim": "From everlasting death."
+    },
+    {
+     "id": "use.en.89a40e73bb0f8420a25f",
+     "address": {
+      "kind": "segment",
+      "segment": "s124"
+     },
+     "claim": "Through Thy death and burial."
+    },
+    {
+     "id": "use.en.8af7e5c07f054a896556",
+     "address": {
+      "kind": "segment",
+      "segment": "s108"
+     },
+     "claim": "Through the mystery of Thy holy Incarnation."
+    },
+    {
+     "id": "use.en.9c4748cae40dcdb5c312",
+     "address": {
+      "kind": "segment",
+      "segment": "s116"
+     },
+     "claim": "Through Thy labors."
+    },
+    {
+     "id": "use.en.b1f710b772c980f50a56",
+     "address": {
+      "kind": "segment",
+      "segment": "s114"
+     },
+     "claim": "Through Thy most divine life."
+    },
+    {
+     "id": "use.en.bec0b320697b091907de",
+     "address": {
+      "kind": "segment",
+      "segment": "s134"
+     },
+     "claim": "Through Thy glory."
+    },
+    {
+     "id": "use.en.d93154f6780590fa997e",
+     "address": {
+      "kind": "segment",
+      "segment": "s132"
+     },
+     "claim": "Through Thy joys."
+    },
+    {
+     "id": "use.en.d975c5d71c6d0b8b9ca5",
+     "address": {
+      "kind": "segment",
+      "segment": "s122"
+     },
+     "claim": "Through Thy sufferings."
+    },
+    {
+     "id": "use.en.db9657f8422013391c85",
+     "address": {
+      "kind": "segment",
+      "segment": "s110"
+     },
+     "claim": "Through Thy nativity."
+    }
+   ],
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

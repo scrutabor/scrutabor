@@ -4,7 +4,7 @@
   "about":"Agimus tibi gratias jest krótką modlitwą dziękczynną tradycyjnie odmawianą po posiłku. Zgromadzeni dziękują wszechmogącemu Bogu za wszystkie Jego dobrodziejstwa i wyznają, że żyje i króluje na wieki.",
   "seg":[
     {"id":"s01","tr":"Dziękujemy Ci, wszechmogący Boże,","tc":[35],"tb":"revised","g":["składamy","Tobie","dzięki","wszechmogący","Boże"],"ex":{"w001":"Z „grátias” tworzy stały zwrot „grátias ágere” — składać dzięki."}},
-    {"id":"s02","tr":"za wszystkie Twoje dobrodziejstwa:","tc":[35],"tb":"revised","g":["za","wszystkie","dobrodziejstwa","Twoje"]},
-    {"id":"s03","tr":"który żyjesz i królujesz na wieki wieków. Amen.","tc":[35],"tb":"revised","g":["który","żyjesz","i","królujesz","na","wieki","wieków","amen"]}
+    {"id":"s02","tr":"za wszystkie Twoje dobrodziejstwa,","g":["za","wszystkie","dobrodziejstwa","Twoje"]},
+    {"id":"s03","tr":"który żyjesz i królujesz na wieki wieków. Amen.","tc":[35],"tb":"exact","g":["Który","żyjesz","i","królujesz","na","wieki","wieków","Amen"]}
   ]
 }

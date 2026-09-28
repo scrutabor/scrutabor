@@ -59,7 +59,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 29",
-    "scan": "scan p. 55"
+    "scan": "scan p. 56"
    },
    "entries": [
     {
@@ -71,7 +71,7 @@
      "claim": "And with your spirit."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -79,17 +79,9 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 30",
-    "scan": "scan p. 56"
+    "scan": "scan p. 57"
    },
    "entries": [
-    {
-     "id": "use.en.13c849c20e55142e6a52",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "Lord Jesus Christ, who said to Your Apostles:"
-    },
     {
      "id": "use.en.1d6301426e814d830374",
      "address": {
@@ -123,7 +115,27 @@
      "claim": "Lord Jesus Christ, who said to Your Apostles:"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "p. 30",
+    "scan": "scan p. 57"
+   },
+   "entries": [
+    {
+     "id": "use.en.13c849c20e55142e6a52",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    }
+   ],
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

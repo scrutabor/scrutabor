@@ -11,14 +11,71 @@
    },
    "entries": [
     {
-     "id": "use.en.db9f8b5404bc615cec7f",
+     "id": "use.en.2bfd4ff507b7bb15ecac",
      "address": {
-      "kind": "text"
+      "kind": "segment",
+      "segment": "s05"
      },
-     "claim": "Historical English wording witness for the complete proprium.dominica-ii-adventus-evangelium text."
+     "claim": "As they went away, Jesus began to speak to the crowds about John: What did you go out into the desert to see? A reed shaken by the wind?"
+    },
+    {
+     "id": "use.en.409d173e802b919764e2",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Are You the One who is to come, or should we look for another?"
+    },
+    {
+     "id": "use.en.4c06d74f2c97bb4b94ef",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "For this is the one of whom it is written: Behold, I send My messenger before Your face, who will prepare Your way before You."
+    },
+    {
+     "id": "use.en.c5b60b5a1b8ef01193de",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Jesus answered them: Go and report to John what you have heard and seen."
+    },
+    {
+     "id": "use.en.c817a9a6d0662694cbfa",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "The blind see, the lame walk, lepers are cleansed, the deaf hear, the dead rise, and the Gospel is preached to the poor; blessed is the one who does not stumble because of Me."
+    },
+    {
+     "id": "use.en.ddec77a783c29b7665a9",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "What then did you go out to see? A man dressed in soft garments?"
+    },
+    {
+     "id": "use.en.e9f30fdc9fb1fd2aafb5",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "What then did you go out to see? A prophet? Yes, I tell you, and more than a prophet."
+    },
+    {
+     "id": "use.en.ee82075e5ab500d4f1e6",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "At that time, when John heard in prison of the works of Christ, he sent two of his disciples and asked Him:"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

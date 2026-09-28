@@ -12,14 +12,6 @@
    },
    "entries": [
     {
-     "id": "use.pl.130b2aed83e0fb2545be",
-     "address": {
-      "kind": "segment",
-      "segment": "s06"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Bogu niech będą dzięki.”"
-    },
-    {
      "id": "use.pl.7a673a744390e0e4643f",
      "address": {
       "kind": "segment",
@@ -34,14 +26,6 @@
       "segment": "s02"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Pan z wami.”"
-    },
-    {
-     "id": "use.pl.b88d3c1eeebe49f7925d",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Idźcie, ofiara spełniona.”"
     }
    ],
    "verified_on": "2026-08-28"

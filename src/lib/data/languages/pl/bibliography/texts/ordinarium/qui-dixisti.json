@@ -33,28 +33,12 @@
    },
    "entries": [
     {
-     "id": "use.pl.1ba385668b1810a176f7",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie Jezu Chryste, który powiedziałeś swoim apostołom:”"
-    },
-    {
      "id": "use.pl.545855601b824f1d7c12",
      "address": {
       "kind": "segment",
       "segment": "s03"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „„Pokój zostawiam wam; pokój mój wam daję” —”"
-    },
-    {
-     "id": "use.pl.80ca5b9c5e6eecc1144a",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „nie zważaj na moje grzechy, lecz na wiarę Twojego Kościoła;”"
     },
     {
      "id": "use.pl.8a7c652cc10540d1c5df",

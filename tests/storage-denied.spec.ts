@@ -34,7 +34,7 @@ test('the day still fills the slots', async ({ page }) => {
 	const dialog = page.getByRole('dialog', { name: 'Wybór dnia' });
 	await dialog.locator('[data-date="2026-11-29"]').click();
 	await dialog.locator('.modal-actions .primary').click();
-	await expect(page.locator('body')).toContainText('wznoszę', { timeout: 15_000 });
+	await expect(page.locator('body')).toContainText('wzniosłem', { timeout: 15_000 });
 });
 
 test('the controls above the text still answer', async ({ page }) => {

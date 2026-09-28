@@ -9,7 +9,7 @@
   "ad":5,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"rubric","text":"Particulam ipsam immittit in Calicem, dicens secrete:","an":8},
+    {"id":"s01","type":"rubric","text":"Particulam ipsam immittit in calicem, dicens secrete:","an":8},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w001","f":"Hæc","l":"hic","m":182},{"i":"w002","f":"commíxtio","l":"commixtio","p":",","m":20},{"i":"w003","f":"et","l":"et","m":15},{"i":"w004","f":"consecrátio","l":"consecratio","m":20},{"i":"w005","f":"Córporis","l":"corpus","m":75},{"i":"w006","f":"et","l":"et","m":15},{"i":"w007","f":"Sánguinis","l":"sanguis","m":69},{"i":"w008","f":"Dómini","l":"dominus","m":54},{"i":"w009","f":"nostri","l":"noster","m":99,"h":"w008"},{"i":"w010","f":"Iesu","l":"Iesus","m":98},{"i":"w011","f":"Christi","l":"Christus","p":",","m":54},{"i":"w012","f":"fiat","l":"fio","m":198},{"i":"w013","f":"accipiéntibus","l":"accipio","m":142,"h":"w014"},{"i":"w014","f":"nobis","l":"nos","m":53},{"i":"w015","f":"in","l":"in","m":3,"h":"w016"},{"i":"w016","f":"vitam","l":"vita","m":141},{"i":"w017","f":"ætérnam","l":"aeternus","p":".","m":8,"h":"w016"},{"i":"w018","f":"Amen","l":"amen","p":".","m":46}]}
   ]
 }

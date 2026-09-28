@@ -3,11 +3,11 @@
   "language":"pl",
   "about":"Alma Redemptoris Mater jest maryjną antyfoną końcową okresu od Adwentu do Oczyszczenia Najświętszej Maryi Panny. Wierni proszą Maryję, Matkę Odkupiciela, aby wspomogła upadający lud i zmiłowała się nad grzesznikami.",
   "seg":[
-    {"id":"s01","tr":"Łaskawa Matko Odkupiciela, która pozostajesz otwartą bramą nieba,","tc":[38],"tb":"revised","g":["łaskawa","Odkupiciela","Matko","która","otwartą","nieba","bramą","pozostajesz"]},
-    {"id":"s02","tr":"i gwiazdą morza, wspomóż lud, który upada,","tc":[38],"tb":"revised","g":["i","gwiazdą","morza","wspomóż","upadającemu"]},
-    {"id":"s03","tr":"a pragnie powstać:","tc":[38],"tb":"revised","g":["powstać","który","pragnie","ludowi"]},
-    {"id":"s04","tr":"ty, która ku zdumieniu natury zrodziłaś swojego świętego Stworzyciela,","tc":[38],"tb":"revised","g":["ty","która","zrodziłaś","gdy natura","się zdumiewała","swojego","świętego","Stworzyciela"],"ex":{"w025":"Maryja nosi Tego, który Ją stworzył: Chrystusa, Jej własnego Stwórcę."}},
-    {"id":"s05","tr":"Panno przedtem i potem,","tc":[38],"tb":"revised","g":["Panno","przedtem","i","potem"]},
-    {"id":"s06","tr":"przyjmując owo Ave z ust Gabriela, zmiłuj się nad grzesznikami.","tc":[38],"tb":"revised","g":["Gabriela","z","ust","przyjmując","owo","Ave","nad grzesznikami","zmiłuj się"]}
+    {"id":"s01","tr":"Dobrotliwa Matko Odkupiciela, która trwasz jako otwarta brama nieba","g":["łaskawa","Odkupiciela","Matko","która","otwartą","nieba","bramą","pozostajesz"]},
+    {"id":"s02","tr":"i gwiazda morza, pospiesz z pomocą upadającemu","g":["i","gwiazdą","morza","wspomóż","upadającemu"]},
+    {"id":"s03","tr":"ludowi, który stara się powstać:","g":["powstać","który","stara się","ludowi"]},
+    {"id":"s04","tr":"ty, która zrodziłaś, ku zdumieniu natury, swojego świętego Stwórcę,","g":["ty","która","zrodziłaś","gdy natura","się zdumiewała","swojego","świętego","Stworzyciela"],"ex":{"w025":"Maryja nosi Tego, który Ją stworzył: Chrystusa, Jej własnego Stwórcę."}},
+    {"id":"s05","tr":"Panno przedtem i potem,","tc":[38],"tb":"normalized","g":["Panno","przedtem","i","potem"]},
+    {"id":"s06","tr":"przyjmując z ust Gabriela owo „Ave”, zmiłuj się nad grzesznikami.","g":["Gabriela","z","ust","przyjmując","owo","Ave","nad grzesznikami","zmiłuj się"],"ex":{"w035":"Pozdrowienie Gabriela w Łk 1, 28, przytoczone jako słowo: Maryja przyjęła owo „Ave”. Formalnie jest to tryb rozkazujący („witaj”), lecz tutaj słowo nazywa samo pozdrowienie i jest dopełnieniem „sumens” (w033)."}}
   ]
 }

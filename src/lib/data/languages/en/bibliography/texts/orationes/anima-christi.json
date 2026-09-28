@@ -19,26 +19,6 @@
     }
    ],
    "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.the-raccolta-1910",
-   "digital_item": "item.raccolta-1910.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 79–80",
-    "scan": "scan pp. 99–100",
-    "section": "n. 95"
-   },
-   "entries": [
-    {
-     "id": "use.en.709d513aee4248ad24fa",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "Historical English wording witness for the complete orationes.anima-christi text."
-    }
-   ],
-   "verified_on": "2026-08-28"
   }
  ],
  "witnesses": [],

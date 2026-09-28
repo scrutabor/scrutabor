@@ -11,14 +11,39 @@
    },
    "entries": [
     {
-     "id": "use.en.56718258d90585e2f378",
+     "id": "use.en.539763923a5837f699ef",
      "address": {
-      "kind": "text"
+      "kind": "segment",
+      "segment": "s01"
      },
-     "claim": "Historical English wording witness for the complete proprium.dominica-i-adventus-evangelium text."
+     "claim": "At that time Jesus said to His disciples: There will be signs in the sun, moon, and stars, and on earth distress among the nations, bewildered by the roaring of the sea and waves. People will faint from fear and from expectation of what is coming upon the whole world, for the powers of the heavens will be shaken."
+    },
+    {
+     "id": "use.en.786df100d7ba7fc7ac35",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Heaven and earth will pass away, but My words will not pass away."
+    },
+    {
+     "id": "use.en.c8b89484af9ef4266dcf",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "But when these things begin to happen, look up and lift up your heads, because your redemption is drawing near."
+    },
+    {
+     "id": "use.en.f1a6dc1d5be5533e2cd4",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Then they will see the Son of Man coming in a cloud with great power and majesty."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

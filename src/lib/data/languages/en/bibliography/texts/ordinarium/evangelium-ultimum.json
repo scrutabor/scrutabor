@@ -6,26 +6,10 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 79–80",
-    "scan": "PDF pp. 91–92"
+    "printed": "p. 81",
+    "scan": "PDF p. 93"
    },
    "entries": [
-    {
-     "id": "use.en.2e75e4813980cbac5910",
-     "address": {
-      "kind": "segment",
-      "segment": "s09"
-     },
-     "claim": "The Lord be with you."
-    },
-    {
-     "id": "use.en.5506d4249036d1a2ac96",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "The Lord be with you."
-    },
     {
      "id": "use.en.696bf35bc08cceeb2050",
      "address": {
@@ -35,10 +19,38 @@
      "claim": "The Lord be with you."
     },
     {
-     "id": "use.en.6975dfa58b37bc55a802",
+     "id": "use.en.b67d7d280f8e535cb1b9",
      "address": {
       "kind": "segment",
-      "segment": "s10"
+      "segment": "s14"
+     },
+     "claim": "The Lord be with you."
+    },
+    {
+     "id": "use.en.bc059c7a314c5863a091",
+     "address": {
+      "kind": "segment",
+      "segment": "s15"
+     },
+     "claim": "The Lord be with you."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 79–80",
+    "scan": "PDF pp. 91–92"
+   },
+   "entries": [
+    {
+     "id": "use.en.5506d4249036d1a2ac96",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
      },
      "claim": "The Lord be with you."
     },
@@ -73,25 +85,29 @@
       "segment": "s02"
      },
      "claim": "The Lord be with you."
-    },
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 80–81",
+    "scan": "PDF pp. 92–93"
+   },
+   "entries": [
     {
-     "id": "use.en.b67d7d280f8e535cb1b9",
+     "id": "use.en.6975dfa58b37bc55a802",
      "address": {
       "kind": "segment",
-      "segment": "s14"
-     },
-     "claim": "The Lord be with you."
-    },
-    {
-     "id": "use.en.bc059c7a314c5863a091",
-     "address": {
-      "kind": "segment",
-      "segment": "s15"
+      "segment": "s10"
      },
      "claim": "The Lord be with you."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

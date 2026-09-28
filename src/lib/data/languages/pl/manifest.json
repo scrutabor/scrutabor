@@ -36,7 +36,6 @@
     {
       "id": "orationes.actus-contritionis",
       "path": "languages/pl/texts/orationes/actus-contritionis.json",
-      "evidence": "languages/pl/bibliography/texts/orationes/actus-contritionis.json",
       "title": "Akt żalu"
     },
     {
@@ -296,8 +295,7 @@
     },
     {
       "id": "ordinarium.in-spiritu-humilitatis",
-      "path": "languages/pl/texts/ordinarium/in-spiritu-humilitatis.json",
-      "evidence": "languages/pl/bibliography/texts/ordinarium/in-spiritu-humilitatis.json"
+      "path": "languages/pl/texts/ordinarium/in-spiritu-humilitatis.json"
     },
     {
       "id": "ordinarium.introibo",
@@ -360,8 +358,7 @@
     },
     {
       "id": "ordinarium.offerimus-tibi",
-      "path": "languages/pl/texts/ordinarium/offerimus-tibi.json",
-      "evidence": "languages/pl/bibliography/texts/ordinarium/offerimus-tibi.json"
+      "path": "languages/pl/texts/ordinarium/offerimus-tibi.json"
     },
     {
       "id": "ordinarium.orate-fratres",
@@ -390,8 +387,7 @@
     },
     {
       "id": "ordinarium.per-quem-haec-omnia",
-      "path": "languages/pl/texts/ordinarium/per-quem-haec-omnia.json",
-      "evidence": "languages/pl/bibliography/texts/ordinarium/per-quem-haec-omnia.json"
+      "path": "languages/pl/texts/ordinarium/per-quem-haec-omnia.json"
     },
     {
       "id": "ordinarium.perceptio-corporis",
@@ -400,8 +396,7 @@
     },
     {
       "id": "ordinarium.placeat-tibi",
-      "path": "languages/pl/texts/ordinarium/placeat-tibi.json",
-      "evidence": "languages/pl/bibliography/texts/ordinarium/placeat-tibi.json"
+      "path": "languages/pl/texts/ordinarium/placeat-tibi.json"
     },
     {
       "id": "ordinarium.praefatio-apostolorum",
@@ -553,8 +548,7 @@
     },
     {
       "id": "ordinarium.suscipe-sancte-pater",
-      "path": "languages/pl/texts/ordinarium/suscipe-sancte-pater.json",
-      "evidence": "languages/pl/bibliography/texts/ordinarium/suscipe-sancte-pater.json"
+      "path": "languages/pl/texts/ordinarium/suscipe-sancte-pater.json"
     },
     {
       "id": "ordinarium.te-igitur",

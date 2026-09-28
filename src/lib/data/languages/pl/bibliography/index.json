@@ -7162,6 +7162,258 @@
      ],
      "texts": [
       {
+       "id": "ordinarium.adiutorium",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.agnus-dei",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.aufer-a-nobis",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.benedictio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.confiteor",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.confiteor-sacerdotis",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.corpus-tuum",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.credo",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.deus-qui-humanae",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.deus-tu-conversus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.ecce-agnus-dei",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.fili-dei-vivi",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.gloria",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.haec-commixtio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.hanc-igitur",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.in-spiritu-humilitatis",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.introibo",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.ite-missa-est",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.iudica-me",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.kyrie",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lavabo",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.libera-nos",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.memento-defunctorum",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.memento-vivorum",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.misereatur",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.misereatur-tui",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.nobis-quoque",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.offerimus-tibi",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.orate-fratres",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.panem-caelestem",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.pater-noster",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.pax-domini",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.per-ipsum",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.per-quem-haec-omnia",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.perceptio-corporis",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.placeat-tibi",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-apostolorum",
        "roles": [
         "official_text"
@@ -7225,6 +7477,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-communis",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-d-n-iesu-christi-regis",
        "roles": [
         "official_text"
@@ -7233,6 +7492,13 @@
       },
       {
        "id": "ordinarium.praefatio-defunctorum",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-dialogus",
        "roles": [
         "official_text"
        ],
@@ -7310,6 +7576,76 @@
       },
       {
        "id": "ordinarium.praefatio-spiritus-sancti",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.quam-oblationem",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.qui-pridie",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.quid-retribuam",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.quod-ore-sumpsimus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sanctus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.supra-quae",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.suscipe-sancta-trinitas",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.suscipe-sancte-pater",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.te-igitur",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.unde-et-memores",
        "roles": [
         "official_text"
        ],
@@ -14294,8 +14630,25 @@
      "lemmas": []
     },
     {
+     "edition": "edition.biblia-wujka-1923",
+     "roles": [
+      "historical_wording_basis"
+     ],
+     "texts": [
+      {
+       "id": "ordinarium.lavabo",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 7
+      }
+     ],
+     "lemmas": []
+    },
+    {
      "edition": "edition.ksiazka-do-nabozenstwa-1883",
      "roles": [
+      "historical_wording_basis",
       "historical_wording_comparator"
      ],
      "texts": [
@@ -14337,16 +14690,23 @@
       {
        "id": "orationes.symbolum-apostolorum",
        "roles": [
-        "historical_wording_comparator"
+        "historical_wording_basis"
        ],
        "uses": 1
       },
       {
        "id": "ordinarium.iudica-me",
        "roles": [
-        "historical_wording_comparator"
+        "historical_wording_basis"
        ],
        "uses": 2
+      },
+      {
+       "id": "ordinarium.lavabo",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
       }
      ],
      "lemmas": []
@@ -14362,7 +14722,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 3
+       "uses": 2
       },
       {
        "id": "orationes.anima-christi",
@@ -14418,7 +14778,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 5
+       "uses": 4
       },
       {
        "id": "ordinarium.praefatio-dialogus",
@@ -14452,25 +14812,18 @@
        "uses": 1
       },
       {
-       "id": "orationes.actus-contritionis",
-       "roles": [
-        "historical_wording_basis"
-       ],
-       "uses": 6
-      },
-      {
        "id": "orationes.alma-redemptoris-mater",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 6
+       "uses": 1
       },
       {
        "id": "orationes.angele-dei",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 6
+       "uses": 5
       },
       {
        "id": "orationes.anima-christi",
@@ -14484,14 +14837,14 @@
        "roles": [
         "historical_wording_comparator"
        ],
-       "uses": 8
+       "uses": 4
       },
       {
        "id": "orationes.deus-refugium",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 7
+       "uses": 6
       },
       {
        "id": "orationes.salve-regina",
@@ -14650,7 +15003,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 5
+       "uses": 4
       },
       {
        "id": "ordinarium.benedictio",
@@ -14664,14 +15017,14 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 5
+       "uses": 3
       },
       {
        "id": "ordinarium.corpus-tuum",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 3
+       "uses": 2
       },
       {
        "id": "ordinarium.deus-qui-humanae",
@@ -14685,14 +15038,14 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 8
+       "uses": 5
       },
       {
        "id": "ordinarium.fili-dei-vivi",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 5
+       "uses": 4
       },
       {
        "id": "ordinarium.gloria",
@@ -14703,13 +15056,6 @@
       },
       {
        "id": "ordinarium.hanc-igitur",
-       "roles": [
-        "historical_wording_basis"
-       ],
-       "uses": 3
-      },
-      {
-       "id": "ordinarium.in-spiritu-humilitatis",
        "roles": [
         "historical_wording_basis"
        ],
@@ -14727,21 +15073,21 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 4
+       "uses": 2
       },
       {
        "id": "ordinarium.lavabo",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 9
+       "uses": 2
       },
       {
        "id": "ordinarium.libera-nos",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 7
+       "uses": 6
       },
       {
        "id": "ordinarium.memento-defunctorum",
@@ -14776,28 +15122,21 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 5
-      },
-      {
-       "id": "ordinarium.offerimus-tibi",
-       "roles": [
-        "historical_wording_basis"
-       ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "ordinarium.orate-fratres",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 3
+       "uses": 2
       },
       {
        "id": "ordinarium.panem-caelestem",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 8
+       "uses": 7
       },
       {
        "id": "ordinarium.pater-noster",
@@ -14818,70 +15157,56 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 5
-      },
-      {
-       "id": "ordinarium.per-quem-haec-omnia",
-       "roles": [
-        "historical_wording_basis"
-       ],
-       "uses": 2
+       "uses": 4
       },
       {
        "id": "ordinarium.perceptio-corporis",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 4
-      },
-      {
-       "id": "ordinarium.placeat-tibi",
-       "roles": [
-        "historical_wording_basis"
-       ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "ordinarium.praefatio-communis",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 4
+       "uses": 1
       },
       {
        "id": "ordinarium.praefatio-dialogus",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 4
+       "uses": 3
       },
       {
        "id": "ordinarium.quam-oblationem",
        "roles": [
         "historical_wording_comparator"
        ],
-       "uses": 4
+       "uses": 2
       },
       {
        "id": "ordinarium.qui-dixisti",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 6
+       "uses": 4
       },
       {
        "id": "ordinarium.qui-pridie",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 6
+       "uses": 3
       },
       {
        "id": "ordinarium.quid-retribuam",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 4
+       "uses": 1
       },
       {
        "id": "ordinarium.sanctus",
@@ -14895,31 +15220,24 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 7
+       "uses": 3
       },
       {
        "id": "ordinarium.supplices-te-rogamus",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 6
+       "uses": 4
       },
       {
        "id": "ordinarium.supra-quae",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
-      },
-      {
-       "id": "ordinarium.suscipe-sancta-trinitas",
-       "roles": [
-        "historical_wording_basis"
-       ],
        "uses": 1
       },
       {
-       "id": "ordinarium.suscipe-sancte-pater",
+       "id": "ordinarium.suscipe-sancta-trinitas",
        "roles": [
         "historical_wording_basis"
        ],
@@ -14930,7 +15248,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 5
+       "uses": 3
       }
      ],
      "lemmas": []
@@ -19574,7 +19892,7 @@
        ]
       },
       {
-       "id": "invisibil",
+       "id": "invisibilis",
        "roles": [
         "lexical_support"
        ],
@@ -19589,12 +19907,12 @@
          },
          "entries": [
           {
-           "id": "use.lemma.invisibil.lewis-short.1879",
+           "id": "use.lemma.invisibilis.lewis-short.1879",
            "address": {
             "kind": "lemma",
-            "lemma": "invisibil"
+            "lemma": "invisibilis"
            },
-           "claim": "The adjective has nominative invisibilis and neuter invisibile, conventionally displayed invisibilis, -e. It denotes what is invisible or unseen; invisibil is only the retained identifier, not a Latin nominative."
+           "claim": "The adjective has nominative invisibilis and neuter invisibile, conventionally displayed invisibilis, -e. It denotes what is invisible or unseen."
           }
          ],
          "verified_on": "2026-09-19"

@@ -1,13 +1,13 @@
 {
   "id":"ordinarium.sanctus",
   "language":"en",
-  "about":"The acclamation joins the cry of the seraphim in Isaias' vision (Is 6:3) to the words of the crowd welcoming Christ into Jerusalem (Mt 21:9). The threefold Sanctus praises the Lord God of hosts, whose glory fills heaven and earth. The Benedíctus blesses Him who comes in the name of the Lord.",
+  "about":"The acclamation joins the cry of the seraphim in Isaias’ vision (Is 6:3) to the words of the crowd welcoming Christ into Jerusalem (Mt 21:9). The threefold Sanctus praises the Lord God of hosts, whose glory fills heaven and earth. The Benedíctus blesses Him who comes in the name of the Lord.",
   "seg":[
     {"id":"s01","nr":"The Preface comes to its end. The priest joins his hands before his breast, bows, and says the Sanctus in a moderate voice while the server rings the bell. At the words “Benedíctus qui venit in nómine Dómini” he straightens up and signs himself with the cross from forehead to breast. The Canon begins immediately after, said silently apart from a few sentences spoken aloud."},
-    {"id":"s02","tr":"Holy, Holy, Holy Lord God of hosts.","tc":[323],"tb":"normalized","g":["holy","holy","holy","the Lord","God","of hosts"],"ex":{"w006":"Hebrew “Sábaoth” entered Latin without inflection and means “of hosts”."}},
+    {"id":"s02","tr":"Holy, Holy, Holy Lord God of hosts.","tc":[323],"tb":"normalized","g":["holy","holy","holy","Lord","God","of hosts"],"ex":{"w006":"Hebrew “Sábaoth” entered Latin without inflection and means “of hosts”."}},
     {"id":"s03","tr":"Heaven and earth are full of Your glory.","g":["full","are","the heavens","and","earth","of glory","Thy"]},
-    {"id":"s04","tr":"Hosanna in the highest.","tc":[323],"tb":"normalized","g":["hosanna","in","the highest"]},
-    {"id":"s05","tr":"Blessed is He who comes in the name of the Lord.","g":["blessed","who","comes","in","the name","of the Lord"],"ex":{"w017":"Latin leaves “est” unspoken: “Benedíctus [est] qui venit” — “blessed [is] he that cometh”.","w019":"Read as the present: the One who is coming. The perfect “vēnit” is spelled the same and differs only in the length of the first vowel."}},
-    {"id":"s06","tr":"Hosanna in the highest.","tc":[323],"tb":"normalized","g":["hosanna","in","the highest"]}
+    {"id":"s04","tr":"Hosanna in the highest.","tc":[323],"tb":"exact","g":["hosanna","in","the highest"]},
+    {"id":"s05","tr":"Blessed is He who comes in the name of the Lord.","g":["blessed","He who","comes","in","the name","of the Lord"],"ex":{"w017":"Latin leaves “est” unspoken: “Benedíctus [est] qui venit” — “blessed [is] he that cometh”.","w019":"Read as the present: the One who is coming. The perfect “vēnit” is spelled the same and differs only in the length of the first vowel."}},
+    {"id":"s06","tr":"Hosanna in the highest.","tc":[323],"tb":"exact","g":["hosanna","in","the highest"]}
   ]
 }

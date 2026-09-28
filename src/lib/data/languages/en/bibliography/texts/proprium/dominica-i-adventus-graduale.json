@@ -11,14 +11,15 @@
    },
    "entries": [
     {
-     "id": "use.en.c1b42cc8fc05b8717241",
+     "id": "use.en.78fdfaf47bf736bfb47f",
      "address": {
-      "kind": "text"
+      "kind": "segment",
+      "segment": "s02"
      },
-     "claim": "Historical English wording witness for the complete proprium.dominica-i-adventus-graduale text."
+     "claim": "Make Your ways known to me, O Lord, and teach me Your paths."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

@@ -6,6 +6,26 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
+    "printed": "p. 37",
+    "scan": "PDF p. 49"
+   },
+   "entries": [
+    {
+     "id": "use.en.86e7cfecba05650b57f0",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
     "printed": "p. 38",
     "scan": "PDF p. 50"
    },
@@ -23,14 +43,6 @@
      "address": {
       "kind": "segment",
       "segment": "s03"
-     },
-     "claim": "May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life."
-    },
-    {
-     "id": "use.en.86e7cfecba05650b57f0",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
      },
      "claim": "May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life."
     },

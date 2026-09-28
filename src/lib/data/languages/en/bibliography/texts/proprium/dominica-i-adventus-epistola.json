@@ -11,14 +11,31 @@
    },
    "entries": [
     {
-     "id": "use.en.326f400e764921f6a7e5",
+     "id": "use.en.50f8668bbf790b28158d",
      "address": {
-      "kind": "text"
+      "kind": "segment",
+      "segment": "s02"
      },
-     "claim": "Historical English wording witness for the complete proprium.dominica-i-adventus-epistola text."
+     "claim": "For now our salvation is nearer than when we believed."
+    },
+    {
+     "id": "use.en.e74aa665502b0e11c5b5",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Brethren: You know that the hour has now come for us to rise from sleep."
+    },
+    {
+     "id": "use.en.fa939feb39fe810005c4",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Let us therefore cast off the works of darkness, and put on the armour of light."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

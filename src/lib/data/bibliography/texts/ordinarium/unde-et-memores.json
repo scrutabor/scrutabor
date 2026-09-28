@@ -1,0 +1,26 @@
+{
+ "id": "ordinarium.unde-et-memores",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "pp. 307–308",
+    "scan": "leaves n388–n389 / PDF pp. 389–390",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n388/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.unde-et-memores.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+    }
+   ],
+   "verified_on": "2026-09-25"
+  }
+ ],
+ "witnesses": []
+}

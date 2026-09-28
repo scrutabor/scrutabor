@@ -1,14 +1,14 @@
 {
   "id":"ordinarium.ite-missa-est",
   "language":"pl",
-  "about":"Rozesłanie po ostatniej modlitwie pokomunijnej. Kapłan pozdrawia wiernych i mówi „Ite, Missa est”, na co odpowiada się „Deo grátias”. Gdy po Mszy następuje procesja, mówi zamiast tego „Benedicámus Dómino”, a we Mszach za zmarłych „Requiéscant in pace”, na co odpowiada się „Amen”.",
+  "about":"Rozesłanie po ostatniej modlitwie pokomunijnej. Kapłan pozdrawia wiernych i mówi „Ite, missa est”, na co odpowiada się „Deo grátias”. Gdy po Mszy następuje procesja, mówi zamiast tego „Benedicámus Dómino”, a we Mszach za zmarłych „Requiéscant in pace”, na co odpowiada się „Amen”.",
   "seg":[
     {"id":"s01","nr":"Po ostatniej modlitwie pokomunijnej kapłan mówi:"},
-    {"id":"s02","tr":"Pan z wami.","tc":[141],"tb":"revised","g":["Pan","z wami"]},
-    {"id":"s03","tr":"I z duchem twoim.","tc":[141],"tb":"revised","g":["i","z","duchem","twoim"]},
-    {"id":"s04","nr":"Zwrócony do ludu kapłan mówi „Ite, Missa est”, a usługujący odpowiada „Deo grátias”. Gdy zamiast tego mówi się „Benedicámus Dómino”, kapłan mówi to na środku ołtarza, zwrócony ku niemu."},
-    {"id":"s05","tr":"Idźcie, ofiara spełniona.","tc":[141],"tb":"revised","g":["idźcie","rozesłanie","dokonuje się"],"nt":{"w008":"„Missa” jako rzeczownik oznacza rozesłanie. Tę samą postać ma imiesłów od „mitto” — „posłana”. Odczytanie imiesłowowe wymagałoby domyślnego podmiotu, którego formuła nie wymienia."}},
-    {"id":"s06","tr":"Bogu niech będą dzięki.","tc":[141],"tb":"revised","g":["Bogu","dzięki"],"ex":{"w011":"Odpowiedź pomija czasownik. Pełny sens brzmi: „składamy dzięki Bogu”."}},
+    {"id":"s02","tr":"Pan z wami.","tc":[141],"tb":"exact","g":["Pan","z wami"]},
+    {"id":"s03","tr":"I z duchem twoim.","tc":[141],"tb":"normalized","g":["i","z","duchem","twoim"]},
+    {"id":"s04","nr":"Zwrócony do ludu kapłan mówi „Ite, missa est”, a usługujący odpowiada „Deo grátias”. Gdy po Mszy następuje procesja liturgiczna, kapłan mówi zamiast tego „Benedicámus Dómino” na środku ołtarza, zwrócony ku niemu."},
+    {"id":"s05","tr":"Idźcie, ofiara spełniona.","g":["idźcie","rozesłanie","dokonuje się"],"nt":{"w008":"„Missa” jako rzeczownik oznacza rozesłanie. Tę samą postać ma imiesłów od „mitto” — „posłana”. Odczytanie imiesłowowe wymagałoby domyślnego podmiotu, którego formuła nie wymienia."}},
+    {"id":"s06","tr":"Bogu niech będą dzięki.","g":["Bogu","dzięki"],"ex":{"w011":"Odpowiedź pomija czasownik. Pełny sens brzmi: „składamy dzięki Bogu”."}},
     {"id":"s07","nr":"We Mszach za zmarłych kapłan, zwrócony ku ołtarzowi, mówi zamiast tego: Requiéscant in pace — a odpowiedź brzmi Amen."}
   ]
 }

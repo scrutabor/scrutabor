@@ -11,14 +11,87 @@
    },
    "entries": [
     {
-     "id": "use.en.24128f6c07307c70101c",
+     "id": "use.en.4a42082abec61754e83f",
      "address": {
-      "kind": "text"
+      "kind": "segment",
+      "segment": "s07"
      },
-     "claim": "Historical English wording witness for the complete proprium.dominica-iii-adventus-evangelium text."
+     "claim": "He said: I am the voice of one crying in the wilderness: Make straight the way of the Lord, as the prophet Isaiah said."
+    },
+    {
+     "id": "use.en.4aec568f029373d6b1d2",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Who are you?"
+    },
+    {
+     "id": "use.en.540f2691c42d44f269c8",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "At that time the Jews sent priests and Levites from Jerusalem to John to ask him:"
+    },
+    {
+     "id": "use.en.5b16df50870c74498b72",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "These things were done in Bethania beyond the Jordan, where John was baptizing."
+    },
+    {
+     "id": "use.en.607bff4c15dca6cdf466",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "He confessed and did not deny, but confessed: I am not the Christ."
+    },
+    {
+     "id": "use.en.68fff2b6b7eec3a1740e",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "They asked him: What then? Are you Elijah?"
+    },
+    {
+     "id": "use.en.6e75ded137132d6310e1",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "They asked him: Why then do you baptize, if you are not the Christ, nor Elijah, nor the prophet?"
+    },
+    {
+     "id": "use.en.ae9f679a1c281d2adf5d",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "He said: I am not. Are you the prophet? He answered: No."
+    },
+    {
+     "id": "use.en.e55eda413d8f10a6518c",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Those who had been sent were Pharisees."
+    },
+    {
+     "id": "use.en.fe6d6c9bb8054bd45e2e",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "They said therefore to him: Who are you, that we may give an answer to those who sent us? What do you say of yourself?"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

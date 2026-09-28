@@ -1,7 +1,7 @@
 import { expect, test } from './fixtures';
 
 for (const [formulary, part, word, latin, sense] of [
-	['dominica-i-post-epiphaniam', 'epistola', 'w084', 'actum', 'act, deed, activity'],
+	['dominica-i-post-epiphaniam', 'epistola', 'w084', 'actum', 'deed, act'],
 	['sancti-thomae-apostoli', 'epistola', 'w030', 'ædificátio', 'building, construction'],
 	['cathedra-sancti-petri', 'graduale', 'w008', 'cáthedra', 'chair, seat'],
 	[
@@ -18,7 +18,7 @@ for (const [formulary, part, word, latin, sense] of [
 	['dominica-iv-post-pentecosten', 'evangelium', 'w090', 'conclusérunt', 'enclose, confine'],
 	['dominica-iii-post-epiphaniam', 'epistola', 'w069', 'cóngeres', 'gather, collect'],
 	['dominica-iv-post-pentecosten', 'introitus', 'w027', 'consístant', 'stand, take a position'],
-	['sancti-bartholomaei-apostoli', 'graduale', 'w001', 'Constítues', 'place, set in position'],
+	['sancti-bartholomaei-apostoli', 'graduale', 'w001', 'Constítues', 'to appoint, ordain'],
 	[
 		'dominica-vi-post-epiphaniam',
 		'evangelium',
@@ -51,7 +51,7 @@ for (const [formulary, part, word, latin, sense] of [
 	],
 	['dominica-iii-post-pentecosten', 'epistola', 'w039', 'dévoret', 'devour, swallow'],
 	['dominica-iv-post-pascha', 'postcommunio', 'w010', 'fidéliter', 'faithfully, loyally'],
-	['assumptio-beatae-mariae-virginis', 'epistola', 'w075', 'géneris', 'race, people, stock'],
+	['assumptio-beatae-mariae-virginis', 'epistola', 'w075', 'géneris', 'race, people'],
 	['dominica-xii-post-pentecosten', 'epistola', 'w028', 'idóneos', 'suitable, fitting'],
 	[
 		'dedicatio-archibasilicae-sanctissimi-salvatoris',
@@ -69,7 +69,8 @@ for (const [formulary, part, word, latin, sense] of [
 		const card = page.locator('aside');
 		await expect(card).toBeVisible();
 		await expect(card.locator('.form')).toContainText(latin);
-		await expect(card.locator('.head-senses')).toContainText(sense);
+		// A word inside an aligned idiom (e contrário) shows its partner's card too.
+		await expect(card.locator('.head-senses').filter({ hasText: sense })).toHaveCount(1);
 		await expect
 			.poll(() => page.evaluate(() => document.documentElement.scrollWidth - innerWidth))
 			.toBe(0);

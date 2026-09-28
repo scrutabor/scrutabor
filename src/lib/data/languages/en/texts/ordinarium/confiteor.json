@@ -1,7 +1,7 @@
 {
   "id":"ordinarium.confiteor",
   "language":"en",
-  "about":"The ministers' Confíteor at the prayers at the foot of the altar. It addresses the priest as “tibi, pater” and “te, pater”. At the second degree of participation in low Mass, the faithful may recite it with the server.",
+  "about":"The ministers’ Confíteor at the prayers at the foot of the altar. It addresses the priest as “tibi, pater” and “te, pater”. At the second degree of participation in low Mass, the faithful may recite it with the server.",
   "seg":[
     {"id":"s01","nr":"The ministers repeat the Confíteor."},
     {"id":"s02","tr":"I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, father:","tc":[159],"tb":"revised","g":["I confess","to God","almighty","to blessed","Mary","ever","Virgin","to blessed","Michael","the Archangel","to blessed","John","the Baptist","to the holy","Apostles","Peter","and","Paul","to all","the Saints","and","to you","father"]},

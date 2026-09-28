@@ -12,14 +12,6 @@
    },
    "entries": [
     {
-     "id": "use.pl.08da4d7bf6b09f9fc44d",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „pobłogosławił, połamał i dał swoim uczniom, mówiąc:”"
-    },
-    {
      "id": "use.pl.0e818c7da5dada264d20",
      "address": {
       "kind": "segment",
@@ -42,22 +34,6 @@
       "segment": "s02"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Który w przeddzień swej męki wziął chleb w swe święte i czcigodne ręce,”"
-    },
-    {
-     "id": "use.pl.1e913625fffbd1df5c73",
-     "address": {
-      "kind": "segment",
-      "segment": "s06"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „składając Ci dzięki,”"
-    },
-    {
-     "id": "use.pl.3547ed7e0571e5a92fde",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „a wzniósłszy oczy ku niebu, ku Tobie, Bogu, swojemu Ojcu wszechmogącemu,”"
     }
    ],
    "verified_on": "2026-08-28"

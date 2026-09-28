@@ -224,7 +224,7 @@ test('reading modes preserve the book geometry @online @sweep', async ({ page })
 for (const size of ['normal', 'largest'] as const) {
 	for (const [lang, formulary, text] of [
 		['pl', 'dominica-ii-post-pentecosten', 'dominica-ii-post-pentecosten-introitus'],
-		['en', 'dominica-in-quinquagesima', 'dominica-in-quinquagesima-collecta']
+		['en', 'dominica-ii-post-pentecosten', 'dominica-ii-post-pentecosten-introitus']
 	] as const) {
 		test(`a shared gloss under a raised initial keeps its row (${lang}, ${size})`, async ({
 			page

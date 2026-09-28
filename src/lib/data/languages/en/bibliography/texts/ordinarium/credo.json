@@ -67,14 +67,6 @@
      "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
     },
     {
-     "id": "use.en.84c7ac9455f82239747b",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
-    },
-    {
      "id": "use.en.8aadaa22e95dfeed99a8",
      "address": {
       "kind": "segment",
@@ -148,6 +140,46 @@
     }
    ],
    "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "pp. 79–83",
+    "scan": "scan pp. 92–96"
+   },
+   "entries": [
+    {
+     "id": "use.en.84c7ac9455f82239747b",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 9",
+    "scan": "scan p. 36"
+   },
+   "entries": [
+    {
+     "id": "use.en.753dde9af9ba3ed0cf09",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "And born of the Father before all ages."
+    }
+   ],
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

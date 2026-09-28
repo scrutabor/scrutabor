@@ -52,7 +52,6 @@
     {
       "id": "orationes.alma-redemptoris-mater",
       "path": "languages/en/texts/orationes/alma-redemptoris-mater.json",
-      "evidence": "languages/en/bibliography/texts/orationes/alma-redemptoris-mater.json",
       "title": "Alma Redemptoris Mater",
       "aliases": [
         "Loving Mother of the Redeemer"
@@ -91,7 +90,6 @@
     {
       "id": "orationes.ave-regina-caelorum",
       "path": "languages/en/texts/orationes/ave-regina-caelorum.json",
-      "evidence": "languages/en/bibliography/texts/orationes/ave-regina-caelorum.json",
       "title": "Hail, Queen of the Heavens"
     },
     {
@@ -254,8 +252,7 @@
     },
     {
       "id": "ordinarium.deus-qui-humanae",
-      "path": "languages/en/texts/ordinarium/deus-qui-humanae.json",
-      "evidence": "languages/en/bibliography/texts/ordinarium/deus-qui-humanae.json"
+      "path": "languages/en/texts/ordinarium/deus-qui-humanae.json"
     },
     {
       "id": "ordinarium.deus-tu-conversus",
@@ -547,13 +544,11 @@
     },
     {
       "id": "ordinarium.suscipe-sancta-trinitas",
-      "path": "languages/en/texts/ordinarium/suscipe-sancta-trinitas.json",
-      "evidence": "languages/en/bibliography/texts/ordinarium/suscipe-sancta-trinitas.json"
+      "path": "languages/en/texts/ordinarium/suscipe-sancta-trinitas.json"
     },
     {
       "id": "ordinarium.suscipe-sancte-pater",
-      "path": "languages/en/texts/ordinarium/suscipe-sancte-pater.json",
-      "evidence": "languages/en/bibliography/texts/ordinarium/suscipe-sancte-pater.json"
+      "path": "languages/en/texts/ordinarium/suscipe-sancte-pater.json"
     },
     {
       "id": "ordinarium.te-igitur",
@@ -1142,8 +1137,7 @@
     },
     {
       "id": "proprium.dominica-i-adventus-offertorium",
-      "path": "languages/en/texts/proprium/dominica-i-adventus-offertorium.json",
-      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-adventus-offertorium.json"
+      "path": "languages/en/texts/proprium/dominica-i-adventus-offertorium.json"
     },
     {
       "id": "proprium.dominica-i-adventus-postcommunio",
@@ -1291,8 +1285,7 @@
     },
     {
       "id": "proprium.dominica-ii-adventus-graduale",
-      "path": "languages/en/texts/proprium/dominica-ii-adventus-graduale.json",
-      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-adventus-graduale.json"
+      "path": "languages/en/texts/proprium/dominica-ii-adventus-graduale.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-introitus",

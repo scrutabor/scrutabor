@@ -6,8 +6,8 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "p. 90",
-    "scan": "PDF p. 102"
+    "printed": "p. 37",
+    "scan": "PDF p. 49"
    },
    "entries": [
     {
@@ -17,7 +17,19 @@
       "segment": "s03"
      },
      "claim": "O people of Sion, behold, the Lord will come to save the nations; the Lord will make the glory of His voice heard for the joy of your hearts."
-    },
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 90",
+    "scan": "PDF p. 102"
+   },
+   "entries": [
     {
      "id": "use.en.84d901e39b2c20ff4f9e",
      "address": {

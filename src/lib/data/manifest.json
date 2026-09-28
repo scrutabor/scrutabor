@@ -164,22 +164,26 @@
     {
       "id": "ordinarium.adiutorium",
       "path": "texts/ordinarium/adiutorium.json",
-      "title": "Adiutórium nostrum"
+      "title": "Adiutórium nostrum",
+      "evidence": "bibliography/texts/ordinarium/adiutorium.json"
     },
     {
       "id": "ordinarium.agnus-dei",
       "path": "texts/ordinarium/agnus-dei.json",
-      "title": "Agnus Dei"
+      "title": "Agnus Dei",
+      "evidence": "bibliography/texts/ordinarium/agnus-dei.json"
     },
     {
       "id": "ordinarium.aufer-a-nobis",
       "path": "texts/ordinarium/aufer-a-nobis.json",
-      "title": "Aufer a nobis"
+      "title": "Aufer a nobis",
+      "evidence": "bibliography/texts/ordinarium/aufer-a-nobis.json"
     },
     {
       "id": "ordinarium.benedictio",
       "path": "texts/ordinarium/benedictio.json",
-      "title": "Benedícat vos omnípotens Deus"
+      "title": "Benedícat vos omnípotens Deus",
+      "evidence": "bibliography/texts/ordinarium/benedictio.json"
     },
     {
       "id": "ordinarium.communicantes",
@@ -189,22 +193,26 @@
     {
       "id": "ordinarium.confiteor-sacerdotis",
       "path": "texts/ordinarium/confiteor-sacerdotis.json",
-      "title": "Confíteor (Sacerdotis)"
+      "title": "Confíteor (Sacerdotis)",
+      "evidence": "bibliography/texts/ordinarium/confiteor-sacerdotis.json"
     },
     {
       "id": "ordinarium.confiteor",
       "path": "texts/ordinarium/confiteor.json",
-      "title": "Confíteor (Ministrórum)"
+      "title": "Confíteor (Ministrórum)",
+      "evidence": "bibliography/texts/ordinarium/confiteor.json"
     },
     {
       "id": "ordinarium.corpus-tuum",
       "path": "texts/ordinarium/corpus-tuum.json",
-      "title": "Corpus tuum"
+      "title": "Corpus tuum",
+      "evidence": "bibliography/texts/ordinarium/corpus-tuum.json"
     },
     {
       "id": "ordinarium.credo",
       "path": "texts/ordinarium/credo.json",
-      "title": "Credo"
+      "title": "Credo",
+      "evidence": "bibliography/texts/ordinarium/credo.json"
     },
     {
       "id": "ordinarium.deo-gratias-epistolae",
@@ -214,17 +222,20 @@
     {
       "id": "ordinarium.deus-qui-humanae",
       "path": "texts/ordinarium/deus-qui-humanae.json",
-      "title": "Deus, qui humánæ substántiæ"
+      "title": "Deus, qui humánæ substántiæ",
+      "evidence": "bibliography/texts/ordinarium/deus-qui-humanae.json"
     },
     {
       "id": "ordinarium.deus-tu-conversus",
       "path": "texts/ordinarium/deus-tu-conversus.json",
-      "title": "Deus, tu convérsus"
+      "title": "Deus, tu convérsus",
+      "evidence": "bibliography/texts/ordinarium/deus-tu-conversus.json"
     },
     {
       "id": "ordinarium.ecce-agnus-dei",
       "path": "texts/ordinarium/ecce-agnus-dei.json",
-      "title": "Ecce Agnus Dei"
+      "title": "Ecce Agnus Dei",
+      "evidence": "bibliography/texts/ordinarium/ecce-agnus-dei.json"
     },
     {
       "id": "ordinarium.evangelium-ultimum",
@@ -234,47 +245,56 @@
     {
       "id": "ordinarium.fili-dei-vivi",
       "path": "texts/ordinarium/fili-dei-vivi.json",
-      "title": "Dómine Iesu Christe, Fili Dei vivi"
+      "title": "Dómine Iesu Christe, Fili Dei vivi",
+      "evidence": "bibliography/texts/ordinarium/fili-dei-vivi.json"
     },
     {
       "id": "ordinarium.gloria",
       "path": "texts/ordinarium/gloria.json",
-      "title": "Glória in excélsis"
+      "title": "Glória in excélsis",
+      "evidence": "bibliography/texts/ordinarium/gloria.json"
     },
     {
       "id": "ordinarium.haec-commixtio",
       "path": "texts/ordinarium/haec-commixtio.json",
-      "title": "Hæc commíxtio"
+      "title": "Hæc commíxtio",
+      "evidence": "bibliography/texts/ordinarium/haec-commixtio.json"
     },
     {
       "id": "ordinarium.hanc-igitur",
       "path": "texts/ordinarium/hanc-igitur.json",
-      "title": "Hanc ígitur"
+      "title": "Hanc ígitur",
+      "evidence": "bibliography/texts/ordinarium/hanc-igitur.json"
     },
     {
       "id": "ordinarium.in-spiritu-humilitatis",
       "path": "texts/ordinarium/in-spiritu-humilitatis.json",
-      "title": "In spíritu humilitátis"
+      "title": "In spíritu humilitátis",
+      "evidence": "bibliography/texts/ordinarium/in-spiritu-humilitatis.json"
     },
     {
       "id": "ordinarium.introibo",
       "path": "texts/ordinarium/introibo.json",
-      "title": "Introíbo ad altáre Dei"
+      "title": "Introíbo ad altáre Dei",
+      "evidence": "bibliography/texts/ordinarium/introibo.json"
     },
     {
       "id": "ordinarium.ite-missa-est",
       "path": "texts/ordinarium/ite-missa-est.json",
-      "title": "Ite, Missa est"
+      "title": "Ite, missa est",
+      "evidence": "bibliography/texts/ordinarium/ite-missa-est.json"
     },
     {
       "id": "ordinarium.iudica-me",
       "path": "texts/ordinarium/iudica-me.json",
-      "title": "Psalmus Iúdica me"
+      "title": "Psalmus Iúdica me",
+      "evidence": "bibliography/texts/ordinarium/iudica-me.json"
     },
     {
       "id": "ordinarium.kyrie",
       "path": "texts/ordinarium/kyrie.json",
-      "title": "Kýrie, eléison"
+      "title": "Kýrie, eléison",
+      "evidence": "bibliography/texts/ordinarium/kyrie.json"
     },
     {
       "id": "ordinarium.laus-tibi-christe",
@@ -284,52 +304,62 @@
     {
       "id": "ordinarium.lavabo",
       "path": "texts/ordinarium/lavabo.json",
-      "title": "Lavábo inter innocéntes"
+      "title": "Lavábo inter innocéntes",
+      "evidence": "bibliography/texts/ordinarium/lavabo.json"
     },
     {
       "id": "ordinarium.libera-nos",
       "path": "texts/ordinarium/libera-nos.json",
-      "title": "Líbera nos"
+      "title": "Líbera nos",
+      "evidence": "bibliography/texts/ordinarium/libera-nos.json"
     },
     {
       "id": "ordinarium.memento-defunctorum",
       "path": "texts/ordinarium/memento-defunctorum.json",
-      "title": "Meménto étiam (pro defúnctis)"
+      "title": "Meménto étiam (pro defúnctis)",
+      "evidence": "bibliography/texts/ordinarium/memento-defunctorum.json"
     },
     {
       "id": "ordinarium.memento-vivorum",
       "path": "texts/ordinarium/memento-vivorum.json",
-      "title": "Meménto (pro vivis)"
+      "title": "Meménto (pro vivis)",
+      "evidence": "bibliography/texts/ordinarium/memento-vivorum.json"
     },
     {
       "id": "ordinarium.misereatur-tui",
       "path": "texts/ordinarium/misereatur-tui.json",
-      "title": "Misereátur tui"
+      "title": "Misereátur tui",
+      "evidence": "bibliography/texts/ordinarium/misereatur-tui.json"
     },
     {
       "id": "ordinarium.misereatur",
       "path": "texts/ordinarium/misereatur.json",
-      "title": "Misereátur"
+      "title": "Misereátur",
+      "evidence": "bibliography/texts/ordinarium/misereatur.json"
     },
     {
       "id": "ordinarium.nobis-quoque",
       "path": "texts/ordinarium/nobis-quoque.json",
-      "title": "Nobis quoque peccatóribus"
+      "title": "Nobis quoque peccatóribus",
+      "evidence": "bibliography/texts/ordinarium/nobis-quoque.json"
     },
     {
       "id": "ordinarium.offerimus-tibi",
       "path": "texts/ordinarium/offerimus-tibi.json",
-      "title": "Offérimus tibi, Dómine"
+      "title": "Offérimus tibi, Dómine",
+      "evidence": "bibliography/texts/ordinarium/offerimus-tibi.json"
     },
     {
       "id": "ordinarium.orate-fratres",
       "path": "texts/ordinarium/orate-fratres.json",
-      "title": "Oráte, fratres"
+      "title": "Oráte, fratres",
+      "evidence": "bibliography/texts/ordinarium/orate-fratres.json"
     },
     {
       "id": "ordinarium.panem-caelestem",
       "path": "texts/ordinarium/panem-caelestem.json",
-      "title": "Panem cæléstem"
+      "title": "Panem cæléstem",
+      "evidence": "bibliography/texts/ordinarium/panem-caelestem.json"
     },
     {
       "id": "ordinarium.pater-noster",
@@ -340,27 +370,32 @@
     {
       "id": "ordinarium.pax-domini",
       "path": "texts/ordinarium/pax-domini.json",
-      "title": "Pax Dómini"
+      "title": "Pax Dómini",
+      "evidence": "bibliography/texts/ordinarium/pax-domini.json"
     },
     {
       "id": "ordinarium.per-ipsum",
       "path": "texts/ordinarium/per-ipsum.json",
-      "title": "Per ipsum"
+      "title": "Per ipsum",
+      "evidence": "bibliography/texts/ordinarium/per-ipsum.json"
     },
     {
       "id": "ordinarium.per-quem-haec-omnia",
       "path": "texts/ordinarium/per-quem-haec-omnia.json",
-      "title": "Per quem hæc ómnia"
+      "title": "Per quem hæc ómnia",
+      "evidence": "bibliography/texts/ordinarium/per-quem-haec-omnia.json"
     },
     {
       "id": "ordinarium.perceptio-corporis",
       "path": "texts/ordinarium/perceptio-corporis.json",
-      "title": "Percéptio Córporis tui"
+      "title": "Percéptio Córporis tui",
+      "evidence": "bibliography/texts/ordinarium/perceptio-corporis.json"
     },
     {
       "id": "ordinarium.placeat-tibi",
       "path": "texts/ordinarium/placeat-tibi.json",
-      "title": "Pláceat tibi, sancta Trínitas"
+      "title": "Pláceat tibi, sancta Trínitas",
+      "evidence": "bibliography/texts/ordinarium/placeat-tibi.json"
     },
     {
       "id": "ordinarium.praefatio-apostolorum",
@@ -419,7 +454,8 @@
     {
       "id": "ordinarium.praefatio-communis",
       "path": "texts/ordinarium/praefatio-communis.json",
-      "title": "Præfatio communis"
+      "title": "Præfatio communis",
+      "evidence": "bibliography/texts/ordinarium/praefatio-communis.json"
     },
     {
       "id": "ordinarium.praefatio-d-n-iesu-christi-regis",
@@ -436,7 +472,8 @@
     {
       "id": "ordinarium.praefatio-dialogus",
       "path": "texts/ordinarium/praefatio-dialogus.json",
-      "title": "Dóminus vobíscum (dialogus Præfationis)"
+      "title": "Dóminus vobíscum (dialogus Præfationis)",
+      "evidence": "bibliography/texts/ordinarium/praefatio-dialogus.json"
     },
     {
       "id": "ordinarium.praefatio-epiphaniae",
@@ -507,7 +544,8 @@
     {
       "id": "ordinarium.quam-oblationem",
       "path": "texts/ordinarium/quam-oblationem.json",
-      "title": "Quam oblatiónem"
+      "title": "Quam oblatiónem",
+      "evidence": "bibliography/texts/ordinarium/quam-oblationem.json"
     },
     {
       "id": "ordinarium.qui-dixisti",
@@ -517,22 +555,26 @@
     {
       "id": "ordinarium.qui-pridie",
       "path": "texts/ordinarium/qui-pridie.json",
-      "title": "Qui prídie"
+      "title": "Qui prídie",
+      "evidence": "bibliography/texts/ordinarium/qui-pridie.json"
     },
     {
       "id": "ordinarium.quid-retribuam",
       "path": "texts/ordinarium/quid-retribuam.json",
-      "title": "Quid retríbuam"
+      "title": "Quid retríbuam",
+      "evidence": "bibliography/texts/ordinarium/quid-retribuam.json"
     },
     {
       "id": "ordinarium.quod-ore-sumpsimus",
       "path": "texts/ordinarium/quod-ore-sumpsimus.json",
-      "title": "Quod ore súmpsimus"
+      "title": "Quod ore súmpsimus",
+      "evidence": "bibliography/texts/ordinarium/quod-ore-sumpsimus.json"
     },
     {
       "id": "ordinarium.sanctus",
       "path": "texts/ordinarium/sanctus.json",
-      "title": "Sanctus"
+      "title": "Sanctus",
+      "evidence": "bibliography/texts/ordinarium/sanctus.json"
     },
     {
       "id": "ordinarium.simili-modo",
@@ -547,27 +589,32 @@
     {
       "id": "ordinarium.supra-quae",
       "path": "texts/ordinarium/supra-quae.json",
-      "title": "Supra quæ"
+      "title": "Supra quæ",
+      "evidence": "bibliography/texts/ordinarium/supra-quae.json"
     },
     {
       "id": "ordinarium.suscipe-sancta-trinitas",
       "path": "texts/ordinarium/suscipe-sancta-trinitas.json",
-      "title": "Súscipe, sancta Trínitas"
+      "title": "Súscipe, sancta Trínitas",
+      "evidence": "bibliography/texts/ordinarium/suscipe-sancta-trinitas.json"
     },
     {
       "id": "ordinarium.suscipe-sancte-pater",
       "path": "texts/ordinarium/suscipe-sancte-pater.json",
-      "title": "Súscipe, sancte Pater"
+      "title": "Súscipe, sancte Pater",
+      "evidence": "bibliography/texts/ordinarium/suscipe-sancte-pater.json"
     },
     {
       "id": "ordinarium.te-igitur",
       "path": "texts/ordinarium/te-igitur.json",
-      "title": "Te ígitur"
+      "title": "Te ígitur",
+      "evidence": "bibliography/texts/ordinarium/te-igitur.json"
     },
     {
       "id": "ordinarium.unde-et-memores",
       "path": "texts/ordinarium/unde-et-memores.json",
-      "title": "Unde et mémores"
+      "title": "Unde et mémores",
+      "evidence": "bibliography/texts/ordinarium/unde-et-memores.json"
     },
     {
       "id": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
@@ -6574,12 +6621,12 @@
     "formularies": "formularies.json",
     "metrics": "metrics.json"
   },
-  "morphology": 989,
+  "morphology": 1045,
   "kalendarium": [
     2026,
     2101
   ],
   "analyses": 20,
-  "citations": 426,
+  "citations": 454,
   "bibliography_schema": "1.3.0"
 }

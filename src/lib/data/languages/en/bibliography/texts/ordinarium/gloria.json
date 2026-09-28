@@ -63,8 +63,8 @@
    "digital_item": "item.family-prayer-book-1839.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "p. 66",
-    "scan": "scan p. 97"
+    "printed": "p. 65",
+    "scan": "scan p. 96"
    },
    "entries": [
     {
@@ -74,7 +74,19 @@
       "segment": "s11"
      },
      "claim": "You who sit at the Father's right hand, have mercy on us."
-    },
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 66",
+    "scan": "scan p. 97"
+   },
+   "entries": [
     {
      "id": "use.en.0524d8c62828c31becdd",
      "address": {

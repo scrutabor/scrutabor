@@ -115,13 +115,13 @@ test('standalone Ordinary prayers omit process rubrics but keep textual directio
 
 	await page.goto('/app/pl/ordinarium/agnus-dei');
 	await expect(page.locator('main > .rubric')).toHaveCount(1);
-	await expect(page.locator('main > .rubric')).toContainText('In Missis Defunctorum');
+	await expect(page.locator('main > .rubric')).toContainText('In Missis defunctorum');
 
 	// The continuous Ordo retains the complete ritual context.
 	await page.goto('/app/pl/ordo/catechumenorum');
 	await expect(
 		page.locator('.rubric-la', {
-			hasText: 'Qua finita, iunctis manibus, et alternatim cum Ministris, dicit'
+			hasText: 'Qua finita, iunctis manibus, alternatim cum ministris dicit'
 		})
 	).toBeVisible();
 });
@@ -198,7 +198,9 @@ test('a cited translation states how its wording relates to the historical sourc
 	sources = page.locator('main .translation-sources details.source-notes');
 	await sources.locator('summary').click();
 	await expect(sources).toContainText('relationship to historical wording');
-	await expect(sources).toContainText('edited directly from the Latin');
+	await expect(sources).toContainText(
+		'after stated modernization of spelling, capitalization, punctuation and archaic word forms'
+	);
 	await expect(sources).toContainText("The Catholic Girl's Guide");
 });
 
@@ -620,7 +622,7 @@ test('Angelus folds each Ave Maria as an ordinary translated verse', async ({ pa
 		});
 	};
 	for (const repetition of await repetitions.all()) await expectFoldedSource(repetition);
-	await expect(first.locator('rt')).toHaveText(['zdrowaś', 'Maryjo', 'łaski', 'pełna']);
+	await expect(first.locator('rt')).toHaveText(['Zdrowaś', 'Maryjo', 'łaski', 'pełna']);
 	await expect(toggle).toHaveAttribute('aria-expanded', 'false');
 	await expect(toggle).toHaveAccessibleName('rozwiń powtórzoną modlitwę');
 
@@ -760,14 +762,19 @@ test('the about sheet speaks the interface language', async ({ page }) => {
 	const pill = page.locator('.about-pill');
 	await expect(pill).toContainText('about this prayer');
 	await pill.click();
-	await expect(page.locator('aside.about-sheet')).toContainText("Lord's Prayer");
+	await expect(page.locator('aside.about-sheet')).toContainText('Lord’s Prayer');
 });
 
 test('an unresolved legacy citation is not presented as audited evidence', async ({ page }) => {
 	await page.goto('/app/en/ordinarium/misereatur');
 	await page.locator('.about-pill').click();
 	await expect(page.locator('aside.about-sheet')).toContainText('absolution');
-	await expect(page.locator('aside.about-sheet details.source-notes')).toHaveCount(0);
+	// Since the Ordinary's collation the sheet cites the Missal's own page, audited evidence;
+	// the Catechism reference, an unresolved legacy citation, still stays out.
+	const notes = page.locator('aside.about-sheet details.source-notes');
+	await expect(notes).toHaveCount(1);
+	await expect(notes).toContainText('Missale Romanum');
+	await expect(notes).not.toContainText('Catechismus');
 });
 
 test('the Credo reads with participles in the panel', async ({ page }) => {

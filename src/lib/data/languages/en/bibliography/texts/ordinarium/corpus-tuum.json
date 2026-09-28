@@ -6,8 +6,8 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "p. 77",
-    "scan": "scan p. 89"
+    "printed": "p. 73",
+    "scan": "scan p. 85"
    },
    "entries": [
     {
@@ -17,7 +17,19 @@
       "segment": "s04"
      },
      "claim": "May Your Body, Lord, which I have received, and the Blood which I have drunk, cling to my inmost being:"
-    },
+    }
+   ],
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 77",
+    "scan": "scan p. 89"
+   },
+   "entries": [
     {
      "id": "use.en.4a50e9621e1b5d72f049",
      "address": {
@@ -43,7 +55,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 33",
-    "scan": "scan p. 59"
+    "scan": "scan p. 60"
    },
    "entries": [
     {
@@ -51,14 +63,6 @@
      "address": {
       "kind": "segment",
       "segment": "s03"
-     },
-     "claim": "May Your Body, Lord, which I have received, and the Blood which I have drunk, cling to my inmost being:"
-    },
-    {
-     "id": "use.en.c1ed2d7d390a3f630f4d",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
      },
      "claim": "May Your Body, Lord, which I have received, and the Blood which I have drunk, cling to my inmost being:"
     },
@@ -71,7 +75,27 @@
      "claim": "May Your Body, Lord, which I have received, and the Blood which I have drunk, cling to my inmost being:"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "p. 33",
+    "scan": "scan p. 60"
+   },
+   "entries": [
+    {
+     "id": "use.en.c1ed2d7d390a3f630f4d",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    }
+   ],
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

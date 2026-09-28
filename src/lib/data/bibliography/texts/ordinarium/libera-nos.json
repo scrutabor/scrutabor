@@ -1,0 +1,26 @@
+{
+ "id": "ordinarium.libera-nos",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 312",
+    "scan": "leaf n393 / PDF p. 394",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n393/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.libera-nos.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+    }
+   ],
+   "verified_on": "2026-09-25"
+  }
+ ],
+ "witnesses": []
+}

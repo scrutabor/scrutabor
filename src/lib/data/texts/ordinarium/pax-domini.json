@@ -9,7 +9,7 @@
   "ad":5,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"rubric","text":"Cum ipsa particula signat ter super Calicem, dicens:","an":8},
+    {"id":"s01","type":"rubric","text":"Cum ipsa particula signat ter super calicem, dicens:","an":8},
     {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Pax","l":"pax","m":20},{"i":"w002","f":"Dómini","l":"dominus","m":54},{"i":"w003","f":"sit","l":"sum","m":198},{"i":"w004","f":"semper","l":"semper","m":32},{"i":"w005","f":"vobíscum","l":"vos","p":".","m":62,"a":3}]},
     {"id":"s03","type":"verse","voice":"clara","speaker":"minister","participation":{"lecta":{"gradus":1,"source":"DMS 31 a"},"cantu":{"gradus":1,"source":"DMS 25 a"}},"w":[{"i":"w006","f":"Et","l":"et","m":15},{"i":"w007","f":"cum","l":"cum","m":0,"h":"w008"},{"i":"w008","f":"spíritu","l":"spiritus","m":100},{"i":"w009","f":"tuo","l":"tuus","p":".","m":101,"h":"w008"}]}
   ]

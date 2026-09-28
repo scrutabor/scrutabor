@@ -1,12 +1,16 @@
 import { expect, test } from './fixtures';
 
 const cards = [
-	['exsisto', 'come forth, appear, arise, become, exist, be', 'n17222'],
-	['teneo', 'hold, keep, possess, maintain, support, restrain', 'n47770'],
-	['transfero', 'carry over, transfer, copy, transcribe, translate, transform', 'n48775'],
+	['exsisto', 'to become, be, to arise, come forth, to exist', 'n17222'],
+	[
+		'teneo',
+		'to hold, hold fast, to seize, lay hold of, to keep, retain, to occupy, possess',
+		'n47770'
+	],
+	['transfero', 'to transfer, carry over, to remove, move, to bring over, lead', 'n48775'],
 	['sors', 'lot, allotted share, portion, fate, condition', 'n44805'],
 	['opus', 'work, deed, need', 'n32865'],
-	['quisquam', 'anyone, any person, anything', 'n40247']
+	['quisquam', 'anything, anyone', 'n40247']
 ] as const;
 
 for (const language of ['pl', 'en']) {

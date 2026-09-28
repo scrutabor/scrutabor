@@ -1,11 +1,11 @@
 {
   "id":"ordinarium.pater-noster",
   "language":"en",
-  "about":"The rubrics call the sentence before Pater noster the preface of the Lord's Prayer. After et ne nos indúcas in tentatiónem, they assign the response sed líbera nos a malo to the server. At low Mass the faithful may say the whole Our Father with the priest, in Latin, and add the Amen with him.",
+  "about":"The rubrics call the sentence before Pater noster the preface of the Lord’s Prayer. After et ne nos indúcas in tentatiónem, they assign the response sed líbera nos a malo to the server. At low Mass the faithful may say the whole Our Father with the priest, in Latin, and add the Amen with him.",
   "seg":[
     {"id":"s01","nr":"The priest joins his hands."},
     {"id":"s02","tr":"Let us pray.","tc":[272],"tb":"normalized","g":["let us pray"]},
-    {"id":"s03","tr":"Taught by precepts that lead to salvation and formed through divine instruction, we dare to say:","g":["by precepts","saving","admonished","and","divine","by the institution","formed","we dare","to say"],"ex":{"w009":"“Audémus dícere” expresses filial boldness: instructed by Christ, we dare to say “Our Father.”"}},
+    {"id":"s03","tr":"Taught by precepts that lead to salvation and formed through divine instruction, we dare to say:","g":["by precepts","saving","admonished","and","divine","through instruction","formed","we dare","to say"],"ex":{"w009":"“Audémus dícere” expresses filial boldness: instructed by Christ, we dare to say “Our Father.”"}},
     {"id":"s04","nr":"The priest spreads his hands, and keeps them so through the prayer."},
     {"id":"s05","tr":"Our Father, who art in heaven,","tc":[93],"tb":"normalized","g":["Father","our","who","art","in","the heavens"],"ex":{"w016":"Latin speaks here of “the heavens” in the plural. The received English keeps the familiar “in heaven”."}},
     {"id":"s06","tr":"hallowed be Thy name.","tc":[93],"tb":"normalized","g":["hallowed be","name","Thy"]},
@@ -16,6 +16,6 @@
     {"id":"s11","tr":"And lead us not into temptation,","tc":[93],"tb":"normalized","g":["and","not","us","lead","into","temptation"]},
     {"id":"s12","tr":"but deliver us from evil.","tc":[93],"tb":"normalized","g":["but","deliver","us","from","evil"],"ex":{"w059":"The Catechism explains this petition as a prayer for deliverance from the Evil One, Satan (CCC 2851). It also includes deliverance from every evil (CCC 2854)."},"nt":{"w059":"Latin “malo” can come from either the noun “malum,” evil, or “malus” used as a noun, the Evil One. The form alone does not distinguish these meanings. The grammatical description here corresponds to the first without excluding the petition’s personal reference."}},
     {"id":"s13","nr":"The priest says Amen silently."},
-    {"id":"s14","tr":"Amen.","tc":[93],"tb":"normalized","g":["amen"]}
+    {"id":"s14","tr":"Amen.","tc":[93],"tb":"normalized","g":["Amen"]}
   ]
 }

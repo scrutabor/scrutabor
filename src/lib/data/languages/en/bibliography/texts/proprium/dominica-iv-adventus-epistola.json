@@ -11,14 +11,23 @@
    },
    "entries": [
     {
-     "id": "use.en.9a16101c5f47197c054c",
+     "id": "use.en.064954ca12fa67060587",
      "address": {
-      "kind": "text"
+      "kind": "segment",
+      "segment": "s04"
      },
-     "claim": "Historical English wording witness for the complete proprium.dominica-iv-adventus-epistola text."
+     "claim": "For I am not conscious of anything against myself, yet this does not justify me; the Lord is the One who judges me."
+    },
+    {
+     "id": "use.en.134d3edbbb50a2d2e98b",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Therefore do not judge before the time, until the Lord comes. He will bring to light the things hidden in darkness and reveal the counsels of hearts; then each will receive praise from God."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-09-26"
   }
  ],
  "witnesses": [],

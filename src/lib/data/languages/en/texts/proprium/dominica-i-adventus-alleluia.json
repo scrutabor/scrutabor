@@ -3,9 +3,9 @@
   "language":"en",
   "about":"The alleluia verse of the First Sunday of Advent, Psalm 84:8 in the Vulgate numbering (Psalm 85 in Hebrew). On the ferias of Advent, when this Sunday Mass is used through the week, the Alleluia and its verse are omitted and only the gradual is said.",
   "seg":[
-    {"id":"s01","nr":"When a weekday of Advent uses the preceding Sunday's Mass, the Alleluia and its verse are omitted and only the Gradual is said."},
-    {"id":"s02","tr":"Alleluia, alleluia.","tc":[142],"tb":"revised","g":["alleluia","alleluia"]},
-    {"id":"s03","tr":"Show us, Lord, Your mercy and grant us Your salvation.","tc":[142],"tb":"revised","g":["show","us","Lord","mercy","Thy","and","salvation","Thy","grant","us"]},
-    {"id":"s04","tr":"Alleluia.","tc":[142],"tb":"revised","g":["alleluia"]}
+    {"id":"s01","nr":"When a weekday of Advent uses the preceding Sunday’s Mass, the Alleluia and its verse are omitted and only the Gradual is said."},
+    {"id":"s02","tr":"Alleluia, alleluia.","tc":[440],"tb":"normalized","g":["alleluia","alleluia"]},
+    {"id":"s03","tr":"Show us, Lord, Your mercy and grant us Your salvation.","tc":[440],"tb":"revised","g":["show","us","Lord","mercy","Thy","and","salvation","Thy","grant","us"]},
+    {"id":"s04","tr":"Alleluia.","tc":[440],"tb":"exact","g":["alleluia"]}
   ]
 }

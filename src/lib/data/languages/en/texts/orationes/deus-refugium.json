@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The collect of the prayers of Leo XIII said after low Mass, which follows the Salve Regína and its versicle. It asks God to look graciously upon the people who cry to Him and to hear the petitions offered through the intercession of the Blessed Virgin Mary, Saint Joseph, the Apostles Peter and Paul, and all the saints. It names two intentions: the conversion of sinners and the freedom and exaltation of the Church.",
   "seg":[
-    {"id":"s01","tr":"Let us pray.","tc":[73],"tb":"revised","g":["let us pray"]},
+    {"id":"s01","tr":"Let us pray.","tc":[73],"tb":"exact","g":["let us pray"]},
     {"id":"s02","tr":"O God, our refuge and strength, look with favor upon the people crying out to You;","tc":[73],"tb":"revised","g":["God","refuge","our","and","strength","the people","to","Thee","crying out","favorable","look upon"],"ex":{"w003":"“Refúgium” can mean both seeking refuge and the refuge itself. Here God is called our refuge."}},
     {"id":"s03","tr":"and through the intercession of the glorious and immaculate Virgin Mary, Mother of God,","tc":[73],"tb":"revised","g":["and","through the intercession of","glorious","and","immaculate","Virgin","of God","Mother","Mary"]},
     {"id":"s04","tr":"together with blessed Joseph, her Spouse, Your blessed Apostles Peter and Paul, and all the Saints,","tc":[73],"tb":"revised","g":["with","blessed","Joseph","her","Spouse","and","blessed","Apostles","Thy","Peter","and","Paul","and","all","the Saints"],"ex":{"w024":"An indeclinable name, here ablative. One witness prints “Josepho”, declining it as “Iosephus” — a reading recorded, not adopted."}},

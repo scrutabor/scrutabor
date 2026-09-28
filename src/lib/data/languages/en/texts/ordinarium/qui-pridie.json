@@ -8,12 +8,12 @@
     {"id":"s03","nr":"The priest raises his eyes to heaven."},
     {"id":"s04","tr":"and, raising His eyes to heaven, to You, O God, His almighty Father,","tc":[303,310],"tb":"revised","g":["and","raising","His eyes","to","heaven","to","Thee","God","Father","His","almighty"]},
     {"id":"s05","nr":"The priest bows his head."},
-    {"id":"s06","tr":"giving thanks to You,","tc":[303,310],"tb":"revised","g":["to Thee","thanks","giving"]},
+    {"id":"s06","tr":"giving thanks to You,","tc":[303,310],"tb":"normalized","g":["to Thee","thanks","giving"]},
     {"id":"s07","nr":"The priest makes the sign of the cross over the Host."},
-    {"id":"s08","tr":"blessed it, broke it, and gave it to His disciples, saying:","tc":[303,310],"tb":"revised","g":["He blessed","He broke","and He gave","to the disciples","His","saying"]},
+    {"id":"s08","tr":"blessed it, broke it, and gave it to His disciples, saying:","tc":[303,310],"tb":"revised","g":["He blessed","He broke","and He gave","to disciples","His","saying"]},
     {"id":"s09","tr":"Take and eat of this, all of you:","tc":[303,310],"tb":"revised","g":["take","and","eat","of","this","all of you"],"ex":{"w035":"The Canon says “manducáte” with 1 Cor 11:24, where Mt 26:26 has “comédite”."}},
     {"id":"s10","nr":"The priest holds the Host with both hands between his forefingers and thumbs and speaks the words of consecration silently, distinctly and attentively over it, and over all the hosts together if there are more to be consecrated."},
-    {"id":"s11","tr":"For this is My Body.","tc":[303,310],"tb":"revised","g":["this","is","for","Body","My"]},
+    {"id":"s11","tr":"For this is My Body.","tc":[303,310],"tb":"normalized","g":["this","is","for","Body","My"]},
     {"id":"s12","nr":"The words spoken, the priest genuflects and adores the consecrated Host, rises, shows it to the people — the elevation, at which the server rings the bell three times — lays it on the corporal and genuflects again. From now until the ablution of the fingers he keeps thumb and forefinger joined, parting them only to handle the Host."}
   ]
 }

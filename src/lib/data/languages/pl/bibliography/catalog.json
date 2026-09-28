@@ -2,6 +2,11 @@
  "schema_version": "1.3.0",
  "works": [
   {
+   "id": "work.biblia-wujka",
+   "responsible": "Jakub Wujek",
+   "title": "Biblia to jest księgi Starego i Nowego Testamentu"
+  },
+  {
    "id": "work.dwutygodnik-dyecezalny-wilenski",
    "title": "Dwutygodnik Dyecezalny Wileński"
   },
@@ -30,6 +35,22 @@
   }
  ],
  "editions": [
+  {
+   "id": "edition.biblia-wujka-1923",
+   "work": "work.biblia-wujka",
+   "title": "Biblia to jest księgi Starego i Nowego Testamentu",
+   "place": "Warszawa",
+   "year": "1923",
+   "publication_type": "scripture",
+   "authority": "scriptural_edition",
+   "languages": [
+    "pl"
+   ],
+   "rights": {
+    "status": "public-domain",
+    "basis": "Jakub Wujek died in 1597; this printing (Brytyjskie i Zagraniczne Towarzystwo Biblijne) reproduces the Kraków edition of 1599 and was published in 1923."
+   }
+  },
   {
    "id": "edition.dwutygodnik-dyecezalny-wilenski-1911",
    "work": "work.dwutygodnik-dyecezalny-wilenski",
@@ -125,6 +146,15 @@
   }
  ],
  "digital_items": [
+  {
+   "id": "item.biblia-wujka-1923.commons",
+   "edition": "edition.biblia-wujka-1923",
+   "repository": "Wikimedia Commons",
+   "kind": "scan",
+   "record_url": "https://commons.wikimedia.org/wiki/File:PL_Wujek-Biblia_to_jest_ksi%C4%99gi_Starego_i_Nowego_Testamentu_1923.djvu",
+   "scan_url": "https://commons.wikimedia.org/wiki/File:PL_Wujek-Biblia_to_jest_ksi%C4%99gi_Starego_i_Nowego_Testamentu_1923.djvu",
+   "access": "open"
+  },
   {
    "id": "item.dwutygodnik-dyecezalny-wilenski-1911.pbc",
    "edition": "edition.dwutygodnik-dyecezalny-wilenski-1911",
