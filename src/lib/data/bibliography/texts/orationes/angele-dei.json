@@ -20,16 +20,5 @@
    "verified_on": "2026-08-28"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.orationes.angele-dei.compendium-2005",
-   "text": "orationes.angele-dei",
-   "use": "use.orationes.angele-dei.compendium-2005",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
-  }
- ]
+ "witnesses": []
 }

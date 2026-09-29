@@ -40,42 +40,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-tractus.do44667ff",
-   "text": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-tractus",
-   "use": "use.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-tractus.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
-  },
-  {
-   "id": "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-tractus.mr1962",
-   "text": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-tractus",
-   "use": "use.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-tractus.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct transcription of the separately headed tract on Benziger 1962 p. 723, including defunctorum; not copied from the digital common."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-tractus.mr1962-do44667ff",
-  "text": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-tractus",
-  "recension": "Complete tract in the Benziger 1962 editio iuxta typicam, including defunctorum; printed punctuation and house i spelling.",
-  "witnesses": [
-   "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-tractus.do44667ff",
-   "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-tractus.mr1962"
-  ],
-  "apparatus": {
-   "entries": 2,
-   "classes": [
-    "omission",
-    "orthography"
-   ]
-  }
- }
+ "witnesses": []
 }

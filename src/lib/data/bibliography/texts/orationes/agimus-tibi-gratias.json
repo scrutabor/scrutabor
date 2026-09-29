@@ -41,16 +41,5 @@
    "verified_on": "2026-08-28"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.orationes.agimus-tibi-gratias.breviarium-romanum-1902",
-   "text": "orationes.agimus-tibi-gratias",
-   "use": "use.orationes.agimus-tibi-gratias.breviarium-romanum-1902",
-   "role": "approved_corroboration",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
-  }
- ]
+ "witnesses": []
 }

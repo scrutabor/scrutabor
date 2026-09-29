@@ -40,43 +40,5 @@
    "verified_on": "2026-09-12"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.ascensio-domini-epistola.do44667ff",
-   "text": "proprium.ascensio-domini-epistola",
-   "use": "use.proprium.ascensio-domini-epistola.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
-  },
-  {
-   "id": "witness.proprium.ascensio-domini-epistola.mr1962",
-   "text": "proprium.ascensio-domini-epistola",
-   "use": "use.proprium.ascensio-domini-epistola.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Controlling printed edition identified at pp. 345–346, n426–n427. The received transcription was checked at w037 against the page image on 2026-09-19; the digital witness has a distinct reading. A fresh complete transcription and full punctuation collation are not asserted."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.ascensio-domini-epistola.mr1962-do44667ff",
-  "text": "proprium.ascensio-domini-epistola",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
-  "witnesses": [
-   "witness.proprium.ascensio-domini-epistola.do44667ff",
-   "witness.proprium.ascensio-domini-epistola.mr1962"
-  ],
-  "apparatus": {
-   "entries": 14,
-   "classes": [
-    "accent",
-    "capital-accent",
-    "orthography"
-   ]
-  }
- }
+ "witnesses": []
 }

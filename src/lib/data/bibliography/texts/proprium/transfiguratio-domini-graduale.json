@@ -40,41 +40,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.transfiguratio-domini-graduale.do44667ff",
-   "text": "proprium.transfiguratio-domini-graduale",
-   "use": "use.proprium.transfiguratio-domini-graduale.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Pinned upstream Latin data maintained outside this corpus. Only the two cited Graduale verses are included; the following Alleluia is a separate chant and is excluded."
-  },
-  {
-   "id": "witness.proprium.transfiguratio-domini-graduale.mr1962",
-   "text": "proprium.transfiguratio-domini-graduale",
-   "use": "use.proprium.transfiguratio-domini-graduale.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Directly viewed printed page 627 of the 1962 typical edition. Complete gradual only; no following Alleluia."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.transfiguratio-domini-graduale.mr1962-do44667ff",
-  "text": "proprium.transfiguratio-domini-graduale",
-  "recension": "The complete 1962 gradual with printed stress and declared digital accent variant",
-  "witnesses": [
-   "witness.proprium.transfiguratio-domini-graduale.do44667ff",
-   "witness.proprium.transfiguratio-domini-graduale.mr1962"
-  ],
-  "apparatus": {
-   "entries": 1,
-   "classes": [
-    "accent"
-   ]
-  }
- }
+ "witnesses": []
 }

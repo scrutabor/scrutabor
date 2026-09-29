@@ -60,41 +60,5 @@
    "verified_on": "2026-09-12"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.dominica-infra-octavam-nativitatis-collecta.do44667ff",
-   "text": "proprium.dominica-infra-octavam-nativitatis-collecta",
-   "use": "use.proprium.dominica-infra-octavam-nativitatis-collecta.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
-  },
-  {
-   "id": "witness.proprium.dominica-infra-octavam-nativitatis-collecta.mr1962",
-   "text": "proprium.dominica-infra-octavam-nativitatis-collecta",
-   "use": "use.proprium.dominica-infra-octavam-nativitatis-collecta.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.dominica-infra-octavam-nativitatis-collecta.mr1962-do44667ff",
-  "text": "proprium.dominica-infra-octavam-nativitatis-collecta",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
-  "witnesses": [
-   "witness.proprium.dominica-infra-octavam-nativitatis-collecta.do44667ff",
-   "witness.proprium.dominica-infra-octavam-nativitatis-collecta.mr1962"
-  ],
-  "apparatus": {
-   "entries": 2,
-   "classes": [
-    "punctuation"
-   ]
-  }
- }
+ "witnesses": []
 }

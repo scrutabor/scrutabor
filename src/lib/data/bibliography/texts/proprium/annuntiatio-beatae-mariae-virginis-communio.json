@@ -58,43 +58,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-communio.do44667ff",
-   "text": "proprium.annuntiatio-beatae-mariae-virginis-communio",
-   "use": "use.proprium.annuntiatio-beatae-mariae-virginis-communio.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Derived pinned source chain, not an independent printed edition; coverage never extends beyond the actual dependency."
-  },
-  {
-   "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-communio.mr1962",
-   "text": "proprium.annuntiatio-beatae-mariae-virginis-communio",
-   "use": "use.proprium.annuntiatio-beatae-mariae-virginis-communio.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Directly viewed approved printed Missal, with explicitly sourced shared expansion."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.annuntiatio-beatae-mariae-virginis-communio.source-comparison",
-  "text": "proprium.annuntiatio-beatae-mariae-virginis-communio",
-  "recension": "Benziger 1962 complete not-paschale communio with explicitly expanded shared formulas.",
-  "witnesses": [
-   "witness.proprium.annuntiatio-beatae-mariae-virginis-communio.mr1962",
-   "witness.proprium.annuntiatio-beatae-mariae-virginis-communio.do44667ff"
-  ],
-  "apparatus": {
-   "entries": 4,
-   "classes": [
-    "capitalization",
-    "orthography",
-    "punctuation"
-   ]
-  }
- }
+ "witnesses": []
 }

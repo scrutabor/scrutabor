@@ -134,41 +134,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.septem-dolorum-beatae-mariae-virginis-collecta.mr1962",
-   "text": "proprium.septem-dolorum-beatae-mariae-virginis-collecta",
-   "use": "use.proprium.septem-dolorum-beatae-mariae-virginis-collecta.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Directly viewed Benziger 1962 p. 670 supplies the proper and abbreviated ending; a separately identified Mass conclusion supplies its declared expansion."
-  },
-  {
-   "id": "witness.proprium.septem-dolorum-beatae-mariae-virginis-collecta.office44667ff",
-   "text": "proprium.septem-dolorum-beatae-mariae-virginis-collecta",
-   "use": "use.proprium.septem-dolorum-beatae-mariae-virginis-collecta.office44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Parallel Latin Office data and its actual conclusion at the pinned revision; derived comparison, not an independent printed witness."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.septem-dolorum-beatae-mariae-virginis-collecta.mr1962-office44667ff",
-  "text": "proprium.septem-dolorum-beatae-mariae-virginis-collecta",
-  "recension": "Short September prayer in Benziger 1962 p. 670 with explicitly expanded conclusion; distinctly identified Office parallel.",
-  "witnesses": [
-   "witness.proprium.septem-dolorum-beatae-mariae-virginis-collecta.mr1962",
-   "witness.proprium.septem-dolorum-beatae-mariae-virginis-collecta.office44667ff"
-  ],
-  "apparatus": {
-   "entries": 2,
-   "classes": [
-    "orthography"
-   ]
-  }
- }
+ "witnesses": []
 }

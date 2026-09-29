@@ -41,16 +41,5 @@
    "verified_on": "2026-08-28"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.orationes.benedic-domine.breviarium-romanum-1902",
-   "text": "orationes.benedic-domine",
-   "use": "use.orationes.benedic-domine.breviarium-romanum-1902",
-   "role": "approved_corroboration",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
-  }
- ]
+ "witnesses": []
 }

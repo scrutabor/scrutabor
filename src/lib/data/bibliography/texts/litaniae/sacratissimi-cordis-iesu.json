@@ -21,16 +21,5 @@
    "verified_on": "2026-08-28"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.litaniae.sacratissimi-cordis-iesu.enchiridion-1952",
-   "text": "litaniae.sacratissimi-cordis-iesu",
-   "use": "use.litaniae.sacratissimi-cordis-iesu.enchiridion-1952",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
-  }
- ]
+ "witnesses": []
 }

@@ -76,41 +76,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium.do44667ff",
-   "text": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
-   "use": "use.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Derived pinned source chain, not an independent printed edition; coverage never extends beyond the actual dependency."
-  },
-  {
-   "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium.mr1962",
-   "text": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
-   "use": "use.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Directly viewed approved printed Missal, with explicitly sourced shared expansion."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium.source-comparison",
-  "text": "proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium",
-  "recension": "Benziger 1962 complete not-paschale offertorium with explicitly expanded shared formulas.",
-  "witnesses": [
-   "witness.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium.mr1962",
-   "witness.proprium.annuntiatio-beatae-mariae-virginis-extra-tempus-paschale-offertorium.do44667ff"
-  ],
-  "apparatus": {
-   "entries": 1,
-   "classes": [
-    "punctuation"
-   ]
-  }
- }
+ "witnesses": []
 }

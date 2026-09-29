@@ -40,41 +40,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.purificatio-beatae-mariae-virginis-tractus.do44667ff",
-   "text": "proprium.purificatio-beatae-mariae-virginis-tractus",
-   "use": "use.proprium.purificatio-beatae-mariae-virginis-tractus.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
-  },
-  {
-   "id": "witness.proprium.purificatio-beatae-mariae-virginis-tractus.mr1962",
-   "text": "proprium.purificatio-beatae-mariae-virginis-tractus",
-   "use": "use.proprium.purificatio-beatae-mariae-virginis-tractus.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct transcription of the separately headed tract from the identified Benziger 1962 editio iuxta typicam page image(s)."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.purificatio-beatae-mariae-virginis-tractus.mr1962-do44667ff",
-  "text": "proprium.purificatio-beatae-mariae-virginis-tractus",
-  "recension": "Tract alone in the Benziger 1962 editio iuxta typicam; preceding gradual excluded; printed punctuation and house i spelling.",
-  "witnesses": [
-   "witness.proprium.purificatio-beatae-mariae-virginis-tractus.do44667ff",
-   "witness.proprium.purificatio-beatae-mariae-virginis-tractus.mr1962"
-  ],
-  "apparatus": {
-   "entries": 1,
-   "classes": [
-    "punctuation"
-   ]
-  }
- }
+ "witnesses": []
 }

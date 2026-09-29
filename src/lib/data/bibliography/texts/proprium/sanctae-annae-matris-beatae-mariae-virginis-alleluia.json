@@ -40,41 +40,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia.do44667ff",
-   "text": "proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia",
-   "use": "use.proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
-  },
-  {
-   "id": "witness.proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia.mr1962",
-   "text": "proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia",
-   "use": "use.proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct transcription of the separately printed chant on Benziger 1962 p. 614. The adjacent chant and rubric are excluded."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia.mr1962-do44667ff",
-  "text": "proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia",
-  "recension": "Benziger 1962 editio iuxta typicam, separately headed chant with exact printed punctuation.",
-  "witnesses": [
-   "witness.proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia.do44667ff",
-   "witness.proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia.mr1962"
-  ],
-  "apparatus": {
-   "entries": 3,
-   "classes": [
-    "orthography"
-   ]
-  }
- }
+ "witnesses": []
 }

@@ -61,44 +61,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-epistola.do44667ff",
-   "text": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-epistola",
-   "use": "use.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-epistola.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
-  },
-  {
-   "id": "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-epistola.mr1962",
-   "text": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-epistola",
-   "use": "use.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-epistola.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct transcription from both Benziger 1962 pp. 722–723, including the opening and the page-break continuation, not from the digital reading."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-epistola.mr1962-do44667ff",
-  "text": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-epistola",
-  "recension": "Benziger 1962 editio iuxta typicam, full Epistle from pp. 722–723, resurgemus; printed punctuation and house i spelling.",
-  "witnesses": [
-   "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-epistola.do44667ff",
-   "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-epistola.mr1962"
-  ],
-  "apparatus": {
-   "entries": 4,
-   "classes": [
-    "accent",
-    "orthography",
-    "punctuation",
-    "substantive"
-   ]
-  }
- }
+ "witnesses": []
 }

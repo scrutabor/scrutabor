@@ -60,42 +60,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.dominica-vi-post-epiphaniam-epistola.do44667ff",
-   "text": "proprium.dominica-vi-post-epiphaniam-epistola",
-   "use": "use.proprium.dominica-vi-post-epiphaniam-epistola.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
-  },
-  {
-   "id": "witness.proprium.dominica-vi-post-epiphaniam-epistola.mr1962",
-   "text": "proprium.dominica-vi-post-epiphaniam-epistola",
-   "use": "use.proprium.dominica-vi-post-epiphaniam-epistola.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct re-collation of the complete component from the identified registered 1962 typical-edition original page image; no OCR wording substituted."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.dominica-vi-post-epiphaniam-epistola.mr1962-do44667ff",
-  "text": "proprium.dominica-vi-post-epiphaniam-epistola",
-  "recension": "The complete 1962 typical-edition component; no shared expansion. Exact printed and pinned digital readings, including punctuation and substantive variants, remain distinguished in the witnesses and apparatus.",
-  "witnesses": [
-   "witness.proprium.dominica-vi-post-epiphaniam-epistola.do44667ff",
-   "witness.proprium.dominica-vi-post-epiphaniam-epistola.mr1962"
-  ],
-  "apparatus": {
-   "entries": 14,
-   "classes": [
-    "orthography",
-    "punctuation"
-   ]
-  }
- }
+ "witnesses": []
 }

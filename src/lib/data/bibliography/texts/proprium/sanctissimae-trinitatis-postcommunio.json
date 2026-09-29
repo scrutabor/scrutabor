@@ -102,44 +102,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.sanctissimae-trinitatis-postcommunio.do44667ff",
-   "text": "proprium.sanctissimae-trinitatis-postcommunio",
-   "use": "use.proprium.sanctissimae-trinitatis-postcommunio.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Proper body plus prescribed full conclusion, explicitly assembled from the named loci. One controlling printed edition and one derived digital comparison; no second full printed proper witness is asserted."
-  },
-  {
-   "id": "witness.proprium.sanctissimae-trinitatis-postcommunio.mr1962",
-   "text": "proprium.sanctissimae-trinitatis-postcommunio",
-   "use": "use.proprium.sanctissimae-trinitatis-postcommunio.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Proper body plus prescribed full conclusion, explicitly assembled from the named loci. One controlling printed edition and one derived digital comparison; no second full printed proper witness is asserted."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.sanctissimae-trinitatis-postcommunio.mr1962-do44667ff",
-  "text": "proprium.sanctissimae-trinitatis-postcommunio",
-  "recension": "1962 typical-edition proper with its explicitly prescribed complete conclusion",
-  "witnesses": [
-   "witness.proprium.sanctissimae-trinitatis-postcommunio.mr1962",
-   "witness.proprium.sanctissimae-trinitatis-postcommunio.do44667ff"
-  ],
-  "apparatus": {
-   "entries": 18,
-   "classes": [
-    "accent",
-    "capitalization",
-    "orthography",
-    "punctuation"
-   ]
-  }
- }
+ "witnesses": []
 }

@@ -40,43 +40,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.dominica-ii-passionis-tractus.do44667ff",
-   "text": "proprium.dominica-ii-passionis-tractus",
-   "use": "use.proprium.dominica-ii-passionis-tractus.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
-  },
-  {
-   "id": "witness.proprium.dominica-ii-passionis-tractus.mr1962",
-   "text": "proprium.dominica-ii-passionis-tractus",
-   "use": "use.proprium.dominica-ii-passionis-tractus.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct full transcription of Benziger 1962 p. 139, §7 Tractus, retaining the printed inspexerunt and cæli comma; not normalized from the digital source."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.dominica-ii-passionis-tractus.mr1962-do44667ff",
-  "text": "proprium.dominica-ii-passionis-tractus",
-  "recension": "Benziger 1962 editio iuxta typicam, p. 139, complete tract including inspexerunt, Israël and cæli comma.",
-  "witnesses": [
-   "witness.proprium.dominica-ii-passionis-tractus.do44667ff",
-   "witness.proprium.dominica-ii-passionis-tractus.mr1962"
-  ],
-  "apparatus": {
-   "entries": 8,
-   "classes": [
-    "orthography",
-    "punctuation",
-    "substantive"
-   ]
-  }
- }
+ "witnesses": []
 }

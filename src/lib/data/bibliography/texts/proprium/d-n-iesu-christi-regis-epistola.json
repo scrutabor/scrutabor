@@ -61,43 +61,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.d-n-iesu-christi-regis-epistola.do44667ff",
-   "text": "proprium.d-n-iesu-christi-regis-epistola",
-   "use": "use.proprium.d-n-iesu-christi-regis-epistola.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "One pinned derived digital comparison, including its named macro where present, not an independent approved printed witness."
-  },
-  {
-   "id": "witness.proprium.d-n-iesu-christi-regis-epistola.mr1962",
-   "text": "proprium.d-n-iesu-christi-regis-epistola",
-   "use": "use.proprium.d-n-iesu-christi-regis-epistola.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct page-image transcription of the identified controlling print, with every composite expansion explicitly declared."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.d-n-iesu-christi-regis-epistola.mr1962-do44667ff",
-  "text": "proprium.d-n-iesu-christi-regis-epistola",
-  "recension": "MR1962 Christ the King reading, complete137words, with declared house accidentals",
-  "witnesses": [
-   "witness.proprium.d-n-iesu-christi-regis-epistola.do44667ff",
-   "witness.proprium.d-n-iesu-christi-regis-epistola.mr1962"
-  ],
-  "apparatus": {
-   "entries": 13,
-   "classes": [
-    "capitalization",
-    "orthography",
-    "punctuation"
-   ]
-  }
- }
+ "witnesses": []
 }

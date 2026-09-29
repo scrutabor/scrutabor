@@ -40,39 +40,5 @@
    "verified_on": "2026-08-31"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.beatae-mariae-virginis-a-rosario-alleluia.do44667ff",
-   "text": "proprium.beatae-mariae-virginis-a-rosario-alleluia",
-   "use": "use.proprium.beatae-mariae-virginis-a-rosario-alleluia.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
-  },
-  {
-   "id": "witness.proprium.beatae-mariae-virginis-a-rosario-alleluia.mr1962",
-   "text": "proprium.beatae-mariae-virginis-a-rosario-alleluia",
-   "use": "use.proprium.beatae-mariae-virginis-a-rosario-alleluia.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.beatae-mariae-virginis-a-rosario-alleluia.mr1962-do44667ff",
-  "text": "proprium.beatae-mariae-virginis-a-rosario-alleluia",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
-  "witnesses": [
-   "witness.proprium.beatae-mariae-virginis-a-rosario-alleluia.do44667ff",
-   "witness.proprium.beatae-mariae-virginis-a-rosario-alleluia.mr1962"
-  ],
-  "apparatus": {
-   "entries": 0,
-   "classes": []
-  }
- }
+ "witnesses": []
 }

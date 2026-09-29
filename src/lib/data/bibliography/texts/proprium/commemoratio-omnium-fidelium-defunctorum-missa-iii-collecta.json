@@ -99,45 +99,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta.do44667ff",
-   "text": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta",
-   "use": "use.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "One controlling printed edition and one separately maintained digital comparison, each with an explicit full-conclusion dependency. The latter has a different beneficiary reading. No second independent printed edition is asserted."
-  },
-  {
-   "id": "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta.mr1962",
-   "text": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta",
-   "use": "use.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "One controlling printed edition and one separately maintained digital comparison, each with an explicit full-conclusion dependency. The latter has a different beneficiary reading. No second independent printed edition is asserted."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta.mr1962-do44667ff",
-  "text": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta",
-  "recension": "1962 typical-edition proper and prescribed full conclusion; the digital beneficiary variant is retained in the apparatus",
-  "witnesses": [
-   "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta.mr1962",
-   "witness.proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-collecta.do44667ff"
-  ],
-  "apparatus": {
-   "entries": 16,
-   "classes": [
-    "accent",
-    "capitalization",
-    "orthography",
-    "punctuation",
-    "substantive-span"
-   ]
-  }
- }
+ "witnesses": []
 }

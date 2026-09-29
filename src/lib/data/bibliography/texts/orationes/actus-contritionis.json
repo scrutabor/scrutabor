@@ -20,16 +20,5 @@
    "verified_on": "2026-08-28"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.orationes.actus-contritionis.compendium-2005",
-   "text": "orationes.actus-contritionis",
-   "use": "use.orationes.actus-contritionis.compendium-2005",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct page-image transcription of the identified edition; not derived from another retained witness."
-  }
- ]
+ "witnesses": []
 }

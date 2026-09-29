@@ -40,42 +40,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-alleluia.do44667ff",
-   "text": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
-   "use": "use.proprium.annuntiatio-beatae-mariae-virginis-alleluia.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Derived pinned proper Latin comparison, not an independently established printed-edition witness."
-  },
-  {
-   "id": "witness.proprium.annuntiatio-beatae-mariae-virginis-alleluia.mr1962",
-   "text": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
-   "use": "use.proprium.annuntiatio-beatae-mariae-virginis-alleluia.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct transcription from the identified Benziger 1962 p. 496 page image."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.annuntiatio-beatae-mariae-virginis-alleluia.mr1962-do44667ff",
-  "text": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
-  "recension": "Benziger 1962 editio iuxta typicam, complete Paschal Alleluia pair with exact printed punctuation.",
-  "witnesses": [
-   "witness.proprium.annuntiatio-beatae-mariae-virginis-alleluia.do44667ff",
-   "witness.proprium.annuntiatio-beatae-mariae-virginis-alleluia.mr1962"
-  ],
-  "apparatus": {
-   "entries": 6,
-   "classes": [
-    "orthography",
-    "punctuation"
-   ]
-  }
- }
+ "witnesses": []
 }

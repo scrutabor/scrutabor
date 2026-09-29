@@ -102,43 +102,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.dominica-iii-adventus-collecta.do44667ff",
-   "text": "proprium.dominica-iii-adventus-collecta",
-   "use": "use.proprium.dominica-iii-adventus-collecta.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Proper body plus prescribed full conclusion, explicitly assembled from the named loci. One controlling printed edition and one derived digital comparison; no second full printed proper witness is asserted."
-  },
-  {
-   "id": "witness.proprium.dominica-iii-adventus-collecta.mr1962",
-   "text": "proprium.dominica-iii-adventus-collecta",
-   "use": "use.proprium.dominica-iii-adventus-collecta.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Proper body plus prescribed full conclusion, explicitly assembled from the named loci. One controlling printed edition and one derived digital comparison; no second full printed proper witness is asserted."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.dominica-iii-adventus-collecta.mr1962-do44667ff",
-  "text": "proprium.dominica-iii-adventus-collecta",
-  "recension": "1962 typical-edition proper with its explicitly prescribed complete conclusion",
-  "witnesses": [
-   "witness.proprium.dominica-iii-adventus-collecta.mr1962",
-   "witness.proprium.dominica-iii-adventus-collecta.do44667ff"
-  ],
-  "apparatus": {
-   "entries": 7,
-   "classes": [
-    "accent",
-    "orthography",
-    "punctuation"
-   ]
-  }
- }
+ "witnesses": []
 }

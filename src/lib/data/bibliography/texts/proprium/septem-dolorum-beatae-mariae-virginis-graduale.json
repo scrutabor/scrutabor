@@ -40,43 +40,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.septem-dolorum-beatae-mariae-virginis-graduale.do44667ff",
-   "text": "proprium.septem-dolorum-beatae-mariae-virginis-graduale",
-   "use": "use.proprium.septem-dolorum-beatae-mariae-virginis-graduale.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Derived pinned Latin comparison, not an independently established printed-edition witness."
-  },
-  {
-   "id": "witness.proprium.septem-dolorum-beatae-mariae-virginis-graduale.mr1962",
-   "text": "proprium.septem-dolorum-beatae-mariae-virginis-graduale",
-   "use": "use.proprium.septem-dolorum-beatae-mariae-virginis-graduale.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct transcription of the separately printed chant from Benziger 1962 p. 670."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.septem-dolorum-beatae-mariae-virginis-graduale.mr1962-do44667ff",
-  "text": "proprium.septem-dolorum-beatae-mariae-virginis-graduale",
-  "recension": "Benziger 1962 editio iuxta typicam; complete separately printed chant with exact punctuation.",
-  "witnesses": [
-   "witness.proprium.septem-dolorum-beatae-mariae-virginis-graduale.do44667ff",
-   "witness.proprium.septem-dolorum-beatae-mariae-virginis-graduale.mr1962"
-  ],
-  "apparatus": {
-   "entries": 4,
-   "classes": [
-    "capitalization",
-    "orthography",
-    "punctuation"
-   ]
-  }
- }
+ "witnesses": []
 }

@@ -40,43 +40,5 @@
    "verified_on": "2026-09-12"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.ordinarium.praefatio-quadragesimae.do44667ff",
-   "text": "ordinarium.praefatio-quadragesimae",
-   "use": "use.ordinarium.praefatio-quadragesimae.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Pinned upstream Latin data maintained independently of this corpus; used as a derived comparison witness, not as the controlling edition."
-  },
-  {
-   "id": "witness.ordinarium.praefatio-quadragesimae.mr1962",
-   "text": "ordinarium.praefatio-quadragesimae",
-   "use": "use.ordinarium.praefatio-quadragesimae.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Direct transcription from the identified 1962 typical-edition page image; OCR was used only to locate the page."
-  }
- ],
- "collation": {
-  "id": "collation.ordinarium.praefatio-quadragesimae.mr1962-do44667ff",
-  "text": "ordinarium.praefatio-quadragesimae",
-  "recension": "The 1962 typical-edition component, with declared shared expansions and house orthography",
-  "witnesses": [
-   "witness.ordinarium.praefatio-quadragesimae.do44667ff",
-   "witness.ordinarium.praefatio-quadragesimae.mr1962"
-  ],
-  "apparatus": {
-   "entries": 6,
-   "classes": [
-    "capital-accent",
-    "orthography",
-    "punctuation"
-   ]
-  }
- }
+ "witnesses": []
 }

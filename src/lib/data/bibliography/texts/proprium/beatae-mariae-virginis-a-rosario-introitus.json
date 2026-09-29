@@ -41,42 +41,5 @@
    "verified_on": "2026-09-19"
   }
  ],
- "witnesses": [
-  {
-   "id": "witness.proprium.beatae-mariae-virginis-a-rosario-introitus.do44667ff",
-   "text": "proprium.beatae-mariae-virginis-a-rosario-introitus",
-   "use": "use.proprium.beatae-mariae-virginis-a-rosario-introitus.do44667ff",
-   "role": "derived_comparison",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Pinned upstream Latin data maintained outside this corpus, resolved through the exact cited sections. Full doxology comes from the pinned Prayers section, not from the abbreviated proper page."
-  },
-  {
-   "id": "witness.proprium.beatae-mariae-virginis-a-rosario-introitus.mr1962",
-   "text": "proprium.beatae-mariae-virginis-a-rosario-introitus",
-   "use": "use.proprium.beatae-mariae-virginis-a-rosario-introitus.mr1962",
-   "role": "controlling",
-   "coverage": {
-    "kind": "full"
-   },
-   "independence_basis": "Every word is supported by directly viewed pages of the same 1962 edition: the proper antiphon and verse, the full printed Gloria, and explicit annual antiphon-repetition instructions. The component ranges are declared in the header. No expansion is copied from the digital comparison source."
-  }
- ],
- "collation": {
-  "id": "collation.proprium.beatae-mariae-virginis-a-rosario-introitus.mr1962-do44667ff",
-  "text": "proprium.beatae-mariae-virginis-a-rosario-introitus",
-  "recension": "The 1962 introit explicitly composed from the same edition's proper antiphon and psalm, full Gloria, and printed antiphon-repetition instructions",
-  "witnesses": [
-   "witness.proprium.beatae-mariae-virginis-a-rosario-introitus.do44667ff",
-   "witness.proprium.beatae-mariae-virginis-a-rosario-introitus.mr1962"
-  ],
-  "apparatus": {
-   "entries": 4,
-   "classes": [
-    "orthography",
-    "punctuation"
-   ]
-  }
- }
+ "witnesses": []
 }
