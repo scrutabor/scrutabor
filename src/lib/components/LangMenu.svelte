@@ -27,9 +27,12 @@
 	{#snippet children(close)}
 		{#each LANGS.filter((candidate) => where.languages.includes(candidate)) as l (l)}
 			<li>
+				<!-- Closing the menu detaches its links before the router can
+				     inherit the body's static-page navigation setting. -->
 				<a
 					class="menu-row"
 					href={pathFor(l)}
+					data-sveltekit-reload
 					aria-current={l === lang ? 'true' : undefined}
 					lang={l}
 					onclick={close}

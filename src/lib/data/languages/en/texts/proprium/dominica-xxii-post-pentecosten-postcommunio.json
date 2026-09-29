@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “22nd Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"We who have received the gift of Your blessed sacrament, O Lord, humbly pray that what You have taught us to do in commemoration of You, may profit and help us in our weakness, who livest and reignest with God the Father in the unity of the Holy Ghost, God, world without end.","g":["We have received","Lord","of sacred","gifts","mystery","humbly","beseeching","that","the things which","unto","Thy","remembrance","us","to do","Thou hast commanded",null,"of our","may profit","weakness","help","Who","livest","and","reignest","with","God","the Father","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages"],"a":[{"s":15,"n":1,"r":"idiom"}]},
+    {"id":"s01","tr":"Lord, we have received the gifts of the sacred mystery, and we humbly pray that what You commanded us to do in remembrance of You may help us in our weakness. You live and reign with God the Father in the unity of the Holy Spirit, God, forever and ever.","g":["We have received","Lord",null,null,null,"humbly","beseeching","that","what",null,null,null,null,null,null,null,null,null,null,null,"You who","live","and","reign","with","God","the Father","in","the unity",null,null,"God",null,null,null,null],"a":[{"s":2,"n":3,"a":1,"g":"the gifts of the sacred mystery"},{"s":9,"n":6,"a":5,"g":"You commanded us to do in remembrance of You"},{"s":15,"n":5,"a":2,"g":"may help us in our weakness"},{"s":29,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":32,"n":4,"a":2,"g":"forever and ever"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

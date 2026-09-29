@@ -44,6 +44,28 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
+    "printed": "p. xviii",
+    "scan": "leaf n23 / PDF p. 24",
+    "section": "Rubricae generales, 115 d",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-xxii-post-pentecosten-postcommunio.expanded-conclusion.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The prescribed conclusion for a prayer addressed to the Son supplies the expanded Qui vivis et regnas through per omnia saecula saeculorum (w021–w036), while the proper page prints only the opening cue. Reader accentuation is supplied separately."
+    }
+   ],
+   "verified_on": "2026-09-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
     "printed": "p. 411",
     "scan": "leaf n492 / PDF p. 493",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n492/mode/1up"
