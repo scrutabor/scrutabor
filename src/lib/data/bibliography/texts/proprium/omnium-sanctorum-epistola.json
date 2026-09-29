@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/11-01; resolved section [Lectio] with declared inherited references"
+    "section": "Latin/Sancti/11-01.txt [Lectio]: marker23, liturgical heading24, Apocalypse7:2–12 reference25, complete reading26. Bound reading evidence25–26; the unprefixed liturgical heading24 is not scripture."
    },
    "entries": [
     {
@@ -14,7 +14,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned digital reading supplies 223 words directly from line26, with no inherited reference or expansion. Its forty accidental differences from selected Latin are recorded, including four house accents also absent from print."
     }
    ],
    "verified_on": "2026-08-31"
@@ -24,8 +24,8 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "pp. 718–719",
-    "scan": "leaves n799–n800 / PDF pp. 800–801",
+    "printed": "p. 718",
+    "scan": "leaf n799 / PDF p. 800",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n799/mode/1up"
    },
    "entries": [
@@ -34,10 +34,30 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger 1962 Editio iuxta typicam prints the Apocalypse reading opening on this page through Ex tribu Manasse duodecim. The remaining reading has a separate continuation-image source use."
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 719",
+    "scan": "leaf n800 / PDF p. 801",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n800/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.omnium-sanctorum-epistola.body-continuation.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The top-left column continues the preceding page at millia signati and completes the reading through the last Amen before the Gradual. Both Amen occurrences belong to the quoted heavenly praise, not an added response."
+    }
+   ],
+   "verified_on": "2026-09-29"
   }
  ],
  "witnesses": []
