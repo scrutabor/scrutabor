@@ -2,6 +2,37 @@ import { expect, setHelp, test } from './fixtures';
 
 const prayers = [
 	{
+		formulary: 'dominica-iv-post-epiphaniam',
+		kind: 'collecta',
+		response: 'w052',
+		conclusion: { section: '115 a', leaf: 22 },
+		opening: {
+			pl: 'Boże, który wiesz, że pośród tak wielkich niebezpieczeństw',
+			en: 'O God, You know that amid such great dangers we cannot stand firm because of human frailty.'
+		},
+		constructions: [
+			{
+				language: 'pl',
+				gloss:
+					'wiesz, że my, postawieni pośród tak wielkich niebezpieczeństw, z powodu ludzkiej słabości nie możemy się ostać',
+				words: 12
+			},
+			{ language: 'pl', gloss: 'z Twoją pomocą', words: 2 },
+			{
+				language: 'en',
+				gloss:
+					'know that we, placed amid such great dangers, cannot stand firm because of human frailty',
+				words: 12
+			},
+			{ language: 'en', gloss: 'our sins', words: 2 },
+			{ language: 'en', gloss: 'with Your help', words: 2 },
+			{ language: 'en', gloss: 'our Lord', words: 2 },
+			{ language: 'en', gloss: 'Your Son', words: 2 },
+			{ language: 'en', gloss: 'of the Holy Spirit', words: 2 },
+			{ language: 'en', gloss: 'forever and ever', words: 4 }
+		]
+	},
+	{
 		formulary: 'dominica-xxii-post-pentecosten',
 		kind: 'postcommunio',
 		response: 'w037',
@@ -213,7 +244,7 @@ for (const { formulary, kind, response, conclusion, opening, constructions } of 
 				.click();
 			const sources = page.getByRole('dialog').locator('details.source-notes');
 			await sources.locator('summary').click();
-			await expect(sources).toContainText(`Rubricae generales, ${conclusion.section}`);
+			await expect(sources).toContainText(new RegExp(`Rubricae generales,? ${conclusion.section}`));
 			await expect(
 				sources.locator(
 					`a[href="https://archive.org/details/missale-romanum-1962/page/n${conclusion.leaf}/mode/1up"]`
@@ -244,6 +275,15 @@ for (const { formulary, kind, response, conclusion, opening, constructions } of 
 						'a[href="https://archive.org/details/missale-romanum-1962/page/n460/mode/1up"]'
 					)
 				).toHaveCount(1);
+			}
+			if (formulary === 'dominica-iv-post-epiphaniam') {
+				for (const leaf of [125, 126]) {
+					await expect(
+						sources.locator(
+							`a[href="https://archive.org/details/missale-romanum-1962/page/n${leaf}/mode/1up"]`
+						)
+					).toHaveCount(1);
+				}
 			}
 		});
 	}

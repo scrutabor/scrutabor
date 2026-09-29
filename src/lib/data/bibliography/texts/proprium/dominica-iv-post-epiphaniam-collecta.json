@@ -6,7 +6,25 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Epi4-0.txt (section [Oratio]); resolved spans: web/www/missa/Latin/Tempora/Epi4-0.txt (lines 16-17); web/www/missa/Latin/Ordo/Prayers.txt (lines 97-98)"
+    "section": "Latin/Ordo/Prayers.txt [Per Dominum], heading line 95, conclusion line 96, response line 97. Original evidence lines 95–97."
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iv-post-epiphaniam-collecta.expanded-conclusion.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The unmodified pinned shared formula supplies the twenty-one-word conclusion and distinct Amen after resolving $Per Dominum. Its original coordinates are 96–97. Earlier coordinates 97–98 referred to a local copy with an inserted preparation comment. Speaker markers are framing."
+    }
+   ],
+   "verified_on": "2026-09-29"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Latin/Tempora/Epi4-0.txt [Oratio], heading line 15, proper body line 16, $Per Dominum reference line 17"
    },
    "entries": [
     {
@@ -14,7 +32,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned file provides the thirty-word proper body and an explicit call to the shared Per Dominum formula. The full ending is established by its separate original-byte source use and raw binding."
     }
    ],
    "verified_on": "2026-09-12"
@@ -24,9 +42,10 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
-    "printed": "pp. xxxii–xxxiv, 226",
-    "scan": "PDF scans 38–40, 306",
-    "section": "RG 480–481, 511 d/i, 513–514; Ordo conclusion"
+    "printed": "p. lii; pp. xxxiii–xxxiv",
+    "scan": "leaf n57 / PDF p. 58; leaves n38–n39 / PDF pp. 39–40",
+    "section": "Ritus servandus V 1–2; RG 511 d, 513 a and 514",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n57/mode/1up"
    },
    "entries": [
     {
@@ -34,7 +53,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
+     "claim": "The collect is a priestly oration after Oremus. These rubrics establish its audible delivery in a read Mass and sung delivery in a solemn or sung Mass. The prescribed conclusion and Amen are supplied by the separate RG 115 a source. These loci alone do not certify the complete response-participation map or date-specific commemoration inventory."
     }
    ],
    "verified_on": "2026-09-19"
@@ -54,10 +73,51 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger 1962 Editio iuxta typicam prints the beginning of this collect on page 46 and continues it on page 47, ending with the Per Dominum cue. The continuation image and prescribed full ending have separate source uses."
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 47",
+    "scan": "leaf n126 / PDF p. 127",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n126/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iv-post-epiphaniam-collecta.body-continuation.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The top-left continuation completes patimur across the page break and the remaining collect body through vincamus, followed by Per Dominum. It belongs to the IV Sunday collect begun on page 46 despite the later running heading."
+    }
+   ],
+   "verified_on": "2026-09-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "Rubricae generales 115 a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iv-post-epiphaniam-collecta.expanded-conclusion.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Father-directed formula supplies the twenty-one-word conclusion and separate Amen. Its unaccented rubric prints tuum, qui. House accents, ligatures, tuum: Qui and terminal Amen. are declared in the witness, not represented as a literal proper-page reading."
+    }
+   ],
+   "verified_on": "2026-09-29"
   }
  ],
  "witnesses": []
