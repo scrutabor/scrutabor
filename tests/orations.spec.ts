@@ -2,7 +2,7 @@ import { expect, setHelp, test } from './fixtures';
 
 const prayers = [
 	{
-		sunday: 'xxii',
+		formulary: 'dominica-xxii-post-pentecosten',
 		kind: 'postcommunio',
 		response: 'w037',
 		conclusion: { section: '115 d', leaf: 23 },
@@ -21,7 +21,7 @@ const prayers = [
 		]
 	},
 	{
-		sunday: 'xiii',
+		formulary: 'dominica-xiii-post-pentecosten',
 		kind: 'postcommunio',
 		response: 'w032',
 		conclusion: { section: '115 a', leaf: 22 },
@@ -46,7 +46,7 @@ const prayers = [
 		]
 	},
 	{
-		sunday: 'vi',
+		formulary: 'dominica-vi-post-pentecosten',
 		kind: 'collecta',
 		response: 'w054',
 		conclusion: { section: '115 a', leaf: 22 },
@@ -67,15 +67,37 @@ const prayers = [
 			{ language: 'en', gloss: 'Your Son', words: 2 },
 			{ language: 'en', gloss: 'of the Holy Spirit', words: 2 }
 		]
+	},
+	{
+		formulary: 'sancti-laurentii-martyris',
+		kind: 'postcommunio',
+		response: 'w044',
+		conclusion: { section: '115 a', leaf: 22 },
+		opening: {
+			pl: 'doświadczali wzrostu zbawienia, którego udzielasz.',
+			en: 'Filled with the sacred gift, we humbly ask You, Lord'
+		},
+		constructions: [
+			{ language: 'pl', gloss: 'w tym, co sprawujemy z obowiązku należnej służby', words: 5 },
+			{ language: 'pl', gloss: 'doświadczyli wzrostu zbawienia, którego udzielasz', words: 4 },
+			{ language: 'en', gloss: 'filled with the sacred gift', words: 3 },
+			{ language: 'en', gloss: 'we implore You, Lord', words: 3 },
+			{ language: 'en', gloss: 'we celebrate in fulfillment of the service we owe', words: 4 },
+			{ language: 'en', gloss: 'Your martyr', words: 2 },
+			{ language: 'en', gloss: 'we may experience as an increase in Your salvation', words: 4 },
+			{ language: 'en', gloss: 'our Lord', words: 2 },
+			{ language: 'en', gloss: 'Your Son', words: 2 },
+			{ language: 'en', gloss: 'of the Holy Spirit', words: 2 }
+		]
 	}
 ] as const;
 
-for (const { sunday, kind, response, conclusion, opening, constructions } of prayers) {
-	const route = `formularium/dominica-${sunday}-post-pentecosten`;
-	const text = `dominica-${sunday}-post-pentecosten-${kind}`;
+for (const { formulary, kind, response, conclusion, opening, constructions } of prayers) {
+	const route = `formularium/${formulary}`;
+	const text = `${formulary}-${kind}`;
 
 	for (const { language, gloss, words } of constructions) {
-		test(`${language} ${sunday} ${kind} preserves ${gloss}`, async ({ page }) => {
+		test(`${language} ${formulary} ${kind} preserves ${gloss}`, async ({ page }) => {
 			await page.goto(`/app/${language}/${route}`);
 			await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
 			await page.reload();
@@ -98,7 +120,10 @@ for (const { sunday, kind, response, conclusion, opening, constructions } of pra
 				expect(await group.boundingBox()).toEqual(before);
 				await button.click();
 				await expect(page.locator('aside .construction-card')).toHaveCount(words);
-				if (sunday === 'vi' && ['z troskliwą dobrocią', 'with loving care'].includes(gloss)) {
+				if (
+					formulary === 'dominica-vi-post-pentecosten' &&
+					['z troskliwą dobrocią', 'with loving care'].includes(gloss)
+				) {
 					await expect(page.locator('aside')).toContainText('pietatis studio');
 					await expect(page.locator('aside')).toContainText(
 						language === 'pl' ? 'przez gorliwą pobożność' : 'through zealous devotion to God'
@@ -125,12 +150,12 @@ for (const { sunday, kind, response, conclusion, opening, constructions } of pra
 	}
 
 	for (const language of ['pl', 'en'] as const) {
-		test(`${language} ${sunday} ${kind} preserves its text, response and source`, async ({
+		test(`${language} ${formulary} ${kind} preserves its text, response and source`, async ({
 			page
 		}) => {
 			await page.goto(`/app/${language}/${route}`);
 			await setHelp(page, 1);
-			if (sunday === 'xxii')
+			if (formulary === 'dominica-xxii-post-pentecosten')
 				await expect(page.locator(`[id="${text}.w009"] rt`)).toHaveText(
 					language === 'pl' ? 'to, co' : 'what'
 				);
@@ -149,7 +174,20 @@ for (const { sunday, kind, response, conclusion, opening, constructions } of pra
 					`a[href="https://archive.org/details/missale-romanum-1962/page/n${conclusion.leaf}/mode/1up"]`
 				)
 			).toHaveCount(1);
-			if (sunday === 'vi') {
+			if (formulary === 'sancti-laurentii-martyris') {
+				await expect(sources).toContainText('S. Laurentii Martyris, Postcommunio');
+				await expect(
+					sources.locator(
+						'a[href="https://archive.org/details/missale-romanum-1962/page/n717/mode/1up"]'
+					)
+				).toHaveCount(1);
+				await expect(
+					sources.locator(
+						'a[href="https://archive.org/details/missale-romanum-1962/page/n715/mode/1up"]'
+					)
+				).toHaveCount(0);
+			}
+			if (formulary === 'dominica-vi-post-pentecosten') {
 				await expect(sources).toContainText('Dominica VI post Pentecosten, Oratio (continued)');
 				await expect(
 					sources.locator(

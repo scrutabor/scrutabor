@@ -44,9 +44,32 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "p. 634",
-    "scan": "leaf n715 / PDF p. 716",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n715/mode/1up"
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "Rubricae generales, 115 a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-laurentii-martyris-postcommunio.expanded-conclusion.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The prescribed Father-directed conclusion supplies Per Dominum nostrum through per omnia saecula saeculorum (w023–w043), whereas the proper page has only the cue. Reader accents and tuum: Qui punctuation and capitalization are supplied separately."
+    }
+   ],
+   "verified_on": "2026-09-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 636",
+    "scan": "leaf n717 / PDF p. 718",
+    "section": "S. Laurentii Martyris, Postcommunio",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n717/mode/1up"
    },
    "entries": [
     {
@@ -54,7 +77,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited proper page prints the 22-word body and the Per Dominum cue, not the full expanded conclusion. The prescribed expansion has a separate source use."
     }
    ],
    "verified_on": "2026-08-31"
