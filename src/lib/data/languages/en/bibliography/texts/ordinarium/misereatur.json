@@ -45,7 +45,19 @@
       "segment": "s03"
      },
      "claim": "May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life."
-    },
+    }
+   ],
+   "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 38–39",
+    "scan": "PDF pp. 50–51"
+   },
+   "entries": [
     {
      "id": "use.en.d847653074f03f178208",
      "address": {

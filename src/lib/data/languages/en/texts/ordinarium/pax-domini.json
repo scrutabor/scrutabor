@@ -5,6 +5,6 @@
   "seg":[
     {"id":"s01","nr":"Holding the particle over the chalice, the priest makes three signs of the cross with it."},
     {"id":"s02","tr":"May the peace of the Lord always be with you.","tc":[278],"tb":"revised","g":["The peace","of the Lord","be","always","with you"]},
-    {"id":"s03","tr":"And with your spirit.","tc":[278],"tb":"normalized","g":["and","with","spirit","your"]}
+    {"id":"s03","tr":"And with your spirit.","tc":[278],"tb":"revised","g":["and","with","spirit","your"]}
   ]
 }

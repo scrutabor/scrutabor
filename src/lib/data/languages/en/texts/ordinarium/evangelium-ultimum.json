@@ -5,7 +5,7 @@
   "seg":[
     {"id":"s01","nr":"Then the priest, at the Gospel side with hands joined, says:"},
     {"id":"s02","tr":"The Lord be with you.","tc":[430],"tb":"exact","g":["The Lord","with you"]},
-    {"id":"s03","tr":"And with your spirit.","tc":[430],"tb":"normalized","g":["and","with","spirit","your"]},
+    {"id":"s03","tr":"And with your spirit.","tc":[430],"tb":"revised","g":["and","with","spirit","your"]},
     {"id":"s04","nr":"And signing with the sign of the cross first the altar or the book, then himself on the forehead, the lips and the breast, the priest says:"},
     {"id":"s05","tr":"The beginning of the holy Gospel according to John.","tc":[430],"tb":"revised","g":["The beginning","of the holy","Gospel","according to","John"]},
     {"id":"s06","tr":"Glory to You, O Lord.","tc":[430],"tb":"revised","g":["Glory","to Thee","Lord"]},

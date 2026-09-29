@@ -5,7 +5,7 @@
   "seg":[
     {"id":"s01","nr":"After the last prayer following Communion the priest says:"},
     {"id":"s02","tr":"The Lord be with you.","tc":[433],"tb":"exact","g":["The Lord","with you"]},
-    {"id":"s03","tr":"And with your spirit.","tc":[433],"tb":"normalized","g":["and","with","spirit","your"]},
+    {"id":"s03","tr":"And with your spirit.","tc":[433],"tb":"revised","g":["and","with","spirit","your"]},
     {"id":"s04","nr":"Turned toward the people, the priest says “Ite, missa est”, and the server answers “Deo grátias”. When a liturgical procession follows the Mass, he says “Benedicámus Dómino” instead, at the middle of the altar, facing it."},
     {"id":"s05","tr":"Go forth, the Mass is ended.","g":["go","the dismissal","is made"],"nt":{"w008":"As a noun, “missa” means dismissal. The same form can be a participle of “mitto,” meaning “sent.” A participial reading would require an understood subject that the formula does not name."}},
     {"id":"s06","tr":"Thanks be to God.","tc":[433],"tb":"exact","g":["to God","thanks"],"ex":{"w011":"The response leaves the verb unspoken. Its full sense is “we give thanks to God”."}},

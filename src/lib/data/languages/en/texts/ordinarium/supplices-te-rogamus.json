@@ -9,7 +9,7 @@
     {"id":"s03","nr":"The priest kisses the altar."},
     {"id":"s11","tr":"through this participation at the altar","tc":[340,341],"tb":"revised","g":["through","this","at the altar","participation","most holy","of Son","Thy"]},
     {"id":"s05","nr":"The priest joins his hands and makes the sign of the cross once over the Host and once over the chalice."},
-    {"id":"s06","tr":"shall receive the most holy Body and Blood of Your Son,","tc":[340,341],"tb":"normalized","g":["Body","and","Blood","shall receive"],"ex":{"w035":"The same form can mean “shall receive” or “may have received”. The context establishes the future “shall receive”."}},
+    {"id":"s06","tr":"shall receive the most holy Body and Blood of Your Son,","tc":[340,341],"tb":"revised","g":["Body","and","Blood","shall receive"],"ex":{"w035":"The same form can mean “shall receive” or “may have received”. The context establishes the future “shall receive”."}},
     {"id":"s07","nr":"The priest signs himself."},
     {"id":"s08","tr":"may be filled with every heavenly blessing and grace.","tc":[340,341],"tb":"revised","g":["every","blessing","heavenly","and","grace","may be filled"]},
     {"id":"s09","nr":"The priest joins his hands."},

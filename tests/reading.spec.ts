@@ -199,8 +199,12 @@ test('a cited translation states how its wording relates to the historical sourc
 	await sources.locator('summary').click();
 	await expect(sources).toContainText('relationship to historical wording');
 	await expect(sources).toContainText(
-		'after stated modernization of spelling, capitalization, punctuation and archaic word forms'
+		'The source wording is retained, with changes limited to spelling, capitalization and punctuation.'
 	);
+	await expect(sources).toContainText(
+		'The translation is based on the cited historical wording, revised with reference to the Latin.'
+	);
+	await expect(sources).not.toContainText('archaic word forms');
 	await expect(sources).toContainText("The Catholic Girl's Guide");
 });
 
