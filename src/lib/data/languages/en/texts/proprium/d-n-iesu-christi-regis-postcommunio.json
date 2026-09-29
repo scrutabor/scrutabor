@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “Christ the King” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"We have received the food of eternal life, and we beseech You, O Lord, that we who are proud to serve under the flag of Christ the King may forever reign with Him in the Kingdom of heaven, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["Of immortality","nourishment","having received","we beseech","Lord","that","we who","under","of Christ","the King","banners","to serve","glory","with","Him","in","heavenly","abode","continually","reign","may","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages"]},
+    {"id":"s01","tr":"We have received the food of eternal life, and we beseech You, O Lord, that we who are proud to serve under the banners of Christ the King may forever reign with Him in the heavenly abode. Who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":[null,null,null,"we beseech","Lord","that","we who","under",null,null,null,null,null,"with","Him","in","the heavenly","abode","continually",null,null,"who","with You","lives","and","reigns","in","the unity",null,null,"God","through","all","ages","of ages"],"a":[{"s":0,"n":3,"a":2,"g":"Having received nourishment of immortality"},{"s":8,"n":3,"a":2,"g":"the banners of Christ the King"},{"s":11,"n":2,"a":1,"g":"glory in serving"},{"s":19,"n":2,"a":1,"g":"may reign"},{"s":28,"n":2,"a":0,"g":"of the Holy Spirit"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

@@ -6,7 +6,25 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/10-DU; resolved section [Postcommunio] with declared inherited references"
+    "section": "Latin/Ordo/Prayers.txt [Qui tecum], heading 119, conclusion 120, response 121. Evidence lines 119–121."
+   },
+   "entries": [
+    {
+     "id": "use.proprium.d-n-iesu-christi-regis-postcommunio.expanded-conclusion.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The exact shared digital formula supplies the fourteen-word ending and distinct Amen after resolving $Qui tecum. The source has no commas after Sancti or Deus. The r. and R. prefixes are framing, not prayer words."
+    }
+   ],
+   "verified_on": "2026-09-29"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Latin/Sancti/10-DU.txt [Postcommunio], heading 65, body 66, $Qui tecum reference 67"
    },
    "entries": [
     {
@@ -14,7 +32,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned file prints the 21-word body and a reference to the shared Qui tecum formula. The latter has a separate exact source use and raw reading span, not inherited body text."
     }
    ],
    "verified_on": "2026-08-31"
@@ -24,9 +42,9 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
-    "printed": "pp. xxxii–xxxiv, 226",
-    "scan": "PDF scans 38–40, 306",
-    "section": "RG 480–481, 511 d/i, 513–514; Ordo conclusion"
+    "printed": "pp. xxxiii–xxxiv, lii, lviii",
+    "scan": "leaves n38–39, n57, n63 / PDF pp. 39–40, 58, 64",
+    "section": "RG 505, 511 d/i, 513–514; Ritus servandus V 1–2, XI 1"
    },
    "entries": [
     {
@@ -34,10 +52,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
+     "claim": "Postcommunions are recited by the celebrant in the mode, number and order of the opening orations. The cited rules establish audible delivery at low Mass and sung orations at solemn or sung Mass. The separate Amen is supplied by the conclusion sources. These passages do not alone establish its complete performer or participation mapping."
     }
    ],
    "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. xviii",
+    "scan": "leaf n23 / PDF p. 24",
+    "section": "Rubricae generales, 115 c",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.d-n-iesu-christi-regis-postcommunio.expanded-conclusion.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Father-directed conclusion, referring to the Son mentioned near the end of the prayer, supplies the fourteen-word ending and separate Amen. The proper page prints only Qui tecum. The rubric is unaccented and uses ae. House accents, ligatures and a terminal period are declared in the witness."
+    }
+   ],
+   "verified_on": "2026-09-29"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -54,7 +93,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger 1962 Editio iuxta typicam proper page prints the 21-word body and Qui tecum cue, not the full expanded conclusion. The prescribed expansion has a separate source use."
     }
    ],
    "verified_on": "2026-08-31"

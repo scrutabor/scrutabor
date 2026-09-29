@@ -91,6 +91,29 @@ const prayers = [
 		]
 	},
 	{
+		formulary: 'd-n-iesu-christi-regis',
+		kind: 'postcommunio',
+		response: 'w036',
+		conclusion: { section: '115 c', leaf: 23 },
+		opening: {
+			pl: 'Dostąpiwszy pożywienia nieśmiertelności, prosimy, Panie',
+			en: 'under the banners of Christ the King may forever reign with Him in the heavenly abode.'
+		},
+		constructions: [
+			{
+				language: 'pl',
+				gloss: 'szczycimy się służbą pod sztandarami Chrystusa Króla',
+				words: 6
+			},
+			{ language: 'pl', gloss: 'mogli królować', words: 2 },
+			{ language: 'en', gloss: 'Having received nourishment of immortality', words: 3 },
+			{ language: 'en', gloss: 'the banners of Christ the King', words: 3 },
+			{ language: 'en', gloss: 'glory in serving', words: 2 },
+			{ language: 'en', gloss: 'may reign', words: 2 },
+			{ language: 'en', gloss: 'of the Holy Spirit', words: 2 }
+		]
+	},
+	{
 		formulary: 'sancti-lucae-evangelistae',
 		kind: 'postcommunio',
 		response: 'w046',
