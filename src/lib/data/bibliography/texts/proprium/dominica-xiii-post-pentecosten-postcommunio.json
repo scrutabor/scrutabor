@@ -44,6 +44,28 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "Rubricae generales, 115 a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-xiii-post-pentecosten-postcommunio.expanded-conclusion.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The prescribed Father-directed conclusion supplies the expansion from Per Dominum nostrum through per omnia saecula saeculorum (w011–w031), while the proper page prints only Per Dominum. Reader accents and the house tuum: Qui punctuation and capitalization are supplied separately."
+    }
+   ],
+   "verified_on": "2026-09-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
     "printed": "p. 389",
     "scan": "leaf n470 / PDF p. 471",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n470/mode/1up"
@@ -54,7 +76,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited proper page prints the ten-word prayer body (w001–w010) and the abbreviated Per Dominum cue. The full conclusion is supplied separately from Rubricae generales 115 a, with declared house accidentals."
     }
    ],
    "verified_on": "2026-08-31"
