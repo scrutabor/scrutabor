@@ -3,6 +3,72 @@ import { expect, setHelp, test } from './fixtures';
 const ANDREW = '/app/en/formularium/sancti-andreae-apostoli';
 const ANDREW_EPISTLE = '#text-proprium-sancti-andreae-apostoli-epistola';
 
+test("Saint John's revised English names both historical loci without leaking them into Polish", async ({
+	page
+}) => {
+	const route = '/formularium/sancti-ioannis-apostoli-et-evangelistae';
+	const sectionId = '#text-proprium-sancti-ioannis-apostoli-et-evangelistae-postcommunio';
+	await page.goto(`/app/en${route}`);
+	await setHelp(page, 2);
+	const sources = page.locator(`${sectionId} .translation-sources .source-notes`);
+	await expect(sources).toHaveCount(1);
+	await sources.locator('summary').click();
+	await expect(sources.locator('li')).toHaveCount(2);
+	await expect(sources).toContainText('The Missal for the Use of the Laity');
+	await expect(sources).toContainText('PDF p. 99');
+	await expect(sources).toContainText('PDF p. 56');
+	await expect(sources.locator('.relationships')).toContainText('revised');
+	await page.goto(`/app/pl${route}`);
+	await setHelp(page, 2);
+	await expect(page.locator(sectionId)).not.toContainText('The Missal for the Use of the Laity');
+});
+
+for (const language of ['pl', 'en']) {
+	test(`Saint John's ${language} petition preserves its complete constructions`, async ({
+		page
+	}) => {
+		await page.goto(`/app/${language}/formularium/sancti-ioannis-apostoli-et-evangelistae`);
+		await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
+		await page.reload();
+		await setHelp(page, 1);
+		const section = page.locator(
+			'#text-proprium-sancti-ioannis-apostoli-et-evangelistae-postcommunio'
+		);
+		const groups = section.locator('.token-group');
+		const targets =
+			language === 'pl'
+				? ['na czyją pamiątkę te dary', 'tego modlitwami byli także chronieni']
+				: [
+						'we may also be protected by the prayers of the one in whose commemoration we have received these gifts'
+					];
+		await expect(groups.locator('rt')).toHaveText(targets);
+		for (const width of [320, 1280]) {
+			await page.setViewportSize({ width, height: 900 });
+			await section.scrollIntoViewIfNeeded();
+			await expect
+				.poll(() => page.evaluate(() => document.documentElement.scrollWidth - innerWidth))
+				.toBe(0);
+			for (let index = 0; index < targets.length; index++) {
+				const group = groups.nth(index);
+				const button = group.locator(':scope > button');
+				await expect(button).toHaveCount(1);
+				await button.click();
+				await expect(page.locator('aside .construction-card')).toHaveCount(
+					language === 'pl' ? 4 : 9
+				);
+				await expect(group.locator('rt')).toHaveText(targets[index]);
+				await page.keyboard.press('Escape');
+				const contained = await group.evaluate((element) => {
+					const box = element.getBoundingClientRect();
+					const gloss = element.querySelector('rt')!.getBoundingClientRect();
+					return gloss.left >= box.left - 1 && gloss.right <= box.right + 1;
+				});
+				expect(contained, `${language} construction ${index} at ${width}px`).toBe(true);
+			}
+		}
+	});
+}
+
 test('oversized interlinear units wrap without changing the reading size or their identity', async ({
 	page
 }) => {

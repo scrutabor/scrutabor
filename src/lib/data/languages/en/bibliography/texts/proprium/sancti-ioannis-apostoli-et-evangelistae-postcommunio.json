@@ -1,0 +1,47 @@
+{
+ "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-postcommunio",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 29",
+    "scan": "PDF p. 56"
+   },
+   "entries": [
+    {
+     "id": "use.en.saint-john-postcommunion.conclusion.husenbeth1853",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the concluding formula only, printed here after Libera nos, not as Saint John's postcommunion. Revised for the selected Latin: same is omitted, our is expressed, and the address, divine apposition and ending use contemporary English. This page does not establish the choice of conclusion or the prayer's body."
+    }
+   ],
+   "verified_on": "2026-09-29"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 72",
+    "scan": "PDF p. 99"
+   },
+   "entries": [
+    {
+     "id": "use.en.saint-john-postcommunion.body.husenbeth1853",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Saint John postcommunion body, revised against the Latin with contemporary address and an explicit connection between the saint commemorated and his prayers. This page abbreviates the conclusion and does not supply its complete wording."
+    }
+   ],
+   "verified_on": "2026-09-29"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}
