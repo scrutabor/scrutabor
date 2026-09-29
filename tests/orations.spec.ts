@@ -89,6 +89,28 @@ const prayers = [
 			{ language: 'en', gloss: 'Your Son', words: 2 },
 			{ language: 'en', gloss: 'of the Holy Spirit', words: 2 }
 		]
+	},
+	{
+		formulary: 'sancti-lucae-evangelistae',
+		kind: 'postcommunio',
+		response: 'w046',
+		conclusion: { section: '115 a', leaf: 22 },
+		opening: {
+			pl: 'aby to, co otrzymaliśmy z Twojego świętego ołtarza',
+			en: 'Grant, we pray, almighty God, that what we have received from Your holy altar'
+		},
+		constructions: [
+			{ language: 'pl', gloss: 'byśmy przez to mogli być bezpieczni', words: 5 },
+			{ language: 'en', gloss: 'we have received from Your holy altar', words: 5 },
+			{ language: 'en', gloss: 'of Your blessed evangelist', words: 3 },
+			{ language: 'en', gloss: 'our souls', words: 2 },
+			{ language: 'en', gloss: 'and through it', words: 2 },
+			{ language: 'en', gloss: 'we may be safe', words: 3 },
+			{ language: 'en', gloss: 'our Lord', words: 2 },
+			{ language: 'en', gloss: 'Your Son', words: 2 },
+			{ language: 'en', gloss: 'of the Holy Spirit', words: 2 },
+			{ language: 'en', gloss: 'forever and ever', words: 4 }
+		]
 	}
 ] as const;
 
