@@ -44,6 +44,28 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "Rubricae generales, 115 a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-vi-post-pentecosten-collecta.expanded-conclusion.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The prescribed Father-directed conclusion supplies Per Dominum nostrum through per omnia saecula saeculorum (w033–w053), whereas the proper page has only the cue. Reader accents and tuum: Qui punctuation and capitalization are supplied separately."
+    }
+   ],
+   "verified_on": "2026-09-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
     "printed": "pp. 378–379",
     "scan": "leaves n459–n460 / PDF pp. 460–461",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n459/mode/1up"
@@ -54,10 +76,32 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The two cited proper pages print the 32-word body and the Per Dominum cue, not the full expanded conclusion. The linked first page ends with pe- within pectoribus; the continuation and prescribed expansion have separate source uses."
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 379",
+    "scan": "leaf n460 / PDF p. 461",
+    "section": "Dominica VI post Pentecosten, Oratio (continued)",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n460/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-vi-post-pentecosten-collecta.continued-body.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The page continues pectoribus with ctóribus after pe- on p. 378, then prints nostris through custodias (w011–w032) and the Per Dominum cue. It does not print the full expanded conclusion."
+    }
+   ],
+   "verified_on": "2026-09-29"
   }
  ],
  "witnesses": []

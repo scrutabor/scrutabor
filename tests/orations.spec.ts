@@ -3,6 +3,7 @@ import { expect, setHelp, test } from './fixtures';
 const prayers = [
 	{
 		sunday: 'xxii',
+		kind: 'postcommunio',
 		response: 'w037',
 		conclusion: { section: '115 d', leaf: 23 },
 		opening: {
@@ -21,6 +22,7 @@ const prayers = [
 	},
 	{
 		sunday: 'xiii',
+		kind: 'postcommunio',
 		response: 'w032',
 		conclusion: { section: '115 a', leaf: 22 },
 		opening: {
@@ -42,15 +44,38 @@ const prayers = [
 			{ language: 'en', gloss: 'Your Son', words: 2 },
 			{ language: 'en', gloss: 'of the Holy Spirit', words: 2 }
 		]
+	},
+	{
+		sunday: 'vi',
+		kind: 'collecta',
+		response: 'w054',
+		conclusion: { section: '115 a', leaf: 22 },
+		opening: {
+			pl: 'Boże Zastępów, do którego należy wszystko, co najlepsze',
+			en: 'God of hosts, all that is best belongs to You.'
+		},
+		constructions: [
+			{ language: 'pl', gloss: 'wzrost pobożności', words: 2 },
+			{ language: 'pl', gloss: 'z troskliwą dobrocią', words: 2 },
+			{ language: 'en', gloss: 'to whom all that is best belongs', words: 6 },
+			{ language: 'en', gloss: 'in our hearts', words: 2 },
+			{ language: 'en', gloss: 'an increase of devotion', words: 2 },
+			{ language: 'en', gloss: 'You may nourish what is good', words: 4 },
+			{ language: 'en', gloss: 'with loving care', words: 2 },
+			{ language: 'en', gloss: 'You may guard what has been nourished', words: 4 },
+			{ language: 'en', gloss: 'our Lord', words: 2 },
+			{ language: 'en', gloss: 'Your Son', words: 2 },
+			{ language: 'en', gloss: 'of the Holy Spirit', words: 2 }
+		]
 	}
 ] as const;
 
-for (const { sunday, response, conclusion, opening, constructions } of prayers) {
+for (const { sunday, kind, response, conclusion, opening, constructions } of prayers) {
 	const route = `formularium/dominica-${sunday}-post-pentecosten`;
-	const text = `dominica-${sunday}-post-pentecosten-postcommunio`;
+	const text = `dominica-${sunday}-post-pentecosten-${kind}`;
 
 	for (const { language, gloss, words } of constructions) {
-		test(`${language} ${sunday} postcommunion preserves ${gloss}`, async ({ page }) => {
+		test(`${language} ${sunday} ${kind} preserves ${gloss}`, async ({ page }) => {
 			await page.goto(`/app/${language}/${route}`);
 			await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
 			await page.reload();
@@ -73,6 +98,12 @@ for (const { sunday, response, conclusion, opening, constructions } of prayers) 
 				expect(await group.boundingBox()).toEqual(before);
 				await button.click();
 				await expect(page.locator('aside .construction-card')).toHaveCount(words);
+				if (sunday === 'vi' && ['z troskliwą dobrocią', 'with loving care'].includes(gloss)) {
+					await expect(page.locator('aside')).toContainText('pietatis studio');
+					await expect(page.locator('aside')).toContainText(
+						language === 'pl' ? 'przez gorliwą pobożność' : 'through zealous devotion to God'
+					);
+				}
 				await page.keyboard.press('Escape');
 				await expect(group.locator('rt')).toHaveText(gloss);
 			}
@@ -94,7 +125,7 @@ for (const { sunday, response, conclusion, opening, constructions } of prayers) 
 	}
 
 	for (const language of ['pl', 'en'] as const) {
-		test(`${language} ${sunday} postcommunion preserves its text, response and source`, async ({
+		test(`${language} ${sunday} ${kind} preserves its text, response and source`, async ({
 			page
 		}) => {
 			await page.goto(`/app/${language}/${route}`);
@@ -118,6 +149,19 @@ for (const { sunday, response, conclusion, opening, constructions } of prayers) 
 					`a[href="https://archive.org/details/missale-romanum-1962/page/n${conclusion.leaf}/mode/1up"]`
 				)
 			).toHaveCount(1);
+			if (sunday === 'vi') {
+				await expect(sources).toContainText('Dominica VI post Pentecosten, Oratio (continued)');
+				await expect(
+					sources.locator(
+						'a[href="https://archive.org/details/missale-romanum-1962/page/n459/mode/1up"]'
+					)
+				).toHaveCount(1);
+				await expect(
+					sources.locator(
+						'a[href="https://archive.org/details/missale-romanum-1962/page/n460/mode/1up"]'
+					)
+				).toHaveCount(1);
+			}
 		});
 	}
 }
