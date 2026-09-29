@@ -2,7 +2,7 @@
 	"note": "Written by scripts/vendor-corpus.mjs. Checked by scripts/provenance.test.ts.",
 	"corpus": {
 		"repository": "scrutabor-corpus",
-		"commit": "0efeb34c73fee72b123ab620e09f78135ea4f6a5",
+		"commit": "9ac95c1a03c0126fc947a8ce8e986a47e77f57f2",
 		"dirty": false
 	},
 	"edition": "5.7.0",
