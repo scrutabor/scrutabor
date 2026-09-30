@@ -1197,7 +1197,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dedicatio-sancti-michaelis-archangeli-communio",
@@ -8531,7 +8531,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dedicatio-sancti-michaelis-archangeli-communio",
@@ -14920,7 +14920,7 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dedicatio-sancti-michaelis-archangeli-postcommunio",

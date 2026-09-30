@@ -6,7 +6,43 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/09-29; resolved section [Oratio] with declared inherited references"
+    "section": "Latin/Ordo/Prayers.txt [Per Dominum], heading95, conclusion96, response97"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dedicatio-sancti-michaelis-archangeli-collecta.expanded-conclusion.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The exact shared formula supplies twenty-one conclusion words and Amen after resolving $Per Dominum. The lowercase r. initial-format marker and uppercase R. response marker are framing, not Latin words."
+    }
+   ],
+   "verified_on": "2026-09-30"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Latin/Sancti/05-08.txt [Oratio], heading19, body20, $Per Dominum command21"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dedicatio-sancti-michaelis-archangeli-collecta.inherited-body.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The May file supplies the twenty-six-word body reached from the September reference, then calls the separately bound shared conclusion."
+    }
+   ],
+   "verified_on": "2026-09-30"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Latin/Sancti/09-29.txt [Oratio], heading22 and @Sancti/05-08 reference23"
    },
    "entries": [
     {
@@ -14,7 +50,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The September file directs this collect to the May source. The complete body and shared conclusion have separate source uses and explicit raw-file reference resolution."
     }
    ],
    "verified_on": "2026-08-31"
@@ -24,9 +60,52 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
-    "printed": "pp. xxxii–xxxiv, 226",
-    "scan": "PDF scans 38–40, 306",
-    "section": "RG 480–481, 511 d/i, 513–514; Ordo conclusion"
+    "printed": "p. xxxiii",
+    "scan": "leaf n38 / PDF p. 39",
+    "section": "RG 511 d",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dedicatio-sancti-michaelis-archangeli-collecta.oration-audible.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "In a read Mass the priest says the orations aloud. This establishes the collect's audible delivery, not a response-participation map."
+    }
+   ],
+   "verified_on": "2026-09-30"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xxxiv",
+    "scan": "leaf n39 / PDF p. 40",
+    "section": "RG 513 a and 514",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n39/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dedicatio-sancti-michaelis-archangeli-collecta.oration-sung.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The celebrant sings the orations in solemn Mass; the corresponding rule extends to sung Mass without sacred ministers."
+    }
+   ],
+   "verified_on": "2026-09-30"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. lii",
+    "scan": "leaf n57 / PDF p. 58",
+    "section": "Ritus servandus V 1-2",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n57/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +113,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
+     "claim": "The celebrant says the collect after Oremus with prescribed gestures through its conclusion. Audible or sung delivery is supported by separately bound RG511d and RG513a/514. These loci do not alone certify response participation or date-specific commemorations."
     }
    ],
    "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "Rubricae generales 115 a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dedicatio-sancti-michaelis-archangeli-collecta.expanded-conclusion.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Father-directed formula supplies the twenty-one-word conclusion and Amen. The unaccented rubric prints tuum, qui and Sancti, Deus; house accents, ligatures, tuum: Qui and terminal Amen. are declared in the witness."
+    }
+   ],
+   "verified_on": "2026-09-30"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -54,7 +154,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The left-column Oratio prints the twenty-six-word collect body and Per Dominum cue. The full conclusion is supplied by the separately bound RG115a source, not printed here in full."
     }
    ],
    "verified_on": "2026-08-31"
