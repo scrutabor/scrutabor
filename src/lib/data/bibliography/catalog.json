@@ -168,6 +168,23 @@
    }
   },
   {
+   "id": "edition.divinum-officium-missa.b5e250b",
+   "work": "work.divinum-officium",
+   "recension": "Latin Mass data at commit b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19",
+   "title": "Divinum Officium: Missa, Latin data",
+   "edition_statement": "Pinned source revision",
+   "year": "2026",
+   "publication_type": "web_resource",
+   "authority": "reference_work",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "permission",
+    "basis": "The pinned revision's README.md contains the project's MIT permission notice."
+   }
+  },
+  {
    "id": "edition.enchiridion-indulgentiarum-fourth-edition",
    "work": "work.enchiridion-indulgentiarum",
    "title": "Enchiridion Indulgentiarum, editio quarta",
@@ -420,6 +437,15 @@
    "kind": "born-digital",
    "record_url": "https://github.com/DivinumOfficium/divinum-officium/commit/44667ff518b8ff1439780470828b39714f5306a2",
    "revision": "44667ff518b8ff1439780470828b39714f5306a2",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-missa.b5e250b.advent-i",
+   "edition": "edition.divinum-officium-missa.b5e250b",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19/web/www/missa/Latin/Tempora/Adv1-0.txt",
+   "revision": "b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19",
    "access": "open"
   },
   {

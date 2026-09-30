@@ -7118,6 +7118,22 @@
      "lemmas": []
     },
     {
+     "edition": "edition.divinum-officium-missa.b5e250b",
+     "roles": [
+      "derived_digital_collation_aid"
+     ],
+     "texts": [
+      {
+       "id": "proprium.dominica-i-adventus-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
      "edition": "edition.breviarium-romanum.1902-pustet",
      "roles": [
       "direct_approved_print"
@@ -8584,6 +8600,13 @@
       },
       {
        "id": "proprium.dedicatio-sancti-michaelis-archangeli-secreta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-adventus-evangelium",
        "roles": [
         "official_text"
        ],

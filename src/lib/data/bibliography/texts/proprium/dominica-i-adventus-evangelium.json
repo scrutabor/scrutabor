@@ -1,0 +1,44 @@
+{
+ "id": "proprium.dominica-i-adventus-evangelium",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.b5e250b",
+   "digital_item": "item.divinum-officium-missa.b5e250b.advent-i",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Latin/Tempora/Adv1-0.txt [Evangelium], marker41, announcement42, reference43, complete body44; Offertorium starts46"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-i-adventus-evangelium.dob5e250b",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The exact pinned 119-word reading has fifteen spelling or punctuation differences from the selected Latin. No inherited text, macro or concluding response is part of this reading."
+    }
+   ],
+   "verified_on": "2026-09-30"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 2",
+    "scan": "leaf n81 / PDF p. 82",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n81/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-i-adventus-evangelium.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The complete 119-word Gospel begins in the lower left column and ends in the upper right before Credo. The announcement, cross and scripture reference are framing; the selected reading retains the printed spelling and punctuation."
+    }
+   ],
+   "verified_on": "2026-09-30"
+  }
+ ],
+ "witnesses": []
+}
