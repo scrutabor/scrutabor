@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/07-01; resolved section [Evangelium] with declared inherited references"
+    "section": "Latin/Sancti/07-01.txt: Evangelium heading46, announcement47, scripture reference48; direct body49. Standalone hyphens and adjacent commas remain exact source punctuation."
    },
    "entries": [
     {
@@ -14,7 +14,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned direct 93-word body is preserved as a derived comparison, including its declared variants. No inherited text or concluding response is included."
     }
    ],
    "verified_on": "2026-08-31"
@@ -34,7 +34,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger 1962 Editio iuxta typicam page prints the complete 93-word body. Announcement, scripture reference and adjacent components are excluded; no expansion or concluding response is added."
     }
    ],
    "verified_on": "2026-08-31"

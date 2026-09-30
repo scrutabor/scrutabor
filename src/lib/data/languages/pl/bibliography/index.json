@@ -4865,7 +4865,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.nativitas-domini-in-die-offertorium",
@@ -5187,7 +5187,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-communio",
@@ -12222,7 +12222,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-domini-in-die-offertorium",
@@ -12544,7 +12544,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-communio",
@@ -15323,7 +15323,8 @@
     {
      "edition": "edition.missale-romanum.1962-typica",
      "roles": [
-      "official_liturgical_context"
+      "official_liturgical_context",
+      "rubric_control"
      ],
      "texts": [
       {
@@ -16807,6 +16808,13 @@
        "id": "proprium.nativitas-domini-in-die-collecta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-domini-in-die-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },

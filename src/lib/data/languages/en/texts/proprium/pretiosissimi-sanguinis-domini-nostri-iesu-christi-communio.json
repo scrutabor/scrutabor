@@ -1,8 +1,8 @@
 {
   "id":"proprium.pretiosissimi-sanguinis-domini-nostri-iesu-christi-communio",
   "language":"en",
-  "about":"The communio of the formulary “Most Precious Blood of Our Lord Jesus Christ” in the 1962 Roman Missal.",
+  "about":"The Communion of the formulary “Most Precious Blood of Our Lord Jesus Christ” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Christ was offered once to drain away the sins of many; the second time He will appear without sin to those who await Him for salvation.","g":["Christ","once","offered","was","to","of many","take away","sins","the second time","without","sin","He will appear","to those awaiting","Him","unto","salvation"]}
+    {"id":"s01","tr":"Christ was offered once to take away the sins of many; the second time He will appear without sin to those who await Him for salvation.","g":["Christ","once",null,null,"to",null,null,null,"the second time","without","sin","He will appear","to those awaiting","Him","for","salvation"],"a":[{"s":2,"n":2,"a":0,"g":"was offered"},{"s":5,"n":3,"a":0,"g":"take away the sins of many"}]}
   ]
 }
