@@ -1,4 +1,4 @@
-import { expect, setHelp, test } from './fixtures';
+import { expect, setHelp, setTheme, test } from './fixtures';
 
 const pairs = [
 	['commemoratio-baptismatis-domini', 'evangelium', 'w045', 'to', 'w046', 'Israel'],
@@ -18,7 +18,7 @@ for (const [formulary, part, prep, prepGloss, noun, nounGloss] of pairs) {
 			[1280, 'dark']
 		] as const) {
 			await page.setViewportSize({ width, height: 900 });
-			await page.emulateMedia({ colorScheme });
+			await setTheme(page, colorScheme);
 			for (const [word, gloss] of [
 				[prep, prepGloss],
 				[noun, nounGloss]

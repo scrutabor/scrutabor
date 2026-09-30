@@ -1,4 +1,4 @@
-import { expect, setHelp, test } from './fixtures';
+import { expect, setHelp, setTheme, test } from './fixtures';
 
 const slug = 'omnium-sanctorum-epistola';
 const constructions = {
@@ -50,7 +50,7 @@ for (const language of ['pl', 'en'] as const) {
 				[1280, 'dark']
 			] as const) {
 				await page.setViewportSize({ width, height: 900 });
-				await page.emulateMedia({ colorScheme });
+				await setTheme(page, colorScheme);
 				await button.scrollIntoViewIfNeeded();
 				const before = await group.boundingBox();
 				await button.hover();

@@ -1,4 +1,4 @@
-import { expect, setHelp, test } from './fixtures';
+import { expect, setHelp, setTheme, test } from './fixtures';
 
 const formulary = 'dedicatio-sancti-michaelis-archangeli';
 const text = `${formulary}-collecta`;
@@ -33,7 +33,7 @@ for (const language of ['pl', 'en'] as const) {
 		for (const width of [320, 1280]) {
 			await page.setViewportSize({ width, height: 900 });
 			for (const colorScheme of ['light', 'dark'] as const) {
-				await page.emulateMedia({ colorScheme });
+				await setTheme(page, colorScheme);
 				await expect(button.locator('rt')).toHaveText(shared);
 				await expect(button.locator('.token')).toHaveCount(10);
 				await button.scrollIntoViewIfNeeded();

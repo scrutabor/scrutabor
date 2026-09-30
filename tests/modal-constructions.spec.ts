@@ -1,4 +1,4 @@
-import { expect, setHelp, test } from './fixtures';
+import { expect, setHelp, setTheme, test } from './fixtures';
 
 const groups = [
 	['en', 'dominica-ii-passionis', 'evangelium', 'w091', 'could you not', 2],
@@ -43,7 +43,7 @@ for (const [lang, formulary, part, anchor, gloss, members] of groups) {
 			[1280, 'dark']
 		] as const) {
 			await page.setViewportSize({ width, height: 900 });
-			await page.emulateMedia({ colorScheme });
+			await setTheme(page, colorScheme);
 			await button.scrollIntoViewIfNeeded();
 			const before = await group.boundingBox();
 			await button.hover();

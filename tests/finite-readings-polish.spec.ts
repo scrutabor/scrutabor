@@ -1,4 +1,4 @@
-import { expect, setHelp, test } from './fixtures';
+import { expect, setHelp, setTheme, test } from './fixtures';
 
 const blood = 'pretiosissimi-sanguinis-domini-nostri-iesu-christi';
 const cases = [
@@ -119,7 +119,7 @@ test('Polish purpose and causative groups remain stable at the largest size', as
 		for (const width of [320, 1280]) {
 			await page.setViewportSize({ width, height: 900 });
 			for (const colorScheme of ['light', 'dark'] as const) {
-				await page.emulateMedia({ colorScheme, media: 'screen' });
+				await setTheme(page, colorScheme);
 				await button.scrollIntoViewIfNeeded();
 				await page.evaluate(() => document.fonts.ready);
 				await expect(button.locator('rt')).toHaveText(gloss);

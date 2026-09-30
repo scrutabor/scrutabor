@@ -297,4 +297,30 @@ export async function setHelp(page: import('@playwright/test').Page, level: 0 | 
 	await expect(radio).toHaveAttribute('aria-checked', 'true');
 }
 
+/** Change the loaded reader's theme through its own control. System media
+ * alone only selects a theme at startup; changing it later can leave a test
+ * measuring the same light page twice. Preserve the document and reading mode. */
+export async function setTheme(page: import('@playwright/test').Page, theme: 'light' | 'dark') {
+	await settled(page);
+	await page.emulateMedia({ colorScheme: theme });
+	const root = page.locator('html');
+	await expect(root).toHaveAttribute('data-theme', /^(light|dark)$/);
+	if ((await root.getAttribute('data-theme')) !== theme) {
+		const name =
+			theme === 'dark'
+				? /^(switch to dark mode|przełącz na tryb ciemny)$/
+				: /^(switch to light mode|przełącz na tryb jasny)$/;
+		await page.getByRole('button', { name }).click();
+	}
+	await expect(root, 'the reader must actually display the requested theme').toHaveAttribute(
+		'data-theme',
+		theme
+	);
+	// The attribute changes before the page's colour transition finishes.
+	await page.locator('body').evaluate(async (body) => {
+		getComputedStyle(body).getPropertyValue('background-color');
+		await Promise.all(body.getAnimations().map((animation) => animation.finished));
+	});
+}
+
 export { expect };

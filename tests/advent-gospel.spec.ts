@@ -1,4 +1,4 @@
-import { expect, setHelp, test } from './fixtures';
+import { expect, setHelp, setTheme, test } from './fixtures';
 
 const formulary = 'dominica-i-adventus';
 const text = `${formulary}-evangelium`;
@@ -29,7 +29,7 @@ for (const [language, anchor, gloss, members] of groups) {
 		for (const width of [320, 1280]) {
 			await page.setViewportSize({ width, height: 900 });
 			for (const colorScheme of ['light', 'dark'] as const) {
-				await page.emulateMedia({ colorScheme });
+				await setTheme(page, colorScheme);
 				await expect(button.locator('rt')).toHaveText(gloss);
 				await expect(button.locator('.token')).toHaveCount(members.length);
 				await button.scrollIntoViewIfNeeded();
