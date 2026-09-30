@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/06-29; resolved section [Lectio] with declared inherited references"
+    "section": "Latin/Sancti/06-29.txt [Lectio], marker27, announcement28, reference29, complete body30; Gradual starts32"
    },
    "entries": [
     {
@@ -14,7 +14,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The complete pinned 212-word body has sixteen differing loci against the selected reading; spelling, accents and punctuation are preserved in the transcript and apparatus."
     }
    ],
    "verified_on": "2026-08-31"
@@ -24,8 +24,8 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "pp. 576–577",
-    "scan": "leaves n657–n658 / PDF pp. 658–659",
+    "printed": "p. 576",
+    "scan": "leaf n657 / PDF p. 658",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n657/mode/1up"
    },
    "entries": [
@@ -34,10 +34,30 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The right column begins the complete Epistle at In diebus illis and continues through milites (word 81); words 82–212 are printed on the separately bound next page."
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 577",
+    "scan": "leaf n658 / PDF p. 659",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n658/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-petri-et-pauli-apostolorum-epistola.body-continuation.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The left column continues the reading from vinctus (word 82) through plebis Iudaeorum (word 212), before the Gradual. The complete original image was read."
+    }
+   ],
+   "verified_on": "2026-09-30"
   }
  ],
  "witnesses": []
