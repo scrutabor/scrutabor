@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/01-13.txt (section [Evangelium]); resolved spans: web/www/missa/Latin/Sancti/01-13.txt (lines 27-29)"
+    "section": "Latin/Sancti/01-13.txt [Evangelium], heading 26, title 27, reference 28, body 29"
    },
    "entries": [
     {
@@ -14,7 +14,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned digital Gospel body is line 29. It agrees in substantive wording with the selected Latin and has the six recorded spelling and punctuation variants."
     }
    ],
    "verified_on": "2026-09-12"
@@ -34,7 +34,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited Benziger 1962 Editio iuxta typicam page prints the complete 110-word Gospel. The heading, scripture reference and following Credo instruction are outside this body."
     }
    ],
    "verified_on": "2026-09-25"
