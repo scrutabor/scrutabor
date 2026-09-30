@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Transfiguration of Our Lord” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Tell no one the vision that you have seen, until the Son of Man rises from the dead.","g":["The vision","which","you have seen","to no one","tell","until","from","the dead","rises","the Son","of Man"]}
+    {"id":"s01","tr":"Tell no one the vision that you have seen, until the Son of Man rises from the dead.","g":["The vision","which","you have seen",null,null,"until","from","the dead","rises","the Son","of Man"],"a":[{"s":3,"n":2,"a":1,"g":"tell no one"}]}
   ]
 }
