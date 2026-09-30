@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/07-02; resolved section [Lectio] with declared inherited references"
+    "section": "Latin/Sancti/07-02.txt [Lectio]: section marker16, announcement17, reference18, complete direct body19; Graduale starts21"
    },
    "entries": [
     {
@@ -14,7 +14,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned 107-word direct reading differs from the selected Latin at seven punctuation loci, the spelling Jam and the substantive inflection petra. No inherited text, macro or concluding response is part of this body."
     }
    ],
    "verified_on": "2026-08-31"
@@ -34,7 +34,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger 1962 Editio iuxta typicam page prints the complete 107-word Epistle, beginning in the lower left column and ending in the upper right before Graduale. The announcement and scripture reference are framing; no expansion or concluding response is included."
     }
    ],
    "verified_on": "2026-08-31"
