@@ -1,8 +1,8 @@
 {
   "id":"proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-epistola",
   "language":"en",
-  "about":"The epistola of the formulary “Commemoration of All the Faithful Departed — Mass III” in the 1962 Roman Missal.",
+  "about":"The Epistle of the formulary “Commemoration of All the Faithful Departed — Mass III” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"In those days, I heard a voice from heaven saying to me: Write: Blessed are the dead who die in the Lord. Now, from this time on, says the Spirit, let them rest from their toils, for their works follow them.","g":["in",null,null,"I heard","voice","from","heaven","saying","to me","write","blessed","the dead","who","in","the Lord","die","henceforth","now","says","the Spirit","that","let them rest","from","labors","their","works","for","their","follow","them"],"a":[{"s":1,"n":2,"a":0,"g":"those days"}]}
+    {"id":"s01","tr":"In those days, I heard a voice from heaven saying to me: Write: Blessed are the dead who die in the Lord. Now, from this time on, says the Spirit, let them rest from their toils, for their works follow them.","g":["in",null,null,"I heard","a voice","from","heaven","saying","to me","write","blessed are","the dead","who","in","the Lord","die","henceforth","now","says","the Spirit","that","they may rest","from",null,null,null,null,null,"follow","them"],"a":[{"s":1,"n":2,"a":0,"g":"those days"},{"s":23,"n":2,"a":0,"g":"their labors"},{"s":25,"n":3,"a":0,"g":"for their works"}]}
   ]
 }
