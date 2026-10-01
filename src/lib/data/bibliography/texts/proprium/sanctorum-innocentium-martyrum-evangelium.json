@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/12-28; resolved section [Evangelium] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/12-28.txt [Evangelium], direct body line 61; heading 58, title 59, reference 60"
    },
    "entries": [
     {
@@ -14,15 +14,15 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned inline Latin Gospel corroborates the substantive 136-word body. Its source spelling, accent, capitalization and punctuation variants are recorded in the apparatus; this is a derived comparison source, not the controlling print or an inherited reading."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-01"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 28",
     "scan": "leaf n107 / PDF p. 108",
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger 1962 Editio iuxta typicam page prints the complete 136-word Matt 2:13–18 Gospel for the Holy Innocents. The reading title, reference, separate Credo rubric and following offertory are framing or other components. No conclusion is expanded."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-01"
   }
  ],
  "witnesses": []
