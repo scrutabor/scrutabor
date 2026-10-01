@@ -40,6 +40,7 @@ describe('syllabify', () => {
 	});
 
 	it('reassembles to the original form for every corpus word', () => {
+		expect(Object.keys(TEXTS).length).toBeGreaterThan(0);
 		for (const key of Object.keys(TEXTS)) {
 			for (const seg of TEXTS[key].segments) {
 				for (const w of seg.words ?? []) {
@@ -141,18 +142,18 @@ describe('ipa', () => {
 		expect(pronunciations('cælis').differ).toBe(true);
 	});
 
-	it('produces nonempty dotted IPA for every corpus word', () => {
-		for (const key of Object.keys(TEXTS)) {
-			for (const seg of TEXTS[key].segments) {
-				for (const w of seg.words ?? []) {
-					for (const tradition of ['roman', 'polish'] as const) {
-						const out = ipa(w.form, tradition);
-						expect(out.length, `${w.form} ${tradition}`).toBeGreaterThan(0);
-						expect(out.split(/[.ˈ]/).filter(Boolean).length, `${w.form} ${tradition}`).toBe(
-							syllabify(w.form).length
-						);
-					}
-				}
+	// Each complete text is a test case: corpus growth must not put every
+	// pronunciation assertion into one shared per-test time budget.
+	it.each(Object.entries(TEXTS))('produces nonempty dotted IPA for %s', (_key, text) => {
+		const words = text.segments.flatMap((segment) => segment.words ?? []);
+		expect(words.length).toBeGreaterThan(0);
+		for (const w of words) {
+			for (const tradition of ['roman', 'polish'] as const) {
+				const out = ipa(w.form, tradition);
+				expect(out.length, `${w.form} ${tradition}`).toBeGreaterThan(0);
+				expect(out.split(/[.ˈ]/).filter(Boolean).length, `${w.form} ${tradition}`).toBe(
+					syllabify(w.form).length
+				);
 			}
 		}
 	});
