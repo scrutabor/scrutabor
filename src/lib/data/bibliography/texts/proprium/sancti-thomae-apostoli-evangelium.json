@@ -22,7 +22,28 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 335",
+    "scan": "leaf n416 / PDF p. 417",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n416/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-thomae-apostoli-evangelium.hand-wound-parallel.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w033"
+     },
+     "claim": "The Low Sunday Gospel prints in manibus eius fixuram in the parallel passage (John 20:25), supporting the declared correction of eis in the Saint Thomas printing. This is another locus of the same edition, not an independent edition."
+    }
+   ],
+   "verified_on": "2026-10-01"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 440",
     "scan": "leaf n521 / PDF p. 522",
@@ -34,10 +55,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger 1962 printing supplies the Gospel from its opening through Deus meus on p. 440; its final sentence is on the separately cited p. 441. The declared hand-wound corrigendum preserves the printed eis in the witness."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-01"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 441",
+    "scan": "leaf n522 / PDF p. 523",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n522/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-thomae-apostoli-evangelium.gospel-continuation.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w113"
+     },
+     "claim": "The page supplies the Gospel's final sentence, Dixit ei Iesus through crediderunt; the following Credo is a separate rubric."
+    }
+   ],
+   "verified_on": "2026-10-01"
   }
  ],
  "witnesses": []
