@@ -1,9 +1,9 @@
 {
   "id":"proprium.dominica-in-albis-postcommunio",
   "language":"en",
-  "about":"The postcommunio of the formulary “Low Sunday” in the 1962 Roman Missal.",
+  "about":"The prayer after Communion of the formulary “Low Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"We beseech Thee, O Lord our God, that Thou wouldst make the most holy mysteries, which Thou hast bestowed as a safeguard of our restoration, a remedy for us both present and future. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["We beseech","Lord","God","our","that","most holy","mysteries","which","as","of restoration","our","a safeguard","Thou hast bestowed","both","a present","for us","remedy","to be","Thou mayest make","and","future","Through",null,null,"Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages"],"a":[{"s":22,"n":2,"a":0,"g":"our Lord"}]},
+    {"id":"s01","tr":"We ask You, Lord our God, to make the most holy mysteries, which You have bestowed to safeguard our restoration, a remedy for us both now and in the future. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, for ever and ever.","g":["We beseech","Lord",null,null,"that","most holy","mysteries","which","as",null,null,"safeguard","You have bestowed","both",null,null,null,null,null,"and","a future one","Through",null,null,"Jesus","Christ",null,null,"Who","with You","lives","and","reigns","in","the unity",null,null,"God","through","all","ages","of ages"],"a":[{"s":2,"n":2,"a":0,"g":"our God"},{"s":9,"n":2,"a":0,"g":"our restoration’s"},{"s":14,"n":3,"a":2,"g":"a present remedy for us"},{"s":17,"n":2,"a":1,"g":"You may make"},{"s":22,"n":2,"a":0,"g":"our Lord"},{"s":26,"n":2,"a":0,"g":"Your Son"},{"s":35,"n":2,"a":0,"g":"of the Holy Spirit"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }
