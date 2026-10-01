@@ -8,7 +8,7 @@
     {"id":"s03","tr":"But when these things begin to happen, look up and lift up your heads, because your redemption is drawing near.","tc":[440],"tb":"revised","g":[null,null,null,null,"look up","and","lift up","heads","your","because","draws near","redemption","your"],"a":[{"s":0,"n":4,"a":3,"g":"but when these things begin to happen"}]},
     {"id":"s04","tr":"And He spoke a parable to them: Observe the fig tree and all the trees: when they already put forth fruit of their own, you know that the summer is at hand.","g":["and","He told","them","a parable","look at","the fig tree","and","all","trees","when","they put forth","now","from","themselves","fruit","you know","that","near","is","summer"],"ex":{"w072":"The word means a fig tree, although Latin leaves the noun “arbor” unspoken."}},
     {"id":"s05","tr":"So you too, when you have seen these things happen, know that the kingdom of God is at hand.","g":["so","also","you","when","you see","these things","happening","know","that","near","is","kingdom","of God"]},
-    {"id":"s06","tr":"Amen I say to you that this generation will not pass away before all things take place.","g":["amen","I say","to you","that","not","will pass away","generation","this","until","all things","happen"]},
-    {"id":"s07","tr":"Heaven and earth will pass away, but My words will not pass away.","tc":[440],"tb":"revised","g":["heaven","and","earth","will pass away","words","but","My","not","will pass away"]}
+    {"id":"s06","tr":"Amen I say to you that this generation will not pass away before all things take place.","g":["amen","I say","to you","that",null,null,"generation","this","until","all things","happen"],"a":[{"s":4,"n":2,"a":1,"g":"will not pass away"}]},
+    {"id":"s07","tr":"Heaven and earth will pass away, but My words will not pass away.","tc":[440],"tb":"revised","g":["heaven","and","earth","will pass away","words","but","My",null,null],"a":[{"s":7,"n":2,"a":1,"g":"will not pass away"}]}
   ]
 }
