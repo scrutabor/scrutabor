@@ -1,8 +1,8 @@
 {
   "id":"proprium.sancti-andreae-apostoli-communio",
   "language":"pl",
-  "about":"Communio formularza „Świętego Andrzeja Apostoła” w Mszale Rzymskim z 1962 roku.",
+  "about":"Antyfona na Komunię formularza „Świętego Andrzeja Apostoła” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Pójdźcie za mną: sprawię, że staniecie się rybakami ludzi. Oni zaś natychmiast, zostawiwszy sieci, poszli za Panem.","g":["Pójdźcie","za","Mną","sprawię","że wy","staniecie się","rybakami","ludzi","A","oni","natychmiast","zostawiwszy","sieci",null,null,"Panem"],"a":[{"s":13,"n":2,"a":0,"g":"poszli za"}]}
+    {"id":"s01","tr":"Pójdźcie za Mną: sprawię, że staniecie się rybakami ludzi. Oni zaś natychmiast, zostawiwszy sieci, poszli za Panem.","g":["Pójdźcie","za","Mną","sprawię","że wy","staniecie się","rybakami","ludzi","A","oni","natychmiast","zostawiwszy","sieci",null,null,"Panem"],"a":[{"s":13,"n":2,"a":0,"g":"poszli za"}]}
   ]
 }
