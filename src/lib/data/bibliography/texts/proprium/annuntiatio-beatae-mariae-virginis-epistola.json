@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/03-25; resolved section [Lectio] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/03-25.txt [Lectio] (lines 18-18); web/www/horas/Latin/Commune/C10a.txt [Lectio] (lines 22-22); web/www/missa/Latin/Tempora/Adv3-3.txt [Lectio] (lines 46-46); titles, headings and scripture reference excluded"
    },
    "entries": [
     {
@@ -14,15 +14,15 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned Mass proper and Horae common references resolve to the complete 80-word Mass Advent reading. The three exact original files and both reference edges are bound in the declared raw reading; this is a derived comparison, not independent textual ancestry."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-01"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 495",
     "scan": "leaf n576 / PDF p. 577",
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger 1962 Editio iuxta typicam page prints the complete 80-word Epistle body, including its liturgical opening, without an abbreviated conclusion or expansion. The heading and Isaias 7:10–15 reference are framing, not words of this child text."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-01"
   }
  ],
  "witnesses": []
