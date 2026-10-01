@@ -148,6 +148,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.omnium-sanctorum-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.septem-dolorum-beatae-mariae-virginis-collecta",
        "roles": [
         "derived_digital_collation_aid"

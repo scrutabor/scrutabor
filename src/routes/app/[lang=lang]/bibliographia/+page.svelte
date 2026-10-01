@@ -404,6 +404,7 @@
 
 	.locator {
 		display: inline;
+		overflow-wrap: anywhere;
 		margin: 0;
 		color: var(--ink);
 		font-size: 0.9rem;

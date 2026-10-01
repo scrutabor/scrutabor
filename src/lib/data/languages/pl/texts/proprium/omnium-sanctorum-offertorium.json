@@ -1,8 +1,8 @@
 {
   "id":"proprium.omnium-sanctorum-offertorium",
   "language":"pl",
-  "about":"Offertorium formularza „Wszystkich Świętych” w Mszale Rzymskim z 1962 roku.",
+  "about":"Antyfona na ofiarowanie formularza „Wszystkich Świętych” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Dusze sprawiedliwych są w ręku Boga i nie dotknie ich udręka niegodziwości; w oczach nierozumnych zdawali się umierać, oni zaś są w pokoju, alleluja.","g":["sprawiedliwych","dusze","w","ręku","Boga","są","i","żadna","dosięgnie","ich","męka","złości",null,null,"oczom","głupich","umrzeć","oni","zaś","są","w","pokoju","alleluja"],"a":[{"s":12,"n":2,"a":0,"g":"wydawali się"}]}
+    {"id":"s01","tr":"Dusze sprawiedliwych są w ręku Boga i nie dotknie ich udręka niegodziwości; w oczach nierozumnych zdawali się umierać, oni zaś są w pokoju, alleluja.","g":["sprawiedliwych","dusze","w","ręku","Boga","są","i","nie","dosięgnie","ich","męka","niegodziwości",null,null,"oczom","głupich","umierać","oni","zaś","są","w","pokoju","alleluja"],"a":[{"s":12,"n":2,"a":0,"g":"wydawali się"}]}
   ]
 }

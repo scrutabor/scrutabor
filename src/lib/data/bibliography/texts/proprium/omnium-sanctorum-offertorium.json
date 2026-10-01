@@ -2,11 +2,29 @@
  "id": "proprium.omnium-sanctorum-offertorium",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-horae.44667ff",
+   "digital_item": "item.divinum-officium-horae.44667ff.doc3a-1",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Horae/Latin/Commune/C3a-1.txt [Offertorium], heading 55, reference 56, body 57; seasonal rubric 58 and replacement 59 excluded"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.omnium-sanctorum-offertorium.inherited-body.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The exact inherited 23-word antiphon is a derived digital comparison, not an independent printed witness. Justórum and allelúja are preserved; no post-Septuagesima substitution is used for November 1."
+    }
+   ],
+   "verified_on": "2026-10-01"
+  },
+  {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/11-01; resolved section [Offertorium] with declared inherited references"
+    "section": "Mass Latin/Sancti/11-01.txt [Offertorium], heading 38, reference 39 to Commune/C3a-1"
    },
    "entries": [
     {
@@ -14,7 +32,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "This pinned Mass source supplies the inheritance directive, not the antiphon body itself. The exact body in Horae/Latin/Commune/C3a-1 is declared separately as a derived digital dependency; independent textual transmission is not claimed."
     }
    ],
    "verified_on": "2026-08-31"
@@ -34,7 +52,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger 1962 Editio iuxta typicam page prints the complete 23-word offertory antiphon including alleluia, Sap 3:1–2, 3. Heading and scripture reference are excluded; no shared conclusion, response or formula is expanded."
     }
    ],
    "verified_on": "2026-08-31"

@@ -1,8 +1,8 @@
 {
   "id":"proprium.omnium-sanctorum-offertorium",
   "language":"en",
-  "about":"The offertorium of the formulary “All Saints” in the 1962 Roman Missal.",
+  "about":"The offertory antiphon for All Saints in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"The souls of the just are in the hand of God, and the torment of malice will not touch them. In the eyes of the foolish they seemed to die, but they are in peace, alleluia.","g":["of the just","the souls","in","the hand","of God","are","and","not","shall touch","them","the torment","of malice",null,null,"in the eyes","of the foolish","to die","they","but","are","in","peace","alleluia"],"a":[{"s":12,"n":2,"a":0,"g":"they seemed"}]}
+    {"id":"s01","tr":"The souls of the just are in the hand of God, and the torment of malice will not touch them. In the eyes of the foolish they seemed to die, but they are in peace, alleluia.","g":["of the just","the souls","in","the hand","of God","are","and",null,null,"them","the torment","of malice",null,null,"in the eyes","of the foolish","to die","they","however","are","in","peace","alleluia"],"a":[{"s":7,"n":2,"a":1,"g":"will not touch"},{"s":12,"n":2,"a":0,"g":"they seemed"}]}
   ]
 }
