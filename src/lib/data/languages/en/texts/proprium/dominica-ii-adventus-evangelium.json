@@ -11,6 +11,6 @@
     {"id":"s06","tr":"What then did you go out to see? A man dressed in soft garments?","tc":[445],"tb":"revised","g":["Then","what","did ye go out","to see","a man","in soft","dressed"]},
     {"id":"s07","tr":"Behold, those who are dressed in soft garments are in the houses of kings.","g":["behold","those who","soft garments","wear","in","houses","of kings","are"]},
     {"id":"s08","tr":"What then did you go out to see? A prophet? Yes, I tell you, and more than a prophet.","tc":[445],"tb":"revised","g":["Then","what","did ye go out","to see","a prophet","Yes","I say","to you","and even","more","than","a prophet"]},
-    {"id":"s09","tr":"For this is the one of whom it is written: Behold, I send My messenger before Your face, who will prepare Your way before You.","tc":[445],"tb":"revised","g":["This is he","is","for","of","whom",null,null,"Behold","I","send","messenger","My","before","face","Thy","who","will prepare","way","Thy","before","Thee"],"a":[{"s":5,"n":2,"a":0,"g":"is written"}]}
+    {"id":"s09","tr":"For this is the one of whom it is written: Behold, I send My messenger before Your face, who will prepare Your way before You.","tc":[445],"tb":"revised","g":[null,null,null,"of","whom",null,null,"Behold","I","send","messenger","My","before","face","Thy","who","will prepare","way","Thy","before","Thee"],"a":[{"s":0,"n":3,"a":1,"g":"For this is he"},{"s":5,"n":2,"a":0,"g":"is written"}]}
   ]
 }

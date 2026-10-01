@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The Eastertide Communion for Saint Joseph, Spouse of the Blessed Virgin Mary, in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Joseph, son of David, do not be afraid to take Mary your wife; for what has been conceived in her is of the Holy Spirit. Alleluia.","g":["Joseph","son","of David","do not","fear","to take","Mary","wife","your","that which","for","in","her",null,null,"of","the Spirit","Holy","is","Alleluia"],"a":[{"s":13,"n":2,"a":0,"g":"has been begotten"}]}
+    {"id":"s01","tr":"Joseph, son of David, do not be afraid to take Mary your wife; for what has been conceived in her is of the Holy Spirit. Alleluia.","g":["Joseph","son","of David","do not","fear","to take","Mary","wife","your",null,null,"in","her",null,null,"of","the Spirit","Holy","is","Alleluia"],"a":[{"s":9,"n":2,"a":0,"g":"for that which"},{"s":13,"n":2,"a":0,"g":"has been begotten"}]}
   ]
 }

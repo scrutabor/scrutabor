@@ -78,7 +78,9 @@ for (const language of ['pl', 'en'] as const) {
 		for (const [word, gloss] of glosses) {
 			await expect(page.locator(`button[id="${text}.${word}"] rt`)).toHaveText(gloss);
 		}
-		await expect(page.locator(`button[id="${text}.w043"] .base`)).toHaveText('Iam');
+		await expect(page.locator(`button[id="${text}.w043"] .base`)).toHaveText(
+			language === 'pl' ? 'Iam' : ['Iam', 'enim']
+		);
 		await expect(page.locator(`button[id="${text}.w086"] .base`)).toHaveText('petræ,');
 		await expect(page.locator(`button[id="${text}.w107"] .base`)).toHaveText('decóra.');
 		await setHelp(page, 2);

@@ -1,0 +1,1080 @@
+[
+	{
+		"text": "orationes/magnificat",
+		"members": ["w018", "w019"],
+		"anchor": "w018",
+		"forms": ["ecce", "enim"],
+		"gloss": "for behold"
+	},
+	{
+		"text": "ordinarium/praefatio-defunctorum",
+		"members": ["w044", "w045", "w046"],
+		"anchor": "w046",
+		"forms": ["Tuis", "enim", "fidélibus"],
+		"gloss": "For to Your faithful"
+	},
+	{
+		"text": "ordinarium/praefatio-paschalis-in-die",
+		"members": ["w027", "w028"],
+		"anchor": "w027",
+		"forms": ["Ipse", "enim"],
+		"gloss": "For He Himself"
+	},
+	{
+		"text": "ordinarium/praefatio-paschalis-in-nocte",
+		"members": ["w027", "w028"],
+		"anchor": "w027",
+		"forms": ["Ipse", "enim"],
+		"gloss": "For He Himself"
+	},
+	{
+		"text": "ordinarium/praefatio-sanctissimae-trinitatis",
+		"members": ["w046", "w047"],
+		"anchor": "w046",
+		"forms": ["Quod", "enim"],
+		"gloss": "For what"
+	},
+	{
+		"text": "ordinarium/qui-pridie",
+		"members": ["w039", "w040", "w041"],
+		"anchor": "w040",
+		"forms": ["Hoc", "est", "enim"],
+		"gloss": "For this is"
+	},
+	{
+		"text": "ordinarium/simili-modo",
+		"members": ["w032", "w033", "w034"],
+		"anchor": "w033",
+		"forms": ["Hic", "est", "enim"],
+		"gloss": "For this is"
+	},
+	{
+		"text": "proprium/annuntiatio-beatae-mariae-virginis-evangelium",
+		"members": ["w067", "w068"],
+		"anchor": "w067",
+		"forms": ["invenísti", "enim"],
+		"gloss": "for you have found"
+	},
+	{
+		"text": "proprium/assumptio-beatae-mariae-virginis-evangelium",
+		"members": ["w035", "w036"],
+		"anchor": "w035",
+		"forms": ["Ecce", "enim"],
+		"gloss": "For behold"
+	},
+	{
+		"text": "proprium/assumptio-beatae-mariae-virginis-evangelium",
+		"members": ["w086", "w087"],
+		"anchor": "w086",
+		"forms": ["ecce", "enim"],
+		"gloss": "for behold"
+	},
+	{
+		"text": "proprium/beata-maria-virgo-regina-evangelium",
+		"members": ["w067", "w068"],
+		"anchor": "w067",
+		"forms": ["invenísti", "enim"],
+		"gloss": "for you have found"
+	},
+	{
+		"text": "proprium/beatae-mariae-virginis-a-rosario-evangelium",
+		"members": ["w067", "w068"],
+		"anchor": "w067",
+		"forms": ["invenísti", "enim"],
+		"gloss": "for you have found"
+	},
+	{
+		"text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-evangelium",
+		"members": ["w028", "w029"],
+		"anchor": "w028",
+		"forms": ["Sicut", "enim"],
+		"gloss": "For as"
+	},
+	{
+		"text": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-ii-epistola",
+		"members": ["w026", "w027"],
+		"anchor": "w026",
+		"forms": ["nisi", "enim"],
+		"gloss": "for unless"
+	},
+	{
+		"text": "proprium/corporis-christi-epistola",
+		"members": ["w002", "w003"],
+		"anchor": "w002",
+		"forms": ["Ego", "enim"],
+		"gloss": "For I"
+	},
+	{
+		"text": "proprium/corporis-christi-epistola",
+		"members": ["w063", "w064"],
+		"anchor": "w063",
+		"forms": ["Quotiescúmque", "enim"],
+		"gloss": "For as often as"
+	},
+	{
+		"text": "proprium/corporis-christi-epistola",
+		"members": ["w106", "w107"],
+		"anchor": "w106",
+		"forms": ["Qui", "enim"],
+		"gloss": "For he who"
+	},
+	{
+		"text": "proprium/corporis-christi-sequentia",
+		"members": ["w054", "w055", "w056"],
+		"anchor": "w054",
+		"forms": ["Dies", "enim", "solémnis"],
+		"gloss": "For a solemn day"
+	},
+	{
+		"text": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-evangelium",
+		"members": ["w129", "w130", "w131", "w132"],
+		"anchor": "w129",
+		"forms": ["Venit", "enim", "fílius", "hóminis"],
+		"gloss": "For the Son of Man came"
+	},
+	{
+		"text": "proprium/dedicatio-sancti-michaelis-archangeli-epistola",
+		"members": ["w044", "w045", "w046", "w047"],
+		"anchor": "w047",
+		"forms": ["tempus", "enim", "prope", "est"],
+		"gloss": "for the time is near"
+	},
+	{
+		"text": "proprium/dedicatio-sancti-michaelis-archangeli-evangelium",
+		"members": ["w095", "w096", "w097", "w098", "w099", "w100"],
+		"anchor": "w095",
+		"forms": ["Necésse", "est", "enim", "ut", "véniant", "scándala"],
+		"gloss": "For occasions of sin must come"
+	},
+	{
+		"text": "proprium/dedicatio-sancti-michaelis-archangeli-evangelium",
+		"members": ["w180", "w181"],
+		"anchor": "w180",
+		"forms": ["dico", "enim"],
+		"gloss": "for I say"
+	},
+	{
+		"text": "proprium/dominica-i-adventus-epistola",
+		"members": ["w011", "w012"],
+		"anchor": "w011",
+		"forms": ["Nunc", "enim"],
+		"gloss": "For now"
+	},
+	{
+		"text": "proprium/dominica-i-in-quadragesima-epistola",
+		"members": ["w010", "w011"],
+		"anchor": "w010",
+		"forms": ["Ait", "enim"],
+		"gloss": "For He says"
+	},
+	{
+		"text": "proprium/dominica-i-in-quadragesima-evangelium",
+		"members": ["w083", "w084", "w085"],
+		"anchor": "w083",
+		"forms": ["Scriptum", "est", "enim"],
+		"gloss": "For it is written"
+	},
+	{
+		"text": "proprium/dominica-i-in-quadragesima-evangelium",
+		"members": ["w149", "w150", "w151"],
+		"anchor": "w149",
+		"forms": ["scriptum", "est", "enim"],
+		"gloss": "for it is written"
+	},
+	{
+		"text": "proprium/dominica-i-passionis-epistola",
+		"members": ["w036", "w037"],
+		"anchor": "w036",
+		"forms": ["Si", "enim"],
+		"gloss": "For if"
+	},
+	{
+		"text": "proprium/dominica-i-post-epiphaniam-epistola",
+		"members": ["w041", "w042"],
+		"anchor": "w041",
+		"forms": ["Dico", "enim"],
+		"gloss": "For I say"
+	},
+	{
+		"text": "proprium/dominica-i-post-epiphaniam-epistola",
+		"members": ["w071", "w072"],
+		"anchor": "w071",
+		"forms": ["Sicut", "enim"],
+		"gloss": "For as"
+	},
+	{
+		"text": "proprium/dominica-ii-adventus-epistola",
+		"members": ["w056", "w057"],
+		"anchor": "w056",
+		"forms": ["Dico", "enim"],
+		"gloss": "For I say"
+	},
+	{
+		"text": "proprium/dominica-ii-adventus-evangelium",
+		"members": ["w104", "w105", "w106"],
+		"anchor": "w105",
+		"forms": ["Hic", "est", "enim"],
+		"gloss": "For this is he"
+	},
+	{
+		"text": "proprium/dominica-ii-in-quadragesima-epistola",
+		"members": ["w027", "w028"],
+		"anchor": "w027",
+		"forms": ["Scitis", "enim"],
+		"gloss": "For you know"
+	},
+	{
+		"text": "proprium/dominica-ii-in-quadragesima-epistola",
+		"members": ["w036", "w037", "w038"],
+		"anchor": "w037",
+		"forms": ["Hæc", "est", "enim"],
+		"gloss": "For this is"
+	},
+	{
+		"text": "proprium/dominica-ii-in-quadragesima-epistola",
+		"members": ["w092", "w093", "w094", "w095", "w096"],
+		"anchor": "w094",
+		"forms": ["Non", "enim", "vocávit", "nos", "Deus"],
+		"gloss": "For God has not called us"
+	},
+	{
+		"text": "proprium/dominica-ii-passionis-evangelium",
+		"members": ["w138", "w139", "w140", "w141"],
+		"anchor": "w138",
+		"forms": ["erant", "enim", "óculi", "eórum"],
+		"gloss": "for their eyes were"
+	},
+	{
+		"text": "proprium/dominica-ii-passionis-evangelium",
+		"members": ["w906", "w907"],
+		"anchor": "w906",
+		"forms": ["multa", "enim"],
+		"gloss": "for many things"
+	},
+	{
+		"text": "proprium/dominica-ii-passionis-evangelium",
+		"members": ["w1251", "w1252"],
+		"anchor": "w1251",
+		"forms": ["dixit", "enim"],
+		"gloss": "for He said"
+	},
+	{
+		"text": "proprium/dominica-ii-post-pascha-epistola",
+		"members": ["w058", "w059"],
+		"anchor": "w058",
+		"forms": ["Erátis", "enim"],
+		"gloss": "For you were"
+	},
+	{
+		"text": "proprium/dominica-iii-adventus-introitus",
+		"members": ["w014", "w015", "w016", "w017"],
+		"anchor": "w017",
+		"forms": ["Dóminus", "enim", "prope", "est"],
+		"gloss": "for the Lord is near"
+	},
+	{
+		"text": "proprium/dominica-iii-adventus-introitus",
+		"members": ["w070", "w071", "w072", "w073"],
+		"anchor": "w073",
+		"forms": ["Dóminus", "enim", "prope", "est"],
+		"gloss": "for the Lord is near"
+	},
+	{
+		"text": "proprium/dominica-iii-in-quadragesima-epistola",
+		"members": ["w058", "w059", "w060"],
+		"anchor": "w060",
+		"forms": ["Hoc", "enim", "scitóte"],
+		"gloss": "For know this"
+	},
+	{
+		"text": "proprium/dominica-iii-in-quadragesima-epistola",
+		"members": ["w086", "w087", "w088"],
+		"anchor": "w086",
+		"forms": ["propter", "hæc", "enim"],
+		"gloss": "for because of these things"
+	},
+	{
+		"text": "proprium/dominica-iii-in-quadragesima-epistola",
+		"members": ["w100", "w101"],
+		"anchor": "w100",
+		"forms": ["Erátis", "enim"],
+		"gloss": "For you were"
+	},
+	{
+		"text": "proprium/dominica-iii-in-quadragesima-epistola",
+		"members": ["w113", "w114"],
+		"anchor": "w113",
+		"forms": ["fructus", "enim"],
+		"gloss": "for the fruit"
+	},
+	{
+		"text": "proprium/dominica-iii-post-epiphaniam-epistola",
+		"members": ["w043", "w044", "w045"],
+		"anchor": "w043",
+		"forms": ["Scriptum", "est", "enim"],
+		"gloss": "For it is written"
+	},
+	{
+		"text": "proprium/dominica-iii-post-epiphaniam-epistola",
+		"members": ["w064", "w065", "w066"],
+		"anchor": "w066",
+		"forms": ["hoc", "enim", "fáciens"],
+		"gloss": "for in doing this"
+	},
+	{
+		"text": "proprium/dominica-iii-post-pascha-epistola",
+		"members": ["w115", "w116", "w117"],
+		"anchor": "w116",
+		"forms": ["Hæc", "est", "enim"],
+		"gloss": "For this is"
+	},
+	{
+		"text": "proprium/dominica-in-quinquagesima-epistola",
+		"members": ["w123", "w124", "w125"],
+		"anchor": "w123",
+		"forms": ["Ex", "parte", "enim"],
+		"gloss": "For in part"
+	},
+	{
+		"text": "proprium/dominica-in-quinquagesima-evangelium",
+		"members": ["w024", "w025"],
+		"anchor": "w024",
+		"forms": ["Tradétur", "enim"],
+		"gloss": "For He will be delivered"
+	},
+	{
+		"text": "proprium/dominica-in-septuagesima-epistola",
+		"members": ["w070", "w071"],
+		"anchor": "w070",
+		"forms": ["Nolo", "enim"],
+		"gloss": "For I do not want"
+	},
+	{
+		"text": "proprium/dominica-in-septuagesima-evangelium",
+		"members": ["w234", "w235"],
+		"anchor": "w234",
+		"forms": ["Multi", "enim"],
+		"gloss": "For many"
+	},
+	{
+		"text": "proprium/dominica-in-sexagesima-epistola",
+		"members": ["w009", "w010"],
+		"anchor": "w009",
+		"forms": ["Sustinétis", "enim"],
+		"gloss": "For you bear it"
+	},
+	{
+		"text": "proprium/dominica-in-sexagesima-epistola",
+		"members": ["w310", "w311"],
+		"anchor": "w310",
+		"forms": ["veritátem", "enim"],
+		"gloss": "for the truth"
+	},
+	{
+		"text": "proprium/dominica-infra-octavam-nativitatis-communio",
+		"members": ["w011", "w012", "w013", "w014", "w015", "w016", "w017"],
+		"anchor": "w011",
+		"forms": ["defúncti", "sunt", "enim", "qui", "quærébant", "ánimam", "púeri"],
+		"gloss": "for those who sought the Child’s life have died"
+	},
+	{
+		"text": "proprium/dominica-iv-adventus-epistola",
+		"members": ["w039", "w040", "w041", "w042", "w043"],
+		"anchor": "w042",
+		"forms": ["Nihil", "enim", "mihi", "cónscius", "sum"],
+		"gloss": "For I am conscious of nothing against myself"
+	},
+	{
+		"text": "proprium/dominica-iv-in-quadragesima-communio",
+		"members": ["w011", "w012"],
+		"anchor": "w011",
+		"forms": ["illuc", "enim"],
+		"gloss": "for there"
+	},
+	{
+		"text": "proprium/dominica-iv-in-quadragesima-epistola",
+		"members": ["w035", "w036"],
+		"anchor": "w035",
+		"forms": ["Hæc", "enim"],
+		"gloss": "For these"
+	},
+	{
+		"text": "proprium/dominica-iv-in-quadragesima-epistola",
+		"members": ["w051", "w052", "w053"],
+		"anchor": "w053",
+		"forms": ["Sina", "enim", "mons"],
+		"gloss": "for Mount Sinai"
+	},
+	{
+		"text": "proprium/dominica-iv-in-quadragesima-epistola",
+		"members": ["w082", "w083", "w084"],
+		"anchor": "w082",
+		"forms": ["Scriptum", "est", "enim"],
+		"gloss": "For it is written"
+	},
+	{
+		"text": "proprium/dominica-iv-in-quadragesima-epistola",
+		"members": ["w140", "w141", "w142", "w143", "w144", "w145"],
+		"anchor": "w142",
+		"forms": ["non", "enim", "heres", "erit", "fílius", "ancíllæ"],
+		"gloss": "for the son of the bondwoman will not be an heir"
+	},
+	{
+		"text": "proprium/dominica-iv-in-quadragesima-evangelium",
+		"members": ["w071", "w072"],
+		"anchor": "w071",
+		"forms": ["ipse", "enim"],
+		"gloss": "for He Himself"
+	},
+	{
+		"text": "proprium/dominica-iv-post-epiphaniam-epistola",
+		"members": ["w009", "w010"],
+		"anchor": "w009",
+		"forms": ["qui", "enim"],
+		"gloss": "for he who"
+	},
+	{
+		"text": "proprium/dominica-iv-post-pascha-epistola",
+		"members": ["w023", "w024"],
+		"anchor": "w023",
+		"forms": ["Voluntárie", "enim"],
+		"gloss": "For of His own will"
+	},
+	{
+		"text": "proprium/dominica-iv-post-pascha-epistola",
+		"members": ["w054", "w055"],
+		"anchor": "w054",
+		"forms": ["Ira", "enim"],
+		"gloss": "For the anger"
+	},
+	{
+		"text": "proprium/dominica-iv-post-pascha-evangelium",
+		"members": ["w042", "w043"],
+		"anchor": "w042",
+		"forms": ["si", "enim"],
+		"gloss": "for if"
+	},
+	{
+		"text": "proprium/dominica-iv-post-pascha-evangelium",
+		"members": ["w122", "w123", "w124"],
+		"anchor": "w124",
+		"forms": ["Non", "enim", "loquétur"],
+		"gloss": "For He will not speak"
+	},
+	{
+		"text": "proprium/dominica-iv-post-pentecosten-epistola",
+		"members": ["w024", "w025"],
+		"anchor": "w024",
+		"forms": ["Vanitáti", "enim"],
+		"gloss": "For to emptiness"
+	},
+	{
+		"text": "proprium/dominica-iv-post-pentecosten-epistola",
+		"members": ["w052", "w053"],
+		"anchor": "w052",
+		"forms": ["Scimus", "enim"],
+		"gloss": "For we know"
+	},
+	{
+		"text": "proprium/dominica-iv-post-pentecosten-evangelium",
+		"members": ["w139", "w140"],
+		"anchor": "w139",
+		"forms": ["Stupor", "enim"],
+		"gloss": "For amazement"
+	},
+	{
+		"text": "proprium/dominica-pentecostes-evangelium",
+		"members": ["w138", "w139", "w140", "w141", "w142"],
+		"anchor": "w138",
+		"forms": ["Venit", "enim", "princeps", "mundi", "huius"],
+		"gloss": "For the ruler of this world is coming"
+	},
+	{
+		"text": "proprium/dominica-v-post-pascha-epistola",
+		"members": ["w029", "w030"],
+		"anchor": "w029",
+		"forms": ["considerávit", "enim"],
+		"gloss": "for he beheld"
+	},
+	{
+		"text": "proprium/dominica-v-post-pentecosten-epistola",
+		"members": ["w035", "w036"],
+		"anchor": "w035",
+		"forms": ["Qui", "enim"],
+		"gloss": "For he who"
+	},
+	{
+		"text": "proprium/dominica-vi-post-epiphaniam-epistola",
+		"members": ["w103", "w104", "w105"],
+		"anchor": "w103",
+		"forms": ["A", "vobis", "enim"],
+		"gloss": "For from you"
+	},
+	{
+		"text": "proprium/dominica-vi-post-epiphaniam-epistola",
+		"members": ["w138", "w139"],
+		"anchor": "w138",
+		"forms": ["Ipsi", "enim"],
+		"gloss": "For they themselves"
+	},
+	{
+		"text": "proprium/dominica-vi-post-pentecosten-evangelium",
+		"members": ["w042", "w043"],
+		"anchor": "w042",
+		"forms": ["quidam", "enim"],
+		"gloss": "for some"
+	},
+	{
+		"text": "proprium/dominica-vii-post-pentecosten-epistola",
+		"members": ["w008", "w009"],
+		"anchor": "w008",
+		"forms": ["sicut", "enim"],
+		"gloss": "for as"
+	},
+	{
+		"text": "proprium/dominica-vii-post-pentecosten-epistola",
+		"members": ["w028", "w029"],
+		"anchor": "w028",
+		"forms": ["Cum", "enim"],
+		"gloss": "For when"
+	},
+	{
+		"text": "proprium/dominica-vii-post-pentecosten-epistola",
+		"members": ["w070", "w071"],
+		"anchor": "w070",
+		"forms": ["Stipéndia", "enim"],
+		"gloss": "For the wages"
+	},
+	{
+		"text": "proprium/dominica-viii-post-pentecosten-epistola",
+		"members": ["w010", "w011"],
+		"anchor": "w010",
+		"forms": ["Si", "enim"],
+		"gloss": "For if"
+	},
+	{
+		"text": "proprium/dominica-viii-post-pentecosten-epistola",
+		"members": ["w023", "w024"],
+		"anchor": "w023",
+		"forms": ["Quicúmque", "enim"],
+		"gloss": "For all who"
+	},
+	{
+		"text": "proprium/dominica-viii-post-pentecosten-epistola",
+		"members": ["w032", "w033", "w034"],
+		"anchor": "w034",
+		"forms": ["Non", "enim", "accepístis"],
+		"gloss": "For you did not receive"
+	},
+	{
+		"text": "proprium/dominica-viii-post-pentecosten-epistola",
+		"members": ["w050", "w051", "w052"],
+		"anchor": "w052",
+		"forms": ["Ipse", "enim", "Spíritus"],
+		"gloss": "For the Spirit Himself"
+	},
+	{
+		"text": "proprium/dominica-viii-post-pentecosten-evangelium",
+		"members": ["w042", "w043", "w044", "w045"],
+		"anchor": "w045",
+		"forms": ["iam", "enim", "non", "póteris"],
+		"gloss": "for you will no longer be able"
+	},
+	{
+		"text": "proprium/dominica-xi-post-pentecosten-epistola",
+		"members": ["w029", "w030"],
+		"anchor": "w029",
+		"forms": ["Trádidi", "enim"],
+		"gloss": "For I delivered"
+	},
+	{
+		"text": "proprium/dominica-xi-post-pentecosten-epistola",
+		"members": ["w099", "w100"],
+		"anchor": "w099",
+		"forms": ["Ego", "enim"],
+		"gloss": "For I"
+	},
+	{
+		"text": "proprium/dominica-xii-post-pentecosten-epistola",
+		"members": ["w038", "w039"],
+		"anchor": "w038",
+		"forms": ["líttera", "enim"],
+		"gloss": "for the letter"
+	},
+	{
+		"text": "proprium/dominica-xii-post-pentecosten-evangelium",
+		"members": ["w015", "w016"],
+		"anchor": "w015",
+		"forms": ["Dico", "enim"],
+		"gloss": "For I say"
+	},
+	{
+		"text": "proprium/dominica-xiii-post-pentecosten-epistola",
+		"members": ["w096", "w097"],
+		"anchor": "w096",
+		"forms": ["Si", "enim"],
+		"gloss": "For if"
+	},
+	{
+		"text": "proprium/dominica-xiv-post-pentecosten-epistola",
+		"members": ["w009", "w010"],
+		"anchor": "w009",
+		"forms": ["Caro", "enim"],
+		"gloss": "For the flesh"
+	},
+	{
+		"text": "proprium/dominica-xiv-post-pentecosten-epistola",
+		"members": ["w018", "w019"],
+		"anchor": "w018",
+		"forms": ["hæc", "enim"],
+		"gloss": "for these things"
+	},
+	{
+		"text": "proprium/dominica-xiv-post-pentecosten-evangelium",
+		"members": ["w013", "w014"],
+		"anchor": "w013",
+		"forms": ["aut", "enim"],
+		"gloss": "for either"
+	},
+	{
+		"text": "proprium/dominica-xiv-post-pentecosten-evangelium",
+		"members": ["w158", "w159", "w160"],
+		"anchor": "w158",
+		"forms": ["Hæc", "enim", "ómnia"],
+		"gloss": "For all these things"
+	},
+	{
+		"text": "proprium/dominica-xiv-post-pentecosten-evangelium",
+		"members": ["w163", "w164", "w165", "w166"],
+		"anchor": "w163",
+		"forms": ["Scit", "enim", "Pater", "vester"],
+		"gloss": "For your Father knows"
+	},
+	{
+		"text": "proprium/dominica-xix-post-pentecosten-evangelium",
+		"members": ["w191", "w192"],
+		"anchor": "w191",
+		"forms": ["Multi", "enim"],
+		"gloss": "For many"
+	},
+	{
+		"text": "proprium/dominica-xv-post-pentecosten-epistola",
+		"members": ["w079", "w080"],
+		"anchor": "w079",
+		"forms": ["Unusquísque", "enim"],
+		"gloss": "For each one"
+	},
+	{
+		"text": "proprium/dominica-xv-post-pentecosten-epistola",
+		"members": ["w102", "w103"],
+		"anchor": "w102",
+		"forms": ["Quæ", "enim"],
+		"gloss": "For what"
+	},
+	{
+		"text": "proprium/dominica-xv-post-pentecosten-epistola",
+		"members": ["w135", "w136", "w137"],
+		"anchor": "w135",
+		"forms": ["témpore", "enim", "suo"],
+		"gloss": "for at the appointed time"
+	},
+	{
+		"text": "proprium/dominica-xx-post-pentecosten-evangelium",
+		"members": ["w033", "w034"],
+		"anchor": "w033",
+		"forms": ["incipiébat", "enim"],
+		"gloss": "for he was beginning"
+	},
+	{
+		"text": "proprium/dominica-xxi-post-pentecosten-introitus",
+		"members": ["w016", "w017", "w018"],
+		"anchor": "w018",
+		"forms": ["tu", "enim", "fecísti"],
+		"gloss": "for You have made"
+	},
+	{
+		"text": "proprium/dominica-xxi-post-pentecosten-introitus",
+		"members": ["w077", "w078", "w079"],
+		"anchor": "w079",
+		"forms": ["tu", "enim", "fecísti"],
+		"gloss": "for You have made"
+	},
+	{
+		"text": "proprium/dominica-xxii-post-pentecosten-epistola",
+		"members": ["w050", "w051", "w052", "w053", "w054"],
+		"anchor": "w050",
+		"forms": ["Testis", "enim", "mihi", "est", "Deus"],
+		"gloss": "For God is my witness"
+	},
+	{
+		"text": "proprium/dominica-xxii-post-pentecosten-evangelium",
+		"members": ["w039", "w040", "w041"],
+		"anchor": "w041",
+		"forms": ["non", "enim", "réspicis"],
+		"gloss": "for You do not regard"
+	},
+	{
+		"text": "proprium/dominica-xxiii-post-pentecosten-epistola",
+		"members": ["w015", "w016"],
+		"anchor": "w015",
+		"forms": ["Multi", "enim"],
+		"gloss": "For many"
+	},
+	{
+		"text": "proprium/dominica-xxiii-post-pentecosten-evangelium",
+		"members": ["w055", "w056"],
+		"anchor": "w055",
+		"forms": ["Dicébat", "enim"],
+		"gloss": "For she was saying"
+	},
+	{
+		"text": "proprium/dominica-xxiii-post-pentecosten-evangelium",
+		"members": ["w103", "w104", "w105", "w106", "w107"],
+		"anchor": "w106",
+		"forms": ["non", "est", "enim", "mórtua", "puélla"],
+		"gloss": "for the girl is not dead"
+	},
+	{
+		"text": "proprium/dominica-xxiv-post-pentecosten-evangelium",
+		"members": ["w072", "w073"],
+		"anchor": "w072",
+		"forms": ["Erit", "enim"],
+		"gloss": "For there will be"
+	},
+	{
+		"text": "proprium/dominica-xxiv-post-pentecosten-evangelium",
+		"members": ["w117", "w118", "w119", "w120", "w121"],
+		"anchor": "w117",
+		"forms": ["Surgent", "enim", "pseudochrísti", "et", "pseudoprophétæ"],
+		"gloss": "For false christs and false prophets will arise"
+	},
+	{
+		"text": "proprium/dominica-xxiv-post-pentecosten-evangelium",
+		"members": ["w156", "w157"],
+		"anchor": "w156",
+		"forms": ["Sicut", "enim"],
+		"gloss": "For as"
+	},
+	{
+		"text": "proprium/epiphania-domini-evangelium",
+		"members": ["w026", "w027"],
+		"anchor": "w026",
+		"forms": ["Vídimus", "enim"],
+		"gloss": "For we have seen"
+	},
+	{
+		"text": "proprium/epiphania-domini-evangelium",
+		"members": ["w068", "w069"],
+		"anchor": "w068",
+		"forms": ["sic", "enim"],
+		"gloss": "for thus"
+	},
+	{
+		"text": "proprium/epiphania-domini-evangelium",
+		"members": ["w085", "w086", "w087"],
+		"anchor": "w085",
+		"forms": ["ex", "te", "enim"],
+		"gloss": "for from you"
+	},
+	{
+		"text": "proprium/exaltatio-sanctae-crucis-epistola",
+		"members": ["w002", "w003", "w004"],
+		"anchor": "w004",
+		"forms": ["Hoc", "enim", "sentíte"],
+		"gloss": "For have this in mind"
+	},
+	{
+		"text": "proprium/feria-v-in-cena-domini-epistola",
+		"members": ["w012", "w013"],
+		"anchor": "w012",
+		"forms": ["Unusquísque", "enim"],
+		"gloss": "For each one"
+	},
+	{
+		"text": "proprium/feria-v-in-cena-domini-epistola",
+		"members": ["w054", "w055"],
+		"anchor": "w054",
+		"forms": ["Ego", "enim"],
+		"gloss": "For I"
+	},
+	{
+		"text": "proprium/feria-v-in-cena-domini-epistola",
+		"members": ["w115", "w116"],
+		"anchor": "w115",
+		"forms": ["Quotiescúmque", "enim"],
+		"gloss": "For as often as"
+	},
+	{
+		"text": "proprium/feria-v-in-cena-domini-epistola",
+		"members": ["w158", "w159"],
+		"anchor": "w158",
+		"forms": ["Qui", "enim"],
+		"gloss": "For he who"
+	},
+	{
+		"text": "proprium/feria-v-in-cena-domini-evangelium",
+		"members": ["w175", "w176"],
+		"anchor": "w175",
+		"forms": ["Sciébat", "enim"],
+		"gloss": "For He knew"
+	},
+	{
+		"text": "proprium/feria-v-in-cena-domini-evangelium",
+		"members": ["w233", "w234"],
+		"anchor": "w233",
+		"forms": ["Exémplum", "enim"],
+		"gloss": "For an example"
+	},
+	{
+		"text": "proprium/immaculatum-cor-beatae-mariae-virginis-epistola",
+		"members": ["w051", "w052", "w053"],
+		"anchor": "w051",
+		"forms": ["Spíritus", "enim", "meus"],
+		"gloss": "For my spirit"
+	},
+	{
+		"text": "proprium/nativitas-domini-in-die-epistola",
+		"members": ["w060", "w061"],
+		"anchor": "w060",
+		"forms": ["Cui", "enim"],
+		"gloss": "For to which"
+	},
+	{
+		"text": "proprium/nativitas-domini-in-nocte-evangelium",
+		"members": ["w132", "w133"],
+		"anchor": "w132",
+		"forms": ["ecce", "enim"],
+		"gloss": "for behold"
+	},
+	{
+		"text": "proprium/nativitas-sancti-ioannis-baptistae-communio",
+		"members": ["w006", "w007"],
+		"anchor": "w006",
+		"forms": ["præíbis", "enim"],
+		"gloss": "for you will go ahead"
+	},
+	{
+		"text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-epistola",
+		"members": ["w036", "w037"],
+		"anchor": "w036",
+		"forms": ["Si", "enim"],
+		"gloss": "For if"
+	},
+	{
+		"text": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-evangelium",
+		"members": ["w028", "w029", "w030", "w031", "w032", "w033"],
+		"anchor": "w028",
+		"forms": ["erat", "enim", "magnus", "dies", "ille", "sábbati"],
+		"gloss": "for that Sabbath day was great"
+	},
+	{
+		"text": "proprium/purificatio-beatae-mariae-virginis-epistola",
+		"members": ["w050", "w051"],
+		"anchor": "w050",
+		"forms": ["Ipse", "enim"],
+		"gloss": "For He Himself is"
+	},
+	{
+		"text": "proprium/sacratissimi-cordis-iesu-evangelium",
+		"members": ["w015", "w016", "w017", "w018", "w019", "w020"],
+		"anchor": "w015",
+		"forms": ["erat", "enim", "magnus", "dies", "ille", "sábbati"],
+		"gloss": "for that Sabbath day was great"
+	},
+	{
+		"text": "proprium/sacratissimi-cordis-iesu-evangelium",
+		"members": ["w091", "w092", "w093", "w094"],
+		"anchor": "w091",
+		"forms": ["Facta", "sunt", "enim", "hæc"],
+		"gloss": "For these things were done"
+	},
+	{
+		"text": "proprium/sanctae-annae-matris-beatae-mariae-virginis-epistola",
+		"members": ["w124", "w125"],
+		"anchor": "w124",
+		"forms": ["omnes", "enim"],
+		"gloss": "for all"
+	},
+	{
+		"text": "proprium/sancti-ioachim-confessoris-epistola",
+		"members": ["w026", "w027"],
+		"anchor": "w026",
+		"forms": ["fecit", "enim"],
+		"gloss": "for he has done"
+	},
+	{
+		"text": "proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-communio",
+		"members": ["w010", "w011"],
+		"anchor": "w010",
+		"forms": ["quod", "enim"],
+		"gloss": "for that which"
+	},
+	{
+		"text": "proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-epistola",
+		"members": ["w058", "w059"],
+		"anchor": "w058",
+		"forms": ["Audívit", "enim"],
+		"gloss": "For He heard"
+	},
+	{
+		"text": "proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-extra-tempus-paschale-communio",
+		"members": ["w010", "w011"],
+		"anchor": "w010",
+		"forms": ["quod", "enim"],
+		"gloss": "for that which"
+	},
+	{
+		"text": "proprium/sancti-laurentii-martyris-epistola",
+		"members": ["w029", "w030", "w031", "w032", "w033"],
+		"anchor": "w032",
+		"forms": ["hílarem", "enim", "datórem", "díligit", "Deus"],
+		"gloss": "for God loves a cheerful giver"
+	},
+	{
+		"text": "proprium/sancti-lucae-evangelistae-epistola",
+		"members": ["w080", "w081"],
+		"anchor": "w080",
+		"forms": ["Providémus", "enim"],
+		"gloss": "For we take forethought"
+	},
+	{
+		"text": "proprium/sancti-lucae-evangelistae-evangelium",
+		"members": ["w103", "w104", "w105", "w106"],
+		"anchor": "w103",
+		"forms": ["dignus", "est", "enim", "operárius"],
+		"gloss": "for the laborer is worthy"
+	},
+	{
+		"text": "proprium/sancti-matthaei-apostoli-et-evangelistae-evangelium",
+		"members": ["w077", "w078", "w079"],
+		"anchor": "w079",
+		"forms": ["Non", "enim", "veni"],
+		"gloss": "For I have not come"
+	},
+	{
+		"text": "proprium/sancti-matthiae-apostoli-epistola",
+		"members": ["w087", "w088", "w089"],
+		"anchor": "w087",
+		"forms": ["Scriptum", "est", "enim"],
+		"gloss": "For it is written"
+	},
+	{
+		"text": "proprium/sancti-matthiae-apostoli-evangelium",
+		"members": ["w090", "w091", "w092"],
+		"anchor": "w090",
+		"forms": ["Iugum", "enim", "meum"],
+		"gloss": "For My yoke"
+	},
+	{
+		"text": "proprium/sancti-stephani-protomartyris-evangelium",
+		"members": ["w108", "w109"],
+		"anchor": "w108",
+		"forms": ["Dico", "enim"],
+		"gloss": "For I say"
+	},
+	{
+		"text": "proprium/sanctissimae-trinitatis-epistola",
+		"members": ["w017", "w018"],
+		"anchor": "w017",
+		"forms": ["Quis", "enim"],
+		"gloss": "For who"
+	},
+	{
+		"text": "proprium/sanctissimi-nominis-iesu-epistola",
+		"members": ["w081", "w082"],
+		"anchor": "w081",
+		"forms": ["Nec", "enim"],
+		"gloss": "For no"
+	},
+	{
+		"text": "proprium/sanctorum-innocentium-martyrum-epistola",
+		"members": ["w089", "w090", "w091"],
+		"anchor": "w089",
+		"forms": ["vírgines", "enim", "sunt"],
+		"gloss": "for they are virgins"
+	},
+	{
+		"text": "proprium/sanctorum-innocentium-martyrum-epistola",
+		"members": ["w114", "w115", "w116", "w117"],
+		"anchor": "w117",
+		"forms": ["sine", "mácula", "enim", "sunt"],
+		"gloss": "for they are without blemish"
+	},
+	{
+		"text": "proprium/sanctorum-innocentium-martyrum-evangelium",
+		"members": ["w029", "w030", "w031"],
+		"anchor": "w029",
+		"forms": ["Futúrum", "est", "enim"],
+		"gloss": "For it will happen"
+	},
+	{
+		"text": "proprium/transfiguratio-domini-epistola",
+		"members": ["w021", "w022"],
+		"anchor": "w021",
+		"forms": ["Accípiens", "enim"],
+		"gloss": "For He received"
+	},
+	{
+		"text": "proprium/vigilia-nativitatis-evangelium",
+		"members": ["w054", "w055"],
+		"anchor": "w054",
+		"forms": ["quod", "enim"],
+		"gloss": "for that which"
+	},
+	{
+		"text": "proprium/vigilia-nativitatis-evangelium",
+		"members": ["w072", "w073", "w074", "w075"],
+		"anchor": "w075",
+		"forms": ["ipse", "enim", "salvum", "fáciet"],
+		"gloss": "for He Himself will save"
+	},
+	{
+		"text": "proprium/vigilia-paschalis-epistola",
+		"members": ["w025", "w026"],
+		"anchor": "w025",
+		"forms": ["Mórtui", "enim"],
+		"gloss": "For you are dead"
+	},
+	{
+		"text": "proprium/vigilia-paschalis-evangelium",
+		"members": ["w023", "w024"],
+		"anchor": "w023",
+		"forms": ["Ángelus", "enim"],
+		"gloss": "For an angel"
+	},
+	{
+		"text": "proprium/vigilia-paschalis-evangelium",
+		"members": ["w068", "w069"],
+		"anchor": "w068",
+		"forms": ["scio", "enim"],
+		"gloss": "for I know"
+	},
+	{
+		"text": "proprium/vigilia-paschalis-evangelium",
+		"members": ["w079", "w080"],
+		"anchor": "w079",
+		"forms": ["surréxit", "enim"],
+		"gloss": "for He is risen"
+	},
+	{
+		"text": "proprium/visitatio-beatae-mariae-virginis-epistola",
+		"members": ["w043", "w044"],
+		"anchor": "w043",
+		"forms": ["Iam", "enim"],
+		"gloss": "For now"
+	},
+	{
+		"text": "proprium/visitatio-beatae-mariae-virginis-epistola",
+		"members": ["w100", "w101", "w102"],
+		"anchor": "w100",
+		"forms": ["vox", "enim", "tua"],
+		"gloss": "for your voice"
+	},
+	{
+		"text": "proprium/visitatio-beatae-mariae-virginis-evangelium",
+		"members": ["w067", "w068"],
+		"anchor": "w067",
+		"forms": ["Ecce", "enim"],
+		"gloss": "For behold"
+	}
+]

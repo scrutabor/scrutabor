@@ -19,7 +19,7 @@ for (const language of ['pl', 'en'] as const) {
 			const container =
 				surface === 'lemma'
 					? page.locator('.lexical-summary')
-					: surface === 'word'
+					: surface === 'word' && language === 'pl'
 						? page.getByRole('dialog').locator('.layers')
 						: page
 								.getByRole('dialog')
