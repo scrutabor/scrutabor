@@ -6,7 +6,25 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/08-10; resolved section [Evangelium] with declared inherited references"
+    "section": "Latin/Sancti/02-01.txt [Evangelium], heading57, announcement58, reference59, body60"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-laurentii-martyris-evangelium.inherited-body.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The exact inherited 71-word body is a derived digital comparison, not an independent printed witness. Source framing on lines57-59 is excluded; Jesus, amen comma and ministrat accent are preserved as printed in the pinned data."
+    }
+   ],
+   "verified_on": "2026-10-01"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Latin/Sancti/08-10.txt [Evangelium], heading36, reference37 to Sancti/02-01"
    },
    "entries": [
     {
@@ -14,7 +32,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned source supplies the inheritance directive, not the Gospel body itself. The exact body in Sancti/02-01 is a separately declared derived digital dependency; independent textual transmission is not claimed."
     }
    ],
    "verified_on": "2026-08-31"
@@ -34,7 +52,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger 1962 Editio iuxta typicam page prints the complete 71-word Gospel body, John12:24-26. The announcement, reference and adjacent components are excluded; no conclusion or response is expanded."
     }
    ],
    "verified_on": "2026-08-31"
