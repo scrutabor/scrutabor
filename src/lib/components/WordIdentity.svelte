@@ -72,6 +72,16 @@
 	}
 
 	@media (max-width: 36rem) {
+		/* A construction can be a whole clause. Keep its pinned heading from
+		   consuming the sheet; the complete form remains in the context below
+		   and in the accessible heading. Single-word pronunciation is unchanged. */
+		.identity-panel.without-pronunciation .form {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+		}
+
 		.identity {
 			display: block;
 		}
@@ -83,6 +93,12 @@
 		.identity-page .form,
 		.identity-page .pronunciation-lead {
 			text-align: center;
+		}
+	}
+
+	@media (max-width: 36rem) and (max-height: 36rem) {
+		.identity-panel.without-pronunciation .form {
+			-webkit-line-clamp: 1;
 		}
 	}
 </style>

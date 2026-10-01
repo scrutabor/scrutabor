@@ -73,6 +73,45 @@ describe('describeMorphParts concept links', () => {
 	});
 });
 
+describe('locative case', () => {
+	const corinthi: Morph = { pos: 'noun', case: 'loc', number: 'sg', gender: 'f', decl: 2 };
+
+	it.each(['pl', 'en'] as const)(
+		'localizes the case without inventing a concept page: %s',
+		(lang) => {
+			const label = lang === 'pl' ? 'miejscownik' : 'locative';
+			const parts = describeMorphParts(corinthi, lang);
+			expect(parts).toContainEqual({ text: label, concept: undefined });
+			expect(parts.some((part) => part.concept)).toBe(false);
+			expect(describeMorph(corinthi, lang)).toBe(
+				lang === 'pl'
+					? 'rzeczownik — miejscownik, l. poj., r. żeński, deklinacja II'
+					: 'noun — locative, singular, feminine, 2nd declension'
+			);
+		}
+	);
+
+	it.each(['pl', 'en'] as const)('preserves a genuine genitive and its concept: %s', (lang) => {
+		const parts = describeMorphParts({ ...corinthi, case: 'gen' }, lang);
+		expect(parts).toContainEqual({
+			text: lang === 'pl' ? 'dopełniacz' : 'genitive',
+			concept: 'genetivus'
+		});
+		expect(describeMorph({ ...corinthi, case: 'gen' }, lang)).not.toContain(
+			lang === 'pl' ? 'miejscownik' : 'locative'
+		);
+	});
+
+	it.each(['pl', 'en'] as const)(
+		'does not disguise an unsupported case as locative: %s',
+		(lang) => {
+			const parts = describeMorphParts({ ...corinthi, case: 'unrecognized' }, lang);
+			expect(parts).toContainEqual({ text: 'unrecognized', concept: undefined });
+			expect(parts.some((part) => part.concept)).toBe(false);
+		}
+	);
+});
+
 describe('describeLemma', () => {
 	it('renders lemma-level paradigm facts', () => {
 		expect(describeLemma({ pos: 'verb', conj: 1 }, 'pl')).toBe('czasownik, koniugacja I');

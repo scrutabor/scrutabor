@@ -48,7 +48,8 @@ const LABELS: Record<Lang, MorphLabels> = {
 			dat: 'celownik',
 			acc: 'biernik',
 			abl: 'ablativus',
-			voc: 'wołacz'
+			voc: 'wołacz',
+			loc: 'miejscownik'
 		},
 		number: { sg: 'l.\u00a0poj.', pl: 'l.\u00a0mn.' },
 		gender: { m: 'r.\u00a0męski', f: 'r.\u00a0żeński', n: 'r.\u00a0nijaki' },
@@ -107,7 +108,8 @@ const LABELS: Record<Lang, MorphLabels> = {
 			dat: 'dative',
 			acc: 'accusative',
 			abl: 'ablative',
-			voc: 'vocative'
+			voc: 'vocative',
+			loc: 'locative'
 		},
 		number: { sg: 'singular', pl: 'plural' },
 		gender: { m: 'masculine', f: 'feminine', n: 'neuter' },
