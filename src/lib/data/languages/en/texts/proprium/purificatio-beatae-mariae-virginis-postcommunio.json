@@ -1,9 +1,9 @@
 {
   "id":"proprium.purificatio-beatae-mariae-virginis-postcommunio",
   "language":"en",
-  "about":"The postcommunio of the formulary “Purification of the Blessed Virgin Mary” in the 1962 Roman Missal.",
+  "about":"The postcommunion prayer of the formulary “Purification of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"We ask You, Lord our God: through the intercession of blessed Mary, ever Virgin, make the most holy mysteries You have bestowed to safeguard our restoration a remedy for us both now and in the future. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["We beseech","Lord","God","our","that","most holy","mysteries","which","as","of restoration","our","a safeguard","Thou hast bestowed","through the intercession of","blessed","Mary","always","Virgin","both","a present","for us","remedy","to be","Thou mayest make","and","future","Through","Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity","of the Spirit","Holy","God","unto","all","ages","of ages"]},
+    {"id":"s01","tr":"We ask You, Lord our God: through the intercession of blessed Mary, ever Virgin, make the most holy mysteries You have bestowed to safeguard our restoration a remedy for us both now and in the future. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["We beseech","Lord","God","our","that","most holy","mysteries","which","as",null,null,"safeguard","You have bestowed","through the intercession of","blessed","Mary","always","Virgin","both","now","for us","a remedy",null,null,"and","in the future","Through","Lord","our","Jesus","Christ","Son","Your","Who","with You","lives","and","reigns","in","the unity","of the Spirit","Holy","God","through","all","ages","of ages"],"a":[{"s":9,"n":2,"a":0,"g":"our restoration’s"},{"s":22,"n":2,"a":1,"g":"You may make"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }
