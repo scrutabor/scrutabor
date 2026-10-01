@@ -60,6 +60,7 @@
 <style>
 	.source-notes {
 		margin: 0.78rem 0 0;
+		overflow-wrap: anywhere;
 		color: var(--ink-soft);
 		font-size: 0.8rem;
 		line-height: 1.45;
