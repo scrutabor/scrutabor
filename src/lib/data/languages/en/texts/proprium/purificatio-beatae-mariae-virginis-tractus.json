@@ -1,8 +1,8 @@
 {
   "id":"proprium.purificatio-beatae-mariae-virginis-tractus",
   "language":"en",
-  "about":"The tractus of the formulary “Purification of the Blessed Virgin Mary” in the 1962 Roman Missal.",
+  "about":"The Tract of the formulary “Purification of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Now You let Your servant depart, Lord, according to Your word, in peace; for my eyes have seen Your salvation, which You have prepared before the face of all peoples: a light for the revelation of the Gentiles, and the glory of Your people Israel.","g":["Now","Thou dost dismiss","servant","Thy","Lord","according to","word","Thy","in","peace","For","have seen","eyes","my","salvation","Thy","which","Thou hast prepared","before","the face","of all","peoples","a light","for","revelation","of the Gentiles","and","glory","of people","Thy","Israel"]}
+    {"id":"s01","tr":"Now You let Your servant depart, Lord, according to Your word, in peace; for my eyes have seen Your salvation, which You have prepared before the face of all peoples: a light for revelation to the Gentiles, and the glory of Your people Israel.","g":["Now","You release",null,null,"Lord","according to",null,null,"in","peace","For",null,null,null,null,null,"which","You have prepared","before","the face","of all","peoples","a light","for","revelation","to the Gentiles","and","glory",null,null,"Israel"],"a":[{"s":2,"n":2,"a":0,"g":"Your servant"},{"s":6,"n":2,"a":0,"g":"Your word"},{"s":11,"n":3,"a":0,"g":"my eyes have seen"},{"s":14,"n":2,"a":0,"g":"Your salvation"},{"s":28,"n":2,"a":0,"g":"of Your people"}]}
   ]
 }
