@@ -1,8 +1,8 @@
 {
   "id":"proprium.purificatio-beatae-mariae-virginis-alleluia",
   "language":"en",
-  "about":"The alleluia of the formulary “Purification of the Blessed Virgin Mary” in the 1962 Roman Missal.",
+  "about":"The Alleluia of the formulary “Purification of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. The old man was carrying the child, yet the child was ruling the old man. Alleluia.","g":["Alleluia","alleluia","The old man","the Child","was carrying","the Child","but","the old man","was ruling","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. The old man was carrying the child, yet the child was ruling the old man. Alleluia.","g":["Alleluia","alleluia","The old man",null,null,"the Child","however",null,null,"Alleluia"],"a":[{"s":3,"n":2,"a":1,"g":"was carrying the Child"},{"s":7,"n":2,"a":1,"g":"was ruling the old man"}]}
   ]
 }

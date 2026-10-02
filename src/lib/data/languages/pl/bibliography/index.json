@@ -5243,7 +5243,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-tractus",
@@ -10624,7 +10624,7 @@
       {
        "id": "proprium.dominica-viii-post-pentecosten-introitus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -12542,16 +12542,16 @@
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-alleluia",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-collecta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 3
+       "uses": 2
       },
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-communio",
@@ -12563,7 +12563,7 @@
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-epistola",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -12577,14 +12577,14 @@
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-graduale",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-offertorium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -12598,9 +12598,9 @@
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-secreta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-tractus",
@@ -15289,6 +15289,22 @@
    "id": "official_documents_and_liturgical_history",
    "entries": [
     {
+     "edition": "edition.liber-usualis.1961",
+     "roles": [
+      "official_liturgical_context"
+     ],
+     "texts": [
+      {
+       "id": "proprium.purificatio-beatae-mariae-virginis-offertorium",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
      "edition": "edition.catechismus-catholicae-ecclesiae.latin-1997",
      "roles": [
       "official_liturgical_context"
@@ -16926,9 +16942,10 @@
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-collecta",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.purificatio-beatae-mariae-virginis-postcommunio",

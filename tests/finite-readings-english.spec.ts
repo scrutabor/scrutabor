@@ -57,7 +57,7 @@ const cases = [
 		part: 'collecta',
 		words: 52,
 		segments: 2,
-		groups: [],
+		groups: [['w029', 'to be presented to You with purified minds', 4]],
 		prose: 'grant us to be presented to You with purified minds'
 	},
 	{
@@ -97,8 +97,6 @@ for (const subject of cases) {
 				['w021', 'was'],
 				['w022', 'presented'],
 				['w025', 'may You cause'],
-				['w027', 'to You'],
-				['w029', 'to be presented'],
 				['w039', 'with You'],
 				['w040', 'lives']
 			]) {

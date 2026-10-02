@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/02-02; resolved section [Graduale] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/02-02.txt [Graduale], gradual-only lines 175–176; following Alleluia excluded"
    },
    "entries": [
     {
@@ -14,15 +14,15 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned direct Latin Mass body at lines 175–176 corroborates the complete 32-word Gradual as a derived digital witness. The same runtime section also contains the following Alleluia, excluded here; no inherited reference or expansion supplies this body."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-02"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 467",
     "scan": "leaf n548 / PDF p. 549",
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The complete 32-word Gradual body has been checked directly on the Benziger Brothers 1962 Editio iuxta typicam page, printed p. 467, leaf n548. The following Alleluia and the post-Septuagesima Tract are separate components. This states current conformity, not original transcription genesis."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-10-02"
   }
  ],
  "witnesses": []
