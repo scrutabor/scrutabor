@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/02-02; resolved section [Communio] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/02-02.txt [Communio]; heading 202, Luke 2:26 reference 203, complete direct body 204; next section 206"
    },
    "entries": [
     {
@@ -14,19 +14,19 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned Latin Mass body corroborates the complete Communion as a derived digital witness. This section is direct, not an inherited reference or an independent controlling print; its framing is excluded."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-02"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
-    "printed": "p. 466",
-    "scan": "leaf n547 / PDF p. 548",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n547/mode/1up"
+    "printed": "p. 467",
+    "scan": "leaf n548 / PDF p. 549",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n548/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger Brothers 1962 Editio iuxta typicam page prints the complete 14-word Communion at its lower right after the Gospel. The longer processional antiphon on the preceding page is a different unit. Framing is excluded; no shared expansion is supplied."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-02"
   }
  ],
  "witnesses": []

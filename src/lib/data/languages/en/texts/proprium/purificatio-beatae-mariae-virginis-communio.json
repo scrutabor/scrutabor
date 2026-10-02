@@ -1,8 +1,8 @@
 {
   "id":"proprium.purificatio-beatae-mariae-virginis-communio",
   "language":"en",
-  "about":"The communio of the formulary “Purification of the Blessed Virgin Mary” in the 1962 Roman Missal.",
+  "about":"The Communion antiphon of the formulary “Purification of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Simeon received an answer from the Holy Spirit that he would not see death without first seeing the Christ of the Lord.","g":["An answer","received","Simeon","from","the Spirit","Holy","not","would see","he","death","unless","he saw","Christ","of the Lord"]}
+    {"id":"s01","tr":"Simeon received an answer from the Holy Spirit that he would not see death without first seeing the Christ of the Lord.","g":[null,null,null,"from",null,null,null,null,null,"death","unless","he saw","the Christ","of the Lord"],"a":[{"s":0,"n":3,"a":1,"g":"Simeon received an answer"},{"s":4,"n":2,"a":0,"g":"the Holy Spirit"},{"s":6,"n":3,"a":1,"g":"that he would not see"}]}
   ]
 }
