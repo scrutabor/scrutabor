@@ -242,7 +242,7 @@ const contexts = [
 		'en',
 		'sanctorum-innocentium-martyrum-epistola',
 		[83, 84, 85, 88, 89],
-		['who', 'with', 'women', 'have not been defiled', 'for they are virgins']
+		['those who', 'with', 'women', 'have not been defiled', 'for they are virgins']
 	],
 	[
 		'en',
