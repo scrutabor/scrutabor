@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/12-28; resolved section [Graduale] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/12-28.txt [Graduale] (lines 38-39)"
    },
    "entries": [
     {
@@ -14,15 +14,15 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned Latin Mass reading corroborates the complete chant body as a derived digital witness; its literal accidentals and reference chain are preserved, without claiming independent original transcription."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-02"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 27",
     "scan": "leaf n106 / PDF p. 107",
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger Brothers Editio iuxta typicam page directly prints this complete 26-word chant body. Framing is excluded; no abbreviated conclusion, shared expansion or Amen is supplied."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-10-02"
   }
  ],
  "witnesses": []

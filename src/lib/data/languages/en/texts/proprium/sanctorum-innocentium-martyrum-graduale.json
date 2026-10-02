@@ -1,8 +1,8 @@
 {
   "id":"proprium.sanctorum-innocentium-martyrum-graduale",
   "language":"en",
-  "about":"The graduale of the formulary “The Holy Innocents, Martyrs” in the 1962 Roman Missal.",
+  "about":"The Gradual of the formulary “The Holy Innocents, Martyrs” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Our soul has been rescued like a sparrow from the snare of the hunters. The snare has been broken, and we have been set free; our help is in the name of the Lord, who made heaven and earth.","g":["Soul","our","like","a sparrow",null,null,"from","the snare","of the fowlers","The snare",null,null,"and","we","freed","were","help","our","in","the name","of the Lord","who","made","heaven","and","earth"],"a":[{"s":4,"n":2,"a":0,"g":"has been snatched"},{"s":10,"n":2,"a":0,"g":"has been broken"}]}
+    {"id":"s01","tr":"Our soul has been rescued like a sparrow from the snare of the hunters. The snare has been broken, and we have been set free; our help is in the name of the Lord, who made heaven and earth.","g":[null,null,"like","a sparrow",null,null,"from","the snare","of the fowlers","The snare",null,null,"and","we",null,null,null,null,"in","the name","of the Lord","who","made","heaven","and","earth"],"a":[{"s":0,"n":2,"a":0,"g":"Our soul"},{"s":4,"n":2,"a":0,"g":"has been snatched"},{"s":10,"n":2,"a":0,"g":"has been broken"},{"s":14,"n":2,"a":0,"g":"have been freed"},{"s":16,"n":2,"a":0,"g":"Our help is"}]}
   ]
 }
