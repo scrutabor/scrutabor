@@ -43,7 +43,7 @@ for (const [formulary, text, word, gloss] of [
 
 const purification = 'purificatio-beatae-mariae-virginis-postcommunio';
 const prose =
-	'We ask You, Lord our God: through the intercession of blessed Mary, ever Virgin, make the most holy mysteries You have bestowed to safeguard our restoration a remedy for us both now and in the future. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.';
+	'We ask You, Lord our God: through the intercession of blessed Mary, ever Virgin, make the most holy mysteries, which You have bestowed to safeguard our restoration, a remedy for us both now and in the future. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.';
 
 test('Purification preserves the complete English petition and separate response', async ({
 	page

@@ -136,6 +136,10 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				note: {
 					pl: 'Kapłan staje u stopni ołtarza, żegna się i mówi pierwsze słowa Mszy — na ołtarz jeszcze nie wstępuje.',
 					en: 'The priest stands at the foot of the altar, signs himself, and says the first words of the Mass — he has not gone up yet.'
+				},
+				when: {
+					pl: 'opuszcza się wraz ze wszystkimi modlitwami u stopni ołtarza, gdy Mszę poprzedza poświęcenie świec albo palm z procesją, poświęcenie popiołu lub procesja błagalna, a także w Wigilię Paschalną — kapłan od razu wstępuje na ołtarz i całuje go',
+					en: 'omitted with all the prayers at the foot of the altar when the Mass follows the blessing and procession of candles or of palms, the blessing of ashes or a Rogation procession, and at the Easter Vigil — the priest goes straight up to the altar and kisses it'
 				}
 			},
 			{

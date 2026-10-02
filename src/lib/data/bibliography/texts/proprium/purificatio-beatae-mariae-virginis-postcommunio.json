@@ -40,6 +40,47 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up",
+    "section": "RG 115 a; expanded conclusion w027–w047 and textual Amen w048"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.purificatio-beatae-mariae-virginis-postcommunio.conclusion-rg115a.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "General rubric 115 a prints the full Father-directed conclusion and Amen. It supplies w027–w048 after expansion of the printed abbreviation; the witness declares house accents, ligatures, tuum: Qui and the separate response punctuation. The response role is supported separately by ritual evidence."
+    }
+   ],
+   "verified_on": "2026-10-02"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 468",
+    "scan": "leaf n549 / PDF p. 550",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n549/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.purificatio-beatae-mariae-virginis-postcommunio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Benziger 1962 page prints the 26-word body (w001–w026) and the abbreviation Per Dóminum. The remainder of the selected conclusion and Amen are supplied by the separately identified RG 115 a use, not directly printed on this page."
+    }
+   ],
+   "verified_on": "2026-10-02"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
     "printed": "pp. xxxii–xxxiv, 226",
@@ -56,47 +97,6 @@
     }
    ],
    "verified_on": "2026-09-19"
-  },
-  {
-   "edition": "edition.missale-romanum.1962-typica",
-   "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
-   "locator": {
-    "printed": "p. xvii",
-    "scan": "leaf n22 / PDF p. 23",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up",
-    "section": "RG 115 a; expanded conclusion w027–w047 and textual Amen w048"
-   },
-   "entries": [
-    {
-     "id": "use.proprium.purificatio-beatae-mariae-virginis-postcommunio.conclusion-rg115a.mr1962",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "General rubric 115 a prints the full Father-directed conclusion and Amen. It supplies w027–w048 after expansion of the printed abbreviation; the witness declares house accents, ligatures, tuum: Qui and the separate response punctuation. The response role is supported separately by ritual evidence."
-    }
-   ],
-   "verified_on": "2026-10-01"
-  },
-  {
-   "edition": "edition.missale-romanum.1962-typica",
-   "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
-   "locator": {
-    "printed": "p. 468",
-    "scan": "leaf n549 / PDF p. 550",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n549/mode/1up"
-   },
-   "entries": [
-    {
-     "id": "use.proprium.purificatio-beatae-mariae-virginis-postcommunio.mr1962",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "The Benziger 1962 page prints the 26-word body (w001–w026) and the abbreviation Per Dóminum. The remainder of the selected conclusion and Amen are supplied by the separately identified RG 115 a use, not directly printed on this page."
-    }
-   ],
-   "verified_on": "2026-09-25"
   }
  ],
  "witnesses": []
