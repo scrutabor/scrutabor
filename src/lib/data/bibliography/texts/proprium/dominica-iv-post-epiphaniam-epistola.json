@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Epi4-0.txt (section [Lectio]); resolved spans: web/www/missa/Latin/Tempora/Epi4-0.txt (lines 20-22)"
+    "section": "web/www/missa/Latin/Tempora/Epi4-0.txt [Lectio]; section heading 19, book title 20, Romans 13:8-10 reference 21, complete direct body 22"
    },
    "entries": [
     {
@@ -14,15 +14,15 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned Latin Mass reading corroborates the complete body as a derived digital witness. Four literal punctuation differences are declared; this is not an independent controlling print or an inherited reading."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-02"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 47",
     "scan": "leaf n126 / PDF p. 127",
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger Brothers Editio iuxta typicam page directly prints the complete 52-word Epistle of the Fourth Sunday after Epiphany. The preceding-page Sunday heading controls its identity, not the next Sunday running header. Framing and the following Gradual are excluded; no expansion is supplied."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-02"
   }
  ],
  "witnesses": []
