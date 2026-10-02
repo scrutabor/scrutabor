@@ -70,6 +70,7 @@ export interface Word {
 	lemma: string;
 	morph: Morph;
 	head?: string;
+	clause_head?: string;
 	substantive?: boolean;
 	ellipsis?: 'predicate' | 'subject';
 	analysis?: Analysis;
@@ -225,6 +226,7 @@ interface WordCell {
 	p?: string;
 	m: number;
 	h?: string;
+	ch?: string;
 	s?: boolean;
 	el?: 'predicate' | 'subject';
 	a?: number;
@@ -280,6 +282,7 @@ function expandWord(cell: WordCell): Word {
 	};
 	if (cell.p) word.post = cell.p;
 	if (cell.h) word.head = cell.h;
+	if (cell.ch) word.clause_head = cell.ch;
 	if (cell.s) word.substantive = true;
 	if (cell.el) word.ellipsis = cell.el;
 	if (cell.a !== undefined) word.analysis = at(ANALYSES, cell.a, 'analyses');

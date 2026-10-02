@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/02-02; resolved section [Evangelium] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/02-02.txt [Evangelium]; heading 190, title 191, Luke 2:22–32 reference 192, complete direct body 193; next section 195"
    },
    "entries": [
     {
@@ -14,15 +14,15 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned Latin Mass body corroborates the complete Gospel as a derived digital comparison witness. This unit is direct, not inherited and not an independent controlling print; its thirteen accidentals are declared in the apparatus."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-02"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 467",
     "scan": "leaf n548 / PDF p. 549",
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Benziger Brothers 1962 Editio iuxta typicam page prints the complete 153-word Gospel on p. 467, leaf n548, from the lower left into the upper right column, ending with Israel before Credo. Framing is excluded; no shared expansion is supplied."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-10-02"
   }
  ],
  "witnesses": []

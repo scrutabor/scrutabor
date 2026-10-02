@@ -69,6 +69,27 @@ describe('vendored corpus snapshot', () => {
 		expect(Object.keys(CORE).length).toBeGreaterThanOrEqual(4);
 	});
 
+	it('preserves the Gospel relative subject separately from the external preposition', () => {
+		const key = 'proprium/purificatio-beatae-mariae-virginis-evangelium';
+		const words = allWords(CORE[key]);
+		const preposition = words.find((word) => word.id === 'w039');
+		const relative = words.find((word) => word.id === 'w040');
+		const predicate = words.find((word) => word.id === 'w041');
+		expect(preposition?.clause_head).toBe('w040');
+		expect(preposition?.head).toBeUndefined();
+		expect(preposition?.morph).toMatchObject({ pos: 'prep', governs: 'acc' });
+		expect(relative?.morph).toMatchObject({ case: 'nom', number: 'sg', gender: 'n' });
+		expect(relative?.head).toBe('w042');
+		expect(predicate?.head).toBe('w040');
+		expect(predicate?.substantive).not.toBe(true);
+		expect(words).toHaveLength(153);
+		for (const language of LANGUAGES) {
+			const localized = TEXTS[language][key].gloss.words;
+			expect(localized.w039.explanation).toBeTruthy();
+			expect(localized.w040.explanation).toBeTruthy();
+		}
+	});
+
 	it('preserves an understood participial subject and both contextual notes', () => {
 		const key = 'proprium/d-n-iesu-christi-regis-epistola';
 		const participle = allWords(CORE[key]).find((word) => word.id === 'w119');
