@@ -107,7 +107,7 @@ for (const language of ['pl', 'en'] as const) {
 						['w035', 'with You'],
 						['w036', 'lives'],
 						['w038', 'reigns'],
-						['w044', 'through']
+						['w044', 'for']
 					];
 		for (const [word, gloss] of [...direct, ['w048', 'Amen']]) {
 			const button = section.locator(`button[id="${text}.${word}"]`);

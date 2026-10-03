@@ -1,0 +1,44 @@
+{
+ "id": "proprium.dominica-iv-adventus-communio",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-horae.44667ff",
+   "digital_item": "item.divinum-officium-horae.44667ff.doc10a",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "pinned source key Horae/Latin/Commune/C10a; section [Communio], line 41 (label 39, Is 7:14 reference 40); reached from Tempora/Adv4-0 [Communio], line 57 (@Commune/C10a:Communio)"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iv-adventus-communio.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+    }
+   ],
+   "verified_on": "2026-10-03"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 15",
+    "scan": "leaf n94 / PDF p. 95",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n94/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iv-adventus-communio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+    }
+   ],
+   "verified_on": "2026-10-03"
+  }
+ ],
+ "witnesses": []
+}

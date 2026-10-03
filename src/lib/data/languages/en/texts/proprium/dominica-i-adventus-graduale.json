@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The gradual of the First Sunday of Advent, Psalm 24:3 and 4 in the Vulgate numbering (Psalm 25 in Hebrew). It sings the two verses the introit has just sung, and reads notas fac mihi where the introit reads demónstra mihi.",
   "seg":[
-    {"id":"s01","tr":"O Lord, none who wait for You will be put to shame.","g":["all","who","Thee","await",null,null,"Lord"],"a":[{"s":4,"n":2,"a":1,"g":"will not be put to shame"}]},
-    {"id":"s02","tr":"Make Your ways known to me, O Lord, and teach me Your paths.","tc":[440],"tb":"revised","g":["ways","Thy","Lord","known","make","to me","and","paths","Thy","teach","me"]}
+    {"id":"s01","tr":"O Lord, none who wait for You will be put to shame.","g":["all","who","You","await",null,null,"Lord"],"a":[{"s":4,"n":2,"a":1,"g":"will not be put to shame"}]},
+    {"id":"s02","tr":"Make Your ways known to me, O Lord, and teach me Your paths.","tc":[440],"tb":"revised","g":["ways","Your","Lord","known","make","to me","and","paths","Your","teach","me"]}
   ]
 }

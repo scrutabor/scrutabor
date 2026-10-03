@@ -10,7 +10,7 @@ for (const language of ['pl', 'en']) {
 		await expect(panel.locator('.form')).toHaveText('exísti');
 		await expect(panel.getByRole('link', { name: 'éxeo, exíre, éxii, éxitum' })).toBeVisible();
 		await expect(panel.locator('.gloss')).toHaveText(
-			language === 'pl' ? 'wyszedłeś' : 'Thou camest forth'
+			language === 'pl' ? 'wyszedłeś' : 'You came forth'
 		);
 		await expect(panel.locator('.morph')).toContainText(
 			language === 'pl' ? 'perfectum' : 'perfect'
@@ -72,7 +72,7 @@ for (const language of ['pl', 'en']) {
 		const part = page.locator(`#text-proprium-${text}`);
 		const group = part.locator('.token-group', { hasText: 'opus est' });
 		await expect(group.locator('rt')).toHaveText(
-			language === 'pl' ? 'potrzeba' : 'Thou hast no need'
+			language === 'pl' ? 'potrzeba' : 'You have no need'
 		);
 		await expect(group.locator('button')).toHaveCount(1);
 		const count = language === 'pl' ? 2 : 4;

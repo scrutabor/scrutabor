@@ -5,9 +5,9 @@
   "seg":[
     {"id":"s01","tr":"My God, I am sorry with my whole heart for all my sins,","g":["God","my","with","all","my heart","I repent","me","of all","my","sins"]},
     {"id":"s02","tr":"and I detest them,","g":["and them","I detest"],"ex":{"w012":"The speaker does not merely repent but rejects and detests the sins."}},
-    {"id":"s03","tr":"not only because in sinning I have deserved the punishments You have justly decreed,","g":["because","by sinning","not","only","punishments","by","Thee","justly","ordained",null,null],"a":[{"s":9,"n":2,"a":0,"g":"I have deserved"}]},
-    {"id":"s04","tr":"but especially because I have offended You, who are the highest good and worthy of love above all things.","g":["but","above all","because","I have offended","Thee","supreme","Good","and","worthy","who","above","all things","to be loved"]},
-    {"id":"s05","tr":"Therefore, aided by Your grace, I firmly resolve never to sin again","g":["therefore","firmly","I resolve","with the help of","grace","Thy","from","now on","that I","not","will sin"],"ex":{"w040":"The phrase “grátia tua adiuvánte” ascribes future fidelity to the help of God’s grace.","w044":"The fixed phrase “de cétero” marks a prospective boundary: henceforth, from now on."}},
+    {"id":"s03","tr":"not only because in sinning I have deserved the punishments You have justly decreed,","g":["because","by sinning","not","only","punishments","by","You","justly","ordained",null,null],"a":[{"s":9,"n":2,"a":0,"g":"I have deserved"}]},
+    {"id":"s04","tr":"but especially because I have offended You, who are the highest good and worthy of love above all things.","g":["but","above all","because","I have offended","You","supreme","Good","and","worthy","who","above","all things","to be loved"]},
+    {"id":"s05","tr":"Therefore, aided by Your grace, I firmly resolve never to sin again","g":["therefore","firmly","I resolve","with the help of","grace","Your","from","now on","that I","not","will sin"],"ex":{"w040":"The phrase “grátia tua adiuvánte” ascribes future fidelity to the help of God’s grace.","w044":"The fixed phrase “de cétero” marks a prospective boundary: henceforth, from now on."}},
     {"id":"s06","tr":"and to shun the near occasions of sin. Amen.","g":["and of sinning","occasions","near","to avoid","amen"],"ex":{"w050":"A moral term denoting near occasions, not every remote circumstance in which sin is possible."}}
   ]
 }

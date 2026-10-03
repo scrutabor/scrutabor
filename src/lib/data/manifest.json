@@ -1423,7 +1423,8 @@
     {
       "id": "proprium.dominica-i-adventus-alleluia",
       "path": "texts/proprium/dominica-i-adventus-alleluia.json",
-      "title": "Osténde nobis, Dómine"
+      "title": "Osténde nobis, Dómine",
+      "evidence": "bibliography/texts/proprium/dominica-i-adventus-alleluia.json"
     },
     {
       "id": "proprium.dominica-i-adventus-collecta",
@@ -1434,12 +1435,14 @@
     {
       "id": "proprium.dominica-i-adventus-communio",
       "path": "texts/proprium/dominica-i-adventus-communio.json",
-      "title": "Dóminus dabit benignitátem"
+      "title": "Dóminus dabit benignitátem",
+      "evidence": "bibliography/texts/proprium/dominica-i-adventus-communio.json"
     },
     {
       "id": "proprium.dominica-i-adventus-epistola",
       "path": "texts/proprium/dominica-i-adventus-epistola.json",
-      "title": "Sciéntes quia hora est"
+      "title": "Sciéntes quia hora est",
+      "evidence": "bibliography/texts/proprium/dominica-i-adventus-epistola.json"
     },
     {
       "id": "proprium.dominica-i-adventus-evangelium",
@@ -1450,17 +1453,20 @@
     {
       "id": "proprium.dominica-i-adventus-graduale",
       "path": "texts/proprium/dominica-i-adventus-graduale.json",
-      "title": "Univérsi, qui te exspéctant"
+      "title": "Univérsi, qui te exspéctant",
+      "evidence": "bibliography/texts/proprium/dominica-i-adventus-graduale.json"
     },
     {
       "id": "proprium.dominica-i-adventus-introitus",
       "path": "texts/proprium/dominica-i-adventus-introitus.json",
-      "title": "Ad te levávi ánimam meam"
+      "title": "Ad te levávi ánimam meam",
+      "evidence": "bibliography/texts/proprium/dominica-i-adventus-introitus.json"
     },
     {
       "id": "proprium.dominica-i-adventus-offertorium",
       "path": "texts/proprium/dominica-i-adventus-offertorium.json",
-      "title": "Ad te levávi ánimam meam"
+      "title": "Ad te levávi ánimam meam",
+      "evidence": "bibliography/texts/proprium/dominica-i-adventus-offertorium.json"
     },
     {
       "id": "proprium.dominica-i-adventus-postcommunio",
@@ -1645,7 +1651,8 @@
     {
       "id": "proprium.dominica-ii-adventus-alleluia",
       "path": "texts/proprium/dominica-ii-adventus-alleluia.json",
-      "title": "Lætátus sum in his"
+      "title": "Lætátus sum in his",
+      "evidence": "bibliography/texts/proprium/dominica-ii-adventus-alleluia.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-collecta",
@@ -1656,32 +1663,38 @@
     {
       "id": "proprium.dominica-ii-adventus-communio",
       "path": "texts/proprium/dominica-ii-adventus-communio.json",
-      "title": "Ierúsalem surge, et sta in excélso"
+      "title": "Ierúsalem surge, et sta in excélso",
+      "evidence": "bibliography/texts/proprium/dominica-ii-adventus-communio.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-epistola",
       "path": "texts/proprium/dominica-ii-adventus-epistola.json",
-      "title": "Quæcúmque scripta sunt"
+      "title": "Quæcúmque scripta sunt",
+      "evidence": "bibliography/texts/proprium/dominica-ii-adventus-epistola.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-evangelium",
       "path": "texts/proprium/dominica-ii-adventus-evangelium.json",
-      "title": "Cum audísset Ioánnes in vínculis"
+      "title": "Cum audísset Ioánnes in vínculis",
+      "evidence": "bibliography/texts/proprium/dominica-ii-adventus-evangelium.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-graduale",
       "path": "texts/proprium/dominica-ii-adventus-graduale.json",
-      "title": "Ex Sion spécies decóris eius"
+      "title": "Ex Sion spécies decóris eius",
+      "evidence": "bibliography/texts/proprium/dominica-ii-adventus-graduale.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-introitus",
       "path": "texts/proprium/dominica-ii-adventus-introitus.json",
-      "title": "Pópulus Sion, ecce Dóminus véniet"
+      "title": "Pópulus Sion, ecce Dóminus véniet",
+      "evidence": "bibliography/texts/proprium/dominica-ii-adventus-introitus.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-offertorium",
       "path": "texts/proprium/dominica-ii-adventus-offertorium.json",
-      "title": "Deus, tu convérsus vivificábis nos"
+      "title": "Deus, tu convérsus vivificábis nos",
+      "evidence": "bibliography/texts/proprium/dominica-ii-adventus-offertorium.json"
     },
     {
       "id": "proprium.dominica-ii-adventus-postcommunio",
@@ -1974,7 +1987,8 @@
     {
       "id": "proprium.dominica-iii-adventus-alleluia",
       "path": "texts/proprium/dominica-iii-adventus-alleluia.json",
-      "title": "Éxcita, Dómine, poténtiam tuam"
+      "title": "Éxcita, Dómine, poténtiam tuam",
+      "evidence": "bibliography/texts/proprium/dominica-iii-adventus-alleluia.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-collecta",
@@ -1985,32 +1999,38 @@
     {
       "id": "proprium.dominica-iii-adventus-communio",
       "path": "texts/proprium/dominica-iii-adventus-communio.json",
-      "title": "Dícite: pusillánimes confortámini"
+      "title": "Dícite: pusillánimes confortámini",
+      "evidence": "bibliography/texts/proprium/dominica-iii-adventus-communio.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-epistola",
       "path": "texts/proprium/dominica-iii-adventus-epistola.json",
-      "title": "Gaudéte in Dómino semper"
+      "title": "Gaudéte in Dómino semper",
+      "evidence": "bibliography/texts/proprium/dominica-iii-adventus-epistola.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-evangelium",
       "path": "texts/proprium/dominica-iii-adventus-evangelium.json",
-      "title": "Misérunt Iudǽi ab Ierosólymis"
+      "title": "Misérunt Iudǽi ab Ierosólymis",
+      "evidence": "bibliography/texts/proprium/dominica-iii-adventus-evangelium.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-graduale",
       "path": "texts/proprium/dominica-iii-adventus-graduale.json",
-      "title": "Qui sedes, Dómine, super Chérubim"
+      "title": "Qui sedes, Dómine, super Chérubim",
+      "evidence": "bibliography/texts/proprium/dominica-iii-adventus-graduale.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-introitus",
       "path": "texts/proprium/dominica-iii-adventus-introitus.json",
-      "title": "Gaudéte in Dómino semper"
+      "title": "Gaudéte in Dómino semper",
+      "evidence": "bibliography/texts/proprium/dominica-iii-adventus-introitus.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-offertorium",
       "path": "texts/proprium/dominica-iii-adventus-offertorium.json",
-      "title": "Benedixísti, Dómine, terram tuam"
+      "title": "Benedixísti, Dómine, terram tuam",
+      "evidence": "bibliography/texts/proprium/dominica-iii-adventus-offertorium.json"
     },
     {
       "id": "proprium.dominica-iii-adventus-postcommunio",
@@ -2501,7 +2521,8 @@
     {
       "id": "proprium.dominica-iv-adventus-alleluia",
       "path": "texts/proprium/dominica-iv-adventus-alleluia.json",
-      "title": "Veni, Dómine, et noli tardáre"
+      "title": "Veni, Dómine, et noli tardáre",
+      "evidence": "bibliography/texts/proprium/dominica-iv-adventus-alleluia.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-collecta",
@@ -2512,32 +2533,38 @@
     {
       "id": "proprium.dominica-iv-adventus-communio",
       "path": "texts/proprium/dominica-iv-adventus-communio.json",
-      "title": "Ecce Virgo concípiet"
+      "title": "Ecce Virgo concípiet",
+      "evidence": "bibliography/texts/proprium/dominica-iv-adventus-communio.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-epistola",
       "path": "texts/proprium/dominica-iv-adventus-epistola.json",
-      "title": "Sic nos exístimet homo"
+      "title": "Sic nos exístimet homo",
+      "evidence": "bibliography/texts/proprium/dominica-iv-adventus-epistola.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-evangelium",
       "path": "texts/proprium/dominica-iv-adventus-evangelium.json",
-      "title": "Anno quintodécimo impérii Tibérii Cǽsaris"
+      "title": "Anno quintodécimo impérii Tibérii Cǽsaris",
+      "evidence": "bibliography/texts/proprium/dominica-iv-adventus-evangelium.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-graduale",
       "path": "texts/proprium/dominica-iv-adventus-graduale.json",
-      "title": "Prope est Dóminus"
+      "title": "Prope est Dóminus",
+      "evidence": "bibliography/texts/proprium/dominica-iv-adventus-graduale.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-introitus",
       "path": "texts/proprium/dominica-iv-adventus-introitus.json",
-      "title": "Roráte, cæli, désuper"
+      "title": "Roráte, cæli, désuper",
+      "evidence": "bibliography/texts/proprium/dominica-iv-adventus-introitus.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-offertorium",
       "path": "texts/proprium/dominica-iv-adventus-offertorium.json",
-      "title": "Ave María, grátia plena"
+      "title": "Ave María, grátia plena",
+      "evidence": "bibliography/texts/proprium/dominica-iv-adventus-offertorium.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-postcommunio",

@@ -7,7 +7,7 @@ const split = (text: string) => text.split(' | ');
 
 const shared = {
 	pl: 'Przyjęliśmy | Boże | miłosierdzie | Twoje | w | środku | świątyni | Twojej | według | imienia | Twego | Boże | tak | i | chwała | Twoja | aż po | krańce | ziemi',
-	en: 'We have received | God | mercy | Your | in | the midst | of temple | Your | according to | name | Your | God | so | also | praise | Your | unto | the ends | of the earth'
+	en: 'We have received | God | mercy | Your | in | the midst | of temple | Your | according to | name | Your | God | so | also | praise | Your | to | the ends | of the earth'
 };
 const readings = {
 	graduale: {

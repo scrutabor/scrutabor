@@ -256,7 +256,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 				wordId: 'w001',
 				note: {
 					pl: 'Ojcze — cała modlitwa jest mową wprost.',
-					en: 'Father — the whole prayer is speech to a Thou.'
+					en: 'Father — the whole prayer is direct address.'
 				}
 			},
 			{
@@ -283,7 +283,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 		label: { pl: 'tryb łączący', en: 'subjunctive' },
 		what: {
 			pl: 'W modlitwach to tryb życzenia i prośby: „niech się stanie”. Tam, gdzie polszczyzna mówi „niech…” albo „abyś nie…”, łacina stawia tryb łączący — nim modlitwa prosi, nie rozkazuje.',
-			en: 'In the prayers it is the mood of wish and petition: “may it be”. Where English says “may…” or “that Thou not…”, Latin uses the subjunctive — with it the prayer asks rather than commands.'
+			en: 'In the prayers it is the mood of wish and petition: “may it be”. Where English says “may…” or “that You not…”, Latin uses the subjunctive — with it the prayer asks rather than commands.'
 		},
 		examples: [
 			{
@@ -310,7 +310,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 				wordId: 'w042',
 				note: {
 					pl: 'z „ne” — prośba przecząca: abyś nie wiódł.',
-					en: 'with “ne” — a negative petition: that Thou not lead.'
+					en: 'with “ne” — a negative petition: that You not lead.'
 				}
 			}
 		]

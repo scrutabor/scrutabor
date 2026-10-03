@@ -7,7 +7,7 @@ const orations = {
 	collecta:
 		'Almighty | eternal | God | majesty | Your | as suppliants | we beseech | that | as | only-begotten | Son | Your | this | day | with | of our | flesh | the substance | in | the temple | was | presented | so | us | may You cause | to be presented to You with purified minds | Through | the same | Lord | our | Jesus | Christ | Son | Your | Who | with You | lives | and | reigns | in | the unity | of the Spirit | Holy | God | for | all | ages | of ages | Amen',
 	secreta:
-		'Graciously hear | Lord | prayers | our | and | that | worthy | may be | the gifts | which | before the eyes | of Your | majesty | we offer | the help | to us | of Your | loving-kindness | bestow | Through | Lord | our | Jesus | Christ | Son | Your | Who | with You | lives | and | reigns | in | the unity | of the Spirit | Holy | God | unto | all | ages | of ages | Amen'
+		'Graciously hear | Lord | prayers | our | and | that | worthy | may be | the gifts | which | before the eyes | of Your | majesty | we offer | the help | to us | of Your | loving-kindness | bestow | Through | Lord | our | Jesus | Christ | Son | Your | Who | with You | lives | and | reigns | in | the unity | of the Spirit | Holy | God | for | all | ages | of ages | Amen'
 } as const;
 
 for (const part of ['collecta', 'secreta'] as const) {

@@ -45,7 +45,14 @@ for (const [language, formulary, part, latin, gloss, cards] of [
 		'while Jesus was speaking',
 		2
 	],
-	['en', 'sancti-ioachim-confessoris', 'postcommunio', 'dilécti Fílii tui', 'of Thy beloved Son', 3]
+	[
+		'en',
+		'sancti-ioachim-confessoris',
+		'postcommunio',
+		'dilécti Fílii tui',
+		'of Your beloved Son',
+		3
+	]
 ] as const) {
 	test(`${language}: ${formulary} keeps its complete phrase together`, async ({ page }) => {
 		await page.setViewportSize({ width: 320, height: 844 });
@@ -217,7 +224,7 @@ for (const language of ['pl', 'en']) {
 				'grátiæ tuæ operánte virtúte',
 				language === 'pl'
 					? 'dzięki działaniu mocy Twojej łaski'
-					: 'with the power of Thy grace at work'
+					: 'with the power of Your grace at work'
 			],
 			[
 				'præséntis vitæ nos conversatióne',
