@@ -19,7 +19,7 @@ const readings = {
 		en: 'Alleluia | alleluia | The old man | was carrying the Child | the Child | however | was ruling the old man | Alleluia'
 	},
 	offertorium: {
-		pl: 'Rozlana | została | łaska | na | wargach | twoich | dlatego | pobłogosławił | ciebie | Bóg | na | wieki | i | na | wiek | wieku',
+		pl: 'Rozlana | została | łaska | na | wargach | twoich | dlatego | pobłogosławił | ciebie | Bóg | na | wieki | i | na | wieki | wieków',
 		en: 'Poured out | has been | grace | upon | lips | your | therefore | God has blessed you | for | ever | and | for | ever | and ever'
 	}
 } as const;
