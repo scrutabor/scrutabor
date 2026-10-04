@@ -26,13 +26,22 @@ export async function expectSharedGloss(
 	await group.scrollIntoViewIfNeeded();
 	await page.evaluate(() => document.fonts.ready);
 	await expect(group.locator('rt')).toBeInViewport();
-	const before = await group.boundingBox();
+	// Hover may scroll the target into view. Compare document coordinates,
+	// captured atomically with the scroll offset, to measure layout alone.
+	const documentBox = () =>
+		group.evaluate((element) => {
+			const box = element.getBoundingClientRect();
+			return { x: box.x + scrollX, y: box.y + scrollY, width: box.width, height: box.height };
+		});
+	const before = await documentBox();
 	await button.hover();
-	expect(await group.boundingBox(), 'hover must only change paint').toEqual(before);
+	expect(await documentBox(), 'hover must only change paint').toEqual(before);
 	await button.click();
-	const cards = page.locator('aside .construction-card');
+	const panel = page.locator('aside.panel[role="dialog"]');
+	await expect(panel).toHaveCount(1);
+	const cards = panel.locator('.construction-card');
 	await expect(cards).toHaveCount(count);
-	await expect(page.locator('aside .context-layer > .gloss')).toHaveText(gloss);
+	await expect(panel.locator('.context-layer > .gloss')).toHaveText(gloss);
 	for (let member = 0; member < count; member++) {
 		const card = cards.nth(member);
 		await expect(card.locator('.construction-title')).toHaveText(
@@ -50,5 +59,5 @@ export async function expectSharedGloss(
 		await expect(card.locator('.morph')).not.toHaveText('');
 	}
 	await page.keyboard.press('Escape');
-	await expect(page.locator('aside')).toHaveCount(0);
+	await expect(panel).toHaveCount(0);
 }

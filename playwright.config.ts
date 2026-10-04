@@ -84,13 +84,23 @@ export default defineConfig({
 		},
 		{
 			name: 'reader-firefox',
-			testMatch: ['interlinear-portability.spec.ts', 'fonts.spec.ts'],
+			testMatch: [
+				'interlinear-portability.spec.ts',
+				'interlinear-clipping.spec.ts',
+				'trinity-preface.spec.ts',
+				'fonts.spec.ts'
+			],
 			grep: /@reader/,
 			use: { browserName: 'firefox', baseURL: 'http://localhost:4174' }
 		},
 		{
 			name: 'reader-webkit',
-			testMatch: ['interlinear-portability.spec.ts', 'fonts.spec.ts'],
+			testMatch: [
+				'interlinear-portability.spec.ts',
+				'interlinear-clipping.spec.ts',
+				'trinity-preface.spec.ts',
+				'fonts.spec.ts'
+			],
 			grep: /@reader/,
 			use: { browserName: 'webkit', baseURL: 'http://localhost:4174' }
 		},

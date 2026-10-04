@@ -89,7 +89,11 @@ bare('baseline geometry detects a displaced speaker mark @online', async ({ page
 	expect(first, 'a speaker mark must be measured').toBeDefined();
 	const mark = page.locator('.verse.glossed > .mark').first();
 	const originalStyle = await mark.getAttribute('style');
-	await mark.evaluate((element) => ((element as HTMLElement).style.transform = 'translateY(10px)'));
+	await mark.evaluate((element) => {
+		const style = (element as HTMLElement).style;
+		style.position = 'relative';
+		style.top = '10px';
+	});
 	const after = await page.locator('main').evaluate(interlinearGeometry);
 	const displaced = after.find((unit) => unit.markerBaselineDelta !== null)!;
 	expect(displaced.markerBaselineDelta! - first.markerBaselineDelta!).toBeCloseTo(10, 1);
@@ -170,7 +174,9 @@ bare(
 		const caption = group.locator('.caption-content');
 		const originalStyle = await caption.getAttribute('style');
 		await caption.evaluate((element) => {
-			(element as HTMLElement).style.transform = 'translateY(-10em)';
+			const style = (element as HTMLElement).style;
+			style.position = 'relative';
+			style.top = '-10em';
 		});
 		const [collision] = await group.evaluate(interlinearGeometry);
 		expect(collision.clearance, 'the measurement catches actual displaced ink').toBeLessThan(0);

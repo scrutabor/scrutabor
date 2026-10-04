@@ -2,15 +2,19 @@
  * Runs inside the page without changing its DOM or ruby layout. */
 export function interlinearGeometry(container: Element) {
 	const context = document.createElement('canvas').getContext('2d')!;
+	type Bounds = { top: number; bottom: number; left: number; right: number };
+	type Clip = { ancestor: string; axis: string; start: number; end: number };
 	const ink = (element: Element) => {
 		const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
 		const boxes: { top: number; bottom: number; left: number; right: number; baseline: number }[] =
 			[];
+		const clipping: Clip[] = [];
 		let node: Node | null;
 		while ((node = walker.nextNode())) {
 			const text = node as Text;
 			const style = getComputedStyle(text.parentElement!);
 			context.font = `${style.fontStyle} ${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
+			const first = boxes.length;
 			let offset = 0;
 			for (const character of text.data) {
 				const end = offset + character.length;
@@ -32,6 +36,17 @@ export function interlinearGeometry(container: Element) {
 				}
 				offset = end;
 			}
+			const nodeBoxes = boxes.slice(first);
+			if (nodeBoxes.length) {
+				clipping.push(
+					...clippedInk(text.parentElement!, {
+						top: Math.min(...nodeBoxes.map((box) => box.top)),
+						bottom: Math.max(...nodeBoxes.map((box) => box.bottom)),
+						left: Math.min(...nodeBoxes.map((box) => box.left)),
+						right: Math.max(...nodeBoxes.map((box) => box.right))
+					})
+				);
+			}
 		}
 		if (
 			!boxes.length ||
@@ -44,6 +59,7 @@ export function interlinearGeometry(container: Element) {
 			if (!rows.length || baseline - rows.at(-1)! > 2) rows.push(baseline);
 		}
 		return {
+			clipping,
 			count: boxes.length,
 			rows: rows.length,
 			baselines: rows,
@@ -52,6 +68,82 @@ export function interlinearGeometry(container: Element) {
 			left: Math.min(...boxes.map((box) => box.left)),
 			right: Math.max(...boxes.map((box) => box.right))
 		};
+	};
+	// Ink can extend outside a non-clipping inline box (negative side bearings).
+	// Only a clipping ancestor can hide that ink; nominal caption bounds cannot.
+	const clippedInk = (element: Element, painted: Bounds) => {
+		const failures: Clip[] = [];
+		for (let ancestor: Element | null = element; ancestor; ancestor = ancestor.parentElement) {
+			const style = getComputedStyle(ancestor);
+			if (
+				style.clip !== 'auto' ||
+				style.clipPath !== 'none' ||
+				(style.maskImage && style.maskImage !== 'none') ||
+				[style.transform, style.scale, style.rotate, style.translate].some(
+					(value) => value && value !== 'none'
+				)
+			) {
+				throw new Error(`Unsupported text clipping geometry: ${ancestor.className}`);
+			}
+			// Body overflow propagates to the viewport only when root overflow is
+			// visible. A small body box is not itself the viewport's clipping edge.
+			const rootStyle = getComputedStyle(document.documentElement);
+			const viewport =
+				ancestor === document.documentElement ||
+				(ancestor === document.body &&
+					rootStyle.overflowX === 'visible' &&
+					rootStyle.overflowY === 'visible');
+			const paintContainment = /\b(paint|strict|content)\b/.test(style.contain);
+			const hasBox = !['inline', 'contents'].includes(style.display);
+			const x = hasBox && (style.overflowX !== 'visible' || paintContainment);
+			// Ordinary vertical document scrolling does not hide reading content.
+			const y =
+				hasBox &&
+				(viewport
+					? ['hidden', 'clip'].includes(style.overflowY)
+					: style.overflowY !== 'visible' || paintContainment);
+			if (!x && !y) continue;
+			// Fail explicitly if a new layout needs a different clipping model.
+			if (
+				(viewport && paintContainment) ||
+				(style.overflowClipMargin && style.overflowClipMargin !== '0px') ||
+				[
+					style.borderTopLeftRadius,
+					style.borderTopRightRadius,
+					style.borderBottomLeftRadius,
+					style.borderBottomRightRadius
+				].some((value) => parseFloat(value) !== 0)
+			)
+				throw new Error(`Unsupported text clipping geometry: ${ancestor.className}`);
+			const box = ancestor.getBoundingClientRect();
+			const left = viewport ? 0 : box.left + parseFloat(style.borderLeftWidth);
+			const top = viewport ? 0 : box.top + parseFloat(style.borderTopWidth);
+			// Hidden/clip have no scrollbar: retain fractional padding-box edges.
+			const right = viewport
+				? innerWidth
+				: ['hidden', 'clip'].includes(style.overflowX)
+					? box.right - parseFloat(style.borderRightWidth)
+					: left + ancestor.clientWidth;
+			const bottom = viewport
+				? innerHeight
+				: ['hidden', 'clip'].includes(style.overflowY)
+					? box.bottom - parseFloat(style.borderBottomWidth)
+					: top + ancestor.clientHeight;
+			for (const [axis, clips, start, end, inkStart, inkEnd] of [
+				['x', x, left, right, painted.left, painted.right],
+				['y', y, top, bottom, painted.top, painted.bottom]
+			] as const) {
+				if (clips && (inkStart < start - 0.5 || inkEnd > end + 0.5)) {
+					failures.push({
+						ancestor: `${ancestor.tagName}.${ancestor.className}`,
+						axis,
+						start,
+						end
+					});
+				}
+			}
+		}
+		return failures;
 	};
 	const units = container.matches('.token, .token-group')
 		? [container]
@@ -94,6 +186,8 @@ export function interlinearGeometry(container: Element) {
 				bounds: { top: box.top, bottom: box.bottom, left: box.left, right: box.right },
 				sourceInk,
 				captionInk,
+				sourceClipping: sourceInk.clipping,
+				captionClipping: captionInk.clipping,
 				captionBounds: {
 					top: captionBox.top,
 					bottom: captionBox.bottom,
