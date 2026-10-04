@@ -5229,7 +5229,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.omnium-sanctorum-alleluia",
@@ -12780,9 +12780,9 @@
       {
        "id": "proprium.nativitas-sancti-ioannis-baptistae-secreta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.omnium-sanctorum-alleluia",

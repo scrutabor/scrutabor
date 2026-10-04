@@ -131,6 +131,47 @@ test('English prayer readings retain the Cross petition and the Son as the concl
 	await expect(page.locator('aside .gloss')).toHaveText('you');
 });
 
+test('the Baptist Secret keeps each natural English phrase in one complete word panel', async ({
+	page
+}) => {
+	const route = '/app/en/formularium/nativitas-sancti-ioannis-baptistae';
+	const prefix = 'nativitas-sancti-ioannis-baptistae-secreta';
+	const groups = [
+		{ first: 'w006', last: 'w007', gloss: 'his birth', forms: ['illíus', 'nativitátem'] },
+		{ first: 'w008', last: 'w009', gloss: 'with due honor', forms: ['honóre', 'débito'] },
+		{ first: 'w021', last: 'w022', gloss: 'our Lord', forms: ['Dóminum', 'nostrum'] },
+		{ first: 'w025', last: 'w026', gloss: 'Your Son', forms: ['Fílium', 'tuum'] },
+		{ first: 'w034', last: 'w035', gloss: 'of the Holy Spirit', forms: ['Spíritus', 'Sancti'] },
+		{
+			first: 'w037',
+			last: 'w040',
+			gloss: 'forever and ever',
+			forms: ['per', 'ómnia', 'sǽcula', 'sæculórum']
+		}
+	];
+	for (const group of groups) {
+		await page.goto(`${route}?w=${prefix}.${group.first}`);
+		await setHelp(page, 1);
+		await expect(page.locator('aside .gloss')).toHaveText(group.gloss);
+		await expect(page.locator('aside .construction-title')).toHaveText(group.forms);
+		await expect(page.locator('aside .construction-card')).toHaveCount(group.forms.length);
+		await page.goto(`${route}?w=${prefix}.${group.last}`);
+		await expect(page.locator('aside .gloss')).toHaveText(group.gloss);
+		await expect(page.locator('aside .construction-title')).toHaveText(group.forms);
+	}
+});
+
+test('the Baptist Secret preserves due honor and both acts before the Christ conclusion', async ({
+	page
+}) => {
+	await page.goto('/app/en/formularium/nativitas-sancti-ioannis-baptistae');
+	await setHelp(page, 2);
+	const secret = page.locator('.translation').filter({ hasText: 'We heap Your altar' });
+	await expect(secret).toContainText(
+		'celebrating with due honor the birth of him who both foretold the coming of the Savior of the world and made His presence known: our Lord Jesus Christ, Your Son. He lives and reigns with You'
+	);
+});
+
 test('opening focus does not ring the whole sheet', async ({ page }) => {
 	await page.goto(PATER);
 	await page.locator('#w008').focus();
