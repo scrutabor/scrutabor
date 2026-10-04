@@ -3416,7 +3416,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-viii-post-pentecosten-alleluia",
@@ -10967,9 +10967,9 @@
       {
        "id": "proprium.dominica-vii-post-pentecosten-secreta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-viii-post-pentecosten-alleluia",
@@ -16185,7 +16185,7 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-viii-post-pentecosten-collecta",
