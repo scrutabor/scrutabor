@@ -17285,9 +17285,9 @@
       {
        "id": "proprium.nativitas-sancti-ioannis-baptistae-secreta",
        "roles": [
-        "official_liturgical_context"
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 4
       },
       {
        "id": "proprium.omnium-sanctorum-collecta",
