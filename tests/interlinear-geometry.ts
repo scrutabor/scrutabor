@@ -64,6 +64,7 @@ export function interlinearGeometry(container: Element) {
 			const sourceInk = ink(source),
 				captionInk = ink(caption);
 			const box = unit.getBoundingClientRect();
+			const captionBox = caption.getBoundingClientRect();
 			const sourceRange = document.createRange();
 			sourceRange.selectNodeContents(source);
 			const paint = getComputedStyle(unit, '::before');
@@ -93,6 +94,12 @@ export function interlinearGeometry(container: Element) {
 				bounds: { top: box.top, bottom: box.bottom, left: box.left, right: box.right },
 				sourceInk,
 				captionInk,
+				captionBounds: {
+					top: captionBox.top,
+					bottom: captionBox.bottom,
+					left: captionBox.left,
+					right: captionBox.right
+				},
 				sourceLeft: sourceRange.getClientRects()[0].left,
 				captionLeft: caption.getBoundingClientRect().left,
 				fontSize: parseFloat(getComputedStyle(source).fontSize),
