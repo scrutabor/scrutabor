@@ -15,6 +15,7 @@ import { pageUrl } from './url';
 import { pushState, replaceState } from '$app/navigation';
 import type { Analysis, GlossDocument, TextDocument, Word, WordGloss } from './corpus';
 import { constructionForWord, type WordConstruction } from './word-construction';
+import { readingLocationFrame } from './reading-location';
 
 export interface WordPanelSelection {
 	gloss: WordGloss | null;
@@ -102,6 +103,10 @@ export function wordPanel(host: WordPanelHost) {
 	// one. Taps update it themselves because shallow routing does not re-run
 	// the location effect.
 	let settlingWord: string | null = null;
+	// Both landing frames belong to this panel, never the next page with
+	// the same corpus word IDs. A newer position replaces pending work.
+	const positionFrame = readingLocationFrame();
+	$effect(() => positionFrame.cancel);
 
 	// The pins preserveScroll schedules must not outlive the page: an
 	// un-cancelled pin from a closing panel can fire against the NEXT
@@ -121,7 +126,10 @@ export function wordPanel(host: WordPanelHost) {
 	// applyFromLocation): these are exactly the inputs a programmatic
 	// scrollIntoView cannot fire, so the two scroll promises never fight.
 	$effect(() => {
-		const acts = () => (settling = false);
+		const acts = () => {
+			settling = false;
+			positionFrame.cancel();
+		};
 		const kinds = ['wheel', 'touchstart', 'pointerdown', 'keydown'] as const;
 		for (const kind of kinds) window.addEventListener(kind, acts, { passive: true });
 		return () => {
@@ -183,6 +191,7 @@ export function wordPanel(host: WordPanelHost) {
 	}
 
 	function open(id: string) {
+		positionFrame.cancel();
 		// The sheet's own padding is back — the kept one has done its work.
 		keepPad = false;
 		settlingWord = id;
@@ -198,6 +207,7 @@ export function wordPanel(host: WordPanelHost) {
 
 	function close() {
 		if (selectedId === null && !openedByPush) return;
+		positionFrame.cancel();
 		preserveScroll();
 		settlingWord = null;
 		settling = false;
@@ -210,18 +220,26 @@ export function wordPanel(host: WordPanelHost) {
 		selectedId = null;
 	}
 
+	// A member deep link still selects one indivisible construction. Measure
+	// its whole reading surface, including the shared translation.
+	function readingElement(id: string) {
+		const el = document.getElementById(id);
+		return el?.closest('.token-group') ?? el;
+	}
+
 	// A tap must never bury the analysed word under its own panel: once the
 	// sheet has rendered, scroll by exactly the overlap (plus a breathing
 	// margin), so words already visible stay put.
-	function raise(id: string) {
-		requestAnimationFrame(() => {
-			const el = document.getElementById(id);
-			const sheet = document.querySelector('aside');
+	function raise(id: string, landing = false) {
+		positionFrame.schedule(() => {
+			if (selectedId !== id || (landing && !settling)) return;
+			const el = readingElement(id);
+			const sheet = document.querySelector('aside.panel');
 			if (!el || !sheet) return;
 			const overlap = el.getBoundingClientRect().bottom + 16 - sheet.getBoundingClientRect().top;
 			if (overlap <= 0) return;
 			const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-			window.scrollBy({ top: overlap, behavior: reduced ? 'auto' : 'smooth' });
+			window.scrollBy({ top: overlap, behavior: landing || reduced ? 'auto' : 'smooth' });
 		});
 	}
 
@@ -243,6 +261,9 @@ export function wordPanel(host: WordPanelHost) {
 		// effect depend on it, re-running on every tap (the documented
 		// read-after-write regression class).
 		const applied = untrack(() => selectedId);
+		// A same-selection data refresh must keep an ordinary tap's pending
+		// clearance. It does not start a new deep-link landing window.
+		if (target !== applied) positionFrame.cancel();
 		if (!target && applied !== null) preserveScroll();
 		if (!w) {
 			openedByPush = false;
@@ -264,9 +285,11 @@ export function wordPanel(host: WordPanelHost) {
 		// (wheel, touch, key, pointer — things a programmatic
 		// scrollIntoView never fires) ends the settling window for good.
 		if (target && settling) {
-			requestAnimationFrame(() =>
-				document.getElementById(target)?.scrollIntoView({ block: 'center' })
-			);
+			positionFrame.schedule(() => {
+				if (!settling || selectedId !== target) return;
+				readingElement(target)?.scrollIntoView({ block: 'center' });
+				raise(target, true);
+			});
 		}
 	}
 
@@ -320,7 +343,7 @@ export function wordPanel(host: WordPanelHost) {
 		/** Follow a cross-reference: opens the target and centres it. */
 		goTo(id: string) {
 			open(id);
-			document.getElementById(id)?.scrollIntoView({ block: 'center' });
+			readingElement(id)?.scrollIntoView({ block: 'center' });
 			raise(id);
 		}
 	};
