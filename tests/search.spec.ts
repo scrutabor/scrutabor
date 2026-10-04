@@ -1,5 +1,6 @@
 import type { Page } from '@playwright/test';
 import { atRoute, expect, setHelp, settled, test } from './fixtures';
+import { interlinearGeometry } from './interlinear-geometry';
 
 async function openSearchPage(page: import('@playwright/test').Page, language: 'pl' | 'en' = 'pl') {
 	await page.goto(`/app/${language}/search`);
@@ -227,22 +228,27 @@ test('selecting a verse changes only paint and clears neighbouring glosses', asy
 	const long = await page.locator('#s13.segment-selected').evaluate((element) => {
 		const verse = element.getBoundingClientRect();
 		const wash = getComputedStyle(element, '::before');
-		const preceding = document.querySelectorAll('#s12 rt');
-		const own = element.querySelectorAll('rt');
 		return {
-			topAir:
-				verse.top +
-				parseFloat(wash.top) -
-				Math.max(...[...preceding].map((gloss) => gloss.getBoundingClientRect().bottom)),
-			bottomAir:
-				verse.bottom -
-				parseFloat(wash.bottom) -
-				Math.max(...[...own].map((gloss) => gloss.getBoundingClientRect().bottom)),
+			top: verse.top + parseFloat(wash.top),
+			bottom: verse.bottom - parseFloat(wash.bottom),
 			overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth
 		};
 	});
-	expect(long.topAir, 'the wash reaches the preceding interlinear gloss').toBeGreaterThan(2);
-	expect(long.bottomAir, 'the wash cuts through its interlinear gloss').toBeGreaterThan(4);
+	const pairs = await page.locator('main').evaluate(interlinearGeometry);
+	const preceding = pairs.filter((pair) => pair.verseId === 's12');
+	const own = pairs.filter((pair) => pair.verseId === 's13');
+	expect(preceding.length).toBeGreaterThan(0);
+	expect(own.length).toBeGreaterThan(0);
+	// Inline rt includes a generated break and unused font-box space. The
+	// wash must clear the actual caption glyphs, in both adjoining verses.
+	expect(
+		long.top - Math.max(...preceding.map((pair) => pair.captionInk.bottom)),
+		'the wash reaches the preceding interlinear gloss'
+	).toBeGreaterThan(2);
+	expect(
+		long.bottom - Math.max(...own.map((pair) => pair.captionInk.bottom)),
+		'the wash cuts through its interlinear gloss'
+	).toBeGreaterThan(4);
 	expect(long.overflow, 'the selected verse widens the page').toBe(0);
 
 	await page.goto('/app/pl/orationes/angelus-domini?s=s07');

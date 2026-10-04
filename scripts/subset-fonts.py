@@ -31,6 +31,7 @@ import shutil
 from pathlib import Path
 
 from fontTools import subset
+from fontTools.ttLib import TTFont
 
 APP = Path(__file__).resolve().parent.parent
 BUILD = APP / "build"
@@ -51,6 +52,46 @@ MARGIN = (
     + "ĀāĂăĆćĒēĖėĘęĪīĶķĹĺŁłŃńŌōŒœŚśŜŝŪūŸŹźŻżǢǣǼǽ"
     + "„“”‘’—–…·†§¶‹›«»×÷°"
 )
+
+
+def preserve_latin_letters(path: Path) -> None:
+    """Keep modern liturgical u/v even when shaping ignores CSS locl=0.
+
+    Remove only the Latin language's localized substitutions. Other language
+    systems, ligatures, accents, outlines and variation axes stay intact.
+    """
+    font = TTFont(path, recalcTimestamp=False)
+    changed = False
+    try:
+        if "GSUB" not in font:
+            return
+        table = font["GSUB"].table
+        for script in table.ScriptList.ScriptRecord:
+            for language in script.Script.LangSysRecord:
+                if language.LangSysTag != "LAT ":
+                    continue
+                system = language.LangSys
+                indexes = system.FeatureIndex
+                kept = [
+                    i
+                    for i in indexes
+                    if table.FeatureList.FeatureRecord[i].FeatureTag != "locl"
+                ]
+                required = system.ReqFeatureIndex
+                if (
+                    required != 0xFFFF
+                    and table.FeatureList.FeatureRecord[required].FeatureTag == "locl"
+                ):
+                    system.ReqFeatureIndex = 0xFFFF
+                    changed = True
+                if kept != indexes:
+                    system.FeatureIndex = kept
+                    system.FeatureCount = len(kept)
+                    changed = True
+        if changed:
+            font.save(path)
+    finally:
+        font.close()
 
 
 def characters_in_build() -> set[str]:
@@ -134,9 +175,12 @@ def main() -> None:
                 f"--output-file={target}",
             ]
         )
+        preserve_latin_letters(target)
         before += source.stat().st_size
         after += target.stat().st_size
-        print(f"  {stem:38} {source.stat().st_size / 1024:7.1f}K -> {target.stat().st_size / 1024:6.1f}K")
+        print(
+            f"  {stem:38} {source.stat().st_size / 1024:7.1f}K -> {target.stat().st_size / 1024:6.1f}K"
+        )
         css += [
             "@font-face {",
             "\tfont-family: 'EB Garamond Variable';",
@@ -152,7 +196,9 @@ def main() -> None:
     (OUT / "fonts.css").write_text("\n".join(css), encoding="utf-8")
     shutil.copyfile(UPSTREAM / "LICENSE", OUT / "LICENSE")
 
-    print(f"\n{len(charset)} characters, {len(kept)} faces: {before / 1024:.0f}K -> {after / 1024:.0f}K")
+    print(
+        f"\n{len(charset)} characters, {len(kept)} faces: {before / 1024:.0f}K -> {after / 1024:.0f}K"
+    )
 
 
 if __name__ == "__main__":

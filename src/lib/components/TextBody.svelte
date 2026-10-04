@@ -13,7 +13,6 @@
 	} from '$lib/role.svelte';
 	import { initialFit } from '$lib/reading-geometry';
 	import { interlinearRuns, type InterlinearRun } from '$lib/interlinear';
-	import { fitInterlinear } from '$lib/interlinear-layout';
 	import { sourceFaceText, sourceWindow, type SourceFace } from '$lib/source-punctuation';
 	import * as marks from '$lib/speaker-marks';
 
@@ -232,8 +231,8 @@
 		helpLevel === 1
 	)}<span
 		class="base"
-		style:padding-top={raised ? `${fit.padTop}em` : null}
-		style:padding-bottom={raised ? `${fit.padBottom}em` : null}
+		style:padding-top={raised && helpLevel !== 1 ? `${fit.padTop}em` : null}
+		style:padding-bottom={raised && helpLevel !== 1 ? `${fit.padBottom}em` : null}
 		>{prefix}{#if raised}<span
 				class="initial"
 				style:font-size="{fit.scale}em"
@@ -242,17 +241,13 @@
 			>{form.slice(1)}{:else}{form}{/if}{suffix}</span
 	>{/snippet}
 
-{#snippet face(source: SourceFace, raised = false, sink = 0, target?: string)}{@const fit =
-		initialFit(source.word.form.slice(0, 1), helpLevel === 1)}<ruby
+{#snippet face(source: SourceFace, raised = false, target?: string)}<ruby
 		>{@render baseFace(
 			source.word.form,
 			source.suffix,
 			raised,
 			source.prefix
-		)}{#if helpLevel === 1 && target}<rt
-				style:top="calc(var(--reading) * (var(--gloss-gap) + {sink - (raised ? fit.lift : 0)}))"
-				class="shifted"
-				{lang}>{target}</rt
+		)}{#if helpLevel === 1 && target}<rt {lang}><span class="caption-content">{target}</span></rt
 			>{/if}</ruby
 	>{/snippet}
 
@@ -260,7 +255,6 @@
 	run: InterlinearRun,
 	target: string,
 	sharedRaised: boolean,
-	sink: number,
 	interactive: boolean,
 	faces: Map<string, SourceFace>
 )}<ruby class="shared-gloss">
@@ -278,16 +272,7 @@
 				</span>{#if index < run.words.length - 1}{' '}{/if}
 			{/each}
 		</span>
-		<!-- No lift for a raised initial here, unlike `face`: the initial's
-		     taller box is absorbed by its own inline-block token, so the
-		     shared annotation never rides down with it. Measured: taking the
-		     lift back sat the gloss 4px above its row at the reading size and
-		     5.6px at the largest — exactly the lift, at every size. -->
-		<rt
-			style:top="calc(var(--reading) * (var(--gloss-gap) - var(--shared-ruby-offset) + {sink}))"
-			class="shifted"
-			{lang}>{run.alignment?.gloss}</rt
-		>
+		<rt {lang}><span class="caption-content">{run.alignment?.gloss}</span></rt>
 	</ruby>{/snippet}
 
 {#snippet segment(seg: TextDocument['segments'][number], i: number)}
@@ -449,14 +434,10 @@
 		     here would defeat the baseline alignment that keeps a verse and
 		     its translation on one line (it did — the first row sat 10px
 		     off until this condition). -->
-		<!-- The gloss row of a verse whose initial reaches below the line
-		     sinks together, so the glosses stay level with each other. -->
 		{@const fit0 =
 			i === firstVerse ? initialFit(seg.words?.[0]?.form.slice(0, 1) ?? '', helpLevel === 1) : null}
-		{@const sink = fit0?.sink ?? 0}
 		<p
 			class="verse"
-			use:fitInterlinear={helpLevel}
 			style:margin-top={fit0 && !bilingual ? `${fit0.reserve}em` : null}
 			style:--selection-initial-start={fit0 ? `calc(var(--reading) * ${-fit0.reserve})` : null}
 			class:glossed={helpLevel === 1}
@@ -552,10 +533,10 @@
 										seg.id
 									)}
 							>
-								{@render constructionRuby(run, constructionTarget, sharedRaised, sink, true, faces)}
+								{@render constructionRuby(run, constructionTarget, sharedRaised, true, faces)}
 							</button>
 						{:else}
-							{@render constructionRuby(run, constructionTarget, sharedRaised, sink, false, faces)}
+							{@render constructionRuby(run, constructionTarget, sharedRaised, false, faces)}
 						{/if}
 					</span>{' '}{:else}{#each run.words as w (w.id)}{@const wi =
 							visibleWords.indexOf(w)}{@const raised = i === firstVerse && wi === 0}{@const source =
@@ -571,9 +552,8 @@
 										? `${sourceFaceText(source)} — ${target}`
 										: undefined}
 									onclick={(event) => tapWord(event, domId(w.id), seg.id)}
-									>{@render face(source, raised, sink, target)}</button
-								>{:else}<span class="word">{@render face(source, raised, sink, target)}</span
-								>{/if}</span
+									>{@render face(source, raised, target)}</button
+								>{:else}<span class="word">{@render face(source, raised, target)}</span>{/if}</span
 						>{' '}{/each}{/if}{/each}{#if window.after}…{/if}
 		</p>
 		{@const translation = gloss.segments[seg.id]?.translation}
@@ -714,16 +694,8 @@
 	/* The attribution line: small caps, quiet, above the words it names —
 	   the shape a missal uses for its S. and M. */
 	.who {
-		/* The label belongs to the verse BELOW it, and it has to look like
-		   it does. Its own bottom margin is tiny for that reason — but a
-		   glossed verse above gives back only --gloss-gap, exactly the
-		   overhang its gloss row paints below the box, so the label was
-		   landing on that row with no daylight at all and reading as part
-		   of the verse it follows (owner, 2026-08-09). The top margin here
-		   is the daylight, and it is written as the air wanted PLUS the
-		   overhang that has to be cleared first. Collapses against a
-		   rubric's larger bottom margin, so a label after a rubric is
-		   unchanged. */
+		/* Keep a label closer to the verse it introduces. A preceding rubric's
+		   larger margin collapses with this one instead of adding another gap. */
 		margin: calc(var(--reading) * (0.517 + var(--gloss-gap))) 0 calc(var(--reading) * 0.103);
 		font-size: calc(var(--reading) * 0.497);
 		letter-spacing: 0.09em;
@@ -735,21 +707,8 @@
 		align-items: baseline;
 	}
 
-	/* And measured in glyphs it was still the wrong way round as soon as the
-	   glosses showed: 40 above and 22 below on bare Latin, where the label
-	   plainly names the verse under it — but 20 and 28 with the glosses on,
-	   where it reads as the tail of the verse above (owner, 2026-08-09).
-
-	   The overhang above is only half of it. The other half is the leading
-	   BELOW: a glossed verse is set at line-height 2.3, so a third of a
-	   line of air stands over its first Latin glyph, inside its own box
-	   where a margin cannot reach it. Clearing the overhang bought back
-	   5px and the leading had already given away 26.
-
-	   So the label spends more above and takes back some of that leading
-	   below, and the pair restores the proportion bare Latin has: 40 and
-	   22. Both corrections name the state that causes them and neither
-	   fires without it. */
+	/* A voice change is a stronger boundary than the regular interlinear
+	   row gap. Keep its label attached to the next source row. */
 	.verse.glossed + .who {
 		margin-top: calc(var(--reading) * (0.517 + var(--gloss-gap) + 0.86));
 	}
@@ -882,15 +841,6 @@
 		text-indent: 0;
 	}
 
-	/* A taller glyph in the ruby base raises the base box, and the
-	   annotation rides down with it: measured at 4px for a 1.75em initial
-	   at the reading size, identical at phone width, so the gloss of the
-	   first word sat 4px below the line its neighbours share. Put back by
-	   the same 4px. */
-	rt.shifted {
-		position: relative;
-	}
-
 	/* The reader's own lines are marked by their MARK — heavier, and in
 	   the red the eye is already looking for. They used to carry a red rule
 	   down the edge as well, which was a second device saying the same
@@ -923,14 +873,15 @@
 	   in whatever comes next: the fault is the verse's, so the verse pays.
 	   The mirror of --gloss-gap, which is ink hanging BELOW its box. */
 	.verse {
+		--word-selection-inline: -0.05em;
 		--selection-block-start: calc(var(--reading) * 0.14);
 		--selection-block-end: calc(var(--reading) * -0.08);
 		font-size: var(--reading-bare);
 		/* 1.5, down from 1.75 (owner, 2026-08-21): the bare modes read as
 		   a prayer book, and printed missals set their verses close to
 		   solid — 1.75 was the interlinear's air bleeding into modes that
-		   have no glosses to make room for. Glossed verses override to 2.3
-		   below, so this number never renders in interlinear mode. At 1.5 a
+		   have no glosses to make room for. Interlinear pairs reserve their
+		   own annotation rows below. At 1.5 a
 		   wrapped verse holds together as one unit and the verse margin
 		   finally reads as structure, not as one more line gap. */
 		line-height: 1.5;
@@ -972,18 +923,30 @@
 	   column is flush; what says a verse has begun is its capital, its
 	   stop, and the mark when the voice changes. */
 	.verse.glossed {
-		--selection-block-end: calc(var(--reading) * -0.34);
+		/* Ordinary inline flow retains a full word space between pairs. */
+		--word-selection-inline: -0.11em;
+		--word-selection-block-end: calc(var(--reading) * -0.08);
+		/* The pair's trailing margin belongs to reading rhythm, not its wash. */
+		--selection-block-end: calc(var(--reading) * 0.5 + var(--word-selection-block-end));
+		container-type: inline-size;
 		font-size: var(--reading);
-		line-height: 2.3;
-		margin-bottom: calc(var(--reading) * 0.759);
-		/* The gloss row is shifted down by GLOSS_GAP, and a relative shift
-		   moves paint without moving layout — so the last gloss of a verse
-		   hangs below the box that carries the margin, and the verse gives
-		   away that much of the space beneath it. Given back here, which is
-		   why a rubric under a glossed line looked cramped while the same
-		   rubric under another rubric looked right. Nothing beyond that:
-		   a verse break is not extra air. */
-		margin-bottom: calc(var(--reading) * var(--gloss-gap));
+		line-height: 1.3;
+		/* Each pair owns its annotation and external reading-line spacing,
+		   including at a verse boundary. No hydration-time fitting is needed. */
+		margin-bottom: 0;
+	}
+
+	.verse.glossed.segment-joins-after {
+		/* Slightly overlap the next wash to absorb subpixel rounding. */
+		--selection-block-end: calc(var(--reading) * -0.141);
+	}
+
+	.verse.glossed > .token,
+	.verse.glossed > .token-group {
+		/* Align Latin, not the pair's last annotation baseline. The verse's
+		   matching source leading also keeps its speaker mark on that row. */
+		vertical-align: top;
+		margin-bottom: calc(var(--reading) * 0.5);
 	}
 
 	/* text-indent INHERITS, and an inline-block establishes its own first
@@ -1012,13 +975,6 @@
 	}
 
 	.token-group {
-		/* A shared ruby holds several atomic Latin tokens inside one button,
-		   instead of one button wrapping each ruby. Chromium counts the base
-		   line's lower half-leading a
-		   second time when it places that ruby text. This measured, scale-free
-		   offset puts the shared annotation on the exact row used by its
-		   neighbours at every reading size. */
-		--shared-ruby-offset: 0.576;
 		--word-selection-block-start: calc(var(--reading) * 0.14);
 		display: inline-block;
 		isolation: isolate;
@@ -1069,49 +1025,66 @@
 		display: inline;
 	}
 
-	/* Only a pair wider than the entire content measure takes this path.
-	   It keeps one button and one annotation, with natural word boundaries
-	   inside the pair. Fitting units retain native ruby and its baseline. */
-	/* stylelint-disable selector-pseudo-class-no-unknown -- Svelte global class added by the layout action */
-	:is(.token, .token-group):global(.wrapped-unit) {
-		inline-size: 100%;
-		line-height: 1.35;
-		margin-block: 0.15em 0.25em;
-		text-align: start;
-		/* At the narrowest measure even one Latin word can be too wide.
-		   Keep ordinary word boundaries first, but let that exceptional word
-		   continue without shrinking, clipping or changing its source text. */
+	/* Keep ruby semantics, using ordinary inline flow for consistent wrapping
+	   across engines. A pair moves intact to the next line; only source or
+	   target wider than the complete reading measure can wrap internally. */
+	.verse.glossed ruby {
+		display: inline-block;
+		inline-size: max-content;
+		max-inline-size: 100cqi;
+		line-height: 0;
+		white-space: normal;
 		overflow-wrap: anywhere;
+		text-align: start;
 	}
 
-	:is(.token, .token-group):global(.wrapped-unit) > .word {
-		display: block;
-		inline-size: 100%;
-		text-align: inherit;
-	}
-
-	:global(.wrapped-unit) ruby {
-		display: flex;
-		flex-direction: column;
-	}
-
-	:global(.wrapped-unit) .shared-base {
-		display: block;
+	.verse.glossed .base {
+		/* The permanent token surface supplies the wash's padding. Keeping
+		   cancelled inline insets here can split even a fitting word. */
+		padding: 0;
+		margin-inline: 0;
 		white-space: normal;
+		overflow-wrap: anywhere;
+		line-height: 1.3;
+		user-select: text;
 	}
 
-	:global(.wrapped-unit) .token {
-		max-inline-size: 100%;
-	}
-
-	:global(.wrapped-unit) rt.shifted {
-		position: static;
-		display: block;
-		margin-block-start: calc(var(--reading) * var(--gloss-gap));
+	.verse.glossed .shared-base,
+	.caption-content {
+		display: inline-block;
+		inline-size: max-content;
+		max-inline-size: 100cqi;
+		box-sizing: border-box;
+		white-space: normal;
+		overflow-wrap: anywhere;
 		line-height: 1.35;
-		white-space: normal;
 	}
-	/* stylelint-enable selector-pseudo-class-no-unknown */
+
+	.verse.glossed .shared-base {
+		line-height: 1.3;
+		/* Include the spaces between selectable words, not just their letters. */
+		user-select: text;
+	}
+
+	.verse.glossed .token {
+		/* A word never inherits the containing citation's trailing paint. */
+		--selection-block-end: var(--word-selection-block-end);
+		max-inline-size: 100cqi;
+	}
+
+	.verse.glossed rt {
+		display: inline;
+		white-space: normal;
+		overflow-wrap: anywhere;
+		line-height: 1.35;
+	}
+
+	.verse.glossed rt::before {
+		/* A non-selectable inline break gives the pair the larger half's
+		   intrinsic width without inserting newlines into copied Latin. */
+		content: '\a';
+		white-space: pre;
+	}
 
 	.token:where(
 			:has(> button.word:hover),
@@ -1120,21 +1093,11 @@
 		)::before {
 		content: '';
 		position: absolute;
-		/* MORE THAN HALF THE GAP between two words, so two tints always meet
-		   and the page never shows between them (owner, 2026-08-09). They
-		   may overlap by a fraction of a pixel; nothing depends on their
-		   paint order any more, because a focused word makes a stacking
-		   context of its own.
-
-		   Half the gap exactly was tried, and that is not a number that
-		   exists: the gap measures 0.0625em on a Mac and 0.079em on the
-		   Linux runner. Font metrics again — the same trap that made a
-		   measure tuned in `ch` land 40px out. So this is sized for the
-		   wider of the two rather than for the one in front of me, and the
-		   test states the rule relatively: they meet, and they do not
-		   overlap enough to read as one band. */
+		/* Cover half the mode's inter-word space with a little rounding room.
+		   The focused word stacks above adjacent washes; its inset ring stays
+		   clear of their letters. This changes paint only, not word spacing. */
 		inset-block: var(--word-selection-block-start) var(--selection-block-end);
-		inset-inline: -0.05em;
+		inset-inline: var(--word-selection-inline);
 		border-radius: 0.172em;
 		background: var(--wash);
 		z-index: -1;
@@ -1156,8 +1119,8 @@
 		)::before {
 		content: '';
 		position: absolute;
-		inset-block: var(--word-selection-block-start) calc(var(--reading) * 0.284);
-		inset-inline: -0.05em;
+		inset-block: var(--word-selection-block-start) var(--word-selection-block-end, 0px);
+		inset-inline: var(--word-selection-inline);
 		border-radius: 0.172em;
 		background: var(--wash);
 		z-index: -1;
@@ -1171,16 +1134,6 @@
 		outline: 2px solid var(--rubric);
 		outline-offset: -2px;
 	}
-
-	/* stylelint-disable selector-pseudo-class-no-unknown -- Svelte global class added by the layout action */
-	:is(.token, .token-group):global(.wrapped-unit):where(
-			:hover,
-			:focus-within,
-			:has(button.word.selected)
-		)::before {
-		inset-block: 0;
-	}
-	/* stylelint-enable selector-pseudo-class-no-unknown */
 
 	.token.word-selected::before {
 		/* Persistent selection outranks transient hover and focus. `:where()`
@@ -1256,20 +1209,6 @@
 		   was allowed into one (the owner pasted the result). */
 		user-select: none;
 		-webkit-user-select: none;
-		/* One Latin word often needs several words to gloss it — 49 of the
-		   163 glosses in the English Credo — and several Latin words may now
-		   share one target expression. Either way, the gloss has to read as
-		   ONE thing under ONE source unit: "having suffered" split over two
-		   lines reads as two glosses, and so would "shall be".
-
-		   The Leipzig Glossing Rules solve this by joining such a gloss
-		   with periods (`come.out`), which is right for a linguistics
-		   paper and wrong for someone praying — "let.it.be.done" is not
-		   readable. Same guarantee, kept in the layout instead: the words
-		   stay, the break does not. Only a pair wider than the full reading
-		   measure uses the explicit wrapping fallback above: it retains one
-		   source unit, one gloss and one interaction surface. */
-		white-space: nowrap;
 	}
 
 	/* A rubric is not another line of the prayer: it is a different voice,
@@ -1277,40 +1216,23 @@
 	   than one line of a prayer takes from the next — the margins collapse,
 	   so this is the one that decides the gap. */
 	.rubric {
-		/* A rubric sits BETWEEN two verses and should look equally far from
-		   each (owner, 2026-08-09); it was 29px from the one above and 18
-		   from the one below. Equal ink, not equal margins: a glossed verse
-		   paints its gloss row --gloss-gap below the box the margin hangs
-		   from, so clearing that overhang is what buys the same daylight
-		   above as below. The two together still spend the 2.0 the old pair
-		   spent, so the page's rhythm is unchanged. */
+		/* Base rhythm for prose and bare Latin. Adjacent interlinear verses
+		   have their own spacing adjustment below. Tests compare visible ink
+		   on both sides, not just the margins of these boxes. */
 		margin: calc(var(--reading) * (1 + var(--gloss-gap))) 0 calc(var(--reading) * 1);
 		border-inline-start: 2px solid var(--rubric);
 		padding-inline-start: calc(var(--reading) * 0.621);
 	}
 
-	/* HALF-LEADING IS NOT INK, and the eye only sees ink. The pair above
-	   balances the BOXES, and with the glosses showing the owner still read
-	   the rubric as belonging to the text above it: 26px of daylight over,
-	   45 under. Measured in glyphs rather than boxes, which is what the
-	   reader measures in.
-
-	   Both numbers come from line-height 2.3 on a glossed verse. It is a
-	   third of a line of air ABOVE the first Latin glyph of the verse
-	   below — inside that verse's own box, so no margin here can see it —
-	   and the gloss row of the verse above hangs past its box the other
-	   way. Neither is visible to the box model; together they move the
-	   rubric two thirds of the way toward the text above it.
-
-	   So the two corrections only exist while the glosses do, and each
-	   names the state that causes it. Bare Latin (help 0) already balanced
-	   at 41/38 and is deliberately left alone. */
+	/* Interlinear pairs reserve their caption and trailing line space inside
+	   the verse. Add only the remaining air above a rubric; its next Latin
+	   line has no caption below it to contribute to the opposite gap. */
 	.verse.glossed + .rubric {
-		margin-top: calc(var(--reading) * (1 + var(--gloss-gap) + 0.43));
+		margin-top: calc(var(--reading) * 0.55);
 	}
 
 	.rubric:has(+ .verse.glossed) {
-		margin-bottom: calc(var(--reading) * 0.61);
+		margin-bottom: calc(var(--reading) * 0.85);
 	}
 
 	/* EVERY KIND OF TEXT ENDS WHERE THE LATIN ENDS (owner, 2026-08-09).
@@ -1577,11 +1499,6 @@
 		.verse {
 			line-height: 1.48;
 			margin-bottom: calc(var(--reading) * 0.42);
-		}
-
-		.verse.glossed {
-			line-height: 2.03;
-			margin-bottom: calc(var(--reading) * var(--gloss-gap));
 		}
 
 		rt {

@@ -1,5 +1,6 @@
 import { expect, setHelp, setTheme, test } from './fixtures';
 import { expectSharedGloss } from './shared-gloss';
+import { interlinearGeometry } from './interlinear-geometry';
 
 // Each expectation preserves the complete contextual construction, not just its verb.
 const subjects: Record<string, [string, number, string][]> = {
@@ -40,15 +41,18 @@ for (const [subject, groups] of Object.entries(subjects)) {
 					.filter({ has: page.locator(`button#${anchor}`) });
 				await expectSharedGloss(page, group, count, gloss);
 				if (width === 320 && count >= 4) {
-					await expect(group).toHaveClass(/wrapped-unit/);
-					const base = await group.locator('.shared-base').boundingBox();
-					const caption = await group.locator('rt').boundingBox();
-					expect(base).not.toBeNull();
-					expect(caption).not.toBeNull();
+					// Closing a word card may still restore the document's scroll
+					// position. Compare both boxes in one layout snapshot, so a
+					// viewport movement cannot masquerade as overlapping text.
+					const [geometry] = await group.evaluate(interlinearGeometry);
 					expect(
-						caption!.y,
-						'a wrapped caption follows all its Latin words'
-					).toBeGreaterThanOrEqual(base!.y + base!.height - 1);
+						geometry.sourceHeight > geometry.sourceLeading * 1.5 ||
+							geometry.captionHeight > geometry.captionLeading * 1.5
+					).toBe(true);
+					const clearance = geometry.clearance;
+					expect(clearance, 'a wrapped caption follows all its Latin words').toBeGreaterThanOrEqual(
+						0
+					);
 				}
 			}
 			expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBe(0);

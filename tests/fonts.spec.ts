@@ -86,14 +86,13 @@ test('the reading face stays small @online', async ({ request }) => {
 	).toBeLessThan(70);
 });
 
-test('Latin text still refuses the locl substitution @online', async ({ page }) => {
+test('Latin text still refuses the locl substitution @online @reader', async ({ page }) => {
 	// EB Garamond's roman carries an OpenType locl rule for the Latin
 	// language system that swaps u for v — "qvia", "cvlpa" — and lang="la"
 	// triggers it. The 1962 orthography distinguishes the two letters, so
 	// the feature is off. This is a font-level trap that no charset check
-	// and no screenshot of a passing page would catch, and the subsetting
-	// kept the feature in the file, so the CSS is the only thing standing
-	// between a reader and "qvia".
+	// would catch. The subsets must omit the Latin-language rule as well:
+	// some shaping engines apply it even when computed CSS says locl=0.
 	await page.goto('/app/pl/ordinarium/gloria');
 	const applied = await page.evaluate(() => {
 		const latin = document.querySelector('[lang="la"], .verse');

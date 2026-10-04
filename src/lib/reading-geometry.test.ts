@@ -6,49 +6,11 @@
 // stated here in a form that fails in a second, so the next wrong constant
 // is caught before anyone has to notice a letter touching its neighbour.
 import { describe, expect, it } from 'vitest';
-import { GLOSS_GAP, initialFit, measuredInitial, sinkFor } from './reading-geometry';
+import { initialFit, measuredInitial } from './reading-geometry';
 import { loadAllCoreTexts } from './corpus';
 import { firstVerseWithInitial } from './speaker-marks';
 
 const TEXTS = await loadAllCoreTexts();
-
-// Q is the only letter in the corpus whose tail reaches below the line;
-// L and A are the two whose ink crosses their advance sideways.
-const TAILED = 'Q';
-
-describe('the gloss gap', () => {
-	it('leaves an ordinary descender more room than it needs', () => {
-		// 0.272em from the baseline to the ink of the gloss, plus the gap,
-		// against a p or q's 0.24em. The margin is small on purpose: the gap
-		// was 0.32 once and pushed the gloss away from the word it belongs to.
-		const roomBelowTheBaseline = 0.272 + GLOSS_GAP;
-		expect(roomBelowTheBaseline).toBeGreaterThan(0.24);
-		expect(roomBelowTheBaseline).toBeLessThan(0.5);
-	});
-});
-
-describe('sinking the gloss row for a tail', () => {
-	it('does not move it for a letter that stays above the line', () => {
-		for (const letter of 'PSCADEMIGHLONBTV') {
-			expect(sinkFor(letter, true), `${letter} should need no sink`).toBe(0);
-		}
-	});
-
-	it('moves it for the one letter whose tail reaches through', () => {
-		expect(sinkFor(TAILED, true)).toBeGreaterThan(0);
-	});
-
-	it('and moves it no further than the tail actually goes', () => {
-		// the sink exists to clear 0.248em scaled by 1.75; anything much
-		// larger is a gap the reader sees and the letter did not ask for
-		expect(sinkFor(TAILED, true)).toBeLessThan(0.05);
-	});
-
-	it('does nothing at all when no gloss is showing', () => {
-		// nothing to clear: the mode is bare Latin
-		expect(sinkFor(TAILED, false)).toBe(0);
-	});
-});
 
 describe('fitting the initial', () => {
 	it('sets it at the raised size, not a dropped one', () => {
@@ -78,12 +40,6 @@ describe('fitting the initial', () => {
 		const a = initialFit('A', true);
 		expect(a.start).toBeGreaterThan(0);
 		expect(a.end).toBeGreaterThan(0);
-	});
-
-	it('lifts the gloss by what the taller letter raised the base box', () => {
-		// a taller glyph raises the ruby base and the annotation rides down
-		// with it; the lift takes that back
-		expect(initialFit('P', true).lift).toBeGreaterThan(0);
 	});
 
 	it('covers the whole letter, top and tail, with the wash', () => {

@@ -1,4 +1,5 @@
 import { expect, setHelp, setTheme, test } from './fixtures';
+import { interlinearGeometry } from './interlinear-geometry';
 
 const formulary = 'dedicatio-sancti-michaelis-archangeli';
 const text = `${formulary}-collecta`;
@@ -38,32 +39,29 @@ for (const language of ['pl', 'en'] as const) {
 				await expect(button.locator('.token')).toHaveCount(10);
 				await button.scrollIntoViewIfNeeded();
 				await page.evaluate(() => document.fonts.ready);
-				const geometry = () =>
-					button.evaluate((element) => {
-						const box = element.getBoundingClientRect();
-						const base = element.querySelector('.shared-base')!.getBoundingClientRect();
-						const gloss = element.querySelector('rt')!.getBoundingClientRect();
-						return {
-							wrapped: element.closest('.token-group')!.classList.contains('wrapped-unit'),
-							width: box.width,
-							height: box.height,
-							left: gloss.left - box.left,
-							right: box.right - gloss.right,
-							bottom: box.bottom - gloss.bottom,
-							gap: gloss.top - base.bottom,
-							overflow: document.documentElement.scrollWidth - innerWidth
-						};
-					});
+				const geometry = async () => {
+					const [ink] = await button.locator('..').evaluate(interlinearGeometry);
+					return {
+						wrapped:
+							ink.sourceHeight > ink.sourceLeading * 1.5 ||
+							ink.captionHeight > ink.captionLeading * 1.5,
+						width: ink.bounds.right - ink.bounds.left,
+						height: ink.bounds.bottom - ink.bounds.top,
+						left: ink.captionInk.left - ink.bounds.left,
+						right: ink.bounds.right - ink.captionInk.right,
+						bottom: ink.bounds.bottom - ink.captionInk.bottom,
+						gap: ink.clearance,
+						overflow: await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)
+					};
+				};
 				const before = await geometry();
 				expect(before.overflow).toBe(0);
 				for (const clearance of [before.left, before.right, before.bottom]) {
 					expect(clearance).toBeGreaterThanOrEqual(-0.5);
 				}
-				// Wrapped blocks have separate line boxes. Native ruby intentionally
-				// overlaps font boxes to share the ordinary gloss baseline; those
-				// boxes are not glyph-ink bounds (covered by interlinear-wrap).
+				// Physical wrapping and glyph clearance, not a script-added class.
 				expect(before.wrapped).toBe(width === 320);
-				if (before.wrapped) expect(before.gap).toBeGreaterThanOrEqual(0);
+				expect(before.gap).toBeGreaterThanOrEqual(0);
 				await button.hover();
 				expect(await geometry()).toEqual(before);
 				await button.focus();

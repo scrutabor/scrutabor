@@ -1,6 +1,7 @@
 // Reading geometry, typography and selection surfaces.
 import type { Page } from '@playwright/test';
 import { setHelp, expect, test } from './fixtures';
+import { interlinearGeometry } from './interlinear-geometry';
 
 test('the header sits on one centre line', async ({ page }) => {
 	// The row's controls centre on the title's own line — measured, not
@@ -47,46 +48,42 @@ test('a gloss belongs to the word above it, and is legible', async ({ page }) =>
 	// a fact about the window, so the page changed shape when the phone
 	// turned.
 	await page.goto('/app/en/ordinarium/corpus-tuum');
-	const gaps = await page.evaluate(() => {
-		const c = document.createElement('canvas').getContext('2d')!;
-		const ink = (el: Element) => {
-			const cs = getComputedStyle(el);
-			c.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
-			const m = c.measureText(el.textContent || 'x');
-			const probe = document.createElement('span');
-			probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
-			el.appendChild(probe);
-			const base = probe.getBoundingClientRect().top;
-			probe.remove();
-			return { top: base - m.actualBoundingBoxAscent, bottom: base + m.actualBoundingBoxDescent };
-		};
-		const verses = [...document.querySelectorAll('.verse.glossed')];
-		const verse = verses[0];
-		const rubies = [...verse.querySelectorAll('ruby')];
-		const first = rubies[0];
-		const rt = first.querySelector('rt')!;
-		const y0 = first.getBoundingClientRect().top;
-		const next = rubies.find((r) => r.getBoundingClientRect().top > y0 + 10)!;
-		const lastRt = [...verse.querySelectorAll('rt')].pop()!;
-		const nextVerse = verses[1].querySelector('ruby')!;
-		return {
-			pair: ink(rt).top - ink(first).bottom,
-			between: ink(next).top - ink(rt).bottom,
-			toNextVerse: ink(nextVerse).top - ink(lastRt).bottom,
-			size: parseFloat(getComputedStyle(rt).fontSize),
-			slope: getComputedStyle(rt).fontStyle
-		};
-	});
+	await page.evaluate(() => document.fonts.ready);
+	const geometry = await page.locator('main').evaluate(interlinearGeometry);
+	const first = geometry[0];
+	const verse = geometry.filter((unit) => unit.verseId === first.verseId);
+	const next = verse.find(
+		(unit) => unit.sourceInk.baselines[0] > first.sourceInk.baselines[0] + 10
+	)!;
+	const nextVerse = geometry.find((unit) => unit.verseId !== first.verseId)!;
+	expect(next, 'the first verse contains a wrapped reading line').toBeDefined();
+	expect(nextVerse, 'a second verse exists').toBeDefined();
+	const gaps = {
+		pair: first.clearance,
+		between: next.sourceInk.top - first.captionInk.bottom,
+		// Different words have different ascenders. Comparing viscéribus' ink
+		// with et's made an equal baseline step look 5px uneven. Measure row
+		// advance independently of letter shape, retaining ink proximity above.
+		lineStep: next.sourceInk.baselines[0] - first.sourceInk.baselines[0],
+		verseStep: nextVerse.sourceInk.baselines[0] - verse.at(-1)!.sourceInk.baselines.at(-1)!
+	};
+	const captionStyle = await page
+		.locator('rt')
+		.first()
+		.evaluate((element) => {
+			const style = getComputedStyle(element);
+			return { size: parseFloat(style.fontSize), slope: style.fontStyle };
+		});
 	expect(gaps.pair, 'the gloss is not touching its word').toBeGreaterThan(3);
 	expect(gaps.between, 'the next line of the verse stands well clear').toBeGreaterThan(
 		gaps.pair * 3
 	);
 	expect(
-		Math.abs(gaps.toNextVerse - gaps.between),
+		Math.abs(gaps.verseStep - gaps.lineStep),
 		'a verse break is the same step as a line break'
 	).toBeLessThan(2);
-	expect(gaps.size, 'the gloss is big enough to read').toBeGreaterThan(13);
-	expect(gaps.slope, 'and upright at that size').toBe('normal');
+	expect(captionStyle.size, 'the gloss is big enough to read').toBeGreaterThan(13);
+	expect(captionStyle.slope, 'and upright at that size').toBe('normal');
 });
 
 test('a selection copies the Latin alone, no apparatus interleaved', async ({ page }) => {
@@ -465,10 +462,10 @@ test('a gloss of several words stays one gloss', async ({ page }) => {
 	] as const) {
 		await page.setViewportSize({ width: w, height: 1100 });
 		await page.goto(url);
-		const broken = await page.evaluate(() =>
-			[...document.querySelectorAll('.verse.glossed rt')]
-				.filter((r) => r.getClientRects().length > 1)
-				.map((r) => (r.textContent ?? '').trim())
+		const geometry = await page.locator('main').evaluate(interlinearGeometry);
+		expect(geometry.length).toBeGreaterThan(0);
+		const broken = geometry.filter(
+			(unit) => unit.captionUnwrappedWidth < unit.availableWidth - 2 && unit.captionInk.rows > 1
 		);
 		expect(broken, `${url} at ${w}px broke a gloss across lines`).toEqual([]);
 	}
@@ -507,7 +504,7 @@ test('Latin, gloss and translation share one left edge', async ({ page }) => {
 			const verse = document.querySelector('.verse.glossed')!;
 			return {
 				latin: Math.round(boxStart(verse.querySelector('.base')!)),
-				gloss: Math.round(boxStart(verse.querySelector('rt')!))
+				gloss: Math.round(boxStart(verse.querySelector('.caption-content')!))
 			};
 		});
 		expect(
@@ -616,7 +613,7 @@ test('the bilingual columns align verse and translation on one baseline', async 
 test('the bare modes read at the bare scale, on the book measure', async ({ page }) => {
 	// The day's two headline numbers, pinned: the bare modes read at 0.84
 	// of the study size with 1.5 leading (the study face stays 1.45rem
-	// with its glossed 2.3), and uncolumned bare text is capped at the
+	// with source leading 1.3 plus its intrinsic annotation row), and bare text is capped at the
 	// 36rem book measure, centred on the title's axis. Nothing else
 	// asserted these — the geometry shipped ungated for half a day.
 	await page.setViewportSize({ width: 1512, height: 982 });
@@ -652,7 +649,7 @@ test('the bare modes read at the bare scale, on the book measure', async ({ page
 		};
 	});
 	expect(study.font, 'the study face keeps the full reading size').toBeCloseTo(1.45, 2);
-	expect(study.leading, 'the glossed leading stays 2.3').toBeCloseTo(2.3, 2);
+	expect(study.leading, 'source leading matches the intrinsic reading pairs').toBeCloseTo(1.3, 2);
 });
 
 test('the reading size is the only knob', async ({ page }) => {
@@ -666,72 +663,38 @@ test('the reading size is the only knob', async ({ page }) => {
 	const sizes: Record<string, unknown> = {};
 	for (const reading of ['1.45rem', '1.75rem', '2.1rem']) {
 		await page.goto('/app/pl/ordinarium/qui-pridie');
-		const m = await page.evaluate((reading) => {
+		const markPx = await page.evaluate((reading) => {
 			document.documentElement.style.setProperty('--reading', reading);
-			const c = document.createElement('canvas').getContext('2d')!;
-			const ink = (el: Element) => {
-				const cs = getComputedStyle(el);
-				c.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
-				const t = (el.textContent || 'x').trim();
-				const mm = c.measureText(t);
-				const probe = document.createElement('span');
-				probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
-				el.appendChild(probe);
-				const b = probe.getBoundingClientRect().top;
-				probe.remove();
-				return { top: b - mm.actualBoundingBoxAscent, bottom: b + mm.actualBoundingBoxDescent };
-			};
-			const boxStart = (el: Element) => {
-				const s = document.createElement('span');
-				s.style.cssText = 'display:inline-block;width:0;height:1em;vertical-align:baseline';
-				el.insertBefore(s, el.firstChild);
-				const x = s.getBoundingClientRect().left;
-				s.remove();
-				return x;
-			};
-			const verses = [...document.querySelectorAll('.verse.glossed')];
-			// the pairing is measured on a verse WITHOUT a raised initial: the
-			// initial's tail reaches below the line by design, and `sink` gives
-			// it room, so it is not the case the gloss/line ratio describes
-			const v = verses.find(
-				(x) => !x.querySelector('.initial') && x.querySelectorAll('ruby').length > 6
-			)!;
-			const rubies = [...v.querySelectorAll('ruby')];
-			const rt = rubies[0].querySelector('rt')!;
-			const y0 = rubies[0].getBoundingClientRect().top;
-			const next = rubies.find((r) => r.getBoundingClientRect().top > y0 + 10);
-			// the raised initial's tail must still clear the gloss beneath it
-			const initial = document.querySelector('.initial');
-			return {
-				latinPx: parseFloat(getComputedStyle(v).fontSize),
-				glossPx: parseFloat(getComputedStyle(rt).fontSize),
-				markPx: parseFloat(getComputedStyle(document.querySelector('.mark')!).fontSize),
-				pair: +(ink(rt).top - ink(rubies[0].querySelector('.base')!).bottom).toFixed(2),
-				between: next ? +(ink(next).top - ink(rt).bottom).toFixed(2) : null,
-				edges: [
-					Math.round(boxStart(v.querySelector('.base')!)),
-					Math.round(boxStart(v.querySelector('rt')!))
-				],
-				brokenGlosses: [...document.querySelectorAll('.verse.glossed rt')].filter(
-					(r) => r.getClientRects().length > 1
-				).length,
-				splitTokens: [...document.querySelectorAll('.verse .token')].filter(
-					(t) => t.getClientRects().length !== 1
-				).length,
-				initialClears: initial
-					? +(ink(rt).top - initial.getBoundingClientRect().bottom).toFixed(2)
-					: null
-			};
+			return parseFloat(getComputedStyle(document.querySelector('.mark')!).fontSize);
 		}, reading);
-		sizes[reading] = m;
-
-		expect(m.pair, `${reading}: the gloss touches its word`).toBeGreaterThan(3);
-		expect(m.between, `${reading}: the next line is not clear of the gloss`).toBeGreaterThan(
-			m.pair
-		);
-		expect(m.edges[0] - m.edges[1], `${reading}: Latin and gloss are ragged`).toBeLessThan(2);
-		expect(m.brokenGlosses, `${reading}: a gloss broke across lines`).toBe(0);
-		expect(m.splitTokens, `${reading}: a token fragmented`).toBe(0);
+		await page.evaluate(() => document.fonts.ready);
+		const units = await page.locator('main').evaluate(interlinearGeometry);
+		expect(units.length).toBeGreaterThan(6);
+		const first = units.find(
+			(unit) =>
+				units.filter((other) => other.verseId === unit.verseId).length > 6 &&
+				!units.some((other) => other.verseId === unit.verseId && other.initial)
+		)!;
+		expect(first, 'a non-initial verse supplies the spacing control').toBeDefined();
+		const next = units.find(
+			(unit) =>
+				unit.verseId === first.verseId &&
+				unit.sourceInk.baselines[0] > first.sourceInk.baselines[0] + 10
+		)!;
+		expect(next, 'the control verse wraps').toBeDefined();
+		sizes[reading] = { latinPx: first.fontSize, glossPx: first.captionFontSize, markPx };
+		expect(first.clearance, `${reading}: the gloss touches its word`).toBeGreaterThan(3);
+		expect(
+			next.sourceInk.top - first.captionInk.bottom,
+			`${reading}: the next line is not clear of the gloss`
+		).toBeGreaterThan(first.clearance);
+		for (const unit of units) {
+			expect(Math.abs(unit.sourceLeft - unit.captionLeft), `${reading}: ragged pair`).toBeLessThan(
+				2
+			);
+			expect(unit.captionInk.rows, `${reading}: a gloss broke across lines`).toBe(1);
+			expect(unit.sourceInk.rows, `${reading}: a source fragmented`).toBe(1);
+		}
 	}
 
 	// and the apparatus grew WITH the face, rather than being left behind
@@ -756,55 +719,26 @@ test('the reading size is the only knob', async ({ page }) => {
 });
 
 test('the highlight marks the word AND its gloss', async ({ page }) => {
-	// A ruby base is stretched to its column, and the column is as wide as
-	// the longer of the word and its gloss — so a short word under a long
-	// gloss came back with a box far wider than itself and nothing said
-	// why. Measured: the glyphs of „Fiat" are 34px inside an 89px box, and
-	// no inner span can hug them (ruby stretches its base's inline content,
-	// and an inline-block that escaped that would disturb the line box the
-	// raised initial depends on).
-	//
-	// So the box was right and the MEANING was missing: it marks the pair.
-	// The two halves have to be continuous — a gap between them would read
-	// as two marks rather than one.
-	// One box must hold the pair in BOTH width cases — the base stretches
-	// to the ruby column and the annotation does not, so the per-element
-	// tint held only while the gloss was the longer half.
+	// One continuous wash covers the visible Latin and caption, whichever is
+	// wider. Font leading outside the painted glyphs is not part of this claim.
 	for (const [url, kind] of [
 		['/app/pl/orationes/pater-noster?w=w013', 'gloss longer'],
 		['/app/pl/psalmi/118-he?w=w016', 'word longer']
 	] as const) {
 		await page.goto(url);
-		const m = await page.evaluate(() => {
-			const w = document.querySelector('button.word.selected')!;
-			const token = w.closest('.token')!;
-			const st = getComputedStyle(token, '::before');
-			const b = token.getBoundingClientRect();
-			const box = {
-				left: b.left + parseFloat(st.left),
-				right: b.right - parseFloat(st.right),
-				top: b.top + parseFloat(st.top),
-				bottom: b.bottom - parseFloat(st.bottom)
-			};
-			const covers = (r: DOMRect) =>
-				box.left <= r.left + 0.5 &&
-				box.right >= r.right - 0.5 &&
-				box.top <= r.top + 0.5 &&
-				box.bottom >= r.bottom - 0.5;
-			const latin = document.createRange();
-			latin.selectNodeContents(w.querySelector('.base')!);
-			const rt = w.querySelector('rt')!.getBoundingClientRect();
-			return {
-				bg: st.backgroundColor,
-				word: covers(latin.getBoundingClientRect()),
-				gloss: covers(rt),
-				glossAir: box.bottom - rt.bottom
-			};
-		});
-		expect(m.bg, `${kind}: the wash paints`).not.toBe('rgba(0, 0, 0, 0)');
-		expect(m.word, `${kind}: the word sits inside the box`).toBe(true);
-		expect(m.gloss, `${kind}: and so does its gloss`).toBe(true);
-		expect(m.glossAir, `${kind}: with air under its descenders`).toBeGreaterThan(1);
+		const [unit] = await page.locator('.token.word-selected').evaluate(interlinearGeometry);
+		expect(unit.paint, `${kind}: a selection surface exists`).not.toBeNull();
+		const paint = unit.paint!;
+		expect(paint.background, `${kind}: the wash paints`).not.toBe('rgba(0, 0, 0, 0)');
+		for (const ink of [unit.sourceInk, unit.captionInk]) {
+			expect(paint.left).toBeLessThanOrEqual(ink.left + 0.5);
+			expect(paint.right).toBeGreaterThanOrEqual(ink.right - 0.5);
+			expect(paint.top).toBeLessThanOrEqual(ink.top + 0.5);
+			expect(paint.bottom).toBeGreaterThanOrEqual(ink.bottom - 0.5);
+		}
+		expect(paint.bottom - unit.captionInk.bottom, `${kind}: air under descenders`).toBeGreaterThan(
+			1
+		);
 	}
 
 	// with no gloss showing, there is nothing to mark but the word
@@ -848,16 +782,8 @@ test('word selection outranks desktop hover and a phone tap', async ({ page }) =
 	);
 });
 
-// The reader measures in GLYPHS; the box model measures in boxes, and on
-// this page they disagree by a lot. A glossed verse carries line-height
-// 2.3, so a third of a line of air sits ABOVE its first Latin glyph,
-// inside its own box where no neighbouring margin can see it — and its
-// gloss row hangs past the bottom of that box the other way. An earlier
-// version of this test measured Range rects, reported 27 above and 22
-// below, and passed while the owner was looking at 26 above and 45 below.
-//
-// So: line box -> baseline via the font's own ascent -> ink via
-// actualBoundingBox. Half-leading is not ink.
+// Measure visible ink on both sides of structural blocks. Range/font boxes
+// contain ascender and descender space that the reader does not see.
 const inkGaps = (page: Page) =>
 	page.evaluate(() => {
 		const ctx = document.createElement('canvas').getContext('2d')!;
@@ -874,10 +800,10 @@ const inkGaps = (page: Page) =>
 			const base = box.top + half + m.fontBoundingBoxAscent;
 			return side === 'top' ? base - m.actualBoundingBoxAscent : base + m.actualBoundingBoxDescent;
 		};
-		// a verse's ink includes its gloss row, painted below its own box
+		// Include both source and the actual caption, not rt's generated break.
 		const edgeOf = (el: Element, side: 'top' | 'bottom') => {
 			if (!el.classList.contains('verse')) return edge(el, side);
-			const parts = [...el.querySelectorAll('.base, rt')];
+			const parts = [...el.querySelectorAll('.base, .caption-content')];
 			const vals = (parts.length ? parts : [el])
 				.map((e) => edge(e, side))
 				.filter((x): x is number => x != null);
@@ -955,32 +881,32 @@ test('a rubric sits centrally between the verses it parts', async ({ page }) => 
 });
 
 test('a verse reserves the space its raised initial paints', async ({ page }) => {
-	// Vertical padding on an INLINE box paints and reserves nothing — it
-	// does not grow the line — so a drop cap rises out of the top of its
-	// line and into whatever stands above it. Every speaker label on this
-	// movement sat 20px clear of its verse except the four before a drop
-	// cap, which had 13 (owner, 2026-08-10).
-	//
-	// Asserted as SPACE PAINTED == SPACE RESERVED, which is what the fix
-	// claims, rather than as a gap in pixels. The obvious measurement is
-	// the trap here: an initial is set at line-height 0, so its box says
-	// nothing about where its ink is, and comparing rects reports a label
-	// eight pixels INSIDE a verse that looks perfectly clear.
+	// The token paints the wash; the verse reserves the initial's extra reach.
+	// Measure real ink rather than an obsolete inline-padding implementation.
 	await page.goto('/app/en/ordo/praeparatio');
-
+	const token = page.locator('.verse.glossed > .token:has(.initial)').first();
+	await token.locator('button').hover();
+	const [geometry] = await token.evaluate(interlinearGeometry);
 	const m = await page.evaluate(() => {
 		const verses = [...document.querySelectorAll('.verse')];
 		const withCap = verses.find((v) => v.querySelector('.initial'))!;
 		const plain = verses.find((v) => !v.querySelector('.initial'))!;
 		return {
-			painted: parseFloat(getComputedStyle(withCap.querySelector('.base')!).paddingTop),
+			painted: -parseFloat(
+				getComputedStyle(withCap.querySelector('.token:has(.initial)')!, '::before').top
+			),
 			reserved: parseFloat(getComputedStyle(withCap).marginTop),
 			plainReserves: parseFloat(getComputedStyle(plain).marginTop)
 		};
 	});
 
-	expect(m.painted, 'the initial is padded for').toBeGreaterThan(0);
+	expect(m.painted, 'the initial has a reserved paint reach').toBeGreaterThan(0);
 	expect(m.reserved, 'and the verse reserves exactly that').toBeCloseTo(m.painted, 0);
+	expect(geometry.sourceInk.count).toBeGreaterThan(0);
+	expect(geometry.paint).not.toBeNull();
+	expect(geometry.paint!.top, 'the complete raised initial is painted').toBeLessThan(
+		geometry.sourceInk.top
+	);
 	// and no verse pays for a letter it does not carry
 	expect(m.plainReserves, 'a verse without an initial reserves nothing').toBe(0);
 });

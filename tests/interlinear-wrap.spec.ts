@@ -1,4 +1,18 @@
 import { expect, setHelp, test } from './fixtures';
+import type { Locator } from '@playwright/test';
+import { interlinearGeometry } from './interlinear-geometry';
+
+async function expectWrapped(unit: Locator, wrapped: boolean) {
+	await expect
+		.poll(async () => {
+			const [geometry] = await unit.evaluate(interlinearGeometry);
+			return (
+				geometry.sourceHeight > geometry.sourceLeading * 1.5 ||
+				geometry.captionHeight > geometry.captionLeading * 1.5
+			);
+		})
+		.toBe(wrapped);
+}
 
 const ANDREW = '/app/en/formularium/sancti-andreae-apostoli';
 const ANDREW_EPISTLE = '#text-proprium-sancti-andreae-apostoli-epistola';
@@ -78,7 +92,7 @@ test('oversized interlinear units wrap without changing the reading size or thei
 	await page.reload();
 	await page.evaluate(() => document.fonts.ready);
 	const group = page.locator('.token-group', { hasText: 'Omnis enim, quicúmque' });
-	await expect(group).toHaveClass(/wrapped-unit/);
+	await expectWrapped(group, true);
 	await expect(group.locator('button')).toHaveCount(1);
 	await expect(group.locator('.token')).toHaveCount(3);
 	await expect(group.locator('rt')).toHaveText('For everyone who');
@@ -95,7 +109,6 @@ test('oversized interlinear units wrap without changing the reading size or thei
 				baseHeight: base.height,
 				glossTop: gloss.top - box.top,
 				glossBottom: gloss.bottom - box.top,
-				clearance: gloss.top - base.bottom,
 				latinSize: parseFloat(style.fontSize),
 				glossSize: parseFloat(getComputedStyle(element.querySelector('rt')!).fontSize),
 				available:
@@ -108,8 +121,12 @@ test('oversized interlinear units wrap without changing the reading size or thei
 	expect(before.glossSize / before.latinSize).toBeCloseTo(0.64, 2);
 	expect(before.width).toBeLessThanOrEqual(before.available + 0.5);
 	expect(before.baseHeight, 'Latin wraps between complete tokens').toBeGreaterThan(60);
-	expect(before.clearance).toBeGreaterThan(0);
-	expect(before.glossBottom).toBeLessThanOrEqual(before.height + 0.5);
+	const [ink] = await group.evaluate(interlinearGeometry);
+	expect(ink.clearance, 'Latin and caption ink remain separate').toBeGreaterThan(0);
+	expect(
+		ink.captionInk.bottom,
+		'the complete caption ink stays in the reading unit'
+	).toBeLessThanOrEqual(ink.bounds.bottom + 0.5);
 	expect(before.overflow).toBe(0);
 	const button = group.locator('button');
 	await button.hover();
@@ -122,21 +139,21 @@ test('oversized interlinear units wrap without changing the reading size or thei
 	expect(await geometry(), 'selection changes no text geometry').toEqual(before);
 	await page.keyboard.press('Escape');
 
-	// Resizing restores native ruby rather than leaving a stale narrow layout.
+	// Intrinsic inline flow responds without a script or a stale narrow layout.
 	await page.setViewportSize({ width: 1280, height: 900 });
-	await expect(group).not.toHaveClass(/wrapped-unit/);
+	await expectWrapped(group, false);
 	await page.setViewportSize({ width: 390, height: 844 });
-	await expect(group).toHaveClass(/wrapped-unit/);
+	await expectWrapped(group, true);
 	await setHelp(page, 0);
-	await expect(page.locator('.wrapped-unit')).toHaveCount(0);
+	await expect(group.locator('rt')).toHaveCount(0);
 	await setHelp(page, 1);
-	await expect(group).toHaveClass(/wrapped-unit/);
+	await expectWrapped(group, true);
 	await page.getByRole('button', { name: 'text size: largest' }).click();
 	await page.locator('.menu ul').getByRole('button', { name: 'normal', exact: true }).click();
-	await expect(group).not.toHaveClass(/wrapped-unit/);
+	await expectWrapped(group, false);
 	await page.getByRole('button', { name: 'text size: normal' }).click();
 	await page.locator('.menu ul').getByRole('button', { name: 'largest', exact: true }).click();
-	await expect(group).toHaveClass(/wrapped-unit/);
+	await expectWrapped(group, true);
 });
 
 test('long shared and single-word glosses stay attached at narrow and wide measures', async ({
@@ -172,7 +189,7 @@ test('long shared and single-word glosses stay attached at narrow and wide measu
 test('a fitting construction keeps its native ruby baseline', async ({ page }) => {
 	await page.goto('/app/en/formularium/commemoratio-omnium-fidelium-defunctorum');
 	const group = page.locator('.token-group', { hasText: 'est futúrus' });
-	await expect(group).not.toHaveClass(/wrapped-unit/);
+	await expectWrapped(group, false);
 	const offsets = await group.evaluate((element) => {
 		const annotations = [...element.closest('.verse')!.querySelectorAll('rt')];
 		const shared = element.querySelector('rt')!;
@@ -191,7 +208,7 @@ test('one long Latin word fits the smallest reading measure without clipping', a
 	await page.reload();
 	const word = page.locator('[id="dominica-i-passionis-communio.w023"]');
 	const token = word.locator('..');
-	await expect(token).toHaveClass(/wrapped-unit/);
+	await expectWrapped(token, true);
 	await expect(word.locator('.base')).toHaveText('commemoratiónem.');
 	await expect(word.locator('rt')).toHaveText('remembrance');
 	const geometry = () =>
@@ -219,7 +236,7 @@ test('one long Latin word fits the smallest reading measure without clipping', a
 	expect(await geometry()).toEqual(before);
 	await page.keyboard.press('Escape');
 	await page.setViewportSize({ width: 1280, height: 900 });
-	await expect(token).not.toHaveClass(/wrapped-unit/);
+	await expectWrapped(token, false);
 });
 
 test('an extended single-word annotation wraps as one attached unit after a content update', async ({
@@ -228,32 +245,23 @@ test('an extended single-word annotation wraps as one attached unit after a cont
 	await page.setViewportSize({ width: 390, height: 844 });
 	await page.goto(ANDREW);
 	const token = page.locator(`${ANDREW_EPISTLE} .verse > .token`).first();
-	const gloss = token.locator('rt');
+	const gloss = token.locator('.caption-content');
 	const original = await gloss.textContent();
 	const extended = 'A deliberately extended annotation that still belongs to this one Latin word';
 	await gloss.evaluate((element, text) => {
 		element.textContent = text;
 	}, extended);
-	await expect(token).toHaveClass(/wrapped-unit/);
+	await expectWrapped(token, true);
 	await expect(gloss).toHaveText(extended);
 	await expect(token.locator('button')).toHaveCount(1);
-	const geometry = await token.evaluate((element) => {
-		const base = element.querySelector('.base')!.getBoundingClientRect();
-		const gloss = element.querySelector('rt')!.getBoundingClientRect();
-		return {
-			gap: gloss.top - base.bottom,
-			height: gloss.height,
-			lineHeight: parseFloat(getComputedStyle(element.querySelector('rt')!).lineHeight),
-			overflow: document.documentElement.scrollWidth - innerWidth
-		};
-	});
-	expect(geometry.gap).toBeGreaterThanOrEqual(0);
-	expect(geometry.height).toBeGreaterThan(geometry.lineHeight * 1.5);
-	expect(geometry.overflow).toBe(0);
+	const [geometry] = await token.evaluate(interlinearGeometry);
+	expect(geometry.clearance).toBeGreaterThanOrEqual(0);
+	expect(geometry.captionHeight).toBeGreaterThan(geometry.captionLeading * 1.5);
+	expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBe(0);
 	await gloss.evaluate((element, text) => {
 		element.textContent = text;
 	}, original);
-	await expect(token).not.toHaveClass(/wrapped-unit/);
+	await expectWrapped(token, false);
 });
 
 test('print geometry retains every unit and screen geometry recovers afterwards', async ({
@@ -280,7 +288,5 @@ test('print geometry retains every unit and screen geometry recovers afterwards'
 	}
 	await page.setViewportSize({ width: 390, height: 844 });
 	await page.emulateMedia({ media: 'screen' });
-	await expect(page.locator('.token-group', { hasText: 'Omnis enim, quicúmque' })).toHaveClass(
-		/wrapped-unit/
-	);
+	await expectWrapped(page.locator('.token-group', { hasText: 'Omnis enim, quicúmque' }), true);
 });

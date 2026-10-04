@@ -81,6 +81,20 @@ jobs:
           # traversal, redirects and the worker's whole-book promise are proven
           # against build/ alone, which preview cannot do.
           - { name: static-host, project: static-host, shard: '1/1', no_server: '0' }
+          - {
+              name: reader-firefox,
+              project: reader-firefox,
+              browser: firefox,
+              shard: '1/1',
+              no_server: '0'
+            }
+          - {
+              name: reader-webkit,
+              project: reader-webkit,
+              browser: webkit,
+              shard: '1/1',
+              no_server: '0'
+            }
           - { name: sweep-1, project: hosted-sweep, shard: '1/4', no_server: '0' }
           - { name: sweep-2, project: hosted-sweep, shard: '2/4', no_server: '0' }
           - { name: sweep-3, project: hosted-sweep, shard: '3/4', no_server: '0' }
@@ -101,11 +115,11 @@ jobs:
         id: playwright-cache
         with:
           path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          key: playwright-${{ matrix.browser || 'chromium' }}-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install --with-deps ${{ matrix.browser || 'chromium' }}
       - if: steps.playwright-cache.outputs.cache-hit == 'true'
-        run: npx playwright install-deps chromium
+        run: npx playwright install-deps ${{ matrix.browser || 'chromium' }}
       - run: npx playwright test --project=${{ matrix.project }} --no-deps --shard=${{ matrix.shard }}
         env:
           SCRUTABOR_E2E_PREBUILT: '1'

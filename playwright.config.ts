@@ -83,6 +83,18 @@ export default defineConfig({
 			grep: /@static-host/
 		},
 		{
+			name: 'reader-firefox',
+			testMatch: ['interlinear-portability.spec.ts', 'fonts.spec.ts'],
+			grep: /@reader/,
+			use: { browserName: 'firefox', baseURL: 'http://localhost:4174' }
+		},
+		{
+			name: 'reader-webkit',
+			testMatch: ['interlinear-portability.spec.ts', 'fonts.spec.ts'],
+			grep: /@reader/,
+			use: { browserName: 'webkit', baseURL: 'http://localhost:4174' }
+		},
+		{
 			// The typography sweep visits every Polish surface. Running it beside
 			// the ordinary scenarios can starve a navigation even when the page
 			// itself is sound, so it starts only after both editions have released

@@ -86,13 +86,34 @@ def faces() -> list[Face]:
         source = re.search(r"url\(['\"]?\./([^)'\"]+\.woff2)", block)
         ranges = re.search(r"unicode-range:\s*([^;]+);", block)
         if not source or not ranges:
-            raise SystemExit("every generated @font-face needs a WOFF2 and unicode-range")
+            raise SystemExit(
+                "every generated @font-face needs a WOFF2 and unicode-range"
+            )
         path = FONTS / source.group(1)
         if not path.is_file():
             raise SystemExit(f"font face is missing: {path.name}")
         font = TTFont(path, lazy=False)
         try:
             cmap = font.getBestCmap() or {}
+            # CSS disabling locl is not sufficient in every shaping engine.
+            # The committed face must not activate historical Latin u/v swaps.
+            if "GSUB" in font:
+                table = font["GSUB"].table
+                for script in table.ScriptList.ScriptRecord:
+                    for language in script.Script.LangSysRecord:
+                        if language.LangSysTag != "LAT ":
+                            continue
+                        system = language.LangSys
+                        indexes = list(system.FeatureIndex)
+                        if system.ReqFeatureIndex != 0xFFFF:
+                            indexes.append(system.ReqFeatureIndex)
+                        if any(
+                            table.FeatureList.FeatureRecord[i].FeatureTag == "locl"
+                            for i in indexes
+                        ):
+                            raise SystemExit(
+                                f"historical Latin letter substitutions enabled: {path.name}"
+                            )
         finally:
             font.close()
         if not cmap:
@@ -106,7 +127,9 @@ def faces() -> list[Face]:
     if referenced != committed:
         missing = sorted(committed - referenced)
         extra = sorted(referenced - committed)
-        raise SystemExit(f"font/CSS file-set mismatch: unreferenced={missing}, missing={extra}")
+        raise SystemExit(
+            f"font/CSS file-set mismatch: unreferenced={missing}, missing={extra}"
+        )
     return found
 
 

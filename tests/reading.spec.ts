@@ -1,5 +1,6 @@
 // The reading experience: help ladder, panel layers, cross-reference jumps.
 import { setHelp, atRoute, expect, settled, test } from './fixtures';
+import { interlinearGeometry } from './interlinear-geometry';
 
 const AVE = '/app/pl/orationes/ave-maria';
 const CONFITEOR = '/app/pl/ordinarium/confiteor';
@@ -149,11 +150,24 @@ test('a speaker label clears the raised initial below it', async ({ page }) => {
 
 		for (const help of [0, 1] as const) {
 			await setHelp(page, help);
-			const clearance = await page.evaluate(() => {
+			let clearance = await page.evaluate(() => {
 				const label = document.querySelector('main .who')!.getBoundingClientRect();
 				const initial = document.querySelector('main .initial')!.getBoundingClientRect();
 				return initial.top - label.bottom;
 			});
+			if (help === 1) {
+				// The inline source's font box extends above its painted initial.
+				// Measure the actual glyph, not that unused font-box space.
+				const [initial] = await page
+					.locator('main .token:has(.initial)')
+					.evaluate(interlinearGeometry);
+				expect(initial.initial).toBe(true);
+				const labelBottom = await page
+					.locator('main .who')
+					.first()
+					.evaluate((label) => label.getBoundingClientRect().bottom);
+				clearance = initial.sourceInk.top - labelBottom;
+			}
 			expect(clearance, `${width}px viewport, help ${help}`).toBeGreaterThan(1.5);
 		}
 	}
@@ -962,6 +976,7 @@ test('the focus ring marks the permanent word surface without changing its line'
 		// the neighbouring words, whose letters the ring must not reach into
 		const words = [...document.querySelectorAll('button.word')];
 		const i = words.indexOf(w as HTMLButtonElement);
+		if (i < 0) throw new Error('Focused word is outside the measured reading');
 		const inkOf = (b: Element | undefined) => {
 			if (!b) return null;
 			const r = document.createRange();
@@ -1024,22 +1039,25 @@ test('two tinted words meet exactly, with no page between them', async ({ page }
 		// read the inset off the rendered tint, never off the stylesheet
 		const pad =
 			(parseFloat(getComputedStyle(sel, '::before').width) - sel.getBoundingClientRect().width) / 2;
-		const words = [...document.querySelectorAll('button.word')];
+		// The permanent pair owns the wash, including a wider annotation.
+		// Shared constructions count once, not as their nested child words.
+		const words = [...document.querySelectorAll('.verse > .token, .verse > .token-group')];
 		const em = parseFloat(getComputedStyle(sel).fontSize);
 		let widestGap = 0;
+		let neighbours = 0;
 		for (let i = 0; i < words.length - 1; i++) {
-			const a = words[i].querySelector('.base')!.getBoundingClientRect();
-			const b = words[i + 1].querySelector('.base')!.getBoundingClientRect();
+			const a = words[i].getBoundingClientRect();
+			const b = words[i + 1].getBoundingClientRect();
 			if (Math.abs(a.top - b.top) > 2) continue; // same line only
+			neighbours++;
 			widestGap = Math.max(widestGap, b.left - a.right);
 		}
-		return { pad, widestGap, em };
+		return { pad, widestGap, em, neighbours };
 	});
 
 	expect(m.pad, 'the tint has an inset to read').toBeGreaterThan(0);
-	// Stated against the gap this renderer actually produces, not against a
-	// pixel count: the gap is 0.0625em on a Mac and 0.079em on the Linux
-	// runner, and a test written to the first number went red on the second.
+	expect(m.neighbours, 'same-line neighbours were measured').toBeGreaterThan(0);
+	// State the rule against the actual rendered gap, not platform-specific pixels.
 	expect(2 * m.pad, 'two tints reach each other').toBeGreaterThanOrEqual(m.widestGap);
 	expect(
 		(2 * m.pad - m.widestGap) / m.em,

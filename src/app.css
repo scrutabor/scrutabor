@@ -150,8 +150,8 @@ body {
 
 /* EB Garamond's roman carries an OpenType locl rule for the Latin language
    system that substitutes u -> v ("qvia", "cvlpa") — triggered by lang="la".
-   The 1962 liturgical orthography distinguishes u/v, so the feature is
-   disabled; the semantic lang attribute stays. */
+   The subsets omit the Latin-language substitution because some shapers
+   ignore locl=0. Keep the CSS safeguard too, and retain semantic lang="la". */
 :lang(la) {
 	font-feature-settings: 'locl' 0;
 }

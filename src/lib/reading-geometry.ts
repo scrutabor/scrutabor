@@ -1,6 +1,5 @@
 /**
- * How a raised initial is fitted, and how far the gloss row under it has to
- * move to let the letter through.
+ * Measured sidebearings, painted bounds and reservation for raised initials.
  *
  * This is arithmetic over measurements taken off the reading face itself,
  * and it lives apart from the component that renders with it for two
@@ -59,23 +58,6 @@ const SB: Record<string, [number, number]> = {
 	Ú: [0.024, 0.01]
 };
 
-// DESCENT below the baseline, in the letter's own em. Q reaches furthest
-// below the line — at 1.75 its tail put 3.6px into the gloss underneath.
-// (An earlier comment here called Q "the only capital that opens a prayer
-// in this corpus and reaches below the line", which was stale in a
-// load-bearing way: the set of opening capitals grows with every Sunday
-// added, and the coverage test in reading-geometry.test.ts is what now
-// holds the tables to the corpus, not a sentence.)
-//
-// Shrinking it was the wrong answer — the owner's, and he is right: a Q
-// two-thirds the size of every other initial is a worse fault than the
-// one it fixes, and the ink is not where a sideways nudge could help
-// either (the tail falls straight over the START of the gloss word, so
-// clearing it that way would drag the gloss 36px off its own word).
-// The line gives way instead: the whole gloss row of that verse sinks
-// by what the tail needs, so the glosses stay level with EACH OTHER,
-// which is the alignment a reader can see, and only sit a hair lower
-// than the row of some other verse, which nobody can.
 // INK reach above and below the baseline, in the letter's own em. The
 // highlight is drawn on the base box, and that box is sized for text at
 // the reading size: an initial at 1.75 pokes out of the top of it, and
@@ -125,55 +107,16 @@ const PAD = 0.06;
 // rounding is going to cross.
 const COVER = 0.1;
 
-const DESCENT: Record<string, number> = { Q: 0.248 };
-// The gloss row sits GLOSS_GAP lower than ruby puts it, so a descender
-// has that much more room before it: measured 0.272em from the baseline
-// to the ink of the gloss, plus the gap.
-//
-// It used to be 0.32rem, chosen so that even the raised initial's tail
-// cleared the gloss without the line giving way — and that pushed the
-// gloss AWAY from the Latin it belongs to and towards the Latin below,
-// which on a verse that wraps left the two indistinguishable: measured
-// 1.3px to its own line against 2.0px to the next. A reader had no cue
-// which line a gloss went with, and the whole column read as evenly
-// spaced rather than as pairs. So it comes back to what an ordinary
-// descender actually needs (0.341em of room against a p or q's 0.24em),
-// and the raised initial does what it was always meant to do when its
-// tail is too long: sink that one verse's gloss row (see `sink`).
-// A FRACTION OF THE READING SIZE, not a length: mirrors --gloss-gap in
-// app.css, which is what actually positions the row. This copy exists
-// because the sink decision below has to be made in numbers, and the
-// test 'the reading size is the only knob' holds the two together by
-// rendering at two sizes and checking the geometry still lands.
-export const GLOSS_GAP = 0.152;
-const ROOM_BELOW = 0.272 + GLOSS_GAP;
 const RAISED = 1.75;
-// The verse leadings, named here because the RESERVATION below depends on
-// them: the box constants were measured under 1.75, and a block's first
-// line box loses half of what the leading loses. Must match .verse and
-// .verse.glossed in TextBody.svelte — 'the reading size is the only knob'
-// and the label-clearance test hold the render to these numbers.
+// Bare text needs the half-leading lost since these box measurements.
+// Interlinear pairs reserve their caption and leading intrinsically.
 const LEADING_MEASURED = 1.75;
 const LEADING_BARE = 1.5;
-const LEADING_GLOSSED = 2.3;
 // A large letter wants more room around it than its metrics ask for:
 // the one judgement in all of this, and what stops A reading as touching
 // the word before it while measuring as neutral on both sides.
 const AIR = 0.03;
 
-/** How far this verse's gloss row has to sink for the initial's tail,
- * in the reading size's em — nothing unless the letter reaches below
- * the line. */
-export function sinkFor(letter: string, glossed: boolean): number {
-	const descent = DESCENT[letter] ?? 0;
-	if (!glossed || descent === 0) return 0;
-	const over = descent * RAISED - ROOM_BELOW; // in the reading size's em
-	return over <= 0 ? 0 : over + 0.014;
-}
-
-/** [font-size, margin-start, margin-end, gloss lift] for an initial, all
- * in the initial's own em except the lift and the sink, which are in the
- * reading size's em. */
 /** Whether a letter has measured metrics in BOTH tables. The renderer
  * degrades softly on an unmeasured letter (a reader must never crash over
  * a margin), so this is how the build stays loud about it instead: the
@@ -194,23 +137,11 @@ export function initialFit(letter: string, glossed: boolean) {
 		scale,
 		start: side(sbStart),
 		end: side(sbEnd),
-		// a taller glyph raises the ruby base box and the annotation rides
-		// down with it: 4px measured at scale 1.75 against a 1.45rem
-		// reading size, and it scales with the extra size — so 0.23 of
-		// the reading size for every 1 of that extra
-		lift: (scale - 1) * 0.23,
-		sink: sinkFor(letter, glossed),
 		// the wash has to cover the whole letter, top and tail
 		padTop: rise,
 		padBottom: Math.max(PAD, (INK[letter]?.[1] ?? 0) * scale - BOX_DESC + COVER),
-		// The margin that RESERVES the rise above the verse block. padTop
-		// is protrusion above the INLINE box — pure font metric, true at
-		// any leading — but the block's first line box top sits half the
-		// leading's loss closer to the ink than it did at the leading the
-		// constants were measured under. The bare modes' 1.5 owes that
-		// half back or the label above lands on the letter's ink (found
-		// at 1.39px on the Iudica me); glossed leading exceeds 1.75, so
-		// it owes nothing.
-		reserve: rise + Math.max(0, (LEADING_MEASURED - (glossed ? LEADING_GLOSSED : LEADING_BARE)) / 2)
+		// Reserve the raised ink above the verse. Bare modes additionally
+		// restore the half-leading lost against the measured reference box.
+		reserve: rise + (glossed ? 0 : (LEADING_MEASURED - LEADING_BARE) / 2)
 	};
 }

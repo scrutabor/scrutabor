@@ -1,5 +1,6 @@
 // The reading size: three steps, set once, kept.
 import { expect, settled, test } from './fixtures';
+import { interlinearGeometry } from './interlinear-geometry';
 import type { Page } from '@playwright/test';
 
 const trigger = (page: Page) => page.getByRole('button', { name: /text size/i });
@@ -192,9 +193,6 @@ test('largest print on the smallest phone still holds together', async ({ page }
 			splitTokens: [...document.querySelectorAll('.verse .token')]
 				.filter((t) => t.getClientRects().length !== 1)
 				.map((t) => t.textContent?.trim()),
-			brokenGlosses: [...document.querySelectorAll('.verse.glossed rt')]
-				.filter((r) => r.getClientRects().length > 1)
-				.map((r) => r.textContent?.trim()),
 			overflowing: document.documentElement.scrollWidth > document.documentElement.clientWidth,
 			modeRows: (() => {
 				const options = [...document.querySelectorAll('.help .option')];
@@ -204,7 +202,15 @@ test('largest print on the smallest phone still holds together', async ({ page }
 		}));
 		expect(damage.root, `${url}: the size did not take`).toBe('22.4px');
 		expect(damage.splitTokens, `${url}: a token fragmented`).toEqual([]);
-		expect(damage.brokenGlosses, `${url}: a gloss broke across lines`).toEqual([]);
+		const pairs = await page.locator('main').evaluate(interlinearGeometry);
+		expect(pairs.length, `${url}: no interlinear pairs measured`).toBeGreaterThan(0);
+		const brokenGlosses = pairs.filter(
+			(pair) => pair.captionInk.rows > 1 && pair.captionUnwrappedWidth <= pair.availableWidth - 1
+		);
+		expect(
+			brokenGlosses.map((pair) => pair.text),
+			`${url}: a fitting gloss broke across lines`
+		).toEqual([]);
 		expect(damage.overflowing, `${url}: the page scrolls sideways`).toBe(false);
 		// and the three mode words hold one line — the control fits by the
 		// row wrapping as a whole, never by a word fragmenting off
