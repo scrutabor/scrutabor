@@ -8,47 +8,20 @@
 // guard: nothing the server serves may need a character the subsets do
 // not carry. When it fails, regenerate — the message says how.
 import { expect, test } from './fixtures';
-import type { APIRequestContext } from '@playwright/test';
 import { CHARSET } from '../src/lib/fonts/charset';
+import { checkedText, fontInventory } from '../scripts/font-inventory';
 
-/** Every path the site serves, plus the one the sitemap leaves out. */
-async function everyPage(request: APIRequestContext): Promise<string[]> {
-	const sitemap = await (await request.get('/sitemap.xml')).text();
-	const paths = [...sitemap.matchAll(/<loc>https?:\/\/[^/]+([^<]*)<\/loc>/g)].map(
-		(m) => m[1] || '/'
-	);
-	return [...paths, '/pl/404', '/en/404'];
-}
-
-test('nothing served needs a character the font subsets lack @online', async ({ request }) => {
+// Request-only checks run once against the deployed static tree. The
+// physical Latin shaping check below still runs in each browser engine.
+test('nothing served needs a character the font subsets lack @online @static-host', async ({
+	request
+}) => {
 	test.setTimeout(120_000);
-
-	const declared = new Set(CHARSET);
-	const needed = new Map<string, string>();
-	const assets = new Set<string>();
-
-	// Prerendered pages reference their assets relatively (../../_app/…),
-	// so every reference is resolved against the page that made it.
-	const read = async (path: string) => {
-		const body = await (await request.get(path)).text();
-		for (const c of body) if (c.codePointAt(0)! > 0x1f && !declared.has(c)) needed.set(c, path);
-		// Scripts and stylesheets carry text too: a label rendered only
-		// after hydration is still text on the page.
-		for (const m of body.matchAll(/["'(]([^"')]*_app\/[^"')]+\.(?:js|css))["')]/g)) {
-			assets.add(new URL(m[1], `http://localhost${path}`).pathname);
-		}
-	};
-
-	const pages = await everyPage(request);
-	expect(pages.length).toBeGreaterThan(150);
-	for (let i = 0; i < pages.length; i += 12) {
-		await Promise.all(pages.slice(i, i + 12).map(read));
-	}
-	for (const asset of assets) await read(asset);
-	expect(assets.size).toBeGreaterThan(10);
-
+	const inventory = await fontInventory(request, new Set(CHARSET));
+	expect(inventory.documents.length).toBeGreaterThan(150);
+	expect(inventory.assets.length).toBeGreaterThan(10);
 	expect(
-		[...needed].map(
+		inventory.needed.map(
 			([c, where]) =>
 				`${c} (U+${c.codePointAt(0)!.toString(16).toUpperCase().padStart(4, '0')}) on ${where}`
 		),
@@ -56,16 +29,16 @@ test('nothing served needs a character the font subsets lack @online', async ({ 
 	).toEqual([]);
 });
 
-test('the reading face stays small @online', async ({ request }) => {
+test('the reading face stays small @online @static-host', async ({ request }) => {
 	// Follow the CSS to the faces, so this measures what a browser would
 	// actually be asked to download.
-	const home = await (await request.get('/en')).text();
+	const home = await checkedText(request, '/en', 200, 'html');
 	const sheets = [...home.matchAll(/["'(]([^"')]*_app\/[^"')]+\.css)["')]/g)].map(
 		(m) => new URL(m[1], 'http://localhost/en').pathname
 	);
 	const faces = new Set<string>();
 	for (const sheet of sheets) {
-		const css = await (await request.get(sheet)).text();
+		const css = await checkedText(request, sheet, 200, 'css');
 		for (const m of css.matchAll(/url\(([^)]+\.woff2)\)/g)) {
 			faces.add(new URL(m[1].replace(/["']/g, ''), `http://localhost${sheet}`).pathname);
 		}
@@ -76,7 +49,12 @@ test('the reading face stays small @online', async ({ request }) => {
 	expect(faces.size).toBe(4);
 
 	let total = 0;
-	for (const face of faces) total += (await (await request.get(face)).body()).length;
+	for (const face of faces) {
+		const response = await request.get(face);
+		expect(response.status(), face).toBe(200);
+		expect(response.headers()['content-type'], face).toMatch(/^font\/woff2(?:;|$)/);
+		total += (await response.body()).length;
+	}
 	// Upstream is 480K across fourteen files; the four roman subsets are
 	// 55K. A regeneration that quietly stopped subsetting — or that let
 	// the italic faces back in — would sail past every other test here.

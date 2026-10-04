@@ -15,6 +15,11 @@ export default defineConfig({
 
 			adapter: adapter(),
 
+			// The static host reuses 404.html at every missing URL depth.
+			// Root-relative assets and runtime base keep that document styled
+			// and interactive. The folder edition has its own Vite build.
+			paths: { relative: false },
+
 			typescript: {
 				// The offline runtime and the build scripts' tests are code
 				// like any other and were the only code no type-checker read:
