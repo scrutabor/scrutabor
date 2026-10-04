@@ -16199,6 +16199,153 @@
      ],
      "texts": [
       {
+       "id": "ordinarium.praefatio-apostolorum",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-ascensionis",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-annuntiatione",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-assumptione",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-conceptione-immaculata",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-nativitate",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-transfixione",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-visitatione",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-communis",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-d-n-iesu-christi-regis",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-defunctorum",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-epiphaniae",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-nativitatis",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-quadragesimae",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-sanctae-crucis",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-sancti-ioseph-in-festivitate",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-sancti-ioseph-in-solemnitate",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-sanctissimae-trinitatis",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-spiritus-sancti",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.annuntiatio-beatae-mariae-virginis-collecta",
        "roles": [
         "official_liturgical_context"

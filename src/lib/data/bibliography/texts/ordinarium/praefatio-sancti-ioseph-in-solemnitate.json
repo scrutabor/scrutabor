@@ -38,6 +38,28 @@
     }
    ],
    "verified_on": "2026-08-31"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 225",
+    "scan": "leaf n304 / PDF p. 305",
+    "section": "Ordo Missae, lower-right final paragraph: Deinde disiungit manus through Sanctus; excluding Et cum dicit: Benedictus qui venit",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n304/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.praefatio-sancti-ioseph-in-solemnitate.hand-position-rubric.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The approved Benziger printing's Ordo Missae prints the hand-position rubric selected in s01, from Deinde disiungit manus through et inclinatus dicit: Sanctus. The following Benedictus sign-of-the-cross direction and the preceding dialogue directions are outside this use. This is ritual support for s01, not a body-text witness or proof of the corpus's historical import workflow. The selected rubric capitalizes Præfationis; the print has lower-case præfationis."
+    }
+   ],
+   "verified_on": "2026-10-04"
   }
  ],
  "witnesses": []
