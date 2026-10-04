@@ -249,7 +249,13 @@ function phonemes(units: Unit[], tradition: Tradition): string[] {
 		}
 		switch (t) {
 			case 'c':
-				out.push(frontAt(i + 1) ? (tradition === 'roman' ? 'tʃ' : 'ts') : 'k');
+				// Liber Usualis (1961), p. xxxvii: soft CC is T-ch.
+				// Keep the geminate split and the Polish reading unchanged.
+				if (tradition === 'roman' && units[i + 1]?.text === 'c' && frontAt(i + 2)) {
+					out.push('t');
+				} else {
+					out.push(frontAt(i + 1) ? (tradition === 'roman' ? 'tʃ' : 'ts') : 'k');
+				}
 				break;
 			case 'g':
 				out.push(frontAt(i + 1) && tradition === 'roman' ? 'dʒ' : 'g');

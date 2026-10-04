@@ -99,6 +99,57 @@ describe('ipa', () => {
 		expect(ipa('cogitatióne', 'polish')).toBe('kɔ.gi.ta.tsiˈɔ.nɛ');
 	});
 
+	describe('soft cc in the Roman tradition', () => {
+		// Liber Usualis (1961), p. xxxvii: CC before a front vowel is T-ch.
+		// Polish values here guard existing behavior, not a new pronunciation rule.
+		it.each([
+			['ecce', 'ˈɛt.tʃɛ', 'ˈɛk.tsɛ'],
+			['siccitas', 'sit.tʃi.tas', 'sik.tsi.tas'],
+			['áccipe', 'ˈat.tʃi.pɛ', 'ˈak.tsi.pɛ'],
+			['peccávi', 'pɛkˈka.vi', 'pɛkˈka.vi'],
+			['cælis', 'ˈtʃɛ.lis', 'ˈtsɛ.lis'],
+			['Christum', 'ˈkri.stum', 'ˈkri.stum'],
+			['descéndit', 'dɛˈʃɛn.dit', 'dɛˈstsɛn.dit'],
+			['excélsis', 'ɛkˈʃɛl.sis', 'ɛksˈtsɛl.sis']
+		])('preserves both readings of %s', (form, roman, polish) => {
+			expect(ipa(form, 'roman')).toBe(roman);
+			expect(ipa(form, 'polish')).toBe(polish);
+		});
+
+		const variants = [
+			['e', 'ˈat.tʃɛ', 'ˈak.tsɛ'],
+			['i', 'ˈat.tʃi', 'ˈak.tsi'],
+			['y', 'ˈat.tʃi', 'ˈak.tsi'],
+			['é', 'atˈtʃɛ', 'akˈtsɛ'],
+			['í', 'atˈtʃi', 'akˈtsi'],
+			['ý', 'atˈtʃi', 'akˈtsi'],
+			['æ', 'ˈat.tʃɛ', 'ˈak.tsɛ'],
+			['ǽ', 'atˈtʃɛ', 'akˈtsɛ'],
+			['œ', 'ˈat.tʃɛ', 'ˈak.tsɛ'],
+			['œ\u0301', 'atˈtʃɛ', 'akˈtsɛ'],
+			['ë', 'ˈat.tʃɛ', 'ˈak.tsɛ'],
+			['e\u0301', 'atˈtʃɛ', 'akˈtsɛ'],
+			['i\u0301', 'atˈtʃi', 'akˈtsi'],
+			['y\u0301', 'atˈtʃi', 'akˈtsi']
+		].flatMap(([suffix, roman, polish]) => [
+			[`acc${suffix}`, roman, polish],
+			[`acc${suffix}`.toUpperCase(), roman, polish]
+		]);
+		it.each(variants)('handles the grapheme variant %s', (form, roman, polish) => {
+			expect(ipa(form, 'roman')).toBe(roman);
+			expect(ipa(form, 'polish')).toBe(polish);
+		});
+
+		it('keeps the geminate division and printed stress', () => {
+			expect(syllabify('áccipe')).toEqual(['ác', 'ci', 'pe']);
+			expect(syllabized('áccipe')).toBe('ác-ci-pe');
+			expect(stressIndex(syllabify('áccipe'))).toBe(0);
+			expect(syllabify('accépta')).toEqual(['ac', 'cép', 'ta']);
+			expect(stressIndex(syllabify('accépta'))).toBe(1);
+			expect(stressIndex(syllabify('siccitas'))).toBe(-1);
+		});
+	});
+
 	it('treats h, qu and z per tradition', () => {
 		expect(ipa('hódie', 'roman')).toBe('ˈɔ.di.ɛ');
 		expect(ipa('hódie', 'polish')).toBe('ˈxɔ.di.ɛ');
