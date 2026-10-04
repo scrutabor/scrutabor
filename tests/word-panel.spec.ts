@@ -88,6 +88,49 @@ test('shared constructions use the same panel in Ordo Missae', async ({ page }) 
 	await expect(page.locator('aside .construction-card')).toHaveCount(2);
 });
 
+test('the water-and-wine prayer presents its perfect deponent as one English gloss', async ({
+	page
+}) => {
+	const prayer = '/app/en/ordinarium/deus-qui-humanae';
+	await page.goto(prayer);
+	await setHelp(page, 1);
+	const group = page.locator('.token-group', { hasText: 'dignátus est' });
+	await expect(group).toHaveCount(1);
+	await expect(group.locator('rt')).toHaveText('deigned');
+	await group.locator(':scope > button.word-construction').click();
+	await expect(page.locator('aside .form')).toHaveText('dignátus est');
+	await expect(page.locator('aside .gloss')).toHaveText('deigned');
+	await expect(page.locator('aside .construction-title')).toHaveText(['dignátus', 'est']);
+
+	await page.goto(`${prayer}?w=w028`);
+	await expect(page.locator('aside .form')).toHaveText('dignátus est');
+	await expect(page.locator('aside .gloss')).toHaveText('deigned');
+});
+
+test('English prayer readings retain the Cross petition and the Son as the conclusion subject', async ({
+	page
+}) => {
+	await page.goto('/app/en/formularium/exaltatio-sanctae-crucis');
+	await setHelp(page, 2);
+	const cross = page.locator('.proper-part').last().locator('.translation').first();
+	await expect(cross).toContainText(
+		'Stand by us, O Lord our God, and also defend, with the unceasing aid of the holy Cross, those whom You make rejoice in its honor.'
+	);
+	await expect(cross).not.toContainText('sacrament');
+
+	await page.goto('/app/en/formularium/beatae-mariae-virginis-a-rosario');
+	await setHelp(page, 2);
+	await expect(page.locator('.translation').filter({ hasText: 'His promises' })).toContainText(
+		'His promises. He lives and reigns with You'
+	);
+
+	await page.goto(
+		'/app/en/formularium/d-n-iesu-christi-regis?w=d-n-iesu-christi-regis-evangelium.w021'
+	);
+	await expect(page.locator('aside .form')).toHaveText('tibi');
+	await expect(page.locator('aside .gloss')).toHaveText('you');
+});
+
 test('opening focus does not ring the whole sheet', async ({ page }) => {
 	await page.goto(PATER);
 	await page.locator('#w008').focus();

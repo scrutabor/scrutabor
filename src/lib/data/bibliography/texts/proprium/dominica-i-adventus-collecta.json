@@ -22,6 +22,26 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 1",
+    "scan": "leaf n80 / PDF p. 81",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-i-adventus-collecta.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+    }
+   ],
+   "verified_on": "2026-10-04"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
     "printed": "pp. xxxii–xxxiv, 226",
@@ -38,26 +58,6 @@
     }
    ],
    "verified_on": "2026-09-19"
-  },
-  {
-   "edition": "edition.missale-romanum.1962-typica",
-   "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
-   "locator": {
-    "printed": "p. 1",
-    "scan": "leaf n80 / PDF p. 81",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up"
-   },
-   "entries": [
-    {
-     "id": "use.proprium.dominica-i-adventus-collecta.mr1962",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
-    }
-   ],
-   "verified_on": "2026-10-03"
   }
  ],
  "witnesses": []
