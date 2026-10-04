@@ -22,7 +22,51 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 228",
+    "scan": "leaf n307 / PDF p. 308",
+    "section": "Praefatio solemnis de Epiphania Domini, opening",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n307/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.praefatio-epiphaniae.sung-opening.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w001"
+     },
+     "claim": "The same approved Benziger printing identifies the sung Epiphany Preface and gives its body from Vere dignum through nostrae mortalitatis; the body continues on p. 229. This is the opening-page dependency of the sung parallel, not an independent edition or a hand-position rubric."
+    }
+   ],
+   "verified_on": "2026-10-04"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 229",
+    "scan": "leaf n308 / PDF p. 309",
+    "section": "Praefatio solemnis de Epiphania Domini, continuation",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n308/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.praefatio-epiphaniae.sung-continuation.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w030"
+     },
+     "claim": "The same approved Benziger printing continues the sung Epiphany Preface from apparuit through sine fine dicentes. Its intact cum Angelis et Archangelis, cum supports the selected w039-w043 phrase where the p. 287 image is discontinuous. The following Sanctus is outside this Preface body; this is same-edition support, not an independent edition."
+    }
+   ],
+   "verified_on": "2026-10-04"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 287",
     "scan": "leaf n366 / PDF p. 367",
@@ -34,7 +78,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The approved Benziger 1962 printing identifies and prints this Preface body on p. 287, but the image has a substantive discontinuity between Et ideo and Thronis. The transcript preserves that reading; the selected phrase is separately supported by the same printing's sung Preface on pp. 228-229. This page does not support the imported hand-position rubric."
     }
    ],
    "verified_on": "2026-09-12"

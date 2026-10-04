@@ -46,4 +46,28 @@ for (const language of ['pl', 'en'] as const) {
 			await expect(dialog).toHaveCount(0);
 		});
 	}
+	for (const width of [1280, 390]) {
+		test(`${language} Epiphany Preface cites its sung parallel at ${width}px`, async ({ page }) => {
+			await page.setViewportSize({ width, height: 844 });
+			await page.goto(`/app/${language}/ordinarium/praefatio-epiphaniae`);
+			await page
+				.getByRole('button', { name: language === 'pl' ? 'o modlitwie' : 'about this prayer' })
+				.click();
+			const notes = page.locator('details.source-notes');
+			await notes.locator('summary').click();
+			for (const [leaf, printedPage] of [
+				[366, 287],
+				[307, 228],
+				[308, 229]
+			]) {
+				const selector = `a[href="https://archive.org/details/missale-romanum-1962/page/n${leaf}/mode/1up"]`;
+				const link = notes.locator(selector);
+				await expect(link).toHaveCount(1);
+				await expect(link).toBeVisible();
+				await expect(notes.locator('li').filter({ has: page.locator(selector) })).toContainText(
+					`p. ${printedPage}`
+				);
+			}
+		});
+	}
 }
