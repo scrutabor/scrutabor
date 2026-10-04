@@ -30,6 +30,7 @@
 
 	const day = $derived(dayById(chosen));
 	const shown = $derived.by(() => {
+		if (!applied) return msgs.dayLoading;
 		if (day) {
 			const partial = day.partial ? ` ${msgs.dayPartial}` : '';
 			return `${day.title[lang]}${partial}`;
@@ -129,15 +130,19 @@
 		aria-labelledby={`${labelId} day-value`}
 		aria-haspopup="dialog"
 		aria-expanded={open}
+		aria-busy={!applied}
+		disabled={!applied}
 		onclick={() => (open = true)}
 	>
 		<span class="choice-copy">
 			<span id="day-value" class="choice-title">{shown}</span>
-			{#if dateShown}<span class="choice-date">{dateShown}</span>{/if}
+			{#if dateShown || !applied}
+				<span class="choice-date" aria-hidden={!applied}>{dateShown || '\u00a0'}</span>
+			{/if}
 		</span>
 		<svg
 			class="calendar-icon"
-			class:dated={!!dateShown}
+			class:dated={!!dateShown || !applied}
 			viewBox="0 0 20 20"
 			aria-hidden="true"
 			focusable="false"
@@ -145,10 +150,10 @@
 			<rect x="3" y="4.5" width="14" height="12.5" rx="1.75"></rect>
 			<path d="M6.5 2.75v3.5M13.5 2.75v3.5M3 8h14"></path>
 		</svg>
-		<span class="sr-only"> — {msgs.dayPicker.open}</span>
+		{#if applied}<span class="sr-only"> — {msgs.dayPicker.open}</span>{/if}
 	</button>
-	{#if applied}
-		<span class="states" aria-live="polite">
+	<span class="states" aria-live="polite">
+		{#if applied}
 			{#if invalid}
 				<span class="state">{msgs.dayPicker.invalidChoice}</span>
 			{:else if proper.slow}
@@ -160,8 +165,8 @@
 			{:else if chosen && proper.payload?.day === chosen}
 				<span class="sr-only">{shown} — {msgs.dayInPlace}</span>
 			{/if}
-		</span>
-	{/if}
+		{/if}
+	</span>
 </div>
 
 {#if open}
@@ -233,7 +238,11 @@
 		transform: translateY(-0.08rem);
 	}
 
-	.day-open:hover .calendar-icon {
+	.day-open:disabled {
+		cursor: progress;
+	}
+
+	.day-open:not(:disabled):hover .calendar-icon {
 		color: var(--rubric);
 	}
 
