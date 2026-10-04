@@ -22,7 +22,7 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 297",
     "scan": "leaf n376 / PDF p. 377",
@@ -34,7 +34,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited page of the approved Benziger printing identifies and prints the body of the Marian Preface with its same-page Nativitate application. The imported hand-position rubric is outside this use. Printed readings and declared selected-text variants remain distinct."
     }
    ],
    "verified_on": "2026-08-31"
