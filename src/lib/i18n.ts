@@ -95,6 +95,8 @@ export interface Messages {
 	ordoSubtitle: string;
 	ordoDescription: string;
 	ordoProper: string;
+	/** Capability limit, not a claim that every date needs an additional prayer. */
+	formularyScope: string;
 	dayLabel: string;
 	/** The day-status icon and its sheet: which week, or why no texts. */
 	dayStatusLabel: string;
@@ -335,6 +337,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		ordoDescription:
 			'Cały porządek Mszy w rycie z 1962 roku, część po części — z tekstami stałymi i miejscami, w których wchodzą teksty własne dnia.',
 		ordoProper: 'z formularza dnia',
+		formularyScope:
+			'Dobór modlitw nie uwzględnia jeszcze wspomnień liturgicznych ani kalendarzy lokalnych.',
 		dayLabel: 'dzień',
 		dayStatusLabel: 'o dniu',
 		dayNone: 'bez formularza',
@@ -552,6 +556,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		ordoDescription:
 			'The whole order of Mass in the 1962 rite, part by part — the fixed texts, and where the day’s own texts belong.',
 		ordoProper: 'from the day’s formulary',
+		formularyScope:
+			'The selection of prayers does not yet account for liturgical commemorations or local calendars.',
 		dayLabel: 'day',
 		dayStatusLabel: 'about the day',
 		dayNone: 'no formulary',

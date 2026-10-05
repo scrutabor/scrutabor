@@ -1,4 +1,5 @@
 <script lang="ts">
+	import FormularyScopeNote from '$lib/components/FormularyScopeNote.svelte';
 	import type { TextBibliographyEvidence } from '$lib/bibliography';
 	import { arrowNav } from '$lib/arrow-nav';
 	import AboutSheet from '$lib/components/AboutSheet.svelte';
@@ -209,6 +210,7 @@
 		{/if}
 		<ReadingControls {lang} bind:value={helpLevel} {hasRoleChoice} {hasMassFormChoice} />
 		{#if day.partial}<p class="partial smallcaps">{msgs.dayPartial}</p>{/if}
+		<FormularyScopeNote {lang} centered />
 	</header>
 
 	<main class:panel-open={picked !== null || panel.keepPad}>

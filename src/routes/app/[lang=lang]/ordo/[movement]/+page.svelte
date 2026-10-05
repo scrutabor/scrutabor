@@ -21,6 +21,7 @@
 	import { wordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
 	import { proper } from '$lib/proper.svelte';
 	import DayPicker from '$lib/components/DayPicker.svelte';
+	import FormularyScopeNote from '$lib/components/FormularyScopeNote.svelte';
 	import { dayHref } from '$lib/proper.svelte';
 	import type { TextBibliographyEvidence } from '$lib/bibliography';
 	import { textHref } from '$lib/content-url';
@@ -317,6 +318,7 @@
 				<RolePicker {lang} kind="mass" />
 			</div>
 		</div>
+		<FormularyScopeNote {lang} centered />
 	</header>
 
 	{#if hasProper && proper.loading}

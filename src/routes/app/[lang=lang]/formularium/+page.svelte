@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageNav from '$lib/components/PageNav.svelte';
+	import FormularyScopeNote from '$lib/components/FormularyScopeNote.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { PROPER_DAYS, SEASONS } from '$lib/proprium';
 
@@ -33,6 +34,7 @@
 	<main>
 		<h1>{msgs.dayPicker.catalogTitle}</h1>
 		<p class="lead">{msgs.dayPicker.catalogDescription}</p>
+		<FormularyScopeNote {lang} />
 		<p class="ordo-link"><a href="/app/{lang}/ordo" lang="la">Ordo Missæ</a></p>
 		<label class="search">
 			<span class="smallcaps">{msgs.dayPicker.searchLabel}</span>

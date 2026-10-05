@@ -1,4 +1,5 @@
 <script lang="ts">
+	import FormularyScopeNote from '$lib/components/FormularyScopeNote.svelte';
 	import { SvelteDate } from 'svelte/reactivity';
 	import { M, type Lang } from '$lib/i18n';
 	import {
@@ -308,6 +309,7 @@
 				{#if displayedDay}
 					<h3>{displayedDay.title[lang]}</h3>
 					{#if displayedDay.partial}<p class="availability">{msgs.dayPicker.partial}</p>{/if}
+					<FormularyScopeNote {lang} />
 					{#if detail.variants.length > 1}
 						<fieldset class="variants">
 							<legend>{msgs.dayPicker.chooseVariant}</legend>
