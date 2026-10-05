@@ -7,7 +7,7 @@ export async function expectSharedGloss(
 	group: Locator,
 	count: number,
 	gloss: string,
-	expectedWords?: readonly { id: string; href: string }[]
+	expectedWords?: readonly { id: string; href: string; cardId?: string }[]
 ) {
 	await expect(group).toHaveCount(1);
 	await expect(group.locator('rt')).toHaveText(gloss);
@@ -50,7 +50,7 @@ export async function expectSharedGloss(
 		if (expectedWords) {
 			await expect(card.locator('.construction-title')).toHaveAttribute(
 				'id',
-				`construction-${expectedWords[member].id}-title`
+				`construction-${expectedWords[member].cardId ?? expectedWords[member].id}-title`
 			);
 			await expect(card.locator('.head a')).toHaveAttribute('href', expectedWords[member].href);
 		}
