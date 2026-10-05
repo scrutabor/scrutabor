@@ -41,7 +41,7 @@
 						},
 						official_documents_and_liturgical_history: {
 							title: 'Dokumenty urzędowe i historia liturgii',
-							note: 'Dokumenty poświadczające użycie, status lub miejsce tekstu w liturgii.'
+							note: 'Dokumenty objaśniające doktrynę oraz użycie, status lub miejsce tekstu w liturgii.'
 						},
 						scripture_language_and_scholarship: {
 							title: 'Pismo Święte, język i opracowania',
@@ -55,7 +55,7 @@
 						derived_digital_collation_aid: 'pomocnicza transkrypcja cyfrowa',
 						historical_wording_basis: 'podstawa brzmienia przekładu',
 						historical_wording_comparator: 'porównanie brzmienia przekładu',
-						official_liturgical_context: 'świadectwo użycia liturgicznego',
+						official_liturgical_context: 'kontekst doktrynalny lub liturgiczny',
 						scripture_text: 'świadectwo tekstu biblijnego',
 						rubric_control: 'rubryki liturgiczne',
 						liturgical_history: 'historia liturgii',
@@ -94,7 +94,7 @@
 						},
 						official_documents_and_liturgical_history: {
 							title: 'Official documents and liturgical history',
-							note: 'Documents establishing a text’s use, status, or place in the liturgy.'
+							note: 'Documents explaining doctrine or a text’s use, status, or place in the liturgy.'
 						},
 						scripture_language_and_scholarship: {
 							title: 'Scripture, language, and scholarship',
@@ -108,7 +108,7 @@
 						derived_digital_collation_aid: 'supporting digital transcription',
 						historical_wording_basis: 'translation wording basis',
 						historical_wording_comparator: 'translation wording comparator',
-						official_liturgical_context: 'liturgical-use witness',
+						official_liturgical_context: 'doctrinal or liturgical context',
 						scripture_text: 'biblical-text witness',
 						rubric_control: 'liturgical rubrics',
 						liturgical_history: 'liturgical history',
@@ -356,6 +356,7 @@
 		min-width: 0;
 		flex-direction: column;
 		gap: 0.15rem;
+		overflow-wrap: anywhere;
 	}
 
 	summary cite {

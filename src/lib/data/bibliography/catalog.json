@@ -2,6 +2,16 @@
  "schema_version": "1.5.0",
  "works": [
   {
+   "id": "work.adam.rudiments",
+   "responsible": "Alexander Adam",
+   "title": "Rudiments of Latin and English Grammar"
+  },
+  {
+   "id": "work.allen-greenough.latin-grammar",
+   "responsible": "J. H. Allen and J. B. Greenough",
+   "title": "Allen and Greenough's New Latin Grammar"
+  },
+  {
    "id": "work.biblia-sacra-vulgatae-editionis",
    "responsible": "Michael Hetzenauer",
    "title": "Biblia Sacra Vulgatae Editionis"
@@ -15,6 +25,11 @@
    "id": "work.catechismus-catholicae-ecclesiae",
    "responsible": "Catholic Church",
    "title": "Catechismus Catholicae Ecclesiae"
+  },
+  {
+   "id": "work.clementine-text-project",
+   "responsible": "Michael Tweedale and the Clementine Text Project",
+   "title": "Biblia Sacra juxta Vulgatam Clementinam, editio electronica"
   },
   {
    "id": "work.compendium-of-the-catechism-of-the-catholic-church",
@@ -68,6 +83,53 @@
  ],
  "editions": [
   {
+   "id": "edition.adam-johnson.1831",
+   "work": "work.adam.rudiments",
+   "title": "Dr. A. Adam's Rudiments of Latin and English Grammar",
+   "edition_statement": "With expansions and additions by James D. Johnson",
+   "contributors": [
+    "James D. Johnson"
+   ],
+   "place": "Philadelphia",
+   "publisher": "Key & Mielke",
+   "year": "1831",
+   "publication_type": "grammar",
+   "authority": "reference_work",
+   "languages": [
+    "en",
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "The repository identifies this 1831 printing as public domain in the United States. Bibliographic and grammatical reference only; neither the scan nor its prose is republished and no worldwide republication permission is asserted."
+   }
+  },
+  {
+   "id": "edition.allen-greenough.1903",
+   "work": "work.allen-greenough.latin-grammar",
+   "title": "Allen and Greenough's New Latin Grammar for Schools and Colleges",
+   "edition_statement": "1903 edition; the consulted scan has an undated title and a 1903 copyright notice, without an identified later impression date",
+   "contributors": [
+    "J. B. Greenough",
+    "G. L. Kittredge",
+    "A. A. Howard",
+    "Benj. L. D'Ooge"
+   ],
+   "place": "Boston / New York / Chicago / London",
+   "publisher": "Ginn & Company",
+   "year": "1903",
+   "publication_type": "grammar",
+   "authority": "reference_work",
+   "languages": [
+    "en",
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "The repository identifies the historical grammar as public domain in the United States. Bibliographic and grammatical reference only; neither the scan nor its prose is republished and no worldwide republication permission is asserted."
+   }
+  },
+  {
    "id": "edition.biblia-sacra-vulgatae-editionis-1914",
    "work": "work.biblia-sacra-vulgatae-editionis",
    "title": "Biblia Sacra Vulgatae Editionis",
@@ -115,6 +177,23 @@
    "rights": {
     "status": "unverified",
     "basis": "Copyright Libreria Editrice Vaticana. Cited for doctrinal context only, without reproducing its text or claiming permission to republish it."
+   }
+  },
+  {
+   "id": "edition.clementine-text-project.electronic-2005",
+   "work": "work.clementine-text-project",
+   "title": "Biblia Sacra juxta Vulgatam Clementinam",
+   "edition_statement": "Electronic edition, London 2005 title; two-column project PDF at website revision 48da7dbf64990b44afb7fb809dc7e28bc119817f",
+   "place": "London",
+   "year": "2005",
+   "publication_type": "scripture",
+   "authority": "scriptural_edition",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "public-domain",
+    "basis": "The Clementine Text Project's publisher statement dedicates its electronic biblical text to the public domain. This does not include the separately licensed project software or unrelated website assets."
    }
   },
   {
@@ -343,6 +422,24 @@
  ],
  "digital_items": [
   {
+   "id": "item.adam-johnson.1831.commons",
+   "edition": "edition.adam-johnson.1831",
+   "repository": "Wikimedia Commons; Library of Congress / Internet Archive scan",
+   "kind": "scan",
+   "record_url": "https://commons.wikimedia.org/w/index.php?title=File:Dr._A._Adam%27s_Rudiments_of_Latin_and_English_grammar_(IA_draadamsrudiment00adam).pdf&oldid=1134331977",
+   "scan_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Dr._A._Adam%27s_Rudiments_of_Latin_and_English_grammar_%28IA_draadamsrudiment00adam%29.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.allen-greenough.1903.commons",
+   "edition": "edition.allen-greenough.1903",
+   "repository": "Wikimedia Commons; California Digital Library / Internet Archive scan",
+   "kind": "scan",
+   "record_url": "https://commons.wikimedia.org/w/index.php?title=File:Allen_and_Greenough%27s_New_Latin_grammar_for_schools_and_colleges,_founded_on_comparative_grammar;_(IA_allengreenoughsn00alleiala).pdf&oldid=873200795",
+   "scan_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Allen_and_Greenough%27s_New_Latin_grammar_for_schools_and_colleges%2C_founded_on_comparative_grammar%3B_%28IA_allengreenoughsn00alleiala%29.pdf",
+   "access": "open"
+  },
+  {
    "id": "item.biblia-sacra-vulgatae-1914.scan",
    "edition": "edition.biblia-sacra-vulgatae-editionis-1914",
    "repository": "Internet Archive",
@@ -361,11 +458,28 @@
    "access": "open"
   },
   {
+   "id": "item.catechismus-catholicae-ecclesiae.iesus-christus",
+   "edition": "edition.catechismus-catholicae-ecclesiae.latin-1997",
+   "repository": "Holy See official website",
+   "kind": "born-digital",
+   "record_url": "https://www.vatican.va/archive/catechism_lt/p1s2c2a2_lt.htm",
+   "access": "open"
+  },
+  {
    "id": "item.catechismus-catholicae-ecclesiae.septem-petitiones",
    "edition": "edition.catechismus-catholicae-ecclesiae.latin-1997",
    "repository": "The Holy See",
    "kind": "born-digital",
    "record_url": "https://www.vatican.va/archive/catechism_lt/p4s2a3_lt.htm",
+   "access": "open"
+  },
+  {
+   "id": "item.clementine-text-project.48da7db.two-column",
+   "edition": "edition.clementine-text-project.electronic-2005",
+   "repository": "Clementine Text Project / original Bitbucket website repository",
+   "kind": "born-digital",
+   "record_url": "https://bitbucket.org/clementinetextproject/website/src/48da7dbf64990b44afb7fb809dc7e28bc119817f/htdocs/index.html",
+   "revision": "48da7dbf64990b44afb7fb809dc7e28bc119817f",
    "access": "open"
   },
   {

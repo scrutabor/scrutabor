@@ -64,9 +64,10 @@ describe('the reader-facing bibliography', () => {
 				.flatMap(({ sources }) => sources)
 				.find(({ id }) => id === 'edition.catechismus-catholicae-ecclesiae.latin-1997')!;
 			const details = await loadBibliographySource(lang, source);
-			expect(details).toHaveLength(1);
-			expect(details[0]).toMatchObject({ section: '2851, 2854' });
-			expect(details[0].uses).toEqual([
+			const wordEvidence = details.filter(({ uses }) => uses.some(({ kind }) => kind === 'word'));
+			expect(wordEvidence).toHaveLength(1);
+			expect(wordEvidence[0]).toMatchObject({ section: '2851, 2854' });
+			expect(wordEvidence[0].uses).toEqual([
 				expect.objectContaining({
 					kind: 'word',
 					href: `/app/${lang}/orationes/pater-noster?w=w049`
@@ -77,6 +78,48 @@ describe('the reader-facing bibliography', () => {
 				})
 			]);
 			expect(loadedTextKeys()).toEqual(loadedBefore);
+		}
+	);
+
+	test.each(['pl', 'en'] as const)(
+		'keeps Catechism lemma references separate from prayer evidence in %s',
+		async (lang) => {
+			const bibliography = await buildBibliography(lang);
+			const source = bibliography.sections
+				.find(({ id }) => id === 'official_documents_and_liturgical_history')!
+				.sources.find(({ id }) => id === 'edition.catechismus-catholicae-ecclesiae.latin-1997')!;
+			const details = await loadBibliographySource(lang, source);
+			const lemmaEvidence = details.filter(({ uses }) => uses.some(({ kind }) => kind === 'lemma'));
+			expect(lemmaEvidence).toHaveLength(2);
+			for (const [lemma, section] of [
+				['Iesus', '430'],
+				['Christus', '436']
+			]) {
+				const groups = lemmaEvidence.filter((group) => group.section === section);
+				expect(groups).toHaveLength(1);
+				expect(groups[0]).toMatchObject({
+					role: 'official_liturgical_context',
+					url: 'https://www.vatican.va/archive/catechism_lt/p1s2c2a2_lt.htm',
+					uses: [
+						{
+							key: `lemma:${lemma}`,
+							title: lemma,
+							href: `/app/${lang}/lemma?l=${lemma}`,
+							kind: 'lemma'
+						}
+					]
+				});
+				const sources = await loadLemmaBibliography(lang, lemma);
+				expect(sources).toContainEqual({
+					title: source.title,
+					locator: section,
+					url: 'https://www.vatican.va/archive/catechism_lt/p1s2c2a2_lt.htm'
+				});
+			}
+			const prayerEvidence = await loadTextBibliography(lang, 'orationes/pater-noster');
+			const catechism = prayerEvidence.context.filter(({ title }) => title === source.title);
+			expect(catechism).toHaveLength(1);
+			expect(catechism[0].locator).toBe('2851, 2854');
 		}
 	);
 

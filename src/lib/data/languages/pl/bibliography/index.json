@@ -15717,7 +15717,64 @@
        "uses": 1
       }
      ],
-     "lemmas": []
+     "lemmas": [
+      {
+       "id": "Christus",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.catechismus-catholicae-ecclesiae.latin-1997",
+         "digital_item": "item.catechismus-catholicae-ecclesiae.iesus-christus",
+         "role": "official_liturgical_context",
+         "locator": {
+          "section": "436"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.christus.catechism.436",
+           "address": {
+            "kind": "lemma",
+            "lemma": "Christus"
+           },
+           "claim": "The Catechism explains Christ as the Greek rendering of the Hebrew messianic title and its meaning of anointing."
+          }
+         ],
+         "verified_on": "2026-10-05"
+        }
+       ]
+      },
+      {
+       "id": "Iesus",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.catechismus-catholicae-ecclesiae.latin-1997",
+         "digital_item": "item.catechismus-catholicae-ecclesiae.iesus-christus",
+         "role": "official_liturgical_context",
+         "locator": {
+          "section": "430"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.iesus.catechism.430",
+           "address": {
+            "kind": "lemma",
+            "lemma": "Iesus"
+           },
+           "claim": "The Catechism explains the salvation meaning of the name Jesus with reference to Matthew 1:21. This supports the theological explanation, not the complete Latin paradigm or every historical etymological reconstruction."
+          }
+         ],
+         "verified_on": "2026-10-05"
+        }
+       ]
+      }
+     ]
     },
     {
      "edition": "edition.breviarium-romanum.1902-pustet",
@@ -18155,12 +18212,80 @@
    "id": "scripture_language_and_scholarship",
    "entries": [
     {
+     "edition": "edition.adam-johnson.1831",
+     "roles": [
+      "grammatical_support"
+     ],
+     "texts": [],
+     "lemmas": [
+      {
+       "id": "Iesus",
+       "roles": [
+        "grammatical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.adam-johnson.1831",
+         "digital_item": "item.adam-johnson.1831.commons",
+         "role": "grammatical_support",
+         "locator": {
+          "printed": "p. 43",
+          "scan": "Physical PDF page 49",
+          "section": "Fourth declension, exception 3: singular Jesus paradigm",
+          "page_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Dr._A._Adam%27s_Rudiments_of_Latin_and_English_grammar_%28IA_draadamsrudiment00adam%29.pdf#page=49"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.iesus.adam-johnson.1831",
+           "address": {
+            "kind": "lemma",
+            "lemma": "Iesus"
+           },
+           "claim": "The six-case singular paradigm gives Jesus, Jesum and Jesu in the genitive, dative, vocative and ablative. These correspond to Iesus, Iesum and Iesu in the card's I/J spelling convention."
+          }
+         ],
+         "verified_on": "2026-10-05"
+        }
+       ]
+      }
+     ]
+    },
+    {
      "edition": "edition.lewis-short.1879",
      "roles": [
       "lexical_support"
      ],
      "texts": [],
      "lemmas": [
+      {
+       "id": "Abel",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n60, Abel"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.abel.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "Abel"
+           },
+           "claim": "The entry attests indeclinable Abel alongside inflected variants. It supports the indeclinable name form used here, without excluding other historical Latin variants."
+          }
+         ],
+         "verified_on": "2026-10-05"
+        }
+       ]
+      },
       {
        "id": "absolvo",
        "roles": [
@@ -18326,6 +18451,34 @@
           }
          ],
          "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "amen",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n2207, amen: confirming and introductory uses"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.amen.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "amen"
+           },
+           "claim": "The entry distinguishes the confirming response 'so be it' from introductory 'truly', with biblical examples. These are different speech acts, not interchangeable translations in every context."
+          }
+         ],
+         "verified_on": "2026-10-05"
         }
        ]
       },
@@ -21186,6 +21339,34 @@
        ]
       },
       {
+       "id": "saeculum",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n42210, saeculum: duration formulas and ecclesiastical world sense"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.saeculum.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "saeculum"
+           },
+           "claim": "The entry distinguishes age or generation from the ecclesiastical world sense and attests in saecula saeculorum as an everlasting-duration formula."
+          }
+         ],
+         "verified_on": "2026-10-05"
+        }
+       ]
+      },
+      {
        "id": "saturitas",
        "roles": [
         "lexical_support"
@@ -21876,6 +22057,46 @@
      "lemmas": []
     },
     {
+     "edition": "edition.allen-greenough.1903",
+     "roles": [
+      "grammatical_support"
+     ],
+     "texts": [],
+     "lemmas": [
+      {
+       "id": "deus",
+       "roles": [
+        "grammatical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.allen-greenough.1903",
+         "digital_item": "item.allen-greenough.1903.commons",
+         "role": "grammatical_support",
+         "locator": {
+          "printed": "p. 23",
+          "scan": "Physical PDF page 41",
+          "section": "49.g, note on the Vulgate vocative",
+          "page_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Allen_and_Greenough%27s_New_Latin_grammar_for_schools_and_colleges%2C_founded_on_comparative_grammar%3B_%28IA_allengreenoughsn00alleiala%29.pdf#page=41"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.deus.allen-greenough.1903",
+           "address": {
+            "kind": "lemma",
+            "lemma": "deus"
+           },
+           "claim": "The note identifies the Vulgate vocative Deus as identical in form to the nominative. Equal spelling does not imply the same grammatical function."
+          }
+         ],
+         "verified_on": "2026-10-05"
+        }
+       ]
+      }
+     ]
+    },
+    {
      "edition": "edition.valla.elegantiae.1538",
      "roles": [
       "grammatical_support"
@@ -21906,6 +22127,46 @@
       }
      ],
      "lemmas": []
+    },
+    {
+     "edition": "edition.clementine-text-project.electronic-2005",
+     "roles": [
+      "scripture_text"
+     ],
+     "texts": [],
+     "lemmas": [
+      {
+       "id": "Abel",
+       "roles": [
+        "scripture_text"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.clementine-text-project.electronic-2005",
+         "digital_item": "item.clementine-text-project.48da7db.two-column",
+         "role": "scripture_text",
+         "locator": {
+          "printed": "p. 2",
+          "scan": "Physical PDF page 13",
+          "section": "Genesis 4:1–5",
+          "page_url": "https://api.bitbucket.org/2.0/repositories/clementinetextproject/website/src/48da7dbf64990b44afb7fb809dc7e28bc119817f/htdocs/vulgata-2col.pdf#page=13"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.abel.clementine.genesis",
+           "address": {
+            "kind": "lemma",
+            "lemma": "Abel"
+           },
+           "claim": "The narrative presents Abel as the son born after Cain, a keeper of sheep whose flock offering receives God's regard in contrast to Cain's. It supports the card's narrative summary, not Latin inflection or the name's etymology."
+          }
+         ],
+         "verified_on": "2026-10-05"
+        }
+       ]
+      }
+     ]
     }
    ]
   }
