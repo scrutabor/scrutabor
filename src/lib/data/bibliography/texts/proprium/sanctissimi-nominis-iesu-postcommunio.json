@@ -6,7 +6,26 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Nat2-0.txt (section [Postcommunio]); resolved spans: web/www/missa/Latin/Tempora/Nat2-0.txt (line 22); web/www/missa/Latin/Tempora/Nat2-0.txt (line 68); web/www/missa/Latin/Ordo/Prayers.txt (lines 113-114)"
+    "section": "web/www/missa/Latin/Ordo/Prayers.txt [Per eumdem], heading line 107; full conclusion and R. Amen. at lines 108–109"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctissimi-nominis-iesu-postcommunio.conclusion.do44667ff",
+     "address": {
+      "kind": "word",
+      "word": "w055"
+     },
+     "claim": "The literal $Per eumdem directive at Nat2-0 line 69 resolves to this full conclusion and Amen. The equal-text Per eundem alias at lines 111–113 is not the invoked section."
+    }
+   ],
+   "verified_on": "2026-10-05"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Tempora/Nat2-0.txt [Postcommunio], section line 67; body line 68 and $Per eumdem reference line 69"
    },
    "entries": [
     {
@@ -14,38 +33,19 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned Latin Mass file supplies the Postcommunion body and its literal $Per eumdem reference. Its complete conclusion is resolved separately from the declared Prayers.txt dependency; this file alone is not a continuous full-text witness."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-05"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_liturgical_context",
-   "locator": {
-    "printed": "pp. xxxii–xxxiv, 226",
-    "scan": "PDF scans 38–40, 306",
-    "section": "RG 480–481, 511 d/i, 513–514; Ordo conclusion"
-   },
-   "entries": [
-    {
-     "id": "use.proprium.sanctissimi-nominis-iesu-postcommunio.oration-boundaries.mr1962",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
-    }
-   ],
-   "verified_on": "2026-09-19"
-  },
-  {
-   "edition": "edition.missale-romanum.1962-typica",
-   "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 35",
     "scan": "leaf n114 / PDF p. 115",
+    "section": "Sanctissimi Nominis Iesu, Postcommunio; full body and abbreviated Per eundem Dominum cue",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n114/mode/1up"
    },
    "entries": [
@@ -54,10 +54,142 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The approved Benziger printing gives the 54-word Postcommunion body, including accented Omnipotens and titulo, followed by the abbreviated Per eundem Dominum cue. It does not print the complete expanded conclusion on this page."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-05"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 123",
+    "scan": "leaf n202 / PDF p. 203",
+    "section": "Postcommunio continuing Monday after the first Sunday of the Passion, above the Tuesday heading; Dominum nostrum through Deus.",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n202/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctissimi-nominis-iesu-postcommunio.conclusion-middle.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w057"
+     },
+     "claim": "This separate Postcommunion supplies the accented middle conclusion from Dominum nostrum through Deus., including no comma after Christum and the colon and uppercase Qui after tuum. It supplies neither eundem nor the final duration or Amen."
+    }
+   ],
+   "verified_on": "2026-10-05"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 226",
+    "scan": "leaf n305 / PDF p. 306",
+    "section": "Top formula and response before the Nativity preface dialogue; Per omnia saecula saeculorum. R. Amen.",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n305/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctissimi-nominis-iesu-postcommunio.conclusion-terminal.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w073"
+     },
+     "claim": "Only the top duration formula and Amen response supply the final five words of the composite, with musical syllable divisions joined and the response marker omitted. The Nativity preface dialogue and body are excluded; this location does not establish Postcommunion delivery."
+    }
+   ],
+   "verified_on": "2026-10-05"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "Rubricae generales 115 a; Father-addressed oration conclusion and response",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctissimi-nominis-iesu-postcommunio.conclusion-rule.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w055"
+     },
+     "claim": "RG 115 a supplies the full Father-addressed conclusion and separate Amen response. It controls expansion, not every accent or accidental seam of the selected printed composite."
+    }
+   ],
+   "verified_on": "2026-10-05"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xviii",
+    "scan": "leaf n23 / PDF p. 24",
+    "section": "Rubricae generales 115 b; the Son mentioned in the body of a Father-addressed oration",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctissimi-nominis-iesu-postcommunio.conclusion-selection.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w055"
+     },
+     "claim": "RG 115 b prescribes Per eundem Dominum nostrum, etc., ut supra when the Son is mentioned at the beginning of an oration addressed to the Father. The body and its explicit Per eundem cue instantiate this conclusion, not the different terminal Son-mention rule in 115 c."
+    }
+   ],
+   "verified_on": "2026-10-05"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xxxiii",
+    "scan": "leaf n38 / PDF p. 39",
+    "section": "Rubricae generales 505; number, mode and order of Postcommunions; heading of 511, In Missa lecta, dicuntur clara voce",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctissimi-nominis-iesu-postcommunio.oration-boundaries.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "RG 505 makes the Postcommunion orations follow the opening orations in number, mode and order. The heading of RG 511 establishes the read-Mass audible-voice list continued on the following leaf. This is not the Secret rule and does not establish a complete date-specific commemoration inventory."
+    }
+   ],
+   "verified_on": "2026-10-05"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xxxiv",
+    "scan": "leaf n39 / PDF p. 40",
+    "section": "Rubricae generales 511 i, continuing the heading on p. xxxiii; 513 a and 514",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n39/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctissimi-nominis-iesu-postcommunio.postcommunion-delivery.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "RG 511 i expressly includes postcommunions in the audible-voice list for read Mass. RG 513 a includes the orations among the celebrant's sung parts in solemn Mass, extended by RG 514 to sung Mass. These support the current priestly clara/cantus delivery, not the Secret's quiet-body split or an exclusive choir assignment of Amen."
+    }
+   ],
+   "verified_on": "2026-10-05"
   }
  ],
  "witnesses": []
