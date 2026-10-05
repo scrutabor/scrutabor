@@ -551,13 +551,25 @@ test('lemma page shows the headword pronunciation', async ({ page }) => {
 	await expect(page.locator('.pron')).toContainText('/ˈɔ.rɔ/');
 });
 
-test('pronuntiatio page carries the rules and links into the prayers', async ({ page }) => {
-	await page.goto('/app/pl/grammatica/pronuntiatio');
-	await expect(page.locator('h1')).toHaveText('Wymowa');
-	await expect(page.locator('table').first()).toContainText('cælis');
-	await page.locator('a[href="/app/pl/orationes/pater-noster?w=w006"]').click();
-	await expect(page.locator('aside .form')).toHaveText('cælis');
-});
+for (const lang of ['pl', 'en']) {
+	test(`pronuntiatio explains the reading convention and links into prayers (${lang})`, async ({
+		page
+	}) => {
+		await page.goto(`/app/${lang}/grammatica/pronuntiatio`);
+		await expect(page.locator('h1')).toHaveText(lang === 'pl' ? 'Wymowa' : 'Pronunciation');
+		const introduction = page.locator('main > .what');
+		await expect(introduction).toHaveCount(2);
+		await expect(introduction.first()).toContainText('rz.');
+		await expect(introduction.first()).toContainText('pol.');
+		await expect(introduction.last()).toContainText('grá-ti-a');
+		await expect(introduction.last()).toContainText(
+			lang === 'pl' ? 'nie wszystkie jej odmiany' : 'not every variant'
+		);
+		await expect(page.locator('table').first()).toContainText('cælis');
+		await page.locator(`a[href="/app/${lang}/orationes/pater-noster?w=w006"]`).click();
+		await expect(page.locator('aside .form')).toHaveText('cælis');
+	});
+}
 
 test('the 404 page speaks both languages, English first @online', async ({ page }) => {
 	await page.goto('/404');

@@ -66,32 +66,31 @@
 
 		{#if lang === 'pl'}
 			<p class="what">
-				Transkrybujemy wymowę <strong>rzymską</strong> (kościelną, „włoską”) — tę, którą śpiewają
-				księgi z&nbsp;1962 roku i&nbsp;schole gregoriańskie — a&nbsp;tam, gdzie polska tradycja
-				parafialna różni się od rzymskiej, pokazujemy obie: <span class="smallcaps">rz.</span>
-				(rzymska) i&nbsp;<span class="smallcaps">pol.</span> (polska). Za świętego Piusa&nbsp;X Rzym zachęcał
-				cały Kościół do wymowy rzymskiej, ale tradycje narodowe — w&nbsp;tym polska — przetrwały w&nbsp;parafiach
-				i&nbsp;obie są dziś w&nbsp;użyciu.
+				Podajemy transkrypcję wymowy <strong>rzymskiej</strong> (kościelnej). W&nbsp;polskiej wersji
+				czytnika przy słowach, dla których podajemy również odmienny wariant polski, stosujemy
+				skróty <span class="smallcaps">rz.</span> (rzymska) i&nbsp;<span class="smallcaps"
+					>pol.</span
+				>
+				(polska). Poniższa tabela zestawia oba warianty.
 			</p>
 			<p class="what">
-				Podział na sylaby jest w&nbsp;obu tradycjach ten sam — w&nbsp;śpiewie każda sylaba dostaje
-				swoją nutę i&nbsp;„grá-ti-a” ma trzy sylaby w&nbsp;Rzymie i&nbsp;w&nbsp;Polsce. W&nbsp;mowie
-				potocznej polszczyzna ściąga „-tia” do jednej sylaby („gracja”), a&nbsp;nasze transkrypcje
-				zachowują podział śpiewany. Polska tradycja nie jest też jednolita — różni się między
-				regionami i&nbsp;pokoleniami, więc zapisujemy jej najczęstszą postać.
+				Kolumna „polska” przedstawia wybrany wariant tradycyjnej wymowy łaciny, nie wszystkie jej
+				odmiany. W&nbsp;obu transkrypcjach zachowujemy rozdzielne samogłoski w&nbsp;wyrazach takich
+				jak „grá-ti-a” — trzy sylaby, inaczej niż w&nbsp;polskim słowie „gracja”. Podział na sylaby
+				wskazuje sposób odczytania słowa, nie liczbę nut w&nbsp;śpiewie.
 			</p>
 		{:else}
 			<p class="what">
-				We transcribe the <strong>Roman</strong> (ecclesiastical, “Italianate”) pronunciation — the one
-				the Gregorian scholas use when they sing from the 1962 books. Under Saint Pius&nbsp;X, Rome encouraged
-				the whole Church toward the Roman pronunciation. National traditions, the Polish one among them,
-				survive in parishes, and the table below shows both. The Polish tradition is not uniform either
-				— it varies by region and generation, and the transcriptions give its most common form.
+				The transcriptions use <strong>Roman</strong> (ecclesiastical) pronunciation. In the
+				Polish-language reader, a different Polish reading is also shown where provided, with the
+				labels <span class="smallcaps">rz.</span> (Roman) and <span class="smallcaps">pol.</span>
+				(Polish). The table below compares the two readings.
 			</p>
 			<p class="what">
-				Syllable division is identical in both traditions — chant gives each syllable its own note,
-				so “grá-ti-a” has three syllables everywhere. In ordinary speech Polish contracts “-tia” to
-				one syllable (“gracja”), and our transcriptions keep the sung division.
+				The Polish column represents one traditional way of reading Latin, not every variant. Both
+				transcriptions keep adjacent vowels separate in words such as “grá-ti-a”: three syllables,
+				unlike the Polish word “gracja”. Syllable divisions guide the reading of the word. They do
+				not specify how many notes it has in chant.
 			</p>
 		{/if}
 
