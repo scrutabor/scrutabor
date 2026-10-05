@@ -4,7 +4,7 @@
   "about":"Bowed low, with his joined hands resting on the altar, the priest asks God that the offering be carried by the hands of His holy Angel to the altar on high before the divine majesty. The prayer does not name the Angel. The clause beginning with “ut” leads to “repleámur”: those who receive the Body and Blood of Christ ask to be filled with every blessing and grace.",
   "seg":[
     {"id":"s01","nr":"The priest bows low and lays his joined hands upon the altar."},
-    {"id":"s02","tr":"We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:","tc":[340,341],"tb":"revised","g":["humbly","You","we beseech","almighty","God","command","these offerings","be carried","by","the hands","of holy","Angel","Your","to","on high","altar","Your","in","the sight","of divine","majesty","Your"]},
+    {"id":"s02","tr":"We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:","tc":[340,341],"tb":"revised","g":["humbly","You","we beseech","almighty","God",null,null,null,"by","the hands","of holy","Angel","Your","to","on high","altar","Your","in","the sight","of divine","majesty","Your"],"a":[{"s":5,"n":3,"a":0,"g":"command that these offerings be carried"}]},
     {"id":"s04","tr":"so that all of us who","tc":[340,341],"tb":"revised","g":["so that we","all who"]},
     {"id":"s03","nr":"The priest kisses the altar."},
     {"id":"s11","tr":"through this participation at the altar","tc":[340,341],"tb":"revised","g":["through","this","at the altar","participation","most holy","of Son","Your"]},
