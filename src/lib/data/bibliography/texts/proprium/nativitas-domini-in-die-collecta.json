@@ -24,9 +24,9 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
-    "printed": "pp. xxxii–xxxiv, 226",
-    "scan": "PDF scans 38–40, 306",
-    "section": "RG 480–481, 511 d/i, 513–514; Ordo conclusion"
+    "printed": "pp. xxxii–xxxiv, 225–226",
+    "scan": "leaves n37–n39, n304–n305 / PDF pp. 38–40, 305–306",
+    "section": "RG 480–481, 511 d/i, 513–514; Ordo Missae rubric and chant formula after the secrets"
    },
    "entries": [
     {
@@ -37,7 +37,7 @@
      "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-10-07"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

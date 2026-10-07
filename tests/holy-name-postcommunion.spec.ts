@@ -7,7 +7,7 @@ const text = `${day}-postcommunio`;
 const constructions = [
 	['pl', 'w009', 9, ['respicio', 'propitius'], 'wejrzyj łaskawie na'],
 	['pl', 'w035', 34, ['suscipio', 'dignor'], 'racz przyjąć'],
-	['pl', 'w047', 45, ['aeternus', 'praedestinatio', 'titulus'], 'z tytułu wiecznego przeznaczenia'],
+	['pl', 'w047', 45, ['aeternus', 'praedestinatio', 'titulus'], 'na mocy wiecznego przeznaczenia'],
 	['pl', 'w051', 51, ['scribo', 'sum'], 'są zapisane'],
 	['en', 'w009', 9, ['respicio', 'propitius'], 'look graciously upon'],
 	['en', 'w011', 11, ['votum', 'noster'], 'our desires'],

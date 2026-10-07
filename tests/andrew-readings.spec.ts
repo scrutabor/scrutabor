@@ -25,8 +25,8 @@ for (const language of ['pl', 'en'] as const) {
 					[gospel, 'w015', 'Piotrem'],
 					[gospel, 'w055', 'Zebedeusza'],
 					[communion, 'w004', 'sprawię'],
-					[communion, 'w005', 'że wy'],
-					[communion, 'w006', 'staniecie się'],
+					// vos fíeri is one construction, as in the Gospel (w035–w036)
+					[communion, 'w006', 'że staniecie się'],
 					[communion, 'w016', 'Panem']
 				]
 			: [
@@ -95,7 +95,7 @@ for (const language of ['pl', 'en'] as const) {
 		await expect(reading.locator('.token')).toHaveCount(81);
 		await expect(reading.locator('rt')).toHaveCount(language === 'pl' ? 78 : 73);
 		await expect(chant.locator('.token')).toHaveCount(16);
-		await expect(chant.locator('rt')).toHaveCount(15);
+		await expect(chant.locator('rt')).toHaveCount(language === 'pl' ? 14 : 15);
 		const direct =
 			language === 'pl'
 				? [
@@ -122,8 +122,7 @@ for (const language of ['pl', 'en'] as const) {
 		for (const [word, gloss] of language === 'pl'
 			? [
 					['w004', 'sprawię'],
-					['w005', 'że wy'],
-					['w006', 'staniecie się'],
+					['w006', 'że staniecie się'],
 					['w016', 'Panem']
 				]
 			: [

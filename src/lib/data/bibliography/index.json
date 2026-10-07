@@ -5670,7 +5670,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-andreae-apostoli-communio",
@@ -5698,14 +5698,14 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-andreae-apostoli-secreta",
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-bartholomaei-apostoli-alleluia",
@@ -13229,9 +13229,10 @@
       {
        "id": "proprium.sancti-andreae-apostoli-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-andreae-apostoli-communio",
@@ -13257,16 +13258,18 @@
       {
        "id": "proprium.sancti-andreae-apostoli-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-andreae-apostoli-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-bartholomaei-apostoli-alleluia",
@@ -13299,16 +13302,18 @@
       {
        "id": "proprium.sancti-bartholomaei-apostoli-graduale",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-bartholomaei-apostoli-offertorium",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-bartholomaei-apostoli-postcommunio",
@@ -13362,9 +13367,10 @@
       {
        "id": "proprium.sancti-iacobi-apostoli-introitus",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-iacobi-apostoli-offertorium",
@@ -16972,21 +16978,21 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-andreae-apostoli-postcommunio",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-andreae-apostoli-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-bartholomaei-apostoli-collecta",
