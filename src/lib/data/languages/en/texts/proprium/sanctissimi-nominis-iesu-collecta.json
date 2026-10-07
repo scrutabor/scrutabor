@@ -1,7 +1,7 @@
 {
   "id":"proprium.sanctissimi-nominis-iesu-collecta",
   "language":"en",
-  "about":"The collecta of the formulary “Most Holy Name of Jesus” in the 1962 Roman Missal.",
+  "about":"The Collect of the formulary “Most Holy Name of Jesus” in the 1962 Roman Missal.",
   "seg":[
     {"id":"s01","tr":"O God, who appointed Your only-begotten Son as Savior of the human race and commanded Him to be called Jesus, mercifully grant that we who venerate His holy name on earth may also enjoy the sight of Him in heaven. Through this same Jesus Christ, our Lord, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","tb":"revised","g":["God","who",null,null,null,null,null,null,null,"and",null,null,null,"grant","mercifully","that",null,null,null,null,null,null,null,null,null,null,"in","heaven","Through",null,null,null,null,null,null,null,"who","with You","lives","and","reigns","in","the unity",null,null,"God",null,null,null,null],"a":[{"s":2,"n":4,"a":3,"g":"appointed Your only-begotten Son"},{"s":6,"n":3,"a":2,"g":"as Savior of the human race"},{"s":10,"n":3,"a":2,"g":"commanded that He be called Jesus"},{"s":16,"n":6,"a":3,"g":"we who venerate His holy name on earth"},{"s":22,"n":4,"a":3,"g":"may also enjoy the sight of Him"},{"s":29,"n":5,"a":1,"g":"this same Jesus Christ, our Lord"},{"s":34,"n":2,"a":0,"g":"Your Son"},{"s":43,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":46,"n":4,"a":2,"g":"forever and ever"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}

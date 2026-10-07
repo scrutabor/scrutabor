@@ -1,8 +1,8 @@
 {
   "id":"proprium.sanctissimi-nominis-iesu-communio",
   "language":"en",
-  "about":"The communio of the formulary “Most Holy Name of Jesus” in the 1962 Roman Missal.",
+  "about":"The Communion antiphon of the formulary “Most Holy Name of Jesus” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"All the nations Thou hast made shall come and adore before Thee, O Lord, and they shall glorify Thy name; for Thou art great and doest wondrous things: Thou alone art God. Alleluia.","g":["All","the nations","which","Thou hast made","shall come","and","shall adore","before","Thee","Lord","and","shall glorify","name","Thy","for","great","art","Thou","and","doest","wondrous things","Thou","art","God","alone","Alleluia"]}
+    {"id":"s01","tr":"All the nations You have made will come and worship before You, O Lord, and they will glorify Your name; for You are great and do wondrous things: You alone are God. Alleluia.","tb":"revised","g":["All","the nations","which","You have made","will come","and","will worship","before","You","Lord","and","will glorify",null,null,"for","great","are","You","and","doing","wondrous things","You","are","God","alone","Alleluia"],"a":[{"s":12,"n":2,"a":0,"g":"Your name"}]}
   ]
 }

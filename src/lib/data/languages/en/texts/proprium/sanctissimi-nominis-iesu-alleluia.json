@@ -1,8 +1,8 @@
 {
   "id":"proprium.sanctissimi-nominis-iesu-alleluia",
   "language":"en",
-  "about":"The alleluia of the formulary “Most Holy Name of Jesus” in the 1962 Roman Missal.",
+  "about":"The Alleluia of the formulary “Most Holy Name of Jesus” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. My mouth shall speak the praise of the Lord, and let all flesh bless His holy name. Alleluia.","g":["Alleluia","alleluia","the praise","of the Lord","shall speak","mouth","my","and","let bless","all","flesh","name","holy","His","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. My mouth will speak the praise of the Lord, and let all flesh bless His holy name. Alleluia.","tb":"revised","g":["Alleluia","alleluia","the praise","of the Lord","will speak",null,null,"and","let bless","all","flesh",null,null,null,"Alleluia"],"a":[{"s":5,"n":2,"a":0,"g":"my mouth"},{"s":11,"n":3,"a":0,"g":"His holy name"}]}
   ]
 }

@@ -22,7 +22,7 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 35",
     "scan": "leaf n114 / PDF p. 115",
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The approved Benziger printing gives the complete Offertory antiphon on page 35; its printed reference Ps. 85, 12 et 15 names verse 15 where the text is verse 5."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-07"
   }
  ],
  "witnesses": []

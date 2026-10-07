@@ -1,8 +1,8 @@
 {
   "id":"proprium.sanctissimi-nominis-iesu-graduale",
   "language":"en",
-  "about":"The graduale of the formulary “Most Holy Name of Jesus” in the 1962 Roman Missal.",
+  "about":"The Gradual of the formulary “Most Holy Name of Jesus” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Save us, O Lord our God, and gather us from among the nations, that we may confess Thy holy name and glory in Thy glory. Thou, O Lord, art our Father and our Redeemer; Thy name is from everlasting.","g":[null,null,"us","Lord","God","our","and","gather","us","from among","the nations","that","may confess","to name","holy","Thy","and","may glory","in","glory","Thy","Thou","Lord","Father","our","and","Redeemer","our","from","everlasting","name","Thy"],"a":[{"s":0,"n":2,"a":0,"g":"save"}]}
+    {"id":"s01","tr":"Save us, O Lord our God, and gather us from among the nations, that we may give praise to Your holy name and glory in Your glory. You, O Lord, are our Father and our Redeemer; Your name is from everlasting.","tb":"revised","g":[null,null,"us","Lord",null,null,"and","gather","us","from among","the nations","that","we may give praise",null,null,null,"and","we may glory","in",null,null,"You","Lord",null,null,"and",null,null,"from","everlasting",null,null],"a":[{"s":0,"n":2,"a":1,"g":"save"},{"s":4,"n":2,"a":0,"g":"our God"},{"s":13,"n":3,"a":0,"g":"to Your holy name"},{"s":19,"n":2,"a":0,"g":"Your glory"},{"s":23,"n":2,"a":0,"g":"our Father"},{"s":26,"n":2,"a":0,"g":"our Redeemer"},{"s":30,"n":2,"a":0,"g":"Your name"}]}
   ]
 }

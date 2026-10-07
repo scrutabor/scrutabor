@@ -4227,7 +4227,8 @@
     },
     {
       "id": "proprium.sanctissimi-nominis-iesu-alleluia",
-      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-alleluia.json"
+      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-alleluia.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sanctissimi-nominis-iesu-alleluia.json"
     },
     {
       "id": "proprium.sanctissimi-nominis-iesu-collecta",
@@ -4236,23 +4237,28 @@
     },
     {
       "id": "proprium.sanctissimi-nominis-iesu-communio",
-      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-communio.json"
+      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-communio.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sanctissimi-nominis-iesu-communio.json"
     },
     {
       "id": "proprium.sanctissimi-nominis-iesu-epistola",
-      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-epistola.json"
+      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sanctissimi-nominis-iesu-epistola.json"
     },
     {
       "id": "proprium.sanctissimi-nominis-iesu-graduale",
-      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-graduale.json"
+      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sanctissimi-nominis-iesu-graduale.json"
     },
     {
       "id": "proprium.sanctissimi-nominis-iesu-introitus",
-      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-introitus.json"
+      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sanctissimi-nominis-iesu-introitus.json"
     },
     {
       "id": "proprium.sanctissimi-nominis-iesu-offertorium",
-      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-offertorium.json"
+      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sanctissimi-nominis-iesu-offertorium.json"
     },
     {
       "id": "proprium.sanctissimi-nominis-iesu-postcommunio",
@@ -4261,7 +4267,8 @@
     },
     {
       "id": "proprium.sanctissimi-nominis-iesu-secreta",
-      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-secreta.json"
+      "path": "languages/en/texts/proprium/sanctissimi-nominis-iesu-secreta.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sanctissimi-nominis-iesu-secreta.json"
     },
     {
       "id": "proprium.sanctorum-innocentium-martyrum-alleluia",

@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Nat2-0.txt (section [Introitus]); resolved spans: web/www/missa/Latin/Tempora/Nat2-0.txt (lines 13-17); web/www/missa/Latin/Ordo/Prayers.txt (lines 14-15)"
+    "section": "web/www/missa/Latin/Tempora/Nat2-0.txt [Introitus], lines 14, 16 and 18, with &Gloria at line 17 expanded from Ordo/Prayers.txt [Gloria], lines 13–14"
    },
    "entries": [
     {
@@ -14,18 +14,19 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact pinned Latin Mass reading corroborates the complete 77-word Introit as a derived digital witness: the antiphon, the verse, the Gloria Patri resolved from the shared Mass prayers, and the repeated antiphon."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-07"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 34",
     "scan": "leaf n113 / PDF p. 114",
+    "section": "Sanctissimi Nominis Iesu, Antiphona ad Introitum with its cues",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n113/mode/1up"
    },
    "entries": [
@@ -34,10 +35,54 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The approved Benziger printing gives the antiphon Phil. 2, 10-11 and the verse Ps. 8, 2 on page 34, then only the cues Glória Patri and In nómine; the full Gloria Patri stands on page 1, and the antiphon is repeated under page 1's year-round repetition rule and general rubric 427. Page 34 prints Iesu once for Iesus; the witness declares that slip as a corrigendum."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 1",
+    "scan": "leaf n80 / PDF p. 81",
+    "section": "Dominica prima Adventus, Antiphona ad Introitum; full Gloria Patri and the repetition rule",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctissimi-nominis-iesu-introitus.gloria-formula.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w037"
+     },
+     "claim": "The approved Benziger printing gives the full Gloria Patri at the Introit of the first Sunday of Advent, with et semper, et in sǽcula, followed by the rubric that the antiphon is repeated in this way throughout the year. The composite completes the Holy Name cue Glória Patri from this printing."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xxix",
+    "scan": "leaf n34 / PDF p. 35",
+    "section": "Rubricae generales 427; Introit antiphon, psalm verse, Gloria Patri and repetition",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n34/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctissimi-nominis-iesu-introitus.repetition-rule.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w057"
+     },
+     "claim": "RG 427 prescribes the Introit antiphon with its psalm verse and Gloria Patri, after which the antiphon is repeated. It governs the expansion of the cue In nómine, not the accidentals of the repeated words."
+    }
+   ],
+   "verified_on": "2026-10-07"
   }
  ],
  "witnesses": []

@@ -1,8 +1,8 @@
 {
   "id":"proprium.sanctissimi-nominis-iesu-offertorium",
   "language":"en",
-  "about":"The offertorium of the formulary “Most Holy Name of Jesus” in the 1962 Roman Missal.",
+  "about":"The Offertory of the formulary “Most Holy Name of Jesus” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"I will praise Thee, O Lord my God, with my whole heart, and I will glorify Thy name for ever; for Thou, O Lord, art sweet and mild, and plenteous in mercy to all who call upon Thee. Alleluia.","g":["I will praise","to Thee","Lord","God","my","with","whole","heart","my","and","I will glorify","name","Thy","for","ever","for","Thou","Lord","sweet","and","mild","art","and","plenteous","in mercy","to all","who call upon","Thee","Alleluia"]}
+    {"id":"s01","tr":"I will praise You, O Lord my God, with my whole heart, and I will glorify Your name forever; for You, O Lord, are sweet and mild, and plenteous in mercy to all who call upon You, alleluia.","tb":"revised","g":["I will praise","You","Lord",null,null,"with",null,null,null,"and","I will glorify",null,null,"for","ever","for","You","Lord","sweet","and","mild","are","and","plenteous","in mercy","to all","who call upon","You","alleluia"],"a":[{"s":3,"n":2,"a":0,"g":"my God"},{"s":6,"n":3,"a":1,"g":"my whole heart"},{"s":11,"n":2,"a":0,"g":"Your name"}]}
   ]
 }

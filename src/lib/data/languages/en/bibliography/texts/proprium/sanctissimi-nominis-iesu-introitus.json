@@ -1,0 +1,51 @@
+{
+ "id": "proprium.sanctissimi-nominis-iesu-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p.93",
+    "scan": "PDF120",
+    "section": "The Most Holy Name of Jesus, Introit",
+    "page_url": "https://archive.org/details/missal_for_use_of_laity_1853-f_c_husenbeth/page/n119/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.sanctissimi-nominis-iesu-introitus.body.husenbeth1853",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the antiphon, the verse and the repeated antiphon, revised against the Latin in contemporary language: At the name renders in nómine of Phil 2:10, of those in heaven and in all the earth are revised, and the address is modernized. This page prints only Glory, &c. for the doxology."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p.4",
+    "scan": "PDF31",
+    "section": "Ordinary of the Mass, Gloria Patri at the psalm Iudica",
+    "page_url": "https://archive.org/details/missal_for_use_of_laity_1853-f_c_husenbeth/page/n30/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.sanctissimi-nominis-iesu-introitus.gloria-patri.husenbeth1853",
+     "address": {
+      "kind": "word",
+      "word": "w035"
+     },
+     "claim": "Only w035–w054 inherit the familiar Gloria Patri, with Holy Spirit for printed Holy Ghost; world without end is retained in this traditional formula. The surrounding antiphon, verse and repetition are not attributed to this page."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

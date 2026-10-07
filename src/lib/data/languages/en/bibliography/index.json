@@ -6734,7 +6734,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctorum-innocentium-martyrum-alleluia",
@@ -12402,9 +12402,9 @@
       {
        "id": "proprium.in-octava-nativitatis-evangelium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.in-octava-nativitatis-postcommunio",
@@ -14229,7 +14229,7 @@
       {
        "id": "proprium.sanctissimi-nominis-iesu-alleluia",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -14243,35 +14243,35 @@
       {
        "id": "proprium.sanctissimi-nominis-iesu-communio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.sanctissimi-nominis-iesu-epistola",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.sanctissimi-nominis-iesu-graduale",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.sanctissimi-nominis-iesu-introitus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctissimi-nominis-iesu-offertorium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -14285,9 +14285,9 @@
       {
        "id": "proprium.sanctissimi-nominis-iesu-secreta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sanctorum-innocentium-martyrum-alleluia",
@@ -15370,6 +15370,13 @@
        "uses": 2
       },
       {
+       "id": "proprium.sanctissimi-nominis-iesu-alleluia",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sanctissimi-nominis-iesu-collecta",
        "roles": [
         "historical_wording_basis"
@@ -15377,7 +15384,49 @@
        "uses": 2
       },
       {
+       "id": "proprium.sanctissimi-nominis-iesu-communio",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-epistola",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-graduale",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-introitus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-offertorium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sanctissimi-nominis-iesu-postcommunio",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sanctissimi-nominis-iesu-secreta",
        "roles": [
         "historical_wording_basis"
        ],
@@ -18448,6 +18497,13 @@
        "uses": 4
       },
       {
+       "id": "proprium.sanctissimi-nominis-iesu-introitus",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sanctissimi-nominis-iesu-postcommunio",
        "roles": [
         "official_liturgical_context"
@@ -18459,7 +18515,7 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sanctorum-innocentium-martyrum-collecta",
