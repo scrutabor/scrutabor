@@ -41,6 +41,72 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 123",
+    "scan": "leaf n202 / PDF p. 203",
+    "section": "Postcommunio continuing Monday after the first Sunday of the Passion, above the Tuesday heading; Per Dominum nostrum through Deus.",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n202/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-i-adventus-postcommunio.conclusion-middle.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w019"
+     },
+     "claim": "This separate Postcommunion prints the accented conclusion with no comma after Christum and the colon and uppercase Qui after tuum, ending with Deus. The composite uses nostrum through Deus.; the cue words Per Dóminum come from p. 2, and this page supplies neither the final duration nor Amen."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 226",
+    "scan": "leaf n305 / PDF p. 306",
+    "section": "Top conclusion and response before the Nativity preface dialogue; Per omnia saecula saeculorum. R. Amen.",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n305/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-i-adventus-postcommunio.conclusion-terminal.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w034"
+     },
+     "claim": "The top chant line prints Per omnia saecula saeculorum and the response Amen. The composite joins musical syllable divisions and omits the response marker. Only these five words are used; the Nativity preface dialogue and body are excluded."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p.xvii",
+    "scan": "n22/PDF23",
+    "section": "Rubricae generales 115 a; Father-addressed oration conclusion",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-i-adventus-postcommunio.conclusion-rg115a.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w017"
+     },
+     "claim": "RG 115 a supplies the full Father-addressed conclusion, ending with Amen. It controls the expansion rule, not the selected composite transcript's accents or its accidental seams."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
     "printed": "pp. xxxii–xxxiv, 226",
@@ -63,32 +129,10 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "p.xvii",
-    "scan": "n22/PDF23",
-    "section": "RG115a",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
-   },
-   "entries": [
-    {
-     "id": "use.proprium.dominica-i-adventus-postcommunio.conclusion-rg115a.mr1962",
-     "address": {
-      "kind": "word",
-      "word": "w017"
-     },
-     "claim": "Prescribed full conclusion or its explicit reference to the preceding formula. The composite witness retains literal unaccented RG spelling and list punctuation."
-    }
-   ],
-   "verified_on": "2026-09-19"
-  },
-  {
-   "edition": "edition.missale-romanum.1962-typica",
-   "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
-   "locator": {
     "printed": "p.2",
     "scan": "n81/PDF82",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n81/mode/1up",
-    "section": "Proper body and abbreviated conclusion cue; full ending supplied from the separately cited RG115 formula"
+    "section": "Proper body and abbreviated conclusion cue; full ending supplied from the printed formulae on pp. 123 and 226 under RG 115 a"
    },
    "entries": [
     {
@@ -99,7 +143,7 @@
      "claim": "This proper-page locus supplies the body or its continuation and the abbreviated conclusion, not the entire expanded ending."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-10-07"
   }
  ],
  "witnesses": []

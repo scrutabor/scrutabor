@@ -8867,16 +8867,18 @@
       {
        "id": "proprium.dominica-i-adventus-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.dominica-i-adventus-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.dominica-i-in-quadragesima-collecta",
@@ -9133,16 +9135,18 @@
       {
        "id": "proprium.dominica-ii-adventus-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.dominica-ii-adventus-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.dominica-ii-in-quadragesima-collecta",
@@ -9525,16 +9529,18 @@
       {
        "id": "proprium.dominica-iii-adventus-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.dominica-iii-adventus-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.dominica-iii-in-quadragesima-collecta",
@@ -10148,16 +10154,18 @@
       {
        "id": "proprium.dominica-iv-adventus-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.dominica-iv-adventus-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 3
+       "uses": 4
       },
       {
        "id": "proprium.dominica-iv-in-quadragesima-collecta",
@@ -15591,14 +15599,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-i-adventus-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-i-in-quadragesima-collecta",
@@ -15675,14 +15683,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-ii-adventus-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-ii-in-quadragesima-collecta",
@@ -15794,14 +15802,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iii-adventus-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iii-in-quadragesima-collecta",
@@ -15976,14 +15984,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iv-adventus-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iv-in-quadragesima-collecta",

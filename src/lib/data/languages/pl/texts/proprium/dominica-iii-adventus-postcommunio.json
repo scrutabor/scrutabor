@@ -1,9 +1,9 @@
 {
   "id":"proprium.dominica-iii-adventus-postcommunio",
   "language":"pl",
-  "about":"Pokomunia III Niedzieli Adwentu. Modlitwa prosi, aby otrzymana pomoc Boża oczyściła nas z wad i przygotowała na nadchodzące święta.",
+  "about":"Modlitwa po Komunii III Niedzieli Adwentu. Prosi, aby otrzymana pomoc Boża oczyściła nas z wad i przygotowała na nadchodzące święta.",
   "seg":[
-    {"id":"s01","tr":"Błagamy, Panie, Twoją łaskawość, aby to boskie wsparcie oczyściło nas z wad i przygotowało na nadchodzące święta. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Błagamy","Panie","łaskawość","Twoją","aby","te","Boże","pomoce","z","wad","oczyszczonych","na","święta","nadchodzące","nas","przygotowały","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"]},
+    {"id":"s01","tr":"Błagamy, Panie, Twoją łaskawość, aby to boskie wsparcie oczyściło nas z wad i przygotowało na nadchodzące święta. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Błagamy","Panie","łaskawość","Twoją","aby",null,null,null,"z","wad","oczyszczonych","na","święta","nadchodzące","nas","przygotowało","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":5,"n":3,"a":2,"g":"to boskie wsparcie"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

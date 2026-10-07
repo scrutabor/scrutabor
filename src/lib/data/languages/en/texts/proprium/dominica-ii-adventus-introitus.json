@@ -1,12 +1,12 @@
 {
   "id":"proprium.dominica-ii-adventus-introitus",
   "language":"en",
-  "about":"The introit of the Second Sunday of Advent, from Isaias, with a verse of Psalm 79. The antiphon addresses the people of Sion and says what the Lord comes for — to save the nations, and to let His voice be heard.",
+  "about":"The introit of the Second Sunday of Advent, from Isaiah, with a verse of Psalm 79. The antiphon addresses the people of Sion and says what the Lord comes for — to save the nations, and to let His voice be heard.",
   "seg":[
-    {"id":"s01","tr":"O people of Sion, behold, the Lord will come to save the nations; the Lord will make the glory of His voice heard for the joy of your hearts.","tc":[446],"tb":"revised","g":["O people","of Sion","behold","the Lord","will come","to","save","the nations","and","heard","will make","the Lord","the glory","of voice","His","for","joy","of heart","your"]},
+    {"id":"s01","tr":"O people of Sion, behold, the Lord will come to save the nations; the Lord will make the glory of His voice heard for the joy of your hearts.","tc":[446],"tb":"revised","g":["O people","of Sion","behold","the Lord","will come","to","save","the nations","and",null,null,"the Lord","the glory",null,null,"for","joy",null,null],"a":[{"s":9,"n":2,"a":1,"g":"will make heard"},{"s":13,"n":2,"a":0,"g":"of His voice"},{"s":17,"n":2,"a":0,"g":"of your heart"}]},
     {"id":"s02","tr":"You who rule Israel, give ear; You who lead Joseph like a sheep.","tc":[446],"tb":"revised","g":["You who","rule","Israel","give ear","You who","lead","like","a sheep","Joseph"]},
     {"id":"s03","tr":"Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.","tc":[435],"tb":"revised","g":["Glory","to the Father","and","to the Son","and","to the Spirit","Holy","As","it was","in","the beginning","and","now","and","always","and","for","ages","of ages","Amen"],"ex":{"w029":"In the doxology the verb remains unspoken. Liturgical usage supplies the wish “glory be”."}},
     {"id":"s04","nr":"After the doxology the Introit antiphon is repeated from Pópulus Sion to the psalm verse — by the choir at a sung Mass, by the priest himself at a low Mass."},
-    {"id":"s05","tr":"O people of Sion, behold, the Lord will come to save the nations; the Lord will make the glory of His voice heard for the joy of your hearts.","tc":[446],"tb":"revised","g":["O people","of Sion","behold","the Lord","will come","to","save","the nations","and","heard","will make","the Lord","the glory","of voice","His","for","joy","of heart","your"]}
+    {"id":"s05","tr":"O people of Sion, behold, the Lord will come to save the nations; the Lord will make the glory of His voice heard for the joy of your hearts.","tc":[446],"tb":"revised","g":["O people","of Sion","behold","the Lord","will come","to","save","the nations","and",null,null,"the Lord","the glory",null,null,"for","joy",null,null],"a":[{"s":9,"n":2,"a":1,"g":"will make heard"},{"s":13,"n":2,"a":0,"g":"of His voice"},{"s":17,"n":2,"a":0,"g":"of your heart"}]}
   ]
 }

@@ -170,7 +170,8 @@ test('print lays out a complete formulary as one continuous Mass', async ({ page
 	await page.setViewportSize({ width: 760, height: 900 });
 	await page.goto('/app/pl/formularium/dominica-i-adventus');
 
-	await expect(page.locator('.proper-part')).toHaveCount(10);
+	// The four Advent Sundays carry the Preface of the Holy Trinity the Missal prints for them.
+	await expect(page.locator('.proper-part')).toHaveCount(11);
 	await expect(page.locator('.about-pill').first()).toBeHidden();
 	const layout = await page
 		.locator('.proper-part')

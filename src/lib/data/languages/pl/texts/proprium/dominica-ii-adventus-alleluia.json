@@ -1,7 +1,7 @@
 {
   "id":"proprium.dominica-ii-adventus-alleluia",
   "language":"pl",
-  "about":"Werset allelujatyczny II Niedzieli Adwentu, z Psalmu 121 — pieśni pielgrzymów idących do Jerozolimy. Radość bierze się nie z przybycia, lecz z samej wiadomości, że się pójdzie.",
+  "about":"Werset allelujatyczny II Niedzieli Adwentu, z Psalmu 121 — pieśni pielgrzymów idących do Jerozolimy. Radość bierze się nie z przybycia, lecz z samej wiadomości, że się pójdzie. W dni powszednie Adwentu, gdy w ciągu tygodnia powtarza się tę Mszę niedzielną, opuszcza się Alleluja z wersetem i odmawia się tylko graduał.",
   "seg":[
     {"id":"s01","tr":"Alleluja, alleluja.","g":["Alleluja","alleluja"]},
     {"id":"s02","tr":"Ucieszyłem się z tego, co mi powiedziano: Pójdziemy do domu Pana.","g":[null,null,"z","tego","co","powiedziane","zostało","mi","do","domu","Pana","pójdziemy"],"a":[{"s":0,"n":2,"a":0,"g":"Uradowałem się"}]},

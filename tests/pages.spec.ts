@@ -396,7 +396,8 @@ bareTest(
 		await expect(page.locator('html')).not.toHaveAttribute('data-hydrated', 'true');
 		await expect(page.locator('h1')).toHaveText('Dominica I Adventus');
 		await expect(page.locator('main')).toContainText('Ad te levávi');
-		await expect(page.locator('.proper-part')).toHaveCount(10);
+		// Ten proper parts and the shared Preface of the Holy Trinity.
+		await expect(page.locator('.proper-part')).toHaveCount(11);
 	}
 );
 

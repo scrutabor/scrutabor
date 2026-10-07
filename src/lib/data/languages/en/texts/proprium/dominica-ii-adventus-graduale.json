@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The gradual of the Second Sunday of Advent, from Psalm 49. The chant between the readings: the first half says where God comes from, the second calls for the gathering of those who made His covenant.",
   "seg":[
-    {"id":"s01","tr":"From Sion, the splendor of His beauty: God will come openly.","g":["From","Sion","the splendor","of beauty","His","God","openly","will come"]},
-    {"id":"s02","tr":"Gather to Him His saints, who have set His covenant upon sacrifices.","g":["Gather","to Him","holy ones","His","who","have set","covenant","His","upon","sacrifices"]}
+    {"id":"s01","tr":"From Sion, the splendor of His beauty: God will come openly.","g":["From","Sion","the splendor",null,null,"God","openly","will come"],"a":[{"s":3,"n":2,"a":0,"g":"of His beauty"}]},
+    {"id":"s02","tr":"Gather to Him His saints, who have set His covenant upon sacrifices.","g":["Gather","to Him",null,null,"who","have set",null,null,"upon","sacrifices"],"a":[{"s":2,"n":2,"a":0,"g":"His holy ones"},{"s":6,"n":2,"a":0,"g":"His covenant"}]}
   ]
 }

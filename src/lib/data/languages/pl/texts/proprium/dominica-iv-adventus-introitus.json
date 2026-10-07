@@ -1,10 +1,10 @@
 {
   "id":"proprium.dominica-iv-adventus-introitus",
   "language":"pl",
-  "about":"Introit IV Niedzieli Adwentu, od którego cały adwentowy zwyczaj Rorat bierze nazwę. Antyfona wraca po psalmie i po Chwała Ojcu, tak jak każe rubryka pod nią.",
+  "about":"Introit IV Niedzieli Adwentu, od którego cały adwentowy zwyczaj Rorat bierze nazwę. Antyfona wraca po psalmie i po Chwała Ojcu, tak jak nakazuje mszał.",
   "seg":[
     {"id":"s01","tr":"Spuśćcie, niebiosa, rosę z wysoka i niech obłoki deszczem ześlą sprawiedliwego; niech się otworzy ziemia i wyda Zbawiciela.","g":["Spuśćcie rosę","niebiosa","z góry","i","obłoki","niech ześlą z deszczem","Sprawiedliwego","niech się otworzy","ziemia","i","niech wyda","Zbawiciela"],"ex":{"w002":"Ten rzeczownik zmienia rodzaj wewnątrz własnej odmiany, z nijakiego na męski, więc wołacz brzmi cæli, a nie cæla."}},
-    {"id":"s02","tr":"Niebiosa opowiadają chwałę Boga, a firmament głosi dzieła Jego rąk.","g":["Niebiosa","opowiadają","chwałę","Boga","i","dzieła","rąk","Jego","obwieszcza","firmament"]},
+    {"id":"s02","tr":"Niebiosa opowiadają chwałę Boga, a firmament głosi dzieła Jego rąk.","g":["Niebiosa","opowiadają","chwałę","Boga","i","dzieła","rąk","Jego","głosi","firmament"]},
     {"id":"s03","tr":"Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.","g":["Chwała","Ojcu","i","Synowi","i","Duchowi","Świętemu","Jak","była","na","początku","i","teraz","i","zawsze","i","na","wieki","wieków","Amen"]},
     {"id":"s04","nr":"Po doksologii powtarza się antyfonę na wejście od Roráte do wersetu psalmu — we Mszy śpiewanej czyni to schola, we Mszy cichej sam kapłan."},
     {"id":"s05","tr":"Spuśćcie, niebiosa, rosę z wysoka i niech obłoki deszczem ześlą sprawiedliwego; niech się otworzy ziemia i wyda Zbawiciela.","g":["Spuśćcie rosę","niebiosa","z góry","i","obłoki","niech ześlą z deszczem","Sprawiedliwego","niech się otworzy","ziemia","i","niech wyda","Zbawiciela"]}

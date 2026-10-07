@@ -1,8 +1,8 @@
 {
   "id":"proprium.dominica-iii-adventus-communio",
   "language":"en",
-  "about":"The communion antiphon of the Third Sunday of Advent, from Isaias. The call is addressed to those who lack heart, not to the strong.",
+  "about":"The communion antiphon of the Third Sunday of Advent, from Isaiah. The call is addressed to those who lack heart, not to the strong.",
   "seg":[
-    {"id":"s01","tr":"Say to the fainthearted: Take courage and do not fear. Behold, our God will come and save us.","tc":[448],"tb":"revised","g":["Say","you fainthearted","Take courage","and","do not","fear","Behold","God","our","will come","and","will save","us"]}
+    {"id":"s01","tr":"Say: You fainthearted, take courage and do not fear. Behold, our God will come and save us.","tc":[448],"tb":"revised","g":["Say","you fainthearted","take courage","and","do not","fear","behold",null,null,"will come","and","will save","us"],"a":[{"s":7,"n":2,"a":0,"g":"our God"}]}
   ]
 }

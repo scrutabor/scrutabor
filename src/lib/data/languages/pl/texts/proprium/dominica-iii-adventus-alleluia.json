@@ -1,10 +1,10 @@
 {
   "id":"proprium.dominica-iii-adventus-alleluia",
   "language":"pl",
-  "about":"Werset allelujatyczny III Niedzieli Adwentu powtarza początek kolekty I Niedzieli: prośbę, aby Pan okazał swoją moc i przyszedł nas zbawić.",
+  "about":"Werset allelujatyczny III Niedzieli Adwentu, Ps 79, 3 według numeracji Wulgaty (Ps 80 w numeracji hebrajskiej), z psalmu graduału, powtarza początek kolekty I Niedzieli: prośbę, aby Pan wzbudził swoją moc i przyszedł nas zbawić. W dni powszednie Adwentu, gdy w ciągu tygodnia powtarza się tę Mszę niedzielną, opuszcza się Alleluja z wersetem i odmawia się tylko graduał.",
   "seg":[
     {"id":"s01","tr":"Alleluja, alleluja.","g":["Alleluja","alleluja"]},
-    {"id":"s02","tr":"Wzbudź, Panie, swoją potęgę i przyjdź, abyś nas zbawił.","g":["Wzbudź","Panie","moc","Twoją","i","przybądź","abyś","zbawionymi","uczynił","nas"]},
+    {"id":"s02","tr":"Wzbudź, Panie, swoją potęgę i przyjdź, abyś nas zbawił.","g":["Wzbudź","Panie","moc","swoją","i","przyjdź","abyś","zbawionymi","uczynił","nas"]},
     {"id":"s03","tr":"Alleluja.","g":["Alleluja"]}
   ]
 }

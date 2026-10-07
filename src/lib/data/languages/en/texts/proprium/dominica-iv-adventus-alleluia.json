@@ -1,10 +1,10 @@
 {
   "id":"proprium.dominica-iv-adventus-alleluia",
   "language":"en",
-  "about":"The alleluia verse of the Fourth Sunday of Advent. The last Sunday before Christmas asks one thing, that He not delay.",
+  "about":"The alleluia verse of the Fourth Sunday of Advent. The last Sunday before Christmas asks one thing, that He not delay. On the ferias of Advent, when this Sunday Mass is used through the week, the Alleluia and its verse are omitted and only the gradual is said.",
   "seg":[
     {"id":"s01","tr":"Alleluia, alleluia.","tc":[451],"tb":"normalized","g":["Alleluia","alleluia"]},
-    {"id":"s02","tr":"Come, O Lord, and do not delay; forgive the offenses of Your people Israel.","tc":[451],"tb":"revised","g":["Come","Lord","and","do not","delay","forgive","the offenses","of people","Your","Israel"]},
+    {"id":"s02","tr":"Come, O Lord, and do not delay; forgive the offenses of Your people Israel.","tc":[451],"tb":"revised","g":["Come","Lord","and","do not","delay","forgive","the offenses",null,null,"Israel"],"a":[{"s":7,"n":2,"a":0,"g":"of Your people"}]},
     {"id":"s03","tr":"Alleluia.","tc":[451],"tb":"exact","g":["Alleluia"]}
   ]
 }

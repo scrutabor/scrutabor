@@ -62,6 +62,12 @@
      "relation": "proper"
     },
     {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
      "key": "communio",
      "role": "communio",
      "text": "proprium/dominica-i-adventus-communio",
@@ -134,6 +140,12 @@
      "role": "secreta",
      "text": "proprium/dominica-ii-adventus-secreta",
      "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
     },
     {
      "key": "communio",
@@ -210,6 +222,12 @@
      "relation": "proper"
     },
     {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
      "key": "communio",
      "role": "communio",
      "text": "proprium/dominica-iii-adventus-communio",
@@ -282,6 +300,12 @@
      "role": "secreta",
      "text": "proprium/dominica-iv-adventus-secreta",
      "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
     },
     {
      "key": "communio",
