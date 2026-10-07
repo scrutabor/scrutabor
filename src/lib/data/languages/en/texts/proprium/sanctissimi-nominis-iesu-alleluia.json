@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The Alleluia of the formulary “Most Holy Name of Jesus” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. My mouth will speak the praise of the Lord, and let all flesh bless His holy name. Alleluia.","tb":"revised","g":["Alleluia","alleluia","the praise","of the Lord","will speak",null,null,"and","let bless","all","flesh",null,null,null,"Alleluia"],"a":[{"s":5,"n":2,"a":0,"g":"my mouth"},{"s":11,"n":3,"a":0,"g":"His holy name"}]}
+    {"id":"s01","tr":"Alleluia, alleluia. My mouth will speak the praise of the Lord, and let all flesh bless His holy name. Alleluia.","tb":"revised","g":["Alleluia","alleluia","the praise","of the Lord",null,null,null,"and",null,null,null,null,null,null,"Alleluia"],"a":[{"s":4,"n":3,"a":0,"g":"my mouth will speak"},{"s":8,"n":3,"a":0,"g":"let all flesh bless"},{"s":11,"n":3,"a":0,"g":"His holy name"}]}
   ]
 }

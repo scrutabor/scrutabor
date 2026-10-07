@@ -5,8 +5,8 @@ import { interlinearGeometry } from './interlinear-geometry';
 // Each expectation preserves the complete contextual construction, not just its verb.
 const subjects: Record<string, [string, number, string][]> = {
 	apostolorum: [
-		['w031', 4, 'that it may be governed by those same leaders'],
-		['w037', 8, 'whom You appointed to preside over it as shepherds, deputies in Your work']
+		['w027', 3, 'keep it under continual protection'],
+		['w035', 3, 'as vicars of Your work']
 	],
 	ascensionis: [['w046', 7, 'that He might grant us a share in His divinity']],
 	epiphaniae: [['w036', 6, 'He renewed us by the new light of His immortality']],

@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The collecta of the formulary “7th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"O God, Whose providence never fails to set things in order, we humbly beseech You to remove from us whatever is harmful and grant whatever is for our benefit. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["God","whose","providence","in","its own","ordering","not","is deceived","You","as suppliants","we entreat","that","harmful things","all","You may remove","and","all things","to us","to be profitable","You may grant","Through","Lord","our","Jesus","Christ","Son","Your","Who","with You","lives","and","reigns","in","the unity","of the Spirit","Holy","God","for","all","ages","of ages"]},
+    {"id":"s01","tr":"O God, Whose providence never fails to set things in order, we humbly beseech You to remove from us whatever is harmful and grant whatever is for our benefit. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["God","whose","providence","in","its own","ordering",null,null,"You","as suppliants","we entreat","that","harmful things","all","You may remove","and","all things","to us","to be profitable","You may grant","Through","Lord","our","Jesus","Christ","Son","Your","Who","with You","lives","and","reigns","in","the unity",null,null,"God","for","all","ages","of ages"],"a":[{"s":6,"n":2,"a":1,"g":"is not deceived"},{"s":34,"n":2,"a":0,"g":"of the Holy Spirit"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

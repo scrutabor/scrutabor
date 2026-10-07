@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Saint Bartholomew the Apostle” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"You will make them princes over all the earth; they will be mindful of Your name, O Lord. In place of Your fathers, sons have been born to You; therefore the peoples will give You praise.","g":["You will appoint","them","princes","over","all","the earth","mindful","will be",null,null,"Lord","Instead of",null,null,null,null,"to You","sons","therefore","peoples","will praise","You"],"a":[{"s":8,"n":2,"a":0,"g":"of Your name"},{"s":12,"n":2,"a":0,"g":"Your fathers"},{"s":14,"n":2,"a":0,"g":"have been born"}]}
+    {"id":"s01","tr":"You will make them princes over all the earth; they will be mindful of Your name, O Lord. In place of Your fathers, sons have been born to You; therefore the peoples will give You praise.","g":["You will appoint","them","princes","over","all","the earth",null,null,null,null,"Lord","Instead of",null,null,null,null,"to You","sons","therefore","peoples","will praise","You"],"a":[{"s":6,"n":2,"a":0,"g":"they will be mindful"},{"s":8,"n":2,"a":0,"g":"of Your name"},{"s":12,"n":2,"a":0,"g":"Your fathers"},{"s":14,"n":2,"a":0,"g":"have been born"}]}
   ]
 }

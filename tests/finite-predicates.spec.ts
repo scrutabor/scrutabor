@@ -262,12 +262,12 @@ const contexts = [
 		[85, 86, 87],
 		['Were not', 'ten', 'cleansed']
 	],
-	// Only the shared auxiliary is covered here; the earlier negative order is a separate issue.
+	// The negation and the shared auxiliary both stay with the first verb.
 	[
 		'en',
 		'sanctorum-simonis-et-iudae-apostolorum-evangelium',
 		[93, 94, 95],
-		['had come', 'and', 'spoken']
+		['had not come', 'and', 'spoken']
 	],
 	[
 		'pl',

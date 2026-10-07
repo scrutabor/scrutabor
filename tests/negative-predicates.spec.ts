@@ -13,11 +13,12 @@ const predicates = [
 		'will not be put to shame'
 	],
 	[
+		// The postponed subject joins the predicate.
 		'proprium/dominica-i-adventus-evangelium',
-		['w104', 'w105'],
+		['w104', 'w105', 'w106', 'w107'],
 		'w105',
-		['non', 'præteríbit'],
-		'will not pass away'
+		['non', 'præteríbit', 'generátio', 'hæc'],
+		'this generation will not pass away'
 	],
 	[
 		'proprium/dominica-i-adventus-evangelium',

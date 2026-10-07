@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Third Sunday after Epiphany” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"The right hand of the Lord hath wrought strength; the right hand of the Lord hath exalted me. I shall not die, but live, and declare the works of the Lord.","g":["The right hand","of the Lord","hath wrought","strength","the right hand","of the Lord","hath exalted","me","not","I shall die","but","live","and","declare","works","of the Lord"]}
+    {"id":"s01","tr":"The right hand of the Lord hath wrought strength; the right hand of the Lord hath exalted me. I shall not die, but live, and declare the works of the Lord.","g":["The right hand","of the Lord","hath wrought","strength","the right hand","of the Lord","hath exalted","me",null,null,"but","live","and","declare","works","of the Lord"],"a":[{"s":8,"n":2,"a":1,"g":"I shall not die"}]}
   ]
 }

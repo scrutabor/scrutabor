@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Saint James the Apostle” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Their sound has gone forth into all the earth, and their words to the ends of the world.","g":["Into","all","the earth","has gone forth","sound","their","and","to","the ends",null,null,"words","their"],"a":[{"s":9,"n":2,"a":0,"g":"of the world"}]}
+    {"id":"s01","tr":"Their sound has gone forth into all the earth, and their words to the ends of the world.","g":["Into","all","the earth","has gone forth",null,null,"and","to","the ends",null,null,null,null],"a":[{"s":4,"n":2,"a":0,"g":"their sound"},{"s":9,"n":2,"a":0,"g":"of the world"},{"s":11,"n":2,"a":0,"g":"their words"}]}
   ]
 }

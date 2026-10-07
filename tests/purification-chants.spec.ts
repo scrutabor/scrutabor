@@ -7,12 +7,12 @@ const split = (text: string) => text.split(' | ');
 
 const shared = {
 	pl: 'Przyjęliśmy | Boże | miłosierdzie | Twoje | w | środku | świątyni | Twojej | według | imienia | Twego | Boże | tak | i | chwała | Twoja | aż po | krańce | ziemi',
-	en: 'We have received | God | mercy | Your | in | the midst | of temple | Your | according to | name | Your | God | so | also | praise | Your | to | the ends | of the earth'
+	en: 'We have received | God | Your mercy | in | the midst | of Your temple | according to | Your name | God | so | also | Your praise | to | the ends | of the earth'
 };
 const readings = {
 	graduale: {
 		pl: `${shared.pl} | Jak | słyszeliśmy | tak | i | ujrzeliśmy | w | mieście | Boga | naszego | na | górze | świętej | Jego`,
-		en: `${shared.en} | As | we have heard | so | also | we have seen | in | the city | of God | our | on | the mountain | holy | His`
+		en: `${shared.en} | As | we have heard | so | also | we have seen | in | the city | of our God | on | His holy mountain`
 	},
 	alleluia: {
 		pl: 'Alleluja | alleluja | Starzec | Dziecię | niósł | Dziecię | zaś | starcem | rządziło | Alleluja',
@@ -20,12 +20,12 @@ const readings = {
 	},
 	offertorium: {
 		pl: 'Rozlana | została | łaska | na | wargach | twoich | dlatego | pobłogosławił | ciebie | Bóg | na | wieki | i | na | wieki | wieków',
-		en: 'Poured out | has been | grace | upon | lips | your | therefore | God has blessed you | for | ever | and | for | ever | and ever'
+		en: 'Grace has been poured out | upon | your lips | therefore | God has blessed you | for | ever | and | for | ever | and ever'
 	}
 } as const;
 const introitAntiphon = {
 	pl: `${shared.pl} | sprawiedliwości | pełna | jest | prawica | Twoja`,
-	en: `${shared.en} | of justice | full | is | right hand | Your`
+	en: `${shared.en} | full of justice | is | Your right hand`
 };
 const labels = {
 	pl: {

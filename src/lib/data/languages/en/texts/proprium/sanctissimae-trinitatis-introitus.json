@@ -5,7 +5,7 @@
   "seg":[
     {"id":"s01","tr":"Blessed be the Holy Trinity and undivided Unity; we shall praise Him, for He has shown us His mercy.","g":["Blessed","be","Holy","Trinity","and","undivided","Unity","we shall praise","Him","for","has shown","to us","mercy","His"]},
     {"id":"s02","tr":"O Lord, our Lord, how wonderful is Thy name in all the earth!","g":["Lord","Lord","our","how","wonderful","is","name","Thy","throughout","all","the earth"]},
-    {"id":"s03","tr":"Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.","g":["Glory","to the Father","and","to the Son","and","to the Spirit","Holy","As","it was","in","the beginning","and","now","and","ever","and","unto","ages","of ages","Amen"]},
+    {"id":"s03","tr":"Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.","g":["Glory","to the Father","and","to the Son","and",null,null,"As","it was","in","the beginning","and","now","and","ever","and","unto","ages","of ages","Amen"],"a":[{"s":5,"n":2,"a":0,"g":"to the Holy Spirit"}]},
     {"id":"s04","nr":"When it is finished, the antiphon “Benedícta sit sancta Trínitas” is repeated up to the psalm."},
     {"id":"s05","tr":"Blessed be the Holy Trinity and undivided Unity; we shall praise Him, for He has shown us His mercy.","g":["Blessed","be","Holy","Trinity","and","undivided","Unity","we shall praise","Him","for","has shown","to us","mercy","His"]}
   ]

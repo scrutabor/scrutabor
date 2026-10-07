@@ -97,8 +97,8 @@ for (const subject of cases) {
 				['w021', 'was'],
 				['w022', 'presented'],
 				['w025', 'may You cause'],
-				['w039', 'with You'],
-				['w040', 'lives']
+				// The conclusion reads as one group.
+				['w040', 'who lives and reigns with You']
 			]) {
 				await expect(page.locator(`button[id="${text}.${word}"] rt`)).toHaveText(gloss);
 			}

@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The Gradual of the formulary “Purification of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"We have received Your mercy, O God, in the midst of Your temple. As is Your name, O God, so too is Your praise, to the ends of the earth. As we have heard, so too have we seen, in the city of our God, on His holy mountain.","g":["We have received","God","mercy","Your","in","the midst","of temple","Your","according to","name","Your","God","so","also","praise","Your","to","the ends","of the earth","As","we have heard","so","also","we have seen","in","the city","of God","our","on","the mountain","holy","His"]}
+    {"id":"s01","tr":"We have received Your mercy, O God, in the midst of Your temple. As is Your name, O God, so too is Your praise, to the ends of the earth. As we have heard, so too have we seen, in the city of our God, on His holy mountain.","g":["We have received","God",null,null,"in","the midst",null,null,"according to",null,null,"God","so","also",null,null,"to","the ends","of the earth","As","we have heard","so","also","we have seen","in","the city",null,null,"on",null,null,null],"a":[{"s":2,"n":2,"a":0,"g":"Your mercy"},{"s":6,"n":2,"a":0,"g":"of Your temple"},{"s":9,"n":2,"a":0,"g":"Your name"},{"s":14,"n":2,"a":0,"g":"Your praise"},{"s":26,"n":2,"a":0,"g":"of our God"},{"s":29,"n":3,"a":0,"g":"His holy mountain"}]}
   ]
 }

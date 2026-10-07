@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “Commemoration of All the Faithful Departed — Mass I” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"May the prayer of Your suppliants, O Lord, benefit the souls of Your servants and handmaids, that You may deliver them from all sins and make them sharers in Your redemption. You live and reign with God the Father in the unity of the Holy Spirit, God, forever and ever.","g":["the souls","we beseech","Lord","servants","and handmaids","Your","prayer","may benefit","of us who supplicate","that","them","and","from","sins","all","deliver","and","of Your","redemption",null,null,"partakers","who","live","and","reign","with","God","the Father","in","the unity","of the Spirit","Holy","God","for","all","ages","of ages"],"a":[{"s":19,"n":2,"a":0,"g":"You may make"}]},
+    {"id":"s01","tr":"May the prayer of Your suppliants, O Lord, benefit the souls of Your servants and handmaids, that You may deliver them from all sins and make them sharers in Your redemption. You live and reign with God the Father in the unity of the Holy Spirit, God, forever and ever.","g":["the souls","we beseech","Lord","servants","and handmaids","Your","prayer","may benefit","of us who supplicate","that","them","and","from","sins","all","deliver","and","of Your","redemption",null,null,"partakers","who","live","and","reign","with","God","the Father","in","the unity",null,null,"God","for","all","ages","of ages"],"a":[{"s":19,"n":2,"a":0,"g":"You may make"},{"s":31,"n":2,"a":0,"g":"of the Holy Spirit"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

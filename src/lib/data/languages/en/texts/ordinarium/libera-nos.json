@@ -12,7 +12,7 @@
     {"id":"s07","nr":"The priest slips the paten under the Host, uncovers the chalice, genuflects, rises, takes the Host, and holding it over the chalice with both hands breaks it in two."},
     {"id":"s08","tr":"Through the same Jesus Christ, Your Son and our Lord,","tc":[237,238],"tb":"revised","g":["through","the same","Lord","our","Jesus","Christ","Son","Your"]},
     {"id":"s09","nr":"The priest lays the half held in his right hand on the paten and breaks a small particle from the half remaining in his left."},
-    {"id":"s10","tr":"who, being God, lives and reigns with You in the unity of the Holy Spirit,","tc":[237,238],"tb":"revised","g":["Who","with You","lives","and","reigns","in","the unity","of the Spirit","Holy","God"]},
+    {"id":"s10","tr":"who, being God, lives and reigns with You in the unity of the Holy Spirit,","tc":[237,238],"tb":"revised","g":["Who","with You","lives","and","reigns","in","the unity",null,null,"God"],"a":[{"s":7,"n":2,"a":0,"g":"of the Holy Spirit"}]},
     {"id":"s11","nr":"The priest joins the other half to the half on the paten, holds the small particle over the chalice, and says in an audible voice or sings:"},
     {"id":"s12","tr":"for ever and ever.","tb":"exact","g":["for","all","ages","of ages"]},
     {"id":"s13","tr":"Amen.","tc":[237,238],"tb":"exact","g":["Amen"]}

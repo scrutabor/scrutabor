@@ -6,14 +6,6 @@ const day = 'sanctissimi-nominis-iesu';
 const text = `${day}-collecta`;
 const constructions = [
 	[
-		'pl',
-		'w020',
-		17,
-		['qui', 'sanctus', 'nomen', 'veneror', 'in', 'terra'],
-		'my, którzy czcimy na ziemi Jego święte imię'
-	],
-	['pl', 'w026', 23, ['is', 'quoque', 'aspectus', 'perfruor'], 'cieszyli się także oglądaniem Go'],
-	[
 		'en',
 		'w006',
 		3,
@@ -41,6 +33,20 @@ const constructions = [
 	['en', 'w044', 44, ['spiritus', 'sanctus'], 'of the Holy Spirit'],
 	['en', 'w049', 47, ['per', 'omnis', 'saeculum', 'saeculum'], 'forever and ever']
 ] as const;
+
+// The Polish relative clause reads word by word: the correlative *czyje … Tego* composes without
+// shared groups.
+test('pl Holy Name Collect reads its relative clause word by word', async ({ page }) => {
+	await page.goto(`/app/pl/formularium/${day}`);
+	await setHelp(page, 1);
+	const captions = await page.locator(`#text-proprium-${text} rt`).allTextContents();
+	const clause =
+		'czyje | święte | imię | czcimy | na | ziemi | Tego | także | oglądaniem | cieszyli się'.split(
+			' | '
+		);
+	const start = captions.indexOf('czyje');
+	expect(captions.slice(start, start + clause.length)).toEqual(clause);
+});
 
 for (const [language, anchor, first, lemmata, caption] of constructions) {
 	const members = lemmata.map((lemma, offset) => {

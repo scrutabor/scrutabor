@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “All Saints” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Fear the Lord, all His Saints, for nothing is wanting to those who fear Him. But those who seek the Lord will not be lacking in any good.","g":["Fear","the Lord","all","holy ones","His","for","nothing","is lacking","to those who fear","Him","Those who seek","but","the Lord","not","shall lack","any","good thing"]}
+    {"id":"s01","tr":"Fear the Lord, all His Saints, for nothing is wanting to those who fear Him. But those who seek the Lord will not be lacking in any good.","g":["Fear","the Lord","all","holy ones","His","for","nothing","is lacking","to those who fear","Him","Those who seek","but","the Lord",null,null,"any","good thing"],"a":[{"s":13,"n":2,"a":1,"g":"they shall not lack"}]}
   ]
 }

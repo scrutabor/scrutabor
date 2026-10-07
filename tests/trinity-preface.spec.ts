@@ -9,7 +9,6 @@ const groups: Record<'pl' | 'en', [string, number, string[], string][]> = {
 		['w044', 43, ['unus', 'trinitas', 'substantia'], 'Trójcy jednej istoty']
 	],
 	en: [
-		['w005', 2, ['dignus', 'et', 'iustus', 'sum'], 'it is right and just'],
 		[
 			'w015',
 			10,

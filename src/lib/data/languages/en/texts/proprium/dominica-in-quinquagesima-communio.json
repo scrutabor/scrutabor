@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Quinquagesima Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"They ate and were filled exceedingly, and the Lord gave them their desire; they were not disappointed in their desire.","g":["They ate","and","filled","were","exceedingly","and","desire","their","gave","them","the Lord","not","were","disappointed","in","desire","their"]}
+    {"id":"s01","tr":"They ate and were filled exceedingly, and the Lord gave them their desire; they were not disappointed in their desire.","g":["They ate","and","filled","were","exceedingly","and","desire","their","gave","them","the Lord",null,null,"disappointed","in","desire","their"],"a":[{"s":11,"n":2,"a":1,"g":"they were not"}]}
   ]
 }

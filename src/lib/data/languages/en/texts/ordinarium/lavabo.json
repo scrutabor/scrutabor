@@ -11,7 +11,7 @@
     {"id":"s06","tr":"in whose hands are iniquities; their right hand is filled with gifts.","g":["in","whose","hands","iniquities","are","right hand","their",null,null,"with gifts"],"a":[{"s":7,"n":2,"a":0,"g":"is filled"}]},
     {"id":"s07","tr":"But I have walked in my innocence; redeem me and have mercy on me.","tc":[434],"tb":"revised","g":["I","however","in","innocence","my","walked","have","redeem","me","and","have mercy","on me"],"ex":{"w059":"With “ingréssus” it forms the single predicate “I have walked”."}},
     {"id":"s08","tr":"My foot has stood on level ground; in the assemblies I will bless You, O Lord.","tc":[434],"tb":"revised","g":["foot","my","has stood","in","the straight way","in","the assemblies","I will bless","You","Lord"]},
-    {"id":"s09","tr":"Glory be to the Father, and to the Son, and to the Holy Spirit.","tc":[435],"tb":"revised","g":["glory","to the Father","and","to the Son","and","to the Spirit","Holy"],"ex":{"w075":"In the doxology Latin leaves “sit” unspoken: “Glória [sit] Patri” — “glory [be] to the Father”."}},
+    {"id":"s09","tr":"Glory be to the Father, and to the Son, and to the Holy Spirit.","tc":[435],"tb":"revised","g":["glory","to the Father","and","to the Son","and",null,null],"a":[{"s":5,"n":2,"a":0,"g":"to the Holy Spirit"}],"ex":{"w075":"In the doxology Latin leaves “sit” unspoken: “Glória [sit] Patri” — “glory [be] to the Father”."}},
     {"id":"s10","tr":"As it was in the beginning, is now, and ever shall be, world without end. Amen.","tc":[435],"tb":"exact","g":["as","it was","in","the beginning","and","now","and","ever","and","for","ages","of ages","amen"]}
   ]
 }

@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The tractus of the formulary “Saint Matthias the Apostle” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"You granted him the desire of his soul, and did not deprive him of the wish of his lips. For You went before him with blessings of sweetness. You set on his head a crown of precious stone.","g":["The desire","of soul","his","You have granted","to him","and","the wish","of lips","his","not","You have withheld","from him","For","You have gone before","him","with","blessings","of sweetness","You have set","on","head","his","a crown","of","stone","precious"]}
+    {"id":"s01","tr":"You granted him the desire of his soul, and did not deprive him of the wish of his lips. For You went before him with blessings of sweetness. You set on his head a crown of precious stone.","g":["The desire","of soul","his","You have granted","to him","and","the wish","of lips","his",null,null,"from him","For","You have gone before","him","with","blessings","of sweetness","You have set","on","head","his","a crown","of","stone","precious"],"a":[{"s":9,"n":2,"a":1,"g":"You have not withheld"}]}
   ]
 }

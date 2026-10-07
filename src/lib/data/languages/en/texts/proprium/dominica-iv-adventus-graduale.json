@@ -4,6 +4,6 @@
   "about":"The gradual of the Fourth Sunday of Advent, from Psalm 144. The nearness is conditional — He is near to those who call upon Him in truth.",
   "seg":[
     {"id":"s01","tr":"The Lord is near to all who call upon Him: to all who call upon Him in truth.","tc":[451],"tb":"revised","g":["Near","is","the Lord","to all","those calling upon","Him","to all","who","call upon","Him","in","truth"]},
-    {"id":"s02","tr":"My mouth will speak the praise of the Lord, and let all flesh bless His holy name.","tc":[451],"tb":"revised","g":["The praise","of the Lord","will speak",null,null,"and","let bless","all","flesh",null,null,null],"a":[{"s":3,"n":2,"a":0,"g":"my mouth"},{"s":9,"n":3,"a":0,"g":"His holy name"}]}
+    {"id":"s02","tr":"My mouth will speak the praise of the Lord, and let all flesh bless His holy name.","tc":[451],"tb":"revised","g":["The praise","of the Lord",null,null,null,"and",null,null,null,null,null,null],"a":[{"s":2,"n":3,"a":0,"g":"my mouth will speak"},{"s":6,"n":3,"a":0,"g":"let all flesh bless"},{"s":9,"n":3,"a":0,"g":"His holy name"}]}
   ]
 }

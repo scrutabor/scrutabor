@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Immaculate Conception of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. You are wholly beautiful, O Mary, and the original stain is not in you. Alleluia.","g":["Alleluia","Alleluia","All","beautiful","are you","Mary","and","stain","original","not","is","in","you","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. You are wholly beautiful, O Mary, and the stain of original sin is not in you. Alleluia.","g":["Alleluia","alleluia","All","beautiful","are you","Mary","and",null,null,null,null,"in","you","Alleluia"],"a":[{"s":7,"n":2,"a":0,"g":"the original stain"},{"s":9,"n":2,"a":1,"g":"is not"}]}
   ]
 }

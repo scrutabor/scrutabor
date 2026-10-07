@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The tractus of the formulary “Chair of Saint Peter the Apostle” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"You are Peter, and upon this rock I will build My Church. And the gates of hell shall not prevail against it; and I will give you the keys of the kingdom of heaven. Whatever you bind upon earth will be bound in heaven as well. And whatever you loose upon earth will be loosed in heaven as well.","g":["You","are","Peter","and","upon","this","rock","I will build","Church","My","And","the gates","of hell","not","shall prevail","against","it","and","you","I will give","the keys","of the kingdom","of heaven","Whatever","you bind","upon","earth","shall be","bound","also","in","heaven","And","whatever","you loose","upon","earth","shall be","loosed","also","in","heaven"]}
+    {"id":"s01","tr":"You are Peter, and upon this rock I will build My Church. And the gates of hell shall not prevail against it; and I will give you the keys of the kingdom of heaven. Whatever you bind upon earth will be bound in heaven as well. And whatever you loose upon earth will be loosed in heaven as well.","g":["You","are","Peter","and","upon","this","rock","I will build","Church","My","And","the gates","of hell",null,null,"against","it","and","you","I will give","the keys","of the kingdom","of heaven","Whatever","you bind","upon","earth","shall be","bound","also","in","heaven","And","whatever","you loose","upon","earth","shall be","loosed","also","in","heaven"],"a":[{"s":13,"n":2,"a":1,"g":"shall not prevail"}]}
   ]
 }

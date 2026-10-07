@@ -5,6 +5,6 @@
   "seg":[
     {"id":"s01","tr":"Alleluia, alleluia. Send forth Thy Spirit, and they shall be created, and Thou shalt renew the face of the earth. Alleluia.","g":["Alleluia","alleluia","Send forth","Spirit","Thy","and","they shall be created","and","Thou shalt renew","the face","of the earth","Alleluia"]},
     {"id":"s02","nr":"Here all genuflect."},
-    {"id":"s03","tr":"Come, Holy Ghost, fill the hearts of Thy faithful and kindle in them the fire of Thy love.","g":["Come","Holy","Spirit","fill","Thy","the hearts","of the faithful","and","of Thy","love","in","them","the fire","kindle"]}
+    {"id":"s03","tr":"Come, Holy Ghost, fill the hearts of Thy faithful and kindle in them the fire of Thy love.","g":["Come",null,null,"fill","Thy","the hearts","of the faithful","and","of Thy","love","in","them","the fire","kindle"],"a":[{"s":1,"n":2,"a":1,"g":"Holy Spirit"}]}
   ]
 }

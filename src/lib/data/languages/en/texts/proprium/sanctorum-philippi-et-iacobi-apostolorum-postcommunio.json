@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “Saints Philip and James, Apostles” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Filled with the sacrament of salvation, we beseech You, O Lord, to help us by the prayers of those whose feast we are celebrating. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["We beseech","Lord","saving","Filled","with mysteries","that","whose","solemnity","we celebrate","their","by prayers","may be helped","through","Lord","our","Jesus","Christ","Son","Your","Who","with You","lives","and","reigns","in","the unity","of the Spirit","Holy","God","for","all","ages","of ages"]},
+    {"id":"s01","tr":"Filled with the sacrament of salvation, we beseech You, O Lord, to help us by the prayers of those whose feast we are celebrating. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["We beseech","Lord","saving","Filled","with mysteries","that","whose","solemnity","we celebrate","their","by prayers","may be helped","through","Lord","our","Jesus","Christ","Son","Your","Who","with You","lives","and","reigns","in","the unity",null,null,"God","for","all","ages","of ages"],"a":[{"s":26,"n":2,"a":0,"g":"of the Holy Spirit"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

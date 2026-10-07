@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/09-08; resolved section [Lectio] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/09-08.txt [Lectio] (lines 19-20)"
    },
    "entries": [
     {
@@ -17,7 +17,28 @@
      "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "pp. 435–436",
+    "scan": "leaves n516–n517 / PDF pp. 517–518",
+    "section": "In Conceptione Immaculata Beatæ Mariæ Virginis, Léctio libri Sapiéntiæ, Prov. 8, 22-35",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n516/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.nativitas-beatae-mariae-virginis-epistola.immaculata-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Mass of the Immaculate Conception prints this lesson in full across pages 435 and 436, identical in letters, accents and punctuation to the selected text."
+    }
+   ],
+   "verified_on": "2026-10-07"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -101,7 +101,7 @@ const subjects: Record<string, [string, number, string][]> = {
 	],
 	'sanctissimae-trinitatis': [
 		['w025', 3, 'Your only-begotten Son'],
-		['w056', 3, 'about Your Son']
+		['w056', 3, 'of Your Son']
 	],
 	'spiritus-sancti': [
 		['w024', 2, 'our Lord'],

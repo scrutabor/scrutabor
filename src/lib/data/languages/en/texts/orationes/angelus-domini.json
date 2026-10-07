@@ -4,7 +4,7 @@
   "about":"The Ángelus is prayed three times a day, at dawn, at noon and toward evening, and this edition prints the three Hail Marys said in it. In Paschaltide the Regína cæli takes its place.",
   "seg":[
     {"id":"s01","tr":"The Angel of the Lord declared unto Mary.","tc":[45],"tb":"normalized","g":["angel","of the Lord","declared","unto Mary"]},
-    {"id":"s02","tr":"And she conceived of the Holy Spirit.","tc":[45],"tb":"revised","g":["and","conceived","of","the Spirit","Holy"]},
+    {"id":"s02","tr":"And she conceived of the Holy Spirit.","tc":[45],"tb":"revised","g":["and","conceived","of",null,null],"a":[{"s":3,"n":2,"a":0,"g":"the Holy Spirit"}]},
     {"id":"s03","tr":"Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.","tc":[48],"tb":"traditional-composite","g":["hail","Mary","of grace","full","the Lord","with you","blessed","you","among","women","and","blessed","the fruit","of womb","your","Jesus","Holy","Mary","Mother","of God","pray","for","us","sinners","now","and","at","the hour","of death","our","amen"]},
     {"id":"s04","tr":"Behold the handmaid of the Lord.","tc":[49],"tb":"normalized","g":["behold","handmaid","of the Lord"]},
     {"id":"s05","tr":"Be it done unto me according to thy word.","tc":[49],"tb":"normalized","g":["be it done","unto me","according to","word","Thy"]},

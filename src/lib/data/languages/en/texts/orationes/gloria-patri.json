@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The Glória Patri is a short Trinitarian doxology. It closes nearly every psalm and canticle of the Office, and in this book the reader meets it at the foot of the altar, at the Lavábo and in the Introit of the Advent Mass.",
   "seg":[
-    {"id":"s01","tr":"Glory be to the Father, and to the Son, and to the Holy Spirit.","tc":[76],"tb":"traditional-composite","g":["glory","to the Father","and","to the Son","and","to the Spirit","Holy"],"ex":{"w001":"Latin leaves “sit” unspoken: “Glória [sit] Patri” — “glory [be] to the Father”."}},
+    {"id":"s01","tr":"Glory be to the Father, and to the Son, and to the Holy Spirit.","tc":[76],"tb":"traditional-composite","g":["glory","to the Father","and","to the Son","and",null,null],"a":[{"s":5,"n":2,"a":0,"g":"to the Holy Spirit"}],"ex":{"w001":"Latin leaves “sit” unspoken: “Glória [sit] Patri” — “glory [be] to the Father”."}},
     {"id":"s02","tr":"As it was in the beginning, is now, and ever shall be, world without end. Amen.","tc":[76],"tb":"traditional-composite","g":["as","it was","in","the beginning","and","now","and","ever","and","for","ages","of ages","amen"]}
   ]
 }

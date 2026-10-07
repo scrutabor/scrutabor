@@ -34,7 +34,8 @@ for (const language of ['pl', 'en'] as const) {
 		await setHelp(page, 1);
 		const section = page.locator(`#text-proprium-${text}`);
 		await expect(section.locator('.token')).toHaveCount(48);
-		await expect(section.locator('rt')).toHaveCount(language === 'pl' ? 45 : 46);
+		// The English conclusion reads in shared groups.
+		await expect(section.locator('rt')).toHaveCount(language === 'pl' ? 45 : 34);
 		for (const width of [320, 1280]) {
 			await page.setViewportSize({ width, height: 900 });
 			for (const theme of ['light', 'dark'] as const) {
@@ -102,17 +103,23 @@ for (const language of ['pl', 'en'] as const) {
 						['w021', 'for us'],
 						['w022', 'a remedy'],
 						['w025', 'and'],
-						['w026', 'in the future'],
-						['w033', 'Your'],
-						['w035', 'with You'],
-						['w036', 'lives'],
-						['w038', 'reigns'],
-						['w044', 'for']
+						['w026', 'in the future']
 					];
 		for (const [word, gloss] of [...direct, ['w048', 'Amen']]) {
 			const button = section.locator(`button[id="${text}.${word}"]`);
 			await expect(button.locator('rt')).toHaveText(gloss);
 			await expect(button.locator('..')).toHaveClass(/\btoken\b/);
+		}
+		if (language === 'en') {
+			for (const [anchor, gloss] of [
+				['w032', 'Your Son'],
+				['w036', 'who lives and reigns with You'],
+				['w046', 'forever and ever']
+			]) {
+				const button = section.locator(`button[id="${text}.${anchor}"]`);
+				await expect(button.locator('rt').first()).toHaveText(gloss);
+				await expect(button.locator('..')).toHaveClass(/\btoken-group\b/);
+			}
 		}
 		await section
 			.getByRole('button', {

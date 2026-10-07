@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Maternity of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. O Virgin Mother of God, the One whom all the world does not contain, become man, enclosed Himself within your womb. Alleluia.","g":["Alleluia","Alleluia","Virgin","of God","Mother","whom","the whole","not","contains","world","within","your","Himself","enclosed","womb","having become","man","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. O Virgin Mother of God, the One whom all the world does not contain, become man, enclosed Himself within your womb. Alleluia.","g":["Alleluia","Alleluia","Virgin","of God","Mother","whom",null,null,null,null,"within","your","Himself","enclosed","womb","having become","man","Alleluia"],"a":[{"s":6,"n":4,"a":2,"g":"the whole world does not contain"}]}
   ]
 }

@@ -126,7 +126,8 @@ for (const language of ['pl', 'en']) {
 			'dominica-iv-post-pascha',
 			'alleluia',
 			'w023',
-			'dominábitur',
+			// English joins the negation to the verb in one construction.
+			language === 'pl' ? 'dominábitur' : 'non dominábitur',
 			language === 'pl' ? 'czas przyszły' : 'future',
 			'dóminor'
 		]

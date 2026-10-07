@@ -5,14 +5,14 @@
   "seg":[
     {"id":"s01","tr":"I believe in God, the Father Almighty, Creator of heaven and earth;","tc":[120,121],"tb":"revised","g":["I believe","into","God","the Father","almighty","Creator","of heaven","and","of earth"]},
     {"id":"s02","tr":"and in Jesus Christ, His only Son, our Lord:","tc":[120,121],"tb":"revised","g":["and","into","Jesus","Christ","the Son","His","only","Lord","our"]},
-    {"id":"s03","tr":"who was conceived by the Holy Spirit, born of the Virgin Mary,","tc":[120,121],"tb":"revised","g":["who","conceived","was","by","the Spirit","Holy","born","of","Mary","the Virgin"]},
+    {"id":"s03","tr":"who was conceived by the Holy Spirit, born of the Virgin Mary,","tc":[120,121],"tb":"revised","g":["who","conceived","was","by",null,null,"born","of","Mary","the Virgin"],"a":[{"s":4,"n":2,"a":0,"g":"the Holy Spirit"}]},
     {"id":"s04","tr":"suffered under Pontius Pilate, was crucified; died, and was buried.","tc":[120,121],"tb":"revised","g":["having suffered","under","Pontius","Pilate","crucified","having died","and","buried"]},
     {"id":"s05","tr":"He descended into hell;","tc":[120,121],"tb":"revised","g":["descended","to","the realm of the dead"]},
     {"id":"s06","tr":"the third day He rose again from the dead;","tc":[120,121],"tb":"revised","g":["on the third","day","rose again","from","the dead"]},
     {"id":"s07","tr":"He ascended into heaven,","tc":[120,121],"tb":"revised","g":["ascended","into","heaven"]},
     {"id":"s08","tr":"sits at the right hand of God the Father Almighty;","tc":[120,121],"tb":"revised","g":["sits","at","the right hand","of God","the Father","almighty"]},
     {"id":"s09","tr":"from thence He shall come to judge the living and the dead.","tc":[120,121],"tb":"revised","g":["from there",null,null,"to judge","the living","and","the dead"],"a":[{"s":1,"n":2,"a":0,"g":"shall come"}]},
-    {"id":"s10","tr":"I believe in the Holy Spirit,","tc":[120,121],"tb":"revised","g":["I believe","into","the Spirit","Holy"]},
+    {"id":"s10","tr":"I believe in the Holy Spirit,","tc":[120,121],"tb":"revised","g":["I believe","into",null,null],"a":[{"s":2,"n":2,"a":0,"g":"the Holy Spirit"}]},
     {"id":"s11","tr":"the Holy Catholic Church, the communion of Saints,","tc":[120,121],"tb":"revised","g":["holy","Church","catholic","of saints","communion"]},
     {"id":"s12","tr":"the forgiveness of sins, the resurrection of the body, and the life everlasting. Amen.","tc":[120,121],"tb":"revised","g":["forgiveness","of sins","of the body","resurrection","life","everlasting","amen"]}
   ]

@@ -53,7 +53,9 @@ for (const language of ['pl', 'en']) {
 			language === 'pl'
 				? ['na czyją pamiątkę te dary', 'tego modlitwami byli także chronieni']
 				: [
-						'we may also be protected by the prayers of the one in whose commemoration we have received these gifts'
+						'we may also be protected by the prayers of the one in whose commemoration we have received these gifts',
+						// The Holy Spirit reads as one group.
+						'of the Holy Spirit'
 					];
 		await expect(groups.locator('rt')).toHaveText(targets);
 		for (const width of [320, 1280]) {
@@ -68,7 +70,7 @@ for (const language of ['pl', 'en']) {
 				await expect(button).toHaveCount(1);
 				await button.click();
 				await expect(page.locator('aside .construction-card')).toHaveCount(
-					language === 'pl' ? 4 : 9
+					language === 'pl' ? 4 : [9, 2][index]
 				);
 				await expect(group.locator('rt')).toHaveText(targets[index]);
 				await page.keyboard.press('Escape');

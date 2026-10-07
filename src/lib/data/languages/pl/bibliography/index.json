@@ -12256,9 +12256,10 @@
       {
        "id": "proprium.immaculata-conceptio-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.immaculata-conceptio-communio",
@@ -12298,16 +12299,18 @@
       {
        "id": "proprium.immaculata-conceptio-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.immaculata-conceptio-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.immaculata-conceptio-tractus",
@@ -12494,9 +12497,10 @@
       {
        "id": "proprium.nativitas-beatae-mariae-virginis-epistola",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-beatae-mariae-virginis-secreta",
@@ -13370,14 +13374,15 @@
         "direct_approved_print",
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.sancti-iacobi-apostoli-offertorium",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-iacobi-apostoli-postcommunio",
@@ -13466,9 +13471,10 @@
       {
        "id": "proprium.sancti-ioachim-confessoris-tractus",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-alleluia",
@@ -14124,9 +14130,10 @@
       {
        "id": "proprium.sancti-thomae-apostoli-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-thomae-apostoli-communio",
@@ -14159,16 +14166,18 @@
       {
        "id": "proprium.sancti-thomae-apostoli-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-thomae-apostoli-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sanctissimae-trinitatis-alleluia",
@@ -17323,21 +17332,21 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.immaculata-conceptio-postcommunio",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.immaculata-conceptio-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.immaculatum-cor-beatae-mariae-virginis-collecta",
@@ -17933,21 +17942,21 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-thomae-apostoli-postcommunio",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-thomae-apostoli-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctissimae-trinitatis-collecta",

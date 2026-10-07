@@ -11,27 +11,11 @@ const constructions = [
 	['pl', 'w051', 51, ['scribo', 'sum'], 'są zapisane'],
 	['en', 'w009', 9, ['respicio', 'propitius'], 'look graciously upon'],
 	['en', 'w011', 11, ['votum', 'noster'], 'our desires'],
-	[
-		'en',
-		'w029',
-		17,
-		[
-			'qui',
-			'in',
-			'honor',
-			'nomen',
-			'filius',
-			'tuus',
-			'dominus',
-			'noster',
-			'Iesus',
-			'Christus',
-			'maiestas',
-			'tuus',
-			'offero'
-		],
-		'which we have offered to Your majesty in honor of the name of Your Son, our Lord Jesus Christ'
-	],
+	// The relative clause reads word by word with three small groups: *which in honor of the name of
+	// Your Son, our Lord Jesus Christ, to Your majesty we have offered*.
+	['en', 'w021', 21, ['filius', 'tuus'], 'of Your Son'],
+	['en', 'w023', 23, ['dominus', 'noster'], 'our Lord'],
+	['en', 'w027', 27, ['maiestas', 'tuus'], 'to Your majesty'],
 	[
 		'en',
 		'w035',

@@ -12,7 +12,7 @@
     {"id":"s007","tr":"Have mercy on us.","tc":[27],"tb":"exact","g":["have mercy","on us"]},
     {"id":"s008","tr":"God the Son, Redeemer of the world.","tc":[27],"tb":"exact","g":["Son","Redeemer","of the world","God"]},
     {"id":"s009","tr":"Have mercy on us.","tc":[27],"tb":"exact","g":["have mercy","on us"]},
-    {"id":"s010","tr":"God the Holy Spirit.","tc":[27],"tb":"revised","g":["Spirit","Holy","God"]},
+    {"id":"s010","tr":"God the Holy Spirit.","tc":[27],"tb":"revised","g":[null,null,"God"],"a":[{"s":0,"n":2,"a":0,"g":"Holy Spirit"}]},
     {"id":"s011","tr":"Have mercy on us.","tc":[27],"tb":"exact","g":["have mercy","on us"]},
     {"id":"s012","tr":"Holy Trinity, one God.","tc":[27],"tb":"exact","g":["Holy","Trinity","one","God"]},
     {"id":"s013","tr":"Have mercy on us.","tc":[27],"tb":"exact","g":["have mercy","on us"]},

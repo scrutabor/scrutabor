@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Saint Lawrence, Martyr” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"You have tested my heart, O Lord, and visited it in the night; You have tried me with fire, and no iniquity has been found in me.","g":["You have tested","Lord","heart","my","and","You have visited","by night","With fire","me","You have tried","and","not","was","found","in","me","iniquity"]}
+    {"id":"s01","tr":"You have tested my heart, O Lord, and visited it in the night; You have tried me with fire, and no iniquity has been found in me.","g":["You have tested","Lord","heart","my","and","You have visited","by night","With fire","me","You have tried","and",null,null,"found","in","me","iniquity"],"a":[{"s":11,"n":2,"a":1,"g":"was not"}]}
   ]
 }

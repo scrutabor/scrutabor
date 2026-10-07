@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “The Holy Innocents, Martyrs” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"A voice was heard in Ramah, weeping and wailing: Rachel weeping for her children, and she refused to be consoled, because they are not.","g":["A voice","in","Ramah",null,null,"weeping","and","lamentation","Rachel","weeping for","children","her","and","would not","be comforted","because","not","are"],"a":[{"s":3,"n":2,"a":0,"g":"was heard"}]}
+    {"id":"s01","tr":"A voice was heard in Ramah, weeping and wailing: Rachel weeping for her children, and she refused to be consoled, because they are not.","g":["A voice","in","Ramah",null,null,"weeping","and","lamentation","Rachel","weeping for","children","her","and","would not","be comforted","because",null,null],"a":[{"s":3,"n":2,"a":0,"g":"was heard"},{"s":16,"n":2,"a":1,"g":"are not"}]}
   ]
 }

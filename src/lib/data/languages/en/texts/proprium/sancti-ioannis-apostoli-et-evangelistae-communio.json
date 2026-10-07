@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Saint John, Apostle and Evangelist” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"A saying went out among the brothers: That disciple does not die. Yet Jesus did not say: He does not die, but: It is My will that he remain thus until I come.","g":["Went abroad","a saying","among","brethren","that","disciple","that","not","dies","But","not","said","Jesus","Not","he dies","but","So","him","I wish","to remain","until","I come"]}
+    {"id":"s01","tr":"A saying went out among the brothers: That disciple does not die. Yet Jesus did not say: He does not die, but: It is My will that he remain thus until I come.","g":["Went abroad","a saying","among","brethren","that",null,null,null,null,"But",null,null,null,null,null,"but","So","him","I wish","to remain","until","I come"],"a":[{"s":5,"n":2,"a":0,"g":"that disciple"},{"s":7,"n":2,"a":1,"g":"does not die"},{"s":10,"n":3,"a":1,"g":"Jesus did not say"},{"s":13,"n":2,"a":1,"g":"He does not die"}]}
   ]
 }

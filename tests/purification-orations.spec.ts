@@ -5,9 +5,9 @@ const split = (text: string) => text.split(' | ');
 
 const orations = {
 	collecta:
-		'Almighty | eternal | God | majesty | Your | as suppliants | we beseech | that | as | only-begotten | Son | Your | this | day | with | of our | flesh | the substance | in | the temple | was | presented | so | us | may You cause | to be presented to You with purified minds | Through | the same | Lord | our | Jesus | Christ | Son | Your | Who | with You | lives | and | reigns | in | the unity | of the Spirit | Holy | God | for | all | ages | of ages | Amen',
+		'Almighty | eternal | God | Your majesty | as suppliants | we beseech | that | as | Your only-begotten Son | this | day | with | the substance of our flesh | in | the temple | was | presented | so | us | may You cause | to be presented to You with purified minds | Through | this same Jesus Christ, our Lord | Your Son | who lives and reigns with You | in | the unity | of the Holy Spirit | God | forever and ever | Amen',
 	secreta:
-		'Graciously hear | Lord | prayers | our | and | that | worthy | may be | the gifts | which | before the eyes | of Your | majesty | we offer | the help | to us | of Your | loving-kindness | bestow | Through | Lord | our | Jesus | Christ | Son | Your | Who | with You | lives | and | reigns | in | the unity | of the Spirit | Holy | God | for | all | ages | of ages | Amen'
+		'Graciously hear | Lord | our prayers | and | that | worthy | may be | the gifts | which | before the eyes | of Your | majesty | we offer | the help | to us | of Your | loving-kindness | bestow | Through | our Lord | Jesus Christ | Your Son | who lives and reigns with You | in | the unity | of the Holy Spirit | God | forever and ever | Amen'
 } as const;
 
 for (const part of ['collecta', 'secreta'] as const) {

@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Saint Bartholomew the Apostle” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"But to me, O God, Your friends are honored exceedingly; their sovereignty is made exceedingly strong.","g":["To me","but","exceedingly","honored","are",null,null,"God","exceedingly","strengthened","is",null,null],"a":[{"s":5,"n":2,"a":0,"g":"Your friends"},{"s":11,"n":2,"a":0,"g":"their sovereignty"}]}
+    {"id":"s01","tr":"But to me, O God, Your friends are honored exceedingly; their sovereignty is made exceedingly strong.","g":[null,null,"exceedingly","honored","are",null,null,"God","exceedingly","strengthened","is",null,null],"a":[{"s":0,"n":2,"a":0,"g":"But to me"},{"s":5,"n":2,"a":0,"g":"Your friends"},{"s":11,"n":2,"a":0,"g":"their sovereignty"}]}
   ]
 }

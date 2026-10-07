@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Visitation of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"You are blessed and venerable, O Virgin Mary, who were found to be the Savior’s mother with your chastity untouched. O Virgin Mother of God, the One whom all the world does not contain, become man, enclosed Himself within your womb.","g":["Blessed","and","venerable","are","Virgin","Mary","who","without","violation","of virginity",null,null,"the Mother","of the Savior","Virgin","of God","Mother","whom","the whole","not","contains","world","within","your","Himself","enclosed","womb","having become","Man"],"a":[{"s":10,"n":2,"a":0,"g":"were found"}]}
+    {"id":"s01","tr":"You are blessed and venerable, O Virgin Mary, who were found to be the Savior’s mother with your chastity untouched. O Virgin Mother of God, the One whom all the world does not contain, become man, enclosed Himself within your womb.","g":["Blessed","and","venerable","are","Virgin","Mary","who","without","violation","of virginity",null,null,"the Mother","of the Savior","Virgin","of God","Mother","whom",null,null,null,null,"within","your","Himself","enclosed","womb","having become","Man"],"a":[{"s":10,"n":2,"a":0,"g":"were found"},{"s":18,"n":4,"a":2,"g":"the whole world does not contain"}]}
   ]
 }
