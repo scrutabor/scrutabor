@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 43",
+    "scan": "leaf n122 / PDF p. 123",
+    "section": "In Commemoratione Baptismatis D.N.I.C., Allelúia, allelúia, its verse Matth. 2, 2",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n122/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.epiphania-domini-alleluia.baptism-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Mass of the Commemoration of the Baptism prints this Alleluia and its verse in full, identical in letters, accents and punctuation to page 38 and the selected text."
+    }
+   ],
+   "verified_on": "2026-10-09"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 38",

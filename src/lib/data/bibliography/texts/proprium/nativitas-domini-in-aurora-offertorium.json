@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 23",
+    "scan": "leaf n102 / PDF p. 103",
+    "section": "Dominica infra octavam Nativitatis Domini, Antiphona ad Offertorium, Ps. 92, 1-2",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n102/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.nativitas-domini-in-aurora-offertorium.sunday-octave-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Mass of the Sunday within the Octave prints this Offertory in full, identical in letters, accents and punctuation to page 20."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 20",

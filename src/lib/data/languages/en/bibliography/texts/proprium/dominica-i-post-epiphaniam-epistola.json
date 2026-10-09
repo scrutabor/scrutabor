@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-i-post-epiphaniam-epistola",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 132",
+    "scan": "scan p. 148"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-i-post-epiphaniam-epistola.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Epistle (Rom. 12:1–5), revised against the Latin in contemporary language: to God, do not be conformed, has divided, do not have, wise with sobriety, and the corpus's earlier sentence revisions."
+    }
+   ],
+   "verified_on": "2026-10-09"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

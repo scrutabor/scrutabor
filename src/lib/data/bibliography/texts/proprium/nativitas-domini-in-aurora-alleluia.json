@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 22",
+    "scan": "leaf n101 / PDF p. 102",
+    "section": "Dominica infra octavam Nativitatis Domini, Allelúia, allelúia, its verse Ps. 92, 1, after the Gradual",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n101/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.nativitas-domini-in-aurora-alleluia.sunday-octave-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Mass of the Sunday within the Octave prints this Alleluia and its verse in full, identical in letters, accents and punctuation to page 19."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 19",

@@ -136,6 +136,28 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
+    "printed": "p. xviii",
+    "scan": "leaf n23 / PDF p. 24",
+    "section": "Rubricae generales 116; other particular conclusions noted in the liturgical books",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.nativitas-domini-in-aurora-postcommunio.conclusion-rg116.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w015"
+     },
+     "claim": "RG 116 keeps the particular conclusions the liturgical books note. This Postcommunion names the birth in its opening clause (nóvitas natális) and the Nativity in its body (cuius Natívitas singuláris), and does not name the Son, so the condition of RG 115 b is met only through the Nativity; page 20 prints Per eúndem Dóminum., and the printed cue controls."
+    }
+   ],
+   "verified_on": "2026-10-09"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
     "printed": "pp. xxxii–xxxiv, 225–226",
     "scan": "leaves n37–n39, n304–n305 / PDF pp. 38–40, 305–306",
     "section": "RG 480–481, 511 d/i, 513–514; Ordo Missae rubric and chant formula after the secrets"

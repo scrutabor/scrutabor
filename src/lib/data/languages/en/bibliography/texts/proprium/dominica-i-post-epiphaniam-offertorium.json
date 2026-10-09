@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-i-post-epiphaniam-offertorium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 133",
+    "scan": "scan p. 149"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-i-post-epiphaniam-offertorium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Offertory (the Douay Ps 99:1–2 through this missal), revised against the Latin: serve, come into His presence with exultation (in exsultatióne), the Lord Himself is God (ipse)."
+    }
+   ],
+   "verified_on": "2026-10-09"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

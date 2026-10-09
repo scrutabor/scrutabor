@@ -1,0 +1,28 @@
+{
+ "id": "proprium.sancta-familia-alleluia",
+ "source_groups": [
+  {
+   "edition": "edition.douay-rheims-bible-challoner",
+   "digital_item": "item.douay-rheims-challoner-1914.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "Old Testament p. 799",
+    "scan": "PDF p. 812",
+    "section": "Isaias 45:15"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.sancta-familia-alleluia.body.douay1914",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Alleluia verse (the Douay Isa 45:15), revised: King for the Missal's Rex where the Vulgate has Deus, Truly You are, the Savior."
+    }
+   ],
+   "verified_on": "2026-10-09"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

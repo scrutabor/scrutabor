@@ -1,0 +1,28 @@
+{
+ "id": "proprium.sancta-familia-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.douay-rheims-bible-challoner",
+   "digital_item": "item.douay-rheims-challoner-1914.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "Old Testament pp. 675, 625",
+    "scan": "PDF pp. 688, 638",
+    "section": "Proverbs 23:24–25; Psalm 83:2–3 (Vulgate numbering)"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.sancta-familia-introitus.body.douay1914",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the antiphon and the psalm verse (the Douay Prov 23:24–25 and Ps 83:2–3), revised against the Missal's Latin: rejoices with gladness, let Your Father and Your Mother be glad, let her who bore You rejoice, longs and faints, the contemporary address; the Gloria Patri is the closed formula with Holy Spirit, and the repeated antiphon takes the same revised wording."
+    }
+   ],
+   "verified_on": "2026-10-09"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

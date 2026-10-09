@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/01-06.txt (section [Communio]); resolved spans: web/www/missa/Latin/Sancti/01-06.txt (lines 30-31)"
+    "section": "web/www/missa/Latin/Sancti/01-06.txt [Communio] (lines 47-48)"
    },
    "entries": [
     {
@@ -17,7 +17,28 @@
      "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-09"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 43",
+    "scan": "leaf n122 / PDF p. 123",
+    "section": "In Commemoratione Baptismatis D.N.I.C., Antiphona ad Communionem, Matth. 2, 2",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n122/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.epiphania-domini-communio.baptism-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Mass of the Commemoration of the Baptism prints this Communion in full. Its words equal page 38 and the selected text; it prints Oríente, with the accent misplaced, and no comma after it (in Oríente et vénimus), where page 38 and the selected text have Oriénte, et."
+    }
+   ],
+   "verified_on": "2026-10-09"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-infra-octavam-nativitatis-evangelium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 124–125",
+    "scan": "scan pp. 138–139"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-infra-octavam-nativitatis-evangelium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gospel (Luke 2:33–40), revised against the Latin in contemporary language: will for the predictive shall, a sword will pierce your own soul, that the thoughts of many hearts may be revealed, up to eighty-four years, she gave praise to the Lord, became strong for waxed strong, and the capitals of the pronouns of Christ."
+    }
+   ],
+   "verified_on": "2026-10-08"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

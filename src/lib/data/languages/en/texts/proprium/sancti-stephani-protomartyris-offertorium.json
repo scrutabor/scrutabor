@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Saint Stephen, the First Martyr” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"The apostles chose Stephen the deacon, filled with faith and with the Holy Spirit; the Jews stoned him as he prayed and said: Lord Jesus, receive my spirit, alleluia.","g":["Chose","the Apostles","Stephen","deacon","full","of faith","and",null,null,"whom","stoned","the Jews","praying","and","saying","Lord","Jesus","receive","spirit","my","alleluia"],"a":[{"s":7,"n":2,"a":0,"g":"of the Holy Spirit"}]}
+    {"id":"s01","tr":"The apostles chose Stephen the deacon, filled with faith and with the Holy Spirit; the Jews stoned him as he prayed and said: Lord Jesus, receive my spirit, alleluia.","g":[null,null,"Stephen","as deacon","full","of faith","and",null,null,"whom",null,null,"praying","and","saying","Lord","Jesus","receive",null,null,"alleluia"],"a":[{"s":0,"n":2,"a":0,"g":"The Apostles chose"},{"s":7,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":10,"n":2,"a":0,"g":"the Jews stoned"},{"s":18,"n":2,"a":0,"g":"my spirit"}]}
   ]
 }

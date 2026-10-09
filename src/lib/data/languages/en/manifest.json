@@ -1225,7 +1225,8 @@
     },
     {
       "id": "proprium.dominica-i-post-epiphaniam-alleluia",
-      "path": "languages/en/texts/proprium/dominica-i-post-epiphaniam-alleluia.json"
+      "path": "languages/en/texts/proprium/dominica-i-post-epiphaniam-alleluia.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-post-epiphaniam-alleluia.json"
     },
     {
       "id": "proprium.dominica-i-post-epiphaniam-collecta",
@@ -1237,7 +1238,8 @@
     },
     {
       "id": "proprium.dominica-i-post-epiphaniam-epistola",
-      "path": "languages/en/texts/proprium/dominica-i-post-epiphaniam-epistola.json"
+      "path": "languages/en/texts/proprium/dominica-i-post-epiphaniam-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-post-epiphaniam-epistola.json"
     },
     {
       "id": "proprium.dominica-i-post-epiphaniam-graduale",
@@ -1245,11 +1247,13 @@
     },
     {
       "id": "proprium.dominica-i-post-epiphaniam-introitus",
-      "path": "languages/en/texts/proprium/dominica-i-post-epiphaniam-introitus.json"
+      "path": "languages/en/texts/proprium/dominica-i-post-epiphaniam-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-post-epiphaniam-introitus.json"
     },
     {
       "id": "proprium.dominica-i-post-epiphaniam-offertorium",
-      "path": "languages/en/texts/proprium/dominica-i-post-epiphaniam-offertorium.json"
+      "path": "languages/en/texts/proprium/dominica-i-post-epiphaniam-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-post-epiphaniam-offertorium.json"
     },
     {
       "id": "proprium.dominica-i-post-epiphaniam-postcommunio",
@@ -1822,7 +1826,8 @@
     },
     {
       "id": "proprium.dominica-infra-octavam-nativitatis-collecta",
-      "path": "languages/en/texts/proprium/dominica-infra-octavam-nativitatis-collecta.json"
+      "path": "languages/en/texts/proprium/dominica-infra-octavam-nativitatis-collecta.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-infra-octavam-nativitatis-collecta.json"
     },
     {
       "id": "proprium.dominica-infra-octavam-nativitatis-communio",
@@ -1830,11 +1835,13 @@
     },
     {
       "id": "proprium.dominica-infra-octavam-nativitatis-epistola",
-      "path": "languages/en/texts/proprium/dominica-infra-octavam-nativitatis-epistola.json"
+      "path": "languages/en/texts/proprium/dominica-infra-octavam-nativitatis-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-infra-octavam-nativitatis-epistola.json"
     },
     {
       "id": "proprium.dominica-infra-octavam-nativitatis-evangelium",
-      "path": "languages/en/texts/proprium/dominica-infra-octavam-nativitatis-evangelium.json"
+      "path": "languages/en/texts/proprium/dominica-infra-octavam-nativitatis-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-infra-octavam-nativitatis-evangelium.json"
     },
     {
       "id": "proprium.dominica-infra-octavam-nativitatis-graduale",
@@ -1842,7 +1849,8 @@
     },
     {
       "id": "proprium.dominica-infra-octavam-nativitatis-introitus",
-      "path": "languages/en/texts/proprium/dominica-infra-octavam-nativitatis-introitus.json"
+      "path": "languages/en/texts/proprium/dominica-infra-octavam-nativitatis-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-infra-octavam-nativitatis-introitus.json"
     },
     {
       "id": "proprium.dominica-infra-octavam-nativitatis-postcommunio",
@@ -1850,7 +1858,8 @@
     },
     {
       "id": "proprium.dominica-infra-octavam-nativitatis-secreta",
-      "path": "languages/en/texts/proprium/dominica-infra-octavam-nativitatis-secreta.json"
+      "path": "languages/en/texts/proprium/dominica-infra-octavam-nativitatis-secreta.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-infra-octavam-nativitatis-secreta.json"
     },
     {
       "id": "proprium.dominica-iv-adventus-alleluia",
@@ -2982,7 +2991,8 @@
     },
     {
       "id": "proprium.epiphania-domini-alleluia",
-      "path": "languages/en/texts/proprium/epiphania-domini-alleluia.json"
+      "path": "languages/en/texts/proprium/epiphania-domini-alleluia.json",
+      "evidence": "languages/en/bibliography/texts/proprium/epiphania-domini-alleluia.json"
     },
     {
       "id": "proprium.epiphania-domini-collecta",
@@ -2990,19 +3000,23 @@
     },
     {
       "id": "proprium.epiphania-domini-communio",
-      "path": "languages/en/texts/proprium/epiphania-domini-communio.json"
+      "path": "languages/en/texts/proprium/epiphania-domini-communio.json",
+      "evidence": "languages/en/bibliography/texts/proprium/epiphania-domini-communio.json"
     },
     {
       "id": "proprium.epiphania-domini-epistola",
-      "path": "languages/en/texts/proprium/epiphania-domini-epistola.json"
+      "path": "languages/en/texts/proprium/epiphania-domini-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/epiphania-domini-epistola.json"
     },
     {
       "id": "proprium.epiphania-domini-evangelium",
-      "path": "languages/en/texts/proprium/epiphania-domini-evangelium.json"
+      "path": "languages/en/texts/proprium/epiphania-domini-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/epiphania-domini-evangelium.json"
     },
     {
       "id": "proprium.epiphania-domini-graduale",
-      "path": "languages/en/texts/proprium/epiphania-domini-graduale.json"
+      "path": "languages/en/texts/proprium/epiphania-domini-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/epiphania-domini-graduale.json"
     },
     {
       "id": "proprium.epiphania-domini-introitus",
@@ -3010,7 +3024,8 @@
     },
     {
       "id": "proprium.epiphania-domini-offertorium",
-      "path": "languages/en/texts/proprium/epiphania-domini-offertorium.json"
+      "path": "languages/en/texts/proprium/epiphania-domini-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/epiphania-domini-offertorium.json"
     },
     {
       "id": "proprium.epiphania-domini-postcommunio",
@@ -3174,11 +3189,13 @@
     },
     {
       "id": "proprium.in-octava-nativitatis-alleluia",
-      "path": "languages/en/texts/proprium/in-octava-nativitatis-alleluia.json"
+      "path": "languages/en/texts/proprium/in-octava-nativitatis-alleluia.json",
+      "evidence": "languages/en/bibliography/texts/proprium/in-octava-nativitatis-alleluia.json"
     },
     {
       "id": "proprium.in-octava-nativitatis-collecta",
-      "path": "languages/en/texts/proprium/in-octava-nativitatis-collecta.json"
+      "path": "languages/en/texts/proprium/in-octava-nativitatis-collecta.json",
+      "evidence": "languages/en/bibliography/texts/proprium/in-octava-nativitatis-collecta.json"
     },
     {
       "id": "proprium.in-octava-nativitatis-evangelium",
@@ -3308,7 +3325,8 @@
     },
     {
       "id": "proprium.nativitas-domini-in-die-graduale",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-die-graduale.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-die-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-die-graduale.json"
     },
     {
       "id": "proprium.nativitas-domini-in-die-introitus",
@@ -3326,7 +3344,8 @@
     },
     {
       "id": "proprium.nativitas-domini-in-die-secreta",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-die-secreta.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-die-secreta.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-die-secreta.json"
     },
     {
       "id": "proprium.nativitas-domini-in-nocte-alleluia",
@@ -3581,7 +3600,8 @@
     },
     {
       "id": "proprium.sancta-familia-alleluia",
-      "path": "languages/en/texts/proprium/sancta-familia-alleluia.json"
+      "path": "languages/en/texts/proprium/sancta-familia-alleluia.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sancta-familia-alleluia.json"
     },
     {
       "id": "proprium.sancta-familia-collecta",
@@ -3592,16 +3612,23 @@
       "path": "languages/en/texts/proprium/sancta-familia-communio.json"
     },
     {
+      "id": "proprium.sancta-familia-epistola",
+      "path": "languages/en/texts/proprium/sancta-familia-epistola.json"
+    },
+    {
       "id": "proprium.sancta-familia-evangelium",
-      "path": "languages/en/texts/proprium/sancta-familia-evangelium.json"
+      "path": "languages/en/texts/proprium/sancta-familia-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sancta-familia-evangelium.json"
     },
     {
       "id": "proprium.sancta-familia-graduale",
-      "path": "languages/en/texts/proprium/sancta-familia-graduale.json"
+      "path": "languages/en/texts/proprium/sancta-familia-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sancta-familia-graduale.json"
     },
     {
       "id": "proprium.sancta-familia-introitus",
-      "path": "languages/en/texts/proprium/sancta-familia-introitus.json"
+      "path": "languages/en/texts/proprium/sancta-familia-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sancta-familia-introitus.json"
     },
     {
       "id": "proprium.sancta-familia-offertorium",
@@ -3825,7 +3852,8 @@
     },
     {
       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-introitus",
-      "path": "languages/en/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-introitus.json"
+      "path": "languages/en/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-introitus.json"
     },
     {
       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-postcommunio",
@@ -4134,7 +4162,8 @@
     },
     {
       "id": "proprium.sancti-stephani-protomartyris-collecta",
-      "path": "languages/en/texts/proprium/sancti-stephani-protomartyris-collecta.json"
+      "path": "languages/en/texts/proprium/sancti-stephani-protomartyris-collecta.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sancti-stephani-protomartyris-collecta.json"
     },
     {
       "id": "proprium.sancti-stephani-protomartyris-communio",
@@ -4291,7 +4320,8 @@
     },
     {
       "id": "proprium.sanctorum-innocentium-martyrum-collecta",
-      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-collecta.json"
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-collecta.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sanctorum-innocentium-martyrum-collecta.json"
     },
     {
       "id": "proprium.sanctorum-innocentium-martyrum-communio",
@@ -4327,7 +4357,8 @@
     },
     {
       "id": "proprium.sanctorum-innocentium-martyrum-tractus",
-      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-tractus.json"
+      "path": "languages/en/texts/proprium/sanctorum-innocentium-martyrum-tractus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/sanctorum-innocentium-martyrum-tractus.json"
     },
     {
       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-alleluia",

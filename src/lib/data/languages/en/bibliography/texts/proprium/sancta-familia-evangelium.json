@@ -1,0 +1,27 @@
+{
+ "id": "proprium.sancta-familia-evangelium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 132–133",
+    "scan": "scan pp. 148–149"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.sancta-familia-evangelium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gospel (Luke 2:42–52, printed there for the First Sunday after the Epiphany), revised against the Latin in contemporary language: did not know, You and Your, to for unto, did not understand, His mother, and the corpus's earlier sentence revisions."
+    }
+   ],
+   "verified_on": "2026-10-09"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

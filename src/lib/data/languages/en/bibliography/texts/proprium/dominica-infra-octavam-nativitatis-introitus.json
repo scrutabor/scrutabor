@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-infra-octavam-nativitatis-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 123",
+    "scan": "scan p. 137"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-infra-octavam-nativitatis-introitus.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the antiphon and the psalm verse, revised against the Latin in contemporary language: kept deep silence, the night in her course had reached the midst of her journey, Your almighty Word, from the royal thrones, has reigned, has girded Himself; the Gloria Patri is the closed formula with Holy Spirit, and the repeated antiphon takes the same revised wording."
+    }
+   ],
+   "verified_on": "2026-10-08"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

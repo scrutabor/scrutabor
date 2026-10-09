@@ -1,0 +1,27 @@
+{
+ "id": "proprium.sancti-stephani-protomartyris-collecta",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 116",
+    "scan": "scan p. 130"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.sancti-stephani-protomartyris-collecta.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Collect, which keeps to love even our enemies and who knew how to pray even for his persecutors to our Lord Jesus Christ, revised against the Latin: Grant us … so to imitate what we revere, for we celebrate the heavenly birthday of him (natalítia), the contemporary address, and the conclusion written out."
+    }
+   ],
+   "verified_on": "2026-10-08"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

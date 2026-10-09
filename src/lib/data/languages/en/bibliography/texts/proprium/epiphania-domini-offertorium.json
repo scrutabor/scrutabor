@@ -1,0 +1,27 @@
+{
+ "id": "proprium.epiphania-domini-offertorium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 130",
+    "scan": "scan p. 146"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.epiphania-domini-offertorium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Offertory (the Douay Ps 71:10–11 through this missal), revised: will for the predictive shall, gifts for múnera and presents for dona, the clauses joined with and."
+    }
+   ],
+   "verified_on": "2026-10-09"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -1,0 +1,27 @@
+{
+ "id": "proprium.in-octava-nativitatis-collecta",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 126",
+    "scan": "scan p. 140"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.in-octava-nativitatis-collecta.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Collect, revised against the Latin: through the fruitful virginity, have bestowed upon mankind, feel her intercession for us (pro nobis), merited for deserved, the contemporary address, and the conclusion written out."
+    }
+   ],
+   "verified_on": "2026-10-08"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

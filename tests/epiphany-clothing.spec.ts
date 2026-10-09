@@ -49,17 +49,19 @@ for (const language of ['pl', 'en'] as const) {
 		page
 	}) => {
 		await page.goto(`${route}?w=${text}.w038`);
-		await expect(page.locator('aside .morph')).toContainText(
-			language === 'pl' ? 'nijaki' : 'neuter'
-		);
-		await expect(page.locator('aside .meta')).toContainText(
+		// *hæc* opens the reviewed group *ómnia autem hæc*; its own card carries the analysis.
+		const card = page
+			.locator('aside .construction-card')
+			.filter({ has: page.locator('.construction-title', { hasText: 'hæc' }) });
+		await expect(card.locator('.morph')).toContainText(language === 'pl' ? 'nijaki' : 'neuter');
+		await expect(card.locator('.meta')).toContainText(
 			language === 'pl' ? 'do przeglądu' : 'awaiting review'
 		);
-		await expect(page.locator('aside .meta')).not.toContainText(
+		await expect(card.locator('.meta')).not.toContainText(
 			language === 'pl' ? 'zaakceptowane' : 'accepted'
 		);
-		await expect(page.locator('aside .meta')).toContainText('Whitaker');
-		await expect(page.locator('aside .meta')).toContainText('Collatinus');
+		await expect(card.locator('.meta')).toContainText('Whitaker');
+		await expect(card.locator('.meta')).toContainText('Collatinus');
 		await page.keyboard.press('Escape');
 		await setHelp(page, 1);
 		const part = page.locator('.proper-part', {

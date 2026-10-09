@@ -26,7 +26,7 @@ const commonPolish = [
 	'z',
 	'sidła',
 	'łowców',
-	'Sidło',
+	'sidło',
 	'zerwane',
 	'zostało',
 	'i',
@@ -54,7 +54,7 @@ const commonEnglish = [
 	'from',
 	'the snare',
 	'of the fowlers',
-	'The snare',
+	'the snare',
 	'has been broken',
 	'and',
 	'we',
@@ -93,6 +93,8 @@ for (const language of ['pl', 'en'] as const) {
 				language === 'pl'
 					? [...commonPolish, ...(isGradual ? extraPolish : [])]
 					: [...commonEnglish, ...(isGradual ? extraEnglish : [])];
+			// The Gradual's verse opens with Láqueus; the Offertory reads on after a colon.
+			if (isGradual) glosses[language === 'pl' ? 9 : 7] = language === 'pl' ? 'Sidło' : 'The snare';
 			for (const [width, height, theme] of [
 				[320, 568, 'dark'],
 				[1280, 900, 'light']

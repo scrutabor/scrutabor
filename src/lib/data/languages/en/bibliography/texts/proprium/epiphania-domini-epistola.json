@@ -1,0 +1,27 @@
+{
+ "id": "proprium.epiphania-domini-epistola",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 87",
+    "scan": "scan p. 114"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.epiphania-domini-epistola.body.husenbeth1853",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the lesson (the Douay Isa 60:1–6 through this missal), revised against the Latin in contemporary language and address: has come, has risen, will for the predictive shall, the peoples, the nations, has been turned and has come for the future perfects, proclaiming."
+    }
+   ],
+   "verified_on": "2026-10-09"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

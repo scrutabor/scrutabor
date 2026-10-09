@@ -24,6 +24,27 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "direct_approved_print",
    "locator": {
+    "printed": "p. 24",
+    "scan": "leaf n103 / PDF p. 104",
+    "section": "S. Stephani Protomartyris, Tractus Ps. 20, 3-4, for votive Masses after Septuagesima",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n103/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-ioachim-confessoris-tractus.stephen-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Mass of St Stephen prints this votive Tract in full, identical in letters, accents and punctuation to page 642 and the selected text."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
     "printed": "p. 441",
     "scan": "leaf n522 / PDF p. 523",
     "section": "S. Thomæ Apostoli, Tractus Ps. 20, 3-4, for votive Masses after Septuagesima",

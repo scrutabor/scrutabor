@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/01-01.txt (section [Oratio]); resolved spans: web/www/missa/Latin/Sancti/01-01.txt (lines 14-15); web/www/missa/Latin/Ordo/Prayers.txt (lines 121-122)"
+    "section": "web/www/missa/Latin/Sancti/01-01.txt [Oratio] (lines 14-15); web/www/missa/Latin/Ordo/Prayers.txt [Qui tecum] (lines 120-121)"
    },
    "entries": [
     {
@@ -17,7 +17,7 @@
      "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-08"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -46,7 +46,8 @@
    "locator": {
     "printed": "p. 33",
     "scan": "leaf n112 / PDF p. 113",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n112/mode/1up"
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n112/mode/1up",
+    "section": "Proper body and abbreviation only; full formula at RG115c, printed xviii / n23 / PDF24"
    },
    "entries": [
     {
@@ -54,10 +55,32 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The proper page supplies the body and Qui tecum abbreviation. The complete comparison joins that body to the exact full conclusion prescribed in RG115c, declared separately."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. xviii",
+    "scan": "n23 / PDF24",
+    "section": "RG115c full Qui tecum conclusion",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.in-octava-nativitatis-collecta.conclusion-rg115c.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w033"
+     },
+     "claim": "Prescribes the complete conclusion supplied after the proper-page abbreviation. Its unaccented spelling and list-final semicolon remain explicit in the composite witness."
+    }
+   ],
+   "verified_on": "2026-10-07"
   }
  ],
  "witnesses": []

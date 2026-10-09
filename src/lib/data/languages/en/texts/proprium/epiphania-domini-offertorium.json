@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Epiphany of the Lord” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"The kings of Tharsis and the islands shall offer gifts; the kings of the Arabians and of Saba shall bring presents; all the kings of the earth shall adore Him, and all nations shall serve Him.","g":["Kings","of Tharsis","and","of the islands","gifts","shall offer","kings","of Arabs","and","of Saba","gifts","shall bring","and","shall adore","Him","all","kings","of earth","all","nations","shall serve","Him"]}
+    {"id":"s01","tr":"The kings of Tharsis and the islands will offer gifts; the kings of the Arabians and of Saba will bring presents; all the kings of the earth will adore Him, and all nations will serve Him.","tb":"revised","g":["Kings","of Tharsis","and","the islands",null,null,"kings","of Arabs","and","of Saba",null,null,"and",null,null,null,null,null,"all","nations","will serve","Him"],"a":[{"s":4,"n":2,"a":1,"g":"will offer gifts"},{"s":10,"n":2,"a":1,"g":"will bring gifts"},{"s":13,"n":5,"a":0,"g":"all the kings of the earth will adore Him"}]}
   ]
 }

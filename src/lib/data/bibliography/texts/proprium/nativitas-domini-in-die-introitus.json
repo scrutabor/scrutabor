@@ -58,6 +58,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 33",
+    "scan": "leaf n112 / PDF p. 113",
+    "section": "In Octava Nativitatis Domini, Antiphona ad Introitum, Isai. 9, 6 and Ps. 97, 1; cues Glória Patri. and Puer.",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n112/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.nativitas-domini-in-die-introitus.octave-day-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Mass of the Octave Day prints this Introit's antiphon and verse in full. Their letters and accents equal page 20 and the selected text; it has a colon after novum (cánticum novum: quia) where page 20 and the selected text have a comma. The Gloria Patri and the repetition are cues on both pages (Puer.)."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 219",

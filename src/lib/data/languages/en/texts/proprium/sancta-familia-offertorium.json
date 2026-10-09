@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Holy Family of Jesus, Mary, and Joseph” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"The parents of Jesus brought Him to Jerusalem to present Him to the Lord.","g":["brought","Jesus","the parents","His","to","Jerusalem","to","present","Him","to the Lord"]}
+    {"id":"s01","tr":"The parents of Jesus brought Him to Jerusalem to present Him to the Lord.","g":[null,null,null,null,"to","Jerusalem","to","present","Him","to the Lord"],"a":[{"s":0,"n":4,"a":0,"g":"His parents brought Jesus"}]}
   ]
 }

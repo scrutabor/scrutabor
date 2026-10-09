@@ -1,0 +1,27 @@
+{
+ "id": "proprium.nativitas-domini-in-die-graduale",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 115",
+    "scan": "scan p. 129"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.nativitas-domini-in-die-graduale.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gradual (the Douay Ps 97:3, 2 through this missal), revised in contemporary language: has for hath, His, and in the sight of the nations He has revealed His justice in the Latin's order, the nations for the Gentiles."
+    }
+   ],
+   "verified_on": "2026-10-08"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

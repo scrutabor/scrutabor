@@ -1,0 +1,27 @@
+{
+ "id": "proprium.sanctorum-innocentium-martyrum-collecta",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 119–120",
+    "scan": "scan pp. 133–134"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.sanctorum-innocentium-martyrum-collecta.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Collect, which keeps O God, whose praise … not by speaking, but by dying, revised against the Latin: the Innocents, Your martyrs, this day proclaimed; put to death in us all the wickedness of sin; so that our life may also profess by its conduct Your faith, which our tongue speaks; and the conclusion written out."
+    }
+   ],
+   "verified_on": "2026-10-08"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

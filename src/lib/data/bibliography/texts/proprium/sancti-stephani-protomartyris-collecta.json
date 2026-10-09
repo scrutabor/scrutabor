@@ -46,7 +46,8 @@
    "locator": {
     "printed": "p. 23",
     "scan": "leaf n102 / PDF p. 103",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n102/mode/1up"
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n102/mode/1up",
+    "section": "Proper body and abbreviation only; full formula at RG115c, printed xviii / n23 / PDF24"
    },
    "entries": [
     {
@@ -54,10 +55,32 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The proper page supplies the body and Qui tecum abbreviation. The complete comparison joins that body to the exact full conclusion prescribed in RG115c, declared separately."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. xviii",
+    "scan": "n23 / PDF24",
+    "section": "RG115c full Qui tecum conclusion",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-stephani-protomartyris-collecta.conclusion-rg115c.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w029"
+     },
+     "claim": "Prescribes the complete conclusion supplied after the proper-page abbreviation. Its unaccented spelling and list-final semicolon remain explicit in the composite witness."
+    }
+   ],
+   "verified_on": "2026-10-07"
   }
  ],
  "witnesses": []

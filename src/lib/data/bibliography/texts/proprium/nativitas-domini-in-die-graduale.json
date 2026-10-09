@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 33",
+    "scan": "leaf n112 / PDF p. 113",
+    "section": "In Octava Nativitatis Domini, Graduale Ps. 97, 3-4 et 2",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n112/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.nativitas-domini-in-die-graduale.octave-day-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Mass of the Octave Day prints this Gradual in full. Its letters and accents equal page 21 and the selected text; it has a semicolon after nostri (Dei nostri; iubiláte) and no comma after Deo (iubiláte Deo omnis terra), where page 21 and the selected text have nostri: and Deo, omnis terra, and its label reads Ps. 97, 3-4 et 2 where page 21 has Ps. 97, 3 et 2."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 21",

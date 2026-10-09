@@ -1,0 +1,28 @@
+{
+ "id": "proprium.sancta-familia-graduale",
+ "source_groups": [
+  {
+   "edition": "edition.douay-rheims-bible-challoner",
+   "digital_item": "item.douay-rheims-challoner-1914.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "Old Testament pp. 593, 625",
+    "scan": "PDF pp. 606, 638",
+    "section": "Psalm 26:4; Psalm 83:5 (Vulgate numbering)"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.sancta-familia-graduale.body.douay1914",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gradual (the Douay Ps 26:4 and 83:5), revised: this I will seek, those who dwell, Your house, they will praise You forever and ever."
+    }
+   ],
+   "verified_on": "2026-10-09"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

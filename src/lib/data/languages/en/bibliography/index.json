@@ -5540,6 +5540,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancta-familia-epistola",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancta-familia-evangelium",
        "roles": [
         "derived_digital_collation_aid"
@@ -8337,7 +8344,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.commemoratio-baptismatis-domini-evangelium",
@@ -8349,16 +8356,17 @@
       {
        "id": "proprium.commemoratio-baptismatis-domini-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.commemoratio-baptismatis-domini-secreta",
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-collecta",
@@ -9023,9 +9031,10 @@
       {
        "id": "proprium.dominica-i-post-epiphaniam-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-i-post-epiphaniam-communio",
@@ -9053,7 +9062,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-i-post-epiphaniam-offertorium",
@@ -9065,16 +9074,18 @@
       {
        "id": "proprium.dominica-i-post-epiphaniam-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-i-post-epiphaniam-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-ii-adventus-alleluia",
@@ -10044,7 +10055,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-infra-octavam-nativitatis-communio",
@@ -10079,21 +10090,23 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-infra-octavam-nativitatis-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-infra-octavam-nativitatis-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-iv-adventus-alleluia",
@@ -12060,30 +12073,34 @@
       {
        "id": "proprium.epiphania-domini-alleluia",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.epiphania-domini-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.epiphania-domini-communio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.epiphania-domini-epistola",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.epiphania-domini-evangelium",
@@ -12095,37 +12112,41 @@
       {
        "id": "proprium.epiphania-domini-graduale",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.epiphania-domini-introitus",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.epiphania-domini-offertorium",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.epiphania-domini-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.epiphania-domini-secreta",
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.exaltatio-sanctae-crucis-alleluia",
@@ -12408,7 +12429,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.in-octava-nativitatis-evangelium",
@@ -12420,16 +12441,18 @@
       {
        "id": "proprium.in-octava-nativitatis-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.in-octava-nativitatis-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.maternitas-beatae-mariae-virginis-alleluia",
@@ -12519,9 +12542,10 @@
       {
        "id": "proprium.nativitas-domini-in-aurora-alleluia",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-domini-in-aurora-collecta",
@@ -12569,9 +12593,10 @@
       {
        "id": "proprium.nativitas-domini-in-aurora-offertorium",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-domini-in-aurora-postcommunio",
@@ -12607,9 +12632,10 @@
       {
        "id": "proprium.nativitas-domini-in-die-communio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-domini-in-die-epistola",
@@ -12628,23 +12654,26 @@
       {
        "id": "proprium.nativitas-domini-in-die-graduale",
        "roles": [
-        "official_text"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.nativitas-domini-in-die-introitus",
-       "roles": [
+        "direct_approved_print",
         "official_text"
        ],
        "uses": 2
       },
       {
-       "id": "proprium.nativitas-domini-in-die-offertorium",
+       "id": "proprium.nativitas-domini-in-die-introitus",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
+      },
+      {
+       "id": "proprium.nativitas-domini-in-die-offertorium",
+       "roles": [
+        "direct_approved_print",
+        "official_text"
+       ],
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-domini-in-die-postcommunio",
@@ -12685,9 +12714,10 @@
       {
        "id": "proprium.nativitas-domini-in-nocte-epistola",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-domini-in-nocte-evangelium",
@@ -12783,9 +12813,10 @@
       {
        "id": "proprium.nativitas-sancti-ioannis-baptistae-offertorium",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-sancti-ioannis-baptistae-postcommunio",
@@ -13100,7 +13131,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancta-familia-communio",
@@ -13110,11 +13141,19 @@
        "uses": 1
       },
       {
-       "id": "proprium.sancta-familia-evangelium",
+       "id": "proprium.sancta-familia-epistola",
        "roles": [
         "official_text"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-evangelium",
+       "roles": [
+        "direct_approved_print",
+        "official_text"
+       ],
+       "uses": 2
       },
       {
        "id": "proprium.sancta-familia-graduale",
@@ -13128,7 +13167,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancta-familia-offertorium",
@@ -13142,14 +13181,15 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancta-familia-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia",
@@ -13479,7 +13519,7 @@
         "direct_approved_print",
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-alleluia",
@@ -13491,9 +13531,10 @@
       {
        "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-communio",
@@ -13528,21 +13569,23 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-tractus",
@@ -14067,7 +14110,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-stephani-protomartyris-communio",
@@ -14102,7 +14145,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-stephani-protomartyris-offertorium",
@@ -14114,16 +14157,18 @@
       {
        "id": "proprium.sancti-stephani-protomartyris-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-stephani-protomartyris-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-thomae-apostoli-alleluia",
@@ -14327,9 +14372,10 @@
       {
        "id": "proprium.sanctorum-innocentium-martyrum-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sanctorum-innocentium-martyrum-communio",
@@ -14364,7 +14410,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctorum-innocentium-martyrum-offertorium",
@@ -14376,16 +14422,18 @@
       {
        "id": "proprium.sanctorum-innocentium-martyrum-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sanctorum-innocentium-martyrum-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sanctorum-innocentium-martyrum-tractus",
@@ -15385,11 +15433,74 @@
        "uses": 5
       },
       {
+       "id": "proprium.dominica-i-post-epiphaniam-introitus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-collecta",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-secreta",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-vii-post-pentecosten-secreta",
        "roles": [
         "historical_wording_basis"
        ],
        "uses": 3
+      },
+      {
+       "id": "proprium.epiphania-domini-alleluia",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-communio",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-epistola",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-evangelium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.epiphania-domini-graduale",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-introitus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
       },
       {
        "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-postcommunio",
@@ -15460,6 +15571,13 @@
         "historical_wording_basis"
        ],
        "uses": 2
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-tractus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
       }
      ],
      "lemmas": []
@@ -15781,6 +15899,27 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancta-familia-alleluia",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-graduale",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancta-familia-introitus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "psalmi.118-he",
        "roles": [
         "historical_wording_basis"
@@ -16088,6 +16227,27 @@
        "uses": 2
       },
       {
+       "id": "proprium.dominica-i-post-epiphaniam-alleluia",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-epistola",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-offertorium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-ii-adventus-alleluia",
        "roles": [
         "historical_wording_basis"
@@ -16179,6 +16339,27 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-infra-octavam-nativitatis-epistola",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-evangelium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-infra-octavam-nativitatis-introitus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-iv-adventus-alleluia",
        "roles": [
         "historical_wording_basis"
@@ -16228,6 +16409,27 @@
        "uses": 1
       },
       {
+       "id": "proprium.epiphania-domini-offertorium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.in-octava-nativitatis-alleluia",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.in-octava-nativitatis-collecta",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.nativitas-domini-in-aurora-alleluia",
        "roles": [
         "historical_wording_basis"
@@ -16270,6 +16472,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.nativitas-domini-in-die-graduale",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.nativitas-domini-in-die-introitus",
        "roles": [
         "historical_wording_basis"
@@ -16278,6 +16487,13 @@
       },
       {
        "id": "proprium.nativitas-domini-in-die-offertorium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-domini-in-die-secreta",
        "roles": [
         "historical_wording_basis"
        ],
@@ -16333,7 +16549,28 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancta-familia-evangelium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stephani-protomartyris-collecta",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sanctissimi-nominis-iesu-postcommunio",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-collecta",
        "roles": [
         "historical_wording_basis"
        ],
@@ -16779,7 +17016,7 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.commemoratio-baptismatis-domini-secreta",
@@ -17003,6 +17240,13 @@
        "roles": [
         "official_liturgical_context"
        ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-i-post-epiphaniam-introitus",
+       "roles": [
+        "rubric_control"
+       ],
        "uses": 1
       },
       {
@@ -17010,14 +17254,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-i-post-epiphaniam-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-ii-adventus-collecta",
@@ -17307,18 +17551,25 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-infra-octavam-nativitatis-introitus",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-infra-octavam-nativitatis-postcommunio",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-infra-octavam-nativitatis-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iv-adventus-collecta",
@@ -17941,6 +18192,13 @@
        "roles": [
         "official_liturgical_context"
        ],
+       "uses": 3
+      },
+      {
+       "id": "proprium.epiphania-domini-introitus",
+       "roles": [
+        "rubric_control"
+       ],
        "uses": 1
       },
       {
@@ -17948,7 +18206,7 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.epiphania-domini-secreta",
@@ -18053,14 +18311,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.in-octava-nativitatis-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.maternitas-beatae-mariae-virginis-collecta",
@@ -18116,14 +18374,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 4
+       "uses": 5
       },
       {
        "id": "proprium.nativitas-domini-in-aurora-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 4
+       "uses": 5
       },
       {
        "id": "proprium.nativitas-domini-in-die-collecta",
@@ -18295,6 +18553,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancta-familia-introitus",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancta-familia-postcommunio",
        "roles": [
         "official_liturgical_context"
@@ -18306,7 +18571,7 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-collecta",
@@ -18418,6 +18683,13 @@
        "roles": [
         "official_liturgical_context"
        ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-introitus",
+       "roles": [
+        "rubric_control"
+       ],
        "uses": 1
       },
       {
@@ -18425,14 +18697,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-ioseph-opificis-collecta",
@@ -18610,18 +18882,25 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-stephani-protomartyris-introitus",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-stephani-protomartyris-postcommunio",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-stephani-protomartyris-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-thomae-apostoli-collecta",
@@ -18698,6 +18977,13 @@
        "roles": [
         "official_liturgical_context"
        ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sanctorum-innocentium-martyrum-introitus",
+       "roles": [
+        "rubric_control"
+       ],
        "uses": 1
       },
       {
@@ -18705,14 +18991,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctorum-innocentium-martyrum-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-collecta",
