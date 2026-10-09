@@ -243,6 +243,10 @@
    "title": "3rd Sunday after Pentecost"
   },
   {
+   "id": "dominica-iii-quae-superfuit-post-epiphaniam",
+   "title": "Transferred Third Sunday after Epiphany"
+  },
+  {
    "id": "dominica-in-albis",
    "title": "Low Sunday"
   },
@@ -283,6 +287,10 @@
    "title": "4th Sunday after Pentecost"
   },
   {
+   "id": "dominica-iv-quae-superfuit-post-epiphaniam",
+   "title": "Transferred Fourth Sunday after Epiphany"
+  },
+  {
    "id": "dominica-ix-post-pentecosten",
    "title": "9th Sunday after Pentecost"
   },
@@ -300,7 +308,7 @@
   },
   {
    "id": "dominica-v-post-epiphaniam",
-   "title": "Transferred Fifth Sunday after Epiphany"
+   "title": "Fifth Sunday after Epiphany"
   },
   {
    "id": "dominica-v-post-pascha",
@@ -311,12 +319,20 @@
    "title": "5th Sunday after Pentecost"
   },
   {
+   "id": "dominica-v-quae-superfuit-post-epiphaniam",
+   "title": "Transferred Fifth Sunday after Epiphany"
+  },
+  {
    "id": "dominica-vi-post-epiphaniam",
-   "title": "Transferred Sixth Sunday after Epiphany"
+   "title": "Sixth Sunday after Epiphany"
   },
   {
    "id": "dominica-vi-post-pentecosten",
    "title": "6th Sunday after Pentecost"
+  },
+  {
+   "id": "dominica-vi-quae-superfuit-post-epiphaniam",
+   "title": "Transferred Sixth Sunday after Epiphany"
   },
   {
    "id": "dominica-vii-post-pentecosten",

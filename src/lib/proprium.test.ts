@@ -368,16 +368,33 @@ describe('lookups', () => {
 		);
 	});
 
-	it('gives the transferred Epiphany Sundays the seasonal chants printed for them', async () => {
-		for (const id of ['dominica-v-post-epiphaniam', 'dominica-vi-post-epiphaniam']) {
-			const sunday = await properData(id, 'en');
-			for (const part of ['introitus', 'graduale', 'alleluia', 'offertorium', 'communio']) {
-				expect(sunday?.parts.find((item) => item.part === part)?.key).toBe(
-					`proprium/dominica-xxiii-post-pentecosten-${part}`
-				);
+	it.each(['pl', 'en'] as const)(
+		'keeps the two Epiphany Sunday printings distinct in %s',
+		async (lang) => {
+			for (const roman of ['iii', 'iv', 'v', 'vi']) {
+				for (const resumed of [false, true]) {
+					const id = `dominica-${roman}-${resumed ? 'quae-superfuit-' : ''}post-epiphaniam`;
+					const sunday = await properData(id, lang);
+					expect(sunday, id).not.toBeNull();
+					for (const part of ['introitus', 'graduale', 'alleluia', 'offertorium', 'communio']) {
+						const source = resumed
+							? `dominica-xxiii-post-pentecosten-${part}`
+							: part === 'graduale'
+								? 'dominica-xvi-post-pentecosten-graduale'
+								: `dominica-iii-post-epiphaniam-${part}`;
+						expect(sunday?.parts.find((item) => item.part === part)?.key, `${id}/${part}`).toBe(
+							`proprium/${source}`
+						);
+					}
+					for (const part of ['collecta', 'epistola', 'evangelium', 'secreta', 'postcommunio']) {
+						expect(sunday?.parts.find((item) => item.part === part)?.key, `${id}/${part}`).toBe(
+							`proprium/dominica-${roman}-post-epiphaniam-${part}`
+						);
+					}
+				}
 			}
 		}
-	});
+	);
 });
 
 describe('a day is offered only where it can act', () => {

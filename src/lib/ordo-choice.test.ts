@@ -54,6 +54,30 @@ describe('a dated Ordo occurrence', () => {
 	});
 
 	it.each([
+		['2028-01-30', 'iv', false],
+		['2029-11-04', 'iv', true],
+		['2028-02-06', 'v', false],
+		['2026-11-08', 'v', true],
+		['2038-02-14', 'vi', false],
+		['2026-11-15', 'vi', true]
+	] as const)('uses only the proper Epiphany occurrence on %s', (date, roman, resumed) => {
+		const ordinary = `dominica-${roman}-post-epiphaniam`;
+		const transferred = `dominica-${roman}-quae-superfuit-post-epiphaniam`;
+		const mass = resumed ? transferred : ordinary;
+		const wrong = resumed ? ordinary : transferred;
+		expect(massesOn(date).map((day) => day.id)).toEqual([mass]);
+		expect(resolveOrdoChoice(date)).toEqual({ date, mass });
+		expect(resolveOrdoChoice(date, mass)).toEqual({ date, mass });
+		expect(resolveOrdoChoice(date, wrong)).toBeNull();
+		const url = new URL('https://example.test/app/en/ordo/catechumenorum?w=w001#introitus');
+		writeOrdoChoice(url, { date, mass });
+		expect(url.searchParams.get('missa')).toBeNull();
+		expect(url.searchParams.get('w')).toBe('w001');
+		expect(url.hash).toBe('#introitus');
+		expect(resolveOrdoChoice(url.searchParams.get('dies')!)).toEqual({ date, mass });
+	});
+
+	it.each([
 		['2026-12-25', 'nativitas-domini-in-nocte', 'nativitas-domini-in-nocte'],
 		['2026-12-25', 'nativitas-domini-in-die', null],
 		['2026-12-25', null, 'none'],

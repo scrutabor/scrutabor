@@ -1460,8 +1460,168 @@
    ]
   },
   {
-   "id": "dominica-in-septuagesima",
+   "id": "dominica-v-post-epiphaniam",
    "order": 18,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-v-post-epiphaniam",
+   "calendar": {
+    "key": "dominica-v-post-epiphaniam",
+    "default": true
+   },
+   "title": "Dominica V post Epiphaniam",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-iii-post-epiphaniam-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-v-post-epiphaniam-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-v-post-epiphaniam-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xvi-post-pentecosten-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-iii-post-epiphaniam-alleluia",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-v-post-epiphaniam-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-iii-post-epiphaniam-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-v-post-epiphaniam-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-iii-post-epiphaniam-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-v-post-epiphaniam-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-vi-post-epiphaniam",
+   "order": 19,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-vi-post-epiphaniam",
+   "calendar": {
+    "key": "dominica-vi-post-epiphaniam",
+    "default": true
+   },
+   "title": "Dominica VI post Epiphaniam",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-iii-post-epiphaniam-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-vi-post-epiphaniam-collecta",
+     "relation": "proper"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-vi-post-epiphaniam-epistola",
+     "relation": "proper"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xvi-post-pentecosten-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-iii-post-epiphaniam-alleluia",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-vi-post-epiphaniam-evangelium",
+     "relation": "proper"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-iii-post-epiphaniam-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-vi-post-epiphaniam-secreta",
+     "relation": "proper"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-iii-post-epiphaniam-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-vi-post-epiphaniam-postcommunio",
+     "relation": "proper"
+    }
+   ]
+  },
+  {
+   "id": "dominica-in-septuagesima",
+   "order": 20,
    "collection": "temporale",
    "season": "septuagesima",
    "observance": "dominica-in-septuagesima",
@@ -1541,7 +1701,7 @@
   },
   {
    "id": "dominica-in-sexagesima",
-   "order": 19,
+   "order": 21,
    "collection": "temporale",
    "season": "septuagesima",
    "observance": "dominica-in-sexagesima",
@@ -1621,7 +1781,7 @@
   },
   {
    "id": "dominica-in-quinquagesima",
-   "order": 20,
+   "order": 22,
    "collection": "temporale",
    "season": "septuagesima",
    "observance": "dominica-in-quinquagesima",
@@ -1701,7 +1861,7 @@
   },
   {
    "id": "dominica-i-in-quadragesima",
-   "order": 21,
+   "order": 23,
    "collection": "temporale",
    "season": "quadragesima",
    "observance": "dominica-i-in-quadragesima",
@@ -1781,7 +1941,7 @@
   },
   {
    "id": "dominica-ii-in-quadragesima",
-   "order": 22,
+   "order": 24,
    "collection": "temporale",
    "season": "quadragesima",
    "observance": "dominica-ii-in-quadragesima",
@@ -1861,7 +2021,7 @@
   },
   {
    "id": "dominica-iii-in-quadragesima",
-   "order": 23,
+   "order": 25,
    "collection": "temporale",
    "season": "quadragesima",
    "observance": "dominica-iii-in-quadragesima",
@@ -1941,7 +2101,7 @@
   },
   {
    "id": "dominica-iv-in-quadragesima",
-   "order": 24,
+   "order": 26,
    "collection": "temporale",
    "season": "quadragesima",
    "observance": "dominica-iv-in-quadragesima",
@@ -2021,7 +2181,7 @@
   },
   {
    "id": "dominica-i-passionis",
-   "order": 25,
+   "order": 27,
    "collection": "temporale",
    "season": "passionis",
    "observance": "dominica-i-passionis",
@@ -2101,7 +2261,7 @@
   },
   {
    "id": "dominica-ii-passionis",
-   "order": 26,
+   "order": 28,
    "collection": "temporale",
    "season": "passionis",
    "observance": "dominica-ii-passionis",
@@ -2181,7 +2341,7 @@
   },
   {
    "id": "feria-v-in-cena-domini",
-   "order": 27,
+   "order": 29,
    "collection": "temporale",
    "season": "passionis",
    "observance": "feria-v-in-cena-domini",
@@ -2255,7 +2415,7 @@
   },
   {
    "id": "vigilia-paschalis",
-   "order": 28,
+   "order": 30,
    "collection": "temporale",
    "season": "paschale",
    "observance": "vigilia-paschalis",
@@ -2311,7 +2471,7 @@
   },
   {
    "id": "dominica-resurrectionis",
-   "order": 29,
+   "order": 31,
    "collection": "temporale",
    "season": "paschale",
    "observance": "dominica-resurrectionis",
@@ -2397,7 +2557,7 @@
   },
   {
    "id": "dominica-in-albis",
-   "order": 30,
+   "order": 32,
    "collection": "temporale",
    "season": "paschale",
    "observance": "dominica-in-albis",
@@ -2471,7 +2631,7 @@
   },
   {
    "id": "dominica-ii-post-pascha",
-   "order": 31,
+   "order": 33,
    "collection": "temporale",
    "season": "paschale",
    "observance": "dominica-ii-post-pascha",
@@ -2545,7 +2705,7 @@
   },
   {
    "id": "dominica-iii-post-pascha",
-   "order": 32,
+   "order": 34,
    "collection": "temporale",
    "season": "paschale",
    "observance": "dominica-iii-post-pascha",
@@ -2619,7 +2779,7 @@
   },
   {
    "id": "dominica-iv-post-pascha",
-   "order": 33,
+   "order": 35,
    "collection": "temporale",
    "season": "paschale",
    "observance": "dominica-iv-post-pascha",
@@ -2693,7 +2853,7 @@
   },
   {
    "id": "dominica-v-post-pascha",
-   "order": 34,
+   "order": 36,
    "collection": "temporale",
    "season": "paschale",
    "observance": "dominica-v-post-pascha",
@@ -2767,7 +2927,7 @@
   },
   {
    "id": "ascensio-domini",
-   "order": 35,
+   "order": 37,
    "collection": "temporale",
    "season": "paschale",
    "observance": "ascensio-domini",
@@ -2841,7 +3001,7 @@
   },
   {
    "id": "dominica-post-ascensionem",
-   "order": 36,
+   "order": 38,
    "collection": "temporale",
    "season": "paschale",
    "observance": "dominica-post-ascensionem",
@@ -2915,7 +3075,7 @@
   },
   {
    "id": "vigilia-pentecostes",
-   "order": 37,
+   "order": 39,
    "collection": "temporale",
    "season": "paschale",
    "observance": "vigilia-pentecostes",
@@ -2995,7 +3155,7 @@
   },
   {
    "id": "dominica-pentecostes",
-   "order": 38,
+   "order": 40,
    "collection": "temporale",
    "season": "paschale",
    "observance": "dominica-pentecostes",
@@ -3075,7 +3235,7 @@
   },
   {
    "id": "sanctissimae-trinitatis",
-   "order": 39,
+   "order": 41,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "sanctissimae-trinitatis",
@@ -3155,7 +3315,7 @@
   },
   {
    "id": "corporis-christi",
-   "order": 40,
+   "order": 42,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "corporis-christi",
@@ -3241,7 +3401,7 @@
   },
   {
    "id": "sacratissimi-cordis-iesu",
-   "order": 41,
+   "order": 43,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "sacratissimi-cordis-iesu",
@@ -3321,7 +3481,7 @@
   },
   {
    "id": "dominica-ii-post-pentecosten",
-   "order": 42,
+   "order": 44,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-ii-post-pentecosten",
@@ -3401,7 +3561,7 @@
   },
   {
    "id": "dominica-iii-post-pentecosten",
-   "order": 43,
+   "order": 45,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-iii-post-pentecosten",
@@ -3481,7 +3641,7 @@
   },
   {
    "id": "dominica-iv-post-pentecosten",
-   "order": 44,
+   "order": 46,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-iv-post-pentecosten",
@@ -3561,7 +3721,7 @@
   },
   {
    "id": "dominica-v-post-pentecosten",
-   "order": 45,
+   "order": 47,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-v-post-pentecosten",
@@ -3641,7 +3801,7 @@
   },
   {
    "id": "dominica-vi-post-pentecosten",
-   "order": 46,
+   "order": 48,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-vi-post-pentecosten",
@@ -3721,7 +3881,7 @@
   },
   {
    "id": "dominica-vii-post-pentecosten",
-   "order": 47,
+   "order": 49,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-vii-post-pentecosten",
@@ -3801,7 +3961,7 @@
   },
   {
    "id": "dominica-viii-post-pentecosten",
-   "order": 48,
+   "order": 50,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-viii-post-pentecosten",
@@ -3881,7 +4041,7 @@
   },
   {
    "id": "dominica-ix-post-pentecosten",
-   "order": 49,
+   "order": 51,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-ix-post-pentecosten",
@@ -3961,7 +4121,7 @@
   },
   {
    "id": "dominica-x-post-pentecosten",
-   "order": 50,
+   "order": 52,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-x-post-pentecosten",
@@ -4041,7 +4201,7 @@
   },
   {
    "id": "dominica-xi-post-pentecosten",
-   "order": 51,
+   "order": 53,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xi-post-pentecosten",
@@ -4121,7 +4281,7 @@
   },
   {
    "id": "dominica-xii-post-pentecosten",
-   "order": 52,
+   "order": 54,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xii-post-pentecosten",
@@ -4201,7 +4361,7 @@
   },
   {
    "id": "dominica-xiii-post-pentecosten",
-   "order": 53,
+   "order": 55,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xiii-post-pentecosten",
@@ -4281,7 +4441,7 @@
   },
   {
    "id": "dominica-xiv-post-pentecosten",
-   "order": 54,
+   "order": 56,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xiv-post-pentecosten",
@@ -4361,7 +4521,7 @@
   },
   {
    "id": "dominica-xv-post-pentecosten",
-   "order": 55,
+   "order": 57,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xv-post-pentecosten",
@@ -4441,7 +4601,7 @@
   },
   {
    "id": "dominica-xvi-post-pentecosten",
-   "order": 56,
+   "order": 58,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xvi-post-pentecosten",
@@ -4521,7 +4681,7 @@
   },
   {
    "id": "dominica-xvii-post-pentecosten",
-   "order": 57,
+   "order": 59,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xvii-post-pentecosten",
@@ -4601,7 +4761,7 @@
   },
   {
    "id": "dominica-xviii-post-pentecosten",
-   "order": 58,
+   "order": 60,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xviii-post-pentecosten",
@@ -4681,7 +4841,7 @@
   },
   {
    "id": "dominica-xix-post-pentecosten",
-   "order": 59,
+   "order": 61,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xix-post-pentecosten",
@@ -4761,7 +4921,7 @@
   },
   {
    "id": "dominica-xx-post-pentecosten",
-   "order": 60,
+   "order": 62,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xx-post-pentecosten",
@@ -4841,7 +5001,7 @@
   },
   {
    "id": "dominica-xxi-post-pentecosten",
-   "order": 61,
+   "order": 63,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xxi-post-pentecosten",
@@ -4921,7 +5081,7 @@
   },
   {
    "id": "dominica-xxii-post-pentecosten",
-   "order": 62,
+   "order": 64,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xxii-post-pentecosten",
@@ -5001,7 +5161,7 @@
   },
   {
    "id": "dominica-xxiii-post-pentecosten",
-   "order": 63,
+   "order": 65,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xxiii-post-pentecosten",
@@ -5080,8 +5240,328 @@
    ]
   },
   {
+   "id": "dominica-iii-quae-superfuit-post-epiphaniam",
+   "order": 66,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-iii-quae-superfuit-post-epiphaniam",
+   "calendar": {
+    "key": "dominica-iii-quae-superfuit-post-epiphaniam",
+    "default": true
+   },
+   "title": "Dominica III quæ superfuit post Epiphaniam",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xxiii-post-pentecosten-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-iii-post-epiphaniam-collecta",
+     "relation": "reference"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-iii-post-epiphaniam-epistola",
+     "relation": "reference"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xxiii-post-pentecosten-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xxiii-post-pentecosten-alleluia",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-iii-post-epiphaniam-evangelium",
+     "relation": "reference"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xxiii-post-pentecosten-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-iii-post-epiphaniam-secreta",
+     "relation": "reference"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xxiii-post-pentecosten-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-iii-post-epiphaniam-postcommunio",
+     "relation": "reference"
+    }
+   ]
+  },
+  {
+   "id": "dominica-iv-quae-superfuit-post-epiphaniam",
+   "order": 67,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-iv-quae-superfuit-post-epiphaniam",
+   "calendar": {
+    "key": "dominica-iv-quae-superfuit-post-epiphaniam",
+    "default": true
+   },
+   "title": "Dominica IV quæ superfuit post Epiphaniam",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xxiii-post-pentecosten-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-iv-post-epiphaniam-collecta",
+     "relation": "reference"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-iv-post-epiphaniam-epistola",
+     "relation": "reference"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xxiii-post-pentecosten-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xxiii-post-pentecosten-alleluia",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-iv-post-epiphaniam-evangelium",
+     "relation": "reference"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xxiii-post-pentecosten-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-iv-post-epiphaniam-secreta",
+     "relation": "reference"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xxiii-post-pentecosten-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-iv-post-epiphaniam-postcommunio",
+     "relation": "reference"
+    }
+   ]
+  },
+  {
+   "id": "dominica-v-quae-superfuit-post-epiphaniam",
+   "order": 68,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-v-quae-superfuit-post-epiphaniam",
+   "calendar": {
+    "key": "dominica-v-quae-superfuit-post-epiphaniam",
+    "default": true
+   },
+   "title": "Dominica V quæ superfuit post Epiphaniam",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xxiii-post-pentecosten-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-v-post-epiphaniam-collecta",
+     "relation": "reference"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-v-post-epiphaniam-epistola",
+     "relation": "reference"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xxiii-post-pentecosten-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xxiii-post-pentecosten-alleluia",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-v-post-epiphaniam-evangelium",
+     "relation": "reference"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xxiii-post-pentecosten-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-v-post-epiphaniam-secreta",
+     "relation": "reference"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xxiii-post-pentecosten-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-v-post-epiphaniam-postcommunio",
+     "relation": "reference"
+    }
+   ]
+  },
+  {
+   "id": "dominica-vi-quae-superfuit-post-epiphaniam",
+   "order": 69,
+   "collection": "temporale",
+   "season": "per-annum",
+   "observance": "dominica-vi-quae-superfuit-post-epiphaniam",
+   "calendar": {
+    "key": "dominica-vi-quae-superfuit-post-epiphaniam",
+    "default": true
+   },
+   "title": "Dominica VI quæ superfuit post Epiphaniam",
+   "components": [
+    {
+     "key": "introitus",
+     "role": "introitus",
+     "text": "proprium/dominica-xxiii-post-pentecosten-introitus",
+     "relation": "reference"
+    },
+    {
+     "key": "collecta",
+     "role": "collecta",
+     "text": "proprium/dominica-vi-post-epiphaniam-collecta",
+     "relation": "reference"
+    },
+    {
+     "key": "epistola",
+     "role": "epistola",
+     "text": "proprium/dominica-vi-post-epiphaniam-epistola",
+     "relation": "reference"
+    },
+    {
+     "key": "graduale",
+     "role": "graduale",
+     "text": "proprium/dominica-xxiii-post-pentecosten-graduale",
+     "relation": "reference"
+    },
+    {
+     "key": "alleluia",
+     "role": "alleluia",
+     "text": "proprium/dominica-xxiii-post-pentecosten-alleluia",
+     "relation": "reference"
+    },
+    {
+     "key": "evangelium",
+     "role": "evangelium",
+     "text": "proprium/dominica-vi-post-epiphaniam-evangelium",
+     "relation": "reference"
+    },
+    {
+     "key": "offertorium",
+     "role": "offertorium",
+     "text": "proprium/dominica-xxiii-post-pentecosten-offertorium",
+     "relation": "reference"
+    },
+    {
+     "key": "secreta",
+     "role": "secreta",
+     "text": "proprium/dominica-vi-post-epiphaniam-secreta",
+     "relation": "reference"
+    },
+    {
+     "key": "praefatio",
+     "role": "praefatio",
+     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
+     "relation": "shared"
+    },
+    {
+     "key": "communio",
+     "role": "communio",
+     "text": "proprium/dominica-xxiii-post-pentecosten-communio",
+     "relation": "reference"
+    },
+    {
+     "key": "postcommunio",
+     "role": "postcommunio",
+     "text": "proprium/dominica-vi-post-epiphaniam-postcommunio",
+     "relation": "reference"
+    }
+   ]
+  },
+  {
    "id": "dominica-xxiv-post-pentecosten",
-   "order": 64,
+   "order": 70,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "dominica-xxiv-post-pentecosten",
@@ -5160,168 +5640,8 @@
    ]
   },
   {
-   "id": "dominica-v-post-epiphaniam",
-   "order": 65,
-   "collection": "temporale",
-   "season": "per-annum",
-   "observance": "dominica-v-post-epiphaniam",
-   "calendar": {
-    "key": "dominica-v-post-epiphaniam",
-    "default": true
-   },
-   "title": "Dominica V quæ superfuit post Epiphaniam",
-   "components": [
-    {
-     "key": "introitus",
-     "role": "introitus",
-     "text": "proprium/dominica-xxiii-post-pentecosten-introitus",
-     "relation": "reference"
-    },
-    {
-     "key": "collecta",
-     "role": "collecta",
-     "text": "proprium/dominica-v-post-epiphaniam-collecta",
-     "relation": "proper"
-    },
-    {
-     "key": "epistola",
-     "role": "epistola",
-     "text": "proprium/dominica-v-post-epiphaniam-epistola",
-     "relation": "proper"
-    },
-    {
-     "key": "graduale",
-     "role": "graduale",
-     "text": "proprium/dominica-xxiii-post-pentecosten-graduale",
-     "relation": "reference"
-    },
-    {
-     "key": "alleluia",
-     "role": "alleluia",
-     "text": "proprium/dominica-xxiii-post-pentecosten-alleluia",
-     "relation": "reference"
-    },
-    {
-     "key": "evangelium",
-     "role": "evangelium",
-     "text": "proprium/dominica-v-post-epiphaniam-evangelium",
-     "relation": "proper"
-    },
-    {
-     "key": "offertorium",
-     "role": "offertorium",
-     "text": "proprium/dominica-xxiii-post-pentecosten-offertorium",
-     "relation": "reference"
-    },
-    {
-     "key": "secreta",
-     "role": "secreta",
-     "text": "proprium/dominica-v-post-epiphaniam-secreta",
-     "relation": "proper"
-    },
-    {
-     "key": "praefatio",
-     "role": "praefatio",
-     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
-     "relation": "shared"
-    },
-    {
-     "key": "communio",
-     "role": "communio",
-     "text": "proprium/dominica-xxiii-post-pentecosten-communio",
-     "relation": "reference"
-    },
-    {
-     "key": "postcommunio",
-     "role": "postcommunio",
-     "text": "proprium/dominica-v-post-epiphaniam-postcommunio",
-     "relation": "proper"
-    }
-   ]
-  },
-  {
-   "id": "dominica-vi-post-epiphaniam",
-   "order": 66,
-   "collection": "temporale",
-   "season": "per-annum",
-   "observance": "dominica-vi-post-epiphaniam",
-   "calendar": {
-    "key": "dominica-vi-post-epiphaniam",
-    "default": true
-   },
-   "title": "Dominica VI quæ superfuit post Epiphaniam",
-   "components": [
-    {
-     "key": "introitus",
-     "role": "introitus",
-     "text": "proprium/dominica-xxiii-post-pentecosten-introitus",
-     "relation": "reference"
-    },
-    {
-     "key": "collecta",
-     "role": "collecta",
-     "text": "proprium/dominica-vi-post-epiphaniam-collecta",
-     "relation": "proper"
-    },
-    {
-     "key": "epistola",
-     "role": "epistola",
-     "text": "proprium/dominica-vi-post-epiphaniam-epistola",
-     "relation": "proper"
-    },
-    {
-     "key": "graduale",
-     "role": "graduale",
-     "text": "proprium/dominica-xxiii-post-pentecosten-graduale",
-     "relation": "reference"
-    },
-    {
-     "key": "alleluia",
-     "role": "alleluia",
-     "text": "proprium/dominica-xxiii-post-pentecosten-alleluia",
-     "relation": "reference"
-    },
-    {
-     "key": "evangelium",
-     "role": "evangelium",
-     "text": "proprium/dominica-vi-post-epiphaniam-evangelium",
-     "relation": "proper"
-    },
-    {
-     "key": "offertorium",
-     "role": "offertorium",
-     "text": "proprium/dominica-xxiii-post-pentecosten-offertorium",
-     "relation": "reference"
-    },
-    {
-     "key": "secreta",
-     "role": "secreta",
-     "text": "proprium/dominica-vi-post-epiphaniam-secreta",
-     "relation": "proper"
-    },
-    {
-     "key": "praefatio",
-     "role": "praefatio",
-     "text": "ordinarium/praefatio-sanctissimae-trinitatis",
-     "relation": "shared"
-    },
-    {
-     "key": "communio",
-     "role": "communio",
-     "text": "proprium/dominica-xxiii-post-pentecosten-communio",
-     "relation": "reference"
-    },
-    {
-     "key": "postcommunio",
-     "role": "postcommunio",
-     "text": "proprium/dominica-vi-post-epiphaniam-postcommunio",
-     "relation": "proper"
-    }
-   ]
-  },
-  {
    "id": "d-n-iesu-christi-regis",
-   "order": 67,
+   "order": 71,
    "collection": "temporale",
    "season": "per-annum",
    "observance": "d-n-iesu-christi-regis",
@@ -5410,7 +5730,7 @@
   },
   {
    "id": "beata-maria-virgo-regina",
-   "order": 68,
+   "order": 72,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "beata-maria-virgo-regina",
@@ -5554,7 +5874,7 @@
   },
   {
    "id": "nativitas-sancti-ioannis-baptistae",
-   "order": 69,
+   "order": 73,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "nativitas-sancti-ioannis-baptistae",
@@ -5634,7 +5954,7 @@
   },
   {
    "id": "sancti-petri-et-pauli-apostolorum",
-   "order": 70,
+   "order": 74,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-petri-et-pauli-apostolorum",
@@ -5714,7 +6034,7 @@
   },
   {
    "id": "pretiosissimi-sanguinis-domini-nostri-iesu-christi",
-   "order": 71,
+   "order": 75,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "pretiosissimi-sanguinis-domini-nostri-iesu-christi",
@@ -5803,7 +6123,7 @@
   },
   {
    "id": "visitatio-beatae-mariae-virginis",
-   "order": 72,
+   "order": 76,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "visitatio-beatae-mariae-virginis",
@@ -5883,7 +6203,7 @@
   },
   {
    "id": "sancti-iacobi-apostoli",
-   "order": 73,
+   "order": 77,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-iacobi-apostoli",
@@ -5963,7 +6283,7 @@
   },
   {
    "id": "sanctae-annae-matris-beatae-mariae-virginis",
-   "order": 74,
+   "order": 78,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sanctae-annae-matris-beatae-mariae-virginis",
@@ -6052,7 +6372,7 @@
   },
   {
    "id": "transfiguratio-domini",
-   "order": 75,
+   "order": 79,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "transfiguratio-domini",
@@ -6132,7 +6452,7 @@
   },
   {
    "id": "sancti-laurentii-martyris",
-   "order": 76,
+   "order": 80,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-laurentii-martyris",
@@ -6212,7 +6532,7 @@
   },
   {
    "id": "assumptio-beatae-mariae-virginis",
-   "order": 77,
+   "order": 81,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "assumptio-beatae-mariae-virginis",
@@ -6292,7 +6612,7 @@
   },
   {
    "id": "sancti-ioachim-confessoris",
-   "order": 78,
+   "order": 82,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-ioachim-confessoris",
@@ -6381,7 +6701,7 @@
   },
   {
    "id": "immaculatum-cor-beatae-mariae-virginis",
-   "order": 79,
+   "order": 83,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "immaculatum-cor-beatae-mariae-virginis",
@@ -6470,7 +6790,7 @@
   },
   {
    "id": "sancti-bartholomaei-apostoli",
-   "order": 80,
+   "order": 84,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-bartholomaei-apostoli",
@@ -6550,7 +6870,7 @@
   },
   {
    "id": "nativitas-beatae-mariae-virginis",
-   "order": 81,
+   "order": 85,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "nativitas-beatae-mariae-virginis",
@@ -6639,7 +6959,7 @@
   },
   {
    "id": "exaltatio-sanctae-crucis",
-   "order": 82,
+   "order": 86,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "exaltatio-sanctae-crucis",
@@ -6719,7 +7039,7 @@
   },
   {
    "id": "septem-dolorum-beatae-mariae-virginis",
-   "order": 83,
+   "order": 87,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "septem-dolorum-beatae-mariae-virginis",
@@ -6814,7 +7134,7 @@
   },
   {
    "id": "sancti-matthaei-apostoli-et-evangelistae",
-   "order": 84,
+   "order": 88,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-matthaei-apostoli-et-evangelistae",
@@ -6894,7 +7214,7 @@
   },
   {
    "id": "dedicatio-sancti-michaelis-archangeli",
-   "order": 85,
+   "order": 89,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "dedicatio-sancti-michaelis-archangeli",
@@ -6974,7 +7294,7 @@
   },
   {
    "id": "beatae-mariae-virginis-a-rosario",
-   "order": 86,
+   "order": 90,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "beatae-mariae-virginis-a-rosario",
@@ -7063,7 +7383,7 @@
   },
   {
    "id": "maternitas-beatae-mariae-virginis",
-   "order": 87,
+   "order": 91,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "maternitas-beatae-mariae-virginis",
@@ -7152,7 +7472,7 @@
   },
   {
    "id": "sancti-lucae-evangelistae",
-   "order": 88,
+   "order": 92,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-lucae-evangelistae",
@@ -7232,7 +7552,7 @@
   },
   {
    "id": "sanctorum-simonis-et-iudae-apostolorum",
-   "order": 89,
+   "order": 93,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sanctorum-simonis-et-iudae-apostolorum",
@@ -7312,7 +7632,7 @@
   },
   {
    "id": "omnium-sanctorum",
-   "order": 90,
+   "order": 94,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "omnium-sanctorum",
@@ -7392,7 +7712,7 @@
   },
   {
    "id": "commemoratio-omnium-fidelium-defunctorum",
-   "order": 91,
+   "order": 95,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "commemoratio-omnium-fidelium-defunctorum",
@@ -7480,7 +7800,7 @@
   },
   {
    "id": "commemoratio-omnium-fidelium-defunctorum-missa-ii",
-   "order": 92,
+   "order": 96,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "commemoratio-omnium-fidelium-defunctorum",
@@ -7567,7 +7887,7 @@
   },
   {
    "id": "commemoratio-omnium-fidelium-defunctorum-missa-iii",
-   "order": 93,
+   "order": 97,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "commemoratio-omnium-fidelium-defunctorum",
@@ -7654,7 +7974,7 @@
   },
   {
    "id": "dedicatio-archibasilicae-sanctissimi-salvatoris",
-   "order": 94,
+   "order": 98,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "dedicatio-archibasilicae-sanctissimi-salvatoris",
@@ -7743,7 +8063,7 @@
   },
   {
    "id": "sancti-andreae-apostoli",
-   "order": 95,
+   "order": 99,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-andreae-apostoli",
@@ -7823,7 +8143,7 @@
   },
   {
    "id": "immaculata-conceptio",
-   "order": 96,
+   "order": 100,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "immaculata-conceptio",
@@ -7912,7 +8232,7 @@
   },
   {
    "id": "sancti-thomae-apostoli",
-   "order": 97,
+   "order": 101,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-thomae-apostoli",
@@ -8001,7 +8321,7 @@
   },
   {
    "id": "sancti-stephani-protomartyris",
-   "order": 98,
+   "order": 102,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-stephani-protomartyris",
@@ -8090,7 +8410,7 @@
   },
   {
    "id": "sancti-ioannis-apostoli-et-evangelistae",
-   "order": 99,
+   "order": 103,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-ioannis-apostoli-et-evangelistae",
@@ -8179,7 +8499,7 @@
   },
   {
    "id": "sanctorum-innocentium-martyrum",
-   "order": 100,
+   "order": 104,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sanctorum-innocentium-martyrum",
@@ -8268,7 +8588,7 @@
   },
   {
    "id": "purificatio-beatae-mariae-virginis",
-   "order": 101,
+   "order": 105,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "purificatio-beatae-mariae-virginis",
@@ -8360,7 +8680,7 @@
   },
   {
    "id": "cathedra-sancti-petri",
-   "order": 102,
+   "order": 106,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "cathedra-sancti-petri",
@@ -8449,7 +8769,7 @@
   },
   {
    "id": "sancti-matthiae-apostoli",
-   "order": 103,
+   "order": 107,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-matthiae-apostoli",
@@ -8529,7 +8849,7 @@
   },
   {
    "id": "sancti-ioseph-sponsi-beatae-mariae-virginis",
-   "order": 104,
+   "order": 108,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-ioseph-sponsi-beatae-mariae-virginis",
@@ -8663,7 +8983,7 @@
   },
   {
    "id": "annuntiatio-beatae-mariae-virginis",
-   "order": 105,
+   "order": 109,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "annuntiatio-beatae-mariae-virginis",
@@ -8797,7 +9117,7 @@
   },
   {
    "id": "sancti-marci-evangelistae",
-   "order": 106,
+   "order": 110,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-marci-evangelistae",
@@ -8871,7 +9191,7 @@
   },
   {
    "id": "sancti-ioseph-opificis",
-   "order": 107,
+   "order": 111,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sancti-ioseph-opificis",
@@ -8945,7 +9265,7 @@
   },
   {
    "id": "sanctorum-philippi-et-iacobi-apostolorum",
-   "order": 108,
+   "order": 112,
    "collection": "sanctorale",
    "season": "per-annum",
    "observance": "sanctorum-philippi-et-iacobi-apostolorum",
