@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Nativity of the Lord — Mass during the Night” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Let the heavens rejoice and the earth be glad before the face of the Lord, for He cometh.","g":["Let rejoice","the heavens","and","let be glad","the earth","before","the face","of the Lord","for","He cometh"]}
+    {"id":"s01","tr":"Let the heavens rejoice and the earth be glad before the face of the Lord, for He comes.","tb":"revised","g":[null,null,"and",null,null,"before","the face","of the Lord","for","He comes"],"a":[{"s":0,"n":2,"a":0,"g":"Let the heavens rejoice"},{"s":3,"n":2,"a":0,"g":"let the earth be glad"}]}
   ]
 }

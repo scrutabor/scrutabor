@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Nativity of the Lord — Mass during the Day” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"All the ends of the earth have seen the salvation of our God; sing joyfully unto God, all the earth. The Lord hath made known His salvation; in the sight of the nations He hath revealed His justice.","g":["Have seen","all","the ends","of the earth","the salvation","of God","our","sing joyfully","unto God","all","the earth","Known","hath made","the Lord","salvation","His","before","the sight","of the nations","He hath revealed","justice","His"]}
+    {"id":"s01","tr":"All the ends of the earth have seen the salvation of our God; sing joyfully to God, all the earth. The Lord has made known His salvation; in the sight of the nations He has revealed His justice.","g":[null,null,null,null,"the salvation",null,null,"sing joyfully","to God","all","the earth",null,null,null,null,null,"before","the sight","of the nations","He has revealed",null,null],"a":[{"s":0,"n":4,"a":0,"g":"All the ends of the earth have seen"},{"s":5,"n":2,"a":0,"g":"of our God"},{"s":11,"n":3,"a":2,"g":"The Lord has made known"},{"s":14,"n":2,"a":0,"g":"His salvation"},{"s":20,"n":2,"a":0,"g":"His justice"}]}
   ]
 }

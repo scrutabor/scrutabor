@@ -1,0 +1,27 @@
+{
+ "id": "proprium.vigilia-nativitatis-offertorium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 108",
+    "scan": "scan p. 120"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.vigilia-nativitatis-offertorium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Offertory (the Douay Ps 23:7 through this missal), revised in contemporary address: O princes, be lifted up, will come in."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -1,0 +1,27 @@
+{
+ "id": "proprium.nativitas-domini-in-nocte-graduale",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 110",
+    "scan": "scan p. 122"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.nativitas-domini-in-nocte-graduale.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gradual (the Douay Ps 109:3 and 109:1 through this missal), revised against the Latin: dominion, power, splendors, the footstool of Your feet, and contemporary address."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

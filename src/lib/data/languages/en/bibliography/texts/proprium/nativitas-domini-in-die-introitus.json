@@ -1,0 +1,27 @@
+{
+ "id": "proprium.nativitas-domini-in-die-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 113–114",
+    "scan": "scan pp. 127–128"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.nativitas-domini-in-die-introitus.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the antiphon and the psalm verse (the Douay Isa 9:6 and Ps 97:1 through this missal), revised: will be called, a new song, He has done wonderful things; the Gloria Patri is the closed formula with Holy Spirit and world without end."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pasc4-0.txt [Graduale], lines 30–34"
+    "section": "web/www/missa/Latin/Tempora/Pasc4-0.txt [Graduale] (lines 30-34)"
    },
    "entries": [
     {
@@ -17,7 +17,7 @@
      "claim": "The exact pinned Latin component supplies a derived digital comparison; its spelling and punctuation differences are preserved, not treated as another independent print."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-10-07"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Vigil of the Nativity of the Lord” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"The glory of the Lord shall be revealed, and all flesh shall see the salvation of our God.","g":["Shall be revealed","the glory","of the Lord","and","shall see","all","flesh","the salvation","of God","our"]}
+    {"id":"s01","tr":"The glory of the Lord will be revealed, and all flesh will see the salvation of our God.","g":["Will be revealed","the glory","of the Lord","and",null,null,null,"the salvation",null,null],"a":[{"s":4,"n":3,"a":0,"g":"all flesh will see"},{"s":8,"n":2,"a":0,"g":"of our God"}]}
   ]
 }

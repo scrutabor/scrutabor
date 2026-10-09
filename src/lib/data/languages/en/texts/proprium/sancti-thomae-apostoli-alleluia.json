@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Saint Thomas the Apostle” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. Rejoice in the Lord, you just; praise befits the upright. Alleluia.","g":["Alleluia","alleluia","Rejoice","you just","in","the Lord","the upright",null,null,"Alleluia"],"a":[{"s":7,"n":2,"a":0,"g":"praise befits"}]}
+    {"id":"s01","tr":"Alleluia, alleluia. Rejoice in the Lord, you just; praise befits the upright. Alleluia.","g":["Alleluia","alleluia","Rejoice","you just","in","the Lord",null,null,null,"Alleluia"],"a":[{"s":6,"n":3,"a":1,"g":"praise befits the upright"}]}
   ]
 }

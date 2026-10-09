@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/12-25m2.txt (section [Introitus]); resolved spans: web/www/missa/Latin/Sancti/12-25m2.txt (lines 14-18); web/www/missa/Latin/Ordo/Prayers.txt (lines 14-15)"
+    "section": "web/www/missa/Latin/Sancti/12-25m2.txt [Introitus] (lines 14-19); web/www/missa/Latin/Ordo/Prayers.txt [Gloria] (lines 13-14)"
    },
    "entries": [
     {
@@ -17,7 +17,29 @@
      "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 219",
+    "scan": "leaf n298 / PDF p. 299",
+    "section": "Ordo Missae: Gloria Patri",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n298/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.nativitas-domini-in-aurora-introitus.expanded-doxology.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The full Gloria Patri through Amen supplies words w037–w056 after the proper's cue; the Ordo prints semper: where the selected text has the house comma."
+    }
+   ],
+   "verified_on": "2026-10-07"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -38,6 +60,27 @@
     }
    ],
    "verified_on": "2026-09-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. xxix",
+    "scan": "leaf n34 / PDF p. 35",
+    "section": "Rubricae generales 427",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n34/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.nativitas-domini-in-aurora-introitus.introit-expansion.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG 427 prescribes antiphon, psalm, Gloria Patri and repeated antiphon; it supports this expansion of the printed cues."
+    }
+   ],
+   "verified_on": "2026-10-07"
   }
  ],
  "witnesses": []

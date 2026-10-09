@@ -1,0 +1,27 @@
+{
+ "id": "proprium.vigilia-nativitatis-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 107",
+    "scan": "scan p. 119"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.vigilia-nativitatis-introitus.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the antiphon and the psalm verse (the Douay Ps 23:1 through this missal), revised against the Latin in contemporary language: Today, will for the predictive shall, its fullness and all who dwell in it, the contemporary address; the Gloria Patri is the closed formula with Holy Spirit, and the repeated antiphon takes the same revised wording."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

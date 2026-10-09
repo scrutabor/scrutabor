@@ -1,0 +1,27 @@
+{
+ "id": "proprium.nativitas-domini-in-aurora-offertorium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 113",
+    "scan": "scan p. 127"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.nativitas-domini-in-aurora-offertorium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Offertory (the Douay Ps 92:1–2 through this missal; Husenbeth 1853 has the same sentence with O God), revised in contemporary language: has established, will not be moved, Your throne, O God, You are."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

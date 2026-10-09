@@ -12526,9 +12526,10 @@
       {
        "id": "proprium.nativitas-domini-in-aurora-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 5
       },
       {
        "id": "proprium.nativitas-domini-in-aurora-communio",
@@ -12563,7 +12564,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-domini-in-aurora-offertorium",
@@ -12575,16 +12576,18 @@
       {
        "id": "proprium.nativitas-domini-in-aurora-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 5
       },
       {
        "id": "proprium.nativitas-domini-in-aurora-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 5
       },
       {
        "id": "proprium.nativitas-domini-in-die-alleluia",
@@ -12596,9 +12599,10 @@
       {
        "id": "proprium.nativitas-domini-in-die-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.nativitas-domini-in-die-communio",
@@ -12647,14 +12651,15 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-domini-in-die-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.nativitas-domini-in-nocte-alleluia",
@@ -12668,7 +12673,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-domini-in-nocte-communio",
@@ -12703,7 +12708,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-domini-in-nocte-offertorium",
@@ -12717,7 +12722,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.nativitas-domini-in-nocte-secreta",
@@ -14653,7 +14658,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.vigilia-nativitatis-communio",
@@ -14688,7 +14693,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.vigilia-nativitatis-offertorium",
@@ -14700,16 +14705,17 @@
       {
        "id": "proprium.vigilia-nativitatis-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.vigilia-nativitatis-secreta",
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.vigilia-paschalis-alleluia",
@@ -17430,6 +17436,13 @@
        "roles": [
         "official_liturgical_context"
        ],
+       "uses": 4
+      },
+      {
+       "id": "proprium.nativitas-domini-in-aurora-introitus",
+       "roles": [
+        "rubric_control"
+       ],
        "uses": 1
       },
       {
@@ -17437,21 +17450,21 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 4
       },
       {
        "id": "proprium.nativitas-domini-in-aurora-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 4
       },
       {
        "id": "proprium.nativitas-domini-in-die-collecta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.nativitas-domini-in-die-introitus",
@@ -17472,12 +17485,19 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.nativitas-domini-in-nocte-collecta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.nativitas-domini-in-nocte-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -18120,11 +18140,18 @@
        "uses": 1
       },
       {
+       "id": "proprium.vigilia-nativitatis-introitus",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.vigilia-nativitatis-postcommunio",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.vigilia-nativitatis-secreta",

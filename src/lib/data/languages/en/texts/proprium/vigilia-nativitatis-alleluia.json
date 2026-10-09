@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The Alleluia of the Vigil of the Nativity of the Lord, sung only when the Vigil falls on Sunday.",
   "seg":[
-    {"id":"s01","nr":"It is said only when the Vigil falls on Sunday."},
-    {"id":"s02","tr":"Alleluia, alleluia. Tomorrow the iniquity of the earth shall be blotted out, and the Savior of the world shall reign over us. Alleluia.","g":["Alleluia","alleluia",null,null,"shall be blotted out","the iniquity","of the earth","and","shall reign","over","us","the Savior","of the world","Alleluia"],"a":[{"s":2,"n":2,"a":0,"g":"Tomorrow"}]}
+    {"id":"s02","tr":"Alleluia, alleluia. Tomorrow the iniquity of the earth will be blotted out, and the Savior of the world will reign over us. Alleluia.","g":["Alleluia","alleluia",null,null,"will be blotted out","the iniquity","of the earth","and","will reign","over","us","the Savior","of the world","Alleluia"],"a":[{"s":2,"n":2,"a":0,"g":"Tomorrow"}]},
+    {"id":"s01","nr":"The Alleluia with the following verse is not said unless this vigil falls on a Sunday."}
   ]
 }

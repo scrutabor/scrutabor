@@ -1,0 +1,27 @@
+{
+ "id": "proprium.nativitas-domini-in-nocte-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 109",
+    "scan": "scan p. 121"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.nativitas-domini-in-nocte-introitus.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the antiphon and the psalm verse (the Douay Ps 2:7 and 2:1 through this missal), revised in contemporary language: said to Me, You are My Son, this day I have begotten You, the nations and the peoples; the Gloria Patri is the closed formula with Holy Spirit."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

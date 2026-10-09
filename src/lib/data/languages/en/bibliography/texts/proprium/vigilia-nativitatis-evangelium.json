@@ -1,0 +1,27 @@
+{
+ "id": "proprium.vigilia-nativitatis-evangelium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 108",
+    "scan": "scan p. 120"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.vigilia-nativitatis-evangelium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gospel (Matt. 1:18–21), revised against the Latin in contemporary language: betrothed, by and of the Holy Spirit, not willing to expose her (the Latin has no publicly), While he was thinking on these things, do not fear to take Mary your wife, will for the predictive shall."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

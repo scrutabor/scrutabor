@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The postcommunio of the formulary “Nativity of the Lord — Mass during the Day” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Grant, we beseech Thee, almighty God, that the Savior of the world, born this day, as He is for us the author of divine generation, may likewise Himself be the giver of immortality, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["Grant","we beseech","almighty","God","that","born","this day","the Savior","of the world","as","of divine","for us","generation","is","the author","so","also","of immortality","may be","Himself","the giver","Who","with Thee","liveth","and","reigneth","in","the unity",null,null,"God","unto","all","ages","of ages"],"a":[{"s":28,"n":2,"a":0,"g":"of the Holy Spirit"}]},
+    {"id":"s01","tr":"Grant, we beseech You, almighty God, that, as the Savior of the world, born today, is for us the author of divine generation, so He Himself may also be the giver of immortality. Who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["Grant","we beseech","almighty","God","that","born","today","the Savior","of the world","as",null,null,null,null,null,"so","also",null,null,null,null,null,null,null,null,null,"in","the unity",null,null,"God",null,null,null,null],"a":[{"s":10,"n":5,"a":4,"g":"He is for us the author of divine generation"},{"s":17,"n":4,"a":3,"g":"may Himself be the giver of immortality"},{"s":21,"n":5,"a":2,"g":"Who lives and reigns with You"},{"s":28,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":31,"n":4,"a":2,"g":"forever and ever"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

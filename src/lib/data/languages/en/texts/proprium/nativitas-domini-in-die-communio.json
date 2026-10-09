@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Nativity of the Lord — Mass during the Day” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"All the ends of the earth have seen the salvation of our God.","g":["Have seen","all","the ends","of the earth","the salvation","of God","our"]}
+    {"id":"s01","tr":"All the ends of the earth have seen the salvation of our God.","g":[null,null,null,null,"the salvation",null,null],"a":[{"s":0,"n":4,"a":0,"g":"All the ends of the earth have seen"},{"s":5,"n":2,"a":0,"g":"of our God"}]}
   ]
 }

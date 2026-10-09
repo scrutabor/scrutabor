@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Nativity of the Lord — Mass at Dawn” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"God hath established the world, which shall not be moved; Thy throne, O God, is prepared from of old; Thou art from everlasting.","g":["God","hath established","the world","of earth","which",null,null,"prepared","throne","Thy","God","from","then","from","the age","Thou","art"],"a":[{"s":5,"n":2,"a":1,"g":"shall not be moved"}]}
+    {"id":"s01","tr":"God has established the world, which will not be moved; Your throne, O God, is prepared from of old; You are from everlasting.","tb":"revised","g":["God","has established","the world","of the earth","which",null,null,null,null,null,"God","from","then","from","the age","You","are"],"a":[{"s":5,"n":2,"a":1,"g":"will not be moved"},{"s":7,"n":3,"a":1,"g":"Your throne is prepared"}]}
   ]
 }

@@ -1,0 +1,27 @@
+{
+ "id": "proprium.nativitas-domini-in-nocte-communio",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 111",
+    "scan": "scan p. 125"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.nativitas-domini-in-nocte-communio.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Communion (the Douay Ps 109:3), revised: the splendors of the saints, I begot You."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

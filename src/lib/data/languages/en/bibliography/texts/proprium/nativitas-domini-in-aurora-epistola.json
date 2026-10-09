@@ -1,0 +1,27 @@
+{
+ "id": "proprium.nativitas-domini-in-aurora-epistola",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 112",
+    "scan": "scan p. 126"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.nativitas-domini-in-aurora-epistola.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Epistle (Tit. 3:4–7), revised against the Latin in contemporary language and address."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

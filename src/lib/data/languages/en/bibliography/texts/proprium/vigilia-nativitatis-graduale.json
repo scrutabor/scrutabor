@@ -1,0 +1,27 @@
+{
+ "id": "proprium.vigilia-nativitatis-graduale",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 108",
+    "scan": "scan p. 120"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.vigilia-nativitatis-graduale.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gradual (the Douay Ps 79:2–3 through this missal), revised in contemporary address: You who rule, You who lead, You who sit upon the Cherubim, show Yourself before; the respond as in the Introit."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

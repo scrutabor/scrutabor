@@ -1,0 +1,27 @@
+{
+ "id": "proprium.nativitas-domini-in-die-offertorium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 115",
+    "scan": "scan p. 129"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.nativitas-domini-in-die-offertorium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Offertory (the Douay Ps 88:12, 15 through this missal), revised in contemporary language: Yours, its fullness, You have founded, Your throne."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

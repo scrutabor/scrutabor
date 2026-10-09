@@ -3242,7 +3242,8 @@
     },
     {
       "id": "proprium.nativitas-domini-in-aurora-alleluia",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-aurora-alleluia.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-aurora-alleluia.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-aurora-alleluia.json"
     },
     {
       "id": "proprium.nativitas-domini-in-aurora-collecta",
@@ -3254,23 +3255,28 @@
     },
     {
       "id": "proprium.nativitas-domini-in-aurora-epistola",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-aurora-epistola.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-aurora-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-aurora-epistola.json"
     },
     {
       "id": "proprium.nativitas-domini-in-aurora-evangelium",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-aurora-evangelium.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-aurora-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-aurora-evangelium.json"
     },
     {
       "id": "proprium.nativitas-domini-in-aurora-graduale",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-aurora-graduale.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-aurora-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-aurora-graduale.json"
     },
     {
       "id": "proprium.nativitas-domini-in-aurora-introitus",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-aurora-introitus.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-aurora-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-aurora-introitus.json"
     },
     {
       "id": "proprium.nativitas-domini-in-aurora-offertorium",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-aurora-offertorium.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-aurora-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-aurora-offertorium.json"
     },
     {
       "id": "proprium.nativitas-domini-in-aurora-postcommunio",
@@ -3306,11 +3312,13 @@
     },
     {
       "id": "proprium.nativitas-domini-in-die-introitus",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-die-introitus.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-die-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-die-introitus.json"
     },
     {
       "id": "proprium.nativitas-domini-in-die-offertorium",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-die-offertorium.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-die-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-die-offertorium.json"
     },
     {
       "id": "proprium.nativitas-domini-in-die-postcommunio",
@@ -3322,7 +3330,8 @@
     },
     {
       "id": "proprium.nativitas-domini-in-nocte-alleluia",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-alleluia.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-alleluia.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-nocte-alleluia.json"
     },
     {
       "id": "proprium.nativitas-domini-in-nocte-collecta",
@@ -3330,27 +3339,33 @@
     },
     {
       "id": "proprium.nativitas-domini-in-nocte-communio",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-communio.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-communio.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-nocte-communio.json"
     },
     {
       "id": "proprium.nativitas-domini-in-nocte-epistola",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-epistola.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-nocte-epistola.json"
     },
     {
       "id": "proprium.nativitas-domini-in-nocte-evangelium",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-evangelium.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-nocte-evangelium.json"
     },
     {
       "id": "proprium.nativitas-domini-in-nocte-graduale",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-graduale.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-nocte-graduale.json"
     },
     {
       "id": "proprium.nativitas-domini-in-nocte-introitus",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-introitus.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-nocte-introitus.json"
     },
     {
       "id": "proprium.nativitas-domini-in-nocte-offertorium",
-      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-offertorium.json"
+      "path": "languages/en/texts/proprium/nativitas-domini-in-nocte-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/nativitas-domini-in-nocte-offertorium.json"
     },
     {
       "id": "proprium.nativitas-domini-in-nocte-postcommunio",
@@ -4476,19 +4491,23 @@
     },
     {
       "id": "proprium.vigilia-nativitatis-evangelium",
-      "path": "languages/en/texts/proprium/vigilia-nativitatis-evangelium.json"
+      "path": "languages/en/texts/proprium/vigilia-nativitatis-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/vigilia-nativitatis-evangelium.json"
     },
     {
       "id": "proprium.vigilia-nativitatis-graduale",
-      "path": "languages/en/texts/proprium/vigilia-nativitatis-graduale.json"
+      "path": "languages/en/texts/proprium/vigilia-nativitatis-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/vigilia-nativitatis-graduale.json"
     },
     {
       "id": "proprium.vigilia-nativitatis-introitus",
-      "path": "languages/en/texts/proprium/vigilia-nativitatis-introitus.json"
+      "path": "languages/en/texts/proprium/vigilia-nativitatis-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/vigilia-nativitatis-introitus.json"
     },
     {
       "id": "proprium.vigilia-nativitatis-offertorium",
-      "path": "languages/en/texts/proprium/vigilia-nativitatis-offertorium.json"
+      "path": "languages/en/texts/proprium/vigilia-nativitatis-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/vigilia-nativitatis-offertorium.json"
     },
     {
       "id": "proprium.vigilia-nativitatis-postcommunio",

@@ -1,0 +1,27 @@
+{
+ "id": "proprium.nativitas-domini-in-aurora-alleluia",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 112",
+    "scan": "scan p. 126"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.nativitas-domini-in-aurora-alleluia.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Alleluia verse (the Douay Ps 92:1), revised against the Latin: has clothed Himself for the active índuit (the Introit has indútus est), with power for virtúte, and contemporary language."
+    }
+   ],
+   "verified_on": "2026-10-07"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

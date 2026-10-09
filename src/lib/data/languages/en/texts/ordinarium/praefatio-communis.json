@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The Common Preface names no mystery of the day. After “through Christ our Lord” it turns to the angelic choirs’ praise of God. Its opening sentence is built around “est”, which governs the construction “nos tibi grátias ágere”.",
   "seg":[
-    {"id":"s01","nr":"The priest parts his hands and holds them apart to the end of the Preface."},
+    {"id":"s01","nr":"Then the priest separates his hands and holds them apart until the end of the Preface. When it is finished, he joins them again and, bowing, says: Sanctus."},
     {"id":"s02","tr":"Truly it is right and just, fitting and leading to salvation, that we should give You thanks always and everywhere:","g":["truly","right","and","just","it is","proper","and","salutary","that we should",null,null,null,null,null,null],"a":[{"s":9,"n":6,"a":5,"g":"always and everywhere give thanks to You"}],"ex":{"w009":"Latin “nos tibi grátias ágere” means literally “that we give thanks to You”. English likewise expands the construction as a clause."}},
     {"id":"s03","tr":"O Lord, holy Father, almighty eternal God: through Christ our Lord.","tc":[296],"tb":"revised","g":["Lord","holy","Father","almighty","eternal","God","through","Christ",null,null],"a":[{"s":8,"n":2,"a":0,"g":"our Lord"}]},
     {"id":"s04","tr":"Through Him the Angels praise Your majesty, the Dominions adore it, and the Powers tremble before it.","tc":[296],"tb":"revised","g":["through","whom",null,null,null,null,null,null,null,null],"a":[{"s":2,"n":2,"a":0,"g":"Your majesty"},{"s":4,"n":2,"a":0,"g":"the Angels praise"},{"s":6,"n":2,"a":0,"g":"the Dominions adore"},{"s":8,"n":2,"a":0,"g":"the Powers tremble"}]},
