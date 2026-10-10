@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 53",
+    "scan": "leaf n132 / PDF p. 133",
+    "section": "Sexagesima Offertory",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n132/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-vi-post-pentecosten-offertorium.mr-sexagesima",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Sexagesima printing has the same 28 substantive words and clause punctuation as the owning VI-after-Pentecost Offertory, but prints gréssus where the owning page has gressus. The owning spelling is retained."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 379",

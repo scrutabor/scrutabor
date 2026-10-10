@@ -9077,7 +9077,7 @@
         "direct_approved_print",
         "official_text"
        ],
-       "uses": 3
+       "uses": 5
       },
       {
        "id": "proprium.dominica-i-post-epiphaniam-secreta",
@@ -10907,9 +10907,10 @@
       {
        "id": "proprium.dominica-vi-post-pentecosten-offertorium",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-vi-post-pentecosten-postcommunio",

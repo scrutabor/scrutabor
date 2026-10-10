@@ -88,8 +88,14 @@ export async function expectSharedGloss(
 			);
 			await expect(card.locator('.head a')).toHaveAttribute('href', expectedWords[member].href);
 		}
-		await card.scrollIntoViewIfNeeded();
-		await expect(card.locator('.head a')).toBeInViewport();
+		// A detailed card can be taller than the mobile panel. Reveal its actual
+		// link, not the whole card whose centered box can hide the heading.
+		const entryLink = card.locator('.head a');
+		await entryLink.scrollIntoViewIfNeeded();
+		await expect(entryLink).toBeInViewport();
+		// Hover checks pointer reachability without dispatching a click through
+		// the downloaded edition's capture-phase navigation handler.
+		await entryLink.hover();
 		await expect(card.locator('.morph')).not.toHaveText('');
 	}
 	await page.keyboard.press('Escape');

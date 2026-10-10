@@ -1,8 +1,8 @@
 {
   "id":"proprium.dominica-vi-post-pentecosten-offertorium",
   "language":"en",
-  "about":"The offertorium of the formulary “6th Sunday after Pentecost” in the 1962 Roman Missal.",
+  "about":"The offertorium of the formulary “6th Sunday after Pentecost” in the 1962 Roman Missal. The same chant is used in the Sexagesima formulary.",
   "seg":[
-    {"id":"s01","tr":"Make my steps sure in Your paths, that my footsteps may not be moved; incline Your ear, and hear my words; display Your wondrous mercies, You who save those who hope in You, O Lord.","g":["Make steadfast","steps","my","in","paths","Your","that",null,null,"footsteps","my","incline","ear","Your","and","hear","words","my","make wonderful","mercies","Your","who","safe","make","those hoping","in","You","Lord"],"a":[{"s":7,"n":2,"a":1,"g":"may not be moved"}]}
+    {"id":"s01","tr":"Make my steps sure in Your paths, that my footsteps may not be moved; incline Your ear, and hear my words; display Your wondrous mercies, You who save those who hope in You, O Lord.","g":[null,null,null,"in",null,null,"that",null,null,null,null,"incline",null,null,"and","hear",null,null,null,null,null,"You who",null,null,"those who hope","in","You","Lord"],"a":[{"s":0,"n":3,"a":0,"g":"Make my steps steadfast"},{"s":4,"n":2,"a":0,"g":"Your paths"},{"s":7,"n":4,"a":1,"g":"my footsteps may not be moved"},{"s":12,"n":2,"a":0,"g":"Your ear"},{"s":16,"n":2,"a":0,"g":"my words"},{"s":18,"n":3,"a":0,"g":"Show Your wondrous mercies"},{"s":22,"n":2,"a":1,"g":"save"}]}
   ]
 }
