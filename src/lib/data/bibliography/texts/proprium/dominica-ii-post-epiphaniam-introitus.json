@@ -22,7 +22,7 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 44",
     "scan": "leaf n123 / PDF p. 124",
@@ -34,10 +34,52 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The p. 44 image prints the 25-word proper antiphon and psalm verse, followed only by the Glória Patri. Omnis. expansion/repetition cues. The full doxology and repeated antiphon are declared separately in the witness."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 1",
+    "scan": "leaf n80 / PDF p. 81",
+    "section": "First Advent Sunday Introit, Gloria Patri through Amen and repeat rubric",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-ii-post-epiphaniam-introitus.gloria-expansion.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The page prints the complete accented Gloria Patri–Amen retained at words w026–w045; its following rubric directs the antiphon repeat up to the psalm and states that this mode applies throughout the year."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. xxix",
+    "scan": "leaf n34 / PDF p. 35",
+    "section": "Rubricae generales427–428",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n34/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-ii-post-epiphaniam-introitus.introit-repeat.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Rubricae generales427 directs the antiphon with psalm verse and Gloria Patri, followed by repetition of the antiphon;428 states the particular seasonal/Requiem omissions. This is rubric control, not the II proper words printed on this page."
+    }
+   ],
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []

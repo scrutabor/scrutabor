@@ -9316,16 +9316,16 @@
       {
        "id": "proprium.dominica-ii-post-epiphaniam-graduale",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-ii-post-epiphaniam-introitus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-ii-post-epiphaniam-offertorium",
@@ -9337,16 +9337,16 @@
       {
        "id": "proprium.dominica-ii-post-epiphaniam-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-ii-post-epiphaniam-secreta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-ii-post-pascha-alleluia",
@@ -16473,18 +16473,25 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-ii-post-epiphaniam-introitus",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-ii-post-epiphaniam-postcommunio",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-ii-post-epiphaniam-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-ii-post-pascha-collecta",

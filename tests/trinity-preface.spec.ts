@@ -39,6 +39,56 @@ const groups: Record<'pl' | 'en', [string, number, string[], string][]> = {
 	]
 };
 
+const quamExplanations = {
+	pl: 'Quam nawiązuje do poprzednich słów: może odnosić się do wspomnianej równości majestatu albo do Bóstwa. Oba łacińskie rzeczowniki — aequalitas i Deitas — są rodzaju żeńskiego.',
+	en: 'Quam links this praise to what precedes. It may refer to the equality in majesty just mentioned or to the earlier Godhead: both aequalitas and Deitas are feminine nouns.'
+};
+
+for (const language of ['pl', 'en'] as const) {
+	test(`Trinity ${language} Quam distinguishes its secure parse from its possible antecedents @reader`, async ({
+		page
+	}) => {
+		await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
+		await page.goto(`/app/${language}/ordinarium/praefatio-sanctissimae-trinitatis?w=w085`);
+		const panel = page.getByRole('dialog');
+		for (const [width, theme] of [
+			[320, 'dark'],
+			[320, 'light'],
+			[1280, 'light'],
+			[1280, 'dark']
+		] as const) {
+			await page.setViewportSize({ width, height: 900 });
+			await setTheme(page, theme);
+			await expect(panel.locator('.form')).toHaveText('Quam');
+			await expect(panel.locator('.head > a')).toHaveAttribute(
+				'href',
+				`/app/${language}/lemma?l=qui`
+			);
+			await expect(panel.locator('.explanation')).toHaveText(quamExplanations[language]);
+			await expect(panel.locator('.morph')).toHaveText(
+				language === 'pl'
+					? 'zaimek — biernik, l. poj., r. żeński'
+					: 'pronoun — accusative, singular, feminine'
+			);
+			expect(await panel.locator('.inner').evaluate((el) => el.scrollWidth - el.clientWidth)).toBe(
+				0
+			);
+		}
+	});
+}
+
+test('Trinity eternal adjective retains qualified nominal and adverbial dictionary senses @reader', async ({
+	page
+}) => {
+	await page.goto('/app/en/ordinarium/praefatio-sanctissimae-trinitatis?w=w020');
+	const panel = page.getByRole('dialog');
+	await expect(panel.locator('.head > a')).toHaveAttribute('href', '/app/en/lemma?l=aeternus');
+	await expect(panel.locator('.head-senses')).toHaveText(
+		'— eternal, everlasting, eternity (used as a noun), forever (adverbial uses, including in aeternum)'
+	);
+	await expect(panel.locator('.morph')).toHaveText('adjective — vocative, singular, masculine');
+});
+
 for (const language of ['pl', 'en'] as const) {
 	for (const [anchor, first, lemmata, gloss] of groups[language]) {
 		const members = lemmata.map((lemma, offset) => ({

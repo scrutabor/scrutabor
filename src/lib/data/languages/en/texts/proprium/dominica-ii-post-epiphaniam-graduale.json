@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Second Sunday after Epiphany” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"The Lord sent His word and healed them, and rescued them from their ruin. Let the mercies of the Lord give glory to Him, and His wonderful works to the children of men.","g":["sent","the Lord","word","His","and","healed","them","and","rescued","them","from","destruction","their","Let give glory","to the Lord","the mercies","His","and","wonderful works","His","to the children","of men"]}
+    {"id":"s01","tr":"The Lord sent His word and healed them, and rescued them from their ruin. Let His mercies and His wonderful works for mankind give glory to the Lord.","g":[null,null,null,null,"and","healed","them","and","rescued","them","from",null,null,null,null,null,null,null,null,null,null,null],"a":[{"s":0,"n":2,"a":0,"g":"The Lord sent"},{"s":2,"n":2,"a":0,"g":"His word"},{"s":11,"n":2,"a":0,"g":"their destruction"},{"s":13,"n":9,"a":0,"g":"Let His mercies and His wonderful works for mankind give glory to the Lord"}],"ex":{"w014":"Misericordiae and mirabilia are plural subjects: the mercies and wonderful works are pictured as giving praise. Confiteantur is a subjunctive expressing a call to praise. The second half shares that verb. Domino names the Lord as the recipient of praise. Filiis hominum can be read as a dative of benefit: the wonderful works are for mankind. Both halves direct praise to the Lord, not to people."}}
   ]
 }

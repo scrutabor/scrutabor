@@ -3,6 +3,17 @@ import { expectSharedGloss } from './shared-gloss';
 import { interlinearGeometry } from './interlinear-geometry';
 
 const day = 'dominica-ii-post-epiphaniam';
+const gradualLemmata = [
+	'confiteor',
+	'dominus',
+	'misericordia',
+	'is',
+	'et',
+	'mirabilis',
+	'is',
+	'filius',
+	'homo'
+] as const;
 const constructions = [
 	{
 		language: 'en',
@@ -17,6 +28,20 @@ const constructions = [
 		first: 68,
 		lemmata: ['capio', 'singulus', 'metreta', 'binus', 'vel', 'ternus'],
 		gloss: 'z których każda mieściła po dwie albo trzy miary'
+	},
+	{
+		language: 'pl',
+		text: 'proprium/dominica-ii-post-epiphaniam-graduale',
+		first: 14,
+		lemmata: gradualLemmata,
+		gloss: 'Niech Jego dzieła miłosierdzia i Jego cuda dla ludzi wysławiają Pana'
+	},
+	{
+		language: 'en',
+		text: 'proprium/dominica-ii-post-epiphaniam-graduale',
+		first: 14,
+		lemmata: gradualLemmata,
+		gloss: 'Let His mercies and His wonderful works for mankind give glory to the Lord'
 	}
 ] as const;
 
