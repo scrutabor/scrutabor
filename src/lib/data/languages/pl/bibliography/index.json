@@ -9619,9 +9619,9 @@
       {
        "id": "proprium.dominica-iii-post-epiphaniam-collecta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 5
       },
       {
        "id": "proprium.dominica-iii-post-epiphaniam-communio",
@@ -9633,23 +9633,23 @@
       {
        "id": "proprium.dominica-iii-post-epiphaniam-epistola",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iii-post-epiphaniam-evangelium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iii-post-epiphaniam-introitus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iii-post-epiphaniam-offertorium",
@@ -9661,16 +9661,16 @@
       {
        "id": "proprium.dominica-iii-post-epiphaniam-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 4
       },
       {
        "id": "proprium.dominica-iii-post-epiphaniam-secreta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 4
       },
       {
        "id": "proprium.dominica-iii-post-pascha-alleluia",
@@ -10253,21 +10253,21 @@
       {
        "id": "proprium.dominica-iv-post-epiphaniam-evangelium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-iv-post-epiphaniam-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-iv-post-epiphaniam-secreta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -16575,6 +16575,13 @@
        "roles": [
         "official_liturgical_context"
        ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-iii-post-epiphaniam-introitus",
+       "roles": [
+        "official_liturgical_context"
+       ],
        "uses": 1
       },
       {
@@ -16582,14 +16589,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-iii-post-epiphaniam-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 4
       },
       {
        "id": "proprium.dominica-iii-post-pascha-collecta",
@@ -16771,14 +16778,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 4
       },
       {
        "id": "proprium.dominica-iv-post-epiphaniam-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-iv-post-pascha-collecta",

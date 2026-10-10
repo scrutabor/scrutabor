@@ -24,7 +24,14 @@ const readings = [
 	['pl', 'proprium/dominica-in-sexagesima-collecta', 'w009', 'nie pokładamy ufności', 1],
 	['pl', 'proprium/dominica-vi-post-pentecosten-secreta', 'w014', 'niczyje', 1],
 	['en', 'proprium/transfiguratio-domini-evangelium', 'w127', 'they saw no one', 2],
-	['en', 'proprium/dominica-iii-post-epiphaniam-evangelium', 'w048', 'tell no one', 2],
+	[
+		'en',
+		'proprium/dominica-iii-post-epiphaniam-evangelium',
+		'w048',
+		'See that you tell no one',
+		3,
+		'w046'
+	],
 	['en', 'proprium/transfiguratio-domini-communio', 'w005', 'tell no one', 2],
 	['en', 'proprium/transfiguratio-domini-evangelium', 'w141', 'tell no one', 2],
 	['en', 'proprium/dominica-ii-in-quadragesima-epistola', 'w071', 'that no one', 2],
@@ -44,14 +51,15 @@ function destination(language: string, text: string, word: string) {
 	};
 }
 
-for (const [language, text, word, gloss, members] of readings) {
+for (const [language, text, word, gloss, members, anchor = word] of readings) {
 	test(`${language} ${text} ${word} preserves the contextual gloss and word analysis`, async ({
 		page
 	}) => {
 		const { route, id } = destination(language, text, word);
+		const { id: anchorId } = destination(language, text, anchor);
 		await page.goto(route);
 		await setHelp(page, 1);
-		const button = page.locator(`button[id="${id}"]`);
+		const button = page.locator(`button[id="${anchorId}"]`);
 		await expect(button.locator('rt')).toHaveText(gloss);
 		if (members > 1) {
 			await expect(button.locator('.token')).toHaveCount(members);

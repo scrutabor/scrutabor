@@ -22,7 +22,7 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 47",
     "scan": "leaf n126 / PDF p. 127",
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Proper page 47 prints all 76 Gospel words with no shared expansion; the IV heading on 46 controls identity despite the V running header. Resumed414 repeats the complete body."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []

@@ -4,7 +4,7 @@ const day = 'dominica-iv-post-epiphaniam';
 const text = `${day}-epistola`;
 const wordId = (n: number) => `w${String(n).padStart(3, '0')}`;
 const readings = {
-	pl: `Bracia | nikomu | nic | nie bądźcie dłużni | oprócz tego | abyście | wzajemnie | się miłowali | kto | bowiem | miłuje | bliźniego | Prawo | wypełnił | Albowiem | Nie | cudzołóż | nie | zabijaj | nie | kradnij | nie | fałszywego | świadectwa | mów | nie | pożądaj | i | jeśli | jakieś | jest | inne | przykazanie | w | tym | słowie | streszcza się | Będziesz miłował | bliźniego | swego | jak | siebie samego | Miłość | bliźniego | zła | nie | wyrządza | Pełnią | więc | Prawa | jest | miłość`,
+	pl: `Bracia | nikomu | nic | nie bądźcie dłużni | oprócz tego | abyście | wzajemnie | się miłowali | kto | bowiem | miłuje | bliźniego | Prawo | wypełnił | Albowiem | Nie | cudzołóż | nie | zabijaj | nie | kradnij | Nie mów fałszywego świadectwa | nie | pożądaj | i | jeśli | jakieś | jest | inne | przykazanie | w | tym | słowie | streszcza się | Będziesz miłował | bliźniego | swego | jak | siebie samego | Miłość | bliźniego | zła | nie | wyrządza | Pełnią | więc | Prawa | jest | miłość`,
 	en: `Brethren | owe no one anything | except | to | love one another | for he who | loves | his neighbor | has fulfilled the Law | For | You shall not commit adultery | you shall not kill | you shall not steal | you shall not bear false witness | you shall not covet | and | if | there is any | other | commandment | in | this | word | it is summed up | You shall love | your neighbor | as | yourself | Love | of one’s neighbor | does no evil | The fulfilling | therefore | of the Law | is | love`
 };
 
@@ -45,7 +45,7 @@ for (const language of ['pl', 'en'] as const) {
 		await setHelp(page, 1);
 		const section = page.locator(`#text-proprium-${text}`);
 		const expected = readings[language].split(' | ');
-		expect(expected).toHaveLength(language === 'pl' ? 52 : 36);
+		expect(expected).toHaveLength(language === 'pl' ? 49 : 36);
 		for (const [width, theme] of [
 			[320, 'dark'],
 			[1280, 'light']

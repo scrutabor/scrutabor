@@ -22,27 +22,7 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_liturgical_context",
-   "locator": {
-    "printed": "pp. xxxii–xxxiv, 225–226",
-    "scan": "leaves n37–n39, n304–n305 / PDF pp. 38–40, 305–306",
-    "section": "RG 480–481, 511 d/i, 513–514; Ordo Missae rubric and chant formula after the secrets"
-   },
-   "entries": [
-    {
-     "id": "use.proprium.dominica-iii-post-epiphaniam-postcommunio.oration-boundaries.mr1962",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
-    }
-   ],
-   "verified_on": "2026-10-07"
-  },
-  {
-   "edition": "edition.missale-romanum.1962-typica",
-   "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 46",
     "scan": "leaf n125 / PDF p. 126",
@@ -54,10 +34,141 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited page prints the 14-word proper body and two-word Per Dominum cue, not the full expanded ending or response. Separate expansion sources are declared."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 123",
+    "scan": "leaf n202 / PDF p. 203",
+    "section": "Postcommunio middle formula before Tuesday heading",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n202/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-post-epiphaniam-postcommunio.conclusion-middle.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w017"
+     },
+     "claim": "Only accented nostrum through Deus. is borrowed from this separate Postcommunion. No comma follows Christum; colon and uppercase Qui follow tuum."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 226",
+    "scan": "leaf n305 / PDF p. 306",
+    "section": "Top Secret/Preface chant and response",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n305/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-post-epiphaniam-postcommunio.conclusion-terminal.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w032"
+     },
+     "claim": "Only five words Per omnia saecula saeculorum and Amen are borrowed. This Secret/Preface transition does not directly print a Collect or Postcommunion terminal speaker."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 413",
+    "scan": "leaf n494 / PDF p. 495",
+    "section": "Resumed Third Sunday after Epiphany",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n494/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-post-epiphaniam-postcommunio.resumed.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w001"
+     },
+     "claim": "The resumed III Postcommunion repeats body and short cue, including quaesumus semicolon; expansion is not printed in full."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "RG 115 a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-post-epiphaniam-postcommunio.conclusion-rg115a.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w015"
+     },
+     "claim": "RG 115 a supplies full Father-addressed conclusion, not its accented continuous printing."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xxxiii",
+    "scan": "leaf n38 / PDF p. 39",
+    "section": "RG 505",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-post-epiphaniam-postcommunio.postcommunion-mode.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w036"
+     },
+     "claim": "RG 505 gives Postcommunion same number/mode/order as beginning orations; dedicated direct terminal response-speaker citation remains pending."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xxxiv",
+    "scan": "leaf n39 / PDF p. 40",
+    "section": "RG 511 i, 513–514 delivery",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n39/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-post-epiphaniam-postcommunio.oration-boundaries.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG 511 i and 513–514 control clear/sung oration and Preface delivery, not a direct terminal Postcommunion response-speaker printing."
+    }
+   ],
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []

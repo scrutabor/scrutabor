@@ -22,7 +22,7 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 46",
     "scan": "leaf n125 / PDF p. 126",
@@ -34,10 +34,32 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited normal p. 46 prints the complete 213-word Gospel; vadit colon is followed. Normal venit semicolon and resumed colon are separately accidental, not a substantive difference."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 413",
+    "scan": "leaf n494 / PDF p. 495",
+    "section": "Resumed Third Sunday after Epiphany",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n494/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-post-epiphaniam-evangelium.resumed.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w132"
+     },
+     "claim": "The resumed III Gospel repeats wording and vadit colon; its commas after veniens/dignus and venit colon differ accidentally from the selected normal printing."
+    }
+   ],
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []

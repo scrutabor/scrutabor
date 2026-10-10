@@ -1,9 +1,9 @@
 {
   "id":"proprium.dominica-iv-post-epiphaniam-postcommunio",
   "language":"en",
-  "about":"The postcommunio of the formulary “Fourth Sunday after Epiphany” in the 1962 Roman Missal.",
+  "about":"The postcommunio of the formulary “Fourth Sunday after Epiphany” in the 1962 Roman Missal. Page 47 prints the proper body and short Per Dominum cue. The full conclusion and Amen are a separate RG115a expansion with declared house orthography, not a continuous page 47 transcription.",
   "seg":[
-    {"id":"s01","tr":"May Thy gifts, O God, free us from earthly delights and ever renew us with heavenly nourishment. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["gifts","Thy","us","God","from","delights","earthly","may free","and","with heavenly","ever","may renew","nourishment","Through","Lord","our","Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity",null,null,"God","unto","all","ages","of ages"],"a":[{"s":27,"n":2,"a":0,"g":"of the Holy Spirit"}]},
+    {"id":"s01","tr":"May Your gifts, O God, free us from earthly delights and always renew us with heavenly nourishment. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":[null,null,null,null,null,null,null,null,"and",null,null,null,null,"Through",null,null,"Jesus","Christ",null,null,"Who","with You","lives","and","reigns","in","the unity",null,null,"God",null,null,null,null],"a":[{"s":0,"n":2,"a":0,"g":"Your gifts"},{"s":2,"n":6,"a":5,"g":"may free us, O God, from earthly delights"},{"s":9,"n":4,"a":2,"g":"always renew us with heavenly nourishment"},{"s":14,"n":2,"a":0,"g":"our Lord"},{"s":18,"n":2,"a":0,"g":"Your Son"},{"s":27,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":30,"n":4,"a":2,"g":"forever and ever"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

@@ -22,7 +22,7 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 45",
     "scan": "leaf n124 / PDF p. 125",
@@ -34,10 +34,32 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited normal p. 45 prints the complete 81-word Epistle; selected house accent fíeri differs from unaccented printed fieri and is declared."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 412",
+    "scan": "leaf n493 / PDF p. 494",
+    "section": "Resumed Third Sunday after Epiphany",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n493/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-post-epiphaniam-epistola.resumed.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w024"
+     },
+     "claim": "The resumed III Epistle repeats the normal wording, including unaccented fieri; selected house accent is not diplomatic."
+    }
+   ],
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []

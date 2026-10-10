@@ -89,6 +89,8 @@ export default defineConfig({
 				'interlinear-clipping.spec.ts',
 				'trinity-preface.spec.ts',
 				'epiphany-constructions.spec.ts',
+				'epiphany-third-constructions.spec.ts',
+				'epiphany-fourth-constructions.spec.ts',
 				'fonts.spec.ts'
 			],
 			grep: /@reader/,
@@ -101,6 +103,8 @@ export default defineConfig({
 				'interlinear-clipping.spec.ts',
 				'trinity-preface.spec.ts',
 				'epiphany-constructions.spec.ts',
+				'epiphany-third-constructions.spec.ts',
+				'epiphany-fourth-constructions.spec.ts',
 				'fonts.spec.ts'
 			],
 			grep: /@reader/,

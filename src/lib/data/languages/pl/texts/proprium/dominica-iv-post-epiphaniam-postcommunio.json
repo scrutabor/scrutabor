@@ -1,9 +1,9 @@
 {
   "id":"proprium.dominica-iv-post-epiphaniam-postcommunio",
   "language":"pl",
-  "about":"Postcommunio formularza „4. Niedziela po Objawieniu Pańskim” w Mszale Rzymskim z 1962 roku.",
+  "about":"Postcommunio formularza „4. Niedziela po Objawieniu Pańskim” w Mszale Rzymskim z 1962 roku. Strona 47 drukuje tekst właściwy i krótki odsyłacz Per Dominum. Pełne zakończenie oraz Amen są osobnym rozwinięciem według RG115a, z zadeklarowaną pisownią redakcyjną, nie ciągłym odpisem strony 47.",
   "seg":[
-    {"id":"s01","tr":"Niech Twoje dary, Boże, oswobadzają nas od ziemskich upodobań i zawsze odnawiają niebieskim pożywieniem. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["dary","Twoje","nas","Boże","od","upodobań","ziemskich","niech uwolnią","i","niebieskimi","zawsze","odnawiają","pokarmami","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","Który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"]},
+    {"id":"s01","tr":"Niech Twoje dary, Boże, oswobadzają nas od ziemskich upodobań i zawsze odnawiają niebieskim pożywieniem. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["dary","Twoje","nas","Boże","od","upodobań","ziemskich","niech uwolnią","i",null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","Który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":9,"n":4,"a":2,"g":"zawsze odnawiają niebieskimi pokarmami"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

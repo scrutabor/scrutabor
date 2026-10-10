@@ -24,8 +24,11 @@ const prayers = [
 					'know that we, placed amid such great dangers, cannot stand firm because of human frailty',
 				words: 12
 			},
-			{ language: 'en', gloss: 'our sins', words: 2 },
-			{ language: 'en', gloss: 'with Your help', words: 2 },
+			{
+				language: 'en',
+				gloss: 'with Your help we may overcome what we suffer for our sins',
+				words: 9
+			},
 			{ language: 'en', gloss: 'our Lord', words: 2 },
 			{ language: 'en', gloss: 'Your Son', words: 2 },
 			{ language: 'en', gloss: 'of the Holy Spirit', words: 2 },

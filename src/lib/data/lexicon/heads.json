@@ -2145,7 +2145,7 @@
     "octo":{"head":"octo","pos":"adj"},
     "octoginta":{"head":"octogínta","pos":"adj"},
     "oculus":{"head":"óculus, -i","pos":"noun","gender":"m","decl":2},
-    "odi":{"head":"odi, odísse, osus sum","pos":"verb","conj":3},
+    "odi":{"head":"odi, odísse, osus sum","pos":"verb","localization":{"note":true}},
     "odium":{"head":"ódium, ódii","pos":"noun","gender":"n","decl":2},
     "odor":{"head":"odor, odóris","pos":"noun","gender":"m","decl":3},
     "offendo":{"head":"offéndo, offéndere, offéndi, offénsum","pos":"verb","conj":3},

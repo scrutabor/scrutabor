@@ -22,27 +22,7 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_liturgical_context",
-   "locator": {
-    "printed": "pp. xxxii–xxxiv, 225–226",
-    "scan": "leaves n37–n39, n304–n305 / PDF pp. 38–40, 305–306",
-    "section": "RG 480–481, 511 d/i, 513–514; Ordo Missae rubric and chant formula after the secrets"
-   },
-   "entries": [
-    {
-     "id": "use.proprium.dominica-iv-post-epiphaniam-postcommunio.oration-boundaries.mr1962",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
-    }
-   ],
-   "verified_on": "2026-10-07"
-  },
-  {
-   "edition": "edition.missale-romanum.1962-typica",
-   "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 47",
     "scan": "leaf n126 / PDF p. 127",
@@ -54,10 +34,94 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Proper page 47 prints the 13-word body and short Per Dominum cue, not the complete conclusion or terminal Amen. The full ending is a separately declared RG115a house-accented expansion. The IV heading, not the V running header, determines identity."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "RG115a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iv-post-epiphaniam-postcommunio.expanded-conclusion.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG115a supplies the 21-word Father-addressed conclusion and Amen. Its unaccented rubric prints tuum, qui; selected accents, ligatures, tuum: Qui and Amen stop are house realization, not the proper-page reading."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xxxiii",
+    "scan": "leaf n38 / PDF p. 39",
+    "section": "RG505",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iv-post-epiphaniam-postcommunio.postcommunion-mode.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG505 applies the number, mode and order of the opening orations to the Postcommunions, not a separately printed proper-page response speaker."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xxxiv",
+    "scan": "leaf n39 / PDF p. 40",
+    "section": "RG511i/513–514",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n39/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iv-post-epiphaniam-postcommunio.oration-delivery.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG511i/513–514 specify clear or sung oration delivery; this rule alone does not identify the terminal responder."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. lviii",
+    "scan": "leaf n63 / PDF p. 64",
+    "section": "RitusXI1; compare RG505 on xxxiii",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n63/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iv-post-epiphaniam-postcommunio.oration-boundaries.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RitusXI1 applies the opening-orations mode to Postcommunion; RG505 gives the same number, mode and order. This does not print a dedicated terminal response or speaker on proper 47; the common responsive-orations/participation chain is separate."
+    }
+   ],
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []
