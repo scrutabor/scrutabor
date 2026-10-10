@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Second Sunday after Epiphany” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Sing joyfully unto God, all the earth; sing a psalm to His name; come and hear, all ye that fear God, and I will tell you what great things the Lord hath done for my soul, alleluia.","g":["Sing joyfully","unto God","all","the earth","a psalm","sing","to the name","His","come","and","hear","and","I will tell","you","all you","who","fear","God","what great things","hath done","the Lord","for soul","my","Alleluia"]}
+    {"id":"s01","tr":"Sing joyfully to God, all the earth; sing a psalm to His name; come and hear, and I will tell you, all you who fear God, what great things the Lord has done for my soul, alleluia.","g":["Sing joyfully","to God","all","the earth",null,null,null,null,"come","and","hear","and","I will tell","you","all you","who","fear","God","what great things",null,null,null,null,"Alleluia"],"a":[{"s":4,"n":2,"a":0,"g":"sing a psalm"},{"s":6,"n":2,"a":0,"g":"to His name"},{"s":19,"n":2,"a":0,"g":"the Lord has done"},{"s":21,"n":2,"a":0,"g":"for my soul"}]}
   ]
 }

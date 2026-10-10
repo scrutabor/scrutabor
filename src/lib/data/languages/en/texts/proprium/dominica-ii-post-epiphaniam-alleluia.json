@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Second Sunday after Epiphany” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. Praise the Lord, all His Angels; praise Him, all His hosts. Alleluia.","g":["Alleluia","alleluia","Praise","the Lord","all","Angels","His","praise","Him","all","hosts","His","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. Praise the Lord, all His Angels; praise Him, all His hosts. Alleluia.","g":["Alleluia","alleluia","Praise","the Lord","all",null,null,"praise","Him","all",null,null,"Alleluia"],"a":[{"s":5,"n":2,"a":0,"g":"His Angels"},{"s":10,"n":2,"a":0,"g":"His hosts"}]}
   ]
 }

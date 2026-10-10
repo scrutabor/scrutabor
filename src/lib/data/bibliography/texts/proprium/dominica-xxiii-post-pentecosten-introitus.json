@@ -22,11 +22,55 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 1",
+    "scan": "leaf n80 / PDF p. 81",
+    "section": "First Sunday of Advent Introit; complete Gloria Patri and annual repetition rule",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-xxiii-post-pentecosten-introitus.gloria-formula.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w032"
+     },
+     "claim": "The complete Gloria Patri printed for the Introit supplies the words after the Gloria Patri cue. The same page prescribes repetition of the antiphon throughout the year."
+    }
+   ],
+   "verified_on": "2026-10-09"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xxix",
+    "scan": "leaf n34 / PDF p. 35",
+    "section": "Rubricae generales427; Introit antiphon, psalm, Gloria Patri and repeat",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n34/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-xxiii-post-pentecosten-introitus.repetition-rule.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w051"
+     },
+     "claim": "RG427 prescribes the psalm and Gloria Patri after the Introit antiphon, followed by the repeated antiphon; it supports expansion of the Dicit cue, not independent accidentals."
+    }
+   ],
+   "verified_on": "2026-10-09"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "p. 412",
-    "scan": "leaf n493 / PDF p. 494",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n493/mode/1up"
+    "printed": "p. 411",
+    "scan": "leaf n492 / PDF p. 493",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n492/mode/1up"
    },
    "entries": [
     {
@@ -34,10 +78,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited base page prints the antiphon and psalm, followed by Gloria Patri and Dicit cues. The declared composite uses the separately named same-edition formula and repetition rule."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-09"
   }
  ],
  "witnesses": []

@@ -12010,9 +12010,10 @@
       {
        "id": "proprium.dominica-xxiii-post-pentecosten-introitus",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-xxiii-post-pentecosten-offertorium",
@@ -18147,6 +18148,13 @@
       },
       {
        "id": "proprium.dominica-xxiii-post-pentecosten-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-xxiii-post-pentecosten-introitus",
        "roles": [
         "official_liturgical_context"
        ],

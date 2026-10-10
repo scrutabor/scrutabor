@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “16th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"The nations will fear Your name, O Lord, and all the kings of the earth Your glory. For the Lord has built up Sion, and He will be seen in His majesty.","g":["Shall fear","the nations","name","Your","Lord","and","all","kings","of earth","glory","Your","For","has built","the Lord","Sion","and","He shall be seen","in","majesty","His"]}
+    {"id":"s01","tr":"The nations will fear Your name, O Lord, and all the kings of the earth Your glory. For the Lord has built up Sion, and He will be seen in His majesty.","g":[null,null,null,null,"Lord","and","all","kings","of the earth",null,null,"For",null,null,"Sion","and","He will be seen","in",null,null],"a":[{"s":0,"n":2,"a":0,"g":"The nations will fear"},{"s":2,"n":2,"a":0,"g":"Your name"},{"s":9,"n":2,"a":0,"g":"Your glory"},{"s":12,"n":2,"a":0,"g":"the Lord has built"},{"s":18,"n":2,"a":0,"g":"His majesty"}]}
   ]
 }

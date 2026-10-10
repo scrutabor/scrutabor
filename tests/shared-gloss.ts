@@ -1,5 +1,27 @@
 import type { Locator, Page } from '@playwright/test';
 import { expect } from './fixtures';
+import {
+	interlinearGeometry,
+	neighborInkCollisions,
+	precedingNeighborInk
+} from './interlinear-geometry';
+
+export const sharedGlossDocumentBox = (group: Locator) =>
+	group.evaluate((element) => {
+		const box = element.getBoundingClientRect();
+		return { x: box.x + scrollX, y: box.y + scrollY, width: box.width, height: box.height };
+	});
+
+export async function expectNeighborInkClear(group: Locator, requirePrecedingRow = false) {
+	const [geometry] = await group.evaluate(interlinearGeometry, { neighbors: true });
+	expect(neighborInkCollisions(geometry), 'selection paint overlaps neighboring ink').toEqual([]);
+	if (requirePrecedingRow)
+		expect(
+			precedingNeighborInk(geometry).length,
+			'measured preceding-row coverage'
+		).toBeGreaterThan(0);
+	return geometry;
+}
 
 /** A shared caption is one interaction, with help for every retained Latin word. */
 export async function expectSharedGloss(
@@ -7,7 +29,8 @@ export async function expectSharedGloss(
 	group: Locator,
 	count: number,
 	gloss: string,
-	expectedWords?: readonly { id: string; href: string; cardId?: string }[]
+	expectedWords?: readonly { id: string; href: string; cardId?: string }[],
+	options: { neighborInk?: boolean; requirePrecedingRow?: boolean } = {}
 ) {
 	await expect(group).toHaveCount(1);
 	await expect(group.locator('rt')).toHaveText(gloss);
@@ -28,17 +51,19 @@ export async function expectSharedGloss(
 	await expect(group.locator('rt')).toBeInViewport();
 	// Hover may scroll the target into view. Compare document coordinates,
 	// captured atomically with the scroll offset, to measure layout alone.
-	const documentBox = () =>
-		group.evaluate((element) => {
-			const box = element.getBoundingClientRect();
-			return { x: box.x + scrollX, y: box.y + scrollY, width: box.width, height: box.height };
-		});
+	const documentBox = () => sharedGlossDocumentBox(group);
 	const before = await documentBox();
 	await button.hover();
 	expect(await documentBox(), 'hover must only change paint').toEqual(before);
+	if (options.neighborInk) await expectNeighborInkClear(group, options.requirePrecedingRow);
 	await button.click();
 	const panel = page.locator('aside.panel[role="dialog"]');
 	await expect(panel).toHaveCount(1);
+	if (options.neighborInk) {
+		await expect(button).toHaveClass(/(?:^|\s)selected(?:\s|$)/);
+		expect(await documentBox(), 'selection must only change paint').toEqual(before);
+		await expectNeighborInkClear(group, options.requirePrecedingRow);
+	}
 	const cards = panel.locator('.construction-card');
 	await expect(cards).toHaveCount(count);
 	await expect(panel.locator('.context-layer > .gloss')).toHaveText(gloss);

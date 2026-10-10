@@ -1,14 +1,16 @@
 import { expect, setHelp, setTheme, test } from './fixtures';
-import { expectSharedGloss } from './shared-gloss';
-import { interlinearGeometry } from './interlinear-geometry';
+import { expectSharedGloss, expectNeighborInkClear, sharedGlossDocumentBox } from './shared-gloss';
+import { interlinearGeometry, precedingNeighborInk } from './interlinear-geometry';
 
 // Expected identities and dictionary targets are independent of the rendered page.
 const groups: Record<'pl' | 'en', [string, number, string[], string][]> = {
 	pl: [
 		['w039', 38, ['unus', 'singularitas', 'persona'], 'pojedynczości jednej osoby'],
-		['w044', 43, ['unus', 'trinitas', 'substantia'], 'Trójcy jednej istoty']
+		['w044', 43, ['unus', 'trinitas', 'substantia'], 'Trójcy jednej istoty'],
+		['w063', 62, ['sine', 'differentia', 'discretio'], 'bez czynienia różnicy']
 	],
 	en: [
+		['w005', 2, ['dignus', 'et', 'iustus', 'sum'], 'it is right and just'],
 		[
 			'w015',
 			10,
@@ -21,8 +23,11 @@ const groups: Record<'pl' | 'en', [string, number, string[], string][]> = {
 		['w039', 38, ['unus', 'singularitas', 'persona'], 'the singleness of one Person'],
 		['w044', 43, ['unus', 'trinitas', 'substantia'], 'the Trinity of one substance'],
 		['w060', 60, ['spiritus', 'sanctus'], 'the Holy Spirit'],
+		['w063', 62, ['sine', 'differentia', 'discretio'], 'without making any distinction'],
 		['w071', 69, ['verus', 'sempiternus', 'deitas'], 'of the true and eternal Godhead'],
-		['w083', 83, ['adoro', 'aequalitas'], 'equality may be adored'],
+		['w075', 73, ['in', 'persona', 'proprietas'], 'distinction in Persons'],
+		['w079', 77, ['in', 'essentia', 'unitas'], 'unity in essence'],
+		['w083', 81, ['in', 'maiestas', 'adoro', 'aequalitas'], 'equality in majesty may be adored'],
 		[
 			'w086',
 			86,
@@ -49,14 +54,19 @@ for (const language of ['pl', 'en'] as const) {
 			await expect(page.locator('html')).toHaveAttribute('data-reading', 'largest');
 			for (const [width, theme] of [
 				[320, 'dark'],
-				[1280, 'light']
+				[320, 'light'],
+				[1280, 'light'],
+				[1280, 'dark']
 			] as const) {
 				await page.setViewportSize({ width, height: 900 });
 				await setTheme(page, theme);
 				const group = page
 					.locator('.token-group')
 					.filter({ has: page.locator(`button#${anchor}`) });
-				await expectSharedGloss(page, group, members.length, gloss, members);
+				await expectSharedGloss(page, group, members.length, gloss, members, {
+					neighborInk: true,
+					requirePrecedingRow: anchor === 'w086'
+				});
 				const [geometry] = await group.evaluate(interlinearGeometry);
 				expect(geometry.clearance).toBeGreaterThanOrEqual(0);
 				// Match the existing physical-ink guard's subpixel rounding allowance.
@@ -149,4 +159,60 @@ test('Trinity English retains help for the list-introducing Latin conjunction', 
 	await expect(panel.locator('.morph')).not.toHaveText('');
 	await page.keyboard.press('Escape');
 	await expect(panel).toHaveCount(0);
+});
+
+test('shared selection wash rejects measured prior-row overlap without moving layout @reader', async ({
+	page
+}) => {
+	await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
+	await page.setViewportSize({ width: 320, height: 900 });
+	await page.goto('/app/en/ordinarium/praefatio-sanctissimae-trinitatis');
+	await setHelp(page, 1);
+	await setTheme(page, 'dark');
+	const group = page.locator('.token-group').filter({ has: page.locator('button#w086') });
+	await expect(group).toHaveCount(1);
+	await group.scrollIntoViewIfNeeded();
+	await page.evaluate(() => document.fonts.ready);
+	const button = group.locator(':scope > button');
+	await button.hover();
+	const clean = await expectNeighborInkClear(group, true);
+	const previous = precedingNeighborInk(clean)[0];
+	const before = await sharedGlossDocumentBox(group);
+	const originalStyle = await group.getAttribute('style');
+	try {
+		// Extend into actual earlier glyph ink; 1px exceeds the 0.5px rounding allowance.
+		await group.evaluate(
+			(element, top) =>
+				(element as HTMLElement).style.setProperty('--word-selection-block-start', `${top}px`),
+			previous.glyph.top - clean.bounds.top - 1
+		);
+		expect(await sharedGlossDocumentBox(group)).toEqual(before);
+		const [damaged] = await group.evaluate(interlinearGeometry, { neighbors: true });
+		// These existing geometry checks still pass: the sabotage changes paint only.
+		expect(damaged.clearance).toBeGreaterThanOrEqual(0);
+		expect(damaged.sourceClipping).toEqual([]);
+		expect(damaged.captionClipping).toEqual([]);
+		for (const ink of [damaged.sourceInk, damaged.captionInk]) {
+			expect(ink.left).toBeGreaterThanOrEqual(-0.5);
+			expect(ink.right).toBeLessThanOrEqual(320.5);
+		}
+		expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBe(0);
+		await expect(expectNeighborInkClear(group, true)).rejects.toThrow(
+			'selection paint overlaps neighboring ink'
+		);
+	} finally {
+		await group.evaluate((element, style) => {
+			if (style === null) element.removeAttribute('style');
+			else element.setAttribute('style', style);
+		}, originalStyle);
+	}
+	expect(await sharedGlossDocumentBox(group)).toEqual(before);
+	await expectNeighborInkClear(group, true);
+	await button.click();
+	await expect(button).toHaveClass(/(?:^|\s)selected(?:\s|$)/);
+	await expect(page.locator('aside.panel[role="dialog"]')).toHaveCount(1);
+	expect(await sharedGlossDocumentBox(group)).toEqual(before);
+	await expectNeighborInkClear(group, true);
+	await page.keyboard.press('Escape');
+	await expect(page.locator('aside.panel[role="dialog"]')).toHaveCount(0);
 });

@@ -88,6 +88,7 @@ export default defineConfig({
 				'interlinear-portability.spec.ts',
 				'interlinear-clipping.spec.ts',
 				'trinity-preface.spec.ts',
+				'epiphany-constructions.spec.ts',
 				'fonts.spec.ts'
 			],
 			grep: /@reader/,
@@ -99,6 +100,7 @@ export default defineConfig({
 				'interlinear-portability.spec.ts',
 				'interlinear-clipping.spec.ts',
 				'trinity-preface.spec.ts',
+				'epiphany-constructions.spec.ts',
 				'fonts.spec.ts'
 			],
 			grep: /@reader/,

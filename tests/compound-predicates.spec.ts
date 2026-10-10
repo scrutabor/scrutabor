@@ -8,7 +8,12 @@ const readings = [
 	['proprium/dominica-i-post-epiphaniam-epistola', 'w046', 'is given', 2],
 	['proprium/dominica-ii-passionis-evangelium', 'w1173', 'were crucified', 2],
 	['proprium/dominica-ii-passionis-evangelium', 'w1262', 'had been crucified', 2],
-	['proprium/dominica-ii-post-epiphaniam-epistola', 'w007', 'is given', 2],
+	[
+		'proprium/dominica-ii-post-epiphaniam-epistola',
+		'w003',
+		'different gifts according to the grace given to us',
+		8
+	],
 	['proprium/dominica-in-albis-epistola', 'w004', 'is born', 2],
 	['proprium/dominica-xi-post-pentecosten-evangelium', 'w063', 'were opened', 2],
 	['proprium/dominica-xiii-post-pentecosten-epistola', 'w098', 'had been given', 2],

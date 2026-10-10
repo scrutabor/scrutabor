@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “23rd Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"You have delivered us, O Lord, from those who afflict us, and You have put to shame those who hate us. In God we will glory all day long, and in Your name we will give praise forever.","g":["You have delivered","us","Lord","from","those afflicting","us","and","those","who","us","hate","You have put to shame","In","God","we shall glory","whole","day","and","in","name","Your","we shall praise","for","ages"]}
+    {"id":"s01","tr":"You have delivered us, O Lord, from those who afflict us, and You have put to shame those who hate us. In God we will glory all day long, and in Your name we will give praise forever.","g":["You have delivered","us","Lord","from","those afflicting","us","and","those","who",null,null,"You have put to shame","In","God","we will glory","all","day","and","in",null,null,"we will give praise","for","ages"],"a":[{"s":9,"n":2,"a":1,"g":"hate us"},{"s":19,"n":2,"a":0,"g":"Your name"}],"nt":{"w015":"Laudabimur is grammatically passive: “we will be praised”. In this psalm it can express glorying in God, acknowledging Him as the source of deliverance. That is the sense used here.","w022":"Confitebimur here means giving praise to God, not confessing sins. In nomine tuo connects this praise with His name."}}
   ]
 }

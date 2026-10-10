@@ -3781,7 +3781,7 @@
     {
       "id": "proprium.dominica-xvi-post-pentecosten-graduale",
       "path": "texts/proprium/dominica-xvi-post-pentecosten-graduale.json",
-      "title": "Timébunt gentes nomen tuum, Dómine, et omnes",
+      "title": "Timébunt gentes nomen tuum, Dómine",
       "evidence": "bibliography/texts/proprium/dominica-xvi-post-pentecosten-graduale.json"
     },
     {
@@ -4141,13 +4141,13 @@
     {
       "id": "proprium.dominica-xxiii-post-pentecosten-graduale",
       "path": "texts/proprium/dominica-xxiii-post-pentecosten-graduale.json",
-      "title": "Liberásti nos, Dómine, ex affligéntibus nos: et",
+      "title": "Liberásti nos, Dómine, ex affligéntibus nos",
       "evidence": "bibliography/texts/proprium/dominica-xxiii-post-pentecosten-graduale.json"
     },
     {
       "id": "proprium.dominica-xxiii-post-pentecosten-introitus",
       "path": "texts/proprium/dominica-xxiii-post-pentecosten-introitus.json",
-      "title": "Dicit Dóminus: Ego cógito cogitatiónes pacis, et",
+      "title": "Dicit Dóminus: Ego cógito cogitatiónes pacis",
       "evidence": "bibliography/texts/proprium/dominica-xxiii-post-pentecosten-introitus.json"
     },
     {
@@ -6660,7 +6660,7 @@
     2026,
     2101
   ],
-  "analyses": 20,
+  "analyses": 21,
   "citations": 456,
   "bibliography_schema": "1.5.0"
 }
