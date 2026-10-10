@@ -1,9 +1,9 @@
 {
   "id":"proprium.dominica-v-post-epiphaniam-postcommunio",
   "language":"pl",
-  "about":"Postcommunio formularza „Przeniesiona 5. Niedziela po Objawieniu Pańskim” w Mszale Rzymskim z 1962 roku.",
+  "about":"Pokomunia V niedzieli po Objawieniu Pańskim w Mszale Rzymskim z 1962 roku, używana także przy podjęciu jej formularza po Pięćdziesiątnicy. Strony formularza drukują tekst właściwy i krótki odsyłacz Per Dominum. Pełne zakończenie oraz Amen są osobnym rozwinięciem według RG115a, z zadeklarowaną pisownią redakcyjną.",
   "seg":[
-    {"id":"s01","tr":"Prosimy, wszechmogący Boże, abyśmy doznali działania tego zbawienia, którego zadatek otrzymaliśmy przez te tajemnice. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Prosimy","wszechmogący","Boże","abyśmy","owego","zbawienia","osiągnęli","skutek","którego","przez","te","tajemnice","zadatek","otrzymaliśmy","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","Który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"]},
+    {"id":"s01","tr":"Prosimy, wszechmogący Boże, abyśmy doznali działania tego zbawienia, którego zadatek otrzymaliśmy przez te tajemnice. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Prosimy","wszechmogący","Boże","abyśmy",null,null,null,null,null,null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","Który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":4,"n":4,"a":2,"g":"osiągnęli skutek owego zbawienia"},{"s":8,"n":6,"a":5,"g":"którego zadatek otrzymaliśmy przez te tajemnice"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

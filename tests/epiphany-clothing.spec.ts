@@ -72,7 +72,7 @@ for (const language of ['pl', 'en'] as const) {
 			for (const [word, gloss] of [
 				['w002', 'Clothe'],
 				['w010', 'with a heart'],
-				['w065', 'may dwell']
+				['w065', 'May Christ’s word dwell']
 			]) {
 				await expect(page.locator(`button[id="${text}.${word}"] rt`)).toHaveText(gloss);
 			}
@@ -113,8 +113,13 @@ for (const language of ['pl', 'en'] as const) {
 			const explanation = page.locator('aside .explanation');
 			await expect(explanation).not.toContainText(/w\d{3}/);
 			await explanation.locator('.xref', { hasText: label }).click();
-			await expect(page.locator('aside .form')).toHaveText(label);
-			await expect(page.locator(`button[id="${text}.${target}"]`)).toBeInViewport();
+			if (language === 'en' && target === 'w063') {
+				// Verbum now belongs to the complete predicate; its own card remains addressable.
+				await expect(page.locator('aside #construction-w063-title')).toHaveText(label);
+			} else {
+				await expect(page.locator('aside .form')).toHaveText(label);
+			}
+			await expect(page.locator(`[id="${text}.${target}"]`)).toBeInViewport();
 		}
 	});
 }

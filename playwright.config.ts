@@ -91,6 +91,7 @@ export default defineConfig({
 				'epiphany-constructions.spec.ts',
 				'epiphany-third-constructions.spec.ts',
 				'epiphany-fourth-constructions.spec.ts',
+				'epiphany-fifth-constructions.spec.ts',
 				'fonts.spec.ts'
 			],
 			grep: /@reader/,
@@ -105,6 +106,7 @@ export default defineConfig({
 				'epiphany-constructions.spec.ts',
 				'epiphany-third-constructions.spec.ts',
 				'epiphany-fourth-constructions.spec.ts',
+				'epiphany-fifth-constructions.spec.ts',
 				'fonts.spec.ts'
 			],
 			grep: /@reader/,

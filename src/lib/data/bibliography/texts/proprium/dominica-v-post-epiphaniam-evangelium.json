@@ -22,7 +22,28 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 48",
+    "scan": "leaf n127 / PDF p. 128",
+    "section": "Fifth Sunday after Epiphany proper",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n127/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-v-post-epiphaniam-evangelium.normal-proper.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Normal page 48 prints the complete 122-word Gospel across its two columns, without a shared conclusion; Credo is outside the reading body."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 415",
     "scan": "leaf n496 / PDF p. 497",
@@ -34,10 +55,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Normal page 48 and resumed page 415 print the complete 122-word Gospel body. It has no shared conclusion expansion; the printed Credo is outside this Gospel body."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []
