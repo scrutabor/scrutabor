@@ -69,13 +69,13 @@ const offertory = {
 for (const text of [postcommunion, offertory]) {
 	for (const parent of text.parents) {
 		for (const language of ['pl', 'en'] as const) {
-			test(`${language} ${parent} retains shared ${text.text} constructions @reader`, async ({
-				page
-			}) => {
-				await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
-				const constructions: readonly Construction[] = text[language];
-				for (const width of [320, 1280]) {
-					for (const theme of ['light', 'dark'] as const) {
+			const constructions: readonly Construction[] = text[language];
+			for (const width of [320, 1280]) {
+				for (const theme of ['light', 'dark'] as const) {
+					test(`${language} ${parent} shared ${text.text} at ${width}px ${theme} @reader`, async ({
+						page
+					}) => {
+						await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
 						await page.setViewportSize({ width, height: 900 });
 						await page.goto(`/app/${language}/formularium/${parent}`);
 						await setHelp(page, 1);
@@ -105,10 +105,19 @@ for (const text of [postcommunion, offertory]) {
 						expect(
 							await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)
 						).toBe(0);
-					}
+					});
 				}
-				// Both long target-language constructions must also fit print media.
+			}
+			test(`${language} ${parent} prints shared ${text.text} constructions @reader`, async ({
+				page
+			}) => {
+				await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
 				await page.setViewportSize({ width: 794, height: 1123 });
+				await page.goto(`/app/${language}/formularium/${parent}`);
+				await setHelp(page, 1);
+				await setTheme(page, 'dark');
+				await expect(page.locator('html')).toHaveAttribute('data-reading', 'largest');
+				expect(await page.evaluate(() => document.documentElement.style.fontSize)).toBe('140%');
 				await page.emulateMedia({ media: 'print' });
 				for (const construction of constructions) {
 					const first = `${text.text}.w${String(construction.first).padStart(3, '0')}`;

@@ -10,7 +10,6 @@ const contrasts = [
 	['proprium/dominica-iii-in-quadragesima-evangelium', ['w044']],
 	['proprium/dominica-iii-post-pascha-evangelium', ['w105']],
 	['proprium/dominica-in-albis-evangelium', ['w105']],
-	['proprium/dominica-in-quinquagesima-tractus', ['w029']],
 	['proprium/dominica-ix-post-pentecosten-evangelium', ['w103']],
 	['proprium/dominica-xii-post-pentecosten-evangelium', ['w105']],
 	['proprium/nativitas-domini-in-die-epistola', ['w162', 'w177']],

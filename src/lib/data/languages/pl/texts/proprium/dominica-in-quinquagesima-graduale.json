@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Graduale formularza „Niedziela Pięćdziesiątnicy” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Ty jesteś Bogiem, który sam czynisz cuda; oznajmiłeś narodom swoją potęgę. Ramieniem swoim wybawiłeś lud swój, synów Izraela i Józefa.","g":["Ty","jesteś","Bogiem","Który","czynisz","cuda","sam","znaną","uczyniłeś","wśród","narodów","potęgę","Twoją","Wybawiłeś","za pomocą","ramienia","Twojego","lud","Twój","synów","Izraela","i","Józefa"]}
+    {"id":"s01","tr":"Ty jesteś Bogiem, który sam czynisz cuda; oznajmiłeś narodom swoją potęgę. Ramieniem swoim wybawiłeś lud swój, synów Izraela i Józefa.","g":["Ty","jesteś","Bogiem","Który","czynisz","cuda","sam",null,null,"wśród","narodów",null,null,"Wybawiłeś","za pomocą",null,null,null,null,"synów","Izraela","i","Józefa"],"a":[{"s":7,"n":2,"a":0,"g":"uczyniłeś znaną"},{"s":11,"n":2,"a":0,"g":"Twoją potęgę"},{"s":15,"n":2,"a":0,"g":"Twojego ramienia"},{"s":17,"n":2,"a":0,"g":"Twój lud"}]}
   ]
 }

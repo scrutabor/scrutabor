@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Quinquagesima Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Blessed art Thou, O Lord; teach me Thy ordinances. With my lips I have declared all the judgments of Thy mouth.","g":["Blessed","art","Lord","teach","me","ordinances","Thy","With","lips","my","I have declared","all","judgments","mouth","Thy"]}
+    {"id":"s01","tr":"Blessed are You, O Lord; teach me Your ordinances. With my lips I have declared all the judgments of Your mouth.","g":[null,null,"Lord","teach","me",null,null,null,null,null,"I have declared","all","judgments",null,null],"a":[{"s":0,"n":2,"a":0,"g":"Blessed are You"},{"s":5,"n":2,"a":0,"g":"Your ordinances"},{"s":7,"n":3,"a":0,"g":"With my lips"},{"s":13,"n":2,"a":0,"g":"of Your mouth"}]}
   ]
 }

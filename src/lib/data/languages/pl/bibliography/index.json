@@ -15769,6 +15769,20 @@
      ],
      "texts": [
       {
+       "id": "proprium.dominica-in-quinquagesima-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-in-quinquagesima-postcommunio",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.purificatio-beatae-mariae-virginis-offertorium",
        "roles": [
         "official_liturgical_context"
@@ -16670,6 +16684,13 @@
        "roles": [
         "official_liturgical_context"
        ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-in-quinquagesima-introitus",
+       "roles": [
+        "official_liturgical_context"
+       ],
        "uses": 1
       },
       {
@@ -16677,7 +16698,7 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-in-septuagesima-collecta",
