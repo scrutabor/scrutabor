@@ -22,7 +22,7 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 50",
     "scan": "leaf n129 / PDF p. 130",
@@ -34,10 +34,52 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The proper prints the twenty-two-word antiphon and fourteen-word psalm verse, followed by Gloria Patri and Circumdederunt cues. It does not continuously print the complete seventy-eight-word expanded Introit."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 1",
+    "scan": "leaf n80 / PDF p. 81",
+    "section": "First Sunday of Advent Introit, common Gloria Patri",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-in-septuagesima-introitus.gloria-expansion.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The common Introit prints the twenty-word Gloria Patri ending. The Septuagesima proper gives only its opening cue; this edition supplies the complete formula."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. xxix",
+    "scan": "leaf n34 / PDF p. 35",
+    "section": "RG 427–428",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n34/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-in-septuagesima-introitus.introit-repeat.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "After the psalm verse and Gloria Patri, the Introit antiphon is repeated. The Septuagesima cue Circumdederunt is expanded as the same twenty-two-word antiphon, not as another psalm verse."
+    }
+   ],
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []

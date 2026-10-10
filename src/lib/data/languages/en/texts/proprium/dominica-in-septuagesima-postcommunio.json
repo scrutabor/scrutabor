@@ -1,9 +1,9 @@
 {
   "id":"proprium.dominica-in-septuagesima-postcommunio",
   "language":"en",
-  "about":"The postcommunio of the formulary “Septuagesima Sunday” in the 1962 Roman Missal.",
+  "about":"The postcommunio of the formulary “Septuagesima Sunday” in the 1962 Roman Missal.\n\nThe proper page prints the prayer body with the short cue Per Dominum. The complete ending and Amen follow the common formula. They are not printed in full beside this prayer.",
   "seg":[
-    {"id":"s01","tr":"May Thy faithful, O God, be strengthened by Thy gifts, that in receiving them they may seek them, and in seeking them may receive them without end. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":[null,null,"God","through","Thy","gifts","may be strengthened","that","them","both","by receiving","they may seek","and","by seeking","without","end","they may receive","Through",null,null,"Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity",null,null,"God","unto","all","ages","of ages"],"a":[{"s":0,"n":2,"a":0,"g":"Thy faithful"},{"s":18,"n":2,"a":0,"g":"our Lord"},{"s":31,"n":2,"a":0,"g":"of the Holy Spirit"}]},
+    {"id":"s01","tr":"May Your faithful, O God, be strengthened by Your gifts, that they may both seek those same gifts by receiving them, and receive them without end by seeking them. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Through",null,null,"Jesus","Christ",null,null,"Who",null,null,"and","reigns","in","the unity",null,null,"God",null,null,null,null],"a":[{"s":0,"n":7,"a":6,"g":"May Your faithful, O God, be strengthened by Your gifts"},{"s":7,"n":10,"a":4,"g":"that they may both seek those same gifts by receiving them, and receive them without end by seeking them"},{"s":18,"n":2,"a":0,"g":"our Lord"},{"s":22,"n":2,"a":0,"g":"Your Son"},{"s":25,"n":2,"a":1,"g":"lives with You"},{"s":31,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":34,"n":4,"a":2,"g":"forever and ever"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

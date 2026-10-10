@@ -1,9 +1,9 @@
 {
   "id":"proprium.dominica-in-septuagesima-collecta",
   "language":"en",
-  "about":"The collecta of the formulary “Septuagesima Sunday” in the 1962 Roman Missal.",
+  "about":"The collecta of the formulary “Septuagesima Sunday” in the 1962 Roman Missal.\n\nThe proper page prints the prayer body with the short cue Per Dominum. The complete ending and Amen follow the common formula. They are not printed in full beside this prayer.",
   "seg":[
-    {"id":"s01","tr":"We beseech Thee, O Lord, graciously hear the prayers of Thy people, that we who are justly afflicted for our sins may mercifully be delivered for the glory of Thy name. Through our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.","g":["The prayers","of people","Thy","we beseech","Lord","mercifully","hear","that","we who","justly","for","sins","our","are afflicted","for","of Thy","name","glory","mercifully","may be delivered","Through",null,null,"Jesus","Christ","Son","Thy","Who","with Thee","liveth","and","reigneth","in","the unity",null,null,"God","unto","all","ages","of ages"],"a":[{"s":21,"n":2,"a":0,"g":"our Lord"},{"s":34,"n":2,"a":0,"g":"of the Holy Spirit"}]},
+    {"id":"s01","tr":"We beseech You, O Lord, graciously hear the prayers of Your people, that we, who are justly afflicted for our sins, may be mercifully delivered for the glory of Your name. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":[null,null,null,null,null,null,null,"that",null,null,null,null,null,null,null,null,null,null,null,null,"Through",null,null,"Jesus","Christ",null,null,"Who",null,null,"and","reigns","in","the unity",null,null,"God",null,null,null,null],"a":[{"s":0,"n":7,"a":6,"g":"We beseech You, O Lord, graciously hear the prayers of Your people"},{"s":8,"n":6,"a":5,"g":"we, who are justly afflicted for our sins,"},{"s":14,"n":6,"a":5,"g":"may be mercifully delivered for the glory of Your name"},{"s":21,"n":2,"a":0,"g":"our Lord"},{"s":25,"n":2,"a":0,"g":"Your Son"},{"s":28,"n":2,"a":1,"g":"lives with You"},{"s":34,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":37,"n":4,"a":2,"g":"forever and ever"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

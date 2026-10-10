@@ -22,11 +22,12 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
-    "printed": "pp. 50–51",
-    "scan": "leaves n129–n130 / PDF pp. 130–131",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n129/mode/1up"
+    "printed": "p. 50",
+    "scan": "leaf n129 / PDF p. 130",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n129/mode/1up",
+    "section": "Opening portion of Septuagesima Gradual; continuation on p. 51"
    },
    "entries": [
     {
@@ -34,10 +35,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The Gradual starts on p. 50 and continues on p. 51. Both leaves together print the complete thirty-five-word body; this primary use identifies the opening leaf."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 51",
+    "scan": "leaf n130 / PDF p. 131",
+    "section": "Septuagesima Gradual continuation",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n130/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-in-septuagesima-graduale.continuation.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Gradual continues from p. 50 onto p. 51, beginning Quoniam non in finem oblivio erit pauperis. The complete thirty-five-word body therefore needs both leaves."
+    }
+   ],
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []

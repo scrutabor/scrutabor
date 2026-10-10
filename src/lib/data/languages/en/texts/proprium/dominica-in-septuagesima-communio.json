@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Septuagesima Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Make Thy face to shine upon Thy servant and save me in Thy mercy; let me not be confounded, O Lord, for I have called upon Thee.","g":["Make shine","face","Thy","upon","servant","Thy","and","safe","me","make","in","Thy","mercy","Lord",null,null,"for","I have called upon","Thee"],"a":[{"s":14,"n":2,"a":1,"g":"may I not be confounded"}]}
+    {"id":"s01","tr":"Make Your face shine upon Your servant, and save me in Your mercy. O Lord, let me not be put to shame, for I have called upon You.","g":[null,null,null,"upon",null,null,"and",null,null,null,"in",null,null,"Lord",null,null,"for","I have called upon","You"],"a":[{"s":0,"n":3,"a":0,"g":"Make Your face shine"},{"s":4,"n":2,"a":0,"g":"Your servant"},{"s":7,"n":3,"a":2,"g":"save me"},{"s":11,"n":2,"a":1,"g":"Your mercy"},{"s":14,"n":2,"a":1,"g":"let me not be put to shame"}]}
   ]
 }

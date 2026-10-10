@@ -94,6 +94,8 @@ export default defineConfig({
 				'epiphany-fifth-constructions.spec.ts',
 				'epiphany-sixth-constructions.spec.ts',
 				'epiphany-sixth-analysis.spec.ts',
+				'septuagesima-constructions.spec.ts',
+				'septuagesima-analysis.spec.ts',
 				'ordo-chant-guidance.spec.ts',
 				'fonts.spec.ts'
 			],
@@ -112,6 +114,8 @@ export default defineConfig({
 				'epiphany-fifth-constructions.spec.ts',
 				'epiphany-sixth-constructions.spec.ts',
 				'epiphany-sixth-analysis.spec.ts',
+				'septuagesima-constructions.spec.ts',
+				'septuagesima-analysis.spec.ts',
 				'ordo-chant-guidance.spec.ts',
 				'fonts.spec.ts'
 			],

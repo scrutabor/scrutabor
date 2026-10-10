@@ -119,7 +119,6 @@ for (const language of ['pl', 'en'] as const) {
 }
 
 const comparisons = [
-	['dominica-in-septuagesima', 'w010', 'Is like', 'w014', 'a man', ['w010', 'w011']],
 	[
 		'dominica-vi-post-epiphaniam',
 		'w010',

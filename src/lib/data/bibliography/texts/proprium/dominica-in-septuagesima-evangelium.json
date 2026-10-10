@@ -22,7 +22,7 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 51",
     "scan": "leaf n130 / PDF p. 131",
@@ -34,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The proper page prints the complete selected evangelium body, distinct from its heading, citation and neighboring rubrics."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []

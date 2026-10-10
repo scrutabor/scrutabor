@@ -9934,63 +9934,63 @@
       {
        "id": "proprium.dominica-in-septuagesima-collecta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-in-septuagesima-communio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-in-septuagesima-epistola",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-in-septuagesima-evangelium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-in-septuagesima-graduale",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-in-septuagesima-introitus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-in-septuagesima-offertorium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-in-septuagesima-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-in-septuagesima-tractus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -16017,16 +16017,23 @@
       {
        "id": "proprium.dominica-in-septuagesima-collecta",
        "roles": [
-        "official_liturgical_context"
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-in-septuagesima-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-in-septuagesima-postcommunio",
        "roles": [
-        "official_liturgical_context"
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-in-sexagesima-collecta",
