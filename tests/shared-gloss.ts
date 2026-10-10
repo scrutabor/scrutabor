@@ -1,5 +1,6 @@
 import type { Locator, Page } from '@playwright/test';
 import { expect } from './fixtures';
+import { documentBoxDelta, type DocumentBox } from './document-box';
 import {
 	interlinearGeometry,
 	neighborInkCollisions,
@@ -11,6 +12,14 @@ export const sharedGlossDocumentBox = (group: Locator) =>
 		const box = element.getBoundingClientRect();
 		return { x: box.x + scrollX, y: box.y + scrollY, width: box.width, height: box.height };
 	});
+
+export function expectDocumentBoxUnchanged(
+	actual: DocumentBox,
+	expected: DocumentBox,
+	message = 'interaction must not move or resize the document box'
+) {
+	expect(documentBoxDelta(actual, expected), message).toEqual({ x: 0, y: 0, width: 0, height: 0 });
+}
 
 export async function expectNeighborInkClear(group: Locator, requirePrecedingRow = false) {
 	const [geometry] = await group.evaluate(interlinearGeometry, { neighbors: true });
@@ -54,14 +63,14 @@ export async function expectSharedGloss(
 	const documentBox = () => sharedGlossDocumentBox(group);
 	const before = await documentBox();
 	await button.hover();
-	expect(await documentBox(), 'hover must only change paint').toEqual(before);
+	expectDocumentBoxUnchanged(await documentBox(), before, 'hover must only change paint');
 	if (options.neighborInk) await expectNeighborInkClear(group, options.requirePrecedingRow);
 	await button.click();
 	const panel = page.locator('aside.panel[role="dialog"]');
 	await expect(panel).toHaveCount(1);
 	if (options.neighborInk) {
 		await expect(button).toHaveClass(/(?:^|\s)selected(?:\s|$)/);
-		expect(await documentBox(), 'selection must only change paint').toEqual(before);
+		expectDocumentBoxUnchanged(await documentBox(), before, 'selection must only change paint');
 		await expectNeighborInkClear(group, options.requirePrecedingRow);
 	}
 	const cards = panel.locator('.construction-card');

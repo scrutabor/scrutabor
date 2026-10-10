@@ -1,5 +1,10 @@
 import { expect, setHelp, setTheme, test } from './fixtures';
-import { expectSharedGloss, expectNeighborInkClear, sharedGlossDocumentBox } from './shared-gloss';
+import {
+	expectSharedGloss,
+	expectNeighborInkClear,
+	expectDocumentBoxUnchanged,
+	sharedGlossDocumentBox
+} from './shared-gloss';
 import { interlinearGeometry, precedingNeighborInk } from './interlinear-geometry';
 
 // Expected identities and dictionary targets are independent of the rendered page.
@@ -236,7 +241,7 @@ test('shared selection wash rejects measured prior-row overlap without moving la
 				(element as HTMLElement).style.setProperty('--word-selection-block-start', `${top}px`),
 			previous.glyph.top - clean.bounds.top - 1
 		);
-		expect(await sharedGlossDocumentBox(group)).toEqual(before);
+		expectDocumentBoxUnchanged(await sharedGlossDocumentBox(group), before);
 		const [damaged] = await group.evaluate(interlinearGeometry, { neighbors: true });
 		// These existing geometry checks still pass: the sabotage changes paint only.
 		expect(damaged.clearance).toBeGreaterThanOrEqual(0);
@@ -256,13 +261,42 @@ test('shared selection wash rejects measured prior-row overlap without moving la
 			else element.setAttribute('style', style);
 		}, originalStyle);
 	}
-	expect(await sharedGlossDocumentBox(group)).toEqual(before);
+	expectDocumentBoxUnchanged(await sharedGlossDocumentBox(group), before);
 	await expectNeighborInkClear(group, true);
 	await button.click();
 	await expect(button).toHaveClass(/(?:^|\s)selected(?:\s|$)/);
 	await expect(page.locator('aside.panel[role="dialog"]')).toHaveCount(1);
-	expect(await sharedGlossDocumentBox(group)).toEqual(before);
+	expectDocumentBoxUnchanged(await sharedGlossDocumentBox(group), before);
 	await expectNeighborInkClear(group, true);
 	await page.keyboard.press('Escape');
 	await expect(page.locator('aside.panel[role="dialog"]')).toHaveCount(0);
+});
+
+test('shared document box rejects real subpixel movement @reader', async ({ page }) => {
+	await page.goto('/app/en/ordinarium/praefatio-sanctissimae-trinitatis');
+	await setHelp(page, 1);
+	const group = page.locator('.token-group').filter({ has: page.locator('button#w039') });
+	await group.scrollIntoViewIfNeeded();
+	await page.evaluate(() => document.fonts.ready);
+	const before = await sharedGlossDocumentBox(group);
+	expectDocumentBoxUnchanged(await sharedGlossDocumentBox(group), before);
+	const originalStyle = await group.getAttribute('style');
+	try {
+		// This visible-box displacement is smaller than a pixel, but much larger
+		// than coordinate arithmetic noise. It must never count as unchanged.
+		await group.evaluate((element) => {
+			(element as HTMLElement).style.transform = 'translateY(0.25px)';
+		});
+		const displaced = await sharedGlossDocumentBox(group);
+		expect(displaced.y - before.y).toBeCloseTo(0.25, 3);
+		expect(() => expectDocumentBoxUnchanged(displaced, before)).toThrow(
+			'interaction must not move or resize the document box'
+		);
+	} finally {
+		await group.evaluate((element, style) => {
+			if (style === null) element.removeAttribute('style');
+			else element.setAttribute('style', style);
+		}, originalStyle);
+	}
+	expectDocumentBoxUnchanged(await sharedGlossDocumentBox(group), before);
 });

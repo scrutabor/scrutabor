@@ -1,4 +1,4 @@
-import { expect, test } from './fixtures';
+import { expect, setTheme, test } from './fixtures';
 
 const cards = [
 	['exsisto', 'to become, be, to arise, come forth, to exist', 'n17222'],
@@ -50,4 +50,37 @@ for (const language of ['pl', 'en']) {
 			}
 		});
 	}
+}
+
+const modernCards = [
+	['tu', 'w010', 'you (singular), thou (traditional English)'],
+	['tuus', 'w026', 'your (traditional English: thy), yours (traditional English: thine)'],
+	['in', 'w037', 'in, on, into, to (traditional English: unto), at, among, for, with']
+] as const;
+
+for (const [lemma, word, senses] of modernCards) {
+	test(`English ${lemma} qualifies traditional senses on both dictionary and word cards`, async ({
+		page
+	}) => {
+		await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
+		for (const [width, theme] of [
+			[320, 'dark'],
+			[1280, 'light']
+		] as const) {
+			await page.setViewportSize({ width, height: 900 });
+			await page.goto(`/app/en/lemma?l=${lemma}`);
+			await setTheme(page, theme);
+			await expect(page.locator('.lexical-summary .head-senses')).toHaveText(`— ${senses}`);
+			expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBe(0);
+			await page.goto(`/app/en/ordinarium/praefatio-sanctissimae-trinitatis?w=${word}`);
+			const panel = page.getByRole('dialog');
+			const entry = panel.locator('.head').filter({
+				has: page.locator(`a[href="/app/en/lemma?l=${lemma}"]`)
+			});
+			await expect(entry.locator('.head-senses')).toHaveText(`— ${senses}`);
+			expect(await panel.locator('.inner').evaluate((el) => el.scrollWidth - el.clientWidth)).toBe(
+				0
+			);
+		}
+	});
 }
