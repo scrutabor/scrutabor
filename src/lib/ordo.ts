@@ -304,8 +304,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The chant between the readings, taken from the day’s formulary. At low Mass the priest reads it aloud at the Epistle side.'
 				},
 				when: {
-					pl: 'od Siedemdziesiątnicy do Wielkanocy zamiast Allelúia śpiewa się traktus, a w kilka dni roku dochodzi sekwencja',
-					en: 'from Septuagesima to Easter the Tract replaces the Allelúia, and on a few days of the year a Sequence is added'
+					pl: 'traktus śpiewa się tylko wtedy, gdy przewiduje go formularz dnia. Podobnie sekwencję dodaje się zgodnie z jego rubrykami',
+					en: "the Tract is sung only when prescribed by the day's formulary. The Sequence is likewise included according to its rubrics"
 				}
 			},
 			{

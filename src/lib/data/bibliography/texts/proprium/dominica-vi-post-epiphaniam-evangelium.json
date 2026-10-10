@@ -22,7 +22,49 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 49",
+    "scan": "leaf n128 / PDF p. 129",
+    "section": "Sixth Sunday after Epiphany proper",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n128/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-vi-post-epiphaniam-evangelium.normal-proper.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Normal page 49 prints the Gospel opening; it has sinapis without the comma printed in the resumed witness."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 50",
+    "scan": "leaf n129 / PDF p. 130",
+    "section": "Sixth Sunday Gospel continuation",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n129/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-vi-post-epiphaniam-evangelium.normal-proper-continuation.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Normal page 50 completes the Gospel through mundi; the subsequent Credo is outside the 102-word reading."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "pp. 416–417",
     "scan": "leaves n497–n498 / PDF pp. 498–499",
@@ -34,10 +76,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Normal pages 49–50 and resumed pages 416–417 print the complete 102-word reading body, without a shared conclusion expansion. Normal p. 49 omits the comma after sinapis; resumed p. 416 prints it. The selected resumed comma is retained, and Aliam receives the declared house capital accent."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []

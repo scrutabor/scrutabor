@@ -92,6 +92,9 @@ export default defineConfig({
 				'epiphany-third-constructions.spec.ts',
 				'epiphany-fourth-constructions.spec.ts',
 				'epiphany-fifth-constructions.spec.ts',
+				'epiphany-sixth-constructions.spec.ts',
+				'epiphany-sixth-analysis.spec.ts',
+				'ordo-chant-guidance.spec.ts',
 				'fonts.spec.ts'
 			],
 			grep: /@reader/,
@@ -107,6 +110,9 @@ export default defineConfig({
 				'epiphany-third-constructions.spec.ts',
 				'epiphany-fourth-constructions.spec.ts',
 				'epiphany-fifth-constructions.spec.ts',
+				'epiphany-sixth-constructions.spec.ts',
+				'epiphany-sixth-analysis.spec.ts',
+				'ordo-chant-guidance.spec.ts',
 				'fonts.spec.ts'
 			],
 			grep: /@reader/,

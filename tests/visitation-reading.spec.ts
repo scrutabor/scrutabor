@@ -119,28 +119,81 @@ for (const language of ['pl', 'en'] as const) {
 }
 
 const comparisons = [
-	['dominica-in-septuagesima', 'w010', 'Is like', 'w014', 'a man'],
-	['dominica-vi-post-epiphaniam', 'w009', 'Is like', 'w013', 'a grain'],
-	['dominica-vi-post-epiphaniam', 'w053', 'Is like', 'w057', 'leaven'],
-	['dominica-xvii-post-pentecosten', 'w054', 'is like', 'w056', 'this'],
-	['sanctae-annae-matris-beatae-mariae-virginis', 'w010', 'Is like', 'w014', 'a treasure'],
-	['sanctae-annae-matris-beatae-mariae-virginis', 'w038', 'is like', 'w042', 'a man'],
-	['sanctae-annae-matris-beatae-mariae-virginis', 'w062', 'is like', 'w066', 'a net'],
-	['sanctae-annae-matris-beatae-mariae-virginis', 'w133', 'is like', 'w135', 'a man']
+	['dominica-in-septuagesima', 'w010', 'Is like', 'w014', 'a man', ['w010', 'w011']],
+	[
+		'dominica-vi-post-epiphaniam',
+		'w010',
+		'The kingdom of heaven is like',
+		'w013',
+		'a grain',
+		['w009', 'w010', 'w011', 'w012']
+	],
+	[
+		'dominica-vi-post-epiphaniam',
+		'w054',
+		'The kingdom of heaven is like',
+		'w057',
+		'leaven',
+		['w053', 'w054', 'w055', 'w056']
+	],
+	['dominica-xvii-post-pentecosten', 'w054', 'is like', 'w056', 'this', ['w054', 'w055']],
+	[
+		'sanctae-annae-matris-beatae-mariae-virginis',
+		'w010',
+		'Is like',
+		'w014',
+		'a treasure',
+		['w010', 'w011']
+	],
+	[
+		'sanctae-annae-matris-beatae-mariae-virginis',
+		'w038',
+		'is like',
+		'w042',
+		'a man',
+		['w038', 'w039']
+	],
+	[
+		'sanctae-annae-matris-beatae-mariae-virginis',
+		'w062',
+		'is like',
+		'w066',
+		'a net',
+		['w062', 'w063']
+	],
+	[
+		'sanctae-annae-matris-beatae-mariae-virginis',
+		'w133',
+		'is like',
+		'w135',
+		'a man',
+		['w133', 'w134']
+	]
 ] as const;
 
-for (const [day, anchor, gloss, comparand, noun] of comparisons) {
+for (const [day, anchor, gloss, comparand, noun, members] of comparisons) {
 	test(`English ${day} ${anchor} keeps the comparison together`, async ({ page }) => {
 		await page.goto(`/app/en/formularium/${day}`);
 		await setHelp(page, 1);
 		const id = `${day}-evangelium`;
 		const button = page.locator(`button[id="${id}.${anchor}"]`);
 		await expect(button.locator('rt')).toHaveText(gloss);
-		await expect(button.locator('.token')).toHaveCount(2);
+		await expect(button.locator('.token')).toHaveCount(members.length);
+		expect(
+			await button
+				.locator('.token')
+				.evaluateAll((tokens) => tokens.map((token) => token.id || token.closest('button')?.id))
+		).toEqual(members.map((member) => `${id}.${member}`));
 		await expect(page.locator(`button[id="${id}.${comparand}"] rt`)).toHaveText(noun);
 		await button.click();
-		await expect(page.locator('aside .construction-title')).toHaveCount(2);
-		await expect(page.locator('aside .construction-card .morph')).toHaveCount(2);
+		await expect(page.locator('aside .construction-title')).toHaveCount(members.length);
+		await expect(page.locator('aside .construction-card .morph')).toHaveCount(members.length);
+		for (let index = 0; index < members.length; index++) {
+			await expect(page.locator('aside .construction-title').nth(index)).toHaveAttribute(
+				'id',
+				`construction-${members[index]}-title`
+			);
+		}
 		await page.keyboard.press('Escape');
 	});
 }

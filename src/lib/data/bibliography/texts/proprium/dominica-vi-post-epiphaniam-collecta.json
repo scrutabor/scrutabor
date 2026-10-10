@@ -22,27 +22,28 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_liturgical_context",
+   "role": "direct_approved_print",
    "locator": {
-    "printed": "pp. xxxii–xxxiv, 225–226",
-    "scan": "leaves n37–n39, n304–n305 / PDF pp. 38–40, 305–306",
-    "section": "RG 480–481, 511 d/i, 513–514; Ordo Missae rubric and chant formula after the secrets"
+    "printed": "p. 49",
+    "scan": "leaf n128 / PDF p. 129",
+    "section": "Sixth Sunday after Epiphany proper",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n128/mode/1up"
    },
    "entries": [
     {
-     "id": "use.proprium.dominica-vi-post-epiphaniam-collecta.oration-boundaries.mr1962",
+     "id": "use.proprium.dominica-vi-post-epiphaniam-collecta.normal-proper.mr1962",
      "address": {
       "kind": "text"
      },
-     "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
+     "claim": "Normal page 49 prints the same 17-word body and abbreviated Per Dominum cue, not the complete ending or terminal Amen."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-10-10"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 416",
     "scan": "leaf n497 / PDF p. 498",
@@ -54,10 +55,52 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Proper page 416 prints the 17-word body and short Per Dominum cue, not the complete conclusion or terminal Amen. Normal page 49 prints the same body and cue. The full ending is a separately declared RG115a house-accented expansion."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "RG115a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-vi-post-epiphaniam-collecta.expanded-conclusion.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG115a prints the 21-word Father-addressed conclusion plus Amen, 22 words in total. Its unaccented rubric has tuum, qui; selected accents, ligatures, tuum: Qui and Amen stop are house realization, not the proper-page reading."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xxxiv",
+    "scan": "leaf n39 / PDF p. 40",
+    "section": "RG511i/513–514",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n39/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-vi-post-epiphaniam-collecta.oration-boundaries.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG511i/513–514 specify clear or sung oration delivery. RG115a separately prints the common full ending and Amen; the abbreviated Collect proper and this delivery rule alone do not directly identify its terminal responder."
+    }
+   ],
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []

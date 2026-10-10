@@ -10820,37 +10820,37 @@
       {
        "id": "proprium.dominica-vi-post-epiphaniam-collecta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-vi-post-epiphaniam-epistola",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-vi-post-epiphaniam-evangelium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-vi-post-epiphaniam-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-vi-post-epiphaniam-secreta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-vi-post-pentecosten-alleluia",
@@ -16953,21 +16953,21 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-vi-post-epiphaniam-postcommunio",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 4
       },
       {
        "id": "proprium.dominica-vi-post-epiphaniam-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-vi-post-pentecosten-collecta",
