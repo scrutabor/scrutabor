@@ -9997,9 +9997,10 @@
       {
        "id": "proprium.dominica-in-sexagesima-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-in-sexagesima-communio",
@@ -10032,16 +10033,18 @@
       {
        "id": "proprium.dominica-in-sexagesima-introitus",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-in-sexagesima-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-in-sexagesima-tractus",
@@ -16701,14 +16704,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-in-sexagesima-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-infra-octavam-nativitatis-collecta",

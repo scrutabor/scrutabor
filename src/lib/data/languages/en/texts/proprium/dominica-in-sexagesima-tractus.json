@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The tractus of the formulary “Sexagesima Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Thou hast moved the earth, O Lord, and hast troubled it. Heal its breaches, for it hath been shaken. That they may flee from before the bow, and that Thine elect may be delivered.","g":["Thou hast moved","Lord","the earth","and","hast troubled","it","Heal","the breaches","its","for","shaken","it hath been","That","they may flee","from","before","the bow","that","may be delivered","the elect","Thine"]}
+    {"id":"s01","tr":"You have moved the earth, O Lord, and have troubled it. Heal its breaches, for it has been shaken. That they may flee from before the bow, that Your chosen people may be delivered.","g":["You have moved","Lord","the earth","and","have troubled","it","Heal",null,null,"for",null,null,"That","they may flee","from","before","the bow","that",null,null,null],"a":[{"s":7,"n":2,"a":0,"g":"its breaches"},{"s":10,"n":2,"a":1,"g":"it has been shaken"},{"s":18,"n":3,"a":0,"g":"Your chosen people may be delivered"}]}
   ]
 }

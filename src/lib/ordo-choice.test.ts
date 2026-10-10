@@ -42,6 +42,19 @@ describe('a dated Ordo occurrence', () => {
 		});
 	});
 
+	it.each([
+		['2026-02-08', '2026-02-09'],
+		['2027-01-31', '2027-02-01']
+	])('keeps Sexagesima on its actual Sunday %s, not the following feria', (sunday, feria) => {
+		const mass = 'dominica-in-sexagesima';
+		expect(massesOn(sunday).map((day) => day.id)).toEqual([mass]);
+		expect(resolveOrdoChoice(sunday)).toEqual({ date: sunday, mass });
+		expect(resolveOrdoChoice(sunday, mass)).toEqual({ date: sunday, mass });
+		expect(massesOn(feria)).toEqual([]);
+		expect(resolveOrdoChoice(feria)).toEqual({ date: feria, mass: null });
+		expect(resolveOrdoChoice(feria, mass)).toBeNull();
+	});
+
 	it('allows only the Masses of the actual occurrence, including transferred All Souls', () => {
 		expect(massesOn('2026-11-02')).toHaveLength(3);
 		expect(massesOn('2031-11-03')).toHaveLength(3);

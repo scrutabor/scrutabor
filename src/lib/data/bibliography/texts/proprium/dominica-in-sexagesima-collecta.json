@@ -22,11 +22,74 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 123",
+    "scan": "leaf n202 / PDF p. 203",
+    "section": "Postcommunion full middle of Per Dominum",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n202/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-in-sexagesima-collecta.conclusion-middle.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The printed Postcommunion supplies nostrum Iesum Christum Filium tuum: Qui tecum vivit et regnat in unitate Spiritus Sancti, Deus. It does not print the terminal Per omnia formula on this page."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 226",
+    "scan": "leaf n305 / PDF p. 306",
+    "section": "Sung Nativity Preface dialogue",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n305/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-in-sexagesima-collecta.conclusion-terminal.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The sung Preface dialogue prints Per omnia saecula saeculorum followed by the response Amen. This controls the terminal words and the audible Secret-to-Preface boundary, not the speaker of the Collect response by itself."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "Rubricae generales 115 a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-in-sexagesima-collecta.conclusion-rg115a.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG 115 a gives the complete Father-directed Per Dominum conclusion, including its terminal formula and Amen. It selects the conclusion for this prayer, not a proper-page full printing or a response-speaker identification."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
     "printed": "pp. xxxii–xxxiv, 225–226",
     "scan": "leaves n37–n39, n304–n305 / PDF pp. 38–40, 305–306",
-    "section": "RG 480–481, 511 d/i, 513–514; Ordo Missae rubric and chant formula after the secrets"
+    "section": "RG 480–481, 511 d/i, 513–514; Ordo p. 225 audible Secret-ending rubric and p. 226 sung Preface dialogue"
    },
    "entries": [
     {
@@ -37,7 +100,7 @@
      "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-10-10"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -54,10 +117,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "p. 52 prints the proper prayer body and its abbreviated Per Dominum cue; it does not print the complete expanded conclusion or a terminal response marker."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []

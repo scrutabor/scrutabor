@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 1",
+    "scan": "leaf n80 / PDF p. 81",
+    "section": "Introit full Gloria Patri and year-round repetition rubric",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-in-sexagesima-introitus.gloria-and-repeat.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This page prints the full Gloria Patri, Sicut erat and Amen and directs repetition of the antiphon up to the Psalm throughout the year. The Sexagesima page supplies its own abbreviated Gloria Patri and Exsurge cues."
+    }
+   ],
+   "verified_on": "2026-10-10"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 52",
@@ -34,10 +55,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "p. 52 prints the proper antiphon and Psalm, with abbreviated Gloria Patri and Exsurge repetition cues; it does not print the complete expanded Introit."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-10"
   }
  ],
  "witnesses": []

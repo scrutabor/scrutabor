@@ -49,8 +49,8 @@ const readings = [
 		'formularium/dominica-in-sexagesima',
 		'dominica-in-sexagesima-epistola.',
 		'w297',
-		'nie będę się chlubił',
-		1
+		'nie będę się chlubił niczym',
+		2
 	],
 	[
 		'pl',

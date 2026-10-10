@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Sexagesima Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Let the nations know that Thy name is God; Thou alone art the Most High over all the earth. O my God, make them like a wheel and like stubble before the face of the wind.","g":["Let know","the nations","that","name","Thy","God","Thou","alone","the Most High","over","all","the earth","God","my","make","them","like","a wheel","and","like","stubble","before","the face","of the wind"]}
+    {"id":"s01","tr":"Let the nations know that Your name is God. You alone are the Most High over all the earth. O my God, make them like a wheel and like stubble before the wind.","g":[null,null,"that",null,null,null,null,null,null,"over","all","the earth",null,null,"make","them","like","a wheel","and","like","stubble",null,null,null],"a":[{"s":0,"n":2,"a":0,"g":"Let the nations know"},{"s":3,"n":3,"a":0,"g":"Your name is God"},{"s":6,"n":3,"a":2,"g":"You alone are the Most High"},{"s":12,"n":2,"a":0,"g":"my God"},{"s":21,"n":3,"a":1,"g":"before the wind"}]}
   ]
 }
