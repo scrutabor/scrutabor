@@ -96,6 +96,8 @@ export default defineConfig({
 				'epiphany-sixth-analysis.spec.ts',
 				'septuagesima-constructions.spec.ts',
 				'septuagesima-analysis.spec.ts',
+				'octave-secret-constructions.spec.ts',
+				'pronoun-context.spec.ts',
 				'ordo-chant-guidance.spec.ts',
 				'fonts.spec.ts'
 			],
@@ -116,6 +118,8 @@ export default defineConfig({
 				'epiphany-sixth-analysis.spec.ts',
 				'septuagesima-constructions.spec.ts',
 				'septuagesima-analysis.spec.ts',
+				'octave-secret-constructions.spec.ts',
+				'pronoun-context.spec.ts',
 				'ordo-chant-guidance.spec.ts',
 				'fonts.spec.ts'
 			],
