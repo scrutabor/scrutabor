@@ -1153,15 +1153,18 @@
     },
     {
       "id": "proprium.dominica-i-in-quadragesima-epistola",
-      "path": "languages/en/texts/proprium/dominica-i-in-quadragesima-epistola.json"
+      "path": "languages/en/texts/proprium/dominica-i-in-quadragesima-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-in-quadragesima-epistola.json"
     },
     {
       "id": "proprium.dominica-i-in-quadragesima-evangelium",
-      "path": "languages/en/texts/proprium/dominica-i-in-quadragesima-evangelium.json"
+      "path": "languages/en/texts/proprium/dominica-i-in-quadragesima-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-in-quadragesima-evangelium.json"
     },
     {
       "id": "proprium.dominica-i-in-quadragesima-graduale",
-      "path": "languages/en/texts/proprium/dominica-i-in-quadragesima-graduale.json"
+      "path": "languages/en/texts/proprium/dominica-i-in-quadragesima-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-in-quadragesima-graduale.json"
     },
     {
       "id": "proprium.dominica-i-in-quadragesima-introitus",
@@ -1169,7 +1172,8 @@
     },
     {
       "id": "proprium.dominica-i-in-quadragesima-offertorium",
-      "path": "languages/en/texts/proprium/dominica-i-in-quadragesima-offertorium.json"
+      "path": "languages/en/texts/proprium/dominica-i-in-quadragesima-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-in-quadragesima-offertorium.json"
     },
     {
       "id": "proprium.dominica-i-in-quadragesima-postcommunio",
@@ -1315,11 +1319,13 @@
     },
     {
       "id": "proprium.dominica-ii-in-quadragesima-communio",
-      "path": "languages/en/texts/proprium/dominica-ii-in-quadragesima-communio.json"
+      "path": "languages/en/texts/proprium/dominica-ii-in-quadragesima-communio.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-in-quadragesima-communio.json"
     },
     {
       "id": "proprium.dominica-ii-in-quadragesima-epistola",
-      "path": "languages/en/texts/proprium/dominica-ii-in-quadragesima-epistola.json"
+      "path": "languages/en/texts/proprium/dominica-ii-in-quadragesima-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-in-quadragesima-epistola.json"
     },
     {
       "id": "proprium.dominica-ii-in-quadragesima-graduale",
@@ -1331,7 +1337,8 @@
     },
     {
       "id": "proprium.dominica-ii-in-quadragesima-offertorium",
-      "path": "languages/en/texts/proprium/dominica-ii-in-quadragesima-offertorium.json"
+      "path": "languages/en/texts/proprium/dominica-ii-in-quadragesima-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-in-quadragesima-offertorium.json"
     },
     {
       "id": "proprium.dominica-ii-in-quadragesima-secreta",
@@ -1339,7 +1346,8 @@
     },
     {
       "id": "proprium.dominica-ii-in-quadragesima-tractus",
-      "path": "languages/en/texts/proprium/dominica-ii-in-quadragesima-tractus.json"
+      "path": "languages/en/texts/proprium/dominica-ii-in-quadragesima-tractus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-in-quadragesima-tractus.json"
     },
     {
       "id": "proprium.dominica-ii-passionis-collecta",
@@ -1546,23 +1554,28 @@
     },
     {
       "id": "proprium.dominica-iii-in-quadragesima-communio",
-      "path": "languages/en/texts/proprium/dominica-iii-in-quadragesima-communio.json"
+      "path": "languages/en/texts/proprium/dominica-iii-in-quadragesima-communio.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-in-quadragesima-communio.json"
     },
     {
       "id": "proprium.dominica-iii-in-quadragesima-epistola",
-      "path": "languages/en/texts/proprium/dominica-iii-in-quadragesima-epistola.json"
+      "path": "languages/en/texts/proprium/dominica-iii-in-quadragesima-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-in-quadragesima-epistola.json"
     },
     {
       "id": "proprium.dominica-iii-in-quadragesima-evangelium",
-      "path": "languages/en/texts/proprium/dominica-iii-in-quadragesima-evangelium.json"
+      "path": "languages/en/texts/proprium/dominica-iii-in-quadragesima-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-in-quadragesima-evangelium.json"
     },
     {
       "id": "proprium.dominica-iii-in-quadragesima-graduale",
-      "path": "languages/en/texts/proprium/dominica-iii-in-quadragesima-graduale.json"
+      "path": "languages/en/texts/proprium/dominica-iii-in-quadragesima-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-in-quadragesima-graduale.json"
     },
     {
       "id": "proprium.dominica-iii-in-quadragesima-introitus",
-      "path": "languages/en/texts/proprium/dominica-iii-in-quadragesima-introitus.json"
+      "path": "languages/en/texts/proprium/dominica-iii-in-quadragesima-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-in-quadragesima-introitus.json"
     },
     {
       "id": "proprium.dominica-iii-in-quadragesima-postcommunio",
@@ -1570,7 +1583,8 @@
     },
     {
       "id": "proprium.dominica-iii-in-quadragesima-tractus",
-      "path": "languages/en/texts/proprium/dominica-iii-in-quadragesima-tractus.json"
+      "path": "languages/en/texts/proprium/dominica-iii-in-quadragesima-tractus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iii-in-quadragesima-tractus.json"
     },
     {
       "id": "proprium.dominica-iii-post-epiphaniam-alleluia",
@@ -1914,15 +1928,18 @@
     },
     {
       "id": "proprium.dominica-iv-in-quadragesima-communio",
-      "path": "languages/en/texts/proprium/dominica-iv-in-quadragesima-communio.json"
+      "path": "languages/en/texts/proprium/dominica-iv-in-quadragesima-communio.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-in-quadragesima-communio.json"
     },
     {
       "id": "proprium.dominica-iv-in-quadragesima-epistola",
-      "path": "languages/en/texts/proprium/dominica-iv-in-quadragesima-epistola.json"
+      "path": "languages/en/texts/proprium/dominica-iv-in-quadragesima-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-in-quadragesima-epistola.json"
     },
     {
       "id": "proprium.dominica-iv-in-quadragesima-evangelium",
-      "path": "languages/en/texts/proprium/dominica-iv-in-quadragesima-evangelium.json"
+      "path": "languages/en/texts/proprium/dominica-iv-in-quadragesima-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-in-quadragesima-evangelium.json"
     },
     {
       "id": "proprium.dominica-iv-in-quadragesima-introitus",
@@ -1930,7 +1947,8 @@
     },
     {
       "id": "proprium.dominica-iv-in-quadragesima-offertorium",
-      "path": "languages/en/texts/proprium/dominica-iv-in-quadragesima-offertorium.json"
+      "path": "languages/en/texts/proprium/dominica-iv-in-quadragesima-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-in-quadragesima-offertorium.json"
     },
     {
       "id": "proprium.dominica-iv-in-quadragesima-postcommunio",
@@ -2791,7 +2809,8 @@
     },
     {
       "id": "proprium.dominica-xviii-post-pentecosten-graduale",
-      "path": "languages/en/texts/proprium/dominica-xviii-post-pentecosten-graduale.json"
+      "path": "languages/en/texts/proprium/dominica-xviii-post-pentecosten-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-xviii-post-pentecosten-graduale.json"
     },
     {
       "id": "proprium.dominica-xviii-post-pentecosten-introitus",

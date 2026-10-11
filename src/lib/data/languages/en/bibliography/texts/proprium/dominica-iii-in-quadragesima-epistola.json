@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-iii-in-quadragesima-epistola",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 210",
+    "scan": "scan p. 226"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iii-in-quadragesima-epistola.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Epistle (the Douay Eph. 5:1–9 through this missal), revised against the Latin in contemporary language: Be followers (the Missal prints no ergo), the service of idols, Do not become partakers (éffici), once."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

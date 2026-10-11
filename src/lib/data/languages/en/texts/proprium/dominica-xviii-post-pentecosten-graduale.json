@@ -1,8 +1,8 @@
 {
   "id":"proprium.dominica-xviii-post-pentecosten-graduale",
   "language":"en",
-  "about":"The graduale of the formulary “18th Sunday after Pentecost” in the 1962 Roman Missal.",
+  "about":"The graduale of the formulary “18th Sunday after Pentecost” in the 1962 Roman Missal. The same chant is used in the formulary of the Fourth Sunday of Lent.",
   "seg":[
-    {"id":"s01","tr":"I rejoiced at the things that were said to me: we shall go into the house of the Lord. Let there be peace in your strength, and abundance in your towers.","g":[null,null,"at","the things","that","said","were","to me","into","the house","of the Lord","we shall go","May there be","peace","in","stronghold","your","and","abundance","in","towers","your"],"a":[{"s":0,"n":2,"a":0,"g":"I rejoiced"}]}
+    {"id":"s01","tr":"I rejoiced at the things that were said to me: we will go into the house of the Lord. Let peace be in your strength, and abundance in your towers.","tb":"revised","g":[null,null,"at","the things","that",null,null,"to me","into","the house","of the Lord","we will go","May there be","peace","in",null,null,"and","abundance","in",null,null],"a":[{"s":0,"n":2,"a":0,"g":"I rejoiced"},{"s":5,"n":2,"a":0,"g":"were said"},{"s":15,"n":2,"a":0,"g":"your stronghold"},{"s":20,"n":2,"a":0,"g":"your towers"}]}
   ]
 }

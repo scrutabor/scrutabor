@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-iv-in-quadragesima-evangelium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 232–233",
+    "scan": "scan pp. 248–249"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iv-in-quadragesima-evangelium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gospel (John 6:1–15), revised against the Latin in contemporary language: across, signs (signa), the Passover, the feast day, Where, to test him, denarii worth, says, a sign, truly the Prophet."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

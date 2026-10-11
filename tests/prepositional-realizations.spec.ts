@@ -5,9 +5,13 @@ const relations = [
 	['pl', 'sancti-matthiae-apostoli-epistola', 'w008', 'braci', 1],
 	['en', 'dedicatio-sancti-michaelis-archangeli-evangelium', 'w022', 'in', 1],
 	['en', 'dedicatio-sancti-michaelis-archangeli-evangelium', 'w024', 'of them', 1],
-	['en', 'dominica-i-in-quadragesima-postcommunio', 'w012', 'into', 1],
-	['en', 'dominica-i-in-quadragesima-postcommunio', 'w013', 'of the mystery', 1],
-	['en', 'dominica-i-in-quadragesima-postcommunio', 'w017', 'fellowship', 1],
+	[
+		'en',
+		'dominica-i-in-quadragesima-postcommunio',
+		'w015',
+		'may cause us to pass into the fellowship of the saving mystery',
+		6
+	],
 	['en', 'dominica-pentecostes-offertorium', 'w014', 'in', 1],
 	['en', 'dominica-resurrectionis-collecta', 'w005', 'through', 1],
 	['en', 'dominica-resurrectionis-evangelium', 'w055', 'on', 1],
@@ -83,7 +87,13 @@ for (const [language, text, word, gloss, members] of relations) {
 for (const [language, text, word, gloss, members] of [
 	['pl', 'sancti-matthiae-apostoli-epistola', 'w007', 'pośród', 2],
 	['en', 'dominica-x-post-pentecosten-evangelium', 'w066', 'afar', 2],
-	['en', 'dominica-i-in-quadragesima-postcommunio', 'w013', 'of the mystery', 1]
+	[
+		'en',
+		'dominica-i-in-quadragesima-postcommunio',
+		'w015',
+		'may cause us to pass into the fellowship of the saving mystery',
+		6
+	]
 ] as const) {
 	test(`${language} ${text} relation stays legible in both themes and print`, async ({ page }) => {
 		const { route, id } = destination(language, text, word);

@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-i-in-quadragesima-graduale",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 172",
+    "scan": "scan p. 188"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-i-in-quadragesima-graduale.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gradual (the Douay Ps 90:11–12 through this missal), revised in contemporary language: has given, will bear you up."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

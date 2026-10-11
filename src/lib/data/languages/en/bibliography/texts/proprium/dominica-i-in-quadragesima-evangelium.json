@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-i-in-quadragesima-evangelium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 173",
+    "scan": "scan p. 189"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-i-in-quadragesima-evangelium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gospel (Matt. 4:1–11), revised against the Latin in contemporary language: become bread, He answered (Qui), Again it is written (Rursum), if You fall down and adore me, says (dicit)."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

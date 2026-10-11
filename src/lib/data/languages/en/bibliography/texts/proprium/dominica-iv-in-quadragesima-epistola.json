@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-iv-in-quadragesima-epistola",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 231–232",
+    "scan": "scan pp. 247–248"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iv-in-quadragesima-epistola.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Epistle (the Douay Gal. 4:22–31 through this missal), revised against the Latin in contemporary language: by way of allegory, covenants, on Mount Sinai (in monte, as the Missal prints), bearing children into bondage, Hagar, is joined (coniúnctus est), will not be heir."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

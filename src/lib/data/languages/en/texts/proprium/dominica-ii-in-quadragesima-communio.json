@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Second Sunday of Lent” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Give heed to my cry; hearken to the voice of my prayer, my King and my God, for unto Thee will I pray, O Lord.","g":["Give heed","cry","my","hearken","to the voice","prayer","my","King","my","and","God","my","for","unto","Thee","will I pray","Lord"]}
+    {"id":"s01","tr":"Give heed to my cry; attend to the voice of my prayer, O my King and my God, for to You I will pray, O Lord.","tb":"revised","g":["Give heed",null,null,"attend","to the voice",null,null,null,null,"and",null,null,"for","to","You","I will pray","Lord"],"a":[{"s":1,"n":2,"a":0,"g":"to my cry"},{"s":5,"n":2,"a":0,"g":"of my prayer"},{"s":7,"n":2,"a":0,"g":"my King"},{"s":10,"n":2,"a":0,"g":"my God"}]}
   ]
 }

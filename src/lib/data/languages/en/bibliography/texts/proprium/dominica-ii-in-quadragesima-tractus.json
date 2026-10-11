@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-ii-in-quadragesima-tractus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 192",
+    "scan": "scan p. 208"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-ii-in-quadragesima-tractus.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Tract (the Douay Ps 105:1–4 through this missal), revised against the Latin in contemporary language: Give praise (Confitémini), endures forever, Who will make all His praises heard (audítas fáciet), in Your favor toward Your people."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

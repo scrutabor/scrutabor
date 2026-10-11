@@ -1,0 +1,28 @@
+{
+ "id": "proprium.dominica-xviii-post-pentecosten-graduale",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 232",
+    "scan": "scan p. 248",
+    "section": "Fourth Sunday in Lent, Gradual"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-xviii-post-pentecosten-graduale.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gradual (the Douay Ps 121:1, 7 through this missal, printed there for the Fourth Sunday in Lent), revised in contemporary language: we will go, your strength, your towers."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

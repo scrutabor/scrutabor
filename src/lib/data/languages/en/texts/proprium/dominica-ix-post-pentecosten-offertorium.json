@@ -1,8 +1,8 @@
 {
   "id":"proprium.dominica-ix-post-pentecosten-offertorium",
   "language":"en",
-  "about":"The offertorium of the formulary “9th Sunday after Pentecost” in the 1962 Roman Missal.",
+  "about":"The offertorium of the formulary “9th Sunday after Pentecost” in the 1962 Roman Missal. The same chant is used in the formulary of the Third Sunday of Lent.",
   "seg":[
-    {"id":"s01","tr":"The just decrees of the Lord are right, gladdening hearts, and His judgments are sweeter than honey and the honeycomb; for indeed Your servant keeps them.","g":["The just decrees","of the Lord","right","gladdening","hearts","and","judgments","His","sweeter","than","honey","and","the honeycomb","for","also","servant","Your","keeps","them"]}
+    {"id":"s01","tr":"The just decrees of the Lord are right, gladdening hearts, and His judgments are sweeter than honey and the honeycomb; for indeed Your servant keeps them.","g":["The just decrees","of the Lord","right","gladdening","hearts","and",null,null,"sweeter","than","honey","and","the honeycomb","for","also",null,null,"keeps","them"],"a":[{"s":6,"n":2,"a":0,"g":"His judgments"},{"s":15,"n":2,"a":0,"g":"Your servant"}]}
   ]
 }

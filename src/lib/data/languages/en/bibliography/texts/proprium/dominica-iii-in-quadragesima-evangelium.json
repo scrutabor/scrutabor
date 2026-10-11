@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-iii-in-quadragesima-evangelium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 211–212",
+    "scan": "scan pp. 227–228"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iii-in-quadragesima-evangelium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gospel (Luke 11:14–28), revised against the Latin in contemporary language: demon for dæmónium, mute, the multitudes marveled, is divided, has come, comes upon him and overcomes him, finds (the present ínvenit), adorned, the breasts that nursed You."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

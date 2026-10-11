@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 106",
+    "scan": "leaf n185 / PDF p. 186",
+    "section": "Dominica IV in Quadragesima, Graduale Ps. 121, 1 et 7",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n185/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-xviii-post-pentecosten-graduale.lent-iv-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Fourth Sunday of Lent prints this Gradual in full, identical in letters, accents and punctuation to page 405 and the selected text; page 405 continues with the Alleluia, which is not part of this text."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 405",

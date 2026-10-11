@@ -1,8 +1,8 @@
 {
   "id":"proprium.dominica-i-in-quadragesima-offertorium",
   "language":"en",
-  "about":"The offertorium of the formulary “First Sunday of Lent” in the 1962 Roman Missal.",
+  "about":"The offertorium of the formulary “First Sunday of Lent” in the 1962 Roman Missal. The same chant is also the Communion of this formulary.",
   "seg":[
-    {"id":"s01","tr":"The Lord shall overshadow thee with His shoulders, and under His wings shalt thou trust; His truth shall compass thee with a shield.","g":["shoulders","His","shall overshadow","thee","the Lord","and","under","wings","His","shalt trust","with a shield","shall compass","thee","truth","His"]}
+    {"id":"s01","tr":"The Lord will overshadow you with His shoulders, and under His wings you will hope; His truth will surround you with a shield.","tb":"revised","g":[null,null,"will overshadow","you","the Lord","and","under",null,null,"you will hope","with a shield","will surround","you",null,null],"a":[{"s":0,"n":2,"a":0,"g":"With His shoulders"},{"s":7,"n":2,"a":0,"g":"His wings"},{"s":13,"n":2,"a":0,"g":"His truth"}]}
   ]
 }

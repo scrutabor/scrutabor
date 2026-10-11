@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-i-in-quadragesima-offertorium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 173–174",
+    "scan": "scan pp. 189–190"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-i-in-quadragesima-offertorium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Offertory (the Douay Ps 90:4–5 through this missal), revised in contemporary language as the Tract of the same Mass renders the same words: you will hope (sperábis), will surround you."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

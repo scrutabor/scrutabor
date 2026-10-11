@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-i-in-quadragesima-epistola",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 171–172",
+    "scan": "scan pp. 187–188"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-i-in-quadragesima-epistola.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Epistle (the Douay 2 Cor. 6:1–10 through this missal), revised against the Latin in contemporary language: not to receive, anyone, show ourselves, the plurals tribulations and prisons, tumults (seditiónibus), kindness (suavitáte), unfeigned charity."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-iv-in-quadragesima-offertorium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 233",
+    "scan": "scan p. 249"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iv-in-quadragesima-offertorium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Offertory (the Douay Ps 134:3, 6 through this missal), revised against the Latin: He is sweet (suávis agrees with the Lord, not with the neuter nómini), Whatever He pleased."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

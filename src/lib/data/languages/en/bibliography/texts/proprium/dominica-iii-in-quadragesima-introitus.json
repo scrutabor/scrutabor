@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-iii-in-quadragesima-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 209–210",
+    "scan": "scan pp. 225–226"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iii-in-quadragesima-introitus.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the antiphon (the Douay Ps 24:15–16 through this missal), revised in contemporary language: He will pluck, look upon me; the psalm verse in the words of the Advent I and Lent II Introits for the same Latin; the Gloria Patri is the closed formula with Holy Spirit, and the repeated antiphon takes the same revised wording."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

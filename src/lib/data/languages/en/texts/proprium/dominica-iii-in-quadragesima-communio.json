@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Third Sunday of Lent” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"The sparrow hath found herself a house and the turtledove a nest wherein to lay her young: Thine altars, O Lord of hosts, my King and my God. Blessed are they that dwell in Thy house; for ever and ever they shall praise Thee.","g":["The sparrow","hath found","for itself","a house","and","the turtledove","a nest","wherein","to lay","young","her","altars","Thine","Lord","of hosts","King","my","and","God","my","Blessed","they that","dwell","in","house","Thy","for","ever","and ever","shall praise","Thee"]}
+    {"id":"s01","tr":"The sparrow has found herself a house, and the turtledove a nest where she may lay her young ones: Your altars, O Lord of hosts, my King and my God. Blessed are those who dwell in Your house; they will praise You forever and ever.","tb":"revised","g":["The sparrow","has found","for itself","a house","and","the turtledove","a nest","where","to lay",null,null,null,null,"Lord","of hosts",null,null,"and",null,null,"blessed","those who","dwell","in",null,null,null,null,null,"they will praise","You"],"a":[{"s":9,"n":2,"a":0,"g":"her young"},{"s":11,"n":2,"a":0,"g":"Your altars"},{"s":15,"n":2,"a":0,"g":"my King"},{"s":18,"n":2,"a":0,"g":"my God"},{"s":24,"n":2,"a":0,"g":"Your house"},{"s":26,"n":3,"a":1,"g":"forever and ever"}]}
   ]
 }

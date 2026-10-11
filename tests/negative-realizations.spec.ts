@@ -33,7 +33,7 @@ const readings = [
 		'w046'
 	],
 	['en', 'proprium/transfiguratio-domini-communio', 'w005', 'tell no one', 2],
-	['en', 'proprium/transfiguratio-domini-evangelium', 'w141', 'tell no one', 2],
+	['en', 'proprium/transfiguratio-domini-evangelium', 'w141', 'Tell no one', 2],
 	['en', 'proprium/dominica-ii-in-quadragesima-epistola', 'w071', 'that no one', 2],
 	['en', 'proprium/dominica-xi-post-pentecosten-evangelium', 'w081', 'not to tell anyone', 3]
 ] as const;

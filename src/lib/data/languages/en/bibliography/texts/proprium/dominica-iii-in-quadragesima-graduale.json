@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-iii-in-quadragesima-graduale",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 210",
+    "scan": "scan p. 226"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iii-in-quadragesima-graduale.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gradual (the Douay Ps 9:20, 4 through this missal), revised: the nations (gentes), is turned back, they will be weakened."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

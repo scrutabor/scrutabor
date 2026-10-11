@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Third Sunday of Lent” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Arise, O Lord, let not man prevail; let the nations be judged in Thy sight. When my enemy is turned back, they shall be weakened and perish before Thy face.","g":["Arise","Lord",null,null,"man","let be judged","the nations","in","sight","Thy","When","is turned","enemy","my","back","shall be weakened","and","perish","before","face","Thy"],"a":[{"s":2,"n":2,"a":1,"g":"let not prevail"}]}
+    {"id":"s01","tr":"Arise, O Lord, let not man prevail; let the nations be judged in Your sight. When my enemy is turned back, they will be weakened and perish before Your face.","tb":"revised","g":["Arise","Lord",null,null,"man",null,null,"in",null,null,null,null,null,null,null,"they will be weakened","and","perish","before",null,null],"a":[{"s":2,"n":2,"a":1,"g":"let not prevail"},{"s":5,"n":2,"a":0,"g":"let the nations be judged"},{"s":8,"n":2,"a":0,"g":"Your sight"},{"s":10,"n":5,"a":1,"g":"When my enemy is turned back"},{"s":19,"n":2,"a":0,"g":"Your face"}]}
   ]
 }

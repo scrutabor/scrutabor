@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-iv-in-quadragesima-communio",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 233",
+    "scan": "scan p. 249"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iv-in-quadragesima-communio.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Communion (the Douay Ps 121:3–4 through this missal), revised against the Latin: whose sharing is in unity (cuius participátio eius in idípsum), there the tribes went up, Your name."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Fourth Sunday of Lent” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Praise the Lord, for He is good; sing praises to His name, for He is sweet. Whatsoever He pleased, He hath done in heaven and on earth.","g":["Praise","the Lord","for","good","He is","sing praises","to the name","His","for","sweet","He is","all","whatsoever","He pleased","He hath done","in","heaven","and","on","earth"]}
+    {"id":"s01","tr":"Praise the Lord, for He is good; sing to His name, for He is sweet. Whatever He pleased, He has done in heaven and on earth.","tb":"revised","g":["Praise","the Lord","for",null,null,"sing praises",null,null,"for",null,null,"all","whatever","He pleased","He has done","in","heaven","and","on","earth"],"a":[{"s":3,"n":2,"a":1,"g":"He is good"},{"s":6,"n":2,"a":0,"g":"to His name"},{"s":9,"n":2,"a":1,"g":"He is sweet"}]}
   ]
 }

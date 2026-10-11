@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 80",
+    "scan": "leaf n159 / PDF p. 160",
+    "section": "Dominica II in Quadragesima, Sequéntia sancti Evangélii secúndum Matthǽum, Matth. 17, 1-9",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n159/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.transfiguratio-domini-evangelium.lent-ii-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Second Sunday of Lent prints this Gospel in full, identical in letters, accents and punctuation to pages 627–628 and the selected text."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "pp. 627–628",
