@@ -38,6 +38,27 @@
     }
    ],
    "verified_on": "2026-09-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. xxix",
+    "scan": "leaf n34 / PDF p. 35",
+    "section": "Rubricae generales 427–428",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n34/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-i-passionis-introitus.introit-expansion.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG 427 prescribes the repeated antiphon; RG 428 omits the Gloria Patri at the Introit in the Masses of the season from Passion Sunday to Holy Thursday. Together they support this expansion of the printed cue."
+    }
+   ],
+   "verified_on": "2026-10-11"
   }
  ],
  "witnesses": []

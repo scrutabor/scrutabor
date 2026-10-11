@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “First Passion Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Deliver me, O Lord, from mine enemies; teach me to do Thy will. O Lord, my deliverer from the wrathful nations, Thou wilt lift me up above them that rise against me; Thou wilt deliver me from the unjust man.","g":["Deliver","me","Lord","from","enemies","mine","teach","me","to do","will","Thy","deliverer","my","Lord","from","the nations","wrathful","above","them that rise","against","me","Thou wilt lift up","me","from","man","unjust","Thou wilt deliver","me"]}
+    {"id":"s01","tr":"Deliver me, O Lord, from my enemies; teach me to do Your will. O Lord, my deliverer from the wrathful nations, You will lift me up above those who rise against me; from the unjust man You will deliver me.","tb":"revised","g":["Deliver","me","Lord","from",null,null,"teach","me","to do",null,null,null,null,"Lord","from",null,null,"above","those who rise","against","me",null,null,"from",null,null,"You will deliver","me"],"a":[{"s":4,"n":2,"a":0,"g":"my enemies"},{"s":9,"n":2,"a":0,"g":"Your will"},{"s":11,"n":2,"a":0,"g":"My deliverer"},{"s":15,"n":2,"a":0,"g":"the wrathful nations"},{"s":21,"n":2,"a":0,"g":"You will lift me up"},{"s":24,"n":2,"a":0,"g":"the unjust man"}]}
   ]
 }

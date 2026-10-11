@@ -8957,9 +8957,10 @@
       {
        "id": "proprium.dominica-i-passionis-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-i-passionis-communio",
@@ -9006,16 +9007,18 @@
       {
        "id": "proprium.dominica-i-passionis-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-i-passionis-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-i-passionis-tractus",
@@ -15635,6 +15638,55 @@
        "uses": 7
       },
       {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-annuntiatione",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-assumptione",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-conceptione-immaculata",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-nativitate",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-transfixione",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-visitatione",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
        "id": "ordinarium.praefatio-communis",
        "roles": [
         "historical_wording_basis"
@@ -15647,6 +15699,34 @@
         "historical_wording_basis"
        ],
        "uses": 5
+      },
+      {
+       "id": "ordinarium.praefatio-quadragesimae",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.praefatio-sanctae-crucis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.praefatio-sancti-ioseph-in-festivitate",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.praefatio-sancti-ioseph-in-solemnitate",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
       }
      ],
      "lemmas": []
@@ -16266,6 +16346,41 @@
       },
       {
        "id": "proprium.dominica-i-in-quadragesima-offertorium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-passionis-evangelium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-passionis-graduale",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-passionis-introitus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-passionis-offertorium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-passionis-tractus",
        "roles": [
         "historical_wording_basis"
        ],
@@ -17390,6 +17505,13 @@
        "roles": [
         "official_liturgical_context"
        ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-i-passionis-introitus",
+       "roles": [
+        "rubric_control"
+       ],
        "uses": 1
       },
       {
@@ -17397,14 +17519,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-i-passionis-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-i-post-epiphaniam-collecta",

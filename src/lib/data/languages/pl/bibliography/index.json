@@ -8957,9 +8957,10 @@
       {
        "id": "proprium.dominica-i-passionis-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-i-passionis-communio",
@@ -9006,16 +9007,18 @@
       {
        "id": "proprium.dominica-i-passionis-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-i-passionis-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-i-passionis-tractus",
@@ -16402,6 +16405,13 @@
        "roles": [
         "official_liturgical_context"
        ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-i-passionis-introitus",
+       "roles": [
+        "rubric_control"
+       ],
        "uses": 1
       },
       {
@@ -16409,14 +16419,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-i-passionis-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-i-post-epiphaniam-collecta",

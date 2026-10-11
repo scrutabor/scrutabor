@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “First Passion Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"I will praise Thee, O Lord, with my whole heart; reward Thy servant: I shall live and keep Thy words; quicken me according to Thy word, O Lord.","g":["I will praise","Thee","Lord","with","whole","heart","my","reward","servant","Thy","I shall live","and","I will keep","words","Thy","quicken","me","according to","word","Thy","Lord"]}
+    {"id":"s01","tr":"I will praise You, O Lord, with my whole heart; reward Your servant: I will live and keep Your words; give me life according to Your word, O Lord.","tb":"revised","g":["I will praise","You","Lord","with",null,null,null,"reward",null,null,"I will live","and","I will keep",null,null,"give life to","me","according to",null,null,"Lord"],"a":[{"s":4,"n":3,"a":0,"g":"my whole heart"},{"s":8,"n":2,"a":0,"g":"Your servant"},{"s":13,"n":2,"a":0,"g":"Your words"},{"s":18,"n":2,"a":0,"g":"Your word"}]}
   ]
 }

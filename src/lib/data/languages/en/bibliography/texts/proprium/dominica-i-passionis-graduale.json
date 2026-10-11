@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-i-passionis-graduale",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 254",
+    "scan": "scan p. 270"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-i-passionis-graduale.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gradual (the Douay Ps 142:9–10 and 17:48–49 through this missal), revised in contemporary language: O Lord, my deliverer (an address, Liberátor meus, Dómine), the wrathful nations, those who rise against me."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

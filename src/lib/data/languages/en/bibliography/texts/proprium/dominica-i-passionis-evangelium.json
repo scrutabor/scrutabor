@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-i-passionis-evangelium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 254–255",
+    "scan": "scan pp. 270–271"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-i-passionis-evangelium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gospel (John 8:46–59), revised against the Latin in contemporary language: the multitudes (turbis), will convict, a demon for dæmónium, if anyone keeps, forever, therefore said (Dixérunt ergo)."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -409,31 +409,38 @@
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-annuntiatione",
-      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-annuntiatione.json"
+      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-annuntiatione.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis-in-annuntiatione.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-assumptione",
-      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-assumptione.json"
+      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-assumptione.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis-in-assumptione.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-conceptione-immaculata",
-      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-conceptione-immaculata.json"
+      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-conceptione-immaculata.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis-in-conceptione-immaculata.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-nativitate",
-      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-nativitate.json"
+      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-nativitate.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis-in-nativitate.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-transfixione",
-      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-transfixione.json"
+      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-transfixione.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis-in-transfixione.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-visitatione",
-      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-visitatione.json"
+      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis-in-visitatione.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis-in-visitatione.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis",
-      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis.json"
+      "path": "languages/en/texts/ordinarium/praefatio-beatae-mariae-virginis.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis.json"
     },
     {
       "id": "ordinarium.praefatio-communis",
@@ -471,7 +478,8 @@
     },
     {
       "id": "ordinarium.praefatio-quadragesimae",
-      "path": "languages/en/texts/ordinarium/praefatio-quadragesimae.json"
+      "path": "languages/en/texts/ordinarium/praefatio-quadragesimae.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-quadragesimae.json"
     },
     {
       "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
@@ -479,15 +487,18 @@
     },
     {
       "id": "ordinarium.praefatio-sanctae-crucis",
-      "path": "languages/en/texts/ordinarium/praefatio-sanctae-crucis.json"
+      "path": "languages/en/texts/ordinarium/praefatio-sanctae-crucis.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-sanctae-crucis.json"
     },
     {
       "id": "ordinarium.praefatio-sancti-ioseph-in-festivitate",
-      "path": "languages/en/texts/ordinarium/praefatio-sancti-ioseph-in-festivitate.json"
+      "path": "languages/en/texts/ordinarium/praefatio-sancti-ioseph-in-festivitate.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-sancti-ioseph-in-festivitate.json"
     },
     {
       "id": "ordinarium.praefatio-sancti-ioseph-in-solemnitate",
-      "path": "languages/en/texts/ordinarium/praefatio-sancti-ioseph-in-solemnitate.json"
+      "path": "languages/en/texts/ordinarium/praefatio-sancti-ioseph-in-solemnitate.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-sancti-ioseph-in-solemnitate.json"
     },
     {
       "id": "ordinarium.praefatio-sanctissimae-trinitatis",
@@ -1201,19 +1212,23 @@
     },
     {
       "id": "proprium.dominica-i-passionis-evangelium",
-      "path": "languages/en/texts/proprium/dominica-i-passionis-evangelium.json"
+      "path": "languages/en/texts/proprium/dominica-i-passionis-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-passionis-evangelium.json"
     },
     {
       "id": "proprium.dominica-i-passionis-graduale",
-      "path": "languages/en/texts/proprium/dominica-i-passionis-graduale.json"
+      "path": "languages/en/texts/proprium/dominica-i-passionis-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-passionis-graduale.json"
     },
     {
       "id": "proprium.dominica-i-passionis-introitus",
-      "path": "languages/en/texts/proprium/dominica-i-passionis-introitus.json"
+      "path": "languages/en/texts/proprium/dominica-i-passionis-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-passionis-introitus.json"
     },
     {
       "id": "proprium.dominica-i-passionis-offertorium",
-      "path": "languages/en/texts/proprium/dominica-i-passionis-offertorium.json"
+      "path": "languages/en/texts/proprium/dominica-i-passionis-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-passionis-offertorium.json"
     },
     {
       "id": "proprium.dominica-i-passionis-postcommunio",
@@ -1225,7 +1240,8 @@
     },
     {
       "id": "proprium.dominica-i-passionis-tractus",
-      "path": "languages/en/texts/proprium/dominica-i-passionis-tractus.json"
+      "path": "languages/en/texts/proprium/dominica-i-passionis-tractus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-i-passionis-tractus.json"
     },
     {
       "id": "proprium.dominica-i-post-epiphaniam-alleluia",

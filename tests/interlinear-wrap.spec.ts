@@ -215,11 +215,11 @@ test('one long Latin word fits the smallest reading measure without clipping', a
 	await page.goto('/app/en/formularium/dominica-i-passionis');
 	await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
 	await page.reload();
-	const word = page.locator('[id="dominica-i-passionis-communio.w023"]');
+	const word = page.locator('[id="dominica-i-passionis-epistola.w085"]');
 	const token = word.locator('..');
 	await expectWrapped(token, true);
-	await expect(word.locator('.base')).toHaveText('commemoratiónem.');
-	await expect(word.locator('rt')).toHaveText('remembrance');
+	await expect(word.locator('.base')).toHaveText('prævaricatiónum,');
+	await expect(word.locator('rt')).toHaveText('transgressions');
 	const geometry = () =>
 		word.evaluate((element) => {
 			const base = element.querySelector('.base')!;
