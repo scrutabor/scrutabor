@@ -8,6 +8,7 @@ const denials = [
 		form: 'novi',
 		english: 'I do not know',
 		polish: 'znam',
+		polishNegative: 'Nie',
 		enNote: 'Novi is a perfect form with present meaning here: Peter denies knowing Jesus.',
 		plNote:
 			'Choć „novi” ma formę czasu przeszłego (perfectum), oznacza tu „znam”. Piotr zaprzecza, że zna Jezusa.'
@@ -18,6 +19,7 @@ const denials = [
 		form: 'novísset',
 		english: 'he did not know',
 		polish: 'zna',
+		polishNegative: 'nie',
 		enNote:
 			'Novisset is a pluperfect subjunctive form. Here it reports Peter’s claim that he did not know Jesus.',
 		plNote:
@@ -39,7 +41,9 @@ for (const denial of denials) {
 				language === 'en' ? denial.english : denial.polish
 			);
 			if (language === 'pl') {
-				await expect(page.locator(`button[id="${text}.${denial.first}"] rt`)).toHaveText('nie');
+				await expect(page.locator(`button[id="${text}.${denial.first}"] rt`)).toHaveText(
+					denial.polishNegative
+				);
 			}
 			await button.click();
 			await expect(page.locator('aside .explanation')).toHaveText(

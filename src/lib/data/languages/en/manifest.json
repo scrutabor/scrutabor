@@ -1375,19 +1375,23 @@
     },
     {
       "id": "proprium.dominica-ii-passionis-evangelium",
-      "path": "languages/en/texts/proprium/dominica-ii-passionis-evangelium.json"
+      "path": "languages/en/texts/proprium/dominica-ii-passionis-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-passionis-evangelium.json"
     },
     {
       "id": "proprium.dominica-ii-passionis-graduale",
-      "path": "languages/en/texts/proprium/dominica-ii-passionis-graduale.json"
+      "path": "languages/en/texts/proprium/dominica-ii-passionis-graduale.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-passionis-graduale.json"
     },
     {
       "id": "proprium.dominica-ii-passionis-introitus",
-      "path": "languages/en/texts/proprium/dominica-ii-passionis-introitus.json"
+      "path": "languages/en/texts/proprium/dominica-ii-passionis-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-passionis-introitus.json"
     },
     {
       "id": "proprium.dominica-ii-passionis-offertorium",
-      "path": "languages/en/texts/proprium/dominica-ii-passionis-offertorium.json"
+      "path": "languages/en/texts/proprium/dominica-ii-passionis-offertorium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-passionis-offertorium.json"
     },
     {
       "id": "proprium.dominica-ii-passionis-postcommunio",
@@ -1399,7 +1403,8 @@
     },
     {
       "id": "proprium.dominica-ii-passionis-tractus",
-      "path": "languages/en/texts/proprium/dominica-ii-passionis-tractus.json"
+      "path": "languages/en/texts/proprium/dominica-ii-passionis-tractus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-ii-passionis-tractus.json"
     },
     {
       "id": "proprium.dominica-ii-post-epiphaniam-alleluia",

@@ -4,7 +4,7 @@ const groups = [
 	['en', 'dominica-ii-passionis', 'evangelium', 'w091', 'could you not', 2],
 	['en', 'dominica-ii-passionis', 'evangelium', 'w094', 'watch one hour', 3],
 	['en', 'dominica-ii-passionis', 'evangelium', 'w295', 'I cannot', 2],
-	['en', 'dominica-ii-passionis', 'evangelium', 'w1229', 'cannot', 2],
+	['en', 'dominica-ii-passionis', 'evangelium', 'w1229', 'He cannot', 2],
 	['en', 'dominica-iii-post-epiphaniam', 'epistola', 'w025', 'it is possible', 2],
 	['en', 'dominica-xxiv-post-pentecosten', 'evangelium', 'w135', 'it is possible', 2],
 	['en', 'sancti-stephani-protomartyris', 'epistola', 'w041', 'they could not', 2],

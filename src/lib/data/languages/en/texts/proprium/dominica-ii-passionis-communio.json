@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Palm Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Father, if this chalice cannot pass away unless I drink it, Thy will be done.","g":["Father","if",null,null,"this","the chalice","pass away","unless","I drink","it","be done","will","Thy"],"a":[{"s":2,"n":2,"a":1,"g":"cannot"}]}
+    {"id":"s01","tr":"Father, if this chalice cannot pass away unless I drink it, Your will be done.","g":["Father","if",null,null,null,null,null,"unless","I drink","it",null,null,null],"a":[{"s":2,"n":5,"a":1,"g":"this chalice cannot pass away"},{"s":10,"n":3,"a":0,"g":"Your will be done"}]}
   ]
 }

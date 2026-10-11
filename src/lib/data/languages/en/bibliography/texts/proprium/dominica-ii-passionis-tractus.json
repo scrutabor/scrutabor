@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-ii-passionis-tractus",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 251",
+    "scan": "scan p. 278"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-ii-passionis-tractus.body.husenbeth1853",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Tract (the Douay Ps 21 through this missal), revised against the Latin in contemporary language: will (the futures), they hoped in You (the third speravérunt), scorned (aspernabántur), they themselves considered and looked closely at me (Ipsi vero consideravérunt, et inspexérunt me), divided (divisérunt), magnify (magnificáte)."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

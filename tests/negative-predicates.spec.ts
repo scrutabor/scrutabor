@@ -36,17 +36,17 @@ const predicates = [
 	],
 	[
 		'proprium/dominica-ii-passionis-communio',
-		['w003', 'w004'],
+		['w003', 'w004', 'w005', 'w006', 'w007'],
 		'w004',
-		['non', 'potest'],
-		'cannot'
+		['non', 'potest', 'hic', 'calix', 'transíre'],
+		'this chalice cannot pass away'
 	],
 	[
 		'proprium/dominica-ii-passionis-evangelium',
-		['w120', 'w121'],
+		['w120', 'w121', 'w122', 'w123', 'w124'],
 		'w121',
-		['non', 'potest'],
-		'cannot'
+		['non', 'potest', 'hic', 'calix', 'transíre'],
+		'this chalice cannot pass away'
 	],
 	[
 		'proprium/septem-dolorum-beatae-mariae-virginis-sequentia',

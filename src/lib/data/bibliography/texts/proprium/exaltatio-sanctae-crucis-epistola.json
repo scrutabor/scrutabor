@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 138",
+    "scan": "leaf n217 / PDF p. 218",
+    "section": "Dominica II Passionis seu in palmis, Léctio Epístolæ beáti Pauli Apóstoli ad Philippénses 2, 5-11",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n217/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.exaltatio-sanctae-crucis-epistola.palm-sunday-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Palm Sunday prints this lesson in full. Its letters and accents equal page 669 and the selected text; it has a comma after exinanívit (exinanívit, formam) and none after flectátur (flectátur cæléstium) or confiteátur (confiteátur quia), where page 669 and the selected text have exinanívit formam, flectátur, cæléstium and confiteátur, quia, and it prints the rubric hic genuflectitur in the line without parentheses."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 669",

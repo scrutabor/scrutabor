@@ -138,9 +138,19 @@ for (const language of ['pl', 'en']) {
 			await page.evaluate(() => localStorage.setItem('scrutabor-reading', 'largest'));
 			await page.reload();
 			const card = page.locator('aside');
-			await expect(card.locator('.form')).toHaveText(latin);
-			await expect(card).toContainText(grammar);
-			await expect(card).toContainText(sense);
+			let analysis = card;
+			if (formulary === 'dominica-ii-passionis' && language === 'en') {
+				await expect(card.locator('.form')).toHaveText('manum déxteram meam');
+				await expect(card.locator('.construction-title')).toHaveText(['manum', 'déxteram', 'meam']);
+				analysis = card.locator('.construction-card').filter({
+					has: page.locator('.construction-title').filter({ hasText: /^déxteram$/ })
+				});
+				await expect(analysis).toHaveCount(1);
+			} else {
+				await expect(card.locator('.form')).toHaveText(latin);
+			}
+			await expect(analysis).toContainText(grammar);
+			await expect(analysis).toContainText(sense);
 			if (word === 'w023') {
 				await expect(card).toContainText(language === 'pl' ? 'deponens' : 'deponent');
 			}

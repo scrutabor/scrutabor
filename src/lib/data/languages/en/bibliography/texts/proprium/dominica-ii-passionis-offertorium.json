@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-ii-passionis-offertorium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 292",
+    "scan": "scan p. 308"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-ii-passionis-offertorium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Offertory (the Douay Ps 68:21–22 through this missal), revised in contemporary language and against the Latin: My heart has expected reproach, I sought one who would comfort me (consolántem me quæsívi), and they gave (et dedérunt)."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

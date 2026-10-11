@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-ii-passionis-graduale",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 283",
+    "scan": "scan p. 299"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-ii-passionis-graduale.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gradual (the Douay Ps 72:24 and 1–3 through this missal), revised against the Latin in contemporary language: You have led me (deduxísti), to the upright in heart, I was envious of sinners, seeing the peace of sinners (zelávi in peccatóribus, pacem peccatórum videns)."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

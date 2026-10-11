@@ -9226,9 +9226,10 @@
       {
        "id": "proprium.dominica-ii-passionis-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-ii-passionis-communio",
@@ -9268,16 +9269,18 @@
       {
        "id": "proprium.dominica-ii-passionis-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-ii-passionis-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-ii-passionis-tractus",
@@ -12191,9 +12194,10 @@
       {
        "id": "proprium.exaltatio-sanctae-crucis-epistola",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.exaltatio-sanctae-crucis-evangelium",
@@ -16503,6 +16507,13 @@
        "roles": [
         "official_liturgical_context"
        ],
+       "uses": 3
+      },
+      {
+       "id": "proprium.dominica-ii-passionis-introitus",
+       "roles": [
+        "rubric_control"
+       ],
        "uses": 1
       },
       {
@@ -16510,14 +16521,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-ii-passionis-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-ii-post-epiphaniam-collecta",
