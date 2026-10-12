@@ -1,0 +1,186 @@
+{
+ "id": "ordinarium.communicantes-in-die-paschae",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "304",
+    "scan": "Archive leaf n385",
+    "section": "Infra actionem: C-PAS-D"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.communicantes-in-die-paschae.mr-benziger-table",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Proper table opening through Iesu Christi, with the printed continuation reference to p305 resolved below; night/day alternatives are resolved by the named Mass, not clock time. This page alone does not print the complete child."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "305",
+    "scan": "Archive leaf n386",
+    "section": "Canon table common continuation"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.communicantes-in-die-paschae.benziger-table-continuation",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Referenced common continuation through Per eundem and Amen. Earlier Joseph-free setting; printed meritis comma retained."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "lii",
+    "scan": "Archive leaf n57",
+    "section": "Ritus servandus V 2"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.communicantes-in-die-paschae.name-inclinations",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Head inclination at Jesus/Mary names applies in these prayers; named-saint inclination is only for the saint of Mass/commemoration, not every saint listed."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "lv",
+    "scan": "Archive leaf n60",
+    "section": "Ritus servandus VIII 4"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.communicantes-in-die-paschae.general-rite",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Communicantes is continued with hands extended; hands join at Per eundem. These ordinary instructions are supplied explicitly, not falsely claimed as printed in the proper table."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "xxxiii",
+    "scan": "Archive leaf n38",
+    "section": "Rubricae generales 500"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.communicantes-in-die-paschae.canon-secreto",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Canon ritual voice is secreto; priest is ritual speaker, not automatically grammatical actor or divine addressee."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "xxxiii",
+    "scan": "Archive leaf n38",
+    "section": "Rubricae generales 501"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.communicantes-in-die-paschae.temporal-boundary",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Proper Communicantes/Hanc rules govern named Mass and prescribed date ranges; a proper preface alone does not extend these Canon variants. No runtime selection is verified by this source use."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "304",
+    "scan": "PDF page 385",
+    "section": "Infra actionem: C-PAS-D"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.communicantes-in-die-paschae.mr-vatican-table",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Proper table opening through Iesu Christi, with the printed continuation reference to p305 resolved below; night/day alternatives are resolved by the named Mass, not clock time. This page alone does not print the complete child."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "305",
+    "scan": "PDF page 386",
+    "section": "Canon table common continuation"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.communicantes-in-die-paschae.vatican-table-continuation",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Referenced common continuation through Per eundem and Amen. Physically Joseph-bearing continuation; reproduction production date remains unproved."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.sacra-rituum-congregatio.de-s-ioseph.1962-aas54",
+   "digital_item": "item.sacra-rituum-congregatio.de-s-ioseph.1962-aas54.vatican",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "873",
+    "scan": "PDF page 873",
+    "section": "Decree of 13 November 1962, operative 8 December 1962"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.communicantes-in-die-paschae.joseph-amendment",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Requires sed et beati Ioseph eiusdem Virginis Sponsi after Christi and expressly includes peculiar Communicantes. Unaccented legal insertion controls scope, while Missal reproduction controls accents/punctuation; earlier Benziger printing is not falsely amended."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  }
+ ],
+ "witnesses": []
+}

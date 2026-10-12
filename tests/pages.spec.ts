@@ -196,13 +196,23 @@ test('lemma summary shares the word panel hierarchy without becoming a panel', a
 	}
 });
 
-test('the external dictionary link opens in a new tab', async ({ page }) => {
-	await page.goto('/app/pl/lemma?l=oro');
-	const logeion = page.locator('.external a');
-	await expect(logeion).toHaveAttribute('href', 'https://logeion.uchicago.edu/oro');
-	await expect(logeion).toHaveAttribute('target', '_blank');
-	await expect(logeion).toHaveAttribute('rel', /noopener/);
-});
+for (const lang of ['pl', 'en']) {
+	for (const [lemma, lookup] of [
+		['oro', 'oro'],
+		['hic_adverbium', 'hic'],
+		['edo_proferre', 'edo']
+	]) {
+		test(`${lang}: the external dictionary looks up ${lemma} without its discriminator`, async ({
+			page
+		}) => {
+			await page.goto(`/app/${lang}/lemma?l=${lemma}`);
+			const logeion = page.locator('.external a');
+			await expect(logeion).toHaveAttribute('href', `https://logeion.uchicago.edu/${lookup}`);
+			await expect(logeion).toHaveAttribute('target', '_blank');
+			await expect(logeion).toHaveAttribute('rel', /noopener/);
+		});
+	}
+}
 
 test('the lemma page displays its liturgical headword', async ({ page }) => {
 	// the key is bare and normalized (Ioannes); the reader sees it accented

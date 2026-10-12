@@ -219,9 +219,44 @@
       "evidence": "languages/en/bibliography/texts/ordinarium/benedictio.json"
     },
     {
+      "id": "ordinarium.communicantes-in-ascensione-domini",
+      "path": "languages/en/texts/ordinarium/communicantes-in-ascensione-domini.json",
+      "title": "Communicantes — Ascension of the Lord"
+    },
+    {
       "id": "ordinarium.communicantes-in-cena-domini",
       "path": "languages/en/texts/ordinarium/communicantes-in-cena-domini.json",
       "title": "Communicantes — Holy Thursday"
+    },
+    {
+      "id": "ordinarium.communicantes-in-die-paschae",
+      "path": "languages/en/texts/ordinarium/communicantes-in-die-paschae.json",
+      "title": "Communicantes — Easter and its octave"
+    },
+    {
+      "id": "ordinarium.communicantes-in-epiphania-domini",
+      "path": "languages/en/texts/ordinarium/communicantes-in-epiphania-domini.json",
+      "title": "Communicantes — Epiphany of the Lord"
+    },
+    {
+      "id": "ordinarium.communicantes-in-nativitate-domini-in-die",
+      "path": "languages/en/texts/ordinarium/communicantes-in-nativitate-domini-in-die.json",
+      "title": "Communicantes — Nativity of the Lord, other Masses and octave"
+    },
+    {
+      "id": "ordinarium.communicantes-in-nativitate-domini-in-nocte",
+      "path": "languages/en/texts/ordinarium/communicantes-in-nativitate-domini-in-nocte.json",
+      "title": "Communicantes — Nativity of the Lord, first Mass (night)"
+    },
+    {
+      "id": "ordinarium.communicantes-in-nocte-paschae",
+      "path": "languages/en/texts/ordinarium/communicantes-in-nocte-paschae.json",
+      "title": "Communicantes — Easter Vigil"
+    },
+    {
+      "id": "ordinarium.communicantes-in-pentecoste",
+      "path": "languages/en/texts/ordinarium/communicantes-in-pentecoste.json",
+      "title": "Communicantes — Pentecost"
     },
     {
       "id": "ordinarium.communicantes",
@@ -293,6 +328,11 @@
       "id": "ordinarium.hanc-igitur-in-cena-domini",
       "path": "languages/en/texts/ordinarium/hanc-igitur-in-cena-domini.json",
       "title": "Hanc igitur — Holy Thursday"
+    },
+    {
+      "id": "ordinarium.hanc-igitur-paschale",
+      "path": "languages/en/texts/ordinarium/hanc-igitur-paschale.json",
+      "title": "Hanc igitur — Easter and Pentecost"
     },
     {
       "id": "ordinarium.hanc-igitur",

@@ -1,0 +1,146 @@
+{
+ "id": "ordinarium.hanc-igitur-paschale",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "216",
+    "scan": "Archive leaf n295",
+    "section": "Baptismal Hanc igitur"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-paschale.mr-benziger-vigil",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Complete baptismal Hanc igitur in this one printed occurrence, including Per Christum and Amen; source-local aqua/peccatorum punctuation is preserved. Not a Joseph amendment."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "305",
+    "scan": "Archive leaf n386",
+    "section": "Baptismal Hanc igitur"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-paschale.mr-benziger-table",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Complete baptismal Hanc igitur in this one printed occurrence, including Per Christum and Amen; source-local aqua/peccatorum punctuation is preserved. Not a Joseph amendment."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "lv",
+    "scan": "Archive leaf n60",
+    "section": "Ritus servandus VIII 4"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-paschale.general-rite",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Hands extended over offerings during Hanc igitur, then joined at Per Christum; inserted baptismal relative clause does not change the gesture sequence."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "xxxiii",
+    "scan": "Archive leaf n38",
+    "section": "Rubricae generales 500"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-paschale.canon-secreto",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Canon ritual voice is secreto; priest is ritual speaker, not automatically grammatical actor or divine addressee."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "xxxiii",
+    "scan": "Archive leaf n38",
+    "section": "Rubricae generales 501"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-paschale.temporal-boundary",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Proper Communicantes/Hanc rules govern named Mass and prescribed date ranges; a proper preface alone does not extend these Canon variants. No runtime selection is verified by this source use."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "305",
+    "scan": "PDF page 386",
+    "section": "Baptismal Hanc igitur"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-paschale.mr-vatican-table",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Complete baptismal Hanc igitur in this one printed occurrence, including Per Christum and Amen; source-local aqua/peccatorum punctuation is preserved. Not a Joseph amendment."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "213",
+    "scan": "PDF page 294",
+    "section": "Easter Vigil rubric 7"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-paschale.vatican-vigil-reference",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Incipit/reference sends these proper prayers to the Canon table; not a second freshly printed full-body Vatican Vigil witness."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  }
+ ],
+ "witnesses": []
+}

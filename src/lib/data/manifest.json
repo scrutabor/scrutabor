@@ -186,10 +186,52 @@
       "evidence": "bibliography/texts/ordinarium/benedictio.json"
     },
     {
+      "id": "ordinarium.communicantes-in-ascensione-domini",
+      "path": "texts/ordinarium/communicantes-in-ascensione-domini.json",
+      "title": "Communicántes in Ascensióne Dómini",
+      "evidence": "bibliography/texts/ordinarium/communicantes-in-ascensione-domini.json"
+    },
+    {
       "id": "ordinarium.communicantes-in-cena-domini",
       "path": "texts/ordinarium/communicantes-in-cena-domini.json",
       "title": "Communicántes in Cena Dómini",
       "evidence": "bibliography/texts/ordinarium/communicantes-in-cena-domini.json"
+    },
+    {
+      "id": "ordinarium.communicantes-in-die-paschae",
+      "path": "texts/ordinarium/communicantes-in-die-paschae.json",
+      "title": "Communicántes in die Paschæ",
+      "evidence": "bibliography/texts/ordinarium/communicantes-in-die-paschae.json"
+    },
+    {
+      "id": "ordinarium.communicantes-in-epiphania-domini",
+      "path": "texts/ordinarium/communicantes-in-epiphania-domini.json",
+      "title": "Communicántes in Epiphanía Dómini",
+      "evidence": "bibliography/texts/ordinarium/communicantes-in-epiphania-domini.json"
+    },
+    {
+      "id": "ordinarium.communicantes-in-nativitate-domini-in-die",
+      "path": "texts/ordinarium/communicantes-in-nativitate-domini-in-die.json",
+      "title": "Communicántes in Nativitáte Dómini in die",
+      "evidence": "bibliography/texts/ordinarium/communicantes-in-nativitate-domini-in-die.json"
+    },
+    {
+      "id": "ordinarium.communicantes-in-nativitate-domini-in-nocte",
+      "path": "texts/ordinarium/communicantes-in-nativitate-domini-in-nocte.json",
+      "title": "Communicántes in Nativitáte Dómini in nocte",
+      "evidence": "bibliography/texts/ordinarium/communicantes-in-nativitate-domini-in-nocte.json"
+    },
+    {
+      "id": "ordinarium.communicantes-in-nocte-paschae",
+      "path": "texts/ordinarium/communicantes-in-nocte-paschae.json",
+      "title": "Communicántes in nocte Paschæ",
+      "evidence": "bibliography/texts/ordinarium/communicantes-in-nocte-paschae.json"
+    },
+    {
+      "id": "ordinarium.communicantes-in-pentecoste",
+      "path": "texts/ordinarium/communicantes-in-pentecoste.json",
+      "title": "Communicántes in Pentecóste",
+      "evidence": "bibliography/texts/ordinarium/communicantes-in-pentecoste.json"
     },
     {
       "id": "ordinarium.communicantes",
@@ -271,6 +313,12 @@
       "path": "texts/ordinarium/hanc-igitur-in-cena-domini.json",
       "title": "Hanc ígitur in Cena Dómini",
       "evidence": "bibliography/texts/ordinarium/hanc-igitur-in-cena-domini.json"
+    },
+    {
+      "id": "ordinarium.hanc-igitur-paschale",
+      "path": "texts/ordinarium/hanc-igitur-paschale.json",
+      "title": "Hanc ígitur paschále",
+      "evidence": "bibliography/texts/ordinarium/hanc-igitur-paschale.json"
     },
     {
       "id": "ordinarium.hanc-igitur",

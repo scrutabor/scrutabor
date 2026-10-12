@@ -224,9 +224,44 @@
       "evidence": "languages/pl/bibliography/texts/ordinarium/benedictio.json"
     },
     {
+      "id": "ordinarium.communicantes-in-ascensione-domini",
+      "path": "languages/pl/texts/ordinarium/communicantes-in-ascensione-domini.json",
+      "title": "Communicantes — Wniebowstąpienie Pańskie"
+    },
+    {
       "id": "ordinarium.communicantes-in-cena-domini",
       "path": "languages/pl/texts/ordinarium/communicantes-in-cena-domini.json",
       "title": "Communicantes — Wielki Czwartek"
+    },
+    {
+      "id": "ordinarium.communicantes-in-die-paschae",
+      "path": "languages/pl/texts/ordinarium/communicantes-in-die-paschae.json",
+      "title": "Communicantes — Wielkanoc i oktawa"
+    },
+    {
+      "id": "ordinarium.communicantes-in-epiphania-domini",
+      "path": "languages/pl/texts/ordinarium/communicantes-in-epiphania-domini.json",
+      "title": "Communicantes — Objawienie Pańskie"
+    },
+    {
+      "id": "ordinarium.communicantes-in-nativitate-domini-in-die",
+      "path": "languages/pl/texts/ordinarium/communicantes-in-nativitate-domini-in-die.json",
+      "title": "Communicantes — Narodzenie Pańskie, pozostałe Msze i oktawa"
+    },
+    {
+      "id": "ordinarium.communicantes-in-nativitate-domini-in-nocte",
+      "path": "languages/pl/texts/ordinarium/communicantes-in-nativitate-domini-in-nocte.json",
+      "title": "Communicantes — Narodzenie Pańskie, pierwsza Msza (noc)"
+    },
+    {
+      "id": "ordinarium.communicantes-in-nocte-paschae",
+      "path": "languages/pl/texts/ordinarium/communicantes-in-nocte-paschae.json",
+      "title": "Communicantes — Wigilia Paschalna"
+    },
+    {
+      "id": "ordinarium.communicantes-in-pentecoste",
+      "path": "languages/pl/texts/ordinarium/communicantes-in-pentecoste.json",
+      "title": "Communicantes — Zesłanie Ducha Świętego"
     },
     {
       "id": "ordinarium.communicantes",
@@ -297,6 +332,11 @@
       "id": "ordinarium.hanc-igitur-in-cena-domini",
       "path": "languages/pl/texts/ordinarium/hanc-igitur-in-cena-domini.json",
       "title": "Hanc igitur — Wielki Czwartek"
+    },
+    {
+      "id": "ordinarium.hanc-igitur-paschale",
+      "path": "languages/pl/texts/ordinarium/hanc-igitur-paschale.json",
+      "title": "Hanc igitur — Wielkanoc i Zesłanie Ducha Świętego"
     },
     {
       "id": "ordinarium.hanc-igitur",

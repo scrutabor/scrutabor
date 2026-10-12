@@ -7416,11 +7416,60 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.communicantes-in-ascensione-domini",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 2
+      },
+      {
        "id": "ordinarium.communicantes-in-cena-domini",
        "roles": [
         "direct_approved_print"
        ],
        "uses": 1
+      },
+      {
+       "id": "ordinarium.communicantes-in-die-paschae",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.communicantes-in-epiphania-domini",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.communicantes-in-nativitate-domini-in-die",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.communicantes-in-nativitate-domini-in-nocte",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.communicantes-in-nocte-paschae",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.communicantes-in-pentecoste",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 2
       },
       {
        "id": "ordinarium.confiteor",
@@ -7505,6 +7554,13 @@
         "direct_approved_print"
        ],
        "uses": 1
+      },
+      {
+       "id": "ordinarium.hanc-igitur-paschale",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 2
       },
       {
        "id": "ordinarium.in-spiritu-humilitatis",
@@ -15006,6 +15062,13 @@
      ],
      "texts": [
       {
+       "id": "ordinarium.communicantes-in-ascensione-domini",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
        "id": "ordinarium.communicantes-in-cena-domini",
        "roles": [
         "official_text"
@@ -15013,7 +15076,56 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.communicantes-in-die-paschae",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.communicantes-in-epiphania-domini",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.communicantes-in-nativitate-domini-in-die",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.communicantes-in-nativitate-domini-in-nocte",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.communicantes-in-nocte-paschae",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.communicantes-in-pentecoste",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
+      },
+      {
        "id": "ordinarium.hanc-igitur-in-cena-domini",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.hanc-igitur-paschale",
        "roles": [
         "official_text"
        ],
@@ -15309,6 +15421,13 @@
      ],
      "texts": [
       {
+       "id": "ordinarium.communicantes-in-ascensione-domini",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 4
+      },
+      {
        "id": "ordinarium.communicantes-in-cena-domini",
        "roles": [
         "rubric_control"
@@ -15316,7 +15435,56 @@
        "uses": 3
       },
       {
+       "id": "ordinarium.communicantes-in-die-paschae",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.communicantes-in-epiphania-domini",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.communicantes-in-nativitate-domini-in-die",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.communicantes-in-nativitate-domini-in-nocte",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.communicantes-in-nocte-paschae",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.communicantes-in-pentecoste",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 4
+      },
+      {
        "id": "ordinarium.hanc-igitur-in-cena-domini",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "ordinarium.hanc-igitur-paschale",
        "roles": [
         "rubric_control"
        ],
@@ -17867,6 +18035,20 @@
      ],
      "texts": [
       {
+       "id": "ordinarium.communicantes-in-nocte-paschae",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.hanc-igitur-paschale",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.qui-pridie-in-cena-domini",
        "roles": [
         "rubric_control"
@@ -17920,7 +18102,56 @@
      ],
      "texts": [
       {
+       "id": "ordinarium.communicantes-in-ascensione-domini",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.communicantes-in-cena-domini",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.communicantes-in-die-paschae",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.communicantes-in-epiphania-domini",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.communicantes-in-nativitate-domini-in-die",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.communicantes-in-nativitate-domini-in-nocte",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.communicantes-in-nocte-paschae",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.communicantes-in-pentecoste",
        "roles": [
         "official_liturgical_context"
        ],
@@ -18006,6 +18237,36 @@
           }
          ],
          "verified_on": "2026-10-05"
+        }
+       ]
+      },
+      {
+       "id": "Pentecoste",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "printed": "s.v. Pentecoste",
+          "scan": "Pinned eng2 XML entry n34569",
+          "section": "Pentecoste / n34569"
+         },
+         "entries": [
+          {
+           "id": "use.lexicon.pentecoste.lewis-short-eng2",
+           "address": {
+            "kind": "lemma",
+            "lemma": "Pentecoste"
+           },
+           "claim": "Exact existing capitalized feminine Greek noun reused; Pentecostes genitive singular, not new lowercase duplicate or accusative plural."
+          }
+         ],
+         "verified_on": "2026-10-12"
         }
        ]
       },
@@ -18458,6 +18719,36 @@
        ]
       },
       {
+       "id": "coaeternus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "printed": "s.v. coaeternus",
+          "scan": "Pinned eng2 XML entry n8752",
+          "section": "coaeternus / n8752"
+         },
+         "entries": [
+          {
+           "id": "use.lexicon.coaeternus.lewis-short-eng2",
+           "address": {
+            "kind": "lemma",
+            "lemma": "coaeternus"
+           },
+           "claim": "Predicate adjective coeternal with Father in Epiphany; not an adverb or mere long duration."
+          }
+         ],
+         "verified_on": "2026-10-12"
+        }
+       ]
+      },
+      {
        "id": "collegium",
        "roles": [
         "lexical_support"
@@ -18482,6 +18773,36 @@
           }
          ],
          "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "colloco",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "printed": "s.v. colloco",
+          "scan": "Pinned eng2 XML entry n9093",
+          "section": "colloco / n9093"
+         },
+         "entries": [
+          {
+           "id": "use.lexicon.colloco.lewis-short-eng2",
+           "address": {
+            "kind": "lemma",
+            "lemma": "colloco"
+           },
+           "claim": "First conjugation avi/atum; in with ablative is attested, supporting dextera ablative despite placement sense. Full theological actor requires complete prayer, not dictionary alone."
+          }
+         ],
+         "verified_on": "2026-10-12"
         }
        ]
       },
@@ -19494,6 +19815,36 @@
        ]
       },
       {
+       "id": "edo_proferre",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "printed": "s.v. edo2",
+          "scan": "Pinned eng2 XML entry n15157",
+          "section": "edo2 / n15157"
+         },
+         "entries": [
+          {
+           "id": "use.lexicon.edo-proferre.lewis-short-eng2",
+           "address": {
+            "kind": "lemma",
+            "lemma": "edo_proferre"
+           },
+           "claim": "Distinct bring-forth verb edo/edidi/editum, third conjugation, Nativity perfect-active edidit; not the eating edo/edi/esum or noun homonym. Internal underscore key and external dictionary key are distinct."
+          }
+         ],
+         "verified_on": "2026-10-12"
+        }
+       ]
+      },
+      {
        "id": "effectus",
        "roles": [
         "lexical_support"
@@ -20246,6 +20597,36 @@
           }
          ],
          "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "innumerus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "printed": "s.v. innumerus",
+          "scan": "Pinned eng2 XML entry n23585",
+          "section": "innumerus / n23585"
+         },
+         "entries": [
+          {
+           "id": "use.lexicon.innumerus.lewis-short-eng2",
+           "address": {
+            "kind": "lemma",
+            "lemma": "innumerus"
+           },
+           "claim": "Innumerable/countless adjective agrees with plural ablative linguis; not unmetrical sense or a silently added noun fire."
+          }
+         ],
+         "verified_on": "2026-10-12"
         }
        ]
       },

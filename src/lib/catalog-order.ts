@@ -54,9 +54,17 @@ export const CATALOG_ORDER: CatalogSectionSource[] = [
 			'gloria',
 			'credo',
 			'sanctus',
+			'communicantes-in-nativitate-domini-in-nocte',
+			'communicantes-in-nativitate-domini-in-die',
+			'communicantes-in-epiphania-domini',
 			'communicantes-in-cena-domini',
 			'hanc-igitur-in-cena-domini',
 			'qui-pridie-in-cena-domini',
+			'communicantes-in-nocte-paschae',
+			'communicantes-in-die-paschae',
+			'hanc-igitur-paschale',
+			'communicantes-in-ascensione-domini',
+			'communicantes-in-pentecoste',
 			'agnus-dei'
 		]
 	},

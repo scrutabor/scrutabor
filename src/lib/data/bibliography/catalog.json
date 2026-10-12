@@ -658,6 +658,19 @@
    }
   },
   {
+   "id": "item.lewis-short.perseus.40038e4.eng2",
+   "edition": "edition.lewis-short.1879",
+   "repository": "Perseus Digital Library",
+   "kind": "born-digital",
+   "record_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng2.xml",
+   "revision": "40038e40937fa639639802e73dac15e6c938496b",
+   "access": "open",
+   "digitization_rights": {
+    "status": "unverified",
+    "basis": "Retained pinned Perseus eng2 XML. Existing repository CC BY-SA assertion is not a fresh rights adjudication; local lexical consultation only, no full extraction publication."
+   }
+  },
+  {
    "id": "item.liber-usualis.1961.ia",
    "edition": "edition.liber-usualis.1961",
    "repository": "Internet Archive",

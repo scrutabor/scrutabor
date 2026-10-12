@@ -7,3 +7,8 @@ export function lemmaHref(lang: Lang, lemma: string): string {
 	// catalogue merely to address Clemens beside clemens.
 	return `/app/${lang}/lemma?l=${encodeURIComponent(lemma)}`;
 }
+
+/** External dictionaries use the headword, not our homograph discriminator. */
+export function externalDictionaryHref(lemma: string): string {
+	return `https://logeion.uchicago.edu/${encodeURIComponent(lemma.split('_', 1)[0])}`;
+}

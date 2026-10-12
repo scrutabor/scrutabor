@@ -1,0 +1,19 @@
+{
+  "id":"ordinarium.communicantes-in-epiphania-domini",
+  "language":"pl",
+  "about":"Kapłan odmawia tę część Kanonu po cichu, we wspólnocie z Kościołem. Ta postać jest przeznaczona na święto Objawienia Pańskiego i wspomina widzialne ukazanie się Jednorodzonego w ciele. Po wspomnieniu świętych prosi Ojca o Jego opiekę, przez Chrystusa.",
+  "seg":[
+    {"id":"s01","tr":"Trwamy we wspólnocie i obchodzimy najświętszy dzień, w którym Twój Jednorodzony, współwieczny z Tobą w Twojej chwale, ukazał się widzialnie w cielesnej postaci, w naszym prawdziwym ciele,","g":["Trwamy we wspólnocie","i",null,null,null,"w którym",null,null,null,null,null,null,null,null,null,null,null,"widzialnie","w cielesnej postaci","ukazał się"],"a":[{"s":2,"n":3,"a":2,"g":"obchodzimy najświętszy dzień"},{"s":6,"n":2,"a":0,"g":"Twój Jednorodzony"},{"s":8,"n":5,"a":4,"g":"współwieczny z Tobą w Twojej chwale"},{"s":13,"n":4,"a":1,"g":"w naszym prawdziwym ciele"}],"ex":{"w001":"Wspólnota modlącego się Kościoła obejmuje także wspomnienie Maryi i świętych, których imiona następują w tej modlitwie.","w005":"Wspominane ukazanie się dotyczy Syna, współwiecznego z Ojcem. Ukazał się On widzialnie w cielesnej postaci, w prawdziwym ciele wspólnym nam jako ludziom."}},
+    {"id":"s02","tr":"a także czcimy pamięć przede wszystkim chwalebnej zawsze Dziewicy","g":[null,null,null,null,null,null,"chwalebnej",null,null],"a":[{"s":0,"n":2,"a":0,"g":"a także"},{"s":2,"n":2,"a":1,"g":"czcimy pamięć"},{"s":4,"n":2,"a":1,"g":"przede wszystkim"},{"s":7,"n":2,"a":1,"g":"zawsze Dziewicy"}],"ex":{"w024":"Pamięć obejmuje Maryję, Józefa, wymienionych Apostołów i Męczenników oraz wszystkich świętych. Ich zasługi i modlitwy zostają przywołane w prośbie o Bożą opiekę."}},
+    {"id":"s03","nr":"Kapłan skłania głowę."},
+    {"id":"s04","tr":"Maryi, Matki Tego samego Boga i Pana naszego","g":["Maryi","Matki","Tego samego","Boga","i","Pana","naszego"]},
+    {"id":"s05","nr":"Kapłan skłania głowę."},
+    {"id":"s06","tr":"Jezusa Chrystusa;","g":["Jezusa","Chrystusa"]},
+    {"id":"s07","tr":"a także błogosławionego Józefa, Oblubieńca tej samej Dziewicy,","g":[null,null,"błogosławionego","Józefa",null,null,null],"a":[{"s":0,"n":2,"a":0,"g":"a także"},{"s":4,"n":3,"a":2,"g":"Oblubieńca tej samej Dziewicy"}]},
+    {"id":"s08","tr":"i Twoich błogosławionych Apostołów i Męczenników: Piotra i Pawła, Andrzeja, Jakuba, Jana, Tomasza, Jakuba, Filipa, Bartłomieja, Mateusza, Szymona i Tadeusza;","g":["i",null,null,null,null,null,"Piotra","i","Pawła","Andrzeja","Jakuba","Jana","Tomasza","Jakuba","Filipa","Bartłomieja","Mateusza","Szymona","i","Tadeusza"],"a":[{"s":1,"n":5,"a":1,"g":"Twoich błogosławionych Apostołów i Męczenników"}]},
+    {"id":"s09","tr":"Linusa, Kleta, Klemensa, Sykstusa, Korneliusza, Cypriana, Wawrzyńca, Chryzogona, Jana i Pawła, Kosmy i Damiana;","g":["Linusa","Kleta","Klemensa","Sykstusa","Korneliusza","Cypriana","Wawrzyńca","Chryzogona","Jana","i","Pawła","Kosmy","i","Damiana"]},
+    {"id":"s10","tr":"i wszystkich Twoich świętych. Przez ich zasługi i modlitwy racz sprawić, abyśmy we wszystkim byli umocnieni pomocą Twojej opieki.","g":["i",null,null,null,"przez ich","zasługi","i modlitwy","racz sprawić","abyśmy",null,null,null,null,null,null],"a":[{"s":1,"n":3,"a":1,"g":"wszystkich Twoich świętych"},{"s":9,"n":2,"a":1,"g":"we wszystkim"},{"s":11,"n":4,"a":2,"g":"byli umocnieni pomocą Twojej opieki"}]},
+    {"id":"s11","nr":"Kapłan składa ręce."},
+    {"id":"s12","tr":"Przez Tego samego Chrystusa, Pana naszego. Amen.","g":["Przez","Tego samego","Chrystusa","Pana","naszego","Amen"]}
+  ]
+}

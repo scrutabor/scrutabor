@@ -5,6 +5,7 @@
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import WordIdentity from '$lib/components/WordIdentity.svelte';
 	import { M, type Lang } from '$lib/i18n';
+	import { externalDictionaryHref } from '$lib/lemma-url';
 	import { GENDER_MARK, describeLemma } from '$lib/morph';
 	import { pageUrl } from '$lib/url';
 
@@ -128,9 +129,7 @@
 
 			<p class="external smallcaps">
 				{msgs.externalDict}:
-				<a href="https://logeion.uchicago.edu/{lemma}" target="_blank" rel="external noopener"
-					>Logeion</a
-				>
+				<a href={externalDictionaryHref(lemma)} target="_blank" rel="external noopener">Logeion</a>
 			</p>
 		</main>
 	{/if}
