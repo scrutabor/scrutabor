@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 159",
+    "scan": "leaf n238 / PDF p. 239",
+    "section": "Feria V in Cena Domini, De lotione pedum, Antiphona 3, Ioann. 13, 12, 13 et 15",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n238/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.feria-v-in-cena-domini-communio.lotio-pedum-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The washing of the feet prints this text in full as its third antiphon, identical in letters, accents and punctuation to page 162 and the selected text, with a space before the colon after illis; its Psalm verse (Ps. 84, 2) and the repeat that follow are not part of this text."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 162",

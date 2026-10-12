@@ -8,6 +8,7 @@ import type { Citation } from './corpus';
 import type { Lang } from './i18n';
 import { remember } from './remember';
 import { lemmaHref } from './lemma-url';
+import { textHref } from './content-url';
 
 export type BibliographySectionId =
 	| 'latin_textual_sources'
@@ -281,7 +282,9 @@ function compactSegments(textId: string, segments: string[], lang: Lang): Biblio
 		uses.push({
 			key: `${textId}:${first.segment}:${last.segment}`,
 			title,
-			href: `/app/${lang}/${key}?s=${first.segment}${run.length > 1 ? `-${last.segment}` : ''}`,
+			href: textHref(lang, key, {
+				segment: `${first.segment}${run.length > 1 ? `-${last.segment}` : ''}`
+			}),
 			kind: run.length > 1 ? 'range' : 'segment',
 			first: first.value,
 			last: last.value
@@ -294,7 +297,7 @@ function compactSegments(textId: string, segments: string[], lang: Lang): Biblio
 			uses.push({
 				key: `${textId}:${item.segment}`,
 				title,
-				href: `/app/${lang}/${key}?s=${item.segment}`,
+				href: textHref(lang, key, { segment: item.segment }),
 				kind: 'segment'
 			});
 			continue;
@@ -329,7 +332,7 @@ function compactUses(
 		const key = textId.replace('.', '/');
 		const out: BibliographyUse[] = [];
 		if (addresses.some(({ kind }) => kind === 'text')) {
-			out.push({ key: `${textId}:text`, title, href: `/app/${lang}/${key}`, kind: 'text' });
+			out.push({ key: `${textId}:text`, title, href: textHref(lang, key), kind: 'text' });
 		}
 		out.push(
 			...compactSegments(
@@ -344,7 +347,7 @@ function compactUses(
 			out.push({
 				key: `${textId}:${word}`,
 				title,
-				href: `/app/${lang}/${key}?w=${encodeURIComponent(word)}`,
+				href: textHref(lang, key, { word }),
 				kind: 'word'
 			});
 		}

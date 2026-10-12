@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/09-14; resolved section [Graduale] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/09-14.txt [Graduale] (lines 36-36); web/www/missa/Latin/Sancti/09-14.txt [Graduale] (line 37, chars 0:88)"
    },
    "entries": [
     {
@@ -14,10 +14,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "Current bounded collation of the complete selected 27-word Gradual against the pinned independently maintained Latin data; the adjacent Alleluia is excluded. The evidence digest identifies the complete Sancti/09-14 archive, not just this body."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-11"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 158",
+    "scan": "leaf n237 / PDF p. 238",
+    "section": "Feria V in Cena Domini, Graduale, Phil. 2, 8-9",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n237/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.exaltatio-sanctae-crucis-graduale.cena-domini-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Holy Thursday prints this Gradual in full. Its letters, accents and marks equal page 669 and the selected text but for one: a colon after illum (exaltávit illum : et dedit), where page 669 and the selected text have a comma (exaltávit illum, et dedit); page 669 continues with the Alleluia, which is not part of this text."
+    }
+   ],
+   "verified_on": "2026-10-11"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

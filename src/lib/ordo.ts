@@ -152,8 +152,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'Psalm 42, said in alternation with the server, closed by the Glória Patri and the antiphon again.'
 				},
 				when: {
-					pl: 'opuszcza się w okresie Męki Pańskiej i we Mszach za zmarłych — wraz z doksologią i powtórzoną antyfoną',
-					en: 'omitted in Passiontide and at Masses for the Dead — with its doxology and the repeated antiphon'
+					pl: 'opuszcza się we Mszach za zmarłych oraz we Mszach okresowych (de Tempore) od I Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie — wraz z doksologią i powtórzoną antyfoną',
+					en: 'omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday inclusive — with its doxology and the repeated antiphon'
 				}
 			},
 			{
@@ -239,8 +239,12 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Intróitus',
 				kind: 'proper',
 				note: {
-					pl: 'Kapłan żegna się i po stronie lekcji czyta antyfonę na wejście z wersetem psalmu, Glória Patri i powtórzoną antyfoną — to pierwszy tekst z formularza dnia.',
-					en: 'The priest signs himself and at the Epistle side reads the Introit antiphon with its psalm verse, the Glória Patri and the antiphon again — the first text from the day’s formulary.'
+					pl: 'Kapłan po stronie lekcji czyta Introit — antyfonę na wejście z wersetem psalmu, zwykle także z Glória Patri, po czym powtarza antyfonę.',
+					en: 'At the Epistle side, the priest reads the Introit antiphon with its psalm verse, usually also the Glória Patri, then repeats the antiphon.'
+				},
+				when: {
+					pl: 'Glória Patri opuszcza się we Mszach za zmarłych oraz we Mszach okresowych (de Tempore) od I Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie. W Wigilię Paschalną nie ma Introitu.',
+					en: 'the Glória Patri is omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday inclusive. There is no Introit at the Easter Vigil'
 				}
 			},
 			{
@@ -412,8 +416,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest washes his fingertips, saying Psalm 25 from the verse that names the altar.'
 				},
 				when: {
-					pl: 'Chwały Ojcu nie odmawia się we Mszach za zmarłych ani w okresie Męki Pańskiej',
-					en: 'the Glória Patri is omitted at Masses for the Dead and in Passiontide'
+					pl: 'Chwały Ojcu nie odmawia się we Mszach za zmarłych ani we Mszach okresowych (de Tempore) od I Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie. W Wigilię Paschalną odmawia się Chwała Ojcu.',
+					en: 'the Glória Patri is omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday inclusive. It is said at the Easter Vigil'
 				}
 			},
 			{

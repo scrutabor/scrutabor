@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 161",
+    "scan": "leaf n240 / PDF p. 241",
+    "section": "Feria V in Cena Domini, Antiphona ad Offertorium, Ps. 117, 16 et 17",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n240/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-post-epiphaniam-offertorium.cena-domini-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Holy Thursday prints this Offertory in full, identical in letters, accents and punctuation to page 46 and the selected text."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 46",

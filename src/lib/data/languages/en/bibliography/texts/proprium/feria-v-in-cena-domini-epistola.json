@@ -1,0 +1,27 @@
+{
+ "id": "proprium.feria-v-in-cena-domini-epistola",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 314–315",
+    "scan": "scan pp. 330–331"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.feria-v-in-cena-domini-epistola.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Epistle (the Douay 1 Corinthians 11:20–32 through this missal), revised against the Latin in contemporary language: in one place (in unum), it is no longer (iam non est), Do you not have houses (Numquid domos non habétis), those who have nothing (eos, qui non habent), will be delivered up (tradétur), in commemoration of Me (in meam commemoratiónem), the new covenant (novum testaméntum), you will proclaim (annuntiábitis), examine himself (probet seípsum), would certainly not be judged (non útique iudicarémur), so that we may not be condemned (ut non … damnémur). Additional revisions: iam non est Dominicam cenam manducare (w006–w011) becomes this is no longer eating the Lord’s supper; suam cenam praesumit ad manducandum (w014–w018) becomes begins to eat his own supper first; postquam cenavit is after He had eaten supper (w097–w098); iudicium sibi manducat et bibit is eats and drinks judgment on himself (w164–w168)."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

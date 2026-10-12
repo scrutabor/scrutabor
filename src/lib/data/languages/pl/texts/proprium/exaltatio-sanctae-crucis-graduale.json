@@ -1,8 +1,8 @@
 {
   "id":"proprium.exaltatio-sanctae-crucis-graduale",
   "language":"pl",
-  "about":"Graduale formularza „Podwyższenie Krzyża Świętego” w Mszale Rzymskim z 1962 roku.",
+  "about":"Graduale formularza „Podwyższenie Krzyża Świętego” w Mszale Rzymskim z 1962 roku. Ten sam śpiew jest używany w formularzu Wielkiego Czwartku.",
   "seg":[
-    {"id":"s01","tr":"Chrystus stał się za nas posłuszny aż do śmierci, i to śmierci krzyżowej. Dlatego też Bóg Go wywyższył i dał Mu imię, które jest ponad każde imię.","g":["Chrystus",null,null,"dla","nas","posłuszny","aż","do","śmierci","śmierci","zaś","krzyżowej","Z powodu","tego","też","Bóg","wywyższył","Go","i","dał","Mu","imię","które","jest","ponad","wszelkie","imię"],"a":[{"s":1,"n":2,"a":0,"g":"stał się"}]}
+    {"id":"s01","tr":"Chrystus stał się za nas posłuszny aż do śmierci, i to śmierci krzyżowej. Dlatego też Bóg Go wywyższył i dał Mu imię, które jest ponad każde imię.","g":["Chrystus",null,null,"dla","nas","posłuszny","aż","do","śmierci",null,null,"krzyżowej","Z powodu","tego","też","Bóg","wywyższył","Go","i","dał","Mu","imię","które","jest","ponad","wszelkie","imię"],"a":[{"s":1,"n":2,"a":0,"g":"stał się"},{"s":9,"n":2,"a":0,"g":"i to śmierci"}]}
   ]
 }

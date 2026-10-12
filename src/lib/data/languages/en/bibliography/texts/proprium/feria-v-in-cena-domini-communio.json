@@ -1,0 +1,27 @@
+{
+ "id": "proprium.feria-v-in-cena-domini-communio",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 316–317",
+    "scan": "scan pp. 332–333"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.feria-v-in-cena-domini-communio.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Communion (John 13:12, 13 and 15 through this missal), revised against the Latin in contemporary language: Do you know what I have done to you, I, the Lord and Master? (Scitis quid fécerim vobis ego, Dóminus et Magíster?), that you also may do likewise (ut et vos ita faciátis). Additional revision: postquam cenavit (w003–w004) is after He had eaten supper. The bare Lord/Master apposition is an optional modern revision of the retained possessive wording, not a finding that the historical your is false."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -3117,19 +3117,23 @@
     },
     {
       "id": "proprium.feria-v-in-cena-domini-collecta",
-      "path": "languages/en/texts/proprium/feria-v-in-cena-domini-collecta.json"
+      "path": "languages/en/texts/proprium/feria-v-in-cena-domini-collecta.json",
+      "evidence": "languages/en/bibliography/texts/proprium/feria-v-in-cena-domini-collecta.json"
     },
     {
       "id": "proprium.feria-v-in-cena-domini-communio",
-      "path": "languages/en/texts/proprium/feria-v-in-cena-domini-communio.json"
+      "path": "languages/en/texts/proprium/feria-v-in-cena-domini-communio.json",
+      "evidence": "languages/en/bibliography/texts/proprium/feria-v-in-cena-domini-communio.json"
     },
     {
       "id": "proprium.feria-v-in-cena-domini-epistola",
-      "path": "languages/en/texts/proprium/feria-v-in-cena-domini-epistola.json"
+      "path": "languages/en/texts/proprium/feria-v-in-cena-domini-epistola.json",
+      "evidence": "languages/en/bibliography/texts/proprium/feria-v-in-cena-domini-epistola.json"
     },
     {
       "id": "proprium.feria-v-in-cena-domini-evangelium",
-      "path": "languages/en/texts/proprium/feria-v-in-cena-domini-evangelium.json"
+      "path": "languages/en/texts/proprium/feria-v-in-cena-domini-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/feria-v-in-cena-domini-evangelium.json"
     },
     {
       "id": "proprium.feria-v-in-cena-domini-introitus",

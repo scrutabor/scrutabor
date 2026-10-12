@@ -1,0 +1,27 @@
+{
+ "id": "proprium.feria-v-in-cena-domini-evangelium",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 315–316",
+    "scan": "scan pp. 331–332"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.feria-v-in-cena-domini-evangelium.body.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the Gospel (the Douay John 13:1–15 through this missal), revised against the Latin of the 1962 Missal in contemporary language: the Passover (Paschæ), during supper (cena facta), Judas, son of Simon Iscariot (Simónis Iscariótæ), He who has bathed (Qui lotus est), having reclined again (cum recubuísset íterum), the Lord and Master (Dóminus et Magíster), with the historic presents of the Latin. Additional line revisions: ego through Magister (w219–w225) is I, the Lord and Master, have washed your feet; Peter’s hands/head (w149, w151) take contextually supplied my. During supper (cena facta) is a qualified contextual alternative, not proof against the received completed-supper reading."
+    }
+   ],
+   "verified_on": "2026-10-11"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}
