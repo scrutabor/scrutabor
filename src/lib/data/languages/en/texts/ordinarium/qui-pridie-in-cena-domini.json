@@ -1,0 +1,20 @@
+{
+  "id":"ordinarium.qui-pridie-in-cena-domini",
+  "language":"en",
+  "about":"The Holy Thursday form of the institution narrative adds the purpose of Christ’s Passion—our salvation and that of all—and the words “that is, today”. The priest addresses the Father while recounting Christ’s actions, then speaks Jesus’ words over the bread. The following chalice prayer is outside this text.",
+  "seg":[
+    {"id":"s01","tr":"Who, on the day before He was to suffer for our salvation and that of all, that is, today,","g":["Who",null,null,null,null,null,null,null,null,null,"today"],"a":[{"s":1,"n":2,"a":0,"g":"on the day before"},{"s":3,"n":5,"a":4,"g":"He was to suffer for our salvation and that of all"},{"s":8,"n":2,"a":1,"g":"that is"}],"ex":{"w001":"The narrative continues to refer to Christ, named in the preceding Canon prayer. He takes the bread, thanks the Father and speaks the following words.","w011":"“Today” explains the institution day, identified as the day before the Passion. It does not say that the Passion itself occurs today."}},
+    {"id":"s02","nr":"The priest takes the host."},
+    {"id":"s03","tr":"took bread into His holy and venerable hands,","g":["took","bread","into",null,null,null,null,null],"a":[{"s":3,"n":5,"a":3,"g":"His holy and venerable hands"}]},
+    {"id":"s04","nr":"The priest raises his eyes to heaven."},
+    {"id":"s05","tr":"and with eyes raised to heaven, to You, God, His almighty Father,","g":["and",null,null,"to","heaven","to","You","God",null,null,null],"a":[{"s":1,"n":2,"a":0,"g":"with eyes raised"},{"s":8,"n":3,"a":0,"g":"His almighty Father"}],"ex":{"w021":"The raised eyes are Christ’s, directed toward the Father. The phrase describes the eyes as already raised while the narrative continues with His thanksgiving and actions."}},
+    {"id":"s06","nr":"The priest bows his head."},
+    {"id":"s07","tr":"giving You thanks,","g":[null,null,null],"a":[{"s":0,"n":3,"a":2,"g":"giving You thanks"}]},
+    {"id":"s08","nr":"The priest makes the sign of the cross over the host."},
+    {"id":"s09","tr":"blessed, broke and gave it to His disciples, saying:","g":["blessed","broke","and gave",null,null,"saying"],"a":[{"s":3,"n":2,"a":0,"g":"to His disciples"}]},
+    {"id":"s10","tr":"Take and eat of this, all of you:","g":["Take","and","eat","of","this","all of you"]},
+    {"id":"s11","nr":"The priest holds the host with both hands between his forefingers and thumbs. The priest pronounces the words of consecration distinctly and attentively over the host, and at the same time over all the hosts if several are to be consecrated."},
+    {"id":"s12","tr":"For this is My Body.","tb":"normalized","g":[null,null,null,null,null],"a":[{"s":0,"n":3,"a":1,"g":"For this is"},{"s":3,"n":2,"a":0,"g":"My Body"}],"ex":{"w050":"The first-person possessive belongs to Jesus speaking to His disciples. It does not refer to the body of the priest who recites the words."}},
+    {"id":"s13","nr":"After speaking these words, the priest immediately genuflects and adores the consecrated host. The priest rises, shows it to the people, places it on the corporal, and genuflects again in adoration. The priest no longer separates his thumbs and forefingers until the washing of his fingers, except when the host must be handled."}
+  ]
+}

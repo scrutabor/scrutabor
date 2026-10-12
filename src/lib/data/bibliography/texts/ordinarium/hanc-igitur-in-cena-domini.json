@@ -1,0 +1,106 @@
+{
+ "id": "ordinarium.hanc-igitur-in-cena-domini",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "161",
+    "scan": "Archive leaf n240",
+    "section": "In Cena Domini — hanc-igitur"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-in-cena-domini.benziger-proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Complete proper occurrence, including literal éripe and Per eundem; éripe is not silently transcribed as éripi."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "lii",
+    "scan": "Archive leaf n57",
+    "section": "Ritus servandus V 2"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-in-cena-domini.name-inclinations",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Head inclination at the names Jesus and Mary applies anywhere in Mass, including these proper additions; named-saint inclination is restricted to the saint of the Mass or commemoration, not every saint in the list."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "lv",
+    "scan": "Archive leaf n60",
+    "section": "Ritus servandus VIII 4"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-in-cena-domini.general-rite",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Hands are held extended over the offerings during Hanc igitur; hands are joined at the proper conclusion."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "xxxiii",
+    "scan": "Archive leaf n38",
+    "section": "Rubricae generales 500"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-in-cena-domini.canon-secreto",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Canon is spoken secreto; the priest is the ritual speaker, not automatically the subject of the words he quotes."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "158",
+    "scan": "PDF page 239",
+    "section": "In Cena Domini, item 917"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-in-cena-domini.vatican-proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Complete proper spoken Latin occurrence; source-local readings and punctuation are retained with declared linearization, excluding ritual rubrics and cross separation."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  }
+ ],
+ "witnesses": []
+}

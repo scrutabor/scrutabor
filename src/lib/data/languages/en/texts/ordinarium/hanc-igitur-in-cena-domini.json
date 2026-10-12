@@ -1,0 +1,15 @@
+{
+  "id":"ordinarium.hanc-igitur-in-cena-domini",
+  "language":"en",
+  "about":"This Holy Thursday prayer links the offering to the day when Christ entrusted His disciples with the celebration of the mysteries of His Body and Blood. Holding his hands over the offerings, the priest asks the Father to accept them, order our days in His peace, and command our deliverance and inclusion among His elect.",
+  "seg":[
+    {"id":"s01","nr":"The priest holds his hands spread over the offerings and says:"},
+    {"id":"s02","tr":"This offering, therefore, of our service and also of all Your family, which we offer to You on account of the day on which our Lord","g":[null,null,null,null,null,null,null,null,null,null,"which","to You","we offer","on account of","the day",null,null,null,null],"a":[{"s":0,"n":3,"a":2,"g":"This offering, therefore"},{"s":3,"n":2,"a":0,"g":"of our service"},{"s":5,"n":2,"a":1,"g":"and also"},{"s":7,"n":3,"a":1,"g":"of all Your family"},{"s":15,"n":2,"a":1,"g":"on which"},{"s":17,"n":2,"a":0,"g":"our Lord"}]},
+    {"id":"s03","nr":"The priest bows his head."},
+    {"id":"s04","tr":"Jesus Christ entrusted to His disciples the mysteries of His Body and Blood for them to celebrate,","g":["Jesus","Christ","entrusted",null,null,null,null,null,null,null,null],"a":[{"s":3,"n":2,"a":0,"g":"to His disciples"},{"s":5,"n":6,"a":4,"g":"the mysteries of His Body and Blood to be celebrated"}],"ex":{"w030":"Christ entrusts the mysteries of His Body and Blood to His disciples for celebration. “To be celebrated” describes the mysteries and expresses the task entrusted to the disciples."}},
+    {"id":"s05","tr":"we ask You, Lord, graciously to accept.","g":["we ask","Lord","that",null,null],"a":[{"s":3,"n":2,"a":1,"g":"You graciously accept"}]},
+    {"id":"s06","tr":"And order our days in Your peace, and command that we be delivered from eternal condemnation and counted in the flock of Your elect.","g":[null,null,null,null,null,null,"and",null,null,null,null,null,null,null,null,null,null,null,null],"a":[{"s":0,"n":6,"a":5,"g":"and order our days in Your peace"},{"s":7,"n":12,"a":9,"g":"command that we be delivered from eternal condemnation and counted in the flock of Your elect"}],"ex":{"w052":"The command sought from God has two outcomes: our deliverance from eternal condemnation and our being counted in the flock of His elect. Both concern the same people praying."}},
+    {"id":"s07","nr":"The priest joins his hands."},
+    {"id":"s08","tr":"Through the same Christ our Lord. Amen.","g":["Through","the same","Christ",null,null,"Amen"],"a":[{"s":3,"n":2,"a":0,"g":"our Lord"}]}
+  ]
+}

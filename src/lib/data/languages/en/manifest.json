@@ -219,6 +219,11 @@
       "evidence": "languages/en/bibliography/texts/ordinarium/benedictio.json"
     },
     {
+      "id": "ordinarium.communicantes-in-cena-domini",
+      "path": "languages/en/texts/ordinarium/communicantes-in-cena-domini.json",
+      "title": "Communicantes — Holy Thursday"
+    },
+    {
       "id": "ordinarium.communicantes",
       "path": "languages/en/texts/ordinarium/communicantes.json",
       "evidence": "languages/en/bibliography/texts/ordinarium/communicantes.json"
@@ -283,6 +288,11 @@
     {
       "id": "ordinarium.haec-commixtio",
       "path": "languages/en/texts/ordinarium/haec-commixtio.json"
+    },
+    {
+      "id": "ordinarium.hanc-igitur-in-cena-domini",
+      "path": "languages/en/texts/ordinarium/hanc-igitur-in-cena-domini.json",
+      "title": "Hanc igitur — Holy Thursday"
     },
     {
       "id": "ordinarium.hanc-igitur",
@@ -517,6 +527,12 @@
       "id": "ordinarium.qui-dixisti",
       "path": "languages/en/texts/ordinarium/qui-dixisti.json",
       "evidence": "languages/en/bibliography/texts/ordinarium/qui-dixisti.json"
+    },
+    {
+      "id": "ordinarium.qui-pridie-in-cena-domini",
+      "path": "languages/en/texts/ordinarium/qui-pridie-in-cena-domini.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/qui-pridie-in-cena-domini.json",
+      "title": "Qui pridie — Holy Thursday"
     },
     {
       "id": "ordinarium.qui-pridie",

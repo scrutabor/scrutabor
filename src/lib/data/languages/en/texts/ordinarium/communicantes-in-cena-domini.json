@@ -1,0 +1,21 @@
+{
+  "id":"ordinarium.communicantes-in-cena-domini",
+  "language":"en",
+  "about":"On Holy Thursday this part of the Canon recalls the most sacred day on which Christ was handed over for us, then commemorates Mary, Joseph and the saints. The priest says it quietly as part of the continuing prayer addressed to the Father.",
+  "seg":[
+    {"id":"s01","tr":"Remaining in communion and celebrating the most sacred day on which our Lord","g":["remaining in communion","and",null,null,null,"on which",null,null],"a":[{"s":2,"n":3,"a":2,"g":"celebrating the most sacred day"},{"s":6,"n":2,"a":0,"g":"our Lord"}],"ex":{"w001":"The communion belongs to those praying within the continuing Canon. The celebration of the day and veneration of the saints’ memory belong to that same praying “we”.","w005":"The day is identified by Christ’s being handed over for us. Its celebration joins the Holy Thursday commemoration to His Passion."}},
+    {"id":"s02","nr":"The priest bows his head."},
+    {"id":"s03","tr":"Jesus Christ was handed over for us,","g":["Jesus","Christ","for","us",null,null],"a":[{"s":4,"n":2,"a":1,"g":"was handed over"}]},
+    {"id":"s04","tr":"we also venerate the memory, first of all, of the glorious ever-Virgin","g":[null,null,null,null,null,null,"of the glorious","ever","Virgin"],"a":[{"s":0,"n":4,"a":3,"g":"we also venerate the memory"},{"s":4,"n":2,"a":1,"g":"first of all"}],"ex":{"w018":"The veneration of memory includes Mary, Joseph and the following list of saints. The prayer remains addressed to the Father."}},
+    {"id":"s05","nr":"The priest bows his head."},
+    {"id":"s06","tr":"Mary, Mother of that same God and our Lord","g":["Mary",null,null,null,null,null,null],"a":[{"s":1,"n":6,"a":0,"g":"Mother of that same God and our Lord"}],"ex":{"w026":"“That same” points back to Jesus Christ, handed over for us. Mary is named as the Mother of that same Christ, called God and Lord."}},
+    {"id":"s07","nr":"The priest bows his head."},
+    {"id":"s08","tr":"Jesus Christ,","g":["Jesus","Christ"]},
+    {"id":"s09","tr":"and also of blessed Joseph, Spouse of that same Virgin,","g":[null,null,"blessed","Joseph",null,null,null],"a":[{"s":0,"n":2,"a":1,"g":"and also of"},{"s":4,"n":3,"a":2,"g":"Spouse of that same Virgin"}],"ex":{"w037":"“That same Virgin” refers to Mary. Joseph is named as her spouse."}},
+    {"id":"s10","tr":"and Your blessed Apostles and Martyrs: Peter and Paul, Andrew, James, John, Thomas, James, Philip, Bartholomew, Matthew, Simon and Thaddeus,","g":["and",null,null,null,null,null,"Peter","and","Paul","Andrew","James","John","Thomas","James","Philip","Bartholomew","Matthew","Simon","and","Thaddeus"],"a":[{"s":1,"n":5,"a":1,"g":"Your blessed Apostles and Martyrs"}]},
+    {"id":"s11","tr":"Linus, Cletus, Clement, Sixtus, Cornelius, Cyprian, Lawrence, Chrysogonus, John and Paul, Cosmas and Damian","g":["Linus","Cletus","Clement","Sixtus","Cornelius","Cyprian","Lawrence","Chrysogonus","John","and","Paul","Cosmas","and","Damian"]},
+    {"id":"s12","tr":"and all Your Saints. Through their merits and prayers, grant that in everything we may be strengthened by the aid of Your protection.","g":["and",null,null,null,null,null,null,"grant","that",null,null,null,null,null,null],"a":[{"s":1,"n":3,"a":1,"g":"all Your Saints"},{"s":4,"n":3,"a":1,"g":"through whose merits and prayers"},{"s":9,"n":2,"a":1,"g":"in everything"},{"s":11,"n":4,"a":2,"g":"we may be strengthened by the aid of Your protection"}]},
+    {"id":"s13","nr":"The priest joins his hands."},
+    {"id":"s14","tr":"Through the same Christ our Lord. Amen.","g":["Through","the same","Christ",null,null,"Amen"],"a":[{"s":3,"n":2,"a":0,"g":"our Lord"}]}
+  ]
+}

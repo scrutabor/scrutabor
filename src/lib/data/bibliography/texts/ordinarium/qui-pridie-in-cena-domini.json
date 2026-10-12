@@ -1,0 +1,107 @@
+{
+ "id": "ordinarium.qui-pridie-in-cena-domini",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "161",
+    "scan": "Archive leaf n240",
+    "section": "In Cena Domini — qui-pridie"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.qui-pridie-in-cena-domini.benziger-proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Complete proper bread-institution occurrence through Corpus meum; retains the occurrence-local sanctas and dedítque commas."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "lv",
+    "scan": "Archive leaf n60",
+    "section": "Ritus servandus VIII 4–5"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.qui-pridie-in-cena-domini.general-rite",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Ordinary institution rite supplies taking the host, raising eyes, bowing, signing, attentive formula and ensuing adoration/elevation; proper additions do not replace that sequence."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "xxxiii",
+    "scan": "Archive leaf n38",
+    "section": "Rubricae generales 500"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.qui-pridie-in-cena-domini.canon-secreto",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Canon is spoken secreto; the priest is the ritual speaker, not automatically the subject of the words he quotes."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "159",
+    "scan": "PDF page 240",
+    "section": "In Cena Domini, item 919"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.qui-pridie-in-cena-domini.vatican-proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Complete proper spoken Latin occurrence; source-local readings and punctuation are retained with declared linearization, excluding ritual rubrics and cross separation."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "306",
+    "scan": "PDF page 387",
+    "section": "Ordo Missae, item 1102"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.qui-pridie-in-cena-domini.post-formula-rubric",
+     "address": {
+      "kind": "segment",
+      "segment": "s13"
+     },
+     "claim": "The post-formula rubric in s13 is supplied from the same typical-edition ordinary, not falsely claimed as freshly printed in the proper item 919."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  }
+ ],
+ "witnesses": []
+}

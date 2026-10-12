@@ -1,17 +1,17 @@
 {
  "schema_version": "1.0.0",
  "texts": {
-  "total": 1106,
+  "total": 1109,
   "proprium": 1001,
-  "words": 62202,
-  "verse_segments": 2613
+  "words": 62406,
+  "verse_segments": 2635
  },
  "languages": {
   "en": {
-   "texts": 1106
+   "texts": 1109
   },
   "pl": {
-   "texts": 1106
+   "texts": 1109
   }
  },
  "formularies": {

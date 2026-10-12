@@ -1,0 +1,21 @@
+{
+  "id":"ordinarium.hanc-igitur-in-cena-domini",
+  "title":"Hanc ígitur in Cena Dómini",
+  "category":"ordinarium",
+  "section":"missa-fidelium",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"rubric","text":"Tenens manus expansas super oblata, dicit:"},
+    {"id":"s02","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w001","f":"Hanc","l":"hic","m":291},{"i":"w002","f":"ígitur","l":"igitur","m":15},{"i":"w003","f":"oblatiónem","l":"oblatio","m":7},{"i":"w004","f":"servitútis","l":"servitus","m":13},{"i":"w005","f":"nostræ","l":"noster","p":",","m":14,"h":"w004"},{"i":"w006","f":"sed","l":"sed","m":15},{"i":"w007","f":"et","l":"et","m":15},{"i":"w008","f":"cunctæ","l":"cunctus","m":14,"h":"w009"},{"i":"w009","f":"famíliæ","l":"familia","m":64},{"i":"w010","f":"tuæ","l":"tuus","p":",","m":14,"h":"w009"},{"i":"w011","f":"quam","l":"qui","m":291},{"i":"w012","f":"tibi","l":"tu","m":139},{"i":"w013","f":"offérimus","l":"offero","m":208},{"i":"w014","f":"ob","l":"ob","m":3,"h":"w015"},{"i":"w015","f":"diem","l":"dies","p":",","m":338},{"i":"w016","f":"in","l":"in","m":0,"h":"w017"},{"i":"w017","f":"qua","l":"qui","m":206},{"i":"w018","f":"Dóminus","l":"dominus","m":60},{"i":"w019","f":"noster","l":"noster","m":59,"h":"w018"}]},
+    {"id":"s03","type":"rubric","text":"Caput inclinat."},
+    {"id":"s04","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w020","f":"Iesus","l":"Iesus","m":34},{"i":"w021","f":"Christus","l":"Christus","m":60},{"i":"w022","f":"trádidit","l":"trado","m":195},{"i":"w023","f":"discípulis","l":"discipulus","m":267},{"i":"w024","f":"suis","l":"suus","m":236,"h":"w023"},{"i":"w025","f":"Córporis","l":"corpus","m":75},{"i":"w026","f":"et","l":"et","m":15},{"i":"w027","f":"Sánguinis","l":"sanguis","m":69},{"i":"w028","f":"sui","l":"suus","m":99,"h":"w027"},{"i":"w029","f":"mystéria","l":"mysterium","m":85},{"i":"w030","f":"celebránda","l":"celebro","p":":","m":710,"h":"w029"}]},
+    {"id":"s05","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w031","f":"quǽsumus","l":"quaeso","p":",","m":92,"a":5},{"i":"w032","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w033","f":"ut","l":"ut","m":15},{"i":"w034","f":"placátus","l":"placatus","m":59,"h":"w035"},{"i":"w035","f":"accípias","l":"accipio","p":":","m":202}]},
+    {"id":"s06","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w036","f":"diésque","l":"dies","m":304},{"i":"w037","f":"nostros","l":"noster","m":91,"h":"w036"},{"i":"w038","f":"in","l":"in","m":0,"h":"w040"},{"i":"w039","f":"tua","l":"tuus","m":31,"h":"w040"},{"i":"w040","f":"pace","l":"pax","m":45},{"i":"w041","f":"dispónas","l":"dispono","p":",","m":202},{"i":"w042","f":"atque","l":"atque","m":15},{"i":"w043","f":"ab","l":"ab","m":0,"h":"w045"},{"i":"w044","f":"ætérna","l":"aeternus","m":31,"h":"w045"},{"i":"w045","f":"damnatióne","l":"damnatio","m":45},{"i":"w046","f":"nos","l":"nos","m":49},{"i":"w047","f":"éripi","l":"eripio","p":",","m":305},{"i":"w048","f":"et","l":"et","m":15},{"i":"w049","f":"in","l":"in","m":0,"h":"w053"},{"i":"w050","f":"electórum","l":"electus","m":76,"s":true},{"i":"w051","f":"tuórum","l":"tuus","m":76,"h":"w050"},{"i":"w052","f":"iúbeas","l":"iubeo","m":306},{"i":"w053","f":"grege","l":"grex","m":109},{"i":"w054","f":"numerári","l":"numero","p":".","m":94}]},
+    {"id":"s07","type":"rubric","text":"Iungit manus."},
+    {"id":"s08","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w055","f":"Per","l":"per","m":3,"h":"w057"},{"i":"w056","f":"eúndem","l":"idem","m":36},{"i":"w057","f":"Christum","l":"Christus","m":35},{"i":"w058","f":"Dóminum","l":"dominus","m":35},{"i":"w059","f":"nostrum","l":"noster","p":".","m":96,"h":"w058"},{"i":"w060","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

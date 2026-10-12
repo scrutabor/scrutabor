@@ -1,0 +1,15 @@
+{
+  "id":"ordinarium.hanc-igitur-in-cena-domini",
+  "language":"pl",
+  "about":"Ta wielkoczwartkowa modlitwa Kanonu wiąże składaną ofiarę z dniem, w którym Chrystus powierzył uczniom sprawowanie tajemnic Swojego Ciała i Krwi. Kapłan trzyma ręce nad darami, prosząc Ojca o przyjęcie ofiary, pokój, ocalenie od potępienia i miejsce w trzodzie wybranych.",
+  "seg":[
+    {"id":"s01","nr":"Kapłan trzyma rozpostarte ręce nad darami i mówi:"},
+    {"id":"s02","tr":"Tę więc ofiarę naszej służby, a także całej Twojej rodziny, którą składamy Ci ze względu na dzień, w którym Pan nasz","g":["Tę","więc","ofiarę","służby","naszej",null,null,"całej","rodziny","Twojej","którą","Ci","składamy","ze względu na","dzień",null,null,"Pan","nasz"],"a":[{"s":5,"n":2,"a":1,"g":"a także"},{"s":15,"n":2,"a":1,"g":"w którym"}]},
+    {"id":"s03","nr":"Kapłan pochyla głowę."},
+    {"id":"s04","tr":"Jezus Chrystus powierzył Swoim uczniom tajemnice Swojego Ciała i Krwi do sprawowania,","g":["Jezus","Chrystus","powierzył",null,null,null,null,null,null,null,null],"a":[{"s":3,"n":2,"a":0,"g":"Swoim uczniom"},{"s":5,"n":6,"a":4,"g":"tajemnice Swojego Ciała i Krwi do sprawowania"}],"ex":{"w030":"Chrystus powierza uczniom tajemnice Swojego Ciała i Krwi do sprawowania. Określenie to odnosi się do tajemnic i wyraża zadanie powierzone uczniom."}},
+    {"id":"s05","tr":"prosimy Cię, Panie, abyś łaskawie przyjął.","g":["prosimy","Panie","abyś","łaskawie","przyjął"]},
+    {"id":"s06","tr":"I dni nasze uporządkuj w Twoim pokoju, a także racz nakazać, byśmy zostali wyrwani z wiecznego potępienia i zaliczeni do trzody Twoich wybranych.","g":["i dni","nasze","w","Twoim","pokoju","uporządkował","a także",null,null,null,null,null,null,null,null,null,null,null,null],"a":[{"s":7,"n":12,"a":9,"g":"nakazał, byśmy zostali wyrwani z wiecznego potępienia i zaliczeni do trzody Twoich wybranych"}],"ex":{"w052":"Prośba obejmuje dwa skutki Bożego rozkazu: wyrwanie nas z wiecznego potępienia i zaliczenie do trzody Jego wybranych. W obu chodzi o tych samych modlących się."}},
+    {"id":"s07","nr":"Kapłan składa ręce."},
+    {"id":"s08","tr":"Przez tego samego Chrystusa, Pana naszego. Amen.","g":["Przez","tego samego","Chrystusa","Pana","naszego","Amen"]}
+  ]
+}

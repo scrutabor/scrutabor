@@ -48,7 +48,17 @@ export const CATALOG_ORDER: CatalogSectionSource[] = [
 	{
 		category: 'ordinarium',
 		label: { pl: 'ordinarium missæ', en: 'ordinarium missæ' },
-		texts: ['confiteor', 'kyrie', 'gloria', 'credo', 'sanctus', 'agnus-dei']
+		texts: [
+			'confiteor',
+			'kyrie',
+			'gloria',
+			'credo',
+			'sanctus',
+			'communicantes-in-cena-domini',
+			'hanc-igitur-in-cena-domini',
+			'qui-pridie-in-cena-domini',
+			'agnus-dei'
+		]
 	},
 	{
 		// Proper texts are reached from the Ordo. Keeping the empty declaration

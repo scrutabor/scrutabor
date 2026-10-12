@@ -76,6 +76,11 @@
    "title": "Missale Romanum ex decreto SS. Concilii Tridentini restitutum"
   },
   {
+   "id": "work.sacra-rituum-congregatio.de-s-ioseph",
+   "responsible": "Sacra Rituum Congregatio",
+   "title": "De S. Joseph nomine Canoni Missae inserendo"
+  },
+  {
    "id": "work.valla.elegantiae",
    "responsible": "Laurentius Valla",
    "title": "De linguae Latinae elegantia libri sex"
@@ -403,6 +408,39 @@
    }
   },
   {
+   "id": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "work": "work.missale-romanum",
+   "recension": "Roman Missal with the Saint Joseph amendment effective 8 December 1962",
+   "title": "Missale Romanum, editio typica (Saint Joseph-bearing reproduction)",
+   "edition_statement": "Editio typica. The manifestation lacks a printed production year; 1962 identifies the underlying typical text, not a proved reproduction date.",
+   "year": "1962",
+   "publication_type": "missal",
+   "authority": "typical_liturgical_edition",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Underlying liturgical text and digitized reproduction are distinct. Repository licensing is not independently established as publication authority; no scan or OCR redistribution is authorized."
+   }
+  },
+  {
+   "id": "edition.sacra-rituum-congregatio.de-s-ioseph.1962-aas54",
+   "work": "work.sacra-rituum-congregatio.de-s-ioseph",
+   "title": "Acta Apostolicae Sedis LIV (1962), De S. Joseph nomine Canoni Missae inserendo",
+   "year": "1962",
+   "volume": "54",
+   "publication_type": "official_act",
+   "authority": "official_document",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Retained official act consulted locally. No independent reproduction-rights adjudication or public scan/extraction permission is claimed."
+   }
+  },
+  {
    "id": "edition.valla.elegantiae.1538",
    "work": "work.valla.elegantiae",
    "title": "De linguae Latinae elegantia libri sex",
@@ -646,6 +684,26 @@
    "record_url": "https://archive.org/details/missale-romanum-1962",
    "scan_url": "https://archive.org/download/missale-romanum-1962/Missale%20Romanum%201962.pdf",
    "access": "open"
+  },
+  {
+   "id": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/missale_romanum-1962",
+   "scan_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf",
+   "access": "open",
+   "digitization_rights": "Repository assertion CC BY-NC-ND 3.0 is retained as an assertion, not a new rights determination."
+  },
+  {
+   "id": "item.sacra-rituum-congregatio.de-s-ioseph.1962-aas54.vatican",
+   "edition": "edition.sacra-rituum-congregatio.de-s-ioseph.1962-aas54",
+   "repository": "Holy See",
+   "kind": "scan",
+   "record_url": "https://www.vatican.va/archive/aas/documents/AAS-54-1962-ocr.pdf",
+   "scan_url": "https://www.vatican.va/archive/aas/documents/AAS-54-1962-ocr.pdf",
+   "access": "open",
+   "digitization_rights": "Unverified; local consultation only."
   },
   {
    "id": "item.valla.elegantiae.1538.mateo",

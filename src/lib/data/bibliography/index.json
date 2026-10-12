@@ -7416,6 +7416,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.communicantes-in-cena-domini",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.confiteor",
        "roles": [
         "official_text"
@@ -7489,6 +7496,13 @@
        "id": "ordinarium.hanc-igitur",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.hanc-igitur-in-cena-domini",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -7818,6 +7832,13 @@
        "id": "ordinarium.qui-pridie",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.qui-pridie-in-cena-domini",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -14979,6 +15000,36 @@
      "lemmas": []
     },
     {
+     "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+     "roles": [
+      "official_text"
+     ],
+     "texts": [
+      {
+       "id": "ordinarium.communicantes-in-cena-domini",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.hanc-igitur-in-cena-domini",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.qui-pridie-in-cena-domini",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
      "edition": "edition.key-of-heaven-1901",
      "roles": [
       "direct_approved_print"
@@ -15258,6 +15309,20 @@
      ],
      "texts": [
       {
+       "id": "ordinarium.communicantes-in-cena-domini",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "ordinarium.hanc-igitur-in-cena-domini",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 3
+      },
+      {
        "id": "ordinarium.praefatio-apostolorum",
        "roles": [
         "rubric_control"
@@ -15403,6 +15468,13 @@
         "rubric_control"
        ],
        "uses": 1
+      },
+      {
+       "id": "ordinarium.qui-pridie-in-cena-domini",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
       },
       {
        "id": "proprium.annuntiatio-beatae-mariae-virginis-collecta",
@@ -17789,6 +17861,22 @@
      "lemmas": []
     },
     {
+     "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+     "roles": [
+      "rubric_control"
+     ],
+     "texts": [
+      {
+       "id": "ordinarium.qui-pridie-in-cena-domini",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
      "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
      "roles": [
       "official_liturgical_context"
@@ -17817,6 +17905,22 @@
       },
       {
        "id": "orationes.sancte-michael",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.sacra-rituum-congregatio.de-s-ioseph.1962-aas54",
+     "roles": [
+      "official_liturgical_context"
+     ],
+     "texts": [
+      {
+       "id": "ordinarium.communicantes-in-cena-domini",
        "roles": [
         "official_liturgical_context"
        ],

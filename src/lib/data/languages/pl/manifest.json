@@ -224,6 +224,11 @@
       "evidence": "languages/pl/bibliography/texts/ordinarium/benedictio.json"
     },
     {
+      "id": "ordinarium.communicantes-in-cena-domini",
+      "path": "languages/pl/texts/ordinarium/communicantes-in-cena-domini.json",
+      "title": "Communicantes — Wielki Czwartek"
+    },
+    {
       "id": "ordinarium.communicantes",
       "path": "languages/pl/texts/ordinarium/communicantes.json",
       "evidence": "languages/pl/bibliography/texts/ordinarium/communicantes.json"
@@ -287,6 +292,11 @@
     {
       "id": "ordinarium.haec-commixtio",
       "path": "languages/pl/texts/ordinarium/haec-commixtio.json"
+    },
+    {
+      "id": "ordinarium.hanc-igitur-in-cena-domini",
+      "path": "languages/pl/texts/ordinarium/hanc-igitur-in-cena-domini.json",
+      "title": "Hanc igitur — Wielki Czwartek"
     },
     {
       "id": "ordinarium.hanc-igitur",
@@ -505,6 +515,12 @@
       "id": "ordinarium.qui-dixisti",
       "path": "languages/pl/texts/ordinarium/qui-dixisti.json",
       "evidence": "languages/pl/bibliography/texts/ordinarium/qui-dixisti.json"
+    },
+    {
+      "id": "ordinarium.qui-pridie-in-cena-domini",
+      "path": "languages/pl/texts/ordinarium/qui-pridie-in-cena-domini.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/qui-pridie-in-cena-domini.json",
+      "title": "Qui pridie — Wielki Czwartek"
     },
     {
       "id": "ordinarium.qui-pridie",

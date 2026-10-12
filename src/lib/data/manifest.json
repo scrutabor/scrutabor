@@ -186,6 +186,12 @@
       "evidence": "bibliography/texts/ordinarium/benedictio.json"
     },
     {
+      "id": "ordinarium.communicantes-in-cena-domini",
+      "path": "texts/ordinarium/communicantes-in-cena-domini.json",
+      "title": "Communicántes in Cena Dómini",
+      "evidence": "bibliography/texts/ordinarium/communicantes-in-cena-domini.json"
+    },
+    {
       "id": "ordinarium.communicantes",
       "path": "texts/ordinarium/communicantes.json",
       "title": "Communicántes"
@@ -259,6 +265,12 @@
       "path": "texts/ordinarium/haec-commixtio.json",
       "title": "Hæc commíxtio",
       "evidence": "bibliography/texts/ordinarium/haec-commixtio.json"
+    },
+    {
+      "id": "ordinarium.hanc-igitur-in-cena-domini",
+      "path": "texts/ordinarium/hanc-igitur-in-cena-domini.json",
+      "title": "Hanc ígitur in Cena Dómini",
+      "evidence": "bibliography/texts/ordinarium/hanc-igitur-in-cena-domini.json"
     },
     {
       "id": "ordinarium.hanc-igitur",
@@ -551,6 +563,12 @@
       "id": "ordinarium.qui-dixisti",
       "path": "texts/ordinarium/qui-dixisti.json",
       "title": "Dómine Iesu Christe, qui dixísti"
+    },
+    {
+      "id": "ordinarium.qui-pridie-in-cena-domini",
+      "path": "texts/ordinarium/qui-pridie-in-cena-domini.json",
+      "title": "Qui prídie in Cena Dómini",
+      "evidence": "bibliography/texts/ordinarium/qui-pridie-in-cena-domini.json"
     },
     {
       "id": "ordinarium.qui-pridie",
