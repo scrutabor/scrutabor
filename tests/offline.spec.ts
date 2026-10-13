@@ -2,6 +2,7 @@
 // chapel with no signal. The worker's scope is /app/ — the book and
 // nothing else — so the landing pages can change without ever touching
 // the reader's offline copy.
+import { readdirSync } from 'node:fs';
 import { expect, test } from './fixtures';
 
 test('a first web visit installs the shell, not the book @online', async ({ page }) => {
@@ -58,8 +59,9 @@ test('a page the reader opens is kept for them @online', async ({ page, context 
 	await context.setOffline(false);
 });
 
-test('an installed app fetches the whole book @online', async ({ page }) => {
+test('an installed app fetches the whole book @online', async ({ page, context }) => {
 	test.setTimeout(120_000);
+	await page.addInitScript(() => localStorage.setItem('scrutabor-role', 'sacerdos'));
 	await page.goto('/app/en');
 	await page.evaluate(() => navigator.serviceWorker.ready);
 
@@ -113,6 +115,30 @@ test('an installed app fetches the whole book @online', async ({ page }) => {
 		return matches.filter((path): path is string => path !== null);
 	}, outside);
 	expect(strays).toEqual([]);
+
+	// The whole-book promise includes text packs that this reader has NEVER opened.
+	const packs = ['pl', 'en'].flatMap((lang) => [
+		`/artifacts/canon/${lang}.json`,
+		...readdirSync(`build/artifacts/proprium/${lang}`).map(
+			(name) => `/artifacts/proprium/${lang}/${name}`
+		)
+	]);
+	await expect
+		.poll(async () => (await Promise.all(packs.map(has))).every(Boolean), { timeout: 90_000 })
+		.toBe(true);
+	await context.setOffline(true);
+	for (const lang of ['pl', 'en']) {
+		await page.goto(`/app/${lang}/ordo/canon?dies=2026-04-02`);
+		for (const slug of ['communicantes', 'hanc-igitur', 'qui-pridie']) {
+			await expect(page.locator(`[id="${slug}-in-cena-domini.w001"]`)).toHaveCount(1);
+			await expect(page.locator(`[id="${slug}.w001"]`)).toHaveCount(0);
+		}
+		await page.goto(`/app/${lang}/ordo/canon?dies=2026-12-25&missa=nativitas-domini-in-nocte`);
+		await expect(
+			page.locator('[id="communicantes-in-nativitate-domini-in-nocte.w001"]')
+		).toHaveCount(1);
+	}
+	await context.setOffline(false);
 });
 
 test('the app declares itself installable @online', async ({ page }) => {

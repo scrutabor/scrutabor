@@ -5,9 +5,9 @@ import { expect, setHelp, test } from './fixtures';
 
 test.use({ serviceWorkers: 'block' });
 
-// Until a paired passage is in the reader edition, the transport fixture owns
-// its punctuation. No source file, rendered DOM or cached corpus is patched.
-// The actual 177-word epistle is placed in an available day's reading slot.
+// The transport fixture owns only punctuation and alignment in this Mass.
+// No source file, rendered DOM or cached corpus is patched.
+// The actual 177-word epistle is read on its own supported date.
 async function pairedReading(
 	page: import('@playwright/test').Page,
 	grouped: boolean,
@@ -53,17 +53,18 @@ async function pairedReading(
 		];
 		for (const word of words) gloss.words[word.id] = { alignment };
 	}
-	const destination = await page.request.get('/artifacts/proprium/en/pack-01.json');
-	expect(destination.ok()).toBe(true);
-	const payload = (await destination.json()) as { days: Record<string, ProperPayload> };
-	const advent = payload.days['dominica-i-adventus'];
-	advent.parts = advent.parts.map((part) => (part.part === 'epistola' ? source : part));
-	advent.lex = { ...advent.lex, ...sourcePack.days[day].lex };
-	await page.route('**/artifacts/proprium/en/pack-01.json*', (route) =>
-		route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(payload) })
+	sourcePack.days[day].parts = sourcePack.days[day].parts.map((part) =>
+		part.part === 'epistola' ? source : part
+	);
+	await page.route(`**/artifacts/proprium/en/pack-${pack}.json*`, (route) =>
+		route.fulfill({
+			status: 200,
+			contentType: 'application/json',
+			body: JSON.stringify(sourcePack)
+		})
 	);
 	await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
-	await page.goto('/app/en/ordo/catechumenorum?dies=2026-11-29');
+	await page.goto('/app/en/ordo/catechumenorum?dies=2038-02-14');
 	const verse = page.locator('.verse').filter({ has: page.locator('[id$=".w167"]') });
 	await expect(verse).toHaveCount(1);
 	return verse;

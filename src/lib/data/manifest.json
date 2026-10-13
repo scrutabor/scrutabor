@@ -1,5 +1,5 @@
 {
-  "schema_version": "5.8.0",
+  "schema_version": "5.9.0",
   "corpus_schema": "0.21.0",
   "texts": [
     {
@@ -6713,6 +6713,7 @@
   "base": {
     "concordance": "concordance.json",
     "calendar": "calendar.json",
+    "canon": "canon.json",
     "lexicon": "lexicon/heads.json",
     "morphology": "tables/morphology.json",
     "analysis": "tables/analysis.json",

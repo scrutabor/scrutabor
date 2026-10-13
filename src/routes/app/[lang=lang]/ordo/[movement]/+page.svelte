@@ -20,6 +20,7 @@
 	import { keepAwake } from '$lib/keepawake.svelte';
 	import { wordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
 	import { proper } from '$lib/proper.svelte';
+	import { isCanonRole } from '$lib/canon';
 	import DayPicker from '$lib/components/DayPicker.svelte';
 	import FormularyScopeNote from '$lib/components/FormularyScopeNote.svelte';
 	import { dayHref } from '$lib/proper.svelte';
@@ -44,7 +45,9 @@
 	const msgs = $derived(M[lang]);
 	const movement = $derived(movementById(data.movement));
 	// Whether this movement has a slot the day fills.
-	const hasProper = $derived((movement?.entries ?? []).some((e) => e.kind === 'proper'));
+	const hasProper = $derived(
+		(movement?.entries ?? []).some((e) => e.kind === 'proper' || isCanonRole(e.id))
+	);
 	const around = $derived(movementNeighbors(data.movement));
 
 	// The flow shares the reading page's help ladder and its stored setting.
@@ -95,7 +98,7 @@
 	// places each wrote `e.text ? texts[e.text] : undefined` and a fourth
 	// looked words up under `ordinarium/`, which no proper slug matches.
 	const bodiesFor = $derived((e: OrdoEntry) => {
-		if (e.kind === 'proper') {
+		if (e.kind === 'proper' || isCanonRole(e.id)) {
 			const chosen = proper.forSlot(e.id).map((part) => ({
 				key: part.key,
 				slug: part.slug,
@@ -106,6 +109,7 @@
 				bibliography: part.bibliography
 			}));
 			if (chosen.length) return chosen;
+			if (proper.canonRequired(e.id)) return [];
 		}
 		if (e.text) {
 			const entry = texts[e.text];
@@ -319,6 +323,15 @@
 			</div>
 		</div>
 		<FormularyScopeNote {lang} centered />
+		{#if movement?.entries.some((e) => isCanonRole(e.id))}
+			<noscript
+				><p class="noscript-note">
+					{lang === 'pl'
+						? 'Wybór formuł Kanonu dla dnia wymaga JavaScriptu. Bez niego otwórz odpowiednie modlitwy osobno w księdze.'
+						: 'Selecting the day’s Canon formulas requires JavaScript. Without it, open the appropriate prayers separately in the book.'}
+				</p></noscript
+			>
+		{/if}
 	</header>
 
 	{#if hasProper && proper.loading}
@@ -338,7 +351,10 @@
 				<p class="silent-run smallcaps">{msgs.quietCollapsed}</p>
 			{/if}
 			{@const revealed = !!entry && !words && !!unfolded[e.id]}
-			{@const partLoading = e.kind === 'proper' && proper.loading}
+			{@const canonPending = proper.canonRequired(e.id)}
+			{@const partLoading =
+				(e.kind === 'proper' && proper.loading) ||
+				(canonPending && (!proper.date || proper.loading))}
 			<section class="part" class:folded class:revealed class:loading={partLoading}>
 				{#if folded}
 					<!-- A prayer the reader is not saying costs ONE LINE, not a
@@ -386,6 +402,8 @@
 					<div class="part-loading">
 						<ContentLoader variant="text" />
 					</div>
+				{:else if canonPending && proper.failed}
+					<p class="part-note" role="status">{msgs.dayFailed}</p>
 				{:else if entry && (words || unfolded[e.id])}
 					<div class="part-text">
 						<!-- One slot can hold more than one text: the chant between

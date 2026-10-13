@@ -69,7 +69,23 @@ bare.describe('without scripting', () => {
 			await page.goto(`/app/${lang}/ordo/canon?dies=2026-07-12`);
 			await expect(page.locator('.day-open .choice-title')).toHaveText(pending);
 			await expect(page.locator('.day-open')).toBeDisabled();
-			await expect(page.locator('.noscript-note')).toBeVisible();
+			const notes = page.locator('.noscript-note');
+			await expect(
+				notes.filter({
+					hasText:
+						lang === 'pl'
+							? 'Ten tekst czyta się bez JavaScriptu, ale wybory — dzień, rola, tryb czytania, wielkość pisma, analiza słowa — wymagają jego włączenia.'
+							: 'The text reads without JavaScript, but the choices — the day, the part, the reading mode, the text size, the word analysis — need it turned on.'
+				})
+			).toBeVisible();
+			await expect(
+				notes.filter({
+					hasText:
+						lang === 'pl'
+							? 'Wybór formuł Kanonu dla dnia wymaga JavaScriptu. Bez niego otwórz odpowiednie modlitwy osobno w księdze.'
+							: 'Selecting the day’s Canon formulas requires JavaScript. Without it, open the appropriate prayers separately in the book.'
+				})
+			).toBeVisible();
 		});
 	}
 });

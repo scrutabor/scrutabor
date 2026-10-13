@@ -30,6 +30,7 @@ import { conceptById } from './grammar';
 export { lemmaData } from './lemma-data';
 import { movementById } from './ordo';
 import { PROPER_DAYS, SLOT_OF } from './proprium';
+import { CANON_VARIANTS, CANON_ROLES, canonKey, validateCanonPack } from './canon';
 import pkg from '../../package.json' with { type: 'json' };
 
 /** The two facts every page under a language needs, and neither of which it
@@ -201,4 +202,37 @@ export async function properData(day: string, lang: Lang) {
 		parts,
 		lex: await narrowLexicon(docs, lang)
 	};
+}
+
+/** Eleven shared nonordinary bodies, emitted once per language, not per Mass. */
+export async function canonData(lang: Lang) {
+	const keys = CANON_VARIANTS.map(canonKey);
+	const loaded = await loadTexts(keys, lang);
+	const parts = await Promise.all(
+		keys.map(async (key) => {
+			const entry = loaded[key];
+			if (!entry) throw new Error('Canon language incomplete');
+			const role = CANON_ROLES.find((role) => key.startsWith(`ordinarium/${role}-`))!;
+			return {
+				key,
+				part: role,
+				slot: role,
+				doc: entry.text,
+				gloss: entry.gloss,
+				bibliography: await loadTextBibliography(lang, key)
+			};
+		})
+	);
+	return validateCanonPack(
+		{
+			schema_version: '1.0.0',
+			lang,
+			parts,
+			lex: await narrowLexicon(
+				parts.map((part) => part.doc),
+				lang
+			)
+		},
+		lang
+	);
 }

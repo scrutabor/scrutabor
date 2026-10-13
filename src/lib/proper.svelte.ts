@@ -18,14 +18,25 @@
 
 import { browser, dev } from '$app/environment';
 import { readStored, writeStored } from '$lib/storage';
-import { localDay } from '$lib/proper-local';
-import { artifactRequestPath, componentApplies } from '$lib/proprium';
+import { localDay, localCanon } from '$lib/proper-local';
+import {
+	canonLookup,
+	CANON_ROLES,
+	isCanonRole,
+	ordinaryCanon,
+	selectedCanon,
+	validateCanonPack,
+	type CanonProfile,
+	type CanonPack
+} from '$lib/canon';
+import { artifactRequestPath, componentApplies, dayById, SLOT_OF } from '$lib/proprium';
 import { dayOn, isoDate } from '$lib/kalendarium';
 import { resolveOrdoChoice, ordoHref, type OrdoChoice } from '$lib/ordo-choice';
 import type { Lang } from '$lib/i18n';
 import type { ComponentCondition } from '$lib/corpus-metadata';
 import type { TextBibliographyEvidence } from '$lib/bibliography';
 import { properOccurrences } from '$lib/proper-occurrences';
+import type { Lexicon, TextDocument, GlossDocument } from '$lib/corpus';
 
 export interface ProperPartPayload {
 	key: string;
@@ -42,7 +53,7 @@ export interface ProperPayload {
 	title: Record<string, string>;
 	lang: string;
 	parts: ProperPartPayload[];
-	lex: Record<string, unknown>;
+	lex: Lexicon;
 }
 
 const KEY = 'scrutabor-day';
@@ -111,6 +122,7 @@ let payload = $state<ProperPayload | null>(null);
 let loading = $state(false);
 let failed = $state(false);
 let unwritten = $state(false);
+let canonProfile = $state<CanonProfile | null>(null);
 
 // Choices supersede one another. Two picks can be in flight at once — the
 // second is the reader correcting themselves — and the responses come back in
@@ -156,10 +168,32 @@ function stopTiming(): void {
 // collections is right that a Map here would not be reactive anyway.
 const held: Record<string, ProperPayload> = {};
 const heldPacks: Record<string, Promise<Record<string, ProperPayload>>> = {};
+const heldCanon: Partial<Record<Lang, Promise<CanonPack>>> = {};
 
 function forDate(source: ProperPayload, selectedDate: string): ProperPayload {
 	const parts = source.parts.filter((part) => componentApplies(part.condition, selectedDate));
 	return parts.length === source.parts.length ? source : { ...source, parts };
+}
+
+function assembled(
+	source: ProperPayload,
+	selectedDate: string,
+	profile: CanonProfile,
+	pack: CanonPack | null
+): ProperPayload {
+	const filtered = forDate(source, selectedDate);
+	const parts = selectedCanon(profile, pack);
+	return {
+		...filtered,
+		parts: [...filtered.parts, ...parts],
+		lex:
+			parts.length && pack
+				? {
+						lemmata: { ...filtered.lex.lemmata, ...pack.lex.lemmata },
+						senses: { ...filtered.lex.senses, ...pack.lex.senses }
+					}
+				: filtered.lex
+	};
 }
 
 export const proper = {
@@ -189,6 +223,14 @@ export const proper = {
 	get unwritten(): boolean {
 		return unwritten;
 	},
+
+	/** An unresolved initial choice is not permission to render an Ordinary formula. */
+	canonRequired(slot: string): boolean {
+		if (!isCanonRole(slot)) return false;
+		if (!date) return true;
+		if (!day) return false;
+		return !canonProfile || canonProfile.texts[slot] !== ordinaryCanon(slot);
+	},
 	/** The texts for one Ordo slot, in rite order. Empty when no day is chosen. */
 	forSlot(slot: string) {
 		return properOccurrences(payload?.parts ?? []).filter((p) => p.slot === slot);
@@ -200,6 +242,7 @@ export const proper = {
 		payload = null;
 		failed = false;
 		unwritten = false;
+		canonProfile = null;
 		loading = false;
 		stopTiming();
 	}
@@ -214,6 +257,7 @@ export const proper = {
 export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
 	const mine = ++current;
 	const selected = resolveOrdoChoice(choice.date, choice.mass ?? 'none');
+	canonProfile = null;
 	date = selected?.date ?? null;
 	// Superseding a flight also takes over its notices: the superseded
 	// finally below declines to touch shared state, so it is settled here.
@@ -235,19 +279,21 @@ export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
 	// make that effect depend on the response and replay the choice on arrival.
 	payload = null;
 	const key = `${lang}/${next}`;
-	const already = held[key];
-	if (already) {
-		payload = forDate(already, selected.date);
-		return;
-	}
 	if (!browser) return;
 	loading = true;
 	startTiming();
 	try {
-		const body = await load(next, lang);
+		if (!canonLookup) throw new Error('Canon resource unavailable');
+		const profile = canonLookup.resolve(selected.date, next);
+		canonProfile = profile;
+		const needsPack = CANON_ROLES.some((role) => profile.texts[role] !== ordinaryCanon(role));
+		const [body, pack] = await Promise.all([
+			held[key] ?? load(next, lang),
+			needsPack ? loadCanon(lang) : null
+		]);
 		held[key] = body;
 		if (mine !== current) return;
-		payload = forDate(body, selected.date);
+		payload = assembled(body, selected.date, profile, pack);
 	} catch {
 		if (mine !== current) return;
 		failed = true;
@@ -273,7 +319,7 @@ export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
  */
 async function load(day: string, lang: Lang): Promise<ProperPayload> {
 	const here = await localDay(day, lang);
-	if (here) return here as ProperPayload;
+	if (here) return validateProper(here, day, lang);
 	const path = artifactRequestPath(day, lang, dev);
 	if (!path) throw new Error('unknown formulary');
 	// Bounded: a request that never answers would otherwise leave the
@@ -288,13 +334,72 @@ async function load(day: string, lang: Lang): Promise<ProperPayload> {
 	let packed: Record<string, ProperPayload>;
 	try {
 		packed = await pending;
+		const found = packed?.[day];
+		return validateProper(found, day, lang);
 	} catch (cause) {
 		// A failed request is not data. Remove only the promise that failed so a
 		// later choice can retry; do not delete a newer retry racing behind it.
 		if (heldPacks[packKey] === pending) delete heldPacks[packKey];
 		throw cause;
 	}
-	const found = packed[day];
-	if (!found) throw new Error('formulary absent from pack');
-	return found;
+}
+
+function validateProper(value: unknown, day: string, lang: Lang): ProperPayload {
+	const body = value as ProperPayload | undefined;
+	const authored = dayById(day);
+	if (
+		!authored ||
+		!body ||
+		body.day !== day ||
+		body.lang !== lang ||
+		!Array.isArray(body.parts) ||
+		body.parts.length !== authored.components.length ||
+		!body.lex ||
+		!body.lex.lemmata ||
+		!body.lex.senses ||
+		body.parts.some((part, index) => {
+			const expected = authored.components[index];
+			const doc = part?.doc as TextDocument | undefined;
+			const gloss = part?.gloss as GlossDocument | undefined;
+			return (
+				!part ||
+				part.key !== expected.text ||
+				part.part !== expected.role ||
+				part.slot !== SLOT_OF[expected.role] ||
+				JSON.stringify(part.condition) !== JSON.stringify(expected.condition) ||
+				!doc ||
+				doc.id !== expected.text.replace('/', '.') ||
+				!Array.isArray(doc.segments) ||
+				!doc.segments.length ||
+				!gloss ||
+				gloss.text !== doc.id ||
+				gloss.lang !== lang ||
+				!gloss.segments ||
+				!gloss.words ||
+				!part.bibliography ||
+				!Array.isArray(part.bibliography.context) ||
+				!Array.isArray(part.bibliography.translation)
+			);
+		})
+	)
+		throw new Error('invalid formulary payload');
+	return body;
+}
+
+async function loadCanon(lang: Lang): Promise<CanonPack> {
+	const pending = (heldCanon[lang] ??= (async () => {
+		const here = await localCanon(lang);
+		if (here) return validateCanonPack(here, lang);
+		const response = await fetch(`/artifacts/canon/${lang}.json${dev ? '?dev=1' : ''}`, {
+			signal: AbortSignal.timeout(15_000)
+		});
+		if (!response.ok) throw new Error(String(response.status));
+		return validateCanonPack(await response.json(), lang);
+	})());
+	try {
+		return await pending;
+	} catch (cause) {
+		if (heldCanon[lang] === pending) delete heldCanon[lang];
+		throw cause;
+	}
 }

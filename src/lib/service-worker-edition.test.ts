@@ -22,6 +22,8 @@ const manifest = {
 		'/app/pl/formularium/dominica-i-adventus/__data.json',
 		'/app/pl/__data.json',
 		'/artifacts/proprium/pl/pack-01.json',
+		'/artifacts/canon/pl.json',
+		'/artifacts/canon/en.json',
 		'/pl',
 		'/pl/__data.json',
 		'/sitemap.xml'
@@ -76,7 +78,11 @@ describe('the worker derives its promises from the served edition', () => {
 	});
 
 	it('promises the whole book and nothing outside it', () => {
-		expect(lists.days).toEqual(['/artifacts/proprium/pl/pack-01.json']);
+		expect(lists.days).toEqual([
+			'/artifacts/proprium/pl/pack-01.json',
+			'/artifacts/canon/pl.json',
+			'/artifacts/canon/en.json'
+		]);
 		expect(lists.everything).toEqual([
 			...lists.shell,
 			...lists.lazyCorpus,
@@ -86,8 +92,14 @@ describe('the worker derives its promises from the served edition', () => {
 			'/app/pl/editio',
 			'/app/pl/ordinarium/credo',
 			'/app/pl/formularium/dominica-i-adventus',
-			'/artifacts/proprium/pl/pack-01.json'
+			'/artifacts/proprium/pl/pack-01.json',
+			'/artifacts/canon/pl.json',
+			'/artifacts/canon/en.json'
 		]);
+		for (const pack of lists.days) {
+			expect(lists.shell).not.toContain(pack);
+			expect(lists.edition.has(pack)).toBe(true);
+		}
 		expect(lists.everything).not.toContain('/pl');
 		expect(lists.everything).not.toContain('/sitemap.xml');
 	});

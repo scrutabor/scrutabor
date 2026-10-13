@@ -25,6 +25,7 @@
 import { build, files, prerendered, version } from '$service-worker';
 import { cacheContainsAll } from '$lib/cache-completeness';
 import { editionLists } from '$lib/service-worker-edition';
+import { revalidateResourceRequest } from '$lib/service-worker-request';
 
 const sw = self as unknown as ServiceWorkerGlobalScope;
 
@@ -225,7 +226,11 @@ async function fetchAll(paths: string[]): Promise<void> {
 	// batching through it meant one bad path silently dropped the five
 	// innocent files sharing its batch, and the book had quiet holes.
 	for (let i = 0; i < missing.length; i += 6) {
-		await Promise.allSettled(missing.slice(i, i + 6).map((path) => cache.add(path)));
+		await Promise.allSettled(
+			missing
+				.slice(i, i + 6)
+				.map((path) => cache.add(revalidateResourceRequest(new Request(path), sw.location.origin)))
+		);
 	}
 }
 
@@ -283,7 +288,7 @@ async function respond(request: Request, url: URL): Promise<Response> {
 	if (cached) return cached;
 
 	try {
-		const response = await fetch(request);
+		const response = await fetch(revalidateResourceRequest(request, sw.location.origin));
 		// Keep what the reader actually opened, so the book fills in behind
 		// them. Only real, own-origin answers: an error page cached is an
 		// error page forever.

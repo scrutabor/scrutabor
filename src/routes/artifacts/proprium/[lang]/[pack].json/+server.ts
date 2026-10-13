@@ -32,7 +32,7 @@ export const GET: RequestHandler = async ({ params }) => {
 		{ days: Object.fromEntries(loaded) },
 		{
 			headers: {
-				'cache-control': dev ? 'no-store' : 'public, max-age=604800, immutable'
+				'cache-control': dev ? 'no-store' : 'no-cache'
 			}
 		}
 	);
