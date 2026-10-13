@@ -1,6 +1,5 @@
 import { beforeEach, afterEach, expect, it, vi } from 'vitest';
 vi.mock('$app/environment', () => ({ browser: true, dev: false }));
-vi.mock('$lib/proper-local', () => ({ localDay: async () => null, localCanon: async () => null }));
 vi.mock('$lib/storage', () => ({ readStored: () => null, writeStored: () => {} }));
 import { canonData, properData } from './loaders';
 let canonLookup: (typeof import('./canon'))['canonLookup'];
@@ -63,13 +62,13 @@ afterEach(() => {
 it('separates undecided initialization from a positive ordinary/none choice', async () => {
 	expect(proper.date).toBeNull();
 	for (const role of ['communicantes', 'hanc-igitur', 'qui-pridie'])
-		expect(proper.canonRequired(role)).toBe(true);
+		expect(proper.variantRequired(role)).toBe(true);
 	const fetcher = vi.fn();
 	vi.stubGlobal('fetch', fetcher);
 	await chooseDay({ date: cena.date, mass: null }, 'en');
 	expect(proper.date).toBe(cena.date);
 	expect(proper.day).toBeNull();
-	expect(proper.canonRequired('communicantes')).toBe(false);
+	expect(proper.variantRequired('communicantes')).toBe(false);
 	expect(fetcher).not.toHaveBeenCalled();
 });
 it('publishes only the combined body, preserves selected roles on raw-cache hits', async () => {
@@ -144,7 +143,7 @@ it('keeps a valid required Canon missing on failed transport, then retries inval
 	expect(proper.failed).toBe(true);
 	expect(proper.unwritten).toBe(false);
 	expect(proper.payload).toBeNull();
-	expect(proper.canonRequired('communicantes')).toBe(true);
+	expect(proper.variantRequired('communicantes')).toBe(true);
 	await chooseDay(cena, 'pl');
 	expect(proper.failed).toBe(false);
 	expect(calls).toBe(2);
@@ -157,7 +156,7 @@ it('fails closed on missing valid table pair even with a held Mass', async () =>
 	await chooseDay(cena, 'en');
 	expect(proper.failed).toBe(true);
 	expect(proper.payload).toBeNull();
-	expect(proper.canonRequired('qui-pridie')).toBe(true);
+	expect(proper.variantRequired('qui-pridie')).toBe(true);
 });
 
 it('holds both newly requested parts until Canon arrives, while explicitly ordinary roles remain eligible', async () => {
@@ -170,9 +169,9 @@ it('holds both newly requested parts until Canon arrives, while explicitly ordin
 		}))
 	);
 	const flight = chooseDay(christmas, 'en');
-	await vi.waitFor(() => expect(proper.canonRequired('communicantes')).toBe(true));
-	expect(proper.canonRequired('hanc-igitur')).toBe(false);
-	expect(proper.canonRequired('qui-pridie')).toBe(false);
+	await vi.waitFor(() => expect(proper.variantRequired('communicantes')).toBe(true));
+	expect(proper.variantRequired('hanc-igitur')).toBe(false);
+	expect(proper.variantRequired('qui-pridie')).toBe(false);
 	expect(proper.payload).toBeNull();
 	expect(proper.forSlot('introitus')).toEqual([]);
 	gate.resolve(await canonData('en'));

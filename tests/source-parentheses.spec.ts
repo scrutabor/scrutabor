@@ -43,6 +43,7 @@ async function pairedReading(
 		const alignment = {
 			words: words.map((word) => word.id),
 			forms: words.map((word) => word.form),
+			anchor: 'w168',
 			gloss: 'whom He raised from the dead'
 		};
 		gloss.segments.s01.alignments = [

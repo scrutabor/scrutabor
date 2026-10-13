@@ -46,7 +46,7 @@ export interface EditionLists {
 	shell: string[];
 	/** Corpus JSON facades and indexes, fetched only when a reader needs them. */
 	lazyCorpus: string[];
-	/** Formulary and Canon packs: part of the book, never of a first visit. */
+	/** Dated text packs: part of the book, never of a first visit. */
 	days: string[];
 	/** The whole book, for a reader who installed it. */
 	everything: string[];
@@ -66,7 +66,7 @@ export function editionLists({ build, files, prerendered }: EditionManifest): Ed
 	const lazyCorpus = build.filter((path) => path.includes('/immutable/corpus/'));
 	const shellBuild = build.filter((path) => !path.includes('/immutable/corpus/'));
 	const shell = [...shellBuild, ...served, ...pages.filter((path) => SHELL_PAGE.test(path))];
-	const days = pages.filter((path) => /^\/artifacts\/(proprium|canon)\//.test(path));
+	const days = pages.filter((path) => /^\/artifacts\/(proprium|canon|dismissal)\//.test(path));
 	const everything = [
 		...shell,
 		...lazyCorpus,

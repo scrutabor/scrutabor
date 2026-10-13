@@ -13,6 +13,7 @@ import { CATALOG } from './catalog';
 import { PROPER_DAYS, SLOT_OF, properRank } from './proprium';
 import { TEXT_KEYS, hasText, loadCoreTexts } from './corpus';
 import { ORDO } from './ordo';
+import { DISMISSAL_ROLE, DISMISSAL_TEXT_KEYS } from './dismissal';
 import concordance from './data/concordance.json';
 
 export interface Occurrence {
@@ -115,6 +116,7 @@ export function everyTextInOrder(): string[] {
 				}
 			}
 			if (e.text) add(e.text);
+			if (e.id === DISMISSAL_ROLE) for (const key of DISMISSAL_TEXT_KEYS) add(key);
 		}
 	}
 	// The tail: anything neither shelf nor Ordo names. The Proper lives here

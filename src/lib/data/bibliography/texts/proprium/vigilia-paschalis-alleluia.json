@@ -20,6 +20,25 @@
    "verified_on": "2026-10-13"
   },
   {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "rubric_control",
+   "locator": {
+    "section": "web/www/missa/Latin/Tempora/Quad6-6r.txt [Prelude], physical lines 497–508; ritual rubric line 499, six utterances lines 498, 500, 502–503, 505–506"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-paschalis-alleluia.do44667ff-rubric",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The source prescribes three progressively higher celebrant intonations, each repeated by all in the same tone; five selected utterances derive from this ritual prescription, not five additional printed witness words."
+    }
+   ],
+   "verified_on": "2026-10-13"
+  },
+  {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "direct_approved_print",
@@ -35,6 +54,27 @@
       "kind": "text"
      },
      "claim": "The approved Benziger page prints Alleluia, Confitemini Domino and the two Laudate Dominum verses. The preceding rubric requires the celebrant to intone Alleluia three times, each repeated by all; the single written word is not a claim that it is sung only once."
+    }
+   ],
+   "verified_on": "2026-10-13"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 214, Alleluia intonation rubric",
+    "scan": "leaf n293 / PDF p. 294",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n293/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-paschalis-alleluia.mr1962-rubric",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The source prescribes three progressively higher celebrant intonations, each repeated by all in the same tone; five selected utterances derive from this ritual prescription, not five additional printed witness words."
     }
    ],
    "verified_on": "2026-10-13"

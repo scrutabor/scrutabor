@@ -3,7 +3,14 @@
   "language":"pl",
   "about":"Alleluia formularza „Msza Wigilii Paschalnej” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","nr":"Celebrans trzykrotnie intonuje Alleluja, za każdym razem podnosząc głos, a wszyscy powtarzają je po każdej intonacji."},
-    {"id":"s02","tr":"Alleluja. Wysławiajcie Pana, bo dobry, bo na wieki Jego miłosierdzie. Chwalcie Pana, wszystkie narody, i chwalcie Go, wszystkie ludy. Bo zostało utwierdzone nad nami Jego miłosierdzie, a prawda Pana trwa na wieki.","g":["Alleluja","Wysławiajcie","Pana","bo","dobry","bo","na","wieki","miłosierdzie","Jego","Chwalcie","Pana","wszystkie","narody","i","wysławiajcie","Go","wszystkie","ludy","Bo","utwierdzone","zostało","nad","nami","miłosierdzie","Jego","a","prawda","Pana","trwa","na","wieki"],"ex":{"w005":"Przymiotnik jest orzecznikiem domyślnego podmiotu, czyli Pana, przy pominiętym łączniku: „bo [On jest] dobry”."}}
+    {"id":"s01","nr":"Celebrans trzykrotnie intonuje Alleluja, za każdym razem coraz wyższym tonem, a wszyscy powtarzają je po każdej intonacji w tym samym tonie."},
+    {"id":"s02","tr":"Alleluja.","g":["Alleluja"]},
+    {"id":"s03","tr":"Alleluja.","g":["Alleluja"]},
+    {"id":"s04","tr":"Alleluja.","g":["Alleluja"]},
+    {"id":"s05","tr":"Alleluja.","g":["Alleluja"]},
+    {"id":"s06","tr":"Alleluja.","g":["Alleluja"]},
+    {"id":"s07","tr":"Alleluja.","g":["Alleluja"]},
+    {"id":"s08","tr":"Wysławiajcie Pana, bo dobry, bo na wieki Jego miłosierdzie.","g":["Wysławiajcie","Pana","bo","dobry","bo","na","wieki","miłosierdzie","Jego"],"ex":{"w005":"Przymiotnik jest orzecznikiem domyślnego podmiotu, czyli Pana, przy pominiętym łączniku: „bo [On jest] dobry”."}},
+    {"id":"s09","tr":"Chwalcie Pana, wszystkie narody, i chwalcie Go, wszystkie ludy. Bo zostało utwierdzone nad nami Jego miłosierdzie, a prawda Pana trwa na wieki.","g":["Chwalcie","Pana","wszystkie","narody","i","wysławiajcie","Go","wszystkie","ludy","Bo","utwierdzone","zostało","nad","nami","miłosierdzie","Jego","a","prawda","Pana","trwa","na","wieki"]}
   ]
 }

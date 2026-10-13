@@ -4,45 +4,46 @@ import { revalidateResourceRequest } from './service-worker-request';
 const origin = 'https://book.example';
 
 describe('stable edition resource requests', () => {
-	it.each(['/artifacts/canon/en.json', '/artifacts/proprium/pl/pack-01.json'])(
-		'revalidates %s without changing request metadata or cancellation',
-		(path) => {
-			const controller = new AbortController();
-			const original = new Request(`${origin}${path}?edition=next&word=w001`, {
-				cache: 'force-cache',
-				credentials: 'include',
-				headers: { 'X-Reader': 'one', Accept: 'application/json' },
-				mode: 'same-origin',
-				redirect: 'manual',
-				referrer: `${origin}/app/en`,
-				referrerPolicy: 'same-origin',
-				integrity: 'sha256-YWJj',
-				keepalive: true,
-				signal: controller.signal
-			});
-			const actual = revalidateResourceRequest(original, origin);
-			expect(actual).not.toBe(original);
-			expect(actual.cache).toBe('no-cache');
-			expect(original.cache).toBe('force-cache');
-			for (const field of [
-				'url',
-				'method',
-				'credentials',
-				'mode',
-				'redirect',
-				'referrer',
-				'referrerPolicy',
-				'integrity',
-				'keepalive'
-			] as const)
-				expect(actual[field]).toBe(original[field]);
-			expect([...actual.headers]).toEqual([...original.headers]);
-			expect(actual.signal.aborted).toBe(false);
-			controller.abort('reader stopped');
-			expect(actual.signal.aborted).toBe(true);
-			expect(actual.signal.reason).toBe('reader stopped');
-		}
-	);
+	it.each([
+		'/artifacts/canon/en.json',
+		'/artifacts/proprium/pl/pack-01.json',
+		'/artifacts/dismissal/en.json'
+	])('revalidates %s without changing request metadata or cancellation', (path) => {
+		const controller = new AbortController();
+		const original = new Request(`${origin}${path}?edition=next&word=w001`, {
+			cache: 'force-cache',
+			credentials: 'include',
+			headers: { 'X-Reader': 'one', Accept: 'application/json' },
+			mode: 'same-origin',
+			redirect: 'manual',
+			referrer: `${origin}/app/en`,
+			referrerPolicy: 'same-origin',
+			integrity: 'sha256-YWJj',
+			keepalive: true,
+			signal: controller.signal
+		});
+		const actual = revalidateResourceRequest(original, origin);
+		expect(actual).not.toBe(original);
+		expect(actual.cache).toBe('no-cache');
+		expect(original.cache).toBe('force-cache');
+		for (const field of [
+			'url',
+			'method',
+			'credentials',
+			'mode',
+			'redirect',
+			'referrer',
+			'referrerPolicy',
+			'integrity',
+			'keepalive'
+		] as const)
+			expect(actual[field]).toBe(original[field]);
+		expect([...actual.headers]).toEqual([...original.headers]);
+		expect(actual.signal.aborted).toBe(false);
+		controller.abort('reader stopped');
+		expect(actual.signal.aborted).toBe(true);
+		expect(actual.signal.reason).toBe('reader stopped');
+	});
 
 	it('preserves an already aborted request', () => {
 		const controller = new AbortController();

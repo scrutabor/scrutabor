@@ -18,7 +18,7 @@
 
 import { browser, dev } from '$app/environment';
 import { readStored, writeStored } from '$lib/storage';
-import { localDay, localCanon } from '$lib/proper-local';
+import { localDay, localCanon, localDismissal } from '$lib/proper-local';
 import {
 	canonLookup,
 	CANON_ROLES,
@@ -29,6 +29,17 @@ import {
 	type CanonProfile,
 	type CanonPack
 } from '$lib/canon';
+import {
+	dismissalLookup,
+	DISMISSAL_ROLE,
+	ORDINARY_DISMISSAL,
+	selectedDismissal,
+	validateDismissalPack,
+	type DismissalProfile,
+	type DismissalPack
+} from '$lib/dismissal';
+import type { VariantPack } from '$lib/variant-resource';
+import { object, validateLocalizedBody } from '$lib/localized-body';
 import { artifactRequestPath, componentApplies, dayById, SLOT_OF } from '$lib/proprium';
 import { dayOn, isoDate } from '$lib/kalendarium';
 import { resolveOrdoChoice, ordoHref, type OrdoChoice } from '$lib/ordo-choice';
@@ -36,7 +47,7 @@ import type { Lang } from '$lib/i18n';
 import type { ComponentCondition } from '$lib/corpus-metadata';
 import type { TextBibliographyEvidence } from '$lib/bibliography';
 import { properOccurrences } from '$lib/proper-occurrences';
-import type { Lexicon, TextDocument, GlossDocument } from '$lib/corpus';
+import type { Lexicon } from '$lib/corpus';
 
 export interface ProperPartPayload {
 	key: string;
@@ -123,6 +134,7 @@ let loading = $state(false);
 let failed = $state(false);
 let unwritten = $state(false);
 let canonProfile = $state<CanonProfile | null>(null);
+let dismissalProfile = $state<DismissalProfile | null>(null);
 
 // Choices supersede one another. Two picks can be in flight at once — the
 // second is the reader correcting themselves — and the responses come back in
@@ -169,6 +181,7 @@ function stopTiming(): void {
 const held: Record<string, ProperPayload> = {};
 const heldPacks: Record<string, Promise<Record<string, ProperPayload>>> = {};
 const heldCanon: Partial<Record<Lang, Promise<CanonPack>>> = {};
+const heldDismissal: Partial<Record<Lang, Promise<DismissalPack>>> = {};
 
 function forDate(source: ProperPayload, selectedDate: string): ProperPayload {
 	const parts = source.parts.filter((part) => componentApplies(part.condition, selectedDate));
@@ -179,20 +192,25 @@ function assembled(
 	source: ProperPayload,
 	selectedDate: string,
 	profile: CanonProfile,
-	pack: CanonPack | null
+	pack: CanonPack | null,
+	dismissal: DismissalProfile,
+	dismissalPack: DismissalPack | null
 ): ProperPayload {
 	const filtered = forDate(source, selectedDate);
-	const parts = selectedCanon(profile, pack);
+	const parts = [...selectedCanon(profile, pack), ...selectedDismissal(dismissal, dismissalPack)];
+	let lex = filtered.lex;
+	for (const extra of [pack, dismissalPack]) {
+		if (extra) {
+			lex = {
+				lemmata: { ...lex.lemmata, ...extra.lex.lemmata },
+				senses: { ...lex.senses, ...extra.lex.senses }
+			};
+		}
+	}
 	return {
 		...filtered,
 		parts: [...filtered.parts, ...parts],
-		lex:
-			parts.length && pack
-				? {
-						lemmata: { ...filtered.lex.lemmata, ...pack.lex.lemmata },
-						senses: { ...filtered.lex.senses, ...pack.lex.senses }
-					}
-				: filtered.lex
+		lex
 	};
 }
 
@@ -223,12 +241,17 @@ export const proper = {
 	get unwritten(): boolean {
 		return unwritten;
 	},
+	get paschalDismissal(): boolean {
+		return dismissalProfile?.id === 'paschale';
+	},
 
 	/** An unresolved initial choice is not permission to render an Ordinary formula. */
-	canonRequired(slot: string): boolean {
-		if (!isCanonRole(slot)) return false;
+	variantRequired(slot: string): boolean {
+		if (!isCanonRole(slot) && slot !== DISMISSAL_ROLE) return false;
 		if (!date) return true;
 		if (!day) return false;
+		if (slot === DISMISSAL_ROLE)
+			return !dismissalProfile || dismissalProfile.text !== ORDINARY_DISMISSAL;
 		return !canonProfile || canonProfile.texts[slot] !== ordinaryCanon(slot);
 	},
 	/** Canonical presence for the chosen date, including while its body is unavailable. */
@@ -253,6 +276,7 @@ export const proper = {
 		failed = false;
 		unwritten = false;
 		canonProfile = null;
+		dismissalProfile = null;
 		loading = false;
 		stopTiming();
 	}
@@ -268,6 +292,7 @@ export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
 	const mine = ++current;
 	const selected = resolveOrdoChoice(choice.date, choice.mass ?? 'none');
 	canonProfile = null;
+	dismissalProfile = null;
 	date = selected?.date ?? null;
 	// Superseding a flight also takes over its notices: the superseded
 	// finally below declines to touch shared state, so it is settled here.
@@ -293,17 +318,20 @@ export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
 	loading = true;
 	startTiming();
 	try {
-		if (!canonLookup) throw new Error('Canon resource unavailable');
+		if (!canonLookup || !dismissalLookup) throw new Error('dated text resource unavailable');
 		const profile = canonLookup.resolve(selected.date, next);
+		const dismissal = dismissalLookup.resolve(selected.date, next);
 		canonProfile = profile;
+		dismissalProfile = dismissal;
 		const needsPack = CANON_ROLES.some((role) => profile.texts[role] !== ordinaryCanon(role));
-		const [body, pack] = await Promise.all([
+		const [body, pack, dismissalPack] = await Promise.all([
 			held[key] ?? load(next, lang),
-			needsPack ? loadCanon(lang) : null
+			needsPack ? loadCanon(lang) : null,
+			dismissal.text !== ORDINARY_DISMISSAL ? loadDismissal(lang) : null
 		]);
 		held[key] = body;
 		if (mine !== current) return;
-		payload = assembled(body, selected.date, profile, pack);
+		payload = assembled(body, selected.date, profile, pack, dismissal, dismissalPack);
 	} catch {
 		if (mine !== current) return;
 		failed = true;
@@ -355,61 +383,59 @@ async function load(day: string, lang: Lang): Promise<ProperPayload> {
 }
 
 function validateProper(value: unknown, day: string, lang: Lang): ProperPayload {
-	const body = value as ProperPayload | undefined;
 	const authored = dayById(day);
 	if (
 		!authored ||
-		!body ||
-		body.day !== day ||
-		body.lang !== lang ||
-		!Array.isArray(body.parts) ||
-		body.parts.length !== authored.components.length ||
-		!body.lex ||
-		!body.lex.lemmata ||
-		!body.lex.senses ||
-		body.parts.some((part, index) => {
-			const expected = authored.components[index];
-			const doc = part?.doc as TextDocument | undefined;
-			const gloss = part?.gloss as GlossDocument | undefined;
-			return (
-				!part ||
-				part.key !== expected.text ||
-				part.part !== expected.role ||
-				part.slot !== SLOT_OF[expected.role] ||
-				JSON.stringify(part.condition) !== JSON.stringify(expected.condition) ||
-				!doc ||
-				doc.id !== expected.text.replace('/', '.') ||
-				!Array.isArray(doc.segments) ||
-				!doc.segments.length ||
-				!gloss ||
-				gloss.text !== doc.id ||
-				gloss.lang !== lang ||
-				!gloss.segments ||
-				!gloss.words ||
-				!part.bibliography ||
-				!Array.isArray(part.bibliography.context) ||
-				!Array.isArray(part.bibliography.translation)
-			);
-		})
+		!object(value) ||
+		value.day !== day ||
+		value.lang !== lang ||
+		!Array.isArray(value.parts) ||
+		value.parts.length !== authored.components.length
 	)
 		throw new Error('invalid formulary payload');
-	return body;
+	for (const [index, part] of value.parts.entries()) {
+		const expected = authored.components[index];
+		if (
+			!object(part) ||
+			part.key !== expected.text ||
+			part.part !== expected.role ||
+			part.slot !== SLOT_OF[expected.role] ||
+			JSON.stringify(part.condition) !== JSON.stringify(expected.condition)
+		)
+			throw new Error('invalid formulary part identity');
+		validateLocalizedBody(part, lang, value.lex);
+	}
+	return value as unknown as ProperPayload;
 }
 
 async function loadCanon(lang: Lang): Promise<CanonPack> {
-	const pending = (heldCanon[lang] ??= (async () => {
-		const here = await localCanon(lang);
-		if (here) return validateCanonPack(here, lang);
-		const response = await fetch(`/artifacts/canon/${lang}.json${dev ? '?dev=1' : ''}`, {
+	return loadVariant(lang, 'canon', localCanon, validateCanonPack, heldCanon);
+}
+
+async function loadDismissal(lang: Lang): Promise<DismissalPack> {
+	return loadVariant(lang, 'dismissal', localDismissal, validateDismissalPack, heldDismissal);
+}
+
+async function loadVariant<Role extends string>(
+	lang: Lang,
+	resource: 'canon' | 'dismissal',
+	local: (lang: Lang) => Promise<unknown | null>,
+	validate: (value: unknown, lang: Lang) => VariantPack<Role>,
+	cache: Partial<Record<Lang, Promise<VariantPack<Role>>>>
+): Promise<VariantPack<Role>> {
+	const pending = (cache[lang] ??= (async () => {
+		const here = await local(lang);
+		if (here) return validate(here, lang);
+		const response = await fetch(`/artifacts/${resource}/${lang}.json${dev ? '?dev=1' : ''}`, {
 			signal: AbortSignal.timeout(15_000)
 		});
 		if (!response.ok) throw new Error(String(response.status));
-		return validateCanonPack(await response.json(), lang);
+		return validate(await response.json(), lang);
 	})());
 	try {
 		return await pending;
 	} catch (cause) {
-		if (heldCanon[lang] === pending) delete heldCanon[lang];
+		if (cache[lang] === pending) delete cache[lang];
 		throw cause;
 	}
 }

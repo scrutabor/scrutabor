@@ -23,3 +23,8 @@ export async function localDay(day: string, lang: Lang): Promise<unknown | null>
 export async function localCanon(lang: Lang): Promise<unknown | null> {
 	return null;
 }
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export async function localDismissal(lang: Lang): Promise<unknown | null> {
+	return null;
+}

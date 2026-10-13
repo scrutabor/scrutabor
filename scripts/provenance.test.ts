@@ -58,8 +58,8 @@ describe('the corpus this app ships', () => {
 		// short key falling through the sets and a layer quietly missing
 		// from the reader's page. Bump these WITH the mirror, never alone.
 		expect(provenance.schema_version).toBe('0.21.0');
-		// 5.9 adds the separately validated Canon table; document row keys are unchanged.
-		expect(provenance.edition).toBe('5.9.0');
+		// 5.10 adds the validated dismissal table; document row keys are unchanged.
+		expect(provenance.edition).toBe('5.10.0');
 	});
 
 	it('was vendored from a clean corpus', () => {

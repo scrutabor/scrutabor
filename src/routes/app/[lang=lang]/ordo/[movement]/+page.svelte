@@ -23,6 +23,8 @@
 	import { wordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
 	import { proper } from '$lib/proper.svelte';
 	import { isCanonRole } from '$lib/canon';
+	import { DISMISSAL_ROLE } from '$lib/dismissal';
+	import { ordoContext } from '$lib/ordo-context';
 	import DayPicker from '$lib/components/DayPicker.svelte';
 	import FormularyScopeNote from '$lib/components/FormularyScopeNote.svelte';
 	import { dayHref } from '$lib/proper.svelte';
@@ -52,7 +54,9 @@
 	);
 	// Whether this movement has a slot the day fills.
 	const hasProper = $derived(
-		(movement?.entries ?? []).some((e) => e.kind === 'proper' || isCanonRole(e.id))
+		(movement?.entries ?? []).some(
+			(e) => e.kind === 'proper' || isCanonRole(e.id) || e.id === DISMISSAL_ROLE
+		)
 	);
 	const around = $derived(movementNeighbors(data.movement));
 
@@ -104,7 +108,7 @@
 	// places each wrote `e.text ? texts[e.text] : undefined` and a fourth
 	// looked words up under `ordinarium/`, which no proper slug matches.
 	const bodiesFor = $derived((e: OrdoEntry) => {
-		if (e.kind === 'proper' || isCanonRole(e.id)) {
+		if (e.kind === 'proper' || isCanonRole(e.id) || e.id === DISMISSAL_ROLE) {
 			const chosen = proper.forSlot(e.id).map((part) => ({
 				key: part.key,
 				slug: part.slug,
@@ -115,7 +119,7 @@
 				bibliography: part.bibliography
 			}));
 			if (chosen.length) return chosen;
-			if (proper.canonRequired(e.id)) return [];
+			if (proper.variantRequired(e.id)) return [];
 		}
 		if (e.text) {
 			const entry = texts[e.text];
@@ -335,12 +339,12 @@
 			</div>
 		</div>
 		<FormularyScopeNote {lang} centered />
-		{#if movement?.entries.some((e) => isCanonRole(e.id))}
+		{#if movement?.entries.some((e) => isCanonRole(e.id) || e.id === DISMISSAL_ROLE)}
 			<noscript
 				><p class="noscript-note">
 					{lang === 'pl'
-						? 'Wybór formuł Kanonu dla dnia wymaga JavaScriptu. Bez niego otwórz odpowiednie modlitwy osobno w księdze.'
-						: 'Selecting the day’s Canon formulas requires JavaScript. Without it, open the appropriate prayers separately in the book.'}
+						? 'Wybór formuł właściwych dla dnia wymaga JavaScriptu. Bez niego otwórz odpowiednie modlitwy osobno w księdze.'
+						: 'Selecting the day’s formulas requires JavaScript. Without it, open the appropriate prayers separately in the book.'}
 				</p></noscript
 			>
 		{/if}
@@ -351,6 +355,7 @@
 	{/if}
 	<main class:panel-open={picked !== null || panel.keepPad} aria-busy={hasProper && proper.loading}>
 		{#each entries as e, idx (e.id)}
+			{@const context = ordoContext(e.id, proper.day, proper.paschalDismissal, lang)}
 			{@const bodies = bodiesFor(e)}
 			{@const entry = bodies[0]}
 			{@const words = showsEntryWords(e)}
@@ -360,10 +365,10 @@
 				<p class="silent-run smallcaps">{msgs.quietCollapsed}</p>
 			{/if}
 			{@const revealed = !!entry && !words && !!unfolded[e.id]}
-			{@const canonPending = proper.canonRequired(e.id)}
+			{@const variantPending = proper.variantRequired(e.id)}
 			{@const partLoading =
 				(e.kind === 'proper' && proper.loading) ||
-				(canonPending && (!proper.date || proper.loading))}
+				(variantPending && (!proper.date || proper.loading))}
 			<section class="part" class:folded class:revealed class:loading={partLoading}>
 				{#if folded}
 					<!-- A prayer the reader is not saying costs ONE LINE, not a
@@ -374,7 +379,7 @@
 					     for their own next line. Folded, never hidden. -->
 					<button class="unfold" onclick={() => (unfolded[e.id] = true)}>
 						<span class="unfold-title" lang="la">{e.title}</span>
-						<span class="unfold-what">{e.note[lang]}</span>
+						<span class="unfold-what">{context ?? e.note[lang]}</span>
 						<span class="unfold-do smallcaps">{msgs.quietReveal}</span>
 					</button>
 				{:else}
@@ -404,14 +409,18 @@
 					     narratives it continues (owner, 2026-08-21): the altar's
 					     story is the book's own layer, not translation help. -->
 					<p class="part-note">
-						{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
+						{#if context}
+							{context}
+						{:else}
+							{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
+						{/if}
 					</p>
 				{/if}
 				{#if partLoading}
 					<div class="part-loading">
 						<ContentLoader variant="text" />
 					</div>
-				{:else if (canonPending || e.kind === 'proper') && proper.failed}
+				{:else if (variantPending || e.kind === 'proper') && proper.failed}
 					<p class="part-note" role="status">{msgs.dayFailed}</p>
 				{:else if entry && (words || unfolded[e.id])}
 					<div class="part-text">

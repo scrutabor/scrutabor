@@ -7598,6 +7598,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.ite-missa-est-paschale",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.iudica-me",
        "roles": [
         "official_text"
@@ -15161,6 +15168,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.ite-missa-est-paschale",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.qui-pridie-in-cena-domini",
        "roles": [
         "official_text"
@@ -17272,6 +17286,22 @@
      ]
     },
     {
+     "edition": "edition.divinum-officium-missa.44667ff",
+     "roles": [
+      "rubric_control"
+     ],
+     "texts": [
+      {
+       "id": "proprium.vigilia-paschalis-alleluia",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
      "edition": "edition.breviarium-romanum.1902-pustet",
      "roles": [
       "official_liturgical_context"
@@ -17363,6 +17393,13 @@
         "rubric_control"
        ],
        "uses": 3
+      },
+      {
+       "id": "ordinarium.ite-missa-est-paschale",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
       },
       {
        "id": "ordinarium.praefatio-apostolorum",
@@ -19833,6 +19870,13 @@
        "id": "proprium.vigilia-nativitatis-secreta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-paschalis-alleluia",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },

@@ -1,11 +1,12 @@
-import { afterEach, beforeEach, expect, it, vi } from 'vitest';
+import { expect, it, vi } from 'vitest';
 vi.mock('$app/environment', () => ({ browser: true, dev: false }));
 vi.mock('$lib/storage', () => ({ readStored: () => null, writeStored: () => {} }));
-import { canonData, properData } from './loaders';
+import { canonData, dismissalData, properData } from './loaders';
 import { ORDO } from './ordo';
 import { dayById, SLOT_OF } from './proprium';
 import type { Lang } from './i18n';
 import type { TextDocument, GlossDocument } from './corpus';
+import { useFreshProperState } from './proper-test-context';
 
 const vigil = { date: '2026-04-04', mass: 'vigilia-paschalis' };
 const easter = { date: '2026-04-05', mass: 'dominica-resurrectionis' };
@@ -26,19 +27,17 @@ function mockTransport(lang: Lang, body: () => Promise<unknown>) {
 		'fetch',
 		vi.fn(async (url: string) => ({
 			ok: true,
-			json: () => (url.includes('/canon/') ? canonData(lang) : body())
+			json: () => {
+				if (url.includes('/canon/')) return canonData(lang);
+				if (url.includes('/dismissal/')) return dismissalData(lang);
+				return body();
+			}
 		}))
 	);
 }
 
-beforeEach(async () => {
-	vi.resetModules();
-	({ chooseDay, proper } = await import('./proper.svelte'));
-	proper.clear();
-});
-afterEach(() => {
-	vi.restoreAllMocks();
-	vi.unstubAllGlobals();
+useFreshProperState((state) => {
+	({ chooseDay, proper } = state);
 });
 
 it('places the conditional Office after Communion and before the postcommunion', () => {

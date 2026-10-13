@@ -6,7 +6,7 @@ export function revalidateResourceRequest(request: Request, origin: string): Req
 	if (
 		request.method !== 'GET' ||
 		url.origin !== origin ||
-		!/^\/artifacts\/(canon|proprium)\//.test(url.pathname)
+		!/^\/artifacts\/(canon|dismissal|proprium)\//.test(url.pathname)
 	) {
 		return request;
 	}

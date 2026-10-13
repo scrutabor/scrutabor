@@ -1,5 +1,5 @@
 {
-  "schema_version": "5.9.0",
+  "schema_version": "5.10.0",
   "corpus_schema": "0.21.0",
   "language": "en",
   "direction": "ltr",
@@ -347,6 +347,11 @@
     {
       "id": "ordinarium.introibo",
       "path": "languages/en/texts/ordinarium/introibo.json"
+    },
+    {
+      "id": "ordinarium.ite-missa-est-paschale",
+      "path": "languages/en/texts/ordinarium/ite-missa-est-paschale.json",
+      "title": "Easter dismissal"
     },
     {
       "id": "ordinarium.ite-missa-est",

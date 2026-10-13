@@ -1,0 +1,19 @@
+{
+  "id":"ordinarium.ite-missa-est-paschale",
+  "title":"Ite, missa est, allelúia, allelúia",
+  "category":"ordinarium",
+  "section":"missa-fidelium",
+  "variant":"paschale",
+  "sung":true,
+  "st":"working-edition",
+  "ad":16,
+  "seg":[
+    {"id":"s01","type":"rubric","text":"Deinde celebrans dicit:"},
+    {"id":"s02","type":"verse","delivery":{"cantu":{"voice":"cantus","speaker":"sacerdos"}},"w":[{"i":"w001","f":"Dóminus","l":"dominus","m":60},{"i":"w002","f":"vobíscum","l":"vos","p":".","m":62,"a":19}]},
+    {"id":"s03","type":"verse","delivery":{"cantu":{"voice":"cantus","speaker":"omnes"}},"w":[{"i":"w003","f":"Et","l":"et","m":15},{"i":"w004","f":"cum","l":"cum","m":0,"h":"w005"},{"i":"w005","f":"spíritu","l":"spiritus","m":100},{"i":"w006","f":"tuo","l":"tuus","p":".","m":101,"h":"w005"}]},
+    {"id":"s04","type":"rubric","text":"Et diaconus, vertens se ad populum, seu ipse sacerdos, cantat:"},
+    {"id":"s05","type":"verse","delivery":{"cantu":{"voice":"cantus"}},"w":[{"i":"w007","f":"Ite","l":"eo","p":",","m":310},{"i":"w008","f":"missa","l":"missa","m":24,"a":4},{"i":"w009","f":"est","l":"sum","p":",","m":21},{"i":"w012","f":"allelúia","l":"alleluia","p":",","m":46},{"i":"w013","f":"allelúia","l":"alleluia","p":".","m":46}]},
+    {"id":"s06","type":"verse","delivery":{"cantu":{"voice":"cantus","speaker":"omnes"}},"w":[{"i":"w010","f":"Deo","l":"deus","m":186},{"i":"w011","f":"grátias","l":"gratia","p":",","m":169},{"i":"w014","f":"allelúia","l":"alleluia","p":",","m":46},{"i":"w015","f":"allelúia","l":"alleluia","p":".","m":46}]},
+    {"id":"s07","type":"rubric","text":"Infra octavam Paschatis, in Missis de Tempore, ad Ite, missa est et ad sequens Deo gratias duplex additur Alleluia."}
+  ]
+}

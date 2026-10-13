@@ -1,10 +1,15 @@
 // The reader owns the date/Mass table. This consumer does no calendar arithmetic.
 import tableData from './data/canon.json';
-import { ROOT_MANIFEST, TEXT_METADATA, hasText } from './corpus-metadata';
-import { isCivilDate } from './kalendarium';
+import { ROOT_MANIFEST, TEXT_METADATA } from './corpus-metadata';
 import type { Lang } from './i18n';
-import type { TextDocument, GlossDocument, Lexicon } from './corpus';
-import type { TextBibliographyEvidence } from './bibliography';
+import {
+	object,
+	exactKeys,
+	indexedChoices,
+	validateVariantPack,
+	type VariantBody,
+	type VariantPack
+} from './variant-resource';
 
 export const CANON_ROLES = ['communicantes', 'hanc-igitur', 'qui-pridie'] as const;
 export type CanonRole = (typeof CANON_ROLES)[number];
@@ -23,36 +28,9 @@ export interface CanonProfile {
 	id: string;
 	texts: Record<CanonRole, string>;
 }
-interface CanonTable {
-	schema_version: string;
-	roles: string[];
-	profiles: CanonProfile[];
-	masses: string[];
-	pairs: [string, number, number][];
-}
-export interface CanonBody {
-	key: string;
-	part: CanonRole;
-	slot: CanonRole;
-	doc: TextDocument;
-	gloss: GlossDocument;
-	bibliography: TextBibliographyEvidence;
-}
-export interface CanonPack {
-	schema_version: string;
-	lang: Lang;
-	parts: CanonBody[];
-	lex: Lexicon;
-}
+export type CanonBody = VariantBody<CanonRole>;
+export type CanonPack = VariantPack<CanonRole>;
 
-function object(value: unknown): value is Record<string, unknown> {
-	return value !== null && typeof value === 'object' && !Array.isArray(value);
-}
-function exactKeys(value: Record<string, unknown>, keys: readonly string[]): boolean {
-	return (
-		Object.keys(value).length === keys.length && keys.every((key) => Object.hasOwn(value, key))
-	);
-}
 export function isCanonRole(slot: string): slot is CanonRole {
 	return (CANON_ROLES as readonly string[]).includes(slot);
 }
@@ -74,11 +52,7 @@ export function createCanonLookup(
 		value.schema_version !== '1.0.0' ||
 		JSON.stringify(value.roles) !== JSON.stringify(CANON_ROLES) ||
 		!Array.isArray(value.profiles) ||
-		value.profiles.length !== PROFILE_IDS.length ||
-		!Array.isArray(value.masses) ||
-		!value.masses.length ||
-		!Array.isArray(value.pairs) ||
-		!value.pairs.length
+		value.profiles.length !== PROFILE_IDS.length
 	)
 		throw new Error('invalid Canon resource');
 	for (const [i, profile] of value.profiles.entries()) {
@@ -101,50 +75,13 @@ export function createCanonLookup(
 				throw new Error('invalid Canon body identity');
 		}
 	}
-	if (
-		value.masses.some(
-			(mass, i, masses) =>
-				typeof mass !== 'string' ||
-				!mass ||
-				mass === 'none' ||
-				(i > 0 && String(masses[i - 1]) >= mass)
-		)
-	)
-		throw new Error('invalid Canon Mass identities');
-	const table = value as unknown as CanonTable;
-	const rows = new Map<string, CanonProfile>();
-	let previous = '';
-	for (const row of table.pairs) {
-		if (!Array.isArray(row) || row.length !== 3) throw new Error('invalid Canon pair');
-		const [date, mass, profile] = row;
-		if (
-			!isCivilDate(date) ||
-			!Number.isInteger(mass) ||
-			mass < 0 ||
-			mass >= table.masses.length ||
-			!Number.isInteger(profile) ||
-			profile < 0 ||
-			profile >= table.profiles.length
-		)
-			throw new Error('invalid Canon pair');
-		const key = `${date}/${table.masses[mass]}`;
-		if (rows.has(key) || (previous && previous >= key))
-			throw new Error('duplicate or unordered Canon pair');
-		rows.set(key, table.profiles[profile]);
-		previous = key;
-	}
-	return {
-		profiles: table.profiles,
-		resolve(date: string, mass: string): CanonProfile {
-			const profile = rows.get(`${date}/${mass}`);
-			if (!isCivilDate(date) || !profile) throw new Error('unsupported Canon choice');
-			return profile;
-		}
-	};
+	const profiles = value.profiles as CanonProfile[];
+	return { profiles, resolve: indexedChoices(value.masses, profiles, value.pairs) };
 }
+
 function declaredLookup() {
 	try {
-		if (ROOT_MANIFEST.schema_version !== '5.9.0' || ROOT_MANIFEST.base.canon !== 'canon.json')
+		if (ROOT_MANIFEST.schema_version !== '5.10.0' || ROOT_MANIFEST.base.canon !== 'canon.json')
 			throw new Error('undeclared Canon resource');
 		return createCanonLookup(tableData);
 	} catch {
@@ -160,77 +97,13 @@ export const CANON_VARIANTS = canonLookup
 
 /** Narrow wire boundary over decoded corpus data; ordinary artifact gates own text parity. */
 export function validateCanonPack(value: unknown, lang: Lang): CanonPack {
-	if (
-		!canonLookup ||
-		!object(value) ||
-		value.schema_version !== '1.0.0' ||
-		value.lang !== lang ||
-		!Array.isArray(value.parts) ||
-		value.parts.length !== CANON_VARIANTS.length ||
-		!object(value.lex) ||
-		!object(value.lex.lemmata) ||
-		!object(value.lex.senses)
-	)
-		throw new Error('invalid Canon pack');
-	const seen = new Set<string>();
-	for (const part of value.parts) {
-		if (
-			!object(part) ||
-			typeof part.key !== 'string' ||
-			!CANON_VARIANTS.includes(part.key.replace('/', '.')) ||
-			seen.has(part.key) ||
-			!hasText(part.key, lang) ||
-			!isCanonRole(String(part.slot)) ||
-			part.part !== part.slot ||
-			!part.key.startsWith(`ordinarium/${part.slot}-`)
-		)
-			throw new Error('invalid Canon pack body');
-		seen.add(part.key);
-		if (
-			!object(part.doc) ||
-			part.doc.id !== part.key.replace('/', '.') ||
-			!Array.isArray(part.doc.segments) ||
-			!part.doc.segments.length ||
-			!object(part.gloss) ||
-			part.gloss.text !== part.doc.id ||
-			part.gloss.lang !== lang ||
-			!object(part.gloss.segments) ||
-			!object(part.gloss.words) ||
-			!object(part.bibliography) ||
-			!Array.isArray(part.bibliography.context) ||
-			!Array.isArray(part.bibliography.translation)
-		)
-			throw new Error('invalid Canon body data');
-		let words = 0;
-		for (const segment of part.doc.segments) {
-			if (
-				!object(segment) ||
-				typeof segment.id !== 'string' ||
-				!object(part.gloss.segments[segment.id])
-			)
-				throw new Error('incomplete Canon segments');
-			if (segment.type === 'verse') {
-				if (!Array.isArray(segment.words) || !segment.words.length)
-					throw new Error('empty Canon body');
-				for (const word of segment.words) {
-					if (
-						!object(word) ||
-						typeof word.id !== 'string' ||
-						typeof word.form !== 'string' ||
-						!word.form ||
-						typeof word.lemma !== 'string' ||
-						!object(value.lex.lemmata[word.lemma]) ||
-						!object(value.lex.senses[word.lemma]) ||
-						!object(part.gloss.words[word.id])
-					)
-						throw new Error('incomplete Canon lexical data');
-					words += 1;
-				}
-			}
-		}
-		if (!words) throw new Error('empty Canon body');
-	}
-	return value as unknown as CanonPack;
+	if (!canonLookup) throw new Error('Canon resource unavailable');
+	const expected = CANON_VARIANTS.map((id) => {
+		const role = CANON_ROLES.find((role) => id.startsWith(`${ordinaryCanon(role)}-`));
+		if (!role) throw new Error('invalid Canon body identity');
+		return { key: canonKey(id), slot: role };
+	});
+	return validateVariantPack(value, lang, expected);
 }
 
 export function selectedCanon(profile: CanonProfile, pack: CanonPack | null): CanonBody[] {

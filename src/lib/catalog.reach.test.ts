@@ -3,6 +3,7 @@ import { CATALOG } from './catalog';
 import { CORPUS_METRICS, TEXT_KEYS, hasText } from './corpus';
 import { ORDO } from './ordo';
 import { PROPER_DAYS } from './proprium';
+import { DISMISSAL_TEXT_KEYS } from './dismissal';
 
 // A vendored text a reader cannot reach is data shipped for nobody, and a
 // catalogue entry with no text behind it is a dead link.
@@ -24,7 +25,8 @@ describe('every vendored text is reachable, and every named text exists', () => 
 		...ORDO.flatMap((m) => m.entries)
 			.map((e) => e.text)
 			.filter((k): k is string => Boolean(k)),
-		...PROPER_DAYS.flatMap((day) => day.components.map((component) => component.text))
+		...PROPER_DAYS.flatMap((day) => day.components.map((component) => component.text)),
+		...DISMISSAL_TEXT_KEYS
 	]);
 
 	// Reached by lemma pages and direct links instead of by a shelf.

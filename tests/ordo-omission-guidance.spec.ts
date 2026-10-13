@@ -20,6 +20,94 @@ const when = {
 } as const;
 
 for (const language of ['pl', 'en'] as const) {
+	test(`@reader ${language} prayer directions avoid unsupported totals and individual Amen claims`, async ({
+		page
+	}) => {
+		await page.goto(`/app/${language}/ordo/catechumenorum?dies=2026-04-04`);
+		const proper = page.locator('[id="vigilia-paschalis-collecta.w001"]');
+		await expect(proper).toBeVisible();
+		await expect(
+			page.locator('section.part').filter({ has: proper }).locator('.part-note')
+		).toHaveText(
+			language === 'pl'
+				? 'Kapłan pozdrawia wiernych, wzywa Orémus i odmawia modlitwę dnia — czasem także modlitwy przypadających wspomnień.'
+				: 'The priest greets the people, calls Orémus, and says the day’s prayer, adding the prayers of any commemorations prescribed.'
+		);
+		await page.goto(`/app/${language}/ordo/offertorium?dies=2026-04-04`);
+		const folded = page.locator('section.part').filter({
+			has: page.locator('.unfold-title', { hasText: 'Súscipe, sancte Pater' })
+		});
+		await expect(folded).toHaveCount(1);
+		await folded.locator('button.unfold').click();
+		const section = page.locator('section.part').filter({
+			has: page.locator('a.part-title[href$="/ordinarium/suscipe-sancte-pater"]')
+		});
+		await expect(section.locator('.part-note')).toHaveText(
+			language === 'pl'
+				? 'Kapłan unosi patenę z hostią i ofiaruje ją po cichu.'
+				: 'The priest raises the paten with the host and offers it silently.'
+		);
+	});
+
+	test(`@reader ${language} Communion guidance distinguishes the Vigil from Easter Sunday`, async ({
+		page
+	}) => {
+		await page.goto(`/app/${language}/ordo/conclusio?dies=2026-04-04`);
+		await expect(page.locator('[id="vigilia-paschalis-laudes-psalmus.w001"]')).toBeVisible();
+		const section = page.locator('section.part').filter({
+			has: page.locator('.part-title', { hasText: /^Commúnio$/ })
+		});
+		await expect(section).toHaveCount(1);
+		await expect(section.locator('.part-note')).toHaveText(
+			language === 'pl'
+				? 'W Wigilię Paschalną nie ma antyfony na Komunię. Po Komunii i ablucjach następują laudesy.'
+				: 'At the Easter Vigil, there is no Communion antiphon. Lauds follows Communion and the ablutions.'
+		);
+		await expect(section.locator('.part-text')).toHaveCount(0);
+		await page.goto(`/app/${language}/ordo/conclusio?dies=2026-04-05`);
+		await expect(section.locator('[id="dominica-resurrectionis-communio.w001"]')).toBeVisible();
+		await expect(section.locator('.part-note')).toHaveText(
+			language === 'pl'
+				? 'Antyfona z formularza dnia, odczytana po stronie lekcji. We Mszy śpiewanej chór śpiewa ją już podczas rozdawania Komunii.'
+				: 'The day’s antiphon, read at the Epistle side. At a sung Mass the choir has already sung it during the distribution of Communion.'
+		);
+	});
+
+	test(`@reader ${language} offering directions describe the actual chalice prayer`, async ({
+		page
+	}) => {
+		await page.goto(`/app/${language}/ordo/offertorium?dies=2026-04-04`);
+		const cases = [
+			{
+				id: 'deus-qui-humanae',
+				title: 'Deus, qui humánæ substántiæ',
+				note:
+					language === 'pl'
+						? 'Do wina dolewa się kroplę wody. Modlitwa nad nią jest starą kolektą Bożego Narodzenia.'
+						: 'A drop of water goes into the wine. The prayer said over it is an old Christmas collect.'
+			},
+			{
+				id: 'offerimus-tibi',
+				title: 'Offérimus tibi, Dómine',
+				note:
+					language === 'pl'
+						? 'Kapłan bierze kielich i ofiaruje go, prosząc o zbawienie nasze i całego świata.'
+						: 'The priest takes the chalice and offers it, praying for our salvation and that of the whole world.'
+			}
+		];
+		for (const entry of cases) {
+			const folded = page.locator('section.part').filter({
+				has: page.locator('.unfold-title', { hasText: entry.title })
+			});
+			await expect(folded).toHaveCount(1);
+			await folded.locator('button.unfold').click();
+			const section = page.locator('section.part').filter({
+				has: page.locator(`a.part-title[href$="/ordinarium/${entry.id}"]`)
+			});
+			await expect(section.locator('.part-note')).toContainText(entry.note);
+		}
+	});
+
 	test(`@reader ${language} the dated Mass for the Dead has no unrestricted self-crossing instruction`, async ({
 		page
 	}) => {
@@ -109,7 +197,7 @@ for (const language of ['pl', 'en'] as const) {
 		).toBeVisible();
 	});
 
-	test(`@reader ${language} Vigil has no actual Introit body, and the generic note states its absence`, async ({
+	test(`@reader ${language} Vigil has no Introit body or generic condition, and its contextual note is exact`, async ({
 		page
 	}) => {
 		await page.goto(`/app/${language}/ordo/catechumenorum?dies=2026-04-04`);
@@ -117,7 +205,13 @@ for (const language of ['pl', 'en'] as const) {
 		const section = page
 			.locator('section.part')
 			.filter({ has: page.locator('.part-title', { hasText: /^Intróitus$/ }) });
-		await expect(section.locator('.when')).toHaveText(when[language].introit);
+		await expect(section).toHaveCount(1);
+		await expect(section.locator('.part-note')).toHaveText(
+			language === 'pl'
+				? 'W Wigilię Paschalną nie ma antyfony Introitu ani jej wersetu psalmu i Gloria Patri.'
+				: 'At the Easter Vigil, there is no Introit antiphon, psalm verse, or Gloria Patri.'
+		);
+		await expect(section.locator('.when')).toHaveCount(0);
 		await expect(section.locator('.part-text')).toHaveCount(0);
 	});
 }

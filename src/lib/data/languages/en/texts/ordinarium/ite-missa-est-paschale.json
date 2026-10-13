@@ -1,0 +1,14 @@
+{
+  "id":"ordinarium.ite-missa-est-paschale",
+  "language":"en",
+  "about":"The dismissal of the Easter Vigil and temporal Masses within the Easter octave. Two Alleluias are added to both the dismissal and its response.",
+  "seg":[
+    {"id":"s01","nr":"Then the celebrant says:"},
+    {"id":"s02","tr":"The Lord be with you.","g":["The Lord","with you"]},
+    {"id":"s03","tr":"And with your spirit.","g":["and","with",null,null],"a":[{"s":2,"n":2,"a":0,"g":"your spirit"}]},
+    {"id":"s04","nr":"The deacon turns toward the people and sings the dismissal, or the priest himself sings it."},
+    {"id":"s05","tr":"Go forth, the Mass is ended. Alleluia, alleluia.","g":["go","the dismissal","is made","alleluia","alleluia"],"nt":{"w008":"As a noun, “missa” means dismissal. The same form can be a participle of “mitto,” meaning “sent.” A participial reading would require an understood subject that the formula does not name."}},
+    {"id":"s06","tr":"Thanks be to God. Alleluia, alleluia.","g":["to God","thanks","alleluia","alleluia"],"ex":{"w011":"The response leaves the verb unspoken. Its full sense is “we give thanks to God”."}},
+    {"id":"s07","nr":"At temporal Masses within the Easter octave, two Alleluias are added to the dismissal and response."}
+  ]
+}

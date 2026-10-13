@@ -278,8 +278,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Orátio',
 				kind: 'proper',
 				note: {
-					pl: 'Kapłan pozdrawia wiernych, wzywa Orémus i odmawia modlitwę dnia — czasem kilka, gdy przypadają wspomnienia — a każdą zamyka Amen.',
-					en: 'The priest greets the people, calls Orémus, and says the day’s prayer — sometimes several, when commemorations fall — each closed by the Amen.'
+					pl: 'Kapłan pozdrawia wiernych, wzywa Orémus i odmawia modlitwę dnia — czasem także modlitwy przypadających wspomnień.',
+					en: 'The priest greets the people, calls Orémus, and says the day’s prayer, adding the prayers of any commemorations prescribed.'
 				}
 			},
 			{
@@ -370,8 +370,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/suscipe-sancte-pater',
 				note: {
-					pl: 'Kapłan unosi patenę z hostią i ofiaruje ją po cichu — pierwsza z trzech modlitw nad darami.',
-					en: 'The priest raises the paten with the host and offers it silently — the first of three prayers over the gifts.'
+					pl: 'Kapłan unosi patenę z hostią i ofiaruje ją po cichu.',
+					en: 'The priest raises the paten with the host and offers it silently.'
 				}
 			},
 			{
@@ -380,7 +380,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/deus-qui-humanae',
 				note: {
-					pl: 'Do wina dolewa się kropla wody. Modlitwa nad nią jest starą kolektą Bożego Narodzenia.',
+					pl: 'Do wina dolewa się kroplę wody. Modlitwa nad nią jest starą kolektą Bożego Narodzenia.',
 					en: 'A drop of water goes into the wine. The prayer said over it is an old Christmas collect.'
 				},
 				when: {
@@ -394,8 +394,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/offerimus-tibi',
 				note: {
-					pl: 'Kapłan unosi kielich i ofiaruje go tymi samymi słowami, w liczbie mnogiej.',
-					en: 'The priest raises the chalice and offers it in the same words, now in the plural.'
+					pl: 'Kapłan bierze kielich i ofiaruje go, prosząc o zbawienie nasze i całego świata.',
+					en: 'The priest takes the chalice and offers it, praying for our salvation and that of the whole world.'
 				}
 			},
 			{

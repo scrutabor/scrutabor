@@ -4,6 +4,7 @@ import { PROPER_DAYS, properRank } from './proprium';
 import { everyTextInOrder, occurrencesOf, textsForLatinForm } from './concordance';
 import { TEXT_KEYS } from './corpus';
 import { ORDO } from './ordo';
+import { DISMISSAL_TEXT_KEYS } from './dismissal';
 
 describe('occurrencesOf', () => {
 	it("groups occurrences by text in the book's own order", async () => {
@@ -69,7 +70,8 @@ describe('what the concordance is built from', () => {
 		const sequenced = new Set([
 			...CATALOG.flatMap((s) => s.texts).map((t) => `${t.category}/${t.slug}`),
 			...ORDO.flatMap((m) => m.entries).flatMap((e) => (e.text ? [e.text] : [])),
-			...PROPER_DAYS.flatMap((day) => day.components.map((component) => component.text))
+			...PROPER_DAYS.flatMap((day) => day.components.map((component) => component.text)),
+			...DISMISSAL_TEXT_KEYS
 		]);
 		const unsequenced = everyTextInOrder().filter((k) => !sequenced.has(k));
 		expect(unsequenced.filter((k) => !k.startsWith('proprium/'))).toEqual([]);
@@ -113,5 +115,21 @@ describe('what the concordance is built from', () => {
 			order.indexOf('ordinarium/kyrie')
 		);
 		expect(order).toContain('ordinarium/evangelium-ultimum');
+	});
+
+	it('keeps the Paschal dismissal beside the Ordinary dismissal, not in the tail', async () => {
+		const order = everyTextInOrder();
+		const ordinary = order.indexOf('ordinarium/ite-missa-est');
+		expect(ordinary).toBeGreaterThan(-1);
+		expect(order.slice(ordinary, ordinary + 3)).toEqual([
+			'ordinarium/ite-missa-est',
+			'ordinarium/ite-missa-est-paschale',
+			'ordinarium/placeat-tibi'
+		]);
+		expect(order.filter((key) => key === 'ordinarium/ite-missa-est-paschale')).toHaveLength(1);
+		const occurrences = (await occurrencesOf('deus')).map(({ textKey }) => textKey);
+		expect(occurrences.indexOf('ordinarium/ite-missa-est-paschale')).toBe(
+			occurrences.indexOf('ordinarium/ite-missa-est') + 1
+		);
 	});
 });

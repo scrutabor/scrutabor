@@ -1,5 +1,5 @@
 {
-  "schema_version": "5.9.0",
+  "schema_version": "5.10.0",
   "corpus_schema": "0.21.0",
   "texts": [
     {
@@ -337,6 +337,12 @@
       "path": "texts/ordinarium/introibo.json",
       "title": "Introíbo ad altáre Dei",
       "evidence": "bibliography/texts/ordinarium/introibo.json"
+    },
+    {
+      "id": "ordinarium.ite-missa-est-paschale",
+      "path": "texts/ordinarium/ite-missa-est-paschale.json",
+      "title": "Ite, missa est, allelúia, allelúia",
+      "evidence": "bibliography/texts/ordinarium/ite-missa-est-paschale.json"
     },
     {
       "id": "ordinarium.ite-missa-est",
@@ -6726,6 +6732,7 @@
     "concordance": "concordance.json",
     "calendar": "calendar.json",
     "canon": "canon.json",
+    "dismissal": "dismissal.json",
     "lexicon": "lexicon/heads.json",
     "morphology": "tables/morphology.json",
     "analysis": "tables/analysis.json",
@@ -6739,7 +6746,7 @@
     2026,
     2101
   ],
-  "analyses": 24,
+  "analyses": 25,
   "citations": 456,
   "bibliography_schema": "1.5.0"
 }

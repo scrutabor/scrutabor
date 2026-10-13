@@ -4,7 +4,7 @@
 // the same texts a reading page renders — no fetch, which file:// refuses,
 // and no per-day artifact, which at the whole church year would have been 400
 // files and about 8 MB of what the runtime already holds.
-import { properData, canonData } from '$lib/loaders';
+import { properData, canonData, dismissalData } from '$lib/loaders';
 import type { Lang } from '$lib/i18n';
 
 export async function localDay(day: string, lang: Lang): Promise<unknown | null> {
@@ -13,4 +13,8 @@ export async function localDay(day: string, lang: Lang): Promise<unknown | null>
 
 export async function localCanon(lang: Lang): Promise<unknown | null> {
 	return await canonData(lang);
+}
+
+export async function localDismissal(lang: Lang): Promise<unknown | null> {
+	return await dismissalData(lang);
 }

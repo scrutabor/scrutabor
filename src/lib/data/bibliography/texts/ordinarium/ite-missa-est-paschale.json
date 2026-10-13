@@ -1,0 +1,65 @@
+{
+ "id": "ordinarium.ite-missa-est-paschale",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 218, final greeting, dismissal and response",
+    "scan": "leaf n297 / PDF p. 298",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n297/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.ite-missa-est-paschale.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The source prints the complete 15-word final greeting, doubled-Alleluia dismissal and response. The sung dismissal rubric expressly permits the deacon or the priest; it does not establish one sole performer."
+    }
+   ],
+   "verified_on": "2026-10-13"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "Rubricae generales 507 b, p. XXXIII",
+    "scan": "leaf n038 / PDF p. 39"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.ite-missa-est-paschale.rg507b",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Double Alleluia belongs to the Vigil and to Masses De Tempore within the Easter octave through Saturday, not Low Sunday or a coincident sanctoral Mass."
+    }
+   ],
+   "verified_on": "2026-10-13"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 215, final greeting, dismissal and response",
+    "scan": "PDF page index 295 / physical page 296"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.ite-missa-est-paschale.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The source prints the complete 15-word final greeting, doubled-Alleluia dismissal and response. The sung dismissal rubric expressly permits the deacon or the priest; it does not establish one sole performer."
+    }
+   ],
+   "verified_on": "2026-10-13"
+  }
+ ],
+ "witnesses": []
+}

@@ -1,5 +1,5 @@
 {
-  "schema_version": "5.9.0",
+  "schema_version": "5.10.0",
   "corpus_schema": "0.21.0",
   "language": "pl",
   "direction": "ltr",
@@ -351,6 +351,11 @@
       "id": "ordinarium.introibo",
       "path": "languages/pl/texts/ordinarium/introibo.json",
       "evidence": "languages/pl/bibliography/texts/ordinarium/introibo.json"
+    },
+    {
+      "id": "ordinarium.ite-missa-est-paschale",
+      "path": "languages/pl/texts/ordinarium/ite-missa-est-paschale.json",
+      "title": "Rozesłanie wielkanocne"
     },
     {
       "id": "ordinarium.ite-missa-est",

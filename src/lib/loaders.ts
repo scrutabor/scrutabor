@@ -31,6 +31,8 @@ export { lemmaData } from './lemma-data';
 import { movementById } from './ordo';
 import { PROPER_DAYS, SLOT_OF } from './proprium';
 import { CANON_VARIANTS, CANON_ROLES, canonKey, validateCanonPack } from './canon';
+import { DISMISSAL_ROLE, PASCHAL_DISMISSAL, validateDismissalPack } from './dismissal';
+import type { VariantPack } from './variant-resource';
 import pkg from '../../package.json' with { type: 'json' };
 
 /** The two facts every page under a language needs, and neither of which it
@@ -206,24 +208,48 @@ export async function properData(day: string, lang: Lang) {
 
 /** Eleven shared nonordinary bodies, emitted once per language, not per Mass. */
 export async function canonData(lang: Lang) {
-	const keys = CANON_VARIANTS.map(canonKey);
-	const loaded = await loadTexts(keys, lang);
+	const declarations = CANON_VARIANTS.map((id) => {
+		const key = canonKey(id);
+		const slot = CANON_ROLES.find((role) => key.startsWith(`ordinarium/${role}-`));
+		if (!slot) throw new Error('invalid Canon body identity');
+		return { key, slot };
+	});
+	return variantData(lang, declarations, validateCanonPack);
+}
+
+/** One shared Easter dismissal body per language, not a copy in each Mass. */
+export async function dismissalData(lang: Lang) {
+	return variantData(
+		lang,
+		[{ key: PASCHAL_DISMISSAL.replace('.', '/'), slot: DISMISSAL_ROLE }],
+		validateDismissalPack
+	);
+}
+
+async function variantData<Role extends string>(
+	lang: Lang,
+	declarations: { key: string; slot: Role }[],
+	validate: (value: unknown, lang: Lang) => VariantPack<Role>
+) {
+	const loaded = await loadTexts(
+		declarations.map(({ key }) => key),
+		lang
+	);
 	const parts = await Promise.all(
-		keys.map(async (key) => {
+		declarations.map(async ({ key, slot }) => {
 			const entry = loaded[key];
-			if (!entry) throw new Error('Canon language incomplete');
-			const role = CANON_ROLES.find((role) => key.startsWith(`ordinarium/${role}-`))!;
+			if (!entry) throw new Error('variant language incomplete');
 			return {
 				key,
-				part: role,
-				slot: role,
+				part: slot,
+				slot,
 				doc: entry.text,
 				gloss: entry.gloss,
 				bibliography: await loadTextBibliography(lang, key)
 			};
 		})
 	);
-	return validateCanonPack(
+	return validate(
 		{
 			schema_version: '1.0.0',
 			lang,

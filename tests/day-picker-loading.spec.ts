@@ -64,28 +64,32 @@ for (const host of ['@online', '@online @static-host']) {
 
 bare.describe('without scripting', () => {
 	bare.use({ javaScriptEnabled: false });
-	for (const [lang, pending] of languages) {
-		bare(`an unresolved day is not a false empty selection: ${lang} @online`, async ({ page }) => {
-			await page.goto(`/app/${lang}/ordo/canon?dies=2026-07-12`);
-			await expect(page.locator('.day-open .choice-title')).toHaveText(pending);
-			await expect(page.locator('.day-open')).toBeDisabled();
-			const notes = page.locator('.noscript-note');
-			await expect(
-				notes.filter({
-					hasText:
+	for (const movement of ['canon', 'conclusio'] as const)
+		for (const [lang, pending] of languages) {
+			bare(
+				`an unresolved day is not a false empty selection: ${lang} ${movement} @online`,
+				async ({ page }) => {
+					await page.goto(`/app/${lang}/ordo/${movement}?dies=2026-07-12`);
+					await expect(page.locator('.day-open .choice-title')).toHaveText(pending);
+					await expect(page.locator('.day-open')).toBeDisabled();
+					const notes = page.locator('.noscript-note');
+					await expect(
+						notes.filter({
+							hasText:
+								lang === 'pl'
+									? 'Ten tekst czyta się bez JavaScriptu, ale wybory — dzień, rola, tryb czytania, wielkość pisma, analiza słowa — wymagają jego włączenia.'
+									: 'The text reads without JavaScript, but the choices — the day, the part, the reading mode, the text size, the word analysis — need it turned on.'
+						})
+					).toBeVisible();
+					const notice =
 						lang === 'pl'
-							? 'Ten tekst czyta się bez JavaScriptu, ale wybory — dzień, rola, tryb czytania, wielkość pisma, analiza słowa — wymagają jego włączenia.'
-							: 'The text reads without JavaScript, but the choices — the day, the part, the reading mode, the text size, the word analysis — need it turned on.'
-				})
-			).toBeVisible();
-			await expect(
-				notes.filter({
-					hasText:
-						lang === 'pl'
-							? 'Wybór formuł Kanonu dla dnia wymaga JavaScriptu. Bez niego otwórz odpowiednie modlitwy osobno w księdze.'
-							: 'Selecting the day’s Canon formulas requires JavaScript. Without it, open the appropriate prayers separately in the book.'
-				})
-			).toBeVisible();
-		});
-	}
+							? 'Wybór formuł właściwych dla dnia wymaga JavaScriptu. Bez niego otwórz odpowiednie modlitwy osobno w księdze.'
+							: 'Selecting the day’s formulas requires JavaScript. Without it, open the appropriate prayers separately in the book.';
+					const contextual = notes.filter({ hasText: notice });
+					await expect(contextual).toHaveCount(1);
+					await expect(contextual).toHaveText(notice);
+					await expect(contextual).toBeVisible();
+				}
+			);
+		}
 });

@@ -1,0 +1,14 @@
+{
+  "id":"ordinarium.ite-missa-est-paschale",
+  "language":"pl",
+  "about":"Rozesłanie Wigilii Paschalnej oraz Mszy z cyklu roku liturgicznego (De Tempore) w oktawie Wielkanocy. Do wezwania i odpowiedzi dodaje się dwukrotne Alleluja.",
+  "seg":[
+    {"id":"s01","nr":"Następnie celebrans mówi:"},
+    {"id":"s02","tr":"Pan z wami.","g":["Pan","z wami"]},
+    {"id":"s03","tr":"I z duchem twoim.","g":["i","z","duchem","twoim"]},
+    {"id":"s04","nr":"Diakon zwraca się do ludu i śpiewa rozesłanie. Może je śpiewać sam kapłan."},
+    {"id":"s05","tr":"Idźcie, ofiara spełniona. Alleluja, alleluja.","g":["idźcie","rozesłanie","dokonuje się","alleluja","alleluja"],"nt":{"w008":"„Missa” jako rzeczownik oznacza rozesłanie. Tę samą postać ma imiesłów od „mitto” — „posłana”. Odczytanie imiesłowowe wymagałoby domyślnego podmiotu, którego formuła nie wymienia."}},
+    {"id":"s06","tr":"Bogu niech będą dzięki. Alleluja, alleluja.","g":["Bogu","dzięki","alleluja","alleluja"],"ex":{"w011":"Odpowiedź pomija czasownik. Pełny sens brzmi: „składamy dzięki Bogu”."}},
+    {"id":"s07","nr":"W Mszach z cyklu roku liturgicznego (De Tempore) w oktawie Wielkanocy do rozesłania i odpowiedzi dodaje się dwukrotne Alleluja."}
+  ]
+}
