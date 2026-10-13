@@ -1,0 +1,16 @@
+{
+  "id":"proprium.vigilia-paschalis-laudes-psalmus",
+  "language":"en",
+  "about":"After Communion and the ablutions, Psalm 150 is sung for Lauds of Easter Sunday. A triple Alleluia precedes the psalm and is repeated after its doxology.",
+  "seg":[
+    {"id":"s01","tr":"Alleluia, alleluia, alleluia.","g":["Alleluia","alleluia","alleluia"]},
+    {"id":"s02","tr":"Praise the Lord in His sanctuary; praise Him in His majestic firmament.","g":["Praise","the Lord","in",null,null,"praise","Him","in",null,null,null],"a":[{"s":3,"n":2,"a":0,"g":"His sanctuary"},{"s":8,"n":3,"a":1,"g":"His majestic firmament"}]},
+    {"id":"s03","tr":"Praise Him for His great works; praise Him for His supreme majesty.","g":["Praise","Him","for",null,null,null,"praise","Him","for",null,null,null],"a":[{"s":3,"n":3,"a":1,"g":"His great works"},{"s":9,"n":3,"a":1,"g":"His supreme majesty"}]},
+    {"id":"s04","tr":"Praise Him with the blast of a trumpet; praise Him with psaltery and cithara.","g":["Praise","Him","with the blast","of a trumpet","praise","Him","with psaltery","and","cithara"],"ex":{"w033":"A psaltery is an ancient stringed instrument.","w035":"Cithara names an ancient stringed instrument. It is distinct from the psaltery named beside it."}},
+    {"id":"s05","tr":"Praise Him with drum and dance; praise Him with strings and pipe.","g":["Praise","Him","with drum","and","dance","praise","Him","with strings","and","pipe"],"ex":{"w040":"Here dance accompanies the praise of God.","w045":"Here the instrument is understood as a pipe. The word has a broader musical range and does not specify a modern church organ."}},
+    {"id":"s06","tr":"Praise Him with resounding cymbals; praise Him with clashing cymbals. Let everything that breathes praise the Lord!","g":["Praise","Him",null,null,"praise","Him",null,null,"everything","that","breathes","let it praise","the Lord"],"a":[{"s":2,"n":2,"a":0,"g":"with resounding cymbals"},{"s":6,"n":2,"a":0,"g":"with clashing cymbals"}],"ex":{"w048":"These cymbals are struck plates, not a stringed instrument."}},
+    {"id":"s07","tr":"Glory to the Father, and to the Son, and to the Holy Spirit,","g":["Glory","to the Father","and","to the Son","and",null,null],"a":[{"s":5,"n":2,"a":0,"g":"to the Holy Spirit"}]},
+    {"id":"s08","tr":"as it was in the beginning, so it is now and always, forever and ever. Amen.","g":["as","it was","in","the beginning","and","now","and","always","and",null,null,null,"Amen"],"a":[{"s":9,"n":3,"a":1,"g":"forever and ever"}]},
+    {"id":"s09","tr":"Alleluia, alleluia, alleluia.","g":["Alleluia","alleluia","alleluia"]}
+  ]
+}

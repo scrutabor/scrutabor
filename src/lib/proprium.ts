@@ -30,6 +30,8 @@ export const PROPER_PARTS = [
 	'secreta',
 	'praefatio',
 	'communio',
+	'laudes-psalmus',
+	'laudes-canticum',
 	'postcommunio'
 ] as const;
 
@@ -51,7 +53,8 @@ export function partOf(slug: string): ProperPart | undefined {
  * Not one-to-one. The Ordo has a single slot for the chant between the
  * readings, titled *Graduále, Allelúia, Tractus*, because which of the three
  * is sung depends on the season — so three parts arrive at one slot and the
- * day decides how many of them exist. Everything else maps straight across.
+ * day decides how many of them exist. The Vigil's psalm and canticle likewise
+ * share one Lauds slot. The other parts map straight across.
  */
 export const SLOT_OF: Record<ProperPart, string> = {
 	introitus: 'introitus',
@@ -66,6 +69,8 @@ export const SLOT_OF: Record<ProperPart, string> = {
 	secreta: 'secreta',
 	praefatio: 'praefatio',
 	communio: 'communio',
+	'laudes-psalmus': 'laudes',
+	'laudes-canticum': 'laudes',
 	postcommunio: 'postcommunio'
 };
 

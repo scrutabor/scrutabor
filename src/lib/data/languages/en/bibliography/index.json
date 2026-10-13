@@ -7171,6 +7171,20 @@
        "uses": 1
       },
       {
+       "id": "proprium.vigilia-paschalis-laudes-canticum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-paschalis-laudes-psalmus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.vigilia-paschalis-postcommunio",
        "roles": [
         "derived_digital_collation_aid"
@@ -14873,42 +14887,56 @@
       {
        "id": "proprium.vigilia-paschalis-alleluia",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.vigilia-paschalis-collecta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.vigilia-paschalis-epistola",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.vigilia-paschalis-evangelium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-paschalis-laudes-canticum",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-paschalis-laudes-psalmus",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.vigilia-paschalis-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.vigilia-paschalis-secreta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -15058,6 +15086,7 @@
     {
      "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
      "roles": [
+      "corroborating_latin_witness",
       "official_text"
      ],
      "texts": [
@@ -15135,6 +15164,20 @@
        "id": "ordinarium.qui-pridie-in-cena-domini",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-paschalis-laudes-canticum",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-paschalis-laudes-psalmus",
+       "roles": [
+        "corroborating_latin_witness"
        ],
        "uses": 1
       }
@@ -19796,23 +19839,25 @@
       {
        "id": "proprium.vigilia-paschalis-collecta",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.vigilia-paschalis-postcommunio",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.vigilia-paschalis-secreta",
        "roles": [
-        "official_liturgical_context"
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.vigilia-pentecostes-collecta",
@@ -20382,6 +20427,34 @@
        ]
       },
       {
+       "id": "augustus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n4509, augustus1"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.augustus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "augustus"
+           },
+           "claim": "Adjective agreeing with firmamento, not Augustus the emperor or a month. General adjective meanings, no token-local statement on the lemma card."
+          }
+         ],
+         "verified_on": "2026-10-13"
+        }
+       ]
+      },
+      {
        "id": "beatitudo",
        "roles": [
         "lexical_support"
@@ -20546,6 +20619,90 @@
           }
          ],
          "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "chorda",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n7862, chorda"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.chorda.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "chorda"
+           },
+           "claim": "Musical string first, attested cord second. No cognate or derivative is invented."
+          }
+         ],
+         "verified_on": "2026-10-13"
+        }
+       ]
+      },
+      {
+       "id": "chorus",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n7880, chorus"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.chorus.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "chorus"
+           },
+           "claim": "The complete entry attests a choral company, a dance, and collective choir usage; the senses distinguish the company from the activity."
+          }
+         ],
+         "verified_on": "2026-10-13"
+        }
+       ]
+      },
+      {
+       "id": "clangor",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n8489, clangor"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.clangor.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "clangor"
+           },
+           "claim": "Clangore tubae supplies an instrumental trumpet sound, not a new sung text or a military event."
+          }
+         ],
+         "verified_on": "2026-10-13"
         }
        ]
       },
@@ -21226,6 +21383,34 @@
        ]
       },
       {
+       "id": "crepito",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n11559, crepito"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.crepito.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "crepito"
+           },
+           "claim": "Only the two forms actually supplied by the consulted head are printed. Do not invent a perfect or supine from crepo or a productive paradigm."
+          }
+         ],
+         "verified_on": "2026-10-13"
+        }
+       ]
+      },
+      {
        "id": "cultus",
        "roles": [
         "lexical_support"
@@ -21334,6 +21519,34 @@
           }
          ],
          "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "cymbalum",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n12136, cymbalum"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.cymbalum.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "cymbalum"
+           },
+           "claim": "The complete entry identifies the cymbal as a percussion instrument; the Polish sense distinguishes it from the stringed instrument called cymbaly."
+          }
+         ],
+         "verified_on": "2026-10-13"
         }
        ]
       },
@@ -22096,6 +22309,34 @@
        ]
       },
       {
+       "id": "grandis",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n19865, grandis"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.grandis.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "grandis"
+           },
+           "claim": "Grandia describes opera. First sense covers magnitude/importance; grown-up is an attested general range, not this occurrence."
+          }
+         ],
+         "verified_on": "2026-10-13"
+        }
+       ]
+      },
+      {
        "id": "hic",
        "roles": [
         "lexical_support"
@@ -22630,6 +22871,34 @@
        ]
       },
       {
+       "id": "iusiurandum",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n25400, jusjurandum"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.iusiurandum.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "iusiurandum"
+           },
+           "claim": "The oath noun has two simultaneously inflected members, with genitive iurisiurandi and ablative iureiurando; it has no single ordinary declension numeral."
+          }
+         ],
+         "verified_on": "2026-10-13"
+        }
+       ]
+      },
+      {
        "id": "lactens",
        "roles": [
         "lexical_support"
@@ -22938,6 +23207,34 @@
        ]
       },
       {
+       "id": "organum",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n32967, organum"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.organum.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "organum"
+           },
+           "claim": "General implement/musical range. Current pipe rendering is contextual, not a claim that the word always excludes an organ."
+          }
+         ],
+         "verified_on": "2026-10-13"
+        }
+       ]
+      },
+      {
        "id": "parabola",
        "roles": [
         "lexical_support"
@@ -23102,6 +23399,34 @@
           }
          ],
          "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "psalterium",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n39278, psalterium"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.psalterium.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "psalterium"
+           },
+           "claim": "Full -ii genitive is required by house head conventions. The general lemma includes the later book sense; its Psalm150 occurrence note disambiguates the instrument."
+          }
+         ],
+         "verified_on": "2026-10-13"
         }
        ]
       },
@@ -23498,6 +23823,34 @@
        ]
       },
       {
+       "id": "spiro",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n45054, spiro"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.spiro.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "spiro"
+           },
+           "claim": "Unlike crepito, the source explicitly supplies perfect and supine. Present spirat is breathing; extended transitive senses remain general dictionary meanings."
+          }
+         ],
+         "verified_on": "2026-10-13"
+        }
+       ]
+      },
+      {
        "id": "sponsa",
        "roles": [
         "lexical_support"
@@ -23830,6 +24183,34 @@
           }
          ],
          "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "tympanum",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng1",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n49576, tympanum"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.tympanum.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "tympanum"
+           },
+           "claim": "Generic attested percussion range. No exact modern orchestral model is inferred."
+          }
+         ],
+         "verified_on": "2026-10-13"
         }
        ]
       },

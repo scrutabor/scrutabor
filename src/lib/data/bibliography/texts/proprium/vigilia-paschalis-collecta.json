@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quad6-6r.txt (section [Oratio]); resolved spans: web/www/missa/Latin/Tempora/Quad6-6r.txt (lines 486-487); web/www/missa/Latin/Ordo/Prayers.txt (lines 113-114)"
+    "section": "web/www/missa/Latin/Tempora/Quad6-6r.txt, [Prelude] at physical line 11, selected evidence lines 486–487; web/www/missa/Latin/Ordo/Prayers.txt, [Per eundem] at physical line 111, selected evidence lines 112–113; $Per eundem at physical line 487 resolves the named prayer ending"
    },
    "entries": [
     {
@@ -14,10 +14,51 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "This dependent same-recension digital comparison supplies the explicitly resolved Latin reading; it does not establish independent transmission or another printed edition."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-13"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 123",
+    "scan": "leaf n202 / PDF p. 203",
+    "section": "Fully printed prayer conclusion",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n202/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-paschalis-collecta.standard-conclusion.formula-p123",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The full printed conclusion supplies the punctuation exemplar Filium tuum: Qui tecum and Spiritus Sancti, Deus used in expanding the abbreviated Vigil collect. This is a formula exemplar, not another printing of the Vigil proper body."
+    }
+   ],
+   "verified_on": "2026-10-13"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 214",
+    "scan": "leaf n293 / PDF p. 294",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n293/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-paschalis-collecta.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The approved Benziger page prints the Vigil collect body and the abbreviated Per eundem Dominum. The full continuation and its punctuation are supported by the separately bound standard-conclusion rule and formula exemplar, not printed in full on this proper page."
+    }
+   ],
+   "verified_on": "2026-10-13"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -42,22 +83,44 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "rubric_control",
    "locator": {
-    "printed": "p. 214",
-    "scan": "leaf n293 / PDF p. 294",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n293/mode/1up"
+    "printed": "p. XVII",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "RG 115 a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
    },
    "entries": [
     {
-     "id": "use.proprium.vigilia-paschalis-collecta.mr1962",
+     "id": "use.proprium.vigilia-paschalis-collecta.standard-conclusion.rg115a",
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The general rule supplies the full Father-addressed conclusion and its terminal Per omnia saecula saeculorum with Amen. This is the standard continuation of the abbreviation on the Vigil proper page, not a full local-page quotation."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-13"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XVIII",
+    "scan": "leaf n23 / PDF p. 24",
+    "section": "RG 115 b",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-paschalis-collecta.standard-conclusion.rg115b",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The rule prescribes Per eundem when the prayer has mentioned the Son; it supports the same abbreviated ending printed in the Vigil collect. It does not supply eiusdem in this collect."
+    }
+   ],
+   "verified_on": "2026-10-13"
   }
  ],
  "witnesses": []

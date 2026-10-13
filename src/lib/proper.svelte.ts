@@ -231,7 +231,17 @@ export const proper = {
 		if (!day) return false;
 		return !canonProfile || canonProfile.texts[slot] !== ordinaryCanon(slot);
 	},
-	/** The texts for one Ordo slot, in rite order. Empty when no day is chosen. */
+	/** Canonical presence for the chosen date, including while its body is unavailable. */
+	hasSlot(slot: string): boolean {
+		if (!day || !date) return false;
+		return (
+			dayById(day)?.components.some(
+				(component) =>
+					SLOT_OF[component.role] === slot && componentApplies(component.condition, date)
+			) ?? false
+		);
+	},
+	/** Loaded texts for one Ordo slot, in rite order. */
 	forSlot(slot: string) {
 		return properOccurrences(payload?.parts ?? []).filter((p) => p.slot === slot);
 	},

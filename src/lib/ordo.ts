@@ -36,6 +36,8 @@ export interface OrdoEntry {
 	title: string;
 	kind: OrdoKind;
 	text?: string;
+	/** Show this addition only when the selected canonical assembly contains it. */
+	onlyWhenPresent?: boolean;
 	note: Record<Lang, string>;
 	when?: Record<Lang, string>;
 }
@@ -796,6 +798,16 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				note: {
 					pl: 'Antyfona z formularza dnia, odczytana po stronie lekcji. We Mszy śpiewanej chór śpiewa ją już podczas rozdawania Komunii.',
 					en: 'The day’s antiphon, read at the Epistle side. At a sung Mass the choir has already sung it during the distribution of Communion.'
+				}
+			},
+			{
+				id: 'laudes',
+				title: 'Laudes',
+				kind: 'proper',
+				onlyWhenPresent: true,
+				note: {
+					pl: 'Po Komunii i ablucjach następują śpiewane laudesy: Psalm 150 i kantyk Zachariasza, każdy z antyfoną i doksologią. Podczas kantyku następuje okadzenie.',
+					en: 'After Communion and the ablutions, sung Lauds follows: Psalm 150 and the Canticle of Zechariah, each with its antiphon and doxology. Incensation takes place during the canticle.'
 				}
 			},
 			{

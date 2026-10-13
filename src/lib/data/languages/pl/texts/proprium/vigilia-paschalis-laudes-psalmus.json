@@ -1,0 +1,16 @@
+{
+  "id":"proprium.vigilia-paschalis-laudes-psalmus",
+  "language":"pl",
+  "about":"Po Komunii i ablucjach śpiewa się Psalm 150 w ramach Jutrzni Niedzieli Zmartwychwstania. Psalm poprzedza potrójne Alleluja. Po doksologii powtarza się tę antyfonę.",
+  "seg":[
+    {"id":"s01","tr":"Alleluja, alleluja, alleluja.","g":["Alleluja","alleluja","alleluja"]},
+    {"id":"s02","tr":"Chwalcie Pana w Jego przybytku, chwalcie Go na Jego majestatycznym nieboskłonie.","g":["Chwalcie","Pana","w",null,null,"chwalcie","Go","na",null,null,null],"a":[{"s":3,"n":2,"a":0,"g":"Jego przybytku"},{"s":8,"n":3,"a":0,"g":"Jego majestatycznym nieboskłonie"}]},
+    {"id":"s03","tr":"Chwalcie Go za Jego wielkie dzieła, chwalcie Go za Jego najwyższy majestat.","g":["Chwalcie","Go","za",null,null,null,"chwalcie","Go","za",null,null,null],"a":[{"s":3,"n":3,"a":0,"g":"Jego wielkie dzieła"},{"s":9,"n":3,"a":0,"g":"Jego najwyższy majestat"}]},
+    {"id":"s04","tr":"Chwalcie Go dźwiękiem trąby, chwalcie Go grą na psałterium i cytrze.","g":["Chwalcie","Go","dźwiękiem","trąby","chwalcie","Go","na psałterium","i","cytrze"],"ex":{"w033":"„Psaltérium” oznacza dawny instrument strunowy. Nie chodzi tu o psałterz jako zbiór psalmów.","w035":"To dawny instrument strunowy, odrębny od wymienionego obok psałterium. Nazwa nie określa dokładnego współczesnego odpowiednika."}},
+    {"id":"s05","tr":"Chwalcie Go bębnem i tańcem, chwalcie Go strunami i piszczałką.","g":["Chwalcie","Go","bębnem","i","tańcem","chwalcie","Go","strunami","i","piszczałką"],"ex":{"w040":"Taniec towarzyszy tu wychwalaniu Boga.","w045":"„Órganum” może oznaczać różne instrumenty. W tym wyliczeniu przywołuje instrument dęty, niekoniecznie organy znane z dzisiejszych kościołów."}},
+    {"id":"s06","tr":"Chwalcie Go dźwięcznymi talerzami, chwalcie Go brzęczącymi talerzami. Wszystko, co oddycha, niech chwali Pana!","g":["Chwalcie","Go","talerzami","dźwięcznymi","chwalcie","Go","talerzami","brzęczącymi","wszystko","co","oddycha","niech chwali","Pana"],"ex":{"w048":"„Cýmbala” to uderzane o siebie metalowe talerze. Nie należy ich mylić ze strunowym instrumentem nazywanym dziś po polsku cymbałami."}},
+    {"id":"s07","tr":"Chwała Ojcu i Synowi, i Duchowi Świętemu.","tb":"normalized","g":["Chwała","Ojcu","i","Synowi","i","Duchowi","Świętemu"]},
+    {"id":"s08","tr":"Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.","tb":"normalized","g":["Jak","była","na","początku","i","teraz","i","zawsze","i","na","wieki","wieków","Amen"]},
+    {"id":"s09","tr":"Alleluja, alleluja, alleluja.","g":["Alleluja","alleluja","alleluja"]}
+  ]
+}

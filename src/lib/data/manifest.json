@@ -6557,6 +6557,18 @@
       "evidence": "bibliography/texts/proprium/vigilia-paschalis-evangelium.json"
     },
     {
+      "id": "proprium.vigilia-paschalis-laudes-canticum",
+      "path": "texts/proprium/vigilia-paschalis-laudes-canticum.json",
+      "title": "Benedictus ad Laudes Vigiliæ paschalis",
+      "evidence": "bibliography/texts/proprium/vigilia-paschalis-laudes-canticum.json"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-laudes-psalmus",
+      "path": "texts/proprium/vigilia-paschalis-laudes-psalmus.json",
+      "title": "Psalmus 150 ad Laudes Vigiliæ paschalis",
+      "evidence": "bibliography/texts/proprium/vigilia-paschalis-laudes-psalmus.json"
+    },
+    {
       "id": "proprium.vigilia-paschalis-postcommunio",
       "path": "texts/proprium/vigilia-paschalis-postcommunio.json",
       "title": "Spíritum nobis, Dómine, tuæ caritátis infúnde: ut",
@@ -6722,12 +6734,12 @@
     "formularies": "formularies.json",
     "metrics": "metrics.json"
   },
-  "morphology": 1050,
+  "morphology": 1054,
   "kalendarium": [
     2026,
     2101
   ],
-  "analyses": 21,
+  "analyses": 24,
   "citations": 456,
   "bibliography_schema": "1.5.0"
 }

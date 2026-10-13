@@ -72,7 +72,7 @@ const subjects: Record<string, [string, number, string][]> = {
 		['w061', 2, 'of Your glory']
 	],
 	'paschalis-in-nocte': [
-		['w037', 2, 'our death'],
+		['w040', 4, 'has destroyed our death by dying'],
 		['w061', 2, 'of Your glory']
 	],
 	quadragesimae: [

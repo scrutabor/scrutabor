@@ -77,11 +77,11 @@ const cases = [
 	[
 		'en',
 		'vigilia-paschalis-evangelium',
-		[73, 74],
-		73,
-		'was crucified',
-		['crucifíxus', 'est,'],
-		['crucifíxus', 'est']
+		[71, 72, 73, 74, 75],
+		75,
+		'you seek Jesus, who was crucified',
+		['Iesum,', 'qui', 'crucifíxus', 'est,', 'quǽritis:'],
+		['Iesum', 'qui', 'crucifíxus', 'est', 'quǽritis']
 	],
 	[
 		'en',
@@ -101,6 +101,9 @@ const englishCards: Record<string, readonly [string, string]> = {
 	],
 	esset: ['sum', 'verb — 3rd person, singular, imperfect, subjunctive, active'],
 	Iesus: ['Iesus', 'noun — nominative, singular, masculine'],
+	Iesum: ['Iesus', 'noun — accusative, singular, masculine'],
+	qui: ['qui', 'pronoun — nominative, singular, masculine'],
+	quǽritis: ['quaero', 'verb — 2nd person, plural, present, indicative, active, 3rd conjugation'],
 	locútus: [
 		'loquor',
 		'verb — participle, perfect, deponent (passive form, active meaning), nominative, singular, masculine, 3rd conjugation'
@@ -247,8 +250,8 @@ const contexts = [
 	[
 		'en',
 		'vigilia-paschalis-evangelium',
-		[71, 72, 73, 75],
-		['Jesus', 'who', 'was crucified', 'you seek']
+		[70, 75, 77, 78, 79],
+		['that', 'you seek Jesus, who was crucified', 'He is not', 'here', 'for He has risen']
 	],
 	[
 		'en',

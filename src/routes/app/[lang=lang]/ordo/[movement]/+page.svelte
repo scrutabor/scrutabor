@@ -16,6 +16,8 @@
 	import { openPage } from '$lib/page-navigation';
 	import { movementById, movementNeighbors, partVoice, type OrdoEntry } from '$lib/ordo';
 	import { role, showsWords } from '$lib/role.svelte';
+	import { massForm } from '$lib/mass-form.svelte';
+	import { inMassForm } from '$lib/speaker-marks';
 	import { ribbon } from '$lib/ribbon.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
 	import { wordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
@@ -44,6 +46,10 @@
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
 	const movement = $derived(movementById(data.movement));
+	// Presence comes from the selected assembly, not a possibly missing payload.
+	const entries = $derived(
+		(movement?.entries ?? []).filter((entry) => !entry.onlyWhenPresent || proper.hasSlot(entry.id))
+	);
 	// Whether this movement has a slot the day fills.
 	const hasProper = $derived(
 		(movement?.entries ?? []).some((e) => e.kind === 'proper' || isCanonRole(e.id))
@@ -129,14 +135,20 @@
 		return [];
 	});
 
+	const showsEntryWords = $derived((entry: OrdoEntry) =>
+		showsWords(
+			bodiesFor(entry).flatMap((body) =>
+				body.doc.segments
+					.filter((segment) => segment.type === 'verse')
+					.map((segment) => inMassForm(segment, massForm.value).voice)
+			),
+			partVoice(entry.id),
+			role.value
+		)
+	);
 	const silent = $derived(
-		(movement?.entries ?? [])
-			.filter((e) => {
-				const entry = bodiesFor(e)[0];
-				if (!entry) return false;
-				const voices = entry.doc.segments.filter((sg) => sg.type === 'verse').map((sg) => sg.voice);
-				return !showsWords(voices, partVoice(e.id), role.value);
-			})
+		entries
+			.filter((entry) => bodiesFor(entry).length > 0 && !showsEntryWords(entry))
 			.map((e) => e.id)
 	);
 
@@ -145,7 +157,7 @@
 	// share this page, so a word is addressed by text AND id — `credo.w001`
 	// — which is also what the ?w= deep link carries.
 	const inlined = $derived(
-		(movement?.entries ?? []).flatMap((e) =>
+		entries.flatMap((e) =>
 			bodiesFor(e).map(({ key, slug, anchor, doc, gloss }) => ({
 				slug,
 				key,
@@ -338,15 +350,12 @@
 		<span class="sr-only" role="status" aria-live="polite">{msgs.dayLoading}</span>
 	{/if}
 	<main class:panel-open={picked !== null || panel.keepPad} aria-busy={hasProper && proper.loading}>
-		{#each movement?.entries ?? [] as e, idx (e.id)}
+		{#each entries as e, idx (e.id)}
 			{@const bodies = bodiesFor(e)}
 			{@const entry = bodies[0]}
-			{@const voices = (entry?.doc.segments ?? [])
-				.filter((s) => s.type === 'verse')
-				.map((s) => s.voice)}
-			{@const words = showsWords(voices, partVoice(e.id), role.value)}
+			{@const words = showsEntryWords(e)}
 			{@const folded = !!entry && !words && !unfolded[e.id]}
-			{#if silent.includes(e.id) && !silent.includes(movement?.entries[idx - 1]?.id ?? '')}
+			{#if silent.includes(e.id) && !silent.includes(entries[idx - 1]?.id ?? '')}
 				<!-- Said once over the run, not on every line of it. -->
 				<p class="silent-run smallcaps">{msgs.quietCollapsed}</p>
 			{/if}
@@ -402,7 +411,7 @@
 					<div class="part-loading">
 						<ContentLoader variant="text" />
 					</div>
-				{:else if canonPending && proper.failed}
+				{:else if (canonPending || e.kind === 'proper') && proper.failed}
 					<p class="part-note" role="status">{msgs.dayFailed}</p>
 				{:else if entry && (words || unfolded[e.id])}
 					<div class="part-text">

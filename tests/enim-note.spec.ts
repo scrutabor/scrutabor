@@ -35,7 +35,10 @@ for (const language of ['pl', 'en'] as const) {
 				language === 'pl' ? '— bowiem, albowiem' : '— for, indeed'
 			);
 			if (surface === 'lemma') {
-				await expect(page.locator('.occ-form')).toHaveCount(172);
+				await expect(page.locator('.occ-form')).toHaveCount(173);
+				await expect(
+					page.locator('.occ-form[href*="w=vigilia-paschalis-laudes-canticum.w103"]')
+				).toHaveCount(1);
 				await expect(
 					page.locator('.occ-form[href*="qui-pridie-in-cena-domini"][href*="w=w048"]')
 				).toHaveCount(1);

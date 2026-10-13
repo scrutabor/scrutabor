@@ -60,17 +60,23 @@ for (const [subject, groups] of Object.entries(subjects)) {
 	});
 }
 
-for (const [subject, occasion] of [
-	['paschalis-in-die', 'day'],
-	['paschalis-in-nocte', 'night']
+for (const [subject, occasion, expected] of [
+	[
+		'paschalis-in-die',
+		'day',
+		'on this day above all, for Christ, our Passover, has been sacrificed.'
+	],
+	[
+		'paschalis-in-nocte',
+		'night',
+		'but more gloriously especially on this night, because Christ, our Passover, has been sacrificed.'
+	]
 ] as const) {
 	test(`English Easter ${occasion} preserves its occasion in the continuous translation`, async ({
 		page
 	}) => {
 		await page.goto(`/app/en/ordinarium/praefatio-${subject}`);
 		await setHelp(page, 2);
-		await expect(page.locator('.translation')).toContainText(
-			`on this ${occasion} above all, for Christ, our Passover, has been sacrificed.`
-		);
+		await expect(page.locator('.translation')).toContainText(expected);
 	});
 }

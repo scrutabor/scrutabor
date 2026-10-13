@@ -54,6 +54,8 @@
 		secreta: 'Secréta',
 		praefatio: 'Præfátio',
 		communio: 'Commúnio',
+		'laudes-psalmus': 'Laudes — Psalmus 150',
+		'laudes-canticum': 'Laudes — Benedíctus',
 		postcommunio: 'Postcommúnio'
 	};
 

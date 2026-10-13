@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quad6-6r.txt (section [Postcommunio]); resolved spans: web/www/missa/Latin/Tempora/Quad6-6r.txt (lines 793-794); web/www/missa/Latin/Ordo/Prayers.txt (lines 101-102)"
+    "section": "web/www/missa/Latin/Tempora/Quad6-6r.txt, [Prelude] at physical line 11, selected evidence lines 793–794; web/www/missa/Latin/Ordo/Prayers.txt, [Per Dominum eiusdem] at physical line 99, selected evidence lines 100–101; $Per Dominum eiusdem at physical line 794 resolves the named prayer ending"
    },
    "entries": [
     {
@@ -14,10 +14,30 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "This dependent same-recension digital comparison supplies the explicitly resolved Latin reading; it does not establish independent transmission or another printed edition."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-13"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 218",
+    "scan": "leaf n297 / PDF p. 298",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n297/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-paschalis-postcommunio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The approved Benziger page prints Spiritum nobis after the Lauds canticle and the conclusion through Sancti Deus, including eiusdem. Its comma after Christum and absence of a comma after Sancti are retained; the terminal Per omnia and Amen follow the separately bound standard conclusion."
+    }
+   ],
+   "verified_on": "2026-10-13"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -42,22 +62,23 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "rubric_control",
    "locator": {
-    "printed": "p. 218",
-    "scan": "leaf n297 / PDF p. 298",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n297/mode/1up"
+    "printed": "p. XVII",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "RG 115 a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
    },
    "entries": [
     {
-     "id": "use.proprium.vigilia-paschalis-postcommunio.mr1962",
+     "id": "use.proprium.vigilia-paschalis-postcommunio.standard-conclusion.rg115a",
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The general rule supplies the full Father-addressed conclusion and its terminal Per omnia saecula saeculorum with Amen. Only that terminal continuation is supplied beyond the Vigil Postcommunion printed on p. 218."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-13"
   }
  ],
  "witnesses": []

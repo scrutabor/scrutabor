@@ -3,7 +3,7 @@ import { setHelp, atRoute, bare as bareTest, expect, settled, test } from './fix
 import { ORDO } from '../src/lib/ordo';
 
 test('the ordo is a map of six movements, walked in order', async ({ page }) => {
-	await page.goto('/app/pl/ordo');
+	await page.goto('/app/pl/ordo?missa=none');
 	await expect(page.locator('h1')).toHaveText('Ordo Missæ');
 	const movements = page.locator('.movement');
 	await expect(movements).toHaveCount(6);
@@ -26,15 +26,22 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 	await expect(page.locator('.part-title').last()).toContainText('Cor Iesu sacratíssimum');
 	await expect(page.locator('.pager-next')).toHaveCount(0);
 
-	// every part of the spine appears on exactly one movement page — under
+	// Every ordinary part appears on exactly one movement page — under
 	// its own heading when it is shown, or as a row in the list of what the
-	// reader is not saying, which is still the part being named
+	// reader is not saying. Vigil-only Lauds is absent from ordinary-only Ordo.
+	const entries = ORDO.flatMap((m) => m.entries);
+	expect(entries.filter((entry) => entry.onlyWhenPresent).map((entry) => entry.id)).toEqual([
+		'laudes'
+	]);
 	let parts = 0;
 	for (const m of ORDO) {
-		await page.goto(`/app/pl/ordo/${m.id}`);
+		await page.goto(`/app/pl/ordo/${m.id}?missa=none`);
+		await expect(
+			page.locator('.part-title, .unfold-title').filter({ hasText: /^Laudes$/ })
+		).toHaveCount(0);
 		parts += await page.locator('.part-title, .unfold-title').count();
 	}
-	expect(parts).toBe(ORDO.flatMap((m) => m.entries).length);
+	expect(parts).toBe(entries.filter((entry) => !entry.onlyWhenPresent).length);
 	await page.goto('/app/pl/ordo/catechumenorum');
 
 	// the texts this edition carries are inlined in full (read at the bare

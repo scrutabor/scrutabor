@@ -4532,6 +4532,18 @@
       "path": "languages/pl/texts/proprium/vigilia-paschalis-evangelium.json"
     },
     {
+      "id": "proprium.vigilia-paschalis-laudes-canticum",
+      "path": "languages/pl/texts/proprium/vigilia-paschalis-laudes-canticum.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/vigilia-paschalis-laudes-canticum.json",
+      "title": "Kantyk Zachariasza na Jutrznię Wigilii Paschalnej"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-laudes-psalmus",
+      "path": "languages/pl/texts/proprium/vigilia-paschalis-laudes-psalmus.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/vigilia-paschalis-laudes-psalmus.json",
+      "title": "Psalm 150 na Jutrznię Wigilii Paschalnej"
+    },
+    {
       "id": "proprium.vigilia-paschalis-postcommunio",
       "path": "languages/pl/texts/proprium/vigilia-paschalis-postcommunio.json"
     },

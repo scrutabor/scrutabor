@@ -1030,10 +1030,10 @@
 	},
 	{
 		"text": "proprium/vigilia-paschalis-epistola",
-		"members": ["w025", "w026"],
+		"members": ["w025", "w026", "w027"],
 		"anchor": "w025",
-		"forms": ["Mórtui", "enim"],
-		"gloss": "For you are dead"
+		"forms": ["Mórtui", "enim", "estis"],
+		"gloss": "For you have died"
 	},
 	{
 		"text": "proprium/vigilia-paschalis-evangelium",
@@ -1054,7 +1054,7 @@
 		"members": ["w079", "w080"],
 		"anchor": "w079",
 		"forms": ["surréxit", "enim"],
-		"gloss": "for He is risen"
+		"gloss": "for He has risen"
 	},
 	{
 		"text": "proprium/visitatio-beatae-mariae-virginis-epistola",

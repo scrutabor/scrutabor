@@ -4665,6 +4665,16 @@
       "path": "languages/en/texts/proprium/vigilia-paschalis-evangelium.json"
     },
     {
+      "id": "proprium.vigilia-paschalis-laudes-canticum",
+      "path": "languages/en/texts/proprium/vigilia-paschalis-laudes-canticum.json",
+      "title": "Benedictus at Easter Vigil Lauds"
+    },
+    {
+      "id": "proprium.vigilia-paschalis-laudes-psalmus",
+      "path": "languages/en/texts/proprium/vigilia-paschalis-laudes-psalmus.json",
+      "title": "Psalm 150 at Easter Vigil Lauds"
+    },
+    {
       "id": "proprium.vigilia-paschalis-postcommunio",
       "path": "languages/en/texts/proprium/vigilia-paschalis-postcommunio.json"
     },

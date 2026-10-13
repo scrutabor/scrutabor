@@ -28,6 +28,14 @@ const SENSES = Object.fromEntries(
 
 const allWords = (text: TextDocument) => text.segments.flatMap((segment) => segment.words ?? []);
 
+// Contextual explanations may address one language's wording. Compare each
+// expanded pack with its own reader artifact, not with the other translation.
+const LANGUAGE_ARTIFACTS = import.meta.glob<{
+	id: string;
+	language: Lang;
+	seg: { ex?: Record<string, string>; nt?: Record<string, string> }[];
+}>('./data/languages/*/texts/**/*.json', { eager: true, import: 'default' });
+
 // The app renders cross-references as „form” (wNNN) / “form” (wNNN) links.
 // Three digits are the minimum width, not a maximum.
 const XREF = /[„“]([^”“„]+)”\s*\((w\d{3,})\)/g;
@@ -213,15 +221,55 @@ describe('vendored corpus snapshot', () => {
 						);
 	});
 
-	it('keeps shared annotation topology aligned where two packs include the same text', () => {
+	it('preserves every language-specific explanation and note from the reader artifacts', () => {
+		expect(Object.keys(LANGUAGE_ARTIFACTS)).toHaveLength(
+			LANGUAGES.reduce((count, language) => count + textKeysFor(language).length, 0)
+		);
+		for (const artifact of Object.values(LANGUAGE_ARTIFACTS)) {
+			const key = artifact.id.replace('.', '/');
+			const words = TEXTS[artifact.language][key].gloss.words;
+			for (const [field, encoded] of [
+				['explanation', 'ex'],
+				['note', 'nt']
+			] as const) {
+				// Expansion applies orphan protection; no wording or punctuation changes.
+				const spaces = (value: string) => value.replaceAll('\u00a0', ' ');
+				const expected = Object.fromEntries(
+					artifact.seg.flatMap((row) =>
+						Object.entries(row[encoded] ?? {}).map(([id, value]) => [id, spaces(value)])
+					)
+				);
+				const actual = Object.fromEntries(
+					Object.entries(words)
+						.filter(([, word]) => field in word)
+						.map(([id, word]) => [id, spaces(word[field]!)])
+				);
+				expect(actual, `${artifact.language}:${key}:${field}`).toEqual(expected);
+			}
+		}
+	});
+
+	it('keeps shared notes and required structural explanations in both languages', () => {
 		for (const key of textKeysFor('pl').filter((candidate) => candidate in TEXTS.en)) {
-			const withField = (language: Lang, field: 'explanation' | 'note') =>
+			const notes = (language: Lang) =>
 				Object.entries(TEXTS[language][key].gloss.words)
-					.filter(([, entry]) => field in entry)
+					.filter(([, entry]) => 'note' in entry)
 					.map(([id]) => id)
 					.sort();
-			expect(withField('pl', 'explanation'), key).toEqual(withField('en', 'explanation'));
-			expect(withField('pl', 'note'), key).toEqual(withField('en', 'note'));
+			expect(notes('pl'), key).toEqual(notes('en'));
+			for (const word of allWords(CORE[key])) {
+				const required = word.clause_head
+					? [word.id, word.clause_head]
+					: word.ellipsis
+						? [word.id]
+						: [];
+				for (const id of required)
+					for (const language of LANGUAGES)
+						expect(
+							TEXTS[language][key].gloss.words[id]?.explanation,
+							`${language}:${key}:${id}`
+						).toBeTruthy();
+			}
 		}
 	});
 

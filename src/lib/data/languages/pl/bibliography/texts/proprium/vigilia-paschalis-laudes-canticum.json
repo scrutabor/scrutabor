@@ -1,0 +1,36 @@
+{
+ "id": "proprium.vigilia-paschalis-laudes-canticum",
+ "source_groups": [
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 12",
+    "scan": "PDF s. 14",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.proprium.vigilia-paschalis-laudes-canticum.s15.skowronek1907",
+     "address": {
+      "kind": "segment",
+      "segment": "s15"
+     },
+     "claim": "Historyczna podstawa polskiego brzmienia: „Chwała Ojcu i Synowi, i Duchowi Świętemu.”. Znormalizowano jedynie interpunkcję, wielką literę i podział na wersety."
+    },
+    {
+     "id": "use.pl.proprium.vigilia-paschalis-laudes-canticum.s16.skowronek1907",
+     "address": {
+      "kind": "segment",
+      "segment": "s16"
+     },
+     "claim": "Historyczna podstawa polskiego brzmienia: „Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.”. Znormalizowano jedynie interpunkcję, wielką literę i podział na wersety."
+    }
+   ],
+   "verified_on": "2026-10-13"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}
