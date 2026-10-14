@@ -242,6 +242,7 @@
 	}
 
 	.close {
+		flex-shrink: 0;
 		appearance: none;
 		margin-left: auto;
 		/* the tap padding would inset the glyph from the text column's

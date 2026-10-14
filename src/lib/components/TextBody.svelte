@@ -12,6 +12,7 @@
 		sharedWithFaithful
 	} from '$lib/role.svelte';
 	import { initialFit } from '$lib/reading-geometry';
+	import { syllabify } from '$lib/pronunciation';
 	import { interlinearRuns, type InterlinearRun } from '$lib/interlinear';
 	import { sourceFaceText, sourceWindow, type SourceFace } from '$lib/source-punctuation';
 	import * as marks from '$lib/speaker-marks';
@@ -226,19 +227,27 @@
 	}
 </script>
 
+{#snippet latinLetters(form: string, raised: boolean)}{#if raised}{@const fit = initialFit(
+			form.slice(0, 1),
+			helpLevel === 1
+		)}<span
+			class="initial"
+			style:font-size="{fit.scale}em"
+			style:margin-inline-start="{fit.start}em"
+			style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
+		>{form.slice(1)}{:else}{form}{/if}{/snippet}
+
 {#snippet baseFace(form: string, suffix = '', raised = false, prefix = '')}{@const fit = initialFit(
 		form.slice(0, 1),
 		helpLevel === 1
-	)}<span
+	)}{@const ending = suffix && helpLevel === 1 ? (syllabify(form).at(-1) ?? '') : ''}{@const stem =
+		form.slice(0, form.length - ending.length)}<span
 		class="base"
 		style:padding-top={raised && helpLevel !== 1 ? `${fit.padTop}em` : null}
 		style:padding-bottom={raised && helpLevel !== 1 ? `${fit.padBottom}em` : null}
-		>{prefix}{#if raised}<span
-				class="initial"
-				style:font-size="{fit.scale}em"
-				style:margin-inline-start="{fit.start}em"
-				style:margin-inline-end="{fit.end}em">{form.slice(0, 1)}</span
-			>{form.slice(1)}{:else}{form}{/if}{suffix}</span
+		>{prefix}{#if ending}{#if stem}{@render latinLetters(stem, raised)}{/if}<span
+				class="word-ending">{@render latinLetters(ending, raised && !stem)}{suffix}</span
+			>{:else}{@render latinLetters(form, raised)}{suffix}{/if}</span
 	>{/snippet}
 
 {#snippet face(source: SourceFace, raised = false, target?: string)}<ruby
@@ -1015,6 +1024,12 @@
 		   keeps the margin. */
 		margin-inline: -0.069em;
 		border-radius: 0.172em;
+	}
+
+	/* Keep closing source punctuation with the final syllable during emergency
+	   wrapping, without adding characters to copied Latin. */
+	.word-ending {
+		white-space: nowrap;
 	}
 
 	button.word {

@@ -60,6 +60,7 @@
 		font-size: 1.7rem;
 		font-weight: 500;
 		text-align: left;
+		overflow-wrap: anywhere;
 	}
 
 	.identity-page .form {

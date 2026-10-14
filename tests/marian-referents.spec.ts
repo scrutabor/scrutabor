@@ -35,7 +35,13 @@ for (const [formulary, text, word, gloss] of [
 		if (formulary === 'dominica-resurrectionis') {
 			await setHelp(page, 2);
 			await expect(page.locator(`#text-proprium-${text} .translation`)).toContainText(
-				'Powiedz nam, Maryjo, coś widziała w drodze?'
+				'Powiedz nam, Mario, coś widziała w drodze?'
+			);
+			await expect(page.locator(`#text-proprium-${text} .translation`)).toContainText(
+				'Anielskich świadków, chustę i szaty.'
+			);
+			await expect(page.locator(`#text-proprium-${text} .translation`)).toContainText(
+				'pójdzie przed wami do Galilei'
 			);
 		}
 	});

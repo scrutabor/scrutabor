@@ -21,6 +21,10 @@ function fixture() {
 const surface = (segment: Segment, start?: number, end?: number) =>
 	sourceWindow(segment, start, end).faces.map(sourceFaceText).join(' ');
 const withoutHydrationComments = (html: string) => html.replace(/<!--.*?-->/g, '');
+// Rendering may split a word into layout-only spans; punctuation assertions
+// concern the visible Latin, not adjacency of source-code characters.
+const latinText = (html: string) =>
+	html.replace(/<rt\b[^>]*>[\s\S]*?<\/rt>/g, '').replace(/<[^>]*>/g, '');
 
 describe('source parentheses', () => {
 	it('has both source marks in the guarded font charset', () => {
@@ -155,8 +159,8 @@ describe('shared reader rendering', () => {
 			render(TextBody, { props: { doc: entry.text, gloss: entry.gloss, lang: 'en', helpLevel } })
 				.body
 		);
-		expect(html).toMatch(/\(quem/);
-		expect(html).toMatch(/mórtuis\)/);
+		expect(latinText(html)).toMatch(/\(quem/);
+		expect(latinText(html)).toMatch(/mórtuis\)/);
 	});
 
 	it('keeps a grouped construction and its lexical card independent of punctuation', () => {
@@ -180,8 +184,8 @@ describe('shared reader rendering', () => {
 		expect(html).toContain(
 			'aria-label="(quem suscitávit ex mórtuis) — whom He raised from the dead"'
 		);
-		expect(html).toMatch(/\(quem/);
-		expect(html).toMatch(/mórtuis\)/);
+		expect(latinText(html)).toMatch(/\(quem/);
+		expect(latinText(html)).toMatch(/mórtuis\)/);
 	});
 
 	it('opens before the raised letter and completes a folded pair before the ellipsis', () => {
@@ -203,7 +207,7 @@ describe('shared reader rendering', () => {
 		expect(html).not.toMatch(/>\(<\/span>/);
 		expect(html.indexOf(')')).toBeLessThan(html.lastIndexOf('…'));
 		for (const word of entry.text.segments[0].words!.slice(0, 6))
-			expect(html).toContain(word.form === 'Fratres' ? 'ratres' : word.form);
+			expect(latinText(html)).toContain(word.form);
 	});
 
 	it('keeps a folded final post and never clips a shared expression reached by a pair', () => {
@@ -230,8 +234,8 @@ describe('shared reader rendering', () => {
 			}).body
 		);
 		expect(html.match(/class="base /g) ?? []).toHaveLength(8);
-		expect(html).toContain('pro)');
-		expect(html).toContain('vobis,');
+		expect(latinText(html)).toContain('pro)');
+		expect(latinText(html)).toContain('vobis,');
 		expect(html).toContain('for you all');
 		expect(html).toMatch(/<\/span> …<\/p>/);
 	});
