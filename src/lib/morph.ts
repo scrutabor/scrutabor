@@ -1,7 +1,7 @@
 // Renders the language-neutral morph object as a reader-facing description.
 // The corpus stores enums (SCHEMA.md); every gloss language brings its own
 // label set here.
-import type { Analysis, Morph } from './corpus';
+import type { Analysis, LemmaEntry, Morph } from './corpus';
 import { bindOrphans } from './polish';
 import type { Lang } from './i18n';
 
@@ -150,15 +150,24 @@ const LABELS: Record<Lang, MorphLabels> = {
 // (masculinum/femininum/neutrum) — the same in every gloss language.
 export const GENDER_MARK: Record<string, string> = { m: 'm.', f: 'f.', n: 'n.' };
 
+// Dictionary alternatives describe the lemma, not the selected word's parse.
+export function describeLemmaGender(
+	e: Pick<LemmaEntry, 'gender' | 'gender_alt'> | null | undefined
+): string {
+	const genders = [e?.gender, e?.gender_alt].filter((gender): gender is string => !!gender);
+	return [...new Set(genders)].map((gender) => GENDER_MARK[gender] ?? gender).join(' / ');
+}
+
 // Lemma-level grammar line for the lemma page: part of speech plus the
 // paradigm facts the lexicon carries (no token, so no case/number here).
 export function describeLemma(
-	e: { pos: string; decl?: number; conj?: number },
+	e: Pick<LemmaEntry, 'pos' | 'decl' | 'decl_alt' | 'conj'>,
 	lang: Lang
 ): string {
 	const t = LABELS[lang];
 	const parts = [t.pos[e.pos] ?? e.pos];
-	if (e.decl) parts.push(t.decl(e.decl));
+	const declensions = [e.decl, e.decl_alt].filter((decl): decl is number => decl !== undefined);
+	if (declensions.length) parts.push([...new Set(declensions)].map(t.decl).join(' / '));
 	if (e.conj) parts.push(t.conj(e.conj));
 	const line = parts.join(', ');
 	return lang === 'pl' ? bindOrphans(line) : line;

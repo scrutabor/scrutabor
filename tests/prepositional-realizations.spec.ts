@@ -25,7 +25,7 @@ const relations = [
 	['en', 'nativitas-domini-in-aurora-evangelium', 'w006', 'to', 1],
 	['en', 'nativitas-domini-in-nocte-evangelium', 'w181', 'in', 1],
 	['en', 'septem-dolorum-beatae-mariae-virginis-sequentia', 'w099', 'in', 1],
-	['en', 'dominica-in-albis-alleluia', 'w023', 'of disciples', 1],
+	['en', 'dominica-in-albis-alleluia', 'w023', 'His disciples', 2],
 	['en', 'sanctae-annae-matris-beatae-mariae-virginis-evangelium', 'w105', 'of the just', 1],
 	['pl', 'dedicatio-sancti-michaelis-archangeli-evangelium', 'w024', 'nich', 1],
 	['pl', 'sancti-matthiae-apostoli-secreta', 'w015', 'dzięki', 1],

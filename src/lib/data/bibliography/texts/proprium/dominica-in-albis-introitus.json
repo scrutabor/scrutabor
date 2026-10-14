@@ -14,15 +14,15 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned digital reading supplies a derived comparison with the printed component, including substantive rationabiles at both antiphon occurrences and the declared accidental differences; it does not corroborate the printed singular at those two places."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-10-14"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 334",
     "scan": "leaf n415 / PDF p. 416",
@@ -34,10 +34,52 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The approved printing gives the complete Low Sunday antiphon and psalm verse, including singular rationabile, followed by Gloria Patri and antiphon-repetition cues; the separately identified common page and rubric supply the expansions."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-14"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 1",
+    "scan": "leaf n80 / PDF p. 81",
+    "section": "First Sunday of Advent — full Introit doxology",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-in-albis-introitus.gloria-patri.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The common printed doxology supplies Gloria Patri through Amen for the Low Sunday cue, including the retained comma after semper."
+    }
+   ],
+   "verified_on": "2026-10-14"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. xxix",
+    "scan": "leaf n34 / PDF p. 35",
+    "section": "RG 427–429",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n34/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-in-albis-introitus.introit-repetition.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Introit rules govern antiphon, psalm verse, complete doxology and repeated antiphon, with the stated exceptions."
+    }
+   ],
+   "verified_on": "2026-10-14"
   }
  ],
  "witnesses": []

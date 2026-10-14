@@ -14,7 +14,7 @@ const readings = [
 		'different gifts according to the grace given to us',
 		8
 	],
-	['proprium/dominica-in-albis-epistola', 'w004', 'is born', 2],
+	['proprium/dominica-in-albis-epistola', 'w004', 'has been born', 2],
 	['proprium/dominica-xi-post-pentecosten-evangelium', 'w063', 'were opened', 2],
 	['proprium/dominica-xiii-post-pentecosten-epistola', 'w098', 'had been given', 2],
 	['proprium/dominica-xix-post-pentecosten-evangelium', 'w139', 'was filled', 2],

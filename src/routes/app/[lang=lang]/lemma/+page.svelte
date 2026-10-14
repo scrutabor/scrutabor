@@ -6,7 +6,7 @@
 	import WordIdentity from '$lib/components/WordIdentity.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { externalDictionaryHref } from '$lib/lemma-url';
-	import { GENDER_MARK, describeLemma } from '$lib/morph';
+	import { describeLemmaGender, describeLemma } from '$lib/morph';
 	import { pageUrl } from '$lib/url';
 
 	let { data } = $props();
@@ -50,6 +50,7 @@
 
 	const lemma = $derived(payload?.lemma ?? '');
 	const entry = $derived(payload?.entry ?? null);
+	const gender = $derived(describeLemmaGender(entry));
 	const sense = $derived(payload?.sense ?? null);
 	const headword = $derived((entry?.head ?? lemma).split(',')[0].trim());
 	const texts = $derived(payload?.occurrences ?? []);
@@ -86,8 +87,7 @@
 			<div class="lexical-summary">
 				<AnalysisRow label={msgs.wordEntryLabel} id="lemma-entry-label" level={2} first>
 					<p class="head">
-						<i lang="la">{entry.head}</i>{#if entry.gender}&nbsp;<span class="gender"
-								>{GENDER_MARK[entry.gender]}</span
+						<i lang="la">{entry.head}</i>{#if gender}&nbsp;<span class="gender">{gender}</span
 							>{/if}{#if sense}<span class="head-senses">{' — '}{sense.senses.join(', ')}</span
 							>{/if}
 					</p>

@@ -8,7 +8,7 @@
 	import type { Analysis, Lexicon, Word, WordGloss } from '$lib/corpus';
 	import { lemmaHref } from '$lib/lemma-url';
 	import { M, type Lang } from '$lib/i18n';
-	import { GENDER_MARK, describeAnalysisParts, describeMorphParts } from '$lib/morph';
+	import { describeLemmaGender, describeAnalysisParts, describeMorphParts } from '$lib/morph';
 	import { describeConstruction, type WordConstruction } from '$lib/word-construction';
 
 	let {
@@ -100,11 +100,12 @@
 
 {#snippet entry(item: Word)}
 	{@const lemmaEntry = lex.lemmata[item.lemma]}
+	{@const gender = describeLemmaGender(lemmaEntry)}
 	{@const senseEntry = lex.senses[item.lemma]}
 	<p class="head">
 		<a href={lemmaHref(lang, item.lemma)} title={M[lang].lemmaPageHint}
-			><i lang="la">{lemmaEntry?.head ?? item.lemma}</i>{#if lemmaEntry?.gender}&nbsp;<span
-					class="gender">{GENDER_MARK[lemmaEntry.gender]}</span
+			><i lang="la">{lemmaEntry?.head ?? item.lemma}</i>{#if gender}&nbsp;<span class="gender"
+					>{gender}</span
 				>{/if}</a
 		>{#if senseEntry}<span class="head-senses">— {senseEntry.senses.join(', ')}</span>{/if}
 	</p>

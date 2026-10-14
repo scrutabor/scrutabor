@@ -566,6 +566,12 @@
       "evidence": "bibliography/texts/ordinarium/praefatio-paschalis-in-nocte.json"
     },
     {
+      "id": "ordinarium.praefatio-paschalis",
+      "path": "texts/ordinarium/praefatio-paschalis.json",
+      "title": "Præfátio paschális",
+      "evidence": "bibliography/texts/ordinarium/praefatio-paschalis.json"
+    },
+    {
       "id": "ordinarium.praefatio-quadragesimae",
       "path": "texts/ordinarium/praefatio-quadragesimae.json",
       "title": "Præfatio de Quadragesima",
@@ -2365,7 +2371,7 @@
     {
       "id": "proprium.dominica-in-albis-introitus",
       "path": "texts/proprium/dominica-in-albis-introitus.json",
-      "title": "Quasi modo géniti infántes, allelúia: rationábiles, sine",
+      "title": "Quasi modo géniti infántes, allelúia: rationábile, sine",
       "evidence": "bibliography/texts/proprium/dominica-in-albis-introitus.json"
     },
     {

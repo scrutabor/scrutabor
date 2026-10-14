@@ -7836,6 +7836,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-paschalis",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-paschalis-in-die",
        "roles": [
         "direct_approved_print"
@@ -9955,9 +9962,9 @@
       {
        "id": "proprium.dominica-in-albis-introitus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-in-albis-offertorium",
@@ -15175,6 +15182,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-paschalis",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.qui-pridie-in-cena-domini",
        "roles": [
         "official_text"
@@ -18210,6 +18224,13 @@
        "id": "proprium.dominica-in-albis-collecta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-in-albis-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },

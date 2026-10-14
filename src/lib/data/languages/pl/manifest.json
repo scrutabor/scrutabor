@@ -524,6 +524,11 @@
       "path": "languages/pl/texts/ordinarium/praefatio-paschalis-in-nocte.json"
     },
     {
+      "id": "ordinarium.praefatio-paschalis",
+      "path": "languages/pl/texts/ordinarium/praefatio-paschalis.json",
+      "title": "Prefacja wielkanocna — okres wielkanocny"
+    },
+    {
       "id": "ordinarium.praefatio-quadragesimae",
       "path": "languages/pl/texts/ordinarium/praefatio-quadragesimae.json"
     },

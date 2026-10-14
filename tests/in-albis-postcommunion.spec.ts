@@ -3,7 +3,7 @@ import { expect, setHelp, setTheme, test } from './fixtures';
 const text = 'dominica-in-albis-postcommunio';
 const prose = {
 	pl: 'Prosimy, Panie, Boże nasz, abyś przenajświętsze tajemnice, których udzieliłeś dla osłony naszego odnowienia, uczynił dla nas lekarstwem zarówno obecnym, jak i przyszłym. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.',
-	en: 'We ask You, Lord our God, to make the most holy mysteries, which You have bestowed to safeguard our restoration, a remedy for us both now and in the future. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, for ever and ever.'
+	en: 'We ask You, Lord our God, to make the most holy mysteries, which You have bestowed to safeguard our restoration, a remedy for us both now and in the future. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.'
 };
 const groups = {
 	pl: [
@@ -21,7 +21,13 @@ const groups = {
 		[['w015', 'w016', 'w017'], 'w017', ['præsens', 'nobis', 'remédium'], 'a present remedy for us'],
 		[['w018', 'w019'], 'w019', ['esse', 'fácias'], 'You may make'],
 		[['w027', 'w028'], 'w027', ['Fílium', 'tuum'], 'Your Son'],
-		[['w036', 'w037'], 'w036', ['Spíritus', 'Sancti'], 'of the Holy Spirit']
+		[['w036', 'w037'], 'w036', ['Spíritus', 'Sancti'], 'of the Holy Spirit'],
+		[
+			['w039', 'w040', 'w041', 'w042'],
+			'w041',
+			['per', 'ómnia', 'sǽcula', 'sæculórum'],
+			'forever and ever'
+		]
 	]
 } as const;
 
@@ -78,7 +84,7 @@ for (const language of ['pl', 'en'] as const) {
 		await setHelp(page, 1);
 		const section = page.locator(`#text-proprium-${text}`);
 		await expect(section.locator('.token')).toHaveCount(43);
-		await expect(section.locator('rt')).toHaveCount(language === 'pl' ? 40 : 35);
+		await expect(section.locator('rt')).toHaveCount(language === 'pl' ? 40 : 32);
 		const direct =
 			language === 'pl'
 				? [
@@ -94,8 +100,7 @@ for (const language of ['pl', 'en'] as const) {
 						['w021', 'a future one'],
 						['w030', 'with You'],
 						['w031', 'lives'],
-						['w033', 'reigns'],
-						['w039', 'for']
+						['w033', 'reigns']
 					];
 		for (const [word, gloss] of [...direct, ['w043', 'Amen']]) {
 			const button = section.locator(`button[id="${text}.${word}"]`);

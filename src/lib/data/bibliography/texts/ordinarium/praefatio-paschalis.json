@@ -1,0 +1,45 @@
+{
+ "id": "ordinarium.praefatio-paschalis",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 291",
+    "scan": "leaf n370 / PDF p. 371",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n370/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.praefatio-paschalis.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The approved Benziger printing supplies the complete Easter Preface from Vere dignum through sine fine dicentes, with the seasonal alternative in hoc potissimum. Its adjoining rubric distinguishes this wording from the night and day alternatives. The preceding dialogue, following Sanctus and surrounding rubrics are outside the selected body."
+    }
+   ],
+   "verified_on": "2026-10-14"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 288",
+    "scan": "physical PDF p. 369"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.praefatio-paschalis.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The retained Vatican typical-text reproduction supplies the complete same seasonal Easter Preface and its in hoc potissimum alternative. The comparison setting lacks the Benziger comma after destruxit. Its unproved reproduction date is distinct from the underlying 1962 text; dialogue, Sanctus and rubrics remain outside this body."
+    }
+   ],
+   "verified_on": "2026-10-14"
+  }
+ ],
+ "witnesses": []
+}

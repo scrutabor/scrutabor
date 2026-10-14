@@ -532,6 +532,11 @@
       "path": "languages/en/texts/ordinarium/praefatio-paschalis-in-nocte.json"
     },
     {
+      "id": "ordinarium.praefatio-paschalis",
+      "path": "languages/en/texts/ordinarium/praefatio-paschalis.json",
+      "title": "Easter Preface — Easter season"
+    },
+    {
       "id": "ordinarium.praefatio-quadragesimae",
       "path": "languages/en/texts/ordinarium/praefatio-quadragesimae.json",
       "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-quadragesimae.json"

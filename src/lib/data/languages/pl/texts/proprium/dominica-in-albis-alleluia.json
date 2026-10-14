@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Alleluia formularza „Niedziela Biała” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Alleluja, alleluja. W dniu mego zmartwychwstania, mówi Pan, uprzedzę was do Galilei. Alleluja. Po ośmiu dniach, przy drzwiach zamkniętych, stanął Jezus pośród swoich uczniów i rzekł: Pokój wam. Alleluja.","g":["Alleluja","alleluja","w","dniu","zmartwychwstania","mojego","mówi","Pan",null,null,"do","Galilei","Alleluja","Po","dniach","ośmiu","drzwiami","zamkniętymi","stanął","Jezus",null,null,"uczniów","swoich","i","rzekł","Pokój","wam","Alleluja"],"a":[{"s":8,"n":2,"a":0,"g":"pójdę przed wami"},{"s":20,"n":2,"a":1,"g":"pośród"}],"ex":{"w009":"Praecedam jest formą pierwszej osoby czasu przyszłego: Jezus zapowiada, że pójdzie przed uczniami do Galilei."}}
+    {"id":"s01","tr":"Alleluja, alleluja. W dniu Mojego zmartwychwstania — mówi Pan — pójdę przed wami do Galilei. Alleluja. Po ośmiu dniach, przy zamkniętych drzwiach, Jezus stanął pośród Swoich uczniów i powiedział: Pokój wam. Alleluja.","g":["Alleluja","alleluja","w","dniu","zmartwychwstania","Mojego","mówi","Pan",null,null,"do","Galilei","Alleluja","Po","dniach","ośmiu",null,null,"stanął","Jezus",null,null,"uczniów","Swoich","i","rzekł","Pokój","wam","Alleluja"],"a":[{"s":8,"n":2,"a":0,"g":"pójdę przed wami"},{"s":16,"n":2,"a":1,"g":"przy zamkniętych drzwiach"},{"s":20,"n":2,"a":1,"g":"pośród"}],"ex":{"w009":"Praecedam jest formą pierwszej osoby czasu przyszłego: Jezus zapowiada, że pójdzie przed uczniami do Galilei."}}
   ]
 }
