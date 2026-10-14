@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Easter Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. Christ our Pasch is sacrificed.","g":["Alleluia","alleluia","Pasch","our",null,null,"Christ"],"a":[{"s":4,"n":2,"a":0,"g":"has been sacrificed"}]}
+    {"id":"s01","tr":"Alleluia, alleluia. Christ, our Passover lamb, has been sacrificed.","g":["Alleluia","alleluia",null,null,null,null,null],"a":[{"s":2,"n":5,"a":2,"g":"Christ, our Passover, has been sacrificed"}],"ex":{"w005":"Christus is the subject. Pascha nostrum identifies Him as our Passover, and immolatus est means “has been sacrificed”."}}
   ]
 }

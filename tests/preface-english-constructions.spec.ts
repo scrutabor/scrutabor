@@ -64,7 +64,7 @@ for (const [subject, occasion, expected] of [
 	[
 		'paschalis-in-die',
 		'day',
-		'on this day above all, for Christ, our Passover, has been sacrificed.'
+		'but more gloriously especially on this day, because Christ, our Passover, has been sacrificed.'
 	],
 	[
 		'paschalis-in-nocte',

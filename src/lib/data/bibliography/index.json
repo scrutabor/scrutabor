@@ -10714,9 +10714,9 @@
       {
        "id": "proprium.dominica-resurrectionis-collecta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-resurrectionis-communio",
@@ -10735,7 +10735,7 @@
       {
        "id": "proprium.dominica-resurrectionis-evangelium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -10749,9 +10749,9 @@
       {
        "id": "proprium.dominica-resurrectionis-introitus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-resurrectionis-offertorium",
@@ -10763,7 +10763,7 @@
       {
        "id": "proprium.dominica-resurrectionis-sequentia",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -16637,7 +16637,15 @@
       {
        "id": "proprium.dominica-resurrectionis-collecta",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "proprium.dominica-resurrectionis-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },

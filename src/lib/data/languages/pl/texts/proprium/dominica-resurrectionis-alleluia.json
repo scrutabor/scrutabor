@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Alleluia formularza „Niedziela Zmartwychwstania Pańskiego” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Alleluja, alleluja. Chrystus został ofiarowany jako nasza Pascha.","g":["Alleluja","alleluja","Pascha","nasza",null,null,"Chrystus"],"a":[{"s":4,"n":2,"a":0,"g":"został ofiarowany"}]}
+    {"id":"s01","tr":"Alleluja, alleluja. Chrystus, nasz Baranek paschalny, został złożony w ofierze.","g":["Alleluja","alleluja",null,null,null,null,null],"a":[{"s":2,"n":5,"a":2,"g":"Chrystus, nasza Pascha, został ofiarowany"}],"ex":{"w005":"Christus jest podmiotem, Pascha nostrum określa Go w apozycji, a immolatus est oznacza „został ofiarowany”."}}
   ]
 }

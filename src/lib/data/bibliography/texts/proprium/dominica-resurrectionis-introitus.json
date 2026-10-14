@@ -22,7 +22,28 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 219",
+    "scan": "leaf n298 / PDF p. 299",
+    "section": "Ordo Missae — Gloria Patri",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n298/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-resurrectionis-introitus.gloria-patri.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Ordinary prints the complete Gloria Patri and Sicut erat used to expand the Easter Introit cue; its colon after semper is recorded in the apparatus."
+    }
+   ],
+   "verified_on": "2026-10-13"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 322",
     "scan": "leaf n403 / PDF p. 404",
@@ -34,10 +55,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The page prints the complete Easter antiphon and psalm verse, followed by cues for Gloria Patri and the antiphon repetition; the separately identified Ordinary and rubrics supply the expansion."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-13"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. xxix",
+    "scan": "leaf n34 / PDF p. 35",
+    "section": "RG 427–429",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n34/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-resurrectionis-introitus.introit-repetition.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The rules require the Introit antiphon, psalm verse, Gloria Patri and repeated antiphon, with the stated omissions and Paschal Alleluia provisions."
+    }
+   ],
+   "verified_on": "2026-10-13"
   }
  ],
  "witnesses": []
