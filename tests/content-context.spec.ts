@@ -171,7 +171,7 @@ for (const language of ['pl', 'en']) {
 		await expect(part.locator('.translation')).toContainText(
 			language === 'pl'
 				? 'śmierć nie będzie już nad Nim panować'
-				: 'death shall no more have dominion over Him'
+				: 'death will no longer have dominion over Him'
 		);
 	});
 }
