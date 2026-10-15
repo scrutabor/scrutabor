@@ -86,6 +86,13 @@ const PASCHAL_DISMISSAL = {
 	en: 'At the Easter Vigil and at temporal Masses within the Easter octave, two Alleluias are added to Ite, missa est and Deo gratias.'
 };
 
+const PENTECOST_VIGIL: Record<string, Record<Lang, string>> = {
+	credo: {
+		pl: 'W Wigilię Zesłania Ducha Świętego Credo się nie odmawia.',
+		en: 'The Creed is omitted at the Vigil of Pentecost.'
+	}
+};
+
 export function ordoContext(
 	entry: string,
 	mass: string | null,
@@ -95,5 +102,7 @@ export function ordoContext(
 	const notes: string[] = [];
 	if (entry === 'ite-missa-est' && paschalDismissal) notes.push(PASCHAL_DISMISSAL[lang]);
 	if (mass === 'vigilia-paschalis' && VIGIL[entry]) notes.push(VIGIL[entry][lang]);
+	if (mass === 'vigilia-pentecostes' && PENTECOST_VIGIL[entry])
+		notes.push(PENTECOST_VIGIL[entry][lang]);
 	return notes.length ? notes.join(' ') : undefined;
 }

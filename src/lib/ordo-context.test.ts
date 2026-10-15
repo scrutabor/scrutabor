@@ -33,6 +33,29 @@ it.each(['pl', 'en'] as const)('limits %s Vigil directions to the chosen Vigil',
 });
 
 it.each(['pl', 'en'] as const)(
+	'notes the omitted Credo on the Vigil of Pentecost in %s',
+	(lang) => {
+		const note =
+			lang === 'pl'
+				? 'W Wigilię Zesłania Ducha Świętego Credo się nie odmawia.'
+				: 'The Creed is omitted at the Vigil of Pentecost.';
+		for (const dismissal of [false, true])
+			expect(ordoContext('credo', 'vigilia-pentecostes', dismissal, lang)).toBe(note);
+		const parts = ORDO.flatMap((movement) => movement.entries).filter(
+			(entry) => entry.id !== 'credo'
+		);
+		expect(parts.length).toBeGreaterThan(60);
+		for (const entry of parts)
+			expect(ordoContext(entry.id, 'vigilia-pentecostes', false, lang), entry.id).toBeUndefined();
+		const masses = PROPER_DAYS.map((day) => day.id).filter((id) => id !== 'vigilia-pentecostes');
+		expect(masses.length).toBeGreaterThan(100);
+		for (const mass of [null, ...masses])
+			expect(ordoContext('credo', mass, false, lang) ?? '', String(mass)).not.toContain(note);
+		expect(ordoContext('credo', 'dominica-pentecostes', false, lang)).toBeUndefined();
+	}
+);
+
+it.each(['pl', 'en'] as const)(
 	'gives every retained preparation prayer an explicit %s Vigil omission note',
 	(lang) => {
 		const entries = ORDO.find((movement) => movement.id === 'praeparatio')!.entries;
