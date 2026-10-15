@@ -86,8 +86,17 @@
 		let installing: ServiceWorker | null = null;
 		let disposed = false;
 
+		// A worker that reaches `installed` beside a controller is an update
+		// only when it is not that controller: on a first visit the page's own
+		// worker can be seen as installed after it has already claimed the page
+		// (WebKit delivers the state change late), and that is not an update.
 		const onStateChange = () => {
-			if (!disposed && installing?.state === 'installed' && serviceWorkers.controller) {
+			if (
+				!disposed &&
+				installing?.state === 'installed' &&
+				serviceWorkers.controller &&
+				serviceWorkers.controller !== installing
+			) {
 				offerUpdate(installing);
 			}
 		};
