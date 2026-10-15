@@ -2,11 +2,12 @@
 	import type { Snippet } from 'svelte';
 	import TextFlow from '$lib/components/TextFlow.svelte';
 	import { textFlowUnits, type FlowRow } from '$lib/text-flow';
+	import { flowBinding } from '$lib/reading-flow';
 	import type { Citation, GlossDocument, TextDocument } from '$lib/corpus';
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { massForm } from '$lib/mass-form.svelte';
-	import { collectTranslationRelationships, litanyRows, type LitanyRow } from '$lib/reading-text';
+	import { collectTranslationRelationships } from '$lib/reading-text';
 	import {
 		isEveryonesResponse,
 		isYours,
@@ -43,7 +44,10 @@
 		hideOpeningRubric = false,
 		showTranslationSources = true,
 		verifiedTranslationCitations = [],
-		layout
+		layout,
+		preceding,
+		following,
+		precededBySources = false
 	}: {
 		doc: TextDocument;
 		gloss: GlossDocument;
@@ -85,6 +89,13 @@
 		verifiedTranslationCitations?: Citation[];
 		/** Frame the semantic opening without requiring a long source row to stay whole. */
 		layout?: Snippet<[Snippet, Snippet, boolean, boolean]>;
+		/** The last row of the body rendered before this one in the same Ordo
+		 * slot, and the first row of the body after it (see TextFlow). */
+		preceding?: FlowRow;
+		following?: FlowRow;
+		/** The body before this one in the slot shows its translation sources
+		 * on screen, so the first row's margin is neutralised there (TextFlow). */
+		precededBySources?: boolean;
 	} = $props();
 
 	// A dot, not a colon: it is unreserved in a URL, so `?w=credo.w001`
@@ -136,46 +147,32 @@
 	// opens with the initial — are pure functions of the segments and live in
 	// $lib/speaker-marks with their reasons and their tests. What is here is
 	// only the binding of them to this document.
-	const segs = $derived(doc.segments.map((segment) => marks.inMassForm(segment, massForm.value)));
+	const binding = $derived(
+		flowBinding(
+			doc,
+			gloss,
+			{ helpLevel, showSpeakerNames, hideOpeningRubric, litanyColumns },
+			massForm.value,
+			role.value
+		)
+	);
+	const segs = $derived(binding.segs);
 	// A one-line fixed response has only one rubrical speaker, but its
 	// participation still makes it an answer the reader needs identified.
 	const answers = $derived(marks.hasAnswers(segs) || marks.hasParticipation(segs));
 	// In a continuous shared prayer (Credo, Gloria, Sanctus, Agnus Dei,
 	// and the ministers' Confiteor at low Mass) V./R. would pretend that a
 	// dialogue exists. Name the shared participation in words instead.
-	const firstSharedVerse = $derived(segs.findIndex((segment) => segment.type === 'verse'));
-	const sharedSpeaker = $derived.by(() => {
-		const speakers = new Set(
-			segs
-				.filter((segment) => segment.type === 'verse' && segment.speaker)
-				.map((segment) => segment.speaker!)
-		);
-		return speakers.size === 1 ? [...speakers][0] : undefined;
-	});
-	const sharedPrayer = $derived(
-		marks.isSharedPrayer(segs, massForm.value) &&
-			(role.value === 'populus' || sharedSpeaker !== undefined)
-	);
+	const firstSharedVerse = $derived(binding.firstSharedVerse);
+	const sharedSpeaker = $derived(binding.sharedSpeaker);
+	const sharedPrayer = $derived(binding.sharedPrayer);
 	const namesSpeaker = (i: number) => marks.namesSpeaker(segs, i);
 	const marked = (i: number) => marks.marked(segs, i);
 	const namesVoice = (i: number) => marks.namesVoice(segs, i);
 	const firstVerse = $derived(marks.firstVerseWithInitial(segs));
 	const segmentId = (id: string) => (idPrefix ? `${idPrefix}-${id}` : id);
-	const rows: LitanyRow[] = $derived(
-		litanyColumns ? litanyRows(segs) : segs.map((_, primary) => ({ primary }))
-	);
-	const flow = $derived(
-		textFlowUnits(segs, rows, {
-			hideOpeningRubric,
-			namesWho: (i) =>
-				(showSpeakerNames && (sharedPrayer ? i === firstSharedVerse : namesSpeaker(i))) ||
-				namesVoice(i) ||
-				(mayJoin(segs[i], massForm.value) &&
-					marks.namesConditionalParticipation(segs, i, massForm.value)),
-			translated: (i) => helpLevel >= 2 && !!gloss.segments[segs[i].id]?.translation,
-			response: (i) => isEveryonesResponse(segs[i], massForm.value)
-		})
-	);
+	const rows = $derived(binding.rows);
+	const flow = $derived(textFlowUnits(segs, rows, binding.options));
 	const rowIndexOf = $derived.by(() => {
 		const bySegment: number[] = [];
 		rows.forEach((row, index) => {
@@ -200,6 +197,13 @@
 	const bilingual = $derived(helpLevel === 2 && !litanyColumns);
 	const translationCitations = $derived(verifiedTranslationCitations);
 	const translationRelationships = $derived(collectTranslationRelationships(segs, gloss));
+	// A body that renders its translation sources after its rows stays linked
+	// to the next body of its slot: on screen the block prices the seam with
+	// its own margins and the last row's tail is neutralised (TextFlow); on
+	// paper the block is not printed and the link prices the seam.
+	const sourcesShown = $derived(
+		helpLevel >= 2 && showTranslationSources && translationCitations.length > 0
+	);
 	let expandedSegments = $state<string[]>([]);
 	// A deep link into a fold opens it: the cited verses and the selected
 	// word's verse join the reader's own toggles. Without this a shared
@@ -356,12 +360,18 @@
 {/snippet}
 
 {#snippet opening()}
+	<!-- A body that fits its opening ends there: its last row then meets the
+	     next body across the partition, so the opening too knows what follows. -->
 	<TextFlow
 		units={flow.opening}
 		row={flowRow}
 		{helpLevel}
 		{litanyColumns}
 		responseRow={flow.responseRow}
+		{preceding}
+		{following}
+		sourcesAfter={sourcesShown}
+		sourcesBefore={precededBySources}
 	/>
 {/snippet}
 
@@ -373,6 +383,8 @@
 		{litanyColumns}
 		responseRow={flow.responseRow}
 		preceding={flow.opening.at(-1)?.rows.at(-1)}
+		{following}
+		sourcesAfter={sourcesShown}
 	/>
 	{@render translationSources()}
 {/snippet}
@@ -394,8 +406,7 @@
 	{@render layout(
 		opening,
 		continuation,
-		flow.continuation.length > 0 ||
-			(helpLevel >= 2 && showTranslationSources && translationCitations.length > 0),
+		flow.continuation.length > 0 || sourcesShown,
 		flow.compactOpening
 	)}
 {:else}
@@ -405,6 +416,10 @@
 		{helpLevel}
 		{litanyColumns}
 		responseRow={flow.responseRow}
+		{preceding}
+		{following}
+		sourcesAfter={sourcesShown}
+		sourcesBefore={precededBySources}
 	/>
 	{@render translationSources()}
 {/if}

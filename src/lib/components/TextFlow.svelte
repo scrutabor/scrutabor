@@ -1,21 +1,39 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import type { FlowRow, FlowUnit } from '$lib/text-flow';
+	import { rowEnd, rowStart, type FlowRow, type FlowUnit } from '$lib/text-flow';
 	let {
 		units,
 		row,
 		helpLevel,
 		litanyColumns,
 		responseRow,
-		preceding
+		preceding,
+		following,
+		sourcesAfter = false,
+		sourcesBefore = false
 	}: {
 		units: FlowUnit[];
 		row: Snippet<[FlowRow]>;
 		helpLevel: number;
 		litanyColumns: boolean;
 		responseRow?: number;
+		/** The row rendered just before this flow by another body of the
+		 * same slot, or the opening of the same text. With it the first row
+		 * is a partition start: its margin is priced against that row and
+		 * not zeroed as the slot's edge. */
 		preceding?: FlowRow;
+		/** The row rendered just after this flow by another body of the same
+		 * slot. With it the last row keeps its tail and knows what follows. */
+		following?: FlowRow;
+		/** On screen a translation-sources block stands after the last row of
+		 * this flow (`sourcesAfter`) or before its first row (`sourcesBefore`):
+		 * the block prices that seam with its own margins there, so the row
+		 * margin next to it is neutralised in screen media only. Paper does
+		 * not print the block, and the neighbour link prices the seam. */
+		sourcesAfter?: boolean;
+		sourcesBefore?: boolean;
 	} = $props();
+	const firstIndex = $derived(units[0]?.rows[0]?.index);
 </script>
 
 {#snippet flow()}
@@ -24,14 +42,20 @@
 			{#each unit.rows as item (item.index)}
 				<div
 					class="flow-row"
-					class:first={item.first}
-					class:last={item.last}
+					class:first={item.first && preceding === undefined}
+					class:last={item.last && following === undefined}
 					class:study={helpLevel === 1}
 					class:terminal={item.terminal}
 					class:response={item.index === responseRow}
-					class:partition-start={preceding !== undefined && item.index === units[0].rows[0].index}
-					data-before={item.before}
-					data-after={item.after}
+					class:partition-start={preceding !== undefined && item.index === firstIndex}
+					class:sources-before={sourcesBefore &&
+						preceding !== undefined &&
+						item.index === firstIndex}
+					class:sources-after={sourcesAfter && following !== undefined && item.last}
+					data-before={item.before ??
+						(preceding !== undefined && item.index === firstIndex ? rowEnd(preceding) : null)}
+					data-after={item.after ??
+						(following !== undefined && item.last ? rowStart(following) : null)}
 				>
 					{@render row(item)}
 				</div>
@@ -64,7 +88,17 @@
 <style>
 	/* These wrappers carry print boundaries and full-document row metadata.
 	   Their screen boxes vanish; Latin, translation and controls keep their
-	   existing classes, ids and sibling order within each rendered row. */
+	   existing classes, ids and sibling order within each rendered row.
+
+	   A row is `first` or `last` only at the slot's own edges. A body that
+	   follows another body in the same slot receives that body's last row
+	   as `preceding` and the one it precedes as `following`, so its edge
+	   rows carry neighbour metadata and keep their margins: the seam between
+	   two bodies is then priced by the same rules as any two rows of one
+	   text; without the metadata a second body abutted the first in the bare
+	   and bilingual faces. A translation-sources block between two bodies
+	   keeps its own margins on screen, where the row margins next to it are
+	   neutralised; paper does not print the block, so the link holds there. */
 	.flow-unit,
 	.flow-row {
 		display: contents;
@@ -85,6 +119,17 @@
 	.measure .flow-row.last > :global(:last-child),
 	.columns .flow-row.last > :global(.verse:has(+ .seg-extra)) {
 		margin-bottom: 0;
+	}
+	@media screen {
+		.flow-row.sources-after > :global(:last-child),
+		.columns .flow-row.sources-after > :global(.verse:has(+ .seg-extra)) {
+			margin-bottom: 0;
+		}
+		.flow-row.sources-before > :global(:first-child),
+		.bilingual.partition .flow-row.partition-start.sources-before > :global(.rubric),
+		.bilingual.partition .flow-row.partition-start.sources-before > :global(.who) {
+			margin-top: 0;
+		}
 	}
 	.flow-row[data-before='hidden'] > :global(.who) {
 		margin-top: 0.3rem;

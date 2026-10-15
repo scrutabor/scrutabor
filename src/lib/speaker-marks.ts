@@ -118,6 +118,17 @@ export function isSharedPrayer(segments: Segment[], form: MassForm): boolean {
 	);
 }
 
+/** The one speaker of a text whose verses all name the same speaker;
+ * undefined for a dialogue or for verses that name nobody. */
+export function sharedSpeaker(segments: Segment[]): Segment['speaker'] | undefined {
+	const speakers = new Set(
+		segments
+			.filter((segment) => segment.type === 'verse' && segment.speaker)
+			.map((segment) => segment.speaker!)
+	);
+	return speakers.size === 1 ? [...speakers][0] : undefined;
+}
+
 /** Name a conditional faculty at the start of each uninterrupted run, and
  * again after a rubric has broken the reader's place in the text. */
 export function namesConditionalParticipation(

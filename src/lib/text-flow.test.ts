@@ -1,20 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import type { Segment } from './corpus';
-import { textFlowUnits } from './text-flow';
+import { rowEnd, rowStart, textFlowUnits } from './text-flow';
 import { litanyRows } from './reading-text';
+import { rubric, verse } from './text-flow.fixture';
 
-const verse = (id: string, count = 2, speaker: Segment['speaker'] = 'sacerdos'): Segment => ({
-	id,
-	type: 'verse',
-	speaker,
-	words: Array.from({ length: count }, (_, i) => ({
-		id: `${id}.w${i}`,
-		form: `Verbum${i}`,
-		lemma: 'verbum',
-		morph: { pos: 'x' }
-	}))
-});
-const rubric = (id: string): Segment => ({ id, type: 'rubric', text: 'Hic genuflectitur.' });
 const plan = (
 	segments: Segment[],
 	options: {
@@ -284,5 +273,27 @@ describe('bounded actual-row print units', () => {
 		expect(result.compactOpening).toBe(false);
 		expect(result.responseRow).toBe(undefined);
 		expect(result.continuation[0].rows[0].terminal).toBe(false);
+	});
+});
+
+describe('the row edge classifiers', () => {
+	it('name what a row shows its neighbours', () => {
+		const flow = plan([rubric('s01'), verse('s02'), verse('s03')], {
+			who: ['s03'],
+			translated: ['s03']
+		});
+		const rows = [...flow.opening, ...flow.continuation].flatMap((unit) => unit.rows);
+		expect(rows.map(rowStart)).toEqual(['rubric', 'verse', 'who']);
+		expect(rows.map(rowEnd)).toEqual(['rubric', 'verse', null]);
+		expect(rows.map((row) => row.before)).toEqual([null, 'rubric', 'verse']);
+		expect(rows.map((row) => row.after)).toEqual(['verse', 'who', null]);
+	});
+	it('hide an opening direction and pair a litany row to nothing', () => {
+		const hidden = plan([rubric('s01'), verse('s02')], { hidden: true });
+		expect(rowStart(hidden.opening[0].rows[0])).toBe('hidden');
+		const paired = plan([verse('s01'), verse('s02', 2, 'populus')], { paired: true });
+		const first = [...paired.opening, ...paired.continuation][0].rows[0];
+		expect(first.row.response).toBeDefined();
+		expect(rowStart(first)).toBeNull();
 	});
 });

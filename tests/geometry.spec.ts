@@ -11,10 +11,30 @@ const PAGES = [
 	'/app/pl/psalmi/118-he',
 	'/app/en/ordo/canon',
 	'/app/en/ordinarium/gloria',
+	// Easter Sunday: one slot carries the Gradual, the Alleluia and the Sequence,
+	// so a seam between two bodies is on every run, not only on a pinned day.
+	'/app/pl/ordo/catechumenorum?dies=2026-04-05',
+	// First Sunday of Advent, English: the Gradual's translation sources stand
+	// between it and the Alleluia, so a seam kept apart by that block is on
+	// every run. The day is named by URL because the undated page shows the
+	// day the reader is on. The English Easter bodies carry no sources block;
+	// that page keeps the three-body slot on the English matrix.
+	'/app/en/ordo/catechumenorum?dies=2026-11-29',
+	'/app/en/ordo/catechumenorum?dies=2026-04-05',
+	// Christmas Eve, English: the slot's continuation opens with the opening
+	// body's sources block, so a sourced partition is on every run.
+	'/app/en/ordo/catechumenorum?dies=2028-12-24',
 	'/pl'
 ];
 const WIDTHS = [1512, 900, 390];
 const MODES = [0, 2, 1];
+// The proper an Ordo address names by its day. A cell that names a day must
+// show that day's proper; its identity is evidence, not an assumption.
+const DAY_PROPERS: Record<string, string> = {
+	'2026-04-05': 'dominica-resurrectionis',
+	'2026-11-29': 'dominica-i-adventus',
+	'2028-12-24': 'vigilia-nativitatis'
+};
 const TOLERANCE = 2.5;
 
 // These pairs deliberately change their adjacent geometry between reading
@@ -66,8 +86,21 @@ const STUDY_RUBRIC_SEAM = 0.55;
 const TRANSLATED_TAIL = 0.9;
 const VERSE_TAIL = 0.62;
 const GRID_TAIL = 0.55;
+// A translation-sources block between two bodies: its own margins (TextBody).
+const SOURCES_ABOVE = 1.1;
+const SOURCES_BELOW = 0.55;
 // Browser layout quantises lengths to 1/64 px; a priced constant moves far more.
 const EXACT = 0.1;
+// Paper does not print the translation sources, so two bodies of a slot are
+// priced by their link there: a direction head stands PRINT_RUBRIC_SEAM and
+// a speaker label PRINT_VOICE_SEAM times --reading below the row before it
+// (TextFlow's print rules), at every width.
+const PRINT_RUBRIC_SEAM = 0.68;
+const PRINT_VOICE_SEAM = 0.5;
+const PRINT_PAGES = [
+	'/app/en/ordo/catechumenorum?dies=2026-11-29',
+	'/app/pl/ordo/catechumenorum?dies=2026-11-29'
+];
 
 type Kind = 'verse' | 'rubric' | 'who';
 
@@ -75,18 +108,33 @@ interface Boundary {
 	before: string;
 	after: string;
 	kind: Kind;
+	/** Present only when the suite runs on this day (SCRUTABOR_TODAY). */
+	day?: string;
 }
+
+const PINNED = (globalThis as { process?: { env: Record<string, string | undefined> } }).process
+	?.env.SCRUTABOR_TODAY;
+const boundariesFor = (url: string) =>
+	(BOUNDARIES[url] ?? []).filter((boundary) => !boundary.day || boundary.day === PINNED);
 
 // Permanent source rows at the three Ordo seams whose wrappers hold their
 // margins differently in each mode, the interior rhythm the first seam must
-// keep, and one interior voice change. A seam is measured between the rows
+// keep, one interior voice change, and one seam between two bodies of a slot. A seam is measured between the rows
 // the opening and the continuation render, never between the wrappers. A
 // speaker label is addressed through the row it names, because it carries
 // no id of its own.
 const BOUNDARIES: Record<string, Boundary[]> = {
 	'/app/pl/ordo/catechumenorum': [
 		{ before: 'kyrie-s02', after: 'kyrie-s03', kind: 'verse' },
-		{ before: 'kyrie-s03', after: 'kyrie-s04', kind: 'verse' }
+		{ before: 'kyrie-s03', after: 'kyrie-s04', kind: 'verse' },
+		// The Gradual and the Alleluia of the First Sunday of Advent share one
+		// slot as two bodies; their seam is the second body's opening direction.
+		{
+			before: 'dominica-i-adventus-graduale-s02',
+			after: 'dominica-i-adventus-alleluia-s01',
+			kind: 'rubric',
+			day: '2026-11-29'
+		}
 	],
 	'/app/pl/ordo/praeparatio': [{ before: 'introibo-s02', after: 'introibo-s03', kind: 'rubric' }],
 	'/app/en/ordo/canon': [
@@ -140,6 +188,14 @@ interface GeometryProbe {
 	projected: number;
 	/** Those whose continuation holds no row, only a trailing block such as the sources. */
 	trailing: number;
+	/** Seams between two bodies of one slot: expected from the bodies' ids, measured, or kept apart by the translation sources between them. */
+	bodySeams: number;
+	projectedBodies: number;
+	blockedBodies: number;
+	/** Sources blocks with a row before and after them in one continuation, counted from the DOM alone. */
+	sourcesBetweenBodies: number;
+	/** Partitions whose continuation opens with the opening body's sources block before the next body's rows. */
+	sourcedPartitions: number;
 	seams: Measured[];
 	scale: Scale;
 	boundaries: Measured[];
@@ -233,6 +289,8 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 		[...container.querySelectorAll('.flow-row')]
 			.map((row) => boxChildren(row).filter(visible))
 			.filter((members) => members.length);
+	const isWrapper = (element: Element) =>
+		element.classList.contains('measure') || element.classList.contains('bilingual');
 	const inGrid = (element: Element) => {
 		const columns = element.closest('.columns');
 		return !!columns && getComputedStyle(columns).display === 'grid';
@@ -252,6 +310,11 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 		partitions: 0,
 		projected: 0,
 		trailing: 0,
+		bodySeams: 0,
+		projectedBodies: 0,
+		blockedBodies: 0,
+		sourcesBetweenBodies: 0,
+		sourcedPartitions: 0,
 		seams: [],
 		scale,
 		boundaries: []
@@ -271,6 +334,8 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 		return ordinal.get(element)!;
 	};
 	const recorded = new Set<string>();
+	const wasRecorded = (first: Element, second: Element) =>
+		recorded.has(`${number(first)}:${number(second)}`);
 	const record = (
 		first: Element,
 		second: Element,
@@ -308,6 +373,10 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 				continue;
 			}
 			(seen.get(first) ?? seen.set(first, new Set()).get(first)!).add(second);
+			// Two bodies' flow wrappers meet at a body seam, which is measured
+			// between their rows below; their edges hold the seam's margins
+			// inside or outside the box by face, like the partition wrappers.
+			if (isWrapper(first) && isWrapper(second)) continue;
 			if (first.classList.contains('part-text') && second.classList.contains('part-continuation')) {
 				// An Ordo part's opening and continuation are one text. Their
 				// wrappers keep margins inside or outside the box by mode, so
@@ -338,6 +407,34 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 						parent,
 						trailing.getBoundingClientRect().top - rowBottom(tail),
 						true
+					);
+					continue;
+				}
+				const leading = boxChildren(second).filter(visible)[0];
+				if (leading?.classList.contains('translation-sources') && !leading.contains(head)) {
+					// The opening's body ends at its sources block and the next body
+					// follows it: both halves are judged against the block's margins.
+					out.sourcedPartitions += 1;
+					const box = leading.getBoundingClientRect();
+					out.seams.push(
+						{
+							before: endpoint(tail) || classify(tail),
+							after: 'sources',
+							kind: 'sources-above',
+							found: true,
+							gap: box.top - rowBottom(tail),
+							translated: translatedRow(tail),
+							grid: inGrid(tail)
+						},
+						{
+							before: 'sources',
+							after: endpoint(head) || classify(head),
+							kind: 'sources-below',
+							found: true,
+							gap: head.getBoundingClientRect().top - box.bottom,
+							translated: false,
+							grid: inGrid(head)
+						}
 					);
 					continue;
 				}
@@ -381,6 +478,108 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 			':scope > .print-opening > .part-text, :scope > .part-text:not(.part-continuation)'
 		);
 		if (opening && visible(opening)) out.partitions += 1;
+	}
+	// SEVERAL BODIES IN ONE SLOT. The Gradual and the Alleluia are separate
+	// documents inside one continuation; every row belongs to the body whose
+	// slug prefixes its segment ids. Where the slug changes between two
+	// consecutive rows the bodies meet, and that seam is priced like any
+	// row boundary. The expected count comes from the ids alone.
+	const slugOf = (members: Element[]) => {
+		const owner =
+			members.find((member) => member.id) ??
+			members.map((member) => member.querySelector('[id]')).find(Boolean);
+		return (owner?.id ?? '').replace(/-(s|v)\d+$/, '');
+	};
+	for (const continuation of scope.querySelectorAll('.part-text.part-continuation')) {
+		if (!visible(continuation)) continue;
+		const slugs = new Set(
+			[...continuation.querySelectorAll('.verse[id], .rubric[id]')].map((element) =>
+				element.id.replace(/-(s|v)\d+$/, '')
+			)
+		);
+		out.bodySeams += Math.max(0, slugs.size - 1);
+		let previous: { slug: string; members: Element[] } | null = null;
+		let blocked: Element | null = null;
+		for (const child of continuation.children) {
+			const childRows = /^(flow-unit|measure|bilingual)$/.test(child.className.split(' ')[0])
+				? rows(child)
+				: [];
+			if (!childRows.length) {
+				// A block without rows between two bodies keeps them apart; only
+				// the translation sources may do so. After the last body it is a tail.
+				// A hidden block (the sources on paper) keeps nothing apart.
+				if (visible(child)) blocked = child;
+				continue;
+			}
+			for (const members of childRows) {
+				const slug = slugOf(members);
+				if (previous && previous.slug !== slug && blocked) {
+					out.blockedBodies += 1;
+					if (!blocked.classList.contains('translation-sources')) {
+						out.overlaps.push(
+							`two bodies of one slot are kept apart by an unexplained block (${blocked.className})`
+						);
+					} else {
+						// The sources block keeps its own margins above and below; both
+						// halves of the seam are judged against them.
+						const tail = previous.members.at(-1)!;
+						const head = members[0];
+						const box = blocked.getBoundingClientRect();
+						out.seams.push(
+							{
+								before: endpoint(tail) || classify(tail),
+								after: 'sources',
+								kind: 'sources-above',
+								found: true,
+								gap: box.top - rowBottom(tail),
+								translated: translatedRow(tail),
+								grid: inGrid(tail)
+							},
+							{
+								before: 'sources',
+								after: endpoint(head) || classify(head),
+								kind: 'sources-below',
+								found: true,
+								gap: head.getBoundingClientRect().top - box.bottom,
+								translated: false,
+								grid: inGrid(head)
+							}
+						);
+					}
+				} else if (previous && previous.slug !== slug) {
+					const tail = previous.members.at(-1)!;
+					const head = members[0];
+					out.projectedBodies += 1;
+					const gap = head.getBoundingClientRect().top - rowBottom(tail);
+					// In the interlinear face the two rows are box siblings and
+					// the walk above already measured them; judge the seam once.
+					if (!wasRecorded(tail, head)) record(tail, head, continuation, gap, true);
+					out.seams.push({
+						before: endpoint(tail) || classify(tail),
+						after: endpoint(head) || classify(head),
+						kind: classify(head),
+						found: true,
+						gap,
+						translated: translatedRow(tail),
+						grid: inGrid(tail)
+					});
+				}
+				previous = { slug, members };
+				blocked = null;
+			}
+		}
+		// Counted from the DOM alone: sources blocks with a row before and after.
+		const children = [...continuation.children];
+		const holdsRows = (child: Element) =>
+			/^(flow-unit|measure|bilingual)$/.test(child.className.split(' ')[0]) &&
+			rows(child).length > 0;
+		out.sourcesBetweenBodies += children.filter(
+			(child, index) =>
+				child.classList.contains('translation-sources') &&
+				visible(child) &&
+				children.slice(0, index).some(holdsRows) &&
+				children.slice(index + 1).some(holdsRows)
+		).length;
 	}
 
 	for (const boundary of boundaries) {
@@ -434,6 +633,8 @@ function expectedBoundary(measured: Measured, mode: number, scale: Scale): numbe
 			? scale.reading * STUDY_RUBRIC_SEAM
 			: scale.reading * (RUBRIC_MARGIN + scale.glossGap);
 	}
+	if (measured.kind === 'sources-above') return scale.reading * SOURCES_ABOVE;
+	if (measured.kind === 'sources-below') return scale.reading * SOURCES_BELOW;
 	if (measured.kind !== 'verse') return null;
 	if (mode === 1) return 0;
 	if (mode === 0) return scale.bare * VERSE_TAIL;
@@ -537,6 +738,10 @@ async function measure(
 		([value, size]) => {
 			localStorage.setItem('scrutabor-help', String(value));
 			localStorage.setItem('scrutabor-reading', size);
+			// The Ordo remembers the day a reader chose for the rest of their
+			// day. A cell must show the day its own address names, or today's,
+			// never the one the previous cell chose.
+			localStorage.removeItem('scrutabor-day');
 		},
 		[mode, step] as const
 	);
@@ -551,8 +756,10 @@ async function measure(
 	await expect(page.locator('main')).not.toHaveAttribute('aria-busy', 'true');
 	await expect(page.locator('.part-loading, .part.loading')).toHaveCount(0);
 	await expect(page.locator('main p.part-note[role="status"]')).toHaveCount(0);
+	const named = DAY_PROPERS[new URL(url, 'http://localhost').searchParams.get('dies') ?? ''];
+	if (named) await expect(page.locator(`main .part [id^="${named}-"]`).first()).toBeAttached();
 	await page.evaluate(() => document.fonts.ready);
-	const data = await page.evaluate(probeGeometry, BOUNDARIES[url] ?? []);
+	const data = await page.evaluate(probeGeometry, boundariesFor(url));
 	expect(data.scale.step).toBe(step);
 	expect(data.scale.reading, 'the reading token must resolve').toBeGreaterThan(0);
 	expect(data.scale.bare).toBeGreaterThan(0);
@@ -568,9 +775,7 @@ async function sweep(
 ) {
 	const expectedRuns = PAGES.length * WIDTHS.length * MODES.length;
 	const expectedBoundaries =
-		Object.values(BOUNDARIES).reduce((sum, list) => sum + list.length, 0) *
-		WIDTHS.length *
-		MODES.length;
+		PAGES.reduce((sum, url) => sum + boundariesFor(url).length, 0) * WIDTHS.length * MODES.length;
 	const findings: string[] = [];
 	const emptyRuns: string[] = [];
 	let runs = 0;
@@ -581,6 +786,11 @@ async function sweep(
 	let partitions = 0;
 	let projected = 0;
 	let trailing = 0;
+	let bodySeams = 0;
+	let projectedBodies = 0;
+	let blockedBodies = 0;
+	let sourcesBetweenBodies = 0;
+	let sourcedPartitions = 0;
 	let judgedBoundaries = 0;
 	let judgedSeams = 0;
 
@@ -605,6 +815,11 @@ async function sweep(
 				partitions += data.partitions;
 				projected += data.projected;
 				trailing += data.trailing;
+				bodySeams += data.bodySeams;
+				projectedBodies += data.projectedBodies;
+				blockedBodies += data.blockedBodies;
+				sourcesBetweenBodies += data.sourcesBetweenBodies;
+				sourcedPartitions += data.sourcedPartitions;
 				if (!data.gaps.length) emptyRuns.push(`${url} @${width} m${mode}`);
 				perMode[mode] = data;
 				for (const issue of [...data.overflow, ...data.targets, ...data.overlaps]) {
@@ -627,10 +842,30 @@ async function sweep(
 	).toBeGreaterThan(0);
 	expect(repeated, 'no physical pair may be recorded twice').toBe(0);
 	expect(partitions, 'Ordo partitions must be on the matrix').toBeGreaterThan(0);
-	expect(projected + trailing, 'every Ordo partition must be measured between rows').toBe(
-		partitions
+	expect(bodySeams, 'slots with several bodies must be on the matrix').toBeGreaterThan(0);
+	expect(
+		blockedBodies,
+		'a seam kept apart by a sources block must be on the matrix'
+	).toBeGreaterThan(0);
+	expect(
+		sourcedPartitions,
+		'a partition opened by a sources block must be on the matrix'
+	).toBeGreaterThan(0);
+	expect(
+		projected + trailing + sourcedPartitions,
+		'every Ordo partition must be measured between rows'
+	).toBe(partitions);
+	expect(
+		projectedBodies + blockedBodies,
+		'every seam between two bodies of a slot must be measured'
+	).toBe(bodySeams);
+	expect(
+		blockedBodies,
+		'a body seam is kept apart only by a sources block that is really there'
+	).toBe(sourcesBetweenBodies);
+	expect(judgedSeams, 'every projected seam must be judged').toBe(
+		projected + projectedBodies + 2 * (blockedBodies + sourcedPartitions)
 	);
-	expect(judgedSeams, 'every projected seam must be judged').toBe(projected);
 	expect(judgedBoundaries, 'named boundary coverage').toBe(expectedBoundaries);
 	expect(emptyRuns, 'every matrix cell must measure adjacent blocks').toEqual([]);
 	expect(findings, findings.join('\n')).toEqual([]);
@@ -666,6 +901,50 @@ for (const step of ['larger', 'largest'] as const) {
 		await sweep(page, step, normal.scale);
 	});
 }
+
+// On paper the translation sources are not printed, so the seam between the
+// Gradual and the Alleluia of the First Sunday of Advent (a direction head
+// after a body that shows its sources on screen) must be priced by the link
+// between the two bodies, not left at zero as the slot's edges are.
+test('paper keeps the seam between two bodies of a slot @online @sweep', async ({ page }) => {
+	test.setTimeout(120_000);
+	await page.goto('/app/pl');
+	await page.evaluate(() => localStorage.setItem('scrutabor-theme', 'light'));
+	await page.emulateMedia({ media: 'print' });
+	let judged = 0;
+	for (const url of PRINT_PAGES) {
+		for (const width of WIDTHS) {
+			await page.setViewportSize({ width, height: 1000 });
+			const data = await measure(page, url, 2, 'normal');
+			expect(
+				data.bodySeams,
+				`${url} @${width}: the slot holds two bodies on paper`
+			).toBeGreaterThan(0);
+			expect(data.blockedBodies, `${url} @${width}: paper prints no block between bodies`).toBe(0);
+			expect(data.sourcesBetweenBodies).toBe(0);
+			const seams = data.seams.filter(
+				(seam) =>
+					/dominica-i-adventus-graduale-s02$/.test(seam.before) &&
+					/dominica-i-adventus-alleluia-s01$/.test(seam.after)
+			);
+			expect(seams.length, `${url} @${width}: the Advent body seam is measured on paper`).toBe(1);
+			for (const seam of seams) {
+				const factor =
+					seam.kind === 'rubric' ? PRINT_RUBRIC_SEAM : seam.kind === 'who' ? PRINT_VOICE_SEAM : NaN;
+				const expected = data.scale.reading * factor;
+				expect(Number.isFinite(expected), `${url} @${width}: paper seam kind ${seam.kind}`).toBe(
+					true
+				);
+				expect(
+					Math.abs(seam.gap - expected),
+					`${url} @${width} paper: seam ${seam.before}→${seam.after} is ${seam.gap.toFixed(2)}px, expected ${expected.toFixed(2)}px`
+				).toBeLessThan(EXACT);
+				judged += 1;
+			}
+		}
+	}
+	expect(judged, 'paper body seams judged').toBe(PRINT_PAGES.length * WIDTHS.length);
+});
 
 // A shared gloss under a construction that OPENS the verse sits on the same
 // row as every other gloss of that verse, at every reading size. The raised

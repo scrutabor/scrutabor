@@ -34,6 +34,34 @@ interface FlowOptions {
 /** Source-word bound for every compact source row, including a first row. */
 export const SHORT_FLOW_WORDS = 12;
 
+/** What a row presents to the row before it: its first box, as the
+ * neighbour's `after` metadata names it. */
+export function rowStart(row: FlowRow): FlowRow['before'] {
+	return row.row.response !== undefined
+		? null
+		: row.hidden
+			? 'hidden'
+			: row.rubric
+				? 'rubric'
+				: row.who
+					? 'who'
+					: 'verse';
+}
+
+/** What a row presents to the row after it: its last box, as the
+ * neighbour's `before` metadata names it. */
+export function rowEnd(row: FlowRow): FlowRow['after'] {
+	return row.row.response !== undefined
+		? null
+		: row.hidden
+			? 'hidden'
+			: row.rubric
+				? 'rubric'
+				: row.translated
+					? null
+					: 'verse';
+}
+
 /** Partition actual rendered rows without slicing or changing the document. */
 export function textFlowUnits(segments: Segment[], rows: LitanyRow[], options: FlowOptions) {
 	const hasVerse = (row: LitanyRow) => segments[row.primary].type === 'verse';
@@ -64,29 +92,9 @@ export function textFlowUnits(segments: Segment[], rows: LitanyRow[], options: F
 			after: null
 		};
 	});
-	const start = (row: FlowRow) =>
-		row.row.response !== undefined
-			? null
-			: row.hidden
-				? 'hidden'
-				: row.rubric
-					? 'rubric'
-					: row.who
-						? 'who'
-						: 'verse';
-	const end = (row: FlowRow) =>
-		row.row.response !== undefined
-			? null
-			: row.hidden
-				? 'hidden'
-				: row.rubric
-					? 'rubric'
-					: row.translated
-						? null
-						: 'verse';
 	layouts.forEach((row, index) => {
-		row.before = index ? end(layouts[index - 1]) : null;
-		row.after = layouts[index + 1] ? start(layouts[index + 1]) : null;
+		row.before = index ? rowEnd(layouts[index - 1]) : null;
+		row.after = layouts[index + 1] ? rowStart(layouts[index + 1]) : null;
 	});
 
 	// A join means only this boundary is inside one bounded unit. Terminal

@@ -12,6 +12,7 @@
 	import RolePicker from '$lib/components/RolePicker.svelte';
 	import SelectedWordPanel from '$lib/components/SelectedWordPanel.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
+	import { textFlowFor } from '$lib/reading-flow';
 	import { M, type Lang } from '$lib/i18n';
 	import { openPage } from '$lib/page-navigation';
 	import { movementById, movementNeighbors, partVoice, type OrdoEntry } from '$lib/ordo';
@@ -358,6 +359,17 @@
 			{@const context = ordoContext(e.id, proper.day, proper.paschalDismissal, lang)}
 			{@const bodies = bodiesFor(e)}
 			{@const entry = bodies[0]}
+			<!-- Several bodies in one slot (the Gradual and the Alleluia) are one
+			     text to the eye: each learns the row its neighbour renders at
+			     their seam, so the seam is priced like any row boundary. -->
+			{@const edges = bodies.map((body) => ({
+				...textFlowFor(body.doc, body.gloss, { helpLevel }, massForm.value, role.value),
+				// A body that shows its translation sources on screen stays linked to
+				// the body after it, and the body after it learns that the block stands
+				// between them, so its first margin yields to the block's on screen
+				// and prices the seam on paper, where the block is not printed.
+				sources: helpLevel >= 2 && body.bibliography.translation.length > 0
+			}))}
 			{@const words = showsEntryWords(e)}
 			{@const folded = !!entry && !words && !unfolded[e.id]}
 			{#if silent.includes(e.id) && !silent.includes(entries[idx - 1]?.id ?? '')}
@@ -427,7 +439,7 @@
 					{#if hasContinuation || bodies.length > 1}
 						<div class="part-text part-continuation">
 							{@render continuation()}
-							{#each bodies.slice(1) as body (body.slug)}
+							{#each bodies.slice(1) as body, j (body.slug)}
 								{#if body.condition && !proper.date}
 									<ComponentConditionNote condition={body.condition} {lang} />
 								{/if}
@@ -442,6 +454,9 @@
 									ontap={tapWord}
 									onmark={openLegend}
 									verifiedTranslationCitations={body.bibliography.translation}
+									preceding={edges[j].last}
+									precededBySources={edges[j].sources}
+									following={edges[j + 2]?.first}
 								/>
 							{/each}
 						</div>
@@ -482,6 +497,7 @@
 							onmark={openLegend}
 							verifiedTranslationCitations={entry.bibliography.translation}
 							layout={partLayout}
+							following={edges[1]?.first}
 						/>
 					{/key}
 				{/if}

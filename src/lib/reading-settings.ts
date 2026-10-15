@@ -18,12 +18,7 @@ function presentation(segments: Segment[], form: MassForm, role: Role): string {
 	const effective = segments.map((segment) => marks.inMassForm(segment, form));
 	const answers = marks.hasAnswers(effective) || marks.hasParticipation(effective);
 	const firstVerse = effective.findIndex((segment) => segment.type === 'verse');
-	const speakers = new Set(
-		effective
-			.filter((segment) => segment.type === 'verse' && segment.speaker)
-			.map((segment) => segment.speaker!)
-	);
-	const sharedSpeaker = speakers.size === 1 ? [...speakers][0] : undefined;
+	const sharedSpeaker = marks.sharedSpeaker(effective);
 	const sharedPrayer =
 		marks.isSharedPrayer(effective, form) && (role === 'populus' || sharedSpeaker !== undefined);
 
