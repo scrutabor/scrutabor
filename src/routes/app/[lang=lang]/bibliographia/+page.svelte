@@ -68,7 +68,7 @@
 					texts: (n: number) => polishCount(n, '1 tekst', 'teksty', 'tekstów'),
 					lemmas: (n: number) => polishCount(n, '1 hasło', 'hasła', 'haseł'),
 					uses: (n: number) => polishCount(n, '1 użycie', 'użycia', 'użyć'),
-					wholeText: 'cały tekst',
+					textReference: 'tekst',
 					word: 'objaśnienie słowa',
 					lemma: 'hasło słownikowe',
 					verse: (n?: number) => (n ? `werset ${n}` : 'wskazany werset'),
@@ -121,7 +121,7 @@
 					texts: (n: number) => (n === 1 ? '1 text' : `${n} texts`),
 					lemmas: (n: number) => (n === 1 ? '1 dictionary entry' : `${n} dictionary entries`),
 					uses: (n: number) => (n === 1 ? '1 use' : `${n} uses`),
-					wholeText: 'complete text',
+					textReference: 'text',
 					word: 'word note',
 					lemma: 'dictionary entry',
 					verse: (n?: number) => (n ? `verse ${n}` : 'indicated verse'),
@@ -151,7 +151,7 @@
 		use.kind === 'lemma'
 			? copy.lemma
 			: use.kind === 'text'
-				? copy.wholeText
+				? copy.textReference
 				: use.kind === 'word'
 					? copy.word
 					: use.kind === 'range'

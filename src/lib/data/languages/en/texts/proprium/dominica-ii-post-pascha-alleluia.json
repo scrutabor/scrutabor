@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Second Sunday after Easter” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. The disciples knew the Lord Jesus in the breaking of bread. Alleluia. I am the good shepherd; I know My sheep, and Mine know Me. Alleluia.","g":["Alleluia","alleluia","knew","disciples","the Lord","Jesus","in","the breaking","of bread","Alleluia","I","am","shepherd","good","and","I know","sheep","My","and","know","Me","Mine","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. The disciples recognized the Lord Jesus at the breaking of bread. Alleluia. I am the good shepherd; I know My sheep, and My sheep know Me. Alleluia.","g":["Alleluia","alleluia",null,null,"the Lord","Jesus","at","the breaking","of bread","Alleluia","I","am",null,null,"and","I know",null,null,"and",null,null,null,"Alleluia"],"a":[{"s":2,"n":2,"a":0,"g":"the disciples recognized"},{"s":12,"n":2,"a":0,"g":"the good shepherd"},{"s":16,"n":2,"a":0,"g":"My sheep"},{"s":19,"n":3,"a":0,"g":"My sheep know Me"}]}
   ]
 }

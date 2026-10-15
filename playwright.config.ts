@@ -85,6 +85,8 @@ export default defineConfig({
 		{
 			name: 'reader-firefox',
 			testMatch: [
+				'pager-layout.spec.ts',
+				'print-associations.spec.ts',
 				'interlinear-portability.spec.ts',
 				'interlinear-clipping.spec.ts',
 				'trinity-preface.spec.ts',
@@ -114,6 +116,7 @@ export default defineConfig({
 				'lemma-paradigms.spec.ts',
 				'preface-polish-choirs.spec.ts',
 				'word-fit.spec.ts',
+				'second-easter-sunday.spec.ts',
 				'ordo-omission-guidance.spec.ts',
 				'octave-secret-constructions.spec.ts',
 				'pronoun-context.spec.ts',
@@ -126,6 +129,8 @@ export default defineConfig({
 		{
 			name: 'reader-webkit',
 			testMatch: [
+				'pager-layout.spec.ts',
+				'print-associations.spec.ts',
 				'interlinear-portability.spec.ts',
 				'interlinear-clipping.spec.ts',
 				'trinity-preface.spec.ts',
@@ -155,6 +160,7 @@ export default defineConfig({
 				'lemma-paradigms.spec.ts',
 				'preface-polish-choirs.spec.ts',
 				'word-fit.spec.ts',
+				'second-easter-sunday.spec.ts',
 				'ordo-omission-guidance.spec.ts',
 				'octave-secret-constructions.spec.ts',
 				'pronoun-context.spec.ts',

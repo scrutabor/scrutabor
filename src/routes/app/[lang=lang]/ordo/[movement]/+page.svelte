@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { untrack } from 'svelte';
+	import { untrack, type Snippet } from 'svelte';
 	import { pageUrl } from '$lib/url';
 	import type { GlossDocument, TextDocument } from '$lib/corpus';
 	import { arrowNav } from '$lib/arrow-nav';
@@ -369,20 +369,13 @@
 			{@const partLoading =
 				(e.kind === 'proper' && proper.loading) ||
 				(variantPending && (!proper.date || proper.loading))}
+			{@const inline =
+				!!entry &&
+				!folded &&
+				!partLoading &&
+				!((variantPending || e.kind === 'proper') && proper.failed)}
 			<section class="part" class:folded class:revealed class:loading={partLoading}>
-				{#if folded}
-					<!-- A prayer the reader is not saying costs ONE LINE, not a
-					     card: title, what is happening, and the way in. Twelve of
-					     these stand between the Sanctus and the Amen a person in
-					     the pew answers, and at a card apiece they were most of
-					     the page — the reader scrolls past the silence looking
-					     for their own next line. Folded, never hidden. -->
-					<button class="unfold" onclick={() => (unfolded[e.id] = true)}>
-						<span class="unfold-title" lang="la">{e.title}</span>
-						<span class="unfold-what">{context ?? e.note[lang]}</span>
-						<span class="unfold-do smallcaps">{msgs.quietReveal}</span>
-					</button>
-				{:else}
+				{#snippet partLead()}
 					<div class="part-head">
 						{#if entry}
 							<a class="part-title" href={textHref(lang, entry.key)} lang="la">{e.title}</a>
@@ -415,6 +408,59 @@
 							{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
 						{/if}
 					</p>
+				{/snippet}
+				{#snippet partLayout(
+					opening: Snippet,
+					continuation: Snippet,
+					hasContinuation: boolean,
+					compactOpening: boolean
+				)}
+					<div class="print-opening" class:compact={compactOpening}>
+						{@render partLead()}
+						<div class="part-text">
+							{#if entry.condition && !proper.date}
+								<ComponentConditionNote condition={entry.condition} {lang} />
+							{/if}
+							{@render opening()}
+						</div>
+					</div>
+					{#if hasContinuation || bodies.length > 1}
+						<div class="part-text part-continuation">
+							{@render continuation()}
+							{#each bodies.slice(1) as body (body.slug)}
+								{#if body.condition && !proper.date}
+									<ComponentConditionNote condition={body.condition} {lang} />
+								{/if}
+								<TextBody
+									doc={body.doc}
+									gloss={body.gloss}
+									{lang}
+									{helpLevel}
+									idPrefix={body.slug}
+									selectedId={panel.id}
+									citedSegments={citedPart === body.slug ? citedSegments : []}
+									ontap={tapWord}
+									onmark={openLegend}
+									verifiedTranslationCitations={body.bibliography.translation}
+								/>
+							{/each}
+						</div>
+					{/if}
+				{/snippet}
+				{#if folded}
+					<!-- A prayer the reader is not saying costs ONE LINE, not a
+					     card: title, what is happening, and the way in. Twelve of
+					     these stand between the Sanctus and the Amen a person in
+					     the pew answers, and at a card apiece they were most of
+					     the page — the reader scrolls past the silence looking
+					     for their own next line. Folded, never hidden. -->
+					<button class="unfold" onclick={() => (unfolded[e.id] = true)}>
+						<span class="unfold-title" lang="la">{e.title}</span>
+						<span class="unfold-what">{context ?? e.note[lang]}</span>
+						<span class="unfold-do smallcaps">{msgs.quietReveal}</span>
+					</button>
+				{:else if !inline}
+					{@render partLead()}
 				{/if}
 				{#if partLoading}
 					<div class="part-loading">
@@ -422,29 +468,22 @@
 					</div>
 				{:else if (variantPending || e.kind === 'proper') && proper.failed}
 					<p class="part-note" role="status">{msgs.dayFailed}</p>
-				{:else if entry && (words || unfolded[e.id])}
-					<div class="part-text">
-						<!-- One slot can hold more than one text: the chant between
-						     the readings is gradual AND alleluia, and in Lent a
-						     tract instead. Each keeps its own word ids. -->
-						{#each bodies as body (body.slug)}
-							{#if body.condition && !proper.date}
-								<ComponentConditionNote condition={body.condition} {lang} />
-							{/if}
-							<TextBody
-								doc={body.doc}
-								gloss={body.gloss}
-								{lang}
-								{helpLevel}
-								idPrefix={body.slug}
-								selectedId={panel.id}
-								citedSegments={citedPart === body.slug ? citedSegments : []}
-								ontap={tapWord}
-								onmark={openLegend}
-								verifiedTranslationCitations={body.bibliography.translation}
-							/>
-						{/each}
-					</div>
+				{:else if inline && entry}
+					{#key entry.slug}
+						<TextBody
+							doc={entry.doc}
+							gloss={entry.gloss}
+							{lang}
+							{helpLevel}
+							idPrefix={entry.slug}
+							selectedId={panel.id}
+							citedSegments={citedPart === entry.slug ? citedSegments : []}
+							ontap={tapWord}
+							onmark={openLegend}
+							verifiedTranslationCitations={entry.bibliography.translation}
+							layout={partLayout}
+						/>
+					{/key}
 				{/if}
 			</section>
 		{/each}
@@ -690,7 +729,29 @@
 		padding-bottom: 45vh;
 	}
 
+	/* The opening frame has no screen box. Text continuation keeps the
+	   same per-part text seam; only paper gains the bounded association. */
+	.print-opening {
+		display: contents;
+	}
+	.part-text.part-continuation {
+		margin-top: 0;
+	}
+
 	@media print {
+		.print-opening {
+			display: block;
+			break-inside: auto;
+		}
+		.print-opening.compact {
+			break-inside: avoid;
+		}
+		/* Rubric-only fallbacks connect onward; real source openings already
+		   share this frame with the complete title and guidance. */
+		.print-opening:not(:has(.verse)) {
+			break-after: avoid;
+		}
+
 		.page > header {
 			padding-bottom: 9pt;
 		}
@@ -704,9 +765,17 @@
 		}
 
 		.part {
+			container: print-part / inline-size;
 			margin: 0 0 11pt;
 			padding-top: 7pt;
 			break-inside: auto;
+		}
+
+		/* Revealed-aside decoration belongs to interactive reading. On paper
+		   every part shares the same measure as its bilingual text. */
+		.part.revealed .part-text {
+			border-inline-start: 0;
+			padding-inline-start: 0;
 		}
 
 		.part.folded {
@@ -767,12 +836,24 @@
 		}
 
 		.part-note {
+			break-inside: avoid;
 			font-size: 0.75rem;
 			line-height: 1.35;
 		}
 
 		.part-text {
 			margin-top: 6pt;
+		}
+	}
+
+	/* Match TextFlow's actual grid measure, not the paper or viewport.
+	   A stacked long first row must remain fragmentable; a grid opening
+	   needs the outer keep to carry its lead across containment. */
+	@container print-part (min-width: 44rem) {
+		@media print {
+			.part .print-opening:has(:global(.bilingual)) {
+				break-inside: avoid;
+			}
 		}
 	}
 </style>

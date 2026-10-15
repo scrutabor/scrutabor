@@ -98,3 +98,29 @@ for (const transport of ['', '@static-host '] as const) {
 		);
 	});
 }
+
+for (const transport of ['', '@static-host '] as const) {
+	for (const lang of ['pl', 'en'] as const) {
+		test(`${transport}${lang}: a text-level source link does not claim complete printed coverage`, async ({
+			page
+		}) => {
+			await page.goto(`/app/${lang}/bibliographia`);
+			const source = page
+				.locator('section[aria-labelledby="section-latin_textual_sources"] li.source')
+				.filter({
+					has: page.locator('cite', {
+						hasText: /^Missale Romanum ex decreto SS\. Concilii Tridentini restitutum$/
+					})
+				});
+			await source.locator('summary').click();
+			const href = `/app/${lang}/formularium/dominica-ii-post-pascha#text-proprium-dominica-ii-post-pascha-collecta`;
+			const use = source.locator('.uses li').filter({
+				has: page.locator(`a[href="${href}"]`)
+			});
+			await expect(use).toHaveCount(1);
+			await expect(use.locator('span')).toHaveText(lang === 'pl' ? '— tekst' : '— text');
+			await use.locator('a').click();
+			await expect(page.locator('#text-proprium-dominica-ii-post-pascha-collecta')).toBeVisible();
+		});
+	}
+}

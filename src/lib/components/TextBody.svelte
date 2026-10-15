@@ -1,4 +1,7 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
+	import TextFlow from '$lib/components/TextFlow.svelte';
+	import { textFlowUnits, type FlowRow } from '$lib/text-flow';
 	import type { Citation, GlossDocument, TextDocument } from '$lib/corpus';
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import { M, type Lang } from '$lib/i18n';
@@ -39,7 +42,8 @@
 		showSpeakerNames = true,
 		hideOpeningRubric = false,
 		showTranslationSources = true,
-		verifiedTranslationCitations = []
+		verifiedTranslationCitations = [],
+		layout
 	}: {
 		doc: TextDocument;
 		gloss: GlossDocument;
@@ -79,6 +83,8 @@
 		/** Audited prayer-level wording witnesses. An empty array deliberately
 		 * suppresses the legacy inline inventory while it is being migrated. */
 		verifiedTranslationCitations?: Citation[];
+		/** Frame the semantic opening without requiring a long source row to stay whole. */
+		layout?: Snippet<[Snippet, Snippet, boolean, boolean]>;
 	} = $props();
 
 	// A dot, not a colon: it is unreserved in a URL, so `?w=credo.w001`
@@ -157,6 +163,18 @@
 	const segmentId = (id: string) => (idPrefix ? `${idPrefix}-${id}` : id);
 	const rows: LitanyRow[] = $derived(
 		litanyColumns ? litanyRows(segs) : segs.map((_, primary) => ({ primary }))
+	);
+	const flow = $derived(
+		textFlowUnits(segs, rows, {
+			hideOpeningRubric,
+			namesWho: (i) =>
+				(showSpeakerNames && (sharedPrayer ? i === firstSharedVerse : namesSpeaker(i))) ||
+				namesVoice(i) ||
+				(mayJoin(segs[i], massForm.value) &&
+					marks.namesConditionalParticipation(segs, i, massForm.value)),
+			translated: (i) => helpLevel >= 2 && !!gloss.segments[segs[i].id]?.translation,
+			response: (i) => isEveryonesResponse(segs[i], massForm.value)
+		})
 	);
 	const rowIndexOf = $derived.by(() => {
 		const bySegment: number[] = [];
@@ -320,51 +338,75 @@
 	{/if}
 {/snippet}
 
-{#snippet flow()}
-	{#each rows as row (segs[row.primary].id)}
-		{@const primary = segs[row.primary]}
-		{#if row.response !== undefined}
-			<div class="litany-pair">
-				<div class="litany-cell litany-invocation">
-					{@render segment(primary, row.primary)}
-				</div>
-				<div class="litany-cell litany-response">
-					{@render segment(segs[row.response], row.response)}
-				</div>
+{#snippet flowRow(item: FlowRow)}
+	{@const row = item.row}
+	{@const primary = segs[row.primary]}
+	{#if row.response !== undefined}
+		<div class="litany-pair">
+			<div class="litany-cell litany-invocation">
+				{@render segment(primary, row.primary)}
 			</div>
-		{:else}
-			{@render segment(primary, row.primary)}
-		{/if}
-	{/each}
+			<div class="litany-cell litany-response">
+				{@render segment(segs[row.response], row.response)}
+			</div>
+		</div>
+	{:else}
+		{@render segment(primary, row.primary)}
+	{/if}
 {/snippet}
 
-{#if bilingual}
-	<!-- The container the column query answers to: rem in a container
-	     query scales with the reading knob, so bigger text correctly
-	     demands more room before the page splits (the pickers' own
-	     pattern). The grid itself lives on .columns below. -->
-	<div class="bilingual">
-		<div class="columns">{@render flow()}</div>
-	</div>
-{:else if helpLevel === 0 && !litanyColumns}
-	<!-- Bare Latin keeps a book measure: at the bare scale the frame's
-	     full content runs ~85 characters, far past the 45-75 a book sets.
-	     The litany is excluded — its paired columns are their own layout
-	     with their own width. -->
-	<div class="measure">{@render flow()}</div>
-{:else}
-	{@render flow()}
-{/if}
+{#snippet opening()}
+	<TextFlow
+		units={flow.opening}
+		row={flowRow}
+		{helpLevel}
+		{litanyColumns}
+		responseRow={flow.responseRow}
+	/>
+{/snippet}
 
-{#if helpLevel >= 2 && showTranslationSources && translationCitations.length}
-	<div class="translation-sources">
-		<SourceNotes
-			citations={translationCitations}
-			relationships={translationRelationships}
-			{lang}
-			centered
-		/>
-	</div>
+{#snippet continuation()}
+	<TextFlow
+		units={flow.continuation}
+		row={flowRow}
+		{helpLevel}
+		{litanyColumns}
+		responseRow={flow.responseRow}
+		preceding={flow.opening.at(-1)?.rows.at(-1)}
+	/>
+	{@render translationSources()}
+{/snippet}
+
+{#snippet translationSources()}
+	{#if helpLevel >= 2 && showTranslationSources && translationCitations.length}
+		<div class="translation-sources">
+			<SourceNotes
+				citations={translationCitations}
+				relationships={translationRelationships}
+				{lang}
+				centered
+			/>
+		</div>
+	{/if}
+{/snippet}
+
+{#if layout}
+	{@render layout(
+		opening,
+		continuation,
+		flow.continuation.length > 0 ||
+			(helpLevel >= 2 && showTranslationSources && translationCitations.length > 0),
+		flow.compactOpening
+	)}
+{:else}
+	<TextFlow
+		units={[...flow.opening, ...flow.continuation]}
+		row={flowRow}
+		{helpLevel}
+		{litanyColumns}
+		responseRow={flow.responseRow}
+	/>
+	{@render translationSources()}
 {/if}
 
 {#snippet verse(
@@ -448,6 +490,7 @@
 		<p
 			class="verse"
 			style:margin-top={fit0 && !bilingual ? `${fit0.reserve}em` : null}
+			style:--print-initial-reserve={fit0 ? `calc(var(--reading) * ${fit0.reserve})` : null}
 			style:--selection-initial-start={fit0 ? `calc(var(--reading) * ${-fit0.reserve})` : null}
 			class:glossed={helpLevel === 1}
 			class:quiet={seg.voice === 'secreto'}
@@ -694,12 +737,6 @@
 		}
 	}
 
-	/* With the opening process rubric absent, the first speaker name is the
-	   beginning of the standalone prayer, not a new section after prose. */
-	.rubric-anchor + .who {
-		margin-top: 0.3rem;
-	}
-
 	/* The attribution line: small caps, quiet, above the words it names —
 	   the shape a missal uses for its S. and M. */
 	.who {
@@ -714,12 +751,6 @@
 		display: flex;
 		gap: calc(var(--reading) * 0.414);
 		align-items: baseline;
-	}
-
-	/* A voice change is a stronger boundary than the regular interlinear
-	   row gap. Keep its label attached to the next source row. */
-	.verse.glossed + .who {
-		margin-top: calc(var(--reading) * (0.517 + var(--gloss-gap) + 0.86));
 	}
 
 	.who:has(+ .verse.glossed) {
@@ -1239,17 +1270,6 @@
 		padding-inline-start: calc(var(--reading) * 0.621);
 	}
 
-	/* Interlinear pairs reserve their caption and trailing line space inside
-	   the verse. Add only the remaining air above a rubric; its next Latin
-	   line has no caption below it to contribute to the opposite gap. */
-	.verse.glossed + .rubric {
-		margin-top: calc(var(--reading) * 0.55);
-	}
-
-	.rubric:has(+ .verse.glossed) {
-		margin-bottom: calc(var(--reading) * 0.85);
-	}
-
 	/* EVERY KIND OF TEXT ENDS WHERE THE LATIN ENDS (owner, 2026-08-09).
 	   Verse, rubric, narrative and translation all run to the one right
 	   edge of the column, so the page has one right margin and not four.
@@ -1341,143 +1361,14 @@
 		text-wrap: pretty;
 	}
 
-	/* THE BILINGUAL SPREAD. Above ~44rem of container the bilingual mode
-	   splits into the two columns of a hand missal, verse against verse —
-	   INSIDE the standard frame, at the bare reading scale (--reading-bare,
-	   app.css). One frame for every mode was the owner's ruling
-	   (2026-08-21, second morning): the first cut widened the page to
-	   72rem instead, and the text outgrowing its own chrome read as a
-	   leftward shift. At the bare scale the Latin column runs 42-49
-	   characters in the frame's half — Missale Meum's own desktop
-	   geometry, measured (two ~420px columns in a 900px text area).
-	   rem in the query scales with the root knob, so larger print
-	   demands a wider room before the page splits.
-
-	   Baseline alignment is what makes the rows TRUE: the first baseline
-	   of the translation sits on the first baseline of its verse — raised
-	   initial, wrapped lines and all — because with equal type and equal
-	   leading the grid can align what the eye actually reads. The row gap
-	   carries the rhythm the verse margins carry when stacked; inside the
-	   grid those margins are zeroed so no row is taller than its content
-	   from either column's side. */
-	.bilingual {
-		container: bilingual / inline-size;
-	}
-
-	/* The book measure for bare text that is not in columns: ~66
-	   characters at the bare scale, centred on the title's own axis.
-	   rem, so the root knob widens it with the type. Shared by Latin
-	   and by bilingual's stacked face below the column threshold. */
-	.measure,
-	.columns {
-		max-width: 36rem;
-		margin-inline: auto;
-	}
-
-	/* The mode wrappers' edges defer to the margins OUTSIDE them, the way
-	   flow collapse always did — in BOTH faces of przekład, because the
-	   landing's flex specimen collapses nothing either: without this the
-	   first rubric's margin stacked on the section seam in columns (the
-	   owner's find, measured by the campaign), and the last translation's
-	   margin pushed the landing's analysis box 43px from text the other
-	   modes keep at 26 (the owner's second find, same page). The drop-cap
-	   reservation is an inline style and outranks the first-child zero. */
-	.columns > :first-child,
-	.measure > :first-child {
-		margin-top: 0;
-	}
-
-	.columns > :last-child,
-	.measure > :last-child {
-		margin-bottom: 0;
-	}
-
-	/* …and in a translated LAST row both cells yield, or the verse's row
-	   margin stretches the final track and the seam grows by exactly one
-	   verse-rhythm in the columns face alone (measured 36.3 where every
-	   other mode reads 25.6). */
-	.columns > .verse:has(+ .seg-extra:last-child) {
-		margin-bottom: 0;
-	}
-
-	@container bilingual (min-width: 44rem) {
-		.columns {
-			max-width: none;
-			margin-inline: 0;
-			display: grid;
-			/* EQUAL columns (owner, 2026-08-21: with 1.12fr/1fr the Polish
-			   read as a bigger face — same type both sides, measured to the
-			   glyph, but the longer language sat in the narrower column and
-			   filled its lines fuller). Equal halves are also Missale
-			   Meum's own desktop shape, and they put the seam on the
-			   title's axis. */
-			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-			column-gap: 2.6rem;
-			align-items: baseline;
-		}
-
-		/* NO BLANKET ROW-GAP. A grid inserts its gap between EVERY row and
-		   collapses no margins — so rubrics and speaker labels, whose flow
-		   margins were priced for collapse, drift apart in columns. The verse
-		   rows carry the rhythm
-		   themselves — priced on the BARE scale (owner: on the study scale
-		   it was a third too much air) — and the pair rules below give the
-		   full-width children exactly the distances flow's collapse gave
-		   them. */
-		.columns > .verse,
-		.columns > .seg-extra {
-			margin-bottom: calc(var(--reading-bare) * 0.55);
-		}
-
-		/* before a full-width child, the verse ROW yields its margin — in
-		   flow it collapsed into the child's larger one. Both cells of a
-		   translated row must yield: the verse's next sibling is its own
-		   translation, so the rubric hides one sibling further on, and a
-		   verse that kept its margin stretched the row track and pushed
-		   the rubric 50px from ink the flow keeps at 29 (the campaign's
-		   probe, then the centrality test). */
-		.columns > .verse:has(+ :is(.rubric, .who)),
-		.columns > .verse:has(+ .seg-extra + :is(.rubric, .who)),
-		.columns > .seg-extra:has(+ :is(.rubric, .who)) {
-			margin-bottom: 0;
-		}
-
-		/* between two full-width children only the first's bottom margin
-		   speaks, as collapse decided; two rubrics keep the extra
-		   --gloss-gap their flow pair spends */
-		.columns > .rubric + :is(.rubric, .who) {
-			margin-top: 0;
-		}
-
-		.columns > .rubric + .rubric {
-			margin-top: calc(var(--reading) * var(--gloss-gap));
-		}
-
-		.columns > * {
-			grid-column: 1 / -1;
-		}
-
-		.columns > .verse {
-			grid-column: 1;
-			margin-top: 0;
-		}
-
-		.columns > .seg-extra {
-			grid-column: 2;
-			margin-top: 0;
-			padding-inline-start: 0;
-		}
-
-		.columns > .seg-extra .translation {
-			font-size: var(--reading-bare);
-			/* parity of leading with the verse column — equal type AND equal
-			   rhythm is what lets the grid align what the eye reads */
-			line-height: 1.5;
-			color: var(--ink);
-		}
-	}
-
 	@media print {
+		/* Preserve the initial's rise inside the paragraph at a page break.
+		   Its inline zero line-height keeps the Latin and ruby baselines aligned. */
+		.verse:has(.initial) {
+			padding-top: var(--print-initial-reserve, 0px);
+			margin-top: 0 !important;
+		}
+
 		/* Screen selection padding cancels its advance with negative margins,
 		   but still paints beyond a line-ending word. Paper has no selection
 		   wash, so remove that horizontal decoration instead of clipping text. */
@@ -1495,11 +1386,15 @@
 			opacity: 0;
 		}
 
-		.verse,
 		.rubric,
-		.seg-extra,
 		.litany-pair {
 			break-inside: avoid;
+		}
+		/* Long paragraphs may continue; bounded source units retain their
+		   own keep, while each fragment still has ordinary orphan control. */
+		.verse,
+		.seg-extra {
+			break-inside: auto;
 		}
 
 		.who {
@@ -1520,9 +1415,7 @@
 			font-size: 0.67em;
 		}
 
-		.rubric,
-		.verse.glossed + .rubric,
-		.rubric:has(+ .verse.glossed) {
+		.rubric {
 			margin-top: calc(var(--reading) * 0.68);
 			margin-bottom: calc(var(--reading) * 0.68);
 		}

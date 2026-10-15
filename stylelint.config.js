@@ -12,7 +12,10 @@ export default {
 	overrides: [
 		{
 			files: ['**/*.svelte'],
-			customSyntax: 'postcss-html'
+			customSyntax: 'postcss-html',
+			rules: {
+				'selector-pseudo-class-no-unknown': [true, { ignorePseudoClasses: ['global'] }]
+			}
 		}
 	]
 };

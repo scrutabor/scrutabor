@@ -82,6 +82,10 @@ npm run build          # static site into build/
 npm run build:offline  # the downloadable folder into build-offline/
 ```
 
+The actual-PDF print checks require Poppler's `pdftotext`: install
+`poppler-utils` on Ubuntu or `poppler` on macOS before running the unit and
+browser suites. Missing PDF text extraction fails the suites; CI installs it explicitly.
+
 CI runs lint, check, build, and both test suites on every push. The
 `static-host` Playwright project serves `build/` with the static host's own
 rules (`scripts/static-host.ts`) — the deployed tree, not SvelteKit's

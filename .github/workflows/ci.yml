@@ -24,6 +24,11 @@ jobs:
         with:
           python-version: '3.13'
       - run: python -m pip install -r scripts/font-requirements.txt
+      - name: install PDF text extraction
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends poppler-utils
+          pdftotext -v
       - run: npm ci
       # Unit tests include byte-budget and chunk-boundary assertions over the
       # published artifact. Consume the one canonical build rather than
@@ -120,6 +125,12 @@ jobs:
         run: npx playwright install --with-deps ${{ matrix.browser || 'chromium' }}
       - if: steps.playwright-cache.outputs.cache-hit == 'true'
         run: npx playwright install-deps ${{ matrix.browser || 'chromium' }}
+      - name: install PDF text extraction
+        if: ${{ !matrix.browser }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends poppler-utils
+          pdftotext -v
       - run: npx playwright test --project=${{ matrix.project }} --no-deps --shard=${{ matrix.shard }}
         env:
           SCRUTABOR_E2E_PREBUILT: '1'

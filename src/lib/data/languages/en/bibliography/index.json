@@ -9467,65 +9467,65 @@
       {
        "id": "proprium.dominica-ii-post-pascha-alleluia",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-ii-post-pascha-collecta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-ii-post-pascha-communio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-ii-post-pascha-epistola",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-ii-post-pascha-evangelium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-ii-post-pascha-introitus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-ii-post-pascha-offertorium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-ii-post-pascha-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-ii-post-pascha-secreta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-ii-post-pentecosten-alleluia",
@@ -18069,7 +18069,15 @@
       {
        "id": "proprium.dominica-ii-post-pascha-collecta",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-ii-post-pascha-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },

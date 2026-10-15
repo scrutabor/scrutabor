@@ -252,7 +252,11 @@ test('a rubric is set apart from the prayer it interrupts', async ({ page }) => 
 		/** the ink top of whatever the block starts with — a verse starts
 		 * with a ruby base, a rubric with its own prose */
 		const inkTop = (el: Element) => metrics(el.querySelector('.base') ?? el).top;
-		const kids = [...document.querySelectorAll('main > .verse, main > .rubric, main > .who')];
+		const kids = [
+			...document.querySelectorAll(
+				'main .flow-row > .verse, main .flow-row > .rubric, main .flow-row > .who'
+			)
+		];
 		const out: { kind: string; gap: number }[] = [];
 		for (let i = 1; i < kids.length; i++) {
 			const a = kids[i - 1];
@@ -597,7 +601,7 @@ test('the bilingual columns align verse and translation on one baseline', async 
 			return y;
 		};
 		const out: number[] = [];
-		document.querySelectorAll('.columns > .verse').forEach((v) => {
+		document.querySelectorAll('.columns .flow-row > .verse').forEach((v) => {
 			const sx = v.nextElementSibling;
 			if (!sx || !sx.classList.contains('seg-extra')) return;
 			const tr = sx.querySelector('.translation')!;
@@ -810,10 +814,14 @@ const inkGaps = (page: Page) =>
 			return side === 'top' ? Math.min(...vals) : Math.max(...vals);
 		};
 
+		const logicalChildren = [...document.querySelectorAll('main .flow-row > *')];
+		const neighbors = (element: Element) => {
+			const at = logicalChildren.indexOf(element);
+			return [logicalChildren[at - 1], logicalChildren[at + 1]];
+		};
 		const rubrics: { above: number; below: number; txt: string }[] = [];
 		document.querySelectorAll('.rubric').forEach((rb) => {
-			const p = rb.previousElementSibling,
-				n = rb.nextElementSibling;
+			const [p, n] = neighbors(rb);
 			if (!p || !n || !n.classList.contains('verse')) return;
 			const la = rb.querySelector('.rubric-la')!;
 			const last = rb.querySelector('.rubric-narrative') ?? la;
@@ -826,8 +834,7 @@ const inkGaps = (page: Page) =>
 
 		const labels: { above: number; below: number; txt: string }[] = [];
 		document.querySelectorAll('.who').forEach((w) => {
-			const p = w.previousElementSibling,
-				n = w.nextElementSibling;
+			const [p, n] = neighbors(w);
 			if (!p || !n || !n.classList.contains('verse')) return;
 			// A rubric or translation can end in a collapsed source disclosure.
 			// Range rectangles include that disclosure's hidden contents in Chromium,
@@ -846,8 +853,7 @@ const inkGaps = (page: Page) =>
 
 		const translations: { above: number; below: number; txt: string }[] = [];
 		document.querySelectorAll('.seg-extra').forEach((sx) => {
-			const p = sx.previousElementSibling,
-				n = sx.nextElementSibling;
+			const [p, n] = neighbors(sx);
 			const tr = sx.querySelector('.translation');
 			if (!p || !n || !tr || !n.classList.contains('verse')) return;
 			translations.push({

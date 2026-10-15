@@ -9,10 +9,13 @@
 
 	let {
 		lang,
+		titleLang = 'la',
 		prev,
 		next
 	}: {
 		lang: Lang;
+		/** The title language can differ from the navigation label. */
+		titleLang?: Lang | 'la';
 		prev?: { href: string; title: string };
 		next?: { href: string; title: string };
 	} = $props();
@@ -23,14 +26,14 @@
 	{#if prev}
 		<a class="pager-link" href={prev.href}
 			><span class="chev" aria-hidden="true">‹</span>
-			<span lang="la">{prev.title}</span></a
+			<span lang={titleLang}>{prev.title}</span></a
 		>
 	{:else}
 		<span></span>
 	{/if}
 	{#if next}
 		<a class="pager-link pager-next" href={next.href}
-			><span lang="la">{next.title}</span>
+			><span lang={titleLang}>{next.title}</span>
 			<span class="chev" aria-hidden="true">›</span></a
 		>
 	{/if}
@@ -48,6 +51,8 @@
 	}
 
 	.pager-link {
+		/* Share the available width instead of squeezing the shorter title. */
+		flex: 1 1 0;
 		min-inline-size: 0;
 		/* A long title must fit beside the other direction, including at
 		   the largest reading size on a narrow screen. */

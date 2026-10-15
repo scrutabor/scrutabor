@@ -250,6 +250,7 @@
 
 		<Pager
 			{lang}
+			titleLang={lang}
 			prev={around.prev && {
 				href: `/app/${lang}/formularium/${around.prev.id}`,
 				title: around.prev.title[lang]

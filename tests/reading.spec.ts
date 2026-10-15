@@ -59,7 +59,13 @@ test('one target gloss spans a multiword Latin construction', async ({ page }) =
 					afterTop: round(rect(annotations[at + 1]).top - verseTop),
 					groupHeight: round(rect(element).height),
 					verseHeight: round(rect(verse).height),
-					nextVerseTop: round(rect(verse.nextElementSibling!).top - verseTop)
+					nextVerseTop: round(
+						rect(
+							[...document.querySelectorAll('.flow-row > .verse')][
+								[...document.querySelectorAll('.flow-row > .verse')].indexOf(verse) + 1
+							]
+						).top - verseTop
+					)
 				};
 			});
 
@@ -103,20 +109,22 @@ test('standalone Ordinary prayers omit process rubrics but keep textual directio
 	// to words within a prayer still help when that prayer is opened alone.
 	for (const slug of ['kyrie', 'gloria', 'sanctus']) {
 		await page.goto(`/app/pl/ordinarium/${slug}`);
-		await expect(page.locator('main > .rubric')).toHaveCount(0);
+		await expect(page.locator('main .flow-row > .rubric')).toHaveCount(0);
 	}
 
 	await page.goto('/app/pl/ordinarium/confiteor');
-	await expect(page.locator('main > .rubric')).toHaveCount(1);
-	await expect(page.locator('main > .rubric')).toContainText('Percutiunt sibi pectus ter');
+	await expect(page.locator('main .flow-row > .rubric')).toHaveCount(1);
+	await expect(page.locator('main .flow-row > .rubric')).toContainText(
+		'Percutiunt sibi pectus ter'
+	);
 
 	await page.goto('/app/pl/ordinarium/credo');
-	await expect(page.locator('main > .rubric')).toHaveCount(1);
-	await expect(page.locator('main > .rubric')).toContainText('Hic genuflectitur');
+	await expect(page.locator('main .flow-row > .rubric')).toHaveCount(1);
+	await expect(page.locator('main .flow-row > .rubric')).toContainText('Hic genuflectitur');
 
 	await page.goto('/app/pl/ordinarium/agnus-dei');
-	await expect(page.locator('main > .rubric')).toHaveCount(1);
-	await expect(page.locator('main > .rubric')).toContainText('In Missis defunctorum');
+	await expect(page.locator('main .flow-row > .rubric')).toHaveCount(1);
+	await expect(page.locator('main .flow-row > .rubric')).toContainText('In Missis defunctorum');
 
 	// The continuous Ordo retains the complete ritual context.
 	await page.goto('/app/pl/ordo/catechumenorum');
@@ -137,7 +145,9 @@ test('a suppressed opening rubric leaves no empty ritual step', async ({ page })
 	await page.goto('/app/pl/ordinarium/kyrie');
 	const gap = await page.evaluate(() => {
 		const header = document.querySelector('header')!.getBoundingClientRect();
-		const first = document.querySelector('main > :not(.rubric-anchor)')!.getBoundingClientRect();
+		const first = document
+			.querySelector('main .flow-row > :not(.rubric-anchor)')!
+			.getBoundingClientRect();
 		return first.top - header.bottom;
 	});
 	expect(gap).toBeLessThan(8);
@@ -645,8 +655,10 @@ test('Angelus folds each Ave Maria as an ordinary translated verse', async ({ pa
 	await expect(toggle).toHaveAccessibleName('rozwiń powtórzoną modlitwę');
 
 	const foldGeometry = await first.evaluate((verse) => {
-		const previous = verse.previousElementSibling as HTMLElement;
-		const next = verse.nextElementSibling as HTMLElement;
+		const rows = [...document.querySelectorAll<HTMLElement>('.flow-row > .verse')];
+		const at = rows.indexOf(verse as HTMLElement);
+		const previous = rows[at - 1];
+		const next = rows[at + 1];
 		const latin = verse.querySelector<HTMLElement>('.base')!.getBoundingClientRect();
 		const previousLatin = previous.querySelector<HTMLElement>('.base')!.getBoundingClientRect();
 		const nextLatin = next.querySelector<HTMLElement>('.base')!.getBoundingClientRect();

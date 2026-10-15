@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Communio formularza „2. Niedziela po Wielkanocy” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Ja jestem dobrym pasterzem, alleluja: i znam moje owce, i moje znają mnie, alleluja, alleluja.","g":["Ja","jestem","pasterzem","dobrym","alleluja","i","znam","owce","moje","a","znają","Mnie","moje","alleluja","alleluja"]}
+    {"id":"s01","tr":"Ja jestem dobrym pasterzem, alleluja: i znam Moje owce, a Moje owce znają Mnie, alleluja, alleluja.","g":["Ja","jestem","pasterzem","dobrym","alleluja","i","znam","owce","Moje","a",null,null,null,"alleluja","alleluja"],"a":[{"s":10,"n":3,"a":0,"g":"Moje owce znają Mnie"}]}
   ]
 }

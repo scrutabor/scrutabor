@@ -310,7 +310,11 @@ test('an opened aside says it is one, and can be shut again', async ({ page }) =
 	const revealed = page.locator('.part.revealed').first();
 	await expect(revealed).toBeVisible();
 	await expect(revealed.locator('.aside-mark')).toHaveText('modlitwa kapłana');
-	await expect(revealed.locator('.part-text')).toBeVisible();
+	// The print opening and continuation both remain visible on screen.
+	await expect(revealed.locator('.part-text')).toHaveCount(2);
+	for (const block of await revealed.locator('.part-text').all()) {
+		await expect(block).toBeVisible();
+	}
 
 	await revealed.locator('.refold').click();
 	await expect(page.locator('.part.revealed')).toHaveCount(0);
@@ -322,7 +326,11 @@ test('the Ordo discloses only bibliography evidence accepted for that text', asy
 	await setHelp(page, 2);
 	const teIgitur = page.locator('.part', { hasText: 'Te ígitur' });
 	await teIgitur.locator('.unfold').click();
-	await expect(teIgitur.locator('.part-text')).toBeVisible();
+	// The print opening and continuation both remain visible on screen.
+	await expect(teIgitur.locator('.part-text')).toHaveCount(2);
+	for (const block of await teIgitur.locator('.part-text').all()) {
+		await expect(block).toBeVisible();
+	}
 	await expect(teIgitur.locator('.translation-sources')).toHaveCount(0);
 	await expect(teIgitur).not.toContainText('Powściągliwość i Praca');
 

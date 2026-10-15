@@ -203,12 +203,14 @@ test('print preserves manually opened repeated prayers and leaves the others fol
 	for (const toggle of await repetitions.locator('.repeated-toggle').all()) {
 		await expect(toggle).toHaveCSS('opacity', '0');
 	}
-	const alignment = await repetitions.first().evaluate((verse) => ({
-		repeated: verse.querySelector<HTMLElement>('.base')!.getBoundingClientRect().left,
-		neighbor: verse
-			.previousElementSibling!.querySelector<HTMLElement>('.base')!
-			.getBoundingClientRect().left
-	}));
+	const alignment = await repetitions.first().evaluate((verse) => {
+		const rows = [...document.querySelectorAll('.flow-row > .verse')];
+		const previous = rows[rows.indexOf(verse) - 1];
+		return {
+			repeated: verse.querySelector<HTMLElement>('.base')!.getBoundingClientRect().left,
+			neighbor: previous.querySelector<HTMLElement>('.base')!.getBoundingClientRect().left
+		};
+	});
 	expect(alignment.repeated).toBeCloseTo(alignment.neighbor, 0);
 	await expect(repetitions.nth(0).locator('.token')).toHaveCount(31);
 	await expect(repetitions.nth(1).locator('.token')).toHaveCount(4);
@@ -253,7 +255,10 @@ test('print preserves the current Ordo folds and keeps prayer units intact', asy
 		partHead: getComputedStyle(document.querySelector('.part-head')!).breakAfter,
 		panel: getComputedStyle(document.querySelector('main')!).paddingBottom
 	}));
-	expect(breaks).toEqual({ verse: 'avoid', label: 'avoid', partHead: 'avoid', panel: '0px' });
+	expect(breaks).toEqual({ verse: 'auto', label: 'avoid', partHead: 'avoid', panel: '0px' });
+	for (const unit of await page.locator('.flow-unit.keep').all()) {
+		await expect(unit).toHaveCSS('break-inside', 'avoid');
+	}
 });
 
 test('print keeps litanies paired while the paper is wide enough', async ({ page }) => {
