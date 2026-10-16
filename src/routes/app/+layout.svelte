@@ -108,7 +108,9 @@
 		};
 		const onUpdateFound = () => watch(registration?.installing ?? null);
 		const onControllerChange = () => {
-			if (hadController) location.reload();
+			// A first activation leaves this page open. An accepted update reloads
+			// even when the page began without a controller.
+			if (hadController || reloading) location.reload();
 		};
 
 		// The worker says when this copy has gone stale past self-repair — a

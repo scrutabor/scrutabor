@@ -153,6 +153,76 @@ test.describe('two worker versions, one book @online', () => {
 		).toBe(true);
 	});
 
+	for (const controlledOnLoad of [false, true]) {
+		test(`accepting a later update reloads a page that began ${controlledOnLoad ? 'controlled' : 'uncontrolled'}`, async ({
+			page
+		}) => {
+			await page.addInitScript(() => {
+				const key = 'scrutabor-test-document-loads';
+				sessionStorage.setItem(key, String(Number(sessionStorage.getItem(key) ?? '0') + 1));
+				sessionStorage.setItem(
+					'scrutabor-test-controller-at-start',
+					String(!!navigator.serviceWorker.controller)
+				);
+			});
+			await page.goto(`${origin}/app/pl`);
+			await ready(page);
+			// The first activation claims this document without reloading it.
+			expect(
+				await page.evaluate(() => sessionStorage.getItem('scrutabor-test-document-loads'))
+			).toBe('1');
+			await expect(page.locator('.update-notice')).toHaveCount(0);
+			if (controlledOnLoad) await page.reload();
+			expect(
+				await page.evaluate(() => sessionStorage.getItem('scrutabor-test-controller-at-start'))
+			).toBe(String(controlledOnLoad));
+			const loadsBeforeUpdate = controlledOnLoad ? 2 : 1;
+			state.suffix = 'B';
+			// Discover a real second worker in the same document. Reloading here
+			// would discard the initially uncontrolled lifecycle under test.
+			await page.evaluate(async () => {
+				const registration = await navigator.serviceWorker.getRegistration();
+				if (!registration) throw new Error('Missing worker registration');
+				await registration.update();
+			});
+			const notice = page.locator('.update-notice');
+			await expect(notice).toBeVisible();
+			expect(
+				await page.evaluate(async () => {
+					const registration = await navigator.serviceWorker.getRegistration();
+					const waiting = registration?.waiting;
+					if (waiting?.state !== 'installed' || navigator.serviceWorker.controller === waiting)
+						return false;
+					navigator.serviceWorker.addEventListener(
+						'controllerchange',
+						() => {
+							sessionStorage.setItem(
+								'scrutabor-test-accepted-worker-controls',
+								String(navigator.serviceWorker.controller === waiting)
+							);
+						},
+						{ once: true }
+					);
+					return true;
+				})
+			).toBe(true);
+			await Promise.all([
+				page.waitForEvent('load', { timeout: 15000 }),
+				notice.getByRole('button', { name: /wczytaj|reload/i }).click()
+			]);
+			await page.waitForSelector('html[data-hydrated]', { state: 'attached' });
+			await expect(notice).toHaveCount(0);
+			expect(
+				await page.evaluate(() => sessionStorage.getItem('scrutabor-test-accepted-worker-controls'))
+			).toBe('true');
+			// The accepted worker controls the book, with exactly one reload.
+			await page.waitForTimeout(800);
+			expect(
+				await page.evaluate(() => sessionStorage.getItem('scrutabor-test-document-loads'))
+			).toBe(String(loadsBeforeUpdate + 1));
+		});
+	}
+
 	test('accepting migrates the book before the old cache goes', async ({ page }) => {
 		await page.goto(`${origin}/app/pl`);
 		await ready(page);
