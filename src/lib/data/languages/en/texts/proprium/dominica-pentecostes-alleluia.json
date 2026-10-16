@@ -3,8 +3,8 @@
   "language":"en",
   "about":"The alleluia of the formulary “Pentecost Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. Send forth Thy Spirit, and they shall be created, and Thou shalt renew the face of the earth. Alleluia.","g":["Alleluia","alleluia","Send forth","Spirit","Thy","and","they shall be created","and","Thou shalt renew","the face","of the earth","Alleluia"]},
+    {"id":"s01","tr":"Alleluia, alleluia. Send forth Your Spirit, and they will be created, and You will renew the face of the earth. Alleluia.","g":["Alleluia","alleluia","Send forth","Spirit","Your","and","they will be created","and","You will renew","the face","of the earth","Alleluia"]},
     {"id":"s02","nr":"Here all genuflect."},
-    {"id":"s03","tr":"Come, Holy Ghost, fill the hearts of Thy faithful and kindle in them the fire of Thy love.","g":["Come",null,null,"fill","Thy","the hearts","of the faithful","and","of Thy","love","in","them","the fire","kindle"],"a":[{"s":1,"n":2,"a":1,"g":"Holy Spirit"}]}
+    {"id":"s03","tr":"Come, Holy Spirit, fill the hearts of Your faithful and kindle in them the fire of Your love.","g":["Come",null,null,"fill","Your","the hearts","of the faithful","and","of Your","love","in","them","the fire","kindle"],"a":[{"s":1,"n":2,"a":1,"g":"Holy Spirit"}]}
   ]
 }
