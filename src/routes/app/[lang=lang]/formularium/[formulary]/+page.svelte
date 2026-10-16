@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import FormularyScopeNote from '$lib/components/FormularyScopeNote.svelte';
 	import type { TextBibliographyEvidence } from '$lib/bibliography';
 	import { arrowNav } from '$lib/arrow-nav';
@@ -218,20 +219,34 @@
 	<main class:panel-open={picked !== null || panel.keepPad}>
 		{#each inlined as part (part.slug)}
 			<section class="proper-part" id={part.anchor}>
-				<div class="part-heading">
-					<div>
-						<h2 lang="la">{partTitles[part.part]}</h2>
-						<p lang="la">{part.doc.title}</p>
+				{#snippet partLead()}
+					<div class="part-heading">
+						<div>
+							<h2 lang="la">{partTitles[part.part]}</h2>
+							<p lang="la">{part.doc.title}</p>
+						</div>
+						{#if part.gloss.about || part.bibliography.context.length}
+							<button class="about-pill smallcaps" onclick={() => openAbout(part.slug)}
+								>{msgs.aboutLabel}</button
+							>
+						{/if}
 					</div>
-					{#if part.gloss.about || part.bibliography.context.length}
-						<button class="about-pill smallcaps" onclick={() => openAbout(part.slug)}
-							>{msgs.aboutLabel}</button
-						>
+					{#if part.condition}
+						<ComponentConditionNote condition={part.condition} {lang} />
 					{/if}
-				</div>
-				{#if part.condition}
-					<ComponentConditionNote condition={part.condition} {lang} />
-				{/if}
+				{/snippet}
+				{#snippet partLayout(
+					opening: Snippet,
+					continuation: Snippet,
+					hasContinuation: boolean,
+					compactOpening: boolean
+				)}
+					<div class="print-opening" class:compact={compactOpening}>
+						{@render partLead()}
+						{@render opening()}
+					</div>
+					{#if hasContinuation}{@render continuation()}{/if}
+				{/snippet}
 				<TextBody
 					doc={part.doc}
 					gloss={part.gloss}
@@ -244,6 +259,7 @@
 					citedSegments={citedFor(part.slug)}
 					onsegmentselect={(id, extend) => selectSegment(part.slug, id, extend)}
 					verifiedTranslationCitations={part.bibliography.translation}
+					layout={partLayout}
 				/>
 			</section>
 		{/each}
@@ -313,6 +329,10 @@
 		margin-bottom: 1.2rem;
 	}
 
+	.print-opening {
+		display: contents;
+	}
+
 	.part-heading h2,
 	.part-heading p {
 		margin: 0;
@@ -366,6 +386,7 @@
 		}
 
 		.proper-part {
+			container: print-part / inline-size;
 			break-before: auto;
 			margin-bottom: 18pt;
 			padding-top: 9pt;
@@ -375,8 +396,27 @@
 			break-after: avoid-page;
 		}
 
+		.print-opening {
+			display: block;
+			break-inside: auto;
+		}
+
+		.print-opening.compact {
+			break-inside: avoid;
+		}
+
 		.about-pill {
 			display: none;
+		}
+	}
+
+	/* Match the text's actual two-column measure. The lead and first sacred
+	   row share one opening; later source rows remain free to continue. */
+	@container print-part (min-width: 44rem) {
+		@media print {
+			.print-opening:has(:global(.bilingual)) {
+				break-inside: avoid;
+			}
 		}
 	}
 </style>

@@ -252,7 +252,10 @@
 			.columns > .flow-unit {
 				display: grid;
 				grid-column: 1 / -1;
-				grid-template-columns: subgrid;
+				/* Each paper unit owns its row tracks. A fragmented subgrid can
+				   place a later voice label over the preceding continued line. */
+				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+				column-gap: 2.6rem;
 				align-items: baseline;
 			}
 			.bilingual.partition .flow-row.partition-start > :global(.rubric) {
